@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+       xmlns:css="http://namespaces.plone.org/diazo/css"
+       xmlns:xhtml="http://www.w3.org/1999/xhtml"
+       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+       xmlns:xi="http://www.w3.org/2001/XInclude">
+
+
+   <!-- Include the backend theme -->
+   <!-- xi:include href="backend.xml" / -->
+
+  <theme href="index.html" />
+  <notheme css:if-not-content="#visual-portal-wrapper" />
+
+  <rules css:if-content="#portal-top">
+    <!-- Attributes -->
+    <copy attributes="*" css:theme="html" css:content="html" />
+    <!-- Base tag -->
+    <before css:theme="title" css:content="base" />
+    <!-- Title -->
+    <replace css:theme="title" css:content="title" />
+    <!-- Pull in Plone Meta -->
+    <after css:theme-children="head" css:content="head meta" />
+    <!-- Don't use Plone icons, use the theme's -->
+    <drop css:content="head link[rel='apple-touch-icon']" />
+    <drop css:content="head link[rel='shortcut icon']" />
+
+    <!-- drop the theme stylesheets -->
+    <!-- drop theme="/html/head/link[rel='stylesheet']" / -->
+
+    <!-- CSS -->
+    <drop css:content="head link[data-bundle='diazo']" />
+    <after css:theme-children="head" css:content="head link" />
+
+    <!-- Script -->
+    <drop css:content="head script[data-bundle='diazo']" />
+    <after css:theme-children="head" css:content="head script" />
+  </rules>
+
+  <!-- Copy over the id/class attributes on the body tag. This is important for per-section styling -->
+  <copy attributes="*" css:content="body" css:theme="body" />
+
+  <!-- sposto le colonne dentro ad un container -->
+  <replace css:content="#portal-column-content">
+    <xsl:variable name="wrapper">
+      <xsl:if test="//aside[@id='portal-column-one']">with-column-one </xsl:if>
+      <xsl:if test="//aside[@id='portal-column-two']">with-column-two</xsl:if>
+      <xsl:if test="not(//aside[@id='portal-column-one']) and not(//aside[@id='portal-column-two'])">with-no-columns</xsl:if>
+    </xsl:variable>
+    <div id="column-wrapper" class="{$wrapper}">
+
+      <!-- contenuto centrale -->
+      <xsl:copy-of select="//*[@id='portal-column-content']"/>
+
+      <!-- colonna 1 -->
+      <xsl:copy-of select="//*[@id='portal-column-one']"/>
+
+      <!-- colonna 2 -->
+      <xsl:copy-of select="//*[@id='portal-column-two']"/>
+
+    </div>
+  </replace>
+
+  <!-- cancello le colonne originali -->
+  <drop css:content="body > aside#portal-column-one" />
+  <drop css:content="body > aside#portal-column-two" />
+
+  <!-- toolbar -->
+  <replace css:theme="#portal-toolbar" css:content-children="#edit-bar" css:if-not-content=".ajax_load" css:if-content=".userrole-authenticated" />
+  <replace css:theme="#anonymous-actions" css:content-children="#portal-personaltools-wrapper" css:if-not-content=".ajax_load" css:if-content=".userrole-anonymous" />
+
+  <!-- aggiungo la freccia per il mobile -->
+    <after css:content="#portal-footer-wrapper">
+      <a href="javascript:" id="return-to-top" title="Return to top" style="display: inline;">
+        <span class="fa fa-chevron-up"></span>
+      </a>
+    </after>
+
+    <replace css:theme="body" css:content="body" />
+
+</rules>

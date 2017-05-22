@@ -1,0 +1,16 @@
+{
+  "//": "Put here only devDependencies, theme dependencies should stay inside of the theme folder.",
+  "name": "redturtle.agidtheme",
+  "version": "1.0.0",
+  "devDependencies": {
+    "grunt": "~1.0.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-watch": "latest",
+    "grunt-sass": "^1.2.1",
+    "grunt-postcss": "^0.8.0",
+    "pixrem": "^3.0.2",
+    "cssnano": "^3.7.7",
+    "autoprefixer": "^6.5.1",
+    "load-grunt-tasks": "^3.5.0"
+  }
+}

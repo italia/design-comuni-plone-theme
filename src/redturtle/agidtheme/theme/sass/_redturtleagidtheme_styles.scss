@@ -1,0 +1,38 @@
+@import "import_bootstrap";
+@import "mixins_utility";
+
+#portal-column-one {
+    font-size: 0.95em;
+}
+
+#portal-column-two {
+    padding-top: 75px;
+    padding-bottom: 30px;
+    font-size: 0.95em;
+
+    .managePortletsLink {
+        margin-top: 20px;
+    }
+
+    @media (max-width: $screen-xs-max) {
+        padding-top: 0;
+    }
+}
+
+// PORTLETPAGE
+.colonna-1-di-2         { @include make-sm-column(12); @include make-md-column(6); }
+.colonna-1-di-3         { @include make-sm-column(4); }
+.colonna-1-di-4         { @include make-sm-column(6); @include make-md-column(3); }
+.colonna-1-di-5         { width: 20%; float: left; }
+.colonna-1-di-6         { @include make-md-column(2); @include make-sm-column(4); }
+
+// fix in edit portlet
+body.template-portlets.portaltype-portlet_page,
+body[class*='subsection-++contextportlets++'] {
+
+    #portlets-above,
+    #portlets-below,
+    #portlets-in-header {
+        display: none;
+    }
+}

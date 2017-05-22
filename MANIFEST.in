@@ -1,0 +1,4 @@
+graft src/redturtle
+graft docs
+include *.rst
+global-exclude *.pyc

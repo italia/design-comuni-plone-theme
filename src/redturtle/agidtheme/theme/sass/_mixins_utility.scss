@@ -1,0 +1,169 @@
+/////// COLUMNS
+@mixin columns($number: 2, $width: 10em) {
+    -webkit-columns: $width $number;
+    -moz-columns: $width $number;
+    columns: $width $number;
+}
+
+/////// BREAK INSIDE (usato con columns)
+@mixin break-inside($value) {
+  // value: auto | avoid
+  -webkit-column-break-inside: $value;
+    page-break-inside: $value;
+    break-inside: $value;
+}
+
+@mixin break-before($value) {
+  // value: auto | avoid
+  -webkit-column-break-before: $value;
+    page-break-before: $value;
+    break-before: $value;
+}
+
+/////// USER-SELECT
+@mixin user-select($value) {
+    -webkit-user-select: $value;
+    -moz-user-select: $value;
+    -ms-user-select: $value;
+}
+
+/////// ICONE
+@mixin make-fa ($code, $color: inherit) {
+    display: inline-block;
+    font-family: FontAwesome;
+    content: $code;
+    color: $color;
+}
+
+// bootstrap container
+@mixin make-container() {
+    @include container-fixed;
+
+    @media (min-width: $screen-sm-min) {
+        width: $container-sm;
+    }
+    @media (min-width: $screen-md-min) {
+        width: $container-md;
+    }
+    @media (min-width: $screen-lg-min) {
+        width: $container-lg;
+    }
+}
+
+// center vertical
+@mixin align-vertical() {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+@mixin align-center() {
+    margin:0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@mixin box-ellipsis($height, $rows: 5) {
+    display: block; /* Fallback for non-webkit */
+    display: -webkit-box;
+    height: $height; /* Fallback for non-webkit */
+    -webkit-line-clamp: $rows;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin ellipsis() {
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+@mixin sr-only() {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+
+@mixin sfumagiu($height: 44px, $bg: #FFF) {
+    overflow: hidden;
+    position: relative;
+
+    &:after { content: "";
+        //pointer-events: none;
+        position: absolute;
+        width: 100%;
+        height: $height;
+        bottom: 0;
+        left: 0;
+        @include gradient-vertical(transparentize($bg, .5), $bg, 0, 70%);
+    }
+}
+
+// Flexbox tools
+
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin flex($values) {
+    -webkit-box-flex: $values;
+    -moz-box-flex:  $values;
+    -webkit-flex:  $values;
+    -ms-flex:  $values;
+    flex:  $values;
+}
+
+@mixin order($val) {
+    -webkit-box-ordinal-group: $val;
+    -moz-box-ordinal-group: $val;
+    -ms-flex-order: $val;
+    -webkit-order: $val;
+    order: $val;
+}
+
+@mixin flex-flow($values) {
+    -webkit-flex-flow: $values;
+    -ms-flex-flow: $values;
+    flex-flow: $values;
+}
+
+@mixin justify-content($val) {
+    -webkit-justify-content: $val;
+    -moz-justify-content: $val;
+    -ms-justify-content: $val;
+    justify-content: $val;
+}
+
+@mixin align-items($val) {
+    -webkit-align-items: $val;
+    -moz-align-items: $val;
+    -ms-align-items: $val;
+    align-items: $val;
+}
+
+@mixin align-content($val) {
+    -webkit-align-content: $val;
+    -moz-align-content: $val;
+    -ms-align-content: $val;
+    align-content: $val;
+}

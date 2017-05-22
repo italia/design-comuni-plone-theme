@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="redturtle.agidtheme">
+
+  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot
+      directory="overrides"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
+      />
+
+  <!-- Publish static files -->
+  <plone:static
+      name="redturtle.agidtheme"
+      type="plone"
+      directory="static"
+      />
+
+</configure>
