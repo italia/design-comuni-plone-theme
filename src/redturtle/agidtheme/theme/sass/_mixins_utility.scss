@@ -1,7 +1,5 @@
 /////// COLUMNS
 @mixin columns($number: 2, $width: 10em) {
-    -webkit-columns: $width $number;
-    -moz-columns: $width $number;
     columns: $width $number;
 }
 
@@ -33,6 +31,12 @@
     font-family: FontAwesome;
     content: $code;
     color: $color;
+    @include antialias();
+}
+
+@mixin antialias() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 // bootstrap container
@@ -55,8 +59,6 @@
     margin: 0;
     position: absolute;
     top: 50%;
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
 }
 
@@ -66,8 +68,6 @@
     top: 50%;
     left: 50%;
     margin-right: -50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -115,55 +115,7 @@
     }
 }
 
-// Flexbox tools
-
-@mixin flexbox() {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-}
-
-@mixin flex($values) {
-    -webkit-box-flex: $values;
-    -moz-box-flex:  $values;
-    -webkit-flex:  $values;
-    -ms-flex:  $values;
-    flex:  $values;
-}
-
-@mixin order($val) {
-    -webkit-box-ordinal-group: $val;
-    -moz-box-ordinal-group: $val;
-    -ms-flex-order: $val;
-    -webkit-order: $val;
-    order: $val;
-}
-
-@mixin flex-flow($values) {
-    -webkit-flex-flow: $values;
-    -ms-flex-flow: $values;
-    flex-flow: $values;
-}
-
-@mixin justify-content($val) {
-    -webkit-justify-content: $val;
-    -moz-justify-content: $val;
-    -ms-justify-content: $val;
-    justify-content: $val;
-}
-
-@mixin align-items($val) {
-    -webkit-align-items: $val;
-    -moz-align-items: $val;
-    -ms-align-items: $val;
-    align-items: $val;
-}
-
-@mixin align-content($val) {
-    -webkit-align-content: $val;
-    -moz-align-content: $val;
-    -ms-align-content: $val;
-    align-content: $val;
+@mixin gradiente-opaco() {
+  background: transparent; /* Old browsers */
+  @include gradient-vertical(transparentize(#000, 1), transparentize(#000, .7));
 }

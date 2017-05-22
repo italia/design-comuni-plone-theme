@@ -1,6 +1,8 @@
 @import "import_bootstrap";
 @import "mixins_utility";
 
+@import "components/_plonefix";
+
 #portal-column-one {
     font-size: 0.95em;
 }

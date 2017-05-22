@@ -9,24 +9,16 @@ module.exports = function (grunt) {
         // about putting files in the correct order
         // (the dependency tree is walked by r.js)
         sass: {
+          options: {
+              sourceMap: true,
+              outputStyle: 'compressed',
+            },
             dist: {
-                options: {
-                    paths: [],
-                    strictMath: false,
-                    sourceMap: true,
-                    outputSourceFiles: true,
-                    outputStyle: 'compressed',
-                    sourceMapURL: '++theme++redturtle.agid.theme/css/redturtleagidtheme.css.map',
-                    sourceMapFilename: 'css/redturtleagidtheme.css.map',
-                    modifyVars: {
-                        "isPlone": "false"
-                    }
-                },
                 files: {
                     // 'destination': 'source'
-                    'css/redturtleagidtheme.css': 'sass/redturtleagidtheme.sass',
+                    'css/redturtleagidtheme.css': 'sass/redturtleagidtheme.scss',
                 }
-            }
+            },
             bs: {
               files: {
                 // 'destination': 'source'
@@ -50,7 +42,7 @@ module.exports = function (grunt) {
         watch: {
             scripts: {
                 files: [
-                    'sass/*.sass'
+                    'sass/*.scss'
                 ],
                 tasks: ['sass', 'postcss']
             }
@@ -59,7 +51,7 @@ module.exports = function (grunt) {
             html: {
                 bsFiles: {
                     src : [
-                      'sass/*.sass'
+                      'sass/*.scss'
                     ]
                 },
                 options: {
@@ -74,7 +66,7 @@ module.exports = function (grunt) {
             plone: {
                 bsFiles: {
                     src : [
-                      'sass/*.sass'
+                      'sass/*.scss'
                     ]
                 },
                 options: {
@@ -89,18 +81,11 @@ module.exports = function (grunt) {
         }
     });
 
-
-    // grunt.loadTasks('tasks');
-  //  grunt.loadNpmTasks('grunt-browser-sync');
-  //  grunt.loadNpmTasks('grunt-contrib-watch');
-  //  grunt.loadNpmTasks('grunt-contrib-less');
-  //  grunt.loadNpmTasks('grunt-postcss');
-
     // CWD to theme folder
     grunt.file.setBase('./src/redturtle/agidtheme/theme');
 
     grunt.registerTask('compile', ['sass', 'postcss']);
-    grunt.registerTask('default', ['compile']);
+    grunt.registerTask('default', ['watch']);
     grunt.registerTask('bsync', ["browserSync:html", "watch"]);
     grunt.registerTask('plone-bsync', ["browserSync:plone", "watch"]);
 };

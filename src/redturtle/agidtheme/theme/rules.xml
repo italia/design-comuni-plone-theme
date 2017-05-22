@@ -7,7 +7,7 @@
 
 
    <!-- Include the backend theme -->
-   <!-- xi:include href="backend.xml" / -->
+   <xi:include href="backend.xml" />
 
   <theme href="index.html" />
   <notheme css:if-not-content="#visual-portal-wrapper" />
@@ -30,11 +30,11 @@
 
     <!-- CSS -->
     <drop css:content="head link[data-bundle='diazo']" />
-    <after css:theme-children="head" css:content="head link" />
+    <before css:theme-children="head" css:content="head link" />
 
     <!-- Script -->
     <drop css:content="head script[data-bundle='diazo']" />
-    <after css:theme-children="head" css:content="head script" />
+    <before css:theme-children="head" css:content="head script" />
   </rules>
 
   <!-- Copy over the id/class attributes on the body tag. This is important for per-section styling -->

@@ -19,7 +19,7 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="Plone Theme: RedTurtle Agid Theme"
+      title="RedTurtle Agid Theme"
       directory="profiles/default"
       description="Installs the Plone theme package redturtle.agidtheme."
       provides="Products.GenericSetup.interfaces.EXTENSION"
@@ -28,7 +28,7 @@
 
   <genericsetup:registerProfile
       name="uninstall"
-      title="Uninstall: Plone Theme: RedTurtle Agid Theme"
+      title="Uninstall: RedTurtle Agid Theme"
       directory="profiles/uninstall"
       description="Uninstalls the Plone theme package redturtle.agidtheme."
       provides="Products.GenericSetup.interfaces.EXTENSION"
