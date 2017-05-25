@@ -61,10 +61,7 @@
   <drop css:content="body > aside#portal-column-one" />
   <drop css:content="body > aside#portal-column-two" />
 
-  <!-- toolbar -->
-  <replace css:theme="#portal-toolbar" css:content-children="#edit-bar" css:if-not-content=".ajax_load" css:if-content=".userrole-authenticated" />
-  <replace css:theme="#anonymous-actions" css:content-children="#portal-personaltools-wrapper" css:if-not-content=".ajax_load" css:if-content=".userrole-anonymous" />
-
+  
   <!-- aggiungo la freccia per il mobile -->
     <after css:content="#portal-footer-wrapper">
       <a href="javascript:" id="return-to-top" title="Return to top" style="display: inline;">

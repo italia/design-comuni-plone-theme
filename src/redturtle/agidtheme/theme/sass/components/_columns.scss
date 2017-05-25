@@ -1,0 +1,72 @@
+
+// I CONTAINER
+#column-wrapper {
+  @include make-container;
+//  background-color: $gray-content;
+  padding: 20px;
+
+  @media (max-width: $screen-xs-max) {
+    padding:0;
+  }
+}
+
+#portal-column-one,
+#portal-column-two {
+  @include make-sm-column(3);
+  padding:0;
+}
+// in plone control panel o add content...
+.sidebar-offcanvas #portal-column-two,
+.sidebar-offcanvas #portal-column-one {
+  width: auto;
+  border: 0;
+}
+
+#portal-column-one {
+//  border-right: 20px solid $gray-content;
+
+  @media (max-width: $screen-xs-max) {
+    border-right: 0;
+    margin-top: 20px;
+  }
+
+  .with-column-one & {
+    @include make-sm-column-pull(9);
+  }
+
+  .with-column-one.with-column-two & {
+    @include make-sm-column-pull(6);
+  }
+}
+
+#portal-column-two {
+//  border-left: 20px solid $gray-content;
+
+  @media (max-width: $screen-xs-max) {
+    border-left: 0;
+    margin-top: 20px;
+  }
+}
+
+#portal-column-content {
+
+  .with-no-columns & {
+    @include make-sm-column(12);
+  }
+
+  .with-column-one &,
+  .with-column-two & {
+    @include make-sm-column(9);
+  }
+  .with-column-one & {
+    @include make-sm-column-push(3);
+  }
+
+  .with-column-one.with-column-two & {
+    @include make-sm-column(6);
+  }
+
+  @media (max-width: $screen-xs-max) {
+    border:0;
+  }
+}

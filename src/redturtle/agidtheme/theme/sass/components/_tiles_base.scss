@@ -1,0 +1,5 @@
+.colonna-1-di-2         { @include make-sm-column(12); @include make-md-column(6); }
+.colonna-1-di-3         { @include make-sm-column(4); }
+.colonna-1-di-4         { @include make-sm-column(6); @include make-md-column(3); }
+.colonna-1-di-5         { width: 20%; float: left; }
+.colonna-1-di-6         { @include make-md-column(2); @include make-sm-column(4); }
