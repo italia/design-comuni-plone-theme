@@ -17,6 +17,7 @@ module.exports = function (grunt) {
                 files: {
                     // 'destination': 'source'
                     'css/redturtleagidtheme.css': 'sass/redturtleagidtheme.scss',
+                    'css/redturtleagidtheme.print.css': 'sass/redturtleagidtheme.print.scss',
                 }
             },
             bs: {
