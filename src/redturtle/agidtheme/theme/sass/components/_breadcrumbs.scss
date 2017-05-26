@@ -1,0 +1,68 @@
+body {
+    &.section-front-page,
+    &.section-homepage {
+        #portal-breadcrumbs {
+            display: none;
+        }
+    }
+
+    #viewlet-above-content {
+        #portal-breadcrumbs {
+            background: $gray-bg;
+            padding: 0;
+
+            .container {
+                padding: 0;
+            }
+
+            ol {
+                @extend .list-unstyled, .list-inline;
+                font-size: 0.95em;
+                font-weight: $light;
+                padding: 10px 20px;
+                margin:0;
+
+                @media (min-width:1420px) {
+                    padding-left:0;
+                    padding-right: 0;
+                }
+
+                li {
+                    padding:0;
+
+                    .section-news &:last-of-type {
+                        display: none;
+                    }
+
+                    &:before {
+                        content: '/';
+                        padding: 0 0.4em;
+                    }
+
+                    &:nth-child(-n+2) {
+                        padding: 0 0.4em;
+                        &:before { display: none; }
+                    }
+
+                    a {
+                        color: $brand-primary;
+
+                        &:focus,
+                        &:hover { color: #000; }
+                    }
+                }
+
+                li#breadcrumbs-home {
+
+                    a {
+                        color: transparent;
+
+                        &:after {
+                            @include make-fa('\f015', $brand-primary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

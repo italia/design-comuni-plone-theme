@@ -1,0 +1,24 @@
+body.section-news {
+    #viewlet-above-content {
+        #portal-breadcrumbs {
+            ol {
+                li:last-of-type {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    #content {
+        .documentDescription {
+            padding-left: 20px;
+            margin: 30px 0 40px;
+            border-left: 9px solid $gray-desc-border;
+        }
+
+        .news-date {
+            text-transform: capitalize;
+            padding-top: 20px;
+        }
+    }
+}
