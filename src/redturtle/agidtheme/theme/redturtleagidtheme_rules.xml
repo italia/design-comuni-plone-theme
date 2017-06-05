@@ -36,6 +36,16 @@
   <!-- Copy over the id/class attributes on the body tag. This is important for per-section styling -->
   <copy attributes="*" css:content="body" css:theme="body" />
 
+  <!-- aggiungo un wrapper in testata per social+search -->
+  <replace css:content="#header-social">
+    <div class="search-social-wrapper">
+      <xsl:copy-of select="//*[@id='header-social']"/>
+      <xsl:copy-of select="//*[@id='portal-searchbox']"/>
+    </div>
+  </replace>
+  <!-- cancello la search originale -->
+  <drop css:content="#portal-header #portal-searchbox" />
+
   <!-- sposto le colonne dentro ad un container -->
   <replace css:content="#portal-column-content">
     <xsl:variable name="wrapper">
@@ -61,10 +71,10 @@
   <drop css:content="body > aside#portal-column-one" />
   <drop css:content="body > aside#portal-column-two" />
 
-  
+
   <!-- aggiungo la freccia per il mobile -->
     <after css:content="#portal-footer-wrapper">
-      <a href="javascript:" id="return-to-top" title="Return to top" style="display: inline;">
+      <a href="javascript:" aria-hidden="true" id="return-to-top" title="Return to top" style="display: none">
         <span class="fa fa-chevron-up"></span>
       </a>
     </after>

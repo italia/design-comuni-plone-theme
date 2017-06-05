@@ -18,6 +18,7 @@ module.exports = function (grunt) {
                     // 'destination': 'source'
                     'css/redturtleagidtheme.css': 'sass/redturtleagidtheme.scss',
                     'css/redturtleagidtheme.print.css': 'sass/redturtleagidtheme.print.scss',
+                    'css/redturtleagidtheme.backend.css': 'sass/redturtleagidtheme.backend.scss',
                 }
             },
             bs: {
@@ -54,7 +55,7 @@ module.exports = function (grunt) {
             html: {
                 bsFiles: {
                     src : [
-                      'sass/*.scss'
+                      'css/*.css'
                     ]
                 },
                 options: {
@@ -69,7 +70,7 @@ module.exports = function (grunt) {
             plone: {
                 bsFiles: {
                     src : [
-                      'sass/*.scss'
+                      'css/*.css'
                     ]
                 },
                 options: {

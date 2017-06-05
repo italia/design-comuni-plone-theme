@@ -1,0 +1,11 @@
+<div id="header-banner">
+  <div class="header-banner-inner">
+    <div class="header-banner-owner">
+      <a href="http://www.regione.emilia-romagna.it" target="_blank">Regione Emilia-Romagna</a>
+    </div>
+  </div>
+</div>
+
+<div id="portal-header">
+    <div tal:replace="structure provider:plone.portalheader" />
+</div>

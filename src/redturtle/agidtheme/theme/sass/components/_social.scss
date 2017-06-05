@@ -1,0 +1,54 @@
+#header-social {
+  text-align: right;
+
+  p {
+    display: inline-block;
+    margin:0;
+  }
+
+  ul {
+    @extend .list-inline;
+    display: inline-block;
+    padding-left: 1rem;
+
+    li {
+      padding-right: 0;
+
+      a {
+        display: inline-block;
+
+        &:before {
+          display: inline-block;
+          border-radius: 100%;
+          background-color: $brand-primary;
+          color: #FFF;
+          width: 3rem;
+          height: 3rem;
+          text-align: center;
+          font-size: 2rem;
+          line-height: 3rem;
+        }
+        &.sc-facebook:before {
+          @include make-fa('\f09a', #FFF);
+        }
+        &.sc-twitter:before {
+          @include make-fa('\f099', #FFF);
+        }
+        &.sc-youtube:before {
+          @include make-fa('\f167', #FFF);
+        }
+
+        &:focus,
+        &:hover {
+          &:before {
+            background-color: $gray;
+          }
+        }
+
+        span {
+          @extend .sr-only;
+        }
+      }
+    }
+  }
+}

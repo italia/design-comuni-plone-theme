@@ -1,0 +1,46 @@
+@import "redturtleagidtheme_variables";
+@import "redturtleagidtheme_styles";
+
+// KILL BARCELONETA STYLES >____<
+
+// search
+#portal-searchbox {
+  margin:0;
+  float: none;
+  max-width: none;
+
+  #searchGadget {
+    border-radius: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    height: inherit;
+  }
+}
+
+// menu
+#portal-globalnav-wrapper {
+    background-color: inherit;
+    color: inherit;
+    position: relative;
+    min-height: inherit;
+    margin-bottom: 0;
+    box-shadow: none;
+
+    #portal-globalnav {
+      float: none;
+
+      > li {
+        > a {
+          padding: 0;
+          line-height: inherit;
+          display: inline;
+
+          &:focus,
+          &:hover {
+            background-color: inherit;
+          }
+        }
+      }
+    }
+  }

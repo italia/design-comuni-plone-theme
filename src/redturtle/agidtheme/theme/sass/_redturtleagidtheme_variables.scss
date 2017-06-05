@@ -7,21 +7,22 @@ $img-path: "../images/";
 //## Gray and brand colors for use across Bootstrap.
 
 $gray-darker:            #2b2b2b;
+$gray-agid:              #303030;
 $gray-dark:              #313131;
-$gray:                   #555;
+$gray:                   #515151;
 $gray-light:             #777;
 $gray-lighter:           #CCC;
 $gray-bg:                #EEE;
 $gray-row:               #E0E0E0;
 $gray-desc-border:       #c1c1c1;
 
-$brand-primary:         #9c3524; // TODO: EDIT THIS
+$brand-primary:         #CB1D15;
 $brand-success:         #5cb85c; // TODO: EDIT THIS
 $brand-info:            #5bc0de; // TODO: EDIT THIS
 $brand-warning:         #f0ad4e; // TODO: EDIT THIS
 $brand-danger:          #d9534f; // TODO: EDIT THIS
 $tr: 				 transparent;
-$yellow:                rgb(234, 211, 19); // TODO: EDIT THIS
+$yellow:                #ECD838;
 
 
 
@@ -32,7 +33,8 @@ $yellow:                rgb(234, 211, 19); // TODO: EDIT THIS
 //** Background color for `<body>`.
 $body-bg:               #fff;
 //** Global text color on `<body>`.
-$text-color:            $gray-dark;
+$text-color:            #1C2024;
+$text-color-light:      #5A6772;
 
 //** Global textual link color.
 $link-color:            $brand-primary;

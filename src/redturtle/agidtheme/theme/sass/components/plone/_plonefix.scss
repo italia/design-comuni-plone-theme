@@ -97,27 +97,6 @@ input[type="text"].text-widget.textline-field { display: inline-block;
     }
 }
 
-// LA MODALE
-/*
-.plone-modal-wrapper { font-size: 16px; }
-.plone-modal-header {
-h2              { font-family: $font-family-base;
-font-weight: bold;
-text-align: center;
-font-size: 24px;
-text-transform: uppercase;
-}
-}
-.plone-modal-footer      {
-.pattern-modal-buttons { text-align: center;
-input.button-field   { @extend .btn, .btn-default;
-margin: 0 5px;
-&[id*='delete']    { @extend .btn-danger; }
-}
-}
-}
-.plone-modal-close       { @include make-fa('\f00d'); }
- */
 
 // TINY
 div.mce-edit-area,

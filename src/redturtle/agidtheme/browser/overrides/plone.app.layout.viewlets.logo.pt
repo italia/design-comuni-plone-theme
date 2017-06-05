@@ -1,0 +1,18 @@
+<h1 id="portal-logo"><a
+   title="Home"
+   tal:attributes="href view/navigation_root_url;"
+   i18n:domain="plone"
+   i18n:attributes="title">
+    <img src="logo.png" alt=""
+         tal:attributes="alt view/logo_title;
+                         title view/logo_title;
+                         src view/img_src" /><span tal:content="view/navigation_root_title">Comune</span></a></h1>
+
+<div id="header-social">
+ <p>Seguici su</p>
+ <ul>
+   <li><a href="#" title="Facebook" class="sc-facebook"><span>Facebook</span></a></li>
+   <li><a href="#" title="Twitter" class="sc-twitter"><span>Twitter</span></a></li>
+   <li><a href="#" title="Youtube" class="sc-youtube"><span>Youtube</span></a></li>
+ </ul>
+</div>

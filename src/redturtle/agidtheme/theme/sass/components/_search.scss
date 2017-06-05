@@ -1,0 +1,35 @@
+// Viewlet ricerca in testata
+#portal-searchbox {
+  text-align: right;
+
+  #searchGadget {
+    border: 1px solid $brand-primary;
+    padding: 1.1rem 1.4rem;
+    width: 25rem;
+
+    &:focus {
+      border-color: $gray;
+    }
+  }
+
+  button.search-button {
+    color: #FFF;
+    background-color: $brand-primary;
+    text-align: center;
+    width: 5rem;
+    padding: 0.8rem 0 1.5rem;
+    line-height: 1;
+    border: 0;
+    margin-left: -0.5rem;
+
+    &:before {
+      @include make-fa('\f002');
+      font-size: 2.6rem;
+    }
+
+    &:focus,
+    &:hover {
+      background-color: $gray;
+    }
+  }
+}
