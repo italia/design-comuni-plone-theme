@@ -1,0 +1,22 @@
+.news-collection {
+    position: relative;
+    padding: 20px 10px;
+
+    ul.tileContent {
+        list-style: none;
+    }
+
+    li.collectionItem {
+        padding: 20px;
+    }
+
+    .showMore {
+        position: absolute;
+        top: 45px;
+        right: 2%;
+
+        a {
+            border-bottom: 1px solid $brand-primary;
+        }
+    }
+}

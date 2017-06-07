@@ -76,9 +76,9 @@ module.exports = function (grunt) {
                 options: {
                     watchTask: true,
                     debugInfo: true,
-                    proxy: "localhost:8080",
+                    proxy: 'localhost:8080',
                     reloadDelay: 3000,
-                    // reloadDebounce: 2000,
+                    reloadDebounce: 1000,
                     online: true
                 }
             }
@@ -90,6 +90,6 @@ module.exports = function (grunt) {
 
     grunt.registerTask('compile', ['sass', 'postcss']);
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('bsync', ["browserSync:html", "watch"]);
-    grunt.registerTask('plone-bsync', ["browserSync:plone", "watch"]);
+    grunt.registerTask('bsync', ['browserSync:html', 'watch']);
+    grunt.registerTask('plone-bsync', ['browserSync:plone', 'watch']);
 };

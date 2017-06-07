@@ -18,4 +18,20 @@
       directory="static"
       />
 
+  <browser:page
+      name="homepage_view"
+      for="plone.app.blocks.layoutbehavior.ILayoutBehaviorAdaptable"
+      template="templates/homepage_view.pt"
+      permission="zope2.View"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
+      />
+
+  <browser:page
+      name="homepage_tile_collection_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".homepage_tile_collection.BaseView"
+      layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
+      template="templates/homepage_tile_collection.pt"
+      />
 </configure>
