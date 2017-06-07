@@ -1,0 +1,14 @@
+#portal-footer-wrapper {
+    background-color: #30373D;
+    padding: 50px 20px;
+    color: #fff;
+
+    a {
+        color: #65DDE0;
+
+        &:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+    }
+}

@@ -20,5 +20,15 @@ body.section-news {
             text-transform: capitalize;
             padding-top: 20px;
         }
+
+        .news-body {
+            width: 70%;
+            float: left;
+        }
+
+        .news-column {
+            width: 30%;
+            float: left;
+        }
     }
 }
