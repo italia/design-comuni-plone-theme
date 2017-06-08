@@ -1,0 +1,41 @@
+// TOC
+#parent-fieldname-text.pat-autotoc .autotoc-nav {
+    float: none;
+    border: 0;
+    padding: 0.8em 0;
+
+    a {
+        padding-left: 1.4em;
+        position: relative;
+        margin-bottom: 0.2em !important;
+
+        &:before {
+            @include make-fa('\f01a');
+            position: absolute;
+            top:0.05em;
+            left: 0;
+            color: $text-color;
+        }
+    }
+
+    .autotoc-level-1 {
+        margin: 0;
+        padding-left: 0;
+        &:before {
+            display: none;
+        }
+    }
+    .autotoc-level-2 {
+        margin: 0;
+    }
+    .autotoc-level-3,
+    .autotoc-level-4,
+    .autotoc-level-5,
+    .autotoc-level-6 {
+        padding-left: 1em;
+
+        &:before {
+            content: '\f105';
+        }
+    }
+}

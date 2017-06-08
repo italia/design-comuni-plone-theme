@@ -40,6 +40,8 @@
 
       &:focus,
       &:hover {
+        border:0;
+        
         span {
           border-bottom: 3px solid $text-color;
         }

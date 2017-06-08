@@ -1,0 +1,27 @@
+
+// CONTACT INFO
+.template-contact-info            {
+    #content                        { @extend .container;
+        .documentDescription          { text-align: center; }
+        form                          { max-width: 600px; margin: 0 auto;
+            .field                      { @extend .form-group;
+                label                     { @extend .control-label;
+                    .formHelp               { font-weight: normal;
+                        color: #999;
+                    }
+                }
+                textarea,
+                input[type="text"]        { width: 100%;
+                    padding: 0.3em 0.5em;
+                    max-width: none !important;
+                }
+            }
+            .formControls               { text-align: center;
+                input[type='submit']      { @extend %buttonSimpleRed;
+                    padding: 0.5em 1.6em !important;
+                }
+            }
+        }
+        #content-core                 { padding: 40px 0; }
+    }
+}

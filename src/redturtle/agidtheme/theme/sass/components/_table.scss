@@ -1,0 +1,4 @@
+table {
+    @extend .table, .table-bordered;
+    width: auto;
+}

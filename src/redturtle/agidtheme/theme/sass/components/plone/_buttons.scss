@@ -1,0 +1,35 @@
+%buttonSimple {
+    display: inline-block;
+    border: 1px solid $text-color;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 1em 4em;
+    font-weight: bold;
+    color: $text-color;
+
+    &:focus,
+    &:hover {
+      color: $link-color;
+      border-color: $link-color;
+    }
+
+    @media (max-width: $screen-xs-max) { padding: 1em; }
+}
+
+%buttonSimpleRed {
+  @extend %buttonSimple;
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+  color: #FFF;
+
+  &:focus,
+  &:hover {
+    background-color: $text-color;
+    border-color: $text-color;
+    color: #FFF;
+  }
+}
+
+.plone-btn-primary {
+  @extend .btn-primary; 
+}

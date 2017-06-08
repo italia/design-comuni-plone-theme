@@ -1,0 +1,42 @@
+// I REFERENCE WIDGETS (SELECT2)
+.pattern-relateditems-container {
+    ul.select2-choices            { padding: 10px;
+        li.select2-search-choice    { background: #E7FB61 none;
+            border-color: #B1C334;
+            .pattern-relateditems-item-title { font-weight: bold; }
+        }
+    }
+}
+.select2-drop.select2-drop-active { border-color: #5897fb;
+    border-left: 1px solid #5897fb;
+    border-right: 1px solid #5897fb;
+}
+.select2-dropdown-open .select2-choices { border-color: #5897fb; }
+
+.pattern-relateditems-dropdown .select2-results {
+    .select2-result-label           { padding:0; cursor: default; }
+    .select2-highlighted            { background-color: $tr;
+
+    }
+    .pattern-relateditems-result    { padding: 4px 30px 6px 26px;
+        position: relative;
+        border-bottom: 1px dashed #ccc;
+        .pattern-relateditems-result-title { font-size: 0.95em; }
+        .pattern-relateditems-buttons { right: 10px;
+            a                           { color: #AAA;
+                &:focus,
+                &:hover                   { color: $brand-primary; }
+            }
+        }
+    }
+    .pattern-relateditems-active    { background-color: $tr;
+        &:before                      { font-size: 13px;
+            left: 4px;
+            top: 0.7em;
+            position: absolute;
+            @include make-fa('\f111');
+            color: $brand-primary;
+
+        }
+    }
+}

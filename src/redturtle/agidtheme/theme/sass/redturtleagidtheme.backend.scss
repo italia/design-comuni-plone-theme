@@ -3,6 +3,25 @@
 
 // KILL BARCELONETA STYLES >____<
 
+body {
+  -webkit-font-smoothing: auto;
+}
+
+// breadcrumbs
+.plone-breadcrumb ol > li + li:before { border:0; position: static; }
+.plone-breadcrumb ol > li + li:after { display: none; }
+
+
+// forms
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  font-size: inherit;
+}
+
 // search
 #portal-searchbox {
   margin:0;

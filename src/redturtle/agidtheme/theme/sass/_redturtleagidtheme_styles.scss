@@ -1,7 +1,7 @@
 @import "import_bootstrap";
 @import "mixins_utility";
 
-@import "components/plone/_plonefix";
+@import "components/plone/_plone_styles";
 @import "components/_columns";
 @import "components/_typo";
 @import "components/_header";
@@ -15,3 +15,6 @@
 @import "components/_footer";
 @import "components/_pages";
 @import "components/_homepage";
+@import "components/_documentByLine";
+@import "components/_table";
+@import "components/_toc";
