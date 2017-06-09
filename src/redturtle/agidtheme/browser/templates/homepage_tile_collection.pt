@@ -25,7 +25,7 @@
                             item_wf_state_class python:'state-' + plone_view.normalizeString(item_wf_state);
                             item_type obj/portal_type;
                             item_type_class python:'contenttype-' + plone_view.normalizeString(item_type);"
-                tal:attributes="class python:oddrow and 'collectionItem even' or 'collectionItem odd'">
+            tal:attributes="class python: 'colonna-1-di-3 ' + (oddrow and 'collectionItem even' or 'collectionItem odd')">
                 <a href="#"
                    tal:attributes="href itemUrl;
                                    class string:tile $item_type_class $item_wf_state_class;
@@ -35,8 +35,7 @@
                        tal:condition=" obj/getIcon"
                        tal:attributes="href obj/getURL;
                                        src  string:$thumb;">
-                    <span tal:replace="obj/Title">
-                     Title </span>
+                    <span tal:replace="obj/Title"> Title </span>
                     <span class="tileItemDetails"
                           tal:condition="python:view.data.get('show_dates', False)"
                           tal:define="obj_date obj/Date"
