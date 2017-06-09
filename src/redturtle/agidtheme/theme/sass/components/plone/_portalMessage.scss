@@ -1,0 +1,21 @@
+.portalMessage   {
+  @extend .alert;
+  margin: $grid-gutter-width;
+
+  &.info       {
+    @extend .alert-info;
+
+    span a    {
+      @extend .btn, .btn-info, .btn-xs;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+  &.warning    {
+    @extend .alert-warning;
+  }
+  &.error      {
+    @extend .alert-danger;
+  }
+}

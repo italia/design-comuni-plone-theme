@@ -1,0 +1,140 @@
+// VISTA STANDARD
+.template-standard_view {
+  .entry {
+    .summary {
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+  }
+}
+.template-listing_view {
+  #content-core {
+    .entry {
+      margin: 10px 0;
+      clear: both;
+
+      p.description {
+        margin:0 0 0 1em;
+        font-size: 0.85em;
+        color: lighten($text-color, 20%);
+      }
+    }
+  }
+}
+// VISTA RIASSUNTIVA
+.template-summary_view {
+  #content-core {
+    padding-bottom: 40px;
+  }
+
+  .tileItem {
+    @extend .clearfix;
+    padding: 12px 0;
+    border-bottom: 1px solid #CCC;
+
+    h2.tileHeadline {
+      font-size: $font-size-h3;
+      margin-top:0;
+    }
+
+    .documentByLine {
+      display: block;
+      margin-top: -0.6em;
+      font-size: 0.85em;
+      color: lighten($text-color, 20%);
+      margin-bottom: 1em;
+    }
+
+    .tileImage {
+      float: left;
+      margin: 0 10px 5px 0;
+    }
+
+    .tileImageNoFloat + .tileFooter {
+      display: none;
+    }
+
+    h2.tileItem {
+      .userrole-authenticated  & {
+        display: inline;
+      }
+    }
+  }
+}
+
+// ALBUM
+.template-album_view {
+  #content-core {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    > .visualClear {
+      display: none;
+    }
+
+    .photoAlbumEntry {
+      margin-bottom: 20px;
+      border: 1px solid #DDD;
+      width: 220px;
+
+      a {
+        display: block;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+
+        &:focus,
+        &:hover {
+          background-color: #F0F0F0;
+        }
+
+        span {
+          display: block;
+
+          &.photoAlbumEntryWrapper {
+            padding-bottom: 10px;
+          }
+          &.photoAlbumEntryTitle {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            line-height: 1.2em;
+          }
+        }
+      }
+
+      &.photoAlbumFolder {
+        border-color: #999;
+        background-color: #EEE;
+
+        .photoAlbumEntryTitle {
+          font-weight: bold;
+
+          &:before {
+            @include make-fa('\f07c');
+          }
+        }
+      }
+    }
+  }
+}
+
+// TABLE VIEW
+.template-tabular_view {
+
+  table.listing {
+    @extend .table, .table-striped;
+  }
+
+  #content-core {
+    padding-bottom: 40px;
+  }
+}
+
+// CRONOLOGIA
+#history-list {
+  @extend .table, .table-striped;
+}

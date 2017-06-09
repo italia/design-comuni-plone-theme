@@ -1,0 +1,56 @@
+// LOGIN FORM
+[class*='template-login_'],
+[class*='template-logged_']       {
+    #content-core                   { width: 50%;
+        max-width: 600px;
+        padding: 0 0 40px;
+        margin: 30px auto 0;
+        @media (max-width: $screen-xs-max) {
+            width: auto;
+        }
+    }
+    // #login-form                     { padding-bottom: 30px;
+        //                                   @extend .form-horizontal;
+        //   .field                        { @extend .form-group;
+            //     label                       { @extend .col-xs-5, .control-label; }
+            //     input                       { @extend .form-control, .col-xs-5;
+                //                                   width: 50%;
+            //     }
+        //   }
+        //   .formControls                 { text-align: center;
+            //     input.context               { @extend %buttonSimpleRed;
+                //                                   padding: 0.5em 1.6em !important;
+            //     }
+        //   }
+    // }
+    #login-forgotten-password       { text-align: center; }
+    #viewlet-below-content {
+        display: none;
+    }
+}
+
+// LOST PASSWORD
+[class*='template-mail_password_form']        {
+    #content                        { @extend .container;
+        .documentDescription          { max-width: 650px; margin: {left: auto; right: auto};}
+    }
+    #content-core                   { width: 50%;
+        max-width: 650px;
+        padding: 0 0 40px;
+    }
+    #mail_password                  { padding: 30px 0;
+        @extend .form-horizontal;
+        legend                        { display: none; }
+        .field                        { @extend .form-group;
+            //  label                       { @extend .col-xs-5, .control-label; }
+            //  input                       { @extend .form-control, .col-xs-5;
+                //                                width: 50%;
+            //  }
+        }
+        .formControls                 { text-align: center;
+            input.context               { @extend %buttonSimpleRed;
+                padding: 0.5em 1.6em !important;
+            }
+        }
+    }
+}
