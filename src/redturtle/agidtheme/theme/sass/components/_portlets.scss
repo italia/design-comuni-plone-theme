@@ -23,13 +23,15 @@
             list-style-type: none;
 
             li {
-                padding: 1.5rem 2rem;
-                border-bottom: 1px solid $gray-desc-border;
+                a {
+                    padding: 1.5rem 2rem;
+                    border-bottom: 1px solid $gray-desc-border;
+                    display: block;
+                }
 
                 &.navTreeCurrentNode {
-                    background-color: $brand-primary;
-
                     a.navTreeCurrentItem {
+                        background-color: $brand-primary;
                         color: #fff;
                         font-weight: $semibold;
                     }
