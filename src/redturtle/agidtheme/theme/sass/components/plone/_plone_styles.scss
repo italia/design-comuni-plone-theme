@@ -11,19 +11,6 @@
 .hiddenStructure { @extend .sr-only; }
 
 ///// FONT ICONE (ma solo nei menu) //////
-.portletNavigationTree {
-    [class*="contenttype-"]:before {
-        @include make-fa('\f016');
-    }
-    .contenttype-folder:before {  content: '\f114';}
-    .contenttype-document:before {  content: '\f0f6';}
-    .contenttype-file:before {    }
-    .contenttype-link:before {    content: '\f0c1';}
-    .contenttype-image:before {   content: '\f1c5';}
-    .contenttype-collection:before {content: '\f0c5';}
-    .contenttype-event:before {   content: '\f073';}
-    .contenttype-news-item:before { content: '\f1ea';}
-}
 
 .image-icon,
 .image-tile {
