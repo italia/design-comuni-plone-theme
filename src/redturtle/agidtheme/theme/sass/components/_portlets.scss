@@ -25,6 +25,15 @@
             li {
                 padding: 1.5rem 2rem;
                 border-bottom: 1px solid $gray-desc-border;
+
+                &.navTreeCurrentNode {
+                    background-color: $brand-primary;
+
+                    a.navTreeCurrentItem {
+                        color: #fff;
+                        font-weight: $semibold;
+                    }
+                }
             }
         }
     }
