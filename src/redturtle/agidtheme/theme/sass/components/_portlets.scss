@@ -1,0 +1,14 @@
+.portlet {
+    margin-bottom: 2em;
+}
+
+.portletHeader {
+    border-bottom: 4px solid $gray-nav;
+    font-size: 2.1rem;
+    font-weight: $semibold;
+    padding: 0.8rem 0.3rem;
+    margin-bottom: 0.5em;
+
+    a { color: #000;
+    }
+}
