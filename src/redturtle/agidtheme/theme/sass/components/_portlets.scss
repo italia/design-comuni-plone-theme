@@ -27,6 +27,22 @@
                     padding: 1.5rem 2rem;
                     border-bottom: 1px solid $gray-desc-border;
                     display: block;
+
+                    &.navTreeFolderish {
+                        &:after {
+                            @include make-fa('\f107');
+                        }
+                    }
+                }
+
+                &.navTreeFolderish {
+                    > ul {
+                        > li {
+                            > a {
+                                background-color: $gray-bg;
+                            }
+                        }
+                    }
                 }
 
                 &.navTreeItemInPath,
