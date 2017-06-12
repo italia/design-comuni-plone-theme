@@ -24,12 +24,7 @@
 
             li {
                 padding: 1.5rem 2rem;
-            }
-
-            &.navTreeLevel0 {
-                > li {
-                    border-bottom: 1px solid $gray-desc-border;
-                }
+                border-bottom: 1px solid $gray-desc-border;
             }
         }
     }
