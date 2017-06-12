@@ -29,7 +29,9 @@
                     display: block;
                 }
 
+                &.navTreeItemInPath,
                 &.navTreeCurrentNode {
+                    a.navTreeItemInPath,
                     a.navTreeCurrentItem {
                         background-color: $brand-primary;
                         color: #fff;
