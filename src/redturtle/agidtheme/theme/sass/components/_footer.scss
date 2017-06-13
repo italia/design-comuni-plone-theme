@@ -74,7 +74,7 @@
         display: inline-block;
 
         li {
-          padding-right: 0;
+          float: left;
 
             a {
                 display: inline-block;
@@ -103,8 +103,15 @@
                 &.in:before {
                     @include make-fa('\f0e1', $footer-bg);
                 }
-                &.st:before {
-                    @include make-fa('\f167', $footer-bg);
+                &.st {
+                    &:before {
+                        content: "";
+                        vertical-align: bottom;
+                        background-image: url(../images/storify.svg);
+                        background-size: 2rem;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                    }
                 }
                 &.tg:before {
                     @include make-fa('\f2c6', $footer-bg);
@@ -118,6 +125,12 @@
                     &:before {
                         background-color: $gray;
                         color: #fff;
+                    }
+
+                    &.st {
+                        &:before {
+                            background-image: url(../images/storifyHover.svg);
+                        }
                     }
                 }
 
