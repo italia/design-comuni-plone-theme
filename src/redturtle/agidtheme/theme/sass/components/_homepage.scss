@@ -1,10 +1,23 @@
+@import '../_redturtleagidtheme_variables';
+
+body.section-homepage {
+    background: $gray-bg;
+
+    #portal-top {
+        background: #fff;
+    }
+}
+
 .news-collection {
     position: relative;
-    display: block;
+    overflow: auto;
     padding: 20px 10px;
 
     ul.tileContent {
         list-style: none;
+        padding-left: 0;
+        display: flex;
+        flex-flow: row nowrap;
     }
 
     li.collectionItem {
@@ -18,6 +31,44 @@
 
         a {
             border-bottom: 1px solid $brand-primary;
+        }
+    }
+
+    .newsWrapper {
+        background: #fff;
+        height: 100%;
+
+        a {
+            color: #000;
+        }
+
+        .newsImage {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .newsText {
+            padding: 5%;
+        }
+
+        .newsTitle {
+            font-weight: $bold;
+            padding: 10px 0;
+        }
+
+        .newsDescription {
+            display: block;          /* Fallback for non-webkit */
+            display: -webkit-box;
+            height: calc(1.5em * 4); /* Fallback for non-webkit */
+            margin: 0 auto;
+            font-size: 1em;
+            line-height: 1.5em;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
     }
 }
