@@ -39,4 +39,33 @@
     </value>
   </record>
 
+  <record name="plone.allowed_sizes" interface="Products.CMFPlone.interfaces.controlpanel.IImagingSchema" field="allowed_sizes">
+    <field type="plone.registry.field.List">
+      <default>
+        <element>large 768:768</element>
+        <element>preview 400:400</element>
+        <element>mini 200:200</element>
+        <element>thumb 128:128</element>
+        <element>tile 64:64</element>
+        <element>icon 32:32</element>
+        <element>listing 16:16</element>
+      </default>
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Specify all allowed maximum image dimensions, one per line. The required format is &amp;lt;name&amp;gt; &amp;lt;width&amp;gt;:&amp;lt;height&amp;gt;.</description>
+      <missing_value/>
+      <required>False</required>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Allowed image sizes</title>
+      <value_type type="plone.registry.field.TextLine"/>
+    </field>
+    <value>
+      <element>large 768:768</element>
+      <element>preview 400:400</element>
+      <element>newshome 450:300</element>
+      <element>mini 200:200</element>
+      <element>thumb 128:128</element>
+      <element>tile 64:64</element>
+      <element>icon 32:32</element>
+      <element>listing 16:16</element>
+    </value>
+  </record>
+
 </registry>
