@@ -57,15 +57,9 @@
                             }
                         }
                     }
-
                     &:hover,
                     &:focus {
-                        background-color: $brand-primary;
-                        color: #fff;
-                        font-weight: $semibold;
-                        &:after {
-                            color: #fff;
-                        }
+                        text-decoration: underline;
                     }
                 }
 
