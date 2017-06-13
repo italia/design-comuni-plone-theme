@@ -29,10 +29,13 @@
                     display: block;
 
                     &.navTreeFolderish {
+                        position: relative;
                         &:after {
                             @include make-fa('\f107');
                             display: block;
-                            float: right;
+                            position: absolute;
+                            top: 1rem;
+                            right: 1rem;
                             font-size: 2.5rem;
                             color: #000;
                         }
@@ -40,6 +43,8 @@
                         &.navTreeItemInPath {
                             &:after {
                                 @include make-fa('\f106');
+                                top: 0.5rem;
+                                font-weight: $regular;
                             }
                         }
                     }
