@@ -31,6 +31,13 @@
                     &.navTreeFolderish {
                         &:after {
                             @include make-fa('\f107');
+                            display: block;
+                            float: right;
+                        }
+                        &.navTreeItemInPath {
+                            &:after {
+                                @include make-fa('\f106');
+                            }
                         }
                     }
                 }
