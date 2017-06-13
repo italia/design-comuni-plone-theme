@@ -90,6 +90,16 @@
             ul {
                 margin-left: 2rem;
             }
+
+            &.navTreeLevel0 {
+                > li {
+                    &:last-child {
+                        > a {
+                            border-bottom: 0 none;
+                        }
+                    }
+                }
+            }
         }
     }
 }
