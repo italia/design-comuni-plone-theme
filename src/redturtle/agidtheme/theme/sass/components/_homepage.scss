@@ -24,6 +24,14 @@ body.section-homepage {
         padding: 20px;
     }
 
+    li.collectionItem:first-of-type {
+        padding-left: 0;
+    }
+
+    li.collectionItem:last-of-type {
+        padding-right: 0;
+    }
+
     .showMore {
         position: absolute;
         top: 45px;
