@@ -59,16 +59,40 @@ body.section-homepage {
         }
 
         .newsDescription {
-            display: block;          /* Fallback for non-webkit */
-            display: -webkit-box;
-            height: calc(1.5em * 4); /* Fallback for non-webkit */
-            margin: 0 auto;
-            font-size: 1em;
-            line-height: 1.5em;
-            -webkit-line-clamp: 4;
-            -webkit-box-orient: vertical;
             overflow: hidden;
-            text-overflow: ellipsis;
+            position: relative;
+            height: 6em;
+        }
+
+        .newsDescription:before {
+            content: "";
+            float: left;
+            width: 5px;
+            height: 6em;
+        }
+
+        .newsDescription > *:first-child {
+            float: right;
+            width: 100%;
+            margin-left: -5px;
+        }
+
+        .newsDescription:after {
+            content: "\02026";
+            box-sizing: content-box;
+            float: right;
+            position: relative;
+            top: -25px;
+            left: 100%;
+            width: 1em;
+            margin-left: -1em;
+            padding-right: 5px;
+            text-align: right;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), white 15%, white);
         }
     }
+}
+
+#viewlet-below-content {
+    display: none;
 }

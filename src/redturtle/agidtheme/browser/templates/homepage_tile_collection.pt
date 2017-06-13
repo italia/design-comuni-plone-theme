@@ -41,7 +41,9 @@
                                     <span tal:replace="obj/Title"> Title </span>
                                 </div>
                                 <div class="newsDescription">
-                                    <span tal:replace="obj/Description"> Description </span>
+                                    <div class="description">
+                                        <span tal:replace="obj/Description"> Description </span>
+                                    </div>
                                 </div>
                             </div>
                         </a>
