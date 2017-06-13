@@ -1,5 +1,5 @@
 .portlet {
-    margin-bottom: 2em;
+    margin-bottom: 3rem;
 }
 
 .portletHeader {
@@ -100,6 +100,17 @@
                     }
                 }
             }
+        }
+    }
+}
+
+// STATICA AVANZATA
+.rerPortletAdvancedStatic {
+    .portletHeader {
+        h4.portlet-header {
+            margin: 0;
+            font-size: 1em;
+            line-height: 1em;
         }
     }
 }
