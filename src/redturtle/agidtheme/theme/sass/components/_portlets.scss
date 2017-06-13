@@ -14,6 +14,15 @@
     }
 }
 
+.portletContent {
+    a {
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid $link-hover-color;
+        }
+    }
+}
+
 // NAVIGAZIONE
 .portletNavigationTree {
     nav.portletContent {
@@ -24,15 +33,18 @@
 
             li {
                 a {
-                    padding: 1.5rem 2rem;
+                    padding: 1.5rem 2.5rem 1.5rem 2rem;
                     border-bottom: 1px solid $gray-desc-border;
                     display: block;
 
                     &.navTreeFolderish {
+                        position: relative;
                         &:after {
                             @include make-fa('\f107');
                             display: block;
-                            float: right;
+                            position: absolute;
+                            top: 1rem;
+                            right: 1rem;
                             font-size: 2.5rem;
                             color: #000;
                         }
@@ -40,8 +52,14 @@
                         &.navTreeItemInPath {
                             &:after {
                                 @include make-fa('\f106');
+                                top: 0.5rem;
+                                font-weight: $regular;
                             }
                         }
+                    }
+                    &:hover,
+                    &:focus {
+                        text-decoration: underline;
                     }
                 }
 
