@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<object>
+  <order manager="plone.belowcontent" skinname="Plone Default">
+    <viewlet name="plone.abovecontenttitle.documentactions" />
+    <viewlet name="plone.belowcontenttitle.keywords" />
+    <viewlet name="plone.nextprevious" />
+    <viewlet name="plone.comments" />
+  </order>
+  <hidden manager="plone.belowcontentbody" skinname="Plone Default">
+    <viewlet name="plone.abovecontenttitle.documentactions" />
+  </hidden>
+</object>
