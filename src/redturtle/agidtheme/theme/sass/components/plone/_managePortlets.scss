@@ -1,0 +1,30 @@
+.portletAssignments {
+  padding: 2rem 0 0;
+
+  h4 {
+    text-transform: uppercase;
+  }
+
+  .managedPortlet.portlet {
+    .portletHeader > a {
+      color: $link-color;
+    }
+  }
+
+  .managedPortlet.inheritedPortlet {
+    margin: 1rem;
+
+    .portletHeader {
+      border-bottom: 0;
+      margin-bottom: 0;
+
+      > a {
+        color: $link-color;
+      }
+    }
+  }
+
+  .portlet-group {
+    padding: 0 0 2rem;
+  }
+}

@@ -15,7 +15,7 @@ label .label {
 
 select[size] {
   width: auto;
-  height: 34px;
+  height: auto;
 }
 
 #form-widgets-body_text_format,
@@ -40,5 +40,5 @@ input[type="text"].text-widget.textline-field {
 
 .formHelp {
   display: block;
-  font-size: 15px; 
+  font-size: 15px;
 }

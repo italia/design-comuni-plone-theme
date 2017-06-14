@@ -15,7 +15,7 @@
 
             a {
                 text-transform: uppercase;
-                font-weight: .semibold;
+                font-weight: $semibold;
                 &:hover,
                 &:focus {
                     border-color: $link-border-hover-color;

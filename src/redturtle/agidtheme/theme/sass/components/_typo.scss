@@ -1,7 +1,12 @@
 h1, h2, h3, h4, h5, h6 {
-  -webkit-font-smoothing: antialiased; 
+  -webkit-font-smoothing: antialiased;
 }
 
 .discreet {
   color: $text-color-light;
+}
+
+h1.documentFirstHeading {
+  margin-top:0;
+  font-weight: $bold;
 }

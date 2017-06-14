@@ -3,7 +3,7 @@
 #column-wrapper {
     @include make-container;
     //  background-color: $gray-content;
-    padding: 20px;
+    padding: 3rem 20px 20px;
 
     @media (max-width: $screen-xs-max) {
         padding:0;
@@ -23,10 +23,7 @@
 }
 
 #portal-column-one {
-    //  border-right: 20px solid $gray-content;
-
     @media (max-width: $screen-xs-max) {
-        border-right: 0;
         margin-top: 20px;
     }
 
@@ -40,10 +37,8 @@
 }
 
 #portal-column-two {
-    //  border-left: 20px solid $gray-content;
 
     @media (max-width: $screen-xs-max) {
-        border-left: 0;
         margin-top: 20px;
     }
 }
@@ -60,13 +55,25 @@
     }
     .with-column-one & {
         @include make-sm-column-push(3);
+
+        @media (min-width: $screen-xs-max) {
+          padding-left: 6%;
+          padding-right:0;
+        }
+    }
+
+    .with-column-two & {
+      @media (min-width: $screen-xs-max) {
+        padding-left: 0;
+        padding-right: 6%;
+      }
     }
 
     .with-column-one.with-column-two & {
         @include make-sm-column(6);
-    }
 
-    @media (max-width: $screen-xs-max) {
-        border:0;
+        @media (min-width: $screen-xs-max) {
+          padding: 0 40px;
+        }
     }
 }
