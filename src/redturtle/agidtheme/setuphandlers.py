@@ -17,14 +17,27 @@ class HiddenProfiles(object):
 def post_install(context):
     """Post install script"""
     # Do something at the end of the installation of this package.
-    NEW_STYLES = (u'portletStaticNavigation|stile menu di navigazione',)
-    STYLES = api.portal.get_registry_record('collective.tiles.advancedstatic.css_styles')
+    NEW_STYLES = (u'portletStaticNavigation|stile menu di navigazione',
+                  u'footer-logo-rer|logo RER footer',
+                  u'colonna-1-di-3|colonna 1 di 3',
+                  u'footer-actions|stile actions footer',
+                  u'news-collection|stile collezione notizie con foto',
+                  u'valuta-sito|stile tile "valuta sito"',
+                  u'aree-tematiche|stile collezione aree tematiche')
+
+    STYLES = api.portal.get_registry_record(
+                 'collective.tiles.advancedstatic.css_styles'
+             )
     if not STYLES:
         STYLES = ()
     for s in NEW_STYLES:
         if s not in STYLES:
             STYLES += (s,)
-    api.portal.set_registry_record('collective.tiles.advancedstatic.css_styles', STYLES)
+
+    api.portal.set_registry_record(
+                  'collective.tiles.advancedstatic.css_styles',
+                  STYLES
+              )
 
 
 def uninstall(context):
