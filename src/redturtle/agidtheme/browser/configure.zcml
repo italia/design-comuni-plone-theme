@@ -34,4 +34,12 @@
       layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
       template="templates/homepage_tile_collection.pt"
       />
+
+  <browser:viewlet
+      name="plone.abovecontenttitle.documentactions"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+      class="plone.app.layout.viewlets.content.DocumentActionsViewlet"
+      permission="zope2.View"
+      />
+
 </configure>
