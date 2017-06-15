@@ -51,11 +51,6 @@
                     <metal:block metal:define-macro="document_byline">
                     </metal:block>
                   </header>
-                  <p class="description discreet"
-                      tal:condition="item_description"
-                      tal:content="item_description">
-                    description
-                  </p>
                 </article>
               </metal:block>
             </tal:block>
