@@ -14,7 +14,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='redturtle.agidtheme',
-    version='1.0a1',
+    version='1.0.0.dev0',
     description="RedTurtle Agid Theme",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -22,6 +22,7 @@ setup(
         "Environment :: Web Environment",
         "Framework :: Plone",
         "Framework :: Plone :: 5.0",
+        "Framework :: Plone :: Theme",
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.7",
         "Operating System :: OS Independent",
@@ -44,6 +45,9 @@ setup(
         'z3c.jbot',
         'plone.app.theming',
         'plone.app.themingplugins',
+        'redturtle.tiles.management',
+        'collective.tiles.collection',
+        'collective.tiles.advancedstatic',
     ],
     extras_require={
         'test': [
