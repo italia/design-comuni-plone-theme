@@ -1,0 +1,39 @@
+.relatedItems {
+    margin: 3.5rem 0 1rem;
+    padding: 2rem 3.5rem 3rem;
+    background-color: $gray-bg;
+
+    #relatedItemBox {
+        header {
+            font-size: 2.3rem;
+            line-height: 1.5em;
+            margin-bottom: 2rem;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+            li {
+                padding-left: 2rem;
+                margin-bottom: 0.5rem;
+                position: relative;
+
+
+                &:before {
+                    @include make-fa('\f105');
+                    color: $text-color;
+                    font-size: 2rem;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                .discreet {
+                    display: block;
+                    font-size: 0.9em;
+                }
+            }
+        }
+    }
+}
