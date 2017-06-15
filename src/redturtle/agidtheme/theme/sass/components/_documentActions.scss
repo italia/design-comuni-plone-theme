@@ -1,32 +1,29 @@
+@import '../redturtleagidtheme_variables';
+
 .documentActions {
-    font-size: 0.8em;
     float: right;
 
     ul {
-        display: inline-block;
         margin: 0;
         padding: 0;
         list-style-type: none;
 
         li {
             display: inline;
-            line-height: 1em;
-            padding: 0 0.5rem;
+            padding: 0 0 0 2rem;
 
             a {
                 text-transform: uppercase;
                 font-weight: $semibold;
                 &:hover,
                 &:focus {
-                    border-color: $link-border-hover-color;
+                    text-decoration: underline;
                 }
             }
             &#document-action-print {
                 a {
-                    &:before {
-                        @include make-fa('\f02f');
-                        padding-right: 0.5rem;
-                    }
+                    background: url("../images/print.png") no-repeat center left;
+                    padding-left: 35px;
                 }
             }
         }
