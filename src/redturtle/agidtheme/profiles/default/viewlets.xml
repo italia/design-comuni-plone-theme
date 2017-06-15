@@ -3,10 +3,12 @@
   <order manager="plone.belowcontent" skinname="Plone Default">
     <viewlet name="plone.abovecontenttitle.documentactions" />
     <viewlet name="plone.belowcontenttitle.keywords" />
+    <viewlet name="plone.belowcontentbody.relateditems" />
     <viewlet name="plone.nextprevious" />
     <viewlet name="plone.comments" />
   </order>
   <hidden manager="plone.belowcontentbody" skinname="Plone Default">
     <viewlet name="plone.abovecontenttitle.documentactions" />
+    <viewlet name="plone.belowcontentbody.relateditems" />
   </hidden>
 </object>
