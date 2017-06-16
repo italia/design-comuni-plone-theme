@@ -1,0 +1,12 @@
+.PagesTileCollection {
+    .tileContent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .collectionItem {
+        width: 30%;
+        margin: auto;
+    }
+}

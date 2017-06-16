@@ -7,7 +7,7 @@
       i18n:domain="collective.tiles.collection">
   <body>
     <metal:macro define-macro="collection-tile-macro">
-      <div class="tileBody">
+      <div class="tileBody PagesTileCollection">
         <p tal:condition="not:results"
            class="noResults"
            i18n:translate="tiles_collection_noresults">
