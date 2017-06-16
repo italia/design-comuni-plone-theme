@@ -13,18 +13,18 @@
            i18n:translate="tiles_collection_noresults">
          No results found
         </p>
-        <ul class="tileContent" tal:condition="results">
+        <div class="tileContent" tal:condition="results">
           <tal:results tal:repeat="obj results">
-            <li tal:define="oddrow repeat/obj/odd;
-                            item   obj/getObject;
-                            text   item/getText"
-                tal:attributes="class python:oddrow and 'collectionItem even' or 'collectionItem odd'">
+            <div tal:define="oddrow repeat/obj/odd;
+                             item   obj/getObject;
+                             text   item/getText"
+                 tal:attributes="class python:oddrow and 'collectionItem even' or 'collectionItem odd'">
 
-              <div tal:replace="structure text">The body</div>
+                <div tal:replace="structure text">The body</div>
 
-            </li>
+            </div>
           </tal:results>
-        </ul>
+        </div>
       </div>
     </metal:macro>
   </body>
