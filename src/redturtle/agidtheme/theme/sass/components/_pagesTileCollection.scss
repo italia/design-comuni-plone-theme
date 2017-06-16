@@ -2,17 +2,17 @@
     .tileContent {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: flex-start;
     }
 
     .collectionItem {
-        width: 33%;
+        width: 32%;
     }
 
     .TextWrapper {
 
-        margin: 3rem 1.5rem;
+        margin: 3rem 0;
 
         &:before {
             border-top: 8px solid $brand-primary;
