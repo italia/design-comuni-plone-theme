@@ -52,4 +52,12 @@
       layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
       />
 
+  <browser:viewlet
+      name="redturtle.agidtheme.social"
+      manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+      class=".viewlets.SocialViewlet"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
+      template="templates/social_viewlet.pt"
+      permission="zope2.View"
+      />
 </configure>
