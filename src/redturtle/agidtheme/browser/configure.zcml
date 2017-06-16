@@ -35,6 +35,15 @@
       template="templates/homepage_tile_collection.pt"
       />
 
+  <browser:page
+      name="pages_tile_collection_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".pages_tile_collection.BaseView"
+      layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
+      template="templates/pages_tile_collection.pt"
+      />
+
   <browser:viewlet
       name="plone.abovecontenttitle.documentactions"
       manager="plone.app.layout.viewlets.interfaces.IBelowContent"
