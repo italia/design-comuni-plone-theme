@@ -19,9 +19,9 @@
                              item   obj/getObject;
                              text   item/getText"
                  tal:attributes="class python:oddrow and 'collectionItem even' or 'collectionItem odd'">
-
+              <div class="TextWrapper">
                 <div tal:replace="structure text">The body</div>
-
+              </div>
             </div>
           </tal:results>
         </div>
