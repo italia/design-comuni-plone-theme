@@ -1,0 +1,58 @@
+.PagesTileCollection {
+    .tileContent {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .collectionItem {
+        width: 32%;
+    }
+
+    .TextWrapper {
+
+        margin: 3rem 0;
+
+        &:before {
+            border-top: 8px solid $brand-primary;
+            clear: both;
+            content: " ";
+            display: block;
+            width: 200px;
+        }
+
+        h1,h2,h3,h4 {
+            font-size: 2.5rem;
+            font-weight: $bold;
+            margin: 1.5rem 0 1rem;
+
+            a {
+                color: #000;
+
+                &:focus,
+                &:hover {
+                    color: $link-hover-color;
+                    border-bottom: 1px solid $link-hover-color;
+                }
+            }
+        }
+        ul {
+            margin: 1.5rem 0;
+            padding: 0;
+            list-style-type: none;
+
+            li {
+                padding: 1.5rem 0;
+                border-top: 1px solid $gray-desc-border;
+
+                a {
+                    &:focus,
+                    &:hover {
+                        border-bottom: 1px solid $link-hover-color;
+                    }
+                }
+            }
+        }
+    }
+}

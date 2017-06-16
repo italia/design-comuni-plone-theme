@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="collective.tiles.collection">
+  <body>
+    <metal:macro define-macro="collection-tile-macro">
+      <div class="tileBody PagesTileCollection">
+        <p tal:condition="not:results"
+           class="noResults"
+           i18n:translate="tiles_collection_noresults">
+         No results found
+        </p>
+        <div class="tileContent" tal:condition="results">
+          <tal:results tal:repeat="obj results">
+            <div tal:define="oddrow repeat/obj/odd;
+                             item   obj/getObject;
+                             text   item/getText"
+                 tal:attributes="class python:oddrow and 'collectionItem even' or 'collectionItem odd'">
+              <div class="TextWrapper">
+                <div tal:replace="structure text">The body</div>
+              </div>
+            </div>
+          </tal:results>
+        </div>
+      </div>
+    </metal:macro>
+  </body>
+</html>
