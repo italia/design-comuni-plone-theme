@@ -16,31 +16,12 @@
         <ul class="tileContent" tal:condition="results">
           <tal:results tal:repeat="obj results">
             <li tal:define="oddrow repeat/obj/odd;
-                            useView python:obj.portal_type in viewActions;
-                            itemUrl python:useView and obj.getURL() + '/view' or obj.getURL();
-                            item_wf_state obj/review_state;
-                            item_wf_state_class python:'state-' + plone_view.normalizeString(item_wf_state);
-                            item_type obj/portal_type;
-                            item_type_class python:'contenttype-' + plone_view.normalizeString(item_type);"
+                            item   obj/getObject;
+                            text   item/getText"
                 tal:attributes="class python:oddrow and 'collectionItem even' or 'collectionItem odd'">
-                <a href="#"
-                   tal:attributes="href itemUrl;
-                                   class string:tile $item_type_class $item_wf_state_class;
-                                   title obj/Description">
-                    <img class="image-icon"
-                       tal:define="thumb python:obj.getURL()+'/@@images/image/icon'"
-                       tal:condition=" obj/getIcon"
-                       tal:attributes="href obj/getURL;
-                                       src  string:$thumb;">
-                    <span tal:replace="obj/Title">
-                     Title </span>
-                    <span class="tileItemDetails"
-                          tal:condition="python:view.data.get('show_dates', False)"
-                          tal:define="obj_date obj/Date"
-                          tal:content="python:toLocalizedTime(obj_date)">
-                        Date
-                    </span>
-                </a>
+
+              <div tal:replace="structure text">The body</div>
+
             </li>
           </tal:results>
         </ul>
