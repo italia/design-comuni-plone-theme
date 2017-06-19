@@ -1,6 +1,3 @@
-# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
-# SOME DESCRIPTIVE TITLE.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -15,7 +12,7 @@ msgstr ""
 "Language-Code: en\n"
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
-"Domain: redturtle.agidtheme\n"
+"Domain: DOMAIN\n"
 
 #: ../profiles/default/controlpanel.xml
 msgid "Configurazione tema agid"
@@ -44,19 +41,19 @@ msgstr ""
 #. Default: "Contents that can be enable for sharing."
 #: ../controlpanel/interfaces.py:15
 msgid "description_available_portaltypes"
-msgstr ""
+msgstr "Contenuti che possono essere abilitati per la condivisione tramite social"
 
 #. Default: "Socials that can be enabled for sharing contents."
 #: ../controlpanel/interfaces.py:28
 msgid "description_available_socials"
-msgstr ""
+msgstr "Social che possono essere abilitati per la condivisione dei contenuti"
 
 #. Default: "Available content types"
 #: ../controlpanel/interfaces.py:13
 msgid "heading_available_portaltypes"
-msgstr ""
+msgstr "Tipi di contenuti disponibili"
 
 #. Default: "Available socials"
 #: ../controlpanel/interfaces.py:26
 msgid "heading_available_socials"
-msgstr ""
+msgstr "Social disponibili"

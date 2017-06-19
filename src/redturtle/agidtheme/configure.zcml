@@ -9,7 +9,13 @@
 
   <includeDependencies package="." />
 
+  <permission
+      id="redturtle.agidtheme.permissions.EditAgidthemeSettings"
+      title="redturtle.agidtheme: Edit Agidtheme Settings"
+    />
+
   <include package=".browser" />
+  <include package=".controlpanel" />
 
   <plone:static
       directory="theme"
@@ -35,9 +41,14 @@
       post_handler=".setuphandlers.uninstall"
       />
 
-
   <utility
       factory=".setuphandlers.HiddenProfiles"
       name="redturtle.agidtheme-hiddenprofiles" />
+
+      <!-- vocabularies -->
+  <utility
+    component=".vocabularies.SocialsVocabularyFactory"
+    name="redturtle.agidtheme.vocabularies.SocialsVocabulary"
+    />
 
 </configure>

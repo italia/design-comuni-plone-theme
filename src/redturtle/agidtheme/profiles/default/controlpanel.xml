@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<object name="portal_controlpanel"
+        xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+        i18n:domain="redturtle.agidtheme">
+
+    <configlet
+        title="Configurazione tema agid"
+        action_id="redturtle-agidtheme-controlpanel"
+        appId="redturtle.agidtheme"
+        category="Products"
+        condition_expr=""
+        icon_expr=""
+        url_expr="string:${portal_url}/@@redturtle-agidtheme-controlpanel"
+        visible="True"
+        i18n:attributes="title">
+            <permission>redturtle.agidtheme.permissions.EditAgidthemeSettings</permission>
+    </configlet>
+
+</object>
