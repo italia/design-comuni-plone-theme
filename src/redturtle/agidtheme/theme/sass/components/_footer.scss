@@ -107,7 +107,7 @@
                     &:before {
                         content: "";
                         vertical-align: bottom;
-                        background-image: url(../images/storify.svg);
+                        background-image: url($img-path + 'storify.svg');
                         background-size: 2rem;
                         background-repeat: no-repeat;
                         background-position: center center;
@@ -129,7 +129,7 @@
 
                     &.st {
                         &:before {
-                            background-image: url(../images/storifyHover.svg);
+                            background-image: url($img-path + 'storifyHover.svg');
                         }
                     }
                 }

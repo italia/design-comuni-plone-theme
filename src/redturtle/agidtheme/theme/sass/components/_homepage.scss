@@ -161,7 +161,7 @@ body.section-homepage {
             width: auto;
             height: 1.5em;
             vertical-align: top;
-            background-image: url(../images/rectangle-tool.svg);
+            background-image: url($img-path + 'rectangle-tool.svg');
             background-size: 4rem;
             background-repeat: no-repeat;
             background-position: center center;
