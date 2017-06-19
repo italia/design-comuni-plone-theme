@@ -29,7 +29,7 @@
                 border-bottom: 1px solid $link-color;
                 &:hover,
                 &:focus {
-                    border-color: $link-border-hover-color;
+                    border-color: $link-hover-border-color;
                 }
             }
         }
