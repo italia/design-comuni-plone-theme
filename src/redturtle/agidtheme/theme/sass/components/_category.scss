@@ -5,7 +5,7 @@
     #categories-filed-under {
         &:before {
             @include make-fa('\f02c');
-            color: $gray-category;
+            color: $gray-documentByLine;
             padding-right: 0.5rem;
         }
     }
