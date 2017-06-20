@@ -176,51 +176,50 @@ body.section-homepage {
     }
 
     .aree-tematiche {
-        &, h3 {
-            padding-bottom: 20px;
-        }
+        padding-bottom: 40px;
 
         ul {
             @extend .list-inline;
             display: inline-flex;
             flex-flow: row wrap;
             @include make-row();
+            width: 100%;
 
             li {
                 @include make-sm-column(6);
                 @include make-md-column(3);
-                margin-bottom: 10px;
 
                 a {
                     display: block;
+                    overflow: auto;
                     border-top: 1px solid $gray-border;
                     font-weight: $bold;
-                    padding-top: 10px;
-                    padding-bottom: 10px;
+                    padding: 15px 10px;
 
-                    .aree-tematiche-item {
-                        margin-left: 20px;
-                    }
-
-                    &:before {
-                        display: inline-block;
-                        color: #000;
-                        width: 3rem;
-                        height: 3rem;
+                    .linkImage {
+                        width: 40px;
+                        float: left;
+                        padding-right: 5px;
                         text-align: center;
-                        font-size: 3rem;
-                        line-height: 3rem;
-                        font-weight: $regular;
+
+                        img {
+                            height: 100%;
+                            width: auto;
+                        }
                     }
 
-                    &:before { /* aggiungere classe per icona */
-                        @include make-fa('\1f4c4', #000);
+                    .linkText {
+                        width: calc(100% - 50px);
+                        padding-left: 5px;
+                        float: left;
                     }
 
                     &:focus,
                     &:hover {
-                        .aree-tematiche-item {
-                            border-bottom: 1px solid $brand-primary;
+                        .linkText {
+                            .title {
+                                border-bottom: 1px solid $brand-primary;
+                            }
                         }
                     }
                 }

@@ -36,6 +36,15 @@
       />
 
   <browser:page
+      name="homepage_smartlink_collection_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".homepage_smartlink_collection.BaseView"
+      layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
+      template="templates/homepage_smartlink_collection.pt"
+      />
+
+  <browser:page
       name="pages_tile_collection_renderer"
       permission="zope2.View"
       for="*"
