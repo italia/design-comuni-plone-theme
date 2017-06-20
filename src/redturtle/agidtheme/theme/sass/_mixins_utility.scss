@@ -31,7 +31,6 @@
     font-family: FontAwesome;
     content: $code;
     color: $color;
-    @include antialias();
 }
 
 @mixin make-ita ($code, $color: inherit) {
@@ -39,7 +38,6 @@
     font-family: ita;
     content: $code;
     color: $color;
-    @include antialias();
 }
 
 @mixin antialias() {

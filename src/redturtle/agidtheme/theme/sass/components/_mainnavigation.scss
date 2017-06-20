@@ -1,7 +1,6 @@
 #portal-mainnavigation {
   background-color: $brand-primary;
   color: #FFF;
-  -webkit-font-smoothing: antialiased;
 
   .plone-navbar-header {
     .plone-navbar-toggle {
@@ -17,7 +16,7 @@
 
     li {
       margin: 0 2%;
-      
+
       &:first-child {
         margin-left: 0;
       }
