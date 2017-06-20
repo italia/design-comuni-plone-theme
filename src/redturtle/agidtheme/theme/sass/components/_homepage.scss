@@ -83,6 +83,13 @@ body.section-homepage {
 
             a {
                 color: #000;
+
+                &:hover,
+                &:focus {
+                    .newsTitle {
+                        text-decoration: underline;
+                    }
+                }
             }
 
             .newsImage {
