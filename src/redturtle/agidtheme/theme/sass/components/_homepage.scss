@@ -36,12 +36,12 @@ body.section-homepage {
 
         &.collectionTile,
         .tileWrapper.collectionTile {
-            @include make-container();
+            @include make-container;
         }
 
         .tile.tile-advanced-static {
             & > div {
-                @include make-container();
+                @include make-container;
             }
 
             &.valuta-sito .tile-text {
@@ -87,7 +87,9 @@ body.section-homepage {
                 &:hover,
                 &:focus {
                     .newsTitle {
-                        text-decoration: underline;
+                        span {
+                            border-bottom: 1px solid #000;
+                        }
                     }
                 }
             }

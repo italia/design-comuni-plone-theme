@@ -5,7 +5,7 @@
   padding: 1.3rem 0;
 
   .header-banner-inner {
-    @include make-container();
+    @include make-container;
   }
 
   .header-banner-owner {
@@ -23,7 +23,7 @@
 
 #portal-header {
   padding: 1.8rem 0;
-  @include make-container();
+  @include make-container;
   display: flex;
   justify-content: space-between;
 
@@ -41,7 +41,7 @@
       &:focus,
       &:hover {
         border:0;
-        
+
         span {
           border-bottom: 3px solid $text-color;
         }

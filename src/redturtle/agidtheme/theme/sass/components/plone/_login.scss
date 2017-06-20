@@ -31,7 +31,7 @@
 
 // LOST PASSWORD
 [class*='template-mail_password_form']        {
-    #content                        { @extend .container;
+    #content                        {
         .documentDescription          { max-width: 650px; margin: {left: auto; right: auto};}
     }
     #content-core                   { width: 50%;

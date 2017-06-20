@@ -1,40 +1,46 @@
 #portal-mainnavigation {
-  background-color: $brand-primary;
-  color: #FFF;
+    background-color: $brand-primary;
+    color: #FFF;
 
-  .plone-navbar-header {
-    .plone-navbar-toggle {
-      display: none;
-    }
-  }
-
-  ul#portal-globalnav {
-    @extend .list-inline;
-    margin:0;
-    display: flex;
-    padding: 1.2rem 0;
-
-    li {
-      margin: 0 2%;
-
-      &:first-child {
-        margin-left: 0;
-      }
-
-      &:first-child {
-        margin-left: 0;
-      }
-
-      a {
-        color: #FFF;
-        font-size: 1.95rem;
-        font-weight: $semibold;
-
-        &:focus,
-        &:hover {
-          border-bottom: 1px solid #FFF;
+    .plone-navbar-header {
+        .plone-navbar-toggle {
+            display: none;
         }
-      }
     }
-  }
+
+    .globalnavWrapper {
+        @include make-container;
+    }
+
+    ul#portal-globalnav {
+        @extend .list-inline;
+        margin:0;
+        display: flex;
+        padding: 1.2rem 0;
+
+        li {
+            margin: 0 2%;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            a {
+                color: #FFF;
+                font-size: 1.95rem;
+                font-weight: $semibold;
+                display: block;
+                border-bottom: 1px solid transparent;
+
+                &:focus,
+                &:hover {
+                    border-color: #FFF;
+                }
+            }
+        }
+    }
 }

@@ -11,21 +11,12 @@ body {
             background: $gray-bg;
             padding: 0;
 
-            .container {
-                padding: 0;
-            }
-
             ol {
                 @extend .list-unstyled, .list-inline;
                 font-size: 0.95em;
                 font-weight: $light;
                 padding: 10px 20px;
-                margin:0;
-
-                @media (min-width:1420px) {
-                    padding-left:0;
-                    padding-right: 0;
-                }
+                margin: 0;
 
                 li {
                     padding:0;
@@ -53,12 +44,20 @@ body {
                 }
 
                 li#breadcrumbs-home {
+                    width: 30px;
+                    padding-left: 30px;
+                    padding-right: 0;
+                    position: relative;
+                    text-indent: -9999px;
 
                     a {
-                        color: transparent;
+                        display: inline-block;
 
-                        &:after {
+                        &:before {
                             @include make-fa('\f015', $brand-primary);
+                            position: absolute;
+                            left: 0;
+                            text-indent: 0;
                         }
                     }
                 }

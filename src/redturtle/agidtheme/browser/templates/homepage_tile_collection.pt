@@ -38,11 +38,11 @@
                             </div>
                             <div class="newsText">
                                 <div class="newsTitle">
-                                    <span tal:replace="obj/Title"> Title </span>
+                                    <span tal:content="obj/Title"> Title </span>
                                 </div>
                                 <div class="newsDescription">
                                     <div class="description">
-                                        <span tal:replace="obj/Description"> Description </span>
+                                        <span tal:content="obj/Description"> Description </span>
                                     </div>
                                 </div>
                             </div>
