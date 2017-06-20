@@ -147,6 +147,13 @@ body.section-homepage {
                 display: block;
                 color: #fff;
                 padding: 20px;
+
+                &:hover,
+                &:focus {
+                    .valuta-sito-text {
+                        border-bottom: 1px solid #fff;
+                    }
+                }
             }
 
             p {
