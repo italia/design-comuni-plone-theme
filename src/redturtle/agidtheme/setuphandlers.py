@@ -23,7 +23,8 @@ def post_install(context):
                   u'footer-actions|stile actions footer',
                   u'news-collection|stile collezione notizie con foto',
                   u'valuta-sito|stile tile "valuta sito"',
-                  u'aree-tematiche|stile collezione aree tematiche')
+                  u'aree-tematiche|stile collezione aree tematiche',
+                  u'PagesTileStatic|stile landing page aree tematiche')
 
     STYLES = api.portal.get_registry_record(
                  'collective.tiles.advancedstatic.css_styles'

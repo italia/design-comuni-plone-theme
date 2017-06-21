@@ -8,4 +8,4 @@ from collective.tiles.collection import _
 class BaseView(BrowserView):
     implements(ICollectionTileRenderer)
 
-    display_name = _("Pages tile collection")
+    display_name = _("Landing page aree tematiche")
