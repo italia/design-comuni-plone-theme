@@ -39,15 +39,16 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=[
-        'plone.api',
-        'Products.GenericSetup>=1.8.2',
         'setuptools',
-        'z3c.jbot',
+        'collective.tiles.advancedstatic',
+        'collective.tiles.collection',
+        'plone.api',
         'plone.app.theming',
         'plone.app.themingplugins',
+        'Products.GenericSetup>=1.8.2',
+        'redturtle.patterns.slider',
         'redturtle.tiles.management',
-        'collective.tiles.collection',
-        'collective.tiles.advancedstatic',
+        'z3c.jbot',
     ],
     extras_require={
         'test': [

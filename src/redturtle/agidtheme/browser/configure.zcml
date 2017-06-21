@@ -61,4 +61,21 @@
       layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
       />
 
+  <!-- custom redturtle.tiles.collection templates -->
+  <browser:page
+    name="collection_tile_helpers"
+    class=".tile_collection_renderers.HelpersView"
+    permission="zope2.View"
+    for="*"
+    layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
+    />
+
+  <browser:page
+      name="news_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".tile_collection_renderers.NewsView"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
+      template="templates/news_renderer.pt"
+  />
 </configure>
