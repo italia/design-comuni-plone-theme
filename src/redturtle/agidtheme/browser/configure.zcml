@@ -27,6 +27,14 @@
       />
 
   <browser:page
+      name="landing_aree_tematiche_view"
+      for="plone.app.blocks.layoutbehavior.ILayoutBehaviorAdaptable"
+      template="templates/landing_aree_tematiche_view.pt"
+      permission="zope2.View"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
+      />
+
+  <browser:page
       name="homepage_tile_collection_renderer"
       permission="zope2.View"
       for="*"

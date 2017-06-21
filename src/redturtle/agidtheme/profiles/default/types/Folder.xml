@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
-<object name="Document"
+<object name="Folder"
    meta_type="Factory-based Type Information with dynamic views"
    i18n:domain="plone" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
  <property name="view_methods" purge="False">
   <element value="homepage_view"/>
+  <element value="landing_aree_tematiche_view"/>
  </property>
 </object>
