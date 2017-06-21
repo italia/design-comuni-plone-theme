@@ -1,6 +1,6 @@
 @import "import_bootstrap";
 @import "mixins_utility";
-@import "../font/style";
+@import "font_ita";
 
 @import "components/plone/_plone_styles";
 @import "components/_columns";
@@ -25,3 +25,4 @@
 @import "components/_documentActions";
 @import "components/_relatedItems";
 @import "components/_pagesTileCollection";
+@import "components/_pagesTileStatic";

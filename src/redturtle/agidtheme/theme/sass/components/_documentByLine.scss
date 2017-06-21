@@ -1,4 +1,15 @@
-.documentByLine { 
+.documentByLine {
   font-size: 0.9em;
   display: inline;
+}
+
+#plone-document-byline {
+    display: block;
+    margin-bottom: 0.7rem;
+
+    &:before {
+        @include make-fa('\f073');
+        color: $gray-documentByLine;
+        padding-right: 0.5rem;
+    }
 }
