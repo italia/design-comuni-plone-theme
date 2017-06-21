@@ -26,4 +26,18 @@ class SocialViewlet(base.ViewletBase):
         return socials
 
     def get_sharer_url(self, social_type):
-        return '%s%s' % (SHARES[social_type]['share_url'], self.context.absolute_url())
+        share_url = SHARES[social_type]['share_url']
+        if social_type == 'linkedin':
+            return share_url.format(self.context.absolute_url(), self.context.title)
+        if social_type == 'twitter':
+            return share_url.format(
+                self.context.absolute_url(),
+                self.context.title,
+                '',
+                '',
+            )
+        if social_type == 'pinterest':
+            return share_url.format('', self.context.absolute_url(), 'false', self.context.title)
+        if social_type == 'pocket':
+            return share_url.format(self.context.absolute_url(), self.context.title)
+        return share_url.format(self.context.absolute_url())
