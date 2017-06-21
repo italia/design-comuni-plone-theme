@@ -8,6 +8,7 @@
       name="view_methods"
       purge="false">
     <element value="homepage_view" />
+    <element value="landing_aree_tematiche_view" />
   </property>
   <property
       name="behaviors"
