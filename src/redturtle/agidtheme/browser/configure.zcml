@@ -96,6 +96,15 @@
       template="templates/news_renderer.pt"
   />
 
+  <browser:page
+      name="sights_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".tile_collection_renderers.SightsView"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
+      template="templates/sights_renderer.pt"
+  />
+
   <browser:viewlet
       name="redturtle.agidtheme.social"
       manager="plone.app.layout.viewlets.interfaces.IAboveContent"
