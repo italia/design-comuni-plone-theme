@@ -25,40 +25,27 @@
                 item_wf_state_class python:'state-' + plone_view.normalizeString(item_wf_state);
                 item_type obj/portal_type;
                 item_type_class python:'contenttype-' + plone_view.normalizeString(item_type);"
-                tal:attributes="class python: 'colonna-1-di-3 ' + (oddrow and 'collectionItem even' or 'collectionItem odd')">
-                    <div class="newsWrapper">
+                tal:attributes="class python: oddrow and 'collectionItem even' or 'collectionItem odd'">
+                    <div class="linkWrapper">
                         <a href="#"
                            tal:attributes="href itemUrl;
                            class string:tile $item_type_class $item_wf_state_class;
                            title obj/Description">
-                            <div class="newsImage">
-                                <img class="image-thumb"
-                                     tal:define="thumb python:obj.getURL()+'/@@images/image/newshome'"
-                                     tal:attributes="src string:$thumb;">
+                            <div class="linkImage">
+                                <img class="link-icon"
+                                     tal:define="icon python:obj.getURL()+'/@@images/image/icon'"
+                                     tal:attributes="src string:$icon;">
                             </div>
-                            <div class="newsText">
-                                <div class="newsTitle">
-                                    <span tal:content="obj/Title"> Title </span>
-                                </div>
-                                <div class="newsDescription">
-                                    <div class="description">
-                                        <span tal:content="obj/Description"> Description </span>
-                                    </div>
-                                </div>
+                            <div class="linkText">
+                                <span class="title">
+                                   <span tal:replace="obj/Title"> Title </span>
+                                </span>
                             </div>
                         </a>
                     </div>
                 </li>
                 </tal:results>
             </ul>
-            <div class="showMore" tal:condition="view/data/show_more">
-                <a href="${collection/absolute_url}"
-                   tal:define="show_more_label view/data/show_more_label|nothing">
-                    <span tal:condition="not:show_more_label"
-                   i18n:translate="more_url">More&hellip;</span>
-                    <span tal:condition="show_more_label">${show_more_label}</span>
-                </a>
-            </div>
         </div>
         </metal:macro>
     </body>

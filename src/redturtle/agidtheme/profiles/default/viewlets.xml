@@ -2,6 +2,7 @@
 <object>
   <order manager="plone.belowcontent" skinname="Plone Default">
     <viewlet name="plone.abovecontenttitle.documentactions" />
+    <viewlet name="plone.belowcontenttitle.documentbyline" />
     <viewlet name="plone.belowcontenttitle.keywords" />
     <viewlet name="plone.belowcontentbody.relateditems" />
     <viewlet name="plone.nextprevious" />
@@ -10,5 +11,8 @@
   <hidden manager="plone.belowcontentbody" skinname="Plone Default">
     <viewlet name="plone.abovecontenttitle.documentactions" />
     <viewlet name="plone.belowcontentbody.relateditems" />
+  </hidden>
+<hidden manager="plone.belowcontenttitle" skinname="Plone Default">
+    <viewlet name="plone.belowcontenttitle.documentbyline" />
   </hidden>
 </object>

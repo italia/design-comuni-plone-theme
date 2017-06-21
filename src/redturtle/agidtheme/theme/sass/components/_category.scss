@@ -5,7 +5,7 @@
     #categories-filed-under {
         &:before {
             @include make-fa('\f02c');
-            color: $gray-category;
+            color: $gray-documentByLine;
             padding-right: 0.5rem;
         }
     }
@@ -29,7 +29,7 @@
                 border-bottom: 1px solid $link-color;
                 &:hover,
                 &:focus {
-                    border-color: $link-border-hover-color;
+                    border-color: $link-hover-border-color;
                 }
             }
         }

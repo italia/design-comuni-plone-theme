@@ -34,13 +34,14 @@ body.section-homepage {
             display: none;
         }
 
+        &.collectionTile,
         .tileWrapper.collectionTile {
-            @include make-container();
+            @include make-container;
         }
 
         .tile.tile-advanced-static {
             & > div {
-                @include make-container();
+                @include make-container;
             }
 
             &.valuta-sito .tile-text {
@@ -82,6 +83,15 @@ body.section-homepage {
 
             a {
                 color: #000;
+
+                &:hover,
+                &:focus {
+                    .newsTitle {
+                        span {
+                            border-bottom: 1px solid #000;
+                        }
+                    }
+                }
             }
 
             .newsImage {
@@ -147,6 +157,13 @@ body.section-homepage {
                 display: block;
                 color: #fff;
                 padding: 20px;
+
+                &:hover,
+                &:focus {
+                    .valuta-sito-text {
+                        border-bottom: 1px solid #fff;
+                    }
+                }
             }
 
             p {
@@ -161,7 +178,7 @@ body.section-homepage {
             width: auto;
             height: 1.5em;
             vertical-align: top;
-            background-image: url(../images/rectangle-tool.svg);
+            background-image: url($img-path + 'rectangle-tool.svg');
             background-size: 4rem;
             background-repeat: no-repeat;
             background-position: center center;
@@ -169,51 +186,50 @@ body.section-homepage {
     }
 
     .aree-tematiche {
-        &, h3 {
-            padding-bottom: 20px;
-        }
+        padding-bottom: 40px;
 
         ul {
             @extend .list-inline;
             display: inline-flex;
             flex-flow: row wrap;
             @include make-row();
+            width: 100%;
 
             li {
                 @include make-sm-column(6);
                 @include make-md-column(3);
-                margin-bottom: 10px;
 
                 a {
                     display: block;
+                    overflow: auto;
                     border-top: 1px solid $gray-border;
                     font-weight: $bold;
-                    padding-top: 10px;
-                    padding-bottom: 10px;
+                    padding: 15px 10px;
 
-                    .aree-tematiche-item {
-                        margin-left: 20px;
-                    }
-
-                    &:before {
-                        display: inline-block;
-                        color: #000;
-                        width: 3rem;
-                        height: 3rem;
+                    .linkImage {
+                        width: 40px;
+                        float: left;
+                        padding-right: 10px;
                         text-align: center;
-                        font-size: 3rem;
-                        line-height: 3rem;
-                        font-weight: $regular;
+
+                        img {
+                            height: 100%;
+                            width: auto;
+                        }
                     }
 
-                    &:before { /* aggiungere classe per icona */
-                        @include make-fa('\1f4c4', #000);
+                    .linkText {
+                        width: calc(100% - 40px);
+                        padding-left: 10px;
+                        float: left;
                     }
 
                     &:focus,
                     &:hover {
-                        .aree-tematiche-item {
-                            border-bottom: 1px solid $brand-primary;
+                        .linkText {
+                            .title {
+                                border-bottom: 1px solid $brand-primary;
+                            }
                         }
                     }
                 }

@@ -68,4 +68,5 @@
     </value>
   </record>
 
+  <records interface="redturtle.agidtheme.controlpanel.interfaces.IRedturtleAgidthemeSettings" />
 </registry>

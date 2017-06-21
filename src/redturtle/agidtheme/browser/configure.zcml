@@ -36,12 +36,29 @@
       />
 
   <browser:page
+      name="homepage_smartlink_collection_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".homepage_smartlink_collection.BaseView"
+      layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
+      template="templates/homepage_smartlink_collection.pt"
+      />
+
+  <browser:page
       name="pages_tile_collection_renderer"
       permission="zope2.View"
       for="*"
       class=".pages_tile_collection.BaseView"
       layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
       template="templates/pages_tile_collection.pt"
+      />
+
+  <browser:viewlet
+      name="plone.belowcontenttitle.documentbyline"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+      class="plone.app.layout.viewlets.content.DocumentBylineViewlet"
+      permission="zope2.View"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
       />
 
   <browser:viewlet
@@ -78,4 +95,14 @@
       layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
       template="templates/news_renderer.pt"
   />
+
+  <browser:viewlet
+      name="redturtle.agidtheme.social"
+      manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+      class=".viewlets.SocialViewlet"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
+      template="templates/social_viewlet.pt"
+      permission="zope2.View"
+      />
+>>>>>>> 0c63b93b576dda4f12bbd0a60b9ac16000319b9c
 </configure>
