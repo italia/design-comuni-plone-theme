@@ -8,4 +8,4 @@ from collective.tiles.collection import _
 class BaseView(BrowserView):
     implements(ICollectionTileRenderer)
 
-    display_name = _("Homepage SmartLink collection")
+    display_name = _("Collezione SmartLink aree tematiche")
