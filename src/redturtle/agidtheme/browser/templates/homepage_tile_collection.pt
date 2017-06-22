@@ -10,7 +10,7 @@
         <h3 tal:define="title view/data/title|nothing;"
                      class="tileTitle"
                      tal:condition="title">${title}</h3>
-        <div class="tileBody">
+        <div class="tileBody news-collection">
             <p tal:condition="not:results"
              class="noResults"
              i18n:translate="tiles_collection_noresults">

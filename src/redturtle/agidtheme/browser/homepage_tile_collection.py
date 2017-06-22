@@ -8,4 +8,4 @@ from collective.tiles.collection import _
 class BaseView(BrowserView):
     implements(ICollectionTileRenderer)
 
-    display_name = _("Homepage tile collection")
+    display_name = _("Homepage news collection con immagine")

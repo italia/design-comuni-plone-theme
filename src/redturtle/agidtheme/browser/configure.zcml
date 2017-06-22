@@ -121,5 +121,4 @@
       template="templates/social_viewlet.pt"
       permission="zope2.View"
       />
->>>>>>> 0c63b93b576dda4f12bbd0a60b9ac16000319b9c
 </configure>
