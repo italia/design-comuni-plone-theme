@@ -3,3 +3,14 @@
     margin: 30px 0 40px;
     border-left: 9px solid $gray-desc-border;
 }
+
+#parent-fieldname-text {
+    a {
+        border-bottom: 1px solid $link-color;
+
+        &:hover,
+        &:focus {
+            border-bottom: 1px solid $link-hover-border-color;
+        }
+    }
+}
