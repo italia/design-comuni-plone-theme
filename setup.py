@@ -40,6 +40,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
+        'collective.smartlink',
         'collective.tiles.advancedstatic',
         'collective.tiles.collection',
         'plone.api',
@@ -48,7 +49,6 @@ setup(
         'Products.GenericSetup>=1.8.2',
         'redturtle.patterns.slider',
         'redturtle.tiles.management',
-        'redturtle.smartlink',
         'z3c.jbot',
     ],
     extras_require={
