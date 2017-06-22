@@ -6,30 +6,30 @@ $img-path: "++theme++redturtle.agid.theme/images/";
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-darker:            #2b2b2b;
-$gray-agid:              #303030;
-$gray-dark:              #313131;
-$gray:                   #515151;
-$gray-light:             #777;
-$gray-lighter:           #CCC;
-$gray-bg:                #EEE;
-$gray-row:               #E0E0E0;
-$gray-desc-border:       #c1c1c1;
-$gray-nav:               #4a4a4a;
-$gray-border:            #4a4a4a;
-$gray-documentByLine:    #666;
+$gray-darker:           #2b2b2b;
+$gray-agid:             #303030;
+$gray-dark:             #313131;
+$gray:                  #515151;
+$gray-light:            #777;
+$gray-lighter:          #CCC;
+$gray-bg:               #EEE;
+$gray-row:              #E0E0E0;
+$gray-desc-border:      #c1c1c1;
+$gray-nav:              #4a4a4a;
+$gray-border:           #4a4a4a;
+$gray-documentByLine:   #666;
 
 $brand-primary:         #CB1D15;
 $brand-success:         #5cb85c; // TODO: EDIT THIS
 $brand-info:            #5bc0de; // TODO: EDIT THIS
 $brand-warning:         #f0ad4e; // TODO: EDIT THIS
 $brand-danger:          #d9534f; // TODO: EDIT THIS
-$tr: 				 transparent;
+$tr: 				    transparent;
 $yellow:                #ECD838;
 
 $footer-bg:             #30373D;
 $footer-link:           #65DDE0;
-$footer-link-hover:     darken($footer-link, 5%);
+$footer-link-hover:     darken($footer-link, 25%);
 $footer-hr:             #979797;
 
 
