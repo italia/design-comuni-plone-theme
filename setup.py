@@ -40,6 +40,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
+        'collective.smartlink',
         'collective.tiles.advancedstatic',
         'collective.tiles.collection',
         'plone.api',
