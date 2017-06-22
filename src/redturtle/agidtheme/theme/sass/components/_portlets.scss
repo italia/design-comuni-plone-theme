@@ -61,6 +61,9 @@
                     &:focus {
                         text-decoration: underline;
                     }
+                    img.image-icon {
+                        display: none;
+                    }
                 }
 
                 &.navTreeFolderish {
