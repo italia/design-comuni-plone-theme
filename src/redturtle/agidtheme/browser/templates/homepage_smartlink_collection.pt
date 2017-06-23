@@ -7,45 +7,47 @@
       i18n:domain="collective.tiles.collection">
     <body>
         <metal:macro define-macro="collection-tile-macro">
-        <h3 tal:define="title view/data/title|nothing;"
-                     class="tileTitle"
-                     tal:condition="title">${title}</h3>
-        <div class="tileBody aree-tematiche">
-            <p tal:condition="not:results"
-             class="noResults"
-             i18n:translate="tiles_collection_noresults">
-            No results found
-            </p>
-            <ul class="tileContent" tal:condition="results">
-                <tal:results tal:repeat="obj results">
-                <li tal:define="oddrow repeat/obj/odd;
-                useView python:obj.portal_type in viewActions;
-                itemUrl python:useView and obj.getURL() + '/view' or obj.getURL();
-                item_wf_state obj/review_state;
-                item_wf_state_class python:'state-' + plone_view.normalizeString(item_wf_state);
-                item_type obj/portal_type;
-                item_type_class python:'contenttype-' + plone_view.normalizeString(item_type);"
-                tal:attributes="class python: oddrow and 'collectionItem even' or 'collectionItem odd'">
-                    <div class="linkWrapper">
-                        <a href="#"
-                           tal:attributes="href itemUrl;
-                           class string:tile $item_type_class $item_wf_state_class;
-                           title obj/Description">
-                            <div class="linkImage">
-                                <img class="link-icon"
-                                     tal:define="icon python:obj.getURL()+'/@@images/image/icon'"
-                                     tal:attributes="src string:$icon;">
-                            </div>
-                            <div class="linkText">
-                                <span class="title">
-                                   <span tal:replace="obj/Title"> Title </span>
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                </li>
-                </tal:results>
-            </ul>
+        <div class="aree-tematiche">
+            <h3 tal:define="title view/data/title|nothing;"
+                         class="tileTitle"
+                         tal:condition="title">${title}</h3>
+            <div class="tileBody">
+                <p tal:condition="not:results"
+                 class="noResults"
+                 i18n:translate="tiles_collection_noresults">
+                No results found
+                </p>
+                <ul class="tileContent" tal:condition="results">
+                    <tal:results tal:repeat="obj results">
+                    <li tal:define="oddrow repeat/obj/odd;
+                    useView python:obj.portal_type in viewActions;
+                    itemUrl python:useView and obj.getURL() + '/view' or obj.getURL();
+                    item_wf_state obj/review_state;
+                    item_wf_state_class python:'state-' + plone_view.normalizeString(item_wf_state);
+                    item_type obj/portal_type;
+                    item_type_class python:'contenttype-' + plone_view.normalizeString(item_type);"
+                    tal:attributes="class python: oddrow and 'collectionItem even' or 'collectionItem odd'">
+                        <div class="linkWrapper">
+                            <a href="#"
+                               tal:attributes="href itemUrl;
+                               class string:tile $item_type_class $item_wf_state_class;
+                               title obj/Description">
+                                <div class="linkImage">
+                                    <img class="link-icon"
+                                         tal:define="icon python:obj.getURL()+'/@@images/image/icon'"
+                                         tal:attributes="src string:$icon;">
+                                </div>
+                                <div class="linkText">
+                                    <span class="title">
+                                       <span tal:replace="obj/Title"> Title </span>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    </tal:results>
+                </ul>
+            </div>
         </div>
         </metal:macro>
     </body>
