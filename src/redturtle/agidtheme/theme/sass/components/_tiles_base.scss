@@ -11,4 +11,15 @@
 .sfondo-scuro {
     background: $tile-fascia-scura;
     color: #fff;
+
+    a {
+        color: #fff;
+        border-color: #fff;
+
+        &:focus,
+        &:hover {
+            color: #fff;
+            border-color: #fff;
+        }
+    }
 }
