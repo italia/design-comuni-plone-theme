@@ -6,6 +6,15 @@
 
 .sfondo-bianco {
     background: #fff;
+
+    a {
+        border-color: $link-color;
+
+        &:focus,
+        &:hover {
+            border-color: $link-hover-color;
+        }
+    }
 }
 
 .sfondo-scuro {
@@ -19,7 +28,7 @@
         &:focus,
         &:hover {
             color: #fff;
-            border-color: #fff;
+            border-color: $link-hover-border-color;
         }
     }
 }
