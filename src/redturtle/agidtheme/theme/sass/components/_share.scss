@@ -1,21 +1,113 @@
-.Share-reveal {
-    margin: 20px auto;
+.share {
+    margin: 0 auto 40px;
+    display: flex;
+    flex-flow: row nowrap;
 
-    a.Share-revealText {
+    .share-slider {
+        display: inline-block;
+    }
 
-        .Share-revealIcon {
-            background: $social-icon-bg;
-            color: #fff;
-            padding: 10px;
-        }
+    a.share-toggle {
+        display: inline-block;
+        text-align: center;
+    }
 
-        .Share-title {
-            background: $gray-bg;
-            padding: 10px;
+    .share-icon {
+        width: 45px;
+        height: 45px;
+        padding: 8px;
+        display: inline-block;
+        color: #fff;
+        text-align: center;
+
+        &:before {
+            @include make-ita('\1f4e2');
+            vertical-align: middle;
         }
     }
-}
 
-#share-options {
-    display: none;
+    .share-title {
+        background: $gray-bg;
+        padding: 10px 20px;
+        height: 45px;
+        display: inline-block;
+    }
+
+    .share-button {
+        display: inline-block;
+        background: $social-icon-bg;
+        width: 45px;
+        height: 45px;
+        color: #fff;
+    }
+
+    .share-options {
+        display: none;
+
+        ul.social-list {
+            list-style: none;
+            padding: 0;
+
+            li {
+                display: inline-block;
+                padding-right: 2px;
+
+                a {
+                    display: block;
+
+                    .u-hiddenVisually {
+                        @include sr-only;
+                    }
+
+                    .social {
+                        background: $brand-primary;
+                        display: inline-block;
+                        text-align: center;
+                        width: 45px;
+                        height: 45px;
+                        padding: 7px;
+
+                        &:before {
+                            font-size: 1.2em;
+                        }
+
+                        &.google:before {
+                            @include make-fa('\f0d5', #fff);
+                        }
+                        &.facebook:before {
+                            @include make-fa('\f09a', #fff);
+                        }
+                        &.twitter:before {
+                            @include make-fa('\f099', #fff);
+                        }
+                        &.youtube:before {
+                            @include make-fa('\f167', #fff);
+                        }
+                        &.whatsapp:before {
+                            @include make-fa('\f232', #fff);
+                        }
+                        &.linkedin:before {
+                            @include make-fa('\f0e1', #fff);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .open {
+        .share-options {
+            display: inline-block;
+            margin: 0;
+        }
+
+        .share-title {
+            display: none;
+        }
+
+        .share-icon {
+            color: $social-icon-bg;
+            background: $gray-bg;
+        }
+    }
 }
