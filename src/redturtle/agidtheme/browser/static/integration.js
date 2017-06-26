@@ -17,5 +17,19 @@ require([
           scrollTop: 0,
         }, 500);
     });
+
+    $('#portal-column-two').prepend($('.share'));
+
+    $('.share .share-toggle').on('click', function(e) {
+      e.preventDefault();
+      if ($('.share').hasClass('open')) {
+        $('.share').addClass('closed');
+      }
+      else {
+        $('.share').removeClass('closed');
+      }
+
+      $('.share').toggleClass('open');
+    });
   });
 });
