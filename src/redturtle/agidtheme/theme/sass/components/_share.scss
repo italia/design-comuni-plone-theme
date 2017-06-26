@@ -1,3 +1,10 @@
+body.template-tile_view,
+body.template-edit {
+    .share {
+        display: none;
+    }
+}
+
 .share {
     margin: 0 auto 40px;
     display: flex;

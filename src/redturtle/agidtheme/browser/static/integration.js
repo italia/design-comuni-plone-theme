@@ -25,7 +25,7 @@ require([
       $('.news-column').prepend($('.share'));
     }
     else {
-      $('.share').delete();
+      $('.share').remove();
     }
 
     $('.share .share-toggle').on('click', function(e) {

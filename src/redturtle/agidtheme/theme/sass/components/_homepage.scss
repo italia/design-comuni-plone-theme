@@ -3,10 +3,6 @@
 body.section-homepage {
     background: $gray-bg;
 
-    .share {
-        display: none;
-    }
-
     #portal-top {
         background: #fff;
     }
@@ -37,17 +33,6 @@ body.section-homepage {
         .tile-header {
             display: none;
         }
-
-        // &.collectionTile,
-        // .tileWrapper.collectionTile {
-        //     @include make-container;
-        // }
-        //
-        // .tile.tile-advanced-static {
-        //     & > div {
-        //         @include make-container;
-        //     }
-        // }
     }
 
     .news-collection {
