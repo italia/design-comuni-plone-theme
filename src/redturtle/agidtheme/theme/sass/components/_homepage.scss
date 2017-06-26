@@ -225,6 +225,62 @@ body.section-homepage {
         }
     }
 
+    .news-highlight {
+        @include make-container;
+        padding: 40px 50px 50px;
+
+        .tile-header {
+            display: block !important;
+            width: 50%;
+            @include clearfix;
+
+            .tileTitle {
+                float: left;
+            }
+
+            .news-date {
+                float: left;
+            }
+        }
+
+        .tile-content {
+            display: flex;
+            flex-flow: row wrap;
+
+            .news-infos {
+                width: 49%;
+                padding-right: 1%;
+
+                .news-title {
+                    margin: 2rem 0;
+                    font-size: 3rem;
+                    font-weight: $bold;
+                    line-height: 1.2em;
+
+                    a {
+                        &:focus,
+                        &:hover {
+                            border-bottom: 1px solid $link-hover-color;
+                        }
+                    }
+                }
+
+                .news-description {
+                    font-size: 2rem;
+                }
+            }
+
+            .item-image {
+                width: 49%;
+                padding-left: 1%;
+
+                img {
+                    float: right;
+                }
+            }
+        }
+    }
+
     #viewlet-below-content {
         display: none;
     }
