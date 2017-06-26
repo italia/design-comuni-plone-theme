@@ -10,17 +10,6 @@
                  tal:define="helper_view nocall:context/@@collection_tile_helpers">
       <div class="news-highlight"
            tal:define="news python: results and results[0] or None;">
-        <div class="tile-header">
-          <h3 tal:define="title view/data/title|nothing;"
-              class="tileTitle"
-              tal:condition="title">${title}</h3>
-          <div class="news-date"
-               tal:define="date python:helper_view.get_formatted_date(news)"
-               tal:condition="date"
-               i18n:domain="plonelocales">
-            ${date/day} <tal:month i18n:translate="">${date/month}</tal:month> ${date/year}
-          </div>
-        </div>
 
         <div class="tileBody">
           <p tal:condition="not:news"
@@ -34,6 +23,17 @@
                            title news/Title;
                            description news/Description">
             <div class="news-infos">
+              <div class="news-detail">
+                <h3 tal:define="title view/data/title|nothing;"
+                    class="tileTitle"
+                    tal:condition="title">${title}</h3>
+                <div class="news-date"
+                     tal:define="date python:helper_view.get_formatted_date(news)"
+                     tal:condition="date"
+                     i18n:domain="plonelocales">
+                  ${date/day} <tal:month i18n:translate="">${date/month}</tal:month> ${date/year}
+                </div>
+              </div>
               <div class="news-title"><a href="${news/getURL}" title="${title}">${title}</a></div>
               <div class="news-description" tal:condition="description"><span>${description}</span></div>
             </div>
