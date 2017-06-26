@@ -229,20 +229,6 @@ body.section-homepage {
         @include make-container;
         padding: 40px 50px 50px;
 
-        .tile-header {
-            display: block !important;
-            width: 50%;
-            @include clearfix;
-
-            .tileTitle {
-                float: left;
-            }
-
-            .news-date {
-                float: left;
-            }
-        }
-
         .tile-content {
             display: flex;
             flex-flow: row wrap;
@@ -250,6 +236,22 @@ body.section-homepage {
             .news-infos {
                 width: 49%;
                 padding-right: 1%;
+
+                .news-detail {
+                    @include clearfix;
+
+                    .tileTitle {
+                        float: left;
+                        font-size: 1.9rem;
+                        font-weight: $bold;
+                    }
+
+                    .news-date {
+                        float: left;
+                        font-size: 1.8rem;
+                        margin: 0 30px;
+                    }
+                }
 
                 .news-title {
                     margin: 2rem 0;

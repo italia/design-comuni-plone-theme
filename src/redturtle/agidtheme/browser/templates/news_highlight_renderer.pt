@@ -24,9 +24,9 @@
                            description news/Description">
             <div class="news-infos">
               <div class="news-detail">
-                <h3 tal:define="title view/data/title|nothing;"
+                <div tal:define="title view/data/title|nothing;"
                     class="tileTitle"
-                    tal:condition="title">${title}</h3>
+                    tal:condition="title">${title}</div>
                 <div class="news-date"
                      tal:define="date python:helper_view.get_formatted_date(news)"
                      tal:condition="date"
