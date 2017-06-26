@@ -5,11 +5,9 @@
 
     .share-slider {
         display: inline-block;
-    }
-
-    a.share-toggle {
-        display: inline-block;
-        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
     }
 
     .share-icon {
@@ -28,9 +26,18 @@
 
     .share-title {
         background: $gray-bg;
-        padding: 10px 20px;
-        height: 45px;
-        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        a.share-toggle {
+            padding: 10px 20px;
+            height: 45px;
+            display: block;
+            text-align: left;
+        }
     }
 
     .share-button {
@@ -42,7 +49,8 @@
     }
 
     .share-options {
-        display: none;
+        width: 0%;
+        overflow: hidden;
 
         ul.social-list {
             list-style: none;
@@ -98,17 +106,33 @@
 
     &.open {
         .share-options {
-            display: inline-block;
+            // display: inline-block;
+            transition: width $animation-speed ease-in-out;
+            width: 100%;
             margin: 0;
         }
 
         .share-title {
-            display: none;
+            // display: none;
+            transition: width $animation-speed ease-in-out;
+            width: 0%;
         }
 
         .share-icon {
             color: $social-icon-bg;
             background: $gray-bg;
+        }
+    }
+
+    &.closed {
+        .share-options {
+            transition: width $animation-speed ease-in-out;
+            width: 0%;
+        }
+
+        .share-title {
+            transition: width $animation-speed ease-in-out;
+            width: 100%;
         }
     }
 }

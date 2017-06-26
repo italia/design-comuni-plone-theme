@@ -22,6 +22,13 @@ require([
 
     $('.share .share-toggle').on('click', function(e) {
       e.preventDefault();
+      if ($('.share').hasClass('open')) {
+        $('.share').addClass('closed');
+      }
+      else {
+        $('.share').removeClass('closed');
+      }
+
       $('.share').toggleClass('open');
     });
   });

@@ -130,3 +130,6 @@ $container-md:                 $container-desktop;
 $container-large-desktop:      (1270px + $grid-gutter-width);
 //** For `$screen-lg-min` and up.
 $container-lg:                 $container-large-desktop - $grid-gutter-width;
+
+
+$animation-speed:              0.3s;
