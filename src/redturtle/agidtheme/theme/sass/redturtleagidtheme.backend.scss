@@ -18,6 +18,11 @@ select {
   font-size: inherit;
 }
 
+#portal-top #portal-header {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 // search
 #portal-searchbox {
     margin:0;
