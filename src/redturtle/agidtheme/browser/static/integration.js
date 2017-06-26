@@ -18,7 +18,15 @@ require([
         }, 500);
     });
 
-    $('#portal-column-two').prepend($('.share'));
+    if ($('#portal-column-two').length) {
+      $('#portal-column-two').prepend($('.share'));
+    }
+    else if ($('.news-column').length) {
+      $('.news-column').prepend($('.share'));
+    }
+    else {
+      $('.share').delete();
+    }
 
     $('.share .share-toggle').on('click', function(e) {
       e.preventDefault();
