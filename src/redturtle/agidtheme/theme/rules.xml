@@ -9,8 +9,9 @@
    <!-- Include the backend theme -->
    <xi:include href="backend.xml" />
 
-  <theme href="index.html" />
-
-  <xi:include href="redturtleagidtheme_rules.xml" />
+   <rules css:if-content="body.viewpermission-view, body.viewpermission-none">
+     <theme href="index.html" />
+     <xi:include href="redturtleagidtheme_rules.xml" />
+   </rules>
 
 </rules>

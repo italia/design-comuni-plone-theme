@@ -40,7 +40,7 @@
     <!-- We can't control the bundle from here due to include. Just hard code -->
     <after css:theme-children="head">
       <link rel="shortcut icon" type="image/x-icon"
-            href="barceloneta-favicon.ico" />
+            href="favicon.ico" />
       <link rel="stylesheet" href="../++theme++barceloneta/less/barceloneta-compiled.css" />
 
 
@@ -137,7 +137,31 @@
 
     <!-- Content header -->
     <drop css:theme="#portal-top" />
-    <drop css:theme="#portal-footer-wrapper" />
+    <!--<drop css:theme="#portal-footer-wrapper" />-->
+
+    <!-- Add site header -->
+    <after css:theme-children="#content-header" css:content="#portal-top" />
+    <after css:theme-children="#content-header" css:content="#portal-mainnavigation" />
+
+    <!-- aggiungo un wrapper in testata per social+search -->
+    <replace css:content="#header-social">
+      <div class="search-social-wrapper">
+        <xsl:copy-of select="//*[@id='header-social']"/>
+        <xsl:copy-of select="//*[@id='portal-searchbox']"/>
+      </div>
+    </replace>
+    <!-- cancello la search originale -->
+    <drop css:content="#portal-header #portal-searchbox" />
+
+    <!-- Add site footer -->
+    <replace css:theme="#portal-footer-wrapper" css:content="#portal-footer-wrapper" />
+
+    <!-- aggiungo la freccia per il mobile -->
+    <after css:theme="#portal-footer-wrapper">
+      <a href="javascript:" aria-hidden="true" id="return-to-top" title="Return to top" style="display: none">
+        <span class="fa fa-chevron-up"></span>
+      </a>
+    </after>
 
   </rules>
 
