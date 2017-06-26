@@ -67,6 +67,8 @@
     </div>
   </replace>
 
+  <drop css:content="#portal-column-two" css:if-content="body.template-tile_view" />
+
   <!-- cancello le colonne originali -->
   <drop css:content="body > aside#portal-column-one" />
   <drop css:content="body > aside#portal-column-two" />
