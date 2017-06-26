@@ -25,6 +25,21 @@ class HelpersView(BrowserView):
             # The object doesn't have an image field
             return ""
 
+    def get_formatted_date(self, item):
+        '''
+        return a formatted date
+        '''
+        effective = item.effective
+        if effective.year() == 1969:
+            # not yet published
+            return {}
+        return {
+            'weekday': u'weekday_{0}'.format(effective.aDay().lower()),
+            'month': u'month_{0}'.format(effective.aMonth().lower()),
+            'day': effective.day(),
+            'year': effective.year()
+        }
+
 
 class NewsView(BrowserView):
     """
@@ -42,3 +57,21 @@ class SightsView(BrowserView):
     implements(ICollectionTileRenderer)
 
     display_name = _("Sights layout")
+
+
+class NewsHighlightView(BrowserView):
+    """
+    Custom view that shows an highlighted news
+    """
+    implements(ICollectionTileRenderer)
+
+    display_name = _("News highlight")
+
+
+class NewsBigPhotoView(BrowserView):
+    """
+    Custom view that shows a news with a big photo on the background
+    """
+    implements(ICollectionTileRenderer)
+
+    display_name = _("News with big photo")

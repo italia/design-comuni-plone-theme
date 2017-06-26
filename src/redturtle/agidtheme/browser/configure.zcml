@@ -113,6 +113,24 @@
       template="templates/sights_renderer.pt"
   />
 
+  <browser:page
+      name="news_highlight_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".tile_collection_renderers.NewsHighlightView"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
+      template="templates/news_highlight_renderer.pt"
+  />
+
+  <browser:page
+      name="news_big_photo_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".tile_collection_renderers.NewsBigPhotoView"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
+      template="templates/news_big_photo_renderer.pt"
+  />
+
   <browser:viewlet
       name="redturtle.agidtheme.social"
       manager="plone.app.layout.viewlets.interfaces.IAboveContent"
