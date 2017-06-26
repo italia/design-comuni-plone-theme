@@ -3,6 +3,10 @@
 body.section-homepage {
     background: $gray-bg;
 
+    .share {
+        display: none;
+    }
+
     #portal-top {
         background: #fff;
     }
