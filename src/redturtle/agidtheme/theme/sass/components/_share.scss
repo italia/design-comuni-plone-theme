@@ -40,10 +40,14 @@ body.template-edit {
         top: 0;
 
         a.share-toggle {
-            padding: 10px 20px;
+            padding: 6px 20px;
             height: 45px;
             display: block;
-            text-align: left;
+            text-align: right;
+
+            span {
+                font-size: 1.2em;
+            }
         }
     }
 
