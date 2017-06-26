@@ -1,13 +1,138 @@
-.Share-reveal {
-    background: $gray-bg;
-    padding: 10px;
-    margin: 20px auto;
+.share {
+    margin: 0 auto 40px;
+    display: flex;
+    flex-flow: row nowrap;
 
-    a {
-        display: block;
+    .share-slider {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
     }
-}
 
-#share-options {
-    display: none;
+    .share-icon {
+        width: 45px;
+        height: 45px;
+        padding: 8px;
+        display: inline-block;
+        color: #fff;
+        text-align: center;
+
+        &:before {
+            @include make-ita('\1f4e2');
+            vertical-align: middle;
+        }
+    }
+
+    .share-title {
+        background: $gray-bg;
+        width: 100%;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        a.share-toggle {
+            padding: 10px 20px;
+            height: 45px;
+            display: block;
+            text-align: left;
+        }
+    }
+
+    .share-button {
+        display: inline-block;
+        background: $social-icon-bg;
+        width: 45px;
+        height: 45px;
+        color: #fff;
+    }
+
+    .share-options {
+        width: 0%;
+        overflow: hidden;
+
+        ul.social-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                display: inline-block;
+                padding-right: 2px;
+
+                a {
+                    display: block;
+
+                    .u-hiddenVisually {
+                        @include sr-only;
+                    }
+
+                    .social {
+                        background: $brand-primary;
+                        display: inline-block;
+                        text-align: center;
+                        width: 45px;
+                        height: 45px;
+                        padding: 7px;
+
+                        &:before {
+                            font-size: 1.2em;
+                        }
+
+                        &.google:before {
+                            @include make-fa('\f0d5', #fff);
+                        }
+                        &.facebook:before {
+                            @include make-fa('\f09a', #fff);
+                        }
+                        &.twitter:before {
+                            @include make-fa('\f099', #fff);
+                        }
+                        &.youtube:before {
+                            @include make-fa('\f167', #fff);
+                        }
+                        &.whatsapp:before {
+                            @include make-fa('\f232', #fff);
+                        }
+                        &.linkedin:before {
+                            @include make-fa('\f0e1', #fff);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.open {
+        .share-options {
+            // display: inline-block;
+            transition: width $animation-speed ease-in-out;
+            width: 100%;
+            margin: 0;
+        }
+
+        .share-title {
+            // display: none;
+            transition: width $animation-speed ease-in-out;
+            width: 0%;
+        }
+
+        .share-icon {
+            color: $social-icon-bg;
+            background: $gray-bg;
+        }
+    }
+
+    &.closed {
+        .share-options {
+            transition: width $animation-speed ease-in-out;
+            width: 0%;
+        }
+
+        .share-title {
+            transition: width $animation-speed ease-in-out;
+            width: 100%;
+        }
+    }
 }

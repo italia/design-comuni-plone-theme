@@ -3,3 +3,32 @@
 .colonna-1-di-4         { @include make-sm-column(6); @include make-md-column(3); }
 .colonna-1-di-5         { width: 20%; float: left; }
 .colonna-1-di-6         { @include make-md-column(2); @include make-sm-column(4); }
+
+.sfondo-bianco {
+    background: #fff;
+
+    a {
+        border-color: $link-color;
+
+        &:focus,
+        &:hover {
+            border-color: $link-hover-color;
+        }
+    }
+}
+
+.sfondo-scuro {
+    background: $tile-fascia-scura;
+    color: #fff;
+
+    a {
+        color: #fff;
+        border-color: #fff;
+
+        &:focus,
+        &:hover {
+            color: #fff;
+            border-color: $link-hover-border-color;
+        }
+    }
+}

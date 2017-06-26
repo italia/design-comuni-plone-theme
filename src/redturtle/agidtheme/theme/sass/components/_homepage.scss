@@ -3,6 +3,10 @@
 body.section-homepage {
     background: $gray-bg;
 
+    .share {
+        display: none;
+    }
+
     #portal-top {
         background: #fff;
     }
@@ -34,24 +38,20 @@ body.section-homepage {
             display: none;
         }
 
-        &.collectionTile,
-        .tileWrapper.collectionTile {
-            @include make-container;
-        }
-
-        .tile.tile-advanced-static {
-            & > div {
-                @include make-container;
-            }
-
-            &.valuta-sito .tile-text {
-                padding-left: 0;
-                padding-right: 0;
-            }
-        }
+        // &.collectionTile,
+        // .tileWrapper.collectionTile {
+        //     @include make-container;
+        // }
+        //
+        // .tile.tile-advanced-static {
+        //     & > div {
+        //         @include make-container;
+        //     }
+        // }
     }
 
     .news-collection {
+        @include make-container;
         position: relative;
         overflow: auto;
         padding: 20px 10px;
@@ -73,7 +73,9 @@ body.section-homepage {
             right: 2%;
 
             a {
-                border-bottom: 1px solid $brand-primary;
+                font-size: 2rem;
+                font-weight: $bold;
+                border-bottom: 1px solid;
             }
         }
 
@@ -186,6 +188,7 @@ body.section-homepage {
     }
 
     .aree-tematiche {
+        @include make-container;
         padding-bottom: 40px;
 
         ul {
