@@ -41,13 +41,13 @@
     <after css:theme-children="head">
       <link rel="shortcut icon" type="image/x-icon"
             href="barceloneta-favicon.ico" />
-      <link rel="stylesheet" href="/++theme++barceloneta/less/barceloneta-compiled.css" />
+      <link rel="stylesheet" href="../++theme++barceloneta/less/barceloneta-compiled.css" />
 
 
       <script src="https://use.fontawesome.com/22e75ec526.js"></script>
 
       <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600" rel="stylesheet"/>
-      <link rel="stylesheet" href="/++theme++redturtle.agid.theme/css/redturtleagidtheme.backend.css" />
+      <link rel="stylesheet" href="../++theme++redturtle.agid.theme/css/redturtleagidtheme.backend.css" />
     </after>
 
     <rules css:if-content="#portal-top">
