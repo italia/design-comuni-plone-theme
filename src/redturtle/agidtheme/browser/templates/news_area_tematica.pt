@@ -27,25 +27,25 @@
                               item_type obj/portal_type;
                               item_type_class python:'contenttype-' + plone_view.normalizeString(item_type);"
                   tal:attributes="class python:oddrow and 'collectionItem even' or 'collectionItem odd'">
-                  <a href="#"
-                     tal:attributes="href itemUrl;
-                                     class string:tile $item_type_class $item_wf_state_class;
-                                     title obj/Description">
-                      <div class="newsDate"
-                           tal:condition="python:view.data.get('show_dates', False)"
-                           tal:define="obj_date obj/Date"
-                           tal:content="python:toLocalizedTime(obj_date)">
-                          Date
-                      </div>
-                      <div class="newsText">
-                          <div class="newsTitle">
-                              <span tal:replace="obj/Title"> Title </span>
-                          </div>
-                          <div class="newsDescription">
-                              <span tal:replace="obj/Description"> Description </span>
-                          </div>
-                      </div>
-                  </a>
+                    <div class="newsDate"
+                         tal:condition="python:view.data.get('show_dates', False)"
+                         tal:define="obj_date obj/Date"
+                         tal:content="python:toLocalizedTime(obj_date)">
+                        Date
+                    </div>
+                    <div class="newsText">
+                        <div class="newsTitle">
+                          <a href="#"
+                             tal:attributes="href itemUrl;
+                                             class string:tile $item_type_class $item_wf_state_class;
+                                             title obj/Description">
+                            <span tal:replace="obj/Title"> Title </span>
+                          </a>
+                        </div>
+                        <div class="newsDescription">
+                            <span tal:replace="obj/Description"> Description </span>
+                        </div>
+                    </div>
               </li>
             </tal:results>
           </ul>
