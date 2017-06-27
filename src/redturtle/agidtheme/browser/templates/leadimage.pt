@@ -7,7 +7,7 @@
     <a tal:define="here_url context/@@plone_context_state/object_url;
                    large_image python: scale_func.scale('image', scale='large');"
         class="pat-plone-modal" data-pat-plone-modal="image: true"
-        tal:attributes="href large_image/url; data-modal-srcset large_image/srcset_attribute">
+        tal:attributes="href large_image/url">
       <img tal:replace="structure python: scaled_image.tag(css_class='newsImage')" />
       <figcaption tal:condition="context/image_caption|nothing"
           tal:content="context/image_caption">
