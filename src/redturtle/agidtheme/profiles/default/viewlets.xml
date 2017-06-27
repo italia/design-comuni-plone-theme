@@ -12,7 +12,10 @@
     <viewlet name="plone.abovecontenttitle.documentactions" />
     <viewlet name="plone.belowcontentbody.relateditems" />
   </hidden>
-<hidden manager="plone.belowcontenttitle" skinname="Plone Default">
+  <hidden manager="plone.belowcontenttitle" skinname="Plone Default">
     <viewlet name="plone.belowcontenttitle.documentbyline" />
+  </hidden>
+  <hidden manager="plone.abovecontenttitle" skinname="Plone Default">
+    <viewlet name="contentleadimage" />
   </hidden>
 </object>

@@ -1,4 +1,6 @@
 body.template-tile_view,
+body.template-homepage_view,
+body.template-landing_aree_tematiche_view,
 body.template-edit {
     .share {
         display: none;
@@ -40,10 +42,14 @@ body.template-edit {
         top: 0;
 
         a.share-toggle {
-            padding: 10px 20px;
+            padding: 6px 20px;
             height: 45px;
             display: block;
-            text-align: left;
+            text-align: right;
+
+            span {
+                font-size: 1.2em;
+            }
         }
     }
 

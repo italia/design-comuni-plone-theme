@@ -33,6 +33,9 @@
     <before css:theme-children="head" css:content="head script" />
   </rules>
 
+  <drop css:content="#portal-column-two" css:if-content="body.template-tile_view" />
+  <before css:theme-children="#content-core" css:if-content="body.template-newsitem_view" css:content=".leadImage" />
+
   <!-- Copy over the id/class attributes on the body tag. This is important for per-section styling -->
   <copy attributes="*" css:content="body" css:theme="body" />
 
@@ -67,7 +70,6 @@
     </div>
   </replace>
 
-  <drop css:content="#portal-column-two" css:if-content="body.template-tile_view" />
 
   <!-- cancello le colonne originali -->
   <drop css:content="body > aside#portal-column-one" />
@@ -75,12 +77,12 @@
 
 
   <!-- aggiungo la freccia per il mobile -->
-    <after css:content="#portal-footer-wrapper">
-      <a href="javascript:" aria-hidden="true" id="return-to-top" title="Return to top" style="display: none">
-        <span class="fa fa-chevron-up"></span>
-      </a>
-    </after>
+  <after css:content="#portal-footer-wrapper">
+    <a href="javascript:" aria-hidden="true" id="return-to-top" title="Return to top" style="display: none">
+      <span class="fa fa-chevron-up"></span>
+    </a>
+  </after>
 
-    <replace css:theme="body" css:content="body" />
+  <replace css:theme="body" css:content="body" />
 
 </rules>
