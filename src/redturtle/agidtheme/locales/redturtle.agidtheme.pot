@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-06-16 15:04+0000\n"
+"POT-Creation-Date: 2017-06-27 09:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,20 +17,44 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: redturtle.agidtheme\n"
 
+#: ../browser/homepage_smartlink_collection.py:11
+msgid "Collezione SmartLink aree tematiche"
+msgstr ""
+
 #: ../profiles/default/controlpanel.xml
 msgid "Configurazione tema agid"
 msgstr ""
 
 #: ../browser/homepage_tile_collection.py:11
-msgid "Homepage tile collection"
+msgid "Homepage news collection con immagine"
 msgstr ""
 
 #: ../configure.zcml:33
 msgid "Installs the Plone theme package redturtle.agidtheme."
 msgstr ""
 
+#: ../browser/pages_tile_collection.py:11
+msgid "Landing page aree tematiche"
+msgstr ""
+
+#: ../browser/tile_collection_renderers.py:68
+msgid "News highlight"
+msgstr ""
+
+#: ../browser/tile_collection_renderers.py:50
+msgid "News layout"
+msgstr ""
+
+#: ../browser/tile_collection_renderers.py:77
+msgid "News with big photo"
+msgstr ""
+
 #: ../configure.zcml:33
 msgid "RedTurtle Agid Theme"
+msgstr ""
+
+#: ../browser/tile_collection_renderers.py:59
+msgid "Sights layout"
 msgstr ""
 
 #: ../configure.zcml:42
@@ -42,21 +66,59 @@ msgid "Uninstalls the Plone theme package redturtle.agidtheme."
 msgstr ""
 
 #. Default: "Contents that can be enable for sharing."
-#: ../controlpanel/interfaces.py:15
+#: ../controlpanel/interfaces.py:12
 msgid "description_available_portaltypes"
 msgstr ""
 
 #. Default: "Socials that can be enabled for sharing contents."
-#: ../controlpanel/interfaces.py:28
+#: ../controlpanel/interfaces.py:25
 msgid "description_available_socials"
 msgstr ""
 
+#. Default: "Header link label"
+#: ../controlpanel/interfaces.py:36
+msgid "header_link_label"
+msgstr ""
+
+#. Default: "Label for the link in the header of the site"
+#: ../controlpanel/interfaces.py:38
+msgid "header_link_label_desc"
+msgstr ""
+
+#. Default: "Header link url"
+#: ../controlpanel/interfaces.py:44
+msgid "header_link_url"
+msgstr ""
+
+#. Default: "URL of the link in the header"
+#: ../controlpanel/interfaces.py:46
+msgid "header_link_url_desc"
+msgstr ""
+
 #. Default: "Available content types"
-#: ../controlpanel/interfaces.py:13
+#: ../controlpanel/interfaces.py:10
 msgid "heading_available_portaltypes"
 msgstr ""
 
 #. Default: "Available socials"
-#: ../controlpanel/interfaces.py:26
+#: ../controlpanel/interfaces.py:23
 msgid "heading_available_socials"
+msgstr ""
+
+#. Default: "Keep reading"
+#: ../browser/templates/news_big_photo_renderer.pt:31
+msgid "keep_reading_label"
+msgstr ""
+
+#. Default: "More…"
+#: ../browser/templates/news_renderer.pt:18
+#: ../browser/templates/sights_renderer.pt:39
+msgid "more_url"
+msgstr ""
+
+#. Default: "No results found"
+#: ../browser/templates/news_big_photo_renderer.pt:15
+#: ../browser/templates/news_highlight_renderer.pt:15
+#: ../browser/templates/news_renderer.pt:26
+msgid "tiles_collection_noresults"
 msgstr ""
