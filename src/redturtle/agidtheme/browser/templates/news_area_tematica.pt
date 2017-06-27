@@ -33,7 +33,7 @@
                          tal:condition="python:view.data.get('show_dates', False)"
                          i18n:domain="plonelocales">
                          <div class="newsDateMonth">
-                            <tal:month i18n:translate="">${date/month}</tal:month>
+                            <tal:month i18n:translate="">${date/month_abbr}</tal:month>
                          </div>
                          <div class="newsDateDay">${date/day}</div>
                          <div class="newsDateYear">${date/year}</div>

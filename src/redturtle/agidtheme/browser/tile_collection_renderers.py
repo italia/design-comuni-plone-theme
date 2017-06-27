@@ -36,6 +36,7 @@ class HelpersView(BrowserView):
         return {
             'weekday': u'weekday_{0}'.format(effective.aDay().lower()),
             'month': u'month_{0}'.format(effective.aMonth().lower()),
+            'month_abbr': u'month_{0}_abbr'.format(effective.aMonth().lower()),
             'day': effective.day(),
             'year': effective.year()
         }
