@@ -75,3 +75,12 @@ class NewsBigPhotoView(BrowserView):
     implements(ICollectionTileRenderer)
 
     display_name = _("News with big photo")
+
+
+class NewsAreaTematicaView(BrowserView):
+    """
+    Custom view that shows news in area tematica
+    """
+    implements(ICollectionTileRenderer)
+
+    display_name = _("News in area tematica")
