@@ -38,12 +38,16 @@
     a {
       color: $text-color;
 
+      span {
+          border-bottom: 3px solid $tr;
+      }
+
       &:focus,
       &:hover {
         border:0;
 
         span {
-          border-bottom: 3px solid $text-color;
+          border-bottom-color: $text-color;
         }
       }
     }
