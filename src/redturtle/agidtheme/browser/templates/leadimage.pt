@@ -1,0 +1,18 @@
+<div class="leadImage"
+     tal:condition="view/available"
+     tal:define="scale_func context/@@images;
+                 scaled_image python: getattr(context.aq_explicit, 'image', False) and scale_func.scale('image', scale='mini')">
+
+  <figure class="newsImageContainer" tal:condition="python: scaled_image">
+    <a tal:define="here_url context/@@plone_context_state/object_url;
+                   large_image python: scale_func.scale('image', scale='large');"
+        class="pat-plone-modal" data-pat-plone-modal="image: true"
+        tal:attributes="href large_image/url; data-modal-srcset large_image/srcset_attribute">
+      <img tal:replace="structure python: scaled_image.tag(css_class='newsImage')" />
+      <figcaption tal:condition="context/image_caption|nothing"
+          tal:content="context/image_caption">
+      </figcaption>
+    </a>
+  </figure>
+
+</div>
