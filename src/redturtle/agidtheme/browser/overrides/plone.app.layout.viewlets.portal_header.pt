@@ -1,7 +1,14 @@
+<?python
+from plone import api
+from redturtle.agidtheme.controlpanel.interfaces import IRedturtleAgidthemeSettings
+header_link_label = api.portal.get_registry_record('header_link_label', interface=IRedturtleAgidthemeSettings)
+header_link_url = api.portal.get_registry_record('header_link_url', interface=IRedturtleAgidthemeSettings)
+?>
+
 <div id="header-banner">
   <div class="header-banner-inner">
     <div class="header-banner-owner">
-      <a href="http://www.regione.emilia-romagna.it" target="_blank">Regione Emilia-Romagna</a>
+      <a href="${header_link_url}" target="_blank">${header_link_label}</a>
     </div>
   </div>
 </div>

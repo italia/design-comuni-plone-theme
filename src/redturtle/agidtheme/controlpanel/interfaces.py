@@ -31,3 +31,19 @@ class IRedturtleAgidthemeSettings(model.Schema):
             vocabulary='redturtle.agidtheme.vocabularies.SocialsVocabulary'
         )
     )
+
+    header_link_label = schema.TextLine(
+        title=_(u'header_link_label',
+                default=u'Header link label'),
+        description=_(u'header_link_label_desc',
+                      default=u'Label for the link in the header of the site'),
+        required=False
+    )
+
+    header_link_url = schema.URI(
+        title=_(u'header_link_url',
+                default=u'Header link url'),
+        description=_(u'header_link_url_desc',
+                      default=u'URL of the link in the header'),
+        required=False
+    )
