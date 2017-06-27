@@ -32,7 +32,11 @@
                          tal:define="date python:helper_view.get_formatted_date(obj)"
                          tal:condition="python:view.data.get('show_dates', False)"
                          i18n:domain="plonelocales">
-                      ${date/day} <tal:month i18n:translate="">${date/month}</tal:month> ${date/year}
+                         <div class="newsDateMonth">
+                            <tal:month i18n:translate="">${date/month}</tal:month>
+                         </div>
+                         <div class="newsDateDay">${date/day}</div>
+                         <div class="newsDateYear">${date/year}</div>
                     </div>
                     <div class="newsText">
                         <div class="newsTitle">
