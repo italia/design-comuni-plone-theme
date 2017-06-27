@@ -166,6 +166,15 @@
       manager="plone.app.layout.viewlets.interfaces.IAboveContentBody"
       template="templates/leadimage.pt"
       permission="zope2.View"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
       />
+
+  <!--<browser:viewlet
+    name="redturtle.path_bar"
+    manager="plone.app.layout.viewlets.interfaces.IMainNavigation"
+    class="plone.app.layout.viewlets.common.PathBarViewlet"
+    permission="zope2.View"
+    layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
+    />-->
 
 </configure>

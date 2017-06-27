@@ -14,6 +14,7 @@
         li.collectionItem {
             border-top: 1px solid $gray-desc-border;
             padding: 2rem 0;
+            @include clearfix;
 
             .newsDate {
                 float: left;
