@@ -44,7 +44,7 @@
 
                         &:focus,
                         &:hover {
-
+                            border-bottom: 1px solid $link-hover-color;
                         }
                     }
                 }

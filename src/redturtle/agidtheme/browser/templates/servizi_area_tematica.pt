@@ -26,7 +26,7 @@
                               item_wf_state_class python:'state-' + plone_view.normalizeString(item_wf_state);
                               item_type obj/portal_type;
                               item_type_class python:'contenttype-' + plone_view.normalizeString(item_type);"
-                  tal:attributes="class python:oddrow and 'collectionItem even' or 'collectionItem odd'">
+                   tal:attributes="class python: 'colonna-1-di-3 ' + (oddrow and 'collectionItem even' or 'collectionItem odd')">
                   <a href="#"
                      tal:attributes="href itemUrl;
                                      class string:tile $item_type_class $item_wf_state_class;
