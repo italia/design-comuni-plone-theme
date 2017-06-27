@@ -31,12 +31,12 @@
                      tal:attributes="href itemUrl;
                                      class string:tile $item_type_class $item_wf_state_class;
                                      title obj/Description">
-                      <span class="tileItemDetails"
-                            tal:condition="python:view.data.get('show_dates', False)"
-                            tal:define="obj_date obj/Date"
-                            tal:content="python:toLocalizedTime(obj_date)">
+                      <div class="newsDate"
+                           tal:condition="python:view.data.get('show_dates', False)"
+                           tal:define="obj_date obj/Date"
+                           tal:content="python:toLocalizedTime(obj_date)">
                           Date
-                      </span>
+                      </div>
                       <div class="newsText">
                           <div class="newsTitle">
                               <span tal:replace="obj/Title"> Title </span>
