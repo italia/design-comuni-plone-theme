@@ -1,0 +1,61 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="collective.tiles.collection">
+  <body>
+    <metal:macro define-macro="collection-tile-macro">
+      <h3 tal:define="title view/data/title|nothing;"
+          class="tileTitle"
+          tal:condition="title">${title}</h3>
+      <div class="tileBody">
+        <p tal:condition="not:results"
+           class="noResults"
+           i18n:translate="tiles_collection_noresults">
+         No results found
+        </p>
+        <ul class="tileContent" tal:condition="results">
+          <tal:results tal:repeat="obj results">
+            <li tal:define="oddrow repeat/obj/odd;
+                            useView python:obj.portal_type in viewActions;
+                            itemUrl python:useView and obj.getURL() + '/view' or obj.getURL();
+                            item_wf_state obj/review_state;
+                            item_wf_state_class python:'state-' + plone_view.normalizeString(item_wf_state);
+                            item_type obj/portal_type;
+                            item_type_class python:'contenttype-' + plone_view.normalizeString(item_type);"
+                tal:attributes="class python:oddrow and 'collectionItem even' or 'collectionItem odd'">
+                <a href="#"
+                   tal:attributes="href itemUrl;
+                                   class string:tile $item_type_class $item_wf_state_class;
+                                   title obj/Description">
+                    <img class="image-icon"
+                       tal:define="thumb python:obj.getURL()+'/@@images/image/icon'"
+                       tal:condition=" obj/getIcon"
+                       tal:attributes="href obj/getURL;
+                                       src  string:$thumb;">
+                    <span tal:replace="obj/Title">
+                     Title </span>
+                    <span class="tileItemDetails"
+                          tal:condition="python:view.data.get('show_dates', False)"
+                          tal:define="obj_date obj/Date"
+                          tal:content="python:toLocalizedTime(obj_date)">
+                        Date
+                    </span>
+                </a>
+            </li>
+          </tal:results>
+        </ul>
+        <div class="showMore" tal:condition="view/data/show_more">
+          <a href="${collection/absolute_url}"
+             tal:define="show_more_label view/data/show_more_label|nothing">
+            <span tal:condition="not:show_more_label"
+                  i18n:translate="more_url">More&hellip;</span>
+            <span tal:condition="show_more_label">${show_more_label}</span>
+          </a>
+        </div>
+      </div>
+    </metal:macro>
+  </body>
+</html>

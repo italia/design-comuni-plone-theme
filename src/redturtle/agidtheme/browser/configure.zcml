@@ -149,6 +149,15 @@
       template="templates/news_area_tematica.pt"
       />
 
+  <browser:page
+      name="servizi_area_tematica_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".tile_collection_renderers.ServiziAreaTematicaView"
+      layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
+      template="templates/servizi_area_tematica.pt"
+      />
+
   <browser:viewlet
       name="contentleadimage"
       for="plone.app.contenttypes.behaviors.leadimage.ILeadImage"

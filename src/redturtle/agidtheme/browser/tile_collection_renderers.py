@@ -85,3 +85,12 @@ class NewsAreaTematicaView(BrowserView):
     implements(ICollectionTileRenderer)
 
     display_name = _("News in area tematica")
+
+
+class ServiziAreaTematicaView(BrowserView):
+    """
+    Custom view that shows servizi in area tematica
+    """
+    implements(ICollectionTileRenderer)
+
+    display_name = _("Servizi in area tematica")
