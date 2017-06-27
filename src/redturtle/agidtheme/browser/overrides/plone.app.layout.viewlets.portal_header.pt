@@ -4,9 +4,9 @@ from redturtle.agidtheme.controlpanel.interfaces import IRedturtleAgidthemeSetti
 header_link_label = api.portal.get_registry_record('header_link_label', interface=IRedturtleAgidthemeSettings)
 header_link_url = api.portal.get_registry_record('header_link_url', interface=IRedturtleAgidthemeSettings)
 if not header_link_label:
-    header_link_label = u'Kuté.it'
+    header_link_label = 'Governo Italiano'
 if not header_link_url:
-    header_link_url = u'http://www.kute.it'
+    header_link_url = 'http://www.governo.it'
 ?>
 
 <div id="header-banner">
