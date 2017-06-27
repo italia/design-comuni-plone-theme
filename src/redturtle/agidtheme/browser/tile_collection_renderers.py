@@ -36,6 +36,7 @@ class HelpersView(BrowserView):
         return {
             'weekday': u'weekday_{0}'.format(effective.aDay().lower()),
             'month': u'month_{0}'.format(effective.aMonth().lower()),
+            'month_abbr': u'month_{0}_abbr'.format(effective.aMonth().lower()),
             'day': effective.day(),
             'year': effective.year()
         }
@@ -75,3 +76,12 @@ class NewsBigPhotoView(BrowserView):
     implements(ICollectionTileRenderer)
 
     display_name = _("News with big photo")
+
+
+class NewsAreaTematicaView(BrowserView):
+    """
+    Custom view that shows news in area tematica
+    """
+    implements(ICollectionTileRenderer)
+
+    display_name = _("News in area tematica")

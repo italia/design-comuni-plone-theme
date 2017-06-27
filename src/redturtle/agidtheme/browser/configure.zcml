@@ -140,6 +140,15 @@
       permission="zope2.View"
       />
 
+  <browser:page
+      name="news_area_tematica_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".tile_collection_renderers.NewsAreaTematicaView"
+      layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
+      template="templates/news_area_tematica.pt"
+      />
+
   <browser:viewlet
       name="contentleadimage"
       for="plone.app.contenttypes.behaviors.leadimage.ILeadImage"
