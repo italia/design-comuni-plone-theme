@@ -1,0 +1,54 @@
+
+.news-area-tematica {
+    margin: 3rem 0;
+
+    ul.tileContent {
+        margin: 2rem 0 0;
+        padding: 0;
+        list-style: outside none;
+
+        li.collectionItem {
+            border-top: 1px solid $gray-desc-border;
+            padding: 2rem 0;
+
+            .newsDate {
+                float: left;
+                border: 1px solid $gray-desc-border;
+                border-radius: 5px;
+                background-color: $gray-bg;
+                font-weight: $bold;
+                text-align: center;
+                padding: 5px 10px;
+                margin: 5px 30px 10px 0;
+                width: 60px;
+                height: 80px;
+
+                .newsDateYear,
+                .newsDateMonth {
+                    text-transform: uppercase;
+                    font-size: 1.5rem;
+                    line-height: 1em;
+                }
+                .newsDateDay {
+                    font-size: 3rem;
+                    line-height: 1em;
+                }
+            }
+            .newsText {
+                .newsTitle {
+
+                    font-weight: $bold;
+                    font-size: 2rem;
+
+                    a {
+
+                        &:focus,
+                        &:hover {
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
