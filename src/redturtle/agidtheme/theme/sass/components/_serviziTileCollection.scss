@@ -28,11 +28,12 @@
             position: relative;
 
             a {
-                font-weight: $bold;
-                font-size: 2rem;
+                line-height: 1em;
+                color: $text-color;
 
                 &:focus,
                 &:hover {
+                    color: $link-hover-color;
                     border-bottom: 1px solid $link-hover-color;
                 }
             }
