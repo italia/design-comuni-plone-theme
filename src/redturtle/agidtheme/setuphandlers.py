@@ -18,7 +18,7 @@ def post_install(context):
     """Post install script"""
     # Do something at the end of the installation of this package.
     NEW_STYLES = (u'portletStaticNavigation|stile menu di navigazione',
-                  u'footer-logo|logo RER footer',
+                  u'footer-logo|logo footer',
                   u'colonna-1-di-3|colonna 1 di 3',
                   u'footer-actions|stile actions footer',
                   u'news-collection|stile collezione notizie con foto',
