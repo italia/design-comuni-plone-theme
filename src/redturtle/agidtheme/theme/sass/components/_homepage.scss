@@ -18,11 +18,12 @@ body.section-homepage {
         padding-bottom: 0;
         padding-left: 0;
         padding-right: 0;
+        padding-top: 0;
         width: 100%;
     }
 
     .pat-tiles-management {
-        margin-bottom: 0;
+        margin: 0;
 
         .actionsTiles {
             padding: 20px;
@@ -36,10 +37,13 @@ body.section-homepage {
     }
 
     .news-collection {
-        @include make-container;
-        position: relative;
-        overflow: auto;
-        padding: 20px 10px;
+
+        .news-collection-container {
+            @include make-container;
+            position: relative;
+            overflow: auto;
+            padding: 20px 0px;
+        }
 
         ul.tileContent {
             list-style: none;
@@ -226,8 +230,12 @@ body.section-homepage {
     }
 
     .news-highlight {
-        @include make-container;
-        padding: 30px 40px 40px;
+        background: #fff;
+
+        .tileBody {
+            @include make-container;
+            padding: 30px 0px 40px;
+        }
 
         .tile-content {
             display: flex;
