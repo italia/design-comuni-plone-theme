@@ -277,6 +277,36 @@ body.section-homepage {
 
                 .news-description {
                     font-size: 2rem;
+                    overflow: hidden;
+                    position: relative;
+                    height: 9em;
+                }
+
+                .news-description:before {
+                    content: "";
+                    float: left;
+                    width: 5px;
+                    height: 9em;
+                }
+
+                .news-description > *:first-child {
+                    float: right;
+                    width: 100%;
+                    margin-left: -5px;
+                }
+
+                .news-description:after {
+                    content: "\02026";
+                    box-sizing: content-box;
+                    float: right;
+                    position: relative;
+                    top: -25px;
+                    left: 100%;
+                    width: 1em;
+                    margin-left: -1em;
+                    padding-right: 5px;
+                    text-align: right;
+                    background: linear-gradient(to right, rgba(255, 255, 255, 0), white 15%, white);
                 }
             }
 
