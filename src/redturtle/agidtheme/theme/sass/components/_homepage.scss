@@ -37,7 +37,6 @@ body.section-homepage {
     }
 
     .news-collection {
-
         .news-collection-container {
             @include make-container;
             position: relative;
@@ -71,6 +70,8 @@ body.section-homepage {
         .newsWrapper {
             background: #fff;
             height: 100%;
+            position: relative;
+            padding-bottom: 2em;
 
             a {
                 color: #000;
@@ -94,6 +95,21 @@ body.section-homepage {
 
             .newsText {
                 padding: 5%;
+            }
+
+            .newsDates {
+                display: block;
+                padding: 10px 20px;
+                position: absolute;
+                right: 0;
+                bottom: 0.5em;
+            }
+
+            .newsDateYear,
+            .newsDateMonth,
+            .newsDateDay {
+                color: $gray;
+                display: inline-block;
             }
 
             .newsTitle {
