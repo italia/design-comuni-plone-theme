@@ -48,7 +48,7 @@ $text-color-light:      #5A6772;
 //** Global textual link color.
 $link-color:            $brand-primary;
 //** Link hover color set via `darken()` function.
-$link-hover-color:      darken($brand-primary, 5%);
+$link-hover-color:      darken($brand-primary, 10%);
 //** Link hover decoration.
 $link-hover-decoration: none;
 
