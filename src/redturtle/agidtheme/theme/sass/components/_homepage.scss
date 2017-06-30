@@ -104,12 +104,10 @@ body.section-homepage {
                 right: 0;
                 bottom: 0.5em;
                 color: $gray;
-            }
 
-            .newsDateYear,
-            .newsDateMonth,
-            .newsDateDay {
-                display: inline-block;
+                > div {
+                    display: inline-block;
+                }
             }
 
             .newsTitle {
