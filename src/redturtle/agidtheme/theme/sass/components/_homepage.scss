@@ -103,12 +103,12 @@ body.section-homepage {
                 position: absolute;
                 right: 0;
                 bottom: 0.5em;
+                color: $gray;
             }
 
             .newsDateYear,
             .newsDateMonth,
             .newsDateDay {
-                color: $gray;
                 display: inline-block;
             }
 
