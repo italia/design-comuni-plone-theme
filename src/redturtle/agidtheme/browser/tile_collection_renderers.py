@@ -90,13 +90,13 @@ class ServiziAreaTematicaView(BrowserView):
 class NewsView(BrowserView):
     implements(ICollectionTileRenderer)
 
-    display_name = _("Homepage news collection con immagine")
+    display_name = _("News layout with image")
 
 
 class AreeTematicheView(BrowserView):
     implements(ICollectionTileRenderer)
 
-    display_name = _("Collezione SmartLink aree tematiche")
+    display_name = _("Link aree tematiche")
 
 
 class LandingAreeTematicheView(BrowserView):
