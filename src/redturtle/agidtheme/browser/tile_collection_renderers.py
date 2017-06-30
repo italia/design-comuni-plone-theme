@@ -42,15 +42,6 @@ class HelpersView(BrowserView):
         }
 
 
-class NewsView(BrowserView):
-    """
-    Custom view that shows news items
-    """
-    implements(ICollectionTileRenderer)
-
-    display_name = _("News layout")
-
-
 class SightsView(BrowserView):
     """
     Custom view that shows sights
@@ -94,3 +85,21 @@ class ServiziAreaTematicaView(BrowserView):
     implements(ICollectionTileRenderer)
 
     display_name = _("Servizi in area tematica")
+
+
+class NewsView(BrowserView):
+    implements(ICollectionTileRenderer)
+
+    display_name = _("Homepage news collection con immagine")
+
+
+class AreeTematicheView(BrowserView):
+    implements(ICollectionTileRenderer)
+
+    display_name = _("Collezione SmartLink aree tematiche")
+
+
+class LandingAreeTematicheView(BrowserView):
+    implements(ICollectionTileRenderer)
+
+    display_name = _("Landing page aree tematiche")

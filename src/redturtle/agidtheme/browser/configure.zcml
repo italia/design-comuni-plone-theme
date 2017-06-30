@@ -35,30 +35,84 @@
       />
 
   <browser:page
-      name="homepage_tile_collection_renderer"
+      name="news_renderer"
       permission="zope2.View"
       for="*"
-      class=".homepage_tile_collection.BaseView"
+      class=".tile_collection_renderers.NewsView"
       layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
-      template="templates/homepage_tile_collection.pt"
+      template="templates/news_renderer.pt"
       />
 
   <browser:page
-      name="homepage_smartlink_collection_renderer"
+      name="aree_tematiche_renderer"
       permission="zope2.View"
       for="*"
-      class=".homepage_smartlink_collection.BaseView"
+      class=".tile_collection_renderers.AreeTematicheView"
       layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
-      template="templates/homepage_smartlink_collection.pt"
+      template="templates/aree_tematiche.pt"
       />
 
   <browser:page
-      name="pages_tile_collection_renderer"
+      name="landing_aree_tematiche_collection_renderer"
       permission="zope2.View"
       for="*"
-      class=".pages_tile_collection.BaseView"
+      class=".tile_collection_renderers.LandingAreeTematicheView"
       layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
-      template="templates/pages_tile_collection.pt"
+      template="templates/landing_aree_tematiche.pt"
+      />
+
+  <!-- custom redturtle.tiles.collection templates -->
+  <browser:page
+      name="collection_tile_helpers"
+      class=".tile_collection_renderers.HelpersView"
+      permission="zope2.View"
+      for="*"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
+      />
+
+  <browser:page
+      name="sights_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".tile_collection_renderers.SightsView"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
+      template="templates/sights_renderer.pt"
+      />
+
+  <browser:page
+      name="news_highlight_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".tile_collection_renderers.NewsHighlightView"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
+      template="templates/news_highlight_renderer.pt"
+      />
+
+  <browser:page
+      name="news_big_photo_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".tile_collection_renderers.NewsBigPhotoView"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
+      template="templates/news_big_photo_renderer.pt"
+      />
+
+  <browser:page
+      name="news_area_tematica_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".tile_collection_renderers.NewsAreaTematicaView"
+      layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
+      template="templates/news_area_tematica.pt"
+      />
+
+  <browser:page
+      name="servizi_area_tematica_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".tile_collection_renderers.ServiziAreaTematicaView"
+      layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
+      template="templates/servizi_area_tematica.pt"
       />
 
   <browser:viewlet
@@ -86,51 +140,6 @@
       layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
       />
 
-  <!-- custom redturtle.tiles.collection templates -->
-  <browser:page
-    name="collection_tile_helpers"
-    class=".tile_collection_renderers.HelpersView"
-    permission="zope2.View"
-    for="*"
-    layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
-    />
-
-  <browser:page
-      name="news_renderer"
-      permission="zope2.View"
-      for="*"
-      class=".tile_collection_renderers.NewsView"
-      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
-      template="templates/news_renderer.pt"
-  />
-
-  <browser:page
-      name="sights_renderer"
-      permission="zope2.View"
-      for="*"
-      class=".tile_collection_renderers.SightsView"
-      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
-      template="templates/sights_renderer.pt"
-  />
-
-  <browser:page
-      name="news_highlight_renderer"
-      permission="zope2.View"
-      for="*"
-      class=".tile_collection_renderers.NewsHighlightView"
-      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
-      template="templates/news_highlight_renderer.pt"
-  />
-
-  <browser:page
-      name="news_big_photo_renderer"
-      permission="zope2.View"
-      for="*"
-      class=".tile_collection_renderers.NewsBigPhotoView"
-      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
-      template="templates/news_big_photo_renderer.pt"
-  />
-
   <browser:viewlet
       name="redturtle.agidtheme.social"
       manager="plone.app.layout.viewlets.interfaces.IAboveContent"
@@ -138,24 +147,6 @@
       layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
       template="templates/social_viewlet.pt"
       permission="zope2.View"
-      />
-
-  <browser:page
-      name="news_area_tematica_renderer"
-      permission="zope2.View"
-      for="*"
-      class=".tile_collection_renderers.NewsAreaTematicaView"
-      layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
-      template="templates/news_area_tematica.pt"
-      />
-
-  <browser:page
-      name="servizi_area_tematica_renderer"
-      permission="zope2.View"
-      for="*"
-      class=".tile_collection_renderers.ServiziAreaTematicaView"
-      layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
-      template="templates/servizi_area_tematica.pt"
       />
 
   <browser:viewlet
@@ -169,12 +160,12 @@
       layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
       />
 
-  <!--<browser:viewlet
-    name="redturtle.path_bar"
-    manager="plone.app.layout.viewlets.interfaces.IMainNavigation"
-    class="plone.app.layout.viewlets.common.PathBarViewlet"
-    permission="zope2.View"
-    layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
-    />-->
+  <!-- <browser:viewlet
+     -     name="redturtle.path_bar"
+     -     manager="plone.app.layout.viewlets.interfaces.IMainNavigation"
+     -     class="plone.app.layout.viewlets.common.PathBarViewlet"
+     -     permission="zope2.View"
+     -     layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
+     -     /> -->
 
 </configure>
