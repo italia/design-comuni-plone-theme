@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-06-27 09:02+0000\n"
+"POT-Creation-Date: 2017-06-30 10:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,39 +28,52 @@ msgstr ""
 
 #: ../configure.zcml:33
 msgid "Installs the Plone theme package redturtle.agidtheme."
-msgstr ""
+msgstr "Install il tema Plone redturtle.agidtheme"
 
 #: ../browser/pages_tile_collection.py:11
+#: ../browser/tile_collection_renderers.py:105
 msgid "Landing page aree tematiche"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:68
+#: ../browser/tile_collection_renderers.py:99
+msgid "Link aree tematiche"
+msgstr ""
+
+#: ../browser/tile_collection_renderers.py:60
 msgid "News highlight"
+msgstr "News in primo piano"
+
+#: ../browser/tile_collection_renderers.py:78
+msgid "News in area tematica"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:50
-msgid "News layout"
-msgstr ""
+#: ../browser/tile_collection_renderers.py:93
+msgid "News layout with image"
+msgstr "Layout news con immagine"
 
-#: ../browser/tile_collection_renderers.py:77
+#: ../browser/tile_collection_renderers.py:69
 msgid "News with big photo"
-msgstr ""
+msgstr "News in primo piano con foto grande"
 
 #: ../configure.zcml:33
 msgid "RedTurtle Agid Theme"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:59
-msgid "Sights layout"
+#: ../browser/tile_collection_renderers.py:87
+msgid "Servizi in area tematica"
 msgstr ""
+
+#: ../browser/tile_collection_renderers.py:51
+msgid "Sights layout"
+msgstr "Layout siti d'interesse"
 
 #: ../configure.zcml:42
 msgid "Uninstall: RedTurtle Agid Theme"
-msgstr ""
+msgstr "Disinstalla: RedTurtle Agid Theme"
 
 #: ../configure.zcml:42
 msgid "Uninstalls the Plone theme package redturtle.agidtheme."
-msgstr ""
+msgstr "Disinstalla il tema Plone redturtle.agidtheme"
 
 #. Default: "Contents that can be enable for sharing."
 #: ../controlpanel/interfaces.py:12
