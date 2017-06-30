@@ -4,44 +4,78 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       lang="en"
       metal:use-macro="here/main_template/macros/master"
-      i18n:domain="redturtle.agidtheme">
-  <body>
-    <metal:macro define-macro="collection-tile-macro"
-                 tal:define="helper_view nocall:context/@@collection_tile_helpers">
-      <div class="tile-header">
-        <h3 tal:define="title view/data/title|nothing;"
-            class="tileTitle"
-            tal:condition="title">${title}</h3>
-        <tal:showmore tal:condition="view/data/show_more">
-          <a href="${collection/absolute_url}"
-             tal:define="show_more_label view/data/show_more_label|nothing">
-            <span tal:condition="not:show_more_label"
-                  i18n:translate="more_url">More&hellip;</span>
-            <span tal:condition="show_more_label">${show_more_label}</span>
-          </a>
-        </tal:showmore>
-      </div>
+      i18n:domain="collective.tiles.collection">
+    <body>
+        <metal:macro define-macro="collection-tile-macro"
+                     tal:define="helper_view nocall:context/@@collection_tile_helpers">
+        <div class="news-collection">
+            <div class="news-collection-container">
+                <h3 tal:define="title view/data/title|nothing;"
+                             class="tileTitle"
+                             tal:condition="title">${title}</h3>
+                <div class="tileBody">
+                    <p tal:condition="not:results"
+                     class="noResults"
+                     i18n:translate="tiles_collection_noresults">
+                    No results found
+                    </p>
+                    <ul class="tileContent" tal:condition="results">
+                        <tal:results tal:repeat="obj results">
+                        <li tal:define="oddrow repeat/obj/odd;
+                        useView python:obj.portal_type in viewActions;
+                        itemUrl python:useView and obj.getURL() + '/view' or obj.getURL();
+                        item_wf_state obj/review_state;
+                        item_wf_state_class python:'state-' + plone_view.normalizeString(item_wf_state);
+                        item_type obj/portal_type;
+                        item_type_class python:'contenttype-' + plone_view.normalizeString(item_type);"
+                        tal:attributes="class python: 'colonna-1-di-3 ' + (oddrow and 'collectionItem even' or 'collectionItem odd')">
+                            <div class="newsWrapper">
+                                <a href="#"
+                                   tal:attributes="href itemUrl;
+                                   class string:tile $item_type_class $item_wf_state_class;
+                                   title obj/Description">
+                                    <div class="newsImage">
+                                        <img class="image-thumb"
+                                             tal:define="thumb python:obj.getURL()+'/@@images/image/newshome'"
+                                             tal:attributes="src string:$thumb;">
+                                    </div>
+                                    <div class="newsText">
+                                        <div class="newsTitle">
+                                            <span tal:content="obj/Title"> Title </span>
+                                        </div>
+                                        <div class="newsDescription">
+                                            <div class="description">
+                                                <span tal:content="obj/Description"> Description </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="newsDates"
+                                         tal:define="date python:helper_view.get_formatted_date(obj)"
+                                         tal:condition="python: view.data.get('show_dates', False)"
+                                         i18n:domain="plonelocales">
 
-      <div class="tileBody">
-        <p tal:condition="not:results"
-           class="noResults"
-           i18n:translate="tiles_collection_noresults">
-         No results found
-        </p>
-        <tal:results condition="results">
-          <tal:result repeat="brain results">
-            <div class="tile-content"
-                 tal:define="obj brain/getObject;
-                             image_tag python:helper_view.get_image_tag(obj);
-                             title brain/Title;
-                             description brain/Description">
-              <figure class="item-image" tal:condition="image_tag" tal:content="structure image_tag" />
-              <div class="item-title"><a href="${brain/getURL}" title="${title}">${title}</a></div>
-              <div class="item-description" tal:condition="description"><span>${description}</span></div>
+                                         <div class="newsDateDay">${date/day}</div>
+                                         <div class="newsDateMonth">
+                                            <tal:month i18n:translate="">${date/month}</tal:month>
+                                         </div>
+                                         <div class="newsDateYear">${date/year}</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        </tal:results>
+                    </ul>
+                    <div class="showMore" tal:condition="view/data/show_more">
+                        <a href="${collection/absolute_url}"
+                           tal:define="show_more_label view/data/show_more_label|nothing">
+                            <span tal:condition="not:show_more_label"
+                           i18n:translate="more_url">More&hellip;</span>
+                            <span tal:condition="show_more_label">${show_more_label}</span>
+                        </a>
+                    </div>
+                </div>
             </div>
-          </tal:result>
-        </tal:results>
-      </div>
-    </metal:macro>
-  </body>
+        </div>
+        </metal:macro>
+    </body>
 </html>
