@@ -7,11 +7,19 @@ body.portaltype-event {
     ul.event.summary {
         float: right;
         clear: right;
-        padding-bottom: 20px;
-        margin: 0;
+        padding: 15px;
+        margin: 0 0 20px;
+        background: $gray-bg;
+        border: 1px solid $gray-lighter;
+        border-radius: 5px;
+        list-style: none;
+
+        abbr {
+            text-decoration: none;
+        }
     }
 
     #parent-fieldname-text {
-        clear: right;
+        clear: left;
     }
 }
