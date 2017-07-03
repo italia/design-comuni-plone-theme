@@ -27,20 +27,21 @@
                               item_type obj/portal_type;
                               item_type_class python:'contenttype-' + plone_view.normalizeString(item_type);
                               "
-                  tal:attributes="class python:oddrow and 'collectionItem even' or 'collectionItem odd'">
-                  <a href="#"
-                     tal:attributes="href itemUrl;
-                                     class string:tile $item_type_class $item_wf_state_class;
-                                     title obj/Description">
+                  tal:attributes="class python: 'colonna-1-di-4 ' + (oddrow and 'collectionItem even' or 'collectionItem odd')">
+                  <div class="serviceWrapper">
                       <div class="serviceText">
                           <div class="serviceSubject"
-                               tal:condition="obj/Subject"
                                tal:define="subjects obj/Subject;
                                            subject python:subjects and subjects[0] or None">
                               <span tal:content="subject"> Subject </span>
                           </div>
                           <div class="serviceTitle">
+                            <a href="#"
+                               tal:attributes="href itemUrl;
+                                               class string:tile $item_type_class $item_wf_state_class;
+                                               title obj/Description">
                               <span tal:content="obj/Title"> Title </span>
+                            </a>
                           </div>
                           <div class="serviceDescription">
                               <div class="description">
@@ -48,7 +49,7 @@
                               </div>
                           </div>
                       </div>
-                  </a>
+                  </div>
               </li>
             </tal:results>
           </ul>
