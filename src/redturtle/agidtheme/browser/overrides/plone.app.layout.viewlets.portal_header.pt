@@ -1,20 +1,32 @@
 <?python
-from plone import api
-from redturtle.agidtheme.controlpanel.interfaces import IRedturtleAgidthemeSettings
-header_link_label = api.portal.get_registry_record('header_link_label', interface=IRedturtleAgidthemeSettings)
-header_link_url = api.portal.get_registry_record('header_link_url', interface=IRedturtleAgidthemeSettings)
-if not header_link_label:
-    header_link_label = 'Governo Italiano'
-if not header_link_url:
-    header_link_url = 'http://www.governo.it'
+    from plone import api
+    from redturtle.agidtheme.controlpanel.interfaces import IRedturtleAgidthemeSettings
+
+    header_link_label = api.portal.get_registry_record('header_link_label', interface=IRedturtleAgidthemeSettings)
+    header_link_url = api.portal.get_registry_record('header_link_url', interface=IRedturtleAgidthemeSettings)
+    header_second_link_label = api.portal.get_registry_record('header_second_link_label', interface=IRedturtleAgidthemeSettings)
+    header_second_link_url = api.portal.get_registry_record('header_second_link_url', interface=IRedturtleAgidthemeSettings)
+
+    if not header_link_label:
+        header_link_label = 'Governo Italiano'
+    if not header_link_url:
+        header_link_url = 'http://www.governo.it'
+    if not header_second_link_label:
+        header_second_link_label = ''
+    if not header_second_link_url:
+        header_second_link_url = '#'
 ?>
 
 <div id="header-banner">
-  <div class="header-banner-inner">
-    <div class="header-banner-owner">
-      <a href="${header_link_url}" target="_blank">${header_link_label}</a>
+    <div class="header-banner-inner">
+        <div class="header-banner-owner">
+            <a href="${header_link_url}" target="_blank">${header_link_label}</a>
+        </div>
+        <div class="header-banner-second-link"
+             tal:condition="header_second_link_label">
+            <a href="${header_second_link_url}" target="_blank">${header_second_link_label}</a>
+        </div>
     </div>
-  </div>
 </div>
 
 <div id="portal-header">
