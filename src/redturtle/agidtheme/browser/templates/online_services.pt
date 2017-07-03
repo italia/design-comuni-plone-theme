@@ -31,7 +31,6 @@
                   <div class="serviceWrapper">
                       <div class="serviceText">
                           <div class="serviceSubject"
-                               tal:condition="obj/Subject"
                                tal:define="subjects obj/Subject;
                                            subject python:subjects and subjects[0] or None">
                               <span tal:content="subject"> Subject </span>
