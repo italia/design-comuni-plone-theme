@@ -24,13 +24,20 @@
                             item_wf_state obj/review_state;
                             item_wf_state_class python:'state-' + plone_view.normalizeString(item_wf_state);
                             item_type obj/portal_type;
-                            item_type_class python:'contenttype-' + plone_view.normalizeString(item_type);"
+                            item_type_class python:'contenttype-' + plone_view.normalizeString(item_type);
+                            "
                 tal:attributes="class python:oddrow and 'collectionItem even' or 'collectionItem odd'">
                 <a href="#"
                    tal:attributes="href itemUrl;
                                    class string:tile $item_type_class $item_wf_state_class;
                                    title obj/Description">
                     <div class="serviceText">
+                        <div class="serviceSubject"
+                             tal:condition="obj/Subject"
+                             tal:define="subjects obj/Subject;
+                                         subject python:subjects and subjects[0] or None">
+                            <span tal:content="subject"> Subject </span>
+                        </div>
                         <div class="serviceTitle">
                             <span tal:content="obj/Title"> Title </span>
                         </div>
