@@ -41,7 +41,7 @@ msgstr ""
 
 #: ../browser/tile_collection_renderers.py:60
 msgid "News highlight"
-msgstr "News in primo piano"
+msgstr "News in evidenza"
 
 #: ../browser/tile_collection_renderers.py:78
 msgid "News in area tematica"
