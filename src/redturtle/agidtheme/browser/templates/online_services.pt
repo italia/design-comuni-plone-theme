@@ -29,27 +29,27 @@
                               "
                   tal:attributes="class python: 'colonna-1-di-4 ' + (oddrow and 'collectionItem even' or 'collectionItem odd')">
                   <div class="serviceWrapper">
-                    <a href="#"
-                       tal:attributes="href itemUrl;
-                                       class string:tile $item_type_class $item_wf_state_class;
-                                       title obj/Description">
-                        <div class="serviceText">
-                            <div class="serviceSubject"
-                                 tal:condition="obj/Subject"
-                                 tal:define="subjects obj/Subject;
-                                             subject python:subjects and subjects[0] or None">
-                                <span tal:content="subject"> Subject </span>
-                            </div>
-                            <div class="serviceTitle">
-                                <span tal:content="obj/Title"> Title </span>
-                            </div>
-                            <div class="serviceDescription">
-                                <div class="description">
-                                    <span tal:content="obj/Description"> Description </span>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+                      <div class="serviceText">
+                          <div class="serviceSubject"
+                               tal:condition="obj/Subject"
+                               tal:define="subjects obj/Subject;
+                                           subject python:subjects and subjects[0] or None">
+                              <span tal:content="subject"> Subject </span>
+                          </div>
+                          <div class="serviceTitle">
+                            <a href="#"
+                               tal:attributes="href itemUrl;
+                                               class string:tile $item_type_class $item_wf_state_class;
+                                               title obj/Description">
+                              <span tal:content="obj/Title"> Title </span>
+                            </a>
+                          </div>
+                          <div class="serviceDescription">
+                              <div class="description">
+                                  <span tal:content="obj/Description"> Description </span>
+                              </div>
+                          </div>
+                      </div>
                   </div>
               </li>
             </tal:results>
