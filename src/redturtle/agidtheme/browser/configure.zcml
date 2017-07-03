@@ -61,6 +61,15 @@
       template="templates/landing_aree_tematiche.pt"
       />
 
+  <browser:page
+      name="online_services_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".tile_collection_renderers.OnlineServicesView"
+      layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
+      template="templates/online_services.pt"
+      />
+
   <!-- custom redturtle.tiles.collection templates -->
   <browser:page
       name="collection_tile_helpers"
