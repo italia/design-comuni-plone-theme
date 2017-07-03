@@ -53,7 +53,7 @@
       />
 
   <browser:page
-      name="landing_aree_tematiche_collection_renderer"
+      name="landing_aree_tematiche_renderer"
       permission="zope2.View"
       for="*"
       class=".tile_collection_renderers.LandingAreeTematicheView"
