@@ -51,7 +51,7 @@
                                     </div>
                                     <div class="newsDates"
                                          tal:define="date python:helper_view.get_formatted_date(obj)"
-                                         tal:condition="python: view.data.get('show_dates', False)"
+                                         tal:condition="python: view.data.get('show_dates', False) and date"
                                          i18n:domain="plonelocales">
 
                                          <div class="newsDateDay">${date/day}</div>

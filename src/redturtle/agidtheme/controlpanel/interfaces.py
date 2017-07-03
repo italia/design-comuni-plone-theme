@@ -23,7 +23,8 @@ class IRedturtleAgidthemeSettings(model.Schema):
         title=_(u'heading_available_socials',
                 default=u'Available socials'),
         description=_(u'description_available_socials',
-                      default=u'Socials that can be enabled for sharing contents.'),
+                      default=u'Socials that can be enabled for\
+                              sharing contents.'),
         required=False,
         default=[],
         missing_value=[],
@@ -45,5 +46,22 @@ class IRedturtleAgidthemeSettings(model.Schema):
                 default=u'Header link url'),
         description=_(u'header_link_url_desc',
                       default=u'URL of the link in the header'),
+        required=False
+    )
+
+    header_second_link_label = schema.TextLine(
+        title=_(u'header_second_link_label',
+                default=u'Header second link label'),
+        description=_(u'header_second_link_label_desc',
+                      default=u'Label for the link in the header of\
+                              the site at right'),
+        required=False
+    )
+
+    header_second_link_url = schema.URI(
+        title=_(u'header_second_link_url',
+                default=u'Header second link url'),
+        description=_(u'header_second_link_url_desc',
+                      default=u'URL of the link in the header at right'),
         required=False
     )
