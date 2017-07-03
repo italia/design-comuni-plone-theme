@@ -301,3 +301,96 @@
         }
     }
 }
+
+.online-services {
+    @include make-container;
+    position: relative;
+    overflow: auto;
+    padding: 20px 0px;
+
+    ul.tileContent {
+        list-style: none;
+        padding-left: 0;
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    li.collectionItem {
+        padding: 20px 10px;
+    }
+
+    .showMore {
+        position: absolute;
+        top: 45px;
+        right: 2%;
+
+        a {
+            font-size: 2rem;
+            font-weight: $bold;
+            border-bottom: 1px solid;
+        }
+    }
+
+    .tileTitle {
+        padding: 0 10px;
+    }
+
+    .serviceWrapper {
+        height: 100%;
+        position: relative;
+
+        a {
+            color: #000;
+
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid #000;
+            }
+        }
+
+        .serviceSubject {
+            font-weight: $bold;
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            height: 30px;
+        }
+
+        .serviceTitle {
+            font-weight: $bold;
+            font-size: 2rem;
+            padding: 10px 0;
+        }
+
+        .serviceDescription {
+            overflow: hidden;
+            position: relative;
+            height: 6em;
+        }
+
+        .serviceDescription:before {
+            content: "";
+            float: left;
+            width: 5px;
+            height: 6em;
+        }
+
+        .serviceDescription > *:first-child {
+            float: right;
+            width: 100%;
+            margin-left: -5px;
+        }
+
+        .serviceDescription:after {
+            content: "\02026";
+            box-sizing: content-box;
+            float: right;
+            position: relative;
+            top: -25px;
+            left: 100%;
+            width: 1em;
+            margin-left: -1em;
+            padding-right: 5px;
+            text-align: right;
+        }
+    }
+}

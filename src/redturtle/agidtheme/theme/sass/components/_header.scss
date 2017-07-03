@@ -1,55 +1,62 @@
 #header-banner {
-  background-color: $gray-agid;
-  color: #FFF;
-  font-weight: $semibold;
-  padding: 1.3rem 0;
+    background-color: $gray-agid;
+    color: #FFF;
+    font-weight: $semibold;
+    padding: 1.3rem 0;
 
-  .header-banner-inner {
-    @include make-container;
-  }
-
-  .header-banner-owner {
-
-    a {
-      color: #FFF;
-
-      &:focus,
-      &:hover {
-        border-bottom: 1px solid #FFF;
-      }
+    .header-banner-inner {
+        @include make-container;
     }
-  }
+
+    .header-banner-owner,
+    .header-banner-second-link {
+        width: 50%;
+        float: left;
+
+        a {
+            color: #FFF;
+
+            &:focus,
+            &:hover {
+                border-bottom: 1px solid #FFF;
+            }
+        }
+    }
+
+    .header-banner-second-link {
+        text-align: right;
+    }
 }
 
 #portal-header {
-  padding: 1.8rem 0;
-  @include make-container;
-  display: flex;
-  justify-content: space-between;
+    padding: 1.8rem 0;
+    @include make-container;
+    display: flex;
+    justify-content: space-between;
 
-  h1 {
-    flex: 1 0 0;
-    margin:0;
+    h1 {
+        flex: 1 0 0;
+        margin:0;
 
-    img {
-        margin-right: 2rem;
-    }
-
-    a {
-      color: $text-color;
-
-      span {
-          border-bottom: 3px solid $tr;
-      }
-
-      &:focus,
-      &:hover {
-        border:0;
-
-        span {
-          border-bottom-color: $text-color;
+        img {
+            margin-right: 2rem;
         }
-      }
+
+        a {
+            color: $text-color;
+
+            span {
+                border-bottom: 3px solid $tr;
+            }
+
+            &:focus,
+            &:hover {
+                border:0;
+
+                span {
+                    border-bottom-color: $text-color;
+                }
+            }
+        }
     }
-  }
 }

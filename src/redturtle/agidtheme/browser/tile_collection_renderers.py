@@ -103,3 +103,8 @@ class LandingAreeTematicheView(BrowserView):
     implements(ICollectionTileRenderer)
 
     display_name = _("Landing page aree tematiche")
+
+class OnlineServicesView(BrowserView):
+    implements(ICollectionTileRenderer)
+
+    display_name = _("Layout servizi online")
