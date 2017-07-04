@@ -128,3 +128,70 @@ h6 {
     }
   }
 }
+
+/* form event */
+.template-event {
+
+    div.riform {
+        form {
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            #rirtemplate {
+                .label {
+                    display: block;
+                    float: none;
+                    text-align: left;
+                    margin: 0;
+                    text-transform: uppercase;
+                    width: auto;
+                }
+
+                select {
+                    padding: 0;
+                }
+
+                input[type=submit][value=save],
+                input[type=button] {
+                    -moz-user-select: none;
+                    background-image: none;
+                    border: 1px solid transparent;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    display: inline-block;
+                    font-size: 14px;
+                    font-weight: normal;
+                    line-height: 1.42857;
+                    margin-bottom: 0;
+                    padding: 6px 12px;
+                    text-align: center;
+                    touch-action: manipulation;
+                    vertical-align: middle;
+                    white-space: nowrap;
+
+                    &[value=save] {
+                        background-color: #007bb1;
+                        border-color: #00587e;
+                        color: #ffffff;
+                    }
+                }
+
+                div.rioccurrencesactions .rioccurancesheader {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+
+    #calroot {
+        #calhead {
+            #caltitle {
+                select {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}

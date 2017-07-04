@@ -27,6 +27,10 @@
     <!-- CSS -->
     <drop css:content="head link[data-bundle='diazo']" />
     <before css:theme-children="head" css:content="head link" />
+    <after css:theme-children="head">
+      <link rel="stylesheet" href="../++theme++redturtle.agid.theme/css/forms.agidtheme.css" />
+      <link rel="stylesheet" href="../++theme++redturtle.agid.theme/css/buttons.agidtheme.css" />
+    </after>
 
     <!-- Script -->
     <drop css:content="head script[data-bundle='diazo']" />
