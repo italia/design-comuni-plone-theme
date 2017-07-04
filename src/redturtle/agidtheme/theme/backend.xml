@@ -42,7 +42,7 @@
       <link rel="shortcut icon" type="image/x-icon"
             href="favicon.ico" />
       <!-- <link rel="stylesheet" href="../++theme++barceloneta/less/barceloneta-compiled.css" /> -->
-      <link rel="stylesheet" href="../++theme++redturtle.agid.theme/barceloneta/barceloneta-compiled.css" />
+      <link rel="stylesheet" href="../++theme++redturtle.agid.theme/barceloneta/barceloneta-backend.css" />
 
 
       <script src="https://use.fontawesome.com/22e75ec526.js"></script>

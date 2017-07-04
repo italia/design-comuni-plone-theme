@@ -23,7 +23,7 @@ module.exports = function (grunt) {
 					}
 				},
 				files: {
-					'barceloneta/barceloneta-compiled.css': 'barceloneta/less/barceloneta.less'
+					'barceloneta/barceloneta-backend.css': 'barceloneta/less/barceloneta.backend.less'
 				}
 			}
 		},
