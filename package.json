@@ -27,5 +27,8 @@
     "grunt-sed": "^0.1.1",
     "load-grunt-tasks": "^3.5.2",
     "pixrem": "^3.0.2"
+  },
+  "dependencies": {
+    "grunt-contrib-less": "^1.4.1"
   }
 }
