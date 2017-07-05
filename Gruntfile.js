@@ -16,14 +16,14 @@ module.exports = function (grunt) {
 					strictMath: false,
 					sourceMap: true,
 					outputSourceFiles: true,
-					sourceMapURL: '++theme++redturtle.agidtheme/barceloneta/barceloneta-compiled.css.map',
-					sourceMapFilename: 'barceloneta/barceloneta-compiled.css.map',
+					sourceMapURL: '++theme++redturtle.agidtheme/barceloneta/barceloneta-backend.css.map',
+					sourceMapFilename: 'barceloneta/barceloneta-backend.css.map',
 					modifyVars: {
 						"isPlone": "true"
 					}
 				},
 				files: {
-					'barceloneta/barceloneta-compiled.css': 'barceloneta/less/barceloneta.less'
+					'barceloneta/barceloneta-backend.css': 'barceloneta/less/barceloneta.backend.less'
 				}
 			}
 		},
