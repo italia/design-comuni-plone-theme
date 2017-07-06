@@ -38,7 +38,7 @@
 .standalone, .context, .destructive, [type="submit"], button {
   display: inline-block;
   margin-bottom: 0; // For input.btn
-  font-weight: 700;
+  font-weight: $bold;
   text-align: center;
   text-shadow: 0 1px rgba(0,0,0,.25);
   vertical-align: middle;
@@ -47,8 +47,8 @@
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.428571429;
+  font-size: inherit;
+  line-height: inherit;
   border-radius: 2px;
   user-select: none;
 
