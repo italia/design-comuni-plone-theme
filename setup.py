@@ -49,6 +49,7 @@ setup(
         'Products.GenericSetup>=1.8.2',
         'redturtle.patterns.slider',
         'redturtle.tiles.management',
+        'plone.app.standardtiles',
         'z3c.jbot',
     ],
     extras_require={
