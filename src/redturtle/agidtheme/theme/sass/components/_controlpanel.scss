@@ -1,10 +1,24 @@
+#content {
+    .portlet.portletSiteSetup {
+
+        ul.configlets {
+            list-style: none;
+
+            .inner-configlet {
+                text-align: center;
+            }
+        }
+    }
+}
+
 .portlet.portletSiteSetup {
 
-    ul.configlets {
-        list-style: none;
+    &#portlet-prefs ul ul li a {
 
-        .inner-configlet {
-            text-align: center;
+        padding-left: 0;
+
+        &:before {
+            display: none;
         }
     }
 }
