@@ -173,7 +173,7 @@
       name="plone.logo"
       manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
       class=".viewlets.LogoViewlet"
-      layer="rer.agidtheme.base.interfaces.IRerAgidthemeBaseLayer"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
       permission="zope2.View"
   />
 
