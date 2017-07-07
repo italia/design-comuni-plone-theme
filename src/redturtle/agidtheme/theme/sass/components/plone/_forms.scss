@@ -100,7 +100,8 @@ input[type="range"] {
 }
 
 // Make multiple select elements height not fixed
-select[multiple] {
+select[multiple],
+select[size] {
   height: auto;
   min-width: 10em;
 }
