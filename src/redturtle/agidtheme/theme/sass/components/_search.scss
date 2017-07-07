@@ -7,6 +7,10 @@
         border: 1px solid $brand-primary;
         padding: 1.1rem 1.4rem;
         width: 25rem;
+        border-radius: 0;
+        box-shadow: none;
+        float: left;
+        height: 50px;
 
         &:focus {
             border-color: $gray;
@@ -25,6 +29,7 @@
         border-radius: 0;
         font-weight: $regular;
         vertical-align: baseline;
+        height: 50px;
 
         &:before {
             @include make-fa('\f002');
