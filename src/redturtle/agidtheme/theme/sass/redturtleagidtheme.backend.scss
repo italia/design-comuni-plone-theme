@@ -154,29 +154,33 @@ h6 {
                 }
 
                 input[type=button] {
-                  display: inline-block;
-                  margin-bottom: 0; // For input.btn
-                  font-weight: $bold;
-                  text-align: center;
-                  text-shadow: 0 1px rgba(0,0,0,.25);
-                  vertical-align: middle;
-                  cursor: pointer;
-                  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-                  border: 1px solid transparent;
-                  white-space: nowrap;
-                  padding: 6px 12px;
-                  font-size: inherit;
-                  line-height: inherit;
-                  border-radius: 2px;
-                  user-select: none;
+                    display: inline-block;
+                    margin-bottom: 0; // For input.btn
+                    font-weight: $bold;
+                    text-align: center;
+                    text-shadow: 0 1px rgba(0,0,0,.25);
+                    vertical-align: middle;
+                    cursor: pointer;
+                    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+                    border: 1px solid transparent;
+                    white-space: nowrap;
+                    padding: 6px 12px;
+                    font-size: inherit;
+                    line-height: inherit;
+                    border-radius: 2px;
+                    user-select: none;
 
-                  margin-top: 0.5rem;
+                    color: #4d4d4d;
+                    background-color: #e5e5e5;
+                    border-color: #b2b2b2;
+
+                    margin-top: 0.5rem;
                 }
 
                 input[type=submit][value=save] {
-                  color: #ffffff;
-                  background-color: #007bb1;
-                  border-color: #00587e;
+                    color: #ffffff;
+                    background-color: #007bb1;
+                    border-color: #00587e;
                 }
 
                 div.rioccurrencesactions .rioccurancesheader {
