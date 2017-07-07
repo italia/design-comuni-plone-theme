@@ -105,9 +105,9 @@ select[size] {
   height: auto;
   min-width: 10em;
 }
-select[size="1"] {
+/* select[size="1"] {
   height: 34px;
-}
+} */
 
 // Focus for file, radio, and checkbox
 input[type="file"]:focus,
