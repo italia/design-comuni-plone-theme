@@ -305,24 +305,26 @@
 .online-services {
     @include make-container;
     position: relative;
-    overflow: auto;
-    padding: 20px 0px;
+    padding: 15px 5px 30px;
 
     ul.tileContent {
         list-style: none;
         padding-left: 0;
         display: flex;
         flex-flow: row wrap;
+        justify-content: space-between;
+        margin-bottom: 0;
     }
 
     li.collectionItem {
         padding: 20px 10px;
+        width: 22.5%;
     }
 
     .showMore {
         position: absolute;
-        top: 45px;
-        right: 2%;
+        top: 40px;
+        right: 15px;
 
         a {
             font-size: 2rem;
@@ -352,13 +354,13 @@
             font-weight: $bold;
             font-size: 1.5rem;
             text-transform: uppercase;
-            height: 30px;
+            min-height: 25px;
         }
 
         .serviceTitle {
             font-weight: $bold;
             font-size: 2rem;
-            padding: 10px 0;
+            padding: 5px 0 10px;
         }
 
         .serviceDescription {
