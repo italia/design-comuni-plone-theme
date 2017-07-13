@@ -2,6 +2,8 @@
 from plone import api
 from Products.CMFPlone.interfaces import INonInstallable
 from zope.interface import implementer
+from redturtle.tiles.management.interfaces import IRedturtleTilesManagementSettings
+from plone import api
 
 
 @implementer(INonInstallable)
@@ -17,6 +19,24 @@ class HiddenProfiles(object):
 def post_install(context):
     """Post install script"""
     # Do something at the end of the installation of this package.
+    add_advancedstatic_styles(context)
+    filter_tiles(context)
+
+
+def filter_tiles(context):
+    starting_tiles = [
+        u'collective.tiles.collection',
+        u'collective.tiles.advancedstatic',
+        u'plone.app.standardtiles.existingcontent',
+        u'plone.app.standardtiles.navigation'
+    ]
+    api.portal.set_registry_record(
+        'enabled_tiles',
+        starting_tiles,
+        IRedturtleTilesManagementSettings)
+
+
+def add_advancedstatic_styles(context):
     NEW_STYLES = (u'portletStaticNavigation|stile menu di navigazione',
                   u'footer-logo|logo footer',
                   u'colonna-1-di-3|colonna 1 di 3',

@@ -169,6 +169,14 @@
       layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
       />
 
+  <browser:viewlet
+      name="plone.logo"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      class=".viewlets.LogoViewlet"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
+      permission="zope2.View"
+  />
+
   <!-- <browser:viewlet
      -     name="redturtle.path_bar"
      -     manager="plone.app.layout.viewlets.interfaces.IMainNavigation"

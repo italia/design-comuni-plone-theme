@@ -6,5 +6,6 @@
     <dependency>profile-collective.tiles.advancedstatic:default</dependency>
     <dependency>profile-plone.app.theming:default</dependency>
     <dependency>profile-redturtle.tiles.management:default</dependency>
+    <dependency>profile-plone.app.standardtiles:default</dependency>
   </dependencies>
 </metadata>

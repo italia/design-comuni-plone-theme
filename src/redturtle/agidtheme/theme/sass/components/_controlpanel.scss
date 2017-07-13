@@ -1,0 +1,21 @@
+
+.portlet.portletSiteSetup {
+
+    nav.portletContent {
+        ul.configlets {
+            list-style: none;
+
+            .inner-configlet {
+                text-align: center;
+            }
+        }
+        > ul.configlets {
+
+            padding: 1rem;
+
+            ul {
+                padding-left: 0;
+            }
+        }
+    }
+}
