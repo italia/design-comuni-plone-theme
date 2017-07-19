@@ -41,16 +41,8 @@
 
   <record name="plone.allowed_sizes" interface="Products.CMFPlone.interfaces.controlpanel.IImagingSchema" field="allowed_sizes">
     <value purge="false">
-      <element>large 768:768</element>
-      <element>preview 400:400</element>
       <element>newshome 450:300</element>
       <element>newshighlight 540:360</element>
-      <element>newsbig 1800:600</element>
-      <element>mini 200:200</element>
-      <element>thumb 128:128</element>
-      <element>tile 64:64</element>
-      <element>icon 32:32</element>
-      <element>listing 16:16</element>
     </value>
   </record>
 
