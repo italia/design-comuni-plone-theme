@@ -1,33 +1,5 @@
-body.section-news {
-    #viewlet-above-content {
-        #portal-breadcrumbs {
-            ol {
-                li:last-of-type {
-                    display: none;
-                }
-            }
-        }
-    }
-
-    #content {
-        .news-date {
-            text-transform: capitalize;
-            padding-top: 20px;
-        }
-
-        .news-body {
-            width: 70%;
-            float: left;
-        }
-
-        .news-column {
-            width: 30%;
-            float: left;
-        }
-    }
-
-    .leadImage {
-        float: right;
-        padding-left: 20px;
-    }
+.newsImageContainer {
+  float:right;
+  margin: 0 0 1em 1.5em;
+  display: block;
 }
