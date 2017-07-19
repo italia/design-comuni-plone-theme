@@ -1,8 +1,8 @@
-body.section-homepage {
+.template-homepage_view {
     background: $gray-bg;
 
     #portal-top {
-        background: #fff;
+      background: #fff;
     }
 
     #content {
@@ -25,6 +25,21 @@ body.section-homepage {
 
         .actionsTiles {
             padding: 20px;
+            text-align: center;
+
+            a.list-group-item {
+              @extend .btn-default;
+            }
+
+            a.plone-btn {
+              @extend .btn-info;
+              text-transform: uppercase;
+              font-weight: $semibold;
+            }
+
+            .available-tiles .list-group {
+              justify-content: center;
+            }
         }
     }
 

@@ -116,45 +116,6 @@
     }
 }
 
-.valuta-sito {
-    .tile-text {
-        width: 100% !important;
-        background: $brand-primary;
-        text-align: center;
-        padding-right: 0;
-        padding-left: 0;
-
-        a {
-            display: block;
-            color: #fff;
-            padding: 20px;
-
-            &:hover,
-            &:focus {
-                .valuta-sito-text {
-                    border-bottom: 1px solid #fff;
-                }
-            }
-        }
-
-        p {
-            margin: 0;
-        }
-    }
-
-    .valuta-sito-content:before {
-        content: "";
-        padding-right: 4em;
-        display: inline-block;
-        width: auto;
-        height: 1.5em;
-        vertical-align: top;
-        background-image: url($img-path + 'rectangle-tool.svg');
-        background-size: 4rem;
-        background-repeat: no-repeat;
-        background-position: center center;
-    }
-}
 
 .aree-tematiche {
     @include make-container;
@@ -395,4 +356,64 @@
             text-align: right;
         }
     }
+}
+
+// NEWS CON FOTO GRANDE IN SFONDO (homepage)
+.news-big-photo {
+  min-height: 40rem;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .tileBody {
+    @include make-container;
+
+    .tile-content {
+      max-width: 600px;
+      margin: 3% auto 3% 5%;
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 2% 3%;
+      color: $text-color;
+      position: relative;
+      border-left: 30px solid $brand-primary;
+      font-size: 1.2em;
+
+      h2 {
+        margin-top: 0;
+        font-size: 1.6em;
+
+        a {
+          color: $text-color;
+
+          &:focus,
+          &:hover {
+            color: $brand-primary;
+          }
+        }
+      }
+
+      .news-date-more {
+        display: flex;
+        justify-content: space-between;
+
+        .show-more {
+          a {
+            font-weight: $semibold;
+            border-bottom: 1px solid $brand-primary;
+
+            &:focus,
+            &:hover {
+              border-color: $link-hover-color;
+            }
+          }
+        }
+
+        .news-date {
+          font-size: 0.9em;
+          color: $gray;
+        }
+      }
+    }
+  }
 }

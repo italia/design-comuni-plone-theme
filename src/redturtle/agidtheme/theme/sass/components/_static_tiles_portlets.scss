@@ -1,0 +1,39 @@
+
+.valuta-sito {
+      width: 100% !important;
+      background: $brand-primary;
+      text-align: center;
+      padding-right: 0;
+      padding-left: 0;
+      margin-bottom: 0;
+
+      a {
+          display: block;
+          color: #fff !important;
+          padding: 20px;
+
+          &:hover,
+          &:focus {
+              .valuta-sito-text {
+                  border-bottom: 1px solid #fff;
+              }
+          }
+      }
+
+      p {
+          margin: 0;
+      }
+
+    .valuta-sito-content:before {
+        content: "";
+        padding-right: 4em;
+        display: inline-block;
+        width: auto;
+        height: 1.5em;
+        vertical-align: top;
+        background-image: url($img-path + 'rectangle-tool.svg');
+        background-size: 4rem;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}

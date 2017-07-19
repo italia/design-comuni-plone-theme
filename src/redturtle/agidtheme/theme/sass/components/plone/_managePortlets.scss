@@ -9,6 +9,13 @@
     .portletHeader > a {
       color: $link-color;
     }
+
+    .portletHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-bottom: 20px;
+    }
   }
 
   .managedPortlet.inheritedPortlet {
@@ -26,5 +33,13 @@
 
   .portlet-group {
     padding: 0 0 2rem;
+  }
+
+  .managedPortletActions {
+    display: flex;
+  }
+
+  .blockedPortlet .managedPortletActions {
+    opacity: .5;
   }
 }
