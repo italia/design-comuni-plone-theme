@@ -49,9 +49,13 @@ require([
 
 
     /*
-     * menu toggle button for mobile
+     * globalnav menu open/close button for mobile
      */
     $('#globalnav-toggle').on('click', function(e) {
+      $('.globalnavWrapper').toggleClass('open');
+    });
+
+    $('#globalnav-close').on('click', function(e) {
       $('.globalnavWrapper').toggleClass('open');
     });
 
