@@ -48,18 +48,29 @@ require([
     });
 
 
+    function toggleMenu() {
+      if ($('.globalnavWrapper').hasClass('open')) {
+        $('.globalnavWrapper').addClass('closed');
+      }
+      else {
+        $('.globalnavWrapper').removeClass('closed');
+      }
+
+      $('.globalnavWrapper').toggleClass('open');
+    }
+
     /*
      * globalnav menu open/close button for mobile
      */
     $('#globalnav-toggle').on('click', function(e) {
-      $('.globalnavWrapper').toggleClass('open');
+      toggleMenu();
       $('#portal-top').addClass('menuOpened');
       $('#column-wrapper').addClass('menuOpened');
       $('#portal-footer-wrapper').addClass('menuOpened');
     });
 
     $('#globalnav-close').on('click', function(e) {
-      $('.globalnavWrapper').toggleClass('open');
+      toggleMenu();
       $('#portal-top').removeClass('menuOpened');
       $('#column-wrapper').removeClass('menuOpened');
       $('#portal-footer-wrapper').removeClass('menuOpened');
