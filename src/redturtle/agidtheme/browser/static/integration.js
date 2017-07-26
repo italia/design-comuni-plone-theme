@@ -53,10 +53,16 @@ require([
      */
     $('#globalnav-toggle').on('click', function(e) {
       $('.globalnavWrapper').toggleClass('open');
+      $('#portal-top').addClass('menuOpened');
+      $('#column-wrapper').addClass('menuOpened');
+      $('#portal-footer-wrapper').addClass('menuOpened');
     });
 
     $('#globalnav-close').on('click', function(e) {
       $('.globalnavWrapper').toggleClass('open');
+      $('#portal-top').removeClass('menuOpened');
+      $('#column-wrapper').removeClass('menuOpened');
+      $('#portal-footer-wrapper').removeClass('menuOpened');
     });
 
   });
