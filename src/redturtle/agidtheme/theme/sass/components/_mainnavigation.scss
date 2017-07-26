@@ -49,5 +49,6 @@
 
     button#globalnav-close {
         display: none;
+        @include sr-only;
     }
 }
