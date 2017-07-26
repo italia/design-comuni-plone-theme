@@ -4,7 +4,10 @@
   <p class="hiddenStructure" i18n:translate="heading_sections">Navigation</p>
   <div class="globalnavWrapper">
       <div class="globalnavClose">
-          <button id="globalnav-close"><span>chiudi</span></button>
+          <button id="globalnav-close">
+              <span class="icon"></span>
+              <span class="sr-only">chiudi</span>
+          </button>
       </div>
       <ul id="portal-globalnav">
       <tal:tabs tal:repeat="tab menu_tabs">

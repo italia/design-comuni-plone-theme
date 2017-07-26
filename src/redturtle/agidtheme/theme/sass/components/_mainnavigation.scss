@@ -49,6 +49,9 @@
 
     button#globalnav-close {
         display: none;
-        @include sr-only;
+
+        span.sr-only {
+            @include sr-only;
+        }
     }
 }
