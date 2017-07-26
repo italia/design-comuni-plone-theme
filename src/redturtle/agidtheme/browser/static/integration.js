@@ -46,5 +46,14 @@ require([
 
       $('.share').toggleClass('open');
     });
+
+
+    /*
+     * menu toggle button for mobile
+     */
+    $('#globalnav-toggle').on('click', function(e) {
+      $('ul#portal-globalnav').toggleClass('open');
+    });
+
   });
 });
