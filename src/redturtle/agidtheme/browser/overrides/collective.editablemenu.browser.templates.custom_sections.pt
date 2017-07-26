@@ -3,7 +3,9 @@
      i18n:domain="plone">
   <p class="hiddenStructure" i18n:translate="heading_sections">Navigation</p>
   <div class="globalnavWrapper">
-      <button id="globalnav-close">chiudi</button>
+      <div class="globalnavClose">
+          <button id="globalnav-close">chiudi</button>
+      </div>
       <ul id="portal-globalnav">
       <tal:tabs tal:repeat="tab menu_tabs">
         <li tal:define="tid python: tab.get('index');
