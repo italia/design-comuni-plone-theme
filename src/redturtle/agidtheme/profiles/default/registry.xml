@@ -25,6 +25,39 @@
     </value>
   </record>
 
+  <records interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema" prefix="plone">
+    <field type="plone.registry.field.List"></field>
+    <value purge="true" key="table_styles">
+      <element>Semplice|table-simple</element>
+      <element>Bordi visibili|table-bordered</element>
+      <element>A righe alternate|table-striped</element>
+      <element>Con effetto hover|table-hover</element>
+    </value>
+  </records>
+
+  <!-- <record name="ploneconf.talk_submission_open">
+  <field type="plone.registry.field.Bool">
+    <title>Allow talk submission</title>
+    <description>Allow the submission of talks for anonymous users</description>
+    <required>False</required>
+  </field>
+  <value>False</value>
+</record> -->
+
+  <record interface="Products.CMFPlone.interfaces.controlpanel.ISearchSchema" name="plone.enable_livesearch" field="enable_livesearch">
+    <field type="plone.registry.field.Bool">
+      <default>False</default>
+    </field>
+  </record>
+
+
+  <record interface="Products.CMFPlone.interfaces.controlpanel.ILinkSchema" name="plone.mark_special_links" field="mark_special_links">
+    <field type="plone.registry.field.Bool">
+      <default>False</default>
+    </field>
+  </record>
+
+
   <record name="plone.custom_tags" interface="Products.CMFPlone.interfaces.controlpanel.IFilterSchema" field="custom_tags">
     <field type="plone.registry.field.List">
       <default/>
