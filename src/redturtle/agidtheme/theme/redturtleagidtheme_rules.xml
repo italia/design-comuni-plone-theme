@@ -44,6 +44,7 @@
     <div class="search-social-wrapper">
       <xsl:copy-of select="//*[@id='header-social']"/>
       <xsl:copy-of select="//*[@id='portal-searchbox']"/>
+      <button id="globalnav-toggle"><span>MENU</span></button>
     </div>
   </replace>
   <!-- cancello la search originale -->
