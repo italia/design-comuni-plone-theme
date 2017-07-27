@@ -270,8 +270,12 @@
             img {
                 float: right;
                 max-width: 100%;
+            }
 
-                @media (max-width: $screen-xs-max) {
+            @media (max-width: $screen-xs-max) {
+                text-align: center;
+
+                img {
                     float: none;
                 }
             }
