@@ -184,10 +184,6 @@
     .tileBody {
         @include make-container;
         padding: 30px 0px 40px;
-
-        @media (max-width: $screen-xs-max) {
-            padding-top: 0;
-        }
     }
 
     .tile-content {
@@ -198,10 +194,6 @@
         .item-image {
             width: 50%;
             padding: 15px;
-
-            @media (max-width: $screen-xs-max) {
-                width: 100%;
-            }
         }
 
         .news-infos {
@@ -268,8 +260,26 @@
                 text-align: right;
                 background: linear-gradient(to right, rgba(255, 255, 255, 0), white 15%, white);
             }
+        }
 
-            @media (max-width: $screen-xs-max) {
+        .item-image {
+            img {
+                float: right;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    @media (max-width: $screen-xs-max) {
+        .tileBody {
+            padding-top: 0;
+        }
+
+        .tile-content {
+            .news-infos {
+                width: 100%;
+
                 .news-detail {
                     .tileTitle,
                     .news-date {
@@ -282,16 +292,9 @@
                     }
                 }
             }
-        }
 
-        .item-image {
-            img {
-                float: right;
-                max-width: 100%;
-                height: auto;
-            }
-
-            @media (max-width: $screen-xs-max) {
+            .item-image {
+                width: 100%;
                 text-align: center;
 
                 img {
