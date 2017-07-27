@@ -49,14 +49,14 @@ require([
 
 
     function toggleMenu() {
-      if ($('.globalnavWrapper').hasClass('open')) {
-        $('.globalnavWrapper').addClass('closed');
+      if ($('#portal-mainnavigation').hasClass('open')) {
+        $('#portal-mainnavigation').addClass('closed');
       }
       else {
-        $('.globalnavWrapper').removeClass('closed');
+        $('#portal-mainnavigation').removeClass('closed');
       }
 
-      $('.globalnavWrapper').toggleClass('open');
+      $('#portal-mainnavigation').toggleClass('open');
     }
 
     /*
@@ -82,8 +82,8 @@ require([
      */
     $('#search-toggle').on('click', function(e) {
       $('#portal-searchbox').toggleClass('open');
-      $('#column-wrapper').toggleClass('menuOpened');
-      $('#portal-footer-wrapper').toggleClass('menuOpened');
+      $('#column-wrapper').toggleClass('searchOpened');
+      $('#portal-footer-wrapper').toggleClass('searchOpened');
 
       if ($('#portal-searchbox').hasClass('open')) {
         $('#searchGadget').focus();
