@@ -9,25 +9,25 @@
     text-decoration: none;
     border-radius: 35px;
     display: none;
-    -webkit-transition: all 0.3s linear;
     transition: all 0.3s linear;
+    z-index: 1000;
 
     span {
-      color: #fff;
-      margin: 0;
-      position: relative;
-      left: 16px;
-      top: 13px;
-      font-size: 19px;
-      -webkit-transition: all 0.3s ease;
-      transition: all 0.3s ease;
+        color: #fff;
+        margin: 0;
+        position: relative;
+        left: 16px;
+        top: 13px;
+        font-size: 19px;
+        transition: all 0.3s ease;
     }
-}
 
-#return-to-top:active {
-  background: rgba(0, 0, 0, 0.9);
-}
-#return-to-top:active span {
-  color: #fff;
-  top: 5px;
+    &:active {
+        background: rgba(0, 0, 0, 0.9);
+
+        span {
+            color: #fff;
+            top: 5px;
+        }
+    }
 }
