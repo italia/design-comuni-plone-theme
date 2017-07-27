@@ -62,5 +62,9 @@
 
     button#globalnav-toggle {
         display: none;
+
+        .sr-only {
+            @include sr-only;
+        }
     }
 }
