@@ -51,6 +51,10 @@
 
             span {
                 border-bottom: 3px solid $tr;
+
+                @media (max-width: $screen-sm-max) {
+                    border-width: 1px;
+                }
             }
 
             &:focus,
