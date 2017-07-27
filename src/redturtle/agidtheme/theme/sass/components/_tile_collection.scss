@@ -270,7 +270,10 @@
             img {
                 float: right;
                 max-width: 100%;
-                margin: auto;
+
+                @media (max-width: $screen-xs-max) {
+                    float: none;
+                }
             }
         }
     }
