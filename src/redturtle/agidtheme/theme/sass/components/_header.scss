@@ -26,6 +26,10 @@
     .header-banner-second-link {
         text-align: right;
     }
+
+    @media (max-width: 600px) {
+        font-size: 0.7em;
+    }
 }
 
 #portal-header {
