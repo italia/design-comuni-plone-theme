@@ -76,5 +76,13 @@ require([
       $('#portal-footer-wrapper').removeClass('menuOpened');
     });
 
+
+    /*
+     * mobile: search button action
+     */
+    $('#search-toggle').on('click', function(e) {
+      $('#portal-searchbox').toggleClass('open');
+    });
+
   });
 });
