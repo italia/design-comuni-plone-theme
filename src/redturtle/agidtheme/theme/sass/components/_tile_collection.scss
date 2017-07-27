@@ -190,10 +190,17 @@
         display: flex;
         flex-flow: row wrap;
 
-        .news-infos {
+        .news-infos,
+        .news-image {
             width: 50%;
             padding: 15px;
 
+            @media (max-width: $screen-xs-max) {
+                width: 100%;
+            }
+        }
+
+        .news-infos {
             .news-detail {
                 @include clearfix;
 
@@ -260,9 +267,6 @@
         }
 
         .item-image {
-            width: 50%;
-            padding: 15px;
-
             img {
                 float: right;
                 max-width: 100%;
