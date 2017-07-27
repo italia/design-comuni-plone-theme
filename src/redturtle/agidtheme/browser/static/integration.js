@@ -82,6 +82,12 @@ require([
      */
     $('#search-toggle').on('click', function(e) {
       $('#portal-searchbox').toggleClass('open');
+      $('#column-wrapper').toggleClass('menuOpened');
+      $('#portal-footer-wrapper').toggleClass('menuOpened');
+
+      if ($('#portal-searchbox').hasClass('open')) {
+        $('#searchGadget').focus();
+      }
     });
 
   });
