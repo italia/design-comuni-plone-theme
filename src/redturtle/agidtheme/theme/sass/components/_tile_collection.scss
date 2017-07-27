@@ -114,6 +114,12 @@
             background: linear-gradient(to right, rgba(255, 255, 255, 0), white 15%, white);
         }
     }
+
+    @media (max-width: $screen-xs-max) {
+        ul.tileContent {
+            font-size: 0.9em;
+        }
+    }
 }
 
 .aree-tematiche {
@@ -294,6 +300,14 @@
                     .tileTitle {
                         padding-bottom: 7px;
                     }
+                }
+
+                .news-title {
+                    font-size: 2rem;
+                }
+
+                .news-description {
+                    font-size: 1.7rem;
                 }
             }
 
