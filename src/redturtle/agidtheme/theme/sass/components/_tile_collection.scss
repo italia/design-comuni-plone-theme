@@ -128,7 +128,7 @@
         width: 100%;
 
         li {
-            @include make-sm-column(6);
+            @include make-xs-column(6);
             @include make-md-column(3);
 
             a {
@@ -164,6 +164,15 @@
                         }
                     }
                 }
+            }
+        }
+
+        @media (max-width: 550px) {
+            flex: column nowrap;
+
+            li {
+                width: 100%;
+                float: none;
             }
         }
     }
