@@ -184,6 +184,10 @@
     .tileBody {
         @include make-container;
         padding: 30px 0px 40px;
+
+        @media (max-width: $screen-xs-max) {
+            padding-top: 0;
+        }
     }
 
     .tile-content {
@@ -263,6 +267,20 @@
                 padding-right: 5px;
                 text-align: right;
                 background: linear-gradient(to right, rgba(255, 255, 255, 0), white 15%, white);
+            }
+
+            @media (max-width: $screen-xs-max) {
+                .news-detail {
+                    .tileTitle,
+                    .news-date {
+                        float: none;
+                        clear: both;
+                    }
+
+                    .tileTitle {
+                        padding-bottom: 7px;
+                    }
+                }
             }
         }
 
