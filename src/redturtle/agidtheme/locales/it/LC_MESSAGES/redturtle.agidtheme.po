@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-06-30 10:52+0000\n"
+"POT-Creation-Date: 2017-08-14 11:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,25 +14,16 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ../browser/homepage_smartlink_collection.py:11
-msgid "Collezione SmartLink aree tematiche"
-msgstr ""
-
 #: ../profiles/default/controlpanel.xml
 msgid "Configurazione tema agid"
 msgstr ""
 
-#: ../browser/homepage_tile_collection.py:11
-msgid "Homepage news collection con immagine"
-msgstr ""
-
-#: ../configure.zcml:33
-msgid "Installs the Plone theme package redturtle.agidtheme."
-msgstr "Install il tema Plone redturtle.agidtheme"
-
-#: ../browser/pages_tile_collection.py:11
 #: ../browser/tile_collection_renderers.py:105
 msgid "Landing page aree tematiche"
+msgstr ""
+
+#: ../browser/tile_collection_renderers.py:110
+msgid "Layout servizi online"
 msgstr ""
 
 #: ../browser/tile_collection_renderers.py:99
@@ -55,10 +46,6 @@ msgstr "Layout news con immagine"
 msgid "News with big photo"
 msgstr "News in primo piano con foto grande"
 
-#: ../configure.zcml:33
-msgid "RedTurtle Agid Theme"
-msgstr ""
-
 #: ../browser/tile_collection_renderers.py:87
 msgid "Servizi in area tematica"
 msgstr ""
@@ -67,43 +54,61 @@ msgstr ""
 msgid "Sights layout"
 msgstr "Layout siti d'interesse"
 
-#: ../configure.zcml:42
-msgid "Uninstall: RedTurtle Agid Theme"
-msgstr "Disinstalla: RedTurtle Agid Theme"
-
-#: ../configure.zcml:42
-msgid "Uninstalls the Plone theme package redturtle.agidtheme."
-msgstr "Disinstalla il tema Plone redturtle.agidtheme"
+#. Default: "published on"
+#: ../browser/templates/document_by_line.pt:33
+msgid "box_published_on"
+msgstr "pubblicato il"
 
 #. Default: "Contents that can be enable for sharing."
 #: ../controlpanel/interfaces.py:12
 msgid "description_available_portaltypes"
 msgstr "Contenuti che possono essere abilitati per la condivisione tramite social"
 
-#. Default: "Socials that can be enabled for sharing contents."
+#. Default: "Socials that can be enabled for                              sharing contents."
 #: ../controlpanel/interfaces.py:25
+#, fuzzy
 msgid "description_available_socials"
 msgstr "Social che possono essere abilitati per la condivisione dei contenuti"
 
 #. Default: "Header link label"
-#: ../controlpanel/interfaces.py:36
+#: ../controlpanel/interfaces.py:37
 msgid "header_link_label"
 msgstr "Testo del link in testata"
 
 #. Default: "Label for the link in the header of the site"
-#: ../controlpanel/interfaces.py:38
+#: ../controlpanel/interfaces.py:39
 msgid "header_link_label_desc"
 msgstr "Testo per il link che si trova in cima alla testata del sito"
 
 #. Default: "Header link url"
-#: ../controlpanel/interfaces.py:44
+#: ../controlpanel/interfaces.py:45
 msgid "header_link_url"
 msgstr "URL del link in testata"
 
 #. Default: "URL of the link in the header"
-#: ../controlpanel/interfaces.py:46
+#: ../controlpanel/interfaces.py:47
 msgid "header_link_url_desc"
 msgstr "URL per il link che si trova in cima alla testata del sito"
+
+#. Default: "Header second link label"
+#: ../controlpanel/interfaces.py:53
+msgid "header_second_link_label"
+msgstr ""
+
+#. Default: "Label for the link in the header of                              the site at right"
+#: ../controlpanel/interfaces.py:55
+msgid "header_second_link_label_desc"
+msgstr ""
+
+#. Default: "Header second link url"
+#: ../controlpanel/interfaces.py:62
+msgid "header_second_link_url"
+msgstr ""
+
+#. Default: "URL of the link in the header at right"
+#: ../controlpanel/interfaces.py:64
+msgid "header_second_link_url_desc"
+msgstr ""
 
 #. Default: "Available content types"
 #: ../controlpanel/interfaces.py:10
@@ -116,12 +121,11 @@ msgid "heading_available_socials"
 msgstr "Social disponibili"
 
 #. Default: "Keep reading"
-#: ../browser/templates/news_big_photo_renderer.pt:31
+#: ../browser/templates/news_big_photo_renderer.pt:40
 msgid "keep_reading_label"
 msgstr ""
 
 #. Default: "More…"
-#: ../browser/templates/news_renderer.pt:18
 #: ../browser/templates/sights_renderer.pt:39
 msgid "more_url"
 msgstr ""
@@ -129,6 +133,6 @@ msgstr ""
 #. Default: "No results found"
 #: ../browser/templates/news_big_photo_renderer.pt:15
 #: ../browser/templates/news_highlight_renderer.pt:15
-#: ../browser/templates/news_renderer.pt:26
+#: ../browser/templates/sights_renderer.pt:20
 msgid "tiles_collection_noresults"
 msgstr ""

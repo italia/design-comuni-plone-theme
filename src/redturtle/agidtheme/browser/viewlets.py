@@ -1,9 +1,34 @@
-from plone.app.layout.viewlets import common as base
-from redturtle.agidtheme.controlpanel.interfaces import IRedturtleAgidthemeSettings
-from plone import api
+# -*- coding: utf-8 -*-
 from ..vocabularies import SHARES
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from plone import api
+from plone.app.layout.viewlets import common as base
+from plone.app.layout.viewlets.content import DocumentBylineViewlet
+from plone.registry.interfaces import IRegistry
+from Products.CMFPlone.interfaces import ISecuritySchema
 from Products.CMFPlone.utils import getSiteLogo
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from redturtle.agidtheme.controlpanel.interfaces import IRedturtleAgidthemeSettings
+from zope.component import getUtility
+
+
+class CustomDocumentBylineViewlet(DocumentBylineViewlet):
+
+    index = ViewPageTemplateFile("templates/document_by_line.pt")
+
+    def show(self):
+        if not self.anonymous:
+            return True
+        else:
+            registry = getUtility(IRegistry)
+            settings = registry.forInterface(
+                ISecuritySchema,
+                prefix='plone',
+            )
+            return settings.allow_anon_views_about
+
+    def creator(self):
+        """ show creator infos only for authenticated users """
+        return not self.anonymous and self.context.Creator() or ''
 
 
 class SocialViewlet(base.ViewletBase):

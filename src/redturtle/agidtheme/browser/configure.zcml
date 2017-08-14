@@ -127,7 +127,7 @@
   <browser:viewlet
       name="plone.belowcontenttitle.documentbyline"
       manager="plone.app.layout.viewlets.interfaces.IBelowContent"
-      class="plone.app.layout.viewlets.content.DocumentBylineViewlet"
+      class=".viewlets.CustomDocumentBylineViewlet"
       permission="zope2.View"
       layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
       />
