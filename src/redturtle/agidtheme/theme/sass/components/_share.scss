@@ -65,11 +65,15 @@ body.template-edit {
     .share-options {
         width: 0%;
         overflow: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
 
         ul.social-list {
             list-style: none;
             padding: 0;
             margin: 0;
+            text-align: right;
 
             li {
                 display: inline-block;
@@ -124,13 +128,6 @@ body.template-edit {
             transition: width $animation-speed ease-in-out;
             width: 300px;
             margin: 0;
-            position: absolute;
-            top: 0;
-            right: 0;
-
-            ul {
-                text-align: right;
-            }
         }
 
         .share-title {
