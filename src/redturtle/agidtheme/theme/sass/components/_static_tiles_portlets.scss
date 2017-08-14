@@ -1,28 +1,31 @@
-
 .valuta-sito {
-      width: 100% !important;
-      background: $brand-primary;
-      text-align: center;
-      padding-right: 0;
-      padding-left: 0;
-      margin-bottom: 0;
+    width: 100% !important;
+    background: $brand-primary;
+    text-align: center;
+    padding-right: 0;
+    padding-left: 0;
+    margin-bottom: 0;
 
-      a {
-          display: block;
-          color: #fff !important;
-          padding: 20px;
+    a {
+        display: block;
+        color: #fff !important;
+        padding: 20px;
 
-          &:hover,
-          &:focus {
-              .valuta-sito-text {
-                  border-bottom: 1px solid #fff;
-              }
-          }
-      }
+        .valuta-sito-text {
+            border-bottom: 1px solid transparent;
+        }
 
-      p {
-          margin: 0;
-      }
+        &:hover,
+        &:focus {
+            .valuta-sito-text {
+                border-bottom-color: #fff;
+            }
+        }
+    }
+
+    p {
+        margin: 0;
+    }
 
     .valuta-sito-content:before {
         content: "";
@@ -35,5 +38,9 @@
         background-size: 4rem;
         background-repeat: no-repeat;
         background-position: center center;
+    }
+
+    .portletHeader {
+        display: none;
     }
 }
