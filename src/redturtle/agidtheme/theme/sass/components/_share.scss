@@ -125,14 +125,12 @@ body.template-edit {
 
     &.open {
         .share-options {
-            // display: inline-block;
             transition: width $animation-speed ease-in-out;
-            width: 300px;
+            width: 275px; // 320px min mobile - 45px button
             margin: 0;
         }
 
         .share-title {
-            // display: none;
             transition: width $animation-speed ease-in-out;
             width: 0%;
         }
@@ -153,5 +151,10 @@ body.template-edit {
             transition: width $animation-speed ease-in-out;
             width: 100%;
         }
+    }
+
+    @media (max-width: $screen-xs-max) {
+        max-width: 200px;
+        margin-right: 15px;
     }
 }

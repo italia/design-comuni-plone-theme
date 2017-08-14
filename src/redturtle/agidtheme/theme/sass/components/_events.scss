@@ -1,49 +1,49 @@
 body.portaltype-event {
+    ul.event.summary.details {
+        float: right;
+        max-width: 350px;
+        padding: 1.3rem 1.5rem;
+        margin: 0 0 2.5rem 2.5rem;
+        border: 1px solid $gray;
+        border-radius: 0;
+        //background-color: transparent;
+        border-width: 2px 0;
+        list-style: none;
 
+        abbr {
+            text-decoration: none;
+        }
 
-        ul.event.summary.details {
-            float: right;
-            max-width: 350px;
-            padding: 1.3rem 1.5rem;
-            margin: 0 0 2.5rem 2.5rem;
-            border: 1px solid $gray;
-            border-radius: 0;
-            //background-color: transparent;
-            border-width: 2px 0;
-            list-style: none;
+        li {
+            display: flex;
+            flex-direction: column;
+            padding: 0.4rem 0;
 
-            abbr {
-                text-decoration: none;
-            }
-
-            li {
-              display: flex;
-              flex-direction: column;
-              padding: 0.4rem 0;
-
-              strong {
+            strong {
                 text-transform: uppercase;
                 font-size: 0.75em;
                 font-weight: $regular;
-              }
+            }
 
-              span {
+            span {
                 font-weight: $semibold;
-              }
             }
         }
+    }
 
     #parent-fieldname-text {
         clear: left;
+
+        @media (max-width: $screen-xs-max) {
+            clear: both;
+        }
     }
 }
 
 // form event
 .template-event {
-
     div.riform {
         form {
-
             h1 {
                 font-size: 3rem;
             }
