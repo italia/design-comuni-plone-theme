@@ -90,5 +90,23 @@ require([
       }
     });
 
+    $(document).on('click', function(e) {
+      if ((!$(e.target).closest('#portal-searchbox').length && !$(e.target).closest('button#search-toggle').length) && $(window).width() <= 991) {
+        $('#portal-searchbox').removeClass('open');
+        $('#column-wrapper').removeClass('searchOpened');
+        $('#portal-footer-wrapper').removeClass('searchOpened');
+        console.log('cacca');
+      }
+
+      if ((!$(e.target).closest('#portal-mainnavigation').length && !$(e.target).closest('button#globalnav-toggle').length) && $(window).width() <= 991) {
+        $('#portal-mainnavigation').removeClass('open');
+        $('#portal-mainnavigation').addClass('closed');
+        $('#portal-top').removeClass('menuOpened');
+        $('#column-wrapper').removeClass('menuOpened');
+        $('#portal-footer-wrapper').removeClass('menuOpened');
+        console.log('shit');
+      }
+    });
+
   });
 });
