@@ -13,14 +13,14 @@
         </div>
         <div class="share-options">
             <ul class="social-list">
-                <tal:results tal:repeat="social results">
-                <li>
-                    <a tal:attributes="href python: view.get_sharer_url(social)" href="#" title="">
-                        <span tal:attributes="class python: 'social ' + social" class=""></span
-                        ><span tal:content="python: social.title()" class="u-hiddenVisually">Facebook</span>
-                    </a>
-                </li>
-                </tal:results>
+                <tal:results tal:repeat="social results"
+                ><li
+                    ><a tal:attributes="href python: view.get_sharer_url(social)" href="#" title=""
+                        ><span tal:attributes="class python: 'social ' + social" class=""></span
+                        ><span tal:content="python: social.title()" class="u-hiddenVisually">Facebook</span
+                    ></a
+                ></li
+            ></tal:results>
             </ul>
         </div>
     </div>
@@ -29,5 +29,4 @@
             <span class="share-icon"></span>
         </a>
     </div>
-
 </div>

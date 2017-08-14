@@ -16,9 +16,11 @@
 
 .portletContent {
     a {
+        border-bottom: 1px solid transparent;
+
         &:hover,
         &:focus {
-            border-bottom: 1px solid $link-hover-color;
+            border-bottom-color: $link-hover-color;
         }
     }
 }

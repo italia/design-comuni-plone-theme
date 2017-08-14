@@ -14,9 +14,9 @@ body.template-edit {
 
     .share-slider {
         display: inline-block;
-        overflow: hidden;
         white-space: nowrap;
         position: relative;
+        width: 100%;
     }
 
     .share-icon {
@@ -40,6 +40,7 @@ body.template-edit {
         position: absolute;
         right: 0;
         top: 0;
+        z-index: 2;
 
         a.share-toggle {
             padding: 6px 20px;
@@ -64,15 +65,20 @@ body.template-edit {
     .share-options {
         width: 0%;
         overflow: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
 
         ul.social-list {
             list-style: none;
             padding: 0;
             margin: 0;
+            text-align: right;
 
             li {
                 display: inline-block;
-                padding-right: 2px;
+                padding-right: 5px;
+                background: #FFF;
 
                 a {
                     display: block;
@@ -119,14 +125,12 @@ body.template-edit {
 
     &.open {
         .share-options {
-            // display: inline-block;
             transition: width $animation-speed ease-in-out;
-            width: 100%;
+            width: 275px; // 320px min mobile - 45px button
             margin: 0;
         }
 
         .share-title {
-            // display: none;
             transition: width $animation-speed ease-in-out;
             width: 0%;
         }
@@ -147,5 +151,10 @@ body.template-edit {
             transition: width $animation-speed ease-in-out;
             width: 100%;
         }
+    }
+
+    @media (max-width: $screen-xs-max) {
+        max-width: 200px;
+        margin-right: 15px;
     }
 }
