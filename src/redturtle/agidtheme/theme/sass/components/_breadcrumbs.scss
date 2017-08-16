@@ -8,6 +8,18 @@ body {
         }
     }
 
+    &.template-newsitem_view {
+        #viewlet-above-content {
+            #portal-breadcrumbs {
+                li {
+                    &:last-of-type {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
     #viewlet-above-content {
         #portal-breadcrumbs {
             background: $gray-bg;
@@ -22,10 +34,6 @@ body {
 
                 li {
                     padding:0;
-
-                    .section-news &:last-of-type {
-                        display: none;
-                    }
 
                     &:before {
                         content: '/';
