@@ -1,0 +1,135 @@
+// KILL BARCELONETA STYLES >____<
+
+// breadcrumbs
+.plone-breadcrumb ol > li + li:before { border:0; position: static; }
+.plone-breadcrumb ol > li + li:after { display: none; }
+
+
+// forms
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  font-size: inherit;
+}
+
+#portal-top #portal-header {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+// search
+#portal-searchbox {
+    margin:0;
+    float: none;
+    max-width: none;
+
+    #searchGadget {
+        border-radius: 0;
+        font-family: inherit;
+        font-size: inherit;
+        line-height: inherit;
+        height: inherit;
+    }
+}
+
+// menu
+#portal-globalnav-wrapper {
+    background-color: inherit;
+    color: inherit;
+    position: relative;
+    min-height: inherit;
+    margin-bottom: 0;
+    box-shadow: none;
+
+    #portal-globalnav {
+        float: none;
+
+        > li {
+            > a {
+                padding: 0;
+                line-height: inherit;
+                display: inline;
+
+                &:focus,
+                &:hover {
+                    background-color: inherit;
+                }
+            }
+        }
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h4,
+h5,
+h6 {
+    a {
+        &:hover,
+        &:focus {
+            border-bottom: 0;
+        }
+    }
+}
+
+// Portlet
+.portlet {
+    border: inherit;
+    margin-bottom: inherit;
+    border-radius: inherit;
+    box-shadow: none;
+
+  .portletHeader {
+    background: inherit;
+    font-weight: $semibold;;
+    font-size: 2.1rem;
+    padding: inherit;
+    color: inherit;
+
+    > a {
+      color: inherit;
+    }
+  }
+
+  .portletContent {
+    font-size: inherit;
+    border-top: inherit;
+    background: inherit;
+    font-weight: inherit;
+  }
+
+  > :last-child {
+      border-radius: 0;
+  }
+
+  > :first-child {
+    border-radius: 0;
+  }
+}
+
+// Portlet NAV
+.portletNavigationTree {
+
+  nav.portletContent {
+    border-top: inherit;
+
+    > ul > li > a {
+        background-color: transparent;
+        color: $link-color;
+        border-top: 0;
+    }
+  }
+}
+
+#main-container {
+    padding: 15px 0;
+}
+
+.share {
+    display: none;
+}
