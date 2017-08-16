@@ -133,3 +133,17 @@ h6 {
 .share {
     display: none;
 }
+
+.portalMessage {
+    margin: 30px 0;
+
+    strong {
+        &:before {
+            margin-left: 0;
+        }
+    }
+
+    > div {
+        padding-left: 30px;
+    }
+}
