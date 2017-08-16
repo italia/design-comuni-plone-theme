@@ -1,0 +1,64 @@
+.plone-modal-wrapper {
+    .plone-modal {
+        .plone-modal-dialog {
+            width: 100%;
+            position: relative;
+        }
+
+        .plone-modal-content {
+            position: relative;
+            background: rgba(255,255,255,.9);
+            border:0;
+            border-radius: 4px;
+            outline: none;
+            background-clip: padding-box;
+            box-shadow: 0 0 25px rgba(0,0,0,.15);
+            @include make-container;
+            padding-left: 0;
+            padding-right: 0;
+        }
+        &.fade {
+            opacity: 0;
+            -webkit-transition: opacity .25s ease;
+            transition: opacity .25s ease;
+            &.in {
+                opacity: 1;
+                -webkit-transition: opacity .25s ease;
+                transition: opacity .25s ease;
+            }
+            & .plone-modal-dialog {
+                -webkit-transform: translate(0, -25%);
+                -ms-transform: translate(0, -25%);
+                transform: translate(0, -25%);
+                -webkit-transition: -webkit-transform 0.25s ease-out;
+                -moz-transition: -moz-transform 0.25s ease-out;
+                -o-transition: -o-transform 0.25s ease-out;
+                transition: transform 0.25s ease-out;
+            }
+            &.in .plone-modal-dialog {
+                -webkit-transform: translate(0, 0);
+                -ms-transform: translate(0, 0);
+                transform: translate(0, 0);
+            }
+        }
+        &.in {display: block !important;}
+
+        .plone-modal-header {
+            border-bottom: 0;
+
+            .plone-modal-title {
+                display: none;
+            }
+        }
+
+        .plone-modal-body {
+            padding-top: 0;
+        }
+    }
+
+    &.image-modal {
+        .modal-image {
+            text-align: center;
+        }
+    }
+}
