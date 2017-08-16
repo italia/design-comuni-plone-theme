@@ -9,6 +9,12 @@
    <!-- Include the backend theme -->
    <xi:include href="backend.xml" />
 
+   <rules css:if-not-content="body.viewpermission-view, body.viewpermission-none">
+     <after css:theme-children="head">
+      <link rel="stylesheet" href="{$portal_url}/++theme++redturtle.agid.theme/css/redturtleagidtheme.backend.css" />
+     </after>
+   </rules>
+
    <rules css:if-content="body.viewpermission-view, body.viewpermission-none">
      <theme href="index.html" />
      <xi:include href="redturtleagidtheme_rules.xml" />

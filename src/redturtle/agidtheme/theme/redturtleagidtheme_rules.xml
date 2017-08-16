@@ -91,12 +91,6 @@
     </a>
   </after>
 
-  <!-- se la portlet "valuta il sito" e' nel footer la sposto fuori dal wrapper -->
-  <before css:content="#portal-footer-wrapper" css:if-content=".portal-footer .rerPortletAdvancedStatic.valuta-sito">
-    <xsl:copy-of css:select=".portal-footer .rerPortletAdvancedStatic.valuta-sito"/>
-  </before>
-  <drop css:content=".portal-footer .rerPortletAdvancedStatic.valuta-sito" />
-
   <replace css:theme="body" css:content="body" />
 
 </rules>

@@ -48,7 +48,6 @@
       <script src="https://use.fontawesome.com/22e75ec526.js"></script>
 
       <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600" rel="stylesheet"/>
-      <link rel="stylesheet" href="{$portal_url}/++theme++redturtle.agid.theme/css/redturtleagidtheme.backend.css" />
     </after>
 
     <rules css:if-content="#portal-top">
@@ -165,5 +164,11 @@
     </after>
 
   </rules>
+
+  <!-- se la portlet "valuta il sito" e' nel footer la sposto fuori dal wrapper -->
+  <before css:content="#portal-footer-wrapper" css:if-content=".portal-footer .rerPortletAdvancedStatic.valuta-sito">
+    <xsl:copy-of css:select=".portal-footer .rerPortletAdvancedStatic.valuta-sito"/>
+  </before>
+  <drop css:content=".portal-footer .rerPortletAdvancedStatic.valuta-sito" />
 
 </rules>
