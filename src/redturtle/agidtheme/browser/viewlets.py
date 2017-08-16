@@ -8,6 +8,7 @@ from Products.CMFPlone.interfaces import ISecuritySchema
 from Products.CMFPlone.utils import getSiteLogo
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from redturtle.agidtheme.controlpanel.interfaces import IRedturtleAgidthemeSettings
+from urllib2 import quote
 from zope.component import getUtility
 
 
@@ -54,20 +55,17 @@ class SocialViewlet(base.ViewletBase):
 
     def get_sharer_url(self, social_type):
         share_url = SHARES[social_type]['share_url']
+        title = quote(self.context.title.encode('utf-8'))
+        item_url = self.context.absolute_url()
         if social_type == 'linkedin':
-            return share_url.format(self.context.absolute_url(), self.context.title)
+            return share_url.format(item_url, self.context.title)
         if social_type == 'twitter':
-            return share_url.format(
-                self.context.absolute_url(),
-                self.context.title,
-                '',
-                '',
-            )
+            return share_url.format(item_url, title)
         if social_type == 'pinterest':
-            return share_url.format('', self.context.absolute_url(), 'false', self.context.title)
+            return share_url.format('', item_url, 'false', title)
         if social_type == 'pocket':
-            return share_url.format(self.context.absolute_url(), self.context.title)
-        return share_url.format(self.context.absolute_url())
+            return share_url.format(item_url, title)
+        return share_url.format(item_url)
 
 
 class LogoViewlet(base.ViewletBase):

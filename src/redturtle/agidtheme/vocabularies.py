@@ -11,7 +11,7 @@ SHARES = {
         'label': 'Facebook',
     },
     'twitter': {
-        'share_url': 'https://twitter.com/intent/tweet?url={0}&text={1}&via={2}&hashtags={3}',
+        'share_url': 'https://twitter.com/intent/tweet?url={0}&text={1}',
 
         'label': 'Twitter',
     },
