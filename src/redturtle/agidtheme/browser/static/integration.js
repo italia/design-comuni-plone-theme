@@ -26,9 +26,11 @@ require([
      */
     if ($('.news-column').length) {
       $('.news-column').prepend($('.share'));
+      $('.share').css('display', 'flex');
     }
     else if ($('#portal-column-two').length) {
       $('#portal-column-two').prepend($('.share'));
+      $('.share').css('display', 'flex');
     }
 
 
