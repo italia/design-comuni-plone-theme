@@ -85,7 +85,7 @@
 
   <record name="plone.allowed_sizes" interface="Products.CMFPlone.interfaces.controlpanel.IImagingSchema" field="allowed_sizes">
     <value purge="false">
-      <element>newshome 450:300</element>
+      <element>newshome 300:200</element>
       <element>newshighlight 540:360</element>
     </value>
   </record>
