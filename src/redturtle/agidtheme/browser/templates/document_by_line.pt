@@ -22,9 +22,10 @@
   </tal:creator>
 
   <tal:dates define="published view/pub_date;
-                     modified context/modified;
+                     modified context/ModificationDate;
+                     modified_compare context/modified;
                      published_current_day python:published and published.isCurrentDay() or False;
-                     modified_current_day python:modified and modified.isCurrentDay() or False">
+                     modified_current_day python:modified and modified_compare.isCurrentDay() or False">
   <span class="documentPublished"
         tal:condition="published">
     <span i18n:translate="box_published" tal:condition="published_current_day">
