@@ -1,8 +1,6 @@
 body {
-    &.template-landing_aree_tematiche_view,
     &.template-homepage_view,
-    &.template-search,
-    &.template-tiles_view {
+    &.template-search {
         #portal-breadcrumbs {
             display: none;
         }
