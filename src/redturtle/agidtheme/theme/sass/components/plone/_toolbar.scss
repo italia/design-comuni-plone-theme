@@ -67,6 +67,8 @@ body#visual-portal-wrapper.pat-plone .outer-wrapper {
 
 //*// on right on toolbar
 body#visual-portal-wrapper.pat-plone #edit-zone {
+    z-index: 5000;
+
     [class*="contenttype-"] {
         padding: 5px 15px 5px 40px;
     }
