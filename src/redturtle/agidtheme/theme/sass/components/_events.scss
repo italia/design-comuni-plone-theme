@@ -109,3 +109,21 @@ body.portaltype-event {
         }
     }
 }
+
+.template-event_listing {
+    .cal_info {
+        .documentByLine {
+            margin: 5px 0;
+            opacity: 0.75;
+            display: inline-block;
+        }
+    }
+}
+
+.template-full_view {
+    abbr {
+        border: 0;
+        text-decoration: none;
+        cursor: inherit;
+    }
+}

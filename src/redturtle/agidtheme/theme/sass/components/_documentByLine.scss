@@ -1,6 +1,14 @@
 .documentByLine {
-  font-size: 0.9em;
-  display: inline;
+    font-size: 0.9em;
+    display: inline;
+
+    abbr {
+        margin: 5px 0;
+        display: inline-block;
+        border: 0;
+        text-decoration: none;
+        cursor: inherit;
+    }
 }
 
 #plone-document-byline {
