@@ -90,6 +90,14 @@
     </value>
   </record>
 
+  <records
+      interface="Products.CMFPlone.interfaces.controlpanel.IImagingSchema"
+      prefix="plone">
+    <value key="allowed_sizes" purge="false">
+      <element>newsbig 1800:600</element>
+    </value>
+  </records>
+
   <records interface="redturtle.agidtheme.controlpanel.interfaces.IRedturtleAgidthemeSettings" />
 
   <!-- RESOURCE -->

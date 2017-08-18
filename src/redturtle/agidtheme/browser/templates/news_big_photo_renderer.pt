@@ -9,7 +9,7 @@
     <metal:macro define-macro="collection-tile-macro"
                  tal:define="helper_view nocall:context/@@collection_tile_helpers"
                  i18n:domain="redturtle.agidtheme">
-      <div class="news-big-photo" style="background-image: url('http://lorempixel.com/1800/600/');"
+      <div class="news-big-photo"
            tal:define="news python: results and results[0] or None;">
         <div class="tileBody">
           <p tal:condition="not:news"
@@ -22,7 +22,7 @@
                            image_tag python:helper_view.get_image_tag(obj, 'newsbig');
                            title news/Title;
                            description news/Description">
-            <!-- figure class="item-image" tal:condition="image_tag" tal:content="structure image_tag" / -->
+            <figure class="item-image" tal:condition="image_tag" tal:content="structure image_tag" />
             <h2 class="news-title"><a href="${news/getURL}" title="${title}">${title}</a></h2>
             <p class="news-description" tal:condition="description">${description}</p>
             <div class="news-date-more">
