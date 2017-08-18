@@ -23,11 +23,11 @@
     "test",
     "tests"
   ],
-  "_release": "33817c7b36",
+  "_release": "8c3102e867",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "33817c7b36f889455ea53c4c0dd344e76f58ade1"
+    "commit": "8c3102e86710ef012f43aa87f29e78c64eb46cea"
   },
   "_source": "https://github.com/nzambello/ellipsed.git",
   "_target": "*",
