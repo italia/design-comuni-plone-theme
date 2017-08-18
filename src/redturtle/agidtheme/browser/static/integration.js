@@ -16,8 +16,8 @@ require([
 
     $('#return-to-top').click(function () {
       $('body,html').animate({
-          scrollTop: 0,
-        }, 500);
+        scrollTop: 0,
+      }, 500);
     });
 
 
@@ -147,5 +147,23 @@ require([
       }
     });
 
+    function handleTabIndex() {
+      if (window.innerWidth <= 991) {
+        if ($('button.tile-collapse-button').attr('tabIndex') !== undefined) {
+          $('button.tile-collapse-button').removeAttr('tabIndex');
+        }
+      }
+      else {
+        $('button.tile-collapse-button').attr('tabIndex', -1);
+      }
+    }
+
+    $('.pat-tiles-management').on('rtTilesLoaded', function(e) {
+      handleTabIndex();
+    });
+
+    $(window).on('resize orientationchange', function(e) {
+      handleTabIndex();
+    });
   });
 });
