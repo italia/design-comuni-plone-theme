@@ -158,12 +158,20 @@ require([
       }
     }
 
+    /*
+     * On tiles loaded:
+     * - gestito tabIndex news collection collapse
+     * - multi lined ellipsis for news collection items
+     */
     $('.pat-tiles-management').on('rtTilesLoaded', function(e) {
       handleTabIndex();
+      ellipsed('.news-collection .newsDescription', 4);
+      ellipsed('.news-highlight .news-description', 6);
     });
 
     $(window).on('resize orientationchange', function(e) {
       handleTabIndex();
     });
+
   });
 });
