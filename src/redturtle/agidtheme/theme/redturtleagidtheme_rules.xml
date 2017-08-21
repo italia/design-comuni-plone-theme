@@ -8,6 +8,10 @@
 
   <notheme css:if-not-content="#visual-portal-wrapper" />
 
+  <after css:theme="head">
+    <script src="++theme++redturtle.agid.theme/bower_components/ellipsed/ellipsed.js"></script>
+  </after>
+
   <rules css:if-content="#portal-top">
     <!-- Attributes -->
     <copy attributes="*" css:theme="html" css:content="html" />
