@@ -67,10 +67,28 @@ module.exports = function (grunt) {
 					sourceMapIncludeSources: false,
 				},
 				files: {
-					'../browser/static/redturtle-agidtheme-bundle-compiled.min.js': ['../browser/static/integration.js'],
+					'../browser/static/redturtle-agidtheme-bundle-compiled.min.js': ['../browser/static/bundle-compiled.js'],
 				},
 			},
 		},
+    requirejs: {
+      'redturtle-agidtheme': {
+        options: {
+          baseUrl: '../browser/',
+          generateSourceMaps: true,
+          preserveLicenseComments: false,
+          paths: {
+            jquery: 'empty:',
+            'ellipsed': 'static/ellipsed',
+          },
+          wrapShim: true,
+          name: '../browser/static/integration.js',
+          exclude: ['jquery'],
+          out: '../browser/static/bundle-compiled.js',
+          optimize: 'none',
+        },
+      },
+    },
 		watch: {
 			styles: {
 				files: [
@@ -133,7 +151,7 @@ module.exports = function (grunt) {
 	// CWD to theme folder
 	grunt.file.setBase('./src/redturtle/agidtheme/theme');
 
-	grunt.registerTask('compile', ['less', 'sass', 'postcss', 'uglify', 'sed:version']);
+	grunt.registerTask('compile', ['less', 'sass', 'postcss', 'requirejs', 'uglify', 'sed:version']);
 	grunt.registerTask('default', ['watch']);
 	grunt.registerTask('bsync', ['browserSync:html', 'watch']);
 	grunt.registerTask('plone-bsync', ['browserSync:plone', 'watch']);

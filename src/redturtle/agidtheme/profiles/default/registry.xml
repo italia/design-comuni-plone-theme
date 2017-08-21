@@ -106,12 +106,18 @@
       <value key="js">++plone++redturtle.agidtheme/integration.js</value>
   </records>
 
+  <records prefix="plone.resources/ellipsed"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+      <value key="js">++plone++redturtle.agidtheme/ellipsed.js</value>
+  </records>
+
   <!-- BUNDLE -->
   <records prefix="plone.bundles/redturtle-agidtheme-bundle"
             interface='Products.CMFPlone.interfaces.IBundleRegistry'>
     <value key="enabled">True</value>
     <value key="resources" purge="false">
       <element>redturtle-agidtheme</element>
+      <element>ellipsed</element>
     </value>
     <value key="jscompilation">++plone++redturtle.agidtheme/redturtle-agidtheme-bundle-compiled.min.js</value>
     <value key="last_compilation">2019-11-26 00:00:00</value>
