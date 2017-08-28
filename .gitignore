@@ -5,6 +5,8 @@
 *.mo
 *.py?
 *.swp
+# Only use yarn
+package-lock.json
 # dirs
 bin/
 buildout-cache/
