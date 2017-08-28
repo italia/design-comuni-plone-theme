@@ -27,6 +27,28 @@
     "grunt-sass": "^1.2.1",
     "grunt-sed": "^0.1.1",
     "load-grunt-tasks": "^3.5.2",
-    "pixrem": "^3.0.2"
+    "pixrem": "^3.0.2",
+    "prettier": "^1.5.3",
+    "stylelint": "^8.0.0",
+    "stylelint-config-recommended": "^1.0.0"
+  },
+  "scripts": {
+    "prettier:scss": "prettier --single-quote --tab-width 4 --list-different src/redturtle/agidtheme/theme/sass/**/*.scss",
+    "prettier:scss:fix": "prettier --single-quote --tab-width 4 --write src/redturtle/agidtheme/theme/sass/**/*.scss"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-recommended",
+    "rules": {
+      "at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": [
+            "extends",
+            "include",
+            "mixin"
+          ]
+        }
+      ]
+    }
   }
 }

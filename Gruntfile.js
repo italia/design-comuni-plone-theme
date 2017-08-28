@@ -79,7 +79,7 @@ module.exports = function (grunt) {
           preserveLicenseComments: false,
           paths: {
             jquery: 'empty:',
-            'ellipsed': 'static/ellipsed',
+            ellipsed: 'static/ellipsed',
           },
           wrapShim: true,
           name: '../browser/static/integration.js',
