@@ -45,29 +45,18 @@ require([
     });
 
 
-    function toggleMenu() {
-      if ($('#portal-mainnavigation').hasClass('open')) {
-        $('#portal-mainnavigation').addClass('closed');
-      }
-      else {
-        $('#portal-mainnavigation').removeClass('closed');
-      }
-
-      $('#portal-mainnavigation').toggleClass('open');
-    }
-
     /*
      * globalnav menu open/close button for mobile
      */
     $('#globalnav-toggle').on('click', function(e) {
-      toggleMenu();
+      $('#portal-mainnavigation').toggleClass('open');
       $('#portal-top').addClass('menuOpened');
       $('#column-wrapper').addClass('menuOpened');
       $('#portal-footer-wrapper').addClass('menuOpened');
     });
 
     $('#globalnav-close').on('click', function(e) {
-      toggleMenu();
+      $('#portal-mainnavigation').removeClass('open');
       $('#portal-top').removeClass('menuOpened');
       $('#column-wrapper').removeClass('menuOpened');
       $('#portal-footer-wrapper').removeClass('menuOpened');
@@ -99,7 +88,7 @@ require([
       }
 
       if ((!$(e.target).closest('#portal-mainnavigation').length && !$(e.target).closest('button#globalnav-toggle').length) && $(window).width() <= 991) {
-        $('#portal-mainnavigation').removeClass('open').addClass('closed');
+        $('#portal-mainnavigation').removeClass('open');
         $('#portal-top').removeClass('menuOpened');
         $('#column-wrapper').removeClass('menuOpened');
         $('#portal-footer-wrapper').removeClass('menuOpened');
@@ -113,32 +102,10 @@ require([
     /*
      * collapse news collection
      */
-    function toggleNews(collapse, defaultClosed) {
-      if (defaultClosed) {
-        if (collapse.hasClass('open')) {
-          collapse.addClass('closed');
-        }
-        else {
-          collapse.removeClass('closed');
-        }
-        collapse.toggleClass('open');
-      }
-      else {
-        if (collapse.hasClass('closed')) {
-          collapse.addClass('open');
-        }
-        else {
-          collapse.removeClass('open');
-        }
-        collapse.toggleClass('closed');
-      }
-    }
-
     $('#content-core').on('click', '.collectionTile.collapsible .news-collection .tile-collapse-button', function(e) {
       if (window.innerWidth <= 991) {
         var collapse = $(e.target).closest('.collapsible');
-        var defaultClosed = collapse.hasClass('default-closed');
-        toggleNews(collapse, defaultClosed);
+        collapse.toggleClass('open');
       }
     });
 

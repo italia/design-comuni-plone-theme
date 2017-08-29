@@ -146,10 +146,12 @@
     .collectionTile.collapsible {
         .news-collection {
             .tileBody {
-                max-height: 10000px;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height $animation-speed ease-in-out;
 
                 .showMore {
-                    display: block;
+                    display: none;
                 }
             }
 
@@ -164,7 +166,7 @@
 
                 .title-icon {
                     &:before {
-                        @include make-fa('\f106');
+                        @include make-fa('\f107');
                         position: absolute;
                         right: 0;
                         top: 0;
@@ -176,31 +178,9 @@
             }
         }
 
-        &.default-closed {
-            .news-collection {
-                .tileBody {
-                    max-height: 0;
-                    overflow: hidden;
-
-                    .showMore {
-                        display: none;
-                    }
-                }
-
-                .tile-collapse-button {
-                    .title-icon {
-                        &:before {
-                            @include make-fa('\f107');
-                        }
-                    }
-                }
-            }
-        }
-
         &.open {
             .news-collection {
                 .tileBody {
-                    transition: max-height $animation-speed ease-in-out;
                     max-height: 10000px;
 
                     .showMore {
@@ -218,30 +198,51 @@
             }
         }
 
-        &.closed {
-            .news-collection {
-                .tileBody {
-                    transition: max-height $animation-speed ease-in-out;
-                    max-height: 0;
-                    overflow: hidden;
-
-                    .showMore {
-                        display: none;
-                    }
-                }
-
-                .tile-collapse-button {
-                    .title-icon {
-                        &:before {
-                            @include make-fa('\f107');
-                        }
-                    }
-                }
-            }
-        }
+/*         &.toggle-news {
+ *             .news-collection {
+ *                 .tileBody {
+ *                     transition: max-height $animation-speed ease-in-out;
+ *                     max-height: 10000px;
+ *
+ *                     .showMore {
+ *                         display: block;
+ *                     }
+ *                 }
+ *
+ *                 .tile-collapse-button {
+ *                     .title-icon {
+ *                         &:before {
+ *                             @include make-fa('\f106');
+ *                         }
+ *                     }
+ *                 }
+ *             }
+ *         }
+ *
+ *         &.closed {
+ *             .news-collection {
+ *                 .tileBody {
+ *                     transition: max-height $animation-speed ease-in-out;
+ *                     max-height: 0;
+ *                     overflow: hidden;
+ *
+ *                     .showMore {
+ *                         display: none;
+ *                     }
+ *                 }
+ *
+ *                 .tile-collapse-button {
+ *                     .title-icon {
+ *                         &:before {
+ *                             @include make-fa('\f107');
+ *                         }
+ *                     }
+ *                 }
+ *             }
+ *         } */
     }
 
-    .collectionTile.mobile-hidden {
+    .mobile-hidden {
         display: none;
     }
 }
