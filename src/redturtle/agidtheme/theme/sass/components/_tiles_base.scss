@@ -29,11 +29,12 @@
     a {
         color: #fff;
         border-color: #fff;
+        border-bottom: 1px solid;
 
         &:focus,
         &:hover {
-            color: #fff;
-            border-color: $link-hover-border-color;
+            color: #DDD;
+            border-color: #DDD;
         }
     }
 
@@ -73,9 +74,9 @@
         }
     }
 
-    .tilesList > .tileWrapper {
-        .tile-header {
-            display: none;
-        }
-    }
+    // .tilesList > .tileWrapper {
+    //     .tile-header {
+    //         display: none;
+    //     }
+    // }
 }
