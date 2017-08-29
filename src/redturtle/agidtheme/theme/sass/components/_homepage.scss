@@ -29,4 +29,10 @@
     #portal-column-two {
         display: none;
     }
+
+    .news-collection {
+      [class*='collection-container'] {
+        @include make-container;
+      }
+    }
 }
