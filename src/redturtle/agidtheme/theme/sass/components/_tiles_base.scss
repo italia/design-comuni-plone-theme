@@ -32,4 +32,11 @@
             border-color: $link-hover-border-color;
         }
     }
+
+    .tileTitle {
+        &,
+        .title-content {
+            color: #FFF;
+        }
+    }
 }
