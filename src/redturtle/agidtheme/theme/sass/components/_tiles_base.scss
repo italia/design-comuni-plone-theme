@@ -5,8 +5,8 @@
 .colonna-1-di-5         { width: 20%; float: left; }
 .colonna-1-di-6         { width: 100%; @include make-md-column(2); @include make-sm-column(4); }
 
-.sfondo-bianco {
-    background: #fff;
+.sfondo-chiaro {
+    background: $gray-bg;
 
     a {
         border-color: $link-color;
@@ -43,6 +43,7 @@
 
 // tiles management
 .pat-tiles-management {
+    background: $gray-bg;
     margin: 0;
 
     .actionsTiles {
