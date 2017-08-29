@@ -144,6 +144,30 @@
             }
         }
 
+        &.sfondo-scuro {
+            .news-collection {
+                .tile-collapse-button {
+                    color: #FFF;
+
+                    .title-content {
+                        border-bottom-color: #FFF;
+                    }
+
+                    .title-icon {
+                        &:before {
+                            @include make-fa('\f107');
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            height: 100%;
+                            padding-top: 5px;
+                            padding-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
         &.open {
             .news-collection {
                 .tileBody {
@@ -434,60 +458,60 @@
 
 // NEWS CON FOTO GRANDE IN SFONDO (homepage)
 .news-big-photo {
-  min-height: 40rem;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+    min-height: 40rem;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
-  .tileBody {
-    @include make-container;
+    .tileBody {
+        @include make-container;
 
-    .tile-content {
-      max-width: 600px;
-      margin: 3% auto 3% 5%;
-      background-color: rgba(255, 255, 255, 0.85);
-      padding: 2% 3%;
-      color: $text-color;
-      position: relative;
-      border-left: 30px solid $brand-primary;
-      font-size: 1.2em;
+        .tile-content {
+            max-width: 600px;
+            margin: 3% auto 3% 5%;
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 2% 3%;
+            color: $text-color;
+            position: relative;
+            border-left: 30px solid $brand-primary;
+            font-size: 1.2em;
 
-      h2 {
-        margin-top: 0;
-        font-size: 1.6em;
+            h2 {
+                margin-top: 0;
+                font-size: 1.6em;
 
-        a {
-          color: $text-color;
+                a {
+                    color: $text-color;
 
-          &:focus,
-          &:hover {
-            color: $brand-primary;
-          }
-        }
-      }
-
-      .news-date-more {
-        display: flex;
-        justify-content: space-between;
-
-        .show-more {
-          a {
-            font-weight: $semibold;
-            border-bottom: 1px solid $brand-primary;
-
-            &:focus,
-            &:hover {
-              border-color: $link-hover-color;
+                    &:focus,
+                    &:hover {
+                        color: $brand-primary;
+                    }
+                }
             }
-          }
-        }
 
-        .news-date {
-          font-size: 0.9em;
-          color: $gray;
+            .news-date-more {
+                display: flex;
+                justify-content: space-between;
+
+                .show-more {
+                    a {
+                        font-weight: $semibold;
+                        border-bottom: 1px solid $brand-primary;
+
+                        &:focus,
+                        &:hover {
+                            border-color: $link-hover-color;
+                        }
+                    }
+                }
+
+                .news-date {
+                    font-size: 0.9em;
+                    color: $gray;
+                }
+            }
         }
-      }
     }
-  }
 }
