@@ -25,13 +25,14 @@ require([
     /*
      *  share button position
      */
+    var $share = $('.share');
     if ($('.news-column').length) {
-      $('.news-column').prepend($('.share'));
-      $('.share').css('display', 'flex');
+      $('.news-column').prepend($share);
+      $share.addClass('share-visible');
     }
     else if ($('#portal-column-two').length) {
-      $('#portal-column-two').prepend($('.share'));
-      $('.share').css('display', 'flex');
+      $('#portal-column-two').prepend($share);
+      $share.addClass('share-visible');
     }
 
 
@@ -40,14 +41,7 @@ require([
      */
     $('.share .share-toggle').on('click', function(e) {
       e.preventDefault();
-      if ($('.share').hasClass('open')) {
-        $('.share').addClass('closed');
-      }
-      else {
-        $('.share').removeClass('closed');
-      }
-
-      $('.share').toggleClass('open');
+      $share.toggleClass('open');
     });
 
 
@@ -112,7 +106,7 @@ require([
       }
 
       if (!$(e.target).closest('.share').length) {
-        $('.share').removeClass('open').addClass('closed');
+        $share.removeClass('open');
       }
     });
 

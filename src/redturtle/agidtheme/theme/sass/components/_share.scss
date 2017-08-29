@@ -12,6 +12,10 @@ body.template-edit {
     display: none;
     flex-flow: row nowrap;
 
+    &.share-visible {
+        display: flex;
+    }
+
     .share-slider {
         display: inline-block;
         white-space: nowrap;
@@ -34,6 +38,7 @@ body.template-edit {
     }
 
     .share-title {
+        transition: width $animation-speed ease-in-out;
         background: $gray-bg;
         width: 100%;
         overflow: hidden;
@@ -63,6 +68,7 @@ body.template-edit {
     }
 
     .share-options {
+        transition: width $animation-speed ease-in-out;
         width: 0%;
         overflow: hidden;
         position: absolute;
@@ -125,31 +131,17 @@ body.template-edit {
 
     &.open {
         .share-options {
-            transition: width $animation-speed ease-in-out;
             width: 275px; // 320px min mobile - 45px button
             margin: 0;
         }
 
         .share-title {
-            transition: width $animation-speed ease-in-out;
             width: 0%;
         }
 
         .share-icon {
             color: $social-icon-bg;
             background: $gray-bg;
-        }
-    }
-
-    &.closed {
-        .share-options {
-            transition: width $animation-speed ease-in-out;
-            width: 0%;
-        }
-
-        .share-title {
-            transition: width $animation-speed ease-in-out;
-            width: 100%;
         }
     }
 
