@@ -5,6 +5,9 @@
       lang="en"
       metal:use-macro="here/main_template/macros/master"
       i18n:domain="">
+  <metal:override fill-slot="top_slot"
+    tal:define="disable_column_one python:request.set('disable_plone.leftcolumn',1);
+                disable_column_two python:request.set('disable_plone.rightcolumn',1);"/>
 
   <body>
     <metal:content-core fill-slot="content-core">

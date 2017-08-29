@@ -114,7 +114,7 @@
 
         </metal:slot>
 
-<!--                 <metal:sub define-slot="sub" tal:content="nothing">
+<!--!                 <metal:sub define-slot="sub" tal:content="nothing">
                    This slot is here for backwards compatibility only.
                    Don't use it in your custom templates.
                 </metal:sub> -->
@@ -134,7 +134,7 @@
       </metal:portlets>
     </aside>
 
-    <!-- agid customization: always show column two, except when disable_column_two is present in request -->
+    <!--! agid customization: always show column two, except when disable_column_two is present in request -->
     <aside id="portal-column-two"
            metal:define-slot="column_two_slot"
            tal:define="force_disable python:request.get('disable_plone.rightcolumn', None)"
