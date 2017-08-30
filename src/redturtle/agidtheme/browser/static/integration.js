@@ -68,6 +68,7 @@ require([
      */
     $('#search-toggle').on('click', function(e) {
       $('#portal-searchbox').toggleClass('open');
+      $('#search-toggle').toggleClass('open');
       $('#column-wrapper').toggleClass('searchOpened');
       $('#portal-footer-wrapper').toggleClass('searchOpened');
 

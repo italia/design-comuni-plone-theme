@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-08-16 08:55+0000\n"
+"POT-Creation-Date: 2017-08-30 09:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,11 +21,15 @@ msgstr ""
 msgid "Configurazione tema agid"
 msgstr ""
 
-#: ../browser/configure.zcml
+#: ../browser/configure.zcml:54
 msgid "Homepage view"
 msgstr ""
 
-#: ../browser/configure.zcml
+#: ../configure.zcml:33
+msgid "Installs the Plone theme package redturtle.agidtheme."
+msgstr ""
+
+#: ../browser/configure.zcml:64
 msgid "Landing Aree Tematiche view"
 msgstr ""
 
@@ -57,6 +61,10 @@ msgstr ""
 msgid "News with big photo"
 msgstr ""
 
+#: ../configure.zcml:33
+msgid "RedTurtle Agid Theme"
+msgstr ""
+
 #: ../browser/tile_collection_renderers.py:87
 msgid "Servizi in area tematica"
 msgstr ""
@@ -65,8 +73,20 @@ msgstr ""
 msgid "Sights layout"
 msgstr ""
 
+#: ../browser/configure.zcml:59
+msgid "Tiles page view"
+msgstr ""
+
+#: ../configure.zcml:42
+msgid "Uninstall: RedTurtle Agid Theme"
+msgstr ""
+
+#: ../configure.zcml:42
+msgid "Uninstalls the Plone theme package redturtle.agidtheme."
+msgstr ""
+
 #. Default: "published on"
-#: ../browser/templates/document_by_line.pt:33
+#: ../browser/templates/document_by_line.pt:34
 msgid "box_published_on"
 msgstr ""
 
@@ -146,4 +166,3 @@ msgstr ""
 #: ../browser/templates/sights_renderer.pt:20
 msgid "tiles_collection_noresults"
 msgstr ""
-
