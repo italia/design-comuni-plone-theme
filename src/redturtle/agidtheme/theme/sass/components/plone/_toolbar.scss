@@ -103,3 +103,31 @@ body#visual-portal-wrapper.pat-plone #edit-zone {
     .contenttype-event:after      { content: '\e809'; }
     .contenttype-news-item:after  { content: '\e80f'; }
 }
+
+// POPOVER RENAME (da folder_contents)
+#popover-rename.active {
+  min-width: 400px;
+
+  .popover-content {
+    padding-top:0;
+  }
+
+  div.item {
+    display: block;
+    @extend .clearfix;
+
+    div.form-group {
+      float: none;
+      margin-bottom: 0;
+
+      label {
+        margin-top: 1rem;
+      }
+
+      input {
+        height: auto;
+        line-height: inherit;
+      }
+    }
+  }
+}
