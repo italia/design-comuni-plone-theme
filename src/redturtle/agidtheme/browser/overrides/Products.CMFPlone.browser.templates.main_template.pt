@@ -138,7 +138,7 @@
     <aside id="portal-column-two"
            metal:define-slot="column_two_slot"
            tal:define="force_disable python:request.get('disable_plone.rightcolumn', None)"
-           tal:condition="python:force_disable is None">
+           tal:condition="python:force_disable in [None, False]">
       <metal:portlets define-slot="portlets_two_slot">
         <tal:block replace="structure provider:plone.rightcolumn" />
       </metal:portlets>
