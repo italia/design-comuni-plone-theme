@@ -321,7 +321,7 @@
         }
     }
 
-    @media (max-width: $screen-xs-max) {
+    @media screen and (max-width: $screen-xs-max) {
         .tileBody {
             padding-top: 0;
         }
