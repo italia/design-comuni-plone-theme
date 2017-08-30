@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="25px" height="19px" viewBox="0 0 25 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.1 (44463) - http://www.bohemiancoding.com/sketch -->
+    <title>Path</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo-medium" fill="#FFFFFF">
+            <path d="M3.56,14.373 C3.56,14.928 3.533,15.06 3.242,15.403 L0.785,18.388 L0.785,18.784 L7.759,18.784 L7.759,18.388 L5.303,15.403 C5.012,15.06 4.959,14.901 4.959,14.373 L4.959,5.42 L11.086,18.784 L11.8,18.784 L17.056,5.42 L17.056,16.064 C17.056,16.354 17.056,16.406 16.871,16.592 L15.023,18.388 L15.023,18.784 L24.213,18.784 L24.213,18.388 L22.391,16.592 C22.207,16.406 22.181,16.354 22.181,16.064 L22.181,2.937 C22.181,2.646 22.207,2.593 22.391,2.409 L24.214,0.612 L24.214,0.216 L17.743,0.216 L13.121,11.758 L7.918,0.216 L1.128,0.216 L1.128,0.612 L3.268,3.252 C3.507,3.544 3.559,3.622 3.559,4.02 L3.559,14.373 L3.56,14.373 Z" id="Path"></path>
+        </g>
+    </g>
+</svg>

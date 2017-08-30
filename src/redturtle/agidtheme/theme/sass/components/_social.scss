@@ -27,6 +27,7 @@
           text-align: center;
           font-size: 2rem;
           line-height: 3rem;
+          vertical-align: middle;
         }
         &.sc-facebook:before {
           @include make-fa('\f09a', #FFF);
@@ -36,6 +37,13 @@
         }
         &.sc-youtube:before {
           @include make-fa('\f167', #FFF);
+        }
+        &.sc-medium:before {
+          background-image: url($img-path + 'medium.svg');
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: 75%;
+          content:'';
         }
 
         &:focus,
