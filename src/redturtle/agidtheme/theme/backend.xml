@@ -40,8 +40,7 @@
     <!-- We can't control the bundle from here due to include. Just hard code -->
     <after css:theme-children="head">
       <link rel="shortcut icon" type="image/x-icon"
-            href="favicon.ico" />
-      <!-- <link rel="stylesheet" href="../++theme++barceloneta/less/barceloneta-compiled.css" /> -->
+            href="{$portal_url}/++theme++redturtle.agid.theme/favicon.ico" />
       <link rel="stylesheet" href="{$portal_url}/++theme++redturtle.agid.theme/barceloneta/barceloneta-backend.css" />
 
 

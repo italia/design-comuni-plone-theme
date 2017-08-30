@@ -23,17 +23,18 @@
 }
 // VISTA RIASSUNTIVA
 .template-summary_view {
-  #content-core {
-    padding-bottom: 40px;
-  }
 
   .tileItem {
     @extend .clearfix;
-    padding: 12px 0;
-    border-bottom: 1px solid #CCC;
+    padding: 2rem 0;
+    border-top: 1px solid #CCC;
+
+    &:first-child {
+        border-top:0;
+    }
 
     h2.tileHeadline {
-      font-size: $font-size-h3;
+      font-size: 2.4rem;
       margin-top:0;
     }
 
@@ -47,7 +48,7 @@
 
     .tileImage {
       float: left;
-      margin: 0 10px 5px 0;
+      margin: 0.3em 1em 0.5em 0;
     }
 
     .tileImageNoFloat + .tileFooter {
