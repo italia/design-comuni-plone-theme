@@ -1,8 +1,8 @@
 .template-homepage_view {
-  //  background: $gray-bg;
+    //  background: $gray-bg;
 
     #portal-top {
-      background: #fff;
+        background: #fff;
     }
 
     #content {
@@ -20,8 +20,6 @@
         width: 100%;
     }
 
-
-
     #viewlet-below-content {
         display: none;
     }
@@ -30,9 +28,8 @@
         display: none;
     }
 
-    .news-collection {
-      [class*='collection-container'] {
+    .aree-tematiche,
+    [class*='collection-container'] {
         @include make-container;
-      }
     }
 }

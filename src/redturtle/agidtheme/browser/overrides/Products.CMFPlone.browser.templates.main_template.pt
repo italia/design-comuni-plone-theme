@@ -145,6 +145,8 @@
       </metal:portlets>
     </aside>
 
+    <div id="tiles-slot" metal:define-slot="tiles_slot"></div>
+
     <footer id="portal-footer-wrapper" i18n:domain="plone">
       <div tal:replace="structure provider:plone.portalfooter" />
     </footer>

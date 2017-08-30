@@ -1,0 +1,22 @@
+body[class*="page_view"] {
+    #viewlet-below-content {
+        display: none;
+    }
+
+    .aree-tematiche,
+    [class*='collection-container'] {
+        width: 100%;
+    }
+
+    .tiles-slot {
+        .tilesList {
+            @include make-container;
+        }
+
+        #viewlet-below-content {
+            @include make-container;
+            display: block;
+            margin-bottom: 50px;
+        }
+    }
+}
