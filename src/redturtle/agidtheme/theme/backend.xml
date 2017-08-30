@@ -171,9 +171,9 @@
   <drop css:content=".portal-footer .rerPortletAdvancedStatic.valuta-sito" />
 
   <!-- sposto portalMessage sotto le breadcrumbs -->
-  <before css:content="#content" css:if-content="#content .portalMessage">
+  <!-- before css:content="#content" css:if-content="#content .portalMessage">
     <xsl:copy-of css:select="#content .portalMessage" />
   </before>
-  <drop css:content="#content .portalMessage" />
+  <drop css:content="#content .portalMessage" / -->
 
 </rules>
