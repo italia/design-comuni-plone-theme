@@ -1,3 +1,9 @@
+.collectionTile {
+  &.senza-titolo .tileTitle {
+    display: none;
+  }
+}
+
 .news-collection {
     .news-collection-container {
         // @include make-container;
@@ -282,12 +288,12 @@
                     float: left;
                     font-size: 1.9rem;
                     font-weight: $bold;
+                    padding-right: 3rem;
                 }
 
                 .news-date {
                     float: left;
                     font-size: 1.8rem;
-                    margin: 0 30px;
                 }
             }
 
