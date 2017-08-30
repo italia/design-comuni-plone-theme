@@ -1,7 +1,7 @@
 body[class*="page_view"] {
     .aree-tematiche,
     [class*='collection-container'] {
-        width: 100%;
+        //width: 100%;
     }
 
     .tiles-slot {
@@ -13,5 +13,17 @@ body[class*="page_view"] {
             @include make-container;
             margin-bottom: 50px;
         }
+    }
+
+    .tile-advanced-static {
+      .tile-container {
+        @include make-container();
+      }
+    }
+
+    .existing-content-tile {
+      > div {
+        @include make-container();
+      }
     }
 }
