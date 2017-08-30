@@ -90,6 +90,7 @@
         <xsl:copy-of select="//*[@id='viewlet-below-content']" />
       </div>
     </replace>
+    <drop css:content="#portal-column-content #viewlet-below-content" />
   </rules>
 
 
