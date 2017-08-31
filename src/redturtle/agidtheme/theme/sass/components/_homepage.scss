@@ -27,9 +27,4 @@
     #portal-column-two {
         display: none;
     }
-
-    .aree-tematiche,
-    [class*='collection-container'] {
-        @include make-container;
-    }
 }
