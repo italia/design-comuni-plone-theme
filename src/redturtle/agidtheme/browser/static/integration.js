@@ -111,7 +111,6 @@ require([
     });
 
     function handleTabIndex() {
-      debugger;
       if (window.innerWidth <= 991 && $('button.tile-collapse-button').closest('.collectionTile').hasClass('collapsible') && $('button.tile-collapse-button').attr('tabIndex') !== undefined) {
         $('button.tile-collapse-button').removeAttr('tabIndex');
       }
