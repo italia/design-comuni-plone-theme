@@ -4,6 +4,10 @@ body[class*="page_view"] {
         width: 100%;
     }
 
+    #viewlet-below-content {
+        display: none;
+    }
+
     .tiles-slot {
         .tilesList {
             @include make-container;

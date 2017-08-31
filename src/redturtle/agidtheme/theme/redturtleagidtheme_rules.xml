@@ -57,6 +57,17 @@
   <!-- cancello la search originale -->
   <drop css:content="#portal-header #portal-searchbox" />
 
+
+  <!-- <rules css:if-content="body.template-tiles_page_view"> -->
+  <!--   <replace css:content=".pat-tiles-management"> -->
+  <!--     <div class="tiles-slot"> -->
+  <!--       <xsl:copy-of css:select=".pat-tiles-management" /> -->
+  <!--       <xsl:copy-of select="//*[@id='viewlet-below-content']" /> -->
+  <!--     </div> -->
+  <!--   </replace> -->
+  <!--   <drop css:content="#portal-column-content #viewlet-below-content" /> -->
+  <!-- </rules> -->
+
   <!-- sposto le colonne dentro ad un container -->
   <replace css:content="#portal-column-content">
     <xsl:variable name="wrapper">
@@ -81,17 +92,6 @@
   <!-- cancello le colonne originali -->
   <drop css:content="body > aside#portal-column-one" />
   <drop css:content="body > aside#portal-column-two" />
-
-
-  <rules css:if-content="body.template-tiles_page_view">
-    <replace css:content=".pat-tiles-management">
-      <div class="tiles-slot">
-        <xsl:copy-of css:select=".pat-tiles-management" />
-        <xsl:copy-of select="//*[@id='viewlet-below-content']" />
-      </div>
-    </replace>
-    <drop css:content="#portal-column-content #viewlet-below-content" />
-  </rules>
 
 
   <!-- aggiungo la freccia per il mobile -->
