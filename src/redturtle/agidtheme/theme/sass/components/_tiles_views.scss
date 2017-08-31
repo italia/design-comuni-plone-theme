@@ -32,7 +32,8 @@ body[class*="page_view"] {
     }
 
     .aree-tematiche,
-    [class*='collection-container'] {
+    [class*='collection-container'],
+    .PagesTileCollection .tileContent {
         @include make-container;
     }
 }
