@@ -298,7 +298,7 @@
 
             .news-title {
                 margin: 2rem 0;
-                font-size: 3rem;
+                font-size: 4rem;
                 font-weight: $bold;
                 line-height: 1.2em;
 
@@ -308,6 +308,9 @@
                         border-bottom: 1px solid $link-hover-color;
                     }
                 }
+            }
+            .news-description {
+              font-size: 2.8rem;
             }
         }
 
