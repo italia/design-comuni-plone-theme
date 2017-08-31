@@ -17,15 +17,8 @@ class CustomDocumentBylineViewlet(DocumentBylineViewlet):
     index = ViewPageTemplateFile("templates/document_by_line.pt")
 
     def show(self):
-        if not self.anonymous:
-            return True
-        else:
-            registry = getUtility(IRegistry)
-            settings = registry.forInterface(
-                ISecuritySchema,
-                prefix='plone',
-            )
-            return settings.allow_anon_views_about
+        # always show: anonymous need to see some infos
+        return True
 
     def creator(self):
         """ show creator infos only for authenticated users """
