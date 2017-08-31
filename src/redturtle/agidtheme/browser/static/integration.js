@@ -111,10 +111,9 @@ require([
     });
 
     function handleTabIndex() {
-      if (window.innerWidth <= 991) {
-        if ($('button.tile-collapse-button').attr('tabIndex') !== undefined) {
-          $('button.tile-collapse-button').removeAttr('tabIndex');
-        }
+      debugger;
+      if (window.innerWidth <= 991 && $('button.tile-collapse-button').closest('.collectionTile').hasClass('collapsible') && $('button.tile-collapse-button').attr('tabIndex') !== undefined) {
+        $('button.tile-collapse-button').removeAttr('tabIndex');
       }
       else {
         $('button.tile-collapse-button').attr('tabIndex', -1);

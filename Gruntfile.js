@@ -103,7 +103,7 @@ module.exports = function (grunt) {
 				files: [
 					'../browser/static/integration.js',
 				],
-				tasks: ['uglify'],
+				tasks: ['requirejs', 'uglify'],
 			},
 		},
 		browserSync: {
