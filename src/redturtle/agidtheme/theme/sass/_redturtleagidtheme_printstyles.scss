@@ -1,7 +1,16 @@
 // link stampati tra parentesi
 a[href]:after { content: none !important; }
+#parent-fieldname-text a,
+.tileWrapper a {
+  border-bottom: 0 !important;
+  text-decoration: underline !important;
+}
 
-img {width: auto !important; max-width: 100%;}
+img {
+  width: auto !important;
+  max-width: 100%;
+}
+
 .clearfix {
   &:before,
   &:after {
@@ -13,11 +22,17 @@ img {width: auto !important; max-width: 100%;}
   }
 }
 
-body { font-size: 9pt; font-family: $font-family-base !important;}
+body {
+  font-size: 9pt;
+  font-family: $font-family-base !important;
+}
 p,
-#content p { margin: 0 0 4pt; line-height: 1.4em; }
+#content p {
+  margin: 0 0 4pt;
+  line-height: 1.4em;
+}
 
-h1, h2 { letter-spacing: normal; font-weight: 500; }
+h1, h2 { letter-spacing: normal; font-weight: $regular; }
 h1, h2, h3, h4, h5, h6, strong, ul, li, #content p, span, div  { font-family: $font-family-base !important; }
 h1 { font-size: 15pt; }
 #content h1.documentFirstHeading { margin-bottom: 0; }
@@ -37,31 +52,79 @@ h3 { font-size: 12pt; font-weight: 600; }
 .globalnavWrapper,
 #portal-globalnav,
 .documentActions,
+#portal-header .search-social-wrapper,
+#portal-logo img,
+#header-banner,
+#viewlet-below-content,
 .managePortletsFallback,
+#return-to-top,
+.valuta-sito,
+#portal-column-one,
+#portal-column-two,
 .managePortletsLink { display: none; }
 
+#portal-header {
+  margin: 1rem;
+  border-bottom: 1px solid $text-color;
+  padding: 0 0 0.5rem;
+  margin-bottom: 3rem;
+}
 
-#portal-logo { float: none !important; display: inline-block; width: 200px; height: 45px; border:0 !important; }
+
+#column-wrapper {
+  padding: 0 1rem;
+}
 
 // fix firefox print
 #portal-columns { display: inline; }
 
 .portal-columns-row { margin: 0 !important; }
 
-// rimetto visibile colonna 2 e nascondo la 1
-#portal-column-one { display: none !important; }
-
-#portal-column-two,
-#portal-column-content { display: inline !important; width: auto !important; float: none !important; position: static !important; }
-
-#portal-column-two { font-size: 1em; padding: 20px 0 0; margin-top: 20px; border-top: 1px dashed #999;
- // nascondo tutte le portlet non di contatto/moduli
- .portlet { display: none; }
+.with-column-one #portal-column-content,
+.with-column-two #portal-column-content {
+    padding: 0;
 }
+
+.colonna-1-di-2         { width: 50%; }
+.colonna-1-di-3         { width: 33.3333333333%; }
+.colonna-2-di-3         { width: 66.6666666667%; }
+.colonna-1-di-4         { width: 25%; }
+.colonna-1-di-5         { width: 20%; }
 
 // formatting
 pre, blockquote, #content .callout {
     border: 1px solid #999;
     padding: 12px;
     border-radius: 4px;
+}
+
+.documentDescription {
+  margin: 1.5rem 0 3rem;
+}
+
+blockquote {
+    float: none;
+    max-width: none;
+    margin: 2rem auto;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+// tiles
+.news-highlight .tileBody {
+  padding: 0;
+}
+.news-big-photo {
+  min-height: 1px;
+
+  .tileBody .tile-content {
+    max-width: none;
+  }
+}
+.news-collection .newsWrapper {
+  border: 1px solid #CCC;
+}
+
+.newsWrapper > a {
+  text-decoration: none !important;
 }

@@ -34,7 +34,7 @@ body.portaltype-event {
     #parent-fieldname-text {
         clear: left;
 
-        @media (max-width: $screen-xs-max) {
+        @media screen and (max-width: $screen-xs-max) {
             clear: both;
         }
     }
