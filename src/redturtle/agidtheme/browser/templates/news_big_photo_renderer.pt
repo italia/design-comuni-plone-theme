@@ -10,7 +10,10 @@
                  tal:define="helper_view nocall:context/@@collection_tile_helpers"
                  i18n:domain="redturtle.agidtheme">
       <div class="news-big-photo"
-           tal:define="news python: results and results[0] or None;">
+           tal:define="news python: results and results[0] or None;
+                       obj news/getObject;
+                       bg_url python:helper_view.get_bg_url(obj, 'newsbig');"
+           tal:attributes="style bg_url">
         <div class="tileBody">
           <p tal:condition="not:news"
              class="noResults"
@@ -18,11 +21,9 @@
            No results found
           </p>
           <div class="tile-content"
-               tal:define="obj news/getObject;
-                           image_tag python:helper_view.get_image_tag(obj, 'newsbig');
-                           title news/Title;
+               tal:define="title news/Title;
                            description news/Description">
-            <figure class="item-image" tal:condition="image_tag" tal:content="structure image_tag" />
+            <!-- <figure class="item-image" tal:condition="image_tag" tal:content="structure image_tag" /> -->
             <h2 class="news-title"><a href="${news/getURL}" title="${title}">${title}</a></h2>
             <p class="news-description" tal:condition="description">${description}</p>
             <div class="news-date-more">

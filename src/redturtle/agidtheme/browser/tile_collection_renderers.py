@@ -25,6 +25,19 @@ class HelpersView(BrowserView):
             # The object doesn't have an image field
             return ""
 
+    def get_bg_url(self, item, scale='thumb'):
+        try:
+            scale_view = api.content.get_view(
+                name='images',
+                context=item,
+                request=self.request,
+            )
+            return 'background-image: url("' +\
+                   str(scale_view.scale('image', scale=scale).url) + '");'
+        except (InvalidParameterError, POSKeyError, AttributeError):
+            # The object doesn't have an image field
+            return ""
+
     def get_formatted_date(self, item):
         '''
         return a formatted date

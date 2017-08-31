@@ -198,6 +198,8 @@ require([
       handleTabIndex();
       ellipsed('.news-collection .newsDescription', 4);
       ellipsed('.news-highlight .news-description', 6);
+      // ellipsed('.news-big-photo .news-description', 4);
+      // ellipsed('.news-big-photo .news-title', 3);
     });
 
     $(window).on('resize orientationchange', function(e) {
