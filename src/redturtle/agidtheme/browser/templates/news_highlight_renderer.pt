@@ -29,7 +29,7 @@
                     tal:condition="title">${title}</div>
                 <div class="news-date"
                      tal:define="date python:helper_view.get_formatted_date(news)"
-                     tal:condition="date"
+                     tal:condition="python: view.data.get('show_dates', False) and date"
                      i18n:domain="plonelocales">
                   ${date/day} <tal:month i18n:translate="">${date/month}</tal:month> ${date/year}
                 </div>
