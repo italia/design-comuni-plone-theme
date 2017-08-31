@@ -60,7 +60,7 @@
   <!-- flags for DocumentBylineViewlet -->
   <record interface="Products.CMFPlone.interfaces.controlpanel.ISecuritySchema" name="plone.allow_anon_views_about" field="allow_anon_views_about">
     <field type="plone.registry.field.Bool">
-      <default>True</default>
+      <default>False</default>
     </field>
   </record>
   <record interface="Products.CMFPlone.interfaces.controlpanel.ISiteSchema" name="plone.display_publication_date_in_byline" field="display_publication_date_in_byline">
