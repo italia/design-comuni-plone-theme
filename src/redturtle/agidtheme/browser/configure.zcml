@@ -35,13 +35,13 @@
       layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
       />
 
-  <browser:page
-      name="landing_aree_tematiche_view"
-      for="plone.app.blocks.layoutbehavior.ILayoutBehaviorAdaptable"
-      template="templates/landing_aree_tematiche_view.pt"
-      permission="zope2.View"
-      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
-      />
+  <!-- <browser:page -->
+  <!--     name="landing_aree_tematiche_view" -->
+  <!--     for="plone.app.blocks.layoutbehavior.ILayoutBehaviorAdaptable" -->
+  <!--     template="templates/landing_aree_tematiche_view.pt" -->
+  <!--     permission="zope2.View" -->
+  <!--     layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer" -->
+  <!--     /> -->
 
   <include package="plone.app.contentmenu" />
   <browser:menuItems
@@ -57,11 +57,11 @@
         action="tiles_page_view"
         i18n:translate="title"
         />
-    <browser:menuItem
-        title="Landing Aree Tematiche view"
-        action="landing_aree_tematiche_view"
-        i18n:translate="title"
-        />
+    <!-- <browser:menuItem -->
+    <!--     title="Landing Aree Tematiche view" -->
+    <!--     action="landing_aree_tematiche_view" -->
+    <!--     i18n:translate="title" -->
+    <!--     /> -->
   </browser:menuItems>
 
   <browser:page

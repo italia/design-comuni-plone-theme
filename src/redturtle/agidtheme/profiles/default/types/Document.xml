@@ -9,7 +9,7 @@
       purge="false">
     <element value="homepage_view" />
     <element value="tiles_page_view" />
-    <element value="landing_aree_tematiche_view" />
+    <!-- <element value="landing_aree_tematiche_view" /> -->
   </property>
   <property
       name="behaviors"
