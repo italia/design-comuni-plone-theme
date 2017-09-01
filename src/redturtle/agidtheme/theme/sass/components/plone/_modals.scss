@@ -81,6 +81,17 @@ body.plone-toolbar-left-expanded {
                 width: calc(100% - 120px);
                 left: 120px !important;
             }
+
+        }
+    }
+}
+
+body.plone-toolbar-left-expanded {
+    .plone-modal-wrapper {
+        .plone-modal {
+            .plone-modal-content {
+                max-width: 100%;
+            }
         }
     }
 }
