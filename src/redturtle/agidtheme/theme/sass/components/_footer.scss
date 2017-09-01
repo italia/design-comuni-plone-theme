@@ -123,6 +123,13 @@
                 &.rss:before {
                     @include make-fa('\f09e', $footer-bg);
                 }
+                &.medium:before {
+                  background-image: url($img-path + 'medium.svg');
+                  background-repeat: no-repeat;
+                  background-position: center center;
+                  background-size: 75%;
+                  content:'';
+                }
 
                 &:focus,
                 &:hover {
@@ -134,6 +141,12 @@
                     &.st {
                         &:before {
                             background-image: url($img-path + 'storifyHover.svg');
+                        }
+                    }
+
+                    &.medium {
+                        &:before {
+                            background-image: url($img-path + 'mediumHover.svg');
                         }
                     }
                 }
