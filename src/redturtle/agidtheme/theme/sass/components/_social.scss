@@ -39,7 +39,7 @@
           @include make-fa('\f167', #FFF);
         }
         &.sc-medium:before {
-          background-image: url($img-path + 'medium.svg');
+          background-image: url($img-path + 'mediumHover.svg'); // *Hover perchè deve essere bianco -> vedi footer
           background-repeat: no-repeat;
           background-position: center center;
           background-size: 75%;
