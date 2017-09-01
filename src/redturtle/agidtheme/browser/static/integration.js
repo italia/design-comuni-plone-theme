@@ -127,7 +127,7 @@ require([
     $('.pat-tiles-management').on('rtTilesLoaded', function(e) {
       handleTabIndex();
       ellipsed('.news-collection .newsDescription', 4);
-      ellipsed('.news-highlight .news-description', 6);
+      ellipsed('.news-highlight .news-description', 4);
       ellipsed('.news-big-photo .news-description', 4);
     });
 
