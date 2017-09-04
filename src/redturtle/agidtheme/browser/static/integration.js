@@ -50,16 +50,12 @@ require([
      */
     $('#globalnav-toggle').on('click', function(e) {
       $('#portal-mainnavigation').toggleClass('open');
-      $('#portal-top').addClass('menuOpened');
-      $('#column-wrapper').addClass('menuOpened');
-      $('#portal-footer-wrapper').addClass('menuOpened');
+      $('body').addClass('menuOpened');
     });
 
     $('#globalnav-close').on('click', function(e) {
       $('#portal-mainnavigation').removeClass('open');
-      $('#portal-top').removeClass('menuOpened');
-      $('#column-wrapper').removeClass('menuOpened');
-      $('#portal-footer-wrapper').removeClass('menuOpened');
+      $('body').removeClass('menuOpened');
     });
 
 
@@ -68,9 +64,7 @@ require([
      */
     $('#search-toggle').on('click', function(e) {
       $('#portal-searchbox').toggleClass('open');
-      $('#search-toggle').toggleClass('open');
-      $('#column-wrapper').toggleClass('searchOpened');
-      $('#portal-footer-wrapper').toggleClass('searchOpened');
+      $('body').toggleClass('searchOpened');
 
       if ($('#portal-searchbox').hasClass('open')) {
         $('#searchGadget').focus();
@@ -84,15 +78,12 @@ require([
     $(document).on('click', function(e) {
       if ((!$(e.target).closest('#portal-searchbox').length && !$(e.target).closest('button#search-toggle').length) && $(window).width() <= 991) {
         $('#portal-searchbox').removeClass('open');
-        $('#column-wrapper').removeClass('searchOpened');
-        $('#portal-footer-wrapper').removeClass('searchOpened');
+        $('body').removeClass('searchOpened');
       }
 
       if ((!$(e.target).closest('#portal-mainnavigation').length && !$(e.target).closest('button#globalnav-toggle').length) && $(window).width() <= 991) {
         $('#portal-mainnavigation').removeClass('open');
-        $('#portal-top').removeClass('menuOpened');
-        $('#column-wrapper').removeClass('menuOpened');
-        $('#portal-footer-wrapper').removeClass('menuOpened');
+        $('body').removeClass('menuOpened');
       }
 
       if (!$(e.target).closest('.share').length) {
