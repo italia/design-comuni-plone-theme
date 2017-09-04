@@ -52,7 +52,7 @@ module.exports = function (grunt) {
 				map: true,
 				processors: [
 			    require('autoprefixer')({
-            browsers: ['last 2 versions', 'ie >= 11'],
+            browsers: ['last 2 versions', 'ie >= 11', 'iOS >= 6'],
 					}),
 				],
 			},
