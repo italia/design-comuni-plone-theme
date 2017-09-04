@@ -24,21 +24,21 @@ function ellipsed(selector, rows) {
     var el = elements[i];
 
     if (rows) {
-      var splittedText = el.innerText.split(' ');
+      var splittedText = el.textContent.trim().split(' ');
       var rowsWrapped = 0;
       var textBeforeWrap = '';
 
-      el.innerText = '';
+      el.textContent = '';
       var elHeight = window.getComputedStyle(el).height;
 
       for (var j = 0; j < splittedText.length; j++) {
         var token = splittedText[j];
 
-        if (el.innerText.length) {
-          el.innerText = el.innerText.concat(' ').concat(token).concat('...');
+        if (el.textContent.length) {
+          el.textContent = el.textContent.concat(' ').concat(token).concat('...');
         }
         else {
-          el.innerText = el.innerText.concat(token).concat('...');
+          el.textContent = el.textContent.concat(token).concat('...');
         }
 
         if (parseFloat(window.getComputedStyle(el).height) > parseFloat(elHeight)) {
@@ -57,11 +57,11 @@ function ellipsed(selector, rows) {
         textBeforeWrap = textBeforeWrap.length
                          ? textBeforeWrap.concat(' ').concat(token)
                          : textBeforeWrap.concat(token);
-        el.innerHTML = textBeforeWrap;
+        el.textContent = textBeforeWrap;
       }
     }
     else {
-      el.innerText = '';
+      el.textContent = '';
     }
   }
 };
