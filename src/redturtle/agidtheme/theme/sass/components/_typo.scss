@@ -1,31 +1,37 @@
 .discreet {
-  color: $text-color-light;
+    color: $text-color-light;
 }
 
 h1.documentFirstHeading {
-  margin-top:0;
-  font-weight: $bold;
+    margin-top:0;
+    font-weight: $bold;
 }
 
 #content-core {
-  ul,
-  ol {
-    li {
-      padding-bottom: 0.4em;
+    ul,
+    ol {
+        li {
+            padding-bottom: 0.4em;
+        }
     }
-  }
 }
 
 p.callout {
-  margin: 2em 0;
+    margin: 2em 0;
 }
 
 blockquote {
-  float: right;
-  max-width: 350px;
-  margin-left: 2em;
+    float: right;
+    max-width: 350px;
+    margin-left: 2em;
 }
 
 #parent-fieldname-text {
-  @extend .clearfix;
+    @extend .clearfix;
+}
+
+#column-wrapper {
+    img {
+        max-width: 100%;
+    }
 }
