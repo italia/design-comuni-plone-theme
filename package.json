@@ -50,5 +50,8 @@
         }
       ]
     }
+  },
+  "dependencies": {
+    "ellipsed": "^0.2.1"
   }
 }

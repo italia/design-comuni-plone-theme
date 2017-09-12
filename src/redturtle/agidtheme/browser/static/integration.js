@@ -1,8 +1,11 @@
 require([
   'jquery',
   'ellipsed'
-], function ($) {
+], function ($, ellipsed) {
   'use strict';
+
+  var makeEllipsed = ellipsed.default;
+
   $(document).ready(function () {
     /*
      *  return-to-top arrow
@@ -117,9 +120,9 @@ require([
      */
     $('.pat-tiles-management').on('rtTilesLoaded', function(e) {
       handleTabIndex();
-      ellipsed('.news-collection .newsDescription', 4);
-      ellipsed('.news-highlight .news-description', 4);
-      ellipsed('.news-big-photo .news-description', 4);
+      makeEllipsed('.news-collection .newsDescription', 4);
+      makeEllipsed('.news-highlight .news-description', 4);
+      makeEllipsed('.news-big-photo .news-description', 4);
     });
 
     $(window).on('resize orientationchange', function(e) {
