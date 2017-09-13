@@ -2,3 +2,6 @@ graft src/redturtle
 graft docs
 include *.rst
 global-exclude *.pyc
+include *.js
+include *.json
+include *.lock
