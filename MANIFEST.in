@@ -5,3 +5,4 @@ global-exclude *.pyc
 include *.js
 include *.json
 include *.lock
+src/redturtle/agidtheme/browser/static/ellipsed
