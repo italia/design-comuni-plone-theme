@@ -71,6 +71,18 @@ module.exports = function (grunt) {
 				},
 			},
 		},
+    copy: {
+      main: {
+        files: [
+          {
+            expand: true,
+            cwd: '../../../../node_modules/ellipsed/lib',
+            src: ['ellipsed.js'],
+            dest: '../browser/static',
+          },
+        ],
+      },
+    },
     requirejs: {
       'redturtle-agidtheme': {
         options: {
@@ -79,7 +91,7 @@ module.exports = function (grunt) {
           preserveLicenseComments: false,
           paths: {
             jquery: 'empty:',
-            ellipsed: './static/ellipsed/lib/ellipsed',
+            ellipsed: './static/ellipsed',
           },
           wrapShim: true,
           name: '../browser/static/integration.js',
@@ -103,7 +115,7 @@ module.exports = function (grunt) {
 				files: [
 					'../browser/static/integration.js',
 				],
-				tasks: ['requirejs', 'uglify'],
+				tasks: ['copy:main', 'requirejs', 'uglify'],
 			},
 		},
 		browserSync: {
@@ -151,7 +163,7 @@ module.exports = function (grunt) {
 	// CWD to theme folder
 	grunt.file.setBase('./src/redturtle/agidtheme/theme');
 
-	grunt.registerTask('compile', ['less', 'sass', 'postcss', 'requirejs', 'uglify', 'sed:version']);
+	grunt.registerTask('compile', ['less', 'sass', 'postcss', 'copy:main', 'requirejs', 'uglify', 'sed:version']);
 	grunt.registerTask('default', ['watch']);
 	grunt.registerTask('bsync', ['browserSync:html', 'watch']);
 	grunt.registerTask('plone-bsync', ['browserSync:plone', 'watch']);
