@@ -16,6 +16,7 @@
 
   <include package=".browser" />
   <include package=".controlpanel" />
+  <include package=".upgrades" />
 
   <plone:static
       directory="theme"

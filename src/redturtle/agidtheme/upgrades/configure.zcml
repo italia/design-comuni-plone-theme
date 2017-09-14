@@ -1,0 +1,18 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+  i18n_domain="redturtle.agidtheme">
+
+  <genericsetup:upgradeSteps
+    source="1000"
+    destination="1001"
+    profile="redturtle.agidtheme:default">
+
+    <genericsetup:upgradeStep
+      title="Import advancedstatic styles"
+      description="Changes styles in css_styles records"
+      handler="..setuphandlers.add_advancedstatic_styles"
+      />
+  </genericsetup:upgradeSteps>
+
+</configure>
