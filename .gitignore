@@ -1,4 +1,5 @@
 .DS_Store
+src/redturtle/agidtheme/browser/static/ellipsed
 .coverage
 *.egg-info
 *.log
