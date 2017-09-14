@@ -108,7 +108,7 @@
 
   <records prefix="plone.resources/ellipsed"
            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-      <value key="js">++plone++redturtle.agidtheme/ellipsed/lib/ellipsed.js</value>
+      <value key="js">++plone++redturtle.agidtheme/ellipsed.js</value>
   </records>
 
   <!-- BUNDLE -->
