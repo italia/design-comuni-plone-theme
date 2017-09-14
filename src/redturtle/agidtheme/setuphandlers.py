@@ -2,8 +2,8 @@
 from plone import api
 from Products.CMFPlone.interfaces import INonInstallable
 from zope.interface import implementer
-from redturtle.tiles.management.interfaces import IRedturtleTilesManagementSettings
-from plone import api
+from redturtle.tiles.management.interfaces \
+    import IRedturtleTilesManagementSettings
 
 
 @implementer(INonInstallable)
@@ -38,12 +38,9 @@ def filter_tiles(context):
 
 def add_advancedstatic_styles(context):
     NEW_STYLES = (u'portletStaticNavigation|stile menu di navigazione',
-                  u'footer-logo|logo footer',
                   u'colonna-1-di-3|colonna 1 di 3',
                   u'colonna-2-di-3|colonna 2 di 3',
-                  u'footer-actions|stile actions footer',
                   u'news-collection|stile collezione notizie con foto',
-                  u'valuta-sito|stile tile "valuta sito"',
                   u'aree-tematiche|stile collezione aree tematiche',
                   u'PagesTileStatic|stile landing page aree tematiche')
 
