@@ -1,72 +1,70 @@
-body {
-    &.template-homepage_view,
-    &.template-search {
-        #portal-breadcrumbs {
-            display: none;
-        }
+.section-homepage,
+.template-search {
+    #portal-breadcrumbs {
+        display: none;
     }
+}
 
-    &.template-newsitem_view {
-        #viewlet-above-content {
-            #portal-breadcrumbs {
-                li {
-                    &:last-of-type {
-                        display: none;
-                    }
+.template-newsitem_view {
+    #viewlet-above-content {
+        #portal-breadcrumbs {
+            li {
+                &:last-of-type {
+                    display: none;
                 }
             }
         }
     }
+}
 
-    #viewlet-above-content {
-        #portal-breadcrumbs {
-            background: $gray-bg;
-            padding: 0;
+#viewlet-above-content {
+    #portal-breadcrumbs {
+        background: $gray-bg;
+        padding: 0;
 
-            ol {
-                @extend .list-unstyled, .list-inline;
-                font-size: 0.95em;
-                font-weight: $light;
-                padding: 10px 0px;
-                margin: 0;
+        ol {
+            @extend .list-unstyled, .list-inline;
+            font-size: 0.95em;
+            font-weight: $light;
+            padding: 10px 0px;
+            margin: 0;
 
-                li {
-                    padding:0;
+            li {
+                padding:0;
 
-                    &:before {
-                        content: '/';
-                        padding: 0 0.4em;
-                    }
-
-                    &:nth-child(-n+2) {
-                        padding: 0 0.4em;
-                        &:before { display: none; }
-                    }
-
-                    a {
-                        color: $brand-primary;
-
-                        &:focus,
-                        &:hover { color: #000; }
-                    }
+                &:before {
+                    content: '/';
+                    padding: 0 0.4em;
                 }
 
-                li#breadcrumbs-home {
-                    width: 30px;
-                    padding-left: 30px;
-                    padding-right: 0;
-                    position: relative;
-                    text-indent: -9999px;
+                &:nth-child(-n+2) {
+                    padding: 0 0.4em;
+                    &:before { display: none; }
+                }
 
-                    a {
-                        display: inline-block;
+                a {
+                    color: $brand-primary;
 
-                        &:before {
-                            @include make-fa('\f015', $brand-primary);
-                            position: absolute;
-                            left: 5px;
-                            text-indent: 0;
-                        }
+                    &:focus,
+                    &:hover { color: #000; }
+                }
+            }
+
+            li#breadcrumbs-home {
+                width: 30px;
+                padding-left: 30px;
+                padding-right: 0;
+                position: relative;
+                text-indent: -9999px;
+
+                a {
+                    display: inline-block;
+
+                    &:before {
+                        @include make-fa('\f015', $brand-primary);
+                        position: absolute;
+                        left: 5px;
+                        text-indent: 0;
                     }
                 }
             }
