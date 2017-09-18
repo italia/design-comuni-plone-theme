@@ -54,6 +54,11 @@
         .plone-modal-body {
             padding-top: 0;
         }
+
+        .plone-modal-close {
+            font-size: 2em;
+            opacity: 0.7;
+        }
     }
 
     &.image-modal {

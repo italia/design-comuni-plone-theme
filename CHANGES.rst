@@ -7,7 +7,8 @@ Changelog
 
 - Fix import di ellipsed nel bundle [nzambello]
 - Aggiornamento versioni npm [nzambello]
-- #12802 Stili tiles testo statico con classe CSS e non entry nel menu a tendina [nzambello]
+- Stili tiles testo statico con classe CSS e non entry nel menu a tendina [nzambello]
+- Icona chiusura modale plone più visibile [nzambello]
 
 
 1.0.0 (2017-09-14)
