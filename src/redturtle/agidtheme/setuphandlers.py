@@ -38,8 +38,6 @@ def filter_tiles(context):
 
 def add_advancedstatic_styles(context):
     NEW_STYLES = (u'portletStaticNavigation|stile menu di navigazione',
-                  u'colonna-1-di-3|colonna 1 di 3',
-                  u'colonna-2-di-3|colonna 2 di 3',
                   u'news-collection|stile collezione notizie con foto',
                   u'aree-tematiche|stile collezione aree tematiche',
                   u'PagesTileStatic|stile landing page aree tematiche')

@@ -27,4 +27,16 @@
       />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeSteps
+    source="1002"
+    destination="1003"
+    profile="redturtle.agidtheme:default">
+
+    <genericsetup:upgradeStep
+      title="Import advancedstatic styles reloading registry"
+      description="Changes styles in css_styles records"
+      handler=".upgrades.import_records_registry"
+      />
+  </genericsetup:upgradeSteps>
+
 </configure>
