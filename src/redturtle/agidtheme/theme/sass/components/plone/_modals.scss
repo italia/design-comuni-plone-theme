@@ -58,6 +58,10 @@
         .plone-modal-close {
             font-size: 2em;
             opacity: 0.7;
+            min-width: 1em;
+            text-align: center;
+            // border: 1px solid #ccc;
+            padding: 0 10px 6px;
         }
     }
 
