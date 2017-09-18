@@ -133,8 +133,6 @@
     </field>
     <value>
       <element>portletStaticNavigation|stile menu di navigazione</element>
-      <element>colonna-1-di-3|colonna 1 di 3</element>
-      <element>colonna-2-di-3|colonna 2 di 3</element>
       <element>news-collection|stile collezione notizie con foto</element>
       <element>aree-tematiche|stile collezione aree tematiche</element>
       <element>PagesTileStatic|stile landing page aree tematiche</element>
