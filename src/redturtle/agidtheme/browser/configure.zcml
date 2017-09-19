@@ -19,13 +19,13 @@
       directory="static"
       />
 
-  <browser:page
+<!--   <browser:page
       name="homepage_view"
       for="plone.app.blocks.layoutbehavior.ILayoutBehaviorAdaptable"
       template="templates/homepage_view.pt"
       permission="zope2.View"
       layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
-      />
+      /> -->
 
   <browser:page
       name="tiles_page_view"
@@ -35,33 +35,20 @@
       layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
       />
 
-  <!-- <browser:page -->
-  <!--     name="landing_aree_tematiche_view" -->
-  <!--     for="plone.app.blocks.layoutbehavior.ILayoutBehaviorAdaptable" -->
-  <!--     template="templates/landing_aree_tematiche_view.pt" -->
-  <!--     permission="zope2.View" -->
-  <!--     layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer" -->
-  <!--     /> -->
-
   <include package="plone.app.contentmenu" />
   <browser:menuItems
       for="plone.app.blocks.layoutbehavior.ILayoutBehaviorAdaptable"
       menu="plone_displayviews">
-    <browser:menuItem
+<!--     <browser:menuItem
         title="Homepage view"
         action="homepage_view"
         i18n:translate="title"
-        />
+        /> -->
     <browser:menuItem
         title="Tiles page view"
         action="tiles_page_view"
         i18n:translate="title"
         />
-    <!-- <browser:menuItem -->
-    <!--     title="Landing Aree Tematiche view" -->
-    <!--     action="landing_aree_tematiche_view" -->
-    <!--     i18n:translate="title" -->
-    <!--     /> -->
   </browser:menuItems>
 
   <browser:page

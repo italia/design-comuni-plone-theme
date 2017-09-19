@@ -1,30 +1,18 @@
-.template-homepage_view {
-    //  background: $gray-bg;
+.section-homepage {
 
     #portal-top {
         background: #fff;
     }
 
-    #content {
-        header {
-            display: none;
-        }
+    #viewlet-below-content,
+    #portal-column-two,
+    #content header {
+        display: none;
     }
 
     #portal-column-content,
     #column-wrapper {
-        padding-bottom: 0;
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: 0;
+        padding: 0;
         width: 100%;
-    }
-
-    #viewlet-below-content {
-        display: none;
-    }
-
-    #portal-column-two {
-        display: none;
     }
 }
