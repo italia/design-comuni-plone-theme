@@ -97,7 +97,7 @@ require([
     /*
      * collapse news collection
      */
-    $('#content-core').on('click', '.collectionTile.collapsible .news-collection .tile-collapse-button', function(e) {
+    $('#content-core').on('click', '.collectionTile.collapsible .tile-collapse-button', function(e) {
       if (window.innerWidth <= 991) {
         var collapse = $(e.target).closest('.collapsible');
         collapse.toggleClass('open');
@@ -120,7 +120,7 @@ require([
      */
     $('.pat-tiles-management').on('rtTilesLoaded', function(e) {
       handleTabIndex();
-      makeEllipsed('.news-collection .newsDescription', 4);
+      makeEllipsed('.news-collection .collectionItemDescription', 4);
       makeEllipsed('.news-highlight .news-description', 4);
       makeEllipsed('.news-big-photo .news-description', 4);
     });

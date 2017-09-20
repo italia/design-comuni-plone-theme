@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-08-30 09:24+0000\n"
+"POT-Creation-Date: 2017-09-20 09:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,68 +18,72 @@ msgstr ""
 msgid "Configurazione tema agid"
 msgstr ""
 
-#: ../browser/configure.zcml:54
+#: ../browser/configure.zcml
 msgid "Homepage view"
 msgstr "Vista homepage"
 
-#: ../configure.zcml:33
+#: ../configure.zcml:34
 msgid "Installs the Plone theme package redturtle.agidtheme."
 msgstr ""
 
-#: ../browser/configure.zcml:64
+#: ../browser/configure.zcml
 msgid "Landing Aree Tematiche view"
 msgstr "Landing page per aree tematiche"
 
-#: ../browser/tile_collection_renderers.py:105
+#: ../browser/tile_collection_renderers.py:124
 msgid "Landing page aree tematiche"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:110
+#: ../browser/tile_collection_renderers.py:130
 msgid "Layout servizi online"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:99
+#: ../browser/tile_collection_renderers.py:118
 msgid "Link aree tematiche"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:60
+#: ../browser/tile_collection_renderers.py:73
 msgid "News highlight"
 msgstr "News in evidenza"
 
-#: ../browser/tile_collection_renderers.py:78
+#: ../browser/tile_collection_renderers.py:91
 msgid "News in area tematica"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:93
+#: ../browser/tile_collection_renderers.py:106
 msgid "News layout with image"
 msgstr "Layout news con immagine"
 
-#: ../browser/tile_collection_renderers.py:69
+#: ../browser/tile_collection_renderers.py:82
 msgid "News with big photo"
 msgstr "News in primo piano con foto grande"
 
-#: ../configure.zcml:33
+#: ../configure.zcml:34
 msgid "RedTurtle Agid Theme"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:87
+#: ../browser/tile_collection_renderers.py:100
 msgid "Servizi in area tematica"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:51
+#: ../browser/tile_collection_renderers.py:64
 msgid "Sights layout"
 msgstr "Layout siti d'interesse"
 
-#: ../browser/configure.zcml:59
+#: ../browser/configure.zcml:38
 msgid "Tiles page view"
 msgstr "Vista tiles schermo intero"
 
-#: ../configure.zcml:42
+#: ../configure.zcml:43
 msgid "Uninstall: RedTurtle Agid Theme"
 msgstr ""
 
-#: ../configure.zcml:42
+#: ../configure.zcml:43
 msgid "Uninstalls the Plone theme package redturtle.agidtheme."
+msgstr ""
+
+#: ../browser/tile_collection_renderers.py:112
+msgid "Video layout"
 msgstr ""
 
 #. Default: "published on"
@@ -149,7 +153,7 @@ msgid "heading_available_socials"
 msgstr "Social disponibili"
 
 #. Default: "Keep reading"
-#: ../browser/templates/news_big_photo_renderer.pt:40
+#: ../browser/templates/news_big_photo_renderer.pt:41
 msgid "keep_reading_label"
 msgstr ""
 
@@ -159,7 +163,7 @@ msgid "more_url"
 msgstr ""
 
 #. Default: "No results found"
-#: ../browser/templates/news_big_photo_renderer.pt:15
+#: ../browser/templates/news_big_photo_renderer.pt:18
 #: ../browser/templates/news_highlight_renderer.pt:15
 #: ../browser/templates/sights_renderer.pt:20
 msgid "tiles_collection_noresults"

@@ -53,6 +53,7 @@
 
         .plone-modal-body {
             padding-top: 0;
+            clear: both;
         }
 
         .plone-modal-close {
@@ -60,8 +61,8 @@
             opacity: 0.7;
             min-width: 1em;
             text-align: center;
-            // border: 1px solid #ccc;
             padding: 0 10px 6px;
+            z-index: 100;
         }
     }
 
@@ -102,6 +103,21 @@ body.plone-toolbar-left-expanded {
             .plone-modal-content {
                 max-width: 100%;
             }
+        }
+    }
+}
+
+.plone-modal-content {
+    .wcvideo-container {
+        text-align: center;
+        padding: 20px;
+
+        @media (max-width: $screen-xs-max) {
+            padding: 20px 0;
+        }
+
+        iframe {
+            max-width: 100%;
         }
     }
 }

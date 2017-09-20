@@ -106,6 +106,12 @@ class NewsView(BrowserView):
     display_name = _("News layout with image")
 
 
+class VideoView(BrowserView):
+    implements(ICollectionTileRenderer)
+
+    display_name = _("Video layout")
+
+
 class AreeTematicheView(BrowserView):
     implements(ICollectionTileRenderer)
 
