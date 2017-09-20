@@ -240,7 +240,7 @@ require([
      */
     $('.pat-tiles-management').on('rtTilesLoaded', function(e) {
       handleTabIndex();
-      makeEllipsed('.news-collection .collectionItemDescription', 4);
+      makeEllipsed('.tile-collection .collectionItemDescription', 4);
       makeEllipsed('.news-highlight .news-description', 4);
       makeEllipsed('.news-big-photo .news-description', 4);
     });
