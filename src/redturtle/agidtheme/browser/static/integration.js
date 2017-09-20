@@ -97,7 +97,7 @@ require([
     /*
      * collapse news collection
      */
-    $('#content-core').on('click', '.collectionTile.collapsible .news-collection .tile-collapse-button', function(e) {
+    $('#content-core').on('click', '.collectionTile.collapsible .tile-collapse-button', function(e) {
       if (window.innerWidth <= 991) {
         var collapse = $(e.target).closest('.collapsible');
         collapse.toggleClass('open');
