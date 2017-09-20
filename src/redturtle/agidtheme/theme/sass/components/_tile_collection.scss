@@ -4,22 +4,8 @@
   }
 }
 
-.news-collection {
-    .news-collection-container {
-        position: relative;
-        overflow: auto;
-        padding: 20px 0px;
-    }
-}
-
 .video-collection {
-    .video-collection-container {
-        position: relative;
-        overflow: auto;
-        padding: 20px 0px;
-    }
-
-    .videoPreview {
+    .collectionItemImage {
         position: relative;
 
         .video-icon {
@@ -43,13 +29,24 @@
         }
     }
 
-    .videoTitle {
+    .collectionItemTitle {
         font-size: 1.2em;
     }
 }
 
-.news-collection,
-.video-collection {
+.news-collection {
+    .collectionItemWrapper {
+        padding-bottom: 2em;
+    }
+}
+
+.tile-collection {
+    .tile-collection-container {
+        position: relative;
+        overflow: auto;
+        padding: 20px 0px;
+    }
+
     ul.tileContent {
         list-style: none;
         padding-left: 0;
@@ -97,12 +94,8 @@
         }
     }
 
-    .newsWrapper {
-        padding-bottom: 2em;
-    }
 
-    .newsWrapper,
-    .videoWrapper {
+    .collectionItemWrapper {
         background: #EEE;
         height: 100%;
         position: relative;
@@ -121,21 +114,18 @@
             }
         }
 
-        .newsImage,
-        .videoPreview {
+        .collectionItemImage {
             img {
                 width: 100%;
                 height: auto;
             }
         }
 
-        .newsText,
-        .videoText {
+        .collectionItemText {
             padding: 5%;
         }
 
-        .newsDates,
-        .videoDates {
+        .collectionItemDates {
             display: block;
             padding: 10px 20px;
             position: absolute;
@@ -148,8 +138,7 @@
             }
         }
 
-        .newsTitle,
-        .videoTitle {
+        .collectionItemTitle {
             font-weight: $bold;
             padding: 10px 0;
         }
@@ -164,8 +153,7 @@
 
 @media (max-width: $screen-sm-max) {
     .collectionTile.collapsible {
-        .news-collection,
-        .video-collection {
+        .tile-collection {
             .tileBody {
                 max-height: 0;
                 overflow: hidden;
@@ -199,8 +187,7 @@
         }
 
         &.sfondo-scuro {
-            .news-collection,
-            .video-collection {
+            .tile-collection {
                 .tile-collapse-button {
                     color: #FFF;
 
@@ -224,8 +211,7 @@
         }
 
         &.open {
-            .news-collection,
-            .video-collection {
+            .tile-collection {
                 .tileBody {
                     max-height: 10000px;
 
