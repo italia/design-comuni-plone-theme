@@ -112,6 +112,12 @@ class VideoView(BrowserView):
     display_name = _("Video layout")
 
 
+class GalleryView(BrowserView):
+    implements(ICollectionTileRenderer)
+
+    display_name = _("Gallery layout")
+
+
 class AreeTematicheView(BrowserView):
     implements(ICollectionTileRenderer)
 

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-09-20 12:26+0000\n"
+"POT-Creation-Date: 2017-09-21 08:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,6 +21,10 @@ msgstr ""
 msgid "Configurazione tema agid"
 msgstr ""
 
+#: ../browser/tile_collection_renderers.py:118
+msgid "Gallery layout"
+msgstr ""
+
 #: ../browser/configure.zcml
 msgid "Homepage view"
 msgstr ""
@@ -33,15 +37,15 @@ msgstr ""
 msgid "Landing Aree Tematiche view"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:124
+#: ../browser/tile_collection_renderers.py:130
 msgid "Landing page aree tematiche"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:130
+#: ../browser/tile_collection_renderers.py:136
 msgid "Layout servizi online"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:118
+#: ../browser/tile_collection_renderers.py:124
 msgid "Link aree tematiche"
 msgstr ""
 
