@@ -4,14 +4,23 @@
     meta_type="Dexterity FTI"
     name="Folder"
     xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
   <property
       name="view_methods"
       purge="false">
     <element value="tiles_page_view" />
   </property>
+
   <property
       name="behaviors"
       purge="false">
     <element value="plone.layoutaware" />
   </property>
+
+  <property
+      name="behaviors"
+      purge="false">
+    <element value="plone.app.contenttypes.behaviors.leadimage.ILeadImage" />
+  </property>
+
 </object>
