@@ -29,10 +29,6 @@ msgstr ""
 msgid "Gallery view"
 msgstr ""
 
-#: ../browser/configure.zcml
-msgid "Homepage view"
-msgstr ""
-
 #: ../configure.zcml:34
 msgid "Installs the Plone theme package redturtle.agidtheme."
 msgstr ""

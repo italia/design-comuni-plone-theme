@@ -26,9 +26,6 @@ msgstr "Layout gallery"
 msgid "Gallery view"
 msgstr "Vista gallery"
 
-#: ../browser/configure.zcml
-msgid "Homepage view"
-msgstr "Vista homepage"
 
 #: ../configure.zcml:34
 msgid "Installs the Plone theme package redturtle.agidtheme."
