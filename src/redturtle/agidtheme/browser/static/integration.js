@@ -4,7 +4,7 @@ require([
 ], function ($, ellipsed) {
   'use strict';
 
-  var makeEllipsed = ellipsed.default;
+  var ellipsis = ellipsed.ellipsis;
 
   $(document).ready(function () {
     /*
@@ -120,9 +120,9 @@ require([
      */
     $('.pat-tiles-management').on('rtTilesLoaded', function(e) {
       handleTabIndex();
-      makeEllipsed('.tile-collection .collectionItemDescription', 4);
-      makeEllipsed('.news-highlight .news-description', 4);
-      makeEllipsed('.news-big-photo .news-description', 4);
+      ellipsis('.tile-collection .collectionItemDescription', 4);
+      ellipsis('.news-highlight .news-description', 4);
+      ellipsis('.news-big-photo .news-description', 4);
     });
 
     $(window).on('resize orientationchange', function(e) {
