@@ -1,0 +1,26 @@
+body.template-gallery_view {
+    #portal-column-two {
+        display: none;
+    }
+
+    #portal-column-content {
+        float: none;
+        width: auto;
+    }
+
+    .leadImage {
+        display: none;
+    }
+
+    .photo-gallery {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+
+        .photo-gallery-item {
+            display: inline-block;
+            padding: 20px;
+            width: calc(100% / 3 - 40px);
+        }
+    }
+}
