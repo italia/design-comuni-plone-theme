@@ -119,5 +119,9 @@ body.plone-toolbar-left-expanded {
         iframe {
             max-width: 100%;
         }
+
+        > div {
+            margin: auto;
+        }
     }
 }
