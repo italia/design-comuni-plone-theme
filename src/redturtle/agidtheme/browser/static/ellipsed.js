@@ -16,105 +16,84 @@
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  function ellipsed() {
-    var selector = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-    var rows = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
 
-    /*   Copyright (C) 2017  Nicola Zambello
-     *
-     *    https://github.com/nzambello/ellipsed
-     *
-     *    The JavaScript code in this page is free software: you can
-     *    redistribute it and/or modify it under the terms of the GNU
-     *    General Public License (GNU GPL) as published by the Free Software
-     *    Foundation, either version 3 of the License, or (at your option)
-     *    any later version.  The code is distributed WITHOUT ANY WARRANTY;
-     *    without even the implied warranty of MERCHANTABILITY or FITNESS
-     *    FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-     *
-     *    As additional permission under GNU GPL version 3 section 7, you
-     *    may distribute non-source (e.g., minimized or compacted) forms of
-     *    that code without the copy of the GNU GPL normally required by
-     *    section 4, provided you include this license notice and a URL
-     *    through which recipients can access the Corresponding Source.
-     */
+  var _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
 
-    var elements = document.querySelectorAll(selector);
-
-    var _iteratorNormalCompletion = true;
-    var _didIteratorError = false;
-    var _iteratorError = undefined;
-
-    try {
-      for (var _iterator = elements[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-        var el = _step.value;
-
-        var splittedText = el.textContent.split(' ');
-        var rowsWrapped = 0;
-        var textBeforeWrap = '';
-
-        el.textContent = '';
-        var elStyle = window.getComputedStyle(el);
-        var elHeight = elStyle.height;
-
-        var _iteratorNormalCompletion2 = true;
-        var _didIteratorError2 = false;
-        var _iteratorError2 = undefined;
-
-        try {
-          for (var _iterator2 = splittedText[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-            var token = _step2.value;
-
-            if (el.textContent.length) {
-              el.textContent = el.textContent + ' ' + token + '...';
-            } else {
-              el.textContent = '' + el.textContent + token + '...';
-            }
-
-            if (parseFloat(elStyle.height) > parseFloat(elHeight)) {
-              elHeight = elStyle.height;
-              rowsWrapped++;
-
-              if (rowsWrapped === rows + 1) {
-                el.innerHTML = textBeforeWrap[textBeforeWrap.length - 1] === '.' ? textBeforeWrap + '..' : textBeforeWrap + '...';
-
-                break;
-              }
-            }
-
-            textBeforeWrap = textBeforeWrap.length ? textBeforeWrap + ' ' + token : '' + textBeforeWrap + token;
-            el.textContent = textBeforeWrap;
-          }
-        } catch (err) {
-          _didIteratorError2 = true;
-          _iteratorError2 = err;
-        } finally {
-          try {
-            if (!_iteratorNormalCompletion2 && _iterator2.return) {
-              _iterator2.return();
-            }
-          } finally {
-            if (_didIteratorError2) {
-              throw _iteratorError2;
-            }
-          }
-        }
-      }
-    } catch (err) {
-      _didIteratorError = true;
-      _iteratorError = err;
-    } finally {
-      try {
-        if (!_iteratorNormalCompletion && _iterator.return) {
-          _iterator.return();
-        }
-      } finally {
-        if (_didIteratorError) {
-          throw _iteratorError;
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
         }
       }
     }
+
+    return target;
+  };
+
+  /*
+   *   Copyright (C) 2017  Nicola Zambello
+   *
+   *    The JavaScript code in this page is open source software licensed under MIT license
+   *    References about this code and its license, see:
+   *
+   *    https://github.com/nzambello/ellipsed
+   *
+   */
+
+  function tokensReducer(acc, token) {
+    var el = acc.el,
+        elStyle = acc.elStyle,
+        elHeight = acc.elHeight,
+        rowsLimit = acc.rowsLimit,
+        rowsWrapped = acc.rowsWrapped;
+
+    if (rowsWrapped === rowsLimit + 1) {
+      return _extends({}, acc);
+    }
+    var textBeforeWrap = el.textContent;
+    var newRowsWrapped = rowsWrapped;
+    var newHeight = elHeight;
+    el.textContent = el.textContent.length ? el.textContent + ' ' + token + '...' : token + '...';
+
+    if (parseFloat(elStyle.height) > parseFloat(elHeight)) {
+      newRowsWrapped++;
+      newHeight = elStyle.height;
+
+      if (newRowsWrapped === rowsLimit + 1) {
+        el.innerHTML = textBeforeWrap[textBeforeWrap.length - 1] === '.' ? textBeforeWrap + '..' : textBeforeWrap + '...';
+
+        return _extends({}, acc, { elHeight: newHeight, rowsWrapped: newRowsWrapped });
+      }
+    }
+
+    el.textContent = textBeforeWrap.length ? textBeforeWrap + ' ' + token : '' + token;
+
+    return _extends({}, acc, { elHeight: newHeight, rowsWrapped: newRowsWrapped });
   }
 
-  exports.default = ellipsed;
+  function ellipsis() {
+    var selector = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+    var rows = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+
+    var elements = document.querySelectorAll(selector);
+
+    for (var i = 0; i < elements.length; ++i) {
+      var el = elements[i];
+      var splittedText = el.textContent.split(' ');
+
+      el.textContent = '';
+      var elStyle = window.getComputedStyle(el);
+
+      splittedText.reduce(tokensReducer, {
+        el: el,
+        elStyle: elStyle,
+        elHeight: 0,
+        rowsLimit: rows,
+        rowsWrapped: 0
+      });
+    }
+  }
+
+  exports.ellipsis = ellipsis;
 });
