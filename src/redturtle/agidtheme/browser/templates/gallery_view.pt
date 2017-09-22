@@ -21,7 +21,6 @@
 
   <div class="photo-gallery">
       <metal:listingmacro define-macro="listing"
-<<<<<<< HEAD
                           tal:define="portal context/@@plone_portal_state/portal;
                                       image_scale portal/@@image_scale">
       <tal:images tal:repeat="image images">
