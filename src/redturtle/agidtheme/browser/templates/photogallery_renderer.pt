@@ -47,6 +47,17 @@
                                             ></span>
                                             <span tal:content="obj/Title"> Title </span>
                                         </div>
+                                        <div class="collectionItemDates"
+                                             tal:define="date python:helper_view.get_formatted_date(obj)"
+                                             tal:condition="python: view.data.get('show_dates', False) and date"
+                                             i18n:domain="plonelocales">
+
+                                            <div class="collectionItemDateDay">${date/day}</div>
+                                            <div class="collectionItemDateMonth">
+                                                <tal:month i18n:translate="">${date/month}</tal:month>
+                                            </div>
+                                            <div class="collectionItemDateYear">${date/year}</div>
+                                        </div>
                                     </div>
                                 </a>
                             </div>

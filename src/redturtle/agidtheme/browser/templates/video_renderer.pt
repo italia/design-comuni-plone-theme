@@ -45,29 +45,25 @@
                                     <div class="collectionItemImage">
                                         <span class="video-icon"></span>
                                         <img class="image-thumb"
-                                             tal:define="thumb python:obj.getURL()+'/@@images/image/newshome'"
-                                             tal:attributes="src string:$thumb;">
+                                             tal:define="realObj obj/getObject;
+                                                         scales realObj/@@images"
+                                             tal:replace="structure python: scales.tag('image', scale='newshome', direction='down', css_class='image-thumb')">
                                     </div>
                                     <div class="collectionItemText">
                                         <div class="collectionItemTitle">
                                             <span tal:content="obj/Title"> Title </span>
                                         </div>
-                                        <div class="collectionItemDescription">
-                                            <div class="description">
-                                                <span tal:content="obj/Description"> Description </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="collectionItemDates"
-                                         tal:define="date python:helper_view.get_formatted_date(obj)"
-                                         tal:condition="python: view.data.get('show_dates', False) and date"
-                                         i18n:domain="plonelocales">
+                                        <div class="collectionItemDates"
+                                             tal:define="date python:helper_view.get_formatted_date(obj)"
+                                             tal:condition="python: view.data.get('show_dates', False) and date"
+                                             i18n:domain="plonelocales">
 
-                                         <div class="collectionItemDateDay">${date/day}</div>
-                                         <div class="collectionItemDateMonth">
-                                            <tal:month i18n:translate="">${date/month}</tal:month>
-                                         </div>
-                                         <div class="collectionItemDateYear">${date/year}</div>
+                                            <div class="collectionItemDateDay">${date/day}</div>
+                                            <div class="collectionItemDateMonth">
+                                                <tal:month i18n:translate="">${date/month}</tal:month>
+                                            </div>
+                                            <div class="collectionItemDateYear">${date/year}</div>
+                                        </div>
                                     </div>
                                 </a>
                             </div>

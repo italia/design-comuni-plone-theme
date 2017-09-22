@@ -12,22 +12,27 @@
                   tal:define="images view/album_images">
 
   <div metal:define-macro="text-field-view"
-      id="parent-fieldname-text" class="stx"
-      tal:define="text view/text"
-      tal:condition="text"
-      tal:attributes="class view/text_class">
+       id="parent-fieldname-text" class="stx"
+       tal:define="text view/text"
+       tal:condition="text"
+       tal:attributes="class view/text_class">
     <div metal:define-slot="inside" tal:replace="structure text">The body</div>
   </div>
 
   <div class="photo-gallery">
       <metal:listingmacro define-macro="listing"
-          tal:define="portal context/@@plone_portal_state/portal;
-                      image_scale portal/@@image_scale">
+                          tal:define="portal context/@@plone_portal_state/portal;
+                                      image_scale portal/@@image_scale">
       <tal:images tal:repeat="image images">
-        <div class="photo-gallery-item">
-          <a tal:attributes="href string:${image/getURL}/view;
-                             title image/Description">
-            <img tal:attributes="src python: image.getURL();
+        <div class="photo-gallery-item"
+             tal:define="itemUrl python: image.getURL()">
+          <a title="" href="#"
+             class="pat-plone-modal"
+             data-pat-plone-modal="position: 'center middle';"
+             tal:attributes="title image/Description;
+                             href python: itemUrl + '/view'">
+            <img class="image-thumb"
+                 tal:attributes="src python: itemUrl;
                                  title image/Description;
                                  alt image/Title" />
           </a>

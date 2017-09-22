@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-09-21 08:11+0000\n"
+"POT-Creation-Date: 2017-09-22 08:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,6 +23,10 @@ msgstr ""
 
 #: ../browser/tile_collection_renderers.py:118
 msgid "Gallery layout"
+msgstr ""
+
+#: ../browser/configure.zcml:52
+msgid "Gallery view"
 msgstr ""
 
 #: ../browser/configure.zcml
@@ -77,7 +81,7 @@ msgstr ""
 msgid "Sights layout"
 msgstr ""
 
-#: ../browser/configure.zcml:38
+#: ../browser/configure.zcml:47
 msgid "Tiles page view"
 msgstr ""
 

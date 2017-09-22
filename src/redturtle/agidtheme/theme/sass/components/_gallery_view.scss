@@ -23,4 +23,16 @@ body.template-gallery_view {
             width: calc(100% / 3 - 40px);
         }
     }
+
+    .plone-modal-content {
+        #content-core {
+            figure.image-product {
+                text-align: center;
+            }
+
+            figcaption {
+                display: none;
+            }
+        }
+    }
 }
