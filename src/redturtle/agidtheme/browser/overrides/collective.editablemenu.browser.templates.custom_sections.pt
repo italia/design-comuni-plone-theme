@@ -4,8 +4,11 @@
   <p class="hiddenStructure" i18n:translate="heading_sections">Navigation</p>
   <div class="globalnavWrapper">
       <div class="globalnavClose">
-          <button id="globalnav-close">
-              <span class="icon"></span>
+          <button id="globalnav-close"
+                  aria-controls="menu"
+                  aria-label="Esci dalla navigazione"
+                  title="Esci dalla navigazione">
+              <span class="icon" aria-hidden="true"></span>
               <span class="sr-only">chiudi</span>
           </button>
       </div>
