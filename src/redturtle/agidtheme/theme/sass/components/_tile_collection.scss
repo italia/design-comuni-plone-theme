@@ -36,7 +36,7 @@
 
 .news-collection {
     .collectionItemWrapper {
-        padding-bottom: 2em;
+        // padding-bottom: 2em;
     }
 }
 
@@ -102,6 +102,9 @@
 
         a {
             color: #000;
+            display: flex;
+            flex-flow: column nowrap;
+            height: 100%;
 
             &:hover,
             &:focus {
@@ -123,14 +126,15 @@
 
         .collectionItemText {
             padding: 5%;
+            display: flex;
+            flex-flow: column nowrap;
+            flex: 1 1 auto;
+            justify-content: space-between;
         }
 
         .collectionItemDates {
-            display: block;
-            padding: 10px 20px;
-            position: absolute;
-            right: 0;
-            bottom: 0.5em;
+            padding-top: 20px;
+            text-align: right;
             color: $gray;
 
             > div {
