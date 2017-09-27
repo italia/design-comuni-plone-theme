@@ -27,15 +27,6 @@
       layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
       />
 
-  <browser:page
-      name="gallery_view"
-      for="plone.dexterity.interfaces.IDexterityContainer"
-      class="plone.app.contenttypes.browser.folder.FolderView"
-      template="templates/gallery_view.pt"
-      permission="zope2.View"
-      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
-      />
-
   <include package="plone.app.contentmenu" />
   <browser:menuItems
       for="plone.app.blocks.layoutbehavior.ILayoutBehaviorAdaptable"
@@ -43,11 +34,6 @@
     <browser:menuItem
         title="Tiles page view"
         action="tiles_page_view"
-        i18n:translate="title"
-        />
-    <browser:menuItem
-        title="Gallery view"
-        action="gallery_view"
         i18n:translate="title"
         />
   </browser:menuItems>

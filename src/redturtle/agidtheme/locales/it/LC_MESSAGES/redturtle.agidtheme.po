@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-09-22 08:54+0000\n"
+"POT-Creation-Date: 2017-09-27 16:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,10 +21,6 @@ msgstr ""
 #: ../browser/tile_collection_renderers.py:118
 msgid "Gallery layout"
 msgstr "Layout gallery"
-
-#: ../browser/configure.zcml:52
-msgid "Gallery view"
-msgstr "Vista gallery"
 
 #: ../configure.zcml:34
 msgid "Installs the Plone theme package redturtle.agidtheme."
@@ -74,7 +70,7 @@ msgstr ""
 msgid "Sights layout"
 msgstr "Layout siti d'interesse"
 
-#: ../browser/configure.zcml:47
+#: ../browser/configure.zcml:38
 msgid "Tiles page view"
 msgstr "Vista tiles schermo intero"
 
