@@ -16,7 +16,6 @@ Changelog
 - Aggiornamento ellipsed per problemi di compatibilita' [nzambello]
 - Aggiunta vista per collezione video [nzambello]
 - Aggiunta vista per collezione gallery (folders) [nzambello]
-- Aggiunta vista per gallery (su folder) [nzambello]
 
 
 1.0.1 (2017-09-18)
