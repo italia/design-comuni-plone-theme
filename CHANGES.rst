@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.2 (unreleased)
+1.0.2 (2017-09-28)
 ------------------
 
 - Aggiunte indicazioni per accessibilita' bottone chiusura menu [nzambello]
