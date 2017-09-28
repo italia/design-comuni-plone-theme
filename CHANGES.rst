@@ -6,6 +6,7 @@ Changelog
 ------------------
 
 - Aggiunte indicazioni per accessibilita' bottone chiusura menu [nzambello]
+- Fix posizione date collezione news [nzambello]
 
 
 1.0.1 (2017-09-18)
