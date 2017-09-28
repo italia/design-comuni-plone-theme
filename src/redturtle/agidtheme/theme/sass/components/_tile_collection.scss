@@ -45,7 +45,7 @@
 
     &.news-collection {
         .collectionItemWrapper {
-            padding-bottom: 2em;
+            // padding-bottom: 2em;
         }
     }
 
@@ -54,45 +54,40 @@
             background-color: $tile-fascia-scura;
 
             .collectionItemText {
-                padding: 2% 5%;
-
-                .collectionItemTitle {
-                    font-size: 1.2em;
-                    padding-bottom: 10px;
-                    margin-bottom: 1.2em;
-                }
+                padding: 10px 20px 20px;
             }
 
             .collectionItemDates {
                 color: #FFF;
                 font-weight: 100;
+                padding-top: 0;
             }
-        }
 
-        .collectionItemTitle {
-            font-size: 1.2em;
-            color: #FFF;
-            display: flex;
-            flex-flow: row nowrap;
+            .collectionItemTitle {
+                font-size: 1.2em;
+                color: #FFF;
+                display: flex;
+                flex-flow: row nowrap;
 
-            .item-icon {
-                &:before {
-                    padding-right: 10px;
-                    font-size: 1.33em;
-                    font-weight: 100;
-                    position: relative;
-                    top: -3px;
-                }
-
-                &.photo {
+                .item-icon {
                     &:before {
-                        @include make-ita('\1f4f7', #FFF);
+                        padding-right: 10px;
+                        font-size: 1.33em;
+                        font-weight: 100;
+                        position: relative;
+                        top: -3px;
                     }
-                }
 
-                &.video {
-                    &:before {
-                        @include make-ita('\1f3a5', #FFF);
+                    &.photo {
+                        &:before {
+                            @include make-ita('\1f4f7', #FFF);
+                        }
+                    }
+
+                    &.video {
+                        &:before {
+                            @include make-ita('\1f3a5', #FFF);
+                        }
                     }
                 }
             }
