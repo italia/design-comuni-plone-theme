@@ -1,12 +1,31 @@
+.plone-navbar-header {
+    @include make-container;
+
+    .plone-navbar-toggle {
+        display: none;
+        background-color: transparent;
+        border: 0 none;
+        padding: 0;
+        margin: 10px 0;
+
+        &:hover,
+        &:focus {
+            box-shadow: none;
+        }
+
+        &:before {
+            background: url("++theme++redturtle.agid.theme/images/menu.png");
+            height: 33px;
+            width: 32px;
+            display: block;
+            content:'';
+        }
+    }
+}
+
 #portal-mainnavigation {
     background-color: $brand-primary;
     color: #FFF;
-
-    .plone-navbar-header {
-        .plone-navbar-toggle {
-            display: none;
-        }
-    }
 
     .globalnavWrapper {
         @include make-container;
@@ -52,6 +71,43 @@
 
         span.sr-only {
             @include sr-only;
+        }
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+
+    .plone-navbar-header {
+        .plone-navbar-toggle {
+            display: block;
+        }
+    }
+
+    #portal-mainnavigation {
+
+        #portal-globalnav-collapse {
+            display: none;
+
+            &.collapse {
+                display: none;
+            }
+            &.collapse.in {
+                display: block;
+            }
+        }
+
+        ul#portal-globalnav {
+            display: block;
+
+            li {
+                display: block;
+                margin: 0 0 2%;
+                padding: 0;
+
+                a {
+                    display: inline-block;
+                }
+            }
         }
     }
 }
