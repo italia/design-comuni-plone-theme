@@ -12,12 +12,6 @@
   </property>
 
   <property
-      name="view_methods"
-      purge="false">
-    <element value="gallery_view" />
-  </property>
-
-  <property
       name="behaviors"
       purge="false">
     <element value="plone.layoutaware" />
