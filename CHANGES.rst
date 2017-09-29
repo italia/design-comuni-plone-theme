@@ -8,6 +8,8 @@ Changelog
 - Aggiornamento ellipsed per problemi di compatibilita' [nzambello]
 - Aggiunta vista per collezione video [nzambello]
 - Aggiunta vista per collezione gallery (folders) [nzambello]
+- Aggiunti stili responsive per header (+ ricerca e menu) [nzambello]
+- Aggiunte indicazioni accessibilita [nzambello]
 
 
 1.0.2 (2017-09-28)
