@@ -73,25 +73,26 @@
     }
 }
 
-body.plone-toolbar-left-default {
-    .plone-modal-wrapper {
-        .plone-modal {
-            .plone-modal-dialog {
-                width: calc(100% - 60px);
-                left: 60px !important;
+@media (min-width: 769px) {
+    body.plone-toolbar-left-default {
+        .plone-modal-wrapper {
+            .plone-modal {
+                .plone-modal-dialog {
+                    width: calc(100% - 60px);
+                    left: 60px !important;
+                }
             }
         }
     }
-}
 
-body.plone-toolbar-left-expanded {
-    .plone-modal-wrapper {
-        .plone-modal {
-            .plone-modal-dialog {
-                width: calc(100% - 120px);
-                left: 120px !important;
+    body.plone-toolbar-left-expanded {
+        .plone-modal-wrapper {
+            .plone-modal {
+                .plone-modal-dialog {
+                    width: calc(100% - 120px);
+                    left: 120px !important;
+                }
             }
-
         }
     }
 }

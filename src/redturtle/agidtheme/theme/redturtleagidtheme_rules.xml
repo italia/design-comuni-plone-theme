@@ -51,28 +51,21 @@
         <span class="icon"></span>
         <span class="sr-only">SEARCH</span>
       </button>
-      <button id="globalnav-toggle"
-              aria-controls="menu"
-              aria-label="Attiva menu"
-              title="Apri/chiudi menu">
-        <span class="icon"></span>
-        <span class="sr-only">MENU</span>
-      </button>
+      <div class="plone-navbar-header">
+        <button type="button"
+                class="plone-navbar-toggle"
+                data-toggle="collapse"
+                data-target="#portal-globalnav-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
     </div>
   </replace>
   <!-- cancello la search originale -->
   <drop css:content="#portal-header #portal-searchbox" />
-
-
-  <!-- <rules css:if-content="body.template-tiles_page_view"> -->
-  <!--   <replace css:content=".pat-tiles-management"> -->
-  <!--     <div class="tiles-slot"> -->
-  <!--       <xsl:copy-of css:select=".pat-tiles-management" /> -->
-  <!--       <xsl:copy-of select="//*[@id='viewlet-below-content']" /> -->
-  <!--     </div> -->
-  <!--   </replace> -->
-  <!--   <drop css:content="#portal-column-content #viewlet-below-content" /> -->
-  <!-- </rules> -->
 
   <!-- sposto le colonne dentro ad un container -->
   <replace css:content="#portal-column-content">

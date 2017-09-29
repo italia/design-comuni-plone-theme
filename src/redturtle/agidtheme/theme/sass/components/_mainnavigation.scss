@@ -1,5 +1,5 @@
 .plone-navbar-header {
-    @include make-container;
+    padding: 0;
 
     .plone-navbar-toggle {
         display: none;
@@ -15,10 +15,12 @@
 
         &:before {
             background: url("++theme++redturtle.agid.theme/images/menu.png");
-            height: 33px;
-            width: 32px;
+            height: 1.2em;
+            width: 1.2em;
             display: block;
             content:'';
+            background-size: cover;
+            background-repeat: no-repeat;
         }
     }
 }
@@ -75,9 +77,13 @@
     }
 }
 
-@media (max-width: $screen-xs-max) {
+@media (max-width: $screen-sm-max) {
 
     .plone-navbar-header {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+
         .plone-navbar-toggle {
             display: block;
         }
