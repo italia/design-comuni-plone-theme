@@ -111,3 +111,14 @@
         }
     }
 }
+
+@media (min-width: $screen-xs-max) {
+
+    #portal-mainnavigation {
+
+        #portal-globalnav-collapse {
+            display: block;
+            height: auto !important;
+        }
+    }
+}
