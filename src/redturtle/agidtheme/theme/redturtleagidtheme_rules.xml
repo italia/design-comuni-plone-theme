@@ -44,11 +44,17 @@
     <div class="search-social-wrapper">
       <xsl:copy-of select="//*[@id='header-social']"/>
       <xsl:copy-of select="//*[@id='portal-searchbox']"/>
-      <button id="search-toggle">
+      <button id="search-toggle"
+              aria-controls="search"
+              aria-label="Attiva ricerca"
+              title="Apri/chiudi ricerca">
         <span class="icon"></span>
         <span class="sr-only">SEARCH</span>
       </button>
-      <button id="globalnav-toggle">
+      <button id="globalnav-toggle"
+              aria-controls="menu"
+              aria-label="Attiva menu"
+              title="Apri/chiudi menu">
         <span class="icon"></span>
         <span class="sr-only">MENU</span>
       </button>
