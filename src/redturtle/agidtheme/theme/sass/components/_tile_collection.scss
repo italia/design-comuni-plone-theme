@@ -482,6 +482,17 @@
         width: 22.5%;
     }
 
+    @media (max-width: $screen-sm-max) {
+        li.collectionItem {
+            width: 47.5%;
+        }
+    }
+    @media (max-width: $screen-xs-max) {
+        li.collectionItem {
+            width: 100%;
+        }
+    }
+
     .showMore {
         position: absolute;
         top: 40px;
