@@ -8,18 +8,12 @@
     <body>
         <metal:macro define-macro="collection-tile-macro"
                      tal:define="helper_view nocall:context/@@collection_tile_helpers">
-        <div class="tile-collection video-collection">
+        <div class="tile-collection gallery-collection">
             <div class="tile-collection-container">
                 <h3 tal:define="title view/data/title|nothing;"
                     class="tileTitle"
                     tal:condition="title"
-                    ><button class="tile-collapse-button"
-                             ><span class="title-content"
-                                 >${title}
-                            </span><span class="title-icon"
-                            ></span
-                    ></button
-                ></h3>
+                    >${title}</h3>
                 <div class="tileBody">
                     <p tal:condition="not:results"
                      class="noResults"
@@ -38,19 +32,19 @@
                             tal:attributes="class python: 'colonna-1-di-3 ' + (oddrow and 'collectionItem even' or 'collectionItem odd')">
                             <div class="collectionItemWrapper">
                                 <a href="#"
-                                   data-pat-plone-modal="position: 'center middle';"
                                    tal:attributes="href itemUrl;
-                                                   class string:tile $item_type_class $item_wf_state_class pat-plone-modal;
+                                                   class string:tile $item_type_class $item_wf_state_class;
                                                    title obj/Description">
                                     <div class="collectionItemImage">
-                                        <span class="video-icon"></span>
-                                        <img class="image-thumb"
-                                             tal:define="realObj obj/getObject;
+                                        <img tal:define="realObj obj/getObject;
                                                          scales realObj/@@images"
                                              tal:replace="structure python: scales.tag('image', scale='newshome', direction='down', css_class='image-thumb')">
                                     </div>
                                     <div class="collectionItemText">
                                         <div class="collectionItemTitle">
+                                            <span tal:define="type_class python: item_type == 'Folder' and 'photo' or 'video'"
+                                                  tal:attributes="class string: item-icon $type_class"
+                                            ></span>
                                             <span tal:content="obj/Title"> Title </span>
                                         </div>
                                         <div class="collectionItemDates"

@@ -5,7 +5,9 @@ Changelog
 1.0.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Aggiornamento ellipsed per problemi di compatibilita' [nzambello]
+- Aggiunta vista per collezione video [nzambello]
+- Aggiunta vista per collezione gallery (folders) [nzambello]
 
 
 1.0.2 (2017-09-28)

@@ -18,10 +18,6 @@ msgstr ""
 "Domain: redturtle.agidtheme\n"
 
 #: ../browser/configure.zcml
-msgid "Homepage view"
-msgstr ""
-
-#: ../browser/configure.zcml
 msgid "Tiles page view"
 msgstr ""
 
