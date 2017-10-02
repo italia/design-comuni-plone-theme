@@ -53,7 +53,7 @@
       </button>
       <div class="plone-navbar-header">
         <button type="button"
-                class="plone-navbar-toggle collapse"
+                class="plone-navbar-toggle"
                 aria-controls="portal-globalnav-collapse"
                 aria-expanded="false">
           <!--
