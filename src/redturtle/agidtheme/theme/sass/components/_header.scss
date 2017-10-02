@@ -56,9 +56,14 @@ $mobile-menu-width: $screen-sm-max;
 
         a {
             color: $text-color;
+            display: flex;
+            flex-flow: row nowrap;
 
             span {
                 border-bottom: 3px solid $tr;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
 
                 @media (max-width: $screen-sm-max) {
                     border-width: 1px;

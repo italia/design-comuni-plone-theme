@@ -63,6 +63,14 @@ require([
 
 
     /*
+     * mobile: menu toggle click
+     */
+    $('button.plone-navbar-toggle').on('click', function(e) {
+      // $('#portal-mainnavigation').toggleClass('open');
+    });
+
+
+    /*
      * gestione click per chiudere menu, ricerca e condividi
      */
     $(document).on('click', function(e) {
@@ -75,26 +83,9 @@ require([
       if (!$(e.target).closest('.share').length) {
         $share.removeClass('open');
       }
-    });
 
-    /* REGIONE */
-    /*
-     * globalnav menu open/close button for mobile
-     */
-    $('button.plone-navbar-toggle').on('click', function(e) {
-      $('#portal-mainnavigation').addClass('open');
-      $('body').addClass('menuOpened');
-    });
-
-    $('#globalnav-close').on('click', function(e) {
-      $('#portal-mainnavigation').removeClass('open');
-      $('body').removeClass('menuOpened');
-    });
-
-    $(document).on('click', function(e) {
-      if ((!$(e.target).closest('#portal-mainnavigation').length && !$(e.target).closest('button#globalnav-toggle').length) && $(window).width() <= 991) {
+      if ((!$(e.target).closest('#portal-mainnavigation').length && !$(e.target).closest('button.pplone-navbar-toggle').length) && $(window).width() <= 991) {
         // $('#portal-mainnavigation').removeClass('open');
-        // $('body').removeClass('menuOpened');
       }
     });
 

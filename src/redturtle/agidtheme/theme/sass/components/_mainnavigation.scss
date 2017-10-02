@@ -77,7 +77,7 @@
     }
 }
 
-@media (max-width: $screen-sm-max) {
+@media (max-width: $screen-xs-max) {
 
     .plone-navbar-header {
         display: flex;
@@ -118,7 +118,7 @@
     }
 }
 
-@media (min-width: $screen-xs-max) {
+// @media (min-width: $screen-xs-max) {
 
     #portal-mainnavigation {
 
@@ -127,4 +127,4 @@
             height: auto !important;
         }
     }
-}
+// }
