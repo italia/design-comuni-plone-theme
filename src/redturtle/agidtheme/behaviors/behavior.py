@@ -16,7 +16,7 @@ class IClassOnView(model.Schema):
         title=_(u'label_class_on_view', default=u'CSS Class'),
         description=_(
             u'help_class_on_view',
-            default=u'Insert CSS Class'),
+            default=u'CSS Class'),
         required=False,
         )
 
