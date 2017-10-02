@@ -20,6 +20,11 @@
     .tileWrapper {
         width: 30%;
         padding: 0 2%;
+
+        @media (max-width: $screen-xs-max) {
+            width: 100%;
+            padding: 0;
+        }
     }
 }
 
