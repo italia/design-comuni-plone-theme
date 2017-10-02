@@ -90,13 +90,15 @@
     }
 
     #portal-mainnavigation {
-        display: block;
-        max-height: 0;
-        transition: max-height $animation-speed ease-in-out;
-        overflow: hidden;
+        #portal-globalnav-wrapper {
+            display: block;
+            max-height: 0;
+            transition: max-height $animation-speed ease-in-out;
+            overflow: hidden;
 
-        &.open {
-            max-height: 1000px;
+            &.open {
+                max-height: 1000px;
+            }
         }
 
         // #portal-globalnav-collapse {

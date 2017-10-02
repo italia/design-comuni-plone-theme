@@ -66,7 +66,7 @@ require([
      * mobile: menu toggle click
      */
     $('button.plone-navbar-toggle').on('click', function(e) {
-      $('#portal-mainnavigation').toggleClass('open');
+      $('#portal-globalnav-wrapper').toggleClass('open');
     });
 
 
@@ -84,8 +84,8 @@ require([
         $share.removeClass('open');
       }
 
-      if ((!$(e.target).closest('#portal-mainnavigation').length && !$(e.target).closest('button.plone-navbar-toggle').length) && $(window).width() <= 991) {
-        $('#portal-mainnavigation').removeClass('open');
+      if ((!$(e.target).closest('#portal-globalnav-wrapper').length && !$(e.target).closest('button.plone-navbar-toggle').length) && $(window).width() <= 991) {
+        $('#portal-globalnav-wrapper').removeClass('open');
       }
     });
 
