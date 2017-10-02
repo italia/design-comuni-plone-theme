@@ -1,4 +1,14 @@
+
+.template-tiles_page_view .LandigPageAreeTematiche,
 .LandigPageAreeTematiche {
+
+    @include make-container;
+
+    .tile-advanced-static .tile-container,
+    .tile-container {
+        width: 100%;
+        padding: 0;
+    }
 
     .tilesList {
         display: flex;
