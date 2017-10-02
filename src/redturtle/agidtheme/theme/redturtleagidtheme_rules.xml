@@ -53,9 +53,13 @@
       </button>
       <div class="plone-navbar-header">
         <button type="button"
-                class="plone-navbar-toggle"
+                class="plone-navbar-toggle collapse"
+                aria-controls="portal-globalnav-collapse"
+                aria-expanded="false">
+          <!--
                 data-toggle="collapse"
-                data-target="#portal-globalnav-collapse">
+                data-target="#portal-globalnav-collapse"
+          -->
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>

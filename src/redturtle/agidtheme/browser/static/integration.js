@@ -66,12 +66,12 @@ require([
      * mobile: menu toggle click
      */
     $('button.plone-navbar-toggle').on('click', function(e) {
-      // $('#portal-mainnavigation').toggleClass('open');
+      $('#portal-mainnavigation').toggleClass('open');
     });
 
 
     /*
-     * gestione click per chiudere menu, ricerca e condividi
+     * gestione click fuori per chiudere menu, ricerca e condividi
      */
     $(document).on('click', function(e) {
       if ((!$(e.target).closest('#portal-searchbox').length && !$(e.target).closest('button#search-toggle').length) && $(window).width() <= 991) {
@@ -84,8 +84,8 @@ require([
         $share.removeClass('open');
       }
 
-      if ((!$(e.target).closest('#portal-mainnavigation').length && !$(e.target).closest('button.pplone-navbar-toggle').length) && $(window).width() <= 991) {
-        // $('#portal-mainnavigation').removeClass('open');
+      if ((!$(e.target).closest('#portal-mainnavigation').length && !$(e.target).closest('button.plone-navbar-toggle').length) && $(window).width() <= 991) {
+        $('#portal-mainnavigation').removeClass('open');
       }
     });
 
