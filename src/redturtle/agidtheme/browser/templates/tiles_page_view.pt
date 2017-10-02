@@ -19,6 +19,8 @@
     <metal:tiles_slot fill-slot="tiles_slot">
       <metal:tiles_slot define-macro="tiles_slot">
         <div class="pat-tiles-management"
+             tal:define="class_on_view context/class_on_view|nothing"
+             tal:attributes="class python: class_on_view and 'pat-tiles-management '+ class_on_view or 'pat-tiles-management'"
              data-pat-tiles-management="managerId:defaultManager" />
       </metal:tiles_slot>
     </metal:tiles_slot>
