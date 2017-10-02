@@ -1,3 +1,19 @@
+.LandigPageAreeTematiche {
+
+    .tilesList {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .tileWrapper {
+        width: 30%;
+        padding: 0 2%;
+    }
+}
+
+.tile-advanced-static.PagesTileStatic,
 .PagesTileStatic {
     margin: 3rem 0;
 
@@ -18,7 +34,7 @@
         }
     }
 
-    .tile-header {
+    h3.tileTitle {
         font-size: 2.5rem;
         font-weight: $bold;
         margin: 1.5rem 0 1rem;
