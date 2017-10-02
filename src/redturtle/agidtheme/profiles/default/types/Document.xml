@@ -13,5 +13,6 @@
       name="behaviors"
       purge="false">
     <element value="plone.layoutaware" />
+    <element value="redturtle.agidtheme.behaviors.behavior.IClassOnView"/>
   </property>
 </object>

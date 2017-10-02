@@ -1,0 +1,15 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:plone="http://namespaces.plone.org/plone"
+  i18n_domain="redturtle.agidtheme">
+
+  <plone:behavior
+    title="redturtle.agidtheme: Class on View behavior"
+    description="We want to add a field Class for objects"
+    provides=".behavior.IClassOnView"
+    factory=".behavior.ClassOnView"
+    for="plone.dexterity.interfaces.IDexterityContent"
+    marker=".behavior.IClassOnView"
+    />
+
+</configure>

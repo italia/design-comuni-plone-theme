@@ -46,6 +46,7 @@ setup(
         'plone.api',
         'plone.app.theming',
         'plone.app.themingplugins',
+        'plone.behavior',
         'Products.GenericSetup>=1.8.2',
         'redturtle.patterns.slider',
         'redturtle.tiles.management',

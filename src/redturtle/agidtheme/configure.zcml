@@ -14,6 +14,7 @@
       title="redturtle.agidtheme: Edit Agidtheme Settings"
     />
 
+  <include package=".behaviors" />
   <include package=".browser" />
   <include package=".controlpanel" />
   <include package=".upgrades" />
