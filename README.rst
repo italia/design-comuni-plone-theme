@@ -12,7 +12,7 @@ __ http://www.agid.gov.it/tags/linee-guida-design-pa
 
 
 Documentation
---------
+-------------
 
 A complete documentation can be found on a magical doc somewhere in the universe.
 
@@ -22,7 +22,9 @@ Examples
 
 This theme can be seen in action at the following sites:
 
-- digitale.regione.emilia-romagna.it
+- `digitale.regione.emilia-romagna.it`__
+
+__ http://digitale.regione.emilia-romagna.it
 
 
 Translations
