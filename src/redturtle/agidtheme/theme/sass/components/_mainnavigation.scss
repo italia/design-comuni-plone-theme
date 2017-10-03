@@ -77,7 +77,7 @@
     }
 }
 
-@media (max-width: $screen-sm-max) {
+@media (max-width: $mobile-menu-width) {
 
     .plone-navbar-header {
         display: flex;
@@ -90,17 +90,27 @@
     }
 
     #portal-mainnavigation {
+        #portal-globalnav-wrapper {
+            display: block;
+            max-height: 0;
+            transition: max-height $animation-speed ease-in-out;
+            overflow: hidden;
 
-        #portal-globalnav-collapse {
-            display: none;
-
-            &.collapse {
-                display: none;
-            }
-            &.collapse.in {
-                display: block;
+            &.open {
+                max-height: 1000px;
             }
         }
+
+        // #portal-globalnav-collapse {
+        //     display: none;
+        //
+        //     &.collapse {
+        //         display: none;
+        //     }
+        //     &.collapse.in {
+        //         display: block;
+        //     }
+        // }
 
         ul#portal-globalnav {
             display: block;
@@ -118,13 +128,13 @@
     }
 }
 
-@media (min-width: $screen-xs-max) {
-
-    #portal-mainnavigation {
-
-        #portal-globalnav-collapse {
-            display: block;
-            height: auto !important;
-        }
-    }
-}
+// @media (min-width: $screen-xs-max) {
+//
+//     #portal-mainnavigation {
+//
+//         #portal-globalnav-collapse {
+//             display: block;
+//             height: auto !important;
+//         }
+//     }
+// }
