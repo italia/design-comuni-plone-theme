@@ -14,7 +14,9 @@ __ http://www.agid.gov.it/tags/linee-guida-design-pa
 Documentation
 -------------
 
-A complete documentation can be found on a magical doc somewhere in the universe.
+A complete documentation can be found on this `document`__.
+
+__ https://docs.google.com/document/d/1ncSgzj0JABBWR1Jt7sxtIH5qwjCVN10qBm7uA8uM5cw/export?format=pdf
 
 
 Examples
