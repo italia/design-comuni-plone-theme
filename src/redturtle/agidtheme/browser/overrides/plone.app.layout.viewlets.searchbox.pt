@@ -26,7 +26,7 @@
                tal:attributes="value request/form/SearchableText|nothing;"
                class="searchField" />
 
-        <button class="search-button" type="suåbmit"
+        <button class="search-button" type="submit"
                 i18n:attributes="title label_search;
                                  aria-label label_search"></button>
 

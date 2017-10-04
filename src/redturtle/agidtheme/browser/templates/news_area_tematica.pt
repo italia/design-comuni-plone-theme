@@ -44,7 +44,7 @@
                              tal:attributes="href itemUrl;
                                              class string:tile $item_type_class $item_wf_state_class;
                                              title obj/Description">
-                            <span tal:replace="obj/Title"> Title </span>
+                            <h3 tal:content="obj/Title"> Title </h3>
                           </a>
                         </div>
                         <div class="newsDescription">

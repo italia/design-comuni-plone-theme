@@ -45,7 +45,7 @@
                                             <span tal:define="type_class python: item_type == 'Folder' and 'photo' or 'video'"
                                                   tal:attributes="class string: item-icon $type_class"
                                             ></span>
-                                            <span tal:content="obj/Title"> Title </span>
+                                            <h3 tal:content="obj/Title"> Title </h3>
                                         </div>
                                         <div class="collectionItemDates"
                                              tal:define="date python:helper_view.get_formatted_date(obj)"
