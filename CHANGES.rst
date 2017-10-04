@@ -5,7 +5,7 @@ Changelog
 1.0.4 (unreleased)
 ------------------
 
-- Stili titoli collezioni tile [nzambello]
+- Corrette indicazioni accessibilita' [nzambello]
 
 
 1.0.3 (2017-10-03)
