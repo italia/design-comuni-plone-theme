@@ -72,5 +72,5 @@ class LogoViewlet(base.ViewletBase):
 
         # TODO: should this be changed to settings.site_title?
         self.navigation_root_title = self.site_title
-        self.logo_title = 'Logo ' + self.site_title
+        self.logo_title = self.site_title
         self.img_src = getSiteLogo()
