@@ -51,7 +51,7 @@
                                     </div>
                                     <div class="collectionItemText">
                                         <div class="collectionItemTitle">
-                                            <span tal:content="obj/Title"> Title </span>
+                                            <h3 tal:content="obj/Title"> Title </h3>
                                         </div>
                                         <div class="collectionItemDates"
                                              tal:define="date python:helper_view.get_formatted_date(obj)"

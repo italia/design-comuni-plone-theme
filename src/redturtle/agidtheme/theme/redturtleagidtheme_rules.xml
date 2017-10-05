@@ -46,7 +46,7 @@
       <xsl:copy-of select="//*[@id='portal-searchbox']"/>
       <button id="search-toggle"
               aria-controls="search"
-              aria-label="Attiva ricerca"
+              aria-label="Apri/chiudi ricerca"
               title="Apri/chiudi ricerca">
         <span class="icon"></span>
         <span class="sr-only">SEARCH</span>

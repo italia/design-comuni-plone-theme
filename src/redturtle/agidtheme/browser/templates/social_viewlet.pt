@@ -27,6 +27,7 @@
     <div class="share-button">
         <a href="#" class="share-toggle">
             <span class="share-icon"></span>
+            <span class="sr-only">Attiva condividi</span>
         </a>
     </div>
 </div>

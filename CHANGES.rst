@@ -2,7 +2,19 @@ Changelog
 =========
 
 
-1.0.3 (unreleased)
+1.0.5 (unreleased)
+------------------
+
+- Nothing changed yet.
+
+
+1.0.4 (2017-10-04)
+------------------
+
+- Corrette indicazioni accessibilita' [nzambello]
+
+
+1.0.3 (2017-10-03)
 ------------------
 
 - Aggiornamento ellipsed per problemi di compatibilita' [nzambello]

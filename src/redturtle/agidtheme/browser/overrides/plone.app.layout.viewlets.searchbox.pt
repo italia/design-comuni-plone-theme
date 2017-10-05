@@ -26,20 +26,11 @@
                tal:attributes="value request/form/SearchableText|nothing;"
                class="searchField" />
 
-        <button class="search-button" type="suåbmit"
+        <button class="search-button" type="submit"
                 i18n:attributes="title label_search;
                                  aria-label label_search"></button>
 
         </div>
     </form>
-
-    <div id="portal-advanced-search"
-         class="hiddenStructure">
-        <a href="#"
-           tal:attributes="href string:${navigation_root_url}/@@search"
-           i18n:translate="label_advanced_search">
-            Advanced Search&hellip;
-        </a>
-    </div>
 
 </div>

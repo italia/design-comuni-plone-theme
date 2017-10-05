@@ -26,7 +26,9 @@
               <div class="news-detail">
                 <div tal:define="title view/data/title|nothing;"
                     class="tileTitle"
-                    tal:condition="title">${title}</div>
+                    tal:condition="title">
+                    <h3>${title}</h3>
+                </div>
                 <div class="news-date"
                      tal:define="date python:helper_view.get_formatted_date(news)"
                      tal:condition="python: view.data.get('show_dates', False) and date"

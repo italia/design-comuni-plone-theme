@@ -125,6 +125,7 @@
 
     .tileTitle {
         padding: 0 10px;
+        font-size: 1.6em;
 
         .tile-collapse-button {
             border: 0;
@@ -146,7 +147,6 @@
             }
         }
     }
-
 
     .collectionItemWrapper {
         background: #EEE;
@@ -198,6 +198,11 @@
         .collectionItemTitle {
             font-weight: $bold;
             padding: 10px 0;
+            font-size: 2.1rem;
+        }
+
+        .collectionItemDescription {
+            font-size: 1.7rem;
         }
     }
 
@@ -627,4 +632,11 @@
             }
         }
     }
+}
+
+h3.tileTitle,
+.collectionItemTitle h3,
+.tileTitle h3 {
+    font-size: inherit;
+    margin: 0;
 }
