@@ -15,15 +15,17 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-start;
+        @include make-row();
     }
 
     .tileWrapper {
-        width: 30%;
-        padding: 0 2%;
+
+        @include make-md-column(4,$gutter: 50px);
+        @include make-xs-column(6,$gutter: 50px);
 
         @media (max-width: $screen-xs-max) {
             width: 100%;
-            padding: 0;
+            float: none;
         }
     }
 }
