@@ -26,4 +26,10 @@
             }
         }
     }
+
+    @media (max-width: $screen-sm-max) {
+        float: none;
+        margin-bottom: 1em;
+        text-align: right;
+    }
 }
