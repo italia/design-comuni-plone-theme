@@ -139,6 +139,13 @@
     }
 }
 
+// CALENDAR
+.ploneCalendar {
+    td.today {
+        border: 0 none;
+    }
+}
+
 // PLACEHOLDER PER CREARE COLONNA
 .placeholder-portlet {
     display: none;
