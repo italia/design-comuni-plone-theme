@@ -505,7 +505,7 @@
 
     .showMore {
         position: absolute;
-        top: 40px;
+        top: 45px;
         right: 15px;
 
         a {
@@ -516,7 +516,9 @@
     }
 
     .tileTitle {
+        font-size: 1.6em;
         padding: 0 10px;
+        margin: 25px 0 12.5px;
     }
 
     .serviceWrapper {
