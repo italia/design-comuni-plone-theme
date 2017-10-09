@@ -29,6 +29,12 @@ body.portaltype-event {
                 font-weight: $semibold;
             }
         }
+
+        @media (max-width: $screen-xs-max) {
+            float: none;
+            max-width: 100%;
+            margin-left: 0;
+        }
     }
 
     #parent-fieldname-text {
