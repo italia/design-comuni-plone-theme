@@ -139,10 +139,42 @@
     }
 }
 
+// COLLEZIONE
+.portletCollection {
+
+    ul.portletContent {
+        padding: 0;
+        list-style-type: none;
+
+        li {
+            padding: 1.5rem 2.5rem 1.5rem 2rem;
+            border-bottom: 1px solid $gray-desc-border;
+            &:last-child {
+                border-bottom: 0 none;
+            }
+
+            a.tile {
+                img {
+                    display: none;
+                }
+                .portletItemDetails {
+                    font-style: italic;
+                    font-size: 0.8em;
+                }
+            }
+        }
+    }
+}
+
 // CALENDAR
-.ploneCalendar {
-    td.today {
-        border: 0 none;
+.portletCalendar {
+    header {
+        text-align: center;
+    }
+    .ploneCalendar {
+        td.today {
+            border: 0 none;
+        }
     }
 }
 
