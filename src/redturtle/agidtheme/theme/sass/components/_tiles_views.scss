@@ -16,15 +16,13 @@
     }
 
     .tile-advanced-static {
-      .tile-container {
-        @include make-container();
-      }
+        .tile-container {
+            @include make-container();
+        }
     }
 
     .existing-content-tile {
-      > div {
         @include make-container();
-      }
     }
 
     .aree-tematiche,
