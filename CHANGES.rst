@@ -5,7 +5,7 @@ Changelog
 1.0.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Corretti stili collezioni e tile [nzambello]
 
 
 1.0.4 (2017-10-04)
