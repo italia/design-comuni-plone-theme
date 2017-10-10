@@ -33,7 +33,7 @@
               <div class="item-title"><a href="${brain/getURL}" title="${title}">${title}</a></div>
             </div>
           </tal:result>
-          <tal:showmore tal:condition="python:view.data.get('show_more') and not showCarousel">
+          <tal:showmore tal:condition="python:view.data.get('show_more') and view.data.get('title') and not showCarousel">
             <a href="${collection/absolute_url}"
                tal:define="show_more_label view/data/show_more_label|nothing">
               <span tal:condition="not:show_more_label"

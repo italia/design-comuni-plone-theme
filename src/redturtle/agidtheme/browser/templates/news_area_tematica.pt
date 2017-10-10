@@ -54,7 +54,10 @@
               </li>
             </tal:results>
           </ul>
-          <div class="showMore" tal:condition="view/data/show_more">
+          <div class="showMore"
+            tal:define="show_more view/data/show_more;
+                        title view/data/title"
+            tal:condition="python: show_more and title">
             <a href="${collection/absolute_url}"
                tal:define="show_more_label view/data/show_more_label|nothing">
               <span tal:condition="not:show_more_label"
