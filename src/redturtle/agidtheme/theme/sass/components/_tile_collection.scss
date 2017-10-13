@@ -602,6 +602,19 @@
         }
     }
 }
+.sfondo-scuro {
+    .online-services {
+        .serviceWrapper a {
+            color: #FFF;
+
+            &:focus,
+            &:hover {
+                color: #DDD;
+                border-color: #DDD;
+            }
+        }
+    }
+}
 
 // NEWS CON FOTO GRANDE IN SFONDO (homepage)
 .news-big-photo {
