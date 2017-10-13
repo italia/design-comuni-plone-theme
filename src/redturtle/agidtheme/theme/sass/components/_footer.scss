@@ -107,6 +107,9 @@
                 &.in:before {
                     @include make-fa('\f0e1', $footer-bg);
                 }
+                &.ig:before {
+                    @include make-fa('\f16d', $footer-bg);
+                }
                 &.st {
                     &:before {
                         content: "";
