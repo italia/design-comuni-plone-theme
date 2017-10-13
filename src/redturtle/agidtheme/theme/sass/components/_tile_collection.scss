@@ -371,6 +371,7 @@
 }
 
 .news-highlight {
+    background: #fff;
 
     .tileBody {
         @include make-container;
@@ -477,6 +478,22 @@
         }
     }
 }
+.sfondo-scuro {
+    .news-highlight {
+        background: $tile-fascia-scura;
+
+        .tile-content .news-infos .news-title a:focus,
+        .tile-content .news-infos .news-title a:hover {
+            border-color: #DDD;
+        }
+    }
+}
+.sfondo-chiaro {
+    .news-highlight {
+        background: $gray-bg;
+    }
+}
+
 
 .online-services {
     @include make-container;
