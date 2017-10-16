@@ -115,6 +115,9 @@
                         &.youtube:before {
                             @include make-fa('\f167', #fff);
                         }
+                        &.instagram:before {
+                            @include make-fa('\f16d', #FFF);
+                        }
                         &.whatsapp:before {
                             @include make-fa('\f232', #fff);
                         }

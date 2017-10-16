@@ -6,6 +6,7 @@ Changelog
 ------------------
 
 - Corretti stili collezioni e tile [nzambello]
+- Aggiunta icona Instagram [nzambello]
 
 
 1.0.4 (2017-10-04)
