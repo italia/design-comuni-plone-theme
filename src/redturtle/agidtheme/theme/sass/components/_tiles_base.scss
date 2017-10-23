@@ -59,26 +59,38 @@
         padding: 20px;
         text-align: center;
 
-        a.list-group-item {
-          @extend .btn-default;
-        }
-
         a.plone-btn {
           @extend .btn-info;
           text-transform: uppercase;
           font-weight: $semibold;
         }
 
-        .available-tiles .list-group {
-          justify-content: center;
+        .available-tiles {
+            .list-group {
+                justify-content: center;
+                font-size: 0.9em;
+
+                .list-group-item {
+                     @extend .btn-default;
+                     width: 24%;
+                }
+
+                .tileTitle {
+                    font-size: 1.3em;
+                }
+            }
         }
     }
 
-    // .tilesList > .tileWrapper {
-    //     .tile-header {
-    //         display: none;
-    //     }
-    // }
+    &.right-column {
+        .actionsTiles {
+            .available-tiles {
+                .list-group-item {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 
 .tileTitle {
