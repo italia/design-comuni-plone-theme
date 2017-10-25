@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.5 (unreleased)
+1.0.5 (2017-10-25)
 ------------------
 
 - Corretti stili collezioni e tile [nzambello]
