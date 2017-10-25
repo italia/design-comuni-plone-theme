@@ -88,6 +88,7 @@
     var defaultOptions = {
       replaceStr: '...',
       responsive: false,
+      debounceDelay: 250,
     };
 
     var opts = _extends({}, defaultOptions, options);
@@ -113,14 +114,23 @@
       });
     }
 
-    window.onresize = function() {
-      for (var _i = 0; _i < elements.length; _i++) {
-        var _el = elements[_i];
-        _el.textContent = originalTexts[_i];
-      }
+    if (opts.responsive) {
+      var resizeTimeout = false;
 
-      ellipsis(selector, rows, options);
-    };
+      var resizeHandler = function resizeHandler() {
+        for (var _i = 0; _i < elements.length; _i++) {
+          var _el = elements[_i];
+          _el.textContent = originalTexts[_i];
+        }
+
+        ellipsis(selector, rows, _extends({}, options, { responsive: false }));
+      };
+
+      window.addEventListener('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(resizeHandler, opts.debounceDelay);
+      });
+    }
   }
 
   exports.ellipsis = ellipsis;
@@ -244,8 +254,8 @@ require([
     $('.pat-tiles-management').on('rtTilesLoaded', function(e) {
       handleTabIndex();
       ellipsis('.tile-collection .collectionItemDescription', 4, { responsive: true });
-      ellipsis('.news-highlight .news-description', 4);
-      ellipsis('.news-big-photo .news-description', 4);
+      ellipsis('.news-highlight .news-description', 4, { responsive: true });
+      ellipsis('.news-big-photo .news-description', 4, { responsive: true });
     });
 
     $(window).on('resize orientationchange', function(e) {

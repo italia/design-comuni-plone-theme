@@ -53,6 +53,6 @@
     }
   },
   "dependencies": {
-    "ellipsed": "^0.4.1"
+    "ellipsed": "^1.0.1"
   }
 }

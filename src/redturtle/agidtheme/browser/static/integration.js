@@ -116,8 +116,8 @@ require([
     $('.pat-tiles-management').on('rtTilesLoaded', function(e) {
       handleTabIndex();
       ellipsis('.tile-collection .collectionItemDescription', 4, { responsive: true });
-      ellipsis('.news-highlight .news-description', 4);
-      ellipsis('.news-big-photo .news-description', 4);
+      ellipsis('.news-highlight .news-description', 4, { responsive: true });
+      ellipsis('.news-big-photo .news-description', 4, { responsive: true });
     });
 
     $(window).on('resize orientationchange', function(e) {

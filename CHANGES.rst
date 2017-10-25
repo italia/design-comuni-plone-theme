@@ -8,6 +8,7 @@ Changelog
 - Corretti stili collezioni e tile [nzambello]
 - Aggiunta icona Instagram [nzambello]
 - Aggiunti alcuni fix responsive [fdelia]
+- Aggiornato ellipsed [nzambello]
 
 
 1.0.4 (2017-10-04)
