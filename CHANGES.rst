@@ -5,7 +5,8 @@ Changelog
 1.0.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix redturtleagidtheme_rules.xml per inserire anche i tag <style>
+  [cekk]
 
 
 1.0.5 (2017-10-25)

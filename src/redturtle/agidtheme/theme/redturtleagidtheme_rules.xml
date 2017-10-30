@@ -27,7 +27,7 @@
     <!-- CSS -->
     <drop css:content="head link[data-bundle='diazo']" />
     <before css:theme-children="head" css:content="head link" />
-
+    <before css:theme-children="head" css:content="head style" />
     <!-- Script -->
     <drop css:content="head script[data-bundle='diazo']" />
     <before css:theme-children="head" css:content="head script" />
