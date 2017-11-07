@@ -20,6 +20,10 @@
             flex-flow: row nowrap;
         }
 
+        .slick-slide {
+            height: auto;
+        }
+
         ul.slick-dots {
             width: 100%;
             padding: 15px 0 0;
