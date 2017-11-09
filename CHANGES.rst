@@ -7,6 +7,8 @@ Changelog
 
 - Fix redturtleagidtheme_rules.xml per inserire anche i tag <style>
   [cekk]
+- Fixed menu styles to avoid effecting possible submenus
+  [pnicolli]
 
 
 1.0.5 (2017-10-25)

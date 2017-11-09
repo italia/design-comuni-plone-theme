@@ -39,7 +39,7 @@
         display: flex;
         padding: 1.2rem 0;
 
-        li {
+        > li {
             margin: 0 2%;
 
             &:first-child {
@@ -50,7 +50,7 @@
                 margin-left: 0;
             }
 
-            a {
+            > a {
                 color: #FFF;
                 font-size: 1.95rem;
                 font-weight: $semibold;
@@ -115,12 +115,12 @@
         ul#portal-globalnav {
             display: block;
 
-            li {
+            > li {
                 display: block;
                 margin: 0 0 2%;
                 padding: 0;
 
-                a {
+                > a {
                     display: inline-block;
                 }
             }
