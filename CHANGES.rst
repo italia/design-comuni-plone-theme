@@ -7,7 +7,9 @@ Changelog
 
 - Fix redturtleagidtheme_rules.xml per inserire anche i tag <style>
   [cekk]
-- Fixed menu styles to avoid effecting possible submenus
+- Fixed menu styles to avoid affecting possible submenus
+  [pnicolli]
+- Refactored tiles page stiles to be more flexible about the number of columns
   [pnicolli]
 
 

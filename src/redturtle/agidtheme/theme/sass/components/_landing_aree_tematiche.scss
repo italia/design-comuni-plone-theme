@@ -1,31 +1,46 @@
 
-.ThreeColumnsPage,
-.template-tiles_page_view .ThreeColumnsPage {
+[class*="ColumnsPage"] {
+    &,
+    .template-tiles_page_view & {
+        @include make-container;
 
-    @include make-container;
-
-    .tile-advanced-static .tile-container,
-    .tile-container {
-        width: 100%;
-        padding: 0;
-    }
-
-    .tilesList {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-        @include make-row();
-    }
-
-    .tileWrapper {
-
-        @include make-md-column(4,$gutter: 50px);
-        @include make-xs-column(6,$gutter: 50px);
-
-        @media (max-width: $screen-xs-max) {
+        .tile-advanced-static .tile-container,
+        .tile-container {
             width: 100%;
-            float: none;
+            padding: 0;
+        }
+        .tilesList {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            @include make-row();
+        }
+        .tileWrapper {
+            @include make-xs-column(6,$gutter: 50px);
+
+            @media (max-width: $screen-xs-max) {
+                width: 100%;
+                float: none;
+            }
+        }
+    }
+}
+
+.ThreeColumnsPage {
+    &,
+    .template-tiles_page_view & {
+        .tileWrapper {
+            @include make-md-column(4,$gutter: 50px);
+        }
+    }
+}
+
+.FourColumnsPage {
+    &,
+    .template-tiles_page_view & {
+        .tileWrapper {
+            @include make-md-column(3,$gutter: 50px);
         }
     }
 }
