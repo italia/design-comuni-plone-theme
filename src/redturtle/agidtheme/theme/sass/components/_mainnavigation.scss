@@ -28,6 +28,7 @@
 #portal-mainnavigation {
     background-color: $brand-primary;
     color: #FFF;
+    @include antialias;
 
     .globalnavWrapper {
         @include make-container;

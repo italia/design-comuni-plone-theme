@@ -207,4 +207,12 @@
      -     layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
      -     /> -->
 
+  <browser:viewlet
+    name="redturtle.header.social"
+    manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+    class=".viewlets.HeaderSocialViewlet"
+    layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
+    permission="zope2.View"
+  />
+
 </configure>

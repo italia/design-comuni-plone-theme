@@ -51,4 +51,13 @@
       />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeStep
+    source="1004"
+    destination="1005"
+    profile="redturtle.agidtheme:default"
+    title="Import viewlets registry"
+    description="Added header social viewlet"
+    handler=".upgrades.import_viewlets_registry"
+  />
+
 </configure>

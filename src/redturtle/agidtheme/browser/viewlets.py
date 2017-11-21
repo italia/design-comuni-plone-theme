@@ -1,15 +1,12 @@
 # -*- coding: utf-8 -*-
+from ..controlpanel.interfaces import IRedturtleAgidthemeSettings
 from ..vocabularies import SHARES
 from plone import api
 from plone.app.layout.viewlets import common as base
 from plone.app.layout.viewlets.content import DocumentBylineViewlet
-from plone.registry.interfaces import IRegistry
-from Products.CMFPlone.interfaces import ISecuritySchema
 from Products.CMFPlone.utils import getSiteLogo
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from redturtle.agidtheme.controlpanel.interfaces import IRedturtleAgidthemeSettings
 from urllib2 import quote
-from zope.component import getUtility
 
 
 class CustomDocumentBylineViewlet(DocumentBylineViewlet):
@@ -74,3 +71,8 @@ class LogoViewlet(base.ViewletBase):
         self.navigation_root_title = self.site_title
         self.logo_title = self.site_title
         self.img_src = getSiteLogo()
+
+
+class HeaderSocialViewlet(base.ViewletBase):
+    '"Follow us" viewlet'
+    index = ViewPageTemplateFile('templates/header_social_viewlet.pt')
