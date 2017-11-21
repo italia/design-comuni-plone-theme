@@ -48,8 +48,8 @@
 }
 
 // bootstrap container
-@mixin make-container() {
-    @include container-fixed;
+@mixin make-container($gutter: $grid-gutter-width) {
+    @include container-fixed($gutter);
 
     @media (min-width: $screen-sm-min) {
         width: $container-sm;

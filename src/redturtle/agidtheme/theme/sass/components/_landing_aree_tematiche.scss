@@ -1,9 +1,12 @@
+$aree-tematiche-gutter: 50px;
+
+.template-tiles_page_view [class*="ColumnsPage"] {
+    @include make-container($aree-tematiche-gutter);
+}
 
 [class*="ColumnsPage"] {
     &,
     .template-tiles_page_view & {
-        @include make-container;
-
         .tile-advanced-static .tile-container,
         .tile-container {
             width: 100%;
@@ -12,12 +15,10 @@
         .tilesList {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: flex-start;
-            @include make-row();
+            @include make-row($aree-tematiche-gutter);
         }
         .tileWrapper {
-            @include make-xs-column(6,$gutter: 50px);
+            @include make-xs-column(6, $aree-tematiche-gutter);
 
             @media (max-width: $screen-xs-max) {
                 width: 100%;
@@ -31,7 +32,7 @@
     &,
     .template-tiles_page_view & {
         .tileWrapper {
-            @include make-md-column(4,$gutter: 50px);
+            @include make-md-column(4, $aree-tematiche-gutter);
         }
     }
 }
@@ -40,7 +41,7 @@
     &,
     .template-tiles_page_view & {
         .tileWrapper {
-            @include make-md-column(3,$gutter: 50px);
+            @include make-md-column(3, $aree-tematiche-gutter);
         }
     }
 }
@@ -55,6 +56,7 @@
         content: " ";
         display: block;
         width: 200px;
+        max-width: 100%;
     }
 
     a {
