@@ -30,7 +30,7 @@
                       </p>
                       <ul class="${resultsClass}"
                           tal:condition="results"
-                          data-pat-slider='{ "initialSlide": 0, "slidesToShow": 3, "slidesToScroll": 1, "autoplay": true, "responsive": [{ "breakpoint": 768, "settings": { "slidesToShow": 1, "slidesToScroll": 1 } }] }'>
+                          data-pat-slider='{ "initialSlide": 0, "slidesToShow": 3, "slidesToScroll": 1, "responsive": [{ "breakpoint": 768, "settings": { "slidesToShow": 1, "slidesToScroll": 1 } }] }'>
                            <tal:results tal:repeat="obj results">
                               <li tal:define="oddrow repeat/obj/odd;
                                               useView python:obj.portal_type in viewActions;
