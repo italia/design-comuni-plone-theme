@@ -26,7 +26,7 @@
         @include make-container();
     }
 
-    .aree-tematiche,
+    .aree-tematiche-collection,
     [class*='collection-container'],
     .PagesTileCollection .tileContent {
         @include make-container;
