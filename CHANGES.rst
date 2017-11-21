@@ -13,6 +13,7 @@ Changelog
   [pnicolli]
 - Removed h1 from logo viewlet
   [pnicolli]
+- Stili carousel [nzambello]
 
 
 1.0.5 (2017-10-25)
