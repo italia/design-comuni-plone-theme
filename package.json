@@ -19,7 +19,6 @@
     "cssnano": "^3.7.7",
     "grunt": "~1.0.1",
     "grunt-browser-sync": "^2.2.0",
-    "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-less": "^1.4.1",
     "grunt-contrib-requirejs": "^1.0.0",
     "grunt-contrib-uglify": "^3.0.1",
@@ -44,7 +43,7 @@
         true,
         {
           "ignoreAtRules": [
-            "extends",
+            "extend",
             "include",
             "mixin"
           ]
