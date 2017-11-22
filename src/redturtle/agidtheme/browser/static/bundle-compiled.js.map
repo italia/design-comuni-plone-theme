@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": [
-    "static/ellipsed.js",
+    "../../../../node_modules/ellipsed/lib/ellipsed.js",
     "static/integration.js"
   ],
   "names": [],
