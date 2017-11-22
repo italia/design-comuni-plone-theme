@@ -6,6 +6,7 @@ $aree-tematiche-gutter: 50px;
 
 [class*="ColumnsPage"] {
     &,
+    .template-tiles_view &,
     .template-tiles_page_view & {
         .tile-advanced-static .tile-container,
         .tile-container {
