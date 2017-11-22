@@ -10,6 +10,10 @@
     }
 
     &.carousel {
+        div[class^="carousel-wrapper"] {
+            position: relative;
+        }
+
         .slick-list {
             width: 93%;
             margin: auto;
@@ -298,6 +302,7 @@
             display: flex;
             flex-flow: column nowrap;
             height: 100%;
+            border: 0;
 
             &:hover,
             &:focus {
