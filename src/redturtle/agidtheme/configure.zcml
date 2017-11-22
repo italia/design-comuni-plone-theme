@@ -43,6 +43,14 @@
       post_handler=".setuphandlers.uninstall"
       />
 
+  <genericsetup:registerProfile
+      name="removeellipsed"
+      title="RedTurtle Agid Theme: Remove ellipsed"
+      directory="profiles/removeellipsed"
+      description="Removes the ellipsed js resource."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <utility
       factory=".setuphandlers.HiddenProfiles"
       name="redturtle.agidtheme-hiddenprofiles" />

@@ -5,16 +5,13 @@ Changelog
 1.0.6 (unreleased)
 ------------------
 
-- Fix redturtleagidtheme_rules.xml per inserire anche i tag <style>
-  [cekk]
-- Fixed menu styles to avoid affecting possible submenus
-  [pnicolli]
-- Refactored tiles page stiles to be more flexible about the number of columns
-  [pnicolli]
-- Removed h1 from logo viewlet
-  [pnicolli]
+- Fix redturtleagidtheme_rules.xml per inserire anche i tag <style> [cekk]
+- Fixed menu styles to avoid affecting possible submenus [pnicolli]
+- Refactored tiles page stiles to be more flexible about the number of columns [pnicolli]
+- Removed h1 from logo viewlet [pnicolli]
 - Stili carousel [nzambello]
 - Renamed aree-tematiche to aree-tematiche-collection to prevent conflicts with site contents ids [nzambello]
+- Removed ellipsed from public resources [pnicolli]
 
 
 1.0.5 (2017-10-25)

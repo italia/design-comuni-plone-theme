@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<registry>
+  <!-- RESOURCE -->
+  <records
+    prefix="plone.resources/ellipsed"
+    interface='Products.CMFPlone.interfaces.IResourceRegistry'
+    remove="True"
+  />
+</registry>

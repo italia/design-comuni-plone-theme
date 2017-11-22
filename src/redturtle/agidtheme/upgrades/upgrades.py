@@ -58,3 +58,13 @@ def import_records_registry(context):
     logger.info('Importing records and settings configuration for' +
                 'redturtle.agidtheme')
     import_registry('plone.app.registry')
+
+
+def remove_ellipsed(context):
+    'Import the removeellipsed profile'
+    setup_tool = api.portal.get_tool('portal_setup')
+    setup_tool.runImportStepFromProfile(
+        'profile-redturtle.agidtheme:removeellipsed',
+        'plone.app.registry',
+        run_dependencies=False
+    )

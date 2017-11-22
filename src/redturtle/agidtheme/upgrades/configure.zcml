@@ -60,4 +60,21 @@
     handler=".upgrades.import_viewlets_registry"
   />
 
+  <genericsetup:upgradeSteps
+    source="1005"
+    destination="1006"
+    profile="redturtle.agidtheme:default">
+
+    <genericsetup:upgradeStep
+      title="Import plone registry"
+      description="Changed base js resource"
+      handler=".upgrades.import_records_registry"
+    />
+    <genericsetup:upgradeStep
+      title="Remove ellipsed"
+      description="Remove the unused 'ellipsed' resource"
+      handler=".upgrades.remove_ellipsed"
+    />
+  </genericsetup:upgradeSteps>
+
 </configure>
