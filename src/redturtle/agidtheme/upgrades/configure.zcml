@@ -77,4 +77,13 @@
     />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeStep
+    source="1006"
+    destination="1007"
+    profile="redturtle.agidtheme:default"
+    title="Import plone registry"
+    description="Changed base js resource"
+    handler=".upgrades.import_records_registry"
+  />
+
 </configure>
