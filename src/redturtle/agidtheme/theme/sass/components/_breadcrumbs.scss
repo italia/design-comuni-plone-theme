@@ -61,7 +61,7 @@
                     display: inline-block;
 
                     &:before {
-                        @include make-fa('\f015', $brand-primary);
+                        @include make-fa('\f015');
                         position: absolute;
                         left: 5px;
                         text-indent: 0;
