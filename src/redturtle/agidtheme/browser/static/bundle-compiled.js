@@ -262,13 +262,12 @@ require([
       handleTabIndex();
     });
 
-    // FIXME: event is not catched
-    $('ul.pat-slider').on('pat-slider-loaded', function(e) {
+    // FIXME: event not catched
+    $('body').on('patSliderInit', '.pat-slider', function(e) {
       $('.slick-dots').toArray().forEach(function(el) {
         $(el).attr('aria-hidden', true);
       });
     });
-
 
   });
 });
