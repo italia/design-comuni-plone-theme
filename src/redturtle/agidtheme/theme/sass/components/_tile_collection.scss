@@ -598,10 +598,24 @@
             border-color: #DDD;
         }
     }
+
+    a {
+        border-bottom: 0;
+    }
 }
 .sfondo-chiaro {
     .news-highlight {
         background: $gray-bg;
+    }
+
+    .tile-collection {
+        .collectionItemWrapper {
+            background: #FFF;
+
+            a, span, h3 {
+                color: #000;
+            }
+        }
     }
 }
 
