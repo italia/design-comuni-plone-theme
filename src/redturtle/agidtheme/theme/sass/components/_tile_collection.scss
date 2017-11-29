@@ -607,6 +607,10 @@
     .tile-collection {
         .collectionItemWrapper {
             background: #FFF;
+
+            a, span, h3 {
+                color: #000;
+            }
         }
     }
 }
