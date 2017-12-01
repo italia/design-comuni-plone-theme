@@ -124,9 +124,8 @@ require([
       handleTabIndex();
     });
 
-    // FIXME: event not catched
-    $('body').on('patSliderInit', '.pat-slider', function(e) {
-      $('.slick-dots').toArray().forEach(function(el) {
+    $(document).on('patSliderInit', function(e) {
+      $(e.originalEvent.detail).find('.slick-dots').toArray().forEach(function(el) {
         $(el).attr('aria-hidden', true);
       });
     });
