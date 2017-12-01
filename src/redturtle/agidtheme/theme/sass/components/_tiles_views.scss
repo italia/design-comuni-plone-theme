@@ -1,3 +1,5 @@
+$aree-tematiche-gutter: 50px;
+
 .template-homepage_view,
 .template-tiles_view,
 .template-tiles_page_view {
@@ -30,5 +32,52 @@
     [class*='collection-container'],
     .PagesTileCollection .tileContent {
         @include make-container;
+    }
+}
+
+.template-tiles_page_view [class*="ColumnsPage"] {
+    @include make-container($aree-tematiche-gutter);
+}
+
+[class*="ColumnsPage"] {
+    &,
+    .template-tiles_view &,
+    .template-tiles_page_view & {
+        .tile-advanced-static .tile-container,
+        .tile-container {
+            width: 100%;
+            padding: 0;
+        }
+        .tilesList {
+            display: flex;
+            flex-wrap: wrap;
+            @include make-row($aree-tematiche-gutter);
+        }
+        .tileWrapper {
+            @include make-xs-column(6, $aree-tematiche-gutter);
+
+            @media (max-width: $screen-xs-max) {
+                width: 100%;
+                float: none;
+            }
+        }
+    }
+}
+
+.ThreeColumnsPage {
+    &,
+    .template-tiles_page_view & {
+        .tileWrapper {
+            @include make-md-column(4, $aree-tematiche-gutter);
+        }
+    }
+}
+
+.FourColumnsPage {
+    &,
+    .template-tiles_page_view & {
+        .tileWrapper {
+            @include make-md-column(3, $aree-tematiche-gutter);
+        }
     }
 }

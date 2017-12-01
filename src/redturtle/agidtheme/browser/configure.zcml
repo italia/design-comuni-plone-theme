@@ -75,15 +75,6 @@
       />
 
   <browser:page
-      name="landing_aree_tematiche_renderer"
-      permission="zope2.View"
-      for="*"
-      class=".tile_collection_renderers.LandingAreeTematicheView"
-      layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
-      template="templates/landing_aree_tematiche.pt"
-      />
-
-  <browser:page
       name="online_services_renderer"
       permission="zope2.View"
       for="*"

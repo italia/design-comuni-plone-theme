@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-  <version>1007</version>
+  <version>1008</version>
   <dependencies>
     <dependency>profile-collective.tiles.collection:default</dependency>
     <dependency>profile-collective.tiles.advancedstatic:default</dependency>
