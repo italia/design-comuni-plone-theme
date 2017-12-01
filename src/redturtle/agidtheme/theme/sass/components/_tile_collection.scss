@@ -602,6 +602,27 @@
     a {
         border-bottom: 0;
     }
+
+    .tile-collection {
+        &.gallery-collection {
+            .collectionItemWrapper {
+                background-color: #EEE;
+
+                .collectionItemTitle,
+                .collectionItemDates {
+                    color: #000;
+                }
+
+                .collectionItemTitle {
+                    .item-icon {
+                        &:before {
+                            color: #000;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 .sfondo-chiaro {
     .news-highlight {
@@ -614,6 +635,18 @@
 
             a, span, h3 {
                 color: #000;
+            }
+        }
+
+        &.gallery-collection {
+            .collectionItemWrapper {
+                .collectionItemTitle {
+                    .item-icon {
+                        &:before {
+                            color: #000;
+                        }
+                    }
+                }
             }
         }
     }
