@@ -263,9 +263,7 @@ require([
     });
 
     $(document).on('patSliderInit', function(e) {
-      $(e.originalEvent.detail).find('.slick-dots').toArray().forEach(function(el) {
-        $(el).attr('aria-hidden', true);
-      });
+      $(e.originalEvent.detail).find('.slick-dots').attr('aria-hidden', true);
     });
 
   });
