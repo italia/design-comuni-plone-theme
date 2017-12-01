@@ -179,4 +179,14 @@ $aree-tematiche-gutter: 50px;
             }
         }
     }
+
+    #content-core & {
+        .TextWrapper {
+            ul {
+                li {
+                    padding-bottom: 1.5rem;
+                }
+            }
+        }
+    }
 }
