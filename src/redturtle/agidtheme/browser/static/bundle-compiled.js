@@ -262,6 +262,10 @@ require([
       handleTabIndex();
     });
 
+    $(document).on('patSliderInit', function(e) {
+      $(e.originalEvent.detail).find('.slick-dots').attr('aria-hidden', true);
+    });
+
   });
 });
 

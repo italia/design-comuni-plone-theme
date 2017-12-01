@@ -47,29 +47,29 @@
 
 // tile statiche generiche
 .tile-advanced-static {
-  margin: 30px 0;
+    margin: 30px 0;
 
-  &.sfondo-scuro,
-  &.sfondo-chiaro {
-    margin:0;
-    padding: 20px 15px;
-  }
-
-  &.senza-titolo h3.tileTitle {
-    display: none;
-  }
-
-  h3.tileTitle {
-    margin-top:0;
-  }
-
-  .tileFooter {
-    font-weight: $semibold;
-
-    a {
-      border: 1px solid;
-      border-radius: 3px;
-      padding: 0 0.5em;
+    &.sfondo-scuro,
+    &.sfondo-chiaro {
+        margin:0;
+        padding: 20px 15px;
     }
-  }
+
+    &.senza-titolo h3.tileTitle {
+        display: none;
+    }
+
+    h3.tileTitle {
+        margin-top:0;
+    }
+
+    .tileFooter {
+        font-weight: $semibold;
+
+        a {
+            border: 1px solid;
+            border-radius: 3px;
+            padding: 0 0.5em;
+        }
+    }
 }
