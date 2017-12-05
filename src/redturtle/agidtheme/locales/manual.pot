@@ -20,7 +20,3 @@ msgstr ""
 #: ../browser/configure.zcml
 msgid "Tiles page view"
 msgstr ""
-
-#: ../browser/configure.zcml
-msgid "Landing Aree Tematiche view"
-msgstr ""

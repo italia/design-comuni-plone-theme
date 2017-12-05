@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-09-27 16:00+0000\n"
+"POT-Creation-Date: 2017-12-05 08:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,19 +22,15 @@ msgstr ""
 msgid "Gallery layout"
 msgstr "Layout gallery"
 
-#: ../configure.zcml:34
+#: ../configure.zcml:35
 msgid "Installs the Plone theme package redturtle.agidtheme."
 msgstr ""
 
-#: ../browser/configure.zcml
-msgid "Landing Aree Tematiche view"
-msgstr "Landing page per aree tematiche"
-
-#: ../browser/tile_collection_renderers.py:130
-msgid "Landing page aree tematiche"
+#: ../behaviors/behavior.py:25
+msgid "Layout"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:136
+#: ../browser/tile_collection_renderers.py:130
 msgid "Layout servizi online"
 msgstr ""
 
@@ -58,8 +54,16 @@ msgstr "Layout news con immagine"
 msgid "News with big photo"
 msgstr "News in primo piano con foto grande"
 
-#: ../configure.zcml:34
+#: ../configure.zcml:35
 msgid "RedTurtle Agid Theme"
+msgstr ""
+
+#: ../configure.zcml:52
+msgid "RedTurtle Agid Theme: Remove ellipsed"
+msgstr ""
+
+#: ../configure.zcml:52
+msgid "Removes the ellipsed js resource."
 msgstr ""
 
 #: ../browser/tile_collection_renderers.py:100
@@ -74,17 +78,21 @@ msgstr "Layout siti d'interesse"
 msgid "Tiles page view"
 msgstr "Vista tiles schermo intero"
 
-#: ../configure.zcml:43
+#: ../configure.zcml:44
 msgid "Uninstall: RedTurtle Agid Theme"
 msgstr ""
 
-#: ../configure.zcml:43
+#: ../configure.zcml:44
 msgid "Uninstalls the Plone theme package redturtle.agidtheme."
 msgstr ""
 
 #: ../browser/tile_collection_renderers.py:112
 msgid "Video layout"
 msgstr "Layout video con modale"
+
+#: ../behaviors/configure.zcml:13
+msgid "We want to add a field Class for objects"
+msgstr ""
 
 #. Default: "published on"
 #: ../browser/templates/document_by_line.pt:34
@@ -152,14 +160,29 @@ msgstr "Tipi di contenuti disponibili"
 msgid "heading_available_socials"
 msgstr "Social disponibili"
 
+#. Default: "CSS Class"
+#: ../behaviors/behavior.py:17
+msgid "help_class_on_view"
+msgstr ""
+
 #. Default: "Keep reading"
-#: ../browser/templates/news_big_photo_renderer.pt:41
+#: ../browser/templates/news_big_photo_renderer.pt:44
 msgid "keep_reading_label"
+msgstr ""
+
+#. Default: "CSS Class"
+#: ../behaviors/behavior.py:16
+msgid "label_class_on_view"
 msgstr ""
 
 #. Default: "More…"
 #: ../browser/templates/sights_renderer.pt:39
+#: ../browser/templates/video_renderer.pt:86
 msgid "more_url"
+msgstr ""
+
+#: ../behaviors/configure.zcml:13
+msgid "redturtle.agidtheme: Class on View behavior"
 msgstr ""
 
 #. Default: "No results found"
