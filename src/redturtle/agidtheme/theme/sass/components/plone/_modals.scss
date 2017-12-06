@@ -109,6 +109,10 @@ body.plone-toolbar-left-expanded {
 }
 
 .plone-modal-content {
+    #content-core {
+        display: block;
+    }
+
     .wcvideo-container {
         text-align: center;
         padding: 20px;
