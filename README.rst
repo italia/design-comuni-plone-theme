@@ -56,8 +56,8 @@ and then running ``bin/buildout``.
 Dependencies
 ------------
 
-This product has been tested on Plone 5.1
-  
+This product has been tested on Plone >= 5.0.7
+
 
 Credits
 ------------
