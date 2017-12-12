@@ -45,7 +45,7 @@
       <xsl:copy-of select="//*[@id='header-social']"/>
       <xsl:copy-of select="//*[@id='portal-searchbox']"/>
       <button id="search-toggle"
-              aria-controls="search"
+              aria-controls="portal-searchbox"
               aria-label="Apri/chiudi ricerca"
               title="Apri/chiudi ricerca">
         <span class="icon"></span>
