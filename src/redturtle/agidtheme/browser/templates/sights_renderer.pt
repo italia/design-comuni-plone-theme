@@ -10,7 +10,7 @@
                      tal:define="helper_view nocall:context/@@collection_tile_helpers;
                                  showCarousel python:'carousel' in view.data.get('css_class');
                                  resultsClass python: showCarousel and 'tileContent pat-slider' or 'tileContent';">
-            <div class="tile-collection news-collection">
+            <div class="tile-collection sights-collection">
                 <div class="tile-collection-container">
                     <h3 tal:define="title view/data/title|nothing;"
                         class="tileTitle"
@@ -36,7 +36,7 @@
                                 <tal:result repeat="brain results">
                                     <li class="collectionItem"
                                          tal:define="obj brain/getObject;
-                                                     image_tag python:helper_view.get_image_tag(obj);
+                                                     image_tag python:helper_view.get_image_tag(obj, 'newshome');
                                                      title brain/Title;
                                                      description brain/Description">
                                         <div class="collectionItemWrapper">
