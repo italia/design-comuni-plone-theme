@@ -83,7 +83,7 @@
   function ellipsis() {
     var selector = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
     var rows = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
-    var options = arguments[2];
+    var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
 
     var defaultOptions = {
       replaceStr: '...',
@@ -119,20 +119,27 @@
 
       var resizeHandler = function resizeHandler() {
         for (var _i = 0; _i < elements.length; _i++) {
-          var _el = elements[_i];
-          _el.textContent = originalTexts[_i];
+          elements[_i].textContent = originalTexts[_i];
         }
-
         ellipsis(selector, rows, _extends({}, options, { responsive: false }));
       };
 
-      window.addEventListener('resize', function() {
+      var resizeListener = function resizeListener() {
         clearTimeout(resizeTimeout);
         resizeTimeout = setTimeout(resizeHandler, opts.debounceDelay);
-      });
+      };
+
+      window.addEventListener('resize', resizeListener);
+
+      return resizeListener;
     }
   }
 
+  function disableResponsive(listener) {
+    window.removeEventListener('resize', listener);
+  }
+
+  exports.disableResponsive = disableResponsive;
   exports.ellipsis = ellipsis;
 });
 

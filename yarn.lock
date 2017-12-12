@@ -807,9 +807,9 @@ electron-to-chromium@^1.3.18:
   version "1.3.18"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.18.tgz#3dcc99da3e6b665f6abbc71c28ad51a2cd731a9c"
 
-ellipsed@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/ellipsed/-/ellipsed-1.0.1.tgz#c7316c83f729fb3d40804af3e7a2892d62251830"
+ellipsed@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/ellipsed/-/ellipsed-1.2.0.tgz#7d85d4d2adb84774ac3361f8246ac1d87bb50724"
 
 emitter-steward@^1.0.0:
   version "1.0.0"
