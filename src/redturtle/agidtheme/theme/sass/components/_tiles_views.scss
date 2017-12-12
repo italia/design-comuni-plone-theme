@@ -6,6 +6,12 @@ $aree-tematiche-gutter: 50px;
     #viewlet-below-content {
         display: none;
     }
+    .tile-container,
+    .existing-content-tile,
+    .aree-tematiche-collection,
+    [class*='collection-container'] {
+        @include clearfix;
+    }
 }
 
 .template-homepage_view,

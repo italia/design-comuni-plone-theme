@@ -222,8 +222,8 @@
 
     .tile-collection-container {
         position: relative;
-        overflow: auto;
         padding: 20px 0px;
+        @include clearfix;
     }
 
     ul.tileContent {
@@ -430,6 +430,7 @@
 
 .aree-tematiche-collection {
     // padding-bottom: 40px;
+    position: relative;
 
     .tileTitle {
         font-size: 1.6em;
@@ -488,6 +489,17 @@
                 width: 100%;
                 float: none;
             }
+        }
+    }
+    .showMore {
+        position: absolute;
+        top: 30px;
+        right: 15px;
+
+        a {
+            font-size: 2rem;
+            font-weight: $bold;
+            border-bottom: 1px solid;
         }
     }
 }
@@ -700,7 +712,7 @@
 
     .showMore {
         position: absolute;
-        top: 45px;
+        top: 30px;
         right: 15px;
 
         a {
