@@ -78,7 +78,7 @@
 .tile-advanced-static.PagesTileStatic {
     margin: 3rem 0;
 
-    &:before {
+    .tile-container:before {
         border-top: 8px solid $brand-primary;
         clear: both;
         content: " ";

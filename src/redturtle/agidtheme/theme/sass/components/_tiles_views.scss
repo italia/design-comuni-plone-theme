@@ -6,66 +6,43 @@ $aree-tematiche-gutter: 50px;
     #viewlet-below-content {
         display: none;
     }
-
-    .tiles-slot {
-        .tilesList {
-            @include make-container;
-        }
-
-        #viewlet-below-content {
-            @include make-container;
-            margin-bottom: 50px;
-        }
-    }
-
-    .tile-advanced-static {
-        .tile-container {
-            @include make-container();
-        }
-    }
-
-    .existing-content-tile {
-        @include make-container();
-    }
-
-    .aree-tematiche-collection,
-    [class*='collection-container'],
-    .PagesTileCollection .tileContent {
-        @include make-container;
-    }
 }
 
-.template-tiles_page_view [class*="ColumnsPage"] {
-    @include make-container($aree-tematiche-gutter);
+.template-homepage_view,
+.template-tiles_page_view {
+    .pat-tiles-management:not([class*="ColumnsPage"]) {
+        .tile-container,
+        .existing-content-tile,
+        .aree-tematiche-collection,
+        [class*='collection-container'] {
+            @include make-container;
+        }
+    }
 }
 
 [class*="ColumnsPage"] {
+    .template-tiles_page_view & {
+        @include make-container($aree-tematiche-gutter);
+    }
     &,
     .template-tiles_view &,
     .template-tiles_page_view & {
-        .tile-advanced-static .tile-container,
-        .tile-container {
-            width: 100%;
-            padding: 0;
-        }
         .tilesList {
             display: flex;
             flex-wrap: wrap;
-            @include make-row($aree-tematiche-gutter);
+            margin-left: -($aree-tematiche-gutter / 2);
+            margin-right: -($aree-tematiche-gutter / 2);
         }
         .tileWrapper {
-            @include make-xs-column(6, $aree-tematiche-gutter);
-
-            @media (max-width: $screen-xs-max) {
-                width: 100%;
-                float: none;
-            }
+            @include make-sm-column(6, $aree-tematiche-gutter);
+            clear: none;
         }
     }
 }
 
 .ThreeColumnsPage {
     &,
+    .template-tiles_view &,
     .template-tiles_page_view & {
         .tileWrapper {
             @include make-md-column(4, $aree-tematiche-gutter);
@@ -75,6 +52,7 @@ $aree-tematiche-gutter: 50px;
 
 .FourColumnsPage {
     &,
+    .template-tiles_view &,
     .template-tiles_page_view & {
         .tileWrapper {
             @include make-md-column(3, $aree-tematiche-gutter);
