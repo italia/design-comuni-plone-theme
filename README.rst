@@ -10,6 +10,7 @@ This is the first Plone theme for `AgID`__ guidelines.
 
 __ http://www.agid.gov.it/tags/linee-guida-design-pa
 
+It is built on guidelines' version 2017.1.
 
 Documentation
 -------------
