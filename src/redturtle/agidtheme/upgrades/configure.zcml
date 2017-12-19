@@ -95,4 +95,13 @@
     handler=".upgrades.import_records_registry"
   />
 
+  <genericsetup:upgradeStep
+    source="1008"
+    destination="1009"
+    profile="redturtle.agidtheme:default"
+    title="Import plone registry"
+    description="Added css bundle against single imports"
+    handler=".upgrades.import_records_registry"
+  />
+
 </configure>

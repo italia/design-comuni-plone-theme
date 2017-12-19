@@ -1,3 +1,5 @@
-@import "bootstrap/mixins/clearfix";
-@import "redturtleagidtheme_variables";
-@import "redturtleagidtheme_printstyles";
+@media (print) {
+    @import "bootstrap/mixins/clearfix";
+    @import "redturtleagidtheme_variables";
+    @import "redturtleagidtheme_printstyles";
+}

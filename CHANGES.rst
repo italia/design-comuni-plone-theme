@@ -18,6 +18,7 @@ Changelog
 - Three columns pages collection tile [nzambello]
 - Fix stili tile sfondo scuro/chiaro [nzambello]
 - Fix JS compile rules in registry [nzambello]
+- Moved theme styles to resource registry [nzambello]
 
 
 1.0.5 (2017-10-25)
