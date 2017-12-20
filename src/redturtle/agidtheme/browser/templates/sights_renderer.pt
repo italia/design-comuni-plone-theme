@@ -30,15 +30,15 @@
                         </p>
                         <div tal:define="classID string:carousel-wrapper-${view/data/collection_uid}"
                              tal:attributes="class classID">
-                            <div class="${resultsClass}"
+                            <ul class="${resultsClass}"
                                  tal:condition="results"
                                  data-pat-slider='{ "initialSlide": 0, "slidesToShow": 4, "slidesToScroll": 1, "appendArrows": ".${classID}", "responsive": [{ "breakpoint": 768, "settings": { "slidesToShow": 1, "slidesToScroll": 1 } }] }'>
                                 <tal:result repeat="brain results">
-                                    <li class="collectionItem"
-                                         tal:define="obj brain/getObject;
-                                                     image_tag python:helper_view.get_image_tag(obj, 'newshome');
-                                                     title brain/Title;
-                                                     description brain/Description">
+                                    <li class="collectionItem colonna-1-di-4"
+                                        tal:define="obj brain/getObject;
+                                                    image_tag python:helper_view.get_image_tag(obj, 'newshome');
+                                                    title brain/Title;
+                                                    description brain/Description">
                                         <div class="collectionItemWrapper">
                                             <a href="${brain/getURL}" title="${title}">
                                                 <div class="collectionItemImage">
@@ -59,7 +59,7 @@
                                         <span tal:condition="show_more_label">${show_more_label}</span>
                                     </a>
                                 </tal:showmore>
-                            </div>
+                            </ul>
                         </div>
                     </div>
                 </div>
