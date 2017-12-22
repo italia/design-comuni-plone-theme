@@ -4,12 +4,14 @@
   <!-- RESOURCE -->
   <records prefix="plone.resources/redturtle-agidtheme"
            interface='Products.CMFPlone.interfaces.IResourceRegistry'
-           remove="True">
+           remove="True"
+           />
 
   <!-- BUNDLE -->
   <records prefix="plone.bundles/redturtle-agidtheme-bundle"
            interface='Products.CMFPlone.interfaces.IBundleRegistry'
-           remove="True">
+           remove="True"
+           />
 
 </registry>
 
