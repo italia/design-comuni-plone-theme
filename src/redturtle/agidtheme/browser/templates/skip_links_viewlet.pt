@@ -1,18 +1,15 @@
 <div class="skip-link-wrapper"
-     i18n:domain="plone"
-     tal:define="url view/current_page_url;
-                 content_id view/content_id;
-                 navigation_id view/navigation_id">
+     i18n:domain="redturtle.agidtheme">
     <a accesskey="2"
        class="skip-link skip-link-content"
-       tal:attributes="href string: ${url}#${content_id}"
+       href="#content"
        i18n:translate="label_skiptocontent">
         <span>Skip to content</span>
     </a>
     <a accesskey="6"
        class="skip-link skip-link-navigation"
-       tal:attributes="href string: ${url}#${navigation_id}"
-       i18n:translate="label_skiptocontent">
+       href="#portal-mainnavigation"
+       i18n:translate="label_skiptonavigation">
        <span>Skip to navigation</span>
     </a>
 </div>

@@ -5,7 +5,7 @@ Changelog
 1.0.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Added skiplinks [nzambello]
 
 
 1.0.6 (2017-12-21)
