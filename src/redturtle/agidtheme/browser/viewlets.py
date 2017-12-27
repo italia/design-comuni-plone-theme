@@ -76,3 +76,8 @@ class LogoViewlet(base.ViewletBase):
 class HeaderSocialViewlet(base.ViewletBase):
     '"Follow us" viewlet'
     index = ViewPageTemplateFile('templates/header_social_viewlet.pt')
+
+
+class SkipLinksViewlet(base.ViewletBase):
+    'Skiplinks viewlet'
+    index = ViewPageTemplateFile('templates/skip_links_viewlet.pt')

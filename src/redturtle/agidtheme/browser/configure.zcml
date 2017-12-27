@@ -206,4 +206,12 @@
     permission="zope2.View"
   />
 
+  <browser:viewlet
+    name="redturtle.skip_links"
+    manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+    class=".viewlets.SkipLinksViewlet"
+    layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
+    permission="zope2.View"
+    />
+
 </configure>

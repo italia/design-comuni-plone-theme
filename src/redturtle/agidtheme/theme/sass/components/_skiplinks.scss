@@ -1,0 +1,25 @@
+.skip-link-wrapper {
+    position: absolute;
+    top: -100%;
+
+    a.skip-link {
+        color: $link-hover-color;
+
+        &:focus {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            border: 2px solid $link-color;
+            padding: 10px;
+            z-index: 9999;
+            background: #fff;
+            outline: 3px solid $link-color;
+        }
+
+        &:hover {
+            span {
+                border-bottom: 1px solid $link-hover-color;
+            }
+        }
+    }
+}
