@@ -15,6 +15,10 @@
     <viewlet name="plone.nextprevious" />
     <viewlet name="plone.comments" />
   </order>
+  <order manager="plone.portaltop" skinname="Plone Default">
+    <viewlet name="redturtle.skip_links" before="*" />
+    <viewlet name="plone.header" />
+  </order>
   <hidden manager="plone.belowcontentbody" skinname="Plone Default">
     <viewlet name="plone.abovecontenttitle.documentactions" />
     <viewlet name="plone.belowcontentbody.relateditems" />

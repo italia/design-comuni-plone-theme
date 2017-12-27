@@ -104,4 +104,13 @@
     handler=".upgrades.import_records_registry"
   />
 
+  <genericsetup:upgradeStep
+    source="1009"
+    destination="1010"
+    profile="redturtle.agidtheme:default"
+    title="Import viewlets profile"
+    description="Added plone.portaltop viewlet manager order for skiplinks"
+    handler=".upgrades.import_viewlets_registry"
+  />
+
 </configure>
