@@ -6,6 +6,8 @@ Changelog
 ------------------
 
 - Added skiplinks [nzambello]
+- Fix big photo tile container styles [nzambello]
+- Added License and references to new repo [nzambello]
 
 
 1.0.6 (2017-12-21)
