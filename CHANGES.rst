@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.7 (unreleased)
+1.0.7 (2017-12-29)
 ------------------
 
 - Added skiplinks [nzambello]
