@@ -5,7 +5,7 @@ Changelog
 1.0.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Divided css and js resources and bundles for themes overriding
 
 
 1.0.7 (2017-12-29)
