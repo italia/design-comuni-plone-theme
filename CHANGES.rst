@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.8 (unreleased)
+1.0.8 (2018-01-05)
 ------------------
 
 - Divided css and js resources and bundles for themes overriding
