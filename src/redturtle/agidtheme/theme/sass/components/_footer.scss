@@ -10,6 +10,10 @@
         padding-right: 0;
     }
 
+    img {
+        max-width: 100%;
+    }
+
     a {
         color: $footer-link;
         text-decoration: underline;
