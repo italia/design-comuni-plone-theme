@@ -68,3 +68,13 @@ def remove_ellipsed(context):
         'plone.app.registry',
         run_dependencies=False
     )
+
+
+def remove_old_bundle(context):
+    'Import the removeoldbundle profile'
+    setup_tool = api.portal.get_tool('portal_setup')
+    setup_tool.runImportStepFromProfile(
+        'profile-redturtle.agidtheme:removeoldbundle',
+        'plone.app.registry',
+        run_dependencies=False
+    )

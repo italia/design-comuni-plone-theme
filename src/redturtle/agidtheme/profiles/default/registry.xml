@@ -100,26 +100,39 @@
 
   <records interface="redturtle.agidtheme.controlpanel.interfaces.IRedturtleAgidthemeSettings" />
 
-  <!-- RESOURCE -->
-  <records prefix="plone.resources/redturtle-agidtheme"
+  <!-- RESOURCES -->
+  <records prefix="plone.resources/redturtle-agidtheme-css"
            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-      <value key="js">++plone++redturtle.agidtheme/bundle-compiled.js</value>
       <value key="css">
         <element>++theme++redturtle.agid.theme/css/bootstrap.min.css</element>
         <element>++theme++redturtle.agid.theme/css/redturtleagidtheme.css</element>
         <element>++theme++redturtle.agid.theme/css/redturtleagidtheme.print.css</element>
       </value>
   </records>
+  <records prefix="plone.resources/redturtle-agidtheme-js"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+      <value key="js">++plone++redturtle.agidtheme/bundle-compiled.js</value>
+  </records>
 
-  <!-- BUNDLE -->
-  <records prefix="plone.bundles/redturtle-agidtheme-bundle"
-            interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+  <!-- BUNDLES -->
+  <records prefix="plone.bundles/redturtle-agidtheme-css-bundle"
+           interface='Products.CMFPlone.interfaces.IBundleRegistry'>
     <value key="enabled">True</value>
     <value key="resources" purge="false">
-      <element>redturtle-agidtheme</element>
+      <element>redturtle-agidtheme-css</element>
+    </value>
+    <value key="csscompilation">++theme++redturtle.agid.theme/css/redturtle-agidtheme-bundle.css</value>
+    <value key="last_compilation">2019-11-26 00:00:00</value>
+    <value key="compile">True</value>
+    <value key="depends">plone</value>
+  </records>
+  <records prefix="plone.bundles/redturtle-agidtheme-js-bundle"
+           interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+    <value key="enabled">True</value>
+    <value key="resources" purge="false">
+      <element>redturtle-agidtheme-js</element>
     </value>
     <value key="jscompilation">++plone++redturtle.agidtheme/redturtle-agidtheme-bundle-compiled.min.js</value>
-    <value key="csscompilation">++theme++redturtle.agid.theme/css/redturtle-agidtheme-bundle.css</value>
     <value key="last_compilation">2019-11-26 00:00:00</value>
     <value key="compile">True</value>
     <value key="depends">plone</value>

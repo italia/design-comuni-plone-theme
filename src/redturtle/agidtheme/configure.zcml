@@ -51,6 +51,14 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:registerProfile
+      name="removeoldbundle"
+      title="RedTurtle Agid Theme: Remove old bundle"
+      directory="profiles/removeoldbundle"
+      description="Divided js and css bundles and resources."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
   <utility
       factory=".setuphandlers.HiddenProfiles"
       name="redturtle.agidtheme-hiddenprofiles" />

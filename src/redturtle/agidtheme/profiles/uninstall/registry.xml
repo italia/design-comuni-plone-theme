@@ -2,13 +2,21 @@
 <registry>
 
   <!-- RESOURCE -->
-  <records prefix="plone.resources/redturtle-agidtheme"
+  <records prefix="plone.resources/redturtle-agidtheme-css"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'
+           remove="True"
+           />
+  <records prefix="plone.resources/redturtle-agidtheme-js"
            interface='Products.CMFPlone.interfaces.IResourceRegistry'
            remove="True"
            />
 
   <!-- BUNDLE -->
-  <records prefix="plone.bundles/redturtle-agidtheme-bundle"
+  <records prefix="plone.bundles/redturtle-agidtheme-css-bundle"
+           interface='Products.CMFPlone.interfaces.IBundleRegistry'
+           remove="True"
+           />
+  <records prefix="plone.bundles/redturtle-agidtheme-js-bundle"
            interface='Products.CMFPlone.interfaces.IBundleRegistry'
            remove="True"
            />

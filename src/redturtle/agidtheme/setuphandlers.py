@@ -13,6 +13,7 @@ class HiddenProfiles(object):
         """Hide uninstall profile from site-creation and quickinstaller"""
         return [
             'redturtle.agidtheme:removeellipsed',
+            'redturtle.agidtheme:removeoldbundle',
             'redturtle.agidtheme:uninstall',
         ]
 

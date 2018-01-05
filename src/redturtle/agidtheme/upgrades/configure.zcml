@@ -113,4 +113,30 @@
     handler=".upgrades.import_viewlets_registry"
   />
 
+  <genericsetup:upgradeStep
+    source="1010"
+    destination="1100"
+    profile="redturtle.agidtheme:default"
+    title="Import plone registry"
+    description="Divided css and js bundles"
+    handler=".upgrades.import_records_registry"
+  />
+
+  <genericsetup:upgradeSteps
+    source="1100"
+    destination="1101"
+    profile="redturtle.agidtheme:default">
+
+    <genericsetup:upgradeStep
+      title="Import plone registry"
+      description="Divided css and js bundles and resources"
+      handler=".upgrades.import_records_registry"
+    />
+    <genericsetup:upgradeStep
+      title="Remove old theme bundle"
+      description="Remove old resource and bundle"
+      handler=".upgrades.remove_old_bundle"
+    />
+  </genericsetup:upgradeSteps>
+
 </configure>
