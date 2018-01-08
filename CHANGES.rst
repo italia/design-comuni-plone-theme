@@ -5,7 +5,8 @@ Changelog
 1.0.9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Minor fix for responsive styles [nzambello]
+- Fix plone styles for site setup portlets list [nzambello]
 
 
 1.0.8 (2018-01-05)
