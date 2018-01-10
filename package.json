@@ -52,6 +52,6 @@
     }
   },
   "dependencies": {
-    "ellipsed": "^1.2.0"
+    "ellipsed": "^1.3.1"
   }
 }
