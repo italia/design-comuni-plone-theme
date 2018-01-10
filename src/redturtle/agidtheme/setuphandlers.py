@@ -40,8 +40,6 @@ def filter_tiles(context):
 
 def add_advancedstatic_styles(context):
     NEW_STYLES = (u'portletStaticNavigation|stile menu di navigazione',
-                  u'news-collection|stile collezione notizie con foto',
-                  u'aree-tematiche|stile collezione aree tematiche',
                   u'PagesTileStatic|stile landing page aree tematiche')
 
     STYLES = api.portal.get_registry_record(
