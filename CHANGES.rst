@@ -7,6 +7,7 @@ Changelog
 
 - Minor fix for responsive styles [nzambello]
 - Fix plone styles for site setup portlets list [nzambello]
+- Updated ellipsed [nzambello]
 
 
 1.0.8 (2018-01-05)
