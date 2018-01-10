@@ -57,8 +57,8 @@
     var textBeforeWrap = el.textContent;
     var newRowsWrapped = rowsWrapped;
     var newHeight = elHeight;
-    el.innerHTML = el.innerHTML.length
-      ? el.innerHTML + ' ' + token + options.replaceStr
+    el.textContent = el.textContent.length
+      ? el.textContent + ' ' + token + options.replaceStr
       : '' + token + options.replaceStr;
 
     if (parseFloat(elStyle.height) > parseFloat(elHeight)) {
@@ -98,10 +98,10 @@
 
     for (var i = 0; i < elements.length; i++) {
       var el = elements[i];
-      originalTexts[i] = el.innerHTML;
-      var splittedText = el.innerHTML.split(' ');
+      originalTexts[i] = el.textContent;
+      var splittedText = el.textContent.split(' ');
 
-      el.innerHTML = '';
+      el.textContent = '';
       var elStyle = window.getComputedStyle(el);
 
       splittedText.reduce(tokensReducer, {
@@ -119,7 +119,7 @@
 
       var resizeHandler = function resizeHandler() {
         for (var _i = 0; _i < elements.length; _i++) {
-          elements[_i].innerHTML = originalTexts[_i];
+          elements[_i].textContent = originalTexts[_i];
         }
         ellipsis(selector, rows, _extends({}, options, { responsive: false }));
       };
