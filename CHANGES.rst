@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.9 (unreleased)
+1.0.9 (2018-01-11)
 ------------------
 
 - Minor fix for responsive styles [nzambello]
