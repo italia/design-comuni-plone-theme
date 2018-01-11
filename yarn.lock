@@ -377,10 +377,10 @@ browserslist@^1.0.0, browserslist@^1.3.6, browserslist@^1.5.2, browserslist@^1.7
     electron-to-chromium "^1.2.7"
 
 browserslist@^2.10.2:
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-2.11.0.tgz#50350d6873a82ebe0f3ae5483658c571ae5f9d7d"
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-2.11.1.tgz#02fda29d9a2164b879100126e7b0d0b57e43a7bb"
   dependencies:
-    caniuse-lite "^1.0.30000784"
+    caniuse-lite "^1.0.30000789"
     electron-to-chromium "^1.3.30"
 
 bs-recipes@1.3.4:
@@ -444,12 +444,12 @@ caniuse-api@^1.5.2:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-  version "1.0.30000789"
-  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000789.tgz#5cf3fec75480041ab162ca06413153141e234325"
+  version "1.0.30000790"
+  resolved "https://registry.yarnpkg.com/caniuse-db/-/caniuse-db-1.0.30000790.tgz#a8023e6eb9fe9c0ef3d60b4427ce104ea87d381c"
 
-caniuse-lite@^1.0.30000784:
-  version "1.0.30000789"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000789.tgz#2e3d937b267133f63635ef7f441fac66360fc889"
+caniuse-lite@^1.0.30000784, caniuse-lite@^1.0.30000789:
+  version "1.0.30000790"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000790.tgz#c954cca780046f34c4b433d324ef419e1db51a53"
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -601,7 +601,11 @@ combined-stream@^1.0.5, combined-stream@~1.0.5:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@^2.2.0, commander@~2.12.1:
+commander@^2.2.0:
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.13.0.tgz#6964bca67685df7c1f1430c584f07d7597885b9c"
+
+commander@~2.12.1:
   version "2.12.2"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.12.2.tgz#0f5946c427ed9ec0d91a46bb9def53e54650e555"
 
@@ -2914,8 +2918,8 @@ preserve@^0.2.0:
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
 prettier@^1.5.3:
-  version "1.9.2"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.9.2.tgz#96bc2132f7a32338e6078aeb29727178c6335827"
+  version "1.10.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.10.2.tgz#1af8356d1842276a99a5b5529c82dd9e9ad3cc93"
 
 pretty-bytes@^1.0.0:
   version "1.0.4"
@@ -4013,8 +4017,8 @@ x-is-string@^0.1.0:
   resolved "https://registry.yarnpkg.com/x-is-string/-/x-is-string-0.1.0.tgz#474b50865af3a49a9c4657f05acd145458f77d82"
 
 xmlhttprequest-ssl@~1.5.4:
-  version "1.5.4"
-  resolved "https://registry.yarnpkg.com/xmlhttprequest-ssl/-/xmlhttprequest-ssl-1.5.4.tgz#04f560915724b389088715cc0ed7813e9677bf57"
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/xmlhttprequest-ssl/-/xmlhttprequest-ssl-1.5.5.tgz#c2876b06168aadc40e57d97e81191ac8f4398b3e"
 
 xtend@^4.0.1:
   version "4.0.1"
