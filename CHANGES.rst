@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.1.1 (unreleased)
+1.1.1 (2018-01-12)
 ------------------
 
 - Improve follow us links: now is a list field with more flexibility
