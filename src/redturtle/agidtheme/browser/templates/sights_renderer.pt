@@ -8,7 +8,7 @@
     <body>
         <metal:macro define-macro="collection-tile-macro"
                      tal:define="helper_view nocall:context/@@collection_tile_helpers;
-                                 showCarousel python: 'carousel' in view.data.get('css_class', '');
+                                 showCarousel python:'carousel' in (view.data.get('css_class') or '');
                                  resultsClass python: showCarousel and 'tileContent pat-slider' or 'tileContent';">
             <div class="tile-collection sights-collection">
                 <div class="tile-collection-container">
