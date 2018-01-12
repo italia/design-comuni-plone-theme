@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2017-12-22 23:13+0000\n"
+"POT-Creation-Date: 2018-01-11 20:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,10 +23,6 @@ msgstr ""
 
 #: ../browser/tile_collection_renderers.py:118
 msgid "Gallery layout"
-msgstr ""
-
-#: ../configure.zcml:35
-msgid "Installs the Plone theme package redturtle.agidtheme."
 msgstr ""
 
 #: ../behaviors/behavior.py:25
@@ -57,18 +53,6 @@ msgstr ""
 msgid "News with big photo"
 msgstr ""
 
-#: ../configure.zcml:35
-msgid "RedTurtle Agid Theme"
-msgstr ""
-
-#: ../configure.zcml:52
-msgid "RedTurtle Agid Theme: Remove ellipsed"
-msgstr ""
-
-#: ../configure.zcml:52
-msgid "Removes the ellipsed js resource."
-msgstr ""
-
 #: ../browser/tile_collection_renderers.py:100
 msgid "Servizi in area tematica"
 msgstr ""
@@ -77,24 +61,12 @@ msgstr ""
 msgid "Sights layout"
 msgstr ""
 
-#: ../browser/configure.zcml:38
+#: ../browser/configure.zcml
 msgid "Tiles page view"
-msgstr ""
-
-#: ../configure.zcml:44
-msgid "Uninstall: RedTurtle Agid Theme"
-msgstr ""
-
-#: ../configure.zcml:44
-msgid "Uninstalls the Plone theme package redturtle.agidtheme."
 msgstr ""
 
 #: ../browser/tile_collection_renderers.py:112
 msgid "Video layout"
-msgstr ""
-
-#: ../behaviors/configure.zcml:13
-msgid "We want to add a field Class for objects"
 msgstr ""
 
 #. Default: "published on"
@@ -102,14 +74,24 @@ msgstr ""
 msgid "box_published_on"
 msgstr ""
 
-#. Default: "Contents that can be enable for sharing."
+#. Default: "List of content-types that can be enable for social sharing."
 #: ../controlpanel/interfaces.py:12
 msgid "description_available_portaltypes"
 msgstr ""
 
-#. Default: "Socials that can be enabled for                              sharing contents."
-#: ../controlpanel/interfaces.py:25
+#. Default: "List of social networks enabled for sharing."
+#: ../controlpanel/interfaces.py:26
 msgid "description_available_socials"
+msgstr ""
+
+#. Default: "Link to Facebook page to show in the header."
+#: ../controlpanel/interfaces.py:47
+msgid "header_facebook_link_desc"
+msgstr ""
+
+#. Default: "Facebook page link"
+#: ../controlpanel/interfaces.py:45
+msgid "header_facebook_link_label"
 msgstr ""
 
 #. Default: "Header link label"
@@ -123,42 +105,62 @@ msgid "header_link_label_desc"
 msgstr ""
 
 #. Default: "Header link url"
-#: ../controlpanel/interfaces.py:45
+#: ../controlpanel/interfaces.py:69
 msgid "header_link_url"
 msgstr ""
 
 #. Default: "URL of the link in the header"
-#: ../controlpanel/interfaces.py:47
+#: ../controlpanel/interfaces.py:71
 msgid "header_link_url_desc"
 msgstr ""
 
 #. Default: "Header second link label"
-#: ../controlpanel/interfaces.py:53
+#: ../controlpanel/interfaces.py:77
 msgid "header_second_link_label"
 msgstr ""
 
 #. Default: "Label for the link in the header of                              the site at right"
-#: ../controlpanel/interfaces.py:55
+#: ../controlpanel/interfaces.py:79
 msgid "header_second_link_label_desc"
 msgstr ""
 
 #. Default: "Header second link url"
-#: ../controlpanel/interfaces.py:62
+#: ../controlpanel/interfaces.py:86
 msgid "header_second_link_url"
 msgstr ""
 
 #. Default: "URL of the link in the header at right"
-#: ../controlpanel/interfaces.py:64
+#: ../controlpanel/interfaces.py:88
 msgid "header_second_link_url_desc"
 msgstr ""
 
-#. Default: "Available content types"
+#. Default: "Link to Twitter account to show in the header."
+#: ../controlpanel/interfaces.py:55
+msgid "header_twitter_link_desc"
+msgstr ""
+
+#. Default: "Twitter link"
+#: ../controlpanel/interfaces.py:53
+msgid "header_twitter_link_label"
+msgstr ""
+
+#. Default: "Link to YouTube to show in the header."
+#: ../controlpanel/interfaces.py:63
+msgid "header_youtube_link_desc"
+msgstr ""
+
+#. Default: "YouTube link"
+#: ../controlpanel/interfaces.py:61
+msgid "header_youtube_link_label"
+msgstr ""
+
+#. Default: "Shareable content types"
 #: ../controlpanel/interfaces.py:10
 msgid "heading_available_portaltypes"
 msgstr ""
 
-#. Default: "Available socials"
-#: ../controlpanel/interfaces.py:23
+#. Default: "Enabled social networks"
+#: ../controlpanel/interfaces.py:24
 msgid "heading_available_socials"
 msgstr ""
 
@@ -168,7 +170,7 @@ msgid "help_class_on_view"
 msgstr ""
 
 #. Default: "Keep reading"
-#: ../browser/templates/news_big_photo_renderer.pt:44
+#: ../browser/templates/news_big_photo_renderer.pt:45
 msgid "keep_reading_label"
 msgstr ""
 
@@ -193,13 +195,10 @@ msgstr ""
 msgid "more_url"
 msgstr ""
 
-#: ../behaviors/configure.zcml:13
-msgid "redturtle.agidtheme: Class on View behavior"
-msgstr ""
-
 #. Default: "No results found"
-#: ../browser/templates/news_big_photo_renderer.pt:18
+#: ../browser/templates/news_big_photo_renderer.pt:19
 #: ../browser/templates/news_highlight_renderer.pt:16
 #: ../browser/templates/sights_renderer.pt:26
 msgid "tiles_collection_noresults"
 msgstr ""
+
