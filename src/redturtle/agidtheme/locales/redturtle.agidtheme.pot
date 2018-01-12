@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-01-11 20:55+0000\n"
+"POT-Creation-Date: 2018-01-12 11:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "Configurazione tema agid"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:118
+#: ../browser/tile_collection_renderers.py:112
 msgid "Gallery layout"
 msgstr ""
 
@@ -29,11 +29,11 @@ msgstr ""
 msgid "Layout"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:130
+#: ../browser/tile_collection_renderers.py:122
 msgid "Layout servizi online"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:124
+#: ../browser/tile_collection_renderers.py:117
 msgid "Link aree tematiche"
 msgstr ""
 
@@ -41,19 +41,19 @@ msgstr ""
 msgid "News highlight"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:91
+#: ../browser/tile_collection_renderers.py:89
 msgid "News in area tematica"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:106
+#: ../browser/tile_collection_renderers.py:102
 msgid "News layout with image"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:82
+#: ../browser/tile_collection_renderers.py:81
 msgid "News with big photo"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:100
+#: ../browser/tile_collection_renderers.py:97
 msgid "Servizi in area tematica"
 msgstr ""
 
@@ -65,7 +65,7 @@ msgstr ""
 msgid "Tiles page view"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:112
+#: ../browser/tile_collection_renderers.py:107
 msgid "Video layout"
 msgstr ""
 
@@ -84,14 +84,14 @@ msgstr ""
 msgid "description_available_socials"
 msgstr ""
 
-#. Default: "Link to Facebook page to show in the header."
+#. Default: "List of links to external social networks. These links are showed in the header.\nIf there isn't a related icon in the theme, the link will not appear properly.\nAvailable icons are: facebook, twitter, youtube, medium, linkedin, storify, rss, newsletter.\nInsert a list of values (one per row) in the following form: social_id|url where social_id is one of the social with available icons."
 #: ../controlpanel/interfaces.py:47
-msgid "header_facebook_link_desc"
+msgid "follow_us_links_description"
 msgstr ""
 
-#. Default: "Facebook page link"
+#. Default: "Follow us links"
 #: ../controlpanel/interfaces.py:45
-msgid "header_facebook_link_label"
+msgid "follow_us_links_label"
 msgstr ""
 
 #. Default: "Header link label"
@@ -105,53 +105,33 @@ msgid "header_link_label_desc"
 msgstr ""
 
 #. Default: "Header link url"
-#: ../controlpanel/interfaces.py:69
+#: ../controlpanel/interfaces.py:65
 msgid "header_link_url"
 msgstr ""
 
 #. Default: "URL of the link in the header"
-#: ../controlpanel/interfaces.py:71
+#: ../controlpanel/interfaces.py:67
 msgid "header_link_url_desc"
 msgstr ""
 
 #. Default: "Header second link label"
-#: ../controlpanel/interfaces.py:77
+#: ../controlpanel/interfaces.py:73
 msgid "header_second_link_label"
 msgstr ""
 
 #. Default: "Label for the link in the header of                              the site at right"
-#: ../controlpanel/interfaces.py:79
+#: ../controlpanel/interfaces.py:75
 msgid "header_second_link_label_desc"
 msgstr ""
 
 #. Default: "Header second link url"
-#: ../controlpanel/interfaces.py:86
+#: ../controlpanel/interfaces.py:82
 msgid "header_second_link_url"
 msgstr ""
 
 #. Default: "URL of the link in the header at right"
-#: ../controlpanel/interfaces.py:88
+#: ../controlpanel/interfaces.py:84
 msgid "header_second_link_url_desc"
-msgstr ""
-
-#. Default: "Link to Twitter account to show in the header."
-#: ../controlpanel/interfaces.py:55
-msgid "header_twitter_link_desc"
-msgstr ""
-
-#. Default: "Twitter link"
-#: ../controlpanel/interfaces.py:53
-msgid "header_twitter_link_label"
-msgstr ""
-
-#. Default: "Link to YouTube to show in the header."
-#: ../controlpanel/interfaces.py:63
-msgid "header_youtube_link_desc"
-msgstr ""
-
-#. Default: "YouTube link"
-#: ../controlpanel/interfaces.py:61
-msgid "header_youtube_link_label"
 msgstr ""
 
 #. Default: "Shareable content types"

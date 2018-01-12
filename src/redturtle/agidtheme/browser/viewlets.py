@@ -9,6 +9,11 @@ from Products.CMFPlone.utils import getSiteLogo
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from urllib2 import quote
 
+import logging
+
+
+logger = logging.getLogger(__name__)
+
 
 class CustomDocumentBylineViewlet(DocumentBylineViewlet):
 
@@ -78,21 +83,26 @@ class HeaderSocialViewlet(base.ViewletBase):
     '"Follow us" viewlet'
     index = ViewPageTemplateFile('templates/header_social_viewlet.pt')
 
-    def get_social_link(self, social):
+    def get_links_list(self):
         try:
             return api.portal.get_registry_record(
-                'header_{0}_link'.format(social),
+                'follow_us_links',
                 interface=IRedturtleAgidthemeSettings)
         except InvalidParameterError:
-            return ''
+            return []
 
     def get_social_links(self):
-        ids = ['facebook', 'twitter', 'youtube']
+        links = self.get_links_list()
         res = []
-        for social in ids:
-            link = self.get_social_link(social)
-            if link:
-                res.append({'id': social, 'url': link})
+        for link in links:
+            try:
+                social, url = link.split('|')
+                res.append({'id': social, 'url': url})
+            except ValueError:
+                logger.warning(
+                    '[HeaderSocialViewlet] - skipped entry "{0}"'
+                    ' because is malformed. Check it in control panel.')
+                continue
         return res
 
 

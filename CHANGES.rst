@@ -5,7 +5,8 @@ Changelog
 1.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Improve follow us links: now is a list field with more flexibility
+  [cekk]
 
 
 1.1.0 (2018-01-12)

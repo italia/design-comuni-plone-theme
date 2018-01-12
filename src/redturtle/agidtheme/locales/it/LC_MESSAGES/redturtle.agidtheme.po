@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-01-11 20:55+0000\n"
+"POT-Creation-Date: 2018-01-12 11:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 msgid "Configurazione tema agid"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:118
+#: ../browser/tile_collection_renderers.py:112
 msgid "Gallery layout"
 msgstr "Layout gallery"
 
@@ -26,11 +26,11 @@ msgstr "Layout gallery"
 msgid "Layout"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:130
+#: ../browser/tile_collection_renderers.py:122
 msgid "Layout servizi online"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:124
+#: ../browser/tile_collection_renderers.py:117
 msgid "Link aree tematiche"
 msgstr ""
 
@@ -38,19 +38,19 @@ msgstr ""
 msgid "News highlight"
 msgstr "News in evidenza"
 
-#: ../browser/tile_collection_renderers.py:91
+#: ../browser/tile_collection_renderers.py:89
 msgid "News in area tematica"
 msgstr ""
 
-#: ../browser/tile_collection_renderers.py:106
+#: ../browser/tile_collection_renderers.py:102
 msgid "News layout with image"
 msgstr "Layout news con immagine"
 
-#: ../browser/tile_collection_renderers.py:82
+#: ../browser/tile_collection_renderers.py:81
 msgid "News with big photo"
 msgstr "News in primo piano con foto grande"
 
-#: ../browser/tile_collection_renderers.py:100
+#: ../browser/tile_collection_renderers.py:97
 msgid "Servizi in area tematica"
 msgstr ""
 
@@ -62,7 +62,7 @@ msgstr "Layout siti d'interesse"
 msgid "Tiles page view"
 msgstr "Vista tiles schermo intero"
 
-#: ../browser/tile_collection_renderers.py:112
+#: ../browser/tile_collection_renderers.py:107
 msgid "Video layout"
 msgstr "Layout video con modale"
 
@@ -81,15 +81,15 @@ msgstr "Una lista di content-type che sono abilitati alla condivisione sui socia
 msgid "description_available_socials"
 msgstr "Una lista di social network abilitati per la condivisione."
 
-#. Default: "Link to Facebook page to show in the header."
+#. Default: "List of links to external social networks. These links are showed in the header.\nIf there isn't a related icon in the theme, the link will not appear properly.\nAvailable icons are: facebook, twitter, youtube, medium, linkedin, storify, rss, newsletter.\nInsert a list of values (one per row) in the following form: social_id|url where social_id is one of the social with available icons."
 #: ../controlpanel/interfaces.py:47
-msgid "header_facebook_link_desc"
-msgstr "Url della pagina Facebook da mostrare in testata."
+msgid "follow_us_links_description"
+msgstr "Una lista di link a social network. Questi link vengono mostrati nella testata del sito. Se non è presente la relativa classe css nel tema, l'icona non può essere mostrata. Le icone possibili sono: facebook, twitter, youtube, medium, linkedin, storify, rss, newsletter. Inserisci una lista di valori (uno per riga) nella seguente forma: social_id|url dove social_id è uno dei possibili social con un'icona disponibile."
 
-#. Default: "Facebook page link"
+#. Default: "Follow us links"
 #: ../controlpanel/interfaces.py:45
-msgid "header_facebook_link_label"
-msgstr "Link a Facebook"
+msgid "follow_us_links_label"
+msgstr "Link Seguici su"
 
 #. Default: "Header link label"
 #: ../controlpanel/interfaces.py:37
@@ -102,54 +102,34 @@ msgid "header_link_label_desc"
 msgstr "Testo per il link che si trova in cima alla testata del sito"
 
 #. Default: "Header link url"
-#: ../controlpanel/interfaces.py:69
+#: ../controlpanel/interfaces.py:65
 msgid "header_link_url"
 msgstr "URL del link in testata"
 
 #. Default: "URL of the link in the header"
-#: ../controlpanel/interfaces.py:71
+#: ../controlpanel/interfaces.py:67
 msgid "header_link_url_desc"
 msgstr "URL per il link che si trova in cima alla testata del sito"
 
 #. Default: "Header second link label"
-#: ../controlpanel/interfaces.py:77
+#: ../controlpanel/interfaces.py:73
 msgid "header_second_link_label"
 msgstr "Link in testata secondario"
 
 #. Default: "Label for the link in the header of                              the site at right"
-#: ../controlpanel/interfaces.py:79
+#: ../controlpanel/interfaces.py:75
 msgid "header_second_link_label_desc"
 msgstr "Label per il link secondario in testata"
 
 #. Default: "Header second link url"
-#: ../controlpanel/interfaces.py:86
+#: ../controlpanel/interfaces.py:82
 msgid "header_second_link_url"
 msgstr "Link secondario in testata"
 
 #. Default: "URL of the link in the header at right"
-#: ../controlpanel/interfaces.py:88
+#: ../controlpanel/interfaces.py:84
 msgid "header_second_link_url_desc"
 msgstr "Url per il link secondario in testata"
-
-#. Default: "Link to Twitter account to show in the header."
-#: ../controlpanel/interfaces.py:55
-msgid "header_twitter_link_desc"
-msgstr "Url di un account Twitter da mostrare in testata. "
-
-#. Default: "Twitter link"
-#: ../controlpanel/interfaces.py:53
-msgid "header_twitter_link_label"
-msgstr "Link a Twitter"
-
-#. Default: "Link to YouTube to show in the header."
-#: ../controlpanel/interfaces.py:63
-msgid "header_youtube_link_desc"
-msgstr "Url a Youtube da mostrare in testata."
-
-#. Default: "YouTube link"
-#: ../controlpanel/interfaces.py:61
-msgid "header_youtube_link_label"
-msgstr "Link a Youtube"
 
 #. Default: "Shareable content types"
 #: ../controlpanel/interfaces.py:10

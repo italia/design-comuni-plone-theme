@@ -150,4 +150,15 @@
       handler=".upgrades.import_records_registry"
     />
   </genericsetup:upgradeSteps>
+  <genericsetup:upgradeSteps
+    source="1102"
+    destination="1103"
+    profile="redturtle.agidtheme:default">
+
+    <genericsetup:upgradeStep
+      title="Import plone registry"
+      description="Fix customizable social links in the header"
+      handler=".upgrades.clean_follow_us_fields"
+    />
+  </genericsetup:upgradeSteps>
 </configure>

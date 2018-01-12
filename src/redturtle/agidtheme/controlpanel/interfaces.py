@@ -41,28 +41,24 @@ class IRedturtleAgidthemeSettings(model.Schema):
         required=False
     )
 
-    header_facebook_link = schema.TextLine(
-        title=_(u'header_facebook_link_label',
-                default=u'Facebook page link'),
-        description=_(u'header_facebook_link_desc',
-                      default=u'Link to Facebook page to show in the header.'),
-        required=False
-    )
-
-    header_twitter_link = schema.TextLine(
-        title=_(u'header_twitter_link_label',
-                default=u'Twitter link'),
-        description=_(u'header_twitter_link_desc',
-                      default=u'Link to Twitter account to show in the header.'),  # noqa
-        required=False
-    )
-
-    header_youtube_link = schema.TextLine(
-        title=_(u'header_youtube_link_label',
-                default=u'YouTube link'),
-        description=_(u'header_youtube_link_desc',
-                      default=u'Link to YouTube to show in the header.'),
-        required=False
+    follow_us_links = schema.List(
+        title=_(u'follow_us_links_label',
+                default=u'Follow us links'),
+        description=_(u'follow_us_links_description',
+                      default=u'List of links to external social networks.'
+                              u' These links are showed in the header.\n'
+                              u'If there isn\'t a related icon in the theme, '
+                              u'the link will not appear properly.\n'
+                              u'Available icons are: facebook, twitter, '
+                              u'youtube, medium, linkedin, storify, rss, '
+                              u'newsletter.\n'
+                              u'Insert a list of values (one per row) in the '
+                              u'following form: social_id|url where social_id'
+                              u' is one of the social with available icons.'),
+        required=False,
+        default=[],
+        missing_value=[],
+        value_type=schema.TextLine()
     )
 
     header_link_url = schema.URI(

@@ -1,6 +1,9 @@
 # -*- coding: utf-8 -*-
 from plone import api
+from plone.registry.interfaces import IRegistry
 from redturtle.agidtheme import logger
+from redturtle.agidtheme.controlpanel.interfaces import IRedturtleAgidthemeSettings  # noqa
+from zope.component import getUtility
 
 
 DEFAULT_PROFILE = 'profile-redturtle.agidtheme:default'
@@ -79,3 +82,18 @@ def remove_old_bundle(context):
         'plone.app.registry',
         run_dependencies=False
     )
+
+
+def clean_follow_us_fields(context):
+    remove_fields = [
+        'header_facebook_link',
+        'header_youtube_link',
+        'header_twitter_link'
+    ]
+    registry = getUtility(IRegistry)
+    for field in remove_fields:
+        del registry.records['{0}.{1}'.format(
+            IRedturtleAgidthemeSettings.__identifier__,
+            field
+        )]
+    import_records_registry(context)
