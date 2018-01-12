@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
+from plone.supermodel import model
 from redturtle.agidtheme import _
 from zope import schema
-from plone.supermodel import model
 
 
 class IRedturtleAgidthemeSettings(model.Schema):

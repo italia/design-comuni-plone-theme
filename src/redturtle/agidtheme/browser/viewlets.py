@@ -36,7 +36,7 @@ class SocialViewlet(base.ViewletBase):
             interface=IRedturtleAgidthemeSettings)
         if self.context.portal_type in allowed_types:
             return self.index()
-        return ""
+        return ''
 
     def get_socials(self):
         socials = api.portal.get_registry_record(

@@ -5,7 +5,7 @@ from plone.api.exc import InvalidParameterError
 from Products.Five.browser import BrowserView
 from redturtle.agidtheme import _
 from ZODB.POSException import POSKeyError
-from zope.interface import implements
+from zope.interface import implementer
 
 
 class HelpersView(BrowserView):
@@ -23,7 +23,7 @@ class HelpersView(BrowserView):
             return scale_view.scale('image', scale=scale).tag()
         except (InvalidParameterError, POSKeyError, AttributeError):
             # The object doesn't have an image field
-            return ""
+            return ''
 
     def get_bg_url(self, item, scale='thumb'):
         try:
@@ -36,12 +36,12 @@ class HelpersView(BrowserView):
                    str(scale_view.scale('image', scale=scale).url) + '");'
         except (InvalidParameterError, POSKeyError, AttributeError):
             # The object doesn't have an image field
-            return ""
+            return ''
 
     def get_formatted_date(self, item):
-        '''
+        """
         return a formatted date
-        '''
+        """
         effective = item.effective
         if effective.year() == 1969:
             # not yet published
@@ -55,76 +55,68 @@ class HelpersView(BrowserView):
         }
 
 
+@implementer(ICollectionTileRenderer)
 class SightsView(BrowserView):
     """
     Custom view that shows sights
     """
-    implements(ICollectionTileRenderer)
 
-    display_name = _("Sights layout")
+    display_name = _('Sights layout')
 
 
+@implementer(ICollectionTileRenderer)
 class NewsHighlightView(BrowserView):
     """
     Custom view that shows an highlighted news
     """
-    implements(ICollectionTileRenderer)
 
-    display_name = _("News highlight")
+    display_name = _('News highlight')
 
 
+@implementer(ICollectionTileRenderer)
 class NewsBigPhotoView(BrowserView):
     """
     Custom view that shows a news with a big photo on the background
     """
-    implements(ICollectionTileRenderer)
-
-    display_name = _("News with big photo")
+    display_name = _('News with big photo')
 
 
+@implementer(ICollectionTileRenderer)
 class NewsAreaTematicaView(BrowserView):
     """
     Custom view that shows news in area tematica
     """
-    implements(ICollectionTileRenderer)
-
-    display_name = _("News in area tematica")
+    display_name = _('News in area tematica')
 
 
+@implementer(ICollectionTileRenderer)
 class ServiziAreaTematicaView(BrowserView):
     """
     Custom view that shows servizi in area tematica
     """
-    implements(ICollectionTileRenderer)
-
-    display_name = _("Servizi in area tematica")
+    display_name = _('Servizi in area tematica')
 
 
+@implementer(ICollectionTileRenderer)
 class NewsView(BrowserView):
-    implements(ICollectionTileRenderer)
-
-    display_name = _("News layout with image")
+    display_name = _('News layout with image')
 
 
+@implementer(ICollectionTileRenderer)
 class VideoView(BrowserView):
-    implements(ICollectionTileRenderer)
-
-    display_name = _("Video layout")
+    display_name = _('Video layout')
 
 
+@implementer(ICollectionTileRenderer)
 class GalleryView(BrowserView):
-    implements(ICollectionTileRenderer)
-
-    display_name = _("Gallery layout")
+    display_name = _('Gallery layout')
 
 
+@implementer(ICollectionTileRenderer)
 class AreeTematicheView(BrowserView):
-    implements(ICollectionTileRenderer)
-
-    display_name = _("Link aree tematiche")
+    display_name = _('Link aree tematiche')
 
 
+@implementer(ICollectionTileRenderer)
 class OnlineServicesView(BrowserView):
-    implements(ICollectionTileRenderer)
-
-    display_name = _("Layout servizi online")
+    display_name = _('Layout servizi online')

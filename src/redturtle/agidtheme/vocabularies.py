@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-from plone import api
-from zope.interface import implements
+from zope.interface import implementer
 from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
@@ -24,7 +23,7 @@ SHARES = {
         'label': 'Linkedin',
     },
     'pinterest': {
-        'share_url': 'https://pinterest.com/pin/create/bookmarklet/?media={0}&url={1}&is_video={2}&description={3}',
+        'share_url': 'https://pinterest.com/pin/create/bookmarklet/?media={0}&url={1}&is_video={2}&description={3}',  # noqa
         'label': 'Pinterest',
     },
     'pocket': {
@@ -34,11 +33,11 @@ SHARES = {
 }
 
 
+@implementer(IVocabularyFactory)
 class SocialsVocabulary(object):
     """
     Vocabulary factory
     """
-    implements(IVocabularyFactory)
 
     def __call__(self, context):
         voc_values = [
@@ -47,5 +46,6 @@ class SocialsVocabulary(object):
                 x,
                 SHARES.get(x).get('label')) for x in SHARES]
         return SimpleVocabulary(voc_values)
+
 
 SocialsVocabularyFactory = SocialsVocabulary()
