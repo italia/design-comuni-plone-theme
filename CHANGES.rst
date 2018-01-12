@@ -5,8 +5,8 @@ Changelog
 1.1.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Fix upgrade-step
+  [cekk]
 
 1.1.1 (2018-01-12)
 ------------------

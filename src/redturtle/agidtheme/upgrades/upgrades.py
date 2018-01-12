@@ -92,8 +92,12 @@ def clean_follow_us_fields(context):
     ]
     registry = getUtility(IRegistry)
     for field in remove_fields:
-        del registry.records['{0}.{1}'.format(
-            IRedturtleAgidthemeSettings.__identifier__,
-            field
-        )]
+        try:
+            del registry.records['{0}.{1}'.format(
+                IRedturtleAgidthemeSettings.__identifier__,
+                field
+            )]
+        except KeyError:
+            # entry not present in registry
+            continue
     import_records_registry(context)
