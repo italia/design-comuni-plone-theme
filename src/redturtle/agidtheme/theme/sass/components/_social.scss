@@ -38,6 +38,9 @@
                 &.sc-youtube:before {
                     @include make-fa('\f167', #FFF);
                 }
+                &.sc-linkedin:before {
+                    @include make-fa('\f0e1', #FFF);
+                }
                 &.sc-instagram:before {
                     @include make-fa('\f16d', #FFF);
                 }
@@ -47,6 +50,26 @@
                     background-position: center center;
                     background-size: 75%;
                     content:'';
+                }
+                &.sc-youtube:before {
+                    @include make-fa('\f167', #FFF);
+                }
+                &.sc-telegram:before {
+                    @include make-fa('\f2c6', #FFF);
+                }
+                &.sc-storify:before {
+                    content: "";
+                    vertical-align: bottom;
+                    background-image: url($img-path + 'storifyHover.svg');
+                    background-size: 2rem;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                }
+                &.sc-rss:before {
+                    @include make-fa('\f09e', #FFF);
+                }
+                &.sc-newsletter:before {
+                    @include make-fa('\f1ea', #FFF);
                 }
 
                 &:focus,
