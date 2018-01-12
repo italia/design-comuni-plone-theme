@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.1.2 (unreleased)
+1.1.2 (2018-01-12)
 ------------------
 
 - Fix upgrade-step
