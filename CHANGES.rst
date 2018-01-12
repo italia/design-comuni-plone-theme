@@ -2,10 +2,13 @@ Changelog
 =========
 
 
-1.0.10 (unreleased)
+1.1.0 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Fix sights_renderer template
+  [cekk]
+- Add customizable social links in header viewlet
+  [cekk]
 
 
 1.0.9 (2018-01-11)

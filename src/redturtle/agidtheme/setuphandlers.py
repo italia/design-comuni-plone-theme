@@ -2,8 +2,7 @@
 from plone import api
 from Products.CMFPlone.interfaces import INonInstallable
 from zope.interface import implementer
-from redturtle.tiles.management.interfaces \
-    import IRedturtleTilesManagementSettings
+from redturtle.tiles.management.interfaces import IRedturtleTilesManagementSettings  # noqa
 
 
 @implementer(INonInstallable)

@@ -69,7 +69,7 @@
     </div>
   </replace>
   <!-- cancello la search originale -->
-  <drop css:content="#portal-header #portal-searchbox" />
+  <drop css:content="#portal-header #portal-searchbox" css:if-content="#header-social" />
 
   <!-- sposto le colonne dentro ad un container -->
   <replace css:content="#portal-column-content">

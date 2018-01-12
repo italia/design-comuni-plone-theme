@@ -60,6 +60,11 @@
         margin: 0;
     }
 
+    > #portal-searchbox {
+        display: flex;
+        align-items: center;
+    }
+
     @media (max-width: $mobile-menu-width) {
         position: relative;
 

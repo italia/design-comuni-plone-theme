@@ -2,6 +2,7 @@
 from ..controlpanel.interfaces import IRedturtleAgidthemeSettings
 from ..vocabularies import SHARES
 from plone import api
+from plone.api.exc import InvalidParameterError
 from plone.app.layout.viewlets import common as base
 from plone.app.layout.viewlets.content import DocumentBylineViewlet
 from Products.CMFPlone.utils import getSiteLogo
@@ -11,7 +12,7 @@ from urllib2 import quote
 
 class CustomDocumentBylineViewlet(DocumentBylineViewlet):
 
-    index = ViewPageTemplateFile("templates/document_by_line.pt")
+    index = ViewPageTemplateFile('templates/document_by_line.pt')
 
     def show(self):
         # always show: anonymous need to see some infos
@@ -35,7 +36,7 @@ class SocialViewlet(base.ViewletBase):
             interface=IRedturtleAgidthemeSettings)
         if self.context.portal_type in allowed_types:
             return self.index()
-        return ""
+        return ''
 
     def get_socials(self):
         socials = api.portal.get_registry_record(
@@ -76,6 +77,23 @@ class LogoViewlet(base.ViewletBase):
 class HeaderSocialViewlet(base.ViewletBase):
     '"Follow us" viewlet'
     index = ViewPageTemplateFile('templates/header_social_viewlet.pt')
+
+    def get_social_link(self, social):
+        try:
+            return api.portal.get_registry_record(
+                'header_{0}_link'.format(social),
+                interface=IRedturtleAgidthemeSettings)
+        except InvalidParameterError:
+            return ''
+
+    def get_social_links(self):
+        ids = ['facebook', 'twitter', 'youtube']
+        res = []
+        for social in ids:
+            link = self.get_social_link(social)
+            if link:
+                res.append({'id': social, 'url': link})
+        return res
 
 
 class SkipLinksViewlet(base.ViewletBase):
