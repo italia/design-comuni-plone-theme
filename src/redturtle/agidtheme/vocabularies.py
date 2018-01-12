@@ -4,6 +4,7 @@ from zope.schema.interfaces import IVocabularyFactory
 from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
 
+
 SHARES = {
     'facebook': {
         'share_url': 'https://www.facebook.com/sharer/sharer.php?u={0}',

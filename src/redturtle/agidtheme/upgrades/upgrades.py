@@ -2,6 +2,7 @@
 from plone import api
 from redturtle.agidtheme import logger
 
+
 DEFAULT_PROFILE = 'profile-redturtle.agidtheme:default'
 
 
