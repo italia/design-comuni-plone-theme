@@ -39,37 +39,34 @@
   <!-- Copy over the id/class attributes on the body tag. This is important for per-section styling -->
   <copy attributes="*" css:content="body" css:theme="body" />
 
-  <!-- aggiungo un wrapper in testata per social+search -->
-  <replace css:content="#header-social">
-    <div class="search-social-wrapper">
-      <xsl:copy-of select="//*[@id='header-social']"/>
-      <xsl:copy-of select="//*[@id='portal-searchbox']"/>
-      <button id="search-toggle"
-              aria-controls="portal-searchbox"
-              aria-label="Apri/chiudi ricerca"
-              title="Apri/chiudi ricerca">
-        <span class="icon"></span>
-        <span class="sr-only">SEARCH</span>
-      </button>
-      <div class="plone-navbar-header">
-        <button type="button"
-                class="plone-navbar-toggle"
-                aria-controls="portal-globalnav-collapse"
-                aria-expanded="false">
-          <!--
-                data-toggle="collapse"
-                data-target="#portal-globalnav-collapse"
-          -->
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+  <!-- Need to rewrite entire portal-header to wrap social, search and burgy-->
+  <replace css:content="#portal-header">
+      <div id="portal-header">
+          <xsl:copy-of select="//*[@id='portal-logo']"/>
+          <div class="search-social-wrapper">
+              <xsl:copy-of select="//*[@id='header-social']"/>
+              <xsl:copy-of select="//*[@id='portal-searchbox']"/>
+              <button id="search-toggle"
+                      aria-controls="portal-searchbox"
+                      aria-label="Apri/chiudi ricerca"
+                      title="Apri/chiudi ricerca">
+                <span class="icon"></span>
+                <span class="sr-only">SEARCH</span>
+              </button>
+              <div class="plone-navbar-header">
+                <button type="button"
+                        class="plone-navbar-toggle"
+                        aria-controls="portal-globalnav-collapse"
+                        aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+              </div>
+          </div>
       </div>
-    </div>
   </replace>
-  <!-- cancello la search originale -->
-  <drop css:content="#portal-header #portal-searchbox" css:if-content="#header-social" />
 
   <!-- sposto le colonne dentro ad un container -->
   <replace css:content="#portal-column-content">
