@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.1.3 (unreleased)
+1.1.3 (2018-01-18)
 ------------------
 
 - Fix problem with mobile menu wrongly dependent on social container
