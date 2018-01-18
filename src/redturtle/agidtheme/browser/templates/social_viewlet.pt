@@ -15,7 +15,7 @@
             <ul class="social-list">
                 <tal:results tal:repeat="social results"
                 ><li
-                    ><a tal:attributes="href python: view.get_sharer_url(social)" href="#" title=""
+                    ><a tal:attributes="href python: view.get_sharer_url(social)" href="#" title="" target="_blank"
                         ><span tal:attributes="class python: 'social ' + social" class=""></span
                         ><span tal:content="python: social.title()" class="u-hiddenVisually">Facebook</span
                     ></a
