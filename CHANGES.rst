@@ -9,6 +9,7 @@ Changelog
   This could fix also problem with close menu button: javascript in
   rer.agidtheme.base seems to work properly
   [lucabel]
+- Aggiunti stili per tile statica "menu navigazione" [nzambello]
 
 
 1.1.2 (2018-01-12)
