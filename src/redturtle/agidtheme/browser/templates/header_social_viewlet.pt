@@ -4,7 +4,7 @@
   <p>Seguici su</p>
   <ul>
     <li tal:repeat="link links">
-      <a href="${link/url}" title="${link/id}" class="sc-${link/id}">
+      <a href="${link/url}" title="${link/id} - apri in una nuova scheda" class="sc-${link/id}" target="_blank">
         <span>${link/id}</span>
       </a>
     </li>
