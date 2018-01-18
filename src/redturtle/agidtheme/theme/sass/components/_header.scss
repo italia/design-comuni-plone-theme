@@ -65,6 +65,13 @@
         align-items: center;
     }
 
+    .search-social-wrapper {
+        &.no-social-links {
+            display: flex;
+            align-items: center;
+        }
+    }
+
     @media (max-width: $mobile-menu-width) {
         position: relative;
 
