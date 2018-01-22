@@ -253,26 +253,6 @@
 
     .tileTitle {
         font-size: 1.6em;
-
-        .tile-collapse-button {
-            border: 0;
-            background: none;
-            padding-left: 0;
-
-            &:active,
-            &:hover {
-                box-shadow: none;
-            }
-
-            @media (min-width: $screen-md-min) {
-                cursor: inherit;
-
-                &:focus {
-                    outline: none;
-                    box-shadow: none;
-                }
-            }
-        }
     }
 
     .collectionItemWrapper {
