@@ -75,6 +75,8 @@
 
     &.portletStaticNavigation {
         .tile-text {
+            padding: 20px;
+
             h3 {
                 border-bottom: 4px solid #666;
                 padding-bottom: 10px;
@@ -171,7 +173,6 @@
     &.portletStaticNavigation {
         .tile-text {
             background: #FFF;
-            padding: 20px;
         }
     }
 }
