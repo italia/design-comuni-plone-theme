@@ -14,14 +14,7 @@
             <div class="tile-collection-container">
                 <h3 tal:define="title view/data/title|nothing;"
                     class="tileTitle"
-                    tal:condition="title"
-                    ><button class="tile-collapse-button"
-                             ><span class="title-content"
-                                 >${title}
-                            </span><span class="title-icon"
-                            ></span
-                    ></button
-                ></h3>
+                    tal:condition="title">${title}</h3>
                 <div class="tileBody">
                     <p tal:condition="not:results"
                        class="noResults"

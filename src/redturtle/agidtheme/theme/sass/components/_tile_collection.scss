@@ -253,26 +253,6 @@
 
     .tileTitle {
         font-size: 1.6em;
-
-        .tile-collapse-button {
-            border: 0;
-            background: none;
-            padding-left: 0;
-
-            &:active,
-            &:hover {
-                box-shadow: none;
-            }
-
-            @media (min-width: $screen-md-min) {
-                cursor: inherit;
-
-                &:focus {
-                    outline: none;
-                    box-shadow: none;
-                }
-            }
-        }
     }
 
     .collectionItemWrapper {
@@ -344,85 +324,6 @@
 }
 
 @media (max-width: $screen-sm-max) {
-    .collectionTile.collapsible {
-        .tile-collection {
-            .tileBody {
-                max-height: 0;
-                overflow: hidden;
-                transition: max-height $animation-speed ease-in-out;
-
-                .showMore {
-                    display: none;
-                }
-            }
-
-            .tile-collapse-button {
-                position: relative;
-                padding-right: 30px;
-
-                .title-content {
-                    border-bottom: 1px solid #000;
-                }
-
-                .title-icon {
-                    &:before {
-                        @include make-fa('\f107');
-                        position: absolute;
-                        right: 0;
-                        top: 0;
-                        height: 100%;
-                        padding-top: 5px;
-                        padding-right: 5px;
-                    }
-                }
-            }
-        }
-
-        &.sfondo-scuro {
-            .tile-collection {
-                .tile-collapse-button {
-                    color: #FFF;
-
-                    .title-content {
-                        border-bottom-color: #FFF;
-                    }
-
-                    .title-icon {
-                        &:before {
-                            @include make-fa('\f107');
-                            position: absolute;
-                            right: 0;
-                            top: 0;
-                            height: 100%;
-                            padding-top: 5px;
-                            padding-right: 5px;
-                        }
-                    }
-                }
-            }
-        }
-
-        &.open {
-            .tile-collection {
-                .tileBody {
-                    max-height: 10000px;
-
-                    .showMore {
-                        display: block;
-                    }
-                }
-
-                .tile-collapse-button {
-                    .title-icon {
-                        &:before {
-                            @include make-fa('\f106');
-                        }
-                    }
-                }
-            }
-        }
-    }
-
     .mobile-hidden {
         display: none;
     }
