@@ -131,11 +131,18 @@
                     @include make-fa('\f09e', $footer-bg);
                 }
                 &.medium:before {
-                  background-image: url($img-path + 'medium.svg');
-                  background-repeat: no-repeat;
-                  background-position: center center;
-                  background-size: 75%;
-                  content:'';
+                    background-image: url($img-path + 'medium.svg');
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: 75%;
+                    content:'';
+                }
+                &.newsletter:before {
+                    content: "";
+                    background-image: url($img-path + 'newsletter.svg');
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: 75%;
                 }
 
                 &:focus,
@@ -154,6 +161,12 @@
                     &.medium {
                         &:before {
                             background-image: url($img-path + 'mediumHover.svg');
+                        }
+                    }
+
+                    &.newsletter {
+                        &:before {
+                            background-image: url($img-path + 'newsletterHover.svg');
                         }
                     }
                 }

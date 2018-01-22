@@ -6,6 +6,7 @@ Changelog
 ------------------
 
 - Added title border to navigation static tile [nzambello]
+- Added icon for newsletter [nzambello]
 
 
 1.1.3 (2018-01-18)

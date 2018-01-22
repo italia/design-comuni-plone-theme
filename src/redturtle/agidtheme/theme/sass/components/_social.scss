@@ -69,7 +69,11 @@
                     @include make-fa('\f09e', #FFF);
                 }
                 &.sc-newsletter:before {
-                    @include make-fa('\f1ea', #FFF);
+                    content: "";
+                    background-image: url($img-path + 'newsletterHover.svg');
+                    background-size: 75%;
+                    background-repeat: no-repeat;
+                    background-position: center center;
                 }
 
                 &:focus,
