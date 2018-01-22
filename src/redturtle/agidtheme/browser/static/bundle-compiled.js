@@ -240,14 +240,9 @@ require([
      * - multi lined ellipsis for news collection items
      */
     $('.pat-tiles-management').on('rtTilesLoaded', function(e) {
-      handleTabIndex();
       ellipsis('.tile-collection .collectionItemDescription', 4, { responsive: true });
       ellipsis('.news-highlight .news-description', 4, { responsive: true });
       ellipsis('.news-big-photo .news-description', 4, { responsive: true });
-    });
-
-    $(window).on('resize orientationchange', function(e) {
-      handleTabIndex();
     });
 
     $(document).on('patSliderInit', function(e) {
