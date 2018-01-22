@@ -235,25 +235,6 @@ require([
     });
 
     /*
-     * collapse news collection
-     */
-    $('#content-core').on('click', '.collectionTile.collapsible .tile-collapse-button', function(e) {
-      if (window.innerWidth <= 991) {
-        var collapse = $(e.target).closest('.collapsible');
-        collapse.toggleClass('open');
-      }
-    });
-
-    function handleTabIndex() {
-      if (window.innerWidth <= 991 && $('button.tile-collapse-button').closest('.collectionTile').hasClass('collapsible') && $('button.tile-collapse-button').attr('tabIndex') !== undefined) {
-        $('button.tile-collapse-button').removeAttr('tabIndex');
-      }
-      else {
-        $('button.tile-collapse-button').attr('tabIndex', -1);
-      }
-    }
-
-    /*
      * On tiles loaded:
      * - gestito tabIndex news collection collapse
      * - multi lined ellipsis for news collection items
