@@ -214,9 +214,11 @@
     }
 
     &.sights-collection {
-        h3 {
-            color: $brand-primary;
-            margin: 0;
+        .tileBody {
+            h3 {
+                color: $brand-primary;
+                margin: 0;
+            }
         }
     }
 
