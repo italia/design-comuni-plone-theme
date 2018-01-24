@@ -21,5 +21,14 @@
            remove="True"
            />
 
+  <record name="plone.allowed_sizes" interface="Products.CMFPlone.interfaces.controlpanel.IImagingSchema" field="allowed_sizes">
+    <value purge="false">
+      <element remove="true">newshome 300:200</element>
+      <element remove="true">newshome 450:300</element>
+      <element remove="true">newshighlight 540:360</element>
+      <element remove="true">newsbig 1800:600</element>
+    </value>
+  </record>
+
 </registry>
 

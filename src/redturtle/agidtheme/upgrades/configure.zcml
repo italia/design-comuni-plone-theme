@@ -150,6 +150,7 @@
       handler=".upgrades.import_records_registry"
     />
   </genericsetup:upgradeSteps>
+
   <genericsetup:upgradeSteps
     source="1102"
     destination="1103"
@@ -161,4 +162,17 @@
       handler=".upgrades.clean_follow_us_fields"
     />
   </genericsetup:upgradeSteps>
+
+  <genericsetup:upgradeSteps
+    source="1103"
+    destination="1200"
+    profile="redturtle.agidtheme:default">
+
+    <genericsetup:upgradeStep
+      title="Change newshome"
+      description="Changed newshome miniature"
+      handler=".upgrades.changenewshome"
+    />
+  </genericsetup:upgradeSteps>
+
 </configure>
