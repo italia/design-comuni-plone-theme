@@ -8,6 +8,7 @@ Changelog
 - Added title border to navigation static tile [nzambello]
 - Added icon for newsletter [nzambello]
 - Removed collapse button for tiles from templates, styles and js [nzambello]
+- Removed tiles_page_view for folder [fdelia]
 
 
 1.1.3 (2018-01-18)

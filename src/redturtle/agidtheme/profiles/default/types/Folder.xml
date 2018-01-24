@@ -6,12 +6,6 @@
     xmlns:i18n="http://xml.zope.org/namespaces/i18n">
 
   <property
-      name="view_methods"
-      purge="false">
-    <element value="tiles_page_view" />
-  </property>
-
-  <property
       name="behaviors"
       purge="false">
     <element value="plone.layoutaware" />
