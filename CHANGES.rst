@@ -9,6 +9,7 @@ Changelog
 - Added icon for newsletter [nzambello]
 - Removed collapse button for tiles from templates, styles and js [nzambello]
 - Removed tiles_page_view for folder [fdelia]
+- Changed newshome miniature [nzambello]
 
 
 1.1.3 (2018-01-18)

@@ -4,6 +4,7 @@ from plone.registry.interfaces import IRegistry
 from redturtle.agidtheme import logger
 from redturtle.agidtheme.controlpanel.interfaces import IRedturtleAgidthemeSettings  # noqa
 from zope.component import getUtility
+from Products.CMFPlone.interfaces.controlpanel import IImagingSchema
 
 
 DEFAULT_PROFILE = 'profile-redturtle.agidtheme:default'
@@ -82,6 +83,22 @@ def remove_old_bundle(context):
         'plone.app.registry',
         run_dependencies=False
     )
+
+
+def changenewshome(context):
+    'Import the changenewshome profile'
+
+    registry = getUtility(IRegistry)
+    settings = registry.forInterface(
+                    IImagingSchema,
+                    prefix='plone',
+                    check=False
+                )
+
+    allowed_sizes = [x for x in settings.allowed_sizes if 'newshome' not in x]
+    allowed_sizes.append(u'newshome 450:300')
+
+    settings.allowed_sizes = allowed_sizes
 
 
 def clean_follow_us_fields(context):
