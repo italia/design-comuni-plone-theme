@@ -85,18 +85,11 @@
 
   <record name="plone.allowed_sizes" interface="Products.CMFPlone.interfaces.controlpanel.IImagingSchema" field="allowed_sizes">
     <value purge="false">
-      <element>newshome 300:200</element>
+      <element>newshome 450:300</element>
       <element>newshighlight 540:360</element>
-    </value>
-  </record>
-
-  <records
-      interface="Products.CMFPlone.interfaces.controlpanel.IImagingSchema"
-      prefix="plone">
-    <value key="allowed_sizes" purge="false">
       <element>newsbig 1800:600</element>
     </value>
-  </records>
+  </record>
 
   <records interface="redturtle.agidtheme.controlpanel.interfaces.IRedturtleAgidthemeSettings" />
 
