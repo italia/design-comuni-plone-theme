@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.1.4 (unreleased)
+1.1.4 (2018-01-25)
 ------------------
 
 - Added title border to navigation static tile [nzambello]
