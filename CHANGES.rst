@@ -5,7 +5,7 @@ Changelog
 1.1.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fixed backend searchbox [pnicolli]
 
 
 1.1.4 (2018-01-25)

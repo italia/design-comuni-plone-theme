@@ -142,15 +142,39 @@
     <after css:theme-children="#content-header" css:content="#portal-top" />
     <after css:theme-children="#content-header" css:content="#portal-mainnavigation" />
 
-    <!-- aggiungo un wrapper in testata per social+search -->
-    <replace css:content="#header-social">
-      <div class="search-social-wrapper">
-        <xsl:copy-of select="//*[@id='header-social']"/>
-        <xsl:copy-of select="//*[@id='portal-searchbox']"/>
+    <!-- Need to rewrite entire portal-header to wrap social, search and burgy-->
+    <replace css:content="#portal-header">
+      <div id="portal-header">
+        <xsl:copy-of select="//*[@id='portal-logo']"/>
+        <xsl:variable name="headerWrapper">
+          <xsl:if test="not(//div[@id='header-social'])"> no-social-links</xsl:if>
+        </xsl:variable>
+
+        <div class="search-social-wrapper{$headerWrapper}">
+          <xsl:copy-of select="//*[@id='header-social']"/>
+          <xsl:copy-of select="//*[@id='portal-searchbox']"/>
+
+          <button id="search-toggle"
+                  aria-controls="portal-searchbox"
+                  aria-label="Apri/chiudi ricerca"
+                  title="Apri/chiudi ricerca">
+            <span class="icon"></span>
+            <span class="sr-only">SEARCH</span>
+          </button>
+          <div class="plone-navbar-header">
+            <button type="button"
+                    class="plone-navbar-toggle"
+                    aria-controls="portal-globalnav-collapse"
+                    aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+        </div>
       </div>
     </replace>
-    <!-- cancello la search originale -->
-    <drop css:content="#portal-header #portal-searchbox" />
 
     <!-- Add site footer -->
     <replace css:theme="#portal-footer-wrapper" css:content="#portal-footer-wrapper" />
