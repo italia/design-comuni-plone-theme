@@ -173,6 +173,7 @@
     &.portletStaticNavigation {
         .tile-text {
             background: #FFF;
+            @include clearfix;
         }
     }
 }
