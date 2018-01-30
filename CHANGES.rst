@@ -7,6 +7,7 @@ Changelog
 
 - Fixed backend searchbox [pnicolli]
 - Added clearfix for static tile bg [nzambello]
+- Fix gallery collection icon [nzambello]
 
 
 1.1.4 (2018-01-25)
