@@ -54,6 +54,15 @@ class HelpersView(BrowserView):
             'year': effective.year()
         }
 
+    def getGalleryTypeIcon(self, portal_type):
+        if portal_type in ['Image', 'Folder']:
+            return 'photo'
+
+        if portal_type == 'WildcardVideo':
+            return 'video'
+
+        return ''
+
 
 @implementer(ICollectionTileRenderer)
 class SightsView(BrowserView):

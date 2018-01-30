@@ -48,7 +48,7 @@
                                       </div>
                                       <div class="collectionItemText">
                                           <div class="collectionItemTitle">
-                                              <span tal:define="type_class python: item_type == 'Folder' and 'photo' or 'video'"
+                                              <span tal:define="type_class python: helper_view.getGalleryTypeIcon(item_type)"
                                                     tal:attributes="class string: item-icon $type_class"
                                               ></span>
                                               <h3 tal:content="obj/Title"> Title </h3>
