@@ -8,6 +8,7 @@ Changelog
 - Fixed backend searchbox [pnicolli]
 - Added clearfix for static tile bg [nzambello]
 - Fix gallery collection icon [nzambello]
+- senza-titolo CSS class applied to any tile [nzambello]
 
 
 1.1.4 (2018-01-25)

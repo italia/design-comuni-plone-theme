@@ -96,3 +96,9 @@
 .tileTitle {
     font-size: 1.6em;
 }
+
+.tile.senza-titolo {
+    h3.tileTitle {
+        display: none;
+    }
+}
