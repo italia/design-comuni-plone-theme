@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.1.5 (unreleased)
+1.1.5 (2018-02-02)
 ------------------
 
 - Fixed backend searchbox [pnicolli]
