@@ -6,6 +6,7 @@ Changelog
 ------------------
 
 - Fix list-style rules to allow an override [nzambello]
+- Removed useless flex in header which had issues with Safari on iOS [nzambello]
 
 
 1.1.5 (2018-02-02)

@@ -80,16 +80,6 @@
 
 @media (max-width: $mobile-menu-width) {
 
-    .plone-navbar-header {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-
-        .plone-navbar-toggle {
-            display: block;
-        }
-    }
-
     #portal-mainnavigation {
         #portal-globalnav-wrapper {
             display: block;
@@ -101,17 +91,6 @@
                 max-height: 1000px;
             }
         }
-
-        // #portal-globalnav-collapse {
-        //     display: none;
-        //
-        //     &.collapse {
-        //         display: none;
-        //     }
-        //     &.collapse.in {
-        //         display: block;
-        //     }
-        // }
 
         ul#portal-globalnav {
             display: block;
@@ -128,14 +107,3 @@
         }
     }
 }
-
-// @media (min-width: $screen-xs-max) {
-//
-//     #portal-mainnavigation {
-//
-//         #portal-globalnav-collapse {
-//             display: block;
-//             height: auto !important;
-//         }
-//     }
-// }
