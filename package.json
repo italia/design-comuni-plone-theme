@@ -28,6 +28,7 @@
     "grunt-sass": "^1.2.1",
     "load-grunt-tasks": "^3.5.2",
     "pixrem": "^3.0.2",
+    "postcss-flexbugs-fixes": "^3.3.0",
     "prettier": "^1.5.3",
     "stylelint": "^8.0.0",
     "stylelint-config-recommended": "^1.0.0"

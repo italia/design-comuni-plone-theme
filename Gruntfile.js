@@ -61,6 +61,7 @@ module.exports = function(grunt) {
           require('autoprefixer')({
             browsers: ['last 2 versions', 'ie >= 11', 'iOS >= 6'],
           }),
+          require('postcss-flexbugs-fixes')(),
         ],
       },
       dist: {
