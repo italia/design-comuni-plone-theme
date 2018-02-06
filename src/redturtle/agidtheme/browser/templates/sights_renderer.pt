@@ -44,15 +44,15 @@
                                         </div>
                                     </li>
                                 </tal:result>
-                                <tal:showmore tal:condition="python:view.data.get('show_more') and view.data.get('title') and not showCarousel">
-                                    <a href="${collection/absolute_url}"
-                                       tal:define="show_more_label view/data/show_more_label|nothing">
-                                        <span tal:condition="not:show_more_label"
-                                              i18n:translate="more_url">More&hellip;</span>
-                                        <span tal:condition="show_more_label">${show_more_label}</span>
-                                    </a>
-                                </tal:showmore>
                             </ul>
+                            <div class="showMore" tal:condition="python:view.data.get('show_more') and view.data.get('title') and not showCarousel">
+                                <a href="${collection/absolute_url}"
+                                   tal:define="show_more_label view/data/show_more_label|nothing">
+                                    <span tal:condition="not:show_more_label"
+                                          i18n:translate="more_url">More&hellip;</span>
+                                    <span tal:condition="show_more_label">${show_more_label}</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
