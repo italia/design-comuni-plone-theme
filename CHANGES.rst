@@ -5,7 +5,7 @@ Changelog
 1.1.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix list-style rules to allow an override [nzambello]
 
 
 1.1.6 (2018-02-07)
