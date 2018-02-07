@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.1.6 (unreleased)
+1.1.6 (2018-02-07)
 ------------------
 
 - Fix list-style rules to allow an override [nzambello]
