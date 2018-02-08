@@ -26,8 +26,12 @@ Examples
 This theme can be seen in action at the following sites:
 
 - `digitale.regione.emilia-romagna.it`__
+- `regione.emilia-romagna.it`__
+- `comune.santarcangelo.rn.it`__
 
 __ http://digitale.regione.emilia-romagna.it
+__ http://www.regione.emilia-romagna.it
+__ http://www.comune.santarcangelo.rn.it
 
 
 Translations
