@@ -6,24 +6,35 @@
 redturtle.agidtheme
 ==============================================================================
 
+Il primo tema Plone conforme alle linee guida `AgID`__.
+
+__ http://www.agid.gov.it/tags/linee-guida-design-pa
+
+Questo tema si basa sulla versione 2017.1 delle linee guida.
+  
+|
+
 This is the first Plone theme for `AgID`__ guidelines.
 
 __ http://www.agid.gov.it/tags/linee-guida-design-pa
 
 It is built on guidelines' version 2017.1.
 
-Documentation
--------------
+This README is written in italian language because it's meant for Italian Public Administrations' websites.
 
-A complete documentation can be found on this `document`__.
+
+Documentazione
+--------------
+
+Una completa documentazione è disponibile in `questo documento`__.
 
 __ https://docs.google.com/document/d/1ncSgzj0JABBWR1Jt7sxtIH5qwjCVN10qBm7uA8uM5cw/export?format=pdf
 
 
-Examples
---------
+Esempi
+------
 
-This theme can be seen in action at the following sites:
+Questo tema può essere visto in azione nei seguenti siti web:
 
 - `digitale.regione.emilia-romagna.it`__
 - `regione.emilia-romagna.it`__
@@ -34,18 +45,18 @@ __ http://www.regione.emilia-romagna.it
 __ http://www.comune.santarcangelo.rn.it
 
 
-Translations
-------------
+Traduzioni
+-----------
 
-This product has been translated into
+Questo prodotto è stato tradotto nelle seguenti lingue:
 
-- Italian
+- Italiano
 
 
-Installation
-------------
+Installazione
+-------------
 
-Install redturtle.agidtheme by adding it to your buildout::
+Installa redturtle.agidtheme aggiungendolo al tuo buildout::
 
     [buildout]
 
@@ -55,28 +66,28 @@ Install redturtle.agidtheme by adding it to your buildout::
         redturtle.agidtheme
 
 
-and then running ``bin/buildout``.
+e successivamente eseguendo ``bin/buildout``.
 
 
-Dependencies
-------------
+Dipendenze
+----------
 
-This product has been tested on Plone >= 5.0.7
+Questo prodotto è stato testato su Plone >= 5.0.7.
 
 
-Credits
-------------
+Crediti
+-------
 
-Developed with the support of `Regione Emilia Romagna`__.
+Sviluppato con il supporto della `Regione Emilia-Romagna`__.
 
 __ http://www.regione.emilia-romagna.it/
 
 
 
-Authors
-------------
+Autori
+------
 
-This product was developed by RedTurtle Technology team.
+Questo prodotto è stato sviluppato dal team di RedTurtle Technology.
 
 .. image:: http://www.redturtle.it/redturtle_banner.png
    :alt: RedTurtle Technology Site
