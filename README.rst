@@ -8,19 +8,19 @@ redturtle.agidtheme
 
 Il primo tema Plone conforme alle linee guida `AgID`__.
 
-__ http://www.agid.gov.it/tags/linee-guida-design-pa
+__ https://design-italia.readthedocs.io/it/stable/index.html
 
 Questo tema si basa sulla versione 2017.1 delle linee guida.
-  
+
 |
 
 This is the first Plone theme for `AgID`__ guidelines.
 
-__ http://www.agid.gov.it/tags/linee-guida-design-pa
+__ https://design-italia.readthedocs.io/it/stable/index.html
 
 It is built on guidelines' version 2017.1.
 
-This README is written in italian language because it's meant for Italian Public Administrations' websites.
+This README is written in italian language because it's meant for Italian Public Administration websites.
 
 
 Documentazione
@@ -75,10 +75,10 @@ Dipendenze
 Questo prodotto è stato testato su Plone >= 5.0.7.
 
 
-Crediti
--------
+Riconoscimenti
+--------------
 
-Sviluppato con il supporto della `Regione Emilia-Romagna`__.
+Sviluppato con il supporto di `Regione Emilia-Romagna`__.
 
 __ http://www.regione.emilia-romagna.it/
 
