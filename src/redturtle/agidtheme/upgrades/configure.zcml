@@ -175,4 +175,13 @@
     />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeStep
+    source="1200"
+    destination="2000"
+    profile="redturtle.agidtheme:default"
+    title="Import plone registry"
+    description="Changed js resources and bundle"
+    handler=".upgrades.import_records_registry"
+  />
+
 </configure>

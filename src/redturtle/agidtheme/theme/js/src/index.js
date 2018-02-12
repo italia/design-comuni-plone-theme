@@ -1,12 +1,16 @@
 require([
   'jquery',
-  'ellipsed'
-], function ($, ellipsed) {
+  'ellipsed',
+  'fa'
+], function ($, ellipsed, fa) {
   'use strict';
 
   var ellipsis = ellipsed.ellipsis;
 
   $(document).ready(function () {
+    // init fontawesome icons
+    fa.init();
+
     /*
      *  return-to-top arrow
      */

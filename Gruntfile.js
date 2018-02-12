@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 module.exports = function(grunt) {
   'use strict';
   require('load-grunt-tasks')(grunt);
@@ -79,6 +81,42 @@ module.exports = function(grunt) {
         dest: 'css/redturtle-agidtheme-bundle.css',
       },
     },
+    webpack: {
+      options: {
+        stats: !process.env.NODE_ENV || process.env.NODE_ENV === 'development',
+      },
+      fa: {
+        entry: './js/src/fa',
+        output: {
+          filename: 'fa.js',
+          path: require('path').resolve(
+            __dirname,
+            'src/redturtle/agidtheme/theme/js/dist'
+          ),
+          library: 'fa',
+          libraryTarget: 'amd',
+        },
+        module: {
+          rules: [
+            {
+              test: /\.js$/,
+              exclude: /(node_modules|bower_components)/,
+              use: {
+                loader: 'babel-loader',
+                options: {
+                  presets: ['env'],
+                },
+              },
+            },
+          ],
+        },
+        plugins: [
+          new webpack.DefinePlugin({
+            'process.env.NODE_ENV': '"production"',
+          }),
+        ],
+      },
+    },
     uglify: {
       agidtheme: {
         options: {
@@ -86,8 +124,8 @@ module.exports = function(grunt) {
           sourceMapIncludeSources: false,
         },
         files: {
-          '../browser/static/redturtle-agidtheme-bundle-compiled.min.js': [
-            '../browser/static/bundle-compiled.js',
+          'js/dist/redturtle-agidtheme-bundle-compiled.min.js': [
+            'js/dist/bundle-compiled.js',
           ],
         },
       },
@@ -95,17 +133,18 @@ module.exports = function(grunt) {
     requirejs: {
       'redturtle-agidtheme': {
         options: {
-          baseUrl: '../browser/',
+          baseUrl: './',
           generateSourceMaps: true,
           preserveLicenseComments: false,
           paths: {
             jquery: 'empty:',
             ellipsed: '../../../../node_modules/ellipsed/lib/ellipsed',
+            fa: './js/dist/fa',
           },
           wrapShim: true,
-          name: '../browser/static/integration.js',
+          name: './js/src/index.js',
           exclude: ['jquery'],
-          out: '../browser/static/bundle-compiled.js',
+          out: './js/dist/bundle-compiled.js',
           optimize: 'none',
         },
       },
@@ -121,9 +160,13 @@ module.exports = function(grunt) {
         tasks: ['less', 'sass', 'postcss', 'concat_css'],
       },
       scripts: {
-        files: ['../browser/static/integration.js'],
+        files: ['js/src/index.js'],
         tasks: ['requirejs', 'uglify'],
       },
+      fa: {
+        files: ['js/src/fa.js'],
+        tasks: ['webpack', 'requirejs', 'uglify'],
+      }
     },
     browserSync: {
       html: {
@@ -163,6 +206,7 @@ module.exports = function(grunt) {
     'sass',
     'postcss',
     'concat_css',
+    'webpack',
     'requirejs',
     'uglify',
   ]);
