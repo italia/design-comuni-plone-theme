@@ -101,6 +101,7 @@ module.exports = function(grunt) {
           paths: {
             jquery: 'empty:',
             ellipsed: '../../../../node_modules/ellipsed/lib/ellipsed',
+            fontawesome: '../browser/static/fontawesome/22e75ec526',
           },
           wrapShim: true,
           name: '../browser/static/integration.js',

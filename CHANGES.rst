@@ -5,7 +5,8 @@ Changelog
 1.1.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Removed fontawesome import via network and added locally [nzambello]
+- Added fontawesome JS resource to theme bundle [nzambello]
 
 
 1.1.7 (2018-02-07)

@@ -1,7 +1,8 @@
 require([
   'jquery',
-  'ellipsed'
-], function ($, ellipsed) {
+  'ellipsed',
+  'fontawesome'
+], function ($, ellipsed, fontawesome) {
   'use strict';
 
   var ellipsis = ellipsed.ellipsis;

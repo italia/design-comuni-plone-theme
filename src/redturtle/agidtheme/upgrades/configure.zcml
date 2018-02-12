@@ -175,4 +175,13 @@
     />
   </genericsetup:upgradeSteps>
 
+  <genericsetup:upgradeStep
+    source="1200"
+    destination="1300"
+    profile="redturtle.agidtheme:default"
+    title="Import plone registry"
+    description="Added fontawesome JS resource to theme bundle"
+    handler=".upgrades.import_records_registry"
+  />
+
 </configure>

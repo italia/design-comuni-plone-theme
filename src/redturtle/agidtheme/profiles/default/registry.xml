@@ -106,6 +106,10 @@
            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
       <value key="js">++plone++redturtle.agidtheme/bundle-compiled.js</value>
   </records>
+  <records prefix="plone.resources/redturtle-agidtheme-fontawesome"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+      <value key="js">++plone++redturtle.agidtheme/fontawesome/22e75ec526.js</value>
+  </records>
 
   <!-- BUNDLES -->
   <records prefix="plone.bundles/redturtle-agidtheme-css-bundle"
@@ -124,6 +128,7 @@
     <value key="enabled">True</value>
     <value key="resources" purge="false">
       <element>redturtle-agidtheme-js</element>
+      <element>redturtle-agidtheme-fontawesome</element>
     </value>
     <value key="jscompilation">++plone++redturtle.agidtheme/redturtle-agidtheme-bundle-compiled.min.js</value>
     <value key="last_compilation">2019-11-26 00:00:00</value>
