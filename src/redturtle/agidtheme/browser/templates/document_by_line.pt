@@ -2,6 +2,7 @@
      id="plone-document-byline"
      i18n:domain="plone"
      tal:condition="view/show">
+  <i class="far fa-calendar-alt"></i>
   <tal:creator tal:define="creator_short_form view/creator;"
                tal:condition="creator_short_form">
   <tal:name tal:define="creator_long_form string:?author=${creator_short_form};

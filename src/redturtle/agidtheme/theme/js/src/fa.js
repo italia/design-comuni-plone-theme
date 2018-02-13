@@ -15,6 +15,7 @@ import faHome from '@fortawesome/fontawesome-free-solid/faHome';
 import faChevronUp from '@fortawesome/fontawesome-free-solid/faChevronUp';
 import faChevronDown from '@fortawesome/fontawesome-free-solid/faChevronDown';
 import faSearch from '@fortawesome/fontawesome-free-solid/faSearch';
+import faCalendarAlt from '@fortawesome/fontawesome-free-regular/faCalendarAlt';
 
 export const init = () => {
   fontawesome.library.add(
@@ -34,5 +35,6 @@ export const init = () => {
     faChevronUp,
     faChevronDown,
     faSearch,
+    faCalendarAlt,
   );
 };
