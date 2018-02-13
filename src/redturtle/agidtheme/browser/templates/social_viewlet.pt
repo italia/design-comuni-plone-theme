@@ -16,7 +16,7 @@
                 <tal:results tal:repeat="social results"
                 ><li
                     ><a tal:attributes="href python: view.get_sharer_url(social); title python: social.title() + ' - apri in una nuova scheda'" href="#" title="Apri in una nuova scheda" target="_blank"
-                        ><span tal:attributes="class python: 'social ' + social" class=""></span
+                        ><span tal:attributes="class python: view.get_css_class(social)" class=""></span
                         ><span tal:content="python: social.title()" class="u-hiddenVisually">Social</span
                     ></a
                 ></li

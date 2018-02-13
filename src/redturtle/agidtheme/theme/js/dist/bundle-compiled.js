@@ -232,18 +232,62 @@ var _faTwitter = __webpack_require__(3);
 
 var _faTwitter2 = _interopRequireDefault(_faTwitter);
 
-var _faInstagram = __webpack_require__(4);
+var _faTelegram = __webpack_require__(4);
+
+var _faTelegram2 = _interopRequireDefault(_faTelegram);
+
+var _faInstagram = __webpack_require__(5);
 
 var _faInstagram2 = _interopRequireDefault(_faInstagram);
 
-var _faMediumM = __webpack_require__(5);
+var _faYoutube = __webpack_require__(6);
+
+var _faYoutube2 = _interopRequireDefault(_faYoutube);
+
+var _faLinkedinIn = __webpack_require__(7);
+
+var _faLinkedinIn2 = _interopRequireDefault(_faLinkedinIn);
+
+var _faMediumM = __webpack_require__(8);
 
 var _faMediumM2 = _interopRequireDefault(_faMediumM);
+
+var _faGooglePlusG = __webpack_require__(9);
+
+var _faGooglePlusG2 = _interopRequireDefault(_faGooglePlusG);
+
+var _faPinterest = __webpack_require__(10);
+
+var _faPinterest2 = _interopRequireDefault(_faPinterest);
+
+var _faGetPocket = __webpack_require__(11);
+
+var _faGetPocket2 = _interopRequireDefault(_faGetPocket);
+
+var _faRss = __webpack_require__(12);
+
+var _faRss2 = _interopRequireDefault(_faRss);
+
+var _faNewspaper = __webpack_require__(13);
+
+var _faNewspaper2 = _interopRequireDefault(_faNewspaper);
+
+var _faHome = __webpack_require__(14);
+
+var _faHome2 = _interopRequireDefault(_faHome);
+
+var _faChevronUp = __webpack_require__(15);
+
+var _faChevronUp2 = _interopRequireDefault(_faChevronUp);
+
+var _faChevronDown = __webpack_require__(16);
+
+var _faChevronDown2 = _interopRequireDefault(_faChevronDown);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var init = exports.init = function init() {
-  _fontawesome2.default.library.add(_faFacebookF2.default, _faTwitter2.default, _faInstagram2.default, _faMediumM2.default);
+  _fontawesome2.default.library.add(_faFacebookF2.default, _faTwitter2.default, _faTelegram2.default, _faInstagram2.default, _faYoutube2.default, _faLinkedinIn2.default, _faMediumM2.default, _faGooglePlusG2.default, _faPinterest2.default, _faGetPocket2.default, _faRss2.default, _faNewspaper2.default, _faHome2.default, _faChevronUp2.default, _faChevronDown2.default);
 };
 
 /***/ }),
@@ -2074,13 +2118,79 @@ module.exports = { prefix: 'fab', iconName: 'twitter', icon: [512, 512, [], "f09
 /* 4 */
 /***/ (function(module, exports) {
 
-module.exports = { prefix: 'fab', iconName: 'instagram', icon: [448, 512, [], "f16d", "M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"] };
+module.exports = { prefix: 'fab', iconName: 'telegram', icon: [496, 512, [], "f2c6", "M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"] };
 
 /***/ }),
 /* 5 */
 /***/ (function(module, exports) {
 
+module.exports = { prefix: 'fab', iconName: 'instagram', icon: [448, 512, [], "f16d", "M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"] };
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+module.exports = { prefix: 'fab', iconName: 'youtube', icon: [576, 512, [], "f167", "M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"] };
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
+
+module.exports = { prefix: 'fab', iconName: 'linkedin-in', icon: [448, 512, [], "f0e1", "M100.3 480H7.4V180.9h92.9V480zM53.8 140.1C24.1 140.1 0 115.5 0 85.8 0 56.1 24.1 32 53.8 32c29.7 0 53.8 24.1 53.8 53.8 0 29.7-24.1 54.3-53.8 54.3zM448 480h-92.7V334.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V480h-92.8V180.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V480z"] };
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
 module.exports = { prefix: 'fab', iconName: 'medium-m', icon: [512, 512, [], "f3c7", "M71.5 142.3c.6-5.9-1.7-11.8-6.1-15.8L20.3 72.1V64h140.2l108.4 237.7L364.2 64h133.7v8.1l-38.6 37c-3.3 2.5-5 6.7-4.3 10.8v272c-.7 4.1 1 8.3 4.3 10.8l37.7 37v8.1H307.3v-8.1l39.1-37.9c3.8-3.8 3.8-5 3.8-10.8V171.2L241.5 447.1h-14.7L100.4 171.2v184.9c-1.1 7.8 1.5 15.6 7 21.2l50.8 61.6v8.1h-144v-8L65 377.3c5.4-5.6 7.9-13.5 6.5-21.2V142.3z"] };
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports) {
+
+module.exports = { prefix: 'fab', iconName: 'google-plus-g', icon: [640, 512, [], "f0d5", "M386.061 228.496c1.834 9.692 3.143 19.384 3.143 31.956C389.204 370.205 315.599 448 204.8 448c-106.084 0-192-85.915-192-192s85.916-192 192-192c51.864 0 95.083 18.859 128.611 50.292l-52.126 50.03c-14.145-13.621-39.028-29.599-76.485-29.599-65.484 0-118.92 54.221-118.92 121.277 0 67.056 53.436 121.277 118.92 121.277 75.961 0 104.513-54.745 108.965-82.773H204.8v-66.009h181.261zm185.406 6.437V179.2h-56.001v55.733h-55.733v56.001h55.733v55.733h56.001v-55.733H627.2v-56.001h-55.733z"] };
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports) {
+
+module.exports = { prefix: 'fab', iconName: 'pinterest', icon: [496, 512, [], "f0d2", "M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z"] };
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
+module.exports = { prefix: 'fab', iconName: 'get-pocket', icon: [448, 512, [], "f265", "M407.6 64h-367C18.5 64 0 82.5 0 104.6v135.2C0 364.5 99.7 464 224.2 464c124 0 223.8-99.5 223.8-224.2V104.6c0-22.4-17.7-40.6-40.4-40.6zm-162 268.5c-12.4 11.8-31.4 11.1-42.4 0C89.5 223.6 88.3 227.4 88.3 209.3c0-16.9 13.8-30.7 30.7-30.7 17 0 16.1 3.8 105.2 89.3 90.6-86.9 88.6-89.3 105.5-89.3 16.9 0 30.7 13.8 30.7 30.7 0 17.8-2.9 15.7-114.8 123.2z"] };
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports) {
+
+module.exports = { prefix: 'fas', iconName: 'rss', icon: [448, 512, [], "f09e", "M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328 0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765 0 183.105 0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686 0 38.981 0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z"] };
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports) {
+
+module.exports = { prefix: 'far', iconName: 'newspaper', icon: [576, 512, [], "f1ea", "M552 64H112c-20.858 0-38.643 13.377-45.248 32H24c-13.255 0-24 10.745-24 24v272c0 30.928 25.072 56 56 56h496c13.255 0 24-10.745 24-24V88c0-13.255-10.745-24-24-24zM48 392V144h16v248c0 4.411-3.589 8-8 8s-8-3.589-8-8zm480 8H111.422c.374-2.614.578-5.283.578-8V112h416v288zM172 280h136c6.627 0 12-5.373 12-12v-96c0-6.627-5.373-12-12-12H172c-6.627 0-12 5.373-12 12v96c0 6.627 5.373 12 12 12zm28-80h80v40h-80v-40zm-40 140v-24c0-6.627 5.373-12 12-12h136c6.627 0 12 5.373 12 12v24c0 6.627-5.373 12-12 12H172c-6.627 0-12-5.373-12-12zm192 0v-24c0-6.627 5.373-12 12-12h104c6.627 0 12 5.373 12 12v24c0 6.627-5.373 12-12 12H364c-6.627 0-12-5.373-12-12zm0-144v-24c0-6.627 5.373-12 12-12h104c6.627 0 12 5.373 12 12v24c0 6.627-5.373 12-12 12H364c-6.627 0-12-5.373-12-12zm0 72v-24c0-6.627 5.373-12 12-12h104c6.627 0 12 5.373 12 12v24c0 6.627-5.373 12-12 12H364c-6.627 0-12-5.373-12-12z"] };
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports) {
+
+module.exports = { prefix: 'fas', iconName: 'home', icon: [576, 512, [], "f015", "M488 312.7V456c0 13.3-10.7 24-24 24H348c-6.6 0-12-5.4-12-12V356c0-6.6-5.4-12-12-12h-72c-6.6 0-12 5.4-12 12v112c0 6.6-5.4 12-12 12H112c-13.3 0-24-10.7-24-24V312.7c0-3.6 1.6-7 4.4-9.3l188-154.8c4.4-3.6 10.8-3.6 15.3 0l188 154.8c2.7 2.3 4.3 5.7 4.3 9.3zm83.6-60.9L488 182.9V44.4c0-6.6-5.4-12-12-12h-56c-6.6 0-12 5.4-12 12V117l-89.5-73.7c-17.7-14.6-43.3-14.6-61 0L4.4 251.8c-5.1 4.2-5.8 11.8-1.6 16.9l25.5 31c4.2 5.1 11.8 5.8 16.9 1.6l235.2-193.7c4.4-3.6 10.8-3.6 15.3 0l235.2 193.7c5.1 4.2 12.7 3.5 16.9-1.6l25.5-31c4.2-5.2 3.4-12.7-1.7-16.9z"] };
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports) {
+
+module.exports = { prefix: 'fas', iconName: 'chevron-up', icon: [448, 512, [], "f077", "M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z"] };
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports) {
+
+module.exports = { prefix: 'fas', iconName: 'chevron-down', icon: [448, 512, [], "f078", "M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"] };
 
 /***/ })
 /******/ ])});;
@@ -2093,8 +2203,80 @@ require([
 
   var ellipsis = ellipsed.ellipsis;
 
+  // adding some <i> via js for fontawesome icons
+  var icons = [
+    {
+      selector: '#breadcrumbs-home a',
+      icon: 'fas fa-home',
+      prepend: true,
+    },
+    {
+      selector: '.footer-social .fb',
+      icon: 'fab fa-facebook-f',
+      prepend: true,
+    },
+    {
+      selector: '.footer-social .ig',
+      icon: 'fab fa-instagram',
+      prepend: true,
+    },
+    {
+      selector: '.footer-social .tw',
+      icon: 'fab fa-twitter',
+      prepend: true,
+    },
+    {
+      selector: '.footer-social .tg',
+      icon: 'fab fa-telegram',
+      prepend: true,
+    },
+    {
+      selector: '.footer-social .yt',
+      icon: 'fab fa-youtube',
+      prepend: true,
+    },
+    {
+      selector: '.footer-social .in',
+      icon: 'fab fa-linkedin-in',
+      prepend: true,
+    },
+    {
+      selector: '.footer-social .gp',
+      icon: 'fab fa-google-plus-g',
+      prepend: true,
+    },
+    {
+      selector: '.footer-social .pi',
+      icon: 'fab fa-pinterest',
+      prepend: true,
+    },
+    {
+      selector: '.footer-social .po',
+      icon: 'fab fa-get-pocket',
+      prepend: true,
+    },
+    {
+      selector: '.footer-social .rss',
+      icon: 'fas fa-rss',
+      prepend: true,
+    },
+  ];
+
   $(document).ready(function () {
+    $('#breadcrumbs-home a').text('');
+
     // init fontawesome icons
+    icons.forEach(function(i) {
+      var $el = $(i.selector);
+
+      if (i.prepend) {
+        $el.prepend('<i class="' + i.icon + '"></i>');
+      }
+      else {
+        $el.append('<i class="' + i.icon + '"></i>');
+      }
+    });
+
     fa.init();
 
     /*

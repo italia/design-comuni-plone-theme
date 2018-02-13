@@ -16,47 +16,16 @@
 
             a {
                 display: inline-block;
+                border-radius: 100%;
+                background-color: $brand-primary;
+                color: #FFF;
+                width: 3rem;
+                height: 3rem;
+                text-align: center;
+                font-size: 2rem;
+                line-height: 30px;
+                vertical-align: middle;
 
-                &:before {
-                    display: inline-block;
-                    border-radius: 100%;
-                    background-color: $brand-primary;
-                    color: #FFF;
-                    width: 3rem;
-                    height: 3rem;
-                    text-align: center;
-                    font-size: 2rem;
-                    line-height: 30px;
-                    vertical-align: middle;
-                }
-                &.sc-facebook:before {
-                    @include make-fa('\f09a', #FFF);
-                }
-                &.sc-twitter:before {
-                    @include make-fa('\f099', #FFF);
-                }
-                &.sc-youtube:before {
-                    @include make-fa('\f167', #FFF);
-                }
-                &.sc-linkedin:before {
-                    @include make-fa('\f0e1', #FFF);
-                }
-                &.sc-instagram:before {
-                    @include make-fa('\f16d', #FFF);
-                }
-                &.sc-medium:before {
-                    background-image: url($img-path + 'mediumHover.svg'); // *Hover perchè deve essere bianco -> vedi footer
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                    background-size: 75%;
-                    content:'';
-                }
-                &.sc-youtube:before {
-                    @include make-fa('\f167', #FFF);
-                }
-                &.sc-telegram:before {
-                    @include make-fa('\f2c6', #FFF);
-                }
                 &.sc-storify:before {
                     content: "";
                     vertical-align: bottom;
@@ -65,22 +34,10 @@
                     background-repeat: no-repeat;
                     background-position: center center;
                 }
-                &.sc-rss:before {
-                    @include make-fa('\f09e', #FFF);
-                }
-                &.sc-newsletter:before {
-                    content: "";
-                    background-image: url($img-path + 'newsletterHover.svg');
-                    background-size: 75%;
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                }
 
                 &:focus,
                 &:hover {
-                    &:before {
-                        background-color: $gray;
-                    }
+                    background-color: $gray;
                 }
 
                 span {

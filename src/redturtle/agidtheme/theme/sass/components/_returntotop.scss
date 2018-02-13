@@ -12,7 +12,7 @@
     transition: all 0.3s linear;
     z-index: 1000;
 
-    span {
+    svg {
         color: #fff;
         margin: 0;
         position: relative;
@@ -25,7 +25,7 @@
     &:active {
         background: rgba(0, 0, 0, 0.9);
 
-        span {
+        svg {
             color: #fff;
             top: 5px;
         }

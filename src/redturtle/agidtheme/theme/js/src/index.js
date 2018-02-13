@@ -7,8 +7,80 @@ require([
 
   var ellipsis = ellipsed.ellipsis;
 
+  // adding some <i> via js for fontawesome icons
+  var icons = [
+    {
+      selector: '#breadcrumbs-home a',
+      icon: 'fas fa-home',
+      prepend: true,
+    },
+    {
+      selector: '.footer-social .fb',
+      icon: 'fab fa-facebook-f',
+      prepend: true,
+    },
+    {
+      selector: '.footer-social .ig',
+      icon: 'fab fa-instagram',
+      prepend: true,
+    },
+    {
+      selector: '.footer-social .tw',
+      icon: 'fab fa-twitter',
+      prepend: true,
+    },
+    {
+      selector: '.footer-social .tg',
+      icon: 'fab fa-telegram',
+      prepend: true,
+    },
+    {
+      selector: '.footer-social .yt',
+      icon: 'fab fa-youtube',
+      prepend: true,
+    },
+    {
+      selector: '.footer-social .in',
+      icon: 'fab fa-linkedin-in',
+      prepend: true,
+    },
+    {
+      selector: '.footer-social .gp',
+      icon: 'fab fa-google-plus-g',
+      prepend: true,
+    },
+    {
+      selector: '.footer-social .pi',
+      icon: 'fab fa-pinterest',
+      prepend: true,
+    },
+    {
+      selector: '.footer-social .po',
+      icon: 'fab fa-get-pocket',
+      prepend: true,
+    },
+    {
+      selector: '.footer-social .rss',
+      icon: 'fas fa-rss',
+      prepend: true,
+    },
+  ];
+
   $(document).ready(function () {
+    $('#breadcrumbs-home a').text('');
+
     // init fontawesome icons
+    icons.forEach(function(i) {
+      var $el = $(i.selector);
+
+      if (i.prepend) {
+        $el.prepend('<i class="' + i.icon + '"></i>');
+      }
+      else {
+        $el.append('<i class="' + i.icon + '"></i>');
+      }
+    });
+
     fa.init();
 
     /*

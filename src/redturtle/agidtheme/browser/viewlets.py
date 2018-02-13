@@ -14,6 +14,21 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+socialCSSClassDict = {
+    'facebook': 'fab fa-facebook-f',
+    'twitter': 'fab fa-twitter',
+    'instagram': 'fab fa-instagram',
+    'telegram': 'fab fa-telegram',
+    'youtube': 'fab fa-youtube',
+    'linkedin': 'fab fa-linkedin-in',
+    'medium': 'fab fa-medium-m',
+    'newsletter': 'far fa-newspaper',
+    'rss': 'fas fa-rss',
+    'google': 'fab fa-google-plus-g',
+    'pinterest': 'fab fa-pinterest',
+    'pocket': 'fab fa-get-pocket',
+}
+
 
 class CustomDocumentBylineViewlet(DocumentBylineViewlet):
 
@@ -48,6 +63,10 @@ class SocialViewlet(base.ViewletBase):
             'available_socials',
             interface=IRedturtleAgidthemeSettings)
         return socials
+
+    def get_css_class(self, social_type):
+        cssClass = SHARES[social_type]['cssClass']
+        return cssClass or ''
 
     def get_sharer_url(self, social_type):
         share_url = SHARES[social_type]['share_url']
@@ -97,7 +116,8 @@ class HeaderSocialViewlet(base.ViewletBase):
         for link in links:
             try:
                 social, url = link.split('|')
-                res.append({'id': social, 'url': url})
+                cssClass = socialCSSClassDict[social]
+                res.append({'id': social, 'url': url, 'cssClass': cssClass})
             except ValueError:
                 logger.warning(
                     '[HeaderSocialViewlet] - skipped entry "{0}"'
