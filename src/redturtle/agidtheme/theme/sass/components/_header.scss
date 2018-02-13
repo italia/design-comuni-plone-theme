@@ -122,19 +122,21 @@
         }
 
         button#search-toggle {
-            .icon {
-                &:before {
-                    @include make-fa('\f002');
-                    vertical-align: middle;
-                }
+            .close-icon {
+                display: none;
             }
 
             &.open {
-                .icon {
+                .close-icon {
+                    display: block;
+
                     &:before {
                         @include make-ita('\1f5f5');
-                        font-size: 0.9em;
                     }
+                }
+
+                svg.fa-search {
+                    display: none;
                 }
             }
         }

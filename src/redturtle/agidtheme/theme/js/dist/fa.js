@@ -139,10 +139,14 @@ var _faChevronDown = __webpack_require__(16);
 
 var _faChevronDown2 = _interopRequireDefault(_faChevronDown);
 
+var _faSearch = __webpack_require__(17);
+
+var _faSearch2 = _interopRequireDefault(_faSearch);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var init = exports.init = function init() {
-  _fontawesome2.default.library.add(_faFacebookF2.default, _faTwitter2.default, _faTelegram2.default, _faInstagram2.default, _faYoutube2.default, _faLinkedinIn2.default, _faMediumM2.default, _faGooglePlusG2.default, _faPinterest2.default, _faGetPocket2.default, _faRss2.default, _faNewspaper2.default, _faHome2.default, _faChevronUp2.default, _faChevronDown2.default);
+  _fontawesome2.default.library.add(_faFacebookF2.default, _faTwitter2.default, _faTelegram2.default, _faInstagram2.default, _faYoutube2.default, _faLinkedinIn2.default, _faMediumM2.default, _faGooglePlusG2.default, _faPinterest2.default, _faGetPocket2.default, _faRss2.default, _faNewspaper2.default, _faHome2.default, _faChevronUp2.default, _faChevronDown2.default, _faSearch2.default);
 };
 
 /***/ }),
@@ -2046,6 +2050,12 @@ module.exports = { prefix: 'fas', iconName: 'chevron-up', icon: [448, 512, [], "
 /***/ (function(module, exports) {
 
 module.exports = { prefix: 'fas', iconName: 'chevron-down', icon: [448, 512, [], "f078", "M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"] };
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports) {
+
+module.exports = { prefix: 'fas', iconName: 'search', icon: [512, 512, [], "f002", "M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"] };
 
 /***/ })
 /******/ ])});;

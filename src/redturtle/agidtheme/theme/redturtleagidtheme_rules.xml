@@ -55,7 +55,8 @@
                 aria-controls="portal-searchbox"
                 aria-label="Apri/chiudi ricerca"
                 title="Apri/chiudi ricerca">
-          <span class="icon"></span>
+          <i class="fas fa-search"></i>
+          <span class="close-icon"></span>
           <span class="sr-only">SEARCH</span>
         </button>
         <div class="plone-navbar-header">

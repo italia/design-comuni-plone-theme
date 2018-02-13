@@ -14,6 +14,7 @@ import faNewspaper from '@fortawesome/fontawesome-free-regular/faNewspaper';
 import faHome from '@fortawesome/fontawesome-free-solid/faHome';
 import faChevronUp from '@fortawesome/fontawesome-free-solid/faChevronUp';
 import faChevronDown from '@fortawesome/fontawesome-free-solid/faChevronDown';
+import faSearch from '@fortawesome/fontawesome-free-solid/faSearch';
 
 export const init = () => {
   fontawesome.library.add(
@@ -32,5 +33,6 @@ export const init = () => {
     faHome,
     faChevronUp,
     faChevronDown,
+    faSearch,
   );
 };
