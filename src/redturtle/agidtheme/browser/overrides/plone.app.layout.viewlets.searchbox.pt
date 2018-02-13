@@ -10,25 +10,27 @@
                           class python: view.livesearch and 'pat-livesearch' or ''">
 
         <div class="LSBox">
-        <label class="hiddenStructure"
-               for="searchGadget"
-               i18n:translate="text_search">Search Site</label>
+          <label class="hiddenStructure"
+                 for="searchGadget"
+                 i18n:translate="text_search">Search Site</label>
 
-        <input name="SearchableText"
-               type="text"
-               size="18"
-               value=""
-               id="searchGadget"
-               title="Search Site"
-               placeholder="Search Site"
-               i18n:attributes="title title_search_site;
-                                placeholder title_search_site"
-               tal:attributes="value request/form/SearchableText|nothing;"
-               class="searchField" />
+          <input name="SearchableText"
+                 type="text"
+                 size="18"
+                 value=""
+                 id="searchGadget"
+                 title="Search Site"
+                 placeholder="Search Site"
+                 i18n:attributes="title title_search_site;
+                                  placeholder title_search_site"
+                 tal:attributes="value request/form/SearchableText|nothing;"
+                 class="searchField" />
 
-        <button class="search-button" type="submit"
-                i18n:attributes="title label_search;
-                                 aria-label label_search"></button>
+          <button class="search-button" type="submit"
+                  i18n:attributes="title label_search;
+                                   aria-label label_search">
+              <i class="fas fa-search"></i>
+          </button>
 
         </div>
     </form>

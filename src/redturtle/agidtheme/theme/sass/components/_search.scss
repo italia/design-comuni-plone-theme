@@ -29,11 +29,7 @@
         font-weight: $regular;
         vertical-align: baseline;
         height: 50px;
-
-        &:before {
-            @include make-fa('\f002');
-            font-size: 2.6rem;
-        }
+        font-size: 2.6rem;
 
         &:focus,
         &:hover {
