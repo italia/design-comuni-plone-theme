@@ -15,10 +15,6 @@
             list-style: none;
 
             li {
-                padding-left: 2rem;
-                margin-bottom: 1.5rem;
-                position: relative;
-
                 a {
                     &:focus,
                     &:hover {
@@ -28,14 +24,13 @@
                     img.image-icon { display: none; }
                 }
 
-
-                &:before {
-                    @include make-fa('\f105');
+                svg {
                     color: $text-color;
                     font-size: 2rem;
-                    position: absolute;
-                    top: 0;
-                    left: 0;
+                }
+
+                > span {
+                    padding-left: 10px;
                 }
 
                 .discreet {

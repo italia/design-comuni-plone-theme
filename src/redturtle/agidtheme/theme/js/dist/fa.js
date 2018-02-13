@@ -139,22 +139,34 @@ var _faChevronDown = __webpack_require__(16);
 
 var _faChevronDown2 = _interopRequireDefault(_faChevronDown);
 
-var _faSearch = __webpack_require__(17);
+var _faChevronRight = __webpack_require__(17);
+
+var _faChevronRight2 = _interopRequireDefault(_faChevronRight);
+
+var _faChevronRight3 = __webpack_require__(18);
+
+var _faChevronRight4 = _interopRequireDefault(_faChevronRight3);
+
+var _faAngleRight = __webpack_require__(19);
+
+var _faAngleRight2 = _interopRequireDefault(_faAngleRight);
+
+var _faSearch = __webpack_require__(20);
 
 var _faSearch2 = _interopRequireDefault(_faSearch);
 
-var _faCalendarAlt = __webpack_require__(18);
+var _faCalendarAlt = __webpack_require__(21);
 
 var _faCalendarAlt2 = _interopRequireDefault(_faCalendarAlt);
 
-var _faTags = __webpack_require__(19);
+var _faTags = __webpack_require__(22);
 
 var _faTags2 = _interopRequireDefault(_faTags);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var init = exports.init = function init() {
-  _fontawesome2.default.library.add(_faFacebookF2.default, _faTwitter2.default, _faTelegram2.default, _faInstagram2.default, _faYoutube2.default, _faLinkedinIn2.default, _faMediumM2.default, _faGooglePlusG2.default, _faPinterest2.default, _faGetPocket2.default, _faRss2.default, _faNewspaper2.default, _faHome2.default, _faChevronUp2.default, _faChevronDown2.default, _faSearch2.default, _faCalendarAlt2.default, _faTags2.default);
+  _fontawesome2.default.library.add(_faFacebookF2.default, _faTwitter2.default, _faTelegram2.default, _faInstagram2.default, _faYoutube2.default, _faLinkedinIn2.default, _faMediumM2.default, _faGooglePlusG2.default, _faPinterest2.default, _faGetPocket2.default, _faRss2.default, _faNewspaper2.default, _faHome2.default, _faChevronUp2.default, _faChevronDown2.default, _faChevronRight2.default, _faChevronRight4.default, _faAngleRight2.default, _faSearch2.default, _faCalendarAlt2.default, _faTags2.default);
 };
 
 /***/ }),
@@ -2063,16 +2075,34 @@ module.exports = { prefix: 'fas', iconName: 'chevron-down', icon: [448, 512, [],
 /* 17 */
 /***/ (function(module, exports) {
 
-module.exports = { prefix: 'fas', iconName: 'search', icon: [512, 512, [], "f002", "M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"] };
+module.exports = { prefix: 'fas', iconName: 'chevron-right', icon: [320, 512, [], "f054", "M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"] };
 
 /***/ }),
 /* 18 */
 /***/ (function(module, exports) {
 
-module.exports = { prefix: 'far', iconName: 'calendar-alt', icon: [448, 512, [], "f073", "M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"] };
+module.exports = { prefix: 'fal', iconName: 'chevron-right', icon: [256, 512, [], "f054", "M17.525 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L205.947 256 10.454 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L34.495 36.465c-4.686-4.687-12.284-4.687-16.97 0z"] };
 
 /***/ }),
 /* 19 */
+/***/ (function(module, exports) {
+
+module.exports = { prefix: 'far', iconName: 'angle-right', icon: [192, 512, [], "f105", "M187.8 264.5L41 412.5c-4.7 4.7-12.3 4.7-17 0L4.2 392.7c-4.7-4.7-4.7-12.3 0-17L122.7 256 4.2 136.3c-4.7-4.7-4.7-12.3 0-17L24 99.5c4.7-4.7 12.3-4.7 17 0l146.8 148c4.7 4.7 4.7 12.3 0 17z"] };
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports) {
+
+module.exports = { prefix: 'fas', iconName: 'search', icon: [512, 512, [], "f002", "M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"] };
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports) {
+
+module.exports = { prefix: 'far', iconName: 'calendar-alt', icon: [448, 512, [], "f073", "M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"] };
+
+/***/ }),
+/* 22 */
 /***/ (function(module, exports) {
 
 module.exports = { prefix: 'fas', iconName: 'tags', icon: [640, 512, [], "f02c", "M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"] };

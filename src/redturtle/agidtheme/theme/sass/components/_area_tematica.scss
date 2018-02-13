@@ -94,6 +94,7 @@
             a {
                 line-height: 1em;
                 color: $text-color;
+                padding-left: 10px;
 
                 &:focus,
                 &:hover {
@@ -101,14 +102,10 @@
                     border-bottom: 1px solid $link-hover-color;
                 }
             }
-
-            &:before {
-                @include make-fa('\f105');
+            
+            svg {
                 color: $text-color;
                 font-size: 2rem;
-                position: absolute;
-                top: 0;
-                left: 0;
             }
         }
     }

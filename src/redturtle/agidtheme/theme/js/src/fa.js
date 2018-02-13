@@ -14,6 +14,9 @@ import faNewspaper from '@fortawesome/fontawesome-free-regular/faNewspaper';
 import faHome from '@fortawesome/fontawesome-free-solid/faHome';
 import faChevronUp from '@fortawesome/fontawesome-free-solid/faChevronUp';
 import faChevronDown from '@fortawesome/fontawesome-free-solid/faChevronDown';
+import faChevronRight from '@fortawesome/fontawesome-free-solid/faChevronRight';
+import faChevronRightL from '@fortawesome/fontawesome-pro-light/faChevronRight';
+import faAngleRight from '@fortawesome/fontawesome-pro-regular/faAngleRight';
 import faSearch from '@fortawesome/fontawesome-free-solid/faSearch';
 import faCalendarAlt from '@fortawesome/fontawesome-free-regular/faCalendarAlt';
 import faTags from '@fortawesome/fontawesome-free-solid/faTags';
@@ -35,6 +38,9 @@ export const init = () => {
     faHome,
     faChevronUp,
     faChevronDown,
+    faChevronRight,
+    faChevronRightL,
+    faAngleRight,
     faSearch,
     faCalendarAlt,
     faTags,
