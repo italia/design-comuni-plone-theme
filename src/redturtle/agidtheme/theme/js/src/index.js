@@ -64,6 +64,16 @@ require([
       icon: 'fas fa-rss',
       prepend: true,
     },
+    {
+      selector: '.navigationTile a.navTreeFolderish:not(.navTreeCurrentNode):not(.navTreeItemInPath), .portletNavigationTree a.navTreeFolderish:not(.navTreeCurrentNode):not(.navTreeItemInPath)',
+      icon: 'far fa-angle-down',
+      prepend: false,
+    },
+    {
+      selector: '.navigationTile a.navTreeFolderish.navTreeCurrentNode, .navigationTile a.navTreeFolderish.navTreeItemInPath, .portletNavigationTree a.navTreeFolderish.navTreeCurrentNode, .portletNavigationTree a.navTreeFolderish.navTreeItemInPath',
+      icon: 'far fa-angle-up',
+      prepend: false,
+    },
   ];
 
   $(document).ready(function () {
