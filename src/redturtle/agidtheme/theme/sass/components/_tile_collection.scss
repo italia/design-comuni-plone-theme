@@ -131,7 +131,6 @@
                 background-color: rgba(0, 0, 0, 0.4);
 
                 &:after {
-                    // @include make-fa('\f01d', rgba(255, 255, 255, 0.6));
                     content: "";
                     display: inline-block;
                     width: 100%;
@@ -157,12 +156,6 @@
             }
         }
     }
-
-    // &.news-collection {
-    //     .collectionItemWrapper {
-    //         // padding-bottom: 2em;
-    //     }
-    // }
 
     &.gallery-collection {
         .collectionItemWrapper {
@@ -328,7 +321,6 @@
 }
 
 .aree-tematiche-collection {
-    // padding-bottom: 40px;
     position: relative;
 
     .tileTitle {
