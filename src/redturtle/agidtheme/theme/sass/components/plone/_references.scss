@@ -34,9 +34,12 @@
             left: 4px;
             top: 0.7em;
             position: absolute;
-            @include make-fa('\f111');
             color: $brand-primary;
-
+            content: ' ';
+            width: 10px;
+            height: 10px;
+            background: $brand-primary;
+            border-radius: 100%;
         }
     }
 }

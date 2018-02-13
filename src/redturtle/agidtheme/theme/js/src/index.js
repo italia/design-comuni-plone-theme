@@ -15,6 +15,11 @@ require([
       prepend: true,
     },
     {
+      selector: '.template-album_view .photoAlbumEntry.photoAlbumFolder .photoAlbumEntryTitle',
+      icon: 'fas fa-folder-open',
+      prepend: true,
+    },
+    {
       selector: '.footer-social .fb',
       icon: 'fab fa-facebook-f',
       prepend: true,

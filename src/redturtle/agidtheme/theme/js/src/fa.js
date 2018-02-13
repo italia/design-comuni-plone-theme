@@ -22,6 +22,7 @@ import faAngleDownR from '@fortawesome/fontawesome-pro-regular/faAngleDown';
 import faSearch from '@fortawesome/fontawesome-free-solid/faSearch';
 import faCalendarAlt from '@fortawesome/fontawesome-free-regular/faCalendarAlt';
 import faTags from '@fortawesome/fontawesome-free-solid/faTags';
+import faFolderOpen from '@fortawesome/fontawesome-free-solid/faFolderOpen';
 
 export const init = () => {
   fontawesome.library.add(
@@ -48,5 +49,6 @@ export const init = () => {
     faSearch,
     faCalendarAlt,
     faTags,
+    faFolderOpen,
   );
 };

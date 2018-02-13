@@ -316,10 +316,14 @@ var _faTags = __webpack_require__(24);
 
 var _faTags2 = _interopRequireDefault(_faTags);
 
+var _faFolderOpen = __webpack_require__(25);
+
+var _faFolderOpen2 = _interopRequireDefault(_faFolderOpen);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var init = exports.init = function init() {
-  _fontawesome2.default.library.add(_faFacebookF2.default, _faTwitter2.default, _faTelegram2.default, _faInstagram2.default, _faYoutube2.default, _faLinkedinIn2.default, _faMediumM2.default, _faGooglePlusG2.default, _faPinterest2.default, _faGetPocket2.default, _faRss2.default, _faNewspaper2.default, _faHome2.default, _faChevronUp2.default, _faChevronDown2.default, _faChevronRight2.default, _faChevronRight4.default, _faAngleRight2.default, _faAngleUp2.default, _faAngleDown2.default, _faSearch2.default, _faCalendarAlt2.default, _faTags2.default);
+  _fontawesome2.default.library.add(_faFacebookF2.default, _faTwitter2.default, _faTelegram2.default, _faInstagram2.default, _faYoutube2.default, _faLinkedinIn2.default, _faMediumM2.default, _faGooglePlusG2.default, _faPinterest2.default, _faGetPocket2.default, _faRss2.default, _faNewspaper2.default, _faHome2.default, _faChevronUp2.default, _faChevronDown2.default, _faChevronRight2.default, _faChevronRight4.default, _faAngleRight2.default, _faAngleUp2.default, _faAngleDown2.default, _faSearch2.default, _faCalendarAlt2.default, _faTags2.default, _faFolderOpen2.default);
 };
 
 /***/ }),
@@ -2272,6 +2276,12 @@ module.exports = { prefix: 'far', iconName: 'calendar-alt', icon: [448, 512, [],
 
 module.exports = { prefix: 'fas', iconName: 'tags', icon: [640, 512, [], "f02c", "M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"] };
 
+/***/ }),
+/* 25 */
+/***/ (function(module, exports) {
+
+module.exports = { prefix: 'fas', iconName: 'folder-open', icon: [576, 512, [], "f07c", "M572.694 292.093L500.27 416.248A63.997 63.997 0 0 1 444.989 448H45.025c-18.523 0-30.064-20.093-20.731-36.093l72.424-124.155A64 64 0 0 1 152 256h399.964c18.523 0 30.064 20.093 20.73 36.093zM152 224h328v-48c0-26.51-21.49-48-48-48H272l-64-64H48C21.49 64 0 85.49 0 112v278.046l69.077-118.418C86.214 242.25 117.989 224 152 224z"] };
+
 /***/ })
 /******/ ])});;
 require([
@@ -2288,6 +2298,11 @@ require([
     {
       selector: '#breadcrumbs-home a',
       icon: 'fas fa-home',
+      prepend: true,
+    },
+    {
+      selector: '.template-album_view .photoAlbumEntry.photoAlbumFolder .photoAlbumEntryTitle',
+      icon: 'fas fa-folder-open',
       prepend: true,
     },
     {

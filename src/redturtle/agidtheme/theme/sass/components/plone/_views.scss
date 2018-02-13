@@ -80,7 +80,6 @@
       width: 220px;
 
       a {
-        display: block;
         height: 100%;
         display: flex;
         flex-flow: column;
@@ -113,10 +112,6 @@
 
         .photoAlbumEntryTitle {
           font-weight: bold;
-
-          &:before {
-            @include make-fa('\f07c');
-          }
         }
       }
     }
