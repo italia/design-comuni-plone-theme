@@ -23,6 +23,9 @@ import faSearch from '@fortawesome/fontawesome-free-solid/faSearch';
 import faCalendarAlt from '@fortawesome/fontawesome-free-regular/faCalendarAlt';
 import faTags from '@fortawesome/fontawesome-free-solid/faTags';
 import faFolderOpen from '@fortawesome/fontawesome-free-solid/faFolderOpen';
+import faFilter from '@fortawesome/fontawesome-free-solid/faFilter';
+import faStar from '@fortawesome/fontawesome-free-solid/faStar';
+import faSortAlphaDown from '@fortawesome/fontawesome-pro-regular/faSortAlphaDown';
 
 export const init = () => {
   fontawesome.library.add(
@@ -50,5 +53,8 @@ export const init = () => {
     faCalendarAlt,
     faTags,
     faFolderOpen,
+    faFilter,
+    faStar,
+    faSortAlphaDown,
   );
 };
