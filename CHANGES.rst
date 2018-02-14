@@ -6,7 +6,7 @@ Changelog
 ------------------
 
 [BREAKING CHANGES]:
-- Moved JS resources to browser/ folder [nzambello]
+- Moved JS resources to theme/ folder [nzambello]
 - Migrated icons and styles to FontAwesome 5 (import via JS, added its classes to templates) [nzambello]
 
 
