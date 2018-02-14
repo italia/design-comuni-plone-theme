@@ -1,0 +1,3 @@
+{
+  "extends": "@redturtle/eslint-config"
+}

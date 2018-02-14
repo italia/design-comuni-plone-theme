@@ -6,7 +6,7 @@
 
 #header-banner {
     background-color: $gray-agid;
-    color: #FFF;
+    color: #fff;
     font-weight: $semibold;
     padding: 1.3rem 0;
     @include antialias;
@@ -21,11 +21,11 @@
         float: left;
 
         a {
-            color: #FFF;
+            color: #fff;
 
             &:focus,
             &:hover {
-                border-bottom: 1px solid #FFF;
+                border-bottom: 1px solid #fff;
             }
         }
     }
@@ -171,7 +171,6 @@
 
     &:hover,
     &:focus {
-
         span {
             border-bottom-color: $text-color;
         }
@@ -208,7 +207,7 @@
         position: relative;
 
         &:after {
-            content: "";
+            content: '';
             display: block;
             width: 100vw;
             height: 100vh;

@@ -33,7 +33,7 @@
 
             &:before {
                 padding-right: 15px;
-                @include make-ita("\23f5", #fff);
+                @include make-ita('\23f5', #fff);
                 font-size: 0.4em;
             }
         }
@@ -82,7 +82,7 @@
         display: inline-block;
 
         li {
-          float: left;
+            float: left;
 
             a {
                 display: inline-block;
@@ -100,7 +100,7 @@
                 }
 
                 &:before {
-                    color: #FFF;
+                    color: #fff;
                 }
 
                 svg {
@@ -110,7 +110,7 @@
 
                 &.st {
                     &:before {
-                        content: "";
+                        content: '';
                         vertical-align: bottom;
                         background-image: url($img-path + 'storify.svg');
                         background-size: 2rem;
@@ -123,10 +123,10 @@
                     background-repeat: no-repeat;
                     background-position: center center;
                     background-size: 75%;
-                    content:'';
+                    content: '';
                 }
                 &.newsletter:before {
-                    content: "";
+                    content: '';
                     background-image: url($img-path + 'newsletter.svg');
                     background-repeat: no-repeat;
                     background-position: center center;
@@ -135,7 +135,8 @@
 
                 &:focus,
                 &:hover {
-                    &:before, svg {
+                    &:before,
+                    svg {
                         background-color: $gray;
                         color: #fff;
                     }
@@ -154,7 +155,8 @@
 
                     &.newsletter {
                         &:before {
-                            background-image: url($img-path + 'newsletterHover.svg');
+                            background-image: url($img-path +
+                                'newsletterHover.svg');
                         }
                     }
                 }
@@ -172,7 +174,7 @@
 
     .newsletter {
         &:before {
-            @include make-ita("\1f4e7", #EEE);
+            @include make-ita('\1f4e7', #EEE);
             display: block;
             font-size: 1.5em;
         }

@@ -1,24 +1,25 @@
-@import "buttons";
-@import "portalMessage";
-@import "forms";
-@import "views";
-@import "tinymce";
-@import "references";
-@import "login";
-@import "contact";
-@import "managePortlets";
-@import "modals";
-@import "toolbar";
-@import "siteSetup";
+@import 'buttons';
+@import 'portalMessage';
+@import 'forms';
+@import 'views';
+@import 'tinymce';
+@import 'references';
+@import 'login';
+@import 'contact';
+@import 'managePortlets';
+@import 'modals';
+@import 'toolbar';
+@import 'siteSetup';
 
-
-.hiddenStructure { @extend .sr-only; }
+.hiddenStructure {
+    @extend .sr-only;
+}
 
 ///// FONT ICONE (ma solo nei menu) //////
 
 .image-icon,
 .image-tile {
-    float:right;
+    float: right;
 }
 
 ///// DA VERIFICARE SE SERVONO

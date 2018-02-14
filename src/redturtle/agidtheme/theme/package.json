@@ -1,5 +1,6 @@
 {
-  "//": "Put here only theme dependencies, devDependencies should stay outside of the theme folder in the package root.",
+  "//":
+    "Put here only theme dependencies, devDependencies should stay outside of the theme folder in the package root.",
   "name": "redturtle.agidtheme",
   "version": "1.0.0",
   "description": "Theme resources dependencies",

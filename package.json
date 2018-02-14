@@ -1,16 +1,13 @@
 {
-  "//": "Put here only devDependencies, theme dependencies should stay inside of the theme folder.",
+  "//":
+    "Put here only devDependencies, theme dependencies should stay inside of the theme folder.",
   "name": "redturtle.agidtheme",
   "version": "1.0.0",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com:PloneGov-IT/redturtle.agidtheme.git"
   },
-  "keywords": [
-    "agid",
-    "redturtle.agidtheme",
-    "theme"
-  ],
+  "keywords": ["agid", "redturtle.agidtheme", "theme"],
   "author": "RedTurtle Technology",
   "license": "GPL-3.0",
   "homepage": "https://github.com/PloneGov-IT/redturtle.agidtheme",
@@ -38,6 +35,8 @@
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^1.2.1",
     "grunt-webpack": "^3.0.2",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.1.0",
     "load-grunt-tasks": "^3.5.2",
     "pixrem": "^3.0.2",
     "postcss-flexbugs-fixes": "^3.3.0",
@@ -48,25 +47,14 @@
     "webpack": "^3.11.0"
   },
   "scripts": {
-    "prettier:scss": "prettier --single-quote --tab-width 4 --list-different src/redturtle/agidtheme/theme/sass/**/*.scss",
-    "prettier:scss:fix": "prettier --single-quote --tab-width 4 --write src/redturtle/agidtheme/theme/sass/**/*.scss"
-  },
-  "stylelint": {
-    "extends": "stylelint-config-recommended",
-    "rules": {
-      "at-rule-no-unknown": [
-        true,
-        {
-          "ignoreAtRules": [
-            "extend",
-            "include",
-            "mixin"
-          ]
-        }
-      ]
-    }
+    "prettier-all":
+      "prettier --write 'src/redturtle/agidtheme/theme/**/*.{js,json,scss}'",
+    "precommit": "lint-staged"
   },
   "dependencies": {
     "ellipsed": "1.2.0"
+  },
+  "lint-staged": {
+    "*.{js,json,css}": ["prettier --write", "git add"]
   }
 }

@@ -1,12 +1,13 @@
 // TINY
 div.mce-edit-area,
 body#tinymce {
-  padding: 14px;
+    padding: 14px;
 
-  table {
-    td, th {
-      font-size: inherit;
-      font-family: $font-family-base;
+    table {
+        td,
+        th {
+            font-size: inherit;
+            font-family: $font-family-base;
+        }
     }
-  }
 }

@@ -55,6 +55,6 @@ export const init = () => {
     faFolderOpen,
     faFilter,
     faStar,
-    faSortAlphaDown,
+    faSortAlphaDown
   );
 };

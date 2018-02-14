@@ -1,4 +1,3 @@
-
 // I CONTAINER
 #column-wrapper {
     @include make-container;
@@ -6,15 +5,15 @@
     padding: 3rem 15px 20px;
 
     //@media (max-width: $screen-xs-max) {
-        // display: flex;
-        // flex-flow: column-reverse;
+    // display: flex;
+    // flex-flow: column-reverse;
     //}
 }
 
 #portal-column-one,
 #portal-column-two {
     @include make-sm-column(3);
-    padding:0;
+    padding: 0;
 }
 // in plone control panel o add content...
 .sidebar-offcanvas #portal-column-two,
@@ -38,14 +37,12 @@
 }
 
 #portal-column-two {
-
     @media (max-width: $screen-xs-max) {
         margin-top: 50px;
     }
 }
 
 #portal-column-content {
-
     .with-no-columns & {
         @include make-sm-column(12);
     }
@@ -58,23 +55,23 @@
         @include make-sm-column-push(3);
 
         @media (min-width: $screen-xs-max) {
-          padding-left: 6%;
-          padding-right:0;
+            padding-left: 6%;
+            padding-right: 0;
         }
     }
 
     .with-column-two & {
-      @media (min-width: $screen-xs-max) {
-        padding-left: 0;
-        padding-right: 6%;
-      }
+        @media (min-width: $screen-xs-max) {
+            padding-left: 0;
+            padding-right: 6%;
+        }
     }
 
     .with-column-one.with-column-two & {
         @include make-sm-column(6);
 
         @media (min-width: $screen-xs-max) {
-          padding: 0 40px;
+            padding: 0 40px;
         }
     }
 }
