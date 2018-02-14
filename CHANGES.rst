@@ -2,10 +2,12 @@ Changelog
 =========
 
 
-1.1.8 (unreleased)
+2.0.0 (unreleased)
 ------------------
 
-- Nothing changed yet.
+[BREAKING CHANGES]:
+- Moved JS resources to browser/ folder [nzambello]
+- Migrated icons and styles to FontAwesome 5 (import via JS, added its classes to templates) [nzambello]
 
 
 1.1.7 (2018-02-07)
