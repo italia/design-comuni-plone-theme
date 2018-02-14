@@ -26,14 +26,6 @@
 }
 
 /////// ICONE
-@mixin make-fa ($code, $color: inherit) {
-    display: inline-block;
-    font-family: FontAwesome;
-    content: $code;
-    color: $color;
-    @include antialias();
-}
-
 @mixin make-ita ($code, $color: inherit) {
     display: inline-block;
     font-family: ita;
