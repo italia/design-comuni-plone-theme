@@ -30,6 +30,7 @@
                                 <li tal:define="oddrow repeat/obj/odd;
                                                 useView python:obj.portal_type in viewActions;
                                                 itemUrl python:useView and obj.getURL() + '/view' or obj.getURL();
+                                                itemUrl python:obj.portal_type=='WildcardVideo' and obj.getURL() +'/@@video_details' or itemUrl;
                                                 item_wf_state obj/review_state;
                                                 item_wf_state_class python:'state-' + plone_view.normalizeString(item_wf_state);
                                                 item_type obj/portal_type;
