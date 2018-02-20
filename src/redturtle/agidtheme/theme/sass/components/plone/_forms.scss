@@ -12,62 +12,60 @@ label .label {
     border-radius: inherit;
 }
 
-
 select[size] {
-  width: auto;
-  height: auto;
+    width: auto;
+    height: auto;
 }
 
 #form-widgets-body_text_format,
 .pat-textareamimetypeselector {
-  display: none;
+    display: none;
 }
 
-input[type="text"][name*='.css_class'],
-input[type="text"][name*='.button_text'],
-input[type="text"].text-widget.textline-field {
-  max-width: 300px;
+input[type='text'][name*='.css_class'],
+input[type='text'][name*='.button_text'],
+input[type='text'].text-widget.textline-field {
+    max-width: 300px;
 }
 
-input[type="text"].text-widget.textline-field {
-  display: inline-block;
+input[type='text'].text-widget.textline-field {
+    display: inline-block;
 
-  + input.searchButton {
-    @extend .btn, .btn-default, .btn-sm;
-    margin-top: -3px;
-  }
+    + input.searchButton {
+        @extend .btn, .btn-default, .btn-sm;
+        margin-top: -3px;
+    }
 }
 
 .formHelp {
-  display: block;
-  font-size: 15px;
+    display: block;
+    font-size: 15px;
 }
-
 
 /** BARCELONETA */
 // Normalize non-controls
 // Restyle and baseline non-control form elements.
 fieldset {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  // Chrome and Firefox set a `min-width: -webkit-min-content;` on fieldsets,
-  // so we reset that to ensure it behaves more like a standard block element.
-  // See https://github.com/twbs/bootstrap/issues/12359.
-  min-width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    // Chrome and Firefox set a `min-width: -webkit-min-content;` on fieldsets,
+    // so we reset that to ensure it behaves more like a standard block element.
+    // See https://github.com/twbs/bootstrap/issues/12359.
+    min-width: 0;
 }
 
 legend {
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin-bottom: 20px;
-  font-size: 21px;
-  line-height: inherit;
-  color: #4d4d4d;
-  border: 0;
-  border-bottom: 1px solid #e5e5e5;
-  font-weight: $regular;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: inherit;
+    color: #4d4d4d;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
+    font-weight: $regular;
 }
 
 // Normalize form controls
@@ -76,156 +74,163 @@ legend {
 // is required to ensure optimum display with or without those classes to better
 // address browser inconsistencies.
 // Override content-box in Normalize (* isn't specific enough)
-input[type="search"] {
-  box-sizing: border-box;
+input[type='search'] {
+    box-sizing: border-box;
 }
 
 // Position radios and checkboxes better
-input[type="radio"],
-input[type="checkbox"] {
-  margin: 4px 0 0;
-  margin-top: 1px \9; // IE8-9
-  line-height: normal;
+input[type='radio'],
+input[type='checkbox'] {
+    margin: 4px 0 0;
+    margin-top: 1px \9; // IE8-9
+    line-height: normal;
 }
 
 // Set the height of file controls to match text inputs
-input[type="file"] {
-  display: block;
+input[type='file'] {
+    display: block;
 }
 
 // Make range inputs behave like textual form controls
-input[type="range"] {
-  display: block;
-  width: 100%;
+input[type='range'] {
+    display: block;
+    width: 100%;
 }
 
 // Make multiple select elements height not fixed
 select[multiple],
 select[size] {
-  height: auto;
-  min-width: 10em;
+    height: auto;
+    min-width: 10em;
 }
 /* select[size="1"] {
   height: 34px;
 } */
 
 // Focus for file, radio, and checkbox
-input[type="file"]:focus,
-input[type="radio"]:focus,
-input[type="checkbox"]:focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+input[type='file']:focus,
+input[type='radio']:focus,
+input[type='checkbox']:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
 }
 
 // Adjust output element
 output {
-  display: block;
-  padding-top: 7px;
-  font-size: 14px;
-  line-height: 1.428571429;
-  color: #696969;
+    display: block;
+    padding-top: 7px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #696969;
 }
 
-/*.form-control,*/ input[type="text"], input[type="number"], input[type="email"], input[type="password"], textarea, select {
-  display: block;
-  width: 100%;
-  height: 34px; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
-  padding: 6px 12px;
-  font-size: inherit;
-  line-height: inherit;
-  color: inherit;
-  background-color: #ffffff;
-  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  border: 1px solid #cccccc;
-  border-radius: 4px;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+/*.form-control,*/
+input[type='text'],
+input[type='number'],
+input[type='email'],
+input[type='password'],
+textarea,
+select {
+    display: block;
+    width: 100%;
+    height: 34px; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+    padding: 6px 12px;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    background-color: #ffffff;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 // Customize the `:focus` state to imitate native WebKit styles.
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus,
+input[type='text']:focus,
+input[type='email']:focus,
+input[type='password']:focus,
 textarea:focus,
 select:focus {
-  border-color: #64bee8;
-  outline: 0;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(100, 190, 232, 0.6);
+    border-color: #64bee8;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+        0 0 8px rgba(100, 190, 232, 0.6);
 }
 // Placeholder
-input[type="text"]::-moz-placeholder,
-input[type="email"]::-moz-placeholder,
-input[type="password"]::-moz-placeholder,
+input[type='text']::-moz-placeholder,
+input[type='email']::-moz-placeholder,
+input[type='password']::-moz-placeholder,
 textarea::-moz-placeholder,
 select::-moz-placeholder {
-  color: #777777;
-  opacity: 1;
+    color: #777777;
+    opacity: 1;
 }
-input[type="text"]:-ms-input-placeholder,
-input[type="email"]:-ms-input-placeholder,
-input[type="password"]:-ms-input-placeholder,
+input[type='text']:-ms-input-placeholder,
+input[type='email']:-ms-input-placeholder,
+input[type='password']:-ms-input-placeholder,
 textarea:-ms-input-placeholder,
 select:-ms-input-placeholder {
-  color: #777777;
+    color: #777777;
 }
-input[type="text"]::-webkit-input-placeholder,
-input[type="email"]::-webkit-input-placeholder,
-input[type="password"]::-webkit-input-placeholder,
+input[type='text']::-webkit-input-placeholder,
+input[type='email']::-webkit-input-placeholder,
+input[type='password']::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder,
 select::-webkit-input-placeholder {
-  color: #777777;
+    color: #777777;
 }
 // Disabled and read-only inputs
 //
 // HTML5 says that controls under a fieldset > legend:first-child won't be
 // disabled if the fieldset is disabled. Due to implementation difficulty, we
 // don't honor that edge case; we style them as disabled anyway.
-input[type="text"][disabled],
-input[type="email"][disabled],
-input[type="password"][disabled],
+input[type='text'][disabled],
+input[type='email'][disabled],
+input[type='password'][disabled],
 textarea[disabled],
 select[disabled],
-input[type="text"][readonly],
-input[type="email"][readonly],
-input[type="password"][readonly],
+input[type='text'][readonly],
+input[type='email'][readonly],
+input[type='password'][readonly],
 textarea[readonly],
 select[readonly],
-fieldset[disabled] input[type="text"],
-fieldset[disabled] input[type="email"],
-fieldset[disabled] input[type="password"],
+fieldset[disabled] input[type='text'],
+fieldset[disabled] input[type='email'],
+fieldset[disabled] input[type='password'],
 fieldset[disabled] textarea,
 fieldset[disabled] select {
-  cursor: not-allowed;
-  background-color: #e5e5e5;
-  opacity: 1;
+    cursor: not-allowed;
+    background-color: #e5e5e5;
+    opacity: 1;
 }
 
 // Reset height for `textarea`s
 textarea {
-  min-height: 9em;
-  min-width: 10em;
-  resize: vertical; //as default, only vertical resize
+    min-height: 9em;
+    min-width: 10em;
+    resize: vertical; //as default, only vertical resize
 
-  &[name='form.widgets.IRichText.text'] {
-    min-height: 12em;
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  }
+    &[name='form.widgets.IRichText.text'] {
+        min-height: 12em;
+        font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+    }
 }
 // Reset height for `textarea`s
 textarea {
-  min-height: 9em;
-  min-width: 10em;
-  resize: vertical; //as default, only vertical resize
+    min-height: 9em;
+    min-width: 10em;
+    resize: vertical; //as default, only vertical resize
 
-  &[name='form.widgets.IRichText.text'] {
-    min-height: 12em;
-    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;  // when typing without richtext editor
-  }
+    &[name='form.widgets.IRichText.text'] {
+        min-height: 12em;
+        font-family: Menlo, Monaco, Consolas, 'Courier New', monospace; // when typing without richtext editor
+    }
 }
 // Reset width for `select` elements
 select {
-  width: unset;
-  display: inline-block;
+    width: unset;
+    display: inline-block;
 }
 
 // Search inputs in iOS
@@ -235,10 +240,9 @@ select {
 // be added to `.form-control` as it's not specific enough. For details, see
 // https://github.com/twbs/bootstrap/issues/11586.
 
-input[type="search"] {
-  -webkit-appearance: none;
+input[type='search'] {
+    -webkit-appearance: none;
 }
-
 
 // Special styles for iOS temporal inputs
 //
@@ -248,35 +252,35 @@ input[type="search"] {
 // given height of the input. Since this fucks up everything else, we have to
 // appropriately reset it for Internet Explorer and the size variations.
 
-input[type="date"],
-input[type="time"],
-input[type="datetime-local"],
-input[type="month"] {
-  line-height: 34px;
-  line-height: 1.428571429 \0;
+input[type='date'],
+input[type='time'],
+input[type='datetime-local'],
+input[type='month'] {
+    line-height: 34px;
+    line-height: 1.428571429 \0;
 }
 
 // Apply same disabled cursor tweak as for inputs
-input[type="radio"],
-input[type="checkbox"] {
-  &[disabled],
-  fieldset[disabled] & {
-    cursor: not-allowed;
-  }
+input[type='radio'],
+input[type='checkbox'] {
+    &[disabled],
+    fieldset[disabled] & {
+        cursor: not-allowed;
+    }
 }
 
 //*// Form field
 .field {
-  margin-bottom: 15px;
-  // each option in a multi-checkbox field should be on a separate line
-  span.option {
-    display: block;
-  }
+    margin-bottom: 15px;
+    // each option in a multi-checkbox field should be on a separate line
+    span.option {
+        display: block;
+    }
 }
 
 .field.error {
-  background: #fbe8e4;
-  box-shadow: 0 0 0 5px #fbe8e4;
+    background: #fbe8e4;
+    box-shadow: 0 0 0 5px #fbe8e4;
 }
 .field.error .help-block,
 .field.error .control-label,
@@ -284,138 +288,151 @@ input[type="checkbox"] {
 .field.error .checkbox,
 .field.error .radio-inline,
 .field.error .checkbox-inline {
-  color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.5);
 }
 .field.error .form-control {
-  border-color: rgba(0, 0, 0, 0.5);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    border-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .field.error .form-control:focus {
-  border-color: rgba(0, 0, 0, 0.5);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px rgba(51, 51, 51, 0.5);
+    border-color: rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+        0 0 6px rgba(51, 51, 51, 0.5);
 }
 .field.error .input-group-addon {
-  color: rgba(0, 0, 0, 0.5);
-  border-color: rgba(0, 0, 0, 0.5);
-  background-color: #ec9c8d;
+    color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.5);
+    background-color: #ec9c8d;
 }
 .field.error .form-control-feedback {
-  color: rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.5);
 }
 .field.error > label,
 .field.error div.error {
-  color: #ff0000;
+    color: #ff0000;
 }
 .field.error div.error {
-  padding-left: 30px;
-  font-weight: 400;
+    padding-left: 30px;
+    font-weight: 400;
 }
 .field.error div.error:before {
-  background-color: #ac493f;
-  content: "×";
-  font-size: 14px;
-  font-weight: 400;
-  margin-left: -30px;
-  margin-right: 5px;
-  display: inline-block;
-  border-radius: 20px;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.9);
-  width: 16px;
-  height: 16px;
-  line-height: 16px;
-  text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
-  top: -1px;
-  position: relative;
+    background-color: #ac493f;
+    content: '×';
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: -30px;
+    margin-right: 5px;
+    display: inline-block;
+    border-radius: 20px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.5);
+    top: -1px;
+    position: relative;
 }
 .field.error input,
 .field.error textarea,
 .field.error select {
-  border-color: #ff0000;
+    border-color: #ff0000;
 }
 .field.error input:focus,
 .field.error textarea:focus,
 .field.error select:focus {
-  box-shadow: 0 0 8px #ffcccc;
+    box-shadow: 0 0 8px #ffcccc;
 }
 
 .formHelp {
-  //display: block; if want all helps to be block. As default span.formHelp inline and div.formHelp block
-  margin-top: 0;
-  margin-bottom: 0;
-  color: #666666;
-  font-weight: 400;
-  font-style: italic;
+    //display: block; if want all helps to be block. As default span.formHelp inline and div.formHelp block
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #666666;
+    font-weight: 400;
+    font-style: italic;
 }
 
 .formControls {
-  border-top: 1px solid #cccccc;
-  padding: 12px;
-  box-shadow: inset 0 10px 10px -10px rgba(0,0,0,.05);
+    border-top: 1px solid #cccccc;
+    padding: 12px;
+    box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.05);
 }
 // don't show formControls in modal body,
 // because the actual controls get moved to the footer
 .plone-modal-body .formControls {
-  border: none;
-  background: transparent;
-  padding: 0;
-  box-shadow: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
 }
 
 //*// Required
 label .required {
-  &:after{
-    color: #ff0000;
-    content:"•";
-    font-size: 200%;
-    line-height: 0;
-    position: relative;
-    top: 7px;
-    margin-left: -4px;
-  }
+    &:after {
+        color: #ff0000;
+        content: '•';
+        font-size: 200%;
+        line-height: 0;
+        position: relative;
+        top: 7px;
+        margin-left: -4px;
+    }
 }
 
 //*// Input + Submit groups (manual because we still have no standard for this)
 .searchField.portlet-search-gadget,
 #sharing-user-group-search,
-#select-rules  {width: 100%; display: inline-block;}
+#select-rules {
+    width: 100%;
+    display: inline-block;
+}
 
 .searchField.portlet-search-gadget + .searchButton,
 #sharing-user-group-search + #sharing-search-button,
-#select-rules + input  {position: relative; float:right;margin-top: -34px;}
-
-
+#select-rules + input {
+    position: relative;
+    float: right;
+    margin-top: -34px;
+}
 
 //*// Highlighted search
-#search-results li {margin: 12px 0;
-  .croppedDescription {margin-bottom: 0;}
+#search-results li {
+    margin: 12px 0;
+    .croppedDescription {
+        margin-bottom: 0;
+    }
 }
 .highlightedSearchTerm {
-  background: #fea;
-  box-shadow: 0 0 1px 1px #fea;
+    background: #fea;
+    box-shadow: 0 0 1px 1px #fea;
 }
-.search-date-options > div, .search-type-options > div {
-display: inline-block;
-margin-right: 12px;
+.search-date-options > div,
+.search-type-options > div {
+    display: inline-block;
+    margin-right: 12px;
 }
-.optionsToggle label {font-weight: 300; color: #696969;}
-
-.ordered-selection-field{
-  td {
-    vertical-align: middle;
-    text-align: center;
-  }
-  td button{
-    display: block;
-    margin: auto;
-  }
+.optionsToggle label {
+    font-weight: 300;
+    color: #696969;
 }
 
-.folder-factories{
-  list-style:none;
+.ordered-selection-field {
+    td {
+        vertical-align: middle;
+        text-align: center;
+    }
+    td button {
+        display: block;
+        margin: auto;
+    }
+}
+
+.folder-factories {
+    list-style: none;
 }
 
 //*// Correct input + label on plone structure widgets
 .widget input + label {
-  display: inline;
+    display: inline;
 }

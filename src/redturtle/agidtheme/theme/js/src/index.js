@@ -1,8 +1,4 @@
-require([
-  'jquery',
-  'ellipsed',
-  'fa'
-], function ($, ellipsed, fa) {
+require(['jquery', 'ellipsed', 'fa'], function($, ellipsed, fa) {
   'use strict';
 
   var ellipsis = ellipsed.ellipsis;
@@ -15,7 +11,8 @@ require([
       prepend: true,
     },
     {
-      selector: '.template-album_view .photoAlbumEntry.photoAlbumFolder .photoAlbumEntryTitle',
+      selector:
+        '.template-album_view .photoAlbumEntry.photoAlbumFolder .photoAlbumEntryTitle',
       icon: 'fas fa-folder-open',
       prepend: true,
     },
@@ -70,18 +67,20 @@ require([
       prepend: true,
     },
     {
-      selector: '.navigationTile a.navTreeFolderish:not(.navTreeCurrentNode):not(.navTreeItemInPath), .portletNavigationTree a.navTreeFolderish:not(.navTreeCurrentNode):not(.navTreeItemInPath)',
+      selector:
+        '.navigationTile a.navTreeFolderish:not(.navTreeCurrentNode):not(.navTreeItemInPath), .portletNavigationTree a.navTreeFolderish:not(.navTreeCurrentNode):not(.navTreeItemInPath)',
       icon: 'far fa-angle-down',
       prepend: false,
     },
     {
-      selector: '.navigationTile a.navTreeFolderish.navTreeCurrentNode, .navigationTile a.navTreeFolderish.navTreeItemInPath, .portletNavigationTree a.navTreeFolderish.navTreeCurrentNode, .portletNavigationTree a.navTreeFolderish.navTreeItemInPath',
+      selector:
+        '.navigationTile a.navTreeFolderish.navTreeCurrentNode, .navigationTile a.navTreeFolderish.navTreeItemInPath, .portletNavigationTree a.navTreeFolderish.navTreeCurrentNode, .portletNavigationTree a.navTreeFolderish.navTreeItemInPath',
       icon: 'far fa-angle-up',
       prepend: false,
     },
   ];
 
-  $(document).ready(function () {
+  $(document).ready(function() {
     $('#breadcrumbs-home a').text('');
 
     // init fontawesome icons
@@ -90,8 +89,7 @@ require([
 
       if (i.prepend) {
         $el.prepend('<i class="' + i.icon + '"></i>');
-      }
-      else {
+      } else {
         $el.append('<i class="' + i.icon + '"></i>');
       }
     });
@@ -101,7 +99,7 @@ require([
     /*
      *  return-to-top arrow
      */
-    $(window).scroll(function () {
+    $(window).scroll(function() {
       if ($(this).scrollTop() >= 50) {
         $('#return-to-top').fadeIn(200);
       } else {
@@ -109,12 +107,14 @@ require([
       }
     });
 
-    $('#return-to-top').click(function () {
-      $('body,html').animate({
-        scrollTop: 0,
-      }, 500);
+    $('#return-to-top').click(function() {
+      $('body,html').animate(
+        {
+          scrollTop: 0,
+        },
+        500
+      );
     });
-
 
     /*
      *  share button position
@@ -123,12 +123,10 @@ require([
     if ($('.news-column').length) {
       $('.news-column').prepend($share);
       $share.addClass('share-visible');
-    }
-    else if ($('#portal-column-two').length) {
+    } else if ($('#portal-column-two').length) {
       $('#portal-column-two').prepend($share);
       $share.addClass('share-visible');
     }
-
 
     /*
      * share button behavior
@@ -137,7 +135,6 @@ require([
       e.preventDefault();
       $share.toggleClass('open');
     });
-
 
     /*
      * mobile: search button action
@@ -152,7 +149,6 @@ require([
       }
     });
 
-
     /*
      * mobile: menu toggle click
      */
@@ -160,12 +156,15 @@ require([
       $('#portal-globalnav-wrapper').toggleClass('open');
     });
 
-
     /*
      * gestione click fuori per chiudere menu, ricerca e condividi
      */
     $(document).on('click', function(e) {
-      if ((!$(e.target).closest('#portal-searchbox').length && !$(e.target).closest('button#search-toggle').length) && $(window).width() <= 991) {
+      if (
+        !$(e.target).closest('#portal-searchbox').length &&
+        !$(e.target).closest('button#search-toggle').length &&
+        $(window).width() <= 991
+      ) {
         $('#portal-searchbox').removeClass('open');
         $('#search-toggle').removeClass('open');
         $('body').removeClass('searchOpened');
@@ -175,7 +174,11 @@ require([
         $share.removeClass('open');
       }
 
-      if ((!$(e.target).closest('#portal-globalnav-wrapper').length && !$(e.target).closest('button.plone-navbar-toggle').length) && $(window).width() <= 991) {
+      if (
+        !$(e.target).closest('#portal-globalnav-wrapper').length &&
+        !$(e.target).closest('button.plone-navbar-toggle').length &&
+        $(window).width() <= 991
+      ) {
         $('#portal-globalnav-wrapper').removeClass('open');
       }
     });
@@ -186,14 +189,17 @@ require([
      * - multi lined ellipsis for news collection items
      */
     $('.pat-tiles-management').on('rtTilesLoaded', function(e) {
-      ellipsis('.tile-collection .collectionItemDescription', 4, { responsive: true });
+      ellipsis('.tile-collection .collectionItemDescription', 4, {
+        responsive: true,
+      });
       ellipsis('.news-highlight .news-description', 4, { responsive: true });
       ellipsis('.news-big-photo .news-description', 4, { responsive: true });
     });
 
     $(document).on('patSliderInit', function(e) {
-      $(e.originalEvent.detail).find('.slick-dots').attr('aria-hidden', true);
+      $(e.originalEvent.detail)
+        .find('.slick-dots')
+        .attr('aria-hidden', true);
     });
-
   });
 });

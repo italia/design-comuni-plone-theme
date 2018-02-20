@@ -5,15 +5,15 @@
 
 /////// BREAK INSIDE (usato con columns)
 @mixin break-inside($value) {
-  // value: auto | avoid
-  -webkit-column-break-inside: $value;
+    // value: auto | avoid
+    -webkit-column-break-inside: $value;
     page-break-inside: $value;
     break-inside: $value;
 }
 
 @mixin break-before($value) {
-  // value: auto | avoid
-  -webkit-column-break-before: $value;
+    // value: auto | avoid
+    -webkit-column-break-before: $value;
     page-break-before: $value;
     break-before: $value;
 }
@@ -35,8 +35,8 @@
 }
 
 @mixin antialias() {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 // bootstrap container
@@ -63,7 +63,7 @@
 }
 
 @mixin align-center() {
-    margin:0;
+    margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -96,7 +96,7 @@
     margin: -1px;
     padding: 0;
     overflow: hidden;
-    clip: rect(0,0,0,0);
+    clip: rect(0, 0, 0, 0);
     border: 0;
 }
 
@@ -104,18 +104,19 @@
     overflow: hidden;
     position: relative;
 
-    &:after { content: "";
+    &:after {
+        content: '';
         //pointer-events: none;
         position: absolute;
         width: 100%;
         height: $height;
         bottom: 0;
         left: 0;
-        @include gradient-vertical(transparentize($bg, .5), $bg, 0, 70%);
+        @include gradient-vertical(transparentize($bg, 0.5), $bg, 0, 70%);
     }
 }
 
 @mixin gradiente-opaco() {
-  background: transparent; /* Old browsers */
-  @include gradient-vertical(transparentize(#000, 1), transparentize(#000, .7));
+    background: transparent; /* Old browsers */
+    @include gradient-vertical(transparentize(#000, 1), transparentize(#000, 0.7));
 }

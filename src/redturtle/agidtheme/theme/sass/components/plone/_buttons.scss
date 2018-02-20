@@ -9,194 +9,200 @@
 
     &:focus,
     &:hover {
-      color: $link-color;
-      border-color: $link-color;
+        color: $link-color;
+        border-color: $link-color;
     }
 
-    @media (max-width: $screen-xs-max) { padding: 1em; }
+    @media (max-width: $screen-xs-max) {
+        padding: 1em;
+    }
 }
 
 %buttonSimpleRed {
-  @extend %buttonSimple;
-  background-color: $brand-primary;
-  border-color: $brand-primary;
-  color: #FFF;
+    @extend %buttonSimple;
+    background-color: $brand-primary;
+    border-color: $brand-primary;
+    color: #fff;
 
-  &:focus,
-  &:hover {
-    background-color: $text-color;
-    border-color: $text-color;
-    color: #FFF;
-  }
+    &:focus,
+    &:hover {
+        background-color: $text-color;
+        border-color: $text-color;
+        color: #fff;
+    }
 }
 
 .plone-btn-primary {
-  @extend .btn-primary;
+    @extend .btn-primary;
 }
 
 /** BARCELONETA */
-.standalone, .context, .destructive, [type="submit"], button {
-  display: inline-block;
-  margin-bottom: 0; // For input.btn
-  font-weight: $bold;
-  text-align: center;
-  text-shadow: 0 1px rgba(0,0,0,.25);
-  vertical-align: middle;
-  cursor: pointer;
-  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 6px 12px;
-  font-size: inherit;
-  line-height: inherit;
-  border-radius: 2px;
-  user-select: none;
+.standalone,
+.context,
+.destructive,
+[type='submit'],
+button {
+    display: inline-block;
+    margin-bottom: 0; // For input.btn
+    font-weight: $bold;
+    text-align: center;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.25);
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: inherit;
+    line-height: inherit;
+    border-radius: 2px;
+    user-select: none;
 
-  &,
-  &:active,
-  &.active {
-    &:focus {
-      outline: thin dotted;
-      outline: 5px auto -webkit-focus-ring-color;
-      outline-offset: -2px;
+    &,
+    &:active,
+    &.active {
+        &:focus {
+            outline: thin dotted;
+            outline: 5px auto -webkit-focus-ring-color;
+            outline-offset: -2px;
+        }
     }
-  }
 
-  &:hover,
-  &:focus {
-    color: #4d4d4d;
-    text-decoration: none;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-  }
+    &:hover,
+    &:focus {
+        color: #4d4d4d;
+        text-decoration: none;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    }
 
-  &:active,
-  &.active {
-    outline: 0;
-    background-image: none;
-    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  }
+    &:active,
+    &.active {
+        outline: 0;
+        background-image: none;
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    }
 
-  &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    cursor: not-allowed;
-    pointer-events: none; // Future-proof disabling of clicks
-    opacity: 0.5;
-    filter: alpha(opacity=50);
-    box-shadow: none;
-  }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        cursor: not-allowed;
+        pointer-events: none; // Future-proof disabling of clicks
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+        box-shadow: none;
+    }
 }
 
 .standalone,
-[type="submit"],
+[type='submit'],
 button {
-  color: #4d4d4d;
-  background-color: #e5e5e5;
-  border-color: #b2b2b2;
+    color: #4d4d4d;
+    background-color: #e5e5e5;
+    border-color: #b2b2b2;
 }
 .standalone:hover,
-[type="submit"]:hover,
+[type='submit']:hover,
 button:hover,
 .standalone:focus,
-[type="submit"]:focus,
+[type='submit']:focus,
 button:focus,
 .standalone:active,
-[type="submit"]:active,
+[type='submit']:active,
 button:active,
 .standalone.active,
-[type="submit"].active,
+[type='submit'].active,
 button.active,
 .open > .dropdown-toggle.standalone,
-.open > .dropdown-toggle[type="submit"],
+.open > .dropdown-toggle[type='submit'],
 .open > .dropdown-togglebutton {
-  color: #4d4d4d;
-  background-color: #cccccc;
-  border-color: #939393;
+    color: #4d4d4d;
+    background-color: #cccccc;
+    border-color: #939393;
 }
 .standalone:active,
-[type="submit"]:active,
+[type='submit']:active,
 button:active,
 .standalone.active,
-[type="submit"].active,
+[type='submit'].active,
 button.active,
 .open > .dropdown-toggle.standalone,
-.open > .dropdown-toggle[type="submit"],
+.open > .dropdown-toggle[type='submit'],
 .open > .dropdown-togglebutton {
-  background-image: none;
+    background-image: none;
 }
 .standalone.disabled,
-[type="submit"].disabled,
+[type='submit'].disabled,
 button.disabled,
 .standalone[disabled],
-[type="submit"][disabled],
+[type='submit'][disabled],
 button[disabled],
 fieldset[disabled] .standalone,
-fieldset[disabled] [type="submit"],
+fieldset[disabled] [type='submit'],
 fieldset[disabled] button,
 .standalone.disabled:hover,
-[type="submit"].disabled:hover,
+[type='submit'].disabled:hover,
 button.disabled:hover,
 .standalone[disabled]:hover,
-[type="submit"][disabled]:hover,
+[type='submit'][disabled]:hover,
 button[disabled]:hover,
 fieldset[disabled] .standalone:hover,
-fieldset[disabled] [type="submit"]:hover,
+fieldset[disabled] [type='submit']:hover,
 fieldset[disabled] button:hover,
 .standalone.disabled:focus,
-[type="submit"].disabled:focus,
+[type='submit'].disabled:focus,
 button.disabled:focus,
 .standalone[disabled]:focus,
-[type="submit"][disabled]:focus,
+[type='submit'][disabled]:focus,
 button[disabled]:focus,
 fieldset[disabled] .standalone:focus,
-fieldset[disabled] [type="submit"]:focus,
+fieldset[disabled] [type='submit']:focus,
 fieldset[disabled] button:focus,
 .standalone.disabled:active,
-[type="submit"].disabled:active,
+[type='submit'].disabled:active,
 button.disabled:active,
 .standalone[disabled]:active,
-[type="submit"][disabled]:active,
+[type='submit'][disabled]:active,
 button[disabled]:active,
 fieldset[disabled] .standalone:active,
-fieldset[disabled] [type="submit"]:active,
+fieldset[disabled] [type='submit']:active,
 fieldset[disabled] button:active,
 .standalone.disabled.active,
-[type="submit"].disabled.active,
+[type='submit'].disabled.active,
 button.disabled.active,
 .standalone[disabled].active,
-[type="submit"][disabled].active,
+[type='submit'][disabled].active,
 button[disabled].active,
 fieldset[disabled] .standalone.active,
-fieldset[disabled] [type="submit"].active,
+fieldset[disabled] [type='submit'].active,
 fieldset[disabled] button.active {
-  background-color: #e5e5e5;
-  border-color: #b2b2b2;
+    background-color: #e5e5e5;
+    border-color: #b2b2b2;
 }
 .standalone .badge,
-[type="submit"] .badge,
+[type='submit'] .badge,
 button .badge {
-  color: #e5e5e5;
-  background-color: #4d4d4d;
+    color: #e5e5e5;
+    background-color: #4d4d4d;
 }
 
 .context {
-  color: #ffffff;
-  background-color: #007bb1;
-  border-color: #00587e;
+    color: #ffffff;
+    background-color: #007bb1;
+    border-color: #00587e;
 }
 .context:hover,
 .context:focus,
 .context:active,
 .context.active,
 .open > .dropdown-toggle.context {
-  color: #ffffff;
-  background-color: #00587e;
-  border-color: #002d41;
+    color: #ffffff;
+    background-color: #00587e;
+    border-color: #002d41;
 }
 .context:active,
 .context.active,
 .open > .dropdown-toggle.context {
-  background-image: none;
+    background-image: none;
 }
 .context.disabled,
 .context[disabled],
@@ -213,32 +219,32 @@ fieldset[disabled] .context:active,
 .context.disabled.active,
 .context[disabled].active,
 fieldset[disabled] .context.active {
-  background-color: #007bb1;
-  border-color: #00587e;
+    background-color: #007bb1;
+    border-color: #00587e;
 }
 .context .badge {
-  color: #007bb1;
-  background-color: #ffffff;
+    color: #007bb1;
+    background-color: #ffffff;
 }
 
 .destructive {
-  color: #ffffff;
-  background-color: #bb4f45;
-  border-color: #963f37;
+    color: #ffffff;
+    background-color: #bb4f45;
+    border-color: #963f37;
 }
 .destructive:hover,
 .destructive:focus,
 .destructive:active,
 .destructive.active,
 .open > .dropdown-toggle.destructive {
-  color: #ffffff;
-  background-color: #963f37;
-  border-color: #692c26;
+    color: #ffffff;
+    background-color: #963f37;
+    border-color: #692c26;
 }
 .destructive:active,
 .destructive.active,
 .open > .dropdown-toggle.destructive {
-  background-image: none;
+    background-image: none;
 }
 .destructive.disabled,
 .destructive[disabled],
@@ -255,76 +261,76 @@ fieldset[disabled] .destructive:active,
 .destructive.disabled.active,
 .destructive[disabled].active,
 fieldset[disabled] .destructive.active {
-  background-color: #bb4f45;
-  border-color: #963f37;
+    background-color: #bb4f45;
+    border-color: #963f37;
 }
 .destructive .badge {
-  color: #bb4f45;
-  background-color: #ffffff;
+    color: #bb4f45;
+    background-color: #ffffff;
 }
 
 .link-parent {
-  display: inline-block;
-  margin-bottom: 0;
-  font-weight: $bold;
-  text-align: center;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.25);
-  vertical-align: middle;
-  cursor: pointer;
-  background-image: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  padding: 6px 12px;
-  font-size: inherit;
-  line-height: inherit;
-  border-radius: 2px;
-  user-select: none;
-  color: #4d4d4d;
-  background-color: #e5e5e5;
-  border-color: #b2b2b2;
-  margin-bottom: 12px;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: $bold;
+    text-align: center;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.25);
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: inherit;
+    line-height: inherit;
+    border-radius: 2px;
+    user-select: none;
+    color: #4d4d4d;
+    background-color: #e5e5e5;
+    border-color: #b2b2b2;
+    margin-bottom: 12px;
 }
 .link-parent:focus,
 .link-parent:active:focus,
 .link-parent.active:focus {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
 }
 .link-parent:hover,
 .link-parent:focus {
-  color: #4d4d4d;
-  text-decoration: none;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    color: #4d4d4d;
+    text-decoration: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 .link-parent:active,
 .link-parent.active {
-  outline: 0;
-  background-image: none;
-  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    outline: 0;
+    background-image: none;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 .link-parent.disabled,
 .link-parent[disabled],
 fieldset[disabled] .link-parent {
-  cursor: not-allowed;
-  pointer-events: none;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  box-shadow: none;
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    box-shadow: none;
 }
 .link-parent:hover,
 .link-parent:focus,
 .link-parent:active,
 .link-parent.active,
 .open > .dropdown-toggle.link-parent {
-  color: #4d4d4d;
-  background-color: #cccccc;
-  border-color: #939393;
+    color: #4d4d4d;
+    background-color: #cccccc;
+    border-color: #939393;
 }
 .link-parent:active,
 .link-parent.active,
 .open > .dropdown-toggle.link-parent {
-  background-image: none;
+    background-image: none;
 }
 .link-parent.disabled,
 .link-parent[disabled],
@@ -341,47 +347,47 @@ fieldset[disabled] .link-parent:active,
 .link-parent.disabled.active,
 .link-parent[disabled].active,
 fieldset[disabled] .link-parent.active {
-  background-color: #e5e5e5;
-  border-color: #b2b2b2;
+    background-color: #e5e5e5;
+    border-color: #b2b2b2;
 }
 .link-parent .badge {
-  color: #e5e5e5;
-  background-color: #4d4d4d;
+    color: #e5e5e5;
+    background-color: #4d4d4d;
 }
 .link-parent:before {
-  content: "↩ ";
-  top: 3px;
-  position: relative;
+    content: '↩ ';
+    top: 3px;
+    position: relative;
 }
 
 // Base styles
 // -------------------------
 .input-group {
-  position: relative; // For dropdowns
-  display: table;
-  border-collapse: separate; // prevent input groups from inheriting border styles from table cells when placed within a table
+    position: relative; // For dropdowns
+    display: table;
+    border-collapse: separate; // prevent input groups from inheriting border styles from table cells when placed within a table
 
-  // Undo padding and float of grid classes
-  &[class*="col-"] {
-    float: none;
-    padding-left: 0;
-    padding-right: 0;
-  }
+    // Undo padding and float of grid classes
+    &[class*='col-'] {
+        float: none;
+        padding-left: 0;
+        padding-right: 0;
+    }
 
-  .form-control {
-    // Ensure that the input is always above the *appended* addon button for
-    // proper border colors.
-    position: relative;
-    z-index: 2;
+    .form-control {
+        // Ensure that the input is always above the *appended* addon button for
+        // proper border colors.
+        position: relative;
+        z-index: 2;
 
-    // IE9 fubars the placeholder attribute in text inputs and the arrows on
-    // select elements in input groups. To fix it, we float the input. Details:
-    // https://github.com/twbs/bootstrap/issues/11561#issuecomment-28936855
-    float: left;
+        // IE9 fubars the placeholder attribute in text inputs and the arrows on
+        // select elements in input groups. To fix it, we float the input. Details:
+        // https://github.com/twbs/bootstrap/issues/11561#issuecomment-28936855
+        float: left;
 
-    width: 100%;
-    margin-bottom: 0;
-  }
+        width: 100%;
+        margin-bottom: 0;
+    }
 }
 
 // Display as table-cell
@@ -389,18 +395,18 @@ fieldset[disabled] .link-parent.active {
 .input-group-addon,
 .input-group-btn,
 .input-group .form-control {
-  display: table-cell;
+    display: table-cell;
 
-  &:not(:first-child):not(:last-child) {
-    border-radius: 0;
-  }
+    &:not(:first-child):not(:last-child) {
+        border-radius: 0;
+    }
 }
 // Addon and addon wrapper for buttons
 .input-group-addon,
 .input-group-btn {
-  width: 1%;
-  white-space: nowrap;
-  vertical-align: middle; // Match the inputs
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle; // Match the inputs
 }
 
 // Reset rounded corners
@@ -411,11 +417,11 @@ fieldset[disabled] .link-parent.active {
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
 }
 .input-group-addon:first-child {
-  border-right: 0;
+    border-right: 0;
 }
 .input-group .form-control:last-child,
 .input-group-addon:last-child,
@@ -424,69 +430,69 @@ fieldset[disabled] .link-parent.active {
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
 .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
 }
 .input-group-addon:last-child {
-  border-left: 0;
+    border-left: 0;
 }
 
 // Button input groups
 // -------------------------
 .input-group-btn {
-  position: relative;
-  // Jankily prevent input button groups from wrapping with `white-space` and
-  // `font-size` in combination with `inline-block` on buttons.
-  font-size: 0;
-  white-space: nowrap;
-
-  // Negative margin for spacing, position for bringing hovered/focused/actived
-  // element above the siblings.
-  > .btn {
     position: relative;
-    + .btn {
-      margin-left: -1px;
-    }
-    // Bring the "active" button to the front
-    &:hover,
-    &:focus,
-    &:active {
-      z-index: 2;
-    }
-  }
+    // Jankily prevent input button groups from wrapping with `white-space` and
+    // `font-size` in combination with `inline-block` on buttons.
+    font-size: 0;
+    white-space: nowrap;
 
-  // Negative margin to only have a 1px border between the two
-  &:first-child {
-    > .btn,
-    > .btn-group {
-      margin-right: -1px;
+    // Negative margin for spacing, position for bringing hovered/focused/actived
+    // element above the siblings.
+    > .btn {
+        position: relative;
+        + .btn {
+            margin-left: -1px;
+        }
+        // Bring the "active" button to the front
+        &:hover,
+        &:focus,
+        &:active {
+            z-index: 2;
+        }
     }
-  }
-  &:last-child {
-    > .btn,
-    > .btn-group {
-      margin-left: -1px;
+
+    // Negative margin to only have a 1px border between the two
+    &:first-child {
+        > .btn,
+        > .btn-group {
+            margin-right: -1px;
+        }
     }
-  }
+    &:last-child {
+        > .btn,
+        > .btn-group {
+            margin-left: -1px;
+        }
+    }
 }
 
 // Dropdown arrow/caret
 .caret {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 2px;
-  vertical-align: middle;
-  border-top: 4px dashed;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
 }
 // Reposition the caret
 .btn .caret {
-  margin-left: 0;
+    margin-left: 0;
 }
 // Carets in other button sizes
 .btn-lg .caret {
-  border-width: 5px 5px 0;
-  border-bottom-width: 0;
+    border-width: 5px 5px 0;
+    border-bottom-width: 0;
 }

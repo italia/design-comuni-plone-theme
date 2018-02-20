@@ -3,30 +3,30 @@ table {
     width: auto;
 
     caption {
-      text-align: center;
+        text-align: center;
     }
 
     > thead > tr > th {
-      vertical-align: top;
-      border:0;
+        vertical-align: top;
+        border: 0;
     }
 
     &.table-simple {
-      border-width: 1px 0 0 0;
-
-      > thead > tr > th {
-        border: 0;
-      }
-      > tbody > tr > td {
         border-width: 1px 0 0 0;
-      }
+
+        > thead > tr > th {
+            border: 0;
+        }
+        > tbody > tr > td {
+            border-width: 1px 0 0 0;
+        }
     }
 
     tr.odd {
-        background-color:  $gray-bg;
+        background-color: $gray-bg;
     }
 }
 
 .invisible {
-  visibility: inherit;
+    visibility: inherit;
 }
