@@ -2395,6 +2395,36 @@ require([
       icon: 'far fa-angle-up',
       prepend: false,
     },
+    {
+      selector: 'button#search-filter-toggle',
+      icon: 'fas fa-filter',
+      prepend: true,
+    },
+    {
+      selector: '#sorting-options a[data-sort="Date"]',
+      icon: 'far fa-calendar-alt',
+      prepend: true,
+    },
+    {
+      selector: '#sorting-options a[data-sort="sortable_title"]',
+      icon: 'far fa-sort-alpha-down',
+      prepend: true,
+    },
+    {
+      selector: '#sorting-options a:not([data-sort="Date"]):not([data-sort="sortable_title"])',
+      icon: 'fas fa-star',
+      prepend: true,
+    },
+    {
+      selector: '#categories-filed-under',
+      icon: 'fas fa-tags',
+      prepend: true,
+    },
+    {
+      selector: '#portal-searchbox button.search-button',
+      icon: 'fas fa-search',
+      prepend: true,
+    }
   ];
 
   $(document).ready(function () {
@@ -2403,6 +2433,8 @@ require([
     // init fontawesome icons
     icons.forEach(function(i) {
       var $el = $(i.selector);
+
+      if ($el.length === 0) return;
 
       if (i.prepend) {
         $el.prepend('<i class="' + i.icon + '"></i>');

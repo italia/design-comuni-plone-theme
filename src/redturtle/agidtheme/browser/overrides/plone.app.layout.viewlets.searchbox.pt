@@ -29,7 +29,6 @@
           <button class="search-button" type="submit"
                   i18n:attributes="title label_search;
                                    aria-label label_search">
-              <i class="fas fa-search"></i>
           </button>
 
         </div>
