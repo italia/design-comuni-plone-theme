@@ -55,15 +55,6 @@
       layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
       template="templates/video_renderer.pt"
       />
-    
-  <browser:page
-      name="video_details"
-      permission="zope2.View"
-      for="*"
-      class=".tile_collection_renderers.VideoView"
-      layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
-      template="templates/video_details_view.pt"
-      />
 
   <browser:page
       name="photogallery_renderer"

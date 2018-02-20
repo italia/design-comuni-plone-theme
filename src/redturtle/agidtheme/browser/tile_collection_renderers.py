@@ -63,10 +63,6 @@ class HelpersView(BrowserView):
 
         return ''
 
-    def get_related_items(self):
-        return self.context.relatedItems
-        
-
 @implementer(ICollectionTileRenderer)
 class SightsView(BrowserView):
     """
