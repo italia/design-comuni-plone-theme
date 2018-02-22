@@ -5,7 +5,7 @@ Changelog
 1.1.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Updated package.json to reflect current addon version [pnicolli]
 
 
 1.1.7 (2018-02-07)
