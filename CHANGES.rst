@@ -6,6 +6,7 @@ Changelog
 ------------------
 
 - Updated package.json to reflect current addon version [pnicolli]
+- Fixed collection tile renderers layers, they won't show up when this theme is not installed anymore [pnicolli]
 
 
 1.1.7 (2018-02-07)

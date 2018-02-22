@@ -43,7 +43,7 @@
       permission="zope2.View"
       for="*"
       class=".tile_collection_renderers.NewsView"
-      layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
       template="templates/news_renderer.pt"
       />
 
@@ -52,7 +52,7 @@
       permission="zope2.View"
       for="*"
       class=".tile_collection_renderers.VideoView"
-      layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
       template="templates/video_renderer.pt"
       />
 
@@ -61,7 +61,7 @@
       permission="zope2.View"
       for="*"
       class=".tile_collection_renderers.GalleryView"
-      layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
       template="templates/photogallery_renderer.pt"
       />
 
@@ -70,7 +70,7 @@
       permission="zope2.View"
       for="*"
       class=".tile_collection_renderers.AreeTematicheView"
-      layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
       template="templates/aree_tematiche.pt"
       />
 
@@ -79,7 +79,7 @@
       permission="zope2.View"
       for="*"
       class=".tile_collection_renderers.OnlineServicesView"
-      layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
       template="templates/online_services.pt"
       />
 
@@ -124,7 +124,7 @@
       permission="zope2.View"
       for="*"
       class=".tile_collection_renderers.NewsAreaTematicaView"
-      layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
       template="templates/news_area_tematica.pt"
       />
 
@@ -133,7 +133,7 @@
       permission="zope2.View"
       for="*"
       class=".tile_collection_renderers.ServiziAreaTematicaView"
-      layer="collective.tiles.collection.interfaces.ICollectiveTilesCollectionLayer"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
       template="templates/servizi_area_tematica.pt"
       />
 
