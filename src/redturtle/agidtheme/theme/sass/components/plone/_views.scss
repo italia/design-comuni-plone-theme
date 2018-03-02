@@ -2,7 +2,7 @@
 .template-standard_view {
   .entry {
     .summary {
-      font-weight: bold;
+      font-weight: $semibold;
       font-size: 1.2em;
     }
   }
@@ -111,7 +111,7 @@
         background-color: #EEE;
 
         .photoAlbumEntryTitle {
-          font-weight: bold;
+          font-weight: $semibold;
         }
       }
     }
