@@ -3,7 +3,7 @@
     ul.select2-choices            { padding: 10px;
         li.select2-search-choice    { background: #E7FB61 none;
             border-color: #B1C334;
-            .pattern-relateditems-item-title { font-weight: bold; }
+            .pattern-relateditems-item-title { font-weight: $semibold; }
         }
     }
 }
