@@ -43,6 +43,7 @@
                                                            title obj/Description">
                                             <div class="collectionItemImage">
                                                 <span class="video-icon"></span>
+                                                <!-- if obj is None, it will break calling getObject() on it, but if the collection is empty this won't be rendered by collective.tiles.collection -->
                                                 <img class="image-thumb"
                                                      tal:define="realObj obj/getObject;
                                                                  scales realObj/@@images"
