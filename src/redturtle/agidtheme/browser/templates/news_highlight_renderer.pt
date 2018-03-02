@@ -18,6 +18,7 @@
               i18n:translate="tiles_collection_noresults">
             No results found
             </p>
+            <!-- if obj is None, it will break calling getObject() on it, but if the collection is empty this won't be rendered by collective.tiles.collection -->
             <div class="tile-content"
                 tal:define="obj news/getObject;
                             image_tag python:helper_view.get_image_tag(obj, 'newshighlight', 'down');
