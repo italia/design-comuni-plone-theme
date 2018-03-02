@@ -20,7 +20,7 @@
             </p>
             <div class="tile-content"
                 tal:define="obj news/getObject;
-                            image_tag python:helper_view.get_image_tag(obj, 'newshighlight');
+                            image_tag python:helper_view.get_image_tag(obj, 'newshighlight', 'down');
                             title news/Title;
                             description news/Description">
               <div class="news-infos">
