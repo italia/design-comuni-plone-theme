@@ -206,6 +206,7 @@
     .searchOpened,
     .menuOpened {
         position: relative;
+        overflow: hidden;
 
         &:after {
             content: "";
