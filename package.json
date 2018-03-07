@@ -1,31 +1,28 @@
 {
-  "//": "Put here only devDependencies, theme dependencies should stay inside of the theme folder.",
+  "//":
+    "Put here only devDependencies, theme dependencies should stay inside of the theme folder.",
   "name": "redturtle.agidtheme",
   "version": "2.0.0",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com:PloneGov-IT/redturtle.agidtheme.git"
   },
-  "keywords": [
-    "agid",
-    "redturtle.agidtheme",
-    "theme"
-  ],
+  "keywords": ["agid", "redturtle.agidtheme", "theme"],
   "author": "RedTurtle Technology",
   "license": "GPL-3.0",
   "homepage": "https://github.com/PloneGov-IT/redturtle.agidtheme",
   "devDependencies": {
     "@redturtle/eslint-config": "^1.2.0",
-    "autoprefixer": "^6.5.1",
+    "autoprefixer": "^8.1.0",
     "babel-core": "^6.26.0",
-    "babel-eslint": "^8.2.1",
-    "babel-loader": "^7.1.2",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "cssnano": "^3.7.7",
-    "eslint": "^4.16.0",
+    "eslint": "^4.18.2",
     "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-flowtype": "^2.42.0",
-    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-prettier": "^2.5.0",
     "grunt": "~1.0.1",
     "grunt-browser-sync": "^2.2.0",
@@ -35,38 +32,31 @@
     "grunt-contrib-requirejs": "^1.0.0",
     "grunt-contrib-uglify": "^3.0.1",
     "grunt-contrib-watch": "latest",
-    "grunt-postcss": "^0.8.0",
-    "grunt-sass": "^1.2.1",
+    "grunt-postcss": "^0.9.0",
+    "grunt-sass": "^2.1.0",
     "grunt-webpack": "^3.0.2",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0",
     "load-grunt-tasks": "^3.5.2",
-    "pixrem": "^3.0.2",
+    "pixrem": "^4.0.1",
     "postcss-flexbugs-fixes": "^3.3.0",
-    "prettier": "^1.5.3",
-    "stylelint": "^8.0.0",
-    "stylelint-config-prettier": "^2.0.0",
-    "stylelint-config-recommended": "^1.0.0",
+    "prettier": "^1.11.1",
+    "stylelint": "^9.1.1",
+    "stylelint-config-prettier": "^2.1.0",
+    "stylelint-config-recommended": "^2.1.0",
     "webpack": "^3.11.0"
   },
   "scripts": {
-    "prettier:scss": "prettier --single-quote --tab-width 4 --list-different src/redturtle/agidtheme/theme/sass/**/*.scss",
-    "prettier:scss:fix": "prettier --single-quote --tab-width 4 --write src/redturtle/agidtheme/theme/sass/**/*.scss"
-  },
-  "stylelint": {
-    "extends": "stylelint-config-recommended",
-    "rules": {
-      "at-rule-no-unknown": [
-        true,
-        {
-          "ignoreAtRules": [
-            "extend",
-            "include",
-            "mixin"
-          ]
-        }
-      ]
-    }
+    "prettier-all":
+      "prettier --write 'src/redturtle/agidtheme/theme/**/*.{js,json,scss}'",
+    "precommit": "lint-staged",
+    "develop": "grunt compile && grunt",
+    "build": "grunt compile && yarn prettier-all"
   },
   "dependencies": {
     "ellipsed": "1.2.0"
+  },
+  "lint-staged": {
+    "*.{js,json,css}": ["prettier --write", "git add"]
   }
 }
