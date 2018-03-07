@@ -55,7 +55,8 @@
                 aria-controls="portal-searchbox"
                 aria-label="Apri/chiudi ricerca"
                 title="Apri/chiudi ricerca">
-          <span class="icon"></span>
+          <i class="fas fa-search"></i>
+          <span class="close-icon"></span>
           <span class="sr-only">SEARCH</span>
         </button>
         <div class="plone-navbar-header">
@@ -102,7 +103,7 @@
   <!-- aggiungo la freccia per il mobile -->
   <after css:content="#portal-footer-wrapper">
     <a href="javascript:" aria-hidden="true" id="return-to-top" title="Return to top" style="display: none">
-      <span class="fa fa-chevron-up"></span>
+      <span class="fas fa-chevron-up"></span>
     </a>
   </after>
 

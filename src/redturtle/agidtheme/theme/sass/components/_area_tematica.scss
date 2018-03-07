@@ -21,7 +21,7 @@
                 border: 1px solid $gray-desc-border;
                 border-radius: 5px;
                 background-color: $gray-bg;
-                font-weight: $bold;
+                font-weight: $semibold;
                 text-align: center;
                 padding: 5px 10px;
                 margin: 5px 30px 10px 0;
@@ -42,7 +42,7 @@
             .newsText {
                 .newsTitle {
 
-                    font-weight: $bold;
+                    font-weight: $semibold;
                     font-size: 2rem;
 
                     a {
@@ -94,6 +94,7 @@
             a {
                 line-height: 1em;
                 color: $text-color;
+                padding-left: 10px;
 
                 &:focus,
                 &:hover {
@@ -102,13 +103,9 @@
                 }
             }
 
-            &:before {
-                @include make-fa('\f105');
+            svg {
                 color: $text-color;
                 font-size: 2rem;
-                position: absolute;
-                top: 0;
-                left: 0;
             }
         }
     }

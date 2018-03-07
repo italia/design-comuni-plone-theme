@@ -87,45 +87,22 @@
                 background: #FFF;
 
                 a {
-                    display: block;
+                    display: flex;
+                    background: $brand-primary;
+                    text-align: center;
+                    align-items: center;
+                    width: 45px;
+                    height: 45px;
+                    padding: 7px;
+
+                    svg {
+                        color: #FFF;
+                        width: 100%;
+                        font-size: 1.5em;
+                    }
 
                     .u-hiddenVisually {
                         @include sr-only;
-                    }
-
-                    .social {
-                        background: $brand-primary;
-                        display: inline-block;
-                        text-align: center;
-                        width: 45px;
-                        height: 45px;
-                        padding: 7px;
-
-                        &:before {
-                            font-size: 1.2em;
-                        }
-
-                        &.google:before {
-                            @include make-fa('\f0d5', #fff);
-                        }
-                        &.facebook:before {
-                            @include make-fa('\f09a', #fff);
-                        }
-                        &.twitter:before {
-                            @include make-fa('\f099', #fff);
-                        }
-                        &.youtube:before {
-                            @include make-fa('\f167', #fff);
-                        }
-                        &.instagram:before {
-                            @include make-fa('\f16d', #FFF);
-                        }
-                        &.whatsapp:before {
-                            @include make-fa('\f232', #fff);
-                        }
-                        &.linkedin:before {
-                            @include make-fa('\f0e1', #fff);
-                        }
                     }
                 }
             }

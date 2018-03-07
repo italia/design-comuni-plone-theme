@@ -13,22 +13,13 @@
 
                 &.navTreeFolderish {
                     position: relative;
-                    &:after {
-                        @include make-fa('\f107');
-                        display: block;
+
+                    svg {
                         position: absolute;
-                        top: 1rem;
-                        right: 1rem;
+                        top: 1.5rem;
+                        right: 1.5rem;
                         font-size: 2.5rem;
                         color: #000;
-                    }
-                    &.navTreeCurrentNode,
-                    &.navTreeItemInPath {
-                        &:after {
-                            @include make-fa('\f106');
-                            top: 0.5rem;
-                            font-weight: $regular;
-                        }
                     }
                 }
                 &:hover,
@@ -57,9 +48,10 @@
                     background-color: $brand-primary;
                     color: #fff;
                     font-weight: $semibold;
-                        &:after {
-                            color: #fff;
-                        }
+
+                    svg {
+                        color: #fff;
+                    }
                 }
             }
         }

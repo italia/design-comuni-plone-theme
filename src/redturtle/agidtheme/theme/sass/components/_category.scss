@@ -3,10 +3,10 @@
     font-size: 0.9em;
 
     #categories-filed-under {
-        &:before {
-            @include make-fa('\f02c');
+        svg {
             color: $gray-documentByLine;
-            padding-right: 0.5rem;
+            padding: 0 0.2rem;
+            margin: 0 8px 0 2px;
         }
     }
 

@@ -29,11 +29,7 @@
         font-weight: $regular;
         vertical-align: baseline;
         height: 50px;
-
-        &:before {
-            @include make-fa('\f002');
-            font-size: 2.6rem;
-        }
+        font-size: 2.6rem;
 
         &:focus,
         &:hover {
@@ -181,8 +177,7 @@
                     margin-left: 0;
                 }
 
-                &:before {
-                    @include make-fa('\f0b0');
+                svg {
                     margin-right: 5px;
                 }
 
@@ -218,7 +213,7 @@
         }
 
         #searchResultsSort {
-            padding: 0 20px 0 30px;
+            padding: 20px 0;
             color: $gray;
             font-size: 0.9em;
 
@@ -249,28 +244,9 @@
                         background-color: #CCC;
                     }
 
-                    span {
-                        @extend .sr-only;
-                    }
-
-                    &:before {
-                        padding-right: 10px;
-                    }
-
-                    &:nth-child(1) {
-                        &:before {
-                            @include make-fa('\f005');
-                        }
-                    }
-                    &[data-sort="Date"] {
-                        &:before {
-                            @include make-fa('\f073');
-                        }
-                    }
-                    &[data-sort="sortable_title"] {
-                        &:before {
-                            @include make-fa('\f15d');
-                        }
+                    svg {
+                        height: 1em;
+                        margin: 0 7px 0 3px;
                     }
                 }
             }
@@ -333,56 +309,6 @@
                 flex-grow: 2;
                 @media (max-width: $screen-sm-max) {
                     padding-right: 0;
-                }
-            }
-
-            .rubricaSearchResults {
-                padding: 20px 30px;
-                background-color: $gray-lighter;
-                min-width: 24%;
-                margin-bottom: 30px;
-
-                nav {
-                    margin-top: 20px;
-                }
-
-                h5.rubricaSideTotResults {
-                    padding-left: 2.2em;
-                    position: relative;
-
-                    .rubricaNResults {
-                        font-size: 0.9em;
-                        font-style: italic;
-                        font-weight: $regular;
-                        display: block;
-                    }
-                    .rubricaTitle {
-                        text-transform: uppercase;
-                        font-weight: $semibold;
-                    }
-
-                    &:before {
-                        @include make-fa('\f006');
-                        display: inline-block;
-                        font-size: 1.7em;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                    }
-                }
-
-                ul {
-                    @extend .list-unstyled;
-                    margin:0;
-
-                    li {
-                        border-top: 1px solid #CCC;
-                        padding: 0.5em 0;
-
-                        &:first-child {
-                            border: 0;
-                        }
-                    }
                 }
             }
         }

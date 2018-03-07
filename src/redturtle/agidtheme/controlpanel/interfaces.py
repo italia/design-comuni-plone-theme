@@ -33,14 +33,6 @@ class IRedturtleAgidthemeSettings(model.Schema):
         )
     )
 
-    header_link_label = schema.TextLine(
-        title=_(u'header_link_label',
-                default=u'Header link label'),
-        description=_(u'header_link_label_desc',
-                      default=u'Label for the link in the header of the site'),
-        required=False
-    )
-
     follow_us_links = schema.List(
         title=_(u'follow_us_links_label',
                 default=u'Follow us links'),
@@ -59,6 +51,14 @@ class IRedturtleAgidthemeSettings(model.Schema):
         default=[],
         missing_value=[],
         value_type=schema.TextLine()
+    )
+
+    header_link_label = schema.TextLine(
+        title=_(u'header_link_label',
+                default=u'Header link label'),
+        description=_(u'header_link_label_desc',
+                      default=u'Label for the link in the header of the site'),
+        required=False
     )
 
     header_link_url = schema.URI(

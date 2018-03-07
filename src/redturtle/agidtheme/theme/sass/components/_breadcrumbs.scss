@@ -51,21 +51,10 @@
             }
 
             li#breadcrumbs-home {
-                width: 30px;
-                padding-left: 30px;
-                padding-right: 0;
-                position: relative;
-                text-indent: -9999px;
+                padding-left: 0;
 
                 a {
                     display: inline-block;
-
-                    &:before {
-                        @include make-fa('\f015');
-                        position: absolute;
-                        left: 5px;
-                        text-indent: 0;
-                    }
                 }
             }
         }

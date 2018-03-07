@@ -9,6 +9,7 @@
     <metal:macro define-macro="collection-tile-macro"
                  tal:define="helper_view nocall:context/@@collection_tile_helpers"
                  i18n:domain="redturtle.agidtheme">
+      <!-- if obj is None, it will break calling getObject() on it, but if the collection is empty this won't be rendered by collective.tiles.collection -->
       <div class="news-big-photo"
            tal:define="news python: results and results[0] or None;
                        obj news/getObject;

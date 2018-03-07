@@ -8,14 +8,6 @@
         padding-left: 1.4em;
         position: relative;
         margin-bottom: 0.2em !important;
-
-        &:before {
-            @include make-fa('\f01a');
-            position: absolute;
-            top:0.05em;
-            left: 0;
-            color: $text-color;
-        }
     }
 
     .autotoc-level-1 {
@@ -33,9 +25,5 @@
     .autotoc-level-5,
     .autotoc-level-6 {
         padding-left: 1em;
-
-        &:before {
-            content: '\f105';
-        }
     }
 }

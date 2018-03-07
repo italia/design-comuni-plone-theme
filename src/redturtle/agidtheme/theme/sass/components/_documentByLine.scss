@@ -12,13 +12,15 @@
 }
 
 #plone-document-byline {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     margin-bottom: 0.7rem;
+    align-items: center;
 
-    &:before {
-        @include make-fa('\f073');
+    svg {
         color: $gray-documentByLine;
-        padding-right: 0.5rem;
+        padding-right: 0.5em;
+        width: 30px;
     }
 
     a {

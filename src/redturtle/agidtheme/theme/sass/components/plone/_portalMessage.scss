@@ -9,7 +9,7 @@
       @extend .btn, .btn-info, .btn-xs;
       font-size: 16px;
       text-transform: uppercase;
-      font-weight: bold;
+      font-weight: $semibold;
     }
   }
   &.warning    {

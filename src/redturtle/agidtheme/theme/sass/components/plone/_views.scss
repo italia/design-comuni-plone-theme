@@ -2,7 +2,7 @@
 .template-standard_view {
   .entry {
     .summary {
-      font-weight: bold;
+      font-weight: $semibold;
       font-size: 1.2em;
     }
   }
@@ -80,7 +80,6 @@
       width: 220px;
 
       a {
-        display: block;
         height: 100%;
         display: flex;
         flex-flow: column;
@@ -112,11 +111,7 @@
         background-color: #EEE;
 
         .photoAlbumEntryTitle {
-          font-weight: bold;
-
-          &:before {
-            @include make-fa('\f07c');
-          }
+          font-weight: $semibold;
         }
       }
     }
