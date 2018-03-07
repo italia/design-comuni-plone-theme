@@ -9,6 +9,13 @@ Changelog
 - Moved JS resources to theme/ folder [nzambello]
 - Migrated icons and styles to FontAwesome 5 (import via JS, added its classes to templates) [nzambello]
 
+- Evitato lo scroll della pagina quando il menu o la ricerca sono aperti [nzambello]
+- Cambiato selettore per il tile manager per l'uso senza pattern [nzambello]
+- Fix nell'ordine degli elementi nel controlpanel [nzambello]
+- Documentate meglio alcune viste per le tile collections [nzambello]
+- Cambiato metodo di scaling di plone.app.imaging da scale() a tag() [nzambello]
+- Cambiate le occorrenze del font-weight 700 a 600 (è quello di cui si fa l'import nel font) [nzambello]
+
 
 1.1.7 (2018-02-07)
 ------------------

@@ -71,12 +71,12 @@ require([
     },
     {
       selector: '.navigationTile a.navTreeFolderish:not(.navTreeCurrentNode):not(.navTreeItemInPath), .portletNavigationTree a.navTreeFolderish:not(.navTreeCurrentNode):not(.navTreeItemInPath)',
-      icon: 'far fa-angle-down',
+      icon: 'fas fa-angle-down',
       prepend: false,
     },
     {
       selector: '.navigationTile a.navTreeFolderish.navTreeCurrentNode, .navigationTile a.navTreeFolderish.navTreeItemInPath, .portletNavigationTree a.navTreeFolderish.navTreeCurrentNode, .portletNavigationTree a.navTreeFolderish.navTreeItemInPath',
-      icon: 'far fa-angle-up',
+      icon: 'fas fa-angle-up',
       prepend: false,
     },
     {
@@ -86,12 +86,12 @@ require([
     },
     {
       selector: '#sorting-options a[data-sort="Date"]',
-      icon: 'far fa-calendar-alt',
+      icon: 'fas fa-calendar-alt',
       prepend: true,
     },
     {
       selector: '#sorting-options a[data-sort="sortable_title"]',
-      icon: 'far fa-sort-alpha-down',
+      icon: 'fas fa-sort-alpha-down',
       prepend: true,
     },
     {

@@ -288,54 +288,50 @@ var _faChevronRight = __webpack_require__(17);
 
 var _faChevronRight2 = _interopRequireDefault(_faChevronRight);
 
-var _faChevronRight3 = __webpack_require__(18);
-
-var _faChevronRight4 = _interopRequireDefault(_faChevronRight3);
-
-var _faAngleRight = __webpack_require__(19);
-
-var _faAngleRight2 = _interopRequireDefault(_faAngleRight);
-
-var _faAngleUp = __webpack_require__(20);
-
-var _faAngleUp2 = _interopRequireDefault(_faAngleUp);
-
-var _faAngleDown = __webpack_require__(21);
-
-var _faAngleDown2 = _interopRequireDefault(_faAngleDown);
-
-var _faSearch = __webpack_require__(22);
+var _faSearch = __webpack_require__(18);
 
 var _faSearch2 = _interopRequireDefault(_faSearch);
 
-var _faCalendarAlt = __webpack_require__(23);
+var _faCalendarAlt = __webpack_require__(19);
 
 var _faCalendarAlt2 = _interopRequireDefault(_faCalendarAlt);
 
-var _faTags = __webpack_require__(24);
+var _faTags = __webpack_require__(20);
 
 var _faTags2 = _interopRequireDefault(_faTags);
 
-var _faFolderOpen = __webpack_require__(25);
+var _faFolderOpen = __webpack_require__(21);
 
 var _faFolderOpen2 = _interopRequireDefault(_faFolderOpen);
 
-var _faFilter = __webpack_require__(26);
+var _faFilter = __webpack_require__(22);
 
 var _faFilter2 = _interopRequireDefault(_faFilter);
 
-var _faStar = __webpack_require__(27);
+var _faStar = __webpack_require__(23);
 
 var _faStar2 = _interopRequireDefault(_faStar);
 
-var _faSortAlphaDown = __webpack_require__(28);
+var _faSortAlphaDown = __webpack_require__(24);
 
 var _faSortAlphaDown2 = _interopRequireDefault(_faSortAlphaDown);
+
+var _faAngleRight = __webpack_require__(25);
+
+var _faAngleRight2 = _interopRequireDefault(_faAngleRight);
+
+var _faAngleUp = __webpack_require__(26);
+
+var _faAngleUp2 = _interopRequireDefault(_faAngleUp);
+
+var _faAngleDown = __webpack_require__(27);
+
+var _faAngleDown2 = _interopRequireDefault(_faAngleDown);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var init = exports.init = function init() {
-  _fontawesome2.default.library.add(_faFacebookF2.default, _faTwitter2.default, _faTelegram2.default, _faInstagram2.default, _faYoutube2.default, _faLinkedinIn2.default, _faMediumM2.default, _faGooglePlusG2.default, _faPinterest2.default, _faGetPocket2.default, _faRss2.default, _faNewspaper2.default, _faHome2.default, _faChevronUp2.default, _faChevronDown2.default, _faChevronRight2.default, _faChevronRight4.default, _faAngleRight2.default, _faAngleUp2.default, _faAngleDown2.default, _faSearch2.default, _faCalendarAlt2.default, _faTags2.default, _faFolderOpen2.default, _faFilter2.default, _faStar2.default, _faSortAlphaDown2.default);
+  _fontawesome2.default.library.add(_faFacebookF2.default, _faTwitter2.default, _faTelegram2.default, _faInstagram2.default, _faYoutube2.default, _faLinkedinIn2.default, _faMediumM2.default, _faGooglePlusG2.default, _faPinterest2.default, _faGetPocket2.default, _faRss2.default, _faNewspaper2.default, _faHome2.default, _faChevronUp2.default, _faChevronDown2.default, _faChevronRight2.default, _faAngleRight2.default, _faAngleUp2.default, _faAngleDown2.default, _faSearch2.default, _faCalendarAlt2.default, _faTags2.default, _faFolderOpen2.default, _faFilter2.default, _faStar2.default, _faSortAlphaDown2.default);
 };
 
 /***/ }),
@@ -2250,67 +2246,61 @@ module.exports = { prefix: 'fas', iconName: 'chevron-right', icon: [320, 512, []
 /* 18 */
 /***/ (function(module, exports) {
 
-module.exports = { prefix: 'fal', iconName: 'chevron-right', icon: [256, 512, [], "f054", "M17.525 36.465l-7.071 7.07c-4.686 4.686-4.686 12.284 0 16.971L205.947 256 10.454 451.494c-4.686 4.686-4.686 12.284 0 16.971l7.071 7.07c4.686 4.686 12.284 4.686 16.97 0l211.051-211.05c4.686-4.686 4.686-12.284 0-16.971L34.495 36.465c-4.686-4.687-12.284-4.687-16.97 0z"] };
+module.exports = { prefix: 'fas', iconName: 'search', icon: [512, 512, [], "f002", "M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"] };
 
 /***/ }),
 /* 19 */
 /***/ (function(module, exports) {
 
-module.exports = { prefix: 'far', iconName: 'angle-right', icon: [192, 512, [], "f105", "M187.8 264.5L41 412.5c-4.7 4.7-12.3 4.7-17 0L4.2 392.7c-4.7-4.7-4.7-12.3 0-17L122.7 256 4.2 136.3c-4.7-4.7-4.7-12.3 0-17L24 99.5c4.7-4.7 12.3-4.7 17 0l146.8 148c4.7 4.7 4.7 12.3 0 17z"] };
+module.exports = { prefix: 'far', iconName: 'calendar-alt', icon: [448, 512, [], "f073", "M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"] };
 
 /***/ }),
 /* 20 */
 /***/ (function(module, exports) {
 
-module.exports = { prefix: 'far', iconName: 'angle-up', icon: [320, 512, [], "f106", "M168.5 164.2l148 146.8c4.7 4.7 4.7 12.3 0 17l-19.8 19.8c-4.7 4.7-12.3 4.7-17 0L160 229.3 40.3 347.8c-4.7 4.7-12.3 4.7-17 0L3.5 328c-4.7-4.7-4.7-12.3 0-17l148-146.8c4.7-4.7 12.3-4.7 17 0z"] };
+module.exports = { prefix: 'fas', iconName: 'tags', icon: [640, 512, [], "f02c", "M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"] };
 
 /***/ }),
 /* 21 */
 /***/ (function(module, exports) {
 
-module.exports = { prefix: 'far', iconName: 'angle-down', icon: [320, 512, [], "f107", "M151.5 347.8L3.5 201c-4.7-4.7-4.7-12.3 0-17l19.8-19.8c4.7-4.7 12.3-4.7 17 0L160 282.7l119.7-118.5c4.7-4.7 12.3-4.7 17 0l19.8 19.8c4.7 4.7 4.7 12.3 0 17l-148 146.8c-4.7 4.7-12.3 4.7-17 0z"] };
+module.exports = { prefix: 'fas', iconName: 'folder-open', icon: [576, 512, [], "f07c", "M572.694 292.093L500.27 416.248A63.997 63.997 0 0 1 444.989 448H45.025c-18.523 0-30.064-20.093-20.731-36.093l72.424-124.155A64 64 0 0 1 152 256h399.964c18.523 0 30.064 20.093 20.73 36.093zM152 224h328v-48c0-26.51-21.49-48-48-48H272l-64-64H48C21.49 64 0 85.49 0 112v278.046l69.077-118.418C86.214 242.25 117.989 224 152 224z"] };
 
 /***/ }),
 /* 22 */
 /***/ (function(module, exports) {
 
-module.exports = { prefix: 'fas', iconName: 'search', icon: [512, 512, [], "f002", "M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"] };
+module.exports = { prefix: 'fas', iconName: 'filter', icon: [512, 512, [], "f0b0", "M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z"] };
 
 /***/ }),
 /* 23 */
 /***/ (function(module, exports) {
 
-module.exports = { prefix: 'far', iconName: 'calendar-alt', icon: [448, 512, [], "f073", "M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"] };
+module.exports = { prefix: 'fas', iconName: 'star', icon: [576, 512, [], "f005", "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"] };
 
 /***/ }),
 /* 24 */
 /***/ (function(module, exports) {
 
-module.exports = { prefix: 'fas', iconName: 'tags', icon: [640, 512, [], "f02c", "M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"] };
+module.exports = { prefix: 'fas', iconName: 'sort-alpha-down', icon: [448, 512, [], "f15d", "M187.298 395.314l-79.984 80.002c-6.248 6.247-16.383 6.245-22.627 0L4.705 395.314C-5.365 385.244 1.807 368 16.019 368H64V48c0-8.837 7.163-16 16-16h32c8.837 0 16 7.163 16 16v320h47.984c14.241 0 21.363 17.264 11.314 27.314zm119.075-180.007A12 12 0 0 1 294.838 224h-35.717c-8.22 0-14.007-8.078-11.362-15.861l57.096-168A12 12 0 0 1 316.217 32h39.566c5.139 0 9.708 3.273 11.362 8.139l57.096 168C426.886 215.922 421.1 224 412.879 224h-35.735a12 12 0 0 1-11.515-8.622l-8.301-28.299h-42.863l-8.092 28.228zm22.857-78.697h13.367l-6.6-22.937-6.767 22.937zm12.575 287.323l67.451-95.698a12 12 0 0 0 2.192-6.913V300c0-6.627-5.373-12-12-12H274.522c-6.627 0-12 5.373-12 12v28.93c0 6.627 5.373 12 12 12h56.469c-.739.991-1.497 2.036-2.27 3.133l-67.203 95.205a12.001 12.001 0 0 0-2.196 6.92V468c0 6.627 5.373 12 12 12h129.355c6.627 0 12-5.373 12-12v-28.93c0-6.627-5.373-12-12-12h-61.146c.74-.993 1.5-2.039 2.274-3.137z"] };
 
 /***/ }),
 /* 25 */
 /***/ (function(module, exports) {
 
-module.exports = { prefix: 'fas', iconName: 'folder-open', icon: [576, 512, [], "f07c", "M572.694 292.093L500.27 416.248A63.997 63.997 0 0 1 444.989 448H45.025c-18.523 0-30.064-20.093-20.731-36.093l72.424-124.155A64 64 0 0 1 152 256h399.964c18.523 0 30.064 20.093 20.73 36.093zM152 224h328v-48c0-26.51-21.49-48-48-48H272l-64-64H48C21.49 64 0 85.49 0 112v278.046l69.077-118.418C86.214 242.25 117.989 224 152 224z"] };
+module.exports = { prefix: 'fas', iconName: 'angle-right', icon: [256, 512, [], "f105", "M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"] };
 
 /***/ }),
 /* 26 */
 /***/ (function(module, exports) {
 
-module.exports = { prefix: 'fas', iconName: 'filter', icon: [512, 512, [], "f0b0", "M487.976 0H24.028C2.71 0-8.047 25.866 7.058 40.971L192 225.941V432c0 7.831 3.821 15.17 10.237 19.662l80 55.98C298.02 518.69 320 507.493 320 487.98V225.941l184.947-184.97C520.021 25.896 509.338 0 487.976 0z"] };
+module.exports = { prefix: 'fas', iconName: 'angle-up', icon: [320, 512, [], "f106", "M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"] };
 
 /***/ }),
 /* 27 */
 /***/ (function(module, exports) {
 
-module.exports = { prefix: 'fas', iconName: 'star', icon: [576, 512, [], "f005", "M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"] };
-
-/***/ }),
-/* 28 */
-/***/ (function(module, exports) {
-
-module.exports = { prefix: 'far', iconName: 'sort-alpha-down', icon: [384, 512, [], "f15d", "M156.718 404.24l-67.994 72.002c-4.732 5.01-12.713 5.014-17.448 0L3.283 404.24C-3.883 396.652 1.428 384 12.007 384H56V44c0-6.627 5.373-12 12-12h24c6.627 0 12 5.373 12 12v340h43.994c10.587 0 15.884 12.658 8.724 20.24zm105.853-188.933A12 12 0 0 1 251.036 224h-29.133c-8.22 0-14.007-8.078-11.362-15.861l57.097-168A11.999 11.999 0 0 1 278.999 32h35.894c5.139 0 9.708 3.273 11.362 8.139l57.097 168c2.645 7.783-3.141 15.861-11.362 15.861h-29.172a12 12 0 0 1-11.515-8.622l-8.793-29.977h-51.367l-8.572 29.906zm21.463-73.942h25.606l-8.822-30.655c-1.277-4.419-2.651-9.992-3.871-15.241-1.221 5.251-2.595 10.824-3.872 15.245l-9.041 30.651zm7.486 292.104c2.274-2.654 4.985-6.056 7.929-10.235l69.819-99.06a11.999 11.999 0 0 0 2.191-6.913V300c0-6.627-5.373-12-12-12H236.493c-6.627 0-12 5.373-12 12v22.61c0 6.627 5.373 12 12 12h59.682c1.652 0 3.213-.03 4.655-.078-2.274 2.653-4.984 6.055-7.927 10.233l-69.56 98.542a12.001 12.001 0 0 0-2.196 6.92V468c0 6.627 5.373 12 12 12h127.599c6.627 0 12-5.373 12-12v-22.61c0-6.627-5.373-12-12-12h-64.571c-1.652 0-3.213.031-4.655.079z"] };
+module.exports = { prefix: 'fas', iconName: 'angle-down', icon: [320, 512, [], "f107", "M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"] };
 
 /***/ })
 /******/ ])});;
@@ -2387,12 +2377,12 @@ require([
     },
     {
       selector: '.navigationTile a.navTreeFolderish:not(.navTreeCurrentNode):not(.navTreeItemInPath), .portletNavigationTree a.navTreeFolderish:not(.navTreeCurrentNode):not(.navTreeItemInPath)',
-      icon: 'far fa-angle-down',
+      icon: 'fas fa-angle-down',
       prepend: false,
     },
     {
       selector: '.navigationTile a.navTreeFolderish.navTreeCurrentNode, .navigationTile a.navTreeFolderish.navTreeItemInPath, .portletNavigationTree a.navTreeFolderish.navTreeCurrentNode, .portletNavigationTree a.navTreeFolderish.navTreeItemInPath',
-      icon: 'far fa-angle-up',
+      icon: 'fas fa-angle-up',
       prepend: false,
     },
     {
@@ -2402,12 +2392,12 @@ require([
     },
     {
       selector: '#sorting-options a[data-sort="Date"]',
-      icon: 'far fa-calendar-alt',
+      icon: 'fas fa-calendar-alt',
       prepend: true,
     },
     {
       selector: '#sorting-options a[data-sort="sortable_title"]',
-      icon: 'far fa-sort-alpha-down',
+      icon: 'fas fa-sort-alpha-down',
       prepend: true,
     },
     {

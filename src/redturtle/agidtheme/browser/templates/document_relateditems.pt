@@ -12,7 +12,7 @@
         <header i18n:translate="label_related_items">Related content</header>
         <ul>
           <li tal:repeat="item related">
-            <i class="far fa-angle-right"></i>
+            <i class="fas fa-angle-right"></i>
             <span tal:define="desc                item/Description;
                               item_type           item/portal_type;
                               item_type_class     python:'contenttype-' + normalizeString(item_type);

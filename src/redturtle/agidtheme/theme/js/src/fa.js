@@ -15,17 +15,17 @@ import faHome from '@fortawesome/fontawesome-free-solid/faHome';
 import faChevronUp from '@fortawesome/fontawesome-free-solid/faChevronUp';
 import faChevronDown from '@fortawesome/fontawesome-free-solid/faChevronDown';
 import faChevronRight from '@fortawesome/fontawesome-free-solid/faChevronRight';
-import faChevronRightL from '@fortawesome/fontawesome-pro-light/faChevronRight';
-import faAngleRightR from '@fortawesome/fontawesome-pro-regular/faAngleRight';
-import faAngleUpR from '@fortawesome/fontawesome-pro-regular/faAngleUp';
-import faAngleDownR from '@fortawesome/fontawesome-pro-regular/faAngleDown';
 import faSearch from '@fortawesome/fontawesome-free-solid/faSearch';
 import faCalendarAlt from '@fortawesome/fontawesome-free-regular/faCalendarAlt';
 import faTags from '@fortawesome/fontawesome-free-solid/faTags';
 import faFolderOpen from '@fortawesome/fontawesome-free-solid/faFolderOpen';
 import faFilter from '@fortawesome/fontawesome-free-solid/faFilter';
 import faStar from '@fortawesome/fontawesome-free-solid/faStar';
-import faSortAlphaDown from '@fortawesome/fontawesome-pro-regular/faSortAlphaDown';
+
+import faSortAlphaDown from '@fortawesome/fontawesome-free-solid/faSortAlphaDown';
+import faAngleRight from '@fortawesome/fontawesome-free-solid/faAngleRight';
+import faAngleUp from '@fortawesome/fontawesome-free-solid/faAngleUp';
+import faAngleDown from '@fortawesome/fontawesome-free-solid/faAngleDown';
 
 export const init = () => {
   fontawesome.library.add(
@@ -45,10 +45,9 @@ export const init = () => {
     faChevronUp,
     faChevronDown,
     faChevronRight,
-    faChevronRightL,
-    faAngleRightR,
-    faAngleUpR,
-    faAngleDownR,
+    faAngleRight,
+    faAngleUp,
+    faAngleDown,
     faSearch,
     faCalendarAlt,
     faTags,
