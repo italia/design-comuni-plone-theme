@@ -5,12 +5,12 @@ Changelog
 2.0.0 (unreleased)
 ------------------
 
-- Updated package.json to reflect current addon version [pnicolli]
-- Fixed collection tile renderers layers, they won't show up when this theme is not installed anymore [pnicolli]
 [BREAKING CHANGES]:
 - Moved JS resources to theme/ folder [nzambello]
 - Migrated icons and styles to FontAwesome 5 (import via JS, added its classes to templates) [nzambello]
 
+- Updated package.json to reflect current addon version [pnicolli]
+- Fixed collection tile renderers layers, they won't show up when this theme is not installed anymore [pnicolli]
 - Evitato lo scroll della pagina quando il menu o la ricerca sono aperti [nzambello]
 - Cambiato selettore per il tile manager per l'uso senza pattern [nzambello]
 - Fix nell'ordine degli elementi nel controlpanel [nzambello]
