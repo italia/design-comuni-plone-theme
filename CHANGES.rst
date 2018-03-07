@@ -8,6 +8,7 @@ Changelog
 [BREAKING CHANGES]:
 - Moved JS resources to theme/ folder [nzambello]
 - Migrated icons and styles to FontAwesome 5 (import via JS, added its classes to templates) [nzambello]
+- Added prettier and made it run on the code [nzambello]
 
 - Updated package.json to reflect current addon version [pnicolli]
 - Fixed collection tile renderers layers, they won't show up when this theme is not installed anymore [pnicolli]
