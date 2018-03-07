@@ -2392,7 +2392,7 @@ require([
     },
     {
       selector: '#sorting-options a[data-sort="Date"]',
-      icon: 'fas fa-calendar-alt',
+      icon: 'far fa-calendar-alt',
       prepend: true,
     },
     {
