@@ -6,7 +6,7 @@
     }
 
     &.carousel {
-        div[class^="carousel-wrapper"] {
+        div[class^='carousel-wrapper'] {
             position: relative;
         }
 
@@ -98,19 +98,19 @@
         &.sfondo-scuro {
             ul.slick-dots {
                 button {
-                    border-color: #FFF;
+                    border-color: #fff;
                 }
 
                 .slick-active {
                     button {
-                        background-color: #FFF;
+                        background-color: #fff;
                     }
                 }
             }
 
             .slick-arrow {
                 &:before {
-                    color: #FFF;
+                    color: #fff;
                 }
             }
         }
@@ -131,7 +131,7 @@
                 background-color: rgba(0, 0, 0, 0.4);
 
                 &:after {
-                    content: "";
+                    content: '';
                     display: inline-block;
                     width: 100%;
                     height: 100%;
@@ -166,14 +166,14 @@
             }
 
             .collectionItemDates {
-                color: #FFF;
+                color: #fff;
                 font-weight: 100;
                 padding-top: 0;
             }
 
             .collectionItemTitle {
                 font-size: 1.2em;
-                color: #FFF;
+                color: #fff;
                 display: flex;
                 flex-flow: row nowrap;
 
@@ -188,13 +188,13 @@
 
                     &.photo {
                         &:before {
-                            @include make-ita('\1f4f7', #FFF);
+                            @include make-ita('\1f4f7', #fff);
                         }
                     }
 
                     &.video {
                         &:before {
-                            @include make-ita('\1f3a5', #FFF);
+                            @include make-ita('\1f3a5', #fff);
                         }
                     }
                 }
@@ -247,7 +247,7 @@
     }
 
     .collectionItemWrapper {
-        background: #EEE;
+        background: #eee;
         height: 100%;
         position: relative;
 
@@ -444,7 +444,7 @@
                 }
             }
             .news-description {
-              font-size: 2.8rem;
+                font-size: 2.8rem;
             }
         }
 
@@ -509,7 +509,7 @@
 
         .tile-content .news-infos .news-title a:focus,
         .tile-content .news-infos .news-title a:hover {
-            border-color: #DDD;
+            border-color: #ddd;
         }
     }
 
@@ -520,7 +520,7 @@
     .tile-collection {
         &.gallery-collection {
             .collectionItemWrapper {
-                background-color: #EEE;
+                background-color: #eee;
 
                 .collectionItemTitle,
                 .collectionItemDates {
@@ -545,9 +545,11 @@
 
     .tile-collection {
         .collectionItemWrapper {
-            background: #FFF;
+            background: #fff;
 
-            a, span, h3 {
+            a,
+            span,
+            h3 {
                 color: #000;
             }
         }
@@ -652,7 +654,7 @@
         }
 
         .serviceDescription:before {
-            content: "";
+            content: '';
             float: left;
             width: 5px;
             height: 6em;
@@ -665,7 +667,7 @@
         }
 
         .serviceDescription:after {
-            content: "\02026";
+            content: '\02026';
             box-sizing: content-box;
             float: right;
             position: relative;
@@ -681,12 +683,12 @@
 .sfondo-scuro {
     .online-services {
         .serviceWrapper a {
-            color: #FFF;
+            color: #fff;
 
             &:focus,
             &:hover {
-                color: #DDD;
-                border-color: #DDD;
+                color: #ddd;
+                border-color: #ddd;
             }
         }
     }

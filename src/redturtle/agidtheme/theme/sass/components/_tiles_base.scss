@@ -1,9 +1,30 @@
-.colonna-1-di-2         { width: 100%; @include make-sm-column(12); @include make-md-column(6); }
-.colonna-1-di-3         { width: 100%; @include make-sm-column(4); }
-.colonna-2-di-3         { width: 100%; @include make-sm-column(8); }
-.colonna-1-di-4         { width: 100%; @include make-sm-column(6); @include make-md-column(3); }
-.colonna-1-di-5         { width: 20%; float: left; }
-.colonna-1-di-6         { width: 100%; @include make-md-column(2); @include make-sm-column(4); }
+.colonna-1-di-2 {
+    width: 100%;
+    @include make-sm-column(12);
+    @include make-md-column(6);
+}
+.colonna-1-di-3 {
+    width: 100%;
+    @include make-sm-column(4);
+}
+.colonna-2-di-3 {
+    width: 100%;
+    @include make-sm-column(8);
+}
+.colonna-1-di-4 {
+    width: 100%;
+    @include make-sm-column(6);
+    @include make-md-column(3);
+}
+.colonna-1-di-5 {
+    width: 20%;
+    float: left;
+}
+.colonna-1-di-6 {
+    width: 100%;
+    @include make-md-column(2);
+    @include make-sm-column(4);
+}
 
 .sfondo-chiaro {
     background: $gray-bg;
@@ -18,7 +39,7 @@
     }
 
     .news-collection .newsWrapper {
-      background-color: #FFF;
+        background-color: #fff;
     }
 }
 
@@ -33,20 +54,20 @@
 
         &:focus,
         &:hover {
-            color: #DDD;
-            border-color: #DDD;
+            color: #ddd;
+            border-color: #ddd;
         }
     }
 
     .tileTitle {
         &,
         .title-content {
-            color: #FFF;
+            color: #fff;
         }
     }
 
     .news-collection .newsWrapper {
-      background-color: #FFF;
+        background-color: #fff;
     }
 }
 
@@ -60,9 +81,9 @@
         text-align: center;
 
         a.plone-btn {
-          @extend .btn-info;
-          text-transform: uppercase;
-          font-weight: $semibold;
+            @extend .btn-info;
+            text-transform: uppercase;
+            font-weight: $semibold;
         }
 
         .available-tiles {
@@ -71,8 +92,8 @@
                 font-size: 0.9em;
 
                 .list-group-item {
-                     @extend .btn-default;
-                     width: 24%;
+                    @extend .btn-default;
+                    width: 24%;
                 }
 
                 .tileTitle {

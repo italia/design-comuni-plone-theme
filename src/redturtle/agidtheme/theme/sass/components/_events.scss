@@ -68,12 +68,12 @@ body.portaltype-event {
                     padding: 0;
                 }
 
-                input[type=button] {
+                input[type='button'] {
                     display: inline-block;
                     margin-bottom: 0; // For input.btn
                     font-weight: $semibold;
                     text-align: center;
-                    text-shadow: 0 1px rgba(0,0,0,.25);
+                    text-shadow: 0 1px rgba(0, 0, 0, 0.25);
                     vertical-align: middle;
                     cursor: pointer;
                     background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
@@ -91,7 +91,7 @@ body.portaltype-event {
                     margin-top: 0.5rem;
                 }
 
-                input[type=submit][value=save] {
+                input[type='submit'][value='save'] {
                     color: #ffffff;
                     background-color: #007bb1;
                     border-color: #00587e;
@@ -125,35 +125,35 @@ body.portaltype-event {
     }
 
     article .vevent {
-      display: flex;
-      padding: 1.4rem 0 1rem;
-      border-top: 3px solid $text-color;
+        display: flex;
+        padding: 1.4rem 0 1rem;
+        border-top: 3px solid $text-color;
 
-      .cal_info {
-        margin:0;
-        flex-grow: 2;
+        .cal_info {
+            margin: 0;
+            flex-grow: 2;
 
-        h2 {
-          margin: 0;
+            h2 {
+                margin: 0;
+            }
+
+            ul.metadata {
+                margin-bottom: 0;
+            }
         }
 
-        ul.metadata {
-          margin-bottom: 0;
-        }
-      }
+        .cal_date {
+            margin: 1rem 4% 0 0;
 
-      .cal_date {
-        margin: 1rem 4% 0 0;
-
-        span.cal_month {
-          background-color: $brand-primary;
-          color: #FFF;
-          padding: 0.2em 0.5em;
-          font-weight: $semibold;
-          text-transform: uppercase;
-          font-size: 0.8em;
+            span.cal_month {
+                background-color: $brand-primary;
+                color: #fff;
+                padding: 0.2em 0.5em;
+                font-weight: $semibold;
+                text-transform: uppercase;
+                font-size: 0.8em;
+            }
         }
-      }
     }
 }
 

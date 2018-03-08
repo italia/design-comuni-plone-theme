@@ -3,7 +3,7 @@
 
     p {
         display: inline-block;
-        margin:0;
+        margin: 0;
     }
 
     ul {
@@ -18,7 +18,7 @@
                 display: inline-block;
                 border-radius: 100%;
                 background-color: $brand-primary;
-                color: #FFF;
+                color: #fff;
                 width: 3rem;
                 height: 3rem;
                 text-align: center;
@@ -27,9 +27,9 @@
                 vertical-align: middle;
 
                 &.sc-storify:before {
-                    content: "";
+                    content: '';
                     vertical-align: bottom;
-                    background-image: url($img-path + 'storifyHover.svg');
+                    background-image: url($img-path+'storifyHover.svg');
                     background-size: 2rem;
                     background-repeat: no-repeat;
                     background-position: center center;

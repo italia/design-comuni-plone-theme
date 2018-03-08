@@ -16,7 +16,7 @@ $aree-tematiche-gutter: 50px;
 
 .template-homepage_view,
 .template-tiles_page_view {
-    .pat-tiles-management:not([class*="ColumnsPage"]) {
+    .pat-tiles-management:not([class*='ColumnsPage']) {
         .tile-container,
         .existing-content-tile,
         .aree-tematiche-collection,
@@ -26,7 +26,7 @@ $aree-tematiche-gutter: 50px;
     }
 }
 
-[class*="ColumnsPage"] {
+[class*='ColumnsPage'] {
     .template-tiles_page_view & {
         @include make-container($aree-tematiche-gutter);
     }

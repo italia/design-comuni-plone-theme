@@ -21,7 +21,9 @@
                         border-bottom: 1px solid $link-hover-color;
                     }
 
-                    img.image-icon { display: none; }
+                    img.image-icon {
+                        display: none;
+                    }
                 }
 
                 svg {

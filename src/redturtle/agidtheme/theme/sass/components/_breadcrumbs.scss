@@ -30,23 +30,27 @@
             margin: 0;
 
             li {
-                padding:0;
+                padding: 0;
 
                 &:before {
                     content: '/';
                     padding: 0 0.4em;
                 }
 
-                &:nth-child(-n+2) {
+                &:nth-child(-n + 2) {
                     padding: 0 0.4em;
-                    &:before { display: none; }
+                    &:before {
+                        display: none;
+                    }
                 }
 
                 a {
                     color: $brand-primary;
 
                     &:focus,
-                    &:hover { color: #000; }
+                    &:hover {
+                        color: #000;
+                    }
                 }
             }
 

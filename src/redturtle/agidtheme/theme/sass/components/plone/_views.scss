@@ -1,136 +1,134 @@
 // VISTA STANDARD
 .template-standard_view {
-  .entry {
-    .summary {
-      font-weight: $semibold;
-      font-size: 1.2em;
+    .entry {
+        .summary {
+            font-weight: $semibold;
+            font-size: 1.2em;
+        }
     }
-  }
 }
 .template-listing_view {
-  #content-core {
-    .entry {
-      margin: 10px 0;
-      clear: both;
+    #content-core {
+        .entry {
+            margin: 10px 0;
+            clear: both;
 
-      p.description {
-        margin:0 0 0 1em;
-        font-size: 0.85em;
-        color: lighten($text-color, 20%);
-      }
+            p.description {
+                margin: 0 0 0 1em;
+                font-size: 0.85em;
+                color: lighten($text-color, 20%);
+            }
+        }
     }
-  }
 }
 // VISTA RIASSUNTIVA
 .template-summary_view {
+    .tileItem {
+        @extend .clearfix;
+        padding: 2rem 0;
+        border-top: 1px solid #ccc;
 
-  .tileItem {
-    @extend .clearfix;
-    padding: 2rem 0;
-    border-top: 1px solid #CCC;
+        &:first-child {
+            border-top: 0;
+        }
 
-    &:first-child {
-        border-top:0;
+        h2.tileHeadline {
+            font-size: 2.4rem;
+            margin-top: 0;
+        }
+
+        .documentByLine {
+            display: block;
+            margin-top: -0.6em;
+            font-size: 0.85em;
+            color: lighten($text-color, 20%);
+            margin-bottom: 1em;
+        }
+
+        .tileImage {
+            float: left;
+            margin: 0.3em 1em 0.5em 0;
+        }
+
+        .tileImageNoFloat + .tileFooter {
+            display: none;
+        }
+
+        h2.tileItem {
+            .userrole-authenticated & {
+                display: inline;
+            }
+        }
     }
-
-    h2.tileHeadline {
-      font-size: 2.4rem;
-      margin-top:0;
-    }
-
-    .documentByLine {
-      display: block;
-      margin-top: -0.6em;
-      font-size: 0.85em;
-      color: lighten($text-color, 20%);
-      margin-bottom: 1em;
-    }
-
-    .tileImage {
-      float: left;
-      margin: 0.3em 1em 0.5em 0;
-    }
-
-    .tileImageNoFloat + .tileFooter {
-      display: none;
-    }
-
-    h2.tileItem {
-      .userrole-authenticated  & {
-        display: inline;
-      }
-    }
-  }
 }
 
 // ALBUM
 .template-album_view {
-  #content-core {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
-    > .visualClear {
-      display: none;
-    }
-
-    .photoAlbumEntry {
-      margin-bottom: 20px;
-      border: 1px solid #DDD;
-      width: 220px;
-
-      a {
-        height: 100%;
+    #content-core {
         display: flex;
-        flex-flow: column;
-        justify-content: center;
-        text-align: center;
-        padding: 10px;
+        flex-wrap: wrap;
+        justify-content: space-around;
 
-        &:focus,
-        &:hover {
-          background-color: #F0F0F0;
+        > .visualClear {
+            display: none;
         }
 
-        span {
-          display: block;
+        .photoAlbumEntry {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            width: 220px;
 
-          &.photoAlbumEntryWrapper {
-            padding-bottom: 10px;
-          }
-          &.photoAlbumEntryTitle {
-            text-overflow: ellipsis;
-            overflow: hidden;
-            line-height: 1.2em;
-          }
+            a {
+                height: 100%;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                text-align: center;
+                padding: 10px;
+
+                &:focus,
+                &:hover {
+                    background-color: #f0f0f0;
+                }
+
+                span {
+                    display: block;
+
+                    &.photoAlbumEntryWrapper {
+                        padding-bottom: 10px;
+                    }
+                    &.photoAlbumEntryTitle {
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        line-height: 1.2em;
+                    }
+                }
+            }
+
+            &.photoAlbumFolder {
+                border-color: #999;
+                background-color: #eee;
+
+                .photoAlbumEntryTitle {
+                    font-weight: $semibold;
+                }
+            }
         }
-      }
-
-      &.photoAlbumFolder {
-        border-color: #999;
-        background-color: #EEE;
-
-        .photoAlbumEntryTitle {
-          font-weight: $semibold;
-        }
-      }
     }
-  }
 }
 
 // TABLE VIEW
 .template-tabular_view {
+    table.listing {
+        @extend .table, .table-striped;
+    }
 
-  table.listing {
-    @extend .table, .table-striped;
-  }
-
-  #content-core {
-    padding-bottom: 40px;
-  }
+    #content-core {
+        padding-bottom: 40px;
+    }
 }
 
 // CRONOLOGIA
 #history-list {
-  @extend .table, .table-striped;
+    @extend .table, .table-striped;
 }

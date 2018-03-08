@@ -18,7 +18,7 @@
     }
 
     button.search-button {
-        color: #FFF;
+        color: #fff;
         background-color: $brand-primary;
         text-align: center;
         width: 5rem;
@@ -43,7 +43,6 @@
         text-align: left;
     }
 }
-
 
 /* RISULTATI RICERCA */
 
@@ -78,7 +77,7 @@
                 flex-grow: 2;
                 border-top-left-radius: 4px;
                 border-bottom-left-radius: 4px;
-                border: 1px solid #D1E0E1;
+                border: 1px solid #d1e0e1;
                 color: #666;
 
                 @media (max-width: 350px) {
@@ -120,8 +119,8 @@
                 position: absolute;
                 top: 2.4em;
                 right: 0;
-                background-color: #F5F5F5;
-                border: 1px solid #CCC;
+                background-color: #f5f5f5;
+                border: 1px solid #ccc;
                 border-radius: 4px;
                 padding: 10px 15px;
                 z-index: 10;
@@ -131,7 +130,7 @@
 
                     fieldset {
                         margin-top: 0.7em;
-                        border:0;
+                        border: 0;
 
                         &:first-child {
                             margin-top: 0;
@@ -139,7 +138,7 @@
                     }
 
                     legend {
-                        margin:0;
+                        margin: 0;
                         font-size: 1em;
                         font-weight: $semibold;
                         text-transform: uppercase;
@@ -154,7 +153,7 @@
             }
 
             h5.actionMenuHeader {
-                margin:0;
+                margin: 0;
             }
 
             &.activated {
@@ -169,8 +168,8 @@
                 font-weight: $regular;
                 padding: 3px 0.5em;
                 cursor: pointer;
-                border: 1px solid #DDD;
-                background-color: #F5F5F5;
+                border: 1px solid #ddd;
+                background-color: #f5f5f5;
                 border-radius: 4px;
 
                 @media (max-width: $screen-sm-max) {
@@ -183,14 +182,14 @@
 
                 &:hover {
                     color: $text-color;
-                    background-color: #CCC;
+                    background-color: #ccc;
                 }
             }
         }
 
         .header-search {
-            border-top: 1px solid #CECECE;
-            border-bottom: 1px solid #CECECE;
+            border-top: 1px solid #cecece;
+            border-bottom: 1px solid #cecece;
             margin: 30px 0;
             padding: 20px 0;
 
@@ -208,7 +207,7 @@
 
             #results-count {
                 flex-grow: 2;
-                margin:0;
+                margin: 0;
             }
         }
 
@@ -227,7 +226,6 @@
             }
 
             #sorting-options {
-
                 a {
                     display: inline-block;
                     vertical-align: middle;
@@ -235,13 +233,13 @@
                     border: 1px solid #ddd;
                     border-radius: 3px;
                     font-size: 15px;
-                    background-color: #F5F5F5;
+                    background-color: #f5f5f5;
                     line-height: 1;
                     margin: 0 4px;
 
                     &:focus,
                     &:hover {
-                        background-color: #CCC;
+                        background-color: #ccc;
                     }
 
                     svg {
@@ -258,10 +256,10 @@
 
             li {
                 padding: 0.8em 0;
-                border-top: 1px solid #DDD;
+                border-top: 1px solid #ddd;
 
                 &:first-child {
-                    border:0;
+                    border: 0;
                 }
 
                 span.result-title {
