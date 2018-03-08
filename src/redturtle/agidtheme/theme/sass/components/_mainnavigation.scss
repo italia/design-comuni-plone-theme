@@ -14,11 +14,11 @@
         }
 
         &:before {
-            background: url("++theme++redturtle.agid.theme/images/menu.png");
+            background: url('++theme++redturtle.agid.theme/images/menu.png');
             height: 1.2em;
             width: 1.2em;
             display: block;
-            content:'';
+            content: '';
             background-size: cover;
             background-repeat: no-repeat;
         }
@@ -27,7 +27,7 @@
 
 #portal-mainnavigation {
     background-color: $brand-primary;
-    color: #FFF;
+    color: #fff;
     @include antialias;
 
     .globalnavWrapper {
@@ -36,7 +36,7 @@
 
     ul#portal-globalnav {
         @extend .list-inline;
-        margin:0;
+        margin: 0;
         display: flex;
         padding: 1.2rem 0;
 
@@ -52,14 +52,14 @@
             }
 
             > a {
-                color: #FFF;
+                color: #fff;
                 font-size: 1.95rem;
                 font-weight: $semibold;
                 display: block;
                 border-bottom: 1px solid transparent;
 
                 &:hover {
-                    border-color: #FFF;
+                    border-color: #fff;
                 }
             }
 
@@ -79,7 +79,6 @@
 }
 
 @media (max-width: $mobile-menu-width) {
-
     #portal-mainnavigation {
         #portal-globalnav-wrapper {
             display: block;

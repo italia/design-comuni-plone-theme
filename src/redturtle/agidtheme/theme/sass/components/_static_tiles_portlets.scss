@@ -28,13 +28,13 @@
     }
 
     .valuta-sito-content:before {
-        content: "";
+        content: '';
         padding-right: 4em;
         display: inline-block;
         width: auto;
         height: 1.5em;
         vertical-align: top;
-        background-image: url($img-path + 'rectangle-tool.svg');
+        background-image: url($img-path+'rectangle-tool.svg');
         background-size: 4rem;
         background-repeat: no-repeat;
         background-position: center center;
@@ -51,12 +51,12 @@
 
     &.sfondo-scuro,
     &.sfondo-chiaro {
-        margin:0;
+        margin: 0;
         padding: 20px 0;
     }
 
     h3.tileTitle {
-        margin-top:0;
+        margin-top: 0;
     }
 
     .tileFooter {
@@ -109,7 +109,7 @@
     .tile-container:before {
         border-top: 8px solid $brand-primary;
         clear: both;
-        content: " ";
+        content: ' ';
         display: block;
         width: 200px;
         max-width: 100%;
@@ -168,7 +168,7 @@
 .sfondo-chiaro {
     &.portletStaticNavigation {
         .tile-text {
-            background: #FFF;
+            background: #fff;
             @include clearfix;
         }
     }

@@ -1,45 +1,45 @@
 .portletAssignments {
-  padding: 2rem 0 0;
+    padding: 2rem 0 0;
 
-  h4 {
-    text-transform: uppercase;
-  }
-
-  .managedPortlet.portlet {
-    .portletHeader > a {
-      color: $link-color;
+    h4 {
+        text-transform: uppercase;
     }
 
-    .portletHeader {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      padding-bottom: 20px;
+    .managedPortlet.portlet {
+        .portletHeader > a {
+            color: $link-color;
+        }
+
+        .portletHeader {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding-bottom: 20px;
+        }
     }
-  }
 
-  .managedPortlet.inheritedPortlet {
-    margin: 1rem;
+    .managedPortlet.inheritedPortlet {
+        margin: 1rem;
 
-    .portletHeader {
-      border-bottom: 0;
-      margin-bottom: 0;
+        .portletHeader {
+            border-bottom: 0;
+            margin-bottom: 0;
 
-      > a {
-        color: $link-color;
-      }
+            > a {
+                color: $link-color;
+            }
+        }
     }
-  }
 
-  .portlet-group {
-    padding: 0 0 2rem;
-  }
+    .portlet-group {
+        padding: 0 0 2rem;
+    }
 
-  .managedPortletActions {
-    display: flex;
-  }
+    .managedPortletActions {
+        display: flex;
+    }
 
-  .blockedPortlet .managedPortletActions {
-    opacity: .5;
-  }
+    .blockedPortlet .managedPortletActions {
+        opacity: 0.5;
+    }
 }

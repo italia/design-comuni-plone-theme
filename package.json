@@ -51,6 +51,7 @@
       "prettier --write 'src/redturtle/agidtheme/theme/**/*.{js,json,scss}'",
     "precommit": "lint-staged",
     "develop": "grunt compile && grunt",
+    "test": "stylelint 'src/redturtle/agidtheme/theme/**/*.scss'",
     "build": "grunt compile && yarn prettier-all"
   },
   "dependencies": {
