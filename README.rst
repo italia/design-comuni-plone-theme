@@ -69,8 +69,18 @@ Installa redturtle.agidtheme aggiungendolo al tuo buildout::
 e successivamente eseguendo ``bin/buildout``.
 
 
-Dipendenze
-----------
+Sviluppo
+--------
+
+Per la compilazione del codice Sass e la build del bundle JavaScript, sono presenti alcuni script nel ``package.json``:
+
+- ``yarn develop``: esegue la compilazione con grunt e farlo restare in watch
+- ``yarn build``: compila con grunt e avviare prettier
+- ``yarn test``: avvia il linting con stylelint.
+
+
+Compatibilità
+-------------
 
 Questo prodotto è stato testato su Plone >= 5.0.7.
 
