@@ -54,9 +54,6 @@
     "test": "stylelint 'src/redturtle/agidtheme/theme/**/*.scss'",
     "build": "grunt compile && yarn prettier-all"
   },
-  "dependencies": {
-    "ellipsed": "1.2.0"
-  },
   "lint-staged": {
     "*.{js,json,css}": ["prettier --write", "git add"]
   }

@@ -138,7 +138,7 @@ module.exports = function(grunt) {
           preserveLicenseComments: false,
           paths: {
             jquery: 'empty:',
-            ellipsed: '../../../../node_modules/ellipsed/lib/ellipsed',
+            ellipsed: './node_modules/ellipsed/lib/ellipsed',
             fa: './js/dist/fa',
           },
           wrapShim: true,
@@ -166,7 +166,7 @@ module.exports = function(grunt) {
       fa: {
         files: ['js/src/fa.js'],
         tasks: ['webpack', 'requirejs', 'uglify'],
-      }
+      },
     },
     browserSync: {
       html: {
