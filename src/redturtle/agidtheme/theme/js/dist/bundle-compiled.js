@@ -330,19 +330,23 @@ define('fa', [], function() {
 
         var _faStar2 = _interopRequireDefault(_faStar);
 
-        var _faSortAlphaDown = __webpack_require__(24);
+        var _faBars = __webpack_require__(24);
+
+        var _faBars2 = _interopRequireDefault(_faBars);
+
+        var _faSortAlphaDown = __webpack_require__(25);
 
         var _faSortAlphaDown2 = _interopRequireDefault(_faSortAlphaDown);
 
-        var _faAngleRight = __webpack_require__(25);
+        var _faAngleRight = __webpack_require__(26);
 
         var _faAngleRight2 = _interopRequireDefault(_faAngleRight);
 
-        var _faAngleUp = __webpack_require__(26);
+        var _faAngleUp = __webpack_require__(27);
 
         var _faAngleUp2 = _interopRequireDefault(_faAngleUp);
 
-        var _faAngleDown = __webpack_require__(27);
+        var _faAngleDown = __webpack_require__(28);
 
         var _faAngleDown2 = _interopRequireDefault(_faAngleDown);
 
@@ -377,7 +381,8 @@ define('fa', [], function() {
             _faFolderOpen2.default,
             _faFilter2.default,
             _faStar2.default,
-            _faSortAlphaDown2.default
+            _faSortAlphaDown2.default,
+            _faBars2.default
           );
         });
 
@@ -3037,6 +3042,22 @@ define('fa', [], function() {
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
+          iconName: 'bars',
+          icon: [
+            448,
+            512,
+            [],
+            'f0c9',
+            'M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z',
+          ],
+        };
+
+        /***/
+      },
+      /* 25 */
+      /***/ function(module, exports) {
+        module.exports = {
+          prefix: 'fas',
           iconName: 'sort-alpha-down',
           icon: [
             448,
@@ -3049,7 +3070,7 @@ define('fa', [], function() {
 
         /***/
       },
-      /* 25 */
+      /* 26 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -3065,7 +3086,7 @@ define('fa', [], function() {
 
         /***/
       },
-      /* 26 */
+      /* 27 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -3081,7 +3102,7 @@ define('fa', [], function() {
 
         /***/
       },
-      /* 27 */
+      /* 28 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -3275,7 +3296,7 @@ require(['jquery', 'ellipsed', 'fa'], function($, ellipsed, fa) {
     /*
      * mobile: search button action
      */
-    $('#search-toggle').on('click', function(e) {
+    $('#search-toggle').on('click', function() {
       $('#portal-searchbox').toggleClass('open');
       $('#search-toggle').toggleClass('open');
       $('body').toggleClass('searchOpened');
@@ -3288,7 +3309,7 @@ require(['jquery', 'ellipsed', 'fa'], function($, ellipsed, fa) {
     /*
      * mobile: menu toggle click
      */
-    $('button.plone-navbar-toggle').on('click', function(e) {
+    $('button.plone-navbar-toggle').on('click', function() {
       $('#portal-globalnav-wrapper').toggleClass('open');
     });
 
@@ -3319,18 +3340,26 @@ require(['jquery', 'ellipsed', 'fa'], function($, ellipsed, fa) {
       }
     });
 
-    /*
-     * On tiles loaded:
-     * - gestito tabIndex news collection collapse
-     * - multi lined ellipsis for news collection items
-     */
-    $('.pat-tiles-management').on('rtTilesLoaded', function(e) {
+    function callEllipsis() {
       ellipsis('.tile-collection .collectionItemDescription', 4, {
         responsive: true,
       });
       ellipsis('.news-highlight .news-description', 4, { responsive: true });
       ellipsis('.news-big-photo .news-description', 4, { responsive: true });
-    });
+    }
+
+    /*
+     * On tiles loaded:
+     * - gestito tabIndex news collection collapse
+     * - multi lined ellipsis for news collection items
+     */
+    if ($('body').hasClass('userrole-anonymous')) {
+      callEllipsis();
+    } else {
+      $('.tiles-management').on('rtTilesLoaded', function() {
+        callEllipsis();
+      });
+    }
 
     $(document).on('patSliderInit', function(e) {
       $(e.originalEvent.detail)

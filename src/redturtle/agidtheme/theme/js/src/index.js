@@ -172,7 +172,7 @@ require(['jquery', 'ellipsed', 'fa'], function($, ellipsed, fa) {
     /*
      * mobile: search button action
      */
-    $('#search-toggle').on('click', function(e) {
+    $('#search-toggle').on('click', function() {
       $('#portal-searchbox').toggleClass('open');
       $('#search-toggle').toggleClass('open');
       $('body').toggleClass('searchOpened');
@@ -185,7 +185,7 @@ require(['jquery', 'ellipsed', 'fa'], function($, ellipsed, fa) {
     /*
      * mobile: menu toggle click
      */
-    $('button.plone-navbar-toggle').on('click', function(e) {
+    $('button.plone-navbar-toggle').on('click', function() {
       $('#portal-globalnav-wrapper').toggleClass('open');
     });
 
@@ -216,18 +216,26 @@ require(['jquery', 'ellipsed', 'fa'], function($, ellipsed, fa) {
       }
     });
 
-    /*
-     * On tiles loaded:
-     * - gestito tabIndex news collection collapse
-     * - multi lined ellipsis for news collection items
-     */
-    $('.pat-tiles-management').on('rtTilesLoaded', function(e) {
+    function callEllipsis() {
       ellipsis('.tile-collection .collectionItemDescription', 4, {
         responsive: true,
       });
       ellipsis('.news-highlight .news-description', 4, { responsive: true });
       ellipsis('.news-big-photo .news-description', 4, { responsive: true });
-    });
+    }
+
+    /*
+     * On tiles loaded:
+     * - gestito tabIndex news collection collapse
+     * - multi lined ellipsis for news collection items
+     */
+    if ($('body').hasClass('userrole-anonymous')) {
+      callEllipsis();
+    } else {
+      $('.tiles-management').on('rtTilesLoaded', function() {
+        callEllipsis();
+      });
+    }
 
     $(document).on('patSliderInit', function(e) {
       $(e.originalEvent.detail)

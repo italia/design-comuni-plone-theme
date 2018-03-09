@@ -8,6 +8,10 @@
         padding: 0;
         margin: 10px 0;
 
+        svg {
+            display: none;
+        }
+
         &:hover,
         &:focus {
             box-shadow: none;

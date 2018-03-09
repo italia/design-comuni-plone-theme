@@ -10752,6 +10752,9 @@ blockquote {
   padding: 0;
   margin: 10px 0;
 }
+.plone-navbar-header .plone-navbar-toggle svg {
+  display: none;
+}
 .plone-navbar-header .plone-navbar-toggle:hover,
 .plone-navbar-header .plone-navbar-toggle:focus {
   -webkit-box-shadow: none;
