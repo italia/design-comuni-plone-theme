@@ -8765,193 +8765,81 @@ nav.pagination ul li.next span {
 .template-tiles_page_view [class*='collection-container']:after {
   clear: both;
 }
-.template-homepage_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  .tile-container,
-.template-homepage_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  .existing-content-tile,
-.template-homepage_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  .aree-tematiche-collection,
-.template-homepage_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  [class*='collection-container'],
-.template-tiles_page_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  .tile-container,
-.template-tiles_page_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  .existing-content-tile,
-.template-tiles_page_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  .aree-tematiche-collection,
-.template-tiles_page_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  [class*='collection-container'] {
+.template-homepage_view .tile-container,
+.template-homepage_view .existing-content-tile,
+.template-homepage_view .aree-tematiche-collection,
+.template-homepage_view [class*='collection-container'],
+.template-tiles_page_view .tile-container,
+.template-tiles_page_view .existing-content-tile,
+.template-tiles_page_view .aree-tematiche-collection,
+.template-tiles_page_view [class*='collection-container'] {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
-.template-homepage_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  .tile-container:before,
-.template-homepage_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  .tile-container:after,
-.template-homepage_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  .existing-content-tile:before,
-.template-homepage_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  .existing-content-tile:after,
-.template-homepage_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  .aree-tematiche-collection:before,
-.template-homepage_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  .aree-tematiche-collection:after,
-.template-homepage_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  [class*='collection-container']:before,
-.template-homepage_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  [class*='collection-container']:after,
-.template-tiles_page_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  .tile-container:before,
-.template-tiles_page_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  .tile-container:after,
-.template-tiles_page_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  .existing-content-tile:before,
-.template-tiles_page_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  .existing-content-tile:after,
-.template-tiles_page_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  .aree-tematiche-collection:before,
-.template-tiles_page_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  .aree-tematiche-collection:after,
-.template-tiles_page_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  [class*='collection-container']:before,
-.template-tiles_page_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  [class*='collection-container']:after {
+.template-homepage_view .tile-container:before,
+.template-homepage_view .tile-container:after,
+.template-homepage_view .existing-content-tile:before,
+.template-homepage_view .existing-content-tile:after,
+.template-homepage_view .aree-tematiche-collection:before,
+.template-homepage_view .aree-tematiche-collection:after,
+.template-homepage_view [class*='collection-container']:before,
+.template-homepage_view [class*='collection-container']:after,
+.template-tiles_page_view .tile-container:before,
+.template-tiles_page_view .tile-container:after,
+.template-tiles_page_view .existing-content-tile:before,
+.template-tiles_page_view .existing-content-tile:after,
+.template-tiles_page_view .aree-tematiche-collection:before,
+.template-tiles_page_view .aree-tematiche-collection:after,
+.template-tiles_page_view [class*='collection-container']:before,
+.template-tiles_page_view [class*='collection-container']:after {
   content: ' ';
   display: table;
 }
-.template-homepage_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  .tile-container:after,
-.template-homepage_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  .existing-content-tile:after,
-.template-homepage_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  .aree-tematiche-collection:after,
-.template-homepage_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  [class*='collection-container']:after,
-.template-tiles_page_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  .tile-container:after,
-.template-tiles_page_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  .existing-content-tile:after,
-.template-tiles_page_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  .aree-tematiche-collection:after,
-.template-tiles_page_view
-  .pat-tiles-management:not([class*='ColumnsPage'])
-  [class*='collection-container']:after {
+.template-homepage_view .tile-container:after,
+.template-homepage_view .existing-content-tile:after,
+.template-homepage_view .aree-tematiche-collection:after,
+.template-homepage_view [class*='collection-container']:after,
+.template-tiles_page_view .tile-container:after,
+.template-tiles_page_view .existing-content-tile:after,
+.template-tiles_page_view .aree-tematiche-collection:after,
+.template-tiles_page_view [class*='collection-container']:after {
   clear: both;
 }
 @media (min-width: 768px) {
-  .template-homepage_view
-    .pat-tiles-management:not([class*='ColumnsPage'])
-    .tile-container,
-  .template-homepage_view
-    .pat-tiles-management:not([class*='ColumnsPage'])
-    .existing-content-tile,
-  .template-homepage_view
-    .pat-tiles-management:not([class*='ColumnsPage'])
-    .aree-tematiche-collection,
-  .template-homepage_view
-    .pat-tiles-management:not([class*='ColumnsPage'])
-    [class*='collection-container'],
-  .template-tiles_page_view
-    .pat-tiles-management:not([class*='ColumnsPage'])
-    .tile-container,
-  .template-tiles_page_view
-    .pat-tiles-management:not([class*='ColumnsPage'])
-    .existing-content-tile,
-  .template-tiles_page_view
-    .pat-tiles-management:not([class*='ColumnsPage'])
-    .aree-tematiche-collection,
-  .template-tiles_page_view
-    .pat-tiles-management:not([class*='ColumnsPage'])
-    [class*='collection-container'] {
+  .template-homepage_view .tile-container,
+  .template-homepage_view .existing-content-tile,
+  .template-homepage_view .aree-tematiche-collection,
+  .template-homepage_view [class*='collection-container'],
+  .template-tiles_page_view .tile-container,
+  .template-tiles_page_view .existing-content-tile,
+  .template-tiles_page_view .aree-tematiche-collection,
+  .template-tiles_page_view [class*='collection-container'] {
     width: auto;
   }
 }
 @media (min-width: 992px) {
-  .template-homepage_view
-    .pat-tiles-management:not([class*='ColumnsPage'])
-    .tile-container,
-  .template-homepage_view
-    .pat-tiles-management:not([class*='ColumnsPage'])
-    .existing-content-tile,
-  .template-homepage_view
-    .pat-tiles-management:not([class*='ColumnsPage'])
-    .aree-tematiche-collection,
-  .template-homepage_view
-    .pat-tiles-management:not([class*='ColumnsPage'])
-    [class*='collection-container'],
-  .template-tiles_page_view
-    .pat-tiles-management:not([class*='ColumnsPage'])
-    .tile-container,
-  .template-tiles_page_view
-    .pat-tiles-management:not([class*='ColumnsPage'])
-    .existing-content-tile,
-  .template-tiles_page_view
-    .pat-tiles-management:not([class*='ColumnsPage'])
-    .aree-tematiche-collection,
-  .template-tiles_page_view
-    .pat-tiles-management:not([class*='ColumnsPage'])
-    [class*='collection-container'] {
+  .template-homepage_view .tile-container,
+  .template-homepage_view .existing-content-tile,
+  .template-homepage_view .aree-tematiche-collection,
+  .template-homepage_view [class*='collection-container'],
+  .template-tiles_page_view .tile-container,
+  .template-tiles_page_view .existing-content-tile,
+  .template-tiles_page_view .aree-tematiche-collection,
+  .template-tiles_page_view [class*='collection-container'] {
     width: auto;
   }
 }
 @media (min-width: 1300px) {
-  .template-homepage_view
-    .pat-tiles-management:not([class*='ColumnsPage'])
-    .tile-container,
-  .template-homepage_view
-    .pat-tiles-management:not([class*='ColumnsPage'])
-    .existing-content-tile,
-  .template-homepage_view
-    .pat-tiles-management:not([class*='ColumnsPage'])
-    .aree-tematiche-collection,
-  .template-homepage_view
-    .pat-tiles-management:not([class*='ColumnsPage'])
-    [class*='collection-container'],
-  .template-tiles_page_view
-    .pat-tiles-management:not([class*='ColumnsPage'])
-    .tile-container,
-  .template-tiles_page_view
-    .pat-tiles-management:not([class*='ColumnsPage'])
-    .existing-content-tile,
-  .template-tiles_page_view
-    .pat-tiles-management:not([class*='ColumnsPage'])
-    .aree-tematiche-collection,
-  .template-tiles_page_view
-    .pat-tiles-management:not([class*='ColumnsPage'])
-    [class*='collection-container'] {
+  .template-homepage_view .tile-container,
+  .template-homepage_view .existing-content-tile,
+  .template-homepage_view .aree-tematiche-collection,
+  .template-homepage_view [class*='collection-container'],
+  .template-tiles_page_view .tile-container,
+  .template-tiles_page_view .existing-content-tile,
+  .template-tiles_page_view .aree-tematiche-collection,
+  .template-tiles_page_view [class*='collection-container'] {
     width: 1270px;
   }
 }

@@ -16,13 +16,11 @@ $aree-tematiche-gutter: 50px;
 
 .template-homepage_view,
 .template-tiles_page_view {
-    .pat-tiles-management:not([class*='ColumnsPage']) {
-        .tile-container,
-        .existing-content-tile,
-        .aree-tematiche-collection,
-        [class*='collection-container'] {
-            @include make-container;
-        }
+    .tile-container,
+    .existing-content-tile,
+    .aree-tematiche-collection,
+    [class*='collection-container'] {
+        @include make-container;
     }
 }
 
