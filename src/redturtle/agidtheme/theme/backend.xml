@@ -43,9 +43,6 @@
             href="{$portal_url}/++theme++redturtle.agid.theme/favicon.ico" />
       <link rel="stylesheet" href="{$portal_url}/++theme++redturtle.agid.theme/barceloneta/barceloneta-backend.css" />
 
-
-      <script src="https://use.fontawesome.com/22e75ec526.js"></script>
-
       <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600" rel="stylesheet"/>
     </after>
 
