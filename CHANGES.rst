@@ -5,12 +5,16 @@ Changelog
 2.0.0 (unreleased)
 ------------------
 
-[BREAKING CHANGES]:
+Docs on this release: `docs`__.
+
+BREAKING CHANGES:
 
 - Moved JS resources to theme/ folder [nzambello]
 - Migrated icons and styles to FontAwesome 5 (import via JS, added its classes to templates) [nzambello]
 - Added prettier and made it run on the code [nzambello]
-|
+
+Minor changes:
+
 - Updated package.json to reflect current addon version [pnicolli]
 - Fixed collection tile renderers layers, they won't show up when this theme is not installed anymore [pnicolli]
 - Evitato lo scroll della pagina quando il menu o la ricerca sono aperti [nzambello]
@@ -20,6 +24,8 @@ Changelog
 - Cambiato metodo di scaling di plone.app.imaging da scale() a tag() [nzambello]
 - Cambiate le occorrenze del font-weight 700 a 600 (è quello di cui si fa l'import nel font) [nzambello]
 
+
+__ https://github.com/PloneGov-IT/redturtle.agidtheme/blob/master/docs/migrationTo2.rst
 
 1.1.7 (2018-02-07)
 ------------------
