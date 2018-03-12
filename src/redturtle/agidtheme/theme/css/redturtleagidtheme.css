@@ -6775,7 +6775,10 @@ blockquote {
 .tilesWrapper .actionsTiles .available-tiles .list-group .tileTitle {
   font-size: 1.3em;
 }
-.tilesWrapper.right-column .actionsTiles .available-tiles .list-group-item {
+.pat-tiles-management.right-column
+  .actionsTiles
+  .available-tiles
+  .list-group-item {
   width: 100%;
 }
 .tileTitle {
