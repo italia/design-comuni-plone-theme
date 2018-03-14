@@ -50,6 +50,7 @@
       <div class="search-social-wrapper{$headerWrapper}">
         <xsl:copy-of select="//*[@id='header-social']"/>
         <xsl:copy-of select="//*[@id='portal-searchbox']"/>
+        <xsl:copy-of select="//*[@id='portal-languageselector']"/>
 
         <button id="search-toggle"
                 aria-controls="portal-searchbox"
@@ -71,6 +72,8 @@
       </div>
     </div>
   </replace>
+  <drop css:content="#portal-languageselector" />
+
 
   <!-- sposto le colonne dentro ad un container -->
   <replace css:content="#portal-column-content">

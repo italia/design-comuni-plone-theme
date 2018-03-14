@@ -200,6 +200,16 @@
   />
 
   <browser:viewlet
+    name="plone.header"
+    manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+    class="plone.app.multilingual.browser.selector.LanguageSelectorViewlet"
+    layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
+    template="templates/portal_header.pt"
+    permission="zope2.View"
+  />
+
+
+  <browser:viewlet
     name="redturtle.skip_links"
     manager="plone.app.layout.viewlets.interfaces.IPortalTop"
     class=".viewlets.SkipLinksViewlet"
