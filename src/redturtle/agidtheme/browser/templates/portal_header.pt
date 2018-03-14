@@ -14,6 +14,26 @@
         <div class="header-banner-owner" tal:condition="python:header_link_label and header_link_url">
             <a href="${header_link_url}" target="_blank">${header_link_label}</a>
         </div>
+        <div class="header-banner-language"
+             tal:condition="view/available"
+             tal:define="languages view/languages">
+           <select class="language-selector">
+               <tal:language repeat="lang languages">
+                   <option tal:define="code lang/code;
+                                       selected lang/selected;
+                                       codeclass string:language-${code};
+                                       current python: selected and 'currentLanguage ' or '';"
+                           tal:attributes="class string:${current}${codeclass}; selected selected">
+                       <a href=""
+                          tal:define="name lang/native|lang/name"
+                          tal:attributes="href lang/url;
+                                          title name"
+                           ><span tal:content="name"></span
+                       ></a>
+                   </option>
+               </tal:language>
+           </select>
+        </div>
         <div class="header-banner-second-link"
              tal:condition="python:header_second_link_label and header_second_link_url">
             <a href="${header_second_link_url}" target="_blank">${header_second_link_label}</a>
