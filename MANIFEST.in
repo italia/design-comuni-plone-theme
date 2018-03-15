@@ -7,4 +7,7 @@ exclude package-lock.json
 include *.js
 include *.json
 include *.lock
-src/redturtle/agidtheme/browser/static/ellipsed
+include .eslintrc
+prune node_modules
+prune src/redturtle/agidtheme/theme/node_modules
+include src/redturtle/agidtheme/browser/static/ellipsed
