@@ -13,7 +13,7 @@ Riferimento a quanto scritto in `CHANGES.rst`__.
 - Aggiornate le versioni dei pacchetti npm (importante: `prettier`__).
 - Configurazione di prettier (con l'hook per il commit con ``git``), stylelint e eslint.
 
-__ https://github.com/PloneGov-IT/redturtle.agidtheme/blob/master/CHANGES.rst#200-unreleased
+__ https://github.com/PloneGov-IT/redturtle.agidtheme/blob/master/CHANGES.rst#200-2018-03-15
 __ https://github.com/prettier/prettier
 
 
