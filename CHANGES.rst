@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.0.0 (unreleased)
+2.0.0 (2018-03-15)
 ------------------
 
 Docs on this release: `docs`__.
