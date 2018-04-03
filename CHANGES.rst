@@ -5,7 +5,7 @@ Changelog
 2.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix tags for icons (for compatibility) [nzambello]
 
 
 2.0.0 (2018-03-15)
