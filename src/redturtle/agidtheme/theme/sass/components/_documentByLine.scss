@@ -17,7 +17,8 @@
     margin-bottom: 0.7rem;
     align-items: center;
 
-    svg {
+    svg,
+    i:before {
         color: $gray-documentByLine;
         padding-right: 0.5em;
         width: 30px;

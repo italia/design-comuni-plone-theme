@@ -91,11 +91,13 @@
                     background: $brand-primary;
                     text-align: center;
                     align-items: center;
+                    justify-content: center;
                     width: 45px;
                     height: 45px;
                     padding: 7px;
 
-                    svg {
+                    svg,
+                    i:before {
                         color: #fff;
                         width: 100%;
                         font-size: 1.5em;

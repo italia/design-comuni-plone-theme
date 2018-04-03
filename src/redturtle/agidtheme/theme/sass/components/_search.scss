@@ -176,7 +176,8 @@
                     margin-left: 0;
                 }
 
-                svg {
+                svg,
+                i:before {
                     margin-right: 5px;
                 }
 
@@ -242,7 +243,8 @@
                         background-color: #ccc;
                     }
 
-                    svg {
+                    svg,
+                    i:before {
                         height: 1em;
                         margin: 0 7px 0 3px;
                     }

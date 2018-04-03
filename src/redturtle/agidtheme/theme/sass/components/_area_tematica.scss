@@ -100,7 +100,8 @@
                 }
             }
 
-            svg {
+            svg,
+            i:before {
                 color: $text-color;
                 font-size: 2rem;
             }

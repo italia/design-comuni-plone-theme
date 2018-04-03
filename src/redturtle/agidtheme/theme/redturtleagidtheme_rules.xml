@@ -101,7 +101,7 @@
   <!-- aggiungo la freccia per il mobile -->
   <after css:content="#portal-footer-wrapper">
     <a href="javascript:" aria-hidden="true" id="return-to-top" title="Return to top" style="display: none">
-      <span class="fas fa-chevron-up"></span>
+      <i class="fas fa-chevron-up"></i>
     </a>
   </after>
 

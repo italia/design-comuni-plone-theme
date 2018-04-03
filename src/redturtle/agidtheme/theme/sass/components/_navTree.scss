@@ -14,7 +14,8 @@
                 &.navTreeFolderish {
                     position: relative;
 
-                    svg {
+                    svg,
+                    i:before {
                         position: absolute;
                         top: 1.5rem;
                         right: 1.5rem;
@@ -22,6 +23,7 @@
                         color: #000;
                     }
                 }
+
                 &:hover,
                 &:focus {
                     text-decoration: underline;
@@ -49,7 +51,8 @@
                     color: #fff;
                     font-weight: $semibold;
 
-                    svg {
+                    svg,
+                    i:before {
                         color: #fff;
                     }
                 }

@@ -12,7 +12,8 @@
     transition: all 0.3s linear;
     z-index: 1000;
 
-    svg {
+    svg,
+    i:before {
         color: #fff;
         margin: 0;
         position: relative;
@@ -25,7 +26,8 @@
     &:active {
         background: rgba(0, 0, 0, 0.9);
 
-        svg {
+        svg,
+        i:before {
             color: #fff;
             top: 5px;
         }

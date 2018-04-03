@@ -3,7 +3,8 @@
     font-size: 0.9em;
 
     #categories-filed-under {
-        svg {
+        svg,
+        i:before {
             color: $gray-documentByLine;
             padding: 0 0.2rem;
             margin: 0 8px 0 2px;

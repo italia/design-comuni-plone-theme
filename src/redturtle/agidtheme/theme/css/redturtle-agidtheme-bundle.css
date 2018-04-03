@@ -10298,7 +10298,8 @@ blockquote {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  #portal-header button#search-toggle.open svg.fa-search {
+  #portal-header button#search-toggle.open svg.fa-search,
+  #portal-header button#search-toggle.open i.fa-search {
     display: none;
   }
 }
@@ -10569,7 +10570,8 @@ blockquote {
     margin-left: 0;
   }
 }
-.template-search #searchform .actionMenu #search-filter-toggle svg {
+.template-search #searchform .actionMenu #search-filter-toggle svg,
+.template-search #searchform .actionMenu #search-filter-toggle i:before {
   margin-right: 5px;
 }
 .template-search #searchform .actionMenu #search-filter-toggle:hover {
@@ -10636,7 +10638,8 @@ blockquote {
 .template-search #searchform #searchResultsSort #sorting-options a:hover {
   background-color: #ccc;
 }
-.template-search #searchform #searchResultsSort #sorting-options a svg {
+.template-search #searchform #searchResultsSort #sorting-options a svg,
+.template-search #searchform #searchResultsSort #sorting-options a i:before {
   height: 1em;
   margin: 0 7px 0 3px;
 }
@@ -10752,7 +10755,8 @@ blockquote {
   padding: 0;
   margin: 10px 0;
 }
-.plone-navbar-header .plone-navbar-toggle svg {
+.plone-navbar-header .plone-navbar-toggle svg,
+.plone-navbar-header .plone-navbar-toggle i:before {
   display: none;
 }
 .plone-navbar-header .plone-navbar-toggle:hover,
@@ -11123,7 +11127,8 @@ blockquote {
   transition: all 0.3s linear;
   z-index: 1000;
 }
-#return-to-top svg {
+#return-to-top svg,
+#return-to-top i:before {
   color: #fff;
   margin: 0;
   position: relative;
@@ -11136,7 +11141,8 @@ blockquote {
 #return-to-top:active {
   background: rgba(0, 0, 0, 0.9);
 }
-#return-to-top:active svg {
+#return-to-top:active svg,
+#return-to-top:active i:before {
   color: #fff;
   top: 5px;
 }
@@ -11243,6 +11249,7 @@ blockquote {
 #portal-footer-wrapper ul.footer-social li a {
   display: inline-block;
 }
+#portal-footer-wrapper ul.footer-social li a i:before,
 #portal-footer-wrapper ul.footer-social li a:before,
 #portal-footer-wrapper ul.footer-social li a svg {
   display: inline-block;
@@ -11253,12 +11260,12 @@ blockquote {
   text-align: center;
   font-size: 2rem;
   line-height: 3rem;
+  color: #30373d;
 }
 #portal-footer-wrapper ul.footer-social li a:before {
   color: #fff;
 }
 #portal-footer-wrapper ul.footer-social li a svg {
-  color: #30373d;
   padding: 0.5rem;
 }
 #portal-footer-wrapper ul.footer-social li a.st:before {
@@ -11283,8 +11290,10 @@ blockquote {
   background-position: center center;
   background-size: 75%;
 }
+#portal-footer-wrapper ul.footer-social li a:focus i:before,
 #portal-footer-wrapper ul.footer-social li a:focus:before,
 #portal-footer-wrapper ul.footer-social li a:focus svg,
+#portal-footer-wrapper ul.footer-social li a:hover i:before,
 #portal-footer-wrapper ul.footer-social li a:hover:before,
 #portal-footer-wrapper ul.footer-social li a:hover svg {
   background-color: #515151;
@@ -12125,7 +12134,8 @@ h3.tileTitle,
   -ms-flex-align: center;
   align-items: center;
 }
-#plone-document-byline svg {
+#plone-document-byline svg,
+#plone-document-byline i:before {
   color: #666;
   padding-right: 0.5em;
   width: 30px;
@@ -12261,7 +12271,8 @@ table tr.odd {
   display: block;
   font-size: 0.9em;
 }
-#category #categories-filed-under svg {
+#category #categories-filed-under svg,
+#category #categories-filed-under i:before {
   color: #666;
   padding: 0 0.2rem;
   margin: 0 8px 0 2px;
@@ -12342,7 +12353,8 @@ table tr.odd {
 .relatedItems #relatedItemBox ul li a img.image-icon {
   display: none;
 }
-.relatedItems #relatedItemBox ul li svg {
+.relatedItems #relatedItemBox ul li svg,
+.relatedItems #relatedItemBox ul li i:before {
   color: #1c2024;
   font-size: 2rem;
 }
@@ -12456,11 +12468,16 @@ table tr.odd {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 45px;
   height: 45px;
   padding: 7px;
 }
-.share .share-options ul.social-list li a svg {
+.share .share-options ul.social-list li a svg,
+.share .share-options ul.social-list li a i:before {
   color: #fff;
   width: 100%;
   font-size: 1.5em;
@@ -12764,7 +12781,8 @@ body.portaltype-event #parent-fieldname-text {
   color: #9d1610;
   border-bottom: 1px solid #9d1610;
 }
-.servizi-area-tematica ul.tileContent li svg {
+.servizi-area-tematica ul.tileContent li svg,
+.servizi-area-tematica ul.tileContent li i:before {
   color: #1c2024;
   font-size: 2rem;
 }
@@ -13227,7 +13245,14 @@ nav.pagination ul li.next span {
   position: relative;
 }
 .navigationTile ul.navTree li a.navTreeFolderish svg,
-.portletNavigationTree nav.portletContent ul.navTree li a.navTreeFolderish svg {
+.navigationTile ul.navTree li a.navTreeFolderish i:before,
+.portletNavigationTree nav.portletContent ul.navTree li a.navTreeFolderish svg,
+.portletNavigationTree
+  nav.portletContent
+  ul.navTree
+  li
+  a.navTreeFolderish
+  i:before {
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
@@ -13283,9 +13308,13 @@ nav.pagination ul li.next span {
   font-weight: 600;
 }
 .navigationTile ul.navTree li.navTreeItemInPath a.navTreeItemInPath svg,
+.navigationTile ul.navTree li.navTreeItemInPath a.navTreeItemInPath i:before,
 .navigationTile ul.navTree li.navTreeItemInPath a.navTreeCurrentItem svg,
+.navigationTile ul.navTree li.navTreeItemInPath a.navTreeCurrentItem i:before,
 .navigationTile ul.navTree li.navTreeCurrentNode a.navTreeItemInPath svg,
+.navigationTile ul.navTree li.navTreeCurrentNode a.navTreeItemInPath i:before,
 .navigationTile ul.navTree li.navTreeCurrentNode a.navTreeCurrentItem svg,
+.navigationTile ul.navTree li.navTreeCurrentNode a.navTreeCurrentItem i:before,
 .portletNavigationTree
   nav.portletContent
   ul.navTree
@@ -13296,8 +13325,20 @@ nav.pagination ul li.next span {
   nav.portletContent
   ul.navTree
   li.navTreeItemInPath
+  a.navTreeItemInPath
+  i:before,
+.portletNavigationTree
+  nav.portletContent
+  ul.navTree
+  li.navTreeItemInPath
   a.navTreeCurrentItem
   svg,
+.portletNavigationTree
+  nav.portletContent
+  ul.navTree
+  li.navTreeItemInPath
+  a.navTreeCurrentItem
+  i:before,
 .portletNavigationTree
   nav.portletContent
   ul.navTree
@@ -13308,8 +13349,20 @@ nav.pagination ul li.next span {
   nav.portletContent
   ul.navTree
   li.navTreeCurrentNode
+  a.navTreeItemInPath
+  i:before,
+.portletNavigationTree
+  nav.portletContent
+  ul.navTree
+  li.navTreeCurrentNode
   a.navTreeCurrentItem
-  svg {
+  svg,
+.portletNavigationTree
+  nav.portletContent
+  ul.navTree
+  li.navTreeCurrentNode
+  a.navTreeCurrentItem
+  i:before {
   color: #fff;
 }
 .navigationTile ul.navTree ul,
