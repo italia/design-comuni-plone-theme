@@ -2966,8 +2966,6 @@ define('fa', [], function() {
   );
 });
 require(['fa'], function(fa) {
-  fa.init();
-
   if (document.addEventListener) {
     document.addEventListener(
       'click',
