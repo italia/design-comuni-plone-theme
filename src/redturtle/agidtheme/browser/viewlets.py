@@ -116,7 +116,7 @@ class HeaderSocialViewlet(base.ViewletBase):
         for link in links:
             try:
                 social, url = link.split('|')
-                cssClass = socialCSSClassDict[social]
+                cssClass = socialCSSClassDict.get(social.strip(), '')
                 res.append({'id': social, 'url': url, 'cssClass': cssClass})
             except ValueError:
                 logger.warning(

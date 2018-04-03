@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 from plone import api
 from plone.registry.interfaces import IRegistry
+from Products.CMFPlone.interfaces.controlpanel import IImagingSchema
 from redturtle.agidtheme import logger
 from redturtle.agidtheme.controlpanel.interfaces import IRedturtleAgidthemeSettings  # noqa
 from zope.component import getUtility
-from Products.CMFPlone.interfaces.controlpanel import IImagingSchema
 
 
 DEFAULT_PROFILE = 'profile-redturtle.agidtheme:default'
@@ -118,3 +118,22 @@ def clean_follow_us_fields(context):
             # entry not present in registry
             continue
     import_records_registry(context)
+
+
+def fix_default_header_links(context):
+    header_link_label = api.portal.get_registry_record(
+        'header_link_label',
+        interface=IRedturtleAgidthemeSettings)
+    header_link_url = api.portal.get_registry_record(
+        'header_link_url',
+        interface=IRedturtleAgidthemeSettings)
+    if not header_link_label:
+        api.portal.set_registry_record(
+            'header_link_label',
+            u'Governo Italiano',
+            interface=IRedturtleAgidthemeSettings)
+    if not header_link_url:
+        api.portal.set_registry_record(
+            'header_link_url',
+            'http://www.governo.it',
+            interface=IRedturtleAgidthemeSettings)
