@@ -184,4 +184,12 @@
     handler=".upgrades.import_records_registry"
   />
 
+  <genericsetup:upgradeStep
+    source="2000"
+    destination="2100"
+    profile="redturtle.agidtheme:default"
+    title="Fix default header label and link"
+    description=""
+    handler=".upgrades.fix_default_header_links"
+  />
 </configure>
