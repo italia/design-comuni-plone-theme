@@ -106,6 +106,10 @@
            interface='Products.CMFPlone.interfaces.IResourceRegistry'>
      <value key="js">++theme++redturtle.agid.theme/js/dist/bundle-compiled.js</value>
   </records>
+  <records prefix="plone.resources/redturtle-agidtheme-icons"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+     <value key="js">++theme++redturtle.agid.theme/js/dist/rt-icons.js</value>
+  </records>
 
   <!-- BUNDLES -->
   <records prefix="plone.bundles/redturtle-agidtheme-css-bundle"
@@ -115,7 +119,7 @@
       <element>redturtle-agidtheme-css</element>
     </value>
     <value key="csscompilation">++theme++redturtle.agid.theme/css/redturtle-agidtheme-bundle.css</value>
-    <value key="last_compilation">2019-11-26 00:00:00</value>
+    <value key="last_compilation">2018-04-02 00:00:00</value>
     <value key="compile">True</value>
     <value key="depends">plone</value>
   </records>
@@ -126,7 +130,18 @@
       <element>redturtle-agidtheme-js</element>
     </value>
     <value key="jscompilation">++theme++redturtle.agid.theme/js/dist/redturtle-agidtheme-bundle-compiled.min.js</value>
-    <value key="last_compilation">2019-11-26 00:00:00</value>
+    <value key="last_compilation">2018-04-02 00:00:00</value>
+    <value key="compile">True</value>
+    <value key="depends">plone</value>
+  </records>
+  <records prefix="plone.bundles/redturtle-agidtheme-icons-bundle"
+           interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+    <value key="enabled">True</value>
+    <value key="resources" purge="false">
+      <element>redturtle-agidtheme-icons</element>
+    </value>
+    <value key="jscompilation">++theme++redturtle.agid.theme/js/dist/redturtle-agidtheme-icons-bundle.min.js</value>
+    <value key="last_compilation">2018-04-02 00:00:00</value>
     <value key="compile">True</value>
     <value key="depends">plone</value>
   </records>

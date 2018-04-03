@@ -129,6 +129,17 @@ module.exports = function(grunt) {
           ],
         },
       },
+      agidtheme_icons: {
+        options: {
+          sourceMap: true,
+          sourceMapIncludeSources: false,
+        },
+        files: {
+          'js/dist/redturtle-agidtheme-icons-bundle.min.js': [
+            'js/dist/rt-icons.js',
+          ],
+        },
+      },
     },
     requirejs: {
       'redturtle-agidtheme': {
@@ -139,12 +150,25 @@ module.exports = function(grunt) {
           paths: {
             jquery: 'empty:',
             ellipsed: './node_modules/ellipsed/lib/ellipsed',
-            fa: './js/dist/fa',
           },
           wrapShim: true,
           name: './js/src/index.js',
           exclude: ['jquery'],
           out: './js/dist/bundle-compiled.js',
+          optimize: 'none',
+        },
+      },
+      'redturtle-agidtheme-icons': {
+        options: {
+          baseUrl: './',
+          generateSourceMaps: true,
+          preserveLicenseComments: false,
+          paths: {
+            fa: './js/dist/fa',
+          },
+          wrapShim: true,
+          name: './js/src/icons.js',
+          out: './js/dist/rt-icons.js',
           optimize: 'none',
         },
       },
@@ -160,7 +184,7 @@ module.exports = function(grunt) {
         tasks: ['less', 'sass', 'postcss', 'concat_css'],
       },
       scripts: {
-        files: ['js/src/index.js'],
+        files: ['js/src/index.js', 'js/src/icons.js'],
         tasks: ['requirejs', 'uglify'],
       },
       fa: {
