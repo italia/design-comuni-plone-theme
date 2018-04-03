@@ -1,4 +1,4 @@
-define('fa', [], function() {
+define('fa_rt', [], function() {
   return /******/ (function(modules) {
     // webpackBootstrap
     /******/ // The module cache

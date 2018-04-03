@@ -1,15 +1,15 @@
-require(['fa'], function(fa) {
+require(['fa_rt'], function(fa_rt) {
   if (document.addEventListener) {
     document.addEventListener(
-      'click',
+      'rtIconsLoaded',
       function() {
-        fa.init();
+        fa_rt.init();
       },
       false
     );
   } else if (document.attachEvent) {
-    document.attachEvent('onclick', function() {
-      fa.init();
+    document.attachEvent('rtIconsLoaded', function() {
+      fa_rt.init();
     });
   }
 });

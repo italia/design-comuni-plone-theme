@@ -85,7 +85,7 @@ module.exports = function(grunt) {
       options: {
         stats: !process.env.NODE_ENV || process.env.NODE_ENV === 'development',
       },
-      fa: {
+      fa_rt: {
         entry: './js/src/fa',
         output: {
           filename: 'fa.js',
@@ -93,7 +93,7 @@ module.exports = function(grunt) {
             __dirname,
             'src/redturtle/agidtheme/theme/js/dist'
           ),
-          library: 'fa',
+          library: 'fa_rt',
           libraryTarget: 'amd',
         },
         module: {
@@ -164,7 +164,7 @@ module.exports = function(grunt) {
           generateSourceMaps: true,
           preserveLicenseComments: false,
           paths: {
-            fa: './js/dist/fa',
+            fa_rt: './js/dist/fa',
           },
           wrapShim: true,
           name: './js/src/icons.js',
