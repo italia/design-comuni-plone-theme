@@ -6,6 +6,9 @@ Changelog
 ------------------
 
 - Fix tags for icons (for compatibility) [nzambello]
+- Don't show header viewlet if settings aren't set. Now default settings are set
+  at install-time.
+  [cekk]
 
 
 2.0.0 (2018-03-15)
