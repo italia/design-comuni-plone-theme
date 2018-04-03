@@ -1,4 +1,4 @@
-require(['jquery', 'ellipsed', 'fa'], function($, ellipsed, fa) {
+require(['jquery', 'ellipsed'], function($, ellipsed) {
   'use strict';
 
   var ellipsis = ellipsed.ellipsis;
@@ -127,8 +127,6 @@ require(['jquery', 'ellipsed', 'fa'], function($, ellipsed, fa) {
       }
     });
 
-    fa.init();
-
     /*
      *  return-to-top arrow
      */
@@ -242,5 +240,8 @@ require(['jquery', 'ellipsed', 'fa'], function($, ellipsed, fa) {
         .find('.slick-dots')
         .attr('aria-hidden', true);
     });
+
+    var iconsEvent = new Event('rtIconsLoaded');
+    document.dispatchEvent(iconsEvent);
   });
 });
