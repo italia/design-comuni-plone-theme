@@ -9150,4 +9150,121 @@ nav.pagination ul li.next span {
 .skip-link-wrapper a.skip-link:hover span {
   border-bottom: 1px solid #9d1610;
 }
+#commenting:before,
+#commenting:after {
+  content: ' ';
+  display: table;
+}
+#commenting:after {
+  clear: both;
+}
+.discussion legend,
+#commenting legend {
+  padding: 0.5em 0.5em 0.5em 0;
+  font-weight: normal;
+}
+.discussion {
+  margin: 30px 0;
+}
+.discussion:before,
+.discussion:after {
+  content: ' ';
+  display: table;
+}
+.discussion:after {
+  clear: both;
+}
+.discussion .comment {
+  margin-bottom: 1em;
+  padding-left: 40px;
+}
+.discussion .commentImage {
+  float: left;
+  border-radius: 50px;
+  overflow: hidden;
+  position: absolute;
+  margin-left: -40px;
+  margin-top: 3px;
+}
+.discussion .documentByLine {
+  font-weight: normal;
+}
+.discussion .commentDate {
+  float: right;
+  display: inline;
+  font-size: 0.85em;
+  color: #76797c;
+}
+.discussion .commentBody {
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
+  border: 1px solid #ccc;
+}
+.discussion .commentBody p {
+  float: left;
+  margin-bottom: 0;
+}
+.discussion .commentactionsform {
+  display: inline;
+  margin-left: 6px;
+}
+.discussion .commentActions {
+  float: right;
+  text-align: right;
+}
+.discussion .reply {
+  border-bottom: 20px;
+}
+.cancelreplytocomment {
+  display: none;
+}
+.replyTreeLevel0 {
+  margin-left: 0;
+}
+.replyTreeLevel1 {
+  margin-left: 38px;
+}
+.replyTreeLevel2 {
+  margin-left: 76px;
+}
+.replyTreeLevel3 {
+  margin-left: 114px;
+}
+.replyTreeLevel4 {
+  margin-left: 152px;
+}
+.replyTreeLevel5 {
+  margin-left: 190px;
+}
+.replyTreeLevel6 {
+  margin-left: 228px;
+}
+.replyTreeLevel7 {
+  margin-left: 266px;
+}
+.replyTreeLevel8 {
+  margin-left: 304px;
+}
+.replyTreeLevel9 {
+  margin-left: 342px;
+}
+.replyTreeLevel10 {
+  margin-left: 380px;
+}
+#viewlet-below-content .loginbutton {
+  margin: 19px 0;
+}
+#viewlet-below-content .reply .loginbutton {
+  display: none;
+}
+#viewlet-below-content .reply ~ .reply .loginbutton {
+  display: inline-block;
+}
+#dobulkaction {
+  margin: 0.3em 0;
+}
+.template-discussion-controlpanel .unclickable {
+  opacity: 0.6;
+}
 /*# sourceMappingURL=redturtleagidtheme.css.map */
