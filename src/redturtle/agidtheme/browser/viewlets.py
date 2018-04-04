@@ -4,6 +4,7 @@ from ..vocabularies import SHARES
 from plone import api
 from plone.api.exc import InvalidParameterError
 from plone.app.layout.viewlets import common as base
+from plone.app.layout.viewlets.common import SearchBoxViewlet
 from plone.app.layout.viewlets.content import DocumentBylineViewlet
 from Products.CMFPlone.utils import getSiteLogo
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
@@ -129,3 +130,8 @@ class HeaderSocialViewlet(base.ViewletBase):
 class SkipLinksViewlet(base.ViewletBase):
     'Skiplinks viewlet'
     index = ViewPageTemplateFile('templates/skip_links_viewlet.pt')
+
+
+class AgidSearchBoxViewlet(SearchBoxViewlet):
+    """ Search viewlet """
+    index = ViewPageTemplateFile('templates/searchbox.pt')

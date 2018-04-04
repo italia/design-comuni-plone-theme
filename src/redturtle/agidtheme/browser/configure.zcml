@@ -191,14 +191,6 @@
       permission="zope2.View"
   />
 
-  <!-- <browser:viewlet
-     -     name="redturtle.path_bar"
-     -     manager="plone.app.layout.viewlets.interfaces.IMainNavigation"
-     -     class="plone.app.layout.viewlets.common.PathBarViewlet"
-     -     permission="zope2.View"
-     -     layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
-     -     /> -->
-
   <browser:viewlet
     name="redturtle.header.social"
     manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
@@ -215,4 +207,12 @@
     permission="zope2.View"
     />
 
+  <!-- The search box -->
+  <browser:viewlet
+      name="plone.searchbox"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      class=".viewlets.AgidSearchBoxViewlet"
+      permission="zope2.View"
+      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
+      />
 </configure>
