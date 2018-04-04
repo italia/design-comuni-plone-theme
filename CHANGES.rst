@@ -6,9 +6,11 @@ Changelog
 ------------------
 
 - Fix tags for icons (for compatibility) [nzambello]
+- Fixes for icons (separated js called with an event) [nzambello]
 - Don't show header viewlet if settings aren't set. Now default settings are set
   at install-time.
   [cekk]
+- Added comments styles from barceloneta [nzambello]
 
 
 2.0.0 (2018-03-15)
