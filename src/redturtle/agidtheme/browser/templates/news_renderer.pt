@@ -9,7 +9,7 @@
         <metal:macro define-macro="collection-tile-macro"
                      tal:define="helper_view nocall:context/@@collection_tile_helpers;
                                  showCarousel python:'carousel' in (view.data.get('css_class') or '');
-                                 renderComments python: 'with-comments' in (view.data.get('css_class') or '');
+                                 renderComments python: 'with-comments' in view.data.get('css_class', '';
                                  resultsClass python: showCarousel and 'tileContent pat-slider' or 'tileContent'">
         <div class="tile-collection news-collection">
             <div class="tile-collection-container">
@@ -69,12 +69,14 @@
                                                   </div>
                                                   <div class="collectionItemDateYear">${date/year}</div>
                                               </div>
-                                              <div class="collectionItemComments"
-                                                   tal:define="hasComments python:True"
-                                                   tal:condition="python: renderComments and hasComments">
+                                              <tal:comments tal:condition="renderComments">
+                                                <div class="collectionItemComments"
+                                                  tal:define="comments python:helper_view.getCommentsCount(obj)"
+                                                  tal:condition="comments/enabled|nothing">
                                                   <i class="far fa-comment"></i>
-                                                  <span class="comment-count">1</span>
-                                              </div>
+                                                  <span class="comment-count">${comments/comments}</span>
+                                                </div>
+                                              </tal:comments>
                                           </div>
                                       </div>
                                   </a>

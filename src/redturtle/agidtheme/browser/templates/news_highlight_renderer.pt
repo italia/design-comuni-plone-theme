@@ -8,7 +8,7 @@
   <body>
     <metal:macro define-macro="collection-tile-macro"
                  tal:define="helper_view nocall:context/@@collection_tile_helpers;
-                             renderComments python: 'with-comments' in (view.data.get('css_class') or '');">
+                             renderComments python: 'with-comments' in view.data.get('css_class', '');">
       <div class="news-highlight"
            tal:define="news python: results and results[0] or None;">
 
@@ -41,12 +41,14 @@
                 </div>
                 <div class="news-title"><a href="${news/getURL}" title="${title}">${title}</a></div>
                 <div class="news-description" tal:condition="description"><span>${description}</span></div>
-                <div class="news-comments"
-                     tal:define="hasComments python:True"
-                     tal:condition="python: renderComments and hasComments">
+                <tal:comments tal:condition="renderComments">
+                  <div class="news-comments"
+                    tal:define="comments python:helper_view.getCommentsCount(obj)"
+                    tal:condition="comments/enabled|nothing">
                     <i class="far fa-comment"></i>
-                    <span class="comment-count">1</span>
-                </div>
+                    <span class="comment-count">${comments/comments}</span>
+                  </div>
+                </tal:comments>
               </div>
               <figure class="item-image" tal:condition="image_tag" tal:content="structure image_tag" />
             </div>

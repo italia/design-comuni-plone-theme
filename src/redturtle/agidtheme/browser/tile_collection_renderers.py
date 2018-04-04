@@ -2,10 +2,16 @@
 from collective.tiles.collection.interfaces import ICollectionTileRenderer
 from plone import api
 from plone.api.exc import InvalidParameterError
+from plone.app.discussion.interfaces import IConversation
 from Products.Five.browser import BrowserView
 from redturtle.agidtheme import _
 from ZODB.POSException import POSKeyError
 from zope.interface import implementer
+
+import logging
+
+
+logger = logging.getLogger(__name__)
 
 
 class HelpersView(BrowserView):
@@ -62,6 +68,19 @@ class HelpersView(BrowserView):
             return 'video'
 
         return ''
+
+    def getCommentsCount(self, item):
+        try:
+            conversation = IConversation(item)
+        except Exception:
+            return {'enabled': False}
+        if not getattr(item, 'allow_discussion'):
+            return {'enabled': False}
+        return {
+            'enabled': True,
+            'comments': conversation.total_comments()
+        }
+
 
 @implementer(ICollectionTileRenderer)
 class SightsView(BrowserView):
