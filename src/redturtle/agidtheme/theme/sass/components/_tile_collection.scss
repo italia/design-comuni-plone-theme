@@ -115,6 +115,36 @@
             }
         }
     }
+
+    &.with-comments {
+        .tile-collection {
+            .collectionItemFooter {
+                display: flex;
+            }
+
+            .collectionItemDates {
+                text-align: left;
+                width: 50%;
+            }
+
+            .collectionItemComments {
+                padding-top: 20px;
+                width: 50%;
+                text-align: right;
+
+                &,
+                span {
+                    color: $brand-primary;
+                }
+            }
+        }
+
+        .news-highlight {
+            .news-comments {
+                padding-top: 20px;
+            }
+        }
+    }
 }
 
 .tile-collection {

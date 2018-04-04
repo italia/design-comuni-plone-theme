@@ -9,6 +9,7 @@
         <metal:macro define-macro="collection-tile-macro"
                      tal:define="helper_view nocall:context/@@collection_tile_helpers;
                                  showCarousel python:'carousel' in (view.data.get('css_class') or '');
+                                 renderComments python: 'with-comments' in (view.data.get('css_class') or '');
                                  resultsClass python: showCarousel and 'tileContent pat-slider' or 'tileContent'">
         <div class="tile-collection news-collection">
             <div class="tile-collection-container">
@@ -56,16 +57,24 @@
                                                   <span tal:content="obj/Description"> Description </span>
                                               </div>
                                           </div>
-                                          <div class="collectionItemDates"
-                                               tal:define="date python:helper_view.get_formatted_date(obj) or None"
-                                               tal:condition="python: view.data.get('show_dates', False) and date"
-                                               i18n:domain="plonelocales">
+                                          <div class="collectionItemFooter">
+                                              <div class="collectionItemDates"
+                                                   tal:define="date python:helper_view.get_formatted_date(obj) or None"
+                                                   tal:condition="python: view.data.get('show_dates', False) and date"
+                                                   i18n:domain="plonelocales">
 
-                                              <div class="collectionItemDateDay">${date/day}</div>
-                                              <div class="collectionItemDateMonth">
-                                                  <tal:month i18n:translate="">${date/month}</tal:month>
+                                                  <div class="collectionItemDateDay">${date/day}</div>
+                                                  <div class="collectionItemDateMonth">
+                                                      <tal:month i18n:translate="">${date/month}</tal:month>
+                                                  </div>
+                                                  <div class="collectionItemDateYear">${date/year}</div>
                                               </div>
-                                              <div class="collectionItemDateYear">${date/year}</div>
+                                              <div class="collectionItemComments"
+                                                   tal:define="hasComments python:True"
+                                                   tal:condition="python: renderComments and hasComments">
+                                                  <i class="far fa-comment"></i>
+                                                  <span class="comment-count">1</span>
+                                              </div>
                                           </div>
                                       </div>
                                   </a>

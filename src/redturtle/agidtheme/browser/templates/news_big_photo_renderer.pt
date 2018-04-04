@@ -7,7 +7,8 @@
       i18n:domain="redturtle.agidtheme">
   <body>
     <metal:macro define-macro="collection-tile-macro"
-                 tal:define="helper_view nocall:context/@@collection_tile_helpers"
+                 tal:define="helper_view nocall:context/@@collection_tile_helpers;
+                             renderComments python: 'with-comments' in (view.data.get('css_class') or '');"
                  i18n:domain="redturtle.agidtheme">
       <!-- if obj is None, it will break calling getObject() on it, but if the collection is empty this won't be rendered by collective.tiles.collection -->
       <div class="news-big-photo"
@@ -36,6 +37,12 @@
                      i18n:domain="plonelocales">
                   ${date/day} <tal:month i18n:translate="">${date/month}</tal:month> ${date/year}
                   </span>
+                </div>
+                <div class="news-comments"
+                     tal:define="hasComments python:True"
+                     tal:condition="python: renderComments and hasComments">
+                    <i class="far fa-comment"></i>
+                    <span class="comment-count">1</span>
                 </div>
                 <div class="showMore"
                   tal:define="show_more view/data/show_more;
