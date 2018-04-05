@@ -241,7 +241,10 @@ require(['jquery', 'ellipsed'], function($, ellipsed) {
         .attr('aria-hidden', true);
     });
 
-    var iconsEvent = new Event('rtIconsLoaded');
-    document.dispatchEvent(iconsEvent);
+    var isIE = /*@cc_on!@*/ false || !!document.documentMode;
+    if (!isIE) {
+      var iconsEvent = new Event('rtIconsLoaded');
+      document.dispatchEvent(iconsEvent);
+    }
   });
 });
