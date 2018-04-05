@@ -8,7 +8,7 @@
   <body>
     <metal:macro define-macro="collection-tile-macro"
                  tal:define="helper_view nocall:context/@@collection_tile_helpers;
-                             renderComments python: 'with-comments' in view.data.get('css_class', '');"
+                             renderComments python: 'with-comments' in (view.data.get('css_class') or '');"
                  i18n:domain="redturtle.agidtheme">
       <!-- if obj is None, it will break calling getObject() on it, but if the collection is empty this won't be rendered by collective.tiles.collection -->
       <div class="news-big-photo"
