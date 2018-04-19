@@ -266,6 +266,11 @@ require(['jquery', 'ellipsed'], function($, ellipsed) {
       icon: 'fas fa-search',
       prepend: true,
     },
+    {
+      selector: '.documentActions #document-action-print a',
+      icon: 'fas fa-print',
+      prepend: true,
+    },
   ];
 
   $(document).ready(function() {
