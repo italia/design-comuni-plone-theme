@@ -74,7 +74,7 @@ class HelpersView(BrowserView):
             conversation = IConversation(item)
         except Exception:
             return {'enabled': False}
-        if not getattr(item, 'allow_discussion'):
+        if getattr(item, 'allow_discussion') == False:
             return {'enabled': False}
         return {
             'enabled': True,
