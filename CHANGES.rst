@@ -11,6 +11,8 @@ Changelog
   at install-time.
   [cekk]
 - Added comments styles from barceloneta [nzambello]
+- Moved icons to a separated bundle [nzambello]
+- Minor fixes for icons and js events [nzambello]
 
 
 2.0.0 (2018-03-15)
