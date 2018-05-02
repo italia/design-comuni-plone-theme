@@ -8071,10 +8071,9 @@ table tr.odd {
 .documentActions ul li a:focus {
   text-decoration: underline;
 }
-.documentActions ul li#document-action-print a {
-  background: url('++theme++redturtle.agid.theme/images/print.png') no-repeat
-    center left;
-  padding-left: 35px;
+.documentActions ul li#document-action-print a svg {
+  margin-right: 0.75rem;
+  font-size: 2rem;
 }
 @media (max-width: 991px) {
   .documentActions {

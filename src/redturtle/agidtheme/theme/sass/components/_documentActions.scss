@@ -18,10 +18,13 @@
                     text-decoration: underline;
                 }
             }
+
             &#document-action-print {
                 a {
-                    background: url($img-path+'print.png') no-repeat center left;
-                    padding-left: 35px;
+                    svg {
+                        margin-right: 0.75rem;
+                        font-size: 2rem;
+                    }
                 }
             }
         }

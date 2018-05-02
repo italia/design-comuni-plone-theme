@@ -179,19 +179,23 @@ define('fa_rt', [], function() {
 
         var _faBars2 = _interopRequireDefault(_faBars);
 
-        var _faSortAlphaDown = __webpack_require__(25);
+        var _faPrint = __webpack_require__(25);
+
+        var _faPrint2 = _interopRequireDefault(_faPrint);
+
+        var _faSortAlphaDown = __webpack_require__(26);
 
         var _faSortAlphaDown2 = _interopRequireDefault(_faSortAlphaDown);
 
-        var _faAngleRight = __webpack_require__(26);
+        var _faAngleRight = __webpack_require__(27);
 
         var _faAngleRight2 = _interopRequireDefault(_faAngleRight);
 
-        var _faAngleUp = __webpack_require__(27);
+        var _faAngleUp = __webpack_require__(28);
 
         var _faAngleUp2 = _interopRequireDefault(_faAngleUp);
 
-        var _faAngleDown = __webpack_require__(28);
+        var _faAngleDown = __webpack_require__(29);
 
         var _faAngleDown2 = _interopRequireDefault(_faAngleDown);
 
@@ -227,7 +231,8 @@ define('fa_rt', [], function() {
             _faFilter2.default,
             _faStar2.default,
             _faSortAlphaDown2.default,
-            _faBars2.default
+            _faBars2.default,
+            _faPrint2.default
           );
         });
 
@@ -2908,6 +2913,22 @@ define('fa_rt', [], function() {
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
+          iconName: 'print',
+          icon: [
+            512,
+            512,
+            [],
+            'f02f',
+            'M464 192h-16V81.941a24 24 0 0 0-7.029-16.97L383.029 7.029A24 24 0 0 0 366.059 0H88C74.745 0 64 10.745 64 24v168H48c-26.51 0-48 21.49-48 48v132c0 6.627 5.373 12 12 12h52v104c0 13.255 10.745 24 24 24h336c13.255 0 24-10.745 24-24V384h52c6.627 0 12-5.373 12-12V240c0-26.51-21.49-48-48-48zm-80 256H128v-96h256v96zM128 224V64h192v40c0 13.2 10.8 24 24 24h40v96H128zm304 72c-13.254 0-24-10.746-24-24s10.746-24 24-24 24 10.746 24 24-10.746 24-24 24z',
+          ],
+        };
+
+        /***/
+      },
+      /* 26 */
+      /***/ function(module, exports) {
+        module.exports = {
+          prefix: 'fas',
           iconName: 'sort-alpha-down',
           icon: [
             448,
@@ -2920,7 +2941,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 26 */
+      /* 27 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -2936,7 +2957,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 27 */
+      /* 28 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -2952,7 +2973,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 28 */
+      /* 29 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',

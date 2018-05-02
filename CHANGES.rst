@@ -2,7 +2,13 @@ Changelog
 =========
 
 
-2.1.0 (unreleased)
+2.1.1 (unreleased)
+------------------
+
+- Nothing changed yet.
+
+
+2.1.0 (2018-04-26)
 ------------------
 
 - Fix tags for icons (for compatibility) [nzambello]
@@ -11,6 +17,8 @@ Changelog
   at install-time.
   [cekk]
 - Added comments styles from barceloneta [nzambello]
+- Moved icons to a separated bundle [nzambello]
+- Minor fixes for icons and js events [nzambello]
 
 
 2.0.0 (2018-03-15)
