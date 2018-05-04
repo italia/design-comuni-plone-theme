@@ -5,7 +5,8 @@ Changelog
 2.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove unused defaults in controlpanel
+  [cekk]
 
 
 2.1.0 (2018-04-26)

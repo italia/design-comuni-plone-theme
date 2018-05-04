@@ -59,7 +59,6 @@ class IRedturtleAgidthemeSettings(model.Schema):
         description=_(u'header_link_label_desc',
                       default=u'Label for the link in the header of the site'),
         required=False,
-        default=u'Governo Italiano'
     )
 
     header_link_url = schema.URI(
@@ -68,7 +67,6 @@ class IRedturtleAgidthemeSettings(model.Schema):
         description=_(u'header_link_url_desc',
                       default=u'URL of the link in the header'),
         required=False,
-        default='http://www.governo.it'
     )
 
     header_second_link_label = schema.TextLine(
