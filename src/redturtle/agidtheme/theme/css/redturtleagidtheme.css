@@ -6074,6 +6074,7 @@ blockquote {
 }
 #portal-logo img {
   margin-right: 2rem;
+  height: 100%;
 }
 @media (max-width: 600px) {
   #portal-logo {
