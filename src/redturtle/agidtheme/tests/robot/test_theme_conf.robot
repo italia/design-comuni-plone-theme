@@ -20,7 +20,7 @@ Scenario: Set parameters in redturtle.agitheme controlpanel
 
  ${id}  new-document
  ${title}  New document
- ${followlinks}  facebook|https://www.facebook.com\n\rtwitter|https://www.twitter.com
+ ${followlinks}  facebook|https://www.facebook.com\n\rtwitter|https://www.twitter.com\nyoutube|https://www.youtube.com\nmedium|https://medium.com/\nlinkedin|https://www.linkedin.com/\nstorify|https://storify.com/\nrss|https://news.google.it/?output=rss\nnewsletter|https://developers.google.com/newsletter/
  ${link1title}  Link 1
  ${link1href}  http://link1.com
  ${link2title}  Link 2
@@ -66,4 +66,18 @@ In the document page I should see all configuration
   Wait For Condition  return $('.header-banner-inner .header-banner-second-link a').text() === '${link2title}'
   Page should contain element  css=#portal-header #header-social ul li a[href*="facebook"]
   Page should contain element  css=#portal-header #header-social ul li a[href*="twitter"]
+  Page should contain element  css=#portal-header #header-social ul li a[href*="youtube"]
+  Page should contain element  css=#portal-header #header-social ul li a[href*="medium"]
+  Page should contain element  css=#portal-header #header-social ul li a[href*="linkedin"]
+  Page should contain element  css=#portal-header #header-social ul li a[href*="storify"]
+  Page should contain element  css=#portal-header #header-social ul li a[href*="rss"]
+  Page should contain element  css=#portal-header #header-social ul li a[href*="newsletter"]
+  Page should contain element  css=#portal-header #header-social ul li a[href*="facebook"] svg
+  Page should contain element  css=#portal-header #header-social ul li a[href*="twitter"] svg
+  Page should contain element  css=#portal-header #header-social ul li a[href*="youtube"] svg
+  Page should contain element  css=#portal-header #header-social ul li a[href*="medium"] svg
+  Page should contain element  css=#portal-header #header-social ul li a[href*="linkedin"] svg
+  # Page should contain element  css=#portal-header #header-social ul li a[href*="storify"] svg
+  Page should contain element  css=#portal-header #header-social ul li a[href*="rss"] svg
+  Page should contain element  css=#portal-header #header-social ul li a[href*="newsletter"] svg
   Page should contain element  css=#portal-column-two .share.share-visible
