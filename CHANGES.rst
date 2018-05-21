@@ -5,7 +5,7 @@ Changelog
 2.1.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix tile collection flexbox dimensions [nzambello]
 
 
 2.1.1 (2018-05-10)
