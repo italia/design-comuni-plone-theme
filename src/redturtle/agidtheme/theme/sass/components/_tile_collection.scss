@@ -302,6 +302,8 @@
         }
 
         .collectionItemImage {
+            flex: 0 0 auto;
+
             img {
                 width: 100%;
                 height: auto;
@@ -334,6 +336,10 @@
 
         .collectionItemDescription {
             font-size: 1.7rem;
+        }
+
+        .collectionItemFooter {
+            margin-top: auto;
         }
     }
 

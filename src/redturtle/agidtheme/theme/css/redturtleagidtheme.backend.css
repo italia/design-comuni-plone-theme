@@ -7391,6 +7391,12 @@ blockquote {
 .tile-collection .collectionItemWrapper a:focus .videoTitle span {
   border-bottom: 1px solid #000;
 }
+.tile-collection .collectionItemWrapper .collectionItemImage {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
 .tile-collection .collectionItemWrapper .collectionItemImage img {
   width: 100%;
   height: auto;
@@ -7430,6 +7436,9 @@ blockquote {
 }
 .tile-collection .collectionItemWrapper .collectionItemDescription {
   font-size: 1.7rem;
+}
+.tile-collection .collectionItemWrapper .collectionItemFooter {
+  margin-top: auto;
 }
 @media (max-width: 767px) {
   .tile-collection ul.tileContent {
