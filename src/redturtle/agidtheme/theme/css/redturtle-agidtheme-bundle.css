@@ -12978,6 +12978,7 @@ blockquote {
   padding-top: 20px;
   width: 50%;
   text-align: right;
+  margin-left: auto;
 }
 .collectionTile.with-comments .tile-collection .collectionItemComments,
 .collectionTile.with-comments .tile-collection .collectionItemComments span {

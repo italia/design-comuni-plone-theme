@@ -7,6 +7,7 @@ Changelog
 
 - Fix tile collection flexbox dimensions [nzambello]
 - Fix bootstrap import (missing modules found) [nzambello]
+- Fix comments styles in tile collections [nzambello]
 
 
 2.1.1 (2018-05-10)
