@@ -58,7 +58,19 @@
                 padding-left: 0;
 
                 a {
-                    display: inline-block;
+                    display: inline-flex;
+                    width: 1.125em;
+                    padding-left: 1.5em;
+                    padding-right: 0;
+                    overflow: hidden;
+                    height: 100%;
+                    position: relative;
+
+                    svg {
+                        position: absolute;
+                        top: calc(50% - 0.5em);
+                        left: 0;
+                    }
                 }
             }
         }
