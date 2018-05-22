@@ -274,8 +274,6 @@ require(['jquery', 'ellipsed'], function($, ellipsed) {
   ];
 
   $(document).ready(function() {
-    $('#breadcrumbs-home a').text('');
-
     // init fontawesome icons
     icons.forEach(function(i) {
       var $el = $(i.selector);

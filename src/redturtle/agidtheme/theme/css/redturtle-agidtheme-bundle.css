@@ -12597,7 +12597,22 @@ blockquote {
   padding-left: 0;
 }
 #viewlet-above-content #portal-breadcrumbs ol li#breadcrumbs-home a {
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 1.125em;
+  padding-left: 1.5em;
+  padding-right: 0;
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
+#viewlet-above-content #portal-breadcrumbs ol li#breadcrumbs-home a svg {
+  position: absolute;
+  top: -webkit-calc(50% - 0.5em);
+  top: calc(50% - 0.5em);
+  left: 0;
 }
 .newsImageContainer {
   float: right;
