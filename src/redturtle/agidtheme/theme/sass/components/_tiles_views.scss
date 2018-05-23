@@ -3,9 +3,6 @@ $aree-tematiche-gutter: 50px;
 .template-homepage_view,
 .template-tiles_view,
 .template-tiles_page_view {
-    #viewlet-below-content {
-        display: none;
-    }
     .tile-container,
     .existing-content-tile,
     .aree-tematiche-collection,
@@ -21,6 +18,10 @@ $aree-tematiche-gutter: 50px;
     .aree-tematiche-collection,
     [class*='collection-container'] {
         @include make-container;
+    }
+
+    #viewlet-below-content {
+        display: none;
     }
 }
 

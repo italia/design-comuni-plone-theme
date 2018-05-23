@@ -10281,11 +10281,6 @@ nav.pagination ul li.next span {
 .sfondo-chiaro.portletStaticNavigation .tile-text:after {
   clear: both;
 }
-.template-homepage_view #viewlet-below-content,
-.template-tiles_view #viewlet-below-content,
-.template-tiles_page_view #viewlet-below-content {
-  display: none;
-}
 .template-homepage_view .tile-container:before,
 .template-homepage_view .tile-container:after,
 .template-homepage_view .existing-content-tile:before,
@@ -10404,6 +10399,10 @@ nav.pagination ul li.next span {
   .template-tiles_page_view [class*='collection-container'] {
     width: 1270px;
   }
+}
+.template-homepage_view #viewlet-below-content,
+.template-tiles_page_view #viewlet-below-content {
+  display: none;
 }
 .template-tiles_page_view [class*='ColumnsPage'] {
   margin-right: auto;
