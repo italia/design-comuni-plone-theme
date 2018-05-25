@@ -6,9 +6,9 @@
 redturtle.agidtheme
 ==============================================================================
 
-Il primo tema Plone conforme alle linee guida `AgID`__.
+Il primo tema Plone conforme a `Italia design system`__.
 
-__ https://design-italia.readthedocs.io/it/stable/index.html
+__ https://italia.github.io/design-react-kit/
 
 Questo tema si basa sulla versione 2017.1 delle linee guida.
 
