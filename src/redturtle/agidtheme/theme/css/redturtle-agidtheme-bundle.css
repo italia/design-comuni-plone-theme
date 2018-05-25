@@ -15052,6 +15052,9 @@ nav.pagination ul li.next span {
 .template-discussion-controlpanel .unclickable {
   opacity: 0.6;
 }
+label span.required:after {
+  font-size: 3.5rem;
+}
 /*# sourceMappingURL=redturtleagidtheme.css.map */
 @media print {
   a[href]:after {

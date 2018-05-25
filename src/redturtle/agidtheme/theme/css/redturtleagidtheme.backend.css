@@ -10782,6 +10782,9 @@ nav.pagination ul li.next span {
 .template-discussion-controlpanel .unclickable {
   opacity: 0.6;
 }
+label span.required:after {
+  font-size: 3.5rem;
+}
 .plone-breadcrumb ol > li + li:before {
   border: 0;
   position: static;
