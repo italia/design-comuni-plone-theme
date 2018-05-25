@@ -168,6 +168,11 @@ require(['jquery', 'ellipsed'], function($, ellipsed) {
       prepend: true,
     },
     {
+      selector: '#document-toc .portletHeader',
+      icon: 'fas fa-list-ul',
+      prepend: true,
+    },
+    {
       selector:
         '.template-album_view .photoAlbumEntry.photoAlbumFolder .photoAlbumEntryTitle',
       icon: 'fas fa-folder-open',

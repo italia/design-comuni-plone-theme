@@ -10785,4 +10785,37 @@ nav.pagination ul li.next span {
 label span.required:after {
   font-size: 3.5rem;
 }
+#document-toc {
+  display: block !important;
+  border-top: 1px dashed #bbb;
+}
+#document-toc .portletHeader {
+  background: transparent;
+  border-bottom: 0 none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 2rem 0 2rem;
+  line-height: 1;
+}
+#document-toc .portletHeader i,
+#document-toc .portletHeader svg {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+}
+#parent-fieldname-text.pat-autotoc .autotoc-nav {
+  border-bottom: 1px dashed #bbb;
+  margin: 0 0 2rem;
+  padding: 0 2.5rem 2rem;
+}
+#parent-fieldname-text.pat-autotoc .autotoc-nav a {
+  border-bottom: 0 none;
+  color: #cb1d15;
+  text-decoration: underline;
+}
+#parent-fieldname-text.pat-autotoc .autotoc-nav a:focus,
+#parent-fieldname-text.pat-autotoc .autotoc-nav a:hover {
+  color: #9d1610;
+}
 /*# sourceMappingURL=redturtleagidtheme.css.map */

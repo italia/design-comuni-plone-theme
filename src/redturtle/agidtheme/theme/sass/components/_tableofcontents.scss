@@ -1,0 +1,38 @@
+#document-toc {
+    display: block !important;
+    border-top: 1px dashed #bbb;
+
+    .portletHeader {
+        background: $tr;
+        border-bottom: 0 none;
+        font-size: 1.6rem;
+        font-weight: $semibold;
+        text-transform: uppercase;
+        padding: 0;
+        margin: 2rem 0 2rem;
+        line-height: 1;
+
+        i,
+        svg {
+            margin-right: 1rem;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+#parent-fieldname-text.pat-autotoc .autotoc-nav {
+    border-bottom: 1px dashed #bbb;
+    margin: 0 0 2rem;
+    padding: 0 2.5rem 2rem;
+
+    a {
+        border-bottom: 0 none;
+        color: $link-color;
+        text-decoration: underline;
+
+        &:focus,
+        &:hover {
+            color: $link-hover-color;
+        }
+    }
+}

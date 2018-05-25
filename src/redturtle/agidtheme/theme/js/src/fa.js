@@ -29,6 +29,8 @@ import faAngleRight from '@fortawesome/fontawesome-free-solid/faAngleRight';
 import faAngleUp from '@fortawesome/fontawesome-free-solid/faAngleUp';
 import faAngleDown from '@fortawesome/fontawesome-free-solid/faAngleDown';
 
+import faListUl from '@fortawesome/fontawesome-free-solid/faListUl';
+
 export const init = () => {
   fontawesome.library.add(
     faFacebookF,
@@ -58,6 +60,7 @@ export const init = () => {
     faStar,
     faSortAlphaDown,
     faBars,
-    faPrint
+    faPrint,
+    faListUl
   );
 };

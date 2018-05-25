@@ -199,6 +199,10 @@ define('fa_rt', [], function() {
 
         var _faAngleDown2 = _interopRequireDefault(_faAngleDown);
 
+        var _faListUl = __webpack_require__(30);
+
+        var _faListUl2 = _interopRequireDefault(_faListUl);
+
         function _interopRequireDefault(obj) {
           return obj && obj.__esModule ? obj : { default: obj };
         }
@@ -232,7 +236,8 @@ define('fa_rt', [], function() {
             _faStar2.default,
             _faSortAlphaDown2.default,
             _faBars2.default,
-            _faPrint2.default
+            _faPrint2.default,
+            _faListUl2.default
           );
         });
 
@@ -2984,6 +2989,22 @@ define('fa_rt', [], function() {
             [],
             'f107',
             'M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z',
+          ],
+        };
+
+        /***/
+      },
+      /* 30 */
+      /***/ function(module, exports) {
+        module.exports = {
+          prefix: 'fas',
+          iconName: 'list-ul',
+          icon: [
+            512,
+            512,
+            [],
+            'f0ca',
+            'M96 96c0 26.51-21.49 48-48 48S0 122.51 0 96s21.49-48 48-48 48 21.49 48 48zM48 208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm0 160c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm96-236h352c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H144c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h352c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H144c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h352c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H144c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z',
           ],
         };
 
