@@ -10087,6 +10087,7 @@ nav.pagination ul li span:hover {
   color: #003552;
   background-color: #f5f5f5;
   border-color: #ddd;
+  cursor: pointer;
 }
 nav.pagination ul li.active a,
 nav.pagination ul li.active span {
