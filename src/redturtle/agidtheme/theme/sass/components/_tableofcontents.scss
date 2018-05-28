@@ -1,6 +1,12 @@
 #document-toc {
     display: block !important;
-    border-top: 1px dashed #bbb;
+    background: #eee;
+    padding: 1rem 2em;
+    margin-bottom: 0;
+
+    .portletContent {
+        display: none;
+    }
 
     .portletHeader {
         background: $tr;
@@ -20,19 +26,32 @@
     }
 }
 
-#parent-fieldname-text.pat-autotoc .autotoc-nav {
-    border-bottom: 1px dashed #bbb;
-    margin: 0 0 2rem;
-    padding: 0 2.5rem 2rem;
+#parent-fieldname-text.pat-autotoc {
+    .autotoc-nav {
+        margin: 0 0 2rem;
+        padding: 0 1rem 2.5rem;
+        background: #eee;
 
-    a {
-        border-bottom: 0 none;
-        color: $link-color;
-        text-decoration: underline;
+        a {
+            border-bottom: 0 none;
+            color: $link-color;
+            text-decoration: underline;
 
-        &:focus,
-        &:hover {
-            color: $link-hover-color;
+            &::before {
+                content: '›';
+                display: inline-block;
+                padding-right: 1rem;
+                color: #333;
+            }
+
+            &:focus,
+            &:hover {
+                color: $link-hover-color;
+
+                &::before {
+                    color: $link-hover-color;
+                }
+            }
         }
     }
 }

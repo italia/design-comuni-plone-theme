@@ -10806,7 +10806,12 @@ label span.required:after {
 }
 #document-toc {
   display: block !important;
-  border-top: 1px dashed #bbb;
+  background: #eee;
+  padding: 1rem 2em;
+  margin-bottom: 0;
+}
+#document-toc .portletContent {
+  display: none;
 }
 #document-toc .portletHeader {
   background: transparent;
@@ -10824,17 +10829,27 @@ label span.required:after {
   font-size: 1.5rem;
 }
 #parent-fieldname-text.pat-autotoc .autotoc-nav {
-  border-bottom: 1px dashed #bbb;
   margin: 0 0 2rem;
-  padding: 0 2.5rem 2rem;
+  padding: 0 1rem 2.5rem;
+  background: #eee;
 }
 #parent-fieldname-text.pat-autotoc .autotoc-nav a {
   border-bottom: 0 none;
   color: #cb1d15;
   text-decoration: underline;
 }
+#parent-fieldname-text.pat-autotoc .autotoc-nav a::before {
+  content: '›';
+  display: inline-block;
+  padding-right: 1rem;
+  color: #333;
+}
 #parent-fieldname-text.pat-autotoc .autotoc-nav a:focus,
 #parent-fieldname-text.pat-autotoc .autotoc-nav a:hover {
+  color: #9d1610;
+}
+#parent-fieldname-text.pat-autotoc .autotoc-nav a:focus::before,
+#parent-fieldname-text.pat-autotoc .autotoc-nav a:hover::before {
   color: #9d1610;
 }
 .plone-breadcrumb ol > li + li:before {
