@@ -17,15 +17,25 @@
     .comment {
         margin-bottom: 1em;
         padding-left: 40px;
+        position: relative;
     }
 
     .commentImage {
-        float: left;
         border-radius: 50px;
         overflow: hidden;
         position: absolute;
-        margin-left: -40px;
-        margin-top: 3px;
+        left: 0;
+        top: 0;
+        width: 40px;
+        height: 40px;
+
+        img {
+            max-width: none !important;
+            min-width: 100%;
+            min-height: 100%;
+            @include align-vertical;
+            @include align-center;
+        }
     }
 
     .documentByLine {

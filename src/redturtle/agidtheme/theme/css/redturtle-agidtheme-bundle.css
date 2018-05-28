@@ -14962,14 +14962,33 @@ nav.pagination ul li.next span {
 .discussion .comment {
   margin-bottom: 1em;
   padding-left: 40px;
+  position: relative;
 }
 .discussion .commentImage {
-  float: left;
   border-radius: 50px;
   overflow: hidden;
   position: absolute;
-  margin-left: -40px;
-  margin-top: 3px;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+}
+.discussion .commentImage img {
+  max-width: none !important;
+  min-width: 100%;
+  min-height: 100%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .discussion .documentByLine {
   font-weight: normal;
