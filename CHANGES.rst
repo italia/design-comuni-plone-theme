@@ -9,6 +9,7 @@ Changelog
 - Fix bootstrap import (missing modules found) [nzambello]
 - Fix comments styles in tile collections [nzambello]
 - Styles for table of contents [nzambello]
+- Fix user pic in comments [nzambello]
 
 
 2.1.1 (2018-05-10)
