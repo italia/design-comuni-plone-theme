@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.1.3 (unreleased)
+2.1.3 (2018-05-29)
 ------------------
 
 - Fix pagination styles [nzambello]
