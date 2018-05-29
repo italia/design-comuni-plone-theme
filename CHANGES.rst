@@ -6,6 +6,7 @@ Changelog
 ------------------
 
 - Fix pagination styles [nzambello]
+- Updated default profile name [pnicolli]
 
 
 2.1.2 (2018-05-28)

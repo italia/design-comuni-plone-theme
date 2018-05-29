@@ -27,18 +27,18 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="RedTurtle Agid Theme"
+      title="Tema: Italia design system"
       directory="profiles/default"
-      description="Installs the Plone theme package redturtle.agidtheme."
+      description="Installa il tema basato sulle linee guida italiane per le PA."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       post_handler=".setuphandlers.post_install"
       />
 
   <genericsetup:registerProfile
       name="uninstall"
-      title="Uninstall: RedTurtle Agid Theme"
+      title="Disinstalla: Tema: Italia design system"
       directory="profiles/uninstall"
-      description="Uninstalls the Plone theme package redturtle.agidtheme."
+      description="Disinstalla il tema basato sulle linee guida italiane per le PA."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       post_handler=".setuphandlers.uninstall"
       />
