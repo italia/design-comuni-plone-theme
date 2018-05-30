@@ -46,10 +46,6 @@
             &:focus,
             &:hover {
                 color: $link-hover-color;
-
-                svg {
-                    color: $link-hover-color;
-                }
             }
         }
     }

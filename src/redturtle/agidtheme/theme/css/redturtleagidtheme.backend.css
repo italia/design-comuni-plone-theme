@@ -10848,10 +10848,6 @@ label span.required:after {
 #parent-fieldname-text.pat-autotoc .autotoc-nav a:hover {
   color: #9d1610;
 }
-#parent-fieldname-text.pat-autotoc .autotoc-nav a:focus svg,
-#parent-fieldname-text.pat-autotoc .autotoc-nav a:hover svg {
-  color: #9d1610;
-}
 .plone-breadcrumb ol > li + li:before {
   border: 0;
   position: static;
