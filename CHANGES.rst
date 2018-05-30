@@ -5,7 +5,7 @@ Changelog
 2.1.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Updated default profile name [pnicolli]
 
 
 2.1.3 (2018-05-29)
