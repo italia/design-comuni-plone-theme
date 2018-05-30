@@ -15109,18 +15109,17 @@ label span.required:after {
   color: #cb1d15;
   text-decoration: underline;
 }
-#parent-fieldname-text.pat-autotoc .autotoc-nav a::before {
-  content: '›';
-  display: inline-block;
-  padding-right: 1rem;
-  color: #333;
+#parent-fieldname-text.pat-autotoc .autotoc-nav a svg {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  color: #555;
 }
 #parent-fieldname-text.pat-autotoc .autotoc-nav a:focus,
 #parent-fieldname-text.pat-autotoc .autotoc-nav a:hover {
   color: #9d1610;
 }
-#parent-fieldname-text.pat-autotoc .autotoc-nav a:focus::before,
-#parent-fieldname-text.pat-autotoc .autotoc-nav a:hover::before {
+#parent-fieldname-text.pat-autotoc .autotoc-nav a:focus svg,
+#parent-fieldname-text.pat-autotoc .autotoc-nav a:hover svg {
   color: #9d1610;
 }
 /*# sourceMappingURL=redturtleagidtheme.css.map */

@@ -37,18 +37,17 @@
             color: $link-color;
             text-decoration: underline;
 
-            &::before {
-                content: '›';
-                display: inline-block;
-                padding-right: 1rem;
-                color: #333;
+            svg {
+                margin-right: 1rem;
+                font-size: 1.5rem;
+                color: #555;
             }
 
             &:focus,
             &:hover {
                 color: $link-hover-color;
 
-                &::before {
+                svg {
                     color: $link-hover-color;
                 }
             }

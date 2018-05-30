@@ -173,6 +173,11 @@ require(['jquery', 'ellipsed'], function($, ellipsed) {
       prepend: true,
     },
     {
+      selector: '.autotoc-nav a',
+      icon: 'fas fa-chevron-right',
+      prepend: true,
+    },
+    {
       selector:
         '.template-album_view .photoAlbumEntry.photoAlbumFolder .photoAlbumEntryTitle',
       icon: 'fas fa-folder-open',
