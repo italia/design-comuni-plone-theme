@@ -6,6 +6,7 @@ Changelog
 ------------------
 
 - Updated default profile name [pnicolli]
+- Styles for table of contents [nzambello]
 
 
 2.1.3 (2018-05-29)
