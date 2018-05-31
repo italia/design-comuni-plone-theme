@@ -14,7 +14,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='redturtle.agidtheme',
-    version='2.1.4.dev0',
+    version='2.1.4',
     description="RedTurtle Agid Theme",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
