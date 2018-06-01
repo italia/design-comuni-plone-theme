@@ -5,7 +5,7 @@ Changelog
 2.1.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Styles for empty tile collections [nzambello]
 
 
 2.1.4 (2018-05-31)

@@ -13096,6 +13096,10 @@ blockquote {
   color: #cb1d15;
   margin: 0;
 }
+.tile-collection.empty {
+  opacity: 0.35;
+  background: #e3e3e3;
+}
 .tile-collection .tile-collection-container {
   position: relative;
   padding: 20px 0px;

@@ -242,6 +242,11 @@
         }
     }
 
+    &.empty {
+        opacity: 0.35;
+        background: #e3e3e3;
+    }
+
     .tile-collection-container {
         position: relative;
         padding: 20px 0px;
