@@ -15,20 +15,21 @@ long_description = '\n\n'.join([
 setup(
     name='redturtle.agidtheme',
     version='2.1.5.dev0',
-    description="RedTurtle Agid Theme",
+    description="Theme for Italia Design System",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
         "Environment :: Web Environment",
         "Framework :: Plone",
         "Framework :: Plone :: 5.0",
+        "Framework :: Plone :: 5.1",
         "Framework :: Plone :: Theme",
         "Programming Language :: Python",
         "Programming Language :: Python :: 2.7",
         "Operating System :: OS Independent",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     ],
-    keywords='Python Plone',
+    keywords='Plone Italia Design System Theme',
     author='RedTurtle',
     author_email='sviluppoplone@redturtle.it',
     url='https://github.com/PloneGov-IT/redturtle.agidtheme.git',
