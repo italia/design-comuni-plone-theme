@@ -164,6 +164,7 @@
         font-size: 3.4rem;
         font-weight: 600;
         line-height: 1.3;
+        white-space: nowrap;
 
         @media (max-width: $screen-sm-max) {
             border-width: 1px;
