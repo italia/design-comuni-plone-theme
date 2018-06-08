@@ -168,6 +168,7 @@
 
         @media (max-width: $screen-sm-max) {
             border-width: 1px;
+            white-space: normal;
         }
     }
 
@@ -184,14 +185,14 @@
     }
 
     @media (max-width: 600px) {
+        padding: 0;
+
         img {
             $logo-width: 13vw;
             width: $logo-width;
             height: $logo-width;
             margin-right: 1.5rem;
         }
-
-        padding: 0;
 
         span {
             font-size: 4vw;

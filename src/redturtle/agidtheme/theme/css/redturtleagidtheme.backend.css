@@ -7558,6 +7558,7 @@ blockquote {
 @media (max-width: 991px) {
   #portal-logo span {
     border-width: 1px;
+    white-space: normal;
   }
 }
 #portal-logo:hover span,
