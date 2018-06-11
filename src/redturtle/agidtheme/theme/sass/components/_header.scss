@@ -26,6 +26,10 @@
             .header-banner-owner {
                 flex: 1;
             }
+
+            .header-banner-second-link {
+                margin-left: 1.5rem;
+            }
         }
     }
 
@@ -49,7 +53,7 @@
     }
 
     .header-banner-language {
-        margin: 0 1.5rem;
+        margin-left: 1.5rem;
 
         button#language-selector-button {
             background: none;
@@ -64,6 +68,9 @@
 
         ul.dropdown-menu {
             background-color: $gray-agid;
+            font-size: 1em;
+            left: auto;
+            right: 0;
 
             li {
                 a {
