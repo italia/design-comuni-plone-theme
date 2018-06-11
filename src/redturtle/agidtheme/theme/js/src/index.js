@@ -16,7 +16,7 @@ require(['jquery', 'ellipsed'], function($, ellipsed) {
       prepend: true,
     },
     {
-      selector: '.autotoc-nav a',
+      selector: '#parent-fieldname-text.pat-autotoc .autotoc-nav a',
       icon: 'fas fa-chevron-right',
       prepend: true,
     },
