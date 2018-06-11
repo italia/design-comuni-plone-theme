@@ -9,7 +9,7 @@
 ?>
 
 <div id="header-banner"
-     tal:condition="python:(header_link_label and header_link_url) or (header_second_link_label and header_second_link_url) or view/available"
+     tal:condition="python:(header_link_label and header_link_url) or (header_second_link_label and header_second_link_url) or view.available()"
      tal:define="className python: view.available() and 'with-languages' or ''">
     <div class="header-banner-inner" tal:attributes="class string:header-banner-inner ${className}">
         <div class="header-banner-owner" tal:condition="python:header_link_label and header_link_url">
