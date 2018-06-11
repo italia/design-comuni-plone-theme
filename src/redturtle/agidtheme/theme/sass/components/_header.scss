@@ -9,10 +9,24 @@
     color: #fff;
     font-weight: $semibold;
     padding: 1.3rem 0;
+    z-index: 500;
     @include antialias;
 
     .header-banner-inner {
         @include make-container;
+
+        &.with-languages {
+            display: flex;
+            align-items: center;
+
+            > div {
+                width: auto;
+            }
+
+            .header-banner-owner {
+                flex: 1;
+            }
+        }
     }
 
     .header-banner-owner,
@@ -32,6 +46,37 @@
 
     .header-banner-second-link {
         text-align: right;
+    }
+
+    .header-banner-language {
+        margin: 0 1.5rem;
+
+        button#language-selector-button {
+            background: none;
+            color: #fff;
+            text-transform: uppercase;
+            border: 0;
+
+            svg {
+                margin-left: 0.5rem;
+            }
+        }
+
+        ul.dropdown-menu {
+            background-color: $gray-agid;
+
+            li {
+                a {
+                    color: #fff;
+                    text-transform: uppercase;
+
+                    &:hover,
+                    &:focus {
+                        background: rgba(255, 255, 255, 0.25);
+                    }
+                }
+            }
+        }
     }
 
     @media (max-width: 600px) {
@@ -229,4 +274,8 @@
             z-index: 200;
         }
     }
+}
+
+#portal-languageselector {
+    display: none;
 }
