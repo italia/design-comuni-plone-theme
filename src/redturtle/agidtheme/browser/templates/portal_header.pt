@@ -9,30 +9,39 @@
 ?>
 
 <div id="header-banner"
-     tal:condition="python:(header_link_label and header_link_url) or (header_second_link_label and header_second_link_url)">
-    <div class="header-banner-inner">
+     tal:condition="python:(header_link_label and header_link_url) or (header_second_link_label and header_second_link_url) or view/available"
+     tal:define="className python: view.available() and 'with-languages' or ''">
+    <div class="header-banner-inner" tal:attributes="class string:header-banner-inner ${className}">
         <div class="header-banner-owner" tal:condition="python:header_link_label and header_link_url">
             <a href="${header_link_url}" target="_blank">${header_link_label}</a>
         </div>
         <div class="header-banner-language"
              tal:condition="view/available"
-             tal:define="languages view/languages">
-           <select class="language-selector">
+             tal:define="languages view/languages;
+                         current python: [x for x in languages if x['selected']][0] or None">
+           <div class="language-selector dropdown">
+             <button id="language-selector-button" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <span tal:content="current/code">Current language</span>
+               <i class="fas fa-chevron-down"></i>
+             </button>
+             <ul class="dropdown-menu" aria-labelledby="language-selector-button">
                <tal:language repeat="lang languages">
-                   <option tal:define="code lang/code;
-                                       selected lang/selected;
-                                       codeclass string:language-${code};
-                                       current python: selected and 'currentLanguage ' or '';"
-                           tal:attributes="class string:${current}${codeclass}; selected selected">
+                   <li tal:define="code lang/code;
+                                   selected lang/selected;
+                                   codeclass string:language-${code};
+                                   current python: selected and 'currentLanguage ' or '';"
+                       tal:attributes="class string:${current}${codeclass}; selected selected">
                        <a href=""
-                          tal:define="name lang/native|lang/name"
+                          tal:define="name lang/native|lang/name;
+                                      code lang/code"
                           tal:attributes="href lang/url;
                                           title name"
-                           ><span tal:content="name"></span
+                         ><span tal:content="code"></span
                        ></a>
-                   </option>
+                   </li>
                </tal:language>
-           </select>
+             </ul>
+          </div>
         </div>
         <div class="header-banner-second-link"
              tal:condition="python:header_second_link_label and header_second_link_url">
@@ -41,6 +50,7 @@
     </div>
 </div>
 
-<div id="portal-header">
+<div id="portal-header"
+     tal:attributes="class python: view.available() and 'with-languages' or ''">
     <div tal:replace="structure provider:plone.portalheader" />
 </div>
