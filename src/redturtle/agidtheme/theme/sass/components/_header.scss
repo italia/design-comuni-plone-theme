@@ -18,6 +18,7 @@
         &.with-languages {
             display: flex;
             align-items: center;
+            justify-content: flex-end;
 
             > div {
                 width: auto;
