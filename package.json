@@ -48,16 +48,19 @@
   },
   "scripts": {
     "prettier-all":
-      "prettier --write 'src/redturtle/agidtheme/theme/**/*.{js,json,scss}'",
+      "yarn prettier-sass && yarn prettier-js && yarn prettier-json",
+    "prettier-sass":
+      "prettier --write 'src/redturtle/agidtheme/theme/sass/**/*.scss'",
+    "prettier-js":
+      "prettier --write 'src/redturtle/agidtheme/theme/js/src/**/*.js'",
+    "prettier-json":
+      "prettier --write 'src/redturtle/agidtheme/theme/**/*.json'",
     "precommit": "lint-staged",
     "develop": "grunt compile && grunt",
     "test": "stylelint 'src/redturtle/agidtheme/theme/**/*.scss'",
     "build": "grunt compile && yarn prettier-all"
   },
   "lint-staged": {
-    "*.{js,json,css}": [
-      "prettier --write 'src/redturtle/agidtheme/theme/**/*.{js,json,scss}'",
-      "git add"
-    ]
+    "*.{js,json,scss}": ["yarn prettier-all", "git add"]
   }
 }
