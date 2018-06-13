@@ -62,7 +62,7 @@
         <div class="plone-navbar-header">
           <button type="button"
                   class="plone-navbar-toggle"
-                  aria-controls="portal-globalnav-collapse"
+                  aria-controls="portal-mainnavigation"
                   aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <i class="fas fa-bars"></i>

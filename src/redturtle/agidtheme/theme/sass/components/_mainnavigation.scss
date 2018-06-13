@@ -31,8 +31,6 @@
 }
 
 #portal-mainnavigation {
-    background-color: $brand-primary;
-    color: #fff;
     @include antialias;
 
     .globalnavWrapper {
@@ -57,14 +55,13 @@
             }
 
             > a {
-                color: #fff;
                 font-size: 1.95rem;
                 font-weight: $semibold;
                 display: block;
                 border-bottom: 1px solid transparent;
 
                 &:hover {
-                    border-color: #fff;
+                    border-color: currentColor;
                 }
             }
 
@@ -74,7 +71,7 @@
         }
     }
 
-    button#globalnav-close {
+    #globalnav-close {
         display: none;
 
         span.sr-only {
@@ -85,17 +82,40 @@
 
 @media (max-width: $mobile-menu-width) {
     #portal-mainnavigation {
-        #portal-globalnav-wrapper {
-            display: block;
-            max-height: 0;
-            transition: max-height $animation-speed ease-in-out;
-            overflow: hidden;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 0;
+        max-width: 75vw;
+        transition: 0.2s width ease;
+        overflow: hidden;
+        z-index: 500;
 
-            &.open {
-                max-height: 1000px;
+        &.open {
+            width: 280px;
+
+            &:before {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: transparentize($color: #000000, $amount: 0.5);
             }
         }
 
+        .container {
+            padding: 0;
+        }
+        #portal-globalnav-wrapper {
+            width: 280px;
+            max-width: 75vw;
+            height: 100%;
+            position: relative;
+            background-color: #fff;
+        }
         ul#portal-globalnav {
             display: block;
 
@@ -106,6 +126,69 @@
 
                 > a {
                     display: inline-block;
+                }
+            }
+        }
+        .globalnavClose {
+            display: block;
+            background: $brand-primary;
+            height: 70px;
+            width: 100%;
+        }
+        #globalnav-close {
+            display: block;
+            border: 0;
+            background: transparent;
+            color: #fff;
+            padding: 5px 10px;
+            width: 100%;
+            height: 70px;
+            text-align: left;
+            font-size: 1.3em;
+
+            .icon {
+                border: 1px solid transparent;
+                border-radius: 4px;
+                padding: 3px 10px;
+
+                &:before {
+                    @include make-ita('\1f5f5');
+                    vertical-align: middle;
+                }
+            }
+
+            &:focus {
+                .icon {
+                    border-color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $screen-xs-max) {
+    #portal-mainnavigation {
+        .globalnavClose {
+            height: 50px;
+        }
+        #globalnav-close {
+            padding-top: 0;
+            padding-bottom: 0;
+            height: 50px;
+            font-size: 1em;
+        }
+    }
+}
+
+@media (min-width: $mobile-menu-width + 1px) {
+    #portal-mainnavigation {
+        background-color: $brand-primary;
+        color: #fff;
+
+        ul#portal-globalnav {
+            > li {
+                > a {
+                    color: #fff;
                 }
             }
         }
