@@ -10,6 +10,12 @@
   <nav class="plone-navbar" id="portal-globalnav-wrapper">
     <div class="container">
       <div class="plone-collapse plone-navbar-collapse" id="portal-globalnav-collapse">
+        <div class="globalnavClose">
+          <button id="globalnav-close" aria-controls="portal-mainnavigation" aria-label="Esci dalla navigazione" title="Esci dalla navigazione">
+            <span aria-hidden="true" class="icon" />
+            <span class="sr-only">chiudi</span>
+          </button>
+        </div>
         <ul class="plone-nav plone-navbar-nav"
             id="portal-globalnav"
             tal:define="selected_tab python:view.selected_portal_tab">

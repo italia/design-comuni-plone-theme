@@ -342,7 +342,7 @@ require(['jquery', 'ellipsed'], function($, ellipsed) {
      * mobile: menu toggle click
      */
     $('button.plone-navbar-toggle').on('click', function() {
-      $('#portal-globalnav-wrapper').toggleClass('open');
+      $('#portal-mainnavigation').toggleClass('open');
     });
 
     /*
@@ -364,11 +364,11 @@ require(['jquery', 'ellipsed'], function($, ellipsed) {
       }
 
       if (
-        !$(e.target).closest('#portal-globalnav-wrapper').length &&
+        !$(e.target).closest('#portal-mainnavigation').length &&
         !$(e.target).closest('button.plone-navbar-toggle').length &&
         $(window).width() <= 991
       ) {
-        $('#portal-globalnav-wrapper').removeClass('open');
+        $('#portal-mainnavigation').removeClass('open');
       }
     });
 

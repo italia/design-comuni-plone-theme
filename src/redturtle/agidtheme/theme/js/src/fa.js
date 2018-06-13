@@ -22,6 +22,7 @@ import faFolderOpen from '@fortawesome/fontawesome-free-solid/faFolderOpen';
 import faFilter from '@fortawesome/fontawesome-free-solid/faFilter';
 import faStar from '@fortawesome/fontawesome-free-solid/faStar';
 import faBars from '@fortawesome/fontawesome-free-solid/faBars';
+import faTimes from '@fortawesome/fontawesome-free-solid/faTimes';
 import faPrint from '@fortawesome/fontawesome-free-solid/faPrint';
 
 import faSortAlphaDown from '@fortawesome/fontawesome-free-solid/faSortAlphaDown';
@@ -60,6 +61,7 @@ export const init = () => {
     faStar,
     faSortAlphaDown,
     faBars,
+    faTimes,
     faPrint,
     faListUl
   );
