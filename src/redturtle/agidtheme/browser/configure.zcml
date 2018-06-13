@@ -200,14 +200,13 @@
   />
 
   <browser:viewlet
-    name="plone.header"
+    name="redturtle.header_banner"
     manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-    class="plone.app.multilingual.browser.selector.LanguageSelectorViewlet"
+    class=".viewlets.HeaderBannerViewlet"
+    template="templates/header_banner.pt"
     layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
-    template="templates/portal_header.pt"
     permission="zope2.View"
   />
-
 
   <browser:viewlet
     name="redturtle.skip_links"
@@ -219,10 +218,11 @@
 
   <!-- The search box -->
   <browser:viewlet
-      name="plone.searchbox"
-      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-      class=".viewlets.AgidSearchBoxViewlet"
-      permission="zope2.View"
-      layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
-      />
+    name="plone.searchbox"
+    manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+    class=".viewlets.AgidSearchBoxViewlet"
+    permission="zope2.View"
+    layer="redturtle.agidtheme.interfaces.IRedturtleAgidthemeLayer"
+    />
+
 </configure>

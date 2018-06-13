@@ -202,4 +202,13 @@
     handler=".upgrades.import_records_registry"
   />
 
+  <genericsetup:upgradeStep
+    source="2200"
+    destination="2300"
+    profile="redturtle.agidtheme:default"
+    title="Fix viewlets order"
+    description="Moved header banner viewlet to the top"
+    handler=".upgrades.import_viewlets_registry"
+  />
+
 </configure>
