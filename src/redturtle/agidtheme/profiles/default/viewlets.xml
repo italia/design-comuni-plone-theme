@@ -17,6 +17,7 @@
   </order>
   <order manager="plone.portaltop" skinname="Plone Default">
     <viewlet name="redturtle.skip_links" before="*" />
+    <viewlet name="redturtle.header_banner" before="*" />
     <viewlet name="plone.header" />
   </order>
   <hidden manager="plone.belowcontentbody" skinname="Plone Default">

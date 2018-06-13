@@ -6,12 +6,12 @@ from plone.api.exc import InvalidParameterError
 from plone.app.layout.viewlets import common as base
 from plone.app.layout.viewlets.common import SearchBoxViewlet
 from plone.app.layout.viewlets.content import DocumentBylineViewlet
+from plone.app.multilingual.browser.selector import LanguageSelectorViewlet
 from Products.CMFPlone.utils import getSiteLogo
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from urllib2 import quote
 
 import logging
-
 
 logger = logging.getLogger(__name__)
 
@@ -45,7 +45,6 @@ class CustomDocumentBylineViewlet(DocumentBylineViewlet):
 
 
 class SocialViewlet(base.ViewletBase):
-
     def __init__(self, context, request, view, manager):
         super(SocialViewlet, self).__init__(context, request, view, manager)
 
@@ -53,16 +52,14 @@ class SocialViewlet(base.ViewletBase):
         """
         """
         allowed_types = api.portal.get_registry_record(
-            'available_types',
-            interface=IRedturtleAgidthemeSettings)
+            'available_types', interface=IRedturtleAgidthemeSettings)
         if self.context.portal_type in allowed_types:
             return self.index()
         return ''
 
     def get_socials(self):
         socials = api.portal.get_registry_record(
-            'available_socials',
-            interface=IRedturtleAgidthemeSettings)
+            'available_socials', interface=IRedturtleAgidthemeSettings)
         return socials
 
     def get_css_class(self, social_type):
@@ -90,8 +87,7 @@ class LogoViewlet(base.ViewletBase):
     def update(self):
 
         super(LogoViewlet, self).update()
-        self.site_title = api.portal.get_registry_record(
-            'plone.site_title',)
+        self.site_title = api.portal.get_registry_record('plone.site_title', )
 
         # TODO: should this be changed to settings.site_title?
         self.navigation_root_title = self.site_title
@@ -106,8 +102,7 @@ class HeaderSocialViewlet(base.ViewletBase):
     def get_links_list(self):
         try:
             return api.portal.get_registry_record(
-                'follow_us_links',
-                interface=IRedturtleAgidthemeSettings)
+                'follow_us_links', interface=IRedturtleAgidthemeSettings)
         except InvalidParameterError:
             return []
 
@@ -135,3 +130,27 @@ class SkipLinksViewlet(base.ViewletBase):
 class AgidSearchBoxViewlet(SearchBoxViewlet):
     """ Search viewlet """
     index = ViewPageTemplateFile('templates/searchbox.pt')
+
+
+class HeaderBannerViewlet(LanguageSelectorViewlet):
+    """ Header banner viewlet """
+
+    def update(self):
+        super(HeaderBannerViewlet, self).update()
+
+        self.header_second_link_url = api.portal.get_registry_record(
+            'header_second_link_url', interface=IRedturtleAgidthemeSettings)
+
+        self.header_link_label = api.portal.get_registry_record(
+            'header_link_label', interface=IRedturtleAgidthemeSettings)
+
+        self.header_link_url = api.portal.get_registry_record(
+            'header_link_url', interface=IRedturtleAgidthemeSettings)
+
+        self.header_second_link_label = api.portal.get_registry_record(
+            'header_second_link_label', interface=IRedturtleAgidthemeSettings)
+
+    def showLanguageSelector(self):
+        return (self.header_link_label and self.header_link_url) or (
+            self.header_second_link_url
+            and self.header_second_link_url) or self.available()

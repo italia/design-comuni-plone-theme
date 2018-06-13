@@ -1,19 +1,9 @@
-<?python
-    from plone import api
-    from redturtle.agidtheme.controlpanel.interfaces import IRedturtleAgidthemeSettings
-
-    header_link_label = api.portal.get_registry_record('header_link_label', interface=IRedturtleAgidthemeSettings)
-    header_link_url = api.portal.get_registry_record('header_link_url', interface=IRedturtleAgidthemeSettings)
-    header_second_link_label = api.portal.get_registry_record('header_second_link_label', interface=IRedturtleAgidthemeSettings)
-    header_second_link_url = api.portal.get_registry_record('header_second_link_url', interface=IRedturtleAgidthemeSettings)
-?>
-
 <div id="header-banner"
-     tal:condition="python:(header_link_label and header_link_url) or (header_second_link_label and header_second_link_url) or view.available()"
+     tal:condition="view/showLanguageSelector"
      tal:define="className python: view.available() and 'with-languages' or ''">
     <div class="header-banner-inner" tal:attributes="class string:header-banner-inner ${className}">
-        <div class="header-banner-owner" tal:condition="python:header_link_label and header_link_url">
-            <a href="${header_link_url}" target="_blank">${header_link_label}</a>
+        <div class="header-banner-owner" tal:condition="python: view.header_link_label and view.header_link_url">
+          <a href="${view/header_link_url}" target="_blank">${view/header_link_label}</a>
         </div>
         <div class="header-banner-language"
              tal:condition="view/available"
@@ -44,13 +34,8 @@
           </div>
         </div>
         <div class="header-banner-second-link"
-             tal:condition="python:header_second_link_label and header_second_link_url">
-            <a href="${header_second_link_url}" target="_blank">${header_second_link_label}</a>
+             tal:condition="python: view.header_second_link_label and view.header_second_link_url">
+             <a href="${view/header_second_link_url}" target="_blank">${view/header_second_link_label}</a>
         </div>
     </div>
-</div>
-
-<div id="portal-header"
-     tal:attributes="class python: view.available() and 'with-languages' or ''">
-    <div tal:replace="structure provider:plone.portalheader" />
 </div>
