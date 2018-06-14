@@ -7,6 +7,8 @@ Changelog
 
 - Styles for empty tile collections [nzambello]
 - Fix flexbox styles for header [nzambello]
+- Added multilingual viewlet [nzambello]
+- Separated header in two viewlets: portal_header (default) and header_banner [nzambello]
 
 
 2.1.4 (2018-05-31)
