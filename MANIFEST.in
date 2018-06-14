@@ -8,6 +8,7 @@ include *.js
 include *.json
 include *.lock
 include .eslintrc
+include .stylelintignore
 prune node_modules
 prune src/redturtle/agidtheme/theme/node_modules
 include src/redturtle/agidtheme/browser/static/ellipsed
