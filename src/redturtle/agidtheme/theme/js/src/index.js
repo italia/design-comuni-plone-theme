@@ -200,6 +200,10 @@ require(['jquery', 'ellipsed'], function($, ellipsed) {
       $('#portal-mainnavigation').toggleClass('open');
     });
 
+    $('#globalnav-close').click(function() {
+      $('#portal-mainnavigation').removeClass('open');
+    });
+
     /*
      * gestione click fuori per chiudere menu, ricerca e condividi
      */
@@ -219,7 +223,7 @@ require(['jquery', 'ellipsed'], function($, ellipsed) {
       }
 
       if (
-        !$(e.target).closest('#portal-mainnavigation').length &&
+        !$(e.target).closest('#portal-globalnav-wrapper').length &&
         !$(e.target).closest('button.plone-navbar-toggle').length &&
         $(window).width() <= 991
       ) {
