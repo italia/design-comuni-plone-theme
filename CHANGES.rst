@@ -5,7 +5,8 @@ Changelog
 2.2.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix missing title formatting for linkedin social share links
+  [cekk]
 
 
 2.2.0 (2018-06-14)

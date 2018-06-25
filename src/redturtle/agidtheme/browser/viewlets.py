@@ -71,7 +71,7 @@ class SocialViewlet(base.ViewletBase):
         title = quote(self.context.title.encode('utf-8'))
         item_url = self.context.absolute_url()
         if social_type == 'linkedin':
-            return share_url.format(item_url, self.context.title)
+            return share_url.format(item_url, title)
         if social_type == 'twitter':
             return share_url.format(item_url, title)
         if social_type == 'pinterest':
