@@ -16,6 +16,7 @@ Changelog
   [eikichi18]
 - Fix missing title formatting for linkedin social share links
   [cekk]
+- Changed menù behavior for mobile devices. It's now positioned off canvas on the right. [pnicolli]
 
 
 2.2.0 (2018-06-14)
