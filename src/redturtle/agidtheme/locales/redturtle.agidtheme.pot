@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-06-26 09:21+0000\n"
+"POT-Creation-Date: 2018-06-26 10:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,6 +21,14 @@ msgstr ""
 msgid "Configurazione tema agid"
 msgstr ""
 
+#: ./configure.zcml:44
+msgid "Disinstalla il tema basato sulle linee guida italiane per le PA."
+msgstr ""
+
+#: ./configure.zcml:44
+msgid "Disinstalla: Tema: Italia design system"
+msgstr ""
+
 #: ./configure.zcml:60
 msgid "Divided js and css bundles and resources."
 msgstr ""
@@ -30,7 +38,7 @@ msgid "Gallery layout"
 msgstr ""
 
 #: ./configure.zcml:35
-msgid "Installs the Plone theme package redturtle.agidtheme."
+msgid "Installa il tema basato sulle linee guida italiane per le PA."
 msgstr ""
 
 #: ./behaviors/behavior.py:25
@@ -61,10 +69,6 @@ msgstr ""
 msgid "News with big photo"
 msgstr ""
 
-#: ./configure.zcml:35
-msgid "RedTurtle Agid Theme"
-msgstr ""
-
 #: ./configure.zcml:52
 msgid "RedTurtle Agid Theme: Remove ellipsed"
 msgstr ""
@@ -85,16 +89,12 @@ msgstr ""
 msgid "Sights layout"
 msgstr ""
 
+#: ./configure.zcml:35
+msgid "Tema: Italia design system"
+msgstr ""
+
 #: ./browser/configure.zcml:38
 msgid "Tiles page view"
-msgstr ""
-
-#: ./configure.zcml:44
-msgid "Uninstall: RedTurtle Agid Theme"
-msgstr ""
-
-#: ./configure.zcml:44
-msgid "Uninstalls the Plone theme package redturtle.agidtheme."
 msgstr ""
 
 #: ./browser/tile_collection_renderers.py:137
@@ -225,4 +225,9 @@ msgstr ""
 #: ./browser/templates/news_highlight_renderer.pt:17
 #: ./browser/templates/sights_renderer.pt:19
 msgid "tiles_collection_noresults"
+msgstr ""
+
+#. Default: "Toggle share"
+#: ./browser/templates/social_viewlet.pt:35
+msgid "toggle_share"
 msgstr ""
