@@ -8,7 +8,12 @@
     <div class="share-slider">
         <div class="share-title">
             <a href="#" class="share-toggle">
-                <span class="share-text">Condividi</span>
+                <span
+                  class="share-text"
+                  i18n:domain="redturtle.agidtheme"
+                  i18n:translate="share_button">
+                  Share
+                </span>
             </a>
         </div>
         <div class="share-options">

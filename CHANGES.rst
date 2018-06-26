@@ -5,6 +5,8 @@ Changelog
 2.2.1 (unreleased)
 ------------------
 
+- Updated traduction for share button on social_viewlet
+  [eikichi18]
 - Fix missing title formatting for linkedin social share links
   [cekk]
 
