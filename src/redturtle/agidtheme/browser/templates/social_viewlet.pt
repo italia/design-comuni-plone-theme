@@ -32,7 +32,11 @@
     <div class="share-button">
         <a href="#" class="share-toggle">
             <span class="share-icon"></span>
-            <span class="sr-only">Attiva condividi</span>
+            <span class="sr-only"
+              i18n:domain="redturtle.agidtheme"
+              i18n:translate="toggle_share">
+              Toggle share
+            </span>
         </a>
     </div>
 </div>
