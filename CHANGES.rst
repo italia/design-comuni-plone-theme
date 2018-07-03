@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.2.1 (unreleased)
+2.2.1 (2018-07-03)
 ------------------
 
 - Improved translation for share button on social_viewlet
