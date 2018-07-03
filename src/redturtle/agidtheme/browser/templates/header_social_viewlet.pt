@@ -1,7 +1,8 @@
 <div id="header-social"
      tal:define="links view/get_social_links"
-     tal:condition="links">
-  <p>Seguici su</p>
+     tal:condition="links"
+     i18n:domain="redturtle.agidtheme">
+  <p i18n:translate="follow_us">Follow us on</p>
   <ul>
     <li tal:repeat="link links">
       <a href="${link/url}" title="${link/id} - apri in una nuova scheda" class="social" target="_blank">

@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-06-26 10:08+0000\n"
+"POT-Creation-Date: 2018-07-03 15:16+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -118,6 +118,11 @@ msgstr ""
 #. Default: "List of social networks enabled for sharing."
 #: ./controlpanel/interfaces.py:26
 msgid "description_available_socials"
+msgstr ""
+
+#. Default: "Follow us on"
+#: ./browser/templates/header_social_viewlet.pt:5
+msgid "follow_us"
 msgstr ""
 
 #. Default: "List of links to external social networks. These links are showed in the header.\nIf there isn't a related icon in the theme, the link will not appear properly.\nAvailable icons are: facebook, twitter, youtube, medium, linkedin, storify, rss, newsletter.\nInsert a list of values (one per row) in the following form: social_id|url where social_id is one of the social with available icons."
