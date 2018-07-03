@@ -5,7 +5,8 @@ Changelog
 2.2.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Improved translation for header social viewlet
+  [eikichi18]
 
 
 2.2.1 (2018-07-03)
