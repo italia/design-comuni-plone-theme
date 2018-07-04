@@ -227,7 +227,12 @@ require(['jquery', 'ellipsed'], function($, ellipsed) {
         !$(e.target).closest('button.plone-navbar-toggle').length &&
         $(window).width() <= 991
       ) {
-        $('#portal-mainnavigation').removeClass('open');
+        if (
+          $('#portal-mainnavigation #portal-globalnav').length &&
+          $('#portal-mainnavigation #portal-globalnav').hasClass('plone-nav')
+        ) {
+          $('#portal-mainnavigation').removeClass('open');
+        }
       }
     });
 
