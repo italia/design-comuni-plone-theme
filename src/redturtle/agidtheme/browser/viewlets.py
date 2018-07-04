@@ -27,6 +27,7 @@ socialCSSClassDict = {
     'rss': 'fas fa-rss',
     'google': 'fab fa-google-plus-g',
     'pinterest': 'fab fa-pinterest',
+    'flickr': 'fab fa-flickr',
     'pocket': 'fab fa-get-pocket',
 }
 

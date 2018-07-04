@@ -8,6 +8,7 @@ import faLinkedinIn from '@fortawesome/fontawesome-free-brands/faLinkedinIn';
 import faMediumM from '@fortawesome/fontawesome-free-brands/faMediumM';
 import faGooglePlusG from '@fortawesome/fontawesome-free-brands/faGooglePlusG';
 import faPinterest from '@fortawesome/fontawesome-free-brands/faPinterest';
+import faFlickr from '@fortawesome/fontawesome-free-brands/faFlickr';
 import faGetPocket from '@fortawesome/fontawesome-free-brands/faGetPocket';
 import faRss from '@fortawesome/fontawesome-free-solid/faRss';
 import faNewspaper from '@fortawesome/fontawesome-free-regular/faNewspaper';
@@ -42,6 +43,7 @@ export const init = () => {
     faMediumM,
     faGooglePlusG,
     faPinterest,
+    faFlickr,
     faGetPocket,
     faRss,
     faNewspaper,
