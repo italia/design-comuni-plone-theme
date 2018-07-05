@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from ..controlpanel.interfaces import IRedturtleAgidthemeSettings
+from ..controlpanel.interfaces import IDesignPloneThemeSettings
 from ..vocabularies import SHARES
 from plone import api
 from plone.api.exc import InvalidParameterError
@@ -53,14 +53,14 @@ class SocialViewlet(base.ViewletBase):
         """
         """
         allowed_types = api.portal.get_registry_record(
-            'available_types', interface=IRedturtleAgidthemeSettings)
+            'available_types', interface=IDesignPloneThemeSettings)
         if self.context.portal_type in allowed_types:
             return self.index()
         return ''
 
     def get_socials(self):
         socials = api.portal.get_registry_record(
-            'available_socials', interface=IRedturtleAgidthemeSettings)
+            'available_socials', interface=IDesignPloneThemeSettings)
         return socials
 
     def get_css_class(self, social_type):
@@ -103,7 +103,7 @@ class HeaderSocialViewlet(base.ViewletBase):
     def get_links_list(self):
         try:
             return api.portal.get_registry_record(
-                'follow_us_links', interface=IRedturtleAgidthemeSettings)
+                'follow_us_links', interface=IDesignPloneThemeSettings)
         except InvalidParameterError:
             return []
 
@@ -140,16 +140,16 @@ class HeaderBannerViewlet(LanguageSelectorViewlet):
         super(HeaderBannerViewlet, self).update()
 
         self.header_second_link_url = api.portal.get_registry_record(
-            'header_second_link_url', interface=IRedturtleAgidthemeSettings)
+            'header_second_link_url', interface=IDesignPloneThemeSettings)
 
         self.header_link_label = api.portal.get_registry_record(
-            'header_link_label', interface=IRedturtleAgidthemeSettings)
+            'header_link_label', interface=IDesignPloneThemeSettings)
 
         self.header_link_url = api.portal.get_registry_record(
-            'header_link_url', interface=IRedturtleAgidthemeSettings)
+            'header_link_url', interface=IDesignPloneThemeSettings)
 
         self.header_second_link_label = api.portal.get_registry_record(
-            'header_second_link_label', interface=IRedturtleAgidthemeSettings)
+            'header_second_link_label', interface=IDesignPloneThemeSettings)
 
     def showLanguageSelector(self):
         return (self.header_link_label and self.header_link_url) or (

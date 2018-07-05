@@ -4,5 +4,5 @@
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
 
-class IRedturtleAgidthemeLayer(IDefaultBrowserLayer):
+class IDesignPloneThemeLayer(IDefaultBrowserLayer):
     """Marker interface that defines a browser layer."""
