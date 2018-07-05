@@ -1,0 +1,60 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="design.plone.theme">
+  <body>
+    <metal:macro define-macro="collection-tile-macro"
+                 tal:define="helper_view nocall:context/@@collection_tile_helpers;
+                             renderComments python: 'with-comments' in (view.data.get('css_class') or '');">
+      <div class="news-highlight"
+           tal:define="news python: results and results[0] or None;">
+
+        <div class="tile-collection-container">
+          <div class="tileBody">
+            <p tal:condition="not:news"
+              class="noResults"
+              i18n:translate="tiles_collection_noresults">
+            No results found
+            </p>
+            <!-- if obj is None, it will break calling getObject() on it, but if the collection is empty this won't be rendered by collective.tiles.collection -->
+            <div class="tile-content"
+                tal:define="obj news/getObject;
+                            image_tag python:helper_view.get_image_tag(obj, 'newshighlight', 'down');
+                            title news/Title;
+                            description news/Description">
+              <div class="news-infos">
+                <div class="news-detail">
+                  <div tal:define="title view/data/title|nothing;"
+                      class="tileTitle"
+                      tal:condition="title">
+                      <h3>${title}</h3>
+                  </div>
+                  <div class="news-date"
+                      tal:define="date python:helper_view.get_formatted_date(news)"
+                      tal:condition="python: view.data.get('show_dates', False) and date"
+                      i18n:domain="plonelocales">
+                    ${date/day} <tal:month i18n:translate="">${date/month}</tal:month> ${date/year}
+                  </div>
+                </div>
+                <div class="news-title"><a href="${news/getURL}" title="${title}">${title}</a></div>
+                <div class="news-description" tal:condition="description"><span>${description}</span></div>
+                <tal:comments tal:condition="renderComments">
+                  <div class="news-comments"
+                    tal:define="comments python:helper_view.getCommentsCount(obj)"
+                    tal:condition="comments/enabled|nothing">
+                    <i class="far fa-comment"></i>
+                    <span class="comment-count">${comments/comments}</span>
+                  </div>
+                </tal:comments>
+              </div>
+              <figure class="item-image" tal:condition="image_tag" tal:content="structure image_tag" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </metal:macro>
+  </body>
+</html>

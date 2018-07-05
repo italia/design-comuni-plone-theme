@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Installer for the redturtle.agidtheme package."""
+"""Installer for the design.plone.theme package."""
 
 from setuptools import find_packages
 from setuptools import setup
@@ -13,7 +13,7 @@ long_description = '\n\n'.join([
 
 
 setup(
-    name='redturtle.agidtheme',
+    name='design.plone.theme',
     version='2.2.3.dev0',
     description="Theme for Italia Design System",
     long_description=long_description,
@@ -32,10 +32,9 @@ setup(
     keywords='Plone Italia Design System Theme',
     author='RedTurtle',
     author_email='sviluppoplone@redturtle.it',
-    url='https://github.com/PloneGov-IT/redturtle.agidtheme.git',
+    url='https://github.com/italia/design.plone.theme.git',
     license='GPL version 3',
     packages=find_packages('src', exclude=['ez_setup']),
-    namespace_packages=['redturtle'],
     package_dir={'': 'src'},
     include_package_data=True,
     zip_safe=False,

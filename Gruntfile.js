@@ -19,7 +19,7 @@ module.exports = function(grunt) {
           sourceMap: true,
           outputSourceFiles: true,
           sourceMapURL:
-            '++theme++redturtle.agidtheme/barceloneta/barceloneta-backend.css.map',
+            '++theme++design.plone.theme/barceloneta/barceloneta-backend.css.map',
           sourceMapFilename: 'barceloneta/barceloneta-backend.css.map',
           modifyVars: {
             isPlone: 'true',
@@ -39,11 +39,10 @@ module.exports = function(grunt) {
       dist: {
         files: {
           // 'destination': 'source'
-          'css/redturtleagidtheme.css': 'sass/redturtleagidtheme.scss',
-          'css/redturtleagidtheme.print.css':
-            'sass/redturtleagidtheme.print.scss',
-          'css/redturtleagidtheme.backend.css':
-            'sass/redturtleagidtheme.backend.scss',
+          'css/designplonetheme.css': 'sass/designplonetheme.scss',
+          'css/designplonetheme.print.css': 'sass/designplonetheme.print.scss',
+          'css/designplonetheme.backend.css':
+            'sass/designplonetheme.backend.scss',
         },
       },
       bs: {
@@ -75,10 +74,10 @@ module.exports = function(grunt) {
       all: {
         src: [
           'css/bootstrap.min.css',
-          'css/redturtleagidtheme.css',
-          'css/redturtleagidtheme.print.css',
+          'css/designplonetheme.css',
+          'css/designplonetheme.print.css',
         ],
-        dest: 'css/redturtle-agidtheme-bundle.css',
+        dest: 'css/design-plone-theme-bundle.css',
       },
     },
     webpack: {
@@ -91,7 +90,7 @@ module.exports = function(grunt) {
           filename: 'fa.js',
           path: require('path').resolve(
             __dirname,
-            'src/redturtle/agidtheme/theme/js/dist'
+            'src/design/plone/theme/theme/js/dist'
           ),
           library: 'fa_rt',
           libraryTarget: 'amd',
@@ -124,7 +123,7 @@ module.exports = function(grunt) {
           sourceMapIncludeSources: false,
         },
         files: {
-          'js/dist/redturtle-agidtheme-bundle-compiled.min.js': [
+          'js/dist/design-plone-theme-bundle-compiled.min.js': [
             'js/dist/bundle-compiled.js',
           ],
         },
@@ -135,14 +134,14 @@ module.exports = function(grunt) {
           sourceMapIncludeSources: false,
         },
         files: {
-          'js/dist/redturtle-agidtheme-icons-bundle.min.js': [
+          'js/dist/design-plone-theme-icons-bundle.min.js': [
             'js/dist/rt-icons.js',
           ],
         },
       },
     },
     requirejs: {
-      'redturtle-agidtheme': {
+      'design-plone-theme': {
         options: {
           baseUrl: './',
           generateSourceMaps: true,
@@ -158,7 +157,7 @@ module.exports = function(grunt) {
           optimize: 'none',
         },
       },
-      'redturtle-agidtheme-icons': {
+      'design-plone-theme-icons': {
         options: {
           baseUrl: './',
           generateSourceMaps: true,
@@ -223,7 +222,7 @@ module.exports = function(grunt) {
   });
 
   // CWD to theme folder
-  grunt.file.setBase('./src/redturtle/agidtheme/theme');
+  grunt.file.setBase('./src/design/plone/theme/theme');
 
   grunt.registerTask('compile', [
     'less',

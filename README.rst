@@ -3,7 +3,7 @@
    This text does not appear on pypi or github. It is a comment.
 
 ==============================================================================
-redturtle.agidtheme
+design.plone.theme
 ==============================================================================
 
 Il primo tema Plone conforme a `Italia design system`__.
@@ -58,14 +58,14 @@ Questo prodotto è stato tradotto nelle seguenti lingue:
 Installazione
 -------------
 
-Installa redturtle.agidtheme aggiungendolo al tuo buildout::
+Installa design.plone.theme aggiungendolo al tuo buildout::
 
     [buildout]
 
     ...
 
     eggs =
-        redturtle.agidtheme
+        design.plone.theme
 
 
 e successivamente eseguendo ``bin/buildout``.

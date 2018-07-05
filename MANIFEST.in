@@ -1,4 +1,4 @@
-graft src/redturtle
+graft src/design
 graft docs
 include LICENSE
 include *.rst
@@ -10,5 +10,5 @@ include *.lock
 include .eslintrc
 include .stylelintignore
 prune node_modules
-prune src/redturtle/agidtheme/theme/node_modules
-include src/redturtle/agidtheme/browser/static/ellipsed
+prune src/design/plone/theme/theme/node_modules
+include src/design/plone/theme/browser/static/ellipsed

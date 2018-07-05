@@ -1,5 +1,5 @@
 .DS_Store
-src/redturtle/agidtheme/browser/static/ellipsed
+src/design/plone/theme/browser/static/ellipsed
 .coverage
 .history/
 *.egg-info
@@ -38,4 +38,4 @@ report.html
 !.gitignore
 !.gitkeep
 !.travis.yml
-!src/redturtle
+!src/design

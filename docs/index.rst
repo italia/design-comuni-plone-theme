@@ -1,5 +1,5 @@
-====================
-redturtle.agidtheme
-====================
+==================
+design.plone.theme
+==================
 
 User documentation

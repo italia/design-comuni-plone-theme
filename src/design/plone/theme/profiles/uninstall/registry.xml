@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<registry>
+
+  <!-- RESOURCE -->
+  <records prefix="plone.resources/design-plone-theme-css"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'
+           remove="True"
+           />
+  <records prefix="plone.resources/design-plone-theme-js"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'
+           remove="True"
+           />
+
+  <!-- BUNDLE -->
+  <records prefix="plone.bundles/design-plone-theme-css-bundle"
+           interface='Products.CMFPlone.interfaces.IBundleRegistry'
+           remove="True"
+           />
+  <records prefix="plone.bundles/design-plone-theme-js-bundle"
+           interface='Products.CMFPlone.interfaces.IBundleRegistry'
+           remove="True"
+           />
+
+  <record name="plone.allowed_sizes" interface="Products.CMFPlone.interfaces.controlpanel.IImagingSchema" field="allowed_sizes">
+    <value purge="false">
+      <element remove="true">newshome 300:200</element>
+      <element remove="true">newshome 450:300</element>
+      <element remove="true">newshighlight 540:360</element>
+      <element remove="true">newsbig 1800:600</element>
+    </value>
+  </record>
+
+</registry>
+

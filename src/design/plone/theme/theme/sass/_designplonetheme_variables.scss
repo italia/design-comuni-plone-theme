@@ -1,0 +1,135 @@
+// Path Img
+$img-path: '++theme++design.plone.theme/images/';
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-darker: #2b2b2b;
+$gray-agid: #303030;
+$gray-dark: #313131;
+$gray: #515151;
+$gray-light: #777;
+$gray-lighter: #ccc;
+$gray-bg: #eee;
+$gray-row: #e0e0e0;
+$gray-desc-border: #c1c1c1;
+$gray-nav: #4a4a4a;
+$gray-border: #4a4a4a;
+$gray-documentByLine: #666;
+
+$brand-primary: #cb1d15;
+$brand-success: #5cb85c; // TODO: EDIT THIS
+$brand-info: #5bc0de; // TODO: EDIT THIS
+$brand-warning: #f0ad4e; // TODO: EDIT THIS
+$brand-danger: #d9534f; // TODO: EDIT THIS
+$tr: transparent;
+$yellow: #ecd838;
+
+$footer-bg: #30373d;
+$footer-link: #65dde0;
+$footer-link-hover: darken($footer-link, 25%);
+$footer-hr: #979797;
+
+$tile-fascia-scura: #333333;
+$social-icon-bg: #cb1d15;
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg: #fff;
+//** Global text color on `<body>`.
+$text-color: #1c2024;
+$text-color-light: #5a6772;
+
+//** Global textual link color.
+$link-color: $brand-primary;
+//** Link hover color set via `darken()` function.
+$link-hover-color: darken($brand-primary, 10%);
+//** Link hover decoration.
+$link-hover-decoration: none;
+
+//** COLORE SOTTOLINEATURA ALL'HOVER DEI LINK
+$link-hover-border-color: $gray-lighter;
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+// pesi dei font
+$light: 300;
+$regular: 400;
+$semibold: 600;
+$bold: 700;
+
+$font-family-sans-serif: 'Titillium Web', 'Helvetica Neue', Helvetica, Arial,
+    sans-serif;
+$font-family-serif: Georgia, 'Times New Roman', Times, serif;
+//$font-family-condensed:  "Open Sans Condensed";
+
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
+$font-family-base: $font-family-sans-serif;
+
+$font-size-base: 17px;
+$font-size-large: ceil(($font-size-base * 1.25)); // ~18px
+$font-size-small: ceil(($font-size-base * 0.85)); // ~12px
+
+$font-size-h1: floor(($font-size-base * 2));
+$font-size-h2: floor(($font-size-base * 1.6));
+$font-size-h3: ceil(($font-size-base * 1.3));
+$font-size-h4: ceil(($font-size-base * 1.1));
+$font-size-h5: $font-size-base !default;
+$font-size-h6: ceil(($font-size-base * 0.95));
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base: 1.5;
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed: floor(($font-size-base * $line-height-base)); // ~20px
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family: inherit;
+$headings-font-weight: 600;
+$headings-line-height: 1.3;
+$headings-color: inherit;
+
+// responsive
+// Extra small screen / phone
+$screen-xs: 480px;
+
+// Small screen / tablet
+$screen-sm: 768px;
+
+// Medium screen / desktop
+$screen-md: 992px;
+
+// Large screen / wide desktop
+$screen-lg: 1300px;
+
+// NAV COLLAPSE
+//$screen-nav-collapse: 1045px;
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+$grid-gutter-width: 30px;
+
+// Small screen / tablet
+$container-tablet: (auto);
+//** For `$screen-sm-min` and up.
+$container-sm: $container-tablet;
+
+// Medium screen / desktop
+$container-desktop: (auto);
+//** For `$screen-md-min` and up.
+$container-md: $container-desktop;
+
+// Large screen / wide desktop
+$container-large-desktop: (1270px + $grid-gutter-width);
+//** For `$screen-lg-min` and up.
+$container-lg: $container-large-desktop - $grid-gutter-width;
+
+$animation-speed: 0.3s;
+$mobile-menu-width: $screen-md - 1;
