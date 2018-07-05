@@ -48,14 +48,15 @@
     "webpack": "^3.11.0"
   },
   "scripts": {
+    "build": "grunt compile && yarn prettier-all",
+    "develop": "grunt compile && grunt",
+    "postinstall": "cd src/design/plone/theme/theme/ && npm install",
+    "precommit": "lint-staged",
     "prettier-all": "yarn prettier-sass && yarn prettier-js && yarn prettier-json",
-    "prettier-sass": "prettier --write 'src/design/plone/theme/theme/sass/**/*.scss'",
     "prettier-js": "prettier --write 'src/design/plone/theme/theme/js/src/**/*.js'",
     "prettier-json": "prettier --write 'src/design/plone/theme/theme/**/*.json'",
-    "precommit": "lint-staged",
-    "develop": "grunt compile && grunt",
-    "test": "stylelint 'src/design/plone/theme/theme/**/*.scss'",
-    "build": "grunt compile && yarn prettier-all"
+    "prettier-sass": "prettier --write 'src/design/plone/theme/theme/sass/**/*.scss'",
+    "test": "stylelint 'src/design/plone/theme/theme/**/*.scss'"
   },
   "lint-staged": {
     "*.{js,json,scss}": [

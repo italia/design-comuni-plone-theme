@@ -78,9 +78,9 @@ Sviluppo
 
 Per la compilazione del codice Sass e la build del bundle JavaScript, sono presenti alcuni script nel ``package.json``:
 
-- ``yarn develop``: esegue la compilazione con grunt e lo lascia avviato in modalità watch
-- ``yarn build``: compila con grunt e esegue prettier
-- ``yarn test``: esegue il linting con stylelint.
+- ``npm run develop``: esegue la compilazione con grunt e lo lascia avviato in modalità watch
+- ``npm run build``: compila con grunt e esegue prettier
+- ``npm run test``: esegue il linting con stylelint.
 
 
 Compatibilità

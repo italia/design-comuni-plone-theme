@@ -3,10 +3,9 @@ graft docs
 include LICENSE
 include *.rst
 global-exclude *.pyc
-exclude package-lock.json
 include *.js
 include *.json
-include *.lock
+exclude yarn.lock
 include .eslintrc
 include .stylelintignore
 prune node_modules

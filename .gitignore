@@ -7,8 +7,8 @@ src/design/plone/theme/browser/static/ellipsed
 *.mo
 *.py?
 *.swp
-# Only use yarn
-package-lock.json
+# Only use npm
+yarn.json
 # dirs
 bin/
 buildout-cache/
