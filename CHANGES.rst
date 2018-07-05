@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-2.2.2 (unreleased)
+2.2.2 (2018-07-05)
 ------------------
 
 - Improved translation for header social viewlet
