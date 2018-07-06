@@ -65,42 +65,6 @@ def import_records_registry(context):
     import_registry('plone.app.registry')
 
 
-def remove_ellipsed(context):
-    'Import the removeellipsed profile'
-    setup_tool = api.portal.get_tool('portal_setup')
-    setup_tool.runImportStepFromProfile(
-        'profile-design.plone.theme:removeellipsed',
-        'plone.app.registry',
-        run_dependencies=False
-    )
-
-
-def remove_old_bundle(context):
-    'Import the removeoldbundle profile'
-    setup_tool = api.portal.get_tool('portal_setup')
-    setup_tool.runImportStepFromProfile(
-        'profile-design.plone.theme:removeoldbundle',
-        'plone.app.registry',
-        run_dependencies=False
-    )
-
-
-def changenewshome(context):
-    'Import the changenewshome profile'
-
-    registry = getUtility(IRegistry)
-    settings = registry.forInterface(
-                    IImagingSchema,
-                    prefix='plone',
-                    check=False
-                )
-
-    allowed_sizes = [x for x in settings.allowed_sizes if 'newshome' not in x]
-    allowed_sizes.append(u'newshome 450:300')
-
-    settings.allowed_sizes = allowed_sizes
-
-
 def clean_follow_us_fields(context):
     remove_fields = [
         'header_facebook_link',

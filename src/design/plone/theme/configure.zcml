@@ -43,22 +43,6 @@
       post_handler=".setuphandlers.uninstall"
       />
 
-  <genericsetup:registerProfile
-      name="removeellipsed"
-      title="Design Plone Theme: Remove ellipsed"
-      directory="profiles/removeellipsed"
-      description="Removes the ellipsed js resource."
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      />
-
-  <genericsetup:registerProfile
-      name="removeoldbundle"
-      title="Design Plone Theme: Remove old bundle"
-      directory="profiles/removeoldbundle"
-      description="Divided js and css bundles and resources."
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      />
-
   <utility
       factory=".setuphandlers.HiddenProfiles"
       name="design.plone.theme-hiddenprofiles" />

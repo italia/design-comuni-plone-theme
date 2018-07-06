@@ -11,8 +11,6 @@ class HiddenProfiles(object):
     def getNonInstallableProfiles(self):
         """Hide uninstall profile from site-creation and quickinstaller"""
         return [
-            'design.plone.theme:removeellipsed',
-            'design.plone.theme:removeoldbundle',
             'design.plone.theme:uninstall',
         ]
 
