@@ -2,10 +2,14 @@ Changelog
 =========
 
 
-2.2.3 (unreleased)
+3.0.0 (unreleased)
 ------------------
 
-- Nothing changed yet.
+BREAKING CHANGES:
+
+- Changed package name from redturtle.agidtheme to design.plone.theme to adhere to the standards of github.com/italia [nzambello]
+    - Removed old upgrade steps
+    - Removed old profiles
 
 
 2.2.2 (2018-07-05)
