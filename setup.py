@@ -35,6 +35,7 @@ setup(
     url='https://github.com/italia/design.plone.theme.git',
     license='GPL version 3',
     packages=find_packages('src', exclude=['ez_setup']),
+    namespace_packages=['design', 'design.plone'],
     package_dir={'': 'src'},
     include_package_data=True,
     zip_safe=False,

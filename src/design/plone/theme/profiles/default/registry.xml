@@ -91,7 +91,7 @@
     </value>
   </record>
 
-  <records interface="design.plone.theme.controlpanel.interfaces.IdesignplonethemeSettings" />
+  <records interface="design.plone.theme.controlpanel.interfaces.IDesignPloneThemeSettings" />
 
   <!-- RESOURCES -->
   <records prefix="plone.resources/design-plone-theme-css"
