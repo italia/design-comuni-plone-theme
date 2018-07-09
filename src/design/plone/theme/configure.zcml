@@ -27,7 +27,7 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="Tema: Italia design system"
+      title="Tema: Italia Design Plone Theme"
       directory="profiles/default"
       description="Installa il tema basato sulle linee guida italiane per le PA."
       provides="Products.GenericSetup.interfaces.EXTENSION"
@@ -36,7 +36,7 @@
 
   <genericsetup:registerProfile
       name="uninstall"
-      title="Disinstalla: Tema: Italia design system"
+      title="Disinstalla: Tema: Italia Design Plone Theme"
       directory="profiles/uninstall"
       description="Disinstalla il tema basato sulle linee guida italiane per le PA."
       provides="Products.GenericSetup.interfaces.EXTENSION"

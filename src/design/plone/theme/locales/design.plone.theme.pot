@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-07-06 13:12+0000\n"
+"POT-Creation-Date: 2018-07-09 16:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,24 +21,12 @@ msgstr ""
 msgid "Configurazione tema agid"
 msgstr ""
 
-#: ../configure.zcml:52
-msgid "Design Plone Theme: Remove ellipsed"
-msgstr ""
-
-#: ../configure.zcml:60
-msgid "Design Plone Theme: Remove old bundle"
-msgstr ""
-
 #: ../configure.zcml:44
 msgid "Disinstalla il tema basato sulle linee guida italiane per le PA."
 msgstr ""
 
 #: ../configure.zcml:44
-msgid "Disinstalla: Tema: Italia design system"
-msgstr ""
-
-#: ../configure.zcml:60
-msgid "Divided js and css bundles and resources."
+msgid "Disinstalla: Tema: Italia Design Plone Theme"
 msgstr ""
 
 #: ../browser/tile_collection_renderers.py:142
@@ -77,10 +65,6 @@ msgstr ""
 msgid "News with big photo"
 msgstr ""
 
-#: ../configure.zcml:52
-msgid "Removes the ellipsed js resource."
-msgstr ""
-
 #: ../browser/tile_collection_renderers.py:127
 msgid "Servizi in area tematica"
 msgstr ""
@@ -90,10 +74,10 @@ msgid "Sights layout"
 msgstr ""
 
 #: ../configure.zcml:35
-msgid "Tema: Italia design system"
+msgid "Tema: Italia Design Plone Theme"
 msgstr ""
 
-#: ../browser/configure.zcml:38
+#: ../browser/configure.zcml:39
 msgid "Tiles page view"
 msgstr ""
 
