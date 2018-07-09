@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<object>
+  <order manager="plone.portalheader" skinname="Plone Default">
+    <viewlet name="plone.logo" />
+    <viewlet name="plone.app.i18n.locales.languageselector" />
+    <viewlet name="redturtle.header.social" />
+    <viewlet name="plone.searchbox" />
+    <viewlet name="plone.anontools" />
+  </order>
+  <order manager="plone.belowcontent" skinname="Plone Default">
+    <viewlet name="plone.abovecontenttitle.documentactions" />
+    <viewlet name="plone.belowcontenttitle.documentbyline" />
+    <viewlet name="plone.belowcontenttitle.keywords" />
+    <viewlet name="plone.belowcontentbody.relateditems" />
+    <viewlet name="plone.nextprevious" />
+    <viewlet name="plone.comments" />
+  </order>
+  <order manager="plone.portaltop" skinname="Plone Default">
+    <viewlet name="redturtle.skip_links" before="*" />
+    <viewlet name="redturtle.header_banner" before="*" />
+    <viewlet name="plone.header" />
+  </order>
+  <hidden manager="plone.belowcontentbody" skinname="Plone Default">
+    <viewlet name="plone.abovecontenttitle.documentactions" />
+    <viewlet name="plone.belowcontentbody.relateditems" />
+  </hidden>
+  <hidden manager="plone.belowcontenttitle" skinname="Plone Default">
+    <viewlet name="plone.belowcontenttitle.documentbyline" />
+  </hidden>
+  <hidden manager="plone.abovecontenttitle" skinname="Plone Default">
+    <viewlet name="contentleadimage" />
+  </hidden>
+</object>
