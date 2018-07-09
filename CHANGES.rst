@@ -10,6 +10,9 @@ BREAKING CHANGES:
 - Changed package name from redturtle.agidtheme to design.plone.theme to adhere to the standards of github.com/italia [nzambello]
     - Removed old upgrade steps
     - Removed old profiles
+
+Minor changes:
+
 - Fix uninstall step
   [cekk]
 
