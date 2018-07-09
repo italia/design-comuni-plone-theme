@@ -1,34 +1,88 @@
 <?xml version="1.0"?>
 <registry>
+  <record name="plone.templates" interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema" field="templates">
+    <field type="plone.registry.field.Text">
+      <default></default>
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="help_tinymce_templates">Enter the list of templates in json format                 http://www.tinymce.com/wiki.php/Plugin:template</description>
+      <required>False</required>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="label_tinymce_templates">Templates</title>
+    </field>
+    <value></value>
+  </record>
 
-  <!-- RESOURCE -->
-  <records prefix="plone.resources/redturtle-agidtheme-css"
-           interface='Products.CMFPlone.interfaces.IResourceRegistry'
-           remove="True"
-           />
-  <records prefix="plone.resources/redturtle-agidtheme-js"
-           interface='Products.CMFPlone.interfaces.IResourceRegistry'
-           remove="True"
-           />
+  <records interface="Products.CMFPlone.interfaces.controlpanel.ITinyMCESchema" prefix="plone">
+    <field type="plone.registry.field.List"></field>
+    <value purge="true" key="table_styles">
+      <element remove="True">Semplice|table-simple</element>
+      <element remove="True">Bordi visibili|table-bordered</element>
+      <element remove="True">A righe alternate|table-striped</element>
+      <element remove="True">Con effetto hover|table-hover</element>
+    </value>
+  </records>
 
-  <!-- BUNDLE -->
-  <records prefix="plone.bundles/redturtle-agidtheme-css-bundle"
-           interface='Products.CMFPlone.interfaces.IBundleRegistry'
-           remove="True"
-           />
-  <records prefix="plone.bundles/redturtle-agidtheme-js-bundle"
-           interface='Products.CMFPlone.interfaces.IBundleRegistry'
-           remove="True"
-           />
+  <record interface="Products.CMFPlone.interfaces.controlpanel.ILinkSchema" name="plone.mark_special_links" field="mark_special_links">
+    <field type="plone.registry.field.Bool">
+      <default>True</default>
+    </field>
+  </record>
 
-  <record name="plone.allowed_sizes" interface="Products.CMFPlone.interfaces.controlpanel.IImagingSchema" field="allowed_sizes">
-    <value purge="false">
-      <element remove="true">newshome 300:200</element>
-      <element remove="true">newshome 450:300</element>
-      <element remove="true">newshighlight 540:360</element>
-      <element remove="true">newsbig 1800:600</element>
+  <record interface="Products.CMFPlone.interfaces.controlpanel.ISecuritySchema" name="plone.allow_anon_views_about" field="allow_anon_views_about">
+    <field type="plone.registry.field.Bool">
+      <default>True</default>
+    </field>
+  </record>
+  <record interface="Products.CMFPlone.interfaces.controlpanel.ISiteSchema" name="plone.display_publication_date_in_byline" field="display_publication_date_in_byline">
+    <field type="plone.registry.field.Bool">
+      <default>False</default>
+    </field>
+  </record>
+
+  <record name="plone.custom_tags" interface="Products.CMFPlone.interfaces.controlpanel.IFilterSchema" field="custom_tags">
+    <field type="plone.registry.field.List">
+      <default/>
+      <description xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Add tag names here for tags which are not part of XHTML but which should be permitted.</description>
+      <missing_value/>
+      <required>False</required>
+      <title xmlns:ns0="http://xml.zope.org/namespaces/i18n" ns0:domain="plone" ns0:translate="">Custom tags</title>
+      <value_type type="plone.registry.field.TextLine"/>
+    </field>
+    <value>
+      <element remove="True">hr</element>
     </value>
   </record>
 
-</registry>
+  <record name="plone.allowed_sizes" interface="Products.CMFPlone.interfaces.controlpanel.IImagingSchema" field="allowed_sizes">
+    <value purge="false">
+      <element remove="True">newshome 450:300</element>
+      <element remove="True">newshighlight 540:360</element>
+      <element remove="True">newsbig 1800:600</element>
+    </value>
+  </record>
 
+  <records interface="redturtle.agidtheme.controlpanel.interfaces.IRedturtleAgidthemeSettings" remove="True"/>
+
+  <!-- RESOURCES -->
+  <records prefix="plone.resources/redturtle-agidtheme-css"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry' remove="True">
+  </records>
+  <records prefix="plone.resources/redturtle-agidtheme-js"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry'  remove="True">
+  </records>
+  <records prefix="plone.resources/redturtle-agidtheme-icons"
+           interface='Products.CMFPlone.interfaces.IResourceRegistry' remove="True">
+  </records>
+
+  <!-- BUNDLES -->
+  <records prefix="plone.bundles/redturtle-agidtheme-css-bundle"
+           interface='Products.CMFPlone.interfaces.IBundleRegistry' remove="True">
+  </records>
+  <records prefix="plone.bundles/redturtle-agidtheme-js-bundle"
+           interface='Products.CMFPlone.interfaces.IBundleRegistry' remove="True">
+  </records>
+  <records prefix="plone.bundles/redturtle-agidtheme-icons-bundle"
+           interface='Products.CMFPlone.interfaces.IBundleRegistry' remove="True">
+  </records>
+
+  <record name="collective.tiles.advancedstatic.css_styles" remove="True">
+  </record>
+</registry>

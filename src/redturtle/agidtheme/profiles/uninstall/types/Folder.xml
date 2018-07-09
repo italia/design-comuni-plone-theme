@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<object
+    i18n:domain="plone"
+    meta_type="Dexterity FTI"
+    name="Folder"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+  <property
+      name="behaviors"
+      purge="false">
+    <element value="plone.layoutaware" remove="True" />
+  </property>
+
+  <property
+      name="behaviors"
+      purge="false">
+    <element value="plone.app.contenttypes.behaviors.leadimage.ILeadImage" remove="True" />
+  </property>
+
+</object>

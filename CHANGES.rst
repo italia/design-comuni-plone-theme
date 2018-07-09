@@ -5,7 +5,8 @@ Changelog
 2.2.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix uninstall step
+  [cekk]
 
 
 2.2.2 (2018-07-05)

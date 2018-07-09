@@ -6,9 +6,8 @@
     <configlet
         title="Configurazione tema agid"
         action_id="redturtle-agidtheme-controlpanel"
-        appId="redturtle.agidtheme"
-        remove="true">
-
+        remove="True"
+        appId="redturtle.agidtheme">
     </configlet>
 
 </object>

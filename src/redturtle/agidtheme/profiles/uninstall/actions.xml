@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<object name="portal_actions" meta_type="Plone Actions Tool"
+   xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+
+ <object name="portal_tabs" meta_type="CMF Action Category">
+  <property name="title">Portal tabs</property>
+  <object name="index_html" meta_type="CMF Action" i18n:domain="plone">
+   <property name="title" i18n:translate="">Home</property>
+   <property name="description" i18n:translate=""></property>
+   <property
+      name="url_expr">string:${globals_view/navigationRootUrl}</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property name="available_expr"></property>
+   <property name="permissions">
+    <element value="View"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+  <object name="aree-tematiche" meta_type="CMF Action" remove="True">
+   <property name="title">Servizi</property>
+   <property name="description"></property>
+   <property
+      name="url_expr">string:${globals_view/navigationRootUrl}/#</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property name="available_expr"></property>
+   <property name="permissions"/>
+   <property name="visible">True</property>
+  </object>
+  <object name="amministrazione" meta_type="CMF Action" remove="True">
+   <property name="title">L'Amministrazione</property>
+   <property name="description"></property>
+   <property
+      name="url_expr">string:${globals_view/navigationRootUrl}/#</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property name="available_expr"></property>
+   <property name="permissions"/>
+   <property name="visible">True</property>
+  </object>
+  <object name="vivere" meta_type="CMF Action" remove="True">
+   <property name="title">Vivere il Comune</property>
+   <property name="description"></property>
+   <property
+      name="url_expr">string:${globals_view/navigationRootUrl}/#</property>
+   <property name="link_target"></property>
+   <property name="icon_expr"></property>
+   <property name="available_expr"></property>
+   <property name="permissions"/>
+   <property name="visible">True</property>
+  </object>
+ </object>
+
+</object>
