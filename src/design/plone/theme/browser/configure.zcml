@@ -30,6 +30,7 @@
   <include package="plone.app.contentmenu" />
   <browser:menuItems
       for="plone.app.blocks.layoutbehavior.ILayoutBehaviorAdaptable"
+      layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
       menu="plone_displayviews">
     <browser:menuItem
         title="Tiles page view"
