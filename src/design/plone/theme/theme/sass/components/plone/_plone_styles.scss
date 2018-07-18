@@ -15,14 +15,15 @@
     @extend .sr-only;
 }
 
-///// FONT ICONE (ma solo nei menu) //////
-
 .image-icon,
 .image-tile {
     float: right;
 }
 
-///// DA VERIFICARE SE SERVONO
-
-// .outer-wrapper .container > .row {  margin:0; }
-// #global_statusmessage { @extend .container; }
+body.template-default_error_message {
+    #content-core {
+        p {
+            white-space: normal;
+        }
+    }
+}
