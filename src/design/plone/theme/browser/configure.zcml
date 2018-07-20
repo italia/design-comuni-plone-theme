@@ -1,0 +1,229 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="design.plone.theme">
+
+  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot
+      directory="overrides"
+      layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+      />
+
+  <!-- Publish static files -->
+  <plone:static
+      name="design.plone.theme"
+      type="plone"
+      directory="static"
+      />
+
+  <browser:page
+      name="tiles_page_view"
+      for="plone.app.blocks.layoutbehavior.ILayoutBehaviorAdaptable"
+      template="templates/tiles_page_view.pt"
+      permission="zope2.View"
+      layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+      />
+
+  <include package="plone.app.contentmenu" />
+  <browser:menuItems
+      for="plone.app.blocks.layoutbehavior.ILayoutBehaviorAdaptable"
+      layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+      menu="plone_displayviews">
+    <browser:menuItem
+        title="Tiles page view"
+        action="tiles_page_view"
+        i18n:translate="title"
+        />
+  </browser:menuItems>
+
+  <browser:page
+      name="news_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".tile_collection_renderers.NewsView"
+      layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+      template="templates/news_renderer.pt"
+      />
+
+  <browser:page
+      name="video_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".tile_collection_renderers.VideoView"
+      layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+      template="templates/video_renderer.pt"
+      />
+
+  <browser:page
+      name="photogallery_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".tile_collection_renderers.GalleryView"
+      layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+      template="templates/photogallery_renderer.pt"
+      />
+
+  <browser:page
+      name="aree_tematiche_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".tile_collection_renderers.AreeTematicheView"
+      layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+      template="templates/aree_tematiche.pt"
+      />
+
+  <browser:page
+      name="online_services_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".tile_collection_renderers.OnlineServicesView"
+      layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+      template="templates/online_services.pt"
+      />
+
+  <!-- custom redturtle.tiles.collection templates -->
+  <browser:page
+      name="collection_tile_helpers"
+      class=".tile_collection_renderers.HelpersView"
+      permission="zope2.View"
+      for="*"
+      layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+      />
+
+  <browser:page
+      name="sights_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".tile_collection_renderers.SightsView"
+      layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+      template="templates/sights_renderer.pt"
+      />
+
+  <browser:page
+      name="news_highlight_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".tile_collection_renderers.NewsHighlightView"
+      layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+      template="templates/news_highlight_renderer.pt"
+      />
+
+  <browser:page
+      name="news_big_photo_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".tile_collection_renderers.NewsBigPhotoView"
+      layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+      template="templates/news_big_photo_renderer.pt"
+      />
+
+  <browser:page
+      name="news_area_tematica_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".tile_collection_renderers.NewsAreaTematicaView"
+      layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+      template="templates/news_area_tematica.pt"
+      />
+
+  <browser:page
+      name="servizi_area_tematica_renderer"
+      permission="zope2.View"
+      for="*"
+      class=".tile_collection_renderers.ServiziAreaTematicaView"
+      layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+      template="templates/servizi_area_tematica.pt"
+      />
+
+  <browser:viewlet
+      name="plone.belowcontenttitle.documentbyline"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+      class=".viewlets.CustomDocumentBylineViewlet"
+      permission="zope2.View"
+      layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+      />
+
+  <browser:viewlet
+      name="plone.abovecontenttitle.documentactions"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+      class="plone.app.layout.viewlets.content.DocumentActionsViewlet"
+      permission="zope2.View"
+      layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+      />
+
+  <browser:viewlet
+      name="plone.belowcontentbody.relateditems"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+      class="plone.app.layout.viewlets.content.ContentRelatedItems"
+      view="plone.app.layout.globals.interfaces.IViewView"
+      permission="zope2.View"
+      layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+      template="templates/document_relateditems.pt"
+      />
+
+  <browser:viewlet
+      name="design.plone.theme.social"
+      manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+      class=".viewlets.SocialViewlet"
+      layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+      template="templates/social_viewlet.pt"
+      permission="zope2.View"
+      />
+
+  <browser:viewlet
+      name="contentleadimage"
+      for="plone.app.contenttypes.behaviors.leadimage.ILeadImage"
+      view="plone.app.layout.globals.interfaces.IViewView"
+      class="plone.app.contenttypes.behaviors.viewlets.LeadImageViewlet"
+      manager="plone.app.layout.viewlets.interfaces.IAboveContentBody"
+      template="templates/leadimage.pt"
+      permission="zope2.View"
+      layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+      />
+
+  <browser:viewlet
+      name="plone.logo"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      class=".viewlets.LogoViewlet"
+      layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+      permission="zope2.View"
+  />
+
+  <browser:viewlet
+    name="redturtle.header.social"
+    manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+    class=".viewlets.HeaderSocialViewlet"
+    layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+    permission="zope2.View"
+  />
+
+  <browser:viewlet
+    name="redturtle.header_banner"
+    manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+    class=".viewlets.HeaderBannerViewlet"
+    template="templates/header_banner.pt"
+    layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+    permission="zope2.View"
+  />
+
+  <browser:viewlet
+    name="redturtle.skip_links"
+    manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+    class=".viewlets.SkipLinksViewlet"
+    layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+    permission="zope2.View"
+    />
+
+  <!-- The search box -->
+  <browser:viewlet
+    name="plone.searchbox"
+    manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+    class=".viewlets.AgidSearchBoxViewlet"
+    permission="zope2.View"
+    layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+    />
+
+</configure>

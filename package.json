@@ -1,19 +1,19 @@
 {
   "//": "Put here only devDependencies, theme dependencies should stay inside of the theme folder.",
-  "name": "redturtle.agidtheme",
+  "name": "design.plone.theme",
   "version": "2.0.0",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com:PloneGov-IT/redturtle.agidtheme.git"
+    "url": "git+ssh://git@github.com:italia/design.plone.theme.git"
   },
   "keywords": [
     "agid",
-    "redturtle.agidtheme",
+    "design.plone.theme",
     "theme"
   ],
   "author": "RedTurtle Technology",
   "license": "GPL-3.0",
-  "homepage": "https://github.com/PloneGov-IT/redturtle.agidtheme",
+  "homepage": "https://github.com/italia/design.plone.theme",
   "devDependencies": {
     "@redturtle/eslint-config": "^2.0.0",
     "autoprefixer": "^8.6.3",
@@ -48,14 +48,15 @@
     "webpack": "^3.11.0"
   },
   "scripts": {
-    "prettier-all": "yarn prettier-sass && yarn prettier-js && yarn prettier-json",
-    "prettier-sass": "prettier --write 'src/redturtle/agidtheme/theme/sass/**/*.scss'",
-    "prettier-js": "prettier --write 'src/redturtle/agidtheme/theme/js/src/**/*.js'",
-    "prettier-json": "prettier --write 'src/redturtle/agidtheme/theme/**/*.json'",
-    "precommit": "lint-staged",
+    "build": "grunt compile && yarn prettier-all",
     "develop": "grunt compile && grunt",
-    "test": "stylelint 'src/redturtle/agidtheme/theme/**/*.scss'",
-    "build": "grunt compile && yarn prettier-all"
+    "postinstall": "cd src/design/plone/theme/theme/ && npm install",
+    "precommit": "lint-staged",
+    "prettier-all": "yarn prettier-sass && yarn prettier-js && yarn prettier-json",
+    "prettier-js": "prettier --write 'src/design/plone/theme/theme/js/src/**/*.js'",
+    "prettier-json": "prettier --write 'src/design/plone/theme/theme/**/*.json'",
+    "prettier-sass": "prettier --write 'src/design/plone/theme/theme/sass/**/*.scss'",
+    "test": "stylelint 'src/design/plone/theme/theme/**/*.scss'"
   },
   "lint-staged": {
     "*.{js,json,scss}": [

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layers>
+  <layer
+      name="design.plone.theme"
+      interface="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+      />
+</layers>

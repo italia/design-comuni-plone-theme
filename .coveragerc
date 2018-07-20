@@ -1,6 +1,6 @@
 [report]
 include =
-    src/redturtle/*
+    src/design/*
 omit =
     */test*
     */upgrades/*

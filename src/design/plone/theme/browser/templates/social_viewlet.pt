@@ -1,0 +1,42 @@
+<div tal:define='results view/get_socials' class="share">
+    <tal:comment replace="nothing">
+    <!-- Rendeder all viewlets inside this manager.
+        Pull viewlets out of the manager and render then one-by-one
+    -->
+    </tal:comment>
+
+    <div class="share-slider">
+        <div class="share-title">
+            <a href="#" class="share-toggle">
+                <span
+                  class="share-text"
+                  i18n:domain="design.plone.theme"
+                  i18n:translate="share_button">
+                  Share
+                </span>
+            </a>
+        </div>
+        <div class="share-options">
+            <ul class="social-list">
+                <tal:results tal:repeat="social results"
+                ><li
+                    ><a tal:attributes="href python: view.get_sharer_url(social); title python: social.title() + ' - apri in una nuova scheda'" href="#" title="Apri in una nuova scheda" target="_blank"
+                        ><i tal:attributes="class python: view.get_css_class(social)" class=""></i
+                        ><span tal:content="python: social.title()" class="u-hiddenVisually">Social</span
+                    ></a
+                ></li
+            ></tal:results>
+            </ul>
+        </div>
+    </div>
+    <div class="share-button">
+        <a href="#" class="share-toggle">
+            <span class="share-icon"></span>
+            <span class="sr-only"
+              i18n:domain="design.plone.theme"
+              i18n:translate="toggle_share">
+              Toggle share
+            </span>
+        </a>
+    </div>
+</div>

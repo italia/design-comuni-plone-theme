@@ -1,0 +1,222 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2018-07-09 16:05+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: design.plone.theme\n"
+
+#: ../profiles/default/controlpanel.xml
+msgid "Configurazione tema agid"
+msgstr ""
+
+#: ../configure.zcml:44
+msgid "Disinstalla il tema basato sulle linee guida italiane per le PA."
+msgstr ""
+
+#: ../configure.zcml:44
+msgid "Disinstalla: Tema: Italia Design Plone Theme"
+msgstr ""
+
+#: ../browser/tile_collection_renderers.py:142
+msgid "Gallery layout"
+msgstr ""
+
+#: ../configure.zcml:35
+msgid "Installa il tema basato sulle linee guida italiane per le PA."
+msgstr ""
+
+#: ../behaviors/behavior.py:25
+msgid "Layout"
+msgstr ""
+
+#: ../browser/tile_collection_renderers.py:152
+msgid "Layout servizi online"
+msgstr ""
+
+#: ../browser/tile_collection_renderers.py:147
+msgid "Link aree tematiche"
+msgstr ""
+
+#: ../browser/tile_collection_renderers.py:103
+msgid "News highlight"
+msgstr ""
+
+#: ../browser/tile_collection_renderers.py:119
+msgid "News in area tematica"
+msgstr ""
+
+#: ../browser/tile_collection_renderers.py:132
+msgid "News layout with image"
+msgstr ""
+
+#: ../browser/tile_collection_renderers.py:111
+msgid "News with big photo"
+msgstr ""
+
+#: ../browser/tile_collection_renderers.py:127
+msgid "Servizi in area tematica"
+msgstr ""
+
+#: ../browser/tile_collection_renderers.py:94
+msgid "Sights layout"
+msgstr ""
+
+#: ../configure.zcml:35
+msgid "Tema: Italia Design Plone Theme"
+msgstr ""
+
+#: ../browser/configure.zcml:39
+msgid "Tiles page view"
+msgstr ""
+
+#: ../browser/tile_collection_renderers.py:137
+msgid "Video layout"
+msgstr ""
+
+#: ../behaviors/configure.zcml:13
+msgid "We want to add a field Class for objects"
+msgstr ""
+
+#. Default: "published on"
+#: ../browser/templates/document_by_line.pt:35
+msgid "box_published_on"
+msgstr ""
+
+#. Default: "List of content-types that can be enable for social sharing."
+#: ../controlpanel/interfaces.py:12
+msgid "description_available_portaltypes"
+msgstr ""
+
+#. Default: "List of social networks enabled for sharing."
+#: ../controlpanel/interfaces.py:26
+msgid "description_available_socials"
+msgstr ""
+
+#: ../behaviors/configure.zcml:13
+msgid "design.plone.theme: Class on View behavior"
+msgstr ""
+
+#. Default: "Follow us on"
+#: ../browser/templates/header_social_viewlet.pt:5
+msgid "follow_us"
+msgstr ""
+
+#. Default: "List of links to external social networks. These links are showed in the header.\nIf there isn't a related icon in the theme, the link will not appear properly.\nAvailable icons are: facebook, twitter, youtube, medium, linkedin, storify, rss, newsletter.\nInsert a list of values (one per row) in the following form: social_id|url where social_id is one of the social with available icons."
+#: ../controlpanel/interfaces.py:39
+msgid "follow_us_links_description"
+msgstr ""
+
+#. Default: "Follow us links"
+#: ../controlpanel/interfaces.py:37
+msgid "follow_us_links_label"
+msgstr ""
+
+#. Default: "Header link label"
+#: ../controlpanel/interfaces.py:57
+msgid "header_link_label"
+msgstr ""
+
+#. Default: "Label for the link in the header of the site"
+#: ../controlpanel/interfaces.py:59
+msgid "header_link_label_desc"
+msgstr ""
+
+#. Default: "Header link url"
+#: ../controlpanel/interfaces.py:65
+msgid "header_link_url"
+msgstr ""
+
+#. Default: "URL of the link in the header"
+#: ../controlpanel/interfaces.py:67
+msgid "header_link_url_desc"
+msgstr ""
+
+#. Default: "Header second link label"
+#: ../controlpanel/interfaces.py:73
+msgid "header_second_link_label"
+msgstr ""
+
+#. Default: "Label for the link in the header of                              the site at right"
+#: ../controlpanel/interfaces.py:75
+msgid "header_second_link_label_desc"
+msgstr ""
+
+#. Default: "Header second link url"
+#: ../controlpanel/interfaces.py:82
+msgid "header_second_link_url"
+msgstr ""
+
+#. Default: "URL of the link in the header at right"
+#: ../controlpanel/interfaces.py:84
+msgid "header_second_link_url_desc"
+msgstr ""
+
+#. Default: "Shareable content types"
+#: ../controlpanel/interfaces.py:10
+msgid "heading_available_portaltypes"
+msgstr ""
+
+#. Default: "Enabled social networks"
+#: ../controlpanel/interfaces.py:24
+msgid "heading_available_socials"
+msgstr ""
+
+#. Default: "CSS Class"
+#: ../behaviors/behavior.py:17
+msgid "help_class_on_view"
+msgstr ""
+
+#. Default: "Keep reading"
+#: ../browser/templates/news_big_photo_renderer.pt:55
+msgid "keep_reading_label"
+msgstr ""
+
+#. Default: "CSS Class"
+#: ../behaviors/behavior.py:16
+msgid "label_class_on_view"
+msgstr ""
+
+#. Default: "<span>Skip to content</span>"
+#: ../browser/templates/skip_links_viewlet.pt:3
+msgid "label_skiptocontent"
+msgstr ""
+
+#. Default: "<span>Skip to navigation</span>"
+#: ../browser/templates/skip_links_viewlet.pt:9
+msgid "label_skiptonavigation"
+msgstr ""
+
+#. Default: "More…"
+#: ../browser/templates/sights_renderer.pt:52
+#: ../browser/templates/video_renderer.pt:80
+msgid "more_url"
+msgstr ""
+
+#. Default: "Share"
+#: ../browser/templates/social_viewlet.pt:11
+msgid "share_button"
+msgstr ""
+
+#. Default: "No results found"
+#: ../browser/templates/news_big_photo_renderer.pt:21
+#: ../browser/templates/news_highlight_renderer.pt:17
+#: ../browser/templates/sights_renderer.pt:19
+msgid "tiles_collection_noresults"
+msgstr ""
+
+#. Default: "Toggle share"
+#: ../browser/templates/social_viewlet.pt:35
+msgid "toggle_share"
+msgstr ""

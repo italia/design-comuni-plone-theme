@@ -1,0 +1,15 @@
+<div class="skip-link-wrapper"
+     i18n:domain="design.plone.theme">
+    <a accesskey="2"
+       class="skip-link skip-link-content"
+       href="#content"
+       i18n:translate="label_skiptocontent">
+        <span>Skip to content</span>
+    </a>
+    <a accesskey="6"
+       class="skip-link skip-link-navigation"
+       href="#portal-mainnavigation"
+       i18n:translate="label_skiptonavigation">
+       <span>Skip to navigation</span>
+    </a>
+</div>

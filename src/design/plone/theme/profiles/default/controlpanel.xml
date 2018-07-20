@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<object name="portal_controlpanel"
+        xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+        i18n:domain="design.plone.theme">
+
+    <configlet
+        title="Configurazione tema agid"
+        action_id="design-plone-theme-controlpanel"
+        appId="design.plone.theme"
+        category="Products"
+        condition_expr=""
+        icon_expr=""
+        url_expr="string:${portal_url}/@@design-plone-theme-controlpanel"
+        visible="True"
+        i18n:attributes="title">
+            <permission>design.plone.theme.permissions.EditAgidthemeSettings</permission>
+    </configlet>
+
+</object>

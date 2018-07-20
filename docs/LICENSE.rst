@@ -1,4 +1,4 @@
-redturtle.agidtheme Copyright 2017, RedTurtle
+design.plone.theme Copyright 2017, RedTurtle
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License version 2

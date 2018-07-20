@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="design.plone.theme">
+
+    <browser:page
+        name="design-plone-theme-controlpanel"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        class=".view.DesignPloneThemeSettingsControlPanel"
+        permission="design.plone.theme.permissions.EditAgidthemeSettings"
+        layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
+        />
+
+</configure>

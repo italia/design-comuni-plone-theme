@@ -1,0 +1,90 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="design.plone.theme">
+    <body>
+        <metal:macro define-macro="collection-tile-macro"
+                     tal:define="helper_view nocall:context/@@collection_tile_helpers;
+                                 showCarousel python:'carousel' in (view.data.get('css_class') or '');
+                                 resultsClass python: showCarousel and 'tileContent pat-slider' or 'tileContent'">
+          <div class="tile-collection video-collection">
+              <div class="tile-collection-container">
+                  <h3 tal:define="title view/data/title|nothing;"
+                      class="tileTitle"
+                      tal:condition="title">${title}</h3>
+                  <div class="tileBody">
+                      <p tal:condition="not:results"
+                       class="noResults"
+                       i18n:translate="tiles_collection_noresults">
+                        No results found
+                      </p>
+                      <div tal:define="classID string:carousel-wrapper-${view/data/collection_uid}"
+                           tal:attributes="class classID">
+                        <ul class="${resultsClass}"
+                            tal:condition="results"
+                            data-pat-slider='{ "initialSlide": 0, "slidesToShow": 3, "slidesToScroll": 1, "appendArrows": ".${classID}", "responsive": [{ "breakpoint": 768, "settings": { "slidesToShow": 1, "slidesToScroll": 1 } }] }'>
+                             <tal:results tal:repeat="obj results">
+                                <li tal:define="oddrow repeat/obj/odd;
+                                                useView python:obj.portal_type in viewActions;
+                                                itemUrl python:useView and obj.getURL() + '/view' or obj.getURL();
+                                                item_wf_state obj/review_state;
+                                                item_wf_state_class python:'state-' + plone_view.normalizeString(item_wf_state);
+                                                item_type obj/portal_type;
+                                                item_type_class python:'contenttype-' + plone_view.normalizeString(item_type);"
+                                    tal:attributes="class python: 'colonna-1-di-3 ' + (oddrow and 'collectionItem even' or 'collectionItem odd')">
+                                    <div class="collectionItemWrapper">
+                                        <a href="#"
+                                           data-pat-plone-modal="position: 'center middle';"
+                                           tal:attributes="href itemUrl;
+                                                           class string:tile $item_type_class $item_wf_state_class pat-plone-modal;
+                                                           title obj/Description">
+                                            <div class="collectionItemImage">
+                                                <span class="video-icon"></span>
+                                                <!-- if obj is None, it will break calling getObject() on it, but if the collection is empty this won't be rendered by collective.tiles.collection -->
+                                                <img class="image-thumb"
+                                                     tal:define="realObj obj/getObject;
+                                                                 scales realObj/@@images"
+                                                     tal:replace="structure python: scales.tag('image', scale='newshome', direction='down', css_class='image-thumb')" />
+                                            </div>
+                                            <div class="collectionItemText">
+                                                <div class="collectionItemTitle">
+                                                    <h3 tal:content="obj/Title"> Title </h3>
+                                                </div>
+                                                <div class="collectionItemDates"
+                                                     tal:define="date python:helper_view.get_formatted_date(obj)"
+                                                     tal:condition="python: view.data.get('show_dates', False) and date"
+                                                     i18n:domain="plonelocales">
+
+                                                    <div class="collectionItemDateDay">${date/day}</div>
+                                                    <div class="collectionItemDateMonth">
+                                                        <tal:month i18n:translate="">${date/month}</tal:month>
+                                                    </div>
+                                                    <div class="collectionItemDateYear">${date/year}</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                             </tal:results>
+                        </ul>
+                      </div>
+                      <div class="showMore"
+                           tal:define="show_more view/data/show_more;
+                                       title view/data/title"
+                           tal:condition="python: show_more and title and not showCarousel">
+                          <a href="${collection/absolute_url}"
+                             tal:define="show_more_label view/data/show_more_label|nothing">
+                              <span tal:condition="not:show_more_label"
+                                    i18n:translate="more_url">More&hellip;</span>
+                              <span tal:condition="show_more_label">${show_more_label}</span>
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </metal:macro>
+    </body>
+</html>

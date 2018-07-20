@@ -1,0 +1,29 @@
+@import 'buttons';
+@import 'portalMessage';
+@import 'forms';
+@import 'views';
+@import 'tinymce';
+@import 'references';
+@import 'login';
+@import 'contact';
+@import 'managePortlets';
+@import 'modals';
+@import 'toolbar';
+@import 'siteSetup';
+
+.hiddenStructure {
+    @extend .sr-only;
+}
+
+.image-icon,
+.image-tile {
+    float: right;
+}
+
+body.template-default_error_message {
+    #content-core {
+        p {
+            white-space: normal;
+        }
+    }
+}

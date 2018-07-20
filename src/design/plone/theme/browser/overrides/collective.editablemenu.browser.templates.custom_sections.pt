@@ -1,0 +1,38 @@
+<tal:sections tal:define="menu_tabs view/menu_tabs"
+     tal:condition="menu_tabs"
+     i18n:domain="plone">
+  <nav aria-label="Navigation"
+       i18n:attributes="aria-label heading_sections"
+       class="globalnavWrapper">
+    <div class="globalnavClose">
+      <button id="globalnav-close"
+              aria-controls="menu"
+              aria-label="Esci dalla navigazione"
+              title="Esci dalla navigazione">
+          <span class="icon" aria-hidden="true"></span>
+          <span class="sr-only">chiudi</span>
+      </button>
+    </div>
+    <ul role="menubar" id="portal-globalnav">
+      <tal:tabs tal:repeat="tab menu_tabs">
+        <li tal:define="tid python: tab.get('index');
+                        clickandgo python: tab.get('clickandgo');
+                        tab_url python: tab.get('url');
+                        tab_title python: tab.get('title')"
+            tal:condition="tab_title"
+            id="portaltab-${tid}"
+            class="${python:tab.get('selected') and 'selected' or 'plain'}">
+          <a href="${python: tab_url or '#'}"
+             data-tabid="${tid}"
+             class="menuTabLink ${python: clickandgo and 'clickandgo' or ''}"
+             aria-haspopup="${python: not clickandgo and 'true' or None}"
+             aria-expanded="${python: not clickandgo and 'false' or None}"
+             role="${python: not clickandgo and 'menuitem' or None}"
+             tal:content="structure tab/title">
+            Tab Name
+          </a>
+        </li>
+      </tal:tabs>
+    </ul>
+  </nav>
+</tal:sections>

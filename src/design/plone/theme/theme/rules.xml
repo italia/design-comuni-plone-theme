@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+       xmlns:css="http://namespaces.plone.org/diazo/css"
+       xmlns:xhtml="http://www.w3.org/1999/xhtml"
+       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+       xmlns:xi="http://www.w3.org/2001/XInclude">
+
+
+   <!-- Include the backend theme -->
+   <xi:include href="backend.xml" />
+
+   <rules css:if-not-content="body.viewpermission-view, body.viewpermission-none">
+     <after css:theme-children="head">
+      <link rel="stylesheet" href="{$portal_url}/++theme++design.plone.theme/css/designplonetheme.backend.css" />
+     </after>
+   </rules>
+
+   <rules css:if-content="body.viewpermission-view, body.viewpermission-none">
+     <theme href="index.html" />
+     <xi:include href="designplonetheme_rules.xml" />
+   </rules>
+
+</rules>
