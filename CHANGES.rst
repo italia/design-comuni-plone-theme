@@ -15,6 +15,8 @@ Minor changes:
 
 - Fix uninstall step
   [cekk]
+- Update of the "font_size_base" variable
+  [fdelia]
 
 
 2.2.2 (2018-07-05)
