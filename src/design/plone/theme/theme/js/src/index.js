@@ -115,7 +115,8 @@ require(['jquery', 'ellipsed'], function($, ellipsed) {
       prepend: true,
     },
     {
-      selector: '#portal-searchbox button.search-button',
+      selector:
+        '#portal-searchbox input:not(.solr-search) + button.search-button',
       icon: 'fas fa-search',
       prepend: true,
     },
