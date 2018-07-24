@@ -91,4 +91,11 @@
 
   <record name="collective.tiles.advancedstatic.css_styles" remove="True">
   </record>
+
+  <records prefix="plone.bundles/plone-logged-in"
+           interface='Products.CMFPlone.interfaces.IBundleRegistry'
+           purge="false">
+    <value key="jscompilation">++plone++static/plone-logged-in-compiled.min.js</value>
+  </records>
+
 </registry>

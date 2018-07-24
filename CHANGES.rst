@@ -13,10 +13,9 @@ BREAKING CHANGES:
 
 Minor changes:
 
-- Fix uninstall step
-  [cekk]
-- Update of the "font_size_base" variable
-  [fdelia]
+- Fix uninstall step [cekk]
+- Update of the "font_size_base" variable [fdelia]
+- Added an override of plone-logged-in js resource to fix toolbar pattern [nzambello]
 
 
 2.2.2 (2018-07-05)

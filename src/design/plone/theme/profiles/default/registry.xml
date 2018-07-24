@@ -157,4 +157,11 @@
       <element>PagesTileStatic|stile landing page aree tematiche</element>
     </value>
   </record>
+
+  <records prefix="plone.bundles/plone-logged-in"
+           interface='Products.CMFPlone.interfaces.IBundleRegistry'
+           purge="false">
+    <value key="jscompilation">++plone++design.plone.theme/plone-logged-in-compiled.min.js</value>
+  </records>
+
 </registry>
