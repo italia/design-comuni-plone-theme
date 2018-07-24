@@ -93,6 +93,16 @@ body#visual-portal-wrapper.pat-plone #edit-zone {
         color: #fff;
     }
 
+    nav {
+        > ul {
+            ul {
+                li {
+                    white-space: normal;
+                }
+            }
+        }
+    }
+
     [class*='contenttype-']:after {
         font-family: 'Fontello';
         font-size: 100%;

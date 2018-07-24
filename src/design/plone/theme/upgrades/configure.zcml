@@ -3,4 +3,14 @@
   xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
   i18n_domain="design.plone.theme">
 
+  <genericsetup:upgradeStep
+    source="1000"
+    destination="1100"
+    profile="design.plone.theme:default"
+    title="Import plone registry"
+    description="Override for plone-logged-in for toolbar pattern js"
+    handler=".upgrades.import_records_registry"
+    />
+
+
 </configure>
