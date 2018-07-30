@@ -55,7 +55,7 @@
         padding: 20px 0;
     }
 
-    h3.tileTitle {
+    .tileTitle {
         margin-top: 0;
     }
 
@@ -73,7 +73,8 @@
         .tile-text {
             padding: 20px;
 
-            h3 {
+            h3,
+            h2 {
                 border-bottom: 4px solid #666;
                 padding-bottom: 10px;
                 margin-bottom: 0.75em;
@@ -124,7 +125,7 @@
         }
     }
 
-    h3.tileTitle {
+    .tileTitle {
         font-size: 2.5rem;
         font-weight: $semibold;
         margin: 1.5rem 0 1rem;

@@ -8,9 +8,9 @@
     <body>
         <metal:macro define-macro="collection-tile-macro">
         <div class="aree-tematiche-collection">
-            <h3 tal:define="title view/data/title|nothing;"
+            <h2 tal:define="title view/data/title|nothing;"
                 class="tileTitle"
-                tal:condition="title">${title}</h3>
+                tal:condition="title">${title}</h2>
             <div class="tileBody">
                 <p tal:condition="not:results"
                    class="noResults"

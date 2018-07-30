@@ -17,11 +17,12 @@ BREAKING CHANGES:
     - Removed old upgrade steps
     - Removed old profiles
 
-Minor changes:
+Other changes:
 
 - Fix uninstall step [cekk]
 - Update of the "font_size_base" variable [fdelia]
 - Added an override of plone-logged-in js resource to fix toolbar pattern [nzambello]
+- Used <h2> for tile titles and extended those styles for h2 [nzambello]
 
 
 2.2.2 (2018-07-05)

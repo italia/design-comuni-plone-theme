@@ -235,7 +235,8 @@
 
     &.sights-collection {
         .tileBody {
-            h3 {
+            h3,
+            h2 {
                 color: $brand-primary;
                 margin: 0;
             }
@@ -591,6 +592,7 @@
 
             a,
             span,
+            h2,
             h3 {
                 color: #000;
             }
@@ -797,7 +799,10 @@
 }
 
 h3.tileTitle,
+h2.tileTitle,
 .collectionItemTitle h3,
-.tileTitle h3 {
+.collectionItemTitle h2,
+.tileTitle h3,
+.tileTitle h2 {
     margin: 0;
 }
