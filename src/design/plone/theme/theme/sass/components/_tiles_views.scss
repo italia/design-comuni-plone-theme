@@ -13,11 +13,13 @@ $aree-tematiche-gutter: 50px;
 
 .template-homepage_view,
 .template-tiles_page_view {
-    .tile-container,
-    .existing-content-tile,
-    .aree-tematiche-collection,
-    [class*='collection-container'] {
-        @include make-container;
+    .tileWrapper:not([class*='colonna']) {
+        .tile-container,
+        .existing-content-tile,
+        .aree-tematiche-collection,
+        [class*='collection-container'] {
+            @include make-container;
+        }
     }
 
     #viewlet-below-content {
