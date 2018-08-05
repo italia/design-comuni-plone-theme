@@ -3,6 +3,7 @@ from plone import api
 from Products.CMFPlone.interfaces import INonInstallable
 from zope.interface import implementer
 from redturtle.tiles.management.interfaces import IRedturtleTilesManagementSettings  # noqa
+from Products.MimetypesRegistry import MimeTypeItem
 
 
 @implementer(INonInstallable)
@@ -20,6 +21,13 @@ def post_install(context):
     # Do something at the end of the installation of this package.
     add_advancedstatic_styles(context)
     filter_tiles(context)
+    fix_mimetype_icons(context)
+
+
+def uninstall(context):
+    """Uninstall script"""
+    # Do something at the end of the uninstallation of this package.
+    revert_mimetype_icons(context)
 
 
 def filter_tiles(context):
@@ -40,8 +48,8 @@ def add_advancedstatic_styles(context):
                   u'PagesTileStatic|stile landing page aree tematiche')
 
     STYLES = api.portal.get_registry_record(
-                 'collective.tiles.advancedstatic.css_styles'
-             )
+        'collective.tiles.advancedstatic.css_styles'
+    )
     if not STYLES:
         STYLES = ()
     for s in NEW_STYLES:
@@ -49,11 +57,18 @@ def add_advancedstatic_styles(context):
             STYLES += (s,)
 
     api.portal.set_registry_record(
-                  'collective.tiles.advancedstatic.css_styles',
-                  STYLES
-              )
+        'collective.tiles.advancedstatic.css_styles',
+        STYLES
+    )
 
 
-def uninstall(context):
-    """Uninstall script"""
-    # Do something at the end of the uninstallation of this package.
+def fix_mimetype_icons(context):
+    mtr = api.portal.get_tool(name='mimetypes_registry')
+    for mimetype in mtr.extensions.values():
+        mimetype.icon_path = MimeTypeItem.guess_icon_path(mimetype)
+
+
+def revert_mimetype_icons(context):
+    mtr = api.portal.get()
+    for mimetype in mtr.extensions.values():
+        mimetype.icon_path = MimeTypeItem._old_guess_icon_path(mimetype)

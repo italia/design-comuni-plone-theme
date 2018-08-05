@@ -41,6 +41,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
+        'collective.monkeypatcher',
         'collective.smartlink',
         'collective.tiles.advancedstatic',
         'collective.tiles.collection',
