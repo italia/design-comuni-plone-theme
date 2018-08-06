@@ -8,6 +8,7 @@ include *.json
 exclude yarn.lock
 include .eslintrc
 include .stylelintignore
+include .prettierignore
 prune node_modules
 prune src/design/plone/theme/theme/node_modules
 include src/design/plone/theme/browser/static/ellipsed
