@@ -1,0 +1,14 @@
+// styles for pat-leaflet
+// used to create maps (i.e.: in collective.venue)
+
+.pat-leaflet {
+    .awesome-marker {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            margin-bottom: 1em;
+        }
+    }
+}

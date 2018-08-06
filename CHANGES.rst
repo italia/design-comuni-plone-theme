@@ -5,7 +5,7 @@ Changelog
 3.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Added icons and styles for pat-leaflet [nzambello]
 
 
 3.0.0 (2018-08-06)

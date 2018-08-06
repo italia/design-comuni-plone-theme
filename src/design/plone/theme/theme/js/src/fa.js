@@ -25,13 +25,13 @@ import faStar from '@fortawesome/fontawesome-free-solid/faStar';
 import faBars from '@fortawesome/fontawesome-free-solid/faBars';
 import faTimes from '@fortawesome/fontawesome-free-solid/faTimes';
 import faPrint from '@fortawesome/fontawesome-free-solid/faPrint';
-
 import faSortAlphaDown from '@fortawesome/fontawesome-free-solid/faSortAlphaDown';
 import faAngleRight from '@fortawesome/fontawesome-free-solid/faAngleRight';
 import faAngleUp from '@fortawesome/fontawesome-free-solid/faAngleUp';
 import faAngleDown from '@fortawesome/fontawesome-free-solid/faAngleDown';
-
 import faListUl from '@fortawesome/fontawesome-free-solid/faListUl';
+import faCircle from '@fortawesome/fontawesome-free-solid/faCircle';
+import faCrosshairs from '@fortawesome/fontawesome-free-solid/faCrosshairs';
 
 export const init = () => {
   fontawesome.library.add(
@@ -65,6 +65,8 @@ export const init = () => {
     faBars,
     faTimes,
     faPrint,
-    faListUl
+    faListUl,
+    faCircle,
+    faCrosshairs
   );
 };
