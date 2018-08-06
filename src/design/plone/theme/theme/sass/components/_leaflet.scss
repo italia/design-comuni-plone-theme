@@ -11,4 +11,16 @@
             margin-bottom: 1em;
         }
     }
+
+    .leaflet-popup {
+        a {
+            color: $link-color;
+            text-decoration: underline;
+
+            &:hover,
+            &:focus {
+                color: $link-hover-color;
+            }
+        }
+    }
 }
