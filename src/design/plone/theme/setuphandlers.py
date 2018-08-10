@@ -69,6 +69,6 @@ def fix_mimetype_icons(context):
 
 
 def revert_mimetype_icons(context):
-    mtr = api.portal.get()
+    mtr = api.portal.get_tool(name='mimetypes_registry')
     for mimetype in mtr.extensions.values():
         mimetype.icon_path = MimeTypeItem._old_guess_icon_path(mimetype)
