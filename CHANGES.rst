@@ -6,6 +6,7 @@ Changelog
 ------------------
 
 - Added icons and styles for pat-leaflet [nzambello]
+- Added login button in header banner viewlet shown if an option in controlpanel is selected [nzambello]
 
 
 3.0.0 (2018-08-06)

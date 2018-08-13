@@ -136,22 +136,38 @@ class AgidSearchBoxViewlet(SearchBoxViewlet):
 class HeaderBannerViewlet(LanguageSelectorViewlet):
     """ Header banner viewlet """
 
+    def get_value_from_registry(self, record):
+        try:
+            value = api.portal.get_registry_record(
+                record, interface=IDesignPloneThemeSettings)
+        except KeyError:
+            value = u''
+
+        return value
+
+    def get_bool_value_from_registry(self, record):
+        try:
+            value = api.portal.get_registry_record(
+                record, interface=IDesignPloneThemeSettings)
+        except KeyError:
+            value = False
+
+        return value
+
     def update(self):
         super(HeaderBannerViewlet, self).update()
 
-        self.header_second_link_url = api.portal.get_registry_record(
-            'header_second_link_url', interface=IDesignPloneThemeSettings)
-
-        self.header_link_label = api.portal.get_registry_record(
-            'header_link_label', interface=IDesignPloneThemeSettings)
-
-        self.header_link_url = api.portal.get_registry_record(
-            'header_link_url', interface=IDesignPloneThemeSettings)
-
-        self.header_second_link_label = api.portal.get_registry_record(
-            'header_second_link_label', interface=IDesignPloneThemeSettings)
+        self.header_link_label = self.get_value_from_registry(
+            'header_link_label')
+        self.header_link_url = self.get_value_from_registry('header_link_url')
+        self.header_second_link_label = self.get_value_from_registry(
+            'header_second_link_label')
+        self.header_second_link_url = self.get_value_from_registry(
+            'header_second_link_url')
+        self.login_button_visible = self.get_bool_value_from_registry(
+            'login_button_visible')
 
     def showLanguageSelector(self):
         return (self.header_link_label and self.header_link_url) or (
-            self.header_second_link_url
-            and self.header_second_link_url) or self.available()
+            self.header_second_link_url and self.header_second_link_url
+        ) or self.login_button_visible or self.available()

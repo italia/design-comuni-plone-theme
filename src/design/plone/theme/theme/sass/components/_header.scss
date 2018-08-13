@@ -14,31 +14,18 @@
 
     .header-banner-inner {
         @include make-container;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
 
-        &.with-languages {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-
-            > div {
-                width: auto;
-            }
-
-            .header-banner-owner {
-                flex: 1;
-            }
-
-            .header-banner-second-link {
-                margin-left: 1.5rem;
-            }
+        .header-banner-owner {
+            flex: 1;
         }
     }
 
     .header-banner-owner,
     .header-banner-second-link {
-        width: 50%;
-        float: left;
-
         a {
             color: #fff;
 
@@ -49,13 +36,17 @@
         }
     }
 
+    .header-banner-second-link,
+    .header-banner-language,
+    .header-banner-login-button {
+        margin-left: 3%;
+    }
+
     .header-banner-second-link {
         text-align: right;
     }
 
     .header-banner-language {
-        margin-left: 1.5rem;
-
         button#language-selector-button {
             background: none;
             color: #fff;
@@ -83,6 +74,19 @@
                         background: rgba(255, 255, 255, 0.25);
                     }
                 }
+            }
+        }
+    }
+
+    .header-banner-login-button {
+        text-align: right;
+
+        a {
+            color: #fff;
+
+            &:hover,
+            &:focus {
+                border-bottom: 1px solid #fff;
             }
         }
     }

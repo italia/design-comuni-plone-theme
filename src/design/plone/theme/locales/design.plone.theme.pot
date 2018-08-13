@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-07-09 16:05+0000\n"
+"POT-Creation-Date: 2018-08-13 14:06+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -196,6 +196,11 @@ msgstr ""
 #. Default: "<span>Skip to navigation</span>"
 #: ../browser/templates/skip_links_viewlet.pt:9
 msgid "label_skiptonavigation"
+msgstr ""
+
+#. Default: "Show login button"
+#: ../controlpanel/interfaces.py:90
+msgid "login_button_bisible"
 msgstr ""
 
 #. Default: "More…"

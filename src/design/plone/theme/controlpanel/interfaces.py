@@ -85,3 +85,10 @@ class IDesignPloneThemeSettings(model.Schema):
                       default=u'URL of the link in the header at right'),
         required=False
     )
+
+    login_button_visible = schema.Bool(
+        title=_(u'login_button_bisible',
+                default=u'Show login button'),
+        default=False,
+        required=False
+    )

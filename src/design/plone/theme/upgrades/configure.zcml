@@ -12,5 +12,13 @@
     handler=".upgrades.import_records_registry"
     />
 
+  <genericsetup:upgradeStep
+    source="1100"
+    destination="1200"
+    profile="design.plone.theme:default"
+    title="Import plone registry"
+    description="Added a field in theme controlpanel"
+    handler=".upgrades.import_records_registry"
+    />
 
 </configure>
