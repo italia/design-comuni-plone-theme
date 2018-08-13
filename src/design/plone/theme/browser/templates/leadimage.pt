@@ -1,7 +1,7 @@
 <div class="leadImage"
      tal:condition="view/available"
      tal:define="scale_func context/@@images;
-                 scaled_image python: getattr(context.aq_explicit, 'image', False) and scale_func.scale('image', scale='mini')">
+                 scaled_image python: getattr(context.aq_explicit, 'image', False) and scale_func.scale('image', scale='big')">
 
   <figure class="newsImageContainer" tal:condition="python: scaled_image">
     <a tal:define="here_url context/@@plone_context_state/object_url;
