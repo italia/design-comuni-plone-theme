@@ -1,7 +1,8 @@
 // styles for pat-leaflet
 // used to create maps (i.e.: in collective.venue)
 
-.pat-leaflet {
+.pat-leaflet,
+.collection-leaflet-map {
     .awesome-marker {
         display: flex;
         justify-content: center;
@@ -12,7 +13,7 @@
         }
     }
 
-    .leaflet-popup {
+    .leaflet-popup-content {
         a {
             color: $link-color;
             text-decoration: underline;

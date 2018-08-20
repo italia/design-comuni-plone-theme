@@ -5,7 +5,7 @@ Changelog
 3.0.1 (unreleased)
 ------------------
 
-- Added icons and styles for pat-leaflet [nzambello]
+- Added icons and styles for pat-leaflet and collective.venue collection [nzambello]
 - Added login button in header banner viewlet shown if an option in controlpanel is selected [nzambello]
 
 
