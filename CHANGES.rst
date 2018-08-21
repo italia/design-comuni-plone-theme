@@ -8,6 +8,7 @@ Changelog
 - Updated styles for new tiles management UI (https://github.com/RedTurtle/redturtle.tiles.management/pull/12) [nzambello]
 - Added login button in header banner viewlet shown if an option in controlpanel is selected [nzambello]
 - Used <h2> for tile titles and extended those styles for h2 [nzambello]
+- Changed styles for leadimage [nzambello]
 
 
 3.0.0 (2018-08-06)
