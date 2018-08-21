@@ -123,3 +123,36 @@
         display: none;
     }
 }
+
+.tilesList {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    .tileWrapper {
+        clear: both;
+        position: relative;
+        grid-column: span 12;
+
+        &[class*='colonna'] {
+            width: 100%;
+            float: none;
+            padding: 0;
+        }
+
+        &.colonna-1-di-2 {
+            grid-column: span 6;
+        }
+
+        &.colonna-1-di-3 {
+            grid-column: span 4;
+        }
+
+        &.colonna-2-di-3 {
+            grid-column: span 8;
+        }
+
+        &.colonna-1-di-4 {
+            grid-column: span 3;
+        }
+    }
+}
