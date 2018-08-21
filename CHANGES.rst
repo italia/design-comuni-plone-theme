@@ -5,7 +5,9 @@ Changelog
 3.0.1 (unreleased)
 ------------------
 
+- Updated styles for new tiles management UI (https://github.com/RedTurtle/redturtle.tiles.management/pull/12) [nzambello]
 - Added login button in header banner viewlet shown if an option in controlpanel is selected [nzambello]
+- Used <h2> for tile titles and extended those styles for h2 [nzambello]
 
 
 3.0.0 (2018-08-06)
@@ -16,14 +18,12 @@ BREAKING CHANGES:
 - Changed package name from redturtle.agidtheme to design.plone.theme to adhere to the standards of github.com/italia [nzambello]
     - Removed old upgrade steps
     - Removed old profiles
-- Updated styles for new tiles management UI (https://github.com/RedTurtle/redturtle.tiles.management/pull/12) [nzambello]
 
 Other changes:
 
 - Fix uninstall step [cekk]
 - Update of the "font_size_base" variable [fdelia]
 - Added an override of plone-logged-in js resource to fix toolbar pattern [nzambello]
-- Used <h2> for tile titles and extended those styles for h2 [nzambello]
 
 
 2.2.2 (2018-07-05)
