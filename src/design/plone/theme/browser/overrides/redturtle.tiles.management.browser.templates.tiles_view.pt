@@ -8,10 +8,12 @@
 
   <body>
     <metal:content-core fill-slot="content-core">
-      <metal:content-core define-macro="content-core">
-        <div class="content-text"
+      <metal:content-core define-macro="content-core"
+                          tal:define="toc context/table_of_contents|nothing;">
+        <div id="parent-fieldname-text" class="content-text"
           tal:condition="context/text"
-          tal:content="structure python:context.text.output_relative_to(view.context)"/>
+	  tal:content="structure python:context.text.output_relative_to(view.context)"
+	  tal:attributes="class python: toc and 'pat-autotoc' or ''"/>
         <div class="pat-tiles-management"
              tal:define="class_on_view context/class_on_view|nothing"
              tal:attributes="class python: class_on_view and 'pat-tiles-management '+ class_on_view or 'pat-tiles-management'"
