@@ -9,6 +9,7 @@ Changelog
 - Added login button in header banner viewlet shown if an option in controlpanel is selected [nzambello]
 - Used <h2> for tile titles and extended those styles for h2 [nzambello]
 - Changed styles for leadimage [nzambello]
+- Added social icons for footer [nzambello]
 
 
 3.0.0 (2018-08-06)
