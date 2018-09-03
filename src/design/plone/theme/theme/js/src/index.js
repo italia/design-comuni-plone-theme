@@ -77,6 +77,11 @@ require(['jquery', 'ellipsed'], function($, ellipsed) {
       prepend: true,
     },
     {
+      selector: '.footer-social .flickr',
+      icon: 'fab fa-flickr',
+      prepend: true,
+    },
+    {
       selector:
         '.navigationTile a.navTreeFolderish:not(.navTreeCurrentNode):not(.navTreeItemInPath), .portletNavigationTree a.navTreeFolderish:not(.navTreeCurrentNode):not(.navTreeItemInPath)',
       icon: 'fas fa-angle-down',
