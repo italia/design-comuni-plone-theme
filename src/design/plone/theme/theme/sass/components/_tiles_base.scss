@@ -132,6 +132,7 @@
         clear: both;
         position: relative;
         grid-column: span 12;
+        width: 100%;
 
         &[class*='colonna'] {
             width: 100%;
