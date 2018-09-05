@@ -125,35 +125,62 @@
 }
 
 .tilesList {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-
     .tileWrapper {
         clear: both;
         position: relative;
-        grid-column: span 12;
         width: 100%;
 
         &[class*='colonna'] {
-            width: 100%;
-            float: none;
             padding: 1rem 2rem;
+            float: left;
         }
 
         &.colonna-1-di-2 {
-            grid-column: span 6;
+            width: 50%;
         }
 
         &.colonna-1-di-3 {
-            grid-column: span 4;
+            width: 33.333%;
         }
 
         &.colonna-2-di-3 {
-            grid-column: span 8;
+            width: 66.666%;
         }
 
         &.colonna-1-di-4 {
-            grid-column: span 3;
+            width: 25%;
+        }
+    }
+}
+
+@supports (display: grid) {
+    .tilesList {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+
+        .tileWrapper {
+            grid-column: span 12;
+
+            &[class*='colonna'] {
+                width: 100%;
+                float: none;
+            }
+
+            &.colonna-1-di-2 {
+                grid-column: span 6;
+            }
+
+            &.colonna-1-di-3 {
+                grid-column: span 4;
+            }
+
+            &.colonna-2-di-3 {
+                grid-column: span 8;
+            }
+
+            &.colonna-1-di-4 {
+                grid-column: span 3;
+            }
         }
     }
 }
