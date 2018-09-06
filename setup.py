@@ -42,7 +42,6 @@ setup(
     install_requires=[
         'setuptools',
         'collective.monkeypatcher',
-        'collective.smartlink',
         'collective.tiles.advancedstatic',
         'collective.tiles.collection',
         'plone.api',
