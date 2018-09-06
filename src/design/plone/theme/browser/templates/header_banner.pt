@@ -1,4 +1,5 @@
 <div id="header-banner"
+     i18n:domain="design.plone.theme"
      tal:condition="view/showLanguageSelector">
     <div class="header-banner-inner" tal:attributes="class string:header-banner-inner">
         <div class="header-banner-owner" tal:condition="python: view.header_link_label and view.header_link_url">
@@ -39,8 +40,12 @@
         <div class="header-banner-login-button"
              tal:condition="view/login_button_visible"
              tal:define="isAnon context/@@plone_portal_state/anonymous">
-            <a href="${context/absolute_url}/login" tal:condition="isAnon">Login</a>
-            <a href="${context/absolute_url}/logout" tal:condition="not: isAnon">Logout</a>
+          <a href="${context/absolute_url}/login" tal:condition="isAnon">
+            <span i18n:translate="login">Login</span>
+          </a>
+          <a href="${context/absolute_url}/logout" tal:condition="not: isAnon">
+            <span i18n:translate="logout">Logout</span>
+          </a>
         </div>
     </div>
 </div>
