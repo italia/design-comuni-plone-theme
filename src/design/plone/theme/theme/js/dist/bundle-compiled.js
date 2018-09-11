@@ -1,6 +1,6 @@
 (function(global, factory) {
   if (typeof define === 'function' && define.amd) {
-    define('ellipsed', ['exports'], factory);
+    define('ellipsed',['exports'], factory);
   } else if (typeof exports !== 'undefined') {
     factory(exports);
   } else {
@@ -67,35 +67,23 @@
 
       if (newRowsWrapped === rowsLimit + 1) {
         el.innerHTML =
-          textBeforeWrap[textBeforeWrap.length - 1] === '.' &&
-          options.replaceStr === '...'
+          textBeforeWrap[textBeforeWrap.length - 1] === '.' && options.replaceStr === '...'
             ? textBeforeWrap + '..'
             : '' + textBeforeWrap + options.replaceStr;
 
-        return _extends({}, acc, {
-          elHeight: newHeight,
-          rowsWrapped: newRowsWrapped,
-        });
+        return _extends({}, acc, { elHeight: newHeight, rowsWrapped: newRowsWrapped });
       }
     }
 
-    el.textContent = textBeforeWrap.length
-      ? textBeforeWrap + ' ' + token
-      : '' + token;
+    el.textContent = textBeforeWrap.length ? textBeforeWrap + ' ' + token : '' + token;
 
-    return _extends({}, acc, {
-      elHeight: newHeight,
-      rowsWrapped: newRowsWrapped,
-    });
+    return _extends({}, acc, { elHeight: newHeight, rowsWrapped: newRowsWrapped });
   }
 
   function ellipsis() {
-    var selector =
-      arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
-    var rows =
-      arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
-    var options =
-      arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+    var selector = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '';
+    var rows = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1;
+    var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
 
     var defaultOptions = {
       replaceStr: '...',
@@ -434,6 +422,7 @@ require(['jquery', 'ellipsed'], function($, ellipsed) {
   });
 });
 
-define('js/src/index.js', function() {});
+define("js/src/index.js", function(){});
+
 
 //# sourceMappingURL=bundle-compiled.js.map
