@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.0.1 (unreleased)
+3.0.1 (2018-09-13)
 ------------------
 
 - Updated styles for new tiles management UI (https://github.com/RedTurtle/redturtle.tiles.management/pull/12) [nzambello]
