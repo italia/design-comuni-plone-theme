@@ -5,7 +5,7 @@ Changelog
 3.0.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Added selector for mimetypes icons [nzambello]
 
 
 3.0.3 (2018-09-13)
