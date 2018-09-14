@@ -24,6 +24,7 @@
                               tal:attributes="title item_type">
               <a tal:attributes="href  item_url">
                  <img class="thumb-icon"
+                      alt=""
                       tal:define="getIcon python:item.getURL() +'/@@images/image/icon'"
                       tal:condition="item_has_image"
                       tal:attributes="src  string:$getIcon">

@@ -5,7 +5,7 @@ Changelog
 3.0.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- A11y: added `alt` attribute to `img` in tile collections where missing [nzambello]
 
 
 3.0.4 (2018-09-13)

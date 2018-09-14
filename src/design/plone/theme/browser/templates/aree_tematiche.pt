@@ -46,7 +46,7 @@
                                 <div class="linkImage"
                                      tal:condition="hasImage"
                                      tal:define="icon python:obj.getURL()+'/@@images/image/icon'">
-                                    <img class="link-icon" tal:attributes="src string:$icon;">
+                                    <img class="link-icon" tal:attributes="src string:$icon;" alt="">
                                 </div>
                                 <div class="linkText">
                                     <span class="title">
