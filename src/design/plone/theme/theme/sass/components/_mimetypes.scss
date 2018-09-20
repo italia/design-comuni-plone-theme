@@ -6,6 +6,12 @@ img.attachmentLinkIcon {
     margin: 0 0.25rem;
 }
 
+body.template-folder_contents {
+    img.mime-icon {
+        margin: 0 0.75rem 0 0.5rem;
+    }
+}
+
 body.template-file_view {
     #content-core {
         img {
