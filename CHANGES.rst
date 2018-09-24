@@ -5,7 +5,7 @@ Changelog
 3.0.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fixed svg mimetypes icons dimensions [nzambello]
 
 
 3.0.5 (2018-09-20)
