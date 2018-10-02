@@ -194,34 +194,6 @@ module.exports = function(grunt) {
         tasks: ['webpack', 'requirejs', 'uglify'],
       },
     },
-    browserSync: {
-      html: {
-        bsFiles: {
-          src: ['css/*.css'],
-        },
-        options: {
-          watchTask: true,
-          debugInfo: true,
-          online: true,
-          server: {
-            baseDir: '.',
-          },
-        },
-      },
-      plone: {
-        bsFiles: {
-          src: ['css/*.css', 'barceloneta/*.css'],
-        },
-        options: {
-          watchTask: true,
-          debugInfo: true,
-          proxy: 'localhost:8080',
-          reloadDelay: 3000,
-          reloadDebounce: 1000,
-          online: true,
-        },
-      },
-    },
   });
 
   // CWD to theme folder
@@ -237,6 +209,4 @@ module.exports = function(grunt) {
     'uglify',
   ]);
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('bsync', ['browserSync:html', 'watch']);
-  grunt.registerTask('plone-bsync', ['browserSync:plone', 'watch']);
 };

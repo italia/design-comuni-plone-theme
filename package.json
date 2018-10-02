@@ -27,7 +27,6 @@
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-prettier": "^2.6.2",
     "grunt": "^1.0.3",
-    "grunt-browser-sync": "^2.2.0",
     "grunt-cli": "^1.2.0",
     "grunt-concat-css": "^0.3.2",
     "grunt-contrib-less": "^2.0.0",
