@@ -5,7 +5,7 @@ Changelog
 3.0.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Added 'big' scale in allowed_sizes, used in leadimage viewlet [fdelia]
 
 
 3.0.6 (2018-09-27)

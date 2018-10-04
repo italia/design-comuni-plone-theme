@@ -88,6 +88,7 @@
       <element>newshome 450:300</element>
       <element>newshighlight 540:360</element>
       <element>newsbig 1800:600</element>
+      <element>big 300:200</element>
     </value>
   </record>
 
