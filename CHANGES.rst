@@ -6,6 +6,7 @@ Changelog
 ------------------
 
 - Added 'big' scale in allowed_sizes, used in leadimage viewlet [fdelia]
+- Enhancing styles for default Plone search page [nzambello]
 
 
 3.0.6 (2018-09-27)
