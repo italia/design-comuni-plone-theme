@@ -3,7 +3,7 @@
      tal:condition="view/showLanguageSelector">
     <div class="header-banner-inner" tal:attributes="class string:header-banner-inner">
         <div class="header-banner-owner" tal:condition="python: view.header_link_label and view.header_link_url">
-          <a href="${view/header_link_url}" target="_blank">${view/header_link_label}</a>
+          <a href="${view/header_link_url}">${view/header_link_label}</a>
         </div>
         <div class="header-banner-language"
              tal:condition="view/available"
@@ -35,7 +35,7 @@
         </div>
         <div class="header-banner-second-link"
              tal:condition="python: view.header_second_link_label and view.header_second_link_url">
-             <a href="${view/header_second_link_url}" target="_blank">${view/header_second_link_label}</a>
+             <a href="${view/header_second_link_url}">${view/header_second_link_label}</a>
         </div>
         <div class="header-banner-login-button"
              tal:condition="view/login_button_visible"
