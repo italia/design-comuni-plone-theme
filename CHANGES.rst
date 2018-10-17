@@ -5,7 +5,7 @@ Changelog
 3.0.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Removed target="_blank" from header banner links [nzambello]
 
 
 3.0.7 (2018-10-11)
