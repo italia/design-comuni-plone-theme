@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
+from design.plone.theme import _
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.dexterity.interfaces import IDexterityContent
 from plone.supermodel import model
-from design.plone.theme import _
 from zope import schema
 from zope.component import adapter
 from zope.interface import implementer
@@ -18,7 +18,7 @@ class IClassOnView(model.Schema):
             u'help_class_on_view',
             default=u'CSS Class'),
         required=False,
-        )
+    )
 
     model.fieldset(
         'layout',
