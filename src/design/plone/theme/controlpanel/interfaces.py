@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from plone.supermodel import model
 from design.plone.theme import _
+from plone.supermodel import model
 from zope import schema
 
 

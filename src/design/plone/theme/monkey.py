@@ -15,4 +15,4 @@ def guess_icon_path(mimetype, icons_dir=ICONS_DIR, icon_ext='svg'):
     # icon_path = '%s.png' % mimetype.major()
     # if os.path.exists(os.path.join(icons_dir, icon_path)):
     #     return PREFIX + icon_path
-    return PREFIX + 'default.svg'
+    return '{0}default.svg'.format(PREFIX)
