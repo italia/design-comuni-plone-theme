@@ -14,7 +14,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='design.plone.theme',
-    version='3.0.8',
+    version='3.0.9.dev0',
     description="Theme for Italia Design System",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
