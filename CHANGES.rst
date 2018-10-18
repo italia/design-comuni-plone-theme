@@ -5,7 +5,8 @@ Changelog
 3.0.9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add personal-information link in header viewlet when an user is logged.
+  [cekk]
 
 
 3.0.8 (2018-10-18)

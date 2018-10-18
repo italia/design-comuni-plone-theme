@@ -171,3 +171,12 @@ class HeaderBannerViewlet(LanguageSelectorViewlet):
         return (self.header_link_label and self.header_link_url) or (
             self.header_second_link_url and self.header_second_link_url
         ) or self.login_button_visible or self.available()
+
+    def getUserInfos(self):
+        if api.user.is_anonymous():
+            return {}
+        user = api.user.get_current()
+        return {
+            'id': user.getProperty('id'),
+            'fullname': user.getProperty('fullname') or user.getProperty('id')
+        }
