@@ -13,6 +13,7 @@ from urllib2 import quote
 
 import logging
 
+
 logger = logging.getLogger(__name__)
 
 socialCSSClassDict = {
@@ -90,7 +91,6 @@ class LogoViewlet(base.ViewletBase):
         super(LogoViewlet, self).update()
         self.site_title = api.portal.get_registry_record('plone.site_title', )
 
-        # TODO: should this be changed to settings.site_title?
         self.navigation_root_title = self.site_title
         self.logo_title = self.site_title
         self.img_src = getSiteLogo()
@@ -171,3 +171,12 @@ class HeaderBannerViewlet(LanguageSelectorViewlet):
         return (self.header_link_label and self.header_link_url) or (
             self.header_second_link_url and self.header_second_link_url
         ) or self.login_button_visible or self.available()
+
+    def getUserInfos(self):
+        if api.user.is_anonymous():
+            return {}
+        user = api.user.get_current()
+        return {
+            'id': user.getProperty('id'),
+            'fullname': user.getProperty('fullname') or user.getProperty('id')
+        }

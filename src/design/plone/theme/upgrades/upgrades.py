@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
-from plone import api
-from plone.registry.interfaces import IRegistry
-from Products.CMFPlone.interfaces.controlpanel import IImagingSchema
 from design.plone.theme import logger
 from design.plone.theme.controlpanel.interfaces import IDesignPloneThemeSettings  # noqa
+from plone import api
+from plone.registry.interfaces import IRegistry
 from zope.component import getUtility
 
 

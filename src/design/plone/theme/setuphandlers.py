@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 from plone import api
 from Products.CMFPlone.interfaces import INonInstallable
-from zope.interface import implementer
-from redturtle.tiles.management.interfaces import IRedturtleTilesManagementSettings  # noqa
 from Products.MimetypesRegistry import MimeTypeItem
+from redturtle.tiles.management.interfaces import IRedturtleTilesManagementSettings  # noqa
+from zope.interface import implementer
 
 
 @implementer(INonInstallable)

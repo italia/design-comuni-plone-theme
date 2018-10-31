@@ -43,9 +43,17 @@
           <a href="${context/absolute_url}/login" tal:condition="isAnon">
             <span i18n:translate="login">Login</span>
           </a>
-          <a href="${context/absolute_url}/logout" tal:condition="not: isAnon">
-            <span i18n:translate="logout">Logout</span>
-          </a>
+          <tal:logged tal:condition="not: isAnon">
+            <a href="${context/portal_url}/@@personal-information"
+               class="header-login-userinfo"
+               tal:define="user_infos view/getUserInfos">
+              <span>${user_infos/fullname}</span>
+            </a>
+            <a href="${context/absolute_url}/logout"
+               class="header-login-logout">
+              <span i18n:translate="logout">Logout</span>
+            </a>
+          </tal:logged>
         </div>
     </div>
 </div>

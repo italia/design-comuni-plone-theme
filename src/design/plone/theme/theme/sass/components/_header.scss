@@ -39,7 +39,7 @@
     .header-banner-second-link,
     .header-banner-language,
     .header-banner-login-button {
-        margin-left: 3%;
+        margin-left: 2rem;
     }
 
     .header-banner-second-link {
@@ -87,6 +87,12 @@
             &:hover,
             &:focus {
                 border-bottom: 1px solid #fff;
+            }
+        }
+
+        a.header-login-userinfo {
+            + a.header-login-logout {
+                margin-left: 2rem;
             }
         }
     }

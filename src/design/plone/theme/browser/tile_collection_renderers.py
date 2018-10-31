@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 from collective.tiles.collection.interfaces import ICollectionTileRenderer
+from design.plone.theme import _
 from plone import api
 from plone.api.exc import InvalidParameterError
 from plone.app.discussion.interfaces import IConversation
 from Products.Five.browser import BrowserView
-from design.plone.theme import _
 from ZODB.POSException import POSKeyError
 from zope.interface import implementer
 
