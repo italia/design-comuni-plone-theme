@@ -40,11 +40,13 @@ Questo tema può essere visto in azione nei seguenti siti web:
 - `regione.emilia-romagna.it`__
 - `comune.santarcangelo.rn.it`__
 - `comune.calderaradireno.bo.it`__
+- `comune.verucchio.rn.it`__
 
 __ http://digitale.regione.emilia-romagna.it
 __ http://www.regione.emilia-romagna.it
 __ http://www.comune.santarcangelo.rn.it
 __ http://www.comune.calderaradireno.bo.it
+__ http://www.comune.verucchio.rn.it
 
 
 Traduzioni
@@ -53,6 +55,7 @@ Traduzioni
 Questo prodotto è stato tradotto nelle seguenti lingue:
 
 - Italiano
+- English
 
 
 Installazione
@@ -75,6 +78,11 @@ Al successivo avvio del sito troverete il tema disponibile tra i prodotti aggiun
 
 Sviluppo
 --------
+
+Per prima cosa bisogna installare le dipendenze npm:
+
+``npm install``
+
 
 Per la compilazione del codice Sass e la build del bundle JavaScript, sono presenti alcuni script nel ``package.json``:
 

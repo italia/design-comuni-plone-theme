@@ -1,0 +1,74 @@
+publiccode-yaml-version: development
+name: Design Plone Theme
+releaseDate: '2017-12-22'
+url: 'https://github.com/italia/design.plone.theme'
+landingURL: 'https://github.com/italia/design.plone.theme'
+developmentStatus: development
+softwareType: addon
+platforms:
+  - web
+usedBy:
+  - Regione Emilia-Romagna
+  - Agenda Digitale Emilia-Romagna
+  - Comune di Santarcangelo di Romagna
+  - Comune di Calderara di Reno
+tags:
+  - content-management
+  - news
+  - publishing
+  - accessibility
+dependsOn:
+  open:
+    - name: Plone CMS
+      version: '5'
+maintenance:
+  type: contract
+  contacts:
+    - name: Nicola Zambello
+      email: nicola.zambello@redturtle.it
+      affiliation: RedTurtle
+  contractors:
+    - name: Regione Emilia Romagna
+      until: '2019-12-22'
+      website: 'https://www.regione.emilia-romagna.it/'
+legal:
+  repoOwner: RedTurtle
+  license: GPL-3.0
+  mainCopyrightOwner: RedTurtle
+localisation:
+  localisationReady: 'yes'
+  availableLanguages:
+    - English
+    - Italian
+it:
+  conforme:
+    accessibile: 'yes'
+    sicuro: 'yes'
+    privacy: 'yes'
+description:
+  eng:
+    shortDescription: A Plone theme that implements the Italia design system
+    documentation: >-
+      https://docs.google.com/document/d/1ncSgzj0JABBWR1Jt7sxtIH5qwjCVN10qBm7uA8uM5cw/export?format=pdf
+    freeTags:
+      - plone
+      - theme
+      - agid
+      - italia
+      - design-system
+    localisedName: Design Plone Theme
+    longDescription: >-
+      <p>This is the first Plone theme that is compliant with the <a
+      href="https://design-italia.readthedocs.io/it/stable/index.html"
+      rel="nofollow">Italia design system</a> guidelines. It is built on
+      guidelines' version 2017.1</p>
+  ita:
+    shortDescription: Un tema Plone che implementa Italia design system
+    documentation: >-
+      https://docs.google.com/document/d/1ncSgzj0JABBWR1Jt7sxtIH5qwjCVN10qBm7uA8uM5cw/export?format=pdf
+    localisedName: Design Plone Theme
+    longDescription: >-
+      <p>Il primo tema Plone conforme a <a
+      href="https://design-italia.readthedocs.io/it/stable/index.html"
+      rel="nofollow">Italia design system</a>. &nbsp;Questo tema si basa sulla
+      versione 2017.1 delle linee guida.</p>
