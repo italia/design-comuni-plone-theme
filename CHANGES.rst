@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.0.9 (unreleased)
+3.0.9 (2018-11-08)
 ------------------
 
 - Add personal-information link in header viewlet when an user is logged.
