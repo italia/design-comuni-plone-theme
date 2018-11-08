@@ -1,3 +1,4 @@
 *.pt
 *.xml
 *.zcml
+src/design/plone/theme/theme/sass/bootstrap
