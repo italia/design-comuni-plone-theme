@@ -5,7 +5,10 @@ Changelog
 3.0.10 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Added publiccode.yml
+  [nzambello]
+- Breadcrumbs styles are now less specific in order to allow breadcrumbs viewlet to be moved in another manager
+  [pnicolli]
 
 
 3.0.9 (2018-11-08)
