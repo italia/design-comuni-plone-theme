@@ -6,71 +6,67 @@
 }
 
 .template-newsitem_view {
-    #viewlet-above-content {
-        #portal-breadcrumbs {
-            li {
-                &:last-of-type {
-                    display: none;
-                }
+    #portal-breadcrumbs {
+        li {
+            &:last-of-type {
+                display: none;
             }
         }
     }
 }
 
-#viewlet-above-content {
-    #portal-breadcrumbs {
-        background: $gray-bg;
-        padding: 0;
+#portal-breadcrumbs {
+    background: $gray-bg;
+    padding: 0;
 
-        ol {
-            @extend .list-unstyled, .list-inline;
-            font-size: 0.95em;
-            font-weight: $light;
-            padding: 10px 0px;
-            margin: 0;
+    ol {
+        @extend .list-unstyled, .list-inline;
+        font-size: 0.95em;
+        font-weight: $light;
+        padding: 10px 0px;
+        margin: 0;
 
-            li {
-                padding: 0;
+        li {
+            padding: 0;
 
+            &:before {
+                content: '/';
+                padding: 0 0.4em;
+            }
+
+            &:nth-child(-n + 2) {
+                padding: 0 0.4em;
                 &:before {
-                    content: '/';
-                    padding: 0 0.4em;
-                }
-
-                &:nth-child(-n + 2) {
-                    padding: 0 0.4em;
-                    &:before {
-                        display: none;
-                    }
-                }
-
-                a {
-                    color: $brand-primary;
-
-                    &:focus,
-                    &:hover {
-                        color: #000;
-                    }
+                    display: none;
                 }
             }
 
-            li#breadcrumbs-home {
-                padding-left: 0;
+            a {
+                color: $brand-primary;
 
-                a {
-                    display: inline-flex;
-                    width: 1.125em;
-                    padding-left: 1.5em;
-                    padding-right: 0;
-                    overflow: hidden;
-                    height: 100%;
-                    position: relative;
+                &:focus,
+                &:hover {
+                    color: #000;
+                }
+            }
+        }
 
-                    svg {
-                        position: absolute;
-                        top: calc(50% - 0.5em);
-                        left: 0;
-                    }
+        li#breadcrumbs-home {
+            padding-left: 0;
+
+            a {
+                display: inline-flex;
+                width: 1.125em;
+                padding-left: 1.5em;
+                padding-right: 0;
+                overflow: hidden;
+                height: 100%;
+                position: relative;
+
+                svg {
+                    position: absolute;
+                    top: calc(50% - 0.5em);
+                    left: 0;
                 }
             }
         }
