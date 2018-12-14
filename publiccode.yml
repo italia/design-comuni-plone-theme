@@ -29,9 +29,9 @@ maintenance:
       email: nicola.zambello@redturtle.it
       affiliation: RedTurtle
   contractors:
-    - name: Regione Emilia Romagna
+    - name: RedTurtle
       until: '2019-12-22'
-      website: 'https://www.regione.emilia-romagna.it/'
+      website: 'https://www.redturtle.it/'
 legal:
   repoOwner: RedTurtle
   license: GPL-3.0
