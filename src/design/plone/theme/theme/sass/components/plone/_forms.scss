@@ -279,8 +279,8 @@ input[type='checkbox'] {
 }
 
 .field.error {
-    background: #fbe8e4;
-    box-shadow: 0 0 0 5px #fbe8e4;
+    background: #ffe6e6;
+    box-shadow: 0 0 0 5px #ffe6e6;
 }
 .field.error .help-block,
 .field.error .control-label,
@@ -309,7 +309,7 @@ input[type='checkbox'] {
 }
 .field.error > label,
 .field.error div.error {
-    color: #ff0000;
+    color: #a00000;
 }
 .field.error div.error {
     padding-left: 30px;
@@ -336,7 +336,7 @@ input[type='checkbox'] {
 .field.error input,
 .field.error textarea,
 .field.error select {
-    border-color: #ff0000;
+    border-color: #a00000;
 }
 .field.error input:focus,
 .field.error textarea:focus,
@@ -370,7 +370,7 @@ input[type='checkbox'] {
 //*// Required
 label .required {
     &:after {
-        color: #ff0000;
+        color: #a00000;
         content: '•';
         font-size: 200%;
         line-height: 0;
