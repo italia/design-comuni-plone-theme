@@ -4,6 +4,7 @@
 
     &.info {
         @extend .alert-info;
+        color: #004d73;
 
         span a {
             @extend .btn, .btn-info, .btn-xs;
@@ -13,9 +14,13 @@
         }
     }
     &.warning {
-        @extend .alert-warning;
+        background-color: #fcf8e3;
+        color: #6e4b00;
+        border-color: #faebcc;
     }
     &.error {
-        @extend .alert-danger;
+        background-color: #ffe6e6;
+        color: #a00000;
+        border-color: #ebccd1;
     }
 }
