@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.0.10 (unreleased)
+3.0.10 (2018-12-20)
 -------------------
 
 - Added publiccode.yml
