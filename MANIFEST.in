@@ -2,6 +2,7 @@ graft src/design
 graft docs
 include LICENSE
 include *.rst
+include publiccode.yml
 global-exclude *.pyc
 include *.js
 include *.json
