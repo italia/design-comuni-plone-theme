@@ -5,14 +5,14 @@ Changelog
 3.0.11 (unreleased)
 -------------------
 
-- Added role attribute for portal message with diazo [nzambello]
+- a11y: added role attribute for portal message with diazo [nzambello]
 
 
 3.0.10 (2018-12-20)
 -------------------
 
-- Added publiccode.yml
-  [nzambello]
+- Added publiccode.yml [nzambello]
+- a11y: fixed contrast in alerts/messages, WCAG 2 AAA compliant [nzambello]
 - Breadcrumbs styles are now less specific in order to allow breadcrumbs viewlet to be moved in another manager
   [pnicolli]
 
