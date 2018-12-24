@@ -77,8 +77,8 @@
     <xsl:variable name="status">
       <xsl:if test="@class[contains(., 'info')]">status</xsl:if>
       <xsl:if test="@class[contains(., 'success')]">status</xsl:if>
-      <xsl:if test="@class[contains(., 'warning')]">alert</xsl:if>
-      <xsl:if test="@class[contains(., 'error')]">alert</xsl:if>
+      <xsl:if test="@class[contains(., 'warning')]">polite</xsl:if>
+      <xsl:if test="@class[contains(., 'error')]">polite</xsl:if>
     </xsl:variable>
     <div role="{$status}"><xsl:copy-of select="attribute::*" />
       <xsl:apply-templates select="./node()" />

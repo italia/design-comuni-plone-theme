@@ -5,7 +5,7 @@ Changelog
 3.0.11 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Added role attribute for portal message with diazo [nzambello]
 
 
 3.0.10 (2018-12-20)
