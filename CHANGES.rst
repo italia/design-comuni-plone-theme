@@ -6,6 +6,7 @@ Changelog
 -------------------
 
 - a11y: added role attribute for portal message with diazo [nzambello]
+- Fixed contact-info view styles [nzambello]
 
 
 3.0.10 (2018-12-20)
