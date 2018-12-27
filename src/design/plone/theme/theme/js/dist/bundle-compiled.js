@@ -275,6 +275,11 @@ require(['jquery', 'ellipsed'], function($, ellipsed) {
       icon: 'fas fa-print',
       prepend: true,
     },
+    {
+      selector: 'nav.pagination ul li .arrow',
+      icon: 'fas fa-angle-right',
+      prepend: false,
+    },
   ];
 
   $(document).ready(function() {
