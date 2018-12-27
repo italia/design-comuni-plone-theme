@@ -9,6 +9,11 @@ Changelog
 - Fixed contact-info view styles [nzambello]
 
 
+Compatibility with Plone 5.1.4:
+
+- Updated styles for pagination, improved accessibility and responsiveness [nzambello]
+
+
 3.0.10 (2018-12-20)
 -------------------
 
