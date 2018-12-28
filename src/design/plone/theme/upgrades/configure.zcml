@@ -20,5 +20,13 @@
     description="Added a field in theme controlpanel"
     handler=".upgrades.import_records_registry"
     />
+  <genericsetup:upgradeStep
+    source="1200"
+    destination="1300"
+    profile="design.plone.theme:default"
+    title="Plone 5.1.4 compatibility"
+    description=""
+    handler=".upgrades.to_1300"
+    />
 
 </configure>
