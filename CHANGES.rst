@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.0.11 (unreleased)
+3.1.0 (unreleased)
 -------------------
 
 - a11y: added role attribute for portal message with diazo [nzambello]
@@ -12,6 +12,8 @@ Changelog
 Compatibility with Plone 5.1.4:
 
 - Updated styles for pagination, improved accessibility and responsiveness [nzambello]
+- `plone-logged-in` override is registered only if Plone version is < 5.1.4
+  [cekk]
 
 
 3.0.10 (2018-12-20)
