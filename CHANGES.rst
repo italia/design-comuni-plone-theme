@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-3.1.0 (unreleased)
--------------------
+3.1.0 (2019-01-09)
+------------------
 
 - a11y: added role attribute for portal message with diazo [nzambello]
 - Fixed contact-info view styles [nzambello]
