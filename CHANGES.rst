@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.1.1 (unreleased)
+3.1.1 (2019-01-22)
 ------------------
 
 - Fixed a bug within diazo rules [nzambello]
