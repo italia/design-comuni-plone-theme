@@ -5,7 +5,7 @@ Changelog
 3.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fixed a bug within diazo rules [nzambello]
 
 
 3.1.0 (2019-01-09)

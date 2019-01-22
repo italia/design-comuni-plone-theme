@@ -6,9 +6,6 @@
        xmlns:xi="http://www.w3.org/2001/XInclude">
 
 
-   <!-- Include the backend theme -->
-   <xi:include href="backend.xml" />
-
    <rules css:if-not-content="body.viewpermission-view, body.viewpermission-none">
      <after css:theme-children="head">
       <link rel="stylesheet" href="{$portal_url}/++theme++design.plone.theme/css/designplonetheme.backend.css" />
@@ -19,5 +16,8 @@
      <theme href="index.html" />
      <xi:include href="designplonetheme_rules.xml" />
    </rules>
+
+   <!-- Include the backend theme -->
+   <xi:include href="backend.xml" />
 
 </rules>
