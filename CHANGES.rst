@@ -5,7 +5,7 @@ Changelog
 3.1.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Sovrascritta label errore portalMessage [nzambello]
 
 
 3.1.1 (2019-01-22)
