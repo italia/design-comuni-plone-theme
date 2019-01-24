@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # i18ndude should be available in current $PATH (eg by running
 # ``export PATH=$PATH:$BUILDOUT_DIR/bin`` when i18ndude is located in your buildout's bin directory)
 #
@@ -6,7 +7,13 @@
 # locales/[language]/LC_MESSAGES/design.plone.theme.po
 # (e.g. locales/de/LC_MESSAGES/design.plone.theme.po)
 
-domain=design.plone.theme
+pkg_domain=design.plone.theme
 
-i18ndude rebuild-pot --pot $domain.pot --create $domain --merge manual.pot ../
-i18ndude sync --pot $domain.pot */LC_MESSAGES/$domain.po
+i18ndude rebuild-pot --pot $pkg_domain.pot --create $pkg_domain --merge manual.pot ../
+
+declare -a domains=( design.plone.theme plone z3c.form collective.z3cform.wizard)
+for domain in "${domains[@]}"
+do
+    i18ndude sync --pot $domain.pot */LC_MESSAGES/$domain.po
+done
+
