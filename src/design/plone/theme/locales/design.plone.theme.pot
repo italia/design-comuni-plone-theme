@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2018-09-06 07:51+0000\n"
+"POT-Creation-Date: 2019-01-24 09:53+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -209,7 +209,7 @@ msgid "login_button_bisible"
 msgstr ""
 
 #. Default: "Logout"
-#: ../browser/templates/header_banner.pt:47
+#: ../browser/templates/header_banner.pt:54
 msgid "logout"
 msgstr ""
 
