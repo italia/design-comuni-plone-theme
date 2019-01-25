@@ -1,0 +1,156 @@
+// from https://github.com/plone/plone.app.event/blob/464e206fcd0ed3e712c9fc3d10249898b2e635c7/plone/app/event/browser/resources/event.css
+
+.event.summary {
+    float: right;
+    clear: right;
+    margin: 1em 0 1em 1em;
+}
+
+// BEGIN COMMON EVENT STYLES
+article.vevent a.event_ical img {
+    vertical-align: baseline;
+    height: 1em;
+    width: auto;
+    color: #007bb3;
+}
+
+.vevent {
+    .cal_date {
+        float: left;
+        vertical-align: top;
+        text-align: center;
+        margin: 42px 1.5em 0.5em 0;
+        background-color: white;
+        border-radius: 0.5em;
+        min-width: 4.4em;
+    }
+
+    .cal_wkday {
+        display: block;
+        font-size: 1em;
+        font-weight: normal;
+        padding-bottom: 0.3em;
+    }
+
+    .cal_day {
+        font-size: 1.7em;
+        display: block;
+        padding-top: 0.3em;
+    }
+
+    .cal_month {
+        font-size: 1.1em;
+        line-height: 1.3em;
+        background: #007bb3;
+        display: block;
+    }
+
+    .cal_info {
+        margin-left: 9em;
+    }
+
+    #content & {
+        // horizontal event metadata
+        ul {
+            &.metadata {
+                margin: 0.8em 0;
+            }
+
+            &.horizontal {
+                padding: 0;
+
+                li {
+                    display: inline-block;
+                    line-height: 1.5em;
+                    list-style-image: none;
+                    list-style-type: none;
+                }
+            }
+
+            &.horizontal.metadata {
+                li {
+                    &::after {
+                        content: ' \2014 ';
+                    }
+
+                    &:last-child::after {
+                        content: '';
+                    }
+                }
+
+                .category span {
+                    &::after {
+                        content: ',';
+                    }
+                    &:last-child::after {
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+
+    .timezone {
+        display: block;
+        margin-top: 0.5em;
+        padding: 0.2em 0;
+        background-color: #ffe;
+        color: #354;
+        width: 100%;
+    }
+
+    .timerange,
+    .timezone {
+        font-size: 85%;
+        line-height: 1em;
+        white-space: nowrap;
+    }
+
+    .datedisplay {
+        line-height: 1.5em;
+        margin-bottom: 0.2em;
+        font-size: 100%;
+    }
+}
+// END COMMON EVENT STYLES
+
+// BEGIN EVENT LISTING STYLES
+.template-event_listing {
+    .documentFirstHeading {
+        position: relative;
+
+        nav {
+            font-size: 14px;
+            position: absolute;
+            right: 0;
+            bottom: 13px;
+
+            ul {
+                margin: 0;
+                list-style-type: none;
+
+                &.mode_selector {
+                    display: block;
+                    margin-left: 0;
+                    list-style-type: none;
+
+                    li {
+                        display: inline;
+
+                        a {
+                            display: inline-block;
+                            margin-left: 0.5em;
+
+                            &:hover,
+                            &:focus {
+                                text-decoration: underline;
+                                border-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// END EVENT LISTING STYLES
