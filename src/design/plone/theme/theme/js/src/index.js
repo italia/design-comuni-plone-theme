@@ -135,6 +135,11 @@ require(['jquery', 'ellipsed'], function($, ellipsed) {
       icon: 'fas fa-angle-right',
       prepend: false,
     },
+    {
+      selector: 'article.vevent a.event_ical',
+      icon: 'far fa-calendar',
+      prepend: true,
+    },
   ];
 
   $(document).ready(function() {
