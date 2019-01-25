@@ -1,3 +1,5 @@
+@import 'events_plone50';
+
 body.portaltype-event {
     ul.event.summary.details {
         float: right;
@@ -124,7 +126,7 @@ body.portaltype-event {
         }
     }
 
-    article .vevent {
+    article.vevent {
         display: flex;
         padding: 1.4rem 0 1rem;
         border-top: 3px solid $text-color;
@@ -152,6 +154,16 @@ body.portaltype-event {
                 font-weight: $semibold;
                 text-transform: uppercase;
                 font-size: 0.8em;
+            }
+        }
+
+        a.event_ical {
+            img {
+                display: none;
+            }
+
+            svg {
+                margin-right: 0.5rem;
             }
         }
     }

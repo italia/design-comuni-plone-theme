@@ -17,6 +17,7 @@ import faChevronUp from '@fortawesome/fontawesome-free-solid/faChevronUp';
 import faChevronDown from '@fortawesome/fontawesome-free-solid/faChevronDown';
 import faChevronRight from '@fortawesome/fontawesome-free-solid/faChevronRight';
 import faSearch from '@fortawesome/fontawesome-free-solid/faSearch';
+import faCalendar from '@fortawesome/fontawesome-free-regular/faCalendar';
 import faCalendarAlt from '@fortawesome/fontawesome-free-regular/faCalendarAlt';
 import faTags from '@fortawesome/fontawesome-free-solid/faTags';
 import faFolderOpen from '@fortawesome/fontawesome-free-solid/faFolderOpen';
@@ -56,6 +57,7 @@ export const init = () => {
     faAngleUp,
     faAngleDown,
     faSearch,
+    faCalendar,
     faCalendarAlt,
     faTags,
     faFolderOpen,
