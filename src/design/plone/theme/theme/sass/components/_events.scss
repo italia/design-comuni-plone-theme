@@ -117,6 +117,16 @@ body.portaltype-event {
     }
 }
 
+.template-event_view {
+    ul.event.summary.details {
+        li.event-calendar {
+            img {
+                display: none;
+            }
+        }
+    }
+}
+
 .template-event_listing {
     .cal_info {
         .documentByLine {

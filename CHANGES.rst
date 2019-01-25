@@ -8,6 +8,7 @@ Changelog
 - Sovrascritta label errore portalMessage [nzambello]
 - Browserlist: Updated iOS (Safari) version from 6+ to 9+ [nzambello]
 - Imported events styles from old plone.app.event resource [nzambello]
+- Minor fixes for events [nzambello]
 
 
 3.1.1 (2019-01-22)

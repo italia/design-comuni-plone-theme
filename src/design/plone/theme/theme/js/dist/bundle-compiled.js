@@ -297,6 +297,11 @@ require(['jquery', 'ellipsed'], function($, ellipsed) {
       icon: 'far fa-calendar',
       prepend: true,
     },
+    {
+      selector: '.event.summary.details li.event-calendar a',
+      icon: 'far fa-calendar',
+      prepend: true,
+    },
   ];
 
   $(document).ready(function() {
