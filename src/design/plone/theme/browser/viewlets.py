@@ -9,7 +9,12 @@ from plone.app.layout.viewlets.content import DocumentBylineViewlet
 from plone.app.multilingual.browser.selector import LanguageSelectorViewlet
 from Products.CMFPlone.utils import getSiteLogo
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from urllib2 import quote
+
+try:
+    from urllib import quote
+except ImportError:
+    from urllib.parse import quote
+
 
 import logging
 
@@ -54,14 +59,16 @@ class SocialViewlet(base.ViewletBase):
         """
         """
         allowed_types = api.portal.get_registry_record(
-            'available_types', interface=IDesignPloneThemeSettings)
+            'available_types', interface=IDesignPloneThemeSettings
+        )
         if self.context.portal_type in allowed_types:
             return self.index()
         return ''
 
     def get_socials(self):
         socials = api.portal.get_registry_record(
-            'available_socials', interface=IDesignPloneThemeSettings)
+            'available_socials', interface=IDesignPloneThemeSettings
+        )
         return socials
 
     def get_css_class(self, social_type):
@@ -92,7 +99,7 @@ class LogoViewlet(base.ViewletBase):
     def update(self):
 
         super(LogoViewlet, self).update()
-        self.site_title = api.portal.get_registry_record('plone.site_title', )
+        self.site_title = api.portal.get_registry_record('plone.site_title')
 
         self.navigation_root_title = self.site_title
         self.logo_title = self.site_title
@@ -106,7 +113,8 @@ class HeaderSocialViewlet(base.ViewletBase):
     def get_links_list(self):
         try:
             return api.portal.get_registry_record(
-                'follow_us_links', interface=IDesignPloneThemeSettings)
+                'follow_us_links', interface=IDesignPloneThemeSettings
+            )
         except InvalidParameterError:
             return []
 
@@ -121,7 +129,8 @@ class HeaderSocialViewlet(base.ViewletBase):
             except ValueError:
                 logger.warning(
                     '[HeaderSocialViewlet] - skipped entry "{0}"'
-                    ' because is malformed. Check it in control panel.')
+                    ' because is malformed. Check it in control panel.'
+                )
                 continue
         return res
 
@@ -133,6 +142,7 @@ class SkipLinksViewlet(base.ViewletBase):
 
 class AgidSearchBoxViewlet(SearchBoxViewlet):
     """ Search viewlet """
+
     index = ViewPageTemplateFile('templates/searchbox.pt')
 
 
@@ -142,7 +152,8 @@ class HeaderBannerViewlet(LanguageSelectorViewlet):
     def get_value_from_registry(self, record):
         try:
             value = api.portal.get_registry_record(
-                record, interface=IDesignPloneThemeSettings)
+                record, interface=IDesignPloneThemeSettings
+            )
         except KeyError:
             value = u''
 
@@ -151,7 +162,8 @@ class HeaderBannerViewlet(LanguageSelectorViewlet):
     def get_bool_value_from_registry(self, record):
         try:
             value = api.portal.get_registry_record(
-                record, interface=IDesignPloneThemeSettings)
+                record, interface=IDesignPloneThemeSettings
+            )
         except KeyError:
             value = False
 
@@ -161,19 +173,26 @@ class HeaderBannerViewlet(LanguageSelectorViewlet):
         super(HeaderBannerViewlet, self).update()
 
         self.header_link_label = self.get_value_from_registry(
-            'header_link_label')
+            'header_link_label'
+        )
         self.header_link_url = self.get_value_from_registry('header_link_url')
         self.header_second_link_label = self.get_value_from_registry(
-            'header_second_link_label')
+            'header_second_link_label'
+        )
         self.header_second_link_url = self.get_value_from_registry(
-            'header_second_link_url')
+            'header_second_link_url'
+        )
         self.login_button_visible = self.get_bool_value_from_registry(
-            'login_button_visible')
+            'login_button_visible'
+        )
 
     def showLanguageSelector(self):
-        return (self.header_link_label and self.header_link_url) or (
-            self.header_second_link_url and self.header_second_link_url
-        ) or self.login_button_visible or self.available()
+        return (
+            (self.header_link_label and self.header_link_url)
+            or (self.header_second_link_url and self.header_second_link_url)
+            or self.login_button_visible
+            or self.available()
+        )
 
     def getUserInfos(self):
         if api.user.is_anonymous():
@@ -181,5 +200,5 @@ class HeaderBannerViewlet(LanguageSelectorViewlet):
         user = api.user.get_current()
         return {
             'id': user.getProperty('id'),
-            'fullname': user.getProperty('fullname') or user.getProperty('id')
+            'fullname': user.getProperty('fullname') or user.getProperty('id'),
         }
