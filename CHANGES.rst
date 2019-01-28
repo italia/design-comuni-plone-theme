@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.1.2 (unreleased)
+3.2.0 (2019-01-28)
 ------------------
 
 - Sovrascritta label errore portalMessage [nzambello]
