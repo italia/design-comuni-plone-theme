@@ -10,32 +10,37 @@ SHARES = {
         'share_url': 'https://www.facebook.com/sharer/sharer.php?u={0}',
         'label': 'Facebook',
         'cssClass': 'fab fa-facebook-f',
+        'target': '_blank',
     },
     'twitter': {
         'share_url': 'https://twitter.com/intent/tweet?url={0}&text={1}',
-
         'label': 'Twitter',
         'cssClass': 'fab fa-twitter',
-    },
-    'google': {
-        'share_url': 'https://plus.google.com/share?url={0}',
-        'label': 'Google',
-        'cssClass': 'fab fa-google-plus-g',
+        'target': '_blank',
     },
     'linkedin': {
         'share_url': 'http://www.linkedin.com/shareArticle?url={0}&title={1}',
         'label': 'Linkedin',
         'cssClass': 'fab fa-linkedin-in',
+        'target': '_blank',
     },
     'pinterest': {
         'share_url': 'https://pinterest.com/pin/create/bookmarklet/?media={0}&url={1}&is_video={2}&description={3}',  # noqa
         'label': 'Pinterest',
         'cssClass': 'fab fa-pinterest',
+        'target': '_blank',
     },
     'pocket': {
         'share_url': 'https://getpocket.com/save?url={0}&title={1}',
         'label': 'Pocket',
         'cssClass': 'fab fa-pocket',
+        'target': '_blank',
+    },
+    'email': {
+        'share_url': '{}/sendto_form',
+        'label': 'Email',
+        'cssClass': 'far fa-envelope',
+        'target': '_self',
     },
 }
 

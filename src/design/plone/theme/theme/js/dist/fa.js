@@ -223,6 +223,10 @@ define('fa_rt', [], function() {
 
         var _faCrosshairs2 = _interopRequireDefault(_faCrosshairs);
 
+        var _faEnvelope = __webpack_require__(36);
+
+        var _faEnvelope2 = _interopRequireDefault(_faEnvelope);
+
         function _interopRequireDefault(obj) {
           return obj && obj.__esModule ? obj : { default: obj };
         }
@@ -262,7 +266,8 @@ define('fa_rt', [], function() {
             _faPrint2.default,
             _faListUl2.default,
             _faCircle2.default,
-            _faCrosshairs2.default
+            _faCrosshairs2.default,
+            _faEnvelope2.default
           );
         });
 
@@ -338,9 +343,9 @@ define('fa_rt', [], function() {
           }
         );
         /*!
-         * Font Awesome Free 5.0.13 by @fontawesome - https://fontawesome.com
-         * License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
-         */
+ * Font Awesome Free 5.0.13 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
         var noop = function noop() {};
 
         var _WINDOW = {};
@@ -3120,6 +3125,22 @@ define('fa_rt', [], function() {
             [],
             'f05b',
             'M500 224h-30.364C455.724 130.325 381.675 56.276 288 42.364V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v30.364C130.325 56.276 56.276 130.325 42.364 224H12c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h30.364C56.276 381.675 130.325 455.724 224 469.636V500c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12v-30.364C381.675 455.724 455.724 381.675 469.636 288H500c6.627 0 12-5.373 12-12v-40c0-6.627-5.373-12-12-12zM288 404.634V364c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40.634C165.826 392.232 119.783 346.243 107.366 288H148c6.627 0 12-5.373 12-12v-40c0-6.627-5.373-12-12-12h-40.634C119.768 165.826 165.757 119.783 224 107.366V148c0 6.627 5.373 12 12 12h40c6.627 0 12-5.373 12-12v-40.634C346.174 119.768 392.217 165.757 404.634 224H364c-6.627 0-12 5.373-12 12v40c0 6.627 5.373 12 12 12h40.634C392.232 346.174 346.243 392.217 288 404.634zM288 256c0 17.673-14.327 32-32 32s-32-14.327-32-32c0-17.673 14.327-32 32-32s32 14.327 32 32z',
+          ],
+        };
+
+        /***/
+      },
+      /* 36 */
+      /***/ function(module, exports) {
+        module.exports = {
+          prefix: 'far',
+          iconName: 'envelope',
+          icon: [
+            512,
+            512,
+            [],
+            'f0e0',
+            'M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z',
           ],
         };
 
