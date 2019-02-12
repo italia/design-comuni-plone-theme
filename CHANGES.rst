@@ -5,7 +5,8 @@ Changelog
 3.2.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Aggiunta email alle opzioni di condivisione [pnicolli]
+- Rimosso Google+ dalle opzioni di condivisione [pnicolli]
 
 
 3.2.0 (2019-01-28)
