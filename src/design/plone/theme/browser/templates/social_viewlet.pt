@@ -20,7 +20,10 @@
             <ul class="social-list">
                 <tal:results tal:repeat="social results"
                 ><li
-                    ><a tal:attributes="href python: view.get_sharer_url(social); title python: social.title() + ' - apri in una nuova scheda'" href="#" title="Apri in una nuova scheda" target="_blank"
+                    ><a tal:attributes="href python: view.get_sharer_url(social);
+                                        title python: social.title() + ' - apri in una nuova scheda';
+                                        target python: view.get_target(social)"
+                        title="Apri in una nuova scheda"
                         ><i tal:attributes="class python: view.get_css_class(social)" class=""></i
                         ><span tal:content="python: social.title()" class="u-hiddenVisually">Social</span
                     ></a

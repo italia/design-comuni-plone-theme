@@ -33,6 +33,7 @@ import faAngleDown from '@fortawesome/fontawesome-free-solid/faAngleDown';
 import faListUl from '@fortawesome/fontawesome-free-solid/faListUl';
 import faCircle from '@fortawesome/fontawesome-free-solid/faCircle';
 import faCrosshairs from '@fortawesome/fontawesome-free-solid/faCrosshairs';
+import faEnvelope from '@fortawesome/fontawesome-free-regular/faEnvelope';
 
 export const init = () => {
   fontawesome.library.add(
@@ -69,6 +70,7 @@ export const init = () => {
     faPrint,
     faListUl,
     faCircle,
-    faCrosshairs
+    faCrosshairs,
+    faEnvelope
   );
 };

@@ -82,6 +82,9 @@ class SocialViewlet(base.ViewletBase):
             return share_url.format(item_url, title)
         return share_url.format(item_url)
 
+    def get_target(self, social_type):
+        return SHARES.get(social_type, {}).get('target', '_blank')
+
 
 class LogoViewlet(base.ViewletBase):
     index = ViewPageTemplateFile('templates/logo.pt')
