@@ -7,6 +7,7 @@ Changelog
 
 - Aggiunta email alle opzioni di condivisione [pnicolli]
 - Rimosso Google+ dalle opzioni di condivisione [pnicolli]
+- Fix search backdrop z-index [nzambello][pnicolli]
 
 
 3.2.0 (2019-01-28)
