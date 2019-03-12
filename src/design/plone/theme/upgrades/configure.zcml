@@ -29,4 +29,13 @@
     handler=".upgrades.to_1300"
     />
 
+  <genericsetup:upgradeStep
+    source="1300"
+    destination="1350"
+    profile="design.plone.theme:default"
+    title="Remove Google Plus"
+    description=""
+    handler=".upgrades.remove_gplus"
+    />
+
 </configure>
