@@ -22,7 +22,7 @@
   <browser:page
       name="tiles_page_view"
       for="plone.app.blocks.layoutbehavior.ILayoutBehaviorAdaptable"
-      template="templates/tiles_page_view.pt"
+      class=".tiles_page_view.TilesPageView"
       permission="zope2.View"
       layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
       />

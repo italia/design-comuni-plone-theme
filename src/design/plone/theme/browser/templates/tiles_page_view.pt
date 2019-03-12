@@ -18,11 +18,17 @@
     </metal:content-core>
 
     <metal:tiles_slot fill-slot="tiles_slot">
-      <metal:tiles_slot define-macro="tiles_slot">
-        <div class="pat-tiles-management"
-             tal:define="class_on_view context/class_on_view|nothing"
-             tal:attributes="class python: class_on_view and 'pat-tiles-management '+ class_on_view or 'pat-tiles-management'"
-             data-pat-tiles-management="managerId:defaultManager" />
+      <metal:tiles_slot define-macro="tiles_slot"
+                        tal:define="isAnon context/@@plone_portal_state/anonymous;
+                                    class_on_view python:getattr(context, 'class_on_view', '')">
+        <tal:anon condition="isAnon">
+          <div class="tiles-management ${class_on_view}"
+               tal:content="structure context/@@tiles_management"></div>
+        </tal:anon>
+        <tal:auth condition="not:isAnon">
+          <div class="pat-tiles-management tiles-management ${class_on_view}"
+               data-pat-tiles-management="managerId:defaultManager" />
+        </tal:auth>
       </metal:tiles_slot>
     </metal:tiles_slot>
   </body>

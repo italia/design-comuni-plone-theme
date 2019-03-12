@@ -9,6 +9,7 @@ Changelog
 - Rimosso Google+ dalle opzioni di condivisione [pnicolli]
 - Fix search backdrop z-index [nzambello][pnicolli]
 - Backport bootstrap 4 container concept [pnicolli]
+- Aggiunto rendering server-side delle tiles per utenti anonimi [pnicolli]
 
 
 3.2.0 (2019-01-28)
