@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.2.1 (unreleased)
+3.3.0 (2019-03-12)
 ------------------
 
 - Aggiunta email alle opzioni di condivisione [pnicolli]
