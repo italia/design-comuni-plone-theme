@@ -9,15 +9,21 @@
   <body>
     <metal:content-core fill-slot="content-core">
       <metal:content-core define-macro="content-core"
-                          tal:define="toc context/table_of_contents|nothing;">
-        <div id="parent-fieldname-text" 
-          class="content-text ${python: toc and 'pat-autotoc' or ''}"
-          tal:condition="context/text"
-	  tal:content="structure python:context.text.output_relative_to(view.context)"/>
-        <div class="pat-tiles-management"
-             tal:define="class_on_view context/class_on_view|nothing"
-             tal:attributes="class python: class_on_view and 'pat-tiles-management '+ class_on_view or 'pat-tiles-management'"
-             data-pat-tiles-management="managerId:defaultManager" />
+                          tal:define="toc context/table_of_contents|nothing;
+                                      isAnon context/@@plone_portal_state/anonymous;
+                                      class_on_view python: getattr(context, 'class_on_view', '')">
+        <div id="parent-fieldname-text"
+             class="content-text ${python: toc and 'pat-autotoc' or ''}"
+             tal:condition="context/text"
+	           tal:content="structure python:context.text.output_relative_to(view.context)"/>
+        <tal:anon condition="isAnon">
+          <div class="tiles-management ${class_on_view}"
+               tal:content="structure context/@@tiles_management"></div>
+        </tal:anon>
+        <tal:auth condition="not:isAnon">
+          <div class="pat-tiles-management tiles-management ${class_on_view}"
+               data-pat-tiles-management="managerId:defaultManager" />
+        </tal:auth>
       </metal:content-core>
     </metal:content-core>
   </body>
