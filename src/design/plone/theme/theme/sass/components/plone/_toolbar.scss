@@ -93,11 +93,13 @@ body#visual-portal-wrapper.pat-plone #edit-zone {
         color: #fff;
     }
 
-    nav {
-        > ul {
-            ul {
-                li {
-                    white-space: normal;
+    @media (max-width: $screen-xs-max) {
+        nav {
+            > ul {
+                ul {
+                    li {
+                        white-space: normal;
+                    }
                 }
             }
         }
@@ -108,7 +110,6 @@ body#visual-portal-wrapper.pat-plone #edit-zone {
         font-size: 100%;
         padding: 0;
         margin: 0;
-        position: relative;
         left: 15px;
         display: inline-block;
         color: inherit;

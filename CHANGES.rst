@@ -6,6 +6,7 @@ Changelog
 ------------------
 
 - Fix per l'override della tiles_view [pnicolli]
+- Fix media query in stili toolbar [pnicolli]
 
 
 3.3.0 (2019-03-12)
