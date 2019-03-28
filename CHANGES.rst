@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.3.1 (unreleased)
+3.3.1 (2019-03-28)
 ------------------
 
 - Fix per l'override della tiles_view [pnicolli]
