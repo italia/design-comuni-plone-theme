@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
-from ..controlpanel.interfaces import IDesignPloneThemeSettings
-from ..vocabularies import SHARES
+from design.plone.theme.controlpanel.interfaces import (
+    IDesignPloneThemeSettings,
+)
+from design.plone.theme.vocabularies import SHARES
 from plone import api
 from plone.api.exc import InvalidParameterError
 from plone.app.layout.viewlets import common as base
@@ -9,12 +11,7 @@ from plone.app.layout.viewlets.content import DocumentBylineViewlet
 from plone.app.multilingual.browser.selector import LanguageSelectorViewlet
 from Products.CMFPlone.utils import getSiteLogo
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-
-try:
-    from urllib import quote
-except ImportError:
-    from urllib.parse import quote
-
+from six.moves.urllib.parse import quote
 
 import logging
 
