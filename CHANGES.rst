@@ -5,7 +5,7 @@ Changelog
 3.3.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix tile collection carousel dots [nzambello]
 
 
 3.3.1 (2019-03-28)
