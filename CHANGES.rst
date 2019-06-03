@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.3.2 (unreleased)
+3.3.2 (2019-06-03)
 ------------------
 
 - Fix tile collection carousel dots [nzambello]
