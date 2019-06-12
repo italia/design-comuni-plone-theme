@@ -5,7 +5,8 @@ Changelog
 3.3.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix relateditems viewlet customization. Now handle empty relations.
+  [cekk]
 
 
 3.3.2 (2019-06-03)
