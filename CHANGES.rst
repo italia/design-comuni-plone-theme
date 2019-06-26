@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.3.3 (unreleased)
+3.3.3 (2019-06-26)
 ------------------
 
 - Fix relateditems viewlet customization. Now handle empty relations.
