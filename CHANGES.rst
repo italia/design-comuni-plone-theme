@@ -7,7 +7,8 @@ Changelog
 
 - Fix relateditems viewlet customization. Now handle empty relations.
   [cekk]
-
+- Fix tiles_page_view condition for text field.
+  [cekk]
 
 3.3.2 (2019-06-03)
 ------------------
