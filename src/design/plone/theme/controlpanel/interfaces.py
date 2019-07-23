@@ -43,7 +43,7 @@ class IDesignPloneThemeSettings(model.Schema):
                               u'the link will not appear properly.\n'
                               u'Available icons are: facebook, twitter, '
                               u'youtube, medium, linkedin, storify, rss, '
-                              u'newsletter.\n'
+                              u'newsletter and instagram.\n'
                               u'Insert a list of values (one per row) in the '
                               u'following form: social_id|url where social_id'
                               u' is one of the social with available icons.'),
