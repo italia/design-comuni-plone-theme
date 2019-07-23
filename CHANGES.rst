@@ -5,7 +5,7 @@ Changelog
 3.3.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Added instagram for social header viewlet [nzambello]
 
 
 3.3.3 (2019-06-26)
