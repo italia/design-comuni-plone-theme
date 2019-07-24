@@ -6,6 +6,7 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 class MainTemplate(BaseView):
 
     main_template_name = 'templates/main_template.pt'
+    ajax_template_name = 'templates/ajax_main_template.pt'
 
     @property
     def macros(self):
