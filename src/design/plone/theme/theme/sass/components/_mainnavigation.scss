@@ -13,6 +13,10 @@
             box-shadow: none;
         }
     }
+
+    &.empty-navigation {
+        display: none;
+    }
 }
 
 #portal-mainnavigation {

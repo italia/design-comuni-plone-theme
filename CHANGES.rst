@@ -6,6 +6,7 @@ Changelog
 ------------------
 
 - Fix for IE: play icon in video collection tile was not displayed [nzambello]
+- Hidden toggle button for navigation if this is empty [nzambello]
 
 
 3.3.4 (2019-07-23)

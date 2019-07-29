@@ -46,6 +46,9 @@
       <xsl:variable name="headerWrapper">
         <xsl:if test="not(//div[@id='header-social'])"> no-social-links</xsl:if>
       </xsl:variable>
+      <xsl:variable name="hasNavigation">
+        <xsl:if test="not(//nav[@class='globalnavWrapper'])"> empty-navigation</xsl:if>
+      </xsl:variable>
 
       <div class="search-social-wrapper{$headerWrapper}">
         <xsl:copy-of select="//*[@id='header-social']"/>
@@ -59,7 +62,7 @@
           <span class="close-icon"></span>
           <span class="sr-only">SEARCH</span>
         </button>
-        <div class="plone-navbar-header">
+        <div class="plone-navbar-header{$hasNavigation}">
           <button type="button"
                   class="plone-navbar-toggle"
                   aria-controls="portal-mainnavigation"
