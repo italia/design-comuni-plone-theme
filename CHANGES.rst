@@ -5,7 +5,7 @@ Changelog
 3.3.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix for IE: play icon in video collection tile was not displayed [nzambello]
 
 
 3.3.4 (2019-07-23)
