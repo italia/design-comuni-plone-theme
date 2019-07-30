@@ -155,4 +155,38 @@ table.Table {
             padding: $table-cell-pad-h;
         }
     }
+
+    &.Table--withBorder.tablesaw-swipe {
+        tr {
+            position: relative;
+        }
+
+        .tablesaw-swipe-cellpersist {
+            z-index: 0;
+            position: sticky;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            height: 100%;
+            border-right: 0;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #fff;
+                z-index: -1;
+                border-right: 1px solid $table-border-color;
+            }
+        }
+    }
+}
+
+@-moz-document url-prefix() {
+    fieldset {
+        display: table-cell;
+    }
 }
