@@ -156,6 +156,14 @@ table.Table {
         }
     }
 
+    &.Table--irregular {
+        tr {
+            th {
+                @extend .u-background-grey-10;
+            }
+        }
+    }
+
     &.Table--withBorder.tablesaw-swipe {
         tr {
             position: relative;
@@ -180,6 +188,10 @@ table.Table {
                 background: #fff;
                 z-index: -1;
                 border-right: 1px solid $table-border-color;
+
+                @media (max-width: 767px) {
+                    box-shadow: 0 0 1rem #e3e3e3;
+                }
             }
         }
     }
