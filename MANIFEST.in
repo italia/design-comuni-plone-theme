@@ -7,6 +7,7 @@ global-exclude *.pyc
 include *.js
 include *.json
 exclude yarn.lock
+exclude .nvmrc
 include .eslintrc
 include .stylelintignore
 include .prettierignore
