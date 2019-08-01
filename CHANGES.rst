@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.3.5 (unreleased)
+3.3.5 (2019-08-01)
 ------------------
 
 - Fix for IE: play icon in video collection tile was not displayed [nzambello]
