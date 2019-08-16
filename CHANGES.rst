@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.3.6 (unreleased)
+3.3.6 (2019-08-16)
 ------------------
 
 - Added registry css_styles definition purge attribute [nzambello]
