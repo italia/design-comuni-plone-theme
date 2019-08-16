@@ -155,7 +155,7 @@
       <title>Advanced static tiles: available CSS styles</title>
       <value_type type="plone.registry.field.TextLine"/>
     </field>
-    <value>
+    <value purge="false">
       <element>portletStaticNavigation|stile menu di navigazione</element>
       <element>PagesTileStatic|stile landing page aree tematiche</element>
     </value>
