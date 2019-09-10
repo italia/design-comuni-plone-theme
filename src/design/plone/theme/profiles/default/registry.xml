@@ -34,6 +34,7 @@
       <element>Bordi visibili|table-bordered</element>
       <element>A righe alternate|table-striped</element>
       <element>Con effetto hover|table-hover</element>
+      <element>Intestazioni scure|table-header-darker</element>
     </value>
   </records>
 

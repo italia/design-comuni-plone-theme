@@ -5,7 +5,7 @@ Changelog
 3.3.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Added styles for tables [nzambello]
 
 
 3.3.6 (2019-08-16)
