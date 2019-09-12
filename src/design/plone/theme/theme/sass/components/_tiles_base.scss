@@ -183,4 +183,16 @@
             }
         }
     }
+    @media (max-width: $screen-sm-max) {
+        .tilesList .tileWrapper {
+            &.colonna-1-di-2,
+            &.colonna-1-di-3,
+            &.colonna-2-di-3 {
+                grid-column: span 12;
+            }
+            &.colonna-1-di-4 {
+                grid-column: span 6;
+            }
+        }
+    }
 }
