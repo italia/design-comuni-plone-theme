@@ -6,6 +6,7 @@ Changelog
 ------------------
 
 - Added styles for tables [nzambello]
+- Fix styles for events calendar view [nzambello]
 
 
 3.3.6 (2019-08-16)
