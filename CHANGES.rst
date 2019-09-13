@@ -7,6 +7,7 @@ Changelog
 
 - Added styles for tables [nzambello]
 - Fix styles for events calendar view [nzambello]
+- Fixed tile sizes for smaller screens [pnicolli]
 
 
 3.3.6 (2019-08-16)
