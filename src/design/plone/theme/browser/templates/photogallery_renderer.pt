@@ -21,7 +21,7 @@
                        i18n:translate="tiles_collection_noresults">
                         No results found
                     </p>
-                    <div tal:define="classID string:carousel-wrapper-${view/data/collection_uid}"
+                    <div tal:define="classID string:carousel-wrapper-${view/id}"
                          tal:attributes="class classID">
                       <ul class="${resultsClass}"
                           tal:condition="results"
