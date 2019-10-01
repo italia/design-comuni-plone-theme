@@ -11,7 +11,7 @@
                                  showCarousel python:'carousel' in (view.data.get('css_class') or '');
                                  renderComments python: 'with-comments' in (view.data.get('css_class') or '');
                                  resultsClass python: showCarousel and 'tileContent pat-slider' or 'tileContent';
-                                 classID string:carousel-wrapper-${view/data/collection_uid};
+                                 classID string:carousel-wrapper-${view/id};
                                  sliderConfig python: showCarousel and '{ &quot;initialSlide&quot;: 0, &quot;slidesToShow&quot;: 3, &quot;slidesToScroll&quot;: 1, &quot;appendArrows&quot;: &quot;.'+classID+'&quot;, &quot;responsive&quot;: [{ &quot;breakpoint&quot;: 768, &quot;settings&quot;: { &quot;slidesToShow&quot;: 1, &quot;slidesToScroll&quot;: 1 } }] }' or None">
         <div class="tile-collection news-collection">
             <div class="tile-collection-container">

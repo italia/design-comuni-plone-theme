@@ -5,7 +5,11 @@ Changelog
 3.3.7 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Added styles for tables [nzambello]
+- Fix styles for events calendar view [nzambello]
+- Fixed tile sizes for smaller screens [pnicolli]
+- Upgraded ellipsed [nzambello]
+- Changed collection UID to tile ID for carousel wrappers [nzambello]
 
 
 3.3.6 (2019-08-16)

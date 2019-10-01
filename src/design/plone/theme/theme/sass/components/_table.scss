@@ -4,44 +4,42 @@ $table-cell-pad-v: 1em;
 $table-hover-color: #e5f1fa;
 $table-stripe-color: #f6f7f9;
 
-table:not(.Table) {
-    @extend .table, .table-bordered;
-    width: auto;
-
-    caption {
-        text-align: center;
-    }
-
-    > thead > tr > th {
-        vertical-align: top;
-        border: 0;
-    }
-
-    &.table-simple {
-        border-width: 1px 0 0 0;
-
-        > thead > tr > th {
-            border: 0;
-        }
-        > tbody > tr > td {
-            border-width: 1px 0 0 0;
-        }
-    }
-
-    tr.odd {
-        background-color: $gray-bg;
-    }
-}
-
-.invisible {
-    visibility: inherit;
-}
-
-table.Table {
+table {
     border: 0;
     border-collapse: collapse;
     max-width: 100%;
     width: 100%;
+
+    &:not(.Table) {
+        tr {
+            border-top: 0;
+            border-bottom: 1px solid $table-border-color;
+
+            td {
+                border: 0;
+            }
+        }
+
+        thead {
+            th {
+                border: 0;
+            }
+        }
+
+        &.table-header-darker {
+            thead {
+                background-color: #f5f5f0;
+
+                th {
+                    border-bottom: 1px solid #222;
+                }
+            }
+        }
+    }
+
+    .invisible {
+        visibility: inherit;
+    }
 
     tr {
         border-bottom: 0;
