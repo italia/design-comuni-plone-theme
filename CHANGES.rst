@@ -5,6 +5,8 @@ Changelog
 3.3.7 (unreleased)
 ------------------
 
+- removed carousel markup on news tile render when not needed [giulia]
+- fixed icon home in breadcrumns [giulia]
 - Added styles for tables [nzambello]
 - Fix styles for events calendar view [nzambello]
 - Fixed tile sizes for smaller screens [pnicolli]
