@@ -5,6 +5,7 @@ Changelog
 3.3.7 (unreleased)
 ------------------
 
+- updated redturtle.tiles.management dependency version [daniele] 
 - removed carousel markup on news tile render when not needed [giulia]
 - fixed icon home in breadcrumns [giulia]
 - Added styles for tables [nzambello]

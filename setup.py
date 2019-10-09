@@ -50,7 +50,7 @@ setup(
         'plone.behavior',
         'Products.GenericSetup>=1.8.2',
         'redturtle.patterns.slider',
-        'redturtle.tiles.management>=1.2.0',
+        'redturtle.tiles.management>=1.2.5',
         'plone.app.standardtiles',
         'z3c.jbot',
     ],
