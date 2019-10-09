@@ -5,7 +5,7 @@ Changelog
 3.3.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- updated redturtle.tiles.management dependency version [daniele] 
 
 
 3.3.2 (2019-06-03)
