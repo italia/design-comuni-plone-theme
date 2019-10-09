@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-3.3.7 (unreleased)
+3.3.7 (2019-10-09)
 ------------------
 
 - updated redturtle.tiles.management dependency version [daniele] 
