@@ -431,11 +431,13 @@ require(['jquery', 'ellipsed'], function($, ellipsed) {
     });
 
     function callEllipsis() {
-      ellipsis('.tile-collection .collectionItemDescription', 4, {
-        responsive: true,
-      });
-      ellipsis('.news-highlight .news-description', 4, { responsive: true });
-      ellipsis('.news-big-photo .news-description', 4, { responsive: true });
+      ellipsis(
+        '.tile-collection .collectionItemDescription, .news-highlight .news-description, .news-big-photo .news-description',
+        4,
+        {
+          responsive: true,
+        }
+      );
     }
 
     /*
