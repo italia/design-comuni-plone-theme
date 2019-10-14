@@ -6,6 +6,7 @@ Changelog
 ------------------
 
 - Upgraded ellipsed [nzambello]
+- Performance fix for ellipsed calls [nzambello]
 
 
 3.3.7 (2019-10-09)
