@@ -5,13 +5,13 @@ Changelog
 3.3.8 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Upgraded ellipsed [nzambello]
 
 
 3.3.7 (2019-10-09)
 ------------------
 
-- updated redturtle.tiles.management dependency version [daniele] 
+- updated redturtle.tiles.management dependency version [daniele]
 - removed carousel markup on news tile render when not needed [giulia]
 - fixed icon home in breadcrumns [giulia]
 - Added styles for tables [nzambello]
