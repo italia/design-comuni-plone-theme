@@ -1,0 +1,162 @@
+.public-ui {
+  // @import 'bootstrap-italia/src/scss/bootstrap-italia';
+  @import 'node_modules/bootstrap-select/sass/bootstrap-select';
+  @import 'node_modules/owl.carousel/src/scss/core';
+  @import 'node_modules/owl.carousel/src/scss/animate';
+  @import 'node_modules/owl.carousel/src/scss/autoheight';
+}
+// funzioni e variabili colore
+@import 'bootstrap-italia/src/scss/functions';
+@import 'bootstrap-italia/src/scss/utilities/colors_vars';
+
+//variables
+@import 'bootstrap-italia/src/scss/variables';
+
+//classi colore
+@import 'bootstrap-italia/src/scss/utilities/colors';
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+
+// mixins
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap-italia/src/scss/custom/mixins/buttons';
+@import 'bootstrap-italia/src/scss/custom/mixins/text-emphasis';
+
+.public-ui {
+  // mixins
+  @import 'bootstrap/scss/root';
+  @import 'bootstrap/scss/print';
+  @import 'bootstrap/scss/reboot';
+}
+
+@import 'bootstrap-override/bootstrap/reboot';
+
+.public-ui {
+  @import 'bootstrap/scss/type';
+  @import 'bootstrap/scss/images';
+  @import 'bootstrap/scss/code';
+  @import 'bootstrap/scss/grid';
+  @import 'bootstrap/scss/tables';
+  @import 'bootstrap/scss/forms';
+  @import 'bootstrap/scss/buttons';
+  @import 'bootstrap/scss/transitions';
+  @import 'bootstrap/scss/dropdown';
+  @import 'bootstrap/scss/button-group';
+  @import 'bootstrap/scss/input-group';
+  @import 'bootstrap/scss/nav';
+  @import 'bootstrap/scss/navbar';
+  @import 'bootstrap/scss/card';
+  @import 'bootstrap/scss/breadcrumb';
+  @import 'bootstrap/scss/pagination';
+  @import 'bootstrap/scss/badge';
+  @import 'bootstrap/scss/progress';
+  @import 'bootstrap/scss/media';
+  @import 'bootstrap/scss/list-group';
+  @import 'bootstrap/scss/close';
+  @import 'bootstrap/scss/modal';
+  @import 'bootstrap/scss/tooltip';
+  @import 'bootstrap/scss/popover';
+  @import 'bootstrap/scss/carousel';
+  @import 'bootstrap/scss/utilities';
+  @import 'bootstrap/scss/spinners';
+  @import 'bootstrap/scss/toasts';
+
+  // Customizzazioni e nuovi componenti
+  @import 'bootstrap-italia/src/scss/custom/type';
+}
+
+@import 'bootstrap-override/bootstrap-italia/type';
+
+.public-ui {
+  @import 'bootstrap-italia/src/scss/custom/grid';
+  @import 'bootstrap-italia/src/scss/custom/tables';
+  @import 'bootstrap-italia/src/scss/custom/breadcrumb';
+  @import 'bootstrap-italia/src/scss/custom/modal';
+  @import 'bootstrap-italia/src/scss/custom/collapse';
+  @import 'bootstrap-italia/src/scss/custom/carousel';
+  @import 'bootstrap-italia/src/scss/custom/calendar';
+  @import 'bootstrap-italia/src/scss/custom/alert';
+  @import 'bootstrap-italia/src/scss/custom/buttons';
+  @import 'bootstrap-italia/src/scss/custom/font';
+  @import 'bootstrap-italia/src/scss/custom/forms';
+  @import 'bootstrap-italia/src/scss/custom/form-input-file';
+  @import 'bootstrap-italia/src/scss/custom/form-input-number';
+  @import 'bootstrap-italia/src/scss/custom/form-input-upload';
+  @import 'bootstrap-italia/src/scss/custom/form-toggles';
+  @import 'bootstrap-italia/src/scss/custom/form-password';
+  @import 'bootstrap-italia/src/scss/custom/form-select';
+  @import 'bootstrap-italia/src/scss/custom/form-transfer';
+  @import 'bootstrap-italia/src/scss/custom/dropdown';
+  @import 'bootstrap-italia/src/scss/custom/pager';
+  @import 'bootstrap-italia/src/scss/custom/tab';
+  @import 'bootstrap-italia/src/scss/custom/cookiebar';
+  @import 'bootstrap-italia/src/scss/custom/hero';
+  @import 'bootstrap-italia/src/scss/custom/forward';
+  @import 'bootstrap-italia/src/scss/custom/back-to-top';
+  @import 'bootstrap-italia/src/scss/custom/autocomplete';
+  @import 'bootstrap-italia/src/scss/custom/linklist';
+  @import 'bootstrap-italia/src/scss/custom/navigation';
+  @import 'bootstrap-italia/src/scss/custom/skiplinks';
+  @import 'bootstrap-italia/src/scss/custom/affix';
+  @import 'bootstrap-italia/src/scss/custom/sidebar';
+  @import 'bootstrap-italia/src/scss/custom/sidebarthemes';
+  @import 'bootstrap-italia/src/scss/custom/megamenu';
+  @import 'bootstrap-italia/src/scss/custom/bottomnav';
+  @import 'bootstrap-italia/src/scss/custom/navscroll';
+  @import 'bootstrap-italia/src/scss/custom/navscrolltheme';
+  @import 'bootstrap-italia/src/scss/custom/callout';
+  @import 'bootstrap-italia/src/scss/custom/toolbar';
+  @import 'bootstrap-italia/src/scss/custom/sections';
+  @import 'bootstrap-italia/src/scss/custom/dialog';
+  @import 'bootstrap-italia/src/scss/custom/notifications';
+  @import 'bootstrap-italia/src/scss/custom/avatar';
+  @import 'bootstrap-italia/src/scss/custom/thumbnav';
+  @import 'bootstrap-italia/src/scss/custom/steppers';
+  @import 'bootstrap-italia/src/scss/custom/card';
+  @import 'bootstrap-italia/src/scss/custom/imgresponsive';
+  @import 'bootstrap-italia/src/scss/custom/overlay-panel';
+  @import 'bootstrap-italia/src/scss/custom/progress-donuts';
+  @import 'bootstrap-italia/src/scss/custom/progress-bars';
+  @import 'bootstrap-italia/src/scss/custom/progress-spinners';
+  @import 'bootstrap-italia/src/scss/custom/gridlist';
+  @import 'bootstrap-italia/src/scss/custom/popover';
+  @import 'bootstrap-italia/src/scss/custom/tooltip';
+  @import 'bootstrap-italia/src/scss/custom/list';
+  @import 'bootstrap-italia/src/scss/custom/chips';
+  @import 'bootstrap-italia/src/scss/custom/rating';
+  @import 'bootstrap-italia/src/scss/custom/dimmer';
+  @import 'bootstrap-italia/src/scss/custom/timeline';
+  @import 'bootstrap-italia/src/scss/custom/anchor';
+  @import 'bootstrap-italia/src/scss/custom/map';
+  @import 'bootstrap-italia/src/scss/custom/point-list';
+  @import 'bootstrap-italia/src/scss/custom/rating-list';
+  @import 'bootstrap-italia/src/scss/custom/badge';
+
+  // datepicker
+  @import 'bootstrap-italia/src/scss/custom/form-datepicker';
+
+  // timepicker
+  @import 'bootstrap-italia/src/scss/custom/timepicker';
+
+  // header
+  @import 'bootstrap-italia/src/scss/custom/headerslim';
+  @import 'bootstrap-italia/src/scss/custom/headerslimtheme';
+  @import 'bootstrap-italia/src/scss/custom/headercenter';
+  @import 'bootstrap-italia/src/scss/custom/headercentertheme';
+  @import 'bootstrap-italia/src/scss/custom/headernavbar';
+  @import 'bootstrap-italia/src/scss/custom/headernavbartheme';
+  @import 'bootstrap-italia/src/scss/custom/header';
+
+  // footer
+  @import 'bootstrap-italia/src/scss/custom/footer';
+
+  //colors theme
+  @import 'bootstrap-italia/src/scss/custom/navigationtheme';
+
+  // componente di esempio
+  @import 'bootstrap-italia/src/scss/custom/componente-base';
+
+  //gestione dei focus
+  @import 'bootstrap-italia/src/scss/utilities/focus';
+  @import 'bootstrap-italia/src/scss/utilities/icons';
+}

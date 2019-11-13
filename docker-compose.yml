@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  ploneapi:
+    image: kitconcept/plone.restapi:latest
+    ports:
+      - "8080:8080"
+    # Uncomment if you need the data to be persistent
+    # volumes:
+    #   - ./data/:/data/
