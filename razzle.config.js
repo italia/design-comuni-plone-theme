@@ -32,6 +32,12 @@ module.exports = Object.assign({}, volto_config, {
       },
     };
 
+    const SVG_LOADER = {
+      test: /\.svg$/,
+      include: [path.resolve('./src')],
+      loader: 'svg-inline',
+    };
+
     const POST_CSS_LOADER = {
       loader: require.resolve('postcss-loader'),
       options: {
@@ -53,6 +59,7 @@ module.exports = Object.assign({}, volto_config, {
         ],
       },
     };
+
     const SASSLOADER = {
       test: /\.s[ac]ss$/i,
       include: [
@@ -102,7 +109,7 @@ module.exports = Object.assign({}, volto_config, {
             },
           ],
     };
-
+    base_config.module.rules.push(SVG_LOADER);
     base_config.module.rules.push(SASSLOADER);
     return base_config;
   },
