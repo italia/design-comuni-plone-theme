@@ -1,3 +1,5 @@
+import LanguageSelector from './DesignTheme/LanguageSelector/LanguageSelector';
+
 /**
  * Add your components here.
  * @module components
