@@ -8,22 +8,19 @@ import PropTypes from 'prop-types';
 import { isMatch } from 'lodash';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
-import { Link } from 'react-router-dom';
+
 import { defineMessages, injectIntl } from 'react-intl';
 import { getBaseUrl } from '@plone/volto/helpers';
 import { getNavigation } from '@plone/volto/actions';
 import { BITIcon, it_burger } from '~/components/DesignTheme/Icons';
-/*
+import { Navbar, Nav } from 'react-bootstrap';
+
 const messages = defineMessages({
-  closeMobileMenu: {
-    id: 'Close menu',
-    defaultMessage: 'Close menu',
+  menu_selected: {
+    id: 'Menu selezionato',
+    defaultMessage: 'Menu selezionato',
   },
-  openMobileMenu: {
-    id: 'Open menu',
-    defaultMessage: 'Open menu',
-  },
-});*/
+});
 
 /**
  * Navigation container class.
@@ -102,7 +99,8 @@ class Navigation extends Component {
    */
   isActive(url) {
     return (
-      (url === '' && this.props.pathname === '/') ||
+      (url === '' &&
+        (this.props.pathname === '/' || this.props.pathname === '')) ||
       (url !== '' && isMatch(this.props.pathname.split('/'), url.split('/')))
     );
   }
@@ -148,77 +146,51 @@ class Navigation extends Component {
    */
   render() {
     return (
-      <nav className="navbar navbar-expand-lg has-megamenu">
-        <button
-          aria-controls="nav10"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          className="custom-navbar-toggler"
-          data-target="#nav10"
-          type="button"
-        >
-          <BITIcon name={it_burger} />
-        </button>
-        <div className="navbar-collapsable" id="nav10">
-          <div className="overlay" />
-          <div className="close-div sr-only">
-            <button className="btn close-menu" type="button">
-              <span className="it-close" />
-              close
-            </button>
-          </div>
-          <div className="menu-wrapper">
-            <ul className="navbar-nav">
-              {this.props.items.map(item => (
-                <li
-                  key={item.url}
-                  className={
-                    this.isActive(item.url) ? 'nav-item active' : 'nav-item'
-                  }
-                >
-                  <Link
-                    to={item.url === '' ? '/' : item.url}
-                    className={
-                      this.isActive(item.url) ? 'nav-link active' : 'nav-link'
-                    }
+      <>
+        <Navbar expand="lg" className="has-megamenu">
+          <Navbar.Toggle
+            aria-controls="nav10"
+            expanded="false"
+            className="custom-navbar-toggler"
+          >
+            <BITIcon name={it_burger} />
+          </Navbar.Toggle>
+          <Navbar.Collapse id="nav10" className="navbar-collapsable">
+            <div className="overlay" />
+            <div className="close-div sr-only">
+              <button className="btn close-menu" type="button">
+                <span className="it-close" />
+                close
+              </button>
+            </div>
+            <div className="menu-wrapper">
+              <Nav as="ul">
+                {this.props.items.map(item => (
+                  <Nav.Item
+                    as="li"
+                    className={this.isActive(item.url) ? 'active' : ''}
+                    key={item.url}
                   >
-                    <span>{item.title}</span>
-                    {this.isActive(item.url) ? (
-                      <span className="sr-only">menu selezionato</span>
-                    ) : null}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <ul className="navbar-nav navbar-secondary">
-              {this.argumentsItems.map(arg => (
-                <li className="nav-item" key={arg.url}>
-                  {/* section == 'argomento' ?'active':null*/}
-                  <Link
-                    to={arg.url}
-                    className={
-                      this.isActiveSection(arg.url)
-                        ? 'nav-link active'
-                        : 'nav-link'
-                    }
-                  >
-                    {arg.type == 'all' ? (
-                      <span className="font-weight-bold">{arg.title}</span>
-                    ) : (
-                      arg.title
-                    )}
-
-                    {this.isActiveSection(arg.url) ? (
-                      <span className="sr-only">menu selezionato</span>
-                    ) : null}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </nav>
+                    <Nav.Link
+                      to={item.url === '' ? '/' : item.url}
+                      active={this.isActive(item.url)}
+                    >
+                      <span>{item.title}</span>
+                      {this.isActive(item.url) ? (
+                        <span className="sr-only">
+                          {this.props.intl.formatMessage(
+                            messages.menu_selected,
+                          )}
+                        </span>
+                      ) : null}
+                    </Nav.Link>
+                  </Nav.Item>
+                ))}
+              </Nav>
+            </div>
+          </Navbar.Collapse>
+        </Navbar>
+      </>
     );
   }
 }

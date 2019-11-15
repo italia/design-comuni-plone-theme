@@ -3,7 +3,7 @@
  * @module components/theme/Header/Header
  */
 
-import React, { Component } from 'react';
+import React, { Component, useRef } from 'react';
 
 /*import { Container, Segment } from 'semantic-ui-react';*/
 import PropTypes from 'prop-types';
@@ -44,6 +44,28 @@ class Header extends Component {
     token: null,
   };
 
+  state = { sticky: false };
+  handleScroll = () => {
+    console.log(window.pageYOffset);
+    if (window.pageYOffset > 0) {
+      this.setState({
+        sticky: true,
+      });
+    } else {
+      this.setState({
+        sticky: false,
+      });
+    }
+  };
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
   /**
    * Render method.
    * @method render
@@ -51,7 +73,12 @@ class Header extends Component {
    */
   render() {
     return (
-      <header className="it-header-wrapper it-header-sticky">
+      <header
+        className={
+          'it-header-wrapper it-header-sticky' +
+          (this.state.sticky ? ' is-sticky' : '')
+        }
+      >
         <div className="it-header-slim-wrapper">
           <Container>
             <Row>
