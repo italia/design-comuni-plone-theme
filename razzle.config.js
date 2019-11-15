@@ -7,7 +7,8 @@ const jsConfig = require('./jsconfig').compilerOptions;
 const path = require('path');
 const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-
+const makeLoaderFinder = require('razzle-dev-utils/makeLoaderFinder');
+const fileLoaderFinder = makeLoaderFinder('file-loader');
 const pathsConfig = jsConfig.paths;
 let voltoPath = './node_modules/@plone/volto';
 Object.keys(pathsConfig).forEach(pkg => {
@@ -19,9 +20,25 @@ Object.keys(pathsConfig).forEach(pkg => {
 //module.exports = require(`${voltoPath}/razzle.config`);
 
 const volto_config = require(`${voltoPath}/razzle.config`);
+
 module.exports = Object.assign({}, volto_config, {
   modify: (config, { target, dev }, webpack) => {
     const base_config = volto_config.modify(config, { target, dev }, webpack);
+
+    const fileLoader = base_config.module.rules.find(fileLoaderFinder);
+    fileLoader.exclude = [
+      /bootstrap-italia\/src\/svg\/.*\.svg$/,
+      ...fileLoader.exclude,
+    ];
+
+    const SVG_LOADER = {
+      test: /bootstrap-italia\/src\/svg\/.*\.svg$/,
+      use: [
+        {
+          loader: 'svg-loader',
+        },
+      ],
+    };
 
     const BASE_CSS_LOADER = {
       loader: 'css-loader',
@@ -30,11 +47,6 @@ module.exports = Object.assign({}, volto_config, {
         sourceMap: true,
         localIdentName: '[name]__[local]___[hash:base64:5]',
       },
-    };
-
-    const SVG_LOADER = {
-      test: /\.svg$/,
-      loader: 'svg-inline',
     };
 
     const POST_CSS_LOADER = {
@@ -108,7 +120,7 @@ module.exports = Object.assign({}, volto_config, {
             },
           ],
     };
-    //base_config.module.rules.push(SVG_LOADER);
+    base_config.module.rules.push(SVG_LOADER);
     base_config.module.rules.push(SASSLOADER);
     return base_config;
   },
