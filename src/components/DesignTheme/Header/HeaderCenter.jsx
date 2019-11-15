@@ -14,10 +14,10 @@ import { Brand } from '~/components/DesignTheme';
 
 import {
   BITIcon,
-  ITPa,
-  ITFacebook,
-  ITTwitter,
-  ITSearch,
+  it_pa,
+  it_facebook,
+  it_twitter,
+  it_search,
 } from '~/components/DesignTheme/Icons';
 
 const messages = defineMessages({
@@ -65,7 +65,7 @@ class HeaderCenter extends Component {
       <div className="it-header-center-content-wrapper">
         <div className="it-brand-wrapper">
           <Link to="/">
-            <BITIcon name={ITPa} />
+            <BITIcon name={it_pa} />
             <Brand
               brand="Nome del Comune"
               subBrand="Uno dei tanti Comuni d'Italia"
@@ -78,12 +78,12 @@ class HeaderCenter extends Component {
             <ul>
               <li>
                 <Link to="#" aria-label="Facebook" target="_blank">
-                  <BITIcon name={ITFacebook} />
+                  <BITIcon name={it_facebook} />
                 </Link>
               </li>
               <li>
                 <Link to="#" aria-label="Twitter" target="_blank">
-                  <BITIcon name={ITTwitter} />
+                  <BITIcon name={it_twitter} />
                 </Link>
               </li>
             </ul>
@@ -97,7 +97,7 @@ class HeaderCenter extends Component {
               aria-label={this.props.intl.formatMessage(messages.search)}
               className="search-link rounded-icon"
             >
-              <BITIcon name={ITSearch} />
+              <BITIcon name={it_search} />
             </Link>
           </div>
         </div>

@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 import { defineMessages, injectIntl } from 'react-intl';
 import { getBaseUrl } from '@plone/volto/helpers';
 import { getNavigation } from '@plone/volto/actions';
-import { BITIcon, ITBurger } from '~/components/DesignTheme/Icons';
+import { BITIcon, it_burger } from '~/components/DesignTheme/Icons';
 /*
 const messages = defineMessages({
   closeMobileMenu: {
@@ -157,7 +157,7 @@ class Navigation extends Component {
           data-target="#nav10"
           type="button"
         >
-          <BITIcon name={ITBurger} />
+          <BITIcon name={it_burger} />
         </button>
         <div className="navbar-collapsable" id="nav10">
           <div className="overlay" />

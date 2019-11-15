@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { LanguageSelector } from '~/components/DesignTheme';
-import { BITIcon, ITUser } from '~/components/DesignTheme/Icons';
+import { BITIcon, it_user } from '~/components/DesignTheme/Icons';
 
 const messages = defineMessages({
   arLogin: {
@@ -64,7 +64,7 @@ class HeaderSlim extends Component {
             title={this.props.intl.formatMessage(messages.arLogin)}
           >
             <span className="rounded-icon">
-              <BITIcon name={ITUser} color="primary" />
+              <BITIcon name={it_user} color="primary" />
             </span>
             <span className="d-none d-lg-block">
               {this.props.intl.formatMessage(messages.arLogin)}

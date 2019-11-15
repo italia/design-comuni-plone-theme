@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { BITIcon, ITExpand } from '~/components/DesignTheme/Icons';
+import { BITIcon, it_expand } from '~/components/DesignTheme/Icons';
 
 /**
  * LanguageSelector component class.
@@ -61,7 +61,7 @@ class LanguageSelector extends Component {
           <span>ITA</span>
 
           <BITIcon
-            name={ITExpand}
+            name={it_expand}
             color="white"
             className="d-none d-lg-block"
           />
