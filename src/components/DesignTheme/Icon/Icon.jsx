@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import iconSprite from 'bootstrap-italia/dist/svg/sprite.svg';
 
 const propTypes = {
   className: PropTypes.string,
@@ -29,9 +28,13 @@ const Icon = ({ color, size, icon, className, padding, ...attributes }) => {
     },
     size,
   );
+  /*<svg className={classes} {...attributes}>
+      <use xlinkHref={`${iconSprite}#${icon}`} />
+    </svg>*/
+
   return (
     <svg className={classes} {...attributes}>
-      <use xlinkHref={`${iconSprite}#${icon}`} />
+      <use xlinkHref={`#${icon}`} />
     </svg>
   );
 };

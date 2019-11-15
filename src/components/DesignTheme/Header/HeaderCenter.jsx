@@ -10,7 +10,9 @@ import PropTypes from 'prop-types';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 
-import { Icon, Brand } from '~/components/DesignTheme';
+import { Brand } from '~/components/DesignTheme';
+import { Icon } from '@plone/volto/components';
+import it_pa from 'bootstrap-italia/src/svg/it-pa.svg';
 
 const messages = defineMessages({
   followUs: {
@@ -57,7 +59,7 @@ class HeaderCenter extends Component {
       <div className="it-header-center-content-wrapper">
         <div className="it-brand-wrapper">
           <Link to="/">
-            <Icon icon="it-pa" />
+            <Icon name={it_pa} />
             <Brand
               brand="Nome del Comune"
               subBrand="Uno dei tanti Comuni d'Italia"
@@ -70,12 +72,12 @@ class HeaderCenter extends Component {
             <ul>
               <li>
                 <Link to="#" aria-label="Facebook" target="_blank">
-                  <Icon icon="it-facebook" />
+                  {/* <Icon name="it-facebook" /> */}
                 </Link>
               </li>
               <li>
                 <Link to="#" aria-label="Twitter" target="_blank">
-                  <Icon icon="it-twitter" />
+                  {/* <Icon name="it-twitter" /> */}
                 </Link>
               </li>
             </ul>
@@ -89,7 +91,7 @@ class HeaderCenter extends Component {
               aria-label={this.props.intl.formatMessage(messages.search)}
               className="search-link rounded-icon"
             >
-              <Icon icon="it-search" />
+              {/* <Icon name="it-search" /> */}
             </Link>
           </div>
         </div>

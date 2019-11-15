@@ -37,6 +37,17 @@ module.exports = Object.assign({}, volto_config, {
         {
           loader: 'svg-loader',
         },
+        {
+          loader: 'svgo-loader',
+          options: {
+            plugins: [
+              { removeTitle: true },
+              { convertPathData: false },
+              { removeUselessStrokeAndFill: true },
+              { removeViewBox: false },
+            ],
+          },
+        },
       ],
     };
 

@@ -68,7 +68,9 @@
     "postcss-overrides": "3.1.4",
     "prettier": "1.17.0",
     "prettier-stylelint": "0.4.2",
-    "sass-loader": "8.0.0"
+    "sass-loader": "8.0.0",
+    "svg-inline-loader": "0.8.0",
+    "svg-inline-react": "3.2.0"
   },
   "resolutions": {
     "@plone/volto/razzle/webpack-dev-server": "3.2.0"

@@ -9,7 +9,9 @@ import { defineMessages, injectIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
-import { Icon, LanguageSelector } from '~/components/DesignTheme';
+import { LanguageSelector } from '~/components/DesignTheme';
+import { Icon } from '@plone/volto/components';
+import it_user from 'bootstrap-italia/src/svg/it-user.svg';
 
 const messages = defineMessages({
   arLogin: {
@@ -63,7 +65,7 @@ class HeaderSlim extends Component {
             title={this.props.intl.formatMessage(messages.arLogin)}
           >
             <span className="rounded-icon">
-              <Icon color="primary" icon="it-user" />
+              <Icon className="icon-primary" name={it_user} />
             </span>
             <span className="d-none d-lg-block">
               {this.props.intl.formatMessage(messages.arLogin)}

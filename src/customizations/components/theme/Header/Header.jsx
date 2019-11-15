@@ -61,7 +61,7 @@ class Header extends Component {
           </div>
         </div>
 
-        <div className="it-nav-wrapper">
+        {/* <div className="it-nav-wrapper">
           <div className="it-header-center-wrapper">
             <div className="container">
               <div className="row">
@@ -80,7 +80,7 @@ class Header extends Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </header>
       /*  
       <Segment basic className="header-wrapper" role="banner">
