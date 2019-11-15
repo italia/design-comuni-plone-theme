@@ -17,6 +17,7 @@ import {
 } from '@plone/volto/components';
 
 import { HeaderSlim, HeaderCenter } from '~/components/DesignTheme';
+import { Row, Col, Container } from 'react-bootstrap';
 
 /**
  * Header component class.
@@ -52,33 +53,33 @@ class Header extends Component {
     return (
       <header className="it-header-wrapper it-header-sticky">
         <div className="it-header-slim-wrapper">
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
+          <Container>
+            <Row>
+              <Col size={12}>
                 <HeaderSlim pathname={this.props.pathname} />
-              </div>
-            </div>
-          </div>
+              </Col>
+            </Row>
+          </Container>
         </div>
 
         <div className="it-nav-wrapper">
           <div className="it-header-center-wrapper">
-            <div className="container">
-              <div className="row">
-                <div className="col-12">
+            <Container>
+              <Row>
+                <Col size={12}>
                   <HeaderCenter />
-                </div>
-              </div>
-            </div>
+                </Col>
+              </Row>
+            </Container>
           </div>
           <div className="it-header-navbar-wrapper">
-            <div className="container">
-              <div className="row">
-                <div className="col-12">
+            <Container>
+              <Row>
+                <Col size={12}>
                   <Navigation pathname={this.props.pathname} />
-                </div>
-              </div>
-            </div>
+                </Col>
+              </Row>
+            </Container>
           </div>
         </div>
       </header>

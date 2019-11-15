@@ -11,6 +11,7 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { LanguageSelector } from '~/components/DesignTheme';
 import { BITIcon, it_user } from '~/components/DesignTheme/Icons';
+import { Button } from 'react-bootstrap';
 
 const messages = defineMessages({
   arLogin: {
@@ -58,9 +59,10 @@ class HeaderSlim extends Component {
         <div className="header-slim-right-zone">
           <LanguageSelector asNavItem={true} />
 
-          <Link
+          <Button
+            className="btn-full btn-icon"
+            as={Link}
             to="#"
-            className="btn btn-primary btn-icon btn-full"
             title={this.props.intl.formatMessage(messages.arLogin)}
           >
             <span className="rounded-icon">
@@ -69,7 +71,7 @@ class HeaderSlim extends Component {
             <span className="d-none d-lg-block">
               {this.props.intl.formatMessage(messages.arLogin)}
             </span>
-          </Link>
+          </Button>
         </div>
       </div>
     );

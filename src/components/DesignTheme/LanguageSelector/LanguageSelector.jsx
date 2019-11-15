@@ -4,11 +4,13 @@
  */
 
 import React, { Component } from 'react';
+import cx from 'classnames';
 import { Link } from 'react-router-dom';
 
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { BITIcon, it_expand } from '~/components/DesignTheme/Icons';
+import { Dropdown, Row, Col } from 'react-bootstrap';
 
 /**
  * LanguageSelector component class.
@@ -33,6 +35,8 @@ class LanguageSelector extends Component {
    */
   static defaultProps = {
     token: null,
+    asNavItem: false,
+    className: null,
   };
 
   /**
@@ -41,52 +45,51 @@ class LanguageSelector extends Component {
    * @returns {string} Markup for the component.
    */
   render() {
-    let class_name = [];
-    if (this.props.asNavItem) {
-      class_name.push('nav-item');
-    }
-    class_name.push('dropdown');
-    class_name.push(this.props.className);
-
     return (
-      <div className={class_name.join(' ')}>
-        <Link
+      <Dropdown
+        className={cx(
+          { 'nav-item': this.props.asNavItem },
+          this.props.className,
+        )}
+      >
+        <Dropdown.Toggle
+          id="language-selector"
+          as={Link}
           to="#"
-          aria-expanded="false"
-          className={
-            (this.props.asNavItem ? 'nav-link ' : '') + 'dropdown-toggle'
-          }
-          data-toggle="dropdown"
+          className={cx(
+            { 'nav-link': this.props.asNavItem },
+            this.props.className,
+          )}
         >
           <span>ITA</span>
-
           <BITIcon
             name={it_expand}
             color="white"
             className="d-none d-lg-block"
           />
-        </Link>
-        <div className="dropdown-menu">
-          <div className="row">
-            <div className="col-12">
+        </Dropdown.Toggle>
+
+        <Dropdown.Menu>
+          <Row>
+            <Col size={12}>
               <div className="link-list-wrapper">
                 <ul className="link-list">
                   <li>
-                    <Link to="#" className="list-item">
+                    <Link to="/it" className="list-item">
                       <span>ITA</span>
                     </Link>
                   </li>
                   <li>
-                    <Link to="#" className="list-item">
+                    <Link to="/en" className="list-item">
                       <span>ENG</span>
                     </Link>
                   </li>
                 </ul>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            </Col>
+          </Row>
+        </Dropdown.Menu>
+      </Dropdown>
     );
   }
 }

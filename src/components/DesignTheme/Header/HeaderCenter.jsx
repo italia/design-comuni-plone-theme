@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 
-import { Brand } from '~/components/DesignTheme';
+import { Brand, SocialLinks } from '~/components/DesignTheme';
 
 import {
   BITIcon,
@@ -73,21 +73,8 @@ class HeaderCenter extends Component {
           </Link>
         </div>
         <div className="it-right-zone">
-          <div className="it-socials d-none d-md-flex">
-            <span>{this.props.intl.formatMessage(messages.followUs)}</span>
-            <ul>
-              <li>
-                <Link to="#" aria-label="Facebook" target="_blank">
-                  <BITIcon name={it_facebook} />
-                </Link>
-              </li>
-              <li>
-                <Link to="#" aria-label="Twitter" target="_blank">
-                  <BITIcon name={it_twitter} />
-                </Link>
-              </li>
-            </ul>
-          </div>
+          <SocialLinks />
+
           <div className="it-search-wrapper">
             <span className="d-none d-md-block">
               {this.props.intl.formatMessage(messages.search)}

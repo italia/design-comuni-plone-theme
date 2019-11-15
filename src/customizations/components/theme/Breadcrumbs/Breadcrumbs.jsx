@@ -8,14 +8,13 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { Link } from 'react-router-dom';
-import { Breadcrumb, Container, Segment } from 'semantic-ui-react';
 import { defineMessages, injectIntl } from 'react-intl';
 
 import { Icon } from '@plone/volto/components';
 import { getBreadcrumbs } from '@plone/volto/actions';
 import { getBaseUrl } from '@plone/volto/helpers';
 
-import homeSVG from '@plone/volto/icons/home.svg';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const messages = defineMessages({
   home: {
@@ -75,10 +74,10 @@ class Breadcrumbs extends Component {
   render() {
     return (
       <>
-        {this.props.items ? (
-          <section id="briciole" className="container px-4 my-4">
-            <div className="row">
-              <div className="col px-lg-4">
+        {this.props.items.length > 0 ? (
+          <Container as="section" id="briciole" className="px-4 my-4">
+            <Row>
+              <Col className="px-lg-4">
                 <nav aria-label="breadcrumb" className="breadcrumb-container">
                   <ol className="breadcrumb">
                     <li className="breadcrumb-item">
@@ -110,9 +109,9 @@ class Breadcrumbs extends Component {
                     ])}
                   </ol>
                 </nav>
-              </div>
-            </div>
-          </section>
+              </Col>
+            </Row>
+          </Container>
         ) : null}
       </>
     );
