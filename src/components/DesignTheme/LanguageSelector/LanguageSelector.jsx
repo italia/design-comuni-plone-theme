@@ -8,8 +8,7 @@ import { Link } from 'react-router-dom';
 
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { Icon } from '@plone/volto/components';
-import it_expand from 'bootstrap-italia/src/svg/it-expand.svg';
+import { BITIcon, ITExpand } from '~/components/DesignTheme/Icons';
 
 /**
  * LanguageSelector component class.
@@ -61,7 +60,11 @@ class LanguageSelector extends Component {
         >
           <span>ITA</span>
 
-          <Icon name={it_expand} className="icon-white d-none d-lg-block" />
+          <BITIcon
+            name={ITExpand}
+            color="white"
+            className="d-none d-lg-block"
+          />
         </Link>
         <div className="dropdown-menu">
           <div className="row">

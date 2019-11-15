@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 import { defineMessages, injectIntl } from 'react-intl';
 import { getBaseUrl } from '@plone/volto/helpers';
 import { getNavigation } from '@plone/volto/actions';
-import { Icon } from '~/components/DesignTheme';
+import { BITIcon, ITBurger } from '~/components/DesignTheme/Icons';
 /*
 const messages = defineMessages({
   closeMobileMenu: {
@@ -69,7 +69,7 @@ class Navigation extends Component {
     this.argumentsItems = [
       { title: 'Argomento 1', url: '/argomenti/argomento-1' },
       { title: 'Argomento 2', url: '/argomenti/argomento-2' },
-      { title: 'Tutti gli argomenti...', url: '/argomenti' },
+      { title: 'Tutti gli argomenti...', url: '/argomenti', type: 'all' },
     ];
   }
 
@@ -157,7 +157,7 @@ class Navigation extends Component {
           data-target="#nav10"
           type="button"
         >
-          <Icon icon="it-burger" />
+          <BITIcon name={ITBurger} />
         </button>
         <div className="navbar-collapsable" id="nav10">
           <div className="overlay" />
@@ -203,7 +203,12 @@ class Navigation extends Component {
                         : 'nav-link'
                     }
                   >
-                    {arg.title}
+                    {arg.type == 'all' ? (
+                      <span className="font-weight-bold">{arg.title}</span>
+                    ) : (
+                      arg.title
+                    )}
+
                     {this.isActiveSection(arg.url) ? (
                       <span className="sr-only">menu selezionato</span>
                     ) : null}

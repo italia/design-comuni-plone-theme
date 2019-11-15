@@ -8,8 +8,6 @@
  *   Footer,
  * };
  */
-
-export Icon from './Icon/Icon';
 export Brand from './Brand/Brand';
 export LanguageSelector from './LanguageSelector/LanguageSelector';
 export HeaderSlim from './Header/HeaderSlim';

@@ -11,8 +11,14 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 
 import { Brand } from '~/components/DesignTheme';
-import { Icon } from '@plone/volto/components';
-import it_pa from 'bootstrap-italia/src/svg/it-pa.svg';
+
+import {
+  BITIcon,
+  ITPa,
+  ITFacebook,
+  ITTwitter,
+  ITSearch,
+} from '~/components/DesignTheme/Icons';
 
 const messages = defineMessages({
   followUs: {
@@ -59,7 +65,7 @@ class HeaderCenter extends Component {
       <div className="it-header-center-content-wrapper">
         <div className="it-brand-wrapper">
           <Link to="/">
-            <Icon name={it_pa} />
+            <BITIcon name={ITPa} />
             <Brand
               brand="Nome del Comune"
               subBrand="Uno dei tanti Comuni d'Italia"
@@ -72,12 +78,12 @@ class HeaderCenter extends Component {
             <ul>
               <li>
                 <Link to="#" aria-label="Facebook" target="_blank">
-                  {/* <Icon name="it-facebook" /> */}
+                  <BITIcon name={ITFacebook} />
                 </Link>
               </li>
               <li>
                 <Link to="#" aria-label="Twitter" target="_blank">
-                  {/* <Icon name="it-twitter" /> */}
+                  <BITIcon name={ITTwitter} />
                 </Link>
               </li>
             </ul>
@@ -91,7 +97,7 @@ class HeaderCenter extends Component {
               aria-label={this.props.intl.formatMessage(messages.search)}
               className="search-link rounded-icon"
             >
-              {/* <Icon name="it-search" /> */}
+              <BITIcon name={ITSearch} />
             </Link>
           </div>
         </div>
