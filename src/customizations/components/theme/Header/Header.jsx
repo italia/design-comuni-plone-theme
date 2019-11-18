@@ -46,7 +46,6 @@ class Header extends Component {
 
   state = { sticky: false };
   handleScroll = () => {
-    console.log(window.pageYOffset);
     if (window.pageYOffset > 0) {
       this.setState({
         sticky: true,

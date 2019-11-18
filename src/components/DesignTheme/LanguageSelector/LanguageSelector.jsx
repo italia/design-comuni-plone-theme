@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { LinkList, LinkListItem } from '~/components/DesignTheme/';
 import { BITIcon, it_expand } from '~/components/DesignTheme/Icons';
 import { Dropdown, Row, Col } from 'react-bootstrap';
 
@@ -72,20 +73,14 @@ class LanguageSelector extends Component {
         <Dropdown.Menu>
           <Row>
             <Col size={12}>
-              <div className="link-list-wrapper">
-                <ul className="link-list">
-                  <li>
-                    <Link to="/it" className="list-item">
-                      <span>ITA</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/en" className="list-item">
-                      <span>ENG</span>
-                    </Link>
-                  </li>
-                </ul>
-              </div>
+              <LinkList>
+                <LinkListItem href="/to">
+                  <span>ITA</span>
+                </LinkListItem>
+                <LinkListItem href="/en">
+                  <span>ENG</span>
+                </LinkListItem>
+              </LinkList>
             </Col>
           </Row>
         </Dropdown.Menu>
