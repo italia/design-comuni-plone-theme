@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import { isMatch } from 'lodash';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
-
+import cx from 'classnames';
 import { defineMessages, injectIntl } from 'react-intl';
 import { getBaseUrl } from '@plone/volto/helpers';
 import { getNavigation } from '@plone/volto/actions';
@@ -19,6 +19,10 @@ const messages = defineMessages({
   menu_selected: {
     id: 'Menu selezionato',
     defaultMessage: 'Menu selezionato',
+  },
+  close: {
+    id: 'close',
+    defaultMessage: 'Chiudi',
   },
 });
 
@@ -58,11 +62,6 @@ class Navigation extends Component {
    */
   constructor(props) {
     super(props);
-    /* this.toggleMobileMenu = this.toggleMobileMenu.bind(this);
-    this.closeMobileMenu = this.closeMobileMenu.bind(this);
-    this.state = {
-      isMobileMenuOpen: false,
-    };*/
     this.argumentsItems = [
       { title: 'Argomento 1', url: '/argomenti/argomento-1' },
       { title: 'Argomento 2', url: '/argomenti/argomento-2' },
@@ -89,6 +88,13 @@ class Navigation extends Component {
     if (nextProps.pathname !== this.props.pathname) {
       this.props.getNavigation(getBaseUrl(nextProps.pathname));
     }
+  }
+
+  onMobileMenuOpen(node, isAppearing) {
+    console.log(node);
+  }
+  onMobileMenuClose(node, isDisappearing) {
+    console.log(node);
   }
 
   /**
@@ -119,78 +125,66 @@ class Navigation extends Component {
   }
 
   /**
-   * Toggle mobile menu's open state
-   * @method toggleMobileMenu
-   * @returns {undefined}
-  
-  toggleMobileMenu() {
-    this.setState({ isMobileMenuOpen: !this.state.isMobileMenuOpen });
-  } */
-
-  /**
-   * Close mobile menu
-   * @method closeMobileMenu
-   * @returns {undefined}
-   
-  closeMobileMenu() {
-    if (!this.state.isMobileMenuOpen) {
-      return;
-    }
-    this.setState({ isMobileMenuOpen: false });
-  }*/
-
-  /**
    * Render method.
    * @method render
    * @returns {string} Markup for the component.
    */
   render() {
     return (
-      <>
-        <Navbar expand="lg" className="has-megamenu">
-          <Navbar.Toggle
-            aria-controls="nav10"
-            expanded="false"
-            className="custom-navbar-toggler"
-          >
-            <BITIcon name={it_burger} />
-          </Navbar.Toggle>
-          <Navbar.Collapse id="nav10" className="navbar-collapsable">
-            <div className="overlay" />
-            <div className="close-div sr-only">
-              <button className="btn close-menu" type="button">
-                <span className="it-close" />
-                close
-              </button>
-            </div>
-            <div className="menu-wrapper">
-              <Nav as="ul">
-                {this.props.items.map(item => (
-                  <Nav.Item
-                    as="li"
-                    className={this.isActive(item.url) ? 'active' : ''}
-                    key={item.url}
+      <Navbar expand="lg" className="has-megamenu">
+        <Navbar.Toggle
+          aria-controls="nav10"
+          expanded="false"
+          className="custom-navbar-toggler"
+        >
+          <BITIcon name={it_burger} />
+        </Navbar.Toggle>
+        <Navbar.Collapse
+          id="nav10"
+          bsPrefix="navbar-collapsable"
+          dimension="width"
+          onEnter={this.onMobileMenuOpen}
+          onExit={this.onMobileMenuClose}
+        >
+          <Navbar.Toggle as="div" aria-controls="nav10" bsPrefix="overlay" />
+          <div className="close-div sr-only">
+            <Navbar.Toggle
+              as="button"
+              aria-controls="nav10"
+              bsPrefix="btn"
+              className="close-menu"
+            >
+              <span className="it-close" />
+              {this.props.intl.formatMessage(messages.close)}
+            </Navbar.Toggle>
+          </div>
+
+          <div className="menu-wrapper">
+            <Nav as="ul">
+              {this.props.items.map(item => (
+                <Nav.Item
+                  as="li"
+                  className={this.isActive(item.url) ? 'active' : ''}
+                  key={item.url}
+                >
+                  <Nav.Link
+                    href={item.url === '' ? '/' : item.url}
+                    eventKey={item.url}
+                    active={this.isActive(item.url)}
                   >
-                    <Nav.Link
-                      to={item.url === '' ? '/' : item.url}
-                      active={this.isActive(item.url)}
-                    >
-                      <span>{item.title}</span>
-                      {this.isActive(item.url) ? (
-                        <span className="sr-only">
-                          {this.props.intl.formatMessage(
-                            messages.menu_selected,
-                          )}
-                        </span>
-                      ) : null}
-                    </Nav.Link>
-                  </Nav.Item>
-                ))}
-              </Nav>
-            </div>
-          </Navbar.Collapse>
-        </Navbar>
-      </>
+                    <span>{item.title}</span>
+                    {this.isActive(item.url) ? (
+                      <span className="sr-only">
+                        {this.props.intl.formatMessage(messages.menu_selected)}
+                      </span>
+                    ) : null}
+                  </Nav.Link>
+                </Nav.Item>
+              ))}
+            </Nav>
+          </div>
+        </Navbar.Collapse>
+      </Navbar>
     );
   }
 }
