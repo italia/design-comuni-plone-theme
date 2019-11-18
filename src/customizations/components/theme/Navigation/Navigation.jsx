@@ -68,7 +68,6 @@ class Navigation extends Component {
       { title: 'Tutti gli argomenti...', url: '/argomenti', type: 'all' },
     ];
   }
-
   /**
    * Component will mount
    * @method componentWillMount
@@ -91,10 +90,18 @@ class Navigation extends Component {
   }
 
   onMobileMenuOpen(node, isAppearing) {
-    console.log(node);
+    node.setAttribute('style', 'display:block;');
+  }
+  onMobileMenuOpened(node, isAppearing) {
+    node.setAttribute('expanded', 'true');
   }
   onMobileMenuClose(node, isDisappearing) {
-    console.log(node);
+    console.log('close');
+    node.removeAttribute('expanded');
+  }
+  onMobileMenuClosed(node, isDisappearing) {
+    console.log('closed');
+    node.setAttribute('style', 'display:none;');
   }
 
   /**
@@ -144,7 +151,9 @@ class Navigation extends Component {
           bsPrefix="navbar-collapsable"
           dimension="width"
           onEnter={this.onMobileMenuOpen}
+          onEntered={this.onMobileMenuOpened}
           onExit={this.onMobileMenuClose}
+          onExited={this.onMobileMenuClosed}
         >
           <Navbar.Toggle as="div" aria-controls="nav10" bsPrefix="overlay" />
           <div className="close-div sr-only">

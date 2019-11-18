@@ -1,9 +1,7 @@
 .navbar {
   // navbar mobile
   .navbar-collapsable {
-    &.show {
-      display: block;
-
+    &[expanded='true'] {
       .overlay {
         display: block;
       }
