@@ -89,21 +89,6 @@ class Navigation extends Component {
     }
   }
 
-  onMobileMenuOpen(node, isAppearing) {
-    node.setAttribute('style', 'display:block;');
-  }
-  onMobileMenuOpened(node, isAppearing) {
-    node.setAttribute('expanded', 'true');
-  }
-  onMobileMenuClose(node, isDisappearing) {
-    console.log('close');
-    node.removeAttribute('expanded');
-  }
-  onMobileMenuClosed(node, isDisappearing) {
-    console.log('closed');
-    node.setAttribute('style', 'display:none;');
-  }
-
   /**
    * Check if menu is active
    * @method isActive
@@ -150,13 +135,9 @@ class Navigation extends Component {
           id="nav10"
           bsPrefix="navbar-collapsable"
           dimension="width"
-          onEnter={this.onMobileMenuOpen}
-          onEntered={this.onMobileMenuOpened}
-          onExit={this.onMobileMenuClose}
-          onExited={this.onMobileMenuClosed}
         >
           <Navbar.Toggle as="div" aria-controls="nav10" bsPrefix="overlay" />
-          <div className="close-div sr-only">
+          <div className="close-div _sr-only">
             <Navbar.Toggle
               as="button"
               aria-controls="nav10"
