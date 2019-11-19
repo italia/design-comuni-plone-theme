@@ -103,7 +103,7 @@ class Breadcrumbs extends Component {
                           aria-current="page"
                           className="breadcrumb-item active"
                         >
-                          {item.title}
+                          <a>{item.title}</a>
                         </li>
                       ),
                     ])}
