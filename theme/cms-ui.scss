@@ -1,4 +1,17 @@
-.cms-ui {
+body.cms-ui {
+  .it-header-wrapper {
+    font-size: 18px;
+    font-weight: 300;
+
+    * {
+      font-family: 'Titillium Web';
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+  }
+
   .it-footer {
     display: none;
   }
