@@ -9,8 +9,7 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { Link } from 'react-router-dom';
 import { defineMessages, injectIntl } from 'react-intl';
-
-import { Icon } from '@plone/volto/components';
+import { isCmsUi } from '@plone/volto/helpers';
 import { getBreadcrumbs } from '@plone/volto/actions';
 import { getBaseUrl } from '@plone/volto/helpers';
 
@@ -72,49 +71,48 @@ class Breadcrumbs extends Component {
    * @returns {string} Markup for the component.
    */
   render() {
-    return (
-      <>
-        {this.props.items.length > 0 ? (
-          <Container as="section" id="briciole" className="px-4 my-4">
-            <Row>
-              <Col className="px-lg-4">
-                <nav aria-label="breadcrumb" className="breadcrumb-container">
-                  <ol className="breadcrumb">
-                    <li className="breadcrumb-item">
-                      <Link
-                        to="/"
-                        title={this.props.intl.formatMessage(messages.home)}
-                      >
-                        {this.props.intl.formatMessage(messages.home)}
-                      </Link>
-                      <span className="separator">/</span>
-                    </li>
+    const isCmsUI = isCmsUi(this.props.pathname);
+    const content =
+      this.props.items.length > 0 ? (
+        <Container as="section" id="briciole" className="px-4 my-4">
+          <Row>
+            <Col className="px-lg-4">
+              <nav aria-label="breadcrumb" className="breadcrumb-container">
+                <ol className="breadcrumb">
+                  <li className="breadcrumb-item">
+                    <Link
+                      to="/"
+                      title={this.props.intl.formatMessage(messages.home)}
+                    >
+                      {this.props.intl.formatMessage(messages.home)}
+                    </Link>
+                    <span className="separator">/</span>
+                  </li>
 
-                    {this.props.items.map((item, index, items) => [
-                      null,
-                      index < items.length - 1 ? (
-                        <li className="breadcrumb-item" key={item.url}>
-                          <Link to={item.url}>{item.title}</Link>
-                          <span className="separator">/</span>
-                        </li>
-                      ) : (
-                        <li
-                          key={item.url}
-                          aria-current="page"
-                          className="breadcrumb-item active"
-                        >
-                          <a>{item.title}</a>
-                        </li>
-                      ),
-                    ])}
-                  </ol>
-                </nav>
-              </Col>
-            </Row>
-          </Container>
-        ) : null}
-      </>
-    );
+                  {this.props.items.map((item, index, items) => [
+                    null,
+                    index < items.length - 1 ? (
+                      <li className="breadcrumb-item" key={item.url}>
+                        <Link to={item.url}>{item.title}</Link>
+                        <span className="separator">/</span>
+                      </li>
+                    ) : (
+                      <li
+                        key={item.url}
+                        aria-current="page"
+                        className="breadcrumb-item active"
+                      >
+                        <a>{item.title}</a>
+                      </li>
+                    ),
+                  ])}
+                </ol>
+              </nav>
+            </Col>
+          </Row>
+        </Container>
+      ) : null;
+    return isCmsUI ? <div className="public-ui">{content}</div> : content;
   }
 }
 

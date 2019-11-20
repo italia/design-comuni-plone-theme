@@ -1,4 +1,6 @@
-.public-ui {
+.public-ui/*,
+.cms-ui .it-header-wrapper,
+.cms-ui .it-footer */ {
   // @import 'bootstrap-italia/src/scss/bootstrap-italia';
   @import 'node_modules/bootstrap-select/sass/bootstrap-select';
   @import 'node_modules/owl.carousel/src/scss/core';
@@ -22,7 +24,9 @@
 @import 'bootstrap-italia/src/scss/custom/mixins/buttons';
 @import 'bootstrap-italia/src/scss/custom/mixins/text-emphasis';
 
-.public-ui {
+.public-ui/*,
+.cms-ui .it-header-wrapper,
+.cms-ui .it-footer*/ {
   // mixins
   @import 'bootstrap/scss/root';
   @import 'bootstrap/scss/print';
@@ -31,7 +35,9 @@
 
 @import 'bootstrap-override/bootstrap/reboot';
 
-.public-ui {
+.public-ui/*,
+.cms-ui .it-header-wrapper,
+.cms-ui .it-footer*/ {
   @import 'bootstrap/scss/type';
   @import 'bootstrap/scss/images';
   @import 'bootstrap/scss/code';
@@ -67,7 +73,9 @@
 
 @import 'bootstrap-override/bootstrap-italia/type';
 
-.public-ui {
+.public-ui/*,
+.cms-ui .it-header-wrapper,
+.cms-ui .it-footer*/ {
   @import 'bootstrap-italia/src/scss/custom/grid';
   @import 'bootstrap-italia/src/scss/custom/tables';
   @import 'bootstrap-italia/src/scss/custom/breadcrumb';

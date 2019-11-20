@@ -3,35 +3,54 @@
  * @module components/theme/Footer/Footer
  */
 
-import React from 'react';
-import { defineMessages, injectIntl } from 'react-intl';
+import React, { Component } from 'react';
 
+import PropTypes from 'prop-types';
+import { defineMessages, injectIntl } from 'react-intl';
+import { compose } from 'redux';
+
+import { isCmsUi } from '@plone/volto/helpers';
 import { FooterMain, FooterSmall } from '~/components/DesignTheme/';
 
 const messages = defineMessages({});
 
 /**
- * Component to display the footer.
- * @function Footer
- * @param {Object} intl Intl object
- * @returns {string} Markup of the component
+ * Footer component class.
+ * @class Footer
+ * @extends Component
  */
-const Footer = ({ intl }) => (
-  <footer className="it-footer">
-    <FooterMain />
-    <FooterSmall />
-  </footer>
-);
-
-/**
- * Property types.
- * @property {Object} propTypes Property types.
- * @static
- */
-Footer.propTypes = {
+class Footer extends Component {
   /**
-   * i18n object
+   * Property types.
+   * @property {Object} propTypes Property types.
+   * @static
    */
-};
+  static propTypes = {
+    //pathname: PropTypes.string.isRequired,
+  };
 
-export default injectIntl(Footer);
+  /**
+   * Default properties.
+   * @property {Object} defaultProps Default properties.
+   * @static
+   */
+  static defaultProps = {};
+
+  /**
+   * Render method.
+   * @method render
+   * @returns {string} Markup for the component.
+   */
+  render() {
+    const isCmsUI = false; //isCmsUi(this.props.pathname);
+    let content = (
+      <footer className="it-footer">
+        <FooterMain />
+        <FooterSmall />
+      </footer>
+    );
+    return isCmsUI ? <div className="public-ui">{content}</div> : content;
+  }
+}
+
+export default compose(injectIntl)(Footer);

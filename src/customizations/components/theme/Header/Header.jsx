@@ -5,9 +5,10 @@
 
 import React, { Component, useRef } from 'react';
 
-/*import { Container, Segment } from 'semantic-ui-react';*/
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+
+import { isCmsUi } from '@plone/volto/helpers';
 
 import {
   /* Anontools,
@@ -71,10 +72,11 @@ class Header extends Component {
    * @returns {string} Markup for the component.
    */
   render() {
-    return (
+    const isCmsUI = isCmsUi(this.props.pathname);
+    let content = (
       <header
         className={
-          'it-header-wrapper it-header-sticky' +
+          'it-header-wrapper it-header-sticky public-ui' +
           (this.state.sticky ? ' is-sticky' : '')
         }
       >
@@ -109,28 +111,8 @@ class Header extends Component {
           </div>
         </div>
       </header>
-      /*  
-      <Segment basic className="header-wrapper" role="banner">
-        <Container>
-          <div className="header">
-            <div className="logo-nav-wrapper">
-              <div className="logo">
-                <Logo />
-              </div>
-              <Navigation pathname={this.props.pathname} />
-            </div>
-            {!this.props.token && (
-              <div className="tools">
-                <Anontools />
-              </div>
-            )}
-            <div className="search">
-              <SearchWidget pathname={this.props.pathname} />
-            </div>
-          </div>
-        </Container>
-      </Segment>*/
     );
+    return isCmsUI ? <div className="public-ui">{content}</div> : content;
   }
 }
 
