@@ -12,7 +12,11 @@ import cx from 'classnames';
 import { defineMessages, injectIntl } from 'react-intl';
 import { getBaseUrl } from '@plone/volto/helpers';
 import { getNavigation } from '@plone/volto/actions';
-import { BITIcon, it_burger } from '~/components/DesignTheme/Icons';
+import {
+  BITIcon,
+  it_burger,
+  it_close_circle,
+} from '~/components/DesignTheme/Icons';
 import { Navbar, Nav } from 'react-bootstrap';
 
 const messages = defineMessages({
@@ -137,7 +141,7 @@ class Navigation extends Component {
           dimension="width"
         >
           <Navbar.Toggle as="div" aria-controls="nav10" bsPrefix="overlay" />
-          <div className="close-div _sr-only">
+          <div className="close-div">
             <Navbar.Toggle
               as="button"
               aria-controls="nav10"
@@ -145,7 +149,10 @@ class Navigation extends Component {
               className="close-menu"
             >
               <span className="it-close" />
-              {this.props.intl.formatMessage(messages.close)}
+              <BITIcon name={it_close_circle} />
+              <span className="sr-only">
+                {this.props.intl.formatMessage(messages.close)}
+              </span>
             </Navbar.Toggle>
           </div>
 
@@ -163,6 +170,34 @@ class Navigation extends Component {
                     active={this.isActive(item.url)}
                   >
                     <span>{item.title}</span>
+                    {this.isActive(item.url) ? (
+                      <span className="sr-only">
+                        {this.props.intl.formatMessage(messages.menu_selected)}
+                      </span>
+                    ) : null}
+                  </Nav.Link>
+                </Nav.Item>
+              ))}
+            </Nav>
+
+            {/*Arguments menu*/}
+            <Nav as="ul" className="navbar-secondary">
+              {this.argumentsItems.map(item => (
+                <Nav.Item
+                  as="li"
+                  className={this.isActive(item.url) ? 'active' : ''}
+                  key={item.url}
+                >
+                  <Nav.Link
+                    href={item.url === '' ? '/' : item.url}
+                    eventKey={item.url}
+                    active={this.isActive(item.url)}
+                  >
+                    <span
+                      className={item.type == 'all' ? 'font-weight-bold' : ''}
+                    >
+                      {item.title}
+                    </span>
                     {this.isActive(item.url) ? (
                       <span className="sr-only">
                         {this.props.intl.formatMessage(messages.menu_selected)}

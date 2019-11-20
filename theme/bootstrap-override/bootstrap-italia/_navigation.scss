@@ -1,38 +1,52 @@
 .navbar {
   // navbar mobile
-  .navbar-collapsable {
-    display: block;
-    //    &[expanded='true'] {
-    width: 0;
-    -webkit-transition: all 0.3s cubic-bezier(0.29, 0.85, 0.5, 0.99);
-    -o-transition: all 0.3s cubic-bezier(0.29, 0.85, 0.5, 0.99);
-    transition: all 0.3s cubic-bezier(0.29, 0.85, 0.5, 0.99);
+  //Tablet horizontal / small desktop
+  @media (max-width: #{map-get($grid-breakpoints, lg)-1}) {
+    .navbar-collapsable {
+      display: block;
+      width: 0;
+      -webkit-transition: all 0.3s cubic-bezier(0.29, 0.85, 0.5, 0.99);
+      -o-transition: all 0.3s cubic-bezier(0.29, 0.85, 0.5, 0.99);
+      transition: all 0.3s cubic-bezier(0.29, 0.85, 0.5, 0.99);
 
-    &.collapsing {
-      position: fixed;
-      height: 100%;
-    }
-
-    &.show {
-      width: 100%;
-
-      .overlay {
-        display: block;
-      }
-
-      .menu-wrapper {
-        -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-        transform: translateX(0);
-        -webkit-transition: all 0.3s cubic-bezier(0.29, 0.85, 0.5, 0.99);
-        -o-transition: all 0.3s cubic-bezier(0.29, 0.85, 0.5, 0.99);
-        transition: all 0.3s cubic-bezier(0.29, 0.85, 0.5, 0.99);
+      &.collapsing {
+        position: fixed;
+        height: 100%;
       }
 
       .close-div {
-        -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-        transform: translateX(0);
+        display: block;
+        width: 0;
+      }
+
+      &.show {
+        width: 100%;
+
+        .overlay {
+          display: block;
+        }
+
+        .menu-wrapper {
+          -webkit-transform: translateX(0);
+          -ms-transform: translateX(0);
+          transform: translateX(0);
+          -webkit-transition: all 0.3s cubic-bezier(0.29, 0.85, 0.5, 0.99);
+          -o-transition: all 0.3s cubic-bezier(0.29, 0.85, 0.5, 0.99);
+          transition: all 0.3s cubic-bezier(0.29, 0.85, 0.5, 0.99);
+        }
+
+        .close-div {
+          width: 100%;
+          -webkit-transform: translateX(0);
+          -ms-transform: translateX(0);
+          transform: translateX(0);
+          // pulsante di chiusura menu
+
+          .close-menu {
+            padding: 0 1em;
+            fill: $navigation-close-button-text-color;
+          }
+        }
       }
     }
   }
