@@ -11,7 +11,7 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import { BITIcon, it_pa } from '~/components/DesignTheme/Icons';
+import { Brand } from '~/components/DesignTheme';
 import { FooterNavigation, FooterInfos } from '~/components/DesignTheme/';
 
 const messages = defineMessages({});
@@ -54,13 +54,7 @@ class FooterMain extends Component {
               <Col sm={12}>
                 <div className="it-brand-wrapper">
                   <Link to="#">
-                    <BITIcon name={it_pa} />
-                    <div className="it-brand-text">
-                      <h2 className="no_toc">Nome del Comune</h2>
-                      <h3 className="no_toc d-none d-md-block">
-                        Uno dei tanti Comuni d'Italia
-                      </h3>
-                    </div>
+                    <Brand />
                   </Link>
                 </div>
               </Col>

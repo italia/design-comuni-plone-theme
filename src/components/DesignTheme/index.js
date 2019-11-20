@@ -11,6 +11,8 @@
 
 export LinkList from './LinkList/LinkList';
 export LinkListItem from './LinkList/LinkListItem';
+export BrandLogo from './Brand/BrandLogo';
+export BrandText from './Brand/BrandText';
 export Brand from './Brand/Brand';
 export LanguageSelector from './LanguageSelector/LanguageSelector';
 export SocialLinks from './SocialLinks/SocialLinks';

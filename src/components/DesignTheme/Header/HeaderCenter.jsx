@@ -12,13 +12,7 @@ import { connect } from 'react-redux';
 
 import { Brand, SocialLinks } from '~/components/DesignTheme';
 
-import {
-  BITIcon,
-  it_pa,
-  it_facebook,
-  it_twitter,
-  it_search,
-} from '~/components/DesignTheme/Icons';
+import { BITIcon, it_search } from '~/components/DesignTheme/Icons';
 
 const messages = defineMessages({
   followUs: {
@@ -65,11 +59,7 @@ class HeaderCenter extends Component {
       <div className="it-header-center-content-wrapper">
         <div className="it-brand-wrapper">
           <Link to="/">
-            <BITIcon name={it_pa} />
-            <Brand
-              brand="Nome del Comune"
-              subBrand="Uno dei tanti Comuni d'Italia"
-            />
+            <Brand />
           </Link>
         </div>
         <div className="it-right-zone">
