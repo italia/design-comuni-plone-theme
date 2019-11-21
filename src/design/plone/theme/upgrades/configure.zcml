@@ -56,4 +56,13 @@
     handler=".upgrades.import_records_registry"
     />
 
+  <genericsetup:upgradeStep
+    source="1500"
+    destination="1501"
+    profile="design.plone.theme:default"
+    title="Import plone registry"
+    description="Fix TinyMCE table style"
+    handler=".upgrades.import_records_registry"
+    />
+
 </configure>

@@ -5,7 +5,7 @@ Changelog
 3.3.9 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- cleanup registry.xml and fixed tinymce template registration [nzambello]
 
 
 3.3.8 (2019-10-14)
