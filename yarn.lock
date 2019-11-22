@@ -1143,7 +1143,7 @@
 
 "@plone/volto@plone/volto#split_styles":
   version "4.0.0-alpha.12"
-  resolved "https://codeload.github.com/plone/volto/tar.gz/56503a4c8d6c9d24e24adc53f31d32f2a6526647"
+  resolved "https://codeload.github.com/plone/volto/tar.gz/75abe929fd429ccf713f759f8f2cc87c635d044c"
   dependencies:
     "@babel/plugin-proposal-decorators" "7.4.0"
     "@babel/plugin-proposal-do-expressions" "7.2.0"
