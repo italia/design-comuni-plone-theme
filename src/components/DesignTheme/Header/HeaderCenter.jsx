@@ -11,6 +11,7 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 
 import { Brand, SocialLinks } from '~/components/DesignTheme';
+import SearchModal from './SearchModal';
 
 import { BITIcon, it_search } from '~/components/DesignTheme/Icons';
 
@@ -31,6 +32,10 @@ const messages = defineMessages({
  * @extends Component
  */
 class HeaderCenter extends Component {
+  state = {
+    showSearchModal: false,
+  };
+
   /**
    * Property types.
    * @property {Object} propTypes Property types.
@@ -48,6 +53,10 @@ class HeaderCenter extends Component {
   static defaultProps = {
     token: null,
   };
+
+  closeModal = () => this.setState({ showSearchModal: false });
+
+  openModal = () => this.setState({ showSearchModal: true });
 
   /**
    * Render method.
@@ -73,9 +82,17 @@ class HeaderCenter extends Component {
               to="#"
               aria-label={this.props.intl.formatMessage(messages.search)}
               className="search-link rounded-icon"
+              onClick={e => {
+                e.preventDefault();
+                this.openModal();
+              }}
             >
               <BITIcon name={it_search} />
             </Link>
+            <SearchModal
+              show={this.state.showSearchModal}
+              closeModal={this.closeModal}
+            />
           </div>
         </div>
       </div>
