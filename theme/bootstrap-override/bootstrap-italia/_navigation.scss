@@ -33,6 +33,34 @@
           -webkit-transition: all 0.3s cubic-bezier(0.29, 0.85, 0.5, 0.99);
           -o-transition: all 0.3s cubic-bezier(0.29, 0.85, 0.5, 0.99);
           transition: all 0.3s cubic-bezier(0.29, 0.85, 0.5, 0.99);
+
+          .it-brand-wrapper {
+            display: flex;
+            flex-direction: row;
+            padding-top: 2rem;
+
+            .icon {
+              width: 48px;
+              height: 48px;
+              flex-shrink: 0;
+              margin-right: 8px;
+              fill: $primary;
+            }
+
+            .it-brand-text {
+              display: flex;
+              align-items: center;
+
+              h2 {
+                margin-bottom: 0;
+                color: $primary;
+                font-size: 1.25em;
+                font-weight: 600;
+                letter-spacing: unset;
+                line-height: 1.1;
+              }
+            }
+          }
         }
 
         .close-div {

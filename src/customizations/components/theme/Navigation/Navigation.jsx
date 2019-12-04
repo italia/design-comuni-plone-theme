@@ -18,6 +18,7 @@ import {
   it_close_circle,
 } from '~/components/DesignTheme/Icons';
 import { Navbar, Nav } from 'react-bootstrap';
+import { Brand } from '~/components/DesignTheme';
 
 const messages = defineMessages({
   menu_selected: {
@@ -141,7 +142,7 @@ class Navigation extends Component {
           dimension="width"
         >
           <Navbar.Toggle as="div" aria-controls="nav10" bsPrefix="overlay" />
-          <div className="close-div">
+          <div className="close-div sr-only">
             <Navbar.Toggle
               as="button"
               aria-controls="nav10"
@@ -157,6 +158,9 @@ class Navigation extends Component {
           </div>
 
           <div className="menu-wrapper">
+            <div className="d-md-none it-brand-wrapper">
+              <Brand />
+            </div>
             <Nav as="ul">
               {this.props.items.map(item => (
                 <Nav.Item
