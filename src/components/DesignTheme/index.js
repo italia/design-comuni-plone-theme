@@ -18,6 +18,7 @@ export LanguageSelector from './LanguageSelector/LanguageSelector';
 export SocialLinks from './SocialLinks/SocialLinks';
 export HeaderSlim from './Header/HeaderSlim';
 export HeaderCenter from './Header/HeaderCenter';
+export MegaMenu from './MegaMenu/MegaMenu';
 export FooterMain from './Footer/FooterMain';
 export FooterInfos from './Footer/FooterInfos';
 export FooterNavigation from './Footer/FooterNavigation';

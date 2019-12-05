@@ -18,7 +18,7 @@ import {
   it_close_circle,
 } from '~/components/DesignTheme/Icons';
 import { Navbar, Nav } from 'react-bootstrap';
-import { Brand } from '~/components/DesignTheme';
+import { Brand, MegaMenu } from '~/components/DesignTheme';
 
 const messages = defineMessages({
   menu_selected: {
@@ -79,7 +79,7 @@ class Navigation extends Component {
    * @returns {undefined}
    */
   componentWillMount() {
-    this.props.getNavigation(getBaseUrl(this.props.pathname));
+    this.props.getNavigation(getBaseUrl(this.props.pathname), 2);
   }
 
   /**
@@ -90,22 +90,8 @@ class Navigation extends Component {
    */
   componentWillReceiveProps(nextProps) {
     if (nextProps.pathname !== this.props.pathname) {
-      this.props.getNavigation(getBaseUrl(nextProps.pathname));
+      this.props.getNavigation(getBaseUrl(nextProps.pathname), 2);
     }
-  }
-
-  /**
-   * Check if menu is active
-   * @method isActive
-   * @param {string} url Url of the navigation item.
-   * @returns {bool} Is menu active?
-   */
-  isActive(url) {
-    return (
-      (url === '' &&
-        (this.props.pathname === '/' || this.props.pathname === '')) ||
-      (url !== '' && isMatch(this.props.pathname.split('/'), url.split('/')))
-    );
   }
 
   /**
@@ -120,6 +106,20 @@ class Navigation extends Component {
       (url !== '' && isMatch(this.props.pathname.split('/'), url.split('/')))
     );
   }
+
+  /**
+   * Check if menu is active
+   * @method isActive
+   * @param {string} url Url of the navigation item.
+   * @returns {bool} Is menu active?
+   */
+  isActive = url => {
+    return (
+      (url === '' &&
+        (this.props.pathname === '/' || this.props.pathname === '')) ||
+      (url !== '' && isMatch(this.props.pathname.split('/'), url.split('/')))
+    );
+  };
 
   /**
    * Render method.
@@ -163,24 +163,11 @@ class Navigation extends Component {
             </div>
             <Nav as="ul">
               {this.props.items.map(item => (
-                <Nav.Item
-                  as="li"
-                  className={this.isActive(item.url) ? 'active' : ''}
-                  key={item.url}
-                >
-                  <Nav.Link
-                    href={item.url === '' ? '/' : item.url}
-                    eventKey={item.url}
-                    active={this.isActive(item.url)}
-                  >
-                    <span>{item.title}</span>
-                    {this.isActive(item.url) ? (
-                      <span className="sr-only">
-                        {this.props.intl.formatMessage(messages.menu_selected)}
-                      </span>
-                    ) : null}
-                  </Nav.Link>
-                </Nav.Item>
+                <MegaMenu
+                  item={item}
+                  pathname={this.props.pathname}
+                  key={item.url + 'mm'}
+                />
               ))}
             </Nav>
 
