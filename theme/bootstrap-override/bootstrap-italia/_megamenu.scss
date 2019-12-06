@@ -1,9 +1,36 @@
 // external link stule
 .navbar {
   .dropdown-menu {
+    .link-list-wrapper {
+      .link-list {
+        &.bordered {
+          li {
+            border-bottom: 1px solid rgba($primary, 0.2);
+
+            &:first-of-type {
+              border-top: 1px solid rgba($primary, 0.2);
+            }
+
+            &:hover,
+            &:active,
+            a.active {
+              background-color: rgba($primary, 0.06);
+            }
+
+            a,
+            a span {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
     .it-external {
       .link-list-wrapper {
-        justify-content: flex-end;
+        @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+          justify-content: flex-end;
+        }
 
         .link-list {
           li.it-more a {

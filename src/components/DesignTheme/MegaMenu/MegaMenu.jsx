@@ -64,7 +64,6 @@ class MegaMenu extends Component {
       (url === '' &&
         (this.props.pathname === '/' || this.props.pathname === '')) ||
       (url !== '' && isMatch(this.props.pathname.split('/'), url.split('/')));
-    console.log('isActive ' + url, ret);
     return ret;
   };
   /**
@@ -112,7 +111,7 @@ class MegaMenu extends Component {
             <Row>
               {childrenGroups.map((group, index) => (
                 <Col lg={4} key={'group_' + index}>
-                  <LinkList>
+                  <LinkList className="bordered">
                     {group.map(child => (
                       <LinkListItem
                         href={child.url}
@@ -135,7 +134,7 @@ class MegaMenu extends Component {
                 <Col lg={8} />
                 <Col lg={4}>
                   <LinkList>
-                    <li className="it-more">
+                    <li className="it-more text-right">
                       <Link
                         className="list-item medium"
                         to={this.props.item.url}
