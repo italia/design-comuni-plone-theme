@@ -1,0 +1,19 @@
+// external link stule
+.navbar {
+  .dropdown-menu {
+    .it-external {
+      .link-list-wrapper {
+        justify-content: flex-end;
+
+        .link-list {
+          li.it-more a {
+            // more button
+            &:before {
+              content: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

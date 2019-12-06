@@ -60,11 +60,12 @@ class MegaMenu extends Component {
    * @returns {bool} Is menu active?
    */
   isActive = url => {
-    return (
+    var ret =
       (url === '' &&
         (this.props.pathname === '/' || this.props.pathname === '')) ||
-      (url !== '' && isMatch(this.props.pathname.split('/'), url.split('/')))
-    );
+      (url !== '' && isMatch(this.props.pathname.split('/'), url.split('/')));
+    console.log('isActive ' + url, ret);
+    return ret;
   };
   /**
    * Render method.
@@ -74,7 +75,8 @@ class MegaMenu extends Component {
   render() {
     var content = null;
     var children = this.props.item.items;
-    if (children) {
+
+    if (children && children.length) {
       //megamenu
       var childrenGroups = [];
       if (children.size < megamenu_max_rows) {
@@ -98,7 +100,12 @@ class MegaMenu extends Component {
           })}
           key={this.props.item.url}
         >
-          <Dropdown.Toggle as={Nav.Link}>
+          <Dropdown.Toggle
+            as={Nav.Link}
+            className={cx(null, {
+              active: this.isActive(this.props.item.url),
+            })}
+          >
             <span>{this.props.item.title}</span>
           </Dropdown.Toggle>
           <Dropdown.Menu>
@@ -111,6 +118,9 @@ class MegaMenu extends Component {
                         href={child.url}
                         title={child.title}
                         key={child.url}
+                        className={cx(null, {
+                          active: this.isActive(child.url),
+                        })}
                       >
                         <span>{child.title}</span>
                       </LinkListItem>
@@ -120,10 +130,10 @@ class MegaMenu extends Component {
               ))}
             </Row>
 
-            <div className="it-external">
+            <div className="it-external bottom-right">
               <Row>
                 <Col lg={8} />
-                <div lg={4}>
+                <Col lg={4}>
                   <LinkList>
                     <li className="it-more">
                       <Link
@@ -137,7 +147,7 @@ class MegaMenu extends Component {
                       </Link>
                     </li>
                   </LinkList>
-                </div>
+                </Col>
               </Row>
             </div>
           </Dropdown.Menu>
