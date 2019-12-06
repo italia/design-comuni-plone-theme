@@ -1,16 +1,4 @@
-/**
- * Add your config changes here.
- * @module config
- * @example
- * export const settings = {
- *   ...defaultSettings,
- *   port: 4300,
- *   listBlockTypes: {
- *     ...defaultSettings.listBlockTypes,
- *     'my-list-item',
- *   }
- * }
- */
+import React from 'react';
 
 import {
   settings as defaultSettings,
@@ -19,21 +7,49 @@ import {
   blocks as defaultBlocks,
 } from '@plone/volto/config';
 
+import createInlineStyleButton from 'draft-js-buttons/lib/utils/createInlineStyleButton';
+import createBlockStyleButton from 'draft-js-buttons/lib/utils/createBlockStyleButton';
+import { Separator } from 'draft-js-inline-toolbar-plugin';
+
+import Icon from '@plone/volto/components/theme/Icon/Icon';
+import underlineSVG from '@plone/volto/icons/underline.svg';
+import alignCenterSVG from '@plone/volto/icons/align-center.svg';
+
 import newsSVG from '@plone/volto/icons/news.svg';
 import NewsHomeView from '@package/components/DesignTheme/Blocks/NewsHome/View';
 import NewsHomeEdit from '@package/components/DesignTheme/Blocks/NewsHome/Edit';
 
-export const settings = {
-  ...defaultSettings,
-};
+import alertSVG from '@plone/volto/icons/alert.svg';
+import AlertView from '@package/components/DesignTheme/Blocks/Alert/View';
+import AlertEdit from '@package/components/DesignTheme/Blocks/Alert/Edit';
 
-export const views = {
-  ...defaultViews,
-};
+const extendedBlockRenderMap = defaultSettings.extendedBlockRenderMap.update(
+  'align-center',
+  (element = 'p') => element,
+);
 
-export const widgets = {
-  ...defaultWidgets,
+const blockStyleFn = contentBlock => {
+  let r = defaultSettings.blockStyleFn(contentBlock);
+
+  if (!r) {
+    const type = contentBlock.getType();
+    if (type === 'align-center') {
+      r += 'align-center';
+    }
+  }
+
+  return r;
 };
+const listBlockTypes = defaultSettings.listBlockTypes.concat(['align-center']);
+
+const UnderlineButton = createInlineStyleButton({
+  style: 'UNDERLINE',
+  children: <Icon name={underlineSVG} size="24px" />,
+});
+const AlignCenterButton = createBlockStyleButton({
+  blockType: 'align-center',
+  children: <Icon name={alignCenterSVG} size="24px" />,
+});
 
 const customBlocks = {
   newsHome: {
@@ -50,6 +66,42 @@ const customBlocks = {
       view: [],
     },
   },
+  alert: {
+    id: 'alert',
+    title: 'Alert',
+    icon: alertSVG,
+    group: 'text',
+    view: AlertView,
+    edit: AlertEdit,
+    restricted: false,
+    mostUsed: false,
+    blockHasOwnFocusManagement: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+  },
+};
+
+export const settings = {
+  ...defaultSettings,
+  richTextEditorInlineToolbarButtons: [
+    AlignCenterButton,
+    Separator,
+    UnderlineButton,
+    ...defaultSettings.richTextEditorInlineToolbarButtons,
+  ],
+  extendedBlockRenderMap: extendedBlockRenderMap,
+  blockStyleFn: blockStyleFn,
+  listBlockTypes: listBlockTypes,
+};
+
+export const views = {
+  ...defaultViews,
+};
+
+export const widgets = {
+  ...defaultWidgets,
 };
 
 const customBlocksOrder = [{ id: 'news', title: 'News' }];
