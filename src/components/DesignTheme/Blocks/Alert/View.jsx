@@ -25,17 +25,16 @@ const View = ({ data, pathname }) => {
     pre = pre ? pre : '';
     return pre + Math.random(5);
   };
+
+  const content = data.text
+    ? redraft(data.text, settings.ToHTMLRenderers, settings.ToHTMLOptions)
+    : '';
+  console.log(data.text, content);
   return (
     <section className="alertblock" key={generateKey('alert')}>
       <Row className={cx('row-full-width', 'bg-' + data.color)}>
         <Container className="p-4 pt-5 pb-5">
-          <Col>
-            {redraft(
-              data.text,
-              settings.ToHTMLRenderers,
-              settings.ToHTMLOptions,
-            )}
-          </Col>
+          <Col>{content}</Col>
         </Container>
       </Row>
     </section>
