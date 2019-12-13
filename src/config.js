@@ -94,15 +94,6 @@ export const settings = {
   extendedBlockRenderMap: extendedBlockRenderMap,
   blockStyleFn: blockStyleFn,
   listBlockTypes: listBlockTypes,
-  ToHTMLRenderers: {
-    ...defaultSettings.ToHTMLRenderers,
-    blocks: {
-      ...defaultSettings.ToHTMLRenderers.blocks,
-      unstyled: (children, { keys }) => {
-        return children.map((child, index) => <p key={keys[index]}>{child}</p>);
-      },
-    },
-  },
 };
 
 export const views = {

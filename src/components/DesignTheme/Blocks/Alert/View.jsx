@@ -10,7 +10,7 @@ import redraft from 'redraft';
 import { Container, Row, Col } from 'react-bootstrap';
 import { isCmsUi } from '@plone/volto/helpers';
 import { settings } from '~/config';
-
+import { flattenToAppURL } from '@plone/volto/helpers';
 /**
  * View image block class.
  * @class View
@@ -29,12 +29,27 @@ const View = ({ data, pathname }) => {
   const content = data.text
     ? redraft(data.text, settings.ToHTMLRenderers, settings.ToHTMLOptions)
     : '';
-  console.log(data.text, content);
+
   return (
     <section className="alertblock" key={generateKey('alert')}>
       <Row className={cx('row-full-width', 'bg-' + data.color)}>
         <Container className="p-4 pt-5 pb-5">
-          <Col>{content}</Col>
+          <Row className="align-items-start">
+            {data.url && (
+              <Col xs={1}>
+                <img
+                  src={
+                    data.url.includes(settings.apiPath)
+                      ? `${flattenToAppURL(data.url)}/@@images/image`
+                      : data.url
+                  }
+                  alt=""
+                  className="left-image"
+                />
+              </Col>
+            )}
+            <Col>{content}</Col>
+          </Row>
         </Container>
       </Row>
     </section>

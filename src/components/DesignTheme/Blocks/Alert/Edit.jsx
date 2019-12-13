@@ -9,10 +9,12 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { injectIntl } from 'react-intl';
 import cx from 'classnames';
+import { settings } from '~/config';
+import { flattenToAppURL } from '@plone/volto/helpers';
 
 import { createContent } from '@plone/volto/actions';
 import { SidebarPortal } from '@plone/volto/components';
-import { EditText } from '~/components/DesignTheme/Blocks/manage';
+import { EditTextBlock } from '@plone/volto/components';
 
 import { Container, Row, Col } from 'react-bootstrap';
 import Sidebar from './Sidebar';
@@ -52,19 +54,8 @@ class Edit extends Component {
     if (!this.props.data.color) {
       this.props.data.color = 'warning';
     }
-
-    this.state = {
-      selectedField: null,
-    };
+    this.blockNode = React.createRef();
   }
-
-  selectField = field => {
-    if (field !== this.state.selectedField) {
-      this.setState({
-        selectedField: field,
-      });
-    }
-  };
 
   render() {
     if (__SERVER__) {
@@ -81,33 +72,40 @@ class Edit extends Component {
             className={cx('row-full-width p-5', 'bg-' + this.props.data.color)}
           >
             <Container className="ui">
-              <Col>
-                <EditText
-                  data={this.props.data}
-                  fieldname="text"
-                  placeholder="Inserisci il testo..."
-                  detached={true}
-                  block={this.props.block}
-                  onClick={this.selectField('text')}
-                  index={0}
-                  selected={this.state.selectedField === 'text'}
-                  onChangeBlock={this.props.onChangeBlock}
-                  onFocusPreviousBlock={this.props.onFocusPreviousBlock}
-                  onFocusNextBlock={this.props.onFocusNextBlock}
-                />
-                {/* <EditText
-              data={this.props.data}
-              fieldname="description"
-              placeholder="Descrizione.."
-              detached={true}
-              block={this.props.block}
-              index={1}
-              selected={false}
-              onChangeBlock={this.props.onChangeBlock}
-              onFocusPreviousBlock={this.props.onFocusPreviousBlock}
-              onFocusNextBlock={this.props.onFocusNextBlock}
-            /> */}
-              </Col>
+              <Row className="align-items-start">
+                {this.props.data.url && (
+                  <Col xs={1}>
+                    <img
+                      src={
+                        this.props.data.url.includes(settings.apiPath)
+                          ? `${flattenToAppURL(
+                              this.props.data.url,
+                            )}/@@images/image`
+                          : this.props.data.url
+                      }
+                      alt=""
+                      className="left-image"
+                    />
+                  </Col>
+                )}
+                <Col>
+                  <EditTextBlock
+                    data={this.props.data}
+                    detached={true}
+                    index={this.props.index}
+                    selected={this.props.selected}
+                    block={this.props.block}
+                    onAddBlock={this.props.onAddBlock}
+                    onChangeBlock={this.props.onChangeBlock}
+                    onDeleteBlock={this.props.onDeleteBlock}
+                    onMutateBlock={this.props.onMutateBlock}
+                    onFocusPreviousBlock={this.props.onFocusPreviousBlock}
+                    onFocusNextBlock={this.props.onFocusNextBlock}
+                    onSelectBlock={this.props.onSelectBlock}
+                    blockNode={this.blockNode}
+                  />
+                </Col>
+              </Row>
             </Container>
           </Row>
         </div>

@@ -35,6 +35,12 @@
       line-height: 1.4rem;
     }
 
+             
+    img.left-image{
+      max-width: 80%;   
+      object-fit: unset;   
+    }
+
     div + h3,
     p + h3,
     h3 + div,

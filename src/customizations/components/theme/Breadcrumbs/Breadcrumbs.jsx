@@ -45,11 +45,11 @@ class Breadcrumbs extends Component {
   };
 
   /**
-   * Component will mount
-   * @method componentWillMount
+   * Component did mount
+   * @method componentDidMount
    * @returns {undefined}
    */
-  componentWillMount() {
+  componentDidMount() {
     this.props.getBreadcrumbs(getBaseUrl(this.props.pathname));
   }
 
