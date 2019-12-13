@@ -10,8 +10,12 @@ import { compose } from 'redux';
 import { injectIntl } from 'react-intl';
 import cx from 'classnames';
 
-import { createContent } from '@plone/volto/actions';
+import { createContent, getContent } from '@plone/volto/actions';
+import { SidebarPortal } from '@plone/volto/components';
+import { getBaseUrl } from '@plone/volto/helpers';
+
 import View from './View';
+import Sidebar from './Sidebar';
 /**
  * Edit image block class.
  * @class Edit
@@ -43,6 +47,25 @@ class Edit extends Component {
     createContent: PropTypes.func.isRequired,
   };
 
+  /**
+   * Component did mount
+   * @method componentDidMount
+   * @returns {undefined}
+   */
+  componentDidMount() {
+    this.loadNews();
+  }
+
+  loadNews = () => {
+    console.log(this);
+    if (this.props.data.href) {
+      //  this.props.getContent(getBaseUrl(this.props.data.href));
+      // getContent(getBaseUrl(this.props.data.href)).then(function(res) {
+      //   console.log('thennnn', res);
+      // });
+    }
+  };
+
   render() {
     if (__SERVER__) {
       return <div />;
@@ -54,6 +77,9 @@ class Edit extends Component {
         })}
       >
         <View data={this.props.data} pathname={this.props.pathname} />
+        <SidebarPortal selected={this.props.selected}>
+          <Sidebar {...this.props} loadNews={this.loadNews} />
+        </SidebarPortal>
       </div>
     );
   }

@@ -82,6 +82,8 @@ class MegaMenu extends Component {
         childrenGroups.push(children);
       } else {
         var rows = Math.floor(children.length / megamenu_max_cols);
+        rows = rows === 0 ? 1 : rows;
+
         for (var i = 0; i < children.length; i++) {
           var group = Math.floor(i % rows);
           if (!childrenGroups[i]) {

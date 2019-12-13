@@ -30,22 +30,6 @@ class Sidebar extends Component {
     block: PropTypes.string.isRequired,
     onChangeBlock: PropTypes.func.isRequired,
     openObjectBrowser: PropTypes.func.isRequired,
-    /*  data,
-    block,
-    onChangeBlock,
-    openObjectBrowser,
-    required = false,
-    index,
-    content,
-    request,
-    pathname,
-    onSelectBlock,
-    onDeleteBlock,
-    onFocusNextBlock,
-    onFocusPreviousBlock,
-    handleKeyDown,
-    createContent,
-    intl, */
   };
   render() {
     return (
