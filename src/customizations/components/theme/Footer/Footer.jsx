@@ -10,7 +10,7 @@ import { defineMessages, injectIntl } from 'react-intl';
 import { compose } from 'redux';
 
 import { isCmsUi } from '@plone/volto/helpers';
-import { FooterMain, FooterSmall } from '~/components/DesignTheme/';
+import { FooterMain, FooterSmall } from '@design/components/DesignTheme/';
 
 const messages = defineMessages({});
 

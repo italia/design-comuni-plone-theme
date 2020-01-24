@@ -11,8 +11,8 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { Container, Row, Col } from 'react-bootstrap';
 
-import { Brand } from '~/components/DesignTheme';
-import { FooterNavigation, FooterInfos } from '~/components/DesignTheme/';
+import { Brand } from '@design/components/DesignTheme';
+import { FooterNavigation, FooterInfos } from '@design/components/DesignTheme/';
 
 const messages = defineMessages({});
 

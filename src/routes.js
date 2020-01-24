@@ -6,6 +6,10 @@
 import { App } from '@plone/volto/components';
 import { defaultRoutes } from '@plone/volto/routes';
 
+export const designRoutes = [
+  // Add design-volto-theme routes here
+];
+
 /**
  * Routes array.
  * @array
@@ -15,10 +19,7 @@ const routes = [
   {
     path: '/',
     component: App, // Change this if you want a different component
-    routes: [
-      // Add your routes here
-      ...defaultRoutes,
-    ],
+    routes: [...defaultRoutes, ...designRoutes],
   },
 ];
 

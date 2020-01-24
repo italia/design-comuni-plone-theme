@@ -10,9 +10,9 @@ import PropTypes from 'prop-types';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 
-import { Brand, SocialLinks } from '~/components/DesignTheme';
+import { Brand, SocialLinks } from '@design/components/DesignTheme';
 
-import { BITIcon, it_search } from '~/components/DesignTheme/Icons';
+import { BITIcon, it_search } from '@design/components/DesignTheme/Icons';
 
 const messages = defineMessages({
   followUs: {

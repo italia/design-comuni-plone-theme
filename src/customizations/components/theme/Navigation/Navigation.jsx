@@ -16,9 +16,9 @@ import {
   BITIcon,
   it_burger,
   it_close_circle,
-} from '~/components/DesignTheme/Icons';
+} from '@design/components/DesignTheme/Icons';
 import { Navbar, Nav } from 'react-bootstrap';
-import { Brand, MegaMenu } from '~/components/DesignTheme';
+import { Brand, MegaMenu } from '@design/components/DesignTheme';
 
 const messages = defineMessages({
   menu_selected: {

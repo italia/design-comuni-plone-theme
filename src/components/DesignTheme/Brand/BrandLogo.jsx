@@ -4,7 +4,7 @@
  */
 
 import React, { Component } from 'react';
-import { BITIcon, it_pa } from '~/components/DesignTheme/Icons';
+import { BITIcon, it_pa } from '@design/components/DesignTheme/Icons';
 
 class BrandLogo extends Component {
   /**

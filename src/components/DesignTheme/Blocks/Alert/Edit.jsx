@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { injectIntl } from 'react-intl';
 import cx from 'classnames';
-import { settings } from '~/config';
+import { settings } from '@design/config';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
 import { createContent } from '@plone/volto/actions';

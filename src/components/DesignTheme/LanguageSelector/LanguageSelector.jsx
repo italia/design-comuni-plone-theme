@@ -9,8 +9,8 @@ import { Link } from 'react-router-dom';
 
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { LinkList, LinkListItem } from '~/components/DesignTheme/';
-import { BITIcon, it_expand } from '~/components/DesignTheme/Icons';
+import { LinkList, LinkListItem } from '@design/components/DesignTheme/';
+import { BITIcon, it_expand } from '@design/components/DesignTheme/Icons';
 import { Dropdown, Row, Col } from 'react-bootstrap';
 
 /**

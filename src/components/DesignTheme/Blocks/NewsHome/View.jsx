@@ -13,7 +13,7 @@ import {
   BITIcon,
   it_calendar,
   it_arrow_right,
-} from '~/components/DesignTheme/Icons';
+} from '@design/components/DesignTheme/Icons';
 /**
  * View image block class.
  * @class View

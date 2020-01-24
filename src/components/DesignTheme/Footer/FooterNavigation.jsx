@@ -14,7 +14,7 @@ import { getBaseUrl } from '@plone/volto/helpers';
 import { getNavigation } from '@plone/volto/actions';
 import { Row, Col } from 'react-bootstrap';
 
-import { LinkList, LinkListItem } from '~/components/DesignTheme';
+import { LinkList, LinkListItem } from '@design/components/DesignTheme';
 
 const messages = defineMessages({
   goToPage: {

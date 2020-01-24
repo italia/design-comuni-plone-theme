@@ -16,12 +16,12 @@ import underlineSVG from '@plone/volto/icons/underline.svg';
 import alignCenterSVG from '@plone/volto/icons/align-center.svg';
 
 import newsSVG from '@plone/volto/icons/news.svg';
-import NewsHomeView from '@package/components/DesignTheme/Blocks/NewsHome/View';
-import NewsHomeEdit from '@package/components/DesignTheme/Blocks/NewsHome/Edit';
+import NewsHomeView from '@design/components/DesignTheme/Blocks/NewsHome/View';
+import NewsHomeEdit from '@design/components/DesignTheme/Blocks/NewsHome/Edit';
 
 import alertSVG from '@plone/volto/icons/alert.svg';
-import AlertView from '@package/components/DesignTheme/Blocks/Alert/View';
-import AlertEdit from '@package/components/DesignTheme/Blocks/Alert/Edit';
+import AlertView from '@design/components/DesignTheme/Blocks/Alert/View';
+import AlertEdit from '@design/components/DesignTheme/Blocks/Alert/Edit';
 
 const extendedBlockRenderMap = defaultSettings.extendedBlockRenderMap.update(
   'align-center',

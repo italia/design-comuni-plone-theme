@@ -10,8 +10,8 @@ import { compose } from 'redux';
 import cx from 'classnames';
 import { Link } from 'react-router-dom';
 import { defineMessages, injectIntl } from 'react-intl';
-import { LinkList, LinkListItem } from '~/components/DesignTheme';
-import { BITIcon, it_arrow_right } from '~/components/DesignTheme/Icons';
+import { LinkList, LinkListItem } from '@design/components/DesignTheme';
+import { BITIcon, it_arrow_right } from '@design/components/DesignTheme/Icons';
 import { Nav, Dropdown, Row, Col } from 'react-bootstrap';
 
 const messages = defineMessages({

@@ -5,7 +5,7 @@
       "alias": {
         "map": [
           ["@plone/volto", "@plone/volto/src"],
-          ["@package", "./src"]
+          ["@design", "./src"]
         ],
         "extensions": [".js", ".jsx", ".json"]
       },

@@ -17,7 +17,7 @@ import {
   /* SearchWidget,*/
 } from '@plone/volto/components';
 
-import { HeaderSlim, HeaderCenter } from '~/components/DesignTheme';
+import { HeaderSlim, HeaderCenter } from '@design/components/DesignTheme';
 import { Row, Col, Container } from 'react-bootstrap';
 
 /**

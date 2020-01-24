@@ -14,7 +14,7 @@ import {
   BITIcon,
   it_facebook,
   it_twitter,
-} from '~/components/DesignTheme/Icons';
+} from '@design/components/DesignTheme/Icons';
 
 const messages = defineMessages({
   followUs: {

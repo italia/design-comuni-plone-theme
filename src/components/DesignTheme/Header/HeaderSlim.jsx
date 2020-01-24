@@ -9,8 +9,8 @@ import { defineMessages, injectIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
-import { LanguageSelector } from '~/components/DesignTheme';
-import { BITIcon, it_user } from '~/components/DesignTheme/Icons';
+import { LanguageSelector } from '@design/components/DesignTheme';
+import { BITIcon, it_user } from '@design/components/DesignTheme/Icons';
 import { Button } from 'react-bootstrap';
 
 const messages = defineMessages({

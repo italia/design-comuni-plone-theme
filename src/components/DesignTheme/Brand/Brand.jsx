@@ -5,7 +5,7 @@
 
 import React, { Component } from 'react';
 
-import { BrandLogo, BrandText } from '~/components/DesignTheme';
+import { BrandLogo, BrandText } from '@design/components/DesignTheme';
 
 class Brand extends Component {
   /**

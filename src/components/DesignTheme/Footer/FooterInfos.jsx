@@ -10,14 +10,14 @@ import PropTypes from 'prop-types';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { Form, Row, Col, Button } from 'react-bootstrap';
-import { LinkList, LinkListItem } from '~/components/DesignTheme/';
+import { LinkList, LinkListItem } from '@design/components/DesignTheme/';
 
 import {
   BITIcon,
   it_mail,
   it_twitter,
   it_facebook,
-} from '~/components/DesignTheme/Icons';
+} from '@design/components/DesignTheme/Icons';
 
 const messages = defineMessages({
   goToPage: {
