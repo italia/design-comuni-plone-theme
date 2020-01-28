@@ -23,3 +23,4 @@ export FooterMain from './Footer/FooterMain';
 export FooterInfos from './Footer/FooterInfos';
 export FooterNavigation from './Footer/FooterNavigation';
 export FooterSmall from './Footer/FooterSmall';
+export CharCounterDescriptionWidget from './manage/Widgets/CharCounterDescriptionWidget';

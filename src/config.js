@@ -22,6 +22,7 @@ import NewsHomeEdit from '@design/components/DesignTheme/Blocks/NewsHome/Edit';
 import alertSVG from '@plone/volto/icons/alert.svg';
 import AlertView from '@design/components/DesignTheme/Blocks/Alert/View';
 import AlertEdit from '@design/components/DesignTheme/Blocks/Alert/Edit';
+import { CharCounterDescriptionWidget } from '@design/components/DesignTheme';
 
 const extendedBlockRenderMap = defaultSettings.extendedBlockRenderMap.update(
   'align-center',
@@ -102,6 +103,10 @@ export const views = {
 
 export const widgets = {
   ...defaultWidgets,
+  id: {
+    ...defaultWidgets.id,
+    description: CharCounterDescriptionWidget,
+  },
 };
 
 const customBlocksOrder = [{ id: 'news', title: 'News' }];
