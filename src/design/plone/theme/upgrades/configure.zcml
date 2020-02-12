@@ -38,4 +38,31 @@
     handler=".upgrades.remove_gplus"
     />
 
+  <genericsetup:upgradeStep
+    source="1350"
+    destination="1400"
+    profile="design.plone.theme:default"
+    title="Import plone registry"
+    description="Added TinyMCE templates"
+    handler=".upgrades.import_records_registry"
+    />
+
+  <genericsetup:upgradeStep
+    source="1400"
+    destination="1500"
+    profile="design.plone.theme:default"
+    title="Import plone registry"
+    description="Added TinyMCE table style"
+    handler=".upgrades.import_records_registry"
+    />
+
+  <genericsetup:upgradeStep
+    source="1500"
+    destination="1501"
+    profile="design.plone.theme:default"
+    title="Import plone registry"
+    description="Fix TinyMCE table style"
+    handler=".upgrades.import_records_registry"
+    />
+
 </configure>

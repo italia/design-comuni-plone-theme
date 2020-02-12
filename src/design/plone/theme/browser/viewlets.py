@@ -7,6 +7,9 @@ from plone import api
 from plone.api.exc import InvalidParameterError
 from plone.app.layout.viewlets import common as base
 from plone.app.layout.viewlets.common import SearchBoxViewlet
+from plone.app.layout.viewlets.content import (
+    ContentRelatedItems as BaseContentRelatedItems,
+)
 from plone.app.layout.viewlets.content import DocumentBylineViewlet
 from plone.app.multilingual.browser.selector import LanguageSelectorViewlet
 from Products.CMFPlone.utils import getSiteLogo
@@ -199,3 +202,26 @@ class HeaderBannerViewlet(LanguageSelectorViewlet):
             'id': user.getProperty('id'),
             'fullname': user.getProperty('fullname') or user.getProperty('id'),
         }
+
+
+class ContentRelatedItems(BaseContentRelatedItems):
+    def related2brains(self, related):
+        """Return a list of brains based on a list of relations. Will filter
+        relations if the user has no permission to access the content.
+
+        :param related: related items
+        :type related: list of relations
+        :return: list of catalog brains
+        """
+        catalog = api.portal.get_tool(name='portal_catalog')
+        brains = []
+        for r in related:
+            path = getattr(r, 'to_path', None)
+            if path is None:
+                # Item was deleted.  The related item should have been cleaned
+                # up, but apparently this does not happen.
+                continue
+            # the query will return an empty list if the user
+            # has no permission to see the target object
+            brains.extend(catalog(path=dict(query=path, depth=0)))
+        return brains

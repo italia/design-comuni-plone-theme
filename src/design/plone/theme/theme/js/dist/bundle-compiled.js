@@ -34,7 +34,7 @@
     };
 
   /*
-   *   Copyright (C) 2017  Nicola Zambello
+   *   Copyright (C) 2017 Nicola Zambello
    *
    *    The JavaScript code in this page is open source software licensed under MIT license
    *    References about this code and its license, see:
@@ -51,14 +51,17 @@
       rowsWrapped = acc.rowsWrapped,
       options = acc.options;
 
+    var oldBuffer = acc.buffer;
+    var newBuffer = oldBuffer;
+
     if (rowsWrapped === rowsLimit + 1) {
       return _extends({}, acc);
     }
-    var textBeforeWrap = el.textContent;
+    var textBeforeWrap = oldBuffer;
     var newRowsWrapped = rowsWrapped;
     var newHeight = elHeight;
-    el.textContent = el.textContent.length
-      ? el.textContent + ' ' + token + options.replaceStr
+    el.innerHTML = newBuffer = oldBuffer.length
+      ? '' + oldBuffer + options.delimiter + token + options.replaceStr
       : '' + token + options.replaceStr;
 
     if (parseFloat(elStyle.height) > parseFloat(elHeight)) {
@@ -66,7 +69,7 @@
       newHeight = elStyle.height;
 
       if (newRowsWrapped === rowsLimit + 1) {
-        el.innerHTML =
+        el.innerHTML = newBuffer =
           textBeforeWrap[textBeforeWrap.length - 1] === '.' &&
           options.replaceStr === '...'
             ? textBeforeWrap + '..'
@@ -79,11 +82,12 @@
       }
     }
 
-    el.textContent = textBeforeWrap.length
-      ? textBeforeWrap + ' ' + token
+    el.innerHTML = newBuffer = textBeforeWrap.length
+      ? '' + textBeforeWrap + options.delimiter + token
       : '' + token;
 
     return _extends({}, acc, {
+      buffer: newBuffer,
       elHeight: newHeight,
       rowsWrapped: newRowsWrapped,
     });
@@ -101,6 +105,7 @@
       replaceStr: '...',
       responsive: false,
       debounceDelay: 250,
+      delimiter: ' ',
     };
 
     var opts = _extends({}, defaultOptions, options);
@@ -110,14 +115,15 @@
 
     for (var i = 0; i < elements.length; i++) {
       var el = elements[i];
-      originalTexts[i] = el.textContent;
-      var splittedText = el.textContent.split(' ');
+      originalTexts[i] = el.innerHTML;
+      var splittedText = el.innerHTML.split(opts.delimiter);
 
-      el.textContent = '';
+      el.innerHTML = '';
       var elStyle = window.getComputedStyle(el);
 
       splittedText.reduce(tokensReducer, {
         el: el,
+        buffer: el.innerHTML,
         elStyle: elStyle,
         elHeight: 0,
         rowsLimit: rows,
@@ -128,12 +134,22 @@
 
     if (opts.responsive) {
       var resizeTimeout = false;
+      var last_window_w = window.innerWidth;
 
       var resizeHandler = function resizeHandler() {
-        for (var _i = 0; _i < elements.length; _i++) {
-          elements[_i].textContent = originalTexts[_i];
+        if (window.innerWidth !== last_window_w) {
+          last_window_w = window.innerWidth;
+
+          for (var _i = 0; _i < elements.length; _i++) {
+            elements[_i].innerHTML = originalTexts[_i];
+          }
+
+          ellipsis(
+            selector,
+            rows,
+            _extends({}, options, { responsive: false })
+          );
         }
-        ellipsis(selector, rows, _extends({}, options, { responsive: false }));
       };
 
       var resizeListener = function resizeListener() {
@@ -415,11 +431,13 @@ require(['jquery', 'ellipsed'], function($, ellipsed) {
     });
 
     function callEllipsis() {
-      ellipsis('.tile-collection .collectionItemDescription', 4, {
-        responsive: true,
-      });
-      ellipsis('.news-highlight .news-description', 4, { responsive: true });
-      ellipsis('.news-big-photo .news-description', 4, { responsive: true });
+      ellipsis(
+        '.tile-collection .collectionItemDescription, .news-highlight .news-description, .news-big-photo .news-description',
+        4,
+        {
+          responsive: true,
+        }
+      );
     }
 
     /*

@@ -1,32 +1,202 @@
-table {
-    @extend .table, .table-bordered;
-    width: auto;
+$table-border-color: #d6dce3;
+$table-cell-pad-h: 0.5em;
+$table-cell-pad-v: 1em;
+$table-hover-color: #e5f1fa;
+$table-stripe-color: #f6f7f9;
 
-    caption {
+table {
+    border: 0;
+    border-collapse: collapse;
+    max-width: 100%;
+    width: 100%;
+
+    &:not(.Table) {
+        tr {
+            border-top: 0;
+            border-bottom: 1px solid $table-border-color;
+
+            td {
+                border: 0;
+            }
+        }
+
+        thead {
+            th {
+                border: 0;
+            }
+        }
+
+        &.table-header-darker {
+            thead {
+                background-color: #f5f5f0;
+
+                th {
+                    border-bottom: 1px solid #222;
+                }
+            }
+        }
+    }
+
+    .invisible {
+        visibility: inherit;
+    }
+
+    tr {
+        border-bottom: 0;
+
+        &.u-border-bottom-xs {
+            border-bottom: 0.2rem solid currentColor;
+        }
+    }
+
+    td,
+    th {
+        text-align: left;
+        padding: 1em;
+    }
+
+    thead tr:first-child {
+        td,
+        th {
+            border-top: 0;
+        }
+    }
+
+    .u-background-grey-10 {
+        background-color: #f5f5f0;
+    }
+    .u-textCenter {
         text-align: center;
     }
-
-    > thead > tr > th {
-        vertical-align: top;
-        border: 0;
+    .u-border-top-xxs {
+        border-top: 0.1rem solid currentColor;
+    }
+    .u-border-right-xxs {
+        border-right: 0.1rem solid currentColor;
+    }
+    .u-border-bottom-xxs {
+        border-bottom: 0.1rem solid currentColor;
+    }
+    .u-border-left-xxs {
+        border-left: 0.1rem solid currentColor;
+    }
+    .u-border-all-xxs {
+        border: 0.1rem solid currentColor;
+    }
+    .u-border-top-xs {
+        border-top: 0.2rem solid currentColor;
+    }
+    .u-border-right-xs {
+        border-right: 0.2rem solid currentColor;
+    }
+    .u-border-bottom-xs {
+        border-bottom: 0.2rem solid currentColor;
+    }
+    .u-textWeight-600 {
+        font-weight: 600;
     }
 
-    &.table-simple {
-        border-width: 1px 0 0 0;
+    &.Table--fixed {
+        table-layout: fixed;
+    }
 
-        > thead > tr > th {
-            border: 0;
-        }
-        > tbody > tr > td {
-            border-width: 1px 0 0 0;
+    &.Table--hover {
+        > tbody {
+            > tr {
+                &:hover {
+                    > th,
+                    > td {
+                        background-color: $table-hover-color;
+                    }
+                }
+            }
         }
     }
 
-    tr.odd {
-        background-color: $gray-bg;
+    &.Table--striped {
+        th,
+        td {
+            border-top: 0;
+        }
+
+        tbody {
+            tr {
+                &:nth-child(odd) {
+                    background-color: $table-stripe-color;
+                }
+            }
+        }
+    }
+
+    &.Table--withBorder {
+        tr {
+            border-bottom: 1px solid $table-border-color;
+        }
+
+        th {
+            border-top: 1px solid $table-border-color;
+        }
+
+        thead {
+            tr:first-child {
+                th,
+                td {
+                    border-top: 0;
+                }
+            }
+        }
+    }
+
+    &.Table--compact {
+        td,
+        th {
+            padding: $table-cell-pad-h;
+        }
+    }
+
+    &.Table--irregular {
+        tr {
+            th {
+                @extend .u-background-grey-10;
+            }
+        }
+    }
+
+    &.Table--withBorder.tablesaw-swipe {
+        tr {
+            position: relative;
+        }
+
+        .tablesaw-swipe-cellpersist {
+            z-index: 0;
+            position: sticky;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            height: 100%;
+            border-right: 0;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #fff;
+                z-index: -1;
+                border-right: 1px solid $table-border-color;
+
+                @media (max-width: 767px) {
+                    box-shadow: 0 0 1rem #e3e3e3;
+                }
+            }
+        }
     }
 }
 
-.invisible {
-    visibility: inherit;
+@-moz-document url-prefix() {
+    fieldset {
+        display: table-cell;
+    }
 }

@@ -165,7 +165,7 @@
   <browser:viewlet
       name="plone.belowcontentbody.relateditems"
       manager="plone.app.layout.viewlets.interfaces.IBelowContent"
-      class="plone.app.layout.viewlets.content.ContentRelatedItems"
+      class=".viewlets.ContentRelatedItems"
       view="plone.app.layout.globals.interfaces.IViewView"
       permission="zope2.View"
       layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"

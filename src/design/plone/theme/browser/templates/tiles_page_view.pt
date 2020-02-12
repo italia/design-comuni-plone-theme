@@ -12,7 +12,8 @@
       <metal:content-core define-macro="content-core"
                           tal:define="toc context/table_of_contents|nothing;">
         <div id="parent-fieldname-text" class="content-text ${python: toc and 'pat-autotoc' or ''}"
-          tal:condition="context/text"
+          tal:define="text context/text|nothing"
+          tal:condition="text"
           tal:content="structure python:context.text.output_relative_to(view.context)"/>
       </metal:content-core>
     </metal:content-core>

@@ -2,11 +2,64 @@ Changelog
 =========
 
 
-3.3.3 (unreleased)
-------------------
+3.3.10 (unreleased)
+-------------------
 
 - updated redturtle.tiles.management dependency version [daniele] 
 
+
+3.3.9 (2019-11-21)
+------------------
+
+- cleanup registry.xml and fixed tinymce template registration [nzambello]
+
+
+3.3.8 (2019-10-14)
+------------------
+
+- Upgraded ellipsed [nzambello]
+- Performance fix for ellipsed calls [nzambello]
+
+
+3.3.7 (2019-10-09)
+------------------
+
+- updated redturtle.tiles.management dependency version [daniele]
+- removed carousel markup on news tile render when not needed [giulia]
+- fixed icon home in breadcrumns [giulia]
+- Added styles for tables [nzambello]
+- Fix styles for events calendar view [nzambello]
+- Fixed tile sizes for smaller screens [pnicolli]
+- Upgraded ellipsed [nzambello]
+- Changed collection UID to tile ID for carousel wrappers [nzambello]
+
+
+3.3.6 (2019-08-16)
+------------------
+
+- Added registry css_styles definition purge attribute [nzambello]
+
+
+3.3.5 (2019-08-01)
+------------------
+
+- Fix for IE: play icon in video collection tile was not displayed [nzambello]
+- Hidden toggle button for navigation if this is empty [nzambello]
+- Added tiny templates for agid tables and relative styles [nzambello]
+
+3.3.4 (2019-07-23)
+------------------
+
+- Added instagram for social header viewlet [nzambello]
+
+
+3.3.3 (2019-06-26)
+------------------
+
+- Fix relateditems viewlet customization. Now handle empty relations.
+  [cekk]
+- Fix tiles_page_view condition for text field.
+  [cekk]
 
 3.3.2 (2019-06-03)
 ------------------
