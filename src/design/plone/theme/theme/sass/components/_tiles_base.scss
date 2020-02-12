@@ -133,6 +133,7 @@
         &[class*='colonna'] {
             padding: 1rem 2rem;
             float: left;
+            clear: none;
         }
 
         &.colonna-1-di-2 {
@@ -149,50 +150,6 @@
 
         &.colonna-1-di-4 {
             width: 25%;
-        }
-    }
-}
-
-@supports (display: grid) {
-    .tilesList {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-
-        .tileWrapper {
-            grid-column: span 12;
-
-            &[class*='colonna'] {
-                width: 100%;
-                float: none;
-            }
-
-            &.colonna-1-di-2 {
-                grid-column: span 6;
-            }
-
-            &.colonna-1-di-3 {
-                grid-column: span 4;
-            }
-
-            &.colonna-2-di-3 {
-                grid-column: span 8;
-            }
-
-            &.colonna-1-di-4 {
-                grid-column: span 3;
-            }
-        }
-    }
-    @media (max-width: $screen-sm-max) {
-        .tilesList .tileWrapper {
-            &.colonna-1-di-2,
-            &.colonna-1-di-3,
-            &.colonna-2-di-3 {
-                grid-column: span 12;
-            }
-            &.colonna-1-di-4 {
-                grid-column: span 6;
-            }
         }
     }
 }

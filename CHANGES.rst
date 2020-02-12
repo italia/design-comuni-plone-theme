@@ -5,7 +5,7 @@ Changelog
 3.3.10 (unreleased)
 -------------------
 
-- Nothing changed yet.
+- Removed use of grids to avoid Chrome 80 bug [nzambello]
 
 
 3.3.9 (2019-11-21)
