@@ -2,8 +2,8 @@ Changelog
 =========
 
 
-3.3.10 (unreleased)
--------------------
+4.0.0 (2020-02-13)
+------------------
 
 - Removed use of grids to avoid Chrome 80 bug [nzambello]
 
