@@ -3,7 +3,7 @@
  * @module components/theme/Header/Header
  */
 
-import React, { Component, useRef } from 'react';
+import React, { Component } from 'react';
 
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
@@ -18,7 +18,7 @@ import {
 } from '@plone/volto/components';
 
 import { HeaderSlim, HeaderCenter } from '@design/components/DesignTheme';
-import { Row, Col, Container } from 'react-bootstrap';
+import { Headers } from 'design-react-kit/dist/design-react-kit';
 
 /**
  * Header component class.
@@ -47,7 +47,7 @@ class Header extends Component {
 
   state = { sticky: false };
   handleScroll = () => {
-    if (window.pageYOffset > 0) {
+    if (window.pageYOffset > 168) {
       this.setState({
         sticky: true,
       });
@@ -74,43 +74,13 @@ class Header extends Component {
   render() {
     const isCmsUI = isCmsUi(this.props.pathname);
     let content = (
-      <header
-        className={
-          'it-header-wrapper it-header-sticky public-ui' +
-          (this.state.sticky ? ' is-sticky' : '')
-        }
-      >
-        <div className="it-header-slim-wrapper">
-          <Container>
-            <Row>
-              <Col size={12}>
-                <HeaderSlim pathname={this.props.pathname} />
-              </Col>
-            </Row>
-          </Container>
-        </div>
-
+      <Headers sticky={this.state.sticky} className="public-ui">
+        <HeaderSlim />
         <div className="it-nav-wrapper">
-          <div className="it-header-center-wrapper">
-            <Container>
-              <Row>
-                <Col size={12}>
-                  <HeaderCenter />
-                </Col>
-              </Row>
-            </Container>
-          </div>
-          <div className="it-header-navbar-wrapper">
-            <Container>
-              <Row>
-                <Col size={12}>
-                  <Navigation pathname={this.props.pathname} />
-                </Col>
-              </Row>
-            </Container>
-          </div>
+          <HeaderCenter />
+          <Navigation pathname={this.props.pathname} />
         </div>
-      </header>
+      </Headers>
     );
     return isCmsUI ? <div className="public-ui">{content}</div> : content;
   }

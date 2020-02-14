@@ -3,78 +3,52 @@
  * @module components/Footer/FooterMain
  */
 
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { defineMessages, injectIntl } from 'react-intl';
-import PropTypes from 'prop-types';
-import { compose } from 'redux';
-import { connect } from 'react-redux';
-import { Container, Row, Col } from 'react-bootstrap';
+import {
+  Container,
+  Row,
+  Col,
+  Icon,
+} from 'design-react-kit/dist/design-react-kit';
 
-import { Brand } from '@design/components/DesignTheme';
 import { FooterNavigation, FooterInfos } from '@design/components/DesignTheme/';
-
-const messages = defineMessages({});
 
 /**
  * FooterMain component class.
  * @class FooterMain
  * @extends Component
  */
-class FooterMain extends Component {
-  /**
-   * Property types.
-   * @property {Object} propTypes Property types.
-   * @static
-   */
-  static propTypes = {
-    token: PropTypes.string,
-  };
+const FooterMain = () => {
+  return (
+    <div className="it-footer-main">
+      <Container tag="div">
+        <section>
+          <Row className="clearfix" tag="div">
+            <Col sm={12} tag="div" widths={['xs', 'sm', 'md', 'lg', 'xl']}>
+              <div className="it-brand-wrapper">
+                <Link to="/">
+                  <Icon color="" icon="it-pa" padding={false} size="" />
+                  <div className="it-brand-text">
+                    <h2 className="no_toc">Nome del Comune</h2>
+                    <h3 className="no_toc d-none d-md-block">
+                      Uno dei tanti Comuni d'Italia
+                    </h3>
+                  </div>
+                </Link>
+              </div>
+            </Col>
+          </Row>
+        </section>
+        <section>
+          <FooterNavigation />
+        </section>
+        <section className="py-4 border-white border-top">
+          <FooterInfos />
+        </section>
+      </Container>
+    </div>
+  );
+};
 
-  /**
-   * Default properties.
-   * @property {Object} defaultProps Default properties.
-   * @static
-   */
-  static defaultProps = {
-    token: null,
-  };
-
-  /**
-   * Render method.
-   * @method render
-   * @returns {string} Markup for the component.
-   */
-  render() {
-    return (
-      <div className="it-footer-main">
-        <Container>
-          <section>
-            <Row className="clearfix">
-              <Col sm={12}>
-                <div className="it-brand-wrapper">
-                  <Link to="#">
-                    <Brand />
-                  </Link>
-                </div>
-              </Col>
-            </Row>
-          </section>
-          <section>
-            <FooterNavigation />
-          </section>
-          <section className="py-4 border-white border-top">
-            <FooterInfos />
-          </section>
-        </Container>
-      </div>
-    );
-  }
-}
-
-export default compose(
-  injectIntl,
-  connect(state => ({
-    token: state.userSession.token,
-  })),
-)(FooterMain);
+export default FooterMain;
