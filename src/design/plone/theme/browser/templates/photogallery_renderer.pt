@@ -33,12 +33,15 @@
                                           item_wf_state obj/review_state;
                                           item_wf_state_class python:'state-' + plone_view.normalizeString(item_wf_state);
                                           item_type obj/portal_type;
-                                          item_type_class python:'contenttype-' + plone_view.normalizeString(item_type);"
+                                          item_type_class python:'contenttype-' + plone_view.normalizeString(item_type);
+                                          is_external_link python: helper_view.is_external_link(obj);"
                               tal:attributes="class python: 'colonna-1-di-3 ' + (oddrow and 'collectionItem even' or 'collectionItem odd')">
                               <div class="collectionItemWrapper">
                                   <a href="#"
                                      tal:attributes="href itemUrl;
                                                      class string:tile $item_type_class $item_wf_state_class;
+                                                     target python: is_external_link and '_blank' or None;
+                                                     rel python: is_external_link and 'noopener noreferrer' or None;
                                                      title obj/Description">
                                       <div class="collectionItemImage">
                                           <!-- if obj is None, it will break calling getObject() on it, but if the collection is empty this won't be rendered by collective.tiles.collection -->

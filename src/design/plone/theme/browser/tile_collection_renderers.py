@@ -84,6 +84,17 @@ class HelpersView(BrowserView):
             'comments': conversation.total_comments()
         }
 
+    def is_external_link(self, item):
+        # accepts a Link object
+        obj = item.getObject()
+        remoteUrl = getattr(obj, 'remoteUrl', None)
+
+        if remoteUrl:
+            # so it's a Link
+            return not remoteUrl.startswith('${portal_url}')
+
+        return False
+
 
 @implementer(ICollectionTileRenderer)
 class SightsView(BrowserView):

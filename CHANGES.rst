@@ -5,7 +5,7 @@ Changelog
 4.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Photogallery tile collection: opening external links in new tab [nzambello]
 
 
 4.0.0 (2020-02-13)
