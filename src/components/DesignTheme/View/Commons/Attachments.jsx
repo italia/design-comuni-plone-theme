@@ -1,6 +1,6 @@
 import { defineMessages, useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
-import React from 'react';
+import React, { useState } from 'react';
 import { searchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
@@ -12,28 +12,20 @@ const messages = defineMessages({
 });
 
 /**
- * NewsItemView view component class.
+ * Attachments view component class.
  * @function Attachments
  * @params {object} content Content object.
+ * @params {string} folder name where to find images.
  * @returns {string} Markup of the component.
  */
 const Attachments = ({ content, folder_name }) => {
   const intl = useIntl();
 
-  // mi prendo il path sotto cui cercare
   const url = flattenToAppURL(content['@id']) + '/' + folder_name;
-  // useSelector will extract subrequest from the state. Il will contain
-  // the query results
   const searchResults = useSelector(state => state.search.subrequests);
-
-  // Obtain dispatcher so i will able to dispatch the action
   const dispatch = useDispatch();
-  //use effect to perform operation after the component did mount/update and
-  // unmount
   React.useEffect(() => {
-    // only if we have the folder
     if (content?.items.some(e => e.id === folder_name)) {
-      // dispatch the action
       dispatch(
         searchContent(
           url,
@@ -46,7 +38,10 @@ const Attachments = ({ content, folder_name }) => {
         ),
       );
     }
-  }, [dispatch, content, url]);
+    return () => {
+      // setValue(folder_name, null);
+    };
+  }, [dispatch, content, url, folder_name]);
 
   const attachments =
     (searchResults &&

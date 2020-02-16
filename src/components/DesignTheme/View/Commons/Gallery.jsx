@@ -12,9 +12,10 @@ const messages = defineMessages({
 });
 
 /**
- * NewsItemView view component class.
- * @function Attachments
+ * Gallery view component class.
+ * @function Gallery
  * @params {object} content Content object.
+ * @params {string} folder name where to find images.
  * @returns {string} Markup of the component.
  */
 const Gallery = ({ content, folder_name }) => {
@@ -47,40 +48,65 @@ const Gallery = ({ content, folder_name }) => {
         ),
       );
     }
-  }, [dispatch, content, url]);
+    return () => {};
+  }, [dispatch, content, url, folder_name]);
 
-  const images =
+  const multimedia =
     (searchResults &&
       searchResults[folder_name] &&
       searchResults[folder_name].items) ||
     [];
-  console.log(images);
+
   return (
-    <article id="gallery" className="it-page-section anchor-offset mt-5">
-      <div className="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
-        <div className="it-header-block">
-          <div className="it-header-block-title">
-            <h4 className="no_toc"> {intl.formatMessage(messages.gallery)}</h4>
+    <>
+      <article id="gallery" className="it-page-section anchor-offset mt-5">
+        <div className="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
+          <div className="it-header-block">
+            <div className="it-header-block-title">
+              <h4 className="no_toc">
+                {' '}
+                {intl.formatMessage(messages.gallery)}
+              </h4>
+            </div>
+          </div>
+          <div className="it-carousel-all owl-carousel it-card-bg">
+            {multimedia
+              .filter(item => item['@type'] === 'Image')
+              .map((item, i) => (
+                <div className="it-single-slide-wrapper" key={i}>
+                  <figure>
+                    <img
+                      src={flattenToAppURL(item.image.scales.preview.download)}
+                      alt={item.title}
+                      className="img-fluid"
+                    ></img>
+                    <figcaption className="figure-caption mt-2">
+                      {item.title}
+                    </figcaption>
+                  </figure>
+                </div>
+              ))}
           </div>
         </div>
-        <div className="it-carousel-all owl-carousel it-card-bg">
-          {images.map((item, i) => (
-            <div className="it-single-slide-wrapper" key={i}>
-              <figure>
-                <img
-                  src={flattenToAppURL(item.image.scales.preview.download)}
-                  alt={item.title}
-                  className="img-fluid"
-                ></img>
-                <figcaption className="figure-caption mt-2">
-                  {item.title}
-                </figcaption>
-              </figure>
+      </article>
+      <article id="video" className="it-page-section anchor-offset mt-5">
+        {multimedia
+          .filter(item => item['@type'] === 'Link')
+          .map((item, i) => (
+            <div
+              key={i}
+              className="embed-responsive embed-responsive-16by9 my-4"
+            >
+              <iframe
+                className="embed-responsive-item"
+                title={item.title}
+                src={item.remoteUrl}
+                allowFullScreen=""
+              ></iframe>
             </div>
           ))}
-        </div>
-      </div>
-    </article>
+      </article>
+    </>
   );
 };
 export default Gallery;

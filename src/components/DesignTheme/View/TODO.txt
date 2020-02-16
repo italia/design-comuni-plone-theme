@@ -1,0 +1,15 @@
+[] icona allegati
+[] includere js bootstrap
+  [X] immagini carousel
+[] test
+[X] propTypes
+[X] Video
+[X] A cura di
+[X] Luoghi
+[] Menu
+[] Correlati news
+[] Correlati documenti
+[] RichText in edit
+[] propTypes dei component
+[] useEffect => clean
+[] Attachment, Gallery e CuredBy: gestire loading

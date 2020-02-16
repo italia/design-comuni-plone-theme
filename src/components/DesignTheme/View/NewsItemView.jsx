@@ -10,6 +10,8 @@ import { defineMessages, useIntl } from 'react-intl';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Attachments } from './Commons';
 import { Gallery } from './Commons';
+import { CuredBy } from './Commons';
+import { Locations } from './Commons';
 import { readingTime } from './ViewUtils';
 // import { getBaseUrl } from '@plone/volto/helpers';
 
@@ -53,18 +55,6 @@ const messages = defineMessages({
   minutes: {
     id: 'minutes',
     defaultMessage: 'min',
-  },
-  cured_by: {
-    id: 'cured_by',
-    defaultMessage: 'A cura di',
-  },
-  page_cured_by: {
-    id: 'page_cured_by',
-    defaultMessage: 'Questa pagina è gestita da',
-  },
-  cured_by_people: {
-    id: 'cured_by_people',
-    defaultMessage: 'Persone',
   },
 });
 
@@ -203,42 +193,14 @@ const NewsItemView = ({ content }) => {
               />
             )}
             {(content.a_cura_di || content.a_cura_di_persone) && (
-              <article
-                id="a-cura-di"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4>{intl.formatMessage(messages.cured_by)}</h4>
-                <div className="row">
-                  {content.a_cura_di && (
-                    <div className="col-12 col-sm-8">
-                      <h6>
-                        <small>
-                          {intl.formatMessage(messages.page_cured_by)}
-                        </small>
-                      </h6>
-                      <div className="card card-teaser border rounded shadow p-4">
-                        <div className="card-body pr-3">
-                          <h5>{content.a_cura_di.title}</h5>
-                        </div>
-                      </div>
-                    </div>
-                  )}
-                  {content.a_cura_di_persone && (
-                    <div className="col-12 col-sm-4">
-                      <h6>
-                        <small>Persone</small>
-                      </h6>
-                      {content.a_cura_di_persone.map((item, i) => (
-                        <a key={i} href={item['@id']}>
-                          <div className="chip chip-simple chip-primary">
-                            <span className="chip-label">{item.title}</span>
-                          </div>
-                        </a>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </article>
+              <CuredBy
+                content={content}
+                office={content.a_cura_di}
+                people={content.a_cura_di_persone}
+              />
+            )}
+            {content.luoghi_notizia && (
+              <Locations locations={content.luoghi_notizia} />
             )}
             {content.dataset && (
               <article
@@ -287,7 +249,6 @@ const NewsItemView = ({ content }) => {
   );
 };
 
-// BBB
 /**
  * Property types.
  * @property {Object} propTypes Property types.
@@ -296,10 +257,25 @@ const NewsItemView = ({ content }) => {
 NewsItemView.propTypes = {
   content: PropTypes.shape({
     title: PropTypes.string,
+    subtitle: PropTypes.string,
     description: PropTypes.string,
+    effective: PropTypes.string,
+    expires: PropTypes.string,
+    image: PropTypes.object,
+    image_caption: PropTypes.string,
     text: PropTypes.shape({
       data: PropTypes.string,
     }),
+    items: PropTypes.object,
+    a_cura_di: PropTypes.shape({
+      title: PropTypes.string,
+    }),
+    a_cura_di_persone: PropTypes.object,
+    dataset: PropTypes.shape({
+      data: PropTypes.string,
+    }),
+    modified: PropTypes.string,
+    rights: PropTypes.string,
   }).isRequired,
 };
 
