@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-4.0.1 (unreleased)
+4.0.1 (2020-02-17)
 ------------------
 
 - Photogallery tile collection: opening external links in new tab [nzambello]
