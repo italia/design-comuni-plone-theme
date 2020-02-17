@@ -16,7 +16,7 @@ long_description = '\n\n'.join(
 
 setup(
     name='design.plone.theme',
-    version='3.3.10.dev0',
+    version='4.0.2.dev0',
     description="Theme for Italia Design System",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -52,7 +52,7 @@ setup(
         'plone.behavior',
         'Products.GenericSetup>=1.8.2',
         'redturtle.patterns.slider',
-        'redturtle.tiles.management>=1.2.5',
+        'redturtle.tiles.management>=2.0.0',
         'plone.app.standardtiles',
         'z3c.jbot',
     ],

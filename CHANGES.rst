@@ -2,10 +2,22 @@ Changelog
 =========
 
 
-3.3.10 (unreleased)
--------------------
+4.0.2 (unreleased)
+------------------
 
 - updated redturtle.tiles.management dependency version [daniele] 
+
+
+4.0.1 (2020-02-17)
+------------------
+
+- Photogallery tile collection: opening external links in new tab [nzambello]
+
+
+4.0.0 (2020-02-13)
+------------------
+
+- Removed use of grids to avoid Chrome 80 bug [nzambello]
 
 
 3.3.9 (2019-11-21)
