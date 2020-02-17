@@ -91,7 +91,9 @@ class HelpersView(BrowserView):
 
         if remoteUrl:
             # so it's a Link
-            return not remoteUrl.startswith('${portal_url}')
+            return not remoteUrl.startswith(
+                "${portal_url}"
+            ) and not remoteUrl.startswith("${navigation_root_url}")
 
         return False
 
