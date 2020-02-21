@@ -7,11 +7,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import { defineMessages, useIntl } from 'react-intl';
-import { flattenToAppURL } from '@plone/volto/helpers';
+
 import { Attachments } from './Commons';
 import { Gallery } from './Commons';
 import { CuredBy } from './Commons';
 import { Locations } from './Commons';
+import { WideImage } from './Commons';
+import { SideMenu } from './Commons';
 import { readingTime } from './ViewUtils';
 // import { getBaseUrl } from '@plone/volto/helpers';
 
@@ -153,26 +155,16 @@ const NewsItemView = ({ content }) => {
           </div>
         </div>
         {(content.image || content.image_caption) && (
-          <div className="row row-full-width my-3">
-            <figure className="figure">
-              {content.image && (
-                <img
-                  src={flattenToAppURL(content.image.download)}
-                  className="figure-img img-fluid full-width"
-                  alt="{content.image_caption || content.title}"
-                  title="{content.image_caption || content.title}"
-                />
-              )}
-              {content.image_caption && (
-                <figcaption className="figure-caption text-center pt-3">
-                  {content.image_caption}
-                </figcaption>
-              )}
-            </figure>
-          </div>
+          <WideImage
+            title={content.title}
+            image={content.image}
+            caption={content.image_caption}
+          />
         )}
         <div className="row border-top row-column-border row-column-menu-left">
-          <aside className="col-lg-4">MENU LATERALE</aside>
+          <aside className="col-lg-4">
+            <SideMenu />
+          </aside>
           <section className="col-lg-8 it-page-sections-container">
             {content.text.data && (
               <article className="it-page-section anchor-offset mt-5">

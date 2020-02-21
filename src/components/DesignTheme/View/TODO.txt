@@ -12,4 +12,12 @@
 [] RichText in edit
 [] propTypes dei component
 [] useEffect => clean
-[] Attachment, Gallery e CuredBy: gestire loading
+[] Attachment, Gallery e CuredBy: gestire loading?
+
+
+        {(content.image || content.image_caption) && <WideImage />}
+        {/* <WideImage
+             title={content.title}
+             image={content.image}
+             caption={content.image_caption}
+           /> */}
