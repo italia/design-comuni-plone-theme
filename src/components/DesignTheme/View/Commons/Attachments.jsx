@@ -3,11 +3,17 @@ import { useDispatch, useSelector } from 'react-redux';
 import React, { useState } from 'react';
 import { searchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import SVGAttachment from '@design/components/DesignTheme/View/Commons/attachment.svg';
+import { Image } from 'semantic-ui-react';
 
 const messages = defineMessages({
   attachments: {
     id: 'attachments',
     defaultMessage: 'Allegati',
+  },
+  attachment: {
+    id: 'attachment',
+    defaultMessage: 'Allegato',
   },
 });
 
@@ -58,7 +64,12 @@ const Attachments = ({ content, folder_name }) => {
             key={i}
             className="card card-teaser shadow p-4 mt-3 rounded border"
           >
-            ICON
+            <Image
+              src={SVGAttachment}
+              height={32}
+              alt={intl.formatMessage(messages.attachment)}
+              title={intl.formatMessage(messages.attachment)}
+            />
             <div className="card-body">
               <h5 className="card-title">
                 <a href={item.id}>{item.title}</a>

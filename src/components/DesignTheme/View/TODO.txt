@@ -1,23 +1,14 @@
-[] icona allegati
-[] includere js bootstrap
+[X] icona allegati
+[N] includere js bootstrap
   [X] immagini carousel
 [] test
 [X] propTypes
 [X] Video
 [X] A cura di
 [X] Luoghi
-[] Menu
+[] Menu   --> JS
 [] Correlati news
 [] Correlati documenti
 [] RichText in edit
-[] propTypes dei component
+[] propTypes dei component... basta il padre?
 [] useEffect => clean
-[] Attachment, Gallery e CuredBy: gestire loading?
-
-
-        {(content.image || content.image_caption) && <WideImage />}
-        {/* <WideImage
-             title={content.title}
-             image={content.image}
-             caption={content.image_caption}
-           /> */}

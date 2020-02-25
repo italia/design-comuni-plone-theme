@@ -37,7 +37,6 @@ const Location = ({ location }) => {
   }
   let card;
   if (location_fo) {
-    console.log(location_fo);
     card = (
       <div className="card card-teaser shadow mt-3 rounded">
         <div className="card-body">

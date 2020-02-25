@@ -1,8 +1,6 @@
 import { defineMessages, useIntl } from 'react-intl';
-import { useDispatch, useSelector } from 'react-redux';
 import React from 'react';
-import { getContent } from '@plone/volto/actions';
-import { flattenToAppURL } from '@plone/volto/helpers';
+import OfficeCard from './OfficeCard';
 
 const messages = defineMessages({
   cured_by: {
@@ -29,51 +27,16 @@ const messages = defineMessages({
  */
 const CuredBy = ({ content, office, people }) => {
   const intl = useIntl();
-  const key = content['UID'] + 'curedby';
-  const url = flattenToAppURL(office['@id']);
-  const officeContent = useSelector(state => state.content.subrequests);
-  const dispatch = useDispatch();
-  React.useEffect(() => {
-    if (office) {
-      dispatch(getContent(url, null, key));
-    }
-    return () => {
-      // setValue(key, null);
-    };
-  }, [dispatch, office, url, key]);
-  // const office_fo = officeContent?.key?.data;
-  let office_fo = null;
-  if (key in officeContent) {
-    office_fo = officeContent[key].data;
-  }
   return (
     <article id="a-cura-di" className="it-page-section anchor-offset mt-5">
       <h4>{intl.formatMessage(messages.cured_by)}</h4>
       <div className="row">
-        {office_fo && (
+        {office && (
           <div className="col-12 col-sm-8">
             <h6>
               <small>{intl.formatMessage(messages.page_cured_by)}</small>
             </h6>
-            <div className="card card-teaser border rounded shadow p-4">
-              <div className="card-body pr-3">
-                <h5>
-                  <a href={office_fo['@id']} title={office_fo.title}>
-                    {office_fo.title}
-                  </a>
-                </h5>
-                {(office_fo.city || office_fo.zip_code || office_fo.street) && (
-                  <div className="card-text">
-                    {office_fo.stree && <p>{office_fo.street}</p>}
-                    {(office_fo.city || office_fo.zip_code) && (
-                      <p>
-                        {office_fo.zip_code} {office_fo.city}
-                      </p>
-                    )}
-                  </div>
-                )}
-              </div>
-            </div>
+            <OfficeCard content={content} office={office} />
           </div>
         )}
         {people && (
