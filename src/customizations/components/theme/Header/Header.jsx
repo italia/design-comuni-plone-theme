@@ -3,10 +3,9 @@
  * @module components/theme/Header/Header
  */
 
-import React, { Component } from 'react';
+import React /*, { useEffect, useState } */ from 'react';
 
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 
 import { isCmsUi } from '@plone/volto/helpers';
 
@@ -20,72 +19,40 @@ import {
 import { HeaderSlim, HeaderCenter } from '@design/components/DesignTheme';
 import { Headers } from 'design-react-kit/dist/design-react-kit';
 
-/**
- * Header component class.
- * @class Header
- * @extends Component
- */
-class Header extends Component {
-  /**
-   * Property types.
-   * @property {Object} propTypes Property types.
-   * @static
-   */
-  static propTypes = {
-    token: PropTypes.string,
-    pathname: PropTypes.string.isRequired,
-  };
+const Header = ({ pathname }) => {
+  // const [mini, setMini] = useState(false);
 
-  /**
-   * Default properties.
-   * @property {Object} defaultProps Default properties.
-   * @static
-   */
-  static defaultProps = {
-    token: null,
-  };
+  // const handleScroll = () => {
+  //   setMini(window.pageYOffset > 120);
+  // };
 
-  state = { sticky: false };
-  handleScroll = () => {
-    if (window.pageYOffset > 168) {
-      this.setState({
-        sticky: true,
-      });
-    } else {
-      this.setState({
-        sticky: false,
-      });
-    }
-  };
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  }
-
-  /**
-   * Render method.
-   * @method render
-   * @returns {string} Markup for the component.
-   */
-  render() {
-    const isCmsUI = isCmsUi(this.props.pathname);
-    let content = (
-      <Headers sticky={this.state.sticky} className="public-ui">
+  const isCmsUI = isCmsUi(pathname);
+  let content = (
+    <>
+      {/* <div
+        className="sticky-placeholder"
+        style={{ paddingTop: mini ? '50px' : '120px' }}
+      /> */}
+      {/* <Headers sticky={true} className={mini ? 'is-sticky' : undefined}> */}
+      <Headers>
         <HeaderSlim />
         <div className="it-nav-wrapper">
           <HeaderCenter />
-          <Navigation pathname={this.props.pathname} />
+          <Navigation pathname={pathname} />
         </div>
       </Headers>
-    );
-    return isCmsUI ? <div className="public-ui">{content}</div> : content;
-  }
-}
+    </>
+  );
+  return isCmsUI ? <div className="public-ui">{content}</div> : content;
+};
 
-export default connect(state => ({
-  token: state.userSession.token,
-}))(Header);
+Header.propTypes = {
+  pathname: PropTypes.string.isRequired,
+};
+
+export default Header;

@@ -48,7 +48,7 @@ const Breadcrumbs = ({ pathname }) => {
                 <span className="separator">/</span>
               </BreadcrumbItem>
               {items.slice(0, -1).map((item, index, items) => (
-                <BreadcrumbItem tag="li">
+                <BreadcrumbItem tag="li" key={item.url}>
                   <Link to={item.url}>{item.title}</Link>
                   {index < items.length - 1 && (
                     <span className="separator">/</span>

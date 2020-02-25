@@ -69,7 +69,7 @@ const MegaMenu = ({ item, pathname }) => {
 
     return (
       <NavItem tag="li" className="megamenu" active={isItemActive}>
-        <UncontrolledDropdown nav tag="div">
+        <UncontrolledDropdown nav inNavbar tag="div">
           <DropdownToggle aria-haspopup color="secondary" nav>
             {item.title}
           </DropdownToggle>
