@@ -174,10 +174,10 @@ const FooterInfos = () => {
             id="input-newsletter"
             name="input-newsletter"
             placeholder="mail@example.com"
+            className="mb-3"
           />
           <Button
-            ccolor="primary"
-            color="secondary"
+            color="primary"
             className="btn-icon"
             type="submit"
             tag="button"
