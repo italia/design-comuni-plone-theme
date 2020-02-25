@@ -6,7 +6,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import {
+  Container,
+  Row,
+  Col,
+  Card,
+  CardBody,
+  CardText,
+  CardTitle,
+} from 'design-react-kit/dist/design-react-kit';
 import { Link } from 'react-router-dom';
 import { isCmsUi } from '@plone/volto/helpers';
 import {
@@ -39,7 +47,7 @@ const View = ({ data, pathname }) => {
           </Col>
           <Col lg={{ span: 5, order: 1 }}>
             <Card>
-              <Card.Body className="pb-5">
+              <CardBody className="pb-5">
                 <div className="category-top">
                   <BITIcon name={it_calendar} />
                   <Link to="#" className="category">
@@ -47,15 +55,15 @@ const View = ({ data, pathname }) => {
                   </Link>
                   <span className="data">18 mag 2018</span>
                 </div>
-                <Card.Title as="h1" className="h4">
+                <CardTitle as="h1" className="h4">
                   Parte l'estate con oltre 300 eventi in centro e nei quartieri,
                   tutti gli eventi previsti
-                </Card.Title>
-                <Card.Text>
+                </CardTitle>
+                <CardText>
                   Inaugurazione lunedì 2 luglio con il concerto gratuito in
                   piazza XX Settembre degli Sweet Soul Revue. Sul palco 20
                   musicisti da tutto il mondo.
-                </Card.Text>
+                </CardText>
                 <div className="chip chip-simple chip-primary">
                   <Link to="#" className="chip-label">
                     Estate in città
@@ -65,7 +73,7 @@ const View = ({ data, pathname }) => {
                   <span className="text">Tutte le novità</span>
                   <BITIcon name={it_arrow_right} />
                 </Link>
-              </Card.Body>
+              </CardBody>
             </Card>
           </Col>
         </Row>

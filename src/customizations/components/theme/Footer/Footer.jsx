@@ -5,14 +5,9 @@
 
 import React, { Component } from 'react';
 
-import PropTypes from 'prop-types';
-import { defineMessages, injectIntl } from 'react-intl';
-import { compose } from 'redux';
-
-import { isCmsUi } from '@plone/volto/helpers';
+// import PropTypes from 'prop-types';
+// import { isCmsUi } from '@plone/volto/helpers';
 import { FooterMain, FooterSmall } from '@design/components/DesignTheme/';
-
-const messages = defineMessages({});
 
 /**
  * Footer component class.
@@ -53,4 +48,4 @@ class Footer extends Component {
   }
 }
 
-export default compose(injectIntl)(Footer);
+export default Footer;

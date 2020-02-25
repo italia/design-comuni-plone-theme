@@ -7,7 +7,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import redraft from 'redraft';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { isCmsUi } from '@plone/volto/helpers';
 import { settings } from '@design/config';
 import { flattenToAppURL } from '@plone/volto/helpers';

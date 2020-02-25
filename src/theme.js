@@ -10,4 +10,7 @@
 import '@plone/volto/../theme/themes/pastanaga-cms-ui/extras/cms-ui.semantic.less';
 //import 'semantic-ui-less/semantic.less';
 import '@plone/volto/../theme/themes/pastanaga/extras/extras.less';
+import 'typeface-titillium-web';
+import 'typeface-roboto-mono';
+import 'typeface-lora';
 import '../theme/site.scss';
