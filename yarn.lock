@@ -1724,8 +1724,6 @@
     "@types/prop-types" "*"
     csstype "^2.2.0"
 
-<<<<<<< HEAD
-=======
 "@types/react@^16.8.23", "@types/react@^16.9.11":
   version "16.9.19"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.19.tgz#c842aa83ea490007d29938146ff2e4d9e4360c40"
@@ -1739,7 +1737,6 @@
   resolved "https://registry.yarnpkg.com/@types/schema-utils/-/schema-utils-1.0.0.tgz#295d36f01e2cb8bc3207ca1d9a68e210db6b40cb"
   integrity sha512-YesPanU1+WCigC/Aj1Mga8UCOjHIfMNHZ3zzDsUY7lI8GlKnh/Kv2QwJOQ+jNQ36Ru7IfzSedlG14hppYaN13A==
 
->>>>>>> master
 "@types/sizzle@2.3.2":
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/@types/sizzle/-/sizzle-2.3.2.tgz#a811b8c18e2babab7d542b3365887ae2e4d9de47"
