@@ -111,7 +111,7 @@ NewsItemView.propTypes = {
     text: PropTypes.shape({
       data: PropTypes.string,
     }),
-    items: PropTypes.object,
+    items: PropTypes.array,
     a_cura_di: PropTypes.shape({
       title: PropTypes.string,
     }),

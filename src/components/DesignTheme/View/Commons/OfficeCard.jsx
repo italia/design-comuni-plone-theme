@@ -26,33 +26,30 @@ const OfficeCard = ({ content, office }) => {
 
   // const office_fo = officeContent?.key?.data;
   let office_fo = null;
-  let html = <></>;
   if (key in officeContent) {
     office_fo = officeContent[key].data;
-    if (office_fo) {
-      html = (
-        <div className="card card-teaser border rounded shadow p-4">
-          <div className="card-body pr-3">
-            <h5>
-              <a href={office_fo['@id']} title={office_fo.title}>
-                {office_fo.title}
-              </a>
-            </h5>
-            {(office_fo.city || office_fo.zip_code || office_fo.street) && (
-              <div className="card-text">
-                {office_fo.stree && <p>{office_fo.street}</p>}
-                {(office_fo.city || office_fo.zip_code) && (
-                  <p>
-                    {office_fo.zip_code} {office_fo.city}
-                  </p>
-                )}
-              </div>
-            )}
-          </div>
+    return office_fo ? (
+      <div className="card card-teaser border rounded shadow p-4">
+        <div className="card-body pr-3">
+          <h5 className="card-title">
+            <a href={office_fo['@id']} title={office_fo.title}>
+              {office_fo.title}
+            </a>
+          </h5>
+          {(office_fo.city || office_fo.zip_code || office_fo.street) && (
+            <div className="card-text">
+              {office_fo.stree && <p>{office_fo.street}</p>}
+              {(office_fo.city || office_fo.zip_code) && (
+                <p>
+                  {office_fo.zip_code} {office_fo.city}
+                </p>
+              )}
+            </div>
+          )}
         </div>
-      );
-    }
+      </div>
+    ) : null;
   }
-  return html;
+  return null;
 };
 export default OfficeCard;

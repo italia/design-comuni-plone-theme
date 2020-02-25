@@ -10,4 +10,6 @@ export RichTextArticle from '@design/components/DesignTheme/View/Commons/RichTex
 export OfficeCard from '@design/components/DesignTheme/View/Commons/OfficeCard';
 export Metadata from '@design/components/DesignTheme/View/Commons/Metadata';
 export Sharing from '@design/components/DesignTheme/View/Commons/Sharing';
+export Venue from '@design/components/DesignTheme/View/Commons/Venue';
+export NewsCard from '@design/components/DesignTheme/View/Commons/NewsCard';
 // export Actions from '@design/components/DesignTheme/View/Commons/Actions';

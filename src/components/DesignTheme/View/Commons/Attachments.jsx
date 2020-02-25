@@ -61,7 +61,7 @@ const Attachments = ({ content, folder_name }) => {
       <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
         {attachments.map((item, i) => (
           <div
-            key={i}
+            key={item['@id']}
             className="card card-teaser shadow p-4 mt-3 rounded border"
           >
             <Image
@@ -72,7 +72,7 @@ const Attachments = ({ content, folder_name }) => {
             />
             <div className="card-body">
               <h5 className="card-title">
-                <a href={item.id}>{item.title}</a>
+                <a href={item['@id']}>{item.title}</a>
               </h5>
             </div>
           </div>

@@ -1,0 +1,42 @@
+body.contenttype-unita-organizzativa {
+  #ulteriori_informazioni p {
+    margin: 0;
+  }
+}
+
+.contenttype-unita-organizzativa {
+  &.public-ui {
+    .callout {
+      padding: 1em;
+      margin: 1rem 0;
+      border: 1px solid #22242626;
+      border-radius: 0.28571429rem;
+      box-shadow: 0 0.5rem 1rem #ddd !important;
+      border-left: solid 7px #e6e6e6;
+      max-width: none;
+    }
+  }
+}
+
+.mapbox {
+  .map {
+    display: block;
+    min-height: 200px;
+    width: auto;
+    background-color: #ddd;
+  }
+}
+
+#legami-altre-strutture {
+  div {
+    margin-bottom: 15px;
+  }
+}
+#persone-struttura {
+  a {
+    margin: 0 10px;
+  }
+  a:first-of-type {
+    margin-left: 0;
+  }
+}

@@ -13,6 +13,8 @@ import { RichTextArticle } from './Commons';
 import { OfficeCard } from './Commons';
 import { Attachments } from './Commons';
 import { Metadata } from './Commons';
+import { Venue } from './Commons';
+import { NewsCard } from './Commons';
 
 const messages = defineMessages({
   tipologia_organizzazione: {
@@ -37,11 +39,19 @@ const messages = defineMessages({
   },
   ulteriori_informazioni: {
     id: 'ulteriori_informazioni',
-    defaultMessage: 'Ulteriori informazioni',
+    defaultMessage: 'Informazioni',
   },
   box_aiuto: {
     id: 'box_aiuto',
     defaultMessage: "Box d'aiuto",
+  },
+  sedi: {
+    id: 'sedi',
+    defaultMessage: 'Dove e come trovarci',
+  },
+  notizie_in_evidenza: {
+    id: 'notizie_in_evidenza',
+    defaultMessage: 'Notizie in evidenza',
   },
 });
 
@@ -75,13 +85,31 @@ const UOView = ({ content }) => {
             <SideMenu />
           </aside>
           <section className="col-lg-8 it-page-sections-container">
+            {content.ulteriori_informazioni && (
+              <RichTextArticle
+                content={content.ulteriori_informazioni.data}
+                tag_id="ulteriori_informazioni"
+                title={intl.formatMessage(messages.ulteriori_informazioni)}
+              />
+            )}
+            {content.sedi && (
+              <article id="sedi" className="it-page-section anchor-offset mt-5">
+                <h4>{intl.formatMessage(messages.sedi)}</h4>
+                {content.sedi.map((item, i) => (
+                  <Venue key={item['@id']} venue={item} content={content} />
+                ))}
+              </article>
+            )}
             {content.tipologia_organizzazione && (
-              <>
+              <article
+                id="organizzazione"
+                className="it-page-section anchor-offset mt-5"
+              >
                 <h4 className="mb-3">
                   {intl.formatMessage(messages.tipologia_organizzazione)}
                 </h4>
                 <p>{content.tipologia_organizzazione.title}</p>
-              </>
+              </article>
             )}
             {content.competenze.data && (
               <RichTextArticle
@@ -149,19 +177,30 @@ const UOView = ({ content }) => {
             {content?.items.some(e => e.id === 'allegati') && (
               <Attachments content={content} folder_name={'allegati'} />
             )}
-            {content.ulteriori_informazioni && (
-              <RichTextArticle
-                content={content.ulteriori_informazioni.data}
-                tag_id="ulteriori_informazioni"
-                title={intl.formatMessage(messages.ulteriori_informazioni)}
-              />
-            )}
             {content.box_aiuto && (
               <RichTextArticle
                 content={content.box_aiuto.data}
                 tag_id="box_aiuto"
                 title={intl.formatMessage(messages.box_aiuto)}
               />
+            )}
+            {content.notizie_collegate && (
+              <article
+                id="related-news"
+                className="it-page-section anchor-offset mt-5"
+              >
+                <h4>{intl.formatMessage(messages.notizie_in_evidenza)}</h4>
+                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                  {content.notizie_collegate.map((item, i) => (
+                    <NewsCard
+                      index={item['@id']}
+                      item={item}
+                      showimage={false}
+                      content={content}
+                    />
+                  ))}
+                </div>
+              </article>
             )}
             <Metadata />
           </section>
