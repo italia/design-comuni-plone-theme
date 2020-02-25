@@ -3,13 +3,11 @@
  * @module components/theme/Footer/FooterSmall
  */
 
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { defineMessages, injectIntl } from 'react-intl';
-import { compose } from 'redux';
-import { connect } from 'react-redux';
+import { defineMessages, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
-import { Container } from 'react-bootstrap';
+import { Container } from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
   goToPage: {
@@ -35,77 +33,38 @@ const messages = defineMessages({
  * @class FooterSmall
  * @extends Component
  */
-class FooterSmall extends Component {
-  /**
-   * Property types.
-   * @property {Object} propTypes Property types.
-   * @static
-   */
-  static propTypes = {
-    token: PropTypes.string,
-  };
+const FooterSmall = () => {
+  const intl = useIntl();
 
-  /**
-   * Default properties.
-   * @property {Object} defaultProps Default properties.
-   * @static
-   */
-  static defaultProps = {
-    token: null,
-  };
+  return (
+    <div className="it-footer-small-prints clearfix">
+      <Container tag="div">
+        <h3 className="sr-only">{intl.formatMessage(messages.goToPage)}</h3>
+        <ul className="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row">
+          <li className="list-inline-item">
+            <Link to="#" title={intl.formatMessage(messages.legalNotes)}>
+              Media policy
+            </Link>
+          </li>
+          <li className="list-inline-item">
+            <Link to="#" title={intl.formatMessage(messages.legalNotes)}>
+              {intl.formatMessage(messages.legalNotes)}
+            </Link>
+          </li>
+          <li className="list-inline-item">
+            <Link to="#" title="Privacy-Cookies">
+              Privacy policy
+            </Link>
+          </li>
+          <li className="list-inline-item">
+            <Link to="#" title={intl.formatMessage(messages.siteMap)}>
+              {intl.formatMessage(messages.siteMap)}
+            </Link>
+          </li>
+        </ul>
+      </Container>
+    </div>
+  );
+};
 
-  /**
-   * Render method.
-   * @method render
-   * @returns {string} Markup for the component.
-   */
-  render() {
-    return (
-      <div className="it-footer-small-prints clearfix">
-        <Container>
-          <h3 className="sr-only">
-            {this.props.intl.formatMessage(messages.goToPage)}
-          </h3>
-          <ul className="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row">
-            <li className="list-inline-item">
-              <Link
-                to="#"
-                title={this.props.intl.formatMessage(messages.legalNotes)}
-              >
-                Media policy
-              </Link>
-            </li>
-            <li className="list-inline-item">
-              <Link
-                to="#"
-                title={this.props.intl.formatMessage(messages.legalNotes)}
-              >
-                {this.props.intl.formatMessage(messages.legalNotes)}
-              </Link>
-            </li>
-            <li className="list-inline-item">
-              <Link to="#" title="Privacy-Cookies">
-                Privacy policy
-              </Link>
-            </li>
-            <li className="list-inline-item">
-              <Link
-                to="#"
-                title={this.props.intl.formatMessage(messages.siteMap)}
-              >
-                {this.props.intl.formatMessage(messages.siteMap)}
-              </Link>
-            </li>
-          </ul>
-        </Container>
-      </div>
-    );
-  }
-}
-
-export default compose(
-  injectIntl,
-  connect(state => ({
-    token: state.userSession.token,
-  })),
-)(FooterSmall);
+export default FooterSmall;

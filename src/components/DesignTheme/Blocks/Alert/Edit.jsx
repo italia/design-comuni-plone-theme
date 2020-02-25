@@ -9,6 +9,7 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { injectIntl } from 'react-intl';
 import cx from 'classnames';
+import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { settings } from '@design/config';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
@@ -16,7 +17,6 @@ import { createContent } from '@plone/volto/actions';
 import { SidebarPortal } from '@plone/volto/components';
 import { EditTextBlock } from '@plone/volto/components';
 
-import { Container, Row, Col } from 'react-bootstrap';
 import Sidebar from './Sidebar';
 /**
  * Edit image block class.

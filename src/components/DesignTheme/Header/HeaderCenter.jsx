@@ -3,16 +3,18 @@
  * @module components/Header/HeaderCenter
  */
 
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { defineMessages, injectIntl } from 'react-intl';
-import PropTypes from 'prop-types';
-import { compose } from 'redux';
-import { connect } from 'react-redux';
-
-import { Brand, SocialLinks } from '@design/components/DesignTheme';
-
-import { BITIcon, it_search } from '@design/components/DesignTheme/Icons';
+import { defineMessages, useIntl } from 'react-intl';
+import {
+  Header,
+  HeaderContent,
+  HeaderBrand,
+  HeaderRightZone,
+  HeaderSocialsZone,
+  HeaderSearch,
+  Icon,
+} from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
   followUs: {
@@ -25,67 +27,44 @@ const messages = defineMessages({
   },
 });
 
-/**
- * HeaderCenter component class.
- * @class HeaderCenter
- * @extends Component
- */
-class HeaderCenter extends Component {
-  /**
-   * Property types.
-   * @property {Object} propTypes Property types.
-   * @static
-   */
-  static propTypes = {
-    token: PropTypes.string,
-  };
+const HeaderCenter = () => {
+  const intl = useIntl();
 
-  /**
-   * Default properties.
-   * @property {Object} defaultProps Default properties.
-   * @static
-   */
-  static defaultProps = {
-    token: null,
-  };
+  return (
+    <Header small={false} theme="" type="center">
+      <HeaderContent>
+        <HeaderBrand iconName="it-pa" responsive={false} tag={Link} to="/">
+          <h2>Nome comune</h2>
+          <h3>Uno dei tanti comuni d'Italia</h3>
+        </HeaderBrand>
+        <HeaderRightZone>
+          <HeaderSocialsZone label={intl.formatMessage(messages.followUs)}>
+            <ul>
+              <li>
+                <a aria-label="Facebook" href="#" target="_blank">
+                  <Icon color="" icon="it-facebook" padding={false} size="" />
+                </a>
+              </li>
+              <li>
+                <a aria-label="Github" href="#" target="_blank">
+                  <Icon color="" icon="it-github" padding={false} size="" />
+                </a>
+              </li>
+              <li>
+                <a aria-label="Twitter" href="#" target="_blank">
+                  <Icon color="" icon="it-twitter" padding={false} size="" />
+                </a>
+              </li>
+            </ul>
+          </HeaderSocialsZone>
+          <HeaderSearch
+            iconName="it-search"
+            label={intl.formatMessage(messages.search)}
+          />
+        </HeaderRightZone>
+      </HeaderContent>
+    </Header>
+  );
+};
 
-  /**
-   * Render method.
-   * @method render
-   * @returns {string} Markup for the component.
-   */
-  render() {
-    return (
-      <div className="it-header-center-content-wrapper">
-        <div className="it-brand-wrapper">
-          <Link to="/">
-            <Brand />
-          </Link>
-        </div>
-        <div className="it-right-zone">
-          <SocialLinks />
-
-          <div className="it-search-wrapper">
-            <span className="d-none d-md-block">
-              {this.props.intl.formatMessage(messages.search)}
-            </span>
-            <Link
-              to="#"
-              aria-label={this.props.intl.formatMessage(messages.search)}
-              className="search-link rounded-icon"
-            >
-              <BITIcon name={it_search} />
-            </Link>
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
-
-export default compose(
-  injectIntl,
-  connect(state => ({
-    token: state.userSession.token,
-  })),
-)(HeaderCenter);
+export default HeaderCenter;

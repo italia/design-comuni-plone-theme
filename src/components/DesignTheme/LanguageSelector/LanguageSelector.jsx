@@ -4,14 +4,19 @@
  */
 
 import React, { Component } from 'react';
-import cx from 'classnames';
-import { Link } from 'react-router-dom';
-
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { LinkList, LinkListItem } from '@design/components/DesignTheme/';
-import { BITIcon, it_expand } from '@design/components/DesignTheme/Icons';
-import { Dropdown, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+// import { BITIcon, it_expand } from '@design/components/DesignTheme/Icons';
+import {
+  Row,
+  Col,
+  DropdownMenu,
+  DropdownToggle,
+  Icon,
+  LinkList,
+  LinkListItem,
+  UncontrolledDropdown,
+} from 'design-react-kit/dist/design-react-kit';
 
 /**
  * LanguageSelector component class.
@@ -47,46 +52,28 @@ class LanguageSelector extends Component {
    */
   render() {
     return (
-      <Dropdown
-        className={cx(
-          { 'nav-item': this.props.asNavItem },
-          this.props.className,
-        )}
-      >
-        <Dropdown.Toggle
-          id="language-selector"
-          as={Link}
-          to="#"
-          className={cx(
-            { 'nav-link': this.props.asNavItem },
-            this.props.className,
-          )}
-        >
-          <span>ITA</span>
-          <BITIcon
-            name={it_expand}
-            color="white"
-            className="d-none d-lg-block"
-          />
-        </Dropdown.Toggle>
-
-        <Dropdown.Menu>
-          <Row>
-            <Col size={12}>
-              <LinkList>
-                <LinkListItem href="/to">
+      <UncontrolledDropdown nav tag="div">
+        <DropdownToggle aria-haspopup caret color="secondary" nav>
+          ITA
+          <Icon color="" icon="it-expand" padding={false} size="" />
+        </DropdownToggle>
+        <DropdownMenu flip tag="div">
+          <Row tag="div">
+            <Col size="12" tag="div" widths={['xs', 'sm', 'md', 'lg', 'xl']}>
+              <LinkList tag="div">
+                <LinkListItem to="/it" tag={Link}>
                   <span>ITA</span>
                 </LinkListItem>
-                <LinkListItem href="/en">
+                <LinkListItem to="/en" tag={Link}>
                   <span>ENG</span>
                 </LinkListItem>
               </LinkList>
             </Col>
           </Row>
-        </Dropdown.Menu>
-      </Dropdown>
+        </DropdownMenu>
+      </UncontrolledDropdown>
     );
   }
 }
 
-export default connect(state => ({}))(LanguageSelector);
+export default LanguageSelector;
