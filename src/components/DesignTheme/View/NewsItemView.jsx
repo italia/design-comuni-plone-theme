@@ -6,6 +6,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import { defineMessages, useIntl } from 'react-intl';
 
 import { Attachments } from './Commons';
 import { Gallery } from './Commons';
@@ -17,7 +18,20 @@ import { PageHeader } from './Commons';
 import { RichTextArticle } from './Commons';
 import { Metadata } from './Commons';
 import { readingTime } from './ViewUtils';
+import { NewsCard } from './Commons';
+import { GenericCard } from './Commons';
 // import { getBaseUrl } from '@plone/volto/helpers';
+
+const messages = defineMessages({
+  notizie_in_evidenza: {
+    id: 'notizie_in_evidenza',
+    defaultMessage: 'Notizie in evidenza',
+  },
+  related_items: {
+    id: 'related_items',
+    defaultMessage: 'Contenuti correlati',
+  },
+});
 
 /**
  * NewsItemView view component class.
@@ -29,6 +43,7 @@ const NewsItemView = ({ content }) => {
   let readingtime = readingTime(
     content.text.data + ' ' + content.title + ' ' + content.description,
   );
+  const intl = useIntl();
   return (
     <>
       <div className="container px-4 my-4 newsitem-view">
@@ -84,6 +99,42 @@ const NewsItemView = ({ content }) => {
                 tag_id="dataset"
                 title={'Dataset'}
               />
+            )}
+            {content.related_news && (
+              <article
+                id="related-news"
+                className="it-page-section anchor-offset mt-5"
+              >
+                <h4>{intl.formatMessage(messages.notizie_in_evidenza)}</h4>
+                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                  {content.related_news.map((item, i) => (
+                    <NewsCard
+                      index={item['@id']}
+                      item={item}
+                      showimage={false}
+                      content={content}
+                    />
+                  ))}
+                </div>
+              </article>
+            )}
+            {content.relatedItems && (
+              <article
+                id="related-items"
+                className="it-page-section anchor-offset mt-5"
+              >
+                <h4>{intl.formatMessage(messages.related_items)}</h4>
+                <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                  {content.relatedItems.map((item, i) => (
+                    <GenericCard
+                      index={item['@id']}
+                      item={item}
+                      showimage={false}
+                      content={content}
+                    />
+                  ))}
+                </div>
+              </article>
             )}
             <Metadata content={content} />
           </section>
