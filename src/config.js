@@ -22,6 +22,11 @@ import NewsHomeEdit from '@design/components/DesignTheme/Blocks/NewsHome/Edit';
 import alertSVG from '@plone/volto/icons/alert.svg';
 import AlertView from '@design/components/DesignTheme/Blocks/Alert/View';
 import AlertEdit from '@design/components/DesignTheme/Blocks/Alert/Edit';
+
+import rssSVG from '@plone/volto/icons/rss.svg';
+import RssView from '@design/components/DesignTheme/Blocks/RSS/View';
+import RssEdit from '@design/components/DesignTheme/Blocks/RSS/Edit';
+
 import { CharCounterDescriptionWidget } from '@design/components/DesignTheme';
 
 const extendedBlockRenderMap = defaultSettings.extendedBlockRenderMap.update(
@@ -53,6 +58,20 @@ const AlignCenterButton = createBlockStyleButton({
 });
 
 const customBlocks = {
+  RssBlock: {
+    id: 'RssBlock',
+    title: 'Rss',
+    icon: rssSVG,
+    group: 'common',
+    view: RssView,
+    edit: RssEdit,
+    restricted: false,
+    mostUsed: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+  },
   newsHome: {
     id: 'newsHome',
     title: 'News Home',
