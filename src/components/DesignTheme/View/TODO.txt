@@ -7,8 +7,10 @@
 [X] A cura di
 [X] Luoghi
 [] Menu   --> JS
-[] Correlati news
-[] Correlati documenti
-[] RichText in edit
+[x] Correlati news
+[x] Correlati documenti
+[x] RichText in edit
 [] propTypes dei component... basta il padre?
 [] useEffect => clean
+[] Test dei social
+ 

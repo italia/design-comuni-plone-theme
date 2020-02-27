@@ -30,6 +30,7 @@ const Venue = ({ content, venue }) => {
     return venue_fo ? (
       <>
         <div
+          className="text-serif"
           dangerouslySetInnerHTML={{ __html: venue_fo.descrizione_breve.data }}
         />{' '}
         {venue_fo.geolocation ? (

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import React, { useState } from 'react';
 import { searchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import SVGAttachment from '@design/components/DesignTheme/View/Commons/attachment.svg';
+import SVGAttachment from '@design/components/DesignTheme/View/Commons/assets/attachment.svg';
 import { Image } from 'semantic-ui-react';
 
 const messages = defineMessages({

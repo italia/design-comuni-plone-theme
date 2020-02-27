@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { getContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import moment from 'moment';
@@ -15,7 +15,7 @@ const NewsCard = ({ item, showimage, content }) => {
   const url = flattenToAppURL(item['@id']);
   const locationContent = useSelector(state => state.content.subrequests);
   const dispatch = useDispatch();
-  React.useEffect(() => {
+  useEffect(() => {
     dispatch(getContent(url, null, key));
     return () => {};
   }, [dispatch, item, url, key]);
@@ -26,13 +26,16 @@ const NewsCard = ({ item, showimage, content }) => {
   return news_fo ? (
     <div className="newscard card card-teaser shadow p-4 mt-3 rounded border">
       <div className="card-body">
-        <div className="header text-uppercase">
+        <div className="header text-uppercase"></div>
+        <div class="category-top">
           {news_fo.tipologia_notizia.title}{' '}
-          {news_fo.effective
-            ? '- ' + moment(news_fo.effective).format('DD MMM Y')
-            : null}
+          {news_fo.effective ? (
+            <span className="data">
+              {moment(news_fo.effective).format('DD MMM Y')}
+            </span>
+          ) : null}{' '}
         </div>
-        <h5 className="card-title">
+        <h5 className="card-title big-heading">
           <a href={news_fo['@id']}>{news_fo.title}</a>
         </h5>
         <div className="card-text">{news_fo.description}</div>

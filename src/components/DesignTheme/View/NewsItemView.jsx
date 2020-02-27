@@ -85,7 +85,7 @@ const NewsItemView = ({ content }) => {
                 title={'Dataset'}
               />
             )}
-            <Metadata />
+            <Metadata content={content} />
           </section>
         </div>
       </div>

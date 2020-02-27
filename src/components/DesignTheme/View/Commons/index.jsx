@@ -11,5 +11,6 @@ export OfficeCard from '@design/components/DesignTheme/View/Commons/OfficeCard';
 export Metadata from '@design/components/DesignTheme/View/Commons/Metadata';
 export Sharing from '@design/components/DesignTheme/View/Commons/Sharing';
 export Venue from '@design/components/DesignTheme/View/Commons/Venue';
+export GenericCard from '@design/components/DesignTheme/View/Commons/GenericCard';
 export NewsCard from '@design/components/DesignTheme/View/Commons/NewsCard';
-// export Actions from '@design/components/DesignTheme/View/Commons/Actions';
+export Actions from '@design/components/DesignTheme/View/Commons/Actions';

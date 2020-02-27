@@ -2,6 +2,7 @@ import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import moment from 'moment';
 import Sharing from './Sharing';
+import Actions from './Actions';
 
 /**
  * PageHeader view component class.
@@ -95,29 +96,20 @@ const PageHeader = props => {
       </div>
       <div className="col-lg-3 offset-lg-1">
         <Sharing url={props.content['@id']} title={props.content.title} />
-        <div className="dropdown d-inline">
-          <a href="https://www.google.it">
-            {intl.formatMessage(messages.actions)}
-          </a>
-        </div>
+        <Actions url={props.content['@id']} title={props.content.title} />
 
         {props.showtassonomiaargomenti && props.content.tassonomia_argomenti && (
           <div className="mt-4 mb-4">
-            <h4>{intl.formatMessage(messages.topics)}</h4>
-            <div>
-              {props.content.tassonomia_argomenti.map((item, i) => (
-                <a
-                  href="https://www.google.it"
-                  className="badge badge-pill badge-argomenti"
-                  key={i}
-                  title={item.title}
-                >
-                  <div className="chip chip-simple chip-primary">
-                    <span className="chip-label">{item.title}</span>
-                  </div>
-                </a>
-              ))}
-            </div>
+            <h6>
+              <small>{intl.formatMessage(messages.topics)}</small>
+            </h6>
+            {props.content.tassonomia_argomenti.map((item, i) => (
+              <a href="https://www.google.it" key={i} title={item.title}>
+                <div className="chip chip-simple chip-primary">
+                  <span className="chip-label">{item.title}</span>
+                </div>
+              </a>
+            ))}
           </div>
         )}
       </div>

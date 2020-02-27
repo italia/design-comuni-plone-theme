@@ -10,7 +10,10 @@ const RichTextArticle = params => {
   return (
     <article id={params.tag_id} className="it-page-section anchor-offset mt-5">
       {params.title && <h4>{params.title}</h4>}
-      <div dangerouslySetInnerHTML={{ __html: params.content }} />
+      <div
+        className="text-serif"
+        dangerouslySetInnerHTML={{ __html: params.content }}
+      />
     </article>
   );
 };

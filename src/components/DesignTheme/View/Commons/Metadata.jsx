@@ -15,6 +15,10 @@ const messages = defineMessages({
     id: 'rights',
     defaultMessage: 'Diritti',
   },
+  subjects: {
+    id: 'subjects',
+    defaultMessage: 'Tags',
+  },
 });
 
 /**
@@ -23,7 +27,7 @@ const messages = defineMessages({
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const Metadata = content => {
+const Metadata = params => {
   const intl = useIntl();
   return (
     <article
@@ -34,15 +38,28 @@ const Metadata = content => {
       <>
         <p className="text-serif">{intl.formatMessage(messages.modified)}</p>
         <h6>
-          <strong>{moment(content.modified).format('DD-MM-Y HH:MM')}</strong>
+          <strong>
+            {moment(params.content.modified).format('DD-MM-Y HH:MM')}
+          </strong>
         </h6>
       </>
-      {content.rights && (
+      {params.content.rights && (
         <>
           <p className="text-serif">{intl.formatMessage(messages.rights)}</p>
           <h6>
-            <strong>{content.rights}</strong>
+            <strong>{params.content.rights}</strong>
           </h6>
+        </>
+      )}
+      {params.content.subjects.length !== 0 && (
+        <>
+          <p className="text-serif">{intl.formatMessage(messages.subjects)}</p>
+
+          {params.content.subjects.map((item, i) => (
+            <div class="chip chip-simple ml-1" key={item}>
+              <span class="chip-label">{item}</span>
+            </div>
+          ))}
         </>
       )}
     </article>

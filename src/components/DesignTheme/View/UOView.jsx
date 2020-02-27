@@ -15,6 +15,7 @@ import { Attachments } from './Commons';
 import { Metadata } from './Commons';
 import { Venue } from './Commons';
 import { NewsCard } from './Commons';
+import { GenericCard } from './Commons';
 
 const messages = defineMessages({
   tipologia_organizzazione: {
@@ -53,6 +54,14 @@ const messages = defineMessages({
     id: 'notizie_in_evidenza',
     defaultMessage: 'Notizie in evidenza',
   },
+  servizi_offerti: {
+    id: 'servizi_offerti',
+    defaultMessage: 'Servizi offerti',
+  },
+  related_items: {
+    id: 'related_items',
+    defaultMessage: 'Contenuti correlati',
+  },
 });
 
 /**
@@ -65,7 +74,7 @@ const UOView = ({ content }) => {
   const intl = useIntl();
   return (
     <>
-      <div className="container px-4 my-4 newsitem-view">
+      <div className="container px-4 my-4 uo-view">
         <PageHeader
           content={content}
           readingtime={null}
@@ -108,7 +117,10 @@ const UOView = ({ content }) => {
                 <h4 className="mb-3">
                   {intl.formatMessage(messages.tipologia_organizzazione)}
                 </h4>
-                <p>{content.tipologia_organizzazione.title}</p>
+                <p className="text-serif">
+                  {' '}
+                  {content.tipologia_organizzazione.title}
+                </p>
               </article>
             )}
             {content.competenze.data && (
@@ -118,15 +130,40 @@ const UOView = ({ content }) => {
                 title={'Competenze'}
               />
             )}
+            {content.servizi_offerti && (
+              <article
+                id="servizi-offerti"
+                className="it-page-section anchor-offset mt-5"
+              >
+                <h4>{intl.formatMessage(messages.servizi_offerti)}</h4>
+                <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                  {content.servizi_offerti.map((item, i) => (
+                    <GenericCard
+                      index={item['@id']}
+                      item={item}
+                      showimage={true}
+                      image_field={'immagine'}
+                      content={content}
+                    />
+                  ))}
+                </div>
+              </article>
+            )}
             {content.legami_con_altre_strutture && (
               <article
                 id="legami-altre-strutture"
                 className="it-page-section anchor-offset mt-5"
               >
                 <h4>{intl.formatMessage(messages.legami_altre_strutture)}</h4>
-                {content.legami_con_altre_strutture.map((item, i) => (
-                  <OfficeCard key={i} office={item} content={content} />
-                ))}
+                <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                  {content.legami_con_altre_strutture.map((item, i) => (
+                    <OfficeCard
+                      key={item['@id']}
+                      office={item}
+                      content={content}
+                    />
+                  ))}
+                </div>
               </article>
             )}
             {content.assessore_riferimento && (
@@ -136,7 +173,7 @@ const UOView = ({ content }) => {
               >
                 <h4>{intl.formatMessage(messages.assessore_riferimento)}</h4>
                 {content.assessore_riferimento.map((item, i) => (
-                  <a key={i} href={item['@id']}>
+                  <a key={item['@id']} href={item['@id']}>
                     <div className="chip chip-simple chip-primary">
                       <span className="chip-label">{item.title}</span>
                     </div>
@@ -151,7 +188,7 @@ const UOView = ({ content }) => {
               >
                 <h4>{intl.formatMessage(messages.responsabile)}</h4>
                 {content.responsabile.map((item, i) => (
-                  <a key={i} href={item['@id']}>
+                  <a key={item['@id']} href={item['@id']}>
                     <div className="chip chip-simple chip-primary">
                       <span className="chip-label">{item.title}</span>
                     </div>
@@ -202,7 +239,25 @@ const UOView = ({ content }) => {
                 </div>
               </article>
             )}
-            <Metadata />
+            {content.relatedItems && (
+              <article
+                id="related-items"
+                className="it-page-section anchor-offset mt-5"
+              >
+                <h4>{intl.formatMessage(messages.related_items)}</h4>
+                <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                  {content.relatedItems.map((item, i) => (
+                    <GenericCard
+                      index={item['@id']}
+                      item={item}
+                      showimage={false}
+                      content={content}
+                    />
+                  ))}
+                </div>
+              </article>
+            )}
+            <Metadata content={content} />
           </section>
         </div>
       </div>
