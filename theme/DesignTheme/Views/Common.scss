@@ -1,0 +1,26 @@
+.full-width {
+  position: relative;
+  right: 50%;
+  left: 50%;
+  width: 100vw !important;
+  max-width: initial !important;
+  margin-right: -50vw !important;
+  margin-left: -50vw !important;
+  object-fit: cover;
+  height: 480px;
+}
+.public-ui {
+  .header {
+    font-size: 14px;
+    margin-bottom: 10px !important;
+  }
+  .card-title {
+    a {
+      font-size: 24px;
+      line-height: 28px;
+      text-decoration: none;
+      color: #455a64;
+    }
+    margin-bottom: 10px !important;
+  }
+}
