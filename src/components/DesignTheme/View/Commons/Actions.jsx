@@ -1,17 +1,12 @@
 import { defineMessages, useIntl } from 'react-intl';
-import SVGAction from '@design/components/DesignTheme/View/Commons/assets/actions.svg';
-import { Image } from 'semantic-ui-react';
 import React, { useState } from 'react';
-import PrintIcon from './assets/print.svg';
-import DownloadIcon from './assets/download.svg';
-import MailToIcon from './assets/email.svg';
-
 import {
-  Dropdown,
+  UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   LinkList,
   LinkListItem,
+  Icon,
 } from 'design-react-kit/dist/design-react-kit';
 
 /**
@@ -42,7 +37,6 @@ const messages = defineMessages({
 
 const Actions = props => {
   const intl = useIntl();
-  const toggle = () => setDropdownOpen(prevState => !prevState);
 
   let socials = [
     {
@@ -50,35 +44,30 @@ const Actions = props => {
       attributes: null,
       title: intl.formatMessage(messages.print),
       url: 'javascript:this.print()',
-      icon: PrintIcon,
+      icon: 'it-print',
     },
-    // {
-    //   id: 'download',
-    //   attributes: 'download',
-    //   title: intl.formatMessage(messages.download),
-    //   url: 'https://twitter.com/intent/tweet?url=' + props.url,
-    //   icon: DownloadIcon,
-    // },
     {
       id: 'mailto',
       attributes: null,
       title: intl.formatMessage(messages.mailto),
       url: 'mailto:?subject=' + props.title + '&body=' + props.url,
-      icon: MailToIcon,
+      icon: 'it-mail',
     },
   ];
-  const [dropdownOpen, setDropdownOpen] = useState(false);
   return (
-    <Dropdown className="d-inline" isOpen={dropdownOpen} toggle={toggle}>
+    <UncontrolledDropdown className="d-inline">
       <DropdownToggle
         className={`btn btn-dropdown`}
         color=""
         tag={'button'}
         caret
       >
-        <Image
-          src={SVGAction}
-          height={32}
+        <Icon
+          className={undefined}
+          color=""
+          icon="it-more-items"
+          padding={false}
+          size=""
           alt={intl.formatMessage(messages.actions)}
           title={intl.formatMessage(messages.actions)}
         />
@@ -88,9 +77,12 @@ const Actions = props => {
         <LinkList>
           {socials.map((item, i) => (
             <LinkListItem href={item.url} key={item.id}>
-              <Image
-                src={item.icon}
-                height={32}
+              <Icon
+                className={undefined}
+                color=""
+                icon={item.icon}
+                padding={false}
+                size=""
                 alt={item.title}
                 title={item.title}
               />
@@ -99,7 +91,7 @@ const Actions = props => {
           ))}
         </LinkList>
       </DropdownMenu>
-    </Dropdown>
+    </UncontrolledDropdown>
   );
 };
 export default Actions;

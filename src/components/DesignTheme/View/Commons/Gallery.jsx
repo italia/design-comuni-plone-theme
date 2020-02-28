@@ -1,7 +1,7 @@
 import { defineMessages, useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
-import React from 'react';
-import { searchContent } from '@plone/volto/actions';
+import React, { useEffect } from 'react';
+import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
 const messages = defineMessages({
@@ -20,21 +20,11 @@ const messages = defineMessages({
  */
 const Gallery = ({ content, folder_name }) => {
   const intl = useIntl();
-
-  // mi prendo il path sotto cui cercare
   const url = flattenToAppURL(content['@id']) + '/' + folder_name;
-  // useSelector will extract subrequest from the state. Il will contain
-  // the query results
   const searchResults = useSelector(state => state.search.subrequests);
-
-  // Obtain dispatcher so i will able to dispatch the action
   const dispatch = useDispatch();
-  //use effect to perform operation after the component did mount/update and
-  // unmount
-  React.useEffect(() => {
-    // only if we have the folder
+  useEffect(() => {
     if (content?.items.some(e => e.id === folder_name)) {
-      // dispatch the action
       dispatch(
         searchContent(
           url,
@@ -48,31 +38,29 @@ const Gallery = ({ content, folder_name }) => {
         ),
       );
     }
-    return () => {};
+    return () => {
+      dispatch(resetSearchContent(folder_name));
+    };
   }, [dispatch, content, url, folder_name]);
 
-  const multimedia =
-    (searchResults &&
-      searchResults[folder_name] &&
-      searchResults[folder_name].items) ||
-    [];
-
+  const multimedia = searchResults?.[folder_name]?.items || [];
+  let images = multimedia.filter(item => item['@type'] === 'Image');
+  let videos = multimedia.filter(item => item['@type'] === 'Link');
   return (
     <>
-      <article id="gallery" className="it-page-section anchor-offset mt-5">
-        <div className="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
-          <div className="it-header-block">
-            <div className="it-header-block-title">
-              <h4 className="no_toc">
-                {' '}
-                {intl.formatMessage(messages.gallery)}
-              </h4>
+      {images.length > 0 ? (
+        <article id="gallery" className="it-page-section anchor-offset mt-5">
+          <div className="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
+            <div className="it-header-block">
+              <div className="it-header-block-title">
+                <h4 className="no_toc">
+                  {' '}
+                  {intl.formatMessage(messages.gallery)}
+                </h4>
+              </div>
             </div>
-          </div>
-          <div className="it-carousel-all owl-carousel it-card-bg">
-            {multimedia
-              .filter(item => item['@type'] === 'Image')
-              .map((item, i) => (
+            <div className="it-carousel-all owl-carousel it-card-bg">
+              {images.map((item, i) => (
                 <div className="it-single-slide-wrapper" key={i}>
                   <figure>
                     <img
@@ -86,13 +74,13 @@ const Gallery = ({ content, folder_name }) => {
                   </figure>
                 </div>
               ))}
+            </div>
           </div>
-        </div>
-      </article>
-      <article id="video" className="it-page-section anchor-offset mt-5">
-        {multimedia
-          .filter(item => item['@type'] === 'Link')
-          .map((item, i) => (
+        </article>
+      ) : null}
+      {videos.length > 0 ? (
+        <article id="video" className="it-page-section anchor-offset mt-5">
+          {videos.map((item, i) => (
             <div
               key={i}
               className="embed-responsive embed-responsive-16by9 my-4"
@@ -105,7 +93,8 @@ const Gallery = ({ content, folder_name }) => {
               ></iframe>
             </div>
           ))}
-      </article>
+        </article>
+      ) : null}
     </>
   );
 };

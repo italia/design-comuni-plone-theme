@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
-import React from 'react';
-import { getContent } from '@plone/volto/actions';
+import React, { useEffect } from 'react';
+import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
 /**
- * OfficeCard view component class.
+ * Venue view component class.
  * @function Venue
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
@@ -15,13 +15,11 @@ const Venue = ({ content, venue }) => {
   const venueContent = useSelector(state => state.content.subrequests);
   const dispatch = useDispatch();
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (venue) {
       dispatch(getContent(url, null, key));
     }
-    return () => {
-      // setValue(key, null);
-    };
+    return () => dispatch(resetContent(key));
   }, [dispatch, venue, url, key]);
 
   let venue_fo = null;

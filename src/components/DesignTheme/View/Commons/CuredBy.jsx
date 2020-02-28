@@ -1,6 +1,9 @@
 import { defineMessages, useIntl } from 'react-intl';
 import React from 'react';
 import OfficeCard from './OfficeCard';
+import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
+import { Link } from 'react-router-dom';
+import { flattenToAppURL } from '@plone/volto/helpers';
 
 const messages = defineMessages({
   cured_by: {
@@ -39,20 +42,26 @@ const CuredBy = ({ content, office, people }) => {
             <OfficeCard content={content} office={office} />
           </div>
         )}
-        {people && (
+        {people.length > 0 ? (
           <div className="col-12 col-sm-4">
             <h6>
               <small>{intl.formatMessage(messages.cured_by_people)}</small>
             </h6>
             {people.map((item, i) => (
-              <a key={i} href={item['@id']}>
-                <div className="chip chip-simple chip-primary">
-                  <span className="chip-label">{item.title}</span>
-                </div>
-              </a>
+              <Link to={flattenToAppURL(item['@id'])} key={item['@id']}>
+                <Chip
+                  color="primary"
+                  disabled={false}
+                  large={false}
+                  simple
+                  tag="div"
+                >
+                  <ChipLabel tag="span">{item.title}</ChipLabel>
+                </Chip>
+              </Link>
             ))}
           </div>
-        )}
+        ) : null}
       </div>
     </article>
   );

@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
-import { getContent } from '@plone/volto/actions';
-import { flattenToAppURL } from '@plone/volto/helpers';
+import { getContent, resetContent } from '@plone/volto/actions';
 import moment from 'moment';
-
+import { Link } from 'react-router-dom';
+import { flattenToAppURL } from '@plone/volto/helpers';
 /**
  * NewsCard view component class.
  * @function Location
@@ -17,7 +17,7 @@ const NewsCard = ({ item, showimage, content }) => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getContent(url, null, key));
-    return () => {};
+    return () => dispatch(resetContent(key));
   }, [dispatch, item, url, key]);
   let news_fo = null;
   if (key in locationContent) {
@@ -36,7 +36,7 @@ const NewsCard = ({ item, showimage, content }) => {
           ) : null}{' '}
         </div>
         <h5 className="card-title big-heading">
-          <a href={news_fo['@id']}>{news_fo.title}</a>
+          <Link to={flattenToAppURL(news_fo['@id'])}>{news_fo.title}</Link>
         </h5>
         <div className="card-text">{news_fo.description}</div>
       </div>

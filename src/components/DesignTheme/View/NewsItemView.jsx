@@ -90,17 +90,17 @@ const NewsItemView = ({ content }) => {
                 people={content.a_cura_di_persone}
               />
             )}
-            {content.luoghi_notizia && (
+            {content.luoghi_notizia.length > 0 ? (
               <Locations locations={content.luoghi_notizia} />
-            )}
-            {content.dataset && (
+            ) : null}
+            {content.dataset?.data.replace(/(<([^>]+)>)/g, '') && (
               <RichTextArticle
                 content={content.dataset.data}
                 tag_id="dataset"
                 title={'Dataset'}
               />
             )}
-            {content.related_news && (
+            {content.related_news.length > 0 ? (
               <article
                 id="related-news"
                 className="it-page-section anchor-offset mt-5"
@@ -117,8 +117,8 @@ const NewsItemView = ({ content }) => {
                   ))}
                 </div>
               </article>
-            )}
-            {content.relatedItems && (
+            ) : null}
+            {content.relatedItems.length > 0 ? (
               <article
                 id="related-items"
                 className="it-page-section anchor-offset mt-5"
@@ -135,7 +135,7 @@ const NewsItemView = ({ content }) => {
                   ))}
                 </div>
               </article>
-            )}
+            ) : null}
             <Metadata content={content} />
           </section>
         </div>

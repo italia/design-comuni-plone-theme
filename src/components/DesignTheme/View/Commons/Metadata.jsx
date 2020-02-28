@@ -1,6 +1,7 @@
 import { defineMessages, useIntl } from 'react-intl';
 import React from 'react';
 import moment from 'moment';
+import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
   other_info: {
@@ -35,14 +36,12 @@ const Metadata = params => {
       className="it-page-section anchor-offset mt-5"
     >
       <h4 className="mb-3">{intl.formatMessage(messages.other_info)}</h4>
-      <>
-        <p className="text-serif">{intl.formatMessage(messages.modified)}</p>
-        <h6>
-          <strong>
-            {moment(params.content.modified).format('DD-MM-Y HH:MM')}
-          </strong>
-        </h6>
-      </>
+      <p className="text-serif">{intl.formatMessage(messages.modified)}</p>
+      <h6>
+        <strong>
+          {moment(params.content.modified).format('DD-MM-Y HH:MM')}
+        </strong>
+      </h6>
       {params.content.rights && (
         <>
           <p className="text-serif">{intl.formatMessage(messages.rights)}</p>
@@ -54,11 +53,20 @@ const Metadata = params => {
       {params.content.subjects.length !== 0 && (
         <>
           <p className="text-serif">{intl.formatMessage(messages.subjects)}</p>
-
           {params.content.subjects.map((item, i) => (
-            <div class="chip chip-simple ml-1" key={item}>
-              <span class="chip-label">{item}</span>
-            </div>
+            <Chip
+              color=""
+              disabled={false}
+              large={false}
+              simple
+              tag="div"
+              key={item}
+            >
+              <ChipLabel tag="span">{item}</ChipLabel>
+            </Chip>
+            // <div class="chip chip-simple ml-1" key={item}>
+            //   <span class="chip-label">{item}</span>
+            // </div>
           ))}
         </>
       )}

@@ -3,6 +3,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import moment from 'moment';
 import Sharing from './Sharing';
 import Actions from './Actions';
+import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 
 /**
  * PageHeader view component class.
@@ -98,20 +99,27 @@ const PageHeader = props => {
         <Sharing url={props.content['@id']} title={props.content.title} />
         <Actions url={props.content['@id']} title={props.content.title} />
 
-        {props.showtassonomiaargomenti && props.content.tassonomia_argomenti && (
-          <div className="mt-4 mb-4">
-            <h6>
-              <small>{intl.formatMessage(messages.topics)}</small>
-            </h6>
-            {props.content.tassonomia_argomenti.map((item, i) => (
-              <a href="https://www.google.it" key={i} title={item.title}>
-                <div className="chip chip-simple chip-primary">
-                  <span className="chip-label">{item.title}</span>
-                </div>
-              </a>
-            ))}
-          </div>
-        )}
+        {props.showtassonomiaargomenti &&
+          props.content.tassonomia_argomenti.length > 0 && (
+            <div className="mt-4 mb-4">
+              <h6>
+                <small>{intl.formatMessage(messages.topics)}</small>
+              </h6>
+              {props.content.tassonomia_argomenti.map((item, i) => (
+                <a href="https://www.google.it" key={i} title={item.title}>
+                  <Chip
+                    color="primary"
+                    disabled={false}
+                    large={false}
+                    simple
+                    tag="div"
+                  >
+                    <ChipLabel tag="span">{item.title}</ChipLabel>
+                  </Chip>
+                </a>
+              ))}
+            </div>
+          )}
       </div>
     </div>
   );

@@ -1,18 +1,13 @@
 import { defineMessages, useIntl } from 'react-intl';
-import SVGShare from '@design/components/DesignTheme/View/Commons/assets/share.svg';
-import { Image } from 'semantic-ui-react';
 import React, { useState } from 'react';
-import FacebookIcon from './assets/Facebook.svg';
-import TwitterIcon from './assets/Twitter.svg';
-import LinkedinIcon from './assets/Linkedin.svg';
-import WhatsappIcon from './assets/Whatsapp.svg';
 
 import {
-  Dropdown,
+  UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   LinkList,
   LinkListItem,
+  Icon,
 } from 'design-react-kit/dist/design-react-kit';
 
 /**
@@ -31,20 +26,18 @@ const messages = defineMessages({
 
 const Sharing = props => {
   const intl = useIntl();
-  const toggle = () => setDropdownOpen(prevState => !prevState);
-
   let socials = [
     {
       id: 'facebook',
       title: 'Facebook',
       url: 'https://www.facebook.com/sharer/sharer.php?u=' + props.url,
-      icon: FacebookIcon,
+      icon: 'it-facebook',
     },
     {
       id: 'twitter',
       title: 'Twitter',
       url: 'https://twitter.com/intent/tweet?url=' + props.url,
-      icon: TwitterIcon,
+      icon: 'it-twitter',
     },
     {
       id: 'linkedin',
@@ -54,28 +47,30 @@ const Sharing = props => {
         props.url +
         '&title=' +
         props.title,
-      icon: LinkedinIcon,
+      icon: 'it-linkedin',
     },
     {
       id: 'whatsapp',
       title: 'Whatsapp',
       url: 'https://api.whatsapp.com/send?phone=&text=' + props.url,
-      icon: WhatsappIcon,
+      icon: 'it-whatsapp',
     },
   ];
-  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <Dropdown className="d-inline" isOpen={dropdownOpen} toggle={toggle}>
+    <UncontrolledDropdown className="d-inline">
       <DropdownToggle
         className={`btn btn-dropdown`}
         color=""
         tag={'button'}
         caret
       >
-        <Image
-          src={SVGShare}
-          height={32}
+        <Icon
+          className={undefined}
+          color=""
+          icon="it-share"
+          padding={false}
+          size=""
           alt={intl.formatMessage(messages.share)}
           title={intl.formatMessage(messages.share)}
         />
@@ -85,9 +80,12 @@ const Sharing = props => {
         <LinkList>
           {socials.map((item, i) => (
             <LinkListItem href={item.url} key={item.id} target="_target">
-              <Image
-                src={item.icon}
-                height={32}
+              <Icon
+                className={undefined}
+                color=""
+                icon={item.icon}
+                padding={false}
+                size=""
                 alt={item.title}
                 title={item.title}
               />
@@ -96,7 +94,7 @@ const Sharing = props => {
           ))}
         </LinkList>
       </DropdownMenu>
-    </Dropdown>
+    </UncontrolledDropdown>
   );
 };
 export default Sharing;

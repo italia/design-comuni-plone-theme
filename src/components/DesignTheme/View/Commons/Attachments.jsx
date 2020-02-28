@@ -1,10 +1,9 @@
 import { defineMessages, useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
-import React, { useState } from 'react';
-import { searchContent } from '@plone/volto/actions';
+import React, { useEffect } from 'react';
+import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import SVGAttachment from '@design/components/DesignTheme/View/Commons/assets/attachment.svg';
-import { Image } from 'semantic-ui-react';
+import { Icon } from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
   attachments: {
@@ -30,7 +29,7 @@ const Attachments = ({ content, folder_name }) => {
   const url = flattenToAppURL(content['@id']) + '/' + folder_name;
   const searchResults = useSelector(state => state.search.subrequests);
   const dispatch = useDispatch();
-  React.useEffect(() => {
+  useEffect(() => {
     if (content?.items.some(e => e.id === folder_name)) {
       dispatch(
         searchContent(
@@ -45,40 +44,44 @@ const Attachments = ({ content, folder_name }) => {
       );
     }
     return () => {
-      // setValue(folder_name, null);
+      dispatch(resetSearchContent(folder_name));
     };
   }, [dispatch, content, url, folder_name]);
 
-  const attachments =
-    (searchResults &&
-      searchResults[folder_name] &&
-      searchResults[folder_name].items) ||
-    [];
-
+  const attachments = searchResults?.[folder_name]?.items || [];
   return (
-    <article id="documenti" className="it-page-section anchor-offset mt-5">
-      <h4>{intl.formatMessage(messages.attachments)}</h4>
-      <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-        {attachments.map((item, i) => (
-          <div
-            key={item['@id']}
-            className="card card-teaser shadow p-4 mt-3 rounded border"
-          >
-            <Image
-              src={SVGAttachment}
-              height={32}
-              alt={intl.formatMessage(messages.attachment)}
-              title={intl.formatMessage(messages.attachment)}
-            />
-            <div className="card-body">
-              <h5 className="card-title">
-                <a href={item['@id']}>{item.title}</a>
-              </h5>
-            </div>
+    <>
+      {attachments.length > 0 ? (
+        <article id="documenti" className="it-page-section anchor-offset mt-5">
+          <h4>{intl.formatMessage(messages.attachments)}</h4>
+          <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+            {attachments.map((item, i) => (
+              <div
+                key={item['@id']}
+                className="card card-teaser shadow p-4 mt-3 rounded border"
+              >
+                <Icon
+                  className={undefined}
+                  color=""
+                  icon="it-clip"
+                  padding={false}
+                  size=""
+                  alt={intl.formatMessage(messages.attachment)}
+                  title={intl.formatMessage(messages.attachment)}
+                />
+                <div className="card-body">
+                  <h5 className="card-title">
+                    <a href={flattenToAppURL(item['@id'] + '/@@download/file')}>
+                      {item.title}
+                    </a>
+                  </h5>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-    </article>
+        </article>
+      ) : null}
+    </>
   );
 };
 export default Attachments;

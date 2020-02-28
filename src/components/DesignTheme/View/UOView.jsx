@@ -5,6 +5,8 @@
 
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
+import { Link } from 'react-router-dom';
+import { flattenToAppURL } from '@plone/volto/helpers';
 
 import { WideImage } from './Commons';
 import { SideMenu } from './Commons';
@@ -16,6 +18,7 @@ import { Metadata } from './Commons';
 import { Venue } from './Commons';
 import { NewsCard } from './Commons';
 import { GenericCard } from './Commons';
+import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
   tipologia_organizzazione: {
@@ -94,7 +97,10 @@ const UOView = ({ content }) => {
             <SideMenu />
           </aside>
           <section className="col-lg-8 it-page-sections-container">
-            {content.ulteriori_informazioni && (
+            {content.ulteriori_informazioni.data.replace(
+              /(<([^>]+)>)/g,
+              '',
+            ) && (
               <RichTextArticle
                 content={content.ulteriori_informazioni.data}
                 tag_id="ulteriori_informazioni"
@@ -123,14 +129,14 @@ const UOView = ({ content }) => {
                 </p>
               </article>
             )}
-            {content.competenze.data && (
+            {content.competenze.data.replace(/(<([^>]+)>)/g, '') && (
               <RichTextArticle
                 content={content.competenze.data}
                 tag_id={'competenze'}
                 title={'Competenze'}
               />
             )}
-            {content.servizi_offerti && (
+            {content.servizi_offerti.length > 0 ? (
               <article
                 id="servizi-offerti"
                 className="it-page-section anchor-offset mt-5"
@@ -148,8 +154,8 @@ const UOView = ({ content }) => {
                   ))}
                 </div>
               </article>
-            )}
-            {content.legami_con_altre_strutture && (
+            ) : null}
+            {content.legami_con_altre_strutture.length > 0 ? (
               <article
                 id="legami-altre-strutture"
                 className="it-page-section anchor-offset mt-5"
@@ -165,52 +171,82 @@ const UOView = ({ content }) => {
                   ))}
                 </div>
               </article>
-            )}
-            {content.assessore_riferimento && (
+            ) : null}
+            {content.assessore_riferimento.length > 0 ? (
               <article
                 id="assessore-riferimento"
                 className="it-page-section anchor-offset mt-5"
               >
                 <h4>{intl.formatMessage(messages.assessore_riferimento)}</h4>
                 {content.assessore_riferimento.map((item, i) => (
-                  <a key={item['@id']} href={item['@id']}>
-                    <div className="chip chip-simple chip-primary">
-                      <span className="chip-label">{item.title}</span>
-                    </div>
-                  </a>
+                  <Link
+                    to={flattenToAppURL(item['@id'])}
+                    key={item['@id']}
+                    title={item.title}
+                  >
+                    <Chip
+                      color="primary"
+                      disabled={false}
+                      large={false}
+                      simple
+                      tag="div"
+                    >
+                      <ChipLabel tag="span">{item.title}</ChipLabel>
+                    </Chip>
+                  </Link>
                 ))}
               </article>
-            )}
-            {content.responsabile && (
+            ) : null}
+            {content.responsabile.length > 0 ? (
               <article
-                id="assessore-responsabile"
+                id="responsabile"
                 className="it-page-section anchor-offset mt-5"
               >
                 <h4>{intl.formatMessage(messages.responsabile)}</h4>
                 {content.responsabile.map((item, i) => (
-                  <a key={item['@id']} href={item['@id']}>
-                    <div className="chip chip-simple chip-primary">
-                      <span className="chip-label">{item.title}</span>
-                    </div>
-                  </a>
+                  <Link
+                    to={flattenToAppURL(item['@id'])}
+                    key={item['@id']}
+                    title={item.title}
+                  >
+                    <Chip
+                      color="primary"
+                      disabled={false}
+                      large={false}
+                      simple
+                      tag="div"
+                    >
+                      <ChipLabel tag="span">{item.title}</ChipLabel>
+                    </Chip>
+                  </Link>
                 ))}
               </article>
-            )}
-            {content.responsabile && (
+            ) : null}
+            {content.persone_struttura.length > 0 ? (
               <article
                 id="persone-struttura"
                 className="it-page-section anchor-offset mt-5"
               >
                 <h4>{intl.formatMessage(messages.persone_struttura)}</h4>
                 {content.persone_struttura.map((item, i) => (
-                  <a key={i} href={item['@id']}>
-                    <div className="chip chip-simple chip-primary">
-                      <span className="chip-label">{item.title}</span>
-                    </div>
-                  </a>
+                  <Link
+                    to={flattenToAppURL(item['@id'])}
+                    key={item['@id']}
+                    title={item.title}
+                  >
+                    <Chip
+                      color="primary"
+                      disabled={false}
+                      large={false}
+                      simple
+                      tag="div"
+                    >
+                      <ChipLabel tag="span">{item.title}</ChipLabel>
+                    </Chip>
+                  </Link>
                 ))}
               </article>
-            )}
+            ) : null}
             {content?.items.some(e => e.id === 'allegati') && (
               <Attachments content={content} folder_name={'allegati'} />
             )}
@@ -221,7 +257,7 @@ const UOView = ({ content }) => {
                 title={intl.formatMessage(messages.box_aiuto)}
               />
             )}
-            {content.notizie_collegate && (
+            {content.notizie_collegate.length > 0 ? (
               <article
                 id="related-news"
                 className="it-page-section anchor-offset mt-5"
@@ -238,8 +274,8 @@ const UOView = ({ content }) => {
                   ))}
                 </div>
               </article>
-            )}
-            {content.relatedItems && (
+            ) : null}
+            {content.relatedItems.length > 0 ? (
               <article
                 id="related-items"
                 className="it-page-section anchor-offset mt-5"
@@ -256,7 +292,7 @@ const UOView = ({ content }) => {
                   ))}
                 </div>
               </article>
-            )}
+            ) : null}
             <Metadata content={content} />
           </section>
         </div>

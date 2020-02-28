@@ -1,8 +1,9 @@
 import { defineMessages, useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
-import React from 'react';
-import { getContent } from '@plone/volto/actions';
+import React, { useEffect } from 'react';
+import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { Link } from 'react-router-dom';
 
 const messages = defineMessages({
   locations: {
@@ -27,9 +28,9 @@ const Location = ({ location }) => {
   const url = flattenToAppURL(location['@id']);
   const locationContent = useSelector(state => state.content.subrequests);
   const dispatch = useDispatch();
-  React.useEffect(() => {
+  useEffect(() => {
     dispatch(getContent(url, null, key));
-    return () => {};
+    return () => dispatch(resetContent(key));
   }, [dispatch, location, url, key]);
   let location_fo = null;
   if (key in locationContent) {
@@ -44,9 +45,12 @@ const Location = ({ location }) => {
           <div className="card-text">
             <p>{location_fo.address}</p>
             <p className="mt-3">
-              <a href={location_fo['@id']} alt={location_fo.title}>
+              <Link
+                to={flattenToAppURL(location_fo['@id'])}
+                title={location_fo.title}
+              >
                 {intl.formatMessage(messages.details)}
-              </a>
+              </Link>
             </p>
           </div>
         </div>

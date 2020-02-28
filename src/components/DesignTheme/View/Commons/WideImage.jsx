@@ -2,12 +2,12 @@ import React from 'react';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
 /**
- * WidgeImage view component class.
- * @function WidgeImage
+ * WideImage view component class.
+ * @function WideImage
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const WidgeImage = params => {
+const WideImage = params => {
   return (
     <div className="row row-full-width my-3">
       <figure className="figure">
@@ -28,4 +28,4 @@ const WidgeImage = params => {
     </div>
   );
 };
-export default WidgeImage;
+export default WideImage;
