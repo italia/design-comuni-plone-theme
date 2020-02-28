@@ -28,6 +28,8 @@ import RssView from '@design/components/DesignTheme/Blocks/RSS/View';
 import RssEdit from '@design/components/DesignTheme/Blocks/RSS/Edit';
 
 import { CharCounterDescriptionWidget } from '@design/components/DesignTheme';
+import { NewsItemView } from '@design/components/DesignTheme';
+import { UOView } from '@design/components/DesignTheme';
 
 const extendedBlockRenderMap = defaultSettings.extendedBlockRenderMap.update(
   'align-center',
@@ -118,6 +120,11 @@ export const settings = {
 
 export const views = {
   ...defaultViews,
+  contentTypesViews: {
+    ...defaultViews.contentTypesViews,
+    'News Item': NewsItemView,
+    'Unita organizzativa': UOView,
+  },
 };
 
 export const widgets = {
