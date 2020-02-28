@@ -108,7 +108,7 @@ const NewsItemView = ({ content }) => {
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.related_news.map((item, i) => (
                     <NewsCard
-                      index={item['@id']}
+                      key={item['@id']}
                       item={item}
                       showimage={false}
                       content={content}
@@ -123,7 +123,7 @@ const NewsItemView = ({ content }) => {
                 className="it-page-section anchor-offset mt-5"
               >
                 <h4>{intl.formatMessage(messages.related_items)}</h4>
-                <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.relatedItems.map((item, i) => (
                     <GenericCard
                       index={item['@id']}
@@ -165,7 +165,7 @@ NewsItemView.propTypes = {
     a_cura_di: PropTypes.shape({
       title: PropTypes.string,
     }),
-    a_cura_di_persone: PropTypes.object,
+    a_cura_di_persone: PropTypes.array,
     dataset: PropTypes.shape({
       data: PropTypes.string,
     }),
