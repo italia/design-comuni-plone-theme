@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 // import { useDispatch, useSelector } from 'react-redux';
-import { FormattedMessage, injectIntl } from 'react-intl';
+import { injectIntl } from 'react-intl';
 import Parser from 'rss-parser';
 import moment from 'moment';
+import { settings } from '@plone/volto/config';
 import {
   Card,
   CardBody,
@@ -19,7 +20,11 @@ const RssBody = ({ data, properties, intl, path, isEditMode }) => {
   useEffect(() => {
     let parser = new Parser();
     if (data?.feed?.length > 0) {
-      parser.parseURL(data.feed, function(err, feed) {
+      let base_url = settings.apiPath;
+      parser.parseURL(base_url + '/@get_rss_feed?feed=' + data.feed, function(
+        err,
+        feed,
+      ) {
         if (err) throw err;
         setFeedItems(feed.items.slice(0, data?.feedItemNumber));
       });
