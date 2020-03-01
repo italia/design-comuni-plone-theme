@@ -45,7 +45,8 @@ const SideMenu = ({ data }) => {
           aria-label="Toggle navigation"
           data-target="#navbarNav"
         >
-          <span className="it-list"></span>Indice della pagina
+          <span className="it-list"></span>
+          {intl.formatMessage(messages.index)}
         </button>
         <div className="navbar-collapsable" id="navbarNav">
           <div className="overlay"></div>
@@ -62,11 +63,11 @@ const SideMenu = ({ data }) => {
           </a> */}
           <div className="menu-wrapper">
             <div className="link-list-wrapper menu-link-list">
-              <h3 className="no-toc">Indice della pagina</h3>
+              <h3 className="no-toc">{intl.formatMessage(messages.index)}</h3>
               <ul className="link-list">
                 {headers.map((item, i) => (
-                  <li className="nav-item active">
-                    <a className="nav-link active" href={'#' + item.id}>
+                  <li className="nav-item">
+                    <a className="nav-link" href={'#' + item.id}>
                       <span>{item.title}</span>
                     </a>
                   </li>
