@@ -3,7 +3,7 @@
  * @module components/theme/View/NewsItemView
  */
 
-import React from 'react';
+import React, { useEffect, createRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 
@@ -42,6 +42,13 @@ const NewsItemView = ({ content }) => {
   let readingtime = readingTime(
     content.text.data + ' ' + content.title + ' ' + content.description,
   );
+  let documentBody = createRef();
+  const [sideMenuElements, setSideMenuElements] = useState(null);
+  useEffect(() => {
+    if (documentBody.current) {
+      setSideMenuElements(documentBody.current);
+    }
+  }, [documentBody]);
   const intl = useIntl();
   return (
     <>
@@ -63,9 +70,12 @@ const NewsItemView = ({ content }) => {
         )}
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
-            <SideMenu />
+            <SideMenu data={sideMenuElements} />
           </aside>
-          <section className="col-lg-8 it-page-sections-container">
+          <section
+            className="col-lg-8 it-page-sections-container"
+            ref={documentBody}
+          >
             {content.text.data && (
               <RichTextArticle
                 content={content.text.data}
