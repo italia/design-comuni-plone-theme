@@ -53,7 +53,7 @@ const Gallery = ({ content, folder_name }) => {
           <div className="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
             <div className="it-header-block">
               <div className="it-header-block-title">
-                <h4 className="no_toc">
+                <h4 id="header-gallery" className="no_toc">
                   {' '}
                   {intl.formatMessage(messages.gallery)}
                 </h4>

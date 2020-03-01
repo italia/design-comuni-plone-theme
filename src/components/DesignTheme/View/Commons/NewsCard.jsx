@@ -35,7 +35,7 @@ const NewsCard = ({ item, showimage, content }) => {
             </span>
           ) : null}{' '}
         </div>
-        <h5 className="card-title big-heading">
+        <h5 className="card-title big-heading no-toc">
           <Link to={flattenToAppURL(news_fo['@id'])}>{news_fo.title}</Link>
         </h5>
         <div className="card-text">{news_fo.description}</div>

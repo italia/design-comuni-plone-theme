@@ -53,7 +53,9 @@ const Attachments = ({ content, folder_name }) => {
     <>
       {attachments.length > 0 ? (
         <article id="documenti" className="it-page-section anchor-offset mt-5">
-          <h4>{intl.formatMessage(messages.attachments)}</h4>
+          <h4 id="header-documenti">
+            {intl.formatMessage(messages.attachments)}
+          </h4>
           <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
             {attachments.map((item, i) => (
               <div
@@ -70,7 +72,7 @@ const Attachments = ({ content, folder_name }) => {
                   title={intl.formatMessage(messages.attachment)}
                 />
                 <div className="card-body">
-                  <h5 className="card-title">
+                  <h5 className="card-title no-toc">
                     <a href={flattenToAppURL(item['@id'] + '/@@download/file')}>
                       {item.title}
                     </a>

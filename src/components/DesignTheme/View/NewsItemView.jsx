@@ -114,7 +114,9 @@ const NewsItemView = ({ content }) => {
                 id="related-news"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>{intl.formatMessage(messages.notizie_in_evidenza)}</h4>
+                <h4 id="header-related-news">
+                  {intl.formatMessage(messages.notizie_in_evidenza)}
+                </h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.related_news.map((item, i) => (
                     <NewsCard
@@ -132,7 +134,9 @@ const NewsItemView = ({ content }) => {
                 id="related-items"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>{intl.formatMessage(messages.related_items)}</h4>
+                <h4 id="header-related-items">
+                  {intl.formatMessage(messages.related_items)}
+                </h4>
                 <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.relatedItems.map((item, i) => (
                     <GenericCard

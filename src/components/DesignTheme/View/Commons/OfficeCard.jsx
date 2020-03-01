@@ -30,7 +30,7 @@ const OfficeCard = ({ content, office }) => {
     return office_fo ? (
       <div className="card card-teaser border rounded shadow p-4">
         <div className="card-body pr-3">
-          <h5 className="card-title">
+          <h5 className="card-title no-toc">
             <Link
               to={flattenToAppURL(office_fo['@id'])}
               title={office_fo.title}

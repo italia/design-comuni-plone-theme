@@ -35,9 +35,11 @@ const Metadata = params => {
       id="ulteriori-informazioni"
       className="it-page-section anchor-offset mt-5"
     >
-      <h4 className="mb-3">{intl.formatMessage(messages.other_info)}</h4>
+      <h4 id="header-ulteriori-informazioni" className="mb-3">
+        {intl.formatMessage(messages.other_info)}
+      </h4>
       <p className="text-serif">{intl.formatMessage(messages.modified)}</p>
-      <h6>
+      <h6 className="no-toc">
         <strong>
           {moment(params.content.modified).format('DD-MM-Y HH:MM')}
         </strong>
@@ -45,7 +47,7 @@ const Metadata = params => {
       {params.content.rights && (
         <>
           <p className="text-serif">{intl.formatMessage(messages.rights)}</p>
-          <h6>
+          <h6 className="no-toc">
             <strong>{params.content.rights}</strong>
           </h6>
         </>

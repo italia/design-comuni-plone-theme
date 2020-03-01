@@ -41,7 +41,7 @@ const Location = ({ location }) => {
     card = (
       <div className="card card-teaser shadow mt-3 rounded">
         <div className="card-body">
-          <h5 className="card-title">{location_fo.title}</h5>
+          <h5 className="card-title no-toc">{location_fo.title}</h5>
           <div className="card-text">
             <p>{location_fo.address}</p>
             <p className="mt-3">
@@ -80,7 +80,7 @@ const Locations = ({ locations }) => {
   const intl = useIntl();
   return (
     <article id="luoghi" className="it-page-section anchor-offset mt-5">
-      <h4>{intl.formatMessage(messages.locations)}</h4>
+      <h4 id="header-luoghi">{intl.formatMessage(messages.locations)}</h4>
       <div className="card-wrapper card-teaser-wrapper">
         {locations.map((item, i) => (
           <Location key={i} location={item} />
