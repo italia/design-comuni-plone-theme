@@ -7,8 +7,6 @@ import React /*, { useEffect, useState } */ from 'react';
 
 import PropTypes from 'prop-types';
 
-import { isCmsUi } from '@plone/volto/helpers';
-
 import {
   /* Anontools,
   Logo,*/
@@ -31,9 +29,8 @@ const Header = ({ pathname }) => {
   //   return () => window.removeEventListener('scroll', handleScroll);
   // }, []);
 
-  const isCmsUI = isCmsUi(pathname);
-  let content = (
-    <>
+  return (
+    <div className="public-ui">
       {/* <div
         className="sticky-placeholder"
         style={{ paddingTop: mini ? '50px' : '120px' }}
@@ -46,9 +43,8 @@ const Header = ({ pathname }) => {
           <Navigation pathname={pathname} />
         </div>
       </Headers>
-    </>
+    </div>
   );
-  return isCmsUI ? <div className="public-ui">{content}</div> : content;
 };
 
 Header.propTypes = {
