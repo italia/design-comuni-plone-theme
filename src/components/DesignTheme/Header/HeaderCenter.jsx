@@ -33,7 +33,7 @@ const HeaderCenter = () => {
   return (
     <Header small={false} theme="" type="center">
       <HeaderContent>
-        <HeaderBrand iconName="it-pa" responsive={false} tag={Link} to="/">
+        <HeaderBrand iconName="it-pa" href="/">
           <h2>Nome comune</h2>
           <h3>Uno dei tanti comuni d'Italia</h3>
         </HeaderBrand>

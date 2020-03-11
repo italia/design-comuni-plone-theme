@@ -48,7 +48,7 @@ const NewsTemplate = ({ items, isEditMode, title, linkMore }) => {
               )}
               <CardBody>
                 <CardCategory date={moment(item.effective).format('ll')}>
-                  {item.subjects.join(', ')}
+                  {item.subjects?.join(', ')}
                 </CardCategory>
                 <CardTitle tag="h4">
                   <Link to={flattenToAppURL(item['@id'])}>
