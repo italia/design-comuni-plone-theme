@@ -26,6 +26,8 @@ import { CharCounterDescriptionWidget } from '@design/components/DesignTheme';
 import { NewsItemView } from '@design/components/DesignTheme';
 import { UOView } from '@design/components/DesignTheme';
 
+import NewsTemplate from '@design/components/DesignTheme/Blocks/Listing/NewsTemplate';
+
 const extendedBlockRenderMap = defaultSettings.extendedBlockRenderMap.update(
   'align-center',
   (element = 'p') => element,
@@ -82,6 +84,16 @@ const customBlocks = {
     security: {
       addPermission: [],
       view: [],
+    },
+  },
+  listing: {
+    ...defaultBlocks.blocksConfig.listing,
+    templates: {
+      ...defaultBlocks.blocksConfig.listing.templates,
+      newsTemplate: {
+        label: 'Notizie',
+        template: NewsTemplate,
+      },
     },
   },
 };

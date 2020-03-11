@@ -1,97 +1,72 @@
-/**
- * Edit Hero block.
- * @module components/manage/Blocks/Image/Edit
- */
-
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { compose } from 'redux';
-import { injectIntl } from 'react-intl';
-import cx from 'classnames';
+import { useDispatch, useSelector } from 'react-redux';
+import { defineMessages, useIntl } from 'react-intl';
 
-import { createContent, getContent } from '@plone/volto/actions';
+import { getContent, resetContent } from '@plone/volto/actions';
 import { SidebarPortal } from '@plone/volto/components';
 import { getBaseUrl } from '@plone/volto/helpers';
 
-import View from './View';
+import Body from './Body';
 import Sidebar from './Sidebar';
-/**
- * Edit image block class.
- * @class Edit
- * @extends Component
- */
-class Edit extends Component {
-  /**
-   * Property types.
-   * @property {Object} propTypes Property types.
-   * @static
-   */
-  static propTypes = {
-    selected: PropTypes.bool.isRequired,
-    block: PropTypes.string.isRequired,
-    index: PropTypes.number.isRequired,
-    data: PropTypes.objectOf(PropTypes.any).isRequired,
-    content: PropTypes.objectOf(PropTypes.any).isRequired,
-    request: PropTypes.shape({
-      loading: PropTypes.bool,
-      loaded: PropTypes.bool,
-    }).isRequired,
-    pathname: PropTypes.string.isRequired,
-    onChangeBlock: PropTypes.func.isRequired,
-    onSelectBlock: PropTypes.func.isRequired,
-    onDeleteBlock: PropTypes.func.isRequired,
-    onFocusPreviousBlock: PropTypes.func.isRequired,
-    onFocusNextBlock: PropTypes.func.isRequired,
-    handleKeyDown: PropTypes.func.isRequired,
-    createContent: PropTypes.func.isRequired,
-  };
 
-  /**
-   * Component did mount
-   * @method componentDidMount
-   * @returns {undefined}
-   */
-  componentDidMount() {
-    this.loadNews();
-  }
+const messages = defineMessages({
+  emptySelection: {
+    id: 'emptySelection',
+    defaultMessage:
+      'Please select an item in the sidebar in order to show it here',
+  },
+});
 
-  loadNews = () => {
-    console.log(this);
-    if (this.props.data.href) {
-      //  this.props.getContent(getBaseUrl(this.props.data.href));
-      // getContent(getBaseUrl(this.props.data.href)).then(function(res) {
-      //   console.log('thennnn', res);
-      // });
+const Edit = ({
+  block,
+  data,
+  pathname,
+  selected,
+  onChangeBlock,
+  openObjectBrowser,
+}) => {
+  const content = useSelector(state => state.content.subrequests[block]?.data);
+  const intl = useIntl();
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (data.href) {
+      dispatch(getContent(getBaseUrl(data.href), null, block));
     }
-  };
+    return () => dispatch(resetContent(block));
+  }, [dispatch, block, data.href]);
 
-  render() {
-    if (__SERVER__) {
-      return <div />;
-    }
-    return (
-      <div
-        className={cx('block', {
-          selected: this.props.selected,
-        })}
-      >
-        <View data={this.props.data} pathname={this.props.pathname} />
-        <SidebarPortal selected={this.props.selected}>
-          <Sidebar {...this.props} loadNews={this.loadNews} />
-        </SidebarPortal>
-      </div>
-    );
-  }
-}
+  return (
+    <>
+      {content ? (
+        <div className="public-ui">
+          <Body content={content} pathname={pathname} />
+        </div>
+      ) : (
+        <p className="empty-selection">
+          {intl.formatMessage(messages.emptySelection)}
+        </p>
+      )}
+      <SidebarPortal selected={selected}>
+        <Sidebar
+          block={block}
+          data={data}
+          onChangeBlock={onChangeBlock}
+          openObjectBrowser={openObjectBrowser}
+        />
+      </SidebarPortal>
+    </>
+  );
+};
 
-export default compose(
-  injectIntl,
-  connect(
-    state => ({
-      request: state.content.create,
-      content: state.content.data,
-    }),
-    { createContent },
-  ),
-)(Edit);
+Edit.propTypes = {
+  selected: PropTypes.bool.isRequired,
+  block: PropTypes.string.isRequired,
+  data: PropTypes.objectOf(PropTypes.any).isRequired,
+  pathname: PropTypes.string.isRequired,
+  onChangeBlock: PropTypes.func.isRequired,
+  openObjectBrowser: PropTypes.func.isRequired,
+};
+
+export default Edit;

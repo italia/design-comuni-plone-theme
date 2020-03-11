@@ -82,6 +82,10 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
+#: components/DesignTheme/Blocks/Listing/NewsTemplate
+msgid "Keep reading"
+msgstr ""
+
 #: components/DesignTheme/Footer/FooterSmall
 msgid "Mappa del sito"
 msgstr ""
@@ -154,8 +158,8 @@ msgstr ""
 msgid "Vedi tutto"
 msgstr ""
 
+#: components/DesignTheme/View/Commons/Actions
 #: components/DesignTheme/View/Commons/PageHeader
-#: components/DesignTheme/View/Commons/Sharing
 msgid "actions"
 msgstr ""
 
@@ -168,7 +172,6 @@ msgid "attachment"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Attachments
-#: components/DesignTheme/View/Commons/RelatedContents
 msgid "attachments"
 msgstr ""
 
@@ -196,6 +199,14 @@ msgstr ""
 msgid "details"
 msgstr ""
 
+#: components/DesignTheme/View/Commons/Actions
+msgid "download"
+msgstr ""
+
+#: components/DesignTheme/Blocks/NewsHome/Edit
+msgid "emptySelection"
+msgstr ""
+
 #: components/DesignTheme/View/Commons/PageHeader
 msgid "expire"
 msgstr ""
@@ -216,17 +227,24 @@ msgstr ""
 msgid "locations"
 msgstr ""
 
+#: components/DesignTheme/View/Commons/Actions
+msgid "mailto"
+msgstr ""
+
 #: components/DesignTheme/View/Commons/PageHeader
 msgid "minutes"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Metadata
-#: components/DesignTheme/View/NewsItemView
 msgid "modified"
 msgstr ""
 
-#: components/DesignTheme/View/Commons/Metadata
 #: components/DesignTheme/View/NewsItemView
+#: components/DesignTheme/View/UOView
+msgid "notizie_in_evidenza"
+msgstr ""
+
+#: components/DesignTheme/View/Commons/Metadata
 msgid "other_info"
 msgstr ""
 
@@ -238,8 +256,17 @@ msgstr ""
 msgid "persone_struttura"
 msgstr ""
 
+#: components/DesignTheme/View/Commons/Actions
+msgid "print"
+msgstr ""
+
 #: components/DesignTheme/View/Commons/PageHeader
 msgid "reading_time"
+msgstr ""
+
+#: components/DesignTheme/View/NewsItemView
+#: components/DesignTheme/View/UOView
+msgid "related_items"
 msgstr ""
 
 #: components/DesignTheme/View/UOView
@@ -247,7 +274,6 @@ msgid "responsabile"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Metadata
-#: components/DesignTheme/View/NewsItemView
 msgid "rights"
 msgstr ""
 
@@ -255,9 +281,17 @@ msgstr ""
 msgid "sedi"
 msgstr ""
 
+#: components/DesignTheme/View/UOView
+msgid "servizi_offerti"
+msgstr ""
+
 #: components/DesignTheme/View/Commons/PageHeader
 #: components/DesignTheme/View/Commons/Sharing
 msgid "share"
+msgstr ""
+
+#: components/DesignTheme/View/Commons/Metadata
+msgid "subjects"
 msgstr ""
 
 #: components/DesignTheme/View/UOView

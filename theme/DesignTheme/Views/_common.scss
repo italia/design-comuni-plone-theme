@@ -24,8 +24,15 @@
     margin-bottom: 10px !important;
   }
 }
+
 div.sticky-wrapper {
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
+}
+
+.slick-slide {
+  figure {
+    width: 95%;
+  }
 }

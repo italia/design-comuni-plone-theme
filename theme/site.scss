@@ -1,9 +1,11 @@
-@import 'bootstrap-override/bootstrap-italia-site.scss';
-@import 'cms-ui.scss';
+@import 'bootstrap-override/bootstrap-italia-site';
+@import 'cms-ui';
 
 /*** DesignTheme ***/
-@import 'DesignTheme/home.scss';
-@import 'DesignTheme/Blocks/alert.scss';
-@import 'DesignTheme/Views/NewsItem.scss';
-@import 'DesignTheme/Views/UO.scss';
-@import 'DesignTheme/Views/Common.scss';
+@import 'DesignTheme/home';
+@import 'DesignTheme/Blocks/alert';
+@import 'DesignTheme/Blocks/newshome';
+@import 'DesignTheme/Blocks/newstemplate';
+@import 'DesignTheme/Views/newsItem';
+@import 'DesignTheme/Views/uo';
+@import 'DesignTheme/Views/common';

@@ -3,6 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const messages = defineMessages({
   gallery: {
@@ -19,6 +22,40 @@ const messages = defineMessages({
  * @returns {string} Markup of the component.
  */
 const Gallery = ({ content, folder_name }) => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   const intl = useIntl();
   const url = flattenToAppURL(content['@id']) + '/' + folder_name;
   const searchResults = useSelector(state => state.search.subrequests);
@@ -59,21 +96,25 @@ const Gallery = ({ content, folder_name }) => {
                 </h4>
               </div>
             </div>
-            <div className="it-carousel-all owl-carousel it-card-bg">
-              {images.map((item, i) => (
-                <div className="it-single-slide-wrapper" key={i}>
-                  <figure>
-                    <img
-                      src={flattenToAppURL(item.image.scales.preview.download)}
-                      alt={item.title}
-                      className="img-fluid"
-                    ></img>
-                    <figcaption className="figure-caption mt-2">
-                      {item.title}
-                    </figcaption>
-                  </figure>
-                </div>
-              ))}
+            <div className="it-carousel-all it-card-bg">
+              <Slider {...settings}>
+                {images.map((item, i) => (
+                  <div className="it-single-slide-wrapper" key={i}>
+                    <figure>
+                      <img
+                        src={flattenToAppURL(
+                          item.image.scales.gallery.download,
+                        )}
+                        alt={item.title}
+                        className="img-fluid"
+                      ></img>
+                      <figcaption className="figure-caption mt-2">
+                        {item.title}
+                      </figcaption>
+                    </figure>
+                  </div>
+                ))}
+              </Slider>
             </div>
           </div>
         </article>
