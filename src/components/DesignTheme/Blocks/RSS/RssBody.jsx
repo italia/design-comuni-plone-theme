@@ -5,14 +5,7 @@ import { injectIntl } from 'react-intl';
 import Parser from 'rss-parser';
 import moment from 'moment';
 import { settings } from '@plone/volto/config';
-import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
-  CardCategory,
-  CardReadMore,
-} from 'design-react-kit/dist/design-react-kit';
+import { blocks as customBlocks } from '@design/config';
 
 const RssBody = ({ data, properties, intl, path, isEditMode }) => {
   const [feedItems, setFeedItems] = useState([]);
@@ -30,30 +23,22 @@ const RssBody = ({ data, properties, intl, path, isEditMode }) => {
       });
     }
   }, [data]);
+
+  const templateConfig = customBlocks.blocksConfig.RssBlock.templates;
+
+  let templateName =
+    data.template && !!templateConfig[data.template]
+      ? data.template
+      : 'default';
+
+  const ListingBodyTemplate = templateConfig[templateName].template;
+
   return feedItems.length > 0 ? (
     <div className="row">
       {feedItems?.map((item, i) => (
-        <div className="col-12 col-lg-3">
-          <Card noWrapper={false} tag="div">
-            <CardBody tag="div">
-              <CardCategory date={moment(item.pubDate).format('DD-MMM-Y')}>
-                {item.categories.length > 0 ? item.categories[0]._ : ''}
-              </CardCategory>
-              <CardTitle className="big-heading" tag="h5">
-                {item.title}
-              </CardTitle>
-              <CardText tag="p" className="text-serif">
-                {item.contentSnippet}
-              </CardText>
-            </CardBody>
-            <CardReadMore
-              iconName="it-arrow-right"
-              tag="a"
-              href={item?.link}
-              text="Leggi di più"
-            />
-          </Card>
-        </div>
+        <>
+          <ListingBodyTemplate key={i} item={item} />
+        </>
       ))}
     </div>
   ) : (

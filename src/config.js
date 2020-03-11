@@ -26,6 +26,8 @@ import AlertEdit from '@design/components/DesignTheme/Blocks/Alert/Edit';
 import rssSVG from '@plone/volto/icons/rss.svg';
 import RssView from '@design/components/DesignTheme/Blocks/RSS/View';
 import RssEdit from '@design/components/DesignTheme/Blocks/RSS/Edit';
+import DefaultRSSTemplate from '@design/components/DesignTheme/Blocks/RSS/templates/DefaultRssTemplate';
+import ImageRssTemplate from '@design/components/DesignTheme/Blocks/RSS/templates/ImageRssTemplate';
 
 import { CharCounterDescriptionWidget } from '@design/components/DesignTheme';
 import { NewsItemView } from '@design/components/DesignTheme';
@@ -72,6 +74,10 @@ const customBlocks = {
     security: {
       addPermission: [],
       view: [],
+    },
+    templates: {
+      default: { label: 'Default', template: DefaultRSSTemplate },
+      with_image: { label: 'Template with image', template: ImageRssTemplate },
     },
   },
   newsHome: {

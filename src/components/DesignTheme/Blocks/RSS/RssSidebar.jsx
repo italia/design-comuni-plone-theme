@@ -6,6 +6,7 @@ import { compose } from 'redux';
 import aheadSVG from '@plone/volto/icons/ahead.svg';
 import { Button } from 'semantic-ui-react';
 import { Icon } from '@plone/volto/components';
+import RssSyle from './RssStyle';
 
 const messages = defineMessages({
   selectRssOptions: {
@@ -55,6 +56,7 @@ const RssSidebar = ({ data, block, onChangeBlock, required = false, intl }) => {
             setFeedItemNumber(value);
           }}
         />
+        <RssSyle data={data} block={block} onChangeBlock={onChangeBlock} />
       </Segment>
       <Segment className="actions" clearing>
         <Button
