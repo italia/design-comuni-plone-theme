@@ -97,7 +97,7 @@ const UOView = ({ content }) => {
             <SideMenu />
           </aside>
           <section className="col-lg-8 it-page-sections-container">
-            {content.ulteriori_informazioni.data.replace(
+            {content.ulteriori_informazioni?.data.replace(
               /(<([^>]+)>)/g,
               '',
             ) && (
@@ -107,7 +107,7 @@ const UOView = ({ content }) => {
                 title={intl.formatMessage(messages.ulteriori_informazioni)}
               />
             )}
-            {content.sedi && (
+            {content.sedi?.length > 0 && (
               <article id="sedi" className="it-page-section anchor-offset mt-5">
                 <h4>{intl.formatMessage(messages.sedi)}</h4>
                 {content.sedi.map((item, i) => (
@@ -129,9 +129,9 @@ const UOView = ({ content }) => {
                 </p>
               </article>
             )}
-            {content.competenze.data.replace(/(<([^>]+)>)/g, '') && (
+            {content.competenze?.data.replace(/(<([^>]+)>)/g, '') && (
               <RichTextArticle
-                content={content.competenze.data}
+                content={content.competenze?.data}
                 tag_id={'competenze'}
                 title={'Competenze'}
               />
@@ -172,7 +172,7 @@ const UOView = ({ content }) => {
                 </div>
               </article>
             ) : null}
-            {content.assessore_riferimento.length > 0 ? (
+            {content.assessore_riferimento?.length > 0 ? (
               <article
                 id="assessore-riferimento"
                 className="it-page-section anchor-offset mt-5"
@@ -197,7 +197,7 @@ const UOView = ({ content }) => {
                 ))}
               </article>
             ) : null}
-            {content.responsabile.length > 0 ? (
+            {content.responsabile?.length > 0 ? (
               <article
                 id="responsabile"
                 className="it-page-section anchor-offset mt-5"
