@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import { isEqual, isMatch } from 'lodash';
 import { useDispatch, useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
-import { getBaseUrl } from '@plone/volto/helpers';
+import { flattenToAppURL, getBaseUrl } from '@plone/volto/helpers';
 import { getNavigation } from '@plone/volto/actions';
 // import {
 //   BITIcon,
@@ -98,7 +98,7 @@ const Navigation = ({ pathname }) => {
                   key={item.url}
                 >
                   <NavLink
-                    to={item.url === '' ? '/' : item.url}
+                    to={item.url === '' ? '/' : flattenToAppURL(item.url)}
                     tag={Link}
                     active={isMenuActive(item.url, pathname)}
                   >

@@ -13,67 +13,67 @@ msgstr ""
 
 #: components/DesignTheme/Header/HeaderSlim
 msgid "Accedi all'area personale"
-msgstr ""
+msgstr "Accedi all'area personale"
 
 #: components/DesignTheme/Blocks/Alert/Sidebar
 msgid "Alert"
-msgstr ""
+msgstr "Alert"
 
 #: components/DesignTheme/Footer/FooterInfos
 msgid "Amministrazione"
-msgstr ""
+msgstr "Amministrazione"
 
 #: components/DesignTheme/Footer/FooterInfos
 msgid "Amministrazione trasparente"
-msgstr ""
+msgstr "Amministrazione trasparente"
 
 #: components/DesignTheme/Footer/FooterInfos
 msgid "Amministrazione trasparente description"
-msgstr ""
+msgstr "Amministrazione trasparente description"
 
 #: components/DesignTheme/Header/HeaderCenter
 msgid "Cerca"
-msgstr ""
+msgstr "Cerca"
 
 #: components/DesignTheme/Blocks/Alert/Sidebar
 msgid "Color"
-msgstr ""
+msgstr "Color"
 
 #: components/DesignTheme/Blocks/Alert/Sidebar
 msgid "Color_danger"
-msgstr ""
+msgstr "Color_danger"
 
 #: components/DesignTheme/Blocks/Alert/Sidebar
 msgid "Color_warning"
-msgstr ""
+msgstr "Color_warning"
 
 #: components/DesignTheme/Footer/FooterInfos
 msgid "Contatti"
-msgstr ""
+msgstr "Contatti"
 
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Default"
-msgstr ""
+msgstr "Default"
 
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Delete"
-msgstr ""
+msgstr "Delete"
 
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Description"
-msgstr ""
+msgstr "Description"
 
 #: components/DesignTheme/Footer/FooterInfos
 msgid "Follow us"
-msgstr ""
+msgstr "Follow us"
 
 #: customizations/components/theme/Breadcrumbs/Breadcrumbs
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
 #: components/DesignTheme/Blocks/Alert/Sidebar
 msgid "Image"
-msgstr ""
+msgstr "Image"
 
 #: components/DesignTheme/Blocks/Listing/NewsTemplate
 msgid "Keep reading"
@@ -81,80 +81,80 @@ msgstr ""
 
 #: components/DesignTheme/Footer/FooterSmall
 msgid "Mappa del sito"
-msgstr ""
+msgstr "Mappa del sito"
 
 #: components/DesignTheme/MegaMenu/MegaMenu
 #: customizations/components/theme/Navigation/Navigation
 msgid "Menu selezionato"
-msgstr ""
+msgstr "Menu selezionato"
 
 #: components/DesignTheme/Blocks/NewsHome/Sidebar
 msgid "News"
-msgstr ""
+msgstr "News"
 
 #: components/DesignTheme/Blocks/NewsHome/Sidebar
 msgid "NewsHome"
-msgstr ""
+msgstr "NewsHome"
 
 #: components/DesignTheme/Footer/FooterInfos
 msgid "Newsletter"
-msgstr ""
+msgstr "Newsletter"
 
 #: components/DesignTheme/Footer/FooterSmall
 msgid "Note legali"
-msgstr ""
+msgstr "Note legali"
 
 #: components/DesignTheme/Footer/FooterInfos
 msgid "PEC"
-msgstr ""
+msgstr "PEC"
 
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Required"
-msgstr ""
+msgstr "Required"
 
 #: components/DesignTheme/Header/HeaderCenter
 #: components/DesignTheme/SocialLinks/SocialLinks
 msgid "Seguici su"
-msgstr ""
+msgstr "Seguici su"
 
 #: components/DesignTheme/Footer/FooterSmall
 msgid "Sezione Link Utili"
-msgstr ""
+msgstr "Sezione Link Utili"
 
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Short Name"
-msgstr ""
+msgstr "Short Name"
 
 #: components/DesignTheme/Footer/FooterInfos
 msgid "Subscribe"
-msgstr ""
+msgstr "Subscribe"
 
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Title"
-msgstr ""
+msgstr "Title"
 
 #: components/DesignTheme/Footer/FooterInfos
 msgid "URP"
-msgstr ""
+msgstr "URP"
 
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Used for programmatic access to the fieldset."
-msgstr ""
+msgstr "Used for programmatic access to the fieldset."
 
 #: components/DesignTheme/Footer/FooterInfos
 #: components/DesignTheme/Footer/FooterNavigation
 #: components/DesignTheme/Footer/FooterSmall
 msgid "Vai alla pagina"
-msgstr ""
+msgstr "Vai alla pagina"
 
 #: components/DesignTheme/MegaMenu/MegaMenu
 msgid "Vedi tutto"
-msgstr ""
+msgstr "Vedi tutto"
 
 #: components/DesignTheme/View/Commons/Actions
 #: components/DesignTheme/View/Commons/PageHeader
 msgid "actions"
-msgstr ""
+msgstr "actions"
 
 #: components/DesignTheme/View/UOView
 msgid "assessore_riferimento"
@@ -174,7 +174,7 @@ msgstr ""
 
 #: customizations/components/theme/Navigation/Navigation
 msgid "close"
-msgstr ""
+msgstr "close"
 
 #: components/DesignTheme/View/Commons/CuredBy
 msgid "cured_by"
@@ -198,7 +198,7 @@ msgstr ""
 
 #: components/DesignTheme/Blocks/NewsHome/Edit
 msgid "emptySelection"
-msgstr ""
+msgstr "Seleziona un elemento nella barra laterale per mostrarlo qui."
 
 #: components/DesignTheme/View/Commons/PageHeader
 msgid "expire"
@@ -281,7 +281,7 @@ msgstr ""
 #: components/DesignTheme/View/Commons/PageHeader
 #: components/DesignTheme/View/Commons/Sharing
 msgid "share"
-msgstr ""
+msgstr "share"
 
 #: components/DesignTheme/View/Commons/Metadata
 msgid "subjects"
@@ -293,7 +293,7 @@ msgstr ""
 
 #: components/DesignTheme/View/Commons/PageHeader
 msgid "topics"
-msgstr ""
+msgstr "topics"
 
 #: components/DesignTheme/View/UOView
 msgid "ulteriori_informazioni"
