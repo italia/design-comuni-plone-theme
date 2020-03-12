@@ -23,12 +23,6 @@ import alertSVG from '@plone/volto/icons/alert.svg';
 import AlertView from '@design/components/DesignTheme/Blocks/Alert/View';
 import AlertEdit from '@design/components/DesignTheme/Blocks/Alert/Edit';
 
-import rssSVG from '@plone/volto/icons/rss.svg';
-import RssView from '@design/components/DesignTheme/Blocks/RSS/View';
-import RssEdit from '@design/components/DesignTheme/Blocks/RSS/Edit';
-import DefaultRSSTemplate from '@design/components/DesignTheme/Blocks/RSS/templates/DefaultRssTemplate';
-import ImageRssTemplate from '@design/components/DesignTheme/Blocks/RSS/templates/ImageRssTemplate';
-
 import { CharCounterDescriptionWidget } from '@design/components/DesignTheme';
 import { NewsItemView } from '@design/components/DesignTheme';
 import { UOView } from '@design/components/DesignTheme';
@@ -64,24 +58,6 @@ const AlignCenterButton = createBlockStyleButton({
 });
 
 const customBlocks = {
-  RssBlock: {
-    id: 'RssBlock',
-    title: 'Rss',
-    icon: rssSVG,
-    group: 'common',
-    view: RssView,
-    edit: RssEdit,
-    restricted: false,
-    mostUsed: true,
-    security: {
-      addPermission: [],
-      view: [],
-    },
-    templates: {
-      default: { label: 'Default', template: DefaultRSSTemplate },
-      with_image: { label: 'Template with image', template: ImageRssTemplate },
-    },
-  },
   newsHome: {
     id: 'newsHome',
     title: 'News Home',

@@ -5,7 +5,8 @@
       "alias": {
         "map": [
           ["@plone/volto", "@plone/volto/src"],
-          ["@design", "./src"]
+          ["@design", "./src"],
+          ["@plone/volto-rss-block", "./src/addons/@plone/volto-rss-block/src"]
         ],
         "extensions": [".js", ".jsx", ".json"]
       },

@@ -1,0 +1,5 @@
+{
+  "@plone/volto-rss-block": {
+      "url": "git@gitlab.com:redturtle/volto-rss-block.git"
+  }
+}
