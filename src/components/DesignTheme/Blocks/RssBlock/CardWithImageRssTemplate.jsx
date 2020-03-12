@@ -7,7 +7,6 @@ import {
   Card,
   CardBody,
   CardTitle,
-  CardText,
   CardCategory,
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
@@ -22,7 +21,8 @@ const CardWithImageRssTemplate = ({ item }) => {
               <img
                 alt={item.title}
                 src={item.enclosure.url}
-                title={item.title} />
+                title={item.title}
+              />
             </figure>
           </div>
         </div>
@@ -30,15 +30,13 @@ const CardWithImageRssTemplate = ({ item }) => {
           <CardCategory date={moment(item.pubDate).format('DD-MMM-Y')}>
             {item.categories.length > 0 ? item.categories[0]._ : ''}
           </CardCategory>
-          <CardTitle className="big-heading" tag="h5">
+          <CardTitle className="big-heading" tag="h6">
             {item.title}
           </CardTitle>
-          <CardText tag="p" className="text-serif">
-            {item.contentSnippet}
-          </CardText>
         </CardBody>
         <CardReadMore
           iconName="it-arrow-right"
+          className="ml-2"
           tag="a"
           href={item?.link}
           text="Leggi di più"
