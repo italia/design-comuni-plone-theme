@@ -15,7 +15,6 @@ import {
 const CardWithoutImageRssTemplate = ({ item }) => {
   return (
     <div className="col-12 col-lg-3">
-      <div>MA SENZA L'IMMAGINE</div>
       <Card noWrapper={false} tag="div">
         <CardBody tag="div">
           <CardCategory date={moment(item.pubDate).format('DD-MMM-Y')}>

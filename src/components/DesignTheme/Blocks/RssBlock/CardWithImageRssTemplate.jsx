@@ -15,8 +15,17 @@ import {
 const CardWithImageRssTemplate = ({ item }) => {
   return (
     <div className="col-12 col-lg-3">
-      <div>MA CON L'IMMAGINE</div>
-      <Card noWrapper={false} tag="div">
+      <Card className="card-bg card-img no-after" noWrapper={false} tag="div">
+        <div className="img-responsive-wrapper">
+          <div className="img-responsive img-responsive-panoramic">
+            <figure className="img-wrapper">
+              <img
+                alt={item.title}
+                src={item.enclosure.url}
+                title={item.title} />
+            </figure>
+          </div>
+        </div>
         <CardBody tag="div">
           <CardCategory date={moment(item.pubDate).format('DD-MMM-Y')}>
             {item.categories.length > 0 ? item.categories[0]._ : ''}
