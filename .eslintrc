@@ -6,7 +6,7 @@
         "map": [
           ["@plone/volto", "@plone/volto/src"],
           ["@design", "./src"],
-          ["volto-rss-block", "./src/addons/volto-rss-block/src"]
+          ["volto-rss-block", "./src/addons/volto-rss-block"]
         ],
         "extensions": [".js", ".jsx", ".json"]
       },
