@@ -20,8 +20,7 @@
       "^.+\\.scss$": "jest-css-modules",
       "^.+\\.(png)$": "jest-file",
       "^.+\\.(jpg)$": "jest-file",
-      "^.+\\.(svg)$": "./node_modules/@plone/volto/jest-svgsystem-transform.js",
-      "@plone/volto-rss-block/(.*)$": "<rootDir>/src/addons/@plone/volto-rss-block/src/$1"
+      "^.+\\.(svg)$": "./node_modules/@plone/volto/jest-svgsystem-transform.js"
     },
     "transformIgnorePatterns": [
       "/node_modules/(?!@plone/volto).+\\.js$"
@@ -29,6 +28,7 @@
     "moduleNameMapper": {
       "@plone/volto/(.*)$": "<rootDir>/node_modules/@plone/volto/src/$1",
       "@design/(.*)$": "<rootDir>/src/$1",
+      "volto-rss-block/(.*)$": "<rootDir>/src/addons/volto-rss-block/src/$1",
       "~/(.*)$": "<rootDir>/src/$1"
     },
     "coverageThreshold": {

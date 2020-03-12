@@ -29,6 +29,8 @@ import { UOView } from '@design/components/DesignTheme';
 
 import NewsTemplate from '@design/components/DesignTheme/Blocks/Listing/NewsTemplate';
 
+import { rssBlock } from 'volto-rss-block';
+
 const extendedBlockRenderMap = defaultSettings.extendedBlockRenderMap.update(
   'align-center',
   (element = 'p') => element,
@@ -97,6 +99,7 @@ const customBlocks = {
       },
     },
   },
+  rssBlock,
 };
 
 export const settings = {

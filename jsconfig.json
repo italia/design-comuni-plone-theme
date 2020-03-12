@@ -1,8 +1,8 @@
 {
     "compilerOptions": {
         "paths": {
-            "@plone/volto-rss-block": [
-                "addons/@plone/volto-rss-block"
+            "volto-rss-block": [
+                "addons/volto-rss-block"
             ]
         },
         "baseUrl": "src"
