@@ -29,7 +29,24 @@ import { UOView } from '@design/components/DesignTheme';
 
 import NewsTemplate from '@design/components/DesignTheme/Blocks/Listing/NewsTemplate';
 
-import { rssBlock } from 'volto-rss-block';
+import { rssBlock as customRssBlock } from 'volto-rss-block';
+import CardWithImageRssTemplate from '@design/components/DesignTheme/Blocks/RssBlock/CardWithImageRssTemplate';
+import CardWithoutImageRssTemplate from '@design/components/DesignTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
+
+const rssBlock = {
+  ...customRssBlock,
+  templates: {
+    ...customRssBlock.templates,
+    card_without_image: {
+      label: 'Card template with image ',
+      template: CardWithImageRssTemplate,
+    },
+    card_with_image: {
+      label: 'Card template without image',
+      template: CardWithoutImageRssTemplate,
+    },
+  }
+}
 
 const extendedBlockRenderMap = defaultSettings.extendedBlockRenderMap.update(
   'align-center',
