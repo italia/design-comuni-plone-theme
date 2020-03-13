@@ -62,8 +62,10 @@ const NewsTemplate = ({ items, isEditMode, title, linkMore }) => {
         ))}
       </Row>
       {linkMore?.href && (
-        <div className="bottom">
-          <ConditionalLink to={linkMore.href}>{linkMore.title}</ConditionalLink>
+        <div className="link-more">
+          <ConditionalLink condition={!isEditMode} to={linkMore.href}>
+            {linkMore.title}
+          </ConditionalLink>
         </div>
       )}
     </div>
