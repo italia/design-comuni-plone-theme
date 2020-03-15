@@ -1,4 +1,5 @@
 export Attachments from '@design/components/DesignTheme/View/Commons/Attachments';
+export Attachment from '@design/components/DesignTheme/View/Commons/Attachment';
 export Gallery from '@design/components/DesignTheme/View/Commons/Gallery';
 export CuredBy from '@design/components/DesignTheme/View/Commons/CuredBy';
 export Locations from '@design/components/DesignTheme/View/Commons/Locations';
@@ -11,5 +12,6 @@ export Metadata from '@design/components/DesignTheme/View/Commons/Metadata';
 export Sharing from '@design/components/DesignTheme/View/Commons/Sharing';
 export Venue from '@design/components/DesignTheme/View/Commons/Venue';
 export GenericCard from '@design/components/DesignTheme/View/Commons/GenericCard';
-export NewsCard from '@design/components/DesignTheme/View/Commons/NewsCard';
+export RelatedNews from '@design/components/DesignTheme/View/Commons/RelatedNews';
 export Actions from '@design/components/DesignTheme/View/Commons/Actions';
+export NewsCard from '@design/components/DesignTheme/View/Commons/NewsCard';

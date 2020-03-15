@@ -16,7 +16,7 @@ import { OfficeCard } from './Commons';
 import { Attachments } from './Commons';
 import { Metadata } from './Commons';
 import { Venue } from './Commons';
-import { NewsCard } from './Commons';
+import { RelatedNews } from './Commons';
 import { GenericCard } from './Commons';
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 
@@ -82,6 +82,8 @@ const UOView = ({ content }) => {
           content={content}
           readingtime={null}
           showreadingtime={false}
+          imageinheader={false}
+          imageinheader_field={null}
           showdates={false}
           showtassonomiaargomenti={true}
         />
@@ -101,12 +103,12 @@ const UOView = ({ content }) => {
               /(<([^>]+)>)/g,
               '',
             ) && (
-              <RichTextArticle
-                content={content.ulteriori_informazioni.data}
-                tag_id="ulteriori_informazioni"
-                title={intl.formatMessage(messages.ulteriori_informazioni)}
-              />
-            )}
+                <RichTextArticle
+                  content={content.ulteriori_informazioni.data}
+                  tag_id="ulteriori_informazioni"
+                  title={intl.formatMessage(messages.ulteriori_informazioni)}
+                />
+              )}
             {content.sedi?.length > 0 && (
               <article id="sedi" className="it-page-section anchor-offset mt-5">
                 <h4>{intl.formatMessage(messages.sedi)}</h4>
@@ -265,7 +267,7 @@ const UOView = ({ content }) => {
                 <h4>{intl.formatMessage(messages.notizie_in_evidenza)}</h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.notizie_collegate.map((item, i) => (
-                    <NewsCard
+                    <RelatedNews
                       index={item['@id']}
                       item={item}
                       showimage={false}

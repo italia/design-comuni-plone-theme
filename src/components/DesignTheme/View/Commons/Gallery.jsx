@@ -10,7 +10,7 @@ import 'slick-carousel/slick/slick-theme.css';
 const messages = defineMessages({
   gallery: {
     id: 'gallery',
-    defaultMessage: 'Galleria immagini',
+    defaultMessage: 'Galleria di immagini',
   },
 });
 

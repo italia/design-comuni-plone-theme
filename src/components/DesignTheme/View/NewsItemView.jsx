@@ -17,7 +17,7 @@ import { PageHeader } from './Commons';
 import { RichTextArticle } from './Commons';
 import { Metadata } from './Commons';
 import { readingTime } from './ViewUtils';
-import { NewsCard } from './Commons';
+import { RelatedNews } from './Commons';
 import { GenericCard } from './Commons';
 // import { getBaseUrl } from '@plone/volto/helpers';
 
@@ -50,6 +50,8 @@ const NewsItemView = ({ content }) => {
           content={content}
           readingtime={readingtime}
           showreadingtime={true}
+          imageinheader={false}
+          imageinheader_field={null}
           showdates={true}
           showtopics={true}
           showtassonomiaargomenti={true}
@@ -107,7 +109,7 @@ const NewsItemView = ({ content }) => {
                 <h4>{intl.formatMessage(messages.notizie_in_evidenza)}</h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.related_news.map((item, i) => (
-                    <NewsCard
+                    <RelatedNews
                       key={item['@id']}
                       item={item}
                       showimage={false}

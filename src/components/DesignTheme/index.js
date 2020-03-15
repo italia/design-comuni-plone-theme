@@ -26,3 +26,4 @@ export FooterSmall from './Footer/FooterSmall';
 export CharCounterDescriptionWidget from './manage/Widgets/CharCounterDescriptionWidget';
 export NewsItemView from './View/NewsItemView';
 export UOView from './View/UOView';
+export PersonaView from './View/PersonaView';
