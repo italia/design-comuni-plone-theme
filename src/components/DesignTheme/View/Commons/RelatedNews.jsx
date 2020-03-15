@@ -1,10 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import { getContent, resetContent } from '@plone/volto/actions';
-import moment from 'moment';
-import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import NewsCard from './NewsCard';
+import PropTypes from 'prop-types';
 /**
  * RelatedNews view component class.
  * @function Location
@@ -33,6 +32,18 @@ const RelatedNews = ({ item, showimage, content }) => {
       id={news_fo['@id']}
     />
   ) : null;
+};
+
+RelatedNews.propTypes = {
+  content: PropTypes.object.isRequired,
+  showimage: PropTypes.bool,
+  item: PropTypes.shape({
+    '@id': PropTypes.string,
+    '@type': PropTypes.string,
+    description: PropTypes.string,
+    review_state: PropTypes.string,
+    title: PropTypes.string,
+  }),
 };
 
 export default RelatedNews;

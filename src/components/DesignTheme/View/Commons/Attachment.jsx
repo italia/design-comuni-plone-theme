@@ -3,6 +3,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import React from 'react';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Icon } from 'design-react-kit/dist/design-react-kit';
+import PropTypes from 'prop-types';
 
 const messages = defineMessages({
   attachment: {
@@ -31,6 +32,10 @@ const Attachment = ({ title, download_url }) => {
       </div>
     </div>
   );
+};
+Attachment.propTypes = {
+  title: PropTypes.string,
+  download_url: PropTypes.string,
 };
 
 export default Attachment;

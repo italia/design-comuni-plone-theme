@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import Attachment from './Attachment';
+import PropTypes from 'prop-types';
 
 const messages = defineMessages({
   attachments: {
@@ -66,5 +67,10 @@ const Attachments = ({ content, folder_name, folder_title }) => {
       ) : null}
     </>
   );
+};
+Attachments.propTypes = {
+  content: PropTypes.object,
+  folder_name: PropTypes.string,
+  folder_title: PropTypes.string,
 };
 export default Attachments;
