@@ -58,7 +58,7 @@ const PageHeader = props => {
     <div className="row">
       <div
         className={`${
-          props.imageinheader ? 'col-lg-5' : 'col-lg-8'
+          props.imageinheader ? 'col-lg-6' : 'col-lg-8'
           } px-lg-4 py-lg-2`}
       >
         <h1>
@@ -129,11 +129,11 @@ const PageHeader = props => {
         )}
       </div>
       {props.imageinheader ? (
-        <div className="col-lg-3">
+        <div className="col-lg-2">
           <figure>
             <img
               src={flattenToAppURL(
-                props.content[props.imageinheader_field].scales.preview
+                props.content[props.imageinheader_field].scales.mini
                   .download,
               )}
               alt={props.content.title}
