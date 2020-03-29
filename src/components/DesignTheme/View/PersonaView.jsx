@@ -109,7 +109,7 @@ const messages = defineMessages({
   related_news: {
     id: 'related_news',
     defaultMessage: 'Notizie collegate',
-  }
+  },
 });
 
 /**
@@ -140,13 +140,13 @@ const PersonaView = ({ content }) => {
             {content.data_insediamento && !content.data_conclusione_incarico ? (
               <p>
                 <strong>
-                  {intl.formatMessage(messages.data_insediamento)}:
+                  {intl.formatMessage(messages.data_insediamento)} :
                 </strong>
                 {moment(content.data_insediamento).format('DD-MM-Y')}
               </p>
             ) : (
-                ''
-              )}
+              ''
+            )}
             {content.data_conclusione_incarico ? (
               <p>
                 <strong>
@@ -155,9 +155,9 @@ const PersonaView = ({ content }) => {
                 {moment(content.data_conclusione_incarico).format('DD-MM-Y')}
               </p>
             ) : (
-                ''
-              )}
-            {!content.data_conclusione_incarico && content.biografia.data && (
+              ''
+            )}
+            {!content.data_conclusione_incarico && content.biografia?.data && (
               <RichTextArticle
                 content={content.biografia.data}
                 tag_id={'text-body'}
@@ -165,145 +165,145 @@ const PersonaView = ({ content }) => {
               />
             )}
             {content.telefono ||
-              content.email ||
-              content.informazioni_di_contatto ? (
-                <>
-                  <h4>{intl.formatMessage(messages.contacts)}</h4>
-                  {content.telefono ? (
-                    <p>
-                      <strong>{intl.formatMessage(messages.phone)}: </strong>
-                      {content.telefono}
-                    </p>
-                  ) : (
-                      ''
-                    )}
-                  {content.email ? (
-                    <p>
-                      <strong>{intl.formatMessage(messages.email)}: </strong>
-                      <a href={'mailto:' + content.email}>{content.email}</a>
-                    </p>
-                  ) : (
-                      ''
-                    )}
-                  {content.informazioni_di_contatto ? (
-                    <div
-                      className="text-serif"
-                      dangerouslySetInnerHTML={{
-                        __html: content.informazioni_di_contatto.data,
-                      }}
+            content.email ||
+            content.informazioni_di_contatto ? (
+              <>
+                <h4>{intl.formatMessage(messages.contacts)}</h4>
+                {content.telefono ? (
+                  <p>
+                    <strong>{intl.formatMessage(messages.phone)}: </strong>
+                    {content.telefono}
+                  </p>
+                ) : (
+                  ''
+                )}
+                {content.email ? (
+                  <p>
+                    <strong>{intl.formatMessage(messages.email)}: </strong>
+                    <a href={'mailto:' + content.email}>{content.email}</a>
+                  </p>
+                ) : (
+                  ''
+                )}
+                {content.informazioni_di_contatto ? (
+                  <div
+                    className="text-serif"
+                    dangerouslySetInnerHTML={{
+                      __html: content.informazioni_di_contatto.data,
+                    }}
+                  />
+                ) : (
+                  ''
+                )}
+              </>
+            ) : (
+              ''
+            )}
+            {!content.data_conclusione_incarico &&
+            content.organizzazione_riferimento?.length > 0 ? (
+              <article
+                id="organizzazione_riferimento"
+                className="it-page-section anchor-offset mt-5"
+              >
+                <h4>
+                  {intl.formatMessage(messages.organizzazione_riferimento)}
+                </h4>
+                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                  {content.organizzazione_riferimento.map((item, i) => (
+                    <OfficeCard
+                      key={item['@id']}
+                      office={item}
+                      content={content}
                     />
-                  ) : (
-                      ''
-                    )}
-                </>
-              ) : (
-                ''
-              )}
+                  ))}
+                </div>
+              </article>
+            ) : null}
             {!content.data_conclusione_incarico &&
-              content.organizzazione_riferimento.length > 0 ? (
-                <article
-                  id="organizzazione_riferimento"
-                  className="it-page-section anchor-offset mt-5"
-                >
-                  <h4>
-                    {intl.formatMessage(messages.organizzazione_riferimento)}
-                  </h4>
-                  <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                    {content.organizzazione_riferimento.map((item, i) => (
-                      <OfficeCard
-                        key={item['@id']}
-                        office={item}
-                        content={content}
-                      />
-                    ))}
-                  </div>
-                </article>
-              ) : null}
+            content.responsabile_di?.length > 0 ? (
+              <article
+                id="organizzazione_riferimento"
+                className="it-page-section anchor-offset mt-5"
+              >
+                <h4>{intl.formatMessage(messages.responsabile_di)}</h4>
+                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                  {content.responsabile_di.map((item, i) => (
+                    <OfficeCard
+                      key={item['@id']}
+                      office={item}
+                      content={content}
+                    />
+                  ))}
+                </div>
+              </article>
+            ) : null}
             {!content.data_conclusione_incarico &&
-              content.responsabile_di.length > 0 ? (
-                <article
-                  id="organizzazione_riferimento"
-                  className="it-page-section anchor-offset mt-5"
-                >
-                  <h4>{intl.formatMessage(messages.responsabile_di)}</h4>
-                  <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                    {content.responsabile_di.map((item, i) => (
-                      <OfficeCard
-                        key={item['@id']}
-                        office={item}
-                        content={content}
-                      />
-                    ))}
-                  </div>
-                </article>
-              ) : null}
+            content.collegamenti_organizzazione_l1.length > 0 ? (
+              <article
+                id="collegamenti_organizzazione_l1"
+                className="it-page-section anchor-offset mt-5"
+              >
+                <h4>
+                  {intl.formatMessage(messages.collegamenti_organizzazione_l1)}
+                </h4>
+                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                  {content.collegamenti_organizzazione_l1.map((item, i) => (
+                    <OfficeCard
+                      key={item['@id']}
+                      office={item}
+                      content={content}
+                    />
+                  ))}
+                </div>
+              </article>
+            ) : null}
             {!content.data_conclusione_incarico &&
-              content.collegamenti_organizzazione_l1.length > 0 ? (
-                <article
-                  id="collegamenti_organizzazione_l1"
-                  className="it-page-section anchor-offset mt-5"
-                >
-                  <h4>
-                    {intl.formatMessage(messages.collegamenti_organizzazione_l1)}
-                  </h4>
-                  <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                    {content.collegamenti_organizzazione_l1.map((item, i) => (
-                      <OfficeCard
-                        key={item['@id']}
-                        office={item}
-                        content={content}
-                      />
-                    ))}
-                  </div>
-                </article>
-              ) : null}
-            {!content.data_conclusione_incarico &&
-              content.collegamenti_organizzazione_l2.length > 0 ? (
-                <article
-                  id="collegamenti_organizzazione_l2"
-                  className="it-page-section anchor-offset mt-5"
-                >
-                  <h4>
-                    {intl.formatMessage(messages.collegamenti_organizzazione_l2)}
-                  </h4>
-                  <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                    {content.collegamenti_organizzazione_l2.map((item, i) => (
-                      <OfficeCard
-                        key={item['@id']}
-                        office={item}
-                        content={content}
-                      />
-                    ))}
-                  </div>
-                </article>
-              ) : null}
-            {!content.data_conclusione_incarico && content.competenze.data ? (
+            content.collegamenti_organizzazione_l2.length > 0 ? (
+              <article
+                id="collegamenti_organizzazione_l2"
+                className="it-page-section anchor-offset mt-5"
+              >
+                <h4>
+                  {intl.formatMessage(messages.collegamenti_organizzazione_l2)}
+                </h4>
+                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                  {content.collegamenti_organizzazione_l2.map((item, i) => (
+                    <OfficeCard
+                      key={item['@id']}
+                      office={item}
+                      content={content}
+                    />
+                  ))}
+                </div>
+              </article>
+            ) : null}
+            {!content.data_conclusione_incarico && content.competenze?.data ? (
               <RichTextArticle
                 content={content.competenze.data}
                 tag_id={'text-competenze'}
                 title={intl.formatMessage(messages.competenze)}
               />
             ) : (
-                ''
-              )}
-            {!content.data_conclusione_incarico && content.deleghe.data ? (
+              ''
+            )}
+            {!content.data_conclusione_incarico && content.deleghe?.data ? (
               <RichTextArticle
                 content={content.deleghe.data}
                 tag_id={'text-deleghe'}
                 title={intl.formatMessage(messages.deleghe)}
               />
             ) : (
-                ''
-              )}
+              ''
+            )}
             {!content.data_conclusione_incarico &&
-              content?.items.some(e => e.id === 'foto-e-attivita-politica') ? (
-                <Gallery
-                  content={content}
-                  folder_name={'foto-e-attivita-politica'}
-                />
-              ) : (
-                ''
-              )}
+            content?.items?.some(e => e.id === 'foto-e-attivita-politica') ? (
+              <Gallery
+                content={content}
+                folder_name={'foto-e-attivita-politica'}
+              />
+            ) : (
+              ''
+            )}
             {content.curriculum_vitae ? (
               <article
                 id="curriculum"
@@ -318,8 +318,8 @@ const PersonaView = ({ content }) => {
                 </div>
               </article>
             ) : (
-                ''
-              )}
+              ''
+            )}
             {content.atto_nomina ? (
               <article
                 id="atto_nomina"
@@ -334,34 +334,34 @@ const PersonaView = ({ content }) => {
                 </div>
               </article>
             ) : (
-                ''
-              )}
-            {content?.items.some(e => e.id === 'compensi') && (
+              ''
+            )}
+            {content?.items?.some(e => e.id === 'compensi') && (
               <Attachments
                 content={content}
                 folder_name={'compensi'}
                 folder_title={intl.formatMessage(messages.compensi)}
               />
             )}
-            {content?.items.some(
+            {content?.items?.some(
               e => e.id === 'importi-di-viaggio-e-o-servizi',
             ) && (
-                <Attachments
-                  content={content}
-                  folder_name={'importi-di-viaggio-e-o-servizi'}
-                  folder_title={intl.formatMessage(
-                    messages.importi_di_viaggio_e_o_servizi,
-                  )}
-                />
-              )}
-            {content?.items.some(e => e.id === 'altre-cariche') && (
+              <Attachments
+                content={content}
+                folder_name={'importi-di-viaggio-e-o-servizi'}
+                folder_title={intl.formatMessage(
+                  messages.importi_di_viaggio_e_o_servizi,
+                )}
+              />
+            )}
+            {content?.items?.some(e => e.id === 'altre-cariche') && (
               <Attachments
                 content={content}
                 folder_name={'altre-cariche'}
                 folder_title={intl.formatMessage(messages.altre_cariche)}
               />
             )}
-            {content?.items.some(e => e.id === 'situazione-patrimoniale') && (
+            {content?.items?.some(e => e.id === 'situazione-patrimoniale') && (
               <Attachments
                 content={content}
                 folder_name={'situazione-patrimoniale'}
@@ -370,7 +370,9 @@ const PersonaView = ({ content }) => {
                 )}
               />
             )}
-            {content?.items.some(e => e.id === 'dichiarazione-dei-redditi') && (
+            {content?.items?.some(
+              e => e.id === 'dichiarazione-dei-redditi',
+            ) && (
               <Attachments
                 content={content}
                 folder_name={'dichiarazione-dei-redditi'}
@@ -379,32 +381,32 @@ const PersonaView = ({ content }) => {
                 )}
               />
             )}
-            {content?.items.some(e => e.id === 'spese-elettorali') && (
+            {content?.items?.some(e => e.id === 'spese-elettorali') && (
               <Attachments
                 content={content}
                 folder_name={'spese-elettorali'}
                 folder_title={intl.formatMessage(messages.spese_elettorali)}
               />
             )}
-            {content?.items.some(
+            {content?.items?.some(
               e => e.id === 'valutazione-situazione-patrimoniale',
             ) && (
-                <Attachments
-                  content={content}
-                  folder_name={'valutazione-situazione-patrimoniale'}
-                  folder_title={intl.formatMessage(
-                    messages.valutazione_situazione_patrimoniale,
-                  )}
-                />
-              )}
-            {content.ulteriori_informazioni.data && (
+              <Attachments
+                content={content}
+                folder_name={'valutazione-situazione-patrimoniale'}
+                folder_title={intl.formatMessage(
+                  messages.valutazione_situazione_patrimoniale,
+                )}
+              />
+            )}
+            {content.ulteriori_informazioni?.data && (
               <RichTextArticle
                 content={content.ulteriori_informazioni.data}
                 tag_id={'text-deleghe'}
                 title={intl.formatMessage(messages.ulteriori_informazioni)}
               />
             )}
-            {content.related_news.length > 0 ? (
+            {content.related_news?.length > 0 ? (
               <article
                 id="related-news"
                 className="it-page-section anchor-offset mt-5"
@@ -469,7 +471,7 @@ PersonaView.propTypes = {
       data: PropTypes.string,
     }),
     organizzazione_riferimento: PropTypes.array.isRequired,
-    responsabile_di: PropTypes.array.isRequired,
+    responsabile_di: PropTypes.array,
     ruolo: PropTypes.string,
     telefono: PropTypes.string,
     tipologia_persona: PropTypes.shape({

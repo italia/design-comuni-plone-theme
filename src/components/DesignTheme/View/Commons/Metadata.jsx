@@ -50,10 +50,10 @@ const Metadata = params => {
           </h6>
         </>
       )}
-      {params.content.subjects.length !== 0 && (
+      {params.content.subjects?.length !== 0 && (
         <>
           <p className="text-serif">{intl.formatMessage(messages.subjects)}</p>
-          {params.content.subjects.map((item, i) => (
+          {params.content.subjects?.map((item, i) => (
             <Chip
               color=""
               disabled={false}

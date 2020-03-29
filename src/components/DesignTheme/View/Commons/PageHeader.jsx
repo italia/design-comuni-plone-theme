@@ -59,7 +59,7 @@ const PageHeader = props => {
       <div
         className={`${
           props.imageinheader ? 'col-lg-6' : 'col-lg-8'
-          } px-lg-4 py-lg-2`}
+        } px-lg-4 py-lg-2`}
       >
         <h1>
           {props.content.title}
@@ -69,25 +69,25 @@ const PageHeader = props => {
           <p className="documentDescription">{props.content.description}</p>
         )}
         {props.content['@type'] === 'Persona' &&
-          props.content?.tipologia_persona &&
-          !props.content.data_conclusione_incarico ? (
-            <p className="mb-0">
-              <strong>{intl.formatMessage(messages.tipologia_persona)}:</strong>{' '}
-              {props.content.tipologia_persona.title}
-            </p>
-          ) : (
-            ''
-          )}
+        props.content?.tipologia_persona &&
+        !props.content.data_conclusione_incarico ? (
+          <p className="mb-0">
+            <strong>{intl.formatMessage(messages.tipologia_persona)}:</strong>{' '}
+            {props.content.tipologia_persona.title}
+          </p>
+        ) : (
+          ''
+        )}
         {props.content['@type'] === 'Persona' &&
-          props.content?.ruolo &&
-          !props.content.data_conclusione_incarico ? (
-            <p className="mb-0">
-              <strong>{intl.formatMessage(messages.ruolo)}:</strong>{' '}
-              {props.content.ruolo}
-            </p>
-          ) : (
-            ''
-          )}
+        props.content?.ruolo &&
+        !props.content.data_conclusione_incarico ? (
+          <p className="mb-0">
+            <strong>{intl.formatMessage(messages.ruolo)}:</strong>{' '}
+            {props.content.ruolo}
+          </p>
+        ) : (
+          ''
+        )}
         {(props.showreadingtime || props.showdates) && (
           <div className="row mt-5 mb-4">
             {(props.showdates &&
@@ -128,13 +128,12 @@ const PageHeader = props => {
           </div>
         )}
       </div>
-      {props.imageinheader ? (
+      {props.imageinheader && props.content[props.imageinheader_field] ? (
         <div className="col-lg-2">
           <figure>
             <img
               src={flattenToAppURL(
-                props.content[props.imageinheader_field].scales.mini
-                  .download,
+                props.content[props.imageinheader_field].scales.mini.download,
               )}
               alt={props.content.title}
               className="img-fluid"
@@ -142,8 +141,8 @@ const PageHeader = props => {
           </figure>
         </div>
       ) : (
-          ''
-        )}
+        ''
+      )}
       <div className="col-lg-3 offset-lg-1">
         <Sharing url={props.content['@id']} title={props.content.title} />
         <Actions url={props.content['@id']} title={props.content.title} />
