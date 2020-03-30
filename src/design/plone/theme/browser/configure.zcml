@@ -3,6 +3,7 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     xmlns:browser="http://namespaces.zope.org/browser"
     xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="design.plone.theme">
 
   <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
@@ -17,6 +18,15 @@
       name="design.plone.theme"
       type="plone"
       directory="static"
+      />
+  
+  <browser:page
+      zcml:condition="have plone-52"
+      for="*"
+      name="main_template"
+      class=".main_template.MainTemplate"
+      permission="zope.Public"
+      layer="design.plone.theme.interfaces.IDesignPloneThemeLayer"
       />
 
   <browser:page

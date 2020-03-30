@@ -5,7 +5,7 @@ Changelog
 4.0.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- updated redturtle.tiles.management dependency version [daniele] 
 
 
 4.0.1 (2020-02-17)

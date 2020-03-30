@@ -132,7 +132,7 @@ def remove_gplus(context):
     record = api.portal.get_registry_record(
         "available_socials", interface=IDesignPloneThemeSettings
     )
-    new_list = filter(lambda x: x != "google", record)
+    new_list = [x for x in record if x != "google"]
     api.portal.set_registry_record(
         "available_socials", new_list, interface=IDesignPloneThemeSettings
     )
