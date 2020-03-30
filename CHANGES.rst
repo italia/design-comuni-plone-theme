@@ -5,7 +5,8 @@ Changelog
 4.0.2 (unreleased)
 ------------------
 
-- updated redturtle.tiles.management dependency version [daniele] 
+- Added python3 compatibility [cekk]
+- updated redturtle.tiles.management dependency version [daniele]
 
 
 4.0.1 (2020-02-17)
