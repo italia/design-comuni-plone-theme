@@ -5,13 +5,15 @@
   "version": "4.0.0-alpha",
   "scripts": {
     "start": "razzle start",
-    "postinstall": "yarn omelette",
+    "develop:npx": "npx -p mrs-developer missdev --config=jsconfig.json --output=addons",
+    "develop": "missdev --config=jsconfig.json --output=addons",
+    "preinstall": "if [ -f $(pwd)/node_modules/.bin/missdev ]; then yarn develop; else yarn develop:npx; fi",
+    "postinstall": "rm -rf ./node_modules/volto-* && yarn omelette",
     "omelette": "ln -sf node_modules/@plone/volto/ omelette",
     "build": "razzle build",
     "test": "razzle test --env=jsdom --passWithNoTests",
     "start:prod": "NODE_ENV=production node build/server.js",
-    "i18n": "NODE_ENV=production node node_modules/@plone/volto/src/i18n.js",
-    "develop": "missdev --config=jsconfig.json --output=addons"
+    "i18n": "NODE_ENV=production node node_modules/@plone/volto/src/i18n.js"
   },
   "jest": {
     "transform": {
@@ -31,6 +33,11 @@
       "volto-rss-block/(.*)$": "<rootDir>/src/addons/volto-rss-block/src/$1",
       "~/(.*)$": "<rootDir>/src/$1"
     },
+    "testMatch": [
+      "**/__tests__/**/*.[jt]s?(x)",
+      "**/?(*.)+(spec|test).[jt]s?(x)",
+      "!**/src/addons/volto/**/*"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 10,
@@ -92,7 +99,8 @@
     "slick-carousel": "1.8.1",
     "typeface-lora": "0.0.72",
     "typeface-roboto-mono": "0.0.75",
-    "typeface-titillium-web": "0.0.72"
+    "typeface-titillium-web": "0.0.72",
+    "volto-rss-block": "redturtle/volto-rss-block"
   },
   "devDependencies": {
     "eslint-plugin-prettier": "3.0.1",
