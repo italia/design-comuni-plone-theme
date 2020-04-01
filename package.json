@@ -31,6 +31,7 @@
       "@plone/volto/(.*)$": "<rootDir>/node_modules/@plone/volto/src/$1",
       "@design/(.*)$": "<rootDir>/src/$1",
       "volto-rss-block/(.*)$": "<rootDir>/src/addons/volto-rss-block/src/$1",
+      "volto-cookie-banner/(.*)$": "<rootDir>/src/addons/volto-cookie-banner/src/$1",
       "~/(.*)$": "<rootDir>/src/$1"
     },
     "testMatch": [
@@ -100,6 +101,7 @@
     "typeface-lora": "0.0.72",
     "typeface-roboto-mono": "0.0.75",
     "typeface-titillium-web": "0.0.72",
+    "volto-cookie-banner": "collective/volto-cookie-banner",
     "volto-rss-block": "redturtle/volto-rss-block"
   },
   "devDependencies": {

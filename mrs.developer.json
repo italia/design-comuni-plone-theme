@@ -1,5 +1,8 @@
 {
   "volto-rss-block": {
     "url": "git@github.com:redturtle/volto-rss-block.git"
+  },
+  "volto-cookie-banner": {
+    "url": "git@github.com:collective/volto-cookie-banner.git"
   }
 }
