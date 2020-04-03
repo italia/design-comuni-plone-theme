@@ -15130,7 +15130,7 @@ vm-browserify@^1.0.1:
 
 volto-cookie-banner@collective/volto-cookie-banner:
   version "0.1.0"
-  resolved "https://codeload.github.com/collective/volto-cookie-banner/tar.gz/3e9b4d55d70135c7a6d686aefd16b90157257ebd"
+  resolved "https://codeload.github.com/collective/volto-cookie-banner/tar.gz/66723478098f2dedcddc90154c310b003c124768"
   dependencies:
     react-cookie-consent "^3.0.0"
 
