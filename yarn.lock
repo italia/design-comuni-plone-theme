@@ -4886,6 +4886,13 @@ draft-js-buttons@2.0.2, draft-js-buttons@^2.0.1:
   dependencies:
     clsx "^1.0.4"
 
+draft-js-export-html@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/draft-js-export-html/-/draft-js-export-html-1.4.1.tgz#7cdad970c6f7f2cdd19ce4c1f5073fdf0f313b4d"
+  integrity sha512-G4VGBSalPowktIE4wp3rFbhjs+Ln9IZ2FhXeHjsZDSw0a2+h+BjKu5Enq+mcsyVb51RW740GBK8Xbf7Iic51tw==
+  dependencies:
+    draft-js-utils "^1.4.0"
+
 draft-js-import-element@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/draft-js-import-element/-/draft-js-import-element-1.4.0.tgz#8760acbfeb60ed824a1c8319ec049f702681df66"
@@ -15123,13 +15130,19 @@ vm-browserify@^1.0.1:
 
 volto-cookie-banner@collective/volto-cookie-banner:
   version "0.1.0"
-  resolved "https://codeload.github.com/collective/volto-cookie-banner/tar.gz/3e8530e9ccd386a57a20265c5a340b76134c00c6"
+  resolved "https://codeload.github.com/collective/volto-cookie-banner/tar.gz/3e9b4d55d70135c7a6d686aefd16b90157257ebd"
   dependencies:
     react-cookie-consent "^3.0.0"
 
+volto-multilingual-widget@collective/volto-multilingual-widget:
+  version "0.1.0"
+  resolved "https://codeload.github.com/collective/volto-multilingual-widget/tar.gz/66b8aecd54a47011a12acea9e9bd6810fa26fb82"
+  dependencies:
+    draft-js-export-html "^1.4.1"
+
 volto-rss-block@redturtle/volto-rss-block:
   version "0.1.0"
-  resolved "https://codeload.github.com/redturtle/volto-rss-block/tar.gz/ad08e193e9d26c9ccfa19138aee0e22e10544f4c"
+  resolved "https://codeload.github.com/redturtle/volto-rss-block/tar.gz/4dacab97370ae69ea4f965fa66a8cc01141b7b11"
   dependencies:
     rss-parser "3.7.5"
 

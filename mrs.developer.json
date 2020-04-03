@@ -4,5 +4,8 @@
   },
   "volto-cookie-banner": {
     "url": "git@github.com:collective/volto-cookie-banner.git"
+  },
+  "volto-multilingual-widget": {
+    "url": "git@github.com:collective/volto-multilingual-widget.git"
   }
 }

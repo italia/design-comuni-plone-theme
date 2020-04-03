@@ -33,6 +33,8 @@ import { rssBlock as customRssBlock } from 'volto-rss-block';
 import CardWithImageRssTemplate from '@design/components/DesignTheme/Blocks/RssBlock/CardWithImageRssTemplate';
 import CardWithoutImageRssTemplate from '@design/components/DesignTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
 
+import MultilingualWidget from 'volto-multilingual-widget';
+
 const rssBlock = {
   ...customRssBlock,
   templates: {
@@ -45,8 +47,8 @@ const rssBlock = {
       label: 'Card template without image',
       template: CardWithoutImageRssTemplate,
     },
-  }
-}
+  },
+};
 
 const extendedBlockRenderMap = defaultSettings.extendedBlockRenderMap.update(
   'align-center',
@@ -146,6 +148,7 @@ export const widgets = {
   id: {
     ...defaultWidgets.id,
     description: CharCounterDescriptionWidget,
+    cookie_consent_configuration: MultilingualWidget(),
   },
 };
 

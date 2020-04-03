@@ -32,6 +32,7 @@
       "@design/(.*)$": "<rootDir>/src/$1",
       "volto-rss-block/(.*)$": "<rootDir>/src/addons/volto-rss-block/src/$1",
       "volto-cookie-banner/(.*)$": "<rootDir>/src/addons/volto-cookie-banner/src/$1",
+      "volto-multilingual-widget/(.*)$": "<rootDir>/src/addons/volto-multilingual-widget/src/$1",
       "~/(.*)$": "<rootDir>/src/$1"
     },
     "testMatch": [
@@ -102,6 +103,7 @@
     "typeface-roboto-mono": "0.0.75",
     "typeface-titillium-web": "0.0.72",
     "volto-cookie-banner": "collective/volto-cookie-banner",
+    "volto-multilingual-widget": "collective/volto-multilingual-widget",
     "volto-rss-block": "redturtle/volto-rss-block"
   },
   "devDependencies": {
