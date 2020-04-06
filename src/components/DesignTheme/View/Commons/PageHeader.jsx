@@ -6,6 +6,7 @@ import Actions from './Actions';
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import cx from 'classnames';
+import PropTypes from 'prop-types';
 
 /**
  * PageHeader view component class.
@@ -156,7 +157,11 @@ const PageHeader = props => {
                 <small>{intl.formatMessage(messages.topics)}</small>
               </h6>
               {props.content.tassonomia_argomenti.map((item, i) => (
-                <a href="https://www.google.it" key={i} title={item.title}>
+                <a
+                  href="https://www.google.it"
+                  key={item.token}
+                  title={item.title}
+                >
                   <Chip
                     color="primary"
                     disabled={false}
@@ -175,3 +180,15 @@ const PageHeader = props => {
   );
 };
 export default PageHeader;
+
+PageHeader.propTypes = {
+  params: PropTypes.shape({
+    content: PropTypes.object,
+    readingtime: PropTypes.string,
+    showreadingtime: PropTypes.bool,
+    imageinheader: PropTypes.bool,
+    imageinheader_field: PropTypes.string,
+    showdates: PropTypes.bool,
+    showtassonomiaargomenti: PropTypes.bool,
+  }),
+};

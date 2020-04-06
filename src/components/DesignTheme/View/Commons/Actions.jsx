@@ -9,6 +9,7 @@ import {
   Icon,
   Button,
 } from 'design-react-kit/dist/design-react-kit';
+import PropTypes from 'prop-types';
 
 /**
  * Actions view component class.
@@ -92,7 +93,7 @@ const Actions = props => {
               </>
             );
             return item.id === 'print' ? (
-              <li>
+              <li key={item.id}>
                 <Button
                   color="link"
                   icon={false}
@@ -117,3 +118,10 @@ const Actions = props => {
   );
 };
 export default Actions;
+
+Actions.propTypes = {
+  params: PropTypes.shape({
+    title: PropTypes.string,
+    url: PropTypes.string,
+  }),
+};

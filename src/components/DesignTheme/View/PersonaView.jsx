@@ -210,11 +210,7 @@ const PersonaView = ({ content }) => {
                 </h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.organizzazione_riferimento.map((item, i) => (
-                    <OfficeCard
-                      key={item['@id']}
-                      office={item}
-                      content={content}
-                    />
+                    <OfficeCard key={item['@id']} office={item} />
                   ))}
                 </div>
               </article>
@@ -228,11 +224,7 @@ const PersonaView = ({ content }) => {
                 <h4>{intl.formatMessage(messages.responsabile_di)}</h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.responsabile_di.map((item, i) => (
-                    <OfficeCard
-                      key={item['@id']}
-                      office={item}
-                      content={content}
-                    />
+                    <OfficeCard key={item['@id']} office={item} />
                   ))}
                 </div>
               </article>
@@ -248,11 +240,7 @@ const PersonaView = ({ content }) => {
                 </h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.collegamenti_organizzazione_l1.map((item, i) => (
-                    <OfficeCard
-                      key={item['@id']}
-                      office={item}
-                      content={content}
-                    />
+                    <OfficeCard key={item['@id']} office={item} />
                   ))}
                 </div>
               </article>
@@ -268,11 +256,7 @@ const PersonaView = ({ content }) => {
                 </h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.collegamenti_organizzazione_l2.map((item, i) => (
-                    <OfficeCard
-                      key={item['@id']}
-                      office={item}
-                      content={content}
-                    />
+                    <OfficeCard key={item['@id']} office={item} />
                   ))}
                 </div>
               </article>

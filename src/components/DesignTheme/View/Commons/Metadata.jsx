@@ -2,6 +2,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import React from 'react';
 import moment from 'moment';
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
+import PropTypes from 'prop-types';
 
 const messages = defineMessages({
   other_info: {
@@ -74,3 +75,9 @@ const Metadata = params => {
   );
 };
 export default Metadata;
+
+Metadata.propTypes = {
+  params: PropTypes.shape({
+    content: PropTypes.object,
+  }),
+};

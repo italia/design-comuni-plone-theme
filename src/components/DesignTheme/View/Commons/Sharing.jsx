@@ -1,5 +1,6 @@
 import { defineMessages, useIntl } from 'react-intl';
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 import {
   UncontrolledDropdown,
@@ -94,3 +95,10 @@ const Sharing = props => {
   );
 };
 export default Sharing;
+
+Sharing.propTypes = {
+  params: PropTypes.shape({
+    title: PropTypes.string,
+    url: PropTypes.string,
+  }),
+};

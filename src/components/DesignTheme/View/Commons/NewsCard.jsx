@@ -2,7 +2,9 @@ import React from 'react';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import PropTypes from 'prop-types';
 /**
+ *
  * NewsCard view component class.
  * @function NewsCard
  * @params {object} news: object.
@@ -29,3 +31,11 @@ const NewsCard = ({ title, typology, effective, description, id }) => {
 };
 
 export default NewsCard;
+
+NewsCard.propTypes = {
+  title: PropTypes.string,
+  typology: PropTypes.string,
+  effective: PropTypes.string,
+  description: PropTypes.string,
+  id: PropTypes.string,
+};

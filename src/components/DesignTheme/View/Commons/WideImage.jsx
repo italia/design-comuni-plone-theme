@@ -1,5 +1,6 @@
 import React from 'react';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import PropTypes from 'prop-types';
 
 /**
  * WideImage view component class.
@@ -29,3 +30,13 @@ const WideImage = params => {
   );
 };
 export default WideImage;
+
+WideImage.propTypes = {
+  params: PropTypes.shape({
+    title: PropTypes.string,
+    image: PropTypes.shape({
+      download: PropTypes.string,
+    }),
+    caption: PropTypes.string,
+  }),
+};

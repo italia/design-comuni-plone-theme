@@ -6,6 +6,7 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import PropTypes from 'prop-types';
 
 const messages = defineMessages({
   gallery: {
@@ -98,7 +99,7 @@ const Gallery = ({ content, folder_name }) => {
             <div className="it-carousel-all it-card-bg">
               <Slider {...settings}>
                 {images.map((item, i) => (
-                  <div className="it-single-slide-wrapper" key={i}>
+                  <div className="it-single-slide-wrapper" key={item['@id']}>
                     <figure>
                       <img
                         src={flattenToAppURL(
@@ -122,7 +123,7 @@ const Gallery = ({ content, folder_name }) => {
         <article id="video" className="it-page-section anchor-offset mt-5">
           {videos.map((item, i) => (
             <div
-              key={i}
+              key={item['@id']}
               className="embed-responsive embed-responsive-16by9 my-4"
             >
               <iframe
@@ -139,3 +140,8 @@ const Gallery = ({ content, folder_name }) => {
   );
 };
 export default Gallery;
+
+Gallery.propTypes = {
+  content: PropTypes.object,
+  folder_name: PropTypes.string,
+};

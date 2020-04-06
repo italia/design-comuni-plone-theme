@@ -86,7 +86,6 @@ const NewsItemView = ({ content }) => {
             )}
             {(content.a_cura_di || content.a_cura_di_persone) && (
               <CuredBy
-                content={content}
                 office={content.a_cura_di}
                 people={content.a_cura_di_persone}
               />
@@ -131,7 +130,6 @@ const NewsItemView = ({ content }) => {
                       index={item['@id']}
                       item={item}
                       showimage={false}
-                      content={content}
                     />
                   ))}
                 </div>
@@ -173,6 +171,18 @@ NewsItemView.propTypes = {
     }),
     modified: PropTypes.string,
     rights: PropTypes.string,
+    luoghi_notizia: PropTypes.array,
+    related_news: PropTypes.array,
+    tassonomia_argomenti: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        token: PropTypes.string,
+      }),
+    ),
+    tipologia_notizia: PropTypes.shape({
+      title: PropTypes.string,
+      token: PropTypes.string,
+    }),
   }).isRequired,
 };
 
