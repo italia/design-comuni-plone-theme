@@ -420,7 +420,7 @@ const PersonaView = ({ content }) => {
 
 PersonaView.propTypes = {
   content: PropTypes.shape({
-    title: PropTypes.string,
+    title: PropTypes.string.isRequired,
     atto_nomina: PropTypes.shape({
       download: PropTypes.string,
       filename: PropTypes.string,
@@ -456,12 +456,12 @@ PersonaView.propTypes = {
     }),
     organizzazione_riferimento: PropTypes.array.isRequired,
     responsabile_di: PropTypes.array,
-    ruolo: PropTypes.string,
+    ruolo: PropTypes.string.isRequired,
     telefono: PropTypes.string,
     tipologia_persona: PropTypes.shape({
       title: PropTypes.string.isRequired,
       token: PropTypes.string.isRequired,
-    }),
+    }).isRequired,
     ulteriori_informazioni: PropTypes.shape({
       data: PropTypes.string,
     }),

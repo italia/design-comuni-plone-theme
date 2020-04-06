@@ -303,7 +303,7 @@ UOView.propTypes = {
     assessore_riferimento: PropTypes.array,
     box_aiuto: PropTypes.shape({
       data: PropTypes.string,
-    }),
+    }).isRequired,
     competenze: PropTypes.shape({
       data: PropTypes.string,
     }),
@@ -330,9 +330,9 @@ UOView.propTypes = {
     tipologia_organizzazione: PropTypes.shape({
       title: PropTypes.string,
       token: PropTypes.string,
-    }),
+    }).isRequired,
     title: PropTypes.shape({
       data: PropTypes.string,
-    }),
+    }).isRequired,
   }),
 };

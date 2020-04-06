@@ -151,7 +151,7 @@ const NewsItemView = ({ content }) => {
  */
 NewsItemView.propTypes = {
   content: PropTypes.shape({
-    title: PropTypes.string,
+    title: PropTypes.string.isRequired,
     subtitle: PropTypes.string,
     description: PropTypes.string,
     effective: PropTypes.string,
@@ -164,7 +164,7 @@ NewsItemView.propTypes = {
     items: PropTypes.array,
     a_cura_di: PropTypes.shape({
       title: PropTypes.string,
-    }),
+    }).isRequired,
     a_cura_di_persone: PropTypes.array,
     dataset: PropTypes.shape({
       data: PropTypes.string,
@@ -182,7 +182,7 @@ NewsItemView.propTypes = {
     tipologia_notizia: PropTypes.shape({
       title: PropTypes.string,
       token: PropTypes.string,
-    }),
+    }).isRequired,
   }).isRequired,
 };
 
