@@ -3,6 +3,11 @@ import { defineMessages, useIntl } from 'react-intl';
 import React from 'react';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Icon } from 'design-react-kit/dist/design-react-kit';
+import {
+  Card,
+  CardBody,
+  CardTitle,
+} from 'design-react-kit/dist/design-react-kit';
 import PropTypes from 'prop-types';
 
 const messages = defineMessages({
@@ -15,22 +20,23 @@ const messages = defineMessages({
 const Attachment = ({ title, download_url }) => {
   const intl = useIntl();
   return (
-    <div className="card card-teaser shadow p-4 mt-3 rounded border">
-      <Icon
-        className={undefined}
-        color=""
-        icon="it-clip"
-        padding={false}
-        size=""
-        alt={intl.formatMessage(messages.attachment)}
-        title={intl.formatMessage(messages.attachment)}
-      />
-      <div className="card-body">
-        <h5 className="card-title">
+    <Card
+      className="card card-teaser shadow p-4 mt-3 rounded border"
+      noWrapper={true}
+      tag="div"
+    >
+      <CardBody tag="div">
+        <Icon
+          icon="it-clip"
+          padding={false}
+          alt={intl.formatMessage(messages.attachment)}
+          title={intl.formatMessage(messages.attachment)}
+        />
+        <CardTitle tag="h5">
           <a href={flattenToAppURL(download_url)}>{title}</a>
-        </h5>
-      </div>
-    </div>
+        </CardTitle>
+      </CardBody>
+    </Card>
   );
 };
 Attachment.propTypes = {

@@ -24,7 +24,7 @@ const messages = defineMessages({
  */
 const Location = ({ location }) => {
   const intl = useIntl();
-  const key = 'luogo' + location['@id'];
+  const key = `luogo${location['@id']}`;
   const url = flattenToAppURL(location['@id']);
   const locationContent = useSelector(state => state.content.subrequests);
   const dispatch = useDispatch();

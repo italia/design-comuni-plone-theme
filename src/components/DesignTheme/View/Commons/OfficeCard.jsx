@@ -11,7 +11,7 @@ import { flattenToAppURL } from '@plone/volto/helpers';
  * @returns {string} Markup of the component.
  */
 const OfficeCard = ({ content, office }) => {
-  const key = office['@id'] + '_office';
+  const key = `${office['@id']}_office`;
   const url = flattenToAppURL(office['@id']);
   const officeContent = useSelector(state => state.content.subrequests);
   const dispatch = useDispatch();

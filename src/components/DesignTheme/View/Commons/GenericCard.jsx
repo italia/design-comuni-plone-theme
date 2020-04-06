@@ -11,7 +11,7 @@ import { flattenToAppURL } from '@plone/volto/helpers';
  * @returns {string} Markup of the component.
  */
 const GenericCard = ({ item, showimage, image_field, content }) => {
-  const key = 'generic_card_' + item['@id'];
+  const key = `generic_card_${item['@id']}`;
   const url = flattenToAppURL(item['@id']);
   const locationContent = useSelector(state => state.content.subrequests);
   const dispatch = useDispatch();

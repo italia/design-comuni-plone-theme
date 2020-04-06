@@ -22,7 +22,7 @@ const messages = defineMessages({
  */
 const Attachments = ({ content, folder_name, folder_title }) => {
   const intl = useIntl();
-  const url = flattenToAppURL(content['@id']) + '/' + folder_name;
+  const url = `${flattenToAppURL(content['@id'])}/${folder_name}`;
   const searchResults = useSelector(state => state.search.subrequests);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -52,14 +52,14 @@ const Attachments = ({ content, folder_name, folder_title }) => {
           {folder_title ? (
             <h4>{folder_title}</h4>
           ) : (
-              <h4>{intl.formatMessage(messages.attachments)}</h4>
-            )}
+            <h4>{intl.formatMessage(messages.attachments)}</h4>
+          )}
           <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
             {attachments.map((item, i) => (
               <Attachment
                 key={item['@id']}
                 title={item.title}
-                download_url={item['@id'] + '/@@download/file'}
+                download_url={`${item['@id']}/@@download/file`}
               />
             ))}
           </div>

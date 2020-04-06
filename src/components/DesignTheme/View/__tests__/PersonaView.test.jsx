@@ -435,9 +435,6 @@ test('Specific fields not in page if data_conclusione_incarico compiled', async 
     </Provider>,
   );
 
-  // Mi pare di capire che getByText se il testo non c'è, dia errore.
-  // queryByText l'ho testato verificando che con not.toBeNull da errore
-
   // data_insediamento
   expect(queryByText('Data di insediamento:')).toBeNull();
 

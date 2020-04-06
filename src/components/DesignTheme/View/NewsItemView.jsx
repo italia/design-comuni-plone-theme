@@ -40,7 +40,7 @@ const messages = defineMessages({
  */
 const NewsItemView = ({ content }) => {
   let readingtime = readingTime(
-    content.text.data + ' ' + content.title + ' ' + content.description,
+    `${content.text.data} ${content.title} ${content.description}`,
   );
   const intl = useIntl();
   return (

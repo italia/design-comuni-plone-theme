@@ -5,6 +5,7 @@ import Sharing from './Sharing';
 import Actions from './Actions';
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import cx from 'classnames';
 
 /**
  * PageHeader view component class.
@@ -57,9 +58,10 @@ const PageHeader = props => {
   return (
     <div className="row">
       <div
-        className={`${
-          props.imageinheader ? 'col-lg-6' : 'col-lg-8'
-        } px-lg-4 py-lg-2`}
+        className={cx('px-lg-4 py-lg-2', {
+          'col-lg-6': props.imageinheader,
+          'col-lg-8': !props.imageinheader,
+        })}
       >
         <h1>
           {props.content.title}
@@ -72,8 +74,8 @@ const PageHeader = props => {
         props.content?.tipologia_persona &&
         !props.content.data_conclusione_incarico ? (
           <p className="mb-0">
-            <strong>{intl.formatMessage(messages.tipologia_persona)}:</strong>{' '}
-            {props.content.tipologia_persona.title}
+            <strong>{intl.formatMessage(messages.tipologia_persona)}:</strong>
+            {` ${props.content.tipologia_persona.title}`}
           </p>
         ) : (
           ''
@@ -82,8 +84,8 @@ const PageHeader = props => {
         props.content?.ruolo &&
         !props.content.data_conclusione_incarico ? (
           <p className="mb-0">
-            <strong>{intl.formatMessage(messages.ruolo)}:</strong>{' '}
-            {props.content.ruolo}
+            <strong>{intl.formatMessage(messages.ruolo)}:</strong>
+            {` ${props.content.ruolo}`}
           </p>
         ) : (
           ''

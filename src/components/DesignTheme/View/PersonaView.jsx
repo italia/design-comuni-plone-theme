@@ -180,7 +180,7 @@ const PersonaView = ({ content }) => {
                 {content.email ? (
                   <p>
                     <strong>{intl.formatMessage(messages.email)}: </strong>
-                    <a href={'mailto:' + content.email}>{content.email}</a>
+                    <a href={`mailto:${content.email}`}>{content.email}</a>
                   </p>
                 ) : (
                   ''

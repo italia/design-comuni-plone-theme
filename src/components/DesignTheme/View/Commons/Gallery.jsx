@@ -57,7 +57,7 @@ const Gallery = ({ content, folder_name }) => {
   };
 
   const intl = useIntl();
-  const url = flattenToAppURL(content['@id']) + '/' + folder_name;
+  const url = `${flattenToAppURL(content['@id'])}/${folder_name}`;
   const searchResults = useSelector(state => state.search.subrequests);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -91,7 +91,6 @@ const Gallery = ({ content, folder_name }) => {
             <div className="it-header-block">
               <div className="it-header-block-title">
                 <h4 className="no_toc">
-                  {' '}
                   {intl.formatMessage(messages.gallery)}
                 </h4>
               </div>

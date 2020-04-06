@@ -103,12 +103,12 @@ const UOView = ({ content }) => {
               /(<([^>]+)>)/g,
               '',
             ) && (
-                <RichTextArticle
-                  content={content.ulteriori_informazioni.data}
-                  tag_id="ulteriori_informazioni"
-                  title={intl.formatMessage(messages.ulteriori_informazioni)}
-                />
-              )}
+              <RichTextArticle
+                content={content.ulteriori_informazioni.data}
+                tag_id="ulteriori_informazioni"
+                title={intl.formatMessage(messages.ulteriori_informazioni)}
+              />
+            )}
             {content.sedi?.length > 0 && (
               <article id="sedi" className="it-page-section anchor-offset mt-5">
                 <h4>{intl.formatMessage(messages.sedi)}</h4>
@@ -126,8 +126,7 @@ const UOView = ({ content }) => {
                   {intl.formatMessage(messages.tipologia_organizzazione)}
                 </h4>
                 <p className="text-serif">
-                  {' '}
-                  {content.tipologia_organizzazione.title}
+                  {` ${content.tipologia_organizzazione.title}`}
                 </p>
               </article>
             )}

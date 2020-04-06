@@ -10,7 +10,7 @@ import { flattenToAppURL } from '@plone/volto/helpers';
  * @returns {string} Markup of the component.
  */
 const Venue = ({ content, venue }) => {
-  const key = content['UID'] + 'venue';
+  const key = `${content['UID']}_venue`;
   const url = flattenToAppURL(venue['@id']);
   const venueContent = useSelector(state => state.content.subrequests);
   const dispatch = useDispatch();
@@ -30,7 +30,7 @@ const Venue = ({ content, venue }) => {
         <div
           className="text-serif"
           dangerouslySetInnerHTML={{ __html: venue_fo.descrizione_breve.data }}
-        />{' '}
+        />
         {venue_fo.geolocation ? (
           <div className="mapbox">
             <h4>Mappa</h4>
