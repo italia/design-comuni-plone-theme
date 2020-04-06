@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { injectIntl } from 'react-intl';
+import { useIntl, defineMessages } from 'react-intl';
 import moment from 'moment';
 
 import {
@@ -11,42 +11,67 @@ import {
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
 
-const CardWithImageRssTemplate = ({ item }) => {
+const messages = defineMessages({
+  readMore: { id: 'rss_read_more', defaultMessage: 'Read more' },
+  noResults: {
+    id: 'rss_no_results',
+    defaultMessage: 'No results from RSS feed.',
+  },
+});
+
+const CardWithImageRssTemplate = ({ items = [] }) => {
+  const intl = useIntl();
+
   return (
-    <div className="col-12 col-lg-3">
-      <Card className="card-bg card-img no-after" noWrapper={false} tag="div">
-        <div className="img-responsive-wrapper">
-          <div className="img-responsive img-responsive-panoramic">
-            <figure className="img-wrapper">
-              <img
-                alt={item.title}
-                src={item.enclosure.url}
-                title={item.title}
+    <div className="row">
+      {items?.length > 0 ? (
+        items.map(item => (
+          <div className="col-12 col-lg-3">
+            <Card
+              className="card-bg card-img no-after"
+              noWrapper={false}
+              tag="div"
+            >
+              <div className="img-responsive-wrapper">
+                <div className="img-responsive img-responsive-panoramic">
+                  <figure className="img-wrapper">
+                    <img
+                      alt={item.title}
+                      src={item.enclosure.url}
+                      title={item.title}
+                    />
+                  </figure>
+                </div>
+              </div>
+              <CardBody tag="div">
+                <CardCategory date={moment(item.pubDate).format('DD-MMM-Y')}>
+                  {item.categories.length > 0 ? item.categories[0]._ : ''}
+                </CardCategory>
+                <CardTitle className="big-heading" tag="h6">
+                  {item.title}
+                </CardTitle>
+              </CardBody>
+              <CardReadMore
+                iconName="it-arrow-right"
+                className="ml-2"
+                tag="a"
+                href={item?.link}
+                text={intl.formatMessage(messages.readMore)}
               />
-            </figure>
+            </Card>
           </div>
+        ))
+      ) : (
+        <div className="no-rss-feed-results">
+          {intl.formatMessage(messages.noResults)}
         </div>
-        <CardBody tag="div">
-          <CardCategory date={moment(item.pubDate).format('DD-MMM-Y')}>
-            {item.categories.length > 0 ? item.categories[0]._ : ''}
-          </CardCategory>
-          <CardTitle className="big-heading" tag="h6">
-            {item.title}
-          </CardTitle>
-        </CardBody>
-        <CardReadMore
-          iconName="it-arrow-right"
-          className="ml-2"
-          tag="a"
-          href={item?.link}
-          text="Leggi di più"
-        />
-      </Card>
+      )}
     </div>
   );
 };
+
 CardWithImageRssTemplate.propTypes = {
-  item: PropTypes.object,
+  items: PropTypes.arrayOf(PropTypes.object),
 };
 
-export default injectIntl(CardWithImageRssTemplate);
+export default CardWithImageRssTemplate;
