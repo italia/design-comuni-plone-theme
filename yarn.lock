@@ -15111,7 +15111,7 @@ vm-browserify@^1.0.1:
 
 volto-rss-block@redturtle/volto-rss-block:
   version "0.1.0"
-  resolved "https://codeload.github.com/redturtle/volto-rss-block/tar.gz/ad08e193e9d26c9ccfa19138aee0e22e10544f4c"
+  resolved "https://codeload.github.com/redturtle/volto-rss-block/tar.gz/e1bd29b512b7618c80876929a00c3dcc08474de7"
   dependencies:
     rss-parser "3.7.5"
 
