@@ -6,7 +6,12 @@
         "map": [
           ["@plone/volto", "@plone/volto/src"],
           ["@design", "./src"],
-          ["volto-rss-block", "./src/addons/volto-rss-block"]
+          ["volto-rss-block", "./src/addons/volto-rss-block/src"],
+          ["volto-cookie-banner", "./src/addons/volto-cookie-banner/src"],
+          [
+            "volto-multilingual-widget",
+            "./src/addons/volto-multilingual-widget/src"
+          ]
         ],
         "extensions": [".js", ".jsx", ".json"]
       },

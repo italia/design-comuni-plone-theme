@@ -33,6 +33,8 @@ import { rssBlock as customRssBlock } from 'volto-rss-block';
 import CardWithImageRssTemplate from '@design/components/DesignTheme/Blocks/RssBlock/CardWithImageRssTemplate';
 import CardWithoutImageRssTemplate from '@design/components/DesignTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
 
+import MultilingualWidget from 'volto-multilingual-widget';
+
 const rssBlock = {
   ...customRssBlock,
   templates: {
@@ -146,6 +148,7 @@ export const widgets = {
   id: {
     ...defaultWidgets.id,
     description: CharCounterDescriptionWidget,
+    cookie_consent_configuration: MultilingualWidget(),
   },
 };
 
