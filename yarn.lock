@@ -15383,7 +15383,7 @@ volto-multilingual-widget@collective/volto-multilingual-widget:
 
 volto-rss-block@redturtle/volto-rss-block:
   version "0.1.0"
-  resolved "https://codeload.github.com/redturtle/volto-rss-block/tar.gz/e1bd29b512b7618c80876929a00c3dcc08474de7"
+  resolved "https://codeload.github.com/redturtle/volto-rss-block/tar.gz/caca398b7768c4ce8ad10cfe956e7d481a84d749"
   dependencies:
     rss-parser "3.7.5"
 
