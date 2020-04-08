@@ -1,0 +1,40 @@
+body.cms-ui {
+  .it-header-wrapper,
+  .public-ui {
+    font-size: 18px;
+    font-weight: 300;
+
+    * {
+      font-family: 'Titillium Web';
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+  }
+
+  .it-footer {
+    display: none;
+  }
+
+  #sidebar{
+    .block.image{
+      .toolbar{
+        height: auto;
+      }
+      img{
+        max-width: 100%;
+      }
+      .dropzone{
+        .toolbar-inner{
+          width: 100%;
+          min-width: unset;
+          input{
+            height: auto;
+            font-size: 0.8em;
+          }
+        }
+      }
+    }
+  }
+}

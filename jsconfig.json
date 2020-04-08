@@ -1,6 +1,15 @@
 {
     "compilerOptions": {
         "paths": {
+            "volto-rss-block": [
+                "addons/volto-rss-block"
+            ],
+            "volto-cookie-banner": [
+                "addons/volto-cookie-banner"
+            ],
+            "volto-multilingual-widget": [
+                "addons/volto-multilingual-widget"
+            ]
         },
         "baseUrl": "src"
     }

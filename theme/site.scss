@@ -1,4 +1,13 @@
-@import 'bootstrap-override/bootstrap-italia-site.scss';
-@import 'cms-ui.scss';
-@import 'extras/modals';
+@import 'bootstrap-override/bootstrap-italia-site';
+@import 'cms-ui';
 @import 'extras/chips';
+@import 'extras/modals';
+
+/*** DesignTheme ***/
+@import 'DesignTheme/home';
+@import 'DesignTheme/Blocks/alert';
+@import 'DesignTheme/Blocks/newshome';
+@import 'DesignTheme/Blocks/newstemplate';
+@import 'DesignTheme/Views/newsItem';
+@import 'DesignTheme/Views/uo';
+@import 'DesignTheme/Views/common';

@@ -3,15 +3,20 @@
  * @module components/DesignTheme/Header/HeaderSlim
  */
 
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { defineMessages, injectIntl } from 'react-intl';
-import PropTypes from 'prop-types';
-import { compose } from 'redux';
-import { connect } from 'react-redux';
-import { LanguageSelector } from '~/components/DesignTheme';
-import { BITIcon, it_user } from '~/components/DesignTheme/Icons';
-import { Button } from 'react-bootstrap';
+import { defineMessages, useIntl } from 'react-intl';
+// import { BITIcon, it_user } from '@design/components/DesignTheme/Icons';
+import {
+  Button,
+  Header,
+  HeaderBrand,
+  HeaderContent,
+  HeaderRightZone,
+  Icon,
+} from 'design-react-kit/dist/design-react-kit';
+
+import { LanguageSelector } from '@design/components/DesignTheme';
 
 const messages = defineMessages({
   arLogin: {
@@ -19,68 +24,37 @@ const messages = defineMessages({
     defaultMessage: "Accedi all'area personale",
   },
 });
-/**
- * HeaderSlim component class.
- * @class HeaderSlim
- * @extends Component
- */
-class HeaderSlim extends Component {
-  /**
-   * Property types.
-   * @property {Object} propTypes Property types.
-   * @static
-   */
-  static propTypes = {
-    token: PropTypes.string,
-    pathname: PropTypes.string.isRequired,
-  };
 
-  /**
-   * Default properties.
-   * @property {Object} defaultProps Default properties.
-   * @static
-   */
-  static defaultProps = {
-    token: null,
-  };
+const HeaderSlim = () => {
+  const intl = useIntl();
 
-  /**
-   * Render method.
-   * @method render
-   * @returns {string} Markup for the component.
-   */
-  render() {
-    return (
-      <div className="it-header-slim-wrapper-content">
-        <Link to="/" key="brand-link" className="d-lg-block navbar-brand">
+  return (
+    <Header small={false} theme="" type="slim">
+      <HeaderContent>
+        <HeaderBrand responsive tag={Link} to="/">
           Nome della Regione
-        </Link>
-
-        <div className="header-slim-right-zone">
-          <LanguageSelector asNavItem={true} />
-
+        </HeaderBrand>
+        <HeaderRightZone>
+          <LanguageSelector />
           <Button
-            className="btn-full btn-icon"
-            as={Link}
+            className="btn-icon"
+            color="primary"
             to="#"
-            title={this.props.intl.formatMessage(messages.arLogin)}
+            icon={false}
+            size="full"
+            tag={Link}
           >
             <span className="rounded-icon">
-              <BITIcon name={it_user} color="primary" />
+              <Icon color="primary" icon="it-user" padding={false} size="" />
             </span>
             <span className="d-none d-lg-block">
-              {this.props.intl.formatMessage(messages.arLogin)}
+              {intl.formatMessage(messages.arLogin)}
             </span>
           </Button>
-        </div>
-      </div>
-    );
-  }
-}
+        </HeaderRightZone>
+      </HeaderContent>
+    </Header>
+  );
+};
 
-export default compose(
-  injectIntl,
-  connect(state => ({
-    token: state.userSession.token,
-  })),
-)(HeaderSlim);
+export default HeaderSlim;

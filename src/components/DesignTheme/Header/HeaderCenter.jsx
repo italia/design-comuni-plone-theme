@@ -7,8 +7,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { defineMessages, injectIntl } from 'react-intl';
 import PropTypes from 'prop-types';
-import { compose } from 'redux';
-import { connect } from 'react-redux';
 
 import { Brand, SocialLinks } from '~/components/DesignTheme';
 import SearchModal from './SearchModal';
@@ -100,9 +98,4 @@ class HeaderCenter extends Component {
   }
 }
 
-export default compose(
-  injectIntl,
-  connect(state => ({
-    token: state.userSession.token,
-  })),
-)(HeaderCenter);
+export default injectIntl(HeaderCenter);

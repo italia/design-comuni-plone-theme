@@ -5,7 +5,13 @@
       "alias": {
         "map": [
           ["@plone/volto", "@plone/volto/src"],
-          ["@package", "./src"]
+          ["@design", "./src"],
+          ["volto-rss-block", "./src/addons/volto-rss-block/src"],
+          ["volto-cookie-banner", "./src/addons/volto-cookie-banner/src"],
+          [
+            "volto-multilingual-widget",
+            "./src/addons/volto-multilingual-widget/src"
+          ]
         ],
         "extensions": [".js", ".jsx", ".json"]
       },

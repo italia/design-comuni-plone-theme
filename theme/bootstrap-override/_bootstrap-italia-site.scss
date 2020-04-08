@@ -16,6 +16,7 @@
 
 //classi colore
 @import 'bootstrap-italia/src/scss/utilities/colors';
+
 @import 'bootstrap/scss/functions';
 @import 'bootstrap/scss/variables';
 
@@ -111,6 +112,7 @@
   @import 'bootstrap-italia/src/scss/custom/sidebar';
   @import 'bootstrap-italia/src/scss/custom/sidebarthemes';
   @import 'bootstrap-italia/src/scss/custom/megamenu';
+  @import 'bootstrap-override/bootstrap-italia/megamenu';
   @import 'bootstrap-italia/src/scss/custom/bottomnav';
   @import 'bootstrap-italia/src/scss/custom/navscroll';
   @import 'bootstrap-italia/src/scss/custom/navscrolltheme';

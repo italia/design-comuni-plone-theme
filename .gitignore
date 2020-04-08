@@ -1,8 +1,10 @@
 .vscode/
+.history
 logs
 *.log
 npm-debug.log*
 .DS_Store
+src/addons
 
 coverage
 node_modules
