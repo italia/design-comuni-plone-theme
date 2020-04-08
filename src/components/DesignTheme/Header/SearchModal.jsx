@@ -1,19 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import Modal from 'react-bootstrap/Modal';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
-import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
-import Tabs from 'react-bootstrap/Tabs';
-import Tab from 'react-bootstrap/Tab';
+import {
+  Modal,
+  ModalHeader,
+  ModalBody,
+  Container,
+  Row,
+  Col,
+  Button,
+  ButtonToolbar,
+  Icon,
+  TabContent as Tabs,
+  TabPane as Tab,
+} from 'design-react-kit/dist/design-react-kit';
 import { defineMessages, injectIntl } from 'react-intl';
 import mapValues from 'lodash/mapValues';
 import toPairs from 'lodash/toPairs';
 import fromPairs from 'lodash/fromPairs';
 import cx from 'classnames';
 
-import { BITIcon, it_arrow_left_circle, it_close } from '../Icons';
 import Checkbox from '../../Checkbox';
 
 const messages = defineMessages({
@@ -231,8 +235,8 @@ const SearchModal = ({ closeModal, show, intl }) => {
   }, []);
 
   return (
-    <Modal show={show} onHide={closeModal} id="search-modal">
-      <Modal.Header>
+    <Modal id="search-modal" isOpen={show} toggle={closeModal}>
+      <ModalHeader toggle={closeModal}>
         <Container>
           <div className="d-flex align-items-center">
             {!advancedSearch && (
@@ -242,7 +246,7 @@ const SearchModal = ({ closeModal, show, intl }) => {
                 onClick={closeModal}
                 type="button"
               >
-                <BITIcon name={it_arrow_left_circle} />
+                <Icon color="" icon="it-arrow-left-circle" padding={false} />
               </Button>
             )}
             {advancedSearch && (
@@ -253,7 +257,7 @@ const SearchModal = ({ closeModal, show, intl }) => {
                 onClick={() => setAdvancedSearch(false)}
                 type="button"
               >
-                <BITIcon name={it_arrow_left_circle} />
+                <Icon color="" icon="it-arrow-left-circle" padding={false} />
                 {intl.formatMessage(messages.search)}
               </Button>
             )}
@@ -273,8 +277,8 @@ const SearchModal = ({ closeModal, show, intl }) => {
             )}
           </div>
         </Container>
-      </Modal.Header>
-      <Modal.Body>
+      </ModalHeader>
+      <ModalBody>
         <Container>
           {!advancedSearch && (
             <>
@@ -342,7 +346,7 @@ const SearchModal = ({ closeModal, show, intl }) => {
                       {selectedTopics[topicId].label}
                     </span>
                     <button type="button">
-                      <BITIcon name={it_close} />
+                      <Icon color="" icon="it-close" padding={false} />
                       <span className="sr-only">
                         {intl.formatMessage(messages.removeTopic)}
                       </span>
@@ -443,7 +447,7 @@ const SearchModal = ({ closeModal, show, intl }) => {
             </Tabs>
           )}
         </Container>
-      </Modal.Body>
+      </ModalBody>
     </Modal>
   );
 };

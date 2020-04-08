@@ -3,15 +3,17 @@
  * @module components/Header/HeaderCenter
  */
 
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { defineMessages, injectIntl } from 'react-intl';
-import PropTypes from 'prop-types';
-
-import { Brand, SocialLinks } from '~/components/DesignTheme';
+import { defineMessages, useIntl } from 'react-intl';
+import {
+  Header,
+  HeaderContent,
+  HeaderRightZone,
+  HeaderSocialsZone,
+  Icon,
+} from 'design-react-kit/dist/design-react-kit';
 import SearchModal from './SearchModal';
-
-import { BITIcon, it_search } from '~/components/DesignTheme/Icons';
 
 const messages = defineMessages({
   followUs: {
@@ -24,78 +26,80 @@ const messages = defineMessages({
   },
 });
 
-/**
- * HeaderCenter component class.
- * @class HeaderCenter
- * @extends Component
- */
-class HeaderCenter extends Component {
-  state = {
-    showSearchModal: false,
-  };
+const HeaderCenter = () => {
+  const intl = useIntl();
+  const [showSearchModal, setShowSearchModal] = useState(false);
 
-  /**
-   * Property types.
-   * @property {Object} propTypes Property types.
-   * @static
-   */
-  static propTypes = {
-    token: PropTypes.string,
-  };
-
-  /**
-   * Default properties.
-   * @property {Object} defaultProps Default properties.
-   * @static
-   */
-  static defaultProps = {
-    token: null,
-  };
-
-  closeModal = () => this.setState({ showSearchModal: false });
-
-  openModal = () => this.setState({ showSearchModal: true });
-
-  /**
-   * Render method.
-   * @method render
-   * @returns {string} Markup for the component.
-   */
-  render() {
-    return (
-      <div className="it-header-center-content-wrapper">
+  return (
+    <Header small={false} theme="" type="center">
+      <HeaderContent>
         <div className="it-brand-wrapper">
           <Link to="/">
-            <Brand />
+            <Icon color="" icon="it-pa" padding={false} size="" />
+            <div className="it-brand-text">
+              <h2 className="no_toc">Nome del Comune</h2>
+              <h3 className="no_toc d-none d-md-block">
+                Uno dei tanti Comuni d'Italia
+              </h3>
+            </div>
           </Link>
         </div>
-        <div className="it-right-zone">
-          <SocialLinks />
-
+        <HeaderRightZone>
+          <HeaderSocialsZone label={intl.formatMessage(messages.followUs)}>
+            <ul>
+              <li>
+                <a
+                  title="Facebook"
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon color="" icon="it-facebook" padding={false} size="" />
+                </a>
+              </li>
+              <li>
+                <a
+                  title="Github"
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon color="" icon="it-github" padding={false} size="" />
+                </a>
+              </li>
+              <li>
+                <a
+                  title="Twitter"
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon color="" icon="it-twitter" padding={false} size="" />
+                </a>
+              </li>
+            </ul>
+          </HeaderSocialsZone>
           <div className="it-search-wrapper">
             <span className="d-none d-md-block">
-              {this.props.intl.formatMessage(messages.search)}
+              {intl.formatMessage(messages.search)}
             </span>
-            <Link
-              to="#"
-              aria-label={this.props.intl.formatMessage(messages.search)}
+            <a
+              href="#"
               className="search-link rounded-icon"
-              onClick={e => {
-                e.preventDefault();
-                this.openModal();
-              }}
+              aria-label={intl.formatMessage(messages.search)}
+              onClick={() => setShowSearchModal(true)}
             >
-              <BITIcon name={it_search} />
-            </Link>
-            <SearchModal
-              show={this.state.showSearchModal}
-              closeModal={this.closeModal}
-            />
+              <Icon icon="it-search" />
+            </a>
           </div>
-        </div>
-      </div>
-    );
-  }
-}
+          <SearchModal
+            show={showSearchModal}
+            closeModal={() => setShowSearchModal(false)}
+          />
+        </HeaderRightZone>
+      </HeaderContent>
+    </Header>
+  );
+};
 
-export default injectIntl(HeaderCenter);
+export default HeaderCenter;

@@ -132,6 +132,7 @@ export const settings = {
   extendedBlockRenderMap: extendedBlockRenderMap,
   blockStyleFn: blockStyleFn,
   listBlockTypes: listBlockTypes,
+  defaultLanguage: 'it',
 };
 
 export const views = {
