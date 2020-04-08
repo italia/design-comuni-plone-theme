@@ -22,11 +22,31 @@ import NewsHomeEdit from '@design/components/DesignTheme/Blocks/NewsHome/Edit';
 import alertSVG from '@plone/volto/icons/alert.svg';
 import AlertView from '@design/components/DesignTheme/Blocks/Alert/View';
 import AlertEdit from '@design/components/DesignTheme/Blocks/Alert/Edit';
+
 import { CharCounterDescriptionWidget } from '@design/components/DesignTheme';
 import { NewsItemView } from '@design/components/DesignTheme';
 import { UOView } from '@design/components/DesignTheme';
 
 import NewsTemplate from '@design/components/DesignTheme/Blocks/Listing/NewsTemplate';
+
+import { rssBlock as customRssBlock } from 'volto-rss-block';
+import CardWithImageRssTemplate from '@design/components/DesignTheme/Blocks/RssBlock/CardWithImageRssTemplate';
+import CardWithoutImageRssTemplate from '@design/components/DesignTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
+
+const rssBlock = {
+  ...customRssBlock,
+  templates: {
+    ...customRssBlock.templates,
+    default: {
+      label: 'Card template without image',
+      template: CardWithoutImageRssTemplate,
+    },
+    card_without_image: {
+      label: 'Card template with image ',
+      template: CardWithImageRssTemplate,
+    },
+  },
+};
 
 const extendedBlockRenderMap = defaultSettings.extendedBlockRenderMap.update(
   'align-center',
@@ -96,6 +116,7 @@ const customBlocks = {
       },
     },
   },
+  rssBlock,
 };
 
 export const settings = {
