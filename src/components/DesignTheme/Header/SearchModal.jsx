@@ -9,8 +9,14 @@ import {
   Button,
   ButtonToolbar,
   Icon,
-  TabContent as Tabs,
-  TabPane as Tab,
+  Nav,
+  NavItem,
+  NavLink,
+  TabContent,
+  TabPane,
+  FormGroup,
+  Input,
+  Label,
 } from 'design-react-kit/dist/design-react-kit';
 import { defineMessages, injectIntl } from 'react-intl';
 import mapValues from 'lodash/mapValues';
@@ -241,40 +247,38 @@ const SearchModal = ({ closeModal, show, intl }) => {
           <div className="d-flex align-items-center">
             {!advancedSearch && (
               <Button
-                variant="link"
+                color="link"
                 title={intl.formatMessage(messages.closeSearch)}
                 onClick={closeModal}
-                type="button"
               >
                 <Icon color="" icon="it-arrow-left-circle" padding={false} />
               </Button>
             )}
             {advancedSearch && (
               <Button
-                variant="link"
+                color="link"
                 title={intl.formatMessage(messages.backToSearch)}
                 className="back-to-search text-reset"
                 onClick={() => setAdvancedSearch(false)}
-                type="button"
               >
                 <Icon color="" icon="it-arrow-left-circle" padding={false} />
                 {intl.formatMessage(messages.search)}
               </Button>
             )}
-            <p className="h1">
+            <p className="modal-title-centered h1">
               {intl.formatMessage(
-                advancedSearch ? messages.sections : messages.search,
+                advancedSearch ? messages.filters : messages.search,
               )}
             </p>
-            {advancedSearch && (
-              <Button
-                variant="outline-primary"
-                className="ml-auto"
-                title={intl.formatMessage(messages.confirmSearch)}
-              >
-                {intl.formatMessage(messages.confirmSearch)}
-              </Button>
-            )}
+            <Button
+              style={{ visibility: advancedSearch ? 'visible' : 'hidden' }}
+              color="primary"
+              outline
+              className="ml-auto"
+              title={intl.formatMessage(messages.confirmSearch)}
+            >
+              {intl.formatMessage(messages.confirmSearch)}
+            </Button>
           </div>
         </Container>
       </ModalHeader>
@@ -288,7 +292,8 @@ const SearchModal = ({ closeModal, show, intl }) => {
                 </div>
                 <ButtonToolbar>
                   <Button
-                    variant={allSectionsChecked ? 'primary' : 'outline-primary'}
+                    color="primary"
+                    outline={!allSectionsChecked}
                     onClick={resetSections}
                     size="sm"
                     className="mr-2"
@@ -298,9 +303,8 @@ const SearchModal = ({ closeModal, show, intl }) => {
                   {Object.keys(sections).map(groupId => (
                     <Button
                       key={groupId}
-                      variant={
-                        checkedGroups[groupId] ? 'primary' : 'outline-primary'
-                      }
+                      color="primary"
+                      outline={!checkedGroups[groupId]}
                       size="sm"
                       className="mr-2"
                       onClick={() =>
@@ -311,7 +315,8 @@ const SearchModal = ({ closeModal, show, intl }) => {
                     </Button>
                   ))}
                   <Button
-                    variant="outline-primary"
+                    color="primary"
+                    outline
                     size="sm"
                     onClick={() => {
                       setAdvancedTab('sections');
@@ -370,21 +375,45 @@ const SearchModal = ({ closeModal, show, intl }) => {
             </>
           )}
           {advancedSearch && (
-            <Tabs
-              activeKey={advancedTab}
-              className="auto"
-              onSelect={k => setAdvancedTab(k)}
-            >
-              <Tab
-                eventKey="sections"
-                title={intl.formatMessage(messages.sections)}
-              >
-                <Row>
-                  {Object.keys(sections).map(groupId => (
-                    <Col sm={6} key={groupId} className="group-col">
-                      <div>
-                        <label className="group-head font-weight-bold text-primary">
+            <div>
+              <Nav tabs className="mb-3 nav-fill">
+                <NavItem>
+                  <NavLink
+                    href="#"
+                    active={advancedTab === 'sections'}
+                    onClick={() => setAdvancedTab('sections')}
+                  >
+                    <span>{intl.formatMessage(messages.sections)}</span>
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink
+                    href="#"
+                    active={advancedTab === 'topics'}
+                    onClick={() => setAdvancedTab('topics')}
+                  >
+                    <span>{intl.formatMessage(messages.topics)}</span>
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink
+                    href="#"
+                    active={advancedTab === 'options'}
+                    onClick={() => setAdvancedTab('options')}
+                  >
+                    <span>{intl.formatMessage(messages.options)}</span>
+                  </NavLink>
+                </NavItem>
+              </Nav>
+
+              <TabContent activeTab={advancedTab}>
+                <TabPane className="p-3" tabId="sections">
+                  <Row>
+                    {Object.keys(sections).map(groupId => (
+                      <Col sm={6} key={groupId} className="group-col">
+                        <FormGroup check tag="div">
                           <Checkbox
+                            id={groupId}
                             indeterminate={isGroupIndeterminate(
                               sections[groupId],
                               checkedGroups[groupId],
@@ -393,15 +422,30 @@ const SearchModal = ({ closeModal, show, intl }) => {
                             onChange={e =>
                               setGroupChecked(groupId, e.currentTarget.checked)
                             }
-                          />{' '}
-                          {intl.formatMessage(messages[groupId])}
-                        </label>
-                      </div>
-                      {Object.keys(sections[groupId]).map(filterId => (
-                        <div key={filterId}>
-                          <label>
-                            <input
-                              type="checkbox"
+                          />
+                          <Label
+                            check
+                            for={groupId}
+                            tag="label"
+                            className={cx(
+                              'group-head font-weight-bold text-primary',
+                              {
+                                indeterminate: isGroupIndeterminate(
+                                  sections[groupId],
+                                  checkedGroups[groupId],
+                                ),
+                              },
+                            )}
+                            widths={['xs', 'sm', 'md', 'lg', 'xl']}
+                          >
+                            {intl.formatMessage(messages[groupId])}
+                          </Label>
+                        </FormGroup>
+
+                        {Object.keys(sections[groupId]).map(filterId => (
+                          <FormGroup check tag="div" key={filterId}>
+                            <Checkbox
+                              id={filterId}
                               checked={sections[groupId][filterId].value}
                               onChange={e =>
                                 setSectionFilterChecked(
@@ -410,41 +454,50 @@ const SearchModal = ({ closeModal, show, intl }) => {
                                   e.currentTarget.checked,
                                 )
                               }
-                            />{' '}
-                            {sections[groupId][filterId].label}
-                          </label>
-                        </div>
-                      ))}
-                    </Col>
-                  ))}
-                </Row>
-              </Tab>
-              <Tab
-                eventKey="topics"
-                title={intl.formatMessage(messages.topics)}
-              >
-                <div className="group-col">
-                  {Object.keys(topics).map(topicId => (
-                    <div key={topicId}>
-                      <label>
-                        <input
-                          type="checkbox"
-                          checked={topics[topicId].value}
-                          onChange={e =>
-                            setTopicChecked(topicId, e.currentTarget.checked)
-                          }
-                        />{' '}
-                        {topics[topicId].label}
-                      </label>
-                    </div>
-                  ))}
-                </div>
-              </Tab>
-              <Tab
-                eventKey="options"
-                title={intl.formatMessage(messages.options)}
-              />
-            </Tabs>
+                            />
+                            <Label
+                              check
+                              for={filterId}
+                              tag="label"
+                              widths={['xs', 'sm', 'md', 'lg', 'xl']}
+                            >
+                              {sections[groupId][filterId].label}
+                            </Label>
+                          </FormGroup>
+                        ))}
+                      </Col>
+                    ))}
+                  </Row>
+                </TabPane>
+                <TabPane className="p-3" tabId="topics">
+                  <div className="group-col">
+                    {Object.keys(topics).map(topicId => (
+                      <div key={topicId}>
+                        <FormGroup check tag="div">
+                          <Input
+                            id={topicId}
+                            type="checkbox"
+                            checked={topics[topicId].value}
+                            onChange={e =>
+                              setTopicChecked(topicId, e.currentTarget.checked)
+                            }
+                          />
+                          <Label
+                            check
+                            for={topicId}
+                            tag="label"
+                            widths={['xs', 'sm', 'md', 'lg', 'xl']}
+                          >
+                            {topics[topicId].label}
+                          </Label>
+                        </FormGroup>
+                      </div>
+                    ))}
+                  </div>
+                </TabPane>
+                <TabPane className="p-3" tabId="options"></TabPane>
+              </TabContent>
+            </div>
           )}
         </Container>
       </ModalBody>

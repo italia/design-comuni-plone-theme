@@ -3,3 +3,31 @@
     cursor: pointer;
   }
 }
+
+#search-modal {
+  .modal-header {
+    button.close {
+      display: none;
+    }
+
+    .modal-title {
+      width: 100%;
+    }
+  }
+
+  .modal-title {
+    .modal-title-centered {
+      flex: 1;
+      text-align: center;
+      text-transform: capitalize;
+    }
+  }
+
+  .nav-tabs {
+    .nav-item {
+      a.nav-link {
+        width: 100%;
+      }
+    }
+  }
+}
