@@ -30,7 +30,8 @@ const messages = defineMessages({
 const Breadcrumbs = ({ pathname }) => {
   const intl = useIntl();
   const dispatch = useDispatch();
-  const items = useSelector(state => state.breadcrumbs.items, isEqual);
+
+  let items = useSelector(state => state.breadcrumbs.items, isEqual);
 
   useEffect(() => {
     dispatch(getBreadcrumbs(getBaseUrl(pathname)));

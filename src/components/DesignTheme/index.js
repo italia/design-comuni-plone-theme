@@ -23,6 +23,7 @@ export FooterMain from './Footer/FooterMain';
 export FooterInfos from './Footer/FooterInfos';
 export FooterNavigation from './Footer/FooterNavigation';
 export FooterSmall from './Footer/FooterSmall';
+export Pagination from './Pagination/Pagination';
 export CharCounterDescriptionWidget from './manage/Widgets/CharCounterDescriptionWidget';
 export NewsItemView from './View/NewsItemView';
 export UOView from './View/UOView';
