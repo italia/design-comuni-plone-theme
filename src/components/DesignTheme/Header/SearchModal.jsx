@@ -17,12 +17,14 @@ import {
   FormGroup,
   Input,
   Label,
+  Toggle,
 } from 'design-react-kit/dist/design-react-kit';
 import { defineMessages, injectIntl } from 'react-intl';
 import mapValues from 'lodash/mapValues';
 import toPairs from 'lodash/toPairs';
 import fromPairs from 'lodash/fromPairs';
 import cx from 'classnames';
+import moment from 'moment';
 
 import Checkbox from '../../Checkbox';
 
@@ -38,6 +40,10 @@ const messages = defineMessages({
   search: {
     id: 'search',
     defaultMessage: 'Cerca',
+  },
+  searchLabel: {
+    id: 'searchLabel',
+    defaultMessage: 'Cerca nel sito',
   },
   filters: {
     id: 'filters',
@@ -91,6 +97,43 @@ const messages = defineMessages({
     id: 'removeTopic',
     defaultMessage: 'Rimuovi argomento',
   },
+  removeOption: {
+    id: 'removeOption',
+    defaultMessage: 'Rimuovi opzione',
+  },
+  optionActiveContentButton: {
+    id: 'optionActiveContentButton',
+    defaultMessage: 'Contenuto attivo',
+  },
+  optionActiveContentLabel: {
+    id: 'optionActiveContentLabel',
+    defaultMessage: 'Cerca solo tra i contenuti attivi',
+  },
+  optionActiveContentInfo: {
+    id: 'optionActiveContentInfo',
+    defaultMessage:
+      'Verranno esclusi dalla ricerca i contenuti archiviati e non più validi come gli eventi terminati o i bandi scaduti.',
+  },
+  optionDateStart: {
+    id: 'optionDateStart',
+    defaultMessage: 'Data inizio',
+  },
+  optionDateEnd: {
+    id: 'optionDateEnd',
+    defaultMessage: 'Data fine',
+  },
+  optionDateStartButton: {
+    id: 'optionDateStartButton',
+    defaultMessage: 'Dal',
+  },
+  optionDateEndButton: {
+    id: 'optionDateEndButton',
+    defaultMessage: 'Al',
+  },
+  optionDatePlaceholder: {
+    id: 'optionDatePlaceholder',
+    defaultMessage: 'inserisci la data in formato gg/mm/aaaa',
+  },
 });
 
 // A group is checked if at least one filter is checked
@@ -115,9 +158,16 @@ export const updateGroupCheckedStatus = (group, checked) =>
     value: checked,
   }));
 
+const defaultOptions = {
+  activeContent: false,
+  dateStart: null,
+  dateEnd: null,
+};
+
 const SearchModal = ({ closeModal, show, intl }) => {
   const [advancedSearch, setAdvancedSearch] = useState(false);
   const [advancedTab, setAdvancedTab] = useState('sections');
+  const [searchText, setSearchText] = useState('');
   const [sections, setSections] = useState({
     amministrazione: {},
     servizi: {},
@@ -125,6 +175,7 @@ const SearchModal = ({ closeModal, show, intl }) => {
     documenti: {},
   });
   const [topics, setTopics] = useState({});
+  const [options, setOptions] = useState({ ...defaultOptions });
   const selectedTopics = fromPairs(toPairs(topics).filter(t => t[1].value));
   const checkedGroups = {
     amministrazione: isGroupChecked(sections.amministrazione),
@@ -138,6 +189,8 @@ const SearchModal = ({ closeModal, show, intl }) => {
     true,
   );
   const allTopicsChecked = Object.keys(selectedTopics).length === 0;
+  const allOptionsSet =
+    !options.activeContent && !options.dateStart && !options.dateEnd;
 
   const resetSections = () => {
     setSections(prevSections =>
@@ -183,6 +236,11 @@ const SearchModal = ({ closeModal, show, intl }) => {
       },
     }));
   };
+
+  const resetOptions = () => setOptions({ ...defaultOptions });
+
+  const setOptionValue = (optId, value) =>
+    setOptions(prevOptions => ({ ...prevOptions, [optId]: value }));
 
   useEffect(() => {
     // TODO Fetch real data here
@@ -286,6 +344,32 @@ const SearchModal = ({ closeModal, show, intl }) => {
         <Container>
           {!advancedSearch && (
             <>
+              <div className="search-filters search-filters-text">
+                <div className="form-group">
+                  <div className="input-group mb-3">
+                    <input
+                      id="search-text"
+                      type="text"
+                      value={searchText}
+                      onChange={e => setSearchText(e.target.value)}
+                      className="form-control"
+                      placeholder={intl.formatMessage(messages.searchLabel)}
+                      aria-label={intl.formatMessage(messages.searchLabel)}
+                      aria-describedby="search-button"
+                    />
+                    <div className="input-group-append">
+                      <button
+                        className="btn btn-link"
+                        type="button"
+                        title={intl.formatMessage(messages.search)}
+                        id="search-button"
+                      >
+                        <Icon icon="it-search" aria-hidden={true} size="sm" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <div className="search-filters search-filters-section">
                 <div className="h6">
                   {intl.formatMessage(messages.sections)}
@@ -371,6 +455,86 @@ const SearchModal = ({ closeModal, show, intl }) => {
               </div>
               <div className="search-filters search-filters-options">
                 <div className="h6">{intl.formatMessage(messages.options)}</div>
+                <button
+                  className={cx('chip chip-simple chip-lg mr-2', {
+                    selected: allOptionsSet,
+                  })}
+                  type="button"
+                  onClick={resetOptions}
+                >
+                  <span className="chip-label">
+                    {intl.formatMessage(messages.allOptions)}
+                  </span>
+                </button>
+                {options.activeContent && (
+                  <div
+                    role="presentation"
+                    className="chip chip-lg selected"
+                    onClick={() => setOptionValue('activeContent', false)}
+                  >
+                    <span className="chip-label">
+                      {intl.formatMessage(messages.optionActiveContentButton)}
+                    </span>
+                    <button type="button">
+                      <Icon color="" icon="it-close" padding={false} />
+                      <span className="sr-only">
+                        {intl.formatMessage(messages.removeOption)}
+                      </span>
+                    </button>
+                  </div>
+                )}
+                {options.dateStart && (
+                  <div
+                    role="presentation"
+                    className="chip chip-lg selected"
+                    onClick={() => setOptionValue('dateStart', null)}
+                  >
+                    <span className="chip-label">
+                      {`${intl.formatMessage(
+                        messages.optionDateStartButton,
+                      )} ${moment(options.dateStart)
+                        .locale(intl.locale)
+                        .format('LL')}`}
+                    </span>
+                    <button type="button">
+                      <Icon color="" icon="it-close" padding={false} />
+                      <span className="sr-only">
+                        {intl.formatMessage(messages.removeOption)}
+                      </span>
+                    </button>
+                  </div>
+                )}
+                {options.dateEnd && (
+                  <div
+                    role="presentation"
+                    className="chip chip-lg selected"
+                    onClick={() => setOptionValue('dateEnd', null)}
+                  >
+                    <span className="chip-label">
+                      {`${intl.formatMessage(
+                        messages.optionDateEndButton,
+                      )} ${moment(options.dateEnd)
+                        .locale(intl.locale)
+                        .format('LL')}`}
+                    </span>
+                    <button type="button">
+                      <Icon color="" icon="it-close" padding={false} />
+                      <span className="sr-only">
+                        {intl.formatMessage(messages.removeOption)}
+                      </span>
+                    </button>
+                  </div>
+                )}
+                <button
+                  className="chip chip-lg"
+                  onClick={() => {
+                    setAdvancedTab('options');
+                    setAdvancedSearch(true);
+                  }}
+                  type="button"
+                >
+                  <span className="chip-label">...</span>
+                </button>
               </div>
             </>
           )}
@@ -409,93 +573,156 @@ const SearchModal = ({ closeModal, show, intl }) => {
               <TabContent activeTab={advancedTab}>
                 <TabPane className="p-3" tabId="sections">
                   <Row>
-                    {Object.keys(sections).map(groupId => (
-                      <Col sm={6} key={groupId} className="group-col">
-                        <FormGroup check tag="div">
-                          <Checkbox
-                            id={groupId}
-                            indeterminate={isGroupIndeterminate(
-                              sections[groupId],
-                              checkedGroups[groupId],
-                            )}
-                            checked={checkedGroups[groupId]}
-                            onChange={e =>
-                              setGroupChecked(groupId, e.currentTarget.checked)
-                            }
-                          />
-                          <Label
-                            check
-                            for={groupId}
-                            tag="label"
-                            className={cx(
-                              'group-head font-weight-bold text-primary',
-                              {
-                                indeterminate: isGroupIndeterminate(
+                    <div className="offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12">
+                      <Row>
+                        {Object.keys(sections).map(groupId => (
+                          <Col sm={6} key={groupId} className="group-col">
+                            <FormGroup check tag="div">
+                              <Checkbox
+                                id={groupId}
+                                indeterminate={isGroupIndeterminate(
                                   sections[groupId],
                                   checkedGroups[groupId],
-                                ),
-                              },
-                            )}
-                            widths={['xs', 'sm', 'md', 'lg', 'xl']}
-                          >
-                            {intl.formatMessage(messages[groupId])}
-                          </Label>
-                        </FormGroup>
+                                )}
+                                checked={checkedGroups[groupId]}
+                                onChange={e =>
+                                  setGroupChecked(
+                                    groupId,
+                                    e.currentTarget.checked,
+                                  )
+                                }
+                              />
+                              <Label
+                                check
+                                for={groupId}
+                                tag="label"
+                                className={cx(
+                                  'group-head font-weight-bold text-primary',
+                                  {
+                                    indeterminate: isGroupIndeterminate(
+                                      sections[groupId],
+                                      checkedGroups[groupId],
+                                    ),
+                                  },
+                                )}
+                                widths={['xs', 'sm', 'md', 'lg', 'xl']}
+                              >
+                                {intl.formatMessage(messages[groupId])}
+                              </Label>
+                            </FormGroup>
 
-                        {Object.keys(sections[groupId]).map(filterId => (
-                          <FormGroup check tag="div" key={filterId}>
-                            <Checkbox
-                              id={filterId}
-                              checked={sections[groupId][filterId].value}
-                              onChange={e =>
-                                setSectionFilterChecked(
-                                  groupId,
-                                  filterId,
-                                  e.currentTarget.checked,
-                                )
-                              }
-                            />
-                            <Label
-                              check
-                              for={filterId}
-                              tag="label"
-                              widths={['xs', 'sm', 'md', 'lg', 'xl']}
-                            >
-                              {sections[groupId][filterId].label}
-                            </Label>
-                          </FormGroup>
+                            {Object.keys(sections[groupId]).map(filterId => (
+                              <FormGroup check tag="div" key={filterId}>
+                                <Checkbox
+                                  id={filterId}
+                                  checked={sections[groupId][filterId].value}
+                                  onChange={e =>
+                                    setSectionFilterChecked(
+                                      groupId,
+                                      filterId,
+                                      e.currentTarget.checked,
+                                    )
+                                  }
+                                />
+                                <Label
+                                  check
+                                  for={filterId}
+                                  tag="label"
+                                  widths={['xs', 'sm', 'md', 'lg', 'xl']}
+                                >
+                                  {sections[groupId][filterId].label}
+                                </Label>
+                              </FormGroup>
+                            ))}
+                          </Col>
                         ))}
-                      </Col>
-                    ))}
+                      </Row>
+                    </div>
                   </Row>
                 </TabPane>
                 <TabPane className="p-3" tabId="topics">
-                  <div className="group-col">
-                    {Object.keys(topics).map(topicId => (
-                      <div key={topicId}>
-                        <FormGroup check tag="div">
+                  <Row>
+                    <div className="offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12">
+                      <div className="group-col columns">
+                        {Object.keys(topics).map(topicId => (
+                          <div key={topicId}>
+                            <FormGroup check tag="div">
+                              <Input
+                                id={topicId}
+                                type="checkbox"
+                                checked={topics[topicId].value}
+                                onChange={e =>
+                                  setTopicChecked(
+                                    topicId,
+                                    e.currentTarget.checked,
+                                  )
+                                }
+                              />
+                              <Label
+                                check
+                                for={topicId}
+                                tag="label"
+                                widths={['xs', 'sm', 'md', 'lg', 'xl']}
+                              >
+                                {topics[topicId].label}
+                              </Label>
+                            </FormGroup>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </Row>
+                </TabPane>
+                <TabPane className="p-3" tabId="options">
+                  <Row>
+                    <div className="offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12">
+                      <FormGroup check className="form-check-group mb-5">
+                        <Toggle
+                          label={intl.formatMessage(
+                            messages.optionActiveContentLabel,
+                          )}
+                          checked={options.activeContent}
+                          onChange={e =>
+                            setOptionValue('activeContent', e.target.checked)
+                          }
+                        />
+                        <p className="small">
+                          {intl.formatMessage(messages.optionActiveContentInfo)}
+                        </p>
+                      </FormGroup>
+                      <div className="row mt-5">
+                        <FormGroup className="col-sm">
                           <Input
-                            id={topicId}
-                            type="checkbox"
-                            checked={topics[topicId].value}
+                            id="options-date-start"
+                            type="date"
+                            label={intl.formatMessage(messages.optionDateStart)}
+                            placeholder={intl.formatMessage(
+                              messages.optionDatePlaceholder,
+                            )}
+                            value={options.dateStart}
                             onChange={e =>
-                              setTopicChecked(topicId, e.currentTarget.checked)
+                              setOptionValue('dateStart', e.target.value)
                             }
                           />
-                          <Label
-                            check
-                            for={topicId}
-                            tag="label"
-                            widths={['xs', 'sm', 'md', 'lg', 'xl']}
-                          >
-                            {topics[topicId].label}
-                          </Label>
+                        </FormGroup>
+                        <FormGroup className="col-sm">
+                          <Input
+                            id="options-date-end"
+                            type="date"
+                            label={intl.formatMessage(messages.optionDateEnd)}
+                            placeholder={intl.formatMessage(
+                              messages.optionDatePlaceholder,
+                            )}
+                            value={options.dateEnd}
+                            onChange={e =>
+                              setOptionValue('dateEnd', e.target.value)
+                            }
+                          />
                         </FormGroup>
                       </div>
-                    ))}
-                  </div>
+                    </div>
+                  </Row>
                 </TabPane>
-                <TabPane className="p-3" tabId="options"></TabPane>
               </TabContent>
             </div>
           )}
