@@ -7,7 +7,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
-import cx from 'classnames';
+import { asyncConnect } from 'redux-connect';
+import { FormattedMessage, injectIntl, defineMessages } from 'react-intl';
+
+import qs from 'query-string';
+import { settings } from '~/config';
+import { searchContent } from '@plone/volto/actions';
 import {
   Container,
   Row,
@@ -20,21 +25,7 @@ import {
   CardCategory,
 } from 'design-react-kit/dist/design-react-kit';
 import { Pagination } from '@design/components/DesignTheme';
-
-import Breadcrumbs from '../Breadcrumbs/Breadcrumbs';
-import { Link } from 'react-router-dom';
-import { asyncConnect } from 'redux-connect';
-import { FormattedMessage, injectIntl, defineMessages } from 'react-intl';
-import { Portal } from 'react-portal';
-import qs from 'query-string';
-
-import { settings } from '~/config';
-import { Helmet } from '@plone/volto/helpers';
-import { searchContent } from '@plone/volto/actions';
-import { SearchTags, Toolbar, Icon } from '@plone/volto/components';
-
-import paginationLeftSVG from '@plone/volto/icons/left-key.svg';
-import paginationRightSVG from '@plone/volto/icons/right-key.svg';
+//import { Link } from 'react-router-dom';
 
 const messages = defineMessages({
   searchResults: {
@@ -112,6 +103,7 @@ class Search extends Component {
       currentPage: 1,
       collapseFilters: true,
       collapseTopics: true,
+      filters: { sections: [], topics: [] },
     };
   }
 
@@ -180,10 +172,23 @@ class Search extends Component {
     });
   };
 
-  breadcrumbs = [
+  //[TODO] da sostituire con chiamata al server per ottenere le sezioni
+  sections = [
     {
-      url: '/',
-      title: this.props.intl.formatMessage(messages.searchResults),
+      '@id': 'http://localhost:8080/Plone/amministrazione',
+      title: 'Amministrazione',
+    },
+    {
+      '@id': 'http://localhost:8080/Plone/servizi',
+      title: 'Servizi',
+    },
+    {
+      '@id': 'http://localhost:8080/Plone/novita',
+      title: 'Novità',
+    },
+    {
+      '@id': 'http://localhost:8080/Plone/documenti',
+      title: 'Documenti',
     },
   ];
 
@@ -277,40 +282,24 @@ class Search extends Component {
                   </h6>
 
                   <div className="form-check mt-4">
-                    <div>
-                      <Input
-                        id="checkbox1"
-                        type="checkbox"
-                        defaultChecked={false}
-                      />
-                      <Label for="checkbox1">Amministraziones</Label>
-                    </div>
-                    <div>
-                      <Input
-                        id="checkbox2"
-                        type="checkbox"
-                        defaultChecked={false}
-                      />
-                      <Label for="checkbox2">Servizi</Label>
-                    </div>
-                    <div>
-                      <Input
-                        id="checkbox3"
-                        type="checkbox"
-                        defaultChecked={false}
-                      />
-                      <Label for="checkbox3">Novità</Label>
-                    </div>
-                    <div>
-                      <Input
-                        id="checkbox4"
-                        type="checkbox"
-                        defaultChecked={false}
-                      />
-                      <Label for="checkbox4">Documenti</Label>
-                    </div>
+                    {this.sections.map(section => (
+                      <div>
+                        <Input
+                          id={section['@id']}
+                          type="checkbox"
+                          defaultChecked={
+                            state.filters.sections.indexOf(section['@id']) >= 0
+                          }
+                          onChange={(a, b, c) => {
+                            console.log(a, b, c);
+                          }}
+                        />
+                        <Label for={section['@id']}>{section.title}</Label>
+                      </div>
+                    ))}
                   </div>
                 </div>
+
                 <div className="pt-2 pt-lg-5">
                   <h6 className="text-uppercase">
                     {intl.formatMessage(messages.topics)}

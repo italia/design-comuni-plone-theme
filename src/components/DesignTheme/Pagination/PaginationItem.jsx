@@ -65,15 +65,21 @@ class PaginationItem extends Component {
     const { active, type, children, intl, ellipsisItem } = this.props;
     const disabled = this.props.disabled || type === 'ellipsisItem';
     return (
-      <PagerItem disabled={disabled} active={active}>
+      <PagerItem disabled={disabled}>
         <PagerLink
-          href="#"
+          href=""
           onClick={this.handleClick}
           onKeyDown={this.handleKeyDown}
+          aria-current={active ? 'page' : null}
         >
           {type === 'prevItem' && (
             <>
-              <Icon icon="it-chevron-left" style={{ ariaHidden: true }} />
+              <Icon
+                icon="it-chevron-left"
+                style={{ ariaHidden: true }}
+                color="primary"
+              />
+
               <span className="sr-only">
                 {intl.formatMessage(messages.prevPage)}
               </span>
@@ -81,7 +87,11 @@ class PaginationItem extends Component {
           )}
           {type === 'nextItem' && (
             <>
-              <Icon icon="it-chevron-right" style={{ ariaHidden: true }} />
+              <Icon
+                icon="it-chevron-right"
+                style={{ ariaHidden: true }}
+                color="primary"
+              />
               <span className="sr-only">
                 {intl.formatMessage(messages.nextPage)}
               </span>
@@ -95,7 +105,6 @@ class PaginationItem extends Component {
               </span>
             </>
           )}
-
           {['prevItem', 'nextItem', 'ellipsisItem'].indexOf(type) < 0 &&
             children}
         </PagerLink>
