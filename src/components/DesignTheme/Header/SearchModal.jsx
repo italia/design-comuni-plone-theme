@@ -19,14 +19,16 @@ import {
   Label,
   Toggle,
 } from 'design-react-kit/dist/design-react-kit';
-import { defineMessages, injectIntl } from 'react-intl';
+import { defineMessages, useIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import mapValues from 'lodash/mapValues';
 import toPairs from 'lodash/toPairs';
 import fromPairs from 'lodash/fromPairs';
 import cx from 'classnames';
 import moment from 'moment';
 
+import { updateSearchFilters } from '~/actions';
 import Checkbox from '../../Checkbox';
 
 const messages = defineMessages({
@@ -161,14 +163,16 @@ export const updateGroupCheckedStatus = (group, checked) =>
 
 const defaultOptions = {
   activeContent: false,
-  dateStart: null,
-  dateEnd: null,
+  dateStart: undefined,
+  dateEnd: undefined,
 };
 
-const SearchModal = ({ closeModal, show, intl }) => {
+const SearchModal = ({ closeModal, show }) => {
+  const intl = useIntl();
+  const dispatch = useDispatch();
   const [advancedSearch, setAdvancedSearch] = useState(false);
   const [advancedTab, setAdvancedTab] = useState('sections');
-  const [searchText, setSearchText] = useState('');
+  const [searchableText, setSearchableText] = useState('');
   const [sections, setSections] = useState({
     amministrazione: {},
     servizi: {},
@@ -246,6 +250,33 @@ const SearchModal = ({ closeModal, show, intl }) => {
   const submitSearch = () => {
     setAdvancedSearch(false);
     closeModal();
+    const activeSections = Object.keys(sections).reduce((secAcc, secKey) => {
+      const sec = Object.keys(sections[secKey]).reduce((acc, section) => {
+        if (sections[secKey][section].value)
+          return { ...acc, [section]: sections[secKey][section] };
+        return acc;
+      }, {});
+
+      if (Object.values(sec).length > 0) return { ...secAcc, [secKey]: sec };
+      return secAcc;
+    }, {});
+    const activeTopics = Object.keys(topics).reduce((acc, topic) => {
+      if (topics[topic].value) return { ...acc, [topic]: topics[topic] };
+      return acc;
+    }, {});
+    const activeOptions = Object.keys(options).reduce((acc, opt) => {
+      if (!!options[opt]) return { ...acc, [opt]: options[opt] };
+      return acc;
+    }, {});
+
+    dispatch(
+      updateSearchFilters({
+        searchableText,
+        sections: activeSections,
+        topics: activeTopics,
+        options: activeOptions,
+      }),
+    );
   };
 
   useEffect(() => {
@@ -361,8 +392,8 @@ const SearchModal = ({ closeModal, show, intl }) => {
                     <input
                       id="search-text"
                       type="text"
-                      value={searchText}
-                      onChange={e => setSearchText(e.target.value)}
+                      value={searchableText}
+                      onChange={e => setSearchableText(e.target.value)}
                       className="form-control"
                       placeholder={intl.formatMessage(messages.searchLabel)}
                       aria-label={intl.formatMessage(messages.searchLabel)}
@@ -744,4 +775,4 @@ const SearchModal = ({ closeModal, show, intl }) => {
   );
 };
 
-export default injectIntl(SearchModal);
+export default SearchModal;

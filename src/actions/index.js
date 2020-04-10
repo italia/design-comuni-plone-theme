@@ -10,3 +10,7 @@
  *   searchContent,
  * };
  */
+
+import { updateSearchFilters } from './updateSearchFilters';
+
+export { updateSearchFilters };
