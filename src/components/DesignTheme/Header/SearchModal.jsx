@@ -20,6 +20,7 @@ import {
   Toggle,
 } from 'design-react-kit/dist/design-react-kit';
 import { defineMessages, injectIntl } from 'react-intl';
+import { Link } from 'react-router-dom';
 import mapValues from 'lodash/mapValues';
 import toPairs from 'lodash/toPairs';
 import fromPairs from 'lodash/fromPairs';
@@ -242,6 +243,11 @@ const SearchModal = ({ closeModal, show, intl }) => {
   const setOptionValue = (optId, value) =>
     setOptions(prevOptions => ({ ...prevOptions, [optId]: value }));
 
+  const submitSearch = () => {
+    setAdvancedSearch(false);
+    closeModal();
+  };
+
   useEffect(() => {
     // TODO Fetch real data here
     setSections({
@@ -299,7 +305,12 @@ const SearchModal = ({ closeModal, show, intl }) => {
   }, []);
 
   return (
-    <Modal id="search-modal" isOpen={show} toggle={closeModal}>
+    <Modal
+      wrapClassName="public-ui"
+      id="search-modal"
+      isOpen={show}
+      toggle={closeModal}
+    >
       <ModalHeader toggle={closeModal}>
         <Container>
           <div className="d-flex align-items-center">
@@ -328,15 +339,15 @@ const SearchModal = ({ closeModal, show, intl }) => {
                 advancedSearch ? messages.filters : messages.search,
               )}
             </p>
-            <Button
+            <Link
+              to="/search"
+              className="ml-auto btn btn-outline-primary text-capitalize"
               style={{ visibility: advancedSearch ? 'visible' : 'hidden' }}
-              color="primary"
-              outline
-              className="ml-auto"
               title={intl.formatMessage(messages.confirmSearch)}
+              onClick={submitSearch}
             >
               {intl.formatMessage(messages.confirmSearch)}
-            </Button>
+            </Link>
           </div>
         </Container>
       </ModalHeader>
@@ -358,14 +369,15 @@ const SearchModal = ({ closeModal, show, intl }) => {
                       aria-describedby="search-button"
                     />
                     <div className="input-group-append">
-                      <button
+                      <Link
+                        to="/search"
+                        onClick={submitSearch}
                         className="btn btn-link"
-                        type="button"
                         title={intl.formatMessage(messages.search)}
                         id="search-button"
                       >
                         <Icon icon="it-search" aria-hidden={true} size="sm" />
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
