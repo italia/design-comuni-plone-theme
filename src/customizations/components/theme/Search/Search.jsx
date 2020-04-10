@@ -26,8 +26,9 @@ import {
   Icon,
   Button,
 } from 'design-react-kit/dist/design-react-kit';
-import { Pagination } from '@design/components/DesignTheme';
-import { Checkbox, TextInput } from '@design/components';
+import { Pagination, SearchSections } from '@design/components/DesignTheme';
+import { TextInput } from '@design/components';
+
 //import { Link } from 'react-router-dom';
 
 const messages = defineMessages({
@@ -257,7 +258,7 @@ class Search extends Component {
                   <TextInput
                     id="searchableText"
                     label={intl.formatMessage(messages.searchSite)}
-                    value={state.filters.searchableText}
+                    value={state.filters.searchableText || ''}
                     onChange={(id, value) => {
                       this.changeFilter('searchableText', value);
                     }}
@@ -337,24 +338,13 @@ class Search extends Component {
                   </h6>
 
                   <div className="form-check mt-4">
-                    {this.sections.map(section => (
-                      <div key={section['@id']}>
-                        <Input
-                          id={section['@id']}
-                          type="checkbox"
-                          defaultChecked={
-                            state.filters.sections.indexOf(section['@id']) >= 0
-                          }
-                          onChange={e => {
-                            console.log(e.target.id);
-                            console.log(e.currentTarget.id);
-                            // toggleFilter("sections", e.target.value);
-                          }}
-                        />
-
-                        <Label for={section['@id']}>{section.title}</Label>
-                      </div>
-                    ))}
+                    <SearchSections
+                      checkedGroups={this.state.filters.sections}
+                      onChange={value => {
+                        this.changeFilter('sections', value);
+                      }}
+                      toggleGroups={true}
+                    />
                   </div>
                 </div>
 

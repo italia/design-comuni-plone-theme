@@ -13,3 +13,4 @@ import LanguageSelector from './DesignTheme/LanguageSelector/LanguageSelector';
 
 export Checkbox from './Checkbox.jsx';
 export TextInput from './TextInput.jsx';
+export SearchUtils from './DesignTheme/Search/utils.js';
