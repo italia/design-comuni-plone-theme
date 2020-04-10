@@ -10,3 +10,6 @@ import LanguageSelector from './DesignTheme/LanguageSelector/LanguageSelector';
  *   Footer,
  * };
  */
+
+export Checkbox from './Checkbox.jsx';
+export TextInput from './TextInput.jsx';

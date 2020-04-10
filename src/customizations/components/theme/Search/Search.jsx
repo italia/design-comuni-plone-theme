@@ -23,14 +23,21 @@ import {
   Card,
   CardBody,
   CardCategory,
+  Icon,
+  Button,
 } from 'design-react-kit/dist/design-react-kit';
 import { Pagination } from '@design/components/DesignTheme';
+import { Checkbox, TextInput } from '@design/components';
 //import { Link } from 'react-router-dom';
 
 const messages = defineMessages({
   searchResults: {
     id: 'Search results',
     defaultMessage: 'Risultati della ricerca',
+  },
+  searchSite: {
+    id: 'Search site',
+    defaultMessage: 'Cerca nel sito',
   },
   sections: {
     id: 'sections',
@@ -99,11 +106,16 @@ class Search extends Component {
 
   constructor(props) {
     super(props);
+
     this.state = {
       currentPage: 1,
       collapseFilters: true,
       collapseTopics: true,
-      filters: { sections: [], topics: [] },
+      filters: {
+        sections: [],
+        topics: [],
+        searchableText: props.searchableText,
+      },
     };
   }
 
@@ -192,6 +204,36 @@ class Search extends Component {
     },
   ];
 
+  toggleFilter = (filter, value) => {
+    this.setState(prevState => {
+      let filterValue = prevState.filters[filter];
+      const i = filterValue.indexOf(value);
+      if (i >= 0) {
+        filterValue = filterValue.splice(i, 1);
+      } else {
+        filterValue.push(value);
+      }
+
+      return {
+        filters: {
+          ...prevState.filters,
+          [filter]: filterValue,
+        },
+      };
+    });
+  };
+
+  changeFilter = (filter, value) => {
+    this.setState(prevState => {
+      return {
+        filters: {
+          ...prevState.filters,
+          [filter]: value,
+        },
+      };
+    });
+  };
+
   /**
    * Render method.
    * @method render
@@ -207,24 +249,33 @@ class Search extends Component {
             <Col>
               <Row>
                 <Col className="py-3 py-lg-5">
-                  <h1>
-                    {this.props.searchableText ? (
-                      <FormattedMessage
-                        id="Search results for {term}"
-                        defaultMessage="Risultati della ricerca per {term}"
-                        values={{
-                          term: <em>{this.props.searchableText}</em>,
-                        }}
-                      />
-                    ) : (
-                      <FormattedMessage
-                        id="Search results"
-                        defaultMessage="Risultati della ricerca"
-                      />
-                    )}
-                  </h1>
+                  <h1>{intl.formatMessage(messages.searchResults)}</h1>
                 </Col>
               </Row>
+              <Row>
+                <Col>
+                  <TextInput
+                    id="searchableText"
+                    label={intl.formatMessage(messages.searchSite)}
+                    value={state.filters.searchableText}
+                    onChange={(id, value) => {
+                      this.changeFilter('searchableText', value);
+                    }}
+                    size="lg"
+                    prepend={
+                      <Button icon tag="button" color="link" size="xs">
+                        <Icon
+                          color=""
+                          icon="it-search"
+                          padding={false}
+                          size="lg"
+                        />
+                      </Button>
+                    }
+                  />
+                </Col>
+              </Row>
+
               <div className="d-block d-lg-none d-xl-none">
                 <div className="row pb-3">
                   <div className="col-6">
@@ -269,8 +320,12 @@ class Search extends Component {
               </div>
             </Col>
           </Row>
-          <Row className="border-top">
+
+          <Row>
+            {/* className="border-top" */}
+
             <aside className="col-lg-3 py-lg-5">
+              <div className="pr-4"></div>
               <Collapse
                 isOpen={!state.collapseFilters}
                 className="d-lg-block d-xl-block"
@@ -283,17 +338,20 @@ class Search extends Component {
 
                   <div className="form-check mt-4">
                     {this.sections.map(section => (
-                      <div>
+                      <div key={section['@id']}>
                         <Input
                           id={section['@id']}
                           type="checkbox"
                           defaultChecked={
                             state.filters.sections.indexOf(section['@id']) >= 0
                           }
-                          onChange={(a, b, c) => {
-                            console.log(a, b, c);
+                          onChange={e => {
+                            console.log(e.target.id);
+                            console.log(e.currentTarget.id);
+                            // toggleFilter("sections", e.target.value);
                           }}
                         />
+
                         <Label for={section['@id']}>{section.title}</Label>
                       </div>
                     ))}
