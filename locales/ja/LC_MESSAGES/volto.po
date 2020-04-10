@@ -82,10 +82,6 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
-#: components/DesignTheme/Blocks/Listing/NewsTemplate
-msgid "Keep reading"
-msgstr ""
-
 #: components/DesignTheme/Footer/FooterSmall
 msgid "Mappa del sito"
 msgstr ""
@@ -119,8 +115,15 @@ msgstr ""
 msgid "Required"
 msgstr ""
 
+#: addons/volto-rss-block/src/Block/RssSidebar
+msgid "RssFeed"
+msgstr ""
+
+#: addons/volto-rss-block/src/Block/RssSidebar
+msgid "RssFeedItemNumber"
+msgstr ""
+
 #: components/DesignTheme/Header/HeaderCenter
-#: components/DesignTheme/SocialLinks/SocialLinks
 msgid "Seguici su"
 msgstr ""
 
@@ -134,6 +137,10 @@ msgstr ""
 
 #: components/DesignTheme/Footer/FooterInfos
 msgid "Subscribe"
+msgstr ""
+
+#: addons/volto-rss-block/src/Block/TemplateWidget
+msgid "Template"
 msgstr ""
 
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
@@ -163,6 +170,22 @@ msgstr ""
 msgid "actions"
 msgstr ""
 
+#: components/DesignTheme/Header/SearchModal
+msgid "allFilters"
+msgstr ""
+
+#: components/DesignTheme/Header/SearchModal
+msgid "allOptions"
+msgstr ""
+
+#: components/DesignTheme/Header/SearchModal
+msgid "allTopics"
+msgstr ""
+
+#: components/DesignTheme/Header/SearchModal
+msgid "amministrazione"
+msgstr ""
+
 #: components/DesignTheme/View/UOView
 msgid "assessore_riferimento"
 msgstr ""
@@ -175,12 +198,28 @@ msgstr ""
 msgid "attachments"
 msgstr ""
 
+#: components/DesignTheme/Header/SearchModal
+msgid "backToSearch"
+msgstr ""
+
 #: components/DesignTheme/View/UOView
 msgid "box_aiuto"
 msgstr ""
 
 #: customizations/components/theme/Navigation/Navigation
 msgid "close"
+msgstr ""
+
+#: components/DesignTheme/Header/SearchModal
+msgid "closeSearch"
+msgstr ""
+
+#: components/DesignTheme/Header/SearchModal
+msgid "confirmSearch"
+msgstr ""
+
+#: addons/volto-cookie-banner/src/CookieBannerContainer
+msgid "cookie_banner_button"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/CuredBy
@@ -199,6 +238,10 @@ msgstr ""
 msgid "details"
 msgstr ""
 
+#: components/DesignTheme/Header/SearchModal
+msgid "documenti"
+msgstr ""
+
 #: components/DesignTheme/View/Commons/Actions
 msgid "download"
 msgstr ""
@@ -209,6 +252,18 @@ msgstr ""
 
 #: components/DesignTheme/View/Commons/PageHeader
 msgid "expire"
+msgstr ""
+
+#: addons/volto-rss-block/src/Block/Edit
+msgid "feed_not_set"
+msgstr ""
+
+#: addons/volto-rss-block/src/Block/Edit
+msgid "feed_set"
+msgstr ""
+
+#: components/DesignTheme/Header/SearchModal
+msgid "filters"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Gallery
@@ -239,9 +294,53 @@ msgstr ""
 msgid "modified"
 msgstr ""
 
+#: addons/volto-multilingual-widget/src/index
+msgid "multilingual_text_placeholder"
+msgstr ""
+
 #: components/DesignTheme/View/NewsItemView
 #: components/DesignTheme/View/UOView
 msgid "notizie_in_evidenza"
+msgstr ""
+
+#: components/DesignTheme/Header/SearchModal
+msgid "novita"
+msgstr ""
+
+#: components/DesignTheme/Header/SearchModal
+msgid "optionActiveContentButton"
+msgstr ""
+
+#: components/DesignTheme/Header/SearchModal
+msgid "optionActiveContentInfo"
+msgstr ""
+
+#: components/DesignTheme/Header/SearchModal
+msgid "optionActiveContentLabel"
+msgstr ""
+
+#: components/DesignTheme/Header/SearchModal
+msgid "optionDateEnd"
+msgstr ""
+
+#: components/DesignTheme/Header/SearchModal
+msgid "optionDateEndButton"
+msgstr ""
+
+#: components/DesignTheme/Header/SearchModal
+msgid "optionDatePlaceholder"
+msgstr ""
+
+#: components/DesignTheme/Header/SearchModal
+msgid "optionDateStart"
+msgstr ""
+
+#: components/DesignTheme/Header/SearchModal
+msgid "optionDateStartButton"
+msgstr ""
+
+#: components/DesignTheme/Header/SearchModal
+msgid "options"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Metadata
@@ -269,6 +368,14 @@ msgstr ""
 msgid "related_items"
 msgstr ""
 
+#: components/DesignTheme/Header/SearchModal
+msgid "removeOption"
+msgstr ""
+
+#: components/DesignTheme/Header/SearchModal
+msgid "removeTopic"
+msgstr ""
+
 #: components/DesignTheme/View/UOView
 msgid "responsabile"
 msgstr ""
@@ -277,12 +384,48 @@ msgstr ""
 msgid "rights"
 msgstr ""
 
+#: addons/volto-rss-block/src/Templates/DefaultRssTemplate
+#: components/DesignTheme/Blocks/RssBlock/CardWithImageRssTemplate
+#: components/DesignTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
+msgid "rss_no_results"
+msgstr ""
+
+#: addons/volto-rss-block/src/Templates/DefaultRssTemplate
+#: components/DesignTheme/Blocks/RssBlock/CardWithImageRssTemplate
+#: components/DesignTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
+msgid "rss_read_more"
+msgstr ""
+
+#: components/DesignTheme/Header/SearchModal
+msgid "search"
+msgstr ""
+
+#: components/DesignTheme/Header/SearchModal
+msgid "searchLabel"
+msgstr ""
+
+#: components/DesignTheme/Header/SearchModal
+msgid "sections"
+msgstr ""
+
 #: components/DesignTheme/View/UOView
 msgid "sedi"
 msgstr ""
 
+#: addons/volto-rss-block/src/Block/RssSidebar
+msgid "selectRSSOptions"
+msgstr ""
+
+#: components/DesignTheme/Header/SearchModal
+msgid "servizi"
+msgstr ""
+
 #: components/DesignTheme/View/UOView
 msgid "servizi_offerti"
+msgstr ""
+
+#: addons/volto-rss-block/src/Block/RssSidebar
+msgid "setrss"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/PageHeader
@@ -298,10 +441,15 @@ msgstr ""
 msgid "tipologia_organizzazione"
 msgstr ""
 
+#: components/DesignTheme/Header/SearchModal
 #: components/DesignTheme/View/Commons/PageHeader
 msgid "topics"
 msgstr ""
 
 #: components/DesignTheme/View/UOView
 msgid "ulteriori_informazioni"
+msgstr ""
+
+#: addons/volto-multilingual-widget/src/index
+msgid "value_for_lang"
 msgstr ""
