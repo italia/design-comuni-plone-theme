@@ -128,6 +128,7 @@ export default function SearchTopics({
   );
   return (
     <>
+      [TODO sistemare topic collapsable]
       {drawTopics[topic_chunks[0]]}
       {collapsable && topic_chunks[1] && (
         <>
