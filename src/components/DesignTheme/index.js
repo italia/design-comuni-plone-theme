@@ -25,6 +25,7 @@ export FooterNavigation from './Footer/FooterNavigation';
 export FooterSmall from './Footer/FooterSmall';
 export Pagination from './Pagination/Pagination';
 export SearchSections from './Search/SearchSections';
+export SearchTopics from './Search/SearchTopics';
 export CharCounterDescriptionWidget from './manage/Widgets/CharCounterDescriptionWidget';
 export NewsItemView from './View/NewsItemView';
 export UOView from './View/UOView';

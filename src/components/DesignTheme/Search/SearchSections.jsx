@@ -79,7 +79,7 @@ export default function SearchSections({
   };
 
   useEffect(() => {
-    console.log('useffect generic');
+    // TODO Fetch real data here
     setSections({
       amministrazione: {
         'organi-politici': {
@@ -122,6 +122,7 @@ export default function SearchSections({
         },
       },
     });
+    // TODO fare il merge di section con defaultCheckedGroup
   }, []);
 
   useEffect(() => {

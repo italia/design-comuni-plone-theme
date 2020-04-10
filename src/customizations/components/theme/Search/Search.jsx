@@ -26,7 +26,11 @@ import {
   Icon,
   Button,
 } from 'design-react-kit/dist/design-react-kit';
-import { Pagination, SearchSections } from '@design/components/DesignTheme';
+import {
+  Pagination,
+  SearchSections,
+  SearchTopics,
+} from '@design/components/DesignTheme';
 import { TextInput } from '@design/components';
 
 //import { Link } from 'react-router-dom';
@@ -47,10 +51,6 @@ const messages = defineMessages({
   topics: {
     id: 'topics',
     defaultMessage: 'Argomenti',
-  },
-  showAll: {
-    id: 'Show all',
-    defaultMessage: 'Mostra tutto',
   },
 });
 
@@ -339,7 +339,7 @@ class Search extends Component {
 
                   <div className="form-check mt-4">
                     <SearchSections
-                      checkedGroups={this.state.filters.sections}
+                      defaultCheckedGroups={this.state.filters.sections}
                       onChange={value => {
                         this.changeFilter('sections', value);
                       }}
@@ -353,144 +353,13 @@ class Search extends Component {
                     {intl.formatMessage(messages.topics)}
                   </h6>
                   <div className="form-check mt-4">
-                    <div>
-                      <Input
-                        id="checkbox5"
-                        type="checkbox"
-                        defaultChecked={false}
-                      />
-                      <Label for="checkbox5">Agevolazioni per la casa</Label>
-                    </div>
-                    <div>
-                      <Input
-                        id="checkbox6"
-                        type="checkbox"
-                        defaultChecked={false}
-                      />
-                      <Label for="checkbox6">Animali</Label>
-                    </div>
-                    <div>
-                      <Input
-                        id="checkbox7"
-                        type="checkbox"
-                        defaultChecked={false}
-                      />
-                      <Label for="checkbox7">Anziani</Label>
-                    </div>
-                    <div>
-                      <Input
-                        id="checkbox8"
-                        type="checkbox"
-                        defaultChecked={false}
-                      />
-                      <Label for="checkbox8">Assistenza e inclusione</Label>
-                    </div>
-                    <div>
-                      <Input
-                        id="checkbox9"
-                        type="checkbox"
-                        defaultChecked={false}
-                      />
-                      <Label for="checkbox9">Associazioni</Label>
-                    </div>
-                    <div>
-                      <Input
-                        id="checkbox10"
-                        type="checkbox"
-                        defaultChecked={false}
-                      />
-                      <Label for="checkbox10">Bambini e ragazzi</Label>
-                    </div>
-                    <div>
-                      <Input
-                        id="checkbox11"
-                        type="checkbox"
-                        defaultChecked={false}
-                      />
-                      <Label for="checkbox11">Cantieri e progetti</Label>
-                    </div>
-                    <div>
-                      <Input
-                        id="checkbox12"
-                        type="checkbox"
-                        defaultChecked={false}
-                      />
-                      <Label for="checkbox12">Comune</Label>
-                    </div>
-                    <div>
-                      <Input
-                        id="checkbox13"
-                        type="checkbox"
-                        defaultChecked={false}
-                      />
-                      <Label for="checkbox13">Comunicare con il Comune</Label>
-                    </div>
-                    <div>
-                      <Input
-                        id="checkbox14"
-                        type="checkbox"
-                        defaultChecked={false}
-                      />
-                      <Label for="checkbox14">Corsi e tempo libero</Label>
-                    </div>
-
-                    <Collapse
-                      isOpen={!state.collapseTopics}
-                      id="collapseTopics"
-                    >
-                      <div>
-                        <Input
-                          id="checkbox15"
-                          type="checkbox"
-                          defaultChecked={false}
-                        />
-                        <Label for="checkbox15">
-                          Costruire e ristrutturare
-                        </Label>
-                      </div>
-                      <div>
-                        <Input
-                          id="checkbox16"
-                          type="checkbox"
-                          defaultChecked={false}
-                        />
-                        <Label for="checkbox16">Cultura</Label>
-                      </div>
-                      <div>
-                        <Input
-                          id="checkbox17"
-                          type="checkbox"
-                          defaultChecked={false}
-                        />
-                        <Label for="checkbox17">Edilizia</Label>
-                      </div>
-                      <div>
-                        <Input
-                          id="checkbox18"
-                          type="checkbox"
-                          defaultChecked={false}
-                        />
-                        <Label for="checkbox18">Famiglia</Label>
-                      </div>
-                    </Collapse>
-                  </div>
-                  <div className="mt-4">
-                    <a
-                      onClick={e => {
-                        e.preventDefault();
-                        this.setState({
-                          collapseTopics: !this.state.collapseTopics,
-                        });
+                    <SearchTopics
+                      onChange={value => {
+                        this.changeFilter('topics', value);
                       }}
-                      className="font-weight-bold"
-                      data-toggle="collapse"
-                      href="#collapseTopics"
-                      role="button"
-                      aria-expanded="false"
-                      aria-controls="collapseList"
-                    >
-                      {intl.formatMessage(messages.showAll)}
-                    </a>
+                      defaultCheckedTopics={this.state.filters.topics}
+                      collapsable={true}
+                    />
                   </div>
                 </div>
               </Collapse>
