@@ -81,7 +81,10 @@ export default function SearchTopics({
       },
     });
 
-    //TODO fare il merge di topics con defaultSelectedTopics
+    //set default checked topics
+    Object.keys(defaultCheckedTopics).map(key => {
+      setTopicChecked(key, true);
+    });
   }, []);
 
   useEffect(() => {

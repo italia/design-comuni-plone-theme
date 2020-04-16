@@ -155,7 +155,8 @@ export default function SearchSections({
               check
               for={groupId}
               tag="label"
-              className={cx('group-head text-primary', {
+              className={cx('group-head', {
+                'text-primary': !toggleGroups,
                 'font-weight-bold': !toggleGroups,
                 indeterminate: SearchUtils.isGroupIndeterminate(
                   sections[groupId],
