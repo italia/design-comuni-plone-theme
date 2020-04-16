@@ -385,17 +385,24 @@ class Search extends Component {
                   <Col xs={6}>
                     <div className="float-right">
                       <Label for="filter-field">
-                        <small className="mr-3">Ordina per</small>
+                        <small className="mr-3">
+                          <FormattedMessage
+                            id="Order by"
+                            defaultMessage="Ordina per"
+                          />
+                        </small>
                       </Label>
                       <select name="filter" id="filter-field">
                         <option value="0">Rilevanza</option>
                       </select>
+                      [TODO] Fare la select
                     </div>
                   </Col>
                 </Row>
               </div>
               <Row>
                 <Col md={4}>
+                  [TODO] ciclo sui risultati. Ogni risultato è una card
                   <Card teaser noWrapper={true}>
                     <CardBody>
                       <CardCategory href={'#'}>Servizi</CardCategory>
