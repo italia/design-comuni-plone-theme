@@ -97,10 +97,29 @@ export default function SearchTopics({
       },
     }));
   };
-  const topic_chunks =
-    topics.length > 10 && collapsable
-      ? [topics.slice(0, 10), topics.slice(10, topics.length)]
-      : [topics];
+
+  const getTopicChunks = topics => {
+    const size = Object.keys(topics).length;
+    if (size > 10) {
+      let visibleTopics = {};
+      let hidedTopics = {};
+      const keys_visible = Object.keys(topics).slice(0, 10);
+      const keys_hide = Object.keys(topics).slice(10, size);
+
+      keys_visible.map(key => {
+        visibleTopics[key] = topics[key];
+      });
+
+      keys_hide.map(key => {
+        hidedTopics[key] = topics[key];
+      });
+
+      return [visibleTopics, hidedTopics];
+    }
+    return [topics];
+  };
+
+  const topic_chunks = getTopicChunks(topics);
 
   const drawTopics = topics => (
     <>
@@ -128,12 +147,11 @@ export default function SearchTopics({
   );
   return (
     <>
-      [TODO sistemare topic collapsable]
-      {drawTopics[topic_chunks[0]]}
+      {drawTopics(topic_chunks[0])}
       {collapsable && topic_chunks[1] && (
         <>
           <Collapse isOpen={!collapse} id="collapseTopics">
-            {drawTopics[topic_chunks[1]]}
+            {drawTopics(topic_chunks[1])}
           </Collapse>
           <div className="mt-4">
             <a
