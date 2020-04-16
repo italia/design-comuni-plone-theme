@@ -56,6 +56,7 @@ export default function SearchSections({
   });
 
   const setSectionFilterChecked = (groupId, filterId, checked) => {
+    console.log('setSectionFilterChecked', groupId, filterId);
     setSections(prevSections => ({
       ...prevSections,
       [groupId]: {
@@ -69,6 +70,7 @@ export default function SearchSections({
   };
 
   const setGroupChecked = (groupId, checked) => {
+    console.log('setGroupChecked', groupId);
     setSections(prevSections => ({
       ...prevSections,
       [groupId]: SearchUtils.updateGroupCheckedStatus(
@@ -76,6 +78,7 @@ export default function SearchSections({
         checked,
       ),
     }));
+    console.log(sections);
   };
 
   useEffect(() => {
@@ -122,7 +125,15 @@ export default function SearchSections({
         },
       },
     });
-    // TODO fare il merge di section con defaultCheckedGroup
+
+    //set default checked groups
+    Object.keys(defaultCheckedGroups).map(groupId => {
+      const group = defaultCheckedGroups[groupId];
+      Object.keys(group).map(sectionId => {
+        const section = group[sectionId];
+        setSectionFilterChecked(groupId, sectionId, section.value);
+      });
+    });
   }, []);
 
   useEffect(() => {
