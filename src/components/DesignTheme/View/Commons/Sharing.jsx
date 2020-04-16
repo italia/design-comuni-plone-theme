@@ -1,5 +1,6 @@
 import { defineMessages, useIntl } from 'react-intl';
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 import {
   UncontrolledDropdown,
@@ -30,29 +31,25 @@ const Sharing = props => {
     {
       id: 'facebook',
       title: 'Facebook',
-      url: 'https://www.facebook.com/sharer/sharer.php?u=' + props.url,
+      url: `https://www.facebook.com/sharer/sharer.php?u=${props.url}`,
       icon: 'it-facebook',
     },
     {
       id: 'twitter',
       title: 'Twitter',
-      url: 'https://twitter.com/intent/tweet?url=' + props.url,
+      url: `https://twitter.com/intent/tweet?url=${props.url}`,
       icon: 'it-twitter',
     },
     {
       id: 'linkedin',
       title: 'Linkedin',
-      url:
-        'https://www.linkedin.com/shareArticle?mini=true&url=' +
-        props.url +
-        '&title=' +
-        props.title,
+      url: `https://www.linkedin.com/shareArticle?mini=true&url=${props.url}&title=${props.title}`,
       icon: 'it-linkedin',
     },
     {
       id: 'whatsapp',
       title: 'Whatsapp',
-      url: 'https://api.whatsapp.com/send?phone=&text=' + props.url,
+      url: `https://api.whatsapp.com/send?phone=&text=${props.url}`,
       icon: 'it-whatsapp',
     },
   ];
@@ -98,3 +95,10 @@ const Sharing = props => {
   );
 };
 export default Sharing;
+
+Sharing.propTypes = {
+  params: PropTypes.shape({
+    title: PropTypes.string,
+    url: PropTypes.string,
+  }),
+};

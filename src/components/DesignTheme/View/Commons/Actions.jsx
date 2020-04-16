@@ -7,7 +7,9 @@ import {
   LinkList,
   LinkListItem,
   Icon,
+  Button,
 } from 'design-react-kit/dist/design-react-kit';
+import PropTypes from 'prop-types';
 
 /**
  * Actions view component class.
@@ -43,14 +45,14 @@ const Actions = props => {
       id: 'print',
       attributes: null,
       title: intl.formatMessage(messages.print),
-      url: 'javascript:this.print()',
+      url: '#',
       icon: 'it-print',
     },
     {
       id: 'mailto',
       attributes: null,
       title: intl.formatMessage(messages.mailto),
-      url: 'mailto:?subject=' + props.title + '&body=' + props.url,
+      url: `mailto:?subject=${props.title}&body=${props.url}`,
       icon: 'it-mail',
     },
   ];
@@ -75,23 +77,51 @@ const Actions = props => {
       </DropdownToggle>
       <DropdownMenu>
         <LinkList>
-          {socials.map((item, i) => (
-            <LinkListItem href={item.url} key={item.id}>
-              <Icon
-                className={undefined}
-                color=""
-                icon={item.icon}
-                padding={false}
-                size=""
-                alt={item.title}
-                title={item.title}
-              />
-              <span>{item.title}</span>
-            </LinkListItem>
-          ))}
+          {socials.map((item, i) => {
+            const icon = (
+              <>
+                <Icon
+                  className={undefined}
+                  color=""
+                  icon={item.icon}
+                  padding={false}
+                  size=""
+                  alt={item.title}
+                  title={item.title}
+                />
+                <span>{item.title}</span>
+              </>
+            );
+            return item.id === 'print' ? (
+              <li key={item.id}>
+                <Button
+                  color="link"
+                  icon={false}
+                  tag="button"
+                  onClick={e => {
+                    e.preventDefault();
+                    return window.print();
+                  }}
+                >
+                  {icon}
+                </Button>
+              </li>
+            ) : (
+              <LinkListItem href={item.url} key={item.id}>
+                {icon}
+              </LinkListItem>
+            );
+          })}
         </LinkList>
       </DropdownMenu>
     </UncontrolledDropdown>
   );
 };
 export default Actions;
+
+Actions.propTypes = {
+  params: PropTypes.shape({
+    title: PropTypes.string,
+    url: PropTypes.string,
+  }),
+};

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 /**
  * RichTextArticle view component class.
@@ -18,3 +19,11 @@ const RichTextArticle = params => {
   );
 };
 export default RichTextArticle;
+
+RichTextArticle.propTypes = {
+  params: PropTypes.shape({
+    title: PropTypes.string,
+    content: PropTypes.string,
+    tag_id: PropTypes.string,
+  }),
+};

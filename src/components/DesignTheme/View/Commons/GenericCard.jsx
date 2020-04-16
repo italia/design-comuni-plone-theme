@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import PropTypes from 'prop-types';
 
 /**
  * GenericCard view component class.
@@ -10,8 +11,8 @@ import { flattenToAppURL } from '@plone/volto/helpers';
  * @params {object} location: object.
  * @returns {string} Markup of the component.
  */
-const GenericCard = ({ item, showimage, image_field, content }) => {
-  const key = 'generic_card_' + item['@id'];
+const GenericCard = ({ item, showimage, image_field }) => {
+  const key = `generic_card_${item['@id']}`;
   const url = flattenToAppURL(item['@id']);
   const locationContent = useSelector(state => state.content.subrequests);
   const dispatch = useDispatch();
@@ -19,11 +20,6 @@ const GenericCard = ({ item, showimage, image_field, content }) => {
     dispatch(getContent(url, null, key));
     return () => dispatch(resetContent(key));
   }, [dispatch, item, url, key]);
-  //let item_fo = null;
-
-  // if (key in locationContent) {
-  //   item_fo = locationContent[key].data;
-  // }
   const item_fo = locationContent[key]?.data;
   return item_fo ? (
     showimage && item_fo[image_field] ? (
@@ -62,3 +58,15 @@ const GenericCard = ({ item, showimage, image_field, content }) => {
 };
 
 export default GenericCard;
+
+GenericCard.propTypes = {
+  item: PropTypes.shape({
+    '@id': PropTypes.string,
+    '@type': PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string,
+    review_state: PropTypes.string,
+  }),
+  showimage: PropTypes.bool,
+  image_field: PropTypes.string,
+};

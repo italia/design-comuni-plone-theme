@@ -17,7 +17,7 @@ import { PageHeader } from './Commons';
 import { RichTextArticle } from './Commons';
 import { Metadata } from './Commons';
 import { readingTime } from './ViewUtils';
-import { NewsCard } from './Commons';
+import { RelatedNews } from './Commons';
 import { GenericCard } from './Commons';
 // import { getBaseUrl } from '@plone/volto/helpers';
 
@@ -40,7 +40,7 @@ const messages = defineMessages({
  */
 const NewsItemView = ({ content }) => {
   let readingtime = readingTime(
-    content.text.data + ' ' + content.title + ' ' + content.description,
+    `${content.text.data} ${content.title} ${content.description}`,
   );
   const intl = useIntl();
   return (
@@ -50,6 +50,8 @@ const NewsItemView = ({ content }) => {
           content={content}
           readingtime={readingtime}
           showreadingtime={true}
+          imageinheader={false}
+          imageinheader_field={null}
           showdates={true}
           showtopics={true}
           showtassonomiaargomenti={true}
@@ -84,7 +86,6 @@ const NewsItemView = ({ content }) => {
             )}
             {(content.a_cura_di || content.a_cura_di_persone) && (
               <CuredBy
-                content={content}
                 office={content.a_cura_di}
                 people={content.a_cura_di_persone}
               />
@@ -107,7 +108,7 @@ const NewsItemView = ({ content }) => {
                 <h4>{intl.formatMessage(messages.notizie_in_evidenza)}</h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.related_news.map((item, i) => (
-                    <NewsCard
+                    <RelatedNews
                       key={item['@id']}
                       item={item}
                       showimage={false}
@@ -129,7 +130,6 @@ const NewsItemView = ({ content }) => {
                       index={item['@id']}
                       item={item}
                       showimage={false}
-                      content={content}
                     />
                   ))}
                 </div>
@@ -151,7 +151,7 @@ const NewsItemView = ({ content }) => {
  */
 NewsItemView.propTypes = {
   content: PropTypes.shape({
-    title: PropTypes.string,
+    title: PropTypes.string.isRequired,
     subtitle: PropTypes.string,
     description: PropTypes.string,
     effective: PropTypes.string,
@@ -164,13 +164,25 @@ NewsItemView.propTypes = {
     items: PropTypes.array,
     a_cura_di: PropTypes.shape({
       title: PropTypes.string,
-    }),
+    }).isRequired,
     a_cura_di_persone: PropTypes.array,
     dataset: PropTypes.shape({
       data: PropTypes.string,
     }),
     modified: PropTypes.string,
     rights: PropTypes.string,
+    luoghi_notizia: PropTypes.array,
+    related_news: PropTypes.array,
+    tassonomia_argomenti: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        token: PropTypes.string,
+      }),
+    ),
+    tipologia_notizia: PropTypes.shape({
+      title: PropTypes.string,
+      token: PropTypes.string,
+    }).isRequired,
   }).isRequired,
 };
 

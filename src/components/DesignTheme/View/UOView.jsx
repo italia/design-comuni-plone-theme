@@ -7,7 +7,7 @@ import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
-
+import PropTypes from 'prop-types';
 import { WideImage } from './Commons';
 import { SideMenu } from './Commons';
 import { PageHeader } from './Commons';
@@ -16,7 +16,7 @@ import { OfficeCard } from './Commons';
 import { Attachments } from './Commons';
 import { Metadata } from './Commons';
 import { Venue } from './Commons';
-import { NewsCard } from './Commons';
+import { RelatedNews } from './Commons';
 import { GenericCard } from './Commons';
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 
@@ -82,6 +82,8 @@ const UOView = ({ content }) => {
           content={content}
           readingtime={null}
           showreadingtime={false}
+          imageinheader={false}
+          imageinheader_field={null}
           showdates={false}
           showtassonomiaargomenti={true}
         />
@@ -111,7 +113,7 @@ const UOView = ({ content }) => {
               <article id="sedi" className="it-page-section anchor-offset mt-5">
                 <h4>{intl.formatMessage(messages.sedi)}</h4>
                 {content.sedi.map((item, i) => (
-                  <Venue key={item['@id']} venue={item} content={content} />
+                  <Venue key={item['@id']} venue={item} />
                 ))}
               </article>
             )}
@@ -124,8 +126,7 @@ const UOView = ({ content }) => {
                   {intl.formatMessage(messages.tipologia_organizzazione)}
                 </h4>
                 <p className="text-serif">
-                  {' '}
-                  {content.tipologia_organizzazione.title}
+                  {` ${content.tipologia_organizzazione.title}`}
                 </p>
               </article>
             )}
@@ -149,7 +150,6 @@ const UOView = ({ content }) => {
                       item={item}
                       showimage={true}
                       image_field={'immagine'}
-                      content={content}
                     />
                   ))}
                 </div>
@@ -163,11 +163,7 @@ const UOView = ({ content }) => {
                 <h4>{intl.formatMessage(messages.legami_altre_strutture)}</h4>
                 <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.legami_con_altre_strutture.map((item, i) => (
-                    <OfficeCard
-                      key={item['@id']}
-                      office={item}
-                      content={content}
-                    />
+                    <OfficeCard key={item['@id']} office={item} />
                   ))}
                 </div>
               </article>
@@ -265,7 +261,7 @@ const UOView = ({ content }) => {
                 <h4>{intl.formatMessage(messages.notizie_in_evidenza)}</h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.notizie_collegate.map((item, i) => (
-                    <NewsCard
+                    <RelatedNews
                       index={item['@id']}
                       item={item}
                       showimage={false}
@@ -287,7 +283,6 @@ const UOView = ({ content }) => {
                       index={item['@id']}
                       item={item}
                       showimage={false}
-                      content={content}
                     />
                   ))}
                 </div>
@@ -302,3 +297,42 @@ const UOView = ({ content }) => {
 };
 
 export default UOView;
+
+UOView.propTypes = {
+  content: PropTypes.shape({
+    assessore_riferimento: PropTypes.array,
+    box_aiuto: PropTypes.shape({
+      data: PropTypes.string,
+    }).isRequired,
+    competenze: PropTypes.shape({
+      data: PropTypes.string,
+    }),
+    description: PropTypes.string,
+    geolocation: PropTypes.shape({
+      latitude: PropTypes.number,
+      longitude: PropTypes.number,
+    }),
+    immagine: PropTypes.shape({
+      download: PropTypes.string,
+    }),
+    legami_con_altre_strutture: PropTypes.array,
+    notizie_collegate: PropTypes.array,
+    persone_struttura: PropTypes.array,
+    responsabile: PropTypes.array,
+    sedi: PropTypes.array,
+    servizi_offerti: PropTypes.array,
+    tassonomia_argomenti: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        token: PropTypes.string,
+      }),
+    ),
+    tipologia_organizzazione: PropTypes.shape({
+      title: PropTypes.string,
+      token: PropTypes.string,
+    }).isRequired,
+    title: PropTypes.shape({
+      data: PropTypes.string,
+    }).isRequired,
+  }),
+};
