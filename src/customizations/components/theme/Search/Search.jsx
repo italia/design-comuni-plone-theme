@@ -9,6 +9,7 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { asyncConnect } from 'redux-connect';
 import { FormattedMessage, injectIntl, defineMessages } from 'react-intl';
+import cx from 'classnames';
 
 import qs from 'query-string';
 import { settings } from '~/config';
@@ -400,28 +401,35 @@ class Search extends Component {
                   </Col>
                 </Row>
               </div>
+              [TODO] ciclo sui risultati. Ogni risultato è una card
               <Row>
-                <Col md={4}>
-                  [TODO] ciclo sui risultati. Ogni risultato è una card
-                  <Card teaser noWrapper={true}>
-                    <CardBody>
-                      <CardCategory href={'#'}>Servizi</CardCategory>
+                {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(i => (
+                  <Col md={4}>
+                    <Card
+                      teaser
+                      noWrapper={true}
+                      className={cx('mt-3 mb-2 border-bottom-half', {
+                        'border-right border-light': i % 3 !== 2,
+                      })}
+                    >
+                      <CardBody>
+                        <CardCategory href={'#'}>Servizi</CardCategory>
 
-                      <h4 className="card-title">
-                        <a href="#">
-                          Scadenza TARI 2018: istruzioni per pagamento
-                        </a>
-                      </h4>
-                      <p className="card-text">
-                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur
-                        aut odit aut fugit, sed quia consequuntur magni dolores
-                        eos qui ratione.
-                      </p>
-                    </CardBody>
-                  </Card>
-                </Col>
+                        <h4 className="card-title">
+                          <a href="#">
+                            Scadenza TARI 2018: istruzioni per pagamento
+                          </a>
+                        </h4>
+                        <p className="card-text">
+                          Nemo enim ipsam voluptatem quia voluptas sit
+                          aspernatur aut odit aut fugit, sed quia consequuntur
+                          magni dolores eos qui ratione.
+                        </p>
+                      </CardBody>
+                    </Card>
+                  </Col>
+                ))}
               </Row>
-
               {this.props.search?.batching && (
                 <Pagination
                   activePage={this.state.currentPage}
