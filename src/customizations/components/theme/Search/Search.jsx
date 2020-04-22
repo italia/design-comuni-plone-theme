@@ -10,8 +10,8 @@ import { compose } from 'redux';
 import { asyncConnect } from 'redux-connect';
 import { FormattedMessage, injectIntl, defineMessages } from 'react-intl';
 import cx from 'classnames';
-
 import qs from 'query-string';
+
 import { settings } from '~/config';
 import { searchContent } from '@plone/volto/actions';
 import {
@@ -101,7 +101,7 @@ class Search extends Component {
    */
   static defaultProps = {
     items: [],
-    searchableText: null,
+    searchableText: '',
     subject: null,
     path: null,
   };
@@ -114,8 +114,9 @@ class Search extends Component {
       collapseFilters: true,
       collapseTopics: true,
       filters: {
-        sections: [],
-        topics: [],
+        sections: props.searchFilters?.sections ?? {},
+        topics: props.searchFilters?.topics ?? {},
+        options: props.searchFilters?.options ?? {},
         searchableText: props.searchableText,
       },
     };
@@ -141,6 +142,20 @@ class Search extends Component {
    * @returns {undefined}
    */
   UNSAFE_componentWillReceiveProps = nextProps => {
+    if (
+      JSON.stringify(nextProps.searchFilters) !==
+      JSON.stringify(this.props.searchFilters)
+    ) {
+      this.setState(prevState => ({
+        filters: {
+          ...prevState.filters,
+          sections: nextProps.searchFilters?.sections ?? {},
+          topics: nextProps.searchFilters?.topics ?? {},
+          options: nextProps.searchFilters?.options ?? {},
+        },
+      }));
+    }
+
     if (
       nextProps.searchableText !== this.props.searchableText ||
       nextProps.subject !== this.props.subject
@@ -557,6 +572,7 @@ export const __test__ = connect(
     subject: qs.parse(props.location.search).Subject,
     path: qs.parse(props.location.search).path,
     pathname: props.location.pathname,
+    searchFilters: state.searchFilters,
   }),
   { searchContent },
 )(Search);
@@ -570,6 +586,7 @@ export default compose(
       subject: qs.parse(props.location.search).Subject,
       path: qs.parse(props.location.search).path,
       pathname: props.location.pathname,
+      searchFilters: state.searchFilters,
     }),
     { searchContent },
   ),
