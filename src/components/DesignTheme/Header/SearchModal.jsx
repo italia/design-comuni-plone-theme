@@ -20,6 +20,7 @@ import {
   Toggle,
 } from 'design-react-kit/dist/design-react-kit';
 import { defineMessages, useIntl } from 'react-intl';
+import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import mapValues from 'lodash/mapValues';
@@ -168,7 +169,7 @@ const defaultOptions = {
   dateEnd: undefined,
 };
 
-const SearchModal = ({ closeModal, show }) => {
+const SearchModal = ({ closeModal, show, history }) => {
   const intl = useIntl();
   const dispatch = useDispatch();
   const [advancedSearch, setAdvancedSearch] = useState(false);
@@ -280,6 +281,21 @@ const SearchModal = ({ closeModal, show }) => {
     );
   };
 
+  const getSearchUrl = () =>
+    `/search${
+      searchableText
+        ? `?${qs.stringify({ SearchableText: searchableText })}`
+        : ''
+    }`;
+
+  const handleEnterSearch = e => {
+    console.dir(e);
+    if (e.key === 'Enter') {
+      submitSearch();
+      history.push(getSearchUrl());
+    }
+  };
+
   useEffect(() => {
     // TODO Fetch real data here
     setSections({
@@ -372,11 +388,7 @@ const SearchModal = ({ closeModal, show }) => {
               )}
             </p>
             <Link
-              to={`/search${
-                searchableText
-                  ? `?${qs.stringify({ SearchableText: searchableText })}`
-                  : ''
-              }`}
+              to={getSearchUrl()}
               className="ml-auto btn btn-outline-primary text-capitalize"
               style={{ visibility: advancedSearch ? 'visible' : 'hidden' }}
               title={intl.formatMessage(messages.confirmSearch)}
@@ -399,6 +411,7 @@ const SearchModal = ({ closeModal, show }) => {
                       type="text"
                       value={searchableText}
                       onChange={e => setSearchableText(e.target.value)}
+                      onKeyDown={handleEnterSearch}
                       className="form-control"
                       placeholder={intl.formatMessage(messages.searchLabel)}
                       aria-label={intl.formatMessage(messages.searchLabel)}
@@ -406,13 +419,7 @@ const SearchModal = ({ closeModal, show }) => {
                     />
                     <div className="input-group-append">
                       <Link
-                        to={`/search${
-                          searchableText
-                            ? `?${qs.stringify({
-                                SearchableText: searchableText,
-                              })}`
-                            : ''
-                        }`}
+                        to={getSearchUrl()}
                         onClick={submitSearch}
                         className="btn btn-link"
                         title={intl.formatMessage(messages.search)}
@@ -786,4 +793,4 @@ const SearchModal = ({ closeModal, show }) => {
   );
 };
 
-export default SearchModal;
+export default withRouter(SearchModal);

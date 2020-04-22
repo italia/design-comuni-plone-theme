@@ -441,8 +441,8 @@ class Search extends Component {
                         </p>
                       </div>
                     )}
-                    {this.state.filters.options?.dateStart && (
-                      <div className="form-check mt-4">
+                    <div className="form-check mt-4">
+                      {this.state.filters.options?.dateStart && (
                         <div
                           role="presentation"
                           className="chip chip-lg selected"
@@ -472,10 +472,8 @@ class Search extends Component {
                             </span>
                           </button>
                         </div>
-                      </div>
-                    )}
-                    {this.state.filters.options?.dateEnd && (
-                      <div className="form-check mt-4">
+                      )}
+                      {this.state.filters.options?.dateEnd && (
                         <div
                           role="presentation"
                           className="chip chip-lg selected"
@@ -505,8 +503,8 @@ class Search extends Component {
                             </span>
                           </button>
                         </div>
-                      </div>
-                    )}
+                      )}
+                    </div>
                   </div>
                 )}
               </Collapse>
