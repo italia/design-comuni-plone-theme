@@ -737,7 +737,7 @@ const SearchModal = ({ closeModal, show }) => {
                           )}
                           checked={options.activeContent}
                           onChange={e =>
-                            setOptionValue('activeContent', e.target.checked)
+                            setOptionValue('activeContent', e.target?.checked)
                           }
                         />
                         <p className="small">

@@ -11,8 +11,7 @@ import { asyncConnect } from 'redux-connect';
 import { FormattedMessage, injectIntl, defineMessages } from 'react-intl';
 import cx from 'classnames';
 import qs from 'query-string';
-
-import { settings } from '~/config';
+import moment from 'moment';
 import { searchContent } from '@plone/volto/actions';
 import {
   Container,
@@ -20,12 +19,12 @@ import {
   Col,
   Collapse,
   Label,
-  Input,
   Card,
   CardBody,
   CardCategory,
   Icon,
   Button,
+  Toggle,
 } from 'design-react-kit/dist/design-react-kit';
 import {
   Pagination,
@@ -33,6 +32,7 @@ import {
   SearchTopics,
 } from '@design/components/DesignTheme';
 import { TextInput } from '@design/components';
+import { settings } from '~/config';
 
 //import { Link } from 'react-router-dom';
 
@@ -52,6 +52,31 @@ const messages = defineMessages({
   topics: {
     id: 'topics',
     defaultMessage: 'Argomenti',
+  },
+  options: {
+    id: 'options',
+    defaultMessage: 'Opzioni',
+  },
+  removeOption: {
+    id: 'removeOption',
+    defaultMessage: 'Rimuovi opzione',
+  },
+  optionActiveContentLabel: {
+    id: 'optionActiveContentLabel',
+    defaultMessage: 'Contenuti attivi',
+  },
+  optionActiveContentInfo: {
+    id: 'optionActiveContentInfo',
+    defaultMessage:
+      'Verranno esclusi dalla ricerca i contenuti archiviati e non più validi come gli eventi terminati o i bandi scaduti.',
+  },
+  optionDateStartButton: {
+    id: 'optionDateStartButton',
+    defaultMessage: 'Dal',
+  },
+  optionDateEndButton: {
+    id: 'optionDateEndButton',
+    defaultMessage: 'Al',
   },
 });
 
@@ -378,6 +403,112 @@ class Search extends Component {
                     />
                   </div>
                 </div>
+
+                {Object.values(this.state.filters.options).filter(
+                  o => o !== null && o !== undefined,
+                ).length > 0 && (
+                  <div className="pt-2 pt-lg-5">
+                    <h6 className="text-uppercase">
+                      {intl.formatMessage(messages.options)}
+                    </h6>
+                    {this.state.filters.options?.activeContent !==
+                      undefined && (
+                      <div className="form-check mt-4">
+                        <Toggle
+                          label={intl.formatMessage(
+                            messages.optionActiveContentLabel,
+                          )}
+                          id="options-active-content"
+                          checked={
+                            this.state.filters.options?.activeContent ?? false
+                          }
+                          onChange={e => {
+                            const checked = e.currentTarget?.checked ?? false;
+
+                            this.setState(prevState => ({
+                              filters: {
+                                ...prevState.filters,
+                                options: {
+                                  ...(prevState.filters.options ?? {}),
+                                  activeContent: checked,
+                                },
+                              },
+                            }));
+                          }}
+                        />
+                        <p className="small">
+                          {intl.formatMessage(messages.optionActiveContentInfo)}
+                        </p>
+                      </div>
+                    )}
+                    {this.state.filters.options?.dateStart && (
+                      <div className="form-check mt-4">
+                        <div
+                          role="presentation"
+                          className="chip chip-lg selected"
+                          onClick={() =>
+                            this.setState(prevState => ({
+                              filters: {
+                                ...prevState.filters,
+                                options: {
+                                  ...(prevState.filters.options ?? {}),
+                                  dateStart: null,
+                                },
+                              },
+                            }))
+                          }
+                        >
+                          <span className="chip-label">
+                            {`${intl.formatMessage(
+                              messages.optionDateStartButton,
+                            )} ${moment(this.state.filters.options.dateStart)
+                              .locale(intl.locale)
+                              .format('LL')}`}
+                          </span>
+                          <button type="button">
+                            <Icon color="" icon="it-close" padding={false} />
+                            <span className="sr-only">
+                              {intl.formatMessage(messages.removeOption)}
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    )}
+                    {this.state.filters.options?.dateEnd && (
+                      <div className="form-check mt-4">
+                        <div
+                          role="presentation"
+                          className="chip chip-lg selected"
+                          onClick={() =>
+                            this.setState(prevState => ({
+                              filters: {
+                                ...prevState.filters,
+                                options: {
+                                  ...(prevState.filters.options ?? {}),
+                                  dateEnd: null,
+                                },
+                              },
+                            }))
+                          }
+                        >
+                          <span className="chip-label">
+                            {`${intl.formatMessage(
+                              messages.optionDateEndButton,
+                            )} ${moment(this.state.filters.options.dateEnd)
+                              .locale(intl.locale)
+                              .format('LL')}`}
+                          </span>
+                          <button type="button">
+                            <Icon color="" icon="it-close" padding={false} />
+                            <span className="sr-only">
+                              {intl.formatMessage(messages.removeOption)}
+                            </span>
+                          </button>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
               </Collapse>
             </aside>
             <Col lg={9} tag="section" className="py-lg-5">
