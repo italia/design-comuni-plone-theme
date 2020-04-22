@@ -21,12 +21,13 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import { defineMessages, useIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import mapValues from 'lodash/mapValues';
 import toPairs from 'lodash/toPairs';
 import fromPairs from 'lodash/fromPairs';
 import cx from 'classnames';
 import moment from 'moment';
+import qs from 'query-string';
 
 import { updateSearchFilters } from '~/actions';
 import Checkbox from '../../Checkbox';
@@ -371,7 +372,11 @@ const SearchModal = ({ closeModal, show }) => {
               )}
             </p>
             <Link
-              to="/search"
+              to={`/search${
+                searchableText
+                  ? `?${qs.stringify({ SearchableText: searchableText })}`
+                  : ''
+              }`}
               className="ml-auto btn btn-outline-primary text-capitalize"
               style={{ visibility: advancedSearch ? 'visible' : 'hidden' }}
               title={intl.formatMessage(messages.confirmSearch)}
@@ -401,7 +406,13 @@ const SearchModal = ({ closeModal, show }) => {
                     />
                     <div className="input-group-append">
                       <Link
-                        to="/search"
+                        to={`/search${
+                          searchableText
+                            ? `?${qs.stringify({
+                                SearchableText: searchableText,
+                              })}`
+                            : ''
+                        }`}
                         onClick={submitSearch}
                         className="btn btn-link"
                         title={intl.formatMessage(messages.search)}
