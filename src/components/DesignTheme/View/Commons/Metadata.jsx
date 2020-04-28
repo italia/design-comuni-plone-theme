@@ -65,9 +65,6 @@ const Metadata = params => {
             >
               <ChipLabel tag="span">{item}</ChipLabel>
             </Chip>
-            // <div class="chip chip-simple ml-1" key={item}>
-            //   <span class="chip-label">{item}</span>
-            // </div>
           ))}
         </>
       )}

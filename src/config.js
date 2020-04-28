@@ -27,6 +27,7 @@ import { CharCounterDescriptionWidget } from '@design/components/DesignTheme';
 import { NewsItemView } from '@design/components/DesignTheme';
 import { UOView } from '@design/components/DesignTheme';
 import { PersonaView } from '@design/components/DesignTheme';
+import { ServizioView } from '@design/components/DesignTheme';
 
 import NewsTemplate from '@design/components/DesignTheme/Blocks/Listing/NewsTemplate';
 
@@ -142,6 +143,7 @@ export const views = {
     'News Item': NewsItemView,
     'Unita organizzativa': UOView,
     Persona: PersonaView,
+    Servizio: ServizioView,
   },
 };
 

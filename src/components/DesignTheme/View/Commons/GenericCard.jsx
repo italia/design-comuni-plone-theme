@@ -4,14 +4,14 @@ import { getContent, resetContent } from '@plone/volto/actions';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
-
+import { Icon } from 'design-react-kit/dist/design-react-kit';
 /**
  * GenericCard view component class.
  * @function Location
  * @params {object} location: object.
  * @returns {string} Markup of the component.
  */
-const GenericCard = ({ item, showimage, image_field }) => {
+const GenericCard = ({ item, showimage, image_field, show_icon }) => {
   const key = `generic_card_${item['@id']}`;
   const url = flattenToAppURL(item['@id']);
   const locationContent = useSelector(state => state.content.subrequests);
@@ -39,6 +39,7 @@ const GenericCard = ({ item, showimage, image_field }) => {
         </div>
         <div className="card-body">
           <h5 className="card-title">
+            {show_icon && <Icon icon={show_icon} padding={false} />}
             <Link to={flattenToAppURL(item_fo['@id'])}>{item_fo.title}</Link>
           </h5>
           <div className="card-text">{item_fo.description}</div>
@@ -48,6 +49,7 @@ const GenericCard = ({ item, showimage, image_field }) => {
       <div className="genericcard card card-teaser shadow p-4 mt-3 rounded border">
         <div className="card-body">
           <h5 className="card-title">
+            {show_icon && <Icon icon={show_icon} padding={false} />}
             <Link to={flattenToAppURL(item_fo['@id'])}>{item_fo.title}</Link>
           </h5>
           <div className="card-text">{item_fo.description}</div>

@@ -11,14 +11,17 @@ import PropTypes from 'prop-types';
  * @returns {string} Markup of the component.
  */
 const NewsCard = ({ title, typology, effective, description, id }) => {
+  let date = effective ? new Date(effective) : false;
   return (
     <div className="relatedNews card card-teaser shadow p-4 mt-3 rounded border">
       <div className="card-body">
         <div className="header text-uppercase"></div>
-        <div class="category-top">
+        <div className="category-top">
           {typology}
-          {effective ? (
-            <span className="data">{moment(effective).format('DD MMM Y')}</span>
+          {date ? (
+            <span className="data">
+              {moment(date.toISOString()).format('DD MMM Y')}
+            </span>
           ) : null}
         </div>
         <h5 className="card-title big-heading">

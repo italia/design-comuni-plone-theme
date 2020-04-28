@@ -17,11 +17,11 @@ const messages = defineMessages({
   },
 });
 
-const Attachment = ({ title, download_url }) => {
+const Attachment = ({ title, description, download_url }) => {
   const intl = useIntl();
   return (
     <Card
-      className="card card-teaser shadow p-4 mt-3 rounded border"
+      className="card card-teaser shadow p-4 mt-3 rounded border attachment"
       noWrapper={true}
       tag="div"
     >
@@ -35,6 +35,7 @@ const Attachment = ({ title, download_url }) => {
         <CardTitle tag="h5">
           <a href={flattenToAppURL(download_url)}>{title}</a>
         </CardTitle>
+        {description && <p>{description}</p>}
       </CardBody>
     </Card>
   );

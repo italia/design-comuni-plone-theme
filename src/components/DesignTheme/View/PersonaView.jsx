@@ -16,6 +16,7 @@ import { OfficeCard } from './Commons';
 import { Gallery } from './Commons';
 import { Metadata } from './Commons';
 import { NewsCard } from './Commons';
+import { GenericCard } from './Commons';
 
 const messages = defineMessages({
   role_bio: {
@@ -405,6 +406,23 @@ const PersonaView = ({ content }) => {
                       description={item.description}
                       effective={item.effective}
                       typology={item.typology}
+                    />
+                  ))}
+                </div>
+              </article>
+            ) : null}
+            {content.relatedItems?.length > 0 ? (
+              <article
+                id="related-items"
+                className="it-page-section anchor-offset mt-5"
+              >
+                <h4>{intl.formatMessage(messages.related_items)}</h4>
+                <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                  {content.relatedItems.map((item, i) => (
+                    <GenericCard
+                      index={item['@id']}
+                      item={item}
+                      showimage={false}
                     />
                   ))}
                 </div>

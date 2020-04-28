@@ -59,6 +59,7 @@ const Attachments = ({ content, folder_name, folder_title }) => {
               <Attachment
                 key={item['@id']}
                 title={item.title}
+                description={item.description}
                 download_url={`${item['@id']}/@@download/file`}
               />
             ))}
