@@ -43,7 +43,7 @@ const CuredBy = ({ office, people }) => {
             <OfficeCard office={office} />
           </div>
         )}
-        {people.length > 0 ? (
+        {people?.length > 0 ? (
           <div className="col-12 col-sm-4">
             <h6>
               <small>{intl.formatMessage(messages.cured_by_people)}</small>
