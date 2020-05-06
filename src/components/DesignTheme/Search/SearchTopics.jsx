@@ -3,7 +3,6 @@
  */
 import React, { useState, useEffect } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import { useDispatch, useSelector } from 'react-redux';
 import {
   Input,
   FormGroup,
@@ -12,8 +11,6 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 
 import { SearchUtils } from '@design/components';
-
-import { getSearchFilters } from '~/actions';
 
 const messages = defineMessages({
   showAll: {
@@ -25,22 +22,16 @@ const messages = defineMessages({
 export default function SearchTopics({
   onChange,
   defaultCheckedTopics,
+  searchFilters,
   collapsable = false,
 }) {
   const intl = useIntl();
-  const dispatch = useDispatch();
   const [topics, setTopics] = useState({});
   const [collapse, setCollapse] = useState(true);
 
-  const searchFilters = useSelector(state => state.searchFiltersFetched.result);
   useEffect(() => {
-    if (!searchFilters || Object.keys(searchFilters).length === 0)
-      dispatch(getSearchFilters());
-  }, [dispatch]);
-
-  useEffect(() => {
-    if (searchFilters?.topics?.length > 0) {
-      setTopics(SearchUtils.parseFetchedTopics(searchFilters.topics));
+    if (searchFilters?.length > 0) {
+      setTopics(SearchUtils.parseFetchedTopics(searchFilters));
 
       //set default checked topics
       Object.keys(defaultCheckedTopics).forEach(key => {
@@ -71,11 +62,11 @@ export default function SearchTopics({
       const keys_visible = Object.keys(topics).slice(0, 10);
       const keys_hide = Object.keys(topics).slice(10, size);
 
-      keys_visible.map(key => {
+      keys_visible.forEach(key => {
         visibleTopics[key] = topics[key];
       });
 
-      keys_hide.map(key => {
+      keys_hide.forEach(key => {
         hidedTopics[key] = topics[key];
       });
 

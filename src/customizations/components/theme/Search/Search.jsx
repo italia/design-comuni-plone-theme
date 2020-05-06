@@ -32,6 +32,7 @@ import {
   SearchTopics,
 } from '@design/components/DesignTheme';
 import { TextInput } from '@design/components';
+import { getSearchFilters } from '~/actions';
 import { settings } from '~/config';
 
 //import { Link } from 'react-router-dom';
@@ -381,6 +382,9 @@ class Search extends Component {
                   <div className="form-check mt-4">
                     <SearchSections
                       defaultCheckedGroups={this.state.filters.sections}
+                      searchFilters={
+                        this.props.searchFiltersFetched?.sections ?? {}
+                      }
                       onChange={value => {
                         this.changeFilter('sections', value);
                       }}
@@ -399,6 +403,9 @@ class Search extends Component {
                         this.changeFilter('topics', value);
                       }}
                       defaultCheckedTopics={this.state.filters.topics}
+                      searchFilters={
+                        this.props.searchFiltersFetched?.topics ?? {}
+                      }
                       collapsable={true}
                     />
                   </div>
@@ -702,8 +709,9 @@ export const __test__ = connect(
     path: qs.parse(props.location.search).path,
     pathname: props.location.pathname,
     searchFilters: state.searchFilters,
+    searchFiltersFetched: state.searchFiltersFetched.result,
   }),
-  { searchContent },
+  { searchContent, getSearchFilters },
 )(Search);
 
 export default compose(
@@ -716,8 +724,9 @@ export default compose(
       path: qs.parse(props.location.search).path,
       pathname: props.location.pathname,
       searchFilters: state.searchFilters,
+      searchFiltersFetched: state.searchFiltersFetched.result,
     }),
-    { searchContent },
+    { searchContent, getSearchFilters },
   ),
   asyncConnect([
     {

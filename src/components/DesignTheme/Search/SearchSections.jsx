@@ -3,7 +3,6 @@
  */
 import React, { useState, useEffect } from 'react';
 import cx from 'classnames';
-import { useDispatch, useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
 import {
   Col,
@@ -15,8 +14,6 @@ import {
 
 import { Checkbox } from '@design/components';
 import { SearchUtils } from '@design/components';
-
-import { getSearchFilters } from '~/actions';
 
 const messages = defineMessages({
   amministrazione: {
@@ -44,11 +41,11 @@ const messages = defineMessages({
 export default function SearchSections({
   onChange,
   defaultCheckedGroups,
+  searchFilters,
   cols,
   toggleGroups = false,
 }) {
   const intl = useIntl();
-  const dispatch = useDispatch();
   const [sections, setSections] = useState({
     amministrazione: {},
     servizi: {},
@@ -89,16 +86,9 @@ export default function SearchSections({
     console.log(sections);
   };
 
-  const searchFilters = useSelector(state => state.searchFiltersFetched.result);
-
   useEffect(() => {
-    if (!searchFilters || Object.keys(searchFilters).length === 0)
-      dispatch(getSearchFilters());
-  }, [dispatch]);
-
-  useEffect(() => {
-    if (Object.keys(searchFilters?.sections ?? {}).length > 0) {
-      setSections(SearchUtils.parseFetchedSections(searchFilters.sections));
+    if (Object.keys(searchFilters ?? {}).length > 0) {
+      setSections(SearchUtils.parseFetchedSections(searchFilters));
 
       //set default checked groups
       Object.keys(defaultCheckedGroups).forEach(groupId => {
