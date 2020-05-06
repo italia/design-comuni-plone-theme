@@ -586,7 +586,7 @@ const SearchModal = ({ closeModal, show, history }) => {
                           <Col sm={6} key={groupId} className="group-col">
                             <FormGroup check tag="div">
                               <Checkbox
-                                id={groupId}
+                                id={`modal-search-${groupId}`}
                                 indeterminate={isGroupIndeterminate(
                                   sections[groupId],
                                   checkedGroups[groupId],
@@ -601,7 +601,7 @@ const SearchModal = ({ closeModal, show, history }) => {
                               />
                               <Label
                                 check
-                                for={groupId}
+                                for={`modal-search-${groupId}`}
                                 tag="label"
                                 className={cx(
                                   'group-head font-weight-bold text-primary',
@@ -621,7 +621,7 @@ const SearchModal = ({ closeModal, show, history }) => {
                             {Object.keys(sections[groupId]).map(filterId => (
                               <FormGroup check tag="div" key={filterId}>
                                 <Checkbox
-                                  id={filterId}
+                                  id={`modal-search-${filterId}`}
                                   checked={sections[groupId][filterId].value}
                                   onChange={e =>
                                     setSectionFilterChecked(
@@ -633,7 +633,7 @@ const SearchModal = ({ closeModal, show, history }) => {
                                 />
                                 <Label
                                   check
-                                  for={filterId}
+                                  for={`modal-search-${filterId}`}
                                   tag="label"
                                   widths={['xs', 'sm', 'md', 'lg', 'xl']}
                                 >
@@ -655,7 +655,7 @@ const SearchModal = ({ closeModal, show, history }) => {
                           <div key={topicId}>
                             <FormGroup check tag="div">
                               <Input
-                                id={topicId}
+                                id={`modal-search-${topicId}`}
                                 type="checkbox"
                                 checked={topics[topicId].value}
                                 onChange={e =>
@@ -667,7 +667,7 @@ const SearchModal = ({ closeModal, show, history }) => {
                               />
                               <Label
                                 check
-                                for={topicId}
+                                for={`modal-search-${topicId}`}
                                 tag="label"
                                 widths={['xs', 'sm', 'md', 'lg', 'xl']}
                               >
