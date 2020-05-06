@@ -284,7 +284,8 @@ const SearchModal = ({ closeModal, show, history }) => {
   const searchFilters = useSelector(state => state.searchFiltersFetched.result);
 
   useEffect(() => {
-    dispatch(getSearchFilters());
+    if (!searchFilters || Object.keys(searchFilters).length === 0)
+      dispatch(getSearchFilters());
   }, [dispatch]);
 
   useEffect(() => {
