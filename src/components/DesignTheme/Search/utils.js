@@ -28,9 +28,35 @@ const updateGroupCheckedStatus = (group, checked) =>
     value: checked,
   }));
 
+const parseFetchedSections = sections =>
+  Object.keys(sections).reduce((acc, sec) => {
+    acc[sec] = sections[sec].items.reduce((itemsAcc, subSec) => {
+      itemsAcc[subSec.path] = {
+        value: false,
+        label: subSec.title,
+      };
+
+      return itemsAcc;
+    }, {});
+
+    return acc;
+  }, {});
+
+const parseFetchedTopics = topics =>
+  topics.reduce((acc, topic) => {
+    acc[topic.path] = {
+      value: false,
+      label: topic.title,
+    };
+
+    return acc;
+  }, {});
+
 export default {
   defaultOptions,
   isGroupChecked,
   isGroupIndeterminate,
   updateGroupCheckedStatus,
+  parseFetchedSections,
+  parseFetchedTopics,
 };

@@ -11,6 +11,16 @@
  * };
  */
 
-import { updateSearchFilters } from './updateSearchFilters';
+import {
+  updateSearchFilters,
+  UPDATE_SEARCH_FILTERS,
+} from './updateSearchFilters';
 
-export { updateSearchFilters };
+import { getSearchFilters, GET_SEARCH_FILTERS } from './getSearchFilters';
+
+export {
+  updateSearchFilters,
+  UPDATE_SEARCH_FILTERS,
+  getSearchFilters,
+  GET_SEARCH_FILTERS,
+};

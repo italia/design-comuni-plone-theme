@@ -1,5 +1,3 @@
-import LanguageSelector from './DesignTheme/LanguageSelector/LanguageSelector';
-
 /**
  * Add your components here.
  * @module components
@@ -11,6 +9,9 @@ import LanguageSelector from './DesignTheme/LanguageSelector/LanguageSelector';
  * };
  */
 
-export Checkbox from './Checkbox.jsx';
-export TextInput from './TextInput.jsx';
-export SearchUtils from './DesignTheme/Search/utils.js';
+import LanguageSelector from './DesignTheme/LanguageSelector/LanguageSelector';
+import Checkbox from './Checkbox';
+import TextInput from './TextInput';
+import SearchUtils from './DesignTheme/Search/utils';
+
+export { LanguageSelector, Checkbox, TextInput, SearchUtils };

@@ -22,7 +22,7 @@ import {
 import { defineMessages, useIntl } from 'react-intl';
 import { withRouter } from 'react-router';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import mapValues from 'lodash/mapValues';
 import toPairs from 'lodash/toPairs';
 import fromPairs from 'lodash/fromPairs';
@@ -30,8 +30,18 @@ import cx from 'classnames';
 import moment from 'moment';
 import qs from 'query-string';
 
-import { updateSearchFilters } from '~/actions';
+import { getSearchFilters, updateSearchFilters } from '~/actions';
 import Checkbox from '../../Checkbox';
+import { SearchUtils } from '@design/components';
+
+const {
+  defaultOptions,
+  isGroupChecked,
+  isGroupIndeterminate,
+  updateGroupCheckedStatus,
+  parseFetchedSections,
+  parseFetchedTopics,
+} = SearchUtils;
 
 const messages = defineMessages({
   closeSearch: {
@@ -90,6 +100,10 @@ const messages = defineMessages({
     id: 'documenti',
     defaultMessage: 'Documenti e dati',
   },
+  'documenti-e-dati': {
+    id: 'documenti-e-dati',
+    defaultMessage: 'Documenti e dati',
+  },
   allTopics: {
     id: 'allTopics',
     defaultMessage: 'Tutti gli argomenti',
@@ -141,34 +155,6 @@ const messages = defineMessages({
   },
 });
 
-// A group is checked if at least one filter is checked
-export const isGroupChecked = group =>
-  Object.keys(group).reduce(
-    (checked, filterId) => checked || group[filterId].value,
-    false,
-  );
-
-// A group is indeterminate if at least one of its filters is checked, but not all of them
-export const isGroupIndeterminate = (group, groupIsChecked) =>
-  groupIsChecked &&
-  Object.keys(group).reduce(
-    (indet, filterId) => indet || !group[filterId].value,
-    false,
-  );
-
-// Given a filters group, set all filters to the given state
-export const updateGroupCheckedStatus = (group, checked) =>
-  mapValues(group, filter => ({
-    ...filter,
-    value: checked,
-  }));
-
-const defaultOptions = {
-  activeContent: false,
-  dateStart: undefined,
-  dateEnd: undefined,
-};
-
 const SearchModal = ({ closeModal, show, history }) => {
   const intl = useIntl();
   const dispatch = useDispatch();
@@ -179,7 +165,7 @@ const SearchModal = ({ closeModal, show, history }) => {
     amministrazione: {},
     servizi: {},
     novita: {},
-    documenti: {},
+    'documenti-e-dati': {},
   });
   const [topics, setTopics] = useState({});
   const [options, setOptions] = useState({ ...defaultOptions });
@@ -188,7 +174,7 @@ const SearchModal = ({ closeModal, show, history }) => {
     amministrazione: isGroupChecked(sections.amministrazione),
     servizi: isGroupChecked(sections.servizi),
     novita: isGroupChecked(sections.novita),
-    documenti: isGroupChecked(sections.documenti),
+    'documenti-e-dati': isGroupChecked(sections['documenti-e-dati']),
   };
   // The "all" filter is checked if all groups are unchecked
   const allSectionsChecked = Object.keys(checkedGroups).reduce(
@@ -289,68 +275,27 @@ const SearchModal = ({ closeModal, show, history }) => {
     }`;
 
   const handleEnterSearch = e => {
-    console.dir(e);
     if (e.key === 'Enter') {
       submitSearch();
       history.push(getSearchUrl());
     }
   };
 
+  const searchFilters = useSelector(state => state.searchFiltersFetched.result);
+
   useEffect(() => {
-    // TODO Fetch real data here
-    setSections({
-      amministrazione: {
-        'organi-politici': {
-          value: false,
-          label: 'Organi politici',
-        },
-        'aree-amministrative': {
-          value: false,
-          label: 'Aree amministrative',
-        },
-      },
-      servizi: {
-        'anagrafe-e-stato-civile': {
-          value: false,
-          label: 'Anagrafe e stato civile',
-        },
-        turismo: {
-          value: false,
-          label: 'Turismo',
-        },
-      },
-      novita: {
-        avvisi: {
-          value: false,
-          label: 'Avvisi',
-        },
-        notizie: {
-          value: false,
-          label: 'Notizie',
-        },
-      },
-      documenti: {
-        modulistica: {
-          value: false,
-          label: 'Modulistica',
-        },
-        normative: {
-          value: false,
-          label: 'Normative',
-        },
-      },
-    });
-    setTopics({
-      abitazione: {
-        label: 'Abitazione',
-        value: false,
-      },
-      acqua: {
-        label: 'Acqua',
-        value: false,
-      },
-    });
-  }, []);
+    dispatch(getSearchFilters());
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (Object.keys(searchFilters?.sections ?? {}).length > 0) {
+      setSections(parseFetchedSections(searchFilters.sections));
+    }
+
+    if (searchFilters?.topics?.length > 0) {
+      setTopics(parseFetchedTopics(searchFilters.topics));
+    }
+  }, [searchFilters]);
 
   return (
     <Modal
