@@ -2,15 +2,18 @@
  * Sections for search
  */
 import React, { useState, useEffect } from 'react';
-import cx from 'classnames';
 import { defineMessages, useIntl } from 'react-intl';
-
+import { useDispatch, useSelector } from 'react-redux';
 import {
   Input,
   FormGroup,
   Label,
   Collapse,
 } from 'design-react-kit/dist/design-react-kit';
+
+import { SearchUtils } from '@design/components';
+
+import { getSearchFilters } from '~/actions';
 
 const messages = defineMessages({
   showAll: {
@@ -25,67 +28,25 @@ export default function SearchTopics({
   collapsable = false,
 }) {
   const intl = useIntl();
+  const dispatch = useDispatch();
   const [topics, setTopics] = useState({});
   const [collapse, setCollapse] = useState(true);
 
+  const searchFilters = useSelector(state => state.searchFiltersFetched.result);
   useEffect(() => {
-    // TODO Fetch real data here
-    setTopics({
-      abitazione: {
-        label: 'Abitazione',
-        value: false,
-      },
-      acqua: {
-        label: 'Acqua',
-        value: false,
-      },
-      agevolazioni_case: {
-        label: 'Agevolazioni per la casa',
-        value: false,
-      },
-      anziani: {
-        label: 'Anziani',
-        value: false,
-      },
-      assistena_e_inclusione: {
-        label: 'Assistenza e inclusione',
-        value: false,
-      },
-      comune: {
-        label: 'Comune',
-        value: false,
-      },
-      comunicare_con_il_comune: {
-        label: 'Comunicare con il comune',
-        value: false,
-      },
-      corsi_e_tempo_libero: {
-        label: 'Corsi e tempo libero',
-        value: false,
-      },
-      costruire_e_ristrutturare: {
-        label: 'Costruire e ristrutturare',
-        value: false,
-      },
-      cultura: {
-        label: 'Cultura',
-        value: false,
-      },
-      edilizia: {
-        label: 'Ediliazia',
-        value: false,
-      },
-      famiglia: {
-        label: 'Famiglia',
-        value: false,
-      },
-    });
+    dispatch(getSearchFilters());
+  }, [dispatch]);
 
-    //set default checked topics
-    Object.keys(defaultCheckedTopics).map(key => {
-      setTopicChecked(key, true);
-    });
-  }, []);
+  useEffect(() => {
+    if (searchFilters?.topics?.length > 0) {
+      setTopics(SearchUtils.parseFetchedTopics(searchFilters.topics));
+
+      //set default checked topics
+      Object.keys(defaultCheckedTopics).forEach(key => {
+        setTopicChecked(key, true);
+      });
+    }
+  }, [searchFilters]);
 
   useEffect(() => {
     onChange(topics);

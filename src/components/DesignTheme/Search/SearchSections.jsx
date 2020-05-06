@@ -3,7 +3,8 @@
  */
 import React, { useState, useEffect } from 'react';
 import cx from 'classnames';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { defineMessages, useIntl } from 'react-intl';
 import {
   Col,
   FormGroup,
@@ -11,9 +12,11 @@ import {
   Icon,
   Collapse,
 } from 'design-react-kit/dist/design-react-kit';
+
 import { Checkbox } from '@design/components';
 import { SearchUtils } from '@design/components';
-import { defineMessages, useIntl } from 'react-intl';
+
+import { getSearchFilters } from '~/actions';
 
 const messages = defineMessages({
   amministrazione: {
@@ -32,6 +35,10 @@ const messages = defineMessages({
     id: 'documenti',
     defaultMessage: 'Documenti e dati',
   },
+  'documenti-e-dati': {
+    id: 'documenti-e-dati',
+    defaultMessage: 'Documenti e dati',
+  },
 });
 
 export default function SearchSections({
@@ -41,18 +48,19 @@ export default function SearchSections({
   toggleGroups = false,
 }) {
   const intl = useIntl();
+  const dispatch = useDispatch();
   const [sections, setSections] = useState({
     amministrazione: {},
     servizi: {},
     novita: {},
-    documenti: {},
+    'documenti-e-dati': {},
   });
 
   const [collapse, setCollapse] = useState({
     amministrazione: toggleGroups,
     servizi: toggleGroups,
     novita: toggleGroups,
-    documenti: toggleGroups,
+    'documenti-e-dati': toggleGroups,
   });
 
   const setSectionFilterChecked = (groupId, filterId, checked) => {
@@ -81,60 +89,26 @@ export default function SearchSections({
     console.log(sections);
   };
 
-  useEffect(() => {
-    // TODO Fetch real data here
-    setSections({
-      amministrazione: {
-        'organi-politici': {
-          value: false,
-          label: 'Organi politici',
-        },
-        'aree-amministrative': {
-          value: false,
-          label: 'Aree amministrative',
-        },
-      },
-      servizi: {
-        'anagrafe-e-stato-civile': {
-          value: false,
-          label: 'Anagrafe e stato civile',
-        },
-        turismo: {
-          value: false,
-          label: 'Turismo',
-        },
-      },
-      novita: {
-        avvisi: {
-          value: false,
-          label: 'Avvisi',
-        },
-        notizie: {
-          value: false,
-          label: 'Notizie',
-        },
-      },
-      documenti: {
-        modulistica: {
-          value: false,
-          label: 'Modulistica',
-        },
-        normative: {
-          value: false,
-          label: 'Normative',
-        },
-      },
-    });
+  const searchFilters = useSelector(state => state.searchFiltersFetched.result);
 
-    //set default checked groups
-    Object.keys(defaultCheckedGroups).map(groupId => {
-      const group = defaultCheckedGroups[groupId];
-      Object.keys(group).map(sectionId => {
-        const section = group[sectionId];
-        setSectionFilterChecked(groupId, sectionId, section.value);
+  useEffect(() => {
+    dispatch(getSearchFilters());
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (Object.keys(searchFilters?.sections ?? {}).length > 0) {
+      setSections(SearchUtils.parseFetchedSections(searchFilters.sections));
+
+      //set default checked groups
+      Object.keys(defaultCheckedGroups).forEach(groupId => {
+        const group = defaultCheckedGroups[groupId];
+        Object.keys(group).forEach(sectionId => {
+          const section = group[sectionId];
+          setSectionFilterChecked(groupId, sectionId, section.value);
+        });
       });
-    });
-  }, []);
+    }
+  }, [searchFilters]);
 
   useEffect(() => {
     onChange(sections);
