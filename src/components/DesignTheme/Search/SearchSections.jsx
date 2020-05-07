@@ -4,6 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import cx from 'classnames';
 import { defineMessages, useIntl } from 'react-intl';
+import { useLocation } from 'react-router-dom';
 import {
   Col,
   FormGroup,
@@ -39,19 +40,18 @@ const messages = defineMessages({
 });
 
 export default function SearchSections({
-  onChange,
-  defaultCheckedGroups,
-  searchFilters,
+  setSections,
+  sections,
   cols,
   toggleGroups = false,
 }) {
   const intl = useIntl();
-  const [sections, setSections] = useState({
-    amministrazione: {},
-    servizi: {},
-    novita: {},
-    'documenti-e-dati': {},
-  });
+  // const [sections, setSections] = useState({
+  //   amministrazione: {},
+  //   servizi: {},
+  //   novita: {},
+  //   'documenti-e-dati': {},
+  // });
 
   const [collapse, setCollapse] = useState({
     amministrazione: toggleGroups,
@@ -61,7 +61,6 @@ export default function SearchSections({
   });
 
   const setSectionFilterChecked = (groupId, filterId, checked) => {
-    console.log('setSectionFilterChecked', groupId, filterId);
     setSections(prevSections => ({
       ...prevSections,
       [groupId]: {
@@ -75,7 +74,6 @@ export default function SearchSections({
   };
 
   const setGroupChecked = (groupId, checked) => {
-    console.log('setGroupChecked', groupId);
     setSections(prevSections => ({
       ...prevSections,
       [groupId]: SearchUtils.updateGroupCheckedStatus(
@@ -83,27 +81,17 @@ export default function SearchSections({
         checked,
       ),
     }));
-    console.log(sections);
   };
 
-  useEffect(() => {
-    if (Object.keys(searchFilters ?? {}).length > 0) {
-      setSections(SearchUtils.parseFetchedSections(searchFilters));
+  // useEffect(() => {
+  //   if (Object.keys(searchFilters ?? {}).length > 0) {
+  //     setSections(searchFilters);
+  //   }
+  // }, [searchFilters]);
 
-      //set default checked groups
-      Object.keys(defaultCheckedGroups).forEach(groupId => {
-        const group = defaultCheckedGroups[groupId];
-        Object.keys(group).forEach(sectionId => {
-          const section = group[sectionId];
-          setSectionFilterChecked(groupId, sectionId, section.value);
-        });
-      });
-    }
-  }, [searchFilters]);
-
-  useEffect(() => {
-    onChange(sections);
-  }, [sections]);
+  // useEffect(() => {
+  //   onChange(sections);
+  // }, [sections]);
 
   const toggleCollapseGroup = groupId => {
     setCollapse(prevCollapse => ({

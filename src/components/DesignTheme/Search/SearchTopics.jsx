@@ -10,8 +10,6 @@ import {
   Collapse,
 } from 'design-react-kit/dist/design-react-kit';
 
-import { SearchUtils } from '@design/components';
-
 const messages = defineMessages({
   showAll: {
     id: 'Show all',
@@ -20,29 +18,23 @@ const messages = defineMessages({
 });
 
 export default function SearchTopics({
-  onChange,
-  defaultCheckedTopics,
-  searchFilters,
+  setTopics,
+  topics,
   collapsable = false,
 }) {
   const intl = useIntl();
-  const [topics, setTopics] = useState({});
+  // const [topics, setTopics] = useState({});
   const [collapse, setCollapse] = useState(true);
 
-  useEffect(() => {
-    if (searchFilters?.length > 0) {
-      setTopics(SearchUtils.parseFetchedTopics(searchFilters));
+  // useEffect(() => {
+  //   if (searchFilters?.length > 0) {
+  //     setTopics(searchFilters);
+  //   }
+  // }, [searchFilters]);
 
-      //set default checked topics
-      Object.keys(defaultCheckedTopics).forEach(key => {
-        setTopicChecked(key, true);
-      });
-    }
-  }, [searchFilters]);
-
-  useEffect(() => {
-    onChange(topics);
-  }, [topics]);
+  // useEffect(() => {
+  //   onChange(topics);
+  // }, [topics]);
 
   const setTopicChecked = (topicId, checked) => {
     setTopics(prevTopics => ({

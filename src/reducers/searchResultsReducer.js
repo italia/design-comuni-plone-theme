@@ -1,9 +1,9 @@
 /**
- * Search filters reducer
+ * Search results reducer
  * @module src/reducers/getSearchFiltersReducer
  */
 
-import { GET_SEARCH_FILTERS } from '~/actions';
+import { GET_SEARCH_RESULTS } from '~/actions';
 
 const initialState = {
   error: null,
@@ -12,22 +12,22 @@ const initialState = {
   loadingResults: false,
 };
 
-export const getSearchFiltersReducer = (state = initialState, action = {}) => {
+export const searchResultsReducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    case `${GET_SEARCH_FILTERS}_PENDING`:
+    case `${GET_SEARCH_RESULTS}_PENDING`:
       return {
         ...state,
         loadingResults: true,
       };
 
-    case `${GET_SEARCH_FILTERS}_SUCCESS`:
+    case `${GET_SEARCH_RESULTS}_SUCCESS`:
       return {
         ...state,
         result: action.result,
         loadingResults: false,
       };
 
-    case `${GET_SEARCH_FILTERS}_FAIL`:
+    case `${GET_SEARCH_RESULTS}_FAIL`:
       return {
         ...state,
         error: action.error,

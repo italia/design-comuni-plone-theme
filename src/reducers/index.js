@@ -6,7 +6,7 @@
 import defaultReducers from '@plone/volto/reducers';
 import { cookieConsentReducer } from 'volto-cookie-banner';
 import { searchFiltersReducer } from './searchFiltersReducer';
-import { getSearchFiltersReducer } from './getSearchFiltersReducer';
+import { searchResultsReducer } from './searchResultsReducer';
 
 /**
  * Root reducer.
@@ -19,7 +19,7 @@ const reducers = {
   ...defaultReducers,
   cookieConsentInfos: cookieConsentReducer,
   searchFilters: searchFiltersReducer,
-  searchFiltersFetched: getSearchFiltersReducer,
+  searchResults: searchResultsReducer,
 };
 
 export default reducers;

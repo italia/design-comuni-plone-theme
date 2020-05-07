@@ -20,8 +20,7 @@ import {
   Toggle,
 } from 'design-react-kit/dist/design-react-kit';
 import { defineMessages, useIntl } from 'react-intl';
-import { withRouter } from 'react-router';
-import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import mapValues from 'lodash/mapValues';
 import toPairs from 'lodash/toPairs';
@@ -30,7 +29,7 @@ import cx from 'classnames';
 import moment from 'moment';
 import qs from 'query-string';
 
-import { getSearchFilters, updateSearchFilters } from '~/actions';
+import { getSearchFilters } from '~/actions';
 import Checkbox from '../../Checkbox';
 import { SearchUtils } from '@design/components';
 
@@ -41,6 +40,8 @@ const {
   updateGroupCheckedStatus,
   parseFetchedSections,
   parseFetchedTopics,
+  parseFetchedOptions,
+  getSearchParamsURL,
 } = SearchUtils;
 
 const messages = defineMessages({
@@ -155,12 +156,15 @@ const messages = defineMessages({
   },
 });
 
-const SearchModal = ({ closeModal, show, history }) => {
+const SearchModal = ({ closeModal, show }) => {
   const intl = useIntl();
   const dispatch = useDispatch();
+  const location = useLocation();
   const [advancedSearch, setAdvancedSearch] = useState(false);
   const [advancedTab, setAdvancedTab] = useState('sections');
-  const [searchableText, setSearchableText] = useState('');
+  const [searchableText, setSearchableText] = useState(
+    qs.parse(location.search)?.SearchableText ?? '',
+  );
   const [sections, setSections] = useState({
     amministrazione: {},
     servizi: {},
@@ -238,50 +242,19 @@ const SearchModal = ({ closeModal, show, history }) => {
   const submitSearch = () => {
     setAdvancedSearch(false);
     closeModal();
-    const activeSections = Object.keys(sections).reduce((secAcc, secKey) => {
-      const sec = Object.keys(sections[secKey]).reduce((acc, section) => {
-        if (sections[secKey][section].value)
-          return { ...acc, [section]: sections[secKey][section] };
-        return acc;
-      }, {});
-
-      if (Object.values(sec).length > 0) return { ...secAcc, [secKey]: sec };
-      return secAcc;
-    }, {});
-    const activeTopics = Object.keys(topics).reduce((acc, topic) => {
-      if (topics[topic].value) return { ...acc, [topic]: topics[topic] };
-      return acc;
-    }, {});
-    const activeOptions = Object.keys(options).reduce((acc, opt) => {
-      if (!!options[opt]) return { ...acc, [opt]: options[opt] };
-      return acc;
-    }, {});
-
-    dispatch(
-      updateSearchFilters({
-        searchableText,
-        sections: activeSections,
-        topics: activeTopics,
-        options: activeOptions,
-      }),
-    );
   };
-
-  const getSearchUrl = () =>
-    `/search${
-      searchableText
-        ? `?${qs.stringify({ SearchableText: searchableText })}`
-        : ''
-    }`;
 
   const handleEnterSearch = e => {
     if (e.key === 'Enter') {
       submitSearch();
-      history.push(getSearchUrl());
+      if (__CLIENT__)
+        window.location.href =
+          window.location.origin +
+          getSearchParamsURL(searchableText, sections, topics, options);
     }
   };
 
-  const searchFilters = useSelector(state => state.searchFiltersFetched.result);
+  const searchFilters = useSelector(state => state.searchFilters.result);
 
   useEffect(() => {
     if (!searchFilters || Object.keys(searchFilters).length === 0)
@@ -290,12 +263,14 @@ const SearchModal = ({ closeModal, show, history }) => {
 
   useEffect(() => {
     if (Object.keys(searchFilters?.sections ?? {}).length > 0) {
-      setSections(parseFetchedSections(searchFilters.sections));
+      setSections(parseFetchedSections(searchFilters.sections, location));
     }
 
     if (searchFilters?.topics?.length > 0) {
-      setTopics(parseFetchedTopics(searchFilters.topics));
+      setTopics(parseFetchedTopics(searchFilters.topics, location));
     }
+
+    setOptions(parseFetchedOptions(defaultOptions, location));
   }, [searchFilters]);
 
   return (
@@ -333,15 +308,20 @@ const SearchModal = ({ closeModal, show, history }) => {
                 advancedSearch ? messages.filters : messages.search,
               )}
             </p>
-            <Link
-              to={getSearchUrl()}
+            <a
+              href={getSearchParamsURL(
+                searchableText,
+                sections,
+                topics,
+                options,
+              )}
               className="ml-auto btn btn-outline-primary text-capitalize"
               style={{ visibility: advancedSearch ? 'visible' : 'hidden' }}
               title={intl.formatMessage(messages.confirmSearch)}
               onClick={submitSearch}
             >
               {intl.formatMessage(messages.confirmSearch)}
-            </Link>
+            </a>
           </div>
         </Container>
       </ModalHeader>
@@ -364,15 +344,20 @@ const SearchModal = ({ closeModal, show, history }) => {
                       aria-describedby="search-button"
                     />
                     <div className="input-group-append">
-                      <Link
-                        to={getSearchUrl()}
+                      <a
+                        href={getSearchParamsURL(
+                          searchableText,
+                          sections,
+                          topics,
+                          options,
+                        )}
                         onClick={submitSearch}
                         className="btn btn-link"
                         title={intl.formatMessage(messages.search)}
                         id="search-button"
                       >
                         <Icon icon="it-search" aria-hidden={true} size="sm" />
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -381,13 +366,13 @@ const SearchModal = ({ closeModal, show, history }) => {
                 <div className="h6">
                   {intl.formatMessage(messages.sections)}
                 </div>
-                <ButtonToolbar>
+                <ButtonToolbar className="mb-3">
                   <Button
                     color="primary"
                     outline={!allSectionsChecked}
                     onClick={resetSections}
                     size="sm"
-                    className="mr-2"
+                    className="mr-2 mb-2"
                   >
                     {intl.formatMessage(messages.allFilters)}
                   </Button>
@@ -397,7 +382,7 @@ const SearchModal = ({ closeModal, show, history }) => {
                       color="primary"
                       outline={!checkedGroups[groupId]}
                       size="sm"
-                      className="mr-2"
+                      className="mr-2 mb-2"
                       onClick={() =>
                         setGroupChecked(groupId, !checkedGroups[groupId])
                       }
@@ -409,6 +394,7 @@ const SearchModal = ({ closeModal, show, history }) => {
                     color="primary"
                     outline
                     size="sm"
+                    className="mb-2"
                     onClick={() => {
                       setAdvancedTab('sections');
                       setAdvancedSearch(true);
@@ -421,7 +407,7 @@ const SearchModal = ({ closeModal, show, history }) => {
               <div className="search-filters search-filters-topics">
                 <div className="h6">{intl.formatMessage(messages.topics)}</div>
                 <button
-                  className={cx('chip chip-simple chip-lg mr-2', {
+                  className={cx('chip chip-simple chip-lg mr-2 mb-2', {
                     selected: allTopicsChecked,
                   })}
                   type="button"
@@ -463,7 +449,7 @@ const SearchModal = ({ closeModal, show, history }) => {
               <div className="search-filters search-filters-options">
                 <div className="h6">{intl.formatMessage(messages.options)}</div>
                 <button
-                  className={cx('chip chip-simple chip-lg mr-2', {
+                  className={cx('chip chip-simple chip-lg mr-2 mb-2', {
                     selected: allOptionsSet,
                   })}
                   type="button"
@@ -739,4 +725,4 @@ const SearchModal = ({ closeModal, show, history }) => {
   );
 };
 
-export default withRouter(SearchModal);
+export default SearchModal;
