@@ -3,7 +3,7 @@
  * @module components/theme/Search/Search
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useIntl, defineMessages } from 'react-intl';
 import cx from 'classnames';
@@ -20,6 +20,7 @@ import {
   Icon,
   Button,
   Toggle,
+  Spinner,
 } from 'design-react-kit/dist/design-react-kit';
 import { Link, useLocation, useHistory } from 'react-router-dom';
 import {
@@ -28,6 +29,7 @@ import {
   SearchTopics,
 } from '@design/components/DesignTheme';
 import { SearchUtils, TextInput, SelectInput } from '@design/components';
+import { flattenToAppURL } from '@plone/volto/helpers';
 import { getSearchFilters, getSearchResults } from '~/actions';
 import { settings } from '~/config';
 
@@ -105,12 +107,14 @@ const messages = defineMessages({
     id: 'filtersCollapse',
     defaultMessage: 'Filtri',
   },
+  section_undefined: {
+    id: 'section_undefined',
+    defaultMessage: 'altro',
+  },
 });
 
 const searchOrderDict = {
-  relevance: {
-    sort_on: 'relevance',
-  },
+  relevance: {},
   date: {
     sort_on: 'Date',
     sort_order: 'reverse',
@@ -118,6 +122,20 @@ const searchOrderDict = {
   sortable_title: {
     sort_on: 'sortable_title',
   },
+};
+
+const useDebouncedEffect = (effect, delay, deps) => {
+  const callback = useCallback(effect, deps);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      callback();
+    }, delay);
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [callback, delay]);
 };
 
 const Search = () => {
@@ -156,6 +174,13 @@ const Search = () => {
     },
   ];
 
+  const getSectionFromId = id => {
+    let itemSection = Object.keys(sections).filter(s => id.indexOf(s) > -1);
+    return itemSection?.length > 0
+      ? itemSection[0].replace(/-/, ' ')
+      : intl.formatMessage(messages.section_undefined);
+  };
+
   const handleQueryPaginationChange = (_e, { activePage }) => {
     window.scrollTo(0, 0);
     setCurrentPage(activePage);
@@ -179,29 +204,41 @@ const Search = () => {
     setOptions(parseFetchedOptions(defaultOptions, location));
   }, [searchFilters]);
 
-  const searchResults = useSelector(state => state.searchResults.result);
-  useEffect(() => {
+  const searchResults = useSelector(state => state.searchResults);
+  useDebouncedEffect(
+    () => {
+      doSearch();
+    },
+    600,
+    [dispatch, searchableText, sections, topics, options, sortOn, currentPage],
+  );
+
+  const doSearch = () => {
+    const activePage = (currentPage - 1) * settings.defaultPageSize;
     const queryString = getSearchParamsURL(
-      `${searchableText}*`,
+      searchableText?.length > 0 ? `${searchableText}*` : '',
       sections,
       topics,
       options,
       searchOrderDict[sortOn] ?? {},
-      (currentPage - 1) * settings.defaultPageSize,
+      activePage && activePage > 0 ? activePage : null,
     );
 
-    // debugger;
     console.log(queryString);
-    // history.push(queryString);
+    searchResults.result &&
+      history.push(
+        getSearchParamsURL(
+          searchableText,
+          sections,
+          topics,
+          options,
+          searchOrderDict[sortOn] ?? {},
+          (currentPage - 1) * settings.defaultPageSize,
+        ),
+      );
     // location.search = queryString.replace('/search', '');
     dispatch(getSearchResults(queryString.replace('/search', '')));
-    // searchableText,
-    // sections,
-    // topics,
-    // options,
-    // sortOn,
-    // currentPage,
-  }, [dispatch]);
+  };
 
   return (
     <div className="public-ui">
@@ -224,7 +261,13 @@ const Search = () => {
                   }}
                   size="lg"
                   prepend={
-                    <Button icon tag="button" color="link" size="xs">
+                    <Button
+                      icon
+                      tag="button"
+                      color="link"
+                      size="xs"
+                      onClick={doSearch}
+                    >
                       <Icon
                         color=""
                         icon="it-search"
@@ -239,10 +282,10 @@ const Search = () => {
             <div className="d-block d-lg-none d-xl-none">
               <div className="row pb-3">
                 <div className="col-6">
-                  {searchResults?.items_total && (
+                  {searchResults?.result?.items_total && (
                     <small>
                       {intl.formatMessage(messages.foundNResults, {
-                        total: searchResults.items_total,
+                        total: searchResults.result.items_total,
                       })}
                     </small>
                   )}
@@ -313,12 +356,13 @@ const Search = () => {
                         )}
                         id="options-active-content"
                         checked={options.activeContent}
-                        onChange={e =>
+                        onChange={e => {
+                          const checked = e.currentTarget?.checked ?? false;
                           setOptions(opts => ({
                             ...opts,
-                            activeContent: e.currentTarget?.checked ?? false,
-                          }))
-                        }
+                            activeContent: checked,
+                          }));
+                        }}
                       />
                       <p className="small">
                         {intl.formatMessage(messages.optionActiveContentInfo)}
@@ -380,68 +424,72 @@ const Search = () => {
           </aside>
 
           <Col lg={9} tag="section" className="py-lg-5">
-            <div className="d-none d-lg-block d-xl-block">
-              <Row className="pb-3 px-4 border-bottom">
-                <Col xs={6}>
-                  {searchResults?.items_total && (
-                    <small>
-                      {intl.formatMessage(messages.foundNResults, {
-                        total: searchResults.items_total,
-                      })}
-                    </small>
-                  )}
-                </Col>
-                <Col xs={6}>
-                  <SelectInput
-                    id="search-sort-on"
-                    value={sortOnOptions.filter(o => o.value === sortOn)[0]}
-                    label={intl.formatMessage(messages.orderBy)}
-                    placeholder={intl.formatMessage(messages.orderBy)}
-                    onChange={opt => setSortOn(opt.value)}
-                    options={sortOnOptions}
-                  />
-                </Col>
-              </Row>
-            </div>
-            <Row>
-              {searchResults?.items?.map(i => (
-                <Col md={4} key={i}>
-                  <Card
-                    teaser
-                    noWrapper={true}
-                    className={cx('mt-3 mb-2 border-bottom-half', {
-                      'border-right border-light': i % 3 !== 2,
-                    })}
-                  >
-                    <CardBody>
-                      <CardCategory href={'#'}>Servizi</CardCategory>
-
-                      <h4 className="card-title">
-                        <Link to="#">
-                          Scadenza TARI 2018: istruzioni per pagamento
-                        </Link>
-                      </h4>
-                      <p className="card-text">
-                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur
-                        aut odit aut fugit, sed quia consequuntur magni dolores
-                        eos qui ratione.
+            {searchResults.loadingResults ? (
+              <Spinner active />
+            ) : searchResults?.result?.items_total > 0 ? (
+              <div className="search-results-wrapper">
+                <div className="d-none d-lg-block d-xl-block">
+                  <Row className="pb-3 px-4 border-bottom">
+                    <Col xs={6} className="align-self-center">
+                      <p>
+                        {intl.formatMessage(messages.foundNResults, {
+                          total: searchResults.result.items_total,
+                        })}
                       </p>
-                    </CardBody>
-                  </Card>
-                </Col>
-              ))}
-            </Row>
-            {/*
-              * FIXME
-              searchResults?.batching && (
-              <Pagination
-                activePage={currentPage}
-                totalPages={Math.ceil(
-                  searchResults?.items_total ?? 0 / settings.defaultPageSize,
+                    </Col>
+                    <Col xs={6}>
+                      <SelectInput
+                        id="search-sort-on"
+                        value={sortOnOptions.filter(o => o.value === sortOn)[0]}
+                        label={intl.formatMessage(messages.orderBy)}
+                        placeholder={intl.formatMessage(messages.orderBy)}
+                        onChange={opt => setSortOn(opt.value)}
+                        options={sortOnOptions}
+                      />
+                    </Col>
+                  </Row>
+                </div>
+                <Row>
+                  {searchResults?.result?.items?.map(i => (
+                    <Col md={4} key={i['@id']}>
+                      <Card
+                        teaser
+                        noWrapper={true}
+                        className={cx('mt-3 mb-2 border-bottom-half', {
+                          'border-right border-light': i % 3 !== 2,
+                        })}
+                      >
+                        <CardBody>
+                          {i['@type'] && (
+                            <CardCategory>
+                              {getSectionFromId(i['@id'])}
+                            </CardCategory>
+                          )}
+                          <h4 className="card-title">
+                            <Link to={flattenToAppURL(i['@id'])}>
+                              {i.title}
+                            </Link>
+                          </h4>
+                          <p className="card-text">{i.description}</p>
+                        </CardBody>
+                      </Card>
+                    </Col>
+                  ))}
+                </Row>
+                {searchResults?.result?.batching && (
+                  <Pagination
+                    activePage={currentPage}
+                    totalPages={Math.ceil(
+                      searchResults?.result?.items_total ??
+                        0 / settings.defaultPageSize,
+                    )}
+                    onPageChange={handleQueryPaginationChange}
+                  />
                 )}
-                onPageChange={handleQueryPaginationChange}
-              />
-            )*/}
+              </div>
+            ) : (
+              <p>Nessun risultato ottenuto</p>
+            )}
           </Col>
         </Row>
       </Container>

@@ -99,7 +99,7 @@ const getSearchParamsURL = (
   topics,
   options,
   sortOn = {},
-  currentPage = null,
+  currentPage,
 ) => {
   const activeSections = Object.keys(sections).reduce((secAcc, secKey) => {
     const sec = Object.keys(sections[secKey]).reduce((acc, section) => {
@@ -143,7 +143,8 @@ const getSearchParamsURL = (
         'path.query': activeSections,
         Subject: activeTopics,
         ...optionsQuery,
-        b_start: currentPage,
+        ...sortOn,
+        // b_start: currentPage,
       },
       { skipNull: true },
     )
