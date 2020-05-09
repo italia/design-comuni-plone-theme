@@ -144,10 +144,10 @@ const getSearchParamsURL = (
         Subject: activeTopics,
         ...optionsQuery,
         ...sortOn,
-        // b_start: currentPage,
       },
       { skipNull: true },
-    )
+    ) +
+    (currentPage && currentPage > 0 ? `&b_start=${currentPage}` : '')
   );
 };
 

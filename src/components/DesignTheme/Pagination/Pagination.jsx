@@ -1,9 +1,10 @@
-import _ from 'lodash';
-import PropTypes from 'prop-types';
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import createPaginationItems from './createPaginationItems';
 import { Pager, PagerList } from 'design-react-kit/dist/design-react-kit';
 import PaginationItem from './PaginationItem';
+import { invoke, isNil, map } from 'lodash';
+
 /**
  * A component to render a pagination.
  */
@@ -60,8 +61,8 @@ export default class Pagination extends Component {
     // Heads up! We need the cast to the "number" type there, as `activePage` can be a string
     if (+prevActivePage === +nextActivePage) return;
 
-    this.trySetState({ activePage: nextActivePage });
-    _.invoke(this.props, 'onPageChange', e, {
+    this.setState({ activePage: nextActivePage });
+    invoke(this.props, 'onPageChange', e, {
       ...this.props,
       activePage: nextActivePage,
     });
@@ -79,7 +80,7 @@ export default class Pagination extends Component {
     const items = createPaginationItems({
       activePage,
       boundaryRange,
-      hideEllipsis: _.isNil(ellipsisItem),
+      hideEllipsis: isNil(ellipsisItem),
       siblingRange,
       totalPages,
     });
@@ -88,7 +89,7 @@ export default class Pagination extends Component {
     return (
       <Pager className="justify-content-center">
         <PagerList>
-          {_.map(items, ({ active, type, value }) => (
+          {map(items, ({ active, type, value }) => (
             <>
               {['firstItem', 'lastItem'].indexOf(type) < 0 && (
                 <PaginationItem

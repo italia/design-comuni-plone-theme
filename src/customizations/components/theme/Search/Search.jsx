@@ -20,6 +20,7 @@ import {
   Icon,
   Button,
   Toggle,
+  Alert,
   Spinner,
 } from 'design-react-kit/dist/design-react-kit';
 import { Link, useLocation, useHistory } from 'react-router-dom';
@@ -183,7 +184,7 @@ const Search = () => {
 
   const handleQueryPaginationChange = (_e, { activePage }) => {
     window.scrollTo(0, 0);
-    setCurrentPage(activePage);
+    setCurrentPage(activePage?.children ?? 1);
   };
 
   const searchFilters = useSelector(state => state.searchFilters.result);
@@ -214,14 +215,13 @@ const Search = () => {
   );
 
   const doSearch = () => {
-    const activePage = (currentPage - 1) * settings.defaultPageSize;
     const queryString = getSearchParamsURL(
       searchableText?.length > 0 ? `${searchableText}*` : '',
       sections,
       topics,
       options,
       searchOrderDict[sortOn] ?? {},
-      activePage && activePage > 0 ? activePage : null,
+      (currentPage - 1) * settings.defaultPageSize,
     );
 
     console.log(queryString);
@@ -480,13 +480,17 @@ const Search = () => {
                   <Pagination
                     activePage={currentPage}
                     totalPages={Math.ceil(
-                      searchResults?.result?.items_total ??
-                        0 / settings.defaultPageSize,
+                      (searchResults?.result?.items_total ?? 0) /
+                        settings.defaultPageSize,
                     )}
                     onPageChange={handleQueryPaginationChange}
                   />
                 )}
               </div>
+            ) : searchResults.error ? (
+              <Alert color="danger">
+                <strong>Attenzione!</strong> Sono occorsi degli errori
+              </Alert>
             ) : (
               <p>Nessun risultato ottenuto</p>
             )}
