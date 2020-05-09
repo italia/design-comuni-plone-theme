@@ -86,10 +86,10 @@ export default class Pagination extends Component {
     });
 
     return (
-      <Pager className="justify-content-center">
+      <Pager className="justify-content-center mt-5">
         <PagerList>
           {map(items, ({ active, type, value }) => (
-            <React.Fragment key={value}>
+            <React.Fragment key={value + type}>
               {['firstItem', 'lastItem'].indexOf(type) < 0 && (
                 <PaginationItem
                   active={active}
