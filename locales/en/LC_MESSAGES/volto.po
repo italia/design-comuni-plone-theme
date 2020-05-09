@@ -96,12 +96,20 @@ msgstr ""
 msgid "Newsletter"
 msgstr ""
 
+#: components/DesignTheme/Pagination/PaginationItem
+msgid "Next page"
+msgstr ""
+
 #: components/DesignTheme/Footer/FooterSmall
 msgid "Note legali"
 msgstr ""
 
 #: components/DesignTheme/Footer/FooterInfos
 msgid "PEC"
+msgstr ""
+
+#: components/DesignTheme/Pagination/PaginationItem
+msgid "Previous page"
 msgstr ""
 
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
@@ -116,6 +124,14 @@ msgstr ""
 msgid "RssFeedItemNumber"
 msgstr ""
 
+#: customizations/components/theme/Search/Search
+msgid "Search results"
+msgstr ""
+
+#: customizations/components/theme/Search/Search
+msgid "Search site"
+msgstr ""
+
 #: components/DesignTheme/Header/HeaderCenter
 msgid "Seguici su"
 msgstr ""
@@ -126,6 +142,10 @@ msgstr ""
 
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Short Name"
+msgstr ""
+
+#: components/DesignTheme/Search/SearchTopics
+msgid "Show all"
 msgstr ""
 
 #: components/DesignTheme/Footer/FooterInfos
@@ -176,6 +196,7 @@ msgid "allTopics"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
 msgid "amministrazione"
 msgstr ""
 
@@ -232,7 +253,13 @@ msgid "details"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
 msgid "documenti"
+msgstr ""
+
+#: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
+msgid "documenti-e-dati"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Actions
@@ -257,6 +284,14 @@ msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
 msgid "filters"
+msgstr ""
+
+#: customizations/components/theme/Search/Search
+msgid "filtersCollapse"
+msgstr ""
+
+#: customizations/components/theme/Search/Search
+msgid "found_n_results"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Gallery
@@ -297,6 +332,7 @@ msgid "notizie_in_evidenza"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
 msgid "novita"
 msgstr ""
 
@@ -305,10 +341,12 @@ msgid "optionActiveContentButton"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
 msgid "optionActiveContentInfo"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
 msgid "optionActiveContentLabel"
 msgstr ""
 
@@ -317,6 +355,7 @@ msgid "optionDateEnd"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
 msgid "optionDateEndButton"
 msgstr ""
 
@@ -329,11 +368,17 @@ msgid "optionDateStart"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
 msgid "optionDateStartButton"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
 msgid "options"
+msgstr ""
+
+#: customizations/components/theme/Search/Search
+msgid "order_by"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Metadata
@@ -362,6 +407,7 @@ msgid "related_items"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
 msgid "removeOption"
 msgstr ""
 
@@ -397,7 +443,12 @@ msgstr ""
 msgid "searchLabel"
 msgstr ""
 
+#: customizations/components/theme/Search/Search
+msgid "section_undefined"
+msgstr ""
+
 #: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
 msgid "sections"
 msgstr ""
 
@@ -410,6 +461,7 @@ msgid "selectRSSOptions"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
 msgid "servizi"
 msgstr ""
 
@@ -426,6 +478,18 @@ msgstr ""
 msgid "share"
 msgstr ""
 
+#: customizations/components/theme/Search/Search
+msgid "sort_on_date"
+msgstr ""
+
+#: customizations/components/theme/Search/Search
+msgid "sort_on_relevance"
+msgstr ""
+
+#: customizations/components/theme/Search/Search
+msgid "sort_on_title"
+msgstr ""
+
 #: components/DesignTheme/View/Commons/Metadata
 msgid "subjects"
 msgstr ""
@@ -436,6 +500,7 @@ msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
 #: components/DesignTheme/View/Commons/PageHeader
+#: customizations/components/theme/Search/Search
 msgid "topics"
 msgstr ""
 

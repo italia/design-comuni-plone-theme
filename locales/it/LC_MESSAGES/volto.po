@@ -96,6 +96,10 @@ msgstr "NewsHome"
 msgid "Newsletter"
 msgstr "Newsletter"
 
+#: components/DesignTheme/Pagination/PaginationItem
+msgid "Next page"
+msgstr "Pagina successiva"
+
 #: components/DesignTheme/Footer/FooterSmall
 msgid "Note legali"
 msgstr "Note legali"
@@ -103,6 +107,10 @@ msgstr "Note legali"
 #: components/DesignTheme/Footer/FooterInfos
 msgid "PEC"
 msgstr "PEC"
+
+#: components/DesignTheme/Pagination/PaginationItem
+msgid "Previous page"
+msgstr "Pagina precedente"
 
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Required"
@@ -116,6 +124,14 @@ msgstr "Feed RSS"
 msgid "RssFeedItemNumber"
 msgstr "Numero di elementi da mostrare"
 
+#: customizations/components/theme/Search/Search
+msgid "Search results"
+msgstr "Risultati della ricerca"
+
+#: customizations/components/theme/Search/Search
+msgid "Search site"
+msgstr "Cerca nel sito"
+
 #: components/DesignTheme/Header/HeaderCenter
 msgid "Seguici su"
 msgstr "Seguici su"
@@ -127,6 +143,10 @@ msgstr "Sezione Link Utili"
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Short Name"
 msgstr "Short Name"
+
+#: components/DesignTheme/Search/SearchTopics
+msgid "Show all"
+msgstr "Mostra tutto"
 
 #: components/DesignTheme/Footer/FooterInfos
 msgid "Subscribe"
@@ -173,9 +193,10 @@ msgstr "Tutte le opzioni"
 
 #: components/DesignTheme/Header/SearchModal
 msgid "allTopics"
-msgstr ""
+msgstr "Tutti gli argomenti"
 
 #: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
 msgid "amministrazione"
 msgstr "Amministrazione"
 
@@ -232,8 +253,14 @@ msgid "details"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
 msgid "documenti"
 msgstr "Documenti"
+
+#: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
+msgid "documenti-e-dati"
+msgstr "Documenti e dati"
 
 #: components/DesignTheme/View/Commons/Actions
 msgid "download"
@@ -258,6 +285,14 @@ msgstr "Feed RSS impostato"
 #: components/DesignTheme/Header/SearchModal
 msgid "filters"
 msgstr "Filtri"
+
+#: customizations/components/theme/Search/Search
+msgid "filtersCollapse"
+msgstr "Filtri"
+
+#: customizations/components/theme/Search/Search
+msgid "found_n_results"
+msgstr "Trovati {total} risultati."
 
 #: components/DesignTheme/View/Commons/Gallery
 msgid "gallery"
@@ -297,6 +332,7 @@ msgid "notizie_in_evidenza"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
 msgid "novita"
 msgstr "Novità"
 
@@ -305,10 +341,12 @@ msgid "optionActiveContentButton"
 msgstr "Contenuto attivo"
 
 #: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
 msgid "optionActiveContentInfo"
 msgstr "Verranno esclusi dalla ricerca i contenuti archiviati e non più validi come gli eventi terminati o i bandi scaduti."
 
 #: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
 msgid "optionActiveContentLabel"
 msgstr "Cerca solo tra i contenuti attivi"
 
@@ -317,6 +355,7 @@ msgid "optionDateEnd"
 msgstr "Data fine"
 
 #: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
 msgid "optionDateEndButton"
 msgstr "Al"
 
@@ -329,12 +368,18 @@ msgid "optionDateStart"
 msgstr "Data inizio"
 
 #: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
 msgid "optionDateStartButton"
 msgstr "Dal"
 
 #: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
 msgid "options"
 msgstr "Opzioni"
+
+#: customizations/components/theme/Search/Search
+msgid "order_by"
+msgstr "Ordiina per"
 
 #: components/DesignTheme/View/Commons/Metadata
 msgid "other_info"
@@ -362,6 +407,7 @@ msgid "related_items"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
 msgid "removeOption"
 msgstr "Rimuovi opzione"
 
@@ -397,7 +443,12 @@ msgstr "Cerca"
 msgid "searchLabel"
 msgstr "Cerca nel sito"
 
+#: customizations/components/theme/Search/Search
+msgid "section_undefined"
+msgstr "Altro"
+
 #: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
 msgid "sections"
 msgstr "Sezioni"
 
@@ -410,6 +461,7 @@ msgid "selectRSSOptions"
 msgstr "Seleziona opzioini"
 
 #: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
 msgid "servizi"
 msgstr "Servizi"
 
@@ -426,6 +478,18 @@ msgstr "Imposta feed RSS"
 msgid "share"
 msgstr "share"
 
+#: customizations/components/theme/Search/Search
+msgid "sort_on_date"
+msgstr "Data (prima i più recenti)"
+
+#: customizations/components/theme/Search/Search
+msgid "sort_on_relevance"
+msgstr "Rilevanza"
+
+#: customizations/components/theme/Search/Search
+msgid "sort_on_title"
+msgstr "Alfabeticamente"
+
 #: components/DesignTheme/View/Commons/Metadata
 msgid "subjects"
 msgstr ""
@@ -436,6 +500,7 @@ msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
 #: components/DesignTheme/View/Commons/PageHeader
+#: customizations/components/theme/Search/Search
 msgid "topics"
 msgstr "Argomenti"
 

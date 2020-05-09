@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-04-09T13:23:18.854Z\n"
+"POT-Creation-Date: 2020-05-09T16:28:18.012Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -119,6 +119,11 @@ msgstr ""
 msgid "Newsletter"
 msgstr ""
 
+#: components/DesignTheme/Pagination/PaginationItem
+# defaultMessage: Pagina successiva
+msgid "Next page"
+msgstr ""
+
 #: components/DesignTheme/Footer/FooterSmall
 # defaultMessage: Note legali
 msgid "Note legali"
@@ -127,6 +132,11 @@ msgstr ""
 #: components/DesignTheme/Footer/FooterInfos
 # defaultMessage: Posta Elettronica Certificata
 msgid "PEC"
+msgstr ""
+
+#: components/DesignTheme/Pagination/PaginationItem
+# defaultMessage: Pagina precedente
+msgid "Previous page"
 msgstr ""
 
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
@@ -144,6 +154,16 @@ msgstr ""
 msgid "RssFeedItemNumber"
 msgstr ""
 
+#: customizations/components/theme/Search/Search
+# defaultMessage: Risultati della ricerca
+msgid "Search results"
+msgstr ""
+
+#: customizations/components/theme/Search/Search
+# defaultMessage: Cerca nel sito
+msgid "Search site"
+msgstr ""
+
 #: components/DesignTheme/Header/HeaderCenter
 # defaultMessage: Seguici su
 msgid "Seguici su"
@@ -157,6 +177,11 @@ msgstr ""
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 # defaultMessage: Short Name
 msgid "Short Name"
+msgstr ""
+
+#: components/DesignTheme/Search/SearchTopics
+# defaultMessage: Mostra tutto
+msgid "Show all"
 msgstr ""
 
 #: components/DesignTheme/Footer/FooterInfos
@@ -218,6 +243,7 @@ msgid "allTopics"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
 # defaultMessage: Amministrazione
 msgid "amministrazione"
 msgstr ""
@@ -288,8 +314,15 @@ msgid "details"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
 # defaultMessage: Documenti e dati
 msgid "documenti"
+msgstr ""
+
+#: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
+# defaultMessage: Documenti e dati
+msgid "documenti-e-dati"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Actions
@@ -320,6 +353,16 @@ msgstr ""
 #: components/DesignTheme/Header/SearchModal
 # defaultMessage: Filtri
 msgid "filters"
+msgstr ""
+
+#: customizations/components/theme/Search/Search
+# defaultMessage: Filtri
+msgid "filtersCollapse"
+msgstr ""
+
+#: customizations/components/theme/Search/Search
+# defaultMessage: Trovati {total} risultati.
+msgid "found_n_results"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Gallery
@@ -369,6 +412,7 @@ msgid "notizie_in_evidenza"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
 # defaultMessage: Novità
 msgid "novita"
 msgstr ""
@@ -379,11 +423,13 @@ msgid "optionActiveContentButton"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
 # defaultMessage: Verranno esclusi dalla ricerca i contenuti archiviati e non più validi come gli eventi terminati o i bandi scaduti.
 msgid "optionActiveContentInfo"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
 # defaultMessage: Cerca solo tra i contenuti attivi
 msgid "optionActiveContentLabel"
 msgstr ""
@@ -394,6 +440,7 @@ msgid "optionDateEnd"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
 # defaultMessage: Al
 msgid "optionDateEndButton"
 msgstr ""
@@ -409,13 +456,20 @@ msgid "optionDateStart"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
 # defaultMessage: Dal
 msgid "optionDateStartButton"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
 # defaultMessage: Opzioni
 msgid "options"
+msgstr ""
+
+#: customizations/components/theme/Search/Search
+# defaultMessage: Ordina per
+msgid "order_by"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Metadata
@@ -450,6 +504,7 @@ msgid "related_items"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
 # defaultMessage: Rimuovi opzione
 msgid "removeOption"
 msgstr ""
@@ -493,7 +548,13 @@ msgstr ""
 msgid "searchLabel"
 msgstr ""
 
+#: customizations/components/theme/Search/Search
+# defaultMessage: altro
+msgid "section_undefined"
+msgstr ""
+
 #: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
 # defaultMessage: Sezioni
 msgid "sections"
 msgstr ""
@@ -509,6 +570,7 @@ msgid "selectRSSOptions"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
 # defaultMessage: Servizi
 msgid "servizi"
 msgstr ""
@@ -529,6 +591,21 @@ msgstr ""
 msgid "share"
 msgstr ""
 
+#: customizations/components/theme/Search/Search
+# defaultMessage: Data (prima i più recenti)
+msgid "sort_on_date"
+msgstr ""
+
+#: customizations/components/theme/Search/Search
+# defaultMessage: Rilevanza
+msgid "sort_on_relevance"
+msgstr ""
+
+#: customizations/components/theme/Search/Search
+# defaultMessage: Alfabeticamente
+msgid "sort_on_title"
+msgstr ""
+
 #: components/DesignTheme/View/Commons/Metadata
 # defaultMessage: Tags
 msgid "subjects"
@@ -541,6 +618,7 @@ msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
 #: components/DesignTheme/View/Commons/PageHeader
+#: customizations/components/theme/Search/Search
 # defaultMessage: Argomenti
 msgid "topics"
 msgstr ""
