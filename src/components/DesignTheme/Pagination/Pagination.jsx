@@ -85,12 +85,11 @@ export default class Pagination extends Component {
       totalPages,
     });
 
-    console.log('items', items);
     return (
       <Pager className="justify-content-center">
         <PagerList>
           {map(items, ({ active, type, value }) => (
-            <>
+            <React.Fragment key={value}>
               {['firstItem', 'lastItem'].indexOf(type) < 0 && (
                 <PaginationItem
                   active={active}
@@ -102,7 +101,7 @@ export default class Pagination extends Component {
                   {value}
                 </PaginationItem>
               )}
-            </>
+            </React.Fragment>
           ))}
         </PagerList>
       </Pager>
