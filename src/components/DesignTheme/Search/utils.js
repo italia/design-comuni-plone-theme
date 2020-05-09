@@ -118,7 +118,7 @@ const getSearchParamsURL = (
 
   const optionsQuery = {};
   if (options.activeContent) {
-    optionsQuery['expires.range'] = 'max';
+    optionsQuery['expires.range'] = 'min';
     optionsQuery['expires.query:list:date'] = moment().format('YYYY/MM/DD');
   }
   if (options.dateStart && options.dateEnd) {
