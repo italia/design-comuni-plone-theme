@@ -84,7 +84,7 @@ const parseFetchedOptions = (options, location) => {
 
   if (
     qsOptions['expires.range'] &&
-    qsOptions['expires.range'] === 'max' &&
+    qsOptions['expires.range'] === 'min' &&
     qsOptions['expires.query:list:date']
   ) {
     opts.activeContent = true;

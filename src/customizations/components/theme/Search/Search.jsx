@@ -35,7 +35,6 @@ import { getSearchFilters, getSearchResults } from '~/actions';
 import { settings } from '~/config';
 
 const {
-  defaultOptions,
   parseFetchedSections,
   parseFetchedTopics,
   parseFetchedOptions,
@@ -202,7 +201,7 @@ const Search = () => {
       setTopics(parseFetchedTopics(searchFilters.topics, location));
     }
 
-    setOptions(parseFetchedOptions(defaultOptions, location));
+    setOptions(parseFetchedOptions({}, location));
   }, [searchFilters]);
 
   const searchResults = useSelector(state => state.searchResults);
