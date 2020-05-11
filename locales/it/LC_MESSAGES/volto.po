@@ -379,7 +379,7 @@ msgstr "Opzioni"
 
 #: customizations/components/theme/Search/Search
 msgid "order_by"
-msgstr "Ordiina per"
+msgstr "Ordina per"
 
 #: components/DesignTheme/View/Commons/Metadata
 msgid "other_info"

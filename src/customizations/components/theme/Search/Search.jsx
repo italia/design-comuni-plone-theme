@@ -177,7 +177,7 @@ const Search = () => {
   const getSectionFromId = id => {
     let itemSection = Object.keys(sections).filter(s => id.indexOf(s) > -1);
     return itemSection?.length > 0
-      ? itemSection[0].replace(/-/, ' ')
+      ? itemSection[0].replace(/-/g, ' ')
       : intl.formatMessage(messages.section_undefined);
   };
 
