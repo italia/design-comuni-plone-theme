@@ -75,10 +75,6 @@ msgstr "Home"
 msgid "Image"
 msgstr "Image"
 
-#: components/DesignTheme/Blocks/Listing/NewsTemplate
-msgid "Keep reading"
-msgstr ""
-
 #: components/DesignTheme/Footer/FooterSmall
 msgid "Mappa del sito"
 msgstr "Mappa del sito"
@@ -100,6 +96,10 @@ msgstr "NewsHome"
 msgid "Newsletter"
 msgstr "Newsletter"
 
+#: components/DesignTheme/Pagination/PaginationItem
+msgid "Next page"
+msgstr "Pagina successiva"
+
 #: components/DesignTheme/Footer/FooterSmall
 msgid "Note legali"
 msgstr "Note legali"
@@ -108,12 +108,31 @@ msgstr "Note legali"
 msgid "PEC"
 msgstr "PEC"
 
+#: components/DesignTheme/Pagination/PaginationItem
+msgid "Previous page"
+msgstr "Pagina precedente"
+
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Required"
 msgstr "Required"
 
+#: addons/volto-rss-block/src/Block/RssSidebar
+msgid "RssFeed"
+msgstr "Feed RSS"
+
+#: addons/volto-rss-block/src/Block/RssSidebar
+msgid "RssFeedItemNumber"
+msgstr "Numero di elementi da mostrare"
+
+#: customizations/components/theme/Search/Search
+msgid "Search results"
+msgstr "Risultati della ricerca"
+
+#: customizations/components/theme/Search/Search
+msgid "Search site"
+msgstr "Cerca nel sito"
+
 #: components/DesignTheme/Header/HeaderCenter
-#: components/DesignTheme/SocialLinks/SocialLinks
 msgid "Seguici su"
 msgstr "Seguici su"
 
@@ -125,9 +144,17 @@ msgstr "Sezione Link Utili"
 msgid "Short Name"
 msgstr "Short Name"
 
+#: components/DesignTheme/Search/SearchTopics
+msgid "Show all"
+msgstr "Mostra tutto"
+
 #: components/DesignTheme/Footer/FooterInfos
 msgid "Subscribe"
 msgstr "Subscribe"
+
+#: addons/volto-rss-block/src/Block/TemplateWidget
+msgid "Template"
+msgstr "Template"
 
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Title"
@@ -156,6 +183,23 @@ msgstr "Vedi tutto"
 msgid "actions"
 msgstr "actions"
 
+#: components/DesignTheme/Header/SearchModal
+msgid "allFilters"
+msgstr "Tutto"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "allOptions"
+msgstr "Tutte le opzioni"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "allTopics"
+msgstr "Tutti gli argomenti"
+
+#: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
+msgid "amministrazione"
+msgstr "Amministrazione"
+
 #: components/DesignTheme/View/UOView
 msgid "assessore_riferimento"
 msgstr ""
@@ -168,6 +212,10 @@ msgstr ""
 msgid "attachments"
 msgstr ""
 
+#: components/DesignTheme/Header/SearchModal
+msgid "backToSearch"
+msgstr "Torna alla ricerca"
+
 #: components/DesignTheme/View/UOView
 msgid "box_aiuto"
 msgstr ""
@@ -175,6 +223,18 @@ msgstr ""
 #: customizations/components/theme/Navigation/Navigation
 msgid "close"
 msgstr "close"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "closeSearch"
+msgstr "Chiidu ricerca"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "confirmSearch"
+msgstr "Conferma"
+
+#: addons/volto-cookie-banner/src/CookieBannerContainer
+msgid "cookie_banner_button"
+msgstr "Accetto"
 
 #: components/DesignTheme/View/Commons/CuredBy
 msgid "cured_by"
@@ -192,6 +252,16 @@ msgstr ""
 msgid "details"
 msgstr ""
 
+#: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
+msgid "documenti"
+msgstr "Documenti"
+
+#: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
+msgid "documenti-e-dati"
+msgstr "Documenti e dati"
+
 #: components/DesignTheme/View/Commons/Actions
 msgid "download"
 msgstr ""
@@ -203,6 +273,26 @@ msgstr "Seleziona un elemento nella barra laterale per mostrarlo qui."
 #: components/DesignTheme/View/Commons/PageHeader
 msgid "expire"
 msgstr ""
+
+#: addons/volto-rss-block/src/Block/Edit
+msgid "feed_not_set"
+msgstr "Feed RSS non impostato"
+
+#: addons/volto-rss-block/src/Block/Edit
+msgid "feed_set"
+msgstr "Feed RSS impostato"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "filters"
+msgstr "Filtri"
+
+#: customizations/components/theme/Search/Search
+msgid "filtersCollapse"
+msgstr "Filtri"
+
+#: customizations/components/theme/Search/Search
+msgid "found_n_results"
+msgstr "Trovati {total} risultati."
 
 #: components/DesignTheme/View/Commons/Gallery
 msgid "gallery"
@@ -232,10 +322,64 @@ msgstr ""
 msgid "modified"
 msgstr ""
 
+#: addons/volto-multilingual-widget/src/index
+msgid "multilingual_text_placeholder"
+msgstr "Digita..."
+
 #: components/DesignTheme/View/NewsItemView
 #: components/DesignTheme/View/UOView
 msgid "notizie_in_evidenza"
 msgstr ""
+
+#: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
+msgid "novita"
+msgstr "Novità"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "optionActiveContentButton"
+msgstr "Contenuto attivo"
+
+#: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
+msgid "optionActiveContentInfo"
+msgstr "Verranno esclusi dalla ricerca i contenuti archiviati e non più validi come gli eventi terminati o i bandi scaduti."
+
+#: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
+msgid "optionActiveContentLabel"
+msgstr "Cerca solo tra i contenuti attivi"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "optionDateEnd"
+msgstr "Data fine"
+
+#: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
+msgid "optionDateEndButton"
+msgstr "Al"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "optionDatePlaceholder"
+msgstr "inserisci la data in formato gg/mm/aaaa"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "optionDateStart"
+msgstr "Data inizio"
+
+#: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
+msgid "optionDateStartButton"
+msgstr "Dal"
+
+#: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
+msgid "options"
+msgstr "Opzioni"
+
+#: customizations/components/theme/Search/Search
+msgid "order_by"
+msgstr "Ordina per"
 
 #: components/DesignTheme/View/Commons/Metadata
 msgid "other_info"
@@ -262,6 +406,15 @@ msgstr ""
 msgid "related_items"
 msgstr ""
 
+#: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
+msgid "removeOption"
+msgstr "Rimuovi opzione"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "removeTopic"
+msgstr "Rimuovi argomento"
+
 #: components/DesignTheme/View/UOView
 msgid "responsabile"
 msgstr ""
@@ -270,18 +423,72 @@ msgstr ""
 msgid "rights"
 msgstr ""
 
+#: addons/volto-rss-block/src/Templates/DefaultRssTemplate
+#: components/DesignTheme/Blocks/RssBlock/CardWithImageRssTemplate
+#: components/DesignTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
+msgid "rss_no_results"
+msgstr "Nessun risultato dal feed RSS"
+
+#: addons/volto-rss-block/src/Templates/DefaultRssTemplate
+#: components/DesignTheme/Blocks/RssBlock/CardWithImageRssTemplate
+#: components/DesignTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
+msgid "rss_read_more"
+msgstr "Leggi tutto"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "search"
+msgstr "Cerca"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "searchLabel"
+msgstr "Cerca nel sito"
+
+#: customizations/components/theme/Search/Search
+msgid "section_undefined"
+msgstr "Altro"
+
+#: components/DesignTheme/Header/SearchModal
+#: customizations/components/theme/Search/Search
+msgid "sections"
+msgstr "Sezioni"
+
 #: components/DesignTheme/View/UOView
 msgid "sedi"
 msgstr ""
+
+#: addons/volto-rss-block/src/Block/RssSidebar
+msgid "selectRSSOptions"
+msgstr "Seleziona opzioini"
+
+#: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
+msgid "servizi"
+msgstr "Servizi"
 
 #: components/DesignTheme/View/UOView
 msgid "servizi_offerti"
 msgstr ""
 
+#: addons/volto-rss-block/src/Block/RssSidebar
+msgid "setrss"
+msgstr "Imposta feed RSS"
+
 #: components/DesignTheme/View/Commons/PageHeader
 #: components/DesignTheme/View/Commons/Sharing
 msgid "share"
 msgstr "share"
+
+#: customizations/components/theme/Search/Search
+msgid "sort_on_date"
+msgstr "Data (prima i più recenti)"
+
+#: customizations/components/theme/Search/Search
+msgid "sort_on_relevance"
+msgstr "Rilevanza"
+
+#: customizations/components/theme/Search/Search
+msgid "sort_on_title"
+msgstr "Alfabeticamente"
 
 #: components/DesignTheme/View/Commons/Metadata
 msgid "subjects"
@@ -291,10 +498,16 @@ msgstr ""
 msgid "tipologia_organizzazione"
 msgstr ""
 
+#: components/DesignTheme/Header/SearchModal
 #: components/DesignTheme/View/Commons/PageHeader
+#: customizations/components/theme/Search/Search
 msgid "topics"
-msgstr "topics"
+msgstr "Argomenti"
 
 #: components/DesignTheme/View/UOView
 msgid "ulteriori_informazioni"
 msgstr ""
+
+#: addons/volto-multilingual-widget/src/index
+msgid "value_for_lang"
+msgstr "Valore per la lingua {lang}"

@@ -1,0 +1,10 @@
+.border-bottom-half {
+  &:before {
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    border-bottom: 1px solid $light;
+
+    content: '';
+  }
+}

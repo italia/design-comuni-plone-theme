@@ -134,6 +134,9 @@ export const settings = {
   extendedBlockRenderMap: extendedBlockRenderMap,
   blockStyleFn: blockStyleFn,
   listBlockTypes: listBlockTypes,
+  isMultilingual: false,
+  supportedLanguages: ['it'],
+  defaultLanguage: 'it',
 };
 
 export const views = {
