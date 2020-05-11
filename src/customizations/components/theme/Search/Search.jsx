@@ -176,9 +176,22 @@ const Search = () => {
 
   const getSectionFromId = id => {
     let itemSection = Object.keys(sections).filter(s => id.indexOf(s) > -1);
-    return itemSection?.length > 0
-      ? itemSection[0].replace(/-/g, ' ')
-      : intl.formatMessage(messages.section_undefined);
+
+    if (itemSection?.length > 0) {
+      let sectionURL = `/${itemSection[0]}`;
+      let sectionLabel = itemSection[0].replace(/-/g, ' ');
+
+      return <CardCategory href={sectionURL}>{sectionLabel}</CardCategory>;
+    } else {
+      return (
+        <div className="category-top">
+          <span className="category">
+            {intl.formatMessage(messages.section_undefined)}
+          </span>
+          <span className="data"></span>
+        </div>
+      );
+    }
   };
 
   const handleQueryPaginationChange = (_e, { activePage }) => {
@@ -223,7 +236,6 @@ const Search = () => {
       (currentPage - 1) * settings.defaultPageSize,
     );
 
-    console.log(queryString);
     searchResults.result &&
       history.push(
         getSearchParamsURL(
@@ -235,7 +247,6 @@ const Search = () => {
           (currentPage - 1) * settings.defaultPageSize,
         ),
       );
-    // location.search = queryString.replace('/search', '');
     dispatch(getSearchResults(queryString.replace('/search', '')));
   };
 
@@ -459,11 +470,7 @@ const Search = () => {
                         })}
                       >
                         <CardBody>
-                          {i['@type'] && (
-                            <CardCategory>
-                              {getSectionFromId(i['@id'])}
-                            </CardCategory>
-                          )}
+                          {i['@type'] && getSectionFromId(i['@id'])}
                           <h4 className="card-title">
                             <Link to={flattenToAppURL(i['@id'])}>
                               {i.title}
