@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-4.0.2 (unreleased)
+5.0.0 (2020-05-13)
 ------------------
 
 - Added python3 compatibility [cekk]
