@@ -30,11 +30,14 @@
                                     <!-- if obj is None, it will break calling getObject() on it, but if the collection is empty this won't be rendered by collective.tiles.collection -->
                                     <li class="collectionItem colonna-1-di-4"
                                         tal:define="obj brain/getObject;
+                                                    is_external_link python: helper_view.is_external_link(brain);
                                                     image_tag python:helper_view.get_image_tag(obj, 'newshome', 'down');
                                                     title brain/Title;
                                                     description brain/Description">
                                         <div class="collectionItemWrapper">
-                                            <a href="${brain/getURL}" title="${title}">
+                                            <a href="${brain/getURL}" title="${title}"
+                                               tal:attributes="target python: is_external_link and '_blank' or None;
+                                                               rel python: is_external_link and 'noopener noreferrer' or None;">
                                                 <div class="collectionItemImage">
                                                     <figure class="item-image" tal:condition="image_tag" tal:content="structure image_tag" />
                                                 </div>

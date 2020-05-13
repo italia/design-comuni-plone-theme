@@ -6,7 +6,8 @@
       metal:use-macro="here/main_template/macros/master"
       i18n:domain="collective.tiles.collection">
     <body>
-        <metal:macro define-macro="collection-tile-macro">
+        <metal:macro define-macro="collection-tile-macro"
+                     tal:define="helper_view nocall:context/@@collection_tile_helpers;">
         <div class="aree-tematiche-collection">
             <h2 tal:define="title view/data/title|nothing;"
                 class="tileTitle"
@@ -22,6 +23,8 @@
                     <li tal:define="oddrow repeat/obj/odd;
                                     useView python:obj.portal_type in viewActions;
                                     itemUrl python:useView and obj.getURL() + '/view' or obj.getURL();
+                                    portal_url context/portal_url;
+                                    is_external_link python: helper_view.is_external_link(obj);
                                     item_wf_state obj/review_state;
                                     item_wf_state_class python:'state-' + plone_view.normalizeString(item_wf_state);
                                     item_type obj/portal_type;
@@ -30,6 +33,8 @@
                         <div class="linkWrapper">
                             <a href="#"
                                tal:attributes="href itemUrl;
+                                               target python: is_external_link and '_blank' or None;
+                                               rel python: is_external_link and 'noopener noreferrer' or None;
                                                class string:tile $item_type_class $item_wf_state_class;
                                                title obj/Description">
 
@@ -46,7 +51,7 @@
                                 <div class="linkImage"
                                      tal:condition="hasImage"
                                      tal:define="icon python:obj.getURL()+'/@@images/image/icon'">
-                                    <img class="link-icon" tal:attributes="src string:$icon;" alt="">
+                                  <img class="link-icon" tal:attributes="src string:$icon;" alt="${obj/Title|nothing}" />
                                 </div>
                                 <div class="linkText">
                                     <span class="title">

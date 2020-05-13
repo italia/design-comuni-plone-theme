@@ -6,7 +6,8 @@
       metal:use-macro="here/main_template/macros/master"
       i18n:domain="collective.tiles.collection">
   <body>
-    <metal:macro define-macro="collection-tile-macro">
+    <metal:macro define-macro="collection-tile-macro"
+                 tal:define="helper_view nocall:context/@@collection_tile_helpers;">
       <div class="online-services">
         <div class="tile-collection-container">
           <h2 tal:define="title view/data/title|nothing;"
@@ -23,6 +24,7 @@
                 <li tal:define="oddrow repeat/obj/odd;
                                 useView python:obj.portal_type in viewActions;
                                 itemUrl python:useView and obj.getURL() + '/view' or obj.getURL();
+                                is_external_link python: helper_view.is_external_link(obj);
                                 item_wf_state obj/review_state;
                                 item_wf_state_class python:'state-' + plone_view.normalizeString(item_wf_state);
                                 item_type obj/portal_type;
@@ -39,6 +41,8 @@
                             <div class="serviceTitle">
                               <a href="#"
                                 tal:attributes="href itemUrl;
+                                                target python: is_external_link and '_blank' or None;
+                                                rel python: is_external_link and 'noopener noreferrer' or None;
                                                 class string:tile $item_type_class $item_wf_state_class;
                                                 title obj/Description">
                                 <span tal:content="obj/Title"> Title </span>

@@ -5,7 +5,7 @@
   <p i18n:translate="follow_us">Follow us on</p>
   <ul>
     <li tal:repeat="link links">
-      <a href="${link/url}" title="${link/id} - apri in una nuova scheda" class="social" target="_blank">
+      <a href="${link/url}" title="${link/id} - apri in una nuova scheda" class="social" target="_blank" rel="noopener noreferrer">
         <i class="${link/cssClass}"></i>
         <span>${link/id}</span>
       </a>

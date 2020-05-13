@@ -86,8 +86,7 @@ class HelpersView(BrowserView):
 
     def is_external_link(self, item):
         # accepts a Link object
-        obj = item.getObject()
-        remoteUrl = getattr(obj, 'remoteUrl', None)
+        remoteUrl = getattr(item, 'remoteUrl', None)
 
         if remoteUrl:
             # so it's a Link
