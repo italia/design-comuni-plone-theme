@@ -1,0 +1,61 @@
+<tal:master define="level options/level | python:0;
+                    children options/children | nothing;
+                    bottomLevel options/bottomLevel | nothing;
+                    supress_icon    view/data/no_icons;
+                    supress_thumb   view/data/no_thumbs;
+                    thumb_scale view/thumb_scale"
+            i18n:domain="plone">
+
+<metal:main define-macro="nav_main"
+            tal:define="portal context/@@plone_portal_state/portal;
+                        image_scale portal/@@image_scale">
+<tal:navitem repeat="node children">
+<li tal:define="show_children   node/show_children;
+                children        node/children;
+                item_url        node/getURL;
+                item_remote_url node/getRemoteUrl;
+                use_remote_url  node/useRemoteUrl | nothing;
+                is_external_link python: 'resolveuid' not in item_remote_url if item_remote_url else False;
+                item_type       node/portal_type;
+                item            node/item;
+                has_thumb       item/getIcon;
+                is_current      node/currentItem;
+                is_in_path      node/currentParent;
+                li_class        python:' navTreeCurrentNode' if is_current else '';
+                li_extr_class   python:' navTreeItemInPath' if is_in_path else '';
+                li_folder_class python:' navTreeFolderish' if show_children else '';
+                normalizeString nocall: context/plone_utils/normalizeString;"
+    tal:condition="python:bottomLevel &lt;= 0 or level &lt;= bottomLevel"
+    tal:attributes="class string:navTreeItem visualNoMarker${li_class}${li_extr_class}${li_folder_class} section-${node/normalized_id}">
+
+    <tal:level define="item_class string:state-${node/normalized_review_state};
+                       item_type_class python:'contenttype-%s' % normalizeString(item_type) if not supress_icon else '';
+                       item_class python:'%s navTreeCurrentItem' % item_class if is_current else item_class">
+
+        <a tal:attributes="href  python:item_remote_url if use_remote_url else item_url;
+                           target python:is_external_link and '_blank' or None;
+                           rel python:is_external_link and 'noopener noreferrer' or None;
+                           title node/Description;
+                           class string:${item_class}${li_class}${li_extr_class}${li_folder_class} ${item_type_class}">
+
+             <img class="mime-icon" tal:condition="python:item_type =='File' and not supress_icon"
+                             tal:attributes="href node/getURL;
+                                             src python:view.getMimeTypeIcon(node);">
+
+            <img tal:condition="python:has_thumb and thumb_scale"
+                 tal:replace="structure python:image_scale.tag(item, 'image', scale=thumb_scale, css_class='pull-right thumb-'+thumb_scale)">
+
+            <span tal:replace="node/Title">Selected Item Title</span>
+        </a>
+        <tal:children condition="children">
+            <ul tal:attributes="class string:navTree navTreeLevel${level}"
+                tal:condition="python: children and show_children and bottomLevel and level < bottomLevel or bottomLevel == 0">
+                <span tal:replace="structure python:view.recurse(children=children, level=level+1, bottomLevel=bottomLevel)" />
+            </ul>
+        </tal:children>
+
+    </tal:level>
+</li>
+</tal:navitem>
+</metal:main>
+</tal:master>

@@ -8,6 +8,7 @@ Changelog
 - Added python3 compatibility [cekk]
 - updated redturtle.tiles.management dependency version [daniele]
 - Handled external links in tile collections [nzambello]
+- Handled external links in navigation portlet [nzambello]
 
 
 4.0.1 (2020-02-17)
