@@ -28,7 +28,7 @@ import { NewsItemView } from '@design/components/DesignTheme';
 import { UOView } from '@design/components/DesignTheme';
 import { PersonaView } from '@design/components/DesignTheme';
 import { ServizioView } from '@design/components/DesignTheme';
-
+import { PaginaArgomentoView } from '@design/components/DesignTheme';
 import NewsTemplate from '@design/components/DesignTheme/Blocks/Listing/NewsTemplate';
 
 import { rssBlock as customRssBlock } from 'volto-rss-block';
@@ -147,6 +147,7 @@ export const views = {
     'Unita organizzativa': UOView,
     Persona: PersonaView,
     Servizio: ServizioView,
+    'Pagina Argomento': PaginaArgomentoView,
   },
 };
 
