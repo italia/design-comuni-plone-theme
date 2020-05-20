@@ -1,0 +1,26 @@
+.ArgomentoHeader {
+  display: flex;
+  flex-wrap: wrap;
+  .title-description-wrapper {
+    ::placeholder {
+      color: #b8c6c9;
+    }
+    width: 70%;
+    textarea {
+      margin-top: 10px;
+      width: 95%;
+      border: 1px solid #d7eaf1;
+    }
+  }
+  .a-portata-di-click {
+    width: 30%;
+    ::placeholder {
+      color: #b8c6c9;
+    }
+    textarea {
+      width: 95%;
+      border: 1px solid #d7eaf1;
+      margin-top: 5px;
+    }
+  }
+}
