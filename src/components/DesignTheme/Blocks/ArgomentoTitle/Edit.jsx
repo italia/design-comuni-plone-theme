@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import { stateFromHTML } from 'draft-js-import-html';
 import { Editor, DefaultDraftBlockRenderMap, EditorState } from 'draft-js';
 import { defineMessages, injectIntl } from 'react-intl';
-import { settings } from '~/config';
+import { TextEditorWidget } from '@design/components/DesignTheme';
 
 const messages = defineMessages({
   title: {
@@ -70,7 +70,6 @@ class Edit extends Component {
     if (!__SERVER__) {
       let editorState;
       let editorStateDescription;
-      let editorStatePortataDiClick;
 
       // Setup state for title
       if (props.data && props.data.title) {
@@ -100,27 +99,10 @@ class Edit extends Component {
         editorStateDescription = EditorState.createEmpty();
       }
 
-      // setup state for portata di click
-      if (props.data && props.data.portata_di_click) {
-        editorStatePortataDiClick = EditorState.createWithContent(
-          stateFromHTML(props.data.portata_di_click),
-        );
-      } else if (props.properties && props.properties.portata_di_click) {
-        const contentStatePortataDiClick = stateFromHTML(
-          props.properties.portata_di_click,
-        );
-        editorStatePortataDiClick = EditorState.createWithContent(
-          contentStatePortataDiClick,
-        );
-      } else {
-        editorStatePortataDiClick = EditorState.createEmpty();
-      }
-
       // setup component state
       this.state = {
         editorState,
         editorStateDescription,
-        editorStatePortataDiClick,
         focus: true,
         focus_description: false,
         focus_portata_di_click: false,
@@ -130,7 +112,6 @@ class Edit extends Component {
     //bind this in change handlers
     this.onChange = this.onChange.bind(this);
     this.onChangeDescription = this.onChangeDescription.bind(this);
-    this.onChangePortataDiClick = this.onChangePortataDiClick.bind(this);
   }
 
   /**
@@ -151,12 +132,6 @@ class Edit extends Component {
         this.setState({ focus_description: false });
       this.node_description._onFocus = () =>
         this.setState({ focus_description: true });
-    }
-    if (this.node_portata_di_click) {
-      this.node_portata_di_click._onBlur = () =>
-        this.setState({ focus_portata_di_click: false });
-      this.node_portata_di_click._onFocus = () =>
-        this.setState({ focus_portata_di_click: true });
     }
   }
 
@@ -199,22 +174,6 @@ class Edit extends Component {
           : EditorState.createEmpty(),
       });
     }
-
-    if (
-      nextProps.properties.portata_di_click &&
-      this.props.properties.portata_di_click !==
-        nextProps.properties.portata_di_click &&
-      !this.state.focus_portata_di_click
-    ) {
-      const contentStatePortataDiClick = stateFromHTML(
-        nextProps.properties.portata_di_click,
-      );
-      this.setState({
-        editorStateDescription: nextProps.properties.portata_di_click
-          ? EditorState.createWithContent(contentStatePortataDiClick)
-          : EditorState.createEmpty(),
-      });
-    }
   }
 
   /**
@@ -239,10 +198,6 @@ class Edit extends Component {
         editorStateDescription.getCurrentContent().getPlainText(),
       );
     });
-  }
-
-  onChangePortataDiClick(editorStatePortataDiClick) {
-    this.setState({ editorStatePortataDiClick });
   }
 
   /**
@@ -287,19 +242,17 @@ class Edit extends Component {
         </div>
         <div className="a-portata-di-click">
           <h4>A PORTATA DI CLICK</h4>
-          <>
-            <Editor
-              onChange={this.onChangePortataDiClick}
-              editorState={this.state.editorStatePortataDiClick}
-              blockRenderMap={settings.extendedBlockRenderMap}
-              blockStyleFn={settings.blockStyleFn}
-              customStyleMap={settings.customStyleMap}
-              placeholder={this.props.intl.formatMessage(messages.click)}
-              ref={node_portata_di_click => {
-                this.node_portata_di_click = node_portata_di_click;
-              }}
-            />
-          </>
+          <TextEditorWidget
+            data={this.props.data}
+            fieldName="portata_di_click"
+            selected={true}
+            block={this.props.block}
+            onChangeBlock={data =>
+              this.props.onChangeBlock(this.props.block, data)
+            }
+            placeholder={this.props.intl.formatMessage(messages.title)}
+            showToolbar={true}
+          />
         </div>
       </div>
     );
