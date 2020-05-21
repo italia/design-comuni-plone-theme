@@ -96,6 +96,123 @@ const mock_allfields = {
   ],
 };
 
+const with_blocks = {
+  ...mock_allfields,
+  title: 'Pagina argomento a blocchi',
+  description: 'Description argomento a blocchi',
+  blocks: {
+    '1fb7c316-ec00-4f0d-9973-096bab6d610b': {
+      '@type': 'pagina_argomento_title',
+      blockRenderMap: {
+        'align-center': 'p',
+        atomic: {
+          element: 'figure',
+        },
+        blockquote: {
+          element: 'blockquote',
+        },
+        callout: {
+          element: 'p',
+        },
+        'code-block': {
+          element: 'pre',
+          wrapper: {
+            _owner: null,
+            _store: {},
+            key: null,
+            props: {
+              className: 'public-DraftStyleDefault-pre',
+            },
+            ref: null,
+            type: 'pre',
+          },
+        },
+        'header-five': {
+          element: 'h5',
+        },
+        'header-four': {
+          element: 'h4',
+        },
+        'header-one': {
+          element: 'h1',
+        },
+        'header-six': {
+          element: 'h6',
+        },
+        'header-three': {
+          element: 'h3',
+        },
+        'header-two': {
+          element: 'h2',
+        },
+        'ordered-list-item': {
+          element: 'li',
+          wrapper: {
+            _owner: null,
+            _store: {},
+            key: null,
+            props: {
+              className: 'public-DraftStyleDefault-ol',
+            },
+            ref: null,
+            type: 'ol',
+          },
+        },
+        'unordered-list-item': {
+          element: 'li',
+          wrapper: {
+            _owner: null,
+            _store: {},
+            key: null,
+            props: {
+              className: 'public-DraftStyleDefault-ul',
+            },
+            ref: null,
+            type: 'ul',
+          },
+        },
+        unstyled: {
+          element: 'div',
+        },
+      },
+      portata_di_click: {
+        blocks: [
+          {
+            data: {},
+            depth: 0,
+            entityRanges: [],
+            inlineStyleRanges: [
+              {
+                length: 6,
+                offset: 40,
+                style: 'BOLD',
+              },
+              {
+                length: 11,
+                offset: 54,
+                style: 'BOLD',
+              },
+              {
+                length: 21,
+                offset: 78,
+                style: 'BOLD',
+              },
+            ],
+            key: '1vnli',
+            text:
+              'Eventi ambiente ed educazione \nParchi e Boschi urbani\nContabilit\u00e0 ambientale e Open Data ambientali',
+            type: 'unstyled',
+          },
+        ],
+        entityMap: {},
+      },
+    },
+  },
+  blocks_layout: {
+    items: ['1fb7c316-ec00-4f0d-9973-096bab6d610b'],
+  },
+};
+
 const store = mockStore({
   intl: {
     locale: 'en',
@@ -216,4 +333,21 @@ test('expect to have all fields in page', async () => {
     getByText(/Pagina Servizio/i),
   );
   expect(related_service).toBeInTheDocument();
+});
+
+test('Page with blocks', async () => {
+  const { getByText, getByAltText } = render(
+    <Provider store={store}>
+      <MemoryRouter>
+        <PaginaArgomentoView content={with_blocks} />
+      </MemoryRouter>
+    </Provider>,
+  );
+
+  // title
+  expect(getByText(/Pagina argomento a blocchi/i)).toBeInTheDocument();
+  // description
+  expect(getByText(/Description argomento a blocchi/i)).toBeInTheDocument();
+  // description
+  expect(getByText(/Eventi ambiente ed educazione/)).toBeInTheDocument();
 });

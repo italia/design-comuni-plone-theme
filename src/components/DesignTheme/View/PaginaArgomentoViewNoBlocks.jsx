@@ -223,8 +223,8 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
  */
 PaginaArgomentoViewNoBlocks.propTypes = {
   content: PropTypes.shape({
-    area_appartenenza: PropTypes.array.isRequired,
-    assessorati_riferimento: PropTypes.array.isRequired,
+    area_appartenenza: PropTypes.array,
+    assessorati_riferimento: PropTypes.array,
     box_aiuto: PropTypes.shape({
       data: PropTypes.string,
     }),

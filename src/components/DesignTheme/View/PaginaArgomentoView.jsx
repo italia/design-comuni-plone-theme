@@ -16,7 +16,7 @@ import { Helmet } from '@plone/volto/helpers';
 import { map } from 'lodash';
 import { blocks } from '~/config';
 import { defineMessages, useIntl } from 'react-intl';
-import { BrowserRouter as useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 /**
  * PaginaArgomentoView view component class.
  * @function PaginaArgomentoView
@@ -36,7 +36,6 @@ const PaginaArgomentoView = ({ content }) => {
   const blocksLayoutFieldname = getBlocksLayoutFieldname(content);
   const intl = useIntl();
   const location = useLocation();
-
   return hasBlocksData(content) ? (
     <div id="page-document" className="ui container">
       <Helmet title={content.title} />
@@ -65,12 +64,6 @@ const PaginaArgomentoView = ({ content }) => {
   ) : (
     <PaginaArgomentoViewNoBlocks content={content} />
   );
-};
-
-PaginaArgomentoView.propTypes = {
-  content: PropTypes.shape({
-    is_using_blokcs: PropTypes.bool.isRequired,
-  }),
 };
 
 export default PaginaArgomentoView;
