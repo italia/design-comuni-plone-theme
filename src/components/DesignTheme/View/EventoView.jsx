@@ -89,7 +89,7 @@ const EventoView = ({ content }) => {
             )}
             {content?.luogo_event?.length > 0 ? (
               <>
-                <Locations locations={content?.luogo_event} />
+                <Locations locations={content?.luogo_event} show_icon={true} />
                 {content?.luogo_event?.map(location => (
                   <Venue venue={location} key={location['@id']} />
                 ))}
@@ -119,14 +119,51 @@ const EventoView = ({ content }) => {
                 title={'Documenti'}
               />
             )}
-            {content?.organizzato_da_esterno ? (
+            {content?.organizzato_da_esterno?.data ? (
               <>
                 <h4>Contatti</h4>
                 <div className="card card-teaser border rounded shadow p-4">
-                  <div className="card-body pr-3"></div>
+                  <Icon icon={'it-telephone'} />
+                  <div className="card-body pr-3">
+                    <p className="card-text">
+                      <p>
+                        {content?.organizzato_da_esterno?.data.replace(
+                          /(<([^>]+)>)/g,
+                          '',
+                        )}
+                      </p>
+                    </p>
+                  </div>
                 </div>
+                <h5>Con il supporto di:</h5>
                 {content?.evento_supportato_da?.map(item => (
-                  <OfficeCard key={item['@id']} office={item} />
+                  <OfficeCard
+                    key={item['@id']}
+                    office={item}
+                    extended={true}
+                    icon={'it-pa'}
+                  />
+                ))}
+              </>
+            ) : null}
+            {content?.organizzato_da_interno?.length > 0 ? (
+              <>
+                {content?.evento_organizzato_da_interno?.map(item => (
+                  <OfficeCard
+                    key={item['@id']}
+                    office={item}
+                    extended={true}
+                    icon={'it-telephone'}
+                  />
+                ))}
+                <h5>Con il supporto di:</h5>
+                {content?.evento_supportato_da?.map(item => (
+                  <OfficeCard
+                    key={item['@id']}
+                    office={item}
+                    extended={true}
+                    icon={'it-pa'}
+                  />
                 ))}
               </>
             ) : null}

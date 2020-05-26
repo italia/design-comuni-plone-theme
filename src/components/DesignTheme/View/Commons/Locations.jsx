@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { Icon } from 'design-react-kit/dist/design-react-kit';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
@@ -23,7 +24,7 @@ const messages = defineMessages({
  * @params {object} location: object.
  * @returns {string} Markup of the component.
  */
-const Location = ({ location }) => {
+const Location = ({ location, show_icon }) => {
   const intl = useIntl();
   const key = `luogo${location['@id']}`;
   const url = flattenToAppURL(location['@id']);
@@ -36,6 +37,7 @@ const Location = ({ location }) => {
   let location_fo = locationContent[key]?.data;
   return location_fo ? (
     <div className="card card-teaser shadow mt-3 rounded">
+      {show_icon && <Icon icon={'it-pin'} />}
       <div className="card-body">
         <h5 className="card-title">{location_fo.title}</h5>
         <div className="card-text">
@@ -70,14 +72,14 @@ const Location = ({ location }) => {
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const Locations = ({ locations }) => {
+const Locations = ({ locations, show_icon }) => {
   const intl = useIntl();
   return (
     <article id="luoghi" className="it-page-section anchor-offset mt-5">
       <h4>{intl.formatMessage(messages.locations)}</h4>
       <div className="card-wrapper card-teaser-wrapper">
         {locations.map((item, i) => (
-          <Location key={item['@id']} location={item} />
+          <Location key={item['@id']} location={item} show_icon={show_icon} />
         ))}
       </div>
     </article>
@@ -95,6 +97,7 @@ Locations.propTypes = {
       review_state: PropTypes.string,
     }),
   ),
+  show_icon: PropTypes.bool,
 };
 
 Location.propTypes = {
@@ -105,4 +108,5 @@ Location.propTypes = {
     description: PropTypes.string,
     review_state: PropTypes.string,
   }),
+  show_icon: PropTypes.bool,
 };
