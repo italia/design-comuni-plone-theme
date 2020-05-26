@@ -34,7 +34,7 @@ const OfficeCard = ({ office }) => {
         <p className="card-text">{office_fo.description}</p>
         {(office_fo.city || office_fo.zip_code || office_fo.street) && (
           <div className="card-text">
-            {office_fo.stree && <p>{office_fo.street}</p>}
+            {office_fo.street && <p>{office_fo.street}</p>}
             {(office_fo.city || office_fo.zip_code) && (
               <p>
                 {office_fo.zip_code} {office_fo.city}

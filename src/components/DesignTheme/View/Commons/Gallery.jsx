@@ -86,7 +86,7 @@ const Gallery = ({ content, folder_name }) => {
   let videos = multimedia.filter(item => item['@type'] === 'Link');
   return (
     <>
-      {images.length > 0 ? (
+      {images?.length > 0 ? (
         <article id="gallery" className="it-page-section anchor-offset mt-5">
           <div className="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
             <div className="it-header-block">
@@ -119,7 +119,7 @@ const Gallery = ({ content, folder_name }) => {
           </div>
         </article>
       ) : null}
-      {videos.length > 0 ? (
+      {videos?.length > 0 ? (
         <article id="video" className="it-page-section anchor-offset mt-5">
           {videos.map((item, i) => (
             <div
