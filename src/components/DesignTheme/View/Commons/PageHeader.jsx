@@ -68,6 +68,13 @@ const PageHeader = props => {
           {props.content.title}
           {props.content.subtitle && ` - ${props.content.subtitle}`}
         </h1>
+        {props.content['@type'] === 'Event' &&
+        moment(props.content.end).format('DD-MM-Y') !==
+          moment(props.content.start).format('DD-MM-Y')
+          ? `dal ${moment(props.content.start).format('DD-MM-Y')} al ${moment(
+              props.content.end,
+            ).format('DD-MM-Y')}`
+          : `${moment(props.content.start).format('DD-MM-Y')}`}
         {props.content.description && (
           <p className="documentDescription">{props.content.description}</p>
         )}
@@ -99,10 +106,16 @@ const PageHeader = props => {
                   {props.content.effective && (
                     <div className="row">
                       <div className="col-12">
-                        <small>{intl.formatMessage(messages.date)}:</small>
-                        <p className="font-weight-semibold text-monospace">
-                          {moment(props.content.effective).format('DD-MM-Y')}
-                        </p>
+                        {props.content['@type'] !== 'Event' && (
+                          <>
+                            <small>{intl.formatMessage(messages.date)}:</small>
+                            <p className="font-weight-semibold text-monospace">
+                              {moment(props.content.effective).format(
+                                'DD-MM-Y',
+                              )}
+                            </p>
+                          </>
+                        )}
                       </div>
                     </div>
                   )}

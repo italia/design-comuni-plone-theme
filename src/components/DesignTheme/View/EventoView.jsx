@@ -9,7 +9,7 @@ import { defineMessages, useIntl } from 'react-intl';
 
 import { Attachments } from './Commons';
 import { Gallery } from './Commons';
-import { CuredBy } from './Commons';
+import { Events } from './Commons';
 import { Locations } from './Commons';
 import { WideImage } from './Commons';
 import { SideMenu } from './Commons';
@@ -17,11 +17,9 @@ import { PageHeader } from './Commons';
 import { RichTextArticle } from './Commons';
 import { Metadata } from './Commons';
 import { Venue } from './Commons';
-import { readingTime } from './ViewUtils';
 import { OfficeCard } from './Commons';
 import { GenericCard } from './Commons';
 import { Icon } from 'design-react-kit/dist/design-react-kit';
-// import { getBaseUrl } from '@plone/volto/helpers';
 
 const messages = defineMessages({
   notizie_in_evidenza: {
@@ -41,9 +39,6 @@ const messages = defineMessages({
  * @returns {string} Markup of the component.
  */
 const EventoView = ({ content }) => {
-  //   let readingtime = readingTime(
-  //     `${content.text.data} ${content.title} ${content.description}`,
-  //   );
   const intl = useIntl();
   console.log(content);
   return (
@@ -122,20 +117,18 @@ const EventoView = ({ content }) => {
             {content?.organizzato_da_esterno?.data ? (
               <>
                 <h4>Contatti</h4>
-                <div className="card card-teaser border rounded shadow p-4">
+                <div className="card card-teaser rounded shadow mt-3">
                   <Icon icon={'it-telephone'} />
                   <div className="card-body pr-3">
                     <p className="card-text">
-                      <p>
-                        {content?.organizzato_da_esterno?.data.replace(
-                          /(<([^>]+)>)/g,
-                          '',
-                        )}
-                      </p>
+                      {content?.organizzato_da_esterno?.data.replace(
+                        /(<([^>]+)>)/g,
+                        '',
+                      )}
                     </p>
                   </div>
                 </div>
-                <h5>Con il supporto di:</h5>
+                <h5 className="mt-4">Con il supporto di:</h5>
                 {content?.evento_supportato_da?.map(item => (
                   <OfficeCard
                     key={item['@id']}
@@ -156,7 +149,7 @@ const EventoView = ({ content }) => {
                     icon={'it-telephone'}
                   />
                 ))}
-                <h5>Con il supporto di:</h5>
+                <h5 className="mt-4">Con il supporto di:</h5>
                 {content?.evento_supportato_da?.map(item => (
                   <OfficeCard
                     key={item['@id']}
@@ -167,6 +160,9 @@ const EventoView = ({ content }) => {
                 ))}
               </>
             ) : null}
+            {content && (
+              <Events content={content} show_image={true} title={null} />
+            )}
             {content?.ulteriori_informazioni?.data && (
               <RichTextArticle
                 content={content?.ulteriori_informazioni?.data}
@@ -220,41 +216,62 @@ const EventoView = ({ content }) => {
  * @property {Object} propTypes Property types.
  * @static
  */
-// EventoView.propTypes = {
-//   content: PropTypes.shape({
-//     title: PropTypes.string.isRequired,
-//     subtitle: PropTypes.string,
-//     description: PropTypes.string,
-//     effective: PropTypes.string,
-//     expires: PropTypes.string,
-//     image: PropTypes.object,
-//     image_caption: PropTypes.string,
-//     text: PropTypes.shape({
-//       data: PropTypes.string,
-//     }),
-//     items: PropTypes.array,
-//     a_cura_di: PropTypes.shape({
-//       title: PropTypes.string,
-//     }).isRequired,
-//     a_cura_di_persone: PropTypes.array,
-//     dataset: PropTypes.shape({
-//       data: PropTypes.string,
-//     }),
-//     modified: PropTypes.string,
-//     rights: PropTypes.string,
-//     luoghi_notizia: PropTypes.array,
-//     related_news: PropTypes.array,
-//     tassonomia_argomenti: PropTypes.arrayOf(
-//       PropTypes.shape({
-//         title: PropTypes.string,
-//         token: PropTypes.string,
-//       }),
-//     ),
-//     tipologia_notizia: PropTypes.shape({
-//       title: PropTypes.string,
-//       token: PropTypes.string,
-//     }).isRequired,
-//   }).isRequired,
-// };
+EventoView.propTypes = {
+  content: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string,
+    description: PropTypes.string,
+    effective: PropTypes.string,
+    start: PropTypes.string,
+    end: PropTypes.string,
+    contact_email: PropTypes.string,
+    contact_phone: PropTypes.string,
+    contact_name: PropTypes.string,
+    patrocinato_da: PropTypes.string,
+    image: PropTypes.object,
+    image_caption: PropTypes.string,
+    orari: PropTypes.shape({
+      data: PropTypes.string,
+    }),
+    prezzo: PropTypes.shape({
+      data: PropTypes.string,
+    }),
+    organizzato_da_esterno: PropTypes.shape({
+      data: PropTypes.string,
+    }),
+    introduzione: PropTypes.shape({
+      data: PropTypes.string,
+    }),
+    descrizione_destinatari: PropTypes.shape({
+      data: PropTypes.string,
+    }),
+    date_significative: PropTypes.shape({
+      data: PropTypes.string,
+    }),
+    box_aiuto: PropTypes.shape({
+      data: PropTypes.string,
+    }),
+    sponsor: PropTypes.shape({
+      data: PropTypes.string,
+    }),
+    ulteriori_informazioni: PropTypes.shape({
+      data: PropTypes.string,
+    }),
+    items: PropTypes.array,
+    strutture_politiche: PropTypes.array,
+    evento_supportato_da: PropTypes.array,
+    organizzato_da_interno: PropTypes.array,
+    persone_amministrazione: PropTypes.array,
+    modified: PropTypes.string,
+    luoghi_evento: PropTypes.array,
+    related_news: PropTypes.array,
+    tassonomia_argomenti: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        token: PropTypes.string,
+      }),
+    ),
+  }).isRequired,
+};
 
 export default EventoView;

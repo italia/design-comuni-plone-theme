@@ -1,6 +1,7 @@
 export Attachments from '@design/components/DesignTheme/View/Commons/Attachments';
 export Attachment from '@design/components/DesignTheme/View/Commons/Attachment';
 export Gallery from '@design/components/DesignTheme/View/Commons/Gallery';
+export Events from '@design/components/DesignTheme/View/Commons/Events';
 export CuredBy from '@design/components/DesignTheme/View/Commons/CuredBy';
 export Locations from '@design/components/DesignTheme/View/Commons/Locations';
 export WideImage from '@design/components/DesignTheme/View/Commons/WideImage';

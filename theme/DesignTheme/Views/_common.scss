@@ -119,3 +119,10 @@ h6 {
     }
   }
 }
+
+.event-center-cropped {
+  object-fit: none;
+  object-position: center;
+  max-height: 300px;
+  max-width: 200px;
+}

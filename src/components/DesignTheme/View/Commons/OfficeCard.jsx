@@ -25,9 +25,9 @@ const OfficeCard = ({ office, extended, icon }) => {
 
   let office_fo = officeContent[key]?.data;
   return office_fo ? (
-    <div className="card card-teaser border rounded shadow p-4">
+    <div className="card card-teaser rounded shadow mt-3">
       {icon && <Icon icon={icon}></Icon>}
-      <div className="card-body pr-3">
+      <div className="card-body">
         <h5 className="card-title">
           <Link to={flattenToAppURL(office_fo['@id'])} title={office_fo.title}>
             {office_fo.title}
