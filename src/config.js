@@ -31,6 +31,7 @@ import { ServizioView } from '@design/components/DesignTheme';
 
 import NewsTemplate from '@design/components/DesignTheme/Blocks/Listing/NewsTemplate';
 import SmallBlockLinksTemplate from '@design/components/DesignTheme/Blocks/Listing/SmallBlockLinksTemplate';
+import PhotogalleryTemplate from '@design/components/DesignTheme/Blocks/Listing/PhotogalleryTemplate';
 
 import { rssBlock as customRssBlock } from 'volto-rss-block';
 import CardWithImageRssTemplate from '@design/components/DesignTheme/Blocks/RssBlock/CardWithImageRssTemplate';
@@ -122,6 +123,10 @@ const customBlocks = {
       smallBlockLinksTemplate: {
         label: 'blocchi di link immagini',
         template: SmallBlockLinksTemplate,
+      },
+      photogallery: {
+        label: 'Photogallery',
+        template: PhotogalleryTemplate,
       },
     },
   },
