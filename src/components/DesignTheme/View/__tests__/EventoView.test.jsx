@@ -192,7 +192,24 @@ const mock_mandatory = {
   },
   organizzato_da_interno: [],
   patrocinato_da: 'Officina della ciccia',
-  persone_amministrazione: [],
+  persone_amministrazione: [
+    {
+      '@id':
+        'http://localhost:9080/Plone/amministrazione/politici/giorgio-giorgi',
+      '@type': 'Persona',
+      description: '',
+      review_state: 'private',
+      title: 'Giorgio Giorgi',
+    },
+    {
+      '@id':
+        'http://localhost:9080/Plone/amministrazione/politici/giovanni-giovanni',
+      '@type': 'Persona',
+      description: '',
+      review_state: 'private',
+      title: 'Giovanni Giovanni',
+    },
+  ],
   previous_item: {},
   prezzo: {
     'content-type': 'text/html',
@@ -226,6 +243,7 @@ const mock_mandatory = {
     encoding: 'utf-8',
   },
   version: 'current',
+  video_evento: 'https://youtu.be/eIZkVaM-0K8',
   versioning_enabled: true,
   whole_day: false,
 };
@@ -335,6 +353,11 @@ it('expect to have all mandatory fields in page', async () => {
   expect(getByText(/Sponsor:/i)).toBeInTheDocument();
   expect(getByText(/Altre informazioni/i)).toBeInTheDocument();
 
+  // const people = await waitForElement(() =>
+  const people = document.querySelector('#attending-vips');
+  // );
+  expect(people).toBeInTheDocument();
+
   // luoghi e contatti/supporto
 
   const luoghi = await waitForElement(() => getByText(/Ravenna/i));
@@ -368,4 +391,18 @@ it('Check parts loaded from child folders', async () => {
 
   const eventi = await waitForElement(() => document.querySelector('#events'));
   expect(eventi).toBeInTheDocument();
+});
+
+it('embedded video is displayed', async () => {
+  render(
+    <Provider store={store}>
+      <MemoryRouter>
+        <EventoView content={mock_mandatory} />
+      </MemoryRouter>
+    </Provider>,
+  );
+  const iframe = await waitForElement(() =>
+    document.querySelector('#embedded-video-0'),
+  );
+  expect(iframe).toBeInTheDocument();
 });

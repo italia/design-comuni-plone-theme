@@ -17,3 +17,5 @@ export GenericCard from '@design/components/DesignTheme/View/Commons/GenericCard
 export RelatedNews from '@design/components/DesignTheme/View/Commons/RelatedNews';
 export Actions from '@design/components/DesignTheme/View/Commons/Actions';
 export NewsCard from '@design/components/DesignTheme/View/Commons/NewsCard';
+export EmbeddedVideo from '@design/components/DesignTheme/View/Commons/EmbeddedVideo';
+export HelpBox from '@design/components/DesignTheme/View/Commons/HelpBox';

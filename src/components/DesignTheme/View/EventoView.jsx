@@ -13,13 +13,16 @@ import { Events } from './Commons';
 import { Locations } from './Commons';
 import { WideImage } from './Commons';
 import { SideMenu } from './Commons';
+import { HelpBox } from './Commons';
 import { PageHeader } from './Commons';
 import { RichTextArticle } from './Commons';
 import { Metadata } from './Commons';
 import { Venue } from './Commons';
 import { OfficeCard } from './Commons';
 import { GenericCard } from './Commons';
-import { Icon } from 'design-react-kit/dist/design-react-kit';
+import { Link } from 'react-router-dom';
+import { flattenToAppURL } from '@plone/volto/helpers';
+import { Icon, Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
   notizie_in_evidenza: {
@@ -40,7 +43,6 @@ const messages = defineMessages({
  */
 const EventoView = ({ content }) => {
   const intl = useIntl();
-  console.log(content);
   return (
     <>
       <div className="container px-4 my-4 newsitem-view">
@@ -75,6 +77,34 @@ const EventoView = ({ content }) => {
             )}
             {content?.items.some(e => e.id === 'multimedia') && (
               <Gallery content={content} folder_name={'multimedia'} />
+            )}
+            {content?.descrizione_destinatari?.data && (
+              <RichTextArticle
+                content={content?.descrizione_destinatari?.data}
+                tag_id={'text-body'}
+                title={null}
+              />
+            )}
+            {content?.persone_amministrazione?.length > 0 && (
+              <div className="pt-3 pb-5" id="attending-vips">
+                <h6 className="text-serif font-weight-bold">Parteciperanno:</h6>
+                {content.persone_amministrazione.map((item, i) => (
+                  <Chip
+                    color="primary"
+                    disabled={false}
+                    large={false}
+                    simple
+                    tag="div"
+                    key={item['@id']}
+                  >
+                    <ChipLabel tag="span">
+                      <Link to={flattenToAppURL(item['@id'])}>
+                        {item.title}
+                      </Link>
+                    </ChipLabel>
+                  </Chip>
+                ))}
+              </div>
             )}
             {content?.items.some(e => e.id === 'documenti-allegati') && (
               <Attachments
@@ -114,7 +144,10 @@ const EventoView = ({ content }) => {
                 title={'Documenti'}
               />
             )}
-            {content?.organizzato_da_esterno?.data ? (
+            {content?.organizzato_da_esterno?.data.replace(
+              /(<([^>]+)>)/g,
+              '',
+            ) ? (
               <>
                 <h4>Contatti</h4>
                 <div className="card card-teaser rounded shadow mt-3">
@@ -163,7 +196,10 @@ const EventoView = ({ content }) => {
             {content && (
               <Events content={content} show_image={true} title={null} />
             )}
-            {content?.ulteriori_informazioni?.data && (
+            {content?.ulteriori_informazioni?.data.replace(
+              /(<([^>]+)>)/g,
+              '',
+            ) && (
               <RichTextArticle
                 content={content?.ulteriori_informazioni?.data}
                 tag_id="additional-info"
@@ -177,14 +213,18 @@ const EventoView = ({ content }) => {
                 title={'Patrocinato da:'}
               />
             )}
-            {content?.sponsor?.data && (
+            {content?.sponsor?.data.replace(/(<([^>]+)>)/g, '') && (
               <RichTextArticle
                 content={content?.sponsor?.data}
                 tag_id="sponsor"
                 title={'Sponsor:'}
               />
             )}
-
+            {content?.box_aiuto?.data.replace(/(<([^>]+)>)/g, '') && (
+              <HelpBox
+                text={content?.box_aiuto?.data.replace(/(<([^>]+)>)/g, '')}
+              />
+            )}
             {content?.relatedItems?.length > 0 ? (
               <article
                 id="related-items"

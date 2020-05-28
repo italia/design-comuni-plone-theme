@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import EmbeddedVideo from './EmbeddedVideo';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -84,6 +85,9 @@ const Gallery = ({ content, folder_name }) => {
   const multimedia = searchResults?.[folder_name]?.items || [];
   let images = multimedia.filter(item => item['@type'] === 'Image');
   let videos = multimedia.filter(item => item['@type'] === 'Link');
+  if (videos?.length === 0 && content['@type'] === 'Event')
+    videos.push(content?.video_evento);
+
   return (
     <>
       {images?.length > 0 ? (
@@ -122,17 +126,12 @@ const Gallery = ({ content, folder_name }) => {
       {videos?.length > 0 ? (
         <article id="video" className="it-page-section anchor-offset mt-5">
           {videos.map((item, i) => (
-            <div
-              key={item['@id']}
-              className="embed-responsive embed-responsive-16by9 my-4"
-            >
-              <iframe
-                className="embed-responsive-item"
-                title={item.title}
-                src={item.remoteUrl}
-                allowFullScreen=""
-              ></iframe>
-            </div>
+            <EmbeddedVideo
+              title={item.title}
+              key={item['@id'] || i}
+              id={item['@id'] || i}
+              video_url={item?.remoteUrl || item}
+            />
           ))}
         </article>
       ) : null}
