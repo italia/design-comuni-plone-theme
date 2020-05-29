@@ -1,0 +1,24 @@
+.in-evidence {
+  .container {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 33% 33% auto;
+  }
+
+  .card-wrapper {
+    &:first-child {
+      grid-column: 1;
+      grid-row: 1 / 3;
+    }
+  }
+  @media (max-width: 400px) {
+    .container {
+      .card-wrapper {
+        width: 100%;
+        margin: 0px;
+      }
+      display: block;
+      height: 100%;
+    }
+  }
+}
