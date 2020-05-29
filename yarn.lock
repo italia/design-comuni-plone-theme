@@ -17025,6 +17025,8 @@ volto-cookie-banner@collective/volto-cookie-banner:
 volto-multilingual-widget@collective/volto-multilingual-widget:
   version "0.1.0"
   resolved "https://codeload.github.com/collective/volto-multilingual-widget/tar.gz/9002a59845d224c0b29997d4d3f58d0e7b77f07e"
+  dependencies:
+    draft-js-export-html "^1.4.1"
 
 volto-rss-block@redturtle/volto-rss-block:
   version "0.1.0"
