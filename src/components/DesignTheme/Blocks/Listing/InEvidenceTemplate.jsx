@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Row, Col } from 'design-react-kit/dist/design-react-kit';
 import {
   Card,
   CardBody,
@@ -25,7 +24,6 @@ const InEvidenceTemplate = ({ items, title }) => {
               'card-img': index === 0 && item.image,
             })}
           >
-            {/* wrapperClassName="card-overlapping" */}
             {index === 0 && item.image && (
               <div className="img-responsive-wrapper">
                 <div className="img-responsive">
