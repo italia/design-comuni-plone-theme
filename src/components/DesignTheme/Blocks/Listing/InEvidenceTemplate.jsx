@@ -22,7 +22,7 @@ const InEvidenceTemplate = ({ items, title }) => {
         {items.map((item, index) => (
           <Card
             className={cx('listing-item card-bg', {
-              'card-img': index < 3 && item.image,
+              'card-img': index === 0 && item.image,
             })}
           >
             {/* wrapperClassName="card-overlapping" */}
