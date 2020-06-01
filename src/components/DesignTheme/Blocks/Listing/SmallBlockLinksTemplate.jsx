@@ -8,7 +8,7 @@ const SmallBlockLinksTemplate = ({ items, title }) => {
       <div className="title">{title && <h3>{title}</h3>}</div>
       <Row className="items">
         {items.map((item, index) => (
-          <Col md="2" key={item['@id']} className="col-item">
+          <Col md="3" key={item['@id']} className="col-item col-sm-4 col-lg-2">
             {item.image && (
               <div className="center-image-card">
                 <a
