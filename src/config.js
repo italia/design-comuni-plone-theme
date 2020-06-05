@@ -120,7 +120,7 @@ const customBlocks = {
         template: NewsTemplate,
       },
       smallBlockLinksTemplate: {
-        label: 'blocchi di link immagini',
+        label: 'Blocco di link con immagine',
         template: SmallBlockLinksTemplate,
       },
     },

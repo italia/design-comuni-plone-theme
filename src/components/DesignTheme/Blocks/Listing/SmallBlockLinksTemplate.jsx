@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Row, Col } from 'design-react-kit/dist/design-react-kit';
+import { flattenToAppURL } from '@plone/volto/helpers';
 
 const SmallBlockLinksTemplate = ({ items, title }) => {
   return (
@@ -14,11 +15,15 @@ const SmallBlockLinksTemplate = ({ items, title }) => {
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
-                  href={`${item['remoteUrl']}`}
+                  href={
+                    item['remoteUrl'] && item['remoteUrl'] !== ''
+                      ? item['remoteUrl']
+                      : flattenToAppURL(item['@ID'])
+                  }
                 >
                   <img
                     className="listing-image"
-                    alt="imagealt"
+                    alt={item.title}
                     src={item.image.scales.preview.download}
                     title={item.title}
                   />
