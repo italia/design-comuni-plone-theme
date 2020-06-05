@@ -22,7 +22,14 @@ import { OfficeCard } from './Commons';
 import { GenericCard } from './Commons';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { Icon, Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
+import {
+  Icon,
+  Chip,
+  ChipLabel,
+  Card,
+  CardBody,
+  Button,
+} from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
   notizie_in_evidenza: {
@@ -122,11 +129,27 @@ const EventoView = ({ content }) => {
             ) : null}
 
             {content?.orari?.data.replace(/(<([^>]+)>)/g, '') && (
-              <RichTextArticle
-                content={content?.orari?.data}
-                tag_id="date-e-orari"
-                title={'Date e orari'}
-              />
+              <>
+                <RichTextArticle
+                  content={content?.orari?.data}
+                  tag_id="date-e-orari"
+                  title={'Date e orari'}
+                />
+                <Button icon size="lg" tag="button" color="primary" outline>
+                  <Icon
+                    color="primary"
+                    icon="it-plus-circle"
+                    padding={false}
+                    size=""
+                  />
+                  <a
+                    href={flattenToAppURL(`${content['@id']}/ics_view`)}
+                    rel="nofollow"
+                  >
+                    Aggiungi al caledario
+                  </a>
+                </Button>
+              </>
             )}
 
             {content?.prezzo?.data.replace(/(<([^>]+)>)/g, '') && (
@@ -150,17 +173,26 @@ const EventoView = ({ content }) => {
             ) ? (
               <>
                 <h4>Contatti</h4>
-                <div className="card card-teaser rounded shadow mt-3">
-                  <Icon icon={'it-telephone'} />
-                  <div className="card-body pr-3">
+                <Card
+                  className="card card-teaser rounded shadow mt-3"
+                  noWrapper={true}
+                  tag="div"
+                >
+                  <CardBody tag="div" className={'card-body pr-3'}>
+                    <Icon
+                      icon="it-telephone"
+                      // padding={false}
+                      // alt={intl.formatMessage(messages.attachment)}
+                      // title={intl.formatMessage(messages.attachment)}
+                    />
                     <p className="card-text">
                       {content?.organizzato_da_esterno?.data.replace(
                         /(<([^>]+)>)/g,
                         '',
                       )}
                     </p>
-                  </div>
-                </div>
+                  </CardBody>
+                </Card>
                 <h5 className="mt-4">Con il supporto di:</h5>
                 {content?.evento_supportato_da?.map(item => (
                   <OfficeCard
@@ -221,9 +253,7 @@ const EventoView = ({ content }) => {
               />
             )}
             {content?.box_aiuto?.data.replace(/(<([^>]+)>)/g, '') && (
-              <HelpBox
-                text={content?.box_aiuto?.data.replace(/(<([^>]+)>)/g, '')}
-              />
+              <HelpBox text={content?.box_aiuto} />
             )}
             {content?.relatedItems?.length > 0 ? (
               <article

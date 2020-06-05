@@ -1,21 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Icon } from 'design-react-kit/dist/design-react-kit';
+import {
+  Icon,
+  Callout,
+  CalloutTitle,
+} from 'design-react-kit/dist/design-react-kit';
+import RichTextArticle from './RichTextArticle';
 
 const HelpBox = ({ text }) => {
   return text ? (
-    <div className="mt-5" id="help-box">
-      <div className="callout">
-        <div className="callout-title">
-          <Icon icon={'it-info-circle'} />
-        </div>
-        <p>{text}</p>
-      </div>
-    </div>
+    <Callout color="" highlight={false} tag="div">
+      <CalloutTitle tag="div">
+        <Icon
+          color=""
+          icon="it-info-circle"
+          padding={false}
+          size=""
+          style={{
+            ariaHidden: true,
+          }}
+        />
+      </CalloutTitle>
+
+      <RichTextArticle
+        content={text?.data.replace(/(<([^>]+)>)/g, '')}
+        tag_id={'help-box'}
+        title={null}
+      />
+    </Callout>
   ) : null;
 };
 HelpBox.propTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.object.isRequired,
 };
 
 export default HelpBox;
