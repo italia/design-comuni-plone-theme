@@ -348,6 +348,6 @@ test('Page with blocks', async () => {
   expect(getByText(/Pagina argomento a blocchi/i)).toBeInTheDocument();
   // description
   expect(getByText(/Description argomento a blocchi/i)).toBeInTheDocument();
-  // description
+  // portata_di_click
   expect(getByText(/Eventi ambiente ed educazione/)).toBeInTheDocument();
 });
