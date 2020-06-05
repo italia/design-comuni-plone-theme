@@ -27,6 +27,7 @@ export Pagination from './Pagination/Pagination';
 export SearchSections from './Search/SearchSections';
 export SearchTopics from './Search/SearchTopics';
 export CharCounterDescriptionWidget from './manage/Widgets/CharCounterDescriptionWidget';
+export TextEditorWidget from './manage/Widgets/TextEditorWidget';
 export NewsItemView from './View/NewsItemView';
 export UOView from './View/UOView';
 export PersonaView from './View/PersonaView';

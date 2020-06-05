@@ -23,6 +23,10 @@ import alertSVG from '@plone/volto/icons/alert.svg';
 import AlertView from '@design/components/DesignTheme/Blocks/Alert/View';
 import AlertEdit from '@design/components/DesignTheme/Blocks/Alert/Edit';
 
+import titleSVG from '@plone/volto/icons/text.svg';
+import ArgomentoTitleView from '@design/components/DesignTheme/Blocks/ArgomentoTitle/View';
+import ArgomentoTitleEdit from '@design/components/DesignTheme/Blocks/ArgomentoTitle/Edit';
+
 import { CharCounterDescriptionWidget } from '@design/components/DesignTheme';
 import { NewsItemView } from '@design/components/DesignTheme';
 import { UOView } from '@design/components/DesignTheme';
@@ -113,6 +117,21 @@ const customBlocks = {
       view: [],
     },
   },
+  pagina_argomento_title: {
+    id: 'pagina_argomento_title',
+    title: 'Titolo Pagina Argomento',
+    icon: titleSVG,
+    group: 'argomento',
+    view: ArgomentoTitleView,
+    edit: ArgomentoTitleEdit,
+    restricted: false,
+    mostUsed: false,
+    blockHasOwnFocusManagement: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+  },
   listing: {
     ...defaultBlocks.blocksConfig.listing,
     templates: {
@@ -176,9 +195,13 @@ export const widgets = {
 };
 
 const customBlocksOrder = [{ id: 'news', title: 'News' }];
+const customInitialBlocks = {
+  'Pagina Argomento': ['pagina_argomento_title'],
+};
 
 export const blocks = {
   ...defaultBlocks,
   blocksConfig: { ...defaultBlocks.blocksConfig, ...customBlocks },
   groupBlocksOrder: defaultBlocks.groupBlocksOrder.concat(customBlocksOrder),
+  initialBlocks: { ...defaultBlocks.initialBlocks, ...customInitialBlocks },
 };
