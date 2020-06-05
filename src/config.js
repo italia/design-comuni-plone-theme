@@ -30,6 +30,7 @@ import { PersonaView } from '@design/components/DesignTheme';
 import { ServizioView } from '@design/components/DesignTheme';
 import { PaginaArgomentoView } from '@design/components/DesignTheme';
 import NewsTemplate from '@design/components/DesignTheme/Blocks/Listing/NewsTemplate';
+import SmallBlockLinksTemplate from '@design/components/DesignTheme/Blocks/Listing/SmallBlockLinksTemplate';
 
 import { rssBlock as customRssBlock } from 'volto-rss-block';
 import CardWithImageRssTemplate from '@design/components/DesignTheme/Blocks/RssBlock/CardWithImageRssTemplate';
@@ -117,6 +118,10 @@ const customBlocks = {
       newsTemplate: {
         label: 'Notizie',
         template: NewsTemplate,
+      },
+      smallBlockLinksTemplate: {
+        label: 'Blocco di link con immagine',
+        template: SmallBlockLinksTemplate,
       },
     },
   },
