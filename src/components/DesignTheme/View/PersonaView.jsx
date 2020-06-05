@@ -123,7 +123,7 @@ const PersonaView = ({ content }) => {
   const intl = useIntl();
   return (
     <>
-      <div className="container px-4 my-4 uo-view">
+      <div className="container px-4 my-4 persona-view">
         <PageHeader
           content={content}
           readingtime={null}
@@ -417,10 +417,10 @@ const PersonaView = ({ content }) => {
                 className="it-page-section anchor-offset mt-5"
               >
                 <h4>{intl.formatMessage(messages.related_items)}</h4>
-                <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.relatedItems.map((item, i) => (
                     <GenericCard
-                      index={item['@id']}
+                      key={item['@id']}
                       item={item}
                       showimage={false}
                     />
