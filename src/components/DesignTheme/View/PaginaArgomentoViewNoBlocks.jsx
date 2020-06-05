@@ -110,19 +110,22 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
                 </div>
               </article>
             ) : null}
-            {content.box_aiuto?.data && (
+            {content.box_aiuto?.data.replace(
+              /(<\/?[^>]+(>|$)|&nbsp;|\s)/g,
+              '',
+            ) && (
               <RichTextArticle
                 content={content.box_aiuto.data}
                 tag_id={'text-box_aiuto'}
                 title={intl.formatMessage(messages.box_aiuto)}
               />
             )}
-            {content.related_servizio?.length > 0 ? (
+            {content?.related_services?.length > 0 ? (
               <article
                 id="related_servizio-items"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>{intl.formatMessage(messages.related_servizio)}</h4>
+                <h4>{intl.formatMessage(messages.related_services)}</h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.related_servizio.map((item, i) => (
                     <GenericCard
@@ -135,7 +138,7 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
                 </div>
               </article>
             ) : null}
-            {content.related_news?.length > 0 ? (
+            {content?.related_news?.length > 0 ? (
               <article
                 id="related-news"
                 className="it-page-section anchor-offset mt-5"
@@ -155,12 +158,12 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
                 </div>
               </article>
             ) : null}
-            {content.related_doc?.length > 0 ? (
+            {content?.related_docs?.length > 0 ? (
               <article
                 id="related_doc-items"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>{intl.formatMessage(messages.related_doc)}</h4>
+                <h4>{intl.formatMessage(messages.related_docs)}</h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.related_doc.map((item, i) => (
                     <GenericCard
@@ -173,7 +176,7 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
                 </div>
               </article>
             ) : null}
-            {content.related_uo?.length > 0 ? (
+            {content?.related_uo?.length > 0 ? (
               <article
                 id="related_uo-items"
                 className="it-page-section anchor-offset mt-5"
@@ -191,7 +194,7 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
                 </div>
               </article>
             ) : null}
-            {content.relatedItems?.length > 0 ? (
+            {content?.relatedItems?.length > 0 ? (
               <article
                 id="related-items"
                 className="it-page-section anchor-offset mt-5"
