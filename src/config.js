@@ -199,6 +199,11 @@ const customInitialBlocks = {
   'Pagina Argomento': ['pagina_argomento_title'],
 };
 
+// BUG#10398
+// We chose to disallow leadimage block usage in editor. If you want it back someday,
+// comment out the following line and add the leadimage behavior in Document.xml file
+delete defaultBlocks.blocksConfig['leadimage'];
+
 export const blocks = {
   ...defaultBlocks,
   blocksConfig: { ...defaultBlocks.blocksConfig, ...customBlocks },
