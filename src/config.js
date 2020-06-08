@@ -5,6 +5,7 @@ import {
   views as defaultViews,
   widgets as defaultWidgets,
   blocks as defaultBlocks,
+  addonReducers as defaultAddonReducers,
 } from '@plone/volto/config';
 
 import createInlineStyleButton from 'draft-js-buttons/lib/utils/createInlineStyleButton';
@@ -64,7 +65,7 @@ const extendedBlockRenderMap = defaultSettings.extendedBlockRenderMap.update(
   (element = 'p') => element,
 );
 
-const blockStyleFn = contentBlock => {
+const blockStyleFn = (contentBlock) => {
   let r = defaultSettings.blockStyleFn(contentBlock);
 
   if (!r) {
@@ -204,4 +205,10 @@ export const blocks = {
   blocksConfig: { ...defaultBlocks.blocksConfig, ...customBlocks },
   groupBlocksOrder: defaultBlocks.groupBlocksOrder.concat(customBlocksOrder),
   initialBlocks: { ...defaultBlocks.initialBlocks, ...customInitialBlocks },
+};
+
+export const addonRoutes = [];
+
+export const addonReducers = {
+  ...defaultAddonReducers,
 };
