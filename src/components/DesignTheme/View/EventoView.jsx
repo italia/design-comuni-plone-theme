@@ -20,6 +20,7 @@ import { Metadata } from './Commons';
 import { Venue } from './Commons';
 import { OfficeCard } from './Commons';
 import { GenericCard } from './Commons';
+import { Dates } from './Commons';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import {
@@ -28,6 +29,7 @@ import {
   ChipLabel,
   Card,
   CardBody,
+  CardTitle,
   Button,
 } from 'design-react-kit/dist/design-react-kit';
 
@@ -129,11 +131,12 @@ const EventoView = ({ content }) => {
             ) : null}
 
             {content?.orari?.data.replace(/(<([^>]+)>)/g, '') && (
-              <>
+              <article className="it-page-section anchor-offset mt-5">
+                <h4>Date e orari</h4>
+                <Dates content={content} />
                 <RichTextArticle
                   content={content?.orari?.data}
                   tag_id="date-e-orari"
-                  title={'Date e orari'}
                 />
                 <Button icon size="lg" tag="button" color="primary" outline>
                   <Icon
@@ -143,13 +146,14 @@ const EventoView = ({ content }) => {
                     size=""
                   />
                   <a
-                    href={flattenToAppURL(`${content['@id']}/ics_view`)}
+                    // href={flattenToAppURL(`${content['@id']}/ics_view`)}
+                    href="#"
                     rel="nofollow"
                   >
                     Aggiungi al caledario
                   </a>
                 </Button>
-              </>
+              </article>
             )}
 
             {content?.prezzo?.data.replace(/(<([^>]+)>)/g, '') && (
@@ -178,13 +182,10 @@ const EventoView = ({ content }) => {
                   noWrapper={true}
                   tag="div"
                 >
+                  <CardTitle tag="h5">
+                    <Icon icon="it-telephone" padding={true} />
+                  </CardTitle>
                   <CardBody tag="div" className={'card-body pr-3'}>
-                    <Icon
-                      icon="it-telephone"
-                      // padding={false}
-                      // alt={intl.formatMessage(messages.attachment)}
-                      // title={intl.formatMessage(messages.attachment)}
-                    />
                     <p className="card-text">
                       {content?.organizzato_da_esterno?.data.replace(
                         /(<([^>]+)>)/g,

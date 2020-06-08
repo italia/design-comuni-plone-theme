@@ -22,11 +22,12 @@ const HelpBox = ({ text }) => {
         />
       </CalloutTitle>
 
-      <RichTextArticle
+      {/* <RichTextArticle
         content={text?.data.replace(/(<([^>]+)>)/g, '')}
         tag_id={'help-box'}
         title={null}
-      />
+      /> */}
+      <p>{text?.data.replace(/(<([^>]+)>)/g, '')}</p>
     </Callout>
   ) : null;
 };

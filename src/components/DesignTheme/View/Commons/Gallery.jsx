@@ -57,6 +57,11 @@ const Gallery = ({ content, folder_name }) => {
       },
     ],
   };
+  const video_settings = {
+    ...settings,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
 
   const intl = useIntl();
   const url = `${flattenToAppURL(content['@id'])}/${folder_name}`;
@@ -85,8 +90,6 @@ const Gallery = ({ content, folder_name }) => {
   const multimedia = searchResults?.[folder_name]?.items || [];
   let images = multimedia.filter(item => item['@type'] === 'Image');
   let videos = multimedia.filter(item => item['@type'] === 'Link');
-  if (videos?.length === 0 && content['@type'] === 'Event')
-    videos.push(content?.video_evento);
 
   return (
     <>
@@ -125,14 +128,16 @@ const Gallery = ({ content, folder_name }) => {
       ) : null}
       {videos?.length > 0 ? (
         <article id="video" className="it-page-section anchor-offset mt-5">
-          {videos.map((item, i) => (
-            <EmbeddedVideo
-              title={item.title}
-              key={item['@id'] || i}
-              id={item['@id'] || i}
-              video_url={item?.remoteUrl || item}
-            />
-          ))}
+          <Slider {...video_settings}>
+            {videos.map((item, i) => (
+              <EmbeddedVideo
+                title={item.title}
+                key={item['@id'] || i}
+                id={item['@id'] || i}
+                video_url={item?.remoteUrl || item}
+              />
+            ))}
+          </Slider>
         </article>
       ) : null}
     </>

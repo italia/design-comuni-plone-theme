@@ -35,7 +35,7 @@ const messages = defineMessages({
   },
   responsabile: {
     id: 'responsabile',
-    defaultMessage: 'Reposanbile',
+    defaultMessage: 'Reponsabile',
   },
   persone_struttura: {
     id: 'persone_struttura',
@@ -143,7 +143,7 @@ const UOView = ({ content }) => {
                 className="it-page-section anchor-offset mt-5"
               >
                 <h4>{intl.formatMessage(messages.servizi_offerti)}</h4>
-                <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.servizi_offerti.map((item, i) => (
                     <GenericCard
                       index={item['@id']}
@@ -161,7 +161,7 @@ const UOView = ({ content }) => {
                 className="it-page-section anchor-offset mt-5"
               >
                 <h4>{intl.formatMessage(messages.legami_altre_strutture)}</h4>
-                <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.legami_con_altre_strutture.map((item, i) => (
                     <OfficeCard key={item['@id']} office={item} />
                   ))}
@@ -277,7 +277,7 @@ const UOView = ({ content }) => {
                 className="it-page-section anchor-offset mt-5"
               >
                 <h4>{intl.formatMessage(messages.related_items)}</h4>
-                <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.relatedItems.map((item, i) => (
                     <GenericCard
                       index={item['@id']}
