@@ -114,6 +114,7 @@ const MegaMenu = ({ item, pathname }) => {
                       <Link
                         className="list-item medium"
                         to={flattenToAppURL(item.url)}
+                        onClick={() => setMenuStatus(false)}
                       >
                         <span>{intl.formatMessage(messages.view_all)}</span>
                         <Icon icon="it-arrow-right" />
