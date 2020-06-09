@@ -5,6 +5,7 @@ import {
   views as defaultViews,
   widgets as defaultWidgets,
   blocks as defaultBlocks,
+  addonReducers as defaultAddonReducers,
 } from '@plone/volto/config';
 
 import createInlineStyleButton from 'draft-js-buttons/lib/utils/createInlineStyleButton';
@@ -23,13 +24,20 @@ import alertSVG from '@plone/volto/icons/alert.svg';
 import AlertView from '@design/components/DesignTheme/Blocks/Alert/View';
 import AlertEdit from '@design/components/DesignTheme/Blocks/Alert/Edit';
 
+import titleSVG from '@plone/volto/icons/text.svg';
+import ArgomentoTitleView from '@design/components/DesignTheme/Blocks/ArgomentoTitle/View';
+import ArgomentoTitleEdit from '@design/components/DesignTheme/Blocks/ArgomentoTitle/Edit';
+
 import { CharCounterDescriptionWidget } from '@design/components/DesignTheme';
 import { NewsItemView } from '@design/components/DesignTheme';
 import { UOView } from '@design/components/DesignTheme';
 import { PersonaView } from '@design/components/DesignTheme';
 import { ServizioView } from '@design/components/DesignTheme';
-
+import { PaginaArgomentoView } from '@design/components/DesignTheme';
 import NewsTemplate from '@design/components/DesignTheme/Blocks/Listing/NewsTemplate';
+import SmallBlockLinksTemplate from '@design/components/DesignTheme/Blocks/Listing/SmallBlockLinksTemplate';
+import PhotogalleryTemplate from '@design/components/DesignTheme/Blocks/Listing/PhotogalleryTemplate';
+import InEvidenceTemplate from '@design/components/DesignTheme/Blocks/Listing/InEvidenceTemplate';
 
 import { rssBlock as customRssBlock } from 'volto-rss-block';
 import CardWithImageRssTemplate from '@design/components/DesignTheme/Blocks/RssBlock/CardWithImageRssTemplate';
@@ -57,7 +65,7 @@ const extendedBlockRenderMap = defaultSettings.extendedBlockRenderMap.update(
   (element = 'p') => element,
 );
 
-const blockStyleFn = contentBlock => {
+const blockStyleFn = (contentBlock) => {
   let r = defaultSettings.blockStyleFn(contentBlock);
 
   if (!r) {
@@ -110,6 +118,21 @@ const customBlocks = {
       view: [],
     },
   },
+  pagina_argomento_title: {
+    id: 'pagina_argomento_title',
+    title: 'Titolo Pagina Argomento',
+    icon: titleSVG,
+    group: 'argomento',
+    view: ArgomentoTitleView,
+    edit: ArgomentoTitleEdit,
+    restricted: false,
+    mostUsed: false,
+    blockHasOwnFocusManagement: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+  },
   listing: {
     ...defaultBlocks.blocksConfig.listing,
     templates: {
@@ -117,6 +140,18 @@ const customBlocks = {
       newsTemplate: {
         label: 'Notizie',
         template: NewsTemplate,
+      },
+      smallBlockLinksTemplate: {
+        label: 'Blocco di link con immagine',
+        template: SmallBlockLinksTemplate,
+      },
+      photogallery: {
+        label: 'Photogallery',
+        template: PhotogalleryTemplate,
+      },
+      inEvidenceTemplate: {
+        label: 'In evidenza',
+        template: InEvidenceTemplate,
       },
     },
   },
@@ -147,6 +182,7 @@ export const views = {
     'Unita organizzativa': UOView,
     Persona: PersonaView,
     Servizio: ServizioView,
+    'Pagina Argomento': PaginaArgomentoView,
   },
 };
 
@@ -160,9 +196,19 @@ export const widgets = {
 };
 
 const customBlocksOrder = [{ id: 'news', title: 'News' }];
+const customInitialBlocks = {
+  'Pagina Argomento': ['pagina_argomento_title'],
+};
 
 export const blocks = {
   ...defaultBlocks,
   blocksConfig: { ...defaultBlocks.blocksConfig, ...customBlocks },
   groupBlocksOrder: defaultBlocks.groupBlocksOrder.concat(customBlocksOrder),
+  initialBlocks: { ...defaultBlocks.initialBlocks, ...customInitialBlocks },
+};
+
+export const addonRoutes = [];
+
+export const addonReducers = {
+  ...defaultAddonReducers,
 };

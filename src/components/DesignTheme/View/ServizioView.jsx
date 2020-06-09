@@ -140,7 +140,7 @@ const ServizioView = ({ content }) => {
   const intl = useIntl();
   return (
     <>
-      <div className="container px-4 my-4 uo-view">
+      <div className="container px-4 my-4 servizio-view">
         <PageHeader
           content={content}
           readingtime={null}
