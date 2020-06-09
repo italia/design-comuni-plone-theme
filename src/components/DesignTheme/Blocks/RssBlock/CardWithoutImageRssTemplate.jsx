@@ -31,7 +31,7 @@ const CardWithoutImageRssTemplate = ({ items = [] }) => {
             <Card noWrapper={false} tag="div">
               <CardBody tag="div">
                 <CardCategory date={moment(item.pubDate).format('DD-MMM-Y')}>
-                  {item.categories.length > 0 ? item.categories[0]._ : ''}
+                  {item.categories?.length > 0 ? item.categories[0]._ : ''}
                 </CardCategory>
                 <CardTitle className="big-heading" tag="h5">
                   {item.title}
