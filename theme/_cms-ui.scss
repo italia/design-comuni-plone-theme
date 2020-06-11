@@ -88,12 +88,18 @@ body.cms-ui {
       }
     }
 
-    .objectbrowser-field .action-button {
-      font-size: 15px;
+    .objectbrowser-field {
+      .action-button {
+        font-size: 15px;
 
-      &:hover,
-      &:focus {
-        background: none;
+        &:hover,
+        &:focus {
+          background: none;
+        }
+      }
+
+      .selected-values {
+        font-size: 15px;
       }
     }
   }
