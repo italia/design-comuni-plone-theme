@@ -77,6 +77,10 @@ body.cms-ui {
         .react-select__value-container {
           font-size: 15px;
         }
+
+        .react-select__menu {
+          color: $text-color;
+        }
       }
 
       .ui.checkbox {
