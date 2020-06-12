@@ -1,0 +1,29 @@
+#toolbar,
+.cms-ui {
+  .ui.form {
+    .ui.input input[type='email'],
+    .ui.input input[type='number'],
+    .ui.input input[type='password'],
+    .ui.input input[type='search'],
+    .ui.input input[type='tel'],
+    .ui.input input[type='time'],
+    .ui.input input[type='text'],
+    .ui.input input[type='url'],
+    textarea,
+    .DraftEditor-root {
+      padding-right: 10px;
+      padding-left: 10px;
+      margin-top: 0.5rem;
+      background: #f5f5f5;
+    }
+
+    .react-select-container,
+    .react-select-container .react-select__control {
+      background: #f5f5f5;
+    }
+
+    .field.inline.textarea textarea {
+      padding: 10px;
+    }
+  }
+}
