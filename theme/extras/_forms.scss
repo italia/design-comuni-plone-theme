@@ -17,9 +17,16 @@
       background: #f5f5f5;
     }
 
-    .react-select-container,
-    .react-select-container .react-select__control {
-      background: #f5f5f5;
+    .react-select-container {
+      &,
+      .react-select__control {
+        background: #f5f5f5;
+      }
+
+      .react-select__control {
+        padding-right: 5px;
+        padding-left: 5px;
+      }
     }
 
     .field.inline.textarea textarea {
