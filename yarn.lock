@@ -1773,8 +1773,8 @@
     "@types/node" ">= 8"
 
 "@plone/volto@plone/volto#split_styles":
-  version "6.0.0"
-  resolved "https://codeload.github.com/plone/volto/tar.gz/66888aa3824aa3345e6edf473906703f52fe5282"
+  version "6.2.0"
+  resolved "https://codeload.github.com/plone/volto/tar.gz/d3c5b39940acad563141b2c02b5b38bc4c0a31eb"
   dependencies:
     "@babel/core" "7.9.6"
     "@babel/plugin-proposal-decorators" "7.8.3"
