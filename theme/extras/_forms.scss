@@ -1,4 +1,6 @@
-#toolbar,
+$sidebarFormBg: #fafafa;
+
+#sidebar,
 .cms-ui {
   .ui.form {
     .ui.input input[type='email'],
@@ -14,13 +16,17 @@
       padding-right: 10px;
       padding-left: 10px;
       margin-top: 0.5rem;
-      background: #f5f5f5;
+      background: $sidebarFormBg;
+
+      &:focus {
+        color: #666;
+      }
     }
 
     .react-select-container {
       &,
       .react-select__control {
-        background: #f5f5f5;
+        background: $sidebarFormBg;
       }
 
       .react-select__control {
@@ -31,6 +37,12 @@
 
     .field.inline.textarea textarea {
       padding: 10px;
+    }
+
+    .DraftEditor-editorContainer {
+      .public-DraftEditor-content {
+        min-height: 60px;
+      }
     }
   }
 }
