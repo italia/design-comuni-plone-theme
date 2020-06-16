@@ -8,14 +8,17 @@ import cx from 'classnames';
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const RichTextArticle = ({ title, content, tag_id, add_class }) => {
+const RichTextArticle = ({ title, content, tag_id, add_class, children }) => {
   return (
     <article id={tag_id} className="it-page-section anchor-offset mt-5">
       {title && <h4>{title}</h4>}
-      <div
-        className={cx('text-serif', add_class)}
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
+      {content && (
+        <div
+          className={cx('text-serif', add_class)}
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
+      )}
+      {children}
     </article>
   );
 };

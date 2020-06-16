@@ -6,19 +6,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-
-import { Attachments } from './Commons';
-import { Gallery } from './Commons';
-import { CuredBy } from './Commons';
-import { Locations } from './Commons';
-import { WideImage } from './Commons';
-import { SideMenu } from './Commons';
-import { PageHeader } from './Commons';
-import { RichTextArticle } from './Commons';
-import { Metadata } from './Commons';
 import { readingTime } from './ViewUtils';
-import { RelatedNews } from './Commons';
-import { GenericCard } from './Commons';
+import { getHTMLString } from './ViewUtils';
+
+import {
+  RelatedNews,
+  GenericCard,
+  Metadata,
+  RichTextArticle,
+  PageHeader,
+  SideMenu,
+  WideImage,
+  Locations,
+  CuredBy,
+  Gallery,
+  Attachments,
+  TextOrBlocks,
+} from './Commons';
+
 // import { getBaseUrl } from '@plone/volto/helpers';
 
 const messages = defineMessages({
@@ -38,11 +43,15 @@ const messages = defineMessages({
  * @params {object} content Content object.
  * @returns {string} Markup of the component.
  */
-const NewsItemView = ({ content }) => {
-  let readingtime = readingTime(
-    `${content.text.data} ${content.title} ${content.description}`,
-  );
+const NewsItemView = ({ content, location }) => {
   const intl = useIntl();
+  const text = <TextOrBlocks content={content} location={location} />;
+  const reading_text = getHTMLString(text, intl.locale);
+
+  let readingtime = readingTime(
+    `${content.title} ${content.description} ${reading_text}`,
+  );
+
   return (
     <>
       <div className="container px-4 my-4 newsitem-view">
@@ -68,17 +77,14 @@ const NewsItemView = ({ content }) => {
             <SideMenu />
           </aside>
           <section className="col-lg-8 it-page-sections-container">
-            {content.text.data && (
-              <RichTextArticle
-                content={content.text.data}
-                tag_id={'text-body'}
-                title={null}
-              />
-            )}
-            {content?.items.some(e => e.id === 'multimedia') && (
+            <article id="text-body" className="it-page-section anchor-offset">
+              {text}
+            </article>
+
+            {content?.items.some((e) => e.id === 'multimedia') && (
               <Gallery content={content} folder_name={'multimedia'} />
             )}
-            {content?.items.some(e => e.id === 'documenti-allegati') && (
+            {content?.items.some((e) => e.id === 'documenti-allegati') && (
               <Attachments
                 content={content}
                 folder_name={'documenti-allegati'}
