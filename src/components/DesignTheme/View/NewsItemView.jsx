@@ -92,7 +92,7 @@ const NewsItemView = ({ content, location }) => {
             )}
             {(content.a_cura_di || content.a_cura_di_persone) && (
               <CuredBy
-                office={content.a_cura_di}
+                office={content.a_cura_di ? content.a_cura_di[0] : null}
                 people={content.a_cura_di_persone}
               />
             )}
