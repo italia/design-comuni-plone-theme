@@ -94,7 +94,8 @@ const NewsItemView = ({ content, location }) => {
               />
             )}
             {((content.a_cura_di && content.a_cura_di.length > 0) ||
-              content.a_cura_di_persone) && (
+              (content.a_cura_di_persone &&
+                content.a_cura_di_persone.length > 0)) && (
               <CuredBy
                 office={content.a_cura_di ? content.a_cura_di[0] : null}
                 people={content.a_cura_di_persone}
