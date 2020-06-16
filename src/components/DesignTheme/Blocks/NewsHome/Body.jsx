@@ -22,7 +22,7 @@ const Body = ({ content, pathname }) => {
       {content.image && (
         <Col lg={{ size: 6, offset: 1, order: 2 }}>
           <img
-            src={content.image.scales.large.download}
+            src={flattenToAppURL(content.image.scales.large.download)}
             title={content.title}
             alt={content.title}
             className="item-image"
