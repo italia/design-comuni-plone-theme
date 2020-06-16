@@ -30,7 +30,7 @@ const messages = defineMessages({
   },
   descrizione_estesa: {
     id: 'descrizione_estesa',
-    defaultMessage: 'Il servizio non è attivo',
+    defaultMessage: 'Descrizione estesa',
   },
   descrizione_destinatari: {
     id: 'descrizione_destinatari',
