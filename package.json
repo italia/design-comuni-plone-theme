@@ -106,7 +106,7 @@
     "node": "^10 || ^12"
   },
   "dependencies": {
-    "@plone/volto": "plone/volto#split_styles",
+    "@plone/volto": "plone/volto#split_styles_demo",
     "bootstrap-italia": "1.3.9",
     "classnames": "2.2.6",
     "design-react-kit": "3.1.3",
