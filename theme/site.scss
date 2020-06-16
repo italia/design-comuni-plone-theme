@@ -1,10 +1,13 @@
 @import 'bootstrap-override/bootstrap-italia-site';
 @import 'cms-ui';
+@import 'extras/sidebar';
+@import 'extras/toolbar';
 @import 'extras/chips';
 @import 'extras/modals';
 @import 'extras/search';
 @import 'extras/checkbox';
 @import 'extras/add_content_menu';
+@import 'extras/forms';
 
 /*** DesignTheme ***/
 @import 'DesignTheme/home';

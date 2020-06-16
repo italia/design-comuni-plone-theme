@@ -3,7 +3,7 @@
  * @module components/theme/Navigation/Navigation
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { isMatch } from 'lodash';
 import cx from 'classnames';
@@ -49,6 +49,8 @@ const MegaMenu = ({ item, pathname }) => {
   const isItemActive = isActive(pathname, item.url);
   const { items = [] } = item;
 
+  const [menuStatus, setMenuStatus] = useState(false);
+
   if (items.length) {
     //megamenu
     const childrenGroups = [];
@@ -69,7 +71,13 @@ const MegaMenu = ({ item, pathname }) => {
 
     return (
       <NavItem tag="li" className="megamenu" active={isItemActive}>
-        <UncontrolledDropdown nav inNavbar tag="div">
+        <UncontrolledDropdown
+          nav
+          inNavbar
+          isOpen={menuStatus}
+          tag="div"
+          toggle={() => setMenuStatus(!menuStatus)}
+        >
           <DropdownToggle aria-haspopup color="secondary" nav>
             {item.title}
           </DropdownToggle>
@@ -84,6 +92,7 @@ const MegaMenu = ({ item, pathname }) => {
                         tag={Link}
                         title={child.title}
                         key={child.url}
+                        onClick={() => setMenuStatus(false)}
                         className={cx({
                           active: isActive(pathname, child.url),
                         })}
@@ -105,6 +114,7 @@ const MegaMenu = ({ item, pathname }) => {
                       <Link
                         className="list-item medium"
                         to={flattenToAppURL(item.url)}
+                        onClick={() => setMenuStatus(false)}
                       >
                         <span>{intl.formatMessage(messages.view_all)}</span>
                         <Icon icon="it-arrow-right" />
