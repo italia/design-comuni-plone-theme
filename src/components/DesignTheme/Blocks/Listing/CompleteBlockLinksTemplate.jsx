@@ -81,7 +81,7 @@ const CompleteBlockLinksTemplate = ({ items, title, isEditMode, linkMore }) => {
             tag="button"
             onClick={() => window.open(linkMore.href, '_self')}
           >
-            {intl.formatMessage(messages.view_all)}
+            {linkMore.title || intl.formatMessage(messages.view_all)}
           </Button>
         </div>
       )}
