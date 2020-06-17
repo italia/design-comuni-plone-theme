@@ -1774,7 +1774,7 @@
 
 "@plone/volto@plone/volto#split_styles_demo":
   version "6.2.0"
-  resolved "https://codeload.github.com/plone/volto/tar.gz/02dbc63d9c8ff84be90a2e6961aac85a51f9ecb7"
+  resolved "https://codeload.github.com/plone/volto/tar.gz/14d1d5e6baec013dd2c3a40c602c890e23886c0b"
   dependencies:
     "@babel/core" "7.9.6"
     "@babel/plugin-proposal-decorators" "7.8.3"
