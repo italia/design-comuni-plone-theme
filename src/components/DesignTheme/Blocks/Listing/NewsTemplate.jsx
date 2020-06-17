@@ -6,6 +6,7 @@ import { ConditionalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { useIntl } from 'react-intl';
 import moment from 'moment';
+
 import {
   Row,
   Col,
@@ -19,9 +20,9 @@ import {
 const NewsTemplate = ({ items, isEditMode, title, linkMore }) => {
   const intl = useIntl();
   moment.locale(intl.locale);
-  console.log(items);
+
   return (
-    <div className="news-template">
+    <div className={cx('news-template', { 'public-ui': isEditMode })}>
       {title && <h2>{title}</h2>}
       <Row className="items">
         {items.map((item, index) => (
