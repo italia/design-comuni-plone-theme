@@ -102,6 +102,7 @@ const customBlocks = {
       addPermission: [],
       view: [],
     },
+    sidebarTab: 1,
   },
   alert: {
     id: 'alert',
@@ -117,6 +118,7 @@ const customBlocks = {
       addPermission: [],
       view: [],
     },
+    sidebarTab: 1,
   },
   pagina_argomento_title: {
     id: 'pagina_argomento_title',
@@ -132,6 +134,7 @@ const customBlocks = {
       addPermission: [],
       view: [],
     },
+    sidebarTab: 1,
   },
   listing: {
     ...defaultBlocks.blocksConfig.listing,
