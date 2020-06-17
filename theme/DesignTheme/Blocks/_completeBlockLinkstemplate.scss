@@ -1,0 +1,55 @@
+.complete-block-links-template {
+  margin: 40px 0;
+
+  .col-item {
+    margin-bottom: 22px;
+  }
+
+  .link-button {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-container {
+    height: 40px;
+    width: 40px;
+    border-radius: 44px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 18px 0px 0px 18px;
+    
+    img{
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .card.card-bg{
+    border-radius: 6px;
+    background-color: #2E7495;
+  }
+
+  .white {
+    color: white!important;
+  }
+
+  .view-all {
+    background-color: #FED505;
+    color: black;
+  }
+
+  .card:after {
+    content: none;
+ }
+
+
+}

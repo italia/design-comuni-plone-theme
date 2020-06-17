@@ -36,6 +36,7 @@ import { ServizioView } from '@design/components/DesignTheme';
 import { PaginaArgomentoView } from '@design/components/DesignTheme';
 import NewsTemplate from '@design/components/DesignTheme/Blocks/Listing/NewsTemplate';
 import SmallBlockLinksTemplate from '@design/components/DesignTheme/Blocks/Listing/SmallBlockLinksTemplate';
+import CompleteBlockLinksTemplate from '@design/components/DesignTheme/Blocks/Listing/CompleteBlockLinksTemplate';
 import PhotogalleryTemplate from '@design/components/DesignTheme/Blocks/Listing/PhotogalleryTemplate';
 import InEvidenceTemplate from '@design/components/DesignTheme/Blocks/Listing/InEvidenceTemplate';
 
@@ -145,8 +146,12 @@ const customBlocks = {
         template: NewsTemplate,
       },
       smallBlockLinksTemplate: {
-        label: 'Blocco di link con immagine',
+        label: 'Blocco link solo immagini',
         template: SmallBlockLinksTemplate,
+      },
+      completeBlockLinksTemplate: {
+        label: 'Blocco link completo',
+        template: CompleteBlockLinksTemplate,
       },
       photogallery: {
         label: 'Photogallery',

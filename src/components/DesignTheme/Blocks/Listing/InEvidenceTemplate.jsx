@@ -12,9 +12,13 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
 
-const InEvidenceTemplate = ({ items, title }) => {
+const InEvidenceTemplate = ({ items, title, isEditMode }) => {
   return (
-    <div className="in-evidence">
+    <div
+      className={cx('in-evidence', {
+        'public-ui': isEditMode,
+      })}
+    >
       <div className="title">{title && <h3>{title}</h3>}</div>
       <div className="container">
         {items.map((item, index) => (
