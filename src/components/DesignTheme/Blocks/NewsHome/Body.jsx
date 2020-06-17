@@ -47,7 +47,10 @@ const Body = ({ content, pathname, block }) => {
                 <>
                   {content.tassonomia_argomenti.map((argomento) => (
                     <Chip simple color="primary" key={argomento['@id']}>
-                      <Link to={argomento['@id']} className="chip-label">
+                      <Link
+                        to={flattenToAppURL(argomento['@id'])}
+                        className="chip-label"
+                      >
                         {argomento.title}
                       </Link>
                     </Chip>

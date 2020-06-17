@@ -173,9 +173,7 @@ NewsItemView.propTypes = {
       data: PropTypes.string,
     }),
     items: PropTypes.array,
-    a_cura_di: PropTypes.shape({
-      title: PropTypes.string,
-    }).isRequired,
+    a_cura_di: PropTypes.array.isRequired,
     a_cura_di_persone: PropTypes.array,
     dataset: PropTypes.shape({
       data: PropTypes.string,
