@@ -40,7 +40,7 @@ const CompleteBlockLinksTemplate = ({ items, title, isEditMode }) => {
                 href={
                   item['remoteUrl'] && item['remoteUrl'] !== ''
                     ? item['remoteUrl']
-                    : flattenToAppURL(item['@ID'])
+                    : flattenToAppURL(item['@id'])
                 }
               >
                 <div className="flex">
