@@ -13,7 +13,7 @@ const View = ({ data, id }) => {
 
   useEffect(() => {
     if (data.href) {
-      dispatch(getContent(flattenToAppURL(data.href)), null, id);
+      dispatch(getContent(flattenToAppURL(data.href), null, id));
     }
     return () => dispatch(resetContent(id));
   }, [dispatch, id, data.href]);
