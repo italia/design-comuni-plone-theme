@@ -71,6 +71,19 @@ msgstr "Follow us"
 msgid "Image"
 msgstr "Image"
 
+#: components/DesignTheme/manage/Widgets/LinkToWidget
+#: components/DesignTheme/Widgets/LinkToWidget
+msgid "Link to"
+msgstr ""
+
+#: components/DesignTheme/Blocks/NewsHome/Sidebar
+msgid "LinkMore"
+msgstr ""
+
+#: components/DesignTheme/Blocks/NewsHome/Sidebar
+msgid "Linkto title"
+msgstr ""
+
 #: components/DesignTheme/Footer/FooterSmall
 msgid "Mappa del sito"
 msgstr "Mappa del sito"
@@ -85,7 +98,7 @@ msgstr "News"
 
 #: components/DesignTheme/Blocks/NewsHome/Sidebar
 msgid "NewsHome"
-msgstr "NewsHome"
+msgstr "News con immagine in primo piano"
 
 #: components/DesignTheme/Footer/FooterInfos
 msgid "Newsletter"
@@ -98,6 +111,11 @@ msgstr "Pagina successiva"
 #: components/DesignTheme/Footer/FooterSmall
 msgid "Note legali"
 msgstr "Note legali"
+
+#: components/DesignTheme/manage/Widgets/LinkToWidget
+#: components/DesignTheme/Widgets/LinkToWidget
+msgid "Open in a new tab"
+msgstr ""
 
 #: components/DesignTheme/Footer/FooterInfos
 msgid "PEC"

@@ -11,11 +11,14 @@ import {
   CardTitle,
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
+import { useIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import moment from 'moment';
 
-const Body = ({ content, pathname }) => {
+const Body = ({ content, pathname, block }) => {
+  const intl = useIntl();
+  moment.locale(intl.locale);
   return (
     <Row>
       {content.image && (
@@ -38,17 +41,28 @@ const Body = ({ content, pathname }) => {
               <Link to={flattenToAppURL(content['@id'])}>{content.title}</Link>
             </CardTitle>
             <CardText>{content.description}</CardText>
-            <Chip simple color="primary">
-              <Link to="#" className="chip-label">
-                Estate in città
-              </Link>
-            </Chip>
-            <CardReadMore
-              tag={Link}
-              iconName="it-arrow-right"
-              text="Vedi tutte le notizie"
-              to="#"
-            />
+
+            {content.tassonomia_argomenti &&
+              content.tassonomia_argomenti.length > 0 && (
+                <>
+                  {content.tassonomia_argomenti.map((argomento) => (
+                    <Chip simple color="primary" key={argomento['@id']}>
+                      <Link to={argomento['@id']} className="chip-label">
+                        {argomento.title}
+                      </Link>
+                    </Chip>
+                  ))}
+                </>
+              )}
+
+            {block.moreHref && (
+              <CardReadMore
+                tag={Link}
+                iconName="it-arrow-right"
+                text={block.moreTitle || 'Vedi tutte le notizie'}
+                to={block.moreHref}
+              />
+            )}
           </CardBody>
         </Card>
       </Col>

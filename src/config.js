@@ -91,7 +91,7 @@ const AlignCenterButton = createBlockStyleButton({
 const customBlocks = {
   newsHome: {
     id: 'newsHome',
-    title: 'News Home',
+    title: 'News con immagine in primo piano',
     icon: newsSVG,
     group: 'news',
     view: NewsHomeView,
