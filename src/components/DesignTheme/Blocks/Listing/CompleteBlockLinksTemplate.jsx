@@ -1,8 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { Card, CardBody, CardTitle, CardText, Button } from 'design-react-kit';
+import {
+  Card,
+  CardBody,
+  CardTitle,
+  CardText,
+  Button,
+  Row,
+  Col,
+} from 'design-react-kit/dist/design-react-kit';
 import cx from 'classnames';
 import { defineMessages, useIntl } from 'react-intl';
 
