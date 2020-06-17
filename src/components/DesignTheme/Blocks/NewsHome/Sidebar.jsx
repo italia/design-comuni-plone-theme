@@ -74,6 +74,7 @@ const Sidebar = ({
             data={data}
             openObjectBrowser={openObjectBrowser}
             linkField="moreHref"
+            showTarget={false}
             onChange={(name, value) =>
               onChangeBlock(block, {
                 ...data,

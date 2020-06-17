@@ -26,7 +26,9 @@ const Edit = ({
   onChangeBlock,
   openObjectBrowser,
 }) => {
-  const content = useSelector(state => state.content.subrequests[block]?.data);
+  const content = useSelector(
+    (state) => state.content.subrequests[block]?.data,
+  );
   const intl = useIntl();
   const dispatch = useDispatch();
 
@@ -41,7 +43,7 @@ const Edit = ({
     <>
       {content ? (
         <div className="public-ui">
-          <Body content={content} pathname={pathname} />
+          <Body content={content} pathname={pathname} block={data} />
         </div>
       ) : (
         <p className="empty-selection">

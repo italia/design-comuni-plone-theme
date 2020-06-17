@@ -15,8 +15,8 @@ import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import moment from 'moment';
 
-const Body = ({ content, pathname }) => {
-  console.log(content);
+const Body = ({ content, pathname, block }) => {
+  console.log(block);
   return (
     <Row>
       {content.image && (
@@ -52,12 +52,15 @@ const Body = ({ content, pathname }) => {
                   ))}
                 </>
               )}
-            <CardReadMore
-              tag={Link}
-              iconName="it-arrow-right"
-              text="Vedi tutte le notizie"
-              to="#"
-            />
+
+            {block.moreHref && (
+              <CardReadMore
+                tag={Link}
+                iconName="it-arrow-right"
+                text={block.moreTitle || 'Vedi tutte le notizie'}
+                to={block.moreHref}
+              />
+            )}
           </CardBody>
         </Card>
       </Col>
