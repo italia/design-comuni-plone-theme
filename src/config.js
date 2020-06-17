@@ -92,7 +92,7 @@ const AlignCenterButton = createBlockStyleButton({
 const customBlocks = {
   newsHome: {
     id: 'newsHome',
-    title: 'News Home',
+    title: 'News con immagine in primo piano',
     icon: newsSVG,
     group: 'news',
     view: NewsHomeView,
@@ -103,6 +103,7 @@ const customBlocks = {
       addPermission: [],
       view: [],
     },
+    sidebarTab: 1,
   },
   alert: {
     id: 'alert',
@@ -118,6 +119,7 @@ const customBlocks = {
       addPermission: [],
       view: [],
     },
+    sidebarTab: 1,
   },
   pagina_argomento_title: {
     id: 'pagina_argomento_title',
@@ -133,6 +135,7 @@ const customBlocks = {
       addPermission: [],
       view: [],
     },
+    sidebarTab: 1,
   },
   listing: {
     ...defaultBlocks.blocksConfig.listing,
@@ -184,7 +187,7 @@ export const views = {
   contentTypesViews: {
     ...defaultViews.contentTypesViews,
     'News Item': NewsItemView,
-    'Unita organizzativa': UOView,
+    'UnitaOrganizzativa': UOView,
     Persona: PersonaView,
     Servizio: ServizioView,
     'Pagina Argomento': PaginaArgomentoView,

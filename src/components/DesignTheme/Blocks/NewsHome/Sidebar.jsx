@@ -1,17 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Form } from 'semantic-ui-react';
-import { Grid, Segment } from 'semantic-ui-react';
+import { Segment, Accordion } from 'semantic-ui-react';
 import { defineMessages, FormattedMessage, useIntl } from 'react-intl';
 import { TextWidget } from '@plone/volto/components';
-
-import clearSVG from '@plone/volto/icons/clear.svg';
-import navTreeSVG from '@plone/volto/icons/nav.svg';
+import { LinkToWidget } from '@design/components/DesignTheme';
 
 const messages = defineMessages({
   News: {
     id: 'News',
     defaultMessage: 'News',
+  },
+  LinkToTitle: {
+    id: 'Linkto title',
+    defaultMessage: 'Testo per il link ad altro',
+  },
+  LinkMore: {
+    id: 'LinkMore',
+    defaultMessage: 'Link ad altro',
   },
 });
 
@@ -28,43 +33,59 @@ const Sidebar = ({
     <Segment.Group raised>
       <header className="header pulled">
         <h2>
-          <FormattedMessage id="NewsHome" defaultMessage="News Home" />
+          <FormattedMessage
+            id="NewsHome"
+            defaultMessage="News con immagine in primo piano"
+          />
         </h2>
       </header>
 
       <Segment className="form">
-        <Form.Field inline required={required}>
-          <Grid>
-            <Grid.Row>
-              <Grid.Column width="12" verticalAlign="middle">
-                <TextWidget
-                  id="news"
-                  title={intl.formatMessage(messages.News)}
-                  required={false}
-                  value={data.href}
-                  icon={data.href ? clearSVG : navTreeSVG}
-                  iconAction={
-                    data.href
-                      ? () => {
-                          onChangeBlock(block, {
-                            ...data,
-                            href: '',
-                          });
-                        }
-                      : () => openObjectBrowser({ mode: 'link' })
-                  }
-                  onChange={(name, value) => {
-                    onChangeBlock(block, {
-                      ...data,
-                      href: value,
-                    });
-                  }}
-                />
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Form.Field>
+        <LinkToWidget
+          data={data}
+          openObjectBrowser={openObjectBrowser}
+          title={intl.formatMessage(messages.News)}
+          showTarget={false}
+          onChange={(name, value) =>
+            onChangeBlock(block, {
+              ...data,
+              [name]: value,
+            })
+          }
+        />
       </Segment>
+      <Accordion fluid styled className="form">
+        <Accordion.Title active={true} index={0} onClick={() => {}}>
+          {intl.formatMessage(messages.LinkMore)}
+        </Accordion.Title>
+        <Accordion.Content active={true}>
+          <TextWidget
+            id="moreTitle"
+            title={intl.formatMessage(messages.LinkToTitle)}
+            required={false}
+            value={data.moreTitle}
+            onChange={(name, value) => {
+              onChangeBlock(block, {
+                ...data,
+                [name]: value,
+              });
+            }}
+          />
+
+          <LinkToWidget
+            data={data}
+            openObjectBrowser={openObjectBrowser}
+            linkField="moreHref"
+            showTarget={false}
+            onChange={(name, value) =>
+              onChangeBlock(block, {
+                ...data,
+                [name]: value,
+              })
+            }
+          />
+        </Accordion.Content>
+      </Accordion>
     </Segment.Group>
   );
 };
