@@ -13,7 +13,6 @@ import { Link } from 'react-router-dom';
 import cx from 'classnames';
 
 const InEvidenceTemplate = ({ items, title }) => {
-  console.log(items);
   return (
     <div className="in-evidence">
       <div className="title">{title && <h3>{title}</h3>}</div>
