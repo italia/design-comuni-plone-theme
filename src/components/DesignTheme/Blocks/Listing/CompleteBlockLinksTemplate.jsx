@@ -4,7 +4,6 @@ import { Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Card, CardBody, CardTitle, CardText, Button } from 'design-react-kit';
 import cx from 'classnames';
-
 import { defineMessages, useIntl } from 'react-intl';
 
 const messages = defineMessages({
@@ -69,7 +68,12 @@ const CompleteBlockLinksTemplate = ({ items, title, isEditMode, linkMore }) => {
       </Row>
       {linkMore?.href && (
         <div className="link-button">
-          <Button className="view-all" icon={false} tag="button">
+          <Button
+            className="view-all"
+            icon={false}
+            tag="button"
+            onClick={() => window.open(linkMore.href, '_self')}
+          >
             {intl.formatMessage(messages.view_all)}
           </Button>
         </div>
