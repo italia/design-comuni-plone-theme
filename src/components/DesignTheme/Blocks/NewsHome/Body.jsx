@@ -16,7 +16,6 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import moment from 'moment';
 
 const Body = ({ content, pathname }) => {
-  console.log(content);
   return (
     <Row>
       {content.image && (
