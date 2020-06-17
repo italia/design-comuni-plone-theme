@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Form } from 'semantic-ui-react';
-import { Grid, Segment, Accordion } from 'semantic-ui-react';
+import { Segment, Accordion } from 'semantic-ui-react';
 import { defineMessages, FormattedMessage, useIntl } from 'react-intl';
 import { TextWidget } from '@plone/volto/components';
 import { LinkToWidget } from '@design/components/DesignTheme';
