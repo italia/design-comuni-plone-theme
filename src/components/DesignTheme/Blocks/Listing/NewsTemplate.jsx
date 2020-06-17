@@ -31,8 +31,9 @@ const NewsTemplate = ({ items, isEditMode, title, linkMore }) => {
               {index < 3 && item.image && (
                 <div className="img-responsive-wrapper">
                   <div className="img-responsive img-responsive-panoramic">
-                    <Link
+                    <ConditionalLink
                       to={flattenToAppURL(item['@id'])}
+                      condition={!isEditMode}
                       className="img-link"
                     >
                       <figure className="img-wrapper">
@@ -42,7 +43,7 @@ const NewsTemplate = ({ items, isEditMode, title, linkMore }) => {
                           alt={item.title}
                         />
                       </figure>
-                    </Link>
+                    </ConditionalLink>
                   </div>
                 </div>
               )}
