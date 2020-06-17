@@ -13,11 +13,22 @@ h6 {
   left: 50%;
   width: 100vw !important;
   max-width: initial !important;
+  height: 480px;
   margin-right: -50vw !important;
   margin-left: -50vw !important;
   object-fit: cover;
-  height: 480px;
+
+  .has-toolbar & {
+    left: calc(50% + 40px);
+    width: calc(100vw - 80px) !important;
+  }
+
+  .has-toolbar-collapsed & {
+    left: calc(50% + 10px);
+    width: calc(100vw - 20px) !important;
+  }
 }
+
 .public-ui {
   .card.bigborder {
     border: 1px solid #eee !important;
