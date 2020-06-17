@@ -86,6 +86,19 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
+#: components/DesignTheme/manage/Widgets/LinkToWidget
+#: components/DesignTheme/Widgets/LinkToWidget
+msgid "Link to"
+msgstr ""
+
+#: components/DesignTheme/Blocks/NewsHome/Sidebar
+msgid "LinkMore"
+msgstr ""
+
+#: components/DesignTheme/Blocks/NewsHome/Sidebar
+msgid "Linkto title"
+msgstr ""
+
 #: components/DesignTheme/Footer/FooterSmall
 msgid "Mappa del sito"
 msgstr ""
@@ -112,6 +125,11 @@ msgstr ""
 
 #: components/DesignTheme/Footer/FooterSmall
 msgid "Note legali"
+msgstr ""
+
+#: components/DesignTheme/manage/Widgets/LinkToWidget
+#: components/DesignTheme/Widgets/LinkToWidget
+msgid "Open in a new tab"
 msgstr ""
 
 #: components/DesignTheme/Footer/FooterInfos

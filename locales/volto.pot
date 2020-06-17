@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-06-16T12:57:31.940Z\n"
+"POT-Creation-Date: 2020-06-17T09:44:49.166Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -88,6 +88,22 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
+#: components/DesignTheme/manage/Widgets/LinkToWidget
+#: components/DesignTheme/Widgets/LinkToWidget
+# defaultMessage: Link a
+msgid "Link to"
+msgstr ""
+
+#: components/DesignTheme/Blocks/NewsHome/Sidebar
+# defaultMessage: Link ad altro
+msgid "LinkMore"
+msgstr ""
+
+#: components/DesignTheme/Blocks/NewsHome/Sidebar
+# defaultMessage: Testo per il link ad altro
+msgid "Linkto title"
+msgstr ""
+
 #: components/DesignTheme/Footer/FooterSmall
 # defaultMessage: Mappa del sito
 msgid "Mappa del sito"
@@ -104,7 +120,7 @@ msgid "News"
 msgstr ""
 
 #: components/DesignTheme/Blocks/NewsHome/Sidebar
-# defaultMessage: News Home
+# defaultMessage: News con immagine in primo piano
 msgid "NewsHome"
 msgstr ""
 
@@ -121,6 +137,12 @@ msgstr ""
 #: components/DesignTheme/Footer/FooterSmall
 # defaultMessage: Note legali
 msgid "Note legali"
+msgstr ""
+
+#: components/DesignTheme/manage/Widgets/LinkToWidget
+#: components/DesignTheme/Widgets/LinkToWidget
+# defaultMessage: Apri in un nuovo tab
+msgid "Open in a new tab"
 msgstr ""
 
 #: components/DesignTheme/Footer/FooterInfos

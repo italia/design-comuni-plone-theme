@@ -11,11 +11,14 @@ import {
   CardTitle,
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
+import { useIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import moment from 'moment';
 
 const Body = ({ content, pathname, block }) => {
+  const intl = useIntl();
+  moment.locale(intl.locale);
   return (
     <Row>
       {content.image && (

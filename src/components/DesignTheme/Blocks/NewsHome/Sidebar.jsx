@@ -33,7 +33,10 @@ const Sidebar = ({
     <Segment.Group raised>
       <header className="header pulled">
         <h2>
-          <FormattedMessage id="NewsHome" defaultMessage="News Home" />
+          <FormattedMessage
+            id="NewsHome"
+            defaultMessage="News con immagine in primo piano"
+          />
         </h2>
       </header>
 
