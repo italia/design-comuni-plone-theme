@@ -14,7 +14,7 @@ const messages = defineMessages({
   },
 });
 
-const CompleteBlockLinksTemplate = ({ items, title, isEditMode }) => {
+const CompleteBlockLinksTemplate = ({ items, title, isEditMode, linkMore }) => {
   const intl = useIntl();
 
   return (
@@ -67,11 +67,13 @@ const CompleteBlockLinksTemplate = ({ items, title, isEditMode }) => {
           </Col>
         ))}
       </Row>
-      <div className="link-button">
-        <Button className="view-all" icon={false} tag="button">
-          {intl.formatMessage(messages.view_all)}
-        </Button>
-      </div>
+      {linkMore?.href && (
+        <div className="link-button">
+          <Button className="view-all" icon={false} tag="button">
+            {intl.formatMessage(messages.view_all)}
+          </Button>
+        </div>
+      )}
     </div>
   );
 };
