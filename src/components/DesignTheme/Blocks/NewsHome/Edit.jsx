@@ -5,7 +5,7 @@ import { defineMessages, useIntl } from 'react-intl';
 
 import { getContent, resetContent } from '@plone/volto/actions';
 import { SidebarPortal } from '@plone/volto/components';
-import { getBaseUrl } from '@plone/volto/helpers';
+import { flattenToAppURL } from '@plone/volto/helpers';
 
 import Body from './Body';
 import Sidebar from './Sidebar';
@@ -32,7 +32,7 @@ const Edit = ({
 
   useEffect(() => {
     if (data.href) {
-      dispatch(getContent(getBaseUrl(data.href), null, block));
+      dispatch(getContent(flattenToAppURL(data.href), null, block));
     }
     return () => dispatch(resetContent(block));
   }, [dispatch, block, data.href]);

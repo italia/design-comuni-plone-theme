@@ -13,6 +13,7 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import moment from 'moment';
 
 const Body = ({ content, pathname }) => {
   return (
@@ -20,7 +21,7 @@ const Body = ({ content, pathname }) => {
       {content.image && (
         <Col lg={{ size: 6, offset: 1, order: 2 }}>
           <img
-            src={content.image.scales.large.download}
+            src={flattenToAppURL(content.image.scales.large.download)}
             title={content.title}
             alt={content.title}
             className="item-image"
@@ -30,7 +31,9 @@ const Body = ({ content, pathname }) => {
       <Col lg={{ size: 5, order: 1 }}>
         <Card>
           <CardBody className="pb-2">
-            <CardCategory date="18 mag 2018">Notizie</CardCategory>
+            <CardCategory date={moment(content.effective).format('ll')}>
+              Notizie
+            </CardCategory>
             <CardTitle tag="h2">
               <Link to={flattenToAppURL(content['@id'])}>{content.title}</Link>
             </CardTitle>
