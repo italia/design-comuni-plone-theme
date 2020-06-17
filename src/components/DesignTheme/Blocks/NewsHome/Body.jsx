@@ -39,15 +39,11 @@ const Body = ({ content, pathname }) => {
               <Link to={flattenToAppURL(content['@id'])}>{content.title}</Link>
             </CardTitle>
             <CardText>{content.description}</CardText>
-            <div className="flex">
-              {content.tassonomia_argomenti?.map((arg) => (
-                <Chip simple color="primary" key={arg.token}>
-                  <Link to="#" className="chip-label">
-                    {arg.title}
-                  </Link>
-                </Chip>
-              ))}
-            </div>
+            <Chip simple color="primary">
+              <Link to="#" className="chip-label">
+                Estate in città
+              </Link>
+            </Chip>
             <CardReadMore
               tag={Link}
               iconName="it-arrow-right"
