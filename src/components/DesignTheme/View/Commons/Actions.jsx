@@ -37,7 +37,7 @@ const messages = defineMessages({
   },
 });
 
-const Actions = props => {
+const Actions = (props) => {
   const intl = useIntl();
 
   let socials = [
@@ -73,6 +73,7 @@ const Actions = props => {
           alt={intl.formatMessage(messages.actions)}
           title={intl.formatMessage(messages.actions)}
         />
+
         <small>{intl.formatMessage(messages.actions)}</small>
       </DropdownToggle>
       <DropdownMenu>
@@ -98,7 +99,7 @@ const Actions = props => {
                   color="link"
                   icon={false}
                   tag="button"
-                  onClick={e => {
+                  onClick={(e) => {
                     e.preventDefault();
                     return window.print();
                   }}

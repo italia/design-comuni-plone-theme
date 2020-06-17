@@ -15,6 +15,7 @@ import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
 const Body = ({ content, pathname }) => {
+  console.log(content);
   return (
     <Row>
       {content.image && (
@@ -35,11 +36,19 @@ const Body = ({ content, pathname }) => {
               <Link to={flattenToAppURL(content['@id'])}>{content.title}</Link>
             </CardTitle>
             <CardText>{content.description}</CardText>
-            <Chip simple color="primary">
-              <Link to="#" className="chip-label">
-                Estate in città
-              </Link>
-            </Chip>
+
+            {content.tassonomia_argomenti &&
+              content.tassonomia_argomenti.length > 0 && (
+                <>
+                  {content.tassonomia_argomenti.map((argomento) => (
+                    <Chip simple color="primary" key={argomento['@id']}>
+                      <Link to={argomento['@id']} className="chip-label">
+                        {argomento.title}
+                      </Link>
+                    </Chip>
+                  ))}
+                </>
+              )}
             <CardReadMore
               tag={Link}
               iconName="it-arrow-right"
