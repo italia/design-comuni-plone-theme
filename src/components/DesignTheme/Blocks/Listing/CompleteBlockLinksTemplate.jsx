@@ -53,7 +53,7 @@ const CompleteBlockLinksTemplate = ({ items, title, isEditMode, linkMore }) => {
                   <div className="image-container">
                     <img
                       alt={item.title}
-                      src={item.image.scales.preview.download}
+                      src={flattenToAppURL(item.image.scales.preview.download)}
                       title={item.title}
                     />
                   </div>

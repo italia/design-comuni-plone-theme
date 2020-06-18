@@ -44,7 +44,9 @@ const NewsTemplate = ({ items, isEditMode, title, linkMore }) => {
                       <figure className="img-wrapper">
                         <img
                           className="listing-image"
-                          src={item.image.scales.preview.download}
+                          src={flattenToAppURL(
+                            item.image.scales.preview.download,
+                          )}
                           alt={item.title}
                         />
                       </figure>

@@ -25,7 +25,7 @@ const SmallBlockLinksTemplate = ({ items, title, isEditMode }) => {
                   <img
                     className="listing-image"
                     alt={item.title}
-                    src={item.image.scales.preview.download}
+                    src={flattenToAppURL(item.image.scales.preview.download)}
                     title={item.title}
                   />
                 </a>
