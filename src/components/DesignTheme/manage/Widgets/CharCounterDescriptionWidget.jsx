@@ -154,7 +154,7 @@ const CharCounterDescriptionWidget = ({
               {value?.length ?? 0}/160
             </span>
             {value?.length > 160 && (
-              <p style={{ color: '#E40166', fontSize: '14px', textAlign: 'right' }}>
+              <p style={{ fontSize: '14px', textAlign: 'right' }}>
                 {intl.formatMessage(messages.exceeded_chars)}
               </p>
             )}
