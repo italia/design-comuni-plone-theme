@@ -8,6 +8,8 @@ import {
   addonReducers as defaultAddonReducers,
 } from '@plone/volto/config';
 
+import ToHTMLRenderers from '@plone/volto/config/RichTextEditor/ToHTML';
+
 import createInlineStyleButton from 'draft-js-buttons/lib/utils/createInlineStyleButton';
 import createBlockStyleButton from 'draft-js-buttons/lib/utils/createBlockStyleButton';
 import { Separator } from 'draft-js-inline-toolbar-plugin';
@@ -180,6 +182,17 @@ export const settings = {
   isMultilingual: false,
   supportedLanguages: ['it'],
   defaultLanguage: 'it',
+  //TODO: rimuovere questa customizzazione quando sistemano https://github.com/plone/volto/issues/1601
+  ToHTMLRenderers: {
+    ...ToHTMLRenderers,
+    blocks: {
+      ...ToHTMLRenderers.blocks,
+      blockquote: (children, { keys }) =>
+        children.map((child, i) => (
+          <blockquote key={keys[i]}>{child}</blockquote>
+        )),
+    },
+  },
 };
 
 export const views = {
@@ -187,7 +200,7 @@ export const views = {
   contentTypesViews: {
     ...defaultViews.contentTypesViews,
     'News Item': NewsItemView,
-    'UnitaOrganizzativa': UOView,
+    UnitaOrganizzativa: UOView,
     Persona: PersonaView,
     Servizio: ServizioView,
     'Pagina Argomento': PaginaArgomentoView,
