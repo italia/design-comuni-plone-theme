@@ -34,7 +34,9 @@ const InEvidenceTemplate = ({ items, title, isEditMode }) => {
                     <figure className="img-wrapper">
                       <img
                         className="listing-image"
-                        src={item.image.scales.preview.download}
+                        src={flattenToAppURL(
+                          item.image.scales.preview.download,
+                        )}
                         alt={item.title}
                       />
                     </figure>
