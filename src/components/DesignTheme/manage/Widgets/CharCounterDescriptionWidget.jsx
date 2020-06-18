@@ -131,7 +131,6 @@ const CharCounterDescriptionWidget = ({
               </div>
             )}
             <TextArea
-              maxLength={160}
               id={`field-${id}`}
               name={id}
               value={value || ''}
@@ -141,9 +140,13 @@ const CharCounterDescriptionWidget = ({
               }
             />
             <span
-              style={{ textAlign: 'right', color: '#878f93', fontWeight: 300 }}
+              style={{
+                textAlign: 'right',
+                color: value?.length > 160 ? '#E40166' : '#878f93',
+                fontWeight: 300,
+              }}
             >
-              {160 - (value ? value.length : 0)}/160
+              {value?.length ?? 0}/160
             </span>
             {map(error, message => (
               <Label key={message} basic color="red" pointing>
