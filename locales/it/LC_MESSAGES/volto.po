@@ -194,6 +194,7 @@ msgstr "Used for programmatic access to the fieldset."
 msgid "Vai alla pagina"
 msgstr "Vai alla pagina"
 
+#: components/DesignTheme/Blocks/Listing/CompleteBlockLinksTemplate
 #: components/DesignTheme/MegaMenu/MegaMenu
 msgid "Vedi tutto"
 msgstr "Vedi tutto"
@@ -407,6 +408,10 @@ msgstr "Email"
 #: components/DesignTheme/Blocks/NewsHome/Edit
 msgid "emptySelection"
 msgstr "Seleziona un elemento nella barra laterale per mostrarlo qui."
+
+#: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
+msgid "exceeded_chars"
+msgstr "Il testo supera la lunghezza consigliata"
 
 #: components/DesignTheme/View/Commons/PageHeader
 msgid "expire"

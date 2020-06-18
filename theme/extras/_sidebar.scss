@@ -43,7 +43,8 @@ body.cms-ui {
         textarea {
           font-size: 15px;
 
-          + span {
+          + span,
+          + p {
             font-size: 14px;
           }
         }
