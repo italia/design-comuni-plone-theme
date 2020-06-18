@@ -34,7 +34,9 @@ const Body = ({ content, pathname, block }) => {
       <Col lg={{ size: 5, order: 1 }}>
         <Card>
           <CardBody className="pb-2">
-            <CardCategory date={moment(content.effective).format('ll')}>
+            <CardCategory
+              date={content.effective && moment(content.effective).format('ll')}
+            >
               Notizie
             </CardCategory>
             <CardTitle tag="h2">
