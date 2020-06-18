@@ -36,7 +36,7 @@ const Breadcrumbs = ({ pathname }) => {
     dispatch(getBreadcrumbs(getBaseUrl(pathname)));
   }, [dispatch, pathname]);
 
-  return (
+  return items?.length > 0 ? (
     <div className="public-ui">
       <Container as="section" id="briciole" className="px-4 my-4">
         <Row>
@@ -61,7 +61,7 @@ const Breadcrumbs = ({ pathname }) => {
         </Row>
       </Container>
     </div>
-  );
+  ) : null;
 };
 
 Breadcrumbs.propTypes = {
