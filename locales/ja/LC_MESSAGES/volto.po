@@ -201,6 +201,7 @@ msgstr ""
 msgid "Vai alla pagina"
 msgstr ""
 
+#: components/DesignTheme/Blocks/Listing/CompleteBlockLinksTemplate
 #: components/DesignTheme/MegaMenu/MegaMenu
 msgid "Vedi tutto"
 msgstr ""
@@ -413,6 +414,10 @@ msgstr ""
 
 #: components/DesignTheme/Blocks/NewsHome/Edit
 msgid "emptySelection"
+msgstr ""
+
+#: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
+msgid "exceeded_chars"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/PageHeader
