@@ -50,13 +50,15 @@ const CompleteBlockLinksTemplate = ({ items, title, isEditMode, linkMore }) => {
                 }
               >
                 <div className="flex">
-                  <div className="image-container">
-                    <img
-                      alt={item.title}
-                      src={item.image.scales.preview.download}
-                      title={item.title}
-                    />
-                  </div>
+                  {item.image && (
+                    <div className="image-container">
+                      <img
+                        alt={item.title}
+                        src={item.image.scales.preview.download}
+                        title={item.title}
+                      />
+                    </div>
+                  )}
                   <div>
                     <CardBody>
                       <CardTitle tag="h5" className="white">
