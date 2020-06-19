@@ -45,7 +45,9 @@ const InEvidenceTemplate = ({ items, title, isEditMode }) => {
               </div>
             )}
             <CardBody>
-              <CardCategory date={moment(item.effective).format('ll')}>
+              <CardCategory
+                date={item.effective && moment(item.effective).format('ll')}
+              >
                 {item.subjects?.join(', ')}
               </CardCategory>
               <CardTitle tag="h4">

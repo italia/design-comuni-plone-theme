@@ -56,7 +56,7 @@ const NewsTemplate = ({ items, isEditMode, title, linkMore }) => {
               )}
               <CardBody>
                 <CardCategory
-                  date={moment(item.effective || item.created).format('ll')}
+                  date={item.effective && moment(item.effective).format('ll')}
                 >
                   {item.subjects?.join(', ')}
                 </CardCategory>
