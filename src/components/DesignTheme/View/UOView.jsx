@@ -87,10 +87,10 @@ const UOView = ({ content }) => {
           showdates={false}
           showtassonomiaargomenti={true}
         />
-        {content.immagine && (
+        {content.image && (
           <WideImage
             title={content.title}
-            image={content.immagine}
+            image={content.image}
             caption={null}
           />
         )}
@@ -243,7 +243,7 @@ const UOView = ({ content }) => {
                 ))}
               </article>
             ) : null}
-            {content?.items.some(e => e.id === 'allegati') && (
+            {content?.items.some((e) => e.id === 'allegati') && (
               <Attachments content={content} folder_name={'allegati'} />
             )}
             {content.box_aiuto && (

@@ -1,0 +1,7 @@
+.chip {
+  cursor: pointer;
+
+  &.selected {
+    @extend .chip:hover;
+  }
+}

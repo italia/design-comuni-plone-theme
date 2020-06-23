@@ -4,7 +4,9 @@ import cx from 'classnames';
 import { Link } from 'react-router-dom';
 import { ConditionalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { useIntl } from 'react-intl';
 import moment from 'moment';
+
 import {
   Row,
   Col,
@@ -16,8 +18,11 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 
 const NewsTemplate = ({ items, isEditMode, title, linkMore }) => {
+  const intl = useIntl();
+  moment.locale(intl.locale);
+
   return (
-    <div className="news-template">
+    <div className={cx('news-template', { 'public-ui': isEditMode })}>
       {title && <h2>{title}</h2>}
       <Row className="items">
         {items.map((item, index) => (
@@ -31,23 +36,28 @@ const NewsTemplate = ({ items, isEditMode, title, linkMore }) => {
               {index < 3 && item.image && (
                 <div className="img-responsive-wrapper">
                   <div className="img-responsive img-responsive-panoramic">
-                    <Link
+                    <ConditionalLink
                       to={flattenToAppURL(item['@id'])}
+                      condition={!isEditMode}
                       className="img-link"
                     >
                       <figure className="img-wrapper">
                         <img
                           className="listing-image"
-                          src={item.image.scales.preview.download}
+                          src={flattenToAppURL(
+                            item.image.scales.preview.download,
+                          )}
                           alt={item.title}
                         />
                       </figure>
-                    </Link>
+                    </ConditionalLink>
                   </div>
                 </div>
               )}
               <CardBody>
-                <CardCategory date={moment(item.effective).format('ll')}>
+                <CardCategory
+                  date={item.effective && moment(item.effective).format('ll')}
+                >
                   {item.subjects?.join(', ')}
                 </CardCategory>
                 <CardTitle tag="h4">

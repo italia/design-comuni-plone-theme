@@ -9,7 +9,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { defineMessages, useIntl } from 'react-intl';
 import { isEqual } from 'lodash';
-import { isCmsUi } from '@plone/volto/helpers';
 import { getBreadcrumbs } from '@plone/volto/actions';
 import { getBaseUrl } from '@plone/volto/helpers';
 import {
@@ -30,39 +29,39 @@ const messages = defineMessages({
 const Breadcrumbs = ({ pathname }) => {
   const intl = useIntl();
   const dispatch = useDispatch();
-  const items = useSelector(state => state.breadcrumbs.items, isEqual);
+
+  let items = useSelector(state => state.breadcrumbs.items, isEqual);
 
   useEffect(() => {
     dispatch(getBreadcrumbs(getBaseUrl(pathname)));
   }, [dispatch, pathname]);
 
-  const isCmsUI = isCmsUi(pathname);
-  const content = items.length > 0 && (
-    <Container as="section" id="briciole" className="px-4 my-4">
-      <Row>
-        <Col className="px-lg-4">
-          <nav className="breadcrumb-container">
-            <Breadcrumb aria-label="breadcrumb" listTag="ol" tag="nav">
-              <BreadcrumbItem tag="li">
-                <Link to="/">{intl.formatMessage(messages.home)}</Link>
-                <span className="separator">/</span>
-              </BreadcrumbItem>
-              {items.slice(0, -1).map((item, index, items) => (
-                <BreadcrumbItem tag="li" key={item.url}>
-                  <Link to={item.url}>{item.title}</Link>
-                  {index < items.length - 1 && (
-                    <span className="separator">/</span>
-                  )}
+  return items?.length > 0 ? (
+    <div className="public-ui">
+      <Container as="section" id="briciole" className="px-4 my-4">
+        <Row>
+          <Col className="px-lg-4">
+            <nav className="breadcrumb-container">
+              <Breadcrumb aria-label="breadcrumb" listTag="ol" tag="nav">
+                <BreadcrumbItem tag="li">
+                  <Link to="/">{intl.formatMessage(messages.home)}</Link>
+                  <span className="separator">/</span>
                 </BreadcrumbItem>
-              ))}
-            </Breadcrumb>
-          </nav>
-        </Col>
-      </Row>
-    </Container>
-  );
-
-  return isCmsUI ? <div className="public-ui">{content}</div> : content;
+                {items.slice(0, -1).map((item, index, items) => (
+                  <BreadcrumbItem tag="li" key={item.url}>
+                    <Link to={item.url}>{item.title}</Link>
+                    {index < items.length - 1 && (
+                      <span className="separator">/</span>
+                    )}
+                  </BreadcrumbItem>
+                ))}
+              </Breadcrumb>
+            </nav>
+          </Col>
+        </Row>
+      </Container>
+    </div>
+  ) : null;
 };
 
 Breadcrumbs.propTypes = {

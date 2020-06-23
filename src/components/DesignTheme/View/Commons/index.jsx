@@ -20,3 +20,4 @@ export NewsCard from '@design/components/DesignTheme/View/Commons/NewsCard';
 export EmbeddedVideo from '@design/components/DesignTheme/View/Commons/EmbeddedVideo';
 export HelpBox from '@design/components/DesignTheme/View/Commons/HelpBox';
 export Dates from '@design/components/DesignTheme/View/Commons/Dates';
+export TextOrBlocks from '@design/components/DesignTheme/View/Commons/TextOrBlocks';

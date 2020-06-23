@@ -1,0 +1,27 @@
+.small-block-links {
+  margin: 40px 0;
+
+  .col-item {
+    margin-bottom: 22px;
+  }
+
+  .center-image-card {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    padding: 56px 8px;
+    border-right: none;
+    background: white;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 100%;
+      height: auto;
+      max-height: 100px;
+    }
+  }
+
+  .title {
+    margin-bottom: 60px;
+  }
+}

@@ -1,0 +1,45 @@
+.public-ui {
+  .ui.embed,
+  #toolbar .ui.embed {
+    position: relative;
+    max-width: 100%;
+    height: 0px;
+    overflow: hidden;
+    background: #878f93;
+    padding-bottom: 56.25%;
+  }
+
+  .ui.active.embed > .embed,
+  #toolbar .ui.active.embed > .embed {
+    display: block;
+  }
+
+  .ui.embed iframe,
+  #toolbar .ui.embed iframe,
+  .ui.embed embed,
+  #toolbar .ui.embed embed,
+  .ui.embed object,
+  #toolbar .ui.embed object {
+    position: absolute;
+    border: none;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    margin: 0em;
+    padding: 0em;
+  }
+}
+
+.block.video {
+  .full-width {
+    .ui.active.embed {
+      height: 100%;
+      position: unset;
+      padding-bottom: unset;
+      .embed {
+        height: 100%;
+      }
+    }
+  }
+}

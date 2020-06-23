@@ -1,10 +1,25 @@
 @import 'bootstrap-override/bootstrap-italia-site';
 @import 'cms-ui';
+@import 'extras/sidebar';
+@import 'extras/toolbar';
+@import 'extras/chips';
+@import 'extras/modals';
+@import 'extras/search';
+@import 'extras/checkbox';
+@import 'extras/add_content_menu';
+@import 'extras/forms';
+@import 'extras/blocks-chooser';
+@import 'extras/video';
 
 /*** DesignTheme ***/
 @import 'DesignTheme/home';
 @import 'DesignTheme/Blocks/alert';
+@import 'DesignTheme/Blocks/titolo_argomento';
 @import 'DesignTheme/Blocks/newshome';
 @import 'DesignTheme/Blocks/newstemplate';
+@import 'DesignTheme/Blocks/smallblockLinkstemplate';
+@import 'DesignTheme/Blocks/completeBlockLinkstemplate';
+@import 'DesignTheme/Blocks/photogallerytemplate';
+@import 'DesignTheme/Blocks/inevidencetemplate';
 @import 'DesignTheme/Views/uo';
 @import 'DesignTheme/Views/common';

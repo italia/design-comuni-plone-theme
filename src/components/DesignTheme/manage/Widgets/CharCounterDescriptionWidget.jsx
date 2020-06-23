@@ -7,7 +7,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Form, Grid, Icon, Label, TextArea } from 'semantic-ui-react';
 import { map } from 'lodash';
-import { defineMessages, injectIntl } from 'react-intl';
+import { defineMessages, useIntl } from 'react-intl';
 
 const messages = defineMessages({
   default: {
@@ -38,6 +38,10 @@ const messages = defineMessages({
     id: 'Delete',
     defaultMessage: 'Delete',
   },
+  exceeded_chars: {
+    id: 'exceeded_chars',
+    defaultMessage: 'Il testo supera la lunghezza consigliata',
+  },
 });
 
 /**
@@ -55,9 +59,10 @@ const CharCounterDescriptionWidget = ({
   onChange,
   onEdit,
   onDelete,
-  intl,
   fieldSet,
 }) => {
+  const intl = useIntl();
+
   const schema = {
     fieldsets: [
       {
@@ -122,7 +127,7 @@ const CharCounterDescriptionWidget = ({
                   <Icon name="write square" size="large" color="blue" />
                 </button>
                 <button
-                  aria-label={this.props.intl.formatMessage(messages.delete)}
+                  aria-label={intl.formatMessage(messages.delete)}
                   className="item ui noborder button"
                   onClick={() => onDelete(id)}
                 >
@@ -131,7 +136,6 @@ const CharCounterDescriptionWidget = ({
               </div>
             )}
             <TextArea
-              maxLength={160}
               id={`field-${id}`}
               name={id}
               value={value || ''}
@@ -141,10 +145,19 @@ const CharCounterDescriptionWidget = ({
               }
             />
             <span
-              style={{ textAlign: 'right', color: '#878f93', fontWeight: 300 }}
+              style={{
+                textAlign: 'right',
+                color: value?.length > 160 ? '#E40166' : '#878f93',
+                fontWeight: 300,
+              }}
             >
-              {160 - (value ? value.length : 0)}/160
+              {value?.length ?? 0}/160
             </span>
+            {value?.length > 160 && (
+              <p style={{ fontSize: '14px', textAlign: 'right' }}>
+                {intl.formatMessage(messages.exceeded_chars)}
+              </p>
+            )}
             {map(error, message => (
               <Label key={message} basic color="red" pointing>
                 {message}
@@ -196,4 +209,4 @@ CharCounterDescriptionWidget.defaultProps = {
   onDelete: null,
 };
 
-export default injectIntl(CharCounterDescriptionWidget);
+export default CharCounterDescriptionWidget;
