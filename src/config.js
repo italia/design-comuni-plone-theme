@@ -35,12 +35,9 @@ import { NewsItemView } from '@design/components/DesignTheme';
 import { UOView } from '@design/components/DesignTheme';
 import { PersonaView } from '@design/components/DesignTheme';
 import { ServizioView } from '@design/components/DesignTheme';
-<<<<<<< HEAD
 import { EventoView } from '@design/components/DesignTheme';
 
-=======
 import { PaginaArgomentoView } from '@design/components/DesignTheme';
->>>>>>> master
 import NewsTemplate from '@design/components/DesignTheme/Blocks/Listing/NewsTemplate';
 import SmallBlockLinksTemplate from '@design/components/DesignTheme/Blocks/Listing/SmallBlockLinksTemplate';
 import CompleteBlockLinksTemplate from '@design/components/DesignTheme/Blocks/Listing/CompleteBlockLinksTemplate';
