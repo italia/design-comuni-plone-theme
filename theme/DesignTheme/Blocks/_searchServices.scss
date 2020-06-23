@@ -1,0 +1,79 @@
+.searchServices{
+  width: 100%;
+  min-height: 280px;
+  padding: 10px 50px;
+  background-color: #0073e6;
+
+  .searchContainer {
+    width: 100%;
+    display: flex;
+    padding: 0px 12%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 28px 0;
+
+    .inputSearch {
+      border: none!important;
+      /* border-bottom: 1px solid #5c6f82!important; */
+      border-radius: 0!important;
+      /* padding: 0rem 0.5rem!important; */
+      outline: 0!important;
+      /* height: 2.5rem!important; */
+      width: 96%!important;
+      box-shadow: none!important;
+      transition: 0.2s ease-out!important;
+      font-weight: 500!important;
+      background: #dedede!important;
+      height: 100%!important;
+    }
+
+    .searchbar {
+      display: flex;
+      height: 45px;
+      background-color: #dedede;
+      width: 100%;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
+      border-radius: 6px;
+      padding: 5px 14px;
+    }
+    
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .flex1 {
+      flex: 1;
+    }
+  }
+
+  .white {
+    color: white
+  }
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+
+  button {
+    margin: 10px 10px 10px 0px;
+  }
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}
+
+.deletable {
+  color: red;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.margin-bottom-22{
+  margin-bottom: 22px
+}

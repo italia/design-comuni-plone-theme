@@ -24,6 +24,9 @@ import alertSVG from '@plone/volto/icons/alert.svg';
 import AlertView from '@design/components/DesignTheme/Blocks/Alert/View';
 import AlertEdit from '@design/components/DesignTheme/Blocks/Alert/Edit';
 
+import SearchServicesView from '@design/components/DesignTheme/Blocks/SearchServices/View';
+import SearchServicesEdit from '@design/components/DesignTheme/Blocks/SearchServices/Edit';
+
 import titleSVG from '@plone/volto/icons/text.svg';
 import ArgomentoTitleView from '@design/components/DesignTheme/Blocks/ArgomentoTitle/View';
 import ArgomentoTitleEdit from '@design/components/DesignTheme/Blocks/ArgomentoTitle/Edit';
@@ -99,6 +102,22 @@ const customBlocks = {
     edit: NewsHomeEdit,
     restricted: false,
     mostUsed: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
+  searchService: {
+    id: 'searchService',
+    title: 'Ricerca di un servizio',
+    icon: newsSVG,
+    group: 'text',
+    view: SearchServicesView,
+    edit: SearchServicesEdit,
+    restricted: false,
+    mostUsed: false,
+    blockHasOwnFocusManagement: true,
     security: {
       addPermission: [],
       view: [],
