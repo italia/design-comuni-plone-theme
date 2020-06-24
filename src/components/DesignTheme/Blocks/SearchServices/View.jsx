@@ -8,7 +8,7 @@ const View = ({ data, id }) => {
   const content = useSelector((state) => state.content.subrequests[id]?.data);
 
   return (
-    <div className="block newsHome">
+    <div className="block">
       <Body content={content} block={data} />
     </div>
   );
