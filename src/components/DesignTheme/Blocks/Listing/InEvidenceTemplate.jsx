@@ -34,7 +34,9 @@ const InEvidenceTemplate = ({ items, title, isEditMode }) => {
                     <figure className="img-wrapper">
                       <img
                         className="listing-image"
-                        src={item.image.scales.preview.download}
+                        src={flattenToAppURL(
+                          item.image.scales.preview.download,
+                        )}
                         alt={item.title}
                       />
                     </figure>
@@ -43,7 +45,9 @@ const InEvidenceTemplate = ({ items, title, isEditMode }) => {
               </div>
             )}
             <CardBody>
-              <CardCategory date={moment(item.effective).format('ll')}>
+              <CardCategory
+                date={item.effective && moment(item.effective).format('ll')}
+              >
                 {item.subjects?.join(', ')}
               </CardCategory>
               <CardTitle tag="h4">

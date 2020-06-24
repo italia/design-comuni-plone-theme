@@ -1,11 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 import { Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
-const PhotogalleryTemplate = ({ items, title }) => {
+const PhotogalleryTemplate = ({ items, title, isEditMode }) => {
   return (
-    <div className="small-block-links">
+    <div
+      className={cx('small-block-links', {
+        'public-ui': isEditMode,
+      })}
+    >
       <div className="title">{<h3>PhotoGallery</h3>}</div>
       <Row className="items">
         {items.map((item, index) => (

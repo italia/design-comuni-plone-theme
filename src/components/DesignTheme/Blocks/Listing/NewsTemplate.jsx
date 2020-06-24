@@ -44,7 +44,9 @@ const NewsTemplate = ({ items, isEditMode, title, linkMore }) => {
                       <figure className="img-wrapper">
                         <img
                           className="listing-image"
-                          src={item.image.scales.preview.download}
+                          src={flattenToAppURL(
+                            item.image.scales.preview.download,
+                          )}
                           alt={item.title}
                         />
                       </figure>
@@ -54,7 +56,7 @@ const NewsTemplate = ({ items, isEditMode, title, linkMore }) => {
               )}
               <CardBody>
                 <CardCategory
-                  date={moment(item.effective || item.created).format('ll')}
+                  date={item.effective && moment(item.effective).format('ll')}
                 >
                   {item.subjects?.join(', ')}
                 </CardCategory>
