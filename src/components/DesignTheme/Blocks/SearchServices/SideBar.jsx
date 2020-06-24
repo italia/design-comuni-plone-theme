@@ -3,11 +3,7 @@ import PropTypes from 'prop-types';
 import { Segment, Accordion } from 'semantic-ui-react';
 import { defineMessages, FormattedMessage, useIntl } from 'react-intl';
 import { TextWidget } from '@plone/volto/components';
-import { LinkToWidget } from '@design/components/DesignTheme';
-import aheadSVG from '@plone/volto/icons/add.svg';
-import clearSVG from '@plone/volto/icons/clear.svg';
-import { Button } from 'semantic-ui-react';
-import { Icon } from '@plone/volto/components';
+import ObjectBrowserWidget from '@plone/volto/components/manage/Widgets/ObjectBrowserWidget';
 
 const messages = defineMessages({
   editSearch: {
@@ -70,77 +66,19 @@ const Sidebar = ({
           Collegamenti
         </Accordion.Title>
         <Accordion.Content active={true}>
-          {data.links?.map((link, index) => {
-            return (
-              <>
-                <div className="margin-bottom-22">
-                  <div key={index} className="flex-center">
-                    <Icon
-                      className="circled deletable"
-                      name={clearSVG}
-                      size="15px"
-                      onClick={() => {
-                        const links = data.links ? [...data.links] : [];
-                        links.splice(index, 1);
-                        onChangeBlock(block, {
-                          ...data,
-                          links: links,
-                        });
-                      }}
-                    />
-                    <div>
-                      <LinkToWidget
-                        data={data.links[index]}
-                        linkField={'url'}
-                        openObjectBrowser={openObjectBrowser}
-                        title={intl.formatMessage(messages.link)}
-                        showTarget={false}
-                        onChange={(name, value) => {
-                          const links = [...data.links];
-                          links[index].url = value;
-                          onChangeBlock(block, {
-                            ...data,
-                            links: links,
-                          });
-                        }}
-                      />
-                      <br></br>
-                      <TextWidget
-                        title={intl.formatMessage(messages.desc)}
-                        required={true}
-                        value={data.links[index].desc}
-                        onChange={(name, value) => {
-                          data.links[index].desc = value;
-                          onChangeBlock(block, {
-                            ...data,
-                            links: data.links,
-                          });
-                        }}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <hr></hr>
-              </>
-            );
-          })}
-          <Button
-            basic
-            primary
-            floated="right"
-            type="button"
-            id="rss-form-submit"
-            onClick={() => {
-              const links = data.links ? [...data.links] : [];
-              links.push({ desc: '', url: '' });
+          <ObjectBrowserWidget
+            id={'ObjectBrowserWidget'}
+            title={intl.formatMessage(messages.desc)}
+            required={true}
+            mode={'multiple'}
+            value={data.links || []}
+            onChange={(name, value) => {
               onChangeBlock(block, {
                 ...data,
-                links: links,
+                links: value,
               });
             }}
-          >
-            <Icon className="circled" name={aheadSVG} size="30px" />
-          </Button>
+          />
         </Accordion.Content>
       </Accordion>
     </Segment.Group>

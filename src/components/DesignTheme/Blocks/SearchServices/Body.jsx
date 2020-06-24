@@ -5,14 +5,20 @@ import { Row, Icon, Button } from 'design-react-kit/dist/design-react-kit';
 import { useIntl } from 'react-intl';
 import moment from 'moment';
 import cx from 'classnames';
+import { useSelector } from 'react-redux';
 
-const navigate = (text) => {
+const navigate = (text, serivices) => {
   window.location.href =
     window.location.origin +
-    `/search?SearchableText=${text}&path.query=%2FPlone%2Fservizi%2Fagricoltura&path.query=%2FPlone%2Fservizi%2Fambiente&path.query=%2FPlone%2Fservizi%2Fanagrafe-e-stato-civile&path.query=%2FPlone%2Fservizi%2Fappalti-pubblici&path.query=%2FPlone%2Fservizi%2Fattivit-produttive-e-commercio&path.query=%2FPlone%2Fservizi%2Fautorizzazioni&path.query=%2FPlone%2Fservizi%2Fcatasto-e-urbanistica&path.query=%2FPlone%2Fservizi%2Fcultura-e-tempo-libero&path.query=%2FPlone%2Fservizi%2Feducazione-e-formazione&path.query=%2FPlone%2Fservizi%2Fgiustizia-e-sicurezza-pubblica&path.query=%2FPlone%2Fservizi%2Fmobilit-e-trasporti&path.query=%2FPlone%2Fservizi%2Fsalute-benessere-e-assistenza&path.query=%2FPlone%2Fservizi%2Ftributi-e-finanze&path.query=%2FPlone%2Fservizi%2Fturismo&path.query=%2FPlone%2Fservizi%2Fvita-lavorativa`;
+    `/search?SearchableText=${text}&path.query=${serivices}`;
 };
 
 const Body = ({ content, pathname, block, isEditMode }) => {
+  const searchFilters = useSelector((state) =>
+    state?.searchFilters?.result?.sections?.servizi?.items
+      .map((x) => x.path)
+      .join('&path.query='),
+  );
   const intl = useIntl();
   moment.locale(intl.locale);
   return (
@@ -32,7 +38,9 @@ const Body = ({ content, pathname, block, isEditMode }) => {
                 type="text"
                 placeholder="Ricerca Servizi"
                 onKeyDown={(e) =>
-                  e.key === 'Enter' ? navigate(e.target.value) : null
+                  e.key === 'Enter'
+                    ? navigate(e.target.value, searchFilters)
+                    : null
                 }
               ></input>
             </div>
@@ -41,14 +49,13 @@ const Body = ({ content, pathname, block, isEditMode }) => {
             {block.links?.map((link, index) => {
               return (
                 <Button
-                  icon={false}
                   outline
                   tag="button"
                   size="sm"
                   key={index}
-                  onClick={() => (window.location = link.url)}
+                  onClick={() => (window.location = link['@id'])}
                 >
-                  {link.desc}
+                  {link.title}
                 </Button>
               );
             })}
