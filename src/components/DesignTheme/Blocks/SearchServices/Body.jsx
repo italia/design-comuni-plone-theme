@@ -25,7 +25,7 @@ const Body = ({ content, pathname, block, isEditMode }) => {
     <Row>
       <div className={cx('searchServices', { 'public-ui': isEditMode })}>
         <div>
-          <h3 className="white">{block.title}</h3>
+          <h2 className="white">{block.title}</h2>
         </div>
         <div className="searchContainer">
           <div className="searchbar">
