@@ -35,7 +35,7 @@ const messages = defineMessages({
   },
   responsabile: {
     id: 'responsabile',
-    defaultMessage: 'Reposanbile',
+    defaultMessage: 'Responsabile',
   },
   persone_struttura: {
     id: 'persone_struttura',
