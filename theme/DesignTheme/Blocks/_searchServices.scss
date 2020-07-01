@@ -6,7 +6,7 @@
     padding: 10px 6px;
   }
 
-  background-color: #0066CC;
+  background-color: $secondary;
 
   .searchContainer {
     width: 100%;
@@ -48,7 +48,7 @@
         width: 50px;
         height: 100%;
         border-radius: 0 6px 6px 0px;
-        background: #bf2816;
+        background: $primary;
         border-width: 0px;
         display: flex;
         justify-content: center;
@@ -72,10 +72,8 @@
 
   button.btn.btn-outline-secondary.btn-sm{
     margin: 10px 10px 10px 0px;
-    background: #BE2716;
-    background-color: #BE2716;
+    background: $primary;
     color: white;
-    border-color: #BE2716;
     box-shadow: none;
   }
 }
