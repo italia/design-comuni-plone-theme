@@ -7,20 +7,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 
-import { Attachments } from './Commons';
-import { Gallery } from './Commons';
-import { Events } from './Commons';
-import { Locations } from './Commons';
-import { WideImage } from './Commons';
-import { SideMenu } from './Commons';
-import { HelpBox } from './Commons';
-import { PageHeader } from './Commons';
-import { RichTextArticle } from './Commons';
-import { Metadata } from './Commons';
-import { Venue } from './Commons';
-import { OfficeCard } from './Commons';
-import { GenericCard } from './Commons';
-import { Dates } from './Commons';
+import {
+  Attachments,
+  Gallery,
+  Events,
+  Locations,
+  WideImage,
+  SideMenu,
+  HelpBox,
+  PageHeader,
+  RichTextArticle,
+  Metadata,
+  Venue,
+  OfficeCard,
+  GenericCard,
+  Dates,
+  TextOrBlocks,
+} from './Commons';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import {
@@ -50,8 +53,14 @@ const messages = defineMessages({
  * @params {object} content Content object.
  * @returns {string} Markup of the component.
  */
-const EventoView = ({ content }) => {
+const EventoView = ({ content, location }) => {
   const intl = useIntl();
+  const text = <TextOrBlocks content={content} location={location} />;
+  const events_path =
+    content?.parent['@type'] === 'Event'
+      ? content?.parent['@id']?.split('/').splice(-1)[0]
+      : content?.['@id'].split('/').splice(-1)[0];
+  console.log(content);
   return (
     <>
       <div className="container px-4 my-4 newsitem-view">
@@ -77,14 +86,20 @@ const EventoView = ({ content }) => {
             <SideMenu />
           </aside>
           <section className="col-lg-8 it-page-sections-container">
-            {content?.introduzione?.data && (
+            <article
+              id="text-body-blocks"
+              className="it-page-section anchor-offset clearfix"
+            >
+              {text}
+            </article>
+            {content.introduzione?.data && (
               <RichTextArticle
-                content={content?.introduzione?.data}
+                content={content.introduzione?.data}
                 tag_id={'text-body'}
                 title={'Introduzione'}
               />
             )}
-            {content?.items.some(e => e.id === 'multimedia') && (
+            {content?.items.some((e) => e.id === 'multimedia') && (
               <Gallery content={content} folder_name={'multimedia'} />
             )}
             {content?.descrizione_destinatari?.data && (
@@ -115,16 +130,11 @@ const EventoView = ({ content }) => {
                 ))}
               </div>
             )}
-            {content?.items.some(e => e.id === 'documenti-allegati') && (
-              <Attachments
-                content={content}
-                folder_name={'documenti-allegati'}
-              />
-            )}
-            {content?.luogo_event?.length > 0 ? (
+
+            {content?.luogo_evento?.length > 0 ? (
               <>
-                <Locations locations={content?.luogo_event} show_icon={true} />
-                {content?.luogo_event?.map(location => (
+                <Locations locations={content?.luogo_evento} show_icon={true} />
+                {content?.luogo_evento?.map((location) => (
                   <Venue venue={location} key={location['@id']} />
                 ))}
               </>
@@ -164,7 +174,7 @@ const EventoView = ({ content }) => {
               />
             )}
 
-            {content?.items.some(e => e.id === 'documenti') && (
+            {content?.items.some((e) => e.id === 'documenti') && (
               <Attachments
                 content={content}
                 folder_name={'documenti'}
@@ -195,7 +205,7 @@ const EventoView = ({ content }) => {
                   </CardBody>
                 </Card>
                 <h5 className="mt-4">Con il supporto di:</h5>
-                {content?.evento_supportato_da?.map(item => (
+                {content?.evento_supportato_da?.map((item) => (
                   <OfficeCard
                     key={item['@id']}
                     office={item}
@@ -207,7 +217,7 @@ const EventoView = ({ content }) => {
             ) : null}
             {content?.organizzato_da_interno?.length > 0 ? (
               <>
-                {content?.evento_organizzato_da_interno?.map(item => (
+                {content?.evento_organizzato_da_interno?.map((item) => (
                   <OfficeCard
                     key={item['@id']}
                     office={item}
@@ -216,7 +226,7 @@ const EventoView = ({ content }) => {
                   />
                 ))}
                 <h5 className="mt-4">Con il supporto di:</h5>
-                {content?.evento_supportato_da?.map(item => (
+                {content?.evento_supportato_da?.map((item) => (
                   <OfficeCard
                     key={item['@id']}
                     office={item}
@@ -227,7 +237,12 @@ const EventoView = ({ content }) => {
               </>
             ) : null}
             {content && (
-              <Events content={content} show_image={true} title={null} />
+              <Events
+                content={content}
+                show_image={true}
+                title={null}
+                folder_name={events_path}
+              />
             )}
             {content?.ulteriori_informazioni?.data.replace(
               /(<([^>]+)>)/g,

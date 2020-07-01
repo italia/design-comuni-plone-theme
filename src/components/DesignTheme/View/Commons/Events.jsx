@@ -1,8 +1,10 @@
 import { defineMessages, useIntl } from 'react-intl';
 
-import React from 'react';
-import moment from 'moment';
+import React, { useEffect } from 'react';
+import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { useDispatch, useSelector } from 'react-redux';
+import moment from 'moment';
 import { Icon } from 'design-react-kit/dist/design-react-kit';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -26,7 +28,7 @@ const messages = defineMessages({
  */
 const Evento = ({ event, show_image }) => {
   const intl = useIntl();
-
+  console.log(event);
   return event ? (
     <div className="card card-teaser card-flex rounded shadow">
       <div className="card-body p-4">
@@ -37,7 +39,9 @@ const Evento = ({ event, show_image }) => {
           </span>
         </h5>
         <div className="card-text">
-          <p className="text-uppercase">{event.luogo_event[0].title}</p>
+          <p className="text-uppercase">
+            {event.luogo_evento && event.luogo_evento[0]?.title}
+          </p>
 
           <div className="pt-4 pb-3">
             <Link to={flattenToAppURL(event['@id'])} title={event.title}>
@@ -68,9 +72,45 @@ const Evento = ({ event, show_image }) => {
  * @params {object} content: Eventi object.
  * @returns {string} Markup of the component.
  */
-const Events = ({ content, title, show_image }) => {
+const Events = ({ content, title, show_image, folder_name }) => {
   const intl = useIntl();
-  const events = content?.items?.filter(el => el['@type'] === 'Event') || [];
+  const path =
+    content.parent['@type'] === 'Event'
+      ? content.parent['@id']
+      : content['@id'];
+  const isChild = content.parent['@type'] === 'Event';
+  const url = flattenToAppURL(path);
+  const searchResults = useSelector((state) => state.search.subrequests);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (isChild) {
+      dispatch(
+        searchContent(
+          url,
+          {
+            portal_type: 'Event',
+            'path.depth': 1,
+            sort_on: 'getObjPositionInParent',
+            fullobjects: true,
+          },
+          folder_name,
+        ),
+      );
+    }
+    return () => {
+      dispatch(resetSearchContent(folder_name));
+    };
+  }, [dispatch, content, url, folder_name, isChild]);
+  let events = isChild
+    ? searchResults?.[folder_name]?.items || []
+    : content?.items?.filter((el) => el['@type'] === 'Event') || [];
+  if (isChild) {
+    events = [...events].filter((el) => !content['@id'].includes(el['@id']));
+    events.push(content.parent);
+  }
+
+  console.log(show_image);
   return (
     <>
       {events.length > 0 ? (
