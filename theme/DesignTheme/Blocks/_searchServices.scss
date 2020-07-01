@@ -6,7 +6,7 @@
     padding: 10px 6px;
   }
 
-  background-color: #0073e6;
+  background-color: #0066CC;
 
   .searchContainer {
     width: 100%;
@@ -62,7 +62,12 @@
   flex-wrap: wrap;
   margin-top: 15px;
 
-  button {
+  button.btn.btn-outline-secondary.btn-sm{
     margin: 10px 10px 10px 0px;
+    background: #BE2716;
+    background-color: #BE2716;
+    color: white;
+    border-color: #BE2716;
+    box-shadow: none;
   }
 }

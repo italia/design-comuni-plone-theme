@@ -45,7 +45,7 @@ const Body = ({ block }) => {
               ></input>
             </div>
           </div>
-          <div className={cx('buttonsContainer', 'public-ui')}>
+          <div className={cx('buttonsContainer')}>
             {block.links?.map((link, index) => {
               return (
                 <Button
