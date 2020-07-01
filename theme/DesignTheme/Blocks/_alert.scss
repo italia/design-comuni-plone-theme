@@ -3,10 +3,10 @@
   .alertblock {
     .bg-danger {
       background-color: $red !important;
-      color: #fff;
+      color: $white;
 
       .public-DraftEditorPlaceholder-inner {
-        color: white;
+        color: $white;
       }
     }
 
@@ -14,7 +14,7 @@
       background-color: $yellow !important;
 
       .public-DraftEditorPlaceholder-inner {
-        color: #000;
+        color: $black;
       }
     }
 
@@ -35,10 +35,9 @@
       line-height: 1.4rem;
     }
 
-             
-    img.left-image{
-      max-width: 80%;   
-      object-fit: unset;   
+    img.left-image {
+      max-width: 80%;
+      object-fit: unset;
     }
 
     div + h3,

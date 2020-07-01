@@ -14,7 +14,7 @@ import { Link } from 'react-router-dom';
 const SmallVenue = ({ venue }) => {
   const key = `${venue['@id']}_venue`;
   const url = flattenToAppURL(venue['@id']);
-  const venueContent = useSelector(state => state.content.subrequests);
+  const venueContent = useSelector((state) => state.content.subrequests);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -25,7 +25,7 @@ const SmallVenue = ({ venue }) => {
   let venue_fo = venueContent[key]?.data;
   return venue_fo ? (
     <>
-      <div className="card card-teaser shadow mt-3 rounded bigborder">
+      <div className="card card-teaser shadow mt-3 rounded border bigborder">
         <div className="card-body">
           <h5 className="card-title">
             <Link to={flattenToAppURL(venue_fo['@id'])} title={venue_fo.title}>
