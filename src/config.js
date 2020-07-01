@@ -214,9 +214,9 @@ export const widgets = {
     description: CharCounterDescriptionWidget,
     cookie_consent_configuration: MultilingualWidget(),
     data_conclusione_incarico: (props) => (
-      <DatetimeWidget {...props} dateOnly="true" />
+      <DatetimeWidget {...props} dateOnly={true} />
     ),
-    data_insediamento: (props) => <DatetimeWidget {...props} dateOnly="true" />,
+    data_insediamento: (props) => <DatetimeWidget {...props} dateOnly={true} />,
   },
 };
 
