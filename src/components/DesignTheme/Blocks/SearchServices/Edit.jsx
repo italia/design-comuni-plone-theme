@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useSelector } from 'react-redux';
 import { SidebarPortal } from '@plone/volto/components';
 import Sidebar from './SideBar';
 
