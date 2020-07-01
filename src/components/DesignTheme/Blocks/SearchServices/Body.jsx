@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Row, Icon, Button } from 'design-react-kit/dist/design-react-kit';
 import { useIntl } from 'react-intl';
@@ -14,6 +14,8 @@ const navigate = (text, serivices) => {
 };
 
 const Body = ({ block }) => {
+  const [inputText, setInputText] = useState(false);
+
   const searchFilters = useSelector((state) =>
     state?.searchFilters?.result?.sections?.servizi?.items
       .map((x) => x.path)
@@ -29,20 +31,28 @@ const Body = ({ block }) => {
         </div>
         <div className="searchContainer">
           <div className="searchbar">
-            <div className="icon">
-              <Icon color="" icon="it-search" padding={false} size="sm" />
-            </div>
             <div className="flex1">
-              <input
-                className="inputSearch"
-                type="text"
-                placeholder="Ricerca Servizi"
-                onKeyDown={(e) =>
-                  e.key === 'Enter'
-                    ? navigate(e.target.value, searchFilters)
-                    : null
-                }
-              ></input>
+              <div>
+                <input
+                  className="inputSearch"
+                  type="text"
+                  placeholder="Ricerca Servizi"
+                  onChange={(e) => setInputText(e.currentTarget.value)}
+                  onKeyDown={(e) =>
+                    e.key === 'Enter'
+                      ? navigate(inputText, searchFilters)
+                      : null
+                  }
+                ></input>
+                <button onClick={(e) => navigate(inputText, searchFilters)}>
+                  <Icon
+                    icon="it-search"
+                    padding={false}
+                    size="sm"
+                    color="white"
+                  />
+                </button>
+              </div>
             </div>
           </div>
           <div className={cx('buttonsContainer')}>
