@@ -19,19 +19,16 @@
     @media (max-width: 585px) {
       padding: 0px 10px;
     }
-    .inputSearch {
-      border: none!important;
-      /* border-bottom: 1px solid #5c6f82!important; */
-      border-radius: 0!important;
-      /* padding: 0rem 0.5rem!important; */
-      outline: 0!important;
-      /* height: 2.5rem!important; */
-      width: 96%!important;
-      box-shadow: none!important;
-      transition: 0.2s ease-out!important;
-      font-weight: 500!important;
-      background: #dedede!important;
-      height: 100%!important;
+    input.inputSearch {
+      border: none;
+      border-radius: 0;
+      outline: 0;
+      width: 96%;
+      box-shadow: none;
+      transition: 0.2s ease-out;
+      font-weight: 500;
+      background: #dedede;
+      height: 100%;
     }
 
     .searchbar {
