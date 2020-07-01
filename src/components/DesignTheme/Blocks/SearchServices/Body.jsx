@@ -13,7 +13,7 @@ const navigate = (text, serivices) => {
     `/search?SearchableText=${text}&path.query=${serivices}`;
 };
 
-const Body = ({ content, pathname, block, isEditMode }) => {
+const Body = ({ block }) => {
   const searchFilters = useSelector((state) =>
     state?.searchFilters?.result?.sections?.servizi?.items
       .map((x) => x.path)
@@ -23,7 +23,7 @@ const Body = ({ content, pathname, block, isEditMode }) => {
   moment.locale(intl.locale);
   return (
     <Row>
-      <div className={cx('searchServices', { 'public-ui': isEditMode })}>
+      <div className={cx('searchServices', 'public-ui')}>
         <div>
           <h2 className="white">{block.title}</h2>
         </div>
@@ -45,7 +45,7 @@ const Body = ({ content, pathname, block, isEditMode }) => {
               ></input>
             </div>
           </div>
-          <div className="buttonsContainer">
+          <div className={cx('buttonsContainer', 'public-ui')}>
             {block.links?.map((link, index) => {
               return (
                 <Button
@@ -72,9 +72,7 @@ const Body = ({ content, pathname, block, isEditMode }) => {
  * @static
  */
 Body.propTypes = {
-  content: PropTypes.objectOf(PropTypes.any),
-  pathname: PropTypes.string,
-  isEditMode: PropTypes.bool,
+  block: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
 export default Body;

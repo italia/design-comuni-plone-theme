@@ -14,12 +14,10 @@ const Edit = ({
   openObjectBrowser,
   selected,
 }) => {
-  const content = useSelector((state) => state.content.subrequests[id]?.data);
-
   return (
     <>
       <div className="block">
-        <Body content={content} block={data} />
+        <Body block={data} />
       </div>
       <SidebarPortal selected={selected}>
         <Sidebar

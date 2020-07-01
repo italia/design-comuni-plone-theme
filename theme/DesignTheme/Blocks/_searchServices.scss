@@ -2,6 +2,10 @@
   width: 100%;
   min-height: 280px;
   padding: 10px 50px;
+  @media (max-width: 585px) {
+    padding: 10px 6px;
+  }
+
   background-color: #0073e6;
 
   .searchContainer {
@@ -10,7 +14,7 @@
     padding: 0px 12%;
     flex-direction: column;
     justify-content: space-evenly;
-    margin: 28px 0;
+    margin: 56px 0;
 
     .inputSearch {
       border: none!important;
@@ -61,19 +65,4 @@
   button {
     margin: 10px 10px 10px 0px;
   }
-}
-
-.flex-center {
-  display: flex;
-  align-items: center;
-}
-
-.deletable {
-  color: red;
-  margin-left: 8px;
-  cursor: pointer;
-}
-
-.margin-bottom-22{
-  margin-bottom: 22px
 }
