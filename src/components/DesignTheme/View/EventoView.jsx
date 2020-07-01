@@ -147,7 +147,7 @@ const EventoView = ({ content, location }) => {
                   content={content?.orari?.data}
                   tag_id="date-e-orari"
                 />
-                <Button icon size="lg" tag="button" color="primary" outline>
+                {/* <Button icon size="lg" tag="button" color="primary" outline>
                   <Icon
                     color="primary"
                     icon="it-plus-circle"
@@ -155,14 +155,13 @@ const EventoView = ({ content, location }) => {
                     size=""
                   />
                   <a
-                    href={flattenToAppURL(`${content['@id']}/ics_view`)}
-                    // href="#"
+                    // href={flattenToAppURL(`${content['@id']}/ics_view`)}
+                    href="#"
                     rel="nofollow"
-                    download={true}
                   >
                     Aggiungi al caledario
                   </a>
-                </Button>
+                </Button> */}
               </article>
             )}
 
