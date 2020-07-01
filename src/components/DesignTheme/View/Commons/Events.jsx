@@ -28,7 +28,6 @@ const messages = defineMessages({
  */
 const Evento = ({ event, show_image }) => {
   const intl = useIntl();
-  console.log(event);
   return event ? (
     <div className="card card-teaser card-flex rounded shadow">
       <div className="card-body p-4">
@@ -72,22 +71,16 @@ const Evento = ({ event, show_image }) => {
  * @params {object} content: Eventi object.
  * @returns {string} Markup of the component.
  */
-const Events = ({ content, title, show_image, folder_name }) => {
+const Events = ({ content, title, show_image, folder_name, isChild }) => {
   const intl = useIntl();
-  const path =
-    content.parent['@type'] === 'Event'
-      ? content.parent['@id']
-      : content['@id'];
-  const isChild = content.parent['@type'] === 'Event';
-  const url = flattenToAppURL(path);
+  const path = isChild ? content.parent['@id'] : content['@id'];
   const searchResults = useSelector((state) => state.search.subrequests);
   const dispatch = useDispatch();
-
   useEffect(() => {
     if (isChild) {
       dispatch(
         searchContent(
-          url,
+          flattenToAppURL(path),
           {
             portal_type: 'Event',
             'path.depth': 1,
@@ -101,16 +94,16 @@ const Events = ({ content, title, show_image, folder_name }) => {
     return () => {
       dispatch(resetSearchContent(folder_name));
     };
-  }, [dispatch, content, url, folder_name, isChild]);
+  }, [dispatch, content, path, folder_name, isChild]);
+
   let events = isChild
     ? searchResults?.[folder_name]?.items || []
     : content?.items?.filter((el) => el['@type'] === 'Event') || [];
   if (isChild) {
     events = [...events].filter((el) => !content['@id'].includes(el['@id']));
-    events.push(content.parent);
   }
 
-  console.log(show_image);
+  console.log(events);
   return (
     <>
       {events.length > 0 ? (
@@ -135,7 +128,9 @@ export default Events;
 Events.propTypes = {
   content: PropTypes.object,
   show_image: PropTypes.bool,
+  isChild: PropTypes.bool,
   title: PropTypes.string,
+  folder_name: PropTypes.string,
 };
 
 Evento.propTypes = {

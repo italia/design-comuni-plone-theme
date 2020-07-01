@@ -56,11 +56,10 @@ const messages = defineMessages({
 const EventoView = ({ content, location }) => {
   const intl = useIntl();
   const text = <TextOrBlocks content={content} location={location} />;
-  const events_path =
-    content?.parent['@type'] === 'Event'
-      ? content?.parent['@id']?.split('/').splice(-1)[0]
-      : content?.['@id'].split('/').splice(-1)[0];
-  console.log(content);
+  const isChildEvent = content?.parent['@type'] === 'Event';
+  const events_path = isChildEvent
+    ? content?.parent['@id']?.split('/').splice(-1)[0]
+    : content?.['@id'].split('/').splice(-1)[0];
   return (
     <>
       <div className="container px-4 my-4 newsitem-view">
@@ -156,9 +155,10 @@ const EventoView = ({ content, location }) => {
                     size=""
                   />
                   <a
-                    // href={flattenToAppURL(`${content['@id']}/ics_view`)}
-                    href="#"
+                    href={flattenToAppURL(`${content['@id']}/ics_view`)}
+                    // href="#"
                     rel="nofollow"
+                    download={true}
                   >
                     Aggiungi al caledario
                   </a>
@@ -242,6 +242,7 @@ const EventoView = ({ content, location }) => {
                 show_image={true}
                 title={null}
                 folder_name={events_path}
+                isChild={isChildEvent}
               />
             )}
             {content?.ulteriori_informazioni?.data.replace(
