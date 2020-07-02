@@ -2,21 +2,20 @@
   width: 100%;
   min-height: 280px;
   padding: 10px 50px;
-  @media (max-width: 585px) {
+  @media (max-width: #{map-get($grid-breakpoints, lg) - 1px}) {
     padding: 10px 6px;
   }
 
   background-color: $secondary;
 
   .searchContainer {
-    width: 100%;
-    display: flex;
+    // width: 100%;
     padding: 0px 12%;
     flex-direction: column;
     justify-content: space-evenly;
     margin: 56px 0;
 
-    @media (max-width: 585px) {
+    @media (max-width: #{map-get($grid-breakpoints, lg) - 1px}) {
       padding: 0px 10px;
     }
     input.inputSearch {
@@ -27,19 +26,13 @@
       box-shadow: none;
       transition: 0.2s ease-out;
       font-weight: 500;
-      background: #dedede;
       height: 100%;
       padding: 0;
     }
 
     .searchbar {
       position: relative;
-      display: flex;
       height: 45px;
-      background-color: #dedede;
-      width: 100%;
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
-      border-radius: 6px;
       padding: 5px 14px;
 
       button {
@@ -48,33 +41,22 @@
         top: 0;
         width: 50px;
         height: 100%;
-        border-radius: 0 6px 6px 0px;
         background: $primary;
         border-width: 0px;
         display: flex;
         justify-content: center;
       }
     }
-
-    .flex1 {
-      flex: 1;
-    }
-  }
-
-  .white {
-    color: white
   }
 }
 
 .buttonsContainer {
-  display: flex;
   flex-wrap: wrap;
-  margin-top: 15px;
 
   button.btn.btn-outline-secondary.btn-sm{
     margin: 10px 10px 10px 0px;
     background: $primary;
-    color: white;
+    color: $white;
     box-shadow: none;
   }
 }
