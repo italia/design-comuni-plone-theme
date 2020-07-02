@@ -53,8 +53,8 @@ const messages = defineMessages({
     id: 'sedi',
     defaultMessage: 'Dove e come trovarci',
   },
-  notizie_in_evidenza: {
-    id: 'notizie_in_evidenza',
+  uo_related_news: {
+    id: 'uo_related_news',
     defaultMessage: 'Notizie in evidenza',
   },
   servizi_offerti: {
@@ -143,10 +143,10 @@ const UOView = ({ content }) => {
                 className="it-page-section anchor-offset mt-5"
               >
                 <h4>{intl.formatMessage(messages.servizi_offerti)}</h4>
-                <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.servizi_offerti.map((item, i) => (
                     <GenericCard
-                      index={item['@id']}
+                      key={item['@id']}
                       item={item}
                       showimage={true}
                       image_field={'immagine'}
@@ -253,16 +253,16 @@ const UOView = ({ content }) => {
                 title={intl.formatMessage(messages.box_aiuto)}
               />
             )}
-            {content.notizie_collegate.length > 0 ? (
+            {content?.related_news?.length > 0 ? (
               <article
                 id="related-news"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>{intl.formatMessage(messages.notizie_in_evidenza)}</h4>
+                <h4>{intl.formatMessage(messages.uo_related_news)}</h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content.notizie_collegate.map((item, i) => (
+                  {content?.related_news?.map((item, i) => (
                     <RelatedNews
-                      index={item['@id']}
+                      key={item['@id']}
                       item={item}
                       showimage={false}
                       content={content}
@@ -316,7 +316,7 @@ UOView.propTypes = {
       download: PropTypes.string,
     }),
     legami_con_altre_strutture: PropTypes.array,
-    notizie_collegate: PropTypes.array,
+    related_news: PropTypes.array,
     persone_struttura: PropTypes.array,
     responsabile: PropTypes.array,
     sedi: PropTypes.array,
@@ -331,8 +331,6 @@ UOView.propTypes = {
       title: PropTypes.string,
       token: PropTypes.string,
     }).isRequired,
-    title: PropTypes.shape({
-      data: PropTypes.string,
-    }).isRequired,
+    title: PropTypes.string.isRequired,
   }),
 };
