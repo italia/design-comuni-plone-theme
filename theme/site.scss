@@ -1,3 +1,4 @@
+@import 'site-variables';
 @import 'bootstrap-override/bootstrap-italia-site';
 @import 'cms-ui';
 @import 'extras/sidebar';
@@ -13,6 +14,7 @@
 
 /*** DesignTheme ***/
 @import 'DesignTheme/home';
+@import 'DesignTheme/Components/venue';
 @import 'DesignTheme/Blocks/alert';
 @import 'DesignTheme/Blocks/titolo_argomento';
 @import 'DesignTheme/Blocks/newshome';

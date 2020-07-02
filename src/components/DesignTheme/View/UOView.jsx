@@ -161,7 +161,7 @@ const UOView = ({ content }) => {
                 className="it-page-section anchor-offset mt-5"
               >
                 <h4>{intl.formatMessage(messages.legami_altre_strutture)}</h4>
-                <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal mb-3">
                   {content.legami_con_altre_strutture.map((item, i) => (
                     <OfficeCard key={item['@id']} office={item} />
                   ))}

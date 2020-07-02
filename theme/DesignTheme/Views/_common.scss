@@ -4,7 +4,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #3d535d;
+  color: $primary-b5;
 }
 
 .full-width {
@@ -31,19 +31,12 @@ h6 {
 
 .public-ui {
   .card.bigborder {
-    border: 1px solid #eee !important;
     border-left-width: 10px !important;
   }
 
-  .p-4.link-esterni {
-    padding: 0 !important;
+  .link-esterni {
     .card-title {
-      color: #455a64;
-      padding: 0 24px 0 24px;
-      border-bottom: 1px solid #e5e5e5;
-    }
-    div {
-      padding: 0 24px 0 24px;
+      border-bottom: 1px solid $neutral-1-a2;
     }
   }
 
@@ -52,29 +45,35 @@ h6 {
       width: 95%;
     }
   }
+
   .header {
-    font-size: 14px;
     margin-bottom: 10px !important;
+    font-size: 14px;
   }
+
   .card-title {
-    line-height: 1rem;
-    a {
-      font-size: 18px;
-      line-height: 26px;
-      color: #06c;
-    }
     margin: 0 !important;
     margin-bottom: 10px !important;
+    line-height: 1rem;
+
+    a {
+      color: $primary;
+      font-size: 18px;
+      line-height: 26px;
+    }
   }
+
   .link-list-wrapper {
     ul {
       li {
         button.btn-link {
-          color: #06c;
+          color: $primary;
+
           &:hover {
-            color: #06c;
+            color: $primary;
+
             .icon {
-              fill: #06c;
+              fill: $primary;
             }
           }
         }
@@ -85,49 +84,65 @@ h6 {
 
 .style_ol_list {
   ol {
-    list-style: none;
     padding: 0;
+    list-style: none;
+
     li {
-      display: flex;
-      margin-left: 70px;
-      border: 1px solid #eee;
-      border-left-width: 10px;
-      border-radius: 4px;
       position: relative;
-      counter-increment: inst;
+      display: flex;
       padding: 10px;
+
+      border: 1px solid $neutral-1-a1;
+
+      border-left-width: 10px;
       margin-bottom: 20px;
+      margin-left: 70px;
+
+      border-radius: 4px;
+
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+
+      counter-increment: inst;
+
       &:last-child:before {
         height: calc(100% + 2px);
         padding-bottom: 20px;
       }
+
       &:before {
-        content: counter(inst);
         position: absolute;
+        top: 0;
+        left: -70px;
+        display: flex;
         width: 50px;
         height: calc(100% + 22px);
-        left: -70px;
-        top: 0;
-        color: #be2716;
-        font-size: 40px;
-        font-family: Roboto Mono Thin;
-        border-right: 1px solid currentColor;
-        line-height: 1;
-        display: flex;
-        justify-content: center;
+
         align-items: center;
+        justify-content: center;
+
         padding-bottom: 42px;
+
+        border-right: 1px solid currentColor;
+        color: $secondary;
+
+        content: counter(inst);
+
+        font-family: Roboto Mono Thin;
+        font-size: 40px;
+
+        line-height: 1;
       }
+
       &:after {
         position: absolute;
-        content: '';
-        width: 9px;
-        height: 9px;
-        background-color: #be2716;
         top: calc(50% - 4px);
         left: -25px;
+        width: 9px;
+        height: 9px;
+        background-color: $secondary;
         border-radius: 50%;
+
+        content: '';
       }
     }
   }

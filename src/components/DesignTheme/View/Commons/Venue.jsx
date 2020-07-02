@@ -13,7 +13,7 @@ import PropTypes from 'prop-types';
 const Venue = ({ venue }) => {
   const key = `${venue['@id']}_venue`;
   const url = flattenToAppURL(venue['@id']);
-  const venueContent = useSelector(state => state.content.subrequests);
+  const venueContent = useSelector((state) => state.content.subrequests);
   const dispatch = useDispatch();
 
   useEffect(() => {
