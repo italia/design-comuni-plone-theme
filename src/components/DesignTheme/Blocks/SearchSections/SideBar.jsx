@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Segment, Accordion } from 'semantic-ui-react';
 import { defineMessages, FormattedMessage, useIntl } from 'react-intl';
-import { TextWidget, SelectWidget } from '@plone/volto/components';
+import { TextWidget, ArrayWidget } from '@plone/volto/components';
 import ObjectBrowserWidget from '@plone/volto/components/manage/Widgets/ObjectBrowserWidget';
 
 const messages = defineMessages({
@@ -82,24 +82,27 @@ const Sidebar = ({
             }}
           />
           {sections && (
-            <SelectWidget
-              id="groups"
+            <ArrayWidget
+            id="groups"
               title={intl.formatMessage(messages.sections)}
               noValuePresent={false}
               choices={Object.keys(sections).map((key) => [
                 key,
                 sections[key].title,
               ])}
-              values={data.sections}
+              value={data.sections}
               onChange={(name, value) => {
+                console.log(value)
                 onChangeBlock(block, {
                   ...data,
-                  sections: value.map((v) => {
-                    return { title: sections[v].title, value: v };
+                  // is not possible remove the no-value field form select
+                  sections: value.filter(v => v !== 'no-value').map((v) => {
+                    return { title: sections[v].title, value: v, token: v };
                   }),
                 });
               }}
-            ></SelectWidget>
+            >
+            </ArrayWidget>
           )}
         </Accordion.Content>
       </Accordion>
