@@ -53,6 +53,7 @@ const NewsItemView = ({ content, location }) => {
   );
   let documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
+
   useEffect(() => {
     if (documentBody.current) {
       setSideMenuElements(documentBody.current);
@@ -94,10 +95,10 @@ const NewsItemView = ({ content, location }) => {
               {text}
             </article>
 
-            {content?.items.some(e => e.id === 'multimedia') && (
+            {content?.items.some((e) => e.id === 'multimedia') && (
               <Gallery content={content} folder_name={'multimedia'} />
             )}
-            {content?.items.some(e => e.id === 'documenti-allegati') && (
+            {content?.items.some((e) => e.id === 'documenti-allegati') && (
               <Attachments
                 content={content}
                 folder_name={'documenti-allegati'}
