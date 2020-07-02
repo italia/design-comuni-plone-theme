@@ -6,19 +6,24 @@
 import React, { useEffect, createRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-
-import { Attachments } from './Commons';
-import { Gallery } from './Commons';
-import { CuredBy } from './Commons';
-import { Locations } from './Commons';
-import { WideImage } from './Commons';
-import { SideMenu } from './Commons';
-import { PageHeader } from './Commons';
-import { RichTextArticle } from './Commons';
-import { Metadata } from './Commons';
 import { readingTime } from './ViewUtils';
-import { NewsCard } from './Commons';
-import { GenericCard } from './Commons';
+import { getHTMLString } from './ViewUtils';
+
+import {
+  RelatedNews,
+  GenericCard,
+  Metadata,
+  RichTextArticle,
+  PageHeader,
+  SideMenu,
+  WideImage,
+  Locations,
+  CuredBy,
+  Gallery,
+  Attachments,
+  TextOrBlocks,
+} from './Commons';
+
 // import { getBaseUrl } from '@plone/volto/helpers';
 
 const messages = defineMessages({
@@ -38,9 +43,13 @@ const messages = defineMessages({
  * @params {object} content Content object.
  * @returns {string} Markup of the component.
  */
-const NewsItemView = ({ content }) => {
+const NewsItemView = ({ content, location }) => {
+  const intl = useIntl();
+  const text = <TextOrBlocks content={content} location={location} />;
+  const reading_text = getHTMLString(text, intl.locale);
+
   let readingtime = readingTime(
-    content.text.data + ' ' + content.title + ' ' + content.description,
+    `${content.title} ${content.description} ${reading_text}`,
   );
   let documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
@@ -49,7 +58,7 @@ const NewsItemView = ({ content }) => {
       setSideMenuElements(documentBody.current);
     }
   }, [documentBody]);
-  const intl = useIntl();
+
   return (
     <>
       <div className="container px-4 my-4 newsitem-view">
@@ -57,6 +66,8 @@ const NewsItemView = ({ content }) => {
           content={content}
           readingtime={readingtime}
           showreadingtime={true}
+          imageinheader={false}
+          imageinheader_field={null}
           showdates={true}
           showtopics={true}
           showtassonomiaargomenti={true}
@@ -76,13 +87,13 @@ const NewsItemView = ({ content }) => {
             className="col-lg-8 it-page-sections-container"
             ref={documentBody}
           >
-            {content.text.data && (
-              <RichTextArticle
-                content={content.text.data}
-                tag_id={'text-body'}
-                title={null}
-              />
-            )}
+            <article
+              id="text-body"
+              className="it-page-section anchor-offset clearfix"
+            >
+              {text}
+            </article>
+
             {content?.items.some(e => e.id === 'multimedia') && (
               <Gallery content={content} folder_name={'multimedia'} />
             )}
@@ -92,14 +103,15 @@ const NewsItemView = ({ content }) => {
                 folder_name={'documenti-allegati'}
               />
             )}
-            {(content.a_cura_di || content.a_cura_di_persone) && (
+            {((content.a_cura_di && content.a_cura_di.length > 0) ||
+              (content.a_cura_di_persone &&
+                content.a_cura_di_persone.length > 0)) && (
               <CuredBy
-                content={content}
-                office={content.a_cura_di}
+                office={content.a_cura_di ? content.a_cura_di[0] : null}
                 people={content.a_cura_di_persone}
               />
             )}
-            {content.luoghi_notizia.length > 0 ? (
+            {content.luoghi_notizia?.length > 0 ? (
               <Locations locations={content.luoghi_notizia} />
             ) : null}
             {content.dataset?.data.replace(/(<([^>]+)>)/g, '') && (
@@ -109,7 +121,7 @@ const NewsItemView = ({ content }) => {
                 title={'Dataset'}
               />
             )}
-            {content.related_news.length > 0 ? (
+            {content.related_news?.length > 0 ? (
               <article
                 id="related-news"
                 className="it-page-section anchor-offset mt-5"
@@ -119,7 +131,7 @@ const NewsItemView = ({ content }) => {
                 </h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.related_news.map((item, i) => (
-                    <NewsCard
+                    <RelatedNews
                       key={item['@id']}
                       item={item}
                       showimage={false}
@@ -129,7 +141,7 @@ const NewsItemView = ({ content }) => {
                 </div>
               </article>
             ) : null}
-            {content.relatedItems.length > 0 ? (
+            {content.relatedItems?.length > 0 ? (
               <article
                 id="related-items"
                 className="it-page-section anchor-offset mt-5"
@@ -143,7 +155,6 @@ const NewsItemView = ({ content }) => {
                       index={item['@id']}
                       item={item}
                       showimage={false}
-                      content={content}
                     />
                   ))}
                 </div>
@@ -165,7 +176,7 @@ const NewsItemView = ({ content }) => {
  */
 NewsItemView.propTypes = {
   content: PropTypes.shape({
-    title: PropTypes.string,
+    title: PropTypes.string.isRequired,
     subtitle: PropTypes.string,
     description: PropTypes.string,
     effective: PropTypes.string,
@@ -176,15 +187,25 @@ NewsItemView.propTypes = {
       data: PropTypes.string,
     }),
     items: PropTypes.array,
-    a_cura_di: PropTypes.shape({
-      title: PropTypes.string,
-    }),
+    a_cura_di: PropTypes.array.isRequired,
     a_cura_di_persone: PropTypes.array,
     dataset: PropTypes.shape({
       data: PropTypes.string,
     }),
     modified: PropTypes.string,
     rights: PropTypes.string,
+    luoghi_notizia: PropTypes.array,
+    related_news: PropTypes.array,
+    tassonomia_argomenti: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        token: PropTypes.string,
+      }),
+    ),
+    tipologia_notizia: PropTypes.shape({
+      title: PropTypes.string,
+      token: PropTypes.string,
+    }).isRequired,
   }).isRequired,
 };
 

@@ -3,18 +3,17 @@
  * @module components/Header/HeaderCenter
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { defineMessages, useIntl } from 'react-intl';
 import {
   Header,
   HeaderContent,
-  HeaderBrand,
   HeaderRightZone,
   HeaderSocialsZone,
-  HeaderSearch,
   Icon,
 } from 'design-react-kit/dist/design-react-kit';
+import SearchModal from './SearchModal';
 
 const messages = defineMessages({
   followUs: {
@@ -29,37 +28,72 @@ const messages = defineMessages({
 
 const HeaderCenter = () => {
   const intl = useIntl();
+  const [showSearchModal, setShowSearchModal] = useState(false);
 
   return (
     <Header small={false} theme="" type="center">
       <HeaderContent>
-        <HeaderBrand iconName="it-pa" responsive={false} tag={Link} to="/">
-          <h2>Nome comune</h2>
-          <h3>Uno dei tanti comuni d'Italia</h3>
-        </HeaderBrand>
+        <div className="it-brand-wrapper">
+          <Link to="/">
+            <Icon color="" icon="it-pa" padding={false} size="" />
+            <div className="it-brand-text">
+              <h2 className="no_toc">Nome del Comune</h2>
+              <h3 className="no_toc d-none d-md-block">
+                Uno dei tanti Comuni d'Italia
+              </h3>
+            </div>
+          </Link>
+        </div>
         <HeaderRightZone>
           <HeaderSocialsZone label={intl.formatMessage(messages.followUs)}>
             <ul>
               <li>
-                <a aria-label="Facebook" href="#" target="_blank">
+                <a
+                  title="Facebook"
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Icon color="" icon="it-facebook" padding={false} size="" />
                 </a>
               </li>
               <li>
-                <a aria-label="Github" href="#" target="_blank">
+                <a
+                  title="Github"
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Icon color="" icon="it-github" padding={false} size="" />
                 </a>
               </li>
               <li>
-                <a aria-label="Twitter" href="#" target="_blank">
+                <a
+                  title="Twitter"
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Icon color="" icon="it-twitter" padding={false} size="" />
                 </a>
               </li>
             </ul>
           </HeaderSocialsZone>
-          <HeaderSearch
-            iconName="it-search"
-            label={intl.formatMessage(messages.search)}
+          <div className="it-search-wrapper">
+            <span className="d-none d-md-block">
+              {intl.formatMessage(messages.search)}
+            </span>
+            <a
+              className="search-link rounded-icon"
+              aria-label={intl.formatMessage(messages.search)}
+              onClick={() => setShowSearchModal(true)}
+            >
+              <Icon icon="it-search" />
+            </a>
+          </div>
+          <SearchModal
+            show={showSearchModal}
+            closeModal={() => setShowSearchModal(false)}
           />
         </HeaderRightZone>
       </HeaderContent>

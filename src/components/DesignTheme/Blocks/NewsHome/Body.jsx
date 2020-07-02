@@ -11,16 +11,20 @@ import {
   CardTitle,
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
+import { useIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import moment from 'moment';
 
-const Body = ({ content, pathname }) => {
+const Body = ({ content, pathname, block }) => {
+  const intl = useIntl();
+  moment.locale(intl.locale);
   return (
     <Row>
       {content.image && (
         <Col lg={{ size: 6, offset: 1, order: 2 }}>
           <img
-            src={content.image.scales.large.download}
+            src={flattenToAppURL(content.image.scales.large.download)}
             title={content.title}
             alt={content.title}
             className="item-image"
@@ -30,22 +34,40 @@ const Body = ({ content, pathname }) => {
       <Col lg={{ size: 5, order: 1 }}>
         <Card>
           <CardBody className="pb-2">
-            <CardCategory date="18 mag 2018">Notizie</CardCategory>
+            <CardCategory
+              date={content.effective && moment(content.effective).format('ll')}
+            >
+              Notizie
+            </CardCategory>
             <CardTitle tag="h2">
               <Link to={flattenToAppURL(content['@id'])}>{content.title}</Link>
             </CardTitle>
             <CardText>{content.description}</CardText>
-            <Chip simple color="primary">
-              <Link to="#" className="chip-label">
-                Estate in città
-              </Link>
-            </Chip>
-            <CardReadMore
-              tag={Link}
-              iconName="it-arrow-right"
-              text="Vedi tutte le notizie"
-              to="#"
-            />
+
+            {content.tassonomia_argomenti &&
+              content.tassonomia_argomenti.length > 0 && (
+                <>
+                  {content.tassonomia_argomenti.map((argomento) => (
+                    <Chip simple color="primary" key={argomento['@id']}>
+                      <Link
+                        to={flattenToAppURL(argomento['@id'])}
+                        className="chip-label"
+                      >
+                        {argomento.title}
+                      </Link>
+                    </Chip>
+                  ))}
+                </>
+              )}
+
+            {block.moreHref && (
+              <CardReadMore
+                tag={Link}
+                iconName="it-arrow-right"
+                text={block.moreTitle || 'Vedi tutte le notizie'}
+                to={block.moreHref}
+              />
+            )}
           </CardBody>
         </Card>
       </Col>

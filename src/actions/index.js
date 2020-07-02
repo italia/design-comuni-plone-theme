@@ -10,3 +10,13 @@
  *   searchContent,
  * };
  */
+
+import { getSearchFilters, GET_SEARCH_FILTERS } from './getSearchFilters';
+import { getSearchResults, GET_SEARCH_RESULTS } from './getSearchResults';
+
+export {
+  getSearchFilters,
+  GET_SEARCH_FILTERS,
+  getSearchResults,
+  GET_SEARCH_RESULTS,
+};

@@ -3,13 +3,13 @@
  * @module components/theme/Navigation/Navigation
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { isMatch } from 'lodash';
 import cx from 'classnames';
 import { Link } from 'react-router-dom';
 import { defineMessages, useIntl } from 'react-intl';
-// import { BITIcon, it_arrow_right } from '@design/components/DesignTheme/Icons';
+import { flattenToAppURL } from '@plone/volto/helpers';
 import {
   NavItem,
   NavLink,
@@ -49,6 +49,8 @@ const MegaMenu = ({ item, pathname }) => {
   const isItemActive = isActive(pathname, item.url);
   const { items = [] } = item;
 
+  const [menuStatus, setMenuStatus] = useState(false);
+
   if (items.length) {
     //megamenu
     const childrenGroups = [];
@@ -69,7 +71,13 @@ const MegaMenu = ({ item, pathname }) => {
 
     return (
       <NavItem tag="li" className="megamenu" active={isItemActive}>
-        <UncontrolledDropdown nav inNavbar tag="div">
+        <UncontrolledDropdown
+          nav
+          inNavbar
+          isOpen={menuStatus}
+          tag="div"
+          toggle={() => setMenuStatus(!menuStatus)}
+        >
           <DropdownToggle aria-haspopup color="secondary" nav>
             {item.title}
           </DropdownToggle>
@@ -80,9 +88,11 @@ const MegaMenu = ({ item, pathname }) => {
                   <LinkList className="bordered">
                     {group.map(child => (
                       <LinkListItem
-                        href={child.url}
+                        to={flattenToAppURL(child.url)}
+                        tag={Link}
                         title={child.title}
                         key={child.url}
+                        onClick={() => setMenuStatus(false)}
                         className={cx({
                           active: isActive(pathname, child.url),
                         })}
@@ -101,7 +111,11 @@ const MegaMenu = ({ item, pathname }) => {
                 <Col lg={4}>
                   <LinkList>
                     <li className="it-more text-right">
-                      <Link className="list-item medium" to={item.url}>
+                      <Link
+                        className="list-item medium"
+                        to={flattenToAppURL(item.url)}
+                        onClick={() => setMenuStatus(false)}
+                      >
                         <span>{intl.formatMessage(messages.view_all)}</span>
                         <Icon icon="it-arrow-right" />
                       </Link>
@@ -118,7 +132,7 @@ const MegaMenu = ({ item, pathname }) => {
     return (
       <NavItem tag="li" active={isItemActive}>
         <NavLink
-          to={item.url === '' ? '/' : item.url}
+          to={item.url === '' ? '/' : flattenToAppURL(item.url)}
           tag={Link}
           active={isItemActive}
         >

@@ -2,6 +2,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import React from 'react';
 import moment from 'moment';
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
+import PropTypes from 'prop-types';
 
 const messages = defineMessages({
   other_info: {
@@ -52,10 +53,10 @@ const Metadata = params => {
           </h6>
         </>
       )}
-      {params.content.subjects.length !== 0 && (
+      {params.content.subjects?.length !== 0 && (
         <>
           <p className="text-serif">{intl.formatMessage(messages.subjects)}</p>
-          {params.content.subjects.map((item, i) => (
+          {params.content.subjects?.map((item, i) => (
             <Chip
               color=""
               disabled={false}
@@ -66,9 +67,6 @@ const Metadata = params => {
             >
               <ChipLabel tag="span">{item}</ChipLabel>
             </Chip>
-            // <div class="chip chip-simple ml-1" key={item}>
-            //   <span class="chip-label">{item}</span>
-            // </div>
           ))}
         </>
       )}
@@ -76,3 +74,9 @@ const Metadata = params => {
   );
 };
 export default Metadata;
+
+Metadata.propTypes = {
+  params: PropTypes.shape({
+    content: PropTypes.object,
+  }),
+};

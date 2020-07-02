@@ -3,15 +3,16 @@ import React, { useEffect } from 'react';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
-
+import PropTypes from 'prop-types';
+import { Icon } from 'design-react-kit/dist/design-react-kit';
 /**
  * GenericCard view component class.
  * @function Location
  * @params {object} location: object.
  * @returns {string} Markup of the component.
  */
-const GenericCard = ({ item, showimage, image_field, content }) => {
-  const key = 'generic_card_' + item['@id'];
+const GenericCard = ({ item, showimage, image_field, show_icon }) => {
+  const key = `generic_card_${item['@id']}`;
   const url = flattenToAppURL(item['@id']);
   const locationContent = useSelector(state => state.content.subrequests);
   const dispatch = useDispatch();
@@ -19,11 +20,6 @@ const GenericCard = ({ item, showimage, image_field, content }) => {
     dispatch(getContent(url, null, key));
     return () => dispatch(resetContent(key));
   }, [dispatch, item, url, key]);
-  //let item_fo = null;
-
-  // if (key in locationContent) {
-  //   item_fo = locationContent[key].data;
-  // }
   const item_fo = locationContent[key]?.data;
   return item_fo ? (
     showimage && item_fo[image_field] ? (
@@ -43,6 +39,7 @@ const GenericCard = ({ item, showimage, image_field, content }) => {
         </div>
         <div className="card-body">
           <h5 className="card-title no-toc">
+            {show_icon && <Icon icon={show_icon} padding={false} />}
             <Link to={flattenToAppURL(item_fo['@id'])}>{item_fo.title}</Link>
           </h5>
           <div className="card-text">{item_fo.description}</div>
@@ -52,6 +49,7 @@ const GenericCard = ({ item, showimage, image_field, content }) => {
       <div className="genericcard card card-teaser shadow p-4 mt-3 rounded border">
         <div className="card-body">
           <h5 className="card-title no-toc">
+            {show_icon && <Icon icon={show_icon} padding={false} />}
             <Link to={flattenToAppURL(item_fo['@id'])}>{item_fo.title}</Link>
           </h5>
           <div className="card-text">{item_fo.description}</div>
@@ -62,3 +60,15 @@ const GenericCard = ({ item, showimage, image_field, content }) => {
 };
 
 export default GenericCard;
+
+GenericCard.propTypes = {
+  item: PropTypes.shape({
+    '@id': PropTypes.string,
+    '@type': PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string,
+    review_state: PropTypes.string,
+  }),
+  showimage: PropTypes.bool,
+  image_field: PropTypes.string,
+};

@@ -1,10 +1,13 @@
-exports.readingTime = text => {
+import React from 'react';
+import { IntlProvider } from 'react-intl';
+import { renderToString } from 'react-dom/server';
+
+export const readingTime = (text) => {
   const wordsPerMinute = 250;
   let plain_text = text.replace(/<[^>]*>/g, '');
-  let result = 0;
   let textLength = plain_text.length;
-  if (textLength > 0) {
-    result = Math.ceil(textLength / wordsPerMinute);
-  }
-  return result;
+  return textLength > 0 ? Math.ceil(textLength / wordsPerMinute) : 0;
 };
+
+export const getHTMLString = (content, locale) =>
+  renderToString(<IntlProvider locale={locale}>{content}</IntlProvider>);

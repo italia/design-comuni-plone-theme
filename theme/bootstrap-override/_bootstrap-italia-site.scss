@@ -50,6 +50,7 @@
   @import 'bootstrap/scss/dropdown';
   @import 'bootstrap/scss/button-group';
   @import 'bootstrap/scss/input-group';
+  @import 'bootstrap-override/bootstrap-italia/input-group';
   @import 'bootstrap/scss/nav';
   @import 'bootstrap/scss/navbar';
   @import 'bootstrap/scss/card';
@@ -70,9 +71,14 @@
 
   // Customizzazioni e nuovi componenti
   @import 'bootstrap-italia/src/scss/custom/type';
+  @import 'bootstrap-override/bootstrap-italia/borders';
+  @import 'bootstrap-override/bootstrap-italia/form-toggles';
+  @import 'bootstrap-override/bootstrap-italia/footer';
+  @import 'bootstrap-override/bootstrap-italia/brand-text';
 }
 
 @import 'bootstrap-override/bootstrap-italia/type';
+@import 'bootstrap-override/bootstrap-italia/grid';
 
 .public-ui/*,
 .cms-ui .it-header-wrapper,

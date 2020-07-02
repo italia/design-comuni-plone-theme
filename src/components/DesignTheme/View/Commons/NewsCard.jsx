@@ -1,47 +1,44 @@
-import { useDispatch, useSelector } from 'react-redux';
-import React, { useEffect } from 'react';
-import { getContent, resetContent } from '@plone/volto/actions';
+import React from 'react';
 import moment from 'moment';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import PropTypes from 'prop-types';
 /**
+ *
  * NewsCard view component class.
- * @function Location
- * @params {object} location: object.
+ * @function NewsCard
+ * @params {object} news: object.
  * @returns {string} Markup of the component.
  */
-const NewsCard = ({ item, showimage, content }) => {
-  const key = 'news' + item['@id'];
-  const url = flattenToAppURL(item['@id']);
-  const locationContent = useSelector(state => state.content.subrequests);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getContent(url, null, key));
-    return () => dispatch(resetContent(key));
-  }, [dispatch, item, url, key]);
-  let news_fo = null;
-  if (key in locationContent) {
-    news_fo = locationContent[key].data;
-  }
-  return news_fo ? (
-    <div className="newscard card card-teaser shadow p-4 mt-3 rounded border">
+const NewsCard = ({ title, typology, effective, description, id }) => {
+  let date = effective ? new Date(effective) : false;
+  return (
+    <div className="relatedNews card card-teaser shadow p-4 mt-3 rounded border">
       <div className="card-body">
         <div className="header text-uppercase"></div>
-        <div class="category-top">
-          {news_fo.tipologia_notizia.title}{' '}
-          {news_fo.effective ? (
+        <div className="category-top">
+          {typology}
+          {date ? (
             <span className="data">
-              {moment(news_fo.effective).format('DD MMM Y')}
+              {moment(date.toISOString()).format('DD MMM Y')}
             </span>
-          ) : null}{' '}
+          ) : null}
         </div>
         <h5 className="card-title big-heading no-toc">
-          <Link to={flattenToAppURL(news_fo['@id'])}>{news_fo.title}</Link>
+          <Link to={flattenToAppURL(id)}>{title}</Link>
         </h5>
-        <div className="card-text">{news_fo.description}</div>
+        <div className="card-text">{description}</div>
       </div>
     </div>
-  ) : null;
+  );
 };
 
 export default NewsCard;
+
+NewsCard.propTypes = {
+  title: PropTypes.string,
+  typology: PropTypes.string,
+  effective: PropTypes.string,
+  description: PropTypes.string,
+  id: PropTypes.string,
+};

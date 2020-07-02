@@ -3,16 +3,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { Icon } from 'design-react-kit/dist/design-react-kit';
+import Attachment from './Attachment';
+import PropTypes from 'prop-types';
 
 const messages = defineMessages({
   attachments: {
     id: 'attachments',
     defaultMessage: 'Allegati',
-  },
-  attachment: {
-    id: 'attachment',
-    defaultMessage: 'Allegato',
   },
 });
 
@@ -23,10 +20,9 @@ const messages = defineMessages({
  * @params {string} folder name where to find images.
  * @returns {string} Markup of the component.
  */
-const Attachments = ({ content, folder_name }) => {
+const Attachments = ({ content, folder_name, folder_title }) => {
   const intl = useIntl();
-
-  const url = flattenToAppURL(content['@id']) + '/' + folder_name;
+  const url = `${flattenToAppURL(content['@id'])}/${folder_name}`;
   const searchResults = useSelector(state => state.search.subrequests);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -53,37 +49,31 @@ const Attachments = ({ content, folder_name }) => {
     <>
       {attachments.length > 0 ? (
         <article id="documenti" className="it-page-section anchor-offset mt-5">
-          <h4 id="header-documenti">
-            {intl.formatMessage(messages.attachments)}
-          </h4>
+          {folder_title ? (
+            <h4 id="header-documenti">{folder_title}</h4>
+          ) : (
+            <h4 id="header-documenti">
+              {intl.formatMessage(messages.attachments)}
+            </h4>
+          )}
           <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
             {attachments.map((item, i) => (
-              <div
+              <Attachment
                 key={item['@id']}
-                className="card card-teaser shadow p-4 mt-3 rounded border"
-              >
-                <Icon
-                  className={undefined}
-                  color=""
-                  icon="it-clip"
-                  padding={false}
-                  size=""
-                  alt={intl.formatMessage(messages.attachment)}
-                  title={intl.formatMessage(messages.attachment)}
-                />
-                <div className="card-body">
-                  <h5 className="card-title no-toc">
-                    <a href={flattenToAppURL(item['@id'] + '/@@download/file')}>
-                      {item.title}
-                    </a>
-                  </h5>
-                </div>
-              </div>
+                title={item.title}
+                description={item.description}
+                download_url={`${item['@id']}/@@download/file`}
+              />
             ))}
           </div>
         </article>
       ) : null}
     </>
   );
+};
+Attachments.propTypes = {
+  content: PropTypes.object,
+  folder_name: PropTypes.string,
+  folder_title: PropTypes.string,
 };
 export default Attachments;

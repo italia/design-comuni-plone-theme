@@ -4,6 +4,7 @@ import OfficeCard from './OfficeCard';
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import PropTypes from 'prop-types';
 
 const messages = defineMessages({
   cured_by: {
@@ -28,7 +29,7 @@ const messages = defineMessages({
  * @params {string} office_field: field where people is related
  * @returns {string} Markup of the component.
  */
-const CuredBy = ({ content, office, people }) => {
+const CuredBy = ({ office, people }) => {
   const intl = useIntl();
   return (
     <article id="a-cura-di" className="it-page-section anchor-offset mt-5">
@@ -39,10 +40,10 @@ const CuredBy = ({ content, office, people }) => {
             <h6 className="no-toc">
               <small>{intl.formatMessage(messages.page_cured_by)}</small>
             </h6>
-            <OfficeCard content={content} office={office} />
+            <OfficeCard office={office} />
           </div>
         )}
-        {people.length > 0 ? (
+        {people?.length > 0 ? (
           <div className="col-12 col-sm-4">
             <h6 className="no-toc">
               <small>{intl.formatMessage(messages.cured_by_people)}</small>
@@ -67,3 +68,22 @@ const CuredBy = ({ content, office, people }) => {
   );
 };
 export default CuredBy;
+
+CuredBy.propTypes = {
+  office: PropTypes.shape({
+    '@id': PropTypes.string,
+    '@type': PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string,
+    review_state: PropTypes.string,
+  }),
+  people: PropTypes.arrayOf(
+    PropTypes.shape({
+      '@id': PropTypes.string,
+      '@type': PropTypes.string,
+      title: PropTypes.string,
+      description: PropTypes.string,
+      review_state: PropTypes.string,
+    }),
+  ),
+};

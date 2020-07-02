@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const messages = defineMessages({
   locations: {
@@ -24,7 +25,7 @@ const messages = defineMessages({
  */
 const Location = ({ location }) => {
   const intl = useIntl();
-  const key = 'luogo' + location['@id'];
+  const key = `luogo${location['@id']}`;
   const url = flattenToAppURL(location['@id']);
   const locationContent = useSelector(state => state.content.subrequests);
   const dispatch = useDispatch();
@@ -32,42 +33,35 @@ const Location = ({ location }) => {
     dispatch(getContent(url, null, key));
     return () => dispatch(resetContent(key));
   }, [dispatch, location, url, key]);
-  let location_fo = null;
-  if (key in locationContent) {
-    location_fo = locationContent[key].data;
-  }
-  let card;
-  if (location_fo) {
-    card = (
-      <div className="card card-teaser shadow mt-3 rounded">
-        <div className="card-body">
-          <h5 className="card-title no-toc">{location_fo.title}</h5>
-          <div className="card-text">
-            <p>{location_fo.address}</p>
-            <p className="mt-3">
-              <Link
-                to={flattenToAppURL(location_fo['@id'])}
-                title={location_fo.title}
-              >
-                {intl.formatMessage(messages.details)}
-              </Link>
-            </p>
-          </div>
+  let location_fo = locationContent[key]?.data;
+  return location_fo ? (
+    <div className="card card-teaser shadow mt-3 rounded">
+      <div className="card-body">
+        <h5 className="card-title">{location_fo.title}</h5>
+        <div className="card-text">
+          <p>{location_fo.address}</p>
+          <p className="mt-3">
+            <Link
+              to={flattenToAppURL(location_fo['@id'])}
+              title={location_fo.title}
+            >
+              {intl.formatMessage(messages.details)}
+            </Link>
+          </p>
         </div>
-        {location_fo.immagine && (
-          <div className="avatar size-xl">
-            <img
-              src={flattenToAppURL(location_fo.immagine.scales.mini.download)}
-              alt="Immagine"
-            ></img>
-          </div>
-        )}
       </div>
-    );
-  } else {
-    card = '';
-  }
-  return card;
+      {location_fo.immagine && (
+        <div className="avatar size-xl">
+          <img
+            src={flattenToAppURL(location_fo.immagine.scales.mini.download)}
+            alt="Immagine"
+          ></img>
+        </div>
+      )}
+    </div>
+  ) : (
+    ''
+  );
 };
 
 /**
@@ -83,10 +77,32 @@ const Locations = ({ locations }) => {
       <h4 id="header-luoghi">{intl.formatMessage(messages.locations)}</h4>
       <div className="card-wrapper card-teaser-wrapper">
         {locations.map((item, i) => (
-          <Location key={i} location={item} />
+          <Location key={item['@id']} location={item} />
         ))}
       </div>
     </article>
   );
 };
 export default Locations;
+
+Locations.propTypes = {
+  locations: PropTypes.arrayOf(
+    PropTypes.shape({
+      '@id': PropTypes.string,
+      '@type': PropTypes.string,
+      title: PropTypes.string,
+      description: PropTypes.string,
+      review_state: PropTypes.string,
+    }),
+  ),
+};
+
+Location.propTypes = {
+  location: PropTypes.shape({
+    '@id': PropTypes.string,
+    '@type': PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string,
+    review_state: PropTypes.string,
+  }),
+};

@@ -67,16 +67,20 @@ msgstr "Description"
 msgid "Follow us"
 msgstr "Follow us"
 
-#: customizations/components/theme/Breadcrumbs/Breadcrumbs
-msgid "Home"
-msgstr "Home"
-
 #: components/DesignTheme/Blocks/Alert/Sidebar
 msgid "Image"
 msgstr "Image"
 
-#: components/DesignTheme/Blocks/Listing/NewsTemplate
-msgid "Keep reading"
+#: components/DesignTheme/manage/Widgets/LinkToWidget
+msgid "Link to"
+msgstr ""
+
+#: components/DesignTheme/Blocks/NewsHome/Sidebar
+msgid "LinkMore"
+msgstr ""
+
+#: components/DesignTheme/Blocks/NewsHome/Sidebar
+msgid "Linkto title"
 msgstr ""
 
 #: components/DesignTheme/Footer/FooterSmall
@@ -84,7 +88,6 @@ msgid "Mappa del sito"
 msgstr "Mappa del sito"
 
 #: components/DesignTheme/MegaMenu/MegaMenu
-#: customizations/components/theme/Navigation/Navigation
 msgid "Menu selezionato"
 msgstr "Menu selezionato"
 
@@ -94,26 +97,45 @@ msgstr "News"
 
 #: components/DesignTheme/Blocks/NewsHome/Sidebar
 msgid "NewsHome"
-msgstr "NewsHome"
+msgstr "News con immagine in primo piano"
 
 #: components/DesignTheme/Footer/FooterInfos
 msgid "Newsletter"
 msgstr "Newsletter"
 
+#: components/DesignTheme/Pagination/PaginationItem
+msgid "Next page"
+msgstr "Pagina successiva"
+
 #: components/DesignTheme/Footer/FooterSmall
 msgid "Note legali"
 msgstr "Note legali"
+
+#: components/DesignTheme/manage/Widgets/LinkToWidget
+msgid "Open in a new tab"
+msgstr ""
 
 #: components/DesignTheme/Footer/FooterInfos
 msgid "PEC"
 msgstr "PEC"
 
+#: components/DesignTheme/Pagination/PaginationItem
+msgid "Previous page"
+msgstr "Pagina precedente"
+
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Required"
 msgstr "Required"
 
+#: addons/volto-rss-block/src/Block/RssSidebar
+msgid "RssFeed"
+msgstr "Feed RSS"
+
+#: addons/volto-rss-block/src/Block/RssSidebar
+msgid "RssFeedItemNumber"
+msgstr "Numero di elementi da mostrare"
+
 #: components/DesignTheme/Header/HeaderCenter
-#: components/DesignTheme/SocialLinks/SocialLinks
 msgid "Seguici su"
 msgstr "Seguici su"
 
@@ -125,17 +147,42 @@ msgstr "Sezione Link Utili"
 msgid "Short Name"
 msgstr "Short Name"
 
+#: components/DesignTheme/Search/SearchTopics
+msgid "Show all"
+msgstr "Mostra tutto"
+
 #: components/DesignTheme/Footer/FooterInfos
 msgid "Subscribe"
 msgstr "Subscribe"
+
+#: addons/volto-rss-block/src/Block/TemplateWidget
+msgid "Template"
+msgstr "Template"
 
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Title"
 msgstr "Title"
 
+#: components/DesignTheme/Blocks/ArgomentoTitle/Edit
+msgid "Type description…"
+msgstr "Digita la descrizione…"
+
+#: components/DesignTheme/Blocks/ArgomentoTitle/Edit
+#: components/DesignTheme/manage/Widgets/TextEditorWidget
+msgid "Type text…"
+msgstr "Digita testo…"
+
+#: components/DesignTheme/Blocks/ArgomentoTitle/Edit
+msgid "Type the title…"
+msgstr "Digita il titolo…"
+
 #: components/DesignTheme/Footer/FooterInfos
 msgid "URP"
 msgstr "URP"
+
+#: components/DesignTheme/View/PaginaArgomentoView
+msgid "Unknown Block"
+msgstr "Blocco sconosciuto"
 
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Used for programmatic access to the fieldset."
@@ -147,6 +194,7 @@ msgstr "Used for programmatic access to the fieldset."
 msgid "Vai alla pagina"
 msgstr "Vai alla pagina"
 
+#: components/DesignTheme/Blocks/Listing/CompleteBlockLinksTemplate
 #: components/DesignTheme/MegaMenu/MegaMenu
 msgid "Vedi tutto"
 msgstr "Vedi tutto"
@@ -154,147 +202,520 @@ msgstr "Vedi tutto"
 #: components/DesignTheme/View/Commons/Actions
 #: components/DesignTheme/View/Commons/PageHeader
 msgid "actions"
-msgstr "actions"
+msgstr "Vedi azioni"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "allFilters"
+msgstr "Tutto"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "allOptions"
+msgstr "Tutte le opzioni"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "allTopics"
+msgstr "Tutti gli argomenti"
+
+#: components/DesignTheme/View/PersonaView
+msgid "altre_cariche"
+msgstr "Altre cariche"
+
+#: components/DesignTheme/View/ServizioView
+msgid "altri_documenti"
+msgstr "Altri documenti"
+
+#: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
+msgid "amministrazione"
+msgstr "Amministrazione"
+
+#: components/DesignTheme/View/ServizioView
+msgid "area"
+msgstr "Area"
+
+#: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
+msgid "area_appartenenza"
+msgstr "Area di appartenenza"
+
+#: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
+msgid "assessorati_riferimento"
+msgstr "Assessorati di riferimento"
 
 #: components/DesignTheme/View/UOView
 msgid "assessore_riferimento"
-msgstr ""
+msgstr "Assessore di riferimento"
 
-#: components/DesignTheme/View/Commons/Attachments
+#: components/DesignTheme/View/Commons/Attachment
 msgid "attachment"
-msgstr ""
+msgstr "Allegato"
 
 #: components/DesignTheme/View/Commons/Attachments
 msgid "attachments"
-msgstr ""
+msgstr "Allegati"
 
+#: components/DesignTheme/View/PersonaView
+msgid "atto_nomina"
+msgstr "Atto di nomina"
+
+#: components/DesignTheme/View/ServizioView
+msgid "autenticazione"
+msgstr "Autenticazione"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "backToSearch"
+msgstr "Torna alla ricerca"
+
+#: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
+#: components/DesignTheme/View/ServizioView
 #: components/DesignTheme/View/UOView
 msgid "box_aiuto"
-msgstr ""
+msgstr "Box d'aiuto"
 
-#: customizations/components/theme/Navigation/Navigation
-msgid "close"
-msgstr "close"
+#: components/DesignTheme/View/ServizioView
+msgid "canale_digitale"
+msgstr "Canale digitale"
+
+#: components/DesignTheme/View/ServizioView
+msgid "canale_fisico"
+msgstr "Canale fisico"
+
+#: components/DesignTheme/View/ServizioView
+msgid "canale_fisico_prenotazione"
+msgstr "Link di prenotazione per il canale fisico"
+
+#: components/DesignTheme/View/ServizioView
+msgid "casi_particolari"
+msgstr "Gestione di casi particolari per la richista del servizio"
+
+#: components/DesignTheme/View/ServizioView
+msgid "chi_puo_presentare"
+msgstr "Chi può presentare domanda"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "closeSearch"
+msgstr "Chiudi ricerca"
+
+#: components/DesignTheme/View/PersonaView
+msgid "collegamenti_organizzazione_l1"
+msgstr "Collegamenti all'organizzazione (I Livello)"
+
+#: components/DesignTheme/View/PersonaView
+msgid "collegamenti_organizzazione_l2"
+msgstr "Collegamenti all'organizzazione (II Livello)"
+
+#: components/DesignTheme/View/ServizioView
+msgid "come_si_fa"
+msgstr "Come si ottiene il servizio"
+
+#: components/DesignTheme/View/PersonaView
+msgid "compensi"
+msgstr "Compensi"
+
+#: components/DesignTheme/View/PersonaView
+msgid "competenze"
+msgstr "Competenze"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "confirmSearch"
+msgstr "Conferma"
+
+#: components/DesignTheme/View/PersonaView
+msgid "contacts"
+msgstr "Contatti"
+
+#: addons/volto-cookie-banner/src/CookieBannerContainer
+msgid "cookie_banner_button"
+msgstr "Accetto"
+
+#: components/DesignTheme/View/ServizioView
+msgid "copertura_geografica"
+msgstr "Copertura geografica del servizio"
+
+#: components/DesignTheme/View/ServizioView
+msgid "cosa_serve"
+msgstr "Cosa serve per effettuare la richiesta del servizio"
+
+#: components/DesignTheme/View/ServizioView
+msgid "cosa_si_ottiene"
+msgstr "Cosa si ottiene dal servizio"
+
+#: components/DesignTheme/View/ServizioView
+msgid "costi"
+msgstr "Costi per la richiesta del servizio"
 
 #: components/DesignTheme/View/Commons/CuredBy
 msgid "cured_by"
-msgstr ""
+msgstr "A cura di"
 
 #: components/DesignTheme/View/Commons/CuredBy
 msgid "cured_by_people"
-msgstr ""
+msgstr "Persone"
+
+#: components/DesignTheme/View/PersonaView
+msgid "curriculum_vitae"
+msgstr "Curriculum vitae"
+
+#: components/DesignTheme/View/PersonaView
+msgid "data_conclusione_incarico"
+msgstr "Ha fatto parte dell'organizzazione comunale fino al"
+
+#: components/DesignTheme/View/PersonaView
+msgid "data_insediamento"
+msgstr "Data di insediamento"
 
 #: components/DesignTheme/View/Commons/PageHeader
 msgid "date"
-msgstr ""
+msgstr "Data"
+
+#: components/DesignTheme/View/PersonaView
+msgid "deleghe"
+msgstr "Deleghe"
+
+#: components/DesignTheme/View/ServizioView
+msgid "descrizione_destinatari"
+msgstr "Destinatari del servizio"
+
+#: components/DesignTheme/View/ServizioView
+msgid "descrizione_estesa"
+msgstr "Descrizione estesa"
 
 #: components/DesignTheme/View/Commons/Locations
 msgid "details"
-msgstr ""
+msgstr "Maggiori dettagli"
+
+#: components/DesignTheme/View/PersonaView
+msgid "dichiarazione_dei_redditi"
+msgstr "Dichiarazione dei redditi"
+
+#: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
+msgid "documenti"
+msgstr "Documenti"
+
+#: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
+msgid "documenti-e-dati"
+msgstr "Documenti e dati"
 
 #: components/DesignTheme/View/Commons/Actions
 msgid "download"
-msgstr ""
+msgstr "Scarica"
+
+#: components/DesignTheme/View/PersonaView
+msgid "email"
+msgstr "Email"
 
 #: components/DesignTheme/Blocks/NewsHome/Edit
 msgid "emptySelection"
 msgstr "Seleziona un elemento nella barra laterale per mostrarlo qui."
 
+#: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
+msgid "exceeded_chars"
+msgstr "Il testo supera la lunghezza consigliata"
+
 #: components/DesignTheme/View/Commons/PageHeader
 msgid "expire"
-msgstr ""
+msgstr "Scadenza"
+
+#: components/DesignTheme/View/ServizioView
+msgid "fasi_scadenze"
+msgstr "Fasi e scadenze per la richiesta del servizio"
+
+#: addons/volto-rss-block/src/Block/Edit
+msgid "feed_not_set"
+msgstr "Feed RSS non impostato"
+
+#: addons/volto-rss-block/src/Block/Edit
+msgid "feed_set"
+msgstr "Feed RSS impostato"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "filters"
+msgstr "Filtri"
 
 #: components/DesignTheme/View/Commons/Gallery
 msgid "gallery"
-msgstr ""
+msgstr "Galleria di immagini"
+
+#: components/DesignTheme/View/PersonaView
+msgid "importi_di_viaggio_e_o_servizi"
+msgstr "Importi di viaggio e/o servizi"
 
 #: components/DesignTheme/View/Commons/SideMenu
 msgid "index"
-msgstr ""
+msgstr "Indice della pagina"
 
 #: components/DesignTheme/View/UOView
 msgid "legami_altre_strutture"
-msgstr ""
+msgstr "Legami con altre strutture"
+
+#: components/DesignTheme/View/ServizioView
+msgid "link_siti_esterni"
+msgstr "Link utili"
 
 #: components/DesignTheme/View/Commons/Locations
 msgid "locations"
-msgstr ""
+msgstr "Luoghi"
 
 #: components/DesignTheme/View/Commons/Actions
 msgid "mailto"
-msgstr ""
+msgstr "Invia"
 
 #: components/DesignTheme/View/Commons/PageHeader
 msgid "minutes"
-msgstr ""
+msgstr "min"
 
 #: components/DesignTheme/View/Commons/Metadata
 msgid "modified"
-msgstr ""
+msgstr "Ultimo aggiornamento"
+
+#: addons/volto-multilingual-widget/src/index
+msgid "multilingual_text_placeholder"
+msgstr "Digita..."
 
 #: components/DesignTheme/View/NewsItemView
 #: components/DesignTheme/View/UOView
 msgid "notizie_in_evidenza"
-msgstr ""
+msgstr "Notizie in evidenza"
+
+#: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
+msgid "novita"
+msgstr "Novità"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "optionActiveContentButton"
+msgstr "Contenuto attivo"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "optionActiveContentInfo"
+msgstr "Verranno esclusi dalla ricerca i contenuti archiviati e non più validi come gli eventi terminati o i bandi scaduti."
+
+#: components/DesignTheme/Header/SearchModal
+msgid "optionActiveContentLabel"
+msgstr "Cerca solo tra i contenuti attivi"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "optionDateEnd"
+msgstr "Data fine"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "optionDateEndButton"
+msgstr "Al"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "optionDatePlaceholder"
+msgstr "inserisci la data in formato gg/mm/aaaa"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "optionDateStart"
+msgstr "Data inizio"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "optionDateStartButton"
+msgstr "Dal"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "options"
+msgstr "Opzioni"
+
+#: components/DesignTheme/View/PersonaView
+msgid "organizzazione_riferimento"
+msgstr "Organizzazione di riferimento"
 
 #: components/DesignTheme/View/Commons/Metadata
 msgid "other_info"
-msgstr ""
+msgstr "Altre informazioni"
 
 #: components/DesignTheme/View/Commons/CuredBy
 msgid "page_cured_by"
-msgstr ""
+msgstr "Questa pagina è gestita da"
 
 #: components/DesignTheme/View/UOView
 msgid "persone_struttura"
-msgstr ""
+msgstr "Persone che compongono la struttura"
+
+#: components/DesignTheme/View/PersonaView
+msgid "phone"
+msgstr "Telefono"
+
+#: components/DesignTheme/Blocks/ArgomentoTitle/View
+msgid "portata_di_click"
+msgstr "A PORTATA DI CLICK"
 
 #: components/DesignTheme/View/Commons/Actions
 msgid "print"
-msgstr ""
+msgstr "Stampa"
+
+#: components/DesignTheme/View/ServizioView
+msgid "procedure_collegate"
+msgstr "Procedure collegate all'esito"
 
 #: components/DesignTheme/View/Commons/PageHeader
 msgid "reading_time"
-msgstr ""
+msgstr "Tempo di lettura"
+
+#: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
+msgid "related_doc"
+msgstr "Documenti"
 
 #: components/DesignTheme/View/NewsItemView
+#: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
+#: components/DesignTheme/View/ServizioView
 #: components/DesignTheme/View/UOView
 msgid "related_items"
-msgstr ""
+msgstr "Contenuti correlati"
+
+#: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
+#: components/DesignTheme/View/PersonaView
+#: components/DesignTheme/View/ServizioView
+msgid "related_news"
+msgstr "Novità"
+
+#: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
+msgid "related_services"
+msgstr "Servizi"
+
+#: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
+msgid "related_uo"
+msgstr "Amministrazione"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "removeOption"
+msgstr "Rimuovi opzione"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "removeTopic"
+msgstr "Rimuovi argomento"
 
 #: components/DesignTheme/View/UOView
 msgid "responsabile"
-msgstr ""
+msgstr "Responsablie"
+
+#: components/DesignTheme/View/PersonaView
+msgid "responsabile_di"
+msgstr "Responsabile di"
 
 #: components/DesignTheme/View/Commons/Metadata
 msgid "rights"
-msgstr ""
+msgstr "Diritti"
+
+#: components/DesignTheme/View/PersonaView
+msgid "role_bio"
+msgstr "Ruolo/Biografia"
+
+#: addons/volto-rss-block/src/Templates/DefaultRssTemplate
+#: components/DesignTheme/Blocks/RssBlock/CardWithImageRssTemplate
+#: components/DesignTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
+msgid "rss_no_results"
+msgstr "Nessun risultato dal feed RSS"
+
+#: addons/volto-rss-block/src/Templates/DefaultRssTemplate
+#: components/DesignTheme/Blocks/RssBlock/CardWithImageRssTemplate
+#: components/DesignTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
+msgid "rss_read_more"
+msgstr "Leggi tutto"
+
+#: components/DesignTheme/View/Commons/PageHeader
+msgid "ruolo"
+msgstr "Ruolo"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "search"
+msgstr "Cerca"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "searchLabel"
+msgstr "Cerca nel sito"
+
+#: components/DesignTheme/Header/SearchModal
+msgid "sections"
+msgstr "Sezioni"
 
 #: components/DesignTheme/View/UOView
 msgid "sedi"
-msgstr ""
+msgstr "Dove e come trovarci"
+
+#: components/DesignTheme/View/ServizioView
+msgid "sedi_e_luoghi"
+msgstr "Dove trovarci"
+
+#: addons/volto-rss-block/src/Block/RssSidebar
+msgid "selectRSSOptions"
+msgstr "Seleziona opzioini"
+
+#: components/DesignTheme/View/ServizioView
+msgid "service_not_active"
+msgstr "Il servizio non è attivo"
+
+#: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/Search/SearchSections
+msgid "servizi"
+msgstr "Servizi"
+
+#: components/DesignTheme/View/ServizioView
+msgid "servizi_collegati"
+msgstr "Servizi collegati"
 
 #: components/DesignTheme/View/UOView
 msgid "servizi_offerti"
-msgstr ""
+msgstr "Servizi offerti"
+
+#: addons/volto-rss-block/src/Block/RssSidebar
+msgid "setrss"
+msgstr "Imposta feed RSS"
 
 #: components/DesignTheme/View/Commons/PageHeader
 #: components/DesignTheme/View/Commons/Sharing
 msgid "share"
-msgstr "share"
+msgstr "Condividi"
+
+#: components/DesignTheme/View/PersonaView
+msgid "situazione_patrimoniale"
+msgstr "Situazione patrimoniale"
+
+#: components/DesignTheme/View/PersonaView
+msgid "spese_elettorali"
+msgstr "Spese elettorali"
 
 #: components/DesignTheme/View/Commons/Metadata
 msgid "subjects"
-msgstr ""
+msgstr "Tags"
 
 #: components/DesignTheme/View/UOView
 msgid "tipologia_organizzazione"
-msgstr ""
+msgstr "Tipologia organizzazione"
 
 #: components/DesignTheme/View/Commons/PageHeader
-msgid "topics"
-msgstr "topics"
+msgid "tipologia_persona"
+msgstr "Tipologia persona"
 
+#: components/DesignTheme/Header/SearchModal
+#: components/DesignTheme/View/Commons/PageHeader
+msgid "topics"
+msgstr "Argomenti"
+
+#: components/DesignTheme/View/ServizioView
+msgid "ufficio_responsabile"
+msgstr "Ufficio responsabile"
+
+#: components/DesignTheme/View/PersonaView
 #: components/DesignTheme/View/UOView
 msgid "ulteriori_informazioni"
-msgstr ""
+msgstr "Ulteriori informazioni"
+
+#: components/DesignTheme/View/Commons/TextOrBlocks
+msgid "unknownBlock"
+msgstr "Blocco sconosciuto"
+
+#: addons/volto-multilingual-widget/src/index
+msgid "value_for_lang"
+msgstr "Valore per la lingua {lang}"
+
+#: components/DesignTheme/View/PersonaView
+msgid "valutazione_situazione_patrimoniale"
+msgstr "Valutazione situazione patrimoniale"
+
+#: components/DesignTheme/View/ServizioView
+msgid "vincoli"
+msgstr "Vincoli per la richista del servizio"

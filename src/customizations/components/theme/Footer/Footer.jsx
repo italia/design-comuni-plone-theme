@@ -8,6 +8,7 @@ import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 // import { isCmsUi } from '@plone/volto/helpers';
 import { FooterMain, FooterSmall } from '@design/components/DesignTheme/';
+import { CookieBanner } from 'volto-cookie-banner';
 
 /**
  * Footer component class.
@@ -42,6 +43,7 @@ class Footer extends Component {
       <footer className="it-footer">
         <FooterMain />
         <FooterSmall />
+        {__CLIENT__ && <CookieBanner />}
       </footer>
     );
     return isCmsUI ? <div className="public-ui">{content}</div> : content;

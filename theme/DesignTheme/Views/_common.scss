@@ -1,27 +1,85 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #3d535d;
+}
+
 .full-width {
   position: relative;
   right: 50%;
   left: 50%;
   width: 100vw !important;
   max-width: initial !important;
+  height: 480px;
   margin-right: -50vw !important;
   margin-left: -50vw !important;
   object-fit: cover;
-  height: 480px;
+
+  .has-toolbar & {
+    left: calc(50% + 40px);
+    width: calc(100vw - 80px) !important;
+  }
+
+  .has-toolbar-collapsed & {
+    left: calc(50% + 10px);
+    width: calc(100vw - 20px) !important;
+  }
 }
+
 .public-ui {
+  .card.bigborder {
+    border: 1px solid #eee !important;
+    border-left-width: 10px !important;
+  }
+
+  .p-4.link-esterni {
+    padding: 0 !important;
+    .card-title {
+      color: #455a64;
+      padding: 0 24px 0 24px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+    div {
+      padding: 0 24px 0 24px;
+    }
+  }
+
+  .slick-slide {
+    figure {
+      width: 95%;
+    }
+  }
   .header {
     font-size: 14px;
     margin-bottom: 10px !important;
   }
   .card-title {
+    line-height: 1rem;
     a {
-      font-size: 24px;
-      line-height: 28px;
-      text-decoration: none;
-      color: #455a64;
+      font-size: 18px;
+      line-height: 26px;
+      color: #06c;
     }
+    margin: 0 !important;
     margin-bottom: 10px !important;
+  }
+  .link-list-wrapper {
+    ul {
+      li {
+        button.btn-link {
+          color: #06c;
+          &:hover {
+            color: #06c;
+            .icon {
+              fill: #06c;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -34,5 +92,55 @@ div.sticky-wrapper {
 .slick-slide {
   figure {
     width: 95%;
+  }
+}
+
+.style_ol_list {
+  ol {
+    list-style: none;
+    padding: 0;
+    li {
+      display: flex;
+      margin-left: 70px;
+      border: 1px solid #eee;
+      border-left-width: 10px;
+      border-radius: 4px;
+      position: relative;
+      counter-increment: inst;
+      padding: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+      &:last-child:before {
+        height: calc(100% + 2px);
+        padding-bottom: 20px;
+      }
+      &:before {
+        content: counter(inst);
+        position: absolute;
+        width: 50px;
+        height: calc(100% + 22px);
+        left: -70px;
+        top: 0;
+        color: #be2716;
+        font-size: 40px;
+        font-family: Roboto Mono Thin;
+        border-right: 1px solid currentColor;
+        line-height: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 42px;
+      }
+      &:after {
+        position: absolute;
+        content: '';
+        width: 9px;
+        height: 9px;
+        background-color: #be2716;
+        top: calc(50% - 4px);
+        left: -25px;
+        border-radius: 50%;
+      }
+    }
   }
 }

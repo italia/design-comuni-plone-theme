@@ -6,11 +6,12 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import PropTypes from 'prop-types';
 
 const messages = defineMessages({
   gallery: {
     id: 'gallery',
-    defaultMessage: 'Galleria immagini',
+    defaultMessage: 'Galleria di immagini',
   },
 });
 
@@ -57,7 +58,7 @@ const Gallery = ({ content, folder_name }) => {
   };
 
   const intl = useIntl();
-  const url = flattenToAppURL(content['@id']) + '/' + folder_name;
+  const url = `${flattenToAppURL(content['@id'])}/${folder_name}`;
   const searchResults = useSelector(state => state.search.subrequests);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -91,7 +92,6 @@ const Gallery = ({ content, folder_name }) => {
             <div className="it-header-block">
               <div className="it-header-block-title">
                 <h4 id="header-gallery" className="no_toc">
-                  {' '}
                   {intl.formatMessage(messages.gallery)}
                 </h4>
               </div>
@@ -99,7 +99,7 @@ const Gallery = ({ content, folder_name }) => {
             <div className="it-carousel-all it-card-bg">
               <Slider {...settings}>
                 {images.map((item, i) => (
-                  <div className="it-single-slide-wrapper" key={i}>
+                  <div className="it-single-slide-wrapper" key={item['@id']}>
                     <figure>
                       <img
                         src={flattenToAppURL(
@@ -123,7 +123,7 @@ const Gallery = ({ content, folder_name }) => {
         <article id="video" className="it-page-section anchor-offset mt-5">
           {videos.map((item, i) => (
             <div
-              key={i}
+              key={item['@id']}
               className="embed-responsive embed-responsive-16by9 my-4"
             >
               <iframe
@@ -140,3 +140,8 @@ const Gallery = ({ content, folder_name }) => {
   );
 };
 export default Gallery;
+
+Gallery.propTypes = {
+  content: PropTypes.object,
+  folder_name: PropTypes.string,
+};
