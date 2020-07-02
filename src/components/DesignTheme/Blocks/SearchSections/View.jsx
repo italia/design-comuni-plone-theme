@@ -6,10 +6,13 @@ import Body from './Body';
 
 const View = ({ data, id }) => {
   const content = useSelector((state) => state.content.subrequests[id]?.data);
+  const sections = useSelector(
+    (state) => state?.searchFilters?.result?.sections,
+  );
 
   return (
     <div className="block">
-      <Body content={content} block={data} />
+      <Body content={content} block={data} sections={sections} />
     </div>
   );
 };

@@ -5,7 +5,6 @@ import { Row, Icon, Button } from 'design-react-kit/dist/design-react-kit';
 import { useIntl } from 'react-intl';
 import moment from 'moment';
 import cx from 'classnames';
-import { useSelector } from 'react-redux';
 
 const navigate = (text, serivices) => {
   window.location.href =
@@ -13,14 +12,15 @@ const navigate = (text, serivices) => {
     `/search?SearchableText=${text}&path.query=${serivices}`;
 };
 
-const Body = ({ block }) => {
+const Body = ({ block, sections }) => {
   const [inputText, setInputText] = useState(false);
 
-  const searchFilters = useSelector((state) =>
-    state?.searchFilters?.result?.sections?.servizi?.items
-      .map((x) => x.path)
-      .join('&path.query='),
-  );
+  const searchFilters = () => {
+    return block.sections.flatMap((section) => {
+      return sections[section.value].items.map((x) => x.path);
+    });
+  };
+
   const intl = useIntl();
   moment.locale(intl.locale);
   return (
@@ -36,15 +36,15 @@ const Body = ({ block }) => {
                 <input
                   className="inputSearch"
                   type="text"
-                  placeholder="Ricerca Servizi"
+                  placeholder={block.placeholder}
                   onChange={(e) => setInputText(e.currentTarget.value)}
                   onKeyDown={(e) =>
                     e.key === 'Enter'
-                      ? navigate(inputText, searchFilters)
+                      ? navigate(inputText, searchFilters())
                       : null
                   }
                 ></input>
-                <button onClick={(e) => navigate(inputText, searchFilters)}>
+                <button onClick={(e) => navigate(inputText, searchFilters())}>
                   <Icon
                     icon="it-search"
                     padding={false}

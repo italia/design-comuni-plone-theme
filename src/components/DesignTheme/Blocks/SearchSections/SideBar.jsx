@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Segment, Accordion } from 'semantic-ui-react';
 import { defineMessages, FormattedMessage, useIntl } from 'react-intl';
-import { TextWidget } from '@plone/volto/components';
+import { TextWidget, SelectWidget } from '@plone/volto/components';
 import ObjectBrowserWidget from '@plone/volto/components/manage/Widgets/ObjectBrowserWidget';
 
 const messages = defineMessages({
@@ -22,16 +22,26 @@ const messages = defineMessages({
     id: 'desc',
     defaultMessage: 'Descrizione',
   },
+  sections: {
+    id: 'sections',
+    defaultMessage: 'Sezioni ricercabili',
+  },
+  placeholder: {
+    id: 'placeholder',
+    defaultMessage: 'Placeholder',
+  },
 });
 
 const Sidebar = ({
   block,
   data,
   onChangeBlock,
+  sections,
   openObjectBrowser,
   required,
 }) => {
   const intl = useIntl();
+
   return (
     <Segment.Group raised>
       <header className="header pulled">
@@ -59,6 +69,38 @@ const Sidebar = ({
               });
             }}
           />
+          <TextWidget
+            id="SearchServicesPlaceholder"
+            title={intl.formatMessage(messages.placeholder)}
+            required={true}
+            value={data.placeholder}
+            onChange={(name, value) => {
+              onChangeBlock(block, {
+                ...data,
+                placeholder: value,
+              });
+            }}
+          />
+          {sections && (
+            <SelectWidget
+              id="groups"
+              title={intl.formatMessage(messages.sections)}
+              noValuePresent={false}
+              choices={Object.keys(sections).map((key) => [
+                key,
+                sections[key].title,
+              ])}
+              values={data.sections}
+              onChange={(name, value) => {
+                onChangeBlock(block, {
+                  ...data,
+                  sections: value.map((v) => {
+                    return { title: sections[v].title, value: v };
+                  }),
+                });
+              }}
+            ></SelectWidget>
+          )}
         </Accordion.Content>
       </Accordion>
       <Accordion fluid styled className="form">
