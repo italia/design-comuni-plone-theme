@@ -103,10 +103,6 @@ function getDefaultValues(choices, value) {
           acc.push({ label: choice[1], value: choice[0] });
         return acc;
       }, []);
-      // .filter((choice) => value.includes(choice[0]))
-      // .map((choice) => {
-      //   return { label: choice[0], value: choice[1] };
-      // });
     }
     return {
       label: value.title !== 'None' && value.title ? value.title : value.token,
