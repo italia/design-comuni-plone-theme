@@ -200,7 +200,7 @@ export const views = {
   contentTypesViews: {
     ...defaultViews.contentTypesViews,
     'News Item': NewsItemView,
-    'Unita Organizzativa': UOView,
+    UnitaOrganizzativa: UOView,
     Persona: PersonaView,
     Servizio: ServizioView,
     'Pagina Argomento': PaginaArgomentoView,
