@@ -45,7 +45,7 @@ import InEvidenceTemplate from '@design/components/DesignTheme/Blocks/Listing/In
 import { rssBlock as customRssBlock } from 'volto-rss-block';
 import CardWithImageRssTemplate from '@design/components/DesignTheme/Blocks/RssBlock/CardWithImageRssTemplate';
 import CardWithoutImageRssTemplate from '@design/components/DesignTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
-
+import { DatetimeWidget } from '@plone/volto/config/Widgets';
 import MultilingualWidget from 'volto-multilingual-widget';
 
 const rssBlock = {
@@ -213,6 +213,10 @@ export const widgets = {
     ...defaultWidgets.id,
     description: CharCounterDescriptionWidget,
     cookie_consent_configuration: MultilingualWidget(),
+    data_conclusione_incarico: (props) => (
+      <DatetimeWidget {...props} dateOnly={true} />
+    ),
+    data_insediamento: (props) => <DatetimeWidget {...props} dateOnly={true} />,
   },
 };
 
