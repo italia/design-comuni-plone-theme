@@ -83,7 +83,7 @@ const NewsItemView = ({ content, location }) => {
         )}
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
-            <SideMenu data={sideMenuElements} />
+            <SideMenu data={sideMenuElements} documentBody={documentBody} />
           </aside>
           <section
             className="col-lg-8 it-page-sections-container"

@@ -19,25 +19,42 @@ const extractHeaders = (elements, intl) => {
 
   for (var index = 0; index < elements.length; index++) {
     item = elements[index];
-    let item_headers = item.querySelectorAll('h1, h2, h3, h4, h5, h6');
 
     if (item.id === 'text-body') {
       headers.push({
         id: item.id,
         title: intl.formatMessage(messages.contenuto),
-        top: item.getBoundingClientRect().top,
+        item: item,
+      });
+    } else {
+      let item_header = item.querySelector('#header-' + item.id);
+      if (item_header) {
+        headers.push({
+          id: item.id,
+          title: item_header.textContent,
+          item: item,
+        });
+      }
+    }
+
+    /*if (item.id === 'text-body') {
+      headers.push({
+        id: item.id,
+        title: intl.formatMessage(messages.contenuto),
+        item: item,
       });
     }
 
+    let item_headers = item.querySelectorAll('h1, h2, h3, h4, h5, h6');
     item_headers.forEach((elem, index) => {
       if (!elem.classList.contains('no-toc')) {
         headers.push({
           id: elem.getAttribute('id'),
           title: elem.textContent,
-          top: elem.getBoundingClientRect().top,
+          item: elem,
         });
       }
-    });
+    });*/
   }
 
   return headers;
@@ -49,50 +66,44 @@ const extractHeaders = (elements, intl) => {
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const SideMenu = ({ data }) => {
+const SideMenu = ({ data, documentBody }) => {
   const intl = useIntl();
   const [headers, setHeaders] = useState([]);
+  const [activeSection, setActiveSection] = useState();
+  const [observer, setObserver] = useState();
+
+  const handleIntersection = function (entries, observer) {
+    entries.forEach((entry) => {
+      if (entry.target.id !== activeSection && entry.isIntersecting) {
+        setActiveSection(entry.target.id);
+      }
+    });
+  };
+
   useEffect(() => {
     if (data?.children) {
       setHeaders(extractHeaders(data.children, intl));
     }
-  }, data);
 
-  useEffect(() => {
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  });
-
-  let onScroll = throttle(() => {
-    let scroll = window.scrollY;
-    console.log(window.pageYOffset, 'pageyoffset');
-
-    setHeaders(
-      headers.map((currentElement) => {
-        currentElement.active =
-          scroll - window.innerHeight > 0 &&
-          scroll >= currentElement.top &&
-          parseInt(currentElement.top / window.innerHeight) ===
-            parseInt(scroll / window.innerHeight);
-        console.log(
-          'offset(scrolly)=',
-          scroll,
-          'window.innerheight',
-          window.innerHeight,
-          'currelement.top',
-          currentElement.top,
-          ' el at page',
-          parseInt(currentElement.top / window.innerHeight),
-          'currentPage',
-          parseInt(scroll / window.innerHeight),
-          '=',
-          currentElement.active,
-        );
-        return currentElement;
+    setObserver(
+      new IntersectionObserver(handleIntersection, {
+        root: null,
+        threshold: 0.25,
       }),
     );
-  }, 100);
-  console.log('return');
+  }, [data]);
+
+  useEffect(() => {
+    headers.map((item) => {
+      observer.observe(item.item);
+    });
+  }, [headers]);
+
+  useEffect(() => {
+    if (observer) {
+      return () => observer.disconnect();
+    }
+  }, []);
 
   return headers?.length > 0 ? (
     <div className="sticky-wrapper navbar-wrapper">
@@ -126,9 +137,11 @@ const SideMenu = ({ data }) => {
               <h3 className="no-toc">{intl.formatMessage(messages.index)}</h3>
               <ul className="link-list">
                 {headers.map((item, i) => (
-                  <li className="nav-item">
+                  <li className="nav-item" key={item.id}>
                     <a
-                      className={`nav-link ${item.active && 'active'}`}
+                      className={`nav-link ${
+                        item.id === activeSection && 'active'
+                      }`}
                       href={'#' + item.id}
                     >
                       <span>{item.title}</span>
