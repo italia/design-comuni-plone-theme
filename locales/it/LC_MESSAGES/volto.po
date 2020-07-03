@@ -51,6 +51,10 @@ msgstr "Color_warning"
 msgid "Contatti"
 msgstr "Contatti"
 
+#: components/DesignTheme/View/Commons/SideMenu
+msgid "Contenuto"
+msgstr ""
+
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Default"
 msgstr "Default"
@@ -72,16 +76,17 @@ msgid "Image"
 msgstr "Image"
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
+#: components/DesignTheme/Widgets/LinkToWidget
 msgid "Link to"
-msgstr ""
+msgstr "Link a"
 
 #: components/DesignTheme/Blocks/NewsHome/Sidebar
 msgid "LinkMore"
-msgstr ""
+msgstr "Link ad altro"
 
 #: components/DesignTheme/Blocks/NewsHome/Sidebar
 msgid "Linkto title"
-msgstr ""
+msgstr "Titolo per i link ad altro"
 
 #: components/DesignTheme/Footer/FooterSmall
 msgid "Mappa del sito"
@@ -112,8 +117,9 @@ msgid "Note legali"
 msgstr "Note legali"
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
+#: components/DesignTheme/Widgets/LinkToWidget
 msgid "Open in a new tab"
-msgstr ""
+msgstr "Apri in un nuovo tab"
 
 #: components/DesignTheme/Footer/FooterInfos
 msgid "PEC"
@@ -134,6 +140,16 @@ msgstr "Feed RSS"
 #: addons/volto-rss-block/src/Block/RssSidebar
 msgid "RssFeedItemNumber"
 msgstr "Numero di elementi da mostrare"
+
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+#: components/DesignTheme/Blocks/SearchServices/SideBar
+msgid "SearchServices"
+msgstr ""
+
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+#: components/DesignTheme/Blocks/SearchServices/SideBar
+msgid "SearchServicesTitle"
+msgstr ""
 
 #: components/DesignTheme/Header/HeaderCenter
 msgid "Seguici su"
@@ -371,6 +387,11 @@ msgstr "Data"
 msgid "deleghe"
 msgstr "Deleghe"
 
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+#: components/DesignTheme/Blocks/SearchServices/SideBar
+msgid "desc"
+msgstr ""
+
 #: components/DesignTheme/View/ServizioView
 msgid "descrizione_destinatari"
 msgstr "Destinatari del servizio"
@@ -400,6 +421,11 @@ msgstr "Documenti e dati"
 #: components/DesignTheme/View/Commons/Actions
 msgid "download"
 msgstr "Scarica"
+
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+#: components/DesignTheme/Blocks/SearchServices/SideBar
+msgid "editSearch"
+msgstr ""
 
 #: components/DesignTheme/View/PersonaView
 msgid "email"
@@ -448,6 +474,11 @@ msgstr "Indice della pagina"
 #: components/DesignTheme/View/UOView
 msgid "legami_altre_strutture"
 msgstr "Legami con altre strutture"
+
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+#: components/DesignTheme/Blocks/SearchServices/SideBar
+msgid "link"
+msgstr ""
 
 #: components/DesignTheme/View/ServizioView
 msgid "link_siti_esterni"
@@ -539,6 +570,10 @@ msgstr "Persone che compongono la struttura"
 msgid "phone"
 msgstr "Telefono"
 
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+msgid "placeholder"
+msgstr ""
+
 #: components/DesignTheme/Blocks/ArgomentoTitle/View
 msgid "portata_di_click"
 msgstr "A PORTATA DI CLICK"
@@ -628,6 +663,7 @@ msgstr "Cerca"
 msgid "searchLabel"
 msgstr "Cerca nel sito"
 
+#: components/DesignTheme/Blocks/SearchSections/SideBar
 #: components/DesignTheme/Header/SearchModal
 msgid "sections"
 msgstr "Sezioni"

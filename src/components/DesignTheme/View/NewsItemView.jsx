@@ -45,6 +45,7 @@ const messages = defineMessages({
  */
 const NewsItemView = ({ content, location }) => {
   const intl = useIntl();
+
   const text = <TextOrBlocks content={content} location={location} />;
   const reading_text = getHTMLString(text, intl.locale);
 
@@ -150,6 +151,7 @@ const NewsItemView = ({ content, location }) => {
                 <h4 id="header-related-items">
                   {intl.formatMessage(messages.related_items)}
                 </h4>
+
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.relatedItems.map((item, i) => (
                     <GenericCard

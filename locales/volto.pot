@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-06-18T11:05:46.548Z\n"
+"POT-Creation-Date: 2020-07-02T16:03:20.174Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -63,6 +63,11 @@ msgstr ""
 msgid "Contatti"
 msgstr ""
 
+#: components/DesignTheme/View/Commons/SideMenu
+# defaultMessage: Contenuto
+msgid "Contenuto"
+msgstr ""
+
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 # defaultMessage: Default
 msgid "Default"
@@ -89,6 +94,7 @@ msgid "Image"
 msgstr ""
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
+#: components/DesignTheme/Widgets/LinkToWidget
 # defaultMessage: Link a
 msgid "Link to"
 msgstr ""
@@ -139,6 +145,7 @@ msgid "Note legali"
 msgstr ""
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
+#: components/DesignTheme/Widgets/LinkToWidget
 # defaultMessage: Apri in un nuovo tab
 msgid "Open in a new tab"
 msgstr ""
@@ -166,6 +173,18 @@ msgstr ""
 #: addons/volto-rss-block/src/Block/RssSidebar
 # defaultMessage: Number of items to show
 msgid "RssFeedItemNumber"
+msgstr ""
+
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+#: components/DesignTheme/Blocks/SearchServices/SideBar
+# defaultMessage: Ricerca servizi
+msgid "SearchServices"
+msgstr ""
+
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+#: components/DesignTheme/Blocks/SearchServices/SideBar
+# defaultMessage: Titolo
+msgid "SearchServicesTitle"
 msgstr ""
 
 #: components/DesignTheme/Header/HeaderCenter
@@ -461,6 +480,12 @@ msgstr ""
 msgid "deleghe"
 msgstr ""
 
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+#: components/DesignTheme/Blocks/SearchServices/SideBar
+# defaultMessage: Descrizione
+msgid "desc"
+msgstr ""
+
 #: components/DesignTheme/View/ServizioView
 # defaultMessage: Destinatari del servizio
 msgid "descrizione_destinatari"
@@ -496,6 +521,12 @@ msgstr ""
 #: components/DesignTheme/View/Commons/Actions
 # defaultMessage: Scarica
 msgid "download"
+msgstr ""
+
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+#: components/DesignTheme/Blocks/SearchServices/SideBar
+# defaultMessage: Modifica ricerca
+msgid "editSearch"
 msgstr ""
 
 #: components/DesignTheme/View/PersonaView
@@ -556,6 +587,12 @@ msgstr ""
 #: components/DesignTheme/View/UOView
 # defaultMessage: Legami con altre strutture
 msgid "legami_altre_strutture"
+msgstr ""
+
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+#: components/DesignTheme/Blocks/SearchServices/SideBar
+# defaultMessage: Collegamento
+msgid "link"
 msgstr ""
 
 #: components/DesignTheme/View/ServizioView
@@ -670,6 +707,11 @@ msgstr ""
 msgid "phone"
 msgstr ""
 
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+# defaultMessage: Placeholder
+msgid "placeholder"
+msgstr ""
+
 #: components/DesignTheme/Blocks/ArgomentoTitle/View
 # defaultMessage: A PORTATA DI CLICK
 msgid "portata_di_click"
@@ -779,8 +821,9 @@ msgstr ""
 msgid "searchLabel"
 msgstr ""
 
+#: components/DesignTheme/Blocks/SearchSections/SideBar
 #: components/DesignTheme/Header/SearchModal
-# defaultMessage: Sezioni
+# defaultMessage: Sezioni ricercabili
 msgid "sections"
 msgstr ""
 
