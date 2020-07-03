@@ -1,0 +1,61 @@
+.searchServices{
+  width: 100%;
+  min-height: 280px;
+  padding: 10px 50px;
+  @media (max-width: #{map-get($grid-breakpoints, lg) - 1px}) {
+    padding: 10px 6px;
+  }
+
+  background-color: $secondary;
+
+  .searchContainer {
+    padding: 0px 12%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 56px 0;
+
+    @media (max-width: #{map-get($grid-breakpoints, lg) - 1px}) {
+      padding: 0px 10px;
+    }
+    input.inputSearch {
+      border: none;
+      border-radius: 0;
+      outline: 0;
+      width: 96%;
+      box-shadow: none;
+      transition: 0.2s ease-out;
+      font-weight: 500;
+      height: 100%;
+      padding: 0;
+    }
+
+    .searchbar {
+      position: relative;
+      height: 45px;
+      padding: 5px 14px;
+
+      button {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50px;
+        height: 100%;
+        background: $primary;
+        border-width: 0px;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.buttonsContainer {
+  flex-wrap: wrap;
+
+  button.btn.btn-outline-secondary.btn-sm{
+    margin: 10px 10px 10px 0px;
+    background: $primary;
+    color: $white;
+    box-shadow: none;
+  }
+}
