@@ -144,6 +144,7 @@ const SideMenu = ({ data, documentBody }) => {
                       }`}
                       onClick={(e) => {
                         e.preventDefault();
+                        setActiveSection(item.id);
                         var anchorTarget = document.getElementById(item.id);
                         anchorTarget.scrollIntoView({
                           behavior: 'smooth',
