@@ -142,7 +142,14 @@ const SideMenu = ({ data, documentBody }) => {
                       className={`nav-link ${
                         item.id === activeSection && 'active'
                       }`}
-                      href={'#' + item.id}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        var anchorTarget = document.getElementById(item.id);
+                        anchorTarget.scrollIntoView({
+                          behavior: 'smooth',
+                          block: 'start',
+                        });
+                      }}
                     >
                       <span>{item.title}</span>
                     </a>
