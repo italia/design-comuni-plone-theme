@@ -87,6 +87,7 @@ const NewsItemView = ({ content, location }) => {
           </aside>
           <section
             className="col-lg-8 it-page-sections-container"
+            id="document-body"
             ref={documentBody}
           >
             <article

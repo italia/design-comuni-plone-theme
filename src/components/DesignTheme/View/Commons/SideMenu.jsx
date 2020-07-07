@@ -1,6 +1,6 @@
 import { defineMessages, useIntl } from 'react-intl';
 import React, { useEffect, useState } from 'react';
-import throttle from 'lodash.throttle';
+import { useHistory } from 'react-router-dom';
 
 const messages = defineMessages({
   index: {
@@ -68,42 +68,56 @@ const extractHeaders = (elements, intl) => {
  */
 const SideMenu = ({ data, documentBody }) => {
   const intl = useIntl();
-  const [headers, setHeaders] = useState([]);
-  const [activeSection, setActiveSection] = useState();
-  const [observer, setObserver] = useState();
-
-  const handleIntersection = function (entries, observer) {
-    entries.forEach((entry) => {
-      if (entry.target.id !== activeSection && entry.isIntersecting) {
-        setActiveSection(entry.target.id);
-      }
-    });
+  //let history = useHistory();
+  const [headers, _setHeaders] = useState([]);
+  const headersRef = React.useRef(headers);
+  const setHeaders = (data) => {
+    headersRef.current = data;
+    _setHeaders(data);
   };
+
+  const [activeSection, _setActiveSection] = useState();
+  const activeSectionRef = React.useRef(activeSection);
+  const setActiveSection = (data) => {
+    activeSectionRef.current = data;
+    _setActiveSection(data);
+  };
+  const [windowScrollY, setWindowScrollY] = useState(window.scrollY);
 
   useEffect(() => {
     if (data?.children) {
       setHeaders(extractHeaders(data.children, intl));
     }
 
-    setObserver(
-      new IntersectionObserver(handleIntersection, {
-        root: null,
-        threshold: 0.25,
-      }),
-    );
+    window.addEventListener('scroll', handleScroll);
   }, [data]);
 
-  useEffect(() => {
-    headers.map((item) => {
-      observer.observe(item.item);
-    });
-  }, [headers]);
+  const handleScroll = () => {
+    let scrollDown = window.scrollY > windowScrollY;
+    setWindowScrollY(window.scrollY);
+    let scrollOffset = (scrollDown ? 0.15 : 0.85) * window.innerHeight;
+    let headersHeights = headersRef.current
+      .map((section) => {
+        let element = document.getElementById(section.id);
+        return {
+          id: section.id,
+          top: element.getBoundingClientRect().top,
+        };
+      })
+      .filter((section) => section.top <= scrollOffset);
+    if (headersHeights.length > 0) {
+      let section = headersHeights.reduce(
+        (prev, curr) => (prev.top > curr.top ? prev : curr),
+        headersRef.current[0],
+      );
 
-  useEffect(() => {
-    if (observer) {
-      return () => observer.disconnect();
+      console.log('activeSectionbyHeight', section.id);
+      if (section.id !== activeSectionRef.current) {
+        console.log('setactive section', section.id);
+        setActiveSection(section.id);
+      }
     }
-  }, []);
+  };
 
   return headers?.length > 0 ? (
     <div className="sticky-wrapper navbar-wrapper">
@@ -150,6 +164,7 @@ const SideMenu = ({ data, documentBody }) => {
                           behavior: 'smooth',
                           block: 'start',
                         });
+                        //       history.push('#' + item.id);
                       }}
                     >
                       <span>{item.title}</span>
