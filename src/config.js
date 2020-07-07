@@ -18,6 +18,7 @@ import Icon from '@plone/volto/components/theme/Icon/Icon';
 import underlineSVG from '@plone/volto/icons/underline.svg';
 import alignCenterSVG from '@plone/volto/icons/align-center.svg';
 
+import newsSVG from '@plone/volto/icons/news.svg';
 import searchIcon from 'bootstrap-italia/src/svg/it-search.svg';
 import NewsHomeView from '@design/components/DesignTheme/Blocks/NewsHome/View';
 import NewsHomeEdit from '@design/components/DesignTheme/Blocks/NewsHome/Edit';
