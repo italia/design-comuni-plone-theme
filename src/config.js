@@ -19,12 +19,16 @@ import underlineSVG from '@plone/volto/icons/underline.svg';
 import alignCenterSVG from '@plone/volto/icons/align-center.svg';
 
 import newsSVG from '@plone/volto/icons/news.svg';
+import searchIcon from 'bootstrap-italia/src/svg/it-search.svg';
 import NewsHomeView from '@design/components/DesignTheme/Blocks/NewsHome/View';
 import NewsHomeEdit from '@design/components/DesignTheme/Blocks/NewsHome/Edit';
 
 import alertSVG from '@plone/volto/icons/alert.svg';
 import AlertView from '@design/components/DesignTheme/Blocks/Alert/View';
 import AlertEdit from '@design/components/DesignTheme/Blocks/Alert/Edit';
+
+import SearchSectionsView from '@design/components/DesignTheme/Blocks/SearchSections/View';
+import SearchSectionsEdit from '@design/components/DesignTheme/Blocks/SearchSections/Edit';
 
 import titleSVG from '@plone/volto/icons/text.svg';
 import ArgomentoTitleView from '@design/components/DesignTheme/Blocks/ArgomentoTitle/View';
@@ -45,7 +49,7 @@ import InEvidenceTemplate from '@design/components/DesignTheme/Blocks/Listing/In
 import { rssBlock as customRssBlock } from 'volto-rss-block';
 import CardWithImageRssTemplate from '@design/components/DesignTheme/Blocks/RssBlock/CardWithImageRssTemplate';
 import CardWithoutImageRssTemplate from '@design/components/DesignTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
-
+import { DatetimeWidget } from '@plone/volto/config/Widgets';
 import MultilingualWidget from 'volto-multilingual-widget';
 
 const rssBlock = {
@@ -101,6 +105,22 @@ const customBlocks = {
     edit: NewsHomeEdit,
     restricted: false,
     mostUsed: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
+  searchSections: {
+    id: 'searchSections',
+    title: 'Ricerca nelle sezioni',
+    icon: searchIcon,
+    group: 'text',
+    view: SearchSectionsView,
+    edit: SearchSectionsEdit,
+    restricted: false,
+    mostUsed: false,
+    blockHasOwnFocusManagement: true,
     security: {
       addPermission: [],
       view: [],
@@ -213,6 +233,10 @@ export const widgets = {
     ...defaultWidgets.id,
     description: CharCounterDescriptionWidget,
     cookie_consent_configuration: MultilingualWidget(),
+    data_conclusione_incarico: (props) => (
+      <DatetimeWidget {...props} dateOnly={true} />
+    ),
+    data_insediamento: (props) => <DatetimeWidget {...props} dateOnly={true} />,
   },
 };
 
@@ -220,6 +244,11 @@ const customBlocksOrder = [{ id: 'news', title: 'News' }];
 const customInitialBlocks = {
   'Pagina Argomento': ['pagina_argomento_title'],
 };
+
+// BUG#10398
+// We chose to disallow leadimage block usage in editor. If you want it back someday,
+// comment out the following line and add the leadimage behavior in Document.xml file
+delete defaultBlocks.blocksConfig['leadimage'];
 
 export const blocks = {
   ...defaultBlocks,

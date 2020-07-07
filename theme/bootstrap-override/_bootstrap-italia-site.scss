@@ -7,6 +7,7 @@
   @import 'node_modules/owl.carousel/src/scss/animate';
   @import 'node_modules/owl.carousel/src/scss/autoheight';
 }
+
 // funzioni e variabili colore
 @import 'bootstrap-italia/src/scss/functions';
 @import 'bootstrap-italia/src/scss/utilities/colors_vars';
@@ -123,6 +124,7 @@
   @import 'bootstrap-italia/src/scss/custom/navscroll';
   @import 'bootstrap-italia/src/scss/custom/navscrolltheme';
   @import 'bootstrap-italia/src/scss/custom/callout';
+  @import 'bootstrap-override/bootstrap-italia/callout';
   @import 'bootstrap-italia/src/scss/custom/toolbar';
   @import 'bootstrap-italia/src/scss/custom/sections';
   @import 'bootstrap-italia/src/scss/custom/dialog';

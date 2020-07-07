@@ -336,16 +336,16 @@ const ServizioView = ({ content }) => {
             ) : null}
             {content.link_siti_esterni?.data && (
               <Card
-                className="card card-teaser shadow p-4 mt-3 rounded border link-esterni"
+                className="card card-teaser shadow p-0 mt-3 rounded border link-esterni"
                 noWrapper={true}
                 tag="div"
               >
                 <CardBody tag="div">
-                  <CardTitle tag="h4">
+                  <CardTitle tag="h4" className="p-4">
                     {intl.formatMessage(messages.link_siti_esterni)}
                   </CardTitle>
                   <div
-                    className="text-serif"
+                    className="text-serif p-4 pt-0"
                     dangerouslySetInnerHTML={{
                       __html: content.link_siti_esterni.data,
                     }}
@@ -360,10 +360,10 @@ const ServizioView = ({ content }) => {
                 title={intl.formatMessage(messages.box_aiuto)}
               />
             )}
-            {content?.items?.some(e => e.id === 'allegati') && (
+            {content?.items?.some((e) => e.id === 'allegati') && (
               <Attachments content={content} folder_name={'allegati'} />
             )}
-            {content?.items?.some(e => e.id === 'modulistica') && (
+            {content?.items?.some((e) => e.id === 'modulistica') && (
               <Attachments
                 content={content}
                 folder_name={'modulistica'}
