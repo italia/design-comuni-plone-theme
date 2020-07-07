@@ -154,6 +154,14 @@ msgstr ""
 msgid "RssFeedItemNumber"
 msgstr ""
 
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+msgid "SearchServices"
+msgstr ""
+
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+msgid "SearchServicesTitle"
+msgstr ""
+
 #: components/DesignTheme/Header/HeaderCenter
 msgid "Seguici su"
 msgstr ""
@@ -390,6 +398,10 @@ msgstr ""
 msgid "deleghe"
 msgstr ""
 
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+msgid "desc"
+msgstr ""
+
 #: components/DesignTheme/View/ServizioView
 msgid "descrizione_destinatari"
 msgstr ""
@@ -418,6 +430,10 @@ msgstr ""
 
 #: components/DesignTheme/View/Commons/Actions
 msgid "download"
+msgstr ""
+
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+msgid "editSearch"
 msgstr ""
 
 #: components/DesignTheme/View/PersonaView
@@ -456,6 +472,22 @@ msgstr ""
 msgid "gallery"
 msgstr ""
 
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+msgid "geolocation"
+msgstr ""
+
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+msgid "geolocationClear"
+msgstr ""
+
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+msgid "geolocation_placeholder"
+msgstr ""
+
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+msgid "geolocation_selected"
+msgstr ""
+
 #: components/DesignTheme/View/PersonaView
 msgid "importi_di_viaggio_e_o_servizi"
 msgstr ""
@@ -466,6 +498,10 @@ msgstr ""
 
 #: components/DesignTheme/View/UOView
 msgid "legami_altre_strutture"
+msgstr ""
+
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+msgid "link"
 msgstr ""
 
 #: components/DesignTheme/View/ServizioView
@@ -493,7 +529,6 @@ msgid "multilingual_text_placeholder"
 msgstr ""
 
 #: components/DesignTheme/View/NewsItemView
-#: components/DesignTheme/View/UOView
 msgid "notizie_in_evidenza"
 msgstr ""
 
@@ -556,6 +591,10 @@ msgstr ""
 
 #: components/DesignTheme/View/PersonaView
 msgid "phone"
+msgstr ""
+
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+msgid "placeholder"
 msgstr ""
 
 #: components/DesignTheme/Blocks/ArgomentoTitle/View
@@ -647,6 +686,7 @@ msgstr ""
 msgid "searchLabel"
 msgstr ""
 
+#: components/DesignTheme/Blocks/SearchSections/SideBar
 #: components/DesignTheme/Header/SearchModal
 msgid "sections"
 msgstr ""
@@ -725,6 +765,10 @@ msgstr ""
 
 #: components/DesignTheme/View/Commons/TextOrBlocks
 msgid "unknownBlock"
+msgstr ""
+
+#: components/DesignTheme/View/UOView
+msgid "uo_related_news"
 msgstr ""
 
 #: addons/volto-multilingual-widget/src/index

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-06-18T11:05:46.548Z\n"
+"POT-Creation-Date: 2020-07-07T13:33:41.966Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -166,6 +166,16 @@ msgstr ""
 #: addons/volto-rss-block/src/Block/RssSidebar
 # defaultMessage: Number of items to show
 msgid "RssFeedItemNumber"
+msgstr ""
+
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+# defaultMessage: Ricerca servizi
+msgid "SearchServices"
+msgstr ""
+
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+# defaultMessage: Titolo
+msgid "SearchServicesTitle"
 msgstr ""
 
 #: components/DesignTheme/Header/HeaderCenter
@@ -461,6 +471,11 @@ msgstr ""
 msgid "deleghe"
 msgstr ""
 
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+# defaultMessage: Descrizione
+msgid "desc"
+msgstr ""
+
 #: components/DesignTheme/View/ServizioView
 # defaultMessage: Destinatari del servizio
 msgid "descrizione_destinatari"
@@ -496,6 +511,11 @@ msgstr ""
 #: components/DesignTheme/View/Commons/Actions
 # defaultMessage: Scarica
 msgid "download"
+msgstr ""
+
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+# defaultMessage: Modifica ricerca
+msgid "editSearch"
 msgstr ""
 
 #: components/DesignTheme/View/PersonaView
@@ -543,6 +563,26 @@ msgstr ""
 msgid "gallery"
 msgstr ""
 
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+# defaultMessage: Geolocation
+msgid "geolocation"
+msgstr ""
+
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+# defaultMessage: Clear
+msgid "geolocationClear"
+msgstr ""
+
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+# defaultMessage: Search a venue...
+msgid "geolocation_placeholder"
+msgstr ""
+
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+# defaultMessage: Selected
+msgid "geolocation_selected"
+msgstr ""
+
 #: components/DesignTheme/View/PersonaView
 # defaultMessage: Importi di viaggio e/o servizi
 msgid "importi_di_viaggio_e_o_servizi"
@@ -556,6 +596,11 @@ msgstr ""
 #: components/DesignTheme/View/UOView
 # defaultMessage: Legami con altre strutture
 msgid "legami_altre_strutture"
+msgstr ""
+
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+# defaultMessage: Collegamento
+msgid "link"
 msgstr ""
 
 #: components/DesignTheme/View/ServizioView
@@ -589,7 +634,6 @@ msgid "multilingual_text_placeholder"
 msgstr ""
 
 #: components/DesignTheme/View/NewsItemView
-#: components/DesignTheme/View/UOView
 # defaultMessage: Notizie in evidenza
 msgid "notizie_in_evidenza"
 msgstr ""
@@ -670,6 +714,11 @@ msgstr ""
 msgid "phone"
 msgstr ""
 
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+# defaultMessage: Placeholder
+msgid "placeholder"
+msgstr ""
+
 #: components/DesignTheme/Blocks/ArgomentoTitle/View
 # defaultMessage: A PORTATA DI CLICK
 msgid "portata_di_click"
@@ -731,7 +780,7 @@ msgid "removeTopic"
 msgstr ""
 
 #: components/DesignTheme/View/UOView
-# defaultMessage: Reposanbile
+# defaultMessage: Responsabile
 msgid "responsabile"
 msgstr ""
 
@@ -779,8 +828,9 @@ msgstr ""
 msgid "searchLabel"
 msgstr ""
 
+#: components/DesignTheme/Blocks/SearchSections/SideBar
 #: components/DesignTheme/Header/SearchModal
-# defaultMessage: Sezioni
+# defaultMessage: Sezioni ricercabili
 msgid "sections"
 msgstr ""
 
@@ -876,6 +926,11 @@ msgstr ""
 #: components/DesignTheme/View/Commons/TextOrBlocks
 # defaultMessage: Blocco sconosciuto
 msgid "unknownBlock"
+msgstr ""
+
+#: components/DesignTheme/View/UOView
+# defaultMessage: Notizie in evidenza
+msgid "uo_related_news"
 msgstr ""
 
 #: addons/volto-multilingual-widget/src/index
