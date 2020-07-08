@@ -30,7 +30,7 @@ const messages = defineMessages({
   },
   noDrag: {
     id: 'noDrag',
-    defaultMessage: 'Non è possibile caricare file al momento',
+    defaultMessage: 'Trascina il nuovo elemento da caricare',
   },
 });
 
@@ -91,7 +91,7 @@ const FileWidget = ({
         <div>
           {value && value !== currentValue && (
             <div>
-              {`${intl.formatMessage(messages.elementNew)} ${value.filename}`}
+              {`${intl.formatMessage(messages.elementNew)}: ${value.filename}`}
               <Button
                 icon
                 basic
@@ -111,17 +111,32 @@ const FileWidget = ({
           <div>
             {currentValue.download ? (
               <div>
-                {intl.formatMessage(messages.elementSaved)}
+                {`${intl.formatMessage(messages.elementSaved)}: `}
                 <Link
                   to={flattenToAppURL(currentValue.download)}
                   target={'_blank'}
                 >
                   {currentValue.filename}
                 </Link>
+                {(!value || (value && value === currentValue)) && (
+                  <Button
+                    icon
+                    basic
+                    className="delete-button"
+                    aria-label="delete file"
+                    onClick={() => {
+                      onChange(id, null);
+                      setCurrentValue(null);
+                    }}
+                  >
+                    <Icon name={deleteSVG} size="20px" />
+                  </Button>
+                )}
               </div>
             ) : (
               <div>
-                {intl.formatMessage(messages.elementNew)} {value.filename}
+                {`${intl.formatMessage(messages.elementNew)}: `}
+                {value.filename}
               </div>
             )}
           </div>
