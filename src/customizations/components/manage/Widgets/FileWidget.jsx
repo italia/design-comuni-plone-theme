@@ -16,21 +16,21 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import { defineMessages, useIntl } from 'react-intl';
 
 const messages = defineMessages({
-  drag: {
-    id: 'drop',
+  fileDrag: {
+    id: 'fileDrag',
     defaultMessage: 'Trascina i file qui ...',
   },
-  saved: {
-    id: 'saved',
-    defaultMessage: 'elemento salvato: ',
+  elementSaved: {
+    id: 'elementSaved',
+    defaultMessage: 'Elemento salvato',
   },
-  new: {
-    id: 'new',
-    defaultMessage: 'nuovo elemento: ',
+  elementNew: {
+    id: 'elementNew',
+    defaultMessage: 'Nuovo elemento',
   },
-  newDrag: {
-    id: 'newDrag',
-    defaultMessage: 'Trascina per usare un nuvo file',
+  noDrag: {
+    id: 'noDrag',
+    defaultMessage: 'Non è possibile caricare file al momento',
   },
 });
 
@@ -82,16 +82,16 @@ const FileWidget = ({
       <div {...getRootProps({ className: 'dropzone' })}>
         <input {...getInputProps({ name: id, id: `field-${id}` })} />
         {isDragActive ? (
-          <p>{intl.formatMessage(messages.drag)}</p>
+          <p>{intl.formatMessage(messages.fileDrag)}</p>
         ) : (
-          <p>{intl.formatMessage(messages.newDrag)}</p>
+          <p>{intl.formatMessage(messages.noDrag)}</p>
         )}
       </div>
       <div className="margin-10">
         <div>
           {value && value !== currentValue && (
             <div>
-              {`${intl.formatMessage(messages.new)} ${value.filename}`}
+              {`${intl.formatMessage(messages.elementNew)} ${value.filename}`}
               <Button
                 icon
                 basic
@@ -111,7 +111,7 @@ const FileWidget = ({
           <div>
             {currentValue.download ? (
               <div>
-                {intl.formatMessage(messages.saved)}
+                {intl.formatMessage(messages.elementSaved)}
                 <Link
                   to={flattenToAppURL(currentValue.download)}
                   target={'_blank'}
@@ -121,7 +121,7 @@ const FileWidget = ({
               </div>
             ) : (
               <div>
-                {intl.formatMessage(messages.new)} {value.filename}
+                {intl.formatMessage(messages.elementNew)} {value.filename}
               </div>
             )}
           </div>
