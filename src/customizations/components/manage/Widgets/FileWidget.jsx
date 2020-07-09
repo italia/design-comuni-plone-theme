@@ -5,7 +5,7 @@
 
 import React, { useCallback, useState } from 'react';
 import PropTypes from 'prop-types';
-import { Input, Button } from 'semantic-ui-react';
+import { Button } from 'semantic-ui-react';
 import { readAsDataURL } from 'promise-file-reader';
 
 import deleteSVG from '@plone/volto/icons/delete.svg';
@@ -16,21 +16,25 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import { defineMessages, useIntl } from 'react-intl';
 
 const messages = defineMessages({
-  fileDrag: {
-    id: 'fileDrag',
-    defaultMessage: 'Trascina i file qui ...',
+  releaseDrag: {
+    id: 'releaseDrag',
+    defaultMessage: 'Rilascia il file qui ...',
   },
   elementSaved: {
     id: 'elementSaved',
-    defaultMessage: 'Elemento salvato',
+    defaultMessage: 'Elemento caricato',
   },
   elementNew: {
     id: 'elementNew',
     defaultMessage: 'Nuovo elemento',
   },
-  noDrag: {
-    id: 'noDrag',
+  fileDrag: {
+    id: 'fileDrag',
     defaultMessage: 'Trascina il nuovo elemento da caricare',
+  },
+  editDrag: {
+    id: 'editDrag',
+    defaultMessage: "Trascina per sostituire l'elemento caricato",
   },
 });
 
@@ -79,12 +83,22 @@ const FileWidget = ({
       wrapped={wrapped}
       fieldSet={fieldSet}
     >
-      <div {...getRootProps({ className: 'dropzone' })}>
+      <div
+        {...getRootProps({
+          className: `dropzone lightgrey-bg-c2 ${
+            isDragActive ? 'dragColor' : 'color'
+          }`,
+        })}
+      >
         <input {...getInputProps({ name: id, id: `field-${id}` })} />
         {isDragActive ? (
-          <p>{intl.formatMessage(messages.fileDrag)}</p>
+          <p>{intl.formatMessage(messages.releaseDrag)}</p>
         ) : (
-          <p>{intl.formatMessage(messages.noDrag)}</p>
+          <p>
+            {currentValue || value
+              ? intl.formatMessage(messages.editDrag)
+              : intl.formatMessage(messages.fileDrag)}
+          </p>
         )}
       </div>
       <div className="margin-10">
