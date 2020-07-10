@@ -24,7 +24,7 @@ const Body = ({ block, sections }) => {
   moment.locale(intl.locale);
   return (
     <Row>
-      <div className={'public-ui searchServices'}>
+      <div className="public-ui searchServices">
         <div className="container">
           <div>
             <h2 className="text-white">{block.title}</h2>
@@ -54,7 +54,7 @@ const Body = ({ block, sections }) => {
                 />
               </button>
             </div>
-            <div className={cx('buttonsContainer', 'mt-2', 'd-flex')}>
+            <div className="buttonsContainer mt-2 d-flex">
               {block.links?.map((link, index) => {
                 return (
                   <Button
