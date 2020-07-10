@@ -291,7 +291,7 @@ const UOView = ({ content }) => {
                 </div>
               </article>
             ) : null}
-            <Metadata content={content} />
+            <Metadata content={content} showTags={false} />
           </section>
         </div>
       </div>
