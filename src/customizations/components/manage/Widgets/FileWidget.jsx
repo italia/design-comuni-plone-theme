@@ -57,7 +57,6 @@ const FileWidget = ({
   const [currentValue, setCurrentValue] = useState(value);
 
   const onDrop = useCallback((acceptedFiles) => {
-    console.log(acceptedFiles);
     const file = acceptedFiles[0];
     readAsDataURL(file).then((data) => {
       const fields = data.match(/^data:(.*);(.*),(.*)$/);
