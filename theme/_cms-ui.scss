@@ -16,4 +16,8 @@ body.cms-ui {
   .it-footer {
     display: none;
   }
+
+  .react-select__menu {
+    z-index: 11;
+  }
 }
