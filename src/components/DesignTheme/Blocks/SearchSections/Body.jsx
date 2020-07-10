@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { Row, Icon, Button } from 'design-react-kit/dist/design-react-kit';
 import { useIntl } from 'react-intl';
 import moment from 'moment';
-import cx from 'classnames';
 
 const navigate = (text, serivices) => {
   window.location.href =
@@ -25,7 +24,7 @@ const Body = ({ block, sections }) => {
   moment.locale(intl.locale);
   return (
     <Row>
-      <div className={cx('public-ui', 'searchServices')}>
+      <div className={'public-ui searchServices'}>
         <div className="container">
           <div>
             <h2 className="text-white">{block.title}</h2>
