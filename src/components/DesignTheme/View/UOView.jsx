@@ -195,6 +195,7 @@ const UOView = ({ content }) => {
                     to={flattenToAppURL(item['@id'])}
                     key={item['@id']}
                     title={item.title}
+                    className="text-decoration-none"
                   >
                     <Chip
                       color="primary"
@@ -222,6 +223,7 @@ const UOView = ({ content }) => {
                     to={flattenToAppURL(item['@id'])}
                     key={item['@id']}
                     title={item.title}
+                    className="text-decoration-none"
                   >
                     <Chip
                       color="primary"
@@ -249,6 +251,7 @@ const UOView = ({ content }) => {
                     to={flattenToAppURL(item['@id'])}
                     key={item['@id']}
                     title={item.title}
+                    className="text-decoration-none"
                   >
                     <Chip
                       color="primary"
@@ -263,7 +266,7 @@ const UOView = ({ content }) => {
                 ))}
               </article>
             ) : null}
-            {content?.items.some((e) => e.id === 'allegati') && (
+            {content?.items.some(e => e.id === 'allegati') && (
               <Attachments content={content} folder_name={'allegati'} />
             )}
             {content.box_aiuto && (

@@ -49,7 +49,11 @@ const CuredBy = ({ office, people }) => {
               <small>{intl.formatMessage(messages.cured_by_people)}</small>
             </h6>
             {people.map((item, i) => (
-              <Link to={flattenToAppURL(item['@id'])} key={item['@id']}>
+              <Link
+                to={flattenToAppURL(item['@id'])}
+                key={item['@id']}
+                className="text-decoration-none"
+              >
                 <Chip
                   color="primary"
                   disabled={false}
