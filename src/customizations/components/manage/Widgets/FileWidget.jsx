@@ -61,7 +61,6 @@ const FileWidget = ({
     const file = acceptedFiles[0];
     readAsDataURL(file).then((data) => {
       const fields = data.match(/^data:(.*);(.*),(.*)$/);
-      console.log(fields);
       onChange(id, {
         data: fields[3],
         encoding: fields[2],
