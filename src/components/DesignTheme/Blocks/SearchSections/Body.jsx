@@ -38,14 +38,21 @@ const Body = ({ block, sections }) => {
                 placeholder={block.placeholder}
                 onChange={(e) => setInputText(e.currentTarget.value)}
                 onKeyDown={(e) =>
-                  e.key === 'Enter' ? navigate(inputText, searchFilters()) : null
+                  e.key === 'Enter'
+                    ? navigate(inputText, searchFilters())
+                    : null
                 }
               ></input>
               <button
                 className="rounded-right"
                 onClick={(e) => navigate(inputText, searchFilters())}
               >
-                <Icon icon="it-search" padding={false} size="sm" color="white" />
+                <Icon
+                  icon="it-search"
+                  padding={false}
+                  size="sm"
+                  color="white"
+                />
               </button>
             </div>
             <div className={cx('buttonsContainer', 'mt-2', 'd-flex')}>
