@@ -1,6 +1,7 @@
-.searchServices{
+.block .row .searchServices{
   width: 100%;
   min-height: 280px;
+  height: auto;
   padding: 10px 50px;
   @media (max-width: #{map-get($grid-breakpoints, lg) - 1px}) {
     padding: 10px 6px;
@@ -26,6 +27,7 @@
       transition: 0.2s ease-out;
       font-weight: 500;
       height: 100%;
+      width: 100%;
       padding: 0;
     }
 
