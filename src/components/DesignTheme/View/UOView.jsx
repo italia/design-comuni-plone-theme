@@ -179,7 +179,7 @@ const UOView = ({ content }) => {
                     to={flattenToAppURL(item['@id'])}
                     key={item['@id']}
                     title={item.title}
-                    className="text-decoration-none"
+                    className="text-decoration-none mr-2"
                   >
                     <Chip
                       color="primary"
@@ -205,7 +205,7 @@ const UOView = ({ content }) => {
                     to={flattenToAppURL(item['@id'])}
                     key={item['@id']}
                     title={item.title}
-                    className="text-decoration-none"
+                    className="text-decoration-none  mr-2"
                   >
                     <Chip
                       color="primary"
