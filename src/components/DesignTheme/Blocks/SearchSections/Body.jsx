@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Row, Icon, Button } from 'design-react-kit/dist/design-react-kit';
 import { useIntl } from 'react-intl';
 import moment from 'moment';
-import cx from 'classnames';
+import { useHistory } from 'react-router-dom';
 
 const navigate = (text, serivices) => {
   window.location.href =
@@ -13,6 +13,7 @@ const navigate = (text, serivices) => {
 };
 
 const Body = ({ block, sections }) => {
+  const history = useHistory();
   const [inputText, setInputText] = useState('');
 
   const searchFilters = () => {
@@ -21,17 +22,21 @@ const Body = ({ block, sections }) => {
     });
   };
 
+  const handleClick = (link) => {
+    history.push(link['@id']);
+  };
+
   const intl = useIntl();
   moment.locale(intl.locale);
   return (
     <Row>
-      <div className={cx('searchServices', 'public-ui')}>
-        <div>
-          <h2 className="text-white">{block.title}</h2>
-        </div>
-        <div className="searchContainer d-flex w-100">
-          <div className="searchbar lightgrey-bg-c2 shadow-sm rounded d-flex w-100">
-            <div>
+      <div className="public-ui searchServices">
+        <div className="container">
+          <div>
+            <h2 className="text-white">{block.title}</h2>
+          </div>
+          <div className="searchContainer d-flex w-100">
+            <div className="searchbar lightgrey-bg-c2 shadow-sm rounded d-flex w-100">
               <input
                 className="inputSearch lightgrey-bg-c2"
                 type="text"
@@ -43,7 +48,10 @@ const Body = ({ block, sections }) => {
                     : null
                 }
               ></input>
-              <button className="rounded-right" onClick={(e) => navigate(inputText, searchFilters())}>
+              <button
+                className="rounded-right"
+                onClick={(e) => navigate(inputText, searchFilters())}
+              >
                 <Icon
                   icon="it-search"
                   padding={false}
@@ -52,21 +60,21 @@ const Body = ({ block, sections }) => {
                 />
               </button>
             </div>
-          </div>
-          <div className={cx('buttonsContainer', 'mt-2', 'd-flex')}>
-            {block.links?.map((link, index) => {
-              return (
-                <Button
-                  outline
-                  tag="button"
-                  size="sm"
-                  key={index}
-                  onClick={() => (window.location = link['@id'])}
-                >
-                  {link.title}
-                </Button>
-              );
-            })}
+            <div className="buttonsContainer mt-2 d-flex">
+              {block.links?.map((link, index) => {
+                return (
+                  <Button
+                    outline
+                    tag="button"
+                    size="sm"
+                    key={index}
+                    onClick={() => handleClick(link)}
+                  >
+                    {link.title}
+                  </Button>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>

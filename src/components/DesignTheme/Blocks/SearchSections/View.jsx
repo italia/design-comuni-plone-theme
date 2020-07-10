@@ -11,7 +11,7 @@ const View = ({ data, id }) => {
   );
 
   return (
-    <div className="block">
+    <div className="block full-width">
       <Body content={content} block={data} sections={sections} />
     </div>
   );
