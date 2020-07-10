@@ -53,7 +53,7 @@ msgstr "Contatti"
 
 #: components/DesignTheme/View/Commons/SideMenu
 msgid "Contenuto"
-msgstr ""
+msgstr "Contenuto"
 
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Default"
@@ -76,7 +76,6 @@ msgid "Image"
 msgstr "Image"
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
-#: components/DesignTheme/Widgets/LinkToWidget
 msgid "Link to"
 msgstr "Link a"
 
@@ -117,7 +116,6 @@ msgid "Note legali"
 msgstr "Note legali"
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
-#: components/DesignTheme/Widgets/LinkToWidget
 msgid "Open in a new tab"
 msgstr "Apri in un nuovo tab"
 
@@ -142,14 +140,12 @@ msgid "RssFeedItemNumber"
 msgstr "Numero di elementi da mostrare"
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "SearchServices"
-msgstr ""
+msgstr "Ricerca servizi"
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "SearchServicesTitle"
-msgstr ""
+msgstr "Titolo"
 
 #: components/DesignTheme/Header/HeaderCenter
 msgid "Seguici su"
@@ -388,9 +384,8 @@ msgid "deleghe"
 msgstr "Deleghe"
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "desc"
-msgstr ""
+msgstr "Descrizione"
 
 #: components/DesignTheme/View/ServizioView
 msgid "descrizione_destinatari"
@@ -423,9 +418,8 @@ msgid "download"
 msgstr "Scarica"
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "editSearch"
-msgstr ""
+msgstr "Modifica ricerca"
 
 #: components/DesignTheme/View/PersonaView
 msgid "email"
@@ -463,6 +457,22 @@ msgstr "Filtri"
 msgid "gallery"
 msgstr "Galleria di immagini"
 
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+msgid "geolocation"
+msgstr ""
+
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+msgid "geolocationClear"
+msgstr ""
+
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+msgid "geolocation_placeholder"
+msgstr ""
+
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+msgid "geolocation_selected"
+msgstr ""
+
 #: components/DesignTheme/View/PersonaView
 msgid "importi_di_viaggio_e_o_servizi"
 msgstr "Importi di viaggio e/o servizi"
@@ -476,9 +486,8 @@ msgid "legami_altre_strutture"
 msgstr "Legami con altre strutture"
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "link"
-msgstr ""
+msgstr "Collegamento"
 
 #: components/DesignTheme/View/ServizioView
 msgid "link_siti_esterni"
@@ -505,7 +514,6 @@ msgid "multilingual_text_placeholder"
 msgstr "Digita..."
 
 #: components/DesignTheme/View/NewsItemView
-#: components/DesignTheme/View/UOView
 msgid "notizie_in_evidenza"
 msgstr "Notizie in evidenza"
 
@@ -572,7 +580,7 @@ msgstr "Telefono"
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
 msgid "placeholder"
-msgstr ""
+msgstr "Placeholder"
 
 #: components/DesignTheme/Blocks/ArgomentoTitle/View
 msgid "portata_di_click"
@@ -743,6 +751,10 @@ msgstr "Ulteriori informazioni"
 #: components/DesignTheme/View/Commons/TextOrBlocks
 msgid "unknownBlock"
 msgstr "Blocco sconosciuto"
+
+#: components/DesignTheme/View/UOView
+msgid "uo_related_news"
+msgstr "Notizie in evidenza"
 
 #: addons/volto-multilingual-widget/src/index
 msgid "value_for_lang"

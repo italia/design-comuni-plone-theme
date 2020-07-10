@@ -83,7 +83,6 @@ msgid "Image"
 msgstr ""
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
-#: components/DesignTheme/Widgets/LinkToWidget
 msgid "Link to"
 msgstr ""
 
@@ -124,7 +123,6 @@ msgid "Note legali"
 msgstr ""
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
-#: components/DesignTheme/Widgets/LinkToWidget
 msgid "Open in a new tab"
 msgstr ""
 
@@ -149,12 +147,10 @@ msgid "RssFeedItemNumber"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "SearchServices"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "SearchServicesTitle"
 msgstr ""
 
@@ -395,7 +391,6 @@ msgid "deleghe"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "desc"
 msgstr ""
 
@@ -430,7 +425,6 @@ msgid "download"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "editSearch"
 msgstr ""
 
@@ -470,6 +464,22 @@ msgstr ""
 msgid "gallery"
 msgstr ""
 
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+msgid "geolocation"
+msgstr ""
+
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+msgid "geolocationClear"
+msgstr ""
+
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+msgid "geolocation_placeholder"
+msgstr ""
+
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+msgid "geolocation_selected"
+msgstr ""
+
 #: components/DesignTheme/View/PersonaView
 msgid "importi_di_viaggio_e_o_servizi"
 msgstr ""
@@ -483,7 +493,6 @@ msgid "legami_altre_strutture"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "link"
 msgstr ""
 
@@ -512,7 +521,6 @@ msgid "multilingual_text_placeholder"
 msgstr ""
 
 #: components/DesignTheme/View/NewsItemView
-#: components/DesignTheme/View/UOView
 msgid "notizie_in_evidenza"
 msgstr ""
 
@@ -749,6 +757,10 @@ msgstr ""
 
 #: components/DesignTheme/View/Commons/TextOrBlocks
 msgid "unknownBlock"
+msgstr ""
+
+#: components/DesignTheme/View/UOView
+msgid "uo_related_news"
 msgstr ""
 
 #: addons/volto-multilingual-widget/src/index
