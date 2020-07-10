@@ -173,7 +173,7 @@ const PersonaView = ({ content }) => {
                 {content.telefono ? (
                   <p>
                     <strong>{intl.formatMessage(messages.phone)}: </strong>
-                    {content.telefono}
+                    <a href={`tel:${content.telefono}`}>{content.telefono}</a>
                   </p>
                 ) : (
                   ''

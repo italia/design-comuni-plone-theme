@@ -48,7 +48,7 @@ const InEvidenceTemplate = ({ items, title, isEditMode }) => {
               <CardCategory
                 date={item.effective && moment(item.effective).format('ll')}
               >
-                {item.subjects?.join(', ')}
+                {item?.design_italia_meta_type}
               </CardCategory>
               <CardTitle tag="h4">
                 <Link to={flattenToAppURL(item['@id'])}>
