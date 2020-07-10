@@ -13,7 +13,7 @@ const navigate = (text, serivices) => {
 };
 
 const Body = ({ block, sections }) => {
-  const [inputText, setInputText] = useState(false);
+  const [inputText, setInputText] = useState('');
 
   const searchFilters = () => {
     return block.sections.flatMap((section) => {
