@@ -85,7 +85,6 @@ const Sidebar = ({
               ])}
               value={data.sections}
               onChange={(name, value) => {
-                console.log(value);
                 onChangeBlock(block, {
                   ...data,
                   // is not possible remove the no-value field form select
