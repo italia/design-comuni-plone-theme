@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Row, Icon, Button } from 'design-react-kit/dist/design-react-kit';
 import { useIntl } from 'react-intl';
 import moment from 'moment';
+import { useHistory } from 'react-router-dom';
 
 const navigate = (text, serivices) => {
   window.location.href =
@@ -12,12 +13,17 @@ const navigate = (text, serivices) => {
 };
 
 const Body = ({ block, sections }) => {
+  const history = useHistory();
   const [inputText, setInputText] = useState('');
 
   const searchFilters = () => {
     return block.sections.flatMap((section) => {
       return sections[section.value].items.map((x) => x.path);
     });
+  };
+
+  const handleClick = (link) => {
+    history.push(link['@id']);
   };
 
   const intl = useIntl();
@@ -62,7 +68,7 @@ const Body = ({ block, sections }) => {
                     tag="button"
                     size="sm"
                     key={index}
-                    onClick={() => (window.location = link['@id'])}
+                    onClick={() => handleClick(link)}
                   >
                     {link.title}
                   </Button>
