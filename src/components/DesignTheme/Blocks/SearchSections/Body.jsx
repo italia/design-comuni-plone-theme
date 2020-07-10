@@ -26,41 +26,43 @@ const Body = ({ block, sections }) => {
   return (
     <Row>
       <div className={cx('public-ui', 'searchServices')}>
-        <div>
-          <h2 className="text-white">{block.title}</h2>
-        </div>
-        <div className="searchContainer d-flex w-100">
-          <div className="searchbar lightgrey-bg-c2 shadow-sm rounded d-flex w-100">
-            <input
-              className="inputSearch lightgrey-bg-c2"
-              type="text"
-              placeholder={block.placeholder}
-              onChange={(e) => setInputText(e.currentTarget.value)}
-              onKeyDown={(e) =>
-                e.key === 'Enter' ? navigate(inputText, searchFilters()) : null
-              }
-            ></input>
-            <button
-              className="rounded-right"
-              onClick={(e) => navigate(inputText, searchFilters())}
-            >
-              <Icon icon="it-search" padding={false} size="sm" color="white" />
-            </button>
+        <div className="container">
+          <div>
+            <h2 className="text-white">{block.title}</h2>
           </div>
-          <div className={cx('buttonsContainer', 'mt-2', 'd-flex')}>
-            {block.links?.map((link, index) => {
-              return (
-                <Button
-                  outline
-                  tag="button"
-                  size="sm"
-                  key={index}
-                  onClick={() => (window.location = link['@id'])}
-                >
-                  {link.title}
-                </Button>
-              );
-            })}
+          <div className="searchContainer d-flex w-100">
+            <div className="searchbar lightgrey-bg-c2 shadow-sm rounded d-flex w-100">
+              <input
+                className="inputSearch lightgrey-bg-c2"
+                type="text"
+                placeholder={block.placeholder}
+                onChange={(e) => setInputText(e.currentTarget.value)}
+                onKeyDown={(e) =>
+                  e.key === 'Enter' ? navigate(inputText, searchFilters()) : null
+                }
+              ></input>
+              <button
+                className="rounded-right"
+                onClick={(e) => navigate(inputText, searchFilters())}
+              >
+                <Icon icon="it-search" padding={false} size="sm" color="white" />
+              </button>
+            </div>
+            <div className={cx('buttonsContainer', 'mt-2', 'd-flex')}>
+              {block.links?.map((link, index) => {
+                return (
+                  <Button
+                    outline
+                    tag="button"
+                    size="sm"
+                    key={index}
+                    onClick={() => (window.location = link['@id'])}
+                  >
+                    {link.title}
+                  </Button>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
