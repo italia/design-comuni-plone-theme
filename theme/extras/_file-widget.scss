@@ -1,0 +1,26 @@
+.dropzone {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border-width: 2px;
+  border-radius: 2px;
+  border-style: dashed;
+  outline: none;
+  transition: border .24s ease-in-out;
+}
+
+.color {
+  border-color: rgba($secondary, 0.5);
+  color: rgba($secondary, 0.5);
+}
+
+.dragColor{
+  border-color: rgba($secondary, 1);
+  color: rgba($secondary, 1);
+}
+
+.margin-10 {
+  margin: 10px;
+}
