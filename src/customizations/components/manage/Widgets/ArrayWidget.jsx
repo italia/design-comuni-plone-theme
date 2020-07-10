@@ -203,7 +203,7 @@ class ArrayWidget extends Component {
     );
   }
 
-  getOptions() {
+  getOptions = () => {
     if (this.props.choices) {
       const options = [
         ...this.props.choices.map((option) => ({
@@ -227,7 +227,7 @@ class ArrayWidget extends Component {
         },
       ];
     }
-  }
+  };
 
   /**
    * Render method.
