@@ -29,7 +29,7 @@ const messages = defineMessages({
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const Metadata = params => {
+const Metadata = ({ content, showTags = true }) => {
   const intl = useIntl();
   return (
     <article
@@ -41,22 +41,20 @@ const Metadata = params => {
       </h4>
       <p className="text-serif">{intl.formatMessage(messages.modified)}</p>
       <h6 className="no-toc">
-        <strong>
-          {moment(params.content.modified).format('DD-MM-Y HH:MM')}
-        </strong>
+        <strong>{moment(content.modified).format('DD-MM-Y HH:MM')}</strong>
       </h6>
-      {params.content.rights && (
+      {content.rights && (
         <>
           <p className="text-serif">{intl.formatMessage(messages.rights)}</p>
           <h6 className="no-toc">
-            <strong>{params.content.rights}</strong>
+            <strong>{content.rights}</strong>
           </h6>
         </>
       )}
-      {params.content.subjects?.length !== 0 && (
+      {showTags && content.subjects?.length > 0 && (
         <>
           <p className="text-serif">{intl.formatMessage(messages.subjects)}</p>
-          {params.content.subjects?.map((item, i) => (
+          {content.subjects?.map((item, i) => (
             <Chip
               color=""
               disabled={false}
@@ -76,7 +74,5 @@ const Metadata = params => {
 export default Metadata;
 
 Metadata.propTypes = {
-  params: PropTypes.shape({
-    content: PropTypes.object,
-  }),
+  content: PropTypes.object,
 };

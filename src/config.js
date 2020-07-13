@@ -57,11 +57,11 @@ const rssBlock = {
   templates: {
     ...customRssBlock.templates,
     default: {
-      label: 'Card template without image',
+      label: 'Card senza immagine',
       template: CardWithoutImageRssTemplate,
     },
     card_without_image: {
-      label: 'Card template with image ',
+      label: 'Card con immagine',
       template: CardWithImageRssTemplate,
     },
   },
