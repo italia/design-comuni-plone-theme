@@ -413,10 +413,6 @@ msgstr "Documenti e dati"
 msgid "download"
 msgstr "Scarica"
 
-#: components/DesignTheme/Blocks/SearchSections/SideBar
-msgid "editSearch"
-msgstr ""
-
 #: components/DesignTheme/View/PersonaView
 msgid "email"
 msgstr "Email"
@@ -727,7 +723,6 @@ msgid "ufficio_responsabile"
 msgstr "Ufficio responsabile"
 
 #: components/DesignTheme/View/PersonaView
-#: components/DesignTheme/View/UOView
 msgid "ulteriori_informazioni"
 msgstr "Ulteriori informazioni"
 
@@ -738,6 +733,10 @@ msgstr "Blocco sconosciuto"
 #: components/DesignTheme/View/UOView
 msgid "uo_related_news"
 msgstr ""
+
+#: components/DesignTheme/View/UOView
+msgid "uo_ulteriori_informazioni"
+msgstr "Informazioni"
 
 #: addons/volto-multilingual-widget/src/index
 msgid "value_for_lang"

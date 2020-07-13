@@ -41,8 +41,8 @@ const messages = defineMessages({
     id: 'persone_struttura',
     defaultMessage: 'Persone che compongono la struttura',
   },
-  ulteriori_informazioni: {
-    id: 'ulteriori_informazioni',
+  uo_ulteriori_informazioni: {
+    id: 'uo_ulteriori_informazioni',
     defaultMessage: 'Informazioni',
   },
   box_aiuto: {
@@ -106,7 +106,7 @@ const UOView = ({ content }) => {
               <RichTextArticle
                 content={content.ulteriori_informazioni.data}
                 tag_id="ulteriori_informazioni"
-                title={intl.formatMessage(messages.ulteriori_informazioni)}
+                title={intl.formatMessage(messages.uo_ulteriori_informazioni)}
               />
             )}
             {content.sedi?.length > 0 && (

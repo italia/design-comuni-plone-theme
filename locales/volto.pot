@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-07-13T08:32:37.608Z\n"
+"POT-Creation-Date: 2020-07-13T09:20:21.562Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -513,11 +513,6 @@ msgstr ""
 msgid "download"
 msgstr ""
 
-#: components/DesignTheme/Blocks/SearchSections/SideBar
-# defaultMessage: Modifica ricerca
-msgid "editSearch"
-msgstr ""
-
 #: components/DesignTheme/View/PersonaView
 # defaultMessage: Email
 msgid "email"
@@ -902,7 +897,6 @@ msgid "ufficio_responsabile"
 msgstr ""
 
 #: components/DesignTheme/View/PersonaView
-#: components/DesignTheme/View/UOView
 # defaultMessage: Ulteriori informazioni
 msgid "ulteriori_informazioni"
 msgstr ""
@@ -915,6 +909,11 @@ msgstr ""
 #: components/DesignTheme/View/UOView
 # defaultMessage: Notizie in evidenza
 msgid "uo_related_news"
+msgstr ""
+
+#: components/DesignTheme/View/UOView
+# defaultMessage: Informazioni
+msgid "uo_ulteriori_informazioni"
 msgstr ""
 
 #: addons/volto-multilingual-widget/src/index
