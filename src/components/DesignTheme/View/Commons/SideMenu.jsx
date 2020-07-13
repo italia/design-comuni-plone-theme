@@ -63,13 +63,14 @@ const SideMenu = ({ data }) => {
     activeSectionRef.current = data;
     _setActiveSection(data);
   };
-  const [windowScrollY, setWindowScrollY] = useState(window.scrollY);
+  const [windowScrollY, setWindowScrollY] = useState(0);
 
   useEffect(() => {
     if (data?.children) {
       let extractedHeaders = extractHeaders(data.children, intl);
       setHeaders(extractedHeaders);
       setActiveSection(extractedHeaders[0].id);
+      setWindowScrollY(window.scrollY);
     }
   }, [data]);
 
