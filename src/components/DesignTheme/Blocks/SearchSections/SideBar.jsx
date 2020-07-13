@@ -16,15 +16,15 @@ const messages = defineMessages({
   },
   desc: {
     id: 'desc',
-    defaultMessage: 'Descrizione',
+    defaultMessage: 'Link rapidi',
   },
-  sections: {
-    id: 'sections',
-    defaultMessage: 'Sezioni ricercabili',
+  search_service_block_sections: {
+    id: 'search_service_block_sections',
+    defaultMessage: 'Dove cercare',
   },
   placeholder: {
     id: 'placeholder',
-    defaultMessage: 'Placeholder',
+    defaultMessage: 'Testo di aiuto',
   },
 });
 
@@ -37,7 +37,7 @@ const Sidebar = ({
   required,
 }) => {
   const intl = useIntl();
-
+  debugger;
   return (
     <Segment.Group raised>
       <header className="header pulled">
@@ -77,7 +77,7 @@ const Sidebar = ({
           {sections && (
             <ArrayWidget
               id="groups"
-              title={intl.formatMessage(messages.sections)}
+              title={intl.formatMessage(messages.search_service_block_sections)}
               noValuePresent={false}
               choices={Object.keys(sections).map((key) => [
                 key,
