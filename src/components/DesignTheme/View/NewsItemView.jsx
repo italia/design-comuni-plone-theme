@@ -3,7 +3,7 @@
  * @module components/theme/View/NewsItemView
  */
 
-import React from 'react';
+import React, { createRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import { readingTime } from './ViewUtils';
@@ -45,12 +45,19 @@ const messages = defineMessages({
  */
 const NewsItemView = ({ content, location }) => {
   const intl = useIntl();
-  const text = <TextOrBlocks content={content} location={location} />;
-  const reading_text = getHTMLString(text, intl.locale);
 
-  let readingtime = readingTime(
-    `${content.title} ${content.description} ${reading_text}`,
-  );
+  const [readingtime, setReadingtime] = useState(0);
+  let documentBody = createRef();
+
+  useEffect(() => {
+    if (documentBody.current) {
+      if (__CLIENT__) {
+        setReadingtime(
+          readingTime(content.title, content.description, documentBody),
+        );
+      }
+    }
+  }, [documentBody]);
 
   return (
     <>
@@ -76,12 +83,16 @@ const NewsItemView = ({ content, location }) => {
           <aside className="col-lg-4">
             <SideMenu />
           </aside>
-          <section className="col-lg-8 it-page-sections-container">
+          <section
+            className="col-lg-8 it-page-sections-container"
+            id="document-body"
+            ref={documentBody}
+          >
             <article
               id="text-body"
               className="it-page-section anchor-offset clearfix"
             >
-              {text}
+              <TextOrBlocks content={content} location={location} />
             </article>
 
             {content?.items.some((e) => e.id === 'multimedia') && (
