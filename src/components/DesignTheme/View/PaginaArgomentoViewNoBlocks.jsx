@@ -97,7 +97,6 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
           </aside>
           <section
             className="col-lg-8 it-page-sections-container"
-            id="document-body"
             ref={documentBody}
           >
             {content?.area_appartenenza?.length > 0 ? (

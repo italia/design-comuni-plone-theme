@@ -150,7 +150,6 @@ const PersonaView = ({ content }) => {
           </aside>
           <section
             className="col-lg-8 it-page-sections-container"
-            id="document-body"
             ref={documentBody}
           >
             {content.data_insediamento && !content.data_conclusione_incarico ? (
