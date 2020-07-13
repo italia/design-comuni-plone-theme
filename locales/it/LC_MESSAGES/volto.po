@@ -72,16 +72,17 @@ msgid "Image"
 msgstr "Image"
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
+#: components/DesignTheme/Widgets/LinkToWidget
 msgid "Link to"
-msgstr ""
+msgstr "Link a"
 
 #: components/DesignTheme/Blocks/NewsHome/Sidebar
 msgid "LinkMore"
-msgstr ""
+msgstr "Link ad altro"
 
 #: components/DesignTheme/Blocks/NewsHome/Sidebar
 msgid "Linkto title"
-msgstr ""
+msgstr "Titolo per il link ad altro"
 
 #: components/DesignTheme/Footer/FooterSmall
 msgid "Mappa del sito"
@@ -112,8 +113,9 @@ msgid "Note legali"
 msgstr "Note legali"
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
+#: components/DesignTheme/Widgets/LinkToWidget
 msgid "Open in a new tab"
-msgstr ""
+msgstr "Apri in un nuovo tab"
 
 #: components/DesignTheme/Footer/FooterInfos
 msgid "PEC"
@@ -136,10 +138,12 @@ msgid "RssFeedItemNumber"
 msgstr "Numero di elementi da mostrare"
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
+#: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "SearchServices"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
+#: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "SearchServicesTitle"
 msgstr ""
 
@@ -169,7 +173,7 @@ msgstr "Template"
 
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Title"
-msgstr "Title"
+msgstr "Titolo"
 
 #: components/DesignTheme/Blocks/ArgomentoTitle/Edit
 msgid "Type description…"
@@ -380,6 +384,7 @@ msgid "deleghe"
 msgstr "Deleghe"
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
+#: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "desc"
 msgstr ""
 
@@ -413,7 +418,7 @@ msgstr "Documenti e dati"
 msgid "download"
 msgstr "Scarica"
 
-#: components/DesignTheme/Blocks/SearchSections/SideBar
+#: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "editSearch"
 msgstr ""
 
@@ -466,6 +471,7 @@ msgid "legami_altre_strutture"
 msgstr "Legami con altre strutture"
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
+#: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "link"
 msgstr ""
 
