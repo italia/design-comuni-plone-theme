@@ -3,7 +3,7 @@
  * @module components/theme/View/UOView
  */
 
-import React, { useEffect, createRef, useState } from 'react';
+import React, { createRef, useEffect, useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -77,11 +77,15 @@ const UOView = ({ content }) => {
   const intl = useIntl();
   let documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
+
   useEffect(() => {
     if (documentBody.current) {
-      setSideMenuElements(documentBody.current);
+      if (__CLIENT__) {
+        setSideMenuElements(documentBody.current);
+      }
     }
   }, [documentBody]);
+
   return (
     <>
       <div className="container px-4 my-4 uo-view">
