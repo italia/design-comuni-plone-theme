@@ -3,11 +3,10 @@
  * @module components/theme/View/NewsItemView
  */
 
-import React, { useEffect, createRef, useState } from 'react';
+import React, { createRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import { readingTime } from './ViewUtils';
-import { getHTMLString } from './ViewUtils';
 
 import {
   RelatedNews,
@@ -46,18 +45,18 @@ const messages = defineMessages({
 const NewsItemView = ({ content, location }) => {
   const intl = useIntl();
 
-  const text = <TextOrBlocks content={content} location={location} />;
-  const reading_text = getHTMLString(text, intl.locale);
-
-  let readingtime = readingTime(
-    `${content.title} ${content.description} ${reading_text}`,
-  );
+  const [readingtime, setReadingtime] = useState(0);
   let documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
 
   useEffect(() => {
     if (documentBody.current) {
-      setSideMenuElements(documentBody.current);
+      if (__CLIENT__) {
+        setReadingtime(
+          readingTime(content.title, content.description, documentBody),
+        );
+        setSideMenuElements(documentBody.current);
+      }
     }
   }, [documentBody]);
 
@@ -83,7 +82,7 @@ const NewsItemView = ({ content, location }) => {
         )}
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
-            <SideMenu data={sideMenuElements} />
+            {__CLIENT__ && <SideMenu data={sideMenuElements} />}
           </aside>
           <section
             className="col-lg-8 it-page-sections-container"
@@ -94,7 +93,7 @@ const NewsItemView = ({ content, location }) => {
               id="text-body"
               className="it-page-section anchor-offset clearfix"
             >
-              {text}
+              <TextOrBlocks content={content} location={location} />
             </article>
 
             {content?.items.some((e) => e.id === 'multimedia') && (
