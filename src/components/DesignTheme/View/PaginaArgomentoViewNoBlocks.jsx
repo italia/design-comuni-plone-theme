@@ -3,7 +3,7 @@
  * @module components/theme/View/PaginaArgomentoViewNoBlocks
  */
 
-import React from 'react';
+import React, { createRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import { GenericCard } from './Commons';
@@ -60,6 +60,17 @@ const messages = defineMessages({
  */
 const PaginaArgomentoViewNoBlocks = ({ content }) => {
   const intl = useIntl();
+  let documentBody = createRef();
+  const [sideMenuElements, setSideMenuElements] = useState(null);
+
+  useEffect(() => {
+    if (documentBody.current) {
+      if (__CLIENT__) {
+        setSideMenuElements(documentBody.current);
+      }
+    }
+  }, [documentBody]);
+
   return (
     <>
       <div className="container px-4 my-4 uo-view">
@@ -79,11 +90,16 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
             caption={content.image_caption}
           />
         )}
+
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
-            <SideMenu />
+            <SideMenu data={sideMenuElements} />
           </aside>
-          <section className="col-lg-8 it-page-sections-container">
+          <section
+            className="col-lg-8 it-page-sections-container"
+            id="document-body"
+            ref={documentBody}
+          >
             {content?.area_appartenenza?.length > 0 ? (
               <article
                 id="area_appartenenza"

@@ -23,10 +23,10 @@ const messages = defineMessages({
 const Attachments = ({ content, folder_name, folder_title }) => {
   const intl = useIntl();
   const url = `${flattenToAppURL(content['@id'])}/${folder_name}`;
-  const searchResults = useSelector(state => state.search.subrequests);
+  const searchResults = useSelector((state) => state.search.subrequests);
   const dispatch = useDispatch();
   useEffect(() => {
-    if (content?.items.some(e => e.id === folder_name)) {
+    if (content?.items.some((e) => e.id === folder_name)) {
       dispatch(
         searchContent(
           url,
@@ -48,11 +48,14 @@ const Attachments = ({ content, folder_name, folder_title }) => {
   return (
     <>
       {attachments.length > 0 ? (
-        <article id="documenti" className="it-page-section anchor-offset mt-5">
+        <article
+          id={folder_name}
+          className="it-page-section anchor-offset mt-5"
+        >
           {folder_title ? (
-            <h4 id="header-documenti">{folder_title}</h4>
+            <h4 id={`header-${folder_name}`}>{folder_title}</h4>
           ) : (
-            <h4 id="header-documenti">
+            <h4 id={`header-${folder_name}`}>
               {intl.formatMessage(messages.attachments)}
             </h4>
           )}
