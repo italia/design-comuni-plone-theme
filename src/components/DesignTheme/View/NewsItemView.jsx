@@ -51,9 +51,11 @@ const NewsItemView = ({ content, location }) => {
 
   useEffect(() => {
     if (documentBody.current) {
-      setReadingtime(
-        readingTime(content.title, content.description, documentBody),
-      );
+      if (__CLIENT__) {
+        setReadingtime(
+          readingTime(content.title, content.description, documentBody),
+        );
+      }
     }
   }, [documentBody]);
 
