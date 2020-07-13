@@ -91,7 +91,6 @@ msgid "Image"
 msgstr ""
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
-#: components/DesignTheme/Widgets/LinkToWidget
 msgid "Link to"
 msgstr ""
 
@@ -132,7 +131,6 @@ msgid "Note legali"
 msgstr ""
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
-#: components/DesignTheme/Widgets/LinkToWidget
 msgid "Open in a new tab"
 msgstr ""
 
@@ -157,12 +155,10 @@ msgid "RssFeedItemNumber"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "SearchServices"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "SearchServicesTitle"
 msgstr ""
 
@@ -403,7 +399,6 @@ msgid "deleghe"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "desc"
 msgstr ""
 
@@ -438,7 +433,6 @@ msgid "download"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "editSearch"
 msgstr ""
 
@@ -491,7 +485,6 @@ msgid "legami_altre_strutture"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "link"
 msgstr ""
 
@@ -678,6 +671,9 @@ msgid "searchLabel"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
+msgid "search_service_block_sections"
+msgstr ""
+
 #: components/DesignTheme/Header/SearchModal
 msgid "sections"
 msgstr ""

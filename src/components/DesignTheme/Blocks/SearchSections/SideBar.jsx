@@ -20,15 +20,15 @@ const messages = defineMessages({
   },
   desc: {
     id: 'desc',
-    defaultMessage: 'Descrizione',
+    defaultMessage: 'Link rapidi',
   },
-  sections: {
-    id: 'sections',
-    defaultMessage: 'Sezioni ricercabili',
+  search_service_block_sections: {
+    id: 'search_service_block_sections',
+    defaultMessage: 'Dove cercare',
   },
   placeholder: {
     id: 'placeholder',
-    defaultMessage: 'Placeholder',
+    defaultMessage: 'Testo di aiuto',
   },
 });
 
@@ -41,7 +41,7 @@ const Sidebar = ({
   required,
 }) => {
   const intl = useIntl();
-
+  debugger;
   return (
     <Segment.Group raised>
       <header className="header pulled">
@@ -83,8 +83,8 @@ const Sidebar = ({
           />
           {sections && (
             <ArrayWidget
-            id="groups"
-              title={intl.formatMessage(messages.sections)}
+              id="groups"
+              title={intl.formatMessage(messages.search_service_block_sections)}
               noValuePresent={false}
               choices={Object.keys(sections).map((key) => [
                 key,
@@ -92,17 +92,18 @@ const Sidebar = ({
               ])}
               value={data.sections}
               onChange={(name, value) => {
-                console.log(value)
+                console.log(value);
                 onChangeBlock(block, {
                   ...data,
                   // is not possible remove the no-value field form select
-                  sections: value.filter(v => v !== 'no-value').map((v) => {
-                    return { title: sections[v].title, value: v, token: v };
-                  }),
+                  sections: value
+                    .filter((v) => v !== 'no-value')
+                    .map((v) => {
+                      return { title: sections[v].title, value: v, token: v };
+                    }),
                 });
               }}
-            >
-            </ArrayWidget>
+            ></ArrayWidget>
           )}
         </Accordion.Content>
       </Accordion>

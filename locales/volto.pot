@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-07-07T14:13:24.551Z\n"
+"POT-Creation-Date: 2020-07-13T08:32:37.608Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -89,7 +89,6 @@ msgid "Image"
 msgstr ""
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
-#: components/DesignTheme/Widgets/LinkToWidget
 # defaultMessage: Link a
 msgid "Link to"
 msgstr ""
@@ -140,7 +139,6 @@ msgid "Note legali"
 msgstr ""
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
-#: components/DesignTheme/Widgets/LinkToWidget
 # defaultMessage: Apri in un nuovo tab
 msgid "Open in a new tab"
 msgstr ""
@@ -171,13 +169,11 @@ msgid "RssFeedItemNumber"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 # defaultMessage: Ricerca servizi
 msgid "SearchServices"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 # defaultMessage: Titolo
 msgid "SearchServicesTitle"
 msgstr ""
@@ -476,8 +472,7 @@ msgid "deleghe"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
-# defaultMessage: Descrizione
+# defaultMessage: Link rapidi
 msgid "desc"
 msgstr ""
 
@@ -519,7 +514,6 @@ msgid "download"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 # defaultMessage: Modifica ricerca
 msgid "editSearch"
 msgstr ""
@@ -585,7 +579,6 @@ msgid "legami_altre_strutture"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 # defaultMessage: Collegamento
 msgid "link"
 msgstr ""
@@ -702,7 +695,7 @@ msgid "phone"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-# defaultMessage: Placeholder
+# defaultMessage: Testo di aiuto
 msgid "placeholder"
 msgstr ""
 
@@ -816,8 +809,12 @@ msgid "searchLabel"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
+# defaultMessage: Dove cercare
+msgid "search_service_block_sections"
+msgstr ""
+
 #: components/DesignTheme/Header/SearchModal
-# defaultMessage: Sezioni ricercabili
+# defaultMessage: Sezioni
 msgid "sections"
 msgstr ""
 
