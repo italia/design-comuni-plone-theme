@@ -81,7 +81,11 @@ const NewsItemView = ({ content, location }) => {
           <aside className="col-lg-4">
             <SideMenu />
           </aside>
-          <section className="col-lg-8 it-page-sections-container">
+          <section
+            className="col-lg-8 it-page-sections-container"
+            id="document-body"
+            ref={documentBody}
+          >
             <article
               id="text-body"
               className="it-page-section anchor-offset clearfix"
