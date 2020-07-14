@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const Venue = ({ venue }) => {
+const Venue = ({ venue, display_title = true }) => {
   const key = `${venue['@id']}_venue`;
   const url = flattenToAppURL(venue['@id']);
   const venueContent = useSelector((state) => state.content.subrequests);
@@ -30,7 +30,7 @@ const Venue = ({ venue }) => {
       />
       {venue_fo.geolocation ? (
         <div className="mapbox">
-          <h4 className="no-toc">Mappa</h4>
+          {display_title && <h4 className="no-toc">Mappa</h4>}
           <div className="map"></div>
         </div>
       ) : null}

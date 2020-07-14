@@ -331,7 +331,9 @@ const ServizioView = ({ content }) => {
                 id="ufficio_responsabile"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>{intl.formatMessage(messages.ufficio_responsabile)}</h4>
+                <h4 id="header-ufficio_responsabile">
+                  {intl.formatMessage(messages.ufficio_responsabile)}
+                </h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.ufficio_responsabile.map((item, i) => (
                     <OfficeCard key={item['@id']} office={item} />
@@ -341,7 +343,7 @@ const ServizioView = ({ content }) => {
             ) : null}
             {content.area?.length > 0 ? (
               <article id="area" className="it-page-section anchor-offset mt-5">
-                <h4>{intl.formatMessage(messages.area)}</h4>
+                <h4 id="header-area">{intl.formatMessage(messages.area)}</h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.area.map((item, i) => (
                     <OfficeCard key={item['@id']} office={item} />
@@ -354,7 +356,9 @@ const ServizioView = ({ content }) => {
                 id="altri_documenti-items"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>{intl.formatMessage(messages.altri_documenti)}</h4>
+                <h4 id="header-altri_documenti-items">
+                  {intl.formatMessage(messages.altri_documenti)}
+                </h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.altri_documenti.map((item, i) => (
                     <GenericCard
@@ -408,7 +412,9 @@ const ServizioView = ({ content }) => {
                 id="servizi-items"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>{intl.formatMessage(messages.servizi_collegati)}</h4>
+                <h4 id="header-servizi-items">
+                  {intl.formatMessage(messages.servizi_collegati)}
+                </h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.servizi_collegati.map((item, i) => (
                     <GenericCard
@@ -425,7 +431,9 @@ const ServizioView = ({ content }) => {
                 id="related-news"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>{intl.formatMessage(messages.related_news)}</h4>
+                <h4 id="header-related-news">
+                  {intl.formatMessage(messages.related_news)}
+                </h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.related_news.map((item, i) => (
                     <NewsCard
@@ -445,7 +453,9 @@ const ServizioView = ({ content }) => {
                 id="related-items"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>{intl.formatMessage(messages.related_items)}</h4>
+                <h4 id="header-related-items">
+                  {intl.formatMessage(messages.related_items)}
+                </h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.relatedItems.map((item, i) => (
                     <GenericCard
@@ -459,7 +469,9 @@ const ServizioView = ({ content }) => {
             ) : null}
             {content.sedi_e_luoghi?.length > 0 && (
               <article id="sedi" className="it-page-section anchor-offset mt-5">
-                <h4>{intl.formatMessage(messages.sedi_e_luoghi)}</h4>
+                <h4 id="header-sedi">
+                  {intl.formatMessage(messages.sedi_e_luoghi)}
+                </h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.sedi_e_luoghi.map((item, i) => (
                     <SmallVenue key={item['@id']} venue={item} />

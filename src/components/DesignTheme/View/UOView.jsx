@@ -128,10 +128,11 @@ const UOView = ({ content }) => {
               <article id="sedi" className="it-page-section anchor-offset mt-5">
                 <h4 id="header-sedi">{intl.formatMessage(messages.sedi)}</h4>
                 {content.sedi.map((item, i) => (
-                  <Venue key={item['@id']} venue={item} />
+                  <Venue key={item['@id']} venue={item} display_title={false} />
                 ))}
               </article>
             )}
+
             {content.tipologia_organizzazione && (
               <article
                 id="organizzazione"

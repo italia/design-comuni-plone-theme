@@ -623,7 +623,7 @@ msgstr "Rimuovi argomento"
 
 #: components/DesignTheme/View/UOView
 msgid "responsabile"
-msgstr "Responsablie"
+msgstr "Responsabile"
 
 #: components/DesignTheme/View/PersonaView
 msgid "responsabile_di"
