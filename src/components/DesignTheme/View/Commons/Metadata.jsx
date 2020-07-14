@@ -32,11 +32,8 @@ const messages = defineMessages({
 const Metadata = ({ content, showTags = true }) => {
   const intl = useIntl();
   return (
-    <article
-      id="ulteriori-informazioni"
-      className="it-page-section anchor-offset mt-5"
-    >
-      <h4 id="header-ulteriori-informazioni" className="mb-3">
+    <article id="metadata" className="it-page-section anchor-offset mt-5">
+      <h4 id="header-metadata" className="mb-3">
         {intl.formatMessage(messages.other_info)}
       </h4>
       <p className="text-serif">{intl.formatMessage(messages.modified)}</p>

@@ -11,7 +11,7 @@ import cx from 'classnames';
 const RichTextArticle = ({ title, content, tag_id, add_class, children }) => {
   return (
     <article id={tag_id} className="it-page-section anchor-offset mt-5">
-      {title && <h4 id={`header-${tag_id}`}>{title}</h4>}
+      {title && <h4>{title}</h4>}
       {content && (
         <div
           className={cx('text-serif', add_class)}
