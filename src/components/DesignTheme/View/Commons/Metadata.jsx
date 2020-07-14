@@ -51,7 +51,9 @@ const Metadata = ({ content, showTags = true }) => {
       )}
       {showTags && content.subjects?.length > 0 && (
         <>
-          <p className="text-serif">{intl.formatMessage(messages.subjects)}</p>
+          <p className="text-serif mt-4">
+            {intl.formatMessage(messages.subjects)}
+          </p>
           {content.subjects?.map((item, i) => (
             <Chip
               color=""
