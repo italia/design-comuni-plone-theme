@@ -123,6 +123,7 @@ const UOView = ({ content }) => {
                 title={intl.formatMessage(messages.ulteriori_informazioni)}
               />
             )}
+
             {content.sedi?.length > 0 && (
               <article id="sedi" className="it-page-section anchor-offset mt-5">
                 <h4 id="header-sedi">{intl.formatMessage(messages.sedi)}</h4>
