@@ -233,45 +233,63 @@ const ServizioView = ({ content }) => {
                 title={intl.formatMessage(messages.procedure_collegate)}
               />
             )}
-            {content.canale_digitale && (
-              <>
-                <h4>{intl.formatMessage(messages.canale_digitale)}</h4>
-                <LinkList tag="div">
-                  <LinkListItem tag="a" href={content.canale_digitale}>
-                    <span>{content.canale_digitale}</span>
-                  </LinkListItem>
-                </LinkList>
-              </>
+            {(content.canale_digitale || content.autenticazione) && (
+              <article
+                id="canale_digitale"
+                className="it-page-section anchor-offset mt-5"
+              >
+                <h4 id="header-canale_digitale">
+                  {intl.formatMessage(messages.canale_digitale)}
+                </h4>
+                {content.canale_digitale && (
+                  <LinkList tag="div">
+                    <LinkListItem tag="a" href={content.canale_digitale}>
+                      <span>{content.canale_digitale}</span>
+                    </LinkListItem>
+                  </LinkList>
+                )}
+
+                {content.autenticazione?.data && (
+                  <>
+                    <strong>
+                      {intl.formatMessage(messages.autenticazione)}
+                    </strong>
+                    <div
+                      className="text-serif"
+                      dangerouslySetInnerHTML={{
+                        __html: content.autenticazione.data,
+                      }}
+                    />
+                  </>
+                )}
+              </article>
             )}
-            {content.autenticazione?.data && (
-              <RichTextArticle
-                content={content.autenticazione.data}
-                tag_id={'text-autenticazione'}
-                title={intl.formatMessage(messages.autenticazione)}
-              />
-            )}
-            {content.canale_fisico?.data && (
+
+            {(content.canale_fisico?.data ||
+              content.canale_fisico_prenotazione) && (
               <RichTextArticle
                 content={content.canale_fisico.data}
                 tag_id={'text-fisico'}
                 title={intl.formatMessage(messages.canale_fisico)}
-              />
+              >
+                {content.canale_fisico_prenotazione && (
+                  <>
+                    <strong>
+                      {intl.formatMessage(messages.canale_fisico_prenotazione)}
+                    </strong>
+                    <LinkList tag="div">
+                      <LinkListItem
+                        tag="a"
+                        href={content.canale_fisico_prenotazione}
+                      >
+                        <span>{content.canale_fisico_prenotazione}</span>
+                      </LinkListItem>
+                    </LinkList>
+                  </>
+                )}
+              </RichTextArticle>
             )}
-            {content.canale_fisico_prenotazione && (
-              <>
-                <h4>
-                  {intl.formatMessage(messages.canale_fisico_prenotazione)}
-                </h4>
-                <LinkList tag="div">
-                  <LinkListItem
-                    tag="a"
-                    href={content.canale_fisico_prenotazione}
-                  >
-                    <span>{content.canale_fisico_prenotazione}</span>
-                  </LinkListItem>
-                </LinkList>
-              </>
-            )}
+
             {content.fasi_scadenze?.data && (
               <RichTextArticle
                 content={content.fasi_scadenze.data}
