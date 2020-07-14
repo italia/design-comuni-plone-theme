@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-07-13T10:01:45.969Z\n"
+"POT-Creation-Date: 2020-07-14T14:09:02.117Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -939,6 +939,6 @@ msgid "valutazione_situazione_patrimoniale"
 msgstr ""
 
 #: components/DesignTheme/View/ServizioView
-# defaultMessage: Vincoli per la richista del servizio
+# defaultMessage: Vincoli per la richiesta del servizio
 msgid "vincoli"
 msgstr ""

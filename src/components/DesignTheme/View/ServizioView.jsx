@@ -86,7 +86,7 @@ const messages = defineMessages({
   },
   vincoli: {
     id: 'vincoli',
-    defaultMessage: 'Vincoli per la richista del servizio',
+    defaultMessage: 'Vincoli per la richiesta del servizio',
   },
   casi_particolari: {
     id: 'casi_particolari',
