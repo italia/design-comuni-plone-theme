@@ -23,9 +23,11 @@ body.cms-ui {
 
   .SingleDatePicker {
     z-index: unset;
+
     .DateInput {
       z-index: 0;
     }
+
     .SingleDatePicker_picker {
       z-index: 10;
     }
