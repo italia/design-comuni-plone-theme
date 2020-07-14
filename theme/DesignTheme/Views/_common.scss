@@ -82,6 +82,18 @@ h6 {
   }
 }
 
+div.sticky-wrapper {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+.slick-slide {
+  figure {
+    width: 95%;
+  }
+}
+
 .style_ol_list {
   ol {
     padding: 0;

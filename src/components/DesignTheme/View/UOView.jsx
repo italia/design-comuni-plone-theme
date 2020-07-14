@@ -3,7 +3,7 @@
  * @module components/theme/View/UOView
  */
 
-import React from 'react';
+import React, { createRef, useEffect, useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -75,6 +75,17 @@ const messages = defineMessages({
  */
 const UOView = ({ content }) => {
   const intl = useIntl();
+  let documentBody = createRef();
+  const [sideMenuElements, setSideMenuElements] = useState(null);
+
+  useEffect(() => {
+    if (documentBody.current) {
+      if (__CLIENT__) {
+        setSideMenuElements(documentBody.current);
+      }
+    }
+  }, [documentBody]);
+
   return (
     <>
       <div className="container px-4 my-4 uo-view">
@@ -96,9 +107,12 @@ const UOView = ({ content }) => {
         )}
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
-            <SideMenu />
+            <SideMenu data={sideMenuElements} />
           </aside>
-          <section className="col-lg-8 it-page-sections-container">
+          <section
+            ref={documentBody}
+            className="col-lg-8 it-page-sections-container"
+          >
             {content.ulteriori_informazioni?.data.replace(
               /(<([^>]+)>)/g,
               '',
@@ -111,7 +125,7 @@ const UOView = ({ content }) => {
             )}
             {content.sedi?.length > 0 && (
               <article id="sedi" className="it-page-section anchor-offset mt-5">
-                <h4>{intl.formatMessage(messages.sedi)}</h4>
+                <h4 id="header-sedi">{intl.formatMessage(messages.sedi)}</h4>
                 {content.sedi.map((item, i) => (
                   <Venue key={item['@id']} venue={item} />
                 ))}
@@ -122,7 +136,7 @@ const UOView = ({ content }) => {
                 id="organizzazione"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4 className="mb-3">
+                <h4 id="header-organizzazione" className="mb-3">
                   {intl.formatMessage(messages.tipologia_organizzazione)}
                 </h4>
                 <p className="text-serif">
@@ -142,8 +156,10 @@ const UOView = ({ content }) => {
                 id="servizi-offerti"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>{intl.formatMessage(messages.servizi_offerti)}</h4>
-                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                <h4 id="header-servizi-offerti">
+                  {intl.formatMessage(messages.servizi_offerti)}
+                </h4>
+                <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.servizi_offerti.map((item, i) => (
                     <GenericCard
                       key={item['@id']}
@@ -160,7 +176,9 @@ const UOView = ({ content }) => {
                 id="legami-altre-strutture"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>{intl.formatMessage(messages.legami_altre_strutture)}</h4>
+                <h4 id="header-legami-altre-strutture">
+                  {intl.formatMessage(messages.legami_altre_strutture)}
+                </h4>
                 <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal mb-3">
                   {content.legami_con_altre_strutture.map((item, i) => (
                     <OfficeCard key={item['@id']} office={item} />
@@ -173,7 +191,9 @@ const UOView = ({ content }) => {
                 id="assessore-riferimento"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>{intl.formatMessage(messages.assessore_riferimento)}</h4>
+                <h4 id="header-assessore-riferimento">
+                  {intl.formatMessage(messages.assessore_riferimento)}
+                </h4>
                 {content.assessore_riferimento.map((item, i) => (
                   <Link
                     to={flattenToAppURL(item['@id'])}
@@ -199,7 +219,9 @@ const UOView = ({ content }) => {
                 id="responsabile"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>{intl.formatMessage(messages.responsabile)}</h4>
+                <h4 id="header-responsabile">
+                  {intl.formatMessage(messages.responsabile)}
+                </h4>
                 {content.responsabile.map((item, i) => (
                   <Link
                     to={flattenToAppURL(item['@id'])}
@@ -225,7 +247,9 @@ const UOView = ({ content }) => {
                 id="persone-struttura"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>{intl.formatMessage(messages.persone_struttura)}</h4>
+                <h4 id="header-persone-struttura">
+                  {intl.formatMessage(messages.persone_struttura)}
+                </h4>
                 {content.persone_struttura.map((item, i) => (
                   <Link
                     to={flattenToAppURL(item['@id'])}
@@ -261,7 +285,9 @@ const UOView = ({ content }) => {
                 id="related-news"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>{intl.formatMessage(messages.uo_related_news)}</h4>
+                <h4 id="header-related-news">
+                  {intl.formatMessage(messages.uo_related_news)}
+                </h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content?.related_news?.map((item, i) => (
                     <RelatedNews
@@ -279,7 +305,9 @@ const UOView = ({ content }) => {
                 id="related-items"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>{intl.formatMessage(messages.related_items)}</h4>
+                <h4 id="header-related-items">
+                  {intl.formatMessage(messages.related_items)}
+                </h4>
                 <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.relatedItems.map((item, i) => (
                     <GenericCard

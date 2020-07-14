@@ -3,7 +3,7 @@
  * @module components/theme/View/NewsItemView
  */
 
-import React from 'react';
+import React, { createRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import { defineMessages, useIntl } from 'react-intl';
@@ -121,6 +121,17 @@ const messages = defineMessages({
  */
 const PersonaView = ({ content }) => {
   const intl = useIntl();
+  let documentBody = createRef();
+  const [sideMenuElements, setSideMenuElements] = useState(null);
+
+  useEffect(() => {
+    if (documentBody.current) {
+      if (__CLIENT__) {
+        setSideMenuElements(documentBody.current);
+      }
+    }
+  }, [documentBody]);
+
   return (
     <>
       <div className="container px-4 my-4 persona-view">
@@ -135,9 +146,12 @@ const PersonaView = ({ content }) => {
         />
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
-            <SideMenu />
+            <SideMenu data={sideMenuElements} />
           </aside>
-          <section className="col-lg-8 it-page-sections-container">
+          <section
+            className="col-lg-8 it-page-sections-container"
+            ref={documentBody}
+          >
             {content.data_insediamento && !content.data_conclusione_incarico ? (
               <p>
                 <strong>
@@ -207,7 +221,7 @@ const PersonaView = ({ content }) => {
                 id="organizzazione_riferimento"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>
+                <h4 id="header-organizzazione_riferimento">
                   {intl.formatMessage(messages.organizzazione_riferimento)}
                 </h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
@@ -220,10 +234,12 @@ const PersonaView = ({ content }) => {
             {!content.data_conclusione_incarico &&
             content.responsabile_di?.length > 0 ? (
               <article
-                id="organizzazione_riferimento"
+                id="responsabile_di"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>{intl.formatMessage(messages.responsabile_di)}</h4>
+                <h4 id="header-responsabile_di">
+                  {intl.formatMessage(messages.responsabile_di)}
+                </h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.responsabile_di.map((item, i) => (
                     <OfficeCard key={item['@id']} office={item} />
@@ -237,7 +253,7 @@ const PersonaView = ({ content }) => {
                 id="collegamenti_organizzazione_l1"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>
+                <h4 id="header-collegamenti_organizzazione_l1">
                   {intl.formatMessage(messages.collegamenti_organizzazione_l1)}
                 </h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
@@ -253,7 +269,7 @@ const PersonaView = ({ content }) => {
                 id="collegamenti_organizzazione_l2"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>
+                <h4 id="header-collegamenti_organizzazione_l2">
                   {intl.formatMessage(messages.collegamenti_organizzazione_l2)}
                 </h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
@@ -295,7 +311,9 @@ const PersonaView = ({ content }) => {
                 id="curriculum"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>{intl.formatMessage(messages.curriculum_vitae)}</h4>
+                <h4 id="header-curriculum">
+                  {intl.formatMessage(messages.curriculum_vitae)}
+                </h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   <Attachment
                     download_url={content.curriculum_vitae.download}
@@ -311,7 +329,9 @@ const PersonaView = ({ content }) => {
                 id="atto_nomina"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>{intl.formatMessage(messages.atto_nomina)}</h4>
+                <h4 id="header-atto_nomina">
+                  {intl.formatMessage(messages.atto_nomina)}
+                </h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   <Attachment
                     download_url={content.atto_nomina.download}
@@ -399,7 +419,9 @@ const PersonaView = ({ content }) => {
                 id="related-news"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>{intl.formatMessage(messages.related_news)}</h4>
+                <h4 id="header-related-news">
+                  {intl.formatMessage(messages.related_news)}
+                </h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.related_news.map((item, i) => (
                     <NewsCard
@@ -419,7 +441,9 @@ const PersonaView = ({ content }) => {
                 id="related-items"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>{intl.formatMessage(messages.related_items)}</h4>
+                <h4 id="header-related-items">
+                  {intl.formatMessage(messages.related_items)}
+                </h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.relatedItems.map((item, i) => (
                     <GenericCard

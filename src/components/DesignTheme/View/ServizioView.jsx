@@ -3,7 +3,7 @@
  * @module components/theme/View/NewsItemView
  */
 
-import React from 'react';
+import React, { createRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import { Attachments } from './Commons';
@@ -138,6 +138,17 @@ const messages = defineMessages({
  */
 const ServizioView = ({ content }) => {
   const intl = useIntl();
+  let documentBody = createRef();
+  const [sideMenuElements, setSideMenuElements] = useState(null);
+
+  useEffect(() => {
+    if (documentBody.current) {
+      if (__CLIENT__) {
+        setSideMenuElements(documentBody.current);
+      }
+    }
+  }, [documentBody]);
+
   return (
     <>
       <div className="container px-4 my-4 servizio-view">
@@ -159,9 +170,12 @@ const ServizioView = ({ content }) => {
         )}
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
-            <SideMenu />
+            <SideMenu data={sideMenuElements} />
           </aside>
-          <section className="col-lg-8 it-page-sections-container">
+          <section
+            className="col-lg-8 it-page-sections-container"
+            ref={documentBody}
+          >
             {content.stato_servizio && content.motivo_stato_servizio?.data && (
               <RichTextArticle
                 content={content.motivo_stato_servizio.data}
@@ -169,10 +183,11 @@ const ServizioView = ({ content }) => {
                 title={intl.formatMessage(messages.service_not_active)}
               />
             )}
+
             {content.descrizione_estesa?.data && (
               <RichTextArticle
                 content={content.descrizione_estesa.data}
-                tag_id={'text-descrizione_estesa'}
+                tag_id={'text-body'}
                 title={''}
               />
             )}

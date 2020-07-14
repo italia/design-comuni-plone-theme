@@ -30,7 +30,7 @@ const Venue = ({ venue }) => {
       />
       {venue_fo.geolocation ? (
         <div className="mapbox">
-          <h4>Mappa</h4>
+          <h4 className="no-toc">Mappa</h4>
           <div className="map"></div>
         </div>
       ) : null}

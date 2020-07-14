@@ -51,6 +51,10 @@ msgstr ""
 msgid "Contatti"
 msgstr ""
 
+#: components/DesignTheme/View/Commons/SideMenu
+msgid "Contenuto"
+msgstr ""
+
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Default"
 msgstr ""
@@ -416,7 +420,7 @@ msgstr ""
 
 #: components/DesignTheme/View/Commons/Actions
 msgid "download"
-msgstr ""
+msgstr "<<<<<<< HEAD"
 
 #: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "editSearch"
