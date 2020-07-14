@@ -15,10 +15,11 @@ import { RichTextArticle } from './Commons';
 import { OfficeCard } from './Commons';
 import { Attachments } from './Commons';
 import { Metadata } from './Commons';
-import { Venue } from './Commons';
 import { RelatedNews } from './Commons';
 import { GenericCard } from './Commons';
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
+import { Map, TileLayer, Marker } from 'react-leaflet';
+import { Helmet } from '@plone/volto/helpers';
 
 const messages = defineMessages({
   tipologia_organizzazione: {
@@ -109,12 +110,65 @@ const UOView = ({ content }) => {
                 title={intl.formatMessage(messages.ulteriori_informazioni)}
               />
             )}
-            {content.sedi?.length > 0 && (
+            {(content.sedi?.length > 0 ||
+              content?.contact_info?.data ||
+              content?.geolocation) && (
               <article id="sedi" className="it-page-section anchor-offset mt-5">
                 <h4>{intl.formatMessage(messages.sedi)}</h4>
-                {content.sedi.map((item, i) => (
-                  <Venue key={item['@id']} venue={item} />
-                ))}
+                {content?.contact_info?.data && (
+                  <div
+                    className="text-serif"
+                    dangerouslySetInnerHTML={{
+                      __html: content.contact_info.data,
+                    }}
+                  />
+                )}
+                {content?.geolocation && (
+                  <>
+                    <Helmet>
+                      <link
+                        rel="stylesheet"
+                        href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+                        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+                        crossOrigin=""
+                      />
+                    </Helmet>
+                    <Map
+                      center={[
+                        content.geolocation.latitude,
+                        content.geolocation.longitude,
+                      ]}
+                      zoom={15}
+                      id="geocoded-result"
+                    >
+                      <TileLayer
+                        attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                      />
+                      <Marker
+                        position={[
+                          content.geolocation.latitude,
+                          content.geolocation.longitude,
+                        ]}
+                        draggable={false}
+                      />
+                    </Map>
+                  </>
+                )}
+                {content?.sedi.length > 0 && (
+                  <>
+                    <h5 className="mt-3">Altre sedi</h5>
+                    <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                      {content.sedi.map((item, i) => (
+                        <GenericCard
+                          key={item['@id']}
+                          item={item}
+                          showimage={false}
+                        />
+                      ))}
+                    </div>
+                  </>
+                )}
               </article>
             )}
             {content.tipologia_organizzazione && (

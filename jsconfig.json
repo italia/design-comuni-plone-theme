@@ -9,6 +9,9 @@
             ],
             "volto-multilingual-widget": [
                 "addons/volto-multilingual-widget"
+            ],
+            "volto-venue": [
+                "addons/volto-venue"
             ]
         },
         "baseUrl": "src"
