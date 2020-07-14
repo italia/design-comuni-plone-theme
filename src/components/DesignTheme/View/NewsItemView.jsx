@@ -3,11 +3,10 @@
  * @module components/theme/View/NewsItemView
  */
 
-import React from 'react';
+import React, { createRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import { readingTime } from './ViewUtils';
-import { getHTMLString } from './ViewUtils';
 
 import {
   RelatedNews,
@@ -45,12 +44,21 @@ const messages = defineMessages({
  */
 const NewsItemView = ({ content, location }) => {
   const intl = useIntl();
-  const text = <TextOrBlocks content={content} location={location} />;
-  const reading_text = getHTMLString(text, intl.locale);
 
-  let readingtime = readingTime(
-    `${content.title} ${content.description} ${reading_text}`,
-  );
+  const [readingtime, setReadingtime] = useState(0);
+  let documentBody = createRef();
+  const [sideMenuElements, setSideMenuElements] = useState(null);
+
+  useEffect(() => {
+    if (documentBody.current) {
+      if (__CLIENT__) {
+        setReadingtime(
+          readingTime(content.title, content.description, documentBody),
+        );
+        setSideMenuElements(documentBody.current);
+      }
+    }
+  }, [documentBody]);
 
   return (
     <>
@@ -74,14 +82,17 @@ const NewsItemView = ({ content, location }) => {
         )}
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
-            <SideMenu />
+            <SideMenu data={sideMenuElements} />
           </aside>
-          <section className="col-lg-8 it-page-sections-container">
+          <section
+            className="col-lg-8 it-page-sections-container"
+            ref={documentBody}
+          >
             <article
               id="text-body"
               className="it-page-section anchor-offset clearfix"
             >
-              {text}
+              <TextOrBlocks content={content} location={location} />
             </article>
 
             {content?.items.some((e) => e.id === 'multimedia') && (
@@ -116,7 +127,9 @@ const NewsItemView = ({ content, location }) => {
                 id="related-news"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>{intl.formatMessage(messages.notizie_in_evidenza)}</h4>
+                <h4 id="header-related-news">
+                  {intl.formatMessage(messages.notizie_in_evidenza)}
+                </h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.related_news.map((item, i) => (
                     <RelatedNews
@@ -134,7 +147,10 @@ const NewsItemView = ({ content, location }) => {
                 id="related-items"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4>{intl.formatMessage(messages.related_items)}</h4>
+                <h4 id="header-related-items">
+                  {intl.formatMessage(messages.related_items)}
+                </h4>
+
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.relatedItems.map((item, i) => (
                     <GenericCard
