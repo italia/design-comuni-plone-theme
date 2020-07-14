@@ -913,7 +913,6 @@ msgid "ufficio_responsabile"
 msgstr ""
 
 #: components/DesignTheme/View/PersonaView
-#: components/DesignTheme/View/UOView
 # defaultMessage: Ulteriori informazioni
 msgid "ulteriori_informazioni"
 msgstr ""
@@ -926,6 +925,11 @@ msgstr ""
 #: components/DesignTheme/View/UOView
 # defaultMessage: Notizie in evidenza
 msgid "uo_related_news"
+msgstr ""
+
+#: components/DesignTheme/View/UOView
+# defaultMessage: Informazioni
+msgid "uo_ulteriori_informazioni"
 msgstr ""
 
 #: addons/volto-multilingual-widget/src/index
