@@ -175,7 +175,7 @@ const PersonaView = ({ content }) => {
             {!content.data_conclusione_incarico && content.biografia?.data && (
               <RichTextArticle
                 content={content.biografia.data}
-                tag_id={'text-body'}
+                tag_id={'biografia'}
                 title={intl.formatMessage(messages.role_bio)}
                 add_class="mb-4"
               />
@@ -183,8 +183,10 @@ const PersonaView = ({ content }) => {
             {content.telefono ||
             content.email ||
             content.informazioni_di_contatto ? (
-              <>
-                <h4>{intl.formatMessage(messages.contacts)}</h4>
+              <article id="contacts">
+                <h4 id="header-contacts">
+                  {intl.formatMessage(messages.contacts)}
+                </h4>
                 {content.telefono ? (
                   <p>
                     <strong>{intl.formatMessage(messages.phone)}: </strong>
@@ -211,7 +213,7 @@ const PersonaView = ({ content }) => {
                 ) : (
                   ''
                 )}
-              </>
+              </article>
             ) : (
               ''
             )}
@@ -410,7 +412,7 @@ const PersonaView = ({ content }) => {
             {content.ulteriori_informazioni?.data && (
               <RichTextArticle
                 content={content.ulteriori_informazioni.data}
-                tag_id={'text-deleghe'}
+                tag_id={'ulteriori_informazioni'}
                 title={intl.formatMessage(messages.ulteriori_informazioni)}
               />
             )}
