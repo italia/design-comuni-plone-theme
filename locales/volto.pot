@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-07-13T08:32:37.608Z\n"
+"POT-Creation-Date: 2020-07-15T07:28:11.380Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -513,11 +513,6 @@ msgstr ""
 msgid "download"
 msgstr ""
 
-#: components/DesignTheme/Blocks/SearchSections/SideBar
-# defaultMessage: Modifica ricerca
-msgid "editSearch"
-msgstr ""
-
 #: components/DesignTheme/View/PersonaView
 # defaultMessage: Email
 msgid "email"
@@ -563,6 +558,26 @@ msgstr ""
 msgid "gallery"
 msgstr ""
 
+#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+# defaultMessage: Geolocation
+msgid "geolocation"
+msgstr ""
+
+#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+# defaultMessage: Clear
+msgid "geolocationClear"
+msgstr ""
+
+#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+# defaultMessage: Search a venue...
+msgid "geolocation_placeholder"
+msgstr ""
+
+#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+# defaultMessage: Selected
+msgid "geolocation_selected"
+msgstr ""
+
 #: components/DesignTheme/View/PersonaView
 # defaultMessage: Importi di viaggio e/o servizi
 msgid "importi_di_viaggio_e_o_servizi"
@@ -571,6 +586,11 @@ msgstr ""
 #: components/DesignTheme/View/Commons/SideMenu
 # defaultMessage: Indice della pagina
 msgid "index"
+msgstr ""
+
+#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+# defaultMessage: Latitude
+msgid "latitude"
 msgstr ""
 
 #: components/DesignTheme/View/UOView
@@ -591,6 +611,11 @@ msgstr ""
 #: components/DesignTheme/View/Commons/Locations
 # defaultMessage: Luoghi
 msgid "locations"
+msgstr ""
+
+#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+# defaultMessage: Longitude
+msgid "longitude"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Actions
@@ -806,6 +831,11 @@ msgstr ""
 #: components/DesignTheme/Header/SearchModal
 # defaultMessage: Cerca nel sito
 msgid "searchLabel"
+msgstr ""
+
+#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+# defaultMessage: Search address on map
+msgid "searchOnMap"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar

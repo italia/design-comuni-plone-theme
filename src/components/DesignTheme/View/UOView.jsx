@@ -18,7 +18,7 @@ import { Metadata } from './Commons';
 import { RelatedNews } from './Commons';
 import { GenericCard } from './Commons';
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
-import { Map, TileLayer, Marker } from 'react-leaflet';
+import { OSMMap } from 'volto-venue';
 import { Helmet } from '@plone/volto/helpers';
 
 const messages = defineMessages({
@@ -76,6 +76,14 @@ const messages = defineMessages({
  */
 const UOView = ({ content }) => {
   const intl = useIntl();
+  const searchAddress = [
+    content?.street,
+    content?.city,
+    content?.country?.title,
+    content?.zip_code,
+  ]
+    .filter(Boolean)
+    .join(', ');
   return (
     <>
       <div className="container px-4 my-4 uo-view">
@@ -115,7 +123,7 @@ const UOView = ({ content }) => {
               content?.geolocation) && (
               <article id="sedi" className="it-page-section anchor-offset mt-5">
                 <h4>{intl.formatMessage(messages.sedi)}</h4>
-                {content?.contact_info?.data && (
+                {content?.contact_info?.data.replace(/(<([^>]+)>)/g, '') && (
                   <div
                     className="text-serif"
                     dangerouslySetInnerHTML={{
@@ -123,7 +131,9 @@ const UOView = ({ content }) => {
                     }}
                   />
                 )}
-                {content?.geolocation && (
+                {__CLIENT__ &&
+                content.geolocation.latitude &&
+                content.geolocation.longitude ? (
                   <>
                     <Helmet>
                       <link
@@ -133,27 +143,18 @@ const UOView = ({ content }) => {
                         crossOrigin=""
                       />
                     </Helmet>
-                    <Map
-                      center={[
+                    <OSMMap
+                      position={[
                         content.geolocation.latitude,
                         content.geolocation.longitude,
                       ]}
-                      zoom={15}
-                      id="geocoded-result"
-                    >
-                      <TileLayer
-                        attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                      />
-                      <Marker
-                        position={[
-                          content.geolocation.latitude,
-                          content.geolocation.longitude,
-                        ]}
-                        draggable={false}
-                      />
-                    </Map>
+                      onMarkerDragEnd={null}
+                      draggable={false}
+                    />
+                    <small>{searchAddress}</small>
                   </>
+                ) : (
+                  ''
                 )}
                 {content?.sedi.length > 0 && (
                   <>
