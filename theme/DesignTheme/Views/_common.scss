@@ -159,3 +159,11 @@ div.sticky-wrapper {
     }
   }
 }
+
+#default-country {
+  .react-select-container {
+    &:last-child {
+      z-index: 2000;
+    }
+  }
+}

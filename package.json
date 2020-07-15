@@ -7,12 +7,14 @@
   "workspaces": [
     "src/addons/volto-cookie-banner",
     "src/addons/volto-multilingual-widget",
-    "src/addons/volto-rss-block"
+    "src/addons/volto-rss-block",
+    "src/addons/volto-venue"
   ],
   "addons": [
     "volto-cookie-banner",
     "volto-multilingual-widget",
-    "volto-rss-block"
+    "volto-rss-block",
+    "volto-venue"
   ],
   "scripts": {
     "start": "razzle start",

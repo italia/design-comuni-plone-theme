@@ -15,10 +15,10 @@ import { RichTextArticle } from './Commons';
 import { OfficeCard } from './Commons';
 import { Attachments } from './Commons';
 import { Metadata } from './Commons';
-import { Venue } from './Commons';
 import { RelatedNews } from './Commons';
 import { GenericCard } from './Commons';
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
+import { OSMMap } from 'volto-venue';
 
 const messages = defineMessages({
   tipologia_organizzazione: {
@@ -77,6 +77,14 @@ const UOView = ({ content }) => {
   const intl = useIntl();
   let documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
+  const searchAddress = [
+    content?.street,
+    content?.city,
+    content?.country?.title,
+    content?.zip_code,
+  ]
+    .filter(Boolean)
+    .join(', ');
 
   useEffect(() => {
     if (documentBody.current) {
@@ -107,7 +115,7 @@ const UOView = ({ content }) => {
         )}
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
-            <SideMenu data={sideMenuElements} />
+            {__CLIENT__ && <SideMenu data={sideMenuElements} />}
           </aside>
           <section
             ref={documentBody}
@@ -123,13 +131,46 @@ const UOView = ({ content }) => {
                 title={intl.formatMessage(messages.uo_ulteriori_informazioni)}
               />
             )}
-
-            {content.sedi?.length > 0 && (
+            {(content.sedi?.length > 0 ||
+              content?.contact_info?.data ||
+              content?.geolocation) && (
               <article id="sedi" className="it-page-section anchor-offset mt-5">
                 <h4 id="header-sedi">{intl.formatMessage(messages.sedi)}</h4>
-                {content.sedi.map((item, i) => (
-                  <Venue key={item['@id']} venue={item} display_title={false} />
-                ))}
+                {content?.contact_info?.data.replace(/(<([^>]+)>)/g, '') && (
+                  <div
+                    className="text-serif"
+                    dangerouslySetInnerHTML={{
+                      __html: content.contact_info.data,
+                    }}
+                  />
+                )}
+                {__CLIENT__ &&
+                  content.geolocation.latitude &&
+                  content.geolocation.longitude && (
+                    <>
+                      <OSMMap
+                        position={[
+                          content.geolocation.latitude,
+                          content.geolocation.longitude,
+                        ]}
+                      />
+                      <small>{searchAddress}</small>
+                    </>
+                  )}
+                {content?.sedi.length > 0 && (
+                  <>
+                    <h5 className="mt-3">Altre sedi</h5>
+                    <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                      {content.sedi.map((item, i) => (
+                        <GenericCard
+                          key={item['@id']}
+                          item={item}
+                          showimage={false}
+                        />
+                      ))}
+                    </div>
+                  </>
+                )}
               </article>
             )}
 
@@ -272,10 +313,10 @@ const UOView = ({ content }) => {
                 ))}
               </article>
             ) : null}
-            {content?.items.some((e) => e.id === 'allegati') && (
+            {content?.items.some(e => e.id === 'allegati') && (
               <Attachments content={content} folder_name={'allegati'} />
             )}
-            {content.box_aiuto && (
+            {content?.box_aiuto && (
               <RichTextArticle
                 content={content.box_aiuto.data}
                 tag_id="box_aiuto"
@@ -336,7 +377,7 @@ UOView.propTypes = {
     assessore_riferimento: PropTypes.array,
     box_aiuto: PropTypes.shape({
       data: PropTypes.string,
-    }).isRequired,
+    }),
     competenze: PropTypes.shape({
       data: PropTypes.string,
     }),

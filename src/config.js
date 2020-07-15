@@ -51,6 +51,7 @@ import CardWithImageRssTemplate from '@design/components/DesignTheme/Blocks/RssB
 import CardWithoutImageRssTemplate from '@design/components/DesignTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
 import { DatetimeWidget } from '@plone/volto/config/Widgets';
 import MultilingualWidget from 'volto-multilingual-widget';
+import { GeoLocationWidget } from 'volto-venue';
 
 const rssBlock = {
   ...customRssBlock,
@@ -231,6 +232,7 @@ export const widgets = {
   ...defaultWidgets,
   id: {
     ...defaultWidgets.id,
+    geolocation: GeoLocationWidget,
     description: CharCounterDescriptionWidget,
     cookie_consent_configuration: MultilingualWidget(),
     data_conclusione_incarico: (props) => (

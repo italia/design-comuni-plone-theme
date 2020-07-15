@@ -76,7 +76,6 @@ msgid "Image"
 msgstr "Image"
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
-#: components/DesignTheme/Widgets/LinkToWidget
 msgid "Link to"
 msgstr "Link a"
 
@@ -117,7 +116,6 @@ msgid "Note legali"
 msgstr "Note legali"
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
-#: components/DesignTheme/Widgets/LinkToWidget
 msgid "Open in a new tab"
 msgstr "Apri in un nuovo tab"
 
@@ -142,12 +140,10 @@ msgid "RssFeedItemNumber"
 msgstr "Numero di elementi da mostrare"
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "SearchServices"
 msgstr "Ricerca servizi"
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "SearchServicesTitle"
 msgstr "Titolo"
 
@@ -388,9 +384,8 @@ msgid "deleghe"
 msgstr "Deleghe"
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "desc"
-msgstr "Descrizione"
+msgstr "Link rapidi"
 
 #: components/DesignTheme/View/ServizioView
 msgid "descrizione_destinatari"
@@ -420,11 +415,7 @@ msgstr "Documenti e dati"
 
 #: components/DesignTheme/View/Commons/Actions
 msgid "download"
-msgstr "Scarica<<<<<<< HEAD"
-
-#: components/DesignTheme/Blocks/SearchServices/SideBar
-msgid "editSearch"
-msgstr "Modifica ricerca"
+msgstr "Scarica"
 
 #: components/DesignTheme/View/PersonaView
 msgid "email"
@@ -462,6 +453,26 @@ msgstr "Filtri"
 msgid "gallery"
 msgstr "Galleria di immagini"
 
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+msgid "geolocation"
+msgstr "Coordinate"
+
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+msgid "geolocationClear"
+msgstr "Cancella"
+
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+msgid "geolocation_placeholder"
+msgstr "Cerca una località"
+
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+msgid "geolocation_selected"
+msgstr "Coordinate selezionate - "
+
 #: components/DesignTheme/View/PersonaView
 msgid "importi_di_viaggio_e_o_servizi"
 msgstr "Importi di viaggio e/o servizi"
@@ -470,12 +481,15 @@ msgstr "Importi di viaggio e/o servizi"
 msgid "index"
 msgstr "Indice della pagina"
 
+#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+msgid "latitude"
+msgstr "Latitudine"
+
 #: components/DesignTheme/View/UOView
 msgid "legami_altre_strutture"
 msgstr "Legami con altre strutture"
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 msgid "link"
 msgstr "Collegamento"
 
@@ -486,6 +500,10 @@ msgstr "Link utili"
 #: components/DesignTheme/View/Commons/Locations
 msgid "locations"
 msgstr "Luoghi"
+
+#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+msgid "longitude"
+msgstr "Longitudine"
 
 #: components/DesignTheme/View/Commons/Actions
 msgid "mailto"
@@ -570,7 +588,7 @@ msgstr "Telefono"
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
 msgid "placeholder"
-msgstr "Placeholder"
+msgstr "Testo di aiuto"
 
 #: components/DesignTheme/Blocks/ArgomentoTitle/View
 msgid "portata_di_click"
@@ -660,6 +678,10 @@ msgstr "Cerca"
 #: components/DesignTheme/Header/SearchModal
 msgid "searchLabel"
 msgstr "Cerca nel sito"
+
+#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+msgid "searchOnMap"
+msgstr "Cerca nella mappa"
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
 msgid "search_service_block_sections"
