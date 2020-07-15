@@ -17,8 +17,8 @@ import { Attachments } from './Commons';
 import { Metadata } from './Commons';
 import { RelatedNews } from './Commons';
 import { GenericCard } from './Commons';
+import { UOLocation } from './Commons';
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
-import { OSMMap } from 'volto-venue';
 
 const messages = defineMessages({
   tipologia_organizzazione: {
@@ -49,10 +49,7 @@ const messages = defineMessages({
     id: 'box_aiuto',
     defaultMessage: "Box d'aiuto",
   },
-  sedi: {
-    id: 'sedi',
-    defaultMessage: 'Dove e come trovarci',
-  },
+
   uo_related_news: {
     id: 'uo_related_news',
     defaultMessage: 'Notizie in evidenza',
@@ -77,14 +74,6 @@ const UOView = ({ content }) => {
   const intl = useIntl();
   let documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
-  const searchAddress = [
-    content?.street,
-    content?.city,
-    content?.country?.title,
-    content?.zip_code,
-  ]
-    .filter(Boolean)
-    .join(', ');
 
   useEffect(() => {
     if (documentBody.current) {
@@ -131,49 +120,22 @@ const UOView = ({ content }) => {
                 title={intl.formatMessage(messages.uo_ulteriori_informazioni)}
               />
             )}
-            {(content.sedi?.length > 0 ||
-              content?.contact_info?.data ||
-              content?.geolocation) && (
-              <article id="sedi" className="it-page-section anchor-offset mt-5">
-                <h4 id="header-sedi">{intl.formatMessage(messages.sedi)}</h4>
-                {content?.contact_info?.data.replace(/(<([^>]+)>)/g, '') && (
-                  <div
-                    className="text-serif"
-                    dangerouslySetInnerHTML={{
-                      __html: content.contact_info.data,
-                    }}
-                  />
-                )}
-                {__CLIENT__ &&
-                  content.geolocation.latitude &&
-                  content.geolocation.longitude && (
-                    <>
-                      <OSMMap
-                        position={[
-                          content.geolocation.latitude,
-                          content.geolocation.longitude,
-                        ]}
-                      />
-                      <small>{searchAddress}</small>
-                    </>
-                  )}
-                {content?.sedi.length > 0 && (
-                  <>
-                    <h5 className="mt-3">Altre sedi</h5>
-                    <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                      {content.sedi.map((item, i) => (
-                        <GenericCard
-                          key={item['@id']}
-                          item={item}
-                          showimage={false}
-                        />
-                      ))}
-                    </div>
-                  </>
-                )}
-              </article>
+            {content.sedi?.length > 0 ||
+            content?.contact_info?.data.replace(/(<([^>]+)>)/g, '') ||
+            content?.geolocation?.latitude ||
+            content?.geolocation?.longitude ? (
+              <UOLocation
+                sedi={content?.sedi}
+                contact_info={content?.contact_info}
+                geolocation={content.geolocation}
+                street={content.street}
+                zip_code={content.zip_code}
+                city={content.city}
+                country={content.country}
+              />
+            ) : (
+              ''
             )}
-
             {content.tipologia_organizzazione && (
               <article
                 id="organizzazione"
@@ -313,7 +275,7 @@ const UOView = ({ content }) => {
                 ))}
               </article>
             ) : null}
-            {content?.items.some(e => e.id === 'allegati') && (
+            {content?.items.some((e) => e.id === 'allegati') && (
               <Attachments content={content} folder_name={'allegati'} />
             )}
             {content?.box_aiuto && (
@@ -394,6 +356,9 @@ UOView.propTypes = {
     persone_struttura: PropTypes.array,
     responsabile: PropTypes.array,
     sedi: PropTypes.array,
+    contact_info: PropTypes.shape({
+      data: PropTypes.string,
+    }),
     servizi_offerti: PropTypes.array,
     tassonomia_argomenti: PropTypes.arrayOf(
       PropTypes.shape({
