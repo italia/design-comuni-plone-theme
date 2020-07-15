@@ -75,6 +75,8 @@ const messages = defineMessages({
  */
 const UOView = ({ content }) => {
   const intl = useIntl();
+  let documentBody = createRef();
+  const [sideMenuElements, setSideMenuElements] = useState(null);
   const searchAddress = [
     content?.street,
     content?.city,
@@ -83,8 +85,6 @@ const UOView = ({ content }) => {
   ]
     .filter(Boolean)
     .join(', ');
-  let documentBody = createRef();
-  const [sideMenuElements, setSideMenuElements] = useState(null);
 
   useEffect(() => {
     if (documentBody.current) {
@@ -115,7 +115,7 @@ const UOView = ({ content }) => {
         )}
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
-            <SideMenu data={sideMenuElements} />
+            {__CLIENT__ && <SideMenu data={sideMenuElements} />}
           </aside>
           <section
             ref={documentBody}
@@ -145,20 +145,18 @@ const UOView = ({ content }) => {
                   />
                 )}
                 {__CLIENT__ &&
-                content.geolocation.latitude &&
-                content.geolocation.longitude ? (
-                  <>
-                    <OSMMap
-                      position={[
-                        content.geolocation.latitude,
-                        content.geolocation.longitude,
-                      ]}
-                    />
-                    <small>{searchAddress}</small>
-                  </>
-                ) : (
-                  ''
-                )}
+                  content.geolocation.latitude &&
+                  content.geolocation.longitude && (
+                    <>
+                      <OSMMap
+                        position={[
+                          content.geolocation.latitude,
+                          content.geolocation.longitude,
+                        ]}
+                      />
+                      <small>{searchAddress}</small>
+                    </>
+                  )}
                 {content?.sedi.length > 0 && (
                   <>
                     <h5 className="mt-3">Altre sedi</h5>
@@ -315,7 +313,7 @@ const UOView = ({ content }) => {
                 ))}
               </article>
             ) : null}
-            {content?.items.some((e) => e.id === 'allegati') && (
+            {content?.items.some(e => e.id === 'allegati') && (
               <Attachments content={content} folder_name={'allegati'} />
             )}
             {content?.box_aiuto && (

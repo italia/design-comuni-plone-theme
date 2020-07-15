@@ -52,14 +52,14 @@ const SideMenu = ({ data }) => {
 
   const [headers, _setHeaders] = useState([]);
   const headersRef = React.useRef(headers);
-  const setHeaders = (data) => {
+  const setHeaders = data => {
     headersRef.current = data;
     _setHeaders(data);
   };
 
   const [activeSection, _setActiveSection] = useState(null);
   const activeSectionRef = React.useRef(activeSection);
-  const setActiveSection = (data) => {
+  const setActiveSection = data => {
     activeSectionRef.current = data;
     _setActiveSection(data);
   };
@@ -68,8 +68,10 @@ const SideMenu = ({ data }) => {
   useEffect(() => {
     if (data?.children) {
       let extractedHeaders = extractHeaders(data.children, intl);
-      setHeaders(extractedHeaders);
-      setActiveSection(extractedHeaders[0].id);
+      if (extractedHeaders.length > 0) {
+        setHeaders(extractedHeaders);
+        setActiveSection(extractedHeaders[0].id);
+      }
       setWindowScrollY(window.scrollY);
     }
   }, [data]);
@@ -87,14 +89,14 @@ const SideMenu = ({ data }) => {
     setWindowScrollY(window.scrollY);
     let scrollOffset = (scrollDown ? 0.15 : 0.85) * window.innerHeight;
     let headersHeights = headersRef.current
-      .map((section) => {
+      .map(section => {
         let element = document.getElementById(section.id);
         return {
           id: section.id,
           top: element.getBoundingClientRect().top,
         };
       })
-      .filter((section) => section.top <= scrollOffset);
+      .filter(section => section.top <= scrollOffset);
 
     if (headersHeights.length > 0) {
       let section = headersHeights.reduce(
@@ -108,7 +110,7 @@ const SideMenu = ({ data }) => {
     }
   }, 100);
 
-  const handleClickAnchor = (id) => (e) => {
+  const handleClickAnchor = id => e => {
     e.preventDefault();
 
     document.getElementById(id).scrollIntoView({
