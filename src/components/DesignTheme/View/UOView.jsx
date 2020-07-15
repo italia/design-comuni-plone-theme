@@ -293,7 +293,7 @@ const UOView = ({ content }) => {
             {content?.items.some((e) => e.id === 'allegati') && (
               <Attachments content={content} folder_name={'allegati'} />
             )}
-            {content.box_aiuto && (
+            {content?.box_aiuto && (
               <RichTextArticle
                 content={content.box_aiuto.data}
                 tag_id="box_aiuto"
@@ -350,7 +350,7 @@ UOView.propTypes = {
     assessore_riferimento: PropTypes.array,
     box_aiuto: PropTypes.shape({
       data: PropTypes.string,
-    }).isRequired,
+    }),
     competenze: PropTypes.shape({
       data: PropTypes.string,
     }),
