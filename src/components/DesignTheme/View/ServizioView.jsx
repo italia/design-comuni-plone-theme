@@ -82,7 +82,7 @@ const messages = defineMessages({
   },
   costi: {
     id: 'costi',
-    defaultMessage: 'Costi per la richista del servizio',
+    defaultMessage: 'Costi per la richiesta del servizio',
   },
   vincoli: {
     id: 'vincoli',
@@ -90,7 +90,8 @@ const messages = defineMessages({
   },
   casi_particolari: {
     id: 'casi_particolari',
-    defaultMessage: 'Gestione di casi particolari per la richista del servizio',
+    defaultMessage:
+      'Gestione di casi particolari per la richiesta del servizio',
   },
   ufficio_responsabile: {
     id: 'ufficio_responsabile',
