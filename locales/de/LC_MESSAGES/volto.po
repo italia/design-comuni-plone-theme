@@ -464,18 +464,22 @@ msgstr ""
 msgid "gallery"
 msgstr ""
 
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 #: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 msgid "geolocation"
 msgstr ""
 
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 #: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 msgid "geolocationClear"
 msgstr ""
 
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 #: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 msgid "geolocation_placeholder"
 msgstr ""
 
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 #: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 msgid "geolocation_selected"
 msgstr ""

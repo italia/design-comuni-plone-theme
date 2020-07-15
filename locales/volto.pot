@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-07-15T07:28:11.380Z\n"
+"POT-Creation-Date: 2020-07-15T08:14:42.079Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -558,21 +558,25 @@ msgstr ""
 msgid "gallery"
 msgstr ""
 
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 #: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 # defaultMessage: Geolocation
 msgid "geolocation"
 msgstr ""
 
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 #: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 # defaultMessage: Clear
 msgid "geolocationClear"
 msgstr ""
 
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 #: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 # defaultMessage: Search a venue...
 msgid "geolocation_placeholder"
 msgstr ""
 
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 #: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 # defaultMessage: Selected
 msgid "geolocation_selected"

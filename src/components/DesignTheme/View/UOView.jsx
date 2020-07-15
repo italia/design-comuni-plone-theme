@@ -19,7 +19,6 @@ import { RelatedNews } from './Commons';
 import { GenericCard } from './Commons';
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 import { OSMMap } from 'volto-venue';
-import { Helmet } from '@plone/volto/helpers';
 
 const messages = defineMessages({
   tipologia_organizzazione: {
@@ -135,21 +134,11 @@ const UOView = ({ content }) => {
                 content.geolocation.latitude &&
                 content.geolocation.longitude ? (
                   <>
-                    <Helmet>
-                      <link
-                        rel="stylesheet"
-                        href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-                        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-                        crossOrigin=""
-                      />
-                    </Helmet>
                     <OSMMap
                       position={[
                         content.geolocation.latitude,
                         content.geolocation.longitude,
                       ]}
-                      onMarkerDragEnd={null}
-                      draggable={false}
                     />
                     <small>{searchAddress}</small>
                   </>

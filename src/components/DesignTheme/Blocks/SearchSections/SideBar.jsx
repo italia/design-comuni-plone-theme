@@ -26,6 +26,10 @@ const messages = defineMessages({
     id: 'placeholder',
     defaultMessage: 'Testo di aiuto',
   },
+  searchServices: {
+    id: 'SearchServices',
+    defaultMessage: 'Ricerca servizi',
+  },
 });
 
 const Sidebar = ({
@@ -41,12 +45,7 @@ const Sidebar = ({
   return (
     <Segment.Group raised>
       <header className="header pulled">
-        <h2>
-          <FormattedMessage
-            id="SearchServices"
-            defaultMessage="Ricerca servizi"
-          />
-        </h2>
+        <h2>{intl.formatMessage(messages.searchServices)}</h2>
       </header>
       <Accordion className="form">
         <Accordion.Content active={true}>
@@ -79,7 +78,7 @@ const Sidebar = ({
               id="groups"
               title={intl.formatMessage(messages.search_service_block_sections)}
               noValuePresent={false}
-              choices={Object.keys(sections).map((key) => [
+              choices={Object.keys(sections).map(key => [
                 key,
                 sections[key].title,
               ])}
@@ -89,8 +88,8 @@ const Sidebar = ({
                   ...data,
                   // is not possible remove the no-value field form select
                   sections: value
-                    .filter((v) => v !== 'no-value')
-                    .map((v) => {
+                    .filter(v => v !== 'no-value')
+                    .map(v => {
                       return { title: sections[v].title, value: v, token: v };
                     }),
                 });

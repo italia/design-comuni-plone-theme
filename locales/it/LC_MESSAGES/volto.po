@@ -73,15 +73,15 @@ msgstr "Image"
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
 msgid "Link to"
-msgstr ""
+msgstr "Link a"
 
 #: components/DesignTheme/Blocks/NewsHome/Sidebar
 msgid "LinkMore"
-msgstr ""
+msgstr "Link ad altro"
 
 #: components/DesignTheme/Blocks/NewsHome/Sidebar
 msgid "Linkto title"
-msgstr ""
+msgstr "Testo per il link ad altro"
 
 #: components/DesignTheme/Footer/FooterSmall
 msgid "Mappa del sito"
@@ -113,7 +113,7 @@ msgstr "Note legali"
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
 msgid "Open in a new tab"
-msgstr ""
+msgstr "Apri in un nuovo tab"
 
 #: components/DesignTheme/Footer/FooterInfos
 msgid "PEC"
@@ -137,11 +137,11 @@ msgstr "Numero di elementi da mostrare"
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
 msgid "SearchServices"
-msgstr ""
+msgstr "Ricerca servizi"
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
 msgid "SearchServicesTitle"
-msgstr ""
+msgstr "Titolo"
 
 #: components/DesignTheme/Header/HeaderCenter
 msgid "Seguici su"
@@ -381,7 +381,7 @@ msgstr "Deleghe"
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
 msgid "desc"
-msgstr ""
+msgstr "Link rapidi"
 
 #: components/DesignTheme/View/ServizioView
 msgid "descrizione_destinatari"
@@ -449,18 +449,22 @@ msgstr "Filtri"
 msgid "gallery"
 msgstr "Galleria di immagini"
 
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 #: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 msgid "geolocation"
 msgstr "Coordinate"
 
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 #: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 msgid "geolocationClear"
 msgstr "Cancella"
 
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 #: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 msgid "geolocation_placeholder"
 msgstr "Cerca una località"
 
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 #: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 msgid "geolocation_selected"
 msgstr "Coordinate selezionate - "
@@ -483,7 +487,7 @@ msgstr "Legami con altre strutture"
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
 msgid "link"
-msgstr ""
+msgstr "Collegamento"
 
 #: components/DesignTheme/View/ServizioView
 msgid "link_siti_esterni"
@@ -580,7 +584,7 @@ msgstr "Telefono"
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
 msgid "placeholder"
-msgstr ""
+msgstr "Testo di aiuto"
 
 #: components/DesignTheme/Blocks/ArgomentoTitle/View
 msgid "portata_di_click"
@@ -761,7 +765,7 @@ msgstr "Blocco sconosciuto"
 
 #: components/DesignTheme/View/UOView
 msgid "uo_related_news"
-msgstr ""
+msgstr "Notizie in evidenza"
 
 #: addons/volto-multilingual-widget/src/index
 msgid "value_for_lang"
