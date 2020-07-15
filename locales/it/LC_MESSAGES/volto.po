@@ -51,6 +51,10 @@ msgstr "Color_warning"
 msgid "Contatti"
 msgstr "Contatti"
 
+#: components/DesignTheme/View/Commons/SideMenu
+msgid "Contenuto"
+msgstr "Contenuto"
+
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Default"
 msgstr "Default"
@@ -81,7 +85,7 @@ msgstr "Link ad altro"
 
 #: components/DesignTheme/Blocks/NewsHome/Sidebar
 msgid "Linkto title"
-msgstr "Testo per il link ad altro"
+msgstr "Titolo per il link ad altro"
 
 #: components/DesignTheme/Footer/FooterSmall
 msgid "Mappa del sito"
@@ -169,7 +173,7 @@ msgstr "Template"
 
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Title"
-msgstr "Title"
+msgstr "Titolo"
 
 #: components/DesignTheme/Blocks/ArgomentoTitle/Edit
 msgid "Type description…"
@@ -637,7 +641,7 @@ msgstr "Rimuovi argomento"
 
 #: components/DesignTheme/View/UOView
 msgid "responsabile"
-msgstr "Responsablie"
+msgstr "Responsabile"
 
 #: components/DesignTheme/View/PersonaView
 msgid "responsabile_di"
@@ -755,7 +759,6 @@ msgid "ufficio_responsabile"
 msgstr "Ufficio responsabile"
 
 #: components/DesignTheme/View/PersonaView
-#: components/DesignTheme/View/UOView
 msgid "ulteriori_informazioni"
 msgstr "Ulteriori informazioni"
 
@@ -766,6 +769,10 @@ msgstr "Blocco sconosciuto"
 #: components/DesignTheme/View/UOView
 msgid "uo_related_news"
 msgstr "Notizie in evidenza"
+
+#: components/DesignTheme/View/UOView
+msgid "uo_ulteriori_informazioni"
+msgstr "Informazioni"
 
 #: addons/volto-multilingual-widget/src/index
 msgid "value_for_lang"

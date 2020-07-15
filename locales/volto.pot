@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-07-15T08:14:42.079Z\n"
+"POT-Creation-Date: 2020-07-15T08:55:04.149Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -61,6 +61,11 @@ msgstr ""
 #: components/DesignTheme/Footer/FooterInfos
 # defaultMessage: Contatti
 msgid "Contatti"
+msgstr ""
+
+#: components/DesignTheme/View/Commons/SideMenu
+# defaultMessage: Contenuto
+msgid "Contenuto"
 msgstr ""
 
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
@@ -936,7 +941,6 @@ msgid "ufficio_responsabile"
 msgstr ""
 
 #: components/DesignTheme/View/PersonaView
-#: components/DesignTheme/View/UOView
 # defaultMessage: Ulteriori informazioni
 msgid "ulteriori_informazioni"
 msgstr ""
@@ -951,6 +955,11 @@ msgstr ""
 msgid "uo_related_news"
 msgstr ""
 
+#: components/DesignTheme/View/UOView
+# defaultMessage: Informazioni
+msgid "uo_ulteriori_informazioni"
+msgstr ""
+
 #: addons/volto-multilingual-widget/src/index
 # defaultMessage: Value for language {lang}
 msgid "value_for_lang"
@@ -962,6 +971,6 @@ msgid "valutazione_situazione_patrimoniale"
 msgstr ""
 
 #: components/DesignTheme/View/ServizioView
-# defaultMessage: Vincoli per la richista del servizio
+# defaultMessage: Vincoli per la richiesta del servizio
 msgid "vincoli"
 msgstr ""

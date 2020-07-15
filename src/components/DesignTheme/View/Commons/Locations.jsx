@@ -74,7 +74,7 @@ const Locations = ({ locations }) => {
   const intl = useIntl();
   return (
     <article id="luoghi" className="it-page-section anchor-offset mt-5">
-      <h4>{intl.formatMessage(messages.locations)}</h4>
+      <h4 id="header-luoghi">{intl.formatMessage(messages.locations)}</h4>
       <div className="card-wrapper card-teaser-wrapper">
         {locations.map((item, i) => (
           <Location key={item['@id']} location={item} />
