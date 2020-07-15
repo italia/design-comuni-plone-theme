@@ -51,7 +51,7 @@ const Body = ({ content, pathname, block }) => {
                     <Chip simple color="primary" key={argomento['@id']}>
                       <Link
                         to={flattenToAppURL(argomento['@id'])}
-                        className="chip-label"
+                        className="chip-label text-decoration-none"
                       >
                         {argomento.title}
                       </Link>

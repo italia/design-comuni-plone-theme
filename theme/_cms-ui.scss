@@ -16,4 +16,20 @@ body.cms-ui {
   .it-footer {
     display: none;
   }
+
+  .react-select__menu {
+    z-index: 11;
+  }
+
+  .SingleDatePicker {
+    z-index: unset;
+
+    .DateInput {
+      z-index: 0;
+    }
+
+    .SingleDatePicker_picker {
+      z-index: 10;
+    }
+  }
 }

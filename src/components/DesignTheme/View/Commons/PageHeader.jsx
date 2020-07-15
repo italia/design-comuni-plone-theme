@@ -161,6 +161,7 @@ const PageHeader = (props) => {
                   href={flattenToAppURL(item['@id'])}
                   key={item.token}
                   title={item.title}
+                  className="text-decoration-none mr-2"
                 >
                   <Chip
                     color="primary"

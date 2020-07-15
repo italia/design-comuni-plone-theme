@@ -38,7 +38,7 @@ const GenericCard = ({ item, showimage, image_field, show_icon }) => {
           </div>
         </div>
         <div className="card-body">
-          <h5 className="card-title">
+          <h5 className="card-title no-toc">
             {show_icon && <Icon icon={show_icon} padding={false} />}
             <Link to={flattenToAppURL(item_fo['@id'])}>{item_fo.title}</Link>
           </h5>
@@ -48,7 +48,7 @@ const GenericCard = ({ item, showimage, image_field, show_icon }) => {
     ) : (
       <div className="genericcard card card-teaser shadow p-4 mt-3 rounded border">
         <div className="card-body">
-          <h5 className="card-title">
+          <h5 className="card-title no-toc">
             {show_icon && <Icon icon={show_icon} padding={false} />}
             <Link to={flattenToAppURL(item_fo['@id'])}>{item_fo.title}</Link>
           </h5>

@@ -35,7 +35,7 @@ const CompleteBlockLinksTemplate = ({ items, title, isEditMode, linkMore }) => {
           <Col md="3" key={item['@id']} className="col-item">
             <Card
               color=""
-              className="card-bg"
+              className="card-bg rounded"
               noWrapper={false}
               space
               tag="div"
@@ -49,7 +49,7 @@ const CompleteBlockLinksTemplate = ({ items, title, isEditMode, linkMore }) => {
                     : flattenToAppURL(item['@id'])
                 }
               >
-                <div className="flex">
+                <div className="d-flex">
                   {item.image && (
                     <div className="image-container">
                       <img
@@ -63,10 +63,10 @@ const CompleteBlockLinksTemplate = ({ items, title, isEditMode, linkMore }) => {
                   )}
                   <div>
                     <CardBody>
-                      <CardTitle tag="h5" className="white">
+                      <CardTitle tag="h5" className="text-white">
                         {item.title}
                       </CardTitle>
-                      <CardText tag="p" className="white">
+                      <CardText tag="p" className="text-white">
                         {item.description}
                       </CardText>
                     </CardBody>

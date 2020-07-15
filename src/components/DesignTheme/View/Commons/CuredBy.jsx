@@ -33,11 +33,11 @@ const CuredBy = ({ office, people }) => {
   const intl = useIntl();
   return (
     <article id="a-cura-di" className="it-page-section anchor-offset mt-5">
-      <h4>{intl.formatMessage(messages.cured_by)}</h4>
+      <h4 id="header-a-cura-di">{intl.formatMessage(messages.cured_by)}</h4>
       <div className="row">
         {office && (
           <div className="col-12 col-sm-8">
-            <h6>
+            <h6 className="no-toc">
               <small>{intl.formatMessage(messages.page_cured_by)}</small>
             </h6>
             <OfficeCard office={office} />
@@ -45,11 +45,15 @@ const CuredBy = ({ office, people }) => {
         )}
         {people?.length > 0 ? (
           <div className="col-12 col-sm-4">
-            <h6>
+            <h6 className="no-toc">
               <small>{intl.formatMessage(messages.cured_by_people)}</small>
             </h6>
             {people.map((item, i) => (
-              <Link to={flattenToAppURL(item['@id'])} key={item['@id']}>
+              <Link
+                to={flattenToAppURL(item['@id'])}
+                key={item['@id']}
+                className="text-decoration-none"
+              >
                 <Chip
                   color="primary"
                   disabled={false}

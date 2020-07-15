@@ -7,5 +7,8 @@
   },
   "volto-multilingual-widget": {
     "url": "git@github.com:collective/volto-multilingual-widget.git"
+  },
+  "volto-venue": {
+    "url": "git@github.com:collective/volto-venue.git"
   }
 }

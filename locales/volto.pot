@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-06-18T11:05:46.548Z\n"
+"POT-Creation-Date: 2020-07-15T10:12:19.479Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -63,6 +63,11 @@ msgstr ""
 msgid "Contatti"
 msgstr ""
 
+#: components/DesignTheme/View/Commons/SideMenu
+# defaultMessage: Contenuto
+msgid "Contenuto"
+msgstr ""
+
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 # defaultMessage: Default
 msgid "Default"
@@ -89,6 +94,7 @@ msgid "Image"
 msgstr ""
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
+#: components/DesignTheme/Widgets/LinkToWidget
 # defaultMessage: Link a
 msgid "Link to"
 msgstr ""
@@ -139,6 +145,7 @@ msgid "Note legali"
 msgstr ""
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
+#: components/DesignTheme/Widgets/LinkToWidget
 # defaultMessage: Apri in un nuovo tab
 msgid "Open in a new tab"
 msgstr ""
@@ -166,6 +173,18 @@ msgstr ""
 #: addons/volto-rss-block/src/Block/RssSidebar
 # defaultMessage: Number of items to show
 msgid "RssFeedItemNumber"
+msgstr ""
+
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+#: components/DesignTheme/Blocks/SearchServices/SideBar
+# defaultMessage: Ricerca servizi
+msgid "SearchServices"
+msgstr ""
+
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+#: components/DesignTheme/Blocks/SearchServices/SideBar
+# defaultMessage: Titolo
+msgid "SearchServicesTitle"
 msgstr ""
 
 #: components/DesignTheme/Header/HeaderCenter
@@ -352,7 +371,7 @@ msgid "canale_fisico_prenotazione"
 msgstr ""
 
 #: components/DesignTheme/View/ServizioView
-# defaultMessage: Gestione di casi particolari per la richista del servizio
+# defaultMessage: Gestione di casi particolari per la richiesta del servizio
 msgid "casi_particolari"
 msgstr ""
 
@@ -422,7 +441,7 @@ msgid "cosa_si_ottiene"
 msgstr ""
 
 #: components/DesignTheme/View/ServizioView
-# defaultMessage: Costi per la richista del servizio
+# defaultMessage: Costi per la richiesta del servizio
 msgid "costi"
 msgstr ""
 
@@ -461,6 +480,12 @@ msgstr ""
 msgid "deleghe"
 msgstr ""
 
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+#: components/DesignTheme/Blocks/SearchServices/SideBar
+# defaultMessage: Link rapidi
+msgid "desc"
+msgstr ""
+
 #: components/DesignTheme/View/ServizioView
 # defaultMessage: Destinatari del servizio
 msgid "descrizione_destinatari"
@@ -496,6 +521,11 @@ msgstr ""
 #: components/DesignTheme/View/Commons/Actions
 # defaultMessage: Scarica
 msgid "download"
+msgstr ""
+
+#: components/DesignTheme/Blocks/SearchServices/SideBar
+# defaultMessage: Modifica ricerca
+msgid "editSearch"
 msgstr ""
 
 #: components/DesignTheme/View/PersonaView
@@ -558,6 +588,12 @@ msgstr ""
 msgid "legami_altre_strutture"
 msgstr ""
 
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+#: components/DesignTheme/Blocks/SearchServices/SideBar
+# defaultMessage: Collegamento
+msgid "link"
+msgstr ""
+
 #: components/DesignTheme/View/ServizioView
 # defaultMessage: Link utili
 msgid "link_siti_esterni"
@@ -589,7 +625,6 @@ msgid "multilingual_text_placeholder"
 msgstr ""
 
 #: components/DesignTheme/View/NewsItemView
-#: components/DesignTheme/View/UOView
 # defaultMessage: Notizie in evidenza
 msgid "notizie_in_evidenza"
 msgstr ""
@@ -670,6 +705,11 @@ msgstr ""
 msgid "phone"
 msgstr ""
 
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+# defaultMessage: Testo di aiuto
+msgid "placeholder"
+msgstr ""
+
 #: components/DesignTheme/Blocks/ArgomentoTitle/View
 # defaultMessage: A PORTATA DI CLICK
 msgid "portata_di_click"
@@ -731,7 +771,7 @@ msgid "removeTopic"
 msgstr ""
 
 #: components/DesignTheme/View/UOView
-# defaultMessage: Reposanbile
+# defaultMessage: Responsabile
 msgid "responsabile"
 msgstr ""
 
@@ -777,6 +817,11 @@ msgstr ""
 #: components/DesignTheme/Header/SearchModal
 # defaultMessage: Cerca nel sito
 msgid "searchLabel"
+msgstr ""
+
+#: components/DesignTheme/Blocks/SearchSections/SideBar
+# defaultMessage: Dove cercare
+msgid "search_service_block_sections"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
@@ -868,7 +913,6 @@ msgid "ufficio_responsabile"
 msgstr ""
 
 #: components/DesignTheme/View/PersonaView
-#: components/DesignTheme/View/UOView
 # defaultMessage: Ulteriori informazioni
 msgid "ulteriori_informazioni"
 msgstr ""
@@ -876,6 +920,16 @@ msgstr ""
 #: components/DesignTheme/View/Commons/TextOrBlocks
 # defaultMessage: Blocco sconosciuto
 msgid "unknownBlock"
+msgstr ""
+
+#: components/DesignTheme/View/UOView
+# defaultMessage: Notizie in evidenza
+msgid "uo_related_news"
+msgstr ""
+
+#: components/DesignTheme/View/UOView
+# defaultMessage: Informazioni
+msgid "uo_ulteriori_informazioni"
 msgstr ""
 
 #: addons/volto-multilingual-widget/src/index
@@ -889,6 +943,6 @@ msgid "valutazione_situazione_patrimoniale"
 msgstr ""
 
 #: components/DesignTheme/View/ServizioView
-# defaultMessage: Vincoli per la richista del servizio
+# defaultMessage: Vincoli per la richiesta del servizio
 msgid "vincoli"
 msgstr ""
