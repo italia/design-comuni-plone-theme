@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-07-15T10:12:19.479Z\n"
+"POT-Creation-Date: 2020-07-16T12:22:54.842Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -94,7 +94,6 @@ msgid "Image"
 msgstr ""
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
-#: components/DesignTheme/Widgets/LinkToWidget
 # defaultMessage: Link a
 msgid "Link to"
 msgstr ""
@@ -145,7 +144,6 @@ msgid "Note legali"
 msgstr ""
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
-#: components/DesignTheme/Widgets/LinkToWidget
 # defaultMessage: Apri in un nuovo tab
 msgid "Open in a new tab"
 msgstr ""
@@ -176,13 +174,11 @@ msgid "RssFeedItemNumber"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 # defaultMessage: Ricerca servizi
 msgid "SearchServices"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 # defaultMessage: Titolo
 msgid "SearchServicesTitle"
 msgstr ""
@@ -481,7 +477,6 @@ msgid "deleghe"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 # defaultMessage: Link rapidi
 msgid "desc"
 msgstr ""
@@ -521,11 +516,6 @@ msgstr ""
 #: components/DesignTheme/View/Commons/Actions
 # defaultMessage: Scarica
 msgid "download"
-msgstr ""
-
-#: components/DesignTheme/Blocks/SearchServices/SideBar
-# defaultMessage: Modifica ricerca
-msgid "editSearch"
 msgstr ""
 
 #: components/DesignTheme/View/PersonaView
@@ -573,6 +563,30 @@ msgstr ""
 msgid "gallery"
 msgstr ""
 
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+# defaultMessage: Geolocation
+msgid "geolocation"
+msgstr ""
+
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+# defaultMessage: Clear
+msgid "geolocationClear"
+msgstr ""
+
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+# defaultMessage: Search a venue...
+msgid "geolocation_placeholder"
+msgstr ""
+
+#: addons/volto-geocoding/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+# defaultMessage: Selected
+msgid "geolocation_selected"
+msgstr ""
+
 #: components/DesignTheme/View/PersonaView
 # defaultMessage: Importi di viaggio e/o servizi
 msgid "importi_di_viaggio_e_o_servizi"
@@ -583,13 +597,17 @@ msgstr ""
 msgid "index"
 msgstr ""
 
+#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+# defaultMessage: Latitude
+msgid "latitude"
+msgstr ""
+
 #: components/DesignTheme/View/UOView
 # defaultMessage: Legami con altre strutture
 msgid "legami_altre_strutture"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
-#: components/DesignTheme/Blocks/SearchServices/SideBar
 # defaultMessage: Collegamento
 msgid "link"
 msgstr ""
@@ -602,6 +620,11 @@ msgstr ""
 #: components/DesignTheme/View/Commons/Locations
 # defaultMessage: Luoghi
 msgid "locations"
+msgstr ""
+
+#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+# defaultMessage: Longitude
+msgid "longitude"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Actions
@@ -817,6 +840,11 @@ msgstr ""
 #: components/DesignTheme/Header/SearchModal
 # defaultMessage: Cerca nel sito
 msgid "searchLabel"
+msgstr ""
+
+#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
+# defaultMessage: Search address on map
+msgid "searchOnMap"
 msgstr ""
 
 #: components/DesignTheme/Blocks/SearchSections/SideBar
