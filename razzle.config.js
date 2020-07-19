@@ -54,79 +54,7 @@ module.exports = Object.assign({}, volto_config, {
       ],
     };
 
-    const BASE_CSS_LOADER = {
-      loader: 'css-loader',
-      options: {
-        importLoaders: 2,
-        sourceMap: true,
-      },
-    };
-
-    const POST_CSS_LOADER = {
-      loader: require.resolve('postcss-loader'),
-      options: {
-        sourceMap: true,
-        // Necessary for external CSS imports to work
-        // https://github.com/facebookincubator/create-react-app/issues/2677
-        ident: 'postcss',
-        plugins: () => [
-          require('postcss-flexbugs-fixes'),
-          autoprefixer({
-            flexbox: 'no-2009',
-          }),
-        ],
-      },
-    };
-
-    const SASSLOADER = {
-      test: /\.s[ac]ss$/i,
-      include: [
-        path.resolve('./theme'),
-        /*/node_modules\/bootstrap-italia/,
-        /node_modules\/bootstrap/,*/
-      ],
-      use: dev
-        ? [
-            {
-              loader: 'style-loader',
-            },
-            BASE_CSS_LOADER,
-            POST_CSS_LOADER,
-            {
-              loader: 'sass-loader',
-              options: {
-                sassOptions: {
-                  outputStyle: 'expanded',
-                  sourceMap: true,
-                  includePaths: ['node_modules'],
-                },
-              },
-            },
-          ]
-        : [
-            MiniCssExtractPlugin.loader,
-            {
-              loader: 'css-loader',
-              options: {
-                importLoaders: 2,
-                sourceMap: true,
-              },
-            },
-            POST_CSS_LOADER,
-            {
-              loader: 'sass-loader',
-              options: {
-                sassOptions: {
-                  outputStyle: 'expanded',
-                  sourceMap: true,
-                  includePaths: ['node_modules'],
-                },
-              },
-            },
-          ],
-    };
     base_config.module.rules.push(SVG_LOADER);
-    base_config.module.rules.push(SASSLOADER);
 
     const jsconfigPaths = {};
     if (fs.existsSync(`${projectRootPath}/jsconfig.json`)) {
@@ -186,4 +114,23 @@ module.exports = Object.assign({}, volto_config, {
 
     return base_config;
   },
+  plugins: [
+    {
+      name: 'scss',
+      options: {
+        sass: {
+          dev: {
+            outputStyle: 'expanded',
+            sourceMap: true,
+            includePaths: ['node_modules'],
+          },
+          prod: {
+            outputStyle: 'expanded',
+            sourceMap: true,
+            includePaths: ['node_modules'],
+          }
+        },
+      },
+    },
+  ],
 });
