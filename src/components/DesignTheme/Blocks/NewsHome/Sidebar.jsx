@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Segment, Accordion } from 'semantic-ui-react';
 import { defineMessages, FormattedMessage, useIntl } from 'react-intl';
 import { TextWidget } from '@plone/volto/components';
-import { LinkToWidget } from '@design/components/DesignTheme';
+import { LinkToWidget } from '@italia/components/DesignTheme';
 
 const messages = defineMessages({
   News: {

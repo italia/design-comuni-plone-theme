@@ -28,8 +28,8 @@ import {
   Pagination,
   SearchSections,
   SearchTopics,
-} from '@design/components/DesignTheme';
-import { SearchUtils, TextInput, SelectInput } from '@design/components';
+} from '@italia/components/DesignTheme';
+import { SearchUtils, TextInput, SelectInput } from '@italia/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { getSearchFilters, getSearchResults } from '~/actions';
 import { settings } from '~/config';
@@ -174,8 +174,8 @@ const Search = () => {
     },
   ];
 
-  const getSectionFromId = id => {
-    let itemSection = Object.keys(sections).filter(s => id.indexOf(s) > -1);
+  const getSectionFromId = (id) => {
+    let itemSection = Object.keys(sections).filter((s) => id.indexOf(s) > -1);
 
     if (itemSection?.length > 0) {
       let sectionURL = `/${itemSection[0]}`;
@@ -199,7 +199,7 @@ const Search = () => {
     setCurrentPage(activePage?.children ?? 1);
   };
 
-  const searchFilters = useSelector(state => state.searchFilters.result);
+  const searchFilters = useSelector((state) => state.searchFilters.result);
   useEffect(() => {
     if (!searchFilters || Object.keys(searchFilters).length === 0)
       dispatch(getSearchFilters());
@@ -217,7 +217,7 @@ const Search = () => {
     setOptions(parseFetchedOptions({}, location));
   }, [searchFilters]);
 
-  const searchResults = useSelector(state => state.searchResults);
+  const searchResults = useSelector((state) => state.searchResults);
   useDebouncedEffect(
     () => {
       doSearch();
@@ -303,7 +303,7 @@ const Search = () => {
                 <div className="col-6">
                   <div className="float-right">
                     <a
-                      onClick={() => setCollapseFilters(prev => !prev)}
+                      onClick={() => setCollapseFilters((prev) => !prev)}
                       href="#categoryCollapse"
                       role="button"
                       className="font-weight-bold text-uppercase"
@@ -352,8 +352,9 @@ const Search = () => {
                 </div>
               </div>
 
-              {Object.values(options).filter(o => o !== null && o !== undefined)
-                .length > 0 && (
+              {Object.values(options).filter(
+                (o) => o !== null && o !== undefined,
+              ).length > 0 && (
                 <div className="pt-2 pt-lg-5">
                   <h6 className="text-uppercase">
                     {intl.formatMessage(messages.options)}
@@ -366,9 +367,9 @@ const Search = () => {
                         )}
                         id="options-active-content"
                         checked={options.activeContent}
-                        onChange={e => {
+                        onChange={(e) => {
                           const checked = e.currentTarget?.checked ?? false;
-                          setOptions(opts => ({
+                          setOptions((opts) => ({
                             ...opts,
                             activeContent: checked,
                           }));
@@ -388,7 +389,7 @@ const Search = () => {
                     role="presentation"
                     className="chip chip-lg selected"
                     onClick={() =>
-                      setOptions(opts => ({ ...opts, dateStart: null }))
+                      setOptions((opts) => ({ ...opts, dateStart: null }))
                     }
                   >
                     <span className="chip-label">
@@ -411,7 +412,7 @@ const Search = () => {
                     role="presentation"
                     className="chip chip-lg selected"
                     onClick={() =>
-                      setOptions(opts => ({ ...opts, dateEnd: null }))
+                      setOptions((opts) => ({ ...opts, dateEnd: null }))
                     }
                   >
                     <span className="chip-label">
@@ -450,17 +451,19 @@ const Search = () => {
                     <Col xs={6}>
                       <SelectInput
                         id="search-sort-on"
-                        value={sortOnOptions.filter(o => o.value === sortOn)[0]}
+                        value={
+                          sortOnOptions.filter((o) => o.value === sortOn)[0]
+                        }
                         label={intl.formatMessage(messages.orderBy)}
                         placeholder={intl.formatMessage(messages.orderBy)}
-                        onChange={opt => setSortOn(opt.value)}
+                        onChange={(opt) => setSortOn(opt.value)}
                         options={sortOnOptions}
                       />
                     </Col>
                   </Row>
                 </div>
                 <Row>
-                  {searchResults?.result?.items?.map(i => (
+                  {searchResults?.result?.items?.map((i) => (
                     <Col md={4} key={i['@id']}>
                       <Card
                         teaser

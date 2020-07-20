@@ -9,7 +9,7 @@ const defaultOptions = {
 };
 
 // A group is checked if at least one filter is checked
-const isGroupChecked = group =>
+const isGroupChecked = (group) =>
   Object.keys(group).reduce(
     (checked, filterId) => checked || group[filterId].value,
     false,
@@ -25,7 +25,7 @@ const isGroupIndeterminate = (group, groupIsChecked) =>
 
 // Given a filters group, set all filters to the given state
 const updateGroupCheckedStatus = (group, checked) =>
-  mapValues(group, filter => ({
+  mapValues(group, (filter) => ({
     ...filter,
     value: checked,
   }));

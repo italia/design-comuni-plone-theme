@@ -6,7 +6,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-// import { BITIcon, it_expand } from '@design/components/DesignTheme/Icons';
+// import { BITIcon, it_expand } from '@italia/components/DesignTheme/Icons';
 import {
   Row,
   Col,

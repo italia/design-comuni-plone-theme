@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import { stateFromHTML } from 'draft-js-import-html';
 import { Editor, DefaultDraftBlockRenderMap, EditorState } from 'draft-js';
 import { defineMessages, injectIntl } from 'react-intl';
-import { TextEditorWidget } from '@design/components/DesignTheme';
+import { TextEditorWidget } from '@italia/components/DesignTheme';
 
 const messages = defineMessages({
   title: {
@@ -225,7 +225,7 @@ class Edit extends Component {
               return 'handled';
             }}
             placeholder={this.props.intl.formatMessage(messages.title)}
-            ref={node => {
+            ref={(node) => {
               this.node = node;
             }}
           />
@@ -235,7 +235,7 @@ class Edit extends Component {
             editorState={this.state.editorStateDescription}
             blockRenderMap={extendedBlockRenderMap}
             placeholder={this.props.intl.formatMessage(messages.description)}
-            ref={node_description => {
+            ref={(node_description) => {
               this.node_description = node_description;
             }}
           />
@@ -247,7 +247,7 @@ class Edit extends Component {
             fieldName="portata_di_click"
             selected={true}
             block={this.props.block}
-            onChangeBlock={data =>
+            onChangeBlock={(data) =>
               this.props.onChangeBlock(this.props.block, data)
             }
             placeholder={this.props.intl.formatMessage(messages.title)}

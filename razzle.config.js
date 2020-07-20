@@ -16,7 +16,7 @@ const projectRootPath = path.resolve('.');
 const packageJson = require(path.join(projectRootPath, 'package.json'));
 const pathsConfig = jsConfig.paths;
 let voltoPath = path.resolve('./node_modules/@plone/volto');
-Object.keys(pathsConfig).forEach(pkg => {
+Object.keys(pathsConfig).forEach((pkg) => {
   if (pkg === '@plone/volto') {
     voltoPath = path.resolve(`./${jsConfig.baseUrl}/${pathsConfig[pkg][0]}`);
   }
@@ -60,7 +60,7 @@ module.exports = Object.assign({}, volto_config, {
     if (fs.existsSync(`${projectRootPath}/jsconfig.json`)) {
       const jsConfig = require(`${projectRootPath}/jsconfig`).compilerOptions;
       const pathsConfig = jsConfig.paths;
-      Object.keys(pathsConfig).forEach(packageName => {
+      Object.keys(pathsConfig).forEach((packageName) => {
         const packagePath = `${projectRootPath}/${jsConfig.baseUrl}/${pathsConfig[packageName][0]}`;
         jsconfigPaths[packageName] = packagePath;
         if (packageName === '@plone/volto') {
@@ -74,12 +74,12 @@ module.exports = Object.assign({}, volto_config, {
     if (!customizationPaths) {
       customizationPaths = ['src/customizations/'];
     }
-    customizationPaths.forEach(customizationPath => {
+    customizationPaths.forEach((customizationPath) => {
       map(
         glob(
           `${customizationPath}**/*.*(svg|png|jpg|jpeg|gif|ico|less|js|jsx)`,
         ),
-        filename => {
+        (filename) => {
           const targetPath = filename.replace(
             customizationPath,
             `${voltoPath}/src/`,
@@ -109,7 +109,7 @@ module.exports = Object.assign({}, volto_config, {
       // to be able to reference path uncustomized by webpack
       '@plone/volto-original': `${voltoPath}/src`,
       // be able to reference current package from customized package
-      '@design': `${projectRootPath}/src`,
+      '@italia': `${projectRootPath}/src`,
     };
 
     return base_config;

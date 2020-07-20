@@ -7,7 +7,7 @@ import React, { Component } from 'react';
 
 // import PropTypes from 'prop-types';
 // import { isCmsUi } from '@plone/volto/helpers';
-import { FooterMain, FooterSmall } from '@design/components/DesignTheme/';
+import { FooterMain, FooterSmall } from '@italia/components/DesignTheme/';
 import { CookieBanner } from 'volto-cookie-banner';
 
 /**

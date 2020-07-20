@@ -9,7 +9,7 @@ import cx from 'classnames';
 import redraft from 'redraft';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { isCmsUi } from '@plone/volto/helpers';
-import { settings } from '@design/config';
+import { settings } from '@italia/config';
 import { flattenToAppURL } from '@plone/volto/helpers';
 /**
  * View image block class.
@@ -21,7 +21,7 @@ const View = ({ data, pathname }) => {
     return <div />;
   }
   const isCmsUI = pathname ? isCmsUi(pathname) : false;
-  const generateKey = pre => {
+  const generateKey = (pre) => {
     pre = pre ? pre : '';
     return pre + Math.random(5);
   };

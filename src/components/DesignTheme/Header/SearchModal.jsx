@@ -30,8 +30,7 @@ import moment from 'moment';
 import qs from 'query-string';
 
 import { getSearchFilters } from '~/actions';
-import Checkbox from '../../Checkbox';
-import { SearchUtils } from '@design/components';
+import { SearchUtils, Checkbox } from '@italia/components';
 
 const {
   defaultOptions,
@@ -173,7 +172,7 @@ const SearchModal = ({ closeModal, show }) => {
   });
   const [topics, setTopics] = useState({});
   const [options, setOptions] = useState({ ...defaultOptions });
-  const selectedTopics = fromPairs(toPairs(topics).filter(t => t[1].value));
+  const selectedTopics = fromPairs(toPairs(topics).filter((t) => t[1].value));
   const checkedGroups = {
     amministrazione: isGroupChecked(sections.amministrazione),
     servizi: isGroupChecked(sections.servizi),
@@ -190,20 +189,22 @@ const SearchModal = ({ closeModal, show }) => {
     !options.activeContent && !options.dateStart && !options.dateEnd;
 
   const resetSections = () => {
-    setSections(prevSections =>
-      mapValues(prevSections, group => updateGroupCheckedStatus(group, false)),
+    setSections((prevSections) =>
+      mapValues(prevSections, (group) =>
+        updateGroupCheckedStatus(group, false),
+      ),
     );
   };
 
   const setGroupChecked = (groupId, checked) => {
-    setSections(prevSections => ({
+    setSections((prevSections) => ({
       ...prevSections,
       [groupId]: updateGroupCheckedStatus(prevSections[groupId], checked),
     }));
   };
 
   const setSectionFilterChecked = (groupId, filterId, checked) => {
-    setSections(prevSections => ({
+    setSections((prevSections) => ({
       ...prevSections,
       [groupId]: {
         ...prevSections[groupId],
@@ -216,8 +217,8 @@ const SearchModal = ({ closeModal, show }) => {
   };
 
   const resetTopics = () => {
-    setTopics(prevTopics =>
-      mapValues(prevTopics, topic => ({
+    setTopics((prevTopics) =>
+      mapValues(prevTopics, (topic) => ({
         ...topic,
         value: false,
       })),
@@ -225,7 +226,7 @@ const SearchModal = ({ closeModal, show }) => {
   };
 
   const setTopicChecked = (topicId, checked) => {
-    setTopics(prevTopics => ({
+    setTopics((prevTopics) => ({
       ...prevTopics,
       [topicId]: {
         ...prevTopics[topicId],
@@ -237,14 +238,14 @@ const SearchModal = ({ closeModal, show }) => {
   const resetOptions = () => setOptions({ ...defaultOptions });
 
   const setOptionValue = (optId, value) =>
-    setOptions(prevOptions => ({ ...prevOptions, [optId]: value }));
+    setOptions((prevOptions) => ({ ...prevOptions, [optId]: value }));
 
   const submitSearch = () => {
     setAdvancedSearch(false);
     closeModal();
   };
 
-  const handleEnterSearch = e => {
+  const handleEnterSearch = (e) => {
     if (e.key === 'Enter') {
       submitSearch();
       if (__CLIENT__)
@@ -254,7 +255,7 @@ const SearchModal = ({ closeModal, show }) => {
     }
   };
 
-  const searchFilters = useSelector(state => state.searchFilters.result);
+  const searchFilters = useSelector((state) => state.searchFilters.result);
 
   useEffect(() => {
     if (!searchFilters || Object.keys(searchFilters).length === 0)
@@ -336,7 +337,7 @@ const SearchModal = ({ closeModal, show }) => {
                       id="search-text"
                       type="text"
                       value={searchableText}
-                      onChange={e => setSearchableText(e.target.value)}
+                      onChange={(e) => setSearchableText(e.target.value)}
                       onKeyDown={handleEnterSearch}
                       className="form-control"
                       placeholder={intl.formatMessage(messages.searchLabel)}
@@ -376,7 +377,7 @@ const SearchModal = ({ closeModal, show }) => {
                   >
                     {intl.formatMessage(messages.allFilters)}
                   </Button>
-                  {Object.keys(sections).map(groupId => (
+                  {Object.keys(sections).map((groupId) => (
                     <Button
                       key={groupId}
                       color="primary"
@@ -417,7 +418,7 @@ const SearchModal = ({ closeModal, show }) => {
                     {intl.formatMessage(messages.allTopics)}
                   </span>
                 </button>
-                {Object.keys(selectedTopics).map(topicId => (
+                {Object.keys(selectedTopics).map((topicId) => (
                   <div
                     role="presentation"
                     className="chip chip-lg selected"
@@ -568,7 +569,7 @@ const SearchModal = ({ closeModal, show }) => {
                   <Row>
                     <div className="offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12">
                       <Row>
-                        {Object.keys(sections).map(groupId => (
+                        {Object.keys(sections).map((groupId) => (
                           <Col sm={6} key={groupId} className="group-col">
                             <FormGroup check tag="div">
                               <Checkbox
@@ -578,7 +579,7 @@ const SearchModal = ({ closeModal, show }) => {
                                   checkedGroups[groupId],
                                 )}
                                 checked={checkedGroups[groupId]}
-                                onChange={e =>
+                                onChange={(e) =>
                                   setGroupChecked(
                                     groupId,
                                     e.currentTarget.checked,
@@ -604,12 +605,12 @@ const SearchModal = ({ closeModal, show }) => {
                               </Label>
                             </FormGroup>
 
-                            {Object.keys(sections[groupId]).map(filterId => (
+                            {Object.keys(sections[groupId]).map((filterId) => (
                               <FormGroup check tag="div" key={filterId}>
                                 <Checkbox
                                   id={`modal-search-${filterId}`}
                                   checked={sections[groupId][filterId].value}
-                                  onChange={e =>
+                                  onChange={(e) =>
                                     setSectionFilterChecked(
                                       groupId,
                                       filterId,
@@ -637,14 +638,14 @@ const SearchModal = ({ closeModal, show }) => {
                   <Row>
                     <div className="offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12">
                       <div className="group-col columns">
-                        {Object.keys(topics).map(topicId => (
+                        {Object.keys(topics).map((topicId) => (
                           <div key={topicId}>
                             <FormGroup check tag="div">
                               <Input
                                 id={`modal-search-${topicId}`}
                                 type="checkbox"
                                 checked={topics[topicId].value}
-                                onChange={e =>
+                                onChange={(e) =>
                                   setTopicChecked(
                                     topicId,
                                     e.currentTarget.checked,
@@ -675,7 +676,7 @@ const SearchModal = ({ closeModal, show }) => {
                             messages.optionActiveContentLabel,
                           )}
                           checked={options.activeContent}
-                          onChange={e =>
+                          onChange={(e) =>
                             setOptionValue('activeContent', e.target?.checked)
                           }
                         />
@@ -693,7 +694,7 @@ const SearchModal = ({ closeModal, show }) => {
                               messages.optionDatePlaceholder,
                             )}
                             value={options.dateStart}
-                            onChange={e =>
+                            onChange={(e) =>
                               setOptionValue('dateStart', e.target.value)
                             }
                           />
@@ -707,7 +708,7 @@ const SearchModal = ({ closeModal, show }) => {
                               messages.optionDatePlaceholder,
                             )}
                             value={options.dateEnd}
-                            onChange={e =>
+                            onChange={(e) =>
                               setOptionValue('dateEnd', e.target.value)
                             }
                           />

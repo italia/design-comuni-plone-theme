@@ -10,7 +10,7 @@ import { compose } from 'redux';
 import { injectIntl } from 'react-intl';
 import cx from 'classnames';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
-import { settings } from '@design/config';
+import { settings } from '@italia/config';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
 import { createContent } from '@plone/volto/actions';
@@ -120,7 +120,7 @@ class Edit extends Component {
 export default compose(
   injectIntl,
   connect(
-    state => ({
+    (state) => ({
       request: state.content.create,
       content: state.content.data,
     }),

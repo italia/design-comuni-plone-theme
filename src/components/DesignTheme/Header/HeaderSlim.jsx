@@ -6,7 +6,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { defineMessages, useIntl } from 'react-intl';
-// import { BITIcon, it_user } from '@design/components/DesignTheme/Icons';
+// import { BITIcon, it_user } from '@italia/components/DesignTheme/Icons';
 import {
   Button,
   Header,
@@ -16,7 +16,7 @@ import {
   Icon,
 } from 'design-react-kit/dist/design-react-kit';
 
-import { LanguageSelector } from '@design/components/DesignTheme';
+import { LanguageSelector } from '@italia/components/DesignTheme';
 
 const messages = defineMessages({
   arLogin: {
