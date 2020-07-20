@@ -47,6 +47,7 @@
       "volto-rss-block/(.*)$": "<rootDir>/src/addons/volto-rss-block/src/$1",
       "volto-cookie-banner/(.*)$": "<rootDir>/src/addons/volto-cookie-banner/src/$1",
       "volto-multilingual-widget/(.*)$": "<rootDir>/src/addons/volto-multilingual-widget/src/$1",
+      "volto-venue/(.*)$": "<rootDir>/src/addons/volto-venue/src/$1",
       "~/(.*)$": "<rootDir>/src/$1"
     },
     "testMatch": [
