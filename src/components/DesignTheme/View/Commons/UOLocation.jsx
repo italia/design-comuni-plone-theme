@@ -71,4 +71,8 @@ UOLocation.propTypes = {
   contact_info: PropTypes.shape({
     data: PropTypes.string,
   }),
+  street: PropTypes.string,
+  city: PropTypes.string,
+  country: PropTypes.string,
+  zip_code: PropTypes.string,
 };
