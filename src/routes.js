@@ -6,7 +6,7 @@
 import { App } from '@plone/volto/components';
 import { defaultRoutes } from '@plone/volto/routes';
 
-export const designRoutes = [
+export const italiaRoutes = [
   // Add design-volto-theme routes here
 ];
 
@@ -19,7 +19,7 @@ const routes = [
   {
     path: '/',
     component: App, // Change this if you want a different component
-    routes: [...defaultRoutes, ...designRoutes],
+    routes: [...defaultRoutes, ...italiaRoutes],
   },
 ];
 
