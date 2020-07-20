@@ -1,6 +1,6 @@
 /**
  * CharCounterDescriptionWidget component.
- * @module components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
+ * @module components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
  */
 
 import React from 'react';
@@ -158,7 +158,7 @@ const CharCounterDescriptionWidget = ({
                 {intl.formatMessage(messages.exceeded_chars)}
               </p>
             )}
-            {map(error, message => (
+            {map(error, (message) => (
               <Label key={message} basic color="red" pointing>
                 {message}
               </Label>

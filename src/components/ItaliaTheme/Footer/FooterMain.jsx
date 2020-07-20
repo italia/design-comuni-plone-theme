@@ -12,7 +12,7 @@ import {
   Icon,
 } from 'design-react-kit/dist/design-react-kit';
 
-import { FooterNavigation, FooterInfos } from '@italia/components/DesignTheme/';
+import { FooterNavigation, FooterInfos } from '@italia/components/ItaliaTheme/';
 
 /**
  * FooterMain component class.

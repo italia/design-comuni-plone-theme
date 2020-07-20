@@ -1,12 +1,12 @@
 /**
  * LanguageSelector component.
- * @module components/DesignTheme/LanguageSelector/LanguageSelector
+ * @module components/ItaliaTheme/LanguageSelector/LanguageSelector
  */
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-// import { BITIcon, it_expand } from '@italia/components/DesignTheme/Icons';
+// import { BITIcon, it_expand } from '@italia/components/ItaliaTheme/Icons';
 import {
   Row,
   Col,

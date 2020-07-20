@@ -1,6 +1,6 @@
 /**
  * FooterNavigation components.
- * @module components/DesignTheme/Footer/FooterNavigation
+ * @module components/ItaliaTheme/Footer/FooterNavigation
  */
 
 import React, { useEffect } from 'react';
@@ -28,7 +28,7 @@ const messages = defineMessages({
 const FooterNavigation = () => {
   const intl = useIntl();
   const dispatch = useDispatch();
-  const items = useSelector(state => state.navigation.items, isEqual);
+  const items = useSelector((state) => state.navigation.items, isEqual);
 
   useEffect(() => {
     dispatch(getNavigation(getBaseUrl(''), 2));
@@ -38,7 +38,7 @@ const FooterNavigation = () => {
     <>
       {items && (
         <Row tag="div">
-          {items.map(item => (
+          {items.map((item) => (
             <Col
               lg={3}
               md={3}
@@ -59,7 +59,7 @@ const FooterNavigation = () => {
               </h4>
               {item.items && (
                 <LinkList className="footer-list clearfix" tag="div">
-                  {item.items.map(subitem => (
+                  {item.items.map((subitem) => (
                     <LinkListItem
                       key={subitem.url}
                       to={subitem.url}

@@ -28,7 +28,7 @@ import {
   Pagination,
   SearchSections,
   SearchTopics,
-} from '@italia/components/DesignTheme';
+} from '@italia/components/ItaliaTheme';
 import { SearchUtils, TextInput, SelectInput } from '@italia/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { getSearchFilters, getSearchResults } from '~/actions';

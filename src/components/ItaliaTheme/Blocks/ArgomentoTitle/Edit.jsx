@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import { stateFromHTML } from 'draft-js-import-html';
 import { Editor, DefaultDraftBlockRenderMap, EditorState } from 'draft-js';
 import { defineMessages, injectIntl } from 'react-intl';
-import { TextEditorWidget } from '@italia/components/DesignTheme';
+import { TextEditorWidget } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   title: {

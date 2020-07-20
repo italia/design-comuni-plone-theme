@@ -1,12 +1,12 @@
 /**
  * HeaderSlim component.
- * @module components/DesignTheme/Header/HeaderSlim
+ * @module components/ItaliaTheme/Header/HeaderSlim
  */
 
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { defineMessages, useIntl } from 'react-intl';
-// import { BITIcon, it_user } from '@italia/components/DesignTheme/Icons';
+// import { BITIcon, it_user } from '@italia/components/ItaliaTheme/Icons';
 import {
   Button,
   Header,
@@ -16,7 +16,7 @@ import {
   Icon,
 } from 'design-react-kit/dist/design-react-kit';
 
-import { LanguageSelector } from '@italia/components/DesignTheme';
+import { LanguageSelector } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   arLogin: {

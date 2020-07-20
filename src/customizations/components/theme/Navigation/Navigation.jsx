@@ -15,7 +15,7 @@ import { getNavigation } from '@plone/volto/actions';
 //   BITIcon,
 //   it_burger,
 //   it_close_circle,
-// } from '@italia/components/DesignTheme/Icons';
+// } from '@italia/components/ItaliaTheme/Icons';
 import {
   Header,
   HeaderContent,
@@ -26,7 +26,7 @@ import {
   NavLink,
   Icon,
 } from 'design-react-kit/dist/design-react-kit';
-import { MegaMenu } from '@italia/components/DesignTheme';
+import { MegaMenu } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   menu_selected: {
