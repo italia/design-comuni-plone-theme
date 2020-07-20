@@ -51,7 +51,7 @@ import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssB
 import CardWithoutImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
 import { DatetimeWidget } from '@plone/volto/config/Widgets';
 import MultilingualWidget from 'volto-multilingual-widget';
-import { GeoLocationWidget } from 'volto-venue';
+import { GeoLocationWidget } from '@italia/volto-venue';
 
 const rssBlock = {
   ...customRssBlock,

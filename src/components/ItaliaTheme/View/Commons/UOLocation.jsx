@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { OSMMap } from 'volto-venue';
+import { OSMMap } from '@italia/volto-venue';
 import { defineMessages, useIntl } from 'react-intl';
 import GenericCard from './GenericCard';
 const messages = defineMessages({
