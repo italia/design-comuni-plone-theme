@@ -1,13 +1,19 @@
 {
-  "compilerOptions": {
-    "paths": {
-      "@italia/addons/volto-rss-block": ["addons/volto-rss-block"],
-      "@italia/addons/volto-cookie-banner": ["addons/volto-cookie-banner"],
-      "@italia/addons/volto-multilingual-widget": [
-        "addons/volto-multilingual-widget"
-      ],
-      "@italia/addons/volto-venue": ["addons/volto-venue"]
-    },
-    "baseUrl": "./src"
-  }
+    "compilerOptions": {
+        "paths": {
+            "@italia/addons/volto-rss-block": [
+                "addons/volto-rss-block"
+            ],
+            "@italia/addons/volto-cookie-banner": [
+                "addons/volto-cookie-banner"
+            ],
+            "@italia/addons/volto-multilingual-widget": [
+                "addons/volto-multilingual-widget"
+            ],
+            "@italia/addons/volto-venue": [
+                "addons/volto-venue"
+            ]
+        },
+        "baseUrl": "src"
+    }
 }
