@@ -45,6 +45,7 @@ import SmallBlockLinksTemplate from '@design/components/DesignTheme/Blocks/Listi
 import CompleteBlockLinksTemplate from '@design/components/DesignTheme/Blocks/Listing/CompleteBlockLinksTemplate';
 import PhotogalleryTemplate from '@design/components/DesignTheme/Blocks/Listing/PhotogalleryTemplate';
 import InEvidenceTemplate from '@design/components/DesignTheme/Blocks/Listing/InEvidenceTemplate';
+import ArgumentsTemplate from  '@design/components/DesignTheme/Blocks/Listing/ArgumentsTemplate';
 
 import { rssBlock as customRssBlock } from 'volto-rss-block';
 import CardWithImageRssTemplate from '@design/components/DesignTheme/Blocks/RssBlock/CardWithImageRssTemplate';
@@ -184,6 +185,10 @@ const customBlocks = {
         label: 'In evidenza',
         template: InEvidenceTemplate,
       },
+      argumentsTemplate: {
+        label: 'Argomenti',
+        template: ArgumentsTemplate,
+      }
     },
   },
   rssBlock,

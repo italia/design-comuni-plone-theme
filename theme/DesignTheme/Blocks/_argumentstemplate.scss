@@ -1,0 +1,63 @@
+.arguments {
+  .data:before {
+    content: none;
+  }
+
+  .container {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 33% 33% auto;
+  }
+
+  .card .categoryicon-top .icon {
+    height: 22px;
+    width: 22px;
+    font-weight: 600;
+    fill: $secondary
+  }
+
+  .card-body a:link {
+    text-decoration: none;
+  }
+  
+  .card-body a:visited {
+    text-decoration: none;
+  }
+  
+  .card-body a:hover {
+    text-decoration: underline;
+  }
+  
+  .card-body a:active {
+    text-decoration: underline;
+  }
+
+  .card:after {
+    content: none;
+  }
+
+  .card .card-body .card-text {
+    font-family: "Titillium Web",Geneva,Tahoma,sans-serif;
+    font-size: .889em;
+    font-weight: 400;
+  }
+
+  // smartphone
+  @media (max-width: 585px) {
+    .container {
+      .card-wrapper {
+        width: 100%;
+        margin: 0px;
+      }
+      display: block;
+      height: 100%;
+    }
+  }
+  // tablet
+  @media (max-width: 1367px) and (min-width: 586px) {
+    .container {
+      grid-template-columns: auto auto;
+    }
+  }
+}
+
