@@ -31,8 +31,8 @@ import {
 } from '@italia/components/ItaliaTheme';
 import { SearchUtils, TextInput, SelectInput } from '@italia/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { getSearchFilters, getSearchResults } from '~/actions';
-import { settings } from '~/config';
+import { getSearchFilters, getSearchResults } from '@italia/actions';
+import { settings } from '@italia/config';
 
 const {
   parseFetchedSections,
