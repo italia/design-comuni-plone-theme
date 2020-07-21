@@ -113,7 +113,7 @@ module.exports = Object.assign({}, volto_config, {
     return base_config;
   },
   plugins: [
-    ...(volto_config.plugins ?? {}),
+    ...(volto_config.plugins || {}),
     {
       name: 'scss',
       options: {

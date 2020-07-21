@@ -46,11 +46,11 @@ import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Li
 import PhotogalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
 import InEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate';
 
-import { rssBlock as customRssBlock } from 'volto-rss-block';
+import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
 import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
 import CardWithoutImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
 import { DatetimeWidget } from '@plone/volto/config/Widgets';
-import MultilingualWidget from 'volto-multilingual-widget';
+import MultilingualWidget from '@italia/addons/volto-multilingual-widget';
 import { GeoLocationWidget } from '@italia/addons/volto-venue';
 
 const rssBlock = {
