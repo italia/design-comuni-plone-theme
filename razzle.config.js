@@ -5,8 +5,6 @@
 
 const jsConfig = require('./jsconfig').compilerOptions;
 const path = require('path');
-const autoprefixer = require('autoprefixer');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { map } = require('lodash');
 const glob = require('glob').sync;
 const fs = require('fs');
