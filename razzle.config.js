@@ -115,6 +115,7 @@ module.exports = Object.assign({}, volto_config, {
     return base_config;
   },
   plugins: [
+    ...(volto_config.plugins ?? {}),
     {
       name: 'scss',
       options: {
@@ -128,7 +129,7 @@ module.exports = Object.assign({}, volto_config, {
             outputStyle: 'expanded',
             sourceMap: true,
             includePaths: ['node_modules'],
-          }
+          },
         },
       },
     },

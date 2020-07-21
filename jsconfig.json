@@ -4,8 +4,8 @@
       "volto-rss-block": ["addons/volto-rss-block"],
       "volto-cookie-banner": ["addons/volto-cookie-banner"],
       "volto-multilingual-widget": ["addons/volto-multilingual-widget"],
-      "@italia/volto-venue": ["addons/volto-venue"]
+      "@italia/addons/volto-venue": ["addons/volto-venue"]
     },
-    "baseUrl": "src"
+    "baseUrl": "./src"
   }
 }
