@@ -12,7 +12,7 @@ import createInlineToolbarPlugin from 'draft-js-inline-toolbar-plugin';
 import { defineMessages } from 'react-intl';
 import { isEqual } from 'lodash';
 
-import { settings } from '~/config';
+import { settings } from '@italia/config';
 
 const messages = defineMessages({
   text: {
@@ -123,7 +123,7 @@ class TextEditorWidget extends Component {
    * @param {object} editorState Editor state.
    * @returns {undefined}
    */
-  onChange = editorState => {
+  onChange = (editorState) => {
     if (
       !isEqual(
         convertToRaw(editorState.getCurrentContent()),
@@ -165,10 +165,10 @@ class TextEditorWidget extends Component {
             blockRenderMap={this.props.blockRenderMap}
             blockStyleFn={settings.blockStyleFn}
             placeholder={placeholder}
-            ref={node => {
+            ref={(node) => {
               this.node = node;
             }}
-            handleReturn={e => {
+            handleReturn={(e) => {
               if (isSoftNewlineEvent(e)) {
                 this.onChange(
                   RichUtils.insertSoftNewline(this.state.editorState),

@@ -14,7 +14,7 @@ import {
 } from '@plone/volto/helpers';
 import { Helmet } from '@plone/volto/helpers';
 import { map } from 'lodash';
-import { blocks } from '~/config';
+import { blocks } from '@italia/config';
 import { defineMessages, useIntl } from 'react-intl';
 import { useLocation } from 'react-router-dom';
 /**
@@ -39,7 +39,7 @@ const PaginaArgomentoView = ({ content }) => {
   return hasBlocksData(content) ? (
     <div id="page-document" className="ui container">
       <Helmet title={content.title} />
-      {map(content[blocksLayoutFieldname].items, block => {
+      {map(content[blocksLayoutFieldname].items, (block) => {
         const Block =
           blocks.blocksConfig[content[blocksFieldname]?.[block]?.['@type']]?.[
             'view'
