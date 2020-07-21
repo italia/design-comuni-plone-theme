@@ -29,7 +29,7 @@ import cx from 'classnames';
 import moment from 'moment';
 import qs from 'query-string';
 
-import { getSearchFilters } from '~/actions';
+import { getSearchFilters } from '@italia/actions';
 import { SearchUtils, Checkbox } from '@italia/components';
 
 const {
