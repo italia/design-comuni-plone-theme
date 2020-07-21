@@ -3,7 +3,7 @@
  * @module src/reducers/getSearchFiltersReducer
  */
 
-import { GET_SEARCH_FILTERS } from '~/actions';
+import { GET_SEARCH_FILTERS } from '@italia/actions';
 
 const initialState = {
   error: null,

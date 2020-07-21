@@ -1,7 +1,7 @@
 /**
  * Sections for search
  */
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import {
   Input,
@@ -37,7 +37,7 @@ export default function SearchTopics({
   // }, [topics]);
 
   const setTopicChecked = (topicId, checked) => {
-    setTopics(prevTopics => ({
+    setTopics((prevTopics) => ({
       ...prevTopics,
       [topicId]: {
         ...prevTopics[topicId],
@@ -46,7 +46,7 @@ export default function SearchTopics({
     }));
   };
 
-  const getTopicChunks = topics => {
+  const getTopicChunks = (topics) => {
     const size = Object.keys(topics).length;
     if (size > 10) {
       let visibleTopics = {};
@@ -54,11 +54,11 @@ export default function SearchTopics({
       const keys_visible = Object.keys(topics).slice(0, 10);
       const keys_hide = Object.keys(topics).slice(10, size);
 
-      keys_visible.forEach(key => {
+      keys_visible.forEach((key) => {
         visibleTopics[key] = topics[key];
       });
 
-      keys_hide.forEach(key => {
+      keys_hide.forEach((key) => {
         hidedTopics[key] = topics[key];
       });
 
@@ -69,16 +69,18 @@ export default function SearchTopics({
 
   const topic_chunks = getTopicChunks(topics);
 
-  const drawTopics = topics => (
+  const drawTopics = (topics) => (
     <>
-      {Object.keys(topics).map(topicId => (
+      {Object.keys(topics).map((topicId) => (
         <div key={topicId}>
           <FormGroup check tag="div">
             <Input
               id={topicId}
               type="checkbox"
               checked={topics[topicId].value}
-              onChange={e => setTopicChecked(topicId, e.currentTarget.checked)}
+              onChange={(e) =>
+                setTopicChecked(topicId, e.currentTarget.checked)
+              }
             />
             <Label
               check
@@ -103,9 +105,9 @@ export default function SearchTopics({
           </Collapse>
           <div className="mt-4">
             <a
-              onClick={e => {
+              onClick={(e) => {
                 e.preventDefault();
-                setCollapse(prev => !prev);
+                setCollapse((prev) => !prev);
               }}
               className="font-weight-bold"
               data-toggle="collapse"
