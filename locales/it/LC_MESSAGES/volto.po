@@ -867,7 +867,7 @@ msgstr "Dove trovarci"
 
 #: addons/volto-rss-block/src/Block/RssSidebar
 msgid "selectRSSOptions"
-msgstr "Seleziona opzioini"
+msgstr "Seleziona opzioni"
 
 #: components/DesignTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView

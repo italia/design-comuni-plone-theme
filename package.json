@@ -43,7 +43,7 @@
     "moduleNameMapper": {
       "@plone/volto/(.*)$": "<rootDir>/node_modules/@plone/volto/src/$1",
       "@plone/volto/babel": "<rootDir>/node_modules/@plone/volto/babel",
-      "@design/(.*)$": "<rootDir>/src/$1",
+      "@italia/(.*)$": "<rootDir>/src/$1",
       "volto-rss-block/(.*)$": "<rootDir>/src/addons/volto-rss-block/src/$1",
       "volto-cookie-banner/(.*)$": "<rootDir>/src/addons/volto-cookie-banner/src/$1",
       "volto-multilingual-widget/(.*)$": "<rootDir>/src/addons/volto-multilingual-widget/src/$1",
