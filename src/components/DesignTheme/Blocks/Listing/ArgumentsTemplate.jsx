@@ -13,9 +13,7 @@ import { Link } from 'react-router-dom';
 import cx from 'classnames';
 
 const ArgumentsTemplate = ({ items, isEditMode, linkMore }) => {
-  console.log(items)
   const getIcon = (service) => {
-    console.log(service)
     switch (service) {
       case 'Servizio':
         return 'it-settings'
