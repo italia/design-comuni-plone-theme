@@ -21,7 +21,6 @@ import {
   CardText,
   CardCategory,
 } from 'design-react-kit/dist/design-react-kit';
-import cx from 'classnames';
 import { flattenToAppURL } from '@plone/volto/helpers';
 /**
  * PaginaArgomentoView view component class.
@@ -58,9 +57,7 @@ const PaginaArgomentoView = ({ content }) => {
                   <>
                     <div className="row mb-3" key={index}>
                       <div className="w-100">
-                      <Card
-                        className={cx('listing-item card-bg')}
-                      >
+                      <Card className={'listing-item card-bg'}>
                         <CardBody>
                           <CardCategory iconName='it-pa'>
                             <span className="text font-weight-bold">
