@@ -8,16 +8,19 @@ import { defineMessages, useIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
-import { WideImage } from './Commons';
-import { SideMenu } from './Commons';
-import { PageHeader } from './Commons';
-import { RichTextArticle } from './Commons';
-import { OfficeCard } from './Commons';
-import { Attachments } from './Commons';
-import { Metadata } from './Commons';
-import { RelatedNews } from './Commons';
-import { GenericCard } from './Commons';
-import { UOLocation } from './Commons';
+import {
+  WideImage,
+  SideMenu,
+  PageHeader,
+  RichTextArticle,
+  OfficeCard,
+  Attachments,
+  Metadata,
+  RelatedNews,
+  GenericCard,
+  UOLocation,
+} from '@italia/components/ItaliaTheme/View';
+
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({

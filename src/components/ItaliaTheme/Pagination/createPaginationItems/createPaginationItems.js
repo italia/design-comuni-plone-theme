@@ -4,9 +4,15 @@ import {
   createNextItem,
   createPageFactory,
   createPrevItem,
-} from './itemFactories';
-import { createComplexRange, createSimpleRange } from './rangeFactories';
-import { isSimplePagination, typifyOptions } from './paginationUtils';
+} from '@italia/components/ItaliaTheme/Pagination/createPaginationItems/itemFactories';
+import {
+  createComplexRange,
+  createSimpleRange,
+} from '@italia/components/ItaliaTheme/Pagination/createPaginationItems/rangeFactories';
+import {
+  isSimplePagination,
+  typifyOptions,
+} from '@italia/components/ItaliaTheme/Pagination/createPaginationItems/paginationUtils';
 
 /**
  * @param {object} rawOptions
@@ -16,7 +22,7 @@ import { isSimplePagination, typifyOptions } from './paginationUtils';
  * @param {number|string} rawOptions.siblingRange Number of always visible pages before and after the current one.
  * @param {number|string} rawOptions.totalPages Total number of pages.
  */
-const createPaginationItems = rawOptions => {
+const createPaginationItems = (rawOptions) => {
   const options = typifyOptions(rawOptions);
   const { activePage, totalPages } = options;
 

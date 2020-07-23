@@ -13,7 +13,8 @@ import {
   HeaderSocialsZone,
   Icon,
 } from 'design-react-kit/dist/design-react-kit';
-import SearchModal from './SearchModal';
+
+import { SearchModal } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   followUs: {

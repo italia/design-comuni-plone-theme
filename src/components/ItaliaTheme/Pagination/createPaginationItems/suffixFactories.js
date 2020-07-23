@@ -1,4 +1,4 @@
-import { createEllipsisItem } from './itemFactories';
+import { createEllipsisItem } from '@italia/components/ItaliaTheme/Pagination/createPaginationItems/itemFactories';
 
 export const createInnerPrefix = (
   firstGroupEnd,

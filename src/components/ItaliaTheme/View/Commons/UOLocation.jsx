@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { OSMMap } from '@italia/addons/volto-venue';
 import { defineMessages, useIntl } from 'react-intl';
-import GenericCard from './GenericCard';
+import { GenericCard } from '@italia/components/ItaliaTheme/View';
 const messages = defineMessages({
   sedi: {
     id: 'sedi',

@@ -21,7 +21,7 @@ import {
   Gallery,
   Attachments,
   TextOrBlocks,
-} from './Commons';
+} from '@italia/components/ItaliaTheme/View';
 
 // import { getBaseUrl } from '@plone/volto/helpers';
 

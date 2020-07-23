@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import NewsCard from './NewsCard';
+import { NewsCard } from '@italia/components/ItaliaTheme/View';
 import PropTypes from 'prop-types';
 /**
  * RelatedNews view component class.
@@ -13,7 +13,7 @@ import PropTypes from 'prop-types';
 const RelatedNews = ({ item, showimage, content }) => {
   const key = `news${item['@id']}`;
   const url = flattenToAppURL(item['@id']);
-  const locationContent = useSelector(state => state.content.subrequests);
+  const locationContent = useSelector((state) => state.content.subrequests);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getContent(url, null, key));
