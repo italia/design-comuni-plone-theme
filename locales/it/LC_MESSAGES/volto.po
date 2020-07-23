@@ -49,12 +49,12 @@ msgstr "Color"
 #: components/DesignTheme/Blocks/Alert/Sidebar
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Color_danger"
-msgstr "Color_danger"
+msgstr "Rosso"
 
 #: components/DesignTheme/Blocks/Alert/Sidebar
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Color_warning"
-msgstr "Color_warning"
+msgstr "Giallo"
 
 #: components/DesignTheme/Footer/FooterInfos
 #: components/ItaliaTheme/Footer/FooterInfos

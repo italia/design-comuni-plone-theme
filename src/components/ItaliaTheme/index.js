@@ -2,36 +2,39 @@
  * Add your components here.
  * @module components
  * @example
- * import Footer from './Footer/Footer';
+ * import Footer from '@italia/components/ItaliaTheme/Footer/Footer';
  *
  * export {
  *   Footer,
  * };
  */
 
-// export LinkList from './LinkList/LinkList';
-// export LinkListItem from './LinkList/LinkListItem';
-// export BrandLogo from './Brand/BrandLogo';
-// export BrandText from './Brand/BrandText';
-// export Brand from './Brand/Brand';
-export LanguageSelector from './LanguageSelector/LanguageSelector';
-// export SocialLinks from './SocialLinks/SocialLinks';
-export HeaderSlim from './Header/HeaderSlim';
-export HeaderCenter from './Header/HeaderCenter';
-export MegaMenu from './MegaMenu/MegaMenu';
-export FooterMain from './Footer/FooterMain';
-export FooterInfos from './Footer/FooterInfos';
-export FooterNavigation from './Footer/FooterNavigation';
-export FooterSmall from './Footer/FooterSmall';
-export Pagination from './Pagination/Pagination';
-export SearchSections from './Search/SearchSections';
-export SearchTopics from './Search/SearchTopics';
-export CharCounterDescriptionWidget from './manage/Widgets/CharCounterDescriptionWidget';
-export TextEditorWidget from './manage/Widgets/TextEditorWidget';
-export NewsItemView from './View/NewsItemView';
-export UOView from './View/UOView';
-export PersonaView from './View/PersonaView';
-export ServizioView from './View/ServizioView';
-export PaginaArgomentoView from './View/PaginaArgomentoView';
+/********* BLOCKS ********* */
+export AlertSidebar from '@italia/components/ItaliaTheme/Blocks/Alert/Sidebar';
 
-export LinkToWidget from './manage/Widgets/LinkToWidget';
+// export LinkList from '@italia/components/ItaliaTheme/LinkList/LinkList';
+// export LinkListItem from '@italia/components/ItaliaTheme/LinkList/LinkListItem';
+// export BrandLogo from '@italia/components/ItaliaTheme/Brand/BrandLogo';
+// export BrandText from '@italia/components/ItaliaTheme/Brand/BrandText';
+// export Brand from '@italia/components/ItaliaTheme/Brand/Brand';
+export LanguageSelector from '@italia/components/ItaliaTheme/LanguageSelector/LanguageSelector';
+// export SocialLinks from '@italia/components/ItaliaTheme/SocialLinks/SocialLinks';
+export HeaderSlim from '@italia/components/ItaliaTheme/Header/HeaderSlim';
+export HeaderCenter from '@italia/components/ItaliaTheme/Header/HeaderCenter';
+export MegaMenu from '@italia/components/ItaliaTheme/MegaMenu/MegaMenu';
+export FooterMain from '@italia/components/ItaliaTheme/Footer/FooterMain';
+export FooterInfos from '@italia/components/ItaliaTheme/Footer/FooterInfos';
+export FooterNavigation from '@italia/components/ItaliaTheme/Footer/FooterNavigation';
+export FooterSmall from '@italia/components/ItaliaTheme/Footer/FooterSmall';
+export Pagination from '@italia/components/ItaliaTheme/Pagination/Pagination';
+export SearchSections from '@italia/components/ItaliaTheme/Search/SearchSections';
+export SearchTopics from '@italia/components/ItaliaTheme/Search/SearchTopics';
+export CharCounterDescriptionWidget from '@italia/components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget';
+export TextEditorWidget from '@italia/components/ItaliaTheme/manage/Widgets/TextEditorWidget';
+export NewsItemView from '@italia/components/ItaliaTheme/View/NewsItemView';
+export UOView from '@italia/components/ItaliaTheme/View/UOView';
+export PersonaView from '@italia/components/ItaliaTheme/View/PersonaView';
+export ServizioView from '@italia/components/ItaliaTheme/View/ServizioView';
+export PaginaArgomentoView from '@italia/components/ItaliaTheme/View/PaginaArgomentoView';
+
+export LinkToWidget from '@italia/components/ItaliaTheme/manage/Widgets/LinkToWidget';

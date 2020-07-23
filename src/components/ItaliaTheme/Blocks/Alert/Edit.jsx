@@ -17,7 +17,7 @@ import { createContent } from '@plone/volto/actions';
 import { SidebarPortal } from '@plone/volto/components';
 import { EditTextBlock } from '@plone/volto/components';
 
-import Sidebar from './Sidebar';
+import { AlertSidebar } from '@italia/components/ItaliaTheme';
 /**
  * Edit image block class.
  * @class Edit
@@ -110,7 +110,7 @@ class Edit extends Component {
           </Row>
         </div>
         <SidebarPortal selected={this.props.selected}>
-          <Sidebar {...this.props} />
+          <AlertSidebar {...this.props} />
         </SidebarPortal>
       </div>
     );
