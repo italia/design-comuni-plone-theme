@@ -244,7 +244,7 @@ export const widgets = {
 
 const customBlocksOrder = [{ id: 'news', title: 'News' }];
 const customInitialBlocks = {
-  'Pagina Argomento': ['pagina_argomento_title'],
+  'Pagina Argomento': ['title', 'description', 'text'],
 };
 
 // BUG#10398

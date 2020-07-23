@@ -1,0 +1,73 @@
+.ArgomentoTitleWrapper,
+.ArgomentoHeader {
+  display: flex;
+  flex-wrap: wrap;
+
+  .title-description-wrapper {
+    flex: 1 1 500px;
+    padding-right: 30px;
+
+    ::placeholder {
+      color: $placeholder;
+    }
+
+    h2 {
+      font-size: 1em;
+    }
+  }
+
+  .a-portata-di-click {
+    flex: 1 1 300px;
+
+    ::placeholder {
+      color: $placeholder;
+    }
+  }
+
+  .card .categoryicon-top .icon {
+    height: 22px;
+    width: 22px;
+    font-weight: 600;
+    fill: $secondary
+  }
+
+  .card-body a:link {
+    text-decoration: none;
+  }
+  
+  .card-body a:visited {
+    text-decoration: none;
+  }
+  
+  .card-body a:hover {
+    text-decoration: underline;
+  }
+  
+  .card-body a:active {
+    text-decoration: underline;
+  }
+
+  .card:after {
+    content: none;
+  }
+
+  .link-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+  }
+
+  .card .card-body .card-text {
+    font-family: "Titillium Web",Geneva,Tahoma,sans-serif;
+    font-size: .889em;
+    font-weight: 400;
+  }
+
+  .asd {
+    color: #555;
+    font-size: .778em;
+    font-weight: 600;
+    font-family: "Titillium Web",Geneva,Tahoma,sans-serif;
+  }
+}
