@@ -46,8 +46,8 @@ const PaginaArgomentoView = ({ content }) => {
     <div id="page-document" className="ui container">
       <div className="ArgomentoTitleWrapper">
         <div className="title-description-wrapper">
-          <h1>{content.title}</h1>
-          {content.description}
+          <h1 className="mb-3">{content.title}</h1>
+          <p className="description">{content.description}</p>
         </div>
           <div className="a-portata-di-click">
             { 
