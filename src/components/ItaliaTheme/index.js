@@ -11,6 +11,8 @@
 
 /********* BLOCKS ********* */
 export AlertSidebar from '@italia/components/ItaliaTheme/Blocks/Alert/Sidebar';
+export NewsHomeBody from '@italia/components/ItaliaTheme/Blocks/NewsHome/Body';
+export NewsHomeSidebar from '@italia/components/ItaliaTheme/Blocks/NewsHome/Sidebar';
 
 // export LinkList from '@italia/components/ItaliaTheme/LinkList/LinkList';
 // export LinkListItem from '@italia/components/ItaliaTheme/LinkList/LinkListItem';
