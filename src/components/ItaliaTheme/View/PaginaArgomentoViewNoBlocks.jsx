@@ -6,14 +6,16 @@
 import React, { createRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import { GenericCard } from './Commons';
-import { WideImage } from './Commons';
-import { SideMenu } from './Commons';
-import { PageHeader } from './Commons';
-import { OfficeCard } from './Commons';
-import { RichTextArticle } from './Commons';
-import { Metadata } from './Commons';
-import { NewsCard } from './Commons';
+import {
+  GenericCard,
+  WideImage,
+  SideMenu,
+  PageHeader,
+  OfficeCard,
+  RichTextArticle,
+  Metadata,
+  NewsCard,
+} from '@italia/components/ItaliaTheme/View';
 
 // import { getBaseUrl } from '@plone/volto/helpers';
 

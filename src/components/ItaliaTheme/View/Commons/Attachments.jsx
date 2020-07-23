@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import Attachment from './Attachment';
+import { Attachment } from '@italia/components/ItaliaTheme/View';
 import PropTypes from 'prop-types';
 
 const messages = defineMessages({

@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { SidebarPortal } from '@plone/volto/components';
-import Sidebar from './SideBar';
-import Body from './Body';
+import {
+  BlockSearchSectionsSidebar,
+  BlockSearchSectionsBody,
+} from '@italia/components/ItaliaTheme';
+
 import { useSelector } from 'react-redux';
 
 const Edit = ({
@@ -20,10 +23,10 @@ const Edit = ({
   return (
     <>
       <div className="block">
-        <Body block={data} sections={sections} />
+        <BlockSearchSectionsBody block={data} sections={sections} />
       </div>
       <SidebarPortal selected={selected}>
-        <Sidebar
+        <BlockSearchSectionsSidebar
           data={data}
           block={block}
           onChangeBlock={onChangeBlock}

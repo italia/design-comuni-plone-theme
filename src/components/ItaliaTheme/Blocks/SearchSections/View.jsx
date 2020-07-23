@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 
-import Body from './Body';
+import { BlockSearchSectionsBody } from '@italia/components/ItaliaTheme';
 
 const View = ({ data, id }) => {
   const content = useSelector((state) => state.content.subrequests[id]?.data);
@@ -12,7 +12,11 @@ const View = ({ data, id }) => {
 
   return (
     <div className="block full-width">
-      <Body content={content} block={data} sections={sections} />
+      <BlockSearchSectionsBody
+        content={content}
+        block={data}
+        sections={sections}
+      />
     </div>
   );
 };

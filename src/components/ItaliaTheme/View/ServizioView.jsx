@@ -6,16 +6,19 @@
 import React, { createRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import { Attachments } from './Commons';
-import { SideMenu } from './Commons';
-import { PageHeader } from './Commons';
-import { RichTextArticle } from './Commons';
-import { OfficeCard } from './Commons';
-import { GenericCard } from './Commons';
-import { Metadata } from './Commons';
-import { NewsCard } from './Commons';
-import { WideImage } from './Commons';
-import { SmallVenue } from './Commons';
+import {
+  Attachments,
+  SideMenu,
+  PageHeader,
+  RichTextArticle,
+  OfficeCard,
+  GenericCard,
+  Metadata,
+  NewsCard,
+  WideImage,
+  SmallVenue,
+} from '@italia/components/ItaliaTheme/View';
+
 import { LinkList, LinkListItem } from 'design-react-kit/dist/design-react-kit';
 import {
   Card,

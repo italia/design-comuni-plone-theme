@@ -7,16 +7,18 @@ import React, { createRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import { defineMessages, useIntl } from 'react-intl';
-import { Attachments } from './Commons';
-import { Attachment } from './Commons';
-import { SideMenu } from './Commons';
-import { PageHeader } from './Commons';
-import { RichTextArticle } from './Commons';
-import { OfficeCard } from './Commons';
-import { Gallery } from './Commons';
-import { Metadata } from './Commons';
-import { NewsCard } from './Commons';
-import { GenericCard } from './Commons';
+import {
+  Attachments,
+  Attachment,
+  SideMenu,
+  PageHeader,
+  RichTextArticle,
+  OfficeCard,
+  Gallery,
+  Metadata,
+  NewsCard,
+  GenericCard,
+} from '@italia/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   role_bio: {

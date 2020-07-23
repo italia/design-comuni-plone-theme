@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { getContent, resetContent } from '@plone/volto/actions';
-import { getBaseUrl, flattenToAppURL } from '@plone/volto/helpers';
+import { flattenToAppURL } from '@plone/volto/helpers';
 
-import Body from './Body';
+import { NewsHomeBody } from '@italia/components/ItaliaTheme';
 
 const View = ({ data, id }) => {
   const content = useSelector((state) => state.content.subrequests[id]?.data);
@@ -20,7 +20,7 @@ const View = ({ data, id }) => {
 
   return data.href && content ? (
     <div className="block newsHome">
-      <Body content={content} block={data} />
+      <NewsHomeBody content={content} block={data} />
     </div>
   ) : null;
 };

@@ -13,6 +13,8 @@
 export AlertSidebar from '@italia/components/ItaliaTheme/Blocks/Alert/Sidebar';
 export NewsHomeBody from '@italia/components/ItaliaTheme/Blocks/NewsHome/Body';
 export NewsHomeSidebar from '@italia/components/ItaliaTheme/Blocks/NewsHome/Sidebar';
+export BlockSearchSectionsSidebar from '@italia/components/ItaliaTheme/Blocks/SearchSections/SideBar';
+export BlockSearchSectionsBody from '@italia/components/ItaliaTheme/Blocks/SearchSections/Body';
 
 // export LinkList from '@italia/components/ItaliaTheme/LinkList/LinkList';
 // export LinkListItem from '@italia/components/ItaliaTheme/LinkList/LinkListItem';
@@ -23,14 +25,17 @@ export LanguageSelector from '@italia/components/ItaliaTheme/LanguageSelector/La
 // export SocialLinks from '@italia/components/ItaliaTheme/SocialLinks/SocialLinks';
 export HeaderSlim from '@italia/components/ItaliaTheme/Header/HeaderSlim';
 export HeaderCenter from '@italia/components/ItaliaTheme/Header/HeaderCenter';
+export SearchModal from '@italia/components/ItaliaTheme/Header/SearchModal';
+export SearchSections from '@italia/components/ItaliaTheme/Search/SearchSections';
+export SearchTopics from '@italia/components/ItaliaTheme/Search/SearchTopics';
+
 export MegaMenu from '@italia/components/ItaliaTheme/MegaMenu/MegaMenu';
 export FooterMain from '@italia/components/ItaliaTheme/Footer/FooterMain';
 export FooterInfos from '@italia/components/ItaliaTheme/Footer/FooterInfos';
 export FooterNavigation from '@italia/components/ItaliaTheme/Footer/FooterNavigation';
 export FooterSmall from '@italia/components/ItaliaTheme/Footer/FooterSmall';
 export Pagination from '@italia/components/ItaliaTheme/Pagination/Pagination';
-export SearchSections from '@italia/components/ItaliaTheme/Search/SearchSections';
-export SearchTopics from '@italia/components/ItaliaTheme/Search/SearchTopics';
+
 export CharCounterDescriptionWidget from '@italia/components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget';
 export TextEditorWidget from '@italia/components/ItaliaTheme/manage/Widgets/TextEditorWidget';
 export NewsItemView from '@italia/components/ItaliaTheme/View/NewsItemView';

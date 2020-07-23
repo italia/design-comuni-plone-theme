@@ -4,8 +4,7 @@
  */
 
 import React from 'react';
-import PropTypes from 'prop-types';
-import PaginaArgomentoViewNoBlocks from './PaginaArgomentoViewNoBlocks';
+import { PaginaArgomentoViewNoBlocks } from '@italia/components/ItaliaTheme/View';
 import {
   getBlocksFieldname,
   getBlocksLayoutFieldname,

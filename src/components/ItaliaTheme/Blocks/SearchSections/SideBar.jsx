@@ -41,7 +41,7 @@ const Sidebar = ({
   required,
 }) => {
   const intl = useIntl();
-  debugger;
+
   return (
     <Segment.Group raised>
       <header className="header pulled">
@@ -78,7 +78,7 @@ const Sidebar = ({
               id="groups"
               title={intl.formatMessage(messages.search_service_block_sections)}
               noValuePresent={false}
-              choices={Object.keys(sections).map(key => [
+              choices={Object.keys(sections).map((key) => [
                 key,
                 sections[key].title,
               ])}
@@ -88,8 +88,8 @@ const Sidebar = ({
                   ...data,
                   // is not possible remove the no-value field form select
                   sections: value
-                    .filter(v => v !== 'no-value')
-                    .map(v => {
+                    .filter((v) => v !== 'no-value')
+                    .map((v) => {
                       return { title: sections[v].title, value: v, token: v };
                     }),
                 });

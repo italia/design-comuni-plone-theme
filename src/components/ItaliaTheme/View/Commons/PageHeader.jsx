@@ -1,8 +1,7 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import moment from 'moment';
-import Sharing from './Sharing';
-import Actions from './Actions';
+import { Sharing, Actions } from '@italia/components/ItaliaTheme/View';
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import cx from 'classnames';
@@ -56,6 +55,7 @@ const messages = defineMessages({
 
 const PageHeader = (props) => {
   const intl = useIntl();
+
   return (
     <div className="row">
       <div
@@ -159,7 +159,7 @@ const PageHeader = (props) => {
               {props.content.tassonomia_argomenti.map((item, i) => (
                 <a
                   href={flattenToAppURL(item['@id'])}
-                  key={item.token}
+                  key={item['@id']}
                   title={item.title}
                   className="text-decoration-none mr-2"
                 >

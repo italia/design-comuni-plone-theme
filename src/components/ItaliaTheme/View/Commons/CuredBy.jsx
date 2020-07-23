@@ -1,10 +1,10 @@
 import { defineMessages, useIntl } from 'react-intl';
 import React from 'react';
-import OfficeCard from './OfficeCard';
+import PropTypes from 'prop-types';
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import PropTypes from 'prop-types';
+import { OfficeCard } from '@italia/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   cured_by: {

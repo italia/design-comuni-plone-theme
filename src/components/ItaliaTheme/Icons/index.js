@@ -1,4 +1,4 @@
-export BITIcon from './BITIcon';
+export BITIcon from '@italia/components/ItaliaTheme/Icons/BITIcon';
 /** List of icons*/
 export it_arrow_down_circle from 'bootstrap-italia/src/svg/it-arrow-down-circle.svg';
 export it_arrow_down_triangle from 'bootstrap-italia/src/svg/it-arrow-down-triangle.svg';
