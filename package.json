@@ -118,10 +118,10 @@
     "typeface-lora": "0.0.72",
     "typeface-roboto-mono": "0.0.75",
     "typeface-titillium-web": "0.0.72",
-    "volto-cookie-banner": "collective/volto-cookie-banner#0.1.0",
-    "volto-multilingual-widget": "collective/volto-multilingual-widget#0.1.0",
-    "volto-rss-block": "redturtle/volto-rss-block#0.1.0",
-    "volto-venue": "collective/volto-venue#0.1.0"
+    "volto-cookie-banner": "collective/volto-cookie-banner#v0.1.0",
+    "volto-multilingual-widget": "collective/volto-multilingual-widget#v0.1.0",
+    "volto-rss-block": "redturtle/volto-rss-block",
+    "volto-venue": "collective/volto-venue"
   },
   "devDependencies": {
     "eslint-plugin-prettier": "3.1.3",
