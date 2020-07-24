@@ -43,16 +43,6 @@
     font-family: 'Titillium Web' !important;
   }
 
-  .view-all {
-    background-color: $tertiary;
-    color: $tertiary-text;
-
-    &:hover,
-    &:active {
-      background-color: darken($tertiary, 8%);
-    }
-  }
-
   .card:after {
     content: none;
   }

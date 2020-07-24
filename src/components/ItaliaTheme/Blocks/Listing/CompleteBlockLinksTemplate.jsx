@@ -80,6 +80,7 @@ const CompleteBlockLinksTemplate = ({ items, title, isEditMode, linkMore }) => {
       {linkMore?.href && (
         <div className="link-button">
           <Button
+            color="tertiary"
             className="view-all"
             icon={false}
             tag="button"
