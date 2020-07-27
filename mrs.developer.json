@@ -1,18 +1,22 @@
 {
   "volto-rss-block": {
     "package": "@italia/addons/volto-rss-block",
+    "path": "src",
     "url": "git@github.com:redturtle/volto-rss-block.git"
   },
   "volto-cookie-banner": {
     "package": "@italia/addons/volto-cookie-banner",
+    "path": "src",
     "url": "git@github.com:collective/volto-cookie-banner.git"
   },
   "volto-multilingual-widget": {
     "package": "@italia/addons/volto-multilingual-widget",
+    "path": "src",
     "url": "git@github.com:collective/volto-multilingual-widget.git"
   },
   "volto-venue": {
     "package": "@italia/addons/volto-venue",
+    "path": "src",
     "url": "git@github.com:collective/volto-venue.git"
   }
 }
