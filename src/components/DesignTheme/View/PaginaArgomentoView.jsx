@@ -62,11 +62,11 @@ const PaginaArgomentoView = ({ content }) => {
   return hasBlocksData(content) ? (
     <div id="page-document" className="ui container">
       <div className="ArgomentoTitleWrapper">
-        <div className="title-description-wrapper">
+        <div className="title-description-wrapper col-lg-6">
           <h1 className="mb-3">{content.title}</h1>
           <p className="description">{content.description}</p>
         </div>
-          <div className="a-portata-di-click">
+          <div className="col-lg-4 offset-lg-2">
             { 
               content?.unita_amministrativa_responsabile?.length > 0 ?
                 content?.unita_amministrativa_responsabile.map((u, index) => {
@@ -74,23 +74,34 @@ const PaginaArgomentoView = ({ content }) => {
                   <>
                     <div className="row mb-3" key={index}>
                       <div className="w-100">
-                      <Card className={'listing-item card-bg'}>
-                        <CardBody>
-                          <CardCategory iconName='it-pa'>
-                            <span className="text font-weight-bold">
-                              <Link to={flattenToAppURL(u['@id'])}>
-                                {u.title || u.id}
-                              </Link>
-                            </span>
-                          </CardCategory>
-                          {
+                      <Card className={'listing-item card-bg border-left-card'}>
+                        <div className="d-flex">
+                        <CardBody className="">
+                            <CardCategory>
+                              <span className="text font-weight-bold">
+                                <Link to={flattenToAppURL(u['@id'])}>
+                                  {u.title || u.id}
+                                </Link>
+                              </span>
+                            </CardCategory>
                             <CardText>
-                              {searchResults[u['@id']]?.data?.street} 
-                              {searchResults[u['@id']]?.data?.street && searchResults[u['@id']]?.data?.zip_code && " | "} 
-                              {searchResults[u['@id']]?.data?.zip_code}
+                                {searchResults[u['@id']]?.data?.street} 
+                                {/* {searchResults[u['@id']]?.data?.street && searchResults[u['@id']]?.data?.zip_code && " | "} 
+                                {searchResults[u['@id']]?.data?.zip_code} */}
                             </CardText>
-                          }
                         </CardBody>
+                        {searchResults[u['@id']]?.data?.image && (
+                          <div className="image-container">
+                            <img
+                              // alt={content.title}
+                              src={flattenToAppURL(
+                                searchResults[u['@id']]?.data?.image.scales.preview.download,
+                              )}
+                              // title={searchResults[u['@id']]?.data?.title}
+                            />
+                          </div>
+                        )}
+                        </div>
                       </Card>
                       </div>
                     </div>

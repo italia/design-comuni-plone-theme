@@ -16,21 +16,6 @@
     }
   }
 
-  .a-portata-di-click {
-    flex: 1 1 300px;
-
-    ::placeholder {
-      color: $placeholder;
-    }
-  }
-
-  .card .categoryicon-top .icon {
-    height: 22px;
-    width: 22px;
-    font-weight: 600;
-    fill: $secondary
-  }
-
   .card-body a:link {
     text-decoration: none;
   }
@@ -51,6 +36,36 @@
     content: none;
   }
 
+  .card.border-left-card:before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 8px;
+    bottom: 0;
+    background: $secondary;
+    @extend .rounded-left;
+  }
+  
+  .card .card-body .category-top .data:before {
+    content: none;
+  }
+
+  .image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $white;
+
+    img {
+      width: 80px;
+      height: 80px;
+      @extend .rounded-circle; 
+    }
+  }
+
   .link-button {
     display: flex;
     align-items: center;
@@ -65,7 +80,6 @@
   }
 
   .description {
-    color: #555;
     font-weight: 400;
     font-family: "Titillium Web",Geneva,Tahoma,sans-serif;
   }
