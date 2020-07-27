@@ -3,7 +3,7 @@
  * @module components/theme/View/PaginaArgomentoView
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import PaginaArgomentoViewNoBlocks from './PaginaArgomentoViewNoBlocks';
 import {
   getBlocksFieldname,
@@ -22,6 +22,9 @@ import {
   CardCategory,
 } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { getContent, resetContent } from '@plone/volto/actions';
+import { useDispatch, useSelector } from 'react-redux';
+
 /**
  * PaginaArgomentoView view component class.
  * @function PaginaArgomentoView
@@ -37,7 +40,21 @@ const messages = defineMessages({
 });
 
 const PaginaArgomentoView = ({ content }) => {
-  console.log(content[blocksLayoutFieldname]?.items, blocksLayoutFieldname)
+  const searchResults = useSelector((state) => state.content.subrequests);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    content['unita_amministrativa_responsabile'].forEach((x) => {
+      dispatch(
+        getContent(flattenToAppURL(x['@id']), null, x['@id'])
+      );
+    })
+    return () => {
+      content['unita_amministrativa_responsabile'].forEach((x) => {
+        dispatch(resetContent(x['@id']));
+      });
+    };
+  }, [dispatch, content]);
+
   const blocksFieldname = getBlocksFieldname(content);
   const blocksLayoutFieldname = getBlocksLayoutFieldname(content);
   const intl = useIntl();
@@ -66,7 +83,13 @@ const PaginaArgomentoView = ({ content }) => {
                               </Link>
                             </span>
                           </CardCategory>
-                          {<CardText>{u?.street} {u?.street && u?.zip_code && "|"} {u?.zip_code}</CardText>}
+                          {
+                            <CardText>
+                              {searchResults[u['@id']]?.data?.street} 
+                              {searchResults[u['@id']]?.data?.street && searchResults[u['@id']]?.data?.zip_code && " | "} 
+                              {searchResults[u['@id']]?.data?.zip_code}
+                            </CardText>
+                          }
                         </CardBody>
                       </Card>
                       </div>
