@@ -41,18 +41,18 @@ const messages = defineMessages({
 });
 
 const PaginaArgomentoView = ({ content }) => {
-  const searchResults = useSelector((state) => state.content.subrequests);
+  const searchResults = useSelector((state) => state.content?.subrequests);
   const dispatch = useDispatch();
   
   // one request is made for every 'unita_amministrativa_responsabile' selected
   useEffect(() => {
-    content['unita_amministrativa_responsabile'].forEach((x) => {
+    content['unita_amministrativa_responsabile']?.forEach((x) => {
       dispatch(
         getContent(flattenToAppURL(x['@id']), null, x['@id'])
       );
     })
     return () => {
-      content['unita_amministrativa_responsabile'].forEach((x) => {
+      content['unita_amministrativa_responsabile']?.forEach((x) => {
         dispatch(resetContent(x['@id']));
       });
     };
@@ -66,18 +66,17 @@ const PaginaArgomentoView = ({ content }) => {
     <div id="page-document" className="ui container">
       <div className="ArgomentoTitleWrapper mb-5">
         <div className="title-description-wrapper col-lg-6">
-          <h1 className="mb-3">{content.title}</h1>
-          <p className="description">{content.description}</p>
+          <h1 className="mb-3">{content?.title}</h1>
+          <p className="description">{content?.description}</p>
         </div>
           <div className="col-lg-4 offset-lg-2">
             { 
               content?.unita_amministrativa_responsabile?.length > 0 ?
-                content?.unita_amministrativa_responsabile.map((u, index) => {
+                content?.unita_amministrativa_responsabile?.map((u, index) => {
                 return (
                   <>
                     <div className="row mb-3" key={index}>
-                      <div className="w-100">
-                      <Card className={'listing-item card-bg border-left-card'}>
+                      <Card className={'listing-item card-bg border-left-card w-100'}>
                         <div className="d-flex">
                         <CardBody className="">
                             <CardCategory>
@@ -104,7 +103,6 @@ const PaginaArgomentoView = ({ content }) => {
                         )}
                         </div>
                       </Card>
-                      </div>
                     </div>
                   </>
                   )
@@ -112,15 +110,15 @@ const PaginaArgomentoView = ({ content }) => {
               :
                 <div dangerouslySetInnerHTML={{ __html: content?.box_aiuto?.data }}/>
             }
-            {content.image ? (
+            {content?.image ? (
               <Portal
                 node={__CLIENT__ && document.getElementById('portal-header-image')}
               >
                 <div>
                   <img
-                    src={flattenToAppURL(content.image.download)}
-                    alt={content.caption || content.title}
-                    title={content.caption || content.title}
+                    src={flattenToAppURL(content?.image?.download)}
+                    alt={content?.caption || content?.title}
+                    title={content?.caption || content?.title}
                   />
                 </div>
               </Portal>
@@ -131,7 +129,7 @@ const PaginaArgomentoView = ({ content }) => {
       </div>
       
       {/* Render other blocks in view, skip title and description */}
-      {map(content[blocksLayoutFieldname].items, block => {
+      {map(content[blocksLayoutFieldname]?.items, block => {
         const blockType = content[blocksFieldname]?.[block]?.['@type'];
         if (['title', 'description'].indexOf(blockType) > -1)
           return null;
