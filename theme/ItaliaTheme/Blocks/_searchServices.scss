@@ -41,15 +41,22 @@
 
         button {
           position: absolute;
-          right: 0;
           top: 0;
+          right: 0;
+
+          display: flex;
           width: 50px;
           height: 100%;
-          background: $primary;
-          border-width: 0px;
-          display: flex;
-          justify-content: center;
           align-items: center;
+          justify-content: center;
+          border-width: 0px;
+
+          background: $primary;
+
+          &:hover,
+          &:active {
+            background-color: darken($primary, 7.5);
+          }
         }
       }
     }
