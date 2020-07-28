@@ -12,7 +12,7 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
 
-const ArgumentsTemplate = ({ items, isEditMode, linkMore }) => {
+const ArgumentListingTemplate = ({ items, isEditMode, linkMore }) => {
   const getIcon = (service) => {
     switch (service) {
       case 'Servizio':
@@ -69,10 +69,10 @@ const ArgumentsTemplate = ({ items, isEditMode, linkMore }) => {
   );
 };
 
-ArgumentsTemplate.propTypes = {
+ArgumentListingTemplate.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
   isEditMode: PropTypes.bool,
   linkMore: PropTypes.any,
 };
 
-export default ArgumentsTemplate;
+export default ArgumentListingTemplate;

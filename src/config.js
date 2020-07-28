@@ -39,7 +39,7 @@ import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listi
 import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate';
 import PhotogalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
 import InEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate';
-import ArgumentsTemplate from  '@italia/components/ItaliaTheme/Blocks/Listing/ArgumentsTemplate';
+import ArgumentListingTemplate from  '@italia/components/ItaliaTheme/Blocks/Listing/ArgumentListingTemplate';
 
 import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
 import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
@@ -178,9 +178,9 @@ const customBlocks = {
         label: 'In evidenza',
         template: InEvidenceTemplate,
       },
-      argumentsTemplate: {
-        label: 'Argomenti',
-        template: ArgumentsTemplate,
+      argumentListingTemplate: {
+        label: 'Lista argomenti',
+        template: ArgumentListingTemplate,
       }
     },
   },
