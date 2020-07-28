@@ -73,38 +73,38 @@ const PaginaArgomentoView = ({ content }) => {
             { 
               content?.unita_amministrativa_responsabile?.length > 0 ?
                 content?.unita_amministrativa_responsabile?.map((u, index) => {
-                return (
-                  <>
+                  return (
                     <div className="row mb-3" key={index}>
-                      <Card className={'listing-item card-bg border-left-card w-100'}>
-                        <div className="d-flex">
-                          <CardBody className="">
-                              <CardCategory>
-                                <span className="text font-weight-bold">
-                                  <Link to={flattenToAppURL(u['@id'])}>
-                                    {u.title || u.id}
-                                  </Link>
-                                </span>
-                              </CardCategory>
-                              <CardText>
-                                  {searchResults[u['@id']]?.data?.street}
-                              </CardText>
-                          </CardBody>
-                          {searchResults[u['@id']]?.data?.image && (
-                            <div className="image-container mr-3">
-                              <img
-                                alt={searchResults[u['@id']]?.data?.image_caption}
-                                src={flattenToAppURL(
-                                  searchResults[u['@id']]?.data?.image.scales.preview.download,
-                                )}
-                                title={searchResults[u['@id']]?.data?.image_caption}
-                              />
-                            </div>
-                          )}
-                        </div>
-                      </Card>
+                      <div className="w-100">
+                        <Card className={'listing-item card-bg border-left-card'}>
+                          <div className="d-flex">
+                            <CardBody className="">
+                                <CardCategory>
+                                  <span className="text font-weight-bold">
+                                    <Link to={flattenToAppURL(u['@id'])}>
+                                      {u.title || u.id}
+                                    </Link>
+                                  </span>
+                                </CardCategory>
+                                <CardText>
+                                    {searchResults[u['@id']]?.data?.street}
+                                </CardText>
+                            </CardBody>
+                            {searchResults[u['@id']]?.data?.image && (
+                              <div className="image-container mr-3">
+                                <img
+                                  alt={searchResults[u['@id']]?.data?.image_caption}
+                                  src={flattenToAppURL(
+                                    searchResults[u['@id']]?.data?.image.scales.preview.download,
+                                  )}
+                                  title={searchResults[u['@id']]?.data?.image_caption}
+                                />
+                              </div>
+                            )}
+                          </div>
+                        </Card>
+                      </div>
                     </div>
-                  </>
                   )
                 })
               :
