@@ -123,14 +123,7 @@ const PaginaArgomentoView = ({ content }) => {
                   )
                 })
               :
-                (
-                  <>
-                    <div
-                      dangerouslySetInnerHTML={{ __html: content?.box_aiuto?.data }}
-                    >
-                    </div>
-                  </>
-                )  
+                <div dangerouslySetInnerHTML={{ __html: content?.box_aiuto?.data }}/>
             }              
           </div>
       </div>
