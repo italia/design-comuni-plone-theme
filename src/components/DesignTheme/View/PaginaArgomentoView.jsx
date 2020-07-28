@@ -106,27 +106,27 @@ const PaginaArgomentoView = ({ content }) => {
                       </Card>
                       </div>
                     </div>
-                    {content.image ? (
-                      <Portal
-                        node={__CLIENT__ && document.getElementById('portal-header-image')}
-                      >
-                        <div>
-                          <img
-                            src={flattenToAppURL(content.image.download)}
-                            alt={content.caption || content.title}
-                            title={content.caption || content.title}
-                          />
-                        </div>
-                      </Portal>
-                    ) : (
-                      ''
-                    )}
                   </>
                   )
                 })
               :
                 <div dangerouslySetInnerHTML={{ __html: content?.box_aiuto?.data }}/>
-            }              
+            }
+            {content.image ? (
+              <Portal
+                node={__CLIENT__ && document.getElementById('portal-header-image')}
+              >
+                <div>
+                  <img
+                    src={flattenToAppURL(content.image.download)}
+                    alt={content.caption || content.title}
+                    title={content.caption || content.title}
+                  />
+                </div>
+              </Portal>
+            ) : (
+              ''
+            )}           
           </div>
       </div>
       
