@@ -44,7 +44,7 @@ const PaginaArgomentoView = ({ content }) => {
   const searchResults = useSelector((state) => state.content.subrequests);
   const dispatch = useDispatch();
   
-  // a request is made for every 'unita_amministrativa_responsabile' selected
+  // one request is made for every 'unita_amministrativa_responsabile' selected
   useEffect(() => {
     content['unita_amministrativa_responsabile'].forEach((x) => {
       dispatch(
