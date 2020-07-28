@@ -6,9 +6,9 @@ const packageJson = require(path.join(projectRootPath, 'package.json'));
 const addonsAliases = [];
 if (packageJson.addons) {
   const addons = packageJson.addons;
-  addons.forEach(addon => {
-    const addonPath = `${addon}/src`;
-    addonsAliases.push([addon, addonPath]);
+  addons.forEach((addon) => {
+    const addonPath = `@italia/addons/${addon}/src`;
+    addonsAliases.push([`@italia/addons/${addon}`, addonPath]);
   });
 }
 
@@ -19,8 +19,9 @@ module.exports = {
       alias: {
         map: [
           ['@plone/volto', '@plone/volto/src'],
-          ...addonsAliases,
           ['@package', './src'],
+          ['@italia', './src'],
+          ...addonsAliases,
         ],
         extensions: ['.js', '.jsx', '.json'],
       },

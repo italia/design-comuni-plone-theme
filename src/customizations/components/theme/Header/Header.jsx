@@ -14,7 +14,7 @@ import {
   /* SearchWidget,*/
 } from '@plone/volto/components';
 
-import { HeaderSlim, HeaderCenter } from '@design/components/DesignTheme';
+import { HeaderSlim, HeaderCenter } from '@italia/components/ItaliaTheme';
 import { Headers } from 'design-react-kit/dist/design-react-kit';
 
 const Header = ({ pathname }) => {

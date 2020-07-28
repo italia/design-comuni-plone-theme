@@ -20,38 +20,38 @@ import alignCenterSVG from '@plone/volto/icons/align-center.svg';
 
 import newsSVG from '@plone/volto/icons/news.svg';
 import searchIcon from 'bootstrap-italia/src/svg/it-search.svg';
-import NewsHomeView from '@design/components/DesignTheme/Blocks/NewsHome/View';
-import NewsHomeEdit from '@design/components/DesignTheme/Blocks/NewsHome/Edit';
+import NewsHomeView from '@italia/components/ItaliaTheme/Blocks/NewsHome/View';
+import NewsHomeEdit from '@italia/components/ItaliaTheme/Blocks/NewsHome/Edit';
 
 import alertSVG from '@plone/volto/icons/alert.svg';
-import AlertView from '@design/components/DesignTheme/Blocks/Alert/View';
-import AlertEdit from '@design/components/DesignTheme/Blocks/Alert/Edit';
+import AlertView from '@italia/components/ItaliaTheme/Blocks/Alert/View';
+import AlertEdit from '@italia/components/ItaliaTheme/Blocks/Alert/Edit';
 
-import SearchSectionsView from '@design/components/DesignTheme/Blocks/SearchSections/View';
-import SearchSectionsEdit from '@design/components/DesignTheme/Blocks/SearchSections/Edit';
+import SearchSectionsView from '@italia/components/ItaliaTheme/Blocks/SearchSections/View';
+import SearchSectionsEdit from '@italia/components/ItaliaTheme/Blocks/SearchSections/Edit';
 
 import titleSVG from '@plone/volto/icons/text.svg';
-import ArgomentoTitleView from '@design/components/DesignTheme/Blocks/ArgomentoTitle/View';
-import ArgomentoTitleEdit from '@design/components/DesignTheme/Blocks/ArgomentoTitle/Edit';
+import ArgomentoTitleView from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/View';
+import ArgomentoTitleEdit from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/Edit';
 
-import { CharCounterDescriptionWidget } from '@design/components/DesignTheme';
-import { NewsItemView } from '@design/components/DesignTheme';
-import { UOView } from '@design/components/DesignTheme';
-import { PersonaView } from '@design/components/DesignTheme';
-import { ServizioView } from '@design/components/DesignTheme';
-import { PaginaArgomentoView } from '@design/components/DesignTheme';
-import NewsTemplate from '@design/components/DesignTheme/Blocks/Listing/NewsTemplate';
-import SmallBlockLinksTemplate from '@design/components/DesignTheme/Blocks/Listing/SmallBlockLinksTemplate';
-import CompleteBlockLinksTemplate from '@design/components/DesignTheme/Blocks/Listing/CompleteBlockLinksTemplate';
-import PhotogalleryTemplate from '@design/components/DesignTheme/Blocks/Listing/PhotogalleryTemplate';
-import InEvidenceTemplate from '@design/components/DesignTheme/Blocks/Listing/InEvidenceTemplate';
+import { CharCounterDescriptionWidget } from '@italia/components/ItaliaTheme';
+import { NewsItemView } from '@italia/components/ItaliaTheme';
+import { UOView } from '@italia/components/ItaliaTheme';
+import { PersonaView } from '@italia/components/ItaliaTheme';
+import { ServizioView } from '@italia/components/ItaliaTheme';
+import { PaginaArgomentoView } from '@italia/components/ItaliaTheme';
+import NewsTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/NewsTemplate';
+import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
+import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate';
+import PhotogalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
+import InEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate';
 
-import { rssBlock as customRssBlock } from 'volto-rss-block';
-import CardWithImageRssTemplate from '@design/components/DesignTheme/Blocks/RssBlock/CardWithImageRssTemplate';
-import CardWithoutImageRssTemplate from '@design/components/DesignTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
+import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
+import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
+import CardWithoutImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
 import { DatetimeWidget } from '@plone/volto/config/Widgets';
-import MultilingualWidget from 'volto-multilingual-widget';
-import { GeoLocationWidget } from 'volto-venue';
+import MultilingualWidget from '@italia/addons/volto-multilingual-widget';
+import { GeoLocationWidget } from '@italia/addons/volto-venue';
 
 const rssBlock = {
   ...customRssBlock,

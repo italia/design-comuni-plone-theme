@@ -1,0 +1,49 @@
+.complete-block-links-template {
+  margin: 40px 0;
+
+  a {
+    text-decoration: none;
+  }
+
+  .col-item {
+    margin-bottom: 22px;
+  }
+
+  .link-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+  }
+
+  .image-container {
+    display: flex;
+    width: 40px;
+    height: 40px;
+
+    align-items: center;
+    justify-content: center;
+    margin: 18px 0px 0px 18px;
+
+    background-color: $white;
+    border-radius: 44px;
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+  }
+
+  .card.card-bg {
+    background-color: $secondary;
+  }
+
+  .card-text {
+    font-family: 'Titillium Web' !important;
+  }
+
+  .card:after {
+    content: none;
+  }
+}

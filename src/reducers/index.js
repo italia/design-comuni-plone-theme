@@ -4,7 +4,7 @@
  */
 
 import defaultReducers from '@plone/volto/reducers';
-import { cookieConsentReducer } from 'volto-cookie-banner';
+import { cookieConsentReducer } from '@italia/addons/volto-cookie-banner';
 import { searchFiltersReducer } from './searchFiltersReducer';
 import { searchResultsReducer } from './searchResultsReducer';
 
