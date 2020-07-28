@@ -24,6 +24,7 @@ import {
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { useDispatch, useSelector } from 'react-redux';
+import { Portal } from 'react-portal';
 
 /**
  * PaginaArgomentoView view component class.
@@ -85,19 +86,17 @@ const PaginaArgomentoView = ({ content }) => {
                               </span>
                             </CardCategory>
                             <CardText>
-                                {searchResults[u['@id']]?.data?.street} 
-                                {/* {searchResults[u['@id']]?.data?.street && searchResults[u['@id']]?.data?.zip_code && " | "} 
-                                {searchResults[u['@id']]?.data?.zip_code} */}
+                                {searchResults[u['@id']]?.data?.street}
                             </CardText>
                         </CardBody>
                         {searchResults[u['@id']]?.data?.image && (
                           <div className="image-container">
                             <img
-                              // alt={content.title}
+                              alt={searchResults[u['@id']]?.data?.image_caption}
                               src={flattenToAppURL(
                                 searchResults[u['@id']]?.data?.image.scales.preview.download,
                               )}
-                              // title={searchResults[u['@id']]?.data?.title}
+                              title={searchResults[u['@id']]?.data?.image_caption}
                             />
                           </div>
                         )}
@@ -105,6 +104,21 @@ const PaginaArgomentoView = ({ content }) => {
                       </Card>
                       </div>
                     </div>
+                    {content.image ? (
+                    <Portal
+                      node={__CLIENT__ && document.getElementById('portal-header-image')}
+                    >
+                      <div>
+                        <img
+                          src={flattenToAppURL(content.image.download)}
+                          alt={content.caption || content.title}
+                          title={content.caption || content.title}
+                        />
+                      </div>
+                    </Portal>
+                  ) : (
+                    ''
+                  )}
                   </>
                   )
                 })

@@ -257,6 +257,7 @@ export const blocks = {
   blocksConfig: { ...defaultBlocks.blocksConfig, ...customBlocks },
   groupBlocksOrder: defaultBlocks.groupBlocksOrder.concat(customBlocksOrder),
   initialBlocks: { ...defaultBlocks.initialBlocks, ...customInitialBlocks },
+  requiredBlocks: { ...defaultBlocks.requiredBlocks.concat('description') },
 };
 
 export const addonRoutes = [];
