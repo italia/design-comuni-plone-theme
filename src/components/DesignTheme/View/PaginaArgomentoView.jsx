@@ -105,20 +105,20 @@ const PaginaArgomentoView = ({ content }) => {
                       </div>
                     </div>
                     {content.image ? (
-                    <Portal
-                      node={__CLIENT__ && document.getElementById('portal-header-image')}
-                    >
-                      <div>
-                        <img
-                          src={flattenToAppURL(content.image.download)}
-                          alt={content.caption || content.title}
-                          title={content.caption || content.title}
-                        />
-                      </div>
-                    </Portal>
-                  ) : (
-                    ''
-                  )}
+                      <Portal
+                        node={__CLIENT__ && document.getElementById('portal-header-image')}
+                      >
+                        <div>
+                          <img
+                            src={flattenToAppURL(content.image.download)}
+                            alt={content.caption || content.title}
+                            title={content.caption || content.title}
+                          />
+                        </div>
+                      </Portal>
+                    ) : (
+                      ''
+                    )}
                   </>
                   )
                 })
