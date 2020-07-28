@@ -23,6 +23,7 @@ const InEvidenceTemplate = ({ items, title, isEditMode }) => {
       <div className="container">
         {items.map((item, index) => (
           <Card
+            key={index}
             className={cx('listing-item card-bg', {
               'card-img': index === 0 && item.image,
             })}
