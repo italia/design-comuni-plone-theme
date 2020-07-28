@@ -43,6 +43,8 @@ const messages = defineMessages({
 const PaginaArgomentoView = ({ content }) => {
   const searchResults = useSelector((state) => state.content.subrequests);
   const dispatch = useDispatch();
+  
+  // a request is made for every 'unita_amministrativa_responsabile' selected
   useEffect(() => {
     content['unita_amministrativa_responsabile'].forEach((x) => {
       dispatch(
@@ -128,6 +130,7 @@ const PaginaArgomentoView = ({ content }) => {
           </div>
       </div>
       
+      {/* Render other blocks in view, skip title and description */}
       {map(content[blocksLayoutFieldname].items, block => {
         const blockType = content[blocksFieldname]?.[block]?.['@type'];
         if (['title', 'description'].indexOf(blockType) > -1)
