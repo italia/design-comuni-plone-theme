@@ -15,7 +15,7 @@ import { getNavigation } from '@plone/volto/actions';
 //   BITIcon,
 //   it_burger,
 //   it_close_circle,
-// } from '@design/components/DesignTheme/Icons';
+// } from '@italia/components/ItaliaTheme/Icons';
 import {
   Header,
   HeaderContent,
@@ -26,7 +26,7 @@ import {
   NavLink,
   Icon,
 } from 'design-react-kit/dist/design-react-kit';
-import { MegaMenu } from '@design/components/DesignTheme';
+import { MegaMenu } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   menu_selected: {
@@ -57,7 +57,7 @@ const Navigation = ({ pathname }) => {
   const [collapseOpen, setCollapseOpen] = useState(false);
   const intl = useIntl();
   const dispatch = useDispatch();
-  const items = useSelector(state => state.navigation.items, isEqual);
+  const items = useSelector((state) => state.navigation.items, isEqual);
 
   useEffect(() => {
     dispatch(getNavigation(getBaseUrl(pathname), 2));
@@ -82,7 +82,7 @@ const Navigation = ({ pathname }) => {
         >
           <div className="menu-wrapper">
             <Nav navbar>
-              {items.map(item => (
+              {items.map((item) => (
                 <MegaMenu
                   item={item}
                   pathname={pathname}
@@ -91,7 +91,7 @@ const Navigation = ({ pathname }) => {
               ))}
             </Nav>
             <Nav navbar className="navbar-secondary">
-              {argumentsItems.map(item => (
+              {argumentsItems.map((item) => (
                 <NavItem
                   tag="li"
                   active={isMenuActive(item.url, pathname)}

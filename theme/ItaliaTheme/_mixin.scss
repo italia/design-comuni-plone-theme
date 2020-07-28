@@ -1,0 +1,12 @@
+.public-ui {
+  .btn-tertiary {
+    background-color: $tertiary;
+    color: $tertiary-text;
+
+    &:hover,
+    &:active {
+      color: $tertiary-text-hover;
+      background-color: darken($tertiary, 4%);
+    }
+  }
+}
