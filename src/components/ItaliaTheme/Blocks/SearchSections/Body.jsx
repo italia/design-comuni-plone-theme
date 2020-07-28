@@ -64,7 +64,7 @@ const Body = ({ block, sections }) => {
               {block.links?.map((link, index) => {
                 return (
                   <Button
-                    outline
+                    color="primary"
                     tag="button"
                     size="sm"
                     key={index}

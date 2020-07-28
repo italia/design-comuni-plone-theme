@@ -1,12 +1,6 @@
 import React from 'react';
 
-import {
-  settings as defaultSettings,
-  views as defaultViews,
-  widgets as defaultWidgets,
-  blocks as defaultBlocks,
-  addonReducers as defaultAddonReducers,
-} from '@plone/volto/config';
+import * as config from '@plone/volto/config';
 
 import ToHTMLRenderers from '@plone/volto/config/RichTextEditor/ToHTML';
 
@@ -50,8 +44,7 @@ import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
 import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
 import CardWithoutImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
 import { DatetimeWidget } from '@plone/volto/config/Widgets';
-import MultilingualWidget from '@italia/addons/volto-multilingual-widget';
-import { GeoLocationWidget } from '@italia/addons/volto-venue';
+import { MultilingualWidget } from '@italia/addons/volto-multilingual-widget';
 
 const rssBlock = {
   ...customRssBlock,
@@ -68,13 +61,13 @@ const rssBlock = {
   },
 };
 
-const extendedBlockRenderMap = defaultSettings.extendedBlockRenderMap.update(
+const extendedBlockRenderMap = config.settings.extendedBlockRenderMap.update(
   'align-center',
   (element = 'p') => element,
 );
 
-const blockStyleFn = (contentBlock) => {
-  let r = defaultSettings.blockStyleFn(contentBlock);
+const blockStyleFn = contentBlock => {
+  let r = config.settings.blockStyleFn(contentBlock);
 
   if (!r) {
     const type = contentBlock.getType();
@@ -85,7 +78,7 @@ const blockStyleFn = (contentBlock) => {
 
   return r;
 };
-const listBlockTypes = defaultSettings.listBlockTypes.concat(['align-center']);
+const listBlockTypes = config.settings.listBlockTypes.concat(['align-center']);
 
 const UnderlineButton = createInlineStyleButton({
   style: 'UNDERLINE',
@@ -161,9 +154,9 @@ const customBlocks = {
     sidebarTab: 1,
   },
   listing: {
-    ...defaultBlocks.blocksConfig.listing,
+    ...config.blocks.blocksConfig.listing,
     templates: {
-      ...defaultBlocks.blocksConfig.listing.templates,
+      ...config.blocks.blocksConfig.listing.templates,
       newsTemplate: {
         label: 'Notizie',
         template: NewsTemplate,
@@ -190,12 +183,12 @@ const customBlocks = {
 };
 
 export const settings = {
-  ...defaultSettings,
+  ...config.settings,
   richTextEditorInlineToolbarButtons: [
     AlignCenterButton,
     Separator,
     UnderlineButton,
-    ...defaultSettings.richTextEditorInlineToolbarButtons,
+    ...config.settings.richTextEditorInlineToolbarButtons,
   ],
   extendedBlockRenderMap: extendedBlockRenderMap,
   blockStyleFn: blockStyleFn,
@@ -217,9 +210,9 @@ export const settings = {
 };
 
 export const views = {
-  ...defaultViews,
+  ...config.views,
   contentTypesViews: {
-    ...defaultViews.contentTypesViews,
+    ...config.views.contentTypesViews,
     'News Item': NewsItemView,
     UnitaOrganizzativa: UOView,
     Persona: PersonaView,
@@ -229,16 +222,15 @@ export const views = {
 };
 
 export const widgets = {
-  ...defaultWidgets,
+  ...config.widgets,
   id: {
-    ...defaultWidgets.id,
-    geolocation: GeoLocationWidget,
+    ...config.widgets.id,
     description: CharCounterDescriptionWidget,
     cookie_consent_configuration: MultilingualWidget(),
-    data_conclusione_incarico: (props) => (
+    data_conclusione_incarico: props => (
       <DatetimeWidget {...props} dateOnly={true} />
     ),
-    data_insediamento: (props) => <DatetimeWidget {...props} dateOnly={true} />,
+    data_insediamento: props => <DatetimeWidget {...props} dateOnly={true} />,
   },
 };
 
@@ -251,7 +243,7 @@ const customRequiredBlocks = ['description']
 // BUG#10398
 // We chose to disallow leadimage block usage in editor. If you want it back someday,
 // comment out the following line and add the leadimage behavior in Document.xml file
-delete defaultBlocks.blocksConfig['leadimage'];
+delete config.blocks.blocksConfig['leadimage'];
 
 export const blocks = {
   ...defaultBlocks,
@@ -261,8 +253,5 @@ export const blocks = {
   requiredBlocks: { ...defaultBlocks.requiredBlocks.concat(...customRequiredBlocks) },
 };
 
-export const addonRoutes = [];
-
-export const addonReducers = {
-  ...defaultAddonReducers,
-};
+export const addonReducers = { ...config.addonReducers };
+export const addonRoutes = [...(config.addonRoutes || [])];
