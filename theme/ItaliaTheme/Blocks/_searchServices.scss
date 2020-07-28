@@ -59,10 +59,7 @@
 .buttonsContainer {
   flex-wrap: wrap;
 
-  button.btn.btn-outline-secondary.btn-sm{
+  button.btn.btn-sm {
     margin: 10px 10px 10px 0px;
-    background: $primary;
-    color: $white;
-    box-shadow: none;
   }
 }
