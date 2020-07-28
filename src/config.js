@@ -246,11 +246,11 @@ const customRequiredBlocks = ['description']
 delete config.blocks.blocksConfig['leadimage'];
 
 export const blocks = {
-  ...defaultBlocks,
-  blocksConfig: { ...defaultBlocks.blocksConfig, ...customBlocks },
-  groupBlocksOrder: defaultBlocks.groupBlocksOrder.concat(customBlocksOrder),
-  initialBlocks: { ...defaultBlocks.initialBlocks, ...customInitialBlocks },
-  requiredBlocks: { ...defaultBlocks.requiredBlocks.concat(...customRequiredBlocks) },
+  ...config.blocks,
+  blocksConfig: { ...config.blocks.blocksConfig, ...customBlocks },
+  groupBlocksOrder: config.blocks.groupBlocksOrder.concat(customBlocksOrder),
+  initialBlocks: { ...config.blocks.initialBlocks, ...customInitialBlocks },
+  requiredBlocks: { ...config.blocks.requiredBlocks.concat(...customRequiredBlocks) },
 };
 
 export const addonReducers = { ...config.addonReducers };
