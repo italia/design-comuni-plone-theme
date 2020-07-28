@@ -90,7 +90,7 @@ const PaginaArgomentoView = ({ content }) => {
                             </CardText>
                         </CardBody>
                         {searchResults[u['@id']]?.data?.image && (
-                          <div className="image-container">
+                          <div className="image-container mr-3">
                             <img
                               alt={searchResults[u['@id']]?.data?.image_caption}
                               src={flattenToAppURL(

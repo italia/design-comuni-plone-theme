@@ -58,11 +58,11 @@
     align-items: center;
     justify-content: center;
     background-color: $white;
-
     img {
       width: 80px;
       height: 80px;
       @extend .rounded-circle; 
+      margin: 0 auto;
     }
   }
 
