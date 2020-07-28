@@ -241,8 +241,9 @@ export const widgets = {
 
 const customBlocksOrder = [{ id: 'news', title: 'News' }];
 const customInitialBlocks = {
-  'Pagina Argomento': ['pagina_argomento_title'],
+  'Pagina Argomento': ['title', 'description', 'text'],
 };
+const customRequiredBlocks = ['description']
 
 // BUG#10398
 // We chose to disallow leadimage block usage in editor. If you want it back someday,
@@ -254,6 +255,7 @@ export const blocks = {
   blocksConfig: { ...config.blocks.blocksConfig, ...customBlocks },
   groupBlocksOrder: config.blocks.groupBlocksOrder.concat(customBlocksOrder),
   initialBlocks: { ...config.blocks.initialBlocks, ...customInitialBlocks },
+  requiredBlocks: { ...config.blocks.requiredBlocks.concat(...customRequiredBlocks) },
 };
 
 export const addonReducers = { ...config.addonReducers };
