@@ -84,3 +84,19 @@
     font-family: "Titillium Web",Geneva,Tahoma,sans-serif;
   }
 }
+
+.contenttype-pagina-argomento {
+  #briciole {
+    padding-left: 90px !important;
+    margin-bottom: 0 !important;
+  }
+
+  &.has-image {
+    #briciole {
+      color: $white;
+      a {
+        color: $white;
+      }
+    }
+  }
+}
