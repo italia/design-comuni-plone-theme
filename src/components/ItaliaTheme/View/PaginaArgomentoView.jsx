@@ -25,6 +25,7 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { Portal } from 'react-portal';
+import { BodyClass } from '@plone/volto/helpers';
 
 /**
  * PaginaArgomentoView view component class.
@@ -111,17 +112,22 @@ const PaginaArgomentoView = ({ content }) => {
                 <div dangerouslySetInnerHTML={{ __html: content?.box_aiuto?.data }}/>
             }
             {content?.image ? (
-              <Portal
-                node={__CLIENT__ && document.getElementById('portal-header-image')}
-              >
-                <div>
-                  <img
-                    src={flattenToAppURL(content?.image?.download)}
-                    alt={content?.caption || content?.title}
-                    title={content?.caption || content?.title}
-                  />
-                </div>
-              </Portal>
+              <>
+                <Portal
+                  node={__CLIENT__ && document.getElementById('portal-header-image')}
+                >
+                  <div>
+                    <img
+                      src={flattenToAppURL(content?.image?.download)}
+                      alt={content?.caption || content?.title}
+                      title={content?.caption || content?.title}
+                    />
+                  </div>
+                </Portal>
+                <BodyClass
+                  className="has-image"
+                />
+              </>
             ) : (
               ''
             )}           
