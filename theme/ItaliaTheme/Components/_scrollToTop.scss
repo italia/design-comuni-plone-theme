@@ -1,0 +1,13 @@
+.btn.scroll-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 0.8rem;
+  border-radius: 50%;
+
+  //small - tablet
+  @media (min-width: #{map-get($grid-breakpoints, md)}) {
+    right: 30px;
+    bottom: 30px;
+  }
+}

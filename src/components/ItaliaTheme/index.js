@@ -23,6 +23,7 @@ export BlockSearchSectionsBody from '@italia/components/ItaliaTheme/Blocks/Searc
 // export Brand from '@italia/components/ItaliaTheme/Brand/Brand';
 export LanguageSelector from '@italia/components/ItaliaTheme/LanguageSelector/LanguageSelector';
 // export SocialLinks from '@italia/components/ItaliaTheme/SocialLinks/SocialLinks';
+
 export HeaderSlim from '@italia/components/ItaliaTheme/Header/HeaderSlim';
 export HeaderCenter from '@italia/components/ItaliaTheme/Header/HeaderCenter';
 export SearchModal from '@italia/components/ItaliaTheme/Header/SearchModal';
