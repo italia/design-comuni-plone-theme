@@ -43,7 +43,7 @@
     "moduleNameMapper": {
       "@plone/volto/(.*)$": "<rootDir>/node_modules/@plone/volto/src/$1",
       "@plone/volto/babel": "<rootDir>/node_modules/@plone/volto/babel",
-      "@design/(.*)$": "<rootDir>/src/$1",
+      "@italia/(.*)$": "<rootDir>/src/$1",
       "volto-rss-block/(.*)$": "<rootDir>/src/addons/volto-rss-block/src/$1",
       "volto-cookie-banner/(.*)$": "<rootDir>/src/addons/volto-cookie-banner/src/$1",
       "volto-multilingual-widget/(.*)$": "<rootDir>/src/addons/volto-multilingual-widget/src/$1",
@@ -120,13 +120,15 @@
     "typeface-titillium-web": "0.0.72",
     "volto-cookie-banner": "collective/volto-cookie-banner",
     "volto-multilingual-widget": "collective/volto-multilingual-widget",
-    "volto-rss-block": "redturtle/volto-rss-block"
+    "volto-rss-block": "redturtle/volto-rss-block",
+    "volto-venue": "collective/volto-venue"
   },
   "devDependencies": {
     "eslint-plugin-prettier": "3.1.3",
     "mrs-developer": "1.1.6",
     "node-sass": "4.13.0",
     "prettier": "2.0.5",
+    "razzle-plugin-scss": "3.1.5",
     "sass-loader": "8.0.0",
     "stylelint-config-idiomatic-order": "8.1.0",
     "stylelint-config-prettier": "8.0.1",

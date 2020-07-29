@@ -35,7 +35,7 @@
   @import 'bootstrap/scss/reboot';
 }
 
-@import 'bootstrap-override/bootstrap/reboot';
+@import './bootstrap/reboot';
 
 .public-ui/*,
 .cms-ui .it-header-wrapper,
@@ -51,7 +51,7 @@
   @import 'bootstrap/scss/dropdown';
   @import 'bootstrap/scss/button-group';
   @import 'bootstrap/scss/input-group';
-  @import 'bootstrap-override/bootstrap-italia/input-group';
+  @import './bootstrap-italia/input-group';
   @import 'bootstrap/scss/nav';
   @import 'bootstrap/scss/navbar';
   @import 'bootstrap/scss/card';
@@ -72,14 +72,14 @@
 
   // Customizzazioni e nuovi componenti
   @import 'bootstrap-italia/src/scss/custom/type';
-  @import 'bootstrap-override/bootstrap-italia/borders';
-  @import 'bootstrap-override/bootstrap-italia/form-toggles';
-  @import 'bootstrap-override/bootstrap-italia/footer';
-  @import 'bootstrap-override/bootstrap-italia/brand-text';
+  @import './bootstrap-italia/borders';
+  @import './bootstrap-italia/form-toggles';
+  @import './bootstrap-italia/footer';
+  @import './bootstrap-italia/brand-text';
 }
 
-@import 'bootstrap-override/bootstrap-italia/type';
-@import 'bootstrap-override/bootstrap-italia/grid';
+@import './bootstrap-italia/type';
+@import './bootstrap-italia/grid';
 
 .public-ui/*,
 .cms-ui .it-header-wrapper,
@@ -87,7 +87,7 @@
   @import 'bootstrap-italia/src/scss/custom/grid';
   @import 'bootstrap-italia/src/scss/custom/tables';
   @import 'bootstrap-italia/src/scss/custom/breadcrumb';
-  @import 'bootstrap-override/bootstrap-italia/breadcrumb';
+  @import './bootstrap-italia/breadcrumb';
   @import 'bootstrap-italia/src/scss/custom/modal';
   @import 'bootstrap-italia/src/scss/custom/collapse';
   @import 'bootstrap-italia/src/scss/custom/carousel';
@@ -113,18 +113,18 @@
   @import 'bootstrap-italia/src/scss/custom/autocomplete';
   @import 'bootstrap-italia/src/scss/custom/linklist';
   @import 'bootstrap-italia/src/scss/custom/navigation';
-  @import 'bootstrap-override/bootstrap-italia/navigation';
+  @import './bootstrap-italia/navigation';
   @import 'bootstrap-italia/src/scss/custom/skiplinks';
   @import 'bootstrap-italia/src/scss/custom/affix';
   @import 'bootstrap-italia/src/scss/custom/sidebar';
   @import 'bootstrap-italia/src/scss/custom/sidebarthemes';
   @import 'bootstrap-italia/src/scss/custom/megamenu';
-  @import 'bootstrap-override/bootstrap-italia/megamenu';
+  @import './bootstrap-italia/megamenu';
   @import 'bootstrap-italia/src/scss/custom/bottomnav';
   @import 'bootstrap-italia/src/scss/custom/navscroll';
   @import 'bootstrap-italia/src/scss/custom/navscrolltheme';
   @import 'bootstrap-italia/src/scss/custom/callout';
-  @import 'bootstrap-override/bootstrap-italia/callout';
+  @import './bootstrap-italia/callout';
   @import 'bootstrap-italia/src/scss/custom/toolbar';
   @import 'bootstrap-italia/src/scss/custom/sections';
   @import 'bootstrap-italia/src/scss/custom/dialog';
