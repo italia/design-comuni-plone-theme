@@ -42,16 +42,17 @@ const ScrollToTop = () => {
   return (
     <>
       {isVisible && (
-        <Button
-          className="scroll-to-top"
-          color="tertiary"
-          tag="button"
-          size="sm"
-          title={intl.formatMessage(messages.scrollToTop)}
-          onClick={scrollToTop}
-        >
-          <Icon icon="it-arrow-up" padding={false} size="sm" />
-        </Button>
+        <div className="public-ui scroll-to-top">
+          <Button
+            color="tertiary"
+            tag="button"
+            size="sm"
+            title={intl.formatMessage(messages.scrollToTop)}
+            onClick={scrollToTop}
+          >
+            <Icon icon="it-arrow-up" padding={false} size="sm" />
+          </Button>
+        </div>
       )}
     </>
   );

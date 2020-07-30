@@ -37,6 +37,8 @@ export FooterNavigation from '@italia/components/ItaliaTheme/Footer/FooterNaviga
 export FooterSmall from '@italia/components/ItaliaTheme/Footer/FooterSmall';
 export Pagination from '@italia/components/ItaliaTheme/Pagination/Pagination';
 
+export SectionIcon from '@italia/components/ItaliaTheme/Icons/SectionIcon';
+
 export CharCounterDescriptionWidget from '@italia/components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget';
 export TextEditorWidget from '@italia/components/ItaliaTheme/manage/Widgets/TextEditorWidget';
 export NewsItemView from '@italia/components/ItaliaTheme/View/NewsItemView';

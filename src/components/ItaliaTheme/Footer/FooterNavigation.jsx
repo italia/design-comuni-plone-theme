@@ -18,6 +18,8 @@ import {
   LinkListItem,
 } from 'design-react-kit/dist/design-react-kit';
 
+import { SectionIcon } from '@italia/components/ItaliaTheme';
+
 const messages = defineMessages({
   goToPage: {
     id: 'Vai alla pagina',
@@ -48,6 +50,10 @@ const FooterNavigation = () => {
               key={item.url}
             >
               <h4>
+                <SectionIcon
+                  section={item.url}
+                  iconProps={{ size: 'sm', color: 'white', className: 'mr-2' }}
+                />
                 <Link
                   to={item.url}
                   title={
