@@ -92,7 +92,7 @@ const PageHeader = (props) => {
           ''
         )}
         {(props.showreadingtime || props.showdates) && (
-          <div className="row mt-5 mb-4">
+          <div className="row mt-5 mb-4 readingtime-dates">
             {(props.showdates &&
               (props.content.effective || props.content.expires) && (
                 <div className="col-6">
@@ -152,7 +152,7 @@ const PageHeader = (props) => {
 
         {props.showtassonomiaargomenti &&
           props.content?.tassonomia_argomenti?.length > 0 && (
-            <div className="mt-4 mb-4">
+            <div className="mt-4 mb-4 page-arguments">
               <h6>
                 <small>{intl.formatMessage(messages.topics)}</small>
               </h6>
