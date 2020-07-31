@@ -57,7 +57,7 @@ const Actions = (props) => {
     },
   ];
   return (
-    <UncontrolledDropdown className="d-inline">
+    <UncontrolledDropdown className="d-inline page-actions">
       <DropdownToggle
         className={`btn btn-dropdown`}
         color=""

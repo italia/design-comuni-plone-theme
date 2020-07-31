@@ -38,6 +38,8 @@ import {
 import clearSVG from '@plone/volto/icons/clear.svg';
 import MultilingualRedirector from '@plone/volto/components/theme/MultilingualRedirector/MultilingualRedirector';
 
+import ScrollToTop from '@italia/components/ItaliaTheme/ScrollToTop/ScrollToTop';
+
 /**
  * @export
  * @class App
@@ -166,6 +168,7 @@ class App extends Component {
             />
           }
         />
+        <ScrollToTop />
       </Fragment>
     );
   }

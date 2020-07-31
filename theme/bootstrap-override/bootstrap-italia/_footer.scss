@@ -5,5 +5,13 @@
         display: inline-flex;
       }
     }
+
+    .social {
+      .text-white {
+        .icon-white {
+          fill: currentcolor !important;
+        }
+      }
+    }
   }
 }

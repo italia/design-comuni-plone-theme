@@ -1,6 +1,6 @@
 /**
  * BITIcon component.
- * @module components/ItaliaTheme/Icons/ITIcon
+ * @module components/ItaliaTheme/Icons/BITIcon
  */
 import React from 'react';
 import PropTypes from 'prop-types';

@@ -1931,8 +1931,8 @@
     "@types/node" ">= 8"
 
 "@plone/volto@plone/volto#split_styles_test":
-  version "7.3.0"
-  resolved "https://codeload.github.com/plone/volto/tar.gz/3c5fe30daf6f966a38961fae0eca1352453a2d1b"
+  version "7.5.1"
+  resolved "https://codeload.github.com/plone/volto/tar.gz/8e2af3362d09c3b083d66589cbc1ebb7d1c93d7a"
   dependencies:
     "@babel/core" "7.9.6"
     "@babel/plugin-proposal-decorators" "7.8.3"
@@ -2019,6 +2019,8 @@
     mem "4.0.0"
     mini-css-extract-plugin "0.9.0"
     moment "2.24.0"
+    moment-locales-webpack-plugin "1.2.0"
+    moment-timezone "^0.5.31"
     pofile "1.0.10"
     postcss-flexbugs-fixes "4.2.1"
     postcss-loader "3.0.0"
@@ -10426,6 +10428,11 @@ lodash.defaults@^4.0.0:
   resolved "https://registry.yarnpkg.com/lodash.defaults/-/lodash.defaults-4.2.0.tgz#d09178716ffea4dde9e5fb7b37f6f0802274580c"
   integrity sha1-0JF4cW/+pN3p5ft7N/bwgCJ0WAw=
 
+lodash.difference@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.difference/-/lodash.difference-4.5.0.tgz#9ccb4e505d486b91651345772885a2df27fd017c"
+  integrity sha1-nMtOUF1Ia5FlE0V3KIWi3yf9AXw=
+
 lodash.find@^4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash.find/-/lodash.find-4.6.0.tgz#cb0704d47ab71789ffa0de8b97dd926fb88b13b1"
@@ -11161,6 +11168,20 @@ mkdirp@^0.5.3, mkdirp@^0.5.4:
   dependencies:
     minimist "^1.2.5"
 
+moment-locales-webpack-plugin@1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/moment-locales-webpack-plugin/-/moment-locales-webpack-plugin-1.2.0.tgz#9af83876a44053706b868ceece5119584d10d7aa"
+  integrity sha512-QAi5v0OlPUP7GXviKMtxnpBAo8WmTHrUNN7iciAhNOEAd9evCOvuN0g1N7ThIg3q11GLCkjY1zQ2saRcf/43nQ==
+  dependencies:
+    lodash.difference "^4.5.0"
+
+moment-timezone@^0.5.31:
+  version "0.5.31"
+  resolved "https://registry.yarnpkg.com/moment-timezone/-/moment-timezone-0.5.31.tgz#9c40d8c5026f0c7ab46eda3d63e49c155148de05"
+  integrity sha512-+GgHNg8xRhMXfEbv81iDtrVeTcWt0kWmTEY1XQK14dICTXnWJnT0dxdlPspwqF3keKMVPXwayEsk1DI0AA/jdA==
+  dependencies:
+    moment ">= 2.9.0"
+
 moment@2.24.0, moment@2.x, moment@>=1.6.0:
   version "2.24.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
@@ -11170,6 +11191,11 @@ moment@2.26.0:
   version "2.26.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.26.0.tgz#5e1f82c6bafca6e83e808b30c8705eed0dcbd39a"
   integrity sha512-oIixUO+OamkUkwjhAVE18rAMfRJNsNe/Stid/gwHSOfHrOtw9EhAY2AHvdKZ/k/MggcYELFCJz/Sn2pL8b8JMw==
+
+"moment@>= 2.9.0":
+  version "2.27.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.27.0.tgz#8bff4e3e26a236220dfe3e36de756b6ebaa0105d"
+  integrity sha512-al0MUK7cpIcglMv3YF13qSgdAIqxHTO7brRtaz3DlSULbqfazqkc5kEjNrLDOM7fsjshoFIihnU8snrP7zUvhQ==
 
 moniker@0.1.2:
   version "0.1.2"
@@ -17459,13 +17485,13 @@ vm-browserify@^1.0.1:
 
 volto-cookie-banner@collective/volto-cookie-banner:
   version "1.0.0"
-  resolved "https://codeload.github.com/collective/volto-cookie-banner/tar.gz/c3b34266c0b0410234f9d54b2dbece550e8b8e42"
+  resolved "https://codeload.github.com/collective/volto-cookie-banner/tar.gz/93424d927aa0c7474fec7a70cf592ea9efbe3769"
   dependencies:
     react-cookie-consent "^3.0.0"
 
 volto-multilingual-widget@collective/volto-multilingual-widget:
   version "1.0.0"
-  resolved "https://codeload.github.com/collective/volto-multilingual-widget/tar.gz/5b0e10f8f50e62ad22dd9806a9b106ecd2224b72"
+  resolved "https://codeload.github.com/collective/volto-multilingual-widget/tar.gz/a0590fd564269a9529609ea3978de11715f4fc03"
   dependencies:
     draft-js-export-html "^1.4.1"
 
@@ -17477,7 +17503,7 @@ volto-rss-block@redturtle/volto-rss-block:
 
 volto-venue@collective/volto-venue:
   version "0.1.0"
-  resolved "https://codeload.github.com/collective/volto-venue/tar.gz/d3316695384b271c6415332fc0a06c66ec7067df"
+  resolved "https://codeload.github.com/collective/volto-venue/tar.gz/865797bf14130024f74d0ce595ea37974148b15f"
   dependencies:
     leaflet "1.6.0"
     react-leaflet "2.7.0"

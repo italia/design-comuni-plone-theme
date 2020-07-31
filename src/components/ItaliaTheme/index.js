@@ -23,6 +23,7 @@ export BlockSearchSectionsBody from '@italia/components/ItaliaTheme/Blocks/Searc
 // export Brand from '@italia/components/ItaliaTheme/Brand/Brand';
 export LanguageSelector from '@italia/components/ItaliaTheme/LanguageSelector/LanguageSelector';
 // export SocialLinks from '@italia/components/ItaliaTheme/SocialLinks/SocialLinks';
+
 export HeaderSlim from '@italia/components/ItaliaTheme/Header/HeaderSlim';
 export HeaderCenter from '@italia/components/ItaliaTheme/Header/HeaderCenter';
 export SearchModal from '@italia/components/ItaliaTheme/Header/SearchModal';
@@ -35,6 +36,8 @@ export FooterInfos from '@italia/components/ItaliaTheme/Footer/FooterInfos';
 export FooterNavigation from '@italia/components/ItaliaTheme/Footer/FooterNavigation';
 export FooterSmall from '@italia/components/ItaliaTheme/Footer/FooterSmall';
 export Pagination from '@italia/components/ItaliaTheme/Pagination/Pagination';
+
+export SectionIcon from '@italia/components/ItaliaTheme/Icons/SectionIcon';
 
 export CharCounterDescriptionWidget from '@italia/components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget';
 export TextEditorWidget from '@italia/components/ItaliaTheme/manage/Widgets/TextEditorWidget';
