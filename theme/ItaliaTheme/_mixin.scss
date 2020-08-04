@@ -1,0 +1,20 @@
+.public-ui {
+  .btn-tertiary {
+    background-color: $tertiary;
+    color: $tertiary-text;
+
+    svg {
+      fill: $tertiary-text;
+    }
+
+    &:hover,
+    &:active {
+      color: $tertiary-text-hover;
+      background-color: darken($tertiary, 4%);
+
+      svg {
+        fill: $tertiary-text-hover;
+      }
+    }
+  }
+}

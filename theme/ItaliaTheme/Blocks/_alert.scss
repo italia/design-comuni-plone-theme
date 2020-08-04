@@ -1,0 +1,57 @@
+.public-ui {
+  .block.alertblock,
+  .alertblock {
+    .bg-danger {
+      background-color: $red !important;
+      color: $white;
+
+      .public-DraftEditorPlaceholder-inner {
+        color: $white;
+      }
+    }
+
+    .bg-warning {
+      background-color: $yellow !important;
+
+      .public-DraftEditorPlaceholder-inner {
+        color: $black;
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 1.333em;
+      font-weight: bold;
+      line-height: 1.56rem;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1.2em;
+      font-weight: bold;
+      line-height: 1.4rem;
+    }
+
+    img.left-image {
+      max-width: 80%;
+      object-fit: unset;
+    }
+
+    div + h3,
+    p + h3,
+    h3 + div,
+    h3 + p {
+      margin-top: 1.33rem;
+    }
+
+    div + h2,
+    p + h2,
+    h2 + div,
+    h2 + p {
+      margin-top: 1rem;
+    }
+  }
+}

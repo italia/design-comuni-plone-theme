@@ -1,12 +1,6 @@
 import React from 'react';
 
-import {
-  settings as defaultSettings,
-  views as defaultViews,
-  widgets as defaultWidgets,
-  blocks as defaultBlocks,
-  addonReducers as defaultAddonReducers,
-} from '@plone/volto/config';
+import * as config from '@plone/volto/config';
 
 import ToHTMLRenderers from '@plone/volto/config/RichTextEditor/ToHTML';
 
@@ -19,59 +13,62 @@ import underlineSVG from '@plone/volto/icons/underline.svg';
 import alignCenterSVG from '@plone/volto/icons/align-center.svg';
 
 import newsSVG from '@plone/volto/icons/news.svg';
-import NewsHomeView from '@design/components/DesignTheme/Blocks/NewsHome/View';
-import NewsHomeEdit from '@design/components/DesignTheme/Blocks/NewsHome/Edit';
+import searchIcon from 'bootstrap-italia/src/svg/it-search.svg';
+import NewsHomeView from '@italia/components/ItaliaTheme/Blocks/NewsHome/View';
+import NewsHomeEdit from '@italia/components/ItaliaTheme/Blocks/NewsHome/Edit';
 
 import alertSVG from '@plone/volto/icons/alert.svg';
-import AlertView from '@design/components/DesignTheme/Blocks/Alert/View';
-import AlertEdit from '@design/components/DesignTheme/Blocks/Alert/Edit';
+import AlertView from '@italia/components/ItaliaTheme/Blocks/Alert/View';
+import AlertEdit from '@italia/components/ItaliaTheme/Blocks/Alert/Edit';
+
+import SearchSectionsView from '@italia/components/ItaliaTheme/Blocks/SearchSections/View';
+import SearchSectionsEdit from '@italia/components/ItaliaTheme/Blocks/SearchSections/Edit';
 
 import titleSVG from '@plone/volto/icons/text.svg';
-import ArgomentoTitleView from '@design/components/DesignTheme/Blocks/ArgomentoTitle/View';
-import ArgomentoTitleEdit from '@design/components/DesignTheme/Blocks/ArgomentoTitle/Edit';
+import ArgomentoTitleView from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/View';
+import ArgomentoTitleEdit from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/Edit';
 
-import { CharCounterDescriptionWidget } from '@design/components/DesignTheme';
-import { NewsItemView } from '@design/components/DesignTheme';
-import { UOView } from '@design/components/DesignTheme';
-import { PersonaView } from '@design/components/DesignTheme';
-import { ServizioView } from '@design/components/DesignTheme';
-import { EventoView } from '@design/components/DesignTheme';
+import { CharCounterDescriptionWidget } from '@italia/components/ItaliaTheme';
+import { NewsItemView } from '@italia/components/ItaliaTheme';
+import { UOView } from '@italia/components/ItaliaTheme';
+import { PersonaView } from '@italia/components/ItaliaTheme';
+import { ServizioView } from '@italia/components/ItaliaTheme';
+import { PaginaArgomentoView } from '@italia/components/ItaliaTheme';
+import NewsTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/NewsTemplate';
+import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
+import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate';
+import PhotogalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
+import InEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate';
+import ArgumentListingTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/ArgumentListingTemplate';
 
-import { PaginaArgomentoView } from '@design/components/DesignTheme';
-import NewsTemplate from '@design/components/DesignTheme/Blocks/Listing/NewsTemplate';
-import SmallBlockLinksTemplate from '@design/components/DesignTheme/Blocks/Listing/SmallBlockLinksTemplate';
-import CompleteBlockLinksTemplate from '@design/components/DesignTheme/Blocks/Listing/CompleteBlockLinksTemplate';
-import PhotogalleryTemplate from '@design/components/DesignTheme/Blocks/Listing/PhotogalleryTemplate';
-import InEvidenceTemplate from '@design/components/DesignTheme/Blocks/Listing/InEvidenceTemplate';
-
-import { rssBlock as customRssBlock } from 'volto-rss-block';
-import CardWithImageRssTemplate from '@design/components/DesignTheme/Blocks/RssBlock/CardWithImageRssTemplate';
-import CardWithoutImageRssTemplate from '@design/components/DesignTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
-
-import MultilingualWidget from 'volto-multilingual-widget';
+import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
+import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
+import CardWithoutImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
+import { DatetimeWidget } from '@plone/volto/config/Widgets';
+import { MultilingualWidget } from '@italia/addons/volto-multilingual-widget';
 
 const rssBlock = {
   ...customRssBlock,
   templates: {
     ...customRssBlock.templates,
     default: {
-      label: 'Card template without image',
+      label: 'Card senza immagine',
       template: CardWithoutImageRssTemplate,
     },
     card_without_image: {
-      label: 'Card template with image ',
+      label: 'Card con immagine',
       template: CardWithImageRssTemplate,
     },
   },
 };
 
-const extendedBlockRenderMap = defaultSettings.extendedBlockRenderMap.update(
+const extendedBlockRenderMap = config.settings.extendedBlockRenderMap.update(
   'align-center',
   (element = 'p') => element,
 );
 
 const blockStyleFn = (contentBlock) => {
-  let r = defaultSettings.blockStyleFn(contentBlock);
+  let r = config.settings.blockStyleFn(contentBlock);
 
   if (!r) {
     const type = contentBlock.getType();
@@ -82,7 +79,7 @@ const blockStyleFn = (contentBlock) => {
 
   return r;
 };
-const listBlockTypes = defaultSettings.listBlockTypes.concat(['align-center']);
+const listBlockTypes = config.settings.listBlockTypes.concat(['align-center']);
 
 const UnderlineButton = createInlineStyleButton({
   style: 'UNDERLINE',
@@ -103,6 +100,22 @@ const customBlocks = {
     edit: NewsHomeEdit,
     restricted: false,
     mostUsed: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
+  searchSections: {
+    id: 'searchSections',
+    title: 'Ricerca nelle sezioni',
+    icon: searchIcon,
+    group: 'text',
+    view: SearchSectionsView,
+    edit: SearchSectionsEdit,
+    restricted: false,
+    mostUsed: false,
+    blockHasOwnFocusManagement: true,
     security: {
       addPermission: [],
       view: [],
@@ -142,9 +155,9 @@ const customBlocks = {
     sidebarTab: 1,
   },
   listing: {
-    ...defaultBlocks.blocksConfig.listing,
+    ...config.blocks.blocksConfig.listing,
     templates: {
-      ...defaultBlocks.blocksConfig.listing.templates,
+      ...config.blocks.blocksConfig.listing.templates,
       newsTemplate: {
         label: 'Notizie',
         template: NewsTemplate,
@@ -165,18 +178,22 @@ const customBlocks = {
         label: 'In evidenza',
         template: InEvidenceTemplate,
       },
+      argumentListingTemplate: {
+        label: 'Lista argomenti',
+        template: ArgumentListingTemplate,
+      },
     },
   },
   rssBlock,
 };
 
 export const settings = {
-  ...defaultSettings,
+  ...config.settings,
   richTextEditorInlineToolbarButtons: [
     AlignCenterButton,
     Separator,
     UnderlineButton,
-    ...defaultSettings.richTextEditorInlineToolbarButtons,
+    ...config.settings.richTextEditorInlineToolbarButtons,
   ],
   extendedBlockRenderMap: extendedBlockRenderMap,
   blockStyleFn: blockStyleFn,
@@ -198,9 +215,9 @@ export const settings = {
 };
 
 export const views = {
-  ...defaultViews,
+  ...config.views,
   contentTypesViews: {
-    ...defaultViews.contentTypesViews,
+    ...config.views.contentTypesViews,
     'News Item': NewsItemView,
     UnitaOrganizzativa: UOView,
     Persona: PersonaView,
@@ -211,28 +228,38 @@ export const views = {
 };
 
 export const widgets = {
-  ...defaultWidgets,
+  ...config.widgets,
   id: {
-    ...defaultWidgets.id,
+    ...config.widgets.id,
     description: CharCounterDescriptionWidget,
     cookie_consent_configuration: MultilingualWidget(),
+    data_conclusione_incarico: (props) => (
+      <DatetimeWidget {...props} dateOnly={true} />
+    ),
+    data_insediamento: (props) => <DatetimeWidget {...props} dateOnly={true} />,
   },
 };
 
 const customBlocksOrder = [{ id: 'news', title: 'News' }];
 const customInitialBlocks = {
-  'Pagina Argomento': ['pagina_argomento_title'],
+  'Pagina Argomento': ['title', 'description', 'text'],
 };
+const customRequiredBlocks = ['description'];
+
+// BUG#10398
+// We chose to disallow leadimage block usage in editor. If you want it back someday,
+// comment out the following line and add the leadimage behavior in Document.xml file
+delete config.blocks.blocksConfig['leadimage'];
 
 export const blocks = {
-  ...defaultBlocks,
-  blocksConfig: { ...defaultBlocks.blocksConfig, ...customBlocks },
-  groupBlocksOrder: defaultBlocks.groupBlocksOrder.concat(customBlocksOrder),
-  initialBlocks: { ...defaultBlocks.initialBlocks, ...customInitialBlocks },
+  ...config.blocks,
+  blocksConfig: { ...config.blocks.blocksConfig, ...customBlocks },
+  groupBlocksOrder: config.blocks.groupBlocksOrder.concat(customBlocksOrder),
+  initialBlocks: { ...config.blocks.initialBlocks, ...customInitialBlocks },
+  requiredBlocks: {
+    ...config.blocks.requiredBlocks.concat(...customRequiredBlocks),
+  },
 };
 
-export const addonRoutes = [];
-
-export const addonReducers = {
-  ...defaultAddonReducers,
-};
+export const addonReducers = { ...config.addonReducers };
+export const addonRoutes = [...(config.addonRoutes || [])];

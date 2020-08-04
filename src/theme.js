@@ -13,4 +13,5 @@ import '@plone/volto/../theme/themes/pastanaga/extras/extras.less';
 import 'typeface-titillium-web';
 import 'typeface-roboto-mono';
 import 'typeface-lora';
+import '../theme/_site-variables.scss';
 import '../theme/site.scss';

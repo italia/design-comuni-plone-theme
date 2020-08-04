@@ -16,4 +16,10 @@
       }
     }
   }
+
+  .sticky-wrapper {
+    &.navbar-wrapper {
+      z-index: 1;
+    }
+  }
 }

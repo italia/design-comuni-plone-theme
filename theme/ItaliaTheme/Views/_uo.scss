@@ -1,0 +1,18 @@
+body.contenttype-unitaorganizzativa {
+  #ulteriori_informazioni {
+    margin: 0 !important;
+  }
+
+  #persone-struttura {
+    a {
+      margin: 0 10px;
+    }
+
+    a:first-of-type {
+      margin-left: 0;
+    }
+  }
+  #geocoded-result {
+    height: 300px !important;
+  }
+}

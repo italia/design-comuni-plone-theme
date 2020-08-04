@@ -7,8 +7,8 @@ import React, { Component } from 'react';
 
 // import PropTypes from 'prop-types';
 // import { isCmsUi } from '@plone/volto/helpers';
-import { FooterMain, FooterSmall } from '@design/components/DesignTheme/';
-import { CookieBanner } from 'volto-cookie-banner';
+import { FooterMain, FooterSmall } from '@italia/components/ItaliaTheme/';
+import { CookieBanner } from '@italia/addons/volto-cookie-banner';
 
 /**
  * Footer component class.

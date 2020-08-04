@@ -1,4 +1,47 @@
 body.cms-ui {
+  .block {
+    font-family: $font-family-serif;
+
+    %heading {
+      margin-top: 0; // 1
+      margin-bottom: $headings-margin-bottom;
+      font-family: $font-family-sans-serif;
+      font-weight: $headings-font-weight;
+      line-height: $headings-line-height;
+      color: $headings-color;
+    }
+
+    h1 {
+      @extend %heading;
+      @include font-size($h1-font-size);
+    }
+
+    h2 {
+      @extend %heading;
+      @include font-size($h2-font-size);
+    }
+
+    h3 {
+      @extend %heading;
+      @include font-size($h3-font-size);
+    }
+
+    h4 {
+      @extend %heading;
+      @include font-size($h4-font-size);
+    }
+
+    h5 {
+      @extend %heading;
+      @include font-size($h5-font-size);
+    }
+
+    h6 {
+      @extend %heading;
+      @include font-size($h6-font-size);
+    }
+  }
+
   .it-header-wrapper,
   .public-ui {
     font-size: 18px;
@@ -16,4 +59,32 @@ body.cms-ui {
   .it-footer {
     display: none;
   }
+
+  .react-select__menu {
+    z-index: 11;
+  }
+
+  .SingleDatePicker {
+    z-index: unset;
+
+    .DateInput {
+      z-index: 0;
+    }
+
+    .SingleDatePicker_picker {
+      z-index: 10;
+    }
+  }
+
+  // .DraftEditor-root {
+  //   font-family: $font-family-serif;
+  //   h1,
+  //   h2,
+  //   h3,
+  //   h4,
+  //   h5,
+  //   h6 {
+  //     font-family: $font-family-sans-serif;
+  //   }
+  // }
 }

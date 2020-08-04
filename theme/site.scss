@@ -1,3 +1,4 @@
+@import 'site-variables';
 @import 'bootstrap-override/bootstrap-italia-site';
 @import 'cms-ui';
 @import 'extras/sidebar';
@@ -10,16 +11,24 @@
 @import 'extras/forms';
 @import 'extras/blocks-chooser';
 @import 'extras/video';
+@import 'extras/file-widget';
 
-/*** DesignTheme ***/
-@import 'DesignTheme/home';
-@import 'DesignTheme/Blocks/alert';
-@import 'DesignTheme/Blocks/titolo_argomento';
-@import 'DesignTheme/Blocks/newshome';
-@import 'DesignTheme/Blocks/newstemplate';
-@import 'DesignTheme/Blocks/smallblockLinkstemplate';
-@import 'DesignTheme/Blocks/completeBlockLinkstemplate';
-@import 'DesignTheme/Blocks/photogallerytemplate';
-@import 'DesignTheme/Blocks/inevidencetemplate';
-@import 'DesignTheme/Views/uo';
-@import 'DesignTheme/Views/common';
+/*** ItaliaTheme ***/
+@import 'ItaliaTheme/mixin';
+@import 'ItaliaTheme/main';
+@import 'ItaliaTheme/Components/scrollToTop';
+@import 'ItaliaTheme/home';
+@import 'ItaliaTheme/Components/venue';
+@import 'ItaliaTheme/Blocks/alert';
+@import 'ItaliaTheme/Blocks/titolo_argomento';
+@import 'ItaliaTheme/Blocks/newshome';
+@import 'ItaliaTheme/Blocks/searchServices';
+@import 'ItaliaTheme/Blocks/newstemplate';
+@import 'ItaliaTheme/Blocks/smallblockLinkstemplate';
+@import 'ItaliaTheme/Blocks/completeBlockLinkstemplate';
+@import 'ItaliaTheme/Blocks/photogallerytemplate';
+@import 'ItaliaTheme/Blocks/inevidencetemplate';
+@import 'ItaliaTheme/Views/uo';
+@import 'ItaliaTheme/Views/common';
+@import 'ItaliaTheme/Blocks/argumentlistingtemplate';
+@import 'ItaliaTheme/Views/paginaArgomentoView';
