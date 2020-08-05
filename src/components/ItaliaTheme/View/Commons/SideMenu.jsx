@@ -25,7 +25,6 @@ const messages = defineMessages({
 const extractHeaders = (elements, intl) => {
   let item;
   let headers = [];
-
   for (var index = 0; index < elements.length; index++) {
     item = elements[index];
 
@@ -57,7 +56,6 @@ const extractHeaders = (elements, intl) => {
  */
 const SideMenu = ({ data }) => {
   const intl = useIntl();
-
   const [headers, _setHeaders] = useState([]);
   const headersRef = React.useRef(headers);
   const setHeaders = (data) => {
@@ -106,7 +104,7 @@ const SideMenu = ({ data }) => {
         let element = document.getElementById(section.id);
         return {
           id: section.id,
-          top: element.getBoundingClientRect().top,
+          top: element?.getBoundingClientRect()?.top,
         };
       })
       .filter((section) => section.top <= scrollOffset);
