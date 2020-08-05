@@ -1,10 +1,11 @@
-import { defineMessages, useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
+import { defineMessages, useIntl } from 'react-intl';
 import React, { useEffect } from 'react';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Icon } from 'design-react-kit/dist/design-react-kit';
 import { Link } from 'react-router-dom';
+import { OSMMap } from '@italia/addons/volto-venue';
 import PropTypes from 'prop-types';
 
 const messages = defineMessages({
@@ -18,12 +19,6 @@ const messages = defineMessages({
   },
 });
 
-/**
- * Location view component class.
- * @function Location
- * @params {object} location: object.
- * @returns {string} Markup of the component.
- */
 const Location = ({ location, show_icon }) => {
   const intl = useIntl();
   const key = `luogo${location['@id']}`;
@@ -67,25 +62,64 @@ const Location = ({ location, show_icon }) => {
     ''
   );
 };
-
 /**
- * Locations view component class.
- * @function Locations
+ * EventLocationMap view component class.
+ * @function LocationMap
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const Locations = ({ locations, show_icon }) => {
+const EventLocationMap = ({ location }) => {
+  const key = `luogo${location['@id']}`;
+  const url = flattenToAppURL(location['@id']);
+  const locationContent = useSelector((state) => state.content.subrequests);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getContent(url, null, key));
+    return () => dispatch(resetContent(key));
+  }, [dispatch, location, url, key]);
+
+  let location_fo = locationContent[key]?.data;
+  return location_fo ? (
+    <>
+      <h4 className="no-toc map-header">Mappa</h4>
+      {__CLIENT__ &&
+      location_fo.geolocation?.latitude &&
+      location_fo.geolocation?.longitude ? (
+        <>
+          <OSMMap
+            position={[
+              location_fo.geolocation.latitude,
+              location_fo.geolocation.longitude,
+            ]}
+          />
+        </>
+      ) : null}
+    </>
+  ) : null;
+};
+
+/**
+ * EventLocations view component class.
+ * @function EventLocations
+ * @params {object} content: Content object.
+ * @returns {string} Markup of the component.
+ */
+const EventLocations = ({ locations, show_icon }) => {
   return (
-    <div className="card-wrapper card-teaser-wrapper">
-      {locations.map((item, i) => (
-        <Location key={item['@id']} location={item} show_icon={show_icon} />
-      ))}
-    </div>
+    <>
+      <div className="card-wrapper card-teaser-wrapper">
+        {locations.map((item, i) => (
+          <Location key={item['@id']} location={item} show_icon={show_icon} />
+        ))}
+      </div>
+      <EventLocationMap location={locations[0]} />
+    </>
   );
 };
-export default Locations;
+export default EventLocations;
 
-Locations.propTypes = {
+EventLocations.propTypes = {
   locations: PropTypes.arrayOf(
     PropTypes.shape({
       '@id': PropTypes.string,
@@ -98,7 +132,7 @@ Locations.propTypes = {
   show_icon: PropTypes.bool,
 };
 
-Location.propTypes = {
+EventLocationMap.propTypes = {
   location: PropTypes.shape({
     '@id': PropTypes.string,
     '@type': PropTypes.string,
@@ -106,5 +140,4 @@ Location.propTypes = {
     description: PropTypes.string,
     review_state: PropTypes.string,
   }),
-  show_icon: PropTypes.bool,
 };

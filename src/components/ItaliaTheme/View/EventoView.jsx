@@ -11,19 +11,17 @@ import {
   Attachments,
   Gallery,
   Events,
-  Locations,
   WideImage,
   SideMenu,
   HelpBox,
   PageHeader,
   RichTextArticle,
   Metadata,
-  Venue,
   OfficeCard,
   GenericCard,
   Dates,
   TextOrBlocks,
-  EventLocation,
+  EventLocations,
 } from '@italia/components/ItaliaTheme/View';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -184,7 +182,7 @@ const EventoView = ({ content, location }) => {
                 <h4 id="header-luoghi">
                   {intl.formatMessage(messages.luoghi)}
                 </h4>
-                <Locations
+                <EventLocations
                   locations={content?.luoghi_correlati}
                   show_icon={true}
                 />

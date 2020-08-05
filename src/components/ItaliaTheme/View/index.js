@@ -26,6 +26,7 @@ export RelatedNews from '@italia/components/ItaliaTheme/View/Commons/RelatedNews
 export WideImage from '@italia/components/ItaliaTheme/View/Commons/WideImage';
 export Locations from '@italia/components/ItaliaTheme/View/Commons/Locations';
 export UOLocation from '@italia/components/ItaliaTheme/View/Commons/UOLocation';
+export EventLocations from '@italia/components/ItaliaTheme/View/Commons/EventLocations';
 export SmallVenue from '@italia/components/ItaliaTheme/View/Commons/SmallVenue';
 
 /* --- View --- */
