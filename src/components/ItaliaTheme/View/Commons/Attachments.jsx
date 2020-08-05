@@ -47,13 +47,13 @@ const Attachments = ({ content, folder_name, title }) => {
   const attachments = searchResults?.[folder_name]?.items || [];
   return (
     <>
-      {attachments.length > 0 ? (
+      {attachments?.length > 0 ? (
         <article
           id={folder_name}
           className="it-page-section anchor-offset mt-5"
         >
-          {folder_title ? (
-            <h4 id={`header-${folder_name}`}>{folder_title}</h4>
+          {title ? (
+            <h4 id={`header-${folder_name}`}>{title}</h4>
           ) : (
             <h4 id={`header-${folder_name}`}>
               {intl.formatMessage(messages.attachments)}

@@ -46,7 +46,6 @@ const extractHeaders = (elements, intl) => {
       }
     }
   }
-
   return headers;
 };
 

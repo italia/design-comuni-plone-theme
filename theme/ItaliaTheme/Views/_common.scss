@@ -165,10 +165,16 @@ div.sticky-wrapper {
   object-position: center;
   max-height: 300px;
   max-width: 200px;
+}
+
 #default-country {
   .react-select-container {
     &:last-child {
       z-index: 2000;
     }
   }
+}
+
+.slider-container {
+  margin-bottom: 20px;
 }

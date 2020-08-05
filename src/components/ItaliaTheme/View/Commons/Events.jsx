@@ -103,15 +103,19 @@ const Events = ({ content, title, show_image, folder_name, isChild }) => {
     events = [...events].filter((el) => !content['@id'].includes(el['@id']));
   }
 
-  console.log(events);
   return (
     <>
       {events.length > 0 ? (
-        <article id="events" className="it-page-section anchor-offset mt-5">
+        <article
+          id="appuntamenti"
+          className="it-page-section anchor-offset mt-5"
+        >
           {title ? (
-            <h4>{title}</h4>
+            <h4 id="header-appuntamenti">{title}</h4>
           ) : (
-            <h4>{intl.formatMessage(messages.events)}</h4>
+            <h4 id="header-appuntamenti">
+              {intl.formatMessage(messages.events)}
+            </h4>
           )}
           <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
             {events.map((item, i) => (

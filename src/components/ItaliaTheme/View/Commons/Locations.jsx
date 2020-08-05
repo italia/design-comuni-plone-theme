@@ -5,6 +5,7 @@ import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Icon } from 'design-react-kit/dist/design-react-kit';
 import { Link } from 'react-router-dom';
+import { OSMMap } from '@italia/addons/volto-venue';
 import PropTypes from 'prop-types';
 
 const messages = defineMessages({
@@ -28,12 +29,14 @@ const Location = ({ location, show_icon }) => {
   const intl = useIntl();
   const key = `luogo${location['@id']}`;
   const url = flattenToAppURL(location['@id']);
-  const locationContent = useSelector(state => state.content.subrequests);
+  const locationContent = useSelector((state) => state.content.subrequests);
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(getContent(url, null, key));
     return () => dispatch(resetContent(key));
   }, [dispatch, location, url, key]);
+
   let location_fo = locationContent[key]?.data;
   return location_fo ? (
     <div className="card card-teaser shadow mt-3 rounded">
@@ -41,7 +44,7 @@ const Location = ({ location, show_icon }) => {
       <div className="card-body">
         <h5 className="card-title">{location_fo.title}</h5>
         <div className="card-text">
-          <p>{location_fo.address}</p>
+          <p>{`${location_fo.street} - ${location_fo.zip_code}`}</p>
           <p className="mt-3">
             <Link
               to={flattenToAppURL(location_fo['@id'])}
@@ -67,22 +70,58 @@ const Location = ({ location, show_icon }) => {
 };
 
 /**
+ * LocationMap view component class.
+ * @function LocationMap
+ * @params {object} content: Content object.
+ * @returns {string} Markup of the component.
+ */
+const LocationMap = ({ location }) => {
+  const key = `luogo${location['@id']}`;
+  const url = flattenToAppURL(location['@id']);
+  const locationContent = useSelector((state) => state.content.subrequests);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getContent(url, null, key));
+    return () => dispatch(resetContent(key));
+  }, [dispatch, location, url, key]);
+
+  let location_fo = locationContent[key]?.data;
+  return location_fo ? (
+    <>
+      <h4 className="no-toc map-header">Mappa</h4>
+      {__CLIENT__ &&
+      location_fo.geolocation?.latitude &&
+      location_fo.geolocation?.longitude ? (
+        <>
+          <OSMMap
+            position={[
+              location_fo.geolocation.latitude,
+              location_fo.geolocation.longitude,
+            ]}
+          />
+        </>
+      ) : null}
+    </>
+  ) : null;
+};
+
+/**
  * Locations view component class.
  * @function Locations
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
 const Locations = ({ locations, show_icon }) => {
-  const intl = useIntl();
   return (
-    <article id="luoghi" className="it-page-section anchor-offset mt-5">
-      <h4 id="header-luoghi">{intl.formatMessage(messages.locations)}</h4>
+    <>
       <div className="card-wrapper card-teaser-wrapper">
         {locations.map((item, i) => (
           <Location key={item['@id']} location={item} show_icon={show_icon} />
         ))}
       </div>
-    </article>
+      <LocationMap location={locations[0]} />
+    </>
   );
 };
 export default Locations;
@@ -109,4 +148,14 @@ Location.propTypes = {
     review_state: PropTypes.string,
   }),
   show_icon: PropTypes.bool,
+};
+
+LocationMap.propTypes = {
+  location: PropTypes.shape({
+    '@id': PropTypes.string,
+    '@type': PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string,
+    review_state: PropTypes.string,
+  }),
 };

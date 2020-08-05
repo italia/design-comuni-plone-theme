@@ -6,6 +6,11 @@ export Sharing from '@italia/components/ItaliaTheme/View/Commons/Sharing';
 export Actions from '@italia/components/ItaliaTheme/View/Commons/Actions';
 export SideMenu from '@italia/components/ItaliaTheme/View/Commons/SideMenu';
 export Gallery from '@italia/components/ItaliaTheme/View/Commons/Gallery';
+export Dates from '@italia/components/ItaliaTheme/View/Commons/Dates';
+export HelpBox from '@italia/components/ItaliaTheme/View/Commons/HelpBox';
+export EmbeddedVideo from '@italia/components/ItaliaTheme/View/Commons/EmbeddedVideo';
+export Events from '@italia/components/ItaliaTheme/View/Commons/Events';
+export Venue from '@italia/components/ItaliaTheme/View/Commons/Venue';
 
 export PageHeader from '@italia/components/ItaliaTheme/View/Commons/PageHeader';
 export Attachment from '@italia/components/ItaliaTheme/View/Commons/Attachment';

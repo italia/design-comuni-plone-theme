@@ -12,7 +12,7 @@ import PropTypes from 'prop-types';
 const messages = defineMessages({
   gallery: {
     id: 'gallery',
-    defaultMessage: 'Galleria di immagini',
+    defaultMessage: 'Galleria immagini',
   },
 });
 
@@ -65,10 +65,10 @@ const Gallery = ({ content, folder_name }) => {
 
   const intl = useIntl();
   const url = `${flattenToAppURL(content['@id'])}/${folder_name}`;
-  const searchResults = useSelector(state => state.search.subrequests);
+  const searchResults = useSelector((state) => state.search.subrequests);
   const dispatch = useDispatch();
   useEffect(() => {
-    if (content?.items.some(e => e.id === folder_name)) {
+    if (content?.items.some((e) => e.id === folder_name)) {
       dispatch(
         searchContent(
           url,
@@ -88,17 +88,17 @@ const Gallery = ({ content, folder_name }) => {
   }, [dispatch, content, url, folder_name]);
 
   const multimedia = searchResults?.[folder_name]?.items || [];
-  let images = multimedia.filter(item => item['@type'] === 'Image');
-  let videos = multimedia.filter(item => item['@type'] === 'Link');
+  let images = multimedia.filter((item) => item['@type'] === 'Image');
+  let videos = multimedia.filter((item) => item['@type'] === 'Link');
 
   return (
     <>
-      {images?.length > 0 ? (
-        <article id="gallery" className="it-page-section anchor-offset mt-5">
-          <div className="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
+      <div className="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
+        {images?.length > 0 ? (
+          <div className="slider-container">
             <div className="it-header-block">
               <div className="it-header-block-title">
-                <h4 id="header-gallery" className="no-toc">
+                <h4 id="galleria" className="no-toc">
                   {intl.formatMessage(messages.gallery)}
                 </h4>
               </div>
@@ -124,22 +124,28 @@ const Gallery = ({ content, folder_name }) => {
               </Slider>
             </div>
           </div>
-        </article>
-      ) : null}
-      {videos?.length > 0 ? (
-        <article id="video" className="it-page-section anchor-offset mt-5">
-          <Slider {...video_settings}>
-            {videos.map((item, i) => (
-              <EmbeddedVideo
-                title={item.title}
-                key={item['@id'] || i}
-                id={item['@id'] || i}
-                video_url={item?.remoteUrl || item}
-              />
-            ))}
-          </Slider>
-        </article>
-      ) : null}
+        ) : null}
+      </div>
+      <div className="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
+        {videos?.length > 0 ? (
+          <div className="slider-container">
+            <div className="it-carousel-all it-card-bg">
+              <Slider {...video_settings}>
+                {videos.map((item, i) => (
+                  <div className="it-single-slide-wrapper" key={item['@id']}>
+                    <EmbeddedVideo
+                      title={item.title}
+                      key={item['@id'] || i}
+                      id={item['@id'] || i}
+                      video_url={item?.remoteUrl || item}
+                    />
+                  </div>
+                ))}
+              </Slider>
+            </div>
+          </div>
+        ) : null}
+      </div>
     </>
   );
 };

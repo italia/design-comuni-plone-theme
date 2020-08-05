@@ -24,8 +24,10 @@ const OfficeCard = ({ office, extended, icon }) => {
   }, [dispatch, office, url, key]);
 
   let office_fo = officeContent[key]?.data;
+
   return office_fo ? (
     <div className="card card-teaser border rounded shadow p-4">
+      {icon && <Icon icon={icon}></Icon>}
       <div className="card-body pr-3">
         <h5 className="card-title no-toc">
           <Link to={flattenToAppURL(office_fo['@id'])} title={office_fo.title}>
@@ -42,28 +44,12 @@ const OfficeCard = ({ office, extended, icon }) => {
               </p>
             )}
             {extended ? (
-              <div className="card-text">
-                {office_fo.phone && <p>{`T ${office_fo.phone}`}</p>}
-                {office_fo.mobile && <p>{`T ${office_fo.mobile}`}</p>}
-                {office_fo.website && (
-                  <a
-                    href={office_fo.website}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    {office_fo.mobile}
-                  </a>
-                )}
-                {office_fo.email && (
-                  <a
-                    href={`mailto:${office_fo.email}`}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    {office_fo.email}
-                  </a>
-                )}
-              </div>
+              <div
+                className="card-text"
+                dangerouslySetInnerHTML={{
+                  __html: office_fo.contact_info?.data,
+                }}
+              />
             ) : null}
           </div>
         )}

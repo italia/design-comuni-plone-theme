@@ -33,6 +33,7 @@ import { NewsItemView } from '@italia/components/ItaliaTheme';
 import { UOView } from '@italia/components/ItaliaTheme';
 import { PersonaView } from '@italia/components/ItaliaTheme';
 import { ServizioView } from '@italia/components/ItaliaTheme';
+import { EventoView } from '@italia/components/ItaliaTheme';
 import { PaginaArgomentoView } from '@italia/components/ItaliaTheme';
 import NewsTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/NewsTemplate';
 import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';

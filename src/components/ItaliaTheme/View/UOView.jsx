@@ -164,15 +164,10 @@ const UOView = ({ content }) => {
                 id="servizi-offerti"
                 className="it-page-section anchor-offset mt-5"
               >
-<<<<<<< HEAD:src/components/DesignTheme/View/UOView.jsx
-                <h4>{intl.formatMessage(messages.servizi_offerti)}</h4>
-                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-=======
                 <h4 id="header-servizi-offerti">
                   {intl.formatMessage(messages.servizi_offerti)}
                 </h4>
                 <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
->>>>>>> master:src/components/ItaliaTheme/View/UOView.jsx
                   {content.servizi_offerti.map((item, i) => (
                     <GenericCard
                       key={item['@id']}
@@ -189,15 +184,10 @@ const UOView = ({ content }) => {
                 id="legami-altre-strutture"
                 className="it-page-section anchor-offset mt-5"
               >
-<<<<<<< HEAD:src/components/DesignTheme/View/UOView.jsx
-                <h4>{intl.formatMessage(messages.legami_altre_strutture)}</h4>
-                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-=======
                 <h4 id="header-legami-altre-strutture">
                   {intl.formatMessage(messages.legami_altre_strutture)}
                 </h4>
                 <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal mb-3">
->>>>>>> master:src/components/ItaliaTheme/View/UOView.jsx
                   {content.legami_con_altre_strutture.map((item, i) => (
                     <OfficeCard key={item['@id']} office={item} />
                   ))}
@@ -288,7 +278,7 @@ const UOView = ({ content }) => {
                 ))}
               </article>
             ) : null}
-            {content?.items.some((e) => e.id === 'allegati') && (
+            {content?.items?.some((e) => e.id === 'allegati') && (
               <Attachments content={content} folder_name={'allegati'} />
             )}
             {content?.box_aiuto && (
@@ -323,15 +313,10 @@ const UOView = ({ content }) => {
                 id="related-items"
                 className="it-page-section anchor-offset mt-5"
               >
-<<<<<<< HEAD:src/components/DesignTheme/View/UOView.jsx
-                <h4>{intl.formatMessage(messages.related_items)}</h4>
-                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-=======
                 <h4 id="header-related-items">
                   {intl.formatMessage(messages.related_items)}
                 </h4>
                 <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
->>>>>>> master:src/components/ItaliaTheme/View/UOView.jsx
                   {content.relatedItems.map((item, i) => (
                     <GenericCard
                       index={item['@id']}

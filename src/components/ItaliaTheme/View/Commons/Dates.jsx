@@ -28,7 +28,6 @@ const messages = defineMessages({
  */
 const Dates = ({ content, show_image }) => {
   const intl = useIntl();
-
   return content ? (
     <div className="point-list-wrapper my-4">
       <div className="point-list">

@@ -5,7 +5,7 @@ const EmbeddedVideo = ({ video_url, title, id }) => {
   /* Needed to fix error:
     "Refused to display 'https://www.youtube.com/watch?v=ID&feature=youtu.be'
     in a frame because it set 'X-Frame-Options' to 'sameorigin'."
-    
+
     It seems youtube /watch endpoint refuses this format for embedded videos.
     Need to reformat url to /embed endpoint
   */
@@ -13,13 +13,13 @@ const EmbeddedVideo = ({ video_url, title, id }) => {
   return video_url ? (
     <div
       key={id}
-      className="embed-responsive embed-responsive-16by9 my-4"
+      className="embed-responsive embed-responsive-16by9 my4"
       id={`embedded-video-${id}`}
     >
       <iframe
         className="embed-responsive-item"
         title={title || `YouTube Video ${id}`}
-        allowFullScreen=""
+        allowFullScreen
         src={`https://youtube.com/embed/${video_id}`}
       ></iframe>
     </div>

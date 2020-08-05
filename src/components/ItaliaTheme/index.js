@@ -45,6 +45,7 @@ export NewsItemView from '@italia/components/ItaliaTheme/View/NewsItemView';
 export UOView from '@italia/components/ItaliaTheme/View/UOView';
 export PersonaView from '@italia/components/ItaliaTheme/View/PersonaView';
 export ServizioView from '@italia/components/ItaliaTheme/View/ServizioView';
+export EventoView from '@italia/components/ItaliaTheme/View/EventoView';
 export PaginaArgomentoView from '@italia/components/ItaliaTheme/View/PaginaArgomentoView';
 
 export LinkToWidget from '@italia/components/ItaliaTheme/manage/Widgets/LinkToWidget';

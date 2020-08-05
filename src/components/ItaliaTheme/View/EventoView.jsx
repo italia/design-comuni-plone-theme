@@ -3,7 +3,7 @@
  * @module components/theme/View/EventoView
  */
 
-import React from 'react';
+import React, { useState, createRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 
@@ -23,7 +23,8 @@ import {
   GenericCard,
   Dates,
   TextOrBlocks,
-} from './Commons';
+  EventLocation,
+} from '@italia/components/ItaliaTheme/View';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import {
@@ -45,6 +46,30 @@ const messages = defineMessages({
     id: 'related_items',
     defaultMessage: 'Contenuti correlati',
   },
+  event_ulteriori_informazioni: {
+    id: 'event_ulteriori_informazioni',
+    defaultMessage: 'Informazioni',
+  },
+  date_e_orari: {
+    id: 'date_e_orari',
+    defaultMessage: 'Date e orari',
+  },
+  parteciperanno: {
+    id: 'parteciperanno',
+    defaultMessage: 'Parteciperanno:',
+  },
+  luoghi: {
+    id: 'luogo',
+    defaultMessage: 'Luogo',
+  },
+  contatti: {
+    id: 'contatti',
+    defaultMessage: 'Contatti',
+  },
+  box_aiuto: {
+    id: 'box_aiuto',
+    defaultMessage: "Box d'aiuto",
+  },
 });
 
 /**
@@ -60,6 +85,17 @@ const EventoView = ({ content, location }) => {
   const events_path = isChildEvent
     ? content?.parent['@id']?.split('/').splice(-1)[0]
     : content?.['@id'].split('/').splice(-1)[0];
+  let documentBody = createRef();
+  const [sideMenuElements, setSideMenuElements] = useState(null);
+
+  useEffect(() => {
+    if (documentBody.current) {
+      if (__CLIENT__) {
+        setSideMenuElements(documentBody.current);
+      }
+    }
+  }, [documentBody]);
+
   return (
     <>
       <div className="container px-4 my-4 newsitem-view">
@@ -82,16 +118,19 @@ const EventoView = ({ content, location }) => {
         )}
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
-            <SideMenu />
+            {__CLIENT__ && <SideMenu data={sideMenuElements} />}
           </aside>
-          <section className="col-lg-8 it-page-sections-container">
+          <section
+            ref={documentBody}
+            className="col-lg-8 it-page-sections-container"
+          >
             <article
-              id="text-body-blocks"
+              id="text-body"
               className="it-page-section anchor-offset clearfix"
             >
               {text}
             </article>
-            {content.introduzione?.data && (
+            {content?.introduzione?.data && (
               <RichTextArticle
                 content={content.introduzione?.data}
                 tag_id={'text-body'}
@@ -99,18 +138,25 @@ const EventoView = ({ content, location }) => {
               />
             )}
             {content?.items.some((e) => e.id === 'multimedia') && (
-              <Gallery content={content} folder_name={'multimedia'} />
+              <article
+                id="galleria"
+                className="it-page-section anchor-offset mt-5"
+              >
+                <Gallery content={content} folder_name={'multimedia'} />
+              </article>
             )}
             {content?.descrizione_destinatari?.data && (
               <RichTextArticle
                 content={content?.descrizione_destinatari?.data}
-                tag_id={'text-body'}
+                tag_id={'descrizione-destinatari'}
                 title={null}
               />
             )}
             {content?.persone_amministrazione?.length > 0 && (
-              <div className="pt-3 pb-5" id="attending-vips">
-                <h6 className="text-serif font-weight-bold">Parteciperanno:</h6>
+              <>
+                <h6 className="text-serif font-weight-bold">
+                  {intl.formatMessage(messages.parteciperanno)}
+                </h6>
                 {content.persone_amministrazione.map((item, i) => (
                   <Chip
                     color="primary"
@@ -127,25 +173,37 @@ const EventoView = ({ content, location }) => {
                     </ChipLabel>
                   </Chip>
                 ))}
-              </div>
+              </>
             )}
 
-            {content?.luogo_evento?.length > 0 ? (
-              <>
-                <Locations locations={content?.luogo_evento} show_icon={true} />
-                {content?.luogo_evento?.map((location) => (
-                  <Venue venue={location} key={location['@id']} />
-                ))}
-              </>
+            {content?.luoghi_correlati?.length > 0 ? (
+              <article
+                id="luoghi"
+                className="it-page-section anchor-offset mt-5"
+              >
+                <h4 id="header-luoghi">
+                  {intl.formatMessage(messages.luoghi)}
+                </h4>
+                <Locations
+                  locations={content?.luoghi_correlati}
+                  show_icon={true}
+                />
+              </article>
             ) : null}
 
-            {content?.orari?.data.replace(/(<([^>]+)>)/g, '') && (
-              <article className="it-page-section anchor-offset mt-5">
-                <h4>Date e orari</h4>
+            {content?.orari?.data?.replace(/(<([^>]+)>)/g, '') && (
+              <article
+                id="date-e-orari"
+                className="it-page-section anchor-offset mt-5"
+              >
+                <h4 id="header-date-e-orari">
+                  {intl.formatMessage(messages.date_e_orari)}
+                </h4>
                 <Dates content={content} />
                 <RichTextArticle
                   content={content?.orari?.data}
                   tag_id="date-e-orari"
+                  title={null}
                 />
                 {/* <Button icon size="lg" tag="button" color="primary" outline>
                   <Icon
@@ -173,19 +231,24 @@ const EventoView = ({ content, location }) => {
               />
             )}
 
-            {content?.items.some((e) => e.id === 'documenti') && (
+            {content?.items?.some((e) => e.id === 'documenti') && (
               <Attachments
                 content={content}
                 folder_name={'documenti'}
                 title={'Documenti'}
               />
             )}
-            {content?.organizzato_da_esterno?.data.replace(
+            {content?.organizzato_da_esterno?.data?.replace(
               /(<([^>]+)>)/g,
               '',
             ) ? (
-              <>
-                <h4>Contatti</h4>
+              <article
+                className="it-page-section anchor-offset mt-5"
+                id="contatti"
+              >
+                <h4 id="header-contatti">
+                  {intl.formatMessage(messages.contatti)}
+                </h4>
                 <Card
                   className="card card-teaser rounded shadow mt-3"
                   noWrapper={true}
@@ -203,7 +266,7 @@ const EventoView = ({ content, location }) => {
                     </p>
                   </CardBody>
                 </Card>
-                <h5 className="mt-4">Con il supporto di:</h5>
+                <h5 className="mt-4 supported-by">Con il supporto di:</h5>
                 {content?.evento_supportato_da?.map((item) => (
                   <OfficeCard
                     key={item['@id']}
@@ -212,10 +275,16 @@ const EventoView = ({ content, location }) => {
                     icon={'it-pa'}
                   />
                 ))}
-              </>
+              </article>
             ) : null}
             {content?.organizzato_da_interno?.length > 0 ? (
-              <>
+              <article
+                className="it-page-section anchor-offset mt-5"
+                id="contatti"
+              >
+                <h4 id="header-contatti">
+                  {intl.formatMessage(messages.contatti)}
+                </h4>
                 {content?.evento_organizzato_da_interno?.map((item) => (
                   <OfficeCard
                     key={item['@id']}
@@ -224,7 +293,7 @@ const EventoView = ({ content, location }) => {
                     icon={'it-telephone'}
                   />
                 ))}
-                <h5 className="mt-4">Con il supporto di:</h5>
+                <h5 className="mt-4 supported-by">Con il supporto di:</h5>
                 {content?.evento_supportato_da?.map((item) => (
                   <OfficeCard
                     key={item['@id']}
@@ -233,7 +302,7 @@ const EventoView = ({ content, location }) => {
                     icon={'it-pa'}
                   />
                 ))}
-              </>
+              </article>
             ) : null}
             {content && (
               <Events
@@ -250,7 +319,7 @@ const EventoView = ({ content, location }) => {
             ) && (
               <RichTextArticle
                 content={content?.ulteriori_informazioni?.data}
-                tag_id="additional-info"
+                tag_id="ulteriori-informazioni"
                 title={'Ulteriori informazioni'}
               />
             )}
@@ -269,7 +338,9 @@ const EventoView = ({ content, location }) => {
               />
             )}
             {content?.box_aiuto?.data.replace(/(<([^>]+)>)/g, '') && (
-              <HelpBox text={content?.box_aiuto} />
+              <article className="it-page-section anchor-offset mt-5">
+                <HelpBox text={content?.box_aiuto} />
+              </article>
             )}
             {content?.relatedItems?.length > 0 ? (
               <article
