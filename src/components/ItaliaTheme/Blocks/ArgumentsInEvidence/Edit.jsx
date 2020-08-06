@@ -1,6 +1,7 @@
   
 import React from 'react'
 import BodyWrapper from './BodyWrapper'
+import PropTypes from 'prop-types';
 
 const Edit = ({ data, id, block, selected, intl, onChangeBlock }) => {
   return (
@@ -20,7 +21,7 @@ const Edit = ({ data, id, block, selected, intl, onChangeBlock }) => {
  * @property {Object} propTypes Property types.
  * @static
  */
-View.propTypes = {
+Edit.propTypes = {
   data: PropTypes.objectOf(PropTypes.any).isRequired,
   id: PropTypes.string.isRequired,
   block: PropTypes.string.isRequired,
