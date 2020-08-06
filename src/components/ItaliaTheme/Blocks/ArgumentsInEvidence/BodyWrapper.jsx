@@ -114,7 +114,7 @@ class BodyWrapper extends SubblocksEdit {
             </div>
           </div>
         </div>
-        <div className="link-button mt-4">
+        <div className="link-button mt-5">
         <Link
           to={'/argomenti'}
           className="text-decoration-none">
@@ -123,7 +123,6 @@ class BodyWrapper extends SubblocksEdit {
               className="view-all"
               icon={false}
               tag="button"
-              // onClick={() => window.open('/argomenti', '_self')}
             >
               {this.props.intl?.formatMessage(messages.view_all)}
             </Button>
