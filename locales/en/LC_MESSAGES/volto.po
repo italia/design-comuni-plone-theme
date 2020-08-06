@@ -16,6 +16,10 @@ msgstr ""
 msgid "Accedi all'area personale"
 msgstr ""
 
+#: addons/volto-subblocks/src/SubblocksEdit
+msgid "Add block…"
+msgstr ""
+
 #: components/DesignTheme/Blocks/Alert/Sidebar
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Alert"
@@ -79,6 +83,13 @@ msgstr ""
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Description"
+msgstr ""
+
+#: addons/volto-subblocks/src/examples/EditBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/EditBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBlock
+msgid "Description placeholder"
 msgstr ""
 
 #: components/DesignTheme/Footer/FooterInfos
@@ -169,6 +180,10 @@ msgstr ""
 msgid "RssFeedItemNumber"
 msgstr ""
 
+#: components/ItaliaTheme/ScrollToTop/ScrollToTop
+msgid "Scroll to top"
+msgstr ""
+
 #: components/DesignTheme/Blocks/SearchSections/SideBar
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "SearchServices"
@@ -208,9 +223,21 @@ msgstr ""
 msgid "Template"
 msgstr ""
 
+#: addons/volto-subblocks/src/examples/Sidebar
+msgid "TextBlocks"
+msgstr ""
+
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Title"
+msgstr ""
+
+#: addons/volto-subblocks/src/examples/EditBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/EditBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBlock
+msgid "Title placeholder"
 msgstr ""
 
 #: components/DesignTheme/Blocks/ArgomentoTitle/Edit
@@ -256,6 +283,7 @@ msgstr ""
 
 #: components/DesignTheme/Blocks/Listing/CompleteBlockLinksTemplate
 #: components/DesignTheme/MegaMenu/MegaMenu
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
 #: components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 msgid "Vedi tutto"
@@ -310,6 +338,10 @@ msgstr ""
 msgid "area_appartenenza"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+msgid "argoment"
+msgstr ""
+
 #: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 msgid "assessorati_riferimento"
@@ -338,6 +370,10 @@ msgstr ""
 #: components/DesignTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView
 msgid "autenticazione"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/SideMenu
+msgid "back"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
@@ -377,6 +413,10 @@ msgstr ""
 #: components/DesignTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView
 msgid "chi_puo_presentare"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/SideMenu
+msgid "close"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
@@ -473,6 +513,10 @@ msgstr ""
 msgid "date"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+msgid "default"
+msgstr ""
+
 #: components/DesignTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView
 msgid "deleghe"
@@ -542,6 +586,10 @@ msgstr ""
 msgid "expire"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
+msgid "exploreArgument"
+msgstr ""
+
 #: components/DesignTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView
 msgid "fasi_scadenze"
@@ -605,6 +653,10 @@ msgstr ""
 msgid "link"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+msgid "linkToArgument"
+msgstr ""
+
 #: components/DesignTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView
 msgid "link_siti_esterni"
@@ -634,7 +686,7 @@ msgstr ""
 msgid "modified"
 msgstr ""
 
-#: addons/volto-multilingual-widget/src/index
+#: addons/volto-multilingual-widget/src/MultilingualWidget
 msgid "multilingual_text_placeholder"
 msgstr ""
 
@@ -927,6 +979,10 @@ msgstr ""
 msgid "tipologia_persona"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+msgid "title"
+msgstr ""
+
 #: components/DesignTheme/Header/SearchModal
 #: components/DesignTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/Header/SearchModal
@@ -959,7 +1015,7 @@ msgstr ""
 msgid "uo_ulteriori_informazioni"
 msgstr ""
 
-#: addons/volto-multilingual-widget/src/index
+#: addons/volto-multilingual-widget/src/MultilingualWidget
 msgid "value_for_lang"
 msgstr ""
 

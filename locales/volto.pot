@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-07-22T09:35:54.790Z\n"
+"POT-Creation-Date: 2020-08-06T15:00:25.954Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,11 @@ msgstr ""
 #: components/ItaliaTheme/Header/HeaderSlim
 # defaultMessage: Accedi all'area personale
 msgid "Accedi all'area personale"
+msgstr ""
+
+#: addons/volto-subblocks/src/SubblocksEdit
+# defaultMessage: Add block
+msgid "Add block…"
 msgstr ""
 
 #: components/DesignTheme/Blocks/Alert/Sidebar
@@ -95,6 +100,14 @@ msgstr ""
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 # defaultMessage: Description
 msgid "Description"
+msgstr ""
+
+#: addons/volto-subblocks/src/examples/EditBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/EditBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBlock
+# defaultMessage: Description...
+msgid "Description placeholder"
 msgstr ""
 
 #: components/DesignTheme/Footer/FooterInfos
@@ -203,6 +216,11 @@ msgstr ""
 msgid "RssFeedItemNumber"
 msgstr ""
 
+#: components/ItaliaTheme/ScrollToTop/ScrollToTop
+# defaultMessage: Torna su
+msgid "Scroll to top"
+msgstr ""
+
 #: components/DesignTheme/Blocks/SearchSections/SideBar
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Ricerca servizi
@@ -250,10 +268,24 @@ msgstr ""
 msgid "Template"
 msgstr ""
 
+#: addons/volto-subblocks/src/examples/Sidebar
+# defaultMessage: Blocchi di testo
+msgid "TextBlocks"
+msgstr ""
+
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 # defaultMessage: Title
 msgid "Title"
+msgstr ""
+
+#: addons/volto-subblocks/src/examples/EditBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/EditBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBlock
+# defaultMessage: Title...
+msgid "Title placeholder"
 msgstr ""
 
 #: components/DesignTheme/Blocks/ArgomentoTitle/Edit
@@ -306,6 +338,7 @@ msgstr ""
 
 #: components/DesignTheme/Blocks/Listing/CompleteBlockLinksTemplate
 #: components/DesignTheme/MegaMenu/MegaMenu
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
 #: components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 # defaultMessage: Vedi tutto
@@ -370,6 +403,11 @@ msgstr ""
 msgid "area_appartenenza"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+# defaultMessage: Argomento
+msgid "argoment"
+msgstr ""
+
 #: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 # defaultMessage: Assessorati di riferimento
@@ -404,6 +442,11 @@ msgstr ""
 #: components/ItaliaTheme/View/ServizioView
 # defaultMessage: Metodi di autenticazione al servizio
 msgid "autenticazione"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/SideMenu
+# defaultMessage: Indietro
+msgid "back"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
@@ -450,6 +493,11 @@ msgstr ""
 #: components/ItaliaTheme/View/ServizioView
 # defaultMessage: Chi può presentare domanda
 msgid "chi_puo_presentare"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/SideMenu
+# defaultMessage: Chiudi
+msgid "close"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
@@ -565,6 +613,11 @@ msgstr ""
 msgid "date"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+# defaultMessage: Default
+msgid "default"
+msgstr ""
+
 #: components/DesignTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView
 # defaultMessage: Deleghe
@@ -647,6 +700,11 @@ msgstr ""
 msgid "expire"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
+# defaultMessage: Esplora argomento
+msgid "exploreArgument"
+msgstr ""
+
 #: components/DesignTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView
 # defaultMessage: Fasi e scadenze per la richiesta del servizio
@@ -724,6 +782,11 @@ msgstr ""
 msgid "link"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+# defaultMessage: Link agli argomenti
+msgid "linkToArgument"
+msgstr ""
+
 #: components/DesignTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView
 # defaultMessage: Link utili
@@ -759,7 +822,7 @@ msgstr ""
 msgid "modified"
 msgstr ""
 
-#: addons/volto-multilingual-widget/src/index
+#: addons/volto-multilingual-widget/src/MultilingualWidget
 # defaultMessage: Type some text...
 msgid "multilingual_text_placeholder"
 msgstr ""
@@ -1107,6 +1170,11 @@ msgstr ""
 msgid "tipologia_persona"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+# defaultMessage: Titolo
+msgid "title"
+msgstr ""
+
 #: components/DesignTheme/Header/SearchModal
 #: components/DesignTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/Header/SearchModal
@@ -1145,7 +1213,7 @@ msgstr ""
 msgid "uo_ulteriori_informazioni"
 msgstr ""
 
-#: addons/volto-multilingual-widget/src/index
+#: addons/volto-multilingual-widget/src/MultilingualWidget
 # defaultMessage: Value for language {lang}
 msgid "value_for_lang"
 msgstr ""

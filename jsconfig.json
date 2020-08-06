@@ -12,6 +12,9 @@
             ],
             "@italia/addons/volto-venue": [
                 "addons/volto-venue/src"
+            ],
+            "@italia/addons/volto-subblocks": [
+                "addons/volto-subblocks/src"
             ]
         },
         "baseUrl": "src"

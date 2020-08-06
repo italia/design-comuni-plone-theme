@@ -23,6 +23,8 @@ import AlertEdit from '@italia/components/ItaliaTheme/Blocks/Alert/Edit';
 
 import SearchSectionsView from '@italia/components/ItaliaTheme/Blocks/SearchSections/View';
 import SearchSectionsEdit from '@italia/components/ItaliaTheme/Blocks/SearchSections/Edit';
+import ArgumentsInEvidenceEdit from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Edit';
+import ArgumentsInEvidenceView from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/View';
 
 import titleSVG from '@plone/volto/icons/text.svg';
 import ArgomentoTitleView from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/View';
@@ -113,6 +115,22 @@ const customBlocks = {
     group: 'text',
     view: SearchSectionsView,
     edit: SearchSectionsEdit,
+    restricted: false,
+    mostUsed: false,
+    blockHasOwnFocusManagement: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
+  argumentsInEvidence: {
+    id: 'argumentsInEvidence',
+    title: 'Argomenti in evidenza 6',
+    icon: searchIcon,
+    group: 'text',
+    view: ArgumentsInEvidenceView,
+    edit: ArgumentsInEvidenceEdit,
     restricted: false,
     mostUsed: false,
     blockHasOwnFocusManagement: true,
