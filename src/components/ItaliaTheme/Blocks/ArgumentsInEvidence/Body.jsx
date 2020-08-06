@@ -42,7 +42,7 @@ class Body extends SubblockEdit {
   render() {
     const argument = this.props?.data?.argument ? this.props?.data?.argument[0] : null;
     return (
-      <Subblock subblock={this} draggable={this.props?.draggable}>
+      <Subblock subblock={this} draggable={this.props.draggable}>
         <Card
           className="card-bg"
           noWrapper={true}

@@ -63,11 +63,11 @@ class BodyWrapper extends SubblocksEdit {
                 <Body
                   data={subblock}
                   index={subindex}
+                  key={subblock.id}
                   inEditMode={this.props.inEditMode}
                   draggable={this.props.draggable}
                   selected={this.isSubblockSelected(subindex)}
                   {...this.subblockProps}
-                  key={subblock.id}
                 />
               ))}
             {this.props.selected && <Grid.Column>{this.renderAddBlockButton()}</Grid.Column>}
@@ -75,7 +75,7 @@ class BodyWrapper extends SubblocksEdit {
           </div>
         </SubblocksWrapper>
 
-        <SidebarPortal selected={this.props.selected}>
+        <SidebarPortal selected={this.props.selected || false}>
           <Sidebar
             {...this.props}
             data={this.props.data}
@@ -96,7 +96,7 @@ class BodyWrapper extends SubblocksEdit {
                 this.props.data?.arguments?.map((argument, index) => (
                   <Link
                     to={flattenToAppURL(argument['@id'])}
-                    key={argument['@id']}
+                    key={index}
                     title={argument.title}
                     className="text-decoration-none"
                   >

@@ -104,9 +104,9 @@ const Sidebar = ({
 }
 
 Sidebar.propTypes = {
-  data: PropTypes.objectOf(PropTypes.any).isRequired,
-  block: PropTypes.string.isRequired,
-  onChangeBlock: PropTypes.func.isRequired,
+  data: PropTypes.objectOf(PropTypes.any),
+  block: PropTypes.string,
+  onChangeBlock: PropTypes.func,
   selected: PropTypes.any,
   setSelected: PropTypes.func,
 }
