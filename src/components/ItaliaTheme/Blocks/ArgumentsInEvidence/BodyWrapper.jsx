@@ -67,7 +67,7 @@ class BodyWrapper extends SubblocksEdit {
                   draggable={this.props.draggable}
                   selected={this.isSubblockSelected(subindex)}
                   {...this.subblockProps}
-                  key={subindex}
+                  key={subblock.id}
                 />
               ))}
             {this.props.selected && <Grid.Column>{this.renderAddBlockButton()}</Grid.Column>}

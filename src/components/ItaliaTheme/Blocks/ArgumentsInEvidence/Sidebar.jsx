@@ -69,35 +69,34 @@ const Sidebar = ({
       <Accordion fluid styled className="form">
         {data.subblocks &&
           data.subblocks.map((subblock, index) => {
-            console.log(subblock)
             return (
-            <div key={'subblock' + index}>
-              <Accordion.Title
-                active={selected === index}
-                index={index}
-                onClick={() => setSelected(selected === index ? null : index)}
-              >
-                {subblock?.argument && subblock?.argument[0]?.title}
-                {selected === index ? <Icon name={upSVG} size="20px" /> : <Icon name={downSVG} size="20px" />}
-              </Accordion.Title>
-              <Accordion.Content active={selected === index}>
-                <ObjectBrowserWidget
-                  id={'ObjectBrowserWidget'}
-                  title={intl.formatMessage(messages.argument)}
-                  required={true}
-                  mode={'link'}
-                  value={subblock.argument}
-                  widgetOptions={{pattern_options:{selectableTypes:['Pagina Argomento']}}}
-                  onChange={(name, value) => {
-                    onChangeSubBlock(index, {
-                      ...subblock,
-                      argument: value,
-                    });
-                  }}
-                />
-              </Accordion.Content>
-            </div>
-          )}
+              <div key={'subblock' + index}>
+                <Accordion.Title
+                  active={selected === index}
+                  index={index}
+                  onClick={() => setSelected(selected === index ? null : index)}
+                >
+                  {subblock?.argument && subblock?.argument[0]?.title}
+                  {selected === index ? <Icon name={upSVG} size="20px" /> : <Icon name={downSVG} size="20px" />}
+                </Accordion.Title>
+                <Accordion.Content active={selected === index}>
+                  <ObjectBrowserWidget
+                    id={'ObjectBrowserWidget'}
+                    title={intl.formatMessage(messages.argument)}
+                    required={true}
+                    mode={'link'}
+                    value={subblock.argument}
+                    widgetOptions={{pattern_options:{selectableTypes:['Pagina Argomento']}}}
+                    onChange={(name, value) => {
+                      onChangeSubBlock(index, {
+                        ...subblock,
+                        argument: value,
+                      });
+                    }}
+                  />
+                </Accordion.Content>
+              </div>
+            )}
           )}
       </Accordion>
     </Segment.Group>
@@ -108,7 +107,6 @@ Sidebar.propTypes = {
   data: PropTypes.objectOf(PropTypes.any).isRequired,
   block: PropTypes.string.isRequired,
   onChangeBlock: PropTypes.func.isRequired,
-  openObjectBrowser: PropTypes.func.isRequired,
   selected: PropTypes.any,
   setSelected: PropTypes.func,
 }
