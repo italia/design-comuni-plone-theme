@@ -15,6 +15,19 @@ const Edit = ({ data, id, block, selected, intl, onChangeBlock }) => {
     />
   )
 }
+/**
+ * Property types.
+ * @property {Object} propTypes Property types.
+ * @static
+ */
+View.propTypes = {
+  data: PropTypes.objectOf(PropTypes.any).isRequired,
+  id: PropTypes.string.isRequired,
+  block: PropTypes.string.isRequired,
+  selected: PropTypes.any,
+  intl: PropTypes.any,
+  onChangeBlock: PropTypes.func.isRequired,
+};
 
 export default Edit;
 
