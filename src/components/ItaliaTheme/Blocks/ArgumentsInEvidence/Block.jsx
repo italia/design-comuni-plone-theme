@@ -1,8 +1,6 @@
 import React from 'react'
-import { injectIntl, defineMessages } from 'react-intl'
-import { compose } from 'redux'
+import { defineMessages } from 'react-intl'
 import { TextEditorWidget } from '@italia/components/ItaliaTheme';
-import { DNDSubblocks, SubblockEdit, Subblock } from 'volto-subblocks'
 import {
   Card,
   CardBody,

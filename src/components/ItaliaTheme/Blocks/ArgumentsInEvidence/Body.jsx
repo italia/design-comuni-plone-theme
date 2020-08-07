@@ -43,7 +43,7 @@ class Body extends SubblockEdit {
           block={this.props.block}
           focusOn={this.props.focusOn}
           intl={this.props.intl}
-          onChange={this.props.onChangeBlock}
+          onChange={this.onChange}
         />
       </Subblock>
     )

@@ -26,7 +26,6 @@ class Edit extends SubblocksEdit {
                 selected={this.isSubblockSelected(subindex)}
                 {...this.subblockProps}
                 intl={this.props.intl}
-                onChangeBlock={this.props.onChangeBlock}
                 openObjectBrowser={this.props.openObjectBrowser}
                 onChangeFocus={this.onSubblockChangeFocus}
               />
