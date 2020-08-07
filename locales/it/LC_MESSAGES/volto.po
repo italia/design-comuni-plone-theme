@@ -18,7 +18,7 @@ msgstr "Accedi all'area personale"
 
 #: addons/volto-subblocks/src/SubblocksEdit
 msgid "Add block…"
-msgstr ""
+msgstr "Aggiungi un blocco"
 
 #: components/DesignTheme/Blocks/Alert/Sidebar
 #: components/ItaliaTheme/Blocks/Alert/Sidebar

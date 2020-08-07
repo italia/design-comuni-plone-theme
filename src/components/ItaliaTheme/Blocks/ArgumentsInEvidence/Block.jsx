@@ -12,9 +12,9 @@ import { settings } from '@italia/config';
 import redraft from 'redraft';
 
 const messages = defineMessages({
-  titlePlaceholder: {
-    id: 'Title placeholder',
-    defaultMessage: 'Title...',
+  text: {
+    id: 'Type text…',
+    defaultMessage: 'Digita un testo…',
   },
   exploreArgument: {
     id: 'exploreArgument',
@@ -45,7 +45,7 @@ const Block = ({ data, inEditMode, selected, focusOn, block, onChange, intl }) =
             selected={selected}
             block={block}
             onChangeBlock={onChange}
-            placeholder={intl.formatMessage(messages.titlePlaceholder)}
+            placeholder={intl.formatMessage(messages.text)}
             focusOn={focusOn}
           />
         :
