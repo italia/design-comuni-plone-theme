@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-08-06T15:00:25.954Z\n"
+"POT-Creation-Date: 2020-08-07T10:21:05.512Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -103,9 +103,11 @@ msgid "Description"
 msgstr ""
 
 #: addons/volto-subblocks/src/examples/EditBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper_old
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/EditBlock
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBodyWrapper copy
 # defaultMessage: Description...
 msgid "Description placeholder"
 msgstr ""
@@ -280,10 +282,13 @@ msgid "Title"
 msgstr ""
 
 #: addons/volto-subblocks/src/examples/EditBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper_old
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/EditBlock
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBodyWrapper copy
 # defaultMessage: Title...
 msgid "Title placeholder"
 msgstr ""
@@ -338,7 +343,9 @@ msgstr ""
 
 #: components/DesignTheme/Blocks/Listing/CompleteBlockLinksTemplate
 #: components/DesignTheme/MegaMenu/MegaMenu
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper_old
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBodyWrapper copy
 #: components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 # defaultMessage: Vedi tutto
@@ -700,6 +707,7 @@ msgstr ""
 msgid "expire"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
 # defaultMessage: Esplora argomento
 msgid "exploreArgument"
@@ -899,6 +907,14 @@ msgstr ""
 #: components/ItaliaTheme/View/PersonaView
 # defaultMessage: Organizzazione di riferimento
 msgid "organizzazione_riferimento"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper_old
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBodyWrapper copy
+# defaultMessage: ALTRI ARGOMENTI
+msgid "otherArguments"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Metadata
@@ -1222,6 +1238,11 @@ msgstr ""
 #: components/ItaliaTheme/View/PersonaView
 # defaultMessage: Valutazione situazione patrimoniale
 msgid "valutazione_situazione_patrimoniale"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody
+# defaultMessage: Vedi tutti
+msgid "view_all"
 msgstr ""
 
 #: components/DesignTheme/View/ServizioView

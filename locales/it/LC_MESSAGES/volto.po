@@ -86,9 +86,11 @@ msgid "Description"
 msgstr "Description"
 
 #: addons/volto-subblocks/src/examples/EditBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper_old
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/EditBlock
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBodyWrapper copy
 msgid "Description placeholder"
 msgstr ""
 
@@ -233,10 +235,13 @@ msgid "Title"
 msgstr "Titolo"
 
 #: addons/volto-subblocks/src/examples/EditBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper_old
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/EditBlock
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBodyWrapper copy
 msgid "Title placeholder"
 msgstr ""
 
@@ -283,7 +288,9 @@ msgstr "Vai alla pagina"
 
 #: components/DesignTheme/Blocks/Listing/CompleteBlockLinksTemplate
 #: components/DesignTheme/MegaMenu/MegaMenu
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper_old
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBodyWrapper copy
 #: components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 msgid "Vedi tutto"
@@ -586,6 +593,7 @@ msgstr "Il testo supera la lunghezza consigliata"
 msgid "expire"
 msgstr "Scadenza"
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
 msgid "exploreArgument"
 msgstr ""
@@ -751,6 +759,13 @@ msgstr "Opzioni"
 #: components/ItaliaTheme/View/PersonaView
 msgid "organizzazione_riferimento"
 msgstr "Organizzazione di riferimento"
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper_old
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBodyWrapper copy
+msgid "otherArguments"
+msgstr ""
 
 #: components/DesignTheme/View/Commons/Metadata
 #: components/ItaliaTheme/View/Commons/Metadata
@@ -1023,6 +1038,10 @@ msgstr "Valore per la lingua {lang}"
 #: components/ItaliaTheme/View/PersonaView
 msgid "valutazione_situazione_patrimoniale"
 msgstr "Valutazione situazione patrimoniale"
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody
+msgid "view_all"
+msgstr ""
 
 #: components/DesignTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView

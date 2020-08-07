@@ -1,19 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import BodyWrapper from './BodyWrapper'
+import BottomBody from './BottomBody'
+import Block from './Block'
 import { useIntl } from 'react-intl';
-
+  
 const View = ({ data, id }) => {
   const currentIntl =  useIntl();
-
   return (
     <div className="block full-width">
-      <BodyWrapper 
-        data={data}
-        inEditMode={false}
-        draggable={false}
-        intl={currentIntl}
-      />
+      <div className='argumentInEvidence'>
+        <BodyWrapper
+          data={data}
+          inEditMode={false}
+        >
+          {data.subblocks.map((subblock, index) => (
+            <Block
+              key={index}
+              data={subblock}
+              inEditMode={false}
+              intl={currentIntl}
+            />
+          ))}
+        </BodyWrapper>
+        <BottomBody 
+          data={data}
+          intl={currentIntl}
+        />
+      </div>
     </div>
   );
 }

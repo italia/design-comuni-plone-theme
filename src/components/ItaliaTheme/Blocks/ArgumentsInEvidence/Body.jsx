@@ -1,17 +1,8 @@
 import React from 'react'
 import { injectIntl, defineMessages } from 'react-intl'
 import { compose } from 'redux'
-import { TextEditorWidget } from '@italia/components/ItaliaTheme';
 import { DNDSubblocks, SubblockEdit, Subblock } from 'volto-subblocks'
-import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
-  CardReadMore
-} from 'design-react-kit/dist/design-react-kit';
-import { settings } from '@italia/config';
-import redraft from 'redraft';
+import Block from './Block'
 
 const messages = defineMessages({
   titlePlaceholder: {
@@ -42,46 +33,18 @@ class Body extends SubblockEdit {
   render() {
     const argument = this.props?.data?.argument ? this.props?.data?.argument[0] : null;
     return (
-      <Subblock subblock={this} draggable={this.props.draggable}>
-        <Card
-          className="card-bg"
-          noWrapper={true}
-          tag="div"
-        >
-          <CardBody tag="div">
-            <CardTitle tag="h3">
-              {argument?.title}
-            </CardTitle>
-            <CardText tag="p">
-              {argument?.description}
-            </CardText>
-            {this.props.inEditMode ?
-              <TextEditorWidget
-                data={this.props.data}
-                fieldName="title"
-                selected={this.props.selected || this.state.focusOn === 'title'}
-                block={this.props.block}
-                onChangeBlock={this.onChange}
-                placeholder={this.props.intl.formatMessage(messages.titlePlaceholder)}
-                focusOn={this.focusOn}
-              />
-              :
-                <div>
-                  {redraft(
-                    this.props.data.title,
-                    settings.ToHTMLRenderers,
-                    settings.ToHTMLOptions,
-                  )}
-                </div>
-            }
-            <CardReadMore
-              iconName="it-arrow-right"
-              tag="a"
-              text={this.props.intl.formatMessage(messages.exploreArgument)}
-              href={argument?.id}
-            />
-          </CardBody>
-        </Card>
+      <Subblock subblock={this}>
+        <Block
+          data={this.props.data}
+          index={this.props.index}
+          key={this.props.index}
+          inEditMode={this.props.inEditMode}
+          selected={this.props.selected || this.state.focusOn === 'title'}
+          block={this.props.block}
+          focusOn={this.props.focusOn}
+          intl={this.props.intl}
+          onChange={this.props.onChangeBlock}
+        />
       </Subblock>
     )
   }
