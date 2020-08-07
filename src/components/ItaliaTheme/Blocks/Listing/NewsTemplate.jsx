@@ -6,6 +6,7 @@ import { ConditionalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { useIntl } from 'react-intl';
 import moment from 'moment';
+import { getIcon } from '@italia/helpers/index';
 
 import {
   Row,
@@ -15,6 +16,7 @@ import {
   CardTitle,
   CardCategory,
   CardText,
+  Icon
 } from 'design-react-kit/dist/design-react-kit';
 
 const NewsTemplate = ({ items, isEditMode, title, linkMore }) => {
@@ -50,6 +52,15 @@ const NewsTemplate = ({ items, isEditMode, title, linkMore }) => {
                           alt={item.title}
                         />
                       </figure>
+                      {/* Aggiungere condizione se è un evento */}
+                      <div className="card-calendar d-flex flex-column justify-content-center">
+                        <span className="card-date">
+                          {moment(item.effective).format('D')}
+                        </span>
+                        <span className="card-day">
+                          {moment(item.effective).format('MMMM')}
+                        </span>
+                      </div>
                     </ConditionalLink>
                   </div>
                 </div>
@@ -58,6 +69,12 @@ const NewsTemplate = ({ items, isEditMode, title, linkMore }) => {
                 <CardCategory
                   date={item.effective && moment(item.effective).format('ll')}
                 >
+                  <Icon
+                    className='icon'
+                    color="primary"
+                    icon={getIcon(item['@type'])}
+                    padding={false}
+                  />
                   {item?.design_italia_meta_type}
                 </CardCategory>
                 <CardTitle tag="h4">

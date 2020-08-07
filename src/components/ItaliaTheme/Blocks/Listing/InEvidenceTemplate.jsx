@@ -6,13 +6,19 @@ import {
   CardTitle,
   CardCategory,
   CardText,
+  Chip,
+  ChipLabel,
+  Icon
 } from 'design-react-kit/dist/design-react-kit';
 import moment from 'moment';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
+import { getIcon } from '@italia/helpers/index';
 
 const InEvidenceTemplate = ({ items, title, isEditMode }) => {
+  console.log(items)
+
   return (
     <div
       className={cx('in-evidence', {
@@ -23,6 +29,7 @@ const InEvidenceTemplate = ({ items, title, isEditMode }) => {
       <div className="container">
         {items.map((item, index) => (
           <Card
+            noWrapper={false}
             key={index}
             className={cx('listing-item card-bg', {
               'card-img': index === 0 && item.image,
@@ -42,21 +49,57 @@ const InEvidenceTemplate = ({ items, title, isEditMode }) => {
                       />
                     </figure>
                   </Link>
+                  <div className="card-calendar d-flex flex-column justify-content-center">
+                    <span className="card-date">
+                      {moment(item.effective).format('D')}
+                    </span>
+                    <span className="card-day">
+                      {moment(item.effective).format('MMMM')}
+                    </span>
+                  </div>
                 </div>
               </div>
             )}
-            <CardBody>
+            <CardBody tag="div">
               <CardCategory
                 date={item.effective && moment(item.effective).format('ll')}
               >
+                <Icon
+                  className='icon'
+                  color="primary"
+                  icon={getIcon(item['@type'])}
+                  padding={false}
+                />
                 {item?.design_italia_meta_type}
               </CardCategory>
-              <CardTitle tag="h4">
+              <CardTitle tag="h4" className="big-heading">
                 <Link to={flattenToAppURL(item['@id'])}>
                   {item.title || item.id}
                 </Link>
               </CardTitle>
               {item.description && <CardText>{item.description}</CardText>}
+              {
+                item.tassonomia_argomenti?.map((argument, index) => (
+                  <Link
+                    to={flattenToAppURL(argument['@id'])}
+                    key={index}
+                    title={argument.title}
+                    className="text-decoration-none"
+                  >
+                    <Chip
+                      color="primary"
+                      disabled={false}
+                      simple
+                      tag="div"
+                      className="mr-2"
+                    >
+                      <ChipLabel tag="span">
+                        {argument.title}
+                      </ChipLabel>
+                    </Chip>
+                  </Link>
+                ))
+              }
             </CardBody>
           </Card>
         ))}

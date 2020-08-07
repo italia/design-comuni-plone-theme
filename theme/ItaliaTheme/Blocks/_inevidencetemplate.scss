@@ -1,4 +1,10 @@
 .in-evidence {
+  .icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
   .container {
     display: grid;
     gap: 24px;
