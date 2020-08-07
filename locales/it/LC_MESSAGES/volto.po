@@ -235,7 +235,6 @@ msgid "Title"
 msgstr "Titolo"
 
 #: addons/volto-subblocks/src/examples/EditBlock
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper_old
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
@@ -243,7 +242,7 @@ msgstr "Titolo"
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBlock
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBodyWrapper copy
 msgid "Title placeholder"
-msgstr ""
+msgstr "Title..."
 
 #: components/DesignTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
@@ -253,6 +252,7 @@ msgstr "Digita la descrizione…"
 #: components/DesignTheme/Blocks/ArgomentoTitle/Edit
 #: components/DesignTheme/manage/Widgets/TextEditorWidget
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/manage/Widgets/TextEditorWidget
 msgid "Type text…"
 msgstr "Digita testo…"
@@ -347,7 +347,7 @@ msgstr "Area di appartenenza"
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 msgid "argoment"
-msgstr ""
+msgstr "Argomento"
 
 #: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
@@ -596,7 +596,7 @@ msgstr "Scadenza"
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
 msgid "exploreArgument"
-msgstr ""
+msgstr "Esplora argomento"
 
 #: components/DesignTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView
@@ -660,10 +660,6 @@ msgstr "Legami con altre strutture"
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "link"
 msgstr "Collegamento"
-
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
-msgid "linkToArgument"
-msgstr ""
 
 #: components/DesignTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView
@@ -765,7 +761,7 @@ msgstr "Organizzazione di riferimento"
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBodyWrapper copy
 msgid "otherArguments"
-msgstr ""
+msgstr "ALTRI ARGOMENTI"
 
 #: components/DesignTheme/View/Commons/Metadata
 #: components/ItaliaTheme/View/Commons/Metadata
@@ -932,6 +928,10 @@ msgstr "Dove e come trovarci"
 msgid "sedi_e_luoghi"
 msgstr "Dove trovarci"
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+msgid "selectArguments"
+msgstr "Seleziona gli argomenti"
+
 #: addons/volto-rss-block/src/Block/RssSidebar
 msgid "selectRSSOptions"
 msgstr "Seleziona opzioni"
@@ -1041,7 +1041,7 @@ msgstr "Valutazione situazione patrimoniale"
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody
 msgid "view_all"
-msgstr ""
+msgstr "Vedi tutti"
 
 #: components/DesignTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView

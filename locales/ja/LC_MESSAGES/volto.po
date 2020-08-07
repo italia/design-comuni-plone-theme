@@ -242,7 +242,6 @@ msgid "Title"
 msgstr ""
 
 #: addons/volto-subblocks/src/examples/EditBlock
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper_old
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
@@ -260,6 +259,7 @@ msgstr ""
 #: components/DesignTheme/Blocks/ArgomentoTitle/Edit
 #: components/DesignTheme/manage/Widgets/TextEditorWidget
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/manage/Widgets/TextEditorWidget
 msgid "Type text…"
 msgstr ""
@@ -668,10 +668,6 @@ msgstr ""
 msgid "link"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
-msgid "linkToArgument"
-msgstr ""
-
 #: components/DesignTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView
 msgid "link_siti_esterni"
@@ -937,6 +933,10 @@ msgstr ""
 #: components/DesignTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView
 msgid "sedi_e_luoghi"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+msgid "selectArguments"
 msgstr ""
 
 #: addons/volto-rss-block/src/Block/RssSidebar

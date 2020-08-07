@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-08-07T10:21:05.512Z\n"
+"POT-Creation-Date: 2020-08-07T15:54:45.431Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -282,7 +282,6 @@ msgid "Title"
 msgstr ""
 
 #: addons/volto-subblocks/src/examples/EditBlock
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper_old
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
@@ -302,6 +301,7 @@ msgstr ""
 #: components/DesignTheme/Blocks/ArgomentoTitle/Edit
 #: components/DesignTheme/manage/Widgets/TextEditorWidget
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/manage/Widgets/TextEditorWidget
 # defaultMessage: Digita il testo…
 msgid "Type text…"
@@ -790,11 +790,6 @@ msgstr ""
 msgid "link"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
-# defaultMessage: Link agli argomenti
-msgid "linkToArgument"
-msgstr ""
-
 #: components/DesignTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView
 # defaultMessage: Link utili
@@ -1110,6 +1105,11 @@ msgstr ""
 #: components/ItaliaTheme/View/ServizioView
 # defaultMessage: Dove trovarci
 msgid "sedi_e_luoghi"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+# defaultMessage: Seleziona gli argomenti
+msgid "selectArguments"
 msgstr ""
 
 #: addons/volto-rss-block/src/Block/RssSidebar

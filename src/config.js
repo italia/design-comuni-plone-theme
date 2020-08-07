@@ -16,6 +16,7 @@ import newsSVG from '@plone/volto/icons/news.svg';
 import searchIcon from 'bootstrap-italia/src/svg/it-search.svg';
 import NewsHomeView from '@italia/components/ItaliaTheme/Blocks/NewsHome/View';
 import NewsHomeEdit from '@italia/components/ItaliaTheme/Blocks/NewsHome/Edit';
+import noteSvg from 'bootstrap-italia/src/svg/it-note.svg';
 
 import alertSVG from '@plone/volto/icons/alert.svg';
 import AlertView from '@italia/components/ItaliaTheme/Blocks/Alert/View';
@@ -112,7 +113,7 @@ const customBlocks = {
     id: 'searchSections',
     title: 'Ricerca nelle sezioni',
     icon: searchIcon,
-    group: 'text',
+    group: 'homePage',
     view: SearchSectionsView,
     edit: SearchSectionsEdit,
     restricted: false,
@@ -126,9 +127,9 @@ const customBlocks = {
   },
   argumentsInEvidence: {
     id: 'argumentsInEvidence',
-    title: 'Argomenti in evidenza 6',
-    icon: searchIcon,
-    group: 'text',
+    title: 'Argomenti in evidenza',
+    icon: noteSvg,
+    group: 'homePage',
     view: ArgumentsInEvidenceView,
     edit: ArgumentsInEvidenceEdit,
     restricted: false,
@@ -257,7 +258,7 @@ export const widgets = {
   },
 };
 
-const customBlocksOrder = [{ id: 'news', title: 'News' }];
+const customBlocksOrder = [{ id: 'news', title: 'News' }, {id: 'homePage', title: 'Home Page'}];
 const customInitialBlocks = {
   'Pagina Argomento': ['title', 'description', 'text'],
 };
