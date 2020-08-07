@@ -16,6 +16,7 @@ import newsSVG from '@plone/volto/icons/news.svg';
 import searchIcon from 'bootstrap-italia/src/svg/it-search.svg';
 import NewsHomeView from '@italia/components/ItaliaTheme/Blocks/NewsHome/View';
 import NewsHomeEdit from '@italia/components/ItaliaTheme/Blocks/NewsHome/Edit';
+import noteSvg from 'bootstrap-italia/src/svg/it-note.svg';
 
 import alertSVG from '@plone/volto/icons/alert.svg';
 import AlertView from '@italia/components/ItaliaTheme/Blocks/Alert/View';
@@ -23,6 +24,8 @@ import AlertEdit from '@italia/components/ItaliaTheme/Blocks/Alert/Edit';
 
 import SearchSectionsView from '@italia/components/ItaliaTheme/Blocks/SearchSections/View';
 import SearchSectionsEdit from '@italia/components/ItaliaTheme/Blocks/SearchSections/Edit';
+import ArgumentsInEvidenceEdit from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Edit';
+import ArgumentsInEvidenceView from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/View';
 
 import titleSVG from '@plone/volto/icons/text.svg';
 import ArgomentoTitleView from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/View';
@@ -110,9 +113,25 @@ const customBlocks = {
     id: 'searchSections',
     title: 'Ricerca nelle sezioni',
     icon: searchIcon,
-    group: 'text',
+    group: 'homePage',
     view: SearchSectionsView,
     edit: SearchSectionsEdit,
+    restricted: false,
+    mostUsed: false,
+    blockHasOwnFocusManagement: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
+  argumentsInEvidence: {
+    id: 'argumentsInEvidence',
+    title: 'Argomenti in evidenza',
+    icon: noteSvg,
+    group: 'homePage',
+    view: ArgumentsInEvidenceView,
+    edit: ArgumentsInEvidenceEdit,
     restricted: false,
     mostUsed: false,
     blockHasOwnFocusManagement: true,
@@ -239,7 +258,7 @@ export const widgets = {
   },
 };
 
-const customBlocksOrder = [{ id: 'news', title: 'News' }];
+const customBlocksOrder = [{ id: 'news', title: 'News' }, {id: 'homePage', title: 'Home Page'}];
 const customInitialBlocks = {
   'Pagina Argomento': ['title', 'description', 'text'],
 };

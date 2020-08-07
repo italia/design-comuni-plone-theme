@@ -16,6 +16,10 @@ msgstr ""
 msgid "Accedi all'area personale"
 msgstr ""
 
+#: addons/volto-subblocks/src/SubblocksEdit
+msgid "Add block…"
+msgstr ""
+
 #: components/DesignTheme/Blocks/Alert/Sidebar
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Alert"
@@ -79,6 +83,15 @@ msgstr ""
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Description"
+msgstr ""
+
+#: addons/volto-subblocks/src/examples/EditBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper_old
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/EditBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBodyWrapper copy
+msgid "Description placeholder"
 msgstr ""
 
 #: components/DesignTheme/Footer/FooterInfos
@@ -169,6 +182,10 @@ msgstr ""
 msgid "RssFeedItemNumber"
 msgstr ""
 
+#: components/ItaliaTheme/ScrollToTop/ScrollToTop
+msgid "Scroll to top"
+msgstr ""
+
 #: components/DesignTheme/Blocks/SearchSections/SideBar
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "SearchServices"
@@ -208,9 +225,23 @@ msgstr ""
 msgid "Template"
 msgstr ""
 
+#: addons/volto-subblocks/src/examples/Sidebar
+msgid "TextBlocks"
+msgstr ""
+
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Title"
+msgstr ""
+
+#: addons/volto-subblocks/src/examples/EditBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper_old
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/EditBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBodyWrapper copy
+msgid "Title placeholder"
 msgstr ""
 
 #: components/DesignTheme/Blocks/ArgomentoTitle/Edit
@@ -221,6 +252,7 @@ msgstr ""
 #: components/DesignTheme/Blocks/ArgomentoTitle/Edit
 #: components/DesignTheme/manage/Widgets/TextEditorWidget
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/manage/Widgets/TextEditorWidget
 msgid "Type text…"
 msgstr ""
@@ -256,6 +288,9 @@ msgstr ""
 
 #: components/DesignTheme/Blocks/Listing/CompleteBlockLinksTemplate
 #: components/DesignTheme/MegaMenu/MegaMenu
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper_old
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBodyWrapper copy
 #: components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 msgid "Vedi tutto"
@@ -310,6 +345,10 @@ msgstr ""
 msgid "area_appartenenza"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+msgid "argoment"
+msgstr ""
+
 #: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 msgid "assessorati_riferimento"
@@ -338,6 +377,10 @@ msgstr ""
 #: components/DesignTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView
 msgid "autenticazione"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/SideMenu
+msgid "back"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
@@ -377,6 +420,10 @@ msgstr ""
 #: components/DesignTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView
 msgid "chi_puo_presentare"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/SideMenu
+msgid "close"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
@@ -473,6 +520,10 @@ msgstr ""
 msgid "date"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+msgid "default"
+msgstr ""
+
 #: components/DesignTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView
 msgid "deleghe"
@@ -540,6 +591,11 @@ msgstr ""
 #: components/DesignTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader
 msgid "expire"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
+msgid "exploreArgument"
 msgstr ""
 
 #: components/DesignTheme/View/ServizioView
@@ -634,7 +690,7 @@ msgstr ""
 msgid "modified"
 msgstr ""
 
-#: addons/volto-multilingual-widget/src/index
+#: addons/volto-multilingual-widget/src/MultilingualWidget
 msgid "multilingual_text_placeholder"
 msgstr ""
 
@@ -698,6 +754,13 @@ msgstr ""
 #: components/DesignTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView
 msgid "organizzazione_riferimento"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper_old
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBodyWrapper copy
+msgid "otherArguments"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Metadata
@@ -865,6 +928,10 @@ msgstr ""
 msgid "sedi_e_luoghi"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+msgid "selectArguments"
+msgstr ""
+
 #: addons/volto-rss-block/src/Block/RssSidebar
 msgid "selectRSSOptions"
 msgstr ""
@@ -927,6 +994,10 @@ msgstr ""
 msgid "tipologia_persona"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+msgid "title"
+msgstr ""
+
 #: components/DesignTheme/Header/SearchModal
 #: components/DesignTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/Header/SearchModal
@@ -959,13 +1030,17 @@ msgstr ""
 msgid "uo_ulteriori_informazioni"
 msgstr ""
 
-#: addons/volto-multilingual-widget/src/index
+#: addons/volto-multilingual-widget/src/MultilingualWidget
 msgid "value_for_lang"
 msgstr ""
 
 #: components/DesignTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView
 msgid "valutazione_situazione_patrimoniale"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody
+msgid "view_all"
 msgstr ""
 
 #: components/DesignTheme/View/ServizioView

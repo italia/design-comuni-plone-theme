@@ -8,13 +8,15 @@
     "src/addons/volto-cookie-banner",
     "src/addons/volto-multilingual-widget",
     "src/addons/volto-rss-block",
-    "src/addons/volto-venue"
+    "src/addons/volto-venue",
+    "src/addons/volto-subblocks"
   ],
   "addons": [
     "volto-cookie-banner",
     "volto-multilingual-widget",
     "volto-rss-block",
-    "volto-venue"
+    "volto-venue",
+    "volto-subblocks"
   ],
   "scripts": {
     "start": "razzle start",
@@ -121,6 +123,7 @@
     "volto-cookie-banner": "collective/volto-cookie-banner",
     "volto-multilingual-widget": "collective/volto-multilingual-widget",
     "volto-rss-block": "redturtle/volto-rss-block",
+    "volto-subblocks": "1.0.0",
     "volto-venue": "collective/volto-venue"
   },
   "devDependencies": {

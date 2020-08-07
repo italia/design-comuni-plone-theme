@@ -16,6 +16,10 @@ msgstr ""
 msgid "Accedi all'area personale"
 msgstr "Accedi all'area personale"
 
+#: addons/volto-subblocks/src/SubblocksEdit
+msgid "Add block…"
+msgstr "Aggiungi un blocco"
+
 #: components/DesignTheme/Blocks/Alert/Sidebar
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Alert"
@@ -80,6 +84,15 @@ msgstr "Delete"
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Description"
 msgstr "Description"
+
+#: addons/volto-subblocks/src/examples/EditBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper_old
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/EditBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBodyWrapper copy
+msgid "Description placeholder"
+msgstr ""
 
 #: components/DesignTheme/Footer/FooterInfos
 #: components/ItaliaTheme/Footer/FooterInfos
@@ -169,6 +182,10 @@ msgstr "Feed RSS"
 msgid "RssFeedItemNumber"
 msgstr "Numero di elementi da mostrare"
 
+#: components/ItaliaTheme/ScrollToTop/ScrollToTop
+msgid "Scroll to top"
+msgstr ""
+
 #: components/DesignTheme/Blocks/SearchSections/SideBar
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "SearchServices"
@@ -208,10 +225,24 @@ msgstr "Subscribe"
 msgid "Template"
 msgstr "Template"
 
+#: addons/volto-subblocks/src/examples/Sidebar
+msgid "TextBlocks"
+msgstr ""
+
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Title"
 msgstr "Titolo"
+
+#: addons/volto-subblocks/src/examples/EditBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper_old
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/EditBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBodyWrapper copy
+msgid "Title placeholder"
+msgstr "Title..."
 
 #: components/DesignTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
@@ -221,6 +252,7 @@ msgstr "Digita la descrizione…"
 #: components/DesignTheme/Blocks/ArgomentoTitle/Edit
 #: components/DesignTheme/manage/Widgets/TextEditorWidget
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/manage/Widgets/TextEditorWidget
 msgid "Type text…"
 msgstr "Digita testo…"
@@ -256,6 +288,9 @@ msgstr "Vai alla pagina"
 
 #: components/DesignTheme/Blocks/Listing/CompleteBlockLinksTemplate
 #: components/DesignTheme/MegaMenu/MegaMenu
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper_old
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBodyWrapper copy
 #: components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 msgid "Vedi tutto"
@@ -310,6 +345,10 @@ msgstr "Area"
 msgid "area_appartenenza"
 msgstr "Area di appartenenza"
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+msgid "argoment"
+msgstr "Argomento"
+
 #: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 msgid "assessorati_riferimento"
@@ -339,6 +378,10 @@ msgstr "Atto di nomina"
 #: components/ItaliaTheme/View/ServizioView
 msgid "autenticazione"
 msgstr "Autenticazione"
+
+#: components/ItaliaTheme/View/Commons/SideMenu
+msgid "back"
+msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
@@ -378,6 +421,10 @@ msgstr "Gestione di casi particolari per la richiesta del servizio"
 #: components/ItaliaTheme/View/ServizioView
 msgid "chi_puo_presentare"
 msgstr "Chi può presentare domanda"
+
+#: components/ItaliaTheme/View/Commons/SideMenu
+msgid "close"
+msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
@@ -473,6 +520,10 @@ msgstr "Data di insediamento"
 msgid "date"
 msgstr "Data"
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+msgid "default"
+msgstr ""
+
 #: components/DesignTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView
 msgid "deleghe"
@@ -541,6 +592,11 @@ msgstr "Il testo supera la lunghezza consigliata"
 #: components/ItaliaTheme/View/Commons/PageHeader
 msgid "expire"
 msgstr "Scadenza"
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
+msgid "exploreArgument"
+msgstr "Esplora argomento"
 
 #: components/DesignTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView
@@ -634,7 +690,7 @@ msgstr "min"
 msgid "modified"
 msgstr "Ultimo aggiornamento"
 
-#: addons/volto-multilingual-widget/src/index
+#: addons/volto-multilingual-widget/src/MultilingualWidget
 msgid "multilingual_text_placeholder"
 msgstr "Digita..."
 
@@ -699,6 +755,13 @@ msgstr "Opzioni"
 #: components/ItaliaTheme/View/PersonaView
 msgid "organizzazione_riferimento"
 msgstr "Organizzazione di riferimento"
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper_old
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBodyWrapper copy
+msgid "otherArguments"
+msgstr "ALTRI ARGOMENTI"
 
 #: components/DesignTheme/View/Commons/Metadata
 #: components/ItaliaTheme/View/Commons/Metadata
@@ -865,6 +928,10 @@ msgstr "Dove e come trovarci"
 msgid "sedi_e_luoghi"
 msgstr "Dove trovarci"
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+msgid "selectArguments"
+msgstr "Seleziona gli argomenti"
+
 #: addons/volto-rss-block/src/Block/RssSidebar
 msgid "selectRSSOptions"
 msgstr "Seleziona opzioni"
@@ -927,6 +994,10 @@ msgstr "Tipologia organizzazione"
 msgid "tipologia_persona"
 msgstr "Tipologia persona"
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+msgid "title"
+msgstr ""
+
 #: components/DesignTheme/Header/SearchModal
 #: components/DesignTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/Header/SearchModal
@@ -959,7 +1030,7 @@ msgstr "Notizie in evidenza"
 msgid "uo_ulteriori_informazioni"
 msgstr "Informazioni"
 
-#: addons/volto-multilingual-widget/src/index
+#: addons/volto-multilingual-widget/src/MultilingualWidget
 msgid "value_for_lang"
 msgstr "Valore per la lingua {lang}"
 
@@ -967,6 +1038,10 @@ msgstr "Valore per la lingua {lang}"
 #: components/ItaliaTheme/View/PersonaView
 msgid "valutazione_situazione_patrimoniale"
 msgstr "Valutazione situazione patrimoniale"
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody
+msgid "view_all"
+msgstr "Vedi tutti"
 
 #: components/DesignTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView
