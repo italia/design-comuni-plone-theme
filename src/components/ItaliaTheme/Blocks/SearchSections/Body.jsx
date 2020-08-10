@@ -29,56 +29,47 @@ const Body = ({ block, sections }) => {
   const intl = useIntl();
   moment.locale(intl.locale);
   return (
-    <Row>
-      <div className="public-ui searchServices">
-        <div className="container">
-          <div>
-            <h2 className="text-white">{block.title}</h2>
+    <div className="public-ui searchSections">
+      <div className="container">
+        <div>
+          <h2 className="text-white">{block.title}</h2>
+        </div>
+        <div className="searchContainer d-flex w-100">
+          <div className="searchbar lightgrey-bg-c2 shadow-sm rounded d-flex w-100">
+            <input
+              className="inputSearch lightgrey-bg-c2"
+              type="text"
+              placeholder={block.placeholder}
+              onChange={(e) => setInputText(e.currentTarget.value)}
+              onKeyDown={(e) =>
+                e.key === 'Enter' ? navigate(inputText, searchFilters()) : null
+              }
+            ></input>
+            <button
+              className="rounded-right"
+              onClick={(e) => navigate(inputText, searchFilters())}
+            >
+              <Icon icon="it-search" padding={false} size="sm" color="white" />
+            </button>
           </div>
-          <div className="searchContainer d-flex w-100">
-            <div className="searchbar lightgrey-bg-c2 shadow-sm rounded d-flex w-100">
-              <input
-                className="inputSearch lightgrey-bg-c2"
-                type="text"
-                placeholder={block.placeholder}
-                onChange={(e) => setInputText(e.currentTarget.value)}
-                onKeyDown={(e) =>
-                  e.key === 'Enter'
-                    ? navigate(inputText, searchFilters())
-                    : null
-                }
-              ></input>
-              <button
-                className="rounded-right"
-                onClick={(e) => navigate(inputText, searchFilters())}
-              >
-                <Icon
-                  icon="it-search"
-                  padding={false}
+          <div className="buttonsContainer mt-2 d-flex">
+            {block.links?.map((link, index) => {
+              return (
+                <Button
+                  color="primary"
+                  tag="button"
                   size="sm"
-                  color="white"
-                />
-              </button>
-            </div>
-            <div className="buttonsContainer mt-2 d-flex">
-              {block.links?.map((link, index) => {
-                return (
-                  <Button
-                    color="primary"
-                    tag="button"
-                    size="sm"
-                    key={index}
-                    onClick={() => handleClick(link)}
-                  >
-                    {link.title}
-                  </Button>
-                );
-              })}
-            </div>
+                  key={index}
+                  onClick={() => handleClick(link)}
+                >
+                  {link.title}
+                </Button>
+              );
+            })}
           </div>
         </div>
       </div>
-    </Row>
+    </div>
   );
 };
 
