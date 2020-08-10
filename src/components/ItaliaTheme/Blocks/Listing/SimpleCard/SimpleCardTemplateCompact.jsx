@@ -9,7 +9,7 @@ import {
   Button,
 } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
-
+import { getItemIcon } from '@italia/components/ItaliaTheme';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
 
@@ -19,11 +19,16 @@ const messages = defineMessages({
     defaultMessage: 'Vedi tutto',
   },
 });
-const SimpleCardTemplateCompact = ({ items, isEditMode, linkMore }) => {
+const SimpleCardTemplateCompact = ({
+  items,
+  isEditMode,
+  linkMore,
+  show_icon = true,
+}) => {
   const intl = useIntl();
   return (
     <div
-      className={cx('arguments', {
+      className={cx('', {
         'public-ui': isEditMode,
       })}
     >
@@ -35,7 +40,7 @@ const SimpleCardTemplateCompact = ({ items, isEditMode, linkMore }) => {
             teaser
             key={index}
           >
-            {item.icon && <Icon icon={item.icon} />}
+            {show_icon && <Icon icon={getItemIcon(item)} />}
             <CardBody>
               <CardTitle tag="h5">
                 <Link

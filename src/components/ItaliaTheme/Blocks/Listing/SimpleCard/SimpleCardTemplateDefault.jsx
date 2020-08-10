@@ -34,13 +34,18 @@ const SimpleCardTemplateDefault = ({
 
   return (
     <div
-      className={cx('arguments', {
+      className={cx('simple-card-default', {
         'public-ui': isEditMode,
       })}
     >
-      <div className="container mb-3">
+      <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-3 mb-3">
         {items.map((item, index) => (
-          <Card className={cx('listing-item card-bg')} key={index}>
+          <Card
+            className="align-items-top rounded shadow"
+            noWrapper
+            teaser
+            key={index}
+          >
             <CardBody>
               {(show_icon || show_section) && (
                 <CardCategory iconName={show_icon ? getItemIcon(item) : null}>
@@ -51,7 +56,7 @@ const SimpleCardTemplateDefault = ({
                   )}
                 </CardCategory>
               )}
-              <CardTitle tag="h4">
+              <CardTitle tag="h5">
                 <Link to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}>
                   {item.title || item.id}
                 </Link>
