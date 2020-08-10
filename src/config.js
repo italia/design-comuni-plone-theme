@@ -42,7 +42,7 @@ import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listi
 import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate';
 import PhotogalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
 import InEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate';
-import ArgumentListingTemplate from  '@italia/components/ItaliaTheme/Blocks/Listing/ArgumentListingTemplate';
+import ArgumentListingTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/ArgumentListing/ArgumentListingTemplate';
 
 import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
 import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
@@ -70,7 +70,7 @@ const extendedBlockRenderMap = config.settings.extendedBlockRenderMap.update(
   (element = 'p') => element,
 );
 
-const blockStyleFn = contentBlock => {
+const blockStyleFn = (contentBlock) => {
   let r = config.settings.blockStyleFn(contentBlock);
 
   if (!r) {
@@ -200,7 +200,7 @@ const customBlocks = {
       argumentListingTemplate: {
         label: 'Lista argomenti',
         template: ArgumentListingTemplate,
-      }
+      },
     },
   },
   rssBlock,
@@ -251,18 +251,21 @@ export const widgets = {
     ...config.widgets.id,
     description: CharCounterDescriptionWidget,
     cookie_consent_configuration: MultilingualWidget(),
-    data_conclusione_incarico: props => (
+    data_conclusione_incarico: (props) => (
       <DatetimeWidget {...props} dateOnly={true} />
     ),
-    data_insediamento: props => <DatetimeWidget {...props} dateOnly={true} />,
+    data_insediamento: (props) => <DatetimeWidget {...props} dateOnly={true} />,
   },
 };
 
-const customBlocksOrder = [{ id: 'news', title: 'News' }, {id: 'homePage', title: 'Home Page'}];
+const customBlocksOrder = [
+  { id: 'news', title: 'News' },
+  { id: 'homePage', title: 'Home Page' },
+];
 const customInitialBlocks = {
   'Pagina Argomento': ['title', 'description', 'text'],
 };
-const customRequiredBlocks = ['description']
+const customRequiredBlocks = ['description'];
 
 // BUG#10398
 // We chose to disallow leadimage block usage in editor. If you want it back someday,
@@ -274,7 +277,9 @@ export const blocks = {
   blocksConfig: { ...config.blocks.blocksConfig, ...customBlocks },
   groupBlocksOrder: config.blocks.groupBlocksOrder.concat(customBlocksOrder),
   initialBlocks: { ...config.blocks.initialBlocks, ...customInitialBlocks },
-  requiredBlocks: { ...config.blocks.requiredBlocks.concat(...customRequiredBlocks) },
+  requiredBlocks: {
+    ...config.blocks.requiredBlocks.concat(...customRequiredBlocks),
+  },
 };
 
 export const addonReducers = { ...config.addonReducers };
