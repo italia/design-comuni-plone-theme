@@ -48,3 +48,6 @@ export ServizioView from '@italia/components/ItaliaTheme/View/ServizioView';
 export PaginaArgomentoView from '@italia/components/ItaliaTheme/View/PaginaArgomentoView';
 
 export LinkToWidget from '@italia/components/ItaliaTheme/manage/Widgets/LinkToWidget';
+
+//common
+export getItemIcon from '@italia/components/ItaliaTheme/common';

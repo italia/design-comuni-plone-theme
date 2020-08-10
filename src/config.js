@@ -42,7 +42,7 @@ import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listi
 import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate';
 import PhotogalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
 import InEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate';
-import ArgumentListingTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/ArgumentListing/ArgumentListingTemplate';
+import SimpleCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplate';
 
 import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
 import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
@@ -197,9 +197,9 @@ const customBlocks = {
         label: 'In evidenza',
         template: InEvidenceTemplate,
       },
-      argumentListingTemplate: {
-        label: 'Lista argomenti',
-        template: ArgumentListingTemplate,
+      simpleCardTemplate: {
+        label: 'Card semplice',
+        template: SimpleCardTemplate,
       },
     },
   },

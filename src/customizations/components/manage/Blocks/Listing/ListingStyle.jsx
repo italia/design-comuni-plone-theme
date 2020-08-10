@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { blocks } from '~/config';
 import TemplateWidget from '@plone/volto/components/manage/Blocks/Listing/TemplateWidget';
-import ArgumentListingOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/ArgumentListingOptions';
+import SimpleCardListingOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/SimpleCardListingOptions';
 
 const ListingStyle = ({ data, block, onChangeBlock, required = false }) => {
   const templatesConfig = blocks.blocksConfig.listing.templates;
@@ -16,8 +16,8 @@ const ListingStyle = ({ data, block, onChangeBlock, required = false }) => {
           onChangeBlock={onChangeBlock}
           required={required}
         />
-        {data.template === 'argumentListingTemplate' && (
-          <ArgumentListingOptions
+        {data.template === 'simpleCardTemplate' && (
+          <SimpleCardListingOptions
             data={data}
             block={block}
             onChangeBlock={onChangeBlock}

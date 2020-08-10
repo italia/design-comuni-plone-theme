@@ -5,11 +5,11 @@ import {
   Card,
   CardBody,
   CardTitle,
-  CardCategory,
-  CardText,
+  Icon,
   Button,
 } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
+
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
 
@@ -19,43 +19,32 @@ const messages = defineMessages({
     defaultMessage: 'Vedi tutto',
   },
 });
-
-const ArgumentListingTemplate = ({ items, isEditMode, linkMore }) => {
+const SimpleCardTemplateCompact = ({ items, isEditMode, linkMore }) => {
   const intl = useIntl();
-  const getIcon = (service) => {
-    switch (service) {
-      case 'Servizio':
-        return 'it-settings';
-      case 'UnitaOrganizzativa':
-        return 'it-pa';
-      case 'Documento':
-        return 'it-file';
-      default:
-        return 'it-pa';
-    }
-  };
-
   return (
     <div
       className={cx('arguments', {
         'public-ui': isEditMode,
       })}
     >
-      <div className="container mb-3">
+      <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-3 mb-3">
         {items.map((item, index) => (
-          <Card className={cx('listing-item card-bg')} key={index}>
+          <Card
+            className="align-items-center rounded shadow"
+            noWrapper
+            teaser
+            key={index}
+          >
+            {item.icon && <Icon icon={item.icon} />}
             <CardBody>
-              <CardCategory iconName={getIcon(item['@type'])}>
-                <span className="text font-weight-bold">
-                  {item.parent?.title}
-                </span>
-              </CardCategory>
-              <CardTitle tag="h4">
-                <Link to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}>
+              <CardTitle tag="h5">
+                <Link
+                  to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}
+                  condition={!isEditMode}
+                >
                   {item.title || item.id}
                 </Link>
               </CardTitle>
-              {item.description && <CardText>{item.description}</CardText>}
             </CardBody>
           </Card>
         ))}
@@ -76,10 +65,10 @@ const ArgumentListingTemplate = ({ items, isEditMode, linkMore }) => {
   );
 };
 
-ArgumentListingTemplate.propTypes = {
+SimpleCardTemplateCompact.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
   isEditMode: PropTypes.bool,
   linkMore: PropTypes.any,
 };
 
-export default ArgumentListingTemplate;
+export default SimpleCardTemplateCompact;
