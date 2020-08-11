@@ -38,7 +38,7 @@ const SimpleCardTemplateDefault = ({
         'public-ui': isEditMode,
       })}
     >
-      <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-3 mb-3">
+      <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-3 mb-3 px-4">
         {items.map((item, index) => (
           <Card
             className="align-items-top rounded shadow"
