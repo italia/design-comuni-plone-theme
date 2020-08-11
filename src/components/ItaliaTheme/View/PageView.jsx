@@ -86,49 +86,58 @@ const PageView = ({ content }) => {
   return hasBlocksData(content) ? (
     <div id="page-document" className="ui container">
       {/*-----Testata-----*/}
-      <Container className="px-4 mb-4">
-        <div className="title-description-wrapper col-lg-6">
-          <h1 className="mb-3">{content?.title}</h1>
-          <p className="description">{content?.description}</p>
-          {content?.ricerca_in_testata && (
-            <div class="form-group mt-5">
-              <div className="input-group mb-3">
-                <input
-                  id="search-page-text"
-                  type="text"
-                  value={searchableText}
-                  className="form-control"
-                  onChange={(e) => setSearchableText(e.target.value)}
-                  onKeyDown={doSearch}
-                  placeholder={`${intl.formatMessage(messages.searchLabel)} "${
-                    content.title
-                  }"`}
-                  aria-label={`${intl.formatMessage(messages.searchLabel)} "${
-                    content.title
-                  }"`}
-                  aria-describedby="search-page-button"
-                />
-                <div className="input-group-append">
-                  <Button
-                    color="link"
-                    onClick={() => doSearch()}
-                    title={intl.formatMessage(messages.search)}
-                    id="search-page-button"
-                    className="pr-2"
-                  >
-                    <Icon icon="it-search" aria-hidden={true} size="sm" />
-                  </Button>
+      <Container className="PageHeaderWrapper px-4 mb-4">
+        <div className="row">
+          <div className="title-description-wrapper col-lg-6">
+            <h1 className="mb-3">{content?.title}</h1>
+            <p className="description">{content?.description}</p>
+
+            {/* --- Form di ricerca --- */}
+            {content?.ricerca_in_testata && (
+              <div class="form-group mt-5">
+                <div className="input-group mb-3">
+                  <input
+                    id="search-page-text"
+                    type="text"
+                    value={searchableText}
+                    className="form-control"
+                    onChange={(e) => setSearchableText(e.target.value)}
+                    onKeyDown={doSearch}
+                    placeholder={`${intl.formatMessage(
+                      messages.searchLabel,
+                    )} "${content.title}"`}
+                    aria-label={`${intl.formatMessage(messages.searchLabel)} "${
+                      content.title
+                    }"`}
+                    aria-describedby="search-page-button"
+                  />
+                  <div className="input-group-append">
+                    <Button
+                      color="link"
+                      onClick={() => doSearch()}
+                      title={intl.formatMessage(messages.search)}
+                      id="search-page-button"
+                      className="pr-2"
+                    >
+                      <Icon icon="it-search" aria-hidden={true} size="sm" />
+                    </Button>
+                  </div>
                 </div>
               </div>
-            </div>
-          )}
-        </div>
-        <div className="col-lg-4 offset-lg-2">
-          {content.info_testata?.data && (
-            <div
-              dangerouslySetInnerHTML={{ __html: content?.info_testata?.data }}
-            />
-          )}
+            )}
+            {/* ---- fine form di ricerca ---- */}
+          </div>
+          <div className="col-lg-4 offset-lg-2">
+            {content.info_testata?.data && (
+              <div className="header-infos">
+                <div
+                  dangerouslySetInnerHTML={{
+                    __html: content?.info_testata?.data,
+                  }}
+                />
+              </div>
+            )}
+          </div>
         </div>
       </Container>
 
