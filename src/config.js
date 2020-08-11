@@ -43,6 +43,7 @@ import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Li
 import PhotogalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
 import InEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate';
 import SimpleCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplate';
+import GalleryArgomentiTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/GalleryArgomentiTemplate';
 
 import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
 import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
@@ -70,7 +71,7 @@ const extendedBlockRenderMap = config.settings.extendedBlockRenderMap.update(
   (element = 'p') => element,
 );
 
-const blockStyleFn = (contentBlock) => {
+const blockStyleFn = contentBlock => {
   let r = config.settings.blockStyleFn(contentBlock);
 
   if (!r) {
@@ -201,6 +202,10 @@ const customBlocks = {
         label: 'Card semplice',
         template: SimpleCardTemplate,
       },
+      galleryArgomentiTemplate: {
+        label: 'Gallery argomenti',
+        template: GalleryArgomentiTemplate,
+      },
     },
   },
   rssBlock,
@@ -251,10 +256,10 @@ export const widgets = {
     ...config.widgets.id,
     description: CharCounterDescriptionWidget,
     cookie_consent_configuration: MultilingualWidget(),
-    data_conclusione_incarico: (props) => (
+    data_conclusione_incarico: props => (
       <DatetimeWidget {...props} dateOnly={true} />
     ),
-    data_insediamento: (props) => <DatetimeWidget {...props} dateOnly={true} />,
+    data_insediamento: props => <DatetimeWidget {...props} dateOnly={true} />,
   },
 };
 
