@@ -51,15 +51,17 @@ h6 {
     font-size: 14px;
   }
 
-  .card-title {
-    margin: 0 !important;
-    margin-bottom: 10px !important;
-    line-height: 1rem;
+  .genericcard {
+    .card-title {
+      margin: 0 !important;
+      margin-bottom: 10px !important;
+      line-height: 1rem;
 
-    a {
-      color: $primary;
-      font-size: 18px;
-      line-height: 26px;
+      a {
+        color: $primary;
+        font-size: 18px;
+        line-height: 26px;
+      }
     }
   }
 
