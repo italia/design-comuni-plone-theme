@@ -23,7 +23,7 @@ const messages = defineMessages({
   },
 });
 
-const MAX_VISIBLE_ITEMS = 3;
+const MAX_VISIBLE_ITEMS = 6;
 const PageHeaderNav = ({ content, title }) => {
   const intl = useIntl();
   const [isExpanded, setIsExpanded] = useState(false);
@@ -36,7 +36,7 @@ const PageHeaderNav = ({ content, title }) => {
   let more_links = [];
   if (links.length > MAX_VISIBLE_ITEMS) {
     visible_links = links.slice(0, MAX_VISIBLE_ITEMS);
-    more_links = links.slice(6, links.length);
+    more_links = links.slice(MAX_VISIBLE_ITEMS, links.length);
   }
 
   const expanded = {
@@ -54,40 +54,47 @@ const PageHeaderNav = ({ content, title }) => {
           to={flattenToAppURL(item['@id'])}
           tag={Link}
           title={intl.formatMessage(messages.goToPage) + ': ' + item.title}
+          key={item['@id']}
         >
           <span>{item.title}</span>
         </LinkListItem>
       ))}
-
-      <LinkListItem
-        size="large"
-        className="left-icon"
-        onClick={(e) => {
-          e.preventDefault();
-          setIsExpanded(!isExpanded);
-        }}
-        {...(isExpanded ? expanded : {})}
-      >
-        <Icon
-          className="right"
-          color="primary"
-          icon="it-more-items"
-          style={{ ariaHidden: true }}
-        />
-      </LinkListItem>
-      <Collapse isOpen={isExpanded}>
-        <LinkList>
-          <LinkListItem>
-            <span>Link list 4 </span>
+      {more_links.length > 0 && (
+        <>
+          <LinkListItem
+            size="large"
+            className="left-icon"
+            onClick={(e) => {
+              e.preventDefault();
+              setIsExpanded(!isExpanded);
+            }}
+            {...(isExpanded ? expanded : {})}
+          >
+            <Icon
+              className="right"
+              color="primary"
+              icon="it-more-items"
+              style={{ ariaHidden: true }}
+            />
           </LinkListItem>
-          <LinkListItem>
-            <span>Link list 5 </span>
-          </LinkListItem>
-          <LinkListItem>
-            <span>Link list 6 </span>
-          </LinkListItem>
-        </LinkList>
-      </Collapse>
+          <Collapse isOpen={isExpanded}>
+            <LinkList>
+              {more_links.map((item) => (
+                <LinkListItem
+                  to={flattenToAppURL(item['@id'])}
+                  tag={Link}
+                  title={
+                    intl.formatMessage(messages.goToPage) + ': ' + item.title
+                  }
+                  key={item['@id']}
+                >
+                  <span>{item.title}</span>
+                </LinkListItem>
+              ))}
+            </LinkList>
+          </Collapse>
+        </>
+      )}
     </LinkList>
   ) : null;
 };
