@@ -43,7 +43,7 @@ const PageView = ({ content }) => {
   const blocksLayoutFieldname = getBlocksLayoutFieldname(content);
   const intl = useIntl();
   const location = useLocation();
-  console.log(content);
+
   return hasBlocksData(content) ? (
     <div id="page-document" className="ui container">
       {/*-----Testata-----*/}
