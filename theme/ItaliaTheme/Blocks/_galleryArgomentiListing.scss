@@ -5,8 +5,8 @@
     @supports (display: grid) {
       display: grid;
       grid-auto-flow: dense;
-      grid-auto-rows: 160px;
-      grid-gap: 10px;
+      grid-auto-rows: 50px;
+      grid-gap: 15px;
       grid-template-columns: 1fr 1fr 1fr;
 
       @media (max-width: 767px) {
@@ -39,29 +39,33 @@
 
         &.item-0 {
           grid-column: 1;
-          grid-row: span 2;
+          grid-row: span 8;
         }
 
         &.item-1 {
           grid-column: 1;
-          grid-row: span 1;
+          grid-row: span 4;
         }
 
         &.item-2,
-        &.item-3,
         &.item-4 {
           grid-column: 2;
-          grid-row: span 1;
+          grid-row: span 5;
+        }
+
+        &.item-3 {
+          grid-column: 2;
+          grid-row: span 2;
         }
 
         &.item-5 {
           grid-column: 3;
-          grid-row: span 1;
+          grid-row: span 4;
         }
 
         &.item-6 {
           grid-column: 3;
-          grid-row: span 2;
+          grid-row: span 8;
         }
 
         @media (max-width: 767px) {
@@ -139,7 +143,7 @@
           left: 0;
           right: 0;
           bottom: 0;
-          background: rgba(0, 0, 0, 0.3);
+          background: rgba(0, 0, 0, 0.5);
           opacity: 0.4;
           transition: opacity 0.3s ease;
           z-index: 1;
