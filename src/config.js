@@ -208,14 +208,14 @@ const customBlocks = {
       galleryArgomentiTemplate: {
         label: 'Gallery argomenti',
         template: GalleryArgomentiTemplate,
-        ribbonCardTemplate: {
-          label: 'Card con nastro',
-          template: RibbonCardTemplate,
-        },
+      },
+      ribbonCardTemplate: {
+        label: 'Card con nastro',
+        template: RibbonCardTemplate,
       },
     },
-    rssBlock,
   },
+  rssBlock,
 };
 
 export const settings = {
