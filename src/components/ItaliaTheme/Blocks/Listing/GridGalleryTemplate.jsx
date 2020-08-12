@@ -39,7 +39,7 @@ const GridGalleryTemplate = ({
     >
       <div
         className={cx('full-width', {
-          'section section-muted section-inset-shadow py-5': show_block_bg,
+          'section section-muted section-inset-shadow': show_block_bg,
         })}
       >
         <Container className="px-4">
