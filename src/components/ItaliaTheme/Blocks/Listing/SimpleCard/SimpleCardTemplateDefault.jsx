@@ -39,6 +39,7 @@ const SimpleCardTemplateDefault = ({
   show_description = true,
   show_detail_link,
   title,
+  show_block_bg,
 }) => {
   const intl = useIntl();
   moment.locale(intl.locale);
@@ -63,7 +64,9 @@ const SimpleCardTemplateDefault = ({
       {title && (
         <Row>
           <Col>
-            <h3 className="mb-4">{title}</h3>
+            <h3 className={(cx('mb-4'), { 'mt-5': !show_block_bg })}>
+              {title}
+            </h3>
           </Col>
         </Row>
       )}
