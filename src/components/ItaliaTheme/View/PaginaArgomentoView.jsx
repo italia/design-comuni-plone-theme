@@ -44,14 +44,12 @@ const messages = defineMessages({
 const PaginaArgomentoView = ({ content }) => {
   const searchResults = useSelector((state) => state.content?.subrequests);
   const dispatch = useDispatch();
-  
+
   // one request is made for every 'unita_amministrativa_responsabile' selected
   useEffect(() => {
     content['unita_amministrativa_responsabile']?.forEach((x) => {
-      dispatch(
-        getContent(flattenToAppURL(x['@id']), null, x['@id'])
-      );
-    })
+      dispatch(getContent(flattenToAppURL(x['@id']), null, x['@id']));
+    });
     return () => {
       content['unita_amministrativa_responsabile']?.forEach((x) => {
         dispatch(resetContent(x['@id']));
@@ -70,75 +68,78 @@ const PaginaArgomentoView = ({ content }) => {
           <h1 className="mb-3">{content?.title}</h1>
           <p className="description">{content?.description}</p>
         </div>
-          <div className="col-lg-4 offset-lg-2">
-            { 
-              content?.unita_amministrativa_responsabile?.length > 0 ?
-                content?.unita_amministrativa_responsabile?.map((u, index) => {
-                  return (
-                    <div className="row mb-3" key={index}>
-                      <div className="w-100">
-                        <Card className={'listing-item card-bg border-left-card'}>
-                          <div className="d-flex">
-                            <CardBody className="">
-                                <CardCategory>
-                                  <span className="text font-weight-bold">
-                                    <Link to={flattenToAppURL(u['@id'])}>
-                                      {u.title || u.id}
-                                    </Link>
-                                  </span>
-                                </CardCategory>
-                                <CardText>
-                                    {searchResults[u['@id']]?.data?.street}
-                                </CardText>
-                            </CardBody>
-                            {searchResults[u['@id']]?.data?.image && (
-                              <div className="image-container mr-3">
-                                <img
-                                  alt={searchResults[u['@id']]?.data?.image_caption}
-                                  src={flattenToAppURL(
-                                    searchResults[u['@id']]?.data?.image.scales.preview.download,
-                                  )}
-                                  title={searchResults[u['@id']]?.data?.image_caption}
-                                />
-                              </div>
-                            )}
+        <div className="col-lg-4 offset-lg-2">
+          {content?.unita_amministrativa_responsabile?.length > 0 ? (
+            content?.unita_amministrativa_responsabile?.map((u, index) => {
+              return (
+                <div className="row mb-3" key={index}>
+                  <div className="w-100">
+                    <Card className={'listing-item card-bg border-left-card'}>
+                      <div className="d-flex">
+                        <CardBody className="">
+                          <CardCategory>
+                            <span className="text font-weight-bold">
+                              <Link to={flattenToAppURL(u['@id'])}>
+                                {u.title || u.id}
+                              </Link>
+                            </span>
+                          </CardCategory>
+                          <CardText>
+                            {searchResults[u['@id']]?.data?.street}
+                          </CardText>
+                        </CardBody>
+                        {searchResults[u['@id']]?.data?.image && (
+                          <div className="image-container mr-3">
+                            <img
+                              alt={searchResults[u['@id']]?.data?.image_caption}
+                              src={flattenToAppURL(
+                                searchResults[u['@id']]?.data?.image.scales
+                                  .preview.download,
+                              )}
+                              title={
+                                searchResults[u['@id']]?.data?.image_caption
+                              }
+                            />
                           </div>
-                        </Card>
+                        )}
                       </div>
-                    </div>
-                  )
-                })
-              :
-                <div dangerouslySetInnerHTML={{ __html: content?.box_aiuto?.data }}/>
-            }
-            {content?.image ? (
-              <>
-                <Portal
-                  node={__CLIENT__ && document.getElementById('portal-header-image')}
-                >
-                  <div>
-                    <img
-                      src={flattenToAppURL(content?.image?.download)}
-                      alt={content?.caption || content?.title}
-                      title={content?.caption || content?.title}
-                    />
+                    </Card>
                   </div>
-                </Portal>
-                <BodyClass
-                  className="has-image"
-                />
-              </>
-            ) : (
-              ''
-            )}           
-          </div>
+                </div>
+              );
+            })
+          ) : (
+            <div
+              dangerouslySetInnerHTML={{ __html: content?.box_aiuto?.data }}
+            />
+          )}
+          {content?.image ? (
+            <>
+              <Portal
+                node={
+                  __CLIENT__ && document.getElementById('portal-header-image')
+                }
+              >
+                <div>
+                  <img
+                    src={flattenToAppURL(content?.image?.download)}
+                    alt={content?.caption || content?.title}
+                    title={content?.caption || content?.title}
+                  />
+                </div>
+              </Portal>
+              <BodyClass className="has-image" />
+            </>
+          ) : (
+            ''
+          )}
+        </div>
       </div>
-      
+
       {/* Render other blocks in view, skip title and description */}
-      {map(content[blocksLayoutFieldname]?.items, block => {
+      {map(content[blocksLayoutFieldname]?.items, (block) => {
         const blockType = content[blocksFieldname]?.[block]?.['@type'];
-        if (['title', 'description'].indexOf(blockType) > -1)
-          return null;
+        if (['title', 'description'].indexOf(blockType) > -1) return null;
 
         const Block = blocks.blocksConfig[blockType]?.['view'] || null;
         return Block !== null ? (

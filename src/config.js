@@ -32,11 +32,13 @@ import ArgomentoTitleView from '@italia/components/ItaliaTheme/Blocks/ArgomentoT
 import ArgomentoTitleEdit from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/Edit';
 
 import { CharCounterDescriptionWidget } from '@italia/components/ItaliaTheme';
+import { PageView } from '@italia/components/ItaliaTheme';
 import { NewsItemView } from '@italia/components/ItaliaTheme';
 import { UOView } from '@italia/components/ItaliaTheme';
 import { PersonaView } from '@italia/components/ItaliaTheme';
 import { ServizioView } from '@italia/components/ItaliaTheme';
 import { PaginaArgomentoView } from '@italia/components/ItaliaTheme';
+
 import NewsTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/NewsTemplate';
 import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
 import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate';
@@ -242,6 +244,7 @@ export const views = {
   ...config.views,
   contentTypesViews: {
     ...config.views.contentTypesViews,
+    Document: PageView,
     'News Item': NewsItemView,
     UnitaOrganizzativa: UOView,
     Persona: PersonaView,
