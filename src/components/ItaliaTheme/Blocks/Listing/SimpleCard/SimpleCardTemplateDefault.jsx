@@ -13,6 +13,8 @@ import {
   CardReadMore,
   Button,
   Icon,
+  Row,
+  Col,
 } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Link } from 'react-router-dom';
@@ -36,6 +38,7 @@ const SimpleCardTemplateDefault = ({
   show_section = true,
   show_description = true,
   show_detail_link,
+  title,
 }) => {
   const intl = useIntl();
   moment.locale(intl.locale);
@@ -56,15 +59,19 @@ const SimpleCardTemplateDefault = ({
   };
 
   return (
-    <div
-      className={cx('simple-card-default', {
-        'public-ui': isEditMode,
-      })}
-    >
-      <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-3 mb-3 px-4">
+    <div className="simple-card-default">
+      {title && (
+        <Row>
+          <Col>
+            <h3 className="mb-4">{title}</h3>
+          </Col>
+        </Row>
+      )}
+
+      <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-3 mb-3">
         {items.map((item, index) => {
           const icon = getItemIcon(item);
-          const title = item.title || item.id;
+          const itemTitle = item.title || item.id;
           const date =
             item['@type'] === 'News Item' && item.effective
               ? moment(item.effective).format('ll')
@@ -95,10 +102,10 @@ const SimpleCardTemplateDefault = ({
                 <CardTitle tag="h5">
                   {!show_detail_link ? (
                     <Link to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}>
-                      {title}
+                      {itemTitle}
                     </Link>
                   ) : (
-                    title
+                    itemTitle
                   )}
                 </CardTitle>
                 {show_description && item.description && (
