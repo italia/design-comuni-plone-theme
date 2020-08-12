@@ -56,6 +56,7 @@ const SimpleCardListingOptions = ({
         data.appearance !== SimpleCardListingAppearance_COMPACT
           ? true
           : undefined,
+      show_detail_link: undefined,
     });
   }, [data.appearance]);
 

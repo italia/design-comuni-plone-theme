@@ -45,6 +45,7 @@ import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Li
 import PhotogalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
 import InEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate';
 import SimpleCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplate';
+import RibbonCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate';
 
 import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
 import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
@@ -202,6 +203,10 @@ const customBlocks = {
       simpleCardTemplate: {
         label: 'Card semplice',
         template: SimpleCardTemplate,
+      },
+      ribbonCardTemplate: {
+        label: 'Card con nastro',
+        template: RibbonCardTemplate,
       },
     },
   },
