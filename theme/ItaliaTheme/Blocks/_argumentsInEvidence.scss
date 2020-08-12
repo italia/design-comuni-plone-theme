@@ -1,0 +1,66 @@
+.argumentInEvidence {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: $primary;
+  }
+
+  .grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .text-white {
+    color: $white
+  }
+
+  .card-body .card-title {
+    line-height: 2rem;
+  }
+
+  .link-button {
+    text-align: center;
+  }
+
+  .delete-button {
+    top: -31px!important;
+  }
+
+  @media (max-width: #{map-get($grid-breakpoints, sm) - 1px}) {
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .container {
+      padding: 0 24px;
+    }
+
+    .card.card-bg {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+
+  @include media-breakpoint-between(sm, md) { 
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .container {
+      padding: 0 24px;
+    }
+
+    .card.card-bg {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  } 
+}

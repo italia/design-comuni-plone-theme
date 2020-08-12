@@ -6,6 +6,7 @@ import { ConditionalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { useIntl } from 'react-intl';
 import moment from 'moment';
+import 'moment/min/locales';
 
 import {
   Row,
