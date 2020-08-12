@@ -13,12 +13,18 @@ import {
   CardCategory,
   CardText,
 } from 'design-react-kit/dist/design-react-kit';
-
+import { ConditionalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
 
-const InEvidenceTemplate = ({ items, title, isEditMode, show_block_bg }) => {
+const InEvidenceTemplate = ({
+  items,
+  title,
+  isEditMode,
+  show_block_bg,
+  linkMore,
+}) => {
   const intl = useIntl();
   moment.locale(intl.locale);
   return (
@@ -86,6 +92,13 @@ const InEvidenceTemplate = ({ items, title, isEditMode, show_block_bg }) => {
               </Card>
             ))}
           </div>
+          {linkMore?.href && (
+            <div className="link-more">
+              <ConditionalLink condition={!isEditMode} to={linkMore.href}>
+                {linkMore.title}
+              </ConditionalLink>
+            </div>
+          )}
         </Container>
       </div>
     </div>
