@@ -47,9 +47,9 @@ const messages = defineMessages({
   },
 });
 
-export const SimpleCardListingAppearance_COMPACT = 'compact';
+export const SimpleCardTemplateAppearance_COMPACT = 'compact';
 
-const SimpleCardListingOptions = ({
+const SimpleCardTemplateOptions = ({
   data,
   block,
   onChangeBlock,
@@ -61,11 +61,11 @@ const SimpleCardListingOptions = ({
       ...data,
       show_icon: true,
       show_section:
-        data.appearance !== SimpleCardListingAppearance_COMPACT
+        data.appearance !== SimpleCardTemplateAppearance_COMPACT
           ? true
           : undefined,
       show_description:
-        data.appearance !== SimpleCardListingAppearance_COMPACT
+        data.appearance !== SimpleCardTemplateAppearance_COMPACT
           ? true
           : undefined,
       show_detail_link: undefined,
@@ -90,7 +90,7 @@ const SimpleCardListingOptions = ({
         }}
         choices={[
           [
-            SimpleCardListingAppearance_COMPACT,
+            SimpleCardTemplateAppearance_COMPACT,
             intl.formatMessage(messages.simplecard_listing_appearance_compact),
           ],
         ]}
@@ -121,7 +121,7 @@ const SimpleCardListingOptions = ({
         }}
       />
 
-      {data.appearance !== SimpleCardListingAppearance_COMPACT && (
+      {data.appearance !== SimpleCardTemplateAppearance_COMPACT && (
         <CheckboxWidget
           id="show_section"
           title={intl.formatMessage(messages.show_section)}
@@ -134,7 +134,7 @@ const SimpleCardListingOptions = ({
           }}
         />
       )}
-      {data.appearance !== SimpleCardListingAppearance_COMPACT && (
+      {data.appearance !== SimpleCardTemplateAppearance_COMPACT && (
         <CheckboxWidget
           id="show_description"
           title={intl.formatMessage(messages.show_description)}
@@ -147,7 +147,7 @@ const SimpleCardListingOptions = ({
           }}
         />
       )}
-      {data.appearance !== SimpleCardListingAppearance_COMPACT && (
+      {data.appearance !== SimpleCardTemplateAppearance_COMPACT && (
         <CheckboxWidget
           id="show_detail_link"
           title={intl.formatMessage(messages.show_detail_link)}
@@ -176,10 +176,10 @@ const SimpleCardListingOptions = ({
   );
 };
 
-SimpleCardListingOptions.propTypes = {
+SimpleCardTemplateOptions.propTypes = {
   data: PropTypes.objectOf(PropTypes.any).isRequired,
   block: PropTypes.string.isRequired,
   onChangeBlock: PropTypes.func.isRequired,
 };
 
-export default SimpleCardListingOptions;
+export default SimpleCardTemplateOptions;

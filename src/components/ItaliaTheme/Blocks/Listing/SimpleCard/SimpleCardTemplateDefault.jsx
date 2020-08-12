@@ -84,7 +84,7 @@ const SimpleCardTemplateDefault = ({
               teaser
               key={index}
             >
-              <CardBody>
+              <CardBody className={cx('', { 'pb-5': show_detail_link })}>
                 {(show_icon || show_section || date) && (
                   <CardCategory
                     iconName={show_icon && !date ? icon : null}

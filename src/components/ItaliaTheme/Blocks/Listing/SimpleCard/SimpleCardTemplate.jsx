@@ -5,12 +5,12 @@ import { Row, Col, Container } from 'design-react-kit/dist/design-react-kit';
 import SimpleCardTemplateDefault from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault';
 import SimpleCardTemplateCompact from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateCompact';
 
-import { SimpleCardListingAppearance_COMPACT } from '@italia/components/ItaliaTheme/Blocks/Listing/Options/SimpleCardListingOptions';
+import { SimpleCardTemplateAppearance_COMPACT } from '@italia/components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions';
 
 const SimpleCardTemplate = (data) => {
   let content = null;
   switch (data.appearance) {
-    case SimpleCardListingAppearance_COMPACT:
+    case SimpleCardTemplateAppearance_COMPACT:
       content = <SimpleCardTemplateCompact {...data} />;
       break;
     default:
