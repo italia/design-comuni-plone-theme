@@ -10,6 +10,7 @@ import {
   CardTitle,
   CardCategory,
   CardText,
+  CardFooterCTA,
   Button,
   Icon,
 } from 'design-react-kit/dist/design-react-kit';
@@ -24,6 +25,7 @@ const messages = defineMessages({
     id: 'Vedi tutto',
     defaultMessage: 'Vedi tutto',
   },
+  card_detail_label: { id: 'Card detail label', defaultMessage: 'Vedi' },
 });
 
 const SimpleCardTemplateDefault = ({
@@ -33,9 +35,25 @@ const SimpleCardTemplateDefault = ({
   show_icon = true,
   show_section = true,
   show_description = true,
+  show_detail_link,
 }) => {
   const intl = useIntl();
   moment.locale(intl.locale);
+
+  const getItemClass = (item) => {
+    let className = null;
+    switch (item['@type']) {
+      case 'News Item':
+        className = item.tipologia_notizia?.token
+          .toLowerCase()
+          .replace(' ', '_');
+
+        break;
+      default:
+        className = className;
+    }
+    return className;
+  };
 
   return (
     <div
@@ -45,27 +63,16 @@ const SimpleCardTemplateDefault = ({
     >
       <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-3 mb-3">
         {items.map((item, index) => {
+          const icon = getItemIcon(item);
+          const title = item.title || item.id;
           const date =
             item['@type'] === 'News Item' && item.effective
               ? moment(item.effective).format('ll')
               : null;
-          const icon = getItemIcon(item);
-          let className = null;
-
-          switch (item['@type']) {
-            case 'News Item':
-              className = item.tipologia_notizia?.token
-                .toLowerCase()
-                .replace(' ', '_');
-
-              break;
-            default:
-              className = className;
-          }
 
           return (
             <Card
-              className={`align-items-top rounded shadow ${className}`}
+              className={`align-items-top rounded shadow ${getItemClass(item)}`}
               noWrapper
               teaser
               key={index}
@@ -86,14 +93,26 @@ const SimpleCardTemplateDefault = ({
                   </CardCategory>
                 )}
                 <CardTitle tag="h5">
-                  <Link to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}>
-                    {item.title || item.id}
-                  </Link>
+                  {!show_detail_link ? (
+                    <Link to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}>
+                      {title}
+                    </Link>
+                  ) : (
+                    title
+                  )}
                 </CardTitle>
                 {show_description && item.description && (
                   <CardText>{item.description}</CardText>
                 )}
               </CardBody>
+              {show_detail_link && (
+                <CardFooterCTA>
+                  <Link to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}>
+                    {intl.formatMessage(messages.card_detail_label)}{' '}
+                    <Icon icon="it-arrow-right" size="xs" color="primary" />
+                  </Link>
+                </CardFooterCTA>
+              )}
             </Card>
           );
         })}
