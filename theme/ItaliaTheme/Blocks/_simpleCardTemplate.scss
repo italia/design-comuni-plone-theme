@@ -34,6 +34,27 @@
         margin-bottom: 10px;
       }
     }
+
+    .it-card-footer {
+      flex: 1 1 100%;
+      align-self: flex-end;
+
+      a {
+        &:hover,
+        &:active {
+          text-decoration: underline;
+        }
+
+        &:link,
+        &:visited {
+          text-decoration: none;
+        }
+      }
+
+      .icon {
+        min-width: unset;
+      }
+    }
   }
 
   .link-button {

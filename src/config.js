@@ -32,11 +32,13 @@ import ArgomentoTitleView from '@italia/components/ItaliaTheme/Blocks/ArgomentoT
 import ArgomentoTitleEdit from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/Edit';
 
 import { CharCounterDescriptionWidget } from '@italia/components/ItaliaTheme';
+import { PageView } from '@italia/components/ItaliaTheme';
 import { NewsItemView } from '@italia/components/ItaliaTheme';
 import { UOView } from '@italia/components/ItaliaTheme';
 import { PersonaView } from '@italia/components/ItaliaTheme';
 import { ServizioView } from '@italia/components/ItaliaTheme';
 import { PaginaArgomentoView } from '@italia/components/ItaliaTheme';
+
 import NewsTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/NewsTemplate';
 import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
 import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate';
@@ -44,6 +46,7 @@ import PhotogalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/
 import InEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate';
 import SimpleCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplate';
 import GalleryArgomentiTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/GalleryArgomentiTemplate';
+import RibbonCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate';
 
 import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
 import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
@@ -71,7 +74,7 @@ const extendedBlockRenderMap = config.settings.extendedBlockRenderMap.update(
   (element = 'p') => element,
 );
 
-const blockStyleFn = contentBlock => {
+const blockStyleFn = (contentBlock) => {
   let r = config.settings.blockStyleFn(contentBlock);
 
   if (!r) {
@@ -205,10 +208,14 @@ const customBlocks = {
       galleryArgomentiTemplate: {
         label: 'Gallery argomenti',
         template: GalleryArgomentiTemplate,
+        ribbonCardTemplate: {
+          label: 'Card con nastro',
+          template: RibbonCardTemplate,
+        },
       },
     },
+    rssBlock,
   },
-  rssBlock,
 };
 
 export const settings = {
@@ -242,6 +249,7 @@ export const views = {
   ...config.views,
   contentTypesViews: {
     ...config.views.contentTypesViews,
+    Document: PageView,
     'News Item': NewsItemView,
     UnitaOrganizzativa: UOView,
     Persona: PersonaView,
@@ -256,10 +264,10 @@ export const widgets = {
     ...config.widgets.id,
     description: CharCounterDescriptionWidget,
     cookie_consent_configuration: MultilingualWidget(),
-    data_conclusione_incarico: props => (
+    data_conclusione_incarico: (props) => (
       <DatetimeWidget {...props} dateOnly={true} />
     ),
-    data_insediamento: props => <DatetimeWidget {...props} dateOnly={true} />,
+    data_insediamento: (props) => <DatetimeWidget {...props} dateOnly={true} />,
   },
 };
 

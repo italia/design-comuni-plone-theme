@@ -93,6 +93,15 @@ const parseFetchedOptions = (options, location) => {
   return opts;
 };
 
+const parseCustomPath = (location) => {
+  const qsOptions = qs.parse(location?.search ?? '');
+  const customPath = null;
+  if (qsOptions['custom_path']) {
+    customPath = qsOptions['custom_path'];
+  }
+  return customPath;
+};
+
 const getSearchParamsURL = (
   searchableText,
   sections,
@@ -100,6 +109,7 @@ const getSearchParamsURL = (
   options,
   sortOn = {},
   currentPage,
+  customPath,
 ) => {
   const activeSections = Object.keys(sections).reduce((secAcc, secKey) => {
     const sec = Object.keys(sections[secKey]).reduce((acc, section) => {
@@ -140,7 +150,7 @@ const getSearchParamsURL = (
     qs.stringify(
       {
         SearchableText: searchableText,
-        'path.query': activeSections,
+        'path.query': activeSections.length > 0 ? activeSections : customPath,
         Subject: activeTopics,
         ...optionsQuery,
         ...sortOn,

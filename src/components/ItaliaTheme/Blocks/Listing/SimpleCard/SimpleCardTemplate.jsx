@@ -1,17 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
+import { Row, Col, Container } from 'design-react-kit/dist/design-react-kit';
 import SimpleCardTemplateDefault from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault';
 import SimpleCardTemplateCompact from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateCompact';
 
 import { SimpleCardListingAppearance_COMPACT } from '@italia/components/ItaliaTheme/Blocks/Listing/Options/SimpleCardListingOptions';
 
 const SimpleCardTemplate = (data) => {
+  let content = null;
   switch (data.appearance) {
     case SimpleCardListingAppearance_COMPACT:
-      return <SimpleCardTemplateCompact {...data} />;
+      content = <SimpleCardTemplateCompact {...data} />;
+      break;
     default:
-      return <SimpleCardTemplateDefault {...data} />;
+      content = <SimpleCardTemplateDefault {...data} />;
   }
+
+  return (
+    <div
+      className={cx('', {
+        'public-ui': data.isEditMode,
+      })}
+    >
+      <div
+        className={cx('full-width', { 'bg-light py-5': data.show_block_bg })}
+      >
+        <Container className="px-4">{content}</Container>
+      </div>
+    </div>
+  );
 };
 
 SimpleCardTemplate.propTypes = {

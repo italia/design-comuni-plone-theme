@@ -6,6 +6,8 @@ import {
   CardBody,
   CardTitle,
   Icon,
+  Row,
+  Col,
   Button,
 } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -24,14 +26,18 @@ const SimpleCardTemplateCompact = ({
   isEditMode,
   linkMore,
   show_icon = true,
+  title,
 }) => {
   const intl = useIntl();
   return (
-    <div
-      className={cx('', {
-        'public-ui': isEditMode,
-      })}
-    >
+    <div className="simple-card-compact-template">
+      {title && (
+        <Row>
+          <Col>
+            <h3 className="mb-4">{title}</h3>
+          </Col>
+        </Row>
+      )}
       <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-3 mb-3">
         {items.map((item, index) => (
           <Card
