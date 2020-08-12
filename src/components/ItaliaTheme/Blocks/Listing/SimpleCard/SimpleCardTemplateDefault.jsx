@@ -38,6 +38,7 @@ const SimpleCardTemplateDefault = ({
   show_section = true,
   show_description = true,
   show_detail_link,
+  detail_link_label,
   title,
   show_block_bg,
 }) => {
@@ -118,7 +119,10 @@ const SimpleCardTemplateDefault = ({
                     iconName="it-arrow-right"
                     tag={Link}
                     to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}
-                    text={intl.formatMessage(messages.card_detail_label)}
+                    text={
+                      detail_link_label ||
+                      intl.formatMessage(messages.card_detail_label)
+                    }
                   />
                 )}
               </CardBody>

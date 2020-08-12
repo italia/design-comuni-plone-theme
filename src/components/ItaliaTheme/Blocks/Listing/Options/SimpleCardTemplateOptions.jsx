@@ -41,6 +41,10 @@ const messages = defineMessages({
     id: 'show_detail_link',
     defaultMessage: 'Mostra il link al dettaglio',
   },
+  detail_link_label: {
+    id: 'detail_link_label',
+    defaultMessage: 'Testo per il link al dettaglio',
+  },
   show_block_bg: {
     id: 'Mostra lo sfondo del blocco',
     defaultMessage: 'Mostra lo sfondo del blocco',
@@ -59,16 +63,21 @@ const SimpleCardTemplateOptions = ({
   useEffect(() => {
     onChangeBlock(block, {
       ...data,
-      show_icon: true,
+      show_icon: data.show_icon == undefined ? true : data.show_icon,
       show_section:
-        data.appearance !== SimpleCardTemplateAppearance_COMPACT
-          ? true
-          : undefined,
+        data.show_section === undefined
+          ? data.appearance !== SimpleCardTemplateAppearance_COMPACT
+            ? true
+            : undefined
+          : data.show_section,
       show_description:
-        data.appearance !== SimpleCardTemplateAppearance_COMPACT
-          ? true
-          : undefined,
-      show_detail_link: undefined,
+        data.show_description === undefined
+          ? data.appearance !== SimpleCardTemplateAppearance_COMPACT
+            ? true
+            : undefined
+          : data.show_description,
+      show_detail_link:
+        data.show_detail_link === undefined ? undefined : data.show_detail_link,
     });
   }, [data.appearance]);
 
@@ -148,17 +157,34 @@ const SimpleCardTemplateOptions = ({
         />
       )}
       {data.appearance !== SimpleCardTemplateAppearance_COMPACT && (
-        <CheckboxWidget
-          id="show_detail_link"
-          title={intl.formatMessage(messages.show_detail_link)}
-          value={data.show_detail_link ? data.show_detail_link : false}
-          onChange={(id, value) => {
-            onChangeBlock(block, {
-              ...data,
-              [id]: value,
-            });
-          }}
-        />
+        <>
+          <CheckboxWidget
+            id="show_detail_link"
+            title={intl.formatMessage(messages.show_detail_link)}
+            value={data.show_detail_link ? data.show_detail_link : false}
+            onChange={(id, value) => {
+              onChangeBlock(block, {
+                ...data,
+                [id]: value,
+              });
+            }}
+          />
+
+          {data.show_detail_link && (
+            <TextWidget
+              id="detail_link_label"
+              title={intl.formatMessage(messages.detail_link_label)}
+              required={false}
+              value={data.detail_link_label}
+              onChange={(name, value) => {
+                onChangeBlock(block, {
+                  ...data,
+                  [name]: value,
+                });
+              }}
+            />
+          )}
+        </>
       )}
 
       <CheckboxWidget
