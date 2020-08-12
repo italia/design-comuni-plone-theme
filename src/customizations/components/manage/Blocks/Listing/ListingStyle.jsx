@@ -5,6 +5,7 @@ import TemplateWidget from '@plone/volto/components/manage/Blocks/Listing/Templa
 import SimpleCardTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions';
 import RibbonCardTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions';
 import GridGalleryTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/GridGalleryTemplateOptions';
+import NewsTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/NewsTemplateOptions';
 
 const ListingStyle = ({ data, block, onChangeBlock, required = false }) => {
   const templatesConfig = blocks.blocksConfig.listing.templates;
@@ -34,6 +35,13 @@ const ListingStyle = ({ data, block, onChangeBlock, required = false }) => {
         )}
         {data.template === 'gridGalleryTemplate' && (
           <GridGalleryTemplateOptions
+            data={data}
+            block={block}
+            onChangeBlock={onChangeBlock}
+          />
+        )}
+        {data.template === 'newsTemplate' && (
+          <NewsTemplateOptions
             data={data}
             block={block}
             onChangeBlock={onChangeBlock}

@@ -9,6 +9,7 @@ import moment from 'moment';
 import 'moment/min/locales';
 
 import {
+  Container,
   Row,
   Col,
   Card,
@@ -18,67 +19,93 @@ import {
   CardText,
 } from 'design-react-kit/dist/design-react-kit';
 
-const NewsTemplate = ({ items, isEditMode, title, linkMore }) => {
+const NewsTemplate = ({
+  items,
+  isEditMode,
+  title,
+  linkMore,
+  show_block_bg = false,
+}) => {
   const intl = useIntl();
   moment.locale(intl.locale);
 
   return (
     <div className={cx('news-template', { 'public-ui': isEditMode })}>
-      {title && <h2>{title}</h2>}
-      <Row className="items">
-        {items.map((item, index) => (
-          <Col md="4" key={item['@id']} className="col-item">
-            <Card
-              className={cx('listing-item card-bg', {
-                'card-img': index < 3 && item.image,
-              })}
-            >
-              {/* wrapperClassName="card-overlapping" */}
-              {index < 3 && item.image && (
-                <div className="img-responsive-wrapper">
-                  <div className="img-responsive img-responsive-panoramic">
-                    <ConditionalLink
-                      to={flattenToAppURL(item['@id'])}
-                      condition={!isEditMode}
-                      className="img-link"
-                    >
-                      <figure className="img-wrapper">
-                        <img
-                          className="listing-image"
-                          src={flattenToAppURL(
-                            item.image.scales.preview.download,
-                          )}
-                          alt={item.title}
-                        />
-                      </figure>
-                    </ConditionalLink>
-                  </div>
-                </div>
-              )}
-              <CardBody>
-                <CardCategory
-                  date={item.effective && moment(item.effective).format('ll')}
+      <div
+        className={cx('full-width', {
+          'bg-light py-5': show_block_bg,
+        })}
+      >
+        <Container className="px-4">
+          {title && (
+            <Row>
+              <Col>
+                <h3 className={cx('mb-4', { 'mt-5': !show_block_bg })}>
+                  {title}
+                </h3>
+              </Col>
+            </Row>
+          )}
+          <Row className="items">
+            {items.map((item, index) => (
+              <Col md="4" key={item['@id']} className="col-item">
+                <Card
+                  className={cx('listing-item card-bg', {
+                    'card-img': index < 3 && item.image,
+                  })}
                 >
-                  {item?.design_italia_meta_type}
-                </CardCategory>
-                <CardTitle tag="h4">
-                  <Link to={flattenToAppURL(item['@id'])}>
-                    {item.title || item.id}
-                  </Link>
-                </CardTitle>
-                {item.description && <CardText>{item.description}</CardText>}
-              </CardBody>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-      {linkMore?.href && (
-        <div className="link-more">
-          <ConditionalLink condition={!isEditMode} to={linkMore.href}>
-            {linkMore.title}
-          </ConditionalLink>
-        </div>
-      )}
+                  {/* wrapperClassName="card-overlapping" */}
+                  {index < 3 && item.image && (
+                    <div className="img-responsive-wrapper">
+                      <div className="img-responsive img-responsive-panoramic">
+                        <ConditionalLink
+                          to={flattenToAppURL(item['@id'])}
+                          condition={!isEditMode}
+                          className="img-link"
+                        >
+                          <figure className="img-wrapper">
+                            <img
+                              className="listing-image"
+                              src={flattenToAppURL(
+                                item.image.scales.preview.download,
+                              )}
+                              alt={item.title}
+                            />
+                          </figure>
+                        </ConditionalLink>
+                      </div>
+                    </div>
+                  )}
+                  <CardBody>
+                    <CardCategory
+                      date={
+                        item.effective && moment(item.effective).format('ll')
+                      }
+                    >
+                      {item?.design_italia_meta_type}
+                    </CardCategory>
+                    <CardTitle tag="h4">
+                      <Link to={flattenToAppURL(item['@id'])}>
+                        {item.title || item.id}
+                      </Link>
+                    </CardTitle>
+                    {item.description && (
+                      <CardText>{item.description}</CardText>
+                    )}
+                  </CardBody>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+          {linkMore?.href && (
+            <div className="link-more">
+              <ConditionalLink condition={!isEditMode} to={linkMore.href}>
+                {linkMore.title}
+              </ConditionalLink>
+            </div>
+          )}
+        </Container>
+      </div>
     </div>
   );
 };
