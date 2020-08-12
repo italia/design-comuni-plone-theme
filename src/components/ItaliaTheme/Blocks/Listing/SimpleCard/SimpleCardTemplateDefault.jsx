@@ -10,7 +10,7 @@ import {
   CardTitle,
   CardCategory,
   CardText,
-  CardFooterCTA,
+  CardReadMore,
   Button,
   Icon,
 } from 'design-react-kit/dist/design-react-kit';
@@ -104,15 +104,16 @@ const SimpleCardTemplateDefault = ({
                 {show_description && item.description && (
                   <CardText>{item.description}</CardText>
                 )}
+
+                {show_detail_link && (
+                  <CardReadMore
+                    iconName="it-arrow-right"
+                    tag={Link}
+                    to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}
+                    text={intl.formatMessage(messages.card_detail_label)}
+                  />
+                )}
               </CardBody>
-              {show_detail_link && (
-                <CardFooterCTA>
-                  <Link to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}>
-                    {intl.formatMessage(messages.card_detail_label)}{' '}
-                    <Icon icon="it-arrow-right" size="xs" color="primary" />
-                  </Link>
-                </CardFooterCTA>
-              )}
             </Card>
           );
         })}
