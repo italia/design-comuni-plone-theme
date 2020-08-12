@@ -59,7 +59,7 @@ const RibbonCardTemplate = ({
             </Row>
           )}
 
-          <Row>
+          <Row className="mb-4">
             {items.map((item, index) => {
               const itemTitle = item.title || item.id;
               const showRibbon =
@@ -117,15 +117,19 @@ const RibbonCardTemplate = ({
             })}
           </Row>
           {linkMore?.href && (
-            <div className="link-button">
-              <Button
-                className="view-all"
-                icon={false}
-                tag="button"
-                onClick={() => window.open(linkMore.href, '_self')}
-              >
-                {linkMore.title || intl.formatMessage(messages.view_all)}
-              </Button>
+            <div className="link-button ">
+              <Row>
+                <Col className="text-center">
+                  <Button
+                    className="view-all"
+                    icon={false}
+                    tag="button"
+                    onClick={() => window.open(linkMore.href, '_self')}
+                  >
+                    {linkMore.title || intl.formatMessage(messages.view_all)}
+                  </Button>
+                </Col>
+              </Row>
             </div>
           )}
         </Container>
