@@ -1,5 +1,5 @@
-.gallery-argomenti-template {
-  .gallery-argomenti-grid {
+.grid-gallery-template {
+  .grid-gallery-grid {
     width: 100%;
 
     @supports (display: grid) {
@@ -24,7 +24,7 @@
       flex-wrap: wrap;
     }
 
-    .gallery-argomenti-item {
+    .grid-gallery-item {
       box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.26);
       border-radius: 4px;
       height: 100%;
