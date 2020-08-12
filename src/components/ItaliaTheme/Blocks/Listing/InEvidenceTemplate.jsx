@@ -1,5 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useIntl } from 'react-intl';
+import moment from 'moment';
+import 'moment/min/locales';
 import {
   Card,
   CardBody,
@@ -7,12 +10,14 @@ import {
   CardCategory,
   CardText,
 } from 'design-react-kit/dist/design-react-kit';
-import moment from 'moment';
+
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
 
 const InEvidenceTemplate = ({ items, title, isEditMode }) => {
+  const intl = useIntl();
+  moment.locale(intl.locale);
   return (
     <div
       className={cx('in-evidence', {
