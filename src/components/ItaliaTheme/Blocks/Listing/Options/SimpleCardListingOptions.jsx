@@ -29,6 +29,10 @@ const messages = defineMessages({
     id: 'show_description',
     defaultMessage: 'Mostra la descrizione',
   },
+  show_detail_link: {
+    id: 'show_detail_link',
+    defaultMessage: 'Mostra il link al dettaglio',
+  },
 });
 
 export const SimpleCardListingAppearance_COMPACT = 'compact';
@@ -109,6 +113,19 @@ const SimpleCardListingOptions = ({
           id="show_description"
           title={intl.formatMessage(messages.show_description)}
           value={data.show_description ? data.show_description : false}
+          onChange={(id, value) => {
+            onChangeBlock(block, {
+              ...data,
+              [id]: value,
+            });
+          }}
+        />
+      )}
+      {data.appearance !== SimpleCardListingAppearance_COMPACT && (
+        <CheckboxWidget
+          id="show_detail_link"
+          title={intl.formatMessage(messages.show_detail_link)}
+          value={data.show_detail_link ? data.show_detail_link : false}
           onChange={(id, value) => {
             onChangeBlock(block, {
               ...data,
