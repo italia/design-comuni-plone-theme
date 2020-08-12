@@ -4,6 +4,7 @@ import { blocks } from '~/config';
 import TemplateWidget from '@plone/volto/components/manage/Blocks/Listing/TemplateWidget';
 import SimpleCardListingOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/SimpleCardListingOptions';
 import RibbonCardTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions';
+import GridGalleryTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/GridGalleryTemplateOptions';
 
 const ListingStyle = ({ data, block, onChangeBlock, required = false }) => {
   const templatesConfig = blocks.blocksConfig.listing.templates;
@@ -26,6 +27,13 @@ const ListingStyle = ({ data, block, onChangeBlock, required = false }) => {
         )}
         {data.template === 'ribbonCardTemplate' && (
           <RibbonCardTemplateOptions
+            data={data}
+            block={block}
+            onChangeBlock={onChangeBlock}
+          />
+        )}
+        {data.template === 'gridGalleryTemplate' && (
+          <GridGalleryTemplateOptions
             data={data}
             block={block}
             onChangeBlock={onChangeBlock}
