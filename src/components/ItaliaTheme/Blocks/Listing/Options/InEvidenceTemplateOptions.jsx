@@ -1,10 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  SelectWidget,
-  CheckboxWidget,
-  TextWidget,
-} from '@plone/volto/components';
+import { CheckboxWidget, TextWidget } from '@plone/volto/components';
 import { defineMessages, useIntl } from 'react-intl';
 
 const messages = defineMessages({
@@ -12,14 +8,13 @@ const messages = defineMessages({
     id: 'Titolo',
     defaultMessage: 'Titolo',
   },
-
   show_block_bg: {
     id: 'Mostra lo sfondo del blocco',
     defaultMessage: 'Mostra lo sfondo del blocco',
   },
 });
 
-const NewsTemplateOptions = ({
+const InEvidenceTemplateOptions = ({
   data,
   block,
   onChangeBlock,
@@ -57,10 +52,10 @@ const NewsTemplateOptions = ({
   );
 };
 
-NewsTemplateOptions.propTypes = {
+InEvidenceTemplateOptions.propTypes = {
   data: PropTypes.objectOf(PropTypes.any).isRequired,
   block: PropTypes.string.isRequired,
   onChangeBlock: PropTypes.func.isRequired,
 };
 
-export default NewsTemplateOptions;
+export default InEvidenceTemplateOptions;

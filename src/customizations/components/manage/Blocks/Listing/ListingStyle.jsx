@@ -6,6 +6,7 @@ import SimpleCardTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Lis
 import RibbonCardTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions';
 import GridGalleryTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/GridGalleryTemplateOptions';
 import NewsTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/NewsTemplateOptions';
+import InEvidenceTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/InEvidenceTemplateOptions';
 
 const ListingStyle = ({ data, block, onChangeBlock, required = false }) => {
   const templatesConfig = blocks.blocksConfig.listing.templates;
@@ -42,6 +43,13 @@ const ListingStyle = ({ data, block, onChangeBlock, required = false }) => {
         )}
         {data.template === 'newsTemplate' && (
           <NewsTemplateOptions
+            data={data}
+            block={block}
+            onChangeBlock={onChangeBlock}
+          />
+        )}
+        {data.template === 'inEvidenceTemplate' && (
+          <InEvidenceTemplateOptions
             data={data}
             block={block}
             onChangeBlock={onChangeBlock}

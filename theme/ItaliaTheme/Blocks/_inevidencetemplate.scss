@@ -1,5 +1,5 @@
 .in-evidence {
-  .container {
+  .in-evidence-cards-wrapper {
     display: grid;
     gap: 24px;
     grid-template-columns: 33% 33% 33%;
@@ -14,7 +14,7 @@
 
   // smartphone
   @media (max-width: 585px) {
-    .container {
+    .in-evidence-cards-wrapper {
       .card-wrapper {
         width: 100%;
         margin: 0px;
@@ -25,7 +25,7 @@
   }
   // tablet
   @media (max-width: 1367px) and (min-width: 586px) {
-    .container {
+    .in-evidence-cards-wrapper {
       grid-template-columns: auto auto;
     }
   }
