@@ -28,7 +28,7 @@ const SimpleCardTemplateCompact = ({
   const intl = useIntl();
   return (
     <div
-      className={cx('', {
+      className={cx('simple-card-compact-template', {
         'public-ui': isEditMode,
       })}
     >

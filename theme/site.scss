@@ -1,6 +1,7 @@
 @import 'site-variables';
 @import 'bootstrap-override/bootstrap-italia-site';
 @import 'cms-ui';
+@import 'extras/blocks';
 @import 'extras/sidebar';
 @import 'extras/toolbar';
 @import 'extras/chips';
@@ -19,6 +20,7 @@
 @import 'ItaliaTheme/Components/scrollToTop';
 @import 'ItaliaTheme/home';
 @import 'ItaliaTheme/Components/venue';
+@import 'ItaliaTheme/Blocks/listing';
 @import 'ItaliaTheme/Blocks/alert';
 @import 'ItaliaTheme/Blocks/titolo_argomento';
 @import 'ItaliaTheme/Blocks/newshome';

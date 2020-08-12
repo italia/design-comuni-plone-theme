@@ -4,6 +4,10 @@ import { TextWidget, CheckboxWidget } from '@plone/volto/components';
 import { defineMessages, useIntl } from 'react-intl';
 
 const messages = defineMessages({
+  title: {
+    id: 'Titolo',
+    defaultMessage: 'Titolo',
+  },
   show_detail_link: {
     id: 'show_detail_link',
     defaultMessage: 'Mostra il link al dettaglio',
@@ -15,6 +19,10 @@ const messages = defineMessages({
   detail_link_label: {
     id: 'detail_link_label',
     defaultMessage: 'Testo per il link al dettaglio',
+  },
+  show_block_bg: {
+    id: 'Mostra lo sfondo del blocco',
+    defaultMessage: 'Mostra lo sfondo del blocco',
   },
 });
 
@@ -36,6 +44,19 @@ const RibbonCardTemplateOptions = ({
 
   return (
     <>
+      <TextWidget
+        id="title"
+        title={intl.formatMessage(messages.title)}
+        required={false}
+        value={data.title}
+        onChange={(name, value) => {
+          onChangeBlock(block, {
+            ...data,
+            [name]: value,
+          });
+        }}
+      />
+
       <CheckboxWidget
         id="show_only_first_ribbon"
         title={intl.formatMessage(messages.show_only_first_ribbon)}
@@ -74,6 +95,18 @@ const RibbonCardTemplateOptions = ({
           }}
         />
       )}
+
+      <CheckboxWidget
+        id="show_block_bg"
+        title={intl.formatMessage(messages.show_block_bg)}
+        value={data.show_block_bg ? data.show_block_bg : false}
+        onChange={(id, value) => {
+          onChangeBlock(block, {
+            ...data,
+            [id]: value,
+          });
+        }}
+      />
     </>
   );
 };
