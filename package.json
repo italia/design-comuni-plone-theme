@@ -39,9 +39,7 @@
       "^.+\\.(jpg)$": "jest-file",
       "^.+\\.(svg)$": "./node_modules/@plone/volto/jest-svgsystem-transform.js"
     },
-    "transformIgnorePatterns": [
-      "/node_modules/(?!@plone/volto).+\\.js$"
-    ],
+    "transformIgnorePatterns": ["/node_modules/(?!@plone/volto).+\\.js$"],
     "moduleNameMapper": {
       "@plone/volto/(.*)$": "<rootDir>/node_modules/@plone/volto/src/$1",
       "@plone/volto/babel": "<rootDir>/node_modules/@plone/volto/babel",
@@ -64,9 +62,7 @@
         "statements": 10
       }
     },
-    "setupFiles": [
-      "@plone/volto/test-setup.js"
-    ],
+    "setupFiles": ["@plone/volto/test-setup.js"],
     "globals": {
       "__DEV__": true
     }
@@ -84,23 +80,15 @@
     ]
   },
   "stylelint": {
-    "extends": [
-      "stylelint-config-idiomatic-order"
-    ],
-    "plugins": [
-      "stylelint-prettier"
-    ],
+    "extends": ["stylelint-config-idiomatic-order"],
+    "plugins": ["stylelint-prettier"],
     "rules": {
       "prettier/prettier": true,
       "rule-empty-line-before": [
         "always-multi-line",
         {
-          "except": [
-            "first-nested"
-          ],
-          "ignore": [
-            "after-comment"
-          ]
+          "except": ["first-nested"],
+          "ignore": ["after-comment"]
         }
       ]
     },
@@ -120,11 +108,11 @@
     "typeface-lora": "0.0.72",
     "typeface-roboto-mono": "0.0.75",
     "typeface-titillium-web": "0.0.72",
-    "volto-cookie-banner": "collective/volto-cookie-banner",
-    "volto-multilingual-widget": "collective/volto-multilingual-widget",
-    "volto-rss-block": "redturtle/volto-rss-block",
-    "volto-subblocks": "1.0.0",
-    "volto-venue": "collective/volto-venue"
+    "volto-cookie-banner": "collective/volto-cookie-banner#v1.0.1",
+    "volto-multilingual-widget": "collective/volto-multilingual-widget#v1.0.1",
+    "volto-rss-block": "redturtle/volto-rss-block#v1.0.0",
+    "volto-subblocks": "collective/volto-subblocks#v1.0.0",
+    "volto-venue": "collective/volto-venue#v1.0.0"
   },
   "devDependencies": {
     "eslint-plugin-prettier": "3.1.3",

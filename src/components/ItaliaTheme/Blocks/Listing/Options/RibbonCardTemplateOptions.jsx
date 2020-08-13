@@ -44,19 +44,6 @@ const RibbonCardTemplateOptions = ({
 
   return (
     <>
-      <TextWidget
-        id="title"
-        title={intl.formatMessage(messages.title)}
-        required={false}
-        value={data.title}
-        onChange={(name, value) => {
-          onChangeBlock(block, {
-            ...data,
-            [name]: value,
-          });
-        }}
-      />
-
       <CheckboxWidget
         id="show_only_first_ribbon"
         title={intl.formatMessage(messages.show_only_first_ribbon)}
@@ -95,18 +82,6 @@ const RibbonCardTemplateOptions = ({
           }}
         />
       )}
-
-      <CheckboxWidget
-        id="show_block_bg"
-        title={intl.formatMessage(messages.show_block_bg)}
-        value={data.show_block_bg ? data.show_block_bg : false}
-        onChange={(id, value) => {
-          onChangeBlock(block, {
-            ...data,
-            [id]: value,
-          });
-        }}
-      />
     </>
   );
 };

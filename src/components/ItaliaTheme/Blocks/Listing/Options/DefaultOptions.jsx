@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { CheckboxWidget, TextWidget } from '@plone/volto/components';
+import { TextWidget, CheckboxWidget } from '@plone/volto/components';
 import { defineMessages, useIntl } from 'react-intl';
 
 const messages = defineMessages({
@@ -14,12 +14,7 @@ const messages = defineMessages({
   },
 });
 
-const InEvidenceTemplateOptions = ({
-  data,
-  block,
-  onChangeBlock,
-  required = false,
-}) => {
+const DefaultOptions = ({ data, block, onChangeBlock, required = false }) => {
   const intl = useIntl();
 
   return (
@@ -52,10 +47,10 @@ const InEvidenceTemplateOptions = ({
   );
 };
 
-InEvidenceTemplateOptions.propTypes = {
+DefaultOptions.propTypes = {
   data: PropTypes.objectOf(PropTypes.any).isRequired,
   block: PropTypes.string.isRequired,
   onChangeBlock: PropTypes.func.isRequired,
 };
 
-export default InEvidenceTemplateOptions;
+export default DefaultOptions;

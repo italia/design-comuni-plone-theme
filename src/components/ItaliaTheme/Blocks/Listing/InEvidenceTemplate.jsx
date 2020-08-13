@@ -42,9 +42,9 @@ const InEvidenceTemplate = ({
           {title && (
             <Row>
               <Col>
-                <h3 className={cx('mb-4', { 'mt-5': !show_block_bg })}>
+                <h2 className={cx('mb-4', { 'mt-5': !show_block_bg })}>
                   {title}
-                </h3>
+                </h2>
               </Col>
             </Row>
           )}

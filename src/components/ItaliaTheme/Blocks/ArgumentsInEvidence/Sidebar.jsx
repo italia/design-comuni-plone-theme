@@ -1,10 +1,10 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Segment, Accordion } from 'semantic-ui-react'
-import { FormattedMessage, injectIntl } from 'react-intl'
-import { Icon, ObjectBrowserWidget, TextWidget } from '@plone/volto/components'
-import upSVG from '@plone/volto/icons/up-key.svg'
-import downSVG from '@plone/volto/icons/down-key.svg'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Segment, Accordion } from 'semantic-ui-react';
+import { FormattedMessage, injectIntl } from 'react-intl';
+import { Icon, ObjectBrowserWidget, TextWidget } from '@plone/volto/components';
+import upSVG from '@plone/volto/icons/up-key.svg';
+import downSVG from '@plone/volto/icons/down-key.svg';
 import { defineMessages, useIntl } from 'react-intl';
 
 const messages = defineMessages({
@@ -14,13 +14,13 @@ const messages = defineMessages({
   },
   selectArguments: {
     id: 'selectArguments',
-    defaultMessage: 'Seleziona gli argomenti',
+    defaultMessage: 'Seleziona gli altri argomenti',
   },
   argument: {
     id: 'argoment',
     defaultMessage: 'Argomento',
   },
-})
+});
 
 const Sidebar = ({
   data,
@@ -30,7 +30,7 @@ const Sidebar = ({
   selected = 0,
   setSelected,
 }) => {
-  const intl =  useIntl();
+  const intl = useIntl();
 
   return (
     <Segment.Group raised>
@@ -56,7 +56,9 @@ const Sidebar = ({
             id={'ObjectBrowserWidget'}
             title={intl.formatMessage(messages.selectArguments)}
             value={data.arguments}
-            widgetOptions={{pattern_options:{selectableTypes:['Pagina Argomento']}}}
+            widgetOptions={{
+              pattern_options: { selectableTypes: ['Pagina Argomento'] },
+            }}
             onChange={(name, value) => {
               onChangeBlock(block, {
                 ...data,
@@ -77,7 +79,11 @@ const Sidebar = ({
                   onClick={() => setSelected(selected === index ? null : index)}
                 >
                   {subblock?.argument && subblock?.argument[0]?.title}
-                  {selected === index ? <Icon name={upSVG} size="20px" /> : <Icon name={downSVG} size="20px" />}
+                  {selected === index ? (
+                    <Icon name={upSVG} size="20px" />
+                  ) : (
+                    <Icon name={downSVG} size="20px" />
+                  )}
                 </Accordion.Title>
                 <Accordion.Content active={selected === index}>
                   <ObjectBrowserWidget
@@ -86,7 +92,11 @@ const Sidebar = ({
                     required={true}
                     mode={'link'}
                     value={subblock.argument}
-                    widgetOptions={{pattern_options:{selectableTypes:['Pagina Argomento']}}}
+                    widgetOptions={{
+                      pattern_options: {
+                        selectableTypes: ['Pagina Argomento'],
+                      },
+                    }}
                     onChange={(name, value) => {
                       onChangeSubBlock(index, {
                         ...subblock,
@@ -96,12 +106,12 @@ const Sidebar = ({
                   />
                 </Accordion.Content>
               </div>
-            )}
-          )}
+            );
+          })}
       </Accordion>
     </Segment.Group>
-  )
-}
+  );
+};
 
 Sidebar.propTypes = {
   data: PropTypes.objectOf(PropTypes.any),
@@ -109,6 +119,6 @@ Sidebar.propTypes = {
   onChangeBlock: PropTypes.func,
   selected: PropTypes.any,
   setSelected: PropTypes.func,
-}
+};
 
-export default injectIntl(Sidebar)
+export default injectIntl(Sidebar);

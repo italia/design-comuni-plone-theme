@@ -32,6 +32,12 @@
 
       .card-title {
         margin-bottom: 10px;
+        a {
+          &:hover,
+          &:active {
+            text-decoration: underline;
+          }
+        }
       }
     }
 

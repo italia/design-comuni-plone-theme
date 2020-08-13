@@ -46,7 +46,7 @@ const GridGalleryTemplate = ({
           {title && (
             <Row>
               <Col>
-                <h3 className="mb-4">{title}</h3>
+                <h2 className="mb-4">{title}</h2>
               </Col>
             </Row>
           )}
@@ -64,12 +64,28 @@ const GridGalleryTemplate = ({
               >
                 <Link to={isEditMode ? '#' : flattenToAppURL(item['@id'])}>
                   <img
-                    src={
+                    src={flattenToAppURL(
                       item.image?.scales?.preview?.download ??
-                      item.image?.download ??
-                      ''
-                    }
-                    srcSet={`${item.image?.scales?.gallery?.download} 250w, ${item.image?.scales?.icon?.download} 32w, ${item.image?.scales?.large?.download} 768w, ${item.image?.scales?.listing?.download} 16w, ${item.image?.scales?.mini?.download} 200w, ${item.image?.scales?.preview?.download} 400w, ${item.image?.scales?.thumb?.download} 128w, ${item.image?.scales?.tile?.download} 64w`}
+                        item.image?.download ??
+                        '',
+                    )}
+                    srcSet={`${flattenToAppURL(
+                      item.image?.scales?.gallery?.download || '',
+                    )} 250w, ${flattenToAppURL(
+                      item.image?.scales?.icon?.download || '',
+                    )} 32w, ${flattenToAppURL(
+                      item.image?.scales?.large?.download || '',
+                    )} 768w, ${flattenToAppURL(
+                      item.image?.scales?.listing?.download || '',
+                    )} 16w, ${flattenToAppURL(
+                      item.image?.scales?.mini?.download || '',
+                    )} 200w, ${flattenToAppURL(
+                      item.image?.scales?.preview?.download || '',
+                    )} 400w, ${flattenToAppURL(
+                      item.image?.scales?.thumb?.download || '',
+                    )} 128w, ${flattenToAppURL(
+                      item.image?.scales?.tile?.download || '',
+                    )} 64w`}
                     loading="lazy"
                     alt=""
                   />

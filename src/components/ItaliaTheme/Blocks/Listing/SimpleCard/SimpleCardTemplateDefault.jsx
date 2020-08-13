@@ -65,7 +65,7 @@ const SimpleCardTemplateDefault = ({
       {title && (
         <Row>
           <Col>
-            <h3 className={cx('mb-4', { 'mt-5': !show_block_bg })}>{title}</h3>
+            <h2 className={cx('mb-4', { 'mt-5': !show_block_bg })}>{title}</h2>
           </Col>
         </Row>
       )}
@@ -102,13 +102,9 @@ const SimpleCardTemplateDefault = ({
                   </CardCategory>
                 )}
                 <CardTitle tag="h5">
-                  {!show_detail_link ? (
-                    <Link to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}>
-                      {itemTitle}
-                    </Link>
-                  ) : (
-                    itemTitle
-                  )}
+                  <Link to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}>
+                    {itemTitle}
+                  </Link>
                 </CardTitle>
                 {show_description && item.description && (
                   <CardText>{item.description}</CardText>
