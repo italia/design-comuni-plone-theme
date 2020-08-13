@@ -47,55 +47,62 @@ const NewsTemplate = ({
             </Row>
           )}
           <Row className="items">
-            {items.map((item, index) => (
-              <Col md="4" key={item['@id']} className="col-item">
-                <Card
-                  className={cx('listing-item card-bg', {
-                    'card-img': index < 3 && item.image,
-                  })}
-                >
-                  {/* wrapperClassName="card-overlapping" */}
-                  {index < 3 && item.image && (
-                    <div className="img-responsive-wrapper">
-                      <div className="img-responsive img-responsive-panoramic">
-                        <ConditionalLink
-                          to={flattenToAppURL(item['@id'])}
-                          condition={!isEditMode}
-                          className="img-link"
-                        >
-                          <figure className="img-wrapper">
-                            <img
-                              className="listing-image"
-                              src={flattenToAppURL(
-                                item.image.scales.preview.download,
-                              )}
-                              alt={item.title}
-                            />
-                          </figure>
-                        </ConditionalLink>
+            {items.map((item, index) => {
+              let date = null;
+              switch (item['@type']) {
+                case 'News Item':
+                  date = item.effective && moment(item.effective).format('ll');
+                  break;
+                default:
+                  date = null;
+              }
+
+              return (
+                <Col md="4" key={item['@id']} className="col-item">
+                  <Card
+                    className={cx('listing-item card-bg', {
+                      'card-img': index < 3 && item.image,
+                    })}
+                  >
+                    {/* wrapperClassName="card-overlapping" */}
+                    {index < 3 && item.image && (
+                      <div className="img-responsive-wrapper">
+                        <div className="img-responsive img-responsive-panoramic">
+                          <ConditionalLink
+                            to={flattenToAppURL(item['@id'])}
+                            condition={!isEditMode}
+                            className="img-link"
+                          >
+                            <figure className="img-wrapper">
+                              <img
+                                className="listing-image"
+                                src={flattenToAppURL(
+                                  item.image.scales.preview.download,
+                                )}
+                                alt={item.title}
+                              />
+                            </figure>
+                          </ConditionalLink>
+                        </div>
                       </div>
-                    </div>
-                  )}
-                  <CardBody>
-                    <CardCategory
-                      date={
-                        item.effective && moment(item.effective).format('ll')
-                      }
-                    >
-                      {item?.design_italia_meta_type}
-                    </CardCategory>
-                    <CardTitle tag="h4">
-                      <Link to={flattenToAppURL(item['@id'])}>
-                        {item.title || item.id}
-                      </Link>
-                    </CardTitle>
-                    {item.description && (
-                      <CardText>{item.description}</CardText>
                     )}
-                  </CardBody>
-                </Card>
-              </Col>
-            ))}
+                    <CardBody>
+                      <CardCategory date={date}>
+                        {item?.design_italia_meta_type}
+                      </CardCategory>
+                      <CardTitle tag="h4">
+                        <Link to={flattenToAppURL(item['@id'])}>
+                          {item.title || item.id}
+                        </Link>
+                      </CardTitle>
+                      {item.description && (
+                        <CardText>{item.description}</CardText>
+                      )}
+                    </CardBody>
+                  </Card>
+                </Col>
+              );
+            })}
           </Row>
           {linkMore?.href && (
             <div className="link-more">

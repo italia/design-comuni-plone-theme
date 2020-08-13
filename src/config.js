@@ -182,7 +182,7 @@ const customBlocks = {
     templates: {
       ...config.blocks.blocksConfig.listing.templates,
       newsTemplate: {
-        label: 'Notizie',
+        label: 'Card con immagine',
         template: NewsTemplate,
       },
       smallBlockLinksTemplate: {
