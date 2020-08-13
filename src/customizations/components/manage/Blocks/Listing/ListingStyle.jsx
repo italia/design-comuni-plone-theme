@@ -4,9 +4,8 @@ import { blocks } from '~/config';
 import TemplateWidget from '@plone/volto/components/manage/Blocks/Listing/TemplateWidget';
 import SimpleCardTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions';
 import RibbonCardTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions';
-import GridGalleryTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/GridGalleryTemplateOptions';
-import NewsTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/NewsTemplateOptions';
-import InEvidenceTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/InEvidenceTemplateOptions';
+
+import DefaultOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions';
 
 const ListingStyle = ({ data, block, onChangeBlock, required = false }) => {
   const templatesConfig = blocks.blocksConfig.listing.templates;
@@ -20,6 +19,17 @@ const ListingStyle = ({ data, block, onChangeBlock, required = false }) => {
           onChangeBlock={onChangeBlock}
           required={required}
         />
+
+        {['default', 'imageGallery', 'simpleCardTemplate'].indexOf(
+          data.template,
+        ) < 0 && (
+          <DefaultOptions
+            data={data}
+            block={block}
+            onChangeBlock={onChangeBlock}
+          />
+        )}
+
         {data.template === 'simpleCardTemplate' && (
           <SimpleCardTemplateOptions
             data={data}
@@ -29,27 +39,6 @@ const ListingStyle = ({ data, block, onChangeBlock, required = false }) => {
         )}
         {data.template === 'ribbonCardTemplate' && (
           <RibbonCardTemplateOptions
-            data={data}
-            block={block}
-            onChangeBlock={onChangeBlock}
-          />
-        )}
-        {data.template === 'gridGalleryTemplate' && (
-          <GridGalleryTemplateOptions
-            data={data}
-            block={block}
-            onChangeBlock={onChangeBlock}
-          />
-        )}
-        {data.template === 'newsTemplate' && (
-          <NewsTemplateOptions
-            data={data}
-            block={block}
-            onChangeBlock={onChangeBlock}
-          />
-        )}
-        {data.template === 'inEvidenceTemplate' && (
-          <InEvidenceTemplateOptions
             data={data}
             block={block}
             onChangeBlock={onChangeBlock}

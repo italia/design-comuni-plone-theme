@@ -7,6 +7,7 @@ import {
   CardTitle,
   CardText,
   Button,
+  Container,
   Row,
   Col,
 } from 'design-react-kit/dist/design-react-kit';
@@ -20,7 +21,13 @@ const messages = defineMessages({
   },
 });
 
-const CompleteBlockLinksTemplate = ({ items, title, isEditMode, linkMore }) => {
+const CompleteBlockLinksTemplate = ({
+  items,
+  title,
+  isEditMode,
+  linkMore,
+  show_block_bg,
+}) => {
   const intl = useIntl();
 
   return (
@@ -29,67 +36,81 @@ const CompleteBlockLinksTemplate = ({ items, title, isEditMode, linkMore }) => {
         'public-ui': isEditMode,
       })}
     >
-      <div className="title">{title && <h2>{title}</h2>}</div>
-      <Row className="items">
-        {items.map((item, index) => (
-          <Col md="3" key={item['@id']} className="col-item">
-            <Card
-              color=""
-              className="card-bg rounded"
-              noWrapper={false}
-              space
-              tag="div"
-            >
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={
-                  item['remoteUrl'] && item['remoteUrl'] !== ''
-                    ? item['remoteUrl']
-                    : flattenToAppURL(item['@id'])
-                }
-              >
-                <div className="d-flex">
-                  {item.image && (
-                    <div className="image-container">
-                      <img
-                        alt={item.title}
-                        src={flattenToAppURL(
-                          item.image.scales.preview.download,
-                        )}
-                        title={item.title}
-                      />
+      <div
+        className={cx('full-width', {
+          'bg-light py-5': show_block_bg,
+        })}
+      >
+        <Container className="px-4">
+          {title && (
+            <Row>
+              <Col>
+                <h2 className="mb-4">{title}</h2>
+              </Col>
+            </Row>
+          )}
+          <Row className="items">
+            {items.map((item, index) => (
+              <Col md="3" key={item['@id']} className="col-item">
+                <Card
+                  color=""
+                  className="card-bg rounded"
+                  noWrapper={false}
+                  space
+                  tag="div"
+                >
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={
+                      item['remoteUrl'] && item['remoteUrl'] !== ''
+                        ? item['remoteUrl']
+                        : flattenToAppURL(item['@id'])
+                    }
+                  >
+                    <div className="d-flex">
+                      {item.image && (
+                        <div className="image-container">
+                          <img
+                            alt={item.title}
+                            src={flattenToAppURL(
+                              item.image.scales.preview.download,
+                            )}
+                            title={item.title}
+                          />
+                        </div>
+                      )}
+                      <div>
+                        <CardBody>
+                          <CardTitle tag="h5" className="text-white">
+                            {item.title}
+                          </CardTitle>
+                          <CardText tag="p" className="text-white">
+                            {item.description}
+                          </CardText>
+                        </CardBody>
+                      </div>
                     </div>
-                  )}
-                  <div>
-                    <CardBody>
-                      <CardTitle tag="h5" className="text-white">
-                        {item.title}
-                      </CardTitle>
-                      <CardText tag="p" className="text-white">
-                        {item.description}
-                      </CardText>
-                    </CardBody>
-                  </div>
-                </div>
-              </a>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-      {linkMore?.href && (
-        <div className="link-button">
-          <Button
-            color="tertiary"
-            className="view-all"
-            icon={false}
-            tag="button"
-            onClick={() => window.open(linkMore.href, '_self')}
-          >
-            {linkMore.title || intl.formatMessage(messages.view_all)}
-          </Button>
-        </div>
-      )}
+                  </a>
+                </Card>
+              </Col>
+            ))}
+          </Row>
+          {linkMore?.href && (
+            <div className="link-button">
+              <Button
+                color="tertiary"
+                className="view-all"
+                icon={false}
+                tag="button"
+                onClick={() => window.open(linkMore.href, '_self')}
+              >
+                {linkMore.title || intl.formatMessage(messages.view_all)}
+              </Button>
+            </div>
+          )}
+        </Container>
+      </div>
     </div>
   );
 };
