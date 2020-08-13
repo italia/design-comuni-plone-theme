@@ -1,0 +1,18 @@
+.ribbon-card-template {
+  .card {
+    &.show_detail_link {
+      .card-title {
+        a {
+          color: $text-color;
+          text-decoration: none;
+
+          &:hover,
+          &:active {
+            color: $link-color;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

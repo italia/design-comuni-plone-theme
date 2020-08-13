@@ -68,7 +68,10 @@ const RibbonCardTemplate = ({
               return (
                 <Col lg={4} sm={12}>
                   <Card
-                    className={`card-bg card-big align-items-top rounded shadow`}
+                    className={cx(
+                      `card-bg card-big align-items-top rounded shadow`,
+                      { show_detail_link: show_detail_link },
+                    )}
                     noWrapper={false}
                     tag="div"
                     spacing
@@ -86,17 +89,11 @@ const RibbonCardTemplate = ({
                       className={cx('', { 'mt-5': !showRibbon })}
                     >
                       <CardTitle tag="h5">
-                        {!show_detail_link ? (
-                          <Link
-                            to={
-                              !isEditMode ? flattenToAppURL(item['@id']) : '#'
-                            }
-                          >
-                            {itemTitle}
-                          </Link>
-                        ) : (
-                          itemTitle
-                        )}
+                        <Link
+                          to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}
+                        >
+                          {itemTitle}
+                        </Link>
                       </CardTitle>
                       <CardText>{item.description}</CardText>
                       {show_detail_link && (

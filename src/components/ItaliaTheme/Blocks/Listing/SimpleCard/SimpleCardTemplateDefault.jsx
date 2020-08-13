@@ -102,13 +102,9 @@ const SimpleCardTemplateDefault = ({
                   </CardCategory>
                 )}
                 <CardTitle tag="h5">
-                  {!show_detail_link ? (
-                    <Link to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}>
-                      {itemTitle}
-                    </Link>
-                  ) : (
-                    itemTitle
-                  )}
+                  <Link to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}>
+                    {itemTitle}
+                  </Link>
                 </CardTitle>
                 {show_description && item.description && (
                   <CardText>{item.description}</CardText>
