@@ -41,7 +41,7 @@ const CompleteBlockLinksTemplate = ({
           'bg-light py-5': show_block_bg,
         })}
       >
-        <Container className="px-4">
+        <Container>
           {title && (
             <Row>
               <Col>
