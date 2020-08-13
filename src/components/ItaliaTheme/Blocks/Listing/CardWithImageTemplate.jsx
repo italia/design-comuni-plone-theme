@@ -19,7 +19,7 @@ import {
   CardText,
 } from 'design-react-kit/dist/design-react-kit';
 
-const NewsTemplate = ({
+const CardWithImageTemplate = ({
   items,
   isEditMode,
   title,
@@ -30,7 +30,9 @@ const NewsTemplate = ({
   moment.locale(intl.locale);
 
   return (
-    <div className={cx('news-template', { 'public-ui': isEditMode })}>
+    <div
+      className={cx('card-with-image-template', { 'public-ui': isEditMode })}
+    >
       <div
         className={cx('full-width', {
           'bg-light py-5': show_block_bg,
@@ -117,11 +119,11 @@ const NewsTemplate = ({
   );
 };
 
-NewsTemplate.propTypes = {
+CardWithImageTemplate.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
   linkMore: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };
 
-export default NewsTemplate;
+export default CardWithImageTemplate;

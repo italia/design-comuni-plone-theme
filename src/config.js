@@ -39,7 +39,7 @@ import { PersonaView } from '@italia/components/ItaliaTheme';
 import { ServizioView } from '@italia/components/ItaliaTheme';
 import { PaginaArgomentoView } from '@italia/components/ItaliaTheme';
 
-import NewsTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/NewsTemplate';
+import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
 import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate';
 import PhotogalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
@@ -182,9 +182,9 @@ const customBlocks = {
     templates: {
       ...config.blocks.blocksConfig.listing.templates,
       default: { label: 'Card semplice', template: SimpleCardTemplate },
-      newsTemplate: {
+      cardWithImage: {
         label: 'Card con immagine',
-        template: NewsTemplate,
+        template: CardWithImageTemplate,
       },
       smallBlockLinksTemplate: {
         label: 'Blocco link solo immagini',
