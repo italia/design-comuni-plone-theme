@@ -1,7 +1,7 @@
 import React from 'react'
 import { injectIntl, defineMessages } from 'react-intl'
 import { compose } from 'redux'
-import { DNDSubblocks, SubblockEdit, Subblock } from 'volto-subblocks'
+import { DNDSubblocks, SubblockEdit, Subblock } from '@italia/addons/volto-subblocks'
 import Block from './Block'
 
 const messages = defineMessages({
