@@ -54,7 +54,7 @@ const RibbonCardTemplate = ({
           {title && (
             <Row>
               <Col>
-                <h3 className="mb-4">{title}</h3>
+                <h2 className="mb-4">{title}</h2>
               </Col>
             </Row>
           )}

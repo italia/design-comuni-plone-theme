@@ -29,7 +29,7 @@ const CompleteBlockLinksTemplate = ({ items, title, isEditMode, linkMore }) => {
         'public-ui': isEditMode,
       })}
     >
-      <div className="title">{title && <h3>{title}</h3>}</div>
+      <div className="title">{title && <h2>{title}</h2>}</div>
       <Row className="items">
         {items.map((item, index) => (
           <Col md="3" key={item['@id']} className="col-item">

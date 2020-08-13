@@ -11,7 +11,7 @@ const PhotogalleryTemplate = ({ items, title, isEditMode }) => {
         'public-ui': isEditMode,
       })}
     >
-      <div className="title">{<h3>PhotoGallery</h3>}</div>
+      <div className="title">{<h2>PhotoGallery</h2>}</div>
       <Row className="items">
         {items.map((item, index) => (
           <Col md="4" key={item['@id']} className="col-item">

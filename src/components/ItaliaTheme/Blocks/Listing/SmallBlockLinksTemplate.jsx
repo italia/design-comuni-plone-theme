@@ -7,7 +7,7 @@ import cx from 'classnames';
 const SmallBlockLinksTemplate = ({ items, title, isEditMode }) => {
   return (
     <div className={cx('small-block-links', { 'public-ui': isEditMode })}>
-      <div className="title">{title && <h3>{title}</h3>}</div>
+      <div className="title">{title && <h2>{title}</h2>}</div>
       <Row className="items">
         {items.map((item, index) => (
           <Col md="3" key={item['@id']} className="col-item col-sm-4 col-lg-2">
