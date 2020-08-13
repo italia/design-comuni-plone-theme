@@ -1,22 +1,22 @@
-  
-import React from 'react'
-import BodyWrapper from './BodyWrapper'
+import React from 'react';
+import BodyWrapper from './BodyWrapper';
 import PropTypes from 'prop-types';
-import BottomBody from './BottomBody'
-import Body from './Body'
-import { withDNDContext, SubblocksEdit, SubblocksWrapper } from 'volto-subblocks'
-import { SidebarPortal } from '@plone/volto/components'
-import Sidebar from './Sidebar.jsx'
+import BottomBody from './BottomBody';
+import Body from './Body';
+import {
+  withDNDContext,
+  SubblocksEdit,
+  SubblocksWrapper,
+} from '@italia/addons/volto-subblocks';
+import { SidebarPortal } from '@plone/volto/components';
+import Sidebar from './Sidebar.jsx';
 
 class Edit extends SubblocksEdit {
   render() {
     return (
-      <div className='argumentInEvidence public-ui'>
+      <div className="argumentInEvidence public-ui">
         <SubblocksWrapper node={this.node}>
-          <BodyWrapper
-            data={this.props.data}
-            inEditMode={false}
-          >
+          <BodyWrapper data={this.props.data} inEditMode={false}>
             {this.state.subblocks.map((subblock, subindex) => (
               <Body
                 data={subblock}
@@ -45,13 +45,10 @@ class Edit extends SubblocksEdit {
             setSelected={this.onSubblockChangeFocus}
           />
         </SidebarPortal>
-        
-        <BottomBody 
-          data={this.props.data}
-          intl={this.props.intl}
-        />
+
+        <BottomBody data={this.props.data} intl={this.props.intl} />
       </div>
-    )
+    );
   }
 }
 /**
@@ -68,5 +65,4 @@ Edit.propTypes = {
   onChangeBlock: PropTypes.func.isRequired,
 };
 
-export default React.memo(withDNDContext(Edit));;
-
+export default React.memo(withDNDContext(Edit));
