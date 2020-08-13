@@ -15,9 +15,11 @@ import {
   Row,
   Col,
   Container,
+  Icon,
 } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Link } from 'react-router-dom';
+import { getItemIcon } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   view_all: {
@@ -65,6 +67,8 @@ const RibbonCardTemplate = ({
               const showRibbon =
                 !show_only_first_ribbon ||
                 (show_only_first_ribbon && index === 0);
+              const icon = getItemIcon(item);
+
               return (
                 <Col lg={4} sm={12}>
                   <Card
@@ -81,6 +85,7 @@ const RibbonCardTemplate = ({
 
                     {item.parent?.title && (
                       <div className="etichetta">
+                        {icon && <Icon icon={icon} />}
                         <span> {item.parent?.title}</span>
                       </div>
                     )}
