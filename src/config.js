@@ -181,6 +181,7 @@ const customBlocks = {
     ...config.blocks.blocksConfig.listing,
     templates: {
       ...config.blocks.blocksConfig.listing.templates,
+      default: { label: 'Card semplice', template: SimpleCardTemplate },
       newsTemplate: {
         label: 'Card con immagine',
         template: NewsTemplate,
@@ -200,10 +201,6 @@ const customBlocks = {
       inEvidenceTemplate: {
         label: 'In evidenza',
         template: InEvidenceTemplate,
-      },
-      simpleCardTemplate: {
-        label: 'Card semplice',
-        template: SimpleCardTemplate,
       },
       gridGalleryTemplate: {
         label: 'Gallery a griglia',

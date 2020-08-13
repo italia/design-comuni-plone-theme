@@ -20,17 +20,16 @@ const ListingStyle = ({ data, block, onChangeBlock, required = false }) => {
           required={required}
         />
 
-        {['default', 'imageGallery', 'simpleCardTemplate'].indexOf(
-          data.template,
-        ) < 0 && (
-          <DefaultOptions
-            data={data}
-            block={block}
-            onChangeBlock={onChangeBlock}
-          />
-        )}
+        {data.template &&
+          ['default', 'imageGallery'].indexOf(data.template) < 0 && (
+            <DefaultOptions
+              data={data}
+              block={block}
+              onChangeBlock={onChangeBlock}
+            />
+          )}
 
-        {data.template === 'simpleCardTemplate' && (
+        {(!data || !data.template || data.template === 'default') && (
           <SimpleCardTemplateOptions
             data={data}
             block={block}
