@@ -69,7 +69,9 @@ const PaginaArgomentoView = ({ content }) => {
           <p className="description">{content?.description}</p>
         </div>
         <div className="col-lg-4 offset-lg-2">
-          {content?.unita_amministrativa_responsabile?.length > 0 ? (
+          <div dangerouslySetInnerHTML={{ __html: content?.box_aiuto?.data }} />
+
+          {content?.unita_amministrativa_responsabile?.length > 0 &&
             content?.unita_amministrativa_responsabile?.map((u, index) => {
               return (
                 <div className="row mb-3" key={index}>
@@ -107,12 +109,7 @@ const PaginaArgomentoView = ({ content }) => {
                   </div>
                 </div>
               );
-            })
-          ) : (
-            <div
-              dangerouslySetInnerHTML={{ __html: content?.box_aiuto?.data }}
-            />
-          )}
+            })}
           {content?.image ? (
             <>
               <Portal
