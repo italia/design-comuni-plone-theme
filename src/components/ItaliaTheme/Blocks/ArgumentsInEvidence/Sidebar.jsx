@@ -12,8 +12,8 @@ const messages = defineMessages({
     id: 'title',
     defaultMessage: 'Titolo',
   },
-  selectArguments: {
-    id: 'selectArguments',
+  selectOtherArguments: {
+    id: 'selectOtherArguments',
     defaultMessage: 'Seleziona gli altri argomenti',
   },
   argument: {
@@ -54,7 +54,7 @@ const Sidebar = ({
           />
           <ObjectBrowserWidget
             id={'ObjectBrowserWidget'}
-            title={intl.formatMessage(messages.selectArguments)}
+            title={intl.formatMessage(messages.selectOtherArguments)}
             value={data.arguments}
             widgetOptions={{
               pattern_options: { selectableTypes: ['Pagina Argomento'] },

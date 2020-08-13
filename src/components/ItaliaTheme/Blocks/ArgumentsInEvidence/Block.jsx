@@ -57,12 +57,14 @@ const Block = ({
             )}
           </div>
         )}
-        <CardReadMore
-          iconName="it-arrow-right"
-          tag="a"
-          text={intl.formatMessage(messages.exploreArgument)}
-          href={argument['@id']}
-        />
+        {argument && (
+          <CardReadMore
+            iconName="it-arrow-right"
+            tag="a"
+            text={intl.formatMessage(messages.exploreArgument)}
+            href={argument['@id']}
+          />
+        )}
       </CardBody>
     </Card>
   );

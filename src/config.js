@@ -39,7 +39,7 @@ import { PersonaView } from '@italia/components/ItaliaTheme';
 import { ServizioView } from '@italia/components/ItaliaTheme';
 import { PaginaArgomentoView } from '@italia/components/ItaliaTheme';
 
-import NewsTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/NewsTemplate';
+import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
 import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate';
 import PhotogalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
@@ -181,9 +181,10 @@ const customBlocks = {
     ...config.blocks.blocksConfig.listing,
     templates: {
       ...config.blocks.blocksConfig.listing.templates,
-      newsTemplate: {
-        label: 'Notizie',
-        template: NewsTemplate,
+      default: { label: 'Card semplice', template: SimpleCardTemplate },
+      cardWithImage: {
+        label: 'Card con immagine',
+        template: CardWithImageTemplate,
       },
       smallBlockLinksTemplate: {
         label: 'Blocco link solo immagini',
@@ -200,10 +201,6 @@ const customBlocks = {
       inEvidenceTemplate: {
         label: 'In evidenza',
         template: InEvidenceTemplate,
-      },
-      simpleCardTemplate: {
-        label: 'Card semplice',
-        template: SimpleCardTemplate,
       },
       gridGalleryTemplate: {
         label: 'Gallery a griglia',
