@@ -182,7 +182,7 @@ const customBlocks = {
     templates: {
       ...config.blocks.blocksConfig.listing.templates,
       default: { label: 'Card semplice', template: SimpleCardTemplate },
-      cardWithImage: {
+      cardWithImageTemplate: {
         label: 'Card con immagine',
         template: CardWithImageTemplate,
       },
