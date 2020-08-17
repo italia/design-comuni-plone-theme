@@ -52,6 +52,7 @@ export default class Pagination extends Component {
 
   constructor(props) {
     super(props);
+    console.log(props.activePage)
     this.state = { activePage: props.activePage };
   }
 
@@ -60,7 +61,7 @@ export default class Pagination extends Component {
 
     // Heads up! We need the cast to the "number" type there, as `activePage` can be a string
     if (+prevActivePage === +nextActivePage) return;
-
+    console.log(nextActivePage)
     this.setState({ activePage: nextActivePage });
     invoke(this.props, 'onPageChange', e, {
       ...this.props,
@@ -78,7 +79,7 @@ export default class Pagination extends Component {
     const { activePage } = this.state;
 
     const items = createPaginationItems({
-      activePage,
+      activePage: activePage?.children || activePage,
       boundaryRange,
       hideEllipsis: isNil(ellipsisItem),
       siblingRange,
