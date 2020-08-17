@@ -67,7 +67,6 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
       ),
     );
   }
-  console.log(currentPage)
   return (
     <>
       {listingItems.length > 0 ? (
