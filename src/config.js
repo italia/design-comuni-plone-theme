@@ -16,6 +16,7 @@ import newsSVG from '@plone/volto/icons/news.svg';
 import searchIcon from 'bootstrap-italia/src/svg/it-search.svg';
 import NewsHomeView from '@italia/components/ItaliaTheme/Blocks/NewsHome/View';
 import NewsHomeEdit from '@italia/components/ItaliaTheme/Blocks/NewsHome/Edit';
+import noteSvg from 'bootstrap-italia/src/svg/it-note.svg';
 
 import alertSVG from '@plone/volto/icons/alert.svg';
 import AlertView from '@italia/components/ItaliaTheme/Blocks/Alert/View';
@@ -23,23 +24,29 @@ import AlertEdit from '@italia/components/ItaliaTheme/Blocks/Alert/Edit';
 
 import SearchSectionsView from '@italia/components/ItaliaTheme/Blocks/SearchSections/View';
 import SearchSectionsEdit from '@italia/components/ItaliaTheme/Blocks/SearchSections/Edit';
+import ArgumentsInEvidenceEdit from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Edit';
+import ArgumentsInEvidenceView from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/View';
 
 import titleSVG from '@plone/volto/icons/text.svg';
 import ArgomentoTitleView from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/View';
 import ArgomentoTitleEdit from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/Edit';
 
 import { CharCounterDescriptionWidget } from '@italia/components/ItaliaTheme';
+import { PageView } from '@italia/components/ItaliaTheme';
 import { NewsItemView } from '@italia/components/ItaliaTheme';
 import { UOView } from '@italia/components/ItaliaTheme';
 import { PersonaView } from '@italia/components/ItaliaTheme';
 import { ServizioView } from '@italia/components/ItaliaTheme';
 import { PaginaArgomentoView } from '@italia/components/ItaliaTheme';
-import NewsTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/NewsTemplate';
+
+import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
 import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate';
 import PhotogalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
 import InEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate';
-import ArgumentListingTemplate from  '@italia/components/ItaliaTheme/Blocks/Listing/ArgumentListingTemplate';
+import SimpleCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplate';
+import GridGalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate';
+import RibbonCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate';
 
 import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
 import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
@@ -67,7 +74,7 @@ const extendedBlockRenderMap = config.settings.extendedBlockRenderMap.update(
   (element = 'p') => element,
 );
 
-const blockStyleFn = contentBlock => {
+const blockStyleFn = (contentBlock) => {
   let r = config.settings.blockStyleFn(contentBlock);
 
   if (!r) {
@@ -110,9 +117,25 @@ const customBlocks = {
     id: 'searchSections',
     title: 'Ricerca nelle sezioni',
     icon: searchIcon,
-    group: 'text',
+    group: 'homePage',
     view: SearchSectionsView,
     edit: SearchSectionsEdit,
+    restricted: false,
+    mostUsed: false,
+    blockHasOwnFocusManagement: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
+  argumentsInEvidence: {
+    id: 'argumentsInEvidence',
+    title: 'Argomenti in evidenza',
+    icon: noteSvg,
+    group: 'homePage',
+    view: ArgumentsInEvidenceView,
+    edit: ArgumentsInEvidenceEdit,
     restricted: false,
     mostUsed: false,
     blockHasOwnFocusManagement: true,
@@ -158,9 +181,10 @@ const customBlocks = {
     ...config.blocks.blocksConfig.listing,
     templates: {
       ...config.blocks.blocksConfig.listing.templates,
-      newsTemplate: {
-        label: 'Notizie',
-        template: NewsTemplate,
+      default: { label: 'Card semplice', template: SimpleCardTemplate },
+      cardWithImageTemplate: {
+        label: 'Card con immagine',
+        template: CardWithImageTemplate,
       },
       smallBlockLinksTemplate: {
         label: 'Blocco link solo immagini',
@@ -178,10 +202,14 @@ const customBlocks = {
         label: 'In evidenza',
         template: InEvidenceTemplate,
       },
-      argumentListingTemplate: {
-        label: 'Lista argomenti',
-        template: ArgumentListingTemplate,
-      }
+      gridGalleryTemplate: {
+        label: 'Gallery a griglia',
+        template: GridGalleryTemplate,
+      },
+      ribbonCardTemplate: {
+        label: 'Card con nastro',
+        template: RibbonCardTemplate,
+      },
     },
   },
   rssBlock,
@@ -218,6 +246,7 @@ export const views = {
   ...config.views,
   contentTypesViews: {
     ...config.views.contentTypesViews,
+    Document: PageView,
     'News Item': NewsItemView,
     UnitaOrganizzativa: UOView,
     Persona: PersonaView,
@@ -232,18 +261,21 @@ export const widgets = {
     ...config.widgets.id,
     description: CharCounterDescriptionWidget,
     cookie_consent_configuration: MultilingualWidget(),
-    data_conclusione_incarico: props => (
+    data_conclusione_incarico: (props) => (
       <DatetimeWidget {...props} dateOnly={true} />
     ),
-    data_insediamento: props => <DatetimeWidget {...props} dateOnly={true} />,
+    data_insediamento: (props) => <DatetimeWidget {...props} dateOnly={true} />,
   },
 };
 
-const customBlocksOrder = [{ id: 'news', title: 'News' }];
+const customBlocksOrder = [
+  { id: 'news', title: 'News' },
+  { id: 'homePage', title: 'Home Page' },
+];
 const customInitialBlocks = {
   'Pagina Argomento': ['title', 'description', 'text'],
 };
-const customRequiredBlocks = ['description']
+const customRequiredBlocks = ['description'];
 
 // BUG#10398
 // We chose to disallow leadimage block usage in editor. If you want it back someday,
@@ -255,7 +287,9 @@ export const blocks = {
   blocksConfig: { ...config.blocks.blocksConfig, ...customBlocks },
   groupBlocksOrder: config.blocks.groupBlocksOrder.concat(customBlocksOrder),
   initialBlocks: { ...config.blocks.initialBlocks, ...customInitialBlocks },
-  requiredBlocks: { ...config.blocks.requiredBlocks.concat(...customRequiredBlocks) },
+  requiredBlocks: {
+    ...config.blocks.requiredBlocks.concat(...customRequiredBlocks),
+  },
 };
 
 export const addonReducers = { ...config.addonReducers };

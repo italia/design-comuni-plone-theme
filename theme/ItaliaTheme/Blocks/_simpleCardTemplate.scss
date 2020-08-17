@@ -1,0 +1,82 @@
+.simple-card-default {
+  .data:before {
+    content: none;
+  }
+
+  .card.card-teaser {
+    &:after {
+      content: none;
+    }
+
+    .categoryicon-top .icon {
+      width: 32px;
+      height: 32px;
+      fill: $secondary;
+      font-weight: 600;
+    }
+
+    .card-body {
+      a {
+        &:link,
+        &:visited {
+          text-decoration: none;
+        }
+      }
+
+      a {
+        &:hover,
+        &:active {
+          text-decoration: underline;
+        }
+      }
+
+      .card-title {
+        margin-bottom: 10px;
+        a {
+          &:hover,
+          &:active {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .it-card-footer {
+      flex: 1 1 100%;
+      align-self: flex-end;
+
+      a {
+        &:hover,
+        &:active {
+          text-decoration: underline;
+        }
+
+        &:link,
+        &:visited {
+          text-decoration: none;
+        }
+      }
+
+      .icon {
+        min-width: unset;
+      }
+    }
+  }
+
+  .link-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0;
+  }
+}
+
+.simple-card-compact-template {
+  .card-teaser-wrapper {
+    &.card-teaser-block-3 {
+      & > .card-teaser {
+        flex-wrap: nowrap;
+      }
+    }
+  }
+}
