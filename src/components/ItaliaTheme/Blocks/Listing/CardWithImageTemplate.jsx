@@ -7,7 +7,7 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import { useIntl } from 'react-intl';
 import moment from 'moment';
 import 'moment/min/locales';
-
+import { getIcon } from '@italia/helpers/index';
 import {
   Container,
   Row,
@@ -17,6 +17,9 @@ import {
   CardTitle,
   CardCategory,
   CardText,
+  Icon,
+  Chip,
+  ChipLabel,
 } from 'design-react-kit/dist/design-react-kit';
 
 const CardWithImageTemplate = ({
@@ -85,11 +88,26 @@ const CardWithImageTemplate = ({
                               />
                             </figure>
                           </ConditionalLink>
+                          {/* Solo per tipo evento, aggiungere if quando pronto */}
+                          <div className="card-calendar d-flex flex-column justify-content-center">
+                            <span className="card-date">
+                              {moment(item.effective).format('D')}
+                            </span>
+                            <span className="card-day">
+                              {moment(item.effective).format('MMMM')}
+                            </span>
+                          </div>
                         </div>
                       </div>
                     )}
                     <CardBody>
                       <CardCategory date={date}>
+                        <Icon
+                          className='icon'
+                          color="primary"
+                          icon={getIcon(item['@type'])}
+                          padding={false}
+                        />
                         {item?.design_italia_meta_type}
                       </CardCategory>
                       <CardTitle tag="h4">
@@ -97,9 +115,29 @@ const CardWithImageTemplate = ({
                           {item.title || item.id}
                         </Link>
                       </CardTitle>
-                      {item.description && (
-                        <CardText>{item.description}</CardText>
-                      )}
+                      {item.description && <CardText>{item.description}</CardText>}
+                      {
+                        item.tassonomia_argomenti?.map((argument, index) => (
+                          <Link
+                            to={flattenToAppURL(argument['@id'])}
+                            key={index}
+                            title={argument.title}
+                            className="text-decoration-none"
+                          >
+                            <Chip
+                              color="primary"
+                              disabled={false}
+                              simple
+                              tag="div"
+                              className="mr-2"
+                            >
+                              <ChipLabel tag="span">
+                                {argument.title}
+                              </ChipLabel>
+                            </Chip>
+                          </Link>
+                        ))
+                      } 
                     </CardBody>
                   </Card>
                 </Col>
