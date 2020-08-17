@@ -79,7 +79,7 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
           />
           {data?.query?.length === 0 &&
             content.items_total > settings.defaultPageSize && (
-              <div className="pagination-wrapper">
+              <div className="pagination-wrapper public-ui">
                 <Pagination
                   activePage={currentPage}
                   totalPages={Math.ceil(
@@ -93,7 +93,7 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
           {data?.query?.length > 0 &&
             querystringResults[data.block].total >
               (data.b_size || settings.defaultPageSize) && (
-              <div className="pagination-wrapper">
+              <div className="pagination-wrapper public-ui">
                 <Pagination
                   activePage={currentPage}
                   totalPages={Math.ceil(
