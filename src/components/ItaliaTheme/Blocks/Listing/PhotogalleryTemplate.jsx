@@ -79,8 +79,6 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
               </Slider>
             </div>
           </div>
-
-
         </Container>
       </div>
     </div>
