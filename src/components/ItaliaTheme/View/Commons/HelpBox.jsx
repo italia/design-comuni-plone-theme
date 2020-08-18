@@ -5,7 +5,6 @@ import {
   Callout,
   CalloutTitle,
 } from 'design-react-kit/dist/design-react-kit';
-import RichTextArticle from './RichTextArticle';
 
 const HelpBox = ({ text }) => {
   return text ? (
@@ -22,11 +21,6 @@ const HelpBox = ({ text }) => {
         />
       </CalloutTitle>
 
-      {/* <RichTextArticle
-        content={text?.data.replace(/(<([^>]+)>)/g, '')}
-        tag_id={'help-box'}
-        title={null}
-      /> */}
       <p>{text?.data.replace(/(<([^>]+)>)/g, '')}</p>
     </Callout>
   ) : null;
