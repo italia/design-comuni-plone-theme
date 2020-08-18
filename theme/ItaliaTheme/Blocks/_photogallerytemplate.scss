@@ -1,16 +1,33 @@
-.small-block-links {
+.photogallery {
   margin: 40px 0;
 
   .col-item {
     margin-bottom: 22px;
   }
 
-  img {
+  .img-wrapper img {
     width: 100%;
-    height: auto;
+    height: 230px;
   }
 
   .title {
     margin-bottom: 60px;
   }
+
+  .slick-prev {
+    outline: none!important;
+    &:before {
+      color: $primary;
+      background-color: #eee;
+    }
+  }
+
+  .slick-next {
+    outline: none!important;
+    &:before {
+      color: $primary;
+      background-color: #eee;
+    }
+  }
+
 }
