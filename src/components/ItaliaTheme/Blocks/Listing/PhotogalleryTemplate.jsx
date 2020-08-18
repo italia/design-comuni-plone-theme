@@ -63,7 +63,7 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
               <Slider {...settings}>
                 {items.map((item, i) => (
                   <div className="it-single-slide-wrapper" key={item['@id']}>
-                    <figure class="img-wrapper">
+                    <figure className="img-wrapper">
                       {item.image && (
                             <img
                               src={flattenToAppURL(
