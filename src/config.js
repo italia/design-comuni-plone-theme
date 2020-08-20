@@ -53,6 +53,26 @@ import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssB
 import CardWithoutImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
 import { DatetimeWidget } from '@plone/volto/config/Widgets';
 import { MultilingualWidget } from '@italia/addons/volto-multilingual-widget';
+import { ArgumentIconWidget } from '@italia/components/ItaliaTheme';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import * as Icons from '@fortawesome/free-solid-svg-icons';
+
+// import { faBaby, faHandHoldingHeart, faChild, faHouseUser, faUserGraduate, faUsers, faSchool, faHome, faPaw, faPeopleArrows,
+//          faPrayingHands, faFileAlt, faComments, faLandmark, faCity, faMicroscope, faChalkboardTeacher, faHardHat, faBus, faHeart,
+//          faPersonBooth, faTheaterMasks, faBook, faPassport, faSmog, faParking, faTrafficLight, faWater, faRecycle, faHeartbeat,
+//          faUserShield, faGlobeEurope, faTree, faVolleyballBall, faCar, faLuggageCart, faPlug, faLaptopCode } from '@fortawesome/free-solid-svg-icons'
+
+// library.add(faBaby, faHandHoldingHeart, faChild, faHouseUser, faUserGraduate, faUsers, faSchool, faHome, faPaw, faPeopleArrows,
+//             faPrayingHands, faFileAlt, faComments, faLandmark, faCity, faMicroscope, faChalkboardTeacher, faHardHat, faBus, faHeart,
+//             faPersonBooth, faTheaterMasks, faBook, faPassport, faSmog, faParking, faTrafficLight, faWater, faRecycle, faHeartbeat,
+//             faUserShield, faGlobeEurope, faTree, faVolleyballBall, faCar, faLuggageCart, faPlug, faLaptopCode)
+ 
+const iconList = Object
+  .keys(Icons)
+  .filter(key => key !== "fas" && key !== "prefix" )
+  .map(icon => Icons[icon])
+
+library.add(...iconList)
 
 const rssBlock = {
   ...customRssBlock,
@@ -260,6 +280,7 @@ export const widgets = {
   id: {
     ...config.widgets.id,
     description: CharCounterDescriptionWidget,
+    icona: ArgumentIconWidget,
     cookie_consent_configuration: MultilingualWidget(),
     data_conclusione_incarico: (props) => (
       <DatetimeWidget {...props} dateOnly={true} />
