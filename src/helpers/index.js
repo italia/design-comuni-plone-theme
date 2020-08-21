@@ -4,3 +4,5 @@
  * @example
  * export { Api } from './Api/Api';
  */
+
+ export { defaultIconWidgetOptions } from '@italia/helpers/IconWidget/IconWidgetHelper';
