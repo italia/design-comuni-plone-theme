@@ -68,8 +68,8 @@ const IconWidget = ({
       />
       <IconPreviewWidget
         icon={iconString}
-        description={intl.formatMessage(messages.description)}
       >
+        {intl.formatMessage(messages.description)}
         <span className="ml-4">
           <a target="_blank" href='https://fontawesome.com/icons?d=gallery'>
             <FontAwesomeIcon icon={'arrow-right'}/>
