@@ -153,8 +153,18 @@ const Search = () => {
     novita: {},
     'documenti-e-dati': {},
   });
+
   const [topics, setTopics] = useState({});
-  const [options, setOptions] = useState({ ...SearchUtils.defaultOptions });
+
+  const [options, setOptions] = useState({
+    ...SearchUtils.defaultOptions,
+    ...parseFetchedOptions({}, location),
+  });
+
+  const [customPath, setCustomPath] = useState(
+    qs.parse(location.search)?.custom_path ?? '',
+  );
+
   const [sortOn, setSortOn] = useState('relevance');
   const [currentPage, setCurrentPage] = useState(1);
   const [collapseFilters, setCollapseFilters] = useState(true);
@@ -234,6 +244,7 @@ const Search = () => {
       options,
       searchOrderDict[sortOn] ?? {},
       (currentPage - 1) * settings.defaultPageSize,
+      customPath,
     );
 
     searchResults.result &&
@@ -245,6 +256,7 @@ const Search = () => {
           options,
           searchOrderDict[sortOn] ?? {},
           (currentPage - 1) * settings.defaultPageSize,
+          customPath,
         ),
       );
     dispatch(getSearchResults(queryString.replace('/search', '')));

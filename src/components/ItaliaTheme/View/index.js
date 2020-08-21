@@ -17,6 +17,8 @@ export Attachment from '@italia/components/ItaliaTheme/View/Commons/Attachment';
 export Attachments from '@italia/components/ItaliaTheme/View/Commons/Attachments';
 export CuredBy from '@italia/components/ItaliaTheme/View/Commons/CuredBy';
 export Metadata from '@italia/components/ItaliaTheme/View/Commons/Metadata';
+export SearchSectionForm from '@italia/components/ItaliaTheme/View/Commons/SearchSectionForm';
+export PageHeaderNav from '@italia/components/ItaliaTheme/View/Commons/PageHeaderNav';
 
 export GenericCard from '@italia/components/ItaliaTheme/View/Commons/GenericCard';
 export NewsCard from '@italia/components/ItaliaTheme/View/Commons/NewsCard';

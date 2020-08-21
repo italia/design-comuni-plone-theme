@@ -60,6 +60,17 @@ h6 {
       color: $primary;
       font-size: 18px;
       line-height: 26px;
+  .genericcard {
+    .card-title {
+      margin: 0 !important;
+      margin-bottom: 10px !important;
+      line-height: 1rem;
+
+      a {
+        color: $primary;
+        font-size: 18px;
+        line-height: 26px;
+      }
     }
   }
 

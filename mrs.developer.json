@@ -18,5 +18,10 @@
     "package": "@italia/addons/volto-venue",
     "path": "src",
     "url": "git@github.com:collective/volto-venue.git"
+  },
+  "volto-subblocks": {
+    "package": "@italia/addons/volto-subblocks",
+    "path": "src",
+    "url": "git@github.com:collective/volto-subblocks.git"
   }
 }

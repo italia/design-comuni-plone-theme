@@ -1252,9 +1252,9 @@
     regenerator-runtime "^0.13.4"
 
 "@babel/runtime@^7.9.2":
-  version "7.11.0"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.11.0.tgz#f10245877042a815e07f7e693faff0ae9d3a2aac"
-  integrity sha512-qArkXsjJq7H+T86WrIFV0Fnu/tNOkZ4cgXmjkzAu3b/58D5mFIO8JH/y77t7C9q0OdDRdh9s7Ue5GasYssxtXw==
+  version "7.11.2"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.11.2.tgz#f549c13c754cc40b87644b9fa9f09a6a95fe0736"
+  integrity sha512-TeWkU52so0mPtDcaCTxNBI/IHiz0pZgr8VEFqXFtZWpYD08ZB6FaSwVAS8MKRQAP3bYKiVjwysOJgMFY28o6Tw==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -1932,7 +1932,7 @@
 
 "@plone/volto@plone/volto#split_styles_test":
   version "7.5.1"
-  resolved "https://codeload.github.com/plone/volto/tar.gz/8e2af3362d09c3b083d66589cbc1ebb7d1c93d7a"
+  resolved "https://codeload.github.com/plone/volto/tar.gz/8ae930b456b5235bf2e71e864a6c6029a1ea0c9a"
   dependencies:
     "@babel/core" "7.9.6"
     "@babel/plugin-proposal-decorators" "7.8.3"
@@ -13918,7 +13918,7 @@ react-dev-utils@^10.2.0:
     strip-ansi "6.0.0"
     text-table "0.2.0"
 
-react-dnd-html5-backend@5.0.1:
+react-dnd-html5-backend@5.0.1, react-dnd-html5-backend@ˆ5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/react-dnd-html5-backend/-/react-dnd-html5-backend-5.0.1.tgz#0b578d79c5c01317c70414c8d717f632b919d4f1"
   integrity sha1-C1eNecXAExfHBBTI1xf2MrkZ1PE=
@@ -13928,7 +13928,7 @@ react-dnd-html5-backend@5.0.1:
     lodash "^4.17.10"
     shallowequal "^1.0.2"
 
-react-dnd@5.0.0:
+react-dnd@5.0.0, react-dnd@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/react-dnd/-/react-dnd-5.0.0.tgz#c4a17c70109e456dad8906be838e6ee8f32b06b5"
   integrity sha1-xKF8cBCeRW2tiQa+g45u6PMrBrU=
@@ -17483,27 +17483,34 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.0.tgz#bd76d6a23323e2ca8ffa12028dc04559c75f9019"
   integrity sha512-iq+S7vZJE60yejDYM0ek6zg308+UZsdtPExWP9VZoCFCz1zkJoXFnAX7aZfd/ZwrkidzdUZL0C/ryW+JwAiIGw==
 
-volto-cookie-banner@collective/volto-cookie-banner:
-  version "1.0.0"
-  resolved "https://codeload.github.com/collective/volto-cookie-banner/tar.gz/93424d927aa0c7474fec7a70cf592ea9efbe3769"
+volto-cookie-banner@collective/volto-cookie-banner#v1.0.1:
+  version "1.0.1"
+  resolved "https://codeload.github.com/collective/volto-cookie-banner/tar.gz/a0749e60cb2165fe6bf223d0d8412039aa60a320"
   dependencies:
     react-cookie-consent "^3.0.0"
 
-volto-multilingual-widget@collective/volto-multilingual-widget:
-  version "1.0.0"
-  resolved "https://codeload.github.com/collective/volto-multilingual-widget/tar.gz/a0590fd564269a9529609ea3978de11715f4fc03"
+volto-multilingual-widget@collective/volto-multilingual-widget#v1.0.1:
+  version "1.0.1"
+  resolved "https://codeload.github.com/collective/volto-multilingual-widget/tar.gz/5a8478902be211419f372d52311d464e89e2f77e"
   dependencies:
     draft-js-export-html "^1.4.1"
 
-volto-rss-block@redturtle/volto-rss-block:
-  version "0.1.0"
-  resolved "https://codeload.github.com/redturtle/volto-rss-block/tar.gz/3b950dd78290ace0441085e0426cc23602e5beaa"
+volto-rss-block@redturtle/volto-rss-block#v1.0.0:
+  version "1.0.0"
+  resolved "https://codeload.github.com/redturtle/volto-rss-block/tar.gz/14d6d25a5eab6c7dd60be1aff6bfc9a2b44eefb7"
   dependencies:
     rss-parser "3.7.5"
 
-volto-venue@collective/volto-venue:
-  version "0.1.0"
-  resolved "https://codeload.github.com/collective/volto-venue/tar.gz/865797bf14130024f74d0ce595ea37974148b15f"
+volto-subblocks@collective/volto-subblocks#v1.0.0:
+  version "1.0.0"
+  resolved "https://codeload.github.com/collective/volto-subblocks/tar.gz/4f62a72d8cb4f7ab373f14f489f89d0964da211f"
+  dependencies:
+    react-dnd "^5.0.0"
+    react-dnd-html5-backend "ˆ5.0.1"
+
+volto-venue@collective/volto-venue#v1.0.0:
+  version "1.0.0"
+  resolved "https://codeload.github.com/collective/volto-venue/tar.gz/c2dd65c5e7a4b0533acf1ef63e578fd70ef74b88"
   dependencies:
     leaflet "1.6.0"
     react-leaflet "2.7.0"
