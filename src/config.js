@@ -60,7 +60,7 @@ import { defaultArgumentOptions } from '@italia/helpers/index';
 
 const iconList = Object
   .keys(Icons)
-  .filter(key => key !== "fas" && key !== "prefix" )
+  .filter(key => key !== "prefix" )
   .map(icon => Icons[icon])
 
 library.add(...iconList)
