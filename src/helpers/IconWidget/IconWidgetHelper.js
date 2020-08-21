@@ -1,4 +1,4 @@
-export const defaultArgumentOptions = [
+export const defaultIconWidgetOptions = [
   [ "hand-holding-heart", "Anziano"],
   [ "baby", "Fanciullo"],
   [ "child", "Giovane"],

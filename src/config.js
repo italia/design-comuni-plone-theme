@@ -56,7 +56,7 @@ import { MultilingualWidget } from '@italia/addons/volto-multilingual-widget';
 import { IconWidget } from '@italia/components/ItaliaTheme';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import * as Icons from '@fortawesome/free-solid-svg-icons';
-import { defaultArgumentOptions } from '@italia/helpers/index';
+import { defaultIconWidgetOptions } from '@italia/helpers/index';
 
 const iconList = Object
   .keys(Icons)
@@ -271,7 +271,7 @@ export const widgets = {
   id: {
     ...config.widgets.id,
     description: CharCounterDescriptionWidget,
-    icona: (props) => (<IconWidget {...props} defaultOptions={defaultArgumentOptions}/>),
+    icona: (props) => (<IconWidget {...props} defaultOptions={defaultIconWidgetOptions}/>),
     cookie_consent_configuration: MultilingualWidget(),
     data_conclusione_incarico: (props) => (
       <DatetimeWidget {...props} dateOnly={true} />
