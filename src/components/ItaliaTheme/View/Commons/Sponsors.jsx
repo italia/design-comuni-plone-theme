@@ -25,7 +25,12 @@ const Sponsor = ({ item }) => {
     <>
       {!!item.image ? (
         <div className="sponsor-item">
-          <a href={item.remoteUrl} alt="">
+          <a
+            href={item.remoteUrl}
+            alt=""
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <img
               src={flattenToAppURL(item.image.scales.mini.download)}
               alt={item.image.filename}
@@ -35,7 +40,12 @@ const Sponsor = ({ item }) => {
         </div>
       ) : (
         <div className="sponsor-item">
-          <a href={item.remoteUrl} alt="">
+          <a
+            href={item.remoteUrl}
+            alt=""
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {item.title}
           </a>
         </div>
