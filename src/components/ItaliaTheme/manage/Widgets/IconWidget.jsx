@@ -48,9 +48,9 @@ const IconWidget = ({
           value={selectValue}
           intl={intl}
           onChange={(_id, value) => {
-            setSelectValue(value)
-            setIconString(value)
-            onChange(id, value)
+            setSelectValue(value);
+            setIconString(value);
+            onChange(id, value);
           }}
           choices={defaultOptions}
           customOption={CustomSelectOption}
@@ -61,9 +61,9 @@ const IconWidget = ({
         title=""
         value={iconString}
         onChange={(name, value) => {
-          setSelectValue('None')
-          setIconString(value)
-          onChange(id, value)
+          setSelectValue(null);
+          setIconString(value);
+          onChange(id, value);
         }}
       />
       <IconPreviewWidget

@@ -221,10 +221,6 @@ class SelectWidget extends Component {
       };
     }
 
-    if (value === 'None') {
-      return {};
-    }
-
     if (isObject(value)) {
       return {
         label: value.title !== 'None' && value.title ? value.title : value.token,
