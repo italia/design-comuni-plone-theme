@@ -1,11 +1,40 @@
 .supported-by {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .map-header {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .slick-track {
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
+}
+
+.sponsor-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+
+  .sponsor-logos {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .sponsor-item {
+      flex-grow: 1;
+      margin-bottom: 1rem;
+      margin-left: 0.25rem;
+      margin-right: 0.25rem;
+    }
+  }
+
+  .sponsor-no-logos {
+    .sponsor-item {
+      display: block;
+      width: 100%;
+    }
+  }
 }

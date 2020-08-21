@@ -222,7 +222,7 @@ const EventoView = ({ content, location }) => {
               </article>
             )}
 
-            {content?.prezzo?.data.replace(/(<([^>]+)>)/g, '') && (
+            {content?.prezzo?.data?.replace(/(<([^>]+)>)/g, '') && (
               <RichTextArticle
                 content={content?.prezzo?.data}
                 tag_id="costi"
@@ -312,7 +312,22 @@ const EventoView = ({ content, location }) => {
                 isChild={isChildEvent}
               />
             )}
-            {content?.ulteriori_informazioni?.data.replace(
+            {!content?.ulteriori_informazioni?.data?.replace(
+              /(<([^>]+)>)/g,
+              '',
+            ) &&
+            (content?.patrocinato_da ||
+              content?.items?.some((e) => e.id === 'sponsor_evento')) ? (
+              <article
+                id={'ulteriori-informazioni'}
+                className="it-page-section anchor-offset mt-5"
+              >
+                <h4 id={`header-ulteriori-informazioni`}>
+                  Ulteriori informazioni
+                </h4>
+              </article>
+            ) : null}
+            {content?.ulteriori_informazioni?.data?.replace(
               /(<([^>]+)>)/g,
               '',
             ) && (
@@ -336,7 +351,7 @@ const EventoView = ({ content, location }) => {
                 title={'Sponsor:'}
               />
             )} */}
-            {content?.items.some((e) => e.id === 'sponsor_evento') && (
+            {content?.items?.some((e) => e.id === 'sponsor_evento') && (
               <article
                 id="sponsor"
                 className="it-page-section anchor-offset mt-5"
@@ -344,7 +359,7 @@ const EventoView = ({ content, location }) => {
                 <Sponsors content={content} folder_name={'sponsor_evento'} />
               </article>
             )}
-            {content?.box_aiuto?.data.replace(/(<([^>]+)>)/g, '') && (
+            {content?.box_aiuto?.data?.replace(/(<([^>]+)>)/g, '') && (
               <article className="it-page-section anchor-offset mt-5">
                 <HelpBox text={content?.box_aiuto} />
               </article>

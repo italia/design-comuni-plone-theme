@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
+import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
   sponsors: {
@@ -20,8 +21,27 @@ const messages = defineMessages({
  * @returns {string} Markup of the component.
  */
 const Sponsor = ({ item }) => {
-  console.log(item);
-  return <div>{}</div>;
+  return item ? (
+    <>
+      {!!item.image ? (
+        <div className="sponsor-item">
+          <a href={item.remoteUrl} alt="">
+            <img
+              src={flattenToAppURL(item.image.scales.mini.download)}
+              alt={item.image.filename}
+              className="img-fluid"
+            ></img>
+          </a>
+        </div>
+      ) : (
+        <div className="sponsor-item">
+          <a href={item.remoteUrl} alt="">
+            {item.title}
+          </a>
+        </div>
+      )}
+    </>
+  ) : null;
 };
 
 /**
@@ -45,6 +65,7 @@ const Sponsors = ({ content, folder_name, title }) => {
             'path.depth': 1,
             sort_on: 'getObjPositionInParent',
             metadata_fields: '_all',
+            fullobjects: true,
           },
           folder_name,
         ),
@@ -56,24 +77,30 @@ const Sponsors = ({ content, folder_name, title }) => {
   }, [dispatch, content, url, folder_name]);
 
   const sponsors = searchResults?.[folder_name]?.items || [];
+  const sponsors_no_logos = sponsors.filter((sponsor) => !sponsor.image);
+  const sponsors_logos = sponsors.filter((sponsor) => sponsor.image);
   return (
     <>
       {sponsors?.length > 0 ? (
-        <article
-          id={folder_name}
-          className="it-page-section anchor-offset mt-5"
-        >
+        <>
           {title ? (
-            <h4>{title}</h4>
+            <strong>{`${title}:`}</strong>
           ) : (
-            <h4>{intl.formatMessage(messages.sponsors)}</h4>
+            <strong>{`${intl.formatMessage(messages.sponsors)}:`}</strong>
           )}
-          <div className="">
-            {sponsors.map((item, i) => (
-              <Sponsor key={item['@id']} item={item} />
-            ))}
+          <div className="sponsor-wrapper">
+            <div className="sponsor-logos">
+              {sponsors_logos.map((item, i) => (
+                <Sponsor key={item['@id']} item={item} />
+              ))}
+            </div>
+            <div className="sponsor-no-logos">
+              {sponsors_no_logos.map((item, i) => (
+                <Sponsor key={item['@id']} item={item} />
+              ))}
+            </div>
           </div>
-        </article>
+        </>
       ) : null}
     </>
   );
