@@ -22,6 +22,7 @@ import {
   Dates,
   TextOrBlocks,
   EventLocations,
+  Sponsors,
 } from '@italia/components/ItaliaTheme/View';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -328,12 +329,20 @@ const EventoView = ({ content, location }) => {
                 title={'Patrocinato da:'}
               />
             )}
-            {content?.sponsor?.data.replace(/(<([^>]+)>)/g, '') && (
+            {/* {content?.sponsor?.data.replace(/(<([^>]+)>)/g, '') && (
               <RichTextArticle
                 content={content?.sponsor?.data}
                 tag_id="sponsor"
                 title={'Sponsor:'}
               />
+            )} */}
+            {content?.items.some((e) => e.id === 'sponsor_evento') && (
+              <article
+                id="sponsor"
+                className="it-page-section anchor-offset mt-5"
+              >
+                <Sponsors content={content} folder_name={'sponsor_evento'} />
+              </article>
             )}
             {content?.box_aiuto?.data.replace(/(<([^>]+)>)/g, '') && (
               <article className="it-page-section anchor-offset mt-5">
