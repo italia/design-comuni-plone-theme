@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { defineMessages, useIntl } from 'react-intl';
+import { Form, Grid, Label } from 'semantic-ui-react';
 
 const messages = defineMessages({
   previewIconSelected: {
@@ -20,34 +21,44 @@ const IconPreviewWidget = ({
   const intl = useIntl();
 
   return (
-    <div className="inline field text">
-      <div className="ui grid">
-        <div className="stretched row">
-          <div className="four wide column">
+    <Form.Field
+        inline
+        className='help'
+        id='icon-preview-widget-id'
+      >
+      <Grid>
+        <Grid.Row stretched>
+          <Grid.Column width="4">
             <div className="wrapper">
-              <label for="field-selectIcon">{title}</label>
+              <label htmlFor='icon-preview-widget-id'>
+                {title}
+              </label>
             </div>
-          </div>
-          <div className="eight wide column">
+          </Grid.Column>
+          <Grid.Column width={8}>
             <div className="ui input flex-center">
-              {icon ? 
-                <FontAwesomeIcon icon={icon} className="show-icon"/>
-                : 
-                <span className="text-icon">{intl.formatMessage(messages.previewIconSelected)}</span>
-              }
-            </div>
-          </div>
-        </div>
-        <div className="stretched row">
-          <div className="stretched twelve wide column">
-            <p className="help">
+              <p className="help">
+                {icon ? 
+                  <FontAwesomeIcon icon={icon} className="show-icon"/>
+                  : 
+                  <span className="text-icon">{intl.formatMessage(messages.previewIconSelected)}</span>
+                }
+              </p>
+            </div>  
+          </Grid.Column>
+        </Grid.Row>
+        {(description || children) && (
+          <Grid.Row stretched>
+            <Grid.Column stretched width="12">
+              <p className="help">
               {description}
               {children}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+              </p>
+            </Grid.Column>
+          </Grid.Row>
+        )}
+      </Grid>
+    </Form.Field>
   )
 }
 
