@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-08-20T10:31:05.378Z\n"
+"POT-Creation-Date: 2020-08-21T08:55:03.804Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -811,11 +811,13 @@ msgstr ""
 msgid "grid-gallery-max-items-exceeded"
 msgstr ""
 
+#: components/ItaliaTheme/manage/Widgets/ArgumentIconWidget
 #: components/ItaliaTheme/manage/Widgets/IconWidget
 # defaultMessage: Icona
 msgid "icon"
 msgstr ""
 
+#: components/ItaliaTheme/manage/Widgets/IconPreviewWidget
 #: components/ItaliaTheme/manage/Widgets/IconWidget
 # defaultMessage: Puoi selezionare un’icona fra quelle proposte nel menu a tendina oppure puoi scrivere/incollare nel campo di testo il nome di un’icona di fontawsome 5
 msgid "iconDescription"
@@ -1006,6 +1008,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/View
 # defaultMessage: A PORTATA DI CLICK
 msgid "portata_di_click"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/IconPreviewWidget
+# defaultMessage: Anteprima dell'icona scelta
+msgid "previewIconSelected"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Actions

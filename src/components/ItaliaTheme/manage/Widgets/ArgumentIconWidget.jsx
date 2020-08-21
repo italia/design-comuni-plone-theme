@@ -4,16 +4,13 @@ import { defineMessages, useIntl } from 'react-intl';
 import { TextWidget, SelectWidget } from '@plone/volto/components';
 import { components } from 'react-select';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import IconPreviewWidget from '@italia/components/ItaliaTheme/manage/Widgets/IconPreviewWidget'
 
 const messages = defineMessages({
   icon: {
     id: 'icon',
     defaultMessage: 'Icona',
-  },
-  description: {
-    id: 'iconDescription',
-    defaultMessage: 'Puoi selezionare un’icona fra quelle proposte nel menu a tendina oppure puoi scrivere/incollare nel campo di testo il nome di un’icona di fontawsome 5',
-  },
+  }
 });
 
 const IconWidget = ({
@@ -66,15 +63,6 @@ const IconWidget = ({
   const [iconString, setIconString] = useState(value);
   const [selectValue, setSelectValue] = useState(value);
 
-  const customSingleValue = ({ data }) => (
-    <div className="public-ui input-select">
-        <div className="input-select__single-value">
-            <FontAwesomeIcon icon={faBaby} />
-            <span>{ data.label }</span>
-        </div>
-    </div>
-  );
-
   const { Option } = components
   const CustomSelectOption = (props) => {
     return (
@@ -113,37 +101,9 @@ const IconWidget = ({
           onChange(id, value)
         }}
       />
-      <div className="inline field text">
-        <div className="ui grid">
-          <div className="stretched row">
-            <div className="four wide column">
-              <div className="wrapper">
-              </div>
-            </div>
-            <div className="eight wide column">
-              <div className="ui input flex-center">
-                {iconString ? 
-                  <FontAwesomeIcon icon={iconString} className="show-icon"/>
-                  : 
-                  <span className="text-icon">Anteprima dell'icona scelta</span>
-                }
-              </div>
-            </div>
-          </div>
-          <div className="stretched row">
-            <div className="stretched twelve wide column">
-              <p className="help">
-                {intl.formatMessage(messages.description)}
-                <span className="ml-4">
-                  <a target="_blank" href='https://fontawesome.com/icons?d=gallery'>
-                    <FontAwesomeIcon icon={'arrow-right'}/>
-                  </a>
-                </span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <IconPreviewWidget
+        icon={iconString}
+      />
     </div>
   )
 }

@@ -679,10 +679,12 @@ msgstr "Selezionato"
 msgid "grid-gallery-max-items-exceeded"
 msgstr "Per questo template il numero di risultati per pagina deve essere 7. Controlla le impostazioni."
 
+#: components/ItaliaTheme/manage/Widgets/ArgumentIconWidget
 #: components/ItaliaTheme/manage/Widgets/IconWidget
 msgid "icon"
 msgstr "Icona"
 
+#: components/ItaliaTheme/manage/Widgets/IconPreviewWidget
 #: components/ItaliaTheme/manage/Widgets/IconWidget
 msgid "iconDescription"
 msgstr "Puoi selezionare un’icona fra quelle proposte nel menu a tendina oppure puoi scrivere/incollare nel campo di testo il nome di un’icona di fontawsome 5"
@@ -842,6 +844,10 @@ msgstr "Testo di aiuto"
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/View
 msgid "portata_di_click"
 msgstr "A PORTATA DI CLICK"
+
+#: components/ItaliaTheme/manage/Widgets/IconPreviewWidget
+msgid "previewIconSelected"
+msgstr "Anteprima dell'icona scelta"
 
 #: components/DesignTheme/View/Commons/Actions
 #: components/ItaliaTheme/View/Commons/Actions

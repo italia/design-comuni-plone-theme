@@ -686,10 +686,12 @@ msgstr ""
 msgid "grid-gallery-max-items-exceeded"
 msgstr ""
 
+#: components/ItaliaTheme/manage/Widgets/ArgumentIconWidget
 #: components/ItaliaTheme/manage/Widgets/IconWidget
 msgid "icon"
 msgstr ""
 
+#: components/ItaliaTheme/manage/Widgets/IconPreviewWidget
 #: components/ItaliaTheme/manage/Widgets/IconWidget
 msgid "iconDescription"
 msgstr ""
@@ -848,6 +850,10 @@ msgstr ""
 #: components/DesignTheme/Blocks/ArgomentoTitle/View
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/View
 msgid "portata_di_click"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/IconPreviewWidget
+msgid "previewIconSelected"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Actions
