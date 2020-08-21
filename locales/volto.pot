@@ -811,7 +811,7 @@ msgstr ""
 msgid "grid-gallery-max-items-exceeded"
 msgstr ""
 
-#: components/ItaliaTheme/manage/Widgets/ArgumentIconWidget
+#: components/ItaliaTheme/manage/Widgets/IconWidget
 #: components/ItaliaTheme/manage/Widgets/IconWidget
 # defaultMessage: Icona
 msgid "icon"

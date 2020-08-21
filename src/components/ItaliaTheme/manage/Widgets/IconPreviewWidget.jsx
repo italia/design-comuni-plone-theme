@@ -4,10 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { defineMessages, useIntl } from 'react-intl';
 
 const messages = defineMessages({
-  description: {
-    id: 'iconDescription',
-    defaultMessage: 'Puoi selezionare un’icona fra quelle proposte nel menu a tendina oppure puoi scrivere/incollare nel campo di testo il nome di un’icona di fontawsome 5',
-  },
   previewIconSelected: {
     id: 'previewIconSelected',
     defaultMessage: "Anteprima dell'icona scelta"
@@ -16,7 +12,10 @@ const messages = defineMessages({
 
 const IconPreviewWidget = ({
   icon,
-  description
+  onEdit,
+  title,
+  description,
+  children
 }) => {
   const intl = useIntl();
 
@@ -26,7 +25,7 @@ const IconPreviewWidget = ({
         <div className="stretched row">
           <div className="four wide column">
             <div className="wrapper">
-              <label for="field-selectIcon">{description}</label>
+              <label for="field-selectIcon">{title}</label>
             </div>
           </div>
           <div className="eight wide column">
@@ -42,12 +41,8 @@ const IconPreviewWidget = ({
         <div className="stretched row">
           <div className="stretched twelve wide column">
             <p className="help">
-              {intl.formatMessage(messages.description)}
-              <span className="ml-4">
-                <a target="_blank" href='https://fontawesome.com/icons?d=gallery'>
-                  <FontAwesomeIcon icon={'arrow-right'}/>
-                </a>
-              </span>
+              {description}
+              {children}
             </p>
           </div>
         </div>
@@ -63,6 +58,7 @@ const IconPreviewWidget = ({
  */
 IconPreviewWidget.propTypes = {
   icon: PropTypes.string,
+  title: PropTypes.string,
   description: PropTypes.string,
 };
 
