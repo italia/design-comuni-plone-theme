@@ -3,11 +3,49 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    infinite: true,
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
     <div
-      className={cx('small-block-links', {
+      className={cx('photogallery', {
         'public-ui': isEditMode,
       })}
     >
@@ -20,20 +58,27 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
               </Col>
             </Row>
           )}
-          <Row className="items">
-            {items.map((item, index) => (
-              <Col md="4" key={item['@id']} className="col-item">
-                <div style={{ padding: '14px' }}>
-                  {item.image && (
-                    <img
-                      src={flattenToAppURL(item.image.scales.preview.download)}
-                      alt={item.title}
-                    />
-                  )}
-                </div>
-              </Col>
-            ))}
-          </Row>
+          <div className="slider-container">
+            <div className="it-carousel-all it-card-bg">
+              <Slider {...settings}>
+                {items.map((item, i) => (
+                  <div className="it-single-slide-wrapper" key={item['@id']}>
+                    <figure className="img-wrapper">
+                      {item.image && (
+                            <img
+                              src={flattenToAppURL(
+                                item?.image?.scales?.preview?.download,
+                              )}
+                              alt={item.title}
+                              className="img-fluid"
+                            ></img>
+                      )}
+                    </figure>
+                  </div>
+                ))}
+              </Slider>
+            </div>
+          </div>
         </Container>
       </div>
     </div>
