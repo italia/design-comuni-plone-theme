@@ -29,7 +29,7 @@ const IconPreviewWidget = ({
             </div>
           </div>
           <div className="eight wide column">
-            <div className="ui input icon-preview">
+            <div className="ui input flex-center">
               {icon ? 
                 <FontAwesomeIcon icon={icon} className="show-icon"/>
                 : 
