@@ -335,7 +335,6 @@ class SelectWidget extends Component {
                 label:
                   // Fix "None" on the serializer, to remove when fixed in p.restapi
                   option[1] !== 'None' && option[1] ? option[1] : option[0],
-                icon: option[2],
               })),
               {
                 label: this.props.intl.formatMessage(messages.no_value),
