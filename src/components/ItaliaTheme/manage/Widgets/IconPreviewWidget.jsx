@@ -41,7 +41,7 @@ const IconPreviewWidget = ({
                 {icon ? 
                   <FontAwesomeIcon icon={icon} className="show-icon"/>
                   : 
-                  <span className="text-icon">{intl.formatMessage(messages.previewIconSelected)}</span>
+                  <span>{intl.formatMessage(messages.previewIconSelected)}</span>
                 }
               </p>
             </div>  
