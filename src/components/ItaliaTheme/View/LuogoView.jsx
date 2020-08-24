@@ -87,7 +87,7 @@ const LuogoView = ({ content }) => {
 
   return (
     <>
-      <div className="container px-4 my-4 persona-view">
+      <div className="container px-4 my-4 luogo-view">
         <PageHeader
           content={content}
           readingtime={null}
