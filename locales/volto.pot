@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-08-21T08:55:03.804Z\n"
+"POT-Creation-Date: 2020-08-24T15:02:59.212Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -504,6 +504,7 @@ msgstr ""
 #: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
 #: components/DesignTheme/View/ServizioView
 #: components/DesignTheme/View/UOView
+#: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/UOView
@@ -539,6 +540,11 @@ msgstr ""
 #: components/ItaliaTheme/View/ServizioView
 # defaultMessage: Chi può presentare domanda
 msgid "chi_puo_presentare"
+msgstr ""
+
+#: components/ItaliaTheme/View/LuogoView
+# defaultMessage: Circoscrizione
+msgid "circoscrizione"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/SideMenu
@@ -592,6 +598,11 @@ msgstr ""
 #: components/ItaliaTheme/View/PersonaView
 # defaultMessage: Contatti
 msgid "contacts"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+# defaultMessage: Contatti
+msgid "contatti"
 msgstr ""
 
 #: addons/volto-cookie-banner/src/CookieBannerContainer
@@ -659,6 +670,11 @@ msgstr ""
 msgid "date"
 msgstr ""
 
+#: components/ItaliaTheme/View/EventoView
+# defaultMessage: Date e orari
+msgid "date_e_orari"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 # defaultMessage: Default
 msgid "default"
@@ -674,6 +690,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Link rapidi
 msgid "desc"
+msgstr ""
+
+#: components/ItaliaTheme/View/LuogoView
+# defaultMessage: Descrizione
+msgid "descrizione"
 msgstr ""
 
 #: components/DesignTheme/View/ServizioView
@@ -695,6 +716,7 @@ msgid "detail_link_label"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Locations
+#: components/ItaliaTheme/View/Commons/EventLocations
 #: components/ItaliaTheme/View/Commons/Locations
 # defaultMessage: Maggiori dettagli
 msgid "details"
@@ -728,6 +750,11 @@ msgstr ""
 msgid "download"
 msgstr ""
 
+#: components/ItaliaTheme/View/LuogoView
+# defaultMessage: Elementi di interesse
+msgid "elementi_di_interesse"
+msgstr ""
+
 #: components/DesignTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView
 # defaultMessage: Email
@@ -738,6 +765,26 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/NewsHome/Edit
 # defaultMessage: Please select an item in the sidebar in order to show it here
 msgid "emptySelection"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/Dates
+# defaultMessage: Fine evento
+msgid "end"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/Events
+# defaultMessage: Eventi
+msgid "event_title"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+# defaultMessage: Informazioni
+msgid "event_ulteriori_informazioni"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/Events
+# defaultMessage: Appuntamenti
+msgid "events"
 msgstr ""
 
 #: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
@@ -811,13 +858,13 @@ msgstr ""
 msgid "grid-gallery-max-items-exceeded"
 msgstr ""
 
-#: components/ItaliaTheme/manage/Widgets/IconWidget
+#: components/ItaliaTheme/manage/Widgets/ArgumentIconWidget
 #: components/ItaliaTheme/manage/Widgets/IconWidget
 # defaultMessage: Icona
 msgid "icon"
 msgstr ""
 
-#: components/ItaliaTheme/manage/Widgets/IconPreviewWidget
+#: components/ItaliaTheme/manage/Widgets/ArgumentIconWidget
 #: components/ItaliaTheme/manage/Widgets/IconWidget
 # defaultMessage: Puoi selezionare un’icona fra quelle proposte nel menu a tendina oppure puoi scrivere/incollare nel campo di testo il nome di un’icona di fontawsome 5
 msgid "iconDescription"
@@ -859,7 +906,9 @@ msgid "link_siti_esterni"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Locations
+#: components/ItaliaTheme/View/Commons/EventLocations
 #: components/ItaliaTheme/View/Commons/Locations
+#: components/ItaliaTheme/View/LuogoView
 # defaultMessage: Luoghi
 msgid "locations"
 msgstr ""
@@ -867,6 +916,11 @@ msgstr ""
 #: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 # defaultMessage: Longitude
 msgid "longitude"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+# defaultMessage: Luogo
+msgid "luogo"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Actions
@@ -881,6 +935,11 @@ msgstr ""
 msgid "minutes"
 msgstr ""
 
+#: components/ItaliaTheme/View/LuogoView
+# defaultMessage: Modalità di accesso
+msgid "modalita_accesso"
+msgstr ""
+
 #: components/DesignTheme/View/Commons/Metadata
 #: components/ItaliaTheme/View/Commons/Metadata
 # defaultMessage: Ultimo aggiornamento
@@ -893,6 +952,7 @@ msgid "multilingual_text_placeholder"
 msgstr ""
 
 #: components/DesignTheme/View/NewsItemView
+#: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/NewsItemView
 # defaultMessage: Notizie in evidenza
 msgid "notizie_in_evidenza"
@@ -960,6 +1020,11 @@ msgstr ""
 msgid "options"
 msgstr ""
 
+#: components/ItaliaTheme/View/LuogoView
+# defaultMessage: Orario al pubblico
+msgid "orario_pubblico"
+msgstr ""
+
 #: components/DesignTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView
 # defaultMessage: Organizzazione di riferimento
@@ -984,6 +1049,11 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/CuredBy
 # defaultMessage: Questa pagina è gestita da
 msgid "page_cured_by"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+# defaultMessage: Parteciperanno:
+msgid "parteciperanno"
 msgstr ""
 
 #: components/DesignTheme/View/UOView
@@ -1027,6 +1097,11 @@ msgstr ""
 msgid "procedure_collegate"
 msgstr ""
 
+#: components/ItaliaTheme/View/LuogoView
+# defaultMessage: Quartiere
+msgid "quartiere"
+msgstr ""
+
 #: components/DesignTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader
 # defaultMessage: Tempo di lettura
@@ -1043,6 +1118,7 @@ msgstr ""
 #: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
 #: components/DesignTheme/View/ServizioView
 #: components/DesignTheme/View/UOView
+#: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/NewsItemView
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/ServizioView
@@ -1168,6 +1244,11 @@ msgstr ""
 msgid "sections"
 msgstr ""
 
+#: components/ItaliaTheme/View/LuogoView
+# defaultMessage: Sede di
+msgid "sede_di"
+msgstr ""
+
 #: components/DesignTheme/View/Commons/UOLocation
 #: components/ItaliaTheme/View/Commons/UOLocation
 # defaultMessage: Dove e come trovarci
@@ -1211,6 +1292,7 @@ msgid "servizi_collegati"
 msgstr ""
 
 #: components/DesignTheme/View/UOView
+#: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/UOView
 # defaultMessage: Servizi offerti
 msgid "servizi_offerti"
@@ -1277,6 +1359,16 @@ msgstr ""
 msgid "spese_elettorali"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/Sponsors
+# defaultMessage: Sponsor
+msgid "sponsors"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/Dates
+# defaultMessage: Inizio evento
+msgid "start"
+msgstr ""
+
 #: components/DesignTheme/View/Commons/Metadata
 #: components/ItaliaTheme/View/Commons/Metadata
 # defaultMessage: Tags
@@ -1315,6 +1407,7 @@ msgid "ufficio_responsabile"
 msgstr ""
 
 #: components/DesignTheme/View/PersonaView
+#: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/PersonaView
 # defaultMessage: Ulteriori informazioni
 msgid "ulteriori_informazioni"
@@ -1327,6 +1420,7 @@ msgid "unknownBlock"
 msgstr ""
 
 #: components/DesignTheme/View/UOView
+#: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/UOView
 # defaultMessage: Notizie in evidenza
 msgid "uo_related_news"
