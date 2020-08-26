@@ -11,7 +11,7 @@ import {
   PageHeader,
   WideImage,
   RichTextArticle,
-  RelatedNewsArticle,
+  RelatedNewsArticles,
   RelatedArticles,
 } from '@italia/components/ItaliaTheme/View';
 import {
@@ -208,7 +208,7 @@ const VenueView = ({ content }) => {
 
             {/* NEWS CORRELATE */}
             {content.related_news?.length > 0 && (
-              <RelatedNewsArticle 
+              <RelatedNewsArticles 
                 news={content.related_news}
                 title={intl.formatMessage(messages.uo_related_news)}
               />

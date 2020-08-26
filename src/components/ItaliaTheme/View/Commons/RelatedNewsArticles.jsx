@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { RelatedNews } from '@italia/components/ItaliaTheme/View';
 /**
  * RichTextArticle view component class.
- * @function RelatedNewsArticle
+ * @function RelatedNewsArticles
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const RelatedNewsArticle = ({ id='related-news', news, title }) => {
+const RelatedNewsArticles = ({ id='related-news', news, title }) => {
   return (
     <article
       id={id}
@@ -28,9 +28,9 @@ const RelatedNewsArticle = ({ id='related-news', news, title }) => {
     </article>
   );
 };
-export default RelatedNewsArticle;
+export default RelatedNewsArticles;
 
-RelatedNewsArticle.propTypes = {
+RelatedNewsArticles.propTypes = {
   title: PropTypes.string,
   id: PropTypes.string,
   news: PropTypes.arrayOf(Object),
