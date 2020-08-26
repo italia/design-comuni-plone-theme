@@ -18,7 +18,12 @@ import {
   Icon,
 } from 'design-react-kit/dist/design-react-kit';
 import { OSMMap } from '@italia/addons/volto-venue';
-
+import {
+  Card,
+  CardBody,
+  CardTitle,
+  CardText
+} from 'design-react-kit/dist/design-react-kit';
 const messages = defineMessages({
   descrizione: {
     id: 'descrizione',
@@ -157,15 +162,17 @@ const LuogoView = ({ content }) => {
                 <h4 id="header-luoghi">
                   {intl.formatMessage(messages.locations)}
                 </h4>
-                 <div className="card card-teaser shadow mt-3 rounded mb-4">
+                 <Card className="card card-teaser shadow mt-3 rounded mb-4">
                   <Icon icon={'it-pin'} />
-                  <div className="card-body">
-                    <h5 className="card-title">{content.title}</h5>
-                    <div className="card-text">
+                  <CardBody>
+                    <CardTitle>
+                      <h5 class="card-title">{content.title}</h5>
+                    </CardTitle>
+                    <CardText>
                       <p>{`${content.street || ''} - ${content.zip_code || ''}`}</p>
-                    </div>
-                  </div>
-                </div>
+                    </CardText>
+                  </CardBody>
+                </Card>
                 { __CLIENT__ && content?.geolocation?.latitude && content?.geolocation?.longitude &&
                   <OSMMap position={[content?.geolocation?.latitude, content?.geolocation?.longitude]} />
                 }
