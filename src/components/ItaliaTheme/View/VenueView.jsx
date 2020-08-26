@@ -201,7 +201,7 @@ const VenueView = ({ content }) => {
             {content.venue_services?.length > 0 && (
               <RelatedArticles
                 id="venue_services"
-                services={content.venue_services}
+                items={content.venue_services}
                 title={intl.formatMessage(messages.servizi_offerti)}
               />
             )}
