@@ -41,9 +41,9 @@ const messages = defineMessages({
     id: 'circoscrizione',
     defaultMessage: 'Circoscrizione',
   },
-  locations: {
-    id: 'locations',
-    defaultMessage: 'Luoghi',
+  dove: {
+    id: 'dove',
+    defaultMessage: 'Dove',
   },
   elementi_di_interesse: {
     id: 'elementi_di_interesse',
@@ -160,7 +160,7 @@ const LuogoView = ({ content }) => {
                 className="it-page-section anchor-offset mt-5"
               >
                 <h4 id="header-luoghi">
-                  {intl.formatMessage(messages.locations)}
+                  {intl.formatMessage(messages.dove)}
                 </h4>
                  <Card className="card card-teaser shadow mt-3 rounded mb-4">
                   <Icon icon={'it-pin'} />

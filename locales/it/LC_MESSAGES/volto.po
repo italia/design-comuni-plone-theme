@@ -624,6 +624,10 @@ msgstr "Documenti"
 msgid "documenti-e-dati"
 msgstr "Documenti e dati"
 
+#: components/ItaliaTheme/View/LuogoView
+msgid "dove"
+msgstr "Dove"
+
 #: components/DesignTheme/View/Commons/Actions
 #: components/ItaliaTheme/View/Commons/Actions
 msgid "download"
@@ -759,7 +763,6 @@ msgstr "Link utili"
 #: components/DesignTheme/View/Commons/Locations
 #: components/ItaliaTheme/View/Commons/EventLocations
 #: components/ItaliaTheme/View/Commons/Locations
-#: components/ItaliaTheme/View/LuogoView
 msgid "locations"
 msgstr "Luoghi"
 
