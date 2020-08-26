@@ -34,5 +34,5 @@ export default RelatedArticles;
 RelatedArticles.propTypes = {
   title: PropTypes.string,
   id: PropTypes.string,
-  news: PropTypes.arrayOf(Object),
+  items: PropTypes.arrayOf(Object),
 };
