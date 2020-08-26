@@ -212,28 +212,6 @@ const LuogoView = ({ content }) => {
               </article>
             )}
 
-            {/* SEDE DI */}
-            {content?.office_venue?.length > 0 && (
-              <article
-                id="sede-di"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4 id="header-servizi-offerti">
-                  {intl.formatMessage(messages.office_venue)}
-                </h4>
-                <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content.office_venue.map((item, i) => (
-                    <GenericCard
-                      key={item['@id']}
-                      item={item}
-                      showimage={true}
-                      image_field={'immagine'}
-                    />
-                  ))}
-                </div>
-              </article>
-            )}
-
             {/* NEWS CORRELATE */}
             {content?.related_news?.length > 0 && (
               <article
