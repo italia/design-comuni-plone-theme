@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { useDispatch, useSelector } from 'react-redux';
-import moment from 'moment';
+import moment from 'moment/min/moment-with-locales';
 import { Icon } from 'design-react-kit/dist/design-react-kit';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -28,6 +28,7 @@ const messages = defineMessages({
  */
 const Evento = ({ event, show_image }) => {
   const intl = useIntl();
+  moment.locale(intl.locale);
   return event ? (
     <div className="card card-teaser card-flex rounded shadow">
       <div className="card-body p-4">
@@ -58,7 +59,7 @@ const Evento = ({ event, show_image }) => {
             src={flattenToAppURL(event.image.scales.gallery.download)}
             alt="Immagine"
             className="event-center-cropped"
-          ></img>
+          />
         </div>
       )}
     </div>

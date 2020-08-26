@@ -1,7 +1,7 @@
 import { defineMessages, useIntl } from 'react-intl';
 
 import React from 'react';
-import moment from 'moment';
+import moment from 'moment/min/moment-with-locales';
 import {
   Card,
   CardTitle,
@@ -28,6 +28,7 @@ const messages = defineMessages({
  */
 const Dates = ({ content, show_image }) => {
   const intl = useIntl();
+  moment.locale(intl.locale);
   return content ? (
     <div className="point-list-wrapper my-4">
       <div className="point-list">

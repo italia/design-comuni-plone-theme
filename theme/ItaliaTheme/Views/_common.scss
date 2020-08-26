@@ -58,20 +58,20 @@ h6 {
 
     a {
       color: $primary;
-      font-size: 18px;
-      line-height: 26px;
+      font-size: 1.125rem;
+      line-height: 1.625rem;
     }
   }
   .genericcard {
     .card-title {
       margin: 0 !important;
-      margin-bottom: 10px !important;
+      margin-bottom: 0.625rem !important;
       line-height: 1rem;
 
       a {
         color: $primary;
-        font-size: 18px;
-        line-height: 26px;
+        font-size: 1.125rem;
+        line-height: 1.625rem;
       }
     }
   }
@@ -176,8 +176,8 @@ div.sticky-wrapper {
 .event-center-cropped {
   object-fit: none;
   object-position: center;
-  max-height: 300px;
-  max-width: 200px;
+  max-height: 18.75rem;
+  max-width: 12.5rem;
 }
 
 #default-country {

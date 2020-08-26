@@ -1,6 +1,6 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import moment from 'moment';
+import moment from 'moment/min/moment-with-locales';
 import { Sharing, Actions } from '@italia/components/ItaliaTheme/View';
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -55,7 +55,7 @@ const messages = defineMessages({
 
 const PageHeader = (props) => {
   const intl = useIntl();
-
+  moment.locale(intl.locale);
   return (
     <div className="row">
       <div
@@ -103,22 +103,17 @@ const PageHeader = (props) => {
             {(props.showdates &&
               (props.content.effective || props.content.expires) && (
                 <div className="col-6">
-                  {props.content.effective && (
-                    <div className="row">
-                      <div className="col-12">
-                        {props.content['@type'] !== 'Event' && (
-                          <>
-                            <small>{intl.formatMessage(messages.date)}:</small>
-                            <p className="font-weight-semibold text-monospace">
-                              {moment(props.content.effective).format(
-                                'DD-MM-Y',
-                              )}
-                            </p>
-                          </>
-                        )}
+                  {props.content.effective &&
+                    props.content['@type'] !== 'Event' && (
+                      <div className="row">
+                        <div className="col-12">
+                          <small>{intl.formatMessage(messages.date)}:</small>
+                          <p className="font-weight-semibold text-monospace">
+                            {moment(props.content.effective).format('DD-MM-Y')}
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                  )}
+                    )}
                   {props.content.expires && (
                     <div className="row">
                       <div className="col-12">

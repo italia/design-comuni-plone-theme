@@ -35,7 +35,7 @@ const Sponsor = ({ item }) => {
               src={flattenToAppURL(item.image.scales.mini.download)}
               alt={item.image.filename}
               className="img-fluid"
-            ></img>
+            />
           </a>
         </div>
       ) : (
