@@ -36,6 +36,7 @@ import { PageView } from '@italia/components/ItaliaTheme';
 import { NewsItemView } from '@italia/components/ItaliaTheme';
 import { UOView } from '@italia/components/ItaliaTheme';
 import { PersonaView } from '@italia/components/ItaliaTheme';
+import { VenueView } from '@italia/components/ItaliaTheme';
 import { ServizioView } from '@italia/components/ItaliaTheme';
 import { PaginaArgomentoView } from '@italia/components/ItaliaTheme';
 
@@ -261,6 +262,7 @@ export const views = {
     'News Item': NewsItemView,
     UnitaOrganizzativa: UOView,
     Persona: PersonaView,
+    Venue: VenueView,
     Servizio: ServizioView,
     'Pagina Argomento': PaginaArgomentoView,
   },

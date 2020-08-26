@@ -16,9 +16,10 @@ import {
   OfficeCard,
   Attachments,
   Metadata,
-  RelatedNews,
+  RelatedNewsArticles,
   GenericCard,
   UOLocation,
+  RelatedArticles,
 } from '@italia/components/ItaliaTheme/View';
 
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
@@ -160,24 +161,11 @@ const UOView = ({ content }) => {
               />
             )}
             {content.servizi_offerti.length > 0 ? (
-              <article
-                id="servizi-offerti"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4 id="header-servizi-offerti">
-                  {intl.formatMessage(messages.servizi_offerti)}
-                </h4>
-                <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content.servizi_offerti.map((item, i) => (
-                    <GenericCard
-                      key={item['@id']}
-                      item={item}
-                      showimage={true}
-                      image_field={'immagine'}
-                    />
-                  ))}
-                </div>
-              </article>
+              <RelatedArticles
+                id="related-services"
+                items={content.servizi_offerti}
+                title={intl.formatMessage(messages.servizi_offerti)}
+              />
             ) : null}
             {content.legami_con_altre_strutture.length > 0 ? (
               <article
@@ -289,43 +277,18 @@ const UOView = ({ content }) => {
               />
             )}
             {content?.related_news?.length > 0 ? (
-              <article
-                id="related-news"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4 id="header-related-news">
-                  {intl.formatMessage(messages.uo_related_news)}
-                </h4>
-                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content?.related_news?.map((item, i) => (
-                    <RelatedNews
-                      key={item['@id']}
-                      item={item}
-                      showimage={false}
-                      content={content}
-                    />
-                  ))}
-                </div>
-              </article>
+              <RelatedNewsArticles 
+                news={content?.related_news}
+                title={intl.formatMessage(messages.uo_related_news)}
+              />
             ) : null}
             {content.relatedItems.length > 0 ? (
-              <article
+              <RelatedArticles
                 id="related-items"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4 id="header-related-items">
-                  {intl.formatMessage(messages.related_items)}
-                </h4>
-                <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content.relatedItems.map((item, i) => (
-                    <GenericCard
-                      index={item['@id']}
-                      item={item}
-                      showimage={false}
-                    />
-                  ))}
-                </div>
-              </article>
+                items={content?.relatedItems}
+                title={intl.formatMessage(messages.related_items)}
+                showimage={false}
+              />
             ) : null}
             <Metadata content={content} showTags={false} />
           </section>
