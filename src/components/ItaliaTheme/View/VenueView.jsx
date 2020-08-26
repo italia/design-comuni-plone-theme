@@ -91,8 +91,9 @@ const VenueView = ({ content }) => {
   }, [documentBody]);
 
   useEffect(() => {
-    if(content.nome_alternativo)
-      content.title = `${content.title} (${content.nome_alternativo})` 
+    if(content.nome_alternativo && !content.title?.includes(content.nome_alternativo)){
+      content.title += ` (${content.nome_alternativo})`;
+    }
   })
 
   return (
