@@ -154,7 +154,7 @@ const LuogoView = ({ content }) => {
             )}
 
             {/* MAPPA */}
-            {content?.geolocation ? (
+            {content.geolocation && (
               <article
                 id="luoghi"
                 className="it-page-section anchor-offset mt-5"
@@ -177,7 +177,7 @@ const LuogoView = ({ content }) => {
                   <OSMMap position={[content?.geolocation?.latitude, content?.geolocation?.longitude]} />
                 }
               </article>
-            ) : null}
+            )}
 
             {/* ELEMENTI DI INTERESSE */}
             {content.elementi_di_interesse && (
@@ -198,7 +198,7 @@ const LuogoView = ({ content }) => {
             )}
 
             {/* SERVIZI CORRELATI */}
-            {content?.venue_services?.length > 0 && (
+            {content.venue_services?.length > 0 && (
               <article
                 id="servizi-offerti"
                 className="it-page-section anchor-offset mt-5"
@@ -220,7 +220,7 @@ const LuogoView = ({ content }) => {
             )}
 
             {/* NEWS CORRELATE */}
-            {content?.related_news?.length > 0 && (
+            {content.related_news?.length > 0 && (
               <article
                 id="related-news"
                 className="it-page-section anchor-offset mt-5"
