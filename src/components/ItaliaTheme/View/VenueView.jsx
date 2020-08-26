@@ -90,6 +90,11 @@ const VenueView = ({ content }) => {
     }
   }, [documentBody]);
 
+  useEffect(() => {
+    if(content.nome_alternativo)
+      content.title = `${content.title} (${content.nome_alternativo})` 
+  })
+
   return (
     <>
       <div className="container px-4 my-4 luogo-view">
