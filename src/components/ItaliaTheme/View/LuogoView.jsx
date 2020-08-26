@@ -157,7 +157,7 @@ const LuogoView = ({ content }) => {
             {content?.geolocation ? (
               <article
                 id="luoghi"
-                className="it-page-section anchor-offset mt-5 geo-height"
+                className="it-page-section anchor-offset mt-5"
               >
                 <h4 id="header-luoghi">
                   {intl.formatMessage(messages.dove)}
