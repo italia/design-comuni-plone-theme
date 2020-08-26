@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { GenericCard } from '@italia/components/ItaliaTheme/View';
 /**
  * RichTextArticle view component class.
- * @function ServicesArticle
+ * @function RelatedArticle
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const ServicesArticle = ({ id='servizi-offerti', services, title }) => {
+const RelatedArticle = ({ id='servizi-offerti', items, title, showimage=true }) => {
   return (
     <article
       id={id}
@@ -17,11 +17,11 @@ const ServicesArticle = ({ id='servizi-offerti', services, title }) => {
         {title}
       </h4>
       <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-        {services?.map((item, i) => (
+        {items?.map((item, i) => (
           <GenericCard
             key={item['@id']}
             item={item}
-            showimage={true}
+            showimage={showimage}
             image_field={'immagine'}
           />
         ))}
@@ -29,9 +29,9 @@ const ServicesArticle = ({ id='servizi-offerti', services, title }) => {
     </article>
   );
 };
-export default ServicesArticle;
+export default RelatedArticle;
 
-ServicesArticle.propTypes = {
+RelatedArticle.propTypes = {
   title: PropTypes.string,
   id: PropTypes.string,
   news: PropTypes.arrayOf(Object),

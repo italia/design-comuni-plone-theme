@@ -12,7 +12,7 @@ import {
   WideImage,
   RichTextArticle,
   RelatedNewsArticle,
-  ServicesArticle,
+  RelatedArticle,
 } from '@italia/components/ItaliaTheme/View';
 import {
   Icon,
@@ -199,7 +199,7 @@ const VenueView = ({ content }) => {
 
             {/* SERVIZI CORRELATI */}
             {content.venue_services?.length > 0 && (
-              <ServicesArticle
+              <RelatedArticle
                 services={content.venue_services}
                 title={intl.formatMessage(messages.servizi_offerti)}
               />
