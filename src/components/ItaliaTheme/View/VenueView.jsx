@@ -11,8 +11,8 @@ import {
   PageHeader,
   WideImage,
   RichTextArticle,
-  RelatedNews,
-  GenericCard,
+  RelatedNewsArticle,
+  ServicesArticle,
 } from '@italia/components/ItaliaTheme/View';
 import {
   Icon,
@@ -72,12 +72,12 @@ const messages = defineMessages({
 });
 
 /**
- * LuogoView view component class.
- * @function LuogoView
+ * VenueView view component class.
+ * @function VenueView
  * @params {object} content Content object.
  * @returns {string} Markup of the component.
  */
-const LuogoView = ({ content }) => {
+const VenueView = ({ content }) => {
   const intl = useIntl();
   let documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
@@ -166,7 +166,7 @@ const LuogoView = ({ content }) => {
                   <Icon icon={'it-pin'} />
                   <CardBody>
                     <CardTitle>
-                      <h5 class="card-title">{content.title}</h5>
+                      <h5 className="card-title">{content.title}</h5>
                     </CardTitle>
                     <CardText>
                       <p>{`${content.street || ''} - ${content.zip_code || ''}`}</p>
@@ -199,46 +199,18 @@ const LuogoView = ({ content }) => {
 
             {/* SERVIZI CORRELATI */}
             {content.venue_services?.length > 0 && (
-              <article
-                id="servizi-offerti"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4 id="header-servizi-offerti">
-                  {intl.formatMessage(messages.servizi_offerti)}
-                </h4>
-                <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content.venue_services.map((item, i) => (
-                    <GenericCard
-                      key={item['@id']}
-                      item={item}
-                      showimage={true}
-                      image_field={'immagine'}
-                    />
-                  ))}
-                </div>
-              </article>
+              <ServicesArticle
+                services={content.venue_services}
+                title={intl.formatMessage(messages.servizi_offerti)}
+              />
             )}
 
             {/* NEWS CORRELATE */}
             {content.related_news?.length > 0 && (
-              <article
-                id="related-news"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4 id="header-related-news">
-                  {intl.formatMessage(messages.uo_related_news)}
-                </h4>
-                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content?.related_news?.map((item, i) => (
-                    <RelatedNews
-                      key={item['@id']}
-                      item={item}
-                      showimage={false}
-                      content={content}
-                    />
-                  ))}
-                </div>
-              </article>
+              <RelatedNewsArticle 
+                news={content.related_news}
+                title={intl.formatMessage(messages.uo_related_news)}
+              />
             )}
 
             {/* ULTERIORI INFORMAZIONI */}
@@ -256,7 +228,7 @@ const LuogoView = ({ content }) => {
   );
 };
 
-LuogoView.propTypes = {
+VenueView.propTypes = {
   content: PropTypes.shape({
     title: PropTypes.string.isRequired,
     description: PropTypes.string,
@@ -271,4 +243,4 @@ LuogoView.propTypes = {
   }).isRequired,
 };
 
-export default LuogoView;
+export default VenueView;

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-08-26T08:20:31.035Z\n"
+"POT-Creation-Date: 2020-08-26T09:43:07.357Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -543,6 +543,7 @@ msgid "chi_puo_presentare"
 msgstr ""
 
 #: components/ItaliaTheme/View/LuogoView
+#: components/ItaliaTheme/View/VenueView
 # defaultMessage: Circoscrizione
 msgid "circoscrizione"
 msgstr ""
@@ -693,6 +694,7 @@ msgid "desc"
 msgstr ""
 
 #: components/ItaliaTheme/View/LuogoView
+#: components/ItaliaTheme/View/VenueView
 # defaultMessage: Descrizione
 msgid "descrizione"
 msgstr ""
@@ -745,6 +747,7 @@ msgid "documenti-e-dati"
 msgstr ""
 
 #: components/ItaliaTheme/View/LuogoView
+#: components/ItaliaTheme/View/VenueView
 # defaultMessage: Dove
 msgid "dove"
 msgstr ""
@@ -756,6 +759,7 @@ msgid "download"
 msgstr ""
 
 #: components/ItaliaTheme/View/LuogoView
+#: components/ItaliaTheme/View/VenueView
 # defaultMessage: Elementi di interesse
 msgid "elementi_di_interesse"
 msgstr ""
@@ -940,6 +944,7 @@ msgid "minutes"
 msgstr ""
 
 #: components/ItaliaTheme/View/LuogoView
+#: components/ItaliaTheme/View/VenueView
 # defaultMessage: Modalità di accesso
 msgid "modalita_accesso"
 msgstr ""
@@ -1025,6 +1030,7 @@ msgid "options"
 msgstr ""
 
 #: components/ItaliaTheme/View/LuogoView
+#: components/ItaliaTheme/View/VenueView
 # defaultMessage: Orario al pubblico
 msgid "orario_pubblico"
 msgstr ""
@@ -1102,6 +1108,7 @@ msgid "procedure_collegate"
 msgstr ""
 
 #: components/ItaliaTheme/View/LuogoView
+#: components/ItaliaTheme/View/VenueView
 # defaultMessage: Quartiere
 msgid "quartiere"
 msgstr ""
@@ -1249,6 +1256,7 @@ msgid "sections"
 msgstr ""
 
 #: components/ItaliaTheme/View/LuogoView
+#: components/ItaliaTheme/View/VenueView
 # defaultMessage: Sede di
 msgid "sede_di"
 msgstr ""
@@ -1298,6 +1306,7 @@ msgstr ""
 #: components/DesignTheme/View/UOView
 #: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/UOView
+#: components/ItaliaTheme/View/VenueView
 # defaultMessage: Servizi offerti
 msgid "servizi_offerti"
 msgstr ""
@@ -1413,6 +1422,7 @@ msgstr ""
 #: components/DesignTheme/View/PersonaView
 #: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/PersonaView
+#: components/ItaliaTheme/View/VenueView
 # defaultMessage: Ulteriori informazioni
 msgid "ulteriori_informazioni"
 msgstr ""
@@ -1426,6 +1436,7 @@ msgstr ""
 #: components/DesignTheme/View/UOView
 #: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/UOView
+#: components/ItaliaTheme/View/VenueView
 # defaultMessage: Notizie in evidenza
 msgid "uo_related_news"
 msgstr ""

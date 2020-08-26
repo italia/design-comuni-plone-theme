@@ -1,5 +1,8 @@
 /* --- Commons --- */
 export RichTextArticle from '@italia/components/ItaliaTheme/View/Commons/RichTextArticle';
+export RelatedNewsArticle from '@italia/components/ItaliaTheme/View/Commons/RelatedNewsArticle';
+export ServicesArticle from '@italia/components/ItaliaTheme/View/Commons/ServicesArticle';
+
 export TextOrBlocks from '@italia/components/ItaliaTheme/View/Commons/TextOrBlocks';
 
 export Sharing from '@italia/components/ItaliaTheme/View/Commons/Sharing';

@@ -476,6 +476,7 @@ msgid "chi_puo_presentare"
 msgstr ""
 
 #: components/ItaliaTheme/View/LuogoView
+#: components/ItaliaTheme/View/VenueView
 msgid "circoscrizione"
 msgstr ""
 
@@ -600,6 +601,7 @@ msgid "desc"
 msgstr ""
 
 #: components/ItaliaTheme/View/LuogoView
+#: components/ItaliaTheme/View/VenueView
 msgid "descrizione"
 msgstr ""
 
@@ -644,6 +646,7 @@ msgid "documenti-e-dati"
 msgstr ""
 
 #: components/ItaliaTheme/View/LuogoView
+#: components/ItaliaTheme/View/VenueView
 msgid "dove"
 msgstr ""
 
@@ -653,6 +656,7 @@ msgid "download"
 msgstr ""
 
 #: components/ItaliaTheme/View/LuogoView
+#: components/ItaliaTheme/View/VenueView
 msgid "elementi_di_interesse"
 msgstr ""
 
@@ -804,6 +808,7 @@ msgid "minutes"
 msgstr ""
 
 #: components/ItaliaTheme/View/LuogoView
+#: components/ItaliaTheme/View/VenueView
 msgid "modalita_accesso"
 msgstr ""
 
@@ -875,6 +880,7 @@ msgid "options"
 msgstr ""
 
 #: components/ItaliaTheme/View/LuogoView
+#: components/ItaliaTheme/View/VenueView
 msgid "orario_pubblico"
 msgstr ""
 
@@ -939,6 +945,7 @@ msgid "procedure_collegate"
 msgstr ""
 
 #: components/ItaliaTheme/View/LuogoView
+#: components/ItaliaTheme/View/VenueView
 msgid "quartiere"
 msgstr ""
 
@@ -1064,6 +1071,7 @@ msgid "sections"
 msgstr ""
 
 #: components/ItaliaTheme/View/LuogoView
+#: components/ItaliaTheme/View/VenueView
 msgid "sede_di"
 msgstr ""
 
@@ -1105,6 +1113,7 @@ msgstr ""
 #: components/DesignTheme/View/UOView
 #: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/UOView
+#: components/ItaliaTheme/View/VenueView
 msgid "servizi_offerti"
 msgstr ""
 
@@ -1200,6 +1209,7 @@ msgstr ""
 #: components/DesignTheme/View/PersonaView
 #: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/PersonaView
+#: components/ItaliaTheme/View/VenueView
 msgid "ulteriori_informazioni"
 msgstr ""
 
@@ -1211,6 +1221,7 @@ msgstr ""
 #: components/DesignTheme/View/UOView
 #: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/UOView
+#: components/ItaliaTheme/View/VenueView
 msgid "uo_related_news"
 msgstr ""
 

@@ -457,6 +457,7 @@ msgid "chi_puo_presentare"
 msgstr "Chi può presentare domanda"
 
 #: components/ItaliaTheme/View/LuogoView
+#: components/ItaliaTheme/View/VenueView
 msgid "circoscrizione"
 msgstr "Circoscrizione"
 
@@ -581,6 +582,7 @@ msgid "desc"
 msgstr "Link rapidi"
 
 #: components/ItaliaTheme/View/LuogoView
+#: components/ItaliaTheme/View/VenueView
 msgid "descrizione"
 msgstr "Descrizione"
 
@@ -625,6 +627,7 @@ msgid "documenti-e-dati"
 msgstr "Documenti e dati"
 
 #: components/ItaliaTheme/View/LuogoView
+#: components/ItaliaTheme/View/VenueView
 msgid "dove"
 msgstr "Dove"
 
@@ -634,6 +637,7 @@ msgid "download"
 msgstr "Scarica"
 
 #: components/ItaliaTheme/View/LuogoView
+#: components/ItaliaTheme/View/VenueView
 msgid "elementi_di_interesse"
 msgstr "Elementi di interesse"
 
@@ -785,6 +789,7 @@ msgid "minutes"
 msgstr "min"
 
 #: components/ItaliaTheme/View/LuogoView
+#: components/ItaliaTheme/View/VenueView
 msgid "modalita_accesso"
 msgstr "Modalità di accesso"
 
@@ -856,6 +861,7 @@ msgid "options"
 msgstr "Opzioni"
 
 #: components/ItaliaTheme/View/LuogoView
+#: components/ItaliaTheme/View/VenueView
 msgid "orario_pubblico"
 msgstr "Orario al pubblico"
 
@@ -920,6 +926,7 @@ msgid "procedure_collegate"
 msgstr "Procedure collegate all'esito"
 
 #: components/ItaliaTheme/View/LuogoView
+#: components/ItaliaTheme/View/VenueView
 msgid "quartiere"
 msgstr "Quartiere"
 
@@ -1045,6 +1052,7 @@ msgid "sections"
 msgstr "Sezioni"
 
 #: components/ItaliaTheme/View/LuogoView
+#: components/ItaliaTheme/View/VenueView
 msgid "sede_di"
 msgstr "Sede di"
 
@@ -1086,6 +1094,7 @@ msgstr "Servizi collegati"
 #: components/DesignTheme/View/UOView
 #: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/UOView
+#: components/ItaliaTheme/View/VenueView
 msgid "servizi_offerti"
 msgstr "Servizi offerti"
 
@@ -1181,6 +1190,7 @@ msgstr "Ufficio responsabile"
 #: components/DesignTheme/View/PersonaView
 #: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/PersonaView
+#: components/ItaliaTheme/View/VenueView
 msgid "ulteriori_informazioni"
 msgstr "Ulteriori informazioni"
 
@@ -1192,6 +1202,7 @@ msgstr "Blocco sconosciuto"
 #: components/DesignTheme/View/UOView
 #: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/UOView
+#: components/ItaliaTheme/View/VenueView
 msgid "uo_related_news"
 msgstr "Notizie in evidenza"
 
