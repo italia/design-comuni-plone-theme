@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { GenericCard } from '@italia/components/ItaliaTheme/View';
 /**
  * RichTextArticle view component class.
- * @function RelatedArticle
+ * @function RelatedArticles
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const RelatedArticle = ({ id='servizi-offerti', items, title, showimage=true }) => {
+const RelatedArticles = ({ id='related-articles', items, title, showimage=true }) => {
   return (
     <article
       id={id}
@@ -29,9 +29,9 @@ const RelatedArticle = ({ id='servizi-offerti', items, title, showimage=true }) 
     </article>
   );
 };
-export default RelatedArticle;
+export default RelatedArticles;
 
-RelatedArticle.propTypes = {
+RelatedArticles.propTypes = {
   title: PropTypes.string,
   id: PropTypes.string,
   news: PropTypes.arrayOf(Object),

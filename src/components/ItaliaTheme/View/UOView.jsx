@@ -19,7 +19,7 @@ import {
   RelatedNewsArticle,
   GenericCard,
   UOLocation,
-  RelatedArticle,
+  RelatedArticles,
 } from '@italia/components/ItaliaTheme/View';
 
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
@@ -161,7 +161,8 @@ const UOView = ({ content }) => {
               />
             )}
             {content.servizi_offerti.length > 0 ? (
-              <RelatedArticle
+              <RelatedArticles
+                id="related-services"
                 items={content.servizi_offerti}
                 title={intl.formatMessage(messages.servizi_offerti)}
               />
@@ -282,7 +283,7 @@ const UOView = ({ content }) => {
               />
             ) : null}
             {content.relatedItems.length > 0 ? (
-              <RelatedArticle
+              <RelatedArticles
                 id="related-items"
                 items={content?.relatedItems}
                 title={intl.formatMessage(messages.related_items)}
