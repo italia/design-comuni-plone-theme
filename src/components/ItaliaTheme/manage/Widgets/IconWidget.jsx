@@ -13,7 +13,7 @@ const messages = defineMessages({
   },
   description: {
     id: 'iconDescription',
-    defaultMessage: 'Puoi selezionare un’icona fra quelle proposte nel menu a tendina oppure puoi scrivere/incollare nel campo di testo il nome di un’icona di fontawsome 5',
+    defaultMessage: 'Puoi selezionare un’icona fra quelle proposte nel menu a tendina oppure puoi scrivere/incollare nel campo di testo il nome di un’icona di fontawesome 5',
   },
 });
 

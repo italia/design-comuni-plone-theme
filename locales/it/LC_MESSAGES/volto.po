@@ -733,7 +733,7 @@ msgstr "Icona"
 #: components/ItaliaTheme/manage/Widgets/ArgumentIconWidget
 #: components/ItaliaTheme/manage/Widgets/IconWidget
 msgid "iconDescription"
-msgstr "Puoi selezionare un’icona fra quelle proposte nel menu a tendina oppure puoi scrivere/incollare nel campo di testo il nome di un’icona di fontawsome 5"
+msgstr "Puoi selezionare un’icona fra quelle proposte nel menu a tendina oppure puoi scrivere/incollare nel campo di testo il nome di un’icona di fontawesome 5"
 
 #: components/DesignTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView
