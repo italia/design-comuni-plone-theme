@@ -33,7 +33,6 @@ import {
   Card,
   CardBody,
   CardTitle,
-  Button,
 } from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
@@ -47,7 +46,7 @@ const messages = defineMessages({
   },
   event_ulteriori_informazioni: {
     id: 'event_ulteriori_informazioni',
-    defaultMessage: 'Informazioni',
+    defaultMessage: 'Ulteriori informazioni',
   },
   date_e_orari: {
     id: 'date_e_orari',
@@ -68,6 +67,14 @@ const messages = defineMessages({
   box_aiuto: {
     id: 'box_aiuto',
     defaultMessage: "Box d'aiuto",
+  },
+  patrocinato_da: {
+    id: 'patrocinato_da',
+    defaultMessage: 'Patrocinato da:',
+  },
+  event_url: {
+    id: 'event_url',
+    defaultMessage: "Url dell'evento",
   },
 });
 
@@ -313,51 +320,68 @@ const EventoView = ({ content, location }) => {
                 isChild={isChildEvent}
               />
             )}
-            {!content?.ulteriori_informazioni?.data?.replace(
+            {content?.ulteriori_informazioni?.data?.replace(
               /(<([^>]+)>)/g,
               '',
-            ) &&
-            (content?.patrocinato_da ||
-              content?.items?.some((e) => e.id === 'sponsor_evento')) ? (
+            ) ||
+            content?.patrocinato_da ||
+            content?.items?.some((e) => e.id === 'sponsor_evento') ? (
               <article
                 id={'ulteriori-informazioni'}
                 className="it-page-section anchor-offset mt-5"
               >
                 <h4 id={`header-ulteriori-informazioni`}>
-                  Ulteriori informazioni
+                  {intl.formatMessage(messages.event_ulteriori_informazioni)}
                 </h4>
+
+                {content?.ulteriori_informazioni?.data?.replace(
+                  /(<([^>]+)>)/g,
+                  '',
+                ) && (
+                  <div
+                    className="text-serif"
+                    dangerouslySetInnerHTML={{
+                      __html: content?.ulteriori_informazioni?.data,
+                    }}
+                  />
+                )}
+
+                {content?.patrocinato_da && (
+                  <div class="mt-5">
+                    <strong>
+                      {intl.formatMessage(messages.patrocinato_da)}
+                    </strong>
+                    <div
+                      className="text-serif"
+                      dangerouslySetInnerHTML={{
+                        __html: content?.patrocinato_da,
+                      }}
+                    />
+                  </div>
+                )}
+
+                {content?.items?.some((e) => e.id === 'sponsor_evento') && (
+                  <div className="mt-5">
+                    <Sponsors
+                      content={content}
+                      folder_name={'sponsor_evento'}
+                    />
+                  </div>
+                )}
               </article>
             ) : null}
-            {content?.ulteriori_informazioni?.data?.replace(
-              /(<([^>]+)>)/g,
-              '',
-            ) && (
-              <RichTextArticle
-                content={content?.ulteriori_informazioni?.data}
-                tag_id="ulteriori-informazioni"
-                title={'Ulteriori informazioni'}
-              />
-            )}
-            {content?.patrocinato_da && (
-              <RichTextArticle
-                content={content?.patrocinato_da}
-                tag_id="patrocinio"
-                title={'Patrocinato da:'}
-              />
-            )}
-            {/* {content?.sponsor?.data.replace(/(<([^>]+)>)/g, '') && (
-              <RichTextArticle
-                content={content?.sponsor?.data}
-                tag_id="sponsor"
-                title={'Sponsor:'}
-              />
-            )} */}
-            {content?.items?.some((e) => e.id === 'sponsor_evento') && (
+
+            {content?.event_url && (
               <article
-                id="sponsor"
+                id="event-url"
                 className="it-page-section anchor-offset mt-5"
               >
-                <Sponsors content={content} folder_name={'sponsor_evento'} />
+                <h4 id={`header-ulteriori-informazioni`}>
+                  {intl.formatMessage(messages.event_url)}:
+                </h4>
+                <a href={content.event_url} rel="noopener noreferer">
+                  {content.event_url}
+                </a>
               </article>
             )}
             {content?.box_aiuto?.data?.replace(/(<([^>]+)>)/g, '') && (
@@ -387,7 +411,7 @@ const EventoView = ({ content, location }) => {
           </section>
         </div>
       </div>
-      <section id="contenuti-correlati"></section>
+      {/* <section id="contenuti-correlati"></section> */}
     </>
   );
 };

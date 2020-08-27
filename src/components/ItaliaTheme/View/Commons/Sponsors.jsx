@@ -99,16 +99,20 @@ const Sponsors = ({ content, folder_name, title }) => {
             <strong>{`${intl.formatMessage(messages.sponsors)}:`}</strong>
           )}
           <div className="sponsor-wrapper">
-            <div className="sponsor-logos">
-              {sponsors_logos.map((item, i) => (
-                <Sponsor key={item['@id']} item={item} />
-              ))}
-            </div>
-            <div className="sponsor-no-logos">
-              {sponsors_no_logos.map((item, i) => (
-                <Sponsor key={item['@id']} item={item} />
-              ))}
-            </div>
+            {sponsors_logos.length > 0 && (
+              <div className="sponsor-logos">
+                {sponsors_logos.map((item, i) => (
+                  <Sponsor key={item['@id']} item={item} />
+                ))}
+              </div>
+            )}
+            {sponsors_no_logos.length > 0 && (
+              <div className="sponsor-no-logos">
+                {sponsors_no_logos.map((item, i) => (
+                  <Sponsor key={item['@id']} item={item} />
+                ))}
+              </div>
+            )}
           </div>
         </>
       ) : null}
