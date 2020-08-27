@@ -68,6 +68,22 @@ const messages = defineMessages({
   ulteriori_informazioni: {
     id: 'ulteriori_informazioni',
     defaultMessage: 'Ulteriori informazioni',
+  },
+  riferimento_telefonico_luogo: {
+    id: 'riferimento_telefonico_luogo',
+    defaultMessage: 'Riferimento telefonico',
+  },
+  riferimento_mail_luogo: {
+    id: 'riferimento_mail_luogo',
+    defaultMessage: 'Riferimento e-mail',
+  },
+  struttura_responsabile_correlati: {
+    id: 'struttura_responsabile_correlati',
+    defaultMessage: 'Struttura responsabile',
+  },
+  riferimento_web: {
+    id: 'riferimento_web',
+    defaultMessage: 'Riferimento web',
   }
 });
 
@@ -220,11 +236,78 @@ const VenueView = ({ content }) => {
               />
             )}
 
+            {/* 
+              STRUTTURE RESPONSABILI 
+              Se è presente una struttura_responsabile_correlati metto quella altrimenti metto una card con i campi singoli, se presenti
+            */}
+            {content.struttura_responsabile_correlati?.length > 0 ? 
+              <RelatedArticles
+                id="struttura_responsabile_correlati"
+                items={content.struttura_responsabile_correlati}
+                title={intl.formatMessage(messages.struttura_responsabile_correlati)}
+              />
+            :
+              (content.struttura_responsabile?.data?.replace(/(<([^>]+)>)/g, '') !== '' ||
+               content.riferimento_telefonico_struttura || content.riferimento_mail_struttura) &&
+              <article
+                id='struttura_responsabile'
+                className="it-page-section anchor-offset mt-5"
+              >
+                <h4 id={`header-struttura_responsabile`}>
+                  {intl.formatMessage(messages.struttura_responsabile_correlati)}
+                </h4>
+                <div className="genericcard card card-teaser shadow p-4 mt-3 rounded border">
+                  <div className="card-body">
+                    <h5 className="card-title no-toc">
+                      <div
+                        className='text-serif'
+                        dangerouslySetInnerHTML={{ __html: content.struttura_responsabile?.data }}
+                      />
+                    </h5>
+                    <div className="card-text">
+                      <div>
+                        <span className="font-weight-semibold">Telefono:</span>  <a href={`tel:${content.riferimento_telefonico_struttura}`}>{content.riferimento_telefonico_struttura}</a>
+                      </div>
+                      <div className="mt-2">
+                        <span className="font-weight-semibold">Mail:</span> <a href={`mailto:${content.riferimento_mail_struttura}`}>{content.riferimento_mail_struttura}</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            }
+            {/* TELEFONO */}
+            {content.riferimento_telefonico_luogo && (
+              <RichTextArticle
+                content={content?.riferimento_telefonico_luogo}
+                tag_id={'riferimento_telefonico_luogo'}
+                title={intl.formatMessage(messages.riferimento_telefonico_luogo)}
+              />
+            )}
+
+            {/* MAIL */}
+            {content.riferimento_mail_luogo && (
+              <RichTextArticle
+                content={content?.riferimento_mail_luogo}
+                tag_id={'riferimento_mail_luogo'}
+                title={intl.formatMessage(messages.riferimento_mail_luogo)}
+              />
+            )}
+
+            {/* WEB */}
+            {content.riferimento_web && (
+              <RichTextArticle
+                content={content?.riferimento_web}
+                tag_id={'riferimento_web'}
+                title={intl.formatMessage(messages.riferimento_web)}
+              />
+            )}
+
             {/* ULTERIORI INFORMAZIONI */}
             {content.ulteriori_informazioni && (
               <RichTextArticle
                 content={content?.ulteriori_informazioni?.data}
-                tag_id={'ulteriori_informazioni'}
+                tag_id={'ulteriori_informazion'}
                 title={intl.formatMessage(messages.ulteriori_informazioni)}
               />
             )}

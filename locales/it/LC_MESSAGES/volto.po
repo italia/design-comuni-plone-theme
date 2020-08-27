@@ -991,6 +991,18 @@ msgstr "Responsabile"
 msgid "responsabile_di"
 msgstr "Responsabile di"
 
+#: components/ItaliaTheme/View/VenueView
+msgid "riferimento_mail_luogo"
+msgstr "Riferimento e-mail"
+
+#: components/ItaliaTheme/View/VenueView
+msgid "riferimento_telefonico_luogo"
+msgstr "Riferimento telefonico"
+
+#: components/ItaliaTheme/View/VenueView
+msgid "riferimento_web"
+msgstr "Riferimento web"
+
 #: components/DesignTheme/View/Commons/Metadata
 #: components/ItaliaTheme/View/Commons/Metadata
 msgid "rights"
@@ -1155,6 +1167,10 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/Dates
 msgid "start"
 msgstr ""
+
+#: components/ItaliaTheme/View/VenueView
+msgid "struttura_responsabile_correlati"
+msgstr "Struttura responsabile"
 
 #: components/DesignTheme/View/Commons/Metadata
 #: components/ItaliaTheme/View/Commons/Metadata

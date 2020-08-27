@@ -107,7 +107,7 @@ const SideMenu = ({ data }) => {
         let element = document.getElementById(section.id);
         return {
           id: section.id,
-          top: element.getBoundingClientRect().top,
+          top: element?.getBoundingClientRect()?.top,
         };
       })
       .filter((section) => section.top <= scrollOffset);

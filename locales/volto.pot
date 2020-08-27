@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-08-26T09:43:07.357Z\n"
+"POT-Creation-Date: 2020-08-27T08:27:17.364Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1184,6 +1184,21 @@ msgstr ""
 msgid "responsabile_di"
 msgstr ""
 
+#: components/ItaliaTheme/View/VenueView
+# defaultMessage: Riferimento e-mail
+msgid "riferimento_mail_luogo"
+msgstr ""
+
+#: components/ItaliaTheme/View/VenueView
+# defaultMessage: Riferimento telefonico
+msgid "riferimento_telefonico_luogo"
+msgstr ""
+
+#: components/ItaliaTheme/View/VenueView
+# defaultMessage: Riferimento web
+msgid "riferimento_web"
+msgstr ""
+
 #: components/DesignTheme/View/Commons/Metadata
 #: components/ItaliaTheme/View/Commons/Metadata
 # defaultMessage: Diritti
@@ -1380,6 +1395,11 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/Dates
 # defaultMessage: Inizio evento
 msgid "start"
+msgstr ""
+
+#: components/ItaliaTheme/View/VenueView
+# defaultMessage: Struttura responsabile
+msgid "struttura_responsabile_correlati"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Metadata
