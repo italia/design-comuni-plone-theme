@@ -6,3 +6,4 @@
  */
 
 export { getIcon }  from './argumentHelper';
+ export { defaultIconWidgetOptions } from '@italia/helpers/IconWidget/IconWidgetHelper';

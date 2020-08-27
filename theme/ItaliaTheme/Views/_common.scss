@@ -31,6 +31,7 @@ h6 {
 
 .public-ui {
   .card.bigborder {
+    border: 1px solid #d9dadb;
     border-left-width: 10px !important;
   }
 
@@ -47,20 +48,32 @@ h6 {
   }
 
   .header {
-    margin-bottom: 10px !important;
-    font-size: 14px;
+    margin-bottom: 1rem !important;
+    font-size: 1.4rem;
+  }
+
+  .card-title {
+    margin: 0 !important;
+    margin-bottom: 1rem !important;
+    line-height: 1rem;
+
+    a {
+      color: $primary;
+      font-size: 1.125rem;
+      line-height: 1.625rem;
+    }
   }
 
   .genericcard {
     .card-title {
       margin: 0 !important;
-      margin-bottom: 10px !important;
+      margin-bottom: 0.625rem !important;
       line-height: 1rem;
 
       a {
         color: $primary;
-        font-size: 18px;
-        line-height: 26px;
+        font-size: 1.125rem;
+        line-height: 1.625rem;
       }
     }
   }
@@ -162,10 +175,21 @@ div.sticky-wrapper {
   }
 }
 
+.event-center-cropped {
+  object-fit: none;
+  object-position: center;
+  max-height: 18.75rem;
+  max-width: 12.5rem;
+}
+
 #default-country {
   .react-select-container {
     &:last-child {
       z-index: 2000;
     }
   }
+}
+
+.slider-container {
+  margin-bottom: 1.5rem;
 }
