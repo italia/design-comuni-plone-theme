@@ -25,7 +25,6 @@ const EventLocationMap = ({ location }) => {
   let location_fo = locationContent[key]?.data;
   return location_fo ? (
     <>
-      <h4 className="no-toc map-header">Mappa</h4>
       {__CLIENT__ &&
       location_fo.geolocation?.latitude &&
       location_fo.geolocation?.longitude ? (
