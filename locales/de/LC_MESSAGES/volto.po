@@ -365,6 +365,7 @@ msgstr ""
 msgid "backToSearch"
 msgstr ""
 
+#: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/UOView
@@ -389,6 +390,10 @@ msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "chi_puo_presentare"
+msgstr ""
+
+#: components/ItaliaTheme/View/VenueView
+msgid "circoscrizione"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/SideMenu
@@ -425,6 +430,10 @@ msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView
 msgid "contacts"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+msgid "contatti"
 msgstr ""
 
 #: addons/volto-cookie-banner/src/CookieBannerContainer
@@ -471,6 +480,10 @@ msgstr ""
 msgid "date"
 msgstr ""
 
+#: components/ItaliaTheme/View/EventoView
+msgid "date_e_orari"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 msgid "default"
 msgstr ""
@@ -481,6 +494,10 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "desc"
+msgstr ""
+
+#: components/ItaliaTheme/View/VenueView
+msgid "descrizione"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView
@@ -496,6 +513,7 @@ msgstr ""
 msgid "detail_link_label"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/EventLocation
 #: components/ItaliaTheme/View/Commons/Locations
 msgid "details"
 msgstr ""
@@ -514,8 +532,16 @@ msgstr ""
 msgid "documenti-e-dati"
 msgstr ""
 
+#: components/ItaliaTheme/View/VenueView
+msgid "dove"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Actions
 msgid "download"
+msgstr ""
+
+#: components/ItaliaTheme/View/VenueView
+msgid "elementi_di_interesse"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView
@@ -524,6 +550,22 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/NewsHome/Edit
 msgid "emptySelection"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/Dates
+msgid "end"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/Events
+msgid "event_title"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+msgid "event_ulteriori_informazioni"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/Events
+msgid "events"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
@@ -579,6 +621,14 @@ msgstr ""
 msgid "grid-gallery-max-items-exceeded"
 msgstr ""
 
+#: components/ItaliaTheme/manage/Widgets/IconWidget
+msgid "icon"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/IconWidget
+msgid "iconDescription"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView
 msgid "importi_di_viaggio_e_o_servizi"
 msgstr ""
@@ -603,12 +653,17 @@ msgstr ""
 msgid "link_siti_esterni"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/EventLocation
 #: components/ItaliaTheme/View/Commons/Locations
 msgid "locations"
 msgstr ""
 
 #: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
 msgid "longitude"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+msgid "luogo"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Actions
@@ -619,6 +674,10 @@ msgstr ""
 msgid "minutes"
 msgstr ""
 
+#: components/ItaliaTheme/View/VenueView
+msgid "modalita_accesso"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Metadata
 msgid "modified"
 msgstr ""
@@ -627,6 +686,7 @@ msgstr ""
 msgid "multilingual_text_placeholder"
 msgstr ""
 
+#: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/NewsItemView
 msgid "notizie_in_evidenza"
 msgstr ""
@@ -672,6 +732,10 @@ msgstr ""
 msgid "options"
 msgstr ""
 
+#: components/ItaliaTheme/View/VenueView
+msgid "orario_pubblico"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView
 msgid "organizzazione_riferimento"
 msgstr ""
@@ -686,6 +750,10 @@ msgstr ""
 
 #: components/ItaliaTheme/View/Commons/CuredBy
 msgid "page_cured_by"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+msgid "parteciperanno"
 msgstr ""
 
 #: components/ItaliaTheme/View/UOView
@@ -704,12 +772,20 @@ msgstr ""
 msgid "portata_di_click"
 msgstr ""
 
+#: components/ItaliaTheme/manage/Widgets/IconPreviewWidget
+msgid "previewIconSelected"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Actions
 msgid "print"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "procedure_collegate"
+msgstr ""
+
+#: components/ItaliaTheme/View/VenueView
+msgid "quartiere"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/PageHeader
@@ -720,6 +796,7 @@ msgstr ""
 msgid "related_doc"
 msgstr ""
 
+#: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/NewsItemView
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/ServizioView
@@ -806,6 +883,10 @@ msgstr ""
 msgid "sections"
 msgstr ""
 
+#: components/ItaliaTheme/View/VenueView
+msgid "sede_di"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/UOLocation
 msgid "sedi"
 msgstr ""
@@ -836,6 +917,7 @@ msgid "servizi_collegati"
 msgstr ""
 
 #: components/ItaliaTheme/View/UOView
+#: components/ItaliaTheme/View/VenueView
 msgid "servizi_offerti"
 msgstr ""
 
@@ -885,6 +967,14 @@ msgstr ""
 msgid "spese_elettorali"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/Sponsors
+msgid "sponsors"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/Dates
+msgid "start"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Metadata
 msgid "subjects"
 msgstr ""
@@ -911,6 +1001,7 @@ msgid "ufficio_responsabile"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView
+#: components/ItaliaTheme/View/VenueView
 msgid "ulteriori_informazioni"
 msgstr ""
 
@@ -919,6 +1010,7 @@ msgid "unknownBlock"
 msgstr ""
 
 #: components/ItaliaTheme/View/UOView
+#: components/ItaliaTheme/View/VenueView
 msgid "uo_related_news"
 msgstr ""
 

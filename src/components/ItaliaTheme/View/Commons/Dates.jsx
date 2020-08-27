@@ -29,6 +29,7 @@ const messages = defineMessages({
 const Dates = ({ content, show_image }) => {
   const intl = useIntl();
   moment.locale(intl.locale);
+
   return content ? (
     <div className="point-list-wrapper my-4">
       <div className="point-list">
@@ -47,9 +48,11 @@ const Dates = ({ content, show_image }) => {
             tag="div"
           >
             <CardBody tag="div" className={'card-body'}>
-              <CardTitle tag="h5">{`${moment(content.start).format(
-                'hh:mm',
-              )} - ${intl.formatMessage(messages.start)}`}</CardTitle>
+              <CardTitle tag="h5">
+                {`${moment(content.start).format(
+                  'hh:mm',
+                )} - ${intl.formatMessage(messages.start)}`}
+              </CardTitle>
             </CardBody>
           </Card>
         </div>

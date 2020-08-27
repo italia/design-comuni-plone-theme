@@ -129,10 +129,11 @@ const EventoView = ({ content, location }) => {
             >
               {text}
             </article>
+
             {content?.introduzione?.data && (
               <RichTextArticle
                 content={content.introduzione?.data}
-                tag_id={'text-body'}
+                tag_id="introduzione"
                 title={'Introduzione'}
               />
             )}
@@ -147,7 +148,7 @@ const EventoView = ({ content, location }) => {
             {content?.descrizione_destinatari?.data && (
               <RichTextArticle
                 content={content?.descrizione_destinatari?.data}
-                tag_id={'descrizione-destinatari'}
+                tag_id="descrizione-destinatari"
                 title={null}
               />
             )}
@@ -373,6 +374,7 @@ const EventoView = ({ content, location }) => {
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.relatedItems.map((item, i) => (
                     <GenericCard
+                      key={i}
                       index={item['@id']}
                       item={item}
                       showimage={false}

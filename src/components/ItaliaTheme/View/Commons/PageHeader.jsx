@@ -68,13 +68,17 @@ const PageHeader = (props) => {
           {props.content.title}
           {props.content.subtitle && ` - ${props.content.subtitle}`}
         </h1>
-        {props.content['@type'] === 'Event' &&
-        moment(props.content.end).format('DD-MM-Y') !==
-          moment(props.content.start).format('DD-MM-Y')
-          ? `dal ${moment(props.content.start).format('DD-MM-Y')} al ${moment(
-              props.content.end,
-            ).format('DD-MM-Y')}`
-          : `${moment(props.content.start).format('DD-MM-Y')}`}
+        {props.content['@type'] === 'Event' && (
+          <h4 className="py-2">
+            {moment(props.content.end).format('DD-MM-Y') !==
+            moment(props.content.start).format('DD-MM-Y')
+              ? `dal ${moment(props.content.start).format(
+                  'DD-MM-Y',
+                )} al ${moment(props.content.end).format('DD-MM-Y')}`
+              : `${moment(props.content.start).format('DD-MM-Y')}`}
+          </h4>
+        )}
+
         {props.content.description && (
           <p className="documentDescription">{props.content.description}</p>
         )}
