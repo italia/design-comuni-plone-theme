@@ -38,6 +38,7 @@ import { UOView } from '@italia/components/ItaliaTheme';
 import { PersonaView } from '@italia/components/ItaliaTheme';
 import { VenueView } from '@italia/components/ItaliaTheme';
 import { ServizioView } from '@italia/components/ItaliaTheme';
+import { EventoView } from '@italia/components/ItaliaTheme';
 import { PaginaArgomentoView } from '@italia/components/ItaliaTheme';
 
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
@@ -264,6 +265,7 @@ export const views = {
     Persona: PersonaView,
     Venue: VenueView,
     Servizio: ServizioView,
+    Event: EventoView,
     'Pagina Argomento': PaginaArgomentoView,
   },
 };

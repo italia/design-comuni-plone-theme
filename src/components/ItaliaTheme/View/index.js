@@ -9,6 +9,11 @@ export Sharing from '@italia/components/ItaliaTheme/View/Commons/Sharing';
 export Actions from '@italia/components/ItaliaTheme/View/Commons/Actions';
 export SideMenu from '@italia/components/ItaliaTheme/View/Commons/SideMenu';
 export Gallery from '@italia/components/ItaliaTheme/View/Commons/Gallery';
+export Dates from '@italia/components/ItaliaTheme/View/Commons/Dates';
+export HelpBox from '@italia/components/ItaliaTheme/View/Commons/HelpBox';
+export EmbeddedVideo from '@italia/components/ItaliaTheme/View/Commons/EmbeddedVideo';
+export Events from '@italia/components/ItaliaTheme/View/Commons/Events';
+export Venue from '@italia/components/ItaliaTheme/View/Commons/Venue';
 
 export PageHeader from '@italia/components/ItaliaTheme/View/Commons/PageHeader';
 export Attachment from '@italia/components/ItaliaTheme/View/Commons/Attachment';
@@ -26,7 +31,11 @@ export RelatedNews from '@italia/components/ItaliaTheme/View/Commons/RelatedNews
 export WideImage from '@italia/components/ItaliaTheme/View/Commons/WideImage';
 export Locations from '@italia/components/ItaliaTheme/View/Commons/Locations';
 export UOLocation from '@italia/components/ItaliaTheme/View/Commons/UOLocation';
+export EventLocations from '@italia/components/ItaliaTheme/View/Commons/EventLocations';
+export EventLocation from '@italia/components/ItaliaTheme/View/Commons/EventLocation';
+export EventLocationMap from '@italia/components/ItaliaTheme/View/Commons/EventLocationMap';
 export SmallVenue from '@italia/components/ItaliaTheme/View/Commons/SmallVenue';
+export Sponsors from '@italia/components/ItaliaTheme/View/Commons/Sponsors';
 
 /* --- View --- */
 export PaginaArgomentoViewNoBlocks from '@italia/components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks';

@@ -266,7 +266,7 @@ const UOView = ({ content }) => {
                 ))}
               </article>
             ) : null}
-            {content?.items.some((e) => e.id === 'allegati') && (
+            {content?.items?.some((e) => e.id === 'allegati') && (
               <Attachments content={content} folder_name={'allegati'} />
             )}
             {content?.box_aiuto && (

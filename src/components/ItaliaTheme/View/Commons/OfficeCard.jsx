@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { Link } from 'react-router-dom';
+import { Icon } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
 
@@ -11,10 +12,10 @@ import PropTypes from 'prop-types';
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const OfficeCard = ({ office }) => {
+const OfficeCard = ({ office, extended, icon, children }) => {
   const key = `${office['@id']}_office`;
   const url = flattenToAppURL(office['@id']);
-  const officeContent = useSelector(state => state.content.subrequests);
+  const officeContent = useSelector((state) => state.content.subrequests);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -23,8 +24,10 @@ const OfficeCard = ({ office }) => {
   }, [dispatch, office, url, key]);
 
   let office_fo = officeContent[key]?.data;
+  console.log(office, office_fo);
   return office_fo ? (
-    <div className="card card-teaser border rounded shadow p-4">
+    <div className="card card-teaser rounded shadow p-4">
+      {icon && <Icon icon={icon}></Icon>}
       <div className="card-body pr-3">
         <h5 className="card-title no-toc">
           <Link to={flattenToAppURL(office_fo['@id'])} title={office_fo.title}>
@@ -34,14 +37,23 @@ const OfficeCard = ({ office }) => {
         <p className="card-text">{office_fo.description}</p>
         {(office_fo.city || office_fo.zip_code || office_fo.street) && (
           <div className="card-text">
-            {office_fo.stree && <p>{office_fo.street}</p>}
+            {office_fo.street && <p>{office_fo.street}</p>}
             {(office_fo.city || office_fo.zip_code) && (
               <p>
                 {office_fo.zip_code} {office_fo.city}
               </p>
             )}
+            {extended ? (
+              <div
+                className="card-text"
+                dangerouslySetInnerHTML={{
+                  __html: office_fo.contact_info?.data,
+                }}
+              />
+            ) : null}
           </div>
         )}
+        {children && <div className="card-text">{children}</div>}
       </div>
     </div>
   ) : null;
@@ -56,4 +68,6 @@ OfficeCard.propTypes = {
     title: PropTypes.string,
     review_state: PropTypes.string,
   }),
+  extended: PropTypes.bool,
+  icon: PropTypes.string,
 };

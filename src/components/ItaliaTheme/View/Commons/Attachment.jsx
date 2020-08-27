@@ -21,18 +21,18 @@ const Attachment = ({ title, description, download_url }) => {
   const intl = useIntl();
   return (
     <Card
-      className="card card-teaser shadow p-4 mt-3 rounded border attachment"
+      className="card card-teaser shadow p-4 mt-3 rounded attachment"
       noWrapper={true}
       tag="div"
     >
       <CardBody tag="div">
-        <Icon
-          icon="it-clip"
-          padding={false}
-          alt={intl.formatMessage(messages.attachment)}
-          title={intl.formatMessage(messages.attachment)}
-        />
         <CardTitle tag="h5">
+          <Icon
+            icon="it-clip"
+            padding={true}
+            alt={intl.formatMessage(messages.attachment)}
+            title={intl.formatMessage(messages.attachment)}
+          />
           <a href={flattenToAppURL(download_url)}>{title}</a>
         </CardTitle>
         {description && <p>{description}</p>}
