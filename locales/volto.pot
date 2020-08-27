@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-08-27T10:02:09.170Z\n"
+"POT-Creation-Date: 2020-08-27T11:00:57.922Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -144,13 +144,8 @@ msgid "Menu selezionato"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/GridGalleryTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/InEvidenceTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/NewsTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/PhotogalleryTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/SmallBlockLinksTemplateOptions
 # defaultMessage: Mostra lo sfondo del blocco
 msgid "Mostra lo sfondo del blocco"
 msgstr ""
@@ -272,13 +267,8 @@ msgid "Title placeholder"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/GridGalleryTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/InEvidenceTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/NewsTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/PhotogalleryTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/SmallBlockLinksTemplateOptions
 # defaultMessage: Titolo
 msgid "Titolo"
 msgstr ""
@@ -683,7 +673,7 @@ msgid "event_title"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView
-# defaultMessage: Ulteriori informazioni
+# defaultMessage: Ulteriori informazioni sull'evento
 msgid "event_ulteriori_informazioni"
 msgstr ""
 
@@ -822,11 +812,6 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/Actions
 # defaultMessage: Invia
 msgid "mailto"
-msgstr ""
-
-#: components/ItaliaTheme/View/Commons/EventLocationMap
-# defaultMessage: Mappa
-msgid "mappa"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/PageHeader

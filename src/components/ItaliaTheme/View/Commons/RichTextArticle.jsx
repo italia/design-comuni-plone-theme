@@ -20,9 +20,7 @@ const RichTextArticle = ({
     <article id={tag_id} className="it-page-section anchor-offset mt-5">
       {title ? (
         title_size === 'h6' ? (
-          <h6 id={`header-${tag_id}`} className="text-serif font-weight-bold">
-            {title}
-          </h6>
+          <h6 className="text-serif font-weight-bold">{title}</h6>
         ) : (
           <h4 id={`header-${tag_id}`}>{title}</h4>
         )

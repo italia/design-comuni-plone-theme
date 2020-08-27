@@ -116,13 +116,8 @@ msgid "Menu selezionato"
 msgstr "Menu selezionato"
 
 #: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/GridGalleryTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/InEvidenceTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/NewsTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/PhotogalleryTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/SmallBlockLinksTemplateOptions
 msgid "Mostra lo sfondo del blocco"
 msgstr "Mostra lo sfondo del blocco"
 
@@ -220,13 +215,8 @@ msgid "Title placeholder"
 msgstr "Title..."
 
 #: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/GridGalleryTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/InEvidenceTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/NewsTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/PhotogalleryTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/SmallBlockLinksTemplateOptions
 msgid "Titolo"
 msgstr "Titolo"
 
@@ -348,7 +338,7 @@ msgstr "indietro"
 
 #: components/ItaliaTheme/Header/SearchModal
 msgid "backToSearch"
-msgstr "Torna alla ricerca<<<<<<< HEAD======="
+msgstr "Torna alla ricerca"
 
 #: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
@@ -375,11 +365,11 @@ msgstr "Gestione di casi particolari per la richiesta del servizio"
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "chi_puo_presentare"
-msgstr "Chi può presentare domanda<<<<<<< HEAD"
+msgstr "Chi può presentare domanda"
 
 #: components/ItaliaTheme/View/VenueView
 msgid "circoscrizione"
-msgstr "======="
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/SideMenu
 msgid "close"
@@ -479,11 +469,11 @@ msgstr "Deleghe"
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "desc"
-msgstr "Link rapidi<<<<<<< HEAD"
+msgstr "Link rapidi"
 
 #: components/ItaliaTheme/View/VenueView
 msgid "descrizione"
-msgstr "======="
+msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "descrizione_destinatari"
@@ -496,7 +486,7 @@ msgstr "Descrizione estesa"
 #: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 msgid "detail_link_label"
-msgstr "Testo per il link al dettaglio<<<<<<< HEAD"
+msgstr "Testo per il link al dettaglio"
 
 #: components/ItaliaTheme/View/Commons/EventLocation
 #: components/ItaliaTheme/View/Commons/Locations
@@ -515,19 +505,19 @@ msgstr "Documenti"
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 msgid "documenti-e-dati"
-msgstr "Documenti e dati<<<<<<< HEAD"
+msgstr "Documenti e dati"
 
 #: components/ItaliaTheme/View/VenueView
 msgid "dove"
-msgstr "======="
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Actions
 msgid "download"
-msgstr "Scarica<<<<<<< HEAD"
+msgstr "Scarica"
 
 #: components/ItaliaTheme/View/VenueView
 msgid "elementi_di_interesse"
-msgstr "======="
+msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView
 msgid "email"
@@ -555,7 +545,7 @@ msgstr "Eventi"
 
 #: components/ItaliaTheme/View/EventoView
 msgid "event_ulteriori_informazioni"
-msgstr "Informazioni"
+msgstr "Ulteriori informazioni sull'evento"
 
 #: components/ItaliaTheme/View/EventoView
 msgid "event_url"
@@ -616,7 +606,7 @@ msgstr "Selezionato"
 
 #: components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate
 msgid "grid-gallery-max-items-exceeded"
-msgstr "Per questo template il numero di risultati per pagina deve essere 7. Controlla le impostazioni.<<<<<<< HEAD"
+msgstr "Per questo template il numero di risultati per pagina deve essere 7. Controlla le impostazioni."
 
 #: components/ItaliaTheme/manage/Widgets/IconWidget
 msgid "icon"
@@ -624,7 +614,7 @@ msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/IconWidget
 msgid "iconDescription"
-msgstr "======="
+msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView
 msgid "importi_di_viaggio_e_o_servizi"
@@ -648,7 +638,7 @@ msgstr "Collegamento"
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "link_siti_esterni"
-msgstr "Link utili<<<<<<< HEAD"
+msgstr "Link utili"
 
 #: components/ItaliaTheme/View/Commons/EventLocation
 #: components/ItaliaTheme/View/Commons/Locations
@@ -667,17 +657,13 @@ msgstr ""
 msgid "mailto"
 msgstr "Invia"
 
-#: components/ItaliaTheme/View/Commons/EventLocationMap
-msgid "mappa"
-msgstr ""
-
 #: components/ItaliaTheme/View/Commons/PageHeader
 msgid "minutes"
-msgstr "min<<<<<<< HEAD"
+msgstr "min"
 
 #: components/ItaliaTheme/View/VenueView
 msgid "modalita_accesso"
-msgstr "======="
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Metadata
 msgid "modified"
@@ -685,7 +671,7 @@ msgstr "Ultimo aggiornamento"
 
 #: addons/volto-multilingual-widget/src/MultilingualWidget
 msgid "multilingual_text_placeholder"
-msgstr "Digita...<<<<<<< HEAD======="
+msgstr "Digita..."
 
 #: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/NewsItemView
@@ -731,11 +717,11 @@ msgstr "Dal"
 
 #: components/ItaliaTheme/Header/SearchModal
 msgid "options"
-msgstr "Opzioni<<<<<<< HEAD"
+msgstr "Opzioni"
 
 #: components/ItaliaTheme/View/VenueView
 msgid "orario_pubblico"
-msgstr "======="
+msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView
 msgid "organizzazione_riferimento"
@@ -787,11 +773,11 @@ msgstr "Stampa"
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "procedure_collegate"
-msgstr "Procedure collegate all'esito<<<<<<< HEAD"
+msgstr "Procedure collegate all'esito"
 
 #: components/ItaliaTheme/View/VenueView
 msgid "quartiere"
-msgstr "======="
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/PageHeader
 msgid "reading_time"
@@ -799,7 +785,7 @@ msgstr "Tempo di lettura"
 
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 msgid "related_doc"
-msgstr "Documenti<<<<<<< HEAD======="
+msgstr "Documenti"
 
 #: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/NewsItemView
@@ -886,11 +872,11 @@ msgstr "Dove cercare"
 
 #: components/ItaliaTheme/Header/SearchModal
 msgid "sections"
-msgstr "Sezioni<<<<<<< HEAD"
+msgstr "Sezioni"
 
 #: components/ItaliaTheme/View/VenueView
 msgid "sede_di"
-msgstr "======="
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/UOLocation
 msgid "sedi"

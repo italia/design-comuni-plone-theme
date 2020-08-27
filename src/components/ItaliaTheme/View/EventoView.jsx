@@ -46,7 +46,7 @@ const messages = defineMessages({
   },
   event_ulteriori_informazioni: {
     id: 'event_ulteriori_informazioni',
-    defaultMessage: 'Ulteriori informazioni',
+    defaultMessage: "Ulteriori informazioni sull'evento",
   },
   date_e_orari: {
     id: 'date_e_orari',
