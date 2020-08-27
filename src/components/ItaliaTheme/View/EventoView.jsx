@@ -94,7 +94,6 @@ const EventoView = ({ content, location }) => {
       }
     }
   }, [documentBody]);
-
   return (
     <>
       <div className="container px-4 my-4 newsitem-view">
@@ -265,15 +264,19 @@ const EventoView = ({ content, location }) => {
                     </p>
                   </CardBody>
                 </Card>
-                <h5 className="mt-4 supported-by">Con il supporto di:</h5>
-                {content?.evento_supportato_da?.map((item) => (
-                  <OfficeCard
-                    key={item['@id']}
-                    office={item}
-                    extended={true}
-                    icon={'it-pa'}
-                  />
-                ))}
+                {content?.evento_supportato_da?.length > 0 && (
+                  <>
+                    <h5 className="mt-4 supported-by">Con il supporto di:</h5>
+                    {content?.evento_supportato_da?.map((item) => (
+                      <OfficeCard
+                        key={item['@id']}
+                        office={item}
+                        extended={true}
+                        icon={'it-pa'}
+                      />
+                    ))}
+                  </>
+                )}
               </article>
             ) : null}
             {content?.organizzato_da_interno?.length > 0 ? (
@@ -284,7 +287,7 @@ const EventoView = ({ content, location }) => {
                 <h4 id="header-contatti">
                   {intl.formatMessage(messages.contatti)}
                 </h4>
-                {content?.evento_organizzato_da_interno?.map((item) => (
+                {content?.organizzato_da_interno?.map((item) => (
                   <OfficeCard
                     key={item['@id']}
                     office={item}
@@ -292,15 +295,20 @@ const EventoView = ({ content, location }) => {
                     icon={'it-telephone'}
                   />
                 ))}
-                <h5 className="mt-4 supported-by">Con il supporto di:</h5>
-                {content?.evento_supportato_da?.map((item) => (
-                  <OfficeCard
-                    key={item['@id']}
-                    office={item}
-                    extended={true}
-                    icon={'it-pa'}
-                  />
-                ))}
+
+                {content?.evento_supportato_da?.length > 0 && (
+                  <>
+                    <h5 className="mt-4 supported-by">Con il supporto di:</h5>
+                    {content?.evento_supportato_da?.map((item) => (
+                      <OfficeCard
+                        key={item['@id']}
+                        office={item}
+                        extended={true}
+                        icon={'it-pa'}
+                      />
+                    ))}
+                  </>
+                )}
               </article>
             ) : null}
             {content && (
