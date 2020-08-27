@@ -556,6 +556,10 @@ msgstr ""
 msgid "event_ulteriori_informazioni"
 msgstr ""
 
+#: components/ItaliaTheme/View/EventoView
+msgid "event_url"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Events
 msgid "events"
 msgstr ""
@@ -746,6 +750,10 @@ msgstr ""
 
 #: components/ItaliaTheme/View/EventoView
 msgid "parteciperanno"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+msgid "patrocinato_da"
 msgstr ""
 
 #: components/ItaliaTheme/View/UOView

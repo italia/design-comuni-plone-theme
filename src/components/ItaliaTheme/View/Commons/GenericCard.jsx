@@ -14,7 +14,7 @@ import { Icon } from 'design-react-kit/dist/design-react-kit';
 const GenericCard = ({ item, showimage, image_field, show_icon }) => {
   const key = `generic_card_${item['@id']}`;
   const url = flattenToAppURL(item['@id']);
-  const locationContent = useSelector(state => state.content.subrequests);
+  const locationContent = useSelector((state) => state.content.subrequests);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getContent(url, null, key));
@@ -23,7 +23,7 @@ const GenericCard = ({ item, showimage, image_field, show_icon }) => {
   const item_fo = locationContent[key]?.data;
   return item_fo ? (
     showimage && item_fo[image_field] ? (
-      <div className="genericcard card-img card card-teaser shadow p-4 mt-3 rounded border">
+      <div className="genericcard card-img card card-teaser shadow p-4 mt-3 rounded">
         <div className="img-responsive-wrapper">
           <div className="img-responsive img-responsive-panoramic">
             <figure className="img-wrapper">
@@ -46,7 +46,7 @@ const GenericCard = ({ item, showimage, image_field, show_icon }) => {
         </div>
       </div>
     ) : (
-      <div className="genericcard card card-teaser shadow p-4 mt-3 rounded border">
+      <div className="genericcard card card-teaser shadow p-4 mt-3 rounded">
         <div className="card-body">
           <h5 className="card-title no-toc">
             {show_icon && <Icon icon={show_icon} padding={false} />}

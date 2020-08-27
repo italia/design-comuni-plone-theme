@@ -76,6 +76,14 @@ const messages = defineMessages({
     id: 'event_url',
     defaultMessage: "Url dell'evento",
   },
+  event_destinatari: {
+    id: 'event_destinatari',
+    defaultMessage: "L'evento è di interesse per:",
+  },
+  strutture_politiche: {
+    id: 'event_strutture_politiche',
+    defaultMessage: 'Strutture politiche coninvolte',
+  },
 });
 
 /**
@@ -155,7 +163,9 @@ const EventoView = ({ content, location }) => {
               <RichTextArticle
                 content={content?.descrizione_destinatari?.data}
                 tag_id="descrizione-destinatari"
-                title={null}
+                title={intl.formatMessage(messages.event_destinatari)}
+                title_size="h6"
+                add_class="mb-5"
               />
             )}
             {content?.persone_amministrazione?.length > 0 && (
@@ -171,6 +181,7 @@ const EventoView = ({ content, location }) => {
                     simple
                     tag="div"
                     key={item['@id']}
+                    className="mr-2"
                   >
                     <ChipLabel tag="span">
                       <Link to={flattenToAppURL(item['@id'])}>
@@ -270,6 +281,14 @@ const EventoView = ({ content, location }) => {
                         '',
                       )}
                     </p>
+                    {content?.contatto_reperibilita && (
+                      <p className="card-text mt-3">
+                        {content?.contatto_reperibilita?.replace(
+                          /(<([^>]+)>)/g,
+                          '',
+                        )}
+                      </p>
+                    )}
                   </CardBody>
                 </Card>
                 {content?.evento_supportato_da?.length > 0 && (
@@ -287,12 +306,13 @@ const EventoView = ({ content, location }) => {
                 )}
               </article>
             ) : null}
+
             {content?.organizzato_da_interno?.length > 0 ? (
               <article
                 className="it-page-section anchor-offset mt-5"
-                id="contatti"
+                id="contatti-interno"
               >
-                <h4 id="header-contatti">
+                <h4 id="header-contatti-interno">
                   {intl.formatMessage(messages.contatti)}
                 </h4>
                 {content?.organizzato_da_interno?.map((item) => (
@@ -301,7 +321,16 @@ const EventoView = ({ content, location }) => {
                     office={item}
                     extended={true}
                     icon={'it-telephone'}
-                  />
+                  >
+                    {content?.contatto_reperibilita && (
+                      <p className="card-text mt-3">
+                        {content?.contatto_reperibilita?.replace(
+                          /(<([^>]+)>)/g,
+                          '',
+                        )}
+                      </p>
+                    )}
+                  </OfficeCard>
                 ))}
 
                 {content?.evento_supportato_da?.length > 0 && (
@@ -332,6 +361,7 @@ const EventoView = ({ content, location }) => {
               /(<([^>]+)>)/g,
               '',
             ) ||
+            content?.event_url ||
             content?.patrocinato_da ||
             content?.items?.some((e) => e.id === 'sponsor_evento') ? (
               <article
@@ -354,8 +384,17 @@ const EventoView = ({ content, location }) => {
                   />
                 )}
 
+                {content?.event_url && (
+                  <div class="mt-4">
+                    <strong>{intl.formatMessage(messages.event_url)}:</strong>{' '}
+                    <a href={content.event_url} rel="noopener noreferer">
+                      {content.event_url}
+                    </a>
+                  </div>
+                )}
+
                 {content?.patrocinato_da && (
-                  <div class="mt-5">
+                  <div class="mt-4">
                     <strong>
                       {intl.formatMessage(messages.patrocinato_da)}
                     </strong>
@@ -369,7 +408,7 @@ const EventoView = ({ content, location }) => {
                 )}
 
                 {content?.items?.some((e) => e.id === 'sponsor_evento') && (
-                  <div className="mt-5">
+                  <div className="mt-4">
                     <Sponsors
                       content={content}
                       folder_name={'sponsor_evento'}
@@ -379,22 +418,28 @@ const EventoView = ({ content, location }) => {
               </article>
             ) : null}
 
-            {content?.event_url && (
-              <article
-                id="event-url"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4 id={`header-ulteriori-informazioni`}>
-                  {intl.formatMessage(messages.event_url)}:
-                </h4>
-                <a href={content.event_url} rel="noopener noreferer">
-                  {content.event_url}
-                </a>
-              </article>
-            )}
             {content?.box_aiuto?.data?.replace(/(<([^>]+)>)/g, '') && (
               <article className="it-page-section anchor-offset mt-5">
                 <HelpBox text={content?.box_aiuto} />
+              </article>
+            )}
+
+            {content?.strutture_politiche.length > 0 && (
+              <article
+                id="strutture_politiche"
+                className="it-page-section anchor-offset mt-5"
+              >
+                <h4>{intl.formatMessage(messages.strutture_politiche)}</h4>
+                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                  {content.strutture_politiche.map((item, i) => (
+                    <GenericCard
+                      key={i}
+                      index={item['@id']}
+                      item={item}
+                      showimage={false}
+                    />
+                  ))}
+                </div>
               </article>
             )}
             {content?.relatedItems?.length > 0 ? (

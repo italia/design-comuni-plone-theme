@@ -21,7 +21,7 @@ const Attachment = ({ title, description, download_url }) => {
   const intl = useIntl();
   return (
     <Card
-      className="card card-teaser shadow p-4 mt-3 rounded border attachment"
+      className="card card-teaser shadow p-4 mt-3 rounded attachment"
       noWrapper={true}
       tag="div"
     >

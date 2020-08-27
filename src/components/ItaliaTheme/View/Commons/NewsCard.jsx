@@ -13,7 +13,7 @@ import PropTypes from 'prop-types';
 const NewsCard = ({ title, typology, effective, description, id }) => {
   let date = effective ? new Date(effective) : false;
   return (
-    <div className="relatedNews card card-teaser shadow p-4 mt-3 rounded border">
+    <div className="relatedNews card card-teaser shadow p-4 mt-3 rounded">
       <div className="card-body">
         <div className="header text-uppercase"></div>
         <div className="category-top">

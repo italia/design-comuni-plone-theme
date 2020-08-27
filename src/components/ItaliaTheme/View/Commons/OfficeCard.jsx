@@ -12,7 +12,7 @@ import PropTypes from 'prop-types';
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const OfficeCard = ({ office, extended, icon }) => {
+const OfficeCard = ({ office, extended, icon, children }) => {
   const key = `${office['@id']}_office`;
   const url = flattenToAppURL(office['@id']);
   const officeContent = useSelector((state) => state.content.subrequests);
@@ -26,7 +26,7 @@ const OfficeCard = ({ office, extended, icon }) => {
   let office_fo = officeContent[key]?.data;
   console.log(office, office_fo);
   return office_fo ? (
-    <div className="card card-teaser border rounded shadow p-4">
+    <div className="card card-teaser rounded shadow p-4">
       {icon && <Icon icon={icon}></Icon>}
       <div className="card-body pr-3">
         <h5 className="card-title no-toc">
@@ -53,6 +53,7 @@ const OfficeCard = ({ office, extended, icon }) => {
             ) : null}
           </div>
         )}
+        {children && <div className="card-text">{children}</div>}
       </div>
     </div>
   ) : null;

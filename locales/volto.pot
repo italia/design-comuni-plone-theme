@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-08-27T07:14:51.874Z\n"
+"POT-Creation-Date: 2020-08-27T08:20:05.822Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -673,8 +673,13 @@ msgid "event_title"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView
-# defaultMessage: Informazioni
+# defaultMessage: Ulteriori informazioni
 msgid "event_ulteriori_informazioni"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+# defaultMessage: Url dell'evento
+msgid "event_url"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Events
@@ -914,6 +919,11 @@ msgstr ""
 #: components/ItaliaTheme/View/EventoView
 # defaultMessage: Parteciperanno:
 msgid "parteciperanno"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+# defaultMessage: Patrocinato da:
+msgid "patrocinato_da"
 msgstr ""
 
 #: components/ItaliaTheme/View/UOView

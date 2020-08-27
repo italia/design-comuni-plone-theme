@@ -61,6 +61,7 @@ const Metadata = ({ content, showTags = true }) => {
               simple
               tag="div"
               key={item}
+              className="mr-2"
             >
               <ChipLabel tag="span">{item}</ChipLabel>
             </Chip>
