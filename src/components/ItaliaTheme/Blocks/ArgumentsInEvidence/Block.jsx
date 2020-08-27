@@ -10,6 +10,7 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import { settings } from '@italia/config';
 import redraft from 'redraft';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const messages = defineMessages({
   text: {
@@ -36,6 +37,9 @@ const Block = ({
   return (
     <Card className="card-bg" noWrapper={true} tag="div">
       <CardBody tag="div">
+        <div className="icon-container d-flex align-items-center justify-content-center mb-2">
+          <FontAwesomeIcon icon={argument.icona} className="show-icon"/>
+        </div>
         <CardTitle tag="h3">{argument?.title}</CardTitle>
         <CardText tag="p">{argument?.description}</CardText>
         {inEditMode ? (
