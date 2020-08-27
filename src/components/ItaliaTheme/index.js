@@ -42,6 +42,7 @@ export SectionIcon from '@italia/components/ItaliaTheme/Icons/SectionIcon';
 export CharCounterDescriptionWidget from '@italia/components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget';
 export TextEditorWidget from '@italia/components/ItaliaTheme/manage/Widgets/TextEditorWidget';
 export PageView from '@italia/components/ItaliaTheme/View/PageView';
+export VenueView from '@italia/components/ItaliaTheme/View/VenueView';
 export NewsItemView from '@italia/components/ItaliaTheme/View/NewsItemView';
 export UOView from '@italia/components/ItaliaTheme/View/UOView';
 export PersonaView from '@italia/components/ItaliaTheme/View/PersonaView';
@@ -50,6 +51,6 @@ export EventoView from '@italia/components/ItaliaTheme/View/EventoView';
 export PaginaArgomentoView from '@italia/components/ItaliaTheme/View/PaginaArgomentoView';
 
 export LinkToWidget from '@italia/components/ItaliaTheme/manage/Widgets/LinkToWidget';
-
+export IconWidget from '@italia/components/ItaliaTheme/manage/Widgets/IconWidget';
 //common
 export getItemIcon from '@italia/components/ItaliaTheme/common';

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-08-27T08:20:05.822Z\n"
+"POT-Creation-Date: 2020-08-27T10:02:09.170Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -667,6 +667,16 @@ msgstr ""
 msgid "end"
 msgstr ""
 
+#: components/ItaliaTheme/View/EventoView
+# defaultMessage: L'evento è di interesse per:
+msgid "event_destinatari"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+# defaultMessage: Strutture politiche coninvolte
+msgid "event_strutture_politiche"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Events
 # defaultMessage: Eventi
 msgid "event_title"
@@ -812,6 +822,11 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/Actions
 # defaultMessage: Invia
 msgid "mailto"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/EventLocationMap
+# defaultMessage: Mappa
+msgid "mappa"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/PageHeader
