@@ -144,13 +144,6 @@ const EventoView = ({ content, location }) => {
               {text}
             </article>
 
-            {content?.introduzione?.data && (
-              <RichTextArticle
-                content={content.introduzione?.data}
-                tag_id="introduzione"
-                title={'Introduzione'}
-              />
-            )}
             {content?.items.some((e) => e.id === 'multimedia') && (
               <article
                 id="galleria"
@@ -482,9 +475,7 @@ EventoView.propTypes = {
     effective: PropTypes.string,
     start: PropTypes.string,
     end: PropTypes.string,
-    contact_email: PropTypes.string,
-    contact_phone: PropTypes.string,
-    contact_name: PropTypes.string,
+
     patrocinato_da: PropTypes.string,
     image: PropTypes.object,
     image_caption: PropTypes.string,
@@ -497,15 +488,11 @@ EventoView.propTypes = {
     organizzato_da_esterno: PropTypes.shape({
       data: PropTypes.string,
     }),
-    introduzione: PropTypes.shape({
-      data: PropTypes.string,
-    }),
+
     descrizione_destinatari: PropTypes.shape({
       data: PropTypes.string,
     }),
-    date_significative: PropTypes.shape({
-      data: PropTypes.string,
-    }),
+
     box_aiuto: PropTypes.shape({
       data: PropTypes.string,
     }),
