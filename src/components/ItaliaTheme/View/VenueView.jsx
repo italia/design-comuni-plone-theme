@@ -256,24 +256,26 @@ const VenueView = ({ content }) => {
                 <h4 id={`header-struttura_responsabile`}>
                   {intl.formatMessage(messages.struttura_responsabile_correlati)}
                 </h4>
-                <div className="genericcard card card-teaser shadow p-4 mt-3 rounded border">
-                  <div className="card-body">
-                    <h5 className="card-title no-toc">
-                      <div
-                        className='text-serif'
-                        dangerouslySetInnerHTML={{ __html: content.struttura_responsabile?.data }}
-                      />
-                    </h5>
-                    <div className="card-text">
+                <Card className="genericcard card card-teaser shadow p-4 mt-3 rounded border">
+                  <CardBody>
+                    <CardTitle>
+                      <h5 className="card-title no-toc">
+                        <div
+                          className='text-serif'
+                          dangerouslySetInnerHTML={{ __html: content.struttura_responsabile?.data }}
+                        />
+                      </h5>
+                    </CardTitle>
+                    <CardText>
                       <div>
                         <span className="font-weight-semibold">Telefono:</span>  <a href={`tel:${content.riferimento_telefonico_struttura}`}>{content.riferimento_telefonico_struttura}</a>
                       </div>
                       <div className="mt-2">
                         <span className="font-weight-semibold">Mail:</span> <a href={`mailto:${content.riferimento_mail_struttura}`}>{content.riferimento_mail_struttura}</a>
                       </div>
-                    </div>
-                  </div>
-                </div>
+                    </CardText>
+                  </CardBody>
+                </Card>
               </article>
             }
             {/* TELEFONO */}
