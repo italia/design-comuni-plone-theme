@@ -12,18 +12,6 @@
     background-color: $primary;
   }
 
-  .icon-container {
-    border-radius: 44px;
-    width: 44px;
-    height: 44px;
-
-    .show-icon {
-      width: 24px;
-      height: 24px;
-      color: $tertiary;
-    }
-  }
-
   .grid {
     display: grid;
     gap: 24px;

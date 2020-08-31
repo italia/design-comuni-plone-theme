@@ -13,7 +13,7 @@ import redraft from 'redraft';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { ArgumentIcon } from '@italia/components/ItaliaTheme/View'
 
 const messages = defineMessages({
   text: {
@@ -52,12 +52,10 @@ const Block = ({
     <Card className="card-bg" noWrapper={true} tag="div">
       <CardBody tag="div">
         {searchResults[argument['@id']]?.data?.icona && 
-          <div className="icon-container d-flex align-items-center justify-content-center mb-2 lightgrey-bg-c2">
-            <FontAwesomeIcon icon={searchResults[argument['@id']]?.data?.icona} className="show-icon"/>
-          </div>
+          <ArgumentIcon icon={searchResults[argument['@id']]?.data?.icona}/>
         }
-        <CardTitle tag="h3">{argument?.title}</CardTitle>
-        <CardText tag="p">{argument?.description}</CardText>
+        <CardTitle tag="h3">{searchResults[argument['@id']]?.data?.title}</CardTitle>
+        <CardText tag="p">{searchResults[argument['@id']]?.data?.description}</CardText>
         {inEditMode ? (
           <TextEditorWidget
             data={data}
