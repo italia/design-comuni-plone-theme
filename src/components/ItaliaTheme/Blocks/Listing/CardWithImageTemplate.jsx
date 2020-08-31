@@ -21,6 +21,7 @@ import {
   Chip,
   ChipLabel,
 } from 'design-react-kit/dist/design-react-kit';
+import { getDateComponent, getCalendarCard } from '@italia/helpers/index';
 
 const CardWithImageTemplate = ({
   items,
@@ -88,20 +89,12 @@ const CardWithImageTemplate = ({
                               />
                             </figure>
                           </ConditionalLink>
-                          {/* Solo per tipo evento, aggiungere if quando pronto */}
-                          <div className="card-calendar d-flex flex-column justify-content-center">
-                            <span className="card-date">
-                              {moment(item.effective).format('D')}
-                            </span>
-                            <span className="card-day">
-                              {moment(item.effective).format('MMMM')}
-                            </span>
-                          </div>
+                          { (item['@type'] == 'Event') && getCalendarCard(item.start, item.end) }
                         </div>
                       </div>
                     )}
                     <CardBody>
-                      <CardCategory date={date}>
+                      <CardCategory date={getDateComponent(item.start, item.end, item.whole_day, item.open_end, item['@type'])}>
                         <Icon
                           className='icon'
                           color="primary"

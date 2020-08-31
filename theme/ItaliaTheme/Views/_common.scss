@@ -193,3 +193,29 @@ div.sticky-wrapper {
 .slider-container {
   margin-bottom: 1.5rem;
 }
+
+.card-wrapper {
+  .custom-calendar-card {
+    .card-calendar {
+      text-align: left;
+      padding: 10px 0;
+      width: 116px;
+
+      .date-label {
+        width: 26px;
+        font-size: 1rem;
+        text-align: center;
+        margin-right: 5px;
+        font-family: roboto-light;
+        font-weight: 500;
+        text-transform: lowercase;
+      }
+
+      .date {
+        font-size: 1.30rem;
+        font-family: roboto mono;
+        font-weight: 200;
+      }
+    }
+  }
+}

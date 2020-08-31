@@ -1,8 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useIntl, defineMessages } from 'react-intl';
-import moment from 'moment';
-import 'moment/min/locales';
 import {
   Container,
   Row,
@@ -21,22 +18,7 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
 import { getIcon } from '@italia/helpers/index';
-import { When } from '@plone/volto/components/theme/View/EventDatesInfo';
-
-const messages = defineMessages({
-  from: {
-    id: 'from',
-    defaultMessage: 'dal',
-  },
-  to: {
-    id: 'to',
-    defaultMessage: 'al',
-  },
-  hours: {
-    id: 'hours',
-    defaultMessage: 'ore',
-  }
-});
+import { getDateComponent, getCalendarCard } from '@italia/helpers/index';
 
 const InEvidenceTemplate = ({
   items,
@@ -45,62 +27,6 @@ const InEvidenceTemplate = ({
   show_block_bg,
   linkMore,
 }) => {
-  const intl = useIntl();
-  moment.locale(intl.locale);
-
-  const getDate = (item) => {
-    return item['@type'] == 'Event' ?
-              <When
-                start={item.start}
-                end={item.end}
-                whole_day={item.whole_day}
-                open_end={item.open_end}
-                start_label={intl.formatMessage(messages.hours)}
-                end_label={'-'}
-                start_date_format={'DD MMM'}
-                end_date_format={'DD MMM'}
-              />
-            :
-              <When
-                start={item.start}
-                whole_day={false}
-                open_end={true}
-                start_label={intl.formatMessage(messages.from)}
-                end_label={intl.formatMessage(messages.to)}
-                start_date_format={'DD MMM'}
-                end_date_format={'DD MMM'} 
-              />
-
-  }
-
-  const getCalendar = (start, end) => {
-    if (moment(start).format('DD/MM/AAAA') === moment(end).format('DD/MM/AAAA')){
-      return ( 
-        <div className="card-calendar d-flex flex-column justify-content-center">
-          <span className="card-date">
-            {moment(start).format('D')}
-          </span>
-          <span className="card-day">
-            {moment(end).format('MMMM')}
-          </span>
-        </div>
-      )
-    } else {
-      return (
-        <div className="card-calendar d-flex flex-column justify-content-center large">
-            <span className="card-date d-flex justify-content-center align-items-baseline">
-              <div className="date-label">{intl.formatMessage(messages.from)}</div>
-              <span className="date">{moment(start).format('DD/MM')}</span>
-            </span>
-            <span className="card-date d-flex justify-content-center align-items-baseline">
-              <div className="date-label">{intl.formatMessage(messages.to)}</div>
-              <span className="date">{moment(end).format('DD/MM')}</span>
-            </span>
-          </div>
-      )
-    }
-  }
-
   return (
     <div
       className={cx('in-evidence', {
@@ -147,15 +73,12 @@ const InEvidenceTemplate = ({
                           />
                         </figure>
                       </Link>
-                      {/* Solo per tipo evento, aggiungere if quando pronto */}
-                      {
-                        (item['@type'] == 'Event') && getCalendar(item.start, item.end)
-                      }
+                      { (item['@type'] == 'Event') && getCalendarCard(item.start, item.end) }
                     </div>
                   </div>
                 )}
                 <CardBody>
-                  <CardCategory date={getDate(item)}>
+                  <CardCategory date={getDateComponent(item.start, item.end, item.whole_day, item.open_end, item['@type'])}>
                       <Icon
                         className='icon'
                         color="primary"
