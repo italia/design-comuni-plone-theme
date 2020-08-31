@@ -506,6 +506,7 @@ msgid "contacts"
 msgstr "Contatti"
 
 #: components/ItaliaTheme/View/EventoView
+#: components/ItaliaTheme/View/VenueView
 msgid "contatti"
 msgstr ""
 
@@ -602,6 +603,7 @@ msgid "detail_link_label"
 msgstr "Testo per il link al dettaglio"
 
 #: components/DesignTheme/View/Commons/Locations
+#: components/ItaliaTheme/View/Commons/EventLocation
 #: components/ItaliaTheme/View/Commons/EventLocations
 #: components/ItaliaTheme/View/Commons/Locations
 msgid "details"
@@ -655,12 +657,24 @@ msgstr "Seleziona un elemento nella barra laterale per mostrarlo qui."
 msgid "end"
 msgstr ""
 
+#: components/ItaliaTheme/View/EventoView
+msgid "event_destinatari"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+msgid "event_strutture_politiche"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Events
 msgid "event_title"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView
 msgid "event_ulteriori_informazioni"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+msgid "event_url"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Events
@@ -700,6 +714,10 @@ msgstr "Feed RSS impostato"
 msgid "filters"
 msgstr "Filtri"
 
+#: components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate
+msgid "from"
+msgstr ""
+
 #: components/DesignTheme/View/Commons/Gallery
 #: components/ItaliaTheme/View/Commons/Gallery
 msgid "gallery"
@@ -724,6 +742,10 @@ msgstr "Selezionato"
 #: components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate
 msgid "grid-gallery-max-items-exceeded"
 msgstr "Per questo template il numero di risultati per pagina deve essere 7. Controlla le impostazioni."
+
+#: components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate
+msgid "hours"
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/ArgumentIconWidget
 #: components/ItaliaTheme/manage/Widgets/IconWidget
@@ -765,6 +787,7 @@ msgid "link_siti_esterni"
 msgstr "Link utili"
 
 #: components/DesignTheme/View/Commons/Locations
+#: components/ItaliaTheme/View/Commons/EventLocation
 #: components/ItaliaTheme/View/Commons/EventLocations
 #: components/ItaliaTheme/View/Commons/Locations
 msgid "locations"
@@ -863,7 +886,7 @@ msgstr "Opzioni"
 #: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/VenueView
 msgid "orario_pubblico"
-msgstr "Orario al pubblico"
+msgstr "Orari di apertura"
 
 #: components/DesignTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView
@@ -889,6 +912,10 @@ msgstr "Questa pagina è gestita da"
 
 #: components/ItaliaTheme/View/EventoView
 msgid "parteciperanno"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+msgid "patrocinato_da"
 msgstr ""
 
 #: components/DesignTheme/View/UOView
@@ -949,6 +976,7 @@ msgstr "Documenti"
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/UOView
+#: components/ItaliaTheme/View/VenueView
 msgid "related_items"
 msgstr "Contenuti correlati"
 
@@ -963,6 +991,7 @@ msgstr "Novità"
 
 #: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
+#: components/ItaliaTheme/View/VenueView
 msgid "related_services"
 msgstr "Servizi"
 
@@ -1106,7 +1135,6 @@ msgstr "Servizi collegati"
 #: components/DesignTheme/View/UOView
 #: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/UOView
-#: components/ItaliaTheme/View/VenueView
 msgid "servizi_offerti"
 msgstr "Servizi offerti"
 
@@ -1190,6 +1218,10 @@ msgstr "Tipologia persona"
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 msgid "title"
 msgstr "Titolo"
+
+#: components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate
+msgid "to"
+msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
 #: components/DesignTheme/View/Commons/PageHeader

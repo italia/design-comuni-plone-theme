@@ -13,6 +13,7 @@ import {
   RichTextArticle,
   RelatedNewsArticles,
   RelatedArticles,
+  RichTextArticles,
 } from '@italia/components/ItaliaTheme/View';
 import {
   Icon,
@@ -51,11 +52,11 @@ const messages = defineMessages({
   },
   orario_pubblico: {
     id: 'orario_pubblico',
-    defaultMessage: 'Orario al pubblico',
+    defaultMessage: 'Orari di apertura',
   },
-  servizi_offerti: {
-    id: 'servizi_offerti',
-    defaultMessage: 'Servizi offerti',
+  related_services: {
+    id: 'related_services',
+    defaultMessage: 'Servizi',
   },
   sede_di: {
     id: 'sede_di',
@@ -84,6 +85,14 @@ const messages = defineMessages({
   riferimento_web: {
     id: 'riferimento_web',
     defaultMessage: 'Riferimento web',
+  },
+  contatti: {
+    id: 'contatti',
+    defaultMessage: 'Contatti',
+  },
+  related_items: {
+    id: 'related_items',
+    defaultMessage: 'Contenuti correlati',
   }
 });
 
@@ -148,30 +157,21 @@ const VenueView = ({ content }) => {
               />
             )}
 
+            {/* ELEMENTI DI INTERESSE */}
+            {content.elementi_di_interesse && (
+              <RichTextArticle
+                content={content?.elementi_di_interesse?.data}
+                tag_id={'elementi-di-interesse'}
+                title={intl.formatMessage(messages.elementi_di_interesse)}
+              />
+            )}
+
             {/* MODALITA DI ACCESSO */}
             {content.modalita_accesso && (
               <RichTextArticle
                 content={content?.modalita_accesso?.data}
                 tag_id={'modalita-accesso'}
                 title={intl.formatMessage(messages.modalita_accesso)}
-              />
-            )}
-
-            {/* QUARTIERE */}
-            {content.quartiere && (
-              <RichTextArticle
-                content={content?.quartiere}
-                tag_id={'quartiere'}
-                title={intl.formatMessage(messages.quartiere)}
-              />
-            )}
-
-            {/* CIRCOSCRIZIONE */}
-            {content.circoscrizione && (
-              <RichTextArticle
-                content={content?.circoscrizione}
-                tag_id={'circoscrizione'}
-                title={intl.formatMessage(messages.circoscrizione)}
               />
             )}
 
@@ -198,16 +198,16 @@ const VenueView = ({ content }) => {
                 { __CLIENT__ && content?.geolocation?.latitude && content?.geolocation?.longitude &&
                   <OSMMap position={[content?.geolocation?.latitude, content?.geolocation?.longitude]} />
                 }
-              </article>
-            )}
+                <h6 className="mt-3">{intl.formatMessage(messages.circoscrizione)}</h6>
+                <div>
+                  {content?.circoscrizione}
+                </div>
 
-            {/* ELEMENTI DI INTERESSE */}
-            {content.elementi_di_interesse && (
-              <RichTextArticle
-                content={content?.elementi_di_interesse?.data}
-                tag_id={'elementi-di-interesse'}
-                title={intl.formatMessage(messages.elementi_di_interesse)}
-              />
+                <h6 className="mt-3">{intl.formatMessage(messages.quartiere)}</h6>
+                <div>
+                  {content?.quartiere}
+                </div>
+              </article>
             )}
 
             {/* ORARIO AL PUBBLICO */}
@@ -224,7 +224,7 @@ const VenueView = ({ content }) => {
               <RelatedArticles
                 id="venue_services"
                 items={content.venue_services}
-                title={intl.formatMessage(messages.servizi_offerti)}
+                title={intl.formatMessage(messages.related_services)}
               />
             )}
 
@@ -232,7 +232,7 @@ const VenueView = ({ content }) => {
             {content.related_news?.length > 0 && (
               <RelatedNewsArticles 
                 news={content.related_news}
-                title={intl.formatMessage(messages.uo_related_news)}
+                title={intl.formatMessage(messages.related_items)}
               />
             )}
 
@@ -278,32 +278,26 @@ const VenueView = ({ content }) => {
                 </Card>
               </article>
             }
-            {/* TELEFONO */}
-            {content.riferimento_telefonico_luogo && (
-              <RichTextArticle
-                content={content?.riferimento_telefonico_luogo}
-                tag_id={'riferimento_telefonico_luogo'}
-                title={intl.formatMessage(messages.riferimento_telefonico_luogo)}
-              />
-            )}
 
-            {/* MAIL */}
-            {content.riferimento_mail_luogo && (
-              <RichTextArticle
-                content={content?.riferimento_mail_luogo}
-                tag_id={'riferimento_mail_luogo'}
-                title={intl.formatMessage(messages.riferimento_mail_luogo)}
-              />
-            )}
-
-            {/* WEB */}
-            {content.riferimento_web && (
-              <RichTextArticle
-                content={content?.riferimento_web}
-                tag_id={'riferimento_web'}
-                title={intl.formatMessage(messages.riferimento_web)}
-              />
-            )}
+            {/* Contatti */}
+            <RichTextArticles 
+              contents={[
+                {
+                  title: intl.formatMessage(messages.riferimento_telefonico_luogo),
+                  text: content?.riferimento_telefonico_luogo
+                },
+                {
+                  title: intl.formatMessage(messages.riferimento_mail_luogo),
+                  text: content?.riferimento_mail_luogo
+                },
+                {
+                  title: intl.formatMessage(messages.riferimento_web),
+                  text: content?.riferimento_web
+                },
+              ]}
+              tag_id={'contatti'}
+              title={intl.formatMessage(messages.contatti)}
+            />
 
             {/* ULTERIORI INFORMAZIONI */}
             {content.ulteriori_informazioni && (

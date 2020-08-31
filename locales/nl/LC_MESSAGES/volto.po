@@ -525,6 +525,7 @@ msgid "contacts"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView
+#: components/ItaliaTheme/View/VenueView
 msgid "contatti"
 msgstr ""
 
@@ -621,6 +622,7 @@ msgid "detail_link_label"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Locations
+#: components/ItaliaTheme/View/Commons/EventLocation
 #: components/ItaliaTheme/View/Commons/EventLocations
 #: components/ItaliaTheme/View/Commons/Locations
 msgid "details"
@@ -674,12 +676,24 @@ msgstr ""
 msgid "end"
 msgstr ""
 
+#: components/ItaliaTheme/View/EventoView
+msgid "event_destinatari"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+msgid "event_strutture_politiche"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Events
 msgid "event_title"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView
 msgid "event_ulteriori_informazioni"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+msgid "event_url"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Events
@@ -719,6 +733,10 @@ msgstr ""
 msgid "filters"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate
+msgid "from"
+msgstr ""
+
 #: components/DesignTheme/View/Commons/Gallery
 #: components/ItaliaTheme/View/Commons/Gallery
 msgid "gallery"
@@ -742,6 +760,10 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate
 msgid "grid-gallery-max-items-exceeded"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate
+msgid "hours"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/ArgumentIconWidget
@@ -784,6 +806,7 @@ msgid "link_siti_esterni"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Locations
+#: components/ItaliaTheme/View/Commons/EventLocation
 #: components/ItaliaTheme/View/Commons/EventLocations
 #: components/ItaliaTheme/View/Commons/Locations
 msgid "locations"
@@ -910,6 +933,10 @@ msgstr ""
 msgid "parteciperanno"
 msgstr ""
 
+#: components/ItaliaTheme/View/EventoView
+msgid "patrocinato_da"
+msgstr ""
+
 #: components/DesignTheme/View/UOView
 #: components/ItaliaTheme/View/UOView
 msgid "persone_struttura"
@@ -968,6 +995,7 @@ msgstr ""
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/UOView
+#: components/ItaliaTheme/View/VenueView
 msgid "related_items"
 msgstr ""
 
@@ -982,6 +1010,7 @@ msgstr ""
 
 #: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
+#: components/ItaliaTheme/View/VenueView
 msgid "related_services"
 msgstr ""
 
@@ -1125,7 +1154,6 @@ msgstr ""
 #: components/DesignTheme/View/UOView
 #: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/UOView
-#: components/ItaliaTheme/View/VenueView
 msgid "servizi_offerti"
 msgstr ""
 
@@ -1208,6 +1236,10 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 msgid "title"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate
+msgid "to"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal

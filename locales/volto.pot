@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-08-27T08:27:17.364Z\n"
+"POT-Creation-Date: 2020-08-30T09:40:32.789Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -602,6 +602,7 @@ msgid "contacts"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView
+#: components/ItaliaTheme/View/VenueView
 # defaultMessage: Contatti
 msgid "contatti"
 msgstr ""
@@ -718,6 +719,7 @@ msgid "detail_link_label"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Locations
+#: components/ItaliaTheme/View/Commons/EventLocation
 #: components/ItaliaTheme/View/Commons/EventLocations
 #: components/ItaliaTheme/View/Commons/Locations
 # defaultMessage: Maggiori dettagli
@@ -781,14 +783,29 @@ msgstr ""
 msgid "end"
 msgstr ""
 
+#: components/ItaliaTheme/View/EventoView
+# defaultMessage: L'evento è di interesse per:
+msgid "event_destinatari"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+# defaultMessage: Strutture politiche coninvolte
+msgid "event_strutture_politiche"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Events
 # defaultMessage: Eventi
 msgid "event_title"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView
-# defaultMessage: Informazioni
+# defaultMessage: Ulteriori informazioni sull'evento
 msgid "event_ulteriori_informazioni"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+# defaultMessage: Url dell'evento
+msgid "event_url"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Events
@@ -836,6 +853,11 @@ msgstr ""
 msgid "filters"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate
+# defaultMessage: dal
+msgid "from"
+msgstr ""
+
 #: components/DesignTheme/View/Commons/Gallery
 #: components/ItaliaTheme/View/Commons/Gallery
 # defaultMessage: Galleria di immagini
@@ -865,6 +887,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate
 # defaultMessage: Per questo template il numero di risultati per pagina deve essere 7. Controlla le impostazioni.
 msgid "grid-gallery-max-items-exceeded"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate
+# defaultMessage: ore
+msgid "hours"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/ArgumentIconWidget
@@ -915,6 +942,7 @@ msgid "link_siti_esterni"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Locations
+#: components/ItaliaTheme/View/Commons/EventLocation
 #: components/ItaliaTheme/View/Commons/EventLocations
 #: components/ItaliaTheme/View/Commons/Locations
 # defaultMessage: Luoghi
@@ -1066,6 +1094,11 @@ msgstr ""
 msgid "parteciperanno"
 msgstr ""
 
+#: components/ItaliaTheme/View/EventoView
+# defaultMessage: Patrocinato da:
+msgid "patrocinato_da"
+msgstr ""
+
 #: components/DesignTheme/View/UOView
 #: components/ItaliaTheme/View/UOView
 # defaultMessage: Persone che compongono la struttura
@@ -1134,6 +1167,7 @@ msgstr ""
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/UOView
+#: components/ItaliaTheme/View/VenueView
 # defaultMessage: Contenuti correlati
 msgid "related_items"
 msgstr ""
@@ -1150,6 +1184,7 @@ msgstr ""
 
 #: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
+#: components/ItaliaTheme/View/VenueView
 # defaultMessage: Servizi
 msgid "related_services"
 msgstr ""
@@ -1321,7 +1356,6 @@ msgstr ""
 #: components/DesignTheme/View/UOView
 #: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/UOView
-#: components/ItaliaTheme/View/VenueView
 # defaultMessage: Servizi offerti
 msgid "servizi_offerti"
 msgstr ""
@@ -1423,6 +1457,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 # defaultMessage: Titolo
 msgid "title"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate
+# defaultMessage: al
+msgid "to"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
