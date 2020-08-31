@@ -17,7 +17,7 @@ msgstr "Accedi all'area personale"
 
 #: addons/volto-subblocks/src/SubblocksEdit
 msgid "Add block"
-msgstr ""
+msgstr "Aggiungi blocco"
 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Alert"
@@ -266,6 +266,10 @@ msgstr "Vedi"
 msgid "Vedi tutto"
 msgstr "Vedi tutto"
 
+#: components/ItaliaTheme/View/ServizioView
+msgid "accedere_al_servizio"
+msgstr "Accedere al servizio"
+
 #: components/ItaliaTheme/View/Commons/Actions
 #: components/ItaliaTheme/View/Commons/PageHeader
 msgid "actions"
@@ -295,10 +299,6 @@ msgstr "Altri documenti"
 #: components/ItaliaTheme/Search/SearchSections
 msgid "amministrazione"
 msgstr "Amministrazione"
-
-#: components/ItaliaTheme/View/ServizioView
-msgid "area"
-msgstr "Area"
 
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 msgid "area_appartenenza"
@@ -352,20 +352,12 @@ msgid "canale_digitale"
 msgstr "Canale digitale"
 
 #: components/ItaliaTheme/View/ServizioView
-msgid "canale_fisico"
-msgstr "Canale fisico"
-
-#: components/ItaliaTheme/View/ServizioView
-msgid "canale_fisico_prenotazione"
-msgstr "Link di prenotazione per il canale fisico"
-
-#: components/ItaliaTheme/View/ServizioView
 msgid "casi_particolari"
-msgstr "Gestione di casi particolari per la richiesta del servizio"
+msgstr "Casi particolari"
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "chi_puo_presentare"
-msgstr "Chi può presentare domanda"
+msgstr "Chi può presentare"
 
 #: components/ItaliaTheme/View/VenueView
 msgid "circoscrizione"
@@ -389,7 +381,7 @@ msgstr "Collegamenti all'organizzazione (II Livello)"
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "come_si_fa"
-msgstr "Come si ottiene il servizio"
+msgstr "Come si fa"
 
 #: components/ItaliaTheme/View/PersonaView
 msgid "compensi"
@@ -408,8 +400,9 @@ msgid "contacts"
 msgstr "Contatti"
 
 #: components/ItaliaTheme/View/EventoView
+#: components/ItaliaTheme/View/ServizioView
 msgid "contatti"
-msgstr ""
+msgstr "Contatti"
 
 #: addons/volto-cookie-banner/src/CookieBannerContainer
 msgid "cookie_banner_button"
@@ -421,15 +414,19 @@ msgstr "Copertura geografica del servizio"
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "cosa_serve"
-msgstr "Cosa serve per effettuare la richiesta del servizio"
+msgstr "Cosa serve"
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "cosa_si_ottiene"
-msgstr "Cosa si ottiene dal servizio"
+msgstr "Cosa si ottiene"
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "costi"
-msgstr "Costi per la richiesta del servizio"
+msgstr "Costi"
+
+#: components/ItaliaTheme/View/ServizioView
+msgid "costi_e_vincoli"
+msgstr "Costi e vincoli"
 
 #: components/ItaliaTheme/View/Commons/CuredBy
 msgid "cured_by"
@@ -457,7 +454,7 @@ msgstr "Data"
 
 #: components/ItaliaTheme/View/EventoView
 msgid "date_e_orari"
-msgstr ""
+msgstr "Date e orari"
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 msgid "default"
@@ -477,7 +474,7 @@ msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "descrizione_destinatari"
-msgstr "Destinatari del servizio"
+msgstr "A chi si rivolge"
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "descrizione_estesa"
@@ -570,7 +567,7 @@ msgstr "Esplora argomento"
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "fasi_scadenze"
-msgstr "Fasi e scadenze per la richiesta del servizio"
+msgstr "Tempi e scadenze"
 
 #: addons/volto-rss-block/src/Block/Edit
 msgid "feed_not_set"
@@ -668,6 +665,10 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/Metadata
 msgid "modified"
 msgstr "Ultimo aggiornamento"
+
+#: components/ItaliaTheme/View/ServizioView
+msgid "modulistica"
+msgstr "Modulistica"
 
 #: addons/volto-multilingual-widget/src/MultilingualWidget
 msgid "multilingual_text_placeholder"
@@ -987,10 +988,6 @@ msgstr "Titolo"
 msgid "topics"
 msgstr "Argomenti"
 
-#: components/ItaliaTheme/View/ServizioView
-msgid "ufficio_responsabile"
-msgstr "Ufficio responsabile"
-
 #: components/ItaliaTheme/View/PersonaView
 #: components/ItaliaTheme/View/VenueView
 msgid "ulteriori_informazioni"
@@ -1023,4 +1020,4 @@ msgstr "Vedi tutti"
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "vincoli"
-msgstr "Vincoli per la richiesta del servizio"
+msgstr "Vincoli"

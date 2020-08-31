@@ -31,7 +31,9 @@ const extractHeaders = (elements, intl) => {
     if (item.id === 'text-body') {
       headers.push({
         id: item.id,
-        title: intl.formatMessage(messages.contenuto),
+        title:
+          item.getAttribute('menu_title') ||
+          intl.formatMessage(messages.contenuto),
         item: item,
       });
     } else {
@@ -79,6 +81,7 @@ const SideMenu = ({ data }) => {
   useEffect(() => {
     if (data?.children) {
       let extractedHeaders = extractHeaders(data.children, intl);
+
       if (extractedHeaders.length > 0) {
         setHeaders(extractedHeaders);
         setActiveSection(extractedHeaders[0].id);

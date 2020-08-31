@@ -411,12 +411,6 @@ const EventoView = ({ content, location }) => {
               </article>
             ) : null}
 
-            {content?.box_aiuto?.data?.replace(/(<([^>]+)>)/g, '') && (
-              <article className="it-page-section anchor-offset mt-5">
-                <HelpBox text={content?.box_aiuto} />
-              </article>
-            )}
-
             {content?.strutture_politiche.length > 0 && (
               <article
                 id="strutture_politiche"
@@ -453,7 +447,11 @@ const EventoView = ({ content, location }) => {
                 </div>
               </article>
             ) : null}
-            <Metadata content={content} />
+            <Metadata content={content}>
+              {content?.box_aiuto?.data?.replace(/(<([^>]+)>)/g, '') && (
+                <HelpBox text={content?.box_aiuto} />
+              )}
+            </Metadata>
           </section>
         </div>
       </div>

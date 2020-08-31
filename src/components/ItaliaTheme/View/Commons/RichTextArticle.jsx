@@ -11,14 +11,19 @@ import cx from 'classnames';
 const RichTextArticle = ({
   title,
   title_size,
+  show_title = true,
   content,
   tag_id,
   add_class,
   children,
 }) => {
   return (
-    <article id={tag_id} className="it-page-section anchor-offset mt-5">
-      {title ? (
+    <article
+      id={tag_id}
+      className="it-page-section anchor-offset mt-5"
+      menu_title={!show_title && title ? title : ''}
+    >
+      {title && show_title ? (
         title_size === 'h6' ? (
           <h6 className="text-serif font-weight-bold">{title}</h6>
         ) : (

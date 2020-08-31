@@ -266,6 +266,10 @@ msgstr ""
 msgid "Vedi tutto"
 msgstr ""
 
+#: components/ItaliaTheme/View/ServizioView
+msgid "accedere_al_servizio"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Actions
 #: components/ItaliaTheme/View/Commons/PageHeader
 msgid "actions"
@@ -294,10 +298,6 @@ msgstr ""
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 msgid "amministrazione"
-msgstr ""
-
-#: components/ItaliaTheme/View/ServizioView
-msgid "area"
 msgstr ""
 
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
@@ -352,14 +352,6 @@ msgid "canale_digitale"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView
-msgid "canale_fisico"
-msgstr ""
-
-#: components/ItaliaTheme/View/ServizioView
-msgid "canale_fisico_prenotazione"
-msgstr ""
-
-#: components/ItaliaTheme/View/ServizioView
 msgid "casi_particolari"
 msgstr ""
 
@@ -408,6 +400,7 @@ msgid "contacts"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView
+#: components/ItaliaTheme/View/ServizioView
 msgid "contatti"
 msgstr ""
 
@@ -429,6 +422,10 @@ msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "costi"
+msgstr ""
+
+#: components/ItaliaTheme/View/ServizioView
+msgid "costi_e_vincoli"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/CuredBy
@@ -667,6 +664,10 @@ msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Metadata
 msgid "modified"
+msgstr ""
+
+#: components/ItaliaTheme/View/ServizioView
+msgid "modulistica"
 msgstr ""
 
 #: addons/volto-multilingual-widget/src/MultilingualWidget
@@ -985,10 +986,6 @@ msgstr ""
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/View/Commons/PageHeader
 msgid "topics"
-msgstr ""
-
-#: components/ItaliaTheme/View/ServizioView
-msgid "ufficio_responsabile"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView

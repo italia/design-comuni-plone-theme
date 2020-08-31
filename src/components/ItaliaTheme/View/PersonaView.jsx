@@ -350,7 +350,7 @@ const PersonaView = ({ content }) => {
               <Attachments
                 content={content}
                 folder_name={'compensi'}
-                folder_title={intl.formatMessage(messages.compensi)}
+                title={intl.formatMessage(messages.compensi)}
               />
             )}
             {content?.items?.some(
@@ -359,7 +359,7 @@ const PersonaView = ({ content }) => {
               <Attachments
                 content={content}
                 folder_name={'importi-di-viaggio-e-o-servizi'}
-                folder_title={intl.formatMessage(
+                title={intl.formatMessage(
                   messages.importi_di_viaggio_e_o_servizi,
                 )}
               />
@@ -368,7 +368,7 @@ const PersonaView = ({ content }) => {
               <Attachments
                 content={content}
                 folder_name={'altre-cariche'}
-                folder_title={intl.formatMessage(messages.altre_cariche)}
+                title={intl.formatMessage(messages.altre_cariche)}
               />
             )}
             {content?.items?.some(
@@ -377,9 +377,7 @@ const PersonaView = ({ content }) => {
               <Attachments
                 content={content}
                 folder_name={'situazione-patrimoniale'}
-                folder_title={intl.formatMessage(
-                  messages.situazione_patrimoniale,
-                )}
+                title={intl.formatMessage(messages.situazione_patrimoniale)}
               />
             )}
             {content?.items?.some(
@@ -388,16 +386,14 @@ const PersonaView = ({ content }) => {
               <Attachments
                 content={content}
                 folder_name={'dichiarazione-dei-redditi'}
-                folder_title={intl.formatMessage(
-                  messages.dichiarazione_dei_redditi,
-                )}
+                title={intl.formatMessage(messages.dichiarazione_dei_redditi)}
               />
             )}
             {content?.items?.some((e) => e.id === 'spese-elettorali') && (
               <Attachments
                 content={content}
                 folder_name={'spese-elettorali'}
-                folder_title={intl.formatMessage(messages.spese_elettorali)}
+                title={intl.formatMessage(messages.spese_elettorali)}
               />
             )}
             {content?.items?.some(
@@ -406,7 +402,7 @@ const PersonaView = ({ content }) => {
               <Attachments
                 content={content}
                 folder_name={'valutazione-situazione-patrimoniale'}
-                folder_title={intl.formatMessage(
+                title={intl.formatMessage(
                   messages.valutazione_situazione_patrimoniale,
                 )}
               />
