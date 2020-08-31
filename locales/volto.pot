@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-08-31T10:14:01.110Z\n"
+"POT-Creation-Date: 2020-08-31T13:01:32.999Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -628,6 +628,11 @@ msgstr ""
 msgid "dove"
 msgstr ""
 
+#: components/ItaliaTheme/View/ServizioView
+# defaultMessage: Dove rivolgersi
+msgid "dove_rivolgersi"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Actions
 # defaultMessage: Scarica
 msgid "download"
@@ -1091,11 +1096,6 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/UOLocation
 # defaultMessage: Dove e come trovarci
 msgid "sedi"
-msgstr ""
-
-#: components/ItaliaTheme/View/ServizioView
-# defaultMessage: Dove trovarci
-msgid "sedi_e_luoghi"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar

@@ -527,6 +527,10 @@ msgstr ""
 msgid "dove"
 msgstr ""
 
+#: components/ItaliaTheme/View/ServizioView
+msgid "dove_rivolgersi"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Actions
 msgid "download"
 msgstr ""
@@ -900,10 +904,6 @@ msgstr ""
 
 #: components/ItaliaTheme/View/Commons/UOLocation
 msgid "sedi"
-msgstr ""
-
-#: components/ItaliaTheme/View/ServizioView
-msgid "sedi_e_luoghi"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
