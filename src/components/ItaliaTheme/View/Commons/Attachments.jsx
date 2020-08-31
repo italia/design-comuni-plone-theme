@@ -20,7 +20,7 @@ const messages = defineMessages({
  * @params {string} folder name where to find images.
  * @returns {string} Markup of the component.
  */
-const Attachments = ({ content, folder_name, folder_title }) => {
+const Attachments = ({ content, folder_name, title }) => {
   const intl = useIntl();
   const url = `${flattenToAppURL(content['@id'])}/${folder_name}`;
   const searchResults = useSelector((state) => state.search.subrequests);
@@ -47,13 +47,13 @@ const Attachments = ({ content, folder_name, folder_title }) => {
   const attachments = searchResults?.[folder_name]?.items || [];
   return (
     <>
-      {attachments.length > 0 ? (
+      {attachments?.length > 0 ? (
         <article
           id={folder_name}
           className="it-page-section anchor-offset mt-5"
         >
-          {folder_title ? (
-            <h4 id={`header-${folder_name}`}>{folder_title}</h4>
+          {title ? (
+            <h4 id={`header-${folder_name}`}>{title}</h4>
           ) : (
             <h4 id={`header-${folder_name}`}>
               {intl.formatMessage(messages.attachments)}
@@ -77,6 +77,6 @@ const Attachments = ({ content, folder_name, folder_title }) => {
 Attachments.propTypes = {
   content: PropTypes.object,
   folder_name: PropTypes.string,
-  folder_title: PropTypes.string,
+  title: PropTypes.string,
 };
 export default Attachments;

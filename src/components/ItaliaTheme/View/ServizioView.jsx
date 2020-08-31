@@ -377,7 +377,7 @@ const ServizioView = ({ content }) => {
             ) : null}
             {content.link_siti_esterni?.data && (
               <Card
-                className="card card-teaser shadow p-0 mt-3 rounded border link-esterni"
+                className="card card-teaser shadow p-0 mt-3 rounded link-esterni"
                 noWrapper={true}
                 tag="div"
               >

@@ -25,7 +25,6 @@ const messages = defineMessages({
 const extractHeaders = (elements, intl) => {
   let item;
   let headers = [];
-
   for (var index = 0; index < elements.length; index++) {
     item = elements[index];
 
@@ -46,7 +45,6 @@ const extractHeaders = (elements, intl) => {
       }
     }
   }
-
   return headers;
 };
 
@@ -58,7 +56,6 @@ const extractHeaders = (elements, intl) => {
  */
 const SideMenu = ({ data }) => {
   const intl = useIntl();
-
   const [headers, _setHeaders] = useState([]);
   const headersRef = React.useRef(headers);
   const setHeaders = (data) => {
