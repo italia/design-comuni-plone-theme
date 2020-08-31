@@ -213,7 +213,7 @@ const ServizioView = ({ content }) => {
                 {content.chi_puo_presentare?.data && (
                   <RichText
                     title={intl.formatMessage(messages.chi_puo_presentare)}
-                    title_size="h6"
+                    title_size="h5"
                     content={content.chi_puo_presentare.data}
                   />
                 )}
@@ -221,7 +221,7 @@ const ServizioView = ({ content }) => {
                 {content.copertura_geografica?.data && (
                   <RichText
                     title={intl.formatMessage(messages.copertura_geografica)}
-                    title_size="h6"
+                    title_size="h5"
                     content={content.copertura_geografica.data}
                   />
                 )}
