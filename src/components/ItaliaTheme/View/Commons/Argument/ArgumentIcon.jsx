@@ -10,9 +10,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
  */
 const ArgumentIcon = ({ icon }) => {
   return (
-    <div className="icon-argument-container d-flex align-items-center justify-content-center mb-2 lightgrey-bg-c2">
-      <FontAwesomeIcon icon={icon} className="show-icon"/>
-    </div>
+    icon ?
+      <div className="icon-argument-container d-flex align-items-center justify-content-center mb-2 lightgrey-bg-c2">
+        <FontAwesomeIcon icon={icon} className="show-icon"/>
+      </div>
+     :
+      null
   );
 };
 

@@ -51,9 +51,7 @@ const Block = ({
   return (
     <Card className="card-bg" noWrapper={true} tag="div">
       <CardBody tag="div">
-        {searchResults[argument['@id']]?.data?.icona && 
-          <ArgumentIcon icon={searchResults[argument['@id']]?.data?.icona}/>
-        }
+        <ArgumentIcon icon={searchResults[argument['@id']]?.data?.icona}/>
         <CardTitle tag="h3">{searchResults[argument['@id']]?.data?.title}</CardTitle>
         <CardText tag="p">{searchResults[argument['@id']]?.data?.description}</CardText>
         {inEditMode ? (

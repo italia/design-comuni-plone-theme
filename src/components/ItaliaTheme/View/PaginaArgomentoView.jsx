@@ -66,7 +66,7 @@ const PaginaArgomentoView = ({ content }) => {
     <div id="page-document" className="ui container">
       <div className="ArgomentoTitleWrapper mb-5">
         <div className="title-description-wrapper col-lg-6">
-          {content.icona && <ArgumentIcon icon={content.icona}/>}
+          <ArgumentIcon icon={content.icona}/>
           <h1 className="mb-3">{content?.title}</h1>
           <p className="description">{content?.description}</p>
         </div>
