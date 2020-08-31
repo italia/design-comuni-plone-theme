@@ -510,7 +510,7 @@ msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "dove_rivolgersi"
-msgstr ""
+msgstr "Dove rivolgersi"
 
 #: components/ItaliaTheme/View/Commons/Actions
 msgid "download"
