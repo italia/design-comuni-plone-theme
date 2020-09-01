@@ -2,6 +2,7 @@
 export RichTextArticle from '@italia/components/ItaliaTheme/View/Commons/RichTextArticle';
 export RelatedNewsArticles from '@italia/components/ItaliaTheme/View/Commons/RelatedNewsArticles';
 export RelatedArticles from '@italia/components/ItaliaTheme/View/Commons/RelatedArticles';
+export ArgumentIcon from '@italia/components/ItaliaTheme/View/Commons/Argument/ArgumentIcon';
 
 export TextOrBlocks from '@italia/components/ItaliaTheme/View/Commons/TextOrBlocks';
 

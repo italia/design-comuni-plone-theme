@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { defineMessages } from 'react-intl';
 import { TextEditorWidget } from '@italia/components/ItaliaTheme';
 import {
@@ -10,6 +10,10 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import { settings } from '@italia/config';
 import redraft from 'redraft';
+import { getContent, resetContent } from '@plone/volto/actions';
+import { useDispatch, useSelector } from 'react-redux';
+import { flattenToAppURL } from '@plone/volto/helpers';
+import { ArgumentIcon } from '@italia/components/ItaliaTheme/View'
 
 const messages = defineMessages({
   text: {
@@ -32,12 +36,24 @@ const Block = ({
   intl,
 }) => {
   const argument = data?.argument ? data?.argument[0] : null;
+  const searchResults = useSelector((state) => state.content?.subrequests);
+  const dispatch = useDispatch();
+
+  // one request is made for every 'unita_amministrativa_responsabile' selected
+  useEffect(() => {
+    dispatch(getContent(flattenToAppURL(argument['@id']), null, argument['@id']));
+    return () => {
+      dispatch(resetContent(argument['@id']));
+    };
+  }, [dispatch, argument]);
+
 
   return (
     <Card className="card-bg" noWrapper={true} tag="div">
       <CardBody tag="div">
-        <CardTitle tag="h3">{argument?.title}</CardTitle>
-        <CardText tag="p">{argument?.description}</CardText>
+        <ArgumentIcon icon={searchResults[argument['@id']]?.data?.icona}/>
+        <CardTitle tag="h3">{searchResults[argument['@id']]?.data?.title}</CardTitle>
+        <CardText tag="p">{searchResults[argument['@id']]?.data?.description}</CardText>
         {inEditMode ? (
           <TextEditorWidget
             data={data}
