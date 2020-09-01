@@ -231,7 +231,7 @@ const ServizioView = ({ content }) => {
             {(content.come_si_fa?.data ||
               content.cosa_si_ottiene?.data ||
               content.procedure_collegate?.data ||
-              content.canale_digitale ||
+              content.canale_digitale?.data ||
               content.autenticazione ||
               content.canale_fisico?.data ||
               content.canale_fisico_prenotazione?.data ||
@@ -261,16 +261,17 @@ const ServizioView = ({ content }) => {
                   />
                 )}
 
-                {(content.canale_digitale || content.autenticazione) && (
+                {(content.canale_digitale?.data || content.autenticazione) && (
                   <div className="mt-4">
-                    {content.canale_digitale && (
+                    {content.canale_digitale?.data && (
                       <>
                         <h5>{intl.formatMessage(messages.canale_digitale)}</h5>
-                        <LinkList tag="div">
-                          <LinkListItem tag="a" href={content.canale_digitale}>
-                            <span>{content.canale_digitale}</span>
-                          </LinkListItem>
-                        </LinkList>
+                        <div
+                          className="text-serif"
+                          dangerouslySetInnerHTML={{
+                            __html: content.canale_digitale.data,
+                          }}
+                        />
                       </>
                     )}
 
