@@ -18,7 +18,8 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
 import { getIcon } from '@italia/helpers/index';
-import { getDateComponent, getCalendarCard } from '@italia/helpers/index';
+import { getDateComponent } from '@italia/helpers/index';
+import { CardCalendar } from './Commons/CardCalendar'
 
 const InEvidenceTemplate = ({
   items,
@@ -73,7 +74,13 @@ const InEvidenceTemplate = ({
                           />
                         </figure>
                       </Link>
-                      { (item['@type'] == 'Event') && getCalendarCard(item.start, item.end) }
+                      { 
+                        (item['@type'] == 'Event') && 
+                          <CardCalendar 
+                            start={item.start}
+                            end={item.end}
+                          /> 
+                      }
                     </div>
                   </div>
                 )}

@@ -21,7 +21,8 @@ import {
   Chip,
   ChipLabel,
 } from 'design-react-kit/dist/design-react-kit';
-import { getDateComponent, getCalendarCard } from '@italia/helpers/index';
+import { getDateComponent } from '@italia/helpers/index';
+import { CardCalendar } from './Commons/CardCalendar'
 
 const CardWithImageTemplate = ({
   items,
@@ -89,7 +90,13 @@ const CardWithImageTemplate = ({
                               />
                             </figure>
                           </ConditionalLink>
-                          { (item['@type'] == 'Event') && getCalendarCard(item.start, item.end) }
+                          { 
+                            (item['@type'] == 'Event') && 
+                              <CardCalendar 
+                                start={item.start}
+                                end={item.end}
+                              /> 
+                          }
                         </div>
                       </div>
                     )}
