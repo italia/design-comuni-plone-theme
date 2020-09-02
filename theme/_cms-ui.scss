@@ -40,6 +40,13 @@ body.cms-ui {
       @extend %heading;
       @include font-size($h6-font-size);
     }
+
+    // Placeholder block title
+    .title {
+      .public-DraftEditorPlaceholder-inner {
+        font-family: "Titillium Web",Geneva,Tahoma,sans-serif;
+      }
+    }
   }
 
   .it-header-wrapper,
