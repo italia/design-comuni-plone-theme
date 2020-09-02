@@ -201,21 +201,22 @@ const EventoView = ({ content, location }) => {
               </article>
             ) : null}
 
-            {content?.orari?.data?.replace(/(<([^>]+)>)/g, '') && (
-              <article
-                id="date-e-orari"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4 id="header-date-e-orari">
-                  {intl.formatMessage(messages.date_e_orari)}
-                </h4>
-                <Dates content={content} />
+            <article
+              id="date-e-orari"
+              className="it-page-section anchor-offset mt-5"
+            >
+              <h4 id="header-date-e-orari">
+                {intl.formatMessage(messages.date_e_orari)}
+              </h4>
+              <Dates content={content} />
+              {content?.orari?.data?.replace(/(<([^>]+)>)/g, '') && (
                 <RichTextArticle
                   content={content?.orari?.data}
                   tag_id="date-e-orari"
                   title={null}
                 />
-                {/* <Button icon size="lg" tag="button" color="primary" outline>
+              )}
+              {/* <Button icon size="lg" tag="button" color="primary" outline>
                   <Icon
                     color="primary"
                     icon="it-plus-circle"
@@ -230,8 +231,7 @@ const EventoView = ({ content, location }) => {
                     Aggiungi al caledario
                   </a>
                 </Button> */}
-              </article>
-            )}
+            </article>
 
             {content?.prezzo?.data?.replace(/(<([^>]+)>)/g, '') && (
               <RichTextArticle
