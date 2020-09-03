@@ -284,19 +284,6 @@ const EventoView = ({ content, location }) => {
                     )}
                   </CardBody>
                 </Card>
-                {content?.evento_supportato_da?.length > 0 && (
-                  <>
-                    <h5 className="mt-4 supported-by">Con il supporto di:</h5>
-                    {content?.evento_supportato_da?.map((item) => (
-                      <OfficeCard
-                        key={item['@id']}
-                        office={item}
-                        extended={true}
-                        icon={'it-pa'}
-                      />
-                    ))}
-                  </>
-                )}
               </article>
             ) : null}
 
