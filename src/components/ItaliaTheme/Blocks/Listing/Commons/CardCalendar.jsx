@@ -19,7 +19,7 @@ export const CardCalendar = ({start, end}) => {
   const intl = useIntl();
   moment.locale(intl.locale);
 
-  if (moment(start).format('DD/MM/YYYY') === moment(end).format('DD/MM/YYYY')) {
+  if (moment(start).isSame(moment(end), 'day')) {
     return ( 
       <div className="card-calendar d-flex flex-column justify-content-center">
         <span className="card-date">
