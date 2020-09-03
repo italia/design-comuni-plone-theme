@@ -435,7 +435,7 @@ const ServizioView = ({ content }) => {
               />
             )}
             {(content.servizi_collegati?.length > 0 ||
-              content.related_news?.length > 0 ||
+              /*content.related_news?.length > 0 ||*/
               content.relatedItems?.length > 0) && (
               <RichTextArticle
                 tag_id="correlati"
@@ -456,7 +456,7 @@ const ServizioView = ({ content }) => {
                   </div>
                 )}
 
-                {content.related_news?.length > 0 && (
+                {/* {content.related_news?.length > 0 && (
                   <div className="mb-4">
                     <h6>{intl.formatMessage(messages.related_news)}</h6>
                     <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
@@ -472,7 +472,7 @@ const ServizioView = ({ content }) => {
                       ))}
                     </div>
                   </div>
-                )}
+                )} */}
                 {content.relatedItems?.length > 0 && (
                   <div className="mb-4">
                     <h6>{intl.formatMessage(messages.related_items)}</h6>
