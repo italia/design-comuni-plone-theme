@@ -7,7 +7,7 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import { useIntl } from 'react-intl';
 import moment from 'moment';
 import 'moment/min/locales';
-import { getIcon } from '@italia/helpers/index';
+import { getIcon } from '@italia/helpers';
 import {
   Container,
   Row,
@@ -21,7 +21,7 @@ import {
   Chip,
   ChipLabel,
 } from 'design-react-kit/dist/design-react-kit';
-import { getDateComponent } from '@italia/helpers/index';
+import { getCalendarDate } from '@italia/helpers';
 import { CardCalendar } from './Commons/CardCalendar'
 
 const CardWithImageTemplate = ({
@@ -101,7 +101,7 @@ const CardWithImageTemplate = ({
                       </div>
                     )}
                     <CardBody>
-                      <CardCategory date={getDateComponent(item.start, item.end, item.whole_day, item.open_end, item['@type'])}>
+                      <CardCategory date={getCalendarDate(item)}>
                         <Icon
                           className='icon'
                           color="primary"

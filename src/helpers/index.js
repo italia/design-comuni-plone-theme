@@ -7,4 +7,4 @@
 
 export { getIcon }  from './argumentHelper';
 export { defaultIconWidgetOptions } from '@italia/helpers/IconWidget/IconWidgetHelper';
-export { getDateComponent } from '@italia/helpers/ListingHelper';
+export { getCalendarDate } from '@italia/helpers/ListingHelper';
