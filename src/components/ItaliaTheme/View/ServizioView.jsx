@@ -245,13 +245,12 @@ const ServizioView = ({ content }) => {
                 <h4 id="header-canale_digitale">
                   {intl.formatMessage(messages.canale_digitale)}
                 </h4>
-                {content.canale_digitale && (
-                  <LinkList tag="div">
-                    <LinkListItem tag="a" href={content.canale_digitale}>
-                      <span>{content.canale_digitale}</span>
-                    </LinkListItem>
-                  </LinkList>
-                )}
+                <div
+                  className="text-serif"
+                  dangerouslySetInnerHTML={{
+                    __html: content.canale_digitale.data,
+                  }}
+                />
 
                 {content.autenticazione?.data && (
                   <>
