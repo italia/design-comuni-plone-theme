@@ -17,8 +17,8 @@ import { ConditionalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
-import { getIcon } from '@italia/helpers/index';
-import { getCalendarDate } from '@italia/helpers/index';
+import { getIcon } from '@italia/helpers';
+import { getCalendarDate } from '@italia/helpers';
 import { CardCalendar } from './Commons/CardCalendar'
 
 const InEvidenceTemplate = ({
