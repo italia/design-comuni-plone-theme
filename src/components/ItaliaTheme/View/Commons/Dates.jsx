@@ -3,6 +3,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import React from 'react';
 import moment from 'moment/min/moment-with-locales';
 import { rrulestr } from 'rrule';
+import { rrulei18n } from '@plone/volto/components/manage/Widgets/RecurrenceWidget/Utils';
 import {
   Card,
   CardTitle,
@@ -19,6 +20,14 @@ const messages = defineMessages({
     id: 'end',
     defaultMessage: 'Fine evento',
   },
+  additional_dates: {
+    id: 'Date aggiuntive',
+    defaultMessage: 'Date aggiuntive',
+  },
+  excluded_dates: {
+    id: "L'evento non si terrà nelle seguenti date:",
+    defaultMessage: "L'evento non si terrà nelle seguenti date:",
+  },
 });
 
 /**
@@ -31,14 +40,22 @@ const Dates = ({ content, show_image }) => {
   const intl = useIntl();
   moment.locale(intl.locale);
   let rruleSet = null;
+  let recurrenceText = null;
 
   if (content.recurrence) {
+    const RRULE_LANGUAGE = rrulei18n(intl);
     rruleSet = rrulestr(content.recurrence, {
       compatible: true, //If set to True, the parser will operate in RFC-compatible mode. Right now it means that unfold will be turned on, and if a DTSTART is found, it will be considered the first recurrence instance, as documented in the RFC.
       forceset: true,
     });
+    recurrenceText = rruleSet.rrules()[0]?.toText(
+      (t) => {
+        return RRULE_LANGUAGE.strings[t];
+      },
+      RRULE_LANGUAGE,
+      RRULE_LANGUAGE.dateFormatter,
+    );
   }
-  console.log('rruleset', rruleSet);
 
   return content ? (
     <>
@@ -92,9 +109,14 @@ const Dates = ({ content, show_image }) => {
           </div>
         </div>
       </div>
+      {recurrenceText && (
+        <div className="mt-4 ml-4 mb-5">
+          <strong>{recurrenceText}</strong>
+        </div>
+      )}
       {rruleSet?.rdates().length > 0 && (
         <div className="mt-4">
-          <h5>Date aggiuntive</h5>
+          <h5>{intl.formatMessage(messages.additional_dates)}</h5>
           {rruleSet.rdates().map((additionalDate) => (
             <div>{moment(additionalDate).format('dddd DD MMMM YYYY')}</div>
           ))}
@@ -102,7 +124,7 @@ const Dates = ({ content, show_image }) => {
       )}
       {rruleSet?.rdates().length > 0 && (
         <div className="mt-4">
-          <h5>L'evento non si terrà nelle seguenti date:</h5>
+          <h5>{intl.formatMessage(messages.excluded_dates)}</h5>
           {rruleSet.exdates().map((exDate) => (
             <div>{moment(exDate).format('dddd DD MMMM YYYY')}</div>
           ))}
