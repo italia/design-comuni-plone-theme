@@ -103,7 +103,7 @@ const CardWithImageTemplate = ({
                     <CardBody>
                       <CardCategory date={getCalendarDate(item)}>
                         <Icon
-                          className='icon'
+                          className='icon mr-2'
                           color="primary"
                           icon={getIcon(item['@type'])}
                           padding={false}
