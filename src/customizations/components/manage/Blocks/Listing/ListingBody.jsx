@@ -67,10 +67,22 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
       ),
     );
   }
+
+  const getBackgroundClass = () => {
+    const block = properties.blocks[data.block];
+    if (!block.show_block_bg) return ''
+
+    if(block.template === 'gridGalleryTemplate') {
+      return 'section section-muted section-inset-shadow py-5';
+    } else {
+      return 'bg-light py-5';
+    }
+  }
+
   return (
     <>
       {listingItems.length > 0 ? (
-        <>
+        <div className={`full-width ${getBackgroundClass()}`}>
           <ListingBodyTemplate
             items={listingItems}
             isEditMode={isEditMode}
@@ -103,7 +115,7 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
                 />
               </div>
             )}
-        </>
+        </div>
       ) : isEditMode ? (
         <div className="listing message">
           {data?.query?.length === 0 && (
