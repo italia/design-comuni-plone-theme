@@ -15,22 +15,12 @@ import {
   OfficeCard,
   GenericCard,
   Metadata,
-  NewsCard,
   WideImage,
   SmallVenue,
   HelpBox,
 } from '@italia/components/ItaliaTheme/View';
 
-import {
-  LinkList,
-  LinkListItem,
-  Icon,
-} from 'design-react-kit/dist/design-react-kit';
-import {
-  Card,
-  CardBody,
-  CardTitle,
-} from 'design-react-kit/dist/design-react-kit';
+import { Card, CardBody } from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
   service_not_active: {
@@ -41,8 +31,8 @@ const messages = defineMessages({
     id: 'descrizione_estesa',
     defaultMessage: 'Descrizione estesa',
   },
-  descrizione_destinatari: {
-    id: 'descrizione_destinatari',
+  a_chi_si_rivolge: {
+    id: 'a_chi_si_rivolge',
     defaultMessage: 'A chi si rivolge',
   },
   accedere_al_servizio: {
@@ -81,8 +71,8 @@ const messages = defineMessages({
     id: 'dove_rivolgersi',
     defaultMessage: 'Dove rivolgersi',
   },
-  fasi_scadenze: {
-    id: 'fasi_scadenze',
+  tempi_e_scadenze: {
+    id: 'tempi_e_scadenze',
     defaultMessage: 'Tempi e scadenze',
   },
   cosa_serve: {
@@ -118,8 +108,8 @@ const messages = defineMessages({
     id: 'altri_documenti',
     defaultMessage: 'Documenti correlati',
   },
-  box_aiuto: {
-    id: 'box_aiuto',
+  ulteriori_informazioni: {
+    id: 'ulteriori_informazioni',
     defaultMessage: 'Ulteriori informazioni',
   },
   related_news: {
@@ -202,13 +192,13 @@ const ServizioView = ({ content }) => {
                 show_title={false}
               />
             )}
-            {(content.descrizione_destinatari?.data ||
+            {(content.a_chi_si_rivolge?.data ||
               content.chi_puo_presentare ||
               content.copertura_geografica?.data) && (
               <RichTextArticle
-                content={content.descrizione_destinatari?.data}
-                tag_id={'text-descrizione_destinatari'}
-                title={intl.formatMessage(messages.descrizione_destinatari)}
+                content={content.a_chi_si_rivolge?.data}
+                tag_id={'text-a_chi_si_rivolge'}
+                title={intl.formatMessage(messages.a_chi_si_rivolge)}
               >
                 {content.chi_puo_presentare?.data && (
                   <RichText
@@ -233,9 +223,9 @@ const ServizioView = ({ content }) => {
               content.procedure_collegate?.data ||
               content.canale_digitale?.data ||
               content.autenticazione ||
-              content.canale_fisico?.data ||
-              content.canale_fisico_prenotazione?.data ||
-              content.sedi_e_luoghi?.length > 0) && (
+              content.prenota_appuntamento?.data ||
+              content.dove_rivolgersi?.length > 0 ||
+              content.dover_rivolgersi_extra?.data) && (
               <RichTextArticle
                 title={intl.formatMessage(messages.accedere_al_servizio)}
                 tag_id="accedere_al_servizio"
@@ -279,31 +269,31 @@ const ServizioView = ({ content }) => {
                       <RichText
                         title={intl.formatMessage(messages.autenticazione)}
                         title_size="h6"
-                        content={content.copertura_geografica.data}
+                        content={content.autenticazione.data}
                       />
                     )}
                   </div>
                 )}
 
-                {(content.canale_fisico?.data ||
-                  content.canale_fisico_prenotazione?.data ||
-                  content.sedi_e_luoghi?.length > 0) && (
+                {(content.dove_rivolgersi?.length > 0 ||
+                  content.dove_rivolgersi_extra?.data ||
+                  content.prenota_appuntamento?.data) && (
                   <RichText
-                    content={content.canale_fisico.data}
                     title={intl.formatMessage(messages.dove_rivolgersi)}
                   >
-                    {content.canale_fisico_prenotazione?.data && (
-                      <RichText
-                        content={content.canale_fisico_prenotazione.data}
-                      />
+                    {content.prenota_appuntamento?.data && (
+                      <RichText content={content.prenota_appuntamento.data} />
                     )}
 
-                    {content.sedi_e_luoghi?.length > 0 && (
+                    {content.dove_rivolgersi?.length > 0 && (
                       <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                        {content.sedi_e_luoghi.map((item, i) => (
+                        {content.dove_rivolgersi.map((item, i) => (
                           <SmallVenue key={item['@id']} venue={item} />
                         ))}
                       </div>
+                    )}
+                    {content.dove_rivolgersi_extra?.data && (
+                      <RichText content={content.dove_rivolgersi_extra.data} />
                     )}
                   </RichText>
                 )}
@@ -341,12 +331,12 @@ const ServizioView = ({ content }) => {
                 </RichTextArticle>
               </>
             )}
-            {content.fasi_scadenze?.data && (
+            {content.tempi_e_scadenze?.data && (
               <RichTextArticle
-                content={content.fasi_scadenze.data}
+                content={content.tempi_e_scadenze.data}
                 add_class="style_ol_list"
-                tag_id={'text-fasi_scadenze'}
-                title={intl.formatMessage(messages.fasi_scadenze)}
+                tag_id={'text-tempi_e_scadenze'}
+                title={intl.formatMessage(messages.tempi_e_scadenze)}
               />
             )}
             {content.casi_particolari?.data && (
@@ -490,9 +480,10 @@ const ServizioView = ({ content }) => {
               </RichTextArticle>
             )}
             <Metadata content={content}>
-              {content.box_aiuto?.data?.replace(/(<([^>]+)>)/g, '') && (
-                <HelpBox text={content.box_aiuto} />
-              )}
+              {content.ulteriori_informazioni?.data?.replace(
+                /(<([^>]+)>)/g,
+                '',
+              ) && <HelpBox text={content.ulteriori_informazioni} />}
             </Metadata>
           </section>
         </div>
@@ -519,7 +510,7 @@ ServizioView.propTypes = {
     descrizione_estesa: PropTypes.shape({
       data: PropTypes.string,
     }),
-    descrizione_destinatari: PropTypes.shape({
+    a_chi_si_rivolge: PropTypes.shape({
       data: PropTypes.string,
     }),
     chi_puo_presentare: PropTypes.shape({
@@ -541,10 +532,10 @@ ServizioView.propTypes = {
     autenticazione: PropTypes.shape({
       data: PropTypes.string,
     }),
-    canale_fisico: PropTypes.shape({
+    dove_rivolgersi_extra: PropTypes.shape({
       data: PropTypes.string,
     }),
-    canale_fisico_prenotazione: PropTypes.shape({
+    prenota_appuntamento: PropTypes.shape({
       data: PropTypes.string,
     }),
     cosa_serve: PropTypes.shape({
@@ -556,7 +547,7 @@ ServizioView.propTypes = {
     vincoli: PropTypes.shape({
       data: PropTypes.string,
     }),
-    fasi_scadenze: PropTypes.shape({
+    tempi_e_scadenze: PropTypes.shape({
       data: PropTypes.string,
     }),
     casi_particolari: PropTypes.shape({
@@ -567,7 +558,7 @@ ServizioView.propTypes = {
     link_siti_esterni: PropTypes.shape({
       data: PropTypes.string,
     }),
-    box_aiuto: PropTypes.shape({
+    ulteriori_informazioni: PropTypes.shape({
       data: PropTypes.string,
     }),
   }),
