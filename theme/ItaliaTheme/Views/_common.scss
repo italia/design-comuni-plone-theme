@@ -204,14 +204,14 @@ div.sticky-wrapper {
         width: 1.4rem;
         font-size: 1rem;
         text-align: center;
-        font-family: Roboto Mono Light;
+        font-family: $font-family-monospace-light;
         font-weight: 500;
         text-transform: lowercase;
       }
 
       .date {
         font-size: 1.30rem;
-        font-family: Roboto Mono;
+        font-family: $font-family-monospace;
         font-weight: 200;
       }
     }
