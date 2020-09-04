@@ -86,6 +86,7 @@ const PageHeader = (props) => {
         <h1>
           {props.content.title}
           {props.content.subtitle && ` - ${props.content.subtitle}`}
+          {props.content.sottotitolo && ` - ${props.content.sottotitolo}`}
         </h1>
         {props.content['@type'] === 'Event' && (
           <>
