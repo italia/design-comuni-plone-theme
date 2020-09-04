@@ -37,11 +37,7 @@ const GridGalleryTemplate = ({
         'public-ui': isEditMode,
       })}
     >
-      <div
-        className={cx('full-width', {
-          'section section-muted section-inset-shadow': show_block_bg,
-        })}
-      >
+      <div className='full-width'>
         <Container className="px-4">
           {title && (
             <Row>

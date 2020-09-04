@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-08-31T13:01:32.999Z\n"
+"POT-Creation-Date: 2020-09-04T14:37:41.839Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -83,6 +83,11 @@ msgstr ""
 msgid "Contenuto"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/Dates
+# defaultMessage: Date aggiuntive
+msgid "Date aggiuntive"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 # defaultMessage: Default
 msgid "Default"
@@ -116,6 +121,11 @@ msgstr ""
 #: components/ItaliaTheme/View/PageView
 # defaultMessage: In questa sezione
 msgid "In this section"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/Dates
+# defaultMessage: L'evento non si terrà nelle seguenti date:
+msgid "L'evento non si terrà nelle seguenti date:"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
@@ -329,6 +339,11 @@ msgid "Vedi tutto"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView
+# defaultMessage: A chi si rivolge
+msgid "a_chi_si_rivolge"
+msgstr ""
+
+#: components/ItaliaTheme/View/ServizioView
 # defaultMessage: Accedere al servizio
 msgid "accedere_al_servizio"
 msgstr ""
@@ -418,14 +433,6 @@ msgstr ""
 #: components/ItaliaTheme/Header/SearchModal
 # defaultMessage: Torna alla ricerca
 msgid "backToSearch"
-msgstr ""
-
-#: components/ItaliaTheme/View/EventoView
-#: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/ServizioView
-#: components/ItaliaTheme/View/UOView
-# defaultMessage: Box d'aiuto
-msgid "box_aiuto"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView
@@ -585,11 +592,6 @@ msgid "descrizione"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView
-# defaultMessage: A chi si rivolge
-msgid "descrizione_destinatari"
-msgstr ""
-
-#: components/ItaliaTheme/View/ServizioView
 # defaultMessage: Descrizione estesa
 msgid "descrizione_estesa"
 msgstr ""
@@ -704,11 +706,6 @@ msgstr ""
 msgid "exploreArgument"
 msgstr ""
 
-#: components/ItaliaTheme/View/ServizioView
-# defaultMessage: Tempi e scadenze
-msgid "fasi_scadenze"
-msgstr ""
-
 #: addons/volto-rss-block/src/Block/Edit
 # defaultMessage: No feed set
 msgid "feed_not_set"
@@ -722,6 +719,12 @@ msgstr ""
 #: components/ItaliaTheme/Header/SearchModal
 # defaultMessage: Filtri
 msgid "filters"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/Commons/CardCalendar
+#: helpers/ListingHelper
+# defaultMessage: dal
+msgid "from"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Gallery
@@ -1202,6 +1205,11 @@ msgstr ""
 msgid "subjects"
 msgstr ""
 
+#: components/ItaliaTheme/View/ServizioView
+# defaultMessage: Tempi e scadenze
+msgid "tempi_e_scadenze"
+msgstr ""
+
 #: components/ItaliaTheme/View/UOView
 # defaultMessage: Tipologia organizzazione
 msgid "tipologia_organizzazione"
@@ -1217,15 +1225,24 @@ msgstr ""
 msgid "title"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/Commons/CardCalendar
+#: helpers/ListingHelper
+# defaultMessage: al
+msgid "to"
+msgstr ""
+
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/View/Commons/PageHeader
 # defaultMessage: Argomenti
 msgid "topics"
 msgstr ""
 
+#: components/ItaliaTheme/View/EventoView
+#: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/PersonaView
+#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/VenueView
-# defaultMessage: Ulteriori informazioni
+# defaultMessage: Box d'aiuto
 msgid "ulteriori_informazioni"
 msgstr ""
 
@@ -1238,11 +1255,6 @@ msgstr ""
 #: components/ItaliaTheme/View/VenueView
 # defaultMessage: Notizie in evidenza
 msgid "uo_related_news"
-msgstr ""
-
-#: components/ItaliaTheme/View/UOView
-# defaultMessage: Informazioni
-msgid "uo_ulteriori_informazioni"
 msgstr ""
 
 #: addons/volto-multilingual-widget/src/MultilingualWidget
