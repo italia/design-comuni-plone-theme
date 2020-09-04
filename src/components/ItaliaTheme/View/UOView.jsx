@@ -17,7 +17,7 @@ import {
   Attachments,
   Metadata,
   RelatedNewsArticles,
-  GenericCard,
+  HelpBox,
   UOLocation,
   RelatedArticles,
 } from '@italia/components/ItaliaTheme/View';
@@ -44,14 +44,6 @@ const messages = defineMessages({
   persone_struttura: {
     id: 'persone_struttura',
     defaultMessage: 'Persone che compongono la struttura',
-  },
-  uo_ulteriori_informazioni: {
-    id: 'uo_ulteriori_informazioni',
-    defaultMessage: 'Informazioni',
-  },
-  ulteriori_informazioni: {
-    id: 'ulteriori_informazioni',
-    defaultMessage: "Box d'aiuto",
   },
 
   uo_related_news: {
@@ -114,16 +106,6 @@ const UOView = ({ content }) => {
             ref={documentBody}
             className="col-lg-8 it-page-sections-container"
           >
-            {content.ulteriori_informazioni?.data.replace(
-              /(<([^>]+)>)/g,
-              '',
-            ) && (
-              <RichTextArticle
-                content={content.ulteriori_informazioni.data}
-                tag_id="ulteriori_informazioni"
-                title={intl.formatMessage(messages.uo_ulteriori_informazioni)}
-              />
-            )}
             {content.sedi?.length > 0 ||
             content?.contact_info?.data.replace(/(<([^>]+)>)/g, '') ||
             content?.geolocation?.latitude ||
@@ -269,13 +251,7 @@ const UOView = ({ content }) => {
             {content?.items?.some((e) => e.id === 'allegati') && (
               <Attachments content={content} folder_name={'allegati'} />
             )}
-            {content?.ulteriori_informazioni && (
-              <RichTextArticle
-                content={content.ulteriori_informazioni.data}
-                tag_id="ulteriori_informazioni"
-                title={intl.formatMessage(messages.ulteriori_informazioni)}
-              />
-            )}
+
             {content?.related_news?.length > 0 ? (
               <RelatedNewsArticles
                 news={content?.related_news}
@@ -290,7 +266,13 @@ const UOView = ({ content }) => {
                 showimage={false}
               />
             ) : null}
-            <Metadata content={content} showTags={false} />
+
+            <Metadata content={content} showTags={false}>
+              {content.ulteriori_informazioni?.data?.replace(
+                /(<([^>]+)>)/g,
+                '',
+              ) && <HelpBox text={content.ulteriori_informazioni} />}
+            </Metadata>
           </section>
         </div>
       </div>
