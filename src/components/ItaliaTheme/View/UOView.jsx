@@ -17,7 +17,7 @@ import {
   Attachments,
   Metadata,
   RelatedNewsArticles,
-  GenericCard,
+  HelpBox,
   UOLocation,
   RelatedArticles,
 } from '@italia/components/ItaliaTheme/View';
@@ -44,14 +44,6 @@ const messages = defineMessages({
   persone_struttura: {
     id: 'persone_struttura',
     defaultMessage: 'Persone che compongono la struttura',
-  },
-  uo_ulteriori_informazioni: {
-    id: 'uo_ulteriori_informazioni',
-    defaultMessage: 'Informazioni',
-  },
-  box_aiuto: {
-    id: 'box_aiuto',
-    defaultMessage: "Box d'aiuto",
   },
 
   uo_related_news: {
@@ -114,16 +106,6 @@ const UOView = ({ content }) => {
             ref={documentBody}
             className="col-lg-8 it-page-sections-container"
           >
-            {content.ulteriori_informazioni?.data.replace(
-              /(<([^>]+)>)/g,
-              '',
-            ) && (
-              <RichTextArticle
-                content={content.ulteriori_informazioni.data}
-                tag_id="ulteriori_informazioni"
-                title={intl.formatMessage(messages.uo_ulteriori_informazioni)}
-              />
-            )}
             {content.sedi?.length > 0 ||
             content?.contact_info?.data.replace(/(<([^>]+)>)/g, '') ||
             content?.geolocation?.latitude ||
@@ -269,15 +251,9 @@ const UOView = ({ content }) => {
             {content?.items?.some((e) => e.id === 'allegati') && (
               <Attachments content={content} folder_name={'allegati'} />
             )}
-            {content?.box_aiuto && (
-              <RichTextArticle
-                content={content.box_aiuto.data}
-                tag_id="box_aiuto"
-                title={intl.formatMessage(messages.box_aiuto)}
-              />
-            )}
+
             {content?.related_news?.length > 0 ? (
-              <RelatedNewsArticles 
+              <RelatedNewsArticles
                 news={content?.related_news}
                 title={intl.formatMessage(messages.uo_related_news)}
               />
@@ -290,7 +266,13 @@ const UOView = ({ content }) => {
                 showimage={false}
               />
             ) : null}
-            <Metadata content={content} showTags={false} />
+
+            <Metadata content={content} showTags={false}>
+              {content.ulteriori_informazioni?.data?.replace(
+                /(<([^>]+)>)/g,
+                '',
+              ) && <HelpBox text={content.ulteriori_informazioni} />}
+            </Metadata>
           </section>
         </div>
       </div>
@@ -303,7 +285,7 @@ export default UOView;
 UOView.propTypes = {
   content: PropTypes.shape({
     assessore_riferimento: PropTypes.array,
-    box_aiuto: PropTypes.shape({
+    ulteriori_informazioni: PropTypes.shape({
       data: PropTypes.string,
     }),
     competenze: PropTypes.shape({

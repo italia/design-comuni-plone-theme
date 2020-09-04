@@ -30,7 +30,7 @@ const mock_mandatory = {
       title: 'Unità organizzativa di primo livello',
     },
   ],
-  box_aiuto: {
+  ulteriori_informazioni: {
     'content-type': 'text/html',
     data: '<p>BoxUlterioriInfo, viverra dignissim nibh vestibulum nisi. </p>',
     encoding: 'utf-8',

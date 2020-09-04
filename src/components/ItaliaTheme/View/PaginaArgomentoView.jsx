@@ -26,7 +26,7 @@ import { getContent, resetContent } from '@plone/volto/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { Portal } from 'react-portal';
 import { BodyClass } from '@plone/volto/helpers';
-import { ArgumentIcon } from '@italia/components/ItaliaTheme/View'
+import { ArgumentIcon } from '@italia/components/ItaliaTheme/View';
 
 /**
  * PaginaArgomentoView view component class.
@@ -66,12 +66,16 @@ const PaginaArgomentoView = ({ content }) => {
     <div id="page-document" className="ui container">
       <div className="ArgomentoTitleWrapper mb-5">
         <div className="title-description-wrapper col-lg-6">
-          <ArgumentIcon icon={content.icona}/>
+          <ArgumentIcon icon={content.icona} />
           <h1 className="mb-3">{content?.title}</h1>
           <p className="description">{content?.description}</p>
         </div>
         <div className="col-lg-4 offset-lg-2">
-          <div dangerouslySetInnerHTML={{ __html: content?.box_aiuto?.data }} />
+          <div
+            dangerouslySetInnerHTML={{
+              __html: content?.ulteriori_informazioni?.data,
+            }}
+          />
 
           {content?.unita_amministrativa_responsabile?.length > 0 &&
             content?.unita_amministrativa_responsabile?.map((u, index) => {

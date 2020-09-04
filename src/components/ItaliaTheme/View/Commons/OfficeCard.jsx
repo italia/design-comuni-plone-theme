@@ -24,7 +24,7 @@ const OfficeCard = ({ office, extended, icon, children }) => {
   }, [dispatch, office, url, key]);
 
   let office_fo = officeContent[key]?.data;
-  console.log(office, office_fo);
+
   return office_fo ? (
     <div className="card card-teaser rounded shadow p-4">
       {icon && <Icon icon={icon}></Icon>}

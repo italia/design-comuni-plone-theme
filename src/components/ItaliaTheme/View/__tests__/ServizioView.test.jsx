@@ -102,7 +102,7 @@ const mock_other_fields = {
       '<p>Tipi di autenticazione richiesti per usare il servizio on line</p>',
     encoding: 'utf-8',
   },
-  box_aiuto: {
+  ulteriori_informazioni: {
     'content-type': 'text/html',
     data: "<p>Indicazioni d'uso del servizio</p>",
     encoding: 'utf-8',
@@ -360,7 +360,7 @@ test('expect to have all fields in page', async () => {
   expect(altri_documenti).toBeInTheDocument();
   // autenticazione
   expect(getByText(/Tipi di autenticazione richiesti/i)).toBeInTheDocument();
-  // box_aiuto
+  // ulteriori_informazioni
   expect(getByText(/Indicazioni d'uso del servizio/i)).toBeInTheDocument();
   // canale_digitale
   expect(

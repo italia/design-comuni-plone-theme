@@ -11,20 +11,16 @@ import {
   SideMenu,
   PageHeader,
   RichTextArticle,
+  RichText,
   OfficeCard,
   GenericCard,
   Metadata,
-  NewsCard,
   WideImage,
   SmallVenue,
+  HelpBox,
 } from '@italia/components/ItaliaTheme/View';
 
-import { LinkList, LinkListItem } from 'design-react-kit/dist/design-react-kit';
-import {
-  Card,
-  CardBody,
-  CardTitle,
-} from 'design-react-kit/dist/design-react-kit';
+import { Card, CardBody } from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
   service_not_active: {
@@ -35,13 +31,17 @@ const messages = defineMessages({
     id: 'descrizione_estesa',
     defaultMessage: 'Descrizione estesa',
   },
-  descrizione_destinatari: {
-    id: 'descrizione_destinatari',
-    defaultMessage: 'Destinatari del servizio',
+  a_chi_si_rivolge: {
+    id: 'a_chi_si_rivolge',
+    defaultMessage: 'A chi si rivolge',
+  },
+  accedere_al_servizio: {
+    id: 'accedere_al_servizio',
+    defaultMessage: 'Accedere al servizio',
   },
   chi_puo_presentare: {
     id: 'chi_puo_presentare',
-    defaultMessage: 'Chi può presentare domanda',
+    defaultMessage: 'Chi può presentare',
   },
   copertura_geografica: {
     id: 'copertura_geografica',
@@ -49,11 +49,11 @@ const messages = defineMessages({
   },
   come_si_fa: {
     id: 'come_si_fa',
-    defaultMessage: 'Come si ottiene il servizio',
+    defaultMessage: 'Come si fa',
   },
   cosa_si_ottiene: {
     id: 'cosa_si_ottiene',
-    defaultMessage: 'Cosa si ottiene dal servizio',
+    defaultMessage: 'Cosa si ottiene',
   },
   procedure_collegate: {
     id: 'procedure_collegate',
@@ -67,43 +67,39 @@ const messages = defineMessages({
     id: 'autenticazione',
     defaultMessage: 'Metodi di autenticazione al servizio',
   },
-  canale_fisico: {
-    id: 'canale_fisico',
-    defaultMessage: 'Canale fisico',
+  dove_rivolgersi: {
+    id: 'dove_rivolgersi',
+    defaultMessage: 'Dove rivolgersi',
   },
-  canale_fisico_prenotazione: {
-    id: 'canale_fisico_prenotazione',
-    defaultMessage: 'Link di prenotazione per il canale fisico',
-  },
-  fasi_scadenze: {
-    id: 'fasi_scadenze',
-    defaultMessage: 'Fasi e scadenze per la richiesta del servizio',
+  tempi_e_scadenze: {
+    id: 'tempi_e_scadenze',
+    defaultMessage: 'Tempi e scadenze',
   },
   cosa_serve: {
     id: 'cosa_serve',
-    defaultMessage: 'Cosa serve per effettuare la richiesta del servizio',
+    defaultMessage: 'Cosa serve',
+  },
+  costi_e_vincoli: {
+    id: 'costi_e_vincoli',
+    defaultMessage: 'Costi e vincoli',
   },
   costi: {
     id: 'costi',
-    defaultMessage: 'Costi per la richiesta del servizio',
+    defaultMessage: 'Costi',
   },
   vincoli: {
     id: 'vincoli',
-    defaultMessage: 'Vincoli per la richiesta del servizio',
+    defaultMessage: 'Vincoli',
   },
   casi_particolari: {
     id: 'casi_particolari',
-    defaultMessage:
-      'Gestione di casi particolari per la richiesta del servizio',
+    defaultMessage: 'Casi particolari',
   },
-  ufficio_responsabile: {
-    id: 'ufficio_responsabile',
-    defaultMessage: 'Ufficio responsabile',
+  contatti: {
+    id: 'contatti',
+    defaultMessage: 'Contatti',
   },
-  area: {
-    id: 'area',
-    defaultMessage: 'Area',
-  },
+
   link_siti_esterni: {
     id: 'link_siti_esterni',
     defaultMessage: 'Link utili',
@@ -112,8 +108,8 @@ const messages = defineMessages({
     id: 'altri_documenti',
     defaultMessage: 'Documenti correlati',
   },
-  box_aiuto: {
-    id: 'box_aiuto',
+  ulteriori_informazioni: {
+    id: 'ulteriori_informazioni',
     defaultMessage: 'Ulteriori informazioni',
   },
   related_news: {
@@ -128,9 +124,10 @@ const messages = defineMessages({
     id: 'servizi_collegati',
     defaultMessage: 'Servizi collegati',
   },
-  sedi_e_luoghi: {
-    id: 'sedi_e_luoghi',
-    defaultMessage: 'Dove trovarci',
+
+  modulistica: {
+    id: 'modulistica',
+    defaultMessage: 'Modulistica',
   },
 });
 
@@ -187,139 +184,159 @@ const ServizioView = ({ content }) => {
                 title={intl.formatMessage(messages.service_not_active)}
               />
             )}
-
             {content.descrizione_estesa?.data && (
               <RichTextArticle
                 content={content.descrizione_estesa.data}
                 tag_id={'text-body'}
-                title={''}
+                title="Cos'è"
+                show_title={false}
               />
             )}
-            {content.descrizione_destinatari?.data && (
+            {(content.a_chi_si_rivolge?.data ||
+              content.chi_puo_presentare ||
+              content.copertura_geografica?.data) && (
               <RichTextArticle
-                content={content.descrizione_destinatari.data}
-                tag_id={'text-descrizione_destinatari'}
-                title={intl.formatMessage(messages.descrizione_destinatari)}
-              />
-            )}
-            {content.chi_puo_presentare?.data && (
-              <RichTextArticle
-                content={content.chi_puo_presentare.data}
-                tag_id={'text-chi_puo_presentare'}
-                title={intl.formatMessage(messages.chi_puo_presentare)}
-              />
-            )}
-            {content.copertura_geografica?.data && (
-              <RichTextArticle
-                content={content.copertura_geografica.data}
-                tag_id={'text-copertura_geografica'}
-                title={intl.formatMessage(messages.copertura_geografica)}
-              />
-            )}
-            {content.come_si_fa?.data && (
-              <RichTextArticle
-                content={content.come_si_fa.data}
-                tag_id={'text-come_si_fa'}
-                title={intl.formatMessage(messages.come_si_fa)}
-              />
-            )}
-            {content.cosa_si_ottiene?.data && (
-              <RichTextArticle
-                content={content.cosa_si_ottiene.data}
-                tag_id={'text-cosa_si_ottiene'}
-                title={intl.formatMessage(messages.cosa_si_ottiene)}
-              />
-            )}
-            {content.procedure_collegate?.data && (
-              <RichTextArticle
-                content={content.procedure_collegate.data}
-                tag_id={'text-procedure_collegate'}
-                title={intl.formatMessage(messages.procedure_collegate)}
-              />
-            )}
-            {(content.canale_digitale || content.autenticazione) && (
-              <article
-                id="canale_digitale"
-                className="it-page-section anchor-offset mt-5"
+                content={content.a_chi_si_rivolge?.data}
+                tag_id={'text-a_chi_si_rivolge'}
+                title={intl.formatMessage(messages.a_chi_si_rivolge)}
               >
-                <h4 id="header-canale_digitale">
-                  {intl.formatMessage(messages.canale_digitale)}
-                </h4>
-                <div
-                  className="text-serif"
-                  dangerouslySetInnerHTML={{
-                    __html: content.canale_digitale.data,
-                  }}
-                />
-
-                {content.autenticazione?.data && (
-                  <>
-                    <strong>
-                      {intl.formatMessage(messages.autenticazione)}
-                    </strong>
-                    <div
-                      className="text-serif"
-                      dangerouslySetInnerHTML={{
-                        __html: content.autenticazione.data,
-                      }}
-                    />
-                  </>
+                {content.chi_puo_presentare?.data && (
+                  <RichText
+                    title={intl.formatMessage(messages.chi_puo_presentare)}
+                    title_size="h5"
+                    content={content.chi_puo_presentare.data}
+                  />
                 )}
-              </article>
-            )}
 
-            {(content.canale_fisico?.data ||
-              content.canale_fisico_prenotazione) && (
-              <RichTextArticle
-                content={content.canale_fisico.data}
-                tag_id={'text-fisico'}
-                title={intl.formatMessage(messages.canale_fisico)}
-              >
-                {content.canale_fisico_prenotazione && (
-                  <>
-                    <strong>
-                      {intl.formatMessage(messages.canale_fisico_prenotazione)}
-                    </strong>
-                    <LinkList tag="div">
-                      <LinkListItem
-                        tag="a"
-                        href={content.canale_fisico_prenotazione}
-                      >
-                        <span>{content.canale_fisico_prenotazione}</span>
-                      </LinkListItem>
-                    </LinkList>
-                  </>
+                {content.copertura_geografica?.data && (
+                  <RichText
+                    title={intl.formatMessage(messages.copertura_geografica)}
+                    title_size="h5"
+                    content={content.copertura_geografica.data}
+                  />
                 )}
               </RichTextArticle>
             )}
 
-            {content.fasi_scadenze?.data && (
+            {(content.come_si_fa?.data ||
+              content.cosa_si_ottiene?.data ||
+              content.procedure_collegate?.data ||
+              content.canale_digitale?.data ||
+              content.autenticazione ||
+              content.prenota_appuntamento?.data ||
+              content.dove_rivolgersi?.length > 0 ||
+              content.dover_rivolgersi_extra?.data) && (
               <RichTextArticle
-                content={content.fasi_scadenze.data}
-                add_class="style_ol_list"
-                tag_id={'text-fasi_scadenze'}
-                title={intl.formatMessage(messages.fasi_scadenze)}
-              />
+                title={intl.formatMessage(messages.accedere_al_servizio)}
+                tag_id="accedere_al_servizio"
+              >
+                {content.come_si_fa?.data && (
+                  <RichText
+                    content={content.come_si_fa.data}
+                    title={intl.formatMessage(messages.come_si_fa)}
+                  />
+                )}
+
+                {content.cosa_si_ottiene?.data && (
+                  <RichText
+                    content={content.cosa_si_ottiene.data}
+                    title={intl.formatMessage(messages.cosa_si_ottiene)}
+                  />
+                )}
+
+                {content.procedure_collegate?.data && (
+                  <RichText
+                    content={content.procedure_collegate.data}
+                    title={intl.formatMessage(messages.procedure_collegate)}
+                  />
+                )}
+
+                {(content.canale_digitale?.data || content.autenticazione) && (
+                  <div className="mt-4">
+                    {content.canale_digitale?.data && (
+                      <>
+                        <h5>{intl.formatMessage(messages.canale_digitale)}</h5>
+                        <div
+                          className="text-serif"
+                          dangerouslySetInnerHTML={{
+                            __html: content.canale_digitale.data,
+                          }}
+                        />
+                      </>
+                    )}
+
+                    {content.autenticazione?.data && (
+                      <RichText
+                        title={intl.formatMessage(messages.autenticazione)}
+                        title_size="h6"
+                        content={content.autenticazione.data}
+                      />
+                    )}
+                  </div>
+                )}
+
+                {(content.dove_rivolgersi?.length > 0 ||
+                  content.dove_rivolgersi_extra?.data ||
+                  content.prenota_appuntamento?.data) && (
+                  <RichText
+                    title={intl.formatMessage(messages.dove_rivolgersi)}
+                  >
+                    {content.prenota_appuntamento?.data && (
+                      <RichText content={content.prenota_appuntamento.data} />
+                    )}
+
+                    {content.dove_rivolgersi?.length > 0 && (
+                      <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                        {content.dove_rivolgersi.map((item, i) => (
+                          <SmallVenue key={item['@id']} venue={item} />
+                        ))}
+                      </div>
+                    )}
+                    {content.dove_rivolgersi_extra?.data && (
+                      <RichText content={content.dove_rivolgersi_extra.data} />
+                    )}
+                  </RichText>
+                )}
+              </RichTextArticle>
             )}
+
             {content.cosa_serve?.data && (
               <RichTextArticle
-                content={content.cosa_serve.data}
                 tag_id={'text-cosa_serve'}
                 title={intl.formatMessage(messages.cosa_serve)}
-              />
+              >
+                <HelpBox text={content.cosa_serve} />
+              </RichTextArticle>
             )}
-            {content.costi?.data && (
-              <RichTextArticle
-                content={content.costi.data}
-                tag_id={'text-costi'}
-                title={intl.formatMessage(messages.costi)}
-              />
+            {(content.costi?.data || content.vincoli?.data) && (
+              <>
+                <RichTextArticle
+                  tag_id={'costi-e-vincoli'}
+                  title={intl.formatMessage(messages.costi_e_vincoli)}
+                >
+                  {content.costi?.data && (
+                    <RichText
+                      title={intl.formatMessage(messages.costi)}
+                      title_size="h6"
+                      content={content.costi.data}
+                    />
+                  )}
+                  {content.vincoli?.data && (
+                    <RichText
+                      title={intl.formatMessage(messages.vincoli)}
+                      title_size="h6"
+                      content={content.vincoli.data}
+                    />
+                  )}
+                </RichTextArticle>
+              </>
             )}
-            {content.vincoli?.data && (
+            {content.tempi_e_scadenze?.data && (
               <RichTextArticle
-                content={content.vincoli.data}
-                tag_id={'text-vincoli'}
-                title={intl.formatMessage(messages.vincoli)}
+                content={content.tempi_e_scadenze.data}
+                add_class="style_ol_list"
+                tag_id={'text-tempi_e_scadenze'}
+                title={intl.formatMessage(messages.tempi_e_scadenze)}
               />
             )}
             {content.casi_particolari?.data && (
@@ -329,31 +346,30 @@ const ServizioView = ({ content }) => {
                 title={intl.formatMessage(messages.casi_particolari)}
               />
             )}
-            {content.ufficio_responsabile?.length > 0 ? (
-              <article
-                id="ufficio_responsabile"
-                className="it-page-section anchor-offset mt-5"
+            {(content.ufficio_responsabile?.length > 0 ||
+              content.area.length > 0) && (
+              <RichTextArticle
+                tag_id="contatti"
+                title={intl.formatMessage(messages.contatti)}
               >
-                <h4 id="header-ufficio_responsabile">
-                  {intl.formatMessage(messages.ufficio_responsabile)}
-                </h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content.ufficio_responsabile.map((item, i) => (
-                    <OfficeCard key={item['@id']} office={item} />
-                  ))}
+                  {content.ufficio_responsabile?.length > 0 && (
+                    <>
+                      {content.ufficio_responsabile.map((item, i) => (
+                        <OfficeCard key={item['@id']} office={item} />
+                      ))}
+                    </>
+                  )}
+                  {content.area?.length > 0 && (
+                    <>
+                      {content.area.map((item, i) => (
+                        <OfficeCard key={item['@id']} office={item} />
+                      ))}
+                    </>
+                  )}
                 </div>
-              </article>
-            ) : null}
-            {content.area?.length > 0 ? (
-              <article id="area" className="it-page-section anchor-offset mt-5">
-                <h4 id="header-area">{intl.formatMessage(messages.area)}</h4>
-                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content.area.map((item, i) => (
-                    <OfficeCard key={item['@id']} office={item} />
-                  ))}
-                </div>
-              </article>
-            ) : null}
+              </RichTextArticle>
+            )}
             {content.altri_documenti?.length > 0 ? (
               <article
                 id="altri_documenti-items"
@@ -375,30 +391,28 @@ const ServizioView = ({ content }) => {
               </article>
             ) : null}
             {content.link_siti_esterni?.data && (
-              <Card
-                className="card card-teaser shadow p-0 mt-3 rounded link-esterni"
-                noWrapper={true}
-                tag="div"
+              <article
+                id="link-esterni"
+                className="it-page-section anchor-offset mt-5"
               >
-                <CardBody tag="div">
-                  <CardTitle tag="h4" className="p-4">
-                    {intl.formatMessage(messages.link_siti_esterni)}
-                  </CardTitle>
-                  <div
-                    className="text-serif p-4 pt-0"
-                    dangerouslySetInnerHTML={{
-                      __html: content.link_siti_esterni.data,
-                    }}
-                  />
-                </CardBody>
-              </Card>
-            )}
-            {content.box_aiuto?.data && (
-              <RichTextArticle
-                content={content.box_aiuto.data}
-                tag_id={'text-box_aiuto'}
-                title={intl.formatMessage(messages.box_aiuto)}
-              />
+                <h4 id="header-link-esterni">
+                  {intl.formatMessage(messages.link_siti_esterni)}
+                </h4>
+                <Card
+                  className="card card-teaser shadow p-0 mt-3 rounded link-esterni"
+                  noWrapper={true}
+                  tag="div"
+                >
+                  <CardBody tag="div">
+                    <div
+                      className="text-serif p-4 pt-0"
+                      dangerouslySetInnerHTML={{
+                        __html: content.link_siti_esterni.data,
+                      }}
+                    />
+                  </CardBody>
+                </Card>
+              </article>
             )}
             {content?.items?.some((e) => e.id === 'allegati') && (
               <Attachments content={content} folder_name={'allegati'} />
@@ -407,82 +421,70 @@ const ServizioView = ({ content }) => {
               <Attachments
                 content={content}
                 folder_name={'modulistica'}
-                folder_title={'Modulistica'}
+                title={intl.formatMessage(messages.modulistica)}
               />
             )}
-            {content.servizi_collegati?.length > 0 ? (
-              <article
-                id="servizi-items"
-                className="it-page-section anchor-offset mt-5"
+            {(content.servizi_collegati?.length > 0 ||
+              /*content.related_news?.length > 0 ||*/
+              content.relatedItems?.length > 0) && (
+              <RichTextArticle
+                tag_id="correlati"
+                title={intl.formatMessage(messages.related_items)}
               >
-                <h4 id="header-servizi-items">
-                  {intl.formatMessage(messages.servizi_collegati)}
-                </h4>
-                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content.servizi_collegati.map((item, i) => (
-                    <GenericCard
-                      key={item['@id']}
-                      item={item}
-                      showimage={false}
-                    />
-                  ))}
-                </div>
-              </article>
-            ) : null}
-            {content.related_news?.length > 0 ? (
-              <article
-                id="related-news"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4 id="header-related-news">
-                  {intl.formatMessage(messages.related_news)}
-                </h4>
-                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content.related_news.map((item, i) => (
-                    <NewsCard
-                      key={item['@id']}
-                      id={item['@id']}
-                      title={item.title}
-                      description={item.description}
-                      effective={item.effective}
-                      typology={item.typology}
-                    />
-                  ))}
-                </div>
-              </article>
-            ) : null}
-            {content.relatedItems?.length > 0 ? (
-              <article
-                id="related-items"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4 id="header-related-items">
-                  {intl.formatMessage(messages.related_items)}
-                </h4>
-                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content.relatedItems.map((item, i) => (
-                    <GenericCard
-                      key={item['@id']}
-                      item={item}
-                      showimage={false}
-                    />
-                  ))}
-                </div>
-              </article>
-            ) : null}
-            {content.sedi_e_luoghi?.length > 0 && (
-              <article id="sedi" className="it-page-section anchor-offset mt-5">
-                <h4 id="header-sedi">
-                  {intl.formatMessage(messages.sedi_e_luoghi)}
-                </h4>
-                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content.sedi_e_luoghi.map((item, i) => (
-                    <SmallVenue key={item['@id']} venue={item} />
-                  ))}
-                </div>
-              </article>
+                {content.servizi_collegati?.length > 0 && (
+                  <div className="mb-4">
+                    <h6>{intl.formatMessage(messages.servizi_collegati)}</h6>
+                    <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                      {content.servizi_collegati.map((item, i) => (
+                        <GenericCard
+                          key={item['@id']}
+                          item={item}
+                          showimage={false}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* {content.related_news?.length > 0 && (
+                  <div className="mb-4">
+                    <h6>{intl.formatMessage(messages.related_news)}</h6>
+                    <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                      {content.related_news.map((item, i) => (
+                        <NewsCard
+                          key={item['@id']}
+                          id={item['@id']}
+                          title={item.title}
+                          description={item.description}
+                          effective={item.effective}
+                          typology={item.typology}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )} */}
+                {content.relatedItems?.length > 0 && (
+                  <div className="mb-4">
+                    <h6>{intl.formatMessage(messages.related_items)}</h6>
+                    <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                      {content.relatedItems.map((item, i) => (
+                        <GenericCard
+                          key={item['@id']}
+                          item={item}
+                          showimage={false}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </RichTextArticle>
             )}
-            <Metadata content={content} />
+            <Metadata content={content}>
+              {content.ulteriori_informazioni?.data?.replace(
+                /(<([^>]+)>)/g,
+                '',
+              ) && <HelpBox text={content.ulteriori_informazioni} />}
+            </Metadata>
           </section>
         </div>
       </div>
@@ -508,7 +510,7 @@ ServizioView.propTypes = {
     descrizione_estesa: PropTypes.shape({
       data: PropTypes.string,
     }),
-    descrizione_destinatari: PropTypes.shape({
+    a_chi_si_rivolge: PropTypes.shape({
       data: PropTypes.string,
     }),
     chi_puo_presentare: PropTypes.shape({
@@ -530,10 +532,12 @@ ServizioView.propTypes = {
     autenticazione: PropTypes.shape({
       data: PropTypes.string,
     }),
-    canale_fisico: PropTypes.shape({
+    dove_rivolgersi_extra: PropTypes.shape({
       data: PropTypes.string,
     }),
-    canale_fisico_prenotazione: PropTypes.string,
+    prenota_appuntamento: PropTypes.shape({
+      data: PropTypes.string,
+    }),
     cosa_serve: PropTypes.shape({
       data: PropTypes.string,
     }),
@@ -543,7 +547,7 @@ ServizioView.propTypes = {
     vincoli: PropTypes.shape({
       data: PropTypes.string,
     }),
-    fasi_scadenze: PropTypes.shape({
+    tempi_e_scadenze: PropTypes.shape({
       data: PropTypes.string,
     }),
     casi_particolari: PropTypes.shape({
@@ -554,7 +558,7 @@ ServizioView.propTypes = {
     link_siti_esterni: PropTypes.shape({
       data: PropTypes.string,
     }),
-    box_aiuto: PropTypes.shape({
+    ulteriori_informazioni: PropTypes.shape({
       data: PropTypes.string,
     }),
   }),
