@@ -64,8 +64,8 @@ const messages = defineMessages({
     id: 'contatti',
     defaultMessage: 'Contatti',
   },
-  box_aiuto: {
-    id: 'box_aiuto',
+  ulteriori_informazioni: {
+    id: 'ulteriori_informazioni',
     defaultMessage: "Box d'aiuto",
   },
   patrocinato_da: {
@@ -435,9 +435,10 @@ const EventoView = ({ content, location }) => {
               </article>
             ) : null}
             <Metadata content={content}>
-              {content?.box_aiuto?.data?.replace(/(<([^>]+)>)/g, '') && (
-                <HelpBox text={content?.box_aiuto} />
-              )}
+              {content?.ulteriori_informazioni?.data?.replace(
+                /(<([^>]+)>)/g,
+                '',
+              ) && <HelpBox text={content?.ulteriori_informazioni} />}
             </Metadata>
           </section>
         </div>
@@ -478,7 +479,7 @@ EventoView.propTypes = {
       data: PropTypes.string,
     }),
 
-    box_aiuto: PropTypes.shape({
+    ulteriori_informazioni: PropTypes.shape({
       data: PropTypes.string,
     }),
     sponsor: PropTypes.shape({
