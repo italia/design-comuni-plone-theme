@@ -80,7 +80,7 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
   }
 
   return (
-    <>
+    <div className="public-ui">
       {listingItems.length > 0 ? (
         <div className={`full-width ${getBackgroundClass()}`}>
           <ListingBodyTemplate
@@ -90,7 +90,7 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
           />
           {data?.query?.length === 0 &&
             content.items_total > settings.defaultPageSize && (
-              <div className="pagination-wrapper public-ui">
+              <div className="pagination-wrapper">
                 <Pagination
                   activePage={currentPage}
                   totalPages={Math.ceil(
@@ -104,7 +104,7 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
           {data?.query?.length > 0 &&
             querystringResults[data.block].total >
               (data.b_size || settings.defaultPageSize) && (
-              <div className="pagination-wrapper public-ui">
+              <div className="pagination-wrapper">
                 <Pagination
                   activePage={currentPage}
                   totalPages={Math.ceil(
@@ -132,7 +132,7 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
           )}
         </div>
       ) : null}
-    </>
+    </div>
   );
 };
 
