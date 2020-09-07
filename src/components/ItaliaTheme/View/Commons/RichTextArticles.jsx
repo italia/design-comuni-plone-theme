@@ -14,13 +14,14 @@ const RichTextArticles = ({ title, contents, tag_id, add_class, children }) => {
       {title && <h4 id={`header-${tag_id}`}>{title}</h4>}
       {contents?.length > 0 && 
         contents.map(content => (
-        <div className="mt-3">
-          {content.title && <h6>{content.title}</h6>}
-          <div
-            className={cx('text-serif', add_class)}
-            dangerouslySetInnerHTML={{ __html: content.text }}
-          />
-        </div>
+          content?.text && 
+            <div className="mt-3">
+              {content.title && <h6>{content.title}</h6>}
+              <div
+                className={cx('text-serif', add_class)}
+                dangerouslySetInnerHTML={{ __html: content.text }}
+              />
+            </div>
       ))}
       {children}
     </article>
