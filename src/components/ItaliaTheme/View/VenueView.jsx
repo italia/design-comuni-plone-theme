@@ -284,15 +284,18 @@ const VenueView = ({ content }) => {
               contents={[
                 {
                   title: intl.formatMessage(messages.riferimento_telefonico_luogo),
-                  text: content?.riferimento_telefonico_luogo
+                  text: content?.riferimento_telefonico_luogo,
+                  href: `tel:${content.riferimento_telefonico_luogo}`
                 },
                 {
                   title: intl.formatMessage(messages.riferimento_mail_luogo),
-                  text: content?.riferimento_mail_luogo
+                  text: content?.riferimento_mail_luogo,
+                  href: `mailto:${content.riferimento_mail_luogo}`
                 },
                 {
                   title: intl.formatMessage(messages.riferimento_web),
-                  text: content?.riferimento_web
+                  text: content?.riferimento_web,
+                  href: `https://${content?.riferimento_web}`
                 },
               ]}
               tag_id={'contatti'}
