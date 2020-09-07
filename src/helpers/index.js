@@ -5,4 +5,6 @@
  * export { Api } from './Api/Api';
  */
 
- export { defaultIconWidgetOptions } from '@italia/helpers/IconWidget/IconWidgetHelper';
+export { getIcon }  from './iconHelper';
+export { defaultIconWidgetOptions } from '@italia/helpers/IconWidget/IconWidgetHelper';
+export { getCalendarDate } from '@italia/helpers/ListingHelper';

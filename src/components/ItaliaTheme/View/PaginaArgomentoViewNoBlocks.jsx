@@ -28,8 +28,8 @@ const messages = defineMessages({
     id: 'assessorati_riferimento',
     defaultMessage: 'Assessorati di riferimento',
   },
-  box_aiuto: {
-    id: 'box_aiuto',
+  ulteriori_informazioni: {
+    id: 'ulteriori_informazioni',
     defaultMessage: 'Ulteriori informazioni',
   },
   related_servizio: {
@@ -127,14 +127,14 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
                 </div>
               </article>
             ) : null}
-            {content.box_aiuto?.data.replace(
+            {content.ulteriori_informazioni?.data.replace(
               /(<\/?[^>]+(>|$)|&nbsp;|\s)/g,
               '',
             ) && (
               <RichTextArticle
-                content={content.box_aiuto.data}
-                tag_id={'text-box_aiuto'}
-                title={intl.formatMessage(messages.box_aiuto)}
+                content={content.ulteriori_informazioni.data}
+                tag_id={'text-ulteriori_informazioni'}
+                title={intl.formatMessage(messages.ulteriori_informazioni)}
               />
             )}
             {content?.related_services?.length > 0 ? (
@@ -245,7 +245,7 @@ PaginaArgomentoViewNoBlocks.propTypes = {
   content: PropTypes.shape({
     area_appartenenza: PropTypes.array,
     assessorati_riferimento: PropTypes.array,
-    box_aiuto: PropTypes.shape({
+    ulteriori_informazioni: PropTypes.shape({
       data: PropTypes.string,
     }),
     description: PropTypes.string,

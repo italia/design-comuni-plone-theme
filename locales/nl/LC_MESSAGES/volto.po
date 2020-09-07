@@ -86,6 +86,10 @@ msgstr ""
 msgid "Contenuto"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/Dates
+msgid "Date aggiuntive"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Default"
 msgstr ""
@@ -112,6 +116,10 @@ msgstr ""
 
 #: components/ItaliaTheme/View/PageView
 msgid "In this section"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/Dates
+msgid "L'evento non si terrà nelle seguenti date:"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
@@ -285,6 +293,14 @@ msgstr ""
 msgid "Vedi tutto"
 msgstr ""
 
+#: components/ItaliaTheme/View/ServizioView
+msgid "a_chi_si_rivolge"
+msgstr ""
+
+#: components/ItaliaTheme/View/ServizioView
+msgid "accedere_al_servizio"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Actions
 #: components/ItaliaTheme/View/Commons/PageHeader
 msgid "actions"
@@ -313,10 +329,6 @@ msgstr ""
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 msgid "amministrazione"
-msgstr ""
-
-#: components/ItaliaTheme/View/ServizioView
-msgid "area"
 msgstr ""
 
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
@@ -359,23 +371,8 @@ msgstr ""
 msgid "backToSearch"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView
-#: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/ServizioView
-#: components/ItaliaTheme/View/UOView
-msgid "box_aiuto"
-msgstr ""
-
 #: components/ItaliaTheme/View/ServizioView
 msgid "canale_digitale"
-msgstr ""
-
-#: components/ItaliaTheme/View/ServizioView
-msgid "canale_fisico"
-msgstr ""
-
-#: components/ItaliaTheme/View/ServizioView
-msgid "canale_fisico_prenotazione"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView
@@ -427,6 +424,7 @@ msgid "contacts"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView
+#: components/ItaliaTheme/View/ServizioView
 msgid "contatti"
 msgstr ""
 
@@ -448,6 +446,10 @@ msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "costi"
+msgstr ""
+
+#: components/ItaliaTheme/View/ServizioView
+msgid "costi_e_vincoli"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/CuredBy
@@ -495,10 +497,6 @@ msgid "descrizione"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView
-msgid "descrizione_destinatari"
-msgstr ""
-
-#: components/ItaliaTheme/View/ServizioView
 msgid "descrizione_estesa"
 msgstr ""
 
@@ -528,6 +526,10 @@ msgstr ""
 
 #: components/ItaliaTheme/View/VenueView
 msgid "dove"
+msgstr ""
+
+#: components/ItaliaTheme/View/ServizioView
+msgid "dove_rivolgersi"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Actions
@@ -587,10 +589,6 @@ msgstr ""
 msgid "exploreArgument"
 msgstr ""
 
-#: components/ItaliaTheme/View/ServizioView
-msgid "fasi_scadenze"
-msgstr ""
-
 #: addons/volto-rss-block/src/Block/Edit
 msgid "feed_not_set"
 msgstr ""
@@ -601,6 +599,11 @@ msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
 msgid "filters"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/Commons/CardCalendar
+#: helpers/ListingHelper
+msgid "from"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Gallery
@@ -686,6 +689,10 @@ msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Metadata
 msgid "modified"
+msgstr ""
+
+#: components/ItaliaTheme/View/ServizioView
+msgid "modulistica"
 msgstr ""
 
 #: addons/volto-multilingual-widget/src/MultilingualWidget
@@ -901,10 +908,6 @@ msgstr ""
 msgid "sedi"
 msgstr ""
 
-#: components/ItaliaTheme/View/ServizioView
-msgid "sedi_e_luoghi"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 msgid "selectOtherArguments"
 msgstr ""
@@ -989,6 +992,10 @@ msgstr ""
 msgid "subjects"
 msgstr ""
 
+#: components/ItaliaTheme/View/ServizioView
+msgid "tempi_e_scadenze"
+msgstr ""
+
 #: components/ItaliaTheme/View/UOView
 msgid "tipologia_organizzazione"
 msgstr ""
@@ -1001,16 +1008,20 @@ msgstr ""
 msgid "title"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/Commons/CardCalendar
+#: helpers/ListingHelper
+msgid "to"
+msgstr ""
+
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/View/Commons/PageHeader
 msgid "topics"
 msgstr ""
 
-#: components/ItaliaTheme/View/ServizioView
-msgid "ufficio_responsabile"
-msgstr ""
-
+#: components/ItaliaTheme/View/EventoView
+#: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/PersonaView
+#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/VenueView
 msgid "ulteriori_informazioni"
 msgstr ""
@@ -1022,10 +1033,6 @@ msgstr ""
 #: components/ItaliaTheme/View/UOView
 #: components/ItaliaTheme/View/VenueView
 msgid "uo_related_news"
-msgstr ""
-
-#: components/ItaliaTheme/View/UOView
-msgid "uo_ulteriori_informazioni"
 msgstr ""
 
 #: addons/volto-multilingual-widget/src/MultilingualWidget

@@ -29,13 +29,14 @@ const messages = defineMessages({
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const Metadata = ({ content, showTags = true }) => {
+const Metadata = ({ content, showTags = true, children }) => {
   const intl = useIntl();
   return (
     <article id="metadata" className="it-page-section anchor-offset mt-5">
       <h4 id="header-metadata" className="mb-3">
         {intl.formatMessage(messages.other_info)}
       </h4>
+      {children}
       <p className="text-serif">{intl.formatMessage(messages.modified)}</p>
       <h6 className="no-toc">
         <strong>{moment(content.modified).format('DD-MM-Y HH:MM')}</strong>

@@ -64,8 +64,8 @@ const messages = defineMessages({
     id: 'contatti',
     defaultMessage: 'Contatti',
   },
-  box_aiuto: {
-    id: 'box_aiuto',
+  ulteriori_informazioni: {
+    id: 'ulteriori_informazioni',
     defaultMessage: "Box d'aiuto",
   },
   patrocinato_da: {
@@ -201,21 +201,22 @@ const EventoView = ({ content, location }) => {
               </article>
             ) : null}
 
-            {content?.orari?.data?.replace(/(<([^>]+)>)/g, '') && (
-              <article
-                id="date-e-orari"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4 id="header-date-e-orari">
-                  {intl.formatMessage(messages.date_e_orari)}
-                </h4>
-                <Dates content={content} />
+            <article
+              id="date-e-orari"
+              className="it-page-section anchor-offset mt-5"
+            >
+              <h4 id="header-date-e-orari">
+                {intl.formatMessage(messages.date_e_orari)}
+              </h4>
+              <Dates content={content} />
+              {content?.orari?.data?.replace(/(<([^>]+)>)/g, '') && (
                 <RichTextArticle
                   content={content?.orari?.data}
                   tag_id="date-e-orari"
                   title={null}
                 />
-                {/* <Button icon size="lg" tag="button" color="primary" outline>
+              )}
+              {/* <Button icon size="lg" tag="button" color="primary" outline>
                   <Icon
                     color="primary"
                     icon="it-plus-circle"
@@ -230,8 +231,7 @@ const EventoView = ({ content, location }) => {
                     Aggiungi al caledario
                   </a>
                 </Button> */}
-              </article>
-            )}
+            </article>
 
             {content?.prezzo?.data?.replace(/(<([^>]+)>)/g, '') && (
               <RichTextArticle
@@ -284,19 +284,6 @@ const EventoView = ({ content, location }) => {
                     )}
                   </CardBody>
                 </Card>
-                {content?.evento_supportato_da?.length > 0 && (
-                  <>
-                    <h5 className="mt-4 supported-by">Con il supporto di:</h5>
-                    {content?.evento_supportato_da?.map((item) => (
-                      <OfficeCard
-                        key={item['@id']}
-                        office={item}
-                        extended={true}
-                        icon={'it-pa'}
-                      />
-                    ))}
-                  </>
-                )}
               </article>
             ) : null}
 
@@ -411,12 +398,6 @@ const EventoView = ({ content, location }) => {
               </article>
             ) : null}
 
-            {content?.box_aiuto?.data?.replace(/(<([^>]+)>)/g, '') && (
-              <article className="it-page-section anchor-offset mt-5">
-                <HelpBox text={content?.box_aiuto} />
-              </article>
-            )}
-
             {content?.strutture_politiche.length > 0 && (
               <article
                 id="strutture_politiche"
@@ -453,7 +434,12 @@ const EventoView = ({ content, location }) => {
                 </div>
               </article>
             ) : null}
-            <Metadata content={content} />
+            <Metadata content={content}>
+              {content?.ulteriori_informazioni?.data?.replace(
+                /(<([^>]+)>)/g,
+                '',
+              ) && <HelpBox text={content?.ulteriori_informazioni} />}
+            </Metadata>
           </section>
         </div>
       </div>
@@ -493,7 +479,7 @@ EventoView.propTypes = {
       data: PropTypes.string,
     }),
 
-    box_aiuto: PropTypes.shape({
+    ulteriori_informazioni: PropTypes.shape({
       data: PropTypes.string,
     }),
     sponsor: PropTypes.shape({

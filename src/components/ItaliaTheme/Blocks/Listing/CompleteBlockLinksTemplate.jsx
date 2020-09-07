@@ -36,11 +36,7 @@ const CompleteBlockLinksTemplate = ({
         'public-ui': isEditMode,
       })}
     >
-      <div
-        className={cx('full-width', {
-          'bg-light py-5': show_block_bg,
-        })}
-      >
+      <div className='full-width'>
         <Container>
           {title && (
             <Row>

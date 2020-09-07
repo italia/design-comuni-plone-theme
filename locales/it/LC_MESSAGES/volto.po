@@ -17,7 +17,7 @@ msgstr "Accedi all'area personale"
 
 #: addons/volto-subblocks/src/SubblocksEdit
 msgid "Add block"
-msgstr ""
+msgstr "Aggiungi blocco"
 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Alert"
@@ -67,6 +67,10 @@ msgstr "Contatti"
 msgid "Contenuto"
 msgstr "Contenuto"
 
+#: components/ItaliaTheme/View/Commons/Dates
+msgid "Date aggiuntive"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "Default"
 msgstr "Default"
@@ -94,6 +98,10 @@ msgstr "Image"
 #: components/ItaliaTheme/View/PageView
 msgid "In this section"
 msgstr "In questa sezione"
+
+#: components/ItaliaTheme/View/Commons/Dates
+msgid "L'evento non si terrà nelle seguenti date:"
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
 msgid "Link to"
@@ -266,6 +274,14 @@ msgstr "Vedi"
 msgid "Vedi tutto"
 msgstr "Vedi tutto"
 
+#: components/ItaliaTheme/View/ServizioView
+msgid "a_chi_si_rivolge"
+msgstr ""
+
+#: components/ItaliaTheme/View/ServizioView
+msgid "accedere_al_servizio"
+msgstr "Accedere al servizio"
+
 #: components/ItaliaTheme/View/Commons/Actions
 #: components/ItaliaTheme/View/Commons/PageHeader
 msgid "actions"
@@ -295,10 +311,6 @@ msgstr "Altri documenti"
 #: components/ItaliaTheme/Search/SearchSections
 msgid "amministrazione"
 msgstr "Amministrazione"
-
-#: components/ItaliaTheme/View/ServizioView
-msgid "area"
-msgstr "Area"
 
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 msgid "area_appartenenza"
@@ -340,32 +352,17 @@ msgstr "indietro"
 msgid "backToSearch"
 msgstr "Torna alla ricerca"
 
-#: components/ItaliaTheme/View/EventoView
-#: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/ServizioView
-#: components/ItaliaTheme/View/UOView
-msgid "box_aiuto"
-msgstr "Box d'aiuto"
-
 #: components/ItaliaTheme/View/ServizioView
 msgid "canale_digitale"
 msgstr "Canale digitale"
 
 #: components/ItaliaTheme/View/ServizioView
-msgid "canale_fisico"
-msgstr "Canale fisico"
-
-#: components/ItaliaTheme/View/ServizioView
-msgid "canale_fisico_prenotazione"
-msgstr "Link di prenotazione per il canale fisico"
-
-#: components/ItaliaTheme/View/ServizioView
 msgid "casi_particolari"
-msgstr "Gestione di casi particolari per la richiesta del servizio"
+msgstr "Casi particolari"
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "chi_puo_presentare"
-msgstr "Chi può presentare domanda"
+msgstr "Chi può presentare"
 
 #: components/ItaliaTheme/View/VenueView
 msgid "circoscrizione"
@@ -389,7 +386,7 @@ msgstr "Collegamenti all'organizzazione (II Livello)"
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "come_si_fa"
-msgstr "Come si ottiene il servizio"
+msgstr "Come si fa"
 
 #: components/ItaliaTheme/View/PersonaView
 msgid "compensi"
@@ -408,8 +405,9 @@ msgid "contacts"
 msgstr "Contatti"
 
 #: components/ItaliaTheme/View/EventoView
+#: components/ItaliaTheme/View/ServizioView
 msgid "contatti"
-msgstr ""
+msgstr "Contatti"
 
 #: addons/volto-cookie-banner/src/CookieBannerContainer
 msgid "cookie_banner_button"
@@ -421,15 +419,19 @@ msgstr "Copertura geografica del servizio"
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "cosa_serve"
-msgstr "Cosa serve per effettuare la richiesta del servizio"
+msgstr "Cosa serve"
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "cosa_si_ottiene"
-msgstr "Cosa si ottiene dal servizio"
+msgstr "Cosa si ottiene"
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "costi"
-msgstr "Costi per la richiesta del servizio"
+msgstr "Costi"
+
+#: components/ItaliaTheme/View/ServizioView
+msgid "costi_e_vincoli"
+msgstr "Costi e vincoli"
 
 #: components/ItaliaTheme/View/Commons/CuredBy
 msgid "cured_by"
@@ -457,7 +459,7 @@ msgstr "Data"
 
 #: components/ItaliaTheme/View/EventoView
 msgid "date_e_orari"
-msgstr ""
+msgstr "Date e orari"
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 msgid "default"
@@ -474,10 +476,6 @@ msgstr "Link rapidi"
 #: components/ItaliaTheme/View/VenueView
 msgid "descrizione"
 msgstr ""
-
-#: components/ItaliaTheme/View/ServizioView
-msgid "descrizione_destinatari"
-msgstr "Destinatari del servizio"
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "descrizione_estesa"
@@ -510,6 +508,10 @@ msgstr "Documenti e dati"
 #: components/ItaliaTheme/View/VenueView
 msgid "dove"
 msgstr ""
+
+#: components/ItaliaTheme/View/ServizioView
+msgid "dove_rivolgersi"
+msgstr "Dove rivolgersi"
 
 #: components/ItaliaTheme/View/Commons/Actions
 msgid "download"
@@ -568,10 +570,6 @@ msgstr "Scadenza"
 msgid "exploreArgument"
 msgstr "Esplora argomento"
 
-#: components/ItaliaTheme/View/ServizioView
-msgid "fasi_scadenze"
-msgstr "Fasi e scadenze per la richiesta del servizio"
-
 #: addons/volto-rss-block/src/Block/Edit
 msgid "feed_not_set"
 msgstr "Feed RSS non impostato"
@@ -583,6 +581,11 @@ msgstr "Feed RSS impostato"
 #: components/ItaliaTheme/Header/SearchModal
 msgid "filters"
 msgstr "Filtri"
+
+#: components/ItaliaTheme/Blocks/Listing/Commons/CardCalendar
+#: helpers/ListingHelper
+msgid "from"
+msgstr "dal"
 
 #: components/ItaliaTheme/View/Commons/Gallery
 msgid "gallery"
@@ -668,6 +671,10 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/Metadata
 msgid "modified"
 msgstr "Ultimo aggiornamento"
+
+#: components/ItaliaTheme/View/ServizioView
+msgid "modulistica"
+msgstr "Modulistica"
 
 #: addons/volto-multilingual-widget/src/MultilingualWidget
 msgid "multilingual_text_placeholder"
@@ -882,10 +889,6 @@ msgstr ""
 msgid "sedi"
 msgstr "Dove e come trovarci"
 
-#: components/ItaliaTheme/View/ServizioView
-msgid "sedi_e_luoghi"
-msgstr "Dove trovarci"
-
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 msgid "selectOtherArguments"
 msgstr "Seleziona gli altri argomenti"
@@ -970,6 +973,10 @@ msgstr ""
 msgid "subjects"
 msgstr "Tags"
 
+#: components/ItaliaTheme/View/ServizioView
+msgid "tempi_e_scadenze"
+msgstr ""
+
 #: components/ItaliaTheme/View/UOView
 msgid "tipologia_organizzazione"
 msgstr "Tipologia organizzazione"
@@ -982,16 +989,20 @@ msgstr "Tipologia persona"
 msgid "title"
 msgstr "Titolo"
 
+#: components/ItaliaTheme/Blocks/Listing/Commons/CardCalendar
+#: helpers/ListingHelper
+msgid "to"
+msgstr "al"
+
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/View/Commons/PageHeader
 msgid "topics"
 msgstr "Argomenti"
 
-#: components/ItaliaTheme/View/ServizioView
-msgid "ufficio_responsabile"
-msgstr "Ufficio responsabile"
-
+#: components/ItaliaTheme/View/EventoView
+#: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/PersonaView
+#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/VenueView
 msgid "ulteriori_informazioni"
 msgstr "Ulteriori informazioni"
@@ -1004,10 +1015,6 @@ msgstr "Blocco sconosciuto"
 #: components/ItaliaTheme/View/VenueView
 msgid "uo_related_news"
 msgstr "Notizie in evidenza"
-
-#: components/ItaliaTheme/View/UOView
-msgid "uo_ulteriori_informazioni"
-msgstr "Informazioni"
 
 #: addons/volto-multilingual-widget/src/MultilingualWidget
 msgid "value_for_lang"
@@ -1023,4 +1030,4 @@ msgstr "Vedi tutti"
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "vincoli"
-msgstr "Vincoli per la richiesta del servizio"
+msgstr "Vincoli"

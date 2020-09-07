@@ -193,3 +193,39 @@ div.sticky-wrapper {
 .slider-container {
   margin-bottom: 1.5rem;
 }
+
+.card-wrapper {
+  .custom-calendar-card {
+    .card-calendar {
+      text-align: left;
+      width: 6.4rem;
+
+      .date-label {
+        width: 1.4rem;
+        font-size: 1rem;
+        text-align: center;
+        font-family: $font-family-monospace-light;
+        font-weight: 500;
+        text-transform: lowercase;
+      }
+
+      .date {
+        font-size: 1.30rem;
+        font-family: $font-family-monospace;
+        font-weight: 200;
+      }
+    }
+  }
+}
+
+.icon-argument-container {
+  border-radius: 44px;
+  width: 44px;
+  height: 44px;
+
+  .show-icon {
+    width: 24px;
+    height: 24px;
+    color: $tertiary;
+  }
+}

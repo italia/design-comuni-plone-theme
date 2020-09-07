@@ -51,7 +51,7 @@ const RibbonCardTemplate = ({
         'public-ui': isEditMode,
       })}
     >
-      <div className={cx('full-width', { 'bg-light py-5': show_block_bg })}>
+      <div className='full-width'>
         <Container className="px-4">
           {title && (
             <Row>
