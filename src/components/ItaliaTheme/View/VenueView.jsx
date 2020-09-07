@@ -160,6 +160,7 @@ const VenueView = ({ content }) => {
             {/* ELEMENTI DI INTERESSE */}
             {content.elementi_di_interesse && (
               <RichTextArticle
+                title_size='h6'
                 content={content?.elementi_di_interesse?.data}
                 tag_id={'elementi-di-interesse'}
                 title={intl.formatMessage(messages.elementi_di_interesse)}
