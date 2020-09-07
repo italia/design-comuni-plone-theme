@@ -295,7 +295,7 @@ const VenueView = ({ content }) => {
                 {
                   title: intl.formatMessage(messages.riferimento_web),
                   text: content?.riferimento_web,
-                  href: `https://${content?.riferimento_web}`
+                  href: `${(/(http(s?)):\/\//i.test(content?.riferimento_web || '')) ? '' : 'https://'}${content?.riferimento_web}`
                 },
               ]}
               tag_id={'contatti'}
