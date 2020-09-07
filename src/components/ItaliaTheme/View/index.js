@@ -1,8 +1,10 @@
 /* --- Commons --- */
 export RichTextArticle from '@italia/components/ItaliaTheme/View/Commons/RichTextArticle';
 export RichTextArticles from '@italia/components/ItaliaTheme/View/Commons/RichTextArticles';
+export RichText from '@italia/components/ItaliaTheme/View/Commons/RichText';
 export RelatedNewsArticles from '@italia/components/ItaliaTheme/View/Commons/RelatedNewsArticles';
 export RelatedArticles from '@italia/components/ItaliaTheme/View/Commons/RelatedArticles';
+export ArgumentIcon from '@italia/components/ItaliaTheme/View/Commons/Argument/ArgumentIcon';
 
 export TextOrBlocks from '@italia/components/ItaliaTheme/View/Commons/TextOrBlocks';
 

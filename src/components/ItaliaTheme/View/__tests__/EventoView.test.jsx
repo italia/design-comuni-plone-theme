@@ -13,7 +13,7 @@ const mock_mandatory = {
   '@type': 'Event',
   UID: 'ce4e5d4f2c3a45f1b541e80ea71da3fc',
   allow_discussion: false,
-  box_aiuto: {
+  ulteriori_informazioni: {
     'content-type': 'text/html',
     data: '<p>aiutati</p>',
     encoding: 'utf-8',
