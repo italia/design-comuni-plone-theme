@@ -468,7 +468,7 @@ msgstr "Chi può presentare"
 #: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/VenueView
 msgid "circoscrizione"
-msgstr ""
+msgstr "Circoscrizione"
 
 #: components/ItaliaTheme/View/Commons/SideMenu
 msgid "close"
@@ -599,7 +599,7 @@ msgstr "Link rapidi"
 #: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/VenueView
 msgid "descrizione"
-msgstr ""
+msgstr "Descrizione"
 
 #: components/DesignTheme/View/ServizioView
 msgid "descrizione_destinatari"
@@ -644,7 +644,7 @@ msgstr "Documenti e dati"
 #: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/VenueView
 msgid "dove"
-msgstr ""
+msgstr "Dove"
 
 #: components/ItaliaTheme/View/ServizioView
 msgid "dove_rivolgersi"
@@ -658,7 +658,7 @@ msgstr "Scarica"
 #: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/VenueView
 msgid "elementi_di_interesse"
-msgstr ""
+msgstr "Elementi di interesse"
 
 #: components/DesignTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView
@@ -832,7 +832,7 @@ msgstr "min"
 #: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/VenueView
 msgid "modalita_accesso"
-msgstr ""
+msgstr "Modalità di accesso"
 
 #: components/DesignTheme/View/Commons/Metadata
 #: components/ItaliaTheme/View/Commons/Metadata
@@ -908,7 +908,7 @@ msgstr "Opzioni"
 #: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/VenueView
 msgid "orario_pubblico"
-msgstr ""
+msgstr "Orari di apertura"
 
 #: components/DesignTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView
@@ -977,7 +977,7 @@ msgstr "Procedure collegate all'esito"
 #: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/VenueView
 msgid "quartiere"
-msgstr ""
+msgstr "Quartiere "
 
 #: components/DesignTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader
@@ -1044,15 +1044,15 @@ msgstr "Responsabile di"
 
 #: components/ItaliaTheme/View/VenueView
 msgid "riferimento_mail_luogo"
-msgstr ""
+msgstr "Riferimento e-mail"
 
 #: components/ItaliaTheme/View/VenueView
 msgid "riferimento_telefonico_luogo"
-msgstr ""
+msgstr "Riferimento telefonico"
 
 #: components/ItaliaTheme/View/VenueView
 msgid "riferimento_web"
-msgstr ""
+msgstr "Riferimento web"
 
 #: components/DesignTheme/View/Commons/Metadata
 #: components/ItaliaTheme/View/Commons/Metadata
@@ -1117,7 +1117,7 @@ msgstr "Sezioni"
 #: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/VenueView
 msgid "sede_di"
-msgstr ""
+msgstr "Sede di"
 
 #: components/DesignTheme/View/Commons/UOLocation
 #: components/ItaliaTheme/View/Commons/UOLocation
@@ -1219,7 +1219,7 @@ msgstr ""
 
 #: components/ItaliaTheme/View/VenueView
 msgid "struttura_responsabile_correlati"
-msgstr ""
+msgstr "Struttura responsabile"
 
 #: components/DesignTheme/View/Commons/Metadata
 #: components/ItaliaTheme/View/Commons/Metadata
