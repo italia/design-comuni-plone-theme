@@ -32,7 +32,7 @@ const RelatedNews = ({ item, showimage, content }) => {
 };
 
 RelatedNews.propTypes = {
-  content: PropTypes.object.isRequired,
+  content: PropTypes.object,
   showimage: PropTypes.bool,
   item: PropTypes.shape({
     '@id': PropTypes.string,
