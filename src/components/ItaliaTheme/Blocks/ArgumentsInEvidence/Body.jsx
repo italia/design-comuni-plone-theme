@@ -31,7 +31,6 @@ class Body extends SubblockEdit {
    * @returns {string} Markup for the component.
    */
   render() {
-    const argument = this.props?.data?.argument ? this.props?.data?.argument[0] : null;
     return (
       <Subblock subblock={this}>
         <Block

@@ -1,8 +1,10 @@
 .in-evidence {
   .in-evidence-cards-wrapper {
+    display: -ms-grid;
     display: grid;
     gap: 24px;
-    grid-template-columns: 33% 33% 33%;
+    -ms-grid-columns: 1fr 24px 1fr 24px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .card-wrapper {

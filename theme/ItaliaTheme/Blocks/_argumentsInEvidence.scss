@@ -13,8 +13,10 @@
   }
 
   .grid {
+    display: -ms-grid;
     display: grid;
     gap: 24px;
+    -ms-grid-columns: 1fr 24px 1fr 24px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
   }
 
@@ -34,9 +36,11 @@
     top: -31px!important;
   }
 
-  @media (max-width: #{map-get($grid-breakpoints, sm) - 1px}) {
+  @media (max-width: #{map-get($grid-breakpoints, md) - 1px}) {
     .grid {
+      display: -ms-grid;
       display: grid;
+      -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
     }
     .container {
@@ -48,19 +52,4 @@
       margin-right: 0px;
     }
   }
-
-  @include media-breakpoint-between(sm, md) { 
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-    }
-    .container {
-      padding: 0 24px;
-    }
-
-    .card.card-bg {
-      margin-left: 0px;
-      margin-right: 0px;
-    }
-  } 
 }
