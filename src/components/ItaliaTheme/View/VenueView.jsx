@@ -13,6 +13,7 @@ import {
   RichTextArticle,
   RelatedNewsArticles,
   RelatedArticles,
+  RichTextArticles,
 } from '@italia/components/ItaliaTheme/View';
 import {
   Icon,
@@ -51,11 +52,11 @@ const messages = defineMessages({
   },
   orario_pubblico: {
     id: 'orario_pubblico',
-    defaultMessage: 'Orario al pubblico',
+    defaultMessage: 'Orari di apertura',
   },
-  servizi_offerti: {
-    id: 'servizi_offerti',
-    defaultMessage: 'Servizi offerti',
+  related_services: {
+    id: 'related_services',
+    defaultMessage: 'Servizi',
   },
   sede_di: {
     id: 'sede_di',
@@ -68,6 +69,30 @@ const messages = defineMessages({
   ulteriori_informazioni: {
     id: 'ulteriori_informazioni',
     defaultMessage: 'Ulteriori informazioni',
+  },
+  riferimento_telefonico_luogo: {
+    id: 'riferimento_telefonico_luogo',
+    defaultMessage: 'Riferimento telefonico',
+  },
+  riferimento_mail_luogo: {
+    id: 'riferimento_mail_luogo',
+    defaultMessage: 'Riferimento e-mail',
+  },
+  struttura_responsabile_correlati: {
+    id: 'struttura_responsabile_correlati',
+    defaultMessage: 'Struttura responsabile',
+  },
+  riferimento_web: {
+    id: 'riferimento_web',
+    defaultMessage: 'Riferimento web',
+  },
+  contatti: {
+    id: 'contatti',
+    defaultMessage: 'Contatti',
+  },
+  related_items: {
+    id: 'related_items',
+    defaultMessage: 'Contenuti correlati',
   }
 });
 
@@ -132,30 +157,22 @@ const VenueView = ({ content }) => {
               />
             )}
 
+            {/* ELEMENTI DI INTERESSE */}
+            {content.elementi_di_interesse && (
+              <RichTextArticle
+                title_size='h6'
+                content={content?.elementi_di_interesse?.data}
+                tag_id={'elementi-di-interesse'}
+                title={intl.formatMessage(messages.elementi_di_interesse)}
+              />
+            )}
+
             {/* MODALITA DI ACCESSO */}
             {content.modalita_accesso && (
               <RichTextArticle
                 content={content?.modalita_accesso?.data}
                 tag_id={'modalita-accesso'}
                 title={intl.formatMessage(messages.modalita_accesso)}
-              />
-            )}
-
-            {/* QUARTIERE */}
-            {content.quartiere && (
-              <RichTextArticle
-                content={content?.quartiere}
-                tag_id={'quartiere'}
-                title={intl.formatMessage(messages.quartiere)}
-              />
-            )}
-
-            {/* CIRCOSCRIZIONE */}
-            {content.circoscrizione && (
-              <RichTextArticle
-                content={content?.circoscrizione}
-                tag_id={'circoscrizione'}
-                title={intl.formatMessage(messages.circoscrizione)}
               />
             )}
 
@@ -175,23 +192,23 @@ const VenueView = ({ content }) => {
                       <h5 className="card-title">{content.title}</h5>
                     </CardTitle>
                     <CardText>
-                      <p>{`${content.street || ''} - ${content.zip_code || ''}`}</p>
+                      <p>{`${content.street || ''} - ${content.zip_code || ''} ${content.city} ${content.country.title}`}</p>
                     </CardText>
                   </CardBody>
                 </Card>
                 { __CLIENT__ && content?.geolocation?.latitude && content?.geolocation?.longitude &&
                   <OSMMap position={[content?.geolocation?.latitude, content?.geolocation?.longitude]} />
                 }
-              </article>
-            )}
+                <h6 className="mt-3">{intl.formatMessage(messages.circoscrizione)}</h6>
+                <div>
+                  {content?.circoscrizione}
+                </div>
 
-            {/* ELEMENTI DI INTERESSE */}
-            {content.elementi_di_interesse && (
-              <RichTextArticle
-                content={content?.elementi_di_interesse?.data}
-                tag_id={'elementi-di-interesse'}
-                title={intl.formatMessage(messages.elementi_di_interesse)}
-              />
+                <h6 className="mt-3">{intl.formatMessage(messages.quartiere)}</h6>
+                <div>
+                  {content?.quartiere}
+                </div>
+              </article>
             )}
 
             {/* ORARIO AL PUBBLICO */}
@@ -208,7 +225,7 @@ const VenueView = ({ content }) => {
               <RelatedArticles
                 id="venue_services"
                 items={content.venue_services}
-                title={intl.formatMessage(messages.servizi_offerti)}
+                title={intl.formatMessage(messages.related_services)}
               />
             )}
 
@@ -216,15 +233,81 @@ const VenueView = ({ content }) => {
             {content.related_news?.length > 0 && (
               <RelatedNewsArticles 
                 news={content.related_news}
-                title={intl.formatMessage(messages.uo_related_news)}
+                title={intl.formatMessage(messages.related_items)}
               />
             )}
+
+            {/* 
+              STRUTTURE RESPONSABILI 
+              Se è presente una struttura_responsabile_correlati metto quella altrimenti metto una card con i campi singoli, se presenti
+            */}
+            {content.struttura_responsabile_correlati?.length > 0 ? 
+              <RelatedArticles
+                id="struttura_responsabile_correlati"
+                items={content.struttura_responsabile_correlati}
+                title={intl.formatMessage(messages.struttura_responsabile_correlati)}
+              />
+            :
+              (content.struttura_responsabile?.data?.replace(/(<([^>]+)>)/g, '') !== '' ||
+               content.riferimento_telefonico_struttura || content.riferimento_mail_struttura) &&
+              <article
+                id='struttura_responsabile'
+                className="it-page-section anchor-offset mt-5"
+              >
+                <h4 id={`header-struttura_responsabile`}>
+                  {intl.formatMessage(messages.struttura_responsabile_correlati)}
+                </h4>
+                <Card className="genericcard card card-teaser shadow p-4 mt-3 rounded border">
+                  <CardBody>
+                    <CardTitle>
+                      <h5 className="card-title no-toc">
+                        <div
+                          className='text-serif'
+                          dangerouslySetInnerHTML={{ __html: content.struttura_responsabile?.data }}
+                        />
+                      </h5>
+                    </CardTitle>
+                    <CardText>
+                      <div>
+                        <span className="font-weight-semibold">Telefono:</span>  <a href={`tel:${content.riferimento_telefonico_struttura}`}>{content.riferimento_telefonico_struttura}</a>
+                      </div>
+                      <div className="mt-2">
+                        <span className="font-weight-semibold">Mail:</span> <a href={`mailto:${content.riferimento_mail_struttura}`}>{content.riferimento_mail_struttura}</a>
+                      </div>
+                    </CardText>
+                  </CardBody>
+                </Card>
+              </article>
+            }
+
+            {/* Contatti */}
+            <RichTextArticles 
+              contents={[
+                {
+                  title: intl.formatMessage(messages.riferimento_telefonico_luogo),
+                  text: content?.riferimento_telefonico_luogo,
+                  href: `tel:${content.riferimento_telefonico_luogo}`
+                },
+                {
+                  title: intl.formatMessage(messages.riferimento_mail_luogo),
+                  text: content?.riferimento_mail_luogo,
+                  href: `mailto:${content.riferimento_mail_luogo}`
+                },
+                {
+                  title: intl.formatMessage(messages.riferimento_web),
+                  text: content?.riferimento_web,
+                  href: `${(/(http(s?)):\/\//i.test(content?.riferimento_web || '')) ? '' : 'https://'}${content?.riferimento_web}`
+                },
+              ]}
+              tag_id={'contatti'}
+              title={intl.formatMessage(messages.contatti)}
+            />
 
             {/* ULTERIORI INFORMAZIONI */}
             {content.ulteriori_informazioni && (
               <RichTextArticle
                 content={content?.ulteriori_informazioni?.data}
-                tag_id={'ulteriori_informazioni'}
+                tag_id={'ulteriori_informazion'}
                 title={intl.formatMessage(messages.ulteriori_informazioni)}
               />
             )}
