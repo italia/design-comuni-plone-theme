@@ -40,7 +40,7 @@ export default RichTextArticles;
 
 RichTextArticles.propTypes = {
   title: PropTypes.string,
-  contents: PropTypes.string,
+  contents: PropTypes.arrayOf(Object),
   tag_id: PropTypes.string,
   add_class: PropTypes.string,
 };
