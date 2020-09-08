@@ -133,11 +133,11 @@ const VenueView = ({ content }) => {
           showdates={false}
           showtassonomiaargomenti={true}
         />
-          {(content?.image || content?.image_caption) && (
+          {(content.image || content.image_caption) && (
             <WideImage
-              title={content?.title}
-              image={content?.image}
-              caption={content?.image_caption}
+              title={content.title}
+              image={content.image}
+              caption={content.image_caption}
             />
           )}
         <div className="row border-top row-column-border row-column-menu-left">
@@ -161,7 +161,7 @@ const VenueView = ({ content }) => {
             {content.elementi_di_interesse && (
               <RichTextArticle
                 title_size='h6'
-                content={content?.elementi_di_interesse?.data}
+                content={content.elementi_di_interesse?.data}
                 tag_id={'elementi-di-interesse'}
                 title={intl.formatMessage(messages.elementi_di_interesse)}
               />
@@ -170,7 +170,7 @@ const VenueView = ({ content }) => {
             {/* MODALITA DI ACCESSO */}
             {content.modalita_accesso && (
               <RichTextArticle
-                content={content?.modalita_accesso?.data}
+                content={content.modalita_accesso?.data}
                 tag_id={'modalita-accesso'}
                 title={intl.formatMessage(messages.modalita_accesso)}
               />
@@ -192,21 +192,21 @@ const VenueView = ({ content }) => {
                       <h5 className="card-title">{content.title}</h5>
                     </CardTitle>
                     <CardText>
-                      <span>{`${content.street || ''} - ${content.zip_code || ''} ${content.city} ${content.country.title}`}</span>
+                      <p>{`${content.street || ''} - ${content.zip_code || ''} ${content.city} ${content.country.title}`}</p>
                     </CardText>
                   </CardBody>
                 </Card>
-                { __CLIENT__ && content?.geolocation?.latitude && content?.geolocation?.longitude &&
-                  <OSMMap position={[content?.geolocation?.latitude, content?.geolocation?.longitude]} />
+                { __CLIENT__ && content.geolocation?.latitude && content.geolocation?.longitude &&
+                  <OSMMap position={[content.geolocation?.latitude, content.geolocation?.longitude]} />
                 }
                 <h6 className="mt-3">{intl.formatMessage(messages.circoscrizione)}</h6>
                 <div>
-                  {content?.circoscrizione}
+                  {content.circoscrizione}
                 </div>
 
                 <h6 className="mt-3">{intl.formatMessage(messages.quartiere)}</h6>
                 <div>
-                  {content?.quartiere}
+                  {content.quartiere}
                 </div>
               </article>
             )}
@@ -214,7 +214,7 @@ const VenueView = ({ content }) => {
             {/* ORARIO AL PUBBLICO */}
             {content.orario_pubblico && (
               <RichTextArticle
-                content={content?.orario_pubblico?.data}
+                content={content.orario_pubblico?.data}
                 tag_id={'orario-per-pubblico'}
                 title={intl.formatMessage(messages.orario_pubblico)}
               />
@@ -285,18 +285,18 @@ const VenueView = ({ content }) => {
               contents={[
                 {
                   title: intl.formatMessage(messages.riferimento_telefonico_luogo),
-                  text: content?.riferimento_telefonico_luogo,
+                  text: content.riferimento_telefonico_luogo,
                   href: `tel:${content.riferimento_telefonico_luogo}`
                 },
                 {
                   title: intl.formatMessage(messages.riferimento_mail_luogo),
-                  text: content?.riferimento_mail_luogo,
+                  text: content.riferimento_mail_luogo,
                   href: `mailto:${content.riferimento_mail_luogo}`
                 },
                 {
                   title: intl.formatMessage(messages.riferimento_web),
-                  text: content?.riferimento_web,
-                  href: `${(/(http(s?)):\/\//i.test(content?.riferimento_web || '')) ? '' : 'https://'}${content?.riferimento_web}`
+                  text: content.riferimento_web,
+                  href: `${(/(http(s?)):\/\//i.test(content.riferimento_web || '')) ? '' : 'https://'}${content.riferimento_web}`
                 },
               ]}
               tag_id={'contatti'}
@@ -306,20 +306,11 @@ const VenueView = ({ content }) => {
             {/* ULTERIORI INFORMAZIONI */}
             {content.ulteriori_informazioni && (
               <RichTextArticle
-                content={content?.ulteriori_informazioni?.data}
+                content={content.ulteriori_informazioni?.data}
                 tag_id={'ulteriori_informazion'}
                 title={intl.formatMessage(messages.ulteriori_informazioni)}
               />
             )}
-
-             {/* SEDE DI */}
-             {content.sede_di?.length > 0 && (
-               <RelatedArticles
-                title_size={'h6'}
-                items={content.sede_di}
-                title={intl.formatMessage(messages.sede_di)}
-              />
-             )}
           </section>
         </div>
       </div>
