@@ -13,9 +13,9 @@ const RichTextArticles = ({ title, contents, tag_id, add_class, children }) => {
     <article id={tag_id} className="it-page-section anchor-offset mt-5">
       {title && <h4 id={`header-${tag_id}`}>{title}</h4>}
       {contents?.length > 0 && 
-        contents.map(content => (
+        contents.map((content, index) => (
           content?.text && 
-            <div className="mt-3">
+            <div className="mt-3" key={index}>
               {content.title && <h6>{content.title}</h6>}
               {
                 content.href ? 
