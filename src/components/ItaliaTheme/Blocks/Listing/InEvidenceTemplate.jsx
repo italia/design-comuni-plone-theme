@@ -45,7 +45,7 @@ const InEvidenceTemplate = ({
               </Col>
             </Row>
           )}
-          <div className="in-evidence-cards-wrapper">
+          <div className="in-evidence-cards-wrapper mb-5">
             {items.map((item, index) => (
               <Card
                 key={index}
