@@ -141,7 +141,9 @@ const EventoView = ({ content, location }) => {
               id="text-body"
               className="it-page-section anchor-offset clearfix"
             >
-              {text}
+              <div className="text-serif">
+                {text}
+              </div>
             </article>
 
             {content?.items.some((e) => e.id === 'multimedia') && (
