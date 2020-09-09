@@ -311,13 +311,21 @@ const VenueView = ({ content }) => {
                 title={intl.formatMessage(messages.ulteriori_informazioni)}
               />
             )}
+
+            {/* SEDE DI */}
+            {content.sede_di?.length > 0 && (
+              <RelatedArticles
+                title_size={'h6'}
+                items={content.sede_di}
+                title={intl.formatMessage(messages.sede_di)}
+              />
+             )}
           </section>
         </div>
       </div>
     </>
   );
 };
-
 VenueView.propTypes = {
   content: PropTypes.shape({
     title: PropTypes.string.isRequired,
@@ -332,5 +340,4 @@ VenueView.propTypes = {
     }),
   }).isRequired,
 };
-
 export default VenueView;
