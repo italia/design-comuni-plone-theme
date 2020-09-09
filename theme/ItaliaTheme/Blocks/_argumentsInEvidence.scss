@@ -15,8 +15,8 @@
   .grid {
     display: -ms-grid;
     display: grid;
-    gap: 24px;
-    -ms-grid-columns: 1fr 24px 1fr 24px 1fr;
+    gap: 1.3rem;
+    -ms-grid-columns: 1fr 1.3rem 1fr 1.3rem 1fr;
     grid-template-columns: 1fr 1fr 1fr;
   }
 
@@ -44,12 +44,12 @@
       grid-template-columns: 1fr;
     }
     .container {
-      padding: 0 24px;
+      padding: 0 1.3rem;
     }
 
     .card.card-bg {
-      margin-left: 0px;
-      margin-right: 0px;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 }
