@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { Icon } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 
 /**
  * OfficeCard view component class.
@@ -12,7 +13,7 @@ import PropTypes from 'prop-types';
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const OfficeCard = ({ office, extended, icon, children }) => {
+const OfficeCard = ({ office, extended, icon, children, margin_bottom=false }) => {
   const key = `${office['@id']}_office`;
   const url = flattenToAppURL(office['@id']);
   const officeContent = useSelector((state) => state.content.subrequests);
@@ -26,7 +27,7 @@ const OfficeCard = ({ office, extended, icon, children }) => {
   let office_fo = officeContent[key]?.data;
 
   return office_fo ? (
-    <div className="card card-teaser rounded shadow p-4">
+    <div className={cx("card card-teaser rounded shadow p-4", {'mb-3': margin_bottom})}>
       {icon && <Icon icon={icon}></Icon>}
       <div className="card-body pr-3">
         <h5 className="card-title no-toc">

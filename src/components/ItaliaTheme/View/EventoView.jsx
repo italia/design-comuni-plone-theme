@@ -82,7 +82,7 @@ const messages = defineMessages({
   },
   strutture_politiche: {
     id: 'event_strutture_politiche',
-    defaultMessage: 'Strutture politiche coninvolte',
+    defaultMessage: 'Strutture politiche coinvolte',
   },
 });
 
@@ -141,7 +141,9 @@ const EventoView = ({ content, location }) => {
               id="text-body"
               className="it-page-section anchor-offset clearfix"
             >
-              {text}
+              <div className="text-serif">
+                {text}
+              </div>
             </article>
 
             {content?.items.some((e) => e.id === 'multimedia') && (
@@ -216,21 +218,6 @@ const EventoView = ({ content, location }) => {
                   title={null}
                 />
               )}
-              {/* <Button icon size="lg" tag="button" color="primary" outline>
-                  <Icon
-                    color="primary"
-                    icon="it-plus-circle"
-                    padding={false}
-                    size=""
-                  />
-                  <a
-                    // href={flattenToAppURL(`${content['@id']}/ics_view`)}
-                    href="#"
-                    rel="nofollow"
-                  >
-                    Aggiungi al caledario
-                  </a>
-                </Button> */}
             </article>
 
             {content?.prezzo?.data?.replace(/(<([^>]+)>)/g, '') && (
@@ -268,12 +255,10 @@ const EventoView = ({ content, location }) => {
                     <Icon icon="it-telephone" padding={true} />
                   </CardTitle>
                   <CardBody tag="div" className={'card-body pr-3'}>
-                    <p className="card-text">
-                      {content?.organizzato_da_esterno?.data.replace(
-                        /(<([^>]+)>)/g,
-                        '',
-                      )}
-                    </p>
+                    <p
+                      className='text-serif'
+                      dangerouslySetInnerHTML={{ __html: content.organizzato_da_esterno?.data }}
+                    />
                     {content?.contatto_reperibilita && (
                       <p className="card-text mt-3">
                         {content?.contatto_reperibilita?.replace(
@@ -295,8 +280,9 @@ const EventoView = ({ content, location }) => {
                 <h4 id="header-contatti-interno">
                   {intl.formatMessage(messages.contatti)}
                 </h4>
-                {content?.organizzato_da_interno?.map((item) => (
+                {content?.organizzato_da_interno?.map((item, index) => (
                   <OfficeCard
+                    margin_bottom={index < content?.organizzato_da_interno?.length - 1}
                     key={item['@id']}
                     office={item}
                     extended={true}
