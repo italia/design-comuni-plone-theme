@@ -82,7 +82,7 @@ const messages = defineMessages({
   },
   strutture_politiche: {
     id: 'event_strutture_politiche',
-    defaultMessage: 'Strutture politiche coninvolte',
+    defaultMessage: 'Strutture politiche coinvolte',
   },
 });
 
@@ -253,12 +253,16 @@ const EventoView = ({ content, location }) => {
                     <Icon icon="it-telephone" padding={true} />
                   </CardTitle>
                   <CardBody tag="div" className={'card-body pr-3'}>
-                    <p className="card-text">
+                    {/* <p className="card-text">
                       {content?.organizzato_da_esterno?.data.replace(
                         /(<([^>]+)>)/g,
                         '',
                       )}
-                    </p>
+                    </p> */}
+                    <p
+                      className='text-serif'
+                      dangerouslySetInnerHTML={{ __html: content.organizzato_da_esterno?.data }}
+                    />
                     {content?.contatto_reperibilita && (
                       <p className="card-text mt-3">
                         {content?.contatto_reperibilita?.replace(
