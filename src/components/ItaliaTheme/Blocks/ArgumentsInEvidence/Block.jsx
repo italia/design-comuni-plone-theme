@@ -24,6 +24,10 @@ const messages = defineMessages({
     id: 'exploreArgument',
     defaultMessage: 'Esplora argomento',
   },
+  select_argument_sidebar: {
+    id: 'select_argument_sidebar',
+    defaultMessage: 'Seleziona un argomento nella barra a lato',
+  }
 });
 
 const Block = ({
@@ -41,47 +45,53 @@ const Block = ({
 
   // one request is made for every 'unita_amministrativa_responsabile' selected
   useEffect(() => {
-    dispatch(getContent(flattenToAppURL(argument['@id']), null, argument['@id']));
+    argument && dispatch(getContent(flattenToAppURL(argument['@id']), null, argument['@id']));
     return () => {
-      dispatch(resetContent(argument['@id']));
+      argument && dispatch(resetContent(argument['@id']));
     };
   }, [dispatch, argument]);
 
 
   return (
     <Card className="card-bg" noWrapper={true} tag="div">
-      <CardBody tag="div">
-        <ArgumentIcon icon={searchResults[argument['@id']]?.data?.icona}/>
-        <CardTitle tag="h3">{searchResults[argument['@id']]?.data?.title}</CardTitle>
-        <CardText tag="p">{searchResults[argument['@id']]?.data?.description}</CardText>
-        {inEditMode ? (
-          <TextEditorWidget
-            data={data}
-            fieldName="title"
-            selected={selected}
-            block={block}
-            onChangeBlock={onChange}
-            placeholder={intl.formatMessage(messages.text)}
-            focusOn={focusOn}
-          />
-        ) : (
-          <div>
-            {redraft(
-              data.title,
-              settings.ToHTMLRenderers,
-              settings.ToHTMLOptions,
-            )}
-          </div>
-        )}
-        {argument && (
-          <CardReadMore
-            iconName="it-arrow-right"
-            tag="a"
-            text={intl.formatMessage(messages.exploreArgument)}
-            href={argument['@id']}
-          />
-        )}
-      </CardBody>
+      {argument ? 
+        <CardBody tag="div">
+          <ArgumentIcon icon={searchResults[argument['@id']]?.data?.icona}/>
+          <CardTitle tag="h3">{searchResults[argument['@id']]?.data?.title}</CardTitle>
+          <CardText tag="p">{searchResults[argument['@id']]?.data?.description}</CardText>
+          {inEditMode ? (
+            <TextEditorWidget
+              data={data}
+              fieldName="title"
+              selected={selected}
+              block={block}
+              onChangeBlock={onChange}
+              placeholder={intl.formatMessage(messages.text)}
+              focusOn={focusOn}
+            />
+          ) : (
+            <div>
+              {redraft(
+                data.title,
+                settings.ToHTMLRenderers,
+                settings.ToHTMLOptions,
+              )}
+            </div>
+          )}
+          {argument && (
+            <CardReadMore
+              iconName="it-arrow-right"
+              tag="a"
+              text={intl.formatMessage(messages.exploreArgument)}
+              href={argument['@id']}
+            />
+          )}
+        </CardBody>
+      :
+        <CardBody tag="div">
+          {intl.formatMessage(messages.select_argument_sidebar)}
+        </CardBody>
+      }
     </Card>
   );
 };

@@ -1155,6 +1155,10 @@ msgstr ""
 msgid "selectRSSOptions"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
+msgid "select_argument_sidebar"
+msgstr "Seleziona un argomento nella barra a lato"
+
 #: components/DesignTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView
 msgid "service_not_active"
