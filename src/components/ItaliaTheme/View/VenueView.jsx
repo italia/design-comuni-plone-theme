@@ -117,7 +117,7 @@ const VenueView = ({ content }) => {
 
   useEffect(() => {
     if(content.nome_alternativo && !content.title?.includes(content.nome_alternativo)){
-      content.title += ` (${content.nome_alternativo})`;
+      content.subtitle = content.nome_alternativo;
     }
   })
 
@@ -200,12 +200,12 @@ const VenueView = ({ content }) => {
                   <OSMMap position={[content.geolocation?.latitude, content.geolocation?.longitude]} />
                 }
                 <h6 className="mt-3">{intl.formatMessage(messages.circoscrizione)}</h6>
-                <div>
+                <div className="text-serif">
                   {content.circoscrizione}
                 </div>
 
                 <h6 className="mt-3">{intl.formatMessage(messages.quartiere)}</h6>
-                <div>
+                <div className="text-serif">
                   {content.quartiere}
                 </div>
               </article>
