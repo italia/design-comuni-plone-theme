@@ -255,12 +255,6 @@ const EventoView = ({ content, location }) => {
                     <Icon icon="it-telephone" padding={true} />
                   </CardTitle>
                   <CardBody tag="div" className={'card-body pr-3'}>
-                    {/* <p className="card-text">
-                      {content?.organizzato_da_esterno?.data.replace(
-                        /(<([^>]+)>)/g,
-                        '',
-                      )}
-                    </p> */}
                     <p
                       className='text-serif'
                       dangerouslySetInnerHTML={{ __html: content.organizzato_da_esterno?.data }}
