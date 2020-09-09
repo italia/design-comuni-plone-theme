@@ -153,6 +153,7 @@ const VenueView = ({ content }) => {
               <RichTextArticle
                 content={content.descrizione_completa.data}
                 tag_id={'description'}
+                title={intl.formatMessage(messages.descrizione)}
                 show_title={false}
               />
             )}

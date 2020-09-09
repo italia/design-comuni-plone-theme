@@ -29,7 +29,7 @@ const RichTextArticle = ({
         ) : (
           <h4 id={`header-${tag_id}`}>{title}</h4>
         )
-      ) : null}
+      ) :  <h4 id={`header-${tag_id}`} style={{'display': 'none'}}>{title}</h4>}
       {content && (
         <div
           className={cx('text-serif', add_class)}
