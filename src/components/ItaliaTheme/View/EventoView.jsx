@@ -216,21 +216,6 @@ const EventoView = ({ content, location }) => {
                   title={null}
                 />
               )}
-              {/* <Button icon size="lg" tag="button" color="primary" outline>
-                  <Icon
-                    color="primary"
-                    icon="it-plus-circle"
-                    padding={false}
-                    size=""
-                  />
-                  <a
-                    // href={flattenToAppURL(`${content['@id']}/ics_view`)}
-                    href="#"
-                    rel="nofollow"
-                  >
-                    Aggiungi al caledario
-                  </a>
-                </Button> */}
             </article>
 
             {content?.prezzo?.data?.replace(/(<([^>]+)>)/g, '') && (
@@ -295,8 +280,9 @@ const EventoView = ({ content, location }) => {
                 <h4 id="header-contatti-interno">
                   {intl.formatMessage(messages.contatti)}
                 </h4>
-                {content?.organizzato_da_interno?.map((item) => (
+                {content?.organizzato_da_interno?.map((item, index) => (
                   <OfficeCard
+                    margin_bottom={index < content?.organizzato_da_interno?.length - 1}
                     key={item['@id']}
                     office={item}
                     extended={true}
