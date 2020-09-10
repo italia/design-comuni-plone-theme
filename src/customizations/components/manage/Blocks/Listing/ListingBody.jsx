@@ -70,7 +70,7 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
 
   const getBackgroundClass = () => {
     const block = properties.blocks[data.block];
-    if (!block.show_block_bg) return ''
+    if (!block?.show_block_bg) return ''
 
     if(block.template === 'gridGalleryTemplate') {
       return 'section section-muted section-inset-shadow py-5';
