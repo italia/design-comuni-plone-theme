@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
+import cx from 'classnames';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -11,7 +12,14 @@ import { Icon } from 'design-react-kit/dist/design-react-kit';
  * @params {object} location: object.
  * @returns {string} Markup of the component.
  */
-const GenericCard = ({ item, showimage, image_field, show_icon }) => {
+const GenericCard = ({
+  item,
+  showimage,
+  image_field,
+  show_icon,
+  showDescription = true,
+  column = false,
+}) => {
   const key = `generic_card_${item['@id']}`;
   const url = flattenToAppURL(item['@id']);
   const locationContent = useSelector((state) => state.content.subrequests);
@@ -23,7 +31,12 @@ const GenericCard = ({ item, showimage, image_field, show_icon }) => {
   const item_fo = locationContent[key]?.data;
   return item_fo ? (
     showimage && item_fo[image_field] ? (
-      <div className="genericcard card-img card card-teaser shadow p-4 mt-3 rounded">
+      <div
+        className={
+          (cx('genericcard card-img card card-teaser shadow p-4 mt-3 rounded'),
+          { 'card-column': column })
+        }
+      >
         <div className="img-responsive-wrapper">
           <div className="img-responsive img-responsive-panoramic">
             <figure className="img-wrapper">
@@ -42,17 +55,25 @@ const GenericCard = ({ item, showimage, image_field, show_icon }) => {
             {show_icon && <Icon icon={show_icon} padding={false} />}
             <Link to={flattenToAppURL(item_fo['@id'])}>{item_fo.title}</Link>
           </h5>
-          <div className="card-text">{item_fo.description}</div>
+          {showDescription && (
+            <div className="card-text">{item_fo.description}</div>
+          )}
         </div>
       </div>
     ) : (
-      <div className="genericcard card card-teaser shadow p-4 mt-3 rounded">
+      <div
+        className={cx('genericcard card card-teaser shadow p-4 mt-3 rounded', {
+          'card-column': column,
+        })}
+      >
         <div className="card-body">
           <h5 className="card-title no-toc">
             {show_icon && <Icon icon={show_icon} padding={false} />}
             <Link to={flattenToAppURL(item_fo['@id'])}>{item_fo.title}</Link>
           </h5>
-          <div className="card-text">{item_fo.description}</div>
+          {showDescription && (
+            <div className="card-text">{item_fo.description}</div>
+          )}
         </div>
       </div>
     )

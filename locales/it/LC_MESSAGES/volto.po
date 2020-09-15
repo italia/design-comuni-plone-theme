@@ -745,7 +745,7 @@ msgstr "ALTRI ARGOMENTI"
 
 #: components/ItaliaTheme/View/Commons/Metadata
 msgid "other_info"
-msgstr "Altre informazioni"
+msgstr "Ulteriori informazioni"
 
 #: components/ItaliaTheme/View/Commons/CuredBy
 msgid "page_cured_by"
@@ -1032,7 +1032,6 @@ msgstr "Argomenti"
 #: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/PersonaView
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/VenueView
 msgid "ulteriori_informazioni"
 msgstr "Ulteriori informazioni"

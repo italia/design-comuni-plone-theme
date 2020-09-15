@@ -25,14 +25,13 @@ const Attachment = ({ title, description, download_url }) => {
       noWrapper={true}
       tag="div"
     >
+      <Icon
+        icon="it-clip"
+        alt={intl.formatMessage(messages.attachment)}
+        title={intl.formatMessage(messages.attachment)}
+      />
       <CardBody tag="div">
         <CardTitle tag="h5">
-          <Icon
-            icon="it-clip"
-            padding={true}
-            alt={intl.formatMessage(messages.attachment)}
-            title={intl.formatMessage(messages.attachment)}
-          />
           <a href={flattenToAppURL(download_url)}>{title}</a>
         </CardTitle>
         {description && <p>{description}</p>}
