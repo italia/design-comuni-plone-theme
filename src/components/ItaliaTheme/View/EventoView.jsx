@@ -141,9 +141,7 @@ const EventoView = ({ content, location }) => {
               id="text-body"
               className="it-page-section anchor-offset clearfix"
             >
-              <div className="text-serif">
-                {text}
-              </div>
+              <div className="text-serif">{text}</div>
             </article>
 
             {content?.items.some((e) => e.id === 'multimedia') && (
@@ -256,8 +254,10 @@ const EventoView = ({ content, location }) => {
                   </CardTitle>
                   <CardBody tag="div" className={'card-body pr-3'}>
                     <p
-                      className='text-serif'
-                      dangerouslySetInnerHTML={{ __html: content.organizzato_da_esterno?.data }}
+                      className="text-serif"
+                      dangerouslySetInnerHTML={{
+                        __html: content.organizzato_da_esterno?.data,
+                      }}
                     />
                     {content?.contatto_reperibilita && (
                       <p className="card-text mt-3">
@@ -282,7 +282,9 @@ const EventoView = ({ content, location }) => {
                 </h4>
                 {content?.organizzato_da_interno?.map((item, index) => (
                   <OfficeCard
-                    margin_bottom={index < content?.organizzato_da_interno?.length - 1}
+                    margin_bottom={
+                      index < content?.organizzato_da_interno?.length - 1
+                    }
                     key={item['@id']}
                     office={item}
                     extended={true}
@@ -341,14 +343,7 @@ const EventoView = ({ content, location }) => {
                 {content?.ulteriori_informazioni?.data?.replace(
                   /(<([^>]+)>)/g,
                   '',
-                ) && (
-                  <div
-                    className="text-serif"
-                    dangerouslySetInnerHTML={{
-                      __html: content?.ulteriori_informazioni?.data,
-                    }}
-                  />
-                )}
+                ) && <HelpBox text={content?.ulteriori_informazioni} />}
 
                 {content?.event_url && (
                   <div class="mt-4">
@@ -420,12 +415,7 @@ const EventoView = ({ content, location }) => {
                 </div>
               </article>
             ) : null}
-            <Metadata content={content}>
-              {content?.ulteriori_informazioni?.data?.replace(
-                /(<([^>]+)>)/g,
-                '',
-              ) && <HelpBox text={content?.ulteriori_informazioni} />}
-            </Metadata>
+            <Metadata content={content} />
           </section>
         </div>
       </div>
@@ -469,9 +459,6 @@ EventoView.propTypes = {
       data: PropTypes.string,
     }),
     sponsor: PropTypes.shape({
-      data: PropTypes.string,
-    }),
-    ulteriori_informazioni: PropTypes.shape({
       data: PropTypes.string,
     }),
     items: PropTypes.array,
