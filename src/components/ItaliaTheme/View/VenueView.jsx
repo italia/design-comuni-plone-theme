@@ -187,7 +187,13 @@ const VenueView = ({ content }) => {
             )}
 
             {/* MAPPA */}
-            {content.geolocation && (
+            {((content.geolocation?.latitude &&
+              content.geolocation?.longitude) ||
+              content.street ||
+              content.zip_code ||
+              content.city ||
+              content.circoscrizione ||
+              content.uqartiere) && (
               <article
                 id="luoghi"
                 className="it-page-section anchor-offset mt-5"
@@ -206,6 +212,7 @@ const VenueView = ({ content }) => {
                     </CardText>
                   </CardBody>
                 </Card>
+
                 {__CLIENT__ &&
                   content.geolocation?.latitude &&
                   content.geolocation?.longitude && (
@@ -216,15 +223,24 @@ const VenueView = ({ content }) => {
                       ]}
                     />
                   )}
-                <h6 className="mt-3">
-                  {intl.formatMessage(messages.circoscrizione)}:
-                </h6>
-                <div className="text-serif">{content.circoscrizione}</div>
 
-                <h6 className="mt-3">
-                  {intl.formatMessage(messages.quartiere)}:
-                </h6>
-                <div className="text-serif">{content.quartiere}</div>
+                {content.circoscrizione && (
+                  <>
+                    <h6 className="mt-3">
+                      {intl.formatMessage(messages.circoscrizione)}:
+                    </h6>
+                    <div className="text-serif">{content.circoscrizione}</div>
+                  </>
+                )}
+
+                {content.quartiere && (
+                  <>
+                    <h6 className="mt-3">
+                      {intl.formatMessage(messages.quartiere)}:
+                    </h6>
+                    <div className="text-serif">{content.quartiere}</div>
+                  </>
+                )}
               </article>
             )}
 
@@ -267,10 +283,8 @@ const VenueView = ({ content }) => {
                 )}
               />
             ) : (
-              (content.struttura_responsabile?.data?.replace(
-                /(<([^>]+)>)/g,
-                '',
-              ) !== '' ||
+              (content.struttura_responsabile?.data?.replace(/(<([^>]+)>)/g, '')
+                .length > 0 ||
                 content.riferimento_telefonico_struttura ||
                 content.riferimento_mail_struttura) && (
                 <article
@@ -323,33 +337,37 @@ const VenueView = ({ content }) => {
             )}
 
             {/* Contatti */}
-            <RichTextArticles
-              contents={[
-                {
-                  title: intl.formatMessage(
-                    messages.riferimento_telefonico_luogo,
-                  ),
-                  text: content.riferimento_telefonico_luogo,
-                  href: `tel:${content.riferimento_telefonico_luogo}`,
-                },
-                {
-                  title: intl.formatMessage(messages.riferimento_mail_luogo),
-                  text: content.riferimento_mail_luogo,
-                  href: `mailto:${content.riferimento_mail_luogo}`,
-                },
-                {
-                  title: intl.formatMessage(messages.riferimento_web),
-                  text: content.riferimento_web,
-                  href: `${
-                    /(http(s?)):\/\//i.test(content.riferimento_web || '')
-                      ? ''
-                      : 'https://'
-                  }${content.riferimento_web}`,
-                },
-              ]}
-              tag_id={'contatti'}
-              title={intl.formatMessage(messages.contatti)}
-            />
+            {(content.riferimento_telefonico_luogo ||
+              content.riferimento_mail_luogo ||
+              content.riferimento_web) && (
+              <RichTextArticles
+                contents={[
+                  {
+                    title: intl.formatMessage(
+                      messages.riferimento_telefonico_luogo,
+                    ),
+                    text: content.riferimento_telefonico_luogo,
+                    href: `tel:${content.riferimento_telefonico_luogo}`,
+                  },
+                  {
+                    title: intl.formatMessage(messages.riferimento_mail_luogo),
+                    text: content.riferimento_mail_luogo,
+                    href: `mailto:${content.riferimento_mail_luogo}`,
+                  },
+                  {
+                    title: intl.formatMessage(messages.riferimento_web),
+                    text: content.riferimento_web,
+                    href: `${
+                      /(http(s?)):\/\//i.test(content.riferimento_web || '')
+                        ? ''
+                        : 'https://'
+                    }${content.riferimento_web}`,
+                  },
+                ]}
+                tag_id={'contatti'}
+                title={intl.formatMessage(messages.contatti)}
+              />
+            )}
 
             {/* ULTERIORI INFORMAZIONI */}
             {content.ulteriori_informazioni && (
