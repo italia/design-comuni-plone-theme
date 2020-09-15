@@ -283,7 +283,8 @@ const PersonaView = ({ content }) => {
                 </div>
               </article>
             ) : null}
-            {!content.data_conclusione_incarico && content.competenze?.data ? (
+            {!content.data_conclusione_incarico &&
+            content.competenze?.data.replace(/(<([^>]+)>)/g, '').length > 0 ? (
               <RichTextArticle
                 content={content.competenze.data}
                 tag_id={'text-competenze'}
@@ -292,7 +293,8 @@ const PersonaView = ({ content }) => {
             ) : (
               ''
             )}
-            {!content.data_conclusione_incarico && content.deleghe?.data ? (
+            {!content.data_conclusione_incarico &&
+            content.deleghe?.data.replace(/(<([^>]+)>)/g, '').length > 0 ? (
               <RichTextArticle
                 content={content.deleghe.data}
                 tag_id={'text-deleghe'}
