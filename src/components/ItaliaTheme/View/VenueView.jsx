@@ -14,6 +14,7 @@ import {
   RelatedNewsArticles,
   RelatedArticles,
   RichTextArticles,
+  HelpBox,
 } from '@italia/components/ItaliaTheme/View';
 import { Icon } from 'design-react-kit/dist/design-react-kit';
 import { OSMMap } from '@italia/addons/volto-venue';
@@ -372,10 +373,11 @@ const VenueView = ({ content }) => {
             {/* ULTERIORI INFORMAZIONI */}
             {content.ulteriori_informazioni && (
               <RichTextArticle
-                content={content.ulteriori_informazioni?.data}
-                tag_id={'ulteriori_informazion'}
+                tag_id={'ulteriori_informazioni'}
                 title={intl.formatMessage(messages.ulteriori_informazioni)}
-              />
+              >
+                <HelpBox text={content?.ulteriori_informazioni} />
+              </RichTextArticle>
             )}
 
             {/* SEDE DI */}
