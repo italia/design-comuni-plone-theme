@@ -18,7 +18,6 @@ const GenericCard = ({
   image_field,
   show_icon,
   showDescription = true,
-  column = false,
 }) => {
   let item_fo = null;
   const locationContent = useSelector((state) => state.content.subrequests);
@@ -38,10 +37,9 @@ const GenericCard = ({
   return item_fo ? (
     showimage && item_fo[image_field] ? (
       <div
-        className={
-          (cx('genericcard card-img card card-teaser shadow p-4 mt-3 rounded'),
-          { 'card-column': column })
-        }
+        className={cx('genericcard card card-img shadow rounded mt-3 ', {
+          'card-teaser': !showimage,
+        })}
       >
         <div className="img-responsive-wrapper">
           <div className="img-responsive img-responsive-panoramic">
@@ -68,9 +66,7 @@ const GenericCard = ({
       </div>
     ) : (
       <div
-        className={cx('genericcard card card-teaser shadow p-4 mt-3 rounded', {
-          'card-column': column,
-        })}
+        className={cx('genericcard card card-teaser shadow p-4 mt-3 rounded')}
       >
         <div className="card-body">
           <h5 className="card-title no-toc">

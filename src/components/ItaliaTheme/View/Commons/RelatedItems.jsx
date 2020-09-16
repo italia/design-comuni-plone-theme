@@ -48,7 +48,7 @@ const messages = defineMessages({
  * @params {object} location: object.
  * @returns {string} Markup of the component.
  */
-const RelatedItems = ({ content, children }) => {
+const RelatedItems = ({ content, children, view_sections = false }) => {
   const intl = useIntl();
 
   let sections = {};
@@ -70,78 +70,86 @@ const RelatedItems = ({ content, children }) => {
       <section className="section section-muted section-inset-shadow">
         <div className="section-content">
           <Container>
-            {/*vista per sezioni*/}
-            {Object.keys(sections).length > 0 && (
+            {/*----------------vista per sezioni----------------*/}
+            {view_sections && (
               <>
-                <Row>
-                  <Col className="text-center">
-                    <h3>{intl.formatMessage(messages.related_items)}</h3>
-                  </Col>
-                </Row>
-                <Row className="mt-lg-4">
-                  <Col>
-                    <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-4">
-                      {Object.keys(sections).map((sectionId, i) => (
-                        <div
-                          class="card card-teaser card-column shadow my-3 rounded"
-                          key={i}
-                        >
-                          <div class="card-header">
-                            <Icon icon={SITE_SECTIONS[sectionId].icon} />
+                {Object.keys(sections).length > 0 && (
+                  <>
+                    <Row>
+                      <Col className="text-center">
+                        <h3>{intl.formatMessage(messages.related_items)}</h3>
+                      </Col>
+                    </Row>
+                    <Row className="mt-lg-4">
+                      <Col>
+                        <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-4">
+                          {Object.keys(sections).map((sectionId, i) => (
+                            <div
+                              class="card card-teaser card-column shadow my-3 rounded"
+                              key={i}
+                            >
+                              <div class="card-header">
+                                <Icon icon={SITE_SECTIONS[sectionId].icon} />
 
-                            <h5 class="card-title">
-                              {intl.formatMessage(messages[sectionId])}
-                            </h5>
-                          </div>
-                          <div class="card-body">
-                            <div class="link-list-wrapper mt-3">
-                              <ul class="link-list">
-                                {sections[sectionId].map((item, i) => (
-                                  <li key={i}>
-                                    <Link
-                                      to={flattenToAppURL(item['@id'])}
-                                      className="list-item"
-                                    >
-                                      <span>{item.title}</span>
-                                    </Link>
-                                  </li>
-                                ))}
-                              </ul>
+                                <h5 class="card-title">
+                                  {intl.formatMessage(messages[sectionId])}
+                                </h5>
+                              </div>
+                              <div class="card-body">
+                                <div class="link-list-wrapper mt-3">
+                                  <ul class="link-list">
+                                    {sections[sectionId].map((item, i) => (
+                                      <li key={i}>
+                                        <Link
+                                          to={flattenToAppURL(item['@id'])}
+                                          className="list-item"
+                                        >
+                                          <span>{item.title}</span>
+                                        </Link>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              </div>
                             </div>
-                          </div>
+                          ))}
                         </div>
-                      ))}
-                    </div>
-                  </Col>
-                </Row>
+                      </Col>
+                    </Row>
+                  </>
+                )}
               </>
             )}
 
-            {/*vista per singoli elementi */}
-            {/* {content?.relatedItems?.length > 0 && (
+            {/*----------------vista per singoli elementi----------------*/}
+            {!view_sections && (
               <>
-                <Row>
-                  <Col className="text-center">
-                    <h3>{intl.formatMessage(messages.related_items)}</h3>
-                  </Col>
-                </Row>
-                <Row className="mt-lg-4">
-                  <Col>
-                    <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-4">
+                {content?.relatedItems?.length > 0 && (
+                  <>
+                    <Row>
+                      <Col className="text-center">
+                        <h3>{intl.formatMessage(messages.related_items)}</h3>
+                      </Col>
+                    </Row>
+                    <Row className="mt-lg-4">
                       {content.relatedItems.map((item, i) => (
-                        <GenericCard
-                          key={i}
-                          index={item['@id']}
-                          item={item}
-                          showimage={false}
-                          column={true}
-                        />
+                        <Col md={4}>
+                          <div className="card-wrapper">
+                            <GenericCard
+                              key={i}
+                              index={item['@id']}
+                              item={item}
+                              showimage={true}
+                              image_field="image"
+                            />
+                          </div>
+                        </Col>
                       ))}
-                    </div>
-                  </Col>
-                </Row>
+                    </Row>
+                  </>
+                )}
               </>
-            )} */}
+            )}
             {children}
           </Container>
         </div>
