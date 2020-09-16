@@ -20,15 +20,21 @@ const GenericCard = ({
   showDescription = true,
   column = false,
 }) => {
-  const key = `generic_card_${item['@id']}`;
-  const url = flattenToAppURL(item['@id']);
+  let item_fo = null;
   const locationContent = useSelector((state) => state.content.subrequests);
   const dispatch = useDispatch();
+  const key = `generic_card_${item['@id']}`;
+  const url = flattenToAppURL(item['@id']);
+
   useEffect(() => {
-    dispatch(getContent(url, null, key));
-    return () => dispatch(resetContent(key));
-  }, [dispatch, item, url, key]);
-  const item_fo = locationContent[key]?.data;
+    if (showimage) {
+      dispatch(getContent(url, null, key));
+      return () => dispatch(resetContent(key));
+    }
+  }, []);
+
+  item_fo = locationContent[key]?.data || item;
+
   return item_fo ? (
     showimage && item_fo[image_field] ? (
       <div
