@@ -1039,7 +1039,6 @@ msgstr ""
 #: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/PersonaView
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/VenueView
 msgid "ulteriori_informazioni"
 msgstr ""

@@ -19,6 +19,20 @@
           content: '';
         }
       }
+
+      &.card-teaser-block-4 {
+        width: 100%;
+        justify-content: space-between;
+
+        & > .card-teaser {
+          flex: 0 0 24%;
+        }
+
+        &:after {
+          flex: 0 0 24%;
+          content: '';
+        }
+      }
     }
   }
 }

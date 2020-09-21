@@ -23,6 +23,7 @@ import {
   TextOrBlocks,
   EventLocations,
   Sponsors,
+  RelatedItems,
 } from '@italia/components/ItaliaTheme/View';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -40,10 +41,7 @@ const messages = defineMessages({
     id: 'notizie_in_evidenza',
     defaultMessage: 'Notizie in evidenza',
   },
-  related_items: {
-    id: 'related_items',
-    defaultMessage: 'Contenuti correlati',
-  },
+
   event_ulteriori_informazioni: {
     id: 'event_ulteriori_informazioni',
     defaultMessage: "Ulteriori informazioni sull'evento",
@@ -83,6 +81,10 @@ const messages = defineMessages({
   strutture_politiche: {
     id: 'event_strutture_politiche',
     defaultMessage: 'Strutture politiche coinvolte',
+  },
+  supported_by: {
+    id: 'supported_by',
+    defaultMessage: 'Con il supporto di:',
   },
 });
 
@@ -137,54 +139,56 @@ const EventoView = ({ content, location }) => {
             ref={documentBody}
             className="col-lg-8 it-page-sections-container"
           >
-            <article
-              id="text-body"
-              className="it-page-section anchor-offset clearfix"
+            <RichTextArticle
+              tag_id={'text-body'}
+              title="Cos'è"
+              show_title={false}
             >
-              <div className="text-serif">{text}</div>
-            </article>
+              {text}
 
-            {content?.items.some((e) => e.id === 'multimedia') && (
-              <article
-                id="galleria"
-                className="it-page-section anchor-offset mt-5"
-              >
+              {content?.items.some((e) => e.id === 'multimedia') && (
                 <Gallery content={content} folder_name={'multimedia'} />
-              </article>
-            )}
-            {content?.descrizione_destinatari?.data && (
-              <RichTextArticle
-                content={content?.descrizione_destinatari?.data}
-                tag_id="descrizione-destinatari"
-                title={intl.formatMessage(messages.event_destinatari)}
-                title_size="h6"
-                add_class="mb-5"
-              />
-            )}
-            {content?.persone_amministrazione?.length > 0 && (
-              <>
-                <h6 className="text-serif font-weight-bold">
-                  {intl.formatMessage(messages.parteciperanno)}
-                </h6>
-                {content.persone_amministrazione.map((item, i) => (
-                  <Chip
-                    color="primary"
-                    disabled={false}
-                    large={false}
-                    simple
-                    tag="div"
-                    key={item['@id']}
-                    className="mr-2"
-                  >
-                    <ChipLabel tag="span">
-                      <Link to={flattenToAppURL(item['@id'])}>
-                        {item.title}
-                      </Link>
-                    </ChipLabel>
-                  </Chip>
-                ))}
-              </>
-            )}
+              )}
+
+              {content?.descrizione_destinatari?.data && (
+                <div className="mb-5">
+                  <h6 className="text-serif font-weight-bold">
+                    {intl.formatMessage(messages.event_destinatari)}
+                  </h6>
+                  <div
+                    className={'text-serif'}
+                    dangerouslySetInnerHTML={{
+                      __html: content?.descrizione_destinatari?.data,
+                    }}
+                  />
+                </div>
+              )}
+
+              {content?.persone_amministrazione?.length > 0 && (
+                <>
+                  <h6 className="text-serif font-weight-bold">
+                    {intl.formatMessage(messages.parteciperanno)}
+                  </h6>
+                  {content.persone_amministrazione.map((item, i) => (
+                    <Chip
+                      color="primary"
+                      disabled={false}
+                      large={false}
+                      simple
+                      tag="div"
+                      key={item['@id']}
+                      className="mr-2"
+                    >
+                      <ChipLabel tag="span">
+                        <Link to={flattenToAppURL(item['@id'])}>
+                          {item.title}
+                        </Link>
+                      </ChipLabel>
+                    </Chip>
+                  ))}
+                </>
+              )}
+            </RichTextArticle>
 
             {content?.luoghi_correlati?.length > 0 ? (
               <article
@@ -303,7 +307,9 @@ const EventoView = ({ content, location }) => {
 
                 {content?.evento_supportato_da?.length > 0 && (
                   <>
-                    <h5 className="mt-4 supported-by">Con il supporto di:</h5>
+                    <h5 className="mt-4 supported-by">
+                      {intl.formatMessage(messages.supported_by)}
+                    </h5>
                     {content?.evento_supportato_da?.map((item) => (
                       <OfficeCard
                         key={item['@id']}
@@ -325,101 +331,81 @@ const EventoView = ({ content, location }) => {
                 isChild={isChildEvent}
               />
             )}
-            {content?.ulteriori_informazioni?.data?.replace(
-              /(<([^>]+)>)/g,
-              '',
-            ) ||
-            content?.event_url ||
-            content?.patrocinato_da ||
-            content?.items?.some((e) => e.id === 'sponsor_evento') ? (
-              <article
-                id={'ulteriori-informazioni'}
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4 id={`header-ulteriori-informazioni`}>
-                  {intl.formatMessage(messages.event_ulteriori_informazioni)}
-                </h4>
 
-                {content?.ulteriori_informazioni?.data?.replace(
-                  /(<([^>]+)>)/g,
-                  '',
-                ) && <HelpBox text={content?.ulteriori_informazioni} />}
+            <Metadata content={content}>
+              {content?.ulteriori_informazioni?.data?.replace(
+                /(<([^>]+)>)/g,
+                '',
+              ) ||
+              content?.event_url ||
+              content?.patrocinato_da ||
+              content?.strutture_politiche.length > 0 ||
+              content?.items?.some((e) => e.id === 'sponsor_evento') ? (
+                <>
+                  {content?.ulteriori_informazioni?.data?.replace(
+                    /(<([^>]+)>)/g,
+                    '',
+                  ) && <HelpBox text={content?.ulteriori_informazioni} />}
 
-                {content?.event_url && (
-                  <div class="mt-4">
-                    <strong>{intl.formatMessage(messages.event_url)}:</strong>{' '}
-                    <a href={content.event_url} rel="noopener noreferer">
-                      {content.event_url}
-                    </a>
-                  </div>
-                )}
+                  {content?.event_url && (
+                    <div class="mt-4">
+                      <strong>{intl.formatMessage(messages.event_url)}:</strong>{' '}
+                      <a href={content.event_url} rel="noopener noreferer">
+                        {content.event_url}
+                      </a>
+                    </div>
+                  )}
 
-                {content?.patrocinato_da && (
-                  <div class="mt-4">
-                    <strong>
-                      {intl.formatMessage(messages.patrocinato_da)}
-                    </strong>
-                    <div
-                      className="text-serif"
-                      dangerouslySetInnerHTML={{
-                        __html: content?.patrocinato_da,
-                      }}
-                    />
-                  </div>
-                )}
+                  {content?.patrocinato_da && (
+                    <div class="mt-4">
+                      <strong>
+                        {intl.formatMessage(messages.patrocinato_da)}
+                      </strong>
+                      <div
+                        className="text-serif"
+                        dangerouslySetInnerHTML={{
+                          __html: content?.patrocinato_da,
+                        }}
+                      />
+                    </div>
+                  )}
 
-                {content?.items?.some((e) => e.id === 'sponsor_evento') && (
-                  <div className="mt-4">
-                    <Sponsors
-                      content={content}
-                      folder_name={'sponsor_evento'}
-                    />
-                  </div>
-                )}
-              </article>
-            ) : null}
+                  {content?.items?.some((e) => e.id === 'sponsor_evento') && (
+                    <div className="mt-4">
+                      <Sponsors
+                        content={content}
+                        folder_name={'sponsor_evento'}
+                      />
+                    </div>
+                  )}
 
-            {content?.strutture_politiche.length > 0 && (
-              <article
-                id="strutture_politiche"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4>{intl.formatMessage(messages.strutture_politiche)}</h4>
-                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content.strutture_politiche.map((item, i) => (
-                    <GenericCard
-                      key={i}
-                      index={item['@id']}
-                      item={item}
-                      showimage={false}
-                    />
-                  ))}
-                </div>
-              </article>
-            )}
-            {content?.relatedItems?.length > 0 ? (
-              <article
-                id="related-items"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4>{intl.formatMessage(messages.related_items)}</h4>
-                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content.relatedItems.map((item, i) => (
-                    <GenericCard
-                      key={i}
-                      index={item['@id']}
-                      item={item}
-                      showimage={false}
-                    />
-                  ))}
-                </div>
-              </article>
-            ) : null}
-            <Metadata content={content} />
+                  {content?.strutture_politiche.length > 0 && (
+                    <div className="mt-4">
+                      <strong>
+                        {intl.formatMessage(messages.strutture_politiche)}:
+                      </strong>
+                      <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                        {content.strutture_politiche.map((item, i) => (
+                          <GenericCard
+                            key={i}
+                            index={item['@id']}
+                            item={item}
+                            showimage={false}
+                            showDescription={false}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  <div className="mt-4"></div>
+                </>
+              ) : null}
+            </Metadata>
           </section>
         </div>
       </div>
-      {/* <section id="contenuti-correlati"></section> */}
+
+      <RelatedItems content={content} />
     </>
   );
 };
