@@ -5,7 +5,8 @@ import { getContent, resetContent } from '@plone/volto/actions';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
-import { Icon } from 'design-react-kit/dist/design-react-kit';
+import { Icon, CardCategory } from 'design-react-kit/dist/design-react-kit';
+import { getCalendarDate, getIcon } from '@italia/helpers';
 /**
  * GenericCard view component class.
  * @function Location
@@ -18,12 +19,31 @@ const GenericCard = ({
   image_field,
   show_icon,
   showDescription = true,
+  showInfos = false,
+  showInfosFor = null,
 }) => {
   let item_fo = null;
   const locationContent = useSelector((state) => state.content.subrequests);
   const dispatch = useDispatch();
   const key = `generic_card_${item['@id']}`;
   const url = flattenToAppURL(item['@id']);
+
+  const infos = (
+    <>
+      {showInfos &&
+        (!showInfosFor || showInfosFor.indexOf(item['@type']) >= 0) && (
+          <CardCategory date={getCalendarDate(item)}>
+            <Icon
+              className="icon"
+              color="primary"
+              icon={getIcon(item['@type'])}
+              padding={false}
+            />
+            {item?.design_italia_meta_type}
+          </CardCategory>
+        )}
+    </>
+  );
 
   useEffect(() => {
     if (showimage) {
@@ -55,6 +75,7 @@ const GenericCard = ({
           </div>
         </div>
         <div className="card-body">
+          {infos}
           <h5 className="card-title no-toc">
             {show_icon && <Icon icon={show_icon} padding={false} />}
             <Link to={flattenToAppURL(item_fo['@id'])}>{item_fo.title}</Link>
@@ -69,6 +90,7 @@ const GenericCard = ({
         className={cx('genericcard card card-teaser shadow p-4 mt-3 rounded')}
       >
         <div className="card-body">
+          {infos}
           <h5 className="card-title no-toc">
             {show_icon && <Icon icon={show_icon} padding={false} />}
             <Link to={flattenToAppURL(item_fo['@id'])}>{item_fo.title}</Link>
