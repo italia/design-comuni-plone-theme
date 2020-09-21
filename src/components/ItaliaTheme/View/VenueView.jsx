@@ -193,7 +193,7 @@ const VenueView = ({ content }) => {
                       <h5 className="card-title">{content.title}</h5>
                     </CardTitle>
                     <CardText>
-                      <p>{`${content.street || ''} - ${content.zip_code || ''} ${content.city} ${content.country.title}`}</p>
+                      <p>{`${content.street || ''} - ${content.zip_code || ''} ${content.city} ${content.country?.title}`}</p>
                     </CardText>
                   </CardBody>
                 </Card>
