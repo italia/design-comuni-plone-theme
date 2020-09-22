@@ -15,6 +15,9 @@
             ],
             "@italia/addons/volto-subblocks": [
                 "addons/volto-subblocks/src"
+            ],
+            "@italia/addons/volto-dropdownmenu": [
+                "addons/volto-dropdownmenu/src"
             ]
         },
         "baseUrl": "src"

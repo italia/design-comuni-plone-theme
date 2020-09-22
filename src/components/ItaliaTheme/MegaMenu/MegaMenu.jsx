@@ -9,7 +9,7 @@ import { isMatch } from 'lodash';
 import cx from 'classnames';
 import { Link } from 'react-router-dom';
 import { defineMessages, useIntl } from 'react-intl';
-import { flattenToAppURL } from '@plone/volto/helpers';
+import { flattenToAppURL, hasBlocksData } from '@plone/volto/helpers';
 import {
   NavItem,
   NavLink,
@@ -34,41 +34,99 @@ const messages = defineMessages({
   },
 });
 
-const megamenu_max_rows = 6;
-const megamenu_max_cols = 3;
+const MEGAMENU_MAX_ROWS = 8;
+const MEGAMENU_MAX_COLS = 3;
 
-const isActive = (pathname = '', url) => {
-  var ret =
-    (url === '' && (pathname === '/' || pathname === '')) ||
-    (url !== '' && isMatch(pathname.split('/'), url.split('/')));
-  return ret;
+const isActive = (item, pathname) => {
+  const paths = [...(item.navigationRoot || [])];
+
+  if (item.showMoreLink?.length > 0) {
+    paths.push(item.showMoreLink[0]);
+  }
+  if (item.linkUrl?.length > 0) {
+    paths.push(item.linkUrl[0]);
+  }
+
+  return paths.reduce(
+    (acc, path) =>
+      acc ||
+      flattenToAppURL(pathname).indexOf(flattenToAppURL(path['@id'])) > -1,
+    false,
+  );
 };
 
 const MegaMenu = ({ item, pathname }) => {
   const intl = useIntl();
-  const isItemActive = isActive(pathname, item.url);
-  const { items = [] } = item;
+
+  const isItemActive = isActive(item, pathname);
 
   const [menuStatus, setMenuStatus] = useState(false);
 
-  if (items.length) {
+  if (item.mode === 'simpleLink') {
+    return (
+      <NavItem tag="li" active={isItemActive}>
+        <NavLink
+          to={
+            item.linkUrl === '' ? '/' : flattenToAppURL(item.linkUrl[0]['@id'])
+          }
+          tag={Link}
+          active={isItemActive}
+        >
+          <span>{item.title}</span>
+          {isItemActive && (
+            <span className="sr-only">
+              {intl.formatMessage(messages.menu_selected)}
+            </span>
+          )}
+        </NavLink>
+      </NavItem>
+    );
+  } else {
     //megamenu
+    let hasBlocks = hasBlocksData(item);
+    let nEmpty = false;
+    Object.keys(item.blocks).map((k) => {
+      let block = item.blocks[k];
+      if (
+        (block['@type'] === 'text' && !block.text) ||
+        block.text?.length === 0
+      ) {
+        nEmpty++;
+      }
+    });
+    hasBlocks = hasBlocks && nEmpty !== item.blocks.length;
+
     const childrenGroups = [];
-    if (items.size < megamenu_max_rows) {
+    const items = [];
+    item.navigationRoot.map((navRoot) => {
+      if (item.navigationRoot.length > 1) {
+        items.push({ ...navRoot, showAsHeader: true });
+      }
+      navRoot.items?.map((subitem) => {
+        items.push(subitem);
+      });
+    });
+
+    let max_cols = hasBlocks ? 2 : MEGAMENU_MAX_COLS;
+    if (items.size < MEGAMENU_MAX_ROWS) {
       childrenGroups.push(items);
     } else {
-      let rows = Math.floor(items.length / megamenu_max_cols);
+      let rows = Math.ceil(items.length / max_cols);
+
       rows = rows === 0 ? 1 : rows;
+      let col = 0;
 
       for (var i = 0; i < items.length; i++) {
-        const group = Math.floor(i % rows);
-        if (!childrenGroups[i]) {
+        if (!childrenGroups[col]) {
           childrenGroups.push([]);
         }
-        childrenGroups[group].push(items[i]);
+        childrenGroups[col].push(items[i]);
+        if ((i + 1) % rows === 0) {
+          col++;
+        }
       }
     }
-
+    console.log('blocks', item);
     return (
       <NavItem tag="li" className="megamenu" active={isItemActive}>
         <UncontrolledDropdown
@@ -83,66 +141,68 @@ const MegaMenu = ({ item, pathname }) => {
           </DropdownToggle>
           <DropdownMenu flip tag="div">
             <Row>
-              {childrenGroups.map((group, index) => (
-                <Col lg={4} key={'group_' + index}>
-                  <LinkList className="bordered">
-                    {group.map(child => (
-                      <LinkListItem
-                        to={flattenToAppURL(child.url)}
-                        tag={Link}
-                        title={child.title}
-                        key={child.url}
-                        onClick={() => setMenuStatus(false)}
-                        className={cx({
-                          active: isActive(pathname, child.url),
+              <Col lg={hasBlocks ? 8 : 12}>
+                <Row>
+                  {childrenGroups.map((group, index) => (
+                    <Col lg={12 / max_cols} key={'group_' + index}>
+                      <LinkList className="bordered">
+                        {group.map((child) => {
+                          return (
+                            <LinkListItem
+                              to={flattenToAppURL(child['@id'])}
+                              tag={Link}
+                              title={child.title}
+                              key={child['@id']}
+                              onClick={() => setMenuStatus(false)}
+                              className={cx({
+                                active: isActive(child, pathname),
+                              })}
+                            >
+                              <span>
+                                {child.showAsHeader ? (
+                                  <h6>{child.title}</h6>
+                                ) : (
+                                  child.title
+                                )}
+                              </span>
+                            </LinkListItem>
+                          );
                         })}
-                      >
-                        <span>{child.title}</span>
-                      </LinkListItem>
-                    ))}
-                  </LinkList>
-                </Col>
-              ))}
+                      </LinkList>
+                    </Col>
+                  ))}
+                </Row>
+              </Col>
+              {hasBlocks && <Col lg={4}>blocks</Col>}
             </Row>
 
-            <div className="it-external bottom-right">
-              <Row>
-                <Col lg={8} />
-                <Col lg={4}>
-                  <LinkList>
-                    <li className="it-more text-right">
-                      <Link
-                        className="list-item medium"
-                        to={flattenToAppURL(item.url)}
-                        onClick={() => setMenuStatus(false)}
-                      >
-                        <span>{intl.formatMessage(messages.view_all)}</span>
-                        <Icon icon="it-arrow-right" />
-                      </Link>
-                    </li>
-                  </LinkList>
-                </Col>
-              </Row>
-            </div>
+            {item.showMoreLink?.length > 0 && (
+              <div className="it-external bottom-right">
+                <Row>
+                  <Col lg={8} />
+                  <Col lg={4}>
+                    <LinkList>
+                      <li className="it-more text-right">
+                        <Link
+                          className="list-item medium"
+                          to={flattenToAppURL(item.showMoreLink[0]['@id'])}
+                          onClick={() => setMenuStatus(false)}
+                        >
+                          <span>
+                            {item.showMoreText?.length > 0
+                              ? item.showMoreText
+                              : intl.formatMessage(messages.view_all)}
+                          </span>
+                          <Icon icon="it-arrow-right" />
+                        </Link>
+                      </li>
+                    </LinkList>
+                  </Col>
+                </Row>
+              </div>
+            )}
           </DropdownMenu>
         </UncontrolledDropdown>
-      </NavItem>
-    );
-  } else {
-    return (
-      <NavItem tag="li" active={isItemActive}>
-        <NavLink
-          to={item.url === '' ? '/' : flattenToAppURL(item.url)}
-          tag={Link}
-          active={isItemActive}
-        >
-          <span>{item.title}</span>
-          {isItemActive && (
-            <span className="sr-only">
-              {intl.formatMessage(messages.menu_selected)}
-            </span>
-          )}
-        </NavLink>
       </NavItem>
     );
   }

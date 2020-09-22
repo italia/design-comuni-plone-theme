@@ -23,5 +23,10 @@
     "package": "@italia/addons/volto-subblocks",
     "path": "src",
     "url": "git@github.com:collective/volto-subblocks.git"
+  },
+  "volto-dropdownmenu": {
+    "package": "@italia/addons/volto-dropdownmenu",
+    "path": "src",
+    "url": "git@github.com:collective/volto-dropdownmenu.git"
   }
 }

@@ -47,6 +47,10 @@ msgstr "Vedi"
 msgid "Cerca"
 msgstr "Cerca"
 
+#: addons/volto-dropdownmenu/src/customizations/components/theme/Navigation/Navigation
+msgid "Close menu"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Color"
 msgstr "Color"
@@ -153,6 +157,10 @@ msgstr "Note legali"
 msgid "Open in a new tab"
 msgstr "Apri in un nuovo tab"
 
+#: addons/volto-dropdownmenu/src/customizations/components/theme/Navigation/Navigation
+msgid "Open menu"
+msgstr ""
+
 #: components/ItaliaTheme/Footer/FooterInfos
 msgid "PEC"
 msgstr "PEC"
@@ -246,6 +254,7 @@ msgstr "Digita il titolo…"
 msgid "URP"
 msgstr "URP"
 
+#: addons/volto-dropdownmenu/src/components/DropdownMenu
 #: components/ItaliaTheme/View/PageView
 #: components/ItaliaTheme/View/PaginaArgomentoView
 msgid "Unknown Block"
@@ -309,6 +318,7 @@ msgstr "Altri documenti"
 
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
+#: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "amministrazione"
 msgstr "Amministrazione"
 
@@ -503,6 +513,7 @@ msgstr "Documenti"
 
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
+#: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "documenti-e-dati"
 msgstr "Documenti e dati"
 
@@ -517,6 +528,98 @@ msgstr "Dove rivolgersi"
 #: components/ItaliaTheme/View/Commons/Actions
 msgid "download"
 msgstr "Scarica"
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
+msgid "dropdownmenu-add-rootpath"
+msgstr "Aggiungi radice"
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
+msgid "dropdownmenu-addmenuitem"
+msgstr "Aggiungi voce di menu"
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+msgid "dropdownmenu-blocks"
+msgstr "Blocchi"
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+msgid "dropdownmenu-blocks-description"
+msgstr "Aggiungi i blocchi che verranno mostrati nella tendina"
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
+msgid "dropdownmenu-delete-button"
+msgstr "Rimuovi"
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
+msgid "dropdownmenu-delete-menupath"
+msgstr "Rimuovi radice"
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+msgid "dropdownmenu-deletemenuitem"
+msgstr "Rimuovi la voce di menu"
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+msgid "dropdownmenu-deletemenuitem-button"
+msgstr "Rimuovi"
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
+msgid "dropdownmenu-emptyActiveMenuItem"
+msgstr "Seleziona una voce di menu"
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
+msgid "dropdownmenu-emptyActiveMenuPath"
+msgstr "Seleziona una voce di menu"
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+msgid "dropdownmenu-linkUrl"
+msgstr "Link"
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
+msgid "dropdownmenu-menuitems-header"
+msgstr "Voci di menu"
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+msgid "dropdownmenu-mode"
+msgstr "Modalità"
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+msgid "dropdownmenu-mode-dropdown"
+msgstr "Tendina"
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+msgid "dropdownmenu-mode-simpleLink"
+msgstr "Link semplice"
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
+msgid "dropdownmenu-move-menuitem-down"
+msgstr "Sposta in basso"
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
+msgid "dropdownmenu-move-menuitem-up"
+msgstr "Sposta in alto"
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+msgid "dropdownmenu-navigationRoot"
+msgstr "Radice di navigazione"
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
+msgid "dropdownmenu-rootpath"
+msgstr "Percorso della radice"
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+msgid "dropdownmenu-showMoreLink"
+msgstr "Link ad altro"
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+msgid "dropdownmenu-showMoreText"
+msgstr "Testo per il link ad altro"
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+msgid "dropdownmenu-title"
+msgstr "Titolo"
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+msgid "dropdownmenu-visible"
+msgstr "Visibile"
 
 #: components/ItaliaTheme/View/VenueView
 msgid "elementi_di_interesse"
@@ -692,6 +795,7 @@ msgstr "Notizie in evidenza"
 
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
+#: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "novita"
 msgstr "Novità"
 
@@ -799,7 +903,7 @@ msgstr "Tempo di lettura"
 msgid "related_doc"
 msgstr "Documenti"
 
-#: components/ItaliaTheme/View/EventoView
+#: components/ItaliaTheme/View/Commons/RelatedItems
 #: components/ItaliaTheme/View/NewsItemView
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/ServizioView
@@ -926,6 +1030,7 @@ msgstr "Il servizio non è attivo"
 
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
+#: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "servizi"
 msgstr "Servizi"
 
@@ -998,6 +1103,10 @@ msgstr "Struttura responsabile"
 #: components/ItaliaTheme/View/Commons/Metadata
 msgid "subjects"
 msgstr "Tags"
+
+#: components/ItaliaTheme/View/EventoView
+msgid "supported_by"
+msgstr ""
 
 #: components/ItaliaTheme/View/VenueView
 msgid "telefono"
