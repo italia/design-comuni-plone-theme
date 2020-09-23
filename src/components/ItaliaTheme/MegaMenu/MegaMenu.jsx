@@ -5,11 +5,18 @@
 
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { isMatch } from 'lodash';
+import { map } from 'lodash';
 import cx from 'classnames';
 import { Link } from 'react-router-dom';
 import { defineMessages, useIntl } from 'react-intl';
-import { flattenToAppURL, hasBlocksData } from '@plone/volto/helpers';
+import { blocks } from '~/config';
+import {
+  flattenToAppURL,
+  hasBlocksData,
+  getBlocksFieldname,
+  getBlocksLayoutFieldname,
+  getBaseUrl,
+} from '@plone/volto/helpers';
 import {
   NavItem,
   NavLink,
@@ -57,7 +64,8 @@ const isActive = (item, pathname) => {
 
 const MegaMenu = ({ item, pathname }) => {
   const intl = useIntl();
-
+  const blocksFieldname = getBlocksFieldname(item);
+  const blocksLayoutFieldname = getBlocksLayoutFieldname(item);
   const isItemActive = isActive(item, pathname);
 
   const [menuStatus, setMenuStatus] = useState(false);
@@ -84,17 +92,12 @@ const MegaMenu = ({ item, pathname }) => {
   } else {
     //megamenu
     let hasBlocks = hasBlocksData(item);
-    let nEmpty = false;
-    Object.keys(item.blocks).map((k) => {
-      let block = item.blocks[k];
-      if (
-        (block['@type'] === 'text' && !block.text) ||
-        block.text?.length === 0
-      ) {
-        nEmpty++;
+    if (Object.keys(item.blocks).length === 1) {
+      let b = item.blocks[Object.keys(item.blocks)[0]];
+      if (b['@type'] === 'text' && (!b.text || b.text?.length === 0)) {
+        hasBlocks = false;
       }
-    });
-    hasBlocks = hasBlocks && nEmpty !== item.blocks.length;
+    }
 
     const childrenGroups = [];
     const items = [];
@@ -108,7 +111,7 @@ const MegaMenu = ({ item, pathname }) => {
     });
 
     let max_cols = hasBlocks ? 2 : MEGAMENU_MAX_COLS;
-    if (items.size < MEGAMENU_MAX_ROWS) {
+    if (items.length < MEGAMENU_MAX_ROWS) {
       childrenGroups.push(items);
     } else {
       let rows = Math.ceil(items.length / max_cols);
@@ -126,7 +129,7 @@ const MegaMenu = ({ item, pathname }) => {
         }
       }
     }
-    console.log('blocks', item);
+
     return (
       <NavItem tag="li" className="megamenu" active={isItemActive}>
         <UncontrolledDropdown
@@ -141,7 +144,7 @@ const MegaMenu = ({ item, pathname }) => {
           </DropdownToggle>
           <DropdownMenu flip tag="div">
             <Row>
-              <Col lg={hasBlocks ? 8 : 12}>
+              <Col lg={hasBlocks ? 6 : 12}>
                 <Row>
                   {childrenGroups.map((group, index) => (
                     <Col lg={12 / max_cols} key={'group_' + index}>
@@ -154,17 +157,12 @@ const MegaMenu = ({ item, pathname }) => {
                               title={child.title}
                               key={child['@id']}
                               onClick={() => setMenuStatus(false)}
+                              header={child.showAsHeader}
                               className={cx({
                                 active: isActive(child, pathname),
                               })}
                             >
-                              <span>
-                                {child.showAsHeader ? (
-                                  <h6>{child.title}</h6>
-                                ) : (
-                                  child.title
-                                )}
-                              </span>
+                              <span>{child.title}</span>
                             </LinkListItem>
                           );
                         })}
@@ -173,7 +171,33 @@ const MegaMenu = ({ item, pathname }) => {
                   ))}
                 </Row>
               </Col>
-              {hasBlocks && <Col lg={4}>blocks</Col>}
+              {hasBlocks && (
+                <Col lg={6}>
+                  {map(item[blocksLayoutFieldname].items, (block) => {
+                    const blockType = item[blocksFieldname]?.[block]?.['@type'];
+                    if (['title', 'pageDescription'].indexOf(blockType) > -1)
+                      return null;
+
+                    const Block =
+                      blocks.blocksConfig[blockType]?.['view'] ?? null;
+                    return Block !== null ? (
+                      <Block
+                        key={block}
+                        id={block}
+                        properties={item}
+                        data={item[blocksFieldname][block]}
+                        path={getBaseUrl(pathname || '')}
+                      />
+                    ) : (
+                      <div key={block}>
+                        {intl.formatMessage(messages.unknownBlock, {
+                          block: item[blocksFieldname]?.[block]?.['@type'],
+                        })}
+                      </div>
+                    );
+                  })}
+                </Col>
+              )}
             </Row>
 
             {item.showMoreLink?.length > 0 && (
