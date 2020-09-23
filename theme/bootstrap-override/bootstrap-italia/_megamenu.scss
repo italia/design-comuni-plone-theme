@@ -22,9 +22,16 @@
               margin-bottom: 5px !important;
             }
 
-            &:not(:first-of-type) {
+            @media (max-width: #{map-get($grid-breakpoints, lg)}) {
               h3 {
                 margin-top: 2em !important;
+              }
+            }
+            @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+              &:not(:first-of-type) {
+                h3 {
+                  margin-top: 2em !important;
+                }
               }
             }
           }

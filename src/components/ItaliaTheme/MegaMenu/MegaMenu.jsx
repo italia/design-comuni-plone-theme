@@ -172,7 +172,7 @@ const MegaMenu = ({ item, pathname }) => {
                 </Row>
               </Col>
               {hasBlocks && (
-                <Col lg={6}>
+                <Col lg={6} className="m-4 m-lg-0">
                   {map(item[blocksLayoutFieldname].items, (block) => {
                     const blockType = item[blocksFieldname]?.[block]?.['@type'];
                     if (['title', 'pageDescription'].indexOf(blockType) > -1)
