@@ -153,8 +153,7 @@ const ServizioView = ({ content }) => {
           content={content}
           readingtime={null}
           showreadingtime={false}
-          imageinheader={true}
-          imageinheader_field={'foto_persona'}
+          imageinheader={false}
           showdates={false}
           showtassonomiaargomenti={true}
         />
