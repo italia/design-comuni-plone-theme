@@ -371,7 +371,7 @@ const EventoView = ({ content, location }) => {
                     </div>
                   )}
 
-                  {content?.items?.some((e) => e.id === 'sponsor_evento') &&  (
+                  {content?.items?.some((e) => e.id === 'sponsor_evento') && (
                     <div className="mt-4">
                       <Sponsors
                         content={content}

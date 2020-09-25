@@ -55,9 +55,7 @@ const Dates = ({ content, show_image }) => {
       RRULE_LANGUAGE.dateFormatter,
     );
   }
-  console.log(content.start)
-  console.log(content.end)
-  console.log(moment.locale());
+
   return content ? (
     <>
       <div className="point-list-wrapper my-4 mb-5">
