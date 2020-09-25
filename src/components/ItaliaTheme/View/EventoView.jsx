@@ -6,7 +6,6 @@
 import React, { useState, createRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import { searchContent, resetSearchContent } from '@plone/volto/actions';
 
 import {
   Attachments,
@@ -37,6 +36,7 @@ import {
   CardTitle,
 } from 'design-react-kit/dist/design-react-kit';
 import { useDispatch, useSelector } from 'react-redux';
+import { searchContent, resetSearchContent } from '@plone/volto/actions';
 
 const messages = defineMessages({
   notizie_in_evidenza: {
@@ -118,86 +118,59 @@ const EventoView = ({ content, location }) => {
     }
   }, [documentBody]);
 
-  const folder_name = 'sponsor_evento';
-  const url = `${flattenToAppURL(content['@id'])}/${folder_name}`;
-  const searchResults = useSelector((state) => state.search.subrequests);
-  const dispatch = useDispatch();
-  const sponsors = searchResults?.[folder_name]?.items || [];
-
-  useEffect(() => {
-    if (content?.items.some((e) => e.id === folder_name)) {
-      dispatch(
-        searchContent(
-          url,
-          {
-            'path.depth': 1,
-            sort_on: 'getObjPositionInParent',
-            metadata_fields: '_all',
-            fullobjects: true,
-          },
-          folder_name,
-        ),
-      );
-    }
-    return () => {
-      dispatch(resetSearchContent(folder_name));
-    };
-  }, [dispatch, content, url, folder_name]);
-
-    return (
-      <>
-        <div className="container px-4 my-4 newsitem-view">
-          <PageHeader
-            content={content}
-            readingtime={null}
-            showreadingtime={true}
-            imageinheader={false}
-            imageinheader_field={null}
-            showdates={true}
-            showtopics={true}
-            showtassonomiaargomenti={true}
+  return (
+    <>
+      <div className="container px-4 my-4 newsitem-view">
+        <PageHeader
+          content={content}
+          readingtime={null}
+          showreadingtime={true}
+          imageinheader={false}
+          imageinheader_field={null}
+          showdates={true}
+          showtopics={true}
+          showtassonomiaargomenti={true}
+        />
+        {(content?.image || content?.image_caption) && (
+          <WideImage
+            title={content?.title}
+            image={content?.image}
+            caption={content?.image_caption}
           />
-          {(content?.image || content?.image_caption) && (
-            <WideImage
-              title={content?.title}
-              image={content?.image}
-              caption={content?.image_caption}
-            />
-          )}
-          <div className="row border-top row-column-border row-column-menu-left">
-            <aside className="col-lg-4">
-              {__CLIENT__ && <SideMenu data={sideMenuElements} />}
-            </aside>
-            <section
-              ref={documentBody}
-              className="col-lg-8 it-page-sections-container"
+        )}
+        <div className="row border-top row-column-border row-column-menu-left">
+          <aside className="col-lg-4">
+            {__CLIENT__ && <SideMenu data={sideMenuElements} />}
+          </aside>
+          <section
+            ref={documentBody}
+            className="col-lg-8 it-page-sections-container"
+          >
+            <RichTextArticle
+              tag_id={'text-body'}
+              title="Cos'è"
+              show_title={false}
             >
-              <article
-                id="text-body"
-                className="it-page-section anchor-offset clearfix"
-              >
-                <div className="text-serif">
-                  {text}
-                </div>
-              </article>
+              {text}
 
               {content?.items.some((e) => e.id === 'multimedia') && (
-                <article
-                  id="galleria"
-                  className="it-page-section anchor-offset mt-5"
-                >
-                  <Gallery content={content} folder_name={'multimedia'} />
-                </article>
+                <Gallery content={content} folder_name={'multimedia'} />
               )}
+
               {content?.descrizione_destinatari?.data && (
-                <RichTextArticle
-                  content={content?.descrizione_destinatari?.data}
-                  tag_id="descrizione-destinatari"
-                  title={intl.formatMessage(messages.event_destinatari)}
-                  title_size="h6"
-                  add_class="mb-5"
-                />
+                <div className="mb-5">
+                  <h6 className="text-serif font-weight-bold">
+                    {intl.formatMessage(messages.event_destinatari)}
+                  </h6>
+                  <div
+                    className={'text-serif'}
+                    dangerouslySetInnerHTML={{
+                      __html: content?.descrizione_destinatari?.data,
+                    }}
+                  />
+                </div>
               )}
+
               {content?.persone_amministrazione?.length > 0 && (
                 <>
                   <h6 className="text-serif font-weight-bold">
@@ -222,169 +195,158 @@ const EventoView = ({ content, location }) => {
                   ))}
                 </>
               )}
+            </RichTextArticle>
 
-              {content?.luoghi_correlati?.length > 0 ? (
-                <article
-                  id="luoghi"
-                  className="it-page-section anchor-offset mt-5"
-                >
-                  <h4 id="header-luoghi">
-                    {intl.formatMessage(messages.luoghi)}
-                  </h4>
-                  <EventLocations
-                    locations={content?.luoghi_correlati}
-                    show_icon={true}
-                  />
-                </article>
-              ) : null}
-
+            {content?.luoghi_correlati?.length > 0 ? (
               <article
-                id="date-e-orari"
+                id="luoghi"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4 id="header-date-e-orari">
-                  {intl.formatMessage(messages.date_e_orari)}
+                <h4 id="header-luoghi">
+                  {intl.formatMessage(messages.luoghi)}
                 </h4>
-                <Dates content={content} />
-                {content?.orari?.data?.replace(/(<([^>]+)>)/g, '') && (
-                  <RichTextArticle
-                    content={content?.orari?.data}
-                    tag_id="date-e-orari"
-                    title={null}
-                  />
-                )}
+                <EventLocations
+                  locations={content?.luoghi_correlati}
+                  show_icon={true}
+                />
               </article>
+            ) : null}
 
-              {content?.prezzo?.data?.replace(/(<([^>]+)>)/g, '') && (
+            <article
+              id="date-e-orari"
+              className="it-page-section anchor-offset mt-5"
+            >
+              <h4 id="header-date-e-orari">
+                {intl.formatMessage(messages.date_e_orari)}
+              </h4>
+              <Dates content={content} />
+              {content?.orari?.data?.replace(/(<([^>]+)>)/g, '') && (
                 <RichTextArticle
-                  content={content?.prezzo?.data}
-                  tag_id="costi"
-                  title={'Costi'}
+                  content={content?.orari?.data}
+                  tag_id="date-e-orari"
+                  title={null}
                 />
               )}
+            </article>
 
-              {content?.items?.some((e) => e.id === 'documenti') && (
-                <Attachments
-                  content={content}
-                  folder_name={'documenti'}
-                  title={'Documenti'}
-                />
-              )}
-              {content?.organizzato_da_esterno?.data?.replace(
+            {content?.prezzo?.data?.replace(/(<([^>]+)>)/g, '') && (
+              <RichTextArticle
+                content={content?.prezzo?.data}
+                tag_id="costi"
+                title={'Costi'}
+              />
+            )}
+
+            {content?.items?.some((e) => e.id === 'documenti') && (
+              <Attachments
+                content={content}
+                folder_name={'documenti'}
+                title={'Documenti'}
+              />
+            )}
+            {content?.organizzato_da_esterno?.data?.replace(
                 /(<([^>]+)>)/g,
                 '',
-              ) ? (
-                <article
-                  className="it-page-section anchor-offset mt-5"
-                  id="contatti"
+            ) ? (
+              <article
+                className="it-page-section anchor-offset mt-5"
+                id="contatti"
+              >
+                <h4 id="header-contatti">
+                  {intl.formatMessage(messages.contatti_esterni)}
+                </h4>
+                <Card
+                  className="card card-teaser rounded shadow mt-3"
+                  noWrapper={true}
+                  tag="div"
                 >
-                  <h4 id="header-contatti">
-                    {intl.formatMessage(messages.contatti_esterni)}
-                  </h4>
-                  <Card
-                    className="card card-teaser rounded shadow mt-3"
-                    noWrapper={true}
-                    tag="div"
-                  >
-                    <CardTitle tag="h5">
-                      <Icon icon="it-telephone" padding={true} />
-                    </CardTitle>
-                    <CardBody tag="div" className={'card-body pr-3'}>
-                      <p
-                        className='text-serif'
-                        dangerouslySetInnerHTML={{ __html: content.organizzato_da_esterno?.data }}
-                      />
-                      {content?.contatto_reperibilita && (
-                        <p className="card-text mt-3">
-                          {content?.contatto_reperibilita?.replace(
-                            /(<([^>]+)>)/g,
-                            '',
-                          )}
-                        </p>
-                      )}
-                    </CardBody>
-                  </Card>
-                </article>
-              ) : null}
-
-              {content?.organizzato_da_interno?.length > 0 ? (
-                <article
-                  className="it-page-section anchor-offset mt-5"
-                  id="contatti-interno"
-                >
-                  <h4 id="header-contatti-interno">
-                    {intl.formatMessage(messages.contatti_interni)}
-                  </h4>
-                  {content?.organizzato_da_interno?.map((item, index) => (
-                    <OfficeCard
-                      margin_bottom={index < content?.organizzato_da_interno?.length - 1}
-                      key={item['@id']}
-                      office={item}
-                      extended={true}
-                      icon={'it-telephone'}
-                    >
-                      {content?.contatto_reperibilita && (
-                        <p className="card-text mt-3">
-                          {content?.contatto_reperibilita?.replace(
-                            /(<([^>]+)>)/g,
-                            '',
-                          )}
-                        </p>
-                      )}
-                    </OfficeCard>
-                  ))}
-                </article>
-              ) : null}
-
-              {content?.evento_supportato_da?.length > 0 && (
-                <>
-                  <h5 className="mt-4 supported-by">Con il supporto di:</h5>
-                  {content?.evento_supportato_da?.map((item) => (
-                    <OfficeCard
-                      key={item['@id']}
-                      office={item}
-                      extended={true}
-                      icon={'it-pa'}
+                  <CardTitle tag="h5">
+                    <Icon icon="it-telephone" padding={true} />
+                  </CardTitle>
+                  <CardBody tag="div" className={'card-body pr-3'}>
+                    <p
+                      className='text-serif'
+                      dangerouslySetInnerHTML={{ __html: content.organizzato_da_esterno?.data }}
                     />
-                  ))}
-                </>
-              )}
+                    {content?.contatto_reperibilita && (
+                      <p className="card-text mt-3">
+                        {content?.contatto_reperibilita?.replace(
+                          /(<([^>]+)>)/g,
+                          '',
+                        )}
+                      </p>
+                    )}
+                  </CardBody>
+                </Card>
+              </article>
+            ) : null}
 
-              {content && (
-                <Events
-                  content={content}
-                  show_image={true}
-                  title={null}
-                  folder_name={events_path}
-                  isChild={isChildEvent}
-                />
-              )}
+            {content?.organizzato_da_interno?.length > 0 ? (
+              <article
+                className="it-page-section anchor-offset mt-5"
+                id="contatti-interno"
+              >
+                <h4 id="header-contatti-interno">
+                  {intl.formatMessage(messages.contatti_interni)}
+                </h4>
+                {content?.organizzato_da_interno?.map((item, index) => (
+                  <OfficeCard
+                    margin_bottom={index < content?.organizzato_da_interno?.length - 1}
+                    key={item['@id']}
+                    office={item}
+                    extended={true}
+                    icon={'it-telephone'}
+                  >
+                    {content?.contatto_reperibilita && (
+                      <p className="card-text mt-3">
+                        {content?.contatto_reperibilita?.replace(
+                          /(<([^>]+)>)/g,
+                          '',
+                        )}
+                      </p>
+                    )}
+                  </OfficeCard>
+                ))}
+              </article>
+            ) : null}
+
+            {content?.evento_supportato_da?.length > 0 && (
+              <>
+                <h5 className="mt-4 supported-by">Con il supporto di:</h5>
+                {content?.evento_supportato_da?.map((item) => (
+                  <OfficeCard
+                    key={item['@id']}
+                    office={item}
+                    extended={true}
+                    icon={'it-pa'}
+                  />
+                ))}
+              </>
+            )}
+            {content && (
+              <Events
+                content={content}
+                show_image={true}
+                title={null}
+                folder_name={events_path}
+                isChild={isChildEvent}
+              />
+            )}
+
+            <Metadata content={content}>
               {content?.ulteriori_informazioni?.data?.replace(
                 /(<([^>]+)>)/g,
                 '',
-              ) !== '' ||
+              ) != '' ||
               content?.event_url ||
               content?.patrocinato_da ||
-              sponsors?.length > 0 ? (
-                <article
-                  id={'ulteriori-informazioni'}
-                  className="it-page-section anchor-offset mt-5"
-                >
-                  <h4 id={`header-ulteriori-informazioni`}>
-                    {intl.formatMessage(messages.event_ulteriori_informazioni)}
-                  </h4>
-
+              content?.strutture_politiche.length > 0 ||
+              content?.items?.some((e) => e.id === 'sponsor_evento') ? (
+                <>
                   {content?.ulteriori_informazioni?.data?.replace(
                     /(<([^>]+)>)/g,
                     '',
-                  ) && (
-                    <div
-                      className="text-serif"
-                      dangerouslySetInnerHTML={{
-                        __html: content?.ulteriori_informazioni?.data,
-                      }}
-                    />
-                  )}
+                  ) && <HelpBox text={content?.ulteriori_informazioni} />}
 
                   {content?.event_url && (
                     <div class="mt-4">
@@ -409,64 +371,44 @@ const EventoView = ({ content, location }) => {
                     </div>
                   )}
 
-                  {content?.items?.some((e) => e.id === 'sponsor_evento') && sponsors &&  (
+                  {content?.items?.some((e) => e.id === 'sponsor_evento') &&  (
                     <div className="mt-4">
-                      <Sponsors sponsors={sponsors} />
+                      <Sponsors
+                        content={content}
+                        folder_name={'sponsor_evento'}
+                      />
                     </div>
                   )}
-                </article>
-              ) : null}
 
-              {content?.strutture_politiche.length > 0 && (
-                <article
-                  id="strutture_politiche"
-                  className="it-page-section anchor-offset mt-5"
-                >
-                  <h4>{intl.formatMessage(messages.strutture_politiche)}</h4>
-                  <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                    {content.strutture_politiche.map((item, i) => (
-                      <GenericCard
-                        key={i}
-                        index={item['@id']}
-                        item={item}
-                        showimage={false}
-                      />
-                    ))}
-                  </div>
-                </article>
-              )}
-              {content?.relatedItems?.length > 0 ? (
-                <article
-                  id="related-items"
-                  className="it-page-section anchor-offset mt-5"
-                >
-                  <h4>{intl.formatMessage(messages.related_items)}</h4>
-                  <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                    {content.relatedItems.map((item, i) => (
-                      <GenericCard
-                        key={i}
-                        index={item['@id']}
-                        item={item}
-                        showimage={false}
-                      />
-                    ))}
-                  </div>
-                </article>
+                  {content?.strutture_politiche.length > 0 && (
+                    <div className="mt-4">
+                      <strong>
+                        {intl.formatMessage(messages.strutture_politiche)}:
+                      </strong>
+                      <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                        {content.strutture_politiche.map((item, i) => (
+                          <GenericCard
+                            key={i}
+                            index={item['@id']}
+                            item={item}
+                            showimage={false}
+                            showDescription={false}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                  <div className="mt-4"></div>
+                </>
               ) : null}
-              <Metadata content={content}>
-                {content?.ulteriori_informazioni?.data?.replace(
-                  /(<([^>]+)>)/g,
-                  '',
-                ) && <HelpBox text={content?.ulteriori_informazioni} />}
-              </Metadata>
-            </section>
-          </div>
+            </Metadata>
+          </section>
         </div>
-        {/* <section id="contenuti-correlati"></section> */}
-      </>
-    );
-  };
-
+      </div>
+      <RelatedItems content={content} />
+    </>
+  );
+};
 /**
  * Property types.
  * @property {Object} propTypes Property types.
