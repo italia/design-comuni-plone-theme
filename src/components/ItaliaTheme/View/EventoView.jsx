@@ -24,6 +24,7 @@ import {
   TextOrBlocks,
   EventLocations,
   Sponsors,
+  RelatedItems,
 } from '@italia/components/ItaliaTheme/View';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -42,10 +43,7 @@ const messages = defineMessages({
     id: 'notizie_in_evidenza',
     defaultMessage: 'Notizie in evidenza',
   },
-  related_items: {
-    id: 'related_items',
-    defaultMessage: 'Contenuti correlati',
-  },
+
   event_ulteriori_informazioni: {
     id: 'event_ulteriori_informazioni',
     defaultMessage: "Ulteriori informazioni sull'evento",
@@ -89,6 +87,10 @@ const messages = defineMessages({
   strutture_politiche: {
     id: 'event_strutture_politiche',
     defaultMessage: 'Strutture politiche coinvolte',
+  },
+  supported_by: {
+    id: 'supported_by',
+    defaultMessage: 'Con il supporto di:',
   },
 });
 
@@ -500,9 +502,6 @@ EventoView.propTypes = {
       data: PropTypes.string,
     }),
     sponsor: PropTypes.shape({
-      data: PropTypes.string,
-    }),
-    ulteriori_informazioni: PropTypes.shape({
       data: PropTypes.string,
     }),
     items: PropTypes.array,

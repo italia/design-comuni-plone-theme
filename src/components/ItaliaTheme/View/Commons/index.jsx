@@ -18,3 +18,4 @@ export RelatedNews from '@italia/components/ItaliaTheme/View/Commons/RelatedNews
 export Actions from '@italia/components/ItaliaTheme/View/Commons/Actions';
 export NewsCard from '@italia/components/ItaliaTheme/View/Commons/NewsCard';
 export TextOrBlocks from '@italia/components/ItaliaTheme/View/Commons/TextOrBlocks';
+export RelatedItems from '@italia/components/ItaliaTheme/View/Commons/RelatedItems';

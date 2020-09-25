@@ -108,10 +108,6 @@ const messages = defineMessages({
     id: 'altri_documenti',
     defaultMessage: 'Documenti correlati',
   },
-  ulteriori_informazioni: {
-    id: 'ulteriori_informazioni',
-    defaultMessage: 'Ulteriori informazioni',
-  },
   related_news: {
     id: 'related_news',
     defaultMessage: 'Notizie collegate',

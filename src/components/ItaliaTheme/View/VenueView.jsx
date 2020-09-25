@@ -14,16 +14,15 @@ import {
   RelatedNewsArticles,
   RelatedArticles,
   RichTextArticles,
+  HelpBox,
 } from '@italia/components/ItaliaTheme/View';
-import {
-  Icon,
-} from 'design-react-kit/dist/design-react-kit';
+import { Icon } from 'design-react-kit/dist/design-react-kit';
 import { OSMMap } from '@italia/addons/volto-venue';
 import {
   Card,
   CardBody,
   CardTitle,
-  CardText
+  CardText,
 } from 'design-react-kit/dist/design-react-kit';
 const messages = defineMessages({
   descrizione: {
@@ -93,7 +92,15 @@ const messages = defineMessages({
   related_items: {
     id: 'related_items',
     defaultMessage: 'Contenuti correlati',
-  }
+  },
+  telefono: {
+    id: 'telefono',
+    defaultMessage: 'Telefono',
+  },
+  mail: {
+    id: 'mail',
+    defaultMessage: 'Mail',
+  },
 });
 
 /**
@@ -116,10 +123,13 @@ const VenueView = ({ content }) => {
   }, [documentBody]);
 
   useEffect(() => {
-    if(content.nome_alternativo && !content.title?.includes(content.nome_alternativo)){
+    if (
+      content.nome_alternativo &&
+      !content.title?.includes(content.nome_alternativo)
+    ) {
       content.subtitle = content.nome_alternativo;
     }
-  })
+  });
 
   return (
     <>
@@ -133,13 +143,13 @@ const VenueView = ({ content }) => {
           showdates={false}
           showtassonomiaargomenti={true}
         />
-          {(content.image || content.image_caption) && (
-            <WideImage
-              title={content.title}
-              image={content.image}
-              caption={content.image_caption}
-            />
-          )}
+        {(content.image || content.image_caption) && (
+          <WideImage
+            title={content.title}
+            image={content.image}
+            caption={content.image_caption}
+          />
+        )}
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
             {__CLIENT__ && <SideMenu data={sideMenuElements} />}
@@ -161,10 +171,10 @@ const VenueView = ({ content }) => {
             {/* ELEMENTI DI INTERESSE */}
             {content.elementi_di_interesse && (
               <RichTextArticle
-                title_size='h6'
+                title_size="h6"
                 content={content.elementi_di_interesse?.data}
                 tag_id={'elementi-di-interesse'}
-                title={intl.formatMessage(messages.elementi_di_interesse)}
+                title={intl.formatMessage(messages.elementi_di_interesse) + `:`}
               />
             )}
 
@@ -178,37 +188,60 @@ const VenueView = ({ content }) => {
             )}
 
             {/* MAPPA */}
-            {content.geolocation && (
+            {((content.geolocation?.latitude &&
+              content.geolocation?.longitude) ||
+              content.street ||
+              content.zip_code ||
+              content.city ||
+              content.circoscrizione ||
+              content.uqartiere) && (
               <article
                 id="luoghi"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4 id="header-luoghi">
-                  {intl.formatMessage(messages.dove)}
-                </h4>
-                 <Card className="card card-teaser shadow mt-3 rounded mb-4">
+                <h4 id="header-luoghi">{intl.formatMessage(messages.dove)}</h4>
+                <Card className="card card-teaser shadow mt-3 rounded mb-4">
                   <Icon icon={'it-pin'} />
                   <CardBody>
                     <CardTitle>
                       <h5 className="card-title">{content.title}</h5>
                     </CardTitle>
                     <CardText>
-                      <p>{`${content.street || ''} - ${content.zip_code || ''} ${content.city} ${content.country?.title}`}</p>
+                      <p>{`${content.street || ''} - ${
+                        content.zip_code || ''
+                      } ${content.city} ${content.country.title}`}</p>
                     </CardText>
                   </CardBody>
                 </Card>
-                { __CLIENT__ && content.geolocation?.latitude && content.geolocation?.longitude &&
-                  <OSMMap position={[content.geolocation?.latitude, content.geolocation?.longitude]} />
-                }
-                <h6 className="mt-3">{intl.formatMessage(messages.circoscrizione)}</h6>
-                <div className="text-serif">
-                  {content.circoscrizione}
-                </div>
 
-                <h6 className="mt-3">{intl.formatMessage(messages.quartiere)}</h6>
-                <div className="text-serif">
-                  {content.quartiere}
-                </div>
+                {__CLIENT__ &&
+                  content.geolocation?.latitude &&
+                  content.geolocation?.longitude && (
+                    <OSMMap
+                      position={[
+                        content.geolocation?.latitude,
+                        content.geolocation?.longitude,
+                      ]}
+                    />
+                  )}
+
+                {content.circoscrizione && (
+                  <>
+                    <h6 className="mt-3">
+                      {intl.formatMessage(messages.circoscrizione)}:
+                    </h6>
+                    <div className="text-serif">{content.circoscrizione}</div>
+                  </>
+                )}
+
+                {content.quartiere && (
+                  <>
+                    <h6 className="mt-3">
+                      {intl.formatMessage(messages.quartiere)}:
+                    </h6>
+                    <div className="text-serif">{content.quartiere}</div>
+                  </>
+                )}
               </article>
             )}
 
@@ -232,85 +265,119 @@ const VenueView = ({ content }) => {
 
             {/* NEWS CORRELATE */}
             {content.related_news?.length > 0 && (
-              <RelatedNewsArticles 
+              <RelatedNewsArticles
                 news={content.related_news}
                 title={intl.formatMessage(messages.related_items)}
               />
             )}
 
-            {/* 
-              STRUTTURE RESPONSABILI 
+            {/*
+              STRUTTURE RESPONSABILI
               Se è presente una struttura_responsabile_correlati metto quella altrimenti metto una card con i campi singoli, se presenti
             */}
-            {content.struttura_responsabile_correlati?.length > 0 ? 
+            {content.struttura_responsabile_correlati?.length > 0 ? (
               <RelatedArticles
                 id="struttura_responsabile_correlati"
                 items={content.struttura_responsabile_correlati}
-                title={intl.formatMessage(messages.struttura_responsabile_correlati)}
+                title={intl.formatMessage(
+                  messages.struttura_responsabile_correlati,
+                )}
               />
-            :
-              (content.struttura_responsabile?.data?.replace(/(<([^>]+)>)/g, '') !== '' ||
-               content.riferimento_telefonico_struttura || content.riferimento_mail_struttura) &&
-              <article
-                id='struttura_responsabile'
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4 id={`header-struttura_responsabile`}>
-                  {intl.formatMessage(messages.struttura_responsabile_correlati)}
-                </h4>
-                <Card className="genericcard card card-teaser shadow p-4 mt-3 rounded border">
-                  <CardBody>
-                    <CardTitle>
-                      <h5 className="card-title no-toc">
-                        <div
-                          className='text-serif'
-                          dangerouslySetInnerHTML={{ __html: content.struttura_responsabile?.data }}
-                        />
-                      </h5>
-                    </CardTitle>
-                    <CardText>
-                      <div>
-                        <span className="font-weight-semibold">Telefono:</span>  <a href={`tel:${content.riferimento_telefonico_struttura}`}>{content.riferimento_telefonico_struttura}</a>
-                      </div>
-                      <div className="mt-2">
-                        <span className="font-weight-semibold">Mail:</span> <a href={`mailto:${content.riferimento_mail_struttura}`}>{content.riferimento_mail_struttura}</a>
-                      </div>
-                    </CardText>
-                  </CardBody>
-                </Card>
-              </article>
-            }
+            ) : (
+              (content.struttura_responsabile?.data?.replace(/(<([^>]+)>)/g, '')
+                .length > 0 ||
+                content.riferimento_telefonico_struttura ||
+                content.riferimento_mail_struttura) && (
+                <article
+                  id="struttura_responsabile"
+                  className="it-page-section anchor-offset mt-5"
+                >
+                  <h4 id={`header-struttura_responsabile`}>
+                    {intl.formatMessage(
+                      messages.struttura_responsabile_correlati,
+                    )}
+                  </h4>
+                  <Card className="genericcard card card-teaser shadow p-4 mt-3 rounded border">
+                    <CardBody>
+                      <CardTitle>
+                        <h5 className="card-title no-toc">
+                          <div
+                            className="text-serif"
+                            dangerouslySetInnerHTML={{
+                              __html: content.struttura_responsabile?.data,
+                            }}
+                          />
+                        </h5>
+                      </CardTitle>
+                      <CardText>
+                        <div>
+                          <span className="font-weight-semibold">
+                            {intl.formatMessage(messages.telefono)}:
+                          </span>{' '}
+                          <a
+                            href={`tel:${content.riferimento_telefonico_struttura}`}
+                          >
+                            {content.riferimento_telefonico_struttura}
+                          </a>
+                        </div>
+                        <div className="mt-2">
+                          <span className="font-weight-semibold">
+                            {intl.formatMessage(messages.mail)}:
+                          </span>{' '}
+                          <a
+                            href={`mailto:${content.riferimento_mail_struttura}`}
+                          >
+                            {content.riferimento_mail_struttura}
+                          </a>
+                        </div>
+                      </CardText>
+                    </CardBody>
+                  </Card>
+                </article>
+              )
+            )}
 
             {/* Contatti */}
-            <RichTextArticles 
-              contents={[
-                {
-                  title: intl.formatMessage(messages.riferimento_telefonico_luogo),
-                  text: content.riferimento_telefonico_luogo,
-                  href: `tel:${content.riferimento_telefonico_luogo}`
-                },
-                {
-                  title: intl.formatMessage(messages.riferimento_mail_luogo),
-                  text: content.riferimento_mail_luogo,
-                  href: `mailto:${content.riferimento_mail_luogo}`
-                },
-                {
-                  title: intl.formatMessage(messages.riferimento_web),
-                  text: content.riferimento_web,
-                  href: `${(/(http(s?)):\/\//i.test(content.riferimento_web || '')) ? '' : 'https://'}${content.riferimento_web}`
-                },
-              ]}
-              tag_id={'contatti'}
-              title={intl.formatMessage(messages.contatti)}
-            />
+            {(content.riferimento_telefonico_luogo ||
+              content.riferimento_mail_luogo ||
+              content.riferimento_web) && (
+              <RichTextArticles
+                contents={[
+                  {
+                    title: intl.formatMessage(
+                      messages.riferimento_telefonico_luogo,
+                    ),
+                    text: content.riferimento_telefonico_luogo,
+                    href: `tel:${content.riferimento_telefonico_luogo}`,
+                  },
+                  {
+                    title: intl.formatMessage(messages.riferimento_mail_luogo),
+                    text: content.riferimento_mail_luogo,
+                    href: `mailto:${content.riferimento_mail_luogo}`,
+                  },
+                  {
+                    title: intl.formatMessage(messages.riferimento_web),
+                    text: content.riferimento_web,
+                    href: `${
+                      /(http(s?)):\/\//i.test(content.riferimento_web || '')
+                        ? ''
+                        : 'https://'
+                    }${content.riferimento_web}`,
+                  },
+                ]}
+                tag_id={'contatti'}
+                title={intl.formatMessage(messages.contatti)}
+              />
+            )}
 
             {/* ULTERIORI INFORMAZIONI */}
             {content.ulteriori_informazioni && (
               <RichTextArticle
-                content={content.ulteriori_informazioni?.data}
-                tag_id={'ulteriori_informazion'}
+                tag_id={'ulteriori_informazioni'}
                 title={intl.formatMessage(messages.ulteriori_informazioni)}
-              />
+              >
+                <HelpBox text={content?.ulteriori_informazioni} />
+              </RichTextArticle>
             )}
 
             {/* SEDE DI */}
@@ -320,7 +387,7 @@ const VenueView = ({ content }) => {
                 items={content.sede_di}
                 title={intl.formatMessage(messages.sede_di)}
               />
-             )}
+            )}
           </section>
         </div>
       </div>

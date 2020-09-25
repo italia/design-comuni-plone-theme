@@ -21,7 +21,14 @@ const HelpBox = ({ text }) => {
         />
       </CalloutTitle>
 
-      <p>{text?.data.replace(/(<([^>]+)>)/g, '')}</p>
+      <p>
+        <div
+          className="text-serif"
+          dangerouslySetInnerHTML={{
+            __html: text?.data,
+          }}
+        />
+      </p>
     </Callout>
   ) : null;
 };

@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 const messages = defineMessages({
   other_info: {
     id: 'other_info',
-    defaultMessage: 'Altre informazioni',
+    defaultMessage: 'Ulteriori informazioni',
   },
   modified: {
     id: 'modified',
