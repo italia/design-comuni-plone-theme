@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-09-15T14:38:41.061Z\n"
+"POT-Creation-Date: 2020-09-25T08:50:24.362Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -56,6 +56,11 @@ msgstr ""
 #: components/ItaliaTheme/Header/HeaderCenter
 # defaultMessage: Cerca
 msgid "Cerca"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/customizations/components/theme/Navigation/Navigation
+# defaultMessage: Close menu
+msgid "Close menu"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
@@ -190,6 +195,11 @@ msgstr ""
 msgid "Open in a new tab"
 msgstr ""
 
+#: addons/volto-dropdownmenu/src/customizations/components/theme/Navigation/Navigation
+# defaultMessage: Open menu
+msgid "Open menu"
+msgstr ""
+
 #: components/ItaliaTheme/Footer/FooterInfos
 # defaultMessage: Posta Elettronica Certificata
 msgid "PEC"
@@ -305,6 +315,7 @@ msgstr ""
 msgid "URP"
 msgstr ""
 
+#: addons/volto-dropdownmenu/src/components/DropdownMenu
 #: components/ItaliaTheme/View/PageView
 #: components/ItaliaTheme/View/PaginaArgomentoView
 # defaultMessage: Unknown Block {block}
@@ -381,6 +392,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
+#: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Amministrazione
 msgid "amministrazione"
 msgstr ""
@@ -622,6 +634,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
+#: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Documenti e dati
 msgid "documenti-e-dati"
 msgstr ""
@@ -639,6 +652,121 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/Actions
 # defaultMessage: Scarica
 msgid "download"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
+# defaultMessage: Add menu path
+msgid "dropdownmenu-add-rootpath"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
+# defaultMessage: Add menu item
+msgid "dropdownmenu-addmenuitem"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+# defaultMessage: Blocks
+msgid "dropdownmenu-blocks"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+# defaultMessage: Add some blocks to show in dropdown menu.
+msgid "dropdownmenu-blocks-description"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
+# defaultMessage: Delete
+msgid "dropdownmenu-delete-button"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
+# defaultMessage: Delete menu path
+msgid "dropdownmenu-delete-menupath"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+# defaultMessage: Delete menu item
+msgid "dropdownmenu-deletemenuitem"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+# defaultMessage: Delete
+msgid "dropdownmenu-deletemenuitem-button"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
+# defaultMessage: Select a menu item
+msgid "dropdownmenu-emptyActiveMenuItem"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
+# defaultMessage: Select a menu path
+msgid "dropdownmenu-emptyActiveMenuPath"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+# defaultMessage: Link
+msgid "dropdownmenu-linkUrl"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
+# defaultMessage: Menu items
+msgid "dropdownmenu-menuitems-header"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+# defaultMessage: Mode
+msgid "dropdownmenu-mode"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+# defaultMessage: Dropdown
+msgid "dropdownmenu-mode-dropdown"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+# defaultMessage: Simple link
+msgid "dropdownmenu-mode-simpleLink"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
+# defaultMessage: Move menu item down
+msgid "dropdownmenu-move-menuitem-down"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
+# defaultMessage: Move menu item up
+msgid "dropdownmenu-move-menuitem-up"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+# defaultMessage: Navigation root
+msgid "dropdownmenu-navigationRoot"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
+# defaultMessage: Root path
+msgid "dropdownmenu-rootpath"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+# defaultMessage: "Show more" link
+msgid "dropdownmenu-showMoreLink"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+# defaultMessage: "Show more" link text
+msgid "dropdownmenu-showMoreText"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+# defaultMessage: Title
+msgid "dropdownmenu-title"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
+# defaultMessage: Visible
+msgid "dropdownmenu-visible"
 msgstr ""
 
 #: components/ItaliaTheme/View/VenueView
@@ -857,6 +985,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
+#: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Novità
 msgid "novita"
 msgstr ""
@@ -991,7 +1120,7 @@ msgstr ""
 msgid "related_doc"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView
+#: components/ItaliaTheme/View/Commons/RelatedItems
 #: components/ItaliaTheme/View/NewsItemView
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/ServizioView
@@ -1146,6 +1275,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
+#: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Servizi
 msgid "servizi"
 msgstr ""
@@ -1235,6 +1365,11 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/Metadata
 # defaultMessage: Tags
 msgid "subjects"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+# defaultMessage: Con il supporto di:
+msgid "supported_by"
 msgstr ""
 
 #: components/ItaliaTheme/View/VenueView

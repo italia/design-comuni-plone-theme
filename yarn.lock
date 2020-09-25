@@ -1957,8 +1957,8 @@
     "@types/node" ">= 8"
 
 "@plone/volto@plone/volto#rt_development":
-  version "7.12.0"
-  resolved "https://codeload.github.com/plone/volto/tar.gz/3d7f2144f78f6284202ff3cb2082d638c7341c0a"
+  version "8.1.0"
+  resolved "https://codeload.github.com/plone/volto/tar.gz/a7c276bbd476e750266db61ab64b872e6eaef92e"
   dependencies:
     "@babel/core" "7.9.6"
     "@babel/plugin-proposal-decorators" "7.8.3"
