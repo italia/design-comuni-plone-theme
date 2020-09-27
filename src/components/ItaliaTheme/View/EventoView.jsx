@@ -68,6 +68,10 @@ const messages = defineMessages({
     id: 'contatti_esterni',
     defaultMessage: 'Contatti esterni',
   },
+  contatti: {
+    id: 'Contatti',
+    defaultMessage: 'Contatti',
+  },
   ulteriori_informazioni: {
     id: 'ulteriori_informazioni',
     defaultMessage: "Box d'aiuto",
@@ -110,6 +114,21 @@ const EventoView = ({ content, location }) => {
   let documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
 
+  const getSupportatoDa = () => {
+    return content?.evento_supportato_da?.length > 0 && (
+      <>
+        <h5 className="mt-4 supported-by">Con il supporto di:</h5>
+        {content?.evento_supportato_da?.map((item) => (
+          <OfficeCard
+            key={item['@id']}
+            office={item}
+            extended={true}
+            icon={'it-pa'}
+          />
+        ))}
+      </>
+    )
+  }
   useEffect(() => {
     if (documentBody.current) {
       if (__CLIENT__) {
@@ -310,19 +329,27 @@ const EventoView = ({ content, location }) => {
               </article>
             ) : null}
 
-            {content?.evento_supportato_da?.length > 0 && (
-              <>
-                <h5 className="mt-4 supported-by">Con il supporto di:</h5>
-                {content?.evento_supportato_da?.map((item) => (
-                  <OfficeCard
-                    key={item['@id']}
-                    office={item}
-                    extended={true}
-                    icon={'it-pa'}
-                  />
-                ))}
-              </>
-            )}
+            {
+              content?.evento_supportato_da?.length > 0 ?
+                content?.organizzato_da_interno?.length === 0 &&
+                content?.organizzato_da_esterno?.data?.replace(
+                  /(<([^>]+)>)/g,
+                  '',
+                ) === '' ?
+                <article
+                  className="it-page-section anchor-offset mt-5"
+                  id="contatti"
+                >
+                  <h4 id="header-contatti">
+                    {intl.formatMessage(messages.contatti)}
+                  </h4>
+                  {getSupportatoDa()}
+                </article>
+                :
+                  getSupportatoDa()
+              : null
+            }
+
             {content && (
               <Events
                 content={content}
