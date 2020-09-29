@@ -1,5 +1,19 @@
 // external link stule
 .navbar {
+  &.has-megamenu {
+    li.nav-item {
+      &.active {
+        .dropdown {
+          a.nav-link {
+            border-left: 0;
+            border-color: #fff;
+            background: transparent;
+          }
+        }
+      }
+    }
+  }
+
   .dropdown-menu {
     .link-list-wrapper {
       .link-list {
