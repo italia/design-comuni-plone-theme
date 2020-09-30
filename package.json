@@ -9,7 +9,8 @@
     "src/addons/volto-multilingual-widget",
     "src/addons/volto-rss-block",
     "src/addons/volto-venue",
-    "src/addons/volto-subblocks"
+    "src/addons/volto-subblocks",
+    "src/addons/volto-dropdownmenu"
   ],
   "addons": [
     "volto-cookie-banner",
