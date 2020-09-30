@@ -101,11 +101,11 @@ const MegaMenu = ({ item, pathname }) => {
 
     const childrenGroups = [];
     const items = [];
-    item.navigationRoot.map((navRoot) => {
+    item.navigationRoot?.forEach((navRoot) => {
       if (item.navigationRoot.length > 1) {
         items.push({ ...navRoot, showAsHeader: true });
       }
-      navRoot.items?.map((subitem) => {
+      navRoot.items?.forEach((subitem) => {
         items.push(subitem);
       });
     });
