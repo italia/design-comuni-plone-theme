@@ -9,14 +9,16 @@
     "src/addons/volto-multilingual-widget",
     "src/addons/volto-rss-block",
     "src/addons/volto-venue",
-    "src/addons/volto-subblocks"
+    "src/addons/volto-subblocks",
+    "src/addons/volto-dropdownmenu"
   ],
   "addons": [
     "volto-cookie-banner",
     "volto-multilingual-widget",
     "volto-rss-block",
     "volto-venue",
-    "volto-subblocks"
+    "volto-subblocks",
+    "volto-dropdownmenu"
   ],
   "scripts": {
     "start": "razzle start",
@@ -49,6 +51,7 @@
       "volto-rss-block/(.*)$": "<rootDir>/src/addons/volto-rss-block/src/$1",
       "volto-cookie-banner/(.*)$": "<rootDir>/src/addons/volto-cookie-banner/src/$1",
       "volto-multilingual-widget/(.*)$": "<rootDir>/src/addons/volto-multilingual-widget/src/$1",
+      "volto-dropdownmenu/(.*)$": "<rootDir>/src/addons/volto-dropdownmenu/src/$1",
       "~/(.*)$": "<rootDir>/src/$1"
     },
     "testMatch": [
@@ -124,6 +127,7 @@
     "typeface-roboto-mono": "0.0.75",
     "typeface-titillium-web": "0.0.72",
     "volto-cookie-banner": "collective/volto-cookie-banner#v1.0.1",
+    "volto-dropdownmenu": "collective/volto-dropdownmenu#v1.0.0",
     "volto-multilingual-widget": "collective/volto-multilingual-widget#v1.0.1",
     "volto-rss-block": "redturtle/volto-rss-block#v1.0.0",
     "volto-subblocks": "collective/volto-subblocks#v1.0.0",

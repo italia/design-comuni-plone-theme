@@ -49,7 +49,7 @@ msgstr "Cerca"
 
 #: addons/volto-dropdownmenu/src/customizations/components/theme/Navigation/Navigation
 msgid "Close menu"
-msgstr ""
+msgstr "Chiudi il menu"
 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Color"
@@ -159,7 +159,7 @@ msgstr "Apri in un nuovo tab"
 
 #: addons/volto-dropdownmenu/src/customizations/components/theme/Navigation/Navigation
 msgid "Open menu"
-msgstr ""
+msgstr "Apri il menu"
 
 #: components/ItaliaTheme/Footer/FooterInfos
 msgid "PEC"
@@ -531,95 +531,95 @@ msgstr "Scarica"
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
 msgid "dropdownmenu-add-rootpath"
-msgstr ""
+msgstr "Aggiungi radice di navigazione"
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
 msgid "dropdownmenu-addmenuitem"
-msgstr ""
+msgstr "Aggiungi voce di menu"
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
 msgid "dropdownmenu-blocks"
-msgstr ""
+msgstr "Blocchi"
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
 msgid "dropdownmenu-blocks-description"
-msgstr ""
+msgstr "Aggiungi i blocchi che verranno mostrati nel megamenu"
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
 msgid "dropdownmenu-delete-button"
-msgstr ""
+msgstr "Elimina il menu"
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
 msgid "dropdownmenu-delete-menupath"
-msgstr ""
+msgstr "Elimina"
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
 msgid "dropdownmenu-deletemenuitem"
-msgstr ""
+msgstr "Elimina"
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
 msgid "dropdownmenu-deletemenuitem-button"
-msgstr ""
+msgstr "Elimina la voce di menu"
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
 msgid "dropdownmenu-emptyActiveMenuItem"
-msgstr ""
+msgstr "Seleziona una voce di menu"
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
 msgid "dropdownmenu-emptyActiveMenuPath"
-msgstr ""
+msgstr "Seleziona una radice di navigazione"
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
 msgid "dropdownmenu-linkUrl"
-msgstr ""
+msgstr "Link"
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
 msgid "dropdownmenu-menuitems-header"
-msgstr ""
+msgstr "Voci del menu"
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
 msgid "dropdownmenu-mode"
-msgstr ""
+msgstr "Modalità"
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
 msgid "dropdownmenu-mode-dropdown"
-msgstr ""
+msgstr "Megamenu"
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
 msgid "dropdownmenu-mode-simpleLink"
-msgstr ""
+msgstr "Link semplice"
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
 msgid "dropdownmenu-move-menuitem-down"
-msgstr ""
+msgstr "Sposta dopo"
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
 msgid "dropdownmenu-move-menuitem-up"
-msgstr ""
+msgstr "Sposta prima"
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
 msgid "dropdownmenu-navigationRoot"
-msgstr ""
+msgstr "Radici di navigazione"
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
 msgid "dropdownmenu-rootpath"
-msgstr ""
+msgstr "Radice del menu"
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
 msgid "dropdownmenu-showMoreLink"
-msgstr ""
+msgstr "Mostra il link ad altro"
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
 msgid "dropdownmenu-showMoreText"
-msgstr ""
+msgstr "Testo per il link ad altro"
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
 msgid "dropdownmenu-title"
-msgstr ""
+msgstr "Titolo"
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
 msgid "dropdownmenu-visible"
-msgstr ""
+msgstr "Visibile"
 
 #: components/ItaliaTheme/View/VenueView
 msgid "elementi_di_interesse"

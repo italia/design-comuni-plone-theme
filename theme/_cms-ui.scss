@@ -89,6 +89,14 @@ body.cms-ui {
     }
   }
 
+  .menu-configuration-widget {
+    .menu-blocks-container {
+      .DraftEditor-editorContainer .public-DraftEditor-content {
+        min-height: 19px;
+      }
+    }
+  }
+
   // .DraftEditor-root {
   //   font-family: $font-family-serif;
   //   h1,

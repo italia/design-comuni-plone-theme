@@ -11,6 +11,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
 import { flattenToAppURL, getBaseUrl } from '@plone/volto/helpers';
 import { getNavigation } from '@plone/volto/actions';
+import { getDropdownMenuNavitems } from '@italia/addons/volto-dropdownmenu/actions';
 // import {
 //   BITIcon,
 //   it_burger,
@@ -57,68 +58,86 @@ const Navigation = ({ pathname }) => {
   const [collapseOpen, setCollapseOpen] = useState(false);
   const intl = useIntl();
   const dispatch = useDispatch();
-  const items = useSelector((state) => state.navigation.items, isEqual);
 
+  const items = useSelector((state) => state.dropdownMenuNavItems?.result);
   useEffect(() => {
-    dispatch(getNavigation(getBaseUrl(pathname), 2));
-  }, [dispatch, pathname]);
+    dispatch(getDropdownMenuNavitems());
+  }, [dispatch]);
+  //const items = useSelector((state) => state.navigation.items, isEqual);
+
+  // useEffect(() => {
+  //   dispatch(getNavigation(getBaseUrl(pathname), 2));
+  // }, [dispatch, pathname]);
+
+  const menu =
+    items
+      .filter((menu) =>
+        (pathname?.length ? pathname : '/').match(new RegExp(menu.rootPath)),
+      )
+      .pop()?.items ?? [];
 
   return (
     <Header theme="" type="navbar">
-      <HeaderContent expand="lg" megamenu>
-        <HeaderToggler
-          aria-controls="nav1"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          onClick={() => setCollapseOpen(!collapseOpen)}
-        >
-          <Icon icon="it-burger" />
-        </HeaderToggler>
-        <Collapse
-          header
-          isOpen={collapseOpen}
-          navbar
-          onOverlayClick={() => setCollapseOpen(!collapseOpen)}
-        >
-          <div className="menu-wrapper">
-            <Nav navbar>
-              {items.map((item) => (
-                <MegaMenu
-                  item={item}
-                  pathname={pathname}
-                  key={item.url + 'mm'}
-                />
-              ))}
-            </Nav>
-            <Nav navbar className="navbar-secondary">
-              {argumentsItems.map((item) => (
-                <NavItem
-                  tag="li"
-                  active={isMenuActive(item.url, pathname)}
-                  key={item.url}
-                >
-                  <NavLink
-                    to={item.url === '' ? '/' : flattenToAppURL(item.url)}
-                    tag={Link}
-                    active={isMenuActive(item.url, pathname)}
+      {menu?.length > 0 ? (
+        <HeaderContent expand="lg" megamenu>
+          <HeaderToggler
+            aria-controls="nav1"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            onClick={() => setCollapseOpen(!collapseOpen)}
+          >
+            <Icon icon="it-burger" />
+          </HeaderToggler>
+          <Collapse
+            header
+            isOpen={collapseOpen}
+            navbar
+            onOverlayClick={() => setCollapseOpen(!collapseOpen)}
+          >
+            <div className="menu-wrapper">
+              <Nav navbar>
+                {menu
+                  ?.filter((item) => item.visible)
+                  ?.map((item, index) => (
+                    <MegaMenu
+                      item={item}
+                      pathname={pathname}
+                      key={index + 'mm'}
+                    />
+                  ))}
+              </Nav>
+              <Nav navbar className="navbar-secondary">
+                {argumentsItems.map((item) => (
+                  <NavItem
+                    tag="li"
+                    active={isMenuActive(flattenToAppURL(item.url), pathname)}
+                    key={item.url}
                   >
-                    <span
-                      className={item.type === 'all' ? 'font-weight-bold' : ''}
+                    <NavLink
+                      to={item.url === '' ? '/' : flattenToAppURL(item.url)}
+                      tag={Link}
+                      active={isMenuActive(flattenToAppURL(item.url), pathname)}
                     >
-                      {item.title}
-                    </span>
-                    {isMenuActive(item.url, pathname) && (
-                      <span className="sr-only">
-                        {intl.formatMessage(messages.menu_selected)}
+                      <span
+                        className={
+                          item.type === 'all' ? 'font-weight-bold' : ''
+                        }
+                      >
+                        {item.title}
                       </span>
-                    )}
-                  </NavLink>
-                </NavItem>
-              ))}
-            </Nav>
-          </div>
-        </Collapse>
-      </HeaderContent>
+                      {isMenuActive(flattenToAppURL(item.url), pathname) && (
+                        <span className="sr-only">
+                          {intl.formatMessage(messages.menu_selected)}
+                        </span>
+                      )}
+                    </NavLink>
+                  </NavItem>
+                ))}
+              </Nav>
+            </div>
+          </Collapse>
+        </HeaderContent>
+      ) : null}
     </Header>
   );
 };
