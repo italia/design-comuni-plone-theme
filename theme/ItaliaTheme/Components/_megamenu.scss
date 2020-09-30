@@ -1,0 +1,22 @@
+// removes full-width and columns for blocks in menu configuration and view
+.dropdownmenu-blocks-column,
+.menu-configuration-widget .menu-blocks-container {
+  .full-width {
+    left: auto !important;
+    position: static;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  body.cms-ui.has-toolbar.has-sidebar-collapsed & {
+    .ui.container {
+      width: 100% !important;
+    }
+  }
+
+  .card-teaser {
+    flex: 0 0 47% !important;
+  }
+}

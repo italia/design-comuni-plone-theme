@@ -62,6 +62,10 @@ const isActive = (item, pathname) => {
   );
 };
 
+const isChildActive = (itemUrl, pathname) => {
+  return pathname.indexOf(itemUrl) > -1;
+};
+
 const MegaMenu = ({ item, pathname }) => {
   const intl = useIntl();
   const blocksFieldname = getBlocksFieldname(item);
@@ -159,7 +163,10 @@ const MegaMenu = ({ item, pathname }) => {
                               onClick={() => setMenuStatus(false)}
                               header={child.showAsHeader}
                               className={cx({
-                                active: isActive(child, pathname),
+                                active: isChildActive(
+                                  flattenToAppURL(child['@id']),
+                                  pathname,
+                                ),
                               })}
                             >
                               <span>{child.title}</span>
@@ -172,7 +179,7 @@ const MegaMenu = ({ item, pathname }) => {
                 </Row>
               </Col>
               {hasBlocks && (
-                <Col lg={6} className="m-4 m-lg-0">
+                <Col lg={6} className="m-4 m-lg-0 dropdownmenu-blocks-column">
                   {map(item[blocksLayoutFieldname].items, (block) => {
                     const blockType = item[blocksFieldname]?.[block]?.['@type'];
                     if (['title', 'pageDescription'].indexOf(blockType) > -1)
