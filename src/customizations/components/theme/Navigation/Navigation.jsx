@@ -110,13 +110,13 @@ const Navigation = ({ pathname }) => {
                 {argumentsItems.map((item) => (
                   <NavItem
                     tag="li"
-                    active={isMenuActive(item.url, pathname)}
+                    active={isMenuActive(flattenToAppURL(item.url), pathname)}
                     key={item.url}
                   >
                     <NavLink
                       to={item.url === '' ? '/' : flattenToAppURL(item.url)}
                       tag={Link}
-                      active={isMenuActive(item.url, pathname)}
+                      active={isMenuActive(flattenToAppURL(item.url), pathname)}
                     >
                       <span
                         className={
@@ -125,7 +125,7 @@ const Navigation = ({ pathname }) => {
                       >
                         {item.title}
                       </span>
-                      {isMenuActive(item.url, pathname) && (
+                      {isMenuActive(flattenToAppURL(item.url), pathname) && (
                         <span className="sr-only">
                           {intl.formatMessage(messages.menu_selected)}
                         </span>
