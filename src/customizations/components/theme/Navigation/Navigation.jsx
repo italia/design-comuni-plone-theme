@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import { getDropdownMenuNavitems } from '@italia/addons/volto-dropdownmenu/actions';
+import { getDropdownMenuNavitems } from '@italia/addons/volto-dropdownmenu';
 import {
   Header,
   HeaderContent,
