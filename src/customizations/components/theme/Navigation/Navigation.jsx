@@ -6,17 +6,11 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { isEqual, isMatch } from 'lodash';
+import { isMatch } from 'lodash';
 import { useDispatch, useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
-import { flattenToAppURL, getBaseUrl } from '@plone/volto/helpers';
-import { getNavigation } from '@plone/volto/actions';
+import { flattenToAppURL } from '@plone/volto/helpers';
 import { getDropdownMenuNavitems } from '@italia/addons/volto-dropdownmenu/actions';
-// import {
-//   BITIcon,
-//   it_burger,
-//   it_close_circle,
-// } from '@italia/components/ItaliaTheme/Icons';
 import {
   Header,
   HeaderContent,
@@ -55,17 +49,49 @@ const Navigation = ({ pathname }) => {
   const intl = useIntl();
   const dispatch = useDispatch();
 
-  const items = useSelector((state) => state.dropdownMenuNavItems?.result);
+  const items = useSelector(state => state.dropdownMenuNavItems?.result);
   useEffect(() => {
     dispatch(getDropdownMenuNavitems());
   }, [dispatch]);
 
   const menu =
     items
-      .filter((menu) =>
+      .filter(menu =>
         (pathname?.length ? pathname : '/').match(new RegExp(menu.rootPath)),
       )
       .pop()?.items ?? [];
+
+  const getAnchorTarget = nodeElement => {
+    if (nodeElement.nodeName === 'A') {
+      return nodeElement;
+    } else if (nodeElement.parentElement?.nodeName === 'A') {
+      return nodeElement.parentElement;
+    } else {
+      return null;
+    }
+  };
+
+  useEffect(() => {
+    const blocksClickListener = e => {
+      const menuLinks = [
+        ...document.querySelectorAll('.menu-wrapper a:not([aria-haspopup])'),
+      ];
+
+      if (
+        menuLinks?.length === 0 ||
+        menuLinks?.indexOf(getAnchorTarget(e.target)) < 0
+      ) {
+        return;
+      }
+
+      setCollapseOpen(false);
+    };
+
+    document.body.addEventListener('click', blocksClickListener);
+
+    return () =>
+      document.body.removeEventListener('click', blocksClickListener);
+  }, []);
 
   return (
     <Header theme="" type="navbar">
@@ -88,7 +114,7 @@ const Navigation = ({ pathname }) => {
             <div className="menu-wrapper">
               <Nav navbar>
                 {menu
-                  ?.filter((item) => item.visible)
+                  ?.filter(item => item.visible)
                   ?.map((item, index) => (
                     <MegaMenu
                       item={item}
@@ -98,7 +124,7 @@ const Navigation = ({ pathname }) => {
                   ))}
               </Nav>
               <Nav navbar className="navbar-secondary">
-                {argumentsItems.map((item) => (
+                {argumentsItems.map(item => (
                   <NavItem
                     tag="li"
                     active={isMenuActive(flattenToAppURL(item.url), pathname)}
