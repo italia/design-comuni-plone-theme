@@ -46,10 +46,6 @@ const argumentsItems = [
   { title: 'Tutti gli argomenti...', url: '/argomenti', type: 'all' },
 ];
 
-// const isSectionActive = (url, pathname) =>
-//   (url === '' && pathname === '/') ||
-//   (url !== '' && isMatch(pathname.split('/'), url.split('/')));
-
 const isMenuActive = (url, pathname = '') =>
   (url === '' && (pathname === '/' || pathname === '')) ||
   (url !== '' && isMatch(pathname.split('/'), url.split('/')));
@@ -63,11 +59,6 @@ const Navigation = ({ pathname }) => {
   useEffect(() => {
     dispatch(getDropdownMenuNavitems());
   }, [dispatch]);
-  //const items = useSelector((state) => state.navigation.items, isEqual);
-
-  // useEffect(() => {
-  //   dispatch(getNavigation(getBaseUrl(pathname), 2));
-  // }, [dispatch, pathname]);
 
   const menu =
     items

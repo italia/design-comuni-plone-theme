@@ -3,7 +3,7 @@
  * @module components/theme/Navigation/Navigation
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { map } from 'lodash';
 import cx from 'classnames';
@@ -73,6 +73,38 @@ const MegaMenu = ({ item, pathname }) => {
   const isItemActive = isActive(item, pathname);
 
   const [menuStatus, setMenuStatus] = useState(false);
+
+  const getAnchorTarget = (nodeElement) => {
+    if (nodeElement.nodeName === 'A') {
+      return nodeElement;
+    } else if (nodeElement.parentElement?.nodeName === 'A') {
+      return nodeElement.parentElement;
+    } else {
+      return null;
+    }
+  };
+
+  useEffect(() => {
+    const blocksClickListener = (e) => {
+      const dropdownmenuLinks = [
+        ...document.querySelectorAll('.dropdown-menu.show a'),
+      ];
+
+      if (
+        dropdownmenuLinks?.length === 0 ||
+        dropdownmenuLinks?.indexOf(getAnchorTarget(e.target)) < 0
+      ) {
+        return;
+      }
+
+      setMenuStatus(false);
+    };
+
+    document.body.addEventListener('click', blocksClickListener);
+
+    return () =>
+      document.body.removeEventListener('click', blocksClickListener);
+  }, []);
 
   if (item.mode === 'simpleLink') {
     return (
