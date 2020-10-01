@@ -94,8 +94,7 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
                 <Pagination
                   activePage={currentPage}
                   totalPages={Math.ceil(
-                    querystringResults[data.block].total /
-                      (data.b_size || settings.defaultPageSize),
+                    content.items_total / settings.defaultPageSize,
                   )}
                   onPageChange={handleQueryPaginationChange}
                 />
