@@ -115,20 +115,22 @@ const EventoView = ({ content, location }) => {
   const [sideMenuElements, setSideMenuElements] = useState(null);
 
   const getSupportatoDa = () => {
-    return content?.evento_supportato_da?.length > 0 && (
-      <>
-        <h5 className="mt-4 supported-by">Con il supporto di:</h5>
-        {content?.evento_supportato_da?.map((item) => (
-          <OfficeCard
-            key={item['@id']}
-            office={item}
-            extended={true}
-            icon={'it-pa'}
-          />
-        ))}
-      </>
-    )
-  }
+    return (
+      content?.evento_supportato_da?.length > 0 && (
+        <>
+          <h5 className="mt-4 supported-by">Con il supporto di:</h5>
+          {content?.evento_supportato_da?.map((item) => (
+            <OfficeCard
+              key={item['@id']}
+              office={item}
+              extended={true}
+              icon={'it-pa'}
+            />
+          ))}
+        </>
+      )
+    );
+  };
   useEffect(() => {
     if (documentBody.current) {
       if (__CLIENT__) {
@@ -264,8 +266,8 @@ const EventoView = ({ content, location }) => {
               />
             )}
             {content?.organizzato_da_esterno?.data?.replace(
-                /(<([^>]+)>)/g,
-                '',
+              /(<([^>]+)>)/g,
+              '',
             ) ? (
               <article
                 className="it-page-section anchor-offset mt-5"
@@ -284,8 +286,10 @@ const EventoView = ({ content, location }) => {
                   </CardTitle>
                   <CardBody tag="div" className={'card-body pr-3'}>
                     <p
-                      className='text-serif'
-                      dangerouslySetInnerHTML={{ __html: content.organizzato_da_esterno?.data }}
+                      className="text-serif"
+                      dangerouslySetInnerHTML={{
+                        __html: content.organizzato_da_esterno?.data,
+                      }}
                     />
                     {content?.contatto_reperibilita && (
                       <p className="card-text mt-3">
@@ -300,7 +304,8 @@ const EventoView = ({ content, location }) => {
               </article>
             ) : null}
 
-            {content?.organizzato_da_interno?.length > 0 ? (
+            {content?.organizzato_da_interno?.length > 0 ||
+            content?.evento_supportato_da?.length > 0 ? (
               <article
                 className="it-page-section anchor-offset mt-5"
                 id="contatti-interno"
@@ -310,7 +315,9 @@ const EventoView = ({ content, location }) => {
                 </h4>
                 {content?.organizzato_da_interno?.map((item, index) => (
                   <OfficeCard
-                    margin_bottom={index < content?.organizzato_da_interno?.length - 1}
+                    margin_bottom={
+                      index < content?.organizzato_da_interno?.length - 1
+                    }
                     key={item['@id']}
                     office={item}
                     extended={true}
@@ -326,29 +333,10 @@ const EventoView = ({ content, location }) => {
                     )}
                   </OfficeCard>
                 ))}
+
+                {getSupportatoDa()}
               </article>
             ) : null}
-
-            {
-              content?.evento_supportato_da?.length > 0 ?
-                content?.organizzato_da_interno?.length === 0 &&
-                content?.organizzato_da_esterno?.data?.replace(
-                  /(<([^>]+)>)/g,
-                  '',
-                ) === '' ?
-                <article
-                  className="it-page-section anchor-offset mt-5"
-                  id="contatti"
-                >
-                  <h4 id="header-contatti">
-                    {intl.formatMessage(messages.contatti)}
-                  </h4>
-                  {getSupportatoDa()}
-                </article>
-                :
-                  getSupportatoDa()
-              : null
-            }
 
             {content && (
               <Events
