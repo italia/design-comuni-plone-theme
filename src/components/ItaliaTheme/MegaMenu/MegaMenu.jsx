@@ -177,6 +177,10 @@ const MegaMenu = ({ item, pathname }) => {
         >
           <DropdownToggle aria-haspopup color="secondary" nav>
             {item.title}
+            <Icon
+              icon="it-expand"
+              className={cx('megamenu-toggle-icon', { open: menuStatus })}
+            />
           </DropdownToggle>
           <DropdownMenu flip tag="div">
             <Row>

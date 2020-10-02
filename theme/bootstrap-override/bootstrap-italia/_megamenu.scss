@@ -71,3 +71,44 @@
     }
   }
 }
+
+.megamenu {
+  .megamenu-toggle-icon {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.5rem;
+    fill: #fff;
+    line-height: 1;
+    transform: rotateX(0);
+    transition: transform 0.3s ease;
+
+    &.open {
+      transform: rotateX(180deg);
+    }
+
+    @media (max-width: 991px) {
+      fill: $primary;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .dropdown.show {
+      > a.nav-link[aria-expanded='true'] {
+        position: relative;
+
+        &::after {
+          position: absolute;
+          bottom: -5px;
+          left: calc(50% - 10px);
+          width: 0;
+          height: 0;
+          border-width: 0 10px 10px;
+          border-style: solid;
+          border-color: transparent transparent #fff;
+          content: '';
+        }
+      }
+    }
+  }
+}
