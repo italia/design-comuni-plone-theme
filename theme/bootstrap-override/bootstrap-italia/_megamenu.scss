@@ -71,3 +71,20 @@
     }
   }
 }
+
+.megamenu {
+  .megamenu-toggle-icon {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.5rem;
+    fill: #fff;
+    line-height: 1;
+    transform: rotateX(0);
+    transition: transform 0.3s ease;
+
+    &.open {
+      transform: rotateX(180deg);
+    }
+  }
+}
