@@ -53,7 +53,6 @@ const Sponsor = ({ item }) => {
     </>
   ) : null;
 };
-
 /**
  * Sponsors view component class.
  * @function Sponsors

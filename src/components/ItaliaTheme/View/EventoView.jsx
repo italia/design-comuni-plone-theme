@@ -35,6 +35,8 @@ import {
   CardBody,
   CardTitle,
 } from 'design-react-kit/dist/design-react-kit';
+import { useDispatch, useSelector } from 'react-redux';
+import { searchContent, resetSearchContent } from '@plone/volto/actions';
 
 const messages = defineMessages({
   notizie_in_evidenza: {
@@ -58,8 +60,16 @@ const messages = defineMessages({
     id: 'luogo',
     defaultMessage: 'Luogo',
   },
+  contatti_interni: {
+    id: 'contatti_interni',
+    defaultMessage: 'Contatti interni',
+  },
+  contatti_esterni: {
+    id: 'contatti_esterni',
+    defaultMessage: 'Contatti esterni',
+  },
   contatti: {
-    id: 'contatti',
+    id: 'Contatti',
     defaultMessage: 'Contatti',
   },
   ulteriori_informazioni: {
@@ -104,6 +114,23 @@ const EventoView = ({ content, location }) => {
   let documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
 
+  const getSupportatoDa = () => {
+    return (
+      content?.evento_supportato_da?.length > 0 && (
+        <>
+          <h5 className="mt-4 supported-by">Con il supporto di:</h5>
+          {content?.evento_supportato_da?.map((item) => (
+            <OfficeCard
+              key={item['@id']}
+              office={item}
+              extended={true}
+              icon={'it-pa'}
+            />
+          ))}
+        </>
+      )
+    );
+  };
   useEffect(() => {
     if (documentBody.current) {
       if (__CLIENT__) {
@@ -111,6 +138,7 @@ const EventoView = ({ content, location }) => {
       }
     }
   }, [documentBody]);
+
   return (
     <>
       <div className="container px-4 my-4 newsitem-view">
@@ -246,7 +274,7 @@ const EventoView = ({ content, location }) => {
                 id="contatti"
               >
                 <h4 id="header-contatti">
-                  {intl.formatMessage(messages.contatti)}
+                  {intl.formatMessage(messages.contatti_esterni)}
                 </h4>
                 <Card
                   className="card card-teaser rounded shadow mt-3"
@@ -276,13 +304,14 @@ const EventoView = ({ content, location }) => {
               </article>
             ) : null}
 
-            {content?.organizzato_da_interno?.length > 0 ? (
+            {content?.organizzato_da_interno?.length > 0 ||
+            content?.evento_supportato_da?.length > 0 ? (
               <article
                 className="it-page-section anchor-offset mt-5"
                 id="contatti-interno"
               >
                 <h4 id="header-contatti-interno">
-                  {intl.formatMessage(messages.contatti)}
+                  {intl.formatMessage(messages.contatti_interni)}
                 </h4>
                 {content?.organizzato_da_interno?.map((item, index) => (
                   <OfficeCard
@@ -305,23 +334,10 @@ const EventoView = ({ content, location }) => {
                   </OfficeCard>
                 ))}
 
-                {content?.evento_supportato_da?.length > 0 && (
-                  <>
-                    <h5 className="mt-4 supported-by">
-                      {intl.formatMessage(messages.supported_by)}
-                    </h5>
-                    {content?.evento_supportato_da?.map((item) => (
-                      <OfficeCard
-                        key={item['@id']}
-                        office={item}
-                        extended={true}
-                        icon={'it-pa'}
-                      />
-                    ))}
-                  </>
-                )}
+                {getSupportatoDa()}
               </article>
             ) : null}
+
             {content && (
               <Events
                 content={content}
@@ -336,7 +352,7 @@ const EventoView = ({ content, location }) => {
               {content?.ulteriori_informazioni?.data?.replace(
                 /(<([^>]+)>)/g,
                 '',
-              ) ||
+              ) != '' ||
               content?.event_url ||
               content?.patrocinato_da ||
               content?.strutture_politiche.length > 0 ||
@@ -404,12 +420,10 @@ const EventoView = ({ content, location }) => {
           </section>
         </div>
       </div>
-
       <RelatedItems content={content} />
     </>
   );
 };
-
 /**
  * Property types.
  * @property {Object} propTypes Property types.

@@ -1,5 +1,4 @@
 import { defineMessages, useIntl } from 'react-intl';
-
 import React from 'react';
 import moment from 'moment/min/moment-with-locales';
 import { rrulestr } from 'rrule';
