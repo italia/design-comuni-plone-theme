@@ -98,6 +98,14 @@ const messages = defineMessages({
     id: 'supported_by',
     defaultMessage: 'Con il supporto di:',
   },
+  telefono: {
+    id: 'telefono',
+    defaultMessage: 'Tel',
+  },
+  email: {
+    id: 'email',
+    defaultMessage: 'E-mail',
+  },
 });
 
 /**
@@ -329,9 +337,6 @@ const EventoView = ({ content, location }) => {
                   '',
                 ) ? (
                   <div className="mb-5">
-                    <h6 className="text-serif font-weight-bold">
-                      {intl.formatMessage(messages.contatti_esterni)}:
-                    </h6>
                     <Card
                       className="card card-teaser rounded shadow mt-3"
                       noWrapper={true}
@@ -347,9 +352,25 @@ const EventoView = ({ content, location }) => {
                             __html: content.organizzato_da_esterno?.data,
                           }}
                         />
+                        {content?.telefono && (
+                          <p className="card-text mt-3">
+                            {intl.formatMessage(messages.telefono)}:{' '}
+                            <a href={`tel:${content.telefono}`}>
+                              {content.telefono}
+                            </a>
+                          </p>
+                        )}
                         {content?.reperibilita && (
                           <p className="card-text mt-3">
                             {content?.reperibilita?.replace(/(<([^>]+)>)/g, '')}
+                          </p>
+                        )}
+                        {content?.email && (
+                          <p className="card-text mt-3">
+                            {intl.formatMessage(messages.email)}:{' '}
+                            <a href={`mailto:${content.email}`}>
+                              {content.email}
+                            </a>
                           </p>
                         )}
                       </CardBody>
@@ -359,8 +380,7 @@ const EventoView = ({ content, location }) => {
 
                 {/* ---contatti interno */}
 
-                {content?.organizzato_da_interno?.length > 0 ||
-                content?.supportato_da?.length > 0 ? (
+                {content?.organizzato_da_interno?.length > 0 && (
                   <div className="mb-5">
                     <h6 className="text-serif font-weight-bold">
                       {intl.formatMessage(messages.contatti_interni)}:
@@ -385,10 +405,11 @@ const EventoView = ({ content, location }) => {
                         )}
                       </OfficeCard>
                     ))}
-
-                    {getSupportatoDa()}
                   </div>
-                ) : null}
+                )}
+
+                {/* ---supportato da */}
+                {getSupportatoDa()}
               </article>
             )}
 
