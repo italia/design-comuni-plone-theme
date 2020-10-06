@@ -24,6 +24,7 @@ import {
   EventLocations,
   Sponsors,
   RelatedItems,
+  RichText,
 } from '@italia/components/ItaliaTheme/View';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -205,14 +206,10 @@ const EventoView = ({ content, location }) => {
                 '',
               ) && (
                 <div className="mb-5">
-                  <h6 className="text-serif font-weight-bold">
-                    {intl.formatMessage(messages.event_destinatari)}
-                  </h6>
-                  <div
-                    className={'text-serif'}
-                    dangerouslySetInnerHTML={{
-                      __html: content?.descrizione_destinatari?.data,
-                    }}
+                  <RichText
+                    title_size="h6"
+                    title={intl.formatMessage(messages.event_destinatari)}
+                    content={content?.descrizione_destinatari.data}
                   />
                 </div>
               )}
@@ -280,12 +277,7 @@ const EventoView = ({ content, location }) => {
             >
               <Dates content={content} />
               {content?.orari?.data?.replace(/(<([^>]+)>)/g, '') && (
-                <p
-                  className="text-serif"
-                  dangerouslySetInnerHTML={{
-                    __html: content.orari?.data,
-                  }}
-                />
+                <RichText content={content?.orari.data} />
               )}
             </RichTextArticle>
 
@@ -346,11 +338,8 @@ const EventoView = ({ content, location }) => {
                         <Icon icon="it-telephone" padding={true} />
                       </CardTitle>
                       <CardBody tag="div" className={'card-body pr-3'}>
-                        <p
-                          className="text-serif"
-                          dangerouslySetInnerHTML={{
-                            __html: content.organizzato_da_esterno?.data,
-                          }}
+                        <RichText
+                          content={content.organizzato_da_esterno?.data}
                         />
                         {content?.telefono && (
                           <p className="card-text mt-3">
@@ -452,12 +441,7 @@ const EventoView = ({ content, location }) => {
                       <strong>
                         {intl.formatMessage(messages.patrocinato_da)}
                       </strong>
-                      <div
-                        className="text-serif"
-                        dangerouslySetInnerHTML={{
-                          __html: content?.patrocinato_da,
-                        }}
-                      />
+                      <RichText content={content?.patrocinato_da} />
                     </div>
                   )}
 

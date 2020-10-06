@@ -12,6 +12,7 @@ import {
   Attachment,
   SideMenu,
   PageHeader,
+  RichText,
   RichTextArticle,
   OfficeCard,
   Gallery,
@@ -231,12 +232,10 @@ const PersonaView = ({ content }) => {
                     {content?.competenze?.data.replace(/(<([^>]+)>)/g, '')
                       .length > 0 && (
                       <div className="mb-5 mt-3">
-                        <h5>{intl.formatMessage(messages.competenze)}:</h5>
-                        <p
-                          className="text-serif"
-                          dangerouslySetInnerHTML={{
-                            __html: content?.competenze?.data,
-                          }}
+                        <RichText
+                          title_size="h5"
+                          title={`${intl.formatMessage(messages.competenze)}:`}
+                          content={content?.competenze?.data}
                         />
                       </div>
                     )}
@@ -244,12 +243,10 @@ const PersonaView = ({ content }) => {
                     {content?.deleghe?.data.replace(/(<([^>]+)>)/g, '').length >
                       0 && (
                       <div className="mb-5 mt-3">
-                        <h5>{intl.formatMessage(messages.deleghe)}:</h5>
-                        <p
-                          className="text-serif"
-                          dangerouslySetInnerHTML={{
-                            __html: content?.deleghe?.data,
-                          }}
+                        <RichText
+                          title_size="h5"
+                          title={`${intl.formatMessage(messages.deleghe)}:`}
+                          content={content?.deleghe?.data}
                         />
                       </div>
                     )}
@@ -275,12 +272,10 @@ const PersonaView = ({ content }) => {
                     {content?.biografia?.data.replace(/(<([^>]+)>)/g, '')
                       .length > 0 && (
                       <div className="mb-5 mt-3">
-                        <h5>{intl.formatMessage(messages.biografia)}:</h5>
-                        <p
-                          className="text-serif"
-                          dangerouslySetInnerHTML={{
-                            __html: content?.biografia?.data,
-                          }}
+                        <RichText
+                          title_size="h5"
+                          title={`${intl.formatMessage(messages.biografia)}:`}
+                          content={content?.biografia?.data}
                         />
                       </div>
                     )}
