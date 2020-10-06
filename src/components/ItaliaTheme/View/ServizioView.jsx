@@ -220,7 +220,7 @@ const ServizioView = ({ content }) => {
               content.autenticazione ||
               content.prenota_appuntamento?.data ||
               content.dove_rivolgersi?.length > 0 ||
-              content.dover_rivolgersi_extra?.data) && (
+              content.dove_rivolgersi_extra?.data) && (
               <RichTextArticle
                 title={intl.formatMessage(messages.accedere_al_servizio)}
                 tag_id="accedere_al_servizio"

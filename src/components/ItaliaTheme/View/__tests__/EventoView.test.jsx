@@ -34,7 +34,7 @@ const mock_mandatory = {
     encoding: 'utf-8',
   },
   description: '',
-  descrizione_destinatari: {
+  a_chi_si_rivolge: {
     'content-type': 'text/html',
     data: '<p>no</p>',
     encoding: 'utf-8',

@@ -35,8 +35,6 @@ import {
   CardBody,
   CardTitle,
 } from 'design-react-kit/dist/design-react-kit';
-import { useDispatch, useSelector } from 'react-redux';
-import { searchContent, resetSearchContent } from '@plone/volto/actions';
 
 const messages = defineMessages({
   notizie_in_evidenza: {
@@ -88,6 +86,10 @@ const messages = defineMessages({
     id: 'event_destinatari',
     defaultMessage: "L'evento è di interesse per:",
   },
+  event_web_site: {
+    id: 'event_web_site',
+    defaultMessage: "Sito web dell'evento:",
+  },
   strutture_politiche: {
     id: 'event_strutture_politiche',
     defaultMessage: 'Strutture politiche coinvolte',
@@ -116,10 +118,10 @@ const EventoView = ({ content, location }) => {
 
   const getSupportatoDa = () => {
     return (
-      content?.evento_supportato_da?.length > 0 && (
+      content?.supportato_da?.length > 0 && (
         <>
           <h5 className="mt-4 supported-by">Con il supporto di:</h5>
-          {content?.evento_supportato_da?.map((item) => (
+          {content?.supportato_da?.map((item) => (
             <OfficeCard
               key={item['@id']}
               office={item}
@@ -178,7 +180,7 @@ const EventoView = ({ content, location }) => {
                 <Gallery content={content} folder_name={'multimedia'} />
               )}
 
-              {content?.descrizione_destinatari?.data && (
+              {content?.a_chi_si_rivolge?.data && (
                 <div className="mb-5">
                   <h6 className="text-serif font-weight-bold">
                     {intl.formatMessage(messages.event_destinatari)}
@@ -186,7 +188,7 @@ const EventoView = ({ content, location }) => {
                   <div
                     className={'text-serif'}
                     dangerouslySetInnerHTML={{
-                      __html: content?.descrizione_destinatari?.data,
+                      __html: content?.a_chi_si_rivolge?.data,
                     }}
                   />
                 </div>
@@ -265,78 +267,105 @@ const EventoView = ({ content, location }) => {
                 title={'Documenti'}
               />
             )}
-            {content?.organizzato_da_esterno?.data?.replace(
-              /(<([^>]+)>)/g,
-              '',
-            ) ? (
+
+            {/* ---contatti */}
+            {(content?.organizzato_da_esterno?.data?.replace(/(<([^>]+)>)/g, '')
+              .length > 0 ||
+              content?.organizzato_da_interno.length > 0 ||
+              content?.supportato_da?.length > 0 ||
+              content.web?.length > 0) && (
               <article
                 className="it-page-section anchor-offset mt-5"
                 id="contatti"
               >
                 <h4 id="header-contatti">
-                  {intl.formatMessage(messages.contatti_esterni)}
+                  {intl.formatMessage(messages.contatti)}
                 </h4>
-                <Card
-                  className="card card-teaser rounded shadow mt-3"
-                  noWrapper={true}
-                  tag="div"
-                >
-                  <CardTitle tag="h5">
-                    <Icon icon="it-telephone" padding={true} />
-                  </CardTitle>
-                  <CardBody tag="div" className={'card-body pr-3'}>
-                    <p
-                      className="text-serif"
-                      dangerouslySetInnerHTML={{
-                        __html: content.organizzato_da_esterno?.data,
-                      }}
-                    />
-                    {content?.contatto_reperibilita && (
-                      <p className="card-text mt-3">
-                        {content?.contatto_reperibilita?.replace(
-                          /(<([^>]+)>)/g,
-                          '',
-                        )}
-                      </p>
-                    )}
-                  </CardBody>
-                </Card>
-              </article>
-            ) : null}
 
-            {content?.organizzato_da_interno?.length > 0 ||
-            content?.evento_supportato_da?.length > 0 ? (
-              <article
-                className="it-page-section anchor-offset mt-5"
-                id="contatti-interno"
-              >
-                <h4 id="header-contatti-interno">
-                  {intl.formatMessage(messages.contatti_interni)}
-                </h4>
-                {content?.organizzato_da_interno?.map((item, index) => (
-                  <OfficeCard
-                    margin_bottom={
-                      index < content?.organizzato_da_interno?.length - 1
-                    }
-                    key={item['@id']}
-                    office={item}
-                    extended={true}
-                    icon={'it-telephone'}
-                  >
-                    {content?.contatto_reperibilita && (
-                      <p className="card-text mt-3">
-                        {content?.contatto_reperibilita?.replace(
-                          /(<([^>]+)>)/g,
-                          '',
-                        )}
-                      </p>
-                    )}
-                  </OfficeCard>
-                ))}
+                {/* ---web */}
+                {content?.web?.length > 0 && (
+                  <div className="mb-5 mt-3">
+                    <h6 className="text-serif font-weight-bold">
+                      {intl.formatMessage(messages.event_web_site)}
+                    </h6>
+                    <a
+                      href={content.web}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {content.web}
+                    </a>
+                  </div>
+                )}
 
-                {getSupportatoDa()}
+                {/* ---organizzato da esterno */}
+                {content?.organizzato_da_esterno?.data?.replace(
+                  /(<([^>]+)>)/g,
+                  '',
+                ) ? (
+                  <div className="mb-5">
+                    <h6 className="text-serif font-weight-bold">
+                      {intl.formatMessage(messages.contatti_esterni)}
+                    </h6>
+                    <Card
+                      className="card card-teaser rounded shadow mt-3"
+                      noWrapper={true}
+                      tag="div"
+                    >
+                      <CardTitle tag="h5">
+                        <Icon icon="it-telephone" padding={true} />
+                      </CardTitle>
+                      <CardBody tag="div" className={'card-body pr-3'}>
+                        <p
+                          className="text-serif"
+                          dangerouslySetInnerHTML={{
+                            __html: content.organizzato_da_esterno?.data,
+                          }}
+                        />
+                        {content?.reperibilita && (
+                          <p className="card-text mt-3">
+                            {content?.reperibilita?.replace(/(<([^>]+)>)/g, '')}
+                          </p>
+                        )}
+                      </CardBody>
+                    </Card>
+                  </div>
+                ) : null}
+
+                {/* ---contatti interno */}
+
+                {content?.organizzato_da_interno?.length > 0 ||
+                content?.supportato_da?.length > 0 ? (
+                  <div className="mb-5">
+                    <h6 className="text-serif font-weight-bold">
+                      {intl.formatMessage(messages.contatti_interni)}
+                    </h6>
+                    {content?.organizzato_da_interno?.map((item, index) => (
+                      <OfficeCard
+                        margin_bottom={
+                          index < content?.organizzato_da_interno?.length - 1
+                        }
+                        key={item['@id']}
+                        office={item}
+                        extended={true}
+                        icon={'it-telephone'}
+                      >
+                        {content?.contatto_reperibilita && (
+                          <p className="card-text mt-3">
+                            {content?.contatto_reperibilita?.replace(
+                              /(<([^>]+)>)/g,
+                              '',
+                            )}
+                          </p>
+                        )}
+                      </OfficeCard>
+                    ))}
+
+                    {getSupportatoDa()}
+                  </div>
+                ) : null}
               </article>
-            ) : null}
+            )}
 
             {content && (
               <Events
@@ -451,7 +480,7 @@ EventoView.propTypes = {
       data: PropTypes.string,
     }),
 
-    descrizione_destinatari: PropTypes.shape({
+    a_chi_si_rivolge: PropTypes.shape({
       data: PropTypes.string,
     }),
 
@@ -463,7 +492,7 @@ EventoView.propTypes = {
     }),
     items: PropTypes.array,
     strutture_politiche: PropTypes.array,
-    evento_supportato_da: PropTypes.array,
+    supportato_da: PropTypes.array,
     organizzato_da_interno: PropTypes.array,
     persone_amministrazione: PropTypes.array,
     modified: PropTypes.string,
