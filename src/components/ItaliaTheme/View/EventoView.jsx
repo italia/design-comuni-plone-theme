@@ -180,7 +180,10 @@ const EventoView = ({ content, location }) => {
                 <Gallery content={content} folder_name={'multimedia'} />
               )}
 
-              {content?.a_chi_si_rivolge?.data && (
+              {content?.descrizione_destinatari?.data?.replace(
+                /(<([^>]+)>)/g,
+                '',
+              ) && (
                 <div className="mb-5">
                   <h6 className="text-serif font-weight-bold">
                     {intl.formatMessage(messages.event_destinatari)}
@@ -188,7 +191,7 @@ const EventoView = ({ content, location }) => {
                   <div
                     className={'text-serif'}
                     dangerouslySetInnerHTML={{
-                      __html: content?.a_chi_si_rivolge?.data,
+                      __html: content?.descrizione_destinatari?.data,
                     }}
                   />
                 </div>
@@ -231,6 +234,28 @@ const EventoView = ({ content, location }) => {
                 <EventLocations
                   locations={content?.luoghi_correlati}
                   show_icon={true}
+                />
+              </article>
+            ) : content?.street > 0 ||
+              (content?.geolocation?.latitude &&
+                content?.geolocation?.longitude) ||
+              content?.zip_code ||
+              content?.city ||
+              content?.quartiere ||
+              content?.circoscrizione ||
+              content?.country ? (
+              <article
+                id="luoghi"
+                className="it-page-section anchor-offset mt-5"
+              >
+                <h4 id="header-luoghi">
+                  {intl.formatMessage(messages.luoghi)}
+                </h4>
+                <EventLocations
+                  locations={[content]}
+                  show_icon={true}
+                  load={false}
+                  details_link={false}
                 />
               </article>
             ) : null}
@@ -305,7 +330,7 @@ const EventoView = ({ content, location }) => {
                 ) ? (
                   <div className="mb-5">
                     <h6 className="text-serif font-weight-bold">
-                      {intl.formatMessage(messages.contatti_esterni)}
+                      {intl.formatMessage(messages.contatti_esterni)}:
                     </h6>
                     <Card
                       className="card card-teaser rounded shadow mt-3"
@@ -338,7 +363,7 @@ const EventoView = ({ content, location }) => {
                 content?.supportato_da?.length > 0 ? (
                   <div className="mb-5">
                     <h6 className="text-serif font-weight-bold">
-                      {intl.formatMessage(messages.contatti_interni)}
+                      {intl.formatMessage(messages.contatti_interni)}:
                     </h6>
                     {content?.organizzato_da_interno?.map((item, index) => (
                       <OfficeCard
@@ -480,7 +505,7 @@ EventoView.propTypes = {
       data: PropTypes.string,
     }),
 
-    a_chi_si_rivolge: PropTypes.shape({
+    descrizione_destinatari: PropTypes.shape({
       data: PropTypes.string,
     }),
 

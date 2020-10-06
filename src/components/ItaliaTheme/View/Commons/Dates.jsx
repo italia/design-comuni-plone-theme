@@ -117,7 +117,9 @@ const Dates = ({ content, show_image }) => {
         <div className="mt-4">
           <h5>{intl.formatMessage(messages.additional_dates)}</h5>
           {rruleSet.rdates().map((additionalDate) => (
-            <div className="text-serif">{moment(additionalDate).format('dddd DD MMMM YYYY')}</div>
+            <div className="text-serif">
+              {moment(additionalDate).format('dddd DD MMMM YYYY')}
+            </div>
           ))}
         </div>
       )}
@@ -125,7 +127,9 @@ const Dates = ({ content, show_image }) => {
         <div className="mt-4">
           <h5>{intl.formatMessage(messages.excluded_dates)}</h5>
           {rruleSet.exdates().map((exDate) => (
-            <div className="text-serif">{moment(exDate).format('dddd DD MMMM YYYY')}</div>
+            <div className="text-serif">
+              {moment(exDate).format('dddd DD MMMM YYYY')}
+            </div>
           ))}
         </div>
       )}
