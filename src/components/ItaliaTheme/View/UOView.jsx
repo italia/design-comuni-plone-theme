@@ -45,7 +45,6 @@ const messages = defineMessages({
     id: 'persone_struttura',
     defaultMessage: 'Persone che compongono la struttura',
   },
-
   uo_related_news: {
     id: 'uo_related_news',
     defaultMessage: 'Notizie in evidenza',
@@ -72,10 +71,8 @@ const UOView = ({ content }) => {
   const [sideMenuElements, setSideMenuElements] = useState(null);
 
   useEffect(() => {
-    if (documentBody.current) {
-      if (__CLIENT__) {
-        setSideMenuElements(documentBody.current);
-      }
+    if (documentBody.current && __CLIENT__) {
+      setSideMenuElements(documentBody.current);
     }
   }, [documentBody]);
 
@@ -91,7 +88,7 @@ const UOView = ({ content }) => {
           showdates={false}
           showtassonomiaargomenti={true}
         />
-        {content.image && (
+        {content?.image && (
           <WideImage
             title={content.title}
             image={content.image}
@@ -106,12 +103,12 @@ const UOView = ({ content }) => {
             ref={documentBody}
             className="col-lg-8 it-page-sections-container"
           >
-            {content.sedi?.length > 0 ||
-            content?.contact_info?.data.replace(/(<([^>]+)>)/g, '') ||
-            content?.geolocation?.latitude ||
-            content?.geolocation?.longitude ? (
+            {(content?.sedi?.length > 0 ||
+              content?.contact_info?.data.replace(/(<([^>]+)>)/g, '') ||
+              content?.geolocation?.latitude ||
+              content?.geolocation?.longitude) && (
               <UOLocation
-                sedi={content?.sedi}
+                sedi={content.sedi}
                 contact_info={content?.contact_info}
                 geolocation={content.geolocation}
                 street={content.street}
@@ -119,10 +116,8 @@ const UOView = ({ content }) => {
                 city={content.city}
                 country={content.country}
               />
-            ) : (
-              ''
             )}
-            {content.tipologia_organizzazione && (
+            {content?.tipologia_organizzazione && (
               <article
                 id="organizzazione"
                 className="it-page-section anchor-offset mt-5"
@@ -135,21 +130,21 @@ const UOView = ({ content }) => {
                 </p>
               </article>
             )}
-            {content.competenze?.data.replace(/(<([^>]+)>)/g, '') && (
+            {content?.competenze?.data?.replace(/(<([^>]+)>)/g, '') && (
               <RichTextArticle
-                content={content.competenze?.data}
+                content={content.competenze.data}
                 tag_id={'competenze'}
                 title={'Competenze'}
               />
             )}
-            {content.servizi_offerti.length > 0 ? (
+            {content?.servizi_offerti?.length > 0 && (
               <RelatedArticles
                 id="related-services"
                 items={content.servizi_offerti}
                 title={intl.formatMessage(messages.servizi_offerti)}
               />
-            ) : null}
-            {content.legami_con_altre_strutture.length > 0 ? (
+            )}
+            {content?.legami_con_altre_strutture?.length > 0 && (
               <article
                 id="legami-altre-strutture"
                 className="it-page-section anchor-offset mt-5"
@@ -163,8 +158,8 @@ const UOView = ({ content }) => {
                   ))}
                 </div>
               </article>
-            ) : null}
-            {content.assessore_riferimento?.length > 0 ? (
+            )}
+            {content?.assessore_riferimento?.length > 0 && (
               <article
                 id="assessore-riferimento"
                 className="it-page-section anchor-offset mt-5"
@@ -191,8 +186,8 @@ const UOView = ({ content }) => {
                   </Link>
                 ))}
               </article>
-            ) : null}
-            {content.responsabile?.length > 0 ? (
+            )}
+            {content?.responsabile?.length > 0 && (
               <article
                 id="responsabile"
                 className="it-page-section anchor-offset mt-5"
@@ -219,8 +214,8 @@ const UOView = ({ content }) => {
                   </Link>
                 ))}
               </article>
-            ) : null}
-            {content.persone_struttura.length > 0 ? (
+            )}
+            {content?.persone_struttura?.length > 0 && (
               <article
                 id="persone-struttura"
                 className="it-page-section anchor-offset mt-5"
@@ -247,28 +242,28 @@ const UOView = ({ content }) => {
                   </Link>
                 ))}
               </article>
-            ) : null}
+            )}
             {content?.items?.some((e) => e.id === 'allegati') && (
               <Attachments content={content} folder_name={'allegati'} />
             )}
 
-            {content?.related_news?.length > 0 ? (
+            {content?.related_news?.length > 0 && (
               <RelatedNewsArticles
-                news={content?.related_news}
+                news={content.related_news}
                 title={intl.formatMessage(messages.uo_related_news)}
               />
-            ) : null}
-            {content.relatedItems.length > 0 ? (
+            )}
+            {content?.relatedItems?.length > 0 && (
               <RelatedArticles
                 id="related-items"
-                items={content?.relatedItems}
+                items={content.relatedItems}
                 title={intl.formatMessage(messages.related_items)}
                 showimage={false}
               />
-            ) : null}
+            )}
 
             <Metadata content={content} showTags={false}>
-              {content.ulteriori_informazioni?.data?.replace(
+              {content?.ulteriori_informazioni?.data?.replace(
                 /(<([^>]+)>)/g,
                 '',
               ) && <HelpBox text={content.ulteriori_informazioni} />}
@@ -279,8 +274,6 @@ const UOView = ({ content }) => {
     </>
   );
 };
-
-export default UOView;
 
 UOView.propTypes = {
   content: PropTypes.shape({
@@ -321,3 +314,5 @@ UOView.propTypes = {
     title: PropTypes.string.isRequired,
   }),
 };
+
+export default UOView;
