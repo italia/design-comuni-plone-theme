@@ -21,6 +21,7 @@ import {
   Gallery,
   Attachments,
   TextOrBlocks,
+  RelatedItems,
 } from '@italia/components/ItaliaTheme/View';
 
 // import { getBaseUrl } from '@plone/volto/helpers';
@@ -33,6 +34,14 @@ const messages = defineMessages({
   related_items: {
     id: 'related_items',
     defaultMessage: 'Contenuti correlati',
+  },
+  dataset: {
+    id: 'dataset',
+    defaultMessage: 'Dataset',
+  },
+  luoghi: {
+    id: 'luoghi_notizia',
+    defaultMessage: 'Luoghi',
   },
 });
 
@@ -48,6 +57,14 @@ const NewsItemView = ({ content, location }) => {
   const [readingtime, setReadingtime] = useState(0);
   let documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
+
+  let related_items = [];
+  if (content?.related_news?.length > 0) {
+    related_items = [...related_items, ...content.related_news];
+  }
+  if (content?.relatedItems?.length > 0) {
+    related_items = [...related_items, ...content.relatedItems];
+  }
 
   useEffect(() => {
     if (documentBody.current) {
@@ -112,61 +129,28 @@ const NewsItemView = ({ content, location }) => {
                 people={content.a_cura_di_persone}
               />
             )}
-            {content.luoghi_notizia?.length > 0 ? (
-              <Locations locations={content.luoghi_notizia} />
-            ) : null}
+
+            {content.luoghi_correlati?.length > 0 && (
+              <RichTextArticle
+                tag_id="luoghi"
+                title={intl.formatMessage(messages.luoghi)}
+              >
+                <Locations locations={content.luoghi_correlati} />
+              </RichTextArticle>
+            )}
+
             {content.dataset?.data.replace(/(<([^>]+)>)/g, '') && (
               <RichTextArticle
                 content={content.dataset.data}
                 tag_id="dataset"
-                title={'Dataset'}
+                title={intl.formatMessage(messages.dataset)}
               />
             )}
-            {content.related_news?.length > 0 ? (
-              <article
-                id="related-news"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4 id="header-related-news">
-                  {intl.formatMessage(messages.notizie_in_evidenza)}
-                </h4>
-                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content.related_news.map((item, i) => (
-                    <RelatedNews
-                      key={item['@id']}
-                      item={item}
-                      showimage={false}
-                      content={content}
-                    />
-                  ))}
-                </div>
-              </article>
-            ) : null}
-            {content.relatedItems?.length > 0 ? (
-              <article
-                id="related-items"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4 id="header-related-items">
-                  {intl.formatMessage(messages.related_items)}
-                </h4>
-
-                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content.relatedItems.map((item, i) => (
-                    <GenericCard
-                      index={item['@id']}
-                      item={item}
-                      showimage={false}
-                    />
-                  ))}
-                </div>
-              </article>
-            ) : null}
             <Metadata content={content} />
           </section>
         </div>
       </div>
-      <section id="contenuti-correlati"></section>
+      <RelatedItems list={related_items} />
     </>
   );
 };
@@ -196,7 +180,7 @@ NewsItemView.propTypes = {
     }),
     modified: PropTypes.string,
     rights: PropTypes.string,
-    luoghi_notizia: PropTypes.array,
+    luoghi_correlati: PropTypes.array,
     related_news: PropTypes.array,
     tassonomia_argomenti: PropTypes.arrayOf(
       PropTypes.shape({
