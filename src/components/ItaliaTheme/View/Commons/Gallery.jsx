@@ -23,7 +23,7 @@ const messages = defineMessages({
  * @params {string} folder name where to find images.
  * @returns {string} Markup of the component.
  */
-const Gallery = ({ content, folder_name }) => {
+const Gallery = ({ content, folder_name, title, title_type = 'h4' }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -90,7 +90,7 @@ const Gallery = ({ content, folder_name }) => {
   const multimedia = searchResults?.[folder_name]?.items || [];
   let images = multimedia.filter((item) => item['@type'] === 'Image');
   let videos = multimedia.filter((item) => item['@type'] === 'Link');
-
+  let gallery_title = title || intl.formatMessage(messages.gallery);
   return (
     <>
       <div className="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
@@ -98,9 +98,16 @@ const Gallery = ({ content, folder_name }) => {
           <div className="slider-container">
             <div className="it-header-block">
               <div className="it-header-block-title">
-                <h4 id="galleria" className="no-toc">
-                  {intl.formatMessage(messages.gallery)}
-                </h4>
+                {title_type === 'h4' && (
+                  <h4 id="galleria" className="no-toc">
+                    {gallery_title}
+                  </h4>
+                )}
+                {title_type === 'h5' && (
+                  <h5 id="galleria" className="no-toc">
+                    {gallery_title}
+                  </h5>
+                )}
               </div>
             </div>
             <div className="it-carousel-all it-card-bg">
