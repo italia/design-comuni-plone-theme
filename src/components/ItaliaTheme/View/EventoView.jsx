@@ -106,6 +106,18 @@ const messages = defineMessages({
     id: 'email',
     defaultMessage: 'E-mail',
   },
+  costi: {
+    id: 'event_costi',
+    defaultMessage: 'Costi',
+  },
+  documenti: {
+    id: 'event_documenti',
+    defaultMessage: 'Documenti',
+  },
+  cos_e: {
+    id: 'event_cos_e',
+    defaultMessage: "Cos'è",
+  },
 });
 
 /**
@@ -179,7 +191,7 @@ const EventoView = ({ content, location }) => {
           >
             <RichTextArticle
               tag_id={'text-body'}
-              title="Cos'è"
+              title={intl.formatMessage(messages.cos_e)}
               show_title={false}
             >
               {text}
@@ -232,18 +244,15 @@ const EventoView = ({ content, location }) => {
             </RichTextArticle>
 
             {content?.luoghi_correlati?.length > 0 ? (
-              <article
-                id="luoghi"
-                className="it-page-section anchor-offset mt-5"
+              <RichTextArticle
+                tag_id="luoghi"
+                title={intl.formatMessage(messages.luoghi)}
               >
-                <h4 id="header-luoghi">
-                  {intl.formatMessage(messages.luoghi)}
-                </h4>
                 <EventLocations
                   locations={content?.luoghi_correlati}
                   show_icon={true}
                 />
-              </article>
+              </RichTextArticle>
             ) : content?.street > 0 ||
               (content?.geolocation?.latitude &&
                 content?.geolocation?.longitude) ||
@@ -252,44 +261,39 @@ const EventoView = ({ content, location }) => {
               content?.quartiere ||
               content?.circoscrizione ||
               content?.country ? (
-              <article
-                id="luoghi"
-                className="it-page-section anchor-offset mt-5"
+              <RichTextArticle
+                tag_id="luoghi"
+                title={intl.formatMessage(messages.luoghi)}
               >
-                <h4 id="header-luoghi">
-                  {intl.formatMessage(messages.luoghi)}
-                </h4>
                 <EventLocations
                   locations={[content]}
                   show_icon={true}
                   load={false}
                   details_link={false}
                 />
-              </article>
+              </RichTextArticle>
             ) : null}
 
-            <article
-              id="date-e-orari"
-              className="it-page-section anchor-offset mt-5"
+            <RichTextArticle
+              tag_id="date-e-orari"
+              title={intl.formatMessage(messages.date_e_orari)}
             >
-              <h4 id="header-date-e-orari">
-                {intl.formatMessage(messages.date_e_orari)}
-              </h4>
               <Dates content={content} />
               {content?.orari?.data?.replace(/(<([^>]+)>)/g, '') && (
-                <RichTextArticle
-                  content={content?.orari?.data}
-                  tag_id="date-e-orari"
-                  title={null}
+                <p
+                  className="text-serif"
+                  dangerouslySetInnerHTML={{
+                    __html: content.orari?.data,
+                  }}
                 />
               )}
-            </article>
+            </RichTextArticle>
 
             {content?.prezzo?.data?.replace(/(<([^>]+)>)/g, '') && (
               <RichTextArticle
                 content={content?.prezzo?.data}
                 tag_id="costi"
-                title={'Costi'}
+                title={intl.formatMessage(messages.costi)}
               />
             )}
 
@@ -297,7 +301,7 @@ const EventoView = ({ content, location }) => {
               <Attachments
                 content={content}
                 folder_name={'documenti'}
-                title={'Documenti'}
+                title={intl.formatMessage(messages.documenti)}
               />
             )}
 
@@ -307,14 +311,10 @@ const EventoView = ({ content, location }) => {
               content?.organizzato_da_interno.length > 0 ||
               content?.supportato_da?.length > 0 ||
               content.web?.length > 0) && (
-              <article
-                className="it-page-section anchor-offset mt-5"
-                id="contatti"
+              <RichTextArticle
+                tag_id="contatti"
+                title={intl.formatMessage(messages.contatti)}
               >
-                <h4 id="header-contatti">
-                  {intl.formatMessage(messages.contatti)}
-                </h4>
-
                 {/* ---web */}
                 {content?.web?.length > 0 && (
                   <div className="mb-5 mt-3">
@@ -410,7 +410,7 @@ const EventoView = ({ content, location }) => {
 
                 {/* ---supportato da */}
                 {getSupportatoDa()}
-              </article>
+              </RichTextArticle>
             )}
 
             {content && (
@@ -427,7 +427,7 @@ const EventoView = ({ content, location }) => {
               {content?.ulteriori_informazioni?.data?.replace(
                 /(<([^>]+)>)/g,
                 '',
-              ) != '' ||
+              ) !== '' ||
               content?.event_url ||
               content?.patrocinato_da ||
               content?.strutture_politiche.length > 0 ||
