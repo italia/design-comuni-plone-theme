@@ -11,7 +11,6 @@ export OfficeCard from '@italia/components/ItaliaTheme/View/Commons/OfficeCard';
 export Metadata from '@italia/components/ItaliaTheme/View/Commons/Metadata';
 export Sharing from '@italia/components/ItaliaTheme/View/Commons/Sharing';
 export Venue from '@italia/components/ItaliaTheme/View/Commons/Venue';
-export UOLocation from '@italia/components/ItaliaTheme/View/Commons/UOLocation';
 export SmallVenue from '@italia/components/ItaliaTheme/View/Commons/SmallVenue';
 export GenericCard from '@italia/components/ItaliaTheme/View/Commons/GenericCard';
 export RelatedNews from '@italia/components/ItaliaTheme/View/Commons/RelatedNews';
