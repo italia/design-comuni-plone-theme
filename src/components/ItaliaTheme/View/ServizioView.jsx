@@ -18,6 +18,7 @@ import {
   WideImage,
   SmallVenue,
   HelpBox,
+  NewsCard,
 } from '@italia/components/ItaliaTheme/View';
 
 import { Card, CardBody } from 'design-react-kit/dist/design-react-kit';
@@ -172,6 +173,7 @@ const ServizioView = ({ content }) => {
             className="col-lg-8 it-page-sections-container"
             ref={documentBody}
           >
+            {/* STATO DEL SERVIZIO */}
             {content.stato_servizio && content.motivo_stato_servizio?.data && (
               <RichTextArticle
                 content={content.motivo_stato_servizio.data}
@@ -179,106 +181,99 @@ const ServizioView = ({ content }) => {
                 title={intl.formatMessage(messages.service_not_active)}
               />
             )}
-            {content.descrizione_estesa?.data && (
-              <RichTextArticle
-                content={content.descrizione_estesa.data}
-                tag_id={'text-body'}
-                title="Cos'è"
-                show_title={false}
-              />
-            )}
-            {(content.a_chi_si_rivolge?.data ||
-              content.chi_puo_presentare ||
-              content.copertura_geografica?.data) && (
+
+            {/* TEXT BODY */}
+            <RichTextArticle
+              content={content.descrizione_estesa.data}
+              tag_id={'text-body'}
+              title="Cos'è"
+              show_title={false}
+            />
+
+            {/* A CHI SI RIVOLGE */}
+            {(content.a_chi_si_rivolge?.data?.replace(/(<([^>]+)>)/g, '')
+              .length > 0 ||
+              content.chi_puo_presentare?.data?.replace(/(<([^>]+)>)/g, '')
+                .length > 0 ||
+              content.copertura_geografica?.data?.replace(/(<([^>]+)>)/g, '')
+                .length > 0) && (
               <RichTextArticle
                 content={content.a_chi_si_rivolge?.data}
                 tag_id={'text-a_chi_si_rivolge'}
                 title={intl.formatMessage(messages.a_chi_si_rivolge)}
               >
-                {content.chi_puo_presentare?.data && (
-                  <RichText
-                    title={intl.formatMessage(messages.chi_puo_presentare)}
-                    title_size="h5"
-                    content={content.chi_puo_presentare.data}
-                  />
-                )}
+                <RichText
+                  title={intl.formatMessage(messages.chi_puo_presentare)}
+                  title_size="h5"
+                  content={content.chi_puo_presentare.data}
+                />
 
-                {content.copertura_geografica?.data && (
-                  <RichText
-                    title={intl.formatMessage(messages.copertura_geografica)}
-                    title_size="h5"
-                    content={content.copertura_geografica.data}
-                  />
-                )}
+                <RichText
+                  title={intl.formatMessage(messages.copertura_geografica)}
+                  title_size="h5"
+                  content={content.copertura_geografica.data}
+                />
               </RichTextArticle>
             )}
 
-            {(content.come_si_fa?.data ||
-              content.cosa_si_ottiene?.data ||
-              content.procedure_collegate?.data ||
-              content.canale_digitale?.data ||
+            {/* ACCEDERE AL SERVIZIO */}
+            {(content.come_si_fa?.data?.replace(/(<([^>]+)>)/g, '').length >
+              0 ||
+              content.cosa_si_ottiene?.data?.replace(/(<([^>]+)>)/g, '')
+                .length > 0 ||
+              content.procedure_collegate?.data?.replace(/(<([^>]+)>)/g, '')
+                .length > 0 ||
+              content.canale_digitale?.data?.replace(/(<([^>]+)>)/g, '')
+                .length > 0 ||
               content.autenticazione ||
-              content.prenota_appuntamento?.data ||
+              content.prenota_appuntamento?.data?.replace(/(<([^>]+)>)/g, '')
+                .length > 0 ||
               content.dove_rivolgersi?.length > 0 ||
-              content.dove_rivolgersi_extra?.data) && (
+              content.dove_rivolgersi_extra?.data?.replace(/(<([^>]+)>)/g, '')
+                .length > 0) && (
               <RichTextArticle
                 title={intl.formatMessage(messages.accedere_al_servizio)}
                 tag_id="accedere_al_servizio"
               >
-                {content.come_si_fa?.data && (
-                  <RichText
-                    content={content.come_si_fa.data}
-                    title={intl.formatMessage(messages.come_si_fa)}
-                  />
-                )}
+                <RichText
+                  content={content.come_si_fa.data}
+                  title={intl.formatMessage(messages.come_si_fa)}
+                />
 
-                {content.cosa_si_ottiene?.data && (
-                  <RichText
-                    content={content.cosa_si_ottiene.data}
-                    title={intl.formatMessage(messages.cosa_si_ottiene)}
-                  />
-                )}
+                <RichText
+                  content={content.cosa_si_ottiene.data}
+                  title={intl.formatMessage(messages.cosa_si_ottiene)}
+                />
 
-                {content.procedure_collegate?.data && (
-                  <RichText
-                    content={content.procedure_collegate.data}
-                    title={intl.formatMessage(messages.procedure_collegate)}
-                  />
-                )}
+                <RichText
+                  content={content.procedure_collegate.data}
+                  title={intl.formatMessage(messages.procedure_collegate)}
+                />
 
-                {(content.canale_digitale?.data || content.autenticazione) && (
-                  <div className="mt-4">
-                    {content.canale_digitale?.data && (
-                      <>
-                        <h5>{intl.formatMessage(messages.canale_digitale)}</h5>
-                        <div
-                          className="text-serif"
-                          dangerouslySetInnerHTML={{
-                            __html: content.canale_digitale.data,
-                          }}
-                        />
-                      </>
-                    )}
+                <RichText
+                  title={intl.formatMessage(messages.canale_digitale)}
+                  content={content.canale_digitale.data}
+                />
 
-                    {content.autenticazione?.data && (
-                      <RichText
-                        title={intl.formatMessage(messages.autenticazione)}
-                        title_size="h6"
-                        content={content.autenticazione.data}
-                      />
-                    )}
-                  </div>
-                )}
+                <RichText
+                  title={intl.formatMessage(messages.autenticazione)}
+                  title_size="h6"
+                  content={content.autenticazione.data}
+                />
 
                 {(content.dove_rivolgersi?.length > 0 ||
-                  content.dove_rivolgersi_extra?.data ||
-                  content.prenota_appuntamento?.data) && (
+                  content.dove_rivolgersi_extra?.data?.replace(
+                    /(<([^>]+)>)/g,
+                    '',
+                  ).length > 0 ||
+                  content.prenota_appuntamento?.data?.replace(
+                    /(<([^>]+)>)/g,
+                    '',
+                  ).length > 0) && (
                   <RichText
                     title={intl.formatMessage(messages.dove_rivolgersi)}
                   >
-                    {content.prenota_appuntamento?.data && (
-                      <RichText content={content.prenota_appuntamento.data} />
-                    )}
+                    <RichText content={content.prenota_appuntamento.data} />
 
                     {content.dove_rivolgersi?.length > 0 && (
                       <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
@@ -287,15 +282,16 @@ const ServizioView = ({ content }) => {
                         ))}
                       </div>
                     )}
-                    {content.dove_rivolgersi_extra?.data && (
-                      <RichText content={content.dove_rivolgersi_extra.data} />
-                    )}
+
+                    <RichText content={content.dove_rivolgersi_extra.data} />
                   </RichText>
                 )}
               </RichTextArticle>
             )}
 
-            {content.cosa_serve?.data && (
+            {/* COSA SERVE */}
+            {content.cosa_serve?.data?.replace(/(<([^>]+)>)/g, '').length >
+              0 && (
               <RichTextArticle
                 tag_id={'text-cosa_serve'}
                 title={intl.formatMessage(messages.cosa_serve)}
@@ -303,44 +299,47 @@ const ServizioView = ({ content }) => {
                 <HelpBox text={content.cosa_serve} />
               </RichTextArticle>
             )}
-            {(content.costi?.data || content.vincoli?.data) && (
+
+            {/* COSTI E VINCOLI */}
+            {(content.costi?.data?.replace(/(<([^>]+)>)/g, '').length > 0 ||
+              content.vincoli.data?.replace(/(<([^>]+)>)/g, '').length > 0) && (
               <>
                 <RichTextArticle
                   tag_id={'costi-e-vincoli'}
                   title={intl.formatMessage(messages.costi_e_vincoli)}
                 >
-                  {content.costi?.data && (
-                    <RichText
-                      title={intl.formatMessage(messages.costi)}
-                      title_size="h6"
-                      content={content.costi.data}
-                    />
-                  )}
-                  {content.vincoli?.data && (
-                    <RichText
-                      title={intl.formatMessage(messages.vincoli)}
-                      title_size="h6"
-                      content={content.vincoli.data}
-                    />
-                  )}
+                  <RichText
+                    title={intl.formatMessage(messages.costi)}
+                    title_size="h6"
+                    content={content.costi.data}
+                  />
+
+                  <RichText
+                    title={intl.formatMessage(messages.vincoli)}
+                    title_size="h6"
+                    content={content.vincoli.data}
+                  />
                 </RichTextArticle>
               </>
             )}
-            {content.tempi_e_scadenze?.data && (
-              <RichTextArticle
-                content={content.tempi_e_scadenze.data}
-                add_class="style_ol_list"
-                tag_id={'text-tempi_e_scadenze'}
-                title={intl.formatMessage(messages.tempi_e_scadenze)}
-              />
-            )}
-            {content.casi_particolari?.data && (
-              <RichTextArticle
-                content={content.casi_particolari.data}
-                tag_id={'text-casi_particolari'}
-                title={intl.formatMessage(messages.casi_particolari)}
-              />
-            )}
+
+            {/* TEMPI E SCADENZE */}
+
+            <RichTextArticle
+              content={content.tempi_e_scadenze.data}
+              add_class="style_ol_list"
+              tag_id={'text-tempi_e_scadenze'}
+              title={intl.formatMessage(messages.tempi_e_scadenze)}
+            />
+
+            {/* CASI PARTICOLARI */}
+
+            <RichTextArticle
+              content={content.casi_particolari.data}
+              tag_id={'text-casi_particolari'}
+              title={intl.formatMessage(messages.casi_particolari)}
+            />
+
             {(content.ufficio_responsabile?.length > 0 ||
               content.area.length > 0) && (
               <RichTextArticle
@@ -365,14 +364,13 @@ const ServizioView = ({ content }) => {
                 </div>
               </RichTextArticle>
             )}
-            {content.altri_documenti?.length > 0 ? (
-              <article
-                id="altri_documenti-items"
-                className="it-page-section anchor-offset mt-5"
+
+            {/* ALTRI DOCUMENTI */}
+            {content.altri_documenti?.length > 0 && (
+              <RichTextArticle
+                tag_id="altri_documenti_items"
+                title={intl.formatMessage(messages.altri_documenti)}
               >
-                <h4 id="header-altri_documenti-items">
-                  {intl.formatMessage(messages.altri_documenti)}
-                </h4>
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.altri_documenti.map((item, i) => (
                     <GenericCard
@@ -383,16 +381,16 @@ const ServizioView = ({ content }) => {
                     />
                   ))}
                 </div>
-              </article>
-            ) : null}
-            {content.link_siti_esterni?.data && (
-              <article
-                id="link-esterni"
-                className="it-page-section anchor-offset mt-5"
+              </RichTextArticle>
+            )}
+
+            {/* SITI ESTERNI */}
+            {content.link_siti_esterni?.data?.replace(/(<([^>]+)>)/g, '')
+              .length > 0 && (
+              <RichTextArticle
+                tag_id="link-esterni"
+                title={intl.formatMessage(messages.link_siti_esterni)}
               >
-                <h4 id="header-link-esterni">
-                  {intl.formatMessage(messages.link_siti_esterni)}
-                </h4>
                 <Card
                   className="card card-teaser shadow p-0 mt-3 rounded link-esterni"
                   noWrapper={true}
@@ -407,11 +405,15 @@ const ServizioView = ({ content }) => {
                     />
                   </CardBody>
                 </Card>
-              </article>
+              </RichTextArticle>
             )}
+
+            {/* ALLEGATI */}
             {content?.items?.some((e) => e.id === 'allegati') && (
               <Attachments content={content} folder_name={'allegati'} />
             )}
+
+            {/* MODULISTICA */}
             {content?.items?.some((e) => e.id === 'modulistica') && (
               <Attachments
                 content={content}
@@ -419,6 +421,8 @@ const ServizioView = ({ content }) => {
                 title={intl.formatMessage(messages.modulistica)}
               />
             )}
+
+            {/* CORRELATI */}
             {(content.servizi_collegati?.length > 0 ||
               /*content.related_news?.length > 0 ||*/
               content.relatedItems?.length > 0) && (
@@ -441,7 +445,7 @@ const ServizioView = ({ content }) => {
                   </div>
                 )}
 
-                {/* {content.related_news?.length > 0 && (
+                {content.related_news?.length > 0 && (
                   <div className="mb-4">
                     <h6>{intl.formatMessage(messages.related_news)}</h6>
                     <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
@@ -457,7 +461,8 @@ const ServizioView = ({ content }) => {
                       ))}
                     </div>
                   </div>
-                )} */}
+                )}
+
                 {content.relatedItems?.length > 0 && (
                   <div className="mb-4">
                     <h6>{intl.formatMessage(messages.related_items)}</h6>
@@ -474,6 +479,8 @@ const ServizioView = ({ content }) => {
                 )}
               </RichTextArticle>
             )}
+
+            {/* ULTERIORI INFORMAZIONI */}
             <Metadata content={content}>
               {content.ulteriori_informazioni?.data?.replace(
                 /(<([^>]+)>)/g,
