@@ -36,7 +36,7 @@ const HeaderSlim = () => {
         </HeaderBrand>
         <HeaderRightZone>
           <LanguageSelector />
-          <Button
+          {/*<Button
             className="btn-icon"
             color="primary"
             to="#"
@@ -50,7 +50,7 @@ const HeaderSlim = () => {
             <span className="d-none d-lg-block">
               {intl.formatMessage(messages.arLogin)}
             </span>
-          </Button>
+          </Button>*/}
         </HeaderRightZone>
       </HeaderContent>
     </Header>
