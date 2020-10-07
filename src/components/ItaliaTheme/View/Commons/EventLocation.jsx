@@ -46,15 +46,18 @@ const EventLocation = ({
   }, [dispatch, location]);
 
   let location_fo = locationContent ? locationContent[key]?.data : location;
+  let address = ['street', 'city', 'zip_code']
+    .map((key) => location_fo?.[key])
+    .filter(Boolean)
+    .join(' - ');
+
   return location_fo ? (
     <div className="card card-teaser shadow mt-3 rounded">
       {show_icon && <Icon icon={'it-pin'} />}
       <div className="card-body">
         <h5 className="card-title">{location_fo.title}</h5>
         <div className="card-text">
-          <p>{`${location_fo.street || ''} ${
-            location_fo.street && location_fo.zip_code ? '-' : ''
-          } ${location_fo.zip_code || ''}`}</p>
+          <p className="text-capitalize">{address}</p>
 
           {!details_link && (
             <>
