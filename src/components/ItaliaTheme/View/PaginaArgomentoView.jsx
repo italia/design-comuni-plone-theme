@@ -46,13 +46,13 @@ const PaginaArgomentoView = ({ content }) => {
   const searchResults = useSelector((state) => state.content?.subrequests);
   const dispatch = useDispatch();
 
-  // one request is made for every 'unita_amministrativa_responsabile' selected
+  // one request is made for every 'unita_amministrative_responsabili' selected
   useEffect(() => {
-    content['unita_amministrativa_responsabile']?.forEach((x) => {
+    content['unita_amministrative_responsabili']?.forEach((x) => {
       dispatch(getContent(flattenToAppURL(x['@id']), null, x['@id']));
     });
     return () => {
-      content['unita_amministrativa_responsabile']?.forEach((x) => {
+      content['unita_amministrative_responsabili']?.forEach((x) => {
         dispatch(resetContent(x['@id']));
       });
     };
@@ -77,8 +77,8 @@ const PaginaArgomentoView = ({ content }) => {
             }}
           />
 
-          {content?.unita_amministrativa_responsabile?.length > 0 &&
-            content?.unita_amministrativa_responsabile?.map((u, index) => {
+          {content?.unita_amministrative_responsabili?.length > 0 &&
+            content?.unita_amministrative_responsabili?.map((u, index) => {
               return (
                 <div className="row mb-3" key={index}>
                   <div className="w-100">
