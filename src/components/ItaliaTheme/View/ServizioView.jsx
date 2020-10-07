@@ -409,18 +409,14 @@ const ServizioView = ({ content }) => {
             )}
 
             {/* ALLEGATI */}
-            {content?.items?.some((e) => e.id === 'allegati') && (
-              <Attachments content={content} folder_name={'allegati'} />
-            )}
+            <Attachments content={content} folder_name={'allegati'} />
 
             {/* MODULISTICA */}
-            {content?.items?.some((e) => e.id === 'modulistica') && (
-              <Attachments
-                content={content}
-                folder_name={'modulistica'}
-                title={intl.formatMessage(messages.modulistica)}
-              />
-            )}
+            <Attachments
+              content={content}
+              folder_name={'modulistica'}
+              title={intl.formatMessage(messages.modulistica)}
+            />
 
             {/* CORRELATI */}
             {(content.servizi_collegati?.length > 0 ||

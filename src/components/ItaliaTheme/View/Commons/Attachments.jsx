@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Attachment } from '@italia/components/ItaliaTheme/View';
+import { contentFolderHasItems } from '@italia/helpers';
 import PropTypes from 'prop-types';
 
 const messages = defineMessages({
@@ -23,12 +24,10 @@ const messages = defineMessages({
 const Attachments = ({ content, folder_name, title, as_article = true }) => {
   const intl = useIntl();
   const url = `${flattenToAppURL(content['@id'])}/${folder_name}`;
-  const searchResults = useSelector(state => state.search.subrequests);
+  const searchResults = useSelector((state) => state.search.subrequests);
   const dispatch = useDispatch();
 
-  const hasChildren =
-    content?.items.some(e => e.id === folder_name) &&
-    content?.items.filter(i => i.id === folder_name)?.[0]?.items_total > 0;
+  const hasChildren = contentFolderHasItems(content, folder_name);
 
   useEffect(() => {
     if (hasChildren) {

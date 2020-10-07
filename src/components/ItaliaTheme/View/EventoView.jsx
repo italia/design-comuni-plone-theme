@@ -190,6 +190,7 @@ const EventoView = ({ content, location }) => {
             ref={documentBody}
             className="col-lg-8 it-page-sections-container"
           >
+            {/* COS'è */}
             <RichTextArticle
               tag_id={'text-body'}
               title={intl.formatMessage(messages.cos_e)}
@@ -197,9 +198,7 @@ const EventoView = ({ content, location }) => {
             >
               {text}
 
-              {content?.items?.some((e) => e.id === 'multimedia') && (
-                <Gallery content={content} folder_name={'multimedia'} />
-              )}
+              <Gallery content={content} folder_name={'multimedia'} />
 
               {content?.descrizione_destinatari?.data?.replace(
                 /(<([^>]+)>)/g,
@@ -240,6 +239,7 @@ const EventoView = ({ content, location }) => {
               )}
             </RichTextArticle>
 
+            {/* LUOGHI */}
             {content?.luoghi_correlati?.length > 0 ? (
               <RichTextArticle
                 tag_id="luoghi"
@@ -271,6 +271,7 @@ const EventoView = ({ content, location }) => {
               </RichTextArticle>
             ) : null}
 
+            {/* DATE E ORARI */}
             <RichTextArticle
               tag_id="date-e-orari"
               title={intl.formatMessage(messages.date_e_orari)}
@@ -281,23 +282,21 @@ const EventoView = ({ content, location }) => {
               )}
             </RichTextArticle>
 
-            {content?.prezzo?.data?.replace(/(<([^>]+)>)/g, '') && (
-              <RichTextArticle
-                content={content?.prezzo?.data}
-                tag_id="costi"
-                title={intl.formatMessage(messages.costi)}
-              />
-            )}
+            {/* COSTI */}
+            <RichTextArticle
+              content={content?.prezzo?.data}
+              tag_id="costi"
+              title={intl.formatMessage(messages.costi)}
+            />
 
-            {content?.items?.some((e) => e.id === 'documenti') && (
-              <Attachments
-                content={content}
-                folder_name={'documenti'}
-                title={intl.formatMessage(messages.documenti)}
-              />
-            )}
+            {/* DOCUMENTI */}
+            <Attachments
+              content={content}
+              folder_name={'documenti'}
+              title={intl.formatMessage(messages.documenti)}
+            />
 
-            {/* ---contatti */}
+            {/* CONTATTI */}
             {(content?.organizzato_da_esterno?.data?.replace(/(<([^>]+)>)/g, '')
               .length > 0 ||
               content?.organizzato_da_interno.length > 0 ||
@@ -368,7 +367,6 @@ const EventoView = ({ content, location }) => {
                 ) : null}
 
                 {/* ---contatti interno */}
-
                 {content?.organizzato_da_interno?.length > 0 && (
                   <div className="mb-5">
                     <h6 className="text-serif font-weight-bold">
@@ -402,6 +400,7 @@ const EventoView = ({ content, location }) => {
               </RichTextArticle>
             )}
 
+            {/* EVENTS */}
             {content && (
               <Events
                 content={content}
@@ -412,6 +411,7 @@ const EventoView = ({ content, location }) => {
               />
             )}
 
+            {/* ULTERIORI INFORMAZIONI */}
             <Metadata content={content}>
               {content?.ulteriori_informazioni?.data?.replace(
                 /(<([^>]+)>)/g,

@@ -23,7 +23,6 @@ import {
 } from '@italia/components/ItaliaTheme/View';
 
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
-import { OSMMap } from '@italia/addons/volto-venue';
 
 const messages = defineMessages({
   cosa_fa: {
@@ -345,10 +344,7 @@ const UOView = ({ content }) => {
                   </div>
                 )}
 
-                {content.orario_pubblico?.data.replace(
-                  /(<([^>]+)>)/g,
-                  '',
-                ) && (
+                {content.orario_pubblico?.data.replace(/(<([^>]+)>)/g, '') && (
                   <div className="mb-5 mt-3">
                     <h6 className="text-serif font-weight-bold">
                       {intl.formatMessage(messages.orario_pubblico)}
@@ -425,14 +421,14 @@ const UOView = ({ content }) => {
               </article>
             )}
 
-            {content?.items?.some((e) => e.id === 'allegati') && (
-              <Attachments
-                title={intl.formatMessage(messages.documenti)}
-                content={content}
-                folder_name={'allegati'}
-              />
-            )}
+            {/* DOCUMENTI */}
+            <Attachments
+              title={intl.formatMessage(messages.documenti)}
+              content={content}
+              folder_name={'allegati'}
+            />
 
+            {/* ULTERIORI INFORMAZIONI */}
             <Metadata content={content} showTags={false}>
               {content?.ulteriori_informazioni?.data?.replace(
                 /(<([^>]+)>)/g,

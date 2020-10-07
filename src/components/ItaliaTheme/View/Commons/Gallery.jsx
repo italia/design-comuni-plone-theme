@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { contentFolderHasItems } from '@italia/helpers';
 import EmbeddedVideo from './EmbeddedVideo';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -73,8 +74,11 @@ const Gallery = ({
   const url = `${flattenToAppURL(content['@id'])}/${folder_name}`;
   const searchResults = useSelector((state) => state.search.subrequests);
   const dispatch = useDispatch();
+
+  const hasChildren = contentFolderHasItems(content, folder_name);
+
   useEffect(() => {
-    if (content?.items.some((e) => e.id === folder_name)) {
+    if (hasChildren) {
       dispatch(
         searchContent(
           url,
@@ -91,13 +95,14 @@ const Gallery = ({
     return () => {
       dispatch(resetSearchContent(folder_name));
     };
-  }, [dispatch, content, url, folder_name]);
+  }, []);
 
   const multimedia = searchResults?.[folder_name]?.items || [];
   let images = multimedia.filter((item) => item['@type'] === 'Image');
   let videos = multimedia.filter((item) => item['@type'] === 'Link');
   let gallery_title = title || intl.formatMessage(messages.gallery);
-  return (
+
+  return !hasChildren ? null : (
     <>
       {images?.length > 0 ? (
         <div className="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
