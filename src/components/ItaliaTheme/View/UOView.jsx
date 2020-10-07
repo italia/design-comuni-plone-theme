@@ -170,6 +170,7 @@ const UOView = ({ content }) => {
                 </div>
               </article>
             )}
+
             {/*** STRUTTURA ***/}
             {(content?.legami_con_altre_strutture?.length > 0 ||
               content?.responsabile?.length > 0 ||
@@ -256,6 +257,7 @@ const UOView = ({ content }) => {
                 )}
               </article>
             )}
+
             {/*** PERSONE ***/}
             {content?.persone_struttura?.length > 0 && (
               <article
@@ -285,6 +287,7 @@ const UOView = ({ content }) => {
                 ))}
               </article>
             )}
+
             {/*** SERVIZI ***/}
             {content?.servizi_offerti?.length > 0 && (
               <RelatedArticles
@@ -293,6 +296,7 @@ const UOView = ({ content }) => {
                 title={intl.formatMessage(messages.servizi_offerti)}
               />
             )}
+
             {/*** CONTATTI ***/}
             {(content?.sedi_secondarie?.length > 0 ||
               content?.contact_info?.data.replace(/(<([^>]+)>)/g, '') ||
@@ -341,7 +345,7 @@ const UOView = ({ content }) => {
                   </div>
                 )}
 
-                {content.orario_pubblico_sede?.data.replace(
+                {content.orario_pubblico?.data.replace(
                   /(<([^>]+)>)/g,
                   '',
                 ) && (
@@ -352,7 +356,7 @@ const UOView = ({ content }) => {
                     <div
                       className="text-serif"
                       dangerouslySetInnerHTML={{
-                        __html: content.orario_pubblico_sede.data,
+                        __html: content.orario_pubblico.data,
                       }}
                     />
                   </div>
