@@ -355,6 +355,10 @@ msgstr ""
 msgid "Vedi tutto"
 msgstr ""
 
+#: components/ItaliaTheme/View/VenueView
+msgid "Video"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView
 msgid "a_chi_si_rivolge"
 msgstr ""
@@ -421,6 +425,10 @@ msgstr ""
 msgid "assessorati_riferimento"
 msgstr ""
 
+#: components/ItaliaTheme/View/PersonaView
+msgid "assessore_di"
+msgstr ""
+
 #: components/DesignTheme/View/UOView
 #: components/ItaliaTheme/View/UOView
 msgid "assessore_riferimento"
@@ -455,6 +463,10 @@ msgstr ""
 msgid "backToSearch"
 msgstr ""
 
+#: components/ItaliaTheme/View/PersonaView
+msgid "biografia"
+msgstr ""
+
 #: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
 #: components/DesignTheme/View/ServizioView
 #: components/DesignTheme/View/UOView
@@ -484,6 +496,7 @@ msgstr ""
 msgid "chi_puo_presentare"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/EventLocation
 #: components/ItaliaTheme/View/VenueView
 msgid "circoscrizione"
 msgstr ""
@@ -498,12 +511,10 @@ msgid "closeSearch"
 msgstr ""
 
 #: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
 msgid "collegamenti_organizzazione_l1"
 msgstr ""
 
 #: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
 msgid "collegamenti_organizzazione_l2"
 msgstr ""
 
@@ -605,6 +616,10 @@ msgstr ""
 msgid "data_insediamento"
 msgstr ""
 
+#: components/ItaliaTheme/View/NewsItemView
+msgid "dataset"
+msgstr ""
+
 #: components/DesignTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader
 msgid "date"
@@ -661,6 +676,7 @@ msgstr ""
 #: components/DesignTheme/Search/SearchSections
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
+#: components/ItaliaTheme/View/PersonaView
 msgid "documenti"
 msgstr ""
 
@@ -782,6 +798,7 @@ msgid "elementi_di_interesse"
 msgstr ""
 
 #: components/DesignTheme/View/PersonaView
+#: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/PersonaView
 msgid "email"
 msgstr ""
@@ -800,7 +817,19 @@ msgid "end"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView
+msgid "event_cos_e"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+msgid "event_costi"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
 msgid "event_destinatari"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+msgid "event_documenti"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView
@@ -817,6 +846,10 @@ msgstr ""
 
 #: components/ItaliaTheme/View/EventoView
 msgid "event_url"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+msgid "event_web_site"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Events
@@ -853,6 +886,10 @@ msgstr ""
 #: components/DesignTheme/Header/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
 msgid "filters"
+msgstr ""
+
+#: components/ItaliaTheme/View/PersonaView
+msgid "foto_attivita_politica"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Commons/CardCalendar
@@ -940,12 +977,12 @@ msgstr ""
 msgid "longitude"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView
-msgid "luogo"
+#: components/ItaliaTheme/View/NewsItemView
+msgid "luoghi_notizia"
 msgstr ""
 
-#: components/ItaliaTheme/View/VenueView
-msgid "mail"
+#: components/ItaliaTheme/View/EventoView
+msgid "luogo"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Actions
@@ -988,6 +1025,10 @@ msgstr ""
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "novita"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/PageHeader
+msgid "numero_progressivo_cs"
 msgstr ""
 
 #: components/DesignTheme/Header/SearchModal
@@ -1067,6 +1108,10 @@ msgstr ""
 msgid "patrocinato_da"
 msgstr ""
 
+#: components/ItaliaTheme/View/VenueView
+msgid "pec"
+msgstr ""
+
 #: components/ItaliaTheme/View/UOView
 msgid "pec_sede"
 msgstr ""
@@ -1105,6 +1150,7 @@ msgstr ""
 msgid "procedure_collegate"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/EventLocation
 #: components/ItaliaTheme/View/VenueView
 msgid "quartiere"
 msgstr ""
@@ -1136,7 +1182,6 @@ msgstr ""
 #: components/DesignTheme/View/PersonaView
 #: components/DesignTheme/View/ServizioView
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/PersonaView
 #: components/ItaliaTheme/View/ServizioView
 msgid "related_news"
 msgstr ""
@@ -1177,7 +1222,19 @@ msgid "riferimento_mail_luogo"
 msgstr ""
 
 #: components/ItaliaTheme/View/VenueView
+msgid "riferimento_mail_struttura"
+msgstr ""
+
+#: components/ItaliaTheme/View/VenueView
+msgid "riferimento_pec_luogo"
+msgstr ""
+
+#: components/ItaliaTheme/View/VenueView
 msgid "riferimento_telefonico_luogo"
+msgstr ""
+
+#: components/ItaliaTheme/View/VenueView
+msgid "riferimento_telefonico_struttura"
 msgstr ""
 
 #: components/ItaliaTheme/View/VenueView
@@ -1190,7 +1247,6 @@ msgid "rights"
 msgstr ""
 
 #: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
 msgid "role_bio"
 msgstr ""
 
@@ -1212,6 +1268,7 @@ msgstr ""
 
 #: components/DesignTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader
+#: components/ItaliaTheme/View/PersonaView
 msgid "ruolo"
 msgstr ""
 
@@ -1359,7 +1416,7 @@ msgid "struttura"
 msgstr ""
 
 #: components/ItaliaTheme/View/VenueView
-msgid "struttura_responsabile_correlati"
+msgid "struttura_responsabile"
 msgstr ""
 
 #: components/DesignTheme/View/Commons/Metadata
@@ -1371,7 +1428,7 @@ msgstr ""
 msgid "supported_by"
 msgstr ""
 
-#: components/ItaliaTheme/View/VenueView
+#: components/ItaliaTheme/View/EventoView
 msgid "telefono"
 msgstr ""
 
@@ -1390,6 +1447,7 @@ msgstr ""
 
 #: components/DesignTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader
+#: components/ItaliaTheme/View/PersonaView
 msgid "tipologia_persona"
 msgstr ""
 
@@ -1450,8 +1508,11 @@ msgid "value_for_lang"
 msgstr ""
 
 #: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
 msgid "valutazione_situazione_patrimoniale"
+msgstr ""
+
+#: components/ItaliaTheme/View/PersonaView
+msgid "variazione_situazione_patrimoniale"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody

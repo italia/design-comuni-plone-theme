@@ -48,13 +48,23 @@ const messages = defineMessages({
  * @params {object} location: object.
  * @returns {string} Markup of the component.
  */
-const RelatedItems = ({ content, children, view_sections = false }) => {
+const RelatedItems = ({
+  content,
+  list = [],
+  children,
+  view_sections = false,
+}) => {
   const intl = useIntl();
 
   let sections = {};
 
-  if (content?.relatedItems?.length > 0) {
-    content.relatedItems.map((item) => {
+  const related_items_content =
+    content?.relatedItems?.length > 0 ? [...content.relatedItems] : [];
+
+  let related = [...related_items_content, ...list];
+
+  if (related?.length > 0) {
+    related.map((item) => {
       let itemSection = flattenToAppURL(item['@id']).split('/')[1];
       if (Object.keys(SITE_SECTIONS).indexOf(itemSection) >= 0) {
         if (!sections[itemSection]) {
@@ -65,7 +75,7 @@ const RelatedItems = ({ content, children, view_sections = false }) => {
     });
   }
 
-  return content?.relatedItems?.length > 0 || children ? (
+  return related?.length > 0 || children ? (
     <section id="contenuti-correlati">
       <section className="section section-muted section-inset-shadow">
         <div className="section-content">
@@ -124,7 +134,7 @@ const RelatedItems = ({ content, children, view_sections = false }) => {
             {/*----------------vista per singoli elementi----------------*/}
             {!view_sections && (
               <>
-                {content?.relatedItems?.length > 0 && (
+                {related?.length > 0 && (
                   <>
                     <Row>
                       <Col className="text-center">
@@ -132,7 +142,7 @@ const RelatedItems = ({ content, children, view_sections = false }) => {
                       </Col>
                     </Row>
                     <Row className="mt-lg-4">
-                      {content.relatedItems.map((item, i) => (
+                      {related.map((item, i) => (
                         <Col md={4}>
                           <div className="card-wrapper">
                             <GenericCard

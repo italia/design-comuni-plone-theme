@@ -17,7 +17,11 @@ const RichTextArticle = ({
   add_class,
   children,
 }) => {
-  return (
+  let content_to_display = content ? content?.replace(/(<([^>]+)>)/g, '') : '';
+  content_to_display =
+    content_to_display.length > 0 ? content_to_display : null;
+
+  return content_to_display || children ? (
     <article
       id={tag_id}
       className="it-page-section anchor-offset mt-5"
@@ -29,7 +33,11 @@ const RichTextArticle = ({
         ) : (
           <h4 id={`header-${tag_id}`}>{title}</h4>
         )
-      ) :  <h4 id={`header-${tag_id}`} style={{'display': 'none'}}>{title}</h4>}
+      ) : (
+        <h4 id={`header-${tag_id}`} style={{ display: 'none' }}>
+          {title}
+        </h4>
+      )}
       {content && (
         <div
           className={cx('text-serif', add_class)}
@@ -38,7 +46,7 @@ const RichTextArticle = ({
       )}
       {children}
     </article>
-  );
+  ) : null;
 };
 export default RichTextArticle;
 

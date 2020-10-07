@@ -20,7 +20,7 @@ const messages = defineMessages({
  * @params {string} folder name where to find images.
  * @returns {string} Markup of the component.
  */
-const Attachments = ({ content, folder_name, title }) => {
+const Attachments = ({ content, folder_name, title, as_article = true }) => {
   const intl = useIntl();
   const url = `${flattenToAppURL(content['@id'])}/${folder_name}`;
   const searchResults = useSelector((state) => state.search.subrequests);
@@ -45,32 +45,45 @@ const Attachments = ({ content, folder_name, title }) => {
   }, [dispatch, content, url, folder_name]);
 
   const attachments = searchResults?.[folder_name]?.items || [];
+
+  const attachments_view = (
+    <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+      {attachments.map((item, i) => (
+        <Attachment
+          key={item['@id']}
+          title={item.title}
+          description={item.description}
+          download_url={`${item['@id']}/@@download/file`}
+        />
+      ))}
+    </div>
+  );
   return (
     <>
-      {attachments?.length > 0 ? (
-        <article
-          id={folder_name}
-          className="it-page-section anchor-offset mt-5"
-        >
-          {title ? (
-            <h4 id={`header-${folder_name}`}>{title}</h4>
+      {attachments?.length > 0 && (
+        <>
+          {as_article ? (
+            <article
+              id={folder_name}
+              className="it-page-section anchor-offset mt-5"
+            >
+              {title ? (
+                <h4 id={`header-${folder_name}`}>{title}</h4>
+              ) : (
+                <h4 id={`header-${folder_name}`}>
+                  {intl.formatMessage(messages.attachments)}
+                </h4>
+              )}
+              {attachments_view}
+            </article>
           ) : (
-            <h4 id={`header-${folder_name}`}>
-              {intl.formatMessage(messages.attachments)}
-            </h4>
+            <div className="mb-5 mt-3">
+              <h5>{title}</h5>
+              {attachments_view}
+            </div>
           )}
-          <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-            {attachments.map((item, i) => (
-              <Attachment
-                key={item['@id']}
-                title={item.title}
-                description={item.description}
-                download_url={`${item['@id']}/@@download/file`}
-              />
-            ))}
-          </div>
-        </article>
-      ) : null}
+        </>
+      )}
     </>
   );
 };

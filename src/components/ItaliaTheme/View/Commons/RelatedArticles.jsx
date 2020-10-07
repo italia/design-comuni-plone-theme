@@ -7,12 +7,16 @@ import { GenericCard } from '@italia/components/ItaliaTheme/View';
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const RelatedArticles = ({ id='related-articles', items, title, showimage=true, title_size, show_title=true }) => {
+const RelatedArticles = ({
+  id = 'related-articles',
+  items,
+  title,
+  showimage = true,
+  title_size,
+  show_title = true,
+}) => {
   return (
-    <article
-      id={id}
-      className="it-page-section anchor-offset mt-5"
-    >
+    <article id={id} className="it-page-section anchor-offset mt-5">
       {title && show_title ? (
         title_size === 'h6' ? (
           <h6 className="text-serif font-weight-bold">{title}</h6>
