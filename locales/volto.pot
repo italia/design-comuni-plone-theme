@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-09-30T08:15:55.882Z\n"
+"POT-Creation-Date: 2020-10-07T10:32:33.665Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -79,6 +79,7 @@ msgid "Color_warning"
 msgstr ""
 
 #: components/ItaliaTheme/Footer/FooterInfos
+#: components/ItaliaTheme/View/EventoView
 # defaultMessage: Contatti
 msgid "Contatti"
 msgstr ""
@@ -154,6 +155,7 @@ msgid "Mappa del sito"
 msgstr ""
 
 #: components/ItaliaTheme/MegaMenu/MegaMenu
+#: components/ItaliaTheme/MenuSecondary/MenuSecondary
 # defaultMessage: Menu selezionato
 msgid "Menu selezionato"
 msgstr ""
@@ -349,6 +351,11 @@ msgstr ""
 msgid "Vedi tutto"
 msgstr ""
 
+#: components/ItaliaTheme/View/VenueView
+# defaultMessage: Video
+msgid "Video"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView
 # defaultMessage: A chi si rivolge
 msgid "a_chi_si_rivolge"
@@ -412,6 +419,11 @@ msgstr ""
 msgid "assessorati_riferimento"
 msgstr ""
 
+#: components/ItaliaTheme/View/PersonaView
+# defaultMessage: Assessore di
+msgid "assessore_di"
+msgstr ""
+
 #: components/ItaliaTheme/View/UOView
 # defaultMessage: Assessore di riferimento
 msgid "assessore_riferimento"
@@ -447,6 +459,11 @@ msgstr ""
 msgid "backToSearch"
 msgstr ""
 
+#: components/ItaliaTheme/View/PersonaView
+# defaultMessage: Biografia
+msgid "biografia"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView
 # defaultMessage: Canale digitale
 msgid "canale_digitale"
@@ -462,6 +479,7 @@ msgstr ""
 msgid "chi_puo_presentare"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/EventLocation
 #: components/ItaliaTheme/View/VenueView
 # defaultMessage: Circoscrizione
 msgid "circoscrizione"
@@ -475,16 +493,6 @@ msgstr ""
 #: components/ItaliaTheme/Header/SearchModal
 # defaultMessage: Chiudi cerca
 msgid "closeSearch"
-msgstr ""
-
-#: components/ItaliaTheme/View/PersonaView
-# defaultMessage: Collegamenti all'organizzazione (I Livello)
-msgid "collegamenti_organizzazione_l1"
-msgstr ""
-
-#: components/ItaliaTheme/View/PersonaView
-# defaultMessage: Collegamenti all'organizzazione (II Livello)
-msgid "collegamenti_organizzazione_l2"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView
@@ -512,11 +520,20 @@ msgstr ""
 msgid "contacts"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/VenueView
 # defaultMessage: Contatti
 msgid "contatti"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+# defaultMessage: Contatti esterni
+msgid "contatti_esterni"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+# defaultMessage: Contatti interni
+msgid "contatti_interni"
 msgstr ""
 
 #: addons/volto-cookie-banner/src/CookieBannerContainer
@@ -574,6 +591,11 @@ msgstr ""
 msgid "data_insediamento"
 msgstr ""
 
+#: components/ItaliaTheme/View/NewsItemView
+# defaultMessage: Dataset
+msgid "dataset"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/PageHeader
 # defaultMessage: Data
 msgid "date"
@@ -628,6 +650,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
+#: components/ItaliaTheme/View/PersonaView
 # defaultMessage: Documenti e dati
 msgid "documenti"
 msgstr ""
@@ -774,8 +797,9 @@ msgstr ""
 msgid "elementi_di_interesse"
 msgstr ""
 
+#: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/PersonaView
-# defaultMessage: Email
+# defaultMessage: E-mail
 msgid "email"
 msgstr ""
 
@@ -790,8 +814,23 @@ msgid "end"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView
+# defaultMessage: Cos'è
+msgid "event_cos_e"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+# defaultMessage: Costi
+msgid "event_costi"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
 # defaultMessage: L'evento è di interesse per:
 msgid "event_destinatari"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+# defaultMessage: Documenti
+msgid "event_documenti"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView
@@ -812,6 +851,11 @@ msgstr ""
 #: components/ItaliaTheme/View/EventoView
 # defaultMessage: Url dell'evento
 msgid "event_url"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView
+# defaultMessage: Sito web dell'evento:
+msgid "event_web_site"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Events
@@ -848,6 +892,11 @@ msgstr ""
 #: components/ItaliaTheme/Header/SearchModal
 # defaultMessage: Filtri
 msgid "filters"
+msgstr ""
+
+#: components/ItaliaTheme/View/PersonaView
+# defaultMessage: Foto dell'attività politica
+msgid "foto_attivita_politica"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Commons/CardCalendar
@@ -937,6 +986,11 @@ msgstr ""
 msgid "longitude"
 msgstr ""
 
+#: components/ItaliaTheme/View/NewsItemView
+# defaultMessage: Luoghi
+msgid "luoghi_notizia"
+msgstr ""
+
 #: components/ItaliaTheme/View/EventoView
 # defaultMessage: Luogo
 msgid "luogo"
@@ -988,6 +1042,11 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Novità
 msgid "novita"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/PageHeader
+# defaultMessage: Numero del comunicato stampa
+msgid "numero_progressivo_cs"
 msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
@@ -1105,6 +1164,7 @@ msgstr ""
 msgid "procedure_collegate"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/EventLocation
 #: components/ItaliaTheme/View/VenueView
 # defaultMessage: Quartiere
 msgid "quartiere"
@@ -1131,7 +1191,6 @@ msgid "related_items"
 msgstr ""
 
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/PersonaView
 #: components/ItaliaTheme/View/ServizioView
 # defaultMessage: Novità
 msgid "related_news"
@@ -1169,28 +1228,28 @@ msgid "responsabile_di"
 msgstr ""
 
 #: components/ItaliaTheme/View/VenueView
-# defaultMessage: Riferimento e-mail
+# defaultMessage: E-mail
 msgid "riferimento_mail_luogo"
 msgstr ""
 
 #: components/ItaliaTheme/View/VenueView
-# defaultMessage: Riferimento telefonico
+# defaultMessage: PEC
+msgid "riferimento_pec_luogo"
+msgstr ""
+
+#: components/ItaliaTheme/View/VenueView
+# defaultMessage: Telefono
 msgid "riferimento_telefonico_luogo"
 msgstr ""
 
 #: components/ItaliaTheme/View/VenueView
-# defaultMessage: Riferimento web
+# defaultMessage: Web
 msgid "riferimento_web"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Metadata
 # defaultMessage: Diritti
 msgid "rights"
-msgstr ""
-
-#: components/ItaliaTheme/View/PersonaView
-# defaultMessage: Ruolo/Biografia
-msgid "role_bio"
 msgstr ""
 
 #: addons/volto-rss-block/src/Templates/DefaultRssTemplate
@@ -1208,6 +1267,7 @@ msgid "rss_read_more"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/PageHeader
+#: components/ItaliaTheme/View/PersonaView
 # defaultMessage: Ruolo
 msgid "ruolo"
 msgstr ""
@@ -1372,8 +1432,9 @@ msgstr ""
 msgid "supported_by"
 msgstr ""
 
+#: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/VenueView
-# defaultMessage: Telefono
+# defaultMessage: Tel
 msgid "telefono"
 msgstr ""
 
@@ -1388,6 +1449,7 @@ msgid "tipologia_organizzazione"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/PageHeader
+#: components/ItaliaTheme/View/PersonaView
 # defaultMessage: Tipologia persona
 msgid "tipologia_persona"
 msgstr ""
@@ -1434,8 +1496,8 @@ msgid "value_for_lang"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView
-# defaultMessage: Valutazione situazione patrimoniale
-msgid "valutazione_situazione_patrimoniale"
+# defaultMessage: Variazione situazione patrimoniale
+msgid "variazione_situazione_patrimoniale"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody

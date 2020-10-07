@@ -197,7 +197,7 @@ const EventoView = ({ content, location }) => {
             >
               {text}
 
-              {content?.items.some((e) => e.id === 'multimedia') && (
+              {content?.items?.some((e) => e.id === 'multimedia') && (
                 <Gallery content={content} folder_name={'multimedia'} />
               )}
 

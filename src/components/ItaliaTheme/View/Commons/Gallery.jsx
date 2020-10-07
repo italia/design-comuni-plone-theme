@@ -23,7 +23,13 @@ const messages = defineMessages({
  * @params {string} folder name where to find images.
  * @returns {string} Markup of the component.
  */
-const Gallery = ({ content, folder_name, title, title_type = 'h4' }) => {
+const Gallery = ({
+  content,
+  folder_name,
+  title,
+  title_type = 'h4',
+  title_video,
+}) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -93,8 +99,8 @@ const Gallery = ({ content, folder_name, title, title_type = 'h4' }) => {
   let gallery_title = title || intl.formatMessage(messages.gallery);
   return (
     <>
-      <div className="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
-        {images?.length > 0 ? (
+      {images?.length > 0 ? (
+        <div className="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
           <div className="slider-container">
             <div className="it-header-block">
               <div className="it-header-block-title">
@@ -131,11 +137,28 @@ const Gallery = ({ content, folder_name, title, title_type = 'h4' }) => {
               </Slider>
             </div>
           </div>
-        ) : null}
-      </div>
-      <div className="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
-        {videos?.length > 0 ? (
+        </div>
+      ) : null}
+
+      {videos?.length > 0 ? (
+        <div className="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
           <div className="slider-container">
+            {title_video && (
+              <div className="it-header-block">
+                <div className="it-header-block-title">
+                  {title_type === 'h4' && (
+                    <h4 id="galleria" className="no-toc">
+                      {title_video}
+                    </h4>
+                  )}
+                  {title_type === 'h5' && (
+                    <h5 id="galleria" className="no-toc">
+                      {title_video}
+                    </h5>
+                  )}
+                </div>
+              </div>
+            )}
             <div className="it-carousel-all it-card-bg">
               <Slider {...video_settings}>
                 {videos.map((item, i) => (
@@ -151,8 +174,8 @@ const Gallery = ({ content, folder_name, title, title_type = 'h4' }) => {
               </Slider>
             </div>
           </div>
-        ) : null}
-      </div>
+        </div>
+      ) : null}
     </>
   );
 };
