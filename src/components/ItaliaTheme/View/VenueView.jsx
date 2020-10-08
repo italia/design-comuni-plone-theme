@@ -19,6 +19,7 @@ import {
   GenericCard,
   Metadata,
 } from '@italia/components/ItaliaTheme/View';
+import { contentFolderHasItems } from '@italia/helpers';
 import { Icon } from 'design-react-kit/dist/design-react-kit';
 import { OSMMap } from '@italia/addons/volto-venue';
 import {
@@ -146,10 +147,6 @@ const VenueView = ({ content }) => {
     }
   });
 
-  console.log(
-    content.items,
-    content?.items?.some((e) => e.id === 'multimedia'),
-  );
   return (
     <>
       <div className="container px-4 my-4 luogo-view">
@@ -181,7 +178,8 @@ const VenueView = ({ content }) => {
             {(content?.descrizione_completa?.data?.replace(/(<([^>]+)>)/g, '')
               .length > 0 ||
               content.elementi_di_interesse?.data?.replace(/(<([^>]+)>)/g, '')
-                .length > 0) && (
+                .length > 0 ||
+              contentFolderHasItems(content, 'multimedia')) && (
               <RichTextArticle
                 tag_id={'description'}
                 title={intl.formatMessage(messages.descrizione)}
@@ -204,13 +202,11 @@ const VenueView = ({ content }) => {
                 )}
 
                 {/*GALLERIA DI IMMAGINI*/}
-                {content.items?.some((e) => e.id === 'multimedia') && (
-                  <Gallery
-                    content={content}
-                    folder_name={'multimedia'}
-                    title_video={intl.formatMessage(messages.video)}
-                  />
-                )}
+                <Gallery
+                  content={content}
+                  folder_name={'multimedia'}
+                  title_video={intl.formatMessage(messages.video)}
+                />
               </RichTextArticle>
             )}
 

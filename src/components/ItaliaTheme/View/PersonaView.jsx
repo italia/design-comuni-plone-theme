@@ -20,6 +20,7 @@ import {
   HelpBox,
   RelatedItems,
 } from '@italia/components/ItaliaTheme/View';
+import { contentFolderHasItems } from '@italia/helpers';
 
 const messages = defineMessages({
   biografia: {
@@ -177,8 +178,9 @@ const PersonaView = ({ content }) => {
                   content?.data_insediamento ||
                   content?.biografia?.data.replace(/(<([^>]+)>)/g, '').length >
                     0 ||
-                  content?.items?.some(
-                    (e) => e.id === 'foto-e-attivita-politica',
+                  contentFolderHasItems(
+                    content,
+                    'foto-e-attivita-politica',
                   )))) && (
               <RichTextArticle
                 tag_id="ruolo"
@@ -280,18 +282,14 @@ const PersonaView = ({ content }) => {
                       </div>
                     )}
 
-                    {content?.items?.some(
-                      (e) => e.id === 'foto-e-attivita-politica',
-                    ) && (
-                      <Gallery
-                        content={content}
-                        folder_name={'foto-e-attivita-politica'}
-                        title={`${intl.formatMessage(
-                          messages.foto_attivita_politica,
-                        )}:`}
-                        title_type="h5"
-                      />
-                    )}
+                    <Gallery
+                      content={content}
+                      folder_name="foto-e-attivita-politica"
+                      title={`${intl.formatMessage(
+                        messages.foto_attivita_politica,
+                      )}:`}
+                      title_type="h5"
+                    />
                   </>
                 )}
                 {content?.data_conclusione_incarico && (
@@ -328,67 +326,61 @@ const PersonaView = ({ content }) => {
               </RichTextArticle>
             )}
 
-            {(content?.curriculum_vitae ||
-              content?.items?.some((e) => e.id === 'compensi') ||
-              content?.items?.some(
-                (e) => e.id === 'importi-di-viaggio-e-o-servizi',
+            {(content?.curriculum_vitae?.download ||
+              contentFolderHasItems(content, 'compensi') ||
+              contentFolderHasItems(
+                content,
+                'importi-di-viaggio-e-o-servizi',
               ) ||
-              content?.items?.some((e) => e.id === 'altre-cariche') ||
-              content.atto_nomina ||
-              content?.items?.some((e) => e.id === 'situazione-patrimoniale') ||
-              content?.items?.some(
-                (e) => e.id === 'dichiarazione-dei-redditi',
-              ) ||
-              content?.items?.some((e) => e.id === 'spese-elettorali') ||
-              content?.items?.some(
-                (e) => e.id === 'variazione-situazione-patrimoniale',
+              contentFolderHasItems(content, 'altre-cariche') ||
+              content.atto_nomina?.download ||
+              contentFolderHasItems(content, 'situazione-patrimoniale') ||
+              contentFolderHasItems(content, 'dichiarazione-dei-redditi') ||
+              contentFolderHasItems(content, 'spese-elettorali') ||
+              contentFolderHasItems(
+                content,
+                'variazione-situazione-patrimoniale',
               )) && (
               <RichTextArticle
                 title={intl.formatMessage(messages.documenti)}
                 tag_id="documenti"
               >
-                <div className="mb-5 mt-3">
-                  <h5>{intl.formatMessage(messages.curriculum_vitae)}</h5>
-                  <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                    <Attachment
-                      download_url={content.curriculum_vitae.download}
-                      title={content.curriculum_vitae.filename}
-                    />
+                {content.curriculum_vitae?.download && (
+                  <div className="mb-5 mt-3">
+                    <h5>{intl.formatMessage(messages.curriculum_vitae)}</h5>
+                    <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                      <Attachment
+                        download_url={content.curriculum_vitae.download}
+                        title={content.curriculum_vitae.filename}
+                      />
+                    </div>
                   </div>
-                </div>
-
-                {content?.items?.some((e) => e.id === 'compensi-1') && (
-                  <Attachments
-                    content={content}
-                    folder_name={'compensi-1'}
-                    title={intl.formatMessage(messages.compensi)}
-                    as_article={false}
-                  />
                 )}
 
-                {content?.items?.some(
-                  (e) => e.id === 'importi-di-viaggio-e-o-servizi',
-                ) && (
-                  <Attachments
-                    content={content}
-                    folder_name={'importi-di-viaggio-e-o-servizi'}
-                    title={intl.formatMessage(
-                      messages.importi_di_viaggio_e_o_servizi,
-                    )}
-                    as_article={false}
-                  />
-                )}
+                <Attachments
+                  content={content}
+                  folder_name={'compensi'}
+                  title={intl.formatMessage(messages.compensi)}
+                  as_article={false}
+                />
 
-                {content?.items?.some((e) => e.id === 'altre-cariche') && (
-                  <Attachments
-                    content={content}
-                    folder_name={'altre-cariche'}
-                    title={intl.formatMessage(messages.altre_cariche)}
-                    as_article={false}
-                  />
-                )}
+                <Attachments
+                  content={content}
+                  folder_name={'importi-di-viaggio-e-o-servizi'}
+                  title={intl.formatMessage(
+                    messages.importi_di_viaggio_e_o_servizi,
+                  )}
+                  as_article={false}
+                />
 
-                {content.atto_nomina && (
+                <Attachments
+                  content={content}
+                  folder_name={'altre-cariche'}
+                  title={intl.formatMessage(messages.altre_cariche)}
+                  as_article={false}
+                />
+
+                {content.atto_nomina?.download && (
                   <div className="mb-5 mt-3">
                     <h5>{intl.formatMessage(messages.atto_nomina)}</h5>
                     <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
@@ -400,51 +392,35 @@ const PersonaView = ({ content }) => {
                   </div>
                 )}
 
-                {content?.items?.some(
-                  (e) => e.id === 'situazione-patrimoniale',
-                ) && (
-                  <Attachments
-                    content={content}
-                    folder_name={'situazione-patrimoniale'}
-                    title={intl.formatMessage(messages.situazione_patrimoniale)}
-                    as_article={false}
-                  />
-                )}
+                <Attachments
+                  content={content}
+                  folder_name={'situazione-patrimoniale'}
+                  title={intl.formatMessage(messages.situazione_patrimoniale)}
+                  as_article={false}
+                />
 
-                {content?.items?.some(
-                  (e) => e.id === 'dichiarazione-dei-redditi',
-                ) && (
-                  <Attachments
-                    content={content}
-                    folder_name={'dichiarazione-dei-redditi'}
-                    title={intl.formatMessage(
-                      messages.dichiarazione_dei_redditi,
-                    )}
-                    as_article={false}
-                  />
-                )}
+                <Attachments
+                  content={content}
+                  folder_name={'dichiarazione-dei-redditi'}
+                  title={intl.formatMessage(messages.dichiarazione_dei_redditi)}
+                  as_article={false}
+                />
 
-                {content?.items?.some((e) => e.id === 'spese-elettorali') && (
-                  <Attachments
-                    content={content}
-                    folder_name={'spese-elettorali'}
-                    title={intl.formatMessage(messages.spese_elettorali)}
-                    as_article={false}
-                  />
-                )}
+                <Attachments
+                  content={content}
+                  folder_name={'spese-elettorali'}
+                  title={intl.formatMessage(messages.spese_elettorali)}
+                  as_article={false}
+                />
 
-                {content?.items?.some(
-                  (e) => e.id === 'variazione-situazione-patrimoniale',
-                ) && (
-                  <Attachments
-                    content={content}
-                    folder_name={'variazione-situazione-patrimoniale'}
-                    title={intl.formatMessage(
-                      messages.variazione_situazione_patrimoniale,
-                    )}
-                    as_article={false}
-                  />
-                )}
+                <Attachments
+                  content={content}
+                  folder_name={'variazione-situazione-patrimoniale'}
+                  title={intl.formatMessage(
+                    messages.variazione_situazione_patrimoniale,
+                  )}
+                  as_article={false}
+                />
               </RichTextArticle>
             )}
             <Metadata content={content}>

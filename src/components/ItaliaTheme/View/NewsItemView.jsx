@@ -9,8 +9,6 @@ import { defineMessages, useIntl } from 'react-intl';
 import { readingTime } from './ViewUtils';
 
 import {
-  RelatedNews,
-  GenericCard,
   Metadata,
   RichTextArticle,
   PageHeader,
@@ -112,15 +110,10 @@ const NewsItemView = ({ content, location }) => {
               <TextOrBlocks content={content} location={location} />
             </article>
 
-            {content?.items.some((e) => e.id === 'multimedia') && (
-              <Gallery content={content} folder_name={'multimedia'} />
-            )}
-            {content?.items.some((e) => e.id === 'documenti-allegati') && (
-              <Attachments
-                content={content}
-                folder_name={'documenti-allegati'}
-              />
-            )}
+            <Gallery content={content} folder_name={'multimedia'} />
+
+            <Attachments content={content} folder_name={'documenti-allegati'} />
+
             {((content.a_cura_di && content.a_cura_di.length > 0) ||
               (content.a_cura_di_persone &&
                 content.a_cura_di_persone.length > 0)) && (
