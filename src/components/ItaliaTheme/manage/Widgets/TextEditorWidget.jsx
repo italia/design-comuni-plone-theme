@@ -41,7 +41,6 @@ class TextEditorWidget extends Component {
     placeholder: PropTypes.string,
     focusOn: PropTypes.func,
     nextFocus: PropTypes.any,
-    blockRenderMap: PropTypes.any,
     showToolbar: PropTypes.bool,
   };
 
@@ -71,12 +70,6 @@ class TextEditorWidget extends Component {
         );
       } else {
         editorState = EditorState.createEmpty();
-      }
-
-      if (props.data) {
-        if (!props.data.blockRenderMap) {
-          props.data.blockRenderMap = settings.extendedBlockRenderMap;
-        }
       }
 
       const inlineToolbarPlugin = createInlineToolbarPlugin({
@@ -162,7 +155,7 @@ class TextEditorWidget extends Component {
               this.state.inlineToolbarPlugin,
               ...settings.richTextEditorPlugins,
             ]}
-            blockRenderMap={this.props.blockRenderMap}
+            blockRenderMap={settings.extendedBlockRenderMap}
             blockStyleFn={settings.blockStyleFn}
             placeholder={placeholder}
             ref={(node) => {
