@@ -157,6 +157,7 @@ class TextEditorWidget extends Component {
             ]}
             blockRenderMap={settings.extendedBlockRenderMap}
             blockStyleFn={settings.blockStyleFn}
+            customStyleMap={settings.customStyleMap}
             placeholder={placeholder}
             ref={(node) => {
               this.node = node;
