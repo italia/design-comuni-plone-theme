@@ -53,6 +53,10 @@ const messages = defineMessages({
     id: 'ruolo',
     defaultMessage: 'Ruolo',
   },
+  numero_progressivo_cs: {
+    id: 'numero_progressivo_cs',
+    defaultMessage: 'Numero del comunicato stampa',
+  },
 });
 
 const PageHeader = (props) => {
@@ -126,6 +130,14 @@ const PageHeader = (props) => {
           </p>
         ) : (
           ''
+        )}
+        {props.content.numero_progressivo_cs && (
+          <p className="mb-0">
+            <strong>
+              {intl.formatMessage(messages.numero_progressivo_cs)}:{' '}
+            </strong>
+            {props.content.numero_progressivo_cs}
+          </p>
         )}
         {(props.showreadingtime || props.showdates) && (
           <div className="row mt-5 mb-4 readingtime-dates">

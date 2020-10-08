@@ -9,7 +9,11 @@ import cx from 'classnames';
  * @returns {string} Markup of the component.
  */
 const RichText = ({ title, title_size, content, add_class, children }) => {
-  return (
+  let content_to_display = content ? content?.replace(/(<([^>]+)>)/g, '') : '';
+  content_to_display =
+    content_to_display.length > 0 ? content_to_display : null;
+
+  return content_to_display || children ? (
     <>
       {title &&
         (title_size === 'h6' ? (
@@ -25,7 +29,7 @@ const RichText = ({ title, title_size, content, add_class, children }) => {
       )}
       {children}
     </>
-  );
+  ) : null;
 };
 export default RichText;
 

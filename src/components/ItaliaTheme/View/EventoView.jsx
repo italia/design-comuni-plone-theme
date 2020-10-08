@@ -24,6 +24,7 @@ import {
   EventLocations,
   Sponsors,
   RelatedItems,
+  RichText,
 } from '@italia/components/ItaliaTheme/View';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -35,8 +36,6 @@ import {
   CardBody,
   CardTitle,
 } from 'design-react-kit/dist/design-react-kit';
-import { useDispatch, useSelector } from 'react-redux';
-import { searchContent, resetSearchContent } from '@plone/volto/actions';
 
 const messages = defineMessages({
   notizie_in_evidenza: {
@@ -88,6 +87,10 @@ const messages = defineMessages({
     id: 'event_destinatari',
     defaultMessage: "L'evento è di interesse per:",
   },
+  event_web_site: {
+    id: 'event_web_site',
+    defaultMessage: "Sito web dell'evento:",
+  },
   strutture_politiche: {
     id: 'event_strutture_politiche',
     defaultMessage: 'Strutture politiche coinvolte',
@@ -95,6 +98,26 @@ const messages = defineMessages({
   supported_by: {
     id: 'supported_by',
     defaultMessage: 'Con il supporto di:',
+  },
+  telefono: {
+    id: 'telefono',
+    defaultMessage: 'Tel',
+  },
+  email: {
+    id: 'email',
+    defaultMessage: 'E-mail',
+  },
+  costi: {
+    id: 'event_costi',
+    defaultMessage: 'Costi',
+  },
+  documenti: {
+    id: 'event_documenti',
+    defaultMessage: 'Documenti',
+  },
+  cos_e: {
+    id: 'event_cos_e',
+    defaultMessage: "Cos'è",
   },
 });
 
@@ -116,10 +139,10 @@ const EventoView = ({ content, location }) => {
 
   const getSupportatoDa = () => {
     return (
-      content?.evento_supportato_da?.length > 0 && (
+      content?.supportato_da?.length > 0 && (
         <>
           <h5 className="mt-4 supported-by">Con il supporto di:</h5>
-          {content?.evento_supportato_da?.map((item) => (
+          {content?.supportato_da?.map((item) => (
             <OfficeCard
               key={item['@id']}
               office={item}
@@ -167,27 +190,25 @@ const EventoView = ({ content, location }) => {
             ref={documentBody}
             className="col-lg-8 it-page-sections-container"
           >
+            {/* COS'è */}
             <RichTextArticle
               tag_id={'text-body'}
-              title="Cos'è"
+              title={intl.formatMessage(messages.cos_e)}
               show_title={false}
             >
               {text}
 
-              {content?.items.some((e) => e.id === 'multimedia') && (
-                <Gallery content={content} folder_name={'multimedia'} />
-              )}
+              <Gallery content={content} folder_name={'multimedia'} />
 
-              {content?.descrizione_destinatari?.data && (
+              {content?.descrizione_destinatari?.data?.replace(
+                /(<([^>]+)>)/g,
+                '',
+              ) && (
                 <div className="mb-5">
-                  <h6 className="text-serif font-weight-bold">
-                    {intl.formatMessage(messages.event_destinatari)}
-                  </h6>
-                  <div
-                    className={'text-serif'}
-                    dangerouslySetInnerHTML={{
-                      __html: content?.descrizione_destinatari?.data,
-                    }}
+                  <RichText
+                    title_size="h6"
+                    title={intl.formatMessage(messages.event_destinatari)}
+                    content={content?.descrizione_destinatari.data}
                   />
                 </div>
               )}
@@ -218,126 +239,168 @@ const EventoView = ({ content, location }) => {
               )}
             </RichTextArticle>
 
+            {/* LUOGHI */}
             {content?.luoghi_correlati?.length > 0 ? (
-              <article
-                id="luoghi"
-                className="it-page-section anchor-offset mt-5"
+              <RichTextArticle
+                tag_id="luoghi"
+                title={intl.formatMessage(messages.luoghi)}
               >
-                <h4 id="header-luoghi">
-                  {intl.formatMessage(messages.luoghi)}
-                </h4>
                 <EventLocations
                   locations={content?.luoghi_correlati}
                   show_icon={true}
                 />
-              </article>
+              </RichTextArticle>
+            ) : content?.street > 0 ||
+              (content?.geolocation?.latitude &&
+                content?.geolocation?.longitude) ||
+              content?.zip_code ||
+              content?.city ||
+              content?.quartiere ||
+              content?.circoscrizione ||
+              content?.country ? (
+              <RichTextArticle
+                tag_id="luoghi"
+                title={intl.formatMessage(messages.luoghi)}
+              >
+                <EventLocations
+                  locations={[content]}
+                  show_icon={true}
+                  load={false}
+                  details_link={false}
+                />
+              </RichTextArticle>
             ) : null}
 
-            <article
-              id="date-e-orari"
-              className="it-page-section anchor-offset mt-5"
+            {/* DATE E ORARI */}
+            <RichTextArticle
+              tag_id="date-e-orari"
+              title={intl.formatMessage(messages.date_e_orari)}
             >
-              <h4 id="header-date-e-orari">
-                {intl.formatMessage(messages.date_e_orari)}
-              </h4>
               <Dates content={content} />
               {content?.orari?.data?.replace(/(<([^>]+)>)/g, '') && (
-                <RichTextArticle
-                  content={content?.orari?.data}
-                  tag_id="date-e-orari"
-                  title={null}
-                />
+                <RichText content={content?.orari.data} />
               )}
-            </article>
+            </RichTextArticle>
 
-            {content?.prezzo?.data?.replace(/(<([^>]+)>)/g, '') && (
+            {/* COSTI */}
+            <RichTextArticle
+              content={content?.prezzo?.data}
+              tag_id="costi"
+              title={intl.formatMessage(messages.costi)}
+            />
+
+            {/* DOCUMENTI */}
+            <Attachments
+              content={content}
+              folder_name={'documenti'}
+              title={intl.formatMessage(messages.documenti)}
+            />
+
+            {/* CONTATTI */}
+            {(content?.organizzato_da_esterno?.data?.replace(/(<([^>]+)>)/g, '')
+              .length > 0 ||
+              content?.organizzato_da_interno.length > 0 ||
+              content?.supportato_da?.length > 0 ||
+              content.web?.length > 0) && (
               <RichTextArticle
-                content={content?.prezzo?.data}
-                tag_id="costi"
-                title={'Costi'}
-              />
-            )}
-
-            {content?.items?.some((e) => e.id === 'documenti') && (
-              <Attachments
-                content={content}
-                folder_name={'documenti'}
-                title={'Documenti'}
-              />
-            )}
-            {content?.organizzato_da_esterno?.data?.replace(
-              /(<([^>]+)>)/g,
-              '',
-            ) ? (
-              <article
-                className="it-page-section anchor-offset mt-5"
-                id="contatti"
+                tag_id="contatti"
+                title={intl.formatMessage(messages.contatti)}
               >
-                <h4 id="header-contatti">
-                  {intl.formatMessage(messages.contatti_esterni)}
-                </h4>
-                <Card
-                  className="card card-teaser rounded shadow mt-3"
-                  noWrapper={true}
-                  tag="div"
-                >
-                  <CardTitle tag="h5">
-                    <Icon icon="it-telephone" padding={true} />
-                  </CardTitle>
-                  <CardBody tag="div" className={'card-body pr-3'}>
-                    <p
-                      className="text-serif"
-                      dangerouslySetInnerHTML={{
-                        __html: content.organizzato_da_esterno?.data,
-                      }}
-                    />
-                    {content?.contatto_reperibilita && (
-                      <p className="card-text mt-3">
-                        {content?.contatto_reperibilita?.replace(
-                          /(<([^>]+)>)/g,
-                          '',
-                        )}
-                      </p>
-                    )}
-                  </CardBody>
-                </Card>
-              </article>
-            ) : null}
+                {/* ---web */}
+                {content?.web?.length > 0 && (
+                  <div className="mb-5 mt-3">
+                    <h6 className="text-serif font-weight-bold">
+                      {intl.formatMessage(messages.event_web_site)}
+                    </h6>
+                    <a
+                      href={content.web}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {content.web}
+                    </a>
+                  </div>
+                )}
 
-            {content?.organizzato_da_interno?.length > 0 ||
-            content?.evento_supportato_da?.length > 0 ? (
-              <article
-                className="it-page-section anchor-offset mt-5"
-                id="contatti-interno"
-              >
-                <h4 id="header-contatti-interno">
-                  {intl.formatMessage(messages.contatti_interni)}
-                </h4>
-                {content?.organizzato_da_interno?.map((item, index) => (
-                  <OfficeCard
-                    margin_bottom={
-                      index < content?.organizzato_da_interno?.length - 1
-                    }
-                    key={item['@id']}
-                    office={item}
-                    extended={true}
-                    icon={'it-telephone'}
-                  >
-                    {content?.contatto_reperibilita && (
-                      <p className="card-text mt-3">
-                        {content?.contatto_reperibilita?.replace(
-                          /(<([^>]+)>)/g,
-                          '',
+                {/* ---organizzato da esterno */}
+                {content?.organizzato_da_esterno?.data?.replace(
+                  /(<([^>]+)>)/g,
+                  '',
+                ) ? (
+                  <div className="mb-5">
+                    <Card
+                      className="card card-teaser rounded shadow mt-3"
+                      noWrapper={true}
+                      tag="div"
+                    >
+                      <CardTitle tag="h5">
+                        <Icon icon="it-telephone" padding={true} />
+                      </CardTitle>
+                      <CardBody tag="div" className={'card-body pr-3'}>
+                        <RichText
+                          content={content.organizzato_da_esterno?.data}
+                        />
+                        {content?.telefono && (
+                          <p className="card-text mt-3">
+                            {intl.formatMessage(messages.telefono)}:{' '}
+                            <a href={`tel:${content.telefono}`}>
+                              {content.telefono}
+                            </a>
+                          </p>
                         )}
-                      </p>
-                    )}
-                  </OfficeCard>
-                ))}
+                        {content?.reperibilita && (
+                          <p className="card-text mt-3">
+                            {content?.reperibilita?.replace(/(<([^>]+)>)/g, '')}
+                          </p>
+                        )}
+                        {content?.email && (
+                          <p className="card-text mt-3">
+                            {intl.formatMessage(messages.email)}:{' '}
+                            <a href={`mailto:${content.email}`}>
+                              {content.email}
+                            </a>
+                          </p>
+                        )}
+                      </CardBody>
+                    </Card>
+                  </div>
+                ) : null}
 
+                {/* ---contatti interno */}
+                {content?.organizzato_da_interno?.length > 0 && (
+                  <div className="mb-5">
+                    <h6 className="text-serif font-weight-bold">
+                      {intl.formatMessage(messages.contatti_interni)}:
+                    </h6>
+                    {content?.organizzato_da_interno?.map((item, index) => (
+                      <OfficeCard
+                        margin_bottom={
+                          index < content?.organizzato_da_interno?.length - 1
+                        }
+                        key={item['@id']}
+                        office={item}
+                        extended={true}
+                        icon={'it-telephone'}
+                      >
+                        {content?.contatto_reperibilita && (
+                          <p className="card-text mt-3">
+                            {content?.contatto_reperibilita?.replace(
+                              /(<([^>]+)>)/g,
+                              '',
+                            )}
+                          </p>
+                        )}
+                      </OfficeCard>
+                    ))}
+                  </div>
+                )}
+
+                {/* ---supportato da */}
                 {getSupportatoDa()}
-              </article>
-            ) : null}
+              </RichTextArticle>
+            )}
 
+            {/* EVENTS */}
             {content && (
               <Events
                 content={content}
@@ -348,11 +411,12 @@ const EventoView = ({ content, location }) => {
               />
             )}
 
+            {/* ULTERIORI INFORMAZIONI */}
             <Metadata content={content}>
               {content?.ulteriori_informazioni?.data?.replace(
                 /(<([^>]+)>)/g,
                 '',
-              ) != '' ||
+              ) !== '' ||
               content?.event_url ||
               content?.patrocinato_da ||
               content?.strutture_politiche.length > 0 ||
@@ -377,12 +441,7 @@ const EventoView = ({ content, location }) => {
                       <strong>
                         {intl.formatMessage(messages.patrocinato_da)}
                       </strong>
-                      <div
-                        className="text-serif"
-                        dangerouslySetInnerHTML={{
-                          __html: content?.patrocinato_da,
-                        }}
-                      />
+                      <RichText content={content?.patrocinato_da} />
                     </div>
                   )}
 
@@ -463,7 +522,7 @@ EventoView.propTypes = {
     }),
     items: PropTypes.array,
     strutture_politiche: PropTypes.array,
-    evento_supportato_da: PropTypes.array,
+    supportato_da: PropTypes.array,
     organizzato_da_interno: PropTypes.array,
     persone_amministrazione: PropTypes.array,
     modified: PropTypes.string,

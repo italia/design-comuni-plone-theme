@@ -9,7 +9,12 @@ import React from 'react';
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const EventLocations = ({ locations, show_icon }) => {
+const EventLocations = ({
+  locations,
+  show_icon,
+  load = true,
+  details_link = true,
+}) => {
   return (
     <>
       <div className="card-wrapper card-teaser-wrapper">
@@ -18,6 +23,8 @@ const EventLocations = ({ locations, show_icon }) => {
             key={item['@id']}
             location={item}
             show_icon={show_icon}
+            load={load}
+            details_link={details_link}
           />
         ))}
       </div>
