@@ -1,10 +1,10 @@
-import React from 'react'
-import { defineMessages } from 'react-intl'
+import React from 'react';
+import { defineMessages } from 'react-intl';
 import { Link } from 'react-router-dom';
 import {
   Chip,
   ChipLabel,
-  Button
+  Button,
 } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
@@ -16,48 +16,44 @@ const messages = defineMessages({
   otherArguments: {
     id: 'otherArguments',
     defaultMessage: 'ALTRI ARGOMENTI',
-  }
-})
+  },
+});
 
-const BottomBody = ({data, intl}) => {
-  return (
+const BottomBody = ({ data, intl }) => {
+  return data?.arguments?.length > 0 ? (
     <>
       <div className="col-lg-10 col-xl-8 offset-lg-1 offset-xl-3 pt-5">
         <div className="row d-lg-inline-flex w-100">
           <div className="col-lg-3">
-            <h6 className="text-uppercase text-center mt-1">{intl?.formatMessage(messages.otherArguments)}</h6>
+            <h6 className="text-uppercase text-center mt-1">
+              {intl?.formatMessage(messages.otherArguments)}
+            </h6>
           </div>
           <div className="col-lg-9">
-            {
-              data?.arguments?.map((argument, index) => (
-                <Link
-                  to={flattenToAppURL(argument['@id'])}
-                  key={index}
-                  title={argument.title}
-                  className="text-decoration-none"
+            {data?.arguments?.map((argument, index) => (
+              <Link
+                to={flattenToAppURL(argument['@id'])}
+                key={index}
+                title={argument.title}
+                className="text-decoration-none"
+              >
+                <Chip
+                  color="primary"
+                  disabled={false}
+                  large
+                  simple
+                  tag="div"
+                  className="mr-2"
                 >
-                  <Chip
-                    color="primary"
-                    disabled={false}
-                    large
-                    simple
-                    tag="div"
-                    className="mr-2"
-                  >
-                    <ChipLabel tag="span">
-                      {argument.title}
-                    </ChipLabel>
-                  </Chip>
-                </Link>
-              ))
-            }
+                  <ChipLabel tag="span">{argument.title}</ChipLabel>
+                </Chip>
+              </Link>
+            ))}
           </div>
         </div>
       </div>
       <div className="link-button mt-5">
-        <Link
-          to={'/argomenti'}
-          className="text-decoration-none">
+        <Link to={'/argomenti'} className="text-decoration-none">
           <Button
             color="primary"
             className="view-all"
@@ -69,6 +65,6 @@ const BottomBody = ({data, intl}) => {
         </Link>
       </div>
     </>
-  )
-}
+  ) : null;
+};
 export default BottomBody;
