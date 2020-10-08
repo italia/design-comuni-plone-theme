@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { FormattedMessage, injectIntl } from 'react-intl';
 import { getContent, getQueryStringResults } from '@plone/volto/actions';
-import {
-  Pagination,
-} from '@italia/components/ItaliaTheme';
+import { Pagination } from '@italia/components/ItaliaTheme';
 import { blocks, settings } from '~/config';
 
 const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
@@ -21,11 +19,29 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
       dispatch(
         getQueryStringResults(path, { ...data, fullobjects: 1 }, data.block),
       );
+    } else if (data.template === 'imageGallery' && data?.query?.length === 0) {
+      dispatch(
+        getQueryStringResults(
+          path,
+          {
+            ...data,
+            fullobjects: 1,
+            query: [
+              {
+                i: 'path',
+                o: 'plone.app.querystring.operation.string.relativePath',
+                v: '',
+              },
+            ],
+          },
+          data.block,
+        ),
+      );
     }
     /* eslint-disable react-hooks/exhaustive-deps */
   }, [data]);
 
-  const folderItems = content.is_folderish ? content.items : [];
+  const folderItems = content?.is_folderish ? content.items : [];
 
   const loadingQuery =
     data?.query?.length > 0 && querystringResults?.[data.block]?.loading;
@@ -49,14 +65,14 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
 
   function handleContentPaginationChange(e, { activePage }) {
     !isEditMode && window.scrollTo(0, 0);
-    const current = activePage?.children ?? 1
+    const current = activePage?.children ?? 1;
     setCurrentPage(current);
     dispatch(getContent(path, null, null, current));
   }
 
   function handleQueryPaginationChange(e, { activePage }) {
     // !isEditMode && window.scrollTo(0, 0);
-    const current = activePage?.children ?? 1
+    const current = activePage?.children ?? 1;
     setCurrentPage(current);
     dispatch(
       getQueryStringResults(
@@ -70,14 +86,14 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
 
   const getBackgroundClass = () => {
     const block = properties.blocks[data.block];
-    if (!block?.show_block_bg) return ''
+    if (!block?.show_block_bg) return '';
 
-    if(block.template === 'gridGalleryTemplate') {
+    if (block.template === 'gridGalleryTemplate') {
       return 'section section-muted section-inset-shadow py-5';
     } else {
       return 'bg-light py-5';
     }
-  }
+  };
 
   return (
     <div className="public-ui">
@@ -89,7 +105,7 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
             {...data}
           />
           {data?.query?.length === 0 &&
-            content.items_total > settings.defaultPageSize && (
+            content?.items_total > settings.defaultPageSize && (
               <div className="pagination-wrapper">
                 <Pagination
                   activePage={currentPage}
