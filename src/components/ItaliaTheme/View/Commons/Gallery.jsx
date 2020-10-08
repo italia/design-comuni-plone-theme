@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { contentFolderHasItems } from '@italia/helpers';
 import EmbeddedVideo from './EmbeddedVideo';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -23,7 +24,13 @@ const messages = defineMessages({
  * @params {string} folder name where to find images.
  * @returns {string} Markup of the component.
  */
-const Gallery = ({ content, folder_name }) => {
+const Gallery = ({
+  content,
+  folder_name,
+  title,
+  title_type = 'h4',
+  title_video,
+}) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -67,8 +74,11 @@ const Gallery = ({ content, folder_name }) => {
   const url = `${flattenToAppURL(content['@id'])}/${folder_name}`;
   const searchResults = useSelector((state) => state.search.subrequests);
   const dispatch = useDispatch();
+
+  const hasChildren = contentFolderHasItems(content, folder_name);
+
   useEffect(() => {
-    if (content?.items.some((e) => e.id === folder_name)) {
+    if (hasChildren) {
       dispatch(
         searchContent(
           url,
@@ -85,22 +95,30 @@ const Gallery = ({ content, folder_name }) => {
     return () => {
       dispatch(resetSearchContent(folder_name));
     };
-  }, [dispatch, content, url, folder_name]);
+  }, []);
 
   const multimedia = searchResults?.[folder_name]?.items || [];
   let images = multimedia.filter((item) => item['@type'] === 'Image');
   let videos = multimedia.filter((item) => item['@type'] === 'Link');
+  let gallery_title = title || intl.formatMessage(messages.gallery);
 
-  return (
+  return !hasChildren ? null : (
     <>
-      <div className="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
-        {images?.length > 0 ? (
+      {images?.length > 0 ? (
+        <div className="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
           <div className="slider-container">
             <div className="it-header-block">
               <div className="it-header-block-title">
-                <h4 id="galleria" className="no-toc">
-                  {intl.formatMessage(messages.gallery)}
-                </h4>
+                {title_type === 'h4' && (
+                  <h4 id="galleria" className="no-toc">
+                    {gallery_title}
+                  </h4>
+                )}
+                {title_type === 'h5' && (
+                  <h5 id="galleria" className="no-toc">
+                    {gallery_title}
+                  </h5>
+                )}
               </div>
             </div>
             <div className="it-carousel-all it-card-bg">
@@ -124,11 +142,28 @@ const Gallery = ({ content, folder_name }) => {
               </Slider>
             </div>
           </div>
-        ) : null}
-      </div>
-      <div className="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
-        {videos?.length > 0 ? (
+        </div>
+      ) : null}
+
+      {videos?.length > 0 ? (
+        <div className="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
           <div className="slider-container">
+            {title_video && (
+              <div className="it-header-block">
+                <div className="it-header-block-title">
+                  {title_type === 'h4' && (
+                    <h4 id="galleria" className="no-toc">
+                      {title_video}
+                    </h4>
+                  )}
+                  {title_type === 'h5' && (
+                    <h5 id="galleria" className="no-toc">
+                      {title_video}
+                    </h5>
+                  )}
+                </div>
+              </div>
+            )}
             <div className="it-carousel-all it-card-bg">
               <Slider {...video_settings}>
                 {videos.map((item, i) => (
@@ -144,8 +179,8 @@ const Gallery = ({ content, folder_name }) => {
               </Slider>
             </div>
           </div>
-        ) : null}
-      </div>
+        </div>
+      ) : null}
     </>
   );
 };

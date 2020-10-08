@@ -12,18 +12,24 @@ import {
   Attachment,
   SideMenu,
   PageHeader,
+  RichText,
   RichTextArticle,
   OfficeCard,
   Gallery,
   Metadata,
-  NewsCard,
-  GenericCard,
+  HelpBox,
+  RelatedItems,
 } from '@italia/components/ItaliaTheme/View';
+import { contentFolderHasItems } from '@italia/helpers';
 
 const messages = defineMessages({
-  role_bio: {
-    id: 'role_bio',
-    defaultMessage: 'Ruolo/Biografia',
+  biografia: {
+    id: 'biografia',
+    defaultMessage: 'Biografia',
+  },
+  ruolo: {
+    id: 'ruolo',
+    defaultMessage: 'Ruolo',
   },
   contacts: {
     id: 'contacts',
@@ -45,13 +51,9 @@ const messages = defineMessages({
     id: 'responsabile_di',
     defaultMessage: 'Responsabile di',
   },
-  collegamenti_organizzazione_l1: {
-    id: 'collegamenti_organizzazione_l1',
-    defaultMessage: "Collegamenti all'organizzazione (I Livello)",
-  },
-  collegamenti_organizzazione_l2: {
-    id: 'collegamenti_organizzazione_l2',
-    defaultMessage: "Collegamenti all'organizzazione (II Livello)",
+  assessore_di: {
+    id: 'assessore_di',
+    defaultMessage: 'Assessore di',
   },
   competenze: {
     id: 'competenze',
@@ -60,6 +62,10 @@ const messages = defineMessages({
   deleghe: {
     id: 'deleghe',
     defaultMessage: 'Deleghe',
+  },
+  tipologia_persona: {
+    id: 'tipologia_persona',
+    defaultMessage: 'Tipologia di persona',
   },
   ulteriori_informazioni: {
     id: 'ulteriori_informazioni',
@@ -89,9 +95,9 @@ const messages = defineMessages({
     id: 'spese_elettorali',
     defaultMessage: 'Spese elettorali',
   },
-  valutazione_situazione_patrimoniale: {
-    id: 'valutazione_situazione_patrimoniale',
-    defaultMessage: 'Valutazione situazione patrimoniale',
+  variazione_situazione_patrimoniale: {
+    id: 'variazione_situazione_patrimoniale',
+    defaultMessage: 'Variazione situazione patrimoniale',
   },
   data_insediamento: {
     id: 'data_insediamento',
@@ -109,9 +115,13 @@ const messages = defineMessages({
     id: 'atto_nomina',
     defaultMessage: 'Atto di nomina',
   },
-  related_news: {
-    id: 'related_news',
-    defaultMessage: 'Notizie collegate',
+  foto_attivita_politica: {
+    id: 'foto_attivita_politica',
+    defaultMessage: "Foto dell'attività politica",
+  },
+  documenti: {
+    id: 'documenti',
+    defaultMessage: 'Documenti',
   },
 });
 
@@ -154,313 +164,275 @@ const PersonaView = ({ content }) => {
             className="col-lg-8 it-page-sections-container"
             ref={documentBody}
           >
-            {content.data_insediamento && !content.data_conclusione_incarico ? (
-              <p>
-                <strong>
-                  {intl.formatMessage(messages.data_insediamento)}:
-                </strong>{' '}
-                {moment(content.data_insediamento).format('DD-MM-Y')}
-              </p>
-            ) : (
-              ''
-            )}
-            {content.data_conclusione_incarico ? (
-              <p>
-                <strong>
-                  {intl.formatMessage(messages.data_conclusione_incarico)}:
-                </strong>{' '}
-                {moment(content.data_conclusione_incarico).format('DD-MM-Y')}
-              </p>
-            ) : (
-              ''
-            )}
-            {!content.data_conclusione_incarico && content.biografia?.data && (
+            {(content.ruolo ||
+              content?.data_conclusione_incarico ||
+              (!content?.data_conclusione_incarico &&
+                (content?.organizzazione_riferimento?.length > 0 ||
+                  content?.responsabile_di?.length > 0 ||
+                  content?.assessore_di?.length > 0 ||
+                  content?.competenze?.data.replace(/(<([^>]+)>)/g, '').length >
+                    0 ||
+                  content?.deleghe?.data.replace(/(<([^>]+)>)/g, '').length >
+                    0 ||
+                  content?.tipologia_persona ||
+                  content?.data_insediamento ||
+                  content?.biografia?.data.replace(/(<([^>]+)>)/g, '').length >
+                    0 ||
+                  contentFolderHasItems(
+                    content,
+                    'foto-e-attivita-politica',
+                  )))) && (
               <RichTextArticle
-                content={content.biografia.data}
-                tag_id={'biografia'}
-                title={intl.formatMessage(messages.role_bio)}
-                add_class="mb-4"
-              />
+                tag_id="ruolo"
+                title={intl.formatMessage(messages.ruolo)}
+              >
+                {content?.ruolo?.length > 0 && (
+                  <div className="mb-5">{content.ruolo}</div>
+                )}
+                {!content?.data_conclusione_incarico && (
+                  <>
+                    {content?.organizzazione_riferimento?.length > 0 && (
+                      <div className="mb-5 mt-3">
+                        <h5>
+                          {intl.formatMessage(
+                            messages.organizzazione_riferimento,
+                          )}
+                          :
+                        </h5>
+                        <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                          {content?.organizzazione_riferimento?.map(
+                            (item, i) => (
+                              <OfficeCard key={item['@id']} office={item} />
+                            ),
+                          )}
+                        </div>
+                      </div>
+                    )}
+
+                    {content?.responsabile_di?.length > 0 && (
+                      <div className="mb-5 mt-3">
+                        <h5>{intl.formatMessage(messages.responsabile_di)}:</h5>
+                        <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                          {content?.responsabile_di?.map((item, i) => (
+                            <OfficeCard key={item['@id']} office={item} />
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {content?.assessore_di?.length > 0 && (
+                      <div className="mb-5 mt-3">
+                        <h5>{intl.formatMessage(messages.assessore_di)}:</h5>
+                        <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                          {content?.assessore_di?.map((item, i) => (
+                            <OfficeCard key={item['@id']} office={item} />
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {content?.competenze?.data.replace(/(<([^>]+)>)/g, '')
+                      .length > 0 && (
+                      <div className="mb-5 mt-3">
+                        <RichText
+                          title_size="h5"
+                          title={`${intl.formatMessage(messages.competenze)}:`}
+                          content={content?.competenze?.data}
+                        />
+                      </div>
+                    )}
+
+                    {content?.deleghe?.data.replace(/(<([^>]+)>)/g, '').length >
+                      0 && (
+                      <div className="mb-5 mt-3">
+                        <RichText
+                          title_size="h5"
+                          title={`${intl.formatMessage(messages.deleghe)}:`}
+                          content={content?.deleghe?.data}
+                        />
+                      </div>
+                    )}
+
+                    {content?.tipologia_persona && (
+                      <div className="mb-5 mt-3">
+                        <h5>
+                          {intl.formatMessage(messages.tipologia_persona)}:
+                        </h5>
+                        {content?.tipologia_persona?.title}
+                      </div>
+                    )}
+
+                    {content?.data_insediamento && (
+                      <div className="mb-5 mt-3">
+                        <h5>
+                          {intl.formatMessage(messages.data_insediamento)}:
+                        </h5>
+                        {moment(content?.data_insediamento).format('DD-MM-Y')}
+                      </div>
+                    )}
+
+                    {content?.biografia?.data.replace(/(<([^>]+)>)/g, '')
+                      .length > 0 && (
+                      <div className="mb-5 mt-3">
+                        <RichText
+                          title_size="h5"
+                          title={`${intl.formatMessage(messages.biografia)}:`}
+                          content={content?.biografia?.data}
+                        />
+                      </div>
+                    )}
+
+                    <Gallery
+                      content={content}
+                      folder_name="foto-e-attivita-politica"
+                      title={`${intl.formatMessage(
+                        messages.foto_attivita_politica,
+                      )}:`}
+                      title_type="h5"
+                    />
+                  </>
+                )}
+                {content?.data_conclusione_incarico && (
+                  <p>
+                    <strong>
+                      {intl.formatMessage(messages.data_conclusione_incarico)}:
+                    </strong>{' '}
+                    {moment(content?.data_conclusione_incarico).format(
+                      'DD-MM-Y',
+                    )}
+                  </p>
+                )}
+              </RichTextArticle>
             )}
-            {content.telefono ||
-            content.email ||
-            content.informazioni_di_contatto ? (
-              <article id="contacts">
-                <h4 id="header-contacts">
-                  {intl.formatMessage(messages.contacts)}
-                </h4>
-                {content.telefono ? (
+
+            {(content?.telefono || content?.email) && (
+              <RichTextArticle
+                title={intl.formatMessage(messages.contacts)}
+                tag_id="contacts"
+              >
+                {content?.telefono && (
                   <p>
                     <strong>{intl.formatMessage(messages.phone)}: </strong>
                     <a href={`tel:${content.telefono}`}>{content.telefono}</a>
                   </p>
-                ) : (
-                  ''
                 )}
-                {content.email ? (
+
+                {content?.email && (
                   <p>
                     <strong>{intl.formatMessage(messages.email)}: </strong>
                     <a href={`mailto:${content.email}`}>{content.email}</a>
                   </p>
-                ) : (
-                  ''
                 )}
-                {content.informazioni_di_contatto ? (
-                  <div
-                    className="text-serif"
-                    dangerouslySetInnerHTML={{
-                      __html: content.informazioni_di_contatto.data,
-                    }}
-                  />
-                ) : (
-                  ''
-                )}
-              </article>
-            ) : (
-              ''
+              </RichTextArticle>
             )}
-            {!content.data_conclusione_incarico &&
-            content.organizzazione_riferimento?.length > 0 ? (
-              <article
-                id="organizzazione_riferimento"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4 id="header-organizzazione_riferimento">
-                  {intl.formatMessage(messages.organizzazione_riferimento)}
-                </h4>
-                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content.organizzazione_riferimento.map((item, i) => (
-                    <OfficeCard key={item['@id']} office={item} />
-                  ))}
-                </div>
-              </article>
-            ) : null}
-            {!content.data_conclusione_incarico &&
-            content.responsabile_di?.length > 0 ? (
-              <article
-                id="responsabile_di"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4 id="header-responsabile_di">
-                  {intl.formatMessage(messages.responsabile_di)}
-                </h4>
-                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content.responsabile_di.map((item, i) => (
-                    <OfficeCard key={item['@id']} office={item} />
-                  ))}
-                </div>
-              </article>
-            ) : null}
-            {!content.data_conclusione_incarico &&
-            content.collegamenti_organizzazione_l1.length > 0 ? (
-              <article
-                id="collegamenti_organizzazione_l1"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4 id="header-collegamenti_organizzazione_l1">
-                  {intl.formatMessage(messages.collegamenti_organizzazione_l1)}
-                </h4>
-                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content.collegamenti_organizzazione_l1.map((item, i) => (
-                    <OfficeCard key={item['@id']} office={item} />
-                  ))}
-                </div>
-              </article>
-            ) : null}
-            {!content.data_conclusione_incarico &&
-            content.collegamenti_organizzazione_l2.length > 0 ? (
-              <article
-                id="collegamenti_organizzazione_l2"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4 id="header-collegamenti_organizzazione_l2">
-                  {intl.formatMessage(messages.collegamenti_organizzazione_l2)}
-                </h4>
-                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content.collegamenti_organizzazione_l2.map((item, i) => (
-                    <OfficeCard key={item['@id']} office={item} />
-                  ))}
-                </div>
-              </article>
-            ) : null}
-            {!content.data_conclusione_incarico &&
-            content.competenze?.data.replace(/(<([^>]+)>)/g, '').length > 0 ? (
+
+            {(content?.curriculum_vitae?.download ||
+              contentFolderHasItems(content, 'compensi') ||
+              contentFolderHasItems(
+                content,
+                'importi-di-viaggio-e-o-servizi',
+              ) ||
+              contentFolderHasItems(content, 'altre-cariche') ||
+              content.atto_nomina?.download ||
+              contentFolderHasItems(content, 'situazione-patrimoniale') ||
+              contentFolderHasItems(content, 'dichiarazione-dei-redditi') ||
+              contentFolderHasItems(content, 'spese-elettorali') ||
+              contentFolderHasItems(
+                content,
+                'variazione-situazione-patrimoniale',
+              )) && (
               <RichTextArticle
-                content={content.competenze.data}
-                tag_id={'text-competenze'}
-                title={intl.formatMessage(messages.competenze)}
-              />
-            ) : (
-              ''
-            )}
-            {!content.data_conclusione_incarico &&
-            content.deleghe?.data.replace(/(<([^>]+)>)/g, '').length > 0 ? (
-              <RichTextArticle
-                content={content.deleghe.data}
-                tag_id={'text-deleghe'}
-                title={intl.formatMessage(messages.deleghe)}
-              />
-            ) : (
-              ''
-            )}
-            {!content.data_conclusione_incarico &&
-            content?.items?.some((e) => e.id === 'foto-e-attivita-politica') ? (
-              <Gallery
-                content={content}
-                folder_name={'foto-e-attivita-politica'}
-              />
-            ) : (
-              ''
-            )}
-            {content.curriculum_vitae ? (
-              <article
-                id="curriculum"
-                className="it-page-section anchor-offset mt-5"
+                title={intl.formatMessage(messages.documenti)}
+                tag_id="documenti"
               >
-                <h4 id="header-curriculum">
-                  {intl.formatMessage(messages.curriculum_vitae)}
-                </h4>
-                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  <Attachment
-                    download_url={content.curriculum_vitae.download}
-                    title={content.curriculum_vitae.filename}
-                  />
-                </div>
-              </article>
-            ) : (
-              ''
-            )}
-            {content.atto_nomina ? (
-              <article
-                id="atto_nomina"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4 id="header-atto_nomina">
-                  {intl.formatMessage(messages.atto_nomina)}
-                </h4>
-                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  <Attachment
-                    download_url={content.atto_nomina.download}
-                    title={content.atto_nomina.filename}
-                  />
-                </div>
-              </article>
-            ) : (
-              ''
-            )}
-            {content?.items?.some((e) => e.id === 'compensi') && (
-              <Attachments
-                content={content}
-                folder_name={'compensi'}
-                title={intl.formatMessage(messages.compensi)}
-              />
-            )}
-            {content?.items?.some(
-              (e) => e.id === 'importi-di-viaggio-e-o-servizi',
-            ) && (
-              <Attachments
-                content={content}
-                folder_name={'importi-di-viaggio-e-o-servizi'}
-                title={intl.formatMessage(
-                  messages.importi_di_viaggio_e_o_servizi,
+                {content.curriculum_vitae?.download && (
+                  <div className="mb-5 mt-3">
+                    <h5>{intl.formatMessage(messages.curriculum_vitae)}</h5>
+                    <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                      <Attachment
+                        download_url={content.curriculum_vitae.download}
+                        title={content.curriculum_vitae.filename}
+                      />
+                    </div>
+                  </div>
                 )}
-              />
-            )}
-            {content?.items?.some((e) => e.id === 'altre-cariche') && (
-              <Attachments
-                content={content}
-                folder_name={'altre-cariche'}
-                title={intl.formatMessage(messages.altre_cariche)}
-              />
-            )}
-            {content?.items?.some(
-              (e) => e.id === 'situazione-patrimoniale',
-            ) && (
-              <Attachments
-                content={content}
-                folder_name={'situazione-patrimoniale'}
-                title={intl.formatMessage(messages.situazione_patrimoniale)}
-              />
-            )}
-            {content?.items?.some(
-              (e) => e.id === 'dichiarazione-dei-redditi',
-            ) && (
-              <Attachments
-                content={content}
-                folder_name={'dichiarazione-dei-redditi'}
-                title={intl.formatMessage(messages.dichiarazione_dei_redditi)}
-              />
-            )}
-            {content?.items?.some((e) => e.id === 'spese-elettorali') && (
-              <Attachments
-                content={content}
-                folder_name={'spese-elettorali'}
-                title={intl.formatMessage(messages.spese_elettorali)}
-              />
-            )}
-            {content?.items?.some(
-              (e) => e.id === 'valutazione-situazione-patrimoniale',
-            ) && (
-              <Attachments
-                content={content}
-                folder_name={'valutazione-situazione-patrimoniale'}
-                title={intl.formatMessage(
-                  messages.valutazione_situazione_patrimoniale,
+
+                <Attachments
+                  content={content}
+                  folder_name={'compensi'}
+                  title={intl.formatMessage(messages.compensi)}
+                  as_article={false}
+                />
+
+                <Attachments
+                  content={content}
+                  folder_name={'importi-di-viaggio-e-o-servizi'}
+                  title={intl.formatMessage(
+                    messages.importi_di_viaggio_e_o_servizi,
+                  )}
+                  as_article={false}
+                />
+
+                <Attachments
+                  content={content}
+                  folder_name={'altre-cariche'}
+                  title={intl.formatMessage(messages.altre_cariche)}
+                  as_article={false}
+                />
+
+                {content.atto_nomina?.download && (
+                  <div className="mb-5 mt-3">
+                    <h5>{intl.formatMessage(messages.atto_nomina)}</h5>
+                    <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                      <Attachment
+                        download_url={content.atto_nomina.download}
+                        title={content.atto_nomina.filename}
+                      />
+                    </div>
+                  </div>
                 )}
-              />
+
+                <Attachments
+                  content={content}
+                  folder_name={'situazione-patrimoniale'}
+                  title={intl.formatMessage(messages.situazione_patrimoniale)}
+                  as_article={false}
+                />
+
+                <Attachments
+                  content={content}
+                  folder_name={'dichiarazione-dei-redditi'}
+                  title={intl.formatMessage(messages.dichiarazione_dei_redditi)}
+                  as_article={false}
+                />
+
+                <Attachments
+                  content={content}
+                  folder_name={'spese-elettorali'}
+                  title={intl.formatMessage(messages.spese_elettorali)}
+                  as_article={false}
+                />
+
+                <Attachments
+                  content={content}
+                  folder_name={'variazione-situazione-patrimoniale'}
+                  title={intl.formatMessage(
+                    messages.variazione_situazione_patrimoniale,
+                  )}
+                  as_article={false}
+                />
+              </RichTextArticle>
             )}
-            {content.ulteriori_informazioni?.data && (
-              <RichTextArticle
-                content={content.ulteriori_informazioni.data}
-                tag_id={'ulteriori_informazioni'}
-                title={intl.formatMessage(messages.ulteriori_informazioni)}
-              />
-            )}
-            {content.related_news?.length > 0 ? (
-              <article
-                id="related-news"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4 id="header-related-news">
-                  {intl.formatMessage(messages.related_news)}
-                </h4>
-                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content.related_news.map((item, i) => (
-                    <NewsCard
-                      key={item['@id']}
-                      id={item['@id']}
-                      title={item.title}
-                      description={item.description}
-                      effective={item.effective}
-                      typology={item.typology}
-                    />
-                  ))}
-                </div>
-              </article>
-            ) : null}
-            {content.relatedItems?.length > 0 ? (
-              <article
-                id="related-items"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4 id="header-related-items">
-                  {intl.formatMessage(messages.related_items)}
-                </h4>
-                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content.relatedItems.map((item, i) => (
-                    <GenericCard
-                      key={item['@id']}
-                      item={item}
-                      showimage={false}
-                    />
-                  ))}
-                </div>
-              </article>
-            ) : null}
-            <Metadata content={content} />
+            <Metadata content={content}>
+              {content?.ulteriori_informazioni?.data?.replace(
+                /(<([^>]+)>)/g,
+                '',
+              ) && <HelpBox text={content?.ulteriori_informazioni} />}
+            </Metadata>
           </section>
         </div>
       </div>
+      <RelatedItems content={content} />
     </>
   );
 };

@@ -12,7 +12,29 @@ body.contenttype-unitaorganizzativa {
       margin-left: 0;
     }
   }
+
   #geocoded-result {
     height: 300px !important;
   }
+
+  .orario-pubblico {
+    padding: 1rem;
+
+    p:last-of-type {
+      margin-bottom: 8px;
+    }
+  }
+
+  dl.contatti-list {
+    .contatti {
+      dt, dd {
+        display: inline-block;
+      }
+
+      dt {
+        min-width: 5rem;
+      }
+    }
+  }
+
 }

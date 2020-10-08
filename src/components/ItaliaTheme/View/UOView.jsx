@@ -9,22 +9,34 @@ import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
 import {
-  WideImage,
-  SideMenu,
-  PageHeader,
-  RichTextArticle,
-  OfficeCard,
   Attachments,
-  Metadata,
-  RelatedNewsArticles,
+  EventLocations,
+  GenericCard,
   HelpBox,
-  UOLocation,
+  Metadata,
+  OfficeCard,
+  PageHeader,
   RelatedArticles,
+  RelatedItems,
+  SideMenu,
+  WideImage,
 } from '@italia/components/ItaliaTheme/View';
 
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
+  cosa_fa: {
+    id: 'cosa_fa',
+    defaultMessage: 'Cosa fa',
+  },
+  competenze: {
+    id: 'competenze',
+    defaultMessage: 'Competenze',
+  },
+  struttura: {
+    id: 'struttura',
+    defaultMessage: 'Struttura',
+  },
   tipologia_organizzazione: {
     id: 'tipologia_organizzazione',
     defaultMessage: 'Tipologia organizzazione',
@@ -43,20 +55,51 @@ const messages = defineMessages({
   },
   persone_struttura: {
     id: 'persone_struttura',
-    defaultMessage: 'Persone che compongono la struttura',
+    defaultMessage: 'Persone',
   },
-
   uo_related_news: {
     id: 'uo_related_news',
     defaultMessage: 'Notizie in evidenza',
   },
   servizi_offerti: {
     id: 'servizi_offerti',
-    defaultMessage: 'Servizi offerti',
+    defaultMessage: 'Servizi',
+  },
+  contatti: {
+    id: 'contatti',
+    defaultMessage: 'Contatti',
   },
   related_items: {
     id: 'related_items',
     defaultMessage: 'Contenuti correlati',
+  },
+  orario_pubblico: {
+    id: 'orario_pubblico',
+    defaultMessage: 'Orario per il pubblico',
+  },
+  email_sede: {
+    id: 'email_sede',
+    defaultMessage: 'Email',
+  },
+  pec_sede: {
+    id: 'pec_sede',
+    defaultMessage: 'PEC',
+  },
+  telefono_sede: {
+    id: 'telefono_sede',
+    defaultMessage: 'Telefono',
+  },
+  website: {
+    id: 'website',
+    defaultMessage: 'Sito web',
+  },
+  altre_sedi: {
+    id: 'uo_altre_sedi',
+    defaultMessage: 'Altre sedi',
+  },
+  documenti: {
+    id: 'uo_documenti',
+    defaultMessage: 'Documenti',
   },
 });
 
@@ -72,10 +115,8 @@ const UOView = ({ content }) => {
   const [sideMenuElements, setSideMenuElements] = useState(null);
 
   useEffect(() => {
-    if (documentBody.current) {
-      if (__CLIENT__) {
-        setSideMenuElements(documentBody.current);
-      }
+    if (documentBody.current && __CLIENT__) {
+      setSideMenuElements(documentBody.current);
     }
   }, [documentBody]);
 
@@ -91,7 +132,7 @@ const UOView = ({ content }) => {
           showdates={false}
           showtassonomiaargomenti={true}
         />
-        {content.image && (
+        {content?.image && (
           <WideImage
             title={content.title}
             image={content.image}
@@ -106,121 +147,118 @@ const UOView = ({ content }) => {
             ref={documentBody}
             className="col-lg-8 it-page-sections-container"
           >
-            {content.sedi?.length > 0 ||
-            content?.contact_info?.data.replace(/(<([^>]+)>)/g, '') ||
-            content?.geolocation?.latitude ||
-            content?.geolocation?.longitude ? (
-              <UOLocation
-                sedi={content?.sedi}
-                contact_info={content?.contact_info}
-                geolocation={content.geolocation}
-                street={content.street}
-                zip_code={content.zip_code}
-                city={content.city}
-                country={content.country}
-              />
-            ) : (
-              ''
-            )}
-            {content.tipologia_organizzazione && (
+            {/*** COSA FA ***/}
+            {content?.competenze?.data?.replace(/(<([^>]+)>)/g, '') && (
               <article
-                id="organizzazione"
+                id="cosa-fa"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4 id="header-organizzazione" className="mb-3">
-                  {intl.formatMessage(messages.tipologia_organizzazione)}
+                <h4 id="header-cosa-fa" className="mb-3">
+                  {intl.formatMessage(messages.cosa_fa)}
                 </h4>
-                <p className="text-serif">
-                  {` ${content.tipologia_organizzazione.title}`}
-                </p>
-              </article>
-            )}
-            {content.competenze?.data.replace(/(<([^>]+)>)/g, '') && (
-              <RichTextArticle
-                content={content.competenze?.data}
-                tag_id={'competenze'}
-                title={'Competenze'}
-              />
-            )}
-            {content.servizi_offerti.length > 0 ? (
-              <RelatedArticles
-                id="related-services"
-                items={content.servizi_offerti}
-                title={intl.formatMessage(messages.servizi_offerti)}
-              />
-            ) : null}
-            {content.legami_con_altre_strutture.length > 0 ? (
-              <article
-                id="legami-altre-strutture"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4 id="header-legami-altre-strutture">
-                  {intl.formatMessage(messages.legami_altre_strutture)}
-                </h4>
-                <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal mb-3">
-                  {content.legami_con_altre_strutture.map((item, i) => (
-                    <OfficeCard key={item['@id']} office={item} />
-                  ))}
+                <div className="mb-5 mt-3">
+                  <h6 className="text-serif font-weight-bold">
+                    {intl.formatMessage(messages.competenze)}
+                  </h6>
+                  <div
+                    className="text-serif"
+                    dangerouslySetInnerHTML={{
+                      __html: content.competenze.data,
+                    }}
+                  />
                 </div>
               </article>
-            ) : null}
-            {content.assessore_riferimento?.length > 0 ? (
+            )}
+
+            {/*** STRUTTURA ***/}
+            {(content?.legami_con_altre_strutture?.length > 0 ||
+              content?.responsabile?.length > 0 ||
+              content?.tipologia_organizzazione ||
+              content?.assessore_riferimento?.length > 0) && (
               <article
-                id="assessore-riferimento"
+                id="struttura"
                 className="it-page-section anchor-offset mt-5"
               >
-                <h4 id="header-assessore-riferimento">
-                  {intl.formatMessage(messages.assessore_riferimento)}
+                <h4 id="header-struttura" className="mb-3">
+                  {intl.formatMessage(messages.struttura)}
                 </h4>
-                {content.assessore_riferimento.map((item, i) => (
-                  <Link
-                    to={flattenToAppURL(item['@id'])}
-                    key={item['@id']}
-                    title={item.title}
-                    className="text-decoration-none mr-2"
-                  >
-                    <Chip
-                      color="primary"
-                      disabled={false}
-                      large={false}
-                      simple
-                      tag="div"
-                    >
-                      <ChipLabel tag="span">{item.title}</ChipLabel>
-                    </Chip>
-                  </Link>
-                ))}
+                {content.legami_con_altre_strutture?.length > 0 && (
+                  <div className="mb-5 mt-3">
+                    <h6 className="text-serif font-weight-bold">
+                      {intl.formatMessage(messages.legami_altre_strutture)}
+                    </h6>
+                    <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal mb-3">
+                      {content.legami_con_altre_strutture.map((item, _i) => (
+                        <OfficeCard key={item['@id']} office={item} />
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {content.responsabile?.length > 0 && (
+                  <div className="mb-5 mt-3">
+                    <h6 className="text-serif font-weight-bold">
+                      {intl.formatMessage(messages.responsabile)}
+                    </h6>
+                    {content.responsabile.map((item, i) => (
+                      <Link
+                        to={flattenToAppURL(item['@id'])}
+                        key={item['@id']}
+                        title={item.title}
+                        className="text-decoration-none  mr-2"
+                      >
+                        <Chip
+                          color="primary"
+                          disabled={false}
+                          large={false}
+                          simple
+                          tag="div"
+                        >
+                          <ChipLabel tag="span">{item.title}</ChipLabel>
+                        </Chip>
+                      </Link>
+                    ))}
+                  </div>
+                )}
+                {content.tipologia_organizzazione?.title && (
+                  <div className="mb-5 mt-3">
+                    <h6 className="text-serif font-weight-bold">
+                      {intl.formatMessage(messages.tipologia_organizzazione)}
+                    </h6>
+                    <p className="text-serif">
+                      {content.tipologia_organizzazione.title}
+                    </p>
+                  </div>
+                )}
+                {content.assessore_riferimento?.length > 0 && (
+                  <div className="mb-5 mt-3">
+                    <h6 className="text-serif font-weight-bold">
+                      {intl.formatMessage(messages.assessore_riferimento)}
+                    </h6>
+                    {content.assessore_riferimento.map((item, _i) => (
+                      <Link
+                        to={flattenToAppURL(item['@id'])}
+                        key={item['@id']}
+                        title={item.title}
+                        className="text-decoration-none mr-2"
+                      >
+                        <Chip
+                          color="primary"
+                          disabled={false}
+                          large={false}
+                          simple
+                          tag="div"
+                        >
+                          <ChipLabel tag="span">{item.title}</ChipLabel>
+                        </Chip>
+                      </Link>
+                    ))}
+                  </div>
+                )}
               </article>
-            ) : null}
-            {content.responsabile?.length > 0 ? (
-              <article
-                id="responsabile"
-                className="it-page-section anchor-offset mt-5"
-              >
-                <h4 id="header-responsabile">
-                  {intl.formatMessage(messages.responsabile)}
-                </h4>
-                {content.responsabile.map((item, i) => (
-                  <Link
-                    to={flattenToAppURL(item['@id'])}
-                    key={item['@id']}
-                    title={item.title}
-                    className="text-decoration-none  mr-2"
-                  >
-                    <Chip
-                      color="primary"
-                      disabled={false}
-                      large={false}
-                      simple
-                      tag="div"
-                    >
-                      <ChipLabel tag="span">{item.title}</ChipLabel>
-                    </Chip>
-                  </Link>
-                ))}
-              </article>
-            ) : null}
-            {content.persone_struttura.length > 0 ? (
+            )}
+
+            {/*** PERSONE ***/}
+            {content?.persone_struttura?.length > 0 && (
               <article
                 id="persone-struttura"
                 className="it-page-section anchor-offset mt-5"
@@ -228,7 +266,7 @@ const UOView = ({ content }) => {
                 <h4 id="header-persone-struttura">
                   {intl.formatMessage(messages.persone_struttura)}
                 </h4>
-                {content.persone_struttura.map((item, i) => (
+                {content.persone_struttura.map((item, _i) => (
                   <Link
                     to={flattenToAppURL(item['@id'])}
                     key={item['@id']}
@@ -247,28 +285,152 @@ const UOView = ({ content }) => {
                   </Link>
                 ))}
               </article>
-            ) : null}
-            {content?.items?.some((e) => e.id === 'allegati') && (
-              <Attachments content={content} folder_name={'allegati'} />
             )}
 
-            {content?.related_news?.length > 0 ? (
-              <RelatedNewsArticles
-                news={content?.related_news}
-                title={intl.formatMessage(messages.uo_related_news)}
-              />
-            ) : null}
-            {content.relatedItems.length > 0 ? (
+            {/*** SERVIZI ***/}
+            {content?.servizi_offerti?.length > 0 && (
               <RelatedArticles
-                id="related-items"
-                items={content?.relatedItems}
-                title={intl.formatMessage(messages.related_items)}
-                showimage={false}
+                id="related-services"
+                items={content.servizi_offerti}
+                title={intl.formatMessage(messages.servizi_offerti)}
               />
-            ) : null}
+            )}
 
+            {/*** CONTATTI ***/}
+            {(content?.sedi_secondarie?.length > 0 ||
+              content?.contact_info?.data.replace(/(<([^>]+)>)/g, '') ||
+              content?.geolocation?.latitude ||
+              content?.geolocation?.longitude ||
+              content?.street ||
+              content?.city ||
+              content?.country?.title ||
+              content?.zip_code ||
+              content?.orario_pubblico?.data.replace(/(<([^>]+)>)/g, '') ||
+              content?.telefono ||
+              content?.web ||
+              content?.email ||
+              content?.pec) && (
+              <article
+                id="contatti"
+                className="it-page-section anchor-offset mt-5"
+              >
+                <h4 id="header-contatti" className="mb-3">
+                  {intl.formatMessage(messages.contatti)}
+                </h4>
+
+                {(content.geolocation?.latitude ||
+                  content?.geolocation?.longitude ||
+                  content?.street ||
+                  content?.city ||
+                  content?.country?.title ||
+                  content?.zip_code) && (
+                  <div className="mb-5 mt-3">
+                    <EventLocations
+                      locations={[content]}
+                      load={false}
+                      details_link={false}
+                    />
+                  </div>
+                )}
+
+                {content.contact_info?.data.replace(/(<([^>]+)>)/g, '') && (
+                  <div className="mb-5 mt-3">
+                    <div
+                      className="text-serif"
+                      dangerouslySetInnerHTML={{
+                        __html: content.contact_info.data,
+                      }}
+                    />
+                  </div>
+                )}
+
+                {content.orario_pubblico?.data.replace(/(<([^>]+)>)/g, '') && (
+                  <div className="mb-5 mt-3">
+                    <h6 className="text-serif font-weight-bold">
+                      {intl.formatMessage(messages.orario_pubblico)}
+                    </h6>
+                    <div
+                      className="text-serif"
+                      dangerouslySetInnerHTML={{
+                        __html: content.orario_pubblico.data,
+                      }}
+                    />
+                  </div>
+                )}
+
+                <dl className="contatti-list">
+                  {content.telefono && (
+                    <div className="text-serif contatti">
+                      <dt>{intl.formatMessage(messages.telefono_sede)}: </dt>
+                      <dd>
+                        <a href={`tel:${content.telefono}`}>
+                          {content.telefono}
+                        </a>
+                      </dd>
+                    </div>
+                  )}
+
+                  {content.email && (
+                    <div className="text-serif contatti">
+                      <dt>{intl.formatMessage(messages.email_sede)}: </dt>
+                      <dd>
+                        <a href={`mailto:${content.email}`}>{content.email}</a>
+                      </dd>
+                    </div>
+                  )}
+                  {content.pec && (
+                    <div className="text-serif contatti">
+                      <dt>{intl.formatMessage(messages.pec_sede)}: </dt>
+                      <dd>
+                        <a href={`mailto:${content.pec}`}>{content.pec}</a>
+                      </dd>
+                    </div>
+                  )}
+                  {content.web && (
+                    <div className="text-serif contatti">
+                      <dt>{intl.formatMessage(messages.website)}: </dt>
+                      <dd>
+                        <a
+                          href={content.web}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {content.web}
+                        </a>
+                      </dd>
+                    </div>
+                  )}
+                </dl>
+
+                {content.sedi_secondarie?.length > 0 && (
+                  <div className="mb-5 mt-5">
+                    <h6 className="text-serif font-weight-bold">
+                      {intl.formatMessage(messages.altre_sedi)}
+                    </h6>
+                    <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                      {content.sedi_secondarie.map((item, _i) => (
+                        <GenericCard
+                          key={item['@id']}
+                          item={item}
+                          showimage={false}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </article>
+            )}
+
+            {/* DOCUMENTI */}
+            <Attachments
+              title={intl.formatMessage(messages.documenti)}
+              content={content}
+              folder_name={'allegati'}
+            />
+
+            {/* ULTERIORI INFORMAZIONI */}
             <Metadata content={content} showTags={false}>
-              {content.ulteriori_informazioni?.data?.replace(
+              {content?.ulteriori_informazioni?.data?.replace(
                 /(<([^>]+)>)/g,
                 '',
               ) && <HelpBox text={content.ulteriori_informazioni} />}
@@ -276,11 +438,11 @@ const UOView = ({ content }) => {
           </section>
         </div>
       </div>
+
+      <RelatedItems content={content} list={content?.related_news ?? []} />
     </>
   );
 };
-
-export default UOView;
 
 UOView.propTypes = {
   content: PropTypes.shape({
@@ -321,3 +483,5 @@ UOView.propTypes = {
     title: PropTypes.string.isRequired,
   }),
 };
+
+export default UOView;

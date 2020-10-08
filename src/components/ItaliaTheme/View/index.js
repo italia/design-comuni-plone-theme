@@ -1,6 +1,5 @@
 /* --- Commons --- */
 export RichTextArticle from '@italia/components/ItaliaTheme/View/Commons/RichTextArticle';
-export RichTextArticles from '@italia/components/ItaliaTheme/View/Commons/RichTextArticles';
 export RichText from '@italia/components/ItaliaTheme/View/Commons/RichText';
 export RelatedNewsArticles from '@italia/components/ItaliaTheme/View/Commons/RelatedNewsArticles';
 export RelatedArticles from '@italia/components/ItaliaTheme/View/Commons/RelatedArticles';
@@ -33,7 +32,6 @@ export OfficeCard from '@italia/components/ItaliaTheme/View/Commons/OfficeCard';
 export RelatedNews from '@italia/components/ItaliaTheme/View/Commons/RelatedNews';
 export WideImage from '@italia/components/ItaliaTheme/View/Commons/WideImage';
 export Locations from '@italia/components/ItaliaTheme/View/Commons/Locations';
-export UOLocation from '@italia/components/ItaliaTheme/View/Commons/UOLocation';
 export EventLocations from '@italia/components/ItaliaTheme/View/Commons/EventLocations';
 export EventLocation from '@italia/components/ItaliaTheme/View/Commons/EventLocation';
 export EventLocationMap from '@italia/components/ItaliaTheme/View/Commons/EventLocationMap';

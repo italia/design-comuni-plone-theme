@@ -20,7 +20,7 @@ const mock_mandatory = {
     },
   ],
   description: 'Descrizione del servizio',
-  descrizione_destinatari: {
+  a_chi_si_rivolge: {
     'content-type': 'text/html',
     data: '<p>Descrizione destinatari</p>',
     encoding: 'utf-8',
