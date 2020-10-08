@@ -184,7 +184,7 @@ const ServizioView = ({ content }) => {
 
             {/* TEXT BODY */}
             <RichTextArticle
-              content={content.descrizione_estesa.data}
+              content={content.descrizione_estesa?.data}
               tag_id={'text-body'}
               title="Cos'è"
               show_title={false}
@@ -205,13 +205,13 @@ const ServizioView = ({ content }) => {
                 <RichText
                   title={intl.formatMessage(messages.chi_puo_presentare)}
                   title_size="h5"
-                  content={content.chi_puo_presentare.data}
+                  content={content.chi_puo_presentare?.data}
                 />
 
                 <RichText
                   title={intl.formatMessage(messages.copertura_geografica)}
                   title_size="h5"
-                  content={content.copertura_geografica.data}
+                  content={content.copertura_geografica?.data}
                 />
               </RichTextArticle>
             )}
@@ -236,29 +236,29 @@ const ServizioView = ({ content }) => {
                 tag_id="accedere_al_servizio"
               >
                 <RichText
-                  content={content.come_si_fa.data}
+                  content={content.come_si_fa?.data}
                   title={intl.formatMessage(messages.come_si_fa)}
                 />
 
                 <RichText
-                  content={content.cosa_si_ottiene.data}
+                  content={content.cosa_si_ottiene?.data}
                   title={intl.formatMessage(messages.cosa_si_ottiene)}
                 />
 
                 <RichText
-                  content={content.procedure_collegate.data}
+                  content={content.procedure_collegate?.data}
                   title={intl.formatMessage(messages.procedure_collegate)}
                 />
 
                 <RichText
+                  content={content.canale_digitale?.data}
                   title={intl.formatMessage(messages.canale_digitale)}
-                  content={content.canale_digitale.data}
                 />
 
                 <RichText
+                  content={content.autenticazione?.data}
                   title={intl.formatMessage(messages.autenticazione)}
                   title_size="h6"
-                  content={content.autenticazione.data}
                 />
 
                 {(content.dove_rivolgersi?.length > 0 ||
@@ -273,7 +273,7 @@ const ServizioView = ({ content }) => {
                   <RichText
                     title={intl.formatMessage(messages.dove_rivolgersi)}
                   >
-                    <RichText content={content.prenota_appuntamento.data} />
+                    <RichText content={content.prenota_appuntamento?.data} />
 
                     {content.dove_rivolgersi?.length > 0 && (
                       <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
@@ -283,7 +283,7 @@ const ServizioView = ({ content }) => {
                       </div>
                     )}
 
-                    <RichText content={content.dove_rivolgersi_extra.data} />
+                    <RichText content={content.dove_rivolgersi_extra?.data} />
                   </RichText>
                 )}
               </RichTextArticle>
@@ -311,13 +311,13 @@ const ServizioView = ({ content }) => {
                   <RichText
                     title={intl.formatMessage(messages.costi)}
                     title_size="h6"
-                    content={content.costi.data}
+                    content={content.costi?.data}
                   />
 
                   <RichText
                     title={intl.formatMessage(messages.vincoli)}
                     title_size="h6"
-                    content={content.vincoli.data}
+                    content={content.vincoli?.data}
                   />
                 </RichTextArticle>
               </>
@@ -326,7 +326,7 @@ const ServizioView = ({ content }) => {
             {/* TEMPI E SCADENZE */}
 
             <RichTextArticle
-              content={content.tempi_e_scadenze.data}
+              content={content.tempi_e_scadenze?.data}
               add_class="style_ol_list"
               tag_id={'text-tempi_e_scadenze'}
               title={intl.formatMessage(messages.tempi_e_scadenze)}
@@ -335,7 +335,7 @@ const ServizioView = ({ content }) => {
             {/* CASI PARTICOLARI */}
 
             <RichTextArticle
-              content={content.casi_particolari.data}
+              content={content.casi_particolari?.data}
               tag_id={'text-casi_particolari'}
               title={intl.formatMessage(messages.casi_particolari)}
             />

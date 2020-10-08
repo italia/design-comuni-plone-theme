@@ -277,9 +277,8 @@ const EventoView = ({ content, location }) => {
               title={intl.formatMessage(messages.date_e_orari)}
             >
               <Dates content={content} />
-              {content?.orari?.data?.replace(/(<([^>]+)>)/g, '') && (
-                <RichText content={content?.orari.data} />
-              )}
+
+              <RichText content={content?.orari?.data} />
             </RichTextArticle>
 
             {/* COSTI */}
@@ -338,7 +337,7 @@ const EventoView = ({ content, location }) => {
                       </CardTitle>
                       <CardBody tag="div" className={'card-body pr-3'}>
                         <RichText
-                          content={content.organizzato_da_esterno?.data}
+                          content={content.organizzato_da_esterno.data}
                         />
                         {content?.telefono && (
                           <p className="card-text mt-3">

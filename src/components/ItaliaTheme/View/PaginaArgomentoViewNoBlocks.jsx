@@ -127,16 +127,13 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
                 </div>
               </article>
             ) : null}
-            {content.ulteriori_informazioni?.data.replace(
-              /(<\/?[^>]+(>|$)|&nbsp;|\s)/g,
-              '',
-            ) && (
-              <RichTextArticle
-                content={content.ulteriori_informazioni.data}
-                tag_id={'text-ulteriori_informazioni'}
-                title={intl.formatMessage(messages.ulteriori_informazioni)}
-              />
-            )}
+
+            <RichTextArticle
+              content={content.ulteriori_informazioni?.data}
+              tag_id={'text-ulteriori_informazioni'}
+              title={intl.formatMessage(messages.ulteriori_informazioni)}
+            />
+
             {content?.related_services?.length > 0 ? (
               <article
                 id="related_servizio-items"

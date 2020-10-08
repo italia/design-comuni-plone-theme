@@ -132,7 +132,7 @@ const NewsItemView = ({ content, location }) => {
               </RichTextArticle>
             )}
 
-            {content.dataset?.data.replace(/(<([^>]+)>)/g, '') && (
+            {content.dataset?.data?.replace(/(<([^>]+)>)/g, '') && (
               <RichTextArticle
                 content={content.dataset.data}
                 tag_id="dataset"

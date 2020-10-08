@@ -64,7 +64,7 @@ const PageView = ({ content }) => {
                   <div className="header-infos px-4 mb-5">
                     <div
                       dangerouslySetInnerHTML={{
-                        __html: content?.info_testata?.data,
+                        __html: content?.info_testata.data,
                       }}
                     />
                   </div>

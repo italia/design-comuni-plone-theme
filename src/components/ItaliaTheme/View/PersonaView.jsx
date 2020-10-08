@@ -237,7 +237,7 @@ const PersonaView = ({ content }) => {
                         <RichText
                           title_size="h5"
                           title={`${intl.formatMessage(messages.competenze)}:`}
-                          content={content?.competenze?.data}
+                          content={content.competenze.data}
                         />
                       </div>
                     )}
@@ -248,7 +248,7 @@ const PersonaView = ({ content }) => {
                         <RichText
                           title_size="h5"
                           title={`${intl.formatMessage(messages.deleghe)}:`}
-                          content={content?.deleghe?.data}
+                          content={content.deleghe.data}
                         />
                       </div>
                     )}
@@ -277,7 +277,7 @@ const PersonaView = ({ content }) => {
                         <RichText
                           title_size="h5"
                           title={`${intl.formatMessage(messages.biografia)}:`}
-                          content={content?.biografia?.data}
+                          content={content.biografia.data}
                         />
                       </div>
                     )}
