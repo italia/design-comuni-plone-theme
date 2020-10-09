@@ -308,7 +308,10 @@ const VenueView = ({ content }) => {
               content?.pec ||
               content?.web ||
               content?.struttura_responsabile_correlati ||
-              content?.struttura.struttura_responsabile ||
+              content?.struttura.struttura_responsabile?.data?.replace(
+                /(<([^>]+)>)/g,
+                '',
+              ).length > 0 ||
               content?.riferimento_telefonico_struttura ||
               content?.riferimento_mail_struttura ||
               content?.riferimento_pec_struttura) && (
@@ -361,7 +364,15 @@ const VenueView = ({ content }) => {
                       {content.web && (
                         <p className="card-text mt-3">
                           {intl.formatMessage(messages.riferimento_web)}:{' '}
-                          <a href={content.web}>{content.web}</a>
+                          <a
+                            href={
+                              content.web.match(/^(http:\/\/|https:\/\/)/gm)
+                                ? content.web
+                                : `http://${content.web}`
+                            }
+                          >
+                            {content.web}
+                          </a>
                         </p>
                       )}
                     </CardBody>
