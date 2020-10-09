@@ -48,7 +48,7 @@ const Dates = ({ content, show_image }) => {
       forceset: true,
     });
     recurrenceText = rruleSet.rrules()[0]?.toText(
-      (t) => {
+      t => {
         return RRULE_LANGUAGE.strings[t];
       },
       RRULE_LANGUAGE,
@@ -76,9 +76,9 @@ const Dates = ({ content, show_image }) => {
             >
               <CardBody tag="div" className={'card-body'}>
                 <CardTitle tag="h5">
-                  {`${moment(content.start).format(
-                    'hh:mm',
-                  )} - ${intl.formatMessage(messages.start)}`}
+                  {!content.whole_day &&
+                    `${moment(content.start).format('hh:mm')} - `}
+                  {intl.formatMessage(messages.start)}
                 </CardTitle>
               </CardBody>
             </Card>
@@ -100,9 +100,11 @@ const Dates = ({ content, show_image }) => {
               tag="div"
             >
               <CardBody tag="div" className={'card-body'}>
-                <CardTitle tag="h5">{`${moment(content.end).format(
-                  'hh:mm',
-                )} - ${intl.formatMessage(messages.end)}`}</CardTitle>
+                <CardTitle tag="h5">
+                  {!content.whole_day &&
+                    `${moment(content.end).format('hh:mm')} - `}
+                  {intl.formatMessage(messages.end)}
+                </CardTitle>
               </CardBody>
             </Card>
           </div>
@@ -116,7 +118,7 @@ const Dates = ({ content, show_image }) => {
       {rruleSet?.rdates().length > 0 && (
         <div className="mt-4">
           <h5>{intl.formatMessage(messages.additional_dates)}</h5>
-          {rruleSet.rdates().map((additionalDate) => (
+          {rruleSet.rdates().map(additionalDate => (
             <div className="text-serif">
               {moment(additionalDate).format('dddd DD MMMM YYYY')}
             </div>
@@ -126,7 +128,7 @@ const Dates = ({ content, show_image }) => {
       {rruleSet?.rdates().length > 0 && (
         <div className="mt-4">
           <h5>{intl.formatMessage(messages.excluded_dates)}</h5>
-          {rruleSet.exdates().map((exDate) => (
+          {rruleSet.exdates().map(exDate => (
             <div className="text-serif">
               {moment(exDate).format('dddd DD MMMM YYYY')}
             </div>
