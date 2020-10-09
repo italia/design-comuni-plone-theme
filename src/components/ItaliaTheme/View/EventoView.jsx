@@ -431,7 +431,7 @@ const EventoView = ({ content, location }) => {
                   ) && <HelpBox text={content?.ulteriori_informazioni} />}
 
                   {content?.event_url && (
-                    <div class="mt-4">
+                    <div className="mt-4">
                       <strong>{intl.formatMessage(messages.event_url)}:</strong>{' '}
                       <a href={content.event_url} rel="noopener noreferer">
                         {content.event_url}
@@ -440,7 +440,7 @@ const EventoView = ({ content, location }) => {
                   )}
 
                   {content?.patrocinato_da && (
-                    <div class="mt-4">
+                    <div className="mt-4">
                       <strong>
                         {intl.formatMessage(messages.patrocinato_da)}
                       </strong>
