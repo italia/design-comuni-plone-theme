@@ -527,7 +527,9 @@ ServizioView.propTypes = {
     procedure_collegate: PropTypes.shape({
       data: PropTypes.string,
     }),
-    canale_digitale: PropTypes.string,
+    canale_digitale: PropTypes.shape({
+      data: PropTypes.string,
+    }),
     autenticazione: PropTypes.shape({
       data: PropTypes.string,
     }),

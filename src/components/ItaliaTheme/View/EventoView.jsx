@@ -312,7 +312,11 @@ const EventoView = ({ content, location }) => {
                       {intl.formatMessage(messages.event_web_site)}
                     </h6>
                     <a
-                      href={content.web}
+                      href={
+                        content.web.match(/^(http:\/\/|https:\/\/)/gm)
+                          ? content.web
+                          : `http://${content.web}`
+                      }
                       target="_blank"
                       rel="noopener noreferrer"
                     >

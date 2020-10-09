@@ -391,7 +391,11 @@ const UOView = ({ content }) => {
                       <dt>{intl.formatMessage(messages.website)}: </dt>
                       <dd>
                         <a
-                          href={content.web}
+                          href={
+                            content.web.match(/^(http:\/\/|https:\/\/)/gm)
+                              ? content.web
+                              : `http://${content.web}`
+                          }
                           target="_blank"
                           rel="noopener noreferrer"
                         >

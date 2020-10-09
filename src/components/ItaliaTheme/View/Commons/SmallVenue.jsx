@@ -23,6 +23,7 @@ const SmallVenue = ({ venue }) => {
   }, [dispatch, venue, url, key]);
 
   let venue_fo = venueContent[key]?.data;
+
   return venue_fo ? (
     <>
       <div className="card card-teaser shadow mt-3 rounded bigborder">
@@ -33,26 +34,32 @@ const SmallVenue = ({ venue }) => {
             </Link>
           </h5>
           <div className="card-text">
-            {venue_fo.riferimento_telefonico_luogo && (
-              <p>{venue_fo.riferimento_telefonico_luogo}</p>
-            )}
-            {venue_fo.riferimento_mail_luogo && (
+            {venue_fo.telefono && <p>{venue_fo.telefono}</p>}
+            {venue_fo.email && (
               <p>
-                <a
-                  href={`mailto:${venue_fo.riferimento_mail_luogo}`}
-                  title={venue_fo.riferimento_mail_luogo}
-                >
-                  {venue_fo.riferimento_mail_luogo}
+                <a href={`mailto:${venue_fo.email}`} title={venue_fo.email}>
+                  {venue_fo.email}
                 </a>
               </p>
             )}
-            {venue_fo.riferimento_pec && (
+            {venue_fo.pec && (
+              <p>
+                <a href={`mailto:${venue_fo.pec}`} title={venue_fo.pec}>
+                  {venue_fo.pec}
+                </a>
+              </p>
+            )}
+            {venue_fo.web && (
               <p>
                 <a
-                  href={`mailto:${venue_fo.riferimento_pec}`}
-                  title={venue_fo.riferimento_pec}
+                  href={
+                    venue_fo.web.match(/^(http:\/\/|https:\/\/)/gm)
+                      ? venue_fo.web
+                      : `http://${venue_fo.web}`
+                  }
+                  title={venue_fo.web}
                 >
-                  {venue_fo.riferimento_pec}
+                  {venue_fo.web}
                 </a>
               </p>
             )}
