@@ -302,7 +302,8 @@ const ServizioView = ({ content }) => {
 
             {/* COSTI E VINCOLI */}
             {(content.costi?.data?.replace(/(<([^>]+)>)/g, '').length > 0 ||
-              content.vincoli.data?.replace(/(<([^>]+)>)/g, '').length > 0) && (
+              content.vincoli?.data?.replace(/(<([^>]+)>)/g, '').length >
+                0) && (
               <>
                 <RichTextArticle
                   tag_id={'costi-e-vincoli'}
