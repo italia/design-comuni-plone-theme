@@ -363,7 +363,7 @@ const VenueView = ({ content }) => {
 
                       {content.web && (
                         <p className="card-text mt-3">
-                          {intl.formatMessage(messages.riferimento_web)}: ss{' '}
+                          {intl.formatMessage(messages.riferimento_web)}:{' '}
                           <a
                             href={
                               content.web.match(/^(http:\/\/|https:\/\/)/gm)
