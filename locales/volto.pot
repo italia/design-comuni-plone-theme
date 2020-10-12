@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-10-07T13:20:06.476Z\n"
+"POT-Creation-Date: 2020-10-12T09:58:46.088Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -837,6 +837,12 @@ msgstr ""
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
 # defaultMessage: Add some blocks to show in dropdown menu.
 msgid "dropdownmenu-blocks-description"
+msgstr ""
+
+#: addons/volto-dropdownmenu/src/components/DropdownMenu
+#: components/ItaliaTheme/MegaMenu/MegaMenu
+# defaultMessage: Close menu
+msgid "dropdownmenu-close-menu-button"
 msgstr ""
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget

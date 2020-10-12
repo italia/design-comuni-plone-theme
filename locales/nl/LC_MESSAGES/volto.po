@@ -717,6 +717,11 @@ msgstr ""
 msgid "dropdownmenu-blocks-description"
 msgstr ""
 
+#: addons/volto-dropdownmenu/src/components/DropdownMenu
+#: components/ItaliaTheme/MegaMenu/MegaMenu
+msgid "dropdownmenu-close-menu-button"
+msgstr ""
+
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
 msgid "dropdownmenu-delete-button"
 msgstr ""

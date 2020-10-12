@@ -698,6 +698,11 @@ msgstr "Blocchi"
 msgid "dropdownmenu-blocks-description"
 msgstr "Aggiungi i blocchi che verranno mostrati nel megamenu"
 
+#: addons/volto-dropdownmenu/src/components/DropdownMenu
+#: components/ItaliaTheme/MegaMenu/MegaMenu
+msgid "dropdownmenu-close-menu-button"
+msgstr "Chiudi menu"
+
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
 msgid "dropdownmenu-delete-button"
 msgstr "Elimina il menu"

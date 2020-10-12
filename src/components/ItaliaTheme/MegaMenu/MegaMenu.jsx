@@ -23,6 +23,7 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
+  Button,
   Row,
   Col,
   LinkList,
@@ -38,6 +39,10 @@ const messages = defineMessages({
   view_all: {
     id: 'Vedi tutto',
     defaultMessage: 'Vedi tutto',
+  },
+  closeMenu: {
+    id: 'dropdownmenu-close-menu-button',
+    defaultMessage: 'Close menu',
   },
 });
 
@@ -183,6 +188,15 @@ const MegaMenu = ({ item, pathname }) => {
             />
           </DropdownToggle>
           <DropdownMenu flip tag="div">
+            <div className="text-right">
+              <Button
+                color="link"
+                onClick={() => setMenuStatus(false)}
+                title={intl.formatMessage(messages.closeMenu)}
+              >
+                <Icon icon="it-close" />
+              </Button>
+            </div>
             <Row>
               <Col lg={hasBlocks ? 6 : 12}>
                 <Row>
