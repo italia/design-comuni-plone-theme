@@ -188,7 +188,7 @@ const MegaMenu = ({ item, pathname }) => {
             />
           </DropdownToggle>
           <DropdownMenu flip tag="div">
-            <div className="text-right sr-only">
+            <div className="text-right megamenu-close-button">
               <Button
                 color="link"
                 onClick={() => setMenuStatus(false)}
