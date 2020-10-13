@@ -1,6 +1,6 @@
 /**
- * NewsItemView view component.
- * @module components/theme/View/NewsItemView
+ * VenueView view component.
+ * @module components/theme/View/VenueView
  */
 
 import React, { createRef, useEffect, useState } from 'react';
@@ -18,6 +18,7 @@ import {
   Gallery,
   GenericCard,
   Metadata,
+  VenuePlaceholderAfterContent,
 } from '@italia/components/ItaliaTheme/View';
 import { contentFolderHasItems } from '@italia/helpers';
 import { Icon } from 'design-react-kit/dist/design-react-kit';
@@ -520,6 +521,7 @@ const VenueView = ({ content }) => {
           </section>
         </div>
       </div>
+      <VenuePlaceholderAfterContent />
       <RelatedItems list={content.related_news ?? []} />
     </>
   );

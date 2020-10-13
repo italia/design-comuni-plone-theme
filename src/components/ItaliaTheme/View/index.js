@@ -40,4 +40,12 @@ export Sponsors from '@italia/components/ItaliaTheme/View/Commons/Sponsors';
 export RelatedItems from '@italia/components/ItaliaTheme/View/Commons/RelatedItems';
 
 /* --- View --- */
-export PaginaArgomentoViewNoBlocks from '@italia/components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks';
+export PaginaArgomentoViewNoBlocks from '@italia/components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks';
+export EventoPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/EventoView/Placeholder/AfterContent';
+export NewsItemPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/NewsItemView/Placeholder/AfterContent';
+export PagePlaceholderAfterContent from '@italia/components/ItaliaTheme/View/PageView/Placeholder/AfterContent';
+export PaginaArgomentoPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/PaginaArgomentoView/Placeholder/AfterContent';
+export PersonaPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/PersonaView/Placeholder/AfterContent';
+export ServizioPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/ServizioView/Placeholder/AfterContent';
+export UOPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/UOView/Placeholder/AfterContent';
+export VenuePlaceholderAfterContent from '@italia/components/ItaliaTheme/View/VenueView/Placeholder/AfterContent';

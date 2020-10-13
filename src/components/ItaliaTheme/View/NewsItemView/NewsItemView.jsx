@@ -6,7 +6,7 @@
 import React, { createRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import { readingTime } from './ViewUtils';
+import { readingTime } from '../ViewUtils';
 
 import {
   Metadata,
@@ -20,6 +20,7 @@ import {
   Attachments,
   TextOrBlocks,
   RelatedItems,
+  NewsItemPlaceholderAfterContent,
 } from '@italia/components/ItaliaTheme/View';
 
 // import { getBaseUrl } from '@plone/volto/helpers';
@@ -143,6 +144,7 @@ const NewsItemView = ({ content, location }) => {
           </section>
         </div>
       </div>
+      <NewsItemPlaceholderAfterContent />
       <RelatedItems list={related_items} />
     </>
   );

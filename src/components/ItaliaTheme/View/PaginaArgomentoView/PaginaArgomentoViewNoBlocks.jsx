@@ -15,6 +15,7 @@ import {
   RichTextArticle,
   Metadata,
   NewsCard,
+  PaginaArgomentoPlaceholderAfterContent,
 } from '@italia/components/ItaliaTheme/View';
 
 // import { getBaseUrl } from '@plone/volto/helpers';
@@ -228,6 +229,7 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
             <Metadata content={content} />
           </section>
         </div>
+        <PaginaArgomentoPlaceholderAfterContent />
       </div>
     </>
   );
