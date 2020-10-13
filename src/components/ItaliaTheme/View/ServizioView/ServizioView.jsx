@@ -1,6 +1,6 @@
 /**
- * NewsItemView view component.
- * @module components/theme/View/NewsItemView
+ * ServizioView view component.
+ * @module components/theme/View/ServizioView
  */
 
 import React, { createRef, useEffect, useState } from 'react';
@@ -19,6 +19,7 @@ import {
   SmallVenue,
   HelpBox,
   NewsCard,
+  ServizioPlaceholderAfterContent,
 } from '@italia/components/ItaliaTheme/View';
 
 import { Card, CardBody } from 'design-react-kit/dist/design-react-kit';
@@ -129,8 +130,8 @@ const messages = defineMessages({
 });
 
 /**
- * PersonaView view component class.
- * @function PersonaView
+ * ServizioView view component class.
+ * @function ServizioView
  * @params {object} content Content object.
  * @returns {string} Markup of the component.
  */
@@ -487,6 +488,7 @@ const ServizioView = ({ content }) => {
           </section>
         </div>
       </div>
+      <ServizioPlaceholderAfterContent />
     </>
   );
 };
