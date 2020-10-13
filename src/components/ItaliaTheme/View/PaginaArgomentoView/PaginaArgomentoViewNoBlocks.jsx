@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import {
   GenericCard,
-  WideImage,
+  ContentImage,
   SideMenu,
   PageHeader,
   OfficeCard,
@@ -81,18 +81,11 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
           content={content}
           readingtime={null}
           showreadingtime={false}
-          imageinheader={false}
-          imageinheader_field={null}
           showdates={false}
           showtassonomiaargomenti={true}
         />
-        {content.image && (
-          <WideImage
-            title={content.title}
-            image={content.image}
-            caption={content.image_caption}
-          />
-        )}
+        {/* HEADER IMAGE */}
+        <ContentImage content={content} position="afterHeader" />
 
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
@@ -102,6 +95,9 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
             className="col-lg-8 it-page-sections-container"
             ref={documentBody}
           >
+            {/* HEADER IMAGE */}
+            <ContentImage content={content} position="documentBody" />
+
             {content?.area_appartenenza?.length > 0 ? (
               <article
                 id="area_appartenenza"

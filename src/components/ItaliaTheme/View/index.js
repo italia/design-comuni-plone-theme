@@ -31,6 +31,7 @@ export OfficeCard from '@italia/components/ItaliaTheme/View/Commons/OfficeCard';
 
 export RelatedNews from '@italia/components/ItaliaTheme/View/Commons/RelatedNews';
 export WideImage from '@italia/components/ItaliaTheme/View/Commons/WideImage';
+export ContentImage from '@italia/components/ItaliaTheme/View/Commons/ContentImage';
 export Locations from '@italia/components/ItaliaTheme/View/Commons/Locations';
 export EventLocations from '@italia/components/ItaliaTheme/View/Commons/EventLocations';
 export EventLocation from '@italia/components/ItaliaTheme/View/Commons/EventLocation';

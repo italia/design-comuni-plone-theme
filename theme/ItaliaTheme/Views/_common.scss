@@ -241,3 +241,18 @@ div.sticky-wrapper {
     color: $tertiary;
   }
 }
+
+.wide-image:not(.row-full-width) {
+  img {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: #{map-get($grid-breakpoints, md)}) {
+  .it-page-sections-container {
+    .wide-image:not(.row-full-width) {
+      margin-right: -2em;
+      margin-left: -2em;
+    }
+  }
+}

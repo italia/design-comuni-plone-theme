@@ -1,6 +1,7 @@
 import React from 'react';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 
 /**
  * WideImage view component class.
@@ -8,21 +9,21 @@ import PropTypes from 'prop-types';
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const WideImage = params => {
+const WideImage = ({ image, title, caption, fullWidth = true }) => {
   return (
-    <div className="row row-full-width my-3">
+    <div className={cx('row wide-image', { 'row-full-width my-3': fullWidth })}>
       <figure className="figure">
-        {params.image && (
+        {image && (
           <img
-            src={flattenToAppURL(params.image.download)}
-            className="full-width"
-            alt={params.caption || params.title}
-            title={params.caption || params.title}
+            src={flattenToAppURL(image.download)}
+            className={cx('', { 'full-width': fullWidth })}
+            alt={caption || title}
+            title={caption || title}
           />
         )}
-        {params.caption && (
+        {caption && (
           <figcaption className="figure-caption text-center pt-3">
-            {params.caption}
+            {caption}
           </figcaption>
         )}
       </figure>
@@ -38,5 +39,6 @@ WideImage.propTypes = {
       download: PropTypes.string,
     }),
     caption: PropTypes.string,
+    fullWidth: PropTypes.bool,
   }),
 };

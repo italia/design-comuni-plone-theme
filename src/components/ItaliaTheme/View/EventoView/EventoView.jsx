@@ -11,7 +11,7 @@ import {
   Attachments,
   Gallery,
   Events,
-  WideImage,
+  ContentImage,
   SideMenu,
   HelpBox,
   PageHeader,
@@ -156,6 +156,7 @@ const EventoView = ({ content, location }) => {
       )
     );
   };
+
   useEffect(() => {
     if (documentBody.current) {
       if (__CLIENT__) {
@@ -171,19 +172,14 @@ const EventoView = ({ content, location }) => {
           content={content}
           readingtime={null}
           showreadingtime={true}
-          imageinheader={false}
-          imageinheader_field={null}
           showdates={true}
           showtopics={true}
           showtassonomiaargomenti={true}
         />
-        {(content?.image || content?.image_caption) && (
-          <WideImage
-            title={content?.title}
-            image={content?.image}
-            caption={content?.image_caption}
-          />
-        )}
+
+        {/* HEADER IMAGE */}
+        <ContentImage content={content} position="afterHeader" />
+
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
             {__CLIENT__ && <SideMenu data={sideMenuElements} />}
@@ -192,6 +188,9 @@ const EventoView = ({ content, location }) => {
             ref={documentBody}
             className="col-lg-8 it-page-sections-container"
           >
+            {/* HEADER IMAGE */}
+            <ContentImage content={content} position="documentBody" />
+
             {/* COS'è */}
             <RichTextArticle
               tag_id={'text-body'}

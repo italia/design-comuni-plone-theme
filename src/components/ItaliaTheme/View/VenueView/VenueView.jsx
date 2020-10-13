@@ -9,7 +9,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import {
   SideMenu,
   PageHeader,
-  WideImage,
+  ContentImage,
   RichTextArticle,
   RelatedItems,
   RelatedArticles,
@@ -155,18 +155,12 @@ const VenueView = ({ content }) => {
           content={content}
           readingtime={null}
           showreadingtime={false}
-          imageinheader={true}
-          imageinheader_field={'foto_persona'}
           showdates={false}
           showtassonomiaargomenti={true}
         />
-        {(content.image || content.image_caption) && (
-          <WideImage
-            title={content.title}
-            image={content.image}
-            caption={content.image_caption}
-          />
-        )}
+        {/* HEADER IMAGE */}
+        <ContentImage content={content} position="afterHeader" />
+
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
             {__CLIENT__ && <SideMenu data={sideMenuElements} />}
@@ -175,6 +169,9 @@ const VenueView = ({ content }) => {
             className="col-lg-8 it-page-sections-container"
             ref={documentBody}
           >
+            {/* HEADER IMAGE */}
+            <ContentImage content={content} position="documentBody" />
+
             {/* DESCRIZIONE */}
             {(content?.descrizione_completa?.data?.replace(/(<([^>]+)>)/g, '')
               .length > 0 ||
