@@ -1,6 +1,6 @@
 /**
- * NewsItemView view component.
- * @module components/theme/View/NewsItemView
+ * PersonaView view component.
+ * @module components/theme/View/PersonaView
  */
 
 import React, { createRef, useEffect, useState } from 'react';
@@ -19,6 +19,7 @@ import {
   Metadata,
   HelpBox,
   RelatedItems,
+  PersonaPlaceholderAfterContent,
 } from '@italia/components/ItaliaTheme/View';
 import { contentFolderHasItems } from '@italia/helpers';
 
@@ -432,6 +433,7 @@ const PersonaView = ({ content }) => {
           </section>
         </div>
       </div>
+      <PersonaPlaceholderAfterContent />
       <RelatedItems content={content} />
     </>
   );

@@ -20,6 +20,7 @@ import {
   RelatedItems,
   SideMenu,
   WideImage,
+  UOPlaceholderAfterContent,
 } from '@italia/components/ItaliaTheme/View';
 
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
@@ -105,7 +106,7 @@ const messages = defineMessages({
 
 /**
  * UOView view component class.
- * @function NewsItemView
+ * @function UOView
  * @params {object} content Content object.
  * @returns {string} Markup of the component.
  */
@@ -442,7 +443,7 @@ const UOView = ({ content }) => {
           </section>
         </div>
       </div>
-
+      <UOPlaceholderAfterContent />
       <RelatedItems content={content} list={content?.related_news ?? []} />
     </>
   );

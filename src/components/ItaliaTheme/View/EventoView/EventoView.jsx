@@ -25,7 +25,9 @@ import {
   Sponsors,
   RelatedItems,
   RichText,
+  EventoPlaceholderAfterContent,
 } from '@italia/components/ItaliaTheme/View';
+
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import {
@@ -482,6 +484,7 @@ const EventoView = ({ content, location }) => {
           </section>
         </div>
       </div>
+      <EventoPlaceholderAfterContent />
       <RelatedItems content={content} />
     </>
   );

@@ -42,14 +42,14 @@ export SectionIcon from '@italia/components/ItaliaTheme/Icons/SectionIcon';
 
 export CharCounterDescriptionWidget from '@italia/components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget';
 export TextEditorWidget from '@italia/components/ItaliaTheme/manage/Widgets/TextEditorWidget';
-export PageView from '@italia/components/ItaliaTheme/View/PageView';
-export VenueView from '@italia/components/ItaliaTheme/View/VenueView';
-export NewsItemView from '@italia/components/ItaliaTheme/View/NewsItemView';
-export UOView from '@italia/components/ItaliaTheme/View/UOView';
-export PersonaView from '@italia/components/ItaliaTheme/View/PersonaView';
-export ServizioView from '@italia/components/ItaliaTheme/View/ServizioView';
-export EventoView from '@italia/components/ItaliaTheme/View/EventoView';
-export PaginaArgomentoView from '@italia/components/ItaliaTheme/View/PaginaArgomentoView';
+export PageView from '@italia/components/ItaliaTheme/View/PageView/PageView';
+export VenueView from '@italia/components/ItaliaTheme/View/VenueView/VenueView';
+export NewsItemView from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemView';
+export UOView from '@italia/components/ItaliaTheme/View/UOView/UOView';
+export PersonaView from '@italia/components/ItaliaTheme/View/PersonaView/PersonaView';
+export ServizioView from '@italia/components/ItaliaTheme/View/ServizioView/ServizioView';
+export EventoView from '@italia/components/ItaliaTheme/View/EventoView/EventoView';
+export PaginaArgomentoView from '@italia/components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoView';
 
 export LinkToWidget from '@italia/components/ItaliaTheme/manage/Widgets/LinkToWidget';
 export IconWidget from '@italia/components/ItaliaTheme/manage/Widgets/IconWidget';
