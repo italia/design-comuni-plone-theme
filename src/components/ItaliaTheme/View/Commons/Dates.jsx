@@ -111,7 +111,7 @@ const Dates = ({ content, show_image }) => {
         </div>
       </div>
       {recurrenceText && (
-        <div className="mt-4 ml-4 mb-5 text-serif">
+        <div className="mt-4 mb-5 text-serif">
           <strong>{recurrenceText}</strong>
         </div>
       )}
