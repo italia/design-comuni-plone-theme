@@ -117,7 +117,7 @@ class SelectWidget extends Component {
     onDelete: PropTypes.func,
     itemsTotal: PropTypes.number,
     wrapped: PropTypes.bool,
-    customOption: PropTypes.any
+    customOption: PropTypes.any,
   };
 
   /**
@@ -223,12 +223,15 @@ class SelectWidget extends Component {
 
     if (isObject(value)) {
       return {
-        label: value.title !== 'None' && value.title ? value.title : value.token,
+        label:
+          value.title !== 'None' && value.title ? value.title : value.token,
         value: value.token,
       };
     }
+
     if (value && choices.length > 0) {
-      return { label: find(choices, (o) => o[0] === value)[1], value };
+      const choice = find(choices, (o) => o[0] === value);
+      return choice ? { label: choice[1], value } : { label: '', value: '' };
     } else {
       return {};
     }
@@ -339,8 +342,12 @@ class SelectWidget extends Component {
             ]}
             styles={customSelectStyles}
             theme={selectTheme}
-            components={{ DropdownIndicator, 
-                          Option: this.props.customOption ? this.props.customOption : Option }}
+            components={{
+              DropdownIndicator,
+              Option: this.props.customOption
+                ? this.props.customOption
+                : Option,
+            }}
             defaultValue={
               id === 'roles' || id === 'groups'
                 ? null
