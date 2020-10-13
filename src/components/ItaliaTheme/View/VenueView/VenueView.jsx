@@ -235,6 +235,7 @@ const VenueView = ({ content }) => {
               content.street ||
               content.zip_code ||
               content.city ||
+              content.country ||
               content.circoscrizione ||
               content.quartiere ||
               content.notes?.data?.replace(/(<([^>]+)>)/g, '').length > 0) && (
@@ -249,9 +250,17 @@ const VenueView = ({ content }) => {
                       <h5 className="card-title">{content.title}</h5>
                     </CardTitle>
                     <CardText>
-                      <p>{`${content.street || ''} - ${
-                        content.zip_code || ''
-                      } ${content.city} ${content.country.title}`}</p>
+                      <p>
+                        {[content.street, content.city]
+                          .filter((v) => v !== null)
+                          .join(' - ')}
+                        {(content.street || content.city) &&
+                          (content.zip_code || content.country) && <br />}
+
+                        {[content.zip_code, content.country?.title]
+                          .filter((v) => v !== null)
+                          .join(' - ')}
+                      </p>
                     </CardText>
                   </CardBody>
                 </Card>
