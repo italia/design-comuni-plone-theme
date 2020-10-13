@@ -229,7 +229,7 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
             <Metadata content={content} />
           </section>
         </div>
-        <PaginaArgomentoPlaceholderAfterContent />
+        <PaginaArgomentoPlaceholderAfterContent content={content} />
       </div>
     </>
   );

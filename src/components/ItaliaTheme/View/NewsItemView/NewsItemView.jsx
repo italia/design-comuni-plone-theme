@@ -144,7 +144,7 @@ const NewsItemView = ({ content, location }) => {
           </section>
         </div>
       </div>
-      <NewsItemPlaceholderAfterContent />
+      <NewsItemPlaceholderAfterContent content={content} />
       <RelatedItems list={related_items} />
     </>
   );

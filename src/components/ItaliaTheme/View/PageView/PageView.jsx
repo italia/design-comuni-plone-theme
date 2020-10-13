@@ -118,7 +118,7 @@ const PageView = ({ content }) => {
           )}
         </Container>
       )}
-      <PagePlaceholderAfterContent />
+      <PagePlaceholderAfterContent content={content} />
       <RelatedItems content={content} />
     </>
   );

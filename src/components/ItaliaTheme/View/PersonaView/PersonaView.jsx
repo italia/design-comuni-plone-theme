@@ -433,7 +433,7 @@ const PersonaView = ({ content }) => {
           </section>
         </div>
       </div>
-      <PersonaPlaceholderAfterContent />
+      <PersonaPlaceholderAfterContent content={content} />
       <RelatedItems content={content} />
     </>
   );

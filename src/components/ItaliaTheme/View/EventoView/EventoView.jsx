@@ -484,7 +484,7 @@ const EventoView = ({ content, location }) => {
           </section>
         </div>
       </div>
-      <EventoPlaceholderAfterContent />
+      <EventoPlaceholderAfterContent content={content} />
       <RelatedItems content={content} />
     </>
   );
