@@ -321,6 +321,7 @@ const UOView = ({ content }) => {
 
                 {(content.geolocation?.latitude ||
                   content?.geolocation?.longitude ||
+                  content?.sede?.length > 0 ||
                   content?.street ||
                   content?.city ||
                   content?.country?.title ||
@@ -328,7 +329,8 @@ const UOView = ({ content }) => {
                   <div className="mb-5 mt-3">
                     <EventLocations
                       content={content}
-                      load={false}
+                      locations={content.sede ?? []}
+                      load={true}
                       details_link={false}
                     />
                   </div>
