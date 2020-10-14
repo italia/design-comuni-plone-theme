@@ -24,8 +24,8 @@ const messages = defineMessages({
     defaultMessage: 'Date aggiuntive',
   },
   excluded_dates: {
-    id: "L'evento non si terrà nelle seguenti date:",
-    defaultMessage: "L'evento non si terrà nelle seguenti date:",
+    id: "L'evento non si terrà nelle seguenti date",
+    defaultMessage: "L'evento non si terrà nelle seguenti date",
   },
 });
 

@@ -124,8 +124,8 @@ msgid "In this section"
 msgstr "In questa sezione"
 
 #: components/ItaliaTheme/View/Commons/Dates
-msgid "L'evento non si terrà nelle seguenti date:"
-msgstr "L'evento non si terrà nelle seguenti date:"
+msgid "L'evento non si terrà nelle seguenti date"
+msgstr "L'evento non si terrà nelle seguenti date"
 
 #: components/DesignTheme/manage/Widgets/LinkToWidget
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
