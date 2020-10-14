@@ -52,6 +52,10 @@ const messages = defineMessages({
     id: 'date_e_orari',
     defaultMessage: 'Date e orari',
   },
+  orari: {
+    id: 'orari',
+    defaultMessage: 'Orari',
+  },
   parteciperanno: {
     id: 'parteciperanno',
     defaultMessage: 'Parteciperanno',
@@ -269,7 +273,7 @@ const EventoView = ({ content, location }) => {
             >
               <Dates content={content} />
 
-              <RichText content={content?.orari?.data} />
+              <RichText title={intl.formatMessage(messages.orari)} content={content?.orari?.data} />
             </RichTextArticle>
 
             {/* COSTI */}

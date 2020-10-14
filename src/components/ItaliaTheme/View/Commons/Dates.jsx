@@ -125,7 +125,7 @@ const Dates = ({ content, show_image }) => {
           ))}
         </div>
       )}
-      {rruleSet?.rdates().length > 0 && (
+      {rruleSet?.exdates().length > 0 && (
         <div className="mt-4">
           <h5>{intl.formatMessage(messages.excluded_dates)}</h5>
           {rruleSet.exdates().map(exDate => (

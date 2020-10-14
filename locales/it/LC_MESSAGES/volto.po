@@ -1131,6 +1131,10 @@ msgstr "Dal"
 msgid "options"
 msgstr "Opzioni"
 
+#: components/ItaliaTheme/View/EventoView/EventoView
+msgid "orari"
+msgstr "Orari"
+
 #: components/ItaliaTheme/View/UOView
 #: components/ItaliaTheme/View/UOView/UOView
 #: components/ItaliaTheme/View/VenueView

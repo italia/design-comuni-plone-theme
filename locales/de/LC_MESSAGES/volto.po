@@ -1146,6 +1146,10 @@ msgstr ""
 msgid "options"
 msgstr ""
 
+#: components/ItaliaTheme/View/EventoView/EventoView
+msgid "orari"
+msgstr ""
+
 #: components/ItaliaTheme/View/UOView
 #: components/ItaliaTheme/View/UOView/UOView
 #: components/ItaliaTheme/View/VenueView
