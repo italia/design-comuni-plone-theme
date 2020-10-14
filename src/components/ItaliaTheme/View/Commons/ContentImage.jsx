@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { views } from '@italia/config';
+import { views } from '~/config';
 import { WideImage } from '@italia/components/ItaliaTheme/View';
 /**
  * ContentImage view component class.
