@@ -23,7 +23,7 @@ const GenericCard = ({
   showInfosFor = null,
 }) => {
   let item_fo = null;
-  const locationContent = useSelector((state) => state.content.subrequests);
+  const locationContent = useSelector(state => state.content.subrequests);
   const dispatch = useDispatch();
   const key = `generic_card_${item['@id']}`;
   const url = flattenToAppURL(item['@id']);
@@ -76,7 +76,7 @@ const GenericCard = ({
         </div>
         <div className="card-body">
           {infos}
-          <h5 className="card-title no-toc">
+          <h5 className="card-title">
             {show_icon && <Icon icon={show_icon} padding={false} />}
             <Link to={flattenToAppURL(item_fo['@id'])}>{item_fo.title}</Link>
           </h5>
@@ -91,7 +91,7 @@ const GenericCard = ({
       >
         <div className="card-body">
           {infos}
-          <h5 className="card-title no-toc">
+          <h5 className="card-title">
             {show_icon && <Icon icon={show_icon} padding={false} />}
             <Link to={flattenToAppURL(item_fo['@id'])}>{item_fo.title}</Link>
           </h5>

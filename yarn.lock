@@ -17625,9 +17625,9 @@ volto-subblocks@collective/volto-subblocks#v1.0.0:
     react-dnd "^5.0.0"
     react-dnd-html5-backend "ˆ5.0.1"
 
-volto-venue@collective/volto-venue#v1.0.0:
-  version "1.0.0"
-  resolved "https://codeload.github.com/collective/volto-venue/tar.gz/c2dd65c5e7a4b0533acf1ef63e578fd70ef74b88"
+volto-venue@collective/volto-venue#v2.0.0:
+  version "2.0.0"
+  resolved "https://codeload.github.com/collective/volto-venue/tar.gz/aef5954edc53fd1845cdf383af3cd14e1a75f648"
   dependencies:
     leaflet "1.6.0"
     react-leaflet "2.7.0"

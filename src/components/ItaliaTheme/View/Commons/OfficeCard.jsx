@@ -13,10 +13,16 @@ import cx from 'classnames';
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const OfficeCard = ({ office, extended, icon, children, margin_bottom=false }) => {
+const OfficeCard = ({
+  office,
+  extended,
+  icon,
+  children,
+  margin_bottom = false,
+}) => {
   const key = `${office['@id']}_office`;
   const url = flattenToAppURL(office['@id']);
-  const officeContent = useSelector((state) => state.content.subrequests);
+  const officeContent = useSelector(state => state.content.subrequests);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -27,10 +33,14 @@ const OfficeCard = ({ office, extended, icon, children, margin_bottom=false }) =
   let office_fo = officeContent[key]?.data;
 
   return office_fo ? (
-    <div className={cx("card card-teaser rounded shadow p-4", {'mb-3': margin_bottom})}>
+    <div
+      className={cx('card card-teaser rounded shadow p-4', {
+        'mb-3': margin_bottom,
+      })}
+    >
       {icon && <Icon icon={icon}></Icon>}
       <div className="card-body pr-3">
-        <h5 className="card-title no-toc">
+        <h5 className="card-title">
           <Link to={flattenToAppURL(office_fo['@id'])} title={office_fo.title}>
             {office_fo.title}
           </Link>

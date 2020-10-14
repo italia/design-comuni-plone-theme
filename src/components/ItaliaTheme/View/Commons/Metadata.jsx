@@ -1,6 +1,7 @@
 import { defineMessages, useIntl } from 'react-intl';
 import React from 'react';
 import moment from 'moment';
+import cx from 'classnames';
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 import PropTypes from 'prop-types';
 
@@ -29,24 +30,27 @@ const messages = defineMessages({
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const Metadata = ({ content, showTags = true, children }) => {
+const Metadata = ({ content, showTags = true, noMargin = false, children }) => {
   const intl = useIntl();
   return (
-    <article id="metadata" className="it-page-section anchor-offset mt-5">
+    <article
+      id="metadata"
+      className={cx('it-page-section', 'anchor-offset', { 'mt-5': !noMargin })}
+    >
       <h4 id="header-metadata" className="mb-3">
         {intl.formatMessage(messages.other_info)}
       </h4>
       {children}
-      <p className="text-serif">{intl.formatMessage(messages.modified)}</p>
-      <h6 className="no-toc">
-        <strong>{moment(content.modified).format('DD-MM-Y HH:MM')}</strong>
-      </h6>
+      <p className="text-serif mb-0 mt-4">
+        {intl.formatMessage(messages.modified)}
+      </p>
+      <strong>{moment(content.modified).format('DD-MM-Y HH:MM')}</strong>
       {content.rights && (
         <>
-          <p className="text-serif">{intl.formatMessage(messages.rights)}</p>
-          <h6 className="no-toc">
-            <strong>{content.rights}</strong>
-          </h6>
+          <p className="text-serif mb-0 mt-4">
+            {intl.formatMessage(messages.rights)}
+          </p>
+          <strong>{content.rights}</strong>
         </>
       )}
       {showTags && content.subjects?.length > 0 && (
@@ -61,7 +65,7 @@ const Metadata = ({ content, showTags = true, children }) => {
               large={false}
               simple
               tag="div"
-              key={item}
+              key={item + i}
               className="mr-2"
             >
               <ChipLabel tag="span">{item}</ChipLabel>
@@ -76,4 +80,6 @@ export default Metadata;
 
 Metadata.propTypes = {
   content: PropTypes.object,
+  showTags: PropTypes.bool,
+  noMargin: PropTypes.bool,
 };

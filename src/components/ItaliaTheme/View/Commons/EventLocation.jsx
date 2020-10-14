@@ -35,7 +35,7 @@ const EventLocation = ({
   const intl = useIntl();
   const key = `luogo${location['@id']}`;
   const url = flattenToAppURL(location['@id']);
-  const locationContent = useSelector((state) => state.content.subrequests);
+  const locationContent = useSelector(state => state.content.subrequests);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -47,7 +47,7 @@ const EventLocation = ({
 
   let location_fo = locationContent ? locationContent[key]?.data : location;
   let address = ['street', 'city', 'zip_code']
-    .map((key) => location_fo?.[key])
+    .map(key => location_fo?.[key])
     .filter(Boolean)
     .join(' - ');
 

@@ -60,7 +60,7 @@ const SideMenu = ({ data }) => {
   const intl = useIntl();
   const [headers, _setHeaders] = useState([]);
   const headersRef = React.useRef(headers);
-  const setHeaders = (data) => {
+  const setHeaders = data => {
     headersRef.current = data;
     _setHeaders(data);
   };
@@ -68,7 +68,7 @@ const SideMenu = ({ data }) => {
   const [activeSection, _setActiveSection] = useState(null);
   const activeSectionRef = React.useRef(activeSection);
   const [isNavOpen, setIsNavOpen] = React.useState(false);
-  const setActiveSection = (data) => {
+  const setActiveSection = data => {
     activeSectionRef.current = data;
     _setActiveSection(data);
   };
@@ -103,14 +103,14 @@ const SideMenu = ({ data }) => {
     setWindowScrollY(window.scrollY);
     let scrollOffset = (scrollDown ? 0.15 : 0.85) * window.innerHeight;
     let headersHeights = headersRef.current
-      .map((section) => {
+      .map(section => {
         let element = document.getElementById(section.id);
         return {
           id: section.id,
           top: element?.getBoundingClientRect()?.top,
         };
       })
-      .filter((section) => section.top <= scrollOffset);
+      .filter(section => section.top <= scrollOffset);
 
     if (headersHeights.length > 0) {
       let section = headersHeights.reduce(
@@ -124,7 +124,7 @@ const SideMenu = ({ data }) => {
     }
   }, 100);
 
-  const handleClickAnchor = (id) => (e) => {
+  const handleClickAnchor = id => e => {
     e.preventDefault();
     document.getElementById(id).scrollIntoView({
       behavior: 'smooth',
@@ -174,7 +174,7 @@ const SideMenu = ({ data }) => {
             className="it-back-button"
             href="#"
             style={isNavOpen ? { display: 'block' } : { display: 'none' }}
-            onClick={(e) => {
+            onClick={e => {
               e.preventDefault();
               onNavScrollToggle();
             }}
@@ -190,7 +190,7 @@ const SideMenu = ({ data }) => {
           </a>
           <div className="menu-wrapper">
             <div className="link-list-wrapper menu-link-list">
-              <h3 className="no-toc">{intl.formatMessage(messages.index)}</h3>
+              <h3>{intl.formatMessage(messages.index)}</h3>
               <ul className="link-list">
                 {headers.map((item, i) => (
                   <li className="nav-item" key={item.id}>
