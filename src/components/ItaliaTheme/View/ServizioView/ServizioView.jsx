@@ -15,7 +15,7 @@ import {
   OfficeCard,
   GenericCard,
   Metadata,
-  WideImage,
+  ContentImage,
   SmallVenue,
   HelpBox,
   NewsCard,
@@ -155,17 +155,12 @@ const ServizioView = ({ content }) => {
           content={content}
           readingtime={null}
           showreadingtime={false}
-          imageinheader={false}
           showdates={false}
           showtassonomiaargomenti={true}
         />
-        {(content.image || content.image_caption) && (
-          <WideImage
-            title={content.title}
-            image={content.image}
-            caption={content.image_caption}
-          />
-        )}
+        {/* HEADER IMAGE */}
+        <ContentImage content={content} position="afterHeader" />
+
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
             <SideMenu data={sideMenuElements} />
@@ -174,6 +169,9 @@ const ServizioView = ({ content }) => {
             className="col-lg-8 it-page-sections-container"
             ref={documentBody}
           >
+            {/* HEADER IMAGE */}
+            <ContentImage content={content} position="documentBody" />
+
             {/* STATO DEL SERVIZIO */}
             {content.stato_servizio && content.motivo_stato_servizio?.data && (
               <RichTextArticle

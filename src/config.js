@@ -268,6 +268,9 @@ export const views = {
     Event: EventoView,
     'Pagina Argomento': PaginaArgomentoView,
   },
+  italiaThemeViewsConfig: {
+    imagePosition: 'afterHeader', //values: afterHeader, documentBody
+  },
 };
 
 export const widgets = {

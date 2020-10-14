@@ -7,13 +7,12 @@ import React, { createRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import { readingTime } from '../ViewUtils';
-
 import {
   Metadata,
   RichTextArticle,
   PageHeader,
   SideMenu,
-  WideImage,
+  ContentImage,
   Locations,
   CuredBy,
   Gallery,
@@ -83,19 +82,14 @@ const NewsItemView = ({ content, location }) => {
           content={content}
           readingtime={readingtime}
           showreadingtime={true}
-          imageinheader={false}
-          imageinheader_field={null}
           showdates={true}
           showtopics={true}
           showtassonomiaargomenti={true}
         />
-        {(content.image || content.image_caption) && (
-          <WideImage
-            title={content.title}
-            image={content.image}
-            caption={content.image_caption}
-          />
-        )}
+
+        {/* HEADER IMAGE */}
+        <ContentImage content={content} position="afterHeader" />
+
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
             <SideMenu data={sideMenuElements} />
@@ -108,6 +102,10 @@ const NewsItemView = ({ content, location }) => {
               id="text-body"
               className="it-page-section anchor-offset clearfix"
             >
+              {/* HEADER IMAGE */}
+              <ContentImage content={content} position="documentBody" />
+
+              {/* TEXT OR BLOCKS */}
               <TextOrBlocks content={content} location={location} />
             </article>
 
