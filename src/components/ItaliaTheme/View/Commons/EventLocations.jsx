@@ -15,29 +15,22 @@ const EventLocations = ({
   show_icon,
   load = true,
   details_link = true,
-}) => {
-  const venues =
-    content?.geolocation?.latitude && content?.geolocation?.longitude
-      ? [content, ...locations]
-      : locations;
-
-  return (
-    <>
-      <div className="card-wrapper card-teaser-wrapper">
-        {venues.map((item, i) => (
-          <EventLocation
-            key={item['@id'] + i}
-            location={item}
-            show_icon={show_icon}
-            load={load}
-            details_link={details_link}
-          />
-        ))}
-      </div>
-      <EventLocationMap center={content} locations={locations} />
-    </>
-  );
-};
+}) => (
+  <>
+    <div className="card-wrapper card-teaser-wrapper">
+      {[content, ...locations].map((item, i) => (
+        <EventLocation
+          key={item['@id'] + i}
+          location={item}
+          show_icon={show_icon}
+          load={load}
+          details_link={details_link}
+        />
+      ))}
+    </div>
+    <EventLocationMap center={content} locations={locations} />
+  </>
+);
 
 EventLocations.propTypes = {
   content: PropTypes.shape({
