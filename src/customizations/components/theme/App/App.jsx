@@ -2,29 +2,27 @@
  * App container.
  * @module components/theme/App/App
  */
-
 import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { asyncConnect } from 'redux-connect';
 import { Segment } from 'semantic-ui-react';
-import Raven from 'raven-js';
 import { renderRoutes } from 'react-router-config';
 import { Slide, ToastContainer, toast } from 'react-toastify';
 import split from 'lodash/split';
 import join from 'lodash/join';
 import trim from 'lodash/trim';
 import cx from 'classnames';
-
+import { settings, views } from '~/config';
 import Error from '@plone/volto/error';
-
 import {
   Breadcrumbs,
   Footer,
   Header,
   Icon,
   OutdatedBrowser,
+  AppExtras,
 } from '@plone/volto/components';
 import { BodyClass, getBaseUrl, getView, isCmsUi } from '@plone/volto/helpers';
 import {
@@ -34,12 +32,9 @@ import {
   getTypes,
   getWorkflow,
 } from '@plone/volto/actions';
-
 import clearSVG from '@plone/volto/icons/clear.svg';
 import MultilingualRedirector from '@plone/volto/components/theme/MultilingualRedirector/MultilingualRedirector';
-
 import ScrollToTop from '@italia/components/ItaliaTheme/ScrollToTop/ScrollToTop';
-
 /**
  * @export
  * @class App
@@ -54,26 +49,11 @@ class App extends Component {
   static propTypes = {
     pathname: PropTypes.string.isRequired,
   };
-
   state = {
     hasError: false,
     error: null,
     errorInfo: null,
   };
-
-  /**
-   * ComponentDidMount
-   * @method ComponentDidMount
-   * @param {string} error  The error
-   * @param {string} info The info
-   * @returns {undefined}
-   */
-  componentDidMount() {
-    if (__CLIENT__ && process.env.SENTRY_DSN) {
-      Raven.config(process.env.SENTRY_DSN).install();
-    }
-  }
-
   /**
    * @method componentWillReceiveProps
    * @param {Object} nextProps Next properties
@@ -86,7 +66,6 @@ class App extends Component {
       }
     }
   }
-
   /**
    * ComponentDidCatch
    * @method ComponentDidCatch
@@ -96,11 +75,7 @@ class App extends Component {
    */
   componentDidCatch(error, info) {
     this.setState({ hasError: true, error, errorInfo: info });
-    if (__CLIENT__ && process.env.SENTRY_DSN) {
-      Raven.captureException(error, { extra: info });
-    }
   }
-
   /**
    * Render method.
    * @method render
@@ -110,11 +85,10 @@ class App extends Component {
     const path = getBaseUrl(this.props.pathname);
     const action = getView(this.props.pathname);
     const isCmsUI = isCmsUi(this.props.pathname);
-
+    const ConnectionRefusedView = views.errorViews.ECONNREFUSED;
     return (
       <Fragment>
         <BodyClass className={`view-${action}view`} />
-
         {/* Body class depending on content type */}
         {this.props.content && this.props.content['@type'] && (
           <BodyClass
@@ -123,7 +97,6 @@ class App extends Component {
               .toLowerCase()}`}
           />
         )}
-
         {/* Body class depending on sections */}
         <BodyClass
           className={cx({
@@ -143,7 +116,9 @@ class App extends Component {
           <Segment basic className="content-area">
             <main>
               <OutdatedBrowser />
-              {this.state.hasError ? (
+              {this.props.connectionRefused ? (
+                <ConnectionRefusedView />
+              ) : this.state.hasError ? (
                 <Error
                   message={this.state.error.message}
                   stackTrace={this.state.errorInfo.componentStack}
@@ -168,21 +143,22 @@ class App extends Component {
             />
           }
         />
+        <AppExtras />
         <ScrollToTop />
       </Fragment>
     );
   }
 }
-
 export const __test__ = connect(
   (state, props) => ({
     pathname: props.location.pathname,
     token: state.userSession.token,
     content: state.content.data,
+    apiError: state.apierror.error,
+    connectionRefused: state.apierror.connectionRefused,
   }),
   {},
 )(App);
-
 export default compose(
   asyncConnect([
     {
@@ -198,7 +174,10 @@ export default compose(
     {
       key: 'navigation',
       promise: ({ location, store: { dispatch } }) =>
-        __SERVER__ && dispatch(getNavigation(getBaseUrl(location.pathname))),
+        __SERVER__ &&
+        dispatch(
+          getNavigation(getBaseUrl(location.pathname), settings.navDepth),
+        ),
     },
     {
       key: 'types',
@@ -216,6 +195,8 @@ export default compose(
       pathname: props.location.pathname,
       token: state.userSession.token,
       content: state.content.data,
+      apiError: state.apierror.error,
+      connectionRefused: state.apierror.connectionRefused,
     }),
     {},
   ),

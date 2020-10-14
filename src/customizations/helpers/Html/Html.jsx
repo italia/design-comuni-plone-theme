@@ -2,14 +2,13 @@
  * Html helper.
  * @module helpers/Html
  */
-
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from '@plone/volto/helpers';
 import serialize from 'serialize-javascript';
 import { join } from 'lodash';
 import { BodyClass } from '@plone/volto/helpers/';
-
+import { runtimeConfig } from '@plone/volto/runtime_config';
 /**
  * Html class.
  * Wrapper component containing HTML metadata and boilerplate tags.
@@ -26,7 +25,6 @@ import { BodyClass } from '@plone/volto/helpers/';
  * @param {Object} props.store Store object.
  * @returns {string} Markup of the not found page.
  */
-
 /**
  * Html class.
  * @class Html
@@ -49,7 +47,6 @@ class Html extends Component {
       getState: PropTypes.func,
     }).isRequired,
   };
-
   /**
    * Render method.
    * @method render
@@ -59,7 +56,6 @@ class Html extends Component {
     const { extractor, markup, store } = this.props;
     const head = Helmet.rewind();
     const bodyClass = join(BodyClass.rewind(), ' ');
-
     return (
       <html lang="en">
         <head>
@@ -69,7 +65,11 @@ class Html extends Component {
           {head.meta.toComponent()}
           {head.link.toComponent()}
           {head.script.toComponent()}
-
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.env = ${serialize(runtimeConfig)};`,
+            }}
+          />
           <link rel="shortcut icon" href="/favicon.ico" />
           <meta
             name="viewport"
@@ -77,7 +77,7 @@ class Html extends Component {
           />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           {/* Add the crossorigin while in development */}
-          {extractor.getLinkElements().map(elem =>
+          {extractor.getLinkElements().map((elem) =>
             React.cloneElement(elem, {
               crossOrigin:
                 process.env.NODE_ENV === 'production' ? undefined : 'true',
@@ -100,7 +100,7 @@ class Html extends Component {
             charSet="UTF-8"
           />
           {/* Add the crossorigin while in development */}
-          {extractor.getScriptElements().map(elem =>
+          {extractor.getScriptElements().map((elem) =>
             React.cloneElement(elem, {
               crossOrigin:
                 process.env.NODE_ENV === 'production' ? undefined : 'true',
@@ -111,5 +111,4 @@ class Html extends Component {
     );
   }
 }
-
 export default Html;
