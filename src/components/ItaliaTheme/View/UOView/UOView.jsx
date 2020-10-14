@@ -158,7 +158,7 @@ const UOView = ({ content }) => {
                   {intl.formatMessage(messages.cosa_fa)}
                 </h4>
                 <div className="mb-5 mt-3">
-                  <h6 className="text-serif font-weight-bold">
+                  <h6 className="font-weight-bold">
                     {intl.formatMessage(messages.competenze)}
                   </h6>
                   <div
@@ -185,7 +185,7 @@ const UOView = ({ content }) => {
                 </h4>
                 {content.legami_con_altre_strutture?.length > 0 && (
                   <div className="mb-5 mt-3">
-                    <h6 className="text-serif font-weight-bold">
+                    <h6 className="font-weight-bold">
                       {intl.formatMessage(messages.legami_altre_strutture)}
                     </h6>
                     <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal mb-3">
@@ -197,7 +197,7 @@ const UOView = ({ content }) => {
                 )}
                 {content.responsabile?.length > 0 && (
                   <div className="mb-5 mt-3">
-                    <h6 className="text-serif font-weight-bold">
+                    <h6 className="font-weight-bold">
                       {intl.formatMessage(messages.responsabile)}
                     </h6>
                     {content.responsabile.map((item, i) => (
@@ -222,7 +222,7 @@ const UOView = ({ content }) => {
                 )}
                 {content.tipologia_organizzazione?.title && (
                   <div className="mb-5 mt-3">
-                    <h6 className="text-serif font-weight-bold">
+                    <h6 className="font-weight-bold">
                       {intl.formatMessage(messages.tipologia_organizzazione)}
                     </h6>
                     <p className="text-serif">
@@ -232,7 +232,7 @@ const UOView = ({ content }) => {
                 )}
                 {content.assessore_riferimento?.length > 0 && (
                   <div className="mb-5 mt-3">
-                    <h6 className="text-serif font-weight-bold">
+                    <h6 className="font-weight-bold">
                       {intl.formatMessage(messages.assessore_riferimento)}
                     </h6>
                     {content.assessore_riferimento.map((item, _i) => (
@@ -347,7 +347,7 @@ const UOView = ({ content }) => {
 
                 {content.orario_pubblico?.data.replace(/(<([^>]+)>)/g, '') && (
                   <div className="mb-5 mt-3">
-                    <h6 className="text-serif font-weight-bold">
+                    <h6 className="font-weight-bold">
                       {intl.formatMessage(messages.orario_pubblico)}
                     </h6>
                     <div
@@ -409,7 +409,7 @@ const UOView = ({ content }) => {
 
                 {content.sedi_secondarie?.length > 0 && (
                   <div className="mb-5 mt-5">
-                    <h6 className="text-serif font-weight-bold">
+                    <h6 className="font-weight-bold">
                       {intl.formatMessage(messages.altre_sedi)}
                     </h6>
                     <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">

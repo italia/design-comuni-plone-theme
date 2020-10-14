@@ -19,7 +19,7 @@ const RelatedArticles = ({
     <article id={id} className="it-page-section anchor-offset mt-5">
       {title && show_title ? (
         title_size === 'h6' ? (
-          <h6 className="text-serif font-weight-bold">{title}</h6>
+          <h6 className="font-weight-bold">{title}</h6>
         ) : (
           <h4 id={`header-${id}`}>{title}</h4>
         )

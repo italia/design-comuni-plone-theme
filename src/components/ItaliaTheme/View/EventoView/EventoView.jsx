@@ -146,7 +146,7 @@ const EventoView = ({ content, location }) => {
           <h5 className="mt-4 supported-by">
             {intl.formatMessage(messages.supported_by)}:
           </h5>
-          {content?.supportato_da?.map((item) => (
+          {content?.supportato_da?.map(item => (
             <OfficeCard
               key={item['@id']}
               office={item}
@@ -302,7 +302,7 @@ const EventoView = ({ content, location }) => {
                 {/* ---web */}
                 {content?.web?.length > 0 && (
                   <div className="mb-5 mt-3">
-                    <h6 className="text-serif font-weight-bold">
+                    <h6 className="font-weight-bold">
                       {intl.formatMessage(messages.event_web_site)}
                     </h6>
                     <a
@@ -366,7 +366,7 @@ const EventoView = ({ content, location }) => {
                 {/* ---contatti interno */}
                 {content?.organizzato_da_interno?.length > 0 && (
                   <div className="mb-5">
-                    <h6 className="text-serif font-weight-bold">
+                    <h6 className="font-weight-bold">
                       {intl.formatMessage(messages.contatti_interni)}:
                     </h6>
                     {content?.organizzato_da_interno?.map((item, index) => (
@@ -417,7 +417,7 @@ const EventoView = ({ content, location }) => {
               content?.event_url ||
               content?.patrocinato_da ||
               content?.strutture_politiche.length > 0 ||
-              content?.items?.some((e) => e.id === 'sponsor_evento') ? (
+              content?.items?.some(e => e.id === 'sponsor_evento') ? (
                 <>
                   {content?.ulteriori_informazioni?.data?.replace(
                     /(<([^>]+)>)/g,
@@ -442,7 +442,7 @@ const EventoView = ({ content, location }) => {
                     </div>
                   )}
 
-                  {content?.items?.some((e) => e.id === 'sponsor_evento') && (
+                  {content?.items?.some(e => e.id === 'sponsor_evento') && (
                     <div className="mt-4">
                       <Sponsors
                         content={content}
