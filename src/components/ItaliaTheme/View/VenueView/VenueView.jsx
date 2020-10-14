@@ -509,6 +509,7 @@ const VenueView = ({ content }) => {
                         title_size={'h5'}
                         items={content.sede_di}
                         title={intl.formatMessage(messages.sede_di)}
+                        noMargin
                       />
                     </div>
                   )}
