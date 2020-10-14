@@ -38,15 +38,11 @@ const Metadata = ({ content, showTags = true, children }) => {
       </h4>
       {children}
       <p className="text-serif">{intl.formatMessage(messages.modified)}</p>
-      <h6 className="no-toc">
-        <strong>{moment(content.modified).format('DD-MM-Y HH:MM')}</strong>
-      </h6>
+      <strong>{moment(content.modified).format('DD-MM-Y HH:MM')}</strong>
       {content.rights && (
         <>
           <p className="text-serif">{intl.formatMessage(messages.rights)}</p>
-          <h6 className="no-toc">
-            <strong>{content.rights}</strong>
-          </h6>
+          <strong>{content.rights}</strong>
         </>
       )}
       {showTags && content.subjects?.length > 0 && (

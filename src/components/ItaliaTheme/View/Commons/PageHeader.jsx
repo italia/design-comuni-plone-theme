@@ -59,7 +59,7 @@ const messages = defineMessages({
   },
 });
 
-const PageHeader = (props) => {
+const PageHeader = props => {
   const intl = useIntl();
   moment.locale(intl.locale);
   let eventRecurrenceText = null;
@@ -71,7 +71,7 @@ const PageHeader = (props) => {
       });
       const RRULE_LANGUAGE = rrulei18n(intl);
       eventRecurrenceText = rruleSet.rrules()[0]?.toText(
-        (t) => {
+        t => {
           return RRULE_LANGUAGE.strings[t];
         },
         RRULE_LANGUAGE,
@@ -202,9 +202,9 @@ const PageHeader = (props) => {
         {props.showtassonomiaargomenti &&
           props.content?.tassonomia_argomenti?.length > 0 && (
             <div className="mt-4 mb-4 page-arguments">
-              <h6>
+              <h5>
                 <small>{intl.formatMessage(messages.topics)}</small>
-              </h6>
+              </h5>
               {props.content.tassonomia_argomenti.map((item, i) => (
                 <a
                   href={flattenToAppURL(item['@id'])}

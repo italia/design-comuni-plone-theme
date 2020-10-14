@@ -272,18 +272,18 @@ const VenueView = ({ content }) => {
 
                 {content.circoscrizione && (
                   <div className="circoscrizione">
-                    <h6 className="mt-3">
+                    <h5 className="mt-3">
                       {intl.formatMessage(messages.circoscrizione)}:
-                    </h6>
+                    </h5>
                     <div className="text-serif">{content.circoscrizione}</div>
                   </div>
                 )}
 
                 {content.quartiere && (
                   <div className="quartiere">
-                    <h6 className="mt-3">
+                    <h5 className="mt-3">
                       {intl.formatMessage(messages.quartiere)}:
-                    </h6>
+                    </h5>
                     <div className="text-serif">{content.quartiere}</div>
                   </div>
                 )}
@@ -506,7 +506,7 @@ const VenueView = ({ content }) => {
                   {content.sede_di?.length > 0 && (
                     <div className="mb-5">
                       <RelatedArticles
-                        title_size={'h6'}
+                        title_size={'h5'}
                         items={content.sede_di}
                         title={`${intl.formatMessage(messages.sede_di)}:`}
                       />

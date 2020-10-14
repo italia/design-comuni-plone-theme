@@ -210,7 +210,7 @@ const EventoView = ({ content, location }) => {
               ) && (
                 <div className="mb-5">
                   <RichText
-                    title_size="h6"
+                    title_size="h5"
                     title={intl.formatMessage(messages.event_destinatari)}
                     content={content?.descrizione_destinatari.data}
                   />
@@ -219,9 +219,9 @@ const EventoView = ({ content, location }) => {
 
               {content?.persone_amministrazione?.length > 0 && (
                 <>
-                  <h6 className="font-weight-bold">
+                  <h5 className="font-weight-bold">
                     {intl.formatMessage(messages.parteciperanno)}
-                  </h6>
+                  </h5>
                   {content.persone_amministrazione.map((item, i) => (
                     <Chip
                       color="primary"
@@ -302,9 +302,9 @@ const EventoView = ({ content, location }) => {
                 {/* ---web */}
                 {content?.web?.length > 0 && (
                   <div className="mb-5 mt-3">
-                    <h6 className="font-weight-bold">
+                    <h5 className="font-weight-bold">
                       {intl.formatMessage(messages.event_web_site)}
-                    </h6>
+                    </h5>
                     <a
                       href={
                         content.web.match(/^(http:\/\/|https:\/\/)/gm)
@@ -366,9 +366,9 @@ const EventoView = ({ content, location }) => {
                 {/* ---contatti interno */}
                 {content?.organizzato_da_interno?.length > 0 && (
                   <div className="mb-5">
-                    <h6 className="font-weight-bold">
+                    <h5 className="font-weight-bold">
                       {intl.formatMessage(messages.contatti_interni)}:
-                    </h6>
+                    </h5>
                     {content?.organizzato_da_interno?.map((item, index) => (
                       <OfficeCard
                         margin_bottom={

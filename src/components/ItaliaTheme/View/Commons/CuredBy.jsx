@@ -37,17 +37,17 @@ const CuredBy = ({ office, people }) => {
       <div className="row">
         {office && (
           <div className="col-12 col-sm-8">
-            <h6 className="no-toc">
+            <h5 className="no-toc">
               <small>{intl.formatMessage(messages.page_cured_by)}</small>
-            </h6>
+            </h5>
             <OfficeCard office={office} />
           </div>
         )}
         {people?.length > 0 ? (
           <div className="col-12 col-sm-4">
-            <h6 className="no-toc">
+            <h5 className="no-toc">
               <small>{intl.formatMessage(messages.cured_by_people)}</small>
-            </h6>
+            </h5>
             {people.map((item, i) => (
               <Link
                 to={flattenToAppURL(item['@id'])}
