@@ -37,7 +37,7 @@ const CuredBy = ({ office, people }) => {
       <div className="row">
         {office && (
           <div className="col-12 col-sm-8">
-            <h5 className="no-toc">
+            <h5>
               <small>{intl.formatMessage(messages.page_cured_by)}</small>
             </h5>
             <OfficeCard office={office} />
@@ -45,7 +45,7 @@ const CuredBy = ({ office, people }) => {
         )}
         {people?.length > 0 ? (
           <div className="col-12 col-sm-4">
-            <h5 className="no-toc">
+            <h5>
               <small>{intl.formatMessage(messages.cured_by_people)}</small>
             </h5>
             {people.map((item, i) => (

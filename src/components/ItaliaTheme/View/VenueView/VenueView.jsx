@@ -426,7 +426,7 @@ const VenueView = ({ content }) => {
                                 '',
                               ).length > 0 && (
                                 <CardTitle>
-                                  <h5 className="card-title no-toc">
+                                  <h5 className="card-title">
                                     <div
                                       className="text-serif"
                                       dangerouslySetInnerHTML={{
