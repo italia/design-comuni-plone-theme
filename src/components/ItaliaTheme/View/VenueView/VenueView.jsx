@@ -260,9 +260,12 @@ const VenueView = ({ content }) => {
                   content.geolocation?.latitude &&
                   content.geolocation?.longitude && (
                     <OSMMap
-                      position={[
-                        content.geolocation?.latitude,
-                        content.geolocation?.longitude,
+                      markers={[
+                        {
+                          latitude: content.geolocation.latitude,
+                          longitude: content.geolocation.longitude,
+                          title: content.title,
+                        },
                       ]}
                     />
                   )}
