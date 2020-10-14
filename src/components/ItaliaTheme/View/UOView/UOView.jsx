@@ -327,7 +327,7 @@ const UOView = ({ content }) => {
                   content?.zip_code) && (
                   <div className="mb-5 mt-3">
                     <EventLocations
-                      locations={[content]}
+                      content={content}
                       load={false}
                       details_link={false}
                     />
