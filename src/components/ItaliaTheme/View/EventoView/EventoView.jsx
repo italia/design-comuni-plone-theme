@@ -219,7 +219,7 @@ const EventoView = ({ content, location }) => {
 
               {content?.persone_amministrazione?.length > 0 && (
                 <>
-                  <h6 className="text-serif font-weight-bold">
+                  <h6 className="font-weight-bold">
                     {intl.formatMessage(messages.parteciperanno)}
                   </h6>
                   {content.persone_amministrazione.map((item, i) => (
