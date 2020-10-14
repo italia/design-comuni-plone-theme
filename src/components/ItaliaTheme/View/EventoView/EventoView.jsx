@@ -44,7 +44,6 @@ const messages = defineMessages({
     id: 'notizie_in_evidenza',
     defaultMessage: 'Notizie in evidenza',
   },
-
   event_ulteriori_informazioni: {
     id: 'event_ulteriori_informazioni',
     defaultMessage: "Ulteriori informazioni sull'evento",
@@ -55,7 +54,7 @@ const messages = defineMessages({
   },
   parteciperanno: {
     id: 'parteciperanno',
-    defaultMessage: 'Parteciperanno:',
+    defaultMessage: 'Parteciperanno',
   },
   luoghi: {
     id: 'luogo',
@@ -79,7 +78,7 @@ const messages = defineMessages({
   },
   patrocinato_da: {
     id: 'patrocinato_da',
-    defaultMessage: 'Patrocinato da:',
+    defaultMessage: 'Patrocinato da',
   },
   event_url: {
     id: 'event_url',
@@ -87,11 +86,11 @@ const messages = defineMessages({
   },
   event_destinatari: {
     id: 'event_destinatari',
-    defaultMessage: "L'evento è di interesse per:",
+    defaultMessage: "L'evento è di interesse per",
   },
   event_web_site: {
     id: 'event_web_site',
-    defaultMessage: "Sito web dell'evento:",
+    defaultMessage: "Sito web dell'evento",
   },
   strutture_politiche: {
     id: 'event_strutture_politiche',
@@ -144,7 +143,7 @@ const EventoView = ({ content, location }) => {
       content?.supportato_da?.length > 0 && (
         <>
           <h5 className="mt-4 supported-by">
-            {intl.formatMessage(messages.supported_by)}:
+            {intl.formatMessage(messages.supported_by)}
           </h5>
           {content?.supportato_da?.map(item => (
             <OfficeCard
@@ -219,9 +218,7 @@ const EventoView = ({ content, location }) => {
 
               {content?.persone_amministrazione?.length > 0 && (
                 <>
-                  <h5 className="font-weight-bold">
-                    {intl.formatMessage(messages.parteciperanno)}
-                  </h5>
+                  <h5>{intl.formatMessage(messages.parteciperanno)}</h5>
                   {content.persone_amministrazione.map((item, i) => (
                     <Chip
                       color="primary"
@@ -302,9 +299,7 @@ const EventoView = ({ content, location }) => {
                 {/* ---web */}
                 {content?.web?.length > 0 && (
                   <div className="mb-5 mt-3">
-                    <h5 className="font-weight-bold">
-                      {intl.formatMessage(messages.event_web_site)}
-                    </h5>
+                    <h5>{intl.formatMessage(messages.event_web_site)}</h5>
                     <a
                       href={
                         content.web.match(/^(http:\/\/|https:\/\/)/gm)
@@ -339,7 +334,7 @@ const EventoView = ({ content, location }) => {
                         />
                         {content?.telefono && (
                           <p className="card-text mt-3">
-                            {intl.formatMessage(messages.telefono)}:{' '}
+                            {intl.formatMessage(messages.telefono)}
                             <a href={`tel:${content.telefono}`}>
                               {content.telefono}
                             </a>
@@ -352,7 +347,7 @@ const EventoView = ({ content, location }) => {
                         )}
                         {content?.email && (
                           <p className="card-text mt-3">
-                            {intl.formatMessage(messages.email)}:{' '}
+                            {intl.formatMessage(messages.email)}
                             <a href={`mailto:${content.email}`}>
                               {content.email}
                             </a>
@@ -366,9 +361,7 @@ const EventoView = ({ content, location }) => {
                 {/* ---contatti interno */}
                 {content?.organizzato_da_interno?.length > 0 && (
                   <div className="mb-5">
-                    <h5 className="font-weight-bold">
-                      {intl.formatMessage(messages.contatti_interni)}:
-                    </h5>
+                    <h5>{intl.formatMessage(messages.contatti_interni)}</h5>
                     {content?.organizzato_da_interno?.map((item, index) => (
                       <OfficeCard
                         margin_bottom={
@@ -410,14 +403,14 @@ const EventoView = ({ content, location }) => {
 
             {/* ULTERIORI INFORMAZIONI */}
             <Metadata content={content}>
-              {content?.ulteriori_informazioni?.data?.replace(
+              {(content?.ulteriori_informazioni?.data?.replace(
                 /(<([^>]+)>)/g,
                 '',
               ) !== '' ||
-              content?.event_url ||
-              content?.patrocinato_da ||
-              content?.strutture_politiche.length > 0 ||
-              content?.items?.some(e => e.id === 'sponsor_evento') ? (
+                content?.event_url ||
+                content?.patrocinato_da ||
+                content?.strutture_politiche.length > 0 ||
+                content?.items?.some(e => e.id === 'sponsor_evento')) && (
                 <>
                   {content?.ulteriori_informazioni?.data?.replace(
                     /(<([^>]+)>)/g,
@@ -426,7 +419,7 @@ const EventoView = ({ content, location }) => {
 
                   {content?.event_url && (
                     <div className="mt-4">
-                      <strong>{intl.formatMessage(messages.event_url)}:</strong>{' '}
+                      <h5>{intl.formatMessage(messages.event_url)}</h5>
                       <a href={content.event_url} rel="noopener noreferer">
                         {content.event_url}
                       </a>
@@ -435,9 +428,7 @@ const EventoView = ({ content, location }) => {
 
                   {content?.patrocinato_da && (
                     <div className="mt-4">
-                      <strong>
-                        {intl.formatMessage(messages.patrocinato_da)}
-                      </strong>
+                      <h5>{intl.formatMessage(messages.patrocinato_da)}</h5>
                       <RichText content={content?.patrocinato_da} />
                     </div>
                   )}
@@ -453,9 +444,9 @@ const EventoView = ({ content, location }) => {
 
                   {content?.strutture_politiche.length > 0 && (
                     <div className="mt-4">
-                      <strong>
-                        {intl.formatMessage(messages.strutture_politiche)}:
-                      </strong>
+                      <h5>
+                        {intl.formatMessage(messages.strutture_politiche)}
+                      </h5>
                       <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                         {content.strutture_politiche.map((item, i) => (
                           <GenericCard
@@ -471,7 +462,7 @@ const EventoView = ({ content, location }) => {
                   )}
                   <div className="mt-4"></div>
                 </>
-              ) : null}
+              )}
             </Metadata>
           </section>
         </div>

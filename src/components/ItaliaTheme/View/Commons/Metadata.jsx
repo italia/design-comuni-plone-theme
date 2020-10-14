@@ -37,11 +37,15 @@ const Metadata = ({ content, showTags = true, children }) => {
         {intl.formatMessage(messages.other_info)}
       </h4>
       {children}
-      <p className="text-serif">{intl.formatMessage(messages.modified)}</p>
+      <p className="text-serif mb-0 mt-4">
+        {intl.formatMessage(messages.modified)}
+      </p>
       <strong>{moment(content.modified).format('DD-MM-Y HH:MM')}</strong>
       {content.rights && (
         <>
-          <p className="text-serif">{intl.formatMessage(messages.rights)}</p>
+          <p className="text-serif mb-0 mt-4">
+            {intl.formatMessage(messages.rights)}
+          </p>
           <strong>{content.rights}</strong>
         </>
       )}

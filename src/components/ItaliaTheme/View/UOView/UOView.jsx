@@ -158,9 +158,7 @@ const UOView = ({ content }) => {
                   {intl.formatMessage(messages.cosa_fa)}
                 </h4>
                 <div className="mb-5 mt-3">
-                  <h5 className="font-weight-bold">
-                    {intl.formatMessage(messages.competenze)}
-                  </h5>
+                  <h5>{intl.formatMessage(messages.competenze)}</h5>
                   <div
                     className="text-serif"
                     dangerouslySetInnerHTML={{
@@ -185,7 +183,7 @@ const UOView = ({ content }) => {
                 </h4>
                 {content.legami_con_altre_strutture?.length > 0 && (
                   <div className="mb-5 mt-3">
-                    <h5 className="font-weight-bold">
+                    <h5>
                       {intl.formatMessage(messages.legami_altre_strutture)}
                     </h5>
                     <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal mb-3">
@@ -197,9 +195,7 @@ const UOView = ({ content }) => {
                 )}
                 {content.responsabile?.length > 0 && (
                   <div className="mb-5 mt-3">
-                    <h5 className="font-weight-bold">
-                      {intl.formatMessage(messages.responsabile)}
-                    </h5>
+                    <h5>{intl.formatMessage(messages.responsabile)}</h5>
                     {content.responsabile.map((item, i) => (
                       <Link
                         to={flattenToAppURL(item['@id'])}
@@ -222,7 +218,7 @@ const UOView = ({ content }) => {
                 )}
                 {content.tipologia_organizzazione?.title && (
                   <div className="mb-5 mt-3">
-                    <h5 className="font-weight-bold">
+                    <h5>
                       {intl.formatMessage(messages.tipologia_organizzazione)}
                     </h5>
                     <p className="text-serif">
@@ -232,7 +228,7 @@ const UOView = ({ content }) => {
                 )}
                 {content.assessore_riferimento?.length > 0 && (
                   <div className="mb-5 mt-3">
-                    <h5 className="font-weight-bold">
+                    <h5>
                       {intl.formatMessage(messages.assessore_riferimento)}
                     </h5>
                     {content.assessore_riferimento.map((item, _i) => (
@@ -347,9 +343,7 @@ const UOView = ({ content }) => {
 
                 {content.orario_pubblico?.data.replace(/(<([^>]+)>)/g, '') && (
                   <div className="mb-5 mt-3">
-                    <h5 className="font-weight-bold">
-                      {intl.formatMessage(messages.orario_pubblico)}
-                    </h5>
+                    <h5>{intl.formatMessage(messages.orario_pubblico)}</h5>
                     <div
                       className="text-serif"
                       dangerouslySetInnerHTML={{
@@ -409,9 +403,7 @@ const UOView = ({ content }) => {
 
                 {content.sedi_secondarie?.length > 0 && (
                   <div className="mb-5 mt-5">
-                    <h5 className="font-weight-bold">
-                      {intl.formatMessage(messages.altre_sedi)}
-                    </h5>
+                    <h5>{intl.formatMessage(messages.altre_sedi)}</h5>
                     <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                       {content.sedi_secondarie.map((item, _i) => (
                         <GenericCard
