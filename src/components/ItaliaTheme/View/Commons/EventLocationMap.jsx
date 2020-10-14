@@ -11,44 +11,83 @@ import PropTypes from 'prop-types';
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const EventLocationMap = ({ location }) => {
-  const key = `luogo${location['@id']}`;
-  const url = flattenToAppURL(location['@id']);
-  const locationContent = useSelector((state) => state.content.subrequests);
+const EventLocationMap = ({ center, locations }) => {
   const dispatch = useDispatch();
+  const fetchedLocations = useSelector(state => state.content.subrequests);
+  const venues = locations.map(location => ({
+    key: `luogo${location['@id']}`,
+    url: flattenToAppURL(location['@id']),
+  }));
 
   useEffect(() => {
-    dispatch(getContent(url, null, key));
-    return () => dispatch(resetContent(key));
-  }, [dispatch, location, url, key]);
+    venues.forEach(loc => {
+      dispatch(getContent(loc.url, null, loc.key));
+    });
 
-  let location_fo = locationContent[key]?.data;
-  return location_fo ? (
+    return () =>
+      venues.forEach(loc => {
+        dispatch(resetContent(loc.key));
+      });
+  }, [dispatch, locations]);
+
+  let venuesData = venues.reduce((acc, val) => {
+    let venue = fetchedLocations?.[val.key]?.data;
+
+    if (venue?.geolocation?.latitude && venue?.geolocation?.longitude) {
+      return [
+        ...acc,
+        {
+          latitude: venue.geolocation.latitude,
+          longitude: venue.geolocation.longitude,
+          title: venue.title,
+        },
+      ];
+    }
+
+    return acc;
+  }, []);
+
+  if (center?.geolocation?.latitude && center?.geolocation?.longitude) {
+    venuesData = [
+      {
+        latitude: center.geolocation.latitude,
+        longitude: center.geolocation.longitude,
+        title: center.title,
+      },
+      ...venuesData,
+    ];
+  }
+
+  return venuesData?.length > 0 ? (
     <>
-      {__CLIENT__ &&
-      location_fo.geolocation?.latitude &&
-      location_fo.geolocation?.longitude ? (
-        <>
-          <OSMMap
-            position={[
-              location_fo.geolocation.latitude,
-              location_fo.geolocation.longitude,
-            ]}
-          />
-        </>
-      ) : null}
+      {__CLIENT__ && (
+        <OSMMap
+          center={[venuesData[0].latitude, venuesData[0].longitude]}
+          markers={venuesData}
+          showTooltip
+        />
+      )}
     </>
   ) : null;
 };
 
 EventLocationMap.propTypes = {
-  location: PropTypes.shape({
+  content: PropTypes.shape({
     '@id': PropTypes.string,
-    '@type': PropTypes.string,
-    title: PropTypes.string,
-    description: PropTypes.string,
-    review_state: PropTypes.string,
+    geolocation: PropTypes.shape({
+      latitude: PropTypes.number,
+      longitude: PropTypes.number,
+    }),
   }),
+  locations: PropTypes.arrayOf(
+    PropTypes.shape({
+      '@id': PropTypes.string,
+      '@type': PropTypes.string,
+      title: PropTypes.string,
+      description: PropTypes.string,
+      review_state: PropTypes.string,
+    }),
+  ),
 };
 
 export default EventLocationMap;

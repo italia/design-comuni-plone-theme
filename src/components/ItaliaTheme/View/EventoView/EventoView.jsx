@@ -99,7 +99,7 @@ const messages = defineMessages({
   },
   supported_by: {
     id: 'supported_by',
-    defaultMessage: 'Con il supporto di:',
+    defaultMessage: 'Con il supporto di',
   },
   telefono: {
     id: 'telefono',
@@ -143,7 +143,9 @@ const EventoView = ({ content, location }) => {
     return (
       content?.supportato_da?.length > 0 && (
         <>
-          <h5 className="mt-4 supported-by">Con il supporto di:</h5>
+          <h5 className="mt-4 supported-by">
+            {intl.formatMessage(messages.supported_by)}:
+          </h5>
           {content?.supportato_da?.map((item) => (
             <OfficeCard
               key={item['@id']}
@@ -242,36 +244,26 @@ const EventoView = ({ content, location }) => {
             </RichTextArticle>
 
             {/* LUOGHI */}
-            {content?.luoghi_correlati?.length > 0 ? (
-              <RichTextArticle
-                tag_id="luoghi"
-                title={intl.formatMessage(messages.luoghi)}
-              >
-                <EventLocations
-                  locations={content?.luoghi_correlati}
-                  show_icon={true}
-                />
-              </RichTextArticle>
-            ) : content?.street > 0 ||
+            {(content?.luoghi_correlati?.length > 0 ||
+              content?.street > 0 ||
               (content?.geolocation?.latitude &&
                 content?.geolocation?.longitude) ||
               content?.zip_code ||
               content?.city ||
               content?.quartiere ||
               content?.circoscrizione ||
-              content?.country ? (
+              content?.country) && (
               <RichTextArticle
                 tag_id="luoghi"
                 title={intl.formatMessage(messages.luoghi)}
               >
                 <EventLocations
-                  locations={[content]}
+                  content={content}
+                  locations={content?.luoghi_correlati ?? []}
                   show_icon={true}
-                  load={false}
-                  details_link={false}
                 />
               </RichTextArticle>
-            ) : null}
+            )}
 
             {/* DATE E ORARI */}
             <RichTextArticle

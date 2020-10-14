@@ -10,17 +10,23 @@ import React from 'react';
  * @returns {string} Markup of the component.
  */
 const EventLocations = ({
-  locations,
+  content = {},
+  locations = [],
   show_icon,
   load = true,
   details_link = true,
 }) => {
+  const venues =
+    content?.geolocation?.latitude && content?.geolocation?.longitude
+      ? [content, ...locations]
+      : locations;
+
   return (
     <>
       <div className="card-wrapper card-teaser-wrapper">
-        {locations.map((item, i) => (
+        {venues.map((item, i) => (
           <EventLocation
-            key={item['@id']}
+            key={item['@id'] + i}
             location={item}
             show_icon={show_icon}
             load={load}
@@ -28,13 +34,19 @@ const EventLocations = ({
           />
         ))}
       </div>
-      <EventLocationMap location={locations[0]} />
+      <EventLocationMap center={content} locations={locations} />
     </>
   );
 };
-export default EventLocations;
 
 EventLocations.propTypes = {
+  content: PropTypes.shape({
+    '@id': PropTypes.string,
+    geolocation: PropTypes.shape({
+      latitude: PropTypes.number,
+      longitude: PropTypes.number,
+    }),
+  }),
   locations: PropTypes.arrayOf(
     PropTypes.shape({
       '@id': PropTypes.string,
@@ -46,3 +58,5 @@ EventLocations.propTypes = {
   ),
   show_icon: PropTypes.bool,
 };
+
+export default EventLocations;
