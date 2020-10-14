@@ -1,6 +1,6 @@
 /**
- * NewsItemView view component.
- * @module components/theme/View/NewsItemView
+ * ServizioView view component.
+ * @module components/theme/View/ServizioView
  */
 
 import React, { createRef, useEffect, useState } from 'react';
@@ -15,10 +15,11 @@ import {
   OfficeCard,
   GenericCard,
   Metadata,
-  WideImage,
+  ContentImage,
   SmallVenue,
   HelpBox,
   NewsCard,
+  ServizioPlaceholderAfterContent,
 } from '@italia/components/ItaliaTheme/View';
 
 import { Card, CardBody } from 'design-react-kit/dist/design-react-kit';
@@ -129,8 +130,8 @@ const messages = defineMessages({
 });
 
 /**
- * PersonaView view component class.
- * @function PersonaView
+ * ServizioView view component class.
+ * @function ServizioView
  * @params {object} content Content object.
  * @returns {string} Markup of the component.
  */
@@ -154,17 +155,12 @@ const ServizioView = ({ content }) => {
           content={content}
           readingtime={null}
           showreadingtime={false}
-          imageinheader={false}
           showdates={false}
           showtassonomiaargomenti={true}
         />
-        {(content.image || content.image_caption) && (
-          <WideImage
-            title={content.title}
-            image={content.image}
-            caption={content.image_caption}
-          />
-        )}
+        {/* HEADER IMAGE */}
+        <ContentImage content={content} position="afterHeader" />
+
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
             <SideMenu data={sideMenuElements} />
@@ -173,6 +169,9 @@ const ServizioView = ({ content }) => {
             className="col-lg-8 it-page-sections-container"
             ref={documentBody}
           >
+            {/* HEADER IMAGE */}
+            <ContentImage content={content} position="documentBody" />
+
             {/* STATO DEL SERVIZIO */}
             {content.stato_servizio && content.motivo_stato_servizio?.data && (
               <RichTextArticle
@@ -255,6 +254,13 @@ const ServizioView = ({ content }) => {
                   title={intl.formatMessage(messages.canale_digitale)}
                 />
 
+                {!content.canale_digitale?.data &&
+                  content.autenticazione?.data && (
+                    <h5 className="mt-4">
+                      {intl.formatMessage(messages.canale_digitale)}
+                    </h5>
+                  )}
+
                 <RichText
                   content={content.autenticazione?.data}
                   title={intl.formatMessage(messages.autenticazione)}
@@ -311,13 +317,11 @@ const ServizioView = ({ content }) => {
                 >
                   <RichText
                     title={intl.formatMessage(messages.costi)}
-                    title_size="h6"
                     content={content.costi?.data}
                   />
 
                   <RichText
                     title={intl.formatMessage(messages.vincoli)}
-                    title_size="h6"
                     content={content.vincoli?.data}
                   />
                 </RichTextArticle>
@@ -429,7 +433,7 @@ const ServizioView = ({ content }) => {
               >
                 {content.servizi_collegati?.length > 0 && (
                   <div className="mb-4">
-                    <h6>{intl.formatMessage(messages.servizi_collegati)}</h6>
+                    <h5>{intl.formatMessage(messages.servizi_collegati)}</h5>
                     <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                       {content.servizi_collegati.map((item, i) => (
                         <GenericCard
@@ -444,7 +448,7 @@ const ServizioView = ({ content }) => {
 
                 {content.related_news?.length > 0 && (
                   <div className="mb-4">
-                    <h6>{intl.formatMessage(messages.related_news)}</h6>
+                    <h5>{intl.formatMessage(messages.related_news)}</h5>
                     <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                       {content.related_news.map((item, i) => (
                         <NewsCard
@@ -462,7 +466,7 @@ const ServizioView = ({ content }) => {
 
                 {content.relatedItems?.length > 0 && (
                   <div className="mb-4">
-                    <h6>{intl.formatMessage(messages.related_items)}</h6>
+                    <h5>{intl.formatMessage(messages.related_items)}</h5>
                     <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                       {content.relatedItems.map((item, i) => (
                         <GenericCard
@@ -487,6 +491,7 @@ const ServizioView = ({ content }) => {
           </section>
         </div>
       </div>
+      <ServizioPlaceholderAfterContent content={content} />
     </>
   );
 };

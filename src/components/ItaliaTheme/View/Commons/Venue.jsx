@@ -13,7 +13,7 @@ import PropTypes from 'prop-types';
 const Venue = ({ venue, display_title = true }) => {
   const key = `${venue['@id']}_venue`;
   const url = flattenToAppURL(venue['@id']);
-  const venueContent = useSelector((state) => state.content.subrequests);
+  const venueContent = useSelector(state => state.content.subrequests);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -30,7 +30,7 @@ const Venue = ({ venue, display_title = true }) => {
       />
       {venue_fo.geolocation ? (
         <div className="mapbox">
-          {display_title && <h4 className="no-toc">Mappa</h4>}
+          {display_title && <h4>Mappa</h4>}
           <div className="map"></div>
         </div>
       ) : null}

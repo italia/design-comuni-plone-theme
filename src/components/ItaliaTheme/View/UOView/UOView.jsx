@@ -19,7 +19,8 @@ import {
   RelatedArticles,
   RelatedItems,
   SideMenu,
-  WideImage,
+  ContentImage,
+  UOPlaceholderAfterContent,
 } from '@italia/components/ItaliaTheme/View';
 
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
@@ -105,7 +106,7 @@ const messages = defineMessages({
 
 /**
  * UOView view component class.
- * @function NewsItemView
+ * @function UOView
  * @params {object} content Content object.
  * @returns {string} Markup of the component.
  */
@@ -127,18 +128,12 @@ const UOView = ({ content }) => {
           content={content}
           readingtime={null}
           showreadingtime={false}
-          imageinheader={false}
-          imageinheader_field={null}
           showdates={false}
           showtassonomiaargomenti={true}
         />
-        {content?.image && (
-          <WideImage
-            title={content.title}
-            image={content.image}
-            caption={null}
-          />
-        )}
+        {/* HEADER IMAGE */}
+        <ContentImage content={content} position="afterHeader" />
+
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
             {__CLIENT__ && <SideMenu data={sideMenuElements} />}
@@ -147,6 +142,9 @@ const UOView = ({ content }) => {
             ref={documentBody}
             className="col-lg-8 it-page-sections-container"
           >
+            {/* HEADER IMAGE */}
+            <ContentImage content={content} position="documentBody" />
+
             {/*** COSA FA ***/}
             {content?.competenze?.data?.replace(/(<([^>]+)>)/g, '') && (
               <article
@@ -157,9 +155,7 @@ const UOView = ({ content }) => {
                   {intl.formatMessage(messages.cosa_fa)}
                 </h4>
                 <div className="mb-5 mt-3">
-                  <h6 className="text-serif font-weight-bold">
-                    {intl.formatMessage(messages.competenze)}
-                  </h6>
+                  <h5>{intl.formatMessage(messages.competenze)}</h5>
                   <div
                     className="text-serif"
                     dangerouslySetInnerHTML={{
@@ -184,9 +180,9 @@ const UOView = ({ content }) => {
                 </h4>
                 {content.legami_con_altre_strutture?.length > 0 && (
                   <div className="mb-5 mt-3">
-                    <h6 className="text-serif font-weight-bold">
+                    <h5>
                       {intl.formatMessage(messages.legami_altre_strutture)}
-                    </h6>
+                    </h5>
                     <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal mb-3">
                       {content.legami_con_altre_strutture.map((item, _i) => (
                         <OfficeCard key={item['@id']} office={item} />
@@ -196,9 +192,7 @@ const UOView = ({ content }) => {
                 )}
                 {content.responsabile?.length > 0 && (
                   <div className="mb-5 mt-3">
-                    <h6 className="text-serif font-weight-bold">
-                      {intl.formatMessage(messages.responsabile)}
-                    </h6>
+                    <h5>{intl.formatMessage(messages.responsabile)}</h5>
                     {content.responsabile.map((item, i) => (
                       <Link
                         to={flattenToAppURL(item['@id'])}
@@ -221,9 +215,9 @@ const UOView = ({ content }) => {
                 )}
                 {content.tipologia_organizzazione?.title && (
                   <div className="mb-5 mt-3">
-                    <h6 className="text-serif font-weight-bold">
+                    <h5>
                       {intl.formatMessage(messages.tipologia_organizzazione)}
-                    </h6>
+                    </h5>
                     <p className="text-serif">
                       {content.tipologia_organizzazione.title}
                     </p>
@@ -231,9 +225,9 @@ const UOView = ({ content }) => {
                 )}
                 {content.assessore_riferimento?.length > 0 && (
                   <div className="mb-5 mt-3">
-                    <h6 className="text-serif font-weight-bold">
+                    <h5>
                       {intl.formatMessage(messages.assessore_riferimento)}
-                    </h6>
+                    </h5>
                     {content.assessore_riferimento.map((item, _i) => (
                       <Link
                         to={flattenToAppURL(item['@id'])}
@@ -320,14 +314,16 @@ const UOView = ({ content }) => {
 
                 {(content.geolocation?.latitude ||
                   content?.geolocation?.longitude ||
+                  content?.sede?.length > 0 ||
                   content?.street ||
                   content?.city ||
                   content?.country?.title ||
                   content?.zip_code) && (
                   <div className="mb-5 mt-3">
                     <EventLocations
-                      locations={[content]}
-                      load={false}
+                      content={content}
+                      locations={content.sede ?? []}
+                      load={true}
                       details_link={false}
                     />
                   </div>
@@ -346,9 +342,7 @@ const UOView = ({ content }) => {
 
                 {content.orario_pubblico?.data.replace(/(<([^>]+)>)/g, '') && (
                   <div className="mb-5 mt-3">
-                    <h6 className="text-serif font-weight-bold">
-                      {intl.formatMessage(messages.orario_pubblico)}
-                    </h6>
+                    <h5>{intl.formatMessage(messages.orario_pubblico)}</h5>
                     <div
                       className="text-serif"
                       dangerouslySetInnerHTML={{
@@ -408,9 +402,7 @@ const UOView = ({ content }) => {
 
                 {content.sedi_secondarie?.length > 0 && (
                   <div className="mb-5 mt-5">
-                    <h6 className="text-serif font-weight-bold">
-                      {intl.formatMessage(messages.altre_sedi)}
-                    </h6>
+                    <h5>{intl.formatMessage(messages.altre_sedi)}</h5>
                     <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                       {content.sedi_secondarie.map((item, _i) => (
                         <GenericCard
@@ -442,7 +434,7 @@ const UOView = ({ content }) => {
           </section>
         </div>
       </div>
-
+      <UOPlaceholderAfterContent content={content} />
       <RelatedItems content={content} list={content?.related_news ?? []} />
     </>
   );

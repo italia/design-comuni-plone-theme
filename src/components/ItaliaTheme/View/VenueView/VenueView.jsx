@@ -1,6 +1,6 @@
 /**
- * NewsItemView view component.
- * @module components/theme/View/NewsItemView
+ * VenueView view component.
+ * @module components/theme/View/VenueView
  */
 
 import React, { createRef, useEffect, useState } from 'react';
@@ -9,7 +9,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import {
   SideMenu,
   PageHeader,
-  WideImage,
+  ContentImage,
   RichTextArticle,
   RelatedItems,
   RelatedArticles,
@@ -18,6 +18,7 @@ import {
   Gallery,
   GenericCard,
   Metadata,
+  VenuePlaceholderAfterContent,
 } from '@italia/components/ItaliaTheme/View';
 import { contentFolderHasItems } from '@italia/helpers';
 import { Icon } from 'design-react-kit/dist/design-react-kit';
@@ -154,18 +155,12 @@ const VenueView = ({ content }) => {
           content={content}
           readingtime={null}
           showreadingtime={false}
-          imageinheader={true}
-          imageinheader_field={'foto_persona'}
           showdates={false}
           showtassonomiaargomenti={true}
         />
-        {(content.image || content.image_caption) && (
-          <WideImage
-            title={content.title}
-            image={content.image}
-            caption={content.image_caption}
-          />
-        )}
+        {/* HEADER IMAGE */}
+        <ContentImage content={content} position="afterHeader" />
+
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
             {__CLIENT__ && <SideMenu data={sideMenuElements} />}
@@ -174,6 +169,9 @@ const VenueView = ({ content }) => {
             className="col-lg-8 it-page-sections-container"
             ref={documentBody}
           >
+            {/* HEADER IMAGE */}
+            <ContentImage content={content} position="documentBody" />
+
             {/* DESCRIZIONE */}
             {(content?.descrizione_completa?.data?.replace(/(<([^>]+)>)/g, '')
               .length > 0 ||
@@ -234,6 +232,7 @@ const VenueView = ({ content }) => {
               content.street ||
               content.zip_code ||
               content.city ||
+              content.country ||
               content.circoscrizione ||
               content.quartiere ||
               content.notes?.data?.replace(/(<([^>]+)>)/g, '').length > 0) && (
@@ -248,9 +247,17 @@ const VenueView = ({ content }) => {
                       <h5 className="card-title">{content.title}</h5>
                     </CardTitle>
                     <CardText>
-                      <p>{`${content.street || ''} - ${
-                        content.zip_code || ''
-                      } ${content.city} ${content.country.title}`}</p>
+                      <p>
+                        {[content.street, content.city]
+                          .filter((v) => v !== null)
+                          .join(' - ')}
+                        {(content.street || content.city) &&
+                          (content.zip_code || content.country) && <br />}
+
+                        {[content.zip_code, content.country?.title]
+                          .filter((v) => v !== null)
+                          .join(' - ')}
+                      </p>
                     </CardText>
                   </CardBody>
                 </Card>
@@ -259,27 +266,30 @@ const VenueView = ({ content }) => {
                   content.geolocation?.latitude &&
                   content.geolocation?.longitude && (
                     <OSMMap
-                      position={[
-                        content.geolocation?.latitude,
-                        content.geolocation?.longitude,
+                      markers={[
+                        {
+                          latitude: content.geolocation.latitude,
+                          longitude: content.geolocation.longitude,
+                          title: content.title,
+                        },
                       ]}
                     />
                   )}
 
                 {content.circoscrizione && (
                   <div className="circoscrizione">
-                    <h6 className="mt-3">
+                    <h5 className="mt-3">
                       {intl.formatMessage(messages.circoscrizione)}:
-                    </h6>
+                    </h5>
                     <div className="text-serif">{content.circoscrizione}</div>
                   </div>
                 )}
 
                 {content.quartiere && (
                   <div className="quartiere">
-                    <h6 className="mt-3">
+                    <h5 className="mt-3">
                       {intl.formatMessage(messages.quartiere)}:
-                    </h6>
+                    </h5>
                     <div className="text-serif">{content.quartiere}</div>
                   </div>
                 )}
@@ -307,11 +317,9 @@ const VenueView = ({ content }) => {
               content?.email ||
               content?.pec ||
               content?.web ||
-              content?.struttura_responsabile_correlati ||
-              content?.struttura.struttura_responsabile?.data?.replace(
-                /(<([^>]+)>)/g,
-                '',
-              ).length > 0 ||
+              content?.struttura_responsabile_correlati?.length > 0 ||
+              content?.struttura_responsabile?.data?.replace(/(<([^>]+)>)/g, '')
+                .length > 0 ||
               content?.riferimento_telefonico_struttura ||
               content?.riferimento_mail_struttura ||
               content?.riferimento_pec_struttura) && (
@@ -422,7 +430,7 @@ const VenueView = ({ content }) => {
                                 '',
                               ).length > 0 && (
                                 <CardTitle>
-                                  <h5 className="card-title no-toc">
+                                  <h5 className="card-title">
                                     <div
                                       className="text-serif"
                                       dangerouslySetInnerHTML={{
@@ -491,7 +499,7 @@ const VenueView = ({ content }) => {
             )}
 
             {/* ULTERIORI INFORMAZIONI */}
-            <Metadata content={content}>
+            <Metadata content={content} noMargin>
               {(content?.ulteriori_informazioni?.data?.replace(
                 /(<([^>]+)>)/g,
                 '',
@@ -502,9 +510,10 @@ const VenueView = ({ content }) => {
                   {content.sede_di?.length > 0 && (
                     <div className="mb-5">
                       <RelatedArticles
-                        title_size={'h6'}
+                        title_size={'h5'}
                         items={content.sede_di}
-                        title={`${intl.formatMessage(messages.sede_di)}:`}
+                        title={intl.formatMessage(messages.sede_di)}
+                        noMargin
                       />
                     </div>
                   )}
@@ -520,6 +529,7 @@ const VenueView = ({ content }) => {
           </section>
         </div>
       </div>
+      <VenuePlaceholderAfterContent content={content} />
       <RelatedItems list={content.related_news ?? []} />
     </>
   );

@@ -1,6 +1,6 @@
 /**
  * PaginaArgomentoView view component.
- * @module components/theme/View/PaginaArgomentoView
+ * @module components/theme/View/PaginaArgomentoView/PaginaArgomentoView
  */
 
 import React, { useEffect } from 'react';
@@ -26,7 +26,10 @@ import { getContent, resetContent } from '@plone/volto/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { Portal } from 'react-portal';
 import { BodyClass } from '@plone/volto/helpers';
-import { ArgumentIcon } from '@italia/components/ItaliaTheme/View';
+import {
+  ArgumentIcon,
+  PaginaArgomentoPlaceholderAfterContent,
+} from '@italia/components/ItaliaTheme/View';
 
 /**
  * PaginaArgomentoView view component class.
@@ -161,6 +164,8 @@ const PaginaArgomentoView = ({ content }) => {
           </div>
         );
       })}
+
+      <PaginaArgomentoPlaceholderAfterContent content={content} />
     </div>
   ) : (
     <PaginaArgomentoViewNoBlocks content={content} />

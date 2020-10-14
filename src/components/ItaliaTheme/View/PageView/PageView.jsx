@@ -16,6 +16,7 @@ import {
   SearchSectionForm,
   PageHeaderNav,
   RelatedItems,
+  PagePlaceholderAfterContent,
 } from '@italia/components/ItaliaTheme/View';
 import { defineMessages, useIntl } from 'react-intl';
 import { useLocation } from 'react-router-dom';
@@ -117,6 +118,7 @@ const PageView = ({ content }) => {
           )}
         </Container>
       )}
+      <PagePlaceholderAfterContent content={content} />
       <RelatedItems content={content} />
     </>
   );

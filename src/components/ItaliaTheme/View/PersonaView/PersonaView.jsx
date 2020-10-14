@@ -1,6 +1,6 @@
 /**
- * NewsItemView view component.
- * @module components/theme/View/NewsItemView
+ * PersonaView view component.
+ * @module components/theme/View/PersonaView
  */
 
 import React, { createRef, useEffect, useState } from 'react';
@@ -19,6 +19,7 @@ import {
   Metadata,
   HelpBox,
   RelatedItems,
+  PersonaPlaceholderAfterContent,
 } from '@italia/components/ItaliaTheme/View';
 import { contentFolderHasItems } from '@italia/helpers';
 
@@ -197,7 +198,6 @@ const PersonaView = ({ content }) => {
                           {intl.formatMessage(
                             messages.organizzazione_riferimento,
                           )}
-                          :
                         </h5>
                         <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                           {content?.organizzazione_riferimento?.map(
@@ -211,7 +211,7 @@ const PersonaView = ({ content }) => {
 
                     {content?.responsabile_di?.length > 0 && (
                       <div className="mb-5 mt-3">
-                        <h5>{intl.formatMessage(messages.responsabile_di)}:</h5>
+                        <h5>{intl.formatMessage(messages.responsabile_di)}</h5>
                         <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                           {content?.responsabile_di?.map((item, i) => (
                             <OfficeCard key={item['@id']} office={item} />
@@ -222,7 +222,7 @@ const PersonaView = ({ content }) => {
 
                     {content?.assessore_di?.length > 0 && (
                       <div className="mb-5 mt-3">
-                        <h5>{intl.formatMessage(messages.assessore_di)}:</h5>
+                        <h5>{intl.formatMessage(messages.assessore_di)}</h5>
                         <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                           {content?.assessore_di?.map((item, i) => (
                             <OfficeCard key={item['@id']} office={item} />
@@ -236,7 +236,7 @@ const PersonaView = ({ content }) => {
                       <div className="mb-5 mt-3">
                         <RichText
                           title_size="h5"
-                          title={`${intl.formatMessage(messages.competenze)}:`}
+                          title={intl.formatMessage(messages.competenze)}
                           content={content.competenze.data}
                         />
                       </div>
@@ -247,7 +247,7 @@ const PersonaView = ({ content }) => {
                       <div className="mb-5 mt-3">
                         <RichText
                           title_size="h5"
-                          title={`${intl.formatMessage(messages.deleghe)}:`}
+                          title={intl.formatMessage(messages.deleghe)}
                           content={content.deleghe.data}
                         />
                       </div>
@@ -256,7 +256,7 @@ const PersonaView = ({ content }) => {
                     {content?.tipologia_persona && (
                       <div className="mb-5 mt-3">
                         <h5>
-                          {intl.formatMessage(messages.tipologia_persona)}:
+                          {intl.formatMessage(messages.tipologia_persona)}
                         </h5>
                         {content?.tipologia_persona?.title}
                       </div>
@@ -265,7 +265,7 @@ const PersonaView = ({ content }) => {
                     {content?.data_insediamento && (
                       <div className="mb-5 mt-3">
                         <h5>
-                          {intl.formatMessage(messages.data_insediamento)}:
+                          {intl.formatMessage(messages.data_insediamento)}
                         </h5>
                         {moment(content?.data_insediamento).format('DD-MM-Y')}
                       </div>
@@ -276,7 +276,7 @@ const PersonaView = ({ content }) => {
                       <div className="mb-5 mt-3">
                         <RichText
                           title_size="h5"
-                          title={`${intl.formatMessage(messages.biografia)}:`}
+                          title={intl.formatMessage(messages.biografia)}
                           content={content.biografia.data}
                         />
                       </div>
@@ -285,9 +285,9 @@ const PersonaView = ({ content }) => {
                     <Gallery
                       content={content}
                       folder_name="foto-e-attivita-politica"
-                      title={`${intl.formatMessage(
+                      title={intl.formatMessage(
                         messages.foto_attivita_politica,
-                      )}:`}
+                      )}
                       title_type="h5"
                     />
                   </>
@@ -432,6 +432,7 @@ const PersonaView = ({ content }) => {
           </section>
         </div>
       </div>
+      <PersonaPlaceholderAfterContent content={content} />
       <RelatedItems content={content} />
     </>
   );

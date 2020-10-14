@@ -107,8 +107,8 @@ msgid "In this section"
 msgstr "In questa sezione"
 
 #: components/ItaliaTheme/View/Commons/Dates
-msgid "L'evento non si terrà nelle seguenti date:"
-msgstr "L'evento non si terrà nelle seguenti date:"
+msgid "L'evento non si terrà nelle seguenti date"
+msgstr "L'evento non si terrà nelle seguenti date"
 
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
 msgid "Link to"
@@ -620,7 +620,7 @@ msgstr "Aggiungi i blocchi che verranno mostrati nel megamenu"
 
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 msgid "dropdownmenu-close-menu-button"
-msgstr "Chiudi menu"
+msgstr ""
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
 msgid "dropdownmenu-delete-button"
@@ -736,7 +736,7 @@ msgstr ""
 #: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "event_destinatari"
-msgstr "L'evento è di interesse per:"
+msgstr "L'evento è di interesse per"
 
 #: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/EventoView/EventoView
@@ -962,6 +962,10 @@ msgstr "Dal"
 #: components/ItaliaTheme/Header/SearchModal
 msgid "options"
 msgstr "Opzioni"
+
+#: components/ItaliaTheme/View/EventoView/EventoView
+msgid "orari"
+msgstr "Orari"
 
 #: components/ItaliaTheme/View/UOView
 #: components/ItaliaTheme/View/UOView/UOView

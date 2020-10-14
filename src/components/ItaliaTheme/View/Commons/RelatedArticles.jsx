@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 import { GenericCard } from '@italia/components/ItaliaTheme/View';
 /**
  * RichTextArticle view component class.
@@ -14,12 +15,16 @@ const RelatedArticles = ({
   showimage = true,
   title_size,
   show_title = true,
+  noMargin = false,
 }) => {
   return (
-    <article id={id} className="it-page-section anchor-offset mt-5">
+    <article
+      id={id}
+      className={cx('it-page-section', 'anchor-offset', { 'mt-5': !noMargin })}
+    >
       {title && show_title ? (
-        title_size === 'h6' ? (
-          <h6 className="text-serif font-weight-bold">{title}</h6>
+        title_size === 'h5' ? (
+          <h5>{title}</h5>
         ) : (
           <h4 id={`header-${id}`}>{title}</h4>
         )
@@ -47,4 +52,5 @@ RelatedArticles.propTypes = {
   title_size: PropTypes.string,
   show_title: PropTypes.bool,
   showimage: PropTypes.bool,
+  noMargin: PropTypes.bool,
 };

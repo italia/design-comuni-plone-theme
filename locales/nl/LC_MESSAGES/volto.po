@@ -126,7 +126,7 @@ msgid "In this section"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Dates
-msgid "L'evento non si terrà nelle seguenti date:"
+msgid "L'evento non si terrà nelle seguenti date"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
@@ -980,6 +980,10 @@ msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
 msgid "options"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView/EventoView
+msgid "orari"
 msgstr ""
 
 #: components/ItaliaTheme/View/UOView

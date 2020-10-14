@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, waitForElement } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import EventoView from '../EventoView';
+import EventoView from '../EventoView/EventoView';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-intl-redux';
 import { MemoryRouter } from 'react-router-dom';

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-10-14T12:45:00.931Z\n"
+"POT-Creation-Date: 2020-10-14T12:51:53.143Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -132,8 +132,8 @@ msgid "In this section"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Dates
-# defaultMessage: L'evento non si terrà nelle seguenti date:
-msgid "L'evento non si terrà nelle seguenti date:"
+# defaultMessage: L'evento non si terrà nelle seguenti date
+msgid "L'evento non si terrà nelle seguenti date"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
@@ -1174,6 +1174,11 @@ msgstr ""
 #: components/ItaliaTheme/Header/SearchModal
 # defaultMessage: Opzioni
 msgid "options"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView/EventoView
+# defaultMessage: Orari
+msgid "orari"
 msgstr ""
 
 #: components/ItaliaTheme/View/UOView

@@ -11,7 +11,7 @@ import {
   Attachments,
   Gallery,
   Events,
-  WideImage,
+  ContentImage,
   SideMenu,
   HelpBox,
   PageHeader,
@@ -25,7 +25,9 @@ import {
   Sponsors,
   RelatedItems,
   RichText,
+  EventoPlaceholderAfterContent,
 } from '@italia/components/ItaliaTheme/View';
+
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import {
@@ -42,7 +44,6 @@ const messages = defineMessages({
     id: 'notizie_in_evidenza',
     defaultMessage: 'Notizie in evidenza',
   },
-
   event_ulteriori_informazioni: {
     id: 'event_ulteriori_informazioni',
     defaultMessage: "Ulteriori informazioni sull'evento",
@@ -51,9 +52,13 @@ const messages = defineMessages({
     id: 'date_e_orari',
     defaultMessage: 'Date e orari',
   },
+  orari: {
+    id: 'orari',
+    defaultMessage: 'Orari',
+  },
   parteciperanno: {
     id: 'parteciperanno',
-    defaultMessage: 'Parteciperanno:',
+    defaultMessage: 'Parteciperanno',
   },
   luoghi: {
     id: 'luogo',
@@ -77,7 +82,7 @@ const messages = defineMessages({
   },
   patrocinato_da: {
     id: 'patrocinato_da',
-    defaultMessage: 'Patrocinato da:',
+    defaultMessage: 'Patrocinato da',
   },
   event_url: {
     id: 'event_url',
@@ -85,11 +90,11 @@ const messages = defineMessages({
   },
   event_destinatari: {
     id: 'event_destinatari',
-    defaultMessage: "L'evento è di interesse per:",
+    defaultMessage: "L'evento è di interesse per",
   },
   event_web_site: {
     id: 'event_web_site',
-    defaultMessage: "Sito web dell'evento:",
+    defaultMessage: "Sito web dell'evento",
   },
   strutture_politiche: {
     id: 'event_strutture_politiche',
@@ -97,7 +102,7 @@ const messages = defineMessages({
   },
   supported_by: {
     id: 'supported_by',
-    defaultMessage: 'Con il supporto di:',
+    defaultMessage: 'Con il supporto di',
   },
   telefono: {
     id: 'telefono',
@@ -141,8 +146,10 @@ const EventoView = ({ content, location }) => {
     return (
       content?.supportato_da?.length > 0 && (
         <>
-          <h5 className="mt-4 supported-by">Con il supporto di:</h5>
-          {content?.supportato_da?.map((item) => (
+          <h5 className="mt-4 supported-by">
+            {intl.formatMessage(messages.supported_by)}
+          </h5>
+          {content?.supportato_da?.map(item => (
             <OfficeCard
               key={item['@id']}
               office={item}
@@ -154,6 +161,7 @@ const EventoView = ({ content, location }) => {
       )
     );
   };
+
   useEffect(() => {
     if (documentBody.current) {
       if (__CLIENT__) {
@@ -169,19 +177,14 @@ const EventoView = ({ content, location }) => {
           content={content}
           readingtime={null}
           showreadingtime={true}
-          imageinheader={false}
-          imageinheader_field={null}
           showdates={true}
           showtopics={true}
           showtassonomiaargomenti={true}
         />
-        {(content?.image || content?.image_caption) && (
-          <WideImage
-            title={content?.title}
-            image={content?.image}
-            caption={content?.image_caption}
-          />
-        )}
+
+        {/* HEADER IMAGE */}
+        <ContentImage content={content} position="afterHeader" />
+
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
             {__CLIENT__ && <SideMenu data={sideMenuElements} />}
@@ -190,6 +193,9 @@ const EventoView = ({ content, location }) => {
             ref={documentBody}
             className="col-lg-8 it-page-sections-container"
           >
+            {/* HEADER IMAGE */}
+            <ContentImage content={content} position="documentBody" />
+
             {/* COS'è */}
             <RichTextArticle
               tag_id={'text-body'}
@@ -206,7 +212,7 @@ const EventoView = ({ content, location }) => {
               ) && (
                 <div className="mb-5">
                   <RichText
-                    title_size="h6"
+                    title_size="h5"
                     title={intl.formatMessage(messages.event_destinatari)}
                     content={content?.descrizione_destinatari.data}
                   />
@@ -215,9 +221,7 @@ const EventoView = ({ content, location }) => {
 
               {content?.persone_amministrazione?.length > 0 && (
                 <>
-                  <h6 className="text-serif font-weight-bold">
-                    {intl.formatMessage(messages.parteciperanno)}
-                  </h6>
+                  <h5>{intl.formatMessage(messages.parteciperanno)}</h5>
                   {content.persone_amministrazione.map((item, i) => (
                     <Chip
                       color="primary"
@@ -240,36 +244,26 @@ const EventoView = ({ content, location }) => {
             </RichTextArticle>
 
             {/* LUOGHI */}
-            {content?.luoghi_correlati?.length > 0 ? (
-              <RichTextArticle
-                tag_id="luoghi"
-                title={intl.formatMessage(messages.luoghi)}
-              >
-                <EventLocations
-                  locations={content?.luoghi_correlati}
-                  show_icon={true}
-                />
-              </RichTextArticle>
-            ) : content?.street > 0 ||
+            {(content?.luoghi_correlati?.length > 0 ||
+              content?.street > 0 ||
               (content?.geolocation?.latitude &&
                 content?.geolocation?.longitude) ||
               content?.zip_code ||
               content?.city ||
               content?.quartiere ||
               content?.circoscrizione ||
-              content?.country ? (
+              content?.country) && (
               <RichTextArticle
                 tag_id="luoghi"
                 title={intl.formatMessage(messages.luoghi)}
               >
                 <EventLocations
-                  locations={[content]}
+                  content={content}
+                  locations={content?.luoghi_correlati ?? []}
                   show_icon={true}
-                  load={false}
-                  details_link={false}
                 />
               </RichTextArticle>
-            ) : null}
+            )}
 
             {/* DATE E ORARI */}
             <RichTextArticle
@@ -278,7 +272,7 @@ const EventoView = ({ content, location }) => {
             >
               <Dates content={content} />
 
-              <RichText content={content?.orari?.data} />
+              <RichText title={intl.formatMessage(messages.orari)} content={content?.orari?.data} />
             </RichTextArticle>
 
             {/* COSTI */}
@@ -308,9 +302,7 @@ const EventoView = ({ content, location }) => {
                 {/* ---web */}
                 {content?.web?.length > 0 && (
                   <div className="mb-5 mt-3">
-                    <h6 className="text-serif font-weight-bold">
-                      {intl.formatMessage(messages.event_web_site)}
-                    </h6>
+                    <h5>{intl.formatMessage(messages.event_web_site)}</h5>
                     <a
                       href={
                         content.web.match(/^(http:\/\/|https:\/\/)/gm)
@@ -345,7 +337,7 @@ const EventoView = ({ content, location }) => {
                         />
                         {content?.telefono && (
                           <p className="card-text mt-3">
-                            {intl.formatMessage(messages.telefono)}:{' '}
+                            {intl.formatMessage(messages.telefono)}
                             <a href={`tel:${content.telefono}`}>
                               {content.telefono}
                             </a>
@@ -358,7 +350,7 @@ const EventoView = ({ content, location }) => {
                         )}
                         {content?.email && (
                           <p className="card-text mt-3">
-                            {intl.formatMessage(messages.email)}:{' '}
+                            {intl.formatMessage(messages.email)}
                             <a href={`mailto:${content.email}`}>
                               {content.email}
                             </a>
@@ -372,9 +364,7 @@ const EventoView = ({ content, location }) => {
                 {/* ---contatti interno */}
                 {content?.organizzato_da_interno?.length > 0 && (
                   <div className="mb-5">
-                    <h6 className="text-serif font-weight-bold">
-                      {intl.formatMessage(messages.contatti_interni)}:
-                    </h6>
+                    <h5>{intl.formatMessage(messages.contatti_interni)}</h5>
                     {content?.organizzato_da_interno?.map((item, index) => (
                       <OfficeCard
                         margin_bottom={
@@ -416,14 +406,14 @@ const EventoView = ({ content, location }) => {
 
             {/* ULTERIORI INFORMAZIONI */}
             <Metadata content={content}>
-              {content?.ulteriori_informazioni?.data?.replace(
+              {(content?.ulteriori_informazioni?.data?.replace(
                 /(<([^>]+)>)/g,
                 '',
               ) !== '' ||
-              content?.event_url ||
-              content?.patrocinato_da ||
-              content?.strutture_politiche.length > 0 ||
-              content?.items?.some((e) => e.id === 'sponsor_evento') ? (
+                content?.event_url ||
+                content?.patrocinato_da ||
+                content?.strutture_politiche.length > 0 ||
+                content?.items?.some(e => e.id === 'sponsor_evento')) && (
                 <>
                   {content?.ulteriori_informazioni?.data?.replace(
                     /(<([^>]+)>)/g,
@@ -431,8 +421,8 @@ const EventoView = ({ content, location }) => {
                   ) && <HelpBox text={content?.ulteriori_informazioni} />}
 
                   {content?.event_url && (
-                    <div class="mt-4">
-                      <strong>{intl.formatMessage(messages.event_url)}:</strong>{' '}
+                    <div className="mt-4">
+                      <h5>{intl.formatMessage(messages.event_url)}</h5>
                       <a href={content.event_url} rel="noopener noreferer">
                         {content.event_url}
                       </a>
@@ -440,15 +430,13 @@ const EventoView = ({ content, location }) => {
                   )}
 
                   {content?.patrocinato_da && (
-                    <div class="mt-4">
-                      <strong>
-                        {intl.formatMessage(messages.patrocinato_da)}
-                      </strong>
+                    <div className="mt-4">
+                      <h5>{intl.formatMessage(messages.patrocinato_da)}</h5>
                       <RichText content={content?.patrocinato_da} />
                     </div>
                   )}
 
-                  {content?.items?.some((e) => e.id === 'sponsor_evento') && (
+                  {content?.items?.some(e => e.id === 'sponsor_evento') && (
                     <div className="mt-4">
                       <Sponsors
                         content={content}
@@ -459,9 +447,9 @@ const EventoView = ({ content, location }) => {
 
                   {content?.strutture_politiche.length > 0 && (
                     <div className="mt-4">
-                      <strong>
-                        {intl.formatMessage(messages.strutture_politiche)}:
-                      </strong>
+                      <h5>
+                        {intl.formatMessage(messages.strutture_politiche)}
+                      </h5>
                       <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                         {content.strutture_politiche.map((item, i) => (
                           <GenericCard
@@ -477,11 +465,12 @@ const EventoView = ({ content, location }) => {
                   )}
                   <div className="mt-4"></div>
                 </>
-              ) : null}
+              )}
             </Metadata>
           </section>
         </div>
       </div>
+      <EventoPlaceholderAfterContent content={content} />
       <RelatedItems content={content} />
     </>
   );
