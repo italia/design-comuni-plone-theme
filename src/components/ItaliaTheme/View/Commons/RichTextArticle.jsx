@@ -28,8 +28,8 @@ const RichTextArticle = ({
       menu_title={!show_title && title ? title : ''}
     >
       {title && show_title ? (
-        title_size === 'h6' ? (
-          <h6 className="font-weight-bold">{title}</h6>
+        title_size === 'h5' ? (
+          <h5>{title}</h5>
         ) : (
           <h4 id={`header-${tag_id}`}>{title}</h4>
         )

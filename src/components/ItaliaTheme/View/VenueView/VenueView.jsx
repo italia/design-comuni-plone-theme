@@ -272,18 +272,18 @@ const VenueView = ({ content }) => {
 
                 {content.circoscrizione && (
                   <div className="circoscrizione">
-                    <h6 className="mt-3">
+                    <h5 className="mt-3">
                       {intl.formatMessage(messages.circoscrizione)}:
-                    </h6>
+                    </h5>
                     <div className="text-serif">{content.circoscrizione}</div>
                   </div>
                 )}
 
                 {content.quartiere && (
                   <div className="quartiere">
-                    <h6 className="mt-3">
+                    <h5 className="mt-3">
                       {intl.formatMessage(messages.quartiere)}:
-                    </h6>
+                    </h5>
                     <div className="text-serif">{content.quartiere}</div>
                   </div>
                 )}
@@ -311,11 +311,9 @@ const VenueView = ({ content }) => {
               content?.email ||
               content?.pec ||
               content?.web ||
-              content?.struttura_responsabile_correlati ||
-              content?.struttura.struttura_responsabile?.data?.replace(
-                /(<([^>]+)>)/g,
-                '',
-              ).length > 0 ||
+              content?.struttura_responsabile_correlati?.length > 0 ||
+              content?.struttura_responsabile?.data?.replace(/(<([^>]+)>)/g, '')
+                .length > 0 ||
               content?.riferimento_telefonico_struttura ||
               content?.riferimento_mail_struttura ||
               content?.riferimento_pec_struttura) && (
@@ -426,7 +424,7 @@ const VenueView = ({ content }) => {
                                 '',
                               ).length > 0 && (
                                 <CardTitle>
-                                  <h5 className="card-title no-toc">
+                                  <h5 className="card-title">
                                     <div
                                       className="text-serif"
                                       dangerouslySetInnerHTML={{
@@ -495,7 +493,7 @@ const VenueView = ({ content }) => {
             )}
 
             {/* ULTERIORI INFORMAZIONI */}
-            <Metadata content={content}>
+            <Metadata content={content} noMargin>
               {(content?.ulteriori_informazioni?.data?.replace(
                 /(<([^>]+)>)/g,
                 '',
@@ -506,9 +504,10 @@ const VenueView = ({ content }) => {
                   {content.sede_di?.length > 0 && (
                     <div className="mb-5">
                       <RelatedArticles
-                        title_size={'h6'}
+                        title_size={'h5'}
                         items={content.sede_di}
-                        title={`${intl.formatMessage(messages.sede_di)}:`}
+                        title={intl.formatMessage(messages.sede_di)}
+                        noMargin
                       />
                     </div>
                   )}
