@@ -165,7 +165,7 @@ const PaginaArgomentoView = ({ content }) => {
         );
       })}
 
-      <PaginaArgomentoPlaceholderAfterContent />
+      <PaginaArgomentoPlaceholderAfterContent content={content} />
     </div>
   ) : (
     <PaginaArgomentoViewNoBlocks content={content} />

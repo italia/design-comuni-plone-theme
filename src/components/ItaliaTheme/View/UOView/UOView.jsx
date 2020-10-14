@@ -437,7 +437,7 @@ const UOView = ({ content }) => {
           </section>
         </div>
       </div>
-      <UOPlaceholderAfterContent />
+      <UOPlaceholderAfterContent content={content} />
       <RelatedItems content={content} list={content?.related_news ?? []} />
     </>
   );

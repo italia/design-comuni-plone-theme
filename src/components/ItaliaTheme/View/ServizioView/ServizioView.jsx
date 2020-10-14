@@ -493,7 +493,7 @@ const ServizioView = ({ content }) => {
           </section>
         </div>
       </div>
-      <ServizioPlaceholderAfterContent />
+      <ServizioPlaceholderAfterContent content={content} />
     </>
   );
 };
