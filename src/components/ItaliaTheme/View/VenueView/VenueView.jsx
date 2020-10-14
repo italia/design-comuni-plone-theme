@@ -311,11 +311,9 @@ const VenueView = ({ content }) => {
               content?.email ||
               content?.pec ||
               content?.web ||
-              content?.struttura_responsabile_correlati ||
-              content?.struttura.struttura_responsabile?.data?.replace(
-                /(<([^>]+)>)/g,
-                '',
-              ).length > 0 ||
+              content?.struttura_responsabile_correlati?.length > 0 ||
+              content?.struttura_responsabile?.data?.replace(/(<([^>]+)>)/g, '')
+                .length > 0 ||
               content?.riferimento_telefonico_struttura ||
               content?.riferimento_mail_struttura ||
               content?.riferimento_pec_struttura) && (
@@ -495,7 +493,7 @@ const VenueView = ({ content }) => {
             )}
 
             {/* ULTERIORI INFORMAZIONI */}
-            <Metadata content={content}>
+            <Metadata content={content} noMargin>
               {(content?.ulteriori_informazioni?.data?.replace(
                 /(<([^>]+)>)/g,
                 '',
