@@ -9,7 +9,7 @@ import cx from 'classnames';
 import redraft from 'redraft';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { isCmsUi } from '@plone/volto/helpers';
-import { settings } from '@italia/config';
+import { settings } from '~/config';
 import { flattenToAppURL } from '@plone/volto/helpers';
 /**
  * View image block class.

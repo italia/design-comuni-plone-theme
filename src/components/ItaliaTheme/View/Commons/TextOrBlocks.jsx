@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { blocks } from '@italia/config';
+import { blocks } from '~/config';
 import { map } from 'lodash';
 import { defineMessages, useIntl } from 'react-intl';
 import {

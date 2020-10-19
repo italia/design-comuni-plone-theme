@@ -8,12 +8,12 @@ import {
   CardText,
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
-import { settings } from '@italia/config';
+import { settings } from '~/config';
 import redraft from 'redraft';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { ArgumentIcon } from '@italia/components/ItaliaTheme/View'
+import { ArgumentIcon } from '@italia/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   text: {
@@ -27,7 +27,7 @@ const messages = defineMessages({
   select_argument_sidebar: {
     id: 'select_argument_sidebar',
     defaultMessage: 'Seleziona un argomento nella barra a lato',
-  }
+  },
 });
 
 const Block = ({
@@ -45,20 +45,26 @@ const Block = ({
 
   // one request is made for every 'unita_amministrativa_responsabile' selected
   useEffect(() => {
-    argument && dispatch(getContent(flattenToAppURL(argument['@id']), null, argument['@id']));
+    argument &&
+      dispatch(
+        getContent(flattenToAppURL(argument['@id']), null, argument['@id']),
+      );
     return () => {
       argument && dispatch(resetContent(argument['@id']));
     };
   }, [dispatch, argument]);
 
-
   return (
     <Card className="card-bg" noWrapper={true} tag="div">
-      {argument ? 
+      {argument ? (
         <CardBody tag="div">
-          <ArgumentIcon icon={searchResults[argument['@id']]?.data?.icona}/>
-          <CardTitle tag="h3">{searchResults[argument['@id']]?.data?.title}</CardTitle>
-          <CardText tag="p">{searchResults[argument['@id']]?.data?.description}</CardText>
+          <ArgumentIcon icon={searchResults[argument['@id']]?.data?.icona} />
+          <CardTitle tag="h3">
+            {searchResults[argument['@id']]?.data?.title}
+          </CardTitle>
+          <CardText tag="p">
+            {searchResults[argument['@id']]?.data?.description}
+          </CardText>
           {inEditMode ? (
             <TextEditorWidget
               data={data}
@@ -87,11 +93,11 @@ const Block = ({
             />
           )}
         </CardBody>
-      :
+      ) : (
         <CardBody tag="div">
           {intl.formatMessage(messages.select_argument_sidebar)}
         </CardBody>
-      }
+      )}
     </Card>
   );
 };

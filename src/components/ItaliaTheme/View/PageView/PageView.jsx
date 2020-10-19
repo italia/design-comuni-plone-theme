@@ -11,7 +11,7 @@ import {
   getBaseUrl,
 } from '@plone/volto/helpers';
 import { map } from 'lodash';
-import { blocks } from '@italia/config';
+import { blocks } from '~/config';
 import {
   SearchSectionForm,
   PageHeaderNav,

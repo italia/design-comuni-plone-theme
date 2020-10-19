@@ -12,7 +12,7 @@ import {
   getBaseUrl,
 } from '@plone/volto/helpers';
 import { map } from 'lodash';
-import { blocks } from '@italia/config';
+import { blocks } from '~/config';
 import { defineMessages, useIntl } from 'react-intl';
 import { useLocation, Link } from 'react-router-dom';
 import {
