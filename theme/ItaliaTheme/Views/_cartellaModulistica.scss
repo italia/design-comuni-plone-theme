@@ -1,0 +1,19 @@
+.contenttype-cartellamodulistica {
+  section.modulistica {
+    .documents-section {
+      margin-bottom: 1.5em;
+
+      .documents {
+        .doc-row {
+          display: flex;
+          justify-content: space-between;
+          padding: 0.5em;
+
+          &:nth-child(even) {
+            background-color: $lightgrey-c2;
+          }
+        }
+      }
+    }
+  }
+}

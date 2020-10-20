@@ -50,3 +50,4 @@ export PersonaPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/
 export ServizioPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/ServizioView/Placeholder/AfterContent';
 export UOPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/UOView/Placeholder/AfterContent';
 export VenuePlaceholderAfterContent from '@italia/components/ItaliaTheme/View/VenueView/Placeholder/AfterContent';
+export DocumentoPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/DocumentoView/Placeholder/AfterContent';

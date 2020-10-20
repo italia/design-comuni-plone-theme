@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 /**
  * Dates view component class.
@@ -9,14 +9,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
  * @returns {string} Markup of the component.
  */
 const ArgumentIcon = ({ icon }) => {
-  return (
-    icon ?
-      <div className="icon-argument-container d-flex align-items-center justify-content-center mb-2 lightgrey-bg-c2">
-        <FontAwesomeIcon icon={icon} className="show-icon"/>
-      </div>
-     :
-      null
-  );
+  return icon ? (
+    <div className="icon-argument-container d-flex align-items-center justify-content-center mb-2 lightgrey-bg-c2">
+      <FontAwesomeIcon icon={icon} className="fal" />
+    </div>
+  ) : null;
 };
 
 export default ArgumentIcon;

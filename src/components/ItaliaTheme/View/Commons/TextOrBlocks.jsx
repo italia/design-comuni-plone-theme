@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { blocks } from '~/config';
 import { map } from 'lodash';
+import { useLocation } from 'react-router-dom';
 import { defineMessages, useIntl } from 'react-intl';
 import {
   flattenHTMLToAppURL,
@@ -23,18 +24,19 @@ const messages = defineMessages({
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const TextOrBlocks = ({ content, location }) => {
+const TextOrBlocks = ({ content, exclude = ['title', 'description'] }) => {
+  /* Render text or blocks in view, skip title and description blocks by default*/
   const blocksFieldname = getBlocksFieldname(content);
   const blocksLayoutFieldname = getBlocksLayoutFieldname(content);
   const intl = useIntl();
+  const location = useLocation();
   return (
     <>
       {hasBlocksData(content)
         ? map(content[blocksLayoutFieldname].items, (block) => {
             const blockType = content[blocksFieldname]?.[block]?.['@type'];
 
-            if (['title', 'pageDescription'].indexOf(blockType) > -1)
-              return null;
+            if (exclude.indexOf(blockType) > -1) return null;
 
             const Block = blocks.blocksConfig[blockType]?.['view'] || null;
             if (Block != null) {

@@ -40,6 +40,8 @@ import { VenueView } from '@italia/components/ItaliaTheme';
 import { ServizioView } from '@italia/components/ItaliaTheme';
 import { EventoView } from '@italia/components/ItaliaTheme';
 import { PaginaArgomentoView } from '@italia/components/ItaliaTheme';
+import { CartellaModulisticaView } from '@italia/components/ItaliaTheme';
+import { DocumentoView } from '@italia/components/ItaliaTheme';
 
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
@@ -58,13 +60,15 @@ import { MultilingualWidget } from '@italia/addons/volto-multilingual-widget';
 import { IconWidget } from '@italia/components/ItaliaTheme';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import * as Icons from '@fortawesome/free-solid-svg-icons';
+import * as IconsRegular from '@fortawesome/free-regular-svg-icons';
 import { defaultIconWidgetOptions } from '@italia/helpers/index';
 
-const iconList = Object.keys(Icons)
-  .filter((key) => key !== 'prefix')
-  .map((icon) => Icons[icon]);
+const iconList = Object.keys(Icons.fas).map((icon) => Icons[icon]);
+const iconListRegular = Object.keys(IconsRegular.far).map(
+  (icon) => IconsRegular[icon],
+);
 
-library.add(...iconList);
+library.add(...iconList, ...iconListRegular);
 
 const rssBlock = {
   ...customRssBlock,
@@ -267,6 +271,8 @@ export const views = {
     Servizio: ServizioView,
     Event: EventoView,
     'Pagina Argomento': PaginaArgomentoView,
+    CartellaModulistica: CartellaModulisticaView,
+    Documento: DocumentoView,
   },
   italiaThemeViewsConfig: {
     imagePosition: 'afterHeader', //values: afterHeader, documentBody
