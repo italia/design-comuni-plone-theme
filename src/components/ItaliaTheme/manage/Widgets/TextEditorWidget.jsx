@@ -12,7 +12,7 @@ import createInlineToolbarPlugin from 'draft-js-inline-toolbar-plugin';
 import { defineMessages } from 'react-intl';
 import { isEqual } from 'lodash';
 
-import { settings } from '@italia/config';
+import { settings } from '~/config';
 
 const messages = defineMessages({
   text: {

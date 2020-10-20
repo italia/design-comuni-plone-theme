@@ -11,7 +11,7 @@ import { Portal } from 'react-portal';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { defineMessages, useIntl } from 'react-intl';
 import redraft from 'redraft';
-import { settings } from '@italia/config';
+import { settings } from '~/config';
 /**
  * View title block class.
  * @class View

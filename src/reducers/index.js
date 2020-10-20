@@ -4,7 +4,7 @@
  */
 
 import defaultReducers from '@plone/volto/reducers';
-import { addonReducers } from '@italia/config';
+import { addonReducers } from '~/config';
 import { searchFiltersReducer } from './searchFiltersReducer';
 import { searchResultsReducer } from './searchResultsReducer';
 
