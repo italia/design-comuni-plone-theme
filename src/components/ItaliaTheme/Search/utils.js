@@ -48,7 +48,7 @@ const parseFetchedSections = (sections, location) => {
 };
 
 const parseFetchedTopics = (topics, location) => {
-  const qsTopics = qs.parse(location?.search ?? '')?.Subject ?? [];
+  const qsTopics = qs.parse(location?.search ?? '')?.tassonomia_argomenti ?? [];
 
   return topics.reduce((acc, topic) => {
     acc[topic.path] = {
@@ -122,7 +122,7 @@ const getSearchParamsURL = (
   }, []);
 
   const activeTopics = Object.keys(topics).reduce((acc, topic) => {
-    if (topics[topic].value) return [...acc, topics[topic].label];
+    if (topics[topic].value) return [...acc, topics[topic].value];
     return acc;
   }, []);
 
@@ -151,7 +151,7 @@ const getSearchParamsURL = (
       {
         SearchableText: searchableText,
         'path.query': activeSections.length > 0 ? activeSections : customPath,
-        Subject: activeTopics,
+        tassonomia_argomenti: activeTopics,
         ...optionsQuery,
         ...sortOn,
       },
