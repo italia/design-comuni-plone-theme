@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Card,
   CardBody,
-  CardTitle,
   CardText,
   Container,
   Row,
@@ -12,7 +11,6 @@ import { defineMessages, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import { settings } from '~/config';
 import redraft from 'redraft';
-import customLinkRenderer from '../utils';
 
 import { TextEditorWidget } from '@italia/components/ItaliaTheme';
 
@@ -125,13 +123,7 @@ const Block = ({ data, block, inEditMode, onChange }) => {
                   <CardText>
                     {redraft(
                       content,
-                      {
-                        ...settings.ToHTMLRenderers,
-                        entities: {
-                          ...settings.ToHTMLRenderers.entities,
-                          LINK: customLinkRenderer,
-                        },
-                      },
+                      settings.ToHTMLRenderers,
                       settings.ToHTMLOptions,
                     )}
                   </CardText>

@@ -4,7 +4,6 @@ import {
   CardBody,
   CardTitle,
   CardText,
-  Icon,
 } from 'design-react-kit/dist/design-react-kit';
 import { defineMessages, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
@@ -12,7 +11,6 @@ import redraft from 'redraft';
 import { TextEditorWidget } from '@italia/components/ItaliaTheme';
 import { Divider } from 'semantic-ui-react';
 import { settings } from '~/config';
-import customLinkRenderer from '../utils';
 
 const messages = defineMessages({
   simple_card_title: {
@@ -31,7 +29,6 @@ const messages = defineMessages({
 
 const Block = ({ inEditMode, data, block, onChange }) => {
   const intl = useIntl();
-  const entityMap = data?.simple_card_content?.entityMap;
   const title = data?.simple_card_title?.blocks[0]?.text;
   const content = data?.simple_card_content;
 
@@ -82,13 +79,7 @@ const Block = ({ inEditMode, data, block, onChange }) => {
                   <CardText>
                     {redraft(
                       content,
-                      {
-                        ...settings.ToHTMLRenderers,
-                        entities: {
-                          ...settings.ToHTMLRenderers.entities,
-                          LINK: customLinkRenderer,
-                        },
-                      },
+                      settings.ToHTMLRenderers,
                       settings.ToHTMLOptions,
                     )}
                   </CardText>
