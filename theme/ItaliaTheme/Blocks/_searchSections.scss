@@ -11,6 +11,11 @@
     }
 
     background-color: $secondary;
+    color: $secondary-text;
+
+    h2.text-secondary {
+      color: $secondary-text !important;
+    }
 
     .searchContainer {
       padding: 0px 12%;
