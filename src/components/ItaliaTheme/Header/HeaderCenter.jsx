@@ -15,6 +15,7 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 
 import { SearchModal } from '@italia/components/ItaliaTheme';
+import { siteConfig } from '~/config';
 
 const messages = defineMessages({
   followUs: {
@@ -38,9 +39,9 @@ const HeaderCenter = () => {
           <Link to="/">
             <Icon color="" icon="it-pa" padding={false} size="" />
             <div className="it-brand-text">
-              <h2 className="no_toc">Nome del Comune</h2>
+              <h2 className="no_toc">{siteConfig.siteTitle}</h2>
               <h3 className="no_toc d-none d-md-block">
-                Uno dei tanti Comuni d'Italia
+                {siteConfig.siteSubtitle}
               </h3>
             </div>
           </Link>
@@ -48,36 +49,18 @@ const HeaderCenter = () => {
         <HeaderRightZone>
           <HeaderSocialsZone label={intl.formatMessage(messages.followUs)}>
             <ul>
-              <li>
-                <a
-                  title="Facebook"
-                  href="https://facebook.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon color="" icon="it-facebook" padding={false} size="" />
-                </a>
-              </li>
-              <li>
-                <a
-                  title="Github"
-                  href="https://github.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon color="" icon="it-github" padding={false} size="" />
-                </a>
-              </li>
-              <li>
-                <a
-                  title="Twitter"
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon color="" icon="it-twitter" padding={false} size="" />
-                </a>
-              </li>
+              {siteConfig.socialSettings?.map((social, idx) => (
+                <li key={idx}>
+                  <a
+                    title={social.title}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon color="" icon={social.icon} padding={false} size="" />
+                  </a>
+                </li>
+              ))}
             </ul>
           </HeaderSocialsZone>
           <div className="it-search-wrapper">
