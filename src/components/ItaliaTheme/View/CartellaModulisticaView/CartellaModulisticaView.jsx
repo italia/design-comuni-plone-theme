@@ -16,6 +16,7 @@ import {
   DownloadFileFormat,
 } from '@italia/components/ItaliaTheme/View';
 import cx from 'classnames';
+import DocRow from './DocRow';
 
 /**
  * CartellaModulisticaView view component class.
@@ -51,70 +52,22 @@ const CartellaModulisticaView = ({ content }) => {
         {modulistica.length > 0 && (
           <section className="modulistica">
             {modulistica.map((section) => {
-              return (
+              return section['@type'] === 'Document' ? (
                 <div className="documents-section">
                   <h3>{section.title}</h3>
                   {Object.keys(section.blocks)?.length > 0 && (
                     <TextOrBlocks content={section} />
                   )}
                   {section.items?.length > 0 && (
-                    <div className="documents">
+                    <>
                       {section.items.map((doc) => (
-                        <div
-                          className={cx('doc-row', {
-                            'has-children': doc.items?.length > 1,
-                          })}
-                          key={doc['@id']}
-                        >
-                          <div className="doc">
-                            <div className="title">
-                              <Link to={flattenToAppURL(doc['@id'])}>
-                                {doc.title}
-                                {doc.items?.length > 1 &&
-                                  ` - ${doc.items[0]?.title}`}
-                              </Link>
-                            </div>
-                            {doc.items?.length > 0 && (
-                              <div className="downloads">
-                                <DownloadFileFormat
-                                  file={doc.items[0]?.file_principale}
-                                />
-                                <DownloadFileFormat
-                                  file={doc.items[0]?.formato_alternativo_1}
-                                />
-                                <DownloadFileFormat
-                                  file={doc.items[0]?.formato_alternativo_2}
-                                />
-                              </div>
-                            )}
-                          </div>
-                          {doc.items?.length > 1 && (
-                            <>
-                              {doc.items
-                                .filter((doc, index) => index > 0)
-                                .map((modulo) => (
-                                  <div class="doc modulo">
-                                    <div className="title">{modulo.title}</div>
-                                    <div className="downloads">
-                                      <DownloadFileFormat
-                                        file={modulo?.file_principale}
-                                      />
-                                      <DownloadFileFormat
-                                        file={modulo?.formato_alternativo_1}
-                                      />
-                                      <DownloadFileFormat
-                                        file={modulo?.formato_alternativo_2}
-                                      />
-                                    </div>
-                                  </div>
-                                ))}
-                            </>
-                          )}
-                        </div>
+                        <DocRow doc={doc} />
                       ))}
-                    </div>
+                    </>
                   )}
                 </div>
+              ) : (
+                <DocRow doc={section} />
               );
             })}
           </section>

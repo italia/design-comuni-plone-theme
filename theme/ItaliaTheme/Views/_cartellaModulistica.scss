@@ -6,48 +6,46 @@
       h3 + br {
         display: none;
       }
+    }
 
-      .documents {
-        .doc-row {
-          &:nth-child(even) {
-            background-color: $lightgrey-c2;
+    .doc-row {
+      &:nth-child(even) {
+        background-color: $lightgrey-c2;
+      }
+
+      &.has-children {
+        padding-bottom: 1em;
+      }
+
+      .doc {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5em;
+
+        &.modulo {
+          margin-left: 2em;
+          @media (max-width: #{map-get($grid-breakpoints, md)}) {
+            margin-left: 1.5em;
           }
+        }
 
-          &.has-children {
-            padding-bottom: 1em;
-          }
+        .downloads {
+          display: flex;
+          justify-content: center;
 
-          .doc {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0.5em;
+          a {
+            width: 2.8em;
+            text-align: center;
 
-            &.modulo {
-              margin-left: 2em;
-              @media (max-width: #{map-get($grid-breakpoints, md)}) {
-                margin-left: 1.5em;
-              }
+            svg {
+              font-size: 1.5em;
             }
+          }
 
-            .downloads {
-              display: flex;
-              justify-content: center;
-
-              a {
-                width: 2.8em;
-                text-align: center;
-
-                svg {
-                  font-size: 1.5em;
-                }
-              }
-
-              @media (max-width: #{map-get($grid-breakpoints, md)}) {
-                a {
-                  margin-left: 1em;
-                }
-              }
+          @media (max-width: #{map-get($grid-breakpoints, md)}) {
+            a {
+              margin-left: 1em;
             }
           }
         }
