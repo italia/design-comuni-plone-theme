@@ -39,7 +39,7 @@ const HeaderCenter = () => {
           <Link to="/">
             <Icon color="" icon="it-pa" padding={false} size="" />
             <div className="it-brand-text">
-              <h2 className="no_toc">{siteConfig.siteTitle}</h2>
+              <h2 className="no_toc">{siteConfig.properties.siteTitle}</h2>
               <h3 className="no_toc d-none d-md-block">
                 {siteConfig.properties.siteSubtitle}
               </h3>
