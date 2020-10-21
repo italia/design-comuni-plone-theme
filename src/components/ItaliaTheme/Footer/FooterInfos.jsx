@@ -109,9 +109,9 @@ const FooterInfos = () => {
           </Link>
         </h4>
         <p>
-          <strong>{siteConfig.siteTitle}</strong>
+          <strong>{siteConfig.properties.siteTitle}</strong>
           <br />
-          {siteConfig.footerInfos}
+          {siteConfig.properties.footerInfos}
         </p>
 
         <LinkList className="footer-list clearfix">

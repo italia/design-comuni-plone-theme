@@ -41,7 +41,7 @@ const HeaderCenter = () => {
             <div className="it-brand-text">
               <h2 className="no_toc">{siteConfig.siteTitle}</h2>
               <h3 className="no_toc d-none d-md-block">
-                {siteConfig.siteSubtitle}
+                {siteConfig.properties.siteSubtitle}
               </h3>
             </div>
           </Link>

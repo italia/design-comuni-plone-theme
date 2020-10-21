@@ -34,11 +34,11 @@ const HeaderSlim = () => {
       <HeaderContent>
         <HeaderBrand
           responsive
-          href={siteConfig.parentSiteURL}
+          href={siteConfig.properties.parentSiteURL}
           target="_blank"
           rel="noopener noreferer"
         >
-          {siteConfig.parentSiteTitle}
+          {siteConfig.properties.parentSiteTitle}
         </HeaderBrand>
         <HeaderRightZone>
           <LanguageSelector />
