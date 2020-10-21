@@ -13,6 +13,7 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 
 import { FooterNavigation, FooterInfos } from '@italia/components/ItaliaTheme/';
+import { siteConfig } from '~/config';
 
 /**
  * FooterMain component class.
@@ -30,9 +31,11 @@ const FooterMain = () => {
                 <Link to="/">
                   <Icon color="" icon="it-pa" padding={false} size="" />
                   <div className="it-brand-text">
-                    <h2 className="no_toc">Nome del Comune</h2>
+                    <h2 className="no_toc">
+                      {siteConfig.properties.siteTitle}
+                    </h2>
                     <h3 className="no_toc d-none d-md-block">
-                      Uno dei tanti Comuni d'Italia
+                      {siteConfig.properties.siteSubtitle}
                     </h3>
                   </div>
                 </Link>
