@@ -42,6 +42,7 @@ import { EventoView } from '@italia/components/ItaliaTheme';
 import { PaginaArgomentoView } from '@italia/components/ItaliaTheme';
 import { CartellaModulisticaView } from '@italia/components/ItaliaTheme';
 import { DocumentoView } from '@italia/components/ItaliaTheme';
+import { ModuloView } from '@italia/components/ItaliaTheme';
 
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
@@ -273,6 +274,7 @@ export const views = {
     'Pagina Argomento': PaginaArgomentoView,
     CartellaModulistica: CartellaModulisticaView,
     Documento: DocumentoView,
+    Modulo: ModuloView,
   },
   italiaThemeViewsConfig: {
     imagePosition: 'afterHeader', //values: afterHeader, documentBody

@@ -89,9 +89,7 @@ const GenericCard = ({
         </div>
       </div>
     ) : (
-      <div
-        className={cx('genericcard card card-teaser shadow p-4 mt-3 rounded')}
-      >
+      <div className="genericcard card card-teaser shadow p-4 mt-3 rounded">
         <div className="card-body">
           {infos}
           <h5 className="card-title">

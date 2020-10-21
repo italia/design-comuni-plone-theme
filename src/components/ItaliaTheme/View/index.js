@@ -39,6 +39,7 @@ export EventLocationMap from '@italia/components/ItaliaTheme/View/Commons/EventL
 export SmallVenue from '@italia/components/ItaliaTheme/View/Commons/SmallVenue';
 export Sponsors from '@italia/components/ItaliaTheme/View/Commons/Sponsors';
 export RelatedItems from '@italia/components/ItaliaTheme/View/Commons/RelatedItems';
+export DownloadFileFormat from '@italia/components/ItaliaTheme/View/Commons/DownloadFileFormat';
 
 /* --- View --- */
 export PaginaArgomentoViewNoBlocks from '@italia/components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks';

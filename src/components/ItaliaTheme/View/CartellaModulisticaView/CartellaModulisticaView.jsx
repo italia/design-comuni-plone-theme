@@ -3,15 +3,19 @@
  * @module components/theme/View/CartellaModulisticaView
  */
 
-import React from 'react';
-
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { getContent, resetContent } from '@plone/volto/actions';
+import { flattenToAppURL } from '@plone/volto/helpers';
 import {
   PageHeader,
   RelatedItems,
   PagePlaceholderAfterContent,
   TextOrBlocks,
+  DownloadFileFormat,
 } from '@italia/components/ItaliaTheme/View';
-import { defineMessages, useIntl } from 'react-intl';
+import cx from 'classnames';
 
 /**
  * CartellaModulisticaView view component class.
@@ -20,58 +24,99 @@ import { defineMessages, useIntl } from 'react-intl';
  * @returns {string} Markup of the component.
  */
 
-const messages = defineMessages({
-  // unknownBlock: {
-  //   id: 'Unknown Block',
-  //   defaultMessage: 'Unknown Block {block}',
-  // },
-});
-
 const CartellaModulisticaView = ({ content }) => {
-  console.log(content);
+  const modulistica_key = 'modulistica';
+  const locationContent = useSelector((state) => state.content.subrequests);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    if (
+      content?.items?.length > 0 &&
+      !locationContent[modulistica_key]?.loaded
+    ) {
+      const modulistica_items_url =
+        content['@components']['modulistica-items']['@id'];
+
+      dispatch(getContent(modulistica_items_url, null, modulistica_key));
+      return () => dispatch(resetContent(modulistica_key));
+    }
+  }, []);
+
+  const modulistica = locationContent[modulistica_key]?.data?.items ?? [];
+
   return (
     <>
-      <div className="container px-4 my-4 newsitem-view">
+      <div className="container px-4 my-4 cartellamodulistica-view">
         <PageHeader content={content} />
         <TextOrBlocks content={content} />
-        {content.items.length > 0 && (
+        {modulistica.length > 0 && (
           <section className="modulistica">
-            {content.items.map((section) => (
-              <div className="documents-section">
-                <h3>{section.title}</h3>
-                {section.blocks?.length > 0 && (
-                  <TextOrBlocks content={section} />
-                )}
-                {section.items_total > 0 && (
-                  <div className="documents">
-                    <div className="doc-row">
-                      <div className="title">titolo</div>
-                      <div className="downloads">downloads</div>
+            {modulistica.map((section) => {
+              return (
+                <div className="documents-section">
+                  <h3>{section.title}</h3>
+                  {Object.keys(section.blocks)?.length > 0 && (
+                    <TextOrBlocks content={section} />
+                  )}
+                  {section.items?.length > 0 && (
+                    <div className="documents">
+                      {section.items.map((doc) => (
+                        <div
+                          className={cx('doc-row', {
+                            'has-children': doc.items?.length > 1,
+                          })}
+                          key={doc['@id']}
+                        >
+                          <div className="doc">
+                            <div className="title">
+                              <Link to={flattenToAppURL(doc['@id'])}>
+                                {doc.title}
+                                {doc.items?.length > 1 &&
+                                  ` - ${doc.items[0]?.title}`}
+                              </Link>
+                            </div>
+                            {doc.items?.length > 0 && (
+                              <div className="downloads">
+                                <DownloadFileFormat
+                                  file={doc.items[0]?.file_principale}
+                                />
+                                <DownloadFileFormat
+                                  file={doc.items[0]?.formato_alternativo_1}
+                                />
+                                <DownloadFileFormat
+                                  file={doc.items[0]?.formato_alternativo_2}
+                                />
+                              </div>
+                            )}
+                          </div>
+                          {doc.items?.length > 1 && (
+                            <>
+                              {doc.items
+                                .filter((doc, index) => index > 0)
+                                .map((modulo) => (
+                                  <div class="doc modulo">
+                                    <div className="title">{modulo.title}</div>
+                                    <div className="downloads">
+                                      <DownloadFileFormat
+                                        file={modulo?.file_principale}
+                                      />
+                                      <DownloadFileFormat
+                                        file={modulo?.formato_alternativo_1}
+                                      />
+                                      <DownloadFileFormat
+                                        file={modulo?.formato_alternativo_2}
+                                      />
+                                    </div>
+                                  </div>
+                                ))}
+                            </>
+                          )}
+                        </div>
+                      ))}
                     </div>
-                    <div className="doc-row">
-                      <div className="title">titolo</div>
-                      <div className="downloads">downloads</div>
-                    </div>
-                    <div className="doc-row">
-                      <div className="title">titolo</div>
-                      <div className="downloads">downloads</div>
-                    </div>
-                    <div className="doc-row">
-                      <div className="title">titolo</div>
-                      <div className="downloads">downloads</div>
-                    </div>
-                    Qui deve fare la load degli items del figlio, per caricare i
-                    documenti e mostrarli
-                    {section.items?.map((doc) => (
-                      <div className="doc-row">
-                        <div className="title">{doc.title}</div>
-                        <div className="downloads">downloads</div>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
+                  )}
+                </div>
+              );
+            })}
           </section>
         )}
       </div>

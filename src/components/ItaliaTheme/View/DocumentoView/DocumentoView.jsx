@@ -9,7 +9,6 @@ import { defineMessages, useIntl } from 'react-intl';
 import Modules from '@italia/components/ItaliaTheme/View/DocumentoView/Modules';
 
 import {
-  Attachments,
   Gallery,
   CuredBy,
   ContentImage,
@@ -20,25 +19,9 @@ import {
   Metadata,
   OfficeCard,
   GenericCard,
-  Dates,
-  TextOrBlocks,
-  EventLocations,
-  Sponsors,
   RelatedItems,
-  RichText,
   DocumentoPlaceholderAfterContent,
 } from '@italia/components/ItaliaTheme/View';
-
-import { Link } from 'react-router-dom';
-import { flattenToAppURL } from '@plone/volto/helpers';
-import {
-  Icon,
-  Chip,
-  ChipLabel,
-  Card,
-  CardBody,
-  CardTitle,
-} from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
   descrizione: {

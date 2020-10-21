@@ -14,6 +14,8 @@ import {
   CardTitle,
 } from 'design-react-kit/dist/design-react-kit';
 
+import { DownloadFileFormat } from '@italia/components/ItaliaTheme/View';
+
 /**
  * Modules view component class.
  * @function Modules
@@ -48,9 +50,9 @@ const Modules = ({ content }) => {
 
             {modulo.description && <p>{modulo.description}</p>}
             <div className="download-formats">
-              <DownloadFormat file={modulo.file_principale} />
-              <DownloadFormat file={modulo.formato_alternativo_1} />
-              <DownloadFormat file={modulo.formato_alternativo_2} />
+              <DownloadFileFormat file={modulo.file_principale} />
+              <DownloadFileFormat file={modulo.formato_alternativo_1} />
+              <DownloadFileFormat file={modulo.formato_alternativo_2} />
             </div>
           </CardBody>
         </Card>
@@ -59,32 +61,6 @@ const Modules = ({ content }) => {
   ) : null;
 };
 
-const DownloadFormat = ({ file }) => {
-  const icons = {
-    'text/rtf': { lib: 'far', name: 'file-alt' },
-    'application/pdf': { lib: 'far', name: 'file-pdf' },
-    'application/zip': { lib: 'far', name: 'file-archive' },
-    'application/gzip': { lib: 'far', name: 'file-archive' },
-    'application/json': { lib: 'fas', name: 'code' },
-    'text/html': { lib: 'fas', name: 'code' },
-    'image/jpg': { lib: 'far', name: 'file-image' },
-    'image/jpeg': { lib: 'far', name: 'file-image' },
-    'image/png': { lib: 'far', name: 'file-image' },
-    'image/svg': { lib: 'far', name: 'file-image' },
-  };
-  const defaultIcon = { lib: 'fas', name: 'download' };
-
-  const icon = file ? icons[file['content-type']] ?? defaultIcon : null;
-  return file ? (
-    <a href={flattenToAppURL(file.download)} title={file.filename}>
-      <Icon
-        icon={[icon.lib, icon.name]}
-        alt={file.filename}
-        title={file.filename}
-      />
-    </a>
-  ) : null;
-};
 /**
  * Property types.
  * @property {Object} propTypes Property types.

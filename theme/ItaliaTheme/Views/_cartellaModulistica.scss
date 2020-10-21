@@ -1,16 +1,54 @@
 .contenttype-cartellamodulistica {
   section.modulistica {
     .documents-section {
-      margin-bottom: 1.5em;
+      margin-bottom: 3em;
+
+      h3 + br {
+        display: none;
+      }
 
       .documents {
         .doc-row {
-          display: flex;
-          justify-content: space-between;
-          padding: 0.5em;
-
           &:nth-child(even) {
             background-color: $lightgrey-c2;
+          }
+
+          &.has-children {
+            padding-bottom: 1em;
+          }
+
+          .doc {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5em;
+
+            &.modulo {
+              margin-left: 2em;
+              @media (max-width: #{map-get($grid-breakpoints, md)}) {
+                margin-left: 1.5em;
+              }
+            }
+
+            .downloads {
+              display: flex;
+              justify-content: center;
+
+              a {
+                width: 2.8em;
+                text-align: center;
+
+                svg {
+                  font-size: 1.5em;
+                }
+              }
+
+              @media (max-width: #{map-get($grid-breakpoints, md)}) {
+                a {
+                  margin-left: 1em;
+                }
+              }
+            }
           }
         }
       }

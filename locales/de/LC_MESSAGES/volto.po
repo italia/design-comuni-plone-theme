@@ -116,6 +116,7 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
+#: components/ItaliaTheme/View/ModulisticaView/ModulisticaView
 #: components/ItaliaTheme/View/PageView
 #: components/ItaliaTheme/View/PageView/PageView
 msgid "In this section"
@@ -274,6 +275,9 @@ msgid "URP"
 msgstr ""
 
 #: addons/volto-dropdownmenu/src/components/DropdownMenu
+#: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
+#: components/ItaliaTheme/View/Commons/Blocks
+#: components/ItaliaTheme/View/ModulisticaView/ModulisticaView
 #: components/ItaliaTheme/View/PageView
 #: components/ItaliaTheme/View/PageView/PageView
 #: components/ItaliaTheme/View/PaginaArgomentoView
@@ -603,6 +607,35 @@ msgstr ""
 msgid "documenti-e-dati"
 msgstr ""
 
+#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+msgid "documento_accedere_al_servizio"
+msgstr ""
+
+#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+msgid "documento_autori"
+msgstr ""
+
+#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+#: components/ItaliaTheme/View/DocumentoView/Moduli
+msgid "documento_descrizione"
+msgstr ""
+
+#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+msgid "documento_documenti_allegati"
+msgstr ""
+
+#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+msgid "documento_licenza_distribuzione"
+msgstr ""
+
+#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+msgid "documento_riferimenti_normativi"
+msgstr ""
+
+#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+msgid "documento_ufficio_responsabile"
+msgstr ""
+
 #: components/ItaliaTheme/View/VenueView
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "dove"
@@ -633,6 +666,7 @@ msgstr ""
 msgid "dropdownmenu-blocks-description"
 msgstr ""
 
+#: addons/volto-dropdownmenu/src/components/DropdownMenu
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 msgid "dropdownmenu-close-menu-button"
 msgstr ""
@@ -919,6 +953,14 @@ msgstr ""
 #: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "modulistica"
+msgstr ""
+
+#: components/ItaliaTheme/View/ModuloView/ModuloView
+msgid "modulo_file_principale"
+msgstr ""
+
+#: components/ItaliaTheme/View/ModuloView/ModuloView
+msgid "modulo_formati_alternativi"
 msgstr ""
 
 #: addons/volto-multilingual-widget/src/MultilingualWidget
@@ -1357,6 +1399,8 @@ msgstr ""
 msgid "topics"
 msgstr ""
 
+#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+#: components/ItaliaTheme/View/DocumentoView/Moduli
 #: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/EventoView/EventoView
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
