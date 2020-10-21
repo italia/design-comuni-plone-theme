@@ -17,12 +17,12 @@ const Body = ({ block, sections }) => {
   const [inputText, setInputText] = useState('');
 
   const searchFilters = () => {
-    return block.sections.flatMap((section) => {
-      return sections[section.value].items.map((x) => x.path);
+    return block.sections.flatMap(section => {
+      return sections[section.value].items.map(x => x.path);
     });
   };
 
-  const handleClick = (link) => {
+  const handleClick = link => {
     history.push(link['@id']);
   };
 
@@ -32,7 +32,7 @@ const Body = ({ block, sections }) => {
     <div className="public-ui searchSections">
       <div className="container">
         <div>
-          <h2 className="text-white">{block.title}</h2>
+          <h2 className="text-secondary">{block.title}</h2>
         </div>
         <div className="searchContainer d-flex w-100">
           <div className="searchbar lightgrey-bg-c2 shadow-sm rounded d-flex w-100">
@@ -40,14 +40,14 @@ const Body = ({ block, sections }) => {
               className="inputSearch lightgrey-bg-c2"
               type="text"
               placeholder={block.placeholder}
-              onChange={(e) => setInputText(e.currentTarget.value)}
-              onKeyDown={(e) =>
+              onChange={e => setInputText(e.currentTarget.value)}
+              onKeyDown={e =>
                 e.key === 'Enter' ? navigate(inputText, searchFilters()) : null
               }
             ></input>
             <button
               className="rounded-right"
-              onClick={(e) => navigate(inputText, searchFilters())}
+              onClick={e => navigate(inputText, searchFilters())}
             >
               <Icon icon="it-search" padding={false} size="sm" color="white" />
             </button>
