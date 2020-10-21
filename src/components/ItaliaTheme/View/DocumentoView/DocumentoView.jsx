@@ -132,7 +132,11 @@ const DocumentoView = ({ content, location }) => {
                     )}
                   </div>
 
-                  <Gallery content={content} folder_name={'multimedia'} />
+                  <Gallery
+                    content={content}
+                    folder_name={'multimedia'}
+                    className="mt-5"
+                  />
                 </RichTextArticle>
               )}
 
