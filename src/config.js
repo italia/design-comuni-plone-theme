@@ -276,9 +276,37 @@ export const views = {
     Documento: DocumentoView,
     Modulo: ModuloView,
   },
+};
+
+export const siteConfig = {
   italiaThemeViewsConfig: {
-    imagePosition: 'afterHeader', //values: afterHeader, documentBody
+    imagePosition: 'afterHeader', // possible values: afterHeader, documentBody
   },
+  properties: {
+    siteTitle: 'Nome del Comune',
+    siteSubtitle: "Uno dei tanti Comuni d'Italia",
+    parentSiteTitle: 'Nome della Regione',
+    parentSiteURL: 'https://www.governo.it',
+    footerInfos:
+      'Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000',
+  },
+  socialSettings: [
+    {
+      title: 'Facebook',
+      url: 'https://facebook.com',
+      icon: 'it-facebook',
+    },
+    {
+      title: 'GitHub',
+      url: 'https://github.com',
+      icon: 'it-github',
+    },
+    {
+      title: 'Twitter',
+      url: 'https://twitter.com',
+      icon: 'it-twitter',
+    },
+  ],
 };
 
 export const widgets = {
