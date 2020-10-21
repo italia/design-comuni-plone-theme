@@ -17,6 +17,7 @@ import {
   LinkList,
   LinkListItem,
 } from 'design-react-kit/dist/design-react-kit';
+import { siteConfig } from '~/config';
 
 const messages = defineMessages({
   goToPage: {
@@ -108,9 +109,9 @@ const FooterInfos = () => {
           </Link>
         </h4>
         <p>
-          <strong>Nome del Comune</strong>
+          <strong>{siteConfig.properties.siteTitle}</strong>
           <br />
-          Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000
+          {siteConfig.properties.footerInfos}
         </p>
 
         <LinkList className="footer-list clearfix">
@@ -199,32 +200,27 @@ const FooterInfos = () => {
           <Link to="#">{intl.formatMessage(messages.followUs)}</Link>
         </h4>
         <ul className="list-inline text-left social">
-          <li className="list-inline-item">
-            <Link className="p-2 text-white" to="#" target="_blank">
-              <Icon
-                icon="it-facebook"
-                color="white"
-                className="align-top"
-                padding={false}
-                size="sm"
-              />
+          {siteConfig.socialSettings?.map((social, idx) => (
+            <li className="list-inline-item" key={idx}>
+              <a
+                className="p-2 text-white"
+                href={social.url}
+                title={social.title}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon
+                  icon={social.icon}
+                  color="white"
+                  className="align-top"
+                  padding={false}
+                  size="sm"
+                />
 
-              <span className="sr-only">Facebook</span>
-            </Link>
-          </li>
-          <li className="list-inline-item">
-            <Link className="p-2 text-white" to="#" target="_blank">
-              <Icon
-                icon="it-twitter"
-                color="white"
-                className="align-top"
-                padding={false}
-                size="sm"
-              />
-
-              <span className="sr-only">Twitter</span>
-            </Link>
-          </li>
+                <span className="sr-only">{social.title}</span>
+              </a>
+            </li>
+          ))}
         </ul>
       </Col>
     </Row>
