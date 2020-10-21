@@ -10,6 +10,10 @@ a {
   cursor: pointer;
 }
 
+.public-ui .text-secondary {
+  color: $secondary-text !important;
+}
+
 ::selection {
   background-color: default;
 }

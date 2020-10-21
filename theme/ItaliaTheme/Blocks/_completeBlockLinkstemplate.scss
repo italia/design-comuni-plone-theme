@@ -37,6 +37,10 @@
 
   .card.card-bg {
     background-color: $secondary;
+
+    a {
+      color: $secondary-text;
+    }
   }
 
   .card-text {
