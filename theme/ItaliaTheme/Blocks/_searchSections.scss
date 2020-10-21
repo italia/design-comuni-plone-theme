@@ -3,9 +3,10 @@
 
   .searchSections {
     width: 100%;
-    min-height: 280px;
     height: auto;
-    padding: 10px 50px;
+    min-height: 280px;
+    padding: 50px 50px 10px;
+
     @media (max-width: #{map-get($grid-breakpoints, lg) - 1px}) {
       padding: 10px 6px;
     }
@@ -18,25 +19,25 @@
     }
 
     .searchContainer {
-      padding: 0px 12%;
       flex-direction: column;
       justify-content: space-evenly;
+      padding: 0px 12%;
       margin: 56px 0;
 
       @media (max-width: #{map-get($grid-breakpoints, lg) - 1px}) {
         padding: 0px 10px;
       }
+
       input.inputSearch {
+        width: 100%;
+        height: 100%;
+        padding: 0;
         border: none;
         border-radius: 0;
-        outline: 0;
-        width: 96%;
         box-shadow: none;
-        transition: 0.2s ease-out;
         font-weight: 500;
-        height: 100%;
-        width: 100%;
-        padding: 0;
+        outline: 0;
+        transition: 0.2s ease-out;
       }
 
       .searchbar {
