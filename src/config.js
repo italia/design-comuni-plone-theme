@@ -31,6 +31,11 @@ import titleSVG from '@plone/volto/icons/text.svg';
 import ArgomentoTitleView from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/View';
 import ArgomentoTitleEdit from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/Edit';
 
+import TextCardView from '@italia/components/ItaliaTheme/Blocks/TextCard/SimpleCard/View';
+import TextCardEdit from '@italia/components/ItaliaTheme/Blocks/TextCard/SimpleCard/Edit';
+import TextCardWithImageView from '@italia/components/ItaliaTheme/Blocks/TextCard/CardWithImage/View';
+import TextCardWithImageEdit from '@italia/components/ItaliaTheme/Blocks/TextCard/CardWithImage/Edit';
+
 import { CharCounterDescriptionWidget } from '@italia/components/ItaliaTheme';
 import { PageView } from '@italia/components/ItaliaTheme';
 import { NewsItemView } from '@italia/components/ItaliaTheme';
@@ -180,6 +185,37 @@ const customBlocks = {
     group: 'argomento',
     view: ArgomentoTitleView,
     edit: ArgomentoTitleEdit,
+    restricted: false,
+    mostUsed: false,
+    blockHasOwnFocusManagement: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
+  testo_riquadro_semplice: {
+    id: 'testo_riquadro_semplice',
+    title: 'Testo in riquadro semplice',
+    icon: titleSVG,
+    group: 'text',
+    view: TextCardView,
+    edit: TextCardEdit,
+    restricted: false,
+    mostUsed: false,
+    blockHasOwnFocusManagement: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+  },
+  testo_riquadro_immagine: {
+    id: 'testo_riquadro_immagine',
+    title: 'Testo in riquadro immagine',
+    icon: titleSVG,
+    group: 'text',
+    view: TextCardWithImageView,
+    edit: TextCardWithImageEdit,
     restricted: false,
     mostUsed: false,
     blockHasOwnFocusManagement: true,
