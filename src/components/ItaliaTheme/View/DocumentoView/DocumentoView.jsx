@@ -57,6 +57,18 @@ const messages = defineMessages({
     id: 'documento_licenza_distribuzione',
     defaultMessage: 'Licenza di distribuzione',
   },
+  accedere_al_servizio: {
+    id: 'documento_accedere_al_servizio',
+    defaultMessage: 'Accedere al servizio',
+  },
+  riferimenti_normativi: {
+    id: 'documento_riferimenti_normativi',
+    defaultMessage: 'Riferimenti normativi',
+  },
+  documenti_allegati: {
+    id: 'documento_documenti_allegati',
+    defaultMessage: 'Documenti allegati',
+  },
   ulteriori_informazioni: {
     id: 'ulteriori_informazioni',
     defaultMessage: "Box d'aiuto",
@@ -113,8 +125,6 @@ const DocumentoView = ({ content, location }) => {
               show_title={false}
               content={content.descrizione_estesa?.data}
             >
-              <Gallery content={content} folder_name={'multimedia'} />
-
               <Modules content={content} />
 
               {(content.ufficio_responsabile?.length > 0 ||
@@ -138,6 +148,8 @@ const DocumentoView = ({ content, location }) => {
                       </>
                     )}
                   </div>
+
+                  <Gallery content={content} folder_name={'multimedia'} />
                 </RichTextArticle>
               )}
 
@@ -155,18 +167,73 @@ const DocumentoView = ({ content, location }) => {
               )}
             </RichTextArticle>
 
+            {/* ACCEDERE AL SERVIZIO */}
+            {content?.servizi_collegati?.length > 0 && (
+              <RichTextArticle
+                tag_id={'accedere-al-servizio'}
+                title={intl.formatMessage(messages.accedere_al_servizio)}
+              >
+                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                  {content.servizi_collegati?.map((servizio, i) => (
+                    <GenericCard
+                      key={servizio['@id']}
+                      item={servizio}
+                      showimage={false}
+                      image_field={'immagine'}
+                    >
+                      {servizio.canale_digitale?.data?.replace(
+                        /(<([^>]+)>)/g,
+                        '',
+                      ).length > 0 && (
+                        <div
+                          className="mt-3"
+                          dangerouslySetInnerHTML={{
+                            __html: servizio.canale_digitale.data,
+                          }}
+                        />
+                      )}
+                    </GenericCard>
+                  ))}
+                </div>
+              </RichTextArticle>
+            )}
+
             {/* ULTERIORI INFORMAZIONI */}
             <Metadata content={content}>
               {content?.ulteriori_informazioni?.data?.replace(
                 /(<([^>]+)>)/g,
                 '',
-              ) !== '' && (
-                <>
-                  {content?.ulteriori_informazioni?.data?.replace(
-                    /(<([^>]+)>)/g,
-                    '',
-                  ) && <HelpBox text={content?.ulteriori_informazioni} />}
-                </>
+              ).length > 0 && (
+                <HelpBox text={content?.ulteriori_informazioni} />
+              )}
+
+              {/* RIFERIMENTI NORMATIVI */}
+              {content?.riferimenti_normativi?.data?.replace(/(<([^>]+)>)/g, '')
+                .length > 0 && (
+                <div className="mt-2">
+                  <h5>{intl.formatMessage(messages.riferimenti_normativi)}</h5>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: content.riferimenti_normativi.data,
+                    }}
+                  />
+                </div>
+              )}
+
+              {/* DOCUMENTI ALLEGATI */}
+              {content?.documenti_allegati?.length > 0 && (
+                <div className="mt-5">
+                  <h5>{intl.formatMessage(messages.documenti_allegati)}</h5>
+                  <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                    {content.documenti_allegati.map((item, i) => (
+                      <GenericCard
+                        key={item['@id']}
+                        item={item}
+                        image_field={'immagine'}
+                      />
+                    ))}
+                  </div>
+                </div>
               )}
             </Metadata>
           </section>

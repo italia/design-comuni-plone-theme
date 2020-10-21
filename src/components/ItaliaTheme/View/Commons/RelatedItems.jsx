@@ -64,7 +64,7 @@ const RelatedItems = ({
   let related = [...related_items_content, ...list];
 
   if (related?.length > 0) {
-    related.map(item => {
+    related.map((item) => {
       let itemSection = flattenToAppURL(item['@id']).split('/')[1];
       if (Object.keys(SITE_SECTIONS).indexOf(itemSection) >= 0) {
         if (!sections[itemSection]) {
@@ -143,7 +143,7 @@ const RelatedItems = ({
                     </Row>
                     <Row className="mt-lg-4">
                       {related.map((item, i) => (
-                        <Col md={4} key={item['@id'] + i}>
+                        <Col md={4} key={item['@id'] + i} className="mb-3">
                           <div className="card-wrapper">
                             <GenericCard
                               key={i}
