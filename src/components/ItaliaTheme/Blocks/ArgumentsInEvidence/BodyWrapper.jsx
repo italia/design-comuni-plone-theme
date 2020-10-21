@@ -4,7 +4,7 @@ import cx from 'classnames';
 const BodyWrapper = ({ data, inEditMode, children }) => {
   return (
     <div className={cx('container pt-5', { 'p-5': inEditMode })}>
-      <h2 className="text-white">{data.text}</h2>
+      <h2 className="text-secondary">{data.text}</h2>
       <div className="grid mt-5">{children}</div>
     </div>
   );
