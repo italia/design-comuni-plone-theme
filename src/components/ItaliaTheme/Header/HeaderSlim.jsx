@@ -41,7 +41,7 @@ const HeaderSlim = () => {
           {siteConfig.properties.parentSiteTitle}
         </HeaderBrand>
         <HeaderRightZone>
-          <LanguageSelector />
+          {/*<LanguageSelector />*/}
           {/*<Button
             className="btn-icon"
             color="primary"
