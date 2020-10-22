@@ -542,7 +542,7 @@ const SearchModal = ({ closeModal, show }) => {
                   className="btn-icon btn btn-primary"
                   title={intl.formatMessage(messages.search)}
                 >
-                  <Icon icon="it-search" aria-hidden={true} size="sm" />{' '}
+                  <Icon icon="it-search" aria-hidden={true} size="sm" />
                   {intl.formatMessage(messages.search)}
                 </a>
               </div>
