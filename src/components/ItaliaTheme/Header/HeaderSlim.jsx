@@ -17,6 +17,7 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 
 import { LanguageSelector } from '@italia/components/ItaliaTheme';
+import { siteConfig } from '~/config';
 
 const messages = defineMessages({
   arLogin: {
@@ -31,8 +32,13 @@ const HeaderSlim = () => {
   return (
     <Header small={false} theme="" type="slim">
       <HeaderContent>
-        <HeaderBrand responsive tag={Link} to="/">
-          Nome della Regione
+        <HeaderBrand
+          responsive
+          href={siteConfig.properties.parentSiteURL}
+          target="_blank"
+          rel="noopener noreferer"
+        >
+          {siteConfig.properties.parentSiteTitle}
         </HeaderBrand>
         <HeaderRightZone>
           <LanguageSelector />

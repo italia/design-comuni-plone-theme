@@ -10,6 +10,14 @@ a {
   cursor: pointer;
 }
 
+.public-ui .text-secondary {
+  color: $secondary-text !important;
+}
+
+button.custom-navbar-toggler svg.icon {
+  fill: $secondary-text;
+}
+
 ::selection {
   background-color: default;
 }

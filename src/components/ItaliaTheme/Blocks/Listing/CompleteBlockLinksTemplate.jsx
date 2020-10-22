@@ -36,7 +36,7 @@ const CompleteBlockLinksTemplate = ({
         'public-ui': isEditMode,
       })}
     >
-      <div className='full-width'>
+      <div className="full-width">
         <Container>
           {title && (
             <Row>
@@ -78,10 +78,10 @@ const CompleteBlockLinksTemplate = ({
                       )}
                       <div>
                         <CardBody>
-                          <CardTitle tag="h5" className="text-white">
+                          <CardTitle tag="h5" className="text-secondary">
                             {item.title}
                           </CardTitle>
-                          <CardText tag="p" className="text-white">
+                          <CardText tag="p" className="text-secondary">
                             {item.description}
                           </CardText>
                         </CardBody>

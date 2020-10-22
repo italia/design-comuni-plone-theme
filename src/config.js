@@ -31,6 +31,11 @@ import titleSVG from '@plone/volto/icons/text.svg';
 import ArgomentoTitleView from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/View';
 import ArgomentoTitleEdit from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/Edit';
 
+import TextCardView from '@italia/components/ItaliaTheme/Blocks/TextCard/SimpleCard/View';
+import TextCardEdit from '@italia/components/ItaliaTheme/Blocks/TextCard/SimpleCard/Edit';
+import TextCardWithImageView from '@italia/components/ItaliaTheme/Blocks/TextCard/CardWithImage/View';
+import TextCardWithImageEdit from '@italia/components/ItaliaTheme/Blocks/TextCard/CardWithImage/Edit';
+
 import { CharCounterDescriptionWidget } from '@italia/components/ItaliaTheme';
 import { PageView } from '@italia/components/ItaliaTheme';
 import { NewsItemView } from '@italia/components/ItaliaTheme';
@@ -40,6 +45,9 @@ import { VenueView } from '@italia/components/ItaliaTheme';
 import { ServizioView } from '@italia/components/ItaliaTheme';
 import { EventoView } from '@italia/components/ItaliaTheme';
 import { PaginaArgomentoView } from '@italia/components/ItaliaTheme';
+import { CartellaModulisticaView } from '@italia/components/ItaliaTheme';
+import { DocumentoView } from '@italia/components/ItaliaTheme';
+import { ModuloView } from '@italia/components/ItaliaTheme';
 
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
@@ -58,13 +66,15 @@ import { MultilingualWidget } from '@italia/addons/volto-multilingual-widget';
 import { IconWidget } from '@italia/components/ItaliaTheme';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import * as Icons from '@fortawesome/free-solid-svg-icons';
+import * as IconsRegular from '@fortawesome/free-regular-svg-icons';
 import { defaultIconWidgetOptions } from '@italia/helpers/index';
 
-const iconList = Object.keys(Icons)
-  .filter((key) => key !== 'prefix')
-  .map((icon) => Icons[icon]);
+const iconList = Object.keys(Icons.fas).map((icon) => Icons[icon]);
+const iconListRegular = Object.keys(IconsRegular.far).map(
+  (icon) => IconsRegular[icon],
+);
 
-library.add(...iconList);
+library.add(...iconList, ...iconListRegular);
 
 const rssBlock = {
   ...customRssBlock,
@@ -189,6 +199,37 @@ const customBlocks = {
     },
     sidebarTab: 1,
   },
+  testo_riquadro_semplice: {
+    id: 'testo_riquadro_semplice',
+    title: 'Testo in riquadro semplice',
+    icon: titleSVG,
+    group: 'text',
+    view: TextCardView,
+    edit: TextCardEdit,
+    restricted: false,
+    mostUsed: false,
+    blockHasOwnFocusManagement: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+  },
+  testo_riquadro_immagine: {
+    id: 'testo_riquadro_immagine',
+    title: 'Testo in riquadro immagine',
+    icon: titleSVG,
+    group: 'text',
+    view: TextCardWithImageView,
+    edit: TextCardWithImageEdit,
+    restricted: false,
+    mostUsed: false,
+    blockHasOwnFocusManagement: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
   listing: {
     ...config.blocks.blocksConfig.listing,
     templates: {
@@ -267,10 +308,41 @@ export const views = {
     Servizio: ServizioView,
     Event: EventoView,
     'Pagina Argomento': PaginaArgomentoView,
+    CartellaModulistica: CartellaModulisticaView,
+    Documento: DocumentoView,
+    Modulo: ModuloView,
   },
+};
+
+export const siteConfig = {
   italiaThemeViewsConfig: {
-    imagePosition: 'afterHeader', //values: afterHeader, documentBody
+    imagePosition: 'afterHeader', // possible values: afterHeader, documentBody
   },
+  properties: {
+    siteTitle: 'Nome del Comune',
+    siteSubtitle: "Uno dei tanti Comuni d'Italia",
+    parentSiteTitle: 'Nome della Regione',
+    parentSiteURL: 'https://www.governo.it',
+    footerInfos:
+      'Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000',
+  },
+  socialSettings: [
+    {
+      title: 'Facebook',
+      url: 'https://facebook.com',
+      icon: 'it-facebook',
+    },
+    {
+      title: 'GitHub',
+      url: 'https://github.com',
+      icon: 'it-github',
+    },
+    {
+      title: 'Twitter',
+      url: 'https://twitter.com',
+      icon: 'it-twitter',
+    },
+  ],
 };
 
 export const widgets = {

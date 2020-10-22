@@ -29,11 +29,13 @@ const messages = defineMessages({
  * @params {string} office_field: field where people is related
  * @returns {string} Markup of the component.
  */
-const CuredBy = ({ office, people }) => {
+const CuredBy = ({ office, people, title }) => {
   const intl = useIntl();
   return (
     <article id="a-cura-di" className="it-page-section anchor-offset mt-5">
-      <h4 id="header-a-cura-di">{intl.formatMessage(messages.cured_by)}</h4>
+      <h4 id="header-a-cura-di">
+        {title ?? intl.formatMessage(messages.cured_by)}
+      </h4>
       <div className="row">
         {office && (
           <div className="col-12 col-sm-8">
@@ -45,9 +47,11 @@ const CuredBy = ({ office, people }) => {
         )}
         {people?.length > 0 ? (
           <div className="col-12 col-sm-4">
-            <h5>
-              <small>{intl.formatMessage(messages.cured_by_people)}</small>
-            </h5>
+            {office && (
+              <h5>
+                <small>{intl.formatMessage(messages.cured_by_people)}</small>
+              </h5>
+            )}
             {people.map((item, i) => (
               <Link
                 to={flattenToAppURL(item['@id'])}

@@ -30,6 +30,7 @@ const Gallery = ({
   title,
   title_type = 'h4',
   title_video,
+  className,
 }) => {
   const settings = {
     dots: true,
@@ -72,7 +73,7 @@ const Gallery = ({
 
   const intl = useIntl();
   const url = `${flattenToAppURL(content['@id'])}/${folder_name}`;
-  const searchResults = useSelector(state => state.search.subrequests);
+  const searchResults = useSelector((state) => state.search.subrequests);
   const dispatch = useDispatch();
 
   const hasChildren = contentFolderHasItems(content, folder_name);
@@ -98,14 +99,16 @@ const Gallery = ({
   }, []);
 
   const multimedia = searchResults?.[folder_name]?.items || [];
-  let images = multimedia.filter(item => item['@type'] === 'Image');
-  let videos = multimedia.filter(item => item['@type'] === 'Link');
+  let images = multimedia.filter((item) => item['@type'] === 'Image');
+  let videos = multimedia.filter((item) => item['@type'] === 'Link');
   let gallery_title = title || intl.formatMessage(messages.gallery);
 
   return !hasChildren ? null : (
     <>
       {images?.length > 0 ? (
-        <div className="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
+        <div
+          className={`it-carousel-wrapper it-carousel-landscape-abstract-three-cols ${className}`}
+        >
           <div className="slider-container">
             <div className="it-header-block">
               <div className="it-header-block-title">

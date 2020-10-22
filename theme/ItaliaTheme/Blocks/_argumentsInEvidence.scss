@@ -12,6 +12,10 @@
     background-color: $primary;
   }
 
+  h2 {
+    color: $primary-text;
+  }
+
   .grid {
     display: -ms-grid;
     display: grid;
@@ -21,7 +25,7 @@
   }
 
   .text-white {
-    color: $white
+    color: $white;
   }
 
   .card-body .card-title {
@@ -33,7 +37,7 @@
   }
 
   .delete-button {
-    top: -31px!important;
+    top: -31px !important;
   }
 
   @media (max-width: #{map-get($grid-breakpoints, md) - 1px}) {

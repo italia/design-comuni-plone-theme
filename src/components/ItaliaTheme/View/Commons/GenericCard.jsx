@@ -21,9 +21,10 @@ const GenericCard = ({
   showDescription = true,
   showInfos = false,
   showInfosFor = null,
+  children,
 }) => {
   let item_fo = null;
-  const locationContent = useSelector(state => state.content.subrequests);
+  const locationContent = useSelector((state) => state.content.subrequests);
   const dispatch = useDispatch();
   const key = `generic_card_${item['@id']}`;
   const url = flattenToAppURL(item['@id']);
@@ -80,23 +81,25 @@ const GenericCard = ({
             {show_icon && <Icon icon={show_icon} padding={false} />}
             <Link to={flattenToAppURL(item_fo['@id'])}>{item_fo.title}</Link>
           </h5>
-          {showDescription && (
-            <div className="card-text">{item_fo.description}</div>
+          {(showDescription || children) && (
+            <div className="card-text">
+              {item_fo.description} {children}
+            </div>
           )}
         </div>
       </div>
     ) : (
-      <div
-        className={cx('genericcard card card-teaser shadow p-4 mt-3 rounded')}
-      >
+      <div className="genericcard card card-teaser shadow p-4 mt-3 rounded">
         <div className="card-body">
           {infos}
           <h5 className="card-title">
             {show_icon && <Icon icon={show_icon} padding={false} />}
             <Link to={flattenToAppURL(item_fo['@id'])}>{item_fo.title}</Link>
           </h5>
-          {showDescription && (
-            <div className="card-text">{item_fo.description}</div>
+          {(showDescription || children) && (
+            <div className="card-text">
+              {item_fo.description} {children}
+            </div>
           )}
         </div>
       </div>

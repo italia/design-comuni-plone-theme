@@ -1,0 +1,256 @@
+/**
+ * DocumentoView view component.
+ * @module components/theme/View/DocumentoView
+ */
+
+import React, { useState, createRef, useEffect } from 'react';
+import PropTypes from 'prop-types';
+import { defineMessages, useIntl } from 'react-intl';
+import Modules from '@italia/components/ItaliaTheme/View/DocumentoView/Modules';
+
+import {
+  Gallery,
+  CuredBy,
+  ContentImage,
+  SideMenu,
+  HelpBox,
+  PageHeader,
+  RichTextArticle,
+  Metadata,
+  OfficeCard,
+  GenericCard,
+  RelatedItems,
+  DocumentoPlaceholderAfterContent,
+} from '@italia/components/ItaliaTheme/View';
+
+const messages = defineMessages({
+  descrizione: {
+    id: 'documento_descrizione',
+    defaultMessage: 'Descrizione',
+  },
+  ufficio_responsabile: {
+    id: 'documento_ufficio_responsabile',
+    defaultMessage: 'Ufficio responsabile',
+  },
+  autori: {
+    id: 'documento_autori',
+    defaultMessage: 'Autori',
+  },
+  licenza_distribuzione: {
+    id: 'documento_licenza_distribuzione',
+    defaultMessage: 'Licenza di distribuzione',
+  },
+  accedere_al_servizio: {
+    id: 'documento_accedere_al_servizio',
+    defaultMessage: 'Accedere al servizio',
+  },
+  riferimenti_normativi: {
+    id: 'documento_riferimenti_normativi',
+    defaultMessage: 'Riferimenti normativi',
+  },
+  documenti_allegati: {
+    id: 'documento_documenti_allegati',
+    defaultMessage: 'Documenti allegati',
+  },
+  ulteriori_informazioni: {
+    id: 'ulteriori_informazioni',
+    defaultMessage: "Box d'aiuto",
+  },
+});
+
+/**
+ * DocumentoView view component class.
+ * @function DocumentoView
+ * @params {object} content Content object.
+ * @returns {string} Markup of the component.
+ */
+const DocumentoView = ({ content, location }) => {
+  const intl = useIntl();
+  let documentBody = createRef();
+  const [sideMenuElements, setSideMenuElements] = useState(null);
+
+  useEffect(() => {
+    if (documentBody.current) {
+      if (__CLIENT__) {
+        setSideMenuElements(documentBody.current);
+      }
+    }
+  }, [documentBody]);
+
+  return (
+    <>
+      <div className="container px-4 my-4 newsitem-view">
+        <PageHeader
+          content={content}
+          readingtime={null}
+          showtopics={true}
+          showtassonomiaargomenti={true}
+        />
+
+        {/* HEADER IMAGE */}
+        <ContentImage content={content} position="afterHeader" />
+
+        <div className="row border-top row-column-border row-column-menu-left">
+          <aside className="col-lg-4">
+            {__CLIENT__ && <SideMenu data={sideMenuElements} />}
+          </aside>
+          <section
+            ref={documentBody}
+            className="col-lg-8 it-page-sections-container"
+          >
+            {/* HEADER IMAGE */}
+            <ContentImage content={content} position="documentBody" />
+
+            {/* DESCRIZIONE*/}
+            <RichTextArticle
+              tag_id={'text-body'}
+              title={intl.formatMessage(messages.descrizione)}
+              show_title={false}
+              content={content.descrizione_estesa?.data}
+            >
+              <Modules content={content} />
+
+              {(content.ufficio_responsabile?.length > 0 ||
+                content.area_responsabile.length > 0) && (
+                <RichTextArticle
+                  title={intl.formatMessage(messages.ufficio_responsabile)}
+                >
+                  <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                    {content.ufficio_responsabile?.length > 0 && (
+                      <>
+                        {content.ufficio_responsabile.map((item, i) => (
+                          <OfficeCard key={item['@id']} office={item} />
+                        ))}
+                      </>
+                    )}
+                    {content.area_responsabile?.length > 0 && (
+                      <>
+                        {content.area_responsabile.map((item, i) => (
+                          <OfficeCard key={item['@id']} office={item} />
+                        ))}
+                      </>
+                    )}
+                  </div>
+
+                  <Gallery
+                    content={content}
+                    folder_name={'multimedia'}
+                    className="mt-5"
+                  />
+                </RichTextArticle>
+              )}
+
+              {content.autori?.length > 0 && (
+                <CuredBy
+                  people={content.autori}
+                  title={intl.formatMessage(messages.autori)}
+                />
+              )}
+              {content.licenza_distribuzione?.length > 0 && (
+                <div className="mt-5">
+                  <h4>{intl.formatMessage(messages.licenza_distribuzione)}</h4>
+                  <p>{content.licenza_distribuzione}</p>
+                </div>
+              )}
+            </RichTextArticle>
+
+            {/* ACCEDERE AL SERVIZIO */}
+            {content?.servizi_collegati?.length > 0 && (
+              <RichTextArticle
+                tag_id={'accedere-al-servizio'}
+                title={intl.formatMessage(messages.accedere_al_servizio)}
+              >
+                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                  {content.servizi_collegati?.map((servizio, i) => (
+                    <GenericCard
+                      key={servizio['@id']}
+                      item={servizio}
+                      showimage={false}
+                      image_field={'immagine'}
+                    >
+                      {servizio.canale_digitale?.data?.replace(
+                        /(<([^>]+)>)/g,
+                        '',
+                      ).length > 0 && (
+                        <div
+                          className="mt-3"
+                          dangerouslySetInnerHTML={{
+                            __html: servizio.canale_digitale.data,
+                          }}
+                        />
+                      )}
+                    </GenericCard>
+                  ))}
+                </div>
+              </RichTextArticle>
+            )}
+
+            {/* ULTERIORI INFORMAZIONI */}
+            <Metadata content={content}>
+              {content?.ulteriori_informazioni?.data?.replace(
+                /(<([^>]+)>)/g,
+                '',
+              ).length > 0 && (
+                <HelpBox text={content?.ulteriori_informazioni} />
+              )}
+
+              {/* RIFERIMENTI NORMATIVI */}
+              {content?.riferimenti_normativi?.data?.replace(/(<([^>]+)>)/g, '')
+                .length > 0 && (
+                <div className="mt-2">
+                  <h5>{intl.formatMessage(messages.riferimenti_normativi)}</h5>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: content.riferimenti_normativi.data,
+                    }}
+                  />
+                </div>
+              )}
+
+              {/* DOCUMENTI ALLEGATI */}
+              {content?.documenti_allegati?.length > 0 && (
+                <div className="mt-5">
+                  <h5>{intl.formatMessage(messages.documenti_allegati)}</h5>
+                  <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                    {content.documenti_allegati.map((item, i) => (
+                      <GenericCard
+                        key={item['@id']}
+                        item={item}
+                        image_field={'immagine'}
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
+            </Metadata>
+          </section>
+        </div>
+      </div>
+      <DocumentoPlaceholderAfterContent content={content} />
+      <RelatedItems content={content} />
+    </>
+  );
+};
+/**
+ * Property types.
+ * @property {Object} propTypes Property types.
+ * @static
+ */
+DocumentoView.propTypes = {
+  content: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    image: PropTypes.object,
+    image_caption: PropTypes.string,
+    items: PropTypes.array,
+    modified: PropTypes.string,
+    tassonomia_argomenti: PropTypes.arrayOf(
+      PropTypes.shape({
+        title: PropTypes.string,
+        token: PropTypes.string,
+      }),
+    ),
+  }).isRequired,
+};
+
+export default DocumentoView;
