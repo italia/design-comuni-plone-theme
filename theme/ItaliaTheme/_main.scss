@@ -21,3 +21,19 @@ button.custom-navbar-toggler svg.icon {
 ::selection {
   background-color: default;
 }
+
+.public-ui a.btn.btn-primary {
+  color: $primary-text;
+
+  svg {
+    fill: $primary-text;
+  }
+}
+
+.public-ui a.btn.btn-secondary {
+  color: $secondary-text;
+
+  svg {
+    fill: $secondary-text;
+  }
+}

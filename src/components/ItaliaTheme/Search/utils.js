@@ -48,7 +48,7 @@ const parseFetchedSections = (sections, location) => {
 };
 
 const parseFetchedTopics = (topics, location) => {
-  const qsTopics = qs.parse(location?.search ?? '')?.Subject ?? [];
+  const qsTopics = qs.parse(location?.search ?? '')?.argomenti ?? [];
 
   return topics.reduce((acc, topic) => {
     acc[topic.path] = {
@@ -145,13 +145,22 @@ const getSearchParamsURL = (
     optionsQuery['effective.query:list:date'] = options.dateEnd;
   }
 
+  let pathQuery = null;
+  if (activeSections.length > 0) {
+    pathQuery = { 'path.query': activeSections };
+  } else if (customPath?.length > 0) {
+    pathQuery = { 'path.query': customPath };
+  }
+
+  let text = searchableText ? { SearchableText: searchableText } : null;
+
   return (
     '/search?' +
     qs.stringify(
       {
-        SearchableText: searchableText,
-        'path.query': activeSections.length > 0 ? activeSections : customPath,
-        Subject: activeTopics,
+        ...(text ?? {}),
+        ...(pathQuery ?? {}),
+        argomenti: activeTopics,
         ...optionsQuery,
         ...sortOn,
       },
