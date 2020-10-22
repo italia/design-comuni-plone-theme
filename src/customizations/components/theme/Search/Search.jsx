@@ -213,7 +213,7 @@ const Search = () => {
   useEffect(() => {
     if (!searchFilters || Object.keys(searchFilters).length === 0)
       dispatch(getSearchFilters());
-  }, [dispatch]);
+  }, []);
 
   useEffect(() => {
     if (Object.keys(searchFilters?.sections ?? {}).length > 0) {
