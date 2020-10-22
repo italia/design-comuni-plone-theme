@@ -530,6 +530,22 @@ const SearchModal = ({ closeModal, show }) => {
                   <span className="chip-label">...</span>
                 </button>
               </div>
+              <div className="search-filters">
+                <a
+                  href={getSearchParamsURL(
+                    searchableText,
+                    sections,
+                    topics,
+                    options,
+                  )}
+                  onClick={submitSearch}
+                  className="btn-icon btn btn-primary"
+                  title={intl.formatMessage(messages.search)}
+                >
+                  <Icon icon="it-search" aria-hidden={true} size="sm" />{' '}
+                  {intl.formatMessage(messages.search)}
+                </a>
+              </div>
             </>
           )}
           {advancedSearch && (
