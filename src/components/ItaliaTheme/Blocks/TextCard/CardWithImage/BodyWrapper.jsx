@@ -4,7 +4,7 @@ import cx from 'classnames';
 const BodyWrapper = ({ data, inEditMode, children }) => {
   return (
     <div
-      className={cx('image-text-block', {
+      className={cx('block image-text-block', {
         'public-ui': inEditMode,
       })}
     >

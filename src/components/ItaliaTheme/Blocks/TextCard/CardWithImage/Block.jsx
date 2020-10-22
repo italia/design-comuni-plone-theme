@@ -51,7 +51,7 @@ const Block = ({ data, block, inEditMode, onChange }) => {
   const content = data?.image_card_content;
   return (
     <div className="image-text-card-wrapper">
-      <h3 className="title">
+      <h3 className="title mt-5">
         {inEditMode ? (
           <TextEditorWidget
             data={data}
