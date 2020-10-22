@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-10-21T14:27:44.984Z\n"
+"POT-Creation-Date: 2020-10-22T07:49:05.577Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -299,18 +299,24 @@ msgid "Titolo"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
+#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
+#: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 # defaultMessage: Digita la descrizione…
 msgid "Type description…"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
+#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
+#: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 #: components/ItaliaTheme/manage/Widgets/TextEditorWidget
 # defaultMessage: Digita il testo…
 msgid "Type text…"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
+#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
+#: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 # defaultMessage: Type the title…
 msgid "Type the title…"
 msgstr ""
@@ -490,6 +496,16 @@ msgstr ""
 msgid "canale_digitale"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
+# defaultMessage: Seleziona l'immagine da mostrare
+msgid "cardImage"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
+# defaultMessage: Mostra l'immagine
+msgid "cardImageEnable"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 # defaultMessage: Casi particolari
@@ -659,6 +675,7 @@ msgid "date_e_orari"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
 # defaultMessage: Default
 msgid "default"
 msgstr ""

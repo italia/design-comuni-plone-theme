@@ -257,16 +257,22 @@ msgid "Titolo"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
+#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
+#: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type description…"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
+#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
+#: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 #: components/ItaliaTheme/manage/Widgets/TextEditorWidget
 msgid "Type text…"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
+#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
+#: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type the title…"
 msgstr ""
 
@@ -416,6 +422,14 @@ msgstr ""
 msgid "canale_digitale"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
+msgid "cardImage"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
+msgid "cardImageEnable"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "casi_particolari"
@@ -557,6 +571,7 @@ msgid "date_e_orari"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
 msgid "default"
 msgstr ""
 
