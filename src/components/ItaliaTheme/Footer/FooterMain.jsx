@@ -9,7 +9,7 @@ import {
   Container,
   Row,
   Col,
-  Icon,
+  LogoFooter,
 } from 'design-react-kit/dist/design-react-kit';
 
 import { FooterNavigation, FooterInfos } from '@italia/components/ItaliaTheme/';
@@ -29,7 +29,7 @@ const FooterMain = () => {
             <Col sm={12} tag="div" widths={['xs', 'sm', 'md', 'lg', 'xl']}>
               <div className="it-brand-wrapper">
                 <Link to="/">
-                  <Icon color="" icon="it-pa" padding={false} size="" />
+                  <LogoFooter />
                   <div className="it-brand-text">
                     <h2 className="no_toc">
                       {siteConfig.properties.siteTitle}

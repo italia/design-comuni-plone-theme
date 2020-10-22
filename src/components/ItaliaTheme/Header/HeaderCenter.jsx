@@ -14,7 +14,7 @@ import {
   Icon,
 } from 'design-react-kit/dist/design-react-kit';
 
-import { SearchModal } from '@italia/components/ItaliaTheme';
+import { SearchModal, Logo } from '@italia/components/ItaliaTheme';
 import { siteConfig } from '~/config';
 
 const messages = defineMessages({
@@ -37,7 +37,7 @@ const HeaderCenter = () => {
       <HeaderContent>
         <div className="it-brand-wrapper">
           <Link to="/">
-            <Icon color="" icon="it-pa" padding={false} size="" />
+            <Logo />
             <div className="it-brand-text">
               <h2 className="no_toc">{siteConfig.properties.siteTitle}</h2>
               <h3 className="no_toc d-none d-md-block">
