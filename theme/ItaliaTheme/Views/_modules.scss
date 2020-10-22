@@ -1,0 +1,12 @@
+.modules.card-wrapper {
+  .modulo {
+    .download-formats {
+      display: flex;
+      flex-wrap: wrap;
+
+      a {
+        margin-right: 0.6em;
+      }
+    }
+  }
+}

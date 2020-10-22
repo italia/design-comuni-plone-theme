@@ -5,16 +5,9 @@
 
 import React, { useEffect } from 'react';
 import PaginaArgomentoViewNoBlocks from './PaginaArgomentoViewNoBlocks';
-import {
-  getBlocksFieldname,
-  getBlocksLayoutFieldname,
-  hasBlocksData,
-  getBaseUrl,
-} from '@plone/volto/helpers';
-import { map } from 'lodash';
-import { blocks } from '~/config';
-import { defineMessages, useIntl } from 'react-intl';
-import { useLocation, Link } from 'react-router-dom';
+import { hasBlocksData } from '@plone/volto/helpers';
+
+import { Link } from 'react-router-dom';
 import {
   Card,
   CardBody,
@@ -29,6 +22,7 @@ import { BodyClass } from '@plone/volto/helpers';
 import {
   ArgumentIcon,
   PaginaArgomentoPlaceholderAfterContent,
+  TextOrBlocks,
 } from '@italia/components/ItaliaTheme/View';
 
 /**
@@ -37,13 +31,6 @@ import {
  * @params {object} content Content object.
  * @returns {string} Markup of the component.
  */
-
-const messages = defineMessages({
-  unknownBlock: {
-    id: 'Unknown Block',
-    defaultMessage: 'Unknown Block {block}',
-  },
-});
 
 const PaginaArgomentoView = ({ content }) => {
   const searchResults = useSelector((state) => state.content?.subrequests);
@@ -61,10 +48,6 @@ const PaginaArgomentoView = ({ content }) => {
     };
   }, [dispatch, content]);
 
-  const blocksFieldname = getBlocksFieldname(content);
-  const blocksLayoutFieldname = getBlocksLayoutFieldname(content);
-  const intl = useIntl();
-  const location = useLocation();
   return hasBlocksData(content) ? (
     <div id="page-document" className="ui container">
       <div className="ArgomentoTitleWrapper mb-5">
@@ -142,28 +125,7 @@ const PaginaArgomentoView = ({ content }) => {
         </div>
       </div>
 
-      {/* Render other blocks in view, skip title and description */}
-      {map(content[blocksLayoutFieldname]?.items, (block) => {
-        const blockType = content[blocksFieldname]?.[block]?.['@type'];
-        if (['title', 'description'].indexOf(blockType) > -1) return null;
-
-        const Block = blocks.blocksConfig[blockType]?.['view'] || null;
-        return Block !== null ? (
-          <Block
-            key={block}
-            id={block}
-            properties={content}
-            data={content[blocksFieldname][block]}
-            path={getBaseUrl(location?.pathname || '')}
-          />
-        ) : (
-          <div key={block}>
-            {intl.formatMessage(messages.unknownBlock, {
-              block: content[blocksFieldname]?.[block]?.['@type'],
-            })}
-          </div>
-        );
-      })}
+      <TextOrBlocks content={content} />
 
       <PaginaArgomentoPlaceholderAfterContent content={content} />
     </div>

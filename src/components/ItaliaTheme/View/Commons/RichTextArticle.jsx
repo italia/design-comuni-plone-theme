@@ -38,10 +38,10 @@ const RichTextArticle = ({
           {title}
         </h4>
       )}
-      {content && (
+      {content_to_display && (
         <div
           className={cx('text-serif', add_class)}
-          dangerouslySetInnerHTML={{ __html: content }}
+          dangerouslySetInnerHTML={{ __html: content_to_display }}
         />
       )}
       {children}
