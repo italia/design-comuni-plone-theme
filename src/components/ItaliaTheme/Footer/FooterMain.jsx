@@ -5,14 +5,13 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {
-  Container,
-  Row,
-  Col,
-  LogoFooter,
-} from 'design-react-kit/dist/design-react-kit';
+import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 
-import { FooterNavigation, FooterInfos } from '@italia/components/ItaliaTheme/';
+import {
+  FooterNavigation,
+  FooterInfos,
+  LogoFooter,
+} from '@italia/components/ItaliaTheme/';
 import { siteConfig } from '~/config';
 
 /**
