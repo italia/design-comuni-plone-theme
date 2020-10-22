@@ -60,3 +60,4 @@ export IconWidget from '@italia/components/ItaliaTheme/manage/Widgets/IconWidget
 export getItemIcon from '@italia/components/ItaliaTheme/common';
 
 export Logo from '@italia/components/ItaliaTheme/Logo/Logo';
+export LogoFooter from '@italia/components/ItaliaTheme/LogoFooter/LogoFooter';
