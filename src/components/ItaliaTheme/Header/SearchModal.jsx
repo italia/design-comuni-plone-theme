@@ -530,7 +530,7 @@ const SearchModal = ({ closeModal, show }) => {
                   <span className="chip-label">...</span>
                 </button>
               </div>
-              <div className="search-filters">
+              <div className="search-filters text-center">
                 <a
                   href={getSearchParamsURL(
                     searchableText,
@@ -543,7 +543,9 @@ const SearchModal = ({ closeModal, show }) => {
                   title={intl.formatMessage(messages.search)}
                 >
                   <Icon icon="it-search" aria-hidden={true} size="sm" />
-                  {intl.formatMessage(messages.search)}
+                  <span className="ml-2">
+                    {intl.formatMessage(messages.search)}
+                  </span>
                 </a>
               </div>
             </>
