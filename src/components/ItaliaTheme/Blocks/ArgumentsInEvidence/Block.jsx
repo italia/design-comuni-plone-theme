@@ -89,7 +89,7 @@ const Block = ({
               iconName="it-arrow-right"
               tag="a"
               text={intl.formatMessage(messages.exploreArgument)}
-              href={argument['@id']}
+              href={flattenToAppURL(argument['@id'])}
             />
           )}
         </CardBody>

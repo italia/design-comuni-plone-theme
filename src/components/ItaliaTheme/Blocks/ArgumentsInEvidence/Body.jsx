@@ -9,10 +9,6 @@ const messages = defineMessages({
     id: 'Title placeholder',
     defaultMessage: 'Title...',
   },
-  exploreArgument: {
-    id: 'exploreArgument',
-    defaultMessage: 'Esplora argomento',
-  },
 })
 
 class Body extends SubblockEdit {
