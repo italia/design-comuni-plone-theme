@@ -5,6 +5,7 @@ import { Row, Icon, Button } from 'design-react-kit/dist/design-react-kit';
 import { useIntl } from 'react-intl';
 import moment from 'moment';
 import { useHistory } from 'react-router-dom';
+import { flattenToAppURL } from '@plone/volto/helpers';
 
 const navigate = (text, serivices) => {
   window.location.href =
@@ -23,7 +24,7 @@ const Body = ({ block, sections }) => {
   };
 
   const handleClick = link => {
-    history.push(link['@id']);
+    history.push(flattenToAppURL(link['@id']));
   };
 
   const intl = useIntl();

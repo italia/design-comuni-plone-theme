@@ -43,27 +43,16 @@ const Block = ({
   const searchResults = useSelector((state) => state.content?.subrequests);
   const dispatch = useDispatch();
 
-  // one request is made for every 'unita_amministrativa_responsabile' selected
-  useEffect(() => {
-    argument &&
-      dispatch(
-        getContent(flattenToAppURL(argument['@id']), null, argument['@id']),
-      );
-    return () => {
-      argument && dispatch(resetContent(argument['@id']));
-    };
-  }, [dispatch, argument]);
-
   return (
     <Card className="card-bg" noWrapper={true} tag="div">
       {argument ? (
         <CardBody tag="div">
-          <ArgumentIcon icon={searchResults[argument['@id']]?.data?.icona} />
+          <ArgumentIcon icon={argument?.icona} />
           <CardTitle tag="h3">
-            {searchResults[argument['@id']]?.data?.title}
+            {argument?.title}
           </CardTitle>
           <CardText tag="p">
-            {searchResults[argument['@id']]?.data?.description}
+            {argument?.description}
           </CardText>
           {inEditMode ? (
             <TextEditorWidget

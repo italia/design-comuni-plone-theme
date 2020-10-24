@@ -65,7 +65,7 @@ const Body = ({ content, pathname, block }) => {
                 tag={Link}
                 iconName="it-arrow-right"
                 text={block.moreTitle || 'Vedi tutte le notizie'}
-                to={block.moreHref}
+                to={flattenToAppURL(block.moreHref)}
               />
             )}
           </CardBody>
