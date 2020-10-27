@@ -30,20 +30,23 @@ const Header = ({ pathname }) => {
   // }, []);
 
   return (
-    <div className="public-ui">
-      {/* <div
+    <>
+      <div className="public-ui">
+        {/* <div
         className="sticky-placeholder"
         style={{ paddingTop: mini ? '50px' : '120px' }}
       /> */}
-      {/* <Headers sticky={true} className={mini ? 'is-sticky' : undefined}> */}
-      <Headers>
-        <HeaderSlim />
-        <div className="it-nav-wrapper">
-          <HeaderCenter />
-          <Navigation pathname={pathname} />
-        </div>
-      </Headers>
-    </div>
+        {/* <Headers sticky={true} className={mini ? 'is-sticky' : undefined}> */}
+        <Headers>
+          <HeaderSlim />
+          <div className="it-nav-wrapper">
+            <HeaderCenter />
+            <Navigation pathname={pathname} />
+          </div>
+        </Headers>
+      </div>
+      <div id="portal-header-image"></div>
+    </>
   );
 };
 
