@@ -4,6 +4,8 @@
  */
 
 import React from 'react';
+import { useSelector } from 'react-redux';
+
 import { Link } from 'react-router-dom';
 import { defineMessages, useIntl } from 'react-intl';
 // import { BITIcon, it_user } from '@italia/components/ItaliaTheme/Icons';
@@ -15,8 +17,12 @@ import {
   HeaderRightZone,
   Icon,
 } from 'design-react-kit/dist/design-react-kit';
+import { addAppURL } from '@plone/volto/helpers';
 
-import { LanguageSelector } from '@italia/components/ItaliaTheme';
+import {
+  ParentSiteMenu,
+  LanguageSelector,
+} from '@italia/components/ItaliaTheme';
 import { siteConfig } from '~/config';
 
 const messages = defineMessages({
@@ -29,18 +35,29 @@ const messages = defineMessages({
 const HeaderSlim = () => {
   const intl = useIntl();
 
+  const subsite = useSelector(
+    (state) => state.content?.subrequests?.subsite?.data,
+  );
+
+  const parentSiteURL = subsite
+    ? addAppURL('')
+    : siteConfig.properties.parentSiteURL;
+  const parentSiteTile = subsite
+    ? siteConfig.properties.subsiteParentSiteTitle
+    : siteConfig.properties.parentSiteTitle;
   return (
     <Header small={false} theme="" type="slim">
       <HeaderContent>
         <HeaderBrand
           responsive
-          href={siteConfig.properties.parentSiteURL}
+          href={parentSiteURL}
           target="_blank"
           rel="noopener noreferer"
         >
-          {siteConfig.properties.parentSiteTitle}
+          {parentSiteTile}
         </HeaderBrand>
         <HeaderRightZone>
+          <ParentSiteMenu />
           {/*<LanguageSelector />*/}
           {/*<Button
             className="btn-icon"

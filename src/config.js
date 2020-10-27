@@ -270,6 +270,7 @@ const customBlocks = {
 
 export const settings = {
   ...config.settings,
+  devProxyToApiPath: 'http://localhost:9080/Plone',
   richTextEditorInlineToolbarButtons: [
     AlignCenterButton,
     Separator,
@@ -323,6 +324,7 @@ export const siteConfig = {
     siteSubtitle: "Uno dei tanti Comuni d'Italia",
     parentSiteTitle: 'Nome della Regione',
     parentSiteURL: 'https://www.governo.it',
+    subsiteParentSiteTitle: 'Nome del sito padre del sottosito',
     footerInfos:
       'Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000',
   },

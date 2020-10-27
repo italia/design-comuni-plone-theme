@@ -26,6 +26,8 @@ export LanguageSelector from '@italia/components/ItaliaTheme/LanguageSelector/La
 
 export HeaderSlim from '@italia/components/ItaliaTheme/Header/HeaderSlim';
 export HeaderCenter from '@italia/components/ItaliaTheme/Header/HeaderCenter';
+export SocialHeader from '@italia/components/ItaliaTheme/Header/SocialHeader';
+export ParentSiteMenu from '@italia/components/ItaliaTheme/Header/ParentSiteMenu';
 export SearchModal from '@italia/components/ItaliaTheme/Header/SearchModal';
 export SearchSections from '@italia/components/ItaliaTheme/Search/SearchSections';
 export SearchTopics from '@italia/components/ItaliaTheme/Search/SearchTopics';
