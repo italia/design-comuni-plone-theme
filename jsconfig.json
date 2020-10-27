@@ -18,6 +18,9 @@
             ],
             "@italia/addons/volto-dropdownmenu": [
                 "addons/volto-dropdownmenu/src"
+            ],
+            "volto-subsites": [
+                "addons/volto-subsites"
             ]
         },
         "baseUrl": "src"
