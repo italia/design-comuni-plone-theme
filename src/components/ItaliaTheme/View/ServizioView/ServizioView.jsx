@@ -147,7 +147,7 @@ const ServizioView = ({ content }) => {
       }
     }
   }, [documentBody]);
-
+  console.log(content);
   return (
     <>
       <div className="container px-4 my-4 servizio-view">
