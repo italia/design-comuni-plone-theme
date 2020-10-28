@@ -48,3 +48,6 @@
 @import 'ItaliaTheme/Widgets/iconWidget';
 @import 'ItaliaTheme/Components/megamenu';
 @import 'ItaliaTheme/Components/logo';
+
+@import 'ItaliaTheme/Subsites/mixin';
+@include define-subsite('yellow', #fcab02, black);

@@ -1,0 +1,14 @@
+@mixin define-subsite(
+  $subsite-style,
+  $subsite-primary: $primary,
+  $subsite-primary-text: $primary-text,
+  $subsite-secondary: $secondary,
+  $subsite-secondary-text: $secondary-text
+) {
+  body.subsite-#{$subsite-style} {
+    @import 'bootstrap-italia/custom/header';
+    @import 'bootstrap-italia/custom/headercenter';
+    @import 'bootstrap-italia/brand-text';
+    @import 'bootstrap-italia/custom/headernavbar';
+  }
+}
