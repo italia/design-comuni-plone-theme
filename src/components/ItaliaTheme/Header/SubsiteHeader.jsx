@@ -17,7 +17,7 @@ const SubsiteHeader = () => {
   const isSubsiteHomepage = subsite
     ? location.pathname === subsite['@id']
     : false;
-  return subsite ? (
+  return subsite && isSubsiteHomepage ? (
     <div
       className="subsite-header"
       style={{
@@ -26,27 +26,15 @@ const SubsiteHeader = () => {
         )})`,
       }}
     >
-      <div
-        className={`text ${!isSubsiteHomepage ? 'subsite-internal-page' : ''}`}
-      >
+      <div className={`text`}>
         <div className="container px-md-4">
-          {isSubsiteHomepage ? (
-            <>
-              {/* subsite homepage */}
-              {subsite.subsite_header?.data && (
-                <div
-                  className="text-serif"
-                  dangerouslySetInnerHTML={{
-                    __html: flattenHTMLToAppURL(subsite.subsite_header.data),
-                  }}
-                />
-              )}
-            </>
-          ) : (
-            <>
-              {/* internal subsite page */}
-              <h2>{subsite.title}</h2>
-            </>
+          {subsite.subsite_header?.data && (
+            <div
+              className="text-serif"
+              dangerouslySetInnerHTML={{
+                __html: flattenHTMLToAppURL(subsite.subsite_header.data),
+              }}
+            />
           )}
         </div>
       </div>
