@@ -41,6 +41,7 @@ export FooterMain from '@italia/components/ItaliaTheme/Footer/FooterMain';
 export FooterInfos from '@italia/components/ItaliaTheme/Footer/FooterInfos';
 export FooterNavigation from '@italia/components/ItaliaTheme/Footer/FooterNavigation';
 export FooterSmall from '@italia/components/ItaliaTheme/Footer/FooterSmall';
+export SubsiteFooter from '@italia/components/ItaliaTheme/Footer/SubsiteFooter';
 export Pagination from '@italia/components/ItaliaTheme/Pagination/Pagination';
 
 export SectionIcon from '@italia/components/ItaliaTheme/Icons/SectionIcon';
