@@ -5,12 +5,12 @@ import { map } from 'lodash';
 import { useLocation } from 'react-router-dom';
 import { defineMessages, useIntl } from 'react-intl';
 import {
-  flattenHTMLToAppURL,
   hasBlocksData,
   getBlocksFieldname,
   getBlocksLayoutFieldname,
   getBaseUrl,
 } from '@plone/volto/helpers';
+import { RichText } from '@italia/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   unknownBlock: {
@@ -60,11 +60,7 @@ const TextOrBlocks = ({ content, exclude = ['title', 'description'] }) => {
             }
           })
         : content.text?.data && (
-            <div
-              dangerouslySetInnerHTML={{
-                __html: flattenHTMLToAppURL(content.text.data),
-              }}
-            />
+            <RichText serif={false} content={content.text.data} />
           )}
     </>
   );

@@ -149,7 +149,7 @@ const EventoView = ({ content, location }) => {
           <h5 className="mt-4 supported-by">
             {intl.formatMessage(messages.supported_by)}
           </h5>
-          {content?.supportato_da?.map(item => (
+          {content?.supportato_da?.map((item) => (
             <OfficeCard
               key={item['@id']}
               office={item}
@@ -272,7 +272,10 @@ const EventoView = ({ content, location }) => {
             >
               <Dates content={content} />
 
-              <RichText title={intl.formatMessage(messages.orari)} content={content?.orari?.data} />
+              <RichText
+                title={intl.formatMessage(messages.orari)}
+                content={content?.orari?.data}
+              />
             </RichTextArticle>
 
             {/* COSTI */}
@@ -413,7 +416,7 @@ const EventoView = ({ content, location }) => {
                 content?.event_url ||
                 content?.patrocinato_da ||
                 content?.strutture_politiche.length > 0 ||
-                content?.items?.some(e => e.id === 'sponsor_evento')) && (
+                content?.items?.some((e) => e.id === 'sponsor_evento')) && (
                 <>
                   {content?.ulteriori_informazioni?.data?.replace(
                     /(<([^>]+)>)/g,
@@ -436,7 +439,7 @@ const EventoView = ({ content, location }) => {
                     </div>
                   )}
 
-                  {content?.items?.some(e => e.id === 'sponsor_evento') && (
+                  {content?.items?.some((e) => e.id === 'sponsor_evento') && (
                     <div className="mt-4">
                       <Sponsors
                         content={content}

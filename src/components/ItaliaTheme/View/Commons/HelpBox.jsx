@@ -5,6 +5,7 @@ import {
   Callout,
   CalloutTitle,
 } from 'design-react-kit/dist/design-react-kit';
+import { RichText } from '@italia/components/ItaliaTheme/View';
 
 const HelpBox = ({ text }) => {
   return text ? (
@@ -22,12 +23,7 @@ const HelpBox = ({ text }) => {
       </CalloutTitle>
 
       <p>
-        <div
-          className="text-serif"
-          dangerouslySetInnerHTML={{
-            __html: text?.data,
-          }}
-        />
+        <RichText content={text?.data} />
       </p>
     </Callout>
   ) : null;

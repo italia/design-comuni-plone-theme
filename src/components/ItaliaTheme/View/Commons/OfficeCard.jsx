@@ -1,11 +1,13 @@
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
-import { getContent, resetContent } from '@plone/volto/actions';
 import { Link } from 'react-router-dom';
 import { Icon } from 'design-react-kit/dist/design-react-kit';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+
+import { getContent, resetContent } from '@plone/volto/actions';
+import { flattenToAppURL } from '@plone/volto/helpers';
+import { RichText } from '@italia/components/ItaliaTheme/View';
 
 /**
  * OfficeCard view component class.
@@ -22,7 +24,7 @@ const OfficeCard = ({
 }) => {
   const key = `${office['@id']}_office`;
   const url = flattenToAppURL(office['@id']);
-  const officeContent = useSelector(state => state.content.subrequests);
+  const officeContent = useSelector((state) => state.content.subrequests);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -54,13 +56,15 @@ const OfficeCard = ({
                 {office_fo.zip_code} {office_fo.city}
               </p>
             )}
+
             {extended ? (
-              <div
-                className="card-text"
-                dangerouslySetInnerHTML={{
-                  __html: office_fo.contact_info?.data,
-                }}
-              />
+              <>
+                <RichText
+                  serif={false}
+                  add_class="card-text"
+                  content={office_fo.contact_info?.data}
+                />
+              </>
             ) : null}
           </div>
         )}

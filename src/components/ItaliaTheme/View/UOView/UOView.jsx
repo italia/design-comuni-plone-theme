@@ -21,6 +21,7 @@ import {
   SideMenu,
   ContentImage,
   UOPlaceholderAfterContent,
+  RichText,
 } from '@italia/components/ItaliaTheme/View';
 
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
@@ -156,12 +157,7 @@ const UOView = ({ content }) => {
                 </h4>
                 <div className="mb-5 mt-3">
                   <h5>{intl.formatMessage(messages.competenze)}</h5>
-                  <div
-                    className="text-serif"
-                    dangerouslySetInnerHTML={{
-                      __html: content.competenze.data,
-                    }}
-                  />
+                  <RichText content={content.competenze.data} />
                 </div>
               </article>
             )}
@@ -331,24 +327,14 @@ const UOView = ({ content }) => {
 
                 {content.contact_info?.data.replace(/(<([^>]+)>)/g, '') && (
                   <div className="mb-5 mt-3">
-                    <div
-                      className="text-serif"
-                      dangerouslySetInnerHTML={{
-                        __html: content.contact_info.data,
-                      }}
-                    />
+                    <RichText content={content.contact_info.data} />
                   </div>
                 )}
 
                 {content.orario_pubblico?.data.replace(/(<([^>]+)>)/g, '') && (
                   <div className="mb-5 mt-3">
                     <h5>{intl.formatMessage(messages.orario_pubblico)}</h5>
-                    <div
-                      className="text-serif"
-                      dangerouslySetInnerHTML={{
-                        __html: content.orario_pubblico.data,
-                      }}
-                    />
+                    <RichText content={content.orario_pubblico.data} />
                   </div>
                 )}
 

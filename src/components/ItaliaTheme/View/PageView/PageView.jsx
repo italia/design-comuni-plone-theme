@@ -11,9 +11,9 @@ import {
   RelatedItems,
   PagePlaceholderAfterContent,
   TextOrBlocks,
+  RichText,
 } from '@italia/components/ItaliaTheme/View';
 import { defineMessages, useIntl } from 'react-intl';
-import { useLocation } from 'react-router-dom';
 import { Container } from 'design-react-kit/dist/design-react-kit';
 
 /**
@@ -53,11 +53,7 @@ const PageView = ({ content }) => {
             <div className="col-lg-4 offset-lg-2">
               {content.info_testata?.data?.replace(/<[^>]+>/g, '') && (
                 <div className="header-infos px-4 mb-5">
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: content?.info_testata.data,
-                    }}
-                  />
+                  <RichText serif={false} content={content.info_testata.data} />
                 </div>
               )}
               {content.mostra_navigazione && (
