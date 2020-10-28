@@ -4,12 +4,15 @@
  */
 
 import React from 'react';
-
+import { isMatch } from 'lodash';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useIntl, defineMessages } from 'react-intl';
-import { isMatch } from 'lodash';
+
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Nav, NavItem, NavLink } from 'design-react-kit/dist/design-react-kit';
+
+import { SubsiteMenuSecondary } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   menu_selected: {

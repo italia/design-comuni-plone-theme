@@ -14,7 +14,11 @@ import {
   /* SearchWidget,*/
 } from '@plone/volto/components';
 
-import { HeaderSlim, HeaderCenter } from '@italia/components/ItaliaTheme';
+import {
+  HeaderSlim,
+  HeaderCenter,
+  SubsiteHeader,
+} from '@italia/components/ItaliaTheme';
 import { Headers } from 'design-react-kit/dist/design-react-kit';
 
 const Header = ({ pathname }) => {
@@ -44,6 +48,7 @@ const Header = ({ pathname }) => {
             <Navigation pathname={pathname} />
           </div>
         </Headers>
+        <SubsiteHeader />
       </div>
       <div id="portal-header-image"></div>
     </>

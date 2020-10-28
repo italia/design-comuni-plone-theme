@@ -9,7 +9,6 @@ import {
   Icon,
   HeaderSocialsZone,
 } from 'design-react-kit/dist/design-react-kit';
-import { useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
 
 const messages = defineMessages({
@@ -21,10 +20,8 @@ const messages = defineMessages({
 
 const SocialHeader = () => {
   const intl = useIntl();
-  const subsite = useSelector(
-    (state) => state.content?.subrequests?.subsite?.data,
-  );
-  return !subsite ? (
+
+  return (
     <HeaderSocialsZone label={intl.formatMessage(messages.followUs)}>
       <ul>
         {siteConfig.socialSettings?.map((social, idx) => (
@@ -41,7 +38,7 @@ const SocialHeader = () => {
         ))}
       </ul>
     </HeaderSocialsZone>
-  ) : null;
+  );
 };
 
 export default SocialHeader;

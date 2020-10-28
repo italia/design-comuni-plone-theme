@@ -17,12 +17,18 @@ import {
   Nav,
   Icon,
 } from 'design-react-kit/dist/design-react-kit';
-import { MegaMenu, MenuSecondary } from '@italia/components/ItaliaTheme';
+import {
+  MegaMenu,
+  MenuSecondary,
+  SubsiteMenuSecondary,
+} from '@italia/components/ItaliaTheme';
 
 const Navigation = ({ pathname }) => {
   const [collapseOpen, setCollapseOpen] = useState(false);
-
   const dispatch = useDispatch();
+  const subsite = useSelector(
+    (state) => state.content?.subrequests?.subsite?.data,
+  );
 
   const items = useSelector((state) => state.dropdownMenuNavItems?.result);
   useEffect(() => {
@@ -99,7 +105,11 @@ const Navigation = ({ pathname }) => {
                   ))}
               </Nav>
 
-              <MenuSecondary pathname={pathname} />
+              {!subsite ? (
+                <MenuSecondary pathname={pathname} />
+              ) : (
+                <SubsiteMenuSecondary />
+              )}
             </div>
           </Collapse>
         </HeaderContent>
