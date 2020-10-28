@@ -1,0 +1,33 @@
+.bando-view {
+  .bando_state {
+    width: 300px;
+    border-left: 5px solid;
+    text-transform: uppercase;
+    &.open {
+      border-left: 5px solid #00cf86;
+      svg {
+        padding-right: 10px;
+        fill: #00cf86;
+      }
+    }
+    &.closed {
+      border-left: 5px solid #7d8b9b;
+      svg {
+        padding-right: 10px;
+        fill: #7d8b9b;
+      }
+    }
+    &.inProgress {
+      border-left: 5px solid #0066cc;
+      svg {
+        padding-right: 10px;
+        fill: #0066cc;
+      }
+    }
+  }
+  #ufficio_responsabile {
+    div.card-teaser {
+      border-left: 5px solid #00388312;
+    }
+  }
+}

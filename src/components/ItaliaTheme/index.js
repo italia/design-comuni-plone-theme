@@ -53,6 +53,7 @@ export PaginaArgomentoView from '@italia/components/ItaliaTheme/View/PaginaArgom
 export CartellaModulisticaView from '@italia/components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView';
 export DocumentoView from '@italia/components/ItaliaTheme/View/DocumentoView/DocumentoView';
 export ModuloView from '@italia/components/ItaliaTheme/View/ModuloView/ModuloView';
+export BandoView from '@italia/components/ItaliaTheme/View/BandoView/BandoView';
 
 export LinkToWidget from '@italia/components/ItaliaTheme/manage/Widgets/LinkToWidget';
 export IconWidget from '@italia/components/ItaliaTheme/manage/Widgets/IconWidget';

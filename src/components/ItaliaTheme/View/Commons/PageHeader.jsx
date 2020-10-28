@@ -1,13 +1,18 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import moment from 'moment/min/moment-with-locales';
-import { Sharing, Actions } from '@italia/components/ItaliaTheme/View';
+import {
+  Sharing,
+  Actions,
+  GenericCard,
+} from '@italia/components/ItaliaTheme/View';
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
 import { rrulestr } from 'rrule';
 import { rrulei18n } from '@plone/volto/components/manage/Widgets/RecurrenceWidget/Utils';
+import { Icon, CardCategory } from 'design-react-kit/dist/design-react-kit';
 
 /**
  * PageHeader view component class.
@@ -56,6 +61,18 @@ const messages = defineMessages({
   numero_progressivo_cs: {
     id: 'numero_progressivo_cs',
     defaultMessage: 'Numero del comunicato stampa',
+  },
+  open: {
+    id: 'open',
+    defaultMessage: 'attivo',
+  },
+  closed: {
+    id: 'closed',
+    defaultMessage: 'scaduto',
+  },
+  inProgress: {
+    id: 'inProgress',
+    defaultMessage: 'in corso',
   },
 });
 
@@ -110,6 +127,40 @@ const PageHeader = (props) => {
 
         {props.content.description && (
           <p className="documentDescription">{props.content.description}</p>
+        )}
+        {props.content['@type'] === 'Bando' &&
+        props.content?.review_state === 'published' &&
+        props.content?.bando_state ? (
+          <>
+            <div
+              className={cx(
+                'genericcard card card-teaser shadow p-3 mt-3 rounded bando_state',
+                props.content.bando_state[0],
+              )}
+            >
+              <div className="card-body">
+                <div className="card-text">
+                  <Icon
+                    className={undefined}
+                    color=""
+                    icon={
+                      {
+                        open: 'it-check-circle',
+                        closed: 'it-error',
+                        inProgress: 'it-info-circle',
+                      }[props.content.bando_state[0]]
+                    }
+                    padding={false}
+                    size=""
+                  />
+                  Bando{' '}
+                  {intl.formatMessage(messages[props.content.bando_state[0]])}
+                </div>
+              </div>
+            </div>
+          </>
+        ) : (
+          ''
         )}
         {props.content['@type'] === 'Persona' &&
         props.content?.tipologia_persona &&

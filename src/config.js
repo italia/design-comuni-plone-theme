@@ -48,6 +48,7 @@ import { PaginaArgomentoView } from '@italia/components/ItaliaTheme';
 import { CartellaModulisticaView } from '@italia/components/ItaliaTheme';
 import { DocumentoView } from '@italia/components/ItaliaTheme';
 import { ModuloView } from '@italia/components/ItaliaTheme';
+import { BandoView } from '@italia/components/ItaliaTheme';
 
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
@@ -311,6 +312,7 @@ export const views = {
     CartellaModulistica: CartellaModulisticaView,
     Documento: DocumentoView,
     Modulo: ModuloView,
+    Bando: BandoView,
   },
 };
 

@@ -194,11 +194,11 @@ const PersonaView = ({ content }) => {
                   <>
                     {content?.organizzazione_riferimento?.length > 0 && (
                       <div className="mb-5 mt-3">
-                        <h5>
+                        <h4>
                           {intl.formatMessage(
                             messages.organizzazione_riferimento,
                           )}
-                        </h5>
+                        </h4>
                         <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                           {content?.organizzazione_riferimento?.map(
                             (item, i) => (
