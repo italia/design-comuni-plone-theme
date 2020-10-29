@@ -91,7 +91,10 @@ const BandiInEvidenceTemplate = ({
               >
                 <CardBody>
                   <CardTitle tag="h4" className="title">
-                    {item.title || item.id}
+                    <a href={!isEditMode ? flattenToAppURL(item['@id']) : '#'}>
+                      {' '}
+                      {item.title || item.id}
+                    </a>
                   </CardTitle>
 
                   <>

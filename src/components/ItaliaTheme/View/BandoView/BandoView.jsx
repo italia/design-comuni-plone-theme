@@ -72,7 +72,7 @@ const messages = defineMessages({
   },
   allegati: {
     id: 'allegati',
-    defaultMessage: 'Allegati',
+    defaultMessage: 'Documenti allegati',
   },
 });
 
@@ -230,7 +230,7 @@ const BandoView = ({ content, location }) => {
                 {/* Se ho una sola cartella lascio solo "allegati" altrimenti
                 aggiungo gli altri titoli */}
                 {content?.approfondimento?.length == 1 ? (
-                  <>
+                  <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                     {content.approfondimento[0].children.map((item, _i) => (
                       <div
                         className={
@@ -241,17 +241,65 @@ const BandoView = ({ content, location }) => {
                           <div className="card-text">
                             <Icon
                               className={undefined}
-                              icon="it-clip"
+                              icon={
+                                item.type === 'File'
+                                  ? 'it-clip'
+                                  : 'it-external-link'
+                              }
                               padding={false}
                             />
-                            {item.title}
+                            <a href={flattenToAppURL(item.url)}>{item.title}</a>
                           </div>
                         </div>
                       </div>
                     ))}
-                  </>
+                  </div>
                 ) : (
-                  ''
+                  <>
+                    {content.approfondimento.map((item, _i) => (
+                      <>
+                        <h5>{item.title}</h5>
+                        <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                          {content.approfondimento[_i].children.map(
+                            (inner_item, _x) => (
+                              <div
+                                className={
+                                  'genericcard card card-teaser shadow p-3 mt-3 rounded'
+                                }
+                              >
+                                <div className="card-body">
+                                  <div className="card-text">
+                                    <p>{item.Type}</p>
+                                    <Icon
+                                      className={undefined}
+                                      icon={
+                                        inner_item.type === 'File'
+                                          ? 'it-clip'
+                                          : 'it-external-link'
+                                      }
+                                      padding={false}
+                                    />
+                                    {inner_item.type === 'File' ? (
+                                      <a href={flattenToAppURL(inner_item.url)}>
+                                        {inner_item.title}
+                                      </a>
+                                    ) : (
+                                      <a
+                                        target="_blank"
+                                        href={flattenToAppURL(inner_item.url)}
+                                      >
+                                        {inner_item.title}
+                                      </a>
+                                    )}
+                                  </div>
+                                </div>
+                              </div>
+                            ),
+                          )}
+                        </div>
+                      </>
+                    ))}
+                  </>
                 )}
               </RichTextArticle>
             )}

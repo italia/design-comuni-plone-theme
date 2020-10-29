@@ -1,4 +1,19 @@
 .bando-view {
+  #allegati {
+    .card-text {
+      a {
+        font-size: 18px;
+        color: #3f4142;
+        border-bottom: none;
+        text-decoration: none;
+      }
+    }
+  }
+  #text-body {
+    h5 {
+      margin-top: 20px;
+    }
+  }
   .bando_state {
     width: 300px;
     border-left: 5px solid;
