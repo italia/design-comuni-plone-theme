@@ -27,6 +27,9 @@ import SearchSectionsEdit from '@italia/components/ItaliaTheme/Blocks/SearchSect
 import ArgumentsInEvidenceEdit from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Edit';
 import ArgumentsInEvidenceView from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/View';
 
+import DeadlinesCalendarView from '@italia/components/ItaliaTheme/Blocks/DeadlinesCalendar/View';
+import DeadlinesCalendarEdit from '@italia/components/ItaliaTheme/Blocks/DeadlinesCalendar/Edit';
+
 import titleSVG from '@plone/volto/icons/text.svg';
 import ArgomentoTitleView from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/View';
 import ArgomentoTitleEdit from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/Edit';
@@ -142,6 +145,22 @@ const customBlocks = {
     group: 'homePage',
     view: SearchSectionsView,
     edit: SearchSectionsEdit,
+    restricted: false,
+    mostUsed: false,
+    blockHasOwnFocusManagement: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
+  deadlinesCalendar: {
+    id: 'deadlinesCalendar',
+    title: 'Calendario scadenze',
+    icon: noteSvg,
+    group: 'homePage',
+    view: DeadlinesCalendarView,
+    edit: DeadlinesCalendarEdit,
     restricted: false,
     mostUsed: false,
     blockHasOwnFocusManagement: true,
