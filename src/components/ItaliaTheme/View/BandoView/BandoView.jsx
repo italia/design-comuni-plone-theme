@@ -94,7 +94,6 @@ const BandoView = ({ content, location }) => {
       }
     }
   }, [documentBody]);
-
   return (
     <>
       <div className="container px-4 my-4 bando-view">
@@ -228,7 +227,7 @@ const BandoView = ({ content, location }) => {
                 tag_id="allegati"
                 title={intl.formatMessage(messages.allegati)}
               >
-                {/* Se ho una sola cartella lascio solo "allegati" altrimenti 
+                {/* Se ho una sola cartella lascio solo "allegati" altrimenti
                 aggiungo gli altri titoli */}
                 {content?.approfondimento?.length == 1 ? (
                   <>

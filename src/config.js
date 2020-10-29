@@ -58,6 +58,7 @@ import InEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/In
 import SimpleCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplate';
 import GridGalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate';
 import RibbonCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate';
+import BandiInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate';
 
 import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
 import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
@@ -263,6 +264,10 @@ const customBlocks = {
       ribbonCardTemplate: {
         label: 'Card con nastro',
         template: RibbonCardTemplate,
+      },
+      bandiInEvidenceTemplate: {
+        label: 'Bandi',
+        template: BandiInEvidenceTemplate,
       },
     },
   },
