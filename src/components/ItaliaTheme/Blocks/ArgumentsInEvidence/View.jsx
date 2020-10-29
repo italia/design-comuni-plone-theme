@@ -1,19 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import BodyWrapper from './BodyWrapper'
-import BottomBody from './BottomBody'
-import Block from './Block'
+import BodyWrapper from './BodyWrapper';
+import BottomBody from './BottomBody';
+import Block from './Block';
+import Background from './Background';
 import { useIntl } from 'react-intl';
-  
+
 const View = ({ data, id }) => {
-  const currentIntl =  useIntl();
+  const currentIntl = useIntl();
   return (
     <div className="block full-width">
-      <div className='argumentInEvidence'>
-        <BodyWrapper
-          data={data}
-          inEditMode={false}
-        >
+      <div className="argumentInEvidence">
+        <Background />
+        <BodyWrapper data={data} inEditMode={false}>
           {data.subblocks.map((subblock, index) => (
             <Block
               key={index}
@@ -23,14 +22,12 @@ const View = ({ data, id }) => {
             />
           ))}
         </BodyWrapper>
-        <BottomBody 
-          data={data}
-          intl={currentIntl}
-        />
+        <BottomBody data={data} intl={currentIntl} />
       </div>
     </div>
   );
-}
+};
+
 /**
  * Property types.
  * @property {Object} propTypes Property types.
