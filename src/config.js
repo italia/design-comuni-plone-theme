@@ -374,6 +374,7 @@ const customBlocksOrder = [
 ];
 const customInitialBlocks = {
   'Pagina Argomento': ['title', 'description', 'text'],
+  'Bando Folder Deepening': ['title', 'description', 'listing'],
 };
 const customRequiredBlocks = ['description'];
 

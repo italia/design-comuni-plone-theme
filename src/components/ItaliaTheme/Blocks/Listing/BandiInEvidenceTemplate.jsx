@@ -120,19 +120,23 @@ const BandiInEvidenceTemplate = ({
                         <div className="bando-dati-label mr-4">
                           {intl.formatMessage(messages.stato)}
                         </div>
-                        <span className="bando-dati-date">
-                          <div
-                            className={cx('bando-state', {
-                              open: item.bando_state?.includes('open'),
-                              closed: item.bando_state?.includes('closed'),
-                              'in-progress': item.bando_state?.includes(
-                                'inProgress',
-                              ),
-                            })}
-                          >
-                            {intl.formatMessage(messages[item.bando_state[0]])}
-                          </div>
-                        </span>
+                        {item?.bando_state && (
+                          <span className="bando-dati-date">
+                            <div
+                              className={cx('bando-state', {
+                                open: item.bando_state?.includes('open'),
+                                closed: item.bando_state?.includes('closed'),
+                                'in-progress': item.bando_state?.includes(
+                                  'inProgress',
+                                ),
+                              })}
+                            >
+                              {intl.formatMessage(
+                                messages[item.bando_state[0]],
+                              )}
+                            </div>
+                          </span>
+                        )}
                       </span>
                     </div>
                     <div className="read-more">
