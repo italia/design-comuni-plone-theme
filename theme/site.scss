@@ -50,4 +50,12 @@
 @import 'ItaliaTheme/Components/logo';
 
 @import 'ItaliaTheme/Subsites/mixin';
-@include define-subsite('yellow', #fcab02, black);
+@include define-subsite('yellow', #fcab02, black, green, white, #b77d04);
+@include define-subsite(
+  'light-blue',
+  #048693,
+  white,
+  $secondary,
+  $secondary-text,
+  #048693
+);

@@ -23,9 +23,9 @@ const ParentSiteMenu = () => {
 
   let menu = null;
   if (subsite) {
-    const subsiteUrl = flattenToAppURL(subsite['@id']);
+    const subsiteUrl = flattenToAppURL(subsite?.['@id'] ?? '');
     const url_split = subsiteUrl.split('/');
-    let parentMenuPath = '/';
+
     let i = url_split.length - 1;
     while (i > 0) {
       let s = url_split.slice(0, i).join('/');

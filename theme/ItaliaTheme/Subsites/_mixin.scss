@@ -3,12 +3,27 @@
   $subsite-primary: $primary,
   $subsite-primary-text: $primary-text,
   $subsite-secondary: $secondary,
-  $subsite-secondary-text: $secondary-text
+  $subsite-secondary-text: $secondary-text,
+  $subsite-link-color: $link-color
 ) {
   body.subsite-#{$subsite-style} {
     @import 'bootstrap-italia/custom/header';
     @import 'bootstrap-italia/custom/headercenter';
     @import 'bootstrap-italia/brand-text';
     @import 'bootstrap-italia/custom/headernavbar';
+    @import 'bootstrap-italia/custom/navigation';
+    @import 'bootstrap-italia/custom/megamenu';
+    @import 'bootstrap-italia/custom/header';
+    @import 'bootstrap-italia/custom/buttons';
+    @import 'ItaliaTheme/Components/subsiteFooter';
+    @import 'homepage';
+
+    a {
+      color: $subsite-link-color;
+
+      &:hover {
+        color: color-hover($subsite-link-color);
+      }
+    }
   }
 }

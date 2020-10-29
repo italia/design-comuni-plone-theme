@@ -22,12 +22,6 @@
 
               a {
                 &.rounded-icon {
-                  background: $subsite-primary-text;
-
-                  &:hover {
-                    background: darken($subsite-primary-text, 5%);
-                  }
-
                   svg {
                     fill: $subsite-primary;
                   }

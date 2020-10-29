@@ -14,6 +14,7 @@ import {
   Icon,
 } from 'design-react-kit/dist/design-react-kit';
 
+import { flattenToAppURL } from '@plone/volto/helpers';
 import {
   SearchModal,
   Logo,
@@ -41,7 +42,7 @@ const HeaderCenter = () => {
     <Header small={false} theme="" type="center">
       <HeaderContent>
         <div className="it-brand-wrapper">
-          <Link to="/">
+          <Link to={subsite?.['@id'] ? flattenToAppURL(subsite['@id']) : '/'}>
             <Logo />
             <div className="it-brand-text">
               <h2 className="no_toc">
