@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import BodyWrapper from './BodyWrapper';
 import BottomBody from './BottomBody';
 import Block from './Block';
-import Background from './Background';
+import { ArgumentsInEvidenceBackground } from '@italia/components/ItaliaTheme';
 import { useIntl } from 'react-intl';
 
 const View = ({ data, id }) => {
@@ -11,7 +11,7 @@ const View = ({ data, id }) => {
   return (
     <div className="block full-width">
       <div className="argumentInEvidence">
-        <Background />
+        <ArgumentsInEvidenceBackground />
         <BodyWrapper data={data} inEditMode={false}>
           {data.subblocks.map((subblock, index) => (
             <Block
