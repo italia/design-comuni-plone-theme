@@ -15,7 +15,9 @@
     @import 'bootstrap-italia/custom/megamenu';
     @import 'bootstrap-italia/custom/header';
     @import 'bootstrap-italia/custom/buttons';
+    @import 'bootstrap-italia/custom/chips';
     @import 'ItaliaTheme/Components/subsiteFooter';
+    @import 'ItaliaTheme/Blocks/cardWithImageAndInEvidence';
     @import 'homepage';
 
     a {
@@ -24,6 +26,10 @@
       &:hover {
         color: color-hover($subsite-link-color);
       }
+    }
+
+    .icon-primary {
+      fill: $subsite-primary !important;
     }
   }
 }

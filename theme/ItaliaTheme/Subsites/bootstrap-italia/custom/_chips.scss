@@ -1,0 +1,38 @@
+//mobile
+.chip {
+  &.chip-primary {
+    border-color: $subsite-primary;
+    color: $subsite-primary;
+
+    & > .chip-label {
+      color: $subsite-primary;
+    }
+
+    &:hover {
+      background-color: $subsite-primary;
+      border-color: $subsite-primary;
+
+      & > .chip-label {
+        color: $subsite-primary-text;
+      }
+    }
+  }
+
+  &.chip-secondary {
+    border-color: $subsite-secondary;
+    color: $subsite-primary;
+
+    & > .chip-label {
+      color: $subsite-secondary;
+    }
+
+    &:hover {
+      background-color: $subsite-secondary;
+      border-color: $subsite-secondary;
+
+      & > .chip-label {
+        color: $subsite-secondary-text;
+      }
+    }
+  }
+}
