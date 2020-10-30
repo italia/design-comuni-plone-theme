@@ -1,6 +1,6 @@
 import { settings } from '~/config';
 
-export const GET_SCADENZIARIO_RESULTS = 'GET_SCADENZIARIO_RESULTS';
+export const GET_CALENDAR_RESULTS = 'GET_CALENDAR_RESULTS';
 
 /**
  * Get querystring results.
@@ -8,10 +8,10 @@ export const GET_SCADENZIARIO_RESULTS = 'GET_SCADENZIARIO_RESULTS';
  * @param {Object} data Data.
  * @returns {Object} Get querystringsearch results action.
  */
-export function getScadenziarioResults(path, data, subrequest, page) {
+export function getCalendarResults(path, data, subrequest, page) {
   // fixes https://github.com/plone/volto/issues/1059
   return {
-    type: GET_SCADENZIARIO_RESULTS,
+    type: GET_CALENDAR_RESULTS,
     subrequest,
     request: {
       op: 'post',

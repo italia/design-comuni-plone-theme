@@ -1,4 +1,4 @@
-.deadlines-calendar{
+.calendar{
 	margin: 3rem 0;
 
 	.full-width {
@@ -9,7 +9,7 @@
 		margin: 0;
 	}
 
-	.deadlines-header{
+	.calendar-header{
 		padding: 0.35rem;
 		background: $primary;
 		h3{
@@ -28,10 +28,10 @@
 		}
 	}
 
-	.deadlines-body{
+	.calendar-body{
 		height: 368px;
 		padding: 0rem 1rem;
-		.deadline-body{
+		.body{
 			height: 368px;
 			padding: 1rem 1rem 1rem 1rem;
 			overflow-y: scroll;
@@ -39,7 +39,7 @@
 				flex: 1;
 			}
 		}
-		.deadline-body:not(:last-child){
+		.body:not(:last-child){
 			box-shadow: 12px 0 9px -6px #8888884a;
 		}
 
@@ -62,7 +62,7 @@
 		font-weight: 400;
 	}
 
-	.deadline-type{
+	.calendar-type{
 		font-weight: 600;
     text-transform: uppercase;
     font-size: 0.8rem;

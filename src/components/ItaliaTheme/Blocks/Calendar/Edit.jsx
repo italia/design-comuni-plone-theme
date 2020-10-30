@@ -8,7 +8,7 @@ import ListingSidebar from './ListingSidebar';
 const Edit = ({ data, block, onChangeBlock, selected, pathname }) => {
 
   return (
-    <div className="deadlines-calendar public-ui">
+    <div className="calendar public-ui">
       <Body data={data} path={getBaseUrl(pathname)} inEditMode={true}/>
       <SidebarPortal selected={selected}>
         <ListingSidebar

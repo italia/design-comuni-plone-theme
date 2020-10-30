@@ -1,6 +1,6 @@
 import { settings } from '~/config';
 
-export const GET_SCADENZIARIO_DAY_RESULTS = 'GET_SCADENZIARIO_DAY_RESULTS';
+export const GET_CALENDAR_DAY_RESULTS = 'GET_CALENDAR_DAY_RESULTS';
 
 /**
  * Get querystring results.
@@ -8,9 +8,9 @@ export const GET_SCADENZIARIO_DAY_RESULTS = 'GET_SCADENZIARIO_DAY_RESULTS';
  * @param {Object} data Data.
  * @returns {Object} Get querystringsearch results action.
  */
-export function getScadenziarioDayResults(path, data, subrequest, page) {
+export function getCalendarDayResults(path, data, subrequest, page) {
   return {
-    type: GET_SCADENZIARIO_DAY_RESULTS,
+    type: GET_CALENDAR_DAY_RESULTS,
     subrequest,
     request: {
       op: 'post',

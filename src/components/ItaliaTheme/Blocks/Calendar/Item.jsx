@@ -3,13 +3,13 @@ import moment from 'moment';
 import 'moment/min/locales';
 import { useDispatch, useSelector } from 'react-redux';
 import { Spinner } from 'design-react-kit/dist/design-react-kit';
-import { getScadenziarioDayResults } from '@italia/actions'
+import { getCalendarDayResults } from '@italia/actions'
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { useIntl } from 'react-intl';
 import cx from 'classnames';
 
-const Deadline = ({ day, path, data, inEdit }) => {
+const Item = ({ day, path, data, inEdit }) => {
 	const intl = useIntl();
 	moment.locale(intl.locale);
 
@@ -27,7 +27,7 @@ const Deadline = ({ day, path, data, inEdit }) => {
 			v: [moment(day).startOf('day').format("YYYY/MM/DD HH:mm"), moment(day).endOf('day').format("YYYY/MM/DD HH:mm")]
 		})
 		dispatch(
-			getScadenziarioDayResults(path, { ...newData, fullobjects: 1 }, day),
+			getCalendarDayResults(path, { ...newData, fullobjects: 1 }, day),
 		);
 	}, []);
 
@@ -51,7 +51,7 @@ const Deadline = ({ day, path, data, inEdit }) => {
 								<div>
 									{item?.type}
 								</div>
-								<Link className="deadline-type" to={flattenToAppURL(item['@id'] || '')}>
+								<Link className="calendar-type" to={flattenToAppURL(item['@id'] || '')}>
 									{item.title}
 								</Link>
 							</div>
@@ -68,4 +68,4 @@ const Deadline = ({ day, path, data, inEdit }) => {
 		</div>
   )
 }
-export default Deadline;
+export default Item;

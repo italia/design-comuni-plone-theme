@@ -1,8 +1,7 @@
-import { map, omit } from 'lodash';
-import { settings } from '~/config';
-import { GET_SCADENZIARIO_RESULTS } from '@italia/actions'
+import { omit } from 'lodash';
+import { GET_CALENDAR_RESULTS } from '@italia/actions'
 
-const RESET_SCADENZIARIO_RESULTS = 'RESET_SCADENZIARIO_RESULTS';
+const RESET_CALENDAR_RESULTS = 'RESET_CALENDAR_RESULTS';
 
 const initialState = {
   error: null,
@@ -21,9 +20,9 @@ const initialState = {
  * @param {Object} action Action to be handled.
  * @returns {Object} New state.
  */
-export function scadenziarioSearchReducer(state = initialState, action = {}) {
+export function calendarSearchReducer(state = initialState, action = {}) {
   switch (action.type) {
-    case `${GET_SCADENZIARIO_RESULTS}_PENDING`:
+    case `${GET_CALENDAR_RESULTS}_PENDING`:
       return action.subrequest
         ? {
             ...state,
@@ -47,7 +46,7 @@ export function scadenziarioSearchReducer(state = initialState, action = {}) {
             loading: true,
             loaded: false,
           };
-    case `${GET_SCADENZIARIO_RESULTS}_SUCCESS`:
+    case `${GET_CALENDAR_RESULTS}_SUCCESS`:
       return action.subrequest
         ? {
             ...state,
@@ -72,7 +71,7 @@ export function scadenziarioSearchReducer(state = initialState, action = {}) {
             loading: false,
             batching: { ...action.result.batching },
           };
-    case `${GET_SCADENZIARIO_RESULTS}_FAIL`:
+    case `${GET_CALENDAR_RESULTS}_FAIL`:
       return action.subrequest
         ? {
             ...state,
@@ -97,7 +96,7 @@ export function scadenziarioSearchReducer(state = initialState, action = {}) {
             loaded: false,
             batching: {},
           };
-    case RESET_SCADENZIARIO_RESULTS:
+    case RESET_CALENDAR_RESULTS:
       return action.subrequest
         ? {
             ...state,

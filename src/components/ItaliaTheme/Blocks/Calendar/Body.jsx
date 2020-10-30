@@ -3,9 +3,9 @@ import { Card, Row, Col, Container} from 'design-react-kit/dist/design-react-kit
 import 'moment/min/locales';
 import Slider from 'react-slick';
 import cx from 'classnames';
-import { getScadenziarioResults } from '@italia/actions';
+import { getCalendarResults } from '@italia/actions';
 import { useDispatch, useSelector } from 'react-redux';
-import Deadline from './Deadline'
+import Item from './Item'
 import moment from 'moment';
 import { useIntl } from 'react-intl';
 import 'moment/min/locales';
@@ -15,9 +15,9 @@ const Body = ({ data, inEditMode, path }) => {
   moment.locale(intl.locale);
 
   const [activePage, setActivePage] = useState(0);
-  
+
   const querystringResults = useSelector(
-    (state) => state.scadenziarioSearch,
+    (state) => state.calendarSearch,
   );
 
   const dispatch = useDispatch();
@@ -25,7 +25,7 @@ const Body = ({ data, inEditMode, path }) => {
   React.useEffect(() => {
     if (data?.query?.length > 0) {
       dispatch(
-        getScadenziarioResults(path, { ...data, fullobjects: 1 }, data.block, '@scadenziario'),
+        getCalendarResults(path, { ...data, fullobjects: 1 }, data.block, '@scadenziario'),
       );
     }
     /* eslint-disable react-hooks/exhaustive-deps */
@@ -73,17 +73,15 @@ const Body = ({ data, inEditMode, path }) => {
     const startIndex = activePage * (data.b_size || 4);
 
     const months = querystringResults?.items?.slice(startIndex, (data.b_size || 4)).reduce((total, date) => {
-      const month = moment(date).format('MMMM')
+      const month = moment(date).format('MMMM');
       if(!total.includes(month)) {
         total.push(month);
       }
       return total;
     },[]);
 
-    return months.map(m=> m.charAt(0).toUpperCase() + m.slice(1)).join(' / ');
+    return months?.map(m=> m.charAt(0).toUpperCase() + m.slice(1)).join(' / ');
   }
-
-  console.log(inEditMode)
 
   return (
     <div className={cx("full-width", {'bg-light py-5': data.show_block_bg, "public-ui": inEditMode })}>
@@ -96,23 +94,23 @@ const Body = ({ data, inEditMode, path }) => {
           </Row>
         )}
         <Card className={cx("card-bg")}>
-          <div className="text-center deadlines-header">
+          <div className="text-center calendar-header">
             <h3>{getMonth()}</h3>
           </div>
-          <div className="deadlines-body">
+          <div className="calendar-body">
             {!inEditMode ? 
             <Slider {...settings}>
               {querystringResults?.items?.map((day, index) => (
-                <div key={index} className="deadline-body">
-                  <Deadline day={day} data={data} path={path}/>
+                <div key={index} className="body">
+                  <Item day={day} data={data} path={path}/>
                 </div>
               ))}
             </Slider>
             :
             <div className="d-flex">
               {querystringResults?.items?.slice(0, data.b_size)?.map((day, index) => (
-                <div key={index} className="deadline-body flex-1">
-                  <Deadline day={day} data={data} path={path} inEdit={inEditMode}/>
+                <div key={index} className="body flex-1">
+                  <Item day={day} data={data} path={path} inEdit={inEditMode}/>
                 </div>
               ))}
             </div>

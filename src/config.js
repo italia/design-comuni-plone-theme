@@ -17,6 +17,7 @@ import searchIcon from 'bootstrap-italia/src/svg/it-search.svg';
 import NewsHomeView from '@italia/components/ItaliaTheme/Blocks/NewsHome/View';
 import NewsHomeEdit from '@italia/components/ItaliaTheme/Blocks/NewsHome/Edit';
 import noteSvg from 'bootstrap-italia/src/svg/it-note.svg';
+import calendarSvg from 'bootstrap-italia/src/svg/it-calendar.svg'
 
 import alertSVG from '@plone/volto/icons/alert.svg';
 import AlertView from '@italia/components/ItaliaTheme/Blocks/Alert/View';
@@ -27,8 +28,8 @@ import SearchSectionsEdit from '@italia/components/ItaliaTheme/Blocks/SearchSect
 import ArgumentsInEvidenceEdit from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Edit';
 import ArgumentsInEvidenceView from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/View';
 
-import DeadlinesCalendarView from '@italia/components/ItaliaTheme/Blocks/DeadlinesCalendar/View';
-import DeadlinesCalendarEdit from '@italia/components/ItaliaTheme/Blocks/DeadlinesCalendar/Edit';
+import CalendarView from '@italia/components/ItaliaTheme/Blocks/Calendar/View';
+import CalendarEdit from '@italia/components/ItaliaTheme/Blocks/Calendar/Edit';
 
 import titleSVG from '@plone/volto/icons/text.svg';
 import ArgomentoTitleView from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/View';
@@ -154,13 +155,13 @@ const customBlocks = {
     },
     sidebarTab: 1,
   },
-  deadlinesCalendar: {
-    id: 'deadlinesCalendar',
-    title: 'Calendario scadenze',
-    icon: noteSvg,
+  calendar: {
+    id: 'calendar',
+    title: 'Calendario',
+    icon: calendarSvg,
     group: 'homePage',
-    view: DeadlinesCalendarView,
-    edit: DeadlinesCalendarEdit,
+    view: CalendarView,
+    edit: CalendarEdit,
     restricted: false,
     mostUsed: false,
     blockHasOwnFocusManagement: true,

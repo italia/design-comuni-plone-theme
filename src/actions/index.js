@@ -13,16 +13,16 @@
 
 import { getSearchFilters, GET_SEARCH_FILTERS } from './getSearchFilters';
 import { getSearchResults, GET_SEARCH_RESULTS } from './getSearchResults';
-import { getScadenziarioResults, GET_SCADENZIARIO_RESULTS } from './scadenziariosearch';
-import { getScadenziarioDayResults, GET_SCADENZIARIO_DAY_RESULTS } from './scadenziarioDaySearch'
+import { getCalendarResults, GET_CALENDAR_RESULTS } from './calendarSearch';
+import { getCalendarDayResults, GET_CALENDAR_DAY_RESULTS } from './canlendarDaySearch'
 
 export {
   getSearchFilters,
   GET_SEARCH_FILTERS,
   getSearchResults,
   GET_SEARCH_RESULTS,
-  getScadenziarioResults,
-  GET_SCADENZIARIO_RESULTS,
-  getScadenziarioDayResults,
-  GET_SCADENZIARIO_DAY_RESULTS,
+  getCalendarResults,
+  GET_CALENDAR_RESULTS,
+  getCalendarDayResults,
+  GET_CALENDAR_DAY_RESULTS,
 };

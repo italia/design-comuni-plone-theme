@@ -6,7 +6,7 @@ import { getBaseUrl } from '@plone/volto/helpers';
 const View = ({ data, id, path,properties, block }) => {
   return (
     <div className="block full-width">
-      <div className="deadlines-calendar">
+      <div className="calendar">
         <Body data={data} 
               path={getBaseUrl(path)}
               properties={properties}

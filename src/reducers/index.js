@@ -7,8 +7,8 @@ import defaultReducers from '@plone/volto/reducers';
 import { addonReducers } from '~/config';
 import { searchFiltersReducer } from './searchFiltersReducer';
 import { searchResultsReducer } from './searchResultsReducer';
-import { scadenziarioSearchReducer } from './scadenziarioSearchReducer';
-import { scadenziarioDaySearchReducer } from './scadenziarioDaySearchReducer';
+import { calendarSearchReducer } from './calendarSearchReducer';
+import { calendarDaySearchReducer } from './calendarDaySearchReducer';
 
 /**
  * Root reducer.
@@ -22,8 +22,8 @@ const reducers = {
   ...addonReducers,
   searchFilters: searchFiltersReducer,
   searchResults: searchResultsReducer,
-  scadenziarioSearch: scadenziarioSearchReducer,
-  scadenziarioDaySearch: scadenziarioDaySearchReducer,
+  calendarSearch: calendarSearchReducer,
+  scadenziarioDaySearch: calendarDaySearchReducer,
 };
 
 export default reducers;
