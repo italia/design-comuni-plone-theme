@@ -17,6 +17,7 @@ export BlockSearchSectionsSidebar from '@italia/components/ItaliaTheme/Blocks/Se
 export BlockSearchSectionsBody from '@italia/components/ItaliaTheme/Blocks/SearchSections/Body';
 
 export ArgumentsInEvidenceBackground from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Background';
+export SearchSectionsBackground from '@italia/components/ItaliaTheme/Blocks/SearchSections/Background';
 
 // export LinkList from '@italia/components/ItaliaTheme/LinkList/LinkList';
 // export LinkListItem from '@italia/components/ItaliaTheme/LinkList/LinkListItem';
