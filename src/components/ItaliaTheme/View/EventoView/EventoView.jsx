@@ -21,7 +21,7 @@ import {
   GenericCard,
   Dates,
   TextOrBlocks,
-  EventLocations,
+  Locations,
   Sponsors,
   RelatedItems,
   RichText,
@@ -238,6 +238,7 @@ const EventoView = ({ content, location }) => {
 
             {/* LUOGHI */}
             {(content?.luoghi_correlati?.length > 0 ||
+              content?.nome_sede > 0 ||
               content?.street > 0 ||
               (content?.geolocation?.latitude &&
                 content?.geolocation?.longitude) ||
@@ -250,7 +251,7 @@ const EventoView = ({ content, location }) => {
                 tag_id="luoghi"
                 title={intl.formatMessage(messages.luoghi)}
               >
-                <EventLocations
+                <Locations
                   content={content}
                   locations={content?.luoghi_correlati ?? []}
                   show_icon={true}

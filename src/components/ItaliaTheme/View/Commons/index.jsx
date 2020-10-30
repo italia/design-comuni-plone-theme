@@ -2,7 +2,7 @@ export Attachments from '@italia/components/ItaliaTheme/View/Commons/Attachments
 export Attachment from '@italia/components/ItaliaTheme/View/Commons/Attachment';
 export Gallery from '@italia/components/ItaliaTheme/View/Commons/Gallery';
 export CuredBy from '@italia/components/ItaliaTheme/View/Commons/CuredBy';
-export Locations from '@italia/components/ItaliaTheme/View/Commons/Locations';
+export VenuesSmall from '@italia/components/ItaliaTheme/View/Commons/VenuesSmall';
 export WideImage from '@italia/components/ItaliaTheme/View/Commons/WideImage';
 export SideMenu from '@italia/components/ItaliaTheme/View/Commons/SideMenu';
 export PageHeader from '@italia/components/ItaliaTheme/View/Commons/PageHeader';

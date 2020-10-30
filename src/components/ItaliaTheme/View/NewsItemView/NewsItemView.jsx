@@ -13,7 +13,7 @@ import {
   PageHeader,
   SideMenu,
   ContentImage,
-  Locations,
+  VenuesSmall,
   CuredBy,
   Gallery,
   Attachments,
@@ -127,7 +127,7 @@ const NewsItemView = ({ content, location }) => {
                 tag_id="luoghi"
                 title={intl.formatMessage(messages.luoghi)}
               >
-                <Locations locations={content.luoghi_correlati} />
+                <VenuesSmall locations={content.luoghi_correlati} />
               </RichTextArticle>
             )}
 

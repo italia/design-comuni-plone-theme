@@ -26,7 +26,7 @@ const messages = defineMessages({
   },
 });
 
-const EventLocation = ({
+const LocationItem = ({
   location,
   show_icon,
   load = true,
@@ -35,7 +35,7 @@ const EventLocation = ({
   const intl = useIntl();
   const key = `luogo${location['@id']}`;
   const url = flattenToAppURL(location['@id']);
-  const locationContent = useSelector(state => state.content.subrequests);
+  const locationContent = useSelector((state) => state.content.subrequests);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -47,7 +47,7 @@ const EventLocation = ({
 
   let location_fo = locationContent ? locationContent[key]?.data : location;
   let address = ['street', 'city', 'zip_code']
-    .map(key => location_fo?.[key])
+    .map((key) => location_fo?.[key])
     .filter(Boolean)
     .join(' - ');
 
@@ -55,7 +55,9 @@ const EventLocation = ({
     <div className="card card-teaser shadow mt-3 rounded">
       {show_icon && <Icon icon={'it-pin'} />}
       <div className="card-body">
-        <h5 className="card-title">{location_fo.title}</h5>
+        <h5 className="card-title">
+          {location_fo.nome_sede || location_fo.title}
+        </h5>
         <div className="card-text">
           <p className="text-capitalize">{address}</p>
 
@@ -101,7 +103,7 @@ const EventLocation = ({
   );
 };
 
-EventLocation.propTypes = {
+LocationItem.propTypes = {
   location: PropTypes.shape({
     '@id': PropTypes.string,
     '@type': PropTypes.string,
@@ -113,4 +115,4 @@ EventLocation.propTypes = {
   show_icon: PropTypes.bool,
 };
 
-export default EventLocation;
+export default LocationItem;

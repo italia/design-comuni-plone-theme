@@ -6,26 +6,26 @@ import { OSMMap } from '@italia/addons/volto-venue';
 import PropTypes from 'prop-types';
 
 /**
- * EventLocationMap view component class.
+ * LocationsMap view component class.
  * @function LocationMap
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const EventLocationMap = ({ center, locations }) => {
+const LocationsMap = ({ center, locations }) => {
   const dispatch = useDispatch();
-  const fetchedLocations = useSelector(state => state.content.subrequests);
-  const venues = locations.map(location => ({
+  const fetchedLocations = useSelector((state) => state.content.subrequests);
+  const venues = locations.map((location) => ({
     key: `luogo${location['@id']}`,
     url: flattenToAppURL(location['@id']),
   }));
 
   useEffect(() => {
-    venues.forEach(loc => {
+    venues.forEach((loc) => {
       dispatch(getContent(loc.url, null, loc.key));
     });
 
     return () =>
-      venues.forEach(loc => {
+      venues.forEach((loc) => {
         dispatch(resetContent(loc.key));
       });
   }, [dispatch, locations]);
@@ -71,7 +71,7 @@ const EventLocationMap = ({ center, locations }) => {
   ) : null;
 };
 
-EventLocationMap.propTypes = {
+LocationsMap.propTypes = {
   content: PropTypes.shape({
     '@id': PropTypes.string,
     geolocation: PropTypes.shape({
@@ -90,4 +90,4 @@ EventLocationMap.propTypes = {
   ),
 };
 
-export default EventLocationMap;
+export default LocationsMap;

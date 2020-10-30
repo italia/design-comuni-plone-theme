@@ -9,7 +9,7 @@ import { Icon, CardCategory } from 'design-react-kit/dist/design-react-kit';
 import { getCalendarDate, getIcon } from '@italia/helpers';
 /**
  * GenericCard view component class.
- * @function Location
+ * @function GenericCard
  * @params {object} location: object.
  * @returns {string} Markup of the component.
  */

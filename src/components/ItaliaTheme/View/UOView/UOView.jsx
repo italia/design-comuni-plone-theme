@@ -10,7 +10,7 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
 import {
   Attachments,
-  EventLocations,
+  Locations,
   GenericCard,
   HelpBox,
   Metadata,
@@ -296,6 +296,7 @@ const UOView = ({ content }) => {
               content?.contact_info?.data.replace(/(<([^>]+)>)/g, '') ||
               content?.geolocation?.latitude ||
               content?.geolocation?.longitude ||
+              content?.nome_sede ||
               content?.street ||
               content?.city ||
               content?.country?.title ||
@@ -317,12 +318,13 @@ const UOView = ({ content }) => {
                 {(content.geolocation?.latitude ||
                   content?.geolocation?.longitude ||
                   content?.sede?.length > 0 ||
+                  content?.nome_sede ||
                   content?.street ||
                   content?.city ||
                   content?.country?.title ||
                   content?.zip_code) && (
                   <div className="mb-5 mt-3">
-                    <EventLocations
+                    <Locations
                       content={content}
                       locations={content.sede ?? []}
                       load={true}
@@ -330,20 +332,17 @@ const UOView = ({ content }) => {
                     />
                   </div>
                 )}
-
                 {content.contact_info?.data.replace(/(<([^>]+)>)/g, '') && (
                   <div className="mb-5 mt-3">
                     <RichText content={content.contact_info.data} />
                   </div>
                 )}
-
                 {content.orario_pubblico?.data.replace(/(<([^>]+)>)/g, '') && (
                   <div className="mb-5 mt-3">
                     <h5>{intl.formatMessage(messages.orario_pubblico)}</h5>
                     <RichText content={content.orario_pubblico.data} />
                   </div>
                 )}
-
                 <dl className="contatti-list">
                   {content.telefono && (
                     <div className="text-serif contatti">
@@ -398,7 +397,6 @@ const UOView = ({ content }) => {
                     </div>
                   )}
                 </dl>
-
                 {content.sedi_secondarie?.length > 0 && (
                   <div className="mb-5 mt-5">
                     <h5>{intl.formatMessage(messages.altre_sedi)}</h5>
