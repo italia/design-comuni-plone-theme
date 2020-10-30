@@ -5,7 +5,7 @@
     width: 100%;
     height: auto;
     min-height: 280px;
-    padding: 50px 50px 10px;
+    padding: 10px 50px;
 
     @media (max-width: #{map-get($grid-breakpoints, lg) - 1px}) {
       padding: 10px 6px;
