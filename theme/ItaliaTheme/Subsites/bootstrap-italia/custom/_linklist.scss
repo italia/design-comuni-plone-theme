@@ -1,0 +1,25 @@
+//mobile
+.link-list-wrapper {
+  ul {
+    li {
+      a {
+        // hover state
+        &:hover:not(.disabled) {
+          span {
+            color: $subsite-link-color;
+          }
+          p {
+            color: $subsite-link-color;
+          }
+          .icon {
+            fill: $subsite-link-color;
+          }
+        }
+
+        span {
+          color: $subsite-link-color;
+        }
+      }
+    }
+  }
+}

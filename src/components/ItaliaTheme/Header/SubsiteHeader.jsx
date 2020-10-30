@@ -25,7 +25,7 @@ const SubsiteHeader = () => {
       }}
     >
       <div className={`text`}>
-        <div className="container px-md-4">
+        <div className="container px-md-4 py-5">
           {subsite.subsite_header?.data && (
             <div
               className="text-serif"

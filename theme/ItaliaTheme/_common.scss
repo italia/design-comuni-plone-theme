@@ -1,7 +1,6 @@
 .public-ui {
   .btn-tertiary {
-    background-color: $tertiary;
-    color: $tertiary-text;
+    @include button-variant($tertiary, $tertiary-text);
 
     svg {
       fill: $tertiary-text;
@@ -9,12 +8,13 @@
 
     &:hover,
     &:active {
-      color: $tertiary-text-hover;
-      background-color: darken($tertiary, 4%);
-
       svg {
         fill: $tertiary-text-hover;
       }
     }
+  }
+
+  .btn-outline-tertiary {
+    @include button-outline-variant($tertiary);
   }
 }

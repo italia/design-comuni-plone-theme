@@ -1,0 +1,54 @@
+.card-title {
+  a {
+    color: $subsite-link-color;
+  }
+}
+
+.genericcard {
+  .card-title {
+    a {
+      color: $subsite-link-color;
+    }
+  }
+}
+
+.link-list-wrapper {
+  ul {
+    li {
+      button.btn-link {
+        color: $subsite-link-color;
+
+        &:hover {
+          color: $subsite-link-color;
+
+          .icon {
+            fill: $subsite-primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.style_ol_list {
+  ol {
+    li {
+      &:before {
+        color: $subsite-secondary;
+      }
+
+      &:after {
+        background-color: $subsite-secondary;
+      }
+    }
+  }
+}
+.icon-argument-container {
+  .show-icon {
+    color: $subsite-tertiary;
+  }
+  svg {
+    fill: $subsite-tertiary;
+    color: $subsite-tertiary;
+  }
+}

@@ -15,7 +15,7 @@
 @import 'extras/file-widget';
 
 /*** ItaliaTheme ***/
-@import 'ItaliaTheme/mixin';
+@import 'ItaliaTheme/common';
 @import 'ItaliaTheme/main';
 @import 'ItaliaTheme/home';
 @import 'ItaliaTheme/Components/parentSiteMenu';
@@ -50,12 +50,31 @@
 @import 'ItaliaTheme/Components/logo';
 
 @import 'ItaliaTheme/Subsites/mixin';
-@include define-subsite('yellow', #fcab02, black, green, white, #b77d04);
+$subsite-yellow-primary: #fcab02;
+$subsite-yellow-primary-text: black;
+$subsite-yellow-secondary: green;
+$subsite-yellow-secondary-text: white;
+$subsite-yellow-link-color: #b77d04;
+@include define-subsite(
+  'yellow',
+  $subsite-yellow-primary,
+  $subsite-yellow-primary-text,
+  $subsite-yellow-secondary,
+  $subsite-yellow-secondary-text,
+  $tertiary,
+  $tertiary-text,
+  $subsite-yellow-link-color
+);
+
+$ubsite-light-blue-primary: #048693;
+$ubsite-light-blue-primary-text: white;
 @include define-subsite(
   'light-blue',
-  #048693,
-  white,
-  $secondary,
-  $secondary-text,
-  #048693
+  $ubsite-light-blue-primary,
+  $ubsite-light-blue-primary-text,
+  $ubsite-light-blue-primary,
+  $ubsite-light-blue-primary-text,
+  $tertiary,
+  $tertiary-text,
+  $ubsite-light-blue-primary
 );

@@ -35,3 +35,13 @@
     color: darken($subsite-secondary-text, 10%);
   }
 }
+
+.btn-outline-primary {
+  @include button-outline-variant($subsite-primary);
+}
+.btn-outline-secondary {
+  @include button-outline-variant($subsite-secondary);
+}
+.btn-outline-tertiary {
+  @include button-outline-variant($subsite-tertiary);
+}
