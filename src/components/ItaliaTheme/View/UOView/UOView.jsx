@@ -25,6 +25,7 @@ import {
 } from '@italia/components/ItaliaTheme/View';
 
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
+import ContactLink from '../Commons/ContactLink';
 
 const messages = defineMessages({
   cosa_fa: {
@@ -90,6 +91,10 @@ const messages = defineMessages({
   telefono_sede: {
     id: 'telefono_sede',
     defaultMessage: 'Telefono',
+  },
+  fax_sede: {
+    id: 'fax_sede',
+    defaultMessage: 'Fax',
   },
   website: {
     id: 'website',
@@ -297,6 +302,7 @@ const UOView = ({ content }) => {
               content?.zip_code ||
               content?.orario_pubblico?.data.replace(/(<([^>]+)>)/g, '') ||
               content?.telefono ||
+              content?.fax ||
               content?.web ||
               content?.email ||
               content?.pec) && (
@@ -343,9 +349,16 @@ const UOView = ({ content }) => {
                     <div className="text-serif contatti">
                       <dt>{intl.formatMessage(messages.telefono_sede)}: </dt>
                       <dd>
-                        <a href={`tel:${content.telefono}`}>
-                          {content.telefono}
-                        </a>
+                        <ContactLink tel={content.telefono} label={false} />
+                      </dd>
+                    </div>
+                  )}
+
+                  {content.fax && (
+                    <div className="text-serif contatti">
+                      <dt>{intl.formatMessage(messages.fax_sede)}: </dt>
+                      <dd>
+                        <ContactLink tel={content.fax} label={false} />
                       </dd>
                     </div>
                   )}
@@ -354,7 +367,7 @@ const UOView = ({ content }) => {
                     <div className="text-serif contatti">
                       <dt>{intl.formatMessage(messages.email_sede)}: </dt>
                       <dd>
-                        <a href={`mailto:${content.email}`}>{content.email}</a>
+                        <ContactLink email={content.email} label={false} />
                       </dd>
                     </div>
                   )}
@@ -362,7 +375,7 @@ const UOView = ({ content }) => {
                     <div className="text-serif contatti">
                       <dt>{intl.formatMessage(messages.pec_sede)}: </dt>
                       <dd>
-                        <a href={`mailto:${content.pec}`}>{content.pec}</a>
+                        <ContactLink email={content.pec} label={false} />
                       </dd>
                     </div>
                   )}

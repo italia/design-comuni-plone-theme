@@ -4,6 +4,7 @@ export RichText from '@italia/components/ItaliaTheme/View/Commons/RichText';
 export RelatedNewsArticles from '@italia/components/ItaliaTheme/View/Commons/RelatedNewsArticles';
 export RelatedArticles from '@italia/components/ItaliaTheme/View/Commons/RelatedArticles';
 export ArgumentIcon from '@italia/components/ItaliaTheme/View/Commons/Argument/ArgumentIcon';
+export ContactLink from '@italia/components/ItaliaTheme/View/Commons/ContactLink';
 
 export TextOrBlocks from '@italia/components/ItaliaTheme/View/Commons/TextOrBlocks';
 

@@ -20,6 +20,7 @@ import {
   HelpBox,
   RelatedItems,
   PersonaPlaceholderAfterContent,
+  ContactLink,
 } from '@italia/components/ItaliaTheme/View';
 import { contentFolderHasItems } from '@italia/helpers';
 
@@ -36,9 +37,9 @@ const messages = defineMessages({
     id: 'contacts',
     defaultMessage: 'Contatti',
   },
-  phone: {
-    id: 'phone',
-    defaultMessage: 'Telefono',
+  telefono: {
+    id: 'telefono',
+    defaultMessage: 'Tel',
   },
   email: {
     id: 'email',
@@ -305,22 +306,38 @@ const PersonaView = ({ content }) => {
               </RichTextArticle>
             )}
 
-            {(content?.telefono || content?.email) && (
+            {(content?.telefono?.length > 0 ||
+              content?.fax ||
+              content?.email?.length > 0) && (
               <RichTextArticle
                 title={intl.formatMessage(messages.contacts)}
                 tag_id="contacts"
               >
-                {content?.telefono && (
+                {content?.telefono?.length > 0 && (
                   <p>
-                    <strong>{intl.formatMessage(messages.phone)}: </strong>
-                    <a href={`tel:${content.telefono}`}>{content.telefono}</a>
+                    <strong>{intl.formatMessage(messages.telefono)}: </strong>
+                    {content.telefono.map((tel) => (
+                      <>
+                        <ContactLink tel={tel} label={false} />{' '}
+                      </>
+                    ))}
                   </p>
                 )}
 
-                {content?.email && (
+                {content?.fax && (
+                  <p>
+                    <ContactLink fax={content.fax} strong={true} />
+                  </p>
+                )}
+
+                {content?.email?.length > 0 && (
                   <p>
                     <strong>{intl.formatMessage(messages.email)}: </strong>
-                    <a href={`mailto:${content.email}`}>{content.email}</a>
+                    {content.email.map((email) => (
+                      <>
+                        <ContactLink email={email} label={false} />{' '}
+                      </>
+                    ))}
                   </p>
                 )}
               </RichTextArticle>

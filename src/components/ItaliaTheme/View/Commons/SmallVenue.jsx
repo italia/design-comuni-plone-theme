@@ -4,7 +4,15 @@ import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { defineMessages, useIntl } from 'react-intl';
+import { ContactLink } from '@italia/components/ItaliaTheme/View';
 
+const messages = defineMessages({
+  fax: {
+    id: 'fax',
+    defaultMessage: 'Fax',
+  },
+});
 /**
  * SmallVenue view component class.
  * @function SmallVenue
@@ -16,6 +24,7 @@ const SmallVenue = ({ venue }) => {
   const url = flattenToAppURL(venue['@id']);
   const venueContent = useSelector((state) => state.content.subrequests);
   const dispatch = useDispatch();
+  const intl = useIntl();
 
   useEffect(() => {
     dispatch(getContent(url, null, key));
@@ -34,19 +43,24 @@ const SmallVenue = ({ venue }) => {
             </Link>
           </h5>
           <div className="card-text">
-            {venue_fo.telefono && <p>{venue_fo.telefono}</p>}
+            {venue_fo.telefono && (
+              <p>
+                <ContactLink tel={venue_fo.telefono} />
+              </p>
+            )}
+            {venue_fo.fax && (
+              <p>
+                <ContactLink fax={venue_fo.fax} />
+              </p>
+            )}
             {venue_fo.email && (
               <p>
-                <a href={`mailto:${venue_fo.email}`} title={venue_fo.email}>
-                  {venue_fo.email}
-                </a>
+                <ContactLink email={venue_fo.email} />
               </p>
             )}
             {venue_fo.pec && (
               <p>
-                <a href={`mailto:${venue_fo.pec}`} title={venue_fo.pec}>
-                  {venue_fo.pec}
-                </a>
+                <ContactLink email={venue_fo.pec} />
               </p>
             )}
             {venue_fo.web && (

@@ -26,6 +26,7 @@ import {
   RelatedItems,
   RichText,
   EventoPlaceholderAfterContent,
+  ContactLink,
 } from '@italia/components/ItaliaTheme/View';
 
 import { Link } from 'react-router-dom';
@@ -103,14 +104,6 @@ const messages = defineMessages({
   supported_by: {
     id: 'supported_by',
     defaultMessage: 'Con il supporto di',
-  },
-  telefono: {
-    id: 'telefono',
-    defaultMessage: 'Tel',
-  },
-  email: {
-    id: 'email',
-    defaultMessage: 'E-mail',
   },
   costi: {
     id: 'event_costi',
@@ -340,10 +333,12 @@ const EventoView = ({ content, location }) => {
                         />
                         {content?.telefono && (
                           <p className="card-text mt-3">
-                            {intl.formatMessage(messages.telefono)}
-                            <a href={`tel:${content.telefono}`}>
-                              {content.telefono}
-                            </a>
+                            <ContactLink tel={content.telefono} label={true} />
+                          </p>
+                        )}
+                        {content?.fax && (
+                          <p className="card-text mt-3">
+                            <ContactLink fax={content.fax} label={true} />
                           </p>
                         )}
                         {content?.reperibilita && (
@@ -353,10 +348,7 @@ const EventoView = ({ content, location }) => {
                         )}
                         {content?.email && (
                           <p className="card-text mt-3">
-                            {intl.formatMessage(messages.email)}
-                            <a href={`mailto:${content.email}`}>
-                              {content.email}
-                            </a>
+                            <ContactLink email={content.email} label={true} />
                           </p>
                         )}
                       </CardBody>

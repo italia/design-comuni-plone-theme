@@ -29,6 +29,7 @@ import {
   CardTitle,
   CardText,
 } from 'design-react-kit/dist/design-react-kit';
+import ContactLink from '../Commons/ContactLink';
 const messages = defineMessages({
   descrizione: {
     id: 'descrizione',
@@ -78,6 +79,10 @@ const messages = defineMessages({
     id: 'riferimento_telefonico_luogo',
     defaultMessage: 'Telefono',
   },
+  riferimento_fax_luogo: {
+    id: 'riferimento_fax_luogo',
+    defaultMessage: 'Fax',
+  },
   riferimento_mail_luogo: {
     id: 'riferimento_mail_luogo',
     defaultMessage: 'E-mail',
@@ -105,6 +110,10 @@ const messages = defineMessages({
   riferimento_telefonico_struttura: {
     id: 'riferimento_telefonico_struttura',
     defaultMessage: 'Telefono',
+  },
+  riferimento_fax_struttura: {
+    id: 'riferimento_fax_struttura',
+    defaultMessage: 'Fax',
   },
   riferimento_mail_struttura: {
     id: 'riferimento_mail_struttura',
@@ -321,6 +330,7 @@ const VenueView = ({ content }) => {
               content?.struttura_responsabile?.data?.replace(/(<([^>]+)>)/g, '')
                 .length > 0 ||
               content?.riferimento_telefonico_struttura ||
+              content?.riferimento_fax_struttura ||
               content?.riferimento_mail_struttura ||
               content?.riferimento_pec_struttura) && (
               <RichTextArticle
@@ -330,6 +340,7 @@ const VenueView = ({ content }) => {
                 {/* CONTATTI LUOGO */}
                 {(content?.telefono ||
                   content?.email ||
+                  content?.fax ||
                   content?.pec ||
                   content?.web) && (
                   <Card
@@ -346,26 +357,28 @@ const VenueView = ({ content }) => {
                           {intl.formatMessage(
                             messages.riferimento_telefonico_luogo,
                           )}
-                          :{' '}
-                          <a href={`tel:${content.telefono}`}>
-                            {content.telefono}
-                          </a>
+                          : <ContactLink tel={content.telefono} label={false} />
+                        </p>
+                      )}
+
+                      {content.fax && (
+                        <p className="card-text mt-3">
+                          {intl.formatMessage(messages.riferimento_fax_luogo)}
+                          : <ContactLink fax={content.fax} label={false} />
                         </p>
                       )}
 
                       {content.email && (
                         <p className="card-text mt-3">
                           {intl.formatMessage(messages.riferimento_mail_luogo)}:{' '}
-                          <a href={`mailto:${content.email}`}>
-                            {content.email}
-                          </a>
+                          <ContactLink email={content.email} label={false} />
                         </p>
                       )}
 
                       {content.pec && (
                         <p className="card-text mt-3">
                           {intl.formatMessage(messages.riferimento_pec_luogo)}:{' '}
-                          <a href={`mailto:${content.pec}`}>{content.pec}</a>
+                          <ContactLink email={content.pec} label={false} />
                         </p>
                       )}
 
@@ -397,9 +410,10 @@ const VenueView = ({ content }) => {
                     '',
                   ).length > 0 ||
                   content?.riferimento_telefonico_struttura ||
+                  content?.riferimento_fax_struttura ||
                   content?.riferimento_mail_struttura ||
                   content?.riferimento_pec_struttura) && (
-                  <div className="mt-5 mb-3">
+                  <div className="mt-5 mb-5">
                     <h5>
                       {intl.formatMessage(messages.struttura_responsabile)}
                     </h5>
@@ -421,6 +435,7 @@ const VenueView = ({ content }) => {
                           '',
                         ).length > 0 ||
                           content.riferimento_telefonico_struttura ||
+                          content.riferimento_fax_struttura ||
                           content.riferimento_mail_struttura ||
                           content.riferimento_pec_struttura) && (
                           <Card className="genericcard card card-teaser shadow p-4 mt-3 rounded">
@@ -448,11 +463,26 @@ const VenueView = ({ content }) => {
                                       )}
                                       :
                                     </span>{' '}
-                                    <a
-                                      href={`tel:${content.riferimento_telefonico_struttura}`}
-                                    >
-                                      {content.riferimento_telefonico_struttura}
-                                    </a>
+                                    <ContactLink
+                                      tel={
+                                        content.riferimento_telefonico_struttura
+                                      }
+                                      label={false}
+                                    />
+                                  </div>
+                                )}
+                                {content.riferimento_fax_struttura && (
+                                  <div className="mt-2">
+                                    <span className="font-weight-semibold">
+                                      {intl.formatMessage(
+                                        messages.riferimento_fax_struttura,
+                                      )}
+                                      :
+                                    </span>{' '}
+                                    <ContactLink
+                                      tel={content.riferimento_fax_struttura}
+                                      label={false}
+                                    />
                                   </div>
                                 )}
                                 {content.riferimento_mail_struttura && (
@@ -463,11 +493,10 @@ const VenueView = ({ content }) => {
                                       )}
                                       :
                                     </span>{' '}
-                                    <a
-                                      href={`mailto:${content.riferimento_mail_struttura}`}
-                                    >
-                                      {content.riferimento_mail_struttura}
-                                    </a>
+                                    <ContactLink
+                                      email={content.riferimento_mail_struttura}
+                                      label={false}
+                                    />
                                   </div>
                                 )}
                                 {content.riferimento_pec_struttura && (
@@ -478,11 +507,10 @@ const VenueView = ({ content }) => {
                                       )}
                                       :
                                     </span>{' '}
-                                    <a
-                                      href={`mailto:${content.riferimento_pec_struttura}`}
-                                    >
-                                      {content.riferimento_pec_struttura}
-                                    </a>
+                                    <ContactLink
+                                      email={content.riferimento_pec_struttura}
+                                      label={false}
+                                    />
                                   </div>
                                 )}
                               </CardText>
