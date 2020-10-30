@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Body from './Body'
+import Body from '@italia/components/ItaliaTheme/Blocks/Calendar/Body'
 import { getBaseUrl } from '@plone/volto/helpers';
 
 const View = ({ data, id, path,properties, block }) => {

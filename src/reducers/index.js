@@ -23,7 +23,7 @@ const reducers = {
   searchFilters: searchFiltersReducer,
   searchResults: searchResultsReducer,
   calendarSearch: calendarSearchReducer,
-  scadenziarioDaySearch: calendarDaySearchReducer,
+  calendarDaySearch: calendarDaySearchReducer,
 };
 
 export default reducers;

@@ -14,7 +14,7 @@ const Item = ({ day, path, data, inEdit }) => {
 	moment.locale(intl.locale);
 
   const querystringResults = useSelector(
-    (state) => state.scadenziarioDaySearch
+    (state) => state.calendarDaySearch
   );
   const dispatch = useDispatch();
 
