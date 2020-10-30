@@ -402,11 +402,9 @@ const ServizioView = ({ content }) => {
                   tag="div"
                 >
                   <CardBody tag="div">
-                    <div
-                      className="text-serif p-4 pt-0"
-                      dangerouslySetInnerHTML={{
-                        __html: content.link_siti_esterni.data,
-                      }}
+                    <RichText
+                      add_class="p-4 pt-0"
+                      content={content.link_siti_esterni.data}
                     />
                   </CardBody>
                 </Card>

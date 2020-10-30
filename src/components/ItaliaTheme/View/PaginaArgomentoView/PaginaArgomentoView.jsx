@@ -23,6 +23,7 @@ import {
   ArgumentIcon,
   PaginaArgomentoPlaceholderAfterContent,
   TextOrBlocks,
+  RichText,
 } from '@italia/components/ItaliaTheme/View';
 
 /**
@@ -57,10 +58,9 @@ const PaginaArgomentoView = ({ content }) => {
           <p className="description">{content?.description}</p>
         </div>
         <div className="col-lg-4 offset-lg-2">
-          <div
-            dangerouslySetInnerHTML={{
-              __html: content?.ulteriori_informazioni?.data,
-            }}
+          <RichText
+            serif={false}
+            content={content.ulteriori_informazioni?.data}
           />
 
           {content?.unita_amministrative_responsabili?.length > 0 &&

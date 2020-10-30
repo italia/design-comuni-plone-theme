@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-
+import { flattenHTMLToAppURL } from '@plone/volto/helpers';
 /**
  * RichTextArticle view component class.
  * @function RichTextArticle
@@ -41,7 +41,7 @@ const RichTextArticle = ({
       {content_to_display && (
         <div
           className={cx('text-serif', add_class)}
-          dangerouslySetInnerHTML={{ __html: content_to_display }}
+          dangerouslySetInnerHTML={{ __html: flattenHTMLToAppURL(content) }}
         />
       )}
       {children}

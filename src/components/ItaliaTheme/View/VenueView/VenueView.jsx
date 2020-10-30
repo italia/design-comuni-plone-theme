@@ -431,12 +431,10 @@ const VenueView = ({ content }) => {
                               ).length > 0 && (
                                 <CardTitle>
                                   <h5 className="card-title">
-                                    <div
-                                      className="text-serif"
-                                      dangerouslySetInnerHTML={{
-                                        __html:
-                                          content.struttura_responsabile.data,
-                                      }}
+                                    <RichText
+                                      content={
+                                        content.struttura_responsabile.data
+                                      }
                                     />
                                   </h5>
                                 </CardTitle>

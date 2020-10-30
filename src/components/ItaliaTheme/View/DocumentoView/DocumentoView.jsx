@@ -21,6 +21,7 @@ import {
   GenericCard,
   RelatedItems,
   DocumentoPlaceholderAfterContent,
+  RichText,
 } from '@italia/components/ItaliaTheme/View';
 
 const messages = defineMessages({
@@ -168,17 +169,11 @@ const DocumentoView = ({ content, location }) => {
                       showimage={false}
                       image_field={'immagine'}
                     >
-                      {servizio.canale_digitale?.data?.replace(
-                        /(<([^>]+)>)/g,
-                        '',
-                      ).length > 0 && (
-                        <div
-                          className="mt-3"
-                          dangerouslySetInnerHTML={{
-                            __html: servizio.canale_digitale.data,
-                          }}
-                        />
-                      )}
+                      <RichText
+                        serif={false}
+                        content={servizio.canale_digitale.data}
+                        add_class="mt-3"
+                      />
                     </GenericCard>
                   ))}
                 </div>
@@ -199,10 +194,9 @@ const DocumentoView = ({ content, location }) => {
                 .length > 0 && (
                 <div className="mt-2">
                   <h5>{intl.formatMessage(messages.riferimenti_normativi)}</h5>
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: content.riferimenti_normativi.data,
-                    }}
+                  <RichText
+                    serif={false}
+                    content={content.riferimenti_normativi.data}
                   />
                 </div>
               )}

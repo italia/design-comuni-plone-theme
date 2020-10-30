@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { flattenHTMLToAppURL } from '@plone/volto/helpers';
 
 /**
  * RichText view component class.
@@ -8,7 +9,14 @@ import cx from 'classnames';
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const RichText = ({ title, title_size, content, add_class, children }) => {
+const RichText = ({
+  title,
+  title_size,
+  content,
+  add_class,
+  children,
+  serif = true,
+}) => {
   let content_to_display = content ? content?.replace(/(<([^>]+)>)/g, '') : '';
   content_to_display =
     content_to_display.length > 0 ? content_to_display : null;
@@ -23,8 +31,8 @@ const RichText = ({ title, title_size, content, add_class, children }) => {
         ))}
       {content && (
         <div
-          className={cx('text-serif', add_class)}
-          dangerouslySetInnerHTML={{ __html: content }}
+          className={cx(add_class, { 'text-serif': serif })}
+          dangerouslySetInnerHTML={{ __html: flattenHTMLToAppURL(content) }}
         />
       )}
       {children}
