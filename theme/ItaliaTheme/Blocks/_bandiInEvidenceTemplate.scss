@@ -8,7 +8,7 @@
   }
 
   .card-backgound {
-    background-color: rgba(0, 56, 131, 0.07);
+    background-color: $lightgrey-b3;
   }
   .card-wrapper {
     min-height: 340px;
@@ -27,13 +27,13 @@
 
   .title {
     line-height: 1.5rem !important;
-    a {
-      margin: 0 !important;
-      margin-bottom: 1rem !important;
-      font-size: 1.555rem !important;
-      font-weight: 600 !important;
-      letter-spacing: normal !important;
-      color: #294766 !important;
+    a.bando-title {
+      margin: 0;
+      margin-bottom: 1rem;
+      font-size: 1.555rem;
+      font-weight: 600;
+      letter-spacing: normal;
+      color: $input-label-color;
       text-decoration: none;
     }
   }
@@ -61,7 +61,7 @@
     align-items: center;
     justify-content: center;
     .view-all {
-      background-color: #003883;
+      background-color: $analogue-1-a9;
       font-size: 18px;
       a {
         color: $primary-text;
@@ -105,7 +105,7 @@
     a.read-more {
       @media (max-width: 585px) {
         display: flex;
-        color: #0066cc;
+        color: $analogue-1-a7;
         text-transform: uppercase;
         font-weight: bold;
         letter-spacing: 0.9px;
@@ -131,12 +131,13 @@
     font-size: 16px;
   }
   .open {
-    background-color: #00cf86;
+    // background-color: #00cf86;
+    background-color: $complementary-3-a5;
   }
   .closed {
-    background-color: #7d8b9b;
+    background-color: $neutral-1-a6;
   }
   .in-progress {
-    background-color: #004080;
+    background-color: $analogue-1-a9;
   }
 }

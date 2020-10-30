@@ -216,7 +216,7 @@ const BandoView = ({ content, location }) => {
               content?.scadenza_domande_bando ||
               content?.chiusura_procedimento_bando) && (
               <RichTextArticle
-                tag_id="date_importanti"
+                tag_id="tempi_e_scadenze"
                 title={intl.formatMessage(messages.tempi_scadenze)}
               >
                 <BandoDates content={content} />

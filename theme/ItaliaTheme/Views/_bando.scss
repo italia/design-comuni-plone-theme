@@ -1,9 +1,16 @@
 .bando-view {
+  #tempi_e_scadenze {
+    .point-list {
+      .card-teaser {
+        border-left: 5px solid $lightgrey-c2;
+      }
+    }
+  }
   #allegati {
     .card-text {
       a {
         font-size: 18px;
-        color: #3f4142;
+        color: $neutral-2-a6;
         border-bottom: none;
         text-decoration: none;
       }
@@ -11,38 +18,39 @@
   }
   #text-body {
     h5 {
-      margin-top: 20px;
+      margin-top: 0.7em;
     }
   }
   .bando_state {
-    width: 300px;
+    width: 20em;
+    margin-bottom: 1em;
     border-left: 5px solid;
     text-transform: uppercase;
     &.open {
-      border-left: 5px solid #00cf86;
+      border-left: 5px solid $complementary-3-a5;
       svg {
         padding-right: 10px;
-        fill: #00cf86;
+        fill: $complementary-3-a5;
       }
     }
     &.closed {
-      border-left: 5px solid #7d8b9b;
+      border-left: 5px solid $neutral-1-a6;
       svg {
         padding-right: 10px;
-        fill: #7d8b9b;
+        fill: $neutral-1-a6;
       }
     }
     &.inProgress {
-      border-left: 5px solid #0066cc;
+      border-left: 5px solid $analogue-1-a7;
       svg {
         padding-right: 10px;
-        fill: #0066cc;
+        fill: $analogue-1-a7;
       }
     }
   }
   #ufficio_responsabile {
     div.card-teaser {
-      border-left: 5px solid #00388312;
+      border-left: 5px solid $lightgrey-c2;
     }
   }
 }

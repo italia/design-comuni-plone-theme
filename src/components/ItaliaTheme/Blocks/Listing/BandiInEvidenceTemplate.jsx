@@ -19,9 +19,6 @@ import { ConditionalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
-import { getIcon } from '@italia/helpers';
-import { getCalendarDate } from '@italia/helpers';
-import { CardCalendar } from './Commons/CardCalendar';
 import { defineMessages, useIntl } from 'react-intl';
 import moment from 'moment';
 import 'moment/min/locales';
@@ -45,11 +42,11 @@ const messages = defineMessages({
   },
   open: {
     id: 'open',
-    defaultMessage: 'Aperto',
+    defaultMessage: 'Attivo',
   },
   closed: {
     id: 'closed',
-    defaultMessage: 'Chiuso',
+    defaultMessage: 'Scaduto',
   },
   inProgress: {
     id: 'inProgress',
@@ -91,63 +88,60 @@ const BandiInEvidenceTemplate = ({
               >
                 <CardBody>
                   <CardTitle tag="h4" className="title">
-                    <a href={!isEditMode ? flattenToAppURL(item['@id']) : '#'}>
-                      {' '}
+                    <a
+                      className="bando-title"
+                      href={!isEditMode ? flattenToAppURL(item['@id']) : '#'}
+                    >
                       {item.title || item.id}
                     </a>
                   </CardTitle>
-
-                  <>
-                    <div className="bando-description">{item.description}</div>
-                    <div className={'bando-dati'}>
-                      <span className=" d-flex align-items-baseline bando-dati-info">
-                        <div className="bando-dati-label mr-4">
-                          {intl.formatMessage(messages.pubblicazione)}
-                        </div>
+                  <div className="bando-description">{item.description}</div>
+                  <div className={'bando-dati'}>
+                    <span className=" d-flex align-items-baseline bando-dati-info">
+                      <div className="bando-dati-label mr-4">
+                        {intl.formatMessage(messages.pubblicazione)}
+                      </div>
+                      <span className="bando-dati-date">
+                        {moment(item.effective).format('DD-MM-YYYY')}
+                      </span>
+                    </span>
+                    <span className="d-flex align-items-baseline bando-dati-info">
+                      <div className="bando-dati-label mr-4">
+                        {intl.formatMessage(messages.scadenza)}
+                      </div>
+                      <span className="bando-dati-date">
+                        {moment(item.scadenza_bando).format('DD-MM-YYYY')}
+                      </span>
+                    </span>
+                    <span className="d-flex align-items-baseline bando-dati-info">
+                      <div className="bando-dati-label mr-4">
+                        {intl.formatMessage(messages.stato)}
+                      </div>
+                      {item?.bando_state && (
                         <span className="bando-dati-date">
-                          {moment(item.effective).format('DD-MM-YYYY')}
+                          <div
+                            className={cx('bando-state', {
+                              open: item.bando_state?.includes('open'),
+                              closed: item.bando_state?.includes('closed'),
+                              'in-progress': item.bando_state?.includes(
+                                'inProgress',
+                              ),
+                            })}
+                          >
+                            {intl.formatMessage(messages[item.bando_state[0]])}
+                          </div>
                         </span>
-                      </span>
-                      <span className="d-flex align-items-baseline bando-dati-info">
-                        <div className="bando-dati-label mr-4">
-                          {intl.formatMessage(messages.scadenza)}
-                        </div>
-                        <span className="bando-dati-date">
-                          {moment(item.scadenza_bando).format('DD-MM-YYYY')}
-                        </span>
-                      </span>
-                      <span className="d-flex align-items-baseline bando-dati-info">
-                        <div className="bando-dati-label mr-4">
-                          {intl.formatMessage(messages.stato)}
-                        </div>
-                        {item?.bando_state && (
-                          <span className="bando-dati-date">
-                            <div
-                              className={cx('bando-state', {
-                                open: item.bando_state?.includes('open'),
-                                closed: item.bando_state?.includes('closed'),
-                                'in-progress': item.bando_state?.includes(
-                                  'inProgress',
-                                ),
-                              })}
-                            >
-                              {intl.formatMessage(
-                                messages[item.bando_state[0]],
-                              )}
-                            </div>
-                          </span>
-                        )}
-                      </span>
-                    </div>
-                    <div className="read-more">
-                      <CardReadMore
-                        iconName="it-arrow-right"
-                        tag={Link}
-                        to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}
-                        text={intl.formatMessage(messages.vedi)}
-                      />
-                    </div>
-                  </>
+                      )}
+                    </span>
+                  </div>
+                  <div className="read-more">
+                    <CardReadMore
+                      iconName="it-arrow-right"
+                      tag={Link}
+                      to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}
+                      text={intl.formatMessage(messages.vedi)}
+                    />
+                  </div>
                 </CardBody>
               </Card>
             ))}
