@@ -48,6 +48,7 @@ import { PaginaArgomentoView } from '@italia/components/ItaliaTheme';
 import { CartellaModulisticaView } from '@italia/components/ItaliaTheme';
 import { DocumentoView } from '@italia/components/ItaliaTheme';
 import { ModuloView } from '@italia/components/ItaliaTheme';
+import { BandoView } from '@italia/components/ItaliaTheme';
 
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
@@ -57,6 +58,7 @@ import InEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/In
 import SimpleCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplate';
 import GridGalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate';
 import RibbonCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate';
+import BandiInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate';
 
 import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
 import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
@@ -263,6 +265,10 @@ const customBlocks = {
         label: 'Card con nastro',
         template: RibbonCardTemplate,
       },
+      bandiInEvidenceTemplate: {
+        label: 'Bandi',
+        template: BandiInEvidenceTemplate,
+      },
     },
   },
   rssBlock,
@@ -311,6 +317,7 @@ export const views = {
     CartellaModulistica: CartellaModulisticaView,
     Documento: DocumentoView,
     Modulo: ModuloView,
+    Bando: BandoView,
   },
 };
 
@@ -367,6 +374,7 @@ const customBlocksOrder = [
 ];
 const customInitialBlocks = {
   'Pagina Argomento': ['title', 'description', 'text'],
+  'Bando Folder Deepening': ['title', 'description', 'listing'],
 };
 const customRequiredBlocks = ['description'];
 

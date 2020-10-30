@@ -41,6 +41,7 @@ export SmallVenue from '@italia/components/ItaliaTheme/View/Commons/SmallVenue';
 export Sponsors from '@italia/components/ItaliaTheme/View/Commons/Sponsors';
 export RelatedItems from '@italia/components/ItaliaTheme/View/Commons/RelatedItems';
 export DownloadFileFormat from '@italia/components/ItaliaTheme/View/Commons/DownloadFileFormat';
+export BandoDates from '@italia/components/ItaliaTheme/View/Commons/BandoDates';
 
 /* --- View --- */
 export PaginaArgomentoViewNoBlocks from '@italia/components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks';
@@ -53,3 +54,4 @@ export ServizioPlaceholderAfterContent from '@italia/components/ItaliaTheme/View
 export UOPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/UOView/Placeholder/AfterContent';
 export VenuePlaceholderAfterContent from '@italia/components/ItaliaTheme/View/VenueView/Placeholder/AfterContent';
 export DocumentoPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/DocumentoView/Placeholder/AfterContent';
+export BandoPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/BandoView/Placeholder/AfterContent';

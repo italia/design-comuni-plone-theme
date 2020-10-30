@@ -1,0 +1,59 @@
+.bando-view {
+  #tempi_e_scadenze {
+    .point-list {
+      .card-teaser {
+        border-left: 5px solid $lightgrey-c2;
+        &.card {
+          padding: 0.8em;
+        }
+      }
+    }
+  }
+  #allegati {
+    .card-text {
+      a {
+        font-size: 18px;
+        color: $neutral-2-a6;
+        border-bottom: none;
+        text-decoration: none;
+      }
+    }
+  }
+  #text-body {
+    h5 {
+      margin-top: 0.7em;
+    }
+  }
+  .bando_state {
+    width: 20em;
+    margin-bottom: 1em;
+    border-left: 0.3em solid;
+    text-transform: uppercase;
+    &.open {
+      border-left: 5px solid $complementary-3-a5;
+      svg {
+        padding-right: 10px;
+        fill: $complementary-3-a5;
+      }
+    }
+    &.closed {
+      border-left: 5px solid $neutral-1-a6;
+      svg {
+        padding-right: 10px;
+        fill: $neutral-1-a6;
+      }
+    }
+    &.inProgress {
+      border-left: 5px solid $analogue-1-a7;
+      svg {
+        padding-right: 10px;
+        fill: $analogue-1-a7;
+      }
+    }
+  }
+  #ufficio_responsabile {
+    div.card-teaser {
+      border-left: 5px solid $lightgrey-c2;
+    }
+  }
+}
