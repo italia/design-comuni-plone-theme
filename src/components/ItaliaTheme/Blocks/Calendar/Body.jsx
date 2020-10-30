@@ -5,7 +5,7 @@ import Slider from 'react-slick';
 import cx from 'classnames';
 import { getCalendarResults } from '@italia/actions';
 import { useDispatch, useSelector } from 'react-redux';
-import Item from './Item'
+import Item from '@italia/components/ItaliaTheme/Blocks/Calendar/Item'
 import moment from 'moment';
 import { useIntl } from 'react-intl';
 import 'moment/min/locales';
@@ -29,7 +29,7 @@ const Body = ({ data, inEditMode, path }) => {
       );
     }
     /* eslint-disable react-hooks/exhaustive-deps */
-  }, [data]);
+  }, []);
 
   const settings = {
     dots: true,
@@ -93,7 +93,7 @@ const Body = ({ data, inEditMode, path }) => {
             </Col>
           </Row>
         )}
-        <Card className={cx("card-bg")}>
+        <Card className={"card-bg"}>
           <div className="text-center calendar-header">
             <h3>{getMonth()}</h3>
           </div>

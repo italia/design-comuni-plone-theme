@@ -19,7 +19,7 @@ const Item = ({ day, path, data, inEdit }) => {
   const dispatch = useDispatch();
 
   React.useEffect(() => {
-		const newData = JSON.parse(JSON.stringify(data))
+		const newData = JSON.parse(JSON.stringify(data));
 
 		newData.query.push({
 			i: "start",
