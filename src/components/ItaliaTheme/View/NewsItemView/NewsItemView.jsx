@@ -104,7 +104,6 @@ const NewsItemView = ({ content, location }) => {
             >
               {/* HEADER IMAGE */}
               <ContentImage content={content} position="documentBody" />
-
               {/* TEXT OR BLOCKS */}
               <TextOrBlocks content={content} location={location} />
             </article>

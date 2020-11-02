@@ -80,14 +80,14 @@ const Location = ({ location, show_icon }) => {
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const VenuesSmall = ({ VenuesSmall, show_icon }) => {
-  return (
+const VenuesSmall = ({ venues, show_icon }) => {
+  return venues ? (
     <div className="card-wrapper card-teaser-wrapper">
-      {VenuesSmall.map((item, i) => (
+      {venues.map((item, i) => (
         <Location key={item['@id']} location={item} show_icon={show_icon} />
       ))}
     </div>
-  );
+  ) : null;
 };
 export default VenuesSmall;
 
