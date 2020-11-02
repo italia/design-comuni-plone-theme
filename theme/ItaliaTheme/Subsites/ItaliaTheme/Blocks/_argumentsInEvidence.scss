@@ -1,4 +1,8 @@
 .argumentInEvidence {
+  .argumentInEvidence-background {
+    background-color: $subsite-primary;
+  }
+
   &::before {
     background-color: $subsite-primary;
   }
