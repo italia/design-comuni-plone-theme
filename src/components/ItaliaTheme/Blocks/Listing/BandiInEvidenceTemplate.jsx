@@ -30,15 +30,15 @@ const messages = defineMessages({
   },
   pubblicazione: {
     id: 'pubblicazione',
-    defaultMessage: 'data di pubblicazione:',
+    defaultMessage: 'Data di pubblicazione:',
   },
   scadenza: {
     id: 'scadenza',
-    defaultMessage: 'data di scadenza:',
+    defaultMessage: 'Data di scadenza:',
   },
   stato: {
     id: 'stato',
-    defaultMessage: 'stato:',
+    defaultMessage: 'Stato:',
   },
   open: {
     id: 'open',
@@ -102,7 +102,7 @@ const BandiInEvidenceTemplate = ({
                         {intl.formatMessage(messages.pubblicazione)}
                       </div>
                       <span className="bando-dati-date">
-                        {moment(item.effective).format('DD-MM-YYYY')}
+                        {item.effective && moment(item.effective).format('DD-MM-YYYY')}
                       </span>
                     </span>
                     <span className="d-flex align-items-baseline bando-dati-info">
@@ -110,7 +110,7 @@ const BandiInEvidenceTemplate = ({
                         {intl.formatMessage(messages.scadenza)}
                       </div>
                       <span className="bando-dati-date">
-                        {moment(item.scadenza_bando).format('DD-MM-YYYY')}
+                        {item.scadenza_bando && moment(item.scadenza_bando).format('DD-MM-YYYY')}
                       </span>
                     </span>
                     <span className="d-flex align-items-baseline bando-dati-info">
