@@ -1,20 +1,19 @@
 import React, { useState } from 'react'
 import { Card, Row, Col, Container} from 'design-react-kit/dist/design-react-kit';
-import 'moment/min/locales';
+import moment from 'moment/min/moment-with-locales';
 import Slider from 'react-slick';
 import cx from 'classnames';
 import { getCalendarResults } from '@italia/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import Item from '@italia/components/ItaliaTheme/Blocks/Calendar/Item'
-import moment from 'moment';
 import { useIntl } from 'react-intl';
-import 'moment/min/locales';
 
 const Body = ({ data, inEditMode, path }) => {
   const intl = useIntl();
   moment.locale(intl.locale);
 
   const [activePage, setActivePage] = useState(0);
+  const [monthName, setMonthName] = useState(getMonth);
 
   const querystringResults = useSelector(
     (state) => state.calendarSearch,
@@ -31,6 +30,16 @@ const Body = ({ data, inEditMode, path }) => {
     /* eslint-disable react-hooks/exhaustive-deps */
   }, []);
 
+  // Every time the page change check the name of the mounth
+  React.useEffect(() => {
+    setMonthName(getMonth);
+  },[activePage]);
+
+  // update the mounth name when the call to getCalendarResults is ended
+  React.useEffect(() => {
+    setMonthName(getMonth);
+  },[querystringResults]);
+
   const settings = {
     dots: true,
     arrows: false,
@@ -41,7 +50,7 @@ const Body = ({ data, inEditMode, path }) => {
     initialSlide: 0,
     dotsClass: 'slick-dots dot',
     lazyLoad: true,
-    afterChange: (current, next) => setActivePage({ activeSlide: next }),
+    afterChange: (current, next) => setActivePage(current),
     responsive: [
       {
         breakpoint: 1025,
@@ -71,8 +80,7 @@ const Body = ({ data, inEditMode, path }) => {
 
   const getMonth = () => {
     const startIndex = activePage * (data.b_size || 4);
-
-    const months = querystringResults?.items?.slice(startIndex, (data.b_size || 4)).reduce((total, date) => {
+    const months = querystringResults?.items?.slice(activePage, startIndex + (+data.b_size || 4)).reduce((total, date) => {
       const month = moment(date).format('MMMM');
       if(!total.includes(month)) {
         total.push(month);
@@ -95,7 +103,7 @@ const Body = ({ data, inEditMode, path }) => {
         )}
         <Card className={"card-bg"}>
           <div className="text-center calendar-header">
-            <h3>{getMonth()}</h3>
+            <h3>{monthName}</h3>
           </div>
           <div className="calendar-body">
             {!inEditMode ? 

@@ -34,7 +34,7 @@
 		.body{
 			height: 368px;
 			padding: 1rem 1rem 1rem 1rem;
-			overflow-y: scroll;
+			overflow-y: auto;
 			&.flex-1 {
 				flex: 1;
 			}
