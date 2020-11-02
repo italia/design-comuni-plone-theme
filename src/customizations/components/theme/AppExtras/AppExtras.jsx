@@ -1,7 +1,7 @@
 import React from 'React';
 import { connect } from 'react-redux';
 import ScrollToTop from '@italia/components/ItaliaTheme/ScrollToTop/ScrollToTop';
-import { SubsiteLoader } from 'volto-subsites';
+import { SubsiteLoader } from '@italia/addons/volto-subsites';
 
 const AppExtras = ({ pathname }) => {
   return (

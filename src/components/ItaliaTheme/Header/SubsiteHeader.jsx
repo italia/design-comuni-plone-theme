@@ -7,10 +7,10 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { flattenToAppURL, flattenHTMLToAppURL } from '@plone/volto/helpers';
-import { isSubsiteRoot } from 'volto-subsites';
+import { isSubsiteRoot } from '@italia/addons/volto-subsites';
 
 const SubsiteHeader = () => {
-  const subsite = useSelector((state) => state.subsite.data);
+  const subsite = useSelector(state => state.subsite?.data);
   const location = useLocation();
   let style = {};
   if (subsite?.image?.download) {

@@ -4,20 +4,14 @@
  */
 
 import React from 'react';
-import { connect } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { useIntl } from 'react-intl';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Nav, NavItem, NavLink } from 'design-react-kit/dist/design-react-kit';
 
 const ParentSiteMenu = () => {
-  const intl = useIntl();
-
-  const dropdownMenu = useSelector(
-    (state) => state.dropdownMenuNavItems?.result,
-  );
-  const subsite = useSelector((state) => state.subsite.data);
+  const dropdownMenu = useSelector(state => state.dropdownMenuNavItems?.result);
+  const subsite = useSelector(state => state.subsite?.data);
 
   let menu = null;
   if (subsite) {
@@ -28,7 +22,7 @@ const ParentSiteMenu = () => {
     while (i > 0) {
       let s = url_split.slice(0, i).join('/');
       s = s.length === 0 ? '/' : s;
-      dropdownMenu.map((m) => {
+      dropdownMenu.map(m => {
         if (m.rootPath === s) {
           menu = m;
           i = 0;
@@ -57,9 +51,4 @@ const ParentSiteMenu = () => {
   ) : null;
 };
 
-export default connect(
-  (state, props) => ({
-    subsite: state.content.subrequests?.subsite?.data,
-  }),
-  {},
-)(ParentSiteMenu);
+export default ParentSiteMenu;

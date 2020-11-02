@@ -35,7 +35,7 @@ const messages = defineMessages({
 const HeaderSlim = () => {
   const intl = useIntl();
 
-  const subsite = useSelector((state) => state.subsite.data);
+  const subsite = useSelector(state => state.subsite?.data);
 
   const parentSiteURL = subsite
     ? addAppURL('')
