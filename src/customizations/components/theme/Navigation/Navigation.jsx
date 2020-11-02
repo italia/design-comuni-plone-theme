@@ -26,21 +26,21 @@ import {
 const Navigation = ({ pathname }) => {
   const [collapseOpen, setCollapseOpen] = useState(false);
   const dispatch = useDispatch();
-  const subsite = useSelector((state) => state.subsite.data);
+  const subsite = useSelector(state => state.subsite?.data);
 
-  const items = useSelector((state) => state.dropdownMenuNavItems?.result);
+  const items = useSelector(state => state.dropdownMenuNavItems?.result);
   useEffect(() => {
     dispatch(getDropdownMenuNavitems());
   }, [dispatch]);
 
   const menu =
     items
-      .filter((menu) =>
+      .filter(menu =>
         (pathname?.length ? pathname : '/').match(new RegExp(menu.rootPath)),
       )
       .pop()?.items ?? [];
 
-  const getAnchorTarget = (nodeElement) => {
+  const getAnchorTarget = nodeElement => {
     if (nodeElement.nodeName === 'A') {
       return nodeElement;
     } else if (nodeElement.parentElement?.nodeName === 'A') {
@@ -51,7 +51,7 @@ const Navigation = ({ pathname }) => {
   };
 
   useEffect(() => {
-    const blocksClickListener = (e) => {
+    const blocksClickListener = e => {
       const menuLinks = [
         ...document.querySelectorAll('.menu-wrapper a:not([aria-haspopup])'),
       ];
@@ -93,7 +93,7 @@ const Navigation = ({ pathname }) => {
             <div className="menu-wrapper">
               <Nav navbar>
                 {menu
-                  ?.filter((item) => item.visible)
+                  ?.filter(item => item.visible)
                   ?.map((item, index) => (
                     <MegaMenu
                       item={item}

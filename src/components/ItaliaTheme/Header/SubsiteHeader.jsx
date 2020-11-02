@@ -10,7 +10,7 @@ import { flattenToAppURL, flattenHTMLToAppURL } from '@plone/volto/helpers';
 import { isSubsiteRoot } from '@italia/addons/volto-subsites';
 
 const SubsiteHeader = () => {
-  const subsite = useSelector(state => state.subsite.data);
+  const subsite = useSelector(state => state.subsite?.data);
   const location = useLocation();
   let style = {};
   if (subsite?.image?.download) {
