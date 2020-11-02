@@ -29,16 +29,22 @@ export LanguageSelector from '@italia/components/ItaliaTheme/LanguageSelector/La
 
 export HeaderSlim from '@italia/components/ItaliaTheme/Header/HeaderSlim';
 export HeaderCenter from '@italia/components/ItaliaTheme/Header/HeaderCenter';
+export SocialHeader from '@italia/components/ItaliaTheme/Header/SocialHeader';
+export SubsiteSocialHeader from '@italia/components/ItaliaTheme/Header/SubsiteSocialHeader';
+export SubsiteHeader from '@italia/components/ItaliaTheme/Header/SubsiteHeader';
+export ParentSiteMenu from '@italia/components/ItaliaTheme/Header/ParentSiteMenu';
 export SearchModal from '@italia/components/ItaliaTheme/Header/SearchModal';
 export SearchSections from '@italia/components/ItaliaTheme/Search/SearchSections';
 export SearchTopics from '@italia/components/ItaliaTheme/Search/SearchTopics';
 
 export MegaMenu from '@italia/components/ItaliaTheme/MegaMenu/MegaMenu';
 export MenuSecondary from '@italia/components/ItaliaTheme/MenuSecondary/MenuSecondary';
+export SubsiteMenuSecondary from '@italia/components/ItaliaTheme/MenuSecondary/SubsiteMenuSecondary';
 export FooterMain from '@italia/components/ItaliaTheme/Footer/FooterMain';
 export FooterInfos from '@italia/components/ItaliaTheme/Footer/FooterInfos';
 export FooterNavigation from '@italia/components/ItaliaTheme/Footer/FooterNavigation';
 export FooterSmall from '@italia/components/ItaliaTheme/Footer/FooterSmall';
+export SubsiteFooter from '@italia/components/ItaliaTheme/Footer/SubsiteFooter';
 export Pagination from '@italia/components/ItaliaTheme/Pagination/Pagination';
 
 export SectionIcon from '@italia/components/ItaliaTheme/Icons/SectionIcon';

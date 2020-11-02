@@ -19,15 +19,15 @@
   .card-body a:link {
     text-decoration: none;
   }
-  
+
   .card-body a:visited {
     text-decoration: none;
   }
-  
+
   .card-body a:hover {
     text-decoration: underline;
   }
-  
+
   .card-body a:active {
     text-decoration: underline;
   }
@@ -36,7 +36,7 @@
     content: none;
   }
 
-  .card.border-left-card:before{
+  .card.border-left-card:before {
     content: '';
     display: block;
     position: absolute;
@@ -48,7 +48,7 @@
     background: $secondary;
     @extend .rounded-left;
   }
-  
+
   .card .card-body .category-top .data:before {
     content: none;
   }
@@ -61,7 +61,7 @@
     img {
       width: 80px;
       height: 80px;
-      @extend .rounded-circle; 
+      @extend .rounded-circle;
       margin: 0 auto;
     }
   }
@@ -74,14 +74,14 @@
   }
 
   .card .card-body .card-text {
-    font-family: "Titillium Web",Geneva,Tahoma,sans-serif;
-    font-size: .889em;
+    font-family: $font-family-sans-serif;
+    font-size: 0.889em;
     font-weight: 400;
   }
 
   .description {
     font-weight: 400;
-    font-family: "Titillium Web",Geneva,Tahoma,sans-serif;
+    font-family: $font-family-sans-serif;
   }
 }
 

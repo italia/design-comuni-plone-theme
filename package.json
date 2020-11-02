@@ -10,7 +10,8 @@
     "src/addons/volto-rss-block",
     "src/addons/volto-venue",
     "src/addons/volto-subblocks",
-    "src/addons/volto-dropdownmenu"
+    "src/addons/volto-dropdownmenu",
+    "src/addons/volto-subsites"
   ],
   "addons": [
     "volto-cookie-banner",
@@ -18,7 +19,8 @@
     "volto-rss-block",
     "volto-venue",
     "volto-subblocks",
-    "volto-dropdownmenu"
+    "volto-dropdownmenu",
+    "volto-subsites"
   ],
   "scripts": {
     "start": "razzle start",
@@ -53,12 +55,14 @@
       "volto-cookie-banner/(.*)$": "<rootDir>/src/addons/volto-cookie-banner/src/$1",
       "volto-multilingual-widget/(.*)$": "<rootDir>/src/addons/volto-multilingual-widget/src/$1",
       "volto-dropdownmenu/(.*)$": "<rootDir>/src/addons/volto-dropdownmenu/src/$1",
-      "~/(.*)$": "<rootDir>/src/$1"
+      "~/(.*)$": "<rootDir>/src/$1",
+      "volto-subsites/(.*)$": "<rootDir>/src/addons/volto-subsites/src/$1"
     },
     "testMatch": [
       "**/__tests__/**/*.[jt]s?(x)",
       "**/?(*.)+(spec|test).[jt]s?(x)",
-      "!**/src/addons/volto/**/*"
+      "!**/src/addons/volto/**/*",
+      "!**/src/addons/**/*"
     ],
     "coverageThreshold": {
       "global": {
@@ -133,12 +137,13 @@
     "volto-multilingual-widget": "collective/volto-multilingual-widget#v1.0.1",
     "volto-rss-block": "redturtle/volto-rss-block#v1.0.0",
     "volto-subblocks": "collective/volto-subblocks#v1.0.0",
-    "volto-venue": "collective/volto-venue#v2.0.0"
+    "volto-venue": "collective/volto-venue#v2.0.0",
+    "volto-subsites": "collective/volto-subsites#v1.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.11.1",
     "eslint-plugin-prettier": "3.1.3",
-    "mrs-developer": "1.1.6",
+    "mrs-developer": "^1.1.6",
     "node-sass": "4.13.1",
     "prettier": "2.0.5",
     "razzle-plugin-scss": "3.1.5",

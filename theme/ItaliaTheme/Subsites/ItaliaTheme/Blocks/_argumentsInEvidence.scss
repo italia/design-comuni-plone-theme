@@ -1,0 +1,9 @@
+.argumentInEvidence {
+  &::before {
+    background-color: $subsite-primary;
+  }
+
+  h2 {
+    color: $subsite-primary-text;
+  }
+}

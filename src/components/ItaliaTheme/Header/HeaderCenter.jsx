@@ -5,23 +5,25 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
 import {
   Header,
   HeaderContent,
   HeaderRightZone,
-  HeaderSocialsZone,
   Icon,
 } from 'design-react-kit/dist/design-react-kit';
 
-import { SearchModal, Logo } from '@italia/components/ItaliaTheme';
+import { flattenToAppURL } from '@plone/volto/helpers';
+import {
+  SearchModal,
+  Logo,
+  SocialHeader,
+  SubsiteSocialHeader,
+} from '@italia/components/ItaliaTheme';
 import { siteConfig } from '~/config';
 
 const messages = defineMessages({
-  followUs: {
-    id: 'Seguici su',
-    defaultMessage: 'Seguici su',
-  },
   search: {
     id: 'Cerca',
     defaultMessage: 'Cerca',
@@ -32,37 +34,27 @@ const HeaderCenter = () => {
   const intl = useIntl();
   const [showSearchModal, setShowSearchModal] = useState(false);
 
+  const subsite = useSelector((state) => state.subsite.data);
+
   return (
     <Header small={false} theme="" type="center">
       <HeaderContent>
         <div className="it-brand-wrapper">
-          <Link to="/">
+          <Link to={subsite?.['@id'] ? flattenToAppURL(subsite['@id']) : '/'}>
             <Logo />
             <div className="it-brand-text">
-              <h2 className="no_toc">{siteConfig.properties.siteTitle}</h2>
+              <h2 className="no_toc">
+                {subsite?.title || siteConfig.properties.siteTitle}
+              </h2>
               <h3 className="no_toc d-none d-md-block">
-                {siteConfig.properties.siteSubtitle}
+                {subsite?.description || siteConfig.properties.siteSubtitle}
               </h3>
             </div>
           </Link>
         </div>
         <HeaderRightZone>
-          <HeaderSocialsZone label={intl.formatMessage(messages.followUs)}>
-            <ul>
-              {siteConfig.socialSettings?.map((social, idx) => (
-                <li key={idx}>
-                  <a
-                    title={social.title}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Icon color="" icon={social.icon} padding={false} size="" />
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </HeaderSocialsZone>
+          {!subsite ? <SocialHeader /> : <SubsiteSocialHeader />}
+
           <div className="it-search-wrapper">
             <span className="d-none d-md-block">
               {intl.formatMessage(messages.search)}

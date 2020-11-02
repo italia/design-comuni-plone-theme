@@ -1,0 +1,10 @@
+.block.newsHome {
+  .card-title {
+    a {
+      &:hover,
+      &:focus {
+        color: $subsite-link-color;
+      }
+    }
+  }
+}

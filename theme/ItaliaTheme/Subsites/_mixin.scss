@@ -1,0 +1,49 @@
+@mixin define-subsite(
+  $subsite-style,
+  $subsite-primary: $primary,
+  $subsite-primary-text: $primary-text,
+  $subsite-secondary: $secondary,
+  $subsite-secondary-text: $secondary-text,
+  $subsite-tertiary: $tertiary,
+  $subsite-tertiary-text: $tertiary-text,
+  $subsite-link-color: $link-color
+) {
+  body.subsite-#{$subsite-style} {
+    @import 'bootstrap-italia/custom/header';
+    @import 'bootstrap-italia/custom/headercenter';
+    @import 'bootstrap-italia/brand-text';
+    @import 'bootstrap-italia/custom/headernavbar';
+    @import 'bootstrap-italia/custom/navigation';
+    @import 'bootstrap-italia/custom/megamenu';
+    @import 'bootstrap-italia/custom/header';
+    @import 'bootstrap-italia/custom/buttons';
+    @import 'bootstrap-italia/custom/chips';
+    @import 'bootstrap-italia/custom/card';
+    @import 'bootstrap-italia/custom/dropdown';
+    @import 'bootstrap-italia/custom/linklist';
+    @import 'bootstrap-italia/custom/navscroll';
+    @import 'ItaliaTheme/Components/subsiteFooter';
+    @import 'ItaliaTheme/Blocks/cardWithImageAndInEvidence';
+    @import 'ItaliaTheme/Blocks/completeBlockLinktemplate';
+    @import 'ItaliaTheme/Blocks/ribbonCardTemplate';
+    @import 'ItaliaTheme/Blocks/newshome';
+    @import 'ItaliaTheme/Blocks/argumentsInEvidence';
+    @import 'ItaliaTheme/Blocks/searchSections';
+    @import 'ItaliaTheme/Views/common';
+    @import 'ItaliaTheme/common';
+    @import 'homepage';
+
+    a,
+    &.cms-ui .public-ui a {
+      color: $subsite-link-color;
+
+      &:hover {
+        color: color-hover($subsite-link-color);
+      }
+    }
+
+    .icon-primary {
+      fill: $subsite-primary !important;
+    }
+  }
+}

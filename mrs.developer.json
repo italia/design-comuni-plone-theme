@@ -28,5 +28,8 @@
     "package": "@italia/addons/volto-dropdownmenu",
     "path": "src",
     "url": "git@github.com:collective/volto-dropdownmenu.git"
+  },
+  "volto-subsites": {
+    "url": "git@github.com:collective/volto-subsites.git"
   }
 }

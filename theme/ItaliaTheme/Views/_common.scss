@@ -240,6 +240,11 @@ div.sticky-wrapper {
     height: 24px;
     color: $tertiary;
   }
+
+  svg {
+    fill: $tertiary;
+    color: $tertiary;
+  }
 }
 
 .wide-image:not(.row-full-width) {

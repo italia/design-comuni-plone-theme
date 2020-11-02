@@ -7,7 +7,11 @@ import React, { Component } from 'react';
 
 // import PropTypes from 'prop-types';
 // import { isCmsUi } from '@plone/volto/helpers';
-import { FooterMain, FooterSmall } from '@italia/components/ItaliaTheme/';
+import {
+  FooterMain,
+  FooterSmall,
+  SubsiteFooter,
+} from '@italia/components/ItaliaTheme/';
 import { CookieBanner } from '@italia/addons/volto-cookie-banner';
 
 /**
@@ -40,11 +44,14 @@ class Footer extends Component {
   render() {
     const isCmsUI = false; //isCmsUi(this.props.pathname);
     let content = (
-      <footer className="it-footer">
-        <FooterMain />
-        <FooterSmall />
-        {__CLIENT__ && <CookieBanner />}
-      </footer>
+      <>
+        <SubsiteFooter />
+        <footer className="it-footer">
+          <FooterMain />
+          <FooterSmall />
+          {__CLIENT__ && <CookieBanner />}
+        </footer>
+      </>
     );
     return isCmsUI ? <div className="public-ui">{content}</div> : content;
   }

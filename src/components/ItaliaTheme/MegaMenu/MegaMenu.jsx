@@ -112,7 +112,7 @@ const MegaMenu = ({ item, pathname }) => {
   }, []);
 
   if (item.mode === 'simpleLink') {
-    return (
+    return item.linkUrl?.length > 0 ? (
       <NavItem tag="li" active={isItemActive}>
         <NavLink
           to={
@@ -129,7 +129,7 @@ const MegaMenu = ({ item, pathname }) => {
           )}
         </NavLink>
       </NavItem>
-    );
+    ) : null;
   } else {
     //megamenu
     let hasBlocks = hasBlocksData(item);

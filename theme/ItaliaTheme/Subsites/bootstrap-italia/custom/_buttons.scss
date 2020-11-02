@@ -1,0 +1,47 @@
+.btn-primary {
+  @include button-variant(
+    $subsite-primary,
+    $subsite-primary-text,
+    lighten($subsite-primary, 7.5%),
+    darken($subsite-primary-text, 10%),
+    lighten($subsite-primary, 10%),
+    darken($subsite-primary-text, 12.5%)
+  );
+  color: $subsite-primary-text;
+  @include hover {
+    color: darken($subsite-primary-text, 10%);
+  }
+  &.disabled,
+  &:disabled {
+    color: darken($subsite-primary-text, 10%);
+  }
+}
+
+.btn-secondary {
+  @include button-variant(
+    $subsite-secondary,
+    $subsite-secondary-text,
+    lighten($subsite-secondary, 7.5%),
+    darken($subsite-secondary-text, 10%),
+    lighten($subsite-secondary, 10%),
+    darken($subsite-secondary-text, 12.5%)
+  );
+  color: $subsite-secondary-text;
+  @include hover {
+    color: darken($subsite-secondary-text, 10%);
+  }
+  &.disabled,
+  &:disabled {
+    color: darken($subsite-secondary-text, 10%);
+  }
+}
+
+.btn-outline-primary {
+  @include button-outline-variant($subsite-primary);
+}
+.btn-outline-secondary {
+  @include button-outline-variant($subsite-secondary);
+}
+.btn-outline-tertiary {
+  @include button-outline-variant($subsite-tertiary);
+}

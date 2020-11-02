@@ -1,0 +1,13 @@
+// flag
+.flag-icon {
+  background: $subsite-primary;
+}
+
+// read more text
+a.read-more {
+  color: $subsite-link-color;
+
+  .icon {
+    fill: $subsite-link-color;
+  }
+}
