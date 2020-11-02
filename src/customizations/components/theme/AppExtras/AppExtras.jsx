@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import { connect } from 'react-redux';
 import ScrollToTop from '@italia/components/ItaliaTheme/ScrollToTop/ScrollToTop';
 import { SubsiteLoader } from '@italia/addons/volto-subsites';
