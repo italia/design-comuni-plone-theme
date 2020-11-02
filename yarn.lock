@@ -17899,7 +17899,7 @@ volto-subblocks@collective/volto-subblocks#v1.0.0:
 
 volto-subsites@collective/volto-subsites:
   version "0.1.0"
-  resolved "git+ssh://git@github.com/collective/volto-subsites.git#0476b1d2664a381955635bbe99fcb0b0f463e8a2"
+  resolved "git+ssh://git@github.com/collective/volto-subsites.git#630b835d10ecf84e733f7132663d7c01d7e6a61a"
 
 volto-venue@collective/volto-venue#v2.0.0:
   version "2.0.0"
