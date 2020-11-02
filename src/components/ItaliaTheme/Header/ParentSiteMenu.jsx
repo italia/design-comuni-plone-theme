@@ -17,9 +17,7 @@ const ParentSiteMenu = () => {
   const dropdownMenu = useSelector(
     (state) => state.dropdownMenuNavItems?.result,
   );
-  const subsite = useSelector(
-    (state) => state.content?.subrequests?.subsite?.data,
-  );
+  const subsite = useSelector((state) => state.subsite.data);
 
   let menu = null;
   if (subsite) {

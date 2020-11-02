@@ -270,7 +270,7 @@ const customBlocks = {
 
 export const settings = {
   ...config.settings,
-  devProxyToApiPath: 'http://localhost:9080/Plone',
+  devProxyToApiPath: 'http://localhost:8080/Plone',
   richTextEditorInlineToolbarButtons: [
     AlignCenterButton,
     Separator,

@@ -8,9 +8,7 @@ import { useSelector } from 'react-redux';
 import { flattenHTMLToAppURL } from '@plone/volto/helpers';
 
 const SubsiteFooter = () => {
-  const subsite = useSelector(
-    (state) => state.content?.subrequests?.subsite?.data,
-  );
+  const subsite = useSelector((state) => state.subsite.data);
 
   return subsite && subsite.subsite_footer?.data ? (
     <div className="subsite-footer ">

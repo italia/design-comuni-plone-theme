@@ -26,9 +26,7 @@ import {
 const Navigation = ({ pathname }) => {
   const [collapseOpen, setCollapseOpen] = useState(false);
   const dispatch = useDispatch();
-  const subsite = useSelector(
-    (state) => state.content?.subrequests?.subsite?.data,
-  );
+  const subsite = useSelector((state) => state.subsite.data);
 
   const items = useSelector((state) => state.dropdownMenuNavItems?.result);
   useEffect(() => {

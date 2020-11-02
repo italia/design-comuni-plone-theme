@@ -34,9 +34,7 @@ const HeaderCenter = () => {
   const intl = useIntl();
   const [showSearchModal, setShowSearchModal] = useState(false);
 
-  const subsite = useSelector(
-    (state) => state.content?.subrequests?.subsite?.data,
-  );
+  const subsite = useSelector((state) => state.subsite.data);
 
   return (
     <Header small={false} theme="" type="center">
