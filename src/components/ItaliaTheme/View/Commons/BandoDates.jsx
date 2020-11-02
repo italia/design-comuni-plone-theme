@@ -87,8 +87,8 @@ const BandoDates = ({ content }) => {
               >
                 <CardBody tag="div" className={'card-body'}>
                   <CardTitle tag="h5">
-                    {`${moment(content.scadenza_domande_bando).format(
-                      'hh:mm',
+                    {`${moment.utc(content.scadenza_domande_bando).local().format(
+                      'HH:mm',
                     )} - `}
                     {intl.formatMessage(messages.scadenza_domande_bando)}
                   </CardTitle>
@@ -116,7 +116,7 @@ const BandoDates = ({ content }) => {
               >
                 <CardBody tag="div" className={'card-body'}>
                   <CardTitle tag="h5">
-                    {`${moment(content.scadenza_bando).format('hh:mm')} - `}
+                    {`${moment.utc(content.scadenza_bando).local().format('HH:mm')} - `}
                     {intl.formatMessage(messages.scadenza_bando)}
                   </CardTitle>
                 </CardBody>
