@@ -35,11 +35,9 @@ const messages = defineMessages({
 const HeaderSlim = () => {
   const intl = useIntl();
 
-  const subsite = useSelector(state => state.subsite?.data);
+  const subsite = useSelector((state) => state.subsite?.data);
 
-  const parentSiteURL = subsite
-    ? addAppURL('')
-    : siteConfig.properties.parentSiteURL;
+  const parentSiteURL = subsite ? '/' : siteConfig.properties.parentSiteURL;
   const parentSiteTile = subsite
     ? siteConfig.properties.subsiteParentSiteTitle
     : siteConfig.properties.parentSiteTitle;
