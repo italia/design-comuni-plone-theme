@@ -31,7 +31,7 @@ const DocRow = ({ doc }) => {
             {doc.items?.length > 1 && ` - ${doc.items[0]?.title}`}
           </Link>
         </div>
-        {(doc.items?.length > 0 || doc.items?.length === 1) && (
+        {doc.items?.length === 1 && (
           <div className="downloads">
             <DownloadFileFormat file={doc.items[0]?.file_principale} />
             <DownloadFileFormat file={doc.items[0]?.formato_alternativo_1} />
@@ -41,18 +41,16 @@ const DocRow = ({ doc }) => {
       </div>
       {doc.items?.length > 1 && (
         <>
-          {doc.items
-            .filter((doc, index) => index > 0)
-            .map((modulo) => (
-              <div class="doc modulo">
-                <div className="title">{modulo.title}</div>
-                <div className="downloads">
-                  <DownloadFileFormat file={modulo?.file_principale} />
-                  <DownloadFileFormat file={modulo?.formato_alternativo_1} />
-                  <DownloadFileFormat file={modulo?.formato_alternativo_2} />
-                </div>
+          {doc.items.map((modulo) => (
+            <div class="doc modulo">
+              <div className="title">{modulo.title}</div>
+              <div className="downloads">
+                <DownloadFileFormat file={modulo?.file_principale} />
+                <DownloadFileFormat file={modulo?.formato_alternativo_1} />
+                <DownloadFileFormat file={modulo?.formato_alternativo_2} />
               </div>
-            ))}
+            </div>
+          ))}
         </>
       )}
     </div>
