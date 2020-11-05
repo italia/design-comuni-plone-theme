@@ -5,18 +5,23 @@
 
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { defineMessages, useIntl } from 'react-intl';
 import { getContent, resetContent } from '@plone/volto/actions';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import {
   PageHeader,
   RelatedItems,
   PagePlaceholderAfterContent,
   TextOrBlocks,
-  DownloadFileFormat,
 } from '@italia/components/ItaliaTheme/View';
-import cx from 'classnames';
+
 import DocRow from './DocRow';
+
+const messages = defineMessages({
+  formati_scaricabili: {
+    id: 'cartellamodulistica_formati_scaricabili',
+    defaultMessage: 'Formati scaricabili',
+  },
+});
 
 /**
  * CartellaModulisticaView view component class.
@@ -29,6 +34,7 @@ const CartellaModulisticaView = ({ content }) => {
   const modulistica_key = 'modulistica';
   const locationContent = useSelector((state) => state.content.subrequests);
   const dispatch = useDispatch();
+  const intl = useIntl();
   useEffect(() => {
     if (
       content?.items?.length > 0 &&
@@ -55,15 +61,22 @@ const CartellaModulisticaView = ({ content }) => {
               return section['@type'] === 'Document' ? (
                 <div className="documents-section">
                   <h3>{section.title}</h3>
+
                   {Object.keys(section.blocks)?.length > 0 && (
                     <TextOrBlocks content={section} />
                   )}
                   {section.items?.length > 0 && (
-                    <>
+                    <div className="items">
+                      <div className="items-header">
+                        <div></div>
+                        <div className="downloads">
+                          {intl.formatMessage(messages.formati_scaricabili)}
+                        </div>
+                      </div>
                       {section.items.map((doc) => (
                         <DocRow doc={doc} />
                       ))}
-                    </>
+                    </div>
                   )}
                 </div>
               ) : (

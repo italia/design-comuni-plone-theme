@@ -31,7 +31,7 @@ const DocRow = ({ doc }) => {
             {doc.items?.length > 1 && ` - ${doc.items[0]?.title}`}
           </Link>
         </div>
-        {doc.items?.length > 0 && (
+        {(doc.items?.length > 0 || doc.items?.length === 1) && (
           <div className="downloads">
             <DownloadFileFormat file={doc.items[0]?.file_principale} />
             <DownloadFileFormat file={doc.items[0]?.formato_alternativo_1} />
