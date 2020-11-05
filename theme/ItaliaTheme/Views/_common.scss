@@ -261,3 +261,9 @@ div.sticky-wrapper {
     }
   }
 }
+
+.it-page-sections-container {
+  & > article.mt-5:first-of-type {
+    margin-top: 0 !important;
+  }
+}

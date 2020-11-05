@@ -29,9 +29,17 @@ const messages = defineMessages({
     id: 'documento_descrizione',
     defaultMessage: 'Descrizione',
   },
+  documenti: {
+    id: 'documento_documentii',
+    defaultMessage: 'Documenti',
+  },
   ufficio_responsabile: {
     id: 'documento_ufficio_responsabile',
     defaultMessage: 'Ufficio responsabile',
+  },
+  area_responsabile: {
+    id: 'documento_area_responsabile',
+    defaultMessage: 'Area responsabile',
   },
   autori: {
     id: 'documento_autori',
@@ -106,40 +114,14 @@ const DocumentoView = ({ content, location }) => {
             <RichTextArticle
               tag_id={'text-body'}
               title={intl.formatMessage(messages.descrizione)}
-              show_title={false}
+              show_title={true}
               content={content.descrizione_estesa?.data}
             >
-              <Modules content={content} />
-
-              {(content.ufficio_responsabile?.length > 0 ||
-                content.area_responsabile.length > 0) && (
-                <RichTextArticle
-                  title={intl.formatMessage(messages.ufficio_responsabile)}
-                >
-                  <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                    {content.ufficio_responsabile?.length > 0 && (
-                      <>
-                        {content.ufficio_responsabile.map((item, i) => (
-                          <OfficeCard key={item['@id']} office={item} />
-                        ))}
-                      </>
-                    )}
-                    {content.area_responsabile?.length > 0 && (
-                      <>
-                        {content.area_responsabile.map((item, i) => (
-                          <OfficeCard key={item['@id']} office={item} />
-                        ))}
-                      </>
-                    )}
-                  </div>
-
-                  <Gallery
-                    content={content}
-                    folder_name={'multimedia'}
-                    className="mt-5"
-                  />
-                </RichTextArticle>
-              )}
+              <Gallery
+                content={content}
+                folder_name={'multimedia'}
+                className="mt-5"
+              />
 
               {content.autori?.length > 0 && (
                 <CuredBy
@@ -147,6 +129,7 @@ const DocumentoView = ({ content, location }) => {
                   title={intl.formatMessage(messages.autori)}
                 />
               )}
+
               {content.licenza_distribuzione?.length > 0 && (
                 <div className="mt-5">
                   <h4>{intl.formatMessage(messages.licenza_distribuzione)}</h4>
@@ -154,6 +137,49 @@ const DocumentoView = ({ content, location }) => {
                 </div>
               )}
             </RichTextArticle>
+
+            {/* DOCUMENTI */}
+            <Modules
+              content={content}
+              title={intl.formatMessage(messages.documenti)}
+              id="elenco-documenti"
+            />
+
+            {/* UFFICIO RESPONSABILE */}
+            {content.ufficio_responsabile?.length > 0 && (
+              <RichTextArticle
+                tag_id="ufficio_responsabile"
+                title={intl.formatMessage(messages.ufficio_responsabile)}
+              >
+                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                  {content.ufficio_responsabile?.length > 0 && (
+                    <>
+                      {content.ufficio_responsabile.map((item, i) => (
+                        <OfficeCard key={item['@id']} office={item} />
+                      ))}
+                    </>
+                  )}
+                </div>
+              </RichTextArticle>
+            )}
+
+            {/* AREA RESPONSABILE */}
+            {content.area_responsabile.length > 0 && (
+              <RichTextArticle
+                tag_id="area_responsabile"
+                title={intl.formatMessage(messages.area_responsabile)}
+              >
+                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                  {content.area_responsabile?.length > 0 && (
+                    <>
+                      {content.area_responsabile.map((item, i) => (
+                        <OfficeCard key={item['@id']} office={item} />
+                      ))}
+                    </>
+                  )}
+                </div>
+              </RichTextArticle>
+            )}
 
             {/* ACCEDERE AL SERVIZIO */}
             {content?.servizi_collegati?.length > 0 && (
@@ -180,6 +206,24 @@ const DocumentoView = ({ content, location }) => {
               </RichTextArticle>
             )}
 
+            {/* DOCUMENTI ALLEGATI */}
+            {content?.documenti_allegati?.length > 0 && (
+              <RichTextArticle
+                tag_id={'documenti-allegati'}
+                title={intl.formatMessage(messages.documenti_allegati)}
+              >
+                <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                  {content.documenti_allegati.map((item, i) => (
+                    <GenericCard
+                      key={item['@id']}
+                      item={item}
+                      show_icon="it-clip"
+                    />
+                  ))}
+                </div>
+              </RichTextArticle>
+            )}
+
             {/* ULTERIORI INFORMAZIONI */}
             <Metadata content={content}>
               {content?.ulteriori_informazioni?.data?.replace(
@@ -198,22 +242,6 @@ const DocumentoView = ({ content, location }) => {
                     serif={false}
                     content={content.riferimenti_normativi.data}
                   />
-                </div>
-              )}
-
-              {/* DOCUMENTI ALLEGATI */}
-              {content?.documenti_allegati?.length > 0 && (
-                <div className="mt-5">
-                  <h5>{intl.formatMessage(messages.documenti_allegati)}</h5>
-                  <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                    {content.documenti_allegati.map((item, i) => (
-                      <GenericCard
-                        key={item['@id']}
-                        item={item}
-                        image_field={'immagine'}
-                      />
-                    ))}
-                  </div>
                 </div>
               )}
             </Metadata>

@@ -17,7 +17,7 @@ import searchIcon from 'bootstrap-italia/src/svg/it-search.svg';
 import NewsHomeView from '@italia/components/ItaliaTheme/Blocks/NewsHome/View';
 import NewsHomeEdit from '@italia/components/ItaliaTheme/Blocks/NewsHome/Edit';
 import noteSvg from 'bootstrap-italia/src/svg/it-note.svg';
-import calendarSvg from 'bootstrap-italia/src/svg/it-calendar.svg'
+import calendarSvg from 'bootstrap-italia/src/svg/it-calendar.svg';
 
 import alertSVG from '@plone/volto/icons/alert.svg';
 import AlertView from '@italia/components/ItaliaTheme/Blocks/Alert/View';

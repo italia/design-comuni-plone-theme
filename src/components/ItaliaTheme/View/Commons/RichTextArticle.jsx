@@ -25,7 +25,7 @@ const RichTextArticle = ({
     <article
       id={tag_id}
       className="it-page-section anchor-offset mt-5"
-      menu_title={!show_title && title ? title : ''}
+      menu_title={title ? title : ''}
     >
       {title && show_title ? (
         title_size === 'h5' ? (
