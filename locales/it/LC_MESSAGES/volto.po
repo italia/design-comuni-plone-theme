@@ -903,7 +903,7 @@ msgstr "Latitudine"
 #: components/ItaliaTheme/View/UOView
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "legami_altre_strutture"
-msgstr "Legami con altre strutture"
+msgstr "Servizi o uffici di riferimento"
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "link"

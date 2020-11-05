@@ -46,7 +46,7 @@ const messages = defineMessages({
   },
   legami_altre_strutture: {
     id: 'legami_altre_strutture',
-    defaultMessage: 'Legami con altre strutture',
+    defaultMessage: 'Servizi o uffici di riferimento',
   },
   assessore_riferimento: {
     id: 'assessore_riferimento',
