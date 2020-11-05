@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-10-22T07:49:05.577Z\n"
+"POT-Creation-Date: 2020-11-05T13:38:08.888Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -48,6 +48,12 @@ msgstr ""
 msgid "Aspetto"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+#: components/ItaliaTheme/Blocks/DeadlinesCalendar/ListingSidebar
+# defaultMessage: Block style
+msgid "Block style"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
 # defaultMessage: Vedi
 msgid "Card detail label"
@@ -83,6 +89,12 @@ msgstr ""
 #: components/ItaliaTheme/View/EventoView/EventoView
 # defaultMessage: Contatti
 msgid "Contatti"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+#: components/ItaliaTheme/Blocks/DeadlinesCalendar/ListingSidebar
+# defaultMessage: Content
+msgid "Content"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/SideMenu
@@ -137,6 +149,12 @@ msgstr ""
 msgid "L'evento non si terrà nelle seguenti date"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+#: components/ItaliaTheme/Blocks/DeadlinesCalendar/ListingSidebar
+# defaultMessage: Link more
+msgid "Link more"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
 # defaultMessage: Link a
 msgid "Link to"
@@ -152,6 +170,12 @@ msgstr ""
 msgid "Linkto title"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+#: components/ItaliaTheme/Blocks/DeadlinesCalendar/ListingSidebar
+# defaultMessage: Listing
+msgid "Listing"
+msgstr ""
+
 #: components/ItaliaTheme/Footer/FooterSmall
 # defaultMessage: Mappa del sito
 msgid "Mappa del sito"
@@ -163,6 +187,8 @@ msgstr ""
 msgid "Menu selezionato"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+#: components/ItaliaTheme/Blocks/DeadlinesCalendar/ListingSidebar
 #: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
@@ -245,7 +271,7 @@ msgstr ""
 msgid "SearchServicesTitle"
 msgstr ""
 
-#: components/ItaliaTheme/Header/HeaderCenter
+#: components/ItaliaTheme/Header/SocialHeader
 # defaultMessage: Seguici su
 msgid "Seguici su"
 msgstr ""
@@ -291,6 +317,8 @@ msgstr ""
 msgid "Title placeholder"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+#: components/ItaliaTheme/Blocks/DeadlinesCalendar/ListingSidebar
 #: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
@@ -327,7 +355,6 @@ msgid "URP"
 msgstr ""
 
 #: addons/volto-dropdownmenu/src/components/DropdownMenu
-#: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
 #: components/ItaliaTheme/View/Commons/Blocks
 #: components/ItaliaTheme/View/ModulisticaView/ModulisticaView
 #: components/ItaliaTheme/View/PageView
@@ -363,6 +390,11 @@ msgstr ""
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 # defaultMessage: Vedi tutto
 msgid "Vedi tutto"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/VenuesSmall
+# defaultMessage: Luoghi
+msgid "VenuesSmall"
 msgstr ""
 
 #: components/ItaliaTheme/View/VenueView
@@ -404,6 +436,11 @@ msgstr ""
 msgid "allTopics"
 msgstr ""
 
+#: components/ItaliaTheme/View/BandoView/BandoView
+# defaultMessage: Documenti allegati
+msgid "allegati"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 # defaultMessage: Altre cariche
@@ -427,6 +464,11 @@ msgstr ""
 #: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 # defaultMessage: Area di appartenenza
 msgid "area_appartenenza"
+msgstr ""
+
+#: components/ItaliaTheme/View/BandoView/BandoView
+# defaultMessage: Area responsabile
+msgid "area_responsabile"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
@@ -506,6 +548,11 @@ msgstr ""
 msgid "cardImageEnable"
 msgstr ""
 
+#: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
+# defaultMessage: Formati scaricabili
+msgid "cartellamodulistica_formati_scaricabili"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 # defaultMessage: Casi particolari
@@ -518,7 +565,23 @@ msgstr ""
 msgid "chi_puo_presentare"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/ContactLink
+# defaultMessage: Chiama il numero
+msgid "chiama_il_numero"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/ContactLink
+# defaultMessage: Contatta il numero di fax
+msgid "chiama_il_numero_fax"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/BandoDates
+# defaultMessage: Chiusura del procedimento
+msgid "chiusura_procedimento_bando"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/EventLocation
+#: components/ItaliaTheme/View/Commons/LocationItem
 #: components/ItaliaTheme/View/VenueView
 #: components/ItaliaTheme/View/VenueView/VenueView
 # defaultMessage: Circoscrizione
@@ -533,6 +596,12 @@ msgstr ""
 #: components/ItaliaTheme/Header/SearchModal
 # defaultMessage: Chiudi cerca
 msgid "closeSearch"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
+#: components/ItaliaTheme/View/Commons/PageHeader
+# defaultMessage: Scaduto
+msgid "closed"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView
@@ -691,6 +760,7 @@ msgstr ""
 msgid "desc"
 msgstr ""
 
+#: components/ItaliaTheme/View/BandoView/BandoView
 #: components/ItaliaTheme/View/VenueView
 #: components/ItaliaTheme/View/VenueView/VenueView
 # defaultMessage: Descrizione
@@ -703,6 +773,11 @@ msgstr ""
 msgid "descrizione_estesa"
 msgstr ""
 
+#: components/ItaliaTheme/View/BandoView/BandoView
+# defaultMessage: Destinatari del bando
+msgid "destinatari"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 # defaultMessage: Testo per il link al dettaglio
@@ -710,7 +785,9 @@ msgid "detail_link_label"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/EventLocation
+#: components/ItaliaTheme/View/Commons/LocationItem
 #: components/ItaliaTheme/View/Commons/Locations
+#: components/ItaliaTheme/View/Commons/VenuesSmall
 # defaultMessage: Maggiori dettagli
 msgid "details"
 msgstr ""
@@ -742,6 +819,11 @@ msgid "documento_accedere_al_servizio"
 msgstr ""
 
 #: components/ItaliaTheme/View/DocumentoView/DocumentoView
+# defaultMessage: Area responsabile
+msgid "documento_area_responsabile"
+msgstr ""
+
+#: components/ItaliaTheme/View/DocumentoView/DocumentoView
 # defaultMessage: Autori
 msgid "documento_autori"
 msgstr ""
@@ -752,9 +834,19 @@ msgstr ""
 msgid "documento_descrizione"
 msgstr ""
 
+#: components/ItaliaTheme/View/DocumentoView/Modules
+# defaultMessage: Documenti
+msgid "documento_documenti"
+msgstr ""
+
 #: components/ItaliaTheme/View/DocumentoView/DocumentoView
 # defaultMessage: Documenti allegati
 msgid "documento_documenti_allegati"
+msgstr ""
+
+#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+# defaultMessage: Documenti
+msgid "documento_documentii"
 msgstr ""
 
 #: components/ItaliaTheme/View/DocumentoView/DocumentoView
@@ -831,7 +923,7 @@ msgid "dropdownmenu-deletemenuitem"
 msgstr ""
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
-# defaultMessage: Delete
+# defaultMessage: Delete menu item
 msgid "dropdownmenu-deletemenuitem-button"
 msgstr ""
 
@@ -910,14 +1002,20 @@ msgstr ""
 msgid "dropdownmenu-visible"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/BandoDates
+# defaultMessage: Data di pubblicazione
+msgid "effective"
+msgstr ""
+
 #: components/ItaliaTheme/View/VenueView
 #: components/ItaliaTheme/View/VenueView/VenueView
 # defaultMessage: Elementi di interesse
 msgid "elementi_di_interesse"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/ContactLink
+#: components/ItaliaTheme/View/Commons/TelLink
 #: components/ItaliaTheme/View/EventoView
-#: components/ItaliaTheme/View/EventoView/EventoView
 #: components/ItaliaTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 # defaultMessage: E-mail
@@ -938,6 +1036,11 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/Dates
 # defaultMessage: Fine evento
 msgid "end"
+msgstr ""
+
+#: components/ItaliaTheme/View/BandoView/BandoView
+# defaultMessage: Ente erogatore
+msgid "ente"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView
@@ -1009,9 +1112,20 @@ msgid "expire"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
 # defaultMessage: Esplora argomento
 msgid "exploreArgument"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/ContactLink
+#: components/ItaliaTheme/View/Commons/SmallVenue
+#: components/ItaliaTheme/View/Commons/TelLink
+# defaultMessage: Fax
+msgid "fax"
+msgstr ""
+
+#: components/ItaliaTheme/View/UOView/UOView
+# defaultMessage: Fax
+msgid "fax_sede"
 msgstr ""
 
 #: addons/volto-rss-block/src/Block/Edit
@@ -1087,6 +1201,12 @@ msgstr ""
 msgid "importi_di_viaggio_e_o_servizi"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
+#: components/ItaliaTheme/View/Commons/PageHeader
+# defaultMessage: In corso
+msgid "inProgress"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/SideMenu
 # defaultMessage: Indice della pagina
 msgid "index"
@@ -1115,6 +1235,7 @@ msgid "link_siti_esterni"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/EventLocation
+#: components/ItaliaTheme/View/Commons/LocationItem
 #: components/ItaliaTheme/View/Commons/Locations
 # defaultMessage: Luoghi
 msgid "locations"
@@ -1164,6 +1285,16 @@ msgstr ""
 msgid "modulistica"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/DownloadFileFormat
+# defaultMessage: Scarica il file
+msgid "modulo_download_file"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/DownloadFileFormat
+# defaultMessage: Scarica in formato
+msgid "modulo_download_in_format"
+msgstr ""
+
 #: components/ItaliaTheme/View/ModuloView/ModuloView
 # defaultMessage: File principale
 msgid "modulo_file_principale"
@@ -1197,6 +1328,12 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/PageHeader
 # defaultMessage: Numero del comunicato stampa
 msgid "numero_progressivo_cs"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
+#: components/ItaliaTheme/View/Commons/PageHeader
+# defaultMessage: Attivo
+msgid "open"
 msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
@@ -1309,7 +1446,6 @@ msgid "persone_struttura"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView/PersonaView
 # defaultMessage: Telefono
 msgid "phone"
 msgstr ""
@@ -1340,7 +1476,13 @@ msgstr ""
 msgid "procedure_collegate"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
+# defaultMessage: Data di pubblicazione:
+msgid "pubblicazione"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/EventLocation
+#: components/ItaliaTheme/View/Commons/LocationItem
 #: components/ItaliaTheme/View/VenueView
 #: components/ItaliaTheme/View/VenueView/VenueView
 # defaultMessage: Quartiere
@@ -1417,6 +1559,16 @@ msgstr ""
 msgid "responsabile_di"
 msgstr ""
 
+#: components/ItaliaTheme/View/VenueView/VenueView
+# defaultMessage: Fax
+msgid "riferimento_fax_luogo"
+msgstr ""
+
+#: components/ItaliaTheme/View/VenueView/VenueView
+# defaultMessage: Fax
+msgid "riferimento_fax_struttura"
+msgstr ""
+
 #: components/ItaliaTheme/View/VenueView
 #: components/ItaliaTheme/View/VenueView/VenueView
 # defaultMessage: E-mail
@@ -1477,6 +1629,26 @@ msgstr ""
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 # defaultMessage: Ruolo
 msgid "ruolo"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
+# defaultMessage: Data di scadenza:
+msgid "scadenza"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/BandoDates
+# defaultMessage: Scadenza dei termini per partecipare al bando
+msgid "scadenza_bando"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/BandoDates
+# defaultMessage: Termine per le richieste di chiarimenti
+msgid "scadenza_domande_bando"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/ContactLink
+# defaultMessage: Scrivi all'indirizzo
+msgid "scrivi_a_mail"
 msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
@@ -1555,6 +1727,11 @@ msgstr ""
 msgid "servizi_collegati"
 msgstr ""
 
+#: components/ItaliaTheme/View/BandoView/BandoView
+# defaultMessage: Servizi collegati
+msgid "servizi_correlati"
+msgstr ""
+
 #: components/ItaliaTheme/View/UOView
 #: components/ItaliaTheme/View/UOView/UOView
 # defaultMessage: Servizi
@@ -1630,6 +1807,11 @@ msgstr ""
 msgid "start"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
+# defaultMessage: Stato:
+msgid "stato"
+msgstr ""
+
 #: components/ItaliaTheme/View/UOView
 #: components/ItaliaTheme/View/UOView/UOView
 # defaultMessage: Struttura
@@ -1653,8 +1835,10 @@ msgstr ""
 msgid "supported_by"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/ContactLink
+#: components/ItaliaTheme/View/Commons/TelLink
 #: components/ItaliaTheme/View/EventoView
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/PersonaView/PersonaView
 # defaultMessage: Tel
 msgid "telefono"
 msgstr ""
@@ -1669,6 +1853,16 @@ msgstr ""
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 # defaultMessage: Tempi e scadenze
 msgid "tempi_e_scadenze"
+msgstr ""
+
+#: components/ItaliaTheme/View/BandoView/BandoView
+# defaultMessage: Tempi e scadenze
+msgid "tempi_scadenze"
+msgstr ""
+
+#: components/ItaliaTheme/View/BandoView/BandoView
+# defaultMessage: Tipologia del bando
+msgid "tipologia_bando"
 msgstr ""
 
 #: components/ItaliaTheme/View/UOView
@@ -1701,6 +1895,12 @@ msgstr ""
 msgid "topics"
 msgstr ""
 
+#: components/ItaliaTheme/View/BandoView/BandoView
+# defaultMessage: Ufficio responsabile
+msgid "ufficio_responsabile"
+msgstr ""
+
+#: components/ItaliaTheme/View/BandoView/BandoView
 #: components/ItaliaTheme/View/DocumentoView/DocumentoView
 #: components/ItaliaTheme/View/DocumentoView/Moduli
 #: components/ItaliaTheme/View/EventoView
@@ -1711,7 +1911,7 @@ msgstr ""
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 #: components/ItaliaTheme/View/VenueView
 #: components/ItaliaTheme/View/VenueView/VenueView
-# defaultMessage: Box d'aiuto
+# defaultMessage: Ulteriori informazioni
 msgid "ulteriori_informazioni"
 msgstr ""
 
@@ -1749,6 +1949,11 @@ msgstr ""
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 # defaultMessage: Variazione situazione patrimoniale
 msgid "variazione_situazione_patrimoniale"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
+# defaultMessage: Vedi
+msgid "vedi"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody
