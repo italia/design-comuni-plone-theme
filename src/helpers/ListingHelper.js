@@ -17,19 +17,28 @@ const messages = defineMessages({
 
 export const getCalendarDate = (item) => {
   const intl = useIntl();
+  const effective = item.effective && (
+    <span>{moment(item.effective).format('ll')}</span>
+  );
 
-  return item['@type'] === 'Event' ?
-            <When
-              start={item.start}
-              end={item.end}
-              whole_day={item.whole_day}
-              open_end={item.open_end}
-              start_label={intl.formatMessage(messages.from)}
-              end_label={intl.formatMessage(messages.to)}
-              start_date_format={'DD MMM YYYY'}
-              end_date_format={'DD MMM YYYY'}
-              show_time={false}
-            />
-          :
-            <span>{item.effective && moment(item.effective).format('ll')}</span>
-}
+  switch (item['@type']) {
+    case 'Event':
+      return (
+        <When
+          start={item.start}
+          end={item.end}
+          whole_day={item.whole_day}
+          open_end={item.open_end}
+          start_label={intl.formatMessage(messages.from)}
+          end_label={intl.formatMessage(messages.to)}
+          start_date_format={'DD MMM YYYY'}
+          end_date_format={'DD MMM YYYY'}
+          show_time={false}
+        />
+      );
+    case 'News Item':
+      return effective;
+    default:
+      return null;
+  }
+};

@@ -5,7 +5,14 @@ import moment from 'moment';
 import cx from 'classnames';
 import { RRule, rrulestr } from 'rrule';
 
-export const datesForDisplay = (start, end, start_date_format, end_date_format, start_time_format, end_time_format) => {
+export const datesForDisplay = (
+  start,
+  end,
+  start_date_format,
+  end_date_format,
+  start_time_format,
+  end_time_format,
+) => {
   const mStart = moment(start);
   const mEnd = moment(end);
   if (!mStart.isValid() || !mEnd.isValid()) {
@@ -13,8 +20,8 @@ export const datesForDisplay = (start, end, start_date_format, end_date_format, 
   }
   const sameDay = mStart.isSame(mEnd, 'day');
   const sameTime = mStart.isSame(mEnd, 'minute');
-  const sameMonth =  mStart.isSame(mEnd, 'month');
-  const sameYear =  mStart.isSame(mEnd, 'year');
+  const sameMonth = mStart.isSame(mEnd, 'month');
+  const sameYear = mStart.isSame(mEnd, 'year');
 
   return {
     sameDay,
@@ -28,9 +35,27 @@ export const datesForDisplay = (start, end, start_date_format, end_date_format, 
   };
 };
 
-export const When = ({ start, end, start_date_format = 'll' , end_date_format = 'll', start_time_format = 'LT', end_time_format = 'LT',
-                       whole_day, open_end, start_label, end_label, show_time = true }) => {
-  const datesInfo = datesForDisplay(start, end, start_date_format , end_date_format, start_time_format, end_time_format);
+export const When = ({
+  start,
+  end,
+  start_date_format = 'll',
+  end_date_format = 'll',
+  start_time_format = 'LT',
+  end_time_format = 'LT',
+  whole_day,
+  open_end,
+  start_label,
+  end_label,
+  show_time = true,
+}) => {
+  const datesInfo = datesForDisplay(
+    start,
+    end,
+    start_date_format,
+    end_date_format,
+    start_time_format,
+    end_time_format,
+  );
 
   if (!datesInfo) {
     console.warn('EventWhen: Received invalid start or end date.');
@@ -39,113 +64,121 @@ export const When = ({ start, end, start_date_format = 'll' , end_date_format = 
 
   const getDate = () => {
     // Same dates
-    if(datesInfo.sameDay && datesInfo.sameMonth && datesInfo.sameYear) {
-      return <>
-        {whole_day && (
-          <span className="start-date">{datesInfo.startDate}</span>
-        )}
-        {open_end && !whole_day && (
-          <>
+    if (datesInfo.sameDay && datesInfo.sameMonth && datesInfo.sameYear) {
+      return (
+        <>
+          {whole_day && (
             <span className="start-date">{datesInfo.startDate}</span>
-            {show_time && (
-              <>
-                &nbsp;{start_label || 'from'}&nbsp;
-                <span className="start-time">{datesInfo.startTime}</span>
-              </>
-            )}
-          </>
-        )}
-        {!(whole_day || open_end) && (
-          <>
-            <span className="start-date">{datesInfo.startDate}</span>
-            {show_time && (
-              <>
-               <span> </span>
-                <span className="start-time">{datesInfo.startTime}</span>
-                &nbsp;-&nbsp;
-                <span className="end-time">{datesInfo.endTime}</span>
-              </>
-            )}
-          </>
-        )}
-      </>
-    // Same month and year
-    } else if(datesInfo.sameMonth && datesInfo.sameYear) {
-      return <>
-        &nbsp;{start_label || 'from'}&nbsp;
-        <span className="start-date">{moment(start).format('DD')}</span>
-        {!whole_day && show_time && (
-          <>
-            <span> </span>
-            <span className="start-time">{datesInfo.startTime}</span>
-          </>
-        )}
-        &nbsp;{end_label || 'to'}&nbsp;
-        <span className="end-date">{moment(end).format('DD')}</span>
-        {!whole_day && show_time &&(
-          <>
-            <span> </span>
-            <span className="start-time">{datesInfo.endTime}</span>
-          </>
-        )}
-        <span> </span>
-        <span className="end-date">{moment(end).format('MMM')}</span>
-        <span> </span>
-        <span className="end-date">{moment(end).format('YYYY')}</span>
-      </>
-    // Same year
-    } else if(datesInfo.sameYear) {
-      return <>
-        &nbsp;{start_label || 'from'}&nbsp;
-        <span className="start-date">{moment(start).format('DD MMM')}</span>
-        {!whole_day && show_time && (
-          <>
-            <span> </span>
-            <span className="start-time">{datesInfo.startTime}</span>
-          </>
-        )}
-        &nbsp;{end_label || 'to'}&nbsp;
-        <span className="end-date">{moment(end).format('DD MMM')}</span>
-        {!whole_day && show_time &&(
-          <>
-            <span> </span>
-            <span className="start-time">{datesInfo.endTime}</span>
-          </>
-        )}
-        <span> </span>
-        <span className="end-date">{moment(end).format('YYYY')}</span>
-      </>
-    // different dates
-    } else {
-      return <>
-        <span className="start">
-          <span className="start-date">{datesInfo.startDate}</span>
+          )}
+          {open_end && !whole_day && (
+            <>
+              <span className="start-date">{datesInfo.startDate}</span>
+              {show_time && (
+                <>
+                  &nbsp;{start_label || 'from'}&nbsp;
+                  <span className="start-time">{datesInfo.startTime}</span>
+                </>
+              )}
+            </>
+          )}
+          {!(whole_day || open_end) && (
+            <>
+              <span className="start-date">{datesInfo.startDate}</span>
+              {show_time && (
+                <>
+                  <span> </span>
+                  <span className="start-time">{datesInfo.startTime}</span>
+                  &nbsp;-&nbsp;
+                  <span className="end-time">{datesInfo.endTime}</span>
+                </>
+              )}
+            </>
+          )}
+        </>
+      );
+      // Same month and year
+    } else if (datesInfo.sameMonth && datesInfo.sameYear) {
+      return (
+        <>
+          {start_label || 'from'}&nbsp;
+          <span className="start-date">{moment(start).format('DD')}</span>
           {!whole_day && show_time && (
             <>
-              {/* Plone has an optional word based on locale here */}
               <span> </span>
               <span className="start-time">{datesInfo.startTime}</span>
             </>
           )}
-        </span>
-        {!open_end && (
-          <>
-            &nbsp;{end_label || 'to'}&nbsp;
-            <span className="end">
-              <span className="end-date">{datesInfo.endDate}</span>
-              {!whole_day && show_time && (
-                <>
-                  {/* Plone has an optional word based on locale here */}
-                  <span> </span>
-                  <span className="end-time">{datesInfo.endTime}</span>
-                </>
-              )}
-            </span>
-          </>
-        )}
-      </>
+          &nbsp;{end_label || 'to'}&nbsp;
+          <span className="end-date">{moment(end).format('DD')}</span>
+          {!whole_day && show_time && (
+            <>
+              <span> </span>
+              <span className="start-time">{datesInfo.endTime}</span>
+            </>
+          )}
+          <span> </span>
+          <span className="end-date">{moment(end).format('MMM')}</span>
+          <span> </span>
+          <span className="end-date">{moment(end).format('YYYY')}</span>
+        </>
+      );
+      // Same year
+    } else if (datesInfo.sameYear) {
+      return (
+        <>
+          {start_label || 'from'}&nbsp;
+          <span className="start-date">{moment(start).format('DD MMM')}</span>
+          {!whole_day && show_time && (
+            <>
+              <span> </span>
+              <span className="start-time">{datesInfo.startTime}</span>
+            </>
+          )}
+          &nbsp;{end_label || 'to'}&nbsp;
+          <span className="end-date">{moment(end).format('DD MMM')}</span>
+          {!whole_day && show_time && (
+            <>
+              <span> </span>
+              <span className="start-time">{datesInfo.endTime}</span>
+            </>
+          )}
+          <span> </span>
+          <span className="end-date">{moment(end).format('YYYY')}</span>
+        </>
+      );
+      // different dates
+    } else {
+      return (
+        <>
+          <span className="start">
+            <span className="start-date">{datesInfo.startDate}</span>
+            {!whole_day && show_time && (
+              <>
+                {/* Plone has an optional word based on locale here */}
+                <span> </span>
+                <span className="start-time">{datesInfo.startTime}</span>
+              </>
+            )}
+          </span>
+          {!open_end && (
+            <>
+              &nbsp;{end_label || 'to'}&nbsp;
+              <span className="end">
+                <span className="end-date">{datesInfo.endDate}</span>
+                {!whole_day && show_time && (
+                  <>
+                    {/* Plone has an optional word based on locale here */}
+                    <span> </span>
+                    <span className="end-time">{datesInfo.endTime}</span>
+                  </>
+                )}
+              </span>
+            </>
+          )}
+        </>
+      );
     }
-  }
+  };
 
   return (
     <span
@@ -156,7 +189,7 @@ export const When = ({ start, end, start_date_format = 'll' , end_date_format = 
         'open-end': open_end,
       })}
     >
-      { getDate() }
+      {getDate()}
     </span>
   );
 };

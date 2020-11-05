@@ -20,7 +20,6 @@ const GenericCard = ({
   show_icon,
   showDescription = true,
   showInfos = false,
-  showInfosFor = null,
   children,
 }) => {
   let item_fo = null;
@@ -31,18 +30,17 @@ const GenericCard = ({
 
   const infos = (
     <>
-      {showInfos &&
-        (!showInfosFor || showInfosFor.indexOf(item['@type']) >= 0) && (
-          <CardCategory date={getCalendarDate(item)}>
-            <Icon
-              className="icon"
-              color="primary"
-              icon={getIcon(item['@type'])}
-              padding={false}
-            />
-            {item?.design_italia_meta_type}
-          </CardCategory>
-        )}
+      {showInfos && (
+        <CardCategory date={getCalendarDate(item)}>
+          <Icon
+            className="icon"
+            color="primary"
+            icon={getIcon(item['@type'])}
+            padding={false}
+          />
+          {item?.design_italia_meta_type}
+        </CardCategory>
+      )}
     </>
   );
 

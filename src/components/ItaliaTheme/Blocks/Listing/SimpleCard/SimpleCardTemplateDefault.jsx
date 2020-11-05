@@ -21,6 +21,7 @@ import { Link } from 'react-router-dom';
 import cx from 'classnames';
 
 import { getItemIcon } from '@italia/components/ItaliaTheme';
+import { getCalendarDate } from '@italia/helpers';
 
 const messages = defineMessages({
   view_all: {
@@ -74,10 +75,7 @@ const SimpleCardTemplateDefault = ({
         {items.map((item, index) => {
           const icon = getItemIcon(item);
           const itemTitle = item.title || item.id;
-          const date =
-            item['@type'] === 'News Item' && item.effective
-              ? moment(item.effective).format('ll')
-              : null;
+          const date = getCalendarDate(item);
 
           return (
             <Card
