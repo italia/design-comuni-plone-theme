@@ -21,7 +21,7 @@ import { Link } from 'react-router-dom';
 import cx from 'classnames';
 
 import { getItemIcon } from '@italia/components/ItaliaTheme';
-import { getCalendarDate } from '@italia/helpers';
+import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
 
 const messages = defineMessages({
   view_all: {
@@ -53,10 +53,10 @@ const SimpleCardTemplateDefault = ({
         className = item.tipologia_notizia?.token
           .toLowerCase()
           .replace(' ', '_');
-
         break;
       default:
-        className = className;
+        className = null;
+        break;
     }
     return className;
   };
@@ -76,6 +76,7 @@ const SimpleCardTemplateDefault = ({
           const icon = getItemIcon(item);
           const itemTitle = item.title || item.id;
           const date = getCalendarDate(item);
+          const eventRecurrenceMore = getEventRecurrenceMore(item, isEditMode);
 
           return (
             <Card
@@ -105,9 +106,11 @@ const SimpleCardTemplateDefault = ({
                   </Link>
                 </CardTitle>
                 {show_description && item.description && (
-                  <CardText>{item.description}</CardText>
+                  <CardText className={cx('', { 'mb-5': eventRecurrenceMore })}>
+                    {item.description}
+                  </CardText>
                 )}
-
+                {eventRecurrenceMore}
                 {show_detail_link && (
                   <CardReadMore
                     iconName="it-arrow-right"

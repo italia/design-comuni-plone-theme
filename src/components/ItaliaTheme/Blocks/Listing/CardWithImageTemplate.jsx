@@ -21,7 +21,7 @@ import {
   Chip,
   ChipLabel,
 } from 'design-react-kit/dist/design-react-kit';
-import { getCalendarDate } from '@italia/helpers';
+import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
 
 import { getItemIcon, CardCalendar } from '@italia/components/ItaliaTheme';
 
@@ -54,6 +54,10 @@ const CardWithImageTemplate = ({
             {items.map((item, index) => {
               const icon = getItemIcon(item);
               const date = getCalendarDate(item);
+              const eventRecurrenceMore = getEventRecurrenceMore(
+                item,
+                isEditMode,
+              );
               return (
                 <Col md="4" key={item['@id']} className="col-item">
                   <Card
@@ -104,27 +108,42 @@ const CardWithImageTemplate = ({
                           {item.title || item.id}
                         </Link>
                       </CardTitle>
-                      {item.description && (
-                        <CardText>{item.description}</CardText>
+                      {(item.description ||
+                        item.tassonomia_argomenti.length > 0) && (
+                        <CardText>
+                          {item.description && (
+                            <div
+                              className={cx('', {
+                                'mb-3': item.tassonomia_argomenti.length > 0,
+                              })}
+                            >
+                              {item.description}
+                            </div>
+                          )}
+                          {item.tassonomia_argomenti?.map((argument, index) => (
+                            <Link
+                              to={flattenToAppURL(argument['@id'])}
+                              key={index}
+                              title={argument.title}
+                              className="text-decoration-none"
+                            >
+                              <Chip
+                                color="primary"
+                                disabled={false}
+                                simple
+                                tag="div"
+                                className="mr-2"
+                              >
+                                <ChipLabel tag="span">
+                                  {argument.title}
+                                </ChipLabel>
+                              </Chip>
+                            </Link>
+                          ))}
+                        </CardText>
                       )}
-                      {item.tassonomia_argomenti?.map((argument, index) => (
-                        <Link
-                          to={flattenToAppURL(argument['@id'])}
-                          key={index}
-                          title={argument.title}
-                          className="text-decoration-none"
-                        >
-                          <Chip
-                            color="primary"
-                            disabled={false}
-                            simple
-                            tag="div"
-                            className="mr-2"
-                          >
-                            <ChipLabel tag="span">{argument.title}</ChipLabel>
-                          </Chip>
-                        </Link>
-                      ))}
+
+                      {eventRecurrenceMore}
                     </CardBody>
                   </Card>
                 </Col>

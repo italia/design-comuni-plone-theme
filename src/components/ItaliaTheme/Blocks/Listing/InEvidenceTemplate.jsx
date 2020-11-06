@@ -17,7 +17,11 @@ import { ConditionalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
-import { getIcon, getCalendarDate } from '@italia/helpers';
+import {
+  getIcon,
+  getCalendarDate,
+  getEventRecurrenceMore,
+} from '@italia/helpers';
 import { CardCalendar, getItemIcon } from '@italia/components/ItaliaTheme';
 
 const InEvidenceTemplate = ({
@@ -48,6 +52,10 @@ const InEvidenceTemplate = ({
             {items.map((item, index) => {
               const icon = getItemIcon(item);
               const date = getCalendarDate(item);
+              const eventRecurrenceMore = getEventRecurrenceMore(
+                item,
+                isEditMode,
+              );
               return (
                 <Card
                   key={index}
@@ -96,27 +104,39 @@ const InEvidenceTemplate = ({
                         {item.title || item.id}
                       </Link>
                     </CardTitle>
-                    {item.description && (
-                      <CardText>{item.description}</CardText>
+                    {(item.description ||
+                      item.tassonomia_argomenti?.length > 0) && (
+                      <CardText>
+                        {item.description && (
+                          <div
+                            className={cx('', {
+                              'mb-3': item.tassonomia_argomenti.length > 0,
+                            })}
+                          >
+                            {item.description}
+                          </div>
+                        )}
+                        {item.tassonomia_argomenti?.map((argument, index) => (
+                          <Link
+                            to={flattenToAppURL(argument['@id'])}
+                            key={index}
+                            title={argument.title}
+                            className="text-decoration-none"
+                          >
+                            <Chip
+                              color="primary"
+                              disabled={false}
+                              simple
+                              tag="div"
+                              className="mr-2"
+                            >
+                              <ChipLabel tag="span">{argument.title}</ChipLabel>
+                            </Chip>
+                          </Link>
+                        ))}
+                      </CardText>
                     )}
-                    {item.tassonomia_argomenti?.map((argument, index) => (
-                      <Link
-                        to={flattenToAppURL(argument['@id'])}
-                        key={index}
-                        title={argument.title}
-                        className="text-decoration-none"
-                      >
-                        <Chip
-                          color="primary"
-                          disabled={false}
-                          simple
-                          tag="div"
-                          className="mr-2"
-                        >
-                          <ChipLabel tag="span">{argument.title}</ChipLabel>
-                        </Chip>
-                      </Link>
-                    ))}
+                    {eventRecurrenceMore}
                   </CardBody>
                 </Card>
               );

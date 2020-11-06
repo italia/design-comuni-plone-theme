@@ -1,8 +1,10 @@
 import React from 'react';
-import { When } from '@plone/volto/components/theme/View/EventDatesInfo';
+import { Link } from 'react-router-dom';
 import { useIntl, defineMessages } from 'react-intl';
 import moment from 'moment';
 import 'moment/min/locales';
+import { flattenToAppURL } from '@plone/volto/helpers';
+import { When } from '@plone/volto/components/theme/View/EventDatesInfo';
 
 const messages = defineMessages({
   from: {
@@ -12,6 +14,10 @@ const messages = defineMessages({
   to: {
     id: 'to',
     defaultMessage: 'al',
+  },
+  event_recurrence_label: {
+    id: 'listing_event_recurrence_label',
+    defaultMessage: 'Questo evento ha più date: vedi tutte',
   },
 });
 
@@ -41,4 +47,21 @@ export const getCalendarDate = (item) => {
     default:
       return null;
   }
+};
+
+export const getEventRecurrenceMore = (item, isEditMode) => {
+  const intl = useIntl();
+  if (item['@type'] === 'Event') {
+    if (item.recurrence) {
+      return (
+        <Link
+          to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}
+          className="event-recurrences-more"
+        >
+          {intl.formatMessage(messages.event_recurrence_label)}
+        </Link>
+      );
+    }
+  }
+  return null;
 };
