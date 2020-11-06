@@ -7,5 +7,8 @@
 
 export { getIcon } from './iconHelper';
 export { defaultIconWidgetOptions } from '@italia/helpers/IconWidget/IconWidgetHelper';
-export { getCalendarDate } from '@italia/helpers/ListingHelper';
+export {
+  getCalendarDate,
+  getEventRecurrenceMore,
+} from '@italia/helpers/ListingHelper';
 export { contentFolderHasItems } from '@italia/helpers/contentHelper';

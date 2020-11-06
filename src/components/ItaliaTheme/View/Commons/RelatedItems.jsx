@@ -152,7 +152,6 @@ const RelatedItems = ({
                               showimage={true}
                               image_field="image"
                               showInfos={true}
-                              showInfosFor={['News Item', 'Event']}
                             />
                           </div>
                         </Col>

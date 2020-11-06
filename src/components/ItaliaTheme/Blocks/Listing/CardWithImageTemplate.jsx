@@ -21,8 +21,9 @@ import {
   Chip,
   ChipLabel,
 } from 'design-react-kit/dist/design-react-kit';
-import { getCalendarDate } from '@italia/helpers';
-import { CardCalendar } from './Commons/CardCalendar'
+import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
+
+import { getItemIcon, CardCalendar } from '@italia/components/ItaliaTheme';
 
 const CardWithImageTemplate = ({
   items,
@@ -38,7 +39,7 @@ const CardWithImageTemplate = ({
     <div
       className={cx('card-with-image-template', { 'public-ui': isEditMode })}
     >
-      <div className='full-width'>
+      <div className="full-width">
         <Container className="px-4">
           {title && (
             <Row>
@@ -51,15 +52,12 @@ const CardWithImageTemplate = ({
           )}
           <Row className="items">
             {items.map((item, index) => {
-              let date = null;
-              switch (item['@type']) {
-                case 'News Item':
-                  date = item.effective && moment(item.effective).format('ll');
-                  break;
-                default:
-                  date = null;
-              }
-
+              const icon = getItemIcon(item);
+              const date = getCalendarDate(item);
+              const eventRecurrenceMore = getEventRecurrenceMore(
+                item,
+                isEditMode,
+              );
               return (
                 <Col md="4" key={item['@id']} className="col-item">
                   <Card
@@ -86,24 +84,23 @@ const CardWithImageTemplate = ({
                               />
                             </figure>
                           </ConditionalLink>
-                          { 
-                            (item['@type'] == 'Event') && 
-                              <CardCalendar 
-                                start={item.start}
-                                end={item.end}
-                              /> 
-                          }
+                          {item['@type'] === 'Event' && (
+                            <CardCalendar start={item.start} end={item.end} />
+                          )}
                         </div>
                       </div>
                     )}
                     <CardBody>
-                      <CardCategory date={getCalendarDate(item)}>
-                        <Icon
-                          className='icon mr-2'
-                          color="primary"
-                          icon={getIcon(item['@type'])}
-                          padding={false}
-                        />
+                      <CardCategory iconName={!date ? icon : null} date={date}>
+                        {date && (
+                          <Icon
+                            className="icon mr-2"
+                            color="primary"
+                            icon={getIcon(item['@type'])}
+                            padding={false}
+                          />
+                        )}{' '}
+                        {/*questo perchè CardCategory mostra o l'icona o la data */}
                         {item?.design_italia_meta_type}
                       </CardCategory>
                       <CardTitle tag="h4">
@@ -111,29 +108,42 @@ const CardWithImageTemplate = ({
                           {item.title || item.id}
                         </Link>
                       </CardTitle>
-                      {item.description && <CardText>{item.description}</CardText>}
-                      {
-                        item.tassonomia_argomenti?.map((argument, index) => (
-                          <Link
-                            to={flattenToAppURL(argument['@id'])}
-                            key={index}
-                            title={argument.title}
-                            className="text-decoration-none"
-                          >
-                            <Chip
-                              color="primary"
-                              disabled={false}
-                              simple
-                              tag="div"
-                              className="mr-2"
+                      {(item.description ||
+                        item.tassonomia_argomenti.length > 0) && (
+                        <CardText>
+                          {item.description && (
+                            <div
+                              className={cx('', {
+                                'mb-3': item.tassonomia_argomenti.length > 0,
+                              })}
                             >
-                              <ChipLabel tag="span">
-                                {argument.title}
-                              </ChipLabel>
-                            </Chip>
-                          </Link>
-                        ))
-                      } 
+                              {item.description}
+                            </div>
+                          )}
+                          {item.tassonomia_argomenti?.map((argument, index) => (
+                            <Link
+                              to={flattenToAppURL(argument['@id'])}
+                              key={index}
+                              title={argument.title}
+                              className="text-decoration-none"
+                            >
+                              <Chip
+                                color="primary"
+                                disabled={false}
+                                simple
+                                tag="div"
+                                className="mr-2"
+                              >
+                                <ChipLabel tag="span">
+                                  {argument.title}
+                                </ChipLabel>
+                              </Chip>
+                            </Link>
+                          ))}
+                        </CardText>
+                      )}
+
+                      {eventRecurrenceMore}
                     </CardBody>
                   </Card>
                 </Col>

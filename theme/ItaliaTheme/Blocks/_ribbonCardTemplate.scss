@@ -1,5 +1,10 @@
 .ribbon-card-template {
   .card {
+    .dates {
+      font-size: 0.8em;
+      text-transform: uppercase;
+    }
+
     &.show_detail_link {
       .card-title {
         a {

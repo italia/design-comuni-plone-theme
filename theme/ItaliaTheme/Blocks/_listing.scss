@@ -2,4 +2,15 @@
   .full-width {
     height: unset;
   }
+
+  .event-recurrences-more {
+    position: absolute;
+    bottom: $v-gap * 8;
+
+    display: flex;
+    align-items: center;
+    color: $card-link-color;
+    font-size: $card-category-size;
+    letter-spacing: $card-category-l-spacing;
+  }
 }

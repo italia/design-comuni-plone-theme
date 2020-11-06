@@ -20,6 +20,7 @@ import {
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Link } from 'react-router-dom';
 import { getItemIcon } from '@italia/components/ItaliaTheme';
+import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
 
 const messages = defineMessages({
   view_all: {
@@ -51,7 +52,7 @@ const RibbonCardTemplate = ({
         'public-ui': isEditMode,
       })}
     >
-      <div className='full-width'>
+      <div className="full-width">
         <Container className="px-4">
           {title && (
             <Row>
@@ -68,7 +69,11 @@ const RibbonCardTemplate = ({
                 !show_only_first_ribbon ||
                 (show_only_first_ribbon && index === 0);
               const icon = getItemIcon(item);
-
+              const date = getCalendarDate(item);
+              const eventRecurrenceMore = getEventRecurrenceMore(
+                item,
+                isEditMode,
+              );
               return (
                 <Col lg={4} sm={12}>
                   <Card
@@ -93,6 +98,7 @@ const RibbonCardTemplate = ({
                       tag="div"
                       className={cx('', { 'mt-5': !showRibbon })}
                     >
+                      {date && <div className="dates">{date}</div>}
                       <CardTitle tag="h5">
                         <Link
                           to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}
@@ -101,6 +107,7 @@ const RibbonCardTemplate = ({
                         </Link>
                       </CardTitle>
                       <CardText>{item.description}</CardText>
+                      {eventRecurrenceMore}
                       {show_detail_link && (
                         <CardReadMore
                           iconName="it-arrow-right"
