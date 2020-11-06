@@ -20,7 +20,7 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
 
-import { getItemIcon } from '@italia/components/ItaliaTheme';
+import { getItemIcon, ListingCategory } from '@italia/components/ItaliaTheme';
 import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
 
 const messages = defineMessages({
@@ -99,7 +99,10 @@ const SimpleCardTemplateDefault = ({
                     {/*questo perchè CardCategory mostra o l'icona o la data */}
                     {show_section && (
                       <span className="text font-weight-bold">
-                        {item.parent?.title}
+                        <ListingCategory
+                          category={item.parent?.title}
+                          item={item}
+                        />
                       </span>
                     )}
                   </CardCategory>

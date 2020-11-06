@@ -23,7 +23,11 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
 
-import { getItemIcon, CardCalendar } from '@italia/components/ItaliaTheme';
+import {
+  getItemIcon,
+  CardCalendar,
+  ListingCategory,
+} from '@italia/components/ItaliaTheme';
 
 const CardWithImageTemplate = ({
   items,
@@ -101,7 +105,10 @@ const CardWithImageTemplate = ({
                           />
                         )}{' '}
                         {/*questo perchè CardCategory mostra o l'icona o la data */}
-                        {item?.design_italia_meta_type}
+                        <ListingCategory
+                          category={item?.design_italia_meta_type}
+                          item={item}
+                        />
                       </CardCategory>
                       <CardTitle tag="h4">
                         <Link to={flattenToAppURL(item['@id'])}>

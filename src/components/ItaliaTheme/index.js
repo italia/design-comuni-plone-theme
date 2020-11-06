@@ -69,6 +69,7 @@ export IconWidget from '@italia/components/ItaliaTheme/manage/Widgets/IconWidget
 //common
 export getItemIcon from '@italia/components/ItaliaTheme/common';
 export CardCalendar from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/CardCalendar';
+export ListingCategory from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/ListingCategory';
 
 export Logo from '@italia/components/ItaliaTheme/Logo/Logo';
 export LogoFooter from '@italia/components/ItaliaTheme/LogoFooter/LogoFooter';

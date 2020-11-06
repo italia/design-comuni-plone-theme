@@ -22,7 +22,11 @@ import {
   getCalendarDate,
   getEventRecurrenceMore,
 } from '@italia/helpers';
-import { CardCalendar, getItemIcon } from '@italia/components/ItaliaTheme';
+import {
+  CardCalendar,
+  getItemIcon,
+  ListingCategory,
+} from '@italia/components/ItaliaTheme';
 
 const InEvidenceTemplate = ({
   items,
@@ -97,7 +101,10 @@ const InEvidenceTemplate = ({
                           padding={false}
                         />
                       )}{' '}
-                      {item?.design_italia_meta_type}
+                      <ListingCategory
+                        category={item?.design_italia_meta_type}
+                        item={item}
+                      />
                     </CardCategory>
                     <CardTitle tag="h4">
                       <Link to={flattenToAppURL(item['@id'])}>
