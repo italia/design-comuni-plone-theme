@@ -35,6 +35,7 @@ const CardWithImageTemplate = ({
   title,
   linkMore,
   show_block_bg = false,
+  always_show_image = false,
 }) => {
   const intl = useIntl();
   moment.locale(intl.locale);
@@ -70,7 +71,7 @@ const CardWithImageTemplate = ({
                     })}
                   >
                     {/* wrapperClassName="card-overlapping" */}
-                    {index < 3 && item.image && (
+                    {(index < 3 || always_show_image) && item.image && (
                       <div className="img-responsive-wrapper">
                         <div className="img-responsive img-responsive-panoramic">
                           <ConditionalLink

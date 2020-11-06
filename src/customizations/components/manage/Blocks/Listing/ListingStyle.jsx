@@ -4,6 +4,7 @@ import { blocks } from '~/config';
 import TemplateWidget from '@plone/volto/components/manage/Blocks/Listing/TemplateWidget';
 import SimpleCardTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions';
 import RibbonCardTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions';
+import CardWithImageTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions';
 
 import DefaultOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions';
 
@@ -38,6 +39,13 @@ const ListingStyle = ({ data, block, onChangeBlock, required = false }) => {
         )}
         {data.template === 'ribbonCardTemplate' && (
           <RibbonCardTemplateOptions
+            data={data}
+            block={block}
+            onChangeBlock={onChangeBlock}
+          />
+        )}
+        {data.template === 'cardWithImageTemplate' && (
+          <CardWithImageTemplateOptions
             data={data}
             block={block}
             onChangeBlock={onChangeBlock}
