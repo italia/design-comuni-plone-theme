@@ -104,18 +104,21 @@ const InEvidenceTemplate = ({
                         {item.title || item.id}
                       </Link>
                     </CardTitle>
-                    {(item.description ||
-                      item.tassonomia_argomenti?.length > 0) && (
-                      <CardText>
-                        {item.description && (
-                          <div
-                            className={cx('', {
-                              'mb-3': item.tassonomia_argomenti.length > 0,
-                            })}
-                          >
-                            {item.description}
-                          </div>
-                        )}
+                    {item.description && (
+                      <CardText
+                        className={cx('', {
+                          'mb-3': item.tassonomia_argomenti.length > 0,
+                        })}
+                      >
+                        {item.description}
+                      </CardText>
+                    )}
+                    {item.tassonomia_argomenti?.length > 0 && (
+                      <div
+                        className={cx('', {
+                          'mb-3': eventRecurrenceMore,
+                        })}
+                      >
                         {item.tassonomia_argomenti?.map((argument, index) => (
                           <Link
                             to={flattenToAppURL(argument['@id'])}
@@ -134,8 +137,9 @@ const InEvidenceTemplate = ({
                             </Chip>
                           </Link>
                         ))}
-                      </CardText>
+                      </div>
                     )}
+
                     {eventRecurrenceMore}
                   </CardBody>
                 </Card>
