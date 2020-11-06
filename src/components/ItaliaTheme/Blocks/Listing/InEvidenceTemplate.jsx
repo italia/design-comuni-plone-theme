@@ -26,6 +26,7 @@ import {
   CardCalendar,
   getItemIcon,
   ListingCategory,
+  ListingText,
 } from '@italia/components/ItaliaTheme';
 
 const InEvidenceTemplate = ({
@@ -60,6 +61,7 @@ const InEvidenceTemplate = ({
                 item,
                 isEditMode,
               );
+              const listingText = <ListingText item={item} />;
               return (
                 <Card
                   key={index}
@@ -84,7 +86,7 @@ const InEvidenceTemplate = ({
                             />
                           </figure>
                         </Link>
-                        {item['@type'] == 'Event' && (
+                        {item['@type'] === 'Event' && (
                           <CardCalendar start={item.start} end={item.end} />
                         )}
                       </div>
@@ -111,13 +113,13 @@ const InEvidenceTemplate = ({
                         {item.title || item.id}
                       </Link>
                     </CardTitle>
-                    {item.description && (
+                    {listingText && (
                       <CardText
                         className={cx('', {
                           'mb-3': item.tassonomia_argomenti.length > 0,
                         })}
                       >
-                        {item.description}
+                        {listingText}
                       </CardText>
                     )}
                     {item.tassonomia_argomenti?.length > 0 && (

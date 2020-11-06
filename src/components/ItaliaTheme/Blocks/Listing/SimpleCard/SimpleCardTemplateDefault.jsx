@@ -20,7 +20,11 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
 
-import { getItemIcon, ListingCategory } from '@italia/components/ItaliaTheme';
+import {
+  getItemIcon,
+  ListingCategory,
+  ListingText,
+} from '@italia/components/ItaliaTheme';
 import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
 
 const messages = defineMessages({
@@ -77,6 +81,7 @@ const SimpleCardTemplateDefault = ({
           const itemTitle = item.title || item.id;
           const date = getCalendarDate(item);
           const eventRecurrenceMore = getEventRecurrenceMore(item, isEditMode);
+          const listingText = <ListingText item={item} />;
 
           return (
             <Card
@@ -112,9 +117,9 @@ const SimpleCardTemplateDefault = ({
                     {itemTitle}
                   </Link>
                 </CardTitle>
-                {show_description && item.description && (
+                {show_description && listingText && (
                   <CardText className={cx('', { 'mb-5': eventRecurrenceMore })}>
-                    {item.description}
+                    {listingText}
                   </CardText>
                 )}
                 {eventRecurrenceMore}

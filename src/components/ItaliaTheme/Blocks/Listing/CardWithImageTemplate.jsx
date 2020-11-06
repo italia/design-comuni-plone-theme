@@ -27,6 +27,7 @@ import {
   getItemIcon,
   CardCalendar,
   ListingCategory,
+  ListingText,
 } from '@italia/components/ItaliaTheme';
 
 const CardWithImageTemplate = ({
@@ -63,6 +64,7 @@ const CardWithImageTemplate = ({
                 item,
                 isEditMode,
               );
+              const listingText = <ListingText item={item} />;
               return (
                 <Col md="4" key={item['@id']} className="col-item">
                   <Card
@@ -116,13 +118,13 @@ const CardWithImageTemplate = ({
                           {item.title || item.id}
                         </Link>
                       </CardTitle>
-                      {item.description && (
+                      {listingText && (
                         <CardText
                           className={cx('', {
                             'mb-3': item.tassonomia_argomenti.length > 0,
                           })}
                         >
-                          {item.description}
+                          {listingText}
                         </CardText>
                       )}
                       {item.tassonomia_argomenti?.length > 0 && (
