@@ -23,6 +23,10 @@ import alertSVG from '@plone/volto/icons/alert.svg';
 import AlertView from '@italia/components/ItaliaTheme/Blocks/Alert/View';
 import AlertEdit from '@italia/components/ItaliaTheme/Blocks/Alert/Edit';
 
+import divideHorizontalSVG from '@plone/volto/icons/divide-horizontal.svg';
+import ViewBreak from '@italia/components/ItaliaTheme/Blocks/Break/View';
+import EditBreak from '@italia/components/ItaliaTheme/Blocks/Break/Edit';
+
 import SearchSectionsView from '@italia/components/ItaliaTheme/Blocks/SearchSections/View';
 import SearchSectionsEdit from '@italia/components/ItaliaTheme/Blocks/SearchSections/Edit';
 import ArgumentsInEvidenceEdit from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Edit';
@@ -183,6 +187,21 @@ const customBlocks = {
     restricted: false,
     mostUsed: false,
     blockHasOwnFocusManagement: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
+  break: {
+    id: 'break',
+    title: 'Interruzione di pagina',
+    icon: divideHorizontalSVG,
+    group: 'text',
+    view: ViewBreak,
+    edit: EditBreak,
+    restricted: false,
+    mostUsed: false,
     security: {
       addPermission: [],
       view: [],
