@@ -49,7 +49,7 @@ const CartellaModulisticaView = ({ content }) => {
   }, []);
 
   const modulistica = locationContent[modulistica_key]?.data?.items ?? [];
-  console.log(modulistica);
+
   return (
     <>
       <div className="container px-4 my-4 cartellamodulistica-view">
@@ -60,7 +60,7 @@ const CartellaModulisticaView = ({ content }) => {
             {modulistica.map((section) => {
               return section['@type'] === 'Document' ? (
                 <div className="documents-section" key={section['@id']}>
-                  <h3>{section.title}</h3>
+                  {/* <h3>{section.title}</h3> */}
 
                   {Object.keys(section.blocks)?.length > 0 && (
                     <TextOrBlocks content={section} />
