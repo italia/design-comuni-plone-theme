@@ -340,6 +340,20 @@ export const settings = {
         )),
     },
   },
+  contentIcons: {
+    ...config.settings.contentIcons,
+    Argomento: Icons.faBoxOpen,
+    CartellaModulistica: Icons.faArchive,
+    Documento: Icons.faFileAlt,
+    Evento: Icons.faCalendarAlt,
+    Venue: Icons.faMapMarkedAlt,
+    'News Item': Icons.faNewspaper,
+    Persona: Icons.faUser,
+    Servizio: Icons.faCog,
+    Subsite: Icons.faSitemap,
+    UnitaOrganizzativa: Icons.faBuilding,
+    Modulo: Icons.faFileDownload,
+  },
 };
 
 export const views = {
