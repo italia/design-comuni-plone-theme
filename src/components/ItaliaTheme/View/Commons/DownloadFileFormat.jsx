@@ -132,7 +132,7 @@ DownloadFileFormat.propTypes = {
     download: PropTypes.string,
     filename: PropTypes.string,
     size: PropTypes.number,
-  }).isRequired,
+  }),
 };
 
 export default DownloadFileFormat;

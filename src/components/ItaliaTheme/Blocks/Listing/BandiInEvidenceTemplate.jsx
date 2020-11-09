@@ -21,31 +21,31 @@ import 'moment/min/locales';
 
 const messages = defineMessages({
   vedi: {
-    id: 'vedi',
+    id: 'bando_vedi',
     defaultMessage: 'Vedi',
   },
   pubblicazione: {
-    id: 'pubblicazione',
+    id: 'bando_data_pubblicazione',
     defaultMessage: 'Data di pubblicazione:',
   },
   scadenza: {
-    id: 'scadenza',
+    id: 'bando_scadenza',
     defaultMessage: 'Data di scadenza:',
   },
   stato: {
-    id: 'stato',
+    id: 'bando_stato',
     defaultMessage: 'Stato:',
   },
   open: {
-    id: 'open',
+    id: 'bando_open',
     defaultMessage: 'Attivo',
   },
   closed: {
-    id: 'closed',
+    id: 'bando_closed',
     defaultMessage: 'Scaduto',
   },
   inProgress: {
-    id: 'inProgress',
+    id: 'bando_inProgress',
     defaultMessage: 'In corso',
   },
 });

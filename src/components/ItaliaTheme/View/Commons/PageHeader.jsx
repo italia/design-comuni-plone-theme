@@ -63,15 +63,15 @@ const messages = defineMessages({
     defaultMessage: 'Numero del comunicato stampa',
   },
   open: {
-    id: 'open',
+    id: 'bando_open',
     defaultMessage: 'attivo',
   },
   closed: {
-    id: 'closed',
+    id: 'bando_closed',
     defaultMessage: 'scaduto',
   },
   inProgress: {
-    id: 'inProgress',
+    id: 'bando_inProgress',
     defaultMessage: 'in corso',
   },
 });

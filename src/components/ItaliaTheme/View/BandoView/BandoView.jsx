@@ -39,7 +39,7 @@ const messages = defineMessages({
     defaultMessage: 'Descrizione',
   },
   tempi_scadenze: {
-    id: 'tempi_scadenze',
+    id: 'tempi_e_scadenze',
     defaultMessage: 'Tempi e scadenze',
   },
   tipologia_bando: {
@@ -47,11 +47,11 @@ const messages = defineMessages({
     defaultMessage: 'Tipologia del bando',
   },
   destinatari: {
-    id: 'destinatari',
+    id: 'bando_destinatari',
     defaultMessage: 'Destinatari del bando',
   },
   ente: {
-    id: 'ente',
+    id: 'bando_ente',
     defaultMessage: 'Ente erogatore',
   },
   ufficio_responsabile: {
@@ -63,7 +63,7 @@ const messages = defineMessages({
     defaultMessage: 'Area responsabile',
   },
   servizi_correlati: {
-    id: 'servizi_correlati',
+    id: 'servizi_collegati',
     defaultMessage: 'Servizi collegati',
   },
   ulteriori_informazioni: {

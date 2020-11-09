@@ -30,7 +30,7 @@ const messages = defineMessages({
     defaultMessage: 'Descrizione',
   },
   documenti: {
-    id: 'documento_documentii',
+    id: 'documento_documenti',
     defaultMessage: 'Documenti',
   },
   ufficio_responsabile: {

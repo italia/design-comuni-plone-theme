@@ -42,7 +42,7 @@ const DocRow = ({ doc }) => {
       {doc.items?.length > 1 && (
         <>
           {doc.items.map((modulo) => (
-            <div class="doc modulo">
+            <div className="doc modulo" key={modulo['@id']}>
               <div className="title">{modulo.title}</div>
               <div className="downloads">
                 <DownloadFileFormat file={modulo?.file_principale} />

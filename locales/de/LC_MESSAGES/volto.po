@@ -387,6 +387,10 @@ msgstr ""
 msgid "altri_documenti"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
+msgid "always_show_image"
+msgstr ""
+
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
@@ -447,6 +451,45 @@ msgstr ""
 msgid "backToSearch"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
+#: components/ItaliaTheme/View/Commons/PageHeader
+msgid "bando_closed"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
+msgid "bando_data_pubblicazione"
+msgstr ""
+
+#: components/ItaliaTheme/View/BandoView/BandoView
+msgid "bando_destinatari"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/BandoDates
+msgid "bando_effective"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
+#: components/ItaliaTheme/View/Commons/PageHeader
+msgid "bando_inProgress"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
+#: components/ItaliaTheme/View/Commons/PageHeader
+msgid "bando_open"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
+msgid "bando_scadenza"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
+msgid "bando_stato"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
+msgid "bando_vedi"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "biografia"
@@ -504,11 +547,6 @@ msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
 msgid "closeSearch"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/View/Commons/PageHeader
-msgid "closed"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView
@@ -652,10 +690,6 @@ msgstr ""
 msgid "descrizione_estesa"
 msgstr ""
 
-#: components/ItaliaTheme/View/BandoView/BandoView
-msgid "destinatari"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 msgid "detail_link_label"
@@ -703,16 +737,13 @@ msgstr ""
 msgid "documento_descrizione"
 msgstr ""
 
+#: components/ItaliaTheme/View/DocumentoView/DocumentoView
 #: components/ItaliaTheme/View/DocumentoView/Modules
 msgid "documento_documenti"
 msgstr ""
 
 #: components/ItaliaTheme/View/DocumentoView/DocumentoView
 msgid "documento_documenti_allegati"
-msgstr ""
-
-#: components/ItaliaTheme/View/DocumentoView/DocumentoView
-msgid "documento_documentii"
 msgstr ""
 
 #: components/ItaliaTheme/View/DocumentoView/DocumentoView
@@ -836,10 +867,6 @@ msgstr ""
 
 #: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
 msgid "dropdownmenu-visible"
-msgstr ""
-
-#: components/ItaliaTheme/View/Commons/BandoDates
-msgid "effective"
 msgstr ""
 
 #: components/ItaliaTheme/View/VenueView
@@ -1001,11 +1028,6 @@ msgstr ""
 msgid "importi_di_viaggio_e_o_servizi"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/View/Commons/PageHeader
-msgid "inProgress"
-msgstr ""
-
 #: components/ItaliaTheme/View/Commons/SideMenu
 msgid "index"
 msgstr ""
@@ -1026,6 +1048,10 @@ msgstr ""
 #: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "link_siti_esterni"
+msgstr ""
+
+#: helpers/ListingHelper
+msgid "listing_event_recurrence_label"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/EventLocation
@@ -1105,11 +1131,6 @@ msgstr ""
 
 #: components/ItaliaTheme/View/Commons/PageHeader
 msgid "numero_progressivo_cs"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/View/Commons/PageHeader
-msgid "open"
 msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
@@ -1224,10 +1245,6 @@ msgstr ""
 #: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "procedure_collegate"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-msgid "pubblicazione"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/EventLocation
@@ -1357,10 +1374,6 @@ msgstr ""
 msgid "ruolo"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-msgid "scadenza"
-msgstr ""
-
 #: components/ItaliaTheme/View/Commons/BandoDates
 msgid "scadenza_bando"
 msgstr ""
@@ -1430,13 +1443,10 @@ msgstr ""
 msgid "servizi"
 msgstr ""
 
+#: components/ItaliaTheme/View/BandoView/BandoView
 #: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "servizi_collegati"
-msgstr ""
-
-#: components/ItaliaTheme/View/BandoView/BandoView
-msgid "servizi_correlati"
 msgstr ""
 
 #: components/ItaliaTheme/View/UOView
@@ -1500,10 +1510,6 @@ msgstr ""
 msgid "start"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-msgid "stato"
-msgstr ""
-
 #: components/ItaliaTheme/View/UOView
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "struttura"
@@ -1535,13 +1541,10 @@ msgstr ""
 msgid "telefono_sede"
 msgstr ""
 
+#: components/ItaliaTheme/View/BandoView/BandoView
 #: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "tempi_e_scadenze"
-msgstr ""
-
-#: components/ItaliaTheme/View/BandoView/BandoView
-msgid "tempi_scadenze"
 msgstr ""
 
 #: components/ItaliaTheme/View/BandoView/BandoView
@@ -1619,10 +1622,6 @@ msgstr ""
 #: components/ItaliaTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "variazione_situazione_patrimoniale"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-msgid "vedi"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody

@@ -12,7 +12,7 @@ import PropTypes from 'prop-types';
 
 const messages = defineMessages({
   effective: {
-    id: 'effective',
+    id: 'bando_effective',
     defaultMessage: 'Data di pubblicazione',
   },
   scadenza_bando: {
@@ -87,9 +87,10 @@ const BandoDates = ({ content }) => {
               >
                 <CardBody tag="div" className={'card-body'}>
                   <CardTitle tag="h5">
-                    {`${moment.utc(content.scadenza_domande_bando).local().format(
-                      'HH:mm',
-                    )} - `}
+                    {`${moment
+                      .utc(content.scadenza_domande_bando)
+                      .local()
+                      .format('HH:mm')} - `}
                     {intl.formatMessage(messages.scadenza_domande_bando)}
                   </CardTitle>
                 </CardBody>
@@ -116,7 +117,10 @@ const BandoDates = ({ content }) => {
               >
                 <CardBody tag="div" className={'card-body'}>
                   <CardTitle tag="h5">
-                    {`${moment.utc(content.scadenza_bando).local().format('HH:mm')} - `}
+                    {`${moment
+                      .utc(content.scadenza_bando)
+                      .local()
+                      .format('HH:mm')} - `}
                     {intl.formatMessage(messages.scadenza_bando)}
                   </CardTitle>
                 </CardBody>

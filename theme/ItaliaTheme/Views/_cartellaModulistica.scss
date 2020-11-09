@@ -1,7 +1,13 @@
+$docs-section-margin: 3em;
 .contenttype-cartellamodulistica {
   section.modulistica {
-    .documents-section {
-      margin-bottom: 3em;
+    .documents-section,
+    .document-row-section {
+      margin-bottom: $docs-section-margin;
+
+      &.document-row-section {
+        margin-bottom: 0;
+      }
 
       h3 + br {
         display: none;
@@ -80,6 +86,10 @@
           }
         }
       }
+    }
+
+    .document-row-section + .documents-section {
+      margin-top: $docs-section-margin;
     }
   }
 }
