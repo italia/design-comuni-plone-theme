@@ -97,6 +97,16 @@ body.cms-ui {
     }
   }
 
+  .sidebar-container .object-listing,
+  .icon-align-name {
+    svg.icon {
+      width: 20px !important;
+      height: 20px !important;
+      color: #888 !important;
+      fill: #888 !important;
+    }
+  }
+
   // .DraftEditor-root {
   //   font-family: $font-family-serif;
   //   h1,
