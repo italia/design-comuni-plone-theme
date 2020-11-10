@@ -102,8 +102,14 @@ body.cms-ui {
     svg.icon {
       width: 20px !important;
       height: 20px !important;
-      color: #888 !important;
-      fill: #888 !important;
+      color: #999 !important;
+      fill: #999 !important;
+    }
+  }
+
+  .icon-align-name {
+    svg.icon {
+      margin-right: 0.75rem !important;
     }
   }
 
