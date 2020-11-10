@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-11-09T10:32:12.677Z\n"
+"POT-Creation-Date: 2020-11-09T17:28:26.518Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -142,6 +142,11 @@ msgstr ""
 #: components/ItaliaTheme/View/PageView/PageView
 # defaultMessage: In questa sezione
 msgid "In this section"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Break/Edit
+# defaultMessage: Interruzione di pagina
+msgid "Interruzione di pagina"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Dates
@@ -550,6 +555,11 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/BandoDates
 # defaultMessage: Data di pubblicazione
 msgid "bando_effective"
+msgstr ""
+
+#: components/ItaliaTheme/View/BandoView/BandoView
+# defaultMessage: Ente erogatore
+msgid "bando_ente"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
@@ -1069,11 +1079,6 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/Dates
 # defaultMessage: Fine evento
 msgid "end"
-msgstr ""
-
-#: components/ItaliaTheme/View/BandoView/BandoView
-# defaultMessage: Ente erogatore
-msgid "ente"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView
