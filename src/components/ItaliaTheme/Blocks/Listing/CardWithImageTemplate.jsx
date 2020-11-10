@@ -121,7 +121,7 @@ const CardWithImageTemplate = ({
                       {listingText && (
                         <CardText
                           className={cx('', {
-                            'mb-3': item.tassonomia_argomenti.length > 0,
+                            'mb-3': item.tassonomia_argomenti?.length > 0,
                           })}
                         >
                           {listingText}
