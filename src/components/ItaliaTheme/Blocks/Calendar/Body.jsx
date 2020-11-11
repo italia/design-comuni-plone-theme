@@ -22,11 +22,9 @@ const Body = ({ data, inEditMode, path }) => {
   const dispatch = useDispatch();
 
   React.useEffect(() => {
-    if (data?.query?.length > 0) {
-      dispatch(
-        getCalendarResults(path, { ...data, fullobjects: 1 }, data.block, '@scadenziario'),
-      );
-    }
+    dispatch(
+      getCalendarResults(path, { ...data, fullobjects: 1 }, data.block, '@scadenziario'),
+    );
     /* eslint-disable react-hooks/exhaustive-deps */
   }, [data]);
 
