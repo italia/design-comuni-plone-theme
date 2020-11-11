@@ -35,9 +35,6 @@
 			height: 368px;
 			padding: 1rem 1rem 1rem 1rem;
 			overflow-y: auto;
-			&.flex-1 {
-				flex: 1;
-			}
 		}
 		.body:not(:last-child){
 			box-shadow: 12px 0 9px -6px $neutral-1-a2;
