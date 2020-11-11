@@ -167,8 +167,7 @@ class TextEditorWidget extends Component {
               if (isSoftNewlineEvent(e)) {
                 this.onChange(
                   RichUtils.insertSoftNewline(this.state.editorState),
-                );
-                EditorState.moveFocusToEnd(this.state.editorState);
+                );                
                 return 'handled';
               }
 
