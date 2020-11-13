@@ -78,14 +78,33 @@ import CardWithoutImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/R
 import { DatetimeWidget } from '@plone/volto/config/Widgets';
 import { MultilingualWidget } from '@italia/addons/volto-multilingual-widget';
 import { IconWidget } from '@italia/components/ItaliaTheme';
+import { defaultIconWidgetOptions } from '@italia/helpers/index';
+
 import { library } from '@fortawesome/fontawesome-svg-core';
 import * as Icons from '@fortawesome/free-solid-svg-icons';
 import * as IconsRegular from '@fortawesome/free-regular-svg-icons';
-import { defaultIconWidgetOptions } from '@italia/helpers/index';
 
-const iconList = Object.keys(Icons.fas).map((icon) => Icons[icon]);
+// CTs icons
+import faFileInvoiceSVG from './icons/file-invoice.svg';
+import faFolderOpenSVG from './icons/folder-open.svg';
+import faImageSVG from './icons/image.svg';
+import faFileSVG from './icons/file.svg';
+import faLinkSVG from './icons/link.svg';
+import faBoxOpenSVG from './icons/box-open.svg';
+import faArchiveSVG from './icons/archive.svg';
+import faFileAltSVG from './icons/file-alt.svg';
+import faCalendarAltSVG from './icons/calendar-alt.svg';
+import faMapMarkedAltSVG from './icons/map-marked-alt.svg';
+import faNewspaperSVG from './icons/newspaper.svg';
+import faUserSVG from './icons/user.svg';
+import faCogSVG from './icons/cog.svg';
+import faSitemapSVG from './icons/sitemap.svg';
+import faBuildingSVG from './icons/building.svg';
+import faFileDownloadSVG from './icons/file-download.svg';
+
+const iconList = Object.keys(Icons.fas).map(icon => Icons[icon]);
 const iconListRegular = Object.keys(IconsRegular.far).map(
-  (icon) => IconsRegular[icon],
+  icon => IconsRegular[icon],
 );
 
 library.add(...iconList, ...iconListRegular);
@@ -110,7 +129,7 @@ const extendedBlockRenderMap = config.settings.extendedBlockRenderMap.update(
   (element = 'p') => element,
 );
 
-const blockStyleFn = (contentBlock) => {
+const blockStyleFn = contentBlock => {
   let r = config.settings.blockStyleFn(contentBlock);
 
   if (!r) {
@@ -359,6 +378,26 @@ export const settings = {
         )),
     },
   },
+  contentIcons: {
+    ...config.settings.contentIcons,
+    Document: faFileInvoiceSVG,
+    Folder: faFolderOpenSVG,
+    'News Item': faNewspaperSVG,
+    Event: faCalendarAltSVG,
+    Image: faImageSVG,
+    File: faFileSVG,
+    Link: faLinkSVG,
+
+    Argomento: faBoxOpenSVG,
+    CartellaModulistica: faArchiveSVG,
+    Documento: faFileAltSVG,
+    Venue: faMapMarkedAltSVG,
+    Persona: faUserSVG,
+    Servizio: faCogSVG,
+    Subsite: faSitemapSVG,
+    UnitaOrganizzativa: faBuildingSVG,
+    Modulo: faFileDownloadSVG,
+  },
 };
 
 export const views = {
@@ -417,14 +456,14 @@ export const widgets = {
   id: {
     ...config.widgets.id,
     description: CharCounterDescriptionWidget,
-    icona: (props) => (
+    icona: props => (
       <IconWidget {...props} defaultOptions={defaultIconWidgetOptions} />
     ),
     cookie_consent_configuration: MultilingualWidget(),
-    data_conclusione_incarico: (props) => (
+    data_conclusione_incarico: props => (
       <DatetimeWidget {...props} dateOnly={true} />
     ),
-    data_insediamento: (props) => <DatetimeWidget {...props} dateOnly={true} />,
+    data_insediamento: props => <DatetimeWidget {...props} dateOnly={true} />,
   },
 };
 
