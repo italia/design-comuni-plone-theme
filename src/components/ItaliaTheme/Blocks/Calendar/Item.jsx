@@ -20,8 +20,7 @@ const Item = ({ day, path, data, inEdit }) => {
 
   React.useEffect(() => {
 		const newData = JSON.parse(JSON.stringify(data));
-
-		newData.query.push({
+		newData.query?.push({
 			i: "start",
 			o: "plone.app.querystring.operation.date.between",
 			v: [moment(day).startOf('day').format("YYYY/MM/DD HH:mm"), moment(day).endOf('day').format("YYYY/MM/DD HH:mm")]

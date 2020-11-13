@@ -22,13 +22,11 @@ const Body = ({ data, inEditMode, path }) => {
   const dispatch = useDispatch();
 
   React.useEffect(() => {
-    if (data?.query?.length > 0) {
-      dispatch(
-        getCalendarResults(path, { ...data, fullobjects: 1 }, data.block, '@scadenziario'),
-      );
-    }
+    dispatch(
+      getCalendarResults(path, { ...data, fullobjects: 1 }, data.block, '@scadenziario'),
+    );
     /* eslint-disable react-hooks/exhaustive-deps */
-  }, []);
+  }, [data]);
 
   // Every time the page change check the name of the mounth
   React.useEffect(() => {
@@ -106,23 +104,13 @@ const Body = ({ data, inEditMode, path }) => {
             <h3>{monthName}</h3>
           </div>
           <div className="calendar-body">
-            {!inEditMode ? 
             <Slider {...settings}>
               {querystringResults?.items?.map((day, index) => (
                 <div key={index} className="body">
-                  <Item day={day} data={data} path={path}/>
-                </div>
-              ))}
-            </Slider>
-            :
-            <div className="d-flex">
-              {querystringResults?.items?.slice(0, data.b_size)?.map((day, index) => (
-                <div key={index} className="body flex-1">
                   <Item day={day} data={data} path={path} inEdit={inEditMode}/>
                 </div>
               ))}
-            </div>
-            }
+            </Slider>
           </div>
         </Card>
       </Container>
