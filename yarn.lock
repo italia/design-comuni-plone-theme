@@ -2146,8 +2146,8 @@
     "@types/node" ">= 8"
 
 "@plone/volto@plone/volto#rt_development":
-  version "8.7.1"
-  resolved "https://codeload.github.com/plone/volto/tar.gz/c85b9cc7ac5137636cbaedcfd0331e6d7b4c872f"
+  version "8.10.0"
+  resolved "https://codeload.github.com/plone/volto/tar.gz/0ef53496ddd03e50dbb61d6e26f03354d0d8eb49"
   dependencies:
     "@babel/core" "7.11.1"
     "@babel/plugin-proposal-decorators" "7.10.5"
@@ -2243,7 +2243,6 @@
     postcss-loader "3.0.0"
     postcss-overrides "3.1.4"
     prettier "2.0.5"
-    pretty "2.0.0"
     pretty-bytes "5.3.0"
     prismjs "1.21.0"
     promise-file-reader "1.0.2"
@@ -17961,7 +17960,7 @@ volto-cookie-banner@collective/volto-cookie-banner#v1.0.1:
     react-cookie-consent "^3.0.0"
 
 volto-dropdownmenu@collective/volto-dropdownmenu#v1.2.1:
-  version "1.2.1"
+  version "1.2.2"
   resolved "https://codeload.github.com/collective/volto-dropdownmenu/tar.gz/b6c793e4345a26f9a1bcee88b4461452fe42ea0d"
   dependencies:
     react-outside-click-handler "1.3.0"
