@@ -1,0 +1,65 @@
+.ui.table {
+  &.celled {
+    @extend .table-bordered;
+  }
+
+  &.fixed {
+    table-layout: fixed;
+  }
+
+  &.striped {
+    @extend .table-striped;
+  }
+
+  &.compact {
+    @extend .table-sm;
+  }
+
+  &.very.basic {
+    border: none;
+
+    tbody > tr {
+      &:first-of-type {
+        th,
+        td {
+          border-top: none;
+        }
+      }
+
+      &:last-of-type {
+        th,
+        td {
+          border-bottom: none;
+        }
+      }
+
+      th,
+      td {
+        &:first-of-type {
+          border-left: none;
+        }
+
+        &:last-of-type {
+          border-right: none;
+        }
+      }
+    }
+  }
+
+  &.inverted {
+    @extend .table-dark;
+  }
+
+  &:not(.inverted) {
+    th {
+      background-color: $neutral-1-a1;
+    }
+  }
+
+  th,
+  td {
+    p:first-of-type:last-of-type {
+      margin: 0;
+    }
+  }
+}

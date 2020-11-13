@@ -39,8 +39,9 @@ class TextEditorWidget extends Component {
     block: PropTypes.string.isRequired,
     onChangeBlock: PropTypes.func.isRequired,
     placeholder: PropTypes.string,
-    focusOn: PropTypes.func,
-    nextFocus: PropTypes.any,
+    setFocus: PropTypes.func,
+    prevFocus: PropTypes.string,
+    nextFocus: PropTypes.string,
     showToolbar: PropTypes.bool,
   };
 
@@ -105,9 +106,6 @@ class TextEditorWidget extends Component {
     if (!this.props.selected && nextProps.selected) {
       // See https://github.com/draft-js-plugins/draft-js-plugins/issues/800
       setTimeout(this.node.focus, 0);
-      this.setState({
-        editorState: EditorState.moveFocusToEnd(this.state.editorState),
-      });
     }
   }
 
@@ -164,14 +162,21 @@ class TextEditorWidget extends Component {
               this.node = node;
             }}
             handleReturn={(e) => {
+              e.stopPropagation();
               if (isSoftNewlineEvent(e)) {
                 this.onChange(
                   RichUtils.insertSoftNewline(this.state.editorState),
-                );                
+                );
+
                 return 'handled';
               }
-
               return {};
+            }}
+            onUpArrow={(e) => {
+              e.stopPropagation();
+            }}
+            onDownArrow={(e) => {
+              e.stopPropagation();
             }}
           />
           {this.props.showToolbar && <InlineToolbar />}
@@ -181,4 +186,4 @@ class TextEditorWidget extends Component {
   }
 }
 
-export default React.memo(TextEditorWidget);
+export default TextEditorWidget;

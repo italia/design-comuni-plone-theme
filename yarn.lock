@@ -2146,8 +2146,8 @@
     "@types/node" ">= 8"
 
 "@plone/volto@plone/volto#rt_development":
-  version "8.9.2"
-  resolved "https://codeload.github.com/plone/volto/tar.gz/348c803c4fa9e6d1f32ce23d8fd7d0ab338a5d61"
+  version "8.10.0"
+  resolved "https://codeload.github.com/plone/volto/tar.gz/0ef53496ddd03e50dbb61d6e26f03354d0d8eb49"
   dependencies:
     "@babel/core" "7.11.1"
     "@babel/plugin-proposal-decorators" "7.10.5"
@@ -2243,7 +2243,6 @@
     postcss-loader "3.0.0"
     postcss-overrides "3.1.4"
     prettier "2.0.5"
-    pretty "2.0.0"
     pretty-bytes "5.3.0"
     prismjs "1.21.0"
     promise-file-reader "1.0.2"

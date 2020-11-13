@@ -44,6 +44,10 @@ import TextCardEdit from '@italia/components/ItaliaTheme/Blocks/TextCard/SimpleC
 import TextCardWithImageView from '@italia/components/ItaliaTheme/Blocks/TextCard/CardWithImage/View';
 import TextCardWithImageEdit from '@italia/components/ItaliaTheme/Blocks/TextCard/CardWithImage/Edit';
 
+import listArrowsSVG from '@plone/volto/icons/list-arrows.svg';
+import AccordionView from '@italia/components/ItaliaTheme/Blocks/Accordion/View';
+import AccordionEdit from '@italia/components/ItaliaTheme/Blocks/Accordion/Edit';
+
 import { CharCounterDescriptionWidget } from '@italia/components/ItaliaTheme';
 import { PageView } from '@italia/components/ItaliaTheme';
 import { NewsItemView } from '@italia/components/ItaliaTheme';
@@ -284,6 +288,21 @@ const customBlocks = {
     restricted: false,
     mostUsed: false,
     blockHasOwnFocusManagement: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
+  accordion: {
+    id: 'accordion',
+    title: 'Accordion',
+    icon: listArrowsSVG,
+    group: 'text',
+    view: AccordionView,
+    edit: AccordionEdit,
+    restricted: false,
+    mostUsed: false,
     security: {
       addPermission: [],
       view: [],

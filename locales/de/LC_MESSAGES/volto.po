@@ -132,6 +132,10 @@ msgstr ""
 msgid "In this section"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Break/Edit
+msgid "Interruzione di pagina"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Dates
 msgid "L'evento non si terrà nelle seguenti date"
 msgstr ""
@@ -466,6 +470,10 @@ msgstr ""
 
 #: components/ItaliaTheme/View/Commons/BandoDates
 msgid "bando_effective"
+msgstr ""
+
+#: components/ItaliaTheme/View/BandoView/BandoView
+msgid "bando_ente"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
@@ -893,10 +901,6 @@ msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Dates
 msgid "end"
-msgstr ""
-
-#: components/ItaliaTheme/View/BandoView/BandoView
-msgid "ente"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView
