@@ -1,0 +1,131 @@
+$accordion-icon-color: #7fb2e5;
+
+.block.accordion {
+  .section.full-width {
+    height: auto;
+
+    @media (max-width: #{map-get($grid-breakpoints, md)}) {
+      padding: 0.5em;
+    }
+
+    .card {
+      padding: 2em;
+      @media (max-width: #{map-get($grid-breakpoints, md)}) {
+        padding: 0.5em;
+      }
+
+      .card-body {
+        @media (min-width: #{map-get($grid-breakpoints, md)+1}) {
+          max-height: 70vh;
+          overflow-y: scroll;
+        }
+
+        padding: 0 3em;
+
+        @media (max-width: #{map-get($grid-breakpoints, md)}) {
+          padding: 0;
+        }
+
+        .accordion-item {
+          margin-top: 0.5em;
+
+          .dragsubblock {
+            top: -17px;
+          }
+
+          .accordion-header {
+            padding: 0.5em 0;
+            border-bottom: 1px solid $gray-border;
+            color: $secondary;
+            font-size: 1.2rem;
+            font-weight: bold;
+
+            p {
+              margin: 0;
+            }
+
+            button {
+              padding: 0 0.4em;
+              border: none;
+              background: none;
+
+              .icon {
+                width: 1.2rem;
+                fill: $accordion-icon-color;
+              }
+            }
+          }
+
+          &.subblock-view {
+            .accordion-header {
+              button {
+                display: flex;
+                align-items: center;
+                color: $secondary;
+                font-size: 1.2rem;
+                font-weight: bold;
+
+                .icon {
+                  margin-right: 0.5em;
+                }
+              }
+            }
+          }
+
+          .subblock-edit {
+            .accordion-header {
+              display: flex;
+              align-items: center;
+
+              .title {
+                color: $secondary;
+              }
+
+              button {
+                padding: 0 0.4em;
+                margin: 0 0.2em;
+
+                .icon {
+                  width: 1.2rem;
+                  height: 1.2rem;
+                  fill: $accordion-icon-color;
+                }
+              }
+            }
+          }
+
+          .accordion-content {
+            overflow: hidden;
+            height: auto;
+            max-height: 0;
+            padding: 0;
+            padding-left: 3em;
+
+            transition: max-height 0.3s ease-in-out;
+
+            &.open {
+              max-height: 100vh;
+            }
+
+            .accordion-inner {
+              padding: 2em 0;
+            }
+
+            .link-more {
+              text-align: right;
+
+              a {
+                font-weight: bold;
+
+                svg {
+                  fill: $link-color;
+                  width: 1.2em;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
