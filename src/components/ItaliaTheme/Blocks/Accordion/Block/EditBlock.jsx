@@ -16,7 +16,8 @@ import { Placeholder } from 'semantic-ui-react';
 import { Button, Icon } from 'design-react-kit/dist/design-react-kit';
 import { Editor, DefaultDraftBlockRenderMap, EditorState } from 'draft-js';
 
-import { TextEditorWidget } from '@italia/components/ItaliaTheme';
+// import { TextEditorWidget } from '@italia/components/ItaliaTheme';
+import TextEditorWidget from '../TextEditorWidget';
 
 const messages = defineMessages({
   titlePlaceholder: {
@@ -55,7 +56,6 @@ class EditBlock extends SubblockEdit {
   componentDidMount() {
     this.accordion_item_ref?.current?.addEventListener('keydown', (e) => {
       if (e.keyCode == 13) {
-        e.stopPropagation();
         if (!(this.state.focusOn === 'text')) {
           this.setState({ focusOn: 'text' });
         }
@@ -74,7 +74,7 @@ class EditBlock extends SubblockEdit {
 
     return (
       <Subblock subblock={this} className="subblock-edit">
-        <div ref={this.accordion_item_ref}>
+        <div ref={this.accordion_item_ref} key={this.props.data.index}>
           <h3 className="accordion-header">
             <Button
               color="link"
@@ -109,7 +109,11 @@ class EditBlock extends SubblockEdit {
                   messages.titlePlaceholder,
                 )}
                 nextFocus="text"
+                setFocus={(f) => {
+                  this.setState({ focusOn: f });
+                }}
                 showToolbar={false}
+                key="title"
               />
             </div>
           </h3>
@@ -132,6 +136,11 @@ class EditBlock extends SubblockEdit {
                   placeholder={this.props.intl.formatMessage(
                     messages.textPlaceholder,
                   )}
+                  prevFocus="title"
+                  setFocus={(f) => {
+                    this.setState({ focusOn: f });
+                  }}
+                  key="text"
                 />
               </div>
               {this.props.data.href && (
