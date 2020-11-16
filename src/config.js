@@ -71,6 +71,8 @@ import SimpleCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/Si
 import GridGalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate';
 import RibbonCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate';
 import BandiInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate';
+import PersoneAmministrazioneTrasparenteTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/PersoneAmministrazioneTrasparenteTemplate';
+
 
 import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
 import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
@@ -345,6 +347,10 @@ const customBlocks = {
       bandiInEvidenceTemplate: {
         label: 'Bandi',
         template: BandiInEvidenceTemplate,
+      },
+      personeAmministrazioneTrasparenteTemplate: {
+        label: 'Elenco Persone Amministrazione Trasparente',
+        template: PersoneAmministrazioneTrasparenteTemplate,
       },
     },
   },
