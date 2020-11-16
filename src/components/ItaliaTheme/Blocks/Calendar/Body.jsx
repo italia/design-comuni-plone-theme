@@ -6,9 +6,16 @@ import cx from 'classnames';
 import { getCalendarResults } from '@italia/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import Item from '@italia/components/ItaliaTheme/Blocks/Calendar/Item'
-import { useIntl } from 'react-intl';
+import { useIntl, defineMessages } from 'react-intl';
 
-const Body = ({ data, inEditMode, path }) => {
+const messages = defineMessages({
+  insert_filter: {
+    id: 'insert_filter',
+    defaultMessage: 'Inserire un filtro dal menù laterale per visualizzare i relativi risultati',
+  },
+});
+
+const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   const intl = useIntl();
   moment.locale(intl.locale);
 
@@ -22,10 +29,23 @@ const Body = ({ data, inEditMode, path }) => {
   const dispatch = useDispatch();
 
   React.useEffect(() => {
+    if(!data.query || data.query.length === 0) {
+      data.query = [{
+        i: "portal_type",
+        o: "plone.app.querystring.operation.selection.any",
+        v: ['Event']
+      }]
+      onChangeBlock({
+        ...data,
+        [data]: data,
+      });
+    }
+  }, []);
+
+  React.useEffect(() => {
     dispatch(
       getCalendarResults(path, { ...data, fullobjects: 1 }, data.block, '@scadenziario'),
     );
-    /* eslint-disable react-hooks/exhaustive-deps */
   }, [data]);
 
   // Every time the page change check the name of the mounth
@@ -104,13 +124,17 @@ const Body = ({ data, inEditMode, path }) => {
             <h3>{monthName}</h3>
           </div>
           <div className="calendar-body">
-            <Slider {...settings}>
-              {querystringResults?.items?.map((day, index) => (
-                <div key={index} className="body">
-                  <Item day={day} data={data} path={path} inEdit={inEditMode}/>
-                </div>
-              ))}
-            </Slider>
+            {data.query?.length > 0 ?
+              <Slider {...settings}>
+                {querystringResults?.items?.map((day, index) => (
+                  <div key={index} className="body">
+                    <Item day={day} data={data} path={path} inEdit={inEditMode}/>
+                  </div>
+                ))}
+              </Slider>
+              : 
+                inEditMode && <span>{intl.formatMessage(messages.insert_filter)}</span>
+            }
           </div>
         </Card>
       </Container>
