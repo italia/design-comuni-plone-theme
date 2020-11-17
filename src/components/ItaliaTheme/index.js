@@ -28,6 +28,7 @@ export LanguageSelector from '@italia/components/ItaliaTheme/LanguageSelector/La
 // export SocialLinks from '@italia/components/ItaliaTheme/SocialLinks/SocialLinks';
 
 export HeaderSlim from '@italia/components/ItaliaTheme/Header/HeaderSlim';
+export HeaderSlimRightZone from '@italia/components/ItaliaTheme/Header/HeaderSlim/HeaderSlimRightZone';
 export HeaderCenter from '@italia/components/ItaliaTheme/Header/HeaderCenter';
 export SocialHeader from '@italia/components/ItaliaTheme/Header/SocialHeader';
 export SubsiteSocialHeader from '@italia/components/ItaliaTheme/Header/SubsiteSocialHeader';
