@@ -10,11 +10,13 @@ import {
 } from '@italia/addons/volto-subblocks';
 import { SidebarPortal } from '@plone/volto/components';
 import Sidebar from './Sidebar.jsx';
+import { ArgumentsInEvidenceBackground } from '@italia/components/ItaliaTheme';
 
 class Edit extends SubblocksEdit {
   render() {
     return (
       <div className="argumentInEvidence public-ui">
+        <ArgumentsInEvidenceBackground />
         <SubblocksWrapper node={this.node}>
           <BodyWrapper data={this.props.data} inEditMode={false}>
             {this.state.subblocks.map((subblock, subindex) => (
