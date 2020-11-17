@@ -45,7 +45,8 @@ const LocationItem = ({
     }
   }, [dispatch, location]);
 
-  let location_fo = locationContent ? locationContent[key]?.data : location;
+  let location_fo = locationContent?.[key]?.data || location;
+
   let address = ['street', 'city', 'zip_code']
     .map((key) => location_fo?.[key])
     .filter(Boolean)
