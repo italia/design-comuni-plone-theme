@@ -54,7 +54,7 @@ const HeaderSlim = () => {
         </HeaderBrand>
         <HeaderRightZone>
           <ParentSiteMenu />
-          {/*<LanguageSelector />*/}
+          <LanguageSelector />
           {/*<Button
             className="btn-icon"
             color="primary"

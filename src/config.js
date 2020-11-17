@@ -102,9 +102,9 @@ import faSitemapSVG from './icons/sitemap.svg';
 import faBuildingSVG from './icons/building.svg';
 import faFileDownloadSVG from './icons/file-download.svg';
 
-const iconList = Object.keys(Icons.fas).map(icon => Icons[icon]);
+const iconList = Object.keys(Icons.fas).map((icon) => Icons[icon]);
 const iconListRegular = Object.keys(IconsRegular.far).map(
-  icon => IconsRegular[icon],
+  (icon) => IconsRegular[icon],
 );
 
 library.add(...iconList, ...iconListRegular);
@@ -129,7 +129,7 @@ const extendedBlockRenderMap = config.settings.extendedBlockRenderMap.update(
   (element = 'p') => element,
 );
 
-const blockStyleFn = contentBlock => {
+const blockStyleFn = (contentBlock) => {
   let r = config.settings.blockStyleFn(contentBlock);
 
   if (!r) {
@@ -456,14 +456,14 @@ export const widgets = {
   id: {
     ...config.widgets.id,
     description: CharCounterDescriptionWidget,
-    icona: props => (
+    icona: (props) => (
       <IconWidget {...props} defaultOptions={defaultIconWidgetOptions} />
     ),
     cookie_consent_configuration: MultilingualWidget(),
-    data_conclusione_incarico: props => (
+    data_conclusione_incarico: (props) => (
       <DatetimeWidget {...props} dateOnly={true} />
     ),
-    data_insediamento: props => <DatetimeWidget {...props} dateOnly={true} />,
+    data_insediamento: (props) => <DatetimeWidget {...props} dateOnly={true} />,
   },
 };
 
