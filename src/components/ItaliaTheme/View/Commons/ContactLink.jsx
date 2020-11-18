@@ -59,7 +59,7 @@ const ContactLink = ({ tel, fax, email, label = true, strong = false }) => {
 
   function ReplaceEmails(str) {
     let newhtml = str.replace(
-      /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi,
+      /([a-zA-Z0-9+._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi,
       function (v) {
         let r =
           "<a href='mailto:" +
