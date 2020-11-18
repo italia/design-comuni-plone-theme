@@ -7,7 +7,7 @@ import React, { useState, createRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import Modules from '@italia/components/ItaliaTheme/View/DocumentoView/Modules';
-
+import { contentFolderHasItems } from '@italia/helpers';
 import {
   Gallery,
   CuredBy,
@@ -111,17 +111,20 @@ const DocumentoView = ({ content, location }) => {
             <ContentImage content={content} position="documentBody" />
 
             {/* DESCRIZIONE*/}
+
             <RichTextArticle
               tag_id={'text-body'}
               title={intl.formatMessage(messages.descrizione)}
               show_title={true}
               content={content.descrizione_estesa?.data}
             >
-              <Gallery
-                content={content}
-                folder_name={'multimedia'}
-                className="mt-5"
-              />
+              {contentFolderHasItems(content, 'multimedia') && (
+                <Gallery
+                  content={content}
+                  folder_name={'multimedia'}
+                  className="mt-5"
+                />
+              )}
 
               {content.autori?.length > 0 && (
                 <CuredBy
