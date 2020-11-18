@@ -24,6 +24,7 @@ const messages = defineMessages({
     id: 'area',
     defaultMessage: 'area',
   },
+  
 });
 
 const GridGalleryTemplate = ({
@@ -76,7 +77,7 @@ const GridGalleryTemplate = ({
                     <Link to={flattenToAppURL(item.organizzazione_riferimento[0]['@id'])} className="text-decoration-none">
                       {item.organizzazione_riferimento[0]?.title}
                     </Link>
-                  : 
+                  :
                     <span>Nessuna</span>
                   }
                 </td>
