@@ -1,4 +1,6 @@
 .ui.table {
+  font-family: $font-family-base;
+
   &.celled {
     @extend .table-bordered;
   }

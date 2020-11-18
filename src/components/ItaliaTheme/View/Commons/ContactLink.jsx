@@ -35,38 +35,55 @@ const ContactLink = ({ tel, fax, email, label = true, strong = false }) => {
   let ret_label = null;
   let ret = null;
 
+  function ReplacePhoneNumbers(str, type) {
+    let newhtml = str.replace(
+      /\+?[0-9]( ?[0-9\/-]+)+.?[0-9]*/gm,
+      function (v) {
+        let r =
+          "<a href='" +
+          type +
+          ':' +
+          v.trim().replace(/-|\/|\s/gm, '') +
+          "' title='" +
+          (type === 'tel'
+            ? intl.formatMessage(messages.call)
+            : intl.formatMessage(messages.call_fax)) +
+          "' >" +
+          v +
+          '</a>';
+        return r;
+      },
+    );
+    return newhtml;
+  }
+
+  function ReplaceEmails(str) {
+    let newhtml = str.replace(
+      /([a-zA-Z0-9+._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/gi,
+      function (v) {
+        let r =
+          "<a href='mailto:" +
+          v.trim().replace(/-|\/|\s/gm, '') +
+          "' title='" +
+          intl.formatMessage(messages.write_to) +
+          "' >" +
+          v +
+          '</a>';
+        return r;
+      },
+    );
+    return newhtml;
+  }
+
   if (tel) {
     ret_label = intl.formatMessage(messages.telefono);
-    ret = (
-      <a
-        href={`tel:${tel}`}
-        title={`${intl.formatMessage(messages.call)} ${tel}`}
-      >
-        {tel}
-      </a>
-    );
+    ret = ReplacePhoneNumbers(tel, 'tel');
   } else if (fax) {
     ret_label = intl.formatMessage(messages.fax);
-    ret = (
-      <a
-        href={`fax:${fax}`}
-        title={`${intl.formatMessage(messages.call_fax)} ${fax}`}
-      >
-        {fax}
-      </a>
-    );
+    ret = ReplacePhoneNumbers(fax, 'fax');
   } else if (email) {
     ret_label = intl.formatMessage(messages.email);
-    ret = (
-      <>
-        <a
-          href={`mailto:${email}`}
-          title={`${intl.formatMessage(messages.write_to)} ${email}`}
-        >
-          {email}
-        </a>
-      </>
-    );
+    ret = ReplaceEmails(email, 'fax');
   }
   ret_label = label ? <>{ret_label}: </> : null;
   ret_label = label ? strong ? <strong>{ret_label}</strong> : ret_label : null;
@@ -74,7 +91,7 @@ const ContactLink = ({ tel, fax, email, label = true, strong = false }) => {
   return ret ? (
     <>
       {ret_label}
-      {ret}
+      <span dangerouslySetInnerHTML={{ __html: ret }} />
     </>
   ) : null;
 };
