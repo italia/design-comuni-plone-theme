@@ -37,7 +37,7 @@ const ContactLink = ({ tel, fax, email, label = true, strong = false }) => {
 
   function ReplacePhoneNumbers(str, type) {
     let newhtml = str.replace(
-      /([0-9.]+)|.([0-9]+\/[0-9]+)|.([0-9]+-[0-9]+)|.([0-9]+\s-\s[0-9]+)|.([0-9]+\s[0-9]+)/gm,
+      /\+?[0-9]( ?[0-9\/-]+)+.?[0-9]*/gm,
       function (v) {
         let r =
           "<a href='" +
