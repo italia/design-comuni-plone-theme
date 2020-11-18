@@ -29,7 +29,8 @@ const PageHeaderNav = ({ content, title }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const excluded_types = ['Image', 'File', 'Folder'];
   const links = content?.items?.filter(
-    (item) => excluded_types.indexOf(item['@type']) < 0,
+    (item) =>
+      excluded_types.indexOf(item['@type']) < 0 && !item.exclude_from_nav,
   );
 
   let visible_links = links;
