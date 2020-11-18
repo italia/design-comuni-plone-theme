@@ -121,7 +121,7 @@ class TinymceWidget extends Component {
   constructor(props) {
     super(props);
 
-    this.state = ({editorState: props.value?.data || ''});
+    this.state = { editorState: props.value?.data || '' };
 
     this.schema = {
       fieldsets: [
@@ -216,39 +216,47 @@ class TinymceWidget extends Component {
                 initialValue={this.state?.editorState}
                 init={{
                   height: 500,
-                  menubar: "view",
+                  menubar: 'view',
                   formats: {
-                    "callout": {
-                      "block": "p",
-                      "classes": "callout"
+                    callout: {
+                      block: 'p',
+                      classes: 'callout',
+                    },
+                  },
+                  init_instance_callback: function (editor) {
+                    var freeTiny = document.querySelector(
+                      '.tox .tox-notification--in',
+                    );
+                    if (freeTiny) {
+                      freeTiny.style.display = 'none';
                     }
                   },
-                  init_instance_callback : function(editor) {
-                    var freeTiny = document.querySelector('.tox .tox-notification--in');
-                   freeTiny.style.display = 'none';
-                  },
                   block_formats: 'callout=callout',
-                  forced_root_block : 'p',
+                  forced_root_block: 'p',
                   table_header_type: 'cells',
                   body_class: 'public-ui',
-                  table_default_attributes: { 
-                    border: "1",
-                    class: 'ui celled fixed table'
+                  table_default_attributes: {
+                    border: '1',
+                    class: 'ui celled fixed table',
                   },
-                  content_style: '.table th { background-color: #ebeced; padding: 18px!important; } .table td { padding: 18px!important } \
+                  content_style:
+                    '.table th { background-color: #ebeced; padding: 18px!important; } .table td { padding: 18px!important } \
                                   .callout { padding: 1.25rem; margin-top: 1.25rem; margin-bottom: 1.25rem; border: 1px solid #d9dadb; border-left-width: 0.4rem; border-radius: 0.25rem; }',
                   language: this.props.intl.locale,
                   plugins: [
                     'advlist autolink lists link image charmap print preview anchor',
                     'searchreplace visualblocks code fullscreen',
-                    'insertdatetime media table paste code help wordcount'
+                    'insertdatetime media table paste code help wordcount',
                   ],
-                  toolbar: ['underline bold italic link h2 h3 bullist numlist blockquote formatselect removeformat table', 'callout']
+                  toolbar: [
+                    'underline bold italic link h2 h3 bullist numlist blockquote formatselect removeformat table',
+                    'callout',
+                  ],
                 }}
                 onEditorChange={this.onChange}
               />
-            </> 
-          ) : ( 
+            </>
+          ) : (
             <div className="DraftEditor-root" />
           )}
         </div>
