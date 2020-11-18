@@ -63,6 +63,7 @@ export CartellaModulisticaView from '@italia/components/ItaliaTheme/View/Cartell
 export DocumentoView from '@italia/components/ItaliaTheme/View/DocumentoView/DocumentoView';
 export ModuloView from '@italia/components/ItaliaTheme/View/ModuloView/ModuloView';
 export BandoView from '@italia/components/ItaliaTheme/View/BandoView/BandoView';
+export TrasparenzaView from '@italia/components/ItaliaTheme/View/TrasparenzaView/TrasparenzaView';
 
 export LinkToWidget from '@italia/components/ItaliaTheme/manage/Widgets/LinkToWidget';
 export IconWidget from '@italia/components/ItaliaTheme/manage/Widgets/IconWidget';

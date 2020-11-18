@@ -55,3 +55,4 @@ export UOPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/UOVie
 export VenuePlaceholderAfterContent from '@italia/components/ItaliaTheme/View/VenueView/Placeholder/AfterContent';
 export DocumentoPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/DocumentoView/Placeholder/AfterContent';
 export BandoPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/BandoView/Placeholder/AfterContent';
+export TrasparenzaPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/TrasparenzaView/Placeholder/AfterContent';
