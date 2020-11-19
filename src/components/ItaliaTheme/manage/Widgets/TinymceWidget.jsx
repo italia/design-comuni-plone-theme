@@ -215,6 +215,7 @@ class TinymceWidget extends Component {
               <Editor
                 initialValue={this.state?.editorState}
                 init={{
+                  inline_styles: true,
                   height: 500,
                   menubar: 'view',
                   formats: {
