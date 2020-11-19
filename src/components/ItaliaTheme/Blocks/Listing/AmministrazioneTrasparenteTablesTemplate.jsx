@@ -11,6 +11,7 @@ import {
 import { Link } from 'react-router-dom';
 import { flattenHTMLToAppURL } from '@plone/volto/helpers';
 import { getTableRowData } from '@italia/helpers';
+import { useLocation } from 'react-router-dom';
 
 const AmministrazioneTrasparenteTablesTemplate = ({
   items,
@@ -21,6 +22,7 @@ const AmministrazioneTrasparenteTablesTemplate = ({
 }) => {
   const intl = useIntl();
   moment.locale(intl.locale);
+  const location = useLocation();
 
   const getColumn = (item) => {
     if(!item) {
@@ -50,7 +52,7 @@ const AmministrazioneTrasparenteTablesTemplate = ({
     }
   }
 
-  const tableData = getTableRowData(items, intl);
+  const tableData = getTableRowData(items, intl, location.pathname);
 
   return (
     <div

@@ -62,6 +62,7 @@ import { DocumentoView } from '@italia/components/ItaliaTheme';
 import { ModuloView } from '@italia/components/ItaliaTheme';
 import { BandoView } from '@italia/components/ItaliaTheme';
 import { TrasparenzaView } from '@italia/components/ItaliaTheme';
+import { DettagliProcedimentiView } from '@italia/components/ItaliaTheme';
 
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
@@ -428,7 +429,7 @@ export const views = {
     ...config.views.layoutViews,
     document_view: PageView,
     trasparenza_view: TrasparenzaView,
-    dettagli_procedimenti_view: TrasparenzaView,
+    dettagli_procedimenti_view: DettagliProcedimentiView,
   },
 };
 
@@ -444,6 +445,7 @@ export const siteConfig = {
     subsiteParentSiteTitle: 'Nome del sito padre del sottosito',
     footerInfos:
       'Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000',
+    amministrazioneTrasparenteUrl: '/amministrazione-trasparente'
   },
   socialSettings: [
     {

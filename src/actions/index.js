@@ -22,6 +22,10 @@ import {
   getAmministrazioneTrasparenteTree,
   GET_AMMINISTRAZIONE_TRASPARENTE,
 } from './getAmministrazioneTrasparenteTree';
+import {
+  getDettagliProcedimento,
+  GET_DETTAGLI_PROCEDIMENTO,
+} from './getDettagliProcedimento';
 
 export {
   getSearchFilters,
@@ -34,4 +38,6 @@ export {
   GET_CALENDAR_DAY_RESULTS,
   getAmministrazioneTrasparenteTree,
   GET_AMMINISTRAZIONE_TRASPARENTE,
+  getDettagliProcedimento,
+  GET_DETTAGLI_PROCEDIMENTO
 };

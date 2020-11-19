@@ -33,7 +33,7 @@ const messages = defineMessages({
   },
 });
 
-export const getTableRowData = (items, intl) => {
+export const getTableRowData = (items, intl, currentLocation) => {
 	if(!items || items.length === 0) {
 		return [];
 	}
@@ -83,7 +83,7 @@ export const getTableRowData = (items, intl) => {
 						type: 'link',
 						class: 'text-decoration-none font-weight-bold',
 						text: item.title,
-						link: flattenToAppURL(item['@id'])
+						link: flattenToAppURL(`${currentLocation}/dettaglio-procedimento?uid=${item.UID}`)
 					},
 					{
 						type: 'text',

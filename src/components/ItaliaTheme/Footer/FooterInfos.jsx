@@ -77,7 +77,7 @@ const FooterInfos = () => {
       >
         <h4>
           <Link
-            to="/amministrazione"
+            to={siteConfig.properties.amministrazioneTrasparenteUrl}
             title={
               intl.formatMessage(messages.goToPage) +
               ':' +

@@ -13,10 +13,7 @@ import {
   PageHeader,
 } from '@italia/components/ItaliaTheme/View';
 import { getAmministrazioneTrasparenteTree } from '@italia/actions';
-
 import {
-  Card,
-  CardBody,
   LinkList,
   LinkListItem,
 } from 'design-react-kit/dist/design-react-kit';
