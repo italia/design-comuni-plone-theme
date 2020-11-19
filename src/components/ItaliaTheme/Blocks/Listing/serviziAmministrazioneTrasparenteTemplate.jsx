@@ -36,7 +36,6 @@ const GridGalleryTemplate = ({
 }) => {
   const intl = useIntl();
   moment.locale(intl.locale);
-  console.log(items)
   return (
     <div
       className={cx('persone-amministrazione-trasparente', {
