@@ -161,7 +161,7 @@ const UOView = ({ content }) => {
                   {intl.formatMessage(messages.cosa_fa)}
                 </h4>
                 <div className="mb-5 mt-3">
-                  <h5>{intl.formatMessage(messages.competenze)}</h5>
+                  {/* <h5>{intl.formatMessage(messages.competenze)}</h5> //rimosso il titolo 'competenze' perchè è l'unico sottotitolo di 'cosa fa' e ci sarebbero sempre due titoli, un po inutili*/}
                   <RichText content={content.competenze.data} />
                 </div>
               </article>
