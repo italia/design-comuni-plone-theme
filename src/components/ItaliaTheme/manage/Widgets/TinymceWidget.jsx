@@ -165,7 +165,10 @@ class TinymceWidget extends Component {
    */
   onChange(editorState) {
     this.setState({ editorState });
-    this.props.onChange(this.props.id, editorState);
+    this.props.onChange(this.props.id, {
+      ...this.props.value,
+      data: editorState,
+    });
   }
 
   /**
@@ -213,7 +216,7 @@ class TinymceWidget extends Component {
           {this.props.onChange ? (
             <>
               <Editor
-                initialValue={this.state?.editorState}
+                initialValue={this.state.editorState}
                 init={{
                   inline_styles: true,
                   height: 500,
