@@ -5,9 +5,9 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import { flattenToAppURL } from '@plone/volto/helpers';
 import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import { flattenToAppURL } from '@plone/volto/helpers';
+import { UniversalLink } from '@plone/volto/components';
 
 import {
   Card,
@@ -48,6 +48,10 @@ const Modules = ({ content, title, id = 'documenti' }) => {
                   >
                     {modulo.title ?? modulo.file_principale.filename}
                   </a>
+                ) : modulo['@type'] === 'Link' ? (
+                  <UniversalLink href={modulo['@id']} title={modulo.title}>
+                    {modulo.title}
+                  </UniversalLink>
                 ) : (
                   modulo.title
                 )}

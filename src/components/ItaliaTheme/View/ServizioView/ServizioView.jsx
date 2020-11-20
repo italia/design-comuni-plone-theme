@@ -431,7 +431,7 @@ const ServizioView = ({ content }) => {
               >
                 {content.servizi_collegati?.length > 0 && (
                   <div className="mb-4">
-                    <h5>{intl.formatMessage(messages.servizi_collegati)}</h5>
+                    {/* <h5>{intl.formatMessage(messages.servizi_collegati)}</h5> */}
                     <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                       {content.servizi_collegati.map((item, i) => (
                         <GenericCard
@@ -444,7 +444,7 @@ const ServizioView = ({ content }) => {
                   </div>
                 )}
 
-                {content.related_news?.length > 0 && (
+                {/* {content.related_news?.length > 0 && (
                   <div className="mb-4">
                     <h5>{intl.formatMessage(messages.related_news)}</h5>
                     <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
@@ -460,11 +460,12 @@ const ServizioView = ({ content }) => {
                       ))}
                     </div>
                   </div>
-                )}
+                )} */}
 
                 {content.relatedItems?.length > 0 && (
                   <div className="mb-4">
-                    <h5>{intl.formatMessage(messages.related_items)}</h5>
+                    {/* <h5>{intl.formatMessage(messages.related_items)}</h5> */}
+
                     <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                       {content.relatedItems.map((item, i) => (
                         <GenericCard

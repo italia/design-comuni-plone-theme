@@ -80,9 +80,11 @@ import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
 import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
 import CardWithoutImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
 import { DatetimeWidget } from '@plone/volto/config/Widgets';
+
 import { MultilingualWidget } from '@italia/addons/volto-multilingual-widget';
 import { IconWidget } from '@italia/components/ItaliaTheme';
 import { defaultIconWidgetOptions } from '@italia/helpers/index';
+import TinymceWidget from '@italia/components/ItaliaTheme/manage/Widgets/TinymceWidget'
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import * as Icons from '@fortawesome/free-solid-svg-icons';
@@ -480,6 +482,10 @@ export const widgets = {
     ),
     data_insediamento: (props) => <DatetimeWidget {...props} dateOnly={true} />,
   },
+  widget: {
+    ...config.widgets.widget,
+    richtext: TinymceWidget
+  }
 };
 
 const customBlocksOrder = [

@@ -48,7 +48,7 @@ const parseFetchedSections = (sections, location) => {
 };
 
 const parseFetchedTopics = (topics, location) => {
-  const qsTopics = qs.parse(location?.search ?? '')?.argomenti ?? [];
+  const qsTopics = qs.parse(location?.search ?? '')?.tassonomia_argomenti ?? [];
 
   return topics.reduce((acc, topic) => {
     acc[topic.path] = {
@@ -160,7 +160,7 @@ const getSearchParamsURL = (
       {
         ...(text ?? {}),
         ...(pathQuery ?? {}),
-        argomenti: activeTopics,
+        tassonomia_argomenti: activeTopics,
         ...optionsQuery,
         ...sortOn,
       },

@@ -22,7 +22,7 @@ const Edit = ({
 
   return (
     <>
-      <div className="block">
+      <div className="block full-width">
         <BlockSearchSectionsBody block={data} sections={sections} />
       </div>
       <SidebarPortal selected={selected}>

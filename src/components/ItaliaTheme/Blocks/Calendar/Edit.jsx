@@ -9,7 +9,7 @@ const Edit = ({ data, block, onChangeBlock, selected, pathname }) => {
 
   return (
     <div className="calendar public-ui">
-      <Body data={data} path={getBaseUrl(pathname)} inEditMode={true}/>
+      <Body data={data} path={getBaseUrl(pathname)} inEditMode={true} onChangeBlock={onChangeBlock}/>
       <SidebarPortal selected={selected}>
         <ListingSidebar
           data={data}

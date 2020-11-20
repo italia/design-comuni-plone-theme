@@ -16,16 +16,29 @@ const Locations = ({
   load = true,
   details_link = true,
 }) => {
+  let location_items = [];
+  if (
+    content?.nome_sede ||
+    content.street ||
+    content.city ||
+    content.zip_code ||
+    content.quartiere ||
+    content.circoscrizione
+  ) {
+    location_items.push(content);
+  }
+
+  location_items = [...location_items, ...locations];
   return (
     <>
       <div className="card-wrapper card-teaser-wrapper">
-        {[content, ...locations].map((item, i) => (
+        {[...location_items].map((item, i) => (
           <LocationItem
             key={item['@id'] + i}
             location={item}
             show_icon={show_icon}
-            load={load}
-            details_link={details_link}
+            load={item['@id'] === content['@id'] ? false : load}
+            details_link={item['@id'] === content['@id'] ? false : details_link}
           />
         ))}
       </div>

@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 
 import { Link } from 'react-router-dom';
 import { defineMessages, useIntl } from 'react-intl';
+import { HeaderSlimRightZone } from '@italia/components/ItaliaTheme';
 // import { BITIcon, it_user } from '@italia/components/ItaliaTheme/Icons';
 import {
   Button,
@@ -53,23 +54,7 @@ const HeaderSlim = () => {
           {parentSiteTile}
         </HeaderBrand>
         <HeaderRightZone>
-          <ParentSiteMenu />
-          {/*<LanguageSelector />*/}
-          {/*<Button
-            className="btn-icon"
-            color="primary"
-            to="#"
-            icon={false}
-            size="full"
-            tag={Link}
-          >
-            <span className="rounded-icon">
-              <Icon color="primary" icon="it-user" padding={false} size="" />
-            </span>
-            <span className="d-none d-lg-block">
-              {intl.formatMessage(messages.arLogin)}
-            </span>
-          </Button>*/}
+          <HeaderSlimRightZone />
         </HeaderRightZone>
       </HeaderContent>
     </Header>

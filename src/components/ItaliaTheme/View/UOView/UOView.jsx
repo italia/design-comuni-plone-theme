@@ -161,7 +161,7 @@ const UOView = ({ content }) => {
                   {intl.formatMessage(messages.cosa_fa)}
                 </h4>
                 <div className="mb-5 mt-3">
-                  <h5>{intl.formatMessage(messages.competenze)}</h5>
+                  {/* <h5>{intl.formatMessage(messages.competenze)}</h5> //rimosso il titolo 'competenze' perchè è l'unico sottotitolo di 'cosa fa' e ci sarebbero sempre due titoli, un po inutili*/}
                   <RichText content={content.competenze.data} />
                 </div>
               </article>
@@ -294,19 +294,18 @@ const UOView = ({ content }) => {
             {/*** CONTATTI ***/}
             {(content?.sedi_secondarie?.length > 0 ||
               content?.contact_info?.data.replace(/(<([^>]+)>)/g, '') ||
-              content?.geolocation?.latitude ||
-              content?.geolocation?.longitude ||
-              content?.nome_sede ||
-              content?.street ||
-              content?.city ||
-              content?.country?.title ||
-              content?.zip_code ||
+              content?.geolocation?.latitude > 0 ||
+              content?.geolocation?.longitude > 0 ||
+              content?.nome_sede?.length > 0 ||
+              content?.street?.length > 0 ||
+              content?.city?.length > 0 ||
+              content?.zip_code?.length > 0 ||
               content?.orario_pubblico?.data.replace(/(<([^>]+)>)/g, '') ||
-              content?.telefono ||
-              content?.fax ||
-              content?.web ||
-              content?.email ||
-              content?.pec) && (
+              content?.telefono?.length > 0 ||
+              content?.fax?.length > 0 ||
+              content?.web?.length > 0 ||
+              content?.email?.length > 0 ||
+              content?.pec?.length > 0) && (
               <article
                 id="contatti"
                 className="it-page-section anchor-offset mt-5"
@@ -315,14 +314,15 @@ const UOView = ({ content }) => {
                   {intl.formatMessage(messages.contatti)}
                 </h4>
 
-                {(content.geolocation?.latitude ||
-                  content?.geolocation?.longitude ||
+                {(content.geolocation?.latitude > 0 ||
+                  content?.geolocation?.longitude > 0 ||
                   content?.sede?.length > 0 ||
-                  content?.nome_sede ||
-                  content?.street ||
-                  content?.city ||
-                  content?.country?.title ||
-                  content?.zip_code) && (
+                  content?.nome_sede?.length > 0 ||
+                  content?.street?.length > 0 ||
+                  content?.city?.length > 0 ||
+                  content?.zip_code?.length > 0 ||
+                  content?.quartiere?.length > 0 ||
+                  content?.circoscrizione?.length > 0) && (
                   <div className="mb-5 mt-3">
                     <Locations
                       content={content}
