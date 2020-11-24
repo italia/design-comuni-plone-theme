@@ -11581,10 +11581,10 @@ mri@^1.1.0, mri@^1.1.4:
   resolved "https://registry.yarnpkg.com/mri/-/mri-1.1.5.tgz#ce21dba2c69f74a9b7cf8a1ec62307e089e223e0"
   integrity sha512-d2RKzMD4JNyHMbnbWnznPaa8vbdlq/4pNZ3IgdaGrVbBhebBsGUUE/6qorTMYNS6TwuH3ilfOlD2bf4Igh8CKg==
 
-mrs-developer@^1.1.6:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/mrs-developer/-/mrs-developer-1.4.0.tgz#800b54da2113b9caaea97cec1e7b063b9a71884d"
-  integrity sha512-17XOJC+DPOuKb1BYFU8m2WIeIdGh/lqRkd9Ic3GOPKN0x0yiDGsn5vdBzvO0AbHNUURgGWV+9j+K5ss2HdDEXg==
+mrs-developer@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/mrs-developer/-/mrs-developer-1.5.0.tgz#7d001f655cf07b71de7439b25d1cbe3214c4f1e3"
+  integrity sha512-flOOAGkmhJLHWOo1LYANZlqnpzMsXjTelDCr8ERxiEJBW/QPsVU/pBcxG0tUqihRjA3RBoeBegb7ocl33A/lzg==
   dependencies:
     colors "^1.3.3"
     simple-git "^1.115.0"
