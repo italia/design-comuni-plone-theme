@@ -97,7 +97,7 @@ export const getTableRowData = (items, intl, currentLocation) => {
 						type: 'link',
 						class: 'text-decoration-none',
 						text: item.ufficio_responsabile?.length > 0 && item.ufficio_responsabile[0]?.title,
-						link: item.ufficio_responsabile?.length > 0 && flattenToAppURL(item.ufficio_responsabile[0]['@id'])
+						link: item.ufficio_responsabile?.length > 0 && flattenToAppURL(item.ufficio_responsabile[0]['@id'] || '')
 					}
 				]
 			})
