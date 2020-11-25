@@ -43,7 +43,7 @@ const AmministrazioneTrasparenteTablesTemplate = ({
         return (
           <div
             dangerouslySetInnerHTML={{
-              __html: flattenHTMLToAppURL(item.text),
+              __html: flattenHTMLToAppURL(item.text || ''),
             }}
           />
         )
