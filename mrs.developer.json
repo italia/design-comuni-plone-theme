@@ -2,31 +2,37 @@
   "volto-rss-block": {
     "package": "@italia/addons/volto-rss-block",
     "path": "src",
+    "https": "https://github.com/redturtle/volto-rss-block.git",
     "url": "git@github.com:redturtle/volto-rss-block.git"
   },
   "volto-cookie-banner": {
     "package": "@italia/addons/volto-cookie-banner",
     "path": "src",
+    "https": "https://github.com/collective/volto-cookie-banner.git",
     "url": "git@github.com:collective/volto-cookie-banner.git"
   },
   "volto-multilingual-widget": {
     "package": "@italia/addons/volto-multilingual-widget",
     "path": "src",
+    "https": "https://github.com/collective/volto-multilingual-widget.git",
     "url": "git@github.com:collective/volto-multilingual-widget.git"
   },
   "volto-venue": {
     "package": "@italia/addons/volto-venue",
     "path": "src",
+    "https": "https://github.com/collective/volto-venue.git",
     "url": "git@github.com:collective/volto-venue.git"
   },
   "volto-subblocks": {
     "package": "@italia/addons/volto-subblocks",
     "path": "src",
+    "https": "https://github.com/collective/volto-subblocks.git",
     "url": "git@github.com:collective/volto-subblocks.git"
   },
   "volto-dropdownmenu": {
     "package": "@italia/addons/volto-dropdownmenu",
     "path": "src",
+    "https": "https://github.com/collective/volto-dropdownmenu.git",
     "url": "git@github.com:collective/volto-dropdownmenu.git"
   },
   "volto-subsites": {
