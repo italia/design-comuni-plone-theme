@@ -91,7 +91,7 @@ export const getTableRowData = (items, intl, currentLocation) => {
 					},
 					{
 						type: 'richtext',
-						text: item.tempi_e_scadenze.data,
+						text: item.tempi_e_scadenze?.data,
 					},
 					{
 						type: 'link',
