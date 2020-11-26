@@ -7,40 +7,46 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { getDropdownMenuNavitems } from '@italia/addons/volto-dropdownmenu';
 import {
   Header,
   HeaderContent,
   HeaderToggler,
-  Collapse,
   Nav,
   Icon,
 } from 'design-react-kit/dist/design-react-kit';
+import { Collapse } from '@italia/components';
 import {
   MegaMenu,
   MenuSecondary,
   SubsiteMenuSecondary,
+  Logo,
+  SocialHeader,
+  SubsiteSocialHeader,
 } from '@italia/components/ItaliaTheme';
+import { flattenToAppURL } from '@plone/volto/helpers';
+import { siteConfig } from '~/config';
 
 const Navigation = ({ pathname }) => {
   const [collapseOpen, setCollapseOpen] = useState(false);
   const dispatch = useDispatch();
-  const subsite = useSelector(state => state.subsite?.data);
+  const subsite = useSelector((state) => state.subsite?.data);
 
-  const items = useSelector(state => state.dropdownMenuNavItems?.result);
+  const items = useSelector((state) => state.dropdownMenuNavItems?.result);
   useEffect(() => {
     dispatch(getDropdownMenuNavitems());
   }, [dispatch]);
 
   const menu =
     items
-      .filter(menu =>
+      .filter((menu) =>
         (pathname?.length ? pathname : '/').match(new RegExp(menu.rootPath)),
       )
       .pop()?.items ?? [];
 
-  const getAnchorTarget = nodeElement => {
+  const getAnchorTarget = (nodeElement) => {
     if (nodeElement.nodeName === 'A') {
       return nodeElement;
     } else if (nodeElement.parentElement?.nodeName === 'A') {
@@ -51,7 +57,7 @@ const Navigation = ({ pathname }) => {
   };
 
   useEffect(() => {
-    const blocksClickListener = e => {
+    const blocksClickListener = (e) => {
       const menuLinks = [
         ...document.querySelectorAll('.menu-wrapper a:not([aria-haspopup])'),
       ];
@@ -91,9 +97,25 @@ const Navigation = ({ pathname }) => {
             onOverlayClick={() => setCollapseOpen(!collapseOpen)}
           >
             <div className="menu-wrapper">
+              <div className="it-brand-wrapper">
+                <Link
+                  to={subsite?.['@id'] ? flattenToAppURL(subsite['@id']) : '/'}
+                >
+                  <Logo />
+                  <div className="it-brand-text">
+                    <h2 className="no_toc">
+                      {subsite?.title || siteConfig.properties.siteTitle}
+                    </h2>
+                    <h3 className="no_toc">
+                      {subsite?.description ||
+                        siteConfig.properties.siteSubtitle}
+                    </h3>
+                  </div>
+                </Link>
+              </div>
               <Nav navbar>
                 {menu
-                  ?.filter(item => item.visible)
+                  ?.filter((item) => item.visible)
                   ?.map((item, index) => (
                     <MegaMenu
                       item={item}
@@ -108,6 +130,8 @@ const Navigation = ({ pathname }) => {
               ) : (
                 <SubsiteMenuSecondary />
               )}
+
+              {!subsite ? <SocialHeader /> : <SubsiteSocialHeader />}
             </div>
           </Collapse>
         </HeaderContent>
