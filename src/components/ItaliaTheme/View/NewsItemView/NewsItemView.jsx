@@ -95,7 +95,7 @@ const NewsItemView = ({ content, location }) => {
             <SideMenu data={sideMenuElements} />
           </aside>
           <section
-            className="col-lg-8 it-page-sections-container"
+            className="col-lg-8 it-page-sections-container text-serif"
             ref={documentBody}
           >
             <article
