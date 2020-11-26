@@ -9,6 +9,10 @@
  * };
  */
 
+const {
+  default: FooterNewsletterSubscribe,
+} = require('./Footer/FooterNewsletterSubscribe');
+
 /********* BLOCKS ********* */
 export AlertSidebar from '@italia/components/ItaliaTheme/Blocks/Alert/Sidebar';
 export NewsHomeBody from '@italia/components/ItaliaTheme/Blocks/NewsHome/Body';
@@ -45,6 +49,7 @@ export FooterMain from '@italia/components/ItaliaTheme/Footer/FooterMain';
 export FooterInfos from '@italia/components/ItaliaTheme/Footer/FooterInfos';
 export FooterNavigation from '@italia/components/ItaliaTheme/Footer/FooterNavigation';
 export FooterSmall from '@italia/components/ItaliaTheme/Footer/FooterSmall';
+export FooterNewsletterSubscribe from '@italia/components/ItaliaTheme/Footer/FooterNewsletterSubscribe';
 export SubsiteFooter from '@italia/components/ItaliaTheme/Footer/SubsiteFooter';
 export Pagination from '@italia/components/ItaliaTheme/Pagination/Pagination';
 
