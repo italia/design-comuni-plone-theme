@@ -11581,7 +11581,7 @@ mri@^1.1.0, mri@^1.1.4:
   resolved "https://registry.yarnpkg.com/mri/-/mri-1.1.5.tgz#ce21dba2c69f74a9b7cf8a1ec62307e089e223e0"
   integrity sha512-d2RKzMD4JNyHMbnbWnznPaa8vbdlq/4pNZ3IgdaGrVbBhebBsGUUE/6qorTMYNS6TwuH3ilfOlD2bf4Igh8CKg==
 
-mrs-developer@^1.5.0:
+mrs-developer@^1.1.6:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/mrs-developer/-/mrs-developer-1.5.0.tgz#7d001f655cf07b71de7439b25d1cbe3214c4f1e3"
   integrity sha512-flOOAGkmhJLHWOo1LYANZlqnpzMsXjTelDCr8ERxiEJBW/QPsVU/pBcxG0tUqihRjA3RBoeBegb7ocl33A/lzg==
@@ -17913,6 +17913,12 @@ volto-cookie-banner@collective/volto-cookie-banner#v1.0.1:
 volto-dropdownmenu@collective/volto-dropdownmenu#v1.2.1:
   version "1.2.1"
   resolved "https://codeload.github.com/collective/volto-dropdownmenu/tar.gz/b6c793e4345a26f9a1bcee88b4461452fe42ea0d"
+  dependencies:
+    react-outside-click-handler "1.3.0"
+
+volto-editablefooter@RedTurtle/volto-editablefooter:
+  version "1.0.0"
+  resolved "https://codeload.github.com/RedTurtle/volto-editablefooter/tar.gz/3b2bc46da16155af8d8737f32b25ca5a432cc14c"
   dependencies:
     react-outside-click-handler "1.3.0"
 

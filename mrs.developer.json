@@ -37,5 +37,8 @@
   },
   "volto-subsites": {
     "url": "git@github.com:collective/volto-subsites.git"
+  },
+  "volto-editablefooter": {
+    "url": "git@github.com:RedTurtle/volto-editablefooter.git"
   }
 }
