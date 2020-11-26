@@ -35,10 +35,6 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
         o: "plone.app.querystring.operation.selection.any",
         v: ['Event']
       }]
-      onChangeBlock({
-        ...data,
-        [data]: data,
-      });
     }
   }, []);
 
