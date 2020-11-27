@@ -130,6 +130,10 @@ msgstr "In questa sezione"
 msgid "Interruzione di pagina"
 msgstr "Interruzione di pagina"
 
+#: components/ItaliaTheme/Footer/FooterNewsletterSubscribe
+msgid "Iscriviti per ricevere la newsletter"
+msgstr "Iscriviti per riceverla"
+
 #: components/ItaliaTheme/View/Commons/Dates
 msgid "L'evento non si terrà nelle seguenti date"
 msgstr "L'evento non si terrà nelle seguenti date"

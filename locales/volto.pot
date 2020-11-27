@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-11-26T16:37:11.723Z\n"
+"POT-Creation-Date: 2020-11-27T09:23:36.870Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -159,6 +159,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Break/Edit
 # defaultMessage: Interruzione di pagina
 msgid "Interruzione di pagina"
+msgstr ""
+
+#: components/ItaliaTheme/Footer/FooterNewsletterSubscribe
+# defaultMessage: Iscriviti per riceverla
+msgid "Iscriviti per ricevere la newsletter"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Dates

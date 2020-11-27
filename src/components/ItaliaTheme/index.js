@@ -9,10 +9,6 @@
  * };
  */
 
-const {
-  default: FooterNewsletterSubscribe,
-} = require('./Footer/FooterNewsletterSubscribe');
-
 /********* BLOCKS ********* */
 export AlertSidebar from '@italia/components/ItaliaTheme/Blocks/Alert/Sidebar';
 export NewsHomeBody from '@italia/components/ItaliaTheme/Blocks/NewsHome/Body';

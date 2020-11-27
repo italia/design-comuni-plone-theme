@@ -145,6 +145,10 @@ msgstr ""
 msgid "Interruzione di pagina"
 msgstr ""
 
+#: components/ItaliaTheme/Footer/FooterNewsletterSubscribe
+msgid "Iscriviti per ricevere la newsletter"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Dates
 msgid "L'evento non si terrà nelle seguenti date"
 msgstr ""

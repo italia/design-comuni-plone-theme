@@ -19,6 +19,10 @@ const messages = defineMessages({
     id: 'Subscribe',
     defaultMessage: 'Iscriviti',
   },
+  subscribeNewsletterLabel: {
+    id: 'Iscriviti per ricevere la newsletter',
+    defaultMessage: 'Iscriviti per riceverla',
+  },
 });
 
 const FooterNewsletterSubscribe = () => {
@@ -34,7 +38,7 @@ const FooterNewsletterSubscribe = () => {
         tag="label"
         widths={['xs', 'sm', 'md', 'lg', 'xl']}
       >
-        Iscriviti per riceverla
+        {intl.formatMessage(messages.subscribeNewsletterLabel)}
       </Label>
       <Input
         type="email"
