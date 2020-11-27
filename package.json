@@ -143,7 +143,7 @@
     "volto-subblocks": "collective/volto-subblocks#v1.0.0",
     "volto-subsites": "collective/volto-subsites#v1.0.1",
     "volto-venue": "collective/volto-venue#v2.0.0",
-    "volto-editablefooter": "RedTurtle/volto-editablefooter"
+    "volto-editablefooter": "RedTurtle/volto-editablefooter#v2.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.11.1",
