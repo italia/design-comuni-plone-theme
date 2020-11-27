@@ -11581,7 +11581,7 @@ mri@^1.1.0, mri@^1.1.4:
   resolved "https://registry.yarnpkg.com/mri/-/mri-1.1.5.tgz#ce21dba2c69f74a9b7cf8a1ec62307e089e223e0"
   integrity sha512-d2RKzMD4JNyHMbnbWnznPaa8vbdlq/4pNZ3IgdaGrVbBhebBsGUUE/6qorTMYNS6TwuH3ilfOlD2bf4Igh8CKg==
 
-mrs-developer@^1.5.0:
+mrs-developer@^1.1.6:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/mrs-developer/-/mrs-developer-1.5.0.tgz#7d001f655cf07b71de7439b25d1cbe3214c4f1e3"
   integrity sha512-flOOAGkmhJLHWOo1LYANZlqnpzMsXjTelDCr8ERxiEJBW/QPsVU/pBcxG0tUqihRjA3RBoeBegb7ocl33A/lzg==
@@ -17927,6 +17927,10 @@ volto-rss-block@redturtle/volto-rss-block#v1.0.0:
   resolved "https://codeload.github.com/redturtle/volto-rss-block/tar.gz/14d6d25a5eab6c7dd60be1aff6bfc9a2b44eefb7"
   dependencies:
     rss-parser "3.7.5"
+
+volto-social-settings@collective/volto-social-settings:
+  version "1.0.0"
+  resolved "https://codeload.github.com/collective/volto-social-settings/tar.gz/e523e3227a95397bb23caa5a2b5d7c4d5f322af1"
 
 volto-subblocks@collective/volto-subblocks#v1.0.0:
   version "1.0.0"
