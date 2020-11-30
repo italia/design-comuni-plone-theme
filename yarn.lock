@@ -2147,7 +2147,7 @@
 
 "@plone/volto@plone/volto#rt_development":
   version "8.10.0"
-  resolved "https://codeload.github.com/plone/volto/tar.gz/0ef53496ddd03e50dbb61d6e26f03354d0d8eb49"
+  resolved "https://codeload.github.com/plone/volto/tar.gz/a9d4812462c6622922e7bfb5115adde3022c6a16"
   dependencies:
     "@babel/core" "7.11.1"
     "@babel/plugin-proposal-decorators" "7.10.5"
