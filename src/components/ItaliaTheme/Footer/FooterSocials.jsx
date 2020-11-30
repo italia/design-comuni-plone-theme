@@ -22,7 +22,7 @@ const messages = defineMessages({
 
 const FooterSocials = () => {
   const intl = useIntl();
-  const socialSettings = useSelector((state) => state.socialSettings?.results);
+  const socialSettings = useSelector(state => state.socialSettings?.results);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -30,8 +30,8 @@ const FooterSocials = () => {
   }, [dispatch]);
 
   return (
-    <HeaderSocialsZone label={intl.formatMessage(messages.followUs)}>
-      {socialSettings.length > 0 && (
+    socialSettings?.length > 0 && (
+      <HeaderSocialsZone label={intl.formatMessage(messages.followUs)}>
         <ul className="list-inline text-left social">
           {socialSettings?.map((social, idx) => (
             <li className="list-inline-item" key={idx}>
@@ -43,7 +43,7 @@ const FooterSocials = () => {
                 className="p-2 text-white"
               >
                 <Icon
-                  icon={social.icon}
+                  icon={`it-${social.icon}`}
                   color="white"
                   className="align-top"
                   padding={false}
@@ -54,8 +54,8 @@ const FooterSocials = () => {
             </li>
           ))}
         </ul>
-      )}
-    </HeaderSocialsZone>
+      </HeaderSocialsZone>
+    )
   );
 };
 

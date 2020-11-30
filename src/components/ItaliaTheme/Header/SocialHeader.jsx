@@ -23,15 +23,15 @@ const messages = defineMessages({
 const SocialHeader = () => {
   const intl = useIntl();
   const dispatch = useDispatch();
-  const socialSettings = useSelector((state) => state?.socialSettings.results); //useSelector((state) => state?.socialSettings?.results);
+  const socialSettings = useSelector(state => state?.socialSettings?.results); //useSelector((state) => state?.socialSettings?.results);
 
   useEffect(() => {
     dispatch(getSocialSettings());
   }, [dispatch]);
 
   return (
-    <HeaderSocialsZone label={intl.formatMessage(messages.followUs)}>
-      {socialSettings?.length > 0 && (
+    socialSettings?.length > 0 && (
+      <HeaderSocialsZone label={intl.formatMessage(messages.followUs)}>
         <ul>
           {socialSettings?.map((social, idx) => (
             <li key={idx}>
@@ -51,8 +51,8 @@ const SocialHeader = () => {
             </li>
           ))}
         </ul>
-      )}
-    </HeaderSocialsZone>
+      </HeaderSocialsZone>
+    )
   );
 };
 
