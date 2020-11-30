@@ -22,7 +22,7 @@ const messages = defineMessages({
 
 const FooterSocials = () => {
   const intl = useIntl();
-  const socialSettings = []; //useSelector((state) => state.socialSettings?.results);
+  const socialSettings = useSelector((state) => state.socialSettings?.results);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -31,29 +31,30 @@ const FooterSocials = () => {
 
   return (
     <HeaderSocialsZone label={intl.formatMessage(messages.followUs)}>
-      ---!!!!da sistemare riga 34!!!!!!
-      <ul className="list-inline text-left social">
-        {socialSettings?.map((social, idx) => (
-          <li className="list-inline-item" key={idx}>
-            <a
-              title={social.title}
-              href={social.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-2 text-white"
-            >
-              <Icon
-                icon={social.icon}
-                color="white"
-                className="align-top"
-                padding={false}
-                size="sm"
-              />
-              <span className="sr-only">{social.title}</span>
-            </a>
-          </li>
-        ))}
-      </ul>
+      {socialSettings.length > 0 && (
+        <ul className="list-inline text-left social">
+          {socialSettings?.map((social, idx) => (
+            <li className="list-inline-item" key={idx}>
+              <a
+                title={social.title}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 text-white"
+              >
+                <Icon
+                  icon={social.icon}
+                  color="white"
+                  className="align-top"
+                  padding={false}
+                  size="sm"
+                />
+                <span className="sr-only">{social.title}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
     </HeaderSocialsZone>
   );
 };
