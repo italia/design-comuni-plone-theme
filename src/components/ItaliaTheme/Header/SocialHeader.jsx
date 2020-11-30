@@ -22,8 +22,8 @@ const messages = defineMessages({
 
 const SocialHeader = () => {
   const intl = useIntl();
-  const socialSettings = []; //useSelector((state) => state.socialSettings?.results);
   const dispatch = useDispatch();
+  const socialSettings = useSelector((state) => state?.socialSettings.results); //useSelector((state) => state?.socialSettings?.results);
 
   useEffect(() => {
     dispatch(getSocialSettings());
@@ -31,21 +31,27 @@ const SocialHeader = () => {
 
   return (
     <HeaderSocialsZone label={intl.formatMessage(messages.followUs)}>
-      ---!!!!da sistemare riga 25!!!!!!
-      <ul>
-        {socialSettings?.map((social, idx) => (
-          <li key={idx}>
-            <a
-              title={social.title}
-              href={social.url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Icon color="" icon={social.icon} padding={false} size="" />
-            </a>
-          </li>
-        ))}
-      </ul>
+      {socialSettings?.length > 0 && (
+        <ul>
+          {socialSettings?.map((social, idx) => (
+            <li key={idx}>
+              <a
+                title={social.title}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Icon
+                  color=""
+                  icon={`it-${social.icon}`}
+                  padding={false}
+                  size=""
+                />
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
     </HeaderSocialsZone>
   );
 };
