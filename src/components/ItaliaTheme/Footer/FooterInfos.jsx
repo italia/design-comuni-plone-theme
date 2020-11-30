@@ -9,10 +9,9 @@ import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { defineMessages, useIntl } from 'react-intl';
 import { Row, Col, Icon } from 'design-react-kit/dist/design-react-kit';
-import { siteConfig } from '~/config';
 import { flattenHTMLToAppURL, flattenToAppURL } from '@plone/volto/helpers';
 import { getEditableFooterColumns } from '@italia/addons/volto-editablefooter';
-import { FooterNewsletterSubscribe } from '@italia/components/ItaliaTheme';
+import { FooterNewsletterSubscribe, FooterSocials } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   goToPage: {
@@ -74,31 +73,7 @@ const FooterInfos = () => {
                 {column.title}
               </Link>
             </h4>
-            {column.showSocial && (
-              <ul className="list-inline text-left social">
-                {siteConfig.socialSettings?.map((social, idx) => (
-                  <li className="list-inline-item" key={idx}>
-                    <a
-                      className="p-2 text-white"
-                      href={social.url}
-                      title={social.title}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Icon
-                        icon={social.icon}
-                        color="white"
-                        className="align-top"
-                        padding={false}
-                        size="sm"
-                      />
-
-                      <span className="sr-only">{social.title}</span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            )}
+            {column.showSocial && <FooterSocials />}
 
             <p
               dangerouslySetInnerHTML={{

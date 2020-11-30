@@ -22,8 +22,20 @@
             "volto-subsites": [
                 "addons/volto-subsites"
             ],
+            "volto-social-settings": [
+                "addons/volto-social-settings"
+            ],
             "volto-editablefooter": [
                 "addons/volto-editablefooter"
+            ],
+            "@italia/addons/volto-subsites": [
+                "addons/volto-subsites/src"
+            ],
+            "@italia/addons/volto-social-settings": [
+                "addons/volto-social-settings/src"
+            ],
+            "@italia/addons/volto-editablefooter": [
+                "addons/volto-editablefooter/src"
             ]
         },
         "baseUrl": "src"

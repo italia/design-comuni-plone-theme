@@ -17934,6 +17934,10 @@ volto-rss-block@redturtle/volto-rss-block#v1.0.0:
   dependencies:
     rss-parser "3.7.5"
 
+volto-social-settings@collective/volto-social-settings#v2.0.0:
+  version "2.0.0"
+  resolved "https://codeload.github.com/collective/volto-social-settings/tar.gz/f9d0fcb825fdfb6a61b37716b723e9369e078a63"
+
 volto-subblocks@collective/volto-subblocks#v1.0.0:
   version "1.0.0"
   resolved "https://codeload.github.com/collective/volto-subblocks/tar.gz/4f62a72d8cb4f7ab373f14f489f89d0964da211f"

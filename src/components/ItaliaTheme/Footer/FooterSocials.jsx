@@ -1,6 +1,6 @@
 /**
- * SocialHeader component.
- * @module components/ItaliaTheme/Header/SocialHeader
+ * FooterSocials component.
+ * @module components/ItaliaTheme/Header/FooterSocials
  */
 
 import React, { useEffect } from 'react';
@@ -20,10 +20,10 @@ const messages = defineMessages({
   },
 });
 
-const SocialHeader = () => {
+const FooterSocials = () => {
   const intl = useIntl();
+  const socialSettings = useSelector(state => state.socialSettings?.results);
   const dispatch = useDispatch();
-  const socialSettings = useSelector(state => state?.socialSettings?.results); //useSelector((state) => state?.socialSettings?.results);
 
   useEffect(() => {
     dispatch(getSocialSettings());
@@ -32,21 +32,24 @@ const SocialHeader = () => {
   return (
     socialSettings?.length > 0 && (
       <HeaderSocialsZone label={intl.formatMessage(messages.followUs)}>
-        <ul>
+        <ul className="list-inline text-left social">
           {socialSettings?.map((social, idx) => (
-            <li key={idx}>
+            <li className="list-inline-item" key={idx}>
               <a
                 title={social.title}
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="p-2 text-white"
               >
                 <Icon
-                  color=""
                   icon={`it-${social.icon}`}
+                  color="white"
+                  className="align-top"
                   padding={false}
-                  size=""
+                  size="sm"
                 />
+                <span className="sr-only">{social.title}</span>
               </a>
             </li>
           ))}
@@ -56,4 +59,4 @@ const SocialHeader = () => {
   );
 };
 
-export default SocialHeader;
+export default FooterSocials;
