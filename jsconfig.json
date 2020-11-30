@@ -21,6 +21,9 @@
             ],
             "volto-subsites": [
                 "addons/volto-subsites"
+            ],
+            "volto-editablefooter": [
+                "addons/volto-editablefooter"
             ]
         },
         "baseUrl": "src"

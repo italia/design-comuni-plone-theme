@@ -1,5 +1,19 @@
 .it-footer {
   .it-footer-main {
+    a {
+      color: $white;
+      text-decoration: none;
+
+      &:hover:not(.disabled) {
+        text-decoration: underline;
+      }
+    }
+
+    ul {
+      padding: 0;
+      list-style-type: none;
+    }
+
     .it-brand-wrapper {
       a {
         display: inline-flex;
