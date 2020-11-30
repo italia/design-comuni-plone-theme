@@ -17916,6 +17916,12 @@ volto-dropdownmenu@collective/volto-dropdownmenu#v1.2.1:
   dependencies:
     react-outside-click-handler "1.3.0"
 
+volto-editablefooter@RedTurtle/volto-editablefooter#v2.0.0:
+  version "2.0.0"
+  resolved "https://codeload.github.com/RedTurtle/volto-editablefooter/tar.gz/00a406e4fedd09d24deb0c4435a179c862d39a73"
+  dependencies:
+    react-outside-click-handler "1.3.0"
+
 volto-multilingual-widget@collective/volto-multilingual-widget#v1.0.1:
   version "1.0.1"
   resolved "https://codeload.github.com/collective/volto-multilingual-widget/tar.gz/5a8478902be211419f372d52311d464e89e2f77e"

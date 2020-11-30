@@ -1,31 +1,18 @@
 {
-    "compilerOptions": {
-        "paths": {
-            "@italia/addons/volto-rss-block": [
-                "addons/volto-rss-block/src"
-            ],
-            "@italia/addons/volto-cookie-banner": [
-                "addons/volto-cookie-banner/src"
-            ],
-            "@italia/addons/volto-multilingual-widget": [
-                "addons/volto-multilingual-widget/src"
-            ],
-            "@italia/addons/volto-venue": [
-                "addons/volto-venue/src"
-            ],
-            "@italia/addons/volto-subblocks": [
-                "addons/volto-subblocks/src"
-            ],
-            "@italia/addons/volto-dropdownmenu": [
-                "addons/volto-dropdownmenu/src"
-            ],
-            "volto-subsites": [
-                "addons/volto-subsites"
-            ],
-            "volto-social-settings": [
-                "addons/volto-social-settings"
-            ]
-        },
-        "baseUrl": "src"
-    }
+  "compilerOptions": {
+    "paths": {
+      "@italia/addons/volto-rss-block": ["addons/volto-rss-block/src"],
+      "@italia/addons/volto-cookie-banner": ["addons/volto-cookie-banner/src"],
+      "@italia/addons/volto-multilingual-widget": [
+        "addons/volto-multilingual-widget/src"
+      ],
+      "@italia/addons/volto-venue": ["addons/volto-venue/src"],
+      "@italia/addons/volto-subblocks": ["addons/volto-subblocks/src"],
+      "@italia/addons/volto-dropdownmenu": ["addons/volto-dropdownmenu/src"],
+      "volto-subsites": ["addons/volto-subsites"],
+      "volto-social-settings": ["addons/volto-social-settings"],
+      "volto-editablefooter": ["addons/volto-editablefooter"]
+    },
+    "baseUrl": "src"
+  }
 }

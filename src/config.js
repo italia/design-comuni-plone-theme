@@ -434,23 +434,6 @@ export const siteConfig = {
     footerInfos:
       'Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000',
   },
-  socialSettings: [
-    {
-      title: 'Facebook',
-      url: 'https://facebook.com',
-      icon: 'it-facebook',
-    },
-    {
-      title: 'GitHub',
-      url: 'https://github.com',
-      icon: 'it-github',
-    },
-    {
-      title: 'Twitter',
-      url: 'https://twitter.com',
-      icon: 'it-twitter',
-    },
-  ],
 };
 
 export const widgets = {
