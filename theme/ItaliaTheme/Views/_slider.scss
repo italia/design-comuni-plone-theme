@@ -1,0 +1,14 @@
+.slider-container {
+  margin-bottom: 1.5rem;
+
+  /**slick**/
+  .slick-slide {
+    figure {
+      width: 95%;
+    }
+  }
+
+  ul.slick-dots {
+    bottom: -30px;
+  }
+}

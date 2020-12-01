@@ -18,7 +18,6 @@ import {
   ContentImage,
   SmallVenue,
   HelpBox,
-  NewsCard,
   ServizioPlaceholderAfterContent,
 } from '@italia/components/ItaliaTheme/View';
 

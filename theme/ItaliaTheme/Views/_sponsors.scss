@@ -1,0 +1,27 @@
+.sponsor-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .sponsor-logos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+
+    .sponsor-item {
+      flex-grow: 1;
+      margin-right: 0.25rem;
+      margin-bottom: 1rem;
+      margin-left: 0.25rem;
+    }
+  }
+
+  .sponsor-no-logos {
+    .sponsor-item {
+      display: block;
+      width: 100%;
+    }
+  }
+}
