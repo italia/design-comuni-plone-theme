@@ -37,6 +37,7 @@ const CardWithImageTemplate = ({
   linkMore,
   show_block_bg = false,
   always_show_image = false,
+  full_width = true
 }) => {
   const intl = useIntl();
   moment.locale(intl.locale);
@@ -45,7 +46,7 @@ const CardWithImageTemplate = ({
     <div
       className={cx('card-with-image-template', { 'public-ui': isEditMode })}
     >
-      <div className="full-width">
+      <div className={cx({"full-width": full_width})}>
         <Container className="px-4">
           {title && (
             <Row>
@@ -66,7 +67,7 @@ const CardWithImageTemplate = ({
               );
               const listingText = <ListingText item={item} />;
               return (
-                <Col md="4" key={item['@id']} className="col-item">
+                <Col md="4" key={item['@id']} className="col-item mb-3">
                   <Card
                     className={cx('listing-item card-bg', {
                       'card-img': index < 3 && item.image,
