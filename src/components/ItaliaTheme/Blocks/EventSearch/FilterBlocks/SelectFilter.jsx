@@ -8,7 +8,6 @@ const SelectFilter = ({options, value, filter, onChange}) => {
 
 	const state = useSelector((state) => { return state });
   const selectOptions = state?.search?.subrequests[options?.dispatch?.subrequests_name]?.items?.map(i => {
-		console.log('GIANNI', i)
 		return {
 			value: i.UID,
 			label: i.title
@@ -28,7 +27,6 @@ const SelectFilter = ({options, value, filter, onChange}) => {
 			)
 		)
 	}, [])
-	console.log(value)
 	return (
 		<div className="mr-3 my-1" style={{minWidth: '150px', flex: 1}}>
 			<SelectInput
@@ -36,7 +34,6 @@ const SelectFilter = ({options, value, filter, onChange}) => {
 				value={value}
 				placeholder={options?.placeholder}
 				onChange={(opt) =>{
-					console.log(opt);
 					onChange(opt, filter)}
 				}
 				options={selectOptions}

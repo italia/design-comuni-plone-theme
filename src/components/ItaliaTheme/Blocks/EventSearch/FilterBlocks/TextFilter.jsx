@@ -8,7 +8,6 @@ const TextFilter = ({value, filter, onChange}) => {
 				placeholder="Inserici un valore"
 				value={value}
 				onChange={(e, data) => { 
-					console.log(e, data)
 					onChange(e.target.value, filter) 
 				}}
 			/>
