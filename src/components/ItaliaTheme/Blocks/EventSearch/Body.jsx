@@ -40,7 +40,6 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const subsite = useSelector((state) => state.subsite?.data);
-  //filters for search form
   const dispatch = useDispatch();
 
   const querystringResults = useSelector((state) => { return state.querystringsearch?.subrequests?.results });
