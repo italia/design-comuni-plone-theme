@@ -35,7 +35,7 @@ const messages = defineMessages({
 
 const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   const intl = useIntl();
-  const b_size = 2;
+  const b_size = 6;
   moment.locale(intl.locale);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
