@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getQueryStringResults } from '@plone/volto/actions';
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import { Pagination } from '@italia/components/ItaliaTheme';
+import { flattenToAppURL } from '@plone/volto/helpers';
 
 const messages = defineMessages({
   find: {
@@ -26,6 +27,10 @@ const messages = defineMessages({
     id: 'venues',
     defaultMessage: 'Luoghi',
   },
+  noResault: {
+    id: 'noResault',
+    defaultMessage: 'Nessun risultato trovato',
+  }
 });
 
 const Body = ({ data, inEditMode, path, onChangeBlock }) => {
@@ -34,7 +39,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   moment.locale(intl.locale);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-
+  const subsite = useSelector((state) => state.subsite?.data);
   //filters for search form
   const dispatch = useDispatch();
 
@@ -62,7 +67,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
       label: 'Filtro per luogo',
       options: {
         dispatch: {
-          path: '/',
+          path: subsite ? flattenToAppURL(subsite['@id']) : '/',
           portal_types: ['Venue'],
           fullobjects: 0,
           b_size: 10000,
@@ -172,7 +177,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
 
     dispatch(
       getQueryStringResults(
-        '/',
+        subsite ? flattenToAppURL(subsite['@id']) : '/',
         {
           fullobjects: 1,
           query: filters,
@@ -257,12 +262,12 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   }
 
   return (
-    <div className={cx("rounded",{
-      "public-ui": inEditMode,
-      'bg-primary': data.bg_color === 'primary' || data.bg_color == null,
-      'bg-secondary': data.bg_color === 'secondary'
-    })}>
-      <Container>
+    <Container>
+      <div className={cx("rounded",{
+        "public-ui": inEditMode,
+        'bg-primary': data.bg_color === 'primary' || data.bg_color == null,
+        'bg-secondary': data.bg_color === 'secondary'
+      })}>
         <div className="d-flex justify-content-center">
           <div className="d-flex search-container align-items-center justify-content-center flex-wrap">
             {filterOne &&
@@ -301,30 +306,32 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
             </Button>
           </div>
         </div>
-        { !loading ?
-            <div className="mt-4">
-              {items && 
-                <>
-                <CardWithImageTemplate items={items} full_width={false} />
-                {querystringResults.total > b_size && 
-                  <Pagination
-                    activePage={currentPage}
-                    totalPages={Math.ceil(
-                      querystringResults.total / b_size,
-                    )}
-                    onPageChange={handleQueryPaginationChange}
-                  />
-                }
-                </>
-              }
-            </div> 
-          :
-            <div className="d-flex justify-content-center mt-3">
-              <Spinner active />
-            </div>
-        }
-      </Container>
-    </div>
+      </div>
+
+      { !loading ?
+        items ? 
+          <div className="mt-4">
+            <CardWithImageTemplate items={items} full_width={false} />
+            {querystringResults.total > b_size && 
+              <Pagination
+                activePage={currentPage}
+                totalPages={Math.ceil(
+                  querystringResults.total / b_size,
+                )}
+                onPageChange={handleQueryPaginationChange}
+              />
+            }
+          </div>
+        :
+          <div className="mt-4">
+            <p className="text-center">{intl.formatMessage(messages.noResault)}</p>
+          </div>
+      :
+        <div className="d-flex justify-content-center mt-3">
+          <Spinner active />
+        </div>
+      }
+    </Container>
   )
 }
 export default Body;
