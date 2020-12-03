@@ -1,12 +1,12 @@
-import React, { useState, useReducer, useEffect } from 'react'
-import { Container, Button, Spinner } from 'design-react-kit/dist/design-react-kit';
+import React, { useState, useReducer, useEffect } from 'react';
+import {
+  Container,
+  Button,
+  Spinner,
+} from 'design-react-kit/dist/design-react-kit';
 import moment from 'moment/min/moment-with-locales';
 import cx from 'classnames';
-import {
-  TextFilter,
-  SelectFilter,
-  DateFilter
-} from './FilterBlocks';
+import { TextFilter, SelectFilter, DateFilter } from './FilterBlocks';
 import { useIntl, defineMessages } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 import { getQueryStringResults } from '@plone/volto/actions';
@@ -21,7 +21,8 @@ const messages = defineMessages({
   },
   insert_filter: {
     id: 'insert_filter',
-    defaultMessage: 'Inserire un filtro dal menù laterale per visualizzare i relativi risultati',
+    defaultMessage:
+      'Inserire un filtro dal menù laterale per visualizzare i relativi risultati',
   },
   venues: {
     id: 'venues',
@@ -30,7 +31,7 @@ const messages = defineMessages({
   noResault: {
     id: 'noResault',
     defaultMessage: 'Nessun risultato trovato',
-  }
+  },
 });
 
 const Body = ({ data, inEditMode, path, onChangeBlock }) => {
@@ -42,7 +43,9 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   const subsite = useSelector((state) => state.subsite?.data);
   const dispatch = useDispatch();
 
-  const querystringResults = useSelector((state) => { return state.querystringsearch?.subrequests?.results });
+  const querystringResults = useSelector((state) => {
+    return state.querystringsearch?.subrequests?.results;
+  });
   const items = querystringResults?.items;
 
   // Tutti i filtri implementati, ogni filtro deve essere associato ad un template definito nella cartella "FilterBLock"
@@ -56,7 +59,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
         dispatchFilter({
           filter: filter,
           value: data ?? '',
-        })
+        });
       },
     },
     venue_filter: {
@@ -70,7 +73,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
           portal_types: ['Venue'],
           fullobjects: 0,
           b_size: 10000,
-          subrequests_name: 'venues'
+          subrequests_name: 'venues',
         },
         placeholder: intl.formatMessage(messages.venues),
       },
@@ -79,7 +82,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
           filter: filter,
           value: data,
         });
-      }
+      },
     },
     date_filter: {
       filter: DateFilter,
@@ -95,18 +98,18 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
           value: { startDate, endDate },
         });
       },
-    }
-  }
+    },
+  };
 
-  const doRequest = (page=currentPage) => {
+  const doRequest = (page = currentPage) => {
     setLoading(true);
     let filters = [];
     const date_fmt = 'YYYY-MM-DD HH:mm';
 
-    [filterOne, filterTwo, filterThree].forEach(f => {
+    [filterOne, filterTwo, filterThree].forEach((f) => {
       switch (f.type) {
         case 'text_filter':
-          if(f.value) {
+          if (f.value) {
             filters.push({
               i: 'SearchableText',
               o: 'plone.app.querystring.operation.string.contains',
@@ -114,9 +117,9 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
             });
           }
           break;
-  
+
         case 'venue_filter':
-          if(f.value && f.value.value) {
+          if (f.value && f.value.value) {
             filters.push({
               i: 'event_location',
               o: 'plone.app.querystring.operation.selection.any',
@@ -124,7 +127,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
             });
           }
           break;
-  
+
         case 'date_filter':
           if (f.value?.startDate) {
             let start = f.value.startDate.startOf('day')?.format(date_fmt);
@@ -168,11 +171,11 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
             }
           }
           break;
-  
+
         default:
-          return newState;
+          break;
       }
-    })
+    });
 
     dispatch(
       getQueryStringResults(
@@ -180,49 +183,49 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
         {
           fullobjects: 1,
           query: filters,
-          b_size: b_size
+          b_size: b_size,
         },
         'results',
-        page
+        page,
       ),
-    )
-  }
+    );
+  };
 
   // Se cambia uno dei tre filtri resetto lo stato dei filtri
   useEffect(() => {
-    dispatchFilter({type: 'reset'});
-  }, [data])
+    dispatchFilter({ type: 'reset' });
+  }, [data]);
 
   // Quando ricevo gli elementi imposto il loader a false
   useEffect(() => {
     setLoading(false);
-  }, [items])
+  }, [items]);
 
-  const getInizitialState = () => {
+  const getInitialState = () => {
     return {
       filterOne: filters[data?.filter_one],
       filterTwo: filters[data?.filter_two],
-      filterThree: filters[data?.filter_three]
+      filterThree: filters[data?.filter_three],
     };
-  }
+  };
 
-  const filtersReducer = (state = getInizitialState(), action) => {
+  const filtersReducer = (state = getInitialState(), action) => {
     let newState = {
       ...state,
       filterOne: {
-        ...state.filterOne
+        ...state.filterOne,
       },
       filterTwo: {
-        ...state.filterTwo
+        ...state.filterTwo,
       },
       filterThree: {
-        ...state.filterThree
-      }
+        ...state.filterThree,
+      },
     };
 
-    if(action.type == 'reset') {
+    if (action.type == 'reset') {
       newState = {
-        ...getInizitialState(),
+        ...getInitialState(),
       };
     } else {
       const f = newState[action.filter];
@@ -246,10 +249,11 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
       }
     }
     return newState;
-  }
+  };
+
   const [{ filterOne, filterTwo, filterThree }, dispatchFilter] = useReducer(
     filtersReducer,
-    getInizitialState(),
+    getInitialState(),
   );
 
   function handleQueryPaginationChange(e, { activePage }) {
@@ -260,13 +264,15 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
     doRequest(current);
   }
 
-  return (
+  return filterOne || filterTwo || filterThree ? (
     <Container>
-      <div className={cx("rounded",{
-        "public-ui": inEditMode,
-        'bg-primary': data.bg_color === 'primary' || data.bg_color == null,
-        'bg-secondary': data.bg_color === 'secondary'
-      })}>
+      <div
+        className={cx('rounded', {
+          'public-ui': inEditMode,
+          'bg-primary': data.bg_color === 'primary' || data.bg_color == null,
+          'bg-secondary': data.bg_color === 'secondary',
+        })}
+      >
         <div className="d-flex justify-content-center">
           <div className="d-flex search-container align-items-center justify-content-center flex-wrap">
             {filterOne &&
@@ -274,28 +280,29 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
                 options: filterOne.options,
                 onChange: filterOne.onChange,
                 value: filterOne.value,
-                filter: 'filterOne'
-              })
-            }
+                filter: 'filterOne',
+              })}
             {filterTwo &&
               React.createElement(filterTwo.filter, {
                 options: filterTwo.options,
                 onChange: filterTwo.onChange,
                 value: filterTwo.value,
-                filter: 'filterTwo'
-              })
-            }
-            {filterThree && React.createElement(filterThree.filter, {
+                filter: 'filterTwo',
+              })}
+            {filterThree &&
+              React.createElement(filterThree.filter, {
                 options: filterThree.options,
                 onChange: filterThree.onChange,
                 value: filterThree.value,
-                filter: 'filterThree'
-              })
-            }
+                filter: 'filterThree',
+              })}
             <Button
               color={
-                data.button_color == null || data.button_color == 'tertiary' ? 'tertiary' 
-                : data.button_color == 'secondary' ? 'secondary' : 'primary'
+                data.button_color == null || data.button_color === 'tertiary'
+                  ? 'tertiary'
+                  : data.button_color === 'secondary'
+                  ? 'secondary'
+                  : 'primary'
               }
               icon={false}
               tag="button"
@@ -307,30 +314,31 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
         </div>
       </div>
 
-      { !loading ?
-        items ? 
+      {!loading ? (
+        items ? (
           <div className="mt-4">
             <CardWithImageTemplate items={items} full_width={false} />
-            {querystringResults.total > b_size && 
+            {querystringResults.total > b_size && (
               <Pagination
                 activePage={currentPage}
-                totalPages={Math.ceil(
-                  querystringResults.total / b_size,
-                )}
+                totalPages={Math.ceil(querystringResults.total / b_size)}
                 onPageChange={handleQueryPaginationChange}
               />
-            }
+            )}
           </div>
-        :
+        ) : (
           <div className="mt-4">
-            <p className="text-center">{intl.formatMessage(messages.noResault)}</p>
+            <p className="text-center">
+              {intl.formatMessage(messages.noResault)}
+            </p>
           </div>
-      :
+        )
+      ) : (
         <div className="d-flex justify-content-center mt-3">
           <Spinner active />
         </div>
-      }
+      )}
     </Container>
-  )
-}
+  ) : null;
+};
 export default Body;
