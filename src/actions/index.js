@@ -14,7 +14,18 @@
 import { getSearchFilters, GET_SEARCH_FILTERS } from './getSearchFilters';
 import { getSearchResults, GET_SEARCH_RESULTS } from './getSearchResults';
 import { getCalendarResults, GET_CALENDAR_RESULTS } from './calendarSearch';
-import { getCalendarDayResults, GET_CALENDAR_DAY_RESULTS } from './canlendarDaySearch'
+import {
+  getCalendarDayResults,
+  GET_CALENDAR_DAY_RESULTS,
+} from './canlendarDaySearch';
+import {
+  getAmministrazioneTrasparenteTree,
+  GET_AMMINISTRAZIONE_TRASPARENTE,
+} from './getAmministrazioneTrasparenteTree';
+import {
+  getDettagliProcedimento,
+  GET_DETTAGLI_PROCEDIMENTO,
+} from './getDettagliProcedimento';
 
 export {
   getSearchFilters,
@@ -25,4 +36,8 @@ export {
   GET_CALENDAR_RESULTS,
   getCalendarDayResults,
   GET_CALENDAR_DAY_RESULTS,
+  getAmministrazioneTrasparenteTree,
+  GET_AMMINISTRAZIONE_TRASPARENTE,
+  getDettagliProcedimento,
+  GET_DETTAGLI_PROCEDIMENTO
 };
