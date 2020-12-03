@@ -1,4 +1,6 @@
 import React, { useState, useReducer, useEffect } from 'react';
+import { useIntl, defineMessages } from 'react-intl';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   Container,
   Button,
@@ -6,13 +8,18 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import moment from 'moment/min/moment-with-locales';
 import cx from 'classnames';
-import { TextFilter, SelectFilter, DateFilter } from './FilterBlocks';
-import { useIntl, defineMessages } from 'react-intl';
-import { useDispatch, useSelector } from 'react-redux';
+
 import { getQueryStringResults } from '@plone/volto/actions';
+import { flattenToAppURL } from '@plone/volto/helpers';
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import { Pagination } from '@italia/components/ItaliaTheme';
-import { flattenToAppURL } from '@plone/volto/helpers';
+
+import {
+  TextFilter,
+  SelectFilter,
+  DateFilter,
+} from '@italia/components/ItaliaTheme/Blocks/EventSearch/Filters';
+import FiltersConfig from '@italia/components/ItaliaTheme/Blocks/EventSearch/FiltersConfig';
 
 const messages = defineMessages({
   find: {
@@ -28,8 +35,8 @@ const messages = defineMessages({
     id: 'venues',
     defaultMessage: 'Luoghi',
   },
-  noResault: {
-    id: 'noResault',
+  noResult: {
+    id: 'noResult',
     defaultMessage: 'Nessun risultato trovato',
   },
 });
@@ -48,69 +55,68 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   });
   const items = querystringResults?.items;
 
-  // Tutti i filtri implementati, ogni filtro deve essere associato ad un template definito nella cartella "FilterBLock"
-  const filters = {
-    text_filter: {
-      filter: TextFilter,
-      value: '',
-      type: 'text_filter',
-      label: 'Filtro di testo',
-      onChange: (data, filter) => {
-        dispatchFilter({
-          filter: filter,
-          value: data ?? '',
-        });
-      },
-    },
-    venue_filter: {
-      filter: SelectFilter,
-      value: null,
-      type: 'venue_filter',
-      label: 'Filtro per luogo',
-      options: {
-        dispatch: {
-          path: subsite ? flattenToAppURL(subsite['@id']) : '/',
-          portal_types: ['Venue'],
-          fullobjects: 0,
-          b_size: 10000,
-          subrequests_name: 'venues',
-        },
-        placeholder: intl.formatMessage(messages.venues),
-      },
-      onChange: (data, filter) => {
-        dispatchFilter({
-          filter: filter,
-          value: data,
-        });
-      },
-    },
-    date_filter: {
-      filter: DateFilter,
-      type: 'date_filter',
-      label: 'Filtro per data',
-      value: {
-        startDate: moment().startOf('day'),
-        endDate: moment().endOf('day'),
-      },
-      onChange: (startDate, endDate, filter) => {
-        dispatchFilter({
-          filter: filter,
-          value: { startDate, endDate },
-        });
-      },
-    },
-  };
+  // const filters = {
+  //   text_filter: {
+  //     filter: TextFilter,
+  //     value: '',
+  //     type: 'text_filter',
+  //     label: 'Filtro di testo',
+  //     onChange: (data, filter) => {
+  //       dispatchFilter({
+  //         filter: filter,
+  //         value: data ?? '',
+  //       });
+  //     },
+  //   },
+  //   venue_filter: {
+  //     filter: SelectFilter,
+  //     value: null,
+  //     type: 'venue_filter',
+  //     label: 'Filtro per luogo',
+  //     options: {
+  //       dispatch: {
+  //         path: subsite ? flattenToAppURL(subsite['@id']) : '/',
+  //         portal_types: ['Venue'],
+  //         fullobjects: 0,
+  //         b_size: 10000,
+  //         subrequests_name: 'venues',
+  //       },
+  //       placeholder: intl.formatMessage(messages.venues),
+  //     },
+  //     onChange: (data, filter) => {
+  //       dispatchFilter({
+  //         filter: filter,
+  //         value: data,
+  //       });
+  //     },
+  //   },
+  //   date_filter: {
+  //     filter: DateFilter,
+  //     type: 'date_filter',
+  //     label: 'Filtro per data',
+  //     value: {
+  //       startDate: moment().startOf('day'),
+  //       endDate: moment().endOf('day'),
+  //     },
+  //     onChange: (startDate, endDate, filter) => {
+  //       dispatchFilter({
+  //         filter: filter,
+  //         value: { startDate, endDate },
+  //       });
+  //     },
+  //   },
+  // };
 
   const doRequest = (page = currentPage) => {
     setLoading(true);
-    let filters = [];
+    let query = [];
     const date_fmt = 'YYYY-MM-DD HH:mm';
 
     [filterOne, filterTwo, filterThree].forEach((f) => {
       switch (f.type) {
         case 'text_filter':
           if (f.value) {
-            filters.push({
+            query.push({
               i: 'SearchableText',
               o: 'plone.app.querystring.operation.string.contains',
               v: f.value,
@@ -120,7 +126,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
 
         case 'venue_filter':
           if (f.value && f.value.value) {
-            filters.push({
+            query.push({
               i: 'event_location',
               o: 'plone.app.querystring.operation.selection.any',
               v: f.value?.value,
@@ -136,13 +142,13 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
               : null;
 
             if (start && end) {
-              filters.push({
+              query.push({
                 i: 'start',
                 o: 'plone.app.querystring.operation.date.between',
                 v: [start, end],
               });
             } else {
-              filters.push({
+              query.push({
                 i: 'start',
                 o: 'plone.app.querystring.operation.date.largerThan',
                 v: start,
@@ -157,13 +163,13 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
               : null;
 
             if (start && end) {
-              filters.push({
+              query.push({
                 i: 'end',
                 o: 'plone.app.querystring.operation.date.between',
                 v: [start, end],
               });
             } else {
-              filters.push({
+              query.push({
                 i: 'end',
                 o: 'plone.app.querystring.operation.date.lessThan',
                 v: end,
@@ -182,7 +188,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
         subsite ? flattenToAppURL(subsite['@id']) : '/',
         {
           fullobjects: 1,
-          query: filters,
+          query: query,
           b_size: b_size,
         },
         'results',
@@ -201,14 +207,6 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
     setLoading(false);
   }, [items]);
 
-  const getInitialState = () => {
-    return {
-      filterOne: filters[data?.filter_one],
-      filterTwo: filters[data?.filter_two],
-      filterThree: filters[data?.filter_three],
-    };
-  };
-
   const filtersReducer = (state = getInitialState(), action) => {
     let newState = {
       ...state,
@@ -223,7 +221,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
       },
     };
 
-    if (action.type == 'reset') {
+    if (action.type === 'reset') {
       newState = {
         ...getInitialState(),
       };
@@ -251,6 +249,15 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
     return newState;
   };
 
+  const filtersConfig = FiltersConfig(); // FiltersConfig(dispatchFilter);
+  const getInitialState = () => {
+    return {
+      filterOne: filtersConfig[data?.filter_one],
+      filterTwo: filtersConfig[data?.filter_two],
+      filterThree: filtersConfig[data?.filter_three],
+    };
+  };
+
   const [{ filterOne, filterTwo, filterThree }, dispatchFilter] = useReducer(
     filtersReducer,
     getInitialState(),
@@ -259,7 +266,6 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   function handleQueryPaginationChange(e, { activePage }) {
     // !isEditMode && window.scrollTo(0, 0);
     const current = activePage?.children ?? 1;
-
     setCurrentPage(current);
     doRequest(current);
   }
@@ -276,34 +282,26 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
         <div className="d-flex justify-content-center">
           <div className="d-flex search-container align-items-center justify-content-center flex-wrap">
             {filterOne &&
-              React.createElement(filterOne.filter, {
-                options: filterOne.options,
-                onChange: filterOne.onChange,
-                value: filterOne.value,
-                filter: 'filterOne',
+              React.createElement(filterOne.widget.component, {
+                ...filterOne.widget,
+                component: null,
+                id: 'filterOne',
               })}
             {filterTwo &&
-              React.createElement(filterTwo.filter, {
-                options: filterTwo.options,
-                onChange: filterTwo.onChange,
-                value: filterTwo.value,
-                filter: 'filterTwo',
+              React.createElement(filterTwo.widget.component, {
+                ...filterTwo.widget,
+                component: null,
+                id: 'filterTwo',
               })}
             {filterThree &&
-              React.createElement(filterThree.filter, {
-                options: filterThree.options,
-                onChange: filterThree.onChange,
-                value: filterThree.value,
-                filter: 'filterThree',
+              React.createElement(filterThree.widget.component, {
+                ...filterThree.widget,
+                component: null,
+                id: 'filterThree',
               })}
+
             <Button
-              color={
-                data.button_color == null || data.button_color === 'tertiary'
-                  ? 'tertiary'
-                  : data.button_color === 'secondary'
-                  ? 'secondary'
-                  : 'primary'
-              }
+              color={data.button_color || 'tertiary'}
               icon={false}
               tag="button"
               onClick={() => doRequest()}
@@ -329,7 +327,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
         ) : (
           <div className="mt-4">
             <p className="text-center">
-              {intl.formatMessage(messages.noResault)}
+              {intl.formatMessage(messages.noResult)}
             </p>
           </div>
         )

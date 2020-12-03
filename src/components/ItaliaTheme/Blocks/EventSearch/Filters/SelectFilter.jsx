@@ -3,7 +3,7 @@ import { SelectInput } from '@italia/components';
 import { useDispatch, useSelector } from 'react-redux';
 import { searchContent } from '@plone/volto/actions';
 
-const SelectFilter = ({ options, value, filter, onChange }) => {
+const SelectFilter = ({ options, value, id, onChange }) => {
   const dispatch = useDispatch();
 
   const state = useSelector((state) => {
@@ -40,7 +40,7 @@ const SelectFilter = ({ options, value, filter, onChange }) => {
         value={value}
         placeholder={options?.placeholder}
         onChange={(opt) => {
-          onChange(opt, filter);
+          onChange(opt, id);
         }}
         options={selectOptions}
       />

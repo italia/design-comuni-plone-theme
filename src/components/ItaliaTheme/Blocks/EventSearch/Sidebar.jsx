@@ -5,6 +5,7 @@ import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
 import { SelectWidget, Icon } from '@plone/volto/components';
 import upSVG from '@plone/volto/icons/up-key.svg';
 import downSVG from '@plone/volto/icons/down-key.svg';
+import FiltersConfig from '@italia/components/ItaliaTheme/Blocks/EventSearch/FiltersConfig';
 
 const messages = defineMessages({
   help: {
@@ -71,11 +72,12 @@ const Sidebar = (props) => {
     setActiveAccIndex(newIndex);
   }
 
-  const filters = [
-    ['text_filter', props.intl.formatMessage(messages.text_filter)],
-    ['venue_filter', props.intl.formatMessage(messages.venue_filter)],
-    ['date_filter', props.intl.formatMessage(messages.date_filter)],
-  ];
+  let filtersConfig = FiltersConfig();
+
+  const filters = Object.keys(filtersConfig).map((k) => [
+    k,
+    filtersConfig[k].label,
+  ]);
 
   const colors = [
     ['primary', props.intl.formatMessage(messages.primary)],
@@ -83,7 +85,7 @@ const Sidebar = (props) => {
   ];
 
   return (
-    <Segment.Group raised form>
+    <Segment.Group raised>
       <header className="header pulled">
         <h2>
           <FormattedMessage
