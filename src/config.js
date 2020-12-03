@@ -212,7 +212,7 @@ const customBlocks = {
   searchEvents: {
     id: 'searchEvents',
     title: 'Ricerca eventi',
-    icon: calendarSvg,
+    icon: searchIcon,
     group: 'homePage',
     view: EventSearchView,
     edit: EventSearchEdit,
