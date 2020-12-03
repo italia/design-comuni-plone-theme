@@ -51,6 +51,10 @@ import listArrowsSVG from '@plone/volto/icons/list-arrows.svg';
 import AccordionView from '@italia/components/ItaliaTheme/Blocks/Accordion/View';
 import AccordionEdit from '@italia/components/ItaliaTheme/Blocks/Accordion/Edit';
 
+import formSVG from '@plone/volto/icons/form.svg';
+import FormView from '@italia/components/ItaliaTheme/Blocks/Form/View';
+import FormEdit from '@italia/components/ItaliaTheme/Blocks/Form/Edit';
+
 import { CharCounterDescriptionWidget } from '@italia/components/ItaliaTheme';
 import { PageView } from '@italia/components/ItaliaTheme';
 import { NewsItemView } from '@italia/components/ItaliaTheme';
@@ -77,7 +81,6 @@ import GridGalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/G
 import RibbonCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate';
 import BandiInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate';
 import AmministrazioneTrasparenteTablesTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
-
 
 import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
 import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
@@ -334,6 +337,21 @@ const customBlocks = {
     },
     sidebarTab: 1,
   },
+  form: {
+    id: 'form',
+    title: 'Form',
+    icon: formSVG,
+    group: 'text',
+    view: FormView,
+    edit: FormEdit,
+    restricted: false,
+    mostUsed: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
   listing: {
     ...config.blocks.blocksConfig.listing,
     templates: {
@@ -466,7 +484,7 @@ export const siteConfig = {
     subsiteParentSiteTitle: 'Nome del sito padre del sottosito',
     footerInfos:
       'Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000',
-    amministrazioneTrasparenteUrl: '/amministrazione-trasparente'
+    amministrazioneTrasparenteUrl: '/amministrazione-trasparente',
   },
 };
 

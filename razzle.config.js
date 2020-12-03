@@ -21,8 +21,16 @@ Object.keys(pathsConfig).forEach((pkg) => {
 const volto_config = require(`${voltoPath}/razzle.config`);
 
 module.exports = Object.assign({}, volto_config, {
-  modify: (config, { target, dev }, webpack) => {
-    const base_config = volto_config.modify(config, { target, dev }, webpack);
+  modifyWebpackConfig: ({
+    env: { target, dev },
+    webpackConfig,
+    webpackObject,
+  }) => {
+    const base_config = volto_config.modifyWebpackConfig({
+      env: { target, dev },
+      webpackConfig,
+      webpackObject,
+    });
 
     const fileLoader = base_config.module.rules.find(fileLoaderFinder);
     fileLoader.exclude = [
@@ -52,8 +60,8 @@ module.exports = Object.assign({}, volto_config, {
 
     base_config.module.rules.push(SVG_LOADER);
 
-    config.resolve.alias = {
-      ...config.resolve.alias,
+    webpackConfig.resolve.alias = {
+      ...webpackConfig.resolve.alias,
       ...base_config.resolve.alias,
       '../../theme.config$': `${projectRootPath}/theme/theme.config`,
 
