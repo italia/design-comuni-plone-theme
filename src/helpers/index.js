@@ -12,3 +12,4 @@ export {
   getEventRecurrenceMore,
 } from '@italia/helpers/ListingHelper';
 export { contentFolderHasItems } from '@italia/helpers/contentHelper';
+export { getTableRowData } from '@italia/helpers/amministrazioneTrasparenteHelper';

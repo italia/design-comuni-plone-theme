@@ -61,6 +61,8 @@ import { CartellaModulisticaView } from '@italia/components/ItaliaTheme';
 import { DocumentoView } from '@italia/components/ItaliaTheme';
 import { ModuloView } from '@italia/components/ItaliaTheme';
 import { BandoView } from '@italia/components/ItaliaTheme';
+import { TrasparenzaView } from '@italia/components/ItaliaTheme';
+import { DettagliProcedimentiView } from '@italia/components/ItaliaTheme';
 
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
@@ -71,6 +73,8 @@ import SimpleCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/Si
 import GridGalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate';
 import RibbonCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate';
 import BandiInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate';
+import AmministrazioneTrasparenteTablesTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
+
 
 import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
 import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
@@ -348,6 +352,10 @@ const customBlocks = {
         label: 'Bandi',
         template: BandiInEvidenceTemplate,
       },
+      amministrazioneTrasparenteTablesTemplate: {
+        label: 'Tabelle Amministrazione Trasparente',
+        template: AmministrazioneTrasparenteTablesTemplate,
+      },
     },
   },
   rssBlock,
@@ -419,6 +427,12 @@ export const views = {
     Modulo: ModuloView,
     Bando: BandoView,
   },
+  layoutViews: {
+    ...config.views.layoutViews,
+    document_view: PageView,
+    trasparenza_view: TrasparenzaView,
+    dettagli_procedimenti_view: DettagliProcedimentiView,
+  },
 };
 
 export const siteConfig = {
@@ -433,6 +447,7 @@ export const siteConfig = {
     subsiteParentSiteTitle: 'Nome del sito padre del sottosito',
     footerInfos:
       'Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000',
+    amministrazioneTrasparenteUrl: '/amministrazione-trasparente'
   },
 };
 
