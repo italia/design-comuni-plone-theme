@@ -38,8 +38,8 @@ const ParentSiteMenu = () => {
         <NavItem tag="li" key={id}>
           <NavLink
             to={flattenToAppURL(
-              navitem.linkUrl?.[0]?.['@id'] ||
-                navitem.navigationRoot?.[0]?.['@id'],
+              (navitem.linkUrl?.[0]?.['@id'] ||
+                navitem.navigationRoot?.[0]?.['@id']) || '',
             )}
             tag={Link}
           >

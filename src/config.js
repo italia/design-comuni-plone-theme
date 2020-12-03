@@ -35,6 +35,9 @@ import ArgumentsInEvidenceView from '@italia/components/ItaliaTheme/Blocks/Argum
 import CalendarView from '@italia/components/ItaliaTheme/Blocks/Calendar/View';
 import CalendarEdit from '@italia/components/ItaliaTheme/Blocks/Calendar/Edit';
 
+import EventSearchView from '@italia/components/ItaliaTheme/Blocks/EventSearch/View';
+import EventSearchEdit from '@italia/components/ItaliaTheme/Blocks/EventSearch/Edit';
+
 import titleSVG from '@plone/volto/icons/text.svg';
 import ArgomentoTitleView from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/View';
 import ArgomentoTitleEdit from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/Edit';
@@ -61,6 +64,8 @@ import { CartellaModulisticaView } from '@italia/components/ItaliaTheme';
 import { DocumentoView } from '@italia/components/ItaliaTheme';
 import { ModuloView } from '@italia/components/ItaliaTheme';
 import { BandoView } from '@italia/components/ItaliaTheme';
+import { TrasparenzaView } from '@italia/components/ItaliaTheme';
+import { DettagliProcedimentiView } from '@italia/components/ItaliaTheme';
 
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
@@ -71,6 +76,8 @@ import SimpleCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/Si
 import GridGalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate';
 import RibbonCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate';
 import BandiInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate';
+import AmministrazioneTrasparenteTablesTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
+
 
 import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
 import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
@@ -193,6 +200,22 @@ const customBlocks = {
     group: 'homePage',
     view: CalendarView,
     edit: CalendarEdit,
+    restricted: false,
+    mostUsed: false,
+    blockHasOwnFocusManagement: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
+  searchEvents: {
+    id: 'searchEvents',
+    title: 'Ricerca eventi',
+    icon: searchIcon,
+    group: 'homePage',
+    view: EventSearchView,
+    edit: EventSearchEdit,
     restricted: false,
     mostUsed: false,
     blockHasOwnFocusManagement: true,
@@ -348,6 +371,10 @@ const customBlocks = {
         label: 'Bandi',
         template: BandiInEvidenceTemplate,
       },
+      amministrazioneTrasparenteTablesTemplate: {
+        label: 'Tabelle Amministrazione Trasparente',
+        template: AmministrazioneTrasparenteTablesTemplate,
+      },
     },
   },
   rssBlock,
@@ -419,6 +446,12 @@ export const views = {
     Modulo: ModuloView,
     Bando: BandoView,
   },
+  layoutViews: {
+    ...config.views.layoutViews,
+    document_view: PageView,
+    trasparenza_view: TrasparenzaView,
+    dettagli_procedimenti_view: DettagliProcedimentiView,
+  },
 };
 
 export const siteConfig = {
@@ -433,6 +466,7 @@ export const siteConfig = {
     subsiteParentSiteTitle: 'Nome del sito padre del sottosito',
     footerInfos:
       'Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000',
+    amministrazioneTrasparenteUrl: '/amministrazione-trasparente'
   },
 };
 

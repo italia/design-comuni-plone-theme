@@ -111,6 +111,7 @@ class SelectWidget extends Component {
       PropTypes.object,
       PropTypes.string,
       PropTypes.bool,
+      PropTypes.func
     ]),
     onChange: PropTypes.func.isRequired,
     onEdit: PropTypes.func,
