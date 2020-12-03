@@ -1,5 +1,10 @@
 .card-wrapper {
   &.card-teaser-wrapper {
+    .card-teaser {
+      .card-body {
+        max-width: 100%;
+      }
+    }
     //Landscape
     @media (min-width: #{map-get($grid-breakpoints, md)}) {
       .card-teaser {

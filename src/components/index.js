@@ -14,5 +14,13 @@ import Checkbox from '@italia/components/Checkbox';
 import TextInput from '@italia/components/TextInput';
 import SearchUtils from '@italia/components/ItaliaTheme/Search/utils';
 import SelectInput from '@italia/components/SelectInput/SelectInput';
+import Collapse from '@italia/components/Collapse';
 
-export { LanguageSelector, Checkbox, TextInput, SelectInput, SearchUtils };
+export {
+  LanguageSelector,
+  Checkbox,
+  TextInput,
+  SelectInput,
+  SearchUtils,
+  Collapse,
+};

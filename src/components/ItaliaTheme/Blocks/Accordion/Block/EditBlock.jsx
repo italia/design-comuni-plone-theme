@@ -6,15 +6,14 @@
 import React from 'react';
 import { compose } from 'redux';
 import { injectIntl, defineMessages } from 'react-intl';
-import isSoftNewlineEvent from 'draft-js/lib/isSoftNewlineEvent';
+
 import {
   DNDSubblocks,
   SubblockEdit,
   Subblock,
 } from '@italia/addons/volto-subblocks';
-import { Placeholder } from 'semantic-ui-react';
+
 import { Button, Icon } from 'design-react-kit/dist/design-react-kit';
-import { Editor, DefaultDraftBlockRenderMap, EditorState } from 'draft-js';
 
 // import { TextEditorWidget } from '@italia/components/ItaliaTheme';
 import TextEditorWidget from '../TextEditorWidget';

@@ -36,6 +36,21 @@
     "url": "git@github.com:collective/volto-dropdownmenu.git"
   },
   "volto-subsites": {
+    "package": "@italia/addons/volto-subsites",
+    "path": "src",
+    "https": "https://github.com/collective/volto-subsites.git",
     "url": "git@github.com:collective/volto-subsites.git"
+  },
+  "volto-social-settings": {
+    "package": "@italia/addons/volto-social-settings",
+    "path": "src",
+    "https": "https://github.com/collective/volto-social-settings.git",
+    "url": "git@github.com:collective/volto-social-settings.git"
+  },
+  "volto-editablefooter": {
+    "package": "@italia/addons/volto-editablefooter",
+    "path": "src",
+    "https": "https://github.com/RedTurtle/volto-editablefooter.git",
+    "url": "git@github.com:RedTurtle/volto-editablefooter.git"
   }
 }
