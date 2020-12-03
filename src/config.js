@@ -35,6 +35,9 @@ import ArgumentsInEvidenceView from '@italia/components/ItaliaTheme/Blocks/Argum
 import CalendarView from '@italia/components/ItaliaTheme/Blocks/Calendar/View';
 import CalendarEdit from '@italia/components/ItaliaTheme/Blocks/Calendar/Edit';
 
+import EventSearchView from '@italia/components/ItaliaTheme/Blocks/EventSearch/View';
+import EventSearchEdit from '@italia/components/ItaliaTheme/Blocks/EventSearch/Edit';
+
 import titleSVG from '@plone/volto/icons/text.svg';
 import ArgomentoTitleView from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/View';
 import ArgomentoTitleEdit from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/Edit';
@@ -197,6 +200,22 @@ const customBlocks = {
     group: 'homePage',
     view: CalendarView,
     edit: CalendarEdit,
+    restricted: false,
+    mostUsed: false,
+    blockHasOwnFocusManagement: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
+  searchEvents: {
+    id: 'searchEvents',
+    title: 'Ricerca eventi',
+    icon: searchIcon,
+    group: 'homePage',
+    view: EventSearchView,
+    edit: EventSearchEdit,
     restricted: false,
     mostUsed: false,
     blockHasOwnFocusManagement: true,
