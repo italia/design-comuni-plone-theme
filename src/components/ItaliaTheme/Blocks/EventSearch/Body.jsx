@@ -14,11 +14,6 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import { Pagination } from '@italia/components/ItaliaTheme';
 
-import {
-  TextFilter,
-  SelectFilter,
-  DateFilter,
-} from '@italia/components/ItaliaTheme/Blocks/EventSearch/Filters';
 import FiltersConfig from '@italia/components/ItaliaTheme/Blocks/EventSearch/FiltersConfig';
 
 const messages = defineMessages({
@@ -55,131 +50,14 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   });
   const items = querystringResults?.items;
 
-  // const filters = {
-  //   text_filter: {
-  //     filter: TextFilter,
-  //     value: '',
-  //     type: 'text_filter',
-  //     label: 'Filtro di testo',
-  //     onChange: (data, filter) => {
-  //       dispatchFilter({
-  //         filter: filter,
-  //         value: data ?? '',
-  //       });
-  //     },
-  //   },
-  //   venue_filter: {
-  //     filter: SelectFilter,
-  //     value: null,
-  //     type: 'venue_filter',
-  //     label: 'Filtro per luogo',
-  //     options: {
-  //       dispatch: {
-  //         path: subsite ? flattenToAppURL(subsite['@id']) : '/',
-  //         portal_types: ['Venue'],
-  //         fullobjects: 0,
-  //         b_size: 10000,
-  //         subrequests_name: 'venues',
-  //       },
-  //       placeholder: intl.formatMessage(messages.venues),
-  //     },
-  //     onChange: (data, filter) => {
-  //       dispatchFilter({
-  //         filter: filter,
-  //         value: data,
-  //       });
-  //     },
-  //   },
-  //   date_filter: {
-  //     filter: DateFilter,
-  //     type: 'date_filter',
-  //     label: 'Filtro per data',
-  //     value: {
-  //       startDate: moment().startOf('day'),
-  //       endDate: moment().endOf('day'),
-  //     },
-  //     onChange: (startDate, endDate, filter) => {
-  //       dispatchFilter({
-  //         filter: filter,
-  //         value: { startDate, endDate },
-  //       });
-  //     },
-  //   },
-  // };
-
   const doRequest = (page = currentPage) => {
     setLoading(true);
     let query = [];
-    const date_fmt = 'YYYY-MM-DD HH:mm';
 
     [filterOne, filterTwo, filterThree].forEach((f) => {
-      switch (f.type) {
-        case 'text_filter':
-          if (f.value) {
-            query.push({
-              i: 'SearchableText',
-              o: 'plone.app.querystring.operation.string.contains',
-              v: f.value,
-            });
-          }
-          break;
-
-        case 'venue_filter':
-          if (f.value && f.value.value) {
-            query.push({
-              i: 'event_location',
-              o: 'plone.app.querystring.operation.selection.any',
-              v: f.value?.value,
-            });
-          }
-          break;
-
-        case 'date_filter':
-          if (f.value?.startDate) {
-            let start = f.value.startDate.startOf('day')?.format(date_fmt);
-            let end = f.value.endDate
-              ? f.value.endDate.endOf('day')?.format(date_fmt)
-              : null;
-
-            if (start && end) {
-              query.push({
-                i: 'start',
-                o: 'plone.app.querystring.operation.date.between',
-                v: [start, end],
-              });
-            } else {
-              query.push({
-                i: 'start',
-                o: 'plone.app.querystring.operation.date.largerThan',
-                v: start,
-              });
-            }
-          }
-
-          if (f.value?.endDate) {
-            let end = f.value?.endDate.endOf('day')?.format(date_fmt);
-            let start = f.value?.startDate
-              ? f.value?.startDate.startOf('day')?.format(date_fmt)
-              : null;
-
-            if (start && end) {
-              query.push({
-                i: 'end',
-                o: 'plone.app.querystring.operation.date.between',
-                v: [start, end],
-              });
-            } else {
-              query.push({
-                i: 'end',
-                o: 'plone.app.querystring.operation.date.lessThan',
-                v: end,
-              });
-            }
-          }
-          break;
-
-        default:
-          break;
+      const value = f.widget.props.value;
+      if (f.query) {
+        f.query(value, query);
       }
     });
 
@@ -210,15 +88,6 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   const filtersReducer = (state = getInitialState(), action) => {
     let newState = {
       ...state,
-      filterOne: {
-        ...state.filterOne,
-      },
-      filterTwo: {
-        ...state.filterTwo,
-      },
-      filterThree: {
-        ...state.filterThree,
-      },
     };
 
     if (action.type === 'reset') {
@@ -227,29 +96,17 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
       };
     } else {
       const f = newState[action.filter];
-      switch (f.type) {
-        case 'text_filter':
-          f.value = action.value;
-          break;
+      const defaultReducer = (value, state) => {
+        return value;
+      };
+      const reducer = f.reducer || defaultReducer;
 
-        case 'venue_filter':
-          f.value = action.value;
-          break;
-
-        case 'date_filter':
-          f.value = {
-            startDate: action.value.startDate ?? state.startDate,
-            endDate: action.value.endDate ?? state.endDate,
-          };
-          break;
-        default:
-          return newState;
-      }
+      f.widget.props.value = reducer(action.value, state);
     }
     return newState;
   };
 
-  const filtersConfig = FiltersConfig(); // FiltersConfig(dispatchFilter);
+  const filtersConfig = FiltersConfig();
   const getInitialState = () => {
     return {
       filterOne: filtersConfig[data?.filter_one],
@@ -273,31 +130,45 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   return filterOne || filterTwo || filterThree ? (
     <Container>
       <div
-        className={cx('rounded', {
+        className={cx('rounded bg-' + (data.bg_color || 'primary'), {
           'public-ui': inEditMode,
-          'bg-primary': data.bg_color === 'primary' || data.bg_color == null,
-          'bg-secondary': data.bg_color === 'secondary',
         })}
       >
         <div className="d-flex justify-content-center">
           <div className="d-flex search-container align-items-center justify-content-center flex-wrap">
-            {filterOne &&
-              React.createElement(filterOne.widget.component, {
-                ...filterOne.widget,
-                component: null,
-                id: 'filterOne',
-              })}
+            {filterOne && (
+              <>
+                {React.createElement(filterOne.widget.component, {
+                  ...filterOne.widget?.props,
+                  id: 'filterOne',
+                  onChange: (filter, value) => {
+                    dispatchFilter({
+                      filter: filter,
+                      value: value,
+                    });
+                  },
+                })}
+              </>
+            )}
             {filterTwo &&
-              React.createElement(filterTwo.widget.component, {
-                ...filterTwo.widget,
-                component: null,
+              React.createElement(filterTwo.widget?.component, {
+                ...filterTwo.widget?.props,
                 id: 'filterTwo',
+                onChange: (filter, value) =>
+                  dispatchFilter({
+                    filter: filter,
+                    value: value,
+                  }),
               })}
             {filterThree &&
-              React.createElement(filterThree.widget.component, {
-                ...filterThree.widget,
-                component: null,
+              React.createElement(filterThree.widget?.component, {
+                ...filterThree.widget?.props,
                 id: 'filterThree',
+                onChange: (filter, value) =>
+                  dispatchFilter({
+                    filter: filter,
+                    value: value,
+                  }),
               })}
 
             <Button
@@ -305,6 +176,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
               icon={false}
               tag="button"
               onClick={() => doRequest()}
+              className="my-2 my-lg-1"
             >
               {intl.formatMessage(messages.find)}
             </Button>
@@ -313,7 +185,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
       </div>
 
       {!loading ? (
-        items ? (
+        items?.length > 0 ? (
           <div className="mt-4">
             <CardWithImageTemplate items={items} full_width={false} />
             {querystringResults.total > b_size && (

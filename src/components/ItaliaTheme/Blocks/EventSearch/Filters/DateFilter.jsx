@@ -16,16 +16,18 @@ const messages = defineMessages({
   },
 });
 
-const DateFilter = ({ value, id, onChange }) => {
+const DateFilter = (props) => {
   const intl = useIntl();
   const [focusedDateInput, setFocusedDateInput] = useState(null);
+  const { value, id, onChange } = props;
 
   let isMobile = false;
   if (__CLIENT__) isMobile = window && window.innerWidth < 992;
 
   return (
-    <div className="mr-3 my-1">
+    <div className="mr-lg-3 my-2 my-lg-1 filter-wrapper date-filter">
       <DateRangePicker
+        {...props}
         startDate={value?.startDate || moment().startOf('day')}
         startDateId="start-date-filter"
         startDatePlaceholderText={intl.formatMessage(
@@ -35,9 +37,8 @@ const DateFilter = ({ value, id, onChange }) => {
         endDateId="end-date-filter"
         endDatePlaceholderText={intl.formatMessage(messages.eventSearchEndDate)}
         onDatesChange={({ startDate, endDate }) =>
-          onChange(startDate, endDate, id)
+          onChange(id, { startDate, endDate })
         }
-        showClearDates
         numberOfMonths={isMobile ? 1 : 2}
         minimumNights={0}
         focusedInput={focusedDateInput}

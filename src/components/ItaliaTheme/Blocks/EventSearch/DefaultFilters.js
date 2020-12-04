@@ -27,7 +27,7 @@ const messages = defineMessages({
   },
 });
 
-const DefaultFilters = (dispatchFilter) => {
+const DefaultFilters = () => {
   const intl = useIntl();
   moment.locale(intl.locale);
   const subsite = useSelector((state) => state.subsite?.data);
@@ -35,60 +35,91 @@ const DefaultFilters = (dispatchFilter) => {
   return {
     text_filter: {
       label: intl.formatMessage(messages.text_filter),
+      type: 'text_filter',
       widget: {
         component: TextFilter,
-        value: '',
-        onChange: (data, id) => {
-          if (dispatchFilter) {
-            dispatchFilter({
-              filter: id,
-              value: data ?? '',
-            });
-          }
+        props: {
+          value: '',
         },
+      },
+      query: (value, query) => {
+        if (value) {
+          query.push({
+            i: 'SearchableText',
+            o: 'plone.app.querystring.operation.string.contains',
+            v: value,
+          });
+        }
       },
     },
     venue_filter: {
       label: intl.formatMessage(messages.venue_filter),
+      type: 'venue_filter',
       widget: {
         component: SelectFilter,
-        value: null,
-        options: {
-          dispatch: {
-            path: subsite ? flattenToAppURL(subsite['@id']) : '/',
-            portal_types: ['Venue'],
-            fullobjects: 0,
-            b_size: 10000,
-            subrequests_name: 'venues',
+        props: {
+          value: null,
+          options: {
+            dispatch: {
+              path: subsite ? flattenToAppURL(subsite['@id']) : '/',
+              portal_types: ['Venue'],
+              fullobjects: 0,
+              b_size: 10000,
+              subrequests_name: 'venues',
+            },
+            placeholder: intl.formatMessage(messages.venues),
           },
-          placeholder: intl.formatMessage(messages.venues),
         },
-        onChange: (data, id) => {
-          if (dispatchFilter) {
-            dispatchFilter({
-              filter: id,
-              value: data,
-            });
-          }
-        },
+      },
+      query: (value, query) => {
+        if (value?.value) {
+          query.push({
+            i: 'luoghi_correlati',
+            o: 'plone.app.querystring.operation.selection.any',
+            v: value.value,
+          });
+        }
       },
     },
     date_filter: {
       label: intl.formatMessage(messages.date_filter),
+      type: 'date_filter',
       widget: {
         component: DateFilter,
-        value: {
-          startDate: moment().startOf('day'),
-          endDate: moment().endOf('day'),
+        props: {
+          value: {
+            startDate: moment().startOf('day'),
+            endDate: moment().endOf('day'),
+          },
+          showClearDates: false,
         },
-        onChange: (startDate, endDate, id) => {
-          if (dispatchFilter) {
-            dispatchFilter({
-              filter: id,
-              value: { startDate, endDate },
-            });
-          }
-        },
+      },
+
+      reducer: (value, state) => {
+        return {
+          startDate: value.startDate ?? state.startDate,
+          endDate: value.endDate ?? state.endDate,
+        };
+      },
+      query: (value, query) => {
+        const date_fmt = 'YYYY-MM-DD HH:mm';
+
+        if (value?.startDate) {
+          let start = value.startDate.startOf('day')?.format(date_fmt);
+          query.push({
+            i: 'end',
+            o: 'plone.app.querystring.operation.date.largerThan',
+            v: start,
+          });
+        }
+        if (value?.endDate) {
+          let end = value.endDate.endOf('day')?.format(date_fmt);
+          query.push({
+            i: 'start',
+            o: 'plone.app.querystring.operation.date.lessThan',
+            v: end,
+          });
+        }
       },
     },
   };

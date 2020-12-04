@@ -34,13 +34,13 @@ const SelectFilter = ({ options, value, id, onChange }) => {
   }, []);
 
   return (
-    <div className="mr-3 my-1" style={{ minWidth: '150px', flex: 1 }}>
+    <div className="mr-lg-3 my-2 my-lg-1 filter-wrapper select-filter">
       <SelectInput
         id="search-sort-on"
         value={value}
         placeholder={options?.placeholder}
         onChange={(opt) => {
-          onChange(opt, id);
+          onChange(id, opt);
         }}
         options={selectOptions}
       />

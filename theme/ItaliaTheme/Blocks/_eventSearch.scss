@@ -1,7 +1,32 @@
 .event-search {
-	.search-container {
-		width: 90%;
-		min-height: 5rem;
-		padding: 1rem;
-	}
+  .search-container {
+    width: 90%;
+    min-height: unset;
+    padding: 1rem;
+
+    .filter-wrapper {
+      flex: 1;
+
+      &.text-filter {
+        min-width: 38%;
+      }
+
+      &.select-filter {
+        min-width: 150px;
+      }
+
+      &.submit-button {
+        text-align: right;
+      }
+
+      @media (max-width: #{map-get($grid-breakpoints, lg)}) {
+        flex: 1 1 100%;
+        margin-right: 0 !important;
+
+        &.submit-button {
+          text-align: center;
+        }
+      }
+    }
+  }
 }
