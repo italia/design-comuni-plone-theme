@@ -95,7 +95,7 @@ const NewsItemView = ({ content, location }) => {
             <SideMenu data={sideMenuElements} />
           </aside>
           <section
-            className="col-lg-8 it-page-sections-container text-serif"
+            className="col-lg-8 it-page-sections-container"
             ref={documentBody}
           >
             <article
@@ -105,7 +105,9 @@ const NewsItemView = ({ content, location }) => {
               {/* HEADER IMAGE */}
               <ContentImage content={content} position="documentBody" />
               {/* TEXT OR BLOCKS */}
-              <TextOrBlocks content={content} location={location} />
+              <div className="text-serif">
+                <TextOrBlocks content={content} location={location} />
+              </div>
             </article>
 
             <Gallery content={content} folder_name={'multimedia'} />
@@ -126,7 +128,7 @@ const NewsItemView = ({ content, location }) => {
                 tag_id="luoghi"
                 title={intl.formatMessage(messages.luoghi)}
               >
-                <VenuesSmall locations={content.luoghi_correlati} />
+                <VenuesSmall venues={content.luoghi_correlati} />
               </RichTextArticle>
             )}
 

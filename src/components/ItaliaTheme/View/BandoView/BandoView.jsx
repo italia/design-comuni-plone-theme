@@ -8,7 +8,6 @@ import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 
 import {
-  Attachments,
   SideMenu,
   HelpBox,
   PageHeader,
@@ -22,7 +21,6 @@ import {
   BandoPlaceholderAfterContent,
 } from '@italia/components/ItaliaTheme/View';
 
-import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import {
   Icon,

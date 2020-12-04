@@ -3,23 +3,37 @@ import PropTypes from 'prop-types';
 import Body from '@italia/components/ItaliaTheme/Blocks/EventSearch/Body';
 import { SidebarPortal } from '@plone/volto/components';
 import { getBaseUrl } from '@plone/volto/helpers';
-import ListingSidebar from '@italia/components/ItaliaTheme/Blocks/EventSearch/ListingSidebar';
+import Sidebar from '@italia/components/ItaliaTheme/Blocks/EventSearch/Sidebar';
+import { useIntl, defineMessages } from 'react-intl';
+
+const messages = defineMessages({
+  no_filters: {
+    id: 'event_search_no_filters',
+    defaultMessage:
+      'Nessun filtro da mostrare. Seleziona i filtri di ricerca da mostrare dalla sidebar laterale.',
+  },
+});
 
 const Edit = ({ data, block, onChangeBlock, selected, pathname }) => {
+  const intl = useIntl();
 
   return (
     <div className="event-search public-ui">
-      <Body data={data} path={getBaseUrl(pathname)} inEditMode={true} onChangeBlock={onChangeBlock}/>
+      {!data.filter_one && !data.filter_two && !data.filter_three && (
+        <div>{intl.formatMessage(messages.no_filters)}</div>
+      )}
+      <Body
+        data={data}
+        path={getBaseUrl(pathname)}
+        inEditMode={true}
+        onChangeBlock={onChangeBlock}
+      />
       <SidebarPortal selected={selected}>
-        <ListingSidebar
-          data={data}
-          block={block}
-          onChangeBlock={onChangeBlock}
-        />
+        <Sidebar data={data} block={block} onChangeBlock={onChangeBlock} />
       </SidebarPortal>
     </div>
   );
-}
+};
 /**
  * Property types.
  * @property {Object} propTypes Property types.

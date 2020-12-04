@@ -4,6 +4,7 @@
  */
 
 import React, { useState, createRef, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import Modules from '@italia/components/ItaliaTheme/View/DocumentoView/Modules';
@@ -77,6 +78,7 @@ const DocumentoView = ({ content, location }) => {
   const intl = useIntl();
   let documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
+  const userLogged = useSelector((state) => state.userSession);
 
   useEffect(() => {
     if (documentBody.current) {
@@ -112,34 +114,42 @@ const DocumentoView = ({ content, location }) => {
 
             {/* DESCRIZIONE*/}
 
-            <RichTextArticle
-              tag_id={'text-body'}
-              title={intl.formatMessage(messages.descrizione)}
-              show_title={true}
-              content={content.descrizione_estesa?.data}
-            >
-              {contentFolderHasItems(content, 'multimedia') && (
-                <Gallery
-                  content={content}
-                  folder_name={'multimedia'}
-                  className="mt-5"
-                />
-              )}
+            {(content.descrizione_estesa?.data.replace(/(<([^>]+)>)/g, '')
+              .length > 0 ||
+              contentFolderHasItems(content, 'multimedia') ||
+              content.autori?.length > 0 ||
+              content.licenza_distribuzione?.length > 0) && (
+              <RichTextArticle
+                tag_id={'text-body'}
+                title={intl.formatMessage(messages.descrizione)}
+                show_title={true}
+                content={content.descrizione_estesa?.data}
+              >
+                {contentFolderHasItems(content, 'multimedia') && (
+                  <Gallery
+                    content={content}
+                    folder_name={'multimedia'}
+                    className="mt-5"
+                  />
+                )}
 
-              {content.autori?.length > 0 && (
-                <CuredBy
-                  people={content.autori}
-                  title={intl.formatMessage(messages.autori)}
-                />
-              )}
+                {content.autori?.length > 0 && (
+                  <CuredBy
+                    people={content.autori}
+                    title={intl.formatMessage(messages.autori)}
+                  />
+                )}
 
-              {content.licenza_distribuzione?.length > 0 && (
-                <div className="mt-5">
-                  <h4>{intl.formatMessage(messages.licenza_distribuzione)}</h4>
-                  <p>{content.licenza_distribuzione}</p>
-                </div>
-              )}
-            </RichTextArticle>
+                {content.licenza_distribuzione?.length > 0 && (
+                  <div className="mt-5">
+                    <h4>
+                      {intl.formatMessage(messages.licenza_distribuzione)}
+                    </h4>
+                    <p>{content.licenza_distribuzione}</p>
+                  </div>
+                )}
+              </RichTextArticle>
+            )}
 
             {/* DOCUMENTI */}
             <Modules
@@ -167,19 +177,15 @@ const DocumentoView = ({ content, location }) => {
             )}
 
             {/* AREA RESPONSABILE */}
-            {content.area_responsabile.length > 0 && (
+            {content?.area_responsabile?.length > 0 && (
               <RichTextArticle
                 tag_id="area_responsabile"
                 title={intl.formatMessage(messages.area_responsabile)}
               >
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                  {content.area_responsabile?.length > 0 && (
-                    <>
-                      {content.area_responsabile.map((item, i) => (
-                        <OfficeCard key={item['@id']} office={item} />
-                      ))}
-                    </>
-                  )}
+                  {content.area_responsabile.map((item, i) => (
+                    <OfficeCard key={item['@id']} office={item} />
+                  ))}
                 </div>
               </RichTextArticle>
             )}

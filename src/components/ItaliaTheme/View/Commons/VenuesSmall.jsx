@@ -34,7 +34,7 @@ const Location = ({ location, show_icon }) => {
   useEffect(() => {
     dispatch(getContent(url, null, key));
     return () => dispatch(resetContent(key));
-  }, [dispatch, location, url, key]);
+  }, []);
 
   let location_fo = locationContent[key]?.data;
   return location_fo ? (
