@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { SelectInput } from '@italia/components';
 import { useDispatch, useSelector } from 'react-redux';
-import { searchContent } from '@plone/volto/actions';
+import { searchContent, getVocabulary } from '@plone/volto/actions';
 
 const SelectFilter = ({ options, value, id, onChange }) => {
   const dispatch = useDispatch();
@@ -18,20 +18,30 @@ const SelectFilter = ({ options, value, id, onChange }) => {
     };
   });
 
+  const vocabularies = state?.vocabularies;
+
   useEffect(() => {
-    dispatch(
-      searchContent(
-        options?.dispatch?.path,
-        {
-          portal_type: options?.dispatch?.portal_types,
-          fullobjects: options?.dispatch?.fullobjects,
-          metadata_fields: 'UID',
-          b_size: options?.dispatch?.b_size,
-        },
-        options?.dispatch?.subrequests_name,
-      ),
-    );
+    if (options.dispatch) {
+      dispatch(
+        searchContent(
+          options?.dispatch?.path,
+          {
+            portal_type: options?.dispatch?.portal_types,
+            fullobjects: options?.dispatch?.fullobjects,
+            metadata_fields: 'UID',
+            b_size: options?.dispatch?.b_size,
+          },
+          options?.dispatch?.subrequests_name,
+        ),
+      );
+    } else if (options.vocabulary) {
+      dispatch(getVocabulary(options.vocabulary));
+    }
   }, []);
+
+  const select_options = options?.vocabulary
+    ? vocabularies?.[options.vocabulary]?.items
+    : selectOptions;
 
   return (
     <div className="mr-lg-3 my-2 my-lg-1 filter-wrapper select-filter">
@@ -42,7 +52,7 @@ const SelectFilter = ({ options, value, id, onChange }) => {
         onChange={(opt) => {
           onChange(id, opt);
         }}
-        options={selectOptions}
+        options={select_options}
       />
     </div>
   );

@@ -1,5 +1,9 @@
 //import { useSelector } from 'react-redux';
-
+import {
+  TextFilter,
+  SelectFilter,
+  DateFilter,
+} from '@italia/components/ItaliaTheme/Blocks/EventSearch/Filters';
 import DefaultFilters from '@italia/components/ItaliaTheme/Blocks/EventSearch/DefaultFilters';
 
 /*
