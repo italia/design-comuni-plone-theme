@@ -36,7 +36,7 @@ const SelectFilter = ({ options, value, id, onChange }) => {
   return (
     <div className="mr-lg-3 my-2 my-lg-1 filter-wrapper select-filter">
       <SelectInput
-        id="search-sort-on"
+        id={id}
         value={value}
         placeholder={options?.placeholder}
         onChange={(opt) => {

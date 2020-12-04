@@ -74,7 +74,7 @@ const DefaultFilters = () => {
       query: (value, query) => {
         if (value?.value) {
           query.push({
-            i: 'luoghi_correlati',
+            i: 'event_location',
             o: 'plone.app.querystring.operation.selection.any',
             v: value.value,
           });
