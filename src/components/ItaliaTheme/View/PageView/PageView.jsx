@@ -10,6 +10,7 @@ import {
   PageHeaderNav,
   RelatedItems,
   PagePlaceholderAfterContent,
+  PagePlaceholderTitle,
   TextOrBlocks,
   RichText,
 } from '@italia/components/ItaliaTheme/View';
@@ -47,7 +48,10 @@ const PageView = ({ content, token, location, history }) => {
           <Container className="PageHeaderWrapper px-3 px-md-4 mb-4">
             <div className="row">
               <div className="title-description-wrapper col-lg-6">
-                <h1 className="mb-3">{content?.title}</h1>
+                <PagePlaceholderTitle content={content}>
+                  <h1 className="mb-3">{content?.title}</h1>
+                </PagePlaceholderTitle>
+
                 <p className="description">{content?.description}</p>
                 {content?.ricerca_in_testata && (
                   <SearchSectionForm content={content} />

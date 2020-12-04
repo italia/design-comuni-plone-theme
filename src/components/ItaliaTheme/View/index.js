@@ -47,6 +47,7 @@ export BandoDates from '@italia/components/ItaliaTheme/View/Commons/BandoDates';
 export PaginaArgomentoViewNoBlocks from '@italia/components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks';
 export EventoPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/EventoView/Placeholder/AfterContent';
 export NewsItemPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/NewsItemView/Placeholder/AfterContent';
+export PagePlaceholderTitle from '@italia/components/ItaliaTheme/View/PageView/Placeholder/Title';
 export PagePlaceholderAfterContent from '@italia/components/ItaliaTheme/View/PageView/Placeholder/AfterContent';
 export PaginaArgomentoPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/PaginaArgomentoView/Placeholder/AfterContent';
 export PersonaPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/PersonaView/Placeholder/AfterContent';
