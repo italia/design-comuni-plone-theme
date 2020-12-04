@@ -4,15 +4,8 @@ import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { defineMessages, useIntl } from 'react-intl';
 import { ContactLink } from '@italia/components/ItaliaTheme/View';
 
-const messages = defineMessages({
-  fax: {
-    id: 'fax',
-    defaultMessage: 'Fax',
-  },
-});
 /**
  * SmallVenue view component class.
  * @function SmallVenue
@@ -24,7 +17,6 @@ const SmallVenue = ({ venue }) => {
   const url = flattenToAppURL(venue['@id']);
   const venueContent = useSelector((state) => state.content.subrequests);
   const dispatch = useDispatch();
-  const intl = useIntl();
 
   useEffect(() => {
     dispatch(getContent(url, null, key));

@@ -46,7 +46,7 @@ const CuredBy = ({ office, people, title }) => {
           </div>
         )}
         {people?.length > 0 ? (
-          <div className="col-12 col-sm-4">
+          <div className={`col-12 ${office && 'col-sm-4'}`}>
             {office && (
               <h5>
                 <small>{intl.formatMessage(messages.cured_by_people)}</small>
@@ -56,7 +56,7 @@ const CuredBy = ({ office, people, title }) => {
               <Link
                 to={flattenToAppURL(item['@id'])}
                 key={item['@id']}
-                className="text-decoration-none"
+                className="text-decoration-none mr-2"
               >
                 <Chip
                   color="primary"

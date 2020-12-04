@@ -4,6 +4,10 @@
       .card-body {
         max-width: 100%;
       }
+
+      .icon + .card-body {
+        max-width: calc(100% - 32px - 1em);
+      }
     }
     //Landscape
     @media (min-width: #{map-get($grid-breakpoints, md)}) {

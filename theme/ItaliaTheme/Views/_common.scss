@@ -41,12 +41,6 @@ h6 {
     }
   }
 
-  .slick-slide {
-    figure {
-      width: 95%;
-    }
-  }
-
   .header {
     margin-bottom: 1rem !important;
     font-size: 1.4rem;
@@ -101,12 +95,6 @@ div.sticky-wrapper {
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
-}
-
-.slick-slide {
-  figure {
-    width: 95%;
-  }
 }
 
 .style_ol_list {
@@ -188,10 +176,6 @@ div.sticky-wrapper {
       z-index: 2000;
     }
   }
-}
-
-.slider-container {
-  margin-bottom: 1.5rem;
 }
 
 .card-wrapper {

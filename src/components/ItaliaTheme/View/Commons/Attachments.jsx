@@ -38,6 +38,7 @@ const Attachments = ({ content, folder_name, title, as_article = true }) => {
             'path.depth': 1,
             sort_on: 'getObjPositionInParent',
             metadata_fields: '_all',
+            fullobjects: 1,
           },
           folder_name,
         ),

@@ -207,12 +207,12 @@ const VenueView = ({ content }) => {
                     />
                   </div>
                 )}
-
                 {/*GALLERIA DI IMMAGINI*/}
                 <Gallery
                   content={content}
                   folder_name={'multimedia'}
                   title_video={intl.formatMessage(messages.video)}
+                  title_type="h5"
                 />
               </RichTextArticle>
             )}
@@ -525,7 +525,7 @@ const VenueView = ({ content }) => {
             )}
 
             {/* ULTERIORI INFORMAZIONI */}
-            <Metadata content={content} noMargin>
+            <Metadata content={content}>
               {(content?.ulteriori_informazioni?.data?.replace(
                 /(<([^>]+)>)/g,
                 '',
