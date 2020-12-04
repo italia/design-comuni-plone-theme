@@ -7,7 +7,7 @@ const getItemIcon = (item) => {
   let icon = type_icons[item['@type']] || 'it-pa'; //default-icon
 
   if (item['@type'] === 'Pagina Argomento') {
-    icon = item.icon ? item.icon : icon;
+    icon = item.icona ? item.icona : icon;
   }
 
   return icon;
