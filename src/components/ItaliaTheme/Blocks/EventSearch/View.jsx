@@ -1,20 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Body from '@italia/components/ItaliaTheme/Blocks/EventSearch/Body'
+import Body from '@italia/components/ItaliaTheme/Blocks/EventSearch/Body';
 import { getBaseUrl } from '@plone/volto/helpers';
 
-const View = ({ data, id, path,properties, block }) => {
+const View = ({ data, id, path, properties, block }) => {
   return (
     <div className="event-search">
       <div className="event-search">
-        <Body data={data} 
-              path={getBaseUrl(path)}
-              properties={properties}
-              block={block}/>
+        <Body
+          data={data}
+          path={getBaseUrl(path)}
+          properties={properties}
+          block={block}
+        />
       </div>
     </div>
   );
-}
+};
 /**
  * Property types.
  * @property {Object} propTypes Property types.
@@ -22,7 +24,7 @@ const View = ({ data, id, path,properties, block }) => {
  */
 View.propTypes = {
   data: PropTypes.objectOf(PropTypes.any).isRequired,
-  id: PropTypes.string.isRequired
+  id: PropTypes.string.isRequired,
 };
 
 export default View;
