@@ -123,6 +123,10 @@ msgid "Distributed under the {license}."
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Form
+msgid "Email Success"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Form
 msgid "Email sent"
 msgstr ""
 
@@ -292,10 +296,6 @@ msgstr ""
 
 #: components/ItaliaTheme/Footer/FooterNewsletterSubscribe
 msgid "Subscribe"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Form
-msgid "Success"
 msgstr ""
 
 #: addons/volto-rss-block/src/Block/TemplateWidget

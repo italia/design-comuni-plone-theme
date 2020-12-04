@@ -116,6 +116,10 @@ msgid "Distributed under the {license}."
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Form
+msgid "Email Success"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Form
 msgid "Email sent"
 msgstr ""
 
@@ -286,10 +290,6 @@ msgstr ""
 #: components/ItaliaTheme/Footer/FooterNewsletterSubscribe
 msgid "Subscribe"
 msgstr "Subscribe"
-
-#: components/ItaliaTheme/Blocks/Form/Form
-msgid "Success"
-msgstr ""
 
 #: addons/volto-rss-block/src/Block/TemplateWidget
 msgid "Template"
@@ -905,71 +905,71 @@ msgstr "Visibile"
 
 #: addons/volto-editablefooter/src/widget/FooterConfigurationWidget
 msgid "editablefooter-add-rootpath"
-msgstr ""
+msgstr "Aggiungi una radice di navigazione"
 
 #: addons/volto-editablefooter/src/widget/FooterConfigurationWidget
 msgid "editablefooter-addfootercolumn"
-msgstr ""
+msgstr "Aggiungi una colonna del footer"
 
 #: addons/volto-editablefooter/src/widget/FooterConfigurationWidget
 msgid "editablefooter-delete-button"
-msgstr ""
+msgstr "Rimuovi"
 
 #: addons/volto-editablefooter/src/widget/FooterConfigurationWidget
 msgid "editablefooter-delete-footerpath"
-msgstr ""
+msgstr "Rimuovi percorso"
 
 #: addons/volto-editablefooter/src/widget/FooterConfigurationForm
 msgid "editablefooter-deletefootercolumn"
-msgstr ""
+msgstr "Rimuovi colonna"
 
 #: addons/volto-editablefooter/src/widget/FooterConfigurationForm
 msgid "editablefooter-deletefootercolumn-button"
-msgstr ""
+msgstr "Rimuovi colonna"
 
 #: addons/volto-editablefooter/src/widget/FooterConfigurationWidget
 msgid "editablefooter-emptyActiveFooterColumn"
-msgstr ""
+msgstr "Seleziona o aggiungi una colonna"
 
 #: addons/volto-editablefooter/src/widget/FooterConfigurationWidget
 msgid "editablefooter-emptyActiveFooterPath"
-msgstr ""
+msgstr "Seleziona o aggiungi un percorso di navigazione"
 
 #: addons/volto-editablefooter/src/widget/FooterConfigurationWidget
 msgid "editablefooter-items-header"
-msgstr ""
+msgstr "Colonne del footer"
 
 #: addons/volto-editablefooter/src/widget/FooterConfigurationWidget
 msgid "editablefooter-move-column-down"
-msgstr ""
+msgstr "Sposta dopo"
 
 #: addons/volto-editablefooter/src/widget/FooterConfigurationWidget
 msgid "editablefooter-move-column-up"
-msgstr ""
+msgstr "Sposta prima"
 
 #: addons/volto-editablefooter/src/widget/FooterConfigurationForm
 msgid "editablefooter-newsletterSubscribe"
-msgstr ""
+msgstr "Mostra la form di iscrizione alla newsletter"
 
 #: addons/volto-editablefooter/src/widget/FooterConfigurationWidget
 msgid "editablefooter-rootpath"
-msgstr ""
+msgstr "Radice di navigazione"
 
 #: addons/volto-editablefooter/src/widget/FooterConfigurationForm
 msgid "editablefooter-showSocial"
-msgstr ""
+msgstr "Mostra i social"
 
 #: addons/volto-editablefooter/src/widget/FooterConfigurationForm
 msgid "editablefooter-text"
-msgstr ""
+msgstr "Testo"
 
 #: addons/volto-editablefooter/src/widget/FooterConfigurationForm
 msgid "editablefooter-title"
-msgstr ""
+msgstr "Titolo"
 
 #: addons/volto-editablefooter/src/widget/FooterConfigurationForm
 msgid "editablefooter-titleLink"
-msgstr ""
+msgstr "Link sul titolo"
 
 #: addons/volto-editablefooter/src/widget/FooterConfigurationForm
 msgid "editablefooter-visible"

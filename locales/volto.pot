@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-12-04T09:03:29.810Z\n"
+"POT-Creation-Date: 2020-12-04T17:17:22.789Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -143,7 +143,12 @@ msgid "Distributed under the {license}."
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Form
-# defaultMessage: Email inviata
+# defaultMessage: Email inviata correttamente
+msgid "Email Success"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Form
+# defaultMessage: La tua mail è stata inviata correttamente
 msgid "Email sent"
 msgstr ""
 
@@ -353,11 +358,6 @@ msgstr ""
 #: components/ItaliaTheme/Footer/FooterNewsletterSubscribe
 # defaultMessage: Iscriviti
 msgid "Subscribe"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Form
-# defaultMessage: Inviato
-msgid "Success"
 msgstr ""
 
 #: addons/volto-rss-block/src/Block/TemplateWidget
@@ -851,7 +851,7 @@ msgid "date_e_orari"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/EventSearch/ListingSidebar
-# defaultMessage: Filtro per date
+# defaultMessage: Filtro per Date
 msgid "date_filter"
 msgstr ""
 
