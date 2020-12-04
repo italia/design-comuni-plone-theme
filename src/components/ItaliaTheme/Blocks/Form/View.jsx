@@ -15,6 +15,7 @@ import Form from './Form';
  */
 const View = (props) => {
   const intl = useIntl();
+
   return process.env.RAZZLE_RECAPTCHA_KEY ? (
     <GoogleReCaptchaProvider
       reCaptchaKey={process.env.RAZZLE_RECAPTCHA_KEY}

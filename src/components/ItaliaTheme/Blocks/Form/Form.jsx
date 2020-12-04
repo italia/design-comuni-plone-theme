@@ -3,13 +3,7 @@
  * @module components/manage/Blocks/IconsBlocks/View
  */
 
-import React, {
-  useCallback,
-  useState,
-  useEffect,
-  useReducer,
-  useRef,
-} from 'react';
+import React, { useCallback, useState, useEffect, useReducer } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { useIntl, defineMessages } from 'react-intl';
@@ -21,8 +15,9 @@ import {
   Col,
   Button,
   Alert,
+  Progress,
 } from 'design-react-kit/dist/design-react-kit';
-import { emailSend } from '@plone/volto/actions/emailSend/emailSend';
+import { sendActionForm } from '@italia/actions/sendActionForm';
 import { getFieldName } from './utils';
 import { GoogleReCaptcha } from 'react-google-recaptcha-v3';
 
@@ -37,11 +32,11 @@ const messages = defineMessages({
   },
   messageSent: {
     id: 'Email sent',
-    defaultMessage: 'Email inviata',
+    defaultMessage: 'La tua mail è stata inviata correttamente',
   },
   success: {
-    id: 'Success',
-    defaultMessage: 'Inviato',
+    id: 'Email Success',
+    defaultMessage: 'Email inviata correttamente',
   },
   empty_values: {
     id: 'form_empty_values_validation',
@@ -86,11 +81,10 @@ const formStateReducer = (state, action) => {
  * @class View
  * @extends Component
  */
-const Form = ({ data, block }) => {
+const Form = ({ data, id, path }) => {
   const intl = useIntl();
   const dispatch = useDispatch();
 
-  const id = new Date().getTime();
   const [formData, setFormData] = useReducer((state, action) => {
     return { ...state, [action.field]: action.value };
   }, {});
@@ -98,7 +92,7 @@ const Form = ({ data, block }) => {
   const [formState, setFormState] = useReducer(formStateReducer, initialState);
   const [formErrors, setFormErrors] = useState([]);
   const [loadedRecaptcha, setLoadedRecaptcha] = useState(null);
-  const submitResults = useSelector((state) => state.emailSend);
+  const submitResults = useSelector((state) => state.sendActionForm);
 
   const onChangeFormData = (field, value, label) => {
     setFormData({ field: field, value: { value: value, label: label } });
@@ -128,6 +122,7 @@ const Form = ({ data, block }) => {
 
   const submit = (e) => {
     e.preventDefault();
+
     if (isValidForm()) {
       let content = '';
 
@@ -139,10 +134,10 @@ const Form = ({ data, block }) => {
       });
 
       dispatch(
-        emailSend(
-          name,
+        sendActionForm(
+          path,
+          id,
           formData.from || data.default_from,
-          data.to,
           data.default_subject,
           content,
         ),
@@ -274,11 +269,23 @@ const Form = ({ data, block }) => {
                         color="primary"
                         type="submit"
                         disabled={
-                          !loadedRecaptcha && process.env.RAZZLE_RECAPTCHA_KEY
+                          (!loadedRecaptcha &&
+                            process.env.RAZZLE_RECAPTCHA_KEY) ||
+                          formState.loading
                         }
                       >
                         {data.submit_label ||
                           intl.formatMessage(messages.default_submit_label)}
+
+                        {formState.loading && (
+                          <span>
+                            <Progress
+                              indeterminate={true}
+                              role="progressbar"
+                              tag="div"
+                            />
+                          </span>
+                        )}
                       </Button>
                     </Col>
                   </Row>
