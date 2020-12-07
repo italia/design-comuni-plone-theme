@@ -40,6 +40,7 @@ const messages = defineMessages({
 const PageView = ({ content, token, location, history }) => {
   const intl = useIntl();
   const layout = content[getLayoutFieldname(content)];
+
   if (layout === 'document_view')
     return (
       <>

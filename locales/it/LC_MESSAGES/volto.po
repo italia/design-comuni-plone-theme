@@ -17,11 +17,11 @@ msgstr "Accedi all'area personale"
 
 #: addons/volto-editablefooter/src/customizations/components/theme/Footer/Footer
 msgid "Accessibility"
-msgstr ""
+msgstr "Accessibilità"
 
 #: components/ItaliaTheme/Blocks/Accordion/Edit
 msgid "Add accordion item"
-msgstr "Accessibilità"
+msgstr "Aggiungi un elemento"
 
 #: addons/volto-subblocks/src/SubblocksEdit
 msgid "Add block"
@@ -29,7 +29,7 @@ msgstr "Aggiungi blocco"
 
 #: components/ItaliaTheme/Blocks/Form/Edit
 msgid "Add field"
-msgstr ""
+msgstr "Aggiungi campo"
 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Alert"
@@ -117,23 +117,23 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Form
 msgid "Email Success"
-msgstr ""
+msgstr "Email inviata correttamente"
 
 #: components/ItaliaTheme/Blocks/Form/Form
 msgid "Email sent"
-msgstr ""
+msgstr "La tua mail è stata inviata correttamente"
 
 #: components/ItaliaTheme/manage/Widgets/TinymceVoltoLink/LinkForm
 msgid "Enter URL or select an item"
-msgstr ""
+msgstr "Inserisci un URL o seleziona un elemento"
 
 #: components/ItaliaTheme/Blocks/Form/Form
 msgid "Error"
-msgstr ""
+msgstr "Errore"
 
 #: components/ItaliaTheme/Blocks/Form/Sidebar
 msgid "Form"
-msgstr ""
+msgstr "Form"
 
 #: addons/volto-editablefooter/src/customizations/components/theme/Footer/Footer
 msgid "GNU GPL license"
@@ -149,11 +149,11 @@ msgstr "In questa sezione"
 
 #: components/ItaliaTheme/Blocks/Break/Edit
 msgid "Interruzione di pagina"
-msgstr ""
+msgstr "Interruzione di pagina"
 
 #: components/ItaliaTheme/Footer/FooterNewsletterSubscribe
 msgid "Iscriviti per ricevere la newsletter"
-msgstr "Interruzione di pagina"
+msgstr "Iscriviti per ricevere la newsletter"
 
 #: components/ItaliaTheme/View/Commons/Dates
 msgid "L'evento non si terrà nelle seguenti date"
@@ -255,7 +255,7 @@ msgstr "Torna su"
 
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "SearchEventsBlock"
-msgstr ""
+msgstr "Blocco di Ricerca eventi"
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "SearchServices"
@@ -285,7 +285,7 @@ msgstr "Mostra tutto"
 
 #: addons/volto-editablefooter/src/customizations/components/theme/Footer/Footer
 msgid "Site Map"
-msgstr ""
+msgstr "Mappa del sito"
 
 #: components/ItaliaTheme/Footer/FooterNewsletterSubscribe
 msgid "Subscribe"
@@ -298,7 +298,7 @@ msgstr "Template"
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/Form/Block/EditBlock
 msgid "Text placeholder"
-msgstr ""
+msgstr "Testo..."
 
 #: addons/volto-subblocks/src/examples/Sidebar
 msgid "TextBlocks"
@@ -533,7 +533,7 @@ msgstr "Vedi"
 
 #: components/ItaliaTheme/Blocks/EventSearch/ListingSidebar
 msgid "bg_color"
-msgstr ""
+msgstr "Colore di sfondo"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "biografia"
@@ -541,7 +541,7 @@ msgstr "Biografia"
 
 #: components/ItaliaTheme/Blocks/EventSearch/ListingSidebar
 msgid "button_color"
-msgstr ""
+msgstr "Colore del bottone"
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "canale_digitale"
@@ -693,11 +693,11 @@ msgstr "Date e orari"
 
 #: components/ItaliaTheme/Blocks/EventSearch/ListingSidebar
 msgid "date_filter"
-msgstr ""
+msgstr "Filtro per date'"
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "decorrenza_termine"
-msgstr ""
+msgstr "Decorrenza termine"
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
@@ -1101,15 +1101,15 @@ msgstr "Filtri"
 
 #: components/ItaliaTheme/Blocks/EventSearch/Body
 msgid "find"
-msgstr ""
+msgstr "Cerca"
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "fine_termine"
-msgstr ""
+msgstr "Fine termine"
 
 #: components/ItaliaTheme/Blocks/Form/Sidebar
 msgid "form_default_from"
-msgstr ""
+msgstr "Mittente di default"
 
 #: components/ItaliaTheme/Blocks/Form/Sidebar
 msgid "form_default_from_description"
@@ -1800,31 +1800,31 @@ msgstr "Situazione patrimoniale"
 
 #: addons/volto-social-settings/src/widget/SocialLinksWidget
 msgid "social-settings-additem"
-msgstr ""
+msgstr "Aggiungi social"
 
 #: addons/volto-social-settings/src/widget/SocialLinksWidget
 msgid "social-settings-delete-item"
-msgstr ""
+msgstr "Rimuovi social"
 
 #: addons/volto-social-settings/src/widget/SocialLinksWidget
 msgid "social-settings-icon"
-msgstr ""
+msgstr "Icona"
 
 #: addons/volto-social-settings/src/widget/SocialLinksWidget
 msgid "social-settings-move-item-down"
-msgstr ""
+msgstr "Sposta prima"
 
 #: addons/volto-social-settings/src/widget/SocialLinksWidget
 msgid "social-settings-move-item-up"
-msgstr ""
+msgstr "Sposta dopo"
 
 #: addons/volto-social-settings/src/widget/SocialLinksWidget
 msgid "social-settings-social-name"
-msgstr ""
+msgstr "Nome"
 
 #: addons/volto-social-settings/src/widget/SocialLinksWidget
 msgid "social-settings-url"
-msgstr ""
+msgstr "URL"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "spese_elettorali"
@@ -1874,23 +1874,23 @@ msgstr "Tempi e scadenze"
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "tempo_medio"
-msgstr ""
+msgstr "Tempo medio"
 
 #: helpers/amministrazioneTrasparenteHelper
 msgid "termine"
-msgstr ""
+msgstr "termine"
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "termini_del_procedimento"
-msgstr ""
+msgstr "Termini del procedimento"
 
 #: components/ItaliaTheme/Blocks/EventSearch/ListingSidebar
 msgid "tertiary"
-msgstr ""
+msgstr "Terziario"
 
 #: components/ItaliaTheme/Blocks/EventSearch/ListingSidebar
 msgid "text_filter"
-msgstr ""
+msgstr "Filtro di testo"
 
 #: components/ItaliaTheme/View/BandoView/BandoView
 msgid "tipologia_bando"
@@ -1911,7 +1911,7 @@ msgstr "Titolo"
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "titolare_potere_sostitutivo"
-msgstr ""
+msgstr "Titolare del potere sostitutivo"
 
 #: helpers/amministrazioneTrasparenteHelper
 msgid "titolo"

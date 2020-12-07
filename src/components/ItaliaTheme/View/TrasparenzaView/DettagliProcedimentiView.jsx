@@ -60,7 +60,8 @@ const messages = defineMessages({
   },
   silenzio_assenso: {
     id: 'silenzio_assenso',
-    defaultMessage: 'Silenzio assenso/Dichiarazione dell\'interessato sostitutiva del provvedimento finale',
+    defaultMessage:
+      "Silenzio assenso/Dichiarazione dell'interessato sostitutiva del provvedimento finale",
   },
   provvedimento_finale: {
     id: 'provvedimento_finale',
@@ -68,7 +69,8 @@ const messages = defineMessages({
   },
   responsabile_del_procedimento_unità_organizzativa_competente: {
     id: 'responsabile_del_procedimento_unità_organizzativa_competente',
-    defaultMessage: 'Responsabile del procedimento e Unità Organizzativa competente',
+    defaultMessage:
+      'Responsabile del procedimento e Unità Organizzativa competente',
   },
   unita_organizzativa_competente: {
     id: 'unita_organizzativa_competente',
@@ -109,7 +111,7 @@ const messages = defineMessages({
   riferimenti_normativi: {
     id: 'riferimenti_normativi',
     defaultMessage: 'Riferimenti normativi',
-  }
+  },
 });
 
 /**
@@ -135,204 +137,317 @@ const DettagliProcedimentiView = ({ content }) => {
   return (
     <>
       <div id="page-document" className="ui container">
-        <h1 className="mb-4">{intl.formatMessage(messages.dettaglio_tipologia_procedimento)}</h1>
+        <h1 className="mb-4">
+          {intl.formatMessage(messages.dettaglio_tipologia_procedimento)}
+        </h1>
         <div
           className="mb-4"
-          dangerouslySetInnerHTML={{ __html: flattenHTMLToAppURL(dettagliProcedimento.descrizione?.data || '') }}>
-        </div>
+          dangerouslySetInnerHTML={{
+            __html: flattenHTMLToAppURL(
+              dettagliProcedimento.descrizione?.data || '',
+            ),
+          }}
+        ></div>
         <div>
-          <h2 className="mb-4">{intl.formatMessage(messages.iter_del_procedimento)}</h2>
+          <h2 className="mb-4">
+            {intl.formatMessage(messages.iter_del_procedimento)}
+          </h2>
 
-          { dettagliProcedimento.modalita_avvio &&
+          {dettagliProcedimento.modalita_avvio && (
             <p className="d-flex">
-              <span class="font-weight-semibold mr-2">{intl.formatMessage(messages.modalita_di_avvio)}:</span>
-              <span
-                dangerouslySetInnerHTML={{ __html: flattenHTMLToAppURL(dettagliProcedimento.modalita_avvio?.data || '') }}>
+              <span class="font-weight-semibold mr-2">
+                {intl.formatMessage(messages.modalita_di_avvio)}:
               </span>
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: flattenHTMLToAppURL(
+                    dettagliProcedimento.modalita_avvio?.data || '',
+                  ),
+                }}
+              ></span>
             </p>
-          }
+          )}
 
-          { dettagliProcedimento.descrizione &&
+          {dettagliProcedimento.descrizione && (
             <p className="d-flex">
-              <span class="font-weight-semibold mr-2">{intl.formatMessage(messages.descrizione)}:</span>
-              <span
-                dangerouslySetInnerHTML={{ __html: flattenHTMLToAppURL(dettagliProcedimento.descrizione?.data || '') }}>
+              <span class="font-weight-semibold mr-2">
+                {intl.formatMessage(messages.descrizione)}:
               </span>
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: flattenHTMLToAppURL(
+                    dettagliProcedimento.descrizione?.data || '',
+                  ),
+                }}
+              ></span>
             </p>
-          }
+          )}
 
-          { dettagliProcedimento.file_correlato &&
-              <p className="d-flex">
-                <span class="font-weight-semibold mr-2">{intl.formatMessage(messages.file_correlato)}:</span>
-                <a
-                  href={flattenToAppURL(dettagliProcedimento.file_correlato?.download || '')}
-                  title={dettagliProcedimento.file_correlato?.filename}
-                >
-                  {dettagliProcedimento.file_correlato?.filename}
-                </a>
-              </p>
-          }
+          {dettagliProcedimento.file_correlato && (
+            <p className="d-flex">
+              <span class="font-weight-semibold mr-2">
+                {intl.formatMessage(messages.file_correlato)}:
+              </span>
+              <a
+                href={flattenToAppURL(
+                  dettagliProcedimento.file_correlato?.download || '',
+                )}
+                title={dettagliProcedimento.file_correlato?.filename}
+              >
+                {dettagliProcedimento.file_correlato?.filename}
+              </a>
+            </p>
+          )}
 
-          { (dettagliProcedimento.decorrenza_termine || dettagliProcedimento.fine_termine || dettagliProcedimento.tempo_medio || dettagliProcedimento.silenzio_assenso) &&
+          {(dettagliProcedimento.decorrenza_termine ||
+            dettagliProcedimento.fine_termine ||
+            dettagliProcedimento.tempo_medio ||
+            dettagliProcedimento.silenzio_assenso) && (
             <>
               <p className="d-flex">
-                <span class="font-weight-semibold mr-2">{intl.formatMessage(messages.termini_del_procedimento)}:</span>
+                <span class="font-weight-semibold mr-2">
+                  {intl.formatMessage(messages.termini_del_procedimento)}:
+                </span>
               </p>
               <ul>
-                { dettagliProcedimento.decorrenza_termine &&
+                {dettagliProcedimento.decorrenza_termine && (
                   <li>
                     <p className="d-flex">
-                      <span class="font-weight-semibold mr-2">{intl.formatMessage(messages.decorrenza_termine)}: </span>
-                      <span
-                        dangerouslySetInnerHTML={{ __html: flattenHTMLToAppURL(dettagliProcedimento.decorrenza_termine?.data || '') }}>
+                      <span class="font-weight-semibold mr-2">
+                        {intl.formatMessage(messages.decorrenza_termine)}:{' '}
                       </span>
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: flattenHTMLToAppURL(
+                            dettagliProcedimento.decorrenza_termine?.data || '',
+                          ),
+                        }}
+                      ></span>
                     </p>
                   </li>
-                }
-              { dettagliProcedimento.fine_termine &&
+                )}
+                {dettagliProcedimento.fine_termine && (
                   <li>
                     <p className="d-flex">
-                      <span class="font-weight-semibold mr-2">{intl.formatMessage(messages.fine_termine)}: </span>
-                      <span
-                        dangerouslySetInnerHTML={{ __html: flattenHTMLToAppURL(dettagliProcedimento.fine_termine?.data || '') }}>
+                      <span class="font-weight-semibold mr-2">
+                        {intl.formatMessage(messages.fine_termine)}:{' '}
                       </span>
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: flattenHTMLToAppURL(
+                            dettagliProcedimento.fine_termine?.data || '',
+                          ),
+                        }}
+                      ></span>
                     </p>
                   </li>
-                }
-                { dettagliProcedimento.tempo_medio &&
+                )}
+                {dettagliProcedimento.tempo_medio && (
                   <li>
                     <p className="d-flex">
-                      <span class="font-weight-semibold mr-2">{intl.formatMessage(messages.tempo_medio)}: </span> 
-                      <span
-                        dangerouslySetInnerHTML={{ __html: flattenHTMLToAppURL(dettagliProcedimento.tempo_medio?.data || '') }}>
+                      <span class="font-weight-semibold mr-2">
+                        {intl.formatMessage(messages.tempo_medio)}:{' '}
                       </span>
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html: flattenHTMLToAppURL(
+                            dettagliProcedimento.tempo_medio?.data || '',
+                          ),
+                        }}
+                      ></span>
                     </p>
                   </li>
-                }
-                { dettagliProcedimento.silenzio_assenso &&
-                    <li>
-                      <p className="d-flex">
-                        <span class="font-weight-semibold mr-2">{intl.formatMessage(messages.silenzio_assenso)}:</span>
-                        <div>
-                          {dettagliProcedimento.silenzio_assenso ? intl.formatMessage(messages.yes) : intl.formatMessage(messages.no)}
-                        </div>
-                      </p>
-                    </li>
-                }
+                )}
+                {dettagliProcedimento.silenzio_assenso && (
+                  <li>
+                    <p className="d-flex">
+                      <span class="font-weight-semibold mr-2">
+                        {intl.formatMessage(messages.silenzio_assenso)}:
+                      </span>
+                      <div>
+                        {dettagliProcedimento.silenzio_assenso
+                          ? intl.formatMessage(messages.yes)
+                          : intl.formatMessage(messages.no)}
+                      </div>
+                    </p>
+                  </li>
+                )}
               </ul>
             </>
-          }
-          { dettagliProcedimento.provvedimento_finale &&
+          )}
+          {dettagliProcedimento.provvedimento_finale && (
             <p className="d-flex">
-              <span class="font-weight-semibold mr-2">{intl.formatMessage(messages.provvedimento_finale)}:</span>
-              <span
-                dangerouslySetInnerHTML={{ __html: flattenHTMLToAppURL(dettagliProcedimento.provvedimento_finale?.data || '') }}>
+              <span class="font-weight-semibold mr-2">
+                {intl.formatMessage(messages.provvedimento_finale)}:
               </span>
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: flattenHTMLToAppURL(
+                    dettagliProcedimento.provvedimento_finale?.data || '',
+                  ),
+                }}
+              ></span>
             </p>
-          }
+          )}
         </div>
 
-        <h2 className="mb-4">{intl.formatMessage(messages.responsabile_del_procedimento_unità_organizzativa_competente)}</h2>
-        { dettagliProcedimento.ufficio_responsabile?.length > 0 &&
-            <p className="d-flex">
-              <span class="font-weight-semibold mr-2">{intl.formatMessage(messages.unita_organizzativa_competente)}:</span>
-                {
-                  dettagliProcedimento.ufficio_responsabile?.map((d, index) => 
-                    <Link to={d['@id']} className="mr-2" key={index}>
-                      {d.title}
-                    </Link>
-                  )
-                }
-            </p>
-        }
-        { dettagliProcedimento.dirigente?.length > 0 &&
-            <p className="d-flex">
-              <span class="font-weight-semibold mr-2">{intl.formatMessage(messages.dirigente)}:</span>
-              <div>
-                {
-                  dettagliProcedimento.dirigente?.map((d, index) => 
-                    <Link to={d['@id']} className="mr-2" key={index}>
-                      {d.title}
-                    </Link>
-                  )
-                }
-              </div>
-            </p>
-        }
-
-       { dettagliProcedimento.responsabile_procedimento?.length > 0 &&
+        <h2 className="mb-4">
+          {intl.formatMessage(
+            messages.responsabile_del_procedimento_unità_organizzativa_competente,
+          )}
+        </h2>
+        {dettagliProcedimento.ufficio_responsabile?.length > 0 && (
           <p className="d-flex">
-            <span class="font-weight-semibold mr-2">{intl.formatMessage(messages.responsabile_del_procedimento)}:</span>
+            <span class="font-weight-semibold mr-2">
+              {intl.formatMessage(messages.unita_organizzativa_competente)}:
+            </span>
+            {dettagliProcedimento.ufficio_responsabile?.map((d, index) => (
+              <Link to={d['@id']} className="mr-2" key={index}>
+                {d.title}
+              </Link>
+            ))}
+          </p>
+        )}
+        {dettagliProcedimento.dirigente?.length > 0 && (
+          <p className="d-flex">
+            <span class="font-weight-semibold mr-2">
+              {intl.formatMessage(messages.dirigente)}:
+            </span>
             <div>
-              {
-                dettagliProcedimento.responsabile_procedimento?.map((d, index ) => 
+              {dettagliProcedimento.dirigente?.map((d, index) => (
+                <Link to={d['@id']} className="mr-2" key={index}>
+                  {d.title}
+                </Link>
+              ))}
+            </div>
+          </p>
+        )}
+
+        {dettagliProcedimento.responsabile_procedimento?.length > 0 && (
+          <p className="d-flex">
+            <span class="font-weight-semibold mr-2">
+              {intl.formatMessage(messages.responsabile_del_procedimento)}:
+            </span>
+            <div>
+              {dettagliProcedimento.responsabile_procedimento?.map(
+                (d, index) => (
                   <Link to={d['@id']} className="mr-2" key={index}>
                     {d.title}
                   </Link>
-                )
-              }
+                ),
+              )}
             </div>
           </p>
-        }
+        )}
 
-        { dettagliProcedimento.organo_competente_provvedimento_finale &&
+        {dettagliProcedimento.organo_competente_provvedimento_finale && (
           <p className="d-flex">
-            <span class="font-weight-semibold mr-2">{intl.formatMessage(messages.organo_competente_provvedimento_finale)}:</span> 
-            <span
-              dangerouslySetInnerHTML={{ __html: flattenHTMLToAppURL(dettagliProcedimento.organo_competente_provvedimento_finale?.data || '') }}>
+            <span class="font-weight-semibold mr-2">
+              {intl.formatMessage(
+                messages.organo_competente_provvedimento_finale,
+              )}
+              :
             </span>
+            <span
+              dangerouslySetInnerHTML={{
+                __html: flattenHTMLToAppURL(
+                  dettagliProcedimento.organo_competente_provvedimento_finale
+                    ?.data || '',
+                ),
+              }}
+            ></span>
           </p>
-        }
+        )}
 
-       { dettagliProcedimento.modalita_richiesta_informazioni &&
+        {dettagliProcedimento.modalita_richiesta_informazioni && (
           <p className="d-flex">
-            <span class="font-weight-semibold mr-2">{intl.formatMessage(messages.modalita_richiedere_informazioni_procedimentodali)}:</span>
-            <span
-              dangerouslySetInnerHTML={{ __html: flattenHTMLToAppURL(dettagliProcedimento.modalita_richiesta_informazioni?.data || '') }}>
+            <span class="font-weight-semibold mr-2">
+              {intl.formatMessage(
+                messages.modalita_richiedere_informazioni_procedimentodali,
+              )}
+              :
             </span>
+            <span
+              dangerouslySetInnerHTML={{
+                __html: flattenHTMLToAppURL(
+                  dettagliProcedimento.modalita_richiesta_informazioni?.data ||
+                    '',
+                ),
+              }}
+            ></span>
           </p>
-        }
+        )}
 
-        <h2 className="mb-4">{intl.formatMessage(messages.strumenti_di_tutela)}</h2>
+        <h2 className="mb-4">
+          {intl.formatMessage(messages.strumenti_di_tutela)}
+        </h2>
 
-        { dettagliProcedimento.strumenti_tutela &&
+        {dettagliProcedimento.strumenti_tutela && (
           <p className="d-flex">
-            <span class="font-weight-semibold mr-2">{intl.formatMessage(messages.strumenti_di_tutela)}:</span>
-            <span
-              dangerouslySetInnerHTML={{ __html: flattenHTMLToAppURL(dettagliProcedimento.strumenti_tutela?.data || '') }}>
+            <span class="font-weight-semibold mr-2">
+              {intl.formatMessage(messages.strumenti_di_tutela)}:
             </span>
+            <span
+              dangerouslySetInnerHTML={{
+                __html: flattenHTMLToAppURL(
+                  dettagliProcedimento.strumenti_tutela?.data || '',
+                ),
+              }}
+            ></span>
           </p>
-        }
+        )}
 
-        { dettagliProcedimento.titolare_potere_sostitutivo &&
+        {dettagliProcedimento.titolare_potere_sostitutivo && (
           <p className="d-flex">
-            <span class="font-weight-semibold mr-2">{intl.formatMessage(messages.titolare_potere_sostitutivo)}:</span>
-            <span
-              dangerouslySetInnerHTML={{ __html: flattenHTMLToAppURL(dettagliProcedimento.titolare_potere_sostitutivo?.data || '') }}>
+            <span class="font-weight-semibold mr-2">
+              {intl.formatMessage(messages.titolare_potere_sostitutivo)}:
             </span>
+            <span
+              dangerouslySetInnerHTML={{
+                __html: flattenHTMLToAppURL(
+                  dettagliProcedimento.titolare_potere_sostitutivo?.data || '',
+                ),
+              }}
+            ></span>
           </p>
-        }
+        )}
 
-        <h2 className="mb-4">{intl.formatMessage(messages.ulteriori_informazioni)}</h2>
+        <h2 className="mb-4">
+          {intl.formatMessage(messages.ulteriori_informazioni)}
+        </h2>
 
-        { dettagliProcedimento.customer_satisfaction &&
+        {dettagliProcedimento.customer_satisfaction && (
           <p className="d-flex">
-            <span class="font-weight-semibold mr-2">{intl.formatMessage(messages.risultati_indagini_customer_satisfaction)}:</span> 
-            <span
-              dangerouslySetInnerHTML={{ __html: flattenHTMLToAppURL(dettagliProcedimento.customer_satisfaction?.data || '') }}>
+            <span class="font-weight-semibold mr-2">
+              {intl.formatMessage(
+                messages.risultati_indagini_customer_satisfaction,
+              )}
+              :
             </span>
+            <span
+              dangerouslySetInnerHTML={{
+                __html: flattenHTMLToAppURL(
+                  dettagliProcedimento.customer_satisfaction?.data || '',
+                ),
+              }}
+            ></span>
           </p>
-        }
+        )}
 
-        { dettagliProcedimento.riferimenti_normativi &&
+        {dettagliProcedimento.riferimenti_normativi && (
           <p className="d-flex">
-            <span class="font-weight-semibold mr-2">{intl.formatMessage(messages.riferimenti_normativi)}:</span>
-            <span
-              dangerouslySetInnerHTML={{ __html: flattenHTMLToAppURL(dettagliProcedimento.riferimenti_normativi?.data || '') }}>
+            <span class="font-weight-semibold mr-2">
+              {intl.formatMessage(messages.riferimenti_normativi)}:
             </span>
+            <span
+              dangerouslySetInnerHTML={{
+                __html: flattenHTMLToAppURL(
+                  dettagliProcedimento.riferimenti_normativi?.data || '',
+                ),
+              }}
+            ></span>
           </p>
-        }
-
+        )}
       </div>
     </>
   );
