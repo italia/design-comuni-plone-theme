@@ -53,6 +53,24 @@ const SelectFilter = ({ options, value, id, onChange }) => {
           onChange(id, opt);
         }}
         options={select_options}
+        isClearable={true}
+        // components={{
+        //   ClearIndicator: (props) => {
+        //     const {
+        //       children = <CustomClearText />,
+        //       innerProps: { ref, ...restInnerProps },
+        //     } = props;
+        //     return (
+        //       <div
+        //         className="select-pill text-primary clearButton"
+        //         {...restInnerProps}
+        //         ref={ref}
+        //       >
+        //         <div style={{ padding: '0px 5px' }}>{children}</div>
+        //       </div>
+        //     );
+        //   },
+        // }}
       />
     </div>
   );

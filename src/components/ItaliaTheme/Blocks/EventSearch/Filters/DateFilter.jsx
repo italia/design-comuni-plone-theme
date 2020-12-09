@@ -39,6 +39,8 @@ const DateFilter = (props) => {
         onDatesChange={({ startDate, endDate }) =>
           onChange(id, { startDate, endDate })
         }
+        showClearDates
+        noBorder={true}
         numberOfMonths={isMobile ? 1 : 2}
         minimumNights={0}
         focusedInput={focusedDateInput}

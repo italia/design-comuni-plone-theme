@@ -18,7 +18,7 @@ SelectContainer.propTypes = {
   children: PropTypes.node,
 };
 
-const Option = props => {
+const Option = (props) => {
   return (
     <div className="select-pill text-primary">
       <components.Option {...props} />
@@ -37,7 +37,7 @@ MenuList.propTypes = {
   children: PropTypes.node,
 };
 
-const DropdownIndicator = props => {
+const DropdownIndicator = (props) => {
   return (
     <components.DropdownIndicator {...props}>
       <Icon icon="it-arrow-down-triangle" style={{ ariaHidden: true }} />
@@ -45,22 +45,26 @@ const DropdownIndicator = props => {
   );
 };
 
-const GroupHeading = props => (
+const GroupHeading = (props) => (
   <div>
     <components.GroupHeading {...props} />
   </div>
 );
 
-const CustomClearText = () => 'Annulla';
-
-const ClearIndicator = props => {
+const ClearIndicator = (props) => {
   const {
-    children = <CustomClearText />,
     innerProps: { ref, ...restInnerProps },
   } = props;
+
   return (
-    <div className="select-pill text-primary" {...restInnerProps} ref={ref}>
-      <div style={{ padding: '0px 5px' }}>{children}</div>
+    <div
+      className="select-pill text-primary clearButton"
+      {...restInnerProps}
+      ref={ref}
+    >
+      <div style={{ padding: '0px 5px' }} title="Annulla">
+        <Icon icon="it-close" style={{ ariaHidden: true }} />
+      </div>
     </div>
   );
 };
@@ -81,6 +85,7 @@ const SelectInput = ({
   isClearable = false,
   onChange,
   options,
+  components = {},
 }) => (
   <div className="bootstrap-select-wrapper">
     {label && <label htmlFor={id}>{label}</label>}
@@ -93,6 +98,7 @@ const SelectInput = ({
         ClearIndicator,
         GroupHeading,
         IndicatorSeparator: null,
+        ...components,
       }}
       id={id}
       value={value}
