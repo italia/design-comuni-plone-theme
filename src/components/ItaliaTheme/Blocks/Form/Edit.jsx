@@ -84,7 +84,7 @@ class Edit extends SubblocksEdit {
           >
             <CardBody tag="div">
               <SubblocksWrapper node={this.node}>
-                {this.state.subblocks.filter((s) => s.field_type === 'from')
+                {/*this.state.subblocks.filter((s) => s.field_type === 'from')
                   .length == 0 && (
                   <Alert color="warning" fade isOpen tag="div">
                     <h4>{this.props.intl.formatMessage(messages.warning)}</h4>
@@ -92,7 +92,7 @@ class Edit extends SubblocksEdit {
                       {this.props.intl.formatMessage(messages.warning_from)}
                     </p>
                   </Alert>
-                )}
+                )*/}
 
                 {this.state.subblocks.map((subblock, subindex) => (
                   <div className="form-field" key={subblock.id}>

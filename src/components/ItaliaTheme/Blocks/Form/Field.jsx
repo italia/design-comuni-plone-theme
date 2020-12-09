@@ -118,17 +118,17 @@ const Field = ({
           >
             <label className="active">{getLabel()}</label>
             {input_values?.map((v, index) => (
-              <FormGroup check className="form-check-group" key={v}>
+              <FormGroup check className="form-check-group" key={v + name + index}>
                 <Input
-                  id={v}
+                  id={v + name}
                   name={name}
                   type="radio"
                   onChange={(e) => {
-                    onChange(name, e.target.id);
+                    onChange(name, v);
                   }}
                   invalid={isInvalid()}
                 />
-                <Label for={v} check>
+                <Label for={v + name} check>
                   {v}
                 </Label>
               </FormGroup>
@@ -148,23 +148,24 @@ const Field = ({
           >
             <label className="active">{getLabel()}</label>
             {input_values?.map((v, index) => (
-              <FormGroup check className="form-check-group" key={v}>
+              <FormGroup check className="form-check-group" key={v + name + index}>
                 <Input
-                  id={v}
+                  id={v + name}
                   name={name}
                   type="checkbox"
+                  checked={value?.indexOf(v) > -1}
                   onChange={(e) => {
-                    let v = JSON.parse(JSON.stringify(value ?? []));
+                    let values = JSON.parse(JSON.stringify(value ?? []));
                     if (e.target.checked) {
-                      v.push(e.target.id);
+                      values.push(v);
                     } else {
-                      v.splice(v.indexOf(e.target.id), 1);
+                      values.splice(values.indexOf(v), 1);
                     }
-                    onChange(name, v);
+                    onChange(name, values);
                   }}
                   invalid={isInvalid()}
                 />
-                <Label for={v} check>
+                <Label for={v + name} check>
                   {v}
                 </Label>
               </FormGroup>
