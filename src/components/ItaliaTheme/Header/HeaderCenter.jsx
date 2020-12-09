@@ -11,8 +11,8 @@ import {
   Header,
   HeaderContent,
   HeaderRightZone,
-  Icon,
 } from 'design-react-kit/dist/design-react-kit';
+import { Icon } from '@italia/components/ItaliaTheme';
 
 import { flattenToAppURL } from '@plone/volto/helpers';
 import {

@@ -3,7 +3,7 @@
  * @module components/manage/Blocks/IconsBlocks/View
  */
 
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl, defineMessages } from 'react-intl';
 import {
@@ -11,7 +11,7 @@ import {
   FormGroup,
   Label,
 } from 'design-react-kit/dist/design-react-kit';
-import Select, { components } from 'react-select';
+import Select from 'react-select';
 
 const messages = defineMessages({
   select_a_value: {
@@ -118,7 +118,11 @@ const Field = ({
           >
             <label className="active">{getLabel()}</label>
             {input_values?.map((v, index) => (
-              <FormGroup check className="form-check-group" key={v + name + index}>
+              <FormGroup
+                check
+                className="form-check-group"
+                key={v + name + index}
+              >
                 <Input
                   id={v + name}
                   name={name}
@@ -148,7 +152,11 @@ const Field = ({
           >
             <label className="active">{getLabel()}</label>
             {input_values?.map((v, index) => (
-              <FormGroup check className="form-check-group" key={v + name + index}>
+              <FormGroup
+                check
+                className="form-check-group"
+                key={v + name + index}
+              >
                 <Input
                   id={v + name}
                   name={name}

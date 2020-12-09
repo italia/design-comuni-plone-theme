@@ -10,9 +10,9 @@ import {
   Form,
   Label,
   Input,
-  Icon,
   Button,
 } from 'design-react-kit/dist/design-react-kit';
+import { Icon } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   subscribe: {

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { defineMessages } from 'react-intl';
 import { TextEditorWidget } from '@italia/components/ItaliaTheme';
 import {
@@ -10,7 +10,6 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import { settings } from '~/config';
 import redraft from 'redraft';
-import { getContent, resetContent } from '@plone/volto/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { ArgumentIcon } from '@italia/components/ItaliaTheme/View';
@@ -48,12 +47,8 @@ const Block = ({
       {argument ? (
         <CardBody tag="div">
           <ArgumentIcon icon={argument?.icona} />
-          <CardTitle tag="h3">
-            {argument?.title}
-          </CardTitle>
-          <CardText tag="p">
-            {argument?.description}
-          </CardText>
+          <CardTitle tag="h3">{argument?.title}</CardTitle>
+          <CardText tag="p">{argument?.description}</CardText>
           {inEditMode ? (
             <TextEditorWidget
               data={data}

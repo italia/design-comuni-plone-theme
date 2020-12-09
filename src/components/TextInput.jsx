@@ -3,6 +3,7 @@
  */
 import React, { useState } from 'react';
 import cx from 'classnames';
+//import { Icon } from '@italia/components/ItaliaTheme';
 
 export default function TextInput({
   id,
@@ -20,7 +21,7 @@ export default function TextInput({
     setIsFocused(true);
   };
 
-  const toggleBlurLabel = e => {
+  const toggleBlurLabel = (e) => {
     if (e.target.value === '') {
       setIsFocused(!isFocused);
     }
@@ -45,11 +46,11 @@ export default function TextInput({
             'focus--mouse': isFocused,
           })}
           onFocus={toggleFocusLabel}
-          onBlur={e => toggleBlurLabel(e)}
+          onBlur={(e) => toggleBlurLabel(e)}
           id={id}
           name={id}
           value={value}
-          onChange={e => {
+          onChange={(e) => {
             onChange(e.target.id, e.target.value);
           }}
           placeholder={placeholder ? placeholder : label}

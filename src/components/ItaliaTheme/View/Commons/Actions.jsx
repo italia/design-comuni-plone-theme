@@ -1,15 +1,15 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import React, { useState } from 'react';
 import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   LinkList,
   LinkListItem,
-  Icon,
   Button,
 } from 'design-react-kit/dist/design-react-kit';
-import PropTypes from 'prop-types';
+import { Icon } from '@italia/components/ItaliaTheme';
 
 /**
  * Actions view component class.

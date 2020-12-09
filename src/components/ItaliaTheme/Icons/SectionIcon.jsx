@@ -1,10 +1,10 @@
 /**
- * BITIcon component.
+ * SectionIcon component.
  * @module components/ItaliaTheme/Icons/SectionIcon
  */
 import React from 'react';
 
-import { Icon } from 'design-react-kit/dist/design-react-kit';
+import { Icon } from '@italia/components/ItaliaTheme';
 
 const section_icons = {
   amministrazione: 'it-pa',

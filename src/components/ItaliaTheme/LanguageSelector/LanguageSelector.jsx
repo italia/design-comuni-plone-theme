@@ -13,17 +13,16 @@ import langmap from 'langmap';
 import { settings } from '~/config';
 import { Helmet, changeLanguage, flattenToAppURL } from '@plone/volto/helpers';
 
-// import { BITIcon, it_expand } from '@italia/components/ItaliaTheme/Icons';
 import {
   Row,
   Col,
   DropdownMenu,
   DropdownToggle,
-  Icon,
   LinkList,
   LinkListItem,
   UncontrolledDropdown,
 } from 'design-react-kit/dist/design-react-kit';
+import { Icon } from '@italia/components/ItaliaTheme';
 
 let locales = {};
 

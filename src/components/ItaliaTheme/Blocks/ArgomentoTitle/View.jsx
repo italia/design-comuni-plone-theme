@@ -5,12 +5,10 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faHatWizard } from '@fortawesome/free-solid-svg-icons';
 import { Portal } from 'react-portal';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import { defineMessages, useIntl } from 'react-intl';
 import redraft from 'redraft';
+import { flattenToAppURL } from '@plone/volto/helpers';
 import { settings } from '~/config';
 /**
  * View title block class.

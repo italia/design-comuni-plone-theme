@@ -6,7 +6,7 @@
 import React from 'react';
 import { compose } from 'redux';
 import { injectIntl, defineMessages } from 'react-intl';
-import { TextWidget } from '@plone/volto/components';
+
 import {
   DNDSubblocks,
   SubblockEdit,
@@ -15,7 +15,6 @@ import {
 
 import Field from '../Field';
 import { getFieldName } from '../utils';
-import { Button, Icon } from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
   titlePlaceholder: {
