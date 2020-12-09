@@ -125,6 +125,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
       className={cx('full-width', {
         'bg-light py-5': data.show_block_bg,
         'public-ui': inEditMode,
+        [data.bg_color]: data.bg_color,
       })}
     >
       <Container>
