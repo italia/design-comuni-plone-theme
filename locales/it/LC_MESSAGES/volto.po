@@ -973,7 +973,7 @@ msgstr "Link sul titolo"
 
 #: addons/volto-editablefooter/src/widget/FooterConfigurationForm
 msgid "editablefooter-visible"
-msgstr "Aggiungi una radice di navigazione"
+msgstr "Visibile"
 
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "elementi_di_interesse"
