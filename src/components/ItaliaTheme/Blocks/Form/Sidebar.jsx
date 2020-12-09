@@ -76,7 +76,7 @@ const messages = defineMessages({
   },
   field_type_from: {
     id: 'form_field_type_from',
-    defaultMessage: 'E-mail mittente',
+    defaultMessage: 'E-mail',
   },
   field_input_values: {
     id: 'form_field_input_values',
@@ -93,7 +93,7 @@ const messages = defineMessages({
   default_from_description: {
     id: 'form_default_from_description',
     defaultMessage:
-      'Questo indirizzo verrà utilizzato come mittente della form se non è presente un campo di tipo "E-mail mittente" oppure se questo campo non viene compilato dall\'utente.',
+      'Questo indirizzo verrà utilizzato come mittente della mail con i dati del form',
   },
 });
 
