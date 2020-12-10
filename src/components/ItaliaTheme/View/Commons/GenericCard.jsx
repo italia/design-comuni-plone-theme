@@ -10,6 +10,7 @@ import {
   Icon,
   CardCategory,
   getItemIcon,
+  ListingCategory,
 } from '@italia/components/ItaliaTheme';
 /**
  * GenericCard view component class.
@@ -31,13 +32,16 @@ const GenericCard = ({
   const dispatch = useDispatch();
   const key = `generic_card_${item['@id']}`;
   const url = flattenToAppURL(item['@id']);
+  const icon = getItemIcon(item);
 
   const infos = (
     <>
       {showInfos && (
-        <CardCategory date={getCalendarDate(item)}>
-          <Icon className="icon" color="primary" padding={false} />
-          {item?.design_italia_meta_type}
+        <CardCategory iconName={icon} date={getCalendarDate(item)}>
+          <ListingCategory
+            category={item?.design_italia_meta_type}
+            item={item}
+          />
         </CardCategory>
       )}
     </>
