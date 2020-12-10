@@ -54,6 +54,7 @@ export SectionIcon from '@italia/components/ItaliaTheme/Icons/SectionIcon';
 
 export CharCounterDescriptionWidget from '@italia/components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget';
 export TextEditorWidget from '@italia/components/ItaliaTheme/manage/Widgets/TextEditorWidget';
+export ColorListWidget from '@italia/components/ItaliaTheme/manage/Widgets/ColorListWidget';
 export PageView from '@italia/components/ItaliaTheme/View/PageView/PageView';
 export VenueView from '@italia/components/ItaliaTheme/View/VenueView/VenueView';
 export NewsItemView from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemView';

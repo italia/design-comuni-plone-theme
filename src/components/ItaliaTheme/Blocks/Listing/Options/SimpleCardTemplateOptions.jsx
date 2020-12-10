@@ -6,6 +6,7 @@ import {
   TextWidget,
 } from '@plone/volto/components';
 import { defineMessages, useIntl } from 'react-intl';
+import DefaultOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions';
 
 const messages = defineMessages({
   appearance: {
@@ -53,12 +54,8 @@ const messages = defineMessages({
 
 export const SimpleCardTemplateAppearance_COMPACT = 'compact';
 
-const SimpleCardTemplateOptions = ({
-  data,
-  block,
-  onChangeBlock,
-  required = false,
-}) => {
+const SimpleCardTemplateOptions = (props) => {
+  const { data, block, onChangeBlock, required = false } = props;
   const intl = useIntl();
   useEffect(() => {
     onChangeBlock(block, {
@@ -105,18 +102,7 @@ const SimpleCardTemplateOptions = ({
         ]}
       />
 
-      <TextWidget
-        id="title"
-        title={intl.formatMessage(messages.title)}
-        required={false}
-        value={data.title}
-        onChange={(name, value) => {
-          onChangeBlock(block, {
-            ...data,
-            [name]: value,
-          });
-        }}
-      />
+      <DefaultOptions {...props} />
 
       <CheckboxWidget
         id="show_icon"
@@ -129,7 +115,6 @@ const SimpleCardTemplateOptions = ({
           });
         }}
       />
-
       {data.appearance !== SimpleCardTemplateAppearance_COMPACT && (
         <CheckboxWidget
           id="show_section"
@@ -186,18 +171,6 @@ const SimpleCardTemplateOptions = ({
           )}
         </>
       )}
-
-      <CheckboxWidget
-        id="show_block_bg"
-        title={intl.formatMessage(messages.show_block_bg)}
-        value={data.show_block_bg ? data.show_block_bg : false}
-        onChange={(id, value) => {
-          onChangeBlock(block, {
-            ...data,
-            [id]: value,
-          });
-        }}
-      />
     </>
   );
 };
