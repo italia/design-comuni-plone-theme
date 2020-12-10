@@ -24,6 +24,10 @@ const messages = defineMessages({
     id: 'Mostra lo sfondo del blocco',
     defaultMessage: 'Mostra lo sfondo del blocco',
   },
+  hide_dates: {
+    id: 'hide_dates',
+    defaultMessage: 'Nascondi le date',
+  },
 });
 
 const RibbonCardTemplateOptions = ({
@@ -50,6 +54,17 @@ const RibbonCardTemplateOptions = ({
         value={
           data.show_only_first_ribbon ? data.show_only_first_ribbon : false
         }
+        onChange={(id, value) => {
+          onChangeBlock(block, {
+            ...data,
+            [id]: value,
+          });
+        }}
+      />
+      <CheckboxWidget
+        id="hide_dates"
+        title={intl.formatMessage(messages.hide_dates)}
+        value={data.hide_dates ? data.hide_dates : false}
         onChange={(id, value) => {
           onChangeBlock(block, {
             ...data,

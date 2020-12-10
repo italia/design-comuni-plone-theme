@@ -46,6 +46,7 @@ const SimpleCardTemplateDefault = ({
   detail_link_label,
   title,
   show_block_bg,
+  hide_dates,
 }) => {
   const intl = useIntl();
   moment.locale(intl.locale);
@@ -79,7 +80,7 @@ const SimpleCardTemplateDefault = ({
         {items.map((item, index) => {
           const icon = getItemIcon(item);
           const itemTitle = item.title || item.id;
-          const date = getCalendarDate(item);
+          const date = hide_dates ? null : getCalendarDate(item);
           const eventRecurrenceMore = getEventRecurrenceMore(item, isEditMode);
           const listingText = <ListingText item={item} />;
 

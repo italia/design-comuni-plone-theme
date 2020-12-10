@@ -37,6 +37,7 @@ const CardWithImageTemplate = ({
   linkMore,
   show_block_bg = false,
   always_show_image = false,
+  hide_dates = false,
   full_width = true,
 }) => {
   const intl = useIntl();
@@ -60,7 +61,7 @@ const CardWithImageTemplate = ({
           <Row className="items">
             {items.map((item, index) => {
               const icon = getItemIcon(item);
-              const date = getCalendarDate(item);
+              const date = hide_dates ? null : getCalendarDate(item);
               const eventRecurrenceMore = getEventRecurrenceMore(
                 item,
                 isEditMode,

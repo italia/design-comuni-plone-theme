@@ -42,6 +42,7 @@ const RibbonCardTemplate = ({
   show_detail_link,
   detail_link_label,
   show_block_bg,
+  hide_dates,
 }) => {
   const intl = useIntl();
   moment.locale(intl.locale);
@@ -69,7 +70,7 @@ const RibbonCardTemplate = ({
                 !show_only_first_ribbon ||
                 (show_only_first_ribbon && index === 0);
               const icon = getItemIcon(item);
-              const date = getCalendarDate(item);
+              const date = hide_dates ? null : getCalendarDate(item);
               const eventRecurrenceMore = getEventRecurrenceMore(
                 item,
                 isEditMode,
