@@ -1,3 +1,5 @@
+import getItemIcon_extend from '@italia/components/ItaliaTheme/Icons/common/common_extend.js';
+
 const getItemIcon = (item) => {
   const type_icons = {
     Servizio: 'it-settings',
@@ -28,7 +30,9 @@ const getItemIcon = (item) => {
     }
   }
 
-  return icon;
+  let custom_icon = getItemIcon_extend(item);
+
+  return custom_icon || icon;
 };
 
 export default getItemIcon;
