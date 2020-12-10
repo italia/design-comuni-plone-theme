@@ -68,6 +68,7 @@ export CharCounterDescriptionWidget from '@italia/components/ItaliaTheme/manage/
 export TextEditorWidget from '@italia/components/ItaliaTheme/manage/Widgets/TextEditorWidget';
 export LinkToWidget from '@italia/components/ItaliaTheme/manage/Widgets/LinkToWidget';
 export IconWidget from '@italia/components/ItaliaTheme/manage/Widgets/IconWidget';
+export ColorListWidget from '@italia/components/ItaliaTheme/manage/Widgets/ColorListWidget';
 
 /********* ICONS ********* */
 export getItemIcon from '@italia/components/ItaliaTheme/Icons/common/common';

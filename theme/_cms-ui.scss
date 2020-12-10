@@ -113,6 +113,17 @@ body.cms-ui {
     }
   }
 
+  .color-list-widget {
+    .button {
+      padding: 1rem;
+      border: 1px solid $gray-border;
+
+      &.active {
+        border: 2px solid $primary;
+      }
+    }
+  }
+
   // .DraftEditor-root {
   //   font-family: $font-family-serif;
   //   h1,
