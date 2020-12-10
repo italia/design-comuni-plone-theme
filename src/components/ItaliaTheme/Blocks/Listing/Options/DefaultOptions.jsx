@@ -47,8 +47,8 @@ const DefaultOptions = (props) => {
         }}
       />
 
-      <BgColor {...props} />
       <ItemsColor {...props} />
+      <BgColor {...props} />
     </>
   );
 };
