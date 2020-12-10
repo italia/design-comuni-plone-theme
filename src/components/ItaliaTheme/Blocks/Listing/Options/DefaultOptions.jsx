@@ -35,6 +35,7 @@ const DefaultOptions = (props) => {
         }}
       />
 
+      <ItemsColor {...props} />
       <CheckboxWidget
         id="show_block_bg"
         title={intl.formatMessage(messages.show_block_bg)}
@@ -46,8 +47,6 @@ const DefaultOptions = (props) => {
           });
         }}
       />
-
-      <ItemsColor {...props} />
       <BgColor {...props} />
     </>
   );
