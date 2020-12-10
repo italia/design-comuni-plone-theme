@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TextWidget, CheckboxWidget } from '@plone/volto/components';
 import { defineMessages, useIntl } from 'react-intl';
+import BgColor from '@italia/components/ItaliaTheme/Blocks/Listing/Options/BgColor/BgColor';
 
 const messages = defineMessages({
   title: {
@@ -14,7 +15,8 @@ const messages = defineMessages({
   },
 });
 
-const DefaultOptions = ({ data, block, onChangeBlock, required = false }) => {
+const DefaultOptions = (props) => {
+  const { data, block, onChangeBlock, required = false } = props;
   const intl = useIntl();
 
   return (
@@ -43,6 +45,8 @@ const DefaultOptions = ({ data, block, onChangeBlock, required = false }) => {
           });
         }}
       />
+
+      <BgColor {...props} />
     </>
   );
 };
