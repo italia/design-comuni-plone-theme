@@ -4,26 +4,28 @@
  */
 
 import React, { useEffect } from 'react';
-import PaginaArgomentoViewNoBlocks from './PaginaArgomentoViewNoBlocks';
-import { hasBlocksData } from '@plone/volto/helpers';
 
 import { Link } from 'react-router-dom';
 import {
   Card,
   CardBody,
   CardText,
-  CardCategory,
 } from 'design-react-kit/dist/design-react-kit';
-import { flattenToAppURL } from '@plone/volto/helpers';
-import { getContent, resetContent } from '@plone/volto/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import { Portal } from 'react-portal';
-import { BodyClass } from '@plone/volto/helpers';
+import {
+  BodyClass,
+  flattenToAppURL,
+  hasBlocksData,
+} from '@plone/volto/helpers';
+import { getContent, resetContent } from '@plone/volto/actions';
+import { CardCategory } from '@italia/components/ItaliaTheme';
 import {
   ArgumentIcon,
   PaginaArgomentoPlaceholderAfterContent,
   TextOrBlocks,
   RichText,
+  PaginaArgomentoViewNoBlocks,
 } from '@italia/components/ItaliaTheme/View';
 
 /**

@@ -9,10 +9,9 @@ import {
   Col,
   FormGroup,
   Label,
-  Icon,
   Collapse,
 } from 'design-react-kit/dist/design-react-kit';
-
+import { Icon } from '@italia/components/ItaliaTheme';
 import { SearchUtils, Checkbox } from '@italia/components';
 
 const messages = defineMessages({

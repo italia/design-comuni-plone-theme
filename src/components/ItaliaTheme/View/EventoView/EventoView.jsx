@@ -6,7 +6,18 @@
 import React, { useState, createRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
+import { Link } from 'react-router-dom';
 
+import {
+  Chip,
+  ChipLabel,
+  Card,
+  CardBody,
+  CardTitle,
+} from 'design-react-kit/dist/design-react-kit';
+import { flattenToAppURL } from '@plone/volto/helpers';
+
+import { Icon } from '@italia/components/ItaliaTheme';
 import {
   Attachments,
   Gallery,
@@ -28,17 +39,6 @@ import {
   EventoPlaceholderAfterContent,
   ContactLink,
 } from '@italia/components/ItaliaTheme/View';
-
-import { Link } from 'react-router-dom';
-import { flattenToAppURL } from '@plone/volto/helpers';
-import {
-  Icon,
-  Chip,
-  ChipLabel,
-  Card,
-  CardBody,
-  CardTitle,
-} from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
   notizie_in_evidenza: {

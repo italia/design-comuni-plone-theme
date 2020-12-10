@@ -2,16 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Segment, Accordion } from 'semantic-ui-react';
 import { FormattedMessage, injectIntl } from 'react-intl';
-import {
-  Icon,
-  ObjectBrowserWidget,
-  TextWidget,
-  FileWidget,
-  CheckboxWidget,
-} from '@plone/volto/components';
-import upSVG from '@plone/volto/icons/up-key.svg';
-import downSVG from '@plone/volto/icons/down-key.svg';
 import { defineMessages, useIntl } from 'react-intl';
+
+import { FileWidget, CheckboxWidget } from '@plone/volto/components';
 
 const messages = defineMessages({
   cardImage: {

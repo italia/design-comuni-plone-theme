@@ -1,18 +1,14 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import moment from 'moment/min/moment-with-locales';
-import {
-  Sharing,
-  Actions,
-  GenericCard,
-} from '@italia/components/ItaliaTheme/View';
-import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
 import { rrulestr } from 'rrule';
+import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
+import { flattenToAppURL } from '@plone/volto/helpers';
 import { rrulei18n } from '@plone/volto/components/manage/Widgets/RecurrenceWidget/Utils';
-import { Icon, CardCategory } from 'design-react-kit/dist/design-react-kit';
+import { Icon } from '@italia/components/ItaliaTheme';
+import { Sharing, Actions } from '@italia/components/ItaliaTheme/View';
 
 /**
  * PageHeader view component class.

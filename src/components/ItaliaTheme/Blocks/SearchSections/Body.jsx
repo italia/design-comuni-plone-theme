@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Row, Icon, Button } from 'design-react-kit/dist/design-react-kit';
 import { useIntl } from 'react-intl';
 import moment from 'moment';
 import { useHistory } from 'react-router-dom';
+import { Button } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { SearchSectionsBackground } from '@italia/components/ItaliaTheme';
+import { Icon, SearchSectionsBackground } from '@italia/components/ItaliaTheme';
 
 const navigate = (text, serivices) => {
   window.location.href =

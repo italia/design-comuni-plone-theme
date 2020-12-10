@@ -5,7 +5,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import { Icon, Button } from 'design-react-kit/dist/design-react-kit';
+import { Button } from 'design-react-kit/dist/design-react-kit';
+import { Icon } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   scrollToTop: {

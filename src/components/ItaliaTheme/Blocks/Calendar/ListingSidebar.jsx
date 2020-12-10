@@ -3,18 +3,11 @@ import PropTypes from 'prop-types';
 import { Segment, Accordion } from 'semantic-ui-react';
 import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
 
-import {
-  ListingBlockData as ListingData,
-  ListingBlockMore as ListingMore,
-  Icon,
-} from '@plone/volto/components';
+import { ListingBlockData as ListingData, Icon } from '@plone/volto/components';
 
 import upSVG from '@plone/volto/icons/up-key.svg';
 import downSVG from '@plone/volto/icons/down-key.svg';
-import {
-  CheckboxWidget,
-  TextWidget,
-} from '@plone/volto/components';
+import { CheckboxWidget, TextWidget } from '@plone/volto/components';
 
 const messages = defineMessages({
   blockStyle: {
@@ -71,17 +64,17 @@ const ListingSidebar = (props) => {
           }}
         />
 
-      <CheckboxWidget
-        id="show_block_bg"
-        title={props.intl.formatMessage(messages.show_block_bg)}
-        value={props.data.show_block_bg ? props.data.show_block_bg : false}
-        onChange={(id, value) => {
-          props.onChangeBlock(props.block, {
-            ...props.data,
-            [id]: value,
-          });
-        }}
-      />
+        <CheckboxWidget
+          id="show_block_bg"
+          title={props.intl.formatMessage(messages.show_block_bg)}
+          value={props.data.show_block_bg ? props.data.show_block_bg : false}
+          onChange={(id, value) => {
+            props.onChangeBlock(props.block, {
+              ...props.data,
+              [id]: value,
+            });
+          }}
+        />
 
         <Accordion.Title
           active={activeAccIndex === 1}

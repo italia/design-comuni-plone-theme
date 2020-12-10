@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Select, { components } from 'react-select';
-import { Icon } from 'design-react-kit/dist/design-react-kit';
+import { Icon } from '@italia/components/ItaliaTheme';
 import './select-styles.css';
 
 const SelectContainer = ({ children, ...props }) => {

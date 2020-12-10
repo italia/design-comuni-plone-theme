@@ -1,14 +1,14 @@
-import { defineMessages, useIntl } from 'react-intl';
 import React, { useState } from 'react';
+import { defineMessages, useIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {
   LinkList,
   LinkListItem,
-  Icon,
   Collapse,
 } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { Icon } from '@italia/components/ItaliaTheme';
 /**
  * PageHeaderNav view component class.
  * @function PageHeaderNav
