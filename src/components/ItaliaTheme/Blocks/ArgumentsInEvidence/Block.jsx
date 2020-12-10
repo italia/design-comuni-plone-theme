@@ -39,8 +39,6 @@ const Block = ({
   intl,
 }) => {
   const argument = data?.argument ? data?.argument[0] : null;
-  const searchResults = useSelector((state) => state.content?.subrequests);
-  const dispatch = useDispatch();
 
   return (
     <Card className="card-bg" noWrapper={true} tag="div">
