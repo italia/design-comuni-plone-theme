@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { TextWidget, CheckboxWidget } from '@plone/volto/components';
 import { defineMessages, useIntl } from 'react-intl';
 import BgColor from '@italia/components/ItaliaTheme/Blocks/Listing/Options/BgColor/BgColor';
+import ItemsColor from '@italia/components/ItaliaTheme/Blocks/Listing/Options/ItemsColor/ItemsColor';
 
 const messages = defineMessages({
   title: {
@@ -47,6 +48,7 @@ const DefaultOptions = (props) => {
       />
 
       <BgColor {...props} />
+      <ItemsColor {...props} />
     </>
   );
 };

@@ -89,11 +89,12 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
     if (!block?.show_block_bg) return '';
 
     let bg_color = data.bg_color ? `bg-${data.bg_color}` : '';
+    let items_color = data.items_color ? `items-color-${data.items_color}` : '';
 
     if (block.template === 'gridGalleryTemplate') {
-      return `section section-muted section-inset-shadow py-5 ${bg_color}`;
+      return `section section-muted section-inset-shadow py-5 ${bg_color} ${items_color}`;
     } else {
-      return `bg-light py-5 ${bg_color}`;
+      return `bg-light py-5 ${bg_color} ${items_color}`;
     }
   };
 
