@@ -7,6 +7,7 @@ import RibbonCardTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Lis
 import CardWithImageTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions';
 
 import DefaultOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions';
+import MoreCustomOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/MoreCustomOptions';
 
 const ListingStyle = ({ data, block, onChangeBlock, required = false }) => {
   const templatesConfig = blocks.blocksConfig.listing.templates;
@@ -51,6 +52,8 @@ const ListingStyle = ({ data, block, onChangeBlock, required = false }) => {
             onChangeBlock={onChangeBlock}
           />
         )}
+
+        <MoreCustomOptions />
       </div>
     );
   }
