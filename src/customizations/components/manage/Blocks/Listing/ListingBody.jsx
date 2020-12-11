@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createRef } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { FormattedMessage, injectIntl } from 'react-intl';
@@ -12,9 +12,16 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
   const querystringResults = useSelector(
     (state) => state.querystringsearch.subrequests,
   );
+  const [firstLoading, setFirstLoading] = React.useState(true);
   const dispatch = useDispatch();
+  const listingRef = createRef();
 
   React.useEffect(() => {
+    doSearch(data);
+    /* eslint-disable react-hooks/exhaustive-deps */
+  }, [data.query]);
+
+  const doSearch = (data) => {
     if (data?.query?.length > 0) {
       dispatch(
         getQueryStringResults(path, { ...data, fullobjects: 1 }, data.block),
@@ -38,8 +45,12 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
         ),
       );
     }
-    /* eslint-disable react-hooks/exhaustive-deps */
-  }, [data]);
+  };
+
+  const addFilters = (filters = []) => {
+    const _data = { ...data, query: [...data.query, ...filters] };
+    doSearch(_data);
+  };
 
   const folderItems = content?.is_folderish ? content.items : [];
 
@@ -64,14 +75,14 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
   const ListingBodyTemplate = templateConfig[templateName].template;
 
   function handleContentPaginationChange(e, { activePage }) {
-    !isEditMode && window.scrollTo(0, 0);
+    !isEditMode && listingRef.current.scrollIntoView({ behavior: 'smooth' });
     const current = activePage?.children ?? 1;
     setCurrentPage(current);
     dispatch(getContent(path, null, null, current));
   }
 
   function handleQueryPaginationChange(e, { activePage }) {
-    // !isEditMode && window.scrollTo(0, 0);
+    !isEditMode && listingRef.current.scrollIntoView({ behavior: 'smooth' });
     const current = activePage?.children ?? 1;
     setCurrentPage(current);
     dispatch(
@@ -107,11 +118,19 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
   return (
     <div className="public-ui">
       {listingItems.length > 0 ? (
-        <div className={`full-width ${getBlockClasses()}`}>
+        <div className={`full-width ${getBlockClasses()}`} ref={listingRef}>
           <ListingBodyTemplate
             items={listingItems}
             isEditMode={isEditMode}
             {...data}
+            addFilters={addFilters}
+            items_total={
+              data?.query?.length === 0
+                ? content?.items_total
+                : querystringResults?.[data.block]?.total
+            }
+            loading={loadingQuery}
+            firstLoading={firstLoading}
           />
           {data?.query?.length === 0 &&
             content?.items_total > settings.defaultPageSize && (
@@ -121,7 +140,7 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
                   totalPages={Math.ceil(
                     content.items_total / settings.defaultPageSize,
                   )}
-                  onPageChange={handleQueryPaginationChange}
+                  onPageChange={handleContentPaginationChange}
                 />
               </div>
             )}
