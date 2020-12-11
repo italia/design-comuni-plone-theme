@@ -30,6 +30,10 @@ const messages = defineMessages({
     id: 'show_icon',
     defaultMessage: "Mostra l'icona",
   },
+  hide_dates: {
+    id: 'hide_dates',
+    defaultMessage: 'Nascondi le date',
+  },
   show_section: {
     id: 'show_section',
     defaultMessage: 'Mostra la sezione',
@@ -60,7 +64,7 @@ const SimpleCardTemplateOptions = (props) => {
   useEffect(() => {
     onChangeBlock(block, {
       ...data,
-      show_icon: data.show_icon == undefined ? true : data.show_icon,
+      show_icon: data.show_icon === undefined ? true : data.show_icon,
       show_section:
         data.show_section === undefined
           ? data.appearance !== SimpleCardTemplateAppearance_COMPACT
@@ -73,8 +77,6 @@ const SimpleCardTemplateOptions = (props) => {
             ? true
             : undefined
           : data.show_description,
-      show_detail_link:
-        data.show_detail_link === undefined ? undefined : data.show_detail_link,
     });
   }, [data.appearance]);
 
@@ -115,6 +117,19 @@ const SimpleCardTemplateOptions = (props) => {
           });
         }}
       />
+      {data.appearance !== SimpleCardTemplateAppearance_COMPACT && (
+        <CheckboxWidget
+          id="hide_dates"
+          title={intl.formatMessage(messages.hide_dates)}
+          value={data.hide_dates ? data.hide_dates : false}
+          onChange={(id, value) => {
+            onChangeBlock(block, {
+              ...data,
+              [id]: value,
+            });
+          }}
+        />
+      )}
       {data.appearance !== SimpleCardTemplateAppearance_COMPACT && (
         <CheckboxWidget
           id="show_section"

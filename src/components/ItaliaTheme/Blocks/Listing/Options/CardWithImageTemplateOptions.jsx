@@ -8,6 +8,10 @@ const messages = defineMessages({
     id: 'always_show_image',
     defaultMessage: "Mostra l'immagine per tutti gli elementi",
   },
+  hide_dates: {
+    id: 'hide_dates',
+    defaultMessage: 'Nascondi le date',
+  },
 });
 
 const CardWithImageTemplateOptions = ({
@@ -24,6 +28,17 @@ const CardWithImageTemplateOptions = ({
         id="always_show_image"
         title={intl.formatMessage(messages.always_show_image)}
         value={data.always_show_image ? data.always_show_image : false}
+        onChange={(id, value) => {
+          onChangeBlock(block, {
+            ...data,
+            [id]: value,
+          });
+        }}
+      />
+      <CheckboxWidget
+        id="hide_dates"
+        title={intl.formatMessage(messages.hide_dates)}
+        value={data.hide_dates ? data.hide_dates : false}
         onChange={(id, value) => {
           onChangeBlock(block, {
             ...data,
