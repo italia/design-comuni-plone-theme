@@ -51,6 +51,10 @@ import listArrowsSVG from '@plone/volto/icons/list-arrows.svg';
 import AccordionView from '@italia/components/ItaliaTheme/Blocks/Accordion/View';
 import AccordionEdit from '@italia/components/ItaliaTheme/Blocks/Accordion/Edit';
 
+import videoSVG from '@plone/volto/icons/video.svg';
+import VideoGalleryView from '@italia/components/ItaliaTheme/Blocks/VideoGallery/View';
+import VideoGalleryEdit from '@italia/components/ItaliaTheme/Blocks/VideoGallery/Edit';
+
 import formSVG from '@plone/volto/icons/form.svg';
 import FormView from '@italia/components/ItaliaTheme/Blocks/Form/View';
 import FormEdit from '@italia/components/ItaliaTheme/Blocks/Form/Edit';
@@ -329,6 +333,21 @@ const customBlocks = {
     group: 'text',
     view: AccordionView,
     edit: AccordionEdit,
+    restricted: false,
+    mostUsed: false,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
+  video_gallery: {
+    id: 'video_gallery',
+    title: 'Video Gallery',
+    icon: videoSVG,
+    group: 'media',
+    view: VideoGalleryView,
+    edit: VideoGalleryEdit,
     restricted: false,
     mostUsed: false,
     security: {

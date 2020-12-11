@@ -5,7 +5,7 @@
 
 import React from 'react';
 import EditBlock from './Block/EditBlock';
-import { Grid } from 'semantic-ui-react';
+
 import {
   Container,
   Card,
