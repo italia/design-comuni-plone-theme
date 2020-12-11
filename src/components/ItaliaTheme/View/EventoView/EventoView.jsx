@@ -38,6 +38,7 @@ import {
   RichText,
   EventoPlaceholderAfterContent,
   ContactLink,
+  RelatedItemInEvidence,
 } from '@italia/components/ItaliaTheme/View';
 
 const messages = defineMessages({
@@ -468,6 +469,7 @@ const EventoView = ({ content, location }) => {
       </div>
       <EventoPlaceholderAfterContent content={content} />
       <RelatedItems content={content} />
+      <RelatedItemInEvidence content={content} />
     </>
   );
 };

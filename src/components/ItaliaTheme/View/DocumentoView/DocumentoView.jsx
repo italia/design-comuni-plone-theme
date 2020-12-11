@@ -23,6 +23,7 @@ import {
   RelatedItems,
   DocumentoPlaceholderAfterContent,
   RichText,
+  RelatedItemInEvidence,
 } from '@italia/components/ItaliaTheme/View';
 
 const messages = defineMessages({
@@ -259,6 +260,7 @@ const DocumentoView = ({ content, location }) => {
       </div>
       <DocumentoPlaceholderAfterContent content={content} />
       <RelatedItems content={content} />
+      <RelatedItemInEvidence content={content} />
     </>
   );
 };

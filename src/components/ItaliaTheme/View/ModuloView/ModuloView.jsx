@@ -14,6 +14,7 @@ import {
   PagePlaceholderAfterContent,
   TextOrBlocks,
   DownloadFileFormat,
+  RelatedItemInEvidence,
 } from '@italia/components/ItaliaTheme/View';
 import { defineMessages, useIntl } from 'react-intl';
 import cx from 'classnames';
@@ -84,6 +85,7 @@ const ModuloView = ({ content }) => {
 
       <PagePlaceholderAfterContent content={content} />
       <RelatedItems content={content} />
+      <RelatedItemInEvidence content={content} />
     </>
   );
 };

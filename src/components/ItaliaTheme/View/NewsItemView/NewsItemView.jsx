@@ -20,6 +20,7 @@ import {
   TextOrBlocks,
   RelatedItems,
   NewsItemPlaceholderAfterContent,
+  RelatedItemInEvidence,
 } from '@italia/components/ItaliaTheme/View';
 
 // import { getBaseUrl } from '@plone/volto/helpers';
@@ -145,6 +146,7 @@ const NewsItemView = ({ content, location }) => {
       </div>
       <NewsItemPlaceholderAfterContent content={content} />
       <RelatedItems list={related_items} />
+      <RelatedItemInEvidence content={content} />
     </>
   );
 };
