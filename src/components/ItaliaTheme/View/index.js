@@ -3,6 +3,7 @@ export RichTextArticle from '@italia/components/ItaliaTheme/View/Commons/RichTex
 export RichText from '@italia/components/ItaliaTheme/View/Commons/RichText';
 export RelatedNewsArticles from '@italia/components/ItaliaTheme/View/Commons/RelatedNewsArticles';
 export RelatedArticles from '@italia/components/ItaliaTheme/View/Commons/RelatedArticles';
+export Icon from '@italia/components/ItaliaTheme/Icons/Icon';
 export ArgumentIcon from '@italia/components/ItaliaTheme/View/Commons/Argument/ArgumentIcon';
 export ContactLink from '@italia/components/ItaliaTheme/View/Commons/ContactLink';
 

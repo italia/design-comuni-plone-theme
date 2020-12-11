@@ -13,7 +13,8 @@ import {
   Subblock,
 } from '@italia/addons/volto-subblocks';
 
-import { Button, Icon } from 'design-react-kit/dist/design-react-kit';
+import { Button } from 'design-react-kit/dist/design-react-kit';
+import { Icon } from '@italia/components/ItaliaTheme';
 
 // import { TextEditorWidget } from '@italia/components/ItaliaTheme';
 import TextEditorWidget from '../TextEditorWidget';
@@ -146,7 +147,7 @@ class EditBlock extends SubblockEdit {
                 <div className="link-more">
                   <a href={this.props.data.href}>
                     {this.props.data.linkMoreTitle ||
-                      intl.formatMessage(messages.vedi)}
+                      this.props.intl.formatMessage(messages.vedi)}
                     <Icon icon="it-arrow-right" />
                   </a>
                 </div>

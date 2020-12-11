@@ -1,5 +1,5 @@
 import { defineMessages, useIntl } from 'react-intl';
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import {
@@ -8,8 +8,8 @@ import {
   DropdownMenu,
   LinkList,
   LinkListItem,
-  Icon,
 } from 'design-react-kit/dist/design-react-kit';
+import { Icon } from '@italia/components/ItaliaTheme';
 
 /**
  * Sharing view component class.

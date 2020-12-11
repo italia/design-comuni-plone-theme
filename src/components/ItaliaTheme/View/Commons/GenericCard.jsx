@@ -1,12 +1,17 @@
-import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import cx from 'classnames';
-import { getContent, resetContent } from '@plone/volto/actions';
 import { Link } from 'react-router-dom';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
-import { Icon, CardCategory } from 'design-react-kit/dist/design-react-kit';
-import { getCalendarDate, getIcon } from '@italia/helpers';
+import { getContent, resetContent } from '@plone/volto/actions';
+import { flattenToAppURL } from '@plone/volto/helpers';
+import { getCalendarDate } from '@italia/helpers';
+import {
+  Icon,
+  CardCategory,
+  getItemIcon,
+  ListingCategory,
+} from '@italia/components/ItaliaTheme';
 /**
  * GenericCard view component class.
  * @function GenericCard
@@ -27,18 +32,16 @@ const GenericCard = ({
   const dispatch = useDispatch();
   const key = `generic_card_${item['@id']}`;
   const url = flattenToAppURL(item['@id']);
+  const icon = getItemIcon(item);
 
   const infos = (
     <>
       {showInfos && (
-        <CardCategory date={getCalendarDate(item)}>
-          <Icon
-            className="icon"
-            color="primary"
-            icon={getIcon(item['@type'])}
-            padding={false}
+        <CardCategory iconName={icon} date={getCalendarDate(item)}>
+          <ListingCategory
+            category={item?.design_italia_meta_type}
+            item={item}
           />
-          {item?.design_italia_meta_type}
         </CardCategory>
       )}
     </>

@@ -3,22 +3,20 @@ import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import moment from 'moment';
 import 'moment/min/locales';
-
+import { Link } from 'react-router-dom';
+import cx from 'classnames';
 import {
   Card,
   CardBody,
   CardTitle,
-  CardCategory,
   CardText,
   CardReadMore,
   Button,
-  Icon,
   Row,
   Col,
 } from 'design-react-kit/dist/design-react-kit';
+import { CardCategory } from '@italia/components/ItaliaTheme';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { Link } from 'react-router-dom';
-import cx from 'classnames';
 
 import {
   getItemIcon,
@@ -97,12 +95,7 @@ const SimpleCardTemplateDefault = ({
                 })}
               >
                 {(show_icon || show_section || date) && (
-                  <CardCategory
-                    iconName={show_icon && !date ? icon : null}
-                    date={date}
-                  >
-                    {show_icon && date && <Icon icon={icon} />}{' '}
-                    {/*questo perchè CardCategory mostra o l'icona o la data */}
+                  <CardCategory iconName={show_icon ? icon : null} date={date}>
                     {show_section && (
                       <span className="text font-weight-bold">
                         <ListingCategory

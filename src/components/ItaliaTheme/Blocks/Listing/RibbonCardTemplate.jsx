@@ -15,11 +15,11 @@ import {
   Row,
   Col,
   Container,
-  Icon,
 } from 'design-react-kit/dist/design-react-kit';
+
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Link } from 'react-router-dom';
-import { getItemIcon } from '@italia/components/ItaliaTheme';
+import { Icon, getItemIcon } from '@italia/components/ItaliaTheme';
 import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
 
 const messages = defineMessages({

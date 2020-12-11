@@ -7,6 +7,13 @@ import React, { createRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import {
+  Card,
+  CardBody,
+  CardTitle,
+  CardText,
+} from 'design-react-kit/dist/design-react-kit';
+import { Icon } from '@italia/components/ItaliaTheme';
+import {
   SideMenu,
   PageHeader,
   ContentImage,
@@ -21,15 +28,9 @@ import {
   VenuePlaceholderAfterContent,
 } from '@italia/components/ItaliaTheme/View';
 import { contentFolderHasItems } from '@italia/helpers';
-import { Icon } from 'design-react-kit/dist/design-react-kit';
 import { OSMMap } from '@italia/addons/volto-venue';
-import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
-} from 'design-react-kit/dist/design-react-kit';
-import ContactLink from '../Commons/ContactLink';
+import ContactLink from '@italia/components/ItaliaTheme/View/Commons/ContactLink';
+
 const messages = defineMessages({
   descrizione: {
     id: 'descrizione',

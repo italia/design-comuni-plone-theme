@@ -7,26 +7,21 @@ import {
   Card,
   CardBody,
   CardTitle,
-  CardCategory,
   CardText,
   Chip,
   ChipLabel,
-  Icon,
 } from 'design-react-kit/dist/design-react-kit';
-import { ConditionalLink } from '@plone/volto/components';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
-import {
-  getIcon,
-  getCalendarDate,
-  getEventRecurrenceMore,
-} from '@italia/helpers';
+import { ConditionalLink } from '@plone/volto/components';
+import { flattenToAppURL } from '@plone/volto/helpers';
+import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
 import {
   CardCalendar,
   getItemIcon,
   ListingCategory,
   ListingText,
+  CardCategory,
 } from '@italia/components/ItaliaTheme';
 
 const InEvidenceTemplate = ({
@@ -93,16 +88,7 @@ const InEvidenceTemplate = ({
                     </div>
                   )}
                   <CardBody>
-                    <CardCategory iconName={!date ? icon : null} date={date}>
-                      {/*questo perchè CardCategory mostra o l'icona o la data */}
-                      {date && (
-                        <Icon
-                          className="icon"
-                          color="primary"
-                          icon={getIcon(item['@type'])}
-                          padding={false}
-                        />
-                      )}{' '}
+                    <CardCategory iconName={icon} date={date}>
                       <ListingCategory
                         category={item?.design_italia_meta_type}
                         item={item}

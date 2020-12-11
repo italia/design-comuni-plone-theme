@@ -6,11 +6,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import redraft from 'redraft';
-import { Link } from 'react-router-dom';
-import { settings } from '~/config';
-import cx from 'classnames';
-import { Button, Icon } from 'design-react-kit/dist/design-react-kit';
 import { useIntl, defineMessages } from 'react-intl';
+import cx from 'classnames';
+import { settings } from '~/config';
+import { Icon } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   vedi: {

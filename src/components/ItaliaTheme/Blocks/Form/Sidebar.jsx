@@ -1,21 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Segment, Accordion, Form } from 'semantic-ui-react';
-import { FormattedMessage, injectIntl } from 'react-intl';
+import {
+  defineMessages,
+  useIntl,
+  FormattedMessage,
+  injectIntl,
+} from 'react-intl';
+
 import {
   Icon,
-  ObjectBrowserWidget,
   TextWidget,
   CheckboxWidget,
   SelectWidget,
   ArrayWidget,
 } from '@plone/volto/components';
-import TokenWidget from '@plone/volto/components/manage/Widgets/TokenWidget';
+
 import upSVG from '@plone/volto/icons/up-key.svg';
 import downSVG from '@plone/volto/icons/down-key.svg';
-import { defineMessages, useIntl } from 'react-intl';
 
-import { LinkToWidget } from '@italia/components/ItaliaTheme';
 const messages = defineMessages({
   to: {
     id: 'form_to',

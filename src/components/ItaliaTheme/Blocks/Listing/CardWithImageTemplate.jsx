@@ -2,12 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { Link } from 'react-router-dom';
-import { ConditionalLink } from '@plone/volto/components';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import { useIntl } from 'react-intl';
 import moment from 'moment';
 import 'moment/min/locales';
-import { getIcon } from '@italia/helpers';
 import {
   Container,
   Row,
@@ -15,12 +12,13 @@ import {
   Card,
   CardBody,
   CardTitle,
-  CardCategory,
   CardText,
-  Icon,
   Chip,
   ChipLabel,
 } from 'design-react-kit/dist/design-react-kit';
+import { ConditionalLink } from '@plone/volto/components';
+import { flattenToAppURL } from '@plone/volto/helpers';
+import { CardCategory } from '@italia/components/ItaliaTheme';
 import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
 
 import {
@@ -100,16 +98,7 @@ const CardWithImageTemplate = ({
                       </div>
                     )}
                     <CardBody>
-                      <CardCategory iconName={!date ? icon : null} date={date}>
-                        {date && (
-                          <Icon
-                            className="icon mr-2"
-                            color="primary"
-                            icon={getIcon(item['@type'])}
-                            padding={false}
-                          />
-                        )}{' '}
-                        {/*questo perchè CardCategory mostra o l'icona o la data */}
+                      <CardCategory iconName={icon} date={date}>
                         <ListingCategory
                           category={item?.design_italia_meta_type}
                           item={item}

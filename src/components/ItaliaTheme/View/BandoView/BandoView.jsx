@@ -22,14 +22,7 @@ import {
 } from '@italia/components/ItaliaTheme/View';
 
 import { flattenToAppURL } from '@plone/volto/helpers';
-import {
-  Icon,
-  Chip,
-  ChipLabel,
-  Card,
-  CardBody,
-  CardTitle,
-} from 'design-react-kit/dist/design-react-kit';
+import { Icon } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   descrizione: {

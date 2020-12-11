@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import cx from 'classnames';
 import { defineMessages, useIntl } from 'react-intl';
 import {
   Card,
   CardBody,
   CardTitle,
-  Icon,
   Row,
   Col,
   Button,
 } from 'design-react-kit/dist/design-react-kit';
+
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { getItemIcon } from '@italia/components/ItaliaTheme';
-import { Link } from 'react-router-dom';
-import cx from 'classnames';
+import { Icon, getItemIcon } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   view_all: {

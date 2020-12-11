@@ -1,11 +1,11 @@
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
-import React, { useEffect } from 'react';
-import { getContent, resetContent } from '@plone/volto/actions';
-import { flattenToAppURL } from '@plone/volto/helpers';
-import { Icon } from 'design-react-kit/dist/design-react-kit';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { getContent, resetContent } from '@plone/volto/actions';
+import { flattenToAppURL } from '@plone/volto/helpers';
+import { Icon } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   locations: {

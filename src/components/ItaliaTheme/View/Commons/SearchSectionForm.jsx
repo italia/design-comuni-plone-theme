@@ -1,9 +1,10 @@
 import { defineMessages, useIntl } from 'react-intl';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Icon, Button } from 'design-react-kit/dist/design-react-kit';
+import { Button } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { SearchUtils } from '@italia/components';
+import { Icon } from '@italia/components/ItaliaTheme';
 
 const { getSearchParamsURL } = SearchUtils;
 /**

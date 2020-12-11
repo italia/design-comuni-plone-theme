@@ -1,14 +1,13 @@
-import { defineMessages, useIntl } from 'react-intl';
-
 import React from 'react';
-import { flattenToAppURL } from '@plone/volto/helpers';
-import { Icon } from 'design-react-kit/dist/design-react-kit';
+import PropTypes from 'prop-types';
+import { defineMessages, useIntl } from 'react-intl';
 import {
   Card,
   CardBody,
   CardTitle,
 } from 'design-react-kit/dist/design-react-kit';
-import PropTypes from 'prop-types';
+import { flattenToAppURL } from '@plone/volto/helpers';
+import { Icon } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   attachment: {

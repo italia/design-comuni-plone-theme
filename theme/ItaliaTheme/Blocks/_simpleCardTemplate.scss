@@ -11,8 +11,9 @@
     .categoryicon-top .icon {
       width: 32px;
       height: 32px;
-      fill: $secondary;
       font-weight: 600;
+      fill: $secondary;
+      color: $secondary;
     }
 
     .card-body {
@@ -76,6 +77,10 @@
     &.card-teaser-block-3 {
       & > .card-teaser {
         flex-wrap: nowrap;
+
+        > .icon {
+          fill: $secondary;
+        }
       }
     }
   }
