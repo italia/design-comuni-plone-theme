@@ -1,0 +1,24 @@
+#correlato-in-evidenza {
+  .other-arguments {
+    color: $primary-text;
+
+    h5 {
+      color: $primary-text;
+      text-transform: uppercase;
+    }
+
+    .chip {
+      border-color: $primary-text;
+      background: transparent;
+
+      .chip-label {
+        color: $primary-text;
+      }
+
+      &:hover,
+      &:active {
+        background-color: transparentize($primary-text, 0.8);
+      }
+    }
+  }
+}

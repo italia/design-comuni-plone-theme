@@ -21,6 +21,7 @@ import {
   RelatedItems,
   PersonaPlaceholderAfterContent,
   ContactLink,
+  RelatedItemInEvidence,
 } from '@italia/components/ItaliaTheme/View';
 import { contentFolderHasItems } from '@italia/helpers';
 
@@ -451,6 +452,7 @@ const PersonaView = ({ content }) => {
       </div>
       <PersonaPlaceholderAfterContent content={content} />
       <RelatedItems content={content} />
+      <RelatedItemInEvidence content={content} />
     </>
   );
 };

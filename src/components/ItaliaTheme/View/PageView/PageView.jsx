@@ -13,6 +13,7 @@ import {
   PagePlaceholderTitle,
   TextOrBlocks,
   RichText,
+  RelatedItemInEvidence,
 } from '@italia/components/ItaliaTheme/View';
 import { defineMessages, useIntl } from 'react-intl';
 import { Container } from 'design-react-kit/dist/design-react-kit';
@@ -82,6 +83,7 @@ const PageView = ({ content, token, location, history }) => {
 
         <PagePlaceholderAfterContent content={content} />
         <RelatedItems content={content} />
+        <RelatedItemInEvidence content={content} />
       </>
     );
   else {

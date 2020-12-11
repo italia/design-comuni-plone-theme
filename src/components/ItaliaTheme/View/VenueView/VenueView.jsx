@@ -26,6 +26,7 @@ import {
   GenericCard,
   Metadata,
   VenuePlaceholderAfterContent,
+  RelatedItemInEvidence,
 } from '@italia/components/ItaliaTheme/View';
 import { contentFolderHasItems } from '@italia/helpers';
 import { OSMMap } from '@italia/addons/volto-venue';
@@ -558,6 +559,7 @@ const VenueView = ({ content }) => {
       </div>
       <VenuePlaceholderAfterContent content={content} />
       <RelatedItems list={content.related_news ?? []} />
+      <RelatedItemInEvidence content={content} />
     </>
   );
 };

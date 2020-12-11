@@ -41,6 +41,7 @@ export LocationsMap from '@italia/components/ItaliaTheme/View/Commons/LocationsM
 export SmallVenue from '@italia/components/ItaliaTheme/View/Commons/SmallVenue';
 export Sponsors from '@italia/components/ItaliaTheme/View/Commons/Sponsors';
 export RelatedItems from '@italia/components/ItaliaTheme/View/Commons/RelatedItems';
+export RelatedItemInEvidence from '@italia/components/ItaliaTheme/View/Commons/RelatedItemInEvidence/RelatedItemInEvidence';
 export DownloadFileFormat from '@italia/components/ItaliaTheme/View/Commons/DownloadFileFormat';
 export BandoDates from '@italia/components/ItaliaTheme/View/Commons/BandoDates';
 

@@ -13,10 +13,7 @@ import {
   PageHeader,
 } from '@italia/components/ItaliaTheme/View';
 import { getAmministrazioneTrasparenteTree } from '@italia/actions';
-import {
-  LinkList,
-  LinkListItem,
-} from 'design-react-kit/dist/design-react-kit';
+import { LinkList, LinkListItem } from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({});
 

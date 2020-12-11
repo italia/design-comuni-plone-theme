@@ -19,6 +19,7 @@ import {
   RelatedItems,
   RichText,
   BandoPlaceholderAfterContent,
+  RelatedItemInEvidence,
 } from '@italia/components/ItaliaTheme/View';
 
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -305,6 +306,7 @@ const BandoView = ({ content, location }) => {
       </div>
       <BandoPlaceholderAfterContent content={content} />
       <RelatedItems content={content} />
+      <RelatedItemInEvidence content={content} />
     </>
   );
 };
