@@ -24,8 +24,8 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
   }, [data.query]);
 
   const doSearch = (data = { query: [] }, page = 1) => {
-    let _data = { ...data, query: [...data.query, ...additionalFilters] };
     if (data?.query?.length > 0 || additionalFilters.length > 0) {
+      let _data = { ...data, query: [...data.query, ...additionalFilters] };
       dispatch(
         getQueryStringResults(
           path,
@@ -39,7 +39,7 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
         getQueryStringResults(
           path,
           {
-            ..._data,
+            ...data,
             fullobjects: 1,
             query: [
               {
