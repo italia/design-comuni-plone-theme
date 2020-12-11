@@ -75,9 +75,7 @@ const ViewBlock = ({ data, index }) => {
         </>
       )}
     </div>
-  ) : (
-    <>No video URL</>
-  );
+  ) : null;
 };
 
 /**

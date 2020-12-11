@@ -15,17 +15,10 @@ import {
 import ViewBlock from './ViewBlock';
 
 const messages = defineMessages({
-  titlePlaceholder: {
-    id: 'Title placeholder',
-    defaultMessage: 'Title...',
-  },
-  textPlaceholder: {
-    id: 'Text placeholder',
-    defaultMessage: 'Text...',
-  },
-  vedi: {
-    id: 'Vedi',
-    defaultMessage: 'Vedi',
+  noVideoUrl: {
+    id: 'noVideoUrl',
+    defaultMessage:
+      "Inserisci l'URL di un video YouTube o Vimeo nella barra a lato.",
   },
 });
 /**
@@ -47,6 +40,9 @@ class EditBlock extends SubblockEdit {
     return (
       <Subblock subblock={this} className="subblock-edit">
         <ViewBlock data={this.props.data} />
+        {(!this.props.data?.url || this.props.data?.url.length === 0) && (
+          <div>{this.props.intl.formatMessage(messages.noVideoUrl)}</div>
+        )}
       </Subblock>
     );
   }

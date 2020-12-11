@@ -22,6 +22,11 @@ const messages = defineMessages({
     defaultMessage: 'Aggiungi elemento',
   },
   titlePlaceholder: { id: 'Title', defaultMessage: 'Titolo' },
+  noVideos: {
+    id: 'noVideos',
+    defaultMessage:
+      'Nessun video selezionato. Aggiungi un elemento per mostrare un video',
+  },
 });
 /**
  * Edit icons block class.
@@ -53,10 +58,13 @@ class Edit extends SubblocksEdit {
                 />
               </div>
             ))}
+            {this.state.subblocks.length === 0 && (
+              <div>{this.props.intl.formatMessage(messages.noVideos)}</div>
+            )}
           </Body>
         </SubblocksWrapper>
         {this.props.selected && (
-          <div className="accordion-item">
+          <div className="add-block-wrapper">
             {this.renderAddBlockButton(
               this.props.intl.formatMessage(messages.addItem),
             )}

@@ -47,7 +47,7 @@ const CompleteBlockLinksTemplate = ({
           )}
           <Row className="items">
             {items.map((item, index) => (
-              <Col md="3" key={item['@id']} className="col-item">
+              <Col md="6" lg="3" key={item['@id']} className="col-item">
                 <Card
                   color=""
                   className="card-bg rounded"
