@@ -1,4 +1,4 @@
-import React, { createRef } from 'react';
+import React, { createRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { FormattedMessage, injectIntl } from 'react-intl';
@@ -16,22 +16,30 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
   const dispatch = useDispatch();
   const listingRef = createRef();
 
-  React.useEffect(() => {
+  const [additionalFilters, setAdditionalFilters] = React.useState([]);
+
+  useEffect(() => {
     doSearch(data);
     /* eslint-disable react-hooks/exhaustive-deps */
   }, [data.query]);
 
-  const doSearch = (data) => {
-    if (data?.query?.length > 0) {
+  const doSearch = (data = { query: [] }, page = 1) => {
+    let _data = { ...data, query: [...data.query, ...additionalFilters] };
+    if (data?.query?.length > 0 || additionalFilters.length > 0) {
       dispatch(
-        getQueryStringResults(path, { ...data, fullobjects: 1 }, data.block),
+        getQueryStringResults(
+          path,
+          { ..._data, fullobjects: 1 },
+          data.block,
+          page,
+        ),
       );
     } else if (data.template === 'imageGallery' && data?.query?.length === 0) {
       dispatch(
         getQueryStringResults(
           path,
           {
-            ...data,
+            ..._data,
             fullobjects: 1,
             query: [
               {
@@ -42,14 +50,21 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
             ],
           },
           data.block,
+          page,
         ),
       );
     }
   };
 
+  useEffect(() => {
+    if (!firstLoading) {
+      doSearch(data);
+    }
+  }, [additionalFilters]);
+
   const addFilters = (filters = []) => {
-    const _data = { ...data, query: [...data.query, ...filters] };
-    doSearch(_data);
+    setCurrentPage(1);
+    setAdditionalFilters(filters);
   };
 
   const folderItems = content?.is_folderish ? content.items : [];
@@ -57,6 +72,9 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
   const loadingQuery =
     data?.query?.length > 0 && querystringResults?.[data.block]?.loading;
 
+  if (firstLoading && querystringResults?.[data.block] && !loadingQuery) {
+    setFirstLoading(false);
+  }
   const listingItems =
     data?.query?.length > 0
       ? (querystringResults &&
@@ -85,14 +103,7 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
     !isEditMode && listingRef.current.scrollIntoView({ behavior: 'smooth' });
     const current = activePage?.children ?? 1;
     setCurrentPage(current);
-    dispatch(
-      getQueryStringResults(
-        path,
-        { ...data, fullobjects: 1 },
-        data.block,
-        current,
-      ),
-    );
+    doSearch(data, current);
   }
 
   const getBackgroundClass = () => {
@@ -140,14 +151,14 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
                   totalPages={Math.ceil(
                     content.items_total / settings.defaultPageSize,
                   )}
-                  onPageChange={handleContentPaginationChange}
+                  onPageChange={handleQueryPaginationChange}
                 />
               </div>
             )}
-          {data?.query?.length > 0 &&
+          {(data?.query?.length > 0 || additionalFilters?.length > 0 > 0) &&
             querystringResults[data.block].total >
               (data.b_size || settings.defaultPageSize) && (
-              <div className="pagination-wrapper">
+              <div className="pagination-wrapper" key={currentPage}>
                 <Pagination
                   activePage={currentPage}
                   totalPages={Math.ceil(

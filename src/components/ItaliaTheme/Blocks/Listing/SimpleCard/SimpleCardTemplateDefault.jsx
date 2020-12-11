@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import moment from 'moment';
@@ -45,9 +45,13 @@ const SimpleCardTemplateDefault = ({
   title,
   show_block_bg,
   hide_dates,
+  path_filters,
+  show_path_filters,
+  addFilters,
 }) => {
   const intl = useIntl();
   moment.locale(intl.locale);
+  const [pathFilter, setPathFilter] = useState(null);
 
   const getItemClass = (item) => {
     let className = null;
@@ -64,13 +68,76 @@ const SimpleCardTemplateDefault = ({
     return className;
   };
 
+  const path_filters_buttons =
+    show_path_filters && path_filters
+      ? Object.keys(path_filters)
+          .map((k) => {
+            return {
+              label: path_filters[k].label,
+              path: path_filters[k].path[0],
+            };
+          })
+          .filter((f) => f.path)
+      : null;
+
+  const addPathFilter = (path) => {
+    let new_path = pathFilter === path ? null : path;
+    setPathFilter(new_path);
+    let filters = [];
+    if (new_path) {
+      filters = [
+        {
+          i: 'path',
+          o: 'plone.app.querystring.operation.string.absolutePath',
+          v: new_path,
+        },
+      ];
+    }
+    addFilters(filters);
+  };
+
   return (
     <div className="simple-card-default">
-      {title && (
-        <Row>
-          <Col>
-            <h2 className={cx('mb-4', { 'mt-5': !show_block_bg })}>{title}</h2>
-          </Col>
+      {(title || path_filters_buttons) && (
+        <Row
+          className={cx('template-header', {
+            'with-filters': path_filters_buttons,
+          })}
+        >
+          {title && (
+            <Col md={path_filters_buttons ? 6 : 12}>
+              <h2
+                className={cx('', {
+                  'mt-5': !show_block_bg,
+                  'mb-4': !path_filters_buttons,
+                })}
+              >
+                {title}
+              </h2>
+            </Col>
+          )}
+
+          {path_filters_buttons && (
+            <Col md={title ? 6 : 12} className="path-filter-buttons">
+              <div className="path-filter-buttons-wrapper">
+                {path_filters_buttons.map((button) => (
+                  <Button
+                    color="primary"
+                    outline={button.path['@id'] !== pathFilter}
+                    size="xs"
+                    icon={false}
+                    tag="button"
+                    className="ml-3"
+                    onClick={(e) => {
+                      addPathFilter(button.path['@id']);
+                    }}
+                  >
+                    {button.label}
+                  </Button>
+                ))}
+              </div>
+            </Col>
+          )}
         </Row>
       )}
 

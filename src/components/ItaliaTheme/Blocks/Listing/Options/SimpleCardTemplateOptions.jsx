@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { Segment } from 'semantic-ui-react';
 import {
   SelectWidget,
   CheckboxWidget,
   TextWidget,
+  ObjectBrowserWidget,
 } from '@plone/volto/components';
 import { defineMessages, useIntl } from 'react-intl';
 import DefaultOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions';
@@ -54,6 +56,22 @@ const messages = defineMessages({
     id: 'Mostra lo sfondo del blocco',
     defaultMessage: 'Mostra lo sfondo del blocco',
   },
+  show_path_filters: {
+    id: 'Mostra i filtri per percorso',
+    defaultMessage: 'Mostra i filtri per percorso',
+  },
+  path_filter_label: {
+    id: 'Etichetta path filter',
+    defaultMessage: 'Etichetta',
+  },
+  path_filter_path: {
+    id: 'Percorso path filter',
+    defaultMessage: 'Percorso',
+  },
+  path_filter_filter: {
+    id: 'Path filter filtro',
+    defaultMessage: 'Filtro',
+  },
 });
 
 export const SimpleCardTemplateAppearance_COMPACT = 'compact';
@@ -79,6 +97,15 @@ const SimpleCardTemplateOptions = (props) => {
           : data.show_description,
     });
   }, [data.appearance]);
+
+  useEffect(() => {
+    if (!data.show_path_filters) {
+      onChangeBlock(block, {
+        ...data,
+        path_filters: {},
+      });
+    }
+  }, [data.show_path_filters]);
 
   return (
     <>
@@ -183,6 +210,73 @@ const SimpleCardTemplateOptions = (props) => {
                 });
               }}
             />
+          )}
+        </>
+      )}
+
+      {data.appearance !== SimpleCardTemplateAppearance_COMPACT && (
+        <>
+          <CheckboxWidget
+            id="show_path_filters"
+            title={intl.formatMessage(messages.show_path_filters)}
+            value={data.show_path_filters ? data.show_path_filters : false}
+            onChange={(id, value) => {
+              onChangeBlock(block, {
+                ...data,
+                [id]: value,
+              });
+            }}
+          />
+
+          {data.show_path_filters && (
+            <>
+              {[0, 1, 2, 3, 4].map((i) => (
+                <div className="path-filter-widget">
+                  <div className="filter-title">
+                    {intl.formatMessage(messages.path_filter_filter)} {i + 1}
+                  </div>
+                  <TextWidget
+                    id="label"
+                    title={intl.formatMessage(messages.path_filter_label)}
+                    required={false}
+                    value={data.path_filters?.[i]?.label}
+                    onChange={(name, value) => {
+                      let path_filters = data.path_filters
+                        ? JSON.parse(JSON.stringify(data.path_filters))
+                        : {};
+                      path_filters[i] = {
+                        ...(path_filters[i] || {}),
+                        [name]: value,
+                      };
+                      onChangeBlock(block, {
+                        ...data,
+                        path_filters: path_filters,
+                      });
+                    }}
+                  />
+                  <ObjectBrowserWidget
+                    id="path"
+                    title={intl.formatMessage(messages.path_filter_path)}
+                    required={false}
+                    mode={'link'}
+                    value={data.path_filters?.[i]?.path}
+                    onChange={(name, value) => {
+                      let path_filters = data.path_filters
+                        ? JSON.parse(JSON.stringify(data.path_filters))
+                        : {};
+                      path_filters[i] = {
+                        ...(path_filters[i] || {}),
+                        [name]: value,
+                      };
+                      onChangeBlock(block, {
+                        ...data,
+                        path_filters: path_filters,
+                      });
+                    }}
+                  />
+                </div>
+              ))}
+            </>
           )}
         </>
       )}

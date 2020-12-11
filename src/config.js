@@ -77,6 +77,7 @@ import { DettagliProcedimentiView } from '@italia/components/ItaliaTheme';
 
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
+
 import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate';
 import PhotogalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
 import InEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate';
@@ -380,6 +381,14 @@ const customBlocks = {
         label: 'Card con immagine',
         template: CardWithImageTemplate,
       },
+      inEvidenceTemplate: {
+        label: 'In evidenza',
+        template: InEvidenceTemplate,
+      },
+      ribbonCardTemplate: {
+        label: 'Card con nastro',
+        template: RibbonCardTemplate,
+      },
       smallBlockLinksTemplate: {
         label: 'Blocco link solo immagini',
         template: SmallBlockLinksTemplate,
@@ -392,17 +401,9 @@ const customBlocks = {
         label: 'Photogallery',
         template: PhotogalleryTemplate,
       },
-      inEvidenceTemplate: {
-        label: 'In evidenza',
-        template: InEvidenceTemplate,
-      },
       gridGalleryTemplate: {
         label: 'Gallery a griglia',
         template: GridGalleryTemplate,
-      },
-      ribbonCardTemplate: {
-        label: 'Card con nastro',
-        template: RibbonCardTemplate,
       },
       bandiInEvidenceTemplate: {
         label: 'Bandi',
