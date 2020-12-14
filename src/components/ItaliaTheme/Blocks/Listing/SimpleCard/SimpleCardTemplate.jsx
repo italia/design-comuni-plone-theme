@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { Row, Col, Container } from 'design-react-kit/dist/design-react-kit';
+import { Container } from 'design-react-kit/dist/design-react-kit';
 import SimpleCardTemplateDefault from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault';
 import SimpleCardTemplateCompact from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateCompact';
 
@@ -23,11 +23,7 @@ const SimpleCardTemplate = (data) => {
         'public-ui': data.isEditMode,
       })}
     >
-      <div
-        className={cx('full-width', { 'bg-light py-5': data.show_block_bg })}
-      >
-        <Container className="px-4">{content}</Container>
-      </div>
+      <Container className="px-4">{content}</Container>
     </div>
   );
 };

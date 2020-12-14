@@ -60,7 +60,11 @@ const Body = ({ data, children }) => {
           <div className="channel">
             <Icon color="primary" icon="it-youtube" className="mr-2" />
             {data.channel_link ? (
-              <a href={data.channel_link} rel="noopener noreferer">
+              <a
+                href={data.channel_link}
+                rel="noopener noreferer"
+                target="_blank"
+              >
                 {data.channel_link_title || data.channel_link}
               </a>
             ) : (
