@@ -60,6 +60,14 @@ const PageView = ({ content, token, location, history }) => {
                 )}
               </div>
               <div className="col-lg-4 offset-lg-2">
+                {content.immagine_testata?.scales?.preview?.download && (
+                  <div className="header-image px-4 mb-3">
+                    <img
+                      alt={content?.title || ''}
+                      src={content.immagine_testata?.scales?.preview?.download}
+                    />
+                  </div>
+                )}
                 {content.info_testata?.data?.replace(/<[^>]+>/g, '') && (
                   <div className="header-infos px-4 mb-5">
                     <RichText
