@@ -74,7 +74,7 @@ const SimpleCardTemplateDefault = ({
           .map((k) => {
             return {
               label: path_filters[k].label,
-              path: path_filters[k].path[0],
+              path: path_filters[k].path?.[0],
             };
           })
           .filter((f) => f.path)
