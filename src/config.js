@@ -35,6 +35,9 @@ import ArgumentsInEvidenceView from '@italia/components/ItaliaTheme/Blocks/Argum
 import CalendarView from '@italia/components/ItaliaTheme/Blocks/Calendar/View';
 import CalendarEdit from '@italia/components/ItaliaTheme/Blocks/Calendar/Edit';
 
+import EventSearchView from '@italia/components/ItaliaTheme/Blocks/EventSearch/View';
+import EventSearchEdit from '@italia/components/ItaliaTheme/Blocks/EventSearch/Edit';
+
 import titleSVG from '@plone/volto/icons/text.svg';
 import ArgomentoTitleView from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/View';
 import ArgomentoTitleEdit from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/Edit';
@@ -47,6 +50,14 @@ import TextCardWithImageEdit from '@italia/components/ItaliaTheme/Blocks/TextCar
 import listArrowsSVG from '@plone/volto/icons/list-arrows.svg';
 import AccordionView from '@italia/components/ItaliaTheme/Blocks/Accordion/View';
 import AccordionEdit from '@italia/components/ItaliaTheme/Blocks/Accordion/Edit';
+
+import videoSVG from '@plone/volto/icons/video.svg';
+import VideoGalleryView from '@italia/components/ItaliaTheme/Blocks/VideoGallery/View';
+import VideoGalleryEdit from '@italia/components/ItaliaTheme/Blocks/VideoGallery/Edit';
+
+import formSVG from '@plone/volto/icons/form.svg';
+import FormView from '@italia/components/ItaliaTheme/Blocks/Form/View';
+import FormEdit from '@italia/components/ItaliaTheme/Blocks/Form/Edit';
 
 import { CharCounterDescriptionWidget } from '@italia/components/ItaliaTheme';
 import { PageView } from '@italia/components/ItaliaTheme';
@@ -61,6 +72,8 @@ import { CartellaModulisticaView } from '@italia/components/ItaliaTheme';
 import { DocumentoView } from '@italia/components/ItaliaTheme';
 import { ModuloView } from '@italia/components/ItaliaTheme';
 import { BandoView } from '@italia/components/ItaliaTheme';
+import { TrasparenzaView } from '@italia/components/ItaliaTheme';
+import { DettagliProcedimentiView } from '@italia/components/ItaliaTheme';
 
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
@@ -71,6 +84,7 @@ import SimpleCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/Si
 import GridGalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate';
 import RibbonCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate';
 import BandiInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate';
+import AmministrazioneTrasparenteTablesTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
 
 import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
 import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
@@ -80,7 +94,7 @@ import { DatetimeWidget } from '@plone/volto/config/Widgets';
 import { MultilingualWidget } from '@italia/addons/volto-multilingual-widget';
 import { IconWidget } from '@italia/components/ItaliaTheme';
 import { defaultIconWidgetOptions } from '@italia/helpers/index';
-import TinymceWidget from '@italia/components/ItaliaTheme/manage/Widgets/TinymceWidget'
+import TinymceWidget from '@italia/components/ItaliaTheme/manage/Widgets/TinymceWidget';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import * as Icons from '@fortawesome/free-solid-svg-icons';
@@ -202,6 +216,22 @@ const customBlocks = {
     },
     sidebarTab: 1,
   },
+  searchEvents: {
+    id: 'searchEvents',
+    title: 'Ricerca eventi',
+    icon: searchIcon,
+    group: 'homePage',
+    view: EventSearchView,
+    edit: EventSearchEdit,
+    restricted: false,
+    mostUsed: false,
+    blockHasOwnFocusManagement: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
   argumentsInEvidence: {
     id: 'argumentsInEvidence',
     title: 'Argomenti in evidenza',
@@ -311,6 +341,36 @@ const customBlocks = {
     },
     sidebarTab: 1,
   },
+  video_gallery: {
+    id: 'video_gallery',
+    title: 'Video Gallery',
+    icon: videoSVG,
+    group: 'media',
+    view: VideoGalleryView,
+    edit: VideoGalleryEdit,
+    restricted: false,
+    mostUsed: false,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
+  form: {
+    id: 'form',
+    title: 'Form',
+    icon: formSVG,
+    group: 'text',
+    view: FormView,
+    edit: FormEdit,
+    restricted: false,
+    mostUsed: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
   listing: {
     ...config.blocks.blocksConfig.listing,
     templates: {
@@ -348,7 +408,13 @@ const customBlocks = {
         label: 'Bandi',
         template: BandiInEvidenceTemplate,
       },
+      amministrazioneTrasparenteTablesTemplate: {
+        label: 'Tabelle Amministrazione Trasparente',
+        template: AmministrazioneTrasparenteTablesTemplate,
+      },
     },
+    listing_bg_colors: [], //{name:'blue', label:'Blu'},{name:'light-blue', label:'Light blue'},{name:'sidebar-background', label:'Grey'}
+    listing_items_colors: [], //{name:'blue', label:'Blu'},{name:'light-blue', label:'Light blue'},{name:'sidebar-background', label:'Grey'}
   },
   rssBlock,
 };
@@ -419,6 +485,12 @@ export const views = {
     Modulo: ModuloView,
     Bando: BandoView,
   },
+  layoutViews: {
+    ...config.views.layoutViews,
+    document_view: PageView,
+    trasparenza_view: TrasparenzaView,
+    dettagli_procedimenti_view: DettagliProcedimentiView,
+  },
 };
 
 export const siteConfig = {
@@ -433,24 +505,8 @@ export const siteConfig = {
     subsiteParentSiteTitle: 'Nome del sito padre del sottosito',
     footerInfos:
       'Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000',
+    amministrazioneTrasparenteUrl: '/amministrazione-trasparente',
   },
-  socialSettings: [
-    {
-      title: 'Facebook',
-      url: 'https://facebook.com',
-      icon: 'it-facebook',
-    },
-    {
-      title: 'GitHub',
-      url: 'https://github.com',
-      icon: 'it-github',
-    },
-    {
-      title: 'Twitter',
-      url: 'https://twitter.com',
-      icon: 'it-twitter',
-    },
-  ],
 };
 
 export const widgets = {
@@ -469,8 +525,8 @@ export const widgets = {
   },
   widget: {
     ...config.widgets.widget,
-    richtext: TinymceWidget
-  }
+    // richtext: TinymceWidget
+  },
 };
 
 const customBlocksOrder = [

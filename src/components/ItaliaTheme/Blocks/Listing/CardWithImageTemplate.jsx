@@ -2,12 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { Link } from 'react-router-dom';
-import { ConditionalLink } from '@plone/volto/components';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import { useIntl } from 'react-intl';
 import moment from 'moment';
 import 'moment/min/locales';
-import { getIcon } from '@italia/helpers';
 import {
   Container,
   Row,
@@ -15,12 +12,13 @@ import {
   Card,
   CardBody,
   CardTitle,
-  CardCategory,
   CardText,
-  Icon,
   Chip,
   ChipLabel,
 } from 'design-react-kit/dist/design-react-kit';
+import { ConditionalLink } from '@plone/volto/components';
+import { flattenToAppURL } from '@plone/volto/helpers';
+import { CardCategory } from '@italia/components/ItaliaTheme';
 import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
 
 import {
@@ -37,6 +35,8 @@ const CardWithImageTemplate = ({
   linkMore,
   show_block_bg = false,
   always_show_image = false,
+  hide_dates = false,
+  full_width = true,
 }) => {
   const intl = useIntl();
   moment.locale(intl.locale);
@@ -45,7 +45,7 @@ const CardWithImageTemplate = ({
     <div
       className={cx('card-with-image-template', { 'public-ui': isEditMode })}
     >
-      <div className="full-width">
+      <div className={cx({ 'full-width': full_width })}>
         <Container className="px-4">
           {title && (
             <Row>
@@ -59,14 +59,14 @@ const CardWithImageTemplate = ({
           <Row className="items">
             {items.map((item, index) => {
               const icon = getItemIcon(item);
-              const date = getCalendarDate(item);
+              const date = hide_dates ? null : getCalendarDate(item);
               const eventRecurrenceMore = getEventRecurrenceMore(
                 item,
                 isEditMode,
               );
               const listingText = <ListingText item={item} />;
               return (
-                <Col md="4" key={item['@id']} className="col-item">
+                <Col lg="4" key={item['@id']} className="col-item mb-3">
                   <Card
                     className={cx('listing-item card-bg', {
                       'card-img': index < 3 && item.image,
@@ -98,16 +98,7 @@ const CardWithImageTemplate = ({
                       </div>
                     )}
                     <CardBody>
-                      <CardCategory iconName={!date ? icon : null} date={date}>
-                        {date && (
-                          <Icon
-                            className="icon mr-2"
-                            color="primary"
-                            icon={getIcon(item['@type'])}
-                            padding={false}
-                          />
-                        )}{' '}
-                        {/*questo perchè CardCategory mostra o l'icona o la data */}
+                      <CardCategory iconName={icon} date={date}>
                         <ListingCategory
                           category={item?.design_italia_meta_type}
                           item={item}

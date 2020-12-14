@@ -8,7 +8,6 @@ import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 
 import {
-  Attachments,
   SideMenu,
   HelpBox,
   PageHeader,
@@ -20,18 +19,11 @@ import {
   RelatedItems,
   RichText,
   BandoPlaceholderAfterContent,
+  RelatedItemInEvidence,
 } from '@italia/components/ItaliaTheme/View';
 
-import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import {
-  Icon,
-  Chip,
-  ChipLabel,
-  Card,
-  CardBody,
-  CardTitle,
-} from 'design-react-kit/dist/design-react-kit';
+import { Icon } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   descrizione: {
@@ -314,6 +306,7 @@ const BandoView = ({ content, location }) => {
       </div>
       <BandoPlaceholderAfterContent content={content} />
       <RelatedItems content={content} />
+      <RelatedItemInEvidence content={content} />
     </>
   );
 };

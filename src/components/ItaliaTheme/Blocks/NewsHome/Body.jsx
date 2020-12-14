@@ -1,20 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useIntl } from 'react-intl';
+import { Link } from 'react-router-dom';
+import moment from 'moment';
 import {
   Row,
   Col,
   Chip,
   Card,
-  CardCategory,
   CardBody,
   CardText,
   CardTitle,
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
-import { useIntl } from 'react-intl';
-import { Link } from 'react-router-dom';
+
 import { flattenToAppURL } from '@plone/volto/helpers';
-import moment from 'moment';
+import { CardCategory } from '@italia/components/ItaliaTheme';
 
 const Body = ({ content, pathname, block }) => {
   const intl = useIntl();

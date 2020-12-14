@@ -18,8 +18,8 @@ import {
   ContentImage,
   SmallVenue,
   HelpBox,
-  NewsCard,
   ServizioPlaceholderAfterContent,
+  RelatedItemInEvidence,
 } from '@italia/components/ItaliaTheme/View';
 
 import { Card, CardBody } from 'design-react-kit/dist/design-react-kit';
@@ -491,6 +491,7 @@ const ServizioView = ({ content }) => {
         </div>
       </div>
       <ServizioPlaceholderAfterContent content={content} />
+      <RelatedItemInEvidence content={content} />
     </>
   );
 };

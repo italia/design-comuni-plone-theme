@@ -1,0 +1,90 @@
+.event-search {
+  .search-container {
+    width: 100%;
+    min-height: unset;
+    padding: 1rem 2rem;
+
+    .filter-wrapper {
+      flex: 1;
+
+      &.text-filter {
+        min-width: 35%;
+      }
+
+      &.select-filter {
+        min-width: 150px;
+
+        .react-select__control {
+          border: none !important;
+          background-color: transparent;
+
+          .react-select__placeholder {
+            color: #fff !important;
+          }
+
+          .react-select__indicators {
+            svg {
+              fill: #fff;
+            }
+          }
+
+          .react-select__single-value {
+            color: #fff !important;
+          }
+        }
+      }
+
+      &.date-filter {
+        .DateRangePickerInput {
+          background-color: transparent;
+
+          .DateInput {
+            background-color: transparent;
+            width: 116px;
+          }
+
+          .DateInput_input {
+            background-color: transparent;
+            color: #fff;
+            border: none;
+          }
+
+          .DateRangePickerInput_arrow {
+            color: #fff;
+
+            .DateRangePickerInput_arrow_svg {
+              fill: #fff;
+            }
+          }
+
+          .DateRangePickerInput_clearDates {
+            opacity: 0.8;
+            transition: opacity 0.1s ease;
+
+            svg {
+              fill: #fff;
+            }
+            &:hover,
+            &:active {
+              background: none;
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      &.submit-button {
+        text-align: right;
+      }
+
+      @media (max-width: #{map-get($grid-breakpoints, lg)}) {
+        flex: 1 1 100%;
+        margin-right: 0 !important;
+
+        &.submit-button {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

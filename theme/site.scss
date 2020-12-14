@@ -43,17 +43,26 @@
 @import 'ItaliaTheme/Blocks/ribbonCardTemplate';
 @import 'ItaliaTheme/Blocks/break';
 @import 'ItaliaTheme/Blocks/accordion';
+@import 'ItaliaTheme/Blocks/simpleCardTemplate';
+@import 'ItaliaTheme/Blocks/eventSearch';
+@import 'ItaliaTheme/Blocks/form';
+@import 'ItaliaTheme/Blocks/videoGallery';
 @import 'ItaliaTheme/Views/uo';
 @import 'ItaliaTheme/Views/evento';
 @import 'ItaliaTheme/Views/common';
 @import 'ItaliaTheme/Views/bando';
 @import 'ItaliaTheme/Views/modules';
 @import 'ItaliaTheme/Views/cartellaModulistica';
+@import 'ItaliaTheme/Views/trasparenzaView';
 @import 'ItaliaTheme/Blocks/simpleCardTemplate';
 @import 'ItaliaTheme/Views/paginaArgomentoView';
+@import 'ItaliaTheme/Views/sponsors';
+@import 'ItaliaTheme/Views/slider';
 @import 'ItaliaTheme/Widgets/iconWidget';
 @import 'ItaliaTheme/Components/megamenu';
 @import 'ItaliaTheme/Components/logo';
+@import 'ItaliaTheme/Components/mobileMenu';
+@import 'ItaliaTheme/Components/relatedItemInEvidence';
 
 @import 'ItaliaTheme/Subsites/mixin';
 $subsite-yellow-primary: #fcab02;

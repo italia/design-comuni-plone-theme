@@ -1,4 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { defineMessages, useIntl } from 'react-intl';
+import { useLocation } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import mapValues from 'lodash/mapValues';
+import toPairs from 'lodash/toPairs';
+import fromPairs from 'lodash/fromPairs';
+import cx from 'classnames';
+import moment from 'moment';
+import qs from 'query-string';
 import {
   Modal,
   ModalHeader,
@@ -8,7 +17,6 @@ import {
   Col,
   Button,
   ButtonToolbar,
-  Icon,
   Nav,
   NavItem,
   NavLink,
@@ -19,16 +27,8 @@ import {
   Label,
   Toggle,
 } from 'design-react-kit/dist/design-react-kit';
-import { defineMessages, useIntl } from 'react-intl';
-import { useLocation } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
-import mapValues from 'lodash/mapValues';
-import toPairs from 'lodash/toPairs';
-import fromPairs from 'lodash/fromPairs';
-import cx from 'classnames';
-import moment from 'moment';
-import qs from 'query-string';
 
+import { Icon } from '@italia/components/ItaliaTheme';
 import { getSearchFilters } from '@italia/actions';
 import { SearchUtils, Checkbox } from '@italia/components';
 

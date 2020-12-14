@@ -3,6 +3,7 @@ export RichTextArticle from '@italia/components/ItaliaTheme/View/Commons/RichTex
 export RichText from '@italia/components/ItaliaTheme/View/Commons/RichText';
 export RelatedNewsArticles from '@italia/components/ItaliaTheme/View/Commons/RelatedNewsArticles';
 export RelatedArticles from '@italia/components/ItaliaTheme/View/Commons/RelatedArticles';
+export Icon from '@italia/components/ItaliaTheme/Icons/Icon';
 export ArgumentIcon from '@italia/components/ItaliaTheme/View/Commons/Argument/ArgumentIcon';
 export ContactLink from '@italia/components/ItaliaTheme/View/Commons/ContactLink';
 
@@ -40,6 +41,7 @@ export LocationsMap from '@italia/components/ItaliaTheme/View/Commons/LocationsM
 export SmallVenue from '@italia/components/ItaliaTheme/View/Commons/SmallVenue';
 export Sponsors from '@italia/components/ItaliaTheme/View/Commons/Sponsors';
 export RelatedItems from '@italia/components/ItaliaTheme/View/Commons/RelatedItems';
+export RelatedItemInEvidence from '@italia/components/ItaliaTheme/View/Commons/RelatedItemInEvidence/RelatedItemInEvidence';
 export DownloadFileFormat from '@italia/components/ItaliaTheme/View/Commons/DownloadFileFormat';
 export BandoDates from '@italia/components/ItaliaTheme/View/Commons/BandoDates';
 
@@ -47,6 +49,7 @@ export BandoDates from '@italia/components/ItaliaTheme/View/Commons/BandoDates';
 export PaginaArgomentoViewNoBlocks from '@italia/components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks';
 export EventoPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/EventoView/Placeholder/AfterContent';
 export NewsItemPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/NewsItemView/Placeholder/AfterContent';
+export PagePlaceholderTitle from '@italia/components/ItaliaTheme/View/PageView/Placeholder/Title';
 export PagePlaceholderAfterContent from '@italia/components/ItaliaTheme/View/PageView/Placeholder/AfterContent';
 export PaginaArgomentoPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/PaginaArgomentoView/Placeholder/AfterContent';
 export PersonaPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/PersonaView/Placeholder/AfterContent';
@@ -55,3 +58,4 @@ export UOPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/UOVie
 export VenuePlaceholderAfterContent from '@italia/components/ItaliaTheme/View/VenueView/Placeholder/AfterContent';
 export DocumentoPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/DocumentoView/Placeholder/AfterContent';
 export BandoPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/BandoView/Placeholder/AfterContent';
+export TrasparenzaPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/TrasparenzaView/Placeholder/AfterContent';

@@ -10,11 +10,15 @@ import {
   PageHeaderNav,
   RelatedItems,
   PagePlaceholderAfterContent,
+  PagePlaceholderTitle,
   TextOrBlocks,
   RichText,
+  RelatedItemInEvidence,
 } from '@italia/components/ItaliaTheme/View';
 import { defineMessages, useIntl } from 'react-intl';
 import { Container } from 'design-react-kit/dist/design-react-kit';
+import { getLayoutFieldname } from '@plone/volto/helpers';
+import { views } from '~/config';
 
 /**
  * PageView view component class.
@@ -34,45 +38,67 @@ const messages = defineMessages({
   },
 });
 
-const PageView = ({ content }) => {
+const PageView = ({ content, token, location, history }) => {
   const intl = useIntl();
+  const layout = content[getLayoutFieldname(content)];
 
-  return (
-    <>
-      <div id="page-document" className="ui container">
-        {/*-----Testata-----*/}
-        <Container className="PageHeaderWrapper px-3 px-md-4 mb-4">
-          <div className="row">
-            <div className="title-description-wrapper col-lg-6">
-              <h1 className="mb-3">{content?.title}</h1>
-              <p className="description">{content?.description}</p>
-              {content?.ricerca_in_testata && (
-                <SearchSectionForm content={content} />
-              )}
+  if (layout === 'document_view')
+    return (
+      <>
+        <div id="page-document" className="ui container">
+          {/*-----Testata-----*/}
+          <Container className="PageHeaderWrapper px-3 px-md-4 mb-4">
+            <div className="row">
+              <div className="title-description-wrapper col-lg-6">
+                <PagePlaceholderTitle content={content}>
+                  <h1 className="mb-3">{content?.title}</h1>
+                </PagePlaceholderTitle>
+
+                <p className="description">{content?.description}</p>
+                {content?.ricerca_in_testata && (
+                  <SearchSectionForm content={content} />
+                )}
+              </div>
+              <div className="col-lg-4 offset-lg-2">
+                {content.info_testata?.data?.replace(/<[^>]+>/g, '') && (
+                  <div className="header-infos px-4 mb-5">
+                    <RichText
+                      serif={false}
+                      content={content.info_testata.data}
+                    />
+                  </div>
+                )}
+                {content.mostra_navigazione && (
+                  <PageHeaderNav
+                    content={content}
+                    title={intl.formatMessage(messages.inThisSection)}
+                  />
+                )}
+              </div>
             </div>
-            <div className="col-lg-4 offset-lg-2">
-              {content.info_testata?.data?.replace(/<[^>]+>/g, '') && (
-                <div className="header-infos px-4 mb-5">
-                  <RichText serif={false} content={content.info_testata.data} />
-                </div>
-              )}
-              {content.mostra_navigazione && (
-                <PageHeaderNav
-                  content={content}
-                  title={intl.formatMessage(messages.inThisSection)}
-                />
-              )}
-            </div>
-          </div>
-        </Container>
+          </Container>
 
-        <TextOrBlocks content={content} />
-      </div>
+          <TextOrBlocks content={content} />
+        </div>
 
-      <PagePlaceholderAfterContent content={content} />
-      <RelatedItems content={content} />
-    </>
-  );
+        <PagePlaceholderAfterContent content={content} />
+        <RelatedItems content={content} />
+        <RelatedItemInEvidence content={content} />
+      </>
+    );
+  else {
+    const getViewByLayout = () => views.layoutViews[layout] || null;
+    const Layout = getViewByLayout();
+    if (Layout)
+      return (
+        <Layout
+          content={content}
+          location={location}
+          token={token}
+          history={history}
+        />
+      );
+  }
 };
 
 export default PageView;

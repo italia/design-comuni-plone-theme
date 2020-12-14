@@ -1,11 +1,11 @@
-import { defineMessages, useIntl } from 'react-intl';
-import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
+import { defineMessages, useIntl } from 'react-intl';
+import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { Icon } from 'design-react-kit/dist/design-react-kit';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import { Icon } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   VenuesSmall: {
@@ -34,7 +34,7 @@ const Location = ({ location, show_icon }) => {
   useEffect(() => {
     dispatch(getContent(url, null, key));
     return () => dispatch(resetContent(key));
-  }, [dispatch, location, url, key]);
+  }, []);
 
   let location_fo = locationContent[key]?.data;
   return location_fo ? (

@@ -22,6 +22,7 @@ import {
   ContentImage,
   UOPlaceholderAfterContent,
   RichText,
+  RelatedItemInEvidence,
 } from '@italia/components/ItaliaTheme/View';
 
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
@@ -433,6 +434,7 @@ const UOView = ({ content }) => {
       </div>
       <UOPlaceholderAfterContent content={content} />
       <RelatedItems content={content} list={content?.related_news ?? []} />
+      <RelatedItemInEvidence content={content} />
     </>
   );
 };

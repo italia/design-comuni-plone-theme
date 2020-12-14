@@ -1,0 +1,96 @@
+.block.form {
+  .card.card-bg:after {
+    content: none;
+  }
+
+  .form-field {
+    .single-block {
+      .dragsubblock {
+        top: 10px;
+        left: -20px;
+      }
+      &.subblock-draggable {
+        .ui.basic.button.delete-button {
+          right: -4px;
+          top: 4px;
+          left: unset;
+        }
+      }
+    }
+  }
+
+  .bootstrap-select-wrapper {
+    > label {
+      position: unset;
+      margin-bottom: 0;
+      line-height: 1rem;
+      transform: unset;
+    }
+
+    &.is-invalid {
+      .react-select__control {
+        border-bottom-color: $danger !important;
+      }
+    }
+  }
+
+  .bootstrap-checkbox-radio-wrapper {
+    > label {
+      position: unset;
+
+      display: block;
+      padding: 0 $input-spacing-x;
+      margin-bottom: 0.55rem;
+      color: $select-label-color;
+      font-size: $select-label-size;
+      font-weight: $select-label-weight;
+      line-height: calc(2.5rem - 1px);
+      transform: none;
+    }
+
+    small {
+      position: unset;
+      padding: 0 $input-spacing-x;
+      font-size: 0.77rem;
+    }
+
+    .form-check-group {
+      label {
+        width: 100%;
+      }
+    }
+
+    &.is-invalid {
+      .form-check-group {
+        input[type='checkbox'] + .form-check-label {
+          &::after {
+            border-color: $danger;
+          }
+        }
+
+        input[type='radio'] + .form-check-label {
+          &::before {
+            border-color: $danger;
+          }
+        }
+      }
+    }
+  }
+
+  .form-group input[type='date'] ~ label {
+    transform: translateY(-75%);
+    font-size: 0.777rem;
+  }
+
+  textarea {
+    border: 1px solid rgba(1, 1, 1, 0.1);
+
+    &.form-control.is-invalid {
+      background-size: 25px !important;
+    }
+  }
+}
+
+.grecaptcha-badge {
+  bottom: 115px !important;
+}

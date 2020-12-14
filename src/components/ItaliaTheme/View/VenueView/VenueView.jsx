@@ -7,6 +7,13 @@ import React, { createRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import {
+  Card,
+  CardBody,
+  CardTitle,
+  CardText,
+} from 'design-react-kit/dist/design-react-kit';
+import { Icon } from '@italia/components/ItaliaTheme';
+import {
   SideMenu,
   PageHeader,
   ContentImage,
@@ -19,17 +26,12 @@ import {
   GenericCard,
   Metadata,
   VenuePlaceholderAfterContent,
+  RelatedItemInEvidence,
 } from '@italia/components/ItaliaTheme/View';
 import { contentFolderHasItems } from '@italia/helpers';
-import { Icon } from 'design-react-kit/dist/design-react-kit';
 import { OSMMap } from '@italia/addons/volto-venue';
-import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
-} from 'design-react-kit/dist/design-react-kit';
-import ContactLink from '../Commons/ContactLink';
+import ContactLink from '@italia/components/ItaliaTheme/View/Commons/ContactLink';
+
 const messages = defineMessages({
   descrizione: {
     id: 'descrizione',
@@ -207,12 +209,12 @@ const VenueView = ({ content }) => {
                     />
                   </div>
                 )}
-
                 {/*GALLERIA DI IMMAGINI*/}
                 <Gallery
                   content={content}
                   folder_name={'multimedia'}
                   title_video={intl.formatMessage(messages.video)}
+                  title_type="h5"
                 />
               </RichTextArticle>
             )}
@@ -525,7 +527,7 @@ const VenueView = ({ content }) => {
             )}
 
             {/* ULTERIORI INFORMAZIONI */}
-            <Metadata content={content} noMargin>
+            <Metadata content={content}>
               {(content?.ulteriori_informazioni?.data?.replace(
                 /(<([^>]+)>)/g,
                 '',
@@ -557,6 +559,7 @@ const VenueView = ({ content }) => {
       </div>
       <VenuePlaceholderAfterContent content={content} />
       <RelatedItems list={content.related_news ?? []} />
+      <RelatedItemInEvidence content={content} />
     </>
   );
 };

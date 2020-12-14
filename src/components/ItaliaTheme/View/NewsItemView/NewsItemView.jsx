@@ -20,6 +20,7 @@ import {
   TextOrBlocks,
   RelatedItems,
   NewsItemPlaceholderAfterContent,
+  RelatedItemInEvidence,
 } from '@italia/components/ItaliaTheme/View';
 
 // import { getBaseUrl } from '@plone/volto/helpers';
@@ -105,7 +106,9 @@ const NewsItemView = ({ content, location }) => {
               {/* HEADER IMAGE */}
               <ContentImage content={content} position="documentBody" />
               {/* TEXT OR BLOCKS */}
-              <TextOrBlocks content={content} location={location} />
+              <div className="text-serif">
+                <TextOrBlocks content={content} location={location} />
+              </div>
             </article>
 
             <Gallery content={content} folder_name={'multimedia'} />
@@ -126,7 +129,7 @@ const NewsItemView = ({ content, location }) => {
                 tag_id="luoghi"
                 title={intl.formatMessage(messages.luoghi)}
               >
-                <VenuesSmall locations={content.luoghi_correlati} />
+                <VenuesSmall venues={content.luoghi_correlati} />
               </RichTextArticle>
             )}
 
@@ -143,6 +146,7 @@ const NewsItemView = ({ content, location }) => {
       </div>
       <NewsItemPlaceholderAfterContent content={content} />
       <RelatedItems list={related_items} />
+      <RelatedItemInEvidence content={content} />
     </>
   );
 };

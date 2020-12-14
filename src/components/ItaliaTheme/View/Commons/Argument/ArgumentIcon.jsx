@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Icon } from '@italia/components/ItaliaTheme';
 
 /**
  * Dates view component class.
@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const ArgumentIcon = ({ icon }) => {
   return icon ? (
     <div className="icon-argument-container d-flex align-items-center justify-content-center mb-2 lightgrey-bg-c2">
-      <FontAwesomeIcon icon={icon} className="fal" />
+      <Icon icon={icon} />
     </div>
   ) : null;
 };

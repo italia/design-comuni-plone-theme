@@ -1,12 +1,11 @@
-import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { Icon } from 'design-react-kit/dist/design-react-kit';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { Icon } from '@italia/components/ItaliaTheme';
 import { RichText } from '@italia/components/ItaliaTheme/View';
 
 /**

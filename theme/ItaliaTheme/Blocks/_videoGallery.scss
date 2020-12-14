@@ -1,0 +1,55 @@
+.block.video_gallery {
+  .full-width {
+    height: 350px;
+  }
+
+  .volto-subblocks-wrapper {
+    .full-width {
+      height: 400px;
+    }
+  }
+  .add-block-wrapper {
+    text-align: center;
+  }
+  .channel {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .video-wrapper {
+    margin-bottom: 1.5em;
+
+    .ui.embed {
+      max-width: unset;
+      height: unset;
+      padding: unset;
+      width: auto;
+      background: transparent;
+
+      > .embed {
+        iframe {
+          width: auto !important;
+          position: relative;
+        }
+      }
+    }
+  }
+
+  .subblock-edit {
+    padding-top: 1.3em;
+    .dragsubblock {
+      top: 0;
+      left: -3px;
+    }
+    .ui.basic.button.delete-button {
+      right: 5.2em;
+      top: -4px;
+      left: unset;
+    }
+  }
+}

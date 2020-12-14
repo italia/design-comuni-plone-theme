@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon } from 'design-react-kit/dist/design-react-kit';
+import { Icon } from '@italia/components/ItaliaTheme';
 
 /*
  * Customization with image

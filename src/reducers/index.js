@@ -9,6 +9,9 @@ import { searchFiltersReducer } from './searchFiltersReducer';
 import { searchResultsReducer } from './searchResultsReducer';
 import { calendarSearchReducer } from './calendarSearchReducer';
 import { calendarDaySearchReducer } from './calendarDaySearchReducer';
+import { amministrazioneTrasparenteTree } from './amministrazioneTrasparenteTree';
+import { dettagliProcedimento } from './dettagliProcedimento';
+import { sendActionForm } from './sendActionForm';
 
 /**
  * Root reducer.
@@ -24,6 +27,9 @@ const reducers = {
   searchResults: searchResultsReducer,
   calendarSearch: calendarSearchReducer,
   calendarDaySearch: calendarDaySearchReducer,
+  amministrazioneTrasparenteTree: amministrazioneTrasparenteTree,
+  dettagliProcedimento: dettagliProcedimento,
+  sendActionForm: sendActionForm,
 };
 
 export default reducers;

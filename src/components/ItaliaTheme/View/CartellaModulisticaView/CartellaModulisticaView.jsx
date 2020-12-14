@@ -12,6 +12,7 @@ import {
   RelatedItems,
   PagePlaceholderAfterContent,
   TextOrBlocks,
+  RelatedItemInEvidence,
 } from '@italia/components/ItaliaTheme/View';
 
 import DocRow from './DocRow';
@@ -92,6 +93,7 @@ const CartellaModulisticaView = ({ content }) => {
 
       <PagePlaceholderAfterContent content={content} />
       <RelatedItems content={content} />
+      <RelatedItemInEvidence content={content} />
     </>
   );
 };

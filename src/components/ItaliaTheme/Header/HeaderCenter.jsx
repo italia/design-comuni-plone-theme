@@ -11,8 +11,8 @@ import {
   Header,
   HeaderContent,
   HeaderRightZone,
-  Icon,
 } from 'design-react-kit/dist/design-react-kit';
+import { Icon } from '@italia/components/ItaliaTheme';
 
 import { flattenToAppURL } from '@plone/volto/helpers';
 import {
@@ -34,7 +34,7 @@ const HeaderCenter = () => {
   const intl = useIntl();
   const [showSearchModal, setShowSearchModal] = useState(false);
 
-  const subsite = useSelector(state => state.subsite?.data);
+  const subsite = useSelector((state) => state.subsite?.data);
 
   return (
     <Header small={false} theme="" type="center">

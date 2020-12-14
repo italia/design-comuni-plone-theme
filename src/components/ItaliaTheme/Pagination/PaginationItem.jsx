@@ -4,11 +4,8 @@ import keyboardKey from 'keyboard-key';
 import PropTypes from 'prop-types';
 import { Component } from 'react';
 import { injectIntl, defineMessages } from 'react-intl';
-import {
-  PagerItem,
-  PagerLink,
-  Icon,
-} from 'design-react-kit/dist/design-react-kit';
+import { PagerItem, PagerLink } from 'design-react-kit/dist/design-react-kit';
+import { Icon } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   prevPage: {
@@ -51,11 +48,11 @@ class PaginationItem extends Component {
     ]),
   };
 
-  handleClick = e => {
+  handleClick = (e) => {
     _.invoke(this.props, 'onClick', e, this.props);
   };
 
-  handleKeyDown = e => {
+  handleKeyDown = (e) => {
     _.invoke(this.props, 'onKeyDown', e, this.props);
     if (keyboardKey.getCode(e) === keyboardKey.Enter)
       _.invoke(this.props, 'onClick', e, this.props);

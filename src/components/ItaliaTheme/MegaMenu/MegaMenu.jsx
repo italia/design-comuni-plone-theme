@@ -8,15 +8,6 @@ import PropTypes from 'prop-types';
 import { map } from 'lodash';
 import cx from 'classnames';
 import { Link } from 'react-router-dom';
-import { defineMessages, useIntl } from 'react-intl';
-import { blocks } from '~/config';
-import {
-  flattenToAppURL,
-  hasBlocksData,
-  getBlocksFieldname,
-  getBlocksLayoutFieldname,
-  getBaseUrl,
-} from '@plone/volto/helpers';
 import {
   NavItem,
   NavLink,
@@ -28,8 +19,17 @@ import {
   Col,
   LinkList,
   LinkListItem,
-  Icon,
 } from 'design-react-kit/dist/design-react-kit';
+import { defineMessages, useIntl } from 'react-intl';
+import {
+  flattenToAppURL,
+  hasBlocksData,
+  getBlocksFieldname,
+  getBlocksLayoutFieldname,
+  getBaseUrl,
+} from '@plone/volto/helpers';
+import { Icon } from '@italia/components/ItaliaTheme';
+import { blocks } from '~/config';
 
 const messages = defineMessages({
   menu_selected: {
