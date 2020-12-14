@@ -124,6 +124,18 @@ body.cms-ui {
     }
   }
 
+  .path-filter-widget {
+    padding: 1em 0 1em 0.5em;
+    margin-left: 2em;
+    border-left: 1px solid #edf1f2;
+
+    .filter-title {
+      background-color: #edf1f2;
+      padding: 0.5em;
+      margin-left: -0.5em;
+    }
+  }
+
   // .DraftEditor-root {
   //   font-family: $font-family-serif;
   //   h1,
