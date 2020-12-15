@@ -1,10 +1,11 @@
 import React from 'react';
 import createBlockStyleButton from 'draft-js-buttons/lib/utils/createBlockStyleButton';
-
+import Icon from '@plone/volto/components/theme/Icon/Icon';
+import textSVG from '@plone/volto/icons/text.svg';
 import DraftJsDropdownButton from './DraftJsDropdownButton';
 
 const HeadingsButton = (props) => {
-  const headings = [
+  const options = [
     {
       block_type: 'header-two',
       value: createBlockStyleButton({
@@ -42,7 +43,13 @@ const HeadingsButton = (props) => {
     },
   ];
 
-  return <DraftJsDropdownButton {...props} optionsList={headings} />;
+  return (
+    <DraftJsDropdownButton
+      {...props}
+      optionsList={options}
+      content={<Icon name={textSVG} size="24px" />}
+    />
+  );
 };
 
 export default HeadingsButton;

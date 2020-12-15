@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import unionClassNames from 'union-class-names';
 
-import Icon from '@plone/volto/components/theme/Icon/Icon';
-import textSVG from '@plone/volto/icons/text.svg';
-
 /*
 Questo è un componente di utility che serve per fare i menu a tendina nella toolbar di draftjs.
 Basta passargli le prop del componente stesso e nella prop optionsList l'elenco delle opzioni
@@ -14,7 +11,7 @@ const DraftJsDropdownButton = (props) => {
   const { theme, optionsList } = props;
   const [open, setOpen] = useState(false);
 
-  const hasBlockStyle = () => {
+  const getCurrentBlockType = () => {
     if (!props.getEditorState) {
       return false;
     }
@@ -24,8 +21,21 @@ const DraftJsDropdownButton = (props) => {
       .getCurrentContent()
       .getBlockForKey(editorState.getSelection().getStartKey())
       .getType();
+    return type;
+  };
 
+  const hasBlockStyle = () => {
+    const type = getCurrentBlockType();
     return props.optionsList.map((o) => o.block_type).indexOf(type) >= 0;
+  };
+
+  const getDropdownToggleContent = () => {
+    const type = getCurrentBlockType();
+    let contentWhenSelected = props.optionsList.filter(
+      (o) => o.block_type === type,
+    )?.[0]?.contentWhenSelected;
+
+    return contentWhenSelected || props.content;
   };
 
   const className = hasBlockStyle()
@@ -53,7 +63,7 @@ const DraftJsDropdownButton = (props) => {
         onClick={openDropdown}
         type="button"
       >
-        <Icon name={textSVG} size="24px" />
+        {getDropdownToggleContent()}
         <span className={`caret ${open ? 'up' : 'down'}`}></span>
       </button>
 

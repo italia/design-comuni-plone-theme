@@ -115,7 +115,8 @@ import {
   ItaliaRichTextEditorInlineToolbarButtons,
   extendedBlockRenderMap,
   blockStyleFn,
-} from '@italia/config/RichTextEditor/ToolbarButtons/config';
+  ItaliaHtmlRenderers,
+} from '@italia/config/RichTextEditor/config';
 
 const iconList = Object.keys(Icons.fas).map((icon) => Icons[icon]);
 const iconListRegular = Object.keys(IconsRegular.far).map(
@@ -408,10 +409,7 @@ export const settings = {
     ...ToHTMLRenderers,
     blocks: {
       ...ToHTMLRenderers.blocks,
-      blockquote: (children, { keys }) =>
-        children.map((child, i) => (
-          <blockquote key={keys[i]}>{child}</blockquote>
-        )),
+      ...ItaliaHtmlRenderers,
     },
   },
   contentIcons: {
