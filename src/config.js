@@ -115,7 +115,7 @@ import {
   ItaliaRichTextEditorInlineToolbarButtons,
   extendedBlockRenderMap,
   blockStyleFn,
-  ItaliaHtmlRenderers,
+  ItaliaBlocksHtmlRenderers,
 } from '@italia/config/RichTextEditor/config';
 
 const iconList = Object.keys(Icons.fas).map((icon) => Icons[icon]);
@@ -140,7 +140,7 @@ const rssBlock = {
   },
 };
 
-const listBlockTypes = config.settings.listBlockTypes.concat(['align-center']);
+const listBlockTypes = config.settings.listBlockTypes; //config.settings.listBlockTypes.concat(['align-center']);
 
 const customBlocks = {
   newsHome: {
@@ -409,8 +409,9 @@ export const settings = {
     ...ToHTMLRenderers,
     blocks: {
       ...ToHTMLRenderers.blocks,
-      ...ItaliaHtmlRenderers,
+      ...ItaliaBlocksHtmlRenderers,
     },
+    inline: { ...ToHTMLRenderers.inline },
   },
   contentIcons: {
     ...config.settings.contentIcons,
@@ -433,6 +434,8 @@ export const settings = {
     Modulo: faFileDownloadSVG,
   },
 };
+
+console.log(settings);
 
 export const views = {
   ...config.views,

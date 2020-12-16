@@ -72,4 +72,26 @@ button.custom-navbar-toggler svg.icon {
     margin: 1.25rem 0;
     background-color: $primary-c1;
   }
+
+  .draftjs-buttons {
+    margin: 0;
+
+    a {
+      display: inline-block;
+      background-color: $primary;
+      color: $primary-text;
+      text-align: center;
+      padding: 1em 2em;
+      margin: 0.5em 1em 0.5em 0;
+      border-radius: $btn-border-radius;
+      font-weight: 600;
+
+      &:hover,
+      &:active {
+        background-color: darken($primary, 8);
+        color: $primary-text;
+        font-weight: 600;
+      }
+    }
+  }
 }

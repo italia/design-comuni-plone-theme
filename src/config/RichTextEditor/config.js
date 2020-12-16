@@ -17,6 +17,7 @@ import UnderlineButton from '@italia/config/RichTextEditor/ToolbarButtons/Underl
 import HeadingsButton from '@italia/config/RichTextEditor/ToolbarButtons/HeadingsButton';
 import AlignButton from '@italia/config/RichTextEditor/ToolbarButtons/AlignButton';
 import CalloutsButton from '@italia/config/RichTextEditor/ToolbarButtons/CalloutsButton';
+import ButtonsButton from '@italia/config/RichTextEditor/ToolbarButtons/ButtonsButton';
 
 const linkPlugin = createLinkPlugin();
 
@@ -29,6 +30,7 @@ export const ItaliaRichTextEditorInlineToolbarButtons = [
   Separator,
   HeadingsButton,
   linkPlugin.LinkButton,
+  ButtonsButton,
   Separator,
   UnorderedListButton,
   OrderedListButton,
@@ -49,10 +51,13 @@ const blockRenderMap = Map({
   'callout-bg': {
     element: 'p',
   },
+  buttons: {
+    element: 'p',
+  },
 });
 
 export const extendedBlockRenderMap = config.settings.extendedBlockRenderMap
-  .update('text-center', (element = 'p') => element)
+  //  .update('text-center', (element = 'p') => element)
   .merge(blockRenderMap);
 
 export const blockStyleFn = (contentBlock) => {
@@ -80,10 +85,13 @@ export const blockStyleFn = (contentBlock) => {
   if (type === 'callout-bg') {
     r += 'callout-bg';
   }
+  if (type === 'buttons') {
+    r += 'draftjs-buttons';
+  }
   return r;
 };
 
-export const ItaliaHtmlRenderers = {
+export const ItaliaBlocksHtmlRenderers = {
   blockquote: (children, { keys }) =>
     children.map((child, i) => <blockquote key={keys[i]}>{child}</blockquote>),
   'align-center': (children, { keys }) =>
@@ -107,6 +115,12 @@ export const ItaliaHtmlRenderers = {
   'callout-bg': (children, { keys }) =>
     children.map((child, i) => (
       <p id={keys[i]} key={keys[i]} className="callout-bg">
+        {child}
+      </p>
+    )),
+  buttons: (children, { keys }) =>
+    children.map((child, i) => (
+      <p id={keys[i]} key={keys[i]} className="draftjs-buttons">
         {child}
       </p>
     )),
