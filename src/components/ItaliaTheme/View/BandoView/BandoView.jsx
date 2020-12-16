@@ -1,6 +1,6 @@
 /**
- * EventoView view component.
- * @module components/theme/View/EventoView
+ * BandoVies view component.
+ * @module components/theme/View/BandoView
  */
 
 import React, { useState, createRef, useEffect } from 'react';

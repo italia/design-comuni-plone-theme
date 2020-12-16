@@ -59,21 +59,21 @@ import formSVG from '@plone/volto/icons/form.svg';
 import FormView from '@italia/components/ItaliaTheme/Blocks/Form/View';
 import FormEdit from '@italia/components/ItaliaTheme/Blocks/Form/Edit';
 
-import { CharCounterDescriptionWidget } from '@italia/components/ItaliaTheme';
-import { PageView } from '@italia/components/ItaliaTheme';
-import { NewsItemView } from '@italia/components/ItaliaTheme';
-import { UOView } from '@italia/components/ItaliaTheme';
-import { PersonaView } from '@italia/components/ItaliaTheme';
-import { VenueView } from '@italia/components/ItaliaTheme';
-import { ServizioView } from '@italia/components/ItaliaTheme';
-import { EventoView } from '@italia/components/ItaliaTheme';
-import { PaginaArgomentoView } from '@italia/components/ItaliaTheme';
-import { CartellaModulisticaView } from '@italia/components/ItaliaTheme';
-import { DocumentoView } from '@italia/components/ItaliaTheme';
-import { ModuloView } from '@italia/components/ItaliaTheme';
-import { BandoView } from '@italia/components/ItaliaTheme';
-import { TrasparenzaView } from '@italia/components/ItaliaTheme';
-import { DettagliProcedimentiView } from '@italia/components/ItaliaTheme';
+import CharCounterDescriptionWidget from '@italia/components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget';
+import PageView from '@italia/components/ItaliaTheme/View/PageView/PageView';
+import NewsItemView from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemView';
+import UOView from '@italia/components/ItaliaTheme/View/UOView/UOView';
+import PersonaView from '@italia/components/ItaliaTheme/View/PersonaView/PersonaView';
+import VenueView from '@italia/components/ItaliaTheme/View/VenueView/VenueView';
+import ServizioView from '@italia/components/ItaliaTheme/View/ServizioView/ServizioView';
+import EventoView from '@italia/components/ItaliaTheme/View/EventoView/EventoView';
+import PaginaArgomentoView from '@italia/components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoView';
+import CartellaModulisticaView from '@italia/components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView';
+import DocumentoView from '@italia/components/ItaliaTheme/View/DocumentoView/DocumentoView';
+import ModuloView from '@italia/components/ItaliaTheme/View/ModuloView/ModuloView';
+import BandoView from '@italia/components/ItaliaTheme/View/BandoView/BandoView';
+import TrasparenzaView from '@italia/components/ItaliaTheme/View/TrasparenzaView/TrasparenzaView';
+import DettagliProcedimentiView from '@italia/components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView';
 
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
@@ -93,7 +93,7 @@ import CardWithoutImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/R
 import { DatetimeWidget } from '@plone/volto/config/Widgets';
 
 import { MultilingualWidget } from '@italia/addons/volto-multilingual-widget';
-import { IconWidget } from '@italia/components/ItaliaTheme';
+import IconWidget from '@italia/components/ItaliaTheme/manage/Widgets/IconWidget';
 import { defaultIconWidgetOptions } from '@italia/helpers/index';
 import TinymceWidget from '@italia/components/ItaliaTheme/manage/Widgets/TinymceWidget';
 

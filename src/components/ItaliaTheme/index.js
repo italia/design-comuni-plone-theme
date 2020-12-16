@@ -9,6 +9,19 @@
  * };
  */
 
+/********* WIDGETS ********* */
+export TextEditorWidget from '@italia/components/ItaliaTheme/manage/Widgets/TextEditorWidget';
+export LinkToWidget from '@italia/components/ItaliaTheme/manage/Widgets/LinkToWidget';
+export ColorListWidget from '@italia/components/ItaliaTheme/manage/Widgets/ColorListWidget';
+
+/********* ICONS ********* */
+export getItemIcon from '@italia/components/ItaliaTheme/Icons/common/common';
+export Icon from '@italia/components/ItaliaTheme/Icons/Icon';
+export SectionIcon from '@italia/components/ItaliaTheme/Icons/SectionIcon';
+
+/********* COMMONS ********* */
+export CardCategory from '@italia/components/ItaliaTheme/Cards/CardCategory';
+
 /********* LAYOUT ********* */
 export LanguageSelector from '@italia/components/ItaliaTheme/LanguageSelector/LanguageSelector';
 export HeaderSlim from '@italia/components/ItaliaTheme/Header/HeaderSlim';
@@ -46,34 +59,3 @@ export SearchSectionsBackground from '@italia/components/ItaliaTheme/Blocks/Sear
 export CardCalendar from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/CardCalendar';
 export ListingCategory from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/ListingCategory';
 export ListingText from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/ListingText';
-
-/********* VIEWS ********* */
-export PageView from '@italia/components/ItaliaTheme/View/PageView/PageView';
-export VenueView from '@italia/components/ItaliaTheme/View/VenueView/VenueView';
-export NewsItemView from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemView';
-export UOView from '@italia/components/ItaliaTheme/View/UOView/UOView';
-export PersonaView from '@italia/components/ItaliaTheme/View/PersonaView/PersonaView';
-export ServizioView from '@italia/components/ItaliaTheme/View/ServizioView/ServizioView';
-export EventoView from '@italia/components/ItaliaTheme/View/EventoView/EventoView';
-export PaginaArgomentoView from '@italia/components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoView';
-export CartellaModulisticaView from '@italia/components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView';
-export DocumentoView from '@italia/components/ItaliaTheme/View/DocumentoView/DocumentoView';
-export ModuloView from '@italia/components/ItaliaTheme/View/ModuloView/ModuloView';
-export BandoView from '@italia/components/ItaliaTheme/View/BandoView/BandoView';
-export TrasparenzaView from '@italia/components/ItaliaTheme/View/TrasparenzaView/TrasparenzaView';
-export DettagliProcedimentiView from '@italia/components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView';
-
-/********* WIDGETS ********* */
-export CharCounterDescriptionWidget from '@italia/components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget';
-export TextEditorWidget from '@italia/components/ItaliaTheme/manage/Widgets/TextEditorWidget';
-export LinkToWidget from '@italia/components/ItaliaTheme/manage/Widgets/LinkToWidget';
-export IconWidget from '@italia/components/ItaliaTheme/manage/Widgets/IconWidget';
-export ColorListWidget from '@italia/components/ItaliaTheme/manage/Widgets/ColorListWidget';
-
-/********* ICONS ********* */
-export getItemIcon from '@italia/components/ItaliaTheme/Icons/common/common';
-export Icon from '@italia/components/ItaliaTheme/Icons/Icon';
-export SectionIcon from '@italia/components/ItaliaTheme/Icons/SectionIcon';
-
-/********* COMMONS ********* */
-export CardCategory from '@italia/components/ItaliaTheme/Cards/CardCategory';
