@@ -63,11 +63,6 @@ body.cms-ui {
     .text-justify {
       text-align: justify;
     }
-
-    //callout
-    .callout {
-      @extend .callout;
-    }
   }
 
   &.contenttype-document {
