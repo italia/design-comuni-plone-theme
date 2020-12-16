@@ -41,7 +41,7 @@ const Navigation = ({ pathname }) => {
 
   const menu =
     items
-      .filter((menu) =>
+      ?.filter((menu) =>
         (pathname?.length ? pathname : '/').match(new RegExp(menu.rootPath)),
       )
       .pop()?.items ?? [];

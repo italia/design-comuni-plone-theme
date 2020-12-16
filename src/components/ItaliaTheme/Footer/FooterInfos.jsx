@@ -40,7 +40,7 @@ const FooterInfos = () => {
   //filter rootpaths
   const footerColumns =
     footerConfiguration
-      .filter((f) =>
+      ?.filter((f) =>
         (location?.pathname?.length ? location.pathname : '/').match(
           new RegExp(flattenToAppURL(f.rootPath)),
         ),

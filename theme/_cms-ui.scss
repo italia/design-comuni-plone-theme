@@ -235,3 +235,13 @@ body.cms-ui {
     }
   }
 }
+
+body.public-ui.has-toolbar {
+  #toolbar {
+    .toolbar {
+      &:before {
+        content: none;
+      }
+    }
+  }
+}

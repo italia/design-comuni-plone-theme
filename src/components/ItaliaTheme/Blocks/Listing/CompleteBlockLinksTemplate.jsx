@@ -52,7 +52,6 @@ const CompleteBlockLinksTemplate = ({
                   color=""
                   className="card-bg rounded"
                   noWrapper={false}
-                  space
                   tag="div"
                 >
                   <a
