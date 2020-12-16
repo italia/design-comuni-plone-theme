@@ -203,14 +203,13 @@ body.cms-ui {
     ul.draftJsToolbarDropdown-optionswrapper {
       position: absolute;
       padding: 0;
-      margin: 0;
-      left: -0.5rem;
+      padding: 0;
       top: 35px;
-
-      list-style-type: none;
-
+      left: 50%;
+      transform: translateX(-50%);s
       background-color: #fff;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
+      list-style-type: none;
 
       &.hide {
         display: none;
