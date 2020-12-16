@@ -7,7 +7,6 @@ import * as config from '@plone/volto/config';
 import {
   BlockquoteButton,
   BoldButton,
-  CalloutButton,
   ItalicButton,
   OrderedListButton,
   UnorderedListButton,
@@ -33,7 +32,7 @@ export const ItaliaRichTextEditorInlineToolbarButtons = [
   UnorderedListButton,
   OrderedListButton,
   BlockquoteButton,
-  CalloutButton,
+  CalloutsButton,
 ];
 
 const blockRenderMap = Map({

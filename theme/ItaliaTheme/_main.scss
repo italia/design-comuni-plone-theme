@@ -22,18 +22,41 @@ button.custom-navbar-toggler svg.icon {
   background-color: default;
 }
 
-.public-ui a.btn.btn-primary {
-  color: $primary-text;
+.public-ui {
+  a.btn.btn-primary {
+    color: $primary-text;
 
-  svg {
-    fill: $primary-text;
+    svg {
+      fill: $primary-text;
+    }
+  }
+
+  a.btn.btn-secondary {
+    color: $secondary-text;
+
+    svg {
+      fill: $secondary-text;
+    }
   }
 }
 
-.public-ui a.btn.btn-secondary {
-  color: $secondary-text;
+.public-ui,
+.cms-ui {
+  blockquote {
+    position: relative;
+    margin: 1.5rem 2rem;
+    font-family: $font-family-serif;
 
-  svg {
-    fill: $secondary-text;
+    &:before {
+      position: absolute;
+      display: block;
+      height: 0;
+      color: $neutral-2-b2;
+      font-size: 400%;
+
+      top: -1.8rem;
+      left: -2rem;
+      content: '“';
+    }
   }
 }
