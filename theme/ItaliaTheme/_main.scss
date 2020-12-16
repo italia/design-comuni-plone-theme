@@ -49,14 +49,27 @@ button.custom-navbar-toggler svg.icon {
 
     &:before {
       position: absolute;
+      top: -1.8rem;
+      left: -2rem;
       display: block;
       height: 0;
       color: $neutral-2-b2;
-      font-size: 400%;
-
-      top: -1.8rem;
-      left: -2rem;
       content: '“';
+      font-size: 400%;
     }
+  }
+
+  .callout {
+    padding: 1.25rem;
+    border: 1px solid $neutral-1-a2;
+    border-left-width: 0.4rem;
+    margin: 1.25rem 0;
+    border-radius: 0.25rem;
+  }
+
+  .callout-bg {
+    padding: 1.25rem;
+    margin: 1.25rem 0;
+    background-color: $primary-c1;
   }
 }

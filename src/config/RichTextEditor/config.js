@@ -16,6 +16,7 @@ import createLinkPlugin from '@plone/volto/components/manage/AnchorPlugin';
 import UnderlineButton from '@italia/config/RichTextEditor/ToolbarButtons/UnderlineButton';
 import HeadingsButton from '@italia/config/RichTextEditor/ToolbarButtons/HeadingsButton';
 import AlignButton from '@italia/config/RichTextEditor/ToolbarButtons/AlignButton';
+import CalloutsButton from '@italia/config/RichTextEditor/ToolbarButtons/CalloutsButton';
 
 const linkPlugin = createLinkPlugin();
 
@@ -45,6 +46,9 @@ const blockRenderMap = Map({
   'align-justify': {
     element: 'p',
   },
+  'callout-bg': {
+    element: 'p',
+  },
 });
 
 export const extendedBlockRenderMap = config.settings.extendedBlockRenderMap
@@ -68,6 +72,14 @@ export const blockStyleFn = (contentBlock) => {
   if (type === 'align-justify') {
     r += 'text-justify';
   }
+
+  if (type === 'callout') {
+    r += 'callout';
+  }
+
+  if (type === 'callout-bg') {
+    r += 'callout-bg';
+  }
   return r;
 };
 
@@ -89,6 +101,12 @@ export const ItaliaHtmlRenderers = {
   'align-justify': (children, { keys }) =>
     children.map((child, i) => (
       <p id={keys[i]} key={keys[i]} className="text-justify">
+        {child}
+      </p>
+    )),
+  'callout-bg': (children, { keys }) =>
+    children.map((child, i) => (
+      <p id={keys[i]} key={keys[i]} className="callout-bg">
         {child}
       </p>
     )),
