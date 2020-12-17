@@ -52,4 +52,4 @@ const HeadingsButton = (props) => {
   );
 };
 
-export default HeadingsButton;
+export default React.memo(HeadingsButton);

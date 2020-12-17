@@ -203,13 +203,15 @@ body.cms-ui {
     ul.draftJsToolbarDropdown-optionswrapper {
       position: absolute;
       padding: 0;
-      padding: 0;
+      margin: 0;
       top: 35px;
       left: 50%;
       transform: translateX(-50%);
       background-color: #fff;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
       list-style-type: none;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
 
       &.hide {
         display: none;
@@ -217,6 +219,11 @@ body.cms-ui {
 
       .draftJsToolbarDropdown-option {
         padding: 0.5rem;
+        color: $neutral-2-b5;
+
+        svg {
+          fill: $neutral-2-b5 !important;
+        }
 
         > * {
           display: block;
@@ -228,6 +235,7 @@ body.cms-ui {
 
           > * {
             margin: 0;
+            color: $neutral-2-b5;
           }
         }
       }

@@ -34,4 +34,4 @@ const CalloutsButton = (props) => {
   );
 };
 
-export default CalloutsButton;
+export default React.memo(CalloutsButton);

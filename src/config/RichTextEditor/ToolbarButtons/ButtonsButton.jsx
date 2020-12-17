@@ -9,4 +9,4 @@ const ButtonsButton = createBlockStyleButton({
   children: <Icon name={circleMenuSVG} size="24px" />,
 });
 
-export default ButtonsButton;
+export default React.memo(ButtonsButton);

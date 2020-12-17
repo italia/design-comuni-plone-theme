@@ -53,4 +53,4 @@ const AlignButton = (props) => {
   );
 };
 
-export default AlignButton;
+export default React.memo(AlignButton);

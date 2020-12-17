@@ -435,8 +435,6 @@ export const settings = {
   },
 };
 
-console.log(settings);
-
 export const views = {
   ...config.views,
   contentTypesViews: {

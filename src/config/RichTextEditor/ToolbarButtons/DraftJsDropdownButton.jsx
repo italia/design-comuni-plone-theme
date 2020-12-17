@@ -103,4 +103,4 @@ DraftJsDropdownButton.propTypes = {
     PropTypes.shape({ block_type: PropTypes.string, value: PropTypes.any }),
   ).isRequired,
 };
-export default DraftJsDropdownButton;
+export default React.memo(DraftJsDropdownButton);

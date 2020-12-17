@@ -57,7 +57,7 @@ const blockRenderMap = Map({
 });
 
 export const extendedBlockRenderMap = config.settings.extendedBlockRenderMap
-  //  .update('text-center', (element = 'p') => element)
+  .update('text-center', (element = 'p') => element)
   .merge(blockRenderMap);
 
 export const blockStyleFn = (contentBlock) => {
@@ -66,28 +66,17 @@ export const blockStyleFn = (contentBlock) => {
   let r = config.settings.blockStyleFn(contentBlock) || '';
   r = r.length > 0 ? ' ' : r;
 
-  if (type === 'align-center') {
-    r += 'text-center';
-  }
+  const styles = {
+    'align-center': 'text-center',
+    'align-right': 'text-right',
+    'align-justify': 'text-justify',
+    callout: 'callout',
+    'callout-bg': 'callout-bg',
+    buttons: 'draftjs-buttons',
+  };
 
-  if (type === 'align-right') {
-    r += 'text-right';
-  }
+  r += styles[type] ?? '';
 
-  if (type === 'align-justify') {
-    r += 'text-justify';
-  }
-
-  if (type === 'callout') {
-    r += 'callout';
-  }
-
-  if (type === 'callout-bg') {
-    r += 'callout-bg';
-  }
-  if (type === 'buttons') {
-    r += 'draftjs-buttons';
-  }
   return r;
 };
 

@@ -9,4 +9,4 @@ const UnderlineButton = createInlineStyleButton({
   children: <Icon name={underlineSVG} size="24px" />,
 });
 
-export default UnderlineButton;
+export default React.memo(UnderlineButton);
