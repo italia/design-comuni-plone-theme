@@ -7,6 +7,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
 import Slider from 'react-slick';
+import moment from 'moment';
 import { Container, Row } from 'design-react-kit/dist/design-react-kit';
 import { getTwitterPosts } from '@italia/actions';
 import { Icon } from '@italia/components/ItaliaTheme';
@@ -70,6 +71,7 @@ const Body = ({ data, isEditMode }) => {
     ],
   };
 
+  console.log(twitter_posts);
   const content =
     twitter_posts?.length > 0 ? (
       <div className="py-4">
@@ -111,7 +113,11 @@ const Body = ({ data, isEditMode }) => {
                   __html: tweet.text,
                 }}
               />
-              <div className="date-time">data e ora</div>
+              <div className="date-time">
+                {moment(tweet.created_at)
+                  .locale(intl.locale)
+                  .format('HH:mm - DD MMM YYYY')}
+              </div>
               <div className="numbers">
                 <div className="number reply" title="Replies">
                   <Icon icon="reply" />
