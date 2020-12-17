@@ -4,14 +4,6 @@ import * as config from '@plone/volto/config';
 
 import ToHTMLRenderers from '@plone/volto/config/RichTextEditor/ToHTML';
 
-import createInlineStyleButton from 'draft-js-buttons/lib/utils/createInlineStyleButton';
-import createBlockStyleButton from 'draft-js-buttons/lib/utils/createBlockStyleButton';
-import { Separator } from 'draft-js-inline-toolbar-plugin';
-
-import Icon from '@plone/volto/components/theme/Icon/Icon';
-import underlineSVG from '@plone/volto/icons/underline.svg';
-import alignCenterSVG from '@plone/volto/icons/align-center.svg';
-
 import newsSVG from '@plone/volto/icons/news.svg';
 import searchIcon from 'bootstrap-italia/src/svg/it-search.svg';
 import NewsHomeView from '@italia/components/ItaliaTheme/Blocks/NewsHome/View';
@@ -119,6 +111,13 @@ import faSitemapSVG from './icons/sitemap.svg';
 import faBuildingSVG from './icons/building.svg';
 import faFileDownloadSVG from './icons/file-download.svg';
 
+import {
+  ItaliaRichTextEditorInlineToolbarButtons,
+  extendedBlockRenderMap,
+  blockStyleFn,
+  ItaliaBlocksHtmlRenderers,
+} from '@italia/config/RichTextEditor/config';
+
 const iconList = Object.keys(Icons.fas).map((icon) => Icons[icon]);
 const iconListRegular = Object.keys(IconsRegular.far).map(
   (icon) => IconsRegular[icon],
@@ -141,33 +140,7 @@ const rssBlock = {
   },
 };
 
-const extendedBlockRenderMap = config.settings.extendedBlockRenderMap.update(
-  'align-center',
-  (element = 'p') => element,
-);
-
-const blockStyleFn = (contentBlock) => {
-  let r = config.settings.blockStyleFn(contentBlock);
-
-  if (!r) {
-    const type = contentBlock.getType();
-    if (type === 'align-center') {
-      r += 'align-center';
-    }
-  }
-
-  return r;
-};
-const listBlockTypes = config.settings.listBlockTypes.concat(['align-center']);
-
-const UnderlineButton = createInlineStyleButton({
-  style: 'UNDERLINE',
-  children: <Icon name={underlineSVG} size="24px" />,
-});
-const AlignCenterButton = createBlockStyleButton({
-  blockType: 'align-center',
-  children: <Icon name={alignCenterSVG} size="24px" />,
-});
+const listBlockTypes = config.settings.listBlockTypes; //config.settings.listBlockTypes.concat(['align-center']);
 
 const customBlocks = {
   newsHome: {
@@ -423,12 +396,7 @@ const customBlocks = {
 export const settings = {
   ...config.settings,
   devProxyToApiPath: 'http://localhost:8080/Plone',
-  richTextEditorInlineToolbarButtons: [
-    AlignCenterButton,
-    Separator,
-    UnderlineButton,
-    ...config.settings.richTextEditorInlineToolbarButtons,
-  ],
+  richTextEditorInlineToolbarButtons: ItaliaRichTextEditorInlineToolbarButtons,
   extendedBlockRenderMap: extendedBlockRenderMap,
   blockStyleFn: blockStyleFn,
   listBlockTypes: listBlockTypes,
@@ -441,11 +409,9 @@ export const settings = {
     ...ToHTMLRenderers,
     blocks: {
       ...ToHTMLRenderers.blocks,
-      blockquote: (children, { keys }) =>
-        children.map((child, i) => (
-          <blockquote key={keys[i]}>{child}</blockquote>
-        )),
+      ...ItaliaBlocksHtmlRenderers,
     },
+    inline: { ...ToHTMLRenderers.inline },
   },
   contentIcons: {
     ...config.settings.contentIcons,

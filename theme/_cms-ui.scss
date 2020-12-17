@@ -29,16 +29,19 @@ body.cms-ui {
     h4 {
       @extend %heading;
       @include font-size($h4-font-size);
+      font-weight: 600;
     }
 
     h5 {
       @extend %heading;
       @include font-size($h5-font-size);
+      font-weight: 400;
     }
 
     h6 {
       @extend %heading;
       @include font-size($h6-font-size);
+      font-weight: 600;
     }
 
     // Placeholder block title
@@ -46,6 +49,27 @@ body.cms-ui {
       .public-DraftEditorPlaceholder-inner {
         font-family: $font-family-sans-serif;
       }
+    }
+
+    //align
+    .text-center {
+      text-align: center;
+    }
+
+    .text-right {
+      text-align: right;
+    }
+
+    .text-justify {
+      text-align: justify;
+    }
+  }
+
+  &.contenttype-document {
+    .block {
+      font-family: $font-family-sans-serif;
+      font-weight: 300;
+      line-height: 1.555;
     }
   }
 
@@ -147,6 +171,76 @@ body.cms-ui {
   //     font-family: $font-family-sans-serif;
   //   }
   // }
+
+  .draftJsToolbarDropdown {
+    position: relative;
+
+    .draftJsToolbarDropdown-toggle {
+      width: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .caret {
+        display: inline-block;
+        width: 0;
+        height: 0;
+
+        border: 5px solid transparent;
+
+        &.down {
+          border-top-color: #888;
+          margin-top: 5px;
+        }
+
+        &.up {
+          border-bottom-color: #888;
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    ul.draftJsToolbarDropdown-optionswrapper {
+      position: absolute;
+      padding: 0;
+      margin: 0;
+      top: 35px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #fff;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
+      list-style-type: none;
+      border-bottom-left-radius: 3px;
+      border-bottom-right-radius: 3px;
+
+      &.hide {
+        display: none;
+      }
+
+      .draftJsToolbarDropdown-option {
+        padding: 0.5rem;
+        color: $neutral-2-b5;
+
+        svg {
+          fill: $neutral-2-b5 !important;
+        }
+
+        > * {
+          display: block;
+        }
+
+        button {
+          width: 100%;
+          height: auto;
+
+          > * {
+            margin: 0;
+            color: $neutral-2-b5;
+          }
+        }
+      }
+    }
+  }
 }
 
 body.public-ui.has-toolbar {
