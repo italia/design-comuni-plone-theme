@@ -73,16 +73,10 @@ class Edit extends Component {
           >
             <Container className="ui">
               <Row className="align-items-start">
-                {this.props.data.url && (
-                  <Col xs={1}>
+                {this.props.data.image?.data && (
+                  <Col sm={2} className="pb-3 image-col">
                     <img
-                      src={
-                        this.props.data.url.includes(settings.apiPath)
-                          ? `${flattenToAppURL(
-                              this.props.data.url,
-                            )}/@@images/image`
-                          : this.props.data.url
-                      }
+                      src={`data:${this.props.data.image['content-type']};${this.props.data.image.encoding},${this.props.data.image.data}`}
                       alt=""
                       className="left-image"
                     />

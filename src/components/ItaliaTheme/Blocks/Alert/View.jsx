@@ -31,18 +31,14 @@ const View = ({ data, pathname }) => {
     : '';
 
   return (
-    <section className="alertblock" key={generateKey('alert')}>
+    <section className="block alertblock" key={generateKey('alert')}>
       <Row className={cx('row-full-width', 'bg-' + data.color)}>
         <Container className="p-4 pt-5 pb-5">
           <Row className="align-items-start">
-            {data.url && (
-              <Col xs={1}>
+            {data.image?.data && (
+              <Col sm={2} className="pb-3 image-col">
                 <img
-                  src={
-                    data.url.includes(settings.apiPath)
-                      ? `${flattenToAppURL(data.url)}/@@images/image`
-                      : data.url
-                  }
+                  src={`data:${data.image['content-type']};${data.image.encoding},${data.image.data}`}
                   alt=""
                   className="left-image"
                 />

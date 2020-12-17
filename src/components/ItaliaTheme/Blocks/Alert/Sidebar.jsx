@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Form } from 'semantic-ui-react';
 import { Button, Grid, Segment } from 'semantic-ui-react';
 import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
-import { EditImageBlock } from '@plone/volto/components';
+import { FileWidget } from '@plone/volto/components';
 
 const messages = defineMessages({
   Color: {
@@ -31,6 +31,7 @@ class Sidebar extends Component {
     onChangeBlock: PropTypes.func.isRequired,
     openObjectBrowser: PropTypes.func.isRequired,
   };
+
   render() {
     return (
       <Segment.Group raised>
@@ -98,7 +99,17 @@ class Sidebar extends Component {
               </Grid.Row>
               <Grid.Row>
                 <Grid.Column>
-                  <EditImageBlock {...this.props} selected={true} />
+                  <FileWidget
+                    id="image"
+                    title={this.props.intl.formatMessage(messages.Image)}
+                    value={this.props.data.image}
+                    onChange={(name, value) => {
+                      this.props.onChangeBlock(this.props.block, {
+                        ...this.props.data,
+                        image: value,
+                      });
+                    }}
+                  />
                 </Grid.Column>
               </Grid.Row>
             </Grid>
