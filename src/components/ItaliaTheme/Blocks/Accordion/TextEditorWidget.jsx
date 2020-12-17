@@ -1,6 +1,6 @@
 /**
- * Edit text block.
- * @module components/Widgets/TextEditorWidget/TextEditorWidget
+ * Text editor widget
+ * @module components/ItaliaTheme/Blocks/Accordion/TextEditorWidget
  */
 
 import React, { Component } from 'react';
@@ -22,7 +22,7 @@ const messages = defineMessages({
 });
 
 /**
- * Edit text block class.
+ * TextEditorWidget class.
  * @class Edit
  * @extends Component
  */

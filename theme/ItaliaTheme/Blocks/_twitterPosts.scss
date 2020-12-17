@@ -1,0 +1,112 @@
+.block.twitter_posts {
+  &,
+  .public-ui {
+    .row-full-width {
+      background-color: #1ea1f2;
+      color: $white;
+    }
+
+    h2,
+    a {
+      color: $white;
+    }
+
+    svg {
+      fill: darken($primary, 20);
+    }
+
+    .authors {
+      margin-bottom: 1.5em;
+      font-size: 0.8em;
+
+      a {
+        margin-right: 1em;
+        text-decoration: none;
+
+        &:hover {
+          color: darken($primary, 20);
+        }
+      }
+    }
+
+    .slick-slider {
+      .slick-list {
+        margin-bottom: 1em;
+        padding-bottom: 2em;
+      }
+      .slick-track {
+        display: flex;
+      }
+      ul.slick-dots {
+        margin-bottom: 0;
+      }
+    }
+
+    .tweet {
+      display: flex;
+      height: auto;
+      flex-direction: column;
+
+      overflow: hidden;
+      padding: 1.5em;
+      margin: 0 0.5em;
+      background-color: $white;
+      color: $text-color;
+
+      a {
+        color: $link-color;
+      }
+
+      .author {
+        display: flex;
+        line-height: 1.3em;
+
+        figure {
+          margin-right: 0.65em;
+        }
+
+        .user-infos {
+          .user-name {
+            font-weight: bold;
+          }
+
+          .user-username {
+            color: $neutral-1-a7;
+            font-weight: 500;
+            font-size: 0.8em;
+          }
+        }
+      }
+
+      .tweet-text {
+        height: 10.5em;
+        margin-bottom: 1em;
+
+        overflow-x: hidden;
+        overflow-y: scroll;
+
+        text-overflow: ellipsis;
+      }
+
+      .date-time {
+        color: $neutral-1-a7;
+        font-family: $font-family-monospace;
+        text-transform: uppercase;
+        font-size: 0.8em;
+        margin-bottom: 1.5em;
+      }
+
+      .numbers {
+        display: flex;
+        color: $neutral-1-a7;
+        justify-content: space-between;
+        .number {
+          svg {
+            width: 0.8em;
+            margin-right: 0.4em;
+          }
+        }
+      }
+    }
+  }
+}

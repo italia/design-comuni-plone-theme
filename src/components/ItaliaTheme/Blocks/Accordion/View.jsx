@@ -1,6 +1,6 @@
 /**
- * View icons block.
- * @module components/manage/Blocks/IconsBlocks/View
+ * View Accordion block.
+ * @module components/ItaliaTheme/Blocks/Accordion/View
  */
 
 import React, { useState } from 'react';
@@ -13,7 +13,7 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 
 /**
- * View icons blocks class.
+ * View Accordion block class.
  * @class View
  * @extends Component
  */

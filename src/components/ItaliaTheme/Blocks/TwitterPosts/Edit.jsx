@@ -1,16 +1,17 @@
 /**
- * Edit Break block.
- * @module components/ItaliaTheme/Blocks/Break/Edit
+ * Edit TwitterPosts block.
+ * @module components/ItaliaTheme/Blocks/TwitterPosts/Edit
  */
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { FormattedMessage } from 'react-intl';
 
-import cx from 'classnames';
+import Body from '@italia/components/ItaliaTheme/Blocks/TwitterPosts/Body';
 
+import { SidebarPortal } from '@plone/volto/components';
+import Sidebar from './Sidebar.jsx';
 /**
- * Edit Break block class.
+ * Edit TwitterPosts block class.
  * @class Edit
  * @extends Component
  */
@@ -48,13 +49,17 @@ class Edit extends Component {
    */
   render() {
     return (
-      <div className={cx('block break-block')}>
-        -{' '}
-        <FormattedMessage
-          id="Interruzione di pagina"
-          defaultMessage="Interruzione di pagina"
-        />{' '}
-        -
+      <div className="public-ui">
+        <Body data={this.props.data} isEditMode={true} />
+        <SidebarPortal selected={this.props.selected || false}>
+          <Sidebar
+            {...this.props}
+            data={this.props.data}
+            block={this.props.block}
+            onChangeBlock={this.props.onChangeBlock}
+            openObjectBrowser={this.props.openObjectBrowser}
+          />
+        </SidebarPortal>
       </div>
     );
   }

@@ -1,5 +1,5 @@
 /**
- * Edit Hero block.
+ * Edit Alert block.
  * @module components/manage/Blocks/Image/Edit
  */
 
@@ -19,7 +19,7 @@ import { EditTextBlock } from '@plone/volto/components';
 
 import { AlertSidebar } from '@italia/components/ItaliaTheme';
 /**
- * Edit image block class.
+ * Edit Alert block class.
  * @class Edit
  * @extends Component
  */

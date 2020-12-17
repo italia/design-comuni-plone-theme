@@ -1,6 +1,6 @@
 /**
  * Edit icons block.
- * @module components/manage/Blocks/Title/Edit
+ * @module components/ItaliaTheme/Blocks/Accordion/Edit
  */
 
 import React from 'react';
@@ -29,7 +29,7 @@ const messages = defineMessages({
   },
 });
 /**
- * Edit icons block class.
+ * Edit Accordion block class.
  * @class Edit
  * @extends Component
  */
