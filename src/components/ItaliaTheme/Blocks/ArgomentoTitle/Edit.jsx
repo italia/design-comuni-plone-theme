@@ -1,6 +1,6 @@
 /**
- * Edit title block.
- * @module components/Blocks/TitleVM/Edit
+ * Edit ArgomentoTitle block.
+ * @module components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
  */
 
 import React, { Component } from 'react';
@@ -35,7 +35,7 @@ const blockRenderMap = Map({
 const extendedBlockRenderMap = DefaultDraftBlockRenderMap.merge(blockRenderMap);
 
 /**
- * Edit title block class.
+ * Edit ArgomentoTitle block class.
  * @class Edit
  * @extends Component
  */

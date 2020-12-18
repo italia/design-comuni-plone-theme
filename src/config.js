@@ -47,6 +47,10 @@ import videoSVG from '@plone/volto/icons/video.svg';
 import VideoGalleryView from '@italia/components/ItaliaTheme/Blocks/VideoGallery/View';
 import VideoGalleryEdit from '@italia/components/ItaliaTheme/Blocks/VideoGallery/Edit';
 
+import faTwitter from './icons/twitter-brands.svg';
+import TwitterPostsView from '@italia/components/ItaliaTheme/Blocks/TwitterPosts/View';
+import TwitterPostsEdit from '@italia/components/ItaliaTheme/Blocks/TwitterPosts/Edit';
+
 import formSVG from '@plone/volto/icons/form.svg';
 import FormView from '@italia/components/ItaliaTheme/Blocks/Form/View';
 import FormEdit from '@italia/components/ItaliaTheme/Blocks/Form/Edit';
@@ -322,6 +326,21 @@ const customBlocks = {
     group: 'media',
     view: VideoGalleryView,
     edit: VideoGalleryEdit,
+    restricted: false,
+    mostUsed: false,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
+  twitter_posts: {
+    id: 'twitter_posts',
+    title: 'Twitter posts',
+    icon: faTwitter,
+    group: 'media',
+    view: TwitterPostsView,
+    edit: TwitterPostsEdit,
     restricted: false,
     mostUsed: false,
     security: {

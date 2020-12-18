@@ -1,5 +1,5 @@
 /**
- * View icons block.
+ * Field
  * @module components/manage/Blocks/IconsBlocks/View
  */
 
@@ -21,7 +21,7 @@ const messages = defineMessages({
 });
 
 /**
- * View icons blocks class.
+ * Field class.
  * @class View
  * @extends Component
  */

@@ -1,6 +1,6 @@
 /**
- * Edit icons block.
- * @module components/manage/Blocks/Title/Edit
+ * Edit Form block.
+ * @module components/ItaliaTheme/Blocks/Form/Edit
  */
 
 import React from 'react';
@@ -45,8 +45,9 @@ const messages = defineMessages({
       'Inserire un campo di tipo "E-mail mittente". Se non è presente, oppure è presente ma non viene compilato dall\'utente, l\'indirizzo del mittente della mail sarà quello configurato dalla sidebar di destra.',
   },
 });
+
 /**
- * Edit icons block class.
+ * Edit Form block class.
  * @class Edit
  * @extends Component
  */

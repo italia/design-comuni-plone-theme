@@ -1,5 +1,5 @@
 /**
- * View icons block.
+ * From class
  * @module components/manage/Blocks/IconsBlocks/View
  */
 
@@ -77,8 +77,8 @@ const formStateReducer = (state, action) => {
 };
 
 /**
- * View icons blocks class.
- * @class View
+ * Form
+ * @class Form
  * @extends Component
  */
 const Form = ({ data, id, path }) => {

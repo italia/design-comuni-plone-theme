@@ -1,6 +1,6 @@
 /**
  * ViewBlock.
- * @module components/manage/Blocks/Text/View
+ * @module components/ItaliaTheme/Blocks/Accordion/Block/ViewBlock
  */
 
 import React from 'react';

@@ -12,6 +12,7 @@ import { calendarDaySearchReducer } from './calendarDaySearchReducer';
 import { amministrazioneTrasparenteTree } from './amministrazioneTrasparenteTree';
 import { dettagliProcedimento } from './dettagliProcedimento';
 import { sendActionForm } from './sendActionForm';
+import { twitterPosts } from './twitterPosts';
 
 /**
  * Root reducer.
@@ -30,6 +31,7 @@ const reducers = {
   amministrazioneTrasparenteTree: amministrazioneTrasparenteTree,
   dettagliProcedimento: dettagliProcedimento,
   sendActionForm: sendActionForm,
+  twitterPosts: twitterPosts,
 };
 
 export default reducers;

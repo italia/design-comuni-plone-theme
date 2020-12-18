@@ -1,6 +1,6 @@
 /**
- * View title block.
- * @module components/manage/Blocks/Title/View
+ * View ArgomentoTitle block.
+ * @module components/ItaliaTheme/Blocks/ArgomentoTitle/View
  */
 
 import React from 'react';
