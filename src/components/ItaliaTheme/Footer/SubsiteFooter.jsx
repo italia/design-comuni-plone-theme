@@ -5,13 +5,16 @@
 
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { flattenHTMLToAppURL } from '@plone/volto/helpers';
+import { useLocation } from 'react-router-dom';
+import { flattenHTMLToAppURL, isCmsUi } from '@plone/volto/helpers';
 
 const SubsiteFooter = () => {
-  const subsite = useSelector(state => state.subsite?.data);
+  const location = useLocation();
+  const isCmsUI = isCmsUi(location.pathname);
+  const subsite = useSelector((state) => state.subsite?.data);
 
   return subsite?.subsite_footer?.data ? (
-    <div className="subsite-footer ">
+    <div className={`subsite-footer ${isCmsUI ? 'public-ui' : ''}`}>
       <div className="text">
         <div className="container px-md-4">
           <div
