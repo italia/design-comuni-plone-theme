@@ -24,13 +24,15 @@ const HeaderSlim = () => {
   const parentSiteTile = subsite
     ? siteConfig.properties.subsiteParentSiteTitle
     : siteConfig.properties.parentSiteTitle;
+
+  const target = subsite ? null : '_blank';
   return (
     <Header small={false} theme="" type="slim">
       <HeaderContent>
         <HeaderBrand
           responsive
           href={parentSiteURL}
-          target="_blank"
+          target={target}
           rel="noopener noreferer"
         >
           {parentSiteTile}
