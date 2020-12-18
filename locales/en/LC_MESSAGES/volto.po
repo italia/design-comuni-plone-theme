@@ -352,6 +352,10 @@ msgstr ""
 msgid "Titolo"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
+msgid "Twitter Posts"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
@@ -1998,6 +2002,7 @@ msgid "tipologia_persona"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "title"
 msgstr ""
@@ -2018,6 +2023,22 @@ msgstr ""
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/View/Commons/PageHeader
 msgid "topics"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
+msgid "twitterAccountLink"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
+msgid "twitterAccounts"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
+msgid "twitterAccounts_description"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/TwitterPosts/Body
+msgid "twitter_posts_no_results"
 msgstr ""
 
 #: components/ItaliaTheme/View/BandoView/BandoView
