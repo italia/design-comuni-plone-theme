@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { useGoogleAnalytics } from 'volto-google-analytics';
+import { useGoogleAnalytics } from '@italia/addons/volto-google-analytics';
 
 // import { isCmsUi } from '@plone/volto/helpers';
 import {

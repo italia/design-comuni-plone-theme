@@ -19,15 +19,6 @@
             "@italia/addons/volto-dropdownmenu": [
                 "addons/volto-dropdownmenu/src"
             ],
-            "volto-subsites": [
-                "addons/volto-subsites"
-            ],
-            "volto-social-settings": [
-                "addons/volto-social-settings"
-            ],
-            "volto-editablefooter": [
-                "addons/volto-editablefooter"
-            ],
             "@italia/addons/volto-subsites": [
                 "addons/volto-subsites/src"
             ],
@@ -37,7 +28,7 @@
             "@italia/addons/volto-editablefooter": [
                 "addons/volto-editablefooter/src"
             ],
-            "volto-google-analytics": [
+            "@italia/addons/volto-google-analytics": [
                 "addons/volto-google-analytics"
             ]
         },
