@@ -3,9 +3,9 @@
  * @module components/theme/Footer/Footer
  */
 
-import React, { Component } from 'react';
+import React from 'react';
+import { useGoogleAnalytics } from 'volto-google-analytics';
 
-// import PropTypes from 'prop-types';
 // import { isCmsUi } from '@plone/volto/helpers';
 import {
   FooterMain,
@@ -19,42 +19,23 @@ import { CookieBanner } from '@italia/addons/volto-cookie-banner';
  * @class Footer
  * @extends Component
  */
-class Footer extends Component {
-  /**
-   * Property types.
-   * @property {Object} propTypes Property types.
-   * @static
-   */
-  static propTypes = {
-    //pathname: PropTypes.string.isRequired,
-  };
 
-  /**
-   * Default properties.
-   * @property {Object} defaultProps Default properties.
-   * @static
-   */
-  static defaultProps = {};
+const Footer = ({ intl }) => {
+  useGoogleAnalytics();
+  const isCmsUI = false; //isCmsUi(this.props.pathname);
 
-  /**
-   * Render method.
-   * @method render
-   * @returns {string} Markup for the component.
-   */
-  render() {
-    const isCmsUI = false; //isCmsUi(this.props.pathname);
-    let content = (
-      <>
-        <SubsiteFooter />
-        <footer className="it-footer">
-          <FooterMain />
-          <FooterSmall />
-          {__CLIENT__ && <CookieBanner />}
-        </footer>
-      </>
-    );
-    return isCmsUI ? <div className="public-ui">{content}</div> : content;
-  }
-}
+  let content = (
+    <>
+      <SubsiteFooter />
+      <footer className="it-footer">
+        <FooterMain />
+        <FooterSmall />
+        {__CLIENT__ && <CookieBanner />}
+      </footer>
+    </>
+  );
+
+  return isCmsUI ? <div className="public-ui">{content}</div> : content;
+};
 
 export default Footer;

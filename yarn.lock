@@ -13552,6 +13552,11 @@ react-fast-compare@2.0.4:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
   integrity sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==
 
+react-ga@2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/react-ga/-/react-ga-2.7.0.tgz#24328f157f31e8cffbf4de74a3396536679d8d7c"
+  integrity sha512-AjC7UOZMvygrWTc2hKxTDvlMXEtbmA0IgJjmkhgmQQ3RkXrWR11xEagLGFGaNyaPnmg24oaIiaNPnEoftUhfXA==
+
 react-google-recaptcha-v3@1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/react-google-recaptcha-v3/-/react-google-recaptcha-v3-1.7.0.tgz#b072464d4237b8f147beaf28fb833264534dc222"
@@ -16882,6 +16887,12 @@ volto-editablefooter@RedTurtle/volto-editablefooter#v2.0.0:
   resolved "https://codeload.github.com/RedTurtle/volto-editablefooter/tar.gz/00a406e4fedd09d24deb0c4435a179c862d39a73"
   dependencies:
     react-outside-click-handler "1.3.0"
+
+volto-google-analytics@collective/volto-google-analytics:
+  version "1.0.0"
+  resolved "https://codeload.github.com/collective/volto-google-analytics/tar.gz/9bd9b49bde6bd6942454a1f6c87968e33eea041a"
+  dependencies:
+    react-ga "2.7.0"
 
 volto-multilingual-widget@collective/volto-multilingual-widget#v1.0.1:
   version "1.0.1"

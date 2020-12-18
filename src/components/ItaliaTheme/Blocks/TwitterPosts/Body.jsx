@@ -71,7 +71,6 @@ const Body = ({ data, isEditMode }) => {
     ],
   };
 
-  console.log(twitter_posts);
   const content =
     twitter_posts?.length > 0 ? (
       <div className="py-4">

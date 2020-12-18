@@ -36,6 +36,9 @@
             ],
             "@italia/addons/volto-editablefooter": [
                 "addons/volto-editablefooter/src"
+            ],
+            "volto-google-analytics": [
+                "addons/volto-google-analytics"
             ]
         },
         "baseUrl": "src"
