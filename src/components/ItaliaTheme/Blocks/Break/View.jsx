@@ -1,13 +1,13 @@
 /**
- * View image block.
- * @module components/Blocks/FullImage/View
+ * View Break block.
+ * @module components/ItaliaTheme/Blocks/break/View
  */
 
 import React from 'react';
 import cx from 'classnames';
 
 /**
- * View image block class.
+ * View Break block class.
  * @class View
  * @extends Component
  */

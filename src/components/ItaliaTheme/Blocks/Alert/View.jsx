@@ -1,5 +1,5 @@
 /**
- * View image block.
+ * View Alert block.
  * @module components/manage/Blocks/Hero/View
  */
 
@@ -12,7 +12,7 @@ import { isCmsUi } from '@plone/volto/helpers';
 import { settings } from '~/config';
 import { flattenToAppURL } from '@plone/volto/helpers';
 /**
- * View image block class.
+ * View Alert block class.
  * @class View
  * @extends Component
  */

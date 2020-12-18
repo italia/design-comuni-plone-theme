@@ -1,6 +1,6 @@
 /**
- * Edit text block.
- * @module components/manage/Blocks/Title/Edit
+ * Edit Accordion block.
+ * @module components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
  */
 
 import React from 'react';
@@ -34,7 +34,7 @@ const messages = defineMessages({
   },
 });
 /**
- * Edit text block class.
+ * Edit Accordion block class.
  * @class Edit
  * @extends Component
  */

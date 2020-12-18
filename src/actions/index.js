@@ -26,6 +26,7 @@ import {
   getDettagliProcedimento,
   GET_DETTAGLI_PROCEDIMENTO,
 } from './getDettagliProcedimento';
+import { getTwitterPosts, GET_TWITTER_POSTS } from './getTwitterPosts';
 
 export {
   getSearchFilters,
@@ -39,5 +40,7 @@ export {
   getAmministrazioneTrasparenteTree,
   GET_AMMINISTRAZIONE_TRASPARENTE,
   getDettagliProcedimento,
-  GET_DETTAGLI_PROCEDIMENTO
+  GET_DETTAGLI_PROCEDIMENTO,
+  getTwitterPosts,
+  GET_TWITTER_POSTS,
 };
