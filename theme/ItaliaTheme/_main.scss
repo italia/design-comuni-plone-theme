@@ -95,3 +95,14 @@ button.custom-navbar-toggler svg.icon {
     }
   }
 }
+
+#text-body {
+  .full-width {
+    left: auto !important;
+    position: static;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+}
