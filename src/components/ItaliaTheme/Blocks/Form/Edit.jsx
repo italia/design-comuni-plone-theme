@@ -53,7 +53,8 @@ const messages = defineMessages({
 class Edit extends SubblocksEdit {
   componentDidMount() {
     super.componentDidMount();
-    if (!this.props.data.default_form) {
+
+    if (!this.props.data.default_from) {
       this.props.onChangeBlock(this.props.block, {
         ...this.props.data,
         default_from: 'noreply@plone.org',
