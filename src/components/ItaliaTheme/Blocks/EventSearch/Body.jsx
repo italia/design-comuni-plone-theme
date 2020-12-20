@@ -1,4 +1,4 @@
-import React, { useState, useReducer, useEffect } from 'react';
+import React, { useState, useReducer, useEffect, createRef } from 'react';
 import { useIntl, defineMessages } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -50,6 +50,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
     return state.querystringsearch?.subrequests?.results;
   });
   const items = querystringResults?.items;
+  const resultsRef = createRef();
 
   const doRequest = (page = currentPage) => {
     setFirstLoading(false);
@@ -129,13 +130,11 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   );
 
   function handleQueryPaginationChange(e, { activePage }) {
-    // !isEditMode && window.scrollTo(0, 0);
+    resultsRef.current.scrollIntoView({ behavior: 'smooth' });
     const current = activePage?.children ?? 1;
     setCurrentPage(current);
     doRequest(current);
   }
-
-  console.log(filterOne.widget?.props);
 
   return filterOne || filterTwo || filterThree ? (
     <Container>
@@ -196,7 +195,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
 
       {!loading ? (
         items?.length > 0 ? (
-          <div className="mt-4">
+          <div className="mt-4" ref={resultsRef}>
             <CardWithImageTemplate items={items} full_width={false} />
             {querystringResults.total > b_size && (
               <Pagination
