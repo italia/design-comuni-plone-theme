@@ -46,6 +46,7 @@ const DateFilter = (props) => {
         focusedInput={focusedDateInput}
         onFocusChange={(focusedInput) => setFocusedDateInput(focusedInput)}
         displayFormat="DD/MM/YYYY"
+        hideKeyboardShortcutsPanel={true}
       />
     </div>
   );

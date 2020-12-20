@@ -43,6 +43,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
   const subsite = useSelector((state) => state.subsite?.data);
+  const [firstLoading, setFirstLoading] = useState(true);
   const dispatch = useDispatch();
 
   const querystringResults = useSelector((state) => {
@@ -51,8 +52,15 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   const items = querystringResults?.items;
 
   const doRequest = (page = currentPage) => {
+    setFirstLoading(false);
     setLoading(true);
-    let query = [];
+    let query = [
+      {
+        i: 'portal_type',
+        o: 'plone.app.querystring.operation.selection.any',
+        v: ['Event'],
+      },
+    ];
 
     [filterOne, filterTwo, filterThree].forEach((f) => {
       const value = f.widget.props.value;
@@ -127,6 +135,8 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
     doRequest(current);
   }
 
+  console.log(filterOne.widget?.props);
+
   return filterOne || filterTwo || filterThree ? (
     <Container>
       <div
@@ -175,7 +185,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
               color={data.button_color || 'tertiary'}
               icon={false}
               tag="button"
-              onClick={() => doRequest()}
+              onClick={() => doRequest(1)}
               className="my-2 my-lg-1"
             >
               {intl.formatMessage(messages.find)}
@@ -197,11 +207,15 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
             )}
           </div>
         ) : (
-          <div className="mt-4">
-            <p className="text-center">
-              {intl.formatMessage(messages.noResult)}
-            </p>
-          </div>
+          <>
+            {!firstLoading && (
+              <div className="mt-4">
+                <p className="text-center">
+                  {intl.formatMessage(messages.noResult)}
+                </p>
+              </div>
+            )}
+          </>
         )
       ) : (
         <div className="d-flex justify-content-center mt-3">

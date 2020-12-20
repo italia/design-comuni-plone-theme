@@ -25,6 +25,10 @@ const messages = defineMessages({
     id: 'venues',
     defaultMessage: 'Luoghi',
   },
+  search_keyword: {
+    id: 'Cerca per parola chiave',
+    defaultMessage: 'Cerca per parola chiave',
+  },
 });
 
 const DefaultFilters = () => {
@@ -40,6 +44,7 @@ const DefaultFilters = () => {
         component: TextFilter,
         props: {
           value: '',
+          placeholder: intl.formatMessage(messages.search_keyword),
         },
       },
       query: (value, query) => {
