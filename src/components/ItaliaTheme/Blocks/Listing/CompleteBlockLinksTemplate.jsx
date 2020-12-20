@@ -29,7 +29,7 @@ const CompleteBlockLinksTemplate = ({
   show_block_bg,
 }) => {
   const intl = useIntl();
-
+  console.log('items', items);
   return (
     <div
       className={cx('complete-block-links-template', {
@@ -59,7 +59,7 @@ const CompleteBlockLinksTemplate = ({
                     rel="noopener noreferrer"
                     href={
                       item['remoteUrl'] && item['remoteUrl'] !== ''
-                        ? item['remoteUrl']
+                        ? flattenToAppURL(item['remoteUrl'])
                         : flattenToAppURL(item['@id'])
                     }
                   >
@@ -98,7 +98,9 @@ const CompleteBlockLinksTemplate = ({
                 className="view-all"
                 icon={false}
                 tag="button"
-                onClick={() => window.open(linkMore.href, '_self')}
+                onClick={() =>
+                  window.open(flattenToAppURL(linkMore.href), '_self')
+                }
               >
                 {linkMore.title || intl.formatMessage(messages.view_all)}
               </Button>

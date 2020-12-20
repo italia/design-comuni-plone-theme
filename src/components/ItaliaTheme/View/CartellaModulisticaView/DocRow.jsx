@@ -28,7 +28,7 @@ const DocRow = ({ doc }) => {
         <div className="title">
           <Link to={flattenToAppURL(doc['@id'])}>
             {doc.title}
-            {doc.items?.length > 1 && ` - ${doc.items[0]?.title}`}
+            {/* {doc.items?.length > 1 && ` - ${doc.items[0]?.title}`} */}
           </Link>
         </div>
         {doc.items?.length === 1 && (
