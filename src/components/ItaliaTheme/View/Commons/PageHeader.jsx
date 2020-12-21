@@ -93,7 +93,7 @@ const PageHeader = (props) => {
     }
   }
   return (
-    <div className="row">
+    <div className="row mb-2 mb-lg-0 ">
       <div
         className={cx('px-lg-4 py-lg-2', {
           'col-lg-6': props.imageinheader,
