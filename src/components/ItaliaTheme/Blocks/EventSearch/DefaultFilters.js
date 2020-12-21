@@ -96,14 +96,20 @@ const DefaultFilters = () => {
             startDate: moment().startOf('day'),
             endDate: moment().endOf('day'),
           },
-          showClearDates: false,
+          showClearDates: true,
+          defaultStart: moment().startOf('day'),
+          defaultEnd: moment().endOf('day'),
         },
       },
 
       reducer: (value, state) => {
+        console.log('reducerdate', {
+          startDate: value.start ?? state.widget.props.defaultStart,
+          endDate: value.end ?? state.widget.props.defaultEnd,
+        });
         return {
-          startDate: value.startDate ?? state.startDate,
-          endDate: value.endDate ?? state.endDate,
+          startDate: value.start ?? state.widget.props.defaultStart,
+          endDate: value.end ?? state.widget.props.defaultEnd,
         };
       },
       query: (value, query) => {

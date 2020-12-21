@@ -49,7 +49,8 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   const querystringResults = useSelector((state) => {
     return state.querystringsearch?.subrequests?.results;
   });
-  const items = querystringResults?.items;
+  const items = firstLoading ? [] : querystringResults?.items;
+
   const resultsRef = createRef();
 
   const doRequest = (page = currentPage) => {
@@ -94,6 +95,11 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
     setLoading(false);
   }, [items]);
 
+  useEffect(() => {
+    //unmount
+    return () => setFirstLoading(true);
+  }, []);
+
   const filtersReducer = (state = getInitialState(), action) => {
     let newState = {
       ...state,
@@ -105,12 +111,9 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
       };
     } else {
       const f = newState[action.filter];
-      const defaultReducer = (value, state) => {
-        return value;
-      };
+      const defaultReducer = (value, state) => value;
       const reducer = f.reducer || defaultReducer;
-
-      f.widget.props.value = reducer(action.value, state);
+      f.widget.props.value = reducer(action.value, state[action.filter]);
     }
     return newState;
   };
