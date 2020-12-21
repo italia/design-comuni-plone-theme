@@ -30,7 +30,7 @@
             ],
             "@italia/addons/volto-google-analytics": [
                 "addons/volto-google-analytics/src"
-            ],
+            ]
         },
         "baseUrl": "src"
     }
