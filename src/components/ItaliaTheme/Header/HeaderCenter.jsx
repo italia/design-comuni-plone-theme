@@ -60,7 +60,7 @@ const HeaderCenter = () => {
               {intl.formatMessage(messages.search)}
             </span>
             <a
-              className="search-link rounded-icon d"
+              className="search-link rounded-icon"
               aria-label={intl.formatMessage(messages.search)}
               onClick={(e) => {
                 e.preventDefault();
