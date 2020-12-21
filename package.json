@@ -143,7 +143,7 @@
     "typeface-lora": "0.0.72",
     "typeface-roboto-mono": "0.0.75",
     "typeface-titillium-web": "0.0.72",
-    "volto-cookie-banner": "collective/volto-cookie-banner#v1.0.1",
+    "volto-cookie-banner": "collective/volto-cookie-banner#v1.0.2",
     "volto-dropdownmenu": "collective/volto-dropdownmenu#v1.2.1",
     "volto-editablefooter": "RedTurtle/volto-editablefooter#v2.0.0",
     "volto-google-analytics": "collective/volto-google-analytics",
