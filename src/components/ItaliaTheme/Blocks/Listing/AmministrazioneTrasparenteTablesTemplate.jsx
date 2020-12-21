@@ -3,12 +3,8 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useIntl } from 'react-intl';
 import moment from 'moment';
-import {
-  Container,
-  Row,
-  Col
-} from 'design-react-kit/dist/design-react-kit';
-import { Link } from 'react-router-dom';
+import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
+import { UniversalLink } from '@plone/volto/components';
 import { flattenHTMLToAppURL } from '@plone/volto/helpers';
 import { getTableRowData } from '@italia/helpers';
 import { useLocation } from 'react-router-dom';
@@ -25,17 +21,17 @@ const AmministrazioneTrasparenteTablesTemplate = ({
   const location = useLocation();
 
   const getColumn = (item) => {
-    if(!item) {
+    if (!item) {
       return '';
     }
 
     switch (item.type) {
       case 'link':
         return (
-          <Link to={item.link} className={item.class}>
+          <UniversalLink href={item.link} className={item.class}>
             {item.text}
-          </Link>
-        )
+          </UniversalLink>
+        );
         break;
       case 'text':
         return item.text;
@@ -46,11 +42,11 @@ const AmministrazioneTrasparenteTablesTemplate = ({
               __html: flattenHTMLToAppURL(item.text || ''),
             }}
           />
-        )
+        );
       default:
         break;
     }
-  }
+  };
 
   const tableData = getTableRowData(items, intl, location.pathname);
 
@@ -73,25 +69,23 @@ const AmministrazioneTrasparenteTablesTemplate = ({
         <table className="table">
           <thead>
             <tr>
-              {tableData.headers?.map((h, index) =>
-                <th scope="col" className="text-uppercase" key={index}>{h}</th>
-              )}
+              {tableData.headers?.map((h, index) => (
+                <th scope="col" className="text-uppercase" key={index}>
+                  {h}
+                </th>
+              ))}
             </tr>
           </thead>
           <tbody>
-              {tableData.body?.flatMap((row, index) => {
-                return(
-                  <tr key={index}>
-                    {
-                      row.map((column, index) => (
-                        <td key={index}>
-                          {getColumn(column)}
-                        </td>
-                      ))
-                    }
-                  </tr>
-                )
-              })}
+            {tableData.body?.flatMap((row, index) => {
+              return (
+                <tr key={index}>
+                  {row.map((column, index) => (
+                    <td key={index}>{getColumn(column)}</td>
+                  ))}
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </Container>

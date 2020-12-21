@@ -1,6 +1,6 @@
 import React from 'react';
 import moment from 'moment';
-import { Link } from 'react-router-dom';
+import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
 /**
@@ -25,7 +25,7 @@ const NewsCard = ({ title, typology, effective, description, id }) => {
           ) : null}
         </div>
         <h5 className="card-title big-heading">
-          <Link to={flattenToAppURL(id)}>{title}</Link>
+          <UniversalLink to={flattenToAppURL(id)}>{title}</UniversalLink>
         </h5>
         <div className="card-text">{description}</div>
       </div>

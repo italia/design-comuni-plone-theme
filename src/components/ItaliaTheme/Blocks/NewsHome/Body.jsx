@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
-import { Link } from 'react-router-dom';
+import { UniversalLink } from '@plone/volto/components';
 import moment from 'moment';
 import {
   Row,
@@ -41,7 +41,9 @@ const Body = ({ content, pathname, block }) => {
               Notizie
             </CardCategory>
             <CardTitle tag="h2">
-              <Link to={flattenToAppURL(content['@id'])}>{content.title}</Link>
+              <UniversalLink href={flattenToAppURL(content['@id'])}>
+                {content.title}
+              </UniversalLink>
             </CardTitle>
             <CardText>{content.description}</CardText>
 
@@ -50,12 +52,12 @@ const Body = ({ content, pathname, block }) => {
                 <>
                   {content.tassonomia_argomenti.map((argomento) => (
                     <Chip simple color="primary" key={argomento['@id']}>
-                      <Link
-                        to={flattenToAppURL(argomento['@id'])}
+                      <UniversalLink
+                        href={flattenToAppURL(argomento['@id'])}
                         className="chip-label text-decoration-none"
                       >
                         {argomento.title}
-                      </Link>
+                      </UniversalLink>
                     </Chip>
                   ))}
                 </>

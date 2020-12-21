@@ -13,7 +13,7 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
-import { ConditionalLink } from '@plone/volto/components';
+import { ConditionalLink, UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
 import {
@@ -67,8 +67,8 @@ const InEvidenceTemplate = ({
                   {index === 0 && item.image && (
                     <div className="img-responsive-wrapper">
                       <div className="img-responsive">
-                        <Link
-                          to={flattenToAppURL(item['@id'])}
+                        <UniversalLink
+                          href={flattenToAppURL(item['@id'])}
                           className="img-link"
                         >
                           <figure className="img-wrapper">
@@ -80,7 +80,7 @@ const InEvidenceTemplate = ({
                               alt={item.title}
                             />
                           </figure>
-                        </Link>
+                        </UniversalLink>
                         {item['@type'] === 'Event' && (
                           <CardCalendar start={item.start} end={item.end} />
                         )}
@@ -95,9 +95,9 @@ const InEvidenceTemplate = ({
                       />
                     </CardCategory>
                     <CardTitle tag="h4">
-                      <Link to={flattenToAppURL(item['@id'])}>
+                      <UniversalLink href={flattenToAppURL(item['@id'])}>
                         {item.title || item.id}
-                      </Link>
+                      </UniversalLink>
                     </CardTitle>
                     {listingText && (
                       <CardText

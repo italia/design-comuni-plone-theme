@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import cx from 'classnames';
-import { Link } from 'react-router-dom';
+import { UniversalLink } from '@plone/volto/components';
 import PropTypes from 'prop-types';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -80,7 +80,9 @@ const GenericCard = ({
           {infos}
           <h5 className="card-title">
             {show_icon && <Icon icon={show_icon} padding={false} />}
-            <Link to={flattenToAppURL(item_fo['@id'])}>{item_fo.title}</Link>
+            <UniversalLink href={flattenToAppURL(item_fo['@id'])}>
+              {item_fo.title}
+            </UniversalLink>
           </h5>
           {(showDescription || children) && (
             <div className="card-text">
@@ -95,7 +97,9 @@ const GenericCard = ({
           {infos}
           <h5 className="card-title">
             {show_icon && <Icon icon={show_icon} padding={false} />}
-            <Link to={flattenToAppURL(item_fo['@id'])}>{item_fo.title}</Link>
+            <UniversalLink href={flattenToAppURL(item_fo['@id'])}>
+              {item_fo.title}
+            </UniversalLink>
           </h5>
           {(showDescription || children) && (
             <div className="card-text">

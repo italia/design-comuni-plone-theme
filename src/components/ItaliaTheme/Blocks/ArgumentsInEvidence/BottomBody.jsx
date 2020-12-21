@@ -1,6 +1,7 @@
 import React from 'react';
 import { defineMessages } from 'react-intl';
 import { Link } from 'react-router-dom';
+import { UniversalLink } from '@plone/volto/components';
 import {
   Chip,
   ChipLabel,
@@ -31,8 +32,8 @@ const BottomBody = ({ data, intl }) => {
           </div>
           <div className="col-lg-9">
             {data?.arguments?.map((argument, index) => (
-              <Link
-                to={flattenToAppURL(argument['@id'])}
+              <UniversalLink
+                href={flattenToAppURL(argument['@id'])}
                 key={index}
                 title={argument.title}
                 className="text-decoration-none"
@@ -47,7 +48,7 @@ const BottomBody = ({ data, intl }) => {
                 >
                   <ChipLabel tag="span">{argument.title}</ChipLabel>
                 </Chip>
-              </Link>
+              </UniversalLink>
             ))}
           </div>
         </div>

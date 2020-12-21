@@ -4,6 +4,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import moment from 'moment';
 import 'moment/min/locales';
 import { Link } from 'react-router-dom';
+import { UniversalLink } from '@plone/volto/components';
 import cx from 'classnames';
 import {
   Card,
@@ -174,9 +175,11 @@ const SimpleCardTemplateDefault = ({
                   </CardCategory>
                 )}
                 <CardTitle tag="h5">
-                  <Link to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}>
+                  <UniversalLink
+                    href={!isEditMode ? flattenToAppURL(item['@id']) : '#'}
+                  >
                     {itemTitle}
-                  </Link>
+                  </UniversalLink>
                 </CardTitle>
                 {show_description && listingText && (
                   <CardText className={cx('', { 'mb-5': eventRecurrenceMore })}>

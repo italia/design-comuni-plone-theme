@@ -5,7 +5,7 @@
 
 import React, { useEffect } from 'react';
 
-import { Link } from 'react-router-dom';
+import { UniversalLink } from '@plone/volto/components';
 import {
   Card,
   CardBody,
@@ -75,9 +75,9 @@ const PaginaArgomentoView = ({ content }) => {
                         <CardBody className="">
                           <CardCategory>
                             <span className="text font-weight-bold">
-                              <Link to={flattenToAppURL(u['@id'])}>
+                              <UniversalLink href={flattenToAppURL(u['@id'])}>
                                 {u.title || u.id}
-                              </Link>
+                              </UniversalLink>
                             </span>
                           </CardCategory>
                           <CardText>
