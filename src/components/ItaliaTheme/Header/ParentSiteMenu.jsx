@@ -33,7 +33,7 @@ const ParentSiteMenu = () => {
       i--;
     }
   }
-  console.log(menu);
+
   return subsite && menu ? (
     <Nav vertical={false} className="parent-site-menu d-none d-md-flex">
       {menu.items.map((navitem, id) => (

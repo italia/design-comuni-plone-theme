@@ -103,10 +103,6 @@ const DefaultFilters = () => {
       },
 
       reducer: (value, state) => {
-        console.log('reducerdate', {
-          startDate: value.start ?? state.widget.props.defaultStart,
-          endDate: value.end ?? state.widget.props.defaultEnd,
-        });
         return {
           startDate: value.start ?? state.widget.props.defaultStart,
           endDate: value.end ?? state.widget.props.defaultEnd,

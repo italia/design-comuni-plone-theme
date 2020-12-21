@@ -29,7 +29,7 @@ const CompleteBlockLinksTemplate = ({
   show_block_bg,
 }) => {
   const intl = useIntl();
-  console.log('items', items);
+
   return (
     <div
       className={cx('complete-block-links-template', {

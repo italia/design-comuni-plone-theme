@@ -40,22 +40,26 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   const intl = useIntl();
   const b_size = 6;
   moment.locale(intl.locale);
-  const [loading, setLoading] = useState(false);
+
   const [currentPage, setCurrentPage] = useState(1);
   const subsite = useSelector((state) => state.subsite?.data);
-  const [firstLoading, setFirstLoading] = useState(true);
+
   const dispatch = useDispatch();
 
   const querystringResults = useSelector((state) => {
     return state.querystringsearch?.subrequests?.results;
   });
-  const items = firstLoading ? [] : querystringResults?.items;
+  const items = useSelector((state) => {
+    return state.querystringsearch?.subrequests?.results?.items ?? [];
+  });
+
+  const loading = useSelector((state) => {
+    return state.querystringsearch?.subrequests?.results?.loading || false;
+  });
 
   const resultsRef = createRef();
 
   const doRequest = (page = currentPage) => {
-    setFirstLoading(false);
-    setLoading(true);
     let query = [
       {
         i: 'portal_type',
@@ -89,16 +93,6 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   useEffect(() => {
     dispatchFilter({ type: 'reset' });
   }, [data]);
-
-  // Quando ricevo gli elementi imposto il loader a false
-  useEffect(() => {
-    setLoading(false);
-  }, [items]);
-
-  useEffect(() => {
-    //unmount
-    return () => setFirstLoading(true);
-  }, []);
 
   const filtersReducer = (state = getInitialState(), action) => {
     let newState = {
@@ -208,17 +202,15 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
               />
             )}
           </div>
-        ) : (
+        ) : querystringResults ? (
           <>
-            {!firstLoading && (
-              <div className="mt-4">
-                <p className="text-center">
-                  {intl.formatMessage(messages.noResult)}
-                </p>
-              </div>
-            )}
+            <div className="mt-4">
+              <p className="text-center">
+                {intl.formatMessage(messages.noResult)}
+              </p>
+            </div>
           </>
-        )
+        ) : null
       ) : (
         <div className="d-flex justify-content-center mt-3">
           <Spinner active />
