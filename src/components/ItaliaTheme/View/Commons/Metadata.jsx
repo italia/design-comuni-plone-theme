@@ -61,7 +61,7 @@ const Metadata = ({ content, showTags = true, noMargin = false, children }) => {
           {content.subjects?.map((item, i) => (
             <Chip
               color=""
-              disabled={false}
+              disabled={true}
               large={false}
               simple
               tag="div"
