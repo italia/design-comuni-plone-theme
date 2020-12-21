@@ -4,8 +4,8 @@
  */
 import React from 'react';
 import classNames from 'classnames';
-import { Icon as DesignIcon } from 'design-react-kit/dist/design-react-kit';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import DesignIcon from './DesignIcon';
 
 const Icon = (props) => {
   const { icon, className, color, size, padding } = props;
@@ -22,7 +22,7 @@ const Icon = (props) => {
     );
 
     return icon.indexOf('it-') === 0 ? (
-      <DesignIcon {...props} />
+      <DesignIcon {...props} className={classes} />
     ) : (
       <FontAwesomeIcon icon={icon} className={`fal ${classes}`} />
     );

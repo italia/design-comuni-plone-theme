@@ -6,6 +6,8 @@
 
 #search-modal {
   .modal-header {
+    flex-shrink: 0;
+
     button.close {
       display: none;
     }
