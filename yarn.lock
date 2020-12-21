@@ -13492,7 +13492,7 @@ react-dev-utils@10.2.0:
     strip-ansi "6.0.0"
     text-table "0.2.0"
 
-react-dnd-html5-backend@5.0.1, react-dnd-html5-backend@ˆ5.0.1:
+react-dnd-html5-backend@5.0.1, react-dnd-html5-backend@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/react-dnd-html5-backend/-/react-dnd-html5-backend-5.0.1.tgz#0b578d79c5c01317c70414c8d717f632b919d4f1"
   integrity sha1-C1eNecXAExfHBBTI1xf2MrkZ1PE=
@@ -16910,12 +16910,12 @@ volto-social-settings@collective/volto-social-settings#v2.0.0:
   version "2.0.0"
   resolved "https://codeload.github.com/collective/volto-social-settings/tar.gz/f9d0fcb825fdfb6a61b37716b723e9369e078a63"
 
-volto-subblocks@collective/volto-subblocks#v1.0.0:
-  version "1.0.0"
-  resolved "https://codeload.github.com/collective/volto-subblocks/tar.gz/4f62a72d8cb4f7ab373f14f489f89d0964da211f"
+volto-subblocks@collective/volto-subblocks#v1.0.1:
+  version "1.0.1"
+  resolved "https://codeload.github.com/collective/volto-subblocks/tar.gz/d565956e04521e46a186cbf8967d2c8883672e21"
   dependencies:
     react-dnd "^5.0.0"
-    react-dnd-html5-backend "ˆ5.0.1"
+    react-dnd-html5-backend "^5.0.1"
 
 volto-subsites@collective/volto-subsites#v1.0.1:
   version "1.0.1"
