@@ -60,9 +60,13 @@ const HeaderCenter = () => {
               {intl.formatMessage(messages.search)}
             </span>
             <a
-              className="search-link rounded-icon"
+              className="search-link rounded-icon d"
               aria-label={intl.formatMessage(messages.search)}
-              onClick={() => setShowSearchModal(true)}
+              onClick={(e) => {
+                e.preventDefault();
+                setShowSearchModal(true);
+              }}
+              href="#search"
             >
               <Icon icon="it-search" />
             </a>
