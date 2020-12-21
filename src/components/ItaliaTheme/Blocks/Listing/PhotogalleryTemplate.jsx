@@ -49,7 +49,7 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
         'public-ui': isEditMode,
       })}
     >
-      <div className='full-width'>
+      <div className="full-width">
         <Container className="px-4">
           {title && (
             <Row>
@@ -65,13 +65,13 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
                   <div className="it-single-slide-wrapper" key={item['@id']}>
                     <figure className="img-wrapper">
                       {item.image && (
-                            <img
-                              src={flattenToAppURL(
-                                item?.image?.scales?.preview?.download,
-                              )}
-                              alt={item.title}
-                              className="img-fluid"
-                            ></img>
+                        <img
+                          src={flattenToAppURL(
+                            item?.image?.scales?.preview?.download,
+                          )}
+                          alt={item.title}
+                          className="img-fluid"
+                        ></img>
                       )}
                     </figure>
                   </div>

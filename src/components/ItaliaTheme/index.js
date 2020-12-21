@@ -56,6 +56,7 @@ export BlockSearchSectionsSidebar from '@italia/components/ItaliaTheme/Blocks/Se
 export BlockSearchSectionsBody from '@italia/components/ItaliaTheme/Blocks/SearchSections/Body';
 export ArgumentsInEvidenceBackground from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Background';
 export SearchSectionsBackground from '@italia/components/ItaliaTheme/Blocks/SearchSections/Background';
+export Skeleton from '@italia/components/ItaliaTheme/Blocks/Listing/Skeleton';
 export CardCalendar from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/CardCalendar';
 export ListingCategory from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/ListingCategory';
 export ListingText from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/ListingText';

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { FormattedMessage, injectIntl } from 'react-intl';
 import { getContent, getQueryStringResults } from '@plone/volto/actions';
-import { Pagination } from '@italia/components/ItaliaTheme';
+import { Pagination, Skeleton } from '@italia/components/ItaliaTheme';
 import { blocks, settings } from '~/config';
 
 const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
@@ -128,7 +128,15 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
 
   return (
     <div className="public-ui">
-      {listingItems.length > 0 ? (
+      {loadingQuery ? (
+        <div className={`full-width ${getBlockClasses()}`} ref={listingRef}>
+          <Skeleton {...data} />
+        </div>
+      ) : (
+        ''
+      )}
+
+      {!loadingQuery && listingItems.length > 0 ? (
         <div className={`full-width ${getBlockClasses()}`} ref={listingRef}>
           <ListingBodyTemplate
             items={listingItems}
