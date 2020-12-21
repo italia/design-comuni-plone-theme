@@ -242,7 +242,9 @@ const SearchModal = ({ closeModal, show }) => {
 
   const submitSearch = () => {
     setAdvancedSearch(false);
-    closeModal();
+    setTimeout(() => {
+      closeModal();
+    }, 500);
   };
 
   const handleEnterSearch = (e) => {
