@@ -11,11 +11,12 @@ import {
   CardTitle,
   CardReadMore,
   CardText,
-  Button,
   Row,
   Col,
   Container,
 } from 'design-react-kit/dist/design-react-kit';
+
+import { UniversalLink } from '@plone/volto/components';
 
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Link } from 'react-router-dom';
@@ -127,19 +128,13 @@ const RibbonCardTemplate = ({
             })}
           </Row>
           {linkMore?.href && (
-            <div className="link-button ">
-              <Row>
-                <Col className="text-center">
-                  <Button
-                    className="view-all"
-                    icon={false}
-                    tag="button"
-                    onClick={() => window.open(linkMore.href, '_self')}
-                  >
-                    {linkMore.title || intl.formatMessage(messages.view_all)}
-                  </Button>
-                </Col>
-              </Row>
+            <div className="link-button text-center my-5">
+              <UniversalLink
+                href={flattenToAppURL(linkMore.href)}
+                className="btn btn-tertiary"
+              >
+                {linkMore.title || intl.formatMessage(messages.view_all)}
+              </UniversalLink>
             </div>
           )}
         </Container>

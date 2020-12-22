@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { UniversalLink } from '@plone/volto/components';
 import {
   Card,
   CardBody,
   CardTitle,
   CardText,
-  Button,
   Container,
   Row,
   Col,
@@ -92,18 +92,13 @@ const CompleteBlockLinksTemplate = ({
             ))}
           </Row>
           {linkMore?.href && (
-            <div className="link-button">
-              <Button
-                color="tertiary"
-                className="view-all"
-                icon={false}
-                tag="button"
-                onClick={() =>
-                  window.open(flattenToAppURL(linkMore.href), '_self')
-                }
+            <div className="link-button text-center my-4">
+              <UniversalLink
+                href={flattenToAppURL(linkMore.href)}
+                className="btn btn-tertiary"
               >
                 {linkMore.title || intl.formatMessage(messages.view_all)}
-              </Button>
+              </UniversalLink>
             </div>
           )}
         </Container>

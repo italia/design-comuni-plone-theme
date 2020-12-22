@@ -204,15 +204,13 @@ const SimpleCardTemplateDefault = ({
         })}
       </div>
       {linkMore?.href && (
-        <div className="link-button">
-          <Button
-            className="view-all"
-            icon={false}
-            tag="button"
-            onClick={() => window.open(linkMore.href, '_self')}
+        <div className="link-button text-center my-4">
+          <UniversalLink
+            href={flattenToAppURL(linkMore.href)}
+            className="btn btn-tertiary"
           >
             {linkMore.title || intl.formatMessage(messages.view_all)}
-          </Button>
+          </UniversalLink>
         </div>
       )}
     </div>

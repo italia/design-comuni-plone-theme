@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
 import { defineMessages, useIntl } from 'react-intl';
+import { UniversalLink } from '@plone/volto/components';
 import {
   Card,
   CardBody,
@@ -62,15 +63,13 @@ const SimpleCardTemplateCompact = ({
         ))}
       </div>
       {linkMore?.href && (
-        <div className="link-button">
-          <Button
-            className="view-all"
-            icon={false}
-            tag="button"
-            onClick={() => window.open(linkMore.href, '_self')}
+        <div className="link-button text-center my-4">
+          <UniversalLink
+            href={flattenToAppURL(linkMore.href)}
+            className="btn btn-tertiary"
           >
             {linkMore.title || intl.formatMessage(messages.view_all)}
-          </Button>
+          </UniversalLink>
         </div>
       )}
     </div>

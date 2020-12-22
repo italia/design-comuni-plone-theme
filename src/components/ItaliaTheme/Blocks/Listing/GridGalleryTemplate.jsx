@@ -18,6 +18,10 @@ const messages = defineMessages({
     defaultMessage:
       'Per questo template il numero di risultati per pagina deve essere 7. Controlla le impostazioni.',
   },
+  view_all: {
+    id: 'Vedi tutto',
+    defaultMessage: 'Vedi tutto',
+  },
 });
 
 const GridGalleryTemplate = ({
@@ -92,10 +96,13 @@ const GridGalleryTemplate = ({
             ))}
           </div>
           {linkMore?.href && (
-            <div className="link-more">
-              <ConditionalLink condition={!isEditMode} to={linkMore.href}>
-                {linkMore.title}
-              </ConditionalLink>
+            <div className="link-button text-center my-5">
+              <UniversalLink
+                href={flattenToAppURL(linkMore.href)}
+                className="btn btn-tertiary"
+              >
+                {linkMore.title || intl.formatMessage(messages.view_all)}
+              </UniversalLink>
             </div>
           )}
         </Container>
