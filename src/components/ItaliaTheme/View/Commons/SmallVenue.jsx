@@ -3,8 +3,8 @@ import React, { useEffect } from 'react';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import { ContactLink } from '@italia/components/ItaliaTheme/View';
+import { UniversalLink } from '@plone/volto/components';
 
 /**
  * SmallVenue view component class.
@@ -30,9 +30,12 @@ const SmallVenue = ({ venue }) => {
       <div className="card card-teaser shadow mt-3 rounded bigborder">
         <div className="card-body">
           <h5 className="card-title">
-            <Link to={flattenToAppURL(venue_fo['@id'])} title={venue_fo.title}>
+            <UniversalLink
+              href={flattenToAppURL(venue_fo['@id'])}
+              title={venue_fo.title}
+            >
               {venue_fo.title}
-            </Link>
+            </UniversalLink>
           </h5>
           <div className="card-text">
             {venue_fo.telefono && (

@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { DownloadFileFormat } from '@italia/components/ItaliaTheme/View';
 import cx from 'classnames';
@@ -26,10 +26,10 @@ const DocRow = ({ doc }) => {
     >
       <div className="doc">
         <div className="title">
-          <Link to={flattenToAppURL(doc['@id'])}>
+          <UniversalLink href={flattenToAppURL(doc['@id'])}>
             {doc.title}
             {/* {doc.items?.length > 1 && ` - ${doc.items[0]?.title}`} */}
-          </Link>
+          </UniversalLink>
         </div>
         {doc.items?.length === 1 && (
           <div className="downloads">

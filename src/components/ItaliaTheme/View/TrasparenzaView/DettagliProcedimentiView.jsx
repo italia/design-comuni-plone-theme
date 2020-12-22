@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 import { getDettagliProcedimento } from '@italia/actions';
 import { useLocation } from 'react-router-dom';
 import { flattenHTMLToAppURL } from '@plone/volto/helpers';
-import { Link } from 'react-router-dom';
+import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
 const messages = defineMessages({
@@ -302,9 +302,9 @@ const DettagliProcedimentiView = ({ content }) => {
               {intl.formatMessage(messages.unita_organizzativa_competente)}:
             </span>
             {dettagliProcedimento.ufficio_responsabile?.map((d, index) => (
-              <Link to={d['@id']} className="mr-2" key={index}>
+              <UniversalLink href={d['@id']} className="mr-2" key={index}>
                 {d.title}
-              </Link>
+              </UniversalLink>
             ))}
           </p>
         )}
@@ -315,9 +315,9 @@ const DettagliProcedimentiView = ({ content }) => {
             </span>
             <div>
               {dettagliProcedimento.dirigente?.map((d, index) => (
-                <Link to={d['@id']} className="mr-2" key={index}>
+                <UniversalLink href={d['@id']} className="mr-2" key={index}>
                   {d.title}
-                </Link>
+                </UniversalLink>
               ))}
             </div>
           </p>
@@ -331,9 +331,9 @@ const DettagliProcedimentiView = ({ content }) => {
             <div>
               {dettagliProcedimento.responsabile_procedimento?.map(
                 (d, index) => (
-                  <Link to={d['@id']} className="mr-2" key={index}>
+                  <UniversalLink href={d['@id']} className="mr-2" key={index}>
                     {d.title}
-                  </Link>
+                  </UniversalLink>
                 ),
               )}
             </div>

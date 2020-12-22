@@ -6,7 +6,7 @@
 import React, { useState, createRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import { Link } from 'react-router-dom';
+import { UniversalLink } from '@plone/volto/components';
 
 import {
   Chip,
@@ -227,9 +227,9 @@ const EventoView = ({ content, location }) => {
                       className="mr-2"
                     >
                       <ChipLabel tag="span">
-                        <Link to={flattenToAppURL(item['@id'])}>
+                        <UniversalLink href={flattenToAppURL(item['@id'])}>
                           {item.title}
-                        </Link>
+                        </UniversalLink>
                       </ChipLabel>
                     </Chip>
                   ))}

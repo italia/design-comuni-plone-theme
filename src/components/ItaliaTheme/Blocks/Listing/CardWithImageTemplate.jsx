@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { Link } from 'react-router-dom';
+import { UniversalLink } from '@plone/volto/components';
 import { useIntl } from 'react-intl';
 import moment from 'moment';
 import 'moment/min/locales';
@@ -105,9 +105,9 @@ const CardWithImageTemplate = ({
                         />
                       </CardCategory>
                       <CardTitle tag="h4">
-                        <Link to={flattenToAppURL(item['@id'])}>
+                        <UniversalLink href={flattenToAppURL(item['@id'])}>
                           {item.title || item.id}
-                        </Link>
+                        </UniversalLink>
                       </CardTitle>
                       {listingText && (
                         <CardText
@@ -125,8 +125,8 @@ const CardWithImageTemplate = ({
                           })}
                         >
                           {item.tassonomia_argomenti?.map((argument, index) => (
-                            <Link
-                              to={flattenToAppURL(argument['@id'])}
+                            <UniversalLink
+                              href={flattenToAppURL(argument['@id'])}
                               key={index}
                               title={argument.title}
                               className="text-decoration-none"
@@ -142,7 +142,7 @@ const CardWithImageTemplate = ({
                                   {argument.title}
                                 </ChipLabel>
                               </Chip>
-                            </Link>
+                            </UniversalLink>
                           ))}
                         </div>
                       )}

@@ -4,7 +4,7 @@
  */
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { UniversalLink } from '@plone/volto/components';
 import { useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
 import {
@@ -40,7 +40,9 @@ const HeaderCenter = () => {
     <Header small={false} theme="" type="center">
       <HeaderContent>
         <div className="it-brand-wrapper">
-          <Link to={subsite?.['@id'] ? flattenToAppURL(subsite['@id']) : '/'}>
+          <UniversalLink
+            href={subsite?.['@id'] ? flattenToAppURL(subsite['@id']) : '/'}
+          >
             <Logo />
             <div className="it-brand-text">
               <h2 className="no_toc">
@@ -50,7 +52,7 @@ const HeaderCenter = () => {
                 {subsite?.description || siteConfig.properties.siteSubtitle}
               </h3>
             </div>
-          </Link>
+          </UniversalLink>
         </div>
         <HeaderRightZone>
           {!subsite ? <SocialHeader /> : <SubsiteSocialHeader />}

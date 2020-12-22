@@ -2,8 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { Link } from 'react-router-dom';
-import { ConditionalLink } from '@plone/volto/components';
+import { UniversalLink, ConditionalLink } from '@plone/volto/components';
 import { useIntl, defineMessages } from 'react-intl';
 import moment from 'moment';
 import {
@@ -37,7 +36,7 @@ const GridGalleryTemplate = ({
         'public-ui': isEditMode,
       })}
     >
-      <div className='full-width'>
+      <div className="full-width">
         <Container className="px-4">
           {title && (
             <Row>
@@ -58,7 +57,9 @@ const GridGalleryTemplate = ({
                 key={item['@id'] ?? index}
                 className={cx('grid-gallery-item', `item-${index % 7}`)}
               >
-                <Link to={isEditMode ? '#' : flattenToAppURL(item['@id'])}>
+                <UniversalLink
+                  href={isEditMode ? '#' : flattenToAppURL(item['@id'])}
+                >
                   <img
                     src={flattenToAppURL(
                       item.image?.scales?.preview?.download ??
@@ -86,7 +87,7 @@ const GridGalleryTemplate = ({
                     alt=""
                   />
                   <h3>{item.title}</h3>
-                </Link>
+                </UniversalLink>
               </div>
             ))}
           </div>

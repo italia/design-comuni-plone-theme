@@ -22,13 +22,14 @@ import {
   Alert,
   Spinner,
 } from 'design-react-kit/dist/design-react-kit';
-import { Link, useLocation, useHistory } from 'react-router-dom';
+import { useLocation, useHistory } from 'react-router-dom';
 import {
   Pagination,
   SearchSections,
   SearchTopics,
   Icon,
 } from '@italia/components/ItaliaTheme';
+import { UniversalLink } from '@plone/volto/components';
 import { SearchUtils, TextInput, SelectInput } from '@italia/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { getSearchFilters, getSearchResults } from '@italia/actions';
@@ -487,9 +488,9 @@ const Search = () => {
                         <CardBody>
                           {i['@type'] && getSectionFromId(i['@id'])}
                           <h4 className="card-title">
-                            <Link to={flattenToAppURL(i['@id'])}>
+                            <UniversalLink href={flattenToAppURL(i['@id'])}>
                               {i.title}
-                            </Link>
+                            </UniversalLink>
                           </h4>
                           <p className="card-text">{i.description}</p>
                         </CardBody>
