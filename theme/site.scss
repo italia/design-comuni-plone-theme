@@ -66,6 +66,13 @@
 @import 'ItaliaTheme/Components/mobileMenu';
 @import 'ItaliaTheme/Components/relatedItemInEvidence';
 
+@import 'ItaliaTheme/Print/all_pages';
+@import 'ItaliaTheme/Print/news_items';
+@import 'ItaliaTheme/Print/bandi';
+@import 'ItaliaTheme/Print/persona';
+@import 'ItaliaTheme/Print/event';
+@import 'ItaliaTheme/Print/servizio';
+
 @import 'ItaliaTheme/Subsites/mixin';
 $subsite-yellow-primary: #fcab02;
 $subsite-yellow-primary-text: black;
