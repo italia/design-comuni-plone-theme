@@ -14,7 +14,6 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    infinite: true,
     responsive: [
       {
         breakpoint: 1025,
@@ -43,6 +42,8 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
     ],
   };
 
+  const getCaption = (item) => item.description ?? item.rights ?? null;
+
   return (
     <div
       className={cx('photogallery', {
@@ -61,7 +62,7 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
           <div className="slider-container">
             <div className="it-carousel-all it-card-bg">
               <Slider {...settings}>
-                {items.map((item, i) => (
+                {items.map((item) => (
                   <div className="it-single-slide-wrapper" key={item['@id']}>
                     <figure className="img-wrapper">
                       {item.image && (
@@ -72,6 +73,9 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
                           alt={item.title}
                           className="img-fluid"
                         ></img>
+                      )}
+                      {getCaption(item) && (
+                        <figcaption>{getCaption(item)}</figcaption>
                       )}
                     </figure>
                   </div>
