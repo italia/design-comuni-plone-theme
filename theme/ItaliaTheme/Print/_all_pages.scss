@@ -1,0 +1,116 @@
+	@media print {
+		// removed underlining from links 
+		a {
+			text-decoration: none!important;
+			font-weight: 600!important;
+		}
+
+		// removed part of header header
+		.it-header-slim-wrapper {
+			display: none;
+		}
+
+		.it-header-center-content-wrapper {
+			.it-brand-wrapper {
+				margin: 0 auto;
+
+				// incresed name of municipalitie
+				a {
+					.it-brand-text {
+						.no_toc {
+							font-size: 2rem!important;
+							color: $primary;
+						}
+					}
+				}
+			}
+		}
+
+		// Removed shadow and card's padding 
+		.card {
+			&.shadow {
+				box-shadow: none!important;
+				padding: 1rem 0 0 0!important
+			}
+
+			&.bigborder {
+				border: none!important;
+				border-left-width: 0 !important;
+			}
+		}
+
+		#text-tempi_e_scadenze > div > p {
+			box-shadow: none!important;
+			padding: 1rem 0 0 0!important;
+		}
+
+		#briciole {
+			display: none;
+		}
+
+		// removed first column in CT pages
+		#view > div > div:nth-child(1) {
+			div.col-lg-3.offset-lg-1 {
+				display: none;
+			}
+		} 
+
+		#view > div {
+			.row.border-top.row-column-border.row-column-menu-left {
+				border-top: none!important;			
+			}
+
+			// Reduced max width image header
+			.row.wide-image.row-full-width.my-3 {
+				width: 100%;
+				max-width:100%;
+
+				figure {
+					display: flex;
+					justify-content: center;
+
+					img {
+						max-width: 300px!important;
+					} 
+				}
+			}
+
+			 aside {
+				display: none;
+			}
+
+			.it-page-sections-container {
+				border-top: none;
+
+				.it-carousel-wrapper {
+					display: none;
+				}
+		
+				.video {
+					display: none;
+				}
+
+				.block {
+					display: none;
+				}
+			}
+		}
+
+		#geocoded-result {
+			.leaflet-control-attribution {
+				display: none;
+			}
+		}
+
+		#contenuti-correlati {
+			display: none;
+		}
+
+		#correlato-in-evidenza {
+			display: none;
+		}
+
+		footer.it-footer {
+			display: none;
+		}
+	}
