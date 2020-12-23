@@ -42,9 +42,9 @@ const messages = defineMessages({
     id: 'telefono',
     defaultMessage: 'Tel',
   },
-  email: {
-    id: 'email',
-    defaultMessage: 'Email',
+  email_label: {
+    id: 'email_label',
+    defaultMessage: 'E-mail',
   },
   organizzazione_riferimento: {
     id: 'organizzazione_riferimento',
@@ -333,7 +333,9 @@ const PersonaView = ({ content }) => {
 
                 {content?.email?.length > 0 && (
                   <p>
-                    <strong>{intl.formatMessage(messages.email)}: </strong>
+                    <strong>
+                      {intl.formatMessage(messages.email_label)}:{' '}
+                    </strong>
                     {content.email.map((email) => (
                       <>
                         <ContactLink email={email} label={false} />{' '}
