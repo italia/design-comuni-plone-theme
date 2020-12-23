@@ -30,7 +30,7 @@ const messages = defineMessages({
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const Metadata = ({ content, showTags = true, noMargin = false, children }) => {
+const Metadata = ({ content, showTags = false, noMargin = false, children }) => {
   const intl = useIntl();
   return (
     <article
