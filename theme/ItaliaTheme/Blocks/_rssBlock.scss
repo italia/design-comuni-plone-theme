@@ -1,0 +1,13 @@
+#text-body {
+  .rssBlock {
+    .row > * {
+      max-width: 50%;
+      flex: 1 0 auto;
+
+      @media (max-width: 480px) {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
