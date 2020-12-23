@@ -14,14 +14,16 @@ const ContentImage = ({ content, position }) => {
     siteConfig.italiaThemeViewsConfig.imagePosition === position;
 
   return view ? (
-    <WideImage
-      title={content?.title}
-      image={content?.image}
-      caption={content?.image_caption}
-      fullWidth={
-        siteConfig.italiaThemeViewsConfig.imagePosition === 'afterHeader'
-      }
-    />
+    <div className="content-image">
+      <WideImage
+        title={content?.title}
+        image={content?.image}
+        caption={content?.image_caption}
+        fullWidth={
+          siteConfig.italiaThemeViewsConfig.imagePosition === 'afterHeader'
+        }
+      />
+    </div>
   ) : null;
 };
 export default ContentImage;
