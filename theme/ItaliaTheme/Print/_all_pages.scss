@@ -55,8 +55,24 @@
 			}
 		} 
 
-		#view > div > div.row.border-top.row-column-border.row-column-menu-left {
-			border-top: none!important;
+		#view > div {
+			.row.border-top.row-column-border.row-column-menu-left {
+				border-top: none!important;			
+			}
+
+			.row.wide-image.row-full-width.my-3 {
+				width: 100%;
+				max-width:100%;
+
+				figure {
+					display: flex;
+					justify-content: center;
+
+					img {
+						max-width: 300px!important;
+					} 
+				}
+			}
 
 			 aside {
 				display: none;
