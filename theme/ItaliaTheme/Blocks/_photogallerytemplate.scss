@@ -5,9 +5,18 @@
     margin-bottom: 22px;
   }
 
-  .img-wrapper img {
-    width: 100%;
-    height: auto;
+  figure.img-wrapper {
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      color: #666;
+      font-size: 0.8em;
+      text-align: center;
+      padding: 0.5em 1em;
+    }
   }
 
   .title {
@@ -28,5 +37,10 @@
       color: $primary;
       background-color: #eee;
     }
+  }
+
+  .slick-track {
+    display: flex;
+    align-items: center;
   }
 }
