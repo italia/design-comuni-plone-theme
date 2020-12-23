@@ -26,35 +26,6 @@
 			}
 		}
 
-		#page-document {
-			// remove blocks apart cardWithImageTemplate
-			.block:not(.cardWithImageTemplate) {
-				display: none;
-			}
-
-			div.block.listing.cardWithImageTemplate {
-				.full-width {
-					left: unset!important;
-					right: unset!important;
-					width: 100% !important;
-					margin-right: 0 !important;
-					margin-left: 0 !important;
-
-					.container {
-						padding-left: 0 !important;
-						max-width: 100%!important;
-
-						.items.row {
-							justify-content: center;
-						}
-						.col-item {
-							max-width: 33%;
-						};
-					}
-				}
-			}
-		} 
-
 		// Removed shadow and card's padding 
 		.card {
 			&.shadow {
