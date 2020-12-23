@@ -40,7 +40,6 @@ msgstr "Aspetto"
 msgid "Block style"
 msgstr "Stile del blocco"
 
-#: components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
 msgid "Card detail label"
 msgstr "Vedi"
@@ -391,7 +390,6 @@ msgid "Vedi"
 msgstr "Vedi"
 
 #: components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate
-#: components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate
 #: components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate
 #: components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate
 #: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
