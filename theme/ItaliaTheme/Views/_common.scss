@@ -7,6 +7,13 @@ h6 {
   color: $primary-b5;
 }
 
+//questa potrebbe essere la soluzione per evitare lo scroll orizzontale causato dal full-width su windows, ma poi tutto ciò che va in overflow viene tagliato e non si vede. quindi per il momento lasciamo cosi com'è
+// body {
+//   overflow-x: hidden;
+//   overflow-y: auto;
+//   width: 100vw;
+// }
+
 .full-width {
   position: relative;
   right: 50%;

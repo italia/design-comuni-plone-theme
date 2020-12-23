@@ -11,7 +11,7 @@ a {
 
   &[href^='mailto'],
   &[target='_blank'],
-  &[rel="noopener noreferreer"] {
+  &[rel='noopener noreferreer'] {
     word-break: break-word;
   }
 }
