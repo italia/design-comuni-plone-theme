@@ -7,10 +7,9 @@ import {
   Card,
   CardBody,
   CardTitle,
-  Button,
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
-import { ConditionalLink } from '@plone/volto/components';
+import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { ListingText } from '@italia/components/ItaliaTheme';
 import { Link } from 'react-router-dom';
@@ -153,17 +152,13 @@ const BandiInEvidenceTemplate = ({
             })}
           </div>
           {linkMore?.href && (
-            <div className="link-more">
-              <Button
-                className="view-all"
-                icon={false}
-                tag="button"
-                onClick={() => window.open(linkMore.href, '_self')}
+            <div className="link-button text-center my-4">
+              <UniversalLink
+                href={flattenToAppURL(linkMore.href)}
+                className="btn btn-tertiary"
               >
-                <ConditionalLink condition={!isEditMode} to={linkMore.href}>
-                  {linkMore.title}
-                </ConditionalLink>
-              </Button>
+                {linkMore.title || intl.formatMessage(messages.view_all)}
+              </UniversalLink>
             </div>
           )}
         </Container>

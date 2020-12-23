@@ -1,13 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { useIntl } from 'react-intl';
+import { useIntl, defineMessages } from 'react-intl';
+import { useLocation } from 'react-router-dom';
 import moment from 'moment';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
-import { flattenHTMLToAppURL } from '@plone/volto/helpers';
+import { flattenHTMLToAppURL, flattenToAppURL } from '@plone/volto/helpers';
 import { getTableRowData } from '@italia/helpers';
-import { useLocation } from 'react-router-dom';
+
+const messages = defineMessages({
+  view_all: {
+    id: 'Vedi tutto',
+    defaultMessage: 'Vedi tutto',
+  },
+});
 
 const AmministrazioneTrasparenteTablesTemplate = ({
   items,
@@ -88,6 +95,16 @@ const AmministrazioneTrasparenteTablesTemplate = ({
             })}
           </tbody>
         </table>
+        {linkMore?.href && (
+          <div className="link-button text-center my-4">
+            <UniversalLink
+              href={flattenToAppURL(linkMore.href)}
+              className="btn btn-tertiary"
+            >
+              {linkMore.title || intl.formatMessage(messages.view_all)}
+            </UniversalLink>
+          </div>
+        )}
       </Container>
     </div>
   );
