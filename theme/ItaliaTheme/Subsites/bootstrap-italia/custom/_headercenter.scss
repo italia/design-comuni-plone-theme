@@ -17,6 +17,7 @@
           ul {
             .icon {
               fill: $subsite-primary-text;
+              color: $subsite-primary-text;
             }
           }
         }
@@ -47,6 +48,7 @@
                 &:hover {
                   svg {
                     fill: darken($subsite-primary-text, 5%);
+                    color: darken($subsite-primary-text, 5%);
                   }
                 }
               }

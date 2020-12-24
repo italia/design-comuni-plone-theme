@@ -40,7 +40,7 @@ const FooterSocials = () => {
                 className="p-2 text-white"
               >
                 <Icon
-                  icon={`it-${social.icon}`}
+                  icon={social.icon}
                   color="white"
                   className="align-top"
                   padding={false}
