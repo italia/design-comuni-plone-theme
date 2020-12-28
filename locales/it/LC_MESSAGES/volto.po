@@ -258,6 +258,10 @@ msgid "RssFeed"
 msgstr "Feed RSS"
 
 #: addons/volto-rss-block/src/Block/RssSidebar
+msgid "RssFeed Url"
+msgstr ""
+
+#: addons/volto-rss-block/src/Block/RssSidebar
 msgid "RssFeedItemNumber"
 msgstr "Numero di elementi da mostrare"
 
@@ -1095,10 +1099,6 @@ msgstr "Fax"
 msgid "feed_not_set"
 msgstr "Feed RSS non impostato"
 
-#: addons/volto-rss-block/src/Block/Edit
-msgid "feed_set"
-msgstr "Feed RSS impostato"
-
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "file_correlato"
 msgstr ""
@@ -1305,13 +1305,15 @@ msgstr "Servizi o uffici di riferimento"
 msgid "link"
 msgstr "Collegamento"
 
+#: addons/volto-rss-block/src/Block/RssSidebar
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 msgid "linkMore"
 msgstr "Link ad altro"
 
+#: addons/volto-rss-block/src/Block/RssSidebar
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 msgid "linkMoreTitle"
-msgstr "Link ad altro"
+msgstr "Titolo per il link ad altro"
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "link_siti_esterni"
@@ -1759,10 +1761,6 @@ msgstr "Sede di"
 msgid "selectOtherArguments"
 msgstr "Seleziona gli altri argomenti"
 
-#: addons/volto-rss-block/src/Block/RssSidebar
-msgid "selectRSSOptions"
-msgstr "Seleziona opzioni"
-
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 msgid "select_argument_sidebar"
 msgstr "Seleziona un argomento nella barra a lato"
@@ -1935,6 +1933,7 @@ msgstr "Tipologia organizzazione"
 msgid "tipologia_persona"
 msgstr "Tipologia persona"
 
+#: addons/volto-rss-block/src/Block/RssSidebar
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar

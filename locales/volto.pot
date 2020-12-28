@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-12-23T16:28:23.118Z\n"
+"POT-Creation-Date: 2020-12-28T10:01:45.677Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -316,6 +316,11 @@ msgstr ""
 #: addons/volto-rss-block/src/Block/RssSidebar
 # defaultMessage: RSS Feed
 msgid "RssFeed"
+msgstr ""
+
+#: addons/volto-rss-block/src/Block/RssSidebar
+# defaultMessage: RSS Feed URL
+msgid "RssFeed Url"
 msgstr ""
 
 #: addons/volto-rss-block/src/Block/RssSidebar
@@ -1351,11 +1356,6 @@ msgstr ""
 msgid "feed_not_set"
 msgstr ""
 
-#: addons/volto-rss-block/src/Block/Edit
-# defaultMessage: Feed set
-msgid "feed_set"
-msgstr ""
-
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: File correlato
 msgid "file_correlato"
@@ -1612,13 +1612,15 @@ msgstr ""
 msgid "link"
 msgstr ""
 
+#: addons/volto-rss-block/src/Block/RssSidebar
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
-# defaultMessage: Link ad altro
+# defaultMessage: Link more
 msgid "linkMore"
 msgstr ""
 
+#: addons/volto-rss-block/src/Block/RssSidebar
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
-# defaultMessage: Titolo per il link ad altro
+# defaultMessage: Title for link more
 msgid "linkMoreTitle"
 msgstr ""
 
@@ -2174,11 +2176,6 @@ msgstr ""
 msgid "selectOtherArguments"
 msgstr ""
 
-#: addons/volto-rss-block/src/Block/RssSidebar
-# defaultMessage: Select options
-msgid "selectRSSOptions"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 # defaultMessage: Seleziona un argomento nella barra a lato
 msgid "select_argument_sidebar"
@@ -2392,10 +2389,11 @@ msgstr ""
 msgid "tipologia_persona"
 msgstr ""
 
+#: addons/volto-rss-block/src/Block/RssSidebar
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
-# defaultMessage: Titolo
+# defaultMessage: Title
 msgid "title"
 msgstr ""
 

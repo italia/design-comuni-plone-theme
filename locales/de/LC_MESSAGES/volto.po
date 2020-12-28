@@ -273,6 +273,10 @@ msgid "RssFeed"
 msgstr ""
 
 #: addons/volto-rss-block/src/Block/RssSidebar
+msgid "RssFeed Url"
+msgstr ""
+
+#: addons/volto-rss-block/src/Block/RssSidebar
 msgid "RssFeedItemNumber"
 msgstr ""
 
@@ -1110,10 +1114,6 @@ msgstr ""
 msgid "feed_not_set"
 msgstr ""
 
-#: addons/volto-rss-block/src/Block/Edit
-msgid "feed_set"
-msgstr ""
-
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "file_correlato"
 msgstr ""
@@ -1320,10 +1320,12 @@ msgstr ""
 msgid "link"
 msgstr ""
 
+#: addons/volto-rss-block/src/Block/RssSidebar
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 msgid "linkMore"
 msgstr ""
 
+#: addons/volto-rss-block/src/Block/RssSidebar
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 msgid "linkMoreTitle"
 msgstr ""
@@ -1774,10 +1776,6 @@ msgstr ""
 msgid "selectOtherArguments"
 msgstr ""
 
-#: addons/volto-rss-block/src/Block/RssSidebar
-msgid "selectRSSOptions"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 msgid "select_argument_sidebar"
 msgstr ""
@@ -1950,6 +1948,7 @@ msgstr ""
 msgid "tipologia_persona"
 msgstr ""
 
+#: addons/volto-rss-block/src/Block/RssSidebar
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
