@@ -16900,9 +16900,9 @@ volto-multilingual-widget@collective/volto-multilingual-widget#v1.0.1:
   dependencies:
     draft-js-export-html "^1.4.1"
 
-volto-rss-block@redturtle/volto-rss-block#v1.0.0:
-  version "1.0.0"
-  resolved "https://codeload.github.com/redturtle/volto-rss-block/tar.gz/14d6d25a5eab6c7dd60be1aff6bfc9a2b44eefb7"
+volto-rss-block@redturtle/volto-rss-block#v1.1.0:
+  version "1.1.0"
+  resolved "https://codeload.github.com/redturtle/volto-rss-block/tar.gz/1f5f32f29e72a07162919a883531e570c0fde3fd"
   dependencies:
     rss-parser "3.7.5"
 

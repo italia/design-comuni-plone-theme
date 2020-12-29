@@ -10,7 +10,11 @@ import {
   CardTitle,
   CardText,
   CardReadMore,
+  Row,
+  Col,
 } from 'design-react-kit/dist/design-react-kit';
+import { flattenToAppURL } from '@plone/volto/helpers';
+import { UniversalLink } from '@plone/volto/components';
 
 const messages = defineMessages({
   readMore: { id: 'rss_read_more', defaultMessage: 'Read more' },
@@ -18,54 +22,83 @@ const messages = defineMessages({
     id: 'rss_no_results',
     defaultMessage: 'No results from RSS feed.',
   },
+  view_all: {
+    id: 'Vedi tutto',
+    defaultMessage: 'Vedi tutto',
+  },
 });
 
-const CardWithoutImageRssTemplate = ({ items = [], isEditMode }) => {
+const CardWithoutImageRssTemplate = ({ items = [], isEditMode, data = {} }) => {
   const intl = useIntl();
   moment.locale(intl.locale);
 
   return (
     <div className={cx('', { 'public-ui': isEditMode })}>
-      <div className="row">
-        {items?.length > 0 ? (
-          items.map((item) => (
-            <div className="col-12 col-lg-3 mb-3" key={item['@id']}>
-              <Card noWrapper={false} tag="div">
-                <CardBody tag="div">
-                  <div className="category-top">
-                    {item?.categories?.length > 0 && item.categories[0]._ ? (
-                      <>
-                        <span className="category">{item.categories[0]._}</span>
-                        <span className="mx-1">&mdash;</span>
-                      </>
-                    ) : (
-                      ''
-                    )}
-                    <span>{moment(item.pubDate).format('DD-MMM-Y')}</span>
-                  </div>
-                  <CardTitle className="big-heading" tag="h5">
-                    {item.title}
-                  </CardTitle>
-                  <CardText tag="p" className="text-serif">
-                    {item.contentSnippet}
-                  </CardText>
-                </CardBody>
-                <CardReadMore
-                  iconName="it-arrow-right"
-                  className="ml-4"
-                  tag="a"
-                  href={item?.link}
-                  text={intl.formatMessage(messages.readMore)}
-                />
-              </Card>
+      {items?.length > 0 ? (
+        <>
+          {data.title && (
+            <Row>
+              <Col>
+                <h2 className="mb-4 mt-5">{data.title}</h2>
+              </Col>
+            </Row>
+          )}
+          <Row>
+            {items.map((item) => (
+              <Col lg={3} className="mb-3" key={item['@id']}>
+                <Card noWrapper={false} tag="div">
+                  <CardBody tag="div">
+                    <div className="category-top">
+                      {item?.categories?.length > 0 && item.categories[0]._ ? (
+                        <>
+                          <span className="category">
+                            {item.categories[0]._}
+                          </span>
+                          <span className="mx-1">&mdash;</span>
+                        </>
+                      ) : (
+                        ''
+                      )}
+                      {(item.pubDate || item.date) && (
+                        <span>
+                          {moment(item.pubDate || item.date).format('DD-MMM-Y')}
+                        </span>
+                      )}
+                    </div>
+                    <CardTitle className="big-heading" tag="h5">
+                      {item.title}
+                    </CardTitle>
+                    <CardText tag="p" className="text-serif">
+                      {item.contentSnippet}
+                    </CardText>
+                  </CardBody>
+                  <CardReadMore
+                    iconName="it-arrow-right"
+                    className="ml-4"
+                    tag="a"
+                    href={item?.link}
+                    text={intl.formatMessage(messages.readMore)}
+                  />
+                </Card>
+              </Col>
+            ))}
+          </Row>
+          {data.linkMore && data.linkMoreTitle && (
+            <div className="link-button text-center my-4">
+              <UniversalLink
+                href={flattenToAppURL(data.linkMore)}
+                className="btn btn-tertiary"
+              >
+                {data.linkMoreTitle || intl.formatMessage(messages.view_all)}
+              </UniversalLink>
             </div>
-          ))
-        ) : (
-          <div className="no-rss-feed-results">
-            {intl.formatMessage(messages.noResults)}
-          </div>
-        )}
-      </div>
+          )}
+        </>
+      ) : data.feed ? (
+        <div className="no-rss-feed-results">
+          {intl.formatMessage(messages.noResults)}
+        </div>
+      ) : null}
     </div>
   );
 };
