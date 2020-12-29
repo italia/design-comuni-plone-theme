@@ -49,10 +49,20 @@ const SimpleCardTemplateDefault = ({
   path_filters,
   show_path_filters,
   addFilters,
+  additionalFilters = [],
 }) => {
   const intl = useIntl();
   moment.locale(intl.locale);
-  const [pathFilter, setPathFilter] = useState(null);
+
+  let currentPathFilter = additionalFilters
+    ?.filter((f) => {
+      return f.i === 'path';
+    })
+    ?.map((f) => {
+      return f.v;
+    });
+
+  const [pathFilter, setPathFilter] = useState(currentPathFilter?.[0] || null);
 
   const getItemClass = (item) => {
     let className = null;

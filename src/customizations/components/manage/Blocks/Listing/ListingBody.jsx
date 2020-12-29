@@ -136,13 +136,15 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
         ''
       )}
 
-      {!loadingQuery && listingItems.length > 0 ? (
+      {!loadingQuery &&
+      (listingItems.length > 0 || additionalFilters?.length > 0) ? (
         <div className={`full-width ${getBlockClasses()}`} ref={listingRef}>
           <ListingBodyTemplate
             items={listingItems}
             isEditMode={isEditMode}
             {...data}
             addFilters={addFilters}
+            additionalFilters={additionalFilters}
             items_total={
               data?.query?.length === 0
                 ? content?.items_total
@@ -163,7 +165,7 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
                 />
               </div>
             )}
-          {(data?.query?.length > 0 || additionalFilters?.length > 0 > 0) &&
+          {(data?.query?.length > 0 || additionalFilters?.length > 0) &&
             querystringResults[data.block].total >
               (data.b_size || settings.defaultPageSize) && (
               <div className="pagination-wrapper" key={currentPage}>
