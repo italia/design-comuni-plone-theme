@@ -73,7 +73,7 @@ const Body = ({ data, isEditMode }) => {
 
   const content =
     twitter_posts?.length > 0 ? (
-      <div className="py-4">
+      <div className="py-4 px-4 px-md-0">
         {data.title && <h2>{data.title}</h2>}
         {authors?.length > 0 && (
           <div className="authors">

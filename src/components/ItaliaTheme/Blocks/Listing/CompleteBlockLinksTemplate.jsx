@@ -36,7 +36,7 @@ const CompleteBlockLinksTemplate = ({
         'public-ui': isEditMode,
       })}
     >
-      <Container>
+      <Container className="px-4 px-md-0">
         {title && (
           <Row>
             <Col>

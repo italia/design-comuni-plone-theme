@@ -42,6 +42,16 @@
       ul.slick-dots {
         margin-bottom: 0;
       }
+
+      @media (max-width: #{map-get($grid-breakpoints, md)}) {
+        .slick-arrow.slick-prev {
+          left: -20px;
+        }
+
+        .slick-arrow.slick-next {
+          right: -20px;
+        }
+      }
     }
 
     .tweet {

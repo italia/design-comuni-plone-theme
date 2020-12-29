@@ -36,6 +36,10 @@ msgstr "Alert"
 msgid "Aspetto"
 msgstr "Aspetto"
 
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
+msgid "Bando"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 msgid "Block style"
 msgstr "Stile del blocco"
@@ -259,7 +263,7 @@ msgstr "Feed RSS"
 
 #: addons/volto-rss-block/src/Block/RssSidebar
 msgid "RssFeed Url"
-msgstr ""
+msgstr "RssFeed URL"
 
 #: addons/volto-rss-block/src/Block/RssSidebar
 msgid "RssFeedItemNumber"
@@ -346,7 +350,7 @@ msgstr "Titolo"
 
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "Twitter Posts"
-msgstr ""
+msgstr "Twitter Posts"
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
@@ -399,6 +403,8 @@ msgstr "Vedi"
 #: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateCompact
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
+#: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
+#: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 msgid "Vedi tutto"
 msgstr "Vedi tutto"
@@ -517,6 +523,7 @@ msgstr "Torna alla ricerca"
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 #: components/ItaliaTheme/View/Commons/PageHeader
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 msgid "bando_closed"
 msgstr "Scaduto"
 
@@ -538,11 +545,13 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 #: components/ItaliaTheme/View/Commons/PageHeader
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 msgid "bando_inProgress"
 msgstr "In corso"
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 #: components/ItaliaTheme/View/Commons/PageHeader
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 msgid "bando_open"
 msgstr "Attivo"
 
@@ -711,6 +720,7 @@ msgid "dataset"
 msgstr "Dataset"
 
 #: components/ItaliaTheme/View/Commons/PageHeader
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDates
 msgid "date"
 msgstr "Data"
 
@@ -1348,6 +1358,7 @@ msgid "mailto"
 msgstr "Invia"
 
 #: components/ItaliaTheme/View/Commons/PageHeader
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
 msgid "minutes"
 msgstr "min"
 
@@ -1424,6 +1435,7 @@ msgid "novita"
 msgstr "Novità"
 
 #: components/ItaliaTheme/View/Commons/PageHeader
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderNewsItem
 msgid "numero_progressivo_cs"
 msgstr "Numero del comunicato stampa"
 
@@ -1546,6 +1558,7 @@ msgid "quartiere"
 msgstr "Quartiere "
 
 #: components/ItaliaTheme/View/Commons/PageHeader
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
 msgid "reading_time"
 msgstr "Tempo di lettura"
 
@@ -1657,6 +1670,7 @@ msgid "rss_read_more"
 msgstr "Leggi tutto"
 
 #: components/ItaliaTheme/View/Commons/PageHeader
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "ruolo"
 msgstr "Ruolo"
@@ -1918,7 +1932,7 @@ msgstr "Termini del procedimento"
 
 #: components/ItaliaTheme/Blocks/EventSearch/Filters/TextFilter
 msgid "text_filter_placeholder"
-msgstr ""
+msgstr "Inserisci un valore"
 
 #: components/ItaliaTheme/View/BandoView/BandoView
 msgid "tipologia_bando"
@@ -1929,6 +1943,7 @@ msgid "tipologia_organizzazione"
 msgstr "Tipologia organizzazione"
 
 #: components/ItaliaTheme/View/Commons/PageHeader
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "tipologia_persona"
 msgstr "Tipologia persona"
@@ -1955,24 +1970,25 @@ msgstr "al"
 
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/View/Commons/PageHeader
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderTassonomiaArgomenti
 msgid "topics"
 msgstr "Argomenti"
 
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccountLink"
-msgstr ""
+msgstr "Link alla pagina del profilo"
 
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccounts"
-msgstr ""
+msgstr "Accounts"
 
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccounts_description"
-msgstr ""
+msgstr "Inserisci i nomi degli account di cui vuoi visualizzare i post, separati da virgola. Ad esempio, se vuoi mostrare i tweet di Repubblica e del Corriere della Sera, inserisci “repubblica,Corriere"."
 
 #: components/ItaliaTheme/Blocks/TwitterPosts/Body
 msgid "twitter_posts_no_results"
-msgstr ""
+msgstr "Non c'è nessun post da mostrare."
 
 #: components/ItaliaTheme/View/BandoView/BandoView
 msgid "ufficio_responsabile"
