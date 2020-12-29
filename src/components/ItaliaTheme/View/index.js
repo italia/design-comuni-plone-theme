@@ -19,7 +19,13 @@ export EmbeddedVideo from '@italia/components/ItaliaTheme/View/Commons/EmbeddedV
 export Events from '@italia/components/ItaliaTheme/View/Commons/Events';
 export Venue from '@italia/components/ItaliaTheme/View/Commons/Venue';
 
-export PageHeader from '@italia/components/ItaliaTheme/View/Commons/PageHeader';
+export PageHeader from '@italia/components/ItaliaTheme/View/Commons/PageHeader/PageHeader';
+export PageHeaderDates from '@italia/components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDates';
+export PageHeaderEventDates from '@italia/components/ItaliaTheme/View/Commons/PageHeader/PageHeaderEventDates';
+export PageHeaderPersona from '@italia/components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona';
+export PageHeaderBando from '@italia/components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando';
+export PageHeaderNewsItem from '@italia/components/ItaliaTheme/View/Commons/PageHeader/PageHeaderNewsItem';
+export PageHeaderTassonomiaArgomenti from '@italia/components/ItaliaTheme/View/Commons/PageHeader/PageHeaderTassonomiaArgomenti';
 export Attachment from '@italia/components/ItaliaTheme/View/Commons/Attachment';
 export Attachments from '@italia/components/ItaliaTheme/View/Commons/Attachments';
 export CuredBy from '@italia/components/ItaliaTheme/View/Commons/CuredBy';
