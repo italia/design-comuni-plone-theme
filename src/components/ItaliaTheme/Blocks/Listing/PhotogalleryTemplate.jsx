@@ -50,41 +50,39 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
         'public-ui': isEditMode,
       })}
     >
-      <div className="full-width">
-        <Container className="px-4">
-          {title && (
-            <Row>
-              <Col>
-                <h2 className="mb-4">{title}</h2>
-              </Col>
-            </Row>
-          )}
-          <div className="slider-container">
-            <div className="it-carousel-all it-card-bg">
-              <Slider {...settings}>
-                {items.map((item) => (
-                  <div className="it-single-slide-wrapper" key={item['@id']}>
-                    <figure className="img-wrapper">
-                      {item.image && (
-                        <img
-                          src={flattenToAppURL(
-                            item?.image?.scales?.preview?.download,
-                          )}
-                          alt={item.title}
-                          className="img-fluid"
-                        ></img>
-                      )}
-                      {getCaption(item) && (
-                        <figcaption>{getCaption(item)}</figcaption>
-                      )}
-                    </figure>
-                  </div>
-                ))}
-              </Slider>
-            </div>
+      <Container className="px-4">
+        {title && (
+          <Row>
+            <Col>
+              <h2 className="mb-4">{title}</h2>
+            </Col>
+          </Row>
+        )}
+        <div className="slider-container px-4 px-md-0">
+          <div className="it-carousel-all it-card-bg">
+            <Slider {...settings}>
+              {items.map((item) => (
+                <div className="it-single-slide-wrapper" key={item['@id']}>
+                  <figure className="img-wrapper">
+                    {item.image && (
+                      <img
+                        src={flattenToAppURL(
+                          item?.image?.scales?.preview?.download,
+                        )}
+                        alt={item.title}
+                        className="img-fluid"
+                      ></img>
+                    )}
+                    {getCaption(item) && (
+                      <figcaption>{getCaption(item)}</figcaption>
+                    )}
+                  </figure>
+                </div>
+              ))}
+            </Slider>
           </div>
-        </Container>
-      </div>
+        </div>
+      </Container>
     </div>
   );
 };
