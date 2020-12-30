@@ -39,6 +39,16 @@
     }
   }
 
+  @media (max-width: #{map-get($grid-breakpoints, md)}) {
+    .slick-arrow.slick-prev {
+      left: -20px;
+    }
+
+    .slick-arrow.slick-next {
+      right: -20px;
+    }
+  }
+
   .slick-track {
     display: flex;
     align-items: center;
