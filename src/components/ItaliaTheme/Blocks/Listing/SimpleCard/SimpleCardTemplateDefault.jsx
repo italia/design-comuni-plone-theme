@@ -177,7 +177,7 @@ const SimpleCardTemplateDefault = ({
                     {show_section && (
                       <span className="text font-weight-bold">
                         <ListingCategory
-                          category={item.design_italia_meta_type}
+                          category={item.parent?.title}
                           item={item}
                         />
                       </span>
