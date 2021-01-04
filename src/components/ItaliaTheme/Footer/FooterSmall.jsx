@@ -4,9 +4,8 @@
  */
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { UniversalLink } from '@plone/volto/components';
 import { defineMessages, useIntl } from 'react-intl';
-import PropTypes from 'prop-types';
 import { Container } from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
@@ -42,24 +41,38 @@ const FooterSmall = () => {
         <h3 className="sr-only">{intl.formatMessage(messages.goToPage)}</h3>
         <ul className="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row">
           <li className="list-inline-item">
-            <Link to="#" title={intl.formatMessage(messages.legalNotes)}>
+            <UniversalLink
+              href="#"
+              title={intl.formatMessage(messages.legalNotes)}
+            >
               Media policy
-            </Link>
+            </UniversalLink>
           </li>
           <li className="list-inline-item">
-            <Link to="#" title={intl.formatMessage(messages.legalNotes)}>
+            <UniversalLink
+              href="#"
+              title={intl.formatMessage(messages.legalNotes)}
+            >
               {intl.formatMessage(messages.legalNotes)}
-            </Link>
+            </UniversalLink>
           </li>
           <li className="list-inline-item">
-            <Link to="#" title="Privacy-Cookies">
+            <UniversalLink href="#" title="Privacy-Cookies">
               Privacy policy
-            </Link>
+            </UniversalLink>
           </li>
           <li className="list-inline-item">
-            <Link to="#" title={intl.formatMessage(messages.siteMap)}>
+            <UniversalLink
+              href="#"
+              title={intl.formatMessage(messages.siteMap)}
+            >
               {intl.formatMessage(messages.siteMap)}
-            </Link>
+            </UniversalLink>
+          </li>
+          <li className="list-inline-item">
+            <UniversalLink href="https://www.redturtle.it/" title="Credits">
+              Credits
+            </UniversalLink>
           </li>
         </ul>
       </Container>
