@@ -12,7 +12,7 @@ import {
   FooterSmall,
   SubsiteFooter,
 } from '@italia/components/ItaliaTheme/';
-import { CookieBanner } from '@italia/addons/volto-cookie-banner';
+import CookieBanner from '@italia/addons/volto-cookie-banner/CookieBannerContainer';
 
 /**
  * Footer component class.
