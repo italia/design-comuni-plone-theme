@@ -123,6 +123,16 @@
     },
     "ignoreFiles": "theme/themes/default/**/*.overrides"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{jsx}": [
+      "yarn i18n"
+    ]
+  },
   "engines": {
     "node": "^10 || ^12"
   },
