@@ -130,7 +130,7 @@
   },
 
   "engines": {
-    "node": "^10 || ^12"
+    "node": "^10 || ^12 || ^14"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.30",
