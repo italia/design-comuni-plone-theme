@@ -123,6 +123,12 @@
     },
     "ignoreFiles": "theme/themes/default/**/*.overrides"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn i18n && git add ."
+    }
+  },
+
   "engines": {
     "node": "^10 || ^12"
   },
