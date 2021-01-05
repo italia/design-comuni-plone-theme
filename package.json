@@ -125,14 +125,10 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "yarn i18n && git add ."
     }
   },
-  "lint-staged": {
-    "src/**/*.{jsx}": [
-      "yarn i18n"
-    ]
-  },
+
   "engines": {
     "node": "^10 || ^12"
   },
