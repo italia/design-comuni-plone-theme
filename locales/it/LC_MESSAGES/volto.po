@@ -63,7 +63,7 @@ msgstr "Chiudi il menu"
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 #: components/ItaliaTheme/manage/Widgets/ColorListWidget
 msgid "Color"
-msgstr "Color"
+msgstr "Colore"
 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Color_danger"
@@ -72,6 +72,10 @@ msgstr "Rosso"
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Color_warning"
 msgstr "Giallo"
+
+#: components/ItaliaTheme/Blocks/Alert/Sidebar
+msgid "Color_warning_orange"
+msgstr ""
 
 #: addons/volto-editablefooter/src/customizations/components/theme/Footer/Footer
 msgid "Contact"
@@ -146,7 +150,7 @@ msgstr "Licenza GNU GPL"
 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Image"
-msgstr "Image"
+msgstr "Immagine"
 
 #: components/ItaliaTheme/View/PageView/PageView
 msgid "In this section"
@@ -430,7 +434,6 @@ msgid "accedere_al_servizio"
 msgstr "Accedere al servizio"
 
 #: components/ItaliaTheme/View/Commons/Actions
-#: components/ItaliaTheme/View/Commons/PageHeader
 msgid "actions"
 msgstr "Vedi azioni"
 
@@ -522,7 +525,6 @@ msgid "backToSearch"
 msgstr "Torna alla ricerca"
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 msgid "bando_closed"
 msgstr "Scaduto"
@@ -544,13 +546,11 @@ msgid "bando_ente"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 msgid "bando_inProgress"
 msgstr "In corso"
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 msgid "bando_open"
 msgstr "Attivo"
@@ -719,7 +719,6 @@ msgstr "Data di insediamento"
 msgid "dataset"
 msgstr "Dataset"
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDates
 msgid "date"
 msgstr "Data"
@@ -1085,10 +1084,6 @@ msgstr "Appuntamenti"
 msgid "exceeded_chars"
 msgstr "Il testo supera la lunghezza consigliata"
 
-#: components/ItaliaTheme/View/Commons/PageHeader
-msgid "expire"
-msgstr "Scadenza"
-
 #: components/ItaliaTheme/View/Commons/RelatedItemInEvidence/ItemInEvidence
 msgid "explore"
 msgstr "Esplora"
@@ -1357,7 +1352,6 @@ msgstr "Luogo"
 msgid "mailto"
 msgstr "Invia"
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
 msgid "minutes"
 msgstr "min"
@@ -1434,7 +1428,6 @@ msgstr "Notizie in evidenza"
 msgid "novita"
 msgstr "Novità"
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderNewsItem
 msgid "numero_progressivo_cs"
 msgstr "Numero del comunicato stampa"
@@ -1557,7 +1550,6 @@ msgstr ""
 msgid "quartiere"
 msgstr "Quartiere "
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
 msgid "reading_time"
 msgstr "Tempo di lettura"
@@ -1669,7 +1661,6 @@ msgstr "Nessun risultato dal feed RSS"
 msgid "rss_read_more"
 msgstr "Leggi tutto"
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "ruolo"
@@ -1802,7 +1793,6 @@ msgstr "Servizi"
 msgid "setrss"
 msgstr "Imposta feed RSS"
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/Sharing
 msgid "share"
 msgstr "Condividi"
@@ -1942,7 +1932,6 @@ msgstr "Tipologia del bando"
 msgid "tipologia_organizzazione"
 msgstr "Tipologia organizzazione"
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "tipologia_persona"
@@ -1969,7 +1958,6 @@ msgid "to"
 msgstr "al"
 
 #: components/ItaliaTheme/Header/SearchModal
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderTassonomiaArgomenti
 msgid "topics"
 msgstr "Argomenti"

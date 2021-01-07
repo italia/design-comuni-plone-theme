@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2020-12-29T14:07:09.299Z\n"
+"POT-Creation-Date: 2021-01-07T09:15:11.241Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -88,6 +88,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 # defaultMessage: Giallo
 msgid "Color_warning"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Alert/Sidebar
+# defaultMessage: Arancione
+msgid "Color_warning_orange"
 msgstr ""
 
 #: addons/volto-editablefooter/src/customizations/components/theme/Footer/Footer
@@ -525,7 +530,6 @@ msgid "accedere_al_servizio"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Actions
-#: components/ItaliaTheme/View/Commons/PageHeader
 # defaultMessage: Vedi azioni
 msgid "actions"
 msgstr ""
@@ -639,7 +643,6 @@ msgid "backToSearch"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 # defaultMessage: Scaduto
 msgid "bando_closed"
@@ -666,14 +669,12 @@ msgid "bando_ente"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 # defaultMessage: In corso
 msgid "bando_inProgress"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 # defaultMessage: Attivo
 msgid "bando_open"
@@ -883,7 +884,6 @@ msgstr ""
 msgid "dataset"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDates
 # defaultMessage: Data
 msgid "date"
@@ -1337,11 +1337,6 @@ msgstr ""
 msgid "exceeded_chars"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
-# defaultMessage: Scadenza
-msgid "expire"
-msgstr ""
-
 #: components/ItaliaTheme/View/Commons/RelatedItemInEvidence/ItemInEvidence
 # defaultMessage: Esplora
 msgid "explore"
@@ -1675,7 +1670,6 @@ msgstr ""
 msgid "mailto"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
 # defaultMessage: min
 msgid "minutes"
@@ -1770,7 +1764,6 @@ msgstr ""
 msgid "novita"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderNewsItem
 # defaultMessage: Numero del comunicato stampa
 msgid "numero_progressivo_cs"
@@ -1923,7 +1916,6 @@ msgstr ""
 msgid "quartiere"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
 # defaultMessage: Tempo di lettura
 msgid "reading_time"
@@ -2060,7 +2052,6 @@ msgstr ""
 msgid "rss_read_more"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 # defaultMessage: Ruolo
@@ -2224,7 +2215,6 @@ msgstr ""
 msgid "setrss"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/Sharing
 # defaultMessage: Condividi
 msgid "share"
@@ -2398,7 +2388,6 @@ msgstr ""
 msgid "tipologia_organizzazione"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 # defaultMessage: Tipologia persona
@@ -2430,7 +2419,6 @@ msgid "to"
 msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderTassonomiaArgomenti
 # defaultMessage: Argomenti
 msgid "topics"

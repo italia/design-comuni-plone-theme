@@ -1,8 +1,8 @@
 .public-ui {
   .block.alertblock,
   .alertblock {
-    .bg-danger {
-      background-color: $red !important;
+    .bg-alert-danger {
+      background-color: #a32219;
       color: $white;
 
       .public-DraftEditorPlaceholder-inner {
@@ -23,8 +23,30 @@
       }
     }
 
-    .bg-warning {
-      background-color: $yellow !important;
+    .bg-alert-warning-orange {
+      background-color: #eb973f;
+      color: $black;
+
+      .public-DraftEditorPlaceholder-inner {
+        color: $black;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: $black;
+      }
+
+      a {
+        color: $black;
+      }
+    }
+
+    .bg-alert-warning {
+      background-color: #f0c250;
       color: $black;
 
       .public-DraftEditorPlaceholder-inner {
