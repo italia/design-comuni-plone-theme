@@ -131,27 +131,22 @@
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json}": [
       "npx eslint --max-warnings=0 --fix",
-      "npx prettier --single-quote --write",
-      "git add ."
+      "npx prettier --single-quote --write"
     ],
     "src/**/*.{jsx}": [
-      "yarn i18n",
-      "git add ."
+      "yarn i18n"
     ],
     "theme/**/*.{css,less}": [
-      "npx stylelint --fix",
-      "git add ."
+      "npx stylelint --fix"
     ],
     "src/**/*.{css,less}": [
-      "npx stylelint --fix","yarn add ."
+      "npx stylelint --fix"
     ],
     "theme/**/*.overrides": [
-      "npx stylelint --fix --syntax less",
-      "git add ."
+      "npx stylelint --fix --syntax less"
     ],
     "src/**/*.overrides": [
-      "npx stylelint --fix --syntax less",
-      "git add ."
+      "npx stylelint --fix --syntax less"
     ]
   },
 
