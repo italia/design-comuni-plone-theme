@@ -69,7 +69,10 @@ class Edit extends Component {
           })}
         >
           <Row
-            className={cx('row-full-width p-5', 'bg-' + this.props.data.color)}
+            className={cx(
+              'row-full-width p-5',
+              'bg-alert-' + this.props.data.color,
+            )}
           >
             <Container className="ui">
               <Row className="align-items-start">

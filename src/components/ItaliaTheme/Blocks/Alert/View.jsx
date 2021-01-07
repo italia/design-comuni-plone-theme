@@ -32,7 +32,7 @@ const View = ({ data, pathname }) => {
 
   return (
     <section className="block alertblock" key={generateKey('alert')}>
-      <Row className={cx('row-full-width', 'bg-' + data.color)}>
+      <Row className={cx('row-full-width', 'bg-alert-' + data.color)}>
         <Container className="p-4 pt-5 pb-5">
           <Row className="align-items-start">
             {data.image?.data && (
