@@ -8,9 +8,9 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import redraft from 'redraft';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
-import { isCmsUi } from '@plone/volto/helpers';
+//import { isCmsUi } from '@plone/volto/helpers';
 import { settings } from '~/config';
-import { flattenToAppURL } from '@plone/volto/helpers';
+
 /**
  * View Alert block class.
  * @class View
@@ -20,7 +20,7 @@ const View = ({ data, pathname }) => {
   if (__SERVER__) {
     return <div />;
   }
-  const isCmsUI = pathname ? isCmsUi(pathname) : false;
+  //const isCmsUI = pathname ? isCmsUi(pathname) : false;
   const generateKey = (pre) => {
     pre = pre ? pre : '';
     return pre + Math.random(5);
@@ -32,6 +32,7 @@ const View = ({ data, pathname }) => {
 
   return (
     <section className="block alertblock" key={generateKey('alert')}>
+      pippo
       <Row className={cx('row-full-width', 'bg-' + data.color)}>
         <Container className="p-4 pt-5 pb-5">
           <Row className="align-items-start">

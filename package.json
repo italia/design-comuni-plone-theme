@@ -132,26 +132,26 @@
     "src/**/*.{js,jsx,ts,tsx,json}": [
       "npx eslint --max-warnings=0 --fix",
       "npx prettier --single-quote --write",
-      "yarn add ."
+      "git add ."
     ],
     "src/**/*.{jsx}": [
       "yarn i18n",
-      "yarn add ."
+      "git add ."
     ],
     "theme/**/*.{css,less}": [
       "npx stylelint --fix",
-      "yarn add ."
+      "git add ."
     ],
     "src/**/*.{css,less}": [
       "npx stylelint --fix","yarn add ."
     ],
     "theme/**/*.overrides": [
       "npx stylelint --fix --syntax less",
-      "yarn add ."
+      "git add ."
     ],
     "src/**/*.overrides": [
       "npx stylelint --fix --syntax less",
-      "yarn add ."
+      "git add ."
     ]
   },
 
