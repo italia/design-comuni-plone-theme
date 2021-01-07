@@ -20,7 +20,7 @@ const View = ({ data, pathname }) => {
   if (__SERVER__) {
     return <div />;
   }
-  //const isCmsUI = pathname ? isCmsUi(pathname) : false;
+  //const isCmsUI = pathname ? isCmsUi(pathname) : false
 
   const content = data.text
     ? redraft(data.text, settings.ToHTMLRenderers, settings.ToHTMLOptions)
