@@ -135,7 +135,6 @@
     ],
     "src/**/*.jsx": [
       "yarn i18n", "git add ."
-
     ],
     "theme/**/*.{css,less}": [
       "npx stylelint --fix"
