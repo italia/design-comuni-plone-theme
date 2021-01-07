@@ -136,10 +136,10 @@
     "src/**/*.jsx": [
       "yarn i18n", "git add ."
     ],
-    "theme/**/*.{css,less}": [
+    "theme/**/*.{css,less,scss}": [
       "npx stylelint --fix"
     ],
-    "src/**/*.{css,less}": [
+    "src/**/*.{css,less,scss}": [
       "npx stylelint --fix"
     ],
     "theme/**/*.overrides": [
