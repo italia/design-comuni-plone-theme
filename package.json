@@ -2,7 +2,7 @@
   "name": "design-volto-theme",
   "description": "Volto Theme for Italia design guidelines",
   "license": "MIT",
-  "version": "1.14.6",
+  "version": "1.14.7",
   "private": true,
   "workspaces": [
     "src/addons/volto-cookie-banner",
@@ -134,7 +134,8 @@
       "npx prettier --single-quote --write"
     ],
     "src/**/*.jsx": [
-      "yarn i18n", "git add ."
+      "yarn i18n",
+      "git add ."
     ],
     "theme/**/*.{css,less,scss}": [
       "npx stylelint --fix"
@@ -149,7 +150,6 @@
       "npx stylelint --fix --syntax less"
     ]
   },
-
   "engines": {
     "node": "^10 || ^12 || ^14"
   },
