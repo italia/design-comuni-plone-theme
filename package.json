@@ -134,7 +134,8 @@
       "npx prettier --single-quote --write"
     ],
     "src/**/*.jsx": [
-      "yarn i18n"
+      "yarn i18n", "git add ."
+
     ],
     "theme/**/*.{css,less}": [
       "npx stylelint --fix"
