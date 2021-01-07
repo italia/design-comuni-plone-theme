@@ -14,6 +14,10 @@ const messages = defineMessages({
     id: 'Color_warning',
     defaultMessage: 'Giallo',
   },
+  Color_warning_orange: {
+    id: 'Color_warning_orange',
+    defaultMessage: 'Arancione',
+  },
   Color_danger: {
     id: 'Color_danger',
     defaultMessage: 'Rosso',
@@ -52,8 +56,12 @@ class Sidebar extends Component {
                     </label>
                   </div>
                 </Grid.Column>
-                <Grid.Column width="8" verticalAlign="middle">
-                  <Button.Group compact>
+                <Grid.Column
+                  width="8"
+                  verticalAlign="middle"
+                  className="color-chooser"
+                >
+                  <Button.Group vertical compact>
                     <Button
                       icon
                       basic={this.props.data.color !== 'warning'}
@@ -67,6 +75,22 @@ class Sidebar extends Component {
                       active={this.props.data.color === 'warning'}
                       content={this.props.intl.formatMessage(
                         messages.Color_warning,
+                      )}
+                    />
+
+                    <Button
+                      icon
+                      basic={this.props.data.color !== 'warning-orange'}
+                      color="orange"
+                      onClick={(name, value) => {
+                        this.props.onChangeBlock(this.props.block, {
+                          ...this.props.data,
+                          color: 'warning-orange',
+                        });
+                      }}
+                      active={this.props.data.color === 'warning-orange'}
+                      content={this.props.intl.formatMessage(
+                        messages.Color_warning_orange,
                       )}
                     />
 
@@ -88,32 +112,19 @@ class Sidebar extends Component {
                   </Button.Group>
                 </Grid.Column>
               </Grid.Row>
-              <Grid.Row>
-                <Grid.Column>
-                  <div className="wrapper">
-                    <label htmlFor="image">
-                      {this.props.intl.formatMessage(messages.Image)}
-                    </label>
-                  </div>
-                </Grid.Column>
-              </Grid.Row>
-              <Grid.Row>
-                <Grid.Column>
-                  <FileWidget
-                    id="image"
-                    title={this.props.intl.formatMessage(messages.Image)}
-                    value={this.props.data.image}
-                    onChange={(name, value) => {
-                      this.props.onChangeBlock(this.props.block, {
-                        ...this.props.data,
-                        image: value,
-                      });
-                    }}
-                  />
-                </Grid.Column>
-              </Grid.Row>
             </Grid>
           </Form.Field>
+          <FileWidget
+            id="image"
+            title={this.props.intl.formatMessage(messages.Image)}
+            value={this.props.data.image}
+            onChange={(name, value) => {
+              this.props.onChangeBlock(this.props.block, {
+                ...this.props.data,
+                image: value,
+              });
+            }}
+          />
         </Segment>
       </Segment.Group>
     );

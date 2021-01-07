@@ -20,19 +20,15 @@ const View = ({ data, pathname }) => {
   if (__SERVER__) {
     return <div />;
   }
-  //const isCmsUI = pathname ? isCmsUi(pathname) : false;
-  const generateKey = (pre) => {
-    pre = pre ? pre : '';
-    return pre + Math.random(5);
-  };
+  //const isCmsUI = pathname ? isCmsUi(pathname) : false
 
   const content = data.text
     ? redraft(data.text, settings.ToHTMLRenderers, settings.ToHTMLOptions)
     : '';
 
   return (
-    <section className="block alertblock" key={generateKey('alert')}>
-      <Row className={cx('row-full-width', 'bg-' + data.color)}>
+    <section role="alert" className="block alertblock">
+      <Row className={cx('row-full-width', 'bg-alert-' + data.color)}>
         <Container className="p-4 pt-5 pb-5">
           <Row className="align-items-start">
             {data.image?.data && (

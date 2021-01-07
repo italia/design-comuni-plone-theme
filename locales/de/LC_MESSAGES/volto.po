@@ -88,6 +88,10 @@ msgstr ""
 msgid "Color_warning"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Alert/Sidebar
+msgid "Color_warning_orange"
+msgstr ""
+
 #: addons/volto-editablefooter/src/customizations/components/theme/Footer/Footer
 msgid "Contact"
 msgstr "<<<<<<< HEAD"
@@ -445,7 +449,6 @@ msgid "accedere_al_servizio"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Actions
-#: components/ItaliaTheme/View/Commons/PageHeader
 msgid "actions"
 msgstr ""
 
@@ -537,7 +540,6 @@ msgid "backToSearch"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 msgid "bando_closed"
 msgstr ""
@@ -559,13 +561,11 @@ msgid "bando_ente"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 msgid "bando_inProgress"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 msgid "bando_open"
 msgstr ""
@@ -734,7 +734,6 @@ msgstr ""
 msgid "dataset"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDates
 msgid "date"
 msgstr ""
@@ -1100,10 +1099,6 @@ msgstr ""
 msgid "exceeded_chars"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
-msgid "expire"
-msgstr ""
-
 #: components/ItaliaTheme/View/Commons/RelatedItemInEvidence/ItemInEvidence
 msgid "explore"
 msgstr ""
@@ -1372,7 +1367,6 @@ msgstr ""
 msgid "mailto"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
 msgid "minutes"
 msgstr ""
@@ -1449,7 +1443,6 @@ msgstr ""
 msgid "novita"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderNewsItem
 msgid "numero_progressivo_cs"
 msgstr ""
@@ -1572,7 +1565,6 @@ msgstr ""
 msgid "quartiere"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
 msgid "reading_time"
 msgstr ""
@@ -1684,7 +1676,6 @@ msgstr ""
 msgid "rss_read_more"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "ruolo"
@@ -1817,7 +1808,6 @@ msgstr ""
 msgid "setrss"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/Sharing
 msgid "share"
 msgstr ""
@@ -1957,7 +1947,6 @@ msgstr ""
 msgid "tipologia_organizzazione"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "tipologia_persona"
@@ -1984,7 +1973,6 @@ msgid "to"
 msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderTassonomiaArgomenti
 msgid "topics"
 msgstr ""
