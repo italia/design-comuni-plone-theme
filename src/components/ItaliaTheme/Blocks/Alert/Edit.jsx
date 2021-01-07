@@ -10,8 +10,6 @@ import { compose } from 'redux';
 import { injectIntl } from 'react-intl';
 import cx from 'classnames';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
-import { settings } from '~/config';
-import { flattenToAppURL } from '@plone/volto/helpers';
 
 import { createContent } from '@plone/volto/actions';
 import { SidebarPortal } from '@plone/volto/components';

@@ -32,7 +32,6 @@ const View = ({ data, pathname }) => {
 
   return (
     <section className="block alertblock" key={generateKey('alert')}>
-      pippo
       <Row className={cx('row-full-width', 'bg-' + data.color)}>
         <Container className="p-4 pt-5 pb-5">
           <Row className="align-items-start">
