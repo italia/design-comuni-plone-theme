@@ -125,8 +125,34 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn i18n && git add ."
+      "pre-commit": "lint-staged"
     }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json}": [
+      "npx eslint --max-warnings=0 --fix",
+      "npx prettier --single-quote --write",
+      "yarn add ."
+    ],
+    "src/**/*.{jsx}": [
+      "yarn i18n",
+      "yarn add ."
+    ],
+    "theme/**/*.{css,less}": [
+      "npx stylelint --fix",
+      "yarn add ."
+    ],
+    "src/**/*.{css,less}": [
+      "npx stylelint --fix","yarn add ."
+    ],
+    "theme/**/*.overrides": [
+      "npx stylelint --fix --syntax less",
+      "yarn add ."
+    ],
+    "src/**/*.overrides": [
+      "npx stylelint --fix --syntax less",
+      "yarn add ."
+    ]
   },
 
   "engines": {
