@@ -22,10 +22,6 @@ const messages = defineMessages({
     id: 'Image',
     defaultMessage: 'Immagine',
   },
-  nuova_trad: {
-    id: 'nuova_trad',
-    defaultMessage: 'nuova_trad',
-  },
 });
 
 class Sidebar extends Component {
