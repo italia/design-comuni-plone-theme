@@ -133,7 +133,7 @@
       "npx eslint --max-warnings=0 --fix",
       "npx prettier --single-quote --write"
     ],
-    "src/**/*.{jsx}": [
+    "src/**/*.jsx": [
       "yarn i18n"
     ],
     "theme/**/*.{css,less}": [
