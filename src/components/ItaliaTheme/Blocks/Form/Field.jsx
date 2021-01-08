@@ -12,6 +12,7 @@ import {
   Label,
 } from 'design-react-kit/dist/design-react-kit';
 import Select from 'react-select';
+import FileWidget from '@italia/components/ItaliaTheme/Blocks/Form/Widgets/FileWidget.jsx';
 
 const messages = defineMessages({
   select_a_value: {
@@ -196,6 +197,20 @@ const Field = ({
           onChange={(e) => {
             onChange(name, e.target.value);
           }}
+        />
+      )}
+      {field_type === 'attachment' && (
+        <FileWidget
+          id={name}
+          name={name}
+          label={getLabel()}
+          type="file"
+          required={required}
+          infoText={description}
+          invalid={isInvalid()}
+          onChange={onChange}
+          onEdit={isOnEdit}
+          value={value}
         />
       )}
       {field_type === 'from' && (

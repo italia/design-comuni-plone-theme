@@ -56,6 +56,10 @@ msgstr "Cerca"
 msgid "Cerca per parola chiave"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+msgid "Clicca qui per sostituire il file"
+msgstr ""
+
 #: addons/volto-dropdownmenu/src/customizations/components/theme/Navigation/Navigation
 msgid "Close menu"
 msgstr "Chiudi il menu"
@@ -261,6 +265,10 @@ msgstr "Pagina precedente"
 msgid "Required"
 msgstr "Required"
 
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+msgid "Rimuovi il file"
+msgstr ""
+
 #: addons/volto-rss-block/src/Block/RssSidebar
 msgid "RssFeed"
 msgstr "Feed RSS"
@@ -293,6 +301,10 @@ msgstr "Titolo"
 #: components/ItaliaTheme/Header/SocialHeader
 msgid "Seguici su"
 msgstr "Seguici su"
+
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+msgid "Seleziona un file"
+msgstr ""
 
 #: components/ItaliaTheme/Footer/FooterSmall
 msgid "Sezione Link Utili"
@@ -351,6 +363,18 @@ msgstr "Title..."
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 msgid "Titolo"
 msgstr "Titolo"
+
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+msgid "Trascina qui il file ..."
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+msgid "Trascina qui un file per caricare un nuovo file"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+msgid "Trascina qui un file per sostituire quello esistente"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "Twitter Posts"
@@ -1176,6 +1200,10 @@ msgstr "Obbligatorio"
 #: components/ItaliaTheme/Blocks/Form/Sidebar
 msgid "form_field_type"
 msgstr "Tipo di campo"
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+msgid "form_field_type_attachment"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Sidebar
 msgid "form_field_type_checkbox"
