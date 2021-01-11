@@ -132,10 +132,15 @@ const Form = ({ data, id, path }) => {
         let name = getFieldName(subblock.label);
         if (formData[name]?.value) {
           const isAttachment = subblock.field_type === 'attachment';
+
+          const value = isAttachment
+            ? formData[name].value.filename
+            : formData[name].value;
+
+          content += `${formData[name].label}: ${value}\n`;
+
           if (isAttachment) {
             attachments[name] = formData[name].value;
-          } else {
-            content += `${formData[name].label}: ${formData[name].value}\n`;
           }
         }
       });
