@@ -102,6 +102,7 @@ const Form = ({ data, id, path }) => {
     if (formErrors.length > 0) {
       isValidForm();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [formData]);
 
   const isValidForm = () => {
@@ -110,7 +111,7 @@ const Form = ({ data, id, path }) => {
       let name = getFieldName(subblock.label);
       if (
         subblock.required &&
-        (!formData[name] || formData[name]?.length == 0)
+        (!formData[name] || formData[name]?.length === 0)
       ) {
         v.push(name);
       }
@@ -125,11 +126,17 @@ const Form = ({ data, id, path }) => {
 
     if (isValidForm()) {
       let content = '';
+      let attachments = {};
 
       data.subblocks.forEach((subblock, index) => {
         let name = getFieldName(subblock.label);
-        if (formData[name].value) {
-          content += `${formData[name].label}: ${formData[name].value}\n`;
+        if (formData[name]?.value) {
+          const attachment = subblock.field_type === 'attachment';
+          let value = attachment
+            ? formData[name].value?.filename
+            : formData[name].value;
+          content += `${formData[name].label}: ${value}\n`;
+          attachments[name] = formData[name].value;
         }
       });
 
@@ -140,6 +147,7 @@ const Form = ({ data, id, path }) => {
           formData.from || data.default_from,
           data.default_subject,
           content,
+          attachments,
         ),
       );
       setFormState({ type: FORM_STATES.loading });
@@ -165,6 +173,7 @@ const Form = ({ data, id, path }) => {
 
       setFormState({ type: FORM_STATES.error, error: errorDescription });
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [submitResults]);
 
   const alertTransition = {
@@ -188,6 +197,7 @@ const Form = ({ data, id, path }) => {
 
   const onVerifyCaptcha = useCallback(
     (token) => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       validToken = token;
     },
     [validToken],
