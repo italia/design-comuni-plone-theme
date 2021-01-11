@@ -1360,6 +1360,10 @@ msgstr "Questo evento ha più date: vedi tutte"
 msgid "listing_items_color"
 msgstr "Colore dell'elemento"
 
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
+msgid "location_to_search"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/LocationItem
 msgid "locations"
 msgstr "Luoghi"

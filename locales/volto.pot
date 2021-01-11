@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-01-08T16:44:28.158Z\n"
+"POT-Creation-Date: 2021-01-11T15:59:23.731Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1678,6 +1678,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/Options/ItemsColor
 # defaultMessage: Colore dell'elemento
 msgid "listing_items_color"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
+# defaultMessage: Posizione in cui cercare
+msgid "location_to_search"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/LocationItem

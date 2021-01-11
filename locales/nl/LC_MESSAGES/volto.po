@@ -1379,6 +1379,10 @@ msgstr ""
 msgid "listing_items_color"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
+msgid "location_to_search"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/LocationItem
 msgid "locations"
 msgstr ""
