@@ -26,11 +26,6 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "X-Is-Fallback-For: de-at de-li de-lu de-ch de-de\n"
 
-#: components/DesignTheme/Header/HeaderSlim
-#: components/ItaliaTheme/Header/HeaderSlim
-msgid "Accedi all'area personale"
-msgstr ""
-
 #: addons/volto-editablefooter/src/customizations/components/theme/Footer/Footer
 msgid "Accessibility"
 msgstr ""
@@ -48,25 +43,8 @@ msgstr ""
 msgid "Add field"
 msgstr ""
 
-#: components/DesignTheme/Blocks/Alert/Sidebar
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Alert"
-msgstr ""
-
-#: addons/volto-slate/src/editor/plugins/StyleMenu/StyleMenu
-msgid "All Styles Applied"
-msgstr ""
-
-#: components/DesignTheme/Footer/FooterInfos
-msgid "Amministrazione"
-msgstr ""
-
-#: components/DesignTheme/Footer/FooterInfos
-msgid "Amministrazione trasparente"
-msgstr ""
-
-#: components/DesignTheme/Footer/FooterInfos
-msgid "Amministrazione trasparente description"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
@@ -78,8 +56,6 @@ msgid "Bando"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
-#: components/ItaliaTheme/Blocks/DeadlinesCalendar/ListingSidebar
-#: components/ItaliaTheme/Blocks/EventSearch/ListingSidebar
 msgid "Block style"
 msgstr ""
 
@@ -87,11 +63,6 @@ msgstr ""
 msgid "Card detail label"
 msgstr ""
 
-#: addons/volto-slate/src/blocks/Table/Edit
-msgid "Cell"
-msgstr ""
-
-#: components/DesignTheme/Header/HeaderCenter
 #: components/ItaliaTheme/Header/HeaderCenter
 msgid "Cerca"
 msgstr ""
@@ -100,22 +71,23 @@ msgstr ""
 msgid "Cerca per parola chiave"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+msgid "Clicca qui per sostituire il file"
+msgstr ""
+
 #: addons/volto-dropdownmenu/src/customizations/components/theme/Navigation/Navigation
 msgid "Close menu"
 msgstr ""
 
-#: components/DesignTheme/Blocks/Alert/Sidebar
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 #: components/ItaliaTheme/manage/Widgets/ColorListWidget
 msgid "Color"
 msgstr ""
 
-#: components/DesignTheme/Blocks/Alert/Sidebar
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Color_danger"
 msgstr ""
 
-#: components/DesignTheme/Blocks/Alert/Sidebar
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Color_warning"
 msgstr ""
@@ -128,18 +100,14 @@ msgstr ""
 msgid "Contact"
 msgstr "<<<<<<< HEAD"
 
-#: components/DesignTheme/Footer/FooterInfos
-#: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "Contatti"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
-#: components/ItaliaTheme/Blocks/DeadlinesCalendar/ListingSidebar
 msgid "Content"
 msgstr ""
 
-#: components/DesignTheme/View/Commons/SideMenu
 #: components/ItaliaTheme/View/Commons/SideMenu
 msgid "Contenuto"
 msgstr ""
@@ -152,59 +120,27 @@ msgstr ""
 msgid "Date aggiuntive"
 msgstr ""
 
-#: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
 msgid "Default"
 msgstr ""
 
-#: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
 msgid "Delete"
 msgstr ""
 
-#: addons/volto-slate/src/blocks/Table/Edit
-msgid "Delete col"
-msgstr ""
-
-#: addons/volto-slate/src/blocks/Table/Edit
-msgid "Delete row"
-msgstr ""
-
-#: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
 msgid "Description"
 msgstr ""
 
 #: addons/volto-subblocks/src/examples/EditBlock
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper_old
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/EditBlock
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBlock
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBodyWrapper copy
 msgid "Description placeholder"
 msgstr ""
 
 #: addons/volto-editablefooter/src/customizations/components/theme/Footer/Footer
 msgid "Distributed under the {license}."
-msgstr ""
-
-#: addons/volto-slate/src/blocks/Table/Edit
-msgid "Divide each row into separate cells"
-msgstr ""
-
-#: addons/volto-slate/src/components/ElementEditor/messages
-msgid "Edit element"
-msgstr ""
-
-#: addons/volto-slate/src/editor/plugins/Link/index
-msgid "Edit link"
-msgstr ""
-
-#: addons/volto-slate/src/futurevolto/InlineForm
-msgid "Edit values"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Form
@@ -215,25 +151,12 @@ msgstr ""
 msgid "Email sent"
 msgstr ""
 
-#: addons/volto-slate/src/futurevolto/InlineForm
 #: components/ItaliaTheme/Blocks/Form/Form
 msgid "Error"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 msgid "Etichetta path filter"
-msgstr ""
-
-#: addons/volto-slate/src/blocks/Table/Edit
-msgid "Fixed width table cells"
-msgstr ""
-
-#: components/DesignTheme/Footer/FooterInfos
-msgid "Follow us"
-msgstr ""
-
-#: addons/volto-slate/src/editor/plugins/StyleMenu/StyleMenu
-msgid "Font Style"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Sidebar
@@ -244,30 +167,12 @@ msgstr ""
 msgid "GNU GPL license"
 msgstr ""
 
-#: components/DesignTheme/Blocks/Alert/Sidebar
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Image"
 msgstr ""
 
-#: components/ItaliaTheme/View/PageView
 #: components/ItaliaTheme/View/PageView/PageView
 msgid "In this section"
-msgstr ""
-
-#: addons/volto-slate/src/blocks/Table/Edit
-msgid "Insert col after"
-msgstr ""
-
-#: addons/volto-slate/src/blocks/Table/Edit
-msgid "Insert col before"
-msgstr ""
-
-#: addons/volto-slate/src/blocks/Table/Edit
-msgid "Insert row after"
-msgstr ""
-
-#: addons/volto-slate/src/blocks/Table/Edit
-msgid "Insert row before"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Break/Edit
@@ -283,41 +188,29 @@ msgid "L'evento non si terrà nelle seguenti date"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
-#: components/ItaliaTheme/Blocks/DeadlinesCalendar/ListingSidebar
 msgid "Link more"
 msgstr ""
 
-#: components/DesignTheme/manage/Widgets/LinkToWidget
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
 msgid "Link to"
 msgstr ""
 
-#: components/DesignTheme/Blocks/NewsHome/Sidebar
 #: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 msgid "LinkMore"
 msgstr ""
 
-#: components/DesignTheme/Blocks/NewsHome/Sidebar
 #: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 msgid "Linkto title"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
-#: components/ItaliaTheme/Blocks/DeadlinesCalendar/ListingSidebar
-#: components/ItaliaTheme/Blocks/EventSearch/ListingSidebar
 msgid "Listing"
 msgstr ""
 
-#: addons/volto-slate/src/blocks/Table/Edit
-msgid "Make the table compact"
-msgstr ""
-
-#: components/DesignTheme/Footer/FooterSmall
 #: components/ItaliaTheme/Footer/FooterSmall
 msgid "Mappa del sito"
 msgstr ""
 
-#: components/DesignTheme/MegaMenu/MegaMenu
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 #: components/ItaliaTheme/MenuSecondary/MenuSecondary
 msgid "Menu selezionato"
@@ -328,56 +221,34 @@ msgid "Mostra i filtri per percorso"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
-#: components/ItaliaTheme/Blocks/DeadlinesCalendar/ListingSidebar
 #: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 msgid "Mostra lo sfondo del blocco"
 msgstr ""
 
-#: components/DesignTheme/Blocks/NewsHome/Sidebar
 #: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 msgid "News"
 msgstr ""
 
-#: components/DesignTheme/Blocks/NewsHome/Sidebar
 #: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 msgid "NewsHome"
 msgstr ""
 
-#: components/DesignTheme/Footer/FooterInfos
-msgid "Newsletter"
-msgstr ""
-
-#: components/DesignTheme/Pagination/PaginationItem
 #: components/ItaliaTheme/Pagination/PaginationItem
 msgid "Next page"
 msgstr ""
 
-#: addons/volto-slate/src/editor/plugins/StyleMenu/StyleMenu
-msgid "No Style"
-msgstr ""
-
-#: components/DesignTheme/Footer/FooterSmall
 #: components/ItaliaTheme/Footer/FooterSmall
 msgid "Note legali"
 msgstr ""
 
-#: components/DesignTheme/manage/Widgets/LinkToWidget
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
 msgid "Open in a new tab"
 msgstr ""
 
 #: addons/volto-dropdownmenu/src/customizations/components/theme/Navigation/Navigation
 msgid "Open menu"
-msgstr ""
-
-#: components/DesignTheme/Footer/FooterInfos
-msgid "PEC"
-msgstr ""
-
-#: addons/volto-slate/src/editor/plugins/StyleMenu/StyleMenu
-msgid "Paragraph Style"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
@@ -400,27 +271,17 @@ msgstr ""
 msgid "Powered by Plone & Python"
 msgstr ""
 
-#: components/DesignTheme/Pagination/PaginationItem
 #: components/ItaliaTheme/Pagination/PaginationItem
 msgid "Previous page"
 msgstr ""
 
-#: addons/volto-slate/src/blocks/Table/Edit
-msgid "Reduce complexity"
-msgstr ""
-
-#: addons/volto-slate/src/components/ElementEditor/messages
-msgid "Remove element"
-msgstr ""
-
-#: addons/volto-slate/src/editor/plugins/Link/index
-msgid "Remove link"
-msgstr ""
-
-#: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
 msgid "Required"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+msgid "Rimuovi il file"
 msgstr ""
 
 #: addons/volto-rss-block/src/Block/RssSidebar
@@ -443,34 +304,32 @@ msgstr ""
 msgid "SearchEventsBlock"
 msgstr ""
 
-#: components/DesignTheme/Blocks/SearchSections/SideBar
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "SearchServices"
 msgstr ""
 
-#: components/DesignTheme/Blocks/SearchSections/SideBar
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "SearchServicesTitle"
 msgstr ""
 
-#: components/DesignTheme/Header/HeaderCenter
 #: components/ItaliaTheme/Footer/FooterSocials
 #: components/ItaliaTheme/Header/SocialHeader
 msgid "Seguici su"
 msgstr ""
 
-#: components/DesignTheme/Footer/FooterSmall
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+msgid "Seleziona un file"
+msgstr ""
+
 #: components/ItaliaTheme/Footer/FooterSmall
 msgid "Sezione Link Utili"
 msgstr ""
 
-#: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
 msgid "Short Name"
 msgstr ""
 
-#: components/DesignTheme/Search/SearchTopics
 #: components/ItaliaTheme/Search/SearchTopics
 msgid "Show all"
 msgstr ""
@@ -479,21 +338,8 @@ msgstr ""
 msgid "Site Map"
 msgstr "<<<<<<< HEAD"
 
-#: addons/volto-slate/src/blocks/Table/Edit
-msgid "Stripe alternate rows with color"
-msgstr ""
-
-#: components/DesignTheme/Footer/FooterInfos
 #: components/ItaliaTheme/Footer/FooterNewsletterSubscribe
 msgid "Subscribe"
-msgstr ""
-
-#: addons/volto-slate/src/blocks/Table/Edit
-msgid "Table"
-msgstr ""
-
-#: addons/volto-slate/src/blocks/Table/Edit
-msgid "Table color inverted"
 msgstr ""
 
 #: addons/volto-rss-block/src/Block/TemplateWidget
@@ -513,11 +359,6 @@ msgstr ""
 msgid "The {plonecms} is {copyright} 2000-{current_year} by the {plonefoundation} and friends."
 msgstr ""
 
-#: addons/volto-slate/src/futurevolto/InlineForm
-msgid "There were some errors"
-msgstr ""
-
-#: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
@@ -527,36 +368,39 @@ msgstr ""
 #: addons/volto-subblocks/src/examples/EditBlock
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper_old
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/EditBlock
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBlock
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBodyWrapper copy
 #: components/ItaliaTheme/Blocks/Form/Block/EditBlock
 msgid "Title placeholder"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
-#: components/ItaliaTheme/Blocks/DeadlinesCalendar/ListingSidebar
 #: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 msgid "Titolo"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+msgid "Trascina qui il file ..."
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+msgid "Trascina qui un file per caricare un nuovo file"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+msgid "Trascina qui un file per sostituire quello esistente"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "Twitter Posts"
 msgstr ""
 
-#: components/DesignTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type description…"
 msgstr ""
 
-#: components/DesignTheme/Blocks/ArgomentoTitle/Edit
-#: components/DesignTheme/manage/Widgets/TextEditorWidget
 #: components/ItaliaTheme/Blocks/Accordion/TextEditorWidget
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
@@ -566,34 +410,22 @@ msgstr ""
 msgid "Type text…"
 msgstr ""
 
-#: components/DesignTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type the title…"
 msgstr ""
 
-#: components/DesignTheme/Footer/FooterInfos
-msgid "URP"
-msgstr ""
-
 #: addons/volto-dropdownmenu/src/components/DropdownMenu
-#: components/DesignTheme/View/PaginaArgomentoView
-#: components/ItaliaTheme/View/PageView
 #: components/ItaliaTheme/View/PageView/PageView
-#: components/ItaliaTheme/View/PaginaArgomentoView
 msgid "Unknown Block"
 msgstr ""
 
-#: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
 msgid "Used for programmatic access to the fieldset."
 msgstr ""
 
-#: components/DesignTheme/Footer/FooterInfos
-#: components/DesignTheme/Footer/FooterNavigation
-#: components/DesignTheme/Footer/FooterSmall
 #: components/ItaliaTheme/Footer/FooterInfos
 #: components/ItaliaTheme/Footer/FooterNavigation
 #: components/ItaliaTheme/Footer/FooterSmall
@@ -608,11 +440,6 @@ msgstr ""
 msgid "Vedi"
 msgstr ""
 
-#: components/DesignTheme/Blocks/Listing/CompleteBlockLinksTemplate
-#: components/DesignTheme/MegaMenu/MegaMenu
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper_old
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBodyWrapper copy
 #: components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate
 #: components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate
 #: components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate
@@ -637,34 +464,26 @@ msgstr ""
 msgid "VideoGalleryBlock"
 msgstr ""
 
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "a_chi_si_rivolge"
 msgstr ""
 
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "accedere_al_servizio"
 msgstr ""
 
-#: components/DesignTheme/View/Commons/Actions
-#: components/DesignTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/Actions
-#: components/ItaliaTheme/View/Commons/PageHeader
 msgid "actions"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
 msgid "allFilters"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
 msgid "allOptions"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
 msgid "allTopics"
 msgstr ""
@@ -673,14 +492,10 @@ msgstr ""
 msgid "allegati"
 msgstr ""
 
-#: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "altre_cariche"
 msgstr ""
 
-#: components/DesignTheme/View/ServizioView
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "altri_documenti"
 msgstr ""
@@ -689,23 +504,18 @@ msgstr ""
 msgid "always_show_image"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
-#: components/DesignTheme/Search/SearchSections
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "amministrazione"
 msgstr ""
 
-#: components/DesignTheme/View/ServizioView
 #: components/ItaliaTheme/Blocks/Listing/serviziAmministrazioneTrasparenteTemplate
 #: helpers/amministrazioneTrasparenteHelper
 msgid "area"
 msgstr ""
 
-#: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 msgid "area_appartenenza"
 msgstr ""
 
@@ -717,9 +527,7 @@ msgstr ""
 msgid "argoment"
 msgstr ""
 
-#: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 msgid "assessorati_riferimento"
 msgstr ""
 
@@ -727,30 +535,22 @@ msgstr ""
 msgid "assessore_di"
 msgstr ""
 
-#: components/DesignTheme/View/UOView
-#: components/ItaliaTheme/View/UOView
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "assessore_riferimento"
 msgstr ""
 
-#: components/DesignTheme/View/Commons/Attachment
 #: components/ItaliaTheme/View/Commons/Attachment
 msgid "attachment"
 msgstr ""
 
-#: components/DesignTheme/View/Commons/Attachments
 #: components/ItaliaTheme/View/Commons/Attachments
 msgid "attachments"
 msgstr ""
 
-#: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "atto_nomina"
 msgstr ""
 
-#: components/DesignTheme/View/ServizioView
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "autenticazione"
 msgstr ""
@@ -759,13 +559,11 @@ msgstr ""
 msgid "back"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
 msgid "backToSearch"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 msgid "bando_closed"
 msgstr ""
@@ -787,13 +585,11 @@ msgid "bando_ente"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 msgid "bando_inProgress"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 msgid "bando_open"
 msgstr ""
@@ -810,10 +606,6 @@ msgstr ""
 msgid "bando_vedi"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/EventSearch/ListingSidebar
-msgid "bg_color"
-msgstr ""
-
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "biografia"
 msgstr ""
@@ -822,28 +614,8 @@ msgstr ""
 msgid "block_bg_color"
 msgstr ""
 
-#: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
-#: components/DesignTheme/View/ServizioView
-#: components/DesignTheme/View/UOView
-msgid "box_aiuto"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/ListingSidebar
-msgid "button_color"
-msgstr ""
-
-#: components/DesignTheme/View/ServizioView
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "canale_digitale"
-msgstr ""
-
-#: components/DesignTheme/View/ServizioView
-msgid "canale_fisico"
-msgstr ""
-
-#: components/DesignTheme/View/ServizioView
-msgid "canale_fisico_prenotazione"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
@@ -858,8 +630,6 @@ msgstr ""
 msgid "cartellamodulistica_formati_scaricabili"
 msgstr ""
 
-#: components/DesignTheme/View/ServizioView
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "casi_particolari"
 msgstr ""
@@ -872,8 +642,6 @@ msgstr ""
 msgid "channel_link_title"
 msgstr ""
 
-#: components/DesignTheme/View/ServizioView
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "chi_puo_presentare"
 msgstr ""
@@ -890,10 +658,7 @@ msgstr ""
 msgid "chiusura_procedimento_bando"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/EventLocation
 #: components/ItaliaTheme/View/Commons/LocationItem
-#: components/ItaliaTheme/View/LuogoView
-#: components/ItaliaTheme/View/VenueView
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "circoscrizione"
 msgstr ""
@@ -902,69 +667,41 @@ msgstr ""
 msgid "close"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
 msgid "closeSearch"
 msgstr ""
 
-#: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
-msgid "collegamenti_organizzazione_l1"
-msgstr ""
-
-#: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
-msgid "collegamenti_organizzazione_l2"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/ListingSidebar
-msgid "colors"
-msgstr ""
-
-#: components/DesignTheme/View/ServizioView
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "come_si_fa"
 msgstr ""
 
-#: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "compensi"
 msgstr ""
 
-#: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "competenze"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
 msgid "confirmSearch"
 msgstr ""
 
-#: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "contacts"
 msgstr ""
 
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 #: components/ItaliaTheme/View/UOView/UOView
-#: components/ItaliaTheme/View/VenueView
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "contatti"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "contatti_esterni"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "contatti_interni"
 msgstr ""
@@ -973,8 +710,6 @@ msgstr ""
 msgid "cookie_banner_button"
 msgstr ""
 
-#: components/DesignTheme/View/ServizioView
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "copertura_geografica"
 msgstr ""
@@ -983,53 +718,38 @@ msgstr ""
 msgid "cosa_fa"
 msgstr ""
 
-#: components/DesignTheme/View/ServizioView
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "cosa_serve"
 msgstr ""
 
-#: components/DesignTheme/View/ServizioView
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "cosa_si_ottiene"
 msgstr ""
 
-#: components/DesignTheme/View/ServizioView
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "costi"
 msgstr ""
 
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "costi_e_vincoli"
 msgstr ""
 
-#: components/DesignTheme/View/Commons/CuredBy
 #: components/ItaliaTheme/View/Commons/CuredBy
 msgid "cured_by"
 msgstr ""
 
-#: components/DesignTheme/View/Commons/CuredBy
 #: components/ItaliaTheme/View/Commons/CuredBy
 msgid "cured_by_people"
 msgstr ""
 
-#: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "curriculum_vitae"
 msgstr ""
 
-#: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "data_conclusione_incarico"
 msgstr ""
 
-#: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "data_insediamento"
 msgstr ""
@@ -1038,19 +758,12 @@ msgstr ""
 msgid "dataset"
 msgstr ""
 
-#: components/DesignTheme/View/Commons/PageHeader
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDates
 msgid "date"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "date_e_orari"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/ListingSidebar
-msgid "date_filter"
 msgstr ""
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
@@ -1063,33 +776,21 @@ msgstr ""
 msgid "default"
 msgstr ""
 
-#: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "deleghe"
 msgstr ""
 
-#: components/DesignTheme/Blocks/SearchSections/SideBar
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "desc"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/PersoneAmministrazioneTrasparenteTemplate
 #: components/ItaliaTheme/View/BandoView/BandoView
-#: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
-#: components/ItaliaTheme/View/VenueView
 #: components/ItaliaTheme/View/VenueView/VenueView
 #: helpers/amministrazioneTrasparenteHelper
 msgid "descrizione"
 msgstr ""
 
-#: components/DesignTheme/View/ServizioView
-msgid "descrizione_destinatari"
-msgstr ""
-
-#: components/DesignTheme/View/ServizioView
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "descrizione_estesa"
 msgstr ""
@@ -1099,11 +800,7 @@ msgstr ""
 msgid "detail_link_label"
 msgstr ""
 
-#: components/DesignTheme/View/Commons/Locations
-#: components/ItaliaTheme/View/Commons/EventLocation
-#: components/ItaliaTheme/View/Commons/EventLocations
 #: components/ItaliaTheme/View/Commons/LocationItem
-#: components/ItaliaTheme/View/Commons/Locations
 #: components/ItaliaTheme/View/Commons/VenuesSmall
 msgid "details"
 msgstr ""
@@ -1112,8 +809,6 @@ msgstr ""
 msgid "dettaglio_tipologia_procedimento"
 msgstr ""
 
-#: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "dichiarazione_dei_redditi"
 msgstr ""
@@ -1122,16 +817,12 @@ msgstr ""
 msgid "dirigente"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
-#: components/DesignTheme/Search/SearchSections
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "documenti"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
-#: components/DesignTheme/Search/SearchSections
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
@@ -1174,18 +865,14 @@ msgstr ""
 msgid "documento_ufficio_responsabile"
 msgstr ""
 
-#: components/ItaliaTheme/View/LuogoView
-#: components/ItaliaTheme/View/VenueView
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "dove"
 msgstr ""
 
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "dove_rivolgersi"
 msgstr ""
 
-#: components/DesignTheme/View/Commons/Actions
 #: components/ItaliaTheme/View/Commons/Actions
 msgid "download"
 msgstr ""
@@ -1359,15 +1046,8 @@ msgstr ""
 msgid "editablefooter-visible"
 msgstr ""
 
-#: components/ItaliaTheme/View/LuogoView
-#: components/ItaliaTheme/View/VenueView
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "elementi_di_interesse"
-msgstr ""
-
-#: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
-msgid "email"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/ContactLink
@@ -1379,7 +1059,6 @@ msgstr ""
 msgid "email_sede"
 msgstr ""
 
-#: components/DesignTheme/Blocks/NewsHome/Edit
 #: components/ItaliaTheme/Blocks/NewsHome/Edit
 msgid "emptySelection"
 msgstr ""
@@ -1396,7 +1075,6 @@ msgstr ""
 msgid "event_costi"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "event_destinatari"
 msgstr ""
@@ -1405,7 +1083,6 @@ msgstr ""
 msgid "event_documenti"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/EventSearch/FilterBlocks/DateFilter
 #: components/ItaliaTheme/Blocks/EventSearch/Filters/DateFilter
 msgid "event_search_endDate"
 msgstr ""
@@ -1414,12 +1091,10 @@ msgstr ""
 msgid "event_search_no_filters"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/EventSearch/FilterBlocks/DateFilter
 #: components/ItaliaTheme/Blocks/EventSearch/Filters/DateFilter
 msgid "event_search_startDate"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "event_strutture_politiche"
 msgstr ""
@@ -1428,12 +1103,10 @@ msgstr ""
 msgid "event_title"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "event_ulteriori_informazioni"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "event_url"
 msgstr ""
@@ -1446,14 +1119,8 @@ msgstr ""
 msgid "events"
 msgstr ""
 
-#: components/DesignTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 msgid "exceeded_chars"
-msgstr ""
-
-#: components/DesignTheme/View/Commons/PageHeader
-#: components/ItaliaTheme/View/Commons/PageHeader
-msgid "expire"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/RelatedItemInEvidence/ItemInEvidence
@@ -1464,12 +1131,7 @@ msgstr ""
 msgid "exploreArgument"
 msgstr ""
 
-#: components/DesignTheme/View/ServizioView
-msgid "fasi_scadenze"
-msgstr ""
-
 #: components/ItaliaTheme/View/Commons/ContactLink
-#: components/ItaliaTheme/View/Commons/SmallVenue
 msgid "fax"
 msgstr ""
 
@@ -1485,19 +1147,6 @@ msgstr ""
 msgid "file_correlato"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/EventSearch/ListingSidebar
-msgid "filter_one"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/ListingSidebar
-msgid "filter_three"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/ListingSidebar
-msgid "filter_two"
-msgstr ""
-
-#: components/DesignTheme/Header/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
 msgid "filters"
 msgstr ""
@@ -1568,6 +1217,10 @@ msgid "form_field_type"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Sidebar
+msgid "form_field_type_attachment"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
 msgid "form_field_type_checkbox"
 msgstr ""
 
@@ -1612,12 +1265,10 @@ msgid "foto_attivita_politica"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Commons/CardCalendar
-#: components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate
 #: helpers/ListingHelper
 msgid "from"
 msgstr ""
 
-#: components/DesignTheme/View/Commons/Gallery
 #: components/ItaliaTheme/View/Commons/Gallery
 msgid "gallery"
 msgstr ""
@@ -1660,22 +1311,14 @@ msgstr ""
 msgid "hide_dates"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate
-msgid "hours"
-msgstr ""
-
-#: components/ItaliaTheme/manage/Widgets/ArgumentIconWidget
 #: components/ItaliaTheme/manage/Widgets/IconWidget
 msgid "icon"
 msgstr ""
 
-#: components/ItaliaTheme/manage/Widgets/ArgumentIconWidget
 #: components/ItaliaTheme/manage/Widgets/IconWidget
 msgid "iconDescription"
 msgstr ""
 
-#: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "importi_di_viaggio_e_o_servizi"
 msgstr ""
@@ -1685,7 +1328,6 @@ msgstr ""
 msgid "incarico"
 msgstr ""
 
-#: components/DesignTheme/View/Commons/SideMenu
 #: components/ItaliaTheme/View/Commons/SideMenu
 msgid "index"
 msgstr ""
@@ -1703,13 +1345,10 @@ msgstr ""
 msgid "latitude"
 msgstr ""
 
-#: components/DesignTheme/View/UOView
-#: components/ItaliaTheme/View/UOView
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "legami_altre_strutture"
 msgstr ""
 
-#: components/DesignTheme/Blocks/SearchSections/SideBar
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "link"
 msgstr ""
@@ -1724,8 +1363,6 @@ msgstr ""
 msgid "linkMoreTitle"
 msgstr ""
 
-#: components/DesignTheme/View/ServizioView
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "link_siti_esterni"
 msgstr ""
@@ -1742,11 +1379,7 @@ msgstr ""
 msgid "location_to_search"
 msgstr ""
 
-#: components/DesignTheme/View/Commons/Locations
-#: components/ItaliaTheme/View/Commons/EventLocation
-#: components/ItaliaTheme/View/Commons/EventLocations
 #: components/ItaliaTheme/View/Commons/LocationItem
-#: components/ItaliaTheme/View/Commons/Locations
 msgid "locations"
 msgstr ""
 
@@ -1758,28 +1391,18 @@ msgstr ""
 msgid "luoghi_notizia"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "luogo"
 msgstr ""
 
-#: components/ItaliaTheme/View/VenueView
-msgid "mail"
-msgstr ""
-
-#: components/DesignTheme/View/Commons/Actions
 #: components/ItaliaTheme/View/Commons/Actions
 msgid "mailto"
 msgstr ""
 
-#: components/DesignTheme/View/Commons/PageHeader
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
 msgid "minutes"
 msgstr ""
 
-#: components/ItaliaTheme/View/LuogoView
-#: components/ItaliaTheme/View/VenueView
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "modalita_accesso"
 msgstr ""
@@ -1792,12 +1415,10 @@ msgstr ""
 msgid "modalita_richiedere_informazioni_procedimentodali"
 msgstr ""
 
-#: components/DesignTheme/View/Commons/Metadata
 #: components/ItaliaTheme/View/Commons/Metadata
 msgid "modified"
 msgstr ""
 
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "modulistica"
 msgstr ""
@@ -1843,68 +1464,53 @@ msgstr ""
 msgid "nominativo"
 msgstr ""
 
-#: components/DesignTheme/View/NewsItemView
-#: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/EventoView/EventoView
-#: components/ItaliaTheme/View/NewsItemView
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
 msgid "notizie_in_evidenza"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
-#: components/DesignTheme/Search/SearchSections
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "novita"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderNewsItem
 msgid "numero_progressivo_cs"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
 msgid "optionActiveContentButton"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
 msgid "optionActiveContentInfo"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
 msgid "optionActiveContentLabel"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
 msgid "optionDateEnd"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
 msgid "optionDateEndButton"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
 msgid "optionDatePlaceholder"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
 msgid "optionDateStart"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
 msgid "optionDateStartButton"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
 msgid "options"
 msgstr ""
@@ -1913,15 +1519,11 @@ msgstr ""
 msgid "orari"
 msgstr ""
 
-#: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/UOView/UOView
-#: components/ItaliaTheme/View/VenueView
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "orario_pubblico"
 msgstr ""
 
-#: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "organizzazione_riferimento"
 msgstr ""
@@ -1930,10 +1532,7 @@ msgstr ""
 msgid "organo_competente_provvedimento_finale"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper_old
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/ViewBodyWrapper copy
 msgid "otherArguments"
 msgstr ""
 
@@ -1941,22 +1540,18 @@ msgstr ""
 msgid "other_arguments"
 msgstr ""
 
-#: components/DesignTheme/View/Commons/Metadata
 #: components/ItaliaTheme/View/Commons/Metadata
 msgid "other_info"
 msgstr ""
 
-#: components/DesignTheme/View/Commons/CuredBy
 #: components/ItaliaTheme/View/Commons/CuredBy
 msgid "page_cured_by"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "parteciperanno"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "patrocinato_da"
 msgstr ""
@@ -1969,23 +1564,14 @@ msgstr ""
 msgid "pec_sede"
 msgstr ""
 
-#: components/DesignTheme/View/UOView
-#: components/ItaliaTheme/View/UOView
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "persone_struttura"
 msgstr ""
 
-#: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
-msgid "phone"
-msgstr ""
-
-#: components/DesignTheme/Blocks/SearchSections/SideBar
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "placeholder"
 msgstr ""
 
-#: components/DesignTheme/Blocks/ArgomentoTitle/View
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/View
 msgid "portata_di_click"
 msgstr ""
@@ -1994,17 +1580,10 @@ msgstr ""
 msgid "previewIconSelected"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/EventSearch/ListingSidebar
-msgid "primary"
-msgstr ""
-
-#: components/DesignTheme/View/Commons/Actions
 #: components/ItaliaTheme/View/Commons/Actions
 msgid "print"
 msgstr ""
 
-#: components/DesignTheme/View/ServizioView
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "procedure_collegate"
 msgstr ""
@@ -2013,81 +1592,50 @@ msgstr ""
 msgid "provvedimento_finale"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/EventLocation
 #: components/ItaliaTheme/View/Commons/LocationItem
-#: components/ItaliaTheme/View/LuogoView
-#: components/ItaliaTheme/View/VenueView
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "quartiere"
 msgstr ""
 
-#: components/DesignTheme/View/Commons/PageHeader
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
 msgid "reading_time"
 msgstr ""
 
-#: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 msgid "related_doc"
 msgstr ""
 
-#: components/DesignTheme/View/NewsItemView
-#: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
-#: components/DesignTheme/View/ServizioView
-#: components/DesignTheme/View/UOView
 #: components/ItaliaTheme/View/Commons/RelatedItems
-#: components/ItaliaTheme/View/NewsItemView
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
-#: components/ItaliaTheme/View/UOView
 #: components/ItaliaTheme/View/UOView/UOView
-#: components/ItaliaTheme/View/VenueView
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "related_items"
 msgstr ""
 
-#: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
-#: components/DesignTheme/View/PersonaView
-#: components/DesignTheme/View/ServizioView
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/PersonaView
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "related_news"
 msgstr ""
 
-#: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/VenueView
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "related_services"
 msgstr ""
 
-#: components/DesignTheme/View/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
 msgid "related_uo"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
 msgid "removeOption"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
 msgid "removeTopic"
 msgstr ""
 
-#: components/DesignTheme/View/UOView
-#: components/ItaliaTheme/View/UOView
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "responsabile"
 msgstr ""
@@ -2100,8 +1648,6 @@ msgstr ""
 msgid "responsabile_del_procedimento_unità_organizzativa_competente"
 msgstr ""
 
-#: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "responsabile_di"
 msgstr ""
@@ -2118,7 +1664,6 @@ msgstr ""
 msgid "riferimento_fax_struttura"
 msgstr ""
 
-#: components/ItaliaTheme/View/VenueView
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "riferimento_mail_luogo"
 msgstr ""
@@ -2131,7 +1676,6 @@ msgstr ""
 msgid "riferimento_pec_luogo"
 msgstr ""
 
-#: components/ItaliaTheme/View/VenueView
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "riferimento_telefonico_luogo"
 msgstr ""
@@ -2140,12 +1684,10 @@ msgstr ""
 msgid "riferimento_telefonico_struttura"
 msgstr ""
 
-#: components/ItaliaTheme/View/VenueView
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "riferimento_web"
 msgstr ""
 
-#: components/DesignTheme/View/Commons/Metadata
 #: components/ItaliaTheme/View/Commons/Metadata
 msgid "rights"
 msgstr ""
@@ -2154,29 +1696,18 @@ msgstr ""
 msgid "risultati_indagini_customer_satisfaction"
 msgstr ""
 
-#: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
-msgid "role_bio"
-msgstr ""
-
 #: addons/volto-rss-block/src/Templates/DefaultRssTemplate
-#: components/DesignTheme/Blocks/RssBlock/CardWithImageRssTemplate
-#: components/DesignTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
 msgid "rss_no_results"
 msgstr ""
 
 #: addons/volto-rss-block/src/Templates/DefaultRssTemplate
-#: components/DesignTheme/Blocks/RssBlock/CardWithImageRssTemplate
-#: components/DesignTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
 msgid "rss_read_more"
 msgstr ""
 
-#: components/DesignTheme/View/Commons/PageHeader
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "ruolo"
@@ -2194,7 +1725,6 @@ msgstr ""
 msgid "scrivi_a_mail"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/View/Commons/SearchSectionForm
 msgid "search"
@@ -2259,7 +1789,6 @@ msgstr ""
 msgid "searchEventsBlock_venue_filter"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
 msgid "searchLabel"
 msgstr ""
@@ -2268,33 +1797,16 @@ msgstr ""
 msgid "searchOnMap"
 msgstr ""
 
-#: components/DesignTheme/Blocks/SearchSections/SideBar
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "search_service_block_sections"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/EventSearch/ListingSidebar
-msgid "secondary"
-msgstr ""
-
-#: components/DesignTheme/Header/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
 msgid "sections"
 msgstr ""
 
-#: components/ItaliaTheme/View/LuogoView
-#: components/ItaliaTheme/View/VenueView
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "sede_di"
-msgstr ""
-
-#: components/DesignTheme/View/Commons/UOLocation
-#: components/ItaliaTheme/View/Commons/UOLocation
-msgid "sedi"
-msgstr ""
-
-#: components/DesignTheme/View/ServizioView
-msgid "sedi_e_luoghi"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
@@ -2305,30 +1817,21 @@ msgstr ""
 msgid "select_argument_sidebar"
 msgstr ""
 
-#: components/DesignTheme/View/ServizioView
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "service_not_active"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
-#: components/DesignTheme/Search/SearchSections
 #: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "servizi"
 msgstr ""
 
-#: components/DesignTheme/View/ServizioView
 #: components/ItaliaTheme/View/BandoView/BandoView
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "servizi_collegati"
 msgstr ""
 
-#: components/DesignTheme/View/UOView
-#: components/ItaliaTheme/View/LuogoView
-#: components/ItaliaTheme/View/UOView
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "servizi_offerti"
 msgstr ""
@@ -2337,9 +1840,6 @@ msgstr ""
 msgid "setrss"
 msgstr ""
 
-#: components/DesignTheme/View/Commons/PageHeader
-#: components/DesignTheme/View/Commons/Sharing
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/Sharing
 msgid "share"
 msgstr ""
@@ -2377,8 +1877,6 @@ msgstr ""
 msgid "simplecard_listing_appearance_description"
 msgstr ""
 
-#: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "situazione_patrimoniale"
 msgstr ""
@@ -2411,8 +1909,6 @@ msgstr ""
 msgid "social-settings-url"
 msgstr ""
 
-#: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "spese_elettorali"
 msgstr ""
@@ -2437,23 +1933,16 @@ msgstr ""
 msgid "struttura_responsabile"
 msgstr ""
 
-#: components/ItaliaTheme/View/VenueView
-msgid "struttura_responsabile_correlati"
-msgstr ""
-
-#: components/DesignTheme/View/Commons/Metadata
 #: components/ItaliaTheme/View/Commons/Metadata
 msgid "subjects"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "supported_by"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/ContactLink
 #: components/ItaliaTheme/View/PersonaView/PersonaView
-#: components/ItaliaTheme/View/VenueView
 msgid "telefono"
 msgstr ""
 
@@ -2462,7 +1951,6 @@ msgid "telefono_sede"
 msgstr ""
 
 #: components/ItaliaTheme/View/BandoView/BandoView
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "tempi_e_scadenze"
 msgstr ""
@@ -2471,21 +1959,12 @@ msgstr ""
 msgid "tempo_medio"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/PersoneAmministrazioneTrasparenteTemplate
 #: helpers/amministrazioneTrasparenteHelper
 msgid "termine"
 msgstr ""
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "termini_del_procedimento"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/ListingSidebar
-msgid "tertiary"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/ListingSidebar
-msgid "text_filter"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/EventSearch/Filters/TextFilter
@@ -2496,14 +1975,10 @@ msgstr ""
 msgid "tipologia_bando"
 msgstr ""
 
-#: components/DesignTheme/View/UOView
-#: components/ItaliaTheme/View/UOView
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "tipologia_organizzazione"
 msgstr ""
 
-#: components/DesignTheme/View/Commons/PageHeader
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "tipologia_persona"
@@ -2520,21 +1995,16 @@ msgstr ""
 msgid "titolare_potere_sostitutivo"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/PersoneAmministrazioneTrasparenteTemplate
 #: helpers/amministrazioneTrasparenteHelper
 msgid "titolo"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Commons/CardCalendar
-#: components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate
 #: helpers/ListingHelper
 msgid "to"
 msgstr ""
 
-#: components/DesignTheme/Header/SearchModal
-#: components/DesignTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/Header/SearchModal
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderTassonomiaArgomenti
 msgid "topics"
 msgstr ""
@@ -2555,28 +2025,20 @@ msgstr ""
 msgid "twitter_posts_no_results"
 msgstr ""
 
-#: components/DesignTheme/View/ServizioView
 #: components/ItaliaTheme/View/BandoView/BandoView
 msgid "ufficio_responsabile"
 msgstr ""
 
-#: components/DesignTheme/View/PersonaView
 #: components/ItaliaTheme/View/BandoView/BandoView
 #: components/ItaliaTheme/View/DocumentoView/DocumentoView
-#: components/ItaliaTheme/View/EventoView
 #: components/ItaliaTheme/View/EventoView/EventoView
-#: components/ItaliaTheme/View/LuogoView
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/PersonaView
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
-#: components/ItaliaTheme/View/VenueView
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "ulteriori_informazioni"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/PersoneAmministrazioneTrasparenteTemplate
 #: helpers/amministrazioneTrasparenteHelper
 msgid "unita_operativa"
 msgstr ""
@@ -2585,7 +2047,6 @@ msgstr ""
 msgid "unita_organizzativa_competente"
 msgstr ""
 
-#: components/DesignTheme/View/Commons/TextOrBlocks
 #: components/ItaliaTheme/View/Commons/TextOrBlocks
 msgid "unknownBlock"
 msgstr ""
@@ -2598,40 +2059,21 @@ msgstr ""
 msgid "uo_documenti"
 msgstr ""
 
-#: components/DesignTheme/View/UOView
-#: components/ItaliaTheme/View/LuogoView
-#: components/ItaliaTheme/View/UOView
 #: components/ItaliaTheme/View/UOView/UOView
-#: components/ItaliaTheme/View/VenueView
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "uo_related_news"
-msgstr ""
-
-#: components/DesignTheme/View/UOView
-msgid "uo_ulteriori_informazioni"
 msgstr ""
 
 #: addons/volto-multilingual-widget/src/MultilingualWidget
 msgid "value_for_lang"
 msgstr ""
 
-#: components/DesignTheme/View/PersonaView
-#: components/ItaliaTheme/View/PersonaView
-msgid "valutazione_situazione_patrimoniale"
-msgstr ""
-
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "variazione_situazione_patrimoniale"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/EventSearch/ListingSidebar
-msgid "venue_filter"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/EventSearch/Body
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
-#: components/ItaliaTheme/Blocks/EventSearch/FilterBlocks/SelectFilter
-#: components/ItaliaTheme/Blocks/EventSearch/FilterBlocks/VenueFilter
 msgid "venues"
 msgstr ""
 
@@ -2639,8 +2081,6 @@ msgstr ""
 msgid "view_all"
 msgstr ""
 
-#: components/DesignTheme/View/ServizioView
-#: components/ItaliaTheme/View/ServizioView
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "vincoli"
 msgstr ""

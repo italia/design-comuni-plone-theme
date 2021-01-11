@@ -77,6 +77,10 @@ const messages = defineMessages({
     id: 'form_field_type_date',
     defaultMessage: 'Data',
   },
+  field_type_attachment: {
+    id: 'form_field_type_attachment',
+    defaultMessage: 'Allegato',
+  },
   field_type_from: {
     id: 'form_field_type_from',
     defaultMessage: 'E-mail',
@@ -252,6 +256,10 @@ const Sidebar = ({
                           intl.formatMessage(messages.field_type_checkbox),
                         ],
                         ['date', intl.formatMessage(messages.field_type_date)],
+                        [
+                          'attachment',
+                          intl.formatMessage(messages.field_type_attachment),
+                        ],
                         ['from', intl.formatMessage(messages.field_type_from)],
                       ]}
                     />
