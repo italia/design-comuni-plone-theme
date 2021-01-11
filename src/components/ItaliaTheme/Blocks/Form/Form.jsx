@@ -131,12 +131,12 @@ const Form = ({ data, id, path }) => {
       data.subblocks.forEach((subblock, index) => {
         let name = getFieldName(subblock.label);
         if (formData[name]?.value) {
-          const attachment = subblock.field_type === 'attachment';
-          let value = attachment
-            ? formData[name].value?.filename
-            : formData[name].value;
-          content += `${formData[name].label}: ${value}\n`;
-          attachments[name] = formData[name].value;
+          const isAttachment = subblock.field_type === 'attachment';
+          if (isAttachment) {
+            attachments[name] = formData[name].value;
+          } else {
+            content += `${formData[name].label}: ${formData[name].value}\n`;
+          }
         }
       });
 
