@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Segment, Accordion } from 'semantic-ui-react';
 import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
-import { SelectWidget, Icon } from '@plone/volto/components';
+import {
+  SelectWidget,
+  Icon,
+  ObjectBrowserWidget,
+} from '@plone/volto/components';
 import upSVG from '@plone/volto/icons/up-key.svg';
 import downSVG from '@plone/volto/icons/down-key.svg';
 import FiltersConfig from '@italia/components/ItaliaTheme/Blocks/EventSearch/FiltersConfig';
@@ -35,6 +39,10 @@ const messages = defineMessages({
   filter_three: {
     id: 'searchEventsBlock_filter_three',
     defaultMessage: 'Filtro 3',
+  },
+  location_to_search: {
+    id: 'location_to_search',
+    defaultMessage: 'Posizione in cui cercare',
   },
   bg_color: {
     id: 'searchEventsBlock_bg_color',
@@ -133,6 +141,18 @@ const Sidebar = (props) => {
               });
             }}
             choices={filters}
+          />
+          <ObjectBrowserWidget
+            id={'ObjectBrowserWidget'}
+            title={props.intl.formatMessage(messages.location_to_search)}
+            value={props.data.location}
+            mode={'link'}
+            onChange={(name, value) => {
+              props.onChangeBlock(props.block, {
+                ...props.data,
+                location: value,
+              });
+            }}
           />
         </div>
       </Segment>

@@ -75,6 +75,14 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
       }
     });
 
+    if (data.location && data.location[0]) {
+      query.push({
+        i: 'path',
+        o: 'plone.app.querystring.operation.string.absolutePath',
+        v: data.location[0]['@id'],
+      });
+    }
+
     dispatch(
       getQueryStringResults(
         subsite ? flattenToAppURL(subsite['@id']) : '/',
