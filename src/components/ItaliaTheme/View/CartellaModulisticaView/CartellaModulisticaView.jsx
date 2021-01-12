@@ -7,6 +7,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
 import { getContent, resetContent } from '@plone/volto/actions';
+import { flattenToAppURL } from '@plone/volto/helpers';
 import {
   PageHeader,
   RelatedItems,
@@ -44,9 +45,16 @@ const CartellaModulisticaView = ({ content }) => {
       const modulistica_items_url =
         content['@components']['modulistica-items']['@id'];
 
-      dispatch(getContent(modulistica_items_url, null, modulistica_key));
+      dispatch(
+        getContent(
+          flattenToAppURL(modulistica_items_url),
+          null,
+          modulistica_key,
+        ),
+      );
       return () => dispatch(resetContent(modulistica_key));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const modulistica = locationContent[modulistica_key]?.data?.items ?? [];
