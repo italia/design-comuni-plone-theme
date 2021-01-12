@@ -16855,7 +16855,7 @@ vm-browserify@^1.0.1:
 
 volto-blocks-widget@collective/volto-blocks-widget:
   version "0.1.0"
-  resolved "https://codeload.github.com/collective/volto-blocks-widget/tar.gz/42d1f7b6600edf76cb0da96da7c88d97447e7149"
+  resolved "https://codeload.github.com/collective/volto-blocks-widget/tar.gz/318a264d146c2474097e1167b9c089e7bde1a6cf"
 
 volto-cookie-banner@collective/volto-cookie-banner#v1.0.1:
   version "1.0.1"
