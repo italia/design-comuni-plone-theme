@@ -36,6 +36,9 @@
             ],
             "@italia/addons/volto-editablefooter": [
                 "addons/volto-editablefooter/src"
+            ],
+            "@italia/addons/volto-blocks-widget": [
+                "addons/volto-blocks-widget"
             ]
         },
         "baseUrl": "src"

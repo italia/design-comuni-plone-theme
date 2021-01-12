@@ -52,5 +52,11 @@
     "path": "src",
     "https": "https://github.com/RedTurtle/volto-editablefooter.git",
     "url": "git@github.com:RedTurtle/volto-editablefooter.git"
+  },
+  "volto-blocks-widget": {
+    "package": "@italia/addons/volto-blocks-widget",
+    "path": "src",
+    "https": "https://github.com/collective/volto-blocks-widget.git",
+    "url": "git@github.com:collective/volto-blocks-widget.git"
   }
 }
