@@ -45,5 +45,18 @@ $sidebarFormBg: #fafafa;
         min-height: 60px;
       }
     }
+
+    .menu-blocks-container {
+      .DraftEditor-editorContainer {
+        .public-DraftEditor-content {
+          min-height: unset;
+        }
+      }
+
+      .DraftEditor-root {
+        //background-color: transparent;
+        border-bottom: none;
+      }
+    }
   }
 }
