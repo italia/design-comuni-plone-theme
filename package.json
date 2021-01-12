@@ -14,6 +14,7 @@
     "src/addons/volto-subsites",
     "src/addons/volto-social-settings",
     "src/addons/volto-editablefooter",
+    "src/addons/volto-blocks-widget",
     "src/addons/volto-google-analytics",
     "src/addons/volto-secondarymenu"
   ],
@@ -27,6 +28,7 @@
     "volto-subsites",
     "volto-social-settings",
     "volto-editablefooter",
+    "volto-blocks-widget",
     "volto-google-analytics",
     "volto-secondarymenu"
   ],
@@ -67,6 +69,7 @@
       "volto-subsites/(.*)$": "<rootDir>/src/addons/volto-subsites/src/$1",
       "volto-social-settings/(.*)$": "<rootDir>/src/addons/volto-social-settings/src/$1",
       "volto-editablefooter/(.*)$": "<rootDir>/src/addons/volto-editablefooter/src/$1",
+      "volto-blocks-widget/(.*)$": "<rootDir>/src/addons/volto-blocks-widget/src/$1",
       "volto-google-analytics/(.*)$": "<rootDir>/src/addons/volto-google-analytics/src/$1",
       "volto-secondarymenu/(.*)$": "<rootDir>/src/addons/volto-secondarymenu/src/$1"
     },
@@ -175,6 +178,7 @@
     "typeface-lora": "0.0.72",
     "typeface-roboto-mono": "0.0.75",
     "typeface-titillium-web": "0.0.72",
+    "volto-blocks-widget": "collective/volto-blocks-widget#v1.0.0",
     "volto-cookie-banner": "collective/volto-cookie-banner#v1.0.2",
     "volto-dropdownmenu": "collective/volto-dropdownmenu#v1.3.0",
     "volto-editablefooter": "RedTurtle/volto-editablefooter#v2.1.0",
