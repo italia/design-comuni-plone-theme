@@ -1,8 +1,12 @@
 @media print {
+  body {
+    display: block !important;
+  }
+
   // removed underlining from links
   a {
-    text-decoration: none !important;
     font-weight: 600 !important;
+    text-decoration: none !important;
   }
 
   // removed part of header header
@@ -18,8 +22,8 @@
       a {
         .it-brand-text {
           .no_toc {
-            font-size: 2rem !important;
             color: $primary;
+            font-size: 2rem !important;
           }
         }
       }
@@ -29,8 +33,8 @@
   // Removed shadow and card's padding
   .card {
     &.shadow {
-      box-shadow: none !important;
       padding: 1rem 0 0 0 !important;
+      box-shadow: none !important;
     }
 
     &.bigborder {
@@ -40,8 +44,8 @@
   }
 
   #text-tempi_e_scadenze > div > p {
-    box-shadow: none !important;
     padding: 1rem 0 0 0 !important;
+    box-shadow: none !important;
   }
 
   #briciole {
