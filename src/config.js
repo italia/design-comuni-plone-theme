@@ -74,6 +74,7 @@ import DettagliProcedimentiView from '@italia/components/ItaliaTheme/View/Traspa
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import CardWithImageTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CardWithImageTemplateSkeleton';
 import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
+import SmallBlockLinksTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SmallBlockLinksTemplateSkeleton';
 
 import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate';
 import PhotogalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
@@ -394,6 +395,7 @@ const customBlocks = {
       smallBlockLinksTemplate: {
         label: 'Blocco link solo immagini',
         template: SmallBlockLinksTemplate,
+        skeleton: SmallBlockLinksTemplateSkeleton,
       },
       completeBlockLinksTemplate: {
         label: 'Blocco link completo',

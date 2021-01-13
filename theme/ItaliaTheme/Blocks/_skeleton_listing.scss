@@ -85,6 +85,11 @@
     }
   }
 
+  .img-skeleton {
+    @extend .skeleton-animation;
+    background-color: $skeleton-bg;
+  }
+
   .link-more {
     @extend .skeleton-animation;
     margin-bottom: 1em;
