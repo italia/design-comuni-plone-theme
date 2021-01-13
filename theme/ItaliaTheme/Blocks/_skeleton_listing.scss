@@ -1,8 +1,15 @@
 .skeleton-template {
+  $skeleton-bg: $lightgrey-c2;
+
   .card {
     position: relative;
 
     .card-title {
+      // min-height: 1.5em;
+      color: transparent;
+    }
+
+    .category-top {
       min-height: 1em;
     }
 
@@ -11,21 +18,32 @@
     }
 
     .card-title,
-    .card-text {
-      background-color: $lightgrey-c2;
+    .card-text,
+    .category-top {
+      background-color: $skeleton-bg;
+    }
+
+    .img-responsive-panoramic {
+      .img-wrapper {
+        min-height: 6em;
+        background-color: $skeleton-bg;
+      }
+    }
+
+    .chip {
+      border-color: $skeleton-bg;
+      background-color: $skeleton-bg;
     }
 
     .card-body {
       overflow: hidden;
 
       &:after {
-        content: '';
-        background-color: #333;
-        width: 100%;
-        height: 100%;
         position: absolute;
         top: 0;
         left: 0;
+        width: 100%;
+        height: 100%;
         animation-duration: 2s;
         animation-iteration-count: infinite;
         animation-name: loader-animate;
@@ -48,8 +66,23 @@
           rgba(255, 255, 255, 0.6) 30%,
           rgba(255, 255, 255, 0) 81%
         );
+        background-color: #333;
+        content: '';
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
       }
+    }
+  }
+
+  .link-more {
+    margin-bottom: 1em;
+    text-align: center;
+
+    &:after {
+      display: inline-block;
+      width: 10em;
+      min-height: 1em;
+      background-color: $skeleton-bg;
+      content: '';
     }
   }
 }

@@ -72,6 +72,7 @@ import TrasparenzaView from '@italia/components/ItaliaTheme/View/TrasparenzaView
 import DettagliProcedimentiView from '@italia/components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView';
 
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
+import CardWithImageTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CardWithImageTemplateSkeleton';
 import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
 
 import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate';
@@ -91,7 +92,7 @@ import { DatetimeWidget } from '@plone/volto/config/Widgets';
 import { MultilingualWidget } from '@italia/addons/volto-multilingual-widget';
 import IconWidget from '@italia/components/ItaliaTheme/manage/Widgets/IconWidget';
 import { defaultIconWidgetOptions } from '@italia/helpers/index';
-import TinymceWidget from '@italia/components/ItaliaTheme/manage/Widgets/TinymceWidget';
+//import TinymceWidget from '@italia/components/ItaliaTheme/manage/Widgets/TinymceWidget';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import * as Icons from '@fortawesome/free-solid-svg-icons';
@@ -368,10 +369,15 @@ const customBlocks = {
     ...config.blocks.blocksConfig.listing,
     templates: {
       ...config.blocks.blocksConfig.listing.templates,
-      default: { label: 'Card semplice', template: SimpleCardTemplate },
+
+      default: {
+        label: 'Card semplice',
+        template: SimpleCardTemplate,
+      },
       cardWithImageTemplate: {
         label: 'Card con immagine',
         template: CardWithImageTemplate,
+        skeleton: CardWithImageTemplateSkeleton,
       },
       inEvidenceTemplate: {
         label: 'In evidenza',
