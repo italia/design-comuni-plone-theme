@@ -12,10 +12,10 @@
     }
 
     figcaption {
+      padding: 0.5em 1em;
       color: #666;
       font-size: 0.8em;
       text-align: center;
-      padding: 0.5em 1em;
     }
   }
 
@@ -25,17 +25,19 @@
 
   .slick-prev {
     outline: none !important;
+
     &:before {
-      color: $primary;
       background-color: #eee;
+      color: $primary;
     }
   }
 
   .slick-next {
     outline: none !important;
+
     &:before {
-      color: $primary;
       background-color: #eee;
+      color: $primary;
     }
   }
 
@@ -52,5 +54,27 @@
   .slick-track {
     display: flex;
     align-items: center;
+  }
+
+  .play-pause-wrapper {
+    text-align: left;
+
+    button {
+      border: none;
+      background: transparent;
+
+      .icon {
+        width: 0.8em;
+        height: 0.8em;
+        color: rgba(0, 0, 0, 0.45);
+      }
+
+      &:hover,
+      &:active {
+        .icon {
+          color: $primary;
+        }
+      }
+    }
   }
 }
