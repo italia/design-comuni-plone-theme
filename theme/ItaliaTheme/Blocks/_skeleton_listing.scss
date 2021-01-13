@@ -35,13 +35,20 @@
       min-height: 1em;
     }
 
+    .etichetta {
+      width: 7em;
+      min-height: 0.8em;
+    }
+
     .card-text {
       min-height: 5em;
     }
 
     .card-title,
     .card-text,
-    .category-top {
+    .category-top,
+    .flag-icon,
+    .etichetta {
       background-color: $skeleton-bg;
     }
 
@@ -62,6 +69,19 @@
     .chip {
       border-color: $skeleton-bg;
       background-color: $skeleton-bg;
+    }
+
+    .read-more {
+      .icon {
+        color: $skeleton-bg;
+        fill: $skeleton-bg;
+      }
+
+      .text {
+        width: 5em;
+        height: 0.8em;
+        background-color: $skeleton-bg;
+      }
     }
   }
 

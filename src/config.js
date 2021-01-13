@@ -82,6 +82,7 @@ import InEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Li
 import SimpleCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplate';
 import GridGalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate';
 import RibbonCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate';
+import RibbonCardTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/RibbonCardTemplateSkeleton';
 import BandiInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate';
 import AmministrazioneTrasparenteTablesTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
 
@@ -388,6 +389,7 @@ const customBlocks = {
       ribbonCardTemplate: {
         label: 'Card con nastro',
         template: RibbonCardTemplate,
+        skeleton: RibbonCardTemplateSkeleton,
       },
       smallBlockLinksTemplate: {
         label: 'Blocco link solo immagini',
