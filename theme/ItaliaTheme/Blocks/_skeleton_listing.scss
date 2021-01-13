@@ -1,8 +1,30 @@
 .skeleton-template {
   $skeleton-bg: $lightgrey-c2;
 
+  .skeleton-animation {
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -150px;
+      display: block;
+      width: 120px;
+      height: 100%;
+
+      animation: loader-animate 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      background: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(255, 255, 255, 0.6) 50%,
+        transparent 100%
+      );
+
+      content: '';
+    }
+  }
+
   .card {
-    position: relative;
+    overflow: hidden;
+    @extend .skeleton-animation;
 
     .card-title {
       // min-height: 1.5em;
@@ -30,50 +52,21 @@
       }
     }
 
+    .img-responsive {
+      .img-wrapper {
+        min-height: 10em;
+        background-color: $skeleton-bg;
+      }
+    }
+
     .chip {
       border-color: $skeleton-bg;
       background-color: $skeleton-bg;
     }
-
-    .card-body {
-      overflow: hidden;
-
-      &:after {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
-        animation-name: loader-animate;
-        animation-timing-function: linear;
-        background: -webkit-linear-gradient(
-          left,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(255, 255, 255, 0.6) 30%,
-          rgba(255, 255, 255, 0) 81%
-        );
-        background: -o-linear-gradient(
-          left,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(255, 255, 255, 0.6) 30%,
-          rgba(255, 255, 255, 0) 81%
-        );
-        background: linear-gradient(
-          to right,
-          rgba(255, 255, 255, 0) 0%,
-          rgba(255, 255, 255, 0.6) 30%,
-          rgba(255, 255, 255, 0) 81%
-        );
-        background-color: #333;
-        content: '';
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
-      }
-    }
   }
 
   .link-more {
+    @extend .skeleton-animation;
     margin-bottom: 1em;
     text-align: center;
 
@@ -89,11 +82,11 @@
 
 // Loader animation
 @keyframes loader-animate {
-  0% {
-    transform: translate3d(-100%, 0, 0);
+  from {
+    left: -150px;
   }
 
-  100% {
-    transform: translate3d(100%, 0, 0);
+  to {
+    left: 100%;
   }
 }
