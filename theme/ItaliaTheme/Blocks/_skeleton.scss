@@ -101,6 +101,7 @@
 
   .img-skeleton {
     @extend .skeleton-animation;
+    height: 100%;
     background-color: $skeleton-bg;
   }
 
