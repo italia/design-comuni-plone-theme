@@ -41,6 +41,44 @@
     }
   }
 
+  .slick-track {
+    display: flex;
+    align-items: center;
+  }
+
+  .slick-dots {
+    position: relative;
+    bottom: unset;
+
+    ul {
+      padding: 0;
+    }
+
+    .play-pause-wrapper {
+      position: absolute;
+      top: -1.5em;
+      text-align: left;
+
+      button {
+        border: none;
+        background: transparent;
+
+        .icon {
+          width: 0.8em;
+          height: 0.8em;
+          color: rgba(0, 0, 0, 0.45);
+        }
+
+        &:hover,
+        &:active {
+          .icon {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+
   @media (max-width: #{map-get($grid-breakpoints, md)}) {
     .slick-arrow.slick-prev {
       left: -20px;
@@ -48,33 +86,6 @@
 
     .slick-arrow.slick-next {
       right: -20px;
-    }
-  }
-
-  .slick-track {
-    display: flex;
-    align-items: center;
-  }
-
-  .play-pause-wrapper {
-    text-align: left;
-
-    button {
-      border: none;
-      background: transparent;
-
-      .icon {
-        width: 0.8em;
-        height: 0.8em;
-        color: rgba(0, 0, 0, 0.45);
-      }
-
-      &:hover,
-      &:active {
-        .icon {
-          color: $primary;
-        }
-      }
     }
   }
 }
