@@ -84,6 +84,7 @@ import InEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/In
 import InEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/InEvidenceTemplateSkeleton';
 import SimpleCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplate';
 import GridGalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate';
+import GridGalleryTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/GridGalleryTemplateSkeleton';
 import RibbonCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate';
 import RibbonCardTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/RibbonCardTemplateSkeleton';
 import BandiInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate';
@@ -414,6 +415,7 @@ const customBlocks = {
       gridGalleryTemplate: {
         label: 'Gallery a griglia',
         template: GridGalleryTemplate,
+        skeleton: GridGalleryTemplateSkeleton,
       },
       bandiInEvidenceTemplate: {
         label: 'Bandi',
