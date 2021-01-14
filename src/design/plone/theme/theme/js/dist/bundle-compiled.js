@@ -464,6 +464,29 @@ require(['jquery', 'ellipsed'], function($, ellipsed) {
       var iconsEvent = new Event('rtIconsLoaded');
       document.dispatchEvent(iconsEvent);
     }
+
+    /*
+     * Update breadcrumbs when navigating in folder content
+     * Patch paired with https://github.com/plone/mockup/issues/1016
+     * Should be paired with plone.staticresources 1.4.0 for full resolution
+     */
+    $(document).on('click', function(e) {
+      if ($(e.target).closest('.pat-structure').length > 0) {
+        $('#portal-breadcrumbs').load(
+          window.location.href.split('folder_contents')[0] +
+            ' #portal-breadcrumbs',
+          function() {
+            $('#portal-breadcrumbs #breadcrumbs-home a').prepend(
+              '<i class="fas fa-home"></i>'
+            );
+          }
+        );
+        $('h1.documentFirstHeading').load(
+          window.location.href.split('folder_contents')[0] +
+            ' h1.documentFirstHeading'
+        );
+      }
+    });
   });
 });
 
