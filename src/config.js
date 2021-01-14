@@ -94,7 +94,9 @@ import AmministrazioneTrasparenteTablesTemplateSkeleton from '@italia/components
 
 import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
 import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
+import CardWithImageRssTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithImageRssTemplateSkeleton';
 import CardWithoutImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
+import CardWithoutImageRssTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton';
 import { DatetimeWidget } from '@plone/volto/config/Widgets';
 
 import { MultilingualWidget } from '@italia/addons/volto-multilingual-widget';
@@ -145,10 +147,12 @@ const rssBlock = {
     default: {
       label: 'Card senza immagine',
       template: CardWithoutImageRssTemplate,
+      skeleton: CardWithoutImageRssTemplateSkeleton,
     },
     card_without_image: {
       label: 'Card con immagine',
       template: CardWithImageRssTemplate,
+      skeleton: CardWithImageRssTemplateSkeleton,
     },
   },
 };

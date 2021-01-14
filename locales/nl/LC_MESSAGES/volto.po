@@ -469,6 +469,8 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/RibbonCardTemplateSkeleton
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
+#: components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithImageRssTemplateSkeleton
+#: components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 msgid "Vedi tutto"
 msgstr ""
@@ -1740,12 +1742,16 @@ msgstr ""
 #: addons/volto-rss-block/src/Templates/DefaultRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
+#: components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithImageRssTemplateSkeleton
+#: components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton
 msgid "rss_no_results"
 msgstr ""
 
 #: addons/volto-rss-block/src/Templates/DefaultRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
+#: components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithImageRssTemplateSkeleton
+#: components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton
 msgid "rss_read_more"
 msgstr ""
 
