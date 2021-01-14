@@ -5,7 +5,7 @@ Changelog
 5.0.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Update breadcrumbs, title in folder contents nav [nzambello]
 
 
 5.0.0 (2020-05-13)
