@@ -103,6 +103,26 @@
     background-color: $skeleton-bg;
   }
 
+  .slick-slider {
+    .slick-slide {
+      .img-wrapper {
+        @extend .skeleton-animation;
+        height: 10em;
+        background-color: $skeleton-bg;
+      }
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      background-color: transparent;
+      color: darken($skeleton-bg, 10);
+    }
+
+    .slick-dots li.slick-active button:before {
+      color: darken($skeleton-bg, 60);
+    }
+  }
+
   .link-more {
     @extend .skeleton-animation;
     margin-bottom: 1em;

@@ -12,10 +12,10 @@
     }
 
     figcaption {
+      padding: 0.5em 1em;
       color: #666;
       font-size: 0.8em;
       text-align: center;
-      padding: 0.5em 1em;
     }
   }
 
@@ -25,17 +25,17 @@
 
   .slick-prev {
     outline: none !important;
+
     &:before {
       color: $primary;
-      background-color: #eee;
     }
   }
 
   .slick-next {
     outline: none !important;
+
     &:before {
       color: $primary;
-      background-color: #eee;
     }
   }
 
