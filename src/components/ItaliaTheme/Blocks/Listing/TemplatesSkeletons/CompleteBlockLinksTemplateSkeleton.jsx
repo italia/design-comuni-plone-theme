@@ -11,7 +11,7 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import cx from 'classnames';
 
-const CompleteBlockLinksTemplate = ({
+const CompleteBlockLinksTemplateSkeleton = ({
   items,
   title,
   isEditMode,
@@ -63,11 +63,11 @@ const CompleteBlockLinksTemplate = ({
   );
 };
 
-CompleteBlockLinksTemplate.propTypes = {
+CompleteBlockLinksTemplateSkeleton.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
   linkMore: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };
 
-export default CompleteBlockLinksTemplate;
+export default CompleteBlockLinksTemplateSkeleton;

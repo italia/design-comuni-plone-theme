@@ -85,7 +85,8 @@
       }
     }
 
-    &.card-bg {
+    &.card-bg,
+    &.card-background {
       background-color: darken($skeleton-bg, 10) !important;
 
       .card-title,

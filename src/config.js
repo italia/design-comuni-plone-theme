@@ -87,6 +87,7 @@ import GridGalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/G
 import RibbonCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate';
 import RibbonCardTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/RibbonCardTemplateSkeleton';
 import BandiInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate';
+import BandiInEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton';
 import AmministrazioneTrasparenteTablesTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
 
 import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
@@ -416,6 +417,7 @@ const customBlocks = {
       bandiInEvidenceTemplate: {
         label: 'Bandi',
         template: BandiInEvidenceTemplate,
+        skeleton: BandiInEvidenceTemplateSkeleton,
       },
       amministrazioneTrasparenteTablesTemplate: {
         label: 'Tabelle Amministrazione Trasparente',
