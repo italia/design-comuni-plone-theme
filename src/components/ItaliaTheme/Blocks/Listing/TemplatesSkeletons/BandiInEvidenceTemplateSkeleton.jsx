@@ -14,7 +14,6 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 
 const BandiInEvidenceTemplateSkeleton = ({
-  items,
   title,
   isEditMode,
   show_block_bg,
@@ -69,7 +68,6 @@ const BandiInEvidenceTemplateSkeleton = ({
 };
 
 BandiInEvidenceTemplateSkeleton.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.any).isRequired,
   linkMore: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,

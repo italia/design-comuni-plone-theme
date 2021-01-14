@@ -15,7 +15,6 @@ import cx from 'classnames';
 import { CardCategory } from '@italia/components/ItaliaTheme';
 
 const InEvidenceTemplateSkeleton = ({
-  items,
   title,
   isEditMode,
   show_block_bg,
@@ -62,13 +61,14 @@ const InEvidenceTemplateSkeleton = ({
                       <CardTitle tag="h4"> </CardTitle>
                       <CardText className="mb-3"> </CardText>
                       <div>
-                        {[0, 1]?.map((argument, index) => (
+                        {[0, 1]?.map((index) => (
                           <Chip
                             color="primary"
                             disabled={false}
                             simple
                             tag="div"
                             className="mr-2"
+                            key={index}
                           ></Chip>
                         ))}
                       </div>
@@ -86,7 +86,6 @@ const InEvidenceTemplateSkeleton = ({
 };
 
 InEvidenceTemplateSkeleton.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.any).isRequired,
   linkMore: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,

@@ -33,7 +33,7 @@ const HeaderSlim = () => {
           responsive
           href={parentSiteURL}
           target={target}
-          rel="noopener noreferer"
+          rel="noopener noreferrer"
         >
           {parentSiteTile}
         </HeaderBrand>

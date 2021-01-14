@@ -12,7 +12,6 @@ import {
 import cx from 'classnames';
 
 const CompleteBlockLinksTemplateSkeleton = ({
-  items,
   title,
   isEditMode,
   linkMore,
@@ -64,7 +63,6 @@ const CompleteBlockLinksTemplateSkeleton = ({
 };
 
 CompleteBlockLinksTemplateSkeleton.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.any).isRequired,
   linkMore: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,

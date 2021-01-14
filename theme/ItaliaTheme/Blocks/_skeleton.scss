@@ -1,27 +1,27 @@
-.skeleton-template {
-  $skeleton-bg: $lightgrey-c2;
+$skeleton-bg: $lightgrey-c2;
 
-  .skeleton-animation {
-    &::before {
-      position: absolute;
-      top: 0;
-      left: -150px;
-      display: block;
-      width: 120px;
-      height: 100%;
+.skeleton-animation {
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -150px;
+    display: block;
+    width: 120px;
+    height: 100%;
 
-      animation: loader-animate 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-      background: linear-gradient(
-        to right,
-        transparent 0%,
-        rgba(255, 255, 255, 0.6) 50%,
-        transparent 100%
-      );
+    animation: loader-animate 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(255, 255, 255, 0.6) 50%,
+      transparent 100%
+    );
 
-      content: '';
-    }
+    content: '';
   }
+}
 
+.skeleton-template {
   .card {
     overflow: hidden;
     @extend .skeleton-animation;
@@ -161,6 +161,16 @@
   }
 }
 
+.bg-light {
+  .skeleton-template {
+    .card {
+      &.card-bg,
+      &.card-background {
+        background-color: $skeleton-bg !important;
+      }
+    }
+  }
+}
 // Loader animation
 @keyframes loader-animate {
   from {

@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import cx from 'classnames';
 
-const SmallBlockLinksTemplate = ({
-  items,
+const SmallBlockLinksTemplateSkeleton = ({
   title,
   isEditMode,
   show_block_bg,
@@ -37,11 +36,10 @@ const SmallBlockLinksTemplate = ({
   );
 };
 
-SmallBlockLinksTemplate.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.any).isRequired,
+SmallBlockLinksTemplateSkeleton.propTypes = {
   linkMore: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };
 
-export default SmallBlockLinksTemplate;
+export default SmallBlockLinksTemplateSkeleton;

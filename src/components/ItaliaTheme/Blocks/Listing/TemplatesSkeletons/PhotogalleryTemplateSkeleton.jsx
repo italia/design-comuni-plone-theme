@@ -17,7 +17,6 @@ const PhotogalleryTemplateSkeleton = (data) => {
 };
 
 PhotogalleryTemplateSkeleton.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.any).isRequired,
   linkMore: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,

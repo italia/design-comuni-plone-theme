@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import {
@@ -12,11 +11,7 @@ import {
   Col,
 } from 'design-react-kit/dist/design-react-kit';
 
-const CardWithoutImageRssTemplateSkeleton = ({
-  items = [],
-  isEditMode,
-  data = {},
-}) => {
+const CardWithoutImageRssTemplateSkeleton = ({ isEditMode, data = {} }) => {
   return (
     <div className={cx('', { 'public-ui': isEditMode })}>
       <div className="skeleton-template">
@@ -53,10 +48,6 @@ const CardWithoutImageRssTemplateSkeleton = ({
       </div>
     </div>
   );
-};
-
-CardWithoutImageRssTemplateSkeleton.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.object),
 };
 
 export default CardWithoutImageRssTemplateSkeleton;

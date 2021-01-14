@@ -18,7 +18,6 @@ import {
 import { Link } from 'react-router-dom';
 
 const RibbonCardTemplateSkeleton = ({
-  items,
   isEditMode,
   linkMore,
   title,
@@ -96,7 +95,6 @@ const RibbonCardTemplateSkeleton = ({
 };
 
 RibbonCardTemplateSkeleton.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.any).isRequired,
   isEditMode: PropTypes.bool,
   linkMore: PropTypes.any,
 };

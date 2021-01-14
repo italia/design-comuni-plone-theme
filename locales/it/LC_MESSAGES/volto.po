@@ -2054,6 +2054,7 @@ msgid "twitterAccounts_description"
 msgstr "Inserisci i nomi degli account di cui vuoi visualizzare i post, separati da virgola. Ad esempio, se vuoi mostrare i tweet di Repubblica e del Corriere della Sera, inserisci “repubblica,Corriere"."
 
 #: components/ItaliaTheme/Blocks/TwitterPosts/Body
+#: components/ItaliaTheme/Blocks/TwitterPosts/Skeleton
 msgid "twitter_posts_no_results"
 msgstr "Non c'è nessun post da mostrare."
 

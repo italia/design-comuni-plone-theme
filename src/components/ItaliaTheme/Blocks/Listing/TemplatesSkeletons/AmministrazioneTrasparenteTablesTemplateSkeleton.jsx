@@ -4,7 +4,6 @@ import cx from 'classnames';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 
 const AmministrazioneTrasparenteTablesTemplate = ({
-  items,
   isEditMode,
   title,
   linkMore,
@@ -56,7 +55,6 @@ const AmministrazioneTrasparenteTablesTemplate = ({
 };
 
 AmministrazioneTrasparenteTablesTemplate.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.any).isRequired,
   linkMore: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,

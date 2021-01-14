@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-01-14T14:33:26.058Z\n"
+"POT-Creation-Date: 2021-01-14T15:37:23.945Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -2531,6 +2531,7 @@ msgid "twitterAccounts_description"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/TwitterPosts/Body
+#: components/ItaliaTheme/Blocks/TwitterPosts/Skeleton
 # defaultMessage: Non c'è nessun post da mostrare.
 msgid "twitter_posts_no_results"
 msgstr ""

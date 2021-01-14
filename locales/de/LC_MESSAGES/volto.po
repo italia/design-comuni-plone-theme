@@ -2069,6 +2069,7 @@ msgid "twitterAccounts_description"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/TwitterPosts/Body
+#: components/ItaliaTheme/Blocks/TwitterPosts/Skeleton
 msgid "twitter_posts_no_results"
 msgstr ""
 

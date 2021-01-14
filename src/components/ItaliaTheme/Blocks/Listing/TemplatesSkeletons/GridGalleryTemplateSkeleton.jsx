@@ -7,7 +7,6 @@ import { UniversalLink } from '@plone/volto/components';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 
 const GridGalleryTemplateSkeleton = ({
-  items,
   isEditMode,
   title,
   linkMore,
@@ -53,7 +52,6 @@ const GridGalleryTemplateSkeleton = ({
 };
 
 GridGalleryTemplateSkeleton.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.any).isRequired,
   linkMore: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,

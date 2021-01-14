@@ -18,8 +18,7 @@ import {
 
 import { CardCategory } from '@italia/components/ItaliaTheme';
 
-const CardWithImageTemplate = ({
-  items,
+const CardWithImageTemplateSkeleton = ({
   isEditMode,
   title,
   linkMore,
@@ -78,6 +77,7 @@ const CardWithImageTemplate = ({
                               simple
                               tag="div"
                               className="mr-2"
+                              key={argument}
                             ></Chip>
                           ))}
                         </div>
@@ -95,11 +95,10 @@ const CardWithImageTemplate = ({
   );
 };
 
-CardWithImageTemplate.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.any).isRequired,
+CardWithImageTemplateSkeleton.propTypes = {
   linkMore: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };
 
-export default CardWithImageTemplate;
+export default CardWithImageTemplateSkeleton;
