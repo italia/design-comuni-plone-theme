@@ -26,7 +26,8 @@
     overflow: hidden;
     @extend .skeleton-animation;
 
-    .card-title {
+    .card-title,
+    .card-body h5.card-title {
       // min-height: 1.5em;
       color: transparent;
     }
@@ -81,6 +82,18 @@
         width: 5em;
         height: 0.8em;
         background-color: $skeleton-bg;
+      }
+    }
+
+    &.card-bg {
+      background-color: darken($skeleton-bg, 10) !important;
+
+      .card-title,
+      .card-text,
+      .category-top,
+      .flag-icon,
+      .etichetta {
+        background-color: #fff;
       }
     }
   }
