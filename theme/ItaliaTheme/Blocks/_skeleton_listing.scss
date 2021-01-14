@@ -137,6 +137,23 @@
       content: '';
     }
   }
+
+  table {
+    @extend .skeleton-animation;
+
+    th,
+    td {
+      height: 3.6em;
+    }
+
+    th {
+      background-color: darken($skeleton-bg, 10);
+    }
+
+    td {
+      background-color: $skeleton-bg;
+    }
+  }
 }
 
 // Loader animation
