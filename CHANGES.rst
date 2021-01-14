@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-5.0.1 (unreleased)
+5.0.1 (2021-01-14)
 ------------------
 
 - Update breadcrumbs, title in folder contents nav [nzambello]
