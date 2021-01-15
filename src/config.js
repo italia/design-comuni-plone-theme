@@ -72,20 +72,31 @@ import TrasparenzaView from '@italia/components/ItaliaTheme/View/TrasparenzaView
 import DettagliProcedimentiView from '@italia/components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView';
 
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
+import CardWithImageTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CardWithImageTemplateSkeleton';
 import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
+import SmallBlockLinksTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SmallBlockLinksTemplateSkeleton';
 
 import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate';
+import CompleteBlockLinksTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CompleteBlockLinksTemplateSkeleton';
 import PhotogalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
+import PhotogalleryTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/PhotogalleryTemplateSkeleton';
 import InEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate';
+import InEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/InEvidenceTemplateSkeleton';
 import SimpleCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplate';
 import GridGalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate';
+import GridGalleryTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/GridGalleryTemplateSkeleton';
 import RibbonCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate';
+import RibbonCardTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/RibbonCardTemplateSkeleton';
 import BandiInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate';
+import BandiInEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton';
 import AmministrazioneTrasparenteTablesTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
+import AmministrazioneTrasparenteTablesTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/AmministrazioneTrasparenteTablesTemplateSkeleton';
 
 import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
 import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
+import CardWithImageRssTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithImageRssTemplateSkeleton';
 import CardWithoutImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
+import CardWithoutImageRssTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton';
 import { DatetimeWidget } from '@plone/volto/config/Widgets';
 
 import { MultilingualWidget } from '@italia/addons/volto-multilingual-widget';
@@ -137,10 +148,12 @@ const rssBlock = {
     default: {
       label: 'Card senza immagine',
       template: CardWithoutImageRssTemplate,
+      skeleton: CardWithoutImageRssTemplateSkeleton,
     },
     card_without_image: {
       label: 'Card con immagine',
       template: CardWithImageRssTemplate,
+      skeleton: CardWithImageRssTemplateSkeleton,
     },
   },
 };
@@ -369,42 +382,55 @@ const customBlocks = {
     ...config.blocks.blocksConfig.listing,
     templates: {
       ...config.blocks.blocksConfig.listing.templates,
-      default: { label: 'Card semplice', template: SimpleCardTemplate },
+
+      default: {
+        label: 'Card semplice',
+        template: SimpleCardTemplate,
+      },
       cardWithImageTemplate: {
         label: 'Card con immagine',
         template: CardWithImageTemplate,
+        skeleton: CardWithImageTemplateSkeleton,
       },
       inEvidenceTemplate: {
         label: 'In evidenza',
         template: InEvidenceTemplate,
+        skeleton: InEvidenceTemplateSkeleton,
       },
       ribbonCardTemplate: {
         label: 'Card con nastro',
         template: RibbonCardTemplate,
+        skeleton: RibbonCardTemplateSkeleton,
       },
       smallBlockLinksTemplate: {
         label: 'Blocco link solo immagini',
         template: SmallBlockLinksTemplate,
+        skeleton: SmallBlockLinksTemplateSkeleton,
       },
       completeBlockLinksTemplate: {
         label: 'Blocco link completo',
         template: CompleteBlockLinksTemplate,
+        skeleton: CompleteBlockLinksTemplateSkeleton,
       },
       photogallery: {
         label: 'Photogallery',
         template: PhotogalleryTemplate,
+        skeleton: PhotogalleryTemplateSkeleton,
       },
       gridGalleryTemplate: {
         label: 'Gallery a griglia',
         template: GridGalleryTemplate,
+        skeleton: GridGalleryTemplateSkeleton,
       },
       bandiInEvidenceTemplate: {
         label: 'Bandi',
         template: BandiInEvidenceTemplate,
+        skeleton: BandiInEvidenceTemplateSkeleton,
       },
       amministrazioneTrasparenteTablesTemplate: {
         label: 'Tabelle Amministrazione Trasparente',
         template: AmministrazioneTrasparenteTablesTemplate,
+        skeleton: AmministrazioneTrasparenteTablesTemplateSkeleton,
       },
     },
     listing_bg_colors: [], //{name:'blue', label:'Blu'},{name:'light-blue', label:'Light blue'},{name:'sidebar-background', label:'Grey'}
@@ -541,6 +567,7 @@ export const blocks = {
     ...config.blocks.requiredBlocks.concat(...customRequiredBlocks),
   },
 };
+delete blocks.blocksConfig.listing.templates.imageGallery; //removes imageGallery volto template, because we have our photoGallery template
 
 export const addonReducers = { ...config.addonReducers };
 export const addonRoutes = [...(config.addonRoutes || [])];

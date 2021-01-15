@@ -44,20 +44,18 @@ const CardWithoutImageRssTemplate = ({ items = [], isEditMode, data = {} }) => {
             </Row>
           )}
           <Row>
-            {items.map((item) => (
-              <Col lg={3} className="mb-3" key={item['@id']}>
+            {items.map((item, index) => (
+              <Col lg={3} className="mb-3" key={index}>
                 <Card noWrapper={false} tag="div">
                   <CardBody tag="div">
                     <div className="category-top">
-                      {item?.categories?.length > 0 && item.categories[0]._ ? (
+                      {item?.categories?.length > 0 && item.categories[0]._ && (
                         <>
                           <span className="category">
                             {item.categories[0]._}
                           </span>
                           <span className="mx-1">&mdash;</span>
                         </>
-                      ) : (
-                        ''
                       )}
                       {(item.pubDate || item.date) && (
                         <span>

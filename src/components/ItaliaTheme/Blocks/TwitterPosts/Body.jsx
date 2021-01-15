@@ -11,6 +11,7 @@ import moment from 'moment';
 import { Container, Row } from 'design-react-kit/dist/design-react-kit';
 import { getTwitterPosts } from '@italia/actions';
 import { Icon } from '@italia/components/ItaliaTheme';
+import TwitterSkeleton from '@italia/components/ItaliaTheme/Blocks/TwitterPosts/Skeleton';
 
 const messages = defineMessages({
   no_results: {
@@ -18,6 +19,40 @@ const messages = defineMessages({
     defaultMessage: "Non c'è nessun post da mostrare.",
   },
 });
+
+const twitter_slider_settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        initialSlide: 2,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
 
 /**
  * Body TwitterPosts
@@ -31,44 +66,13 @@ const Body = ({ data, isEditMode }) => {
   const authors = data.twitter_accounts?.split(',').filter((a) => a.length > 0);
 
   useEffect(() => {
-    dispatch(getTwitterPosts(authors));
-  }, [authors, data.twitter_accounts, dispatch]);
+    if (data.twitter_accounts?.length > 0) {
+      dispatch(getTwitterPosts(authors));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data.twitter_accounts]);
 
   const twitter_posts = request?.result || [];
-
-  const slider_settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1025,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
 
   const content =
     twitter_posts?.length > 0 ? (
@@ -82,6 +86,7 @@ const Body = ({ data, isEditMode }) => {
                 href={`https://twitter.com/${author}`}
                 target="_blank"
                 rel="noopener noreferrer"
+                key={author}
               >
                 @{author}
               </a>
@@ -89,7 +94,7 @@ const Body = ({ data, isEditMode }) => {
           </div>
         )}
 
-        <Slider {...slider_settings}>
+        <Slider {...twitter_slider_settings}>
           {twitter_posts.map((tweet, index) => (
             <div className="it-single-slide-wrapper tweet rounded" key={index}>
               <div className="author">
@@ -139,7 +144,9 @@ const Body = ({ data, isEditMode }) => {
       intl.formatMessage(messages.no_results)
     ) : null;
 
-  return request.error ? (
+  return request.loadingResults ? (
+    <TwitterSkeleton data={data} authors={authors} isEditMode={isEditMode} />
+  ) : request.error ? (
     <Row className="row-full-width">
       <Container className="p-2">
         <div className="pt-4 pb-4">

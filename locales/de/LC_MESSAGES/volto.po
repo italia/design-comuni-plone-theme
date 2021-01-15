@@ -255,8 +255,16 @@ msgstr ""
 msgid "Path filter filtro"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
+msgid "Pause slider"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 msgid "Percorso path filter"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
+msgid "Play slider"
 msgstr ""
 
 #: addons/volto-editablefooter/src/customizations/components/theme/Footer/Footer
@@ -438,6 +446,10 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Form/Block/EditBlock
 #: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
 msgid "Vedi"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
+msgid "Vedi l'immagine"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate

@@ -12,10 +12,10 @@
     }
 
     figcaption {
+      padding: 0.5em 1em;
       color: #666;
       font-size: 0.8em;
       text-align: center;
-      padding: 0.5em 1em;
     }
   }
 
@@ -25,17 +25,42 @@
 
   .slick-prev {
     outline: none !important;
+
     &:before {
       color: $primary;
-      background-color: #eee;
     }
   }
 
   .slick-next {
     outline: none !important;
+
     &:before {
       color: $primary;
-      background-color: #eee;
+    }
+  }
+
+  .slick-dots {
+    position: unset;
+    bottom: unset;
+
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .play-pause-wrapper {
+      text-align: left;
+
+      button {
+        border: none;
+        background: none;
+
+        .icon {
+          width: 1em;
+          height: 1em;
+          color: $link-color;
+        }
+      }
     }
   }
 
@@ -47,10 +72,5 @@
     .slick-arrow.slick-next {
       right: -20px;
     }
-  }
-
-  .slick-track {
-    display: flex;
-    align-items: center;
   }
 }

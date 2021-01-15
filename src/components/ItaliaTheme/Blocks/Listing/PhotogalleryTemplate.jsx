@@ -1,19 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { useIntl, defineMessages } from 'react-intl';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import Slider from 'react-slick';
 import Image from '@plone/volto/components/theme/Image/Image';
+import { Icon } from '@italia/components/ItaliaTheme';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+const messages = defineMessages({
+  viewImage: {
+    id: "Vedi l'immagine",
+    defaultMessage: "Vedi l'immagine",
+  },
+  play: {
+    id: 'Play slider',
+    defaultMessage: 'Play',
+  },
+  pause: {
+    id: 'Pause slider',
+    defaultMessage: 'Metti in pausa',
+  },
+});
+
 const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
+  const intl = useIntl();
+  const [autoplay, setAutoplay] = useState(false);
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    autoplay: autoplay,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 1025,
@@ -40,6 +61,23 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
         },
       },
     ],
+    appendDots: (dots) => (
+      <div>
+        <div className="play-pause-wrapper">
+          <button
+            onClick={() => setAutoplay(!autoplay)}
+            title={
+              autoplay
+                ? intl.formatMessage(messages.pause)
+                : intl.formatMessage(messages.play)
+            }
+          >
+            <Icon icon={autoplay ? 'pause' : 'play'} />
+          </button>
+        </div>
+        <ul style={{ margin: '0px' }}> {dots} </ul>
+      </div>
+    ),
   };
 
   const getCaption = (item) => item.description ?? item.rights ?? null;
@@ -63,18 +101,25 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
             <Slider {...settings}>
               {items.map((item) => (
                 <div className="it-single-slide-wrapper" key={item['@id']}>
-                  <figure className="img-wrapper">
-                    {item.image && (
-                      <Image
-                        className="img-fluid"
-                        image={item.image}
-                        alt={item.title}
-                      />
-                    )}
-                    {getCaption(item) && (
-                      <figcaption>{getCaption(item)}</figcaption>
-                    )}
-                  </figure>
+                  <a
+                    href={item['@id']}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title={intl.formatMessage(messages.viewImage)}
+                  >
+                    <figure className="img-wrapper">
+                      {item.image && (
+                        <Image
+                          className="img-fluid"
+                          image={item.image}
+                          alt={item.title}
+                        />
+                      )}
+                      {getCaption(item) && (
+                        <figcaption>{getCaption(item)}</figcaption>
+                      )}
+                    </figure>
+                  </a>
                 </div>
               ))}
             </Slider>

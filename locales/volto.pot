@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-01-15T18:54:13.549Z\n"
+"POT-Creation-Date: 2021-01-15T19:04:19.195Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -297,9 +297,19 @@ msgstr ""
 msgid "Path filter filtro"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
+# defaultMessage: Metti in pausa
+msgid "Pause slider"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 # defaultMessage: Percorso
 msgid "Percorso path filter"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
+# defaultMessage: Play
+msgid "Play slider"
 msgstr ""
 
 #: addons/volto-editablefooter/src/customizations/components/theme/Footer/Footer
@@ -519,6 +529,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
 # defaultMessage: Vedi
 msgid "Vedi"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
+# defaultMessage: Vedi l'immagine
+msgid "Vedi l'immagine"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate

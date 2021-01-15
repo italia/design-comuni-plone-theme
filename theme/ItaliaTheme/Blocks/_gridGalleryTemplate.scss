@@ -170,4 +170,20 @@
       }
     }
   }
+
+  .skeleton-template {
+    .grid-gallery-grid {
+      .grid-gallery-item {
+        a {
+          &::before {
+            background: rgba(0, 0, 0, 0.2);
+          }
+
+          h3 {
+            height: 1.5em;
+          }
+        }
+      }
+    }
+  }
 }

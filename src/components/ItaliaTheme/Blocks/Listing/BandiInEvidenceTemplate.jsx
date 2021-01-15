@@ -81,13 +81,13 @@ const BandiInEvidenceTemplate = ({
               return (
                 <Card
                   key={index}
-                  className={cx('listing-item card-backgound', '')}
+                  className={cx('listing-item card-backrgound', '')}
                 >
                   <CardBody>
                     <CardTitle tag="h4" className="title">
                       <a
                         className="bando-title"
-                        href={!isEditMode ? flattenToAppURL(item['@id']) : '#'}
+                        href={!isEditMode ? flattenToAppURL(item['@id']) : '#0'}
                       >
                         {item.title || item.id}
                       </a>
