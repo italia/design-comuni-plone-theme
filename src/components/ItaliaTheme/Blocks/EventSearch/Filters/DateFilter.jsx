@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useIntl, defineMessages } from 'react-intl';
 import { DateRangePicker } from 'react-dates';
-import moment from 'moment/min/moment-with-locales';
+
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
 
