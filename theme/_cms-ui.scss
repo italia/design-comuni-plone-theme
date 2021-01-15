@@ -5,10 +5,10 @@ body.cms-ui {
     %heading {
       margin-top: 0; // 1
       margin-bottom: $headings-margin-bottom;
+      color: $headings-color;
       font-family: $font-family-sans-serif;
       font-weight: $headings-font-weight;
       line-height: $headings-line-height;
-      color: $headings-color;
     }
 
     h1 {
@@ -150,13 +150,13 @@ body.cms-ui {
 
   .path-filter-widget {
     padding: 1em 0 1em 0.5em;
-    margin-left: 2em;
     border-left: 1px solid #edf1f2;
+    margin-left: 2em;
 
     .filter-title {
-      background-color: #edf1f2;
       padding: 0.5em;
       margin-left: -0.5em;
+      background-color: #edf1f2;
     }
   }
 
@@ -172,12 +172,28 @@ body.cms-ui {
   //   }
   // }
 
+  //stili per l'editor di testo dei ct con i campi
+  .DraftEditor-root {
+    .public-DraftStyleDefault-block {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .block.text {
+    .DraftEditor-root {
+      .public-DraftStyleDefault-block {
+        margin-bottom: unset;
+      }
+    }
+  }
+  /////
+
   .draftJsToolbarDropdown {
     position: relative;
 
     .draftJsToolbarDropdown-toggle {
-      width: 42px;
       display: flex;
+      width: 42px;
       align-items: center;
       justify-content: space-between;
 
@@ -202,16 +218,16 @@ body.cms-ui {
 
     ul.draftJsToolbarDropdown-optionswrapper {
       position: absolute;
-      padding: 0;
-      margin: 0;
       top: 35px;
       left: 50%;
-      transform: translateX(-50%);
+      padding: 0;
+      margin: 0;
       background-color: #fff;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
-      list-style-type: none;
       border-bottom-left-radius: 3px;
       border-bottom-right-radius: 3px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.05);
+      list-style-type: none;
+      transform: translateX(-50%);
 
       &.hide {
         display: none;
@@ -243,8 +259,8 @@ body.cms-ui {
   }
 
   .column.color-chooser {
-    padding-bottom: 0.5em;
     padding-top: 0.5em;
+    padding-bottom: 0.5em;
   }
 }
 

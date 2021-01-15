@@ -49,8 +49,12 @@
 .card {
   .categoryicon-top {
     .icon {
-      fill: $secondary;
       color: $secondary;
+      fill: $secondary;
     }
   }
+}
+
+a.read-more {
+  color: $link-color;
 }

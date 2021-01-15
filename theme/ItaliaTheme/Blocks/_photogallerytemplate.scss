@@ -27,7 +27,6 @@
     outline: none !important;
 
     &:before {
-      background-color: #eee;
       color: $primary;
     }
   }
@@ -36,46 +35,7 @@
     outline: none !important;
 
     &:before {
-      background-color: #eee;
       color: $primary;
-    }
-  }
-
-  .slick-track {
-    display: flex;
-    align-items: center;
-  }
-
-  .slick-dots {
-    position: relative;
-    bottom: unset;
-
-    ul {
-      padding: 0;
-    }
-
-    .play-pause-wrapper {
-      position: absolute;
-      top: -1.5em;
-      text-align: left;
-
-      button {
-        border: none;
-        background: transparent;
-
-        .icon {
-          width: 0.8em;
-          height: 0.8em;
-          color: rgba(0, 0, 0, 0.45);
-        }
-
-        &:hover,
-        &:active {
-          .icon {
-            color: $primary;
-          }
-        }
-      }
     }
   }
 

@@ -99,6 +99,7 @@ const DefaultFilters = () => {
           showClearDates: true,
           defaultStart: moment().startOf('day'),
           defaultEnd: moment().endOf('day'),
+          isOutsideRange: () => false,
         },
       },
 

@@ -23,7 +23,6 @@ const Body = ({ data, children }) => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    infinite: true,
     responsive: [
       {
         breakpoint: 1025,
@@ -62,7 +61,7 @@ const Body = ({ data, children }) => {
             {data.channel_link ? (
               <a
                 href={data.channel_link}
-                rel="noopener noreferer"
+                rel="noopener noreferrer"
                 target="_blank"
               >
                 {data.channel_link_title || data.channel_link}

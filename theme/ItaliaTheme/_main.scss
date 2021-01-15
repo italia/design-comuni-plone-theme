@@ -71,12 +71,26 @@ button.custom-navbar-toggler svg.icon {
     border-left-width: 0.4rem;
     margin: 1.25rem 0;
     border-radius: 0.25rem;
+
+    p,
+    .public-DraftStyleDefault-block {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
   }
 
   .callout-bg {
     padding: 1.25rem;
     margin: 1.25rem 0;
     background-color: $primary-c1;
+
+    p,
+    .public-DraftStyleDefault-block {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
   }
 
   .draftjs-buttons {
@@ -84,13 +98,13 @@ button.custom-navbar-toggler svg.icon {
 
     a {
       display: inline-block;
-      background-color: $primary;
-      color: $primary-text;
-      text-align: center;
       padding: 1em 2em;
       margin: 0.5em 1em 0.5em 0;
+      background-color: $primary;
       border-radius: $btn-border-radius;
+      color: $primary-text;
       font-weight: 600;
+      text-align: center;
 
       &:hover,
       &:active {
@@ -104,11 +118,11 @@ button.custom-navbar-toggler svg.icon {
 
 #text-body {
   .full-width {
-    left: auto !important;
     position: static;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    max-width: 100% !important;
+    left: auto !important;
     width: 100% !important;
+    max-width: 100% !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
   }
 }

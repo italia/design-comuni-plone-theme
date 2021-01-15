@@ -1,4 +1,8 @@
 @media print {
+  body {
+    display: block !important;
+  }
+
   // removed underlining from links
   a {
     font-weight: 600 !important;

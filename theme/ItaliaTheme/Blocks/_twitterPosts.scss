@@ -56,10 +56,10 @@
 
     .tweet {
       display: flex;
-      height: auto;
-      flex-direction: column;
 
       overflow: hidden;
+      height: auto;
+      flex-direction: column;
       padding: 1.5em;
       margin: 0 0.5em;
       background-color: $white;
@@ -84,8 +84,8 @@
 
           .user-username {
             color: $neutral-1-a7;
-            font-weight: 500;
             font-size: 0.8em;
+            font-weight: 500;
           }
         }
       }
@@ -101,21 +101,77 @@
       }
 
       .date-time {
+        margin-bottom: 1.5em;
         color: $neutral-1-a7;
         font-family: $font-family-monospace;
-        text-transform: uppercase;
         font-size: 0.7em;
-        margin-bottom: 1.5em;
+        text-transform: uppercase;
       }
 
       .numbers {
         display: flex;
-        color: $neutral-1-a7;
         justify-content: space-between;
+        color: $neutral-1-a7;
+
         .number {
           svg {
             width: 0.8em;
             margin-right: 0.4em;
+          }
+        }
+      }
+    }
+
+    .skeleton-template {
+      .authors {
+        @extend .skeleton-animation;
+        min-height: 2em;
+        background-color: $skeleton-bg;
+      }
+
+      .tweet {
+        @extend .skeleton-animation;
+
+        .author {
+          .user-infos {
+            .user-name,
+            .user-username {
+              min-height: 1em;
+              background-color: $skeleton-bg;
+            }
+
+            .user-name {
+              min-width: 7em;
+              margin-bottom: 0.5em;
+            }
+
+            .user-username {
+              width: 6em;
+            }
+          }
+
+          figure {
+            width: 3em;
+            height: 3em;
+          }
+        }
+
+        .tweet-text {
+          min-height: 6em;
+          background-color: $skeleton-bg;
+        }
+
+        .date-time {
+          min-height: 1em;
+          background-color: $skeleton-bg;
+        }
+
+        .numbers {
+          .number {
+            min-width: 4em;
+            min-height: 1em;
+
+            background-color: $skeleton-bg;
           }
         }
       }
