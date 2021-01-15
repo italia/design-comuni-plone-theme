@@ -32,7 +32,7 @@ const Body = ({ data, isEditMode }) => {
 
   useEffect(() => {
     dispatch(getTwitterPosts(authors));
-  }, [data.twitter_accounts]);
+  }, [authors, data.twitter_accounts, dispatch]);
 
   const twitter_posts = request?.result || [];
 
@@ -42,7 +42,6 @@ const Body = ({ data, isEditMode }) => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    infinite: true,
     responsive: [
       {
         breakpoint: 1025,
@@ -82,7 +81,7 @@ const Body = ({ data, isEditMode }) => {
               <a
                 href={`https://twitter.com/${author}`}
                 target="_blank"
-                rel="noopener noreferer"
+                rel="noopener noreferrer"
               >
                 @{author}
               </a>
@@ -99,6 +98,7 @@ const Body = ({ data, isEditMode }) => {
                     src={tweet.author.profile_image_url}
                     alt={tweet.author.name}
                     className="rounded-circle"
+                    loading="lazy"
                   />
                 </figure>
                 <div className="user-infos">

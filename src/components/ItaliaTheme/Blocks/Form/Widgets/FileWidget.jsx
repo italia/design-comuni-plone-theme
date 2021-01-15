@@ -105,7 +105,7 @@ const FileWidget = (props) => {
       <label for={`field-${id}`} class="active">
         {label}
       </label>
-      <div className="form-input-file ">
+      <div className="form-input-file">
         <Dropzone onDrop={onDrop}>
           {({ getRootProps, getInputProps, isDragActive }) => (
             <div className="file-widget-dropzone" {...getRootProps()}>
@@ -120,6 +120,7 @@ const FileWidget = (props) => {
                       : null
                   }
                   alt=""
+                  loading="lazy"
                 />
               ) : (
                 <div className="dropzone-placeholder">

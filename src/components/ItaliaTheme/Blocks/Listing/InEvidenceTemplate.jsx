@@ -23,6 +23,7 @@ import {
   ListingText,
   CardCategory,
 } from '@italia/components/ItaliaTheme';
+import Image from '@plone/volto/components/theme/Image/Image';
 
 const InEvidenceTemplate = ({
   items,
@@ -72,11 +73,9 @@ const InEvidenceTemplate = ({
                           className="img-link"
                         >
                           <figure className="img-wrapper">
-                            <img
+                            <Image
                               className="listing-image"
-                              src={flattenToAppURL(
-                                item.image.scales.preview.download,
-                              )}
+                              image={item.image}
                               alt={item.title}
                             />
                           </figure>

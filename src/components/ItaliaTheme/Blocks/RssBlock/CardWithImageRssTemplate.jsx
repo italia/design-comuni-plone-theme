@@ -55,6 +55,7 @@ const CardWithImageRssTemplate = ({ items = [], isEditMode, data = {} }) => {
                             alt={item.title}
                             src={item.enclosure.url}
                             title={item.title}
+                            loading="lazy"
                           />
                         </figure>
                       </div>

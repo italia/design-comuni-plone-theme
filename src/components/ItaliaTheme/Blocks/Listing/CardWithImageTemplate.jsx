@@ -17,6 +17,7 @@ import {
   ChipLabel,
 } from 'design-react-kit/dist/design-react-kit';
 import { ConditionalLink } from '@plone/volto/components';
+import Image from '@plone/volto/components/theme/Image/Image';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { CardCategory } from '@italia/components/ItaliaTheme';
 import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
@@ -82,11 +83,9 @@ const CardWithImageTemplate = ({
                             className="img-link"
                           >
                             <figure className="img-wrapper">
-                              <img
+                              <Image
                                 className="listing-image"
-                                src={flattenToAppURL(
-                                  item.image.scales.preview.download,
-                                )}
+                                image={item.image}
                                 alt={item.title}
                               />
                             </figure>
