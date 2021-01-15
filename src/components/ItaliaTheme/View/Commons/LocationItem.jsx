@@ -43,6 +43,7 @@ const LocationItem = ({
       dispatch(getContent(url, null, key));
       return () => dispatch(resetContent(key));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch, location]);
 
   let location_fo = locationContent?.[key]?.data || location;
@@ -53,14 +54,14 @@ const LocationItem = ({
     .join(' - ');
 
   return location_fo ? (
-    <div className="card card-teaser shadow mt-3 rounded">
+    <div className="card card-teaser shadow mt-3 rounded location-item">
       {show_icon && <Icon icon={'it-pin'} />}
       <div className="card-body">
         <h5 className="card-title">
           {location_fo.nome_sede || location_fo.title}
         </h5>
         <div className="card-text">
-          <p className="text-capitalize">{address}</p>
+          <p>{address}</p>
 
           {!details_link && (
             <>
