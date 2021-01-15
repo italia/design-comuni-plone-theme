@@ -39,6 +39,31 @@
     }
   }
 
+  .slick-dots {
+    position: unset;
+    bottom: unset;
+
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .play-pause-wrapper {
+      text-align: left;
+
+      button {
+        border: none;
+        background: none;
+
+        .icon {
+          width: 1em;
+          height: 1em;
+          color: $link-color;
+        }
+      }
+    }
+  }
+
   @media (max-width: #{map-get($grid-breakpoints, md)}) {
     .slick-arrow.slick-prev {
       left: -20px;
