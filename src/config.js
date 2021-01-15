@@ -567,6 +567,7 @@ export const blocks = {
     ...config.blocks.requiredBlocks.concat(...customRequiredBlocks),
   },
 };
+delete blocks.blocksConfig.listing.templates.imageGallery; //removes imageGallery volto template, because we have our photoGallery template
 
 export const addonReducers = { ...config.addonReducers };
 export const addonRoutes = [...(config.addonRoutes || [])];
