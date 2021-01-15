@@ -91,7 +91,7 @@ import { DatetimeWidget } from '@plone/volto/config/Widgets';
 import { MultilingualWidget } from '@italia/addons/volto-multilingual-widget';
 import IconWidget from '@italia/components/ItaliaTheme/manage/Widgets/IconWidget';
 import { defaultIconWidgetOptions } from '@italia/helpers/index';
-import TinymceWidget from '@italia/components/ItaliaTheme/manage/Widgets/TinymceWidget';
+//import TinymceWidget from '@italia/components/ItaliaTheme/manage/Widgets/TinymceWidget';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import * as Icons from '@fortawesome/free-solid-svg-icons';
@@ -120,6 +120,7 @@ import {
   extendedBlockRenderMap,
   blockStyleFn,
   ItaliaBlocksHtmlRenderers,
+  ItaliaFromHTMLCustomBlockFn,
 } from '@italia/config/RichTextEditor/config';
 
 const iconList = Object.keys(Icons.fas).map((icon) => Icons[icon]);
@@ -432,6 +433,7 @@ export const settings = {
     },
     inline: { ...ToHTMLRenderers.inline },
   },
+  FromHTMLCustomBlockFn: ItaliaFromHTMLCustomBlockFn,
   contentIcons: {
     ...config.settings.contentIcons,
     Document: faFileInvoiceSVG,

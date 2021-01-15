@@ -12,6 +12,7 @@ import {
   UnorderedListButton,
 } from '@plone/volto/config/RichTextEditor/Styles';
 
+import FromHTML from '@plone/volto/config/RichTextEditor/FromHTML';
 import createLinkPlugin from '@plone/volto/components/manage/AnchorPlugin';
 import UnderlineButton from '@italia/config/RichTextEditor/ToolbarButtons/UnderlineButton';
 import HeadingsButton from '@italia/config/RichTextEditor/ToolbarButtons/HeadingsButton';
@@ -113,4 +114,22 @@ export const ItaliaBlocksHtmlRenderers = {
         {child}
       </p>
     )),
+};
+
+export const ItaliaFromHTMLCustomBlockFn = (element) => {
+  let ret = FromHTML(element); //get default from plone/volto
+
+  if (!ret) {
+    if (element.className === 'callout-bg') {
+      ret = {
+        type: 'callout-bg',
+      };
+    }
+    if (element.className === 'draftjs-buttons') {
+      ret = {
+        type: 'buttons',
+      };
+    }
+  }
+  return ret;
 };
