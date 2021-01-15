@@ -131,6 +131,7 @@ import {
   extendedBlockRenderMap,
   blockStyleFn,
   ItaliaBlocksHtmlRenderers,
+  ItaliaFromHTMLCustomBlockFn,
 } from '@italia/config/RichTextEditor/config';
 
 const iconList = Object.keys(Icons.fas).map((icon) => Icons[icon]);
@@ -458,6 +459,7 @@ export const settings = {
     },
     inline: { ...ToHTMLRenderers.inline },
   },
+  FromHTMLCustomBlockFn: ItaliaFromHTMLCustomBlockFn,
   contentIcons: {
     ...config.settings.contentIcons,
     Document: faFileInvoiceSVG,

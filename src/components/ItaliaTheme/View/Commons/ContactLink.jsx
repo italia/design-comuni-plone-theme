@@ -36,6 +36,7 @@ const ContactLink = ({ tel, fax, email, label = true, strong = false }) => {
   let ret = null;
 
   function ReplacePhoneNumbers(str, type) {
+    // eslint-disable-next-line no-useless-escape
     let newhtml = str.replace(/\+?[0-9]( ?[0-9\/-]+)+.?[0-9]*/gm, function (v) {
       let r =
         "<a href='" +
@@ -80,7 +81,7 @@ const ContactLink = ({ tel, fax, email, label = true, strong = false }) => {
     ret = ReplacePhoneNumbers(fax, 'fax');
   } else if (email) {
     ret_label = intl.formatMessage(messages.email_label);
-    ret = ReplaceEmails(email, 'fax');
+    ret = ReplaceEmails(email);
   }
   ret_label = label ? <>{ret_label}: </> : null;
   ret_label = label ? strong ? <strong>{ret_label}</strong> : ret_label : null;
