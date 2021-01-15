@@ -2,7 +2,7 @@ import React, { createRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { FormattedMessage, injectIntl } from 'react-intl';
-import { getContent, getQueryStringResults } from '@plone/volto/actions';
+import { getQueryStringResults } from '@plone/volto/actions';
 import { Pagination, Skeleton } from '@italia/components/ItaliaTheme';
 import { blocks, settings } from '~/config';
 
@@ -91,13 +91,14 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
       : 'default';
 
   const ListingBodyTemplate = templateConfig[templateName].template;
+  const SkeletonTemplate = templateConfig[templateName].skeleton || Skeleton;
 
-  function handleContentPaginationChange(e, { activePage }) {
-    !isEditMode && listingRef.current.scrollIntoView({ behavior: 'smooth' });
-    const current = activePage?.children ?? 1;
-    setCurrentPage(current);
-    dispatch(getContent(path, null, null, current));
-  }
+  // function handleContentPaginationChange(e, { activePage }) {
+  //   !isEditMode && listingRef.current.scrollIntoView({ behavior: 'smooth' });
+  //   const current = activePage?.children ?? 1;
+  //   setCurrentPage(current);
+  //   dispatch(getContent(path, null, null, current));
+  // }
 
   function handleQueryPaginationChange(e, { activePage }) {
     !isEditMode && listingRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -128,12 +129,10 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
 
   return (
     <div className="public-ui">
-      {loadingQuery ? (
+      {loadingQuery && (
         <div className={`full-width ${getBlockClasses()}`} ref={listingRef}>
-          <Skeleton {...data} />
+          <SkeletonTemplate {...data} />
         </div>
-      ) : (
-        ''
       )}
 
       {!loadingQuery &&
