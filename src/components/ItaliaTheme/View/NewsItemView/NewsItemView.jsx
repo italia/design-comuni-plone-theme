@@ -74,7 +74,7 @@ const NewsItemView = ({ content, location }) => {
         setSideMenuElements(documentBody.current);
       }
     }
-  }, [documentBody]);
+  }, [content.description, content.title, documentBody]);
 
   return (
     <>
@@ -107,7 +107,7 @@ const NewsItemView = ({ content, location }) => {
               <ContentImage content={content} position="documentBody" />
               {/* TEXT OR BLOCKS */}
               <div className="text-serif">
-                <TextOrBlocks content={content} location={location} />
+                <TextOrBlocks content={content} />
               </div>
             </article>
 

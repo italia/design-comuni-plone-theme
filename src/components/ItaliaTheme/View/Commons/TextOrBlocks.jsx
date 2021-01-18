@@ -1,23 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { blocks } from '~/config';
-import { map } from 'lodash';
-import { useLocation } from 'react-router-dom';
-import { defineMessages, useIntl } from 'react-intl';
-import {
-  hasBlocksData,
-  getBlocksFieldname,
-  getBlocksLayoutFieldname,
-  getBaseUrl,
-} from '@plone/volto/helpers';
-import { RichText } from '@italia/components/ItaliaTheme/View';
 
-const messages = defineMessages({
-  unknownBlock: {
-    id: 'unknownBlock',
-    defaultMessage: 'Blocco sconosciuto',
-  },
-});
+import { hasBlocksData } from '@plone/volto/helpers';
+import { RichText, RenderBlocks } from '@italia/components/ItaliaTheme/View';
+
 /**
  * TextOrBlocks view component class.
  * @function TextOrBlocks
@@ -26,42 +12,15 @@ const messages = defineMessages({
  */
 const TextOrBlocks = ({ content, exclude = ['title', 'description'] }) => {
   /* Render text or blocks in view, skip title and description blocks by default*/
-  const blocksFieldname = getBlocksFieldname(content);
-  const blocksLayoutFieldname = getBlocksLayoutFieldname(content);
-  const intl = useIntl();
-  const location = useLocation();
   return (
     <>
-      {hasBlocksData(content)
-        ? map(content[blocksLayoutFieldname].items, (block) => {
-            const blockType = content[blocksFieldname]?.[block]?.['@type'];
-
-            if (exclude.indexOf(blockType) > -1) return null;
-
-            const Block = blocks.blocksConfig[blockType]?.['view'] || null;
-            if (Block != null) {
-              return (
-                <Block
-                  key={block}
-                  id={block}
-                  properties={content}
-                  data={content[blocksFieldname][block]}
-                  path={getBaseUrl(location?.pathname || '')}
-                />
-              );
-            } else {
-              return (
-                <div key={block}>
-                  {intl.formatMessage(messages.unknownBlock, {
-                    block: content[blocksFieldname]?.[block]?.['@type'],
-                  })}
-                </div>
-              );
-            }
-          })
-        : content.text?.data && (
-            <RichText serif={false} content={content.text.data} />
-          )}
+      {hasBlocksData(content) ? (
+        <RenderBlocks content={content} />
+      ) : (
+        content.text?.data && (
+          <RichText serif={false} content={content.text.data} />
+        )
+      )}
     </>
   );
 };

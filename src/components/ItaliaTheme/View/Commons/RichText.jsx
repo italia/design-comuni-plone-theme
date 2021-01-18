@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import cx from 'classnames';
-import { flattenHTMLToAppURL } from '@plone/volto/helpers';
-
+import { RichTextRender } from '@italia/components/ItaliaTheme/View';
 /**
  * RichText view component class.
  * @function RichText
@@ -17,9 +15,11 @@ const RichText = ({
   children,
   serif = true,
 }) => {
-  let content_to_display = content ? content?.replace(/(<([^>]+)>)/g, '') : '';
-  content_to_display =
-    content_to_display.length > 0 ? content_to_display : null;
+  let content_to_display = RichTextRender({
+    content: content,
+    add_class: add_class,
+    serif: serif,
+  });
 
   return content_to_display || children ? (
     <>
@@ -29,12 +29,7 @@ const RichText = ({
         ) : (
           <h5 className="mt-4">{title}</h5>
         ))}
-      {content && (
-        <div
-          className={cx(add_class, { 'text-serif': serif })}
-          dangerouslySetInnerHTML={{ __html: flattenHTMLToAppURL(content) }}
-        />
-      )}
+      {content_to_display}
       {children}
     </>
   ) : null;
@@ -43,7 +38,7 @@ export default RichText;
 
 RichText.propTypes = {
   title: PropTypes.string,
-  content: PropTypes.string,
+  content: PropTypes.object,
   add_class: PropTypes.string,
   title_size: PropTypes.string,
 };
