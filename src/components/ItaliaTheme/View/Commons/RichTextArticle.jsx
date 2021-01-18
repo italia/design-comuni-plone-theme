@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import cx from 'classnames';
-import { flattenHTMLToAppURL } from '@plone/volto/helpers';
+import { RichTextRender } from '@italia/components/ItaliaTheme/View';
 /**
  * RichTextArticle view component class.
  * @function RichTextArticle
@@ -17,9 +16,11 @@ const RichTextArticle = ({
   add_class,
   children,
 }) => {
-  let content_to_display = content ? content?.replace(/(<([^>]+)>)/g, '') : '';
-  content_to_display =
-    content_to_display.length > 0 ? content_to_display : null;
+  let content_to_display = RichTextRender({
+    content: content,
+    add_class: add_class,
+    serif: true,
+  });
 
   return content_to_display || children ? (
     <article
@@ -38,12 +39,8 @@ const RichTextArticle = ({
           {title}
         </h4>
       )}
-      {content_to_display && (
-        <div
-          className={cx('text-serif', add_class)}
-          dangerouslySetInnerHTML={{ __html: flattenHTMLToAppURL(content) }}
-        />
-      )}
+
+      {content_to_display}
       {children}
     </article>
   ) : null;
