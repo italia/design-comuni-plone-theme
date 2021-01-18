@@ -20,7 +20,16 @@ const messages = defineMessages({
     id: 'channel_link',
     defaultMessage: 'Link al canale',
   },
-  video_url: { id: 'video_url', defaultMessage: 'Video URL' },
+  video_url: { id: 'gallery_video_url', defaultMessage: 'Video URL' },
+  video_title: {
+    id: 'gallery_video_title',
+    defaultMessage: 'Titolo del video',
+  },
+  video_title_description: {
+    id: 'gallery_video_title_description',
+    defaultMessage:
+      "Non viene mostrato. Serve al redattore per identificare meglio il video all'interno della gallery.",
+  },
 });
 
 const Sidebar = ({
@@ -101,9 +110,9 @@ const Sidebar = ({
                   </Accordion.Title>
                   <Accordion.Content active={selected === index}>
                     <TextWidget
-                      id="title"
-                      title={intl.formatMessage(messages.title)}
-                      value={subblock.title}
+                      id="url"
+                      title={intl.formatMessage(messages.video_url)}
+                      value={subblock.url}
                       onChange={(name, value) => {
                         onChangeSubBlock(index, {
                           ...subblock,
@@ -113,9 +122,12 @@ const Sidebar = ({
                     />
 
                     <TextWidget
-                      id="url"
-                      title={intl.formatMessage(messages.video_url)}
-                      value={subblock.url}
+                      id="title"
+                      title={intl.formatMessage(messages.video_title)}
+                      description={intl.formatMessage(
+                        messages.video_title_description,
+                      )}
+                      value={subblock.title}
                       onChange={(name, value) => {
                         onChangeSubBlock(index, {
                           ...subblock,

@@ -3,7 +3,7 @@ import { SelectInput } from '@italia/components';
 import { useDispatch, useSelector } from 'react-redux';
 import { searchContent, getVocabulary } from '@plone/volto/actions';
 
-const SelectFilter = ({ options, value, id, onChange }) => {
+const SelectFilter = ({ options, value, id, onChange, placeholder }) => {
   const dispatch = useDispatch();
 
   const state = useSelector((state) => {

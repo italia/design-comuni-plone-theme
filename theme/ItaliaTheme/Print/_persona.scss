@@ -1,0 +1,9 @@
+.contenttype-persona {
+	@media print {
+		.it-page-sections-container {
+			#documenti {
+				display: none;
+			}
+		}
+	}
+}

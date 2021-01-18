@@ -5,7 +5,7 @@
 
 import React, { useEffect } from 'react';
 
-import { Link } from 'react-router-dom';
+import { UniversalLink } from '@plone/volto/components';
 import {
   Card,
   CardBody,
@@ -27,6 +27,7 @@ import {
   RichText,
   PaginaArgomentoViewNoBlocks,
 } from '@italia/components/ItaliaTheme/View';
+import Image from '@plone/volto/components/theme/Image/Image';
 
 /**
  * PaginaArgomentoView view component class.
@@ -41,13 +42,18 @@ const PaginaArgomentoView = ({ content }) => {
 
   // one request is made for every 'unita_amministrative_responsabili' selected
   useEffect(() => {
-    content['unita_amministrative_responsabili']?.forEach((x) => {
-      dispatch(getContent(flattenToAppURL(x['@id']), null, x['@id']));
-    });
-    return () => {
-      content['unita_amministrative_responsabili']?.forEach((x) => {
-        dispatch(resetContent(x['@id']));
+    if (content?.unita_amministrative_responsabili?.length > 0) {
+      content.unita_amministrative_responsabili.forEach((x) => {
+        dispatch(getContent(flattenToAppURL(x['@id']), null, x['@id']));
       });
+    }
+
+    return () => {
+      if (content?.unita_amministrative_responsabili?.length > 0) {
+        content.unita_amministrative_responsabili.forEach((x) => {
+          dispatch(resetContent(x['@id']));
+        });
+      }
     };
   }, [dispatch, content]);
 
@@ -75,9 +81,9 @@ const PaginaArgomentoView = ({ content }) => {
                         <CardBody className="">
                           <CardCategory>
                             <span className="text font-weight-bold">
-                              <Link to={flattenToAppURL(u['@id'])}>
+                              <UniversalLink href={flattenToAppURL(u['@id'])}>
                                 {u.title || u.id}
-                              </Link>
+                              </UniversalLink>
                             </span>
                           </CardCategory>
                           <CardText>
@@ -86,15 +92,10 @@ const PaginaArgomentoView = ({ content }) => {
                         </CardBody>
                         {searchResults[u['@id']]?.data?.image && (
                           <div className="image-container mr-3">
-                            <img
-                              alt={searchResults[u['@id']]?.data?.image_caption}
-                              src={flattenToAppURL(
-                                searchResults[u['@id']]?.data?.image.scales
-                                  .preview.download,
-                              )}
-                              title={
-                                searchResults[u['@id']]?.data?.image_caption
-                              }
+                            <Image
+                              image={searchResults[u['@id']].data.image}
+                              alt={searchResults[u['@id'].data.image_caption]}
+                              title={searchResults[u['@id'].data.image_caption]}
                             />
                           </div>
                         )}
@@ -112,10 +113,10 @@ const PaginaArgomentoView = ({ content }) => {
                 }
               >
                 <div>
-                  <img
-                    src={flattenToAppURL(content?.image?.download)}
-                    alt={content?.caption || content?.title}
-                    title={content?.caption || content?.title}
+                  <Image
+                    image={content.image}
+                    alt={content.caption ?? content.title}
+                    title={content.caption ?? content.title}
                   />
                 </div>
               </Portal>

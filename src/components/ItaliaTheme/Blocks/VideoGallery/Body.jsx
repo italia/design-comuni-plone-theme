@@ -23,7 +23,6 @@ const Body = ({ data, children }) => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    infinite: true,
     responsive: [
       {
         breakpoint: 1025,
@@ -60,7 +59,11 @@ const Body = ({ data, children }) => {
           <div className="channel">
             <Icon color="primary" icon="it-youtube" className="mr-2" />
             {data.channel_link ? (
-              <a href={data.channel_link} rel="noopener noreferer">
+              <a
+                href={data.channel_link}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 {data.channel_link_title || data.channel_link}
               </a>
             ) : (

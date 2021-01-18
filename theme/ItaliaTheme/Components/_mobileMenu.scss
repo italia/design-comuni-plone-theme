@@ -96,10 +96,9 @@
 
             li {
               display: inline-block;
+              margin: 0.5rem 1rem;
 
-              + li {
-                margin-left: 1rem;
-              }
+              margin-left: 0;
 
               .icon {
                 width: 28px;

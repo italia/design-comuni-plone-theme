@@ -7,6 +7,20 @@ h6 {
   color: $primary-b5;
 }
 
+//questa evita lo scroll orizzontale causato dal full-width su windows
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  table {
+    th,
+    td {
+      word-break: break-word;
+    }
+  }
+}
+
 .full-width {
   position: relative;
   right: 50%;
@@ -26,6 +40,16 @@ h6 {
   .has-toolbar-collapsed & {
     left: calc(50% + 10px);
     width: calc(100vw - 20px) !important;
+  }
+}
+
+@media (max-width: #{map-get($grid-breakpoints, lg)}) {
+  .page-side-menu {
+    display: none;
+  }
+
+  .it-page-sections-container {
+    border-top: none !important;
   }
 }
 

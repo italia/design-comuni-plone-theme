@@ -3,13 +3,9 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useIntl, defineMessages } from 'react-intl';
 import moment from 'moment';
-import {
-  Container,
-  Row,
-  Col
-} from 'design-react-kit/dist/design-react-kit';
+import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { Link } from 'react-router-dom';
+import { UniversalLink } from '@plone/volto/components';
 
 const messages = defineMessages({
   nominativo: {
@@ -24,7 +20,6 @@ const messages = defineMessages({
     id: 'area',
     defaultMessage: 'area',
   },
-  
 });
 
 const GridGalleryTemplate = ({
@@ -55,30 +50,43 @@ const GridGalleryTemplate = ({
         <table className="table">
           <thead>
             <tr>
-              <th scope="col" className="text-uppercase">{intl.formatMessage(messages.nominativo)}</th>
-              <th scope="col" className="text-uppercase">{intl.formatMessage(messages.incarico)}</th>
-              <th scope="col" className="text-uppercase">{intl.formatMessage(messages.area)}</th>
+              <th scope="col" className="text-uppercase">
+                {intl.formatMessage(messages.nominativo)}
+              </th>
+              <th scope="col" className="text-uppercase">
+                {intl.formatMessage(messages.incarico)}
+              </th>
+              <th scope="col" className="text-uppercase">
+                {intl.formatMessage(messages.area)}
+              </th>
             </tr>
           </thead>
           <tbody>
             {items.map((item, index) => (
               <tr>
                 <td>
-                  <Link to={flattenToAppURL(item['@id'])} className="text-decoration-none font-weight-bold">
+                  <UniversalLink
+                    href={flattenToAppURL(item['@id'])}
+                    className="text-decoration-none font-weight-bold"
+                  >
                     {item.title}
-                  </Link>
+                  </UniversalLink>
                 </td>
+                <td>{item.ruolo}</td>
                 <td>
-                  {item.ruolo}
-                </td>
-                <td>
-                  {item.organizzazione_riferimento && item.organizzazione_riferimento.length > 0 ? 
-                    <Link to={flattenToAppURL(item.organizzazione_riferimento[0]['@id'])} className="text-decoration-none">
+                  {item.organizzazione_riferimento &&
+                  item.organizzazione_riferimento.length > 0 ? (
+                    <UniversalLink
+                      href={flattenToAppURL(
+                        item.organizzazione_riferimento[0]['@id'],
+                      )}
+                      className="text-decoration-none"
+                    >
                       {item.organizzazione_riferimento[0]?.title}
-                    </Link>
-                  :
+                    </UniversalLink>
+                  ) : (
                     <span>Nessuna</span>
-                  }
+                  )}
                 </td>
               </tr>
             ))}

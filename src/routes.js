@@ -19,7 +19,7 @@ const routes = [
   {
     path: '/',
     component: App, // Change this if you want a different component
-    routes: [...defaultRoutes, ...italiaRoutes],
+    routes: [...italiaRoutes, ...defaultRoutes],
   },
 ];
 

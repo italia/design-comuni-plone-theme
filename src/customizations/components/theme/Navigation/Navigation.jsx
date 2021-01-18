@@ -15,7 +15,6 @@ import {
   HeaderContent,
   HeaderToggler,
   Nav,
-  Icon,
 } from 'design-react-kit/dist/design-react-kit';
 import { Collapse } from '@italia/components';
 import {
@@ -23,6 +22,7 @@ import {
   MenuSecondary,
   SubsiteMenuSecondary,
   Logo,
+  Icon,
   SocialHeader,
   SubsiteSocialHeader,
 } from '@italia/components/ItaliaTheme';
@@ -41,7 +41,7 @@ const Navigation = ({ pathname }) => {
 
   const menu =
     items
-      .filter((menu) =>
+      ?.filter((menu) =>
         (pathname?.length ? pathname : '/').match(new RegExp(menu.rootPath)),
       )
       .pop()?.items ?? [];

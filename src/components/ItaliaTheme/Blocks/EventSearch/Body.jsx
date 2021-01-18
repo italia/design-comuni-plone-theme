@@ -1,4 +1,4 @@
-import React, { useState, useReducer, useEffect } from 'react';
+import React, { useState, useReducer, useEffect, createRef } from 'react';
 import { useIntl, defineMessages } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 import {
@@ -40,19 +40,33 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   const intl = useIntl();
   const b_size = 6;
   moment.locale(intl.locale);
-  const [loading, setLoading] = useState(false);
+
   const [currentPage, setCurrentPage] = useState(1);
   const subsite = useSelector((state) => state.subsite?.data);
+
   const dispatch = useDispatch();
 
   const querystringResults = useSelector((state) => {
     return state.querystringsearch?.subrequests?.results;
   });
-  const items = querystringResults?.items;
+  const items = useSelector((state) => {
+    return state.querystringsearch?.subrequests?.results?.items ?? [];
+  });
+
+  const loading = useSelector((state) => {
+    return state.querystringsearch?.subrequests?.results?.loading || false;
+  });
+
+  const resultsRef = createRef();
 
   const doRequest = (page = currentPage) => {
-    setLoading(true);
-    let query = [];
+    let query = [
+      {
+        i: 'portal_type',
+        o: 'plone.app.querystring.operation.selection.any',
+        v: ['Event'],
+      },
+    ];
 
     [filterOne, filterTwo, filterThree].forEach((f) => {
       const value = f.widget.props.value;
@@ -60,6 +74,14 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
         f.query(value, query);
       }
     });
+
+    if (data.location && data.location[0]) {
+      query.push({
+        i: 'path',
+        o: 'plone.app.querystring.operation.string.absolutePath',
+        v: data.location[0]['@id'],
+      });
+    }
 
     dispatch(
       getQueryStringResults(
@@ -80,11 +102,6 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
     dispatchFilter({ type: 'reset' });
   }, [data]);
 
-  // Quando ricevo gli elementi imposto il loader a false
-  useEffect(() => {
-    setLoading(false);
-  }, [items]);
-
   const filtersReducer = (state = getInitialState(), action) => {
     let newState = {
       ...state,
@@ -96,12 +113,9 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
       };
     } else {
       const f = newState[action.filter];
-      const defaultReducer = (value, state) => {
-        return value;
-      };
+      const defaultReducer = (value, state) => value;
       const reducer = f.reducer || defaultReducer;
-
-      f.widget.props.value = reducer(action.value, state);
+      f.widget.props.value = reducer(action.value, state[action.filter]);
     }
     return newState;
   };
@@ -121,7 +135,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   );
 
   function handleQueryPaginationChange(e, { activePage }) {
-    // !isEditMode && window.scrollTo(0, 0);
+    resultsRef.current.scrollIntoView({ behavior: 'smooth' });
     const current = activePage?.children ?? 1;
     setCurrentPage(current);
     doRequest(current);
@@ -175,7 +189,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
               color={data.button_color || 'tertiary'}
               icon={false}
               tag="button"
-              onClick={() => doRequest()}
+              onClick={() => doRequest(1)}
               className="my-2 my-lg-1"
             >
               {intl.formatMessage(messages.find)}
@@ -186,7 +200,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
 
       {!loading ? (
         items?.length > 0 ? (
-          <div className="mt-4">
+          <div className="mt-4" ref={resultsRef}>
             <CardWithImageTemplate items={items} full_width={false} />
             {querystringResults.total > b_size && (
               <Pagination
@@ -196,13 +210,15 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
               />
             )}
           </div>
-        ) : (
-          <div className="mt-4">
-            <p className="text-center">
-              {intl.formatMessage(messages.noResult)}
-            </p>
-          </div>
-        )
+        ) : querystringResults ? (
+          <>
+            <div className="mt-4">
+              <p className="text-center">
+                {intl.formatMessage(messages.noResult)}
+              </p>
+            </div>
+          </>
+        ) : null
       ) : (
         <div className="d-flex justify-content-center mt-3">
           <Spinner active />

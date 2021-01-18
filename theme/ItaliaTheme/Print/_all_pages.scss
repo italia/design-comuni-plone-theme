@@ -1,0 +1,118 @@
+@media print {
+  body {
+    display: block !important;
+  }
+
+  // removed underlining from links
+  a {
+    font-weight: 600 !important;
+    text-decoration: none !important;
+  }
+
+  // removed part of header header
+  .it-header-slim-wrapper {
+    display: none;
+  }
+
+  .it-header-center-content-wrapper {
+    .it-brand-wrapper {
+      margin: 0 auto;
+
+      // incresed name of municipalitie
+      a {
+        .it-brand-text {
+          .no_toc {
+            color: $primary;
+            font-size: 2rem !important;
+          }
+        }
+      }
+    }
+  }
+
+  // Removed shadow and card's padding
+  .card {
+    &.shadow {
+      padding: 1rem 0 0 0 !important;
+      box-shadow: none !important;
+    }
+
+    &.bigborder {
+      border: none !important;
+      border-left-width: 0 !important;
+    }
+  }
+
+  #text-tempi_e_scadenze > div > p {
+    padding: 1rem 0 0 0 !important;
+    box-shadow: none !important;
+  }
+
+  #briciole {
+    display: none;
+  }
+
+  // removed first column in CT pages
+  #view .page-header-right {
+    display: none;
+  }
+
+  #view > div {
+    .row.border-top.row-column-border.row-column-menu-left {
+      border-top: none !important;
+    }
+
+    // Reduced max width image header
+    .content-image {
+      width: 100%;
+      max-width: 100%;
+
+      figure {
+        display: flex;
+        justify-content: center;
+
+        img {
+          max-width: 300px !important;
+        }
+      }
+    }
+
+    aside {
+      display: none;
+    }
+
+    .it-page-sections-container {
+      border-top: none;
+
+      .it-carousel-wrapper {
+        display: none;
+      }
+
+      .video {
+        display: none;
+      }
+
+      // .block { //i blocchi devono essere visibili per quei CT che hanno i blocchi
+      //   display: none;
+      // }
+    }
+  }
+
+  #geocoded-result {
+    .leaflet-control-attribution {
+      display: none;
+    }
+  }
+
+  #contenuti-correlati {
+    display: none;
+  }
+
+  #correlato-in-evidenza {
+    display: none;
+  }
+
+  footer.it-footer {
+    display: none;
+  }
+}

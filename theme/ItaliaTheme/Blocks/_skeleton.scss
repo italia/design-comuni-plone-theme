@@ -1,0 +1,183 @@
+$skeleton-bg: $lightgrey-c2;
+
+.skeleton-animation {
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -150px;
+    display: block;
+    width: 120px;
+    height: 100%;
+
+    animation: loader-animate 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(255, 255, 255, 0.6) 50%,
+      transparent 100%
+    );
+
+    content: '';
+  }
+}
+
+.skeleton-template {
+  .card {
+    overflow: hidden;
+    @extend .skeleton-animation;
+
+    .card-title,
+    .card-body h5.card-title {
+      // min-height: 1.5em;
+      color: transparent;
+    }
+
+    .category-top {
+      min-height: 1em;
+    }
+
+    .etichetta {
+      width: 7em;
+      min-height: 0.8em;
+    }
+
+    .card-text {
+      min-height: 5em;
+    }
+
+    .card-title,
+    .card-text,
+    .category-top,
+    .flag-icon,
+    .etichetta {
+      background-color: $skeleton-bg;
+    }
+
+    .img-responsive-panoramic {
+      .img-wrapper {
+        min-height: 6em;
+        background-color: $skeleton-bg;
+      }
+    }
+
+    .img-responsive {
+      .img-wrapper {
+        min-height: 10em;
+        background-color: $skeleton-bg;
+      }
+    }
+
+    .chip {
+      border-color: $skeleton-bg;
+      background-color: $skeleton-bg;
+    }
+
+    .read-more {
+      .icon {
+        color: $skeleton-bg;
+        fill: $skeleton-bg;
+      }
+
+      .text {
+        width: 5em;
+        height: 0.8em;
+        background-color: $skeleton-bg;
+      }
+    }
+
+    &.card-bg,
+    &.card-background {
+      background-color: darken($skeleton-bg, 10) !important;
+
+      .card-title,
+      .card-text,
+      .category-top,
+      .flag-icon,
+      .etichetta {
+        background-color: #fff;
+      }
+    }
+  }
+
+  .img-skeleton {
+    @extend .skeleton-animation;
+    height: 100%;
+    background-color: $skeleton-bg;
+  }
+
+  .skeleton-item-title {
+    background-color: $skeleton-bg;
+  }
+
+  .slick-slider {
+    .slick-slide {
+      .img-wrapper {
+        @extend .skeleton-animation;
+        height: 10em;
+        background-color: $skeleton-bg;
+      }
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+      background-color: transparent;
+      color: darken($skeleton-bg, 10);
+    }
+
+    .slick-dots li.slick-active button:before {
+      color: darken($skeleton-bg, 60);
+    }
+  }
+
+  .link-more {
+    @extend .skeleton-animation;
+    margin-bottom: 1em;
+    text-align: center;
+
+    &:after {
+      display: inline-block;
+      width: 10em;
+      min-height: 1em;
+      background-color: $skeleton-bg;
+      content: '';
+    }
+  }
+
+  table {
+    @extend .skeleton-animation;
+
+    th,
+    td {
+      height: 3.6em;
+    }
+
+    th {
+      background-color: darken($skeleton-bg, 10);
+    }
+
+    td {
+      background-color: $skeleton-bg;
+    }
+  }
+}
+
+.bg-light {
+  .skeleton-template {
+    .card {
+      &.card-bg,
+      &.card-background {
+        background-color: $skeleton-bg !important;
+      }
+    }
+  }
+}
+// Loader animation
+@keyframes loader-animate {
+  from {
+    left: -150px;
+  }
+
+  to {
+    left: 100%;
+  }
+}

@@ -9,11 +9,12 @@ const defaultOptions = {
 };
 
 // A group is checked if at least one filter is checked
-const isGroupChecked = (group) =>
-  Object.keys(group).reduce(
+const isGroupChecked = (group) => {
+  return Object.keys(group || {}).reduce(
     (checked, filterId) => checked || group[filterId].value,
     false,
   );
+};
 
 // A group is indeterminate if at least one of its filters is checked, but not all of them
 const isGroupIndeterminate = (group, groupIsChecked) =>
@@ -95,7 +96,7 @@ const parseFetchedOptions = (options, location) => {
 
 const parseCustomPath = (location) => {
   const qsOptions = qs.parse(location?.search ?? '');
-  const customPath = null;
+  let customPath = null;
   if (qsOptions['custom_path']) {
     customPath = qsOptions['custom_path'];
   }

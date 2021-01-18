@@ -2,8 +2,8 @@ import React, { createRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { FormattedMessage, injectIntl } from 'react-intl';
-import { getContent, getQueryStringResults } from '@plone/volto/actions';
-import { Pagination } from '@italia/components/ItaliaTheme';
+import { getQueryStringResults, getContent } from '@plone/volto/actions';
+import { Pagination, Skeleton } from '@italia/components/ItaliaTheme';
 import { blocks, settings } from '~/config';
 
 const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
@@ -91,6 +91,7 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
       : 'default';
 
   const ListingBodyTemplate = templateConfig[templateName].template;
+  const SkeletonTemplate = templateConfig[templateName].skeleton || Skeleton;
 
   function handleContentPaginationChange(e, { activePage }) {
     !isEditMode && listingRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -128,13 +129,21 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
 
   return (
     <div className="public-ui">
-      {listingItems.length > 0 ? (
+      {loadingQuery && (
+        <div className={`full-width ${getBlockClasses()}`} ref={listingRef}>
+          <SkeletonTemplate {...data} />
+        </div>
+      )}
+
+      {!loadingQuery &&
+      (listingItems.length > 0 || additionalFilters?.length > 0) ? (
         <div className={`full-width ${getBlockClasses()}`} ref={listingRef}>
           <ListingBodyTemplate
             items={listingItems}
             isEditMode={isEditMode}
             {...data}
             addFilters={addFilters}
+            additionalFilters={additionalFilters}
             items_total={
               data?.query?.length === 0
                 ? content?.items_total
@@ -151,11 +160,11 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
                   totalPages={Math.ceil(
                     content.items_total / settings.defaultPageSize,
                   )}
-                  onPageChange={handleQueryPaginationChange}
+                  onPageChange={handleContentPaginationChange}
                 />
               </div>
             )}
-          {(data?.query?.length > 0 || additionalFilters?.length > 0 > 0) &&
+          {(data?.query?.length > 0 || additionalFilters?.length > 0) &&
             querystringResults[data.block].total >
               (data.b_size || settings.defaultPageSize) && (
               <div className="pagination-wrapper" key={currentPage}>

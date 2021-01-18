@@ -7,10 +7,9 @@ import {
   Card,
   CardBody,
   CardTitle,
-  Button,
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
-import { ConditionalLink } from '@plone/volto/components';
+import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { ListingText } from '@italia/components/ItaliaTheme';
 import { Link } from 'react-router-dom';
@@ -82,13 +81,13 @@ const BandiInEvidenceTemplate = ({
               return (
                 <Card
                   key={index}
-                  className={cx('listing-item card-backgound', '')}
+                  className={cx('listing-item card-backrgound', '')}
                 >
                   <CardBody>
                     <CardTitle tag="h4" className="title">
                       <a
                         className="bando-title"
-                        href={!isEditMode ? flattenToAppURL(item['@id']) : '#'}
+                        href={!isEditMode ? flattenToAppURL(item['@id']) : '#0'}
                       >
                         {item.title || item.id}
                       </a>
@@ -153,17 +152,13 @@ const BandiInEvidenceTemplate = ({
             })}
           </div>
           {linkMore?.href && (
-            <div className="link-more">
-              <Button
-                className="view-all"
-                icon={false}
-                tag="button"
-                onClick={() => window.open(linkMore.href, '_self')}
+            <div className="link-button text-center my-4">
+              <UniversalLink
+                href={flattenToAppURL(linkMore.href)}
+                className="btn btn-tertiary"
               >
-                <ConditionalLink condition={!isEditMode} to={linkMore.href}>
-                  {linkMore.title}
-                </ConditionalLink>
-              </Button>
+                {linkMore.title || intl.formatMessage(messages.view_all)}
+              </UniversalLink>
             </div>
           )}
         </Container>

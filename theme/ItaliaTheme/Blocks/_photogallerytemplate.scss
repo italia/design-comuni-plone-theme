@@ -5,9 +5,18 @@
     margin-bottom: 22px;
   }
 
-  .img-wrapper img {
-    width: 100%;
-    height: 230px;
+  figure.img-wrapper {
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      padding: 0.5em 1em;
+      color: #666;
+      font-size: 0.8em;
+      text-align: center;
+    }
   }
 
   .title {
@@ -15,19 +24,53 @@
   }
 
   .slick-prev {
-    outline: none!important;
+    outline: none !important;
+
     &:before {
       color: $primary;
-      background-color: #eee;
     }
   }
 
   .slick-next {
-    outline: none!important;
+    outline: none !important;
+
     &:before {
       color: $primary;
-      background-color: #eee;
     }
   }
 
+  .slick-dots {
+    position: unset;
+    bottom: unset;
+
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .play-pause-wrapper {
+      text-align: left;
+
+      button {
+        border: none;
+        background: none;
+
+        .icon {
+          width: 1em;
+          height: 1em;
+          color: $link-color;
+        }
+      }
+    }
+  }
+
+  @media (max-width: #{map-get($grid-breakpoints, md)}) {
+    .slick-arrow.slick-prev {
+      left: -20px;
+    }
+
+    .slick-arrow.slick-next {
+      right: -20px;
+    }
+  }
 }

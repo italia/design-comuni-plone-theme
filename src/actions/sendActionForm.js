@@ -15,7 +15,14 @@ export const EMAIL_SEND_ACTION_FORM = 'EMAIL_SEND_ACTION_FORM';
  * @param {string} message Email message.
  * @returns {Object} Edit sendActionForm action.
  */
-export function sendActionForm(path = '', block_id, from, subject, message) {
+export function sendActionForm(
+  path = '',
+  block_id,
+  from,
+  subject,
+  message,
+  attachments,
+) {
   return {
     type: EMAIL_SEND_ACTION_FORM,
     request: {
@@ -26,6 +33,7 @@ export function sendActionForm(path = '', block_id, from, subject, message) {
         from,
         subject,
         message,
+        attachments,
       },
     },
   };

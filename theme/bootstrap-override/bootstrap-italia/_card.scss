@@ -45,3 +45,16 @@
     }
   }
 }
+
+.card {
+  .categoryicon-top {
+    .icon {
+      color: $secondary;
+      fill: $secondary;
+    }
+  }
+}
+
+a.read-more {
+  color: $link-color;
+}

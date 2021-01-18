@@ -1,19 +1,68 @@
 .public-ui {
   .block.alertblock,
   .alertblock {
-    .bg-danger {
-      background-color: $red !important;
+    .bg-alert-danger {
+      background-color: #a32219;
       color: $white;
 
       .public-DraftEditorPlaceholder-inner {
         color: $white;
       }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: $white;
+      }
+
+      a {
+        color: $white;
+      }
     }
 
-    .bg-warning {
-      background-color: $yellow !important;
+    .bg-alert-warning-orange {
+      background-color: #eb973f;
+      color: $black;
 
       .public-DraftEditorPlaceholder-inner {
+        color: $black;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: $black;
+      }
+
+      a {
+        color: $black;
+      }
+    }
+
+    .bg-alert-warning {
+      background-color: #f0c250;
+      color: $black;
+
+      .public-DraftEditorPlaceholder-inner {
+        color: $black;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: $black;
+      }
+
+      a {
         color: $black;
       }
     }
@@ -22,22 +71,13 @@
       margin: 0;
     }
 
-    h2 {
-      font-size: 1.333em;
-      font-weight: bold;
-      line-height: 1.56rem;
-    }
-
-    h3 {
-      margin: 0;
-      font-size: 1.2em;
-      font-weight: bold;
-      line-height: 1.4rem;
-    }
-
     img.left-image {
       max-width: 80%;
       object-fit: unset;
+    }
+
+    .image-col {
+      text-align: center;
     }
 
     div + h3,

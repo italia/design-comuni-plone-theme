@@ -83,7 +83,7 @@ const messages = defineMessages({
   },
   email_sede: {
     id: 'email_sede',
-    defaultMessage: 'Email',
+    defaultMessage: 'E-mail',
   },
   pec_sede: {
     id: 'pec_sede',

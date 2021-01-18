@@ -2,10 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { Link } from 'react-router-dom';
-import { ConditionalLink } from '@plone/volto/components';
+import { UniversalLink } from '@plone/volto/components';
 import { useIntl, defineMessages } from 'react-intl';
 import moment from 'moment';
+import Image from '@plone/volto/components/theme/Image/Image';
+
 import {
   Container,
   Row,
@@ -18,6 +19,10 @@ const messages = defineMessages({
     id: 'grid-gallery-max-items-exceeded',
     defaultMessage:
       'Per questo template il numero di risultati per pagina deve essere 7. Controlla le impostazioni.',
+  },
+  view_all: {
+    id: 'Vedi tutto',
+    defaultMessage: 'Vedi tutto',
   },
 });
 
@@ -37,7 +42,7 @@ const GridGalleryTemplate = ({
         'public-ui': isEditMode,
       })}
     >
-      <div className='full-width'>
+      <div className="full-width">
         <Container className="px-4">
           {title && (
             <Row>
@@ -58,43 +63,30 @@ const GridGalleryTemplate = ({
                 key={item['@id'] ?? index}
                 className={cx('grid-gallery-item', `item-${index % 7}`)}
               >
-                <Link to={isEditMode ? '#' : flattenToAppURL(item['@id'])}>
-                  <img
-                    src={flattenToAppURL(
-                      item.image?.scales?.preview?.download ??
-                        item.image?.download ??
-                        '',
-                    )}
-                    srcSet={`${flattenToAppURL(
-                      item.image?.scales?.gallery?.download || '',
-                    )} 250w, ${flattenToAppURL(
-                      item.image?.scales?.icon?.download || '',
-                    )} 32w, ${flattenToAppURL(
-                      item.image?.scales?.large?.download || '',
-                    )} 768w, ${flattenToAppURL(
-                      item.image?.scales?.listing?.download || '',
-                    )} 16w, ${flattenToAppURL(
-                      item.image?.scales?.mini?.download || '',
-                    )} 200w, ${flattenToAppURL(
-                      item.image?.scales?.preview?.download || '',
-                    )} 400w, ${flattenToAppURL(
-                      item.image?.scales?.thumb?.download || '',
-                    )} 128w, ${flattenToAppURL(
-                      item.image?.scales?.tile?.download || '',
-                    )} 64w`}
-                    loading="lazy"
-                    alt=""
-                  />
+                <UniversalLink
+                  href={isEditMode ? '#' : flattenToAppURL(item['@id'])}
+                >
+                  {item.image && (
+                    <Image
+                      image={item.image}
+                      alt=""
+                      loading="lazy"
+                      role="presentation"
+                    />
+                  )}
                   <h3>{item.title}</h3>
-                </Link>
+                </UniversalLink>
               </div>
             ))}
           </div>
           {linkMore?.href && (
-            <div className="link-more">
-              <ConditionalLink condition={!isEditMode} to={linkMore.href}>
-                {linkMore.title}
-              </ConditionalLink>
+            <div className="link-button text-center my-5">
+              <UniversalLink
+                href={flattenToAppURL(linkMore.href)}
+                className="btn btn-tertiary"
+              >
+                {linkMore.title || intl.formatMessage(messages.view_all)}
+              </UniversalLink>
             </div>
           )}
         </Container>

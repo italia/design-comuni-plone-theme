@@ -1,19 +1,17 @@
 /**
- * Edit icons block.
- * @module components/manage/Blocks/Title/Edit
+ * Edit Form block.
+ * @module components/ItaliaTheme/Blocks/Form/Edit
  */
 
 import React from 'react';
 import EditBlock from './Block/EditBlock';
-import { Grid } from 'semantic-ui-react';
+
 import {
-  Container,
   Card,
   CardBody,
   Button,
   Row,
   Col,
-  Alert,
 } from 'design-react-kit/dist/design-react-kit';
 import {
   withDNDContext,
@@ -45,15 +43,17 @@ const messages = defineMessages({
       'Inserire un campo di tipo "E-mail mittente". Se non è presente, oppure è presente ma non viene compilato dall\'utente, l\'indirizzo del mittente della mail sarà quello configurato dalla sidebar di destra.',
   },
 });
+
 /**
- * Edit icons block class.
+ * Edit Form block class.
  * @class Edit
  * @extends Component
  */
 class Edit extends SubblocksEdit {
   componentDidMount() {
     super.componentDidMount();
-    if (!this.props.data.default_form) {
+
+    if (!this.props.data.default_from) {
       this.props.onChangeBlock(this.props.block, {
         ...this.props.data,
         default_from: 'noreply@plone.org',

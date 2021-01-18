@@ -1,6 +1,6 @@
 /**
- * Edit image block.
- * @module components/Blocks/FullImage/Edit
+ * Edit Break block.
+ * @module components/ItaliaTheme/Blocks/Break/Edit
  */
 
 import React, { Component } from 'react';
@@ -10,7 +10,7 @@ import { FormattedMessage } from 'react-intl';
 import cx from 'classnames';
 
 /**
- * Edit break block class.
+ * Edit Break block class.
  * @class Edit
  * @extends Component
  */

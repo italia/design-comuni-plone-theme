@@ -9,6 +9,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import PropTypes from 'prop-types';
+import Image from '@plone/volto/components/theme/Image/Image';
 
 const messages = defineMessages({
   gallery: {
@@ -96,7 +97,7 @@ const Gallery = ({
     return () => {
       dispatch(resetSearchContent(folder_name));
     };
-  }, []);
+  }, [dispatch, folder_name, hasChildren, url]);
 
   const multimedia = searchResults?.[folder_name]?.items || [];
   let images = multimedia.filter((item) => item['@type'] === 'Image');
@@ -121,13 +122,11 @@ const Gallery = ({
                 {images.map((item, i) => (
                   <div className="it-single-slide-wrapper" key={item['@id']}>
                     <figure>
-                      <img
-                        src={flattenToAppURL(
-                          item.image.scales.gallery.download,
-                        )}
+                      <Image
+                        image={item.image}
                         alt={item.title}
                         className="img-fluid"
-                      ></img>
+                      />
                       <figcaption className="figure-caption mt-2">
                         {item.title}
                       </figcaption>

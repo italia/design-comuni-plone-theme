@@ -134,7 +134,7 @@ const SideMenu = ({ data }) => {
   };
 
   return headers?.length > 0 ? (
-    <div className="sticky-wrapper navbar-wrapper">
+    <div className="sticky-wrapper navbar-wrapper page-side-menu">
       <nav className="navbar it-navscroll-wrapper navbar-expand-lg">
         <button
           className={

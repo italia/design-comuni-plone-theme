@@ -38,7 +38,8 @@ const renderImage = (image, showImage) =>
             src={`data:${image['content-type']};${image.encoding},${image.data}`}
             alt="imgalt"
             title="imgtitle"
-          ></img>
+            loading="lazy"
+          />
         </figure>
       </div>
     </div>

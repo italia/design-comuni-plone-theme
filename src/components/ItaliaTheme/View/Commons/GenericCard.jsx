@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import cx from 'classnames';
-import { Link } from 'react-router-dom';
+import { UniversalLink } from '@plone/volto/components';
 import PropTypes from 'prop-types';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -12,6 +12,8 @@ import {
   getItemIcon,
   ListingCategory,
 } from '@italia/components/ItaliaTheme';
+import Image from '@plone/volto/components/theme/Image/Image';
+
 /**
  * GenericCard view component class.
  * @function GenericCard
@@ -52,7 +54,7 @@ const GenericCard = ({
       dispatch(getContent(url, null, key));
       return () => dispatch(resetContent(key));
     }
-  }, []);
+  }, [dispatch, key, showimage, url]);
 
   item_fo = locationContent[key]?.data || item;
 
@@ -66,10 +68,8 @@ const GenericCard = ({
         <div className="img-responsive-wrapper">
           <div className="img-responsive img-responsive-panoramic">
             <figure className="img-wrapper">
-              <img
-                src={flattenToAppURL(
-                  item_fo[image_field].scales.preview.download,
-                )}
+              <Image
+                image={item_fo[image_field]}
                 alt={item_fo.title}
                 title={item_fo.title}
               />
@@ -80,7 +80,9 @@ const GenericCard = ({
           {infos}
           <h5 className="card-title">
             {show_icon && <Icon icon={show_icon} padding={false} />}
-            <Link to={flattenToAppURL(item_fo['@id'])}>{item_fo.title}</Link>
+            <UniversalLink href={flattenToAppURL(item_fo['@id'])}>
+              {item_fo.title}
+            </UniversalLink>
           </h5>
           {(showDescription || children) && (
             <div className="card-text">
@@ -95,7 +97,9 @@ const GenericCard = ({
           {infos}
           <h5 className="card-title">
             {show_icon && <Icon icon={show_icon} padding={false} />}
-            <Link to={flattenToAppURL(item_fo['@id'])}>{item_fo.title}</Link>
+            <UniversalLink href={flattenToAppURL(item_fo['@id'])}>
+              {item_fo.title}
+            </UniversalLink>
           </h5>
           {(showDescription || children) && (
             <div className="card-text">

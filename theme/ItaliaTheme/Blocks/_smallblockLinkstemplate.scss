@@ -14,10 +14,15 @@
     background: white;
     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
 
-    img {
+    img,
+    .img-skeleton {
       width: 100%;
       height: auto;
       max-height: 100px;
+    }
+
+    .img-skeleton {
+      height: 80px;
     }
   }
 

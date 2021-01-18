@@ -1,0 +1,9 @@
+.contenttype-servizio {
+	@media print {
+		.it-page-sections-container {
+			#correlati {
+				display: none;
+			}
+		}
+	}
+}

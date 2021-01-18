@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import cx from 'classnames';
+import Image from '@plone/volto/components/theme/Image/Image';
 
 const SmallBlockLinksTemplate = ({
   items,
@@ -12,7 +13,7 @@ const SmallBlockLinksTemplate = ({
 }) => {
   return (
     <div className={cx('small-block-links', { 'public-ui': isEditMode })}>
-      <div className='full-width'>
+      <div className="full-width">
         <Container className="px-4">
           {title && (
             <Row>
@@ -39,13 +40,11 @@ const SmallBlockLinksTemplate = ({
                           : flattenToAppURL(item['@id'])
                       }
                     >
-                      <img
-                        className="listing-image"
-                        alt={item.title}
-                        src={flattenToAppURL(
-                          item.image.scales.preview.download,
-                        )}
+                      <Image
+                        image={item.image}
                         title={item.title}
+                        alt={item.title}
+                        className="listing-image"
                       />
                     </a>
                   </div>

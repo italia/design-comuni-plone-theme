@@ -11,8 +11,8 @@ const messages = defineMessages({
     id: 'fax',
     defaultMessage: 'Fax',
   },
-  email: {
-    id: 'email',
+  email_label: {
+    id: 'email_label',
     defaultMessage: 'E-mail',
   },
 
@@ -36,24 +36,22 @@ const ContactLink = ({ tel, fax, email, label = true, strong = false }) => {
   let ret = null;
 
   function ReplacePhoneNumbers(str, type) {
-    let newhtml = str.replace(
-      /\+?[0-9]( ?[0-9\/-]+)+.?[0-9]*/gm,
-      function (v) {
-        let r =
-          "<a href='" +
-          type +
-          ':' +
-          v.trim().replace(/-|\/|\s/gm, '') +
-          "' title='" +
-          (type === 'tel'
-            ? intl.formatMessage(messages.call)
-            : intl.formatMessage(messages.call_fax)) +
-          "' >" +
-          v +
-          '</a>';
-        return r;
-      },
-    );
+    // eslint-disable-next-line no-useless-escape
+    let newhtml = str.replace(/\+?[0-9]( ?[0-9\/-]+)+.?[0-9]*/gm, function (v) {
+      let r =
+        "<a href='" +
+        type +
+        ':' +
+        v.trim().replace(/-|\/|\s/gm, '') +
+        "' title='" +
+        (type === 'tel'
+          ? intl.formatMessage(messages.call)
+          : intl.formatMessage(messages.call_fax)) +
+        "' >" +
+        v +
+        '</a>';
+      return r;
+    });
     return newhtml;
   }
 
@@ -82,8 +80,8 @@ const ContactLink = ({ tel, fax, email, label = true, strong = false }) => {
     ret_label = intl.formatMessage(messages.fax);
     ret = ReplacePhoneNumbers(fax, 'fax');
   } else if (email) {
-    ret_label = intl.formatMessage(messages.email);
-    ret = ReplaceEmails(email, 'fax');
+    ret_label = intl.formatMessage(messages.email_label);
+    ret = ReplaceEmails(email);
   }
   ret_label = label ? <>{ret_label}: </> : null;
   ret_label = label ? strong ? <strong>{ret_label}</strong> : ret_label : null;

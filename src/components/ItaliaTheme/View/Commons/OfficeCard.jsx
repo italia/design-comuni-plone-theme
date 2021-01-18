@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { UniversalLink } from '@plone/volto/components';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { getContent, resetContent } from '@plone/volto/actions';
@@ -42,9 +42,12 @@ const OfficeCard = ({
       {icon && <Icon icon={icon}></Icon>}
       <div className="card-body pr-3">
         <h5 className="card-title">
-          <Link to={flattenToAppURL(office_fo['@id'])} title={office_fo.title}>
+          <UniversalLink
+            href={flattenToAppURL(office_fo['@id'])}
+            title={office_fo.title}
+          >
             {office_fo.title}
-          </Link>
+          </UniversalLink>
         </h5>
         <p className="card-text">{office_fo.description}</p>
         {(office_fo.city || office_fo.zip_code || office_fo.street) && (

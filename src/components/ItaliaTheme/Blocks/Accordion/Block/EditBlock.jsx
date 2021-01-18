@@ -1,6 +1,6 @@
 /**
- * Edit text block.
- * @module components/manage/Blocks/Title/Edit
+ * Edit Accordion block.
+ * @module components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
  */
 
 import React from 'react';
@@ -34,7 +34,7 @@ const messages = defineMessages({
   },
 });
 /**
- * Edit text block class.
+ * Edit Accordion block class.
  * @class Edit
  * @extends Component
  */
@@ -54,8 +54,9 @@ class EditBlock extends SubblockEdit {
   }
 
   componentDidMount() {
+    // eslint-disable-next-line no-unused-expressions
     this.accordion_item_ref?.current?.addEventListener('keydown', (e) => {
-      if (e.keyCode == 13) {
+      if (e.keyCode === 13) {
         if (!(this.state.focusOn === 'text')) {
           this.setState({ focusOn: 'text' });
         }

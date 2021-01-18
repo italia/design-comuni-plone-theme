@@ -6,6 +6,8 @@
 
 #search-modal {
   .modal-header {
+    flex-shrink: 0;
+
     button.close {
       display: none;
     }
@@ -39,5 +41,9 @@
 .search-results-wrapper {
   .card.card-teaser {
     height: 100%;
+
+    .card-body {
+      max-width: 100%;
+    }
   }
 }

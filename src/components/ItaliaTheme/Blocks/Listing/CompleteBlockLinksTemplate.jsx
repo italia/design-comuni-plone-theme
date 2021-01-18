@@ -1,18 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { UniversalLink } from '@plone/volto/components';
 import {
   Card,
   CardBody,
   CardTitle,
   CardText,
-  Button,
   Container,
   Row,
   Col,
 } from 'design-react-kit/dist/design-react-kit';
 import cx from 'classnames';
 import { defineMessages, useIntl } from 'react-intl';
+import Image from '@plone/volto/components/theme/Image/Image';
 
 const messages = defineMessages({
   view_all: {
@@ -36,77 +37,71 @@ const CompleteBlockLinksTemplate = ({
         'public-ui': isEditMode,
       })}
     >
-      <div className="full-width">
-        <Container>
-          {title && (
-            <Row>
-              <Col>
-                <h2 className="mb-4">{title}</h2>
-              </Col>
-            </Row>
-          )}
-          <Row className="items">
-            {items.map((item, index) => (
-              <Col md="6" lg="3" key={item['@id']} className="col-item">
-                <Card
-                  color=""
-                  className="card-bg rounded"
-                  noWrapper={false}
-                  space
-                  tag="div"
-                >
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href={
-                      item['remoteUrl'] && item['remoteUrl'] !== ''
-                        ? item['remoteUrl']
-                        : flattenToAppURL(item['@id'])
-                    }
-                  >
-                    <div className="d-flex">
-                      {item.image && (
-                        <div className="image-container">
-                          <img
-                            alt={item.title}
-                            src={flattenToAppURL(
-                              item.image.scales.preview.download,
-                            )}
-                            title={item.title}
-                          />
-                        </div>
-                      )}
-                      <div>
-                        <CardBody>
-                          <CardTitle tag="h5" className="text-secondary">
-                            {item.title}
-                          </CardTitle>
-                          <CardText tag="p" className="text-secondary">
-                            {item.description}
-                          </CardText>
-                        </CardBody>
-                      </div>
-                    </div>
-                  </a>
-                </Card>
-              </Col>
-            ))}
+      <Container className="px-4 px-md-0">
+        {title && (
+          <Row>
+            <Col>
+              <h2 className="mb-4">{title}</h2>
+            </Col>
           </Row>
-          {linkMore?.href && (
-            <div className="link-button">
-              <Button
-                color="tertiary"
-                className="view-all"
-                icon={false}
-                tag="button"
-                onClick={() => window.open(linkMore.href, '_self')}
+        )}
+        <Row className="items">
+          {items.map((item, index) => (
+            <Col md="6" lg="3" key={item['@id']} className="col-item">
+              <Card
+                color=""
+                className="card-bg rounded"
+                noWrapper={false}
+                tag="div"
               >
-                {linkMore.title || intl.formatMessage(messages.view_all)}
-              </Button>
-            </div>
-          )}
-        </Container>
-      </div>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={
+                    item['remoteUrl'] && item['remoteUrl'] !== ''
+                      ? flattenToAppURL(item['remoteUrl'])
+                      : flattenToAppURL(item['@id'])
+                  }
+                >
+                  <div className="d-flex">
+                    {item.image && (
+                      <div className="image-container">
+                        <Image
+                          alt={item.title}
+                          image={flattenToAppURL(
+                            item.image.scales.preview.download,
+                          )}
+                          title={item.title}
+                        />
+                      </div>
+                    )}
+                    <div>
+                      <CardBody>
+                        <CardTitle tag="h5" className="text-secondary">
+                          {item.title}
+                        </CardTitle>
+                        <CardText tag="p" className="text-secondary">
+                          {item.description}
+                        </CardText>
+                      </CardBody>
+                    </div>
+                  </div>
+                </a>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+        {linkMore?.href && (
+          <div className="link-button text-center my-4">
+            <UniversalLink
+              href={flattenToAppURL(linkMore.href)}
+              className="btn btn-tertiary"
+            >
+              {linkMore.title || intl.formatMessage(messages.view_all)}
+            </UniversalLink>
+          </div>
+        )}
+      </Container>
     </div>
   );
 };

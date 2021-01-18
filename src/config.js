@@ -4,14 +4,6 @@ import * as config from '@plone/volto/config';
 
 import ToHTMLRenderers from '@plone/volto/config/RichTextEditor/ToHTML';
 
-import createInlineStyleButton from 'draft-js-buttons/lib/utils/createInlineStyleButton';
-import createBlockStyleButton from 'draft-js-buttons/lib/utils/createBlockStyleButton';
-import { Separator } from 'draft-js-inline-toolbar-plugin';
-
-import Icon from '@plone/volto/components/theme/Icon/Icon';
-import underlineSVG from '@plone/volto/icons/underline.svg';
-import alignCenterSVG from '@plone/volto/icons/align-center.svg';
-
 import newsSVG from '@plone/volto/icons/news.svg';
 import searchIcon from 'bootstrap-italia/src/svg/it-search.svg';
 import NewsHomeView from '@italia/components/ItaliaTheme/Blocks/NewsHome/View';
@@ -55,47 +47,62 @@ import videoSVG from '@plone/volto/icons/video.svg';
 import VideoGalleryView from '@italia/components/ItaliaTheme/Blocks/VideoGallery/View';
 import VideoGalleryEdit from '@italia/components/ItaliaTheme/Blocks/VideoGallery/Edit';
 
+import faTwitter from './icons/twitter-brands.svg';
+import TwitterPostsView from '@italia/components/ItaliaTheme/Blocks/TwitterPosts/View';
+import TwitterPostsEdit from '@italia/components/ItaliaTheme/Blocks/TwitterPosts/Edit';
+
 import formSVG from '@plone/volto/icons/form.svg';
 import FormView from '@italia/components/ItaliaTheme/Blocks/Form/View';
 import FormEdit from '@italia/components/ItaliaTheme/Blocks/Form/Edit';
 
-import { CharCounterDescriptionWidget } from '@italia/components/ItaliaTheme';
-import { PageView } from '@italia/components/ItaliaTheme';
-import { NewsItemView } from '@italia/components/ItaliaTheme';
-import { UOView } from '@italia/components/ItaliaTheme';
-import { PersonaView } from '@italia/components/ItaliaTheme';
-import { VenueView } from '@italia/components/ItaliaTheme';
-import { ServizioView } from '@italia/components/ItaliaTheme';
-import { EventoView } from '@italia/components/ItaliaTheme';
-import { PaginaArgomentoView } from '@italia/components/ItaliaTheme';
-import { CartellaModulisticaView } from '@italia/components/ItaliaTheme';
-import { DocumentoView } from '@italia/components/ItaliaTheme';
-import { ModuloView } from '@italia/components/ItaliaTheme';
-import { BandoView } from '@italia/components/ItaliaTheme';
-import { TrasparenzaView } from '@italia/components/ItaliaTheme';
-import { DettagliProcedimentiView } from '@italia/components/ItaliaTheme';
+import CharCounterDescriptionWidget from '@italia/components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget';
+import PageView from '@italia/components/ItaliaTheme/View/PageView/PageView';
+import NewsItemView from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemView';
+import UOView from '@italia/components/ItaliaTheme/View/UOView/UOView';
+import PersonaView from '@italia/components/ItaliaTheme/View/PersonaView/PersonaView';
+import VenueView from '@italia/components/ItaliaTheme/View/VenueView/VenueView';
+import ServizioView from '@italia/components/ItaliaTheme/View/ServizioView/ServizioView';
+import EventoView from '@italia/components/ItaliaTheme/View/EventoView/EventoView';
+import PaginaArgomentoView from '@italia/components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoView';
+import CartellaModulisticaView from '@italia/components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView';
+import DocumentoView from '@italia/components/ItaliaTheme/View/DocumentoView/DocumentoView';
+import ModuloView from '@italia/components/ItaliaTheme/View/ModuloView/ModuloView';
+import BandoView from '@italia/components/ItaliaTheme/View/BandoView/BandoView';
+import TrasparenzaView from '@italia/components/ItaliaTheme/View/TrasparenzaView/TrasparenzaView';
+import DettagliProcedimentiView from '@italia/components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView';
 
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
+import CardWithImageTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CardWithImageTemplateSkeleton';
 import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
+import SmallBlockLinksTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SmallBlockLinksTemplateSkeleton';
 
 import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate';
+import CompleteBlockLinksTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CompleteBlockLinksTemplateSkeleton';
 import PhotogalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
+import PhotogalleryTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/PhotogalleryTemplateSkeleton';
 import InEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate';
+import InEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/InEvidenceTemplateSkeleton';
 import SimpleCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplate';
 import GridGalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate';
+import GridGalleryTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/GridGalleryTemplateSkeleton';
 import RibbonCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate';
+import RibbonCardTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/RibbonCardTemplateSkeleton';
 import BandiInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate';
+import BandiInEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton';
 import AmministrazioneTrasparenteTablesTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
+import AmministrazioneTrasparenteTablesTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/AmministrazioneTrasparenteTablesTemplateSkeleton';
 
 import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
 import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
+import CardWithImageRssTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithImageRssTemplateSkeleton';
 import CardWithoutImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
+import CardWithoutImageRssTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton';
 import { DatetimeWidget } from '@plone/volto/config/Widgets';
 
 import { MultilingualWidget } from '@italia/addons/volto-multilingual-widget';
-import { IconWidget } from '@italia/components/ItaliaTheme';
+import IconWidget from '@italia/components/ItaliaTheme/manage/Widgets/IconWidget';
 import { defaultIconWidgetOptions } from '@italia/helpers/index';
-import TinymceWidget from '@italia/components/ItaliaTheme/manage/Widgets/TinymceWidget';
+//import TinymceWidget from '@italia/components/ItaliaTheme/manage/Widgets/TinymceWidget';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import * as Icons from '@fortawesome/free-solid-svg-icons';
@@ -119,6 +126,14 @@ import faSitemapSVG from './icons/sitemap.svg';
 import faBuildingSVG from './icons/building.svg';
 import faFileDownloadSVG from './icons/file-download.svg';
 
+import {
+  ItaliaRichTextEditorInlineToolbarButtons,
+  extendedBlockRenderMap,
+  blockStyleFn,
+  ItaliaBlocksHtmlRenderers,
+  ItaliaFromHTMLCustomBlockFn,
+} from '@italia/config/RichTextEditor/config';
+
 const iconList = Object.keys(Icons.fas).map((icon) => Icons[icon]);
 const iconListRegular = Object.keys(IconsRegular.far).map(
   (icon) => IconsRegular[icon],
@@ -133,41 +148,17 @@ const rssBlock = {
     default: {
       label: 'Card senza immagine',
       template: CardWithoutImageRssTemplate,
+      skeleton: CardWithoutImageRssTemplateSkeleton,
     },
     card_without_image: {
       label: 'Card con immagine',
       template: CardWithImageRssTemplate,
+      skeleton: CardWithImageRssTemplateSkeleton,
     },
   },
 };
 
-const extendedBlockRenderMap = config.settings.extendedBlockRenderMap.update(
-  'align-center',
-  (element = 'p') => element,
-);
-
-const blockStyleFn = (contentBlock) => {
-  let r = config.settings.blockStyleFn(contentBlock);
-
-  if (!r) {
-    const type = contentBlock.getType();
-    if (type === 'align-center') {
-      r += 'align-center';
-    }
-  }
-
-  return r;
-};
-const listBlockTypes = config.settings.listBlockTypes.concat(['align-center']);
-
-const UnderlineButton = createInlineStyleButton({
-  style: 'UNDERLINE',
-  children: <Icon name={underlineSVG} size="24px" />,
-});
-const AlignCenterButton = createBlockStyleButton({
-  blockType: 'align-center',
-  children: <Icon name={alignCenterSVG} size="24px" />,
-});
+const listBlockTypes = config.settings.listBlockTypes; //config.settings.listBlockTypes.concat(['align-center']);
 
 const customBlocks = {
   newsHome: {
@@ -357,6 +348,21 @@ const customBlocks = {
     },
     sidebarTab: 1,
   },
+  twitter_posts: {
+    id: 'twitter_posts',
+    title: 'Twitter posts',
+    icon: faTwitter,
+    group: 'media',
+    view: TwitterPostsView,
+    edit: TwitterPostsEdit,
+    restricted: false,
+    mostUsed: false,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
   form: {
     id: 'form',
     title: 'Form',
@@ -376,42 +382,55 @@ const customBlocks = {
     ...config.blocks.blocksConfig.listing,
     templates: {
       ...config.blocks.blocksConfig.listing.templates,
-      default: { label: 'Card semplice', template: SimpleCardTemplate },
+
+      default: {
+        label: 'Card semplice',
+        template: SimpleCardTemplate,
+      },
       cardWithImageTemplate: {
         label: 'Card con immagine',
         template: CardWithImageTemplate,
+        skeleton: CardWithImageTemplateSkeleton,
       },
       inEvidenceTemplate: {
         label: 'In evidenza',
         template: InEvidenceTemplate,
+        skeleton: InEvidenceTemplateSkeleton,
       },
       ribbonCardTemplate: {
         label: 'Card con nastro',
         template: RibbonCardTemplate,
+        skeleton: RibbonCardTemplateSkeleton,
       },
       smallBlockLinksTemplate: {
         label: 'Blocco link solo immagini',
         template: SmallBlockLinksTemplate,
+        skeleton: SmallBlockLinksTemplateSkeleton,
       },
       completeBlockLinksTemplate: {
         label: 'Blocco link completo',
         template: CompleteBlockLinksTemplate,
+        skeleton: CompleteBlockLinksTemplateSkeleton,
       },
       photogallery: {
         label: 'Photogallery',
         template: PhotogalleryTemplate,
+        skeleton: PhotogalleryTemplateSkeleton,
       },
       gridGalleryTemplate: {
         label: 'Gallery a griglia',
         template: GridGalleryTemplate,
+        skeleton: GridGalleryTemplateSkeleton,
       },
       bandiInEvidenceTemplate: {
         label: 'Bandi',
         template: BandiInEvidenceTemplate,
+        skeleton: BandiInEvidenceTemplateSkeleton,
       },
       amministrazioneTrasparenteTablesTemplate: {
         label: 'Tabelle Amministrazione Trasparente',
         template: AmministrazioneTrasparenteTablesTemplate,
+        skeleton: AmministrazioneTrasparenteTablesTemplateSkeleton,
       },
     },
     listing_bg_colors: [], //{name:'blue', label:'Blu'},{name:'light-blue', label:'Light blue'},{name:'sidebar-background', label:'Grey'}
@@ -423,12 +442,7 @@ const customBlocks = {
 export const settings = {
   ...config.settings,
   devProxyToApiPath: 'http://localhost:8080/Plone',
-  richTextEditorInlineToolbarButtons: [
-    AlignCenterButton,
-    Separator,
-    UnderlineButton,
-    ...config.settings.richTextEditorInlineToolbarButtons,
-  ],
+  richTextEditorInlineToolbarButtons: ItaliaRichTextEditorInlineToolbarButtons,
   extendedBlockRenderMap: extendedBlockRenderMap,
   blockStyleFn: blockStyleFn,
   listBlockTypes: listBlockTypes,
@@ -441,12 +455,11 @@ export const settings = {
     ...ToHTMLRenderers,
     blocks: {
       ...ToHTMLRenderers.blocks,
-      blockquote: (children, { keys }) =>
-        children.map((child, i) => (
-          <blockquote key={keys[i]}>{child}</blockquote>
-        )),
+      ...ItaliaBlocksHtmlRenderers,
     },
+    inline: { ...ToHTMLRenderers.inline },
   },
+  FromHTMLCustomBlockFn: ItaliaFromHTMLCustomBlockFn,
   contentIcons: {
     ...config.settings.contentIcons,
     Document: faFileInvoiceSVG,
@@ -554,6 +567,7 @@ export const blocks = {
     ...config.blocks.requiredBlocks.concat(...customRequiredBlocks),
   },
 };
+delete blocks.blocksConfig.listing.templates.imageGallery; //removes imageGallery volto template, because we have our photoGallery template
 
 export const addonReducers = { ...config.addonReducers };
 export const addonRoutes = [...(config.addonRoutes || [])];

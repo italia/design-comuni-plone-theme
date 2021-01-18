@@ -1,5 +1,5 @@
 /**
- * Edit Hero block.
+ * Edit Alert block.
  * @module components/manage/Blocks/Image/Edit
  */
 
@@ -10,8 +10,6 @@ import { compose } from 'redux';
 import { injectIntl } from 'react-intl';
 import cx from 'classnames';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
-import { settings } from '~/config';
-import { flattenToAppURL } from '@plone/volto/helpers';
 
 import { createContent } from '@plone/volto/actions';
 import { SidebarPortal } from '@plone/volto/components';
@@ -19,7 +17,7 @@ import { EditTextBlock } from '@plone/volto/components';
 
 import { AlertSidebar } from '@italia/components/ItaliaTheme';
 /**
- * Edit image block class.
+ * Edit Alert block class.
  * @class Edit
  * @extends Component
  */
@@ -69,20 +67,17 @@ class Edit extends Component {
           })}
         >
           <Row
-            className={cx('row-full-width p-5', 'bg-' + this.props.data.color)}
+            className={cx(
+              'row-full-width p-5',
+              'bg-alert-' + this.props.data.color,
+            )}
           >
             <Container className="ui">
               <Row className="align-items-start">
-                {this.props.data.url && (
-                  <Col xs={1}>
+                {this.props.data.image?.data && (
+                  <Col sm={2} className="pb-3 image-col">
                     <img
-                      src={
-                        this.props.data.url.includes(settings.apiPath)
-                          ? `${flattenToAppURL(
-                              this.props.data.url,
-                            )}/@@images/image`
-                          : this.props.data.url
-                      }
+                      src={`data:${this.props.data.image['content-type']};${this.props.data.image.encoding},${this.props.data.image.data}`}
                       alt=""
                       className="left-image"
                     />

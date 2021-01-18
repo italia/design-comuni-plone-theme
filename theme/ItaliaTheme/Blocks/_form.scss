@@ -9,10 +9,11 @@
         top: 10px;
         left: -20px;
       }
+
       &.subblock-draggable {
         .ui.basic.button.delete-button {
-          right: -4px;
           top: 4px;
+          right: -4px;
           left: unset;
         }
       }
@@ -78,8 +79,8 @@
   }
 
   .form-group input[type='date'] ~ label {
-    transform: translateY(-75%);
     font-size: 0.777rem;
+    transform: translateY(-75%);
   }
 
   textarea {
@@ -87,6 +88,39 @@
 
     &.form-control.is-invalid {
       background-size: 25px !important;
+    }
+  }
+
+  .form-input-file {
+    .field-file-name {
+      align-items: center;
+      padding: 0;
+    }
+
+    small.form-text {
+      position: unset;
+    }
+
+    .dropzone-text {
+      margin: 0;
+    }
+
+    .image-preview {
+      max-width: 250px;
+      max-height: 150px;
+    }
+
+    .delete-button {
+      padding: 0.5em;
+      border: none;
+      background: none;
+      box-shadow: none;
+
+      .icon {
+        width: 16px;
+        height: 16px;
+        color: $primary;
+      }
     }
   }
 }

@@ -25,9 +25,14 @@
         .icon-white {
           fill: currentcolor !important;
         }
+
+        .icon {
+          fill: currentcolor !important;
+        }
       }
 
       .list-inline-item {
+        margin-bottom: 1em;
         margin-left: 0.5rem;
 
         &,

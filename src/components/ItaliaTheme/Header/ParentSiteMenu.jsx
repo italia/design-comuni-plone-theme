@@ -10,8 +10,10 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import { Nav, NavItem, NavLink } from 'design-react-kit/dist/design-react-kit';
 
 const ParentSiteMenu = () => {
-  const dropdownMenu = useSelector(state => state.dropdownMenuNavItems?.result);
-  const subsite = useSelector(state => state.subsite?.data);
+  const dropdownMenu = useSelector(
+    (state) => state.dropdownMenuNavItems?.result,
+  );
+  const subsite = useSelector((state) => state.subsite?.data);
 
   let menu = null;
   if (subsite) {
@@ -22,7 +24,7 @@ const ParentSiteMenu = () => {
     while (i > 0) {
       let s = url_split.slice(0, i).join('/');
       s = s.length === 0 ? '/' : s;
-      dropdownMenu.map(m => {
+      dropdownMenu.map((m) => {
         if (m.rootPath === s) {
           menu = m;
           i = 0;
@@ -38,8 +40,10 @@ const ParentSiteMenu = () => {
         <NavItem tag="li" key={id}>
           <NavLink
             to={flattenToAppURL(
-              (navitem.linkUrl?.[0]?.['@id'] ||
-                navitem.navigationRoot?.[0]?.['@id']) || '',
+              navitem.linkUrl?.[0]?.['@id'] ||
+                navitem.showMoreLink?.[0]?.['@id'] ||
+                navitem.navigationRoot?.[0]?.['@id'] ||
+                '',
             )}
             tag={Link}
           >

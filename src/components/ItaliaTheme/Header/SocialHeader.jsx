@@ -38,12 +38,7 @@ const SocialHeader = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Icon
-                  color=""
-                  icon={`it-${social.icon}`}
-                  padding={false}
-                  size=""
-                />
+                <Icon color="" icon={social.icon} padding={false} size="" />
               </a>
             </li>
           ))}

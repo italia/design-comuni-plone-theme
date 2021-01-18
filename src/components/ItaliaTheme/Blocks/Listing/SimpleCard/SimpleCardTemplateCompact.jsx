@@ -1,15 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import cx from 'classnames';
 import { defineMessages, useIntl } from 'react-intl';
+import { ConditionalLink, UniversalLink } from '@plone/volto/components';
 import {
   Card,
   CardBody,
   CardTitle,
   Row,
   Col,
-  Button,
 } from 'design-react-kit/dist/design-react-kit';
 
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -50,27 +49,25 @@ const SimpleCardTemplateCompact = ({
             {show_icon && <Icon icon={getItemIcon(item)} />}
             <CardBody>
               <CardTitle tag="h5">
-                <Link
+                <ConditionalLink
                   to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}
                   condition={!isEditMode}
                 >
                   {item.title || item.id}
-                </Link>
+                </ConditionalLink>
               </CardTitle>
             </CardBody>
           </Card>
         ))}
       </div>
       {linkMore?.href && (
-        <div className="link-button">
-          <Button
-            className="view-all"
-            icon={false}
-            tag="button"
-            onClick={() => window.open(linkMore.href, '_self')}
+        <div className="link-button text-center my-4">
+          <UniversalLink
+            href={flattenToAppURL(linkMore.href)}
+            className="btn btn-tertiary"
           >
             {linkMore.title || intl.formatMessage(messages.view_all)}
-          </Button>
+          </UniversalLink>
         </div>
       )}
     </div>

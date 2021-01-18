@@ -8,6 +8,17 @@
 
 a {
   cursor: pointer;
+
+  &[href^='mailto'],
+  &[target='_blank'],
+  &[rel='noopener noreferreer'] {
+    word-break: break-word;
+  }
+}
+
+.listing-item img {
+  max-width: unset;
+  margin-right: unset;
 }
 
 .public-ui .text-secondary {
@@ -22,18 +33,101 @@ button.custom-navbar-toggler svg.icon {
   background-color: default;
 }
 
-.public-ui a.btn.btn-primary {
-  color: $primary-text;
+.public-ui {
+  a.btn.btn-primary {
+    color: $primary-text;
 
-  svg {
-    fill: $primary-text;
+    svg {
+      fill: $primary-text;
+    }
+  }
+
+  a.btn.btn-secondary {
+    color: $secondary-text;
+
+    svg {
+      fill: $secondary-text;
+    }
   }
 }
 
-.public-ui a.btn.btn-secondary {
-  color: $secondary-text;
+.public-ui,
+.cms-ui {
+  blockquote {
+    position: relative;
+    margin: 1.5rem 2rem;
+    font-family: $font-family-serif;
 
-  svg {
-    fill: $secondary-text;
+    &:before {
+      position: absolute;
+      top: -1.8rem;
+      left: -2rem;
+      display: block;
+      height: 0;
+      color: $neutral-2-b2;
+      content: '“';
+      font-size: 400%;
+    }
+  }
+
+  .callout {
+    padding: 1.25rem;
+    border: 1px solid $neutral-1-a2;
+    border-left-width: 0.4rem;
+    margin: 1.25rem 0;
+    border-radius: 0.25rem;
+
+    p,
+    .public-DraftStyleDefault-block {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .callout-bg {
+    padding: 1.25rem;
+    margin: 1.25rem 0;
+    background-color: $primary-c1;
+
+    p,
+    .public-DraftStyleDefault-block {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .draftjs-buttons {
+    margin: 0;
+
+    a {
+      display: inline-block;
+      padding: 1em 2em;
+      margin: 0.5em 1em 0.5em 0;
+      background-color: $primary;
+      border-radius: $btn-border-radius;
+      color: $primary-text;
+      font-weight: 600;
+      text-align: center;
+
+      &:hover,
+      &:active {
+        background-color: darken($primary, 8);
+        color: $primary-text;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+#text-body {
+  .full-width {
+    position: static;
+    left: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
   }
 }

@@ -2,11 +2,12 @@ import React, { useEffect } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment/min/moment-with-locales';
-import { Link } from 'react-router-dom';
+import { UniversalLink } from '@plone/volto/components';
 import PropTypes from 'prop-types';
 import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Icon } from '@italia/components/ItaliaTheme';
+import Image from '@plone/volto/components/theme/Image/Image';
 
 const messages = defineMessages({
   events: {
@@ -43,9 +44,12 @@ const Evento = ({ event, show_image }) => {
           </p>
 
           <div className="pt-4 pb-3">
-            <Link to={flattenToAppURL(event['@id'])} title={event.title}>
+            <UniversalLink
+              href={flattenToAppURL(event['@id'])}
+              title={event.title}
+            >
               <h6 className="font-weight-semibold">{event.title}</h6>
-            </Link>
+            </UniversalLink>
           </div>
         </div>
       </div>
@@ -54,8 +58,8 @@ const Evento = ({ event, show_image }) => {
           <div className="card-date text-center rounded shadow">
             {moment(event.start).format('DD MMM')}
           </div>
-          <img
-            src={flattenToAppURL(event.image.scales.gallery.download)}
+          <Image
+            image={event.image}
             alt="Immagine"
             className="event-center-cropped"
           />
