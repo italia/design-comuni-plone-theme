@@ -430,7 +430,6 @@ msgstr "Vai alla pagina"
 #: components/ItaliaTheme/Blocks/Accordion/Block/ViewBlock
 #: components/ItaliaTheme/Blocks/Form/Block/EditBlock
 #: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/RibbonCardTemplateSkeleton
 msgid "Vedi"
 msgstr "Vedi"
 
@@ -444,14 +443,8 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateCompact
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/AmministrazioneTrasparenteTablesTemplateSkeleton
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CompleteBlockLinksTemplateSkeleton
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/GridGalleryTemplateSkeleton
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/RibbonCardTemplateSkeleton
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
-#: components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithImageRssTemplateSkeleton
-#: components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 msgid "Vedi tutto"
 msgstr "Vedi tutto"
@@ -477,7 +470,6 @@ msgid "accedere_al_servizio"
 msgstr "Accedere al servizio"
 
 #: components/ItaliaTheme/View/Commons/Actions
-#: components/ItaliaTheme/View/Commons/PageHeader
 msgid "actions"
 msgstr "Vedi azioni"
 
@@ -569,14 +561,11 @@ msgid "backToSearch"
 msgstr "Torna alla ricerca"
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 msgid "bando_closed"
 msgstr "Scaduto"
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton
 msgid "bando_data_pubblicazione"
 msgstr "Data di pubblicazione:"
 
@@ -593,31 +582,24 @@ msgid "bando_ente"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 msgid "bando_inProgress"
 msgstr "In corso"
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 msgid "bando_open"
 msgstr "Attivo"
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton
 msgid "bando_scadenza"
 msgstr "Data di scadenza:"
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton
 msgid "bando_stato"
 msgstr "Stato:"
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton
 msgid "bando_vedi"
 msgstr "Vedi"
 
@@ -773,7 +755,6 @@ msgstr "Data di insediamento"
 msgid "dataset"
 msgstr "Dataset"
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDates
 msgid "date"
 msgstr "Data"
@@ -1139,10 +1120,6 @@ msgstr "Appuntamenti"
 msgid "exceeded_chars"
 msgstr "Il testo supera la lunghezza consigliata"
 
-#: components/ItaliaTheme/View/Commons/PageHeader
-msgid "expire"
-msgstr ""
-
 #: components/ItaliaTheme/View/Commons/RelatedItemInEvidence/ItemInEvidence
 msgid "explore"
 msgstr "Esplora"
@@ -1322,7 +1299,6 @@ msgid "geolocation_selected"
 msgstr "Selezionato"
 
 #: components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/GridGalleryTemplateSkeleton
 msgid "grid-gallery-max-items-exceeded"
 msgstr "Per questo template il numero di risultati per pagina deve essere 7. Controlla le impostazioni."
 
@@ -1420,7 +1396,6 @@ msgstr "Luogo"
 msgid "mailto"
 msgstr "Invia"
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
 msgid "minutes"
 msgstr "min"
@@ -1497,7 +1472,6 @@ msgstr "Notizie in evidenza"
 msgid "novita"
 msgstr "Novità"
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderNewsItem
 msgid "numero_progressivo_cs"
 msgstr "Numero del comunicato stampa"
@@ -1620,7 +1594,6 @@ msgstr ""
 msgid "quartiere"
 msgstr "Quartiere "
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
 msgid "reading_time"
 msgstr "Tempo di lettura"
@@ -1723,20 +1696,15 @@ msgstr ""
 #: addons/volto-rss-block/src/Templates/DefaultRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
-#: components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithImageRssTemplateSkeleton
-#: components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton
 msgid "rss_no_results"
 msgstr "Nessun risultato dal feed RSS"
 
 #: addons/volto-rss-block/src/Templates/DefaultRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
-#: components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithImageRssTemplateSkeleton
-#: components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton
 msgid "rss_read_more"
 msgstr "Leggi tutto"
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "ruolo"
@@ -1869,7 +1837,6 @@ msgstr "Servizi"
 msgid "setrss"
 msgstr "Imposta feed RSS"
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/Sharing
 msgid "share"
 msgstr "Condividi"
@@ -2009,7 +1976,6 @@ msgstr "Tipologia del bando"
 msgid "tipologia_organizzazione"
 msgstr "Tipologia organizzazione"
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "tipologia_persona"
@@ -2036,7 +2002,6 @@ msgid "to"
 msgstr "al"
 
 #: components/ItaliaTheme/Header/SearchModal
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderTassonomiaArgomenti
 msgid "topics"
 msgstr "Argomenti"
@@ -2054,7 +2019,6 @@ msgid "twitterAccounts_description"
 msgstr "Inserisci i nomi degli account di cui vuoi visualizzare i post, separati da virgola. Ad esempio, se vuoi mostrare i tweet di Repubblica e del Corriere della Sera, inserisci “repubblica,Corriere"."
 
 #: components/ItaliaTheme/Blocks/TwitterPosts/Body
-#: components/ItaliaTheme/Blocks/TwitterPosts/Skeleton
 msgid "twitter_posts_no_results"
 msgstr "Non c'è nessun post da mostrare."
 

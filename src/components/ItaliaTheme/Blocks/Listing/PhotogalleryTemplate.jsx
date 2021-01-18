@@ -4,10 +4,10 @@ import cx from 'classnames';
 import { useIntl, defineMessages } from 'react-intl';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import Slider from 'react-slick';
+import Image from '@plone/volto/components/theme/Image/Image';
+import { Icon } from '@italia/components/ItaliaTheme';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { flattenToAppURL } from '@plone/volto/helpers';
-import { Icon } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   viewImage: {
@@ -109,13 +109,11 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
                   >
                     <figure className="img-wrapper">
                       {item.image && (
-                        <img
-                          src={flattenToAppURL(
-                            item?.image?.scales?.preview?.download,
-                          )}
-                          alt={item.title}
+                        <Image
                           className="img-fluid"
-                        ></img>
+                          image={item.image}
+                          alt={item.title}
+                        />
                       )}
                       {getCaption(item) && (
                         <figcaption>{getCaption(item)}</figcaption>

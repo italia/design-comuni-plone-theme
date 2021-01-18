@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import { Portal } from 'react-portal';
 import { defineMessages, useIntl } from 'react-intl';
 import redraft from 'redraft';
-import { flattenToAppURL } from '@plone/volto/helpers';
+import Image from '@plone/volto/components/theme/Image/Image';
 import { settings } from '~/config';
 /**
  * View title block class.
@@ -48,8 +48,8 @@ const ArgomentoTitleView = ({ data, properties }) => {
           node={__CLIENT__ && document.getElementById('portal-header-image')}
         >
           <div>
-            <img
-              src={flattenToAppURL(properties.image.download)}
+            <Image
+              image={properties.image}
               alt={properties.caption || properties.title}
               title={properties.caption || properties.title}
             />

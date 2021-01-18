@@ -13,6 +13,7 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import cx from 'classnames';
 import { defineMessages, useIntl } from 'react-intl';
+import Image from '@plone/volto/components/theme/Image/Image';
 
 const messages = defineMessages({
   view_all: {
@@ -65,9 +66,9 @@ const CompleteBlockLinksTemplate = ({
                   <div className="d-flex">
                     {item.image && (
                       <div className="image-container">
-                        <img
+                        <Image
                           alt={item.title}
-                          src={flattenToAppURL(
+                          image={flattenToAppURL(
                             item.image.scales.preview.download,
                           )}
                           title={item.title}

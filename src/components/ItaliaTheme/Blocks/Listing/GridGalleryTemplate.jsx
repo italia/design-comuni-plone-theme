@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { UniversalLink, ConditionalLink } from '@plone/volto/components';
+import { UniversalLink } from '@plone/volto/components';
 import { useIntl, defineMessages } from 'react-intl';
 import moment from 'moment';
+import Image from '@plone/volto/components/theme/Image/Image';
+
 import {
   Container,
   Row,
@@ -64,32 +66,14 @@ const GridGalleryTemplate = ({
                 <UniversalLink
                   href={isEditMode ? '#' : flattenToAppURL(item['@id'])}
                 >
-                  <img
-                    src={flattenToAppURL(
-                      item.image?.scales?.preview?.download ??
-                        item.image?.download ??
-                        '',
-                    )}
-                    srcSet={`${flattenToAppURL(
-                      item.image?.scales?.gallery?.download || '',
-                    )} 250w, ${flattenToAppURL(
-                      item.image?.scales?.icon?.download || '',
-                    )} 32w, ${flattenToAppURL(
-                      item.image?.scales?.large?.download || '',
-                    )} 768w, ${flattenToAppURL(
-                      item.image?.scales?.listing?.download || '',
-                    )} 16w, ${flattenToAppURL(
-                      item.image?.scales?.mini?.download || '',
-                    )} 200w, ${flattenToAppURL(
-                      item.image?.scales?.preview?.download || '',
-                    )} 400w, ${flattenToAppURL(
-                      item.image?.scales?.thumb?.download || '',
-                    )} 128w, ${flattenToAppURL(
-                      item.image?.scales?.tile?.download || '',
-                    )} 64w`}
-                    loading="lazy"
-                    alt=""
-                  />
+                  {item.image && (
+                    <Image
+                      image={item.image}
+                      alt=""
+                      loading="lazy"
+                      role="presentation"
+                    />
+                  )}
                   <h3>{item.title}</h3>
                 </UniversalLink>
               </div>

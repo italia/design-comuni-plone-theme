@@ -12,6 +12,8 @@ import {
   getItemIcon,
   ListingCategory,
 } from '@italia/components/ItaliaTheme';
+import Image from '@plone/volto/components/theme/Image/Image';
+
 /**
  * GenericCard view component class.
  * @function GenericCard
@@ -52,7 +54,7 @@ const GenericCard = ({
       dispatch(getContent(url, null, key));
       return () => dispatch(resetContent(key));
     }
-  }, []);
+  }, [dispatch, key, showimage, url]);
 
   item_fo = locationContent[key]?.data || item;
 
@@ -66,10 +68,8 @@ const GenericCard = ({
         <div className="img-responsive-wrapper">
           <div className="img-responsive img-responsive-panoramic">
             <figure className="img-wrapper">
-              <img
-                src={flattenToAppURL(
-                  item_fo[image_field].scales.preview.download,
-                )}
+              <Image
+                image={item_fo[image_field]}
                 alt={item_fo.title}
                 title={item_fo.title}
               />

@@ -103,6 +103,7 @@ const Body = ({ data, isEditMode }) => {
                     src={tweet.author.profile_image_url}
                     alt={tweet.author.name}
                     className="rounded-circle"
+                    loading="lazy"
                   />
                 </figure>
                 <div className="user-infos">

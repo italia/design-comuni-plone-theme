@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Icon } from '@italia/components/ItaliaTheme';
+import Image from '@plone/volto/components/theme/Image/Image';
 
 const messages = defineMessages({
   events: {
@@ -57,8 +58,8 @@ const Evento = ({ event, show_image }) => {
           <div className="card-date text-center rounded shadow">
             {moment(event.start).format('DD MMM')}
           </div>
-          <img
-            src={flattenToAppURL(event.image.scales.gallery.download)}
+          <Image
+            image={event.image}
             alt="Immagine"
             className="event-center-cropped"
           />
