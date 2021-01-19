@@ -28,7 +28,11 @@ const RichTextRender = ({ content, add_class, serif = true }) => {
 
   return hasContent ? (
     hasBlocksData(content) ? (
-      <div className={cx(add_class, { 'text-serif': serif })}>
+      <div
+        className={cx(`richtext-blocks ${add_class ?? ''}`, {
+          'text-serif': serif,
+        })}
+      >
         <RenderBlocks content={content} />
       </div>
     ) : (
