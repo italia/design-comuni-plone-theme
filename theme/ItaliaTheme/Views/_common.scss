@@ -44,22 +44,15 @@ body {
 }
 
 //richtext-blocks
-
-.richtext-blocks {
-  + h2,
-  + h3,
-  + h4,
-  + h5,
-  + h6 {
-    margin-bottom: 1rem;
-  }
-}
-
 h2,
 h3,
 h4,
 h5,
 h6 {
+  ~ .richtext-blocks {
+    margin-top: 1rem;
+  }
+
   + .richtext-blocks {
     margin-bottom: 2.5rem;
   }
