@@ -56,18 +56,21 @@ const FileWidget = ({
 }) => {
   const [currentValue, setCurrentValue] = useState(value);
 
-  const onDrop = useCallback((acceptedFiles) => {
-    const file = acceptedFiles[0];
-    readAsDataURL(file).then((data) => {
-      const fields = data.match(/^data:(.*);(.*),(.*)$/);
-      onChange(id, {
-        data: fields[3],
-        encoding: fields[2],
-        'content-type': fields[1],
-        filename: file.name,
+  const onDrop = useCallback(
+    (acceptedFiles) => {
+      const file = acceptedFiles[0];
+      readAsDataURL(file).then((data) => {
+        const fields = data.match(/^data:(.*);(.*),(.*)$/);
+        onChange(id, {
+          data: fields[3],
+          encoding: fields[2],
+          'content-type': fields[1],
+          filename: file.name,
+        });
       });
-    });
-  }, []);
+    },
+    [id, onChange],
+  );
   const intl = useIntl();
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
@@ -80,6 +83,7 @@ const FileWidget = ({
       error={error}
       wrapped={wrapped}
       fieldSet={fieldSet}
+      className="fileWidget"
     >
       <div
         {...getRootProps({
@@ -130,25 +134,35 @@ const FileWidget = ({
                 >
                   {currentValue.filename}
                 </Link>
-                {(!value || (value && value === currentValue)) && (
-                  <Button
-                    icon
-                    basic
-                    className="delete-button"
-                    aria-label="delete file"
-                    onClick={() => {
-                      onChange(id, null);
-                      setCurrentValue(null);
-                    }}
-                  >
-                    <Icon name={deleteSVG} size="20px" />
-                  </Button>
-                )}
+                <Button
+                  icon
+                  basic
+                  className="delete-button"
+                  aria-label="delete file"
+                  onClick={() => {
+                    onChange(id, null);
+                    setCurrentValue(null);
+                  }}
+                >
+                  <Icon name={deleteSVG} size="20px" />
+                </Button>
               </div>
             ) : (
               <div>
                 {`${intl.formatMessage(messages.elementNew)}: `}
                 {value.filename}
+                <Button
+                  icon
+                  basic
+                  className="delete-button ml-0"
+                  aria-label="delete file"
+                  onClick={() => {
+                    onChange(id, null);
+                    setCurrentValue(null);
+                  }}
+                >
+                  <Icon name={deleteSVG} size="20px" />
+                </Button>
               </div>
             )}
           </div>
