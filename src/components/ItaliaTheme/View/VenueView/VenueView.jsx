@@ -27,6 +27,7 @@ import {
   Metadata,
   VenuePlaceholderAfterContent,
   RelatedItemInEvidence,
+  richTextHasContent,
 } from '@italia/components/ItaliaTheme/View';
 import { contentFolderHasItems } from '@italia/helpers';
 import { OSMMap } from '@italia/addons/volto-venue';
@@ -182,30 +183,24 @@ const VenueView = ({ content }) => {
           >
             {/* HEADER IMAGE */}
             <ContentImage content={content} position="documentBody" />
-
             {/* DESCRIZIONE */}
-            {(content?.descrizione_completa?.data?.replace(/(<([^>]+)>)/g, '')
-              .length > 0 ||
-              content.elementi_di_interesse?.data?.replace(/(<([^>]+)>)/g, '')
-                .length > 0 ||
+            {(richTextHasContent(content?.descrizione_completa) ||
+              richTextHasContent(content.elementi_di_interesse) ||
               contentFolderHasItems(content, 'multimedia')) && (
               <RichTextArticle
                 tag_id={'description'}
                 title={intl.formatMessage(messages.descrizione)}
               >
                 {/* DESCRIZIONE COMPLETA */}
-                <RichText content={content.descrizione_completa?.data} />
+                <RichText content={content.descrizione_completa} />
                 {/* ELEMENTI DI INTERESSE */}
-                {content.elementi_di_interesse?.data?.replace(
-                  /(<([^>]+)>)/g,
-                  '',
-                ).length > 0 && (
+                {richTextHasContent(content.elementi_di_interesse) && (
                   <div className="mb-5 mt-3">
                     <RichText
                       title={`${intl.formatMessage(
                         messages.elementi_di_interesse,
                       )}:`}
-                      content={content.elementi_di_interesse.data}
+                      content={content.elementi_di_interesse}
                     />
                   </div>
                 )}
@@ -218,7 +213,6 @@ const VenueView = ({ content }) => {
                 />
               </RichTextArticle>
             )}
-
             {/* SERVIZI CORRELATI */}
             {content?.venue_services?.length > 0 && (
               <RelatedArticles
@@ -227,11 +221,10 @@ const VenueView = ({ content }) => {
                 title={intl.formatMessage(messages.related_services)}
               />
             )}
-
             {/* MODALITA DI ACCESSO */}
-            {content?.modalita_accesso && (
+            {richTextHasContent(content?.modalita_accesso) && (
               <RichTextArticle
-                content={content.modalita_accesso.data}
+                content={content.modalita_accesso}
                 tag_id={'modalita-accesso'}
                 title={intl.formatMessage(messages.modalita_accesso)}
               />
@@ -246,7 +239,7 @@ const VenueView = ({ content }) => {
               content.country ||
               content.circoscrizione ||
               content.quartiere ||
-              content.notes?.data?.replace(/(<([^>]+)>)/g, '').length > 0) && (
+              richTextHasContent(content.notes)) && (
               <RichTextArticle
                 tag_id="dove"
                 title={intl.formatMessage(messages.dove)}
@@ -272,7 +265,6 @@ const VenueView = ({ content }) => {
                     </CardText>
                   </CardBody>
                 </Card>
-
                 {__CLIENT__ &&
                   content.geolocation?.latitude &&
                   content.geolocation?.longitude && (
@@ -286,7 +278,6 @@ const VenueView = ({ content }) => {
                       ]}
                     />
                   )}
-
                 {content.circoscrizione && (
                   <div className="circoscrizione">
                     <h5 className="mt-3">
@@ -295,7 +286,6 @@ const VenueView = ({ content }) => {
                     <div className="text-serif">{content.circoscrizione}</div>
                   </div>
                 )}
-
                 {content.quartiere && (
                   <div className="quartiere">
                     <h5 className="mt-3">
@@ -304,33 +294,28 @@ const VenueView = ({ content }) => {
                     <div className="text-serif">{content.quartiere}</div>
                   </div>
                 )}
-
-                {content.notes?.data?.replace(/(<([^>]+)>)/g, '').length >
-                  0 && (
+                {richTextHasContent(content.notes) && (
                   <div className="mt-5">
-                    <RichText content={content.notes.data} />
+                    <RichText content={content.notes} />
                   </div>
                 )}
               </RichTextArticle>
             )}
-
             {/* ORARIO AL PUBBLICO */}
-            {content.orario_pubblico && (
+            {richTextHasContent(content.orario_pubblico) && (
               <RichTextArticle
-                content={content.orario_pubblico?.data}
+                content={content.orario_pubblico}
                 tag_id={'orario-per-pubblico'}
                 title={intl.formatMessage(messages.orario_pubblico)}
               />
             )}
-
             {/* CONTATTI */}
             {(content?.telefono ||
               content?.email ||
               content?.pec ||
               content?.web ||
               content?.struttura_responsabile_correlati?.length > 0 ||
-              content?.struttura_responsabile?.data?.replace(/(<([^>]+)>)/g, '')
-                .length > 0 ||
+              richTextHasContent(content?.struttura_responsabile) ||
               content?.riferimento_telefonico_struttura ||
               content?.riferimento_fax_struttura ||
               content?.riferimento_mail_struttura ||
@@ -407,10 +392,7 @@ const VenueView = ({ content }) => {
               Se è presente una struttura_responsabile_correlati metto quella altrimenti metto una card con i campi singoli, se presenti
             */}
                 {(content?.struttura_responsabile_correlati?.length > 0 ||
-                  content?.struttura_responsabile?.data?.replace(
-                    /(<([^>]+)>)/g,
-                    '',
-                  ).length > 0 ||
+                  richTextHasContent(content?.struttura_responsabile) ||
                   content?.riferimento_telefonico_struttura ||
                   content?.riferimento_fax_struttura ||
                   content?.riferimento_mail_struttura ||
@@ -432,26 +414,20 @@ const VenueView = ({ content }) => {
                     ) : (
                       //STRUTTURA RESPONSABILE
                       <>
-                        {(content.struttura_responsabile?.data?.replace(
-                          /(<([^>]+)>)/g,
-                          '',
-                        ).length > 0 ||
+                        {(richTextHasContent(content.struttura_responsabile) ||
                           content.riferimento_telefonico_struttura ||
                           content.riferimento_fax_struttura ||
                           content.riferimento_mail_struttura ||
                           content.riferimento_pec_struttura) && (
                           <Card className="genericcard card card-teaser shadow p-4 mt-3 rounded">
                             <CardBody>
-                              {content.struttura_responsabile?.data?.replace(
-                                /(<([^>]+)>)/g,
-                                '',
-                              ).length > 0 && (
+                              {richTextHasContent(
+                                content.struttura_responsabile,
+                              ) && (
                                 <CardTitle>
                                   <h5 className="card-title">
                                     <RichText
-                                      content={
-                                        content.struttura_responsabile.data
-                                      }
+                                      content={content.struttura_responsabile}
                                     />
                                   </h5>
                                 </CardTitle>
@@ -525,13 +501,9 @@ const VenueView = ({ content }) => {
                 )}
               </RichTextArticle>
             )}
-
             {/* ULTERIORI INFORMAZIONI */}
             <Metadata content={content}>
-              {(content?.ulteriori_informazioni?.data?.replace(
-                /(<([^>]+)>)/g,
-                '',
-              ).length > 0 ||
+              {(richTextHasContent(content?.ulteriori_informazioni) ||
                 content.sede_di?.length > 0) && (
                 <>
                   {/* SEDE DI */}
@@ -547,10 +519,9 @@ const VenueView = ({ content }) => {
                   )}
 
                   {/* HELP BOX - ULTERIORI INFORMAZIONI */}
-                  {content?.ulteriori_informazioni?.data?.replace(
-                    /(<([^>]+)>)/g,
-                    '',
-                  ) && <HelpBox text={content?.ulteriori_informazioni} />}
+                  {richTextHasContent(content?.ulteriori_informazioni) && (
+                    <HelpBox text={content?.ulteriori_informazioni} />
+                  )}
                 </>
               )}
             </Metadata>

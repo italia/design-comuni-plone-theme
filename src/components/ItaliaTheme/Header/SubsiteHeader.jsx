@@ -6,11 +6,15 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
-import { flattenToAppURL, flattenHTMLToAppURL } from '@plone/volto/helpers';
+import { flattenToAppURL } from '@plone/volto/helpers';
 import { isSubsiteRoot } from '@italia/addons/volto-subsites';
+import {
+  richTextHasContent,
+  RichText,
+} from '@italia/components/ItaliaTheme/View';
 
 const SubsiteHeader = () => {
-  const subsite = useSelector(state => state.subsite?.data);
+  const subsite = useSelector((state) => state.subsite?.data);
   const location = useLocation();
   let style = {};
   if (subsite?.image?.download) {
@@ -22,17 +26,12 @@ const SubsiteHeader = () => {
   return subsite &&
     isSubsiteRoot(location.pathname, subsite) &&
     (Object.keys(style).length > 0 ||
-      subsite?.subsite_header?.data?.replace(/(<([^>]+)>)/g, '').length > 0) ? (
+      richTextHasContent(subsite?.subsite_header)) ? (
     <div className="subsite-header" style={style}>
       <div className={`text`}>
         <div className="container px-md-4 py-5">
           {subsite.subsite_header?.data && (
-            <div
-              className="text-serif"
-              dangerouslySetInnerHTML={{
-                __html: flattenHTMLToAppURL(subsite.subsite_header.data),
-              }}
-            />
+            <RichText content={subsite.subsite_header} />
           )}
         </div>
       </div>

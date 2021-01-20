@@ -12,6 +12,7 @@ import {
   TextOrBlocks,
   RichText,
   RelatedItemInEvidence,
+  richTextHasContent,
 } from '@italia/components/ItaliaTheme/View';
 import { defineMessages, useIntl } from 'react-intl';
 import { Container } from 'design-react-kit/dist/design-react-kit';
@@ -67,12 +68,9 @@ const PageView = ({ content, token, location, history }) => {
                     />
                   </div>
                 )}
-                {content.info_testata?.data?.replace(/<[^>]+>/g, '') && (
+                {richTextHasContent(content.info_testata) && (
                   <div className="header-infos px-4 mb-5">
-                    <RichText
-                      serif={false}
-                      content={content.info_testata.data}
-                    />
+                    <RichText serif={false} content={content.info_testata} />
                   </div>
                 )}
                 {content.mostra_navigazione && (
