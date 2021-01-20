@@ -21,6 +21,7 @@ import {
   RelatedItems,
   NewsItemPlaceholderAfterContent,
   RelatedItemInEvidence,
+  richTextHasContent,
 } from '@italia/components/ItaliaTheme/View';
 
 // import { getBaseUrl } from '@plone/volto/helpers';
@@ -133,9 +134,9 @@ const NewsItemView = ({ content, location }) => {
               </RichTextArticle>
             )}
 
-            {content.dataset?.data?.replace(/(<([^>]+)>)/g, '') && (
+            {richTextHasContent(content.dataset) && (
               <RichTextArticle
-                content={content.dataset.data}
+                content={content.dataset}
                 tag_id="dataset"
                 title={intl.formatMessage(messages.dataset)}
               />

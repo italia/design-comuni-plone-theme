@@ -66,10 +66,7 @@ const PaginaArgomentoView = ({ content }) => {
           <p className="description">{content?.description}</p>
         </div>
         <div className="col-lg-4 offset-lg-2">
-          <RichText
-            serif={false}
-            content={content.ulteriori_informazioni?.data}
-          />
+          <RichText serif={false} content={content.ulteriori_informazioni} />
 
           {content?.unita_amministrative_responsabili?.length > 0 &&
             content?.unita_amministrative_responsabili?.map((u, index) => {

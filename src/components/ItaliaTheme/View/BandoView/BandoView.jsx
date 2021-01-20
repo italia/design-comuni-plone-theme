@@ -20,6 +20,7 @@ import {
   RichText,
   BandoPlaceholderAfterContent,
   RelatedItemInEvidence,
+  richTextHasContent,
 } from '@italia/components/ItaliaTheme/View';
 
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -106,7 +107,7 @@ const BandoView = ({ content, location }) => {
             ref={documentBody}
             className="col-lg-8 it-page-sections-container"
           >
-            {(content?.text?.data?.replace(/(<([^>]+)>)/g, '') ||
+            {(richTextHasContent(content?.text) ||
               content?.tipologia_bando ||
               content?.destinatari?.length > 0 ||
               content?.ente_bando?.length > 0) && (
@@ -116,11 +117,11 @@ const BandoView = ({ content, location }) => {
                 show_title={true}
               >
                 {/* DESCRIZIONE DEL BANDO */}
-                {content?.text?.data?.replace(/(<([^>]+)>)/g, '') && (
+                {richTextHasContent(content?.text) && (
                   <RichText
                     title_size="h5"
                     title={''}
-                    content={content?.text.data}
+                    content={content?.text}
                   />
                 )}
                 {/* TIPOLOGIA DEL BANDO */}
@@ -221,7 +222,7 @@ const BandoView = ({ content, location }) => {
               >
                 {/* Se ho una sola cartella lascio solo "allegati" altrimenti
                 aggiungo gli altri titoli */}
-                {content?.approfondimento?.length == 1 ? (
+                {content?.approfondimento?.length === 1 ? (
                   <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                     {content.approfondimento[0].children.map((item, _i) => (
                       <div
@@ -297,10 +298,9 @@ const BandoView = ({ content, location }) => {
               </RichTextArticle>
             )}
             <Metadata content={content}>
-              {content?.riferimenti_bando?.data?.replace(
-                /(<([^>]+)>)/g,
-                '',
-              ) && <HelpBox text={content?.riferimenti_bando} />}
+              {richTextHasContent(content?.riferimenti_bando) && (
+                <HelpBox text={content?.riferimenti_bando} />
+              )}
             </Metadata>
           </section>
         </div>

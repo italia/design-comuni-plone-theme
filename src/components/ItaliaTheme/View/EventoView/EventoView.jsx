@@ -39,6 +39,7 @@ import {
   EventoPlaceholderAfterContent,
   ContactLink,
   RelatedItemInEvidence,
+  richTextHasContent,
 } from '@italia/components/ItaliaTheme/View';
 
 const messages = defineMessages({
@@ -200,15 +201,12 @@ const EventoView = ({ content, location }) => {
 
               <Gallery content={content} folder_name={'multimedia'} />
 
-              {content?.descrizione_destinatari?.data?.replace(
-                /(<([^>]+)>)/g,
-                '',
-              ) && (
+              {richTextHasContent(content?.descrizione_destinatari) && (
                 <div className="mb-5">
                   <RichText
                     title_size="h5"
                     title={intl.formatMessage(messages.event_destinatari)}
-                    content={content?.descrizione_destinatari.data}
+                    content={content?.descrizione_destinatari}
                   />
                 </div>
               )}
@@ -269,13 +267,13 @@ const EventoView = ({ content, location }) => {
 
               <RichText
                 title={intl.formatMessage(messages.orari)}
-                content={content?.orari?.data}
+                content={content?.orari}
               />
             </RichTextArticle>
 
             {/* COSTI */}
             <RichTextArticle
-              content={content?.prezzo?.data}
+              content={content?.prezzo}
               tag_id="costi"
               title={intl.formatMessage(messages.costi)}
             />
@@ -288,8 +286,7 @@ const EventoView = ({ content, location }) => {
             />
 
             {/* CONTATTI */}
-            {(content?.organizzato_da_esterno?.data?.replace(/(<([^>]+)>)/g, '')
-              .length > 0 ||
+            {(richTextHasContent(content?.organizzato_da_esterno) ||
               content?.organizzato_da_interno.length > 0 ||
               content?.supportato_da?.length > 0 ||
               content.web?.length > 0) && (
@@ -316,10 +313,7 @@ const EventoView = ({ content, location }) => {
                 )}
 
                 {/* ---organizzato da esterno */}
-                {content?.organizzato_da_esterno?.data?.replace(
-                  /(<([^>]+)>)/g,
-                  '',
-                ) ? (
+                {richTextHasContent(content?.organizzato_da_esterno) ? (
                   <div className="mb-5">
                     <Card
                       className="card card-teaser rounded shadow mt-3"
@@ -330,9 +324,7 @@ const EventoView = ({ content, location }) => {
                         <Icon icon="it-telephone" padding={true} />
                       </CardTitle>
                       <CardBody tag="div" className={'card-body pr-3'}>
-                        <RichText
-                          content={content.organizzato_da_esterno.data}
-                        />
+                        <RichText content={content.organizzato_da_esterno} />
                         {content?.telefono && (
                           <p className="card-text mt-3">
                             <ContactLink tel={content.telefono} label={true} />
@@ -343,7 +335,7 @@ const EventoView = ({ content, location }) => {
                             <ContactLink fax={content.fax} label={true} />
                           </p>
                         )}
-                        {content?.reperibilita && (
+                        {richTextHasContent(content?.reperibilita) && (
                           <p className="card-text mt-3">
                             {content?.reperibilita?.replace(/(<([^>]+)>)/g, '')}
                           </p>
@@ -372,7 +364,7 @@ const EventoView = ({ content, location }) => {
                         extended={true}
                         icon={'it-telephone'}
                       >
-                        {content?.contatto_reperibilita && (
+                        {richTextHasContent(content?.contatto_reperibilita) && (
                           <p className="card-text mt-3">
                             {content?.contatto_reperibilita?.replace(
                               /(<([^>]+)>)/g,
@@ -403,19 +395,15 @@ const EventoView = ({ content, location }) => {
 
             {/* ULTERIORI INFORMAZIONI */}
             <Metadata content={content}>
-              {(content?.ulteriori_informazioni?.data?.replace(
-                /(<([^>]+)>)/g,
-                '',
-              ) !== '' ||
+              {(richTextHasContent(content?.ulteriori_informazioni) ||
                 content?.event_url ||
                 content?.patrocinato_da ||
                 content?.strutture_politiche.length > 0 ||
                 content?.items?.some((e) => e.id === 'sponsor_evento')) && (
                 <>
-                  {content?.ulteriori_informazioni?.data?.replace(
-                    /(<([^>]+)>)/g,
-                    '',
-                  ) && <HelpBox text={content?.ulteriori_informazioni} />}
+                  {richTextHasContent(content?.ulteriori_informazioni) && (
+                    <HelpBox text={content?.ulteriori_informazioni} />
+                  )}
 
                   {content?.event_url && (
                     <div className="mt-4">
