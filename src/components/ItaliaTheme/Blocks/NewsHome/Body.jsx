@@ -14,6 +14,7 @@ import {
   CardTitle,
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
+import Image from '@plone/volto/components/theme/Image/Image';
 
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { CardCategory } from '@italia/components/ItaliaTheme';
@@ -25,9 +26,8 @@ const Body = ({ content, pathname, block }) => {
     <Row>
       {content.image && (
         <Col lg={{ size: 6, offset: 1, order: 2 }}>
-          <img
-            src={flattenToAppURL(content.image.scales.large.download)}
-            title={content.title}
+          <Image
+            image={content.image}
             alt={content.title}
             className="item-image"
           />
