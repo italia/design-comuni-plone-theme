@@ -16870,9 +16870,9 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
-volto-blocks-widget@collective/volto-blocks-widget:
-  version "0.1.0"
-  resolved "https://codeload.github.com/collective/volto-blocks-widget/tar.gz/b28a151b3d8f13cd5d2565a149c2a3602a948c39"
+volto-blocks-widget@collective/volto-blocks-widget#v1.0.0:
+  version "1.0.0"
+  resolved "https://codeload.github.com/collective/volto-blocks-widget/tar.gz/2907da91551ace68e614cffba47fc71673e11219"
 
 volto-cookie-banner@collective/volto-cookie-banner#v1.0.2:
   version "1.0.2"
