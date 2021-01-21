@@ -64,6 +64,11 @@
     }
   }
 
+  .slick-track {
+    display: flex;
+    align-items: center;
+  }
+
   @media (max-width: #{map-get($grid-breakpoints, md)}) {
     .slick-arrow.slick-prev {
       left: -20px;

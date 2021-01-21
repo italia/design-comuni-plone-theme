@@ -15,6 +15,10 @@ const messages = defineMessages({
     id: 'date',
     defaultMessage: 'Data',
   },
+  expire: {
+    id: 'expire',
+    defaultMessage: 'Scadenza',
+  },
 });
 
 const PageHeaderDates = ({ content }) => {
