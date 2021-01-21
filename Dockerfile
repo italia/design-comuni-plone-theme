@@ -14,7 +14,8 @@ RUN mkdir -p src && \
 
 USER node
 
-RUN RAZZLE_API_PATH=VOLTO_API_PATH RAZZLE_INTERNAL_API_PATH=VOLTO_INTERNAL_API_PATH yarn --frozen-lockfile
+RUN yarn set version 1.19.1 && \
+    RAZZLE_API_PATH=VOLTO_API_PATH RAZZLE_INTERNAL_API_PATH=VOLTO_INTERNAL_API_PATH yarn --frozen-lockfile
 
 USER root
 COPY . .
