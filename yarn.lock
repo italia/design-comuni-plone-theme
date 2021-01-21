@@ -1638,7 +1638,7 @@
 
 "@plone/volto@plone/volto#rt_development":
   version "10.9.2"
-  resolved "https://codeload.github.com/plone/volto/tar.gz/600c56c6984a3ab23d43cad1cbc4f13c289a0538"
+  resolved "https://codeload.github.com/plone/volto/tar.gz/867ac3e1b183791a9b89677604402662e385fc19"
   dependencies:
     "@babel/plugin-proposal-export-default-from" "7.10.4"
     "@babel/plugin-proposal-export-namespace-from" "7.10.4"
