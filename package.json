@@ -2,7 +2,7 @@
   "name": "design-volto-theme",
   "description": "Volto Theme for Italia design guidelines",
   "license": "MIT",
-  "version": "1.15.2",
+  "version": "1.15.3",
   "private": true,
   "workspaces": [
     "src/addons/volto-cookie-banner",
@@ -172,7 +172,7 @@
     "typeface-titillium-web": "0.0.72",
     "volto-cookie-banner": "collective/volto-cookie-banner#v1.0.2",
     "volto-dropdownmenu": "collective/volto-dropdownmenu#v1.2.1",
-    "volto-editablefooter": "RedTurtle/volto-editablefooter#v2.0.0",
+    "volto-editablefooter": "RedTurtle/volto-editablefooter#v2.0.1",
     "volto-google-analytics": "collective/volto-google-analytics",
     "volto-multilingual-widget": "collective/volto-multilingual-widget#v1.0.1",
     "volto-rss-block": "redturtle/volto-rss-block#v1.2.0",

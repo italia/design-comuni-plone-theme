@@ -1474,6 +1474,7 @@ msgstr ""
 
 #: components/DesignTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDates
 msgid "expire"
 msgstr ""
 
