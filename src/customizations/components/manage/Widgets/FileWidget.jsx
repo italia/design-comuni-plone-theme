@@ -36,6 +36,10 @@ const messages = defineMessages({
     id: 'editDrag',
     defaultMessage: "Trascina per sostituire l'elemento caricato",
   },
+  deleteFile: {
+    id: 'deleteFile',
+    defaultMessage: 'Cancella il file',
+  },
 });
 
 /**
@@ -112,7 +116,7 @@ const FileWidget = ({
                 icon
                 basic
                 className="delete-button"
-                aria-label="delete file"
+                aria-label={intl.formatMessage(messages.deleteFile)}
                 onClick={() => {
                   onChange(id, currentValue);
                 }}
@@ -134,18 +138,20 @@ const FileWidget = ({
                 >
                   {currentValue.filename}
                 </Link>
-                <Button
-                  icon
-                  basic
-                  className="delete-button"
-                  aria-label="delete file"
-                  onClick={() => {
-                    onChange(id, null);
-                    setCurrentValue(null);
-                  }}
-                >
-                  <Icon name={deleteSVG} size="20px" />
-                </Button>
+                {(!value || (value && value === currentValue)) && (
+                  <Button
+                    icon
+                    basic
+                    className="delete-button"
+                    aria-label={intl.formatMessage(messages.deleteFile)}
+                    onClick={() => {
+                      onChange(id, null);
+                      setCurrentValue(null);
+                    }}
+                  >
+                    <Icon name={deleteSVG} size="20px" />
+                  </Button>
+                )}
               </div>
             ) : (
               <div>
@@ -154,8 +160,8 @@ const FileWidget = ({
                 <Button
                   icon
                   basic
-                  className="delete-button ml-0"
-                  aria-label="delete file"
+                  className="delete-button"
+                  aria-label={intl.formatMessage(messages.deleteFile)}
                   onClick={() => {
                     onChange(id, null);
                     setCurrentValue(null);
