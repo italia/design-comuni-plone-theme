@@ -47,7 +47,7 @@ const CardWithImageTemplateSkeleton = ({
               </Row>
             )}
             <Row className="items">
-              {[0, 1, 2, 3, 4, 5, 6].map((i) => {
+              {[0, 1, 2, 3, 4, 5].map((i) => {
                 return (
                   <Col lg="4" key={i} className="col-item mb-3">
                     <Card
