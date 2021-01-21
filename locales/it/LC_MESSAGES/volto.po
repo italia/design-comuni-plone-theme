@@ -1474,8 +1474,9 @@ msgstr "Il testo supera la lunghezza consigliata"
 
 #: components/DesignTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDates
 msgid "expire"
-msgstr ""
+msgstr "Scadenza"
 
 #: components/ItaliaTheme/View/Commons/RelatedItemInEvidence/ItemInEvidence
 msgid "explore"
