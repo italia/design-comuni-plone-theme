@@ -498,6 +498,21 @@ export const settings = {
     UnitaOrganizzativa: faBuildingSVG,
     Modulo: faFileDownloadSVG,
   },
+  'volto-blocks-widget': {
+    allowedBlocks: [
+      'text',
+      'image',
+      'video',
+      'html',
+      'table',
+      'maps',
+      'break',
+      'testo_riquadro_semplice',
+      'testo_riquadro_immagine',
+      //se si aggiunge un nuovo blocco, verificare che in edit non ci siano bottoni che provocano il submit della form. Se succede, gestirli con e.prevenDefault() e.stopPropagation().
+    ],
+    showRestricted: false,
+  },
 };
 
 export const views = {
