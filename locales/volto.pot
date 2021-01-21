@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-01-20T16:56:19.508Z\n"
+"POT-Creation-Date: 2021-01-21T09:52:14.466Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1402,6 +1402,7 @@ msgid "exceeded_chars"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/PageHeader
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDates
 # defaultMessage: Scadenza
 msgid "expire"
 msgstr ""

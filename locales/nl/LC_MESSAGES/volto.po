@@ -1159,6 +1159,7 @@ msgid "exceeded_chars"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/PageHeader
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDates
 msgid "expire"
 msgstr ""
 

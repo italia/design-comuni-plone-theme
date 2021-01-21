@@ -1,14 +1,18 @@
 .navbar {
   @media (max-width: 991px) {
     .navbar-collapsable {
-      display: block !important;
-      opacity: 0;
-      overflow: hidden;
-      max-width: 0;
+      &,
+      .public-ui & {
+        z-index: 10;
+        display: block !important;
+        overflow: hidden;
+        max-width: 0;
+        opacity: 0;
+      }
 
       &.expanded {
-        opacity: 1;
         max-width: 100%;
+        opacity: 1;
       }
 
       .menu-wrapper {
