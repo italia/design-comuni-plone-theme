@@ -42,7 +42,7 @@ const Sharing = ({ url, title }) => {
     },
     {
       id: 'linkedin',
-      title: 'Linkedin',
+      title: 'LinkedIn',
       url: `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`,
       icon: 'it-linkedin',
     },
