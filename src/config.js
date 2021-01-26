@@ -444,7 +444,10 @@ export const settings = {
   ...config.settings,
   devProxyToApiPath: 'http://localhost:8080/Plone',
   richTextEditorInlineToolbarButtons: ItaliaRichTextEditorInlineToolbarButtons,
-  richTextEditorPlugins: ItaliaRichTextEditorPlugins,
+  richTextEditorPlugins: [
+    ...config.settings.richTextEditorPlugins,
+    ...ItaliaRichTextEditorPlugins,
+  ],
   extendedBlockRenderMap: extendedBlockRenderMap,
   blockStyleFn: blockStyleFn,
   listBlockTypes: listBlockTypes,
