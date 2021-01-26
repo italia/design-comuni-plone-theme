@@ -128,6 +128,7 @@ import faFileDownloadSVG from './icons/file-download.svg';
 
 import {
   ItaliaRichTextEditorInlineToolbarButtons,
+  ItaliaRichTextEditorPlugins,
   extendedBlockRenderMap,
   blockStyleFn,
   ItaliaBlocksHtmlRenderers,
@@ -443,6 +444,7 @@ export const settings = {
   ...config.settings,
   devProxyToApiPath: 'http://localhost:8080/Plone',
   richTextEditorInlineToolbarButtons: ItaliaRichTextEditorInlineToolbarButtons,
+  richTextEditorPlugins: ItaliaRichTextEditorPlugins,
   extendedBlockRenderMap: extendedBlockRenderMap,
   blockStyleFn: blockStyleFn,
   listBlockTypes: listBlockTypes,
