@@ -14,6 +14,7 @@ import {
 
 import FromHTML from '@plone/volto/config/RichTextEditor/FromHTML';
 import createLinkPlugin from '@plone/volto/components/manage/AnchorPlugin';
+import createLinkDetectionPlugin from 'draft-js-link-detection-plugin';
 import UnderlineButton from '@italia/config/RichTextEditor/ToolbarButtons/UnderlineButton';
 import HeadingsButton from '@italia/config/RichTextEditor/ToolbarButtons/HeadingsButton';
 import AlignButton from '@italia/config/RichTextEditor/ToolbarButtons/AlignButton';
@@ -21,6 +22,7 @@ import CalloutsButton from '@italia/config/RichTextEditor/ToolbarButtons/Callout
 import ButtonsButton from '@italia/config/RichTextEditor/ToolbarButtons/ButtonsButton';
 
 const linkPlugin = createLinkPlugin();
+const linkDetectionPlugin = createLinkDetectionPlugin();
 
 export const ItaliaRichTextEditorInlineToolbarButtons = [
   AlignButton,
@@ -38,6 +40,8 @@ export const ItaliaRichTextEditorInlineToolbarButtons = [
   BlockquoteButton,
   CalloutsButton,
 ];
+
+export const ItaliaRichTextEditorPlugins = [linkDetectionPlugin];
 
 const blockRenderMap = Map({
   'align-center': {
