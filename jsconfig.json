@@ -1,40 +1,40 @@
 {
-    "compilerOptions": {
-        "paths": {
-            "@italia/addons/volto-rss-block": [
-                "addons/volto-rss-block/src"
-            ],
-            "@italia/addons/volto-cookie-banner": [
-                "addons/volto-cookie-banner/src"
-            ],
-            "@italia/addons/volto-multilingual-widget": [
-                "addons/volto-multilingual-widget/src"
-            ],
-            "@italia/addons/volto-venue": [
-                "addons/volto-venue/src"
-            ],
-            "@italia/addons/volto-subblocks": [
-                "addons/volto-subblocks/src"
-            ],
-            "@italia/addons/volto-dropdownmenu": [
-                "addons/volto-dropdownmenu/src"
-            ],
-            "@italia/addons/volto-subsites": [
-                "addons/volto-subsites/src"
-            ],
-            "@italia/addons/volto-social-settings": [
-                "addons/volto-social-settings/src"
-            ],
-            "@italia/addons/volto-editablefooter": [
-                "addons/volto-editablefooter/src"
-            ],
-            "@italia/addons/volto-google-analytics": [
-                "addons/volto-google-analytics/src"
-            ],
-            "@italia/addons/volto-secondarymenu": [
-                "addons/volto-secondarymenu/src"
-            ],
-        },
-        "baseUrl": "src"
-    }
+  "compilerOptions": {
+      "paths": {
+          "@italia/addons/volto-rss-block": [
+              "addons/volto-rss-block/src"
+          ],
+          "@italia/addons/volto-cookie-banner": [
+              "addons/volto-cookie-banner/src"
+          ],
+          "@italia/addons/volto-multilingual-widget": [
+              "addons/volto-multilingual-widget/src"
+          ],
+          "@italia/addons/volto-venue": [
+              "addons/volto-venue/src"
+          ],
+          "@italia/addons/volto-subblocks": [
+              "addons/volto-subblocks/src"
+          ],
+          "@italia/addons/volto-dropdownmenu": [
+              "addons/volto-dropdownmenu/src"
+          ],
+          "@italia/addons/volto-subsites": [
+              "addons/volto-subsites/src"
+          ],
+          "@italia/addons/volto-social-settings": [
+              "addons/volto-social-settings/src"
+          ],
+          "@italia/addons/volto-editablefooter": [
+              "addons/volto-editablefooter/src"
+          ],
+          "@italia/addons/volto-google-analytics": [
+              "addons/volto-google-analytics/src"
+          ],
+          "@italia/addons/volto-secondarymenu": [
+              "addons/volto-secondarymenu/src"
+          ]
+      },
+      "baseUrl": "src"
+  }
 }
