@@ -33,7 +33,7 @@
             ],
             "@italia/addons/volto-secondarymenu": [
                 "addons/volto-secondarymenu/src"
-            ]
+            ],
         },
         "baseUrl": "src"
     }
