@@ -16963,7 +16963,7 @@ volto-rss-block@redturtle/volto-rss-block#v1.2.0:
 
 volto-secondarymenu@collective/volto-secondarymenu:
   version "0.1.0"
-  resolved "https://codeload.github.com/collective/volto-secondarymenu/tar.gz/3dc93762f49b751802532d817a6b0ae268e3062a"
+  resolved "https://codeload.github.com/collective/volto-secondarymenu/tar.gz/a764b11ec419a886a74afe91739965e29173901b"
 
 volto-social-settings@collective/volto-social-settings#v2.0.0:
   version "2.0.0"
