@@ -13,8 +13,9 @@ const View = ({ data, id }) => {
   const dispatch = useDispatch();
   const loaded = useSelector((state) => {
     return (
-      state.content.subrequests[id]?.loaded &&
-      !state.content.subrequests[id]?.loading
+      (state.content.subrequests[id]?.loaded &&
+        !state.content.subrequests[id]?.loading) ||
+      state.content.subrequests[id]?.error
     );
   });
 

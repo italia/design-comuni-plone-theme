@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-01-21T14:54:36.198Z\n"
+"POT-Creation-Date: 2021-01-28T10:06:38.460Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -527,7 +527,6 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Accordion/Block/ViewBlock
 #: components/ItaliaTheme/Blocks/Form/Block/EditBlock
 #: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/RibbonCardTemplateSkeleton
 # defaultMessage: Vedi
 msgid "Vedi"
 msgstr ""
@@ -543,14 +542,8 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateCompact
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/AmministrazioneTrasparenteTablesTemplateSkeleton
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CompleteBlockLinksTemplateSkeleton
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/GridGalleryTemplateSkeleton
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/RibbonCardTemplateSkeleton
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
-#: components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithImageRssTemplateSkeleton
-#: components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 # defaultMessage: Vedi tutto
 msgid "Vedi tutto"
@@ -582,7 +575,6 @@ msgid "accedere_al_servizio"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Actions
-#: components/ItaliaTheme/View/Commons/PageHeader
 # defaultMessage: Vedi azioni
 msgid "actions"
 msgstr ""
@@ -696,15 +688,12 @@ msgid "backToSearch"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 # defaultMessage: Scaduto
 msgid "bando_closed"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton
 # defaultMessage: Data di pubblicazione:
 msgid "bando_data_pubblicazione"
 msgstr ""
@@ -725,35 +714,28 @@ msgid "bando_ente"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 # defaultMessage: In corso
 msgid "bando_inProgress"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 # defaultMessage: Attivo
 msgid "bando_open"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton
 # defaultMessage: Data di scadenza:
 msgid "bando_scadenza"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton
 # defaultMessage: Stato:
 msgid "bando_stato"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton
 # defaultMessage: Vedi
 msgid "bando_vedi"
 msgstr ""
@@ -947,7 +929,6 @@ msgstr ""
 msgid "dataset"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDates
 # defaultMessage: Data
 msgid "date"
@@ -1401,7 +1382,6 @@ msgstr ""
 msgid "exceeded_chars"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDates
 # defaultMessage: Scadenza
 msgid "expire"
@@ -1630,7 +1610,6 @@ msgid "geolocation_selected"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/GridGalleryTemplateSkeleton
 # defaultMessage: Per questo template il numero di risultati per pagina deve essere 7. Controlla le impostazioni.
 msgid "grid-gallery-max-items-exceeded"
 msgstr ""
@@ -1751,7 +1730,6 @@ msgstr ""
 msgid "mailto"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
 # defaultMessage: min
 msgid "minutes"
@@ -1846,7 +1824,6 @@ msgstr ""
 msgid "novita"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderNewsItem
 # defaultMessage: Numero del comunicato stampa
 msgid "numero_progressivo_cs"
@@ -1999,7 +1976,6 @@ msgstr ""
 msgid "quartiere"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
 # defaultMessage: Tempo di lettura
 msgid "reading_time"
@@ -2125,8 +2101,6 @@ msgstr ""
 #: addons/volto-rss-block/src/Templates/DefaultRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
-#: components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithImageRssTemplateSkeleton
-#: components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton
 # defaultMessage: No results from RSS feed.
 msgid "rss_no_results"
 msgstr ""
@@ -2134,13 +2108,10 @@ msgstr ""
 #: addons/volto-rss-block/src/Templates/DefaultRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
-#: components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithImageRssTemplateSkeleton
-#: components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton
 # defaultMessage: Read more
 msgid "rss_read_more"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 # defaultMessage: Ruolo
@@ -2256,6 +2227,81 @@ msgstr ""
 msgid "search_service_block_sections"
 msgstr ""
 
+#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationWidget
+# defaultMessage: Add menu path
+msgid "secondarymenu-add-rootpath"
+msgstr ""
+
+#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationWidget
+# defaultMessage: Add menu item
+msgid "secondarymenu-addmenuitem"
+msgstr ""
+
+#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationWidget
+# defaultMessage: Delete
+msgid "secondarymenu-delete-button"
+msgstr ""
+
+#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationWidget
+# defaultMessage: Delete menu path
+msgid "secondarymenu-delete-menupath"
+msgstr ""
+
+#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationForm
+# defaultMessage: Delete menu item
+msgid "secondarymenu-deletemenuitem-button"
+msgstr ""
+
+#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationWidget
+# defaultMessage: Select a menu item
+msgid "secondarymenu-emptyActiveMenuItem"
+msgstr ""
+
+#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationWidget
+# defaultMessage: Select a menu path
+msgid "secondarymenu-emptyActiveMenuPath"
+msgstr ""
+
+#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationForm
+# defaultMessage: Link
+msgid "secondarymenu-linkUrl"
+msgstr ""
+
+#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationForm
+# defaultMessage: Type an external url, or select an internal url clicking on the right button
+msgid "secondarymenu-linkUrl_description"
+msgstr ""
+
+#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationWidget
+# defaultMessage: Menu items
+msgid "secondarymenu-menuitems-header"
+msgstr ""
+
+#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationWidget
+# defaultMessage: Move menu item down
+msgid "secondarymenu-move-menuitem-down"
+msgstr ""
+
+#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationWidget
+# defaultMessage: Move menu item up
+msgid "secondarymenu-move-menuitem-up"
+msgstr ""
+
+#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationWidget
+# defaultMessage: Root path
+msgid "secondarymenu-rootpath"
+msgstr ""
+
+#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationForm
+# defaultMessage: Title
+msgid "secondarymenu-title"
+msgstr ""
+
+#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationForm
+# defaultMessage: Visible
+msgid "secondarymenu-visible"
+msgstr ""
+
 #: components/ItaliaTheme/Header/SearchModal
 # defaultMessage: Sezioni
 msgid "sections"
@@ -2304,7 +2350,6 @@ msgstr ""
 msgid "setrss"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/Sharing
 # defaultMessage: Condividi
 msgid "share"
@@ -2478,7 +2523,6 @@ msgstr ""
 msgid "tipologia_organizzazione"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 # defaultMessage: Tipologia persona
@@ -2510,7 +2554,6 @@ msgid "to"
 msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderTassonomiaArgomenti
 # defaultMessage: Argomenti
 msgid "topics"
@@ -2532,7 +2575,6 @@ msgid "twitterAccounts_description"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/TwitterPosts/Body
-#: components/ItaliaTheme/Blocks/TwitterPosts/Skeleton
 # defaultMessage: Non c'è nessun post da mostrare.
 msgid "twitter_posts_no_results"
 msgstr ""
@@ -2563,7 +2605,6 @@ msgstr ""
 msgid "unita_organizzativa_competente"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/RenderBlocks
 #: components/ItaliaTheme/View/Commons/TextOrBlocks
 # defaultMessage: Blocco sconosciuto
 msgid "unknownBlock"
