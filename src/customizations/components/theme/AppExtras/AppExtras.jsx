@@ -13,7 +13,8 @@ const AppExtras = ({ pathname }) => {
     <>
       <Helmet>
         <title>
-          {content.title} - {subsite?.title ?? siteConfig.properties.siteTitle}
+          {content?.title} -{' '}
+          {subsite?.title ?? siteConfig?.properties?.siteTitle}
         </title>
       </Helmet>
       <ScrollToTop />

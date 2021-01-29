@@ -203,6 +203,7 @@ msgstr ""
 msgid "Mappa del sito"
 msgstr ""
 
+#: addons/volto-secondarymenu/src/components/SecondaryMenu
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 #: components/ItaliaTheme/MenuSecondary/MenuSecondary
 msgid "Menu selezionato"
@@ -1835,6 +1836,10 @@ msgstr ""
 
 #: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationWidget
 msgid "secondarymenu-emptyActiveMenuPath"
+msgstr ""
+
+#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationForm
+msgid "secondarymenu-inevidence"
 msgstr ""
 
 #: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationForm
