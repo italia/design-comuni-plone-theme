@@ -16906,9 +16906,9 @@ volto-rss-block@redturtle/volto-rss-block#v1.2.0:
   dependencies:
     rss-parser "3.7.5"
 
-volto-secondarymenu@collective/volto-secondarymenu:
-  version "0.1.0"
-  resolved "https://codeload.github.com/collective/volto-secondarymenu/tar.gz/a764b11ec419a886a74afe91739965e29173901b"
+volto-secondarymenu@collective/volto-secondarymenu#v1.0.0:
+  version "1.0.0"
+  resolved "https://codeload.github.com/collective/volto-secondarymenu/tar.gz/3b2ece1a9bf599678be65514683d5066d458379d"
 
 volto-social-settings@collective/volto-social-settings#v2.0.0:
   version "2.0.0"
