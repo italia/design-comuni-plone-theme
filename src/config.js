@@ -100,7 +100,6 @@ import CardWithoutImageRssTemplateSkeleton from '@italia/components/ItaliaTheme/
 import { DatetimeWidget } from '@plone/volto/config/Widgets';
 
 import { MultilingualWidget } from '@italia/addons/volto-multilingual-widget';
-import { SecondaryMenuConfigurationWidget } from '@italia/addons/volto-secondarymenu';
 import IconWidget from '@italia/components/ItaliaTheme/manage/Widgets/IconWidget';
 import { defaultIconWidgetOptions } from '@italia/helpers/index';
 //import TinymceWidget from '@italia/components/ItaliaTheme/manage/Widgets/TinymceWidget';
@@ -542,7 +541,6 @@ export const widgets = {
       <DatetimeWidget {...props} dateOnly={true} />
     ),
     data_insediamento: (props) => <DatetimeWidget {...props} dateOnly={true} />,
-    secondary_menu_configuration: SecondaryMenuConfigurationWidget,
   },
   widget: {
     ...config.widgets.widget,
