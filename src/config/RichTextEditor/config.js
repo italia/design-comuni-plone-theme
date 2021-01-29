@@ -39,6 +39,8 @@ export const ItaliaRichTextEditorInlineToolbarButtons = [
   CalloutsButton,
 ];
 
+export const ItaliaRichTextEditorPlugins = [];
+
 const blockRenderMap = Map({
   'align-center': {
     element: 'p',

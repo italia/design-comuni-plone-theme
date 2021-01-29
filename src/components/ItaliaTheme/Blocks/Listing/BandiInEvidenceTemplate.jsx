@@ -79,10 +79,7 @@ const BandiInEvidenceTemplate = ({
             {items.map((item, index) => {
               const listingText = <ListingText item={item} />;
               return (
-                <Card
-                  key={index}
-                  className={cx('listing-item card-backrgound', '')}
-                >
+                <Card key={index} className={cx('listing-item card-bg', '')}>
                   <CardBody>
                     <CardTitle tag="h4" className="title">
                       <a

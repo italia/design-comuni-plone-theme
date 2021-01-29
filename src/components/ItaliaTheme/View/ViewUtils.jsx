@@ -5,10 +5,10 @@ import { renderToString } from 'react-dom/server';
 export const readingTime = (title, description, htmlBody) => {
   const body = htmlBody.current.textContent;
   const text = `${title} ${description} ${body}`;
-  const wordsPerMinute = 250;
+  const wordsPerMinute = 200;
   let plain_text = text.replace(/<[^>]*>/g, '');
-  let textLength = plain_text.length;
-  return textLength > 0 ? Math.ceil(textLength / wordsPerMinute) : 0;
+  let wordsCount = plain_text.split(' ').length;
+  return wordsCount > 0 ? Math.ceil(wordsCount / wordsPerMinute) : 0;
 };
 
 export const getHTMLString = (content, locale) =>
