@@ -2,7 +2,7 @@
   "name": "design-volto-theme",
   "description": "Volto Theme for Italia design guidelines",
   "license": "MIT",
-  "version": "1.15.7",
+  "version": "1.15.8",
   "private": true,
   "workspaces": [
     "src/addons/volto-cookie-banner",
