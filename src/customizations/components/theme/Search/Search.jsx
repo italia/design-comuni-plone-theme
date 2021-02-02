@@ -9,6 +9,7 @@ import { useIntl, defineMessages } from 'react-intl';
 import cx from 'classnames';
 import qs from 'query-string';
 import moment from 'moment';
+import { Helmet } from '@plone/volto/helpers';
 import {
   Container,
   Row,
@@ -126,7 +127,7 @@ const searchOrderDict = {
 };
 
 const useDebouncedEffect = (effect, delay, deps) => {
-  const callback = useCallback(effect, deps);
+  const callback = useCallback(effect, [effect]);
 
   useEffect(() => {
     const handler = setTimeout(() => {
@@ -162,9 +163,7 @@ const Search = () => {
     ...parseFetchedOptions({}, location),
   });
 
-  const [customPath, setCustomPath] = useState(
-    qs.parse(location.search)?.custom_path ?? '',
-  );
+  const [customPath] = useState(qs.parse(location.search)?.custom_path ?? '');
 
   const [sortOn, setSortOn] = useState('relevance');
   const [currentPage, setCurrentPage] = useState(1);
@@ -214,6 +213,7 @@ const Search = () => {
   useEffect(() => {
     if (!searchFilters || Object.keys(searchFilters).length === 0)
       dispatch(getSearchFilters());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -226,13 +226,14 @@ const Search = () => {
     }
 
     setOptions(parseFetchedOptions({}, location));
-  }, [searchFilters]);
+  }, [location, searchFilters]);
 
   const searchResults = useSelector((state) => state.searchResults);
   useDebouncedEffect(
     () => {
       doSearch();
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     600,
     [dispatch, searchableText, sections, topics, options, sortOn, currentPage],
   );
@@ -265,6 +266,8 @@ const Search = () => {
 
   return (
     <div className="public-ui">
+      <Helmet title={intl.formatMessage(messages.searchResults)} />
+
       <Container className="px-4 my-4">
         <Row>
           <Col>
