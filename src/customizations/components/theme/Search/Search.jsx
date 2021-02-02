@@ -127,7 +127,8 @@ const searchOrderDict = {
 };
 
 const useDebouncedEffect = (effect, delay, deps) => {
-  const callback = useCallback(effect, [effect]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const callback = useCallback(effect, deps);
 
   useEffect(() => {
     const handler = setTimeout(() => {
@@ -226,7 +227,8 @@ const Search = () => {
     }
 
     setOptions(parseFetchedOptions({}, location));
-  }, [location, searchFilters]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [searchFilters]);
 
   const searchResults = useSelector((state) => state.searchResults);
   useDebouncedEffect(
