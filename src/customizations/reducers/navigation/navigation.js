@@ -5,7 +5,7 @@
 
 /*
  CUSTOMIZATIONS:
- - customized getRecursiveItems to use remoteUrl property for Link objects
+ - customized getRecursiveItems to use remoteUrl property for plone types 'Link' objects
  */
 
 import { map } from 'lodash';
