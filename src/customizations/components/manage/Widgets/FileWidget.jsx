@@ -36,6 +36,10 @@ const messages = defineMessages({
     id: 'editDrag',
     defaultMessage: "Trascina per sostituire l'elemento caricato",
   },
+  deleteFile: {
+    id: 'deleteFile',
+    defaultMessage: 'Cancella il file',
+  },
 });
 
 /**
@@ -56,18 +60,21 @@ const FileWidget = ({
 }) => {
   const [currentValue, setCurrentValue] = useState(value);
 
-  const onDrop = useCallback((acceptedFiles) => {
-    const file = acceptedFiles[0];
-    readAsDataURL(file).then((data) => {
-      const fields = data.match(/^data:(.*);(.*),(.*)$/);
-      onChange(id, {
-        data: fields[3],
-        encoding: fields[2],
-        'content-type': fields[1],
-        filename: file.name,
+  const onDrop = useCallback(
+    (acceptedFiles) => {
+      const file = acceptedFiles[0];
+      readAsDataURL(file).then((data) => {
+        const fields = data.match(/^data:(.*);(.*),(.*)$/);
+        onChange(id, {
+          data: fields[3],
+          encoding: fields[2],
+          'content-type': fields[1],
+          filename: file.name,
+        });
       });
-    });
-  }, []);
+    },
+    [id, onChange],
+  );
   const intl = useIntl();
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
 
@@ -80,6 +87,7 @@ const FileWidget = ({
       error={error}
       wrapped={wrapped}
       fieldSet={fieldSet}
+      className="fileWidget"
     >
       <div
         {...getRootProps({
@@ -108,7 +116,7 @@ const FileWidget = ({
                 icon
                 basic
                 className="delete-button"
-                aria-label="delete file"
+                aria-label={intl.formatMessage(messages.deleteFile)}
                 onClick={() => {
                   onChange(id, currentValue);
                 }}
@@ -135,7 +143,7 @@ const FileWidget = ({
                     icon
                     basic
                     className="delete-button"
-                    aria-label="delete file"
+                    aria-label={intl.formatMessage(messages.deleteFile)}
                     onClick={() => {
                       onChange(id, null);
                       setCurrentValue(null);
@@ -149,6 +157,18 @@ const FileWidget = ({
               <div>
                 {`${intl.formatMessage(messages.elementNew)}: `}
                 {value.filename}
+                <Button
+                  icon
+                  basic
+                  className="delete-button"
+                  aria-label={intl.formatMessage(messages.deleteFile)}
+                  onClick={() => {
+                    onChange(id, null);
+                    setCurrentValue(null);
+                  }}
+                >
+                  <Icon name={deleteSVG} size="20px" />
+                </Button>
               </div>
             )}
           </div>

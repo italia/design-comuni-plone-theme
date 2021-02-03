@@ -7,15 +7,11 @@ import { siteConfig } from '~/config';
 
 const AppExtras = ({ pathname }) => {
   const subsite = useSelector((state) => state.subsite?.data);
-  const content = useSelector((state) => state.content?.data);
-
+  const siteTitle = subsite?.title ?? siteConfig?.properties?.siteTitle;
   return (
     <>
-      <Helmet>
-        <title>
-          {content.title} - {subsite?.title ?? siteConfig.properties.siteTitle}
-        </title>
-      </Helmet>
+      <Helmet titleTemplate={`%s - ${siteTitle}`} />
+
       <ScrollToTop />
       <SubsiteLoader pathname={pathname} />
     </>

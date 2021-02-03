@@ -151,9 +151,9 @@
           right: 0;
           bottom: 0;
           left: 0;
-          background: rgba(0, 0, 0, 0.5);
+          background: rgba(0, 0, 0, 0.6);
           content: '';
-          opacity: 0.4;
+          opacity: 0.75;
           transition: opacity 0.3s ease;
         }
 
@@ -164,7 +164,7 @@
           }
 
           &::before {
-            opacity: 0.7;
+            opacity: 1;
           }
         }
       }
