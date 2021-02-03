@@ -1205,6 +1205,10 @@ msgstr ""
 msgid "newsHome-news"
 msgstr ""
 
+#: components/ItaliaTheme/View/NewsItemView/NewsItemView
+msgid "news_item_contenuto"
+msgstr ""
+
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "no"
 msgstr ""
@@ -1557,10 +1561,6 @@ msgid "search_service_block_sections"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
-msgid "searchsectionswidge-items-header"
-msgstr ""
-
-#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-add-rootpath"
 msgstr ""
 
@@ -1582,6 +1582,10 @@ msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-emptyActiveRootPath"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+msgid "searchsectionswidget-items-header"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
