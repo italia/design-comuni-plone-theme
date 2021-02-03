@@ -31,7 +31,6 @@ import {
   OfficeCard,
   GenericCard,
   Dates,
-  TextOrBlocks,
   Locations,
   Sponsors,
   RelatedItems,
@@ -129,7 +128,7 @@ const messages = defineMessages({
  */
 const EventoView = ({ content, location }) => {
   const intl = useIntl();
-  const text = <TextOrBlocks content={content} location={location} />;
+
   const isChildEvent = content?.parent['@type'] === 'Event';
   const events_path = isChildEvent
     ? content?.parent['@id']?.split('/').splice(-1)[0]
@@ -196,9 +195,8 @@ const EventoView = ({ content, location }) => {
               tag_id={'text-body'}
               title={intl.formatMessage(messages.cos_e)}
               show_title={false}
+              content={content.descrizione_estesa}
             >
-              {text}
-
               <Gallery content={content} folder_name={'multimedia'} />
 
               {richTextHasContent(content?.descrizione_destinatari) && (

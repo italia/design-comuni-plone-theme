@@ -18,17 +18,9 @@ msgstr ""
 "Preferred-Encodings: utf-8\n"
 "X-Is-Fallback-For: ja-jp\n"
 
-#: addons/volto-editablefooter/src/customizations/components/theme/Footer/Footer
-msgid "Accessibility"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/Accordion/Edit
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
 msgid "Add accordion item"
-msgstr ""
-
-#: addons/volto-subblocks/src/SubblocksEdit
-msgid "Add block"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Edit
@@ -67,10 +59,6 @@ msgstr ""
 msgid "Clicca qui per sostituire il file"
 msgstr ""
 
-#: addons/volto-dropdownmenu/src/customizations/components/theme/Navigation/Navigation
-msgid "Close menu"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 #: components/ItaliaTheme/manage/Widgets/ColorListWidget
 msgid "Color"
@@ -88,10 +76,6 @@ msgstr ""
 msgid "Color_warning_orange"
 msgstr ""
 
-#: addons/volto-editablefooter/src/customizations/components/theme/Footer/Footer
-msgid "Contact"
-msgstr ""
-
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "Contatti"
 msgstr ""
@@ -102,10 +86,6 @@ msgstr ""
 
 #: components/ItaliaTheme/View/Commons/SideMenu
 msgid "Contenuto"
-msgstr ""
-
-#: addons/volto-editablefooter/src/customizations/components/theme/Footer/Footer
-msgid "Copyright"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Dates
@@ -127,14 +107,6 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: addons/volto-subblocks/src/examples/EditBlock
-msgid "Description placeholder"
-msgstr ""
-
-#: addons/volto-editablefooter/src/customizations/components/theme/Footer/Footer
-msgid "Distributed under the {license}."
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/Form/Form
 msgid "Email Success"
 msgstr ""
@@ -153,10 +125,6 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Sidebar
 msgid "Form"
-msgstr ""
-
-#: addons/volto-editablefooter/src/customizations/components/theme/Footer/Footer
-msgid "GNU GPL license"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
@@ -239,10 +207,6 @@ msgstr ""
 msgid "Open in a new tab"
 msgstr ""
 
-#: addons/volto-dropdownmenu/src/customizations/components/theme/Navigation/Navigation
-msgid "Open menu"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 msgid "Path filter filtro"
 msgstr ""
@@ -259,18 +223,6 @@ msgstr ""
 msgid "Play slider"
 msgstr ""
 
-#: addons/volto-editablefooter/src/customizations/components/theme/Footer/Footer
-msgid "Plone Foundation"
-msgstr ""
-
-#: addons/volto-editablefooter/src/customizations/components/theme/Footer/Footer
-msgid "Plone{reg} Open Source CMS/WCM"
-msgstr ""
-
-#: addons/volto-editablefooter/src/customizations/components/theme/Footer/Footer
-msgid "Powered by Plone & Python"
-msgstr ""
-
 #: components/ItaliaTheme/Pagination/PaginationItem
 msgid "Previous page"
 msgstr ""
@@ -282,18 +234,6 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 msgid "Rimuovi il file"
-msgstr ""
-
-#: addons/volto-rss-block/src/Block/RssSidebar
-msgid "RssFeed"
-msgstr ""
-
-#: addons/volto-rss-block/src/Block/RssSidebar
-msgid "RssFeed Url"
-msgstr ""
-
-#: addons/volto-rss-block/src/Block/RssSidebar
-msgid "RssFeedItemNumber"
 msgstr ""
 
 #: components/ItaliaTheme/ScrollToTop/ScrollToTop
@@ -334,29 +274,13 @@ msgstr ""
 msgid "Show all"
 msgstr ""
 
-#: addons/volto-editablefooter/src/customizations/components/theme/Footer/Footer
-msgid "Site Map"
-msgstr ""
-
 #: components/ItaliaTheme/Footer/FooterNewsletterSubscribe
 msgid "Subscribe"
-msgstr ""
-
-#: addons/volto-rss-block/src/Block/TemplateWidget
-msgid "Template"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/Form/Block/EditBlock
 msgid "Text placeholder"
-msgstr ""
-
-#: addons/volto-subblocks/src/examples/Sidebar
-msgid "TextBlocks"
-msgstr ""
-
-#: addons/volto-editablefooter/src/customizations/components/theme/Footer/Footer
-msgid "The {plonecms} is {copyright} 2000-{current_year} by the {plonefoundation} and friends."
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
@@ -365,7 +289,6 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: addons/volto-subblocks/src/examples/EditBlock
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
 #: components/ItaliaTheme/Blocks/Form/Block/EditBlock
@@ -416,7 +339,6 @@ msgstr ""
 msgid "Type the title…"
 msgstr ""
 
-#: addons/volto-dropdownmenu/src/components/DropdownMenu
 #: components/ItaliaTheme/View/PageView/PageView
 msgid "Unknown Block"
 msgstr ""
@@ -437,7 +359,6 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Accordion/Block/ViewBlock
 #: components/ItaliaTheme/Blocks/Form/Block/EditBlock
 #: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/RibbonCardTemplateSkeleton
 msgid "Vedi"
 msgstr ""
 
@@ -451,14 +372,8 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateCompact
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/AmministrazioneTrasparenteTablesTemplateSkeleton
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CompleteBlockLinksTemplateSkeleton
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/GridGalleryTemplateSkeleton
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/RibbonCardTemplateSkeleton
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
-#: components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithImageRssTemplateSkeleton
-#: components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 msgid "Vedi tutto"
 msgstr ""
@@ -484,7 +399,6 @@ msgid "accedere_al_servizio"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Actions
-#: components/ItaliaTheme/View/Commons/PageHeader
 msgid "actions"
 msgstr ""
 
@@ -576,14 +490,11 @@ msgid "backToSearch"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 msgid "bando_closed"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton
 msgid "bando_data_pubblicazione"
 msgstr ""
 
@@ -600,31 +511,24 @@ msgid "bando_ente"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 msgid "bando_inProgress"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 msgid "bando_open"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton
 msgid "bando_scadenza"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton
 msgid "bando_stato"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton
 msgid "bando_vedi"
 msgstr ""
 
@@ -728,10 +632,6 @@ msgstr ""
 msgid "contatti_interni"
 msgstr ""
 
-#: addons/volto-cookie-banner/src/CookieBannerContainer
-msgid "cookie_banner_button"
-msgstr ""
-
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "copertura_geografica"
 msgstr ""
@@ -780,7 +680,6 @@ msgstr ""
 msgid "dataset"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDates
 msgid "date"
 msgstr ""
@@ -900,173 +799,8 @@ msgstr ""
 msgid "download"
 msgstr ""
 
-#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
-msgid "dropdownmenu-add-rootpath"
-msgstr ""
-
-#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
-msgid "dropdownmenu-addmenuitem"
-msgstr ""
-
-#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
-msgid "dropdownmenu-blocks"
-msgstr ""
-
-#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
-msgid "dropdownmenu-blocks-description"
-msgstr ""
-
-#: addons/volto-dropdownmenu/src/components/DropdownMenu
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 msgid "dropdownmenu-close-menu-button"
-msgstr ""
-
-#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
-msgid "dropdownmenu-delete-button"
-msgstr ""
-
-#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
-msgid "dropdownmenu-delete-menupath"
-msgstr ""
-
-#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
-msgid "dropdownmenu-deletemenuitem"
-msgstr ""
-
-#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
-msgid "dropdownmenu-deletemenuitem-button"
-msgstr ""
-
-#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
-msgid "dropdownmenu-emptyActiveMenuItem"
-msgstr ""
-
-#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
-msgid "dropdownmenu-emptyActiveMenuPath"
-msgstr ""
-
-#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
-msgid "dropdownmenu-linkUrl"
-msgstr ""
-
-#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
-msgid "dropdownmenu-menuitems-header"
-msgstr ""
-
-#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
-msgid "dropdownmenu-mode"
-msgstr ""
-
-#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
-msgid "dropdownmenu-mode-dropdown"
-msgstr ""
-
-#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
-msgid "dropdownmenu-mode-simpleLink"
-msgstr ""
-
-#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
-msgid "dropdownmenu-move-menuitem-down"
-msgstr ""
-
-#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
-msgid "dropdownmenu-move-menuitem-up"
-msgstr ""
-
-#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
-msgid "dropdownmenu-navigationRoot"
-msgstr ""
-
-#: addons/volto-dropdownmenu/src/widget/MenuConfigurationWidget
-msgid "dropdownmenu-rootpath"
-msgstr ""
-
-#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
-msgid "dropdownmenu-showMoreLink"
-msgstr ""
-
-#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
-msgid "dropdownmenu-showMoreText"
-msgstr ""
-
-#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
-msgid "dropdownmenu-title"
-msgstr ""
-
-#: addons/volto-dropdownmenu/src/widget/MenuConfigurationForm
-msgid "dropdownmenu-visible"
-msgstr ""
-
-#: addons/volto-editablefooter/src/widget/FooterConfigurationWidget
-msgid "editablefooter-add-rootpath"
-msgstr ""
-
-#: addons/volto-editablefooter/src/widget/FooterConfigurationWidget
-msgid "editablefooter-addfootercolumn"
-msgstr ""
-
-#: addons/volto-editablefooter/src/widget/FooterConfigurationWidget
-msgid "editablefooter-delete-button"
-msgstr ""
-
-#: addons/volto-editablefooter/src/widget/FooterConfigurationWidget
-msgid "editablefooter-delete-footerpath"
-msgstr ""
-
-#: addons/volto-editablefooter/src/widget/FooterConfigurationForm
-msgid "editablefooter-deletefootercolumn"
-msgstr ""
-
-#: addons/volto-editablefooter/src/widget/FooterConfigurationForm
-msgid "editablefooter-deletefootercolumn-button"
-msgstr ""
-
-#: addons/volto-editablefooter/src/widget/FooterConfigurationWidget
-msgid "editablefooter-emptyActiveFooterColumn"
-msgstr ""
-
-#: addons/volto-editablefooter/src/widget/FooterConfigurationWidget
-msgid "editablefooter-emptyActiveFooterPath"
-msgstr ""
-
-#: addons/volto-editablefooter/src/widget/FooterConfigurationWidget
-msgid "editablefooter-items-header"
-msgstr ""
-
-#: addons/volto-editablefooter/src/widget/FooterConfigurationWidget
-msgid "editablefooter-move-column-down"
-msgstr ""
-
-#: addons/volto-editablefooter/src/widget/FooterConfigurationWidget
-msgid "editablefooter-move-column-up"
-msgstr ""
-
-#: addons/volto-editablefooter/src/widget/FooterConfigurationForm
-msgid "editablefooter-newsletterSubscribe"
-msgstr ""
-
-#: addons/volto-editablefooter/src/widget/FooterConfigurationWidget
-msgid "editablefooter-rootpath"
-msgstr ""
-
-#: addons/volto-editablefooter/src/widget/FooterConfigurationForm
-msgid "editablefooter-showSocial"
-msgstr ""
-
-#: addons/volto-editablefooter/src/widget/FooterConfigurationForm
-msgid "editablefooter-text"
-msgstr ""
-
-#: addons/volto-editablefooter/src/widget/FooterConfigurationForm
-msgid "editablefooter-title"
-msgstr ""
-
-#: addons/volto-editablefooter/src/widget/FooterConfigurationForm
-msgid "editablefooter-titleLink"
-msgstr ""
-
-#: addons/volto-editablefooter/src/widget/FooterConfigurationForm
-msgid "editablefooter-visible"
 msgstr ""
 
 #: components/ItaliaTheme/View/VenueView/VenueView
@@ -1146,7 +880,6 @@ msgstr ""
 msgid "exceeded_chars"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDates
 msgid "expire"
 msgstr ""
@@ -1165,10 +898,6 @@ msgstr ""
 
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "fax_sede"
-msgstr ""
-
-#: addons/volto-rss-block/src/Block/Edit
-msgid "feed_not_set"
 msgstr ""
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
@@ -1313,24 +1042,7 @@ msgstr ""
 msgid "gallery_video_url"
 msgstr ""
 
-#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
-msgid "geolocation"
-msgstr ""
-
-#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
-msgid "geolocationClear"
-msgstr ""
-
-#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
-msgid "geolocation_placeholder"
-msgstr ""
-
-#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
-msgid "geolocation_selected"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate
-#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/GridGalleryTemplateSkeleton
 msgid "grid-gallery-max-items-exceeded"
 msgstr ""
 
@@ -1370,10 +1082,6 @@ msgstr ""
 msgid "iter_del_procedimento"
 msgstr ""
 
-#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
-msgid "latitude"
-msgstr ""
-
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "legami_altre_strutture"
 msgstr ""
@@ -1382,12 +1090,10 @@ msgstr ""
 msgid "link"
 msgstr ""
 
-#: addons/volto-rss-block/src/Block/RssSidebar
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 msgid "linkMore"
 msgstr ""
 
-#: addons/volto-rss-block/src/Block/RssSidebar
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 msgid "linkMoreTitle"
 msgstr ""
@@ -1412,10 +1118,6 @@ msgstr ""
 msgid "locations"
 msgstr ""
 
-#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
-msgid "longitude"
-msgstr ""
-
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
 msgid "luoghi_notizia"
 msgstr ""
@@ -1428,7 +1130,6 @@ msgstr ""
 msgid "mailto"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
 msgid "minutes"
 msgstr ""
@@ -1469,8 +1170,8 @@ msgstr ""
 msgid "modulo_formati_alternativi"
 msgstr ""
 
-#: addons/volto-multilingual-widget/src/MultilingualWidget
-msgid "multilingual_text_placeholder"
+#: components/ItaliaTheme/View/NewsItemView/NewsItemView
+msgid "news_item_contenuto"
 msgstr ""
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
@@ -1505,7 +1206,6 @@ msgstr ""
 msgid "novita"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderNewsItem
 msgid "numero_progressivo_cs"
 msgstr ""
@@ -1628,7 +1328,6 @@ msgstr ""
 msgid "quartiere"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
 msgid "reading_time"
 msgstr ""
@@ -1728,23 +1427,16 @@ msgstr ""
 msgid "risultati_indagini_customer_satisfaction"
 msgstr ""
 
-#: addons/volto-rss-block/src/Templates/DefaultRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
-#: components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithImageRssTemplateSkeleton
-#: components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton
 msgid "rss_no_results"
 msgstr ""
 
-#: addons/volto-rss-block/src/Templates/DefaultRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
-#: components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithImageRssTemplateSkeleton
-#: components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton
 msgid "rss_read_more"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "ruolo"
@@ -1830,10 +1522,6 @@ msgstr ""
 msgid "searchLabel"
 msgstr ""
 
-#: addons/volto-venue/src/components/Widgets/GeoLocationWidget/GeoLocationWidget
-msgid "searchOnMap"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "search_service_block_sections"
 msgstr ""
@@ -1873,11 +1561,6 @@ msgstr ""
 msgid "servizi_offerti"
 msgstr ""
 
-#: addons/volto-rss-block/src/Block/RssSidebar
-msgid "setrss"
-msgstr ""
-
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/Sharing
 msgid "share"
 msgstr ""
@@ -1917,34 +1600,6 @@ msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "situazione_patrimoniale"
-msgstr ""
-
-#: addons/volto-social-settings/src/widget/SocialLinksWidget
-msgid "social-settings-additem"
-msgstr ""
-
-#: addons/volto-social-settings/src/widget/SocialLinksWidget
-msgid "social-settings-delete-item"
-msgstr ""
-
-#: addons/volto-social-settings/src/widget/SocialLinksWidget
-msgid "social-settings-icon"
-msgstr ""
-
-#: addons/volto-social-settings/src/widget/SocialLinksWidget
-msgid "social-settings-move-item-down"
-msgstr ""
-
-#: addons/volto-social-settings/src/widget/SocialLinksWidget
-msgid "social-settings-move-item-up"
-msgstr ""
-
-#: addons/volto-social-settings/src/widget/SocialLinksWidget
-msgid "social-settings-social-name"
-msgstr ""
-
-#: addons/volto-social-settings/src/widget/SocialLinksWidget
-msgid "social-settings-url"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
@@ -2017,13 +1672,11 @@ msgstr ""
 msgid "tipologia_organizzazione"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "tipologia_persona"
 msgstr ""
 
-#: addons/volto-rss-block/src/Block/RssSidebar
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
@@ -2044,7 +1697,6 @@ msgid "to"
 msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
-#: components/ItaliaTheme/View/Commons/PageHeader
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderTassonomiaArgomenti
 msgid "topics"
 msgstr ""
@@ -2062,7 +1714,6 @@ msgid "twitterAccounts_description"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/TwitterPosts/Body
-#: components/ItaliaTheme/Blocks/TwitterPosts/Skeleton
 msgid "twitter_posts_no_results"
 msgstr ""
 
@@ -2104,10 +1755,6 @@ msgstr ""
 #: components/ItaliaTheme/View/UOView/UOView
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "uo_related_news"
-msgstr ""
-
-#: addons/volto-multilingual-widget/src/MultilingualWidget
-msgid "value_for_lang"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
