@@ -30,10 +30,7 @@ const SmallVenue = ({ venue }) => {
       <div className="card card-teaser shadow mt-3 rounded bigborder">
         <div className="card-body">
           <h5 className="card-title">
-            <UniversalLink
-              href={flattenToAppURL(venue_fo['@id'])}
-              title={venue_fo.title}
-            >
+            <UniversalLink item={venue_fo} title={venue_fo.title}>
               {venue_fo.title}
             </UniversalLink>
           </h5>

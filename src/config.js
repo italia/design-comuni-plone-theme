@@ -160,6 +160,9 @@ const rssBlock = {
 };
 
 const listBlockTypes = config.settings.listBlockTypes; //config.settings.listBlockTypes.concat(['align-center']);
+const voltoDefaultListingTemplates =
+  config.blocks.blocksConfig.listing.templates;
+delete voltoDefaultListingTemplates.summary;
 
 const customBlocks = {
   newsHome: {
@@ -382,7 +385,7 @@ const customBlocks = {
   listing: {
     ...config.blocks.blocksConfig.listing,
     templates: {
-      ...config.blocks.blocksConfig.listing.templates,
+      ...voltoDefaultListingTemplates,
 
       default: {
         label: 'Card semplice',

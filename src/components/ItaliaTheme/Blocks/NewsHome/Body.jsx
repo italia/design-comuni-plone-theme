@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
-import { Link } from 'react-router-dom';
 import { UniversalLink } from '@plone/volto/components';
 import moment from 'moment';
 import {
@@ -66,10 +65,10 @@ const Body = ({ content, pathname, block }) => {
 
             {block.moreHref && (
               <CardReadMore
-                tag={Link}
+                tag={UniversalLink}
                 iconName="it-arrow-right"
                 text={block.moreTitle || 'Vedi tutte le notizie'}
-                to={flattenToAppURL(block.moreHref)}
+                href={flattenToAppURL(block.moreHref)}
               />
             )}
           </CardBody>

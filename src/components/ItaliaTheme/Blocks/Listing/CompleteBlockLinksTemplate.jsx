@@ -54,14 +54,9 @@ const CompleteBlockLinksTemplate = ({
                 noWrapper={false}
                 tag="div"
               >
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={
-                    item['remoteUrl'] && item['remoteUrl'] !== ''
-                      ? flattenToAppURL(item['remoteUrl'])
-                      : flattenToAppURL(item['@id'])
-                  }
+                <UniversalLink
+                  item={!isEditMode ? item : null}
+                  href={isEditMode ? '#' : null}
                 >
                   <div className="d-flex">
                     {item.image && (
@@ -86,7 +81,7 @@ const CompleteBlockLinksTemplate = ({
                       </CardBody>
                     </div>
                   </div>
-                </a>
+                </UniversalLink>
               </Card>
             </Col>
           ))}

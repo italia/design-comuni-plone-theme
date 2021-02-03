@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { defineMessages, useIntl } from 'react-intl';
-import { ConditionalLink, UniversalLink } from '@plone/volto/components';
+import { UniversalLink } from '@plone/volto/components';
 import {
   Card,
   CardBody,
@@ -49,12 +49,12 @@ const SimpleCardTemplateCompact = ({
             {show_icon && <Icon icon={getItemIcon(item)} />}
             <CardBody>
               <CardTitle tag="h5">
-                <ConditionalLink
-                  to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}
-                  condition={!isEditMode}
+                <UniversalLink
+                  item={!isEditMode ? item : null}
+                  href={isEditMode ? '#' : null}
                 >
                   {item.title || item.id}
-                </ConditionalLink>
+                </UniversalLink>
               </CardTitle>
             </CardBody>
           </Card>

@@ -80,9 +80,7 @@ const GenericCard = ({
           {infos}
           <h5 className="card-title">
             {show_icon && <Icon icon={show_icon} padding={false} />}
-            <UniversalLink href={flattenToAppURL(item_fo['@id'])}>
-              {item_fo.title}
-            </UniversalLink>
+            <UniversalLink item={item_fo}>{item_fo.title}</UniversalLink>
           </h5>
           {(showDescription || children) && (
             <div className="card-text">
@@ -97,9 +95,7 @@ const GenericCard = ({
           {infos}
           <h5 className="card-title">
             {show_icon && <Icon icon={show_icon} padding={false} />}
-            <UniversalLink href={flattenToAppURL(item_fo['@id'])}>
-              {item_fo.title}
-            </UniversalLink>
+            <UniversalLink item={item_fo}>{item_fo.title}</UniversalLink>
           </h5>
           {(showDescription || children) && (
             <div className="card-text">
