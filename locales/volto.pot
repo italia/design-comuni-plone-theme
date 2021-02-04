@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-02-01T15:15:43.630Z\n"
+"POT-Creation-Date: 2021-02-04T09:06:31.954Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -243,7 +243,6 @@ msgstr ""
 msgid "Mappa del sito"
 msgstr ""
 
-#: addons/volto-secondarymenu/src/components/SecondaryMenu
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 #: components/ItaliaTheme/MenuSecondary/MenuSecondary
 # defaultMessage: Menu selezionato
@@ -2226,86 +2225,6 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Dove cercare
 msgid "search_service_block_sections"
-msgstr ""
-
-#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationWidget
-# defaultMessage: Add menu path
-msgid "secondarymenu-add-rootpath"
-msgstr ""
-
-#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationWidget
-# defaultMessage: Add menu item
-msgid "secondarymenu-addmenuitem"
-msgstr ""
-
-#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationWidget
-# defaultMessage: Delete
-msgid "secondarymenu-delete-button"
-msgstr ""
-
-#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationWidget
-# defaultMessage: Delete menu path
-msgid "secondarymenu-delete-menupath"
-msgstr ""
-
-#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationForm
-# defaultMessage: Delete menu item
-msgid "secondarymenu-deletemenuitem-button"
-msgstr ""
-
-#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationWidget
-# defaultMessage: Select a menu item
-msgid "secondarymenu-emptyActiveMenuItem"
-msgstr ""
-
-#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationWidget
-# defaultMessage: Select a menu path
-msgid "secondarymenu-emptyActiveMenuPath"
-msgstr ""
-
-#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationForm
-# defaultMessage: In evidence
-msgid "secondarymenu-inevidence"
-msgstr ""
-
-#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationForm
-# defaultMessage: Link
-msgid "secondarymenu-linkUrl"
-msgstr ""
-
-#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationForm
-# defaultMessage: Type an external url, or select an internal url clicking on the right button
-msgid "secondarymenu-linkUrl_description"
-msgstr ""
-
-#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationWidget
-# defaultMessage: Menu items
-msgid "secondarymenu-menuitems-header"
-msgstr ""
-
-#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationWidget
-# defaultMessage: Move menu item down
-msgid "secondarymenu-move-menuitem-down"
-msgstr ""
-
-#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationWidget
-# defaultMessage: Move menu item up
-msgid "secondarymenu-move-menuitem-up"
-msgstr ""
-
-#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationWidget
-# defaultMessage: Root path
-msgid "secondarymenu-rootpath"
-msgstr ""
-
-#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationForm
-# defaultMessage: Title
-msgid "secondarymenu-title"
-msgstr ""
-
-#: addons/volto-secondarymenu/src/widget/SecondaryMenuConfigurationForm
-# defaultMessage: Visible
-msgid "secondarymenu-visible"
 msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
