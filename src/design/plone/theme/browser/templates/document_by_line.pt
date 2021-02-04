@@ -24,23 +24,14 @@
 
   <tal:dates define="published view/pub_date;
                      modified context/ModificationDate;
-                     modified_compare context/modified;
-                     published_current_day python:published and published.isCurrentDay() or False;
-                     modified_current_day python:modified and modified_compare.isCurrentDay() or False">
+                     toLocalizedTime nocall:context/@@plone/toLocalizedTime;">
   <span class="documentPublished"
         tal:condition="published">
-    <span i18n:translate="box_published" tal:condition="published_current_day">
-      published
-    </span>
     <span i18n:domain="design.plone.theme"
-          i18n:translate="box_published_on"
-          tal:condition="not:published_current_day">
+          i18n:translate="box_published_on">
       published on
     </span>
-    <span class="pat-moment"
-          tal:define="format python: published_current_day and 'relative' or 'calendar'"
-          data-pat-moment="format:${format};"
-          tal:content="published" />
+    <span tal:content="python:toLocalizedTime(published, long_format=False)" />
     <tal:sep condition="modified">—</tal:sep>
   </span>
 
@@ -49,10 +40,7 @@
     <span i18n:translate="box_last_modified">
       last modified
     </span>
-    <span class="pat-moment"
-          tal:define="format python: modified_current_day and 'relative' or 'calendar'"
-          data-pat-moment="format:${format};"
-          tal:content="modified">
+    <span tal:content="python:toLocalizedTime(modified, long_format=False)">
       Modified
     </span>
   </span>

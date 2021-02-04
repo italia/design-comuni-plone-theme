@@ -5,7 +5,8 @@ Changelog
 5.0.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove pat-moment from documentByLine viewlet.
+  [cekk]
 
 
 5.0.1 (2021-01-14)
