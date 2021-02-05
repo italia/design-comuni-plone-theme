@@ -1739,7 +1739,7 @@
 
 "@plone/volto@plone/volto#rt_development":
   version "11.0.0"
-  resolved "https://codeload.github.com/plone/volto/tar.gz/81059e703b3c36bcef4c245f9847acbf1fbae8c4"
+  resolved "https://codeload.github.com/plone/volto/tar.gz/a24a99b4dca27a5689e3b054886fbc0604932a6c"
   dependencies:
     "@babel/plugin-proposal-export-default-from" "7.10.4"
     "@babel/plugin-proposal-export-namespace-from" "7.10.4"
@@ -17256,9 +17256,9 @@ volto-subsites@collective/volto-subsites#v1.0.2:
   version "1.0.2"
   resolved "https://codeload.github.com/collective/volto-subsites/tar.gz/5066279dafc48ff2a2410a48291182caf557ef81"
 
-volto-venue@collective/volto-venue#v2.0.0:
-  version "2.0.0"
-  resolved "https://codeload.github.com/collective/volto-venue/tar.gz/aef5954edc53fd1845cdf383af3cd14e1a75f648"
+volto-venue@collective/volto-venue#v2.0.1:
+  version "2.0.1"
+  resolved "https://codeload.github.com/collective/volto-venue/tar.gz/9494fe427b1d77fc94a541e8d55f7fe4e95af9ab"
   dependencies:
     leaflet "1.6.0"
     react-leaflet "2.7.0"

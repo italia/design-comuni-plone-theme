@@ -107,6 +107,10 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
+msgid "Dimensione della mappa"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Form/Form
 msgid "Email Success"
 msgstr ""
@@ -197,6 +201,10 @@ msgstr ""
 
 #: components/ItaliaTheme/Pagination/PaginationItem
 msgid "Next page"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/MapTemplate
+msgid "Non ci sono punti da mostrare sulla mappa"
 msgstr ""
 
 #: components/ItaliaTheme/Footer/FooterSmall
@@ -358,6 +366,7 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/Accordion/Block/ViewBlock
 #: components/ItaliaTheme/Blocks/Form/Block/EditBlock
+#: components/ItaliaTheme/Blocks/Listing/MapTemplate
 #: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
 msgid "Vedi"
 msgstr ""
@@ -369,6 +378,7 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate
 #: components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate
 #: components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate
+#: components/ItaliaTheme/Blocks/Listing/MapTemplate
 #: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateCompact
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
@@ -1130,6 +1140,18 @@ msgstr ""
 msgid "mailto"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
+msgid "map_size_large"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
+msgid "map_size_medium"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
+msgid "map_size_small"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
 msgid "minutes"
 msgstr ""
@@ -1574,6 +1596,10 @@ msgstr ""
 msgid "show_icon"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
+msgid "show_map_full_width"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
 msgid "show_only_first_ribbon"
 msgstr ""
@@ -1735,6 +1761,7 @@ msgstr ""
 msgid "unita_organizzativa_competente"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/RenderBlocks
 #: components/ItaliaTheme/View/Commons/TextOrBlocks
 msgid "unknownBlock"
 msgstr ""

@@ -1,0 +1,46 @@
+.block.listing .map-template {
+  .leaflet-container {
+    width: 100%;
+  }
+
+  .map-wrapper {
+    #geocoded-result {
+      z-index: 0;
+    }
+
+    &.size_small {
+      #geocoded-result {
+        height: 400px;
+        @media (max-width: #{map-get($grid-breakpoints, md)}) {
+          height: 250px;
+        }
+      }
+    }
+
+    &.size_medium {
+      #geocoded-result {
+        height: 550px;
+        @media (max-width: #{map-get($grid-breakpoints, md)}) {
+          height: 370px;
+        }
+      }
+    }
+
+    &.size_large {
+      #geocoded-result {
+        height: 700px;
+        @media (max-width: #{map-get($grid-breakpoints, md)}) {
+          height: 500px;
+        }
+      }
+    }
+  }
+
+  .template-skeleton {
+    .map-skeleton {
+      height: 300px;
+      background-color: $skeleton-bg;
+      @extend .skeleton-animation;
+    }
+  }
+}
