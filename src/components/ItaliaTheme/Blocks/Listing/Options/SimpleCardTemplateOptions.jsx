@@ -1,6 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Segment } from 'semantic-ui-react';
+
 import {
   SelectWidget,
   CheckboxWidget,
@@ -77,7 +78,7 @@ const messages = defineMessages({
 export const SimpleCardTemplateAppearance_COMPACT = 'compact';
 
 const SimpleCardTemplateOptions = (props) => {
-  const { data, block, onChangeBlock, required = false } = props;
+  const { data, block, onChangeBlock } = props;
   const intl = useIntl();
   useEffect(() => {
     onChangeBlock(block, {
