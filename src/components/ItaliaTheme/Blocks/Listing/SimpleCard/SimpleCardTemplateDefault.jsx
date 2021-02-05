@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import moment from 'moment';
 import 'moment/min/locales';
-import { Link } from 'react-router-dom';
 import { UniversalLink } from '@plone/volto/components';
 import cx from 'classnames';
 import {
@@ -186,7 +185,8 @@ const SimpleCardTemplateDefault = ({
                 )}
                 <CardTitle tag="h5">
                   <UniversalLink
-                    href={!isEditMode ? flattenToAppURL(item['@id']) : '#'}
+                    item={!isEditMode ? item : null}
+                    href={isEditMode ? '#' : null}
                   >
                     {itemTitle}
                   </UniversalLink>
@@ -200,8 +200,9 @@ const SimpleCardTemplateDefault = ({
                 {show_detail_link && (
                   <CardReadMore
                     iconName="it-arrow-right"
-                    tag={Link}
-                    to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}
+                    tag={UniversalLink}
+                    item={!isEditMode ? item : null}
+                    href={isEditMode ? '#' : null}
                     text={
                       detail_link_label ||
                       intl.formatMessage(messages.card_detail_label)

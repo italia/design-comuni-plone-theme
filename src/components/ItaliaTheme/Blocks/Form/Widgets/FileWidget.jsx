@@ -102,7 +102,7 @@ const FileWidget = (props) => {
 
   return (
     <div className="form-group ">
-      <label for={`field-${id}`} class="active">
+      <label for={`field-${id}`} className="active">
         {label}
       </label>
       <div className="form-input-file">

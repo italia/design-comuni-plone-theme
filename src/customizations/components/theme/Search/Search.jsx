@@ -9,6 +9,7 @@ import { useIntl, defineMessages } from 'react-intl';
 import cx from 'classnames';
 import qs from 'query-string';
 import moment from 'moment';
+import { Helmet } from '@plone/volto/helpers';
 import {
   Container,
   Row,
@@ -31,7 +32,6 @@ import {
 } from '@italia/components/ItaliaTheme';
 import { UniversalLink } from '@plone/volto/components';
 import { SearchUtils, TextInput, SelectInput } from '@italia/components';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import { getSearchFilters, getSearchResults } from '@italia/actions';
 import { settings } from '~/config';
 
@@ -126,6 +126,7 @@ const searchOrderDict = {
 };
 
 const useDebouncedEffect = (effect, delay, deps) => {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const callback = useCallback(effect, deps);
 
   useEffect(() => {
@@ -162,9 +163,7 @@ const Search = () => {
     ...parseFetchedOptions({}, location),
   });
 
-  const [customPath, setCustomPath] = useState(
-    qs.parse(location.search)?.custom_path ?? '',
-  );
+  const [customPath] = useState(qs.parse(location.search)?.custom_path ?? '');
 
   const [sortOn, setSortOn] = useState('relevance');
   const [currentPage, setCurrentPage] = useState(1);
@@ -214,6 +213,7 @@ const Search = () => {
   useEffect(() => {
     if (!searchFilters || Object.keys(searchFilters).length === 0)
       dispatch(getSearchFilters());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -226,6 +226,7 @@ const Search = () => {
     }
 
     setOptions(parseFetchedOptions({}, location));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchFilters]);
 
   const searchResults = useSelector((state) => state.searchResults);
@@ -233,6 +234,7 @@ const Search = () => {
     () => {
       doSearch();
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     600,
     [dispatch, searchableText, sections, topics, options, sortOn, currentPage],
   );
@@ -265,6 +267,8 @@ const Search = () => {
 
   return (
     <div className="public-ui">
+      <Helmet title={intl.formatMessage(messages.searchResults)} />
+
       <Container className="px-4 my-4">
         <Row>
           <Col>
@@ -488,9 +492,7 @@ const Search = () => {
                         <CardBody>
                           {i['@type'] && getSectionFromId(i['@id'])}
                           <h4 className="card-title">
-                            <UniversalLink href={flattenToAppURL(i['@id'])}>
-                              {i.title}
-                            </UniversalLink>
+                            <UniversalLink item={i}>{i.title}</UniversalLink>
                           </h4>
                           <p className="card-text">{i.description}</p>
                         </CardBody>

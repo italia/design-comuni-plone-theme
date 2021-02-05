@@ -66,7 +66,7 @@ const GridGalleryTemplate = ({
               <tr>
                 <td>
                   <UniversalLink
-                    href={flattenToAppURL(item['@id'])}
+                    item={item}
                     className="text-decoration-none font-weight-bold"
                   >
                     {item.title}

@@ -67,7 +67,8 @@ const FooterInfos = () => {
             <h4>
               <ConditionalLink
                 condition={column.titleLink?.length > 0}
-                to={flattenToAppURL(column.titleLink?.[0]?.['@id'] || '')}
+                item={column.titleLink?.[0]}
+                to={column.titleLink?.[0]?.['@id'] ? null : ''}
                 title={
                   intl.formatMessage(messages.goToPage) + ':' + column.title
                 }
