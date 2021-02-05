@@ -39,7 +39,6 @@ const AmministrazioneTrasparenteTablesTemplate = ({
             {item.text}
           </UniversalLink>
         );
-        break;
       case 'text':
         return item.text;
       case 'richtext':

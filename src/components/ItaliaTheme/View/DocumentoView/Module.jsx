@@ -32,6 +32,7 @@ const Module = ({ item }) => {
   useEffect(() => {
     dispatch(getContent(item['@id'], null, key));
     return () => dispatch(resetContent(key));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch]);
 
   let modulo = subrequests[key]?.data;
@@ -52,7 +53,7 @@ const Module = ({ item }) => {
               {modulo.title ?? modulo.file_principale.filename}
             </a>
           ) : modulo['@type'] === 'Link' ? (
-            <UniversalLink href={modulo['@id']} title={modulo.title}>
+            <UniversalLink item={modulo} title={modulo.title}>
               {modulo.title}
             </UniversalLink>
           ) : (

@@ -32,7 +32,6 @@ import {
 } from '@italia/components/ItaliaTheme';
 import { UniversalLink } from '@plone/volto/components';
 import { SearchUtils, TextInput, SelectInput } from '@italia/components';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import { getSearchFilters, getSearchResults } from '@italia/actions';
 import { settings } from '~/config';
 
@@ -493,9 +492,7 @@ const Search = () => {
                         <CardBody>
                           {i['@type'] && getSectionFromId(i['@id'])}
                           <h4 className="card-title">
-                            <UniversalLink href={flattenToAppURL(i['@id'])}>
-                              {i.title}
-                            </UniversalLink>
+                            <UniversalLink item={i}>{i.title}</UniversalLink>
                           </h4>
                           <p className="card-text">{i.description}</p>
                         </CardBody>

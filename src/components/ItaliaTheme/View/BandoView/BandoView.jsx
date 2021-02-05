@@ -23,6 +23,7 @@ import {
 } from '@italia/components/ItaliaTheme/View';
 
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { UniversalLink } from '@plone/volto/components';
 import { Icon } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
@@ -240,7 +241,9 @@ const BandoView = ({ content, location }) => {
                               }
                               padding={false}
                             />
-                            <a href={flattenToAppURL(item.url)}>{item.title}</a>
+                            <UniversalLink href={flattenToAppURL(item.url)}>
+                              {item.title}
+                            </UniversalLink>
                           </div>
                         </div>
                       </div>
@@ -272,17 +275,18 @@ const BandoView = ({ content, location }) => {
                                       padding={false}
                                     />
                                     {inner_item.type === 'File' ? (
-                                      <a href={flattenToAppURL(inner_item.url)}>
-                                        {inner_item.title}
-                                      </a>
-                                    ) : (
-                                      <a
-                                        target="_blank"
-                                        rel="noopener noreferrer"
+                                      <UniversalLink
                                         href={flattenToAppURL(inner_item.url)}
                                       >
                                         {inner_item.title}
-                                      </a>
+                                      </UniversalLink>
+                                    ) : (
+                                      <UniversalLink
+                                        openLinkInNewTab={true}
+                                        href={flattenToAppURL(inner_item.url)}
+                                      >
+                                        {inner_item.title}
+                                      </UniversalLink>
                                     )}
                                   </div>
                                 </div>
