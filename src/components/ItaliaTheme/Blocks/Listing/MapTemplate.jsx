@@ -6,7 +6,7 @@ import { useHistory } from 'react-router-dom';
 import moment from 'moment';
 import 'moment/min/locales';
 import cx from 'classnames';
-import { OSMMap } from '@package/addons/volto-venue'; // from 'volto-venue';
+import { OSMMap } from 'volto-venue'; // from 'volto-venue';
 import { Row, Col, Container } from 'design-react-kit/dist/design-react-kit';
 
 import { UniversalLink } from '@plone/volto/components';
