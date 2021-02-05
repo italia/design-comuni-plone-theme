@@ -12,7 +12,6 @@ import {
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { ListingText } from '@italia/components/ItaliaTheme';
-import { Link } from 'react-router-dom';
 import cx from 'classnames';
 import { defineMessages, useIntl } from 'react-intl';
 import moment from 'moment';
@@ -82,12 +81,13 @@ const BandiInEvidenceTemplate = ({
                 <Card key={index} className={cx('listing-item card-bg', '')}>
                   <CardBody>
                     <CardTitle tag="h4" className="title">
-                      <a
+                      <UniversalLink
                         className="bando-title"
-                        href={!isEditMode ? flattenToAppURL(item['@id']) : '#0'}
+                        item={!isEditMode ? item : null}
+                        href={isEditMode ? '#' : null}
                       >
                         {item.title || item.id}
-                      </a>
+                      </UniversalLink>
                     </CardTitle>
                     <div className="bando-description">{item.description}</div>
                     <div className={'bando-dati'}>
@@ -138,8 +138,9 @@ const BandiInEvidenceTemplate = ({
                     <div className="read-more">
                       <CardReadMore
                         iconName="it-arrow-right"
-                        tag={Link}
-                        to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}
+                        tag={UniversalLink}
+                        item={!isEditMode ? item : null}
+                        href={isEditMode ? '#' : null}
                         text={intl.formatMessage(messages.vedi)}
                       />
                     </div>

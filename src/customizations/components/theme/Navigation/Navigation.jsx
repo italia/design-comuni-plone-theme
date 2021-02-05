@@ -20,7 +20,6 @@ import { Collapse } from '@italia/components';
 import {
   MegaMenu,
   MenuSecondary,
-  SubsiteMenuSecondary,
   Logo,
   Icon,
   SocialHeader,
@@ -125,11 +124,7 @@ const Navigation = ({ pathname }) => {
                   ))}
               </Nav>
 
-              {!subsite ? (
-                <MenuSecondary pathname={pathname} />
-              ) : (
-                <SubsiteMenuSecondary />
-              )}
+              <MenuSecondary pathname={pathname} />
 
               {!subsite ? <SocialHeader /> : <SubsiteSocialHeader />}
             </div>

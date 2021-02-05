@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-
+import { UniversalLink } from '@plone/volto/components';
 import { Icon } from '@italia/components/ItaliaTheme';
 
 const propTypes = {
@@ -19,9 +19,9 @@ const CardCategory = (props) => {
   });
   // Simple category link
   const categoryLink = href && (
-    <a href={href} className="category">
+    <UniversalLink href={href} className="category">
       {children}
-    </a>
+    </UniversalLink>
   );
   const categoryDate = date && <span className="data">{date}</span>;
   // Category with icon

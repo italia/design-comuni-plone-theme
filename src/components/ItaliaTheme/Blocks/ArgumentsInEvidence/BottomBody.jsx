@@ -1,13 +1,11 @@
 import React from 'react';
 import { defineMessages } from 'react-intl';
-import { Link } from 'react-router-dom';
 import { UniversalLink } from '@plone/volto/components';
 import {
   Chip,
   ChipLabel,
   Button,
 } from 'design-react-kit/dist/design-react-kit';
-import { flattenToAppURL } from '@plone/volto/helpers';
 
 const messages = defineMessages({
   view_all: {
@@ -33,7 +31,7 @@ const BottomBody = ({ data, intl }) => {
           <div className="col-lg-9">
             {data?.arguments?.map((argument, index) => (
               <UniversalLink
-                href={flattenToAppURL(argument['@id'])}
+                item={argument}
                 key={index}
                 title={argument.title}
                 className="text-decoration-none"
@@ -54,7 +52,7 @@ const BottomBody = ({ data, intl }) => {
         </div>
       </div>
       <div className="link-button mt-5">
-        <Link to={'/argomenti'} className="text-decoration-none">
+        <UniversalLink href="/argomenti" className="text-decoration-none">
           <Button
             color="primary"
             className="view-all"
@@ -63,7 +61,7 @@ const BottomBody = ({ data, intl }) => {
           >
             {intl?.formatMessage(messages.view_all)}
           </Button>
-        </Link>
+        </UniversalLink>
       </div>
     </>
   ) : null;

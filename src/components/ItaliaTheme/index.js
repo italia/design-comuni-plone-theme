@@ -36,7 +36,6 @@ export SearchSections from '@italia/components/ItaliaTheme/Search/SearchSections
 export SearchTopics from '@italia/components/ItaliaTheme/Search/SearchTopics';
 export MegaMenu from '@italia/components/ItaliaTheme/MegaMenu/MegaMenu';
 export MenuSecondary from '@italia/components/ItaliaTheme/MenuSecondary/MenuSecondary';
-export SubsiteMenuSecondary from '@italia/components/ItaliaTheme/MenuSecondary/SubsiteMenuSecondary';
 export Logo from '@italia/components/ItaliaTheme/Logo/Logo';
 export LogoFooter from '@italia/components/ItaliaTheme/LogoFooter/LogoFooter';
 export FooterMain from '@italia/components/ItaliaTheme/Footer/FooterMain';
