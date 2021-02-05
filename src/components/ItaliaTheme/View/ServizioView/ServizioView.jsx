@@ -224,7 +224,7 @@ const ServizioView = ({ content }) => {
                 .length > 0 ||
               content.canale_digitale?.data?.replace(/(<([^>]+)>)/g, '')
                 .length > 0 ||
-              content.autenticazione ||
+              content.autenticazione?.data?.replace(/(<([^>]+)>)/g, '') ||
               content.prenota_appuntamento?.data?.replace(/(<([^>]+)>)/g, '')
                 .length > 0 ||
               content.dove_rivolgersi?.length > 0 ||
