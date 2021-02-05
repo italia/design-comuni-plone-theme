@@ -221,8 +221,8 @@ const BandoView = ({ content, location }) => {
               >
                 {/* Se ho una sola cartella lascio solo "allegati" altrimenti
                 aggiungo gli altri titoli */}
-                {content?.approfondimento?.length == 1 ? (
-                  <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                {content?.approfondimento?.length === 1 ? (
+                  <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                     {content.approfondimento[0].children.map((item, _i) => (
                       <div
                         className={
@@ -251,7 +251,7 @@ const BandoView = ({ content, location }) => {
                     {content.approfondimento.map((item, _i) => (
                       <>
                         <h5>{item.title}</h5>
-                        <div class="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                        <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                           {content.approfondimento[_i].children.map(
                             (inner_item, _x) => (
                               <div
@@ -278,6 +278,7 @@ const BandoView = ({ content, location }) => {
                                     ) : (
                                       <a
                                         target="_blank"
+                                        rel="noopener noreferrer"
                                         href={flattenToAppURL(inner_item.url)}
                                       >
                                         {inner_item.title}
