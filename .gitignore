@@ -1,6 +1,7 @@
 .vscode/
 .history
 .yarn/
+.yarnrc
 logs
 *.log
 npm-debug.log*
