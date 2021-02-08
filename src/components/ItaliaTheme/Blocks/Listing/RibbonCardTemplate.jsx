@@ -77,7 +77,7 @@ const RibbonCardTemplate = ({
                 isEditMode,
               );
               return (
-                <Col lg={4} sm={12}>
+                <Col lg={4} sm={12} key={index}>
                   <Card
                     className={cx(
                       `card-bg card-big align-items-top rounded shadow`,

@@ -52,7 +52,7 @@ const PageHeaderNav = ({ content, title }) => {
       )}
       {visible_links.map((item) => (
         <LinkListItem
-          item={item['@id']}
+          item={item}
           tag={UniversalLink}
           title={intl.formatMessage(messages.goToPage) + ': ' + item.title}
           key={item['@id']}
@@ -82,7 +82,7 @@ const PageHeaderNav = ({ content, title }) => {
             <LinkList>
               {more_links.map((item) => (
                 <LinkListItem
-                  item={item['@id']}
+                  item={item}
                   tag={UniversalLink}
                   title={
                     intl.formatMessage(messages.goToPage) + ': ' + item.title
