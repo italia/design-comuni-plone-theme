@@ -1,5 +1,6 @@
 @media print {
   .block {
+    &.full-width,
     .full-width {
       right: unset !important;
       left: unset !important;
@@ -71,6 +72,43 @@
 
     .section.full-width .card .card-body .accordion-item .accordion-content {
       max-height: unset;
+    }
+  }
+
+  .block {
+    .argumentInEvidence {
+      .argumentInEvidence-background {
+        display: none;
+      }
+
+      h2 {
+        color: $primary !important;
+      }
+
+      .grid {
+        display: flex;
+        justify-content: space-between;
+
+        .card {
+          flex: 1 1 30%;
+        }
+      }
+    }
+  }
+
+  .container {
+    .block {
+      .searchSections {
+        .searchSections-background {
+          display: none;
+        }
+
+        h2.text-secondary {
+          color: $primary !important;
+        }
+
+        border: 1px solid $gray-border;
+      }
     }
   }
 
