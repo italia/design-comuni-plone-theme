@@ -9,6 +9,8 @@ import {
   LinkListItem,
   Button,
 } from 'design-react-kit/dist/design-react-kit';
+
+import { toPublicURL } from '@plone/volto/helpers';
 import { Icon } from '@italia/components/ItaliaTheme';
 
 /**
@@ -39,7 +41,7 @@ const messages = defineMessages({
 
 const Actions = (props) => {
   const intl = useIntl();
-
+  const publicUrl = toPublicURL(props.url);
   let socials = [
     {
       id: 'print',
@@ -52,7 +54,7 @@ const Actions = (props) => {
       id: 'mailto',
       attributes: null,
       title: intl.formatMessage(messages.mailto),
-      url: `mailto:?subject=${props.title}&body=${props.url}`,
+      url: `mailto:?subject=${props.title}&body=${publicUrl}`,
       icon: 'it-mail',
     },
   ];
