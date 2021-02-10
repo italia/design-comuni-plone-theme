@@ -19,7 +19,7 @@ import {
 import { UniversalLink } from '@plone/volto/components';
 
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { Link } from 'react-router-dom';
+
 import { Icon, getItemIcon } from '@italia/components/ItaliaTheme';
 import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
 
@@ -77,7 +77,7 @@ const RibbonCardTemplate = ({
                 isEditMode,
               );
               return (
-                <Col lg={4} sm={12}>
+                <Col lg={4} sm={12} key={index}>
                   <Card
                     className={cx(
                       `card-bg card-big align-items-top rounded shadow`,
@@ -102,19 +102,21 @@ const RibbonCardTemplate = ({
                     >
                       {date && <div className="dates">{date}</div>}
                       <CardTitle tag="h5">
-                        <Link
-                          to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}
+                        <UniversalLink
+                          item={!isEditMode ? item : null}
+                          href={isEditMode ? '#' : null}
                         >
                           {itemTitle}
-                        </Link>
+                        </UniversalLink>
                       </CardTitle>
                       <CardText>{item.description}</CardText>
                       {eventRecurrenceMore}
                       {show_detail_link && (
                         <CardReadMore
                           iconName="it-arrow-right"
-                          tag={Link}
-                          to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}
+                          tag={UniversalLink}
+                          item={!isEditMode ? item : null}
+                          href={isEditMode ? '#' : null}
                           text={
                             detail_link_label ||
                             intl.formatMessage(messages.default_detail_link)

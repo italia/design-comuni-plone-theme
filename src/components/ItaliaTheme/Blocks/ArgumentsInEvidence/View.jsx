@@ -8,19 +8,24 @@ import { useIntl } from 'react-intl';
 
 const View = ({ data, id }) => {
   const currentIntl = useIntl();
+
   return (
     <div className="block full-width">
       <div className="argumentInEvidence">
         <ArgumentsInEvidenceBackground />
         <BodyWrapper data={data} inEditMode={false}>
-          {data.subblocks.map((subblock, index) => (
-            <Block
-              key={index}
-              data={subblock}
-              inEditMode={false}
-              intl={currentIntl}
-            />
-          ))}
+          {data.subblocks
+            ?.filter((subblock) => {
+              return subblock.argument?.length > 0;
+            })
+            .map((subblock, index) => (
+              <Block
+                key={index}
+                data={subblock}
+                inEditMode={false}
+                intl={currentIntl}
+              />
+            ))}
         </BodyWrapper>
         <BottomBody data={data} intl={currentIntl} />
       </div>

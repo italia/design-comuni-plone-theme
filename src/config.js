@@ -87,6 +87,9 @@ import GridGalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/G
 import GridGalleryTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/GridGalleryTemplateSkeleton';
 import RibbonCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate';
 import RibbonCardTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/RibbonCardTemplateSkeleton';
+import MapTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/MapTemplate';
+import MapTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/MapTemplateSkeleton';
+
 import BandiInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate';
 import BandiInEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton';
 import AmministrazioneTrasparenteTablesTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
@@ -160,6 +163,9 @@ const rssBlock = {
 };
 
 const listBlockTypes = config.settings.listBlockTypes; //config.settings.listBlockTypes.concat(['align-center']);
+const voltoDefaultListingTemplates =
+  config.blocks.blocksConfig.listing.templates;
+delete voltoDefaultListingTemplates.summary;
 
 const customBlocks = {
   newsHome: {
@@ -382,7 +388,7 @@ const customBlocks = {
   listing: {
     ...config.blocks.blocksConfig.listing,
     templates: {
-      ...config.blocks.blocksConfig.listing.templates,
+      ...voltoDefaultListingTemplates,
 
       default: {
         label: 'Card semplice',
@@ -402,6 +408,11 @@ const customBlocks = {
         label: 'Card con nastro',
         template: RibbonCardTemplate,
         skeleton: RibbonCardTemplateSkeleton,
+      },
+      mapTemplate: {
+        label: 'Mappa',
+        template: MapTemplate,
+        skeleton: MapTemplateSkeleton,
       },
       smallBlockLinksTemplate: {
         label: 'Blocco link solo immagini',

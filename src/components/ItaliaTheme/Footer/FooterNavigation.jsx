@@ -11,6 +11,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import { isEqual } from 'lodash';
 import { getBaseUrl } from '@plone/volto/helpers';
 import { getNavigation } from '@plone/volto/actions';
+import { UniversalLink } from '@plone/volto/components';
 import {
   Row,
   Col,
@@ -65,20 +66,22 @@ const FooterNavigation = () => {
               </h4>
               {item.items && (
                 <LinkList className="footer-list clearfix" tag="div">
-                  {item.items.map((subitem) => (
-                    <LinkListItem
-                      key={subitem.url}
-                      to={subitem.url}
-                      tag={Link}
-                      title={
-                        intl.formatMessage(messages.goToPage) +
-                        ': ' +
-                        subitem.title
-                      }
-                    >
-                      {subitem.title}
-                    </LinkListItem>
-                  ))}
+                  {item.items.map((subitem) => {
+                    return (
+                      <LinkListItem
+                        key={subitem.url}
+                        href={subitem.url}
+                        tag={UniversalLink}
+                        title={
+                          intl.formatMessage(messages.goToPage) +
+                          ': ' +
+                          subitem.title
+                        }
+                      >
+                        {subitem.title}
+                      </LinkListItem>
+                    );
+                  })}
                 </LinkList>
               )}
             </Col>

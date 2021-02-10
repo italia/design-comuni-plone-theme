@@ -9,6 +9,8 @@ import {
   LinkList,
   LinkListItem,
 } from 'design-react-kit/dist/design-react-kit';
+
+import { toPublicURL } from '@plone/volto/helpers';
 import { Icon } from '@italia/components/ItaliaTheme';
 
 /**
@@ -27,30 +29,38 @@ const messages = defineMessages({
 
 const Sharing = ({ url, title }) => {
   const intl = useIntl();
+  const publicUrl = toPublicURL(url);
+
   let socials = [
     {
       id: 'facebook',
       title: 'Facebook',
-      url: `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+      url: `https://www.facebook.com/sharer/sharer.php?u=${publicUrl}`,
       icon: 'it-facebook',
     },
     {
       id: 'twitter',
       title: 'Twitter',
-      url: `https://twitter.com/intent/tweet?url=${url}`,
+      url: `https://twitter.com/intent/tweet?url=${publicUrl}`,
       icon: 'it-twitter',
     },
     {
       id: 'linkedin',
       title: 'LinkedIn',
-      url: `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`,
+      url: `https://www.linkedin.com/shareArticle?mini=true&url=${publicUrl}&title=${publicUrl}`,
       icon: 'it-linkedin',
     },
     {
       id: 'whatsapp',
       title: 'Whatsapp',
-      url: `https://api.whatsapp.com/send?phone=&text=${url}`,
+      url: `https://api.whatsapp.com/send?phone=&text=${publicUrl}`,
       icon: 'it-whatsapp',
+    },
+    {
+      id: 'telegram',
+      title: 'Telegram',
+      url: `https://t.me/share/url?url=${publicUrl}&text=${title}`,
+      icon: 'telegram',
     },
   ];
 

@@ -262,6 +262,23 @@ body.cms-ui {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
   }
+
+  .upload-row {
+    img.ui.image {
+      max-width: 100%;
+      height: auto;
+      max-height: 60px;
+    }
+  }
+
+  .ui.page.modals.dimmer {
+    .ui.modal {
+      .content {
+        max-height: 80vh;
+        overflow-y: scroll;
+      }
+    }
+  }
 }
 
 body.public-ui.has-toolbar {

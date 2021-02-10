@@ -7,7 +7,6 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { map } from 'lodash';
 import cx from 'classnames';
-import { Link } from 'react-router-dom';
 import {
   NavItem,
   NavLink,
@@ -28,6 +27,7 @@ import {
   getBlocksLayoutFieldname,
   getBaseUrl,
 } from '@plone/volto/helpers';
+import { UniversalLink } from '@plone/volto/components';
 import { Icon } from '@italia/components/ItaliaTheme';
 import { blocks } from '~/config';
 
@@ -115,10 +115,9 @@ const MegaMenu = ({ item, pathname }) => {
     return item.linkUrl?.length > 0 ? (
       <NavItem tag="li" active={isItemActive}>
         <NavLink
-          to={
-            item.linkUrl === '' ? '/' : flattenToAppURL(item.linkUrl[0]['@id'])
-          }
-          tag={Link}
+          href={item.linkUrl === '' ? '/' : null}
+          item={item.linkUrl[0]}
+          tag={UniversalLink}
           active={isItemActive}
         >
           <span>{item.title}</span>
@@ -142,10 +141,12 @@ const MegaMenu = ({ item, pathname }) => {
 
     const childrenGroups = [];
     const items = [];
+    // eslint-disable-next-line no-unused-expressions
     item.navigationRoot?.forEach((navRoot) => {
       if (item.navigationRoot.length > 1) {
         items.push({ ...navRoot, showAsHeader: true });
       }
+      // eslint-disable-next-line no-unused-expressions
       navRoot.items?.forEach((subitem) => {
         items.push(subitem);
       });
@@ -206,8 +207,8 @@ const MegaMenu = ({ item, pathname }) => {
                         {group.map((child) => {
                           return (
                             <LinkListItem
-                              to={flattenToAppURL(child['@id'])}
-                              tag={Link}
+                              item={child}
+                              tag={UniversalLink}
                               title={child.title}
                               key={child['@id']}
                               onClick={() => setMenuStatus(false)}
@@ -264,9 +265,9 @@ const MegaMenu = ({ item, pathname }) => {
                   <Col lg={4}>
                     <LinkList>
                       <li className="it-more text-right">
-                        <Link
+                        <UniversalLink
                           className="list-item medium"
-                          to={flattenToAppURL(item.showMoreLink[0]['@id'])}
+                          item={item.showMoreLink[0]}
                           onClick={() => setMenuStatus(false)}
                         >
                           <span>
@@ -275,7 +276,7 @@ const MegaMenu = ({ item, pathname }) => {
                               : intl.formatMessage(messages.view_all)}
                           </span>
                           <Icon icon="it-arrow-right" />
-                        </Link>
+                        </UniversalLink>
                       </li>
                     </LinkList>
                   </Col>

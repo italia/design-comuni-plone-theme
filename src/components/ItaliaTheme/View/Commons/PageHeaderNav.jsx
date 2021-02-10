@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {
   LinkList,
   LinkListItem,
   Collapse,
 } from 'design-react-kit/dist/design-react-kit';
-import { flattenToAppURL } from '@plone/volto/helpers';
+import { UniversalLink } from '@plone/volto/components';
 import { Icon } from '@italia/components/ItaliaTheme';
+
 /**
  * PageHeaderNav view component class.
  * @function PageHeaderNav
@@ -52,8 +52,8 @@ const PageHeaderNav = ({ content, title }) => {
       )}
       {visible_links.map((item) => (
         <LinkListItem
-          to={flattenToAppURL(item['@id'])}
-          tag={Link}
+          item={item}
+          tag={UniversalLink}
           title={intl.formatMessage(messages.goToPage) + ': ' + item.title}
           key={item['@id']}
         >
@@ -82,8 +82,8 @@ const PageHeaderNav = ({ content, title }) => {
             <LinkList>
               {more_links.map((item) => (
                 <LinkListItem
-                  to={flattenToAppURL(item['@id'])}
-                  tag={Link}
+                  item={item}
+                  tag={UniversalLink}
                   title={
                     intl.formatMessage(messages.goToPage) + ': ' + item.title
                   }

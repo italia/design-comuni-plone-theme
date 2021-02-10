@@ -6,11 +6,11 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { defineMessages, useIntl } from 'react-intl';
 import { isEqual } from 'lodash';
 import { getBreadcrumbs } from '@plone/volto/actions';
 import { getBaseUrl } from '@plone/volto/helpers';
+import { UniversalLink } from '@plone/volto/components';
 import {
   Container,
   Row,
@@ -30,7 +30,7 @@ const Breadcrumbs = ({ pathname }) => {
   const intl = useIntl();
   const dispatch = useDispatch();
 
-  let items = useSelector(state => state.breadcrumbs.items, isEqual);
+  let items = useSelector((state) => state.breadcrumbs.items, isEqual);
 
   useEffect(() => {
     dispatch(getBreadcrumbs(getBaseUrl(pathname)));
@@ -44,12 +44,14 @@ const Breadcrumbs = ({ pathname }) => {
             <nav className="breadcrumb-container">
               <Breadcrumb aria-label="breadcrumb" listTag="ol" tag="nav">
                 <BreadcrumbItem tag="li">
-                  <Link to="/">{intl.formatMessage(messages.home)}</Link>
+                  <UniversalLink href="/">
+                    {intl.formatMessage(messages.home)}
+                  </UniversalLink>
                   <span className="separator">/</span>
                 </BreadcrumbItem>
                 {items.slice(0, -1).map((item, index, items) => (
                   <BreadcrumbItem tag="li" key={item.url}>
-                    <Link to={item.url}>{item.title}</Link>
+                    <UniversalLink href={item.url}>{item.title}</UniversalLink>
                     {index < items.length - 1 && (
                       <span className="separator">/</span>
                     )}
