@@ -52,6 +52,12 @@ const Sharing = ({ url, title }) => {
       url: `https://api.whatsapp.com/send?phone=&text=${url}`,
       icon: 'it-whatsapp',
     },
+    {
+      id: 'telegram',
+      title: 'Telegram',
+      url: `https://t.me/share/url?url=${url}&text=${title}`,
+      icon: 'telegram',
+    },
   ];
 
   return (
