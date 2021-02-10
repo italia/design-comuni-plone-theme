@@ -11,6 +11,7 @@ import redraft from 'redraft';
 import { TextEditorWidget } from '@italia/components/ItaliaTheme';
 import { Divider } from 'semantic-ui-react';
 import { settings } from '~/config';
+import cx from 'classnames';
 
 const messages = defineMessages({
   simple_card_title: {
@@ -42,7 +43,7 @@ const Block = ({ inEditMode, data, block, onChange }) => {
         tag="div"
       >
         <CardBody>
-          <div className="simple-text-card cms-ui">
+          <div className={cx('simple-text-card', { 'cms-ui': inEditMode })}>
             {inEditMode ? (
               <>
                 <CardTitle tag="h4">
