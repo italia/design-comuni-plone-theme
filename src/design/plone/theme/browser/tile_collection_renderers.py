@@ -19,14 +19,14 @@ class HelpersView(BrowserView):
     A set of helper functions for tile collection views.
     """
 
-    def get_image_tag(self, item, scale='thumb', direction='keep'):
+    def get_image_tag(self, item, scale='thumb', direction='keep', loading='lazy'):
         try:
             scale_view = api.content.get_view(
                 name='images',
                 context=item,
                 request=self.request,
             )
-            return scale_view.tag('image', scale=scale, direction=direction)
+            return scale_view.tag('image', scale=scale, direction=direction, loading=loading)
         except (InvalidParameterError, POSKeyError, AttributeError):
             # The object doesn't have an image field
             return ''

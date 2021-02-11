@@ -48,7 +48,7 @@
                                           <img class="image-thumb"
                                                tal:define="realObj obj/getObject;
                                                            scales realObj/@@images"
-                                               tal:replace="structure python: scales.tag('image', scale='newshome', direction='down', css_class='image-thumb')" />
+                                               tal:replace="structure python: scales.tag('image', scale='newshome', direction='down', css_class='image-thumb', loading='lazy')" />
                                       </div>
                                       <div class="collectionItemText">
                                           <div class="collectionItemTitle">

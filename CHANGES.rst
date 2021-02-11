@@ -5,8 +5,7 @@ Changelog
 5.0.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- loading=lazy delle immagini [mamico]
 
 5.0.2 (2021-02-04)
 ------------------
