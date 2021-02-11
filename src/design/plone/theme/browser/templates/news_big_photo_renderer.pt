@@ -10,7 +10,7 @@
                  tal:define="helper_view nocall:context/@@collection_tile_helpers;
                              renderComments python: 'with-comments' in (view.data.get('css_class') or '');"
                  i18n:domain="design.plone.theme">
-      <!-- if obj is None, it will break calling getObject() on it, but if the collection is empty this won't be rendered by collective.tiles.collection -->
+      <!--! if obj is None, it will break calling getObject() on it, but if the collection is empty this won't be rendered by collective.tiles.collection !-->
       <div class="news-big-photo"
            tal:define="news python: results and results[0] or None;
                        obj news/getObject;
@@ -26,7 +26,7 @@
             <div class="tile-content"
                  tal:define="title news/Title;
                              description news/Description">
-              <!-- <figure class="item-image" tal:condition="image_tag" tal:content="structure image_tag" /> -->
+              <!--! <figure class="item-image" tal:condition="image_tag" tal:content="structure image_tag" /> !-->
               <h2 class="news-title"><a href="${news/getURL}" title="${title}">${title}</a></h2>
               <p class="news-description" tal:condition="description">${description}</p>
               <div class="news-date-more">
