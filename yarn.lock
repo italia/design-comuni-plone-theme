@@ -1738,8 +1738,8 @@
     "@types/node" ">= 8"
 
 "@plone/volto@plone/volto#rt_development":
-  version "11.0.0"
-  resolved "https://codeload.github.com/plone/volto/tar.gz/c36d67c6a27fa28ab9f236fbbebae6629b542f90"
+  version "11.1.0"
+  resolved "https://codeload.github.com/plone/volto/tar.gz/47ce3aa5919b87896014038ab9d4dc22bead3ad3"
   dependencies:
     "@babel/plugin-proposal-export-default-from" "7.10.4"
     "@babel/plugin-proposal-export-namespace-from" "7.10.4"
