@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-5.0.3 (unreleased)
+5.0.3 (2021-02-16)
 ------------------
 
 - Add new faChevronLeft and faDownload icons to the theme bundle
