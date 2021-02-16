@@ -5,7 +5,8 @@ Changelog
 5.0.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add new faChevronLeft and faDownload icons to the theme bundle
+  [lucabel]
 
 
 5.0.2 (2021-02-04)
