@@ -149,81 +149,89 @@ define('fa_rt', [], function() {
 
         var _faChevronDown2 = _interopRequireDefault(_faChevronDown);
 
-        var _faChevronRight = __webpack_require__(18);
+        var _faChevronLeft = __webpack_require__(18);
+
+        var _faChevronLeft2 = _interopRequireDefault(_faChevronLeft);
+
+        var _faChevronRight = __webpack_require__(19);
 
         var _faChevronRight2 = _interopRequireDefault(_faChevronRight);
 
-        var _faSearch = __webpack_require__(19);
+        var _faSearch = __webpack_require__(20);
 
         var _faSearch2 = _interopRequireDefault(_faSearch);
 
-        var _faCalendar = __webpack_require__(20);
+        var _faCalendar = __webpack_require__(21);
 
         var _faCalendar2 = _interopRequireDefault(_faCalendar);
 
-        var _faCalendarAlt = __webpack_require__(21);
+        var _faCalendarAlt = __webpack_require__(22);
 
         var _faCalendarAlt2 = _interopRequireDefault(_faCalendarAlt);
 
-        var _faTags = __webpack_require__(22);
+        var _faTags = __webpack_require__(23);
 
         var _faTags2 = _interopRequireDefault(_faTags);
 
-        var _faFolderOpen = __webpack_require__(23);
+        var _faFolderOpen = __webpack_require__(24);
 
         var _faFolderOpen2 = _interopRequireDefault(_faFolderOpen);
 
-        var _faFilter = __webpack_require__(24);
+        var _faFilter = __webpack_require__(25);
 
         var _faFilter2 = _interopRequireDefault(_faFilter);
 
-        var _faStar = __webpack_require__(25);
+        var _faStar = __webpack_require__(26);
 
         var _faStar2 = _interopRequireDefault(_faStar);
 
-        var _faBars = __webpack_require__(26);
+        var _faBars = __webpack_require__(27);
 
         var _faBars2 = _interopRequireDefault(_faBars);
 
-        var _faTimes = __webpack_require__(27);
+        var _faTimes = __webpack_require__(28);
 
         var _faTimes2 = _interopRequireDefault(_faTimes);
 
-        var _faPrint = __webpack_require__(28);
+        var _faPrint = __webpack_require__(29);
 
         var _faPrint2 = _interopRequireDefault(_faPrint);
 
-        var _faSortAlphaDown = __webpack_require__(29);
+        var _faSortAlphaDown = __webpack_require__(30);
 
         var _faSortAlphaDown2 = _interopRequireDefault(_faSortAlphaDown);
 
-        var _faAngleRight = __webpack_require__(30);
+        var _faAngleRight = __webpack_require__(31);
 
         var _faAngleRight2 = _interopRequireDefault(_faAngleRight);
 
-        var _faAngleUp = __webpack_require__(31);
+        var _faAngleUp = __webpack_require__(32);
 
         var _faAngleUp2 = _interopRequireDefault(_faAngleUp);
 
-        var _faAngleDown = __webpack_require__(32);
+        var _faAngleDown = __webpack_require__(33);
 
         var _faAngleDown2 = _interopRequireDefault(_faAngleDown);
 
-        var _faListUl = __webpack_require__(33);
+        var _faListUl = __webpack_require__(34);
 
         var _faListUl2 = _interopRequireDefault(_faListUl);
 
-        var _faCircle = __webpack_require__(34);
+        var _faCircle = __webpack_require__(35);
 
         var _faCircle2 = _interopRequireDefault(_faCircle);
 
-        var _faCrosshairs = __webpack_require__(35);
+        var _faCrosshairs = __webpack_require__(36);
 
         var _faCrosshairs2 = _interopRequireDefault(_faCrosshairs);
 
-        var _faEnvelope = __webpack_require__(36);
+        var _faEnvelope = __webpack_require__(37);
 
         var _faEnvelope2 = _interopRequireDefault(_faEnvelope);
+
+        var _faDownload = __webpack_require__(38);
+
+        var _faDownload2 = _interopRequireDefault(_faDownload);
 
         function _interopRequireDefault(obj) {
           return obj && obj.__esModule ? obj : { default: obj };
@@ -248,6 +256,7 @@ define('fa_rt', [], function() {
             _faChevronUp2.default,
             _faChevronDown2.default,
             _faChevronRight2.default,
+            _faChevronLeft2.default,
             _faAngleRight2.default,
             _faAngleUp2.default,
             _faAngleDown2.default,
@@ -265,7 +274,8 @@ define('fa_rt', [], function() {
             _faListUl2.default,
             _faCircle2.default,
             _faCrosshairs2.default,
-            _faEnvelope2.default
+            _faEnvelope2.default,
+            _faDownload2.default
           );
         });
 
@@ -2839,6 +2849,22 @@ define('fa_rt', [], function() {
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
+          iconName: 'chevron-left',
+          icon: [
+            320,
+            512,
+            [],
+            'f053',
+            'M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z',
+          ],
+        };
+
+        /***/
+      },
+      /* 19 */
+      /***/ function(module, exports) {
+        module.exports = {
+          prefix: 'fas',
           iconName: 'chevron-right',
           icon: [
             320,
@@ -2851,7 +2877,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 19 */
+      /* 20 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -2867,7 +2893,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 20 */
+      /* 21 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'far',
@@ -2883,7 +2909,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 21 */
+      /* 22 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'far',
@@ -2899,7 +2925,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 22 */
+      /* 23 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -2915,7 +2941,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 23 */
+      /* 24 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -2931,7 +2957,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 24 */
+      /* 25 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -2947,7 +2973,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 25 */
+      /* 26 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -2963,7 +2989,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 26 */
+      /* 27 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -2979,7 +3005,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 27 */
+      /* 28 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -2995,7 +3021,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 28 */
+      /* 29 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -3011,7 +3037,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 29 */
+      /* 30 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -3027,7 +3053,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 30 */
+      /* 31 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -3043,7 +3069,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 31 */
+      /* 32 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -3059,7 +3085,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 32 */
+      /* 33 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -3075,7 +3101,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 33 */
+      /* 34 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -3091,7 +3117,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 34 */
+      /* 35 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -3107,7 +3133,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 35 */
+      /* 36 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -3123,7 +3149,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 36 */
+      /* 37 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'far',
@@ -3134,6 +3160,22 @@ define('fa_rt', [], function() {
             [],
             'f0e0',
             'M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm0 48v40.805c-22.422 18.259-58.168 46.651-134.587 106.49-16.841 13.247-50.201 45.072-73.413 44.701-23.208.375-56.579-31.459-73.413-44.701C106.18 199.465 70.425 171.067 48 152.805V112h416zM48 400V214.398c22.914 18.251 55.409 43.862 104.938 82.646 21.857 17.205 60.134 55.186 103.062 54.955 42.717.231 80.509-37.199 103.053-54.947 49.528-38.783 82.032-64.401 104.947-82.653V400H48z',
+          ],
+        };
+
+        /***/
+      },
+      /* 38 */
+      /***/ function(module, exports) {
+        module.exports = {
+          prefix: 'fas',
+          iconName: 'download',
+          icon: [
+            512,
+            512,
+            [],
+            'f019',
+            'M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z',
           ],
         };
 

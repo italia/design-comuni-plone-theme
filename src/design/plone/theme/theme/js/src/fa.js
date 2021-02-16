@@ -15,6 +15,7 @@ import faNewspaper from '@fortawesome/fontawesome-free-regular/faNewspaper';
 import faHome from '@fortawesome/fontawesome-free-solid/faHome';
 import faChevronUp from '@fortawesome/fontawesome-free-solid/faChevronUp';
 import faChevronDown from '@fortawesome/fontawesome-free-solid/faChevronDown';
+import faChevronLeft from '@fortawesome/fontawesome-free-solid/faChevronLeft';
 import faChevronRight from '@fortawesome/fontawesome-free-solid/faChevronRight';
 import faSearch from '@fortawesome/fontawesome-free-solid/faSearch';
 import faCalendar from '@fortawesome/fontawesome-free-regular/faCalendar';
@@ -34,6 +35,7 @@ import faListUl from '@fortawesome/fontawesome-free-solid/faListUl';
 import faCircle from '@fortawesome/fontawesome-free-solid/faCircle';
 import faCrosshairs from '@fortawesome/fontawesome-free-solid/faCrosshairs';
 import faEnvelope from '@fortawesome/fontawesome-free-regular/faEnvelope';
+import faDownload from '@fortawesome/fontawesome-free-solid/faDownload';
 
 export const init = () => {
   fontawesome.library.add(
@@ -54,6 +56,7 @@ export const init = () => {
     faChevronUp,
     faChevronDown,
     faChevronRight,
+    faChevronLeft,
     faAngleRight,
     faAngleUp,
     faAngleDown,
@@ -71,6 +74,7 @@ export const init = () => {
     faListUl,
     faCircle,
     faCrosshairs,
-    faEnvelope
+    faEnvelope,
+    faDownload
   );
 };
