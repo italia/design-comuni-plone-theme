@@ -6,6 +6,7 @@ Changelog
 ------------------
 
 - Add font-display swap [mamico]
+- Loading lazy images [mamico]
 
 
 5.0.3 (2021-02-16)

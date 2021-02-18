@@ -43,7 +43,7 @@
                                              src python:view.getMimeTypeIcon(node);">
 
             <img tal:condition="python:has_thumb and thumb_scale"
-                 tal:replace="structure python:image_scale.tag(item, 'image', scale=thumb_scale, css_class='pull-right thumb-'+thumb_scale)">
+                 tal:replace="structure python:image_scale.tag(item, 'image', scale=thumb_scale, css_class='pull-right thumb-'+thumb_scale, loading='lazy')">
 
             <span tal:replace="node/Title">Selected Item Title</span>
         </a>
