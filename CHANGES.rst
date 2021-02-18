@@ -5,7 +5,7 @@ Changelog
 5.0.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add font-display swap [mamico]
 
 
 5.0.3 (2021-02-16)
