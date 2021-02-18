@@ -1754,7 +1754,6 @@ msgstr ""
 msgid "unita_organizzativa_competente"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/RenderBlocks
 #: components/ItaliaTheme/View/Commons/TextOrBlocks
 msgid "unknownBlock"
 msgstr "Blocco sconosciuto"
