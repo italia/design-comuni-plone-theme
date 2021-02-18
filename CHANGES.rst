@@ -7,6 +7,7 @@ Changelog
 
 - Add font-display swap [mamico]
 - Loading lazy images [mamico]
+- Fix: disable #mobile-menu from Plone5.2 [nzambello]
 
 
 5.0.3 (2021-02-16)
