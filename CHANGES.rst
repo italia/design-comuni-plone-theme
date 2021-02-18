@@ -2,10 +2,25 @@ Changelog
 =========
 
 
-5.0.3 (unreleased)
+5.1.1 (unreleased)
 ------------------
 
 - loading=lazy delle immagini [mamico]
+
+5.1.0 (2021-02-18)
+------------------
+
+- Add font-display swap [mamico]
+- Loading lazy images [mamico]
+- Fix: disable #mobile-menu from Plone5.2 [nzambello]
+
+
+5.0.3 (2021-02-16)
+------------------
+
+- Add new faChevronLeft and faDownload icons to the theme bundle
+  [lucabel]
+
 
 5.0.2 (2021-02-04)
 ------------------
