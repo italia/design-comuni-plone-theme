@@ -78,7 +78,7 @@ const FooterInfos = () => {
             </h4>
             {column.showSocial && <FooterSocials />}
 
-            <p
+            <div
               dangerouslySetInnerHTML={{
                 __html: flattenHTMLToAppURL(column.text.data),
               }}
