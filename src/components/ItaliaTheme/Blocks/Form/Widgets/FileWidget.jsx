@@ -120,6 +120,7 @@ const FileWidget = (props) => {
                       : null
                   }
                   alt=""
+                  aria-hidden="true"
                   loading="lazy"
                 />
               ) : (

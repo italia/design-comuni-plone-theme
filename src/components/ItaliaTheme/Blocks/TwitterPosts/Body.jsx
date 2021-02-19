@@ -102,6 +102,7 @@ const Body = ({ data, isEditMode }) => {
                   <img
                     src={tweet.author.profile_image_url}
                     alt={tweet.author.name}
+                    aria-hidden="true"
                     className="rounded-circle"
                     loading="lazy"
                   />

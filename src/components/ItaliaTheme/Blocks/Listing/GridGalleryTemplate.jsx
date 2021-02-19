@@ -73,6 +73,7 @@ const GridGalleryTemplate = ({
                       alt=""
                       loading="lazy"
                       role="presentation"
+                      aria-hidden="true"
                     />
                   )}
                   <h3>{item.title}</h3>
