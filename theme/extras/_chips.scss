@@ -1,9 +1,28 @@
-.chip {
+.chip,
+.public-ui .chip {
   cursor: pointer;
 
-  &.selected {
-    @extend .chip:hover;
+  &:not(:disabled) {
+    &.selected,
+    &:hover,
+    &:focus {
+      border-color: #444e57;
+      background: #444e57;
+
+      &,
+      span.chip-label {
+        color: #fff;
+      }
+
+      svg.icon {
+        fill: #fff;
+      }
+    }
   }
+
+  // &.selected {
+  //   @extend .chip:hover;
+  // }
 }
 
 #metadata {
