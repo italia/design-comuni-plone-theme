@@ -2,12 +2,12 @@
 .public-ui .chip {
   cursor: pointer;
 
-  &:not(:disabled) {
+  &:not(:disabled):not(.chip-primary):not(.chip-secondary) {
     &.selected,
     &:hover,
     &:focus {
-      border-color: #444e57;
-      background: #444e57;
+      border-color: $neutral-2-b5;
+      background: $neutral-2-b5;
 
       &,
       span.chip-label {
