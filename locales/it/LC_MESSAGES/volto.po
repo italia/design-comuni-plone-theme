@@ -1185,6 +1185,10 @@ msgstr "File principale"
 msgid "modulo_formati_alternativi"
 msgstr "Formati alternativi"
 
+#: components/ItaliaTheme/Blocks/NewsHome/Body
+msgid "newsHome-news"
+msgstr ""
+
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "no"
 msgstr ""

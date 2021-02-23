@@ -47,7 +47,7 @@ const MenuSecondary = ({ pathname }) => {
 
   return (
     items?.length > 0 && (
-      <Nav navbar className="navbar-secondary">
+      <Nav navbar className="navbar-secondary" role="navigation">
         {items.map((item, i) => {
           let url = item.href || item.linkUrl?.[0]?.['@id'] || '';
 

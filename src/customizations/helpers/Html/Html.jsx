@@ -9,6 +9,7 @@ import serialize from 'serialize-javascript';
 import { join } from 'lodash';
 import { BodyClass } from '@plone/volto/helpers/';
 import { runtimeConfig } from '@plone/volto/runtime_config';
+import { Skiplink, SkiplinkItem } from 'design-react-kit/dist/design-react-kit';
 import { settings } from '~/config';
 
 const CRITICAL_CSS_TEMPLATE = `function alter() {
@@ -144,6 +145,17 @@ class Html extends Component {
           ) : undefined}
         </head>
         <body className={bodyClass}>
+          <Skiplink tag="div">
+            <SkiplinkItem href="#view" tag="a">
+              Skip to main content
+            </SkiplinkItem>
+            <SkiplinkItem href="#navigation" tag="a">
+              Skip to navigation
+            </SkiplinkItem>
+            <SkiplinkItem href="#footer" tag="a">
+              Skip to footer
+            </SkiplinkItem>
+          </Skiplink>
           <div role="navigation" aria-label="Toolbar" id="toolbar" />
           <div id="main" dangerouslySetInnerHTML={{ __html: markup }} />
           <div id="sidebar" />

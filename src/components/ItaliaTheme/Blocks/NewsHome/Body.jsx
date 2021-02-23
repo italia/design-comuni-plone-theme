@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useIntl } from 'react-intl';
+import { useIntl, defineMessages } from 'react-intl';
 import { UniversalLink } from '@plone/volto/components';
 import moment from 'moment';
 import {
@@ -18,9 +18,17 @@ import Image from '@plone/volto/components/theme/Image/Image';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { CardCategory } from '@italia/components/ItaliaTheme';
 
+const messages = defineMessages({
+  news: {
+    id: 'newsHome-news',
+    defineMessage: 'News',
+  },
+});
+
 const Body = ({ content, pathname, block }) => {
   const intl = useIntl();
   moment.locale(intl.locale);
+
   return (
     <Row>
       {content.image && (
@@ -29,6 +37,7 @@ const Body = ({ content, pathname, block }) => {
             image={content.image}
             alt={content.title}
             className="item-image"
+            role="presentation"
           />
         </Col>
       )}
@@ -38,7 +47,7 @@ const Body = ({ content, pathname, block }) => {
             <CardCategory
               date={content.effective && moment(content.effective).format('ll')}
             >
-              Notizie
+              {intl.formatMessage(messages.news)}
             </CardCategory>
             <CardTitle tag="h2">
               <UniversalLink href={flattenToAppURL(content['@id'])}>

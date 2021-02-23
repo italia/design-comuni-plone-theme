@@ -80,7 +80,7 @@ const Navigation = ({ pathname }) => {
   return (
     <Header theme="" type="navbar">
       {menu?.length > 0 ? (
-        <HeaderContent expand="lg" megamenu>
+        <HeaderContent expand="lg" megamenu id="navigation">
           <HeaderToggler
             aria-controls="nav1"
             aria-expanded="false"
@@ -112,7 +112,7 @@ const Navigation = ({ pathname }) => {
                   </div>
                 </Link>
               </div>
-              <Nav navbar>
+              <Nav navbar rol="navigation">
                 {menu
                   ?.filter((item) => item.visible)
                   ?.map((item, index) => (
