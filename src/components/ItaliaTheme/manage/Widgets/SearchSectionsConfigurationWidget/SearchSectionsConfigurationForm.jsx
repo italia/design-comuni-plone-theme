@@ -118,10 +118,11 @@ const SearchSectionsConfigurationForm = ({
 
       <Form.Field inline className="delete wide" id="item-delete">
         <Grid>
-          <Grid.Row stretched>
-            <Grid.Column width={12}>
+          <Grid.Row>
+            <Grid.Column width={12} textAlign="center">
               <Button
                 icon="trash"
+                size="mini"
                 onClick={deleteItem}
                 id="delete-item"
                 negative

@@ -27,10 +27,6 @@ const messages = defineMessages({
     id: 'searchsectionswidget-delete-rootpath',
     defaultMessage: 'Delete path',
   },
-  deleteButton: {
-    id: 'searchsectionswidget-delete-button',
-    defaultMessage: 'Delete',
-  },
   root_path: {
     id: 'searchsectionswidget-rootpath',
     defaultMessage: 'Root path',
@@ -53,7 +49,7 @@ const messages = defineMessages({
   },
   emptyActiveItem: {
     id: 'searchsectionswidget-emptyActiveItem',
-    defaultMessage: 'Select a section',
+    defaultMessage: 'Add a new section, or select one.',
   },
 });
 
@@ -215,132 +211,139 @@ const SearchSectionsConfigurationWidget = ({
                 </Menu>
                 <Segment>
                   {activeRoot > -1 && activeRoot < configuration.length ? (
-                    <Grid>
-                      <Grid.Column
-                        width={12}
-                        className="search-sections-rootpath-segment"
-                      >
-                        <TextWidget
-                          id="rootPath"
-                          title={intl.formatMessage(messages.root_path)}
-                          description=""
-                          required={true}
-                          value={
-                            configuration?.[activeRoot]?.rootPath
-                              ? flattenToAppURL(
-                                  configuration[activeRoot].rootPath,
-                                )
-                              : '/'
-                          }
-                          onChange={(id, value) => {
-                            onChangeRootPath(activeRoot, {
-                              ...configuration[activeRoot],
-                              rootPath: value?.length ? value : '/',
-                            });
-                          }}
-                        />
-                        <Form.Field
-                          inline
-                          className="delete wide"
-                          id="rootpath-delete"
+                    <>
+                      <Grid className="root-path-configuration">
+                        <Grid.Column
+                          width={12}
+                          className="search-sections-rootpath-segment"
                         >
-                          <Grid>
-                            <Grid.Row stretched>
-                              <Grid.Column width={12}>
-                                <Button
-                                  icon="trash"
-                                  negative
-                                  onClick={(e) => deleteRootPath(e, activeRoot)}
-                                  id="delete-rootpath"
-                                  content={intl.formatMessage(
-                                    messages.deleteButton,
-                                  )}
-                                />
-                              </Grid.Column>
-                            </Grid.Row>
-                          </Grid>
-                        </Form.Field>
-                      </Grid.Column>
-                      <Grid.Column width={4}>
-                        <Header
-                          as="h2"
-                          className="search-sections-items-header"
-                        >
-                          {intl.formatMessage(messages.rootItemsHeader)}
-                        </Header>
-                        <Menu
-                          fluid
-                          vertical
-                          tabular
-                          className="root-items-menu"
-                        >
-                          {configuration[activeRoot].items?.map((item, idx) => (
-                            <Menu.Item
-                              key={`item-${idx}`}
-                              name={item.title}
-                              active={activeItem === idx}
-                              onClick={() => setActiveItem(idx)}
-                            >
-                              <Button.Group vertical className="move-buttons">
-                                <Button
-                                  disabled={idx === 0}
-                                  size="tiny"
-                                  icon={<Icon name="arrow left" />}
-                                  title={intl.formatMessage(
-                                    messages.moveItemUp,
-                                  )}
-                                  onClick={(e) =>
-                                    moveItem(e, activeRoot, idx, 'up')
-                                  }
-                                />
-                                <Button
-                                  disabled={
-                                    idx ===
-                                    configuration[activeRoot].items.length - 1
-                                  }
-                                  size="tiny"
-                                  icon={<Icon name="arrow right" />}
-                                  title={intl.formatMessage(
-                                    messages.moveItemDown,
-                                  )}
-                                  onClick={(e) =>
-                                    moveItem(e, activeRoot, idx, 'down')
-                                  }
-                                />
-                              </Button.Group>
-                              <span>{item.title}</span>
-                            </Menu.Item>
-                          ))}
-                          <Menu.Item
-                            name={intl.formatMessage(messages.addItem)}
-                            onClick={(e) => addItem(e, activeRoot)}
-                          >
-                            <Icon name="plus" />
-                          </Menu.Item>
-                        </Menu>
-                      </Grid.Column>
-                      <Grid.Column stretched width={8}>
-                        {activeItem > -1 &&
-                        activeItem < configuration[activeRoot].items?.length ? (
-                          <SearchSectionsConfigurationForm
-                            id={`${activeRoot}-${activeItem}`}
-                            item={configuration[activeRoot].items[activeItem]}
-                            onChange={(root) =>
-                              onChangeItem(activeRoot, activeItem, root)
+                          <TextWidget
+                            id="rootPath"
+                            title={intl.formatMessage(messages.root_path)}
+                            description=""
+                            required={true}
+                            value={
+                              configuration?.[activeRoot]?.rootPath
+                                ? flattenToAppURL(
+                                    configuration[activeRoot].rootPath,
+                                  )
+                                : '/'
                             }
-                            deleteItem={(e) =>
-                              deleteItem(e, activeRoot, activeItem)
-                            }
+                            onChange={(id, value) => {
+                              onChangeRootPath(activeRoot, {
+                                ...configuration[activeRoot],
+                                rootPath: value?.length ? value : '/',
+                              });
+                            }}
                           />
-                        ) : (
-                          <span>
-                            {intl.formatMessage(messages.emptyActiveItem)}
-                          </span>
-                        )}
-                      </Grid.Column>
-                    </Grid>
+                        </Grid.Column>
+                        <Grid.Column
+                          width={12}
+                          textAlign="right"
+                          className="delete-root-path-container"
+                        >
+                          <Button
+                            icon="trash"
+                            size="mini"
+                            negative
+                            onClick={(e) => deleteRootPath(e, activeRoot)}
+                            id="delete-rootpath"
+                            content={intl.formatMessage(
+                              messages.deleteRootPath,
+                            )}
+                          />
+                        </Grid.Column>
+                      </Grid>
+
+                      <Grid>
+                        <Grid.Column width={4}>
+                          <Header
+                            as="h5"
+                            className="search-sections-items-header"
+                          >
+                            {intl.formatMessage(messages.rootItemsHeader)}
+                          </Header>
+                          <Menu
+                            fluid
+                            vertical
+                            tabular
+                            className="root-items-menu"
+                          >
+                            {configuration[activeRoot].items?.map(
+                              (item, idx) => (
+                                <Menu.Item
+                                  key={`item-${idx}`}
+                                  name={item.title}
+                                  active={activeItem === idx}
+                                  onClick={() => setActiveItem(idx)}
+                                >
+                                  <Button.Group
+                                    vertical
+                                    className="move-buttons"
+                                  >
+                                    <Button
+                                      disabled={idx === 0}
+                                      size="tiny"
+                                      icon={<Icon name="arrow left" />}
+                                      title={intl.formatMessage(
+                                        messages.moveItemUp,
+                                      )}
+                                      onClick={(e) =>
+                                        moveItem(e, activeRoot, idx, 'up')
+                                      }
+                                    />
+                                    <Button
+                                      disabled={
+                                        idx ===
+                                        configuration[activeRoot].items.length -
+                                          1
+                                      }
+                                      size="tiny"
+                                      icon={<Icon name="arrow right" />}
+                                      title={intl.formatMessage(
+                                        messages.moveItemDown,
+                                      )}
+                                      onClick={(e) =>
+                                        moveItem(e, activeRoot, idx, 'down')
+                                      }
+                                    />
+                                  </Button.Group>
+                                  <span>{item.title}</span>
+                                </Menu.Item>
+                              ),
+                            )}
+                            <Menu.Item
+                              name={intl.formatMessage(messages.addItem)}
+                              onClick={(e) => addItem(e, activeRoot)}
+                            >
+                              <Icon name="plus" />
+                            </Menu.Item>
+                          </Menu>
+                        </Grid.Column>
+                        <Grid.Column stretched width={8}>
+                          {activeItem > -1 &&
+                          activeItem <
+                            configuration[activeRoot].items?.length ? (
+                            <SearchSectionsConfigurationForm
+                              id={`${activeRoot}-${activeItem}`}
+                              item={configuration[activeRoot].items[activeItem]}
+                              onChange={(root) =>
+                                onChangeItem(activeRoot, activeItem, root)
+                              }
+                              deleteItem={(e) =>
+                                deleteItem(e, activeRoot, activeItem)
+                              }
+                            />
+                          ) : (
+                            <span className="empty-active-item">
+                              {intl.formatMessage(messages.emptyActiveItem)}
+                            </span>
+                          )}
+                        </Grid.Column>
+                      </Grid>
+                    </>
                   ) : (
-                    <span>
+                    <span className="empty-active-root-path">
                       {intl.formatMessage(messages.emptyActiveRootPath)}
                     </span>
                   )}

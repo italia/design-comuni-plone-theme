@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-02-22T16:47:55.313Z\n"
+"POT-Creation-Date: 2021-02-23T09:07:13.230Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1913,11 +1913,6 @@ msgid "searchsectionswidget-additem"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
-# defaultMessage: Delete
-msgid "searchsectionswidget-delete-button"
-msgstr ""
-
-#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 # defaultMessage: Delete path
 msgid "searchsectionswidget-delete-rootpath"
 msgstr ""
@@ -1928,7 +1923,7 @@ msgid "searchsectionswidget-deleteitem-button"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
-# defaultMessage: Select a section
+# defaultMessage: Add a new section, or select one.
 msgid "searchsectionswidget-emptyActiveItem"
 msgstr ""
 

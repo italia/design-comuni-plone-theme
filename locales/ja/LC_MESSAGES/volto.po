@@ -1557,10 +1557,6 @@ msgid "searchsectionswidget-additem"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
-msgid "searchsectionswidget-delete-button"
-msgstr ""
-
-#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-delete-rootpath"
 msgstr ""
 
