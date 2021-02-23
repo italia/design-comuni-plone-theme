@@ -96,15 +96,15 @@ const PageView = ({ content, token, location, history }) => {
   else {
     const getViewByLayout = () => views.layoutViews[layout] || null;
     const Layout = getViewByLayout();
-    if (Layout)
-      return (
-        <Layout
-          content={content}
-          location={location}
-          token={token}
-          history={history}
-        />
-      );
+
+    return Layout ? (
+      <Layout
+        content={content}
+        location={location}
+        token={token}
+        history={history}
+      />
+    ) : null;
   }
 };
 
