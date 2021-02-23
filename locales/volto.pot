@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-02-23T11:17:36.676Z\n"
+"POT-Creation-Date: 2021-02-23T17:05:51.321Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -529,7 +529,6 @@ msgstr ""
 msgid "always_show_image"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Amministrazione
@@ -911,14 +910,12 @@ msgstr ""
 msgid "dirigente"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 # defaultMessage: Documenti e dati
 msgid "documenti"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Documenti e dati
@@ -1494,7 +1491,6 @@ msgstr ""
 msgid "notizie_in_evidenza"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Novità
@@ -1987,7 +1983,6 @@ msgstr ""
 msgid "service_not_active"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Servizi

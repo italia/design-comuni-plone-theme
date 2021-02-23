@@ -85,26 +85,7 @@ const messages = defineMessages({
     id: 'allFilters',
     defaultMessage: 'Tutto',
   },
-  amministrazione: {
-    id: 'amministrazione',
-    defaultMessage: 'Amministrazione',
-  },
-  servizi: {
-    id: 'servizi',
-    defaultMessage: 'Servizi',
-  },
-  novita: {
-    id: 'novita',
-    defaultMessage: 'Novità',
-  },
-  documenti: {
-    id: 'documenti',
-    defaultMessage: 'Documenti e dati',
-  },
-  'documenti-e-dati': {
-    id: 'documenti-e-dati',
-    defaultMessage: 'Documenti e dati',
-  },
+
   allTopics: {
     id: 'allTopics',
     defaultMessage: 'Tutti gli argomenti',
@@ -184,7 +165,9 @@ const SearchModal = ({ closeModal, show }) => {
 
   useEffect(() => {
     if (Object.keys(searchFilters?.sections ?? {}).length > 0) {
-      setSections(parseFetchedSections(searchFilters.sections, location));
+      let pfs = parseFetchedSections(searchFilters.sections, location);
+
+      setSections(pfs);
     }
 
     if (searchFilters?.topics?.length > 0) {
@@ -205,16 +188,20 @@ const SearchModal = ({ closeModal, show }) => {
 
   const resetSections = () => {
     setSections((prevSections) =>
-      mapValues(prevSections, (group) =>
-        updateGroupCheckedStatus(group, false),
-      ),
+      mapValues(prevSections, (group) => ({
+        ...group,
+        items: updateGroupCheckedStatus(group, false),
+      })),
     );
   };
 
   const setGroupChecked = (groupId, checked) => {
     setSections((prevSections) => ({
       ...prevSections,
-      [groupId]: updateGroupCheckedStatus(prevSections[groupId], checked),
+      [groupId]: {
+        ...prevSections[groupId],
+        items: updateGroupCheckedStatus(prevSections[groupId], checked),
+      },
     }));
   };
 
@@ -223,9 +210,12 @@ const SearchModal = ({ closeModal, show }) => {
       ...prevSections,
       [groupId]: {
         ...prevSections[groupId],
-        [filterId]: {
-          ...prevSections[groupId][filterId],
-          value: checked,
+        items: {
+          ...prevSections[groupId].items,
+          [filterId]: {
+            ...prevSections[groupId].items[filterId],
+            value: checked,
+          },
         },
       },
     }));
@@ -386,7 +376,7 @@ const SearchModal = ({ closeModal, show }) => {
                         setGroupChecked(groupId, !checkedGroups[groupId])
                       }
                     >
-                      {intl.formatMessage(messages[groupId])}
+                      {sections[groupId].title}
                     </Button>
                   ))}
                   <Button
@@ -617,33 +607,37 @@ const SearchModal = ({ closeModal, show }) => {
                                 )}
                                 widths={['xs', 'sm', 'md', 'lg', 'xl']}
                               >
-                                {intl.formatMessage(messages[groupId])}
+                                {sections[groupId].title}
                               </Label>
                             </FormGroup>
 
-                            {Object.keys(sections[groupId]).map((filterId) => (
-                              <FormGroup check tag="div" key={filterId}>
-                                <Checkbox
-                                  id={`modal-search-${filterId}`}
-                                  checked={sections[groupId][filterId].value}
-                                  onChange={(e) =>
-                                    setSectionFilterChecked(
-                                      groupId,
-                                      filterId,
-                                      e.currentTarget.checked,
-                                    )
-                                  }
-                                />
-                                <Label
-                                  check
-                                  for={`modal-search-${filterId}`}
-                                  tag="label"
-                                  widths={['xs', 'sm', 'md', 'lg', 'xl']}
-                                >
-                                  {sections[groupId][filterId].label}
-                                </Label>
-                              </FormGroup>
-                            ))}
+                            {Object.keys(sections[groupId].items).map(
+                              (filterId) => (
+                                <FormGroup check tag="div" key={filterId}>
+                                  <Checkbox
+                                    id={`modal-search-${filterId}`}
+                                    checked={
+                                      sections[groupId].items[filterId].value
+                                    }
+                                    onChange={(e) =>
+                                      setSectionFilterChecked(
+                                        groupId,
+                                        filterId,
+                                        e.currentTarget.checked,
+                                      )
+                                    }
+                                  />
+                                  <Label
+                                    check
+                                    for={`modal-search-${filterId}`}
+                                    tag="label"
+                                    widths={['xs', 'sm', 'md', 'lg', 'xl']}
+                                  >
+                                    {sections[groupId].items[filterId].label}
+                                  </Label>
+                                </FormGroup>
+                              ),
+                            )}
                           </Col>
                         ))}
                       </Row>

@@ -433,7 +433,6 @@ msgstr "Altri documenti"
 msgid "always_show_image"
 msgstr "Mostra l'immagine per tutti gli elementi"
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "amministrazione"
@@ -742,13 +741,11 @@ msgstr "Dichiarazione dei redditi"
 msgid "dirigente"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "documenti"
 msgstr "Documenti"
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "documenti-e-dati"
@@ -1211,7 +1208,6 @@ msgstr ""
 msgid "notizie_in_evidenza"
 msgstr "Notizie in evidenza"
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "novita"
@@ -1567,7 +1563,7 @@ msgstr "Aggiungi una configurazione per un nuovo percorso, oppure scegline una e
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
 msgid "searchsectionswidget-linkUrl"
-msgstr "Link"
+msgstr "Percorso"
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
 msgid "searchsectionswidget-linkUrl_description"
@@ -1609,7 +1605,6 @@ msgstr "Seleziona un argomento nella barra a lato"
 msgid "service_not_active"
 msgstr "Il servizio non è attivo"
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "servizi"

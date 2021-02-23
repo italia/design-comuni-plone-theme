@@ -75,7 +75,9 @@ const SearchSectionsConfigurationWidget = ({
 }) => {
   const intl = useIntl();
   const [configuration, setConfiguration] = useState(
-    value ? JSON.parse(value) : defaultConfiguration,
+    value?.length > 0 && value !== '""'
+      ? JSON.parse(value)
+      : defaultConfiguration,
   );
 
   const [activeRoot, setActiveRoot] = useState(0);
