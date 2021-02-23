@@ -44,19 +44,12 @@ export default function SearchSections({
   toggleGroups = false,
 }) {
   const intl = useIntl();
-  // const [sections, setSections] = useState({
-  //   amministrazione: {},
-  //   servizi: {},
-  //   novita: {},
-  //   'documenti-e-dati': {},
-  // });
 
-  const [collapse, setCollapse] = useState({
-    amministrazione: toggleGroups,
-    servizi: toggleGroups,
-    novita: toggleGroups,
-    'documenti-e-dati': toggleGroups,
+  let defaultCollapse = {};
+  Object.keys(sections).forEach((k) => {
+    defaultCollapse[k] = toggleGroups;
   });
+  const [collapse, setCollapse] = useState(defaultCollapse);
 
   const setSectionFilterChecked = (groupId, filterId, checked) => {
     setSections((prevSections) => ({
@@ -80,16 +73,6 @@ export default function SearchSections({
       ),
     }));
   };
-
-  // useEffect(() => {
-  //   if (Object.keys(searchFilters ?? {}).length > 0) {
-  //     setSections(searchFilters);
-  //   }
-  // }, [searchFilters]);
-
-  // useEffect(() => {
-  //   onChange(sections);
-  // }, [sections]);
 
   const toggleCollapseGroup = (groupId) => {
     setCollapse((prevCollapse) => ({

@@ -30,12 +30,8 @@
     padding-left: 0.75rem;
   }
 
-  .ui.menu.root-items-menu .item span {
-    margin-left: 0.5rem;
-  }
-
   .ui.menu.root-items-menu .item button.ui.button {
-    padding: 0.5rem;
+    padding: 0.3rem;
     text-align: center;
   }
 
@@ -43,6 +39,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    font-size: 0.8rem;
     transform: rotate(90deg);
   }
 
@@ -55,6 +52,7 @@
 
   .ui.menu.root-items-menu .item span {
     padding-left: 0.5rem;
+    font-size: 0.8rem;
   }
 
   .field.text .ui.icon.input + button {

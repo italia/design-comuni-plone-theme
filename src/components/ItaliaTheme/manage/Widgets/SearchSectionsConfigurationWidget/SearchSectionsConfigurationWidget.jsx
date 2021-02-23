@@ -58,12 +58,12 @@ const defaultSectionItem = (title) => ({
   linkUrl: null,
 });
 
-const defaultRootMenu = (title) => ({
+const defaultRootConfiguration = (title) => ({
   rootPath: '/',
   items: [defaultSectionItem(title)],
 });
 
-const defaultConfiguration = [defaultRootMenu];
+const defaultConfiguration = [defaultRootConfiguration()];
 
 const SearchSectionsConfigurationWidget = ({
   value,
@@ -75,7 +75,7 @@ const SearchSectionsConfigurationWidget = ({
 }) => {
   const intl = useIntl();
   const [configuration, setConfiguration] = useState(
-    value ? value : defaultConfiguration,
+    value ? JSON.parse(value) : defaultConfiguration,
   );
 
   const [activeRoot, setActiveRoot] = useState(0);
@@ -93,7 +93,7 @@ const SearchSectionsConfigurationWidget = ({
     let newRootConfiguration = [
       ...configuration,
       {
-        ...defaultRootMenu(`Tab ${itemsNumber}`),
+        ...defaultRootConfiguration(`Tab ${itemsNumber}`),
         rootPath: rootItem,
       },
     ];
@@ -175,13 +175,13 @@ const SearchSectionsConfigurationWidget = ({
       <Form.Field inline id={id}>
         <Grid>
           <Grid.Row>
-            <Grid.Column width="12">
+            <Grid.Column width="4">
               <div className="wrapper">
                 <label htmlFor="search-sections-configuration">{title}</label>
               </div>
             </Grid.Column>
             <Grid.Column
-              width="12"
+              width="8"
               className="search-sections-configuration-widget"
             >
               <div id="search-sections-configuration">

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import { useLocation } from 'react-router-dom';
@@ -164,21 +165,35 @@ const SearchModal = ({ closeModal, show }) => {
   const [searchableText, setSearchableText] = useState(
     qs.parse(location.search)?.SearchableText ?? '',
   );
-  const [sections, setSections] = useState({
-    amministrazione: {},
-    servizi: {},
-    novita: {},
-    'documenti-e-dati': {},
-  });
+  const [sections, setSections] = useState({});
   const [topics, setTopics] = useState({});
   const [options, setOptions] = useState({ ...defaultOptions });
   const selectedTopics = fromPairs(toPairs(topics).filter((t) => t[1].value));
-  const checkedGroups = {
-    amministrazione: isGroupChecked(sections.amministrazione),
-    servizi: isGroupChecked(sections.servizi),
-    novita: isGroupChecked(sections.novita),
-    'documenti-e-dati': isGroupChecked(sections['documenti-e-dati']),
-  };
+
+  let checkedGroups = {};
+  Object.keys(sections).forEach((k) => {
+    checkedGroups[k] = isGroupChecked(sections[k]);
+  });
+
+  const searchFilters = useSelector((state) => state.searchFilters.result);
+
+  useEffect(() => {
+    if (!searchFilters || Object.keys(searchFilters).length === 0)
+      dispatch(getSearchFilters());
+  }, []);
+
+  useEffect(() => {
+    if (Object.keys(searchFilters?.sections ?? {}).length > 0) {
+      setSections(parseFetchedSections(searchFilters.sections, location));
+    }
+
+    if (searchFilters?.topics?.length > 0) {
+      setTopics(parseFetchedTopics(searchFilters.topics, location));
+    }
+
+    setOptions(parseFetchedOptions(defaultOptions, location));
+  }, [searchFilters]);
+
   // The "all" filter is checked if all groups are unchecked
   const allSectionsChecked = Object.keys(checkedGroups).reduce(
     (checked, groupId) => checked && !checkedGroups[groupId],
@@ -256,25 +271,6 @@ const SearchModal = ({ closeModal, show }) => {
           getSearchParamsURL(searchableText, sections, topics, options);
     }
   };
-
-  const searchFilters = useSelector((state) => state.searchFilters.result);
-
-  useEffect(() => {
-    if (!searchFilters || Object.keys(searchFilters).length === 0)
-      dispatch(getSearchFilters());
-  }, []);
-
-  useEffect(() => {
-    if (Object.keys(searchFilters?.sections ?? {}).length > 0) {
-      setSections(parseFetchedSections(searchFilters.sections, location));
-    }
-
-    if (searchFilters?.topics?.length > 0) {
-      setTopics(parseFetchedTopics(searchFilters.topics, location));
-    }
-
-    setOptions(parseFetchedOptions(defaultOptions, location));
-  }, [searchFilters]);
 
   return (
     <Modal

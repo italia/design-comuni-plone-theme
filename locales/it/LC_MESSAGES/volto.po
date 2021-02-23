@@ -1539,7 +1539,7 @@ msgstr "Dove cercare"
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidge-items-header"
-msgstr "Sezioni di ricerca per il percorso"
+msgstr "Sezioni"
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-add-rootpath"
@@ -1588,30 +1588,6 @@ msgstr "Percorso"
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
 msgid "searchsectionswidget-title"
 msgstr "Titolo"
-
-#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SecondaryMenuConfigurationForm
-msgid "secondarymenu-deletemenuitem-button"
-msgstr "Rimuovi elemento"
-
-#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SecondaryMenuConfigurationForm
-msgid "secondarymenu-inevidence"
-msgstr "In evidenza"
-
-#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SecondaryMenuConfigurationForm
-msgid "secondarymenu-linkUrl"
-msgstr "Link"
-
-#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SecondaryMenuConfigurationForm
-msgid "secondarymenu-linkUrl_description"
-msgstr "Inserisci un url esterno, oppure seleziona un link interno cliccando il bottone qui a destra"
-
-#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SecondaryMenuConfigurationForm
-msgid "secondarymenu-title"
-msgstr "Titolo"
-
-#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SecondaryMenuConfigurationForm
-msgid "secondarymenu-visible"
-msgstr "Visibile"
 
 #: components/ItaliaTheme/Header/SearchModal
 msgid "sections"

@@ -1608,30 +1608,6 @@ msgstr ""
 msgid "searchsectionswidget-title"
 msgstr ""
 
-#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SecondaryMenuConfigurationForm
-msgid "secondarymenu-deletemenuitem-button"
-msgstr ""
-
-#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SecondaryMenuConfigurationForm
-msgid "secondarymenu-inevidence"
-msgstr ""
-
-#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SecondaryMenuConfigurationForm
-msgid "secondarymenu-linkUrl"
-msgstr ""
-
-#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SecondaryMenuConfigurationForm
-msgid "secondarymenu-linkUrl_description"
-msgstr ""
-
-#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SecondaryMenuConfigurationForm
-msgid "secondarymenu-title"
-msgstr ""
-
-#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SecondaryMenuConfigurationForm
-msgid "secondarymenu-visible"
-msgstr ""
-
 #: components/ItaliaTheme/Header/SearchModal
 msgid "sections"
 msgstr ""
