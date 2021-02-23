@@ -9,8 +9,8 @@ import serialize from 'serialize-javascript';
 import { join } from 'lodash';
 import { BodyClass } from '@plone/volto/helpers/';
 import { runtimeConfig } from '@plone/volto/runtime_config';
-import { Skiplink, SkiplinkItem } from 'design-react-kit/dist/design-react-kit';
 import { settings } from '~/config';
+import Skiplinks from '@italia/components/ItaliaTheme/Skiplinks/Skiplinks';
 
 const CRITICAL_CSS_TEMPLATE = `function alter() {
   document.querySelectorAll("head link[rel='prefetch']").forEach(function(el) { el.rel = 'stylesheet'});
@@ -145,17 +145,7 @@ class Html extends Component {
           ) : undefined}
         </head>
         <body className={bodyClass}>
-          <Skiplink tag="div">
-            <SkiplinkItem href="#view" tag="a">
-              Skip to main content
-            </SkiplinkItem>
-            <SkiplinkItem href="#navigation" tag="a">
-              Skip to navigation
-            </SkiplinkItem>
-            <SkiplinkItem href="#footer" tag="a">
-              Skip to footer
-            </SkiplinkItem>
-          </Skiplink>
+          <Skiplinks />
           <div role="navigation" aria-label="Toolbar" id="toolbar" />
           <div id="main" dangerouslySetInnerHTML={{ __html: markup }} />
           <div id="sidebar" />

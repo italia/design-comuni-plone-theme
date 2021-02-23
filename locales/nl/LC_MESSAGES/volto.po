@@ -1640,6 +1640,18 @@ msgstr ""
 msgid "situazione_patrimoniale"
 msgstr ""
 
+#: components/ItaliaTheme/Skiplinks/Skiplinks
+msgid "skiplink-footer"
+msgstr ""
+
+#: components/ItaliaTheme/Skiplinks/Skiplinks
+msgid "skiplink-main-content"
+msgstr ""
+
+#: components/ItaliaTheme/Skiplinks/Skiplinks
+msgid "skiplink-navigation"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "spese_elettorali"
 msgstr ""

@@ -1621,6 +1621,18 @@ msgstr "Qui puoi selezionare, per il template 'Card semplice', un aspetto divers
 msgid "situazione_patrimoniale"
 msgstr "Situazione patrimoniale"
 
+#: components/ItaliaTheme/Skiplinks/Skiplinks
+msgid "skiplink-footer"
+msgstr "Vai al footer"
+
+#: components/ItaliaTheme/Skiplinks/Skiplinks
+msgid "skiplink-main-content"
+msgstr "Vai al contenuto"
+
+#: components/ItaliaTheme/Skiplinks/Skiplinks
+msgid "skiplink-navigation"
+msgstr "Vai alla navigazione"
+
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "spese_elettorali"
 msgstr "Spese elettorali"
