@@ -452,7 +452,6 @@ msgstr ""
 msgid "always_show_image"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "amministrazione"
@@ -761,13 +760,11 @@ msgstr ""
 msgid "dirigente"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "documenti"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "documenti-e-dati"
@@ -1234,7 +1231,6 @@ msgstr ""
 msgid "notizie_in_evidenza"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "novita"
@@ -1632,7 +1628,6 @@ msgstr "Seleziona un argomento nella barra a lato"
 msgid "service_not_active"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "servizi"

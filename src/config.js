@@ -104,6 +104,7 @@ import { DatetimeWidget } from '@plone/volto/config/Widgets';
 
 import { MultilingualWidget } from '@italia/addons/volto-multilingual-widget';
 import IconWidget from '@italia/components/ItaliaTheme/manage/Widgets/IconWidget';
+import SearchSectionsConfigurationWidget from '@italia/components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget';
 import { defaultIconWidgetOptions } from '@italia/helpers/index';
 //import TinymceWidget from '@italia/components/ItaliaTheme/manage/Widgets/TinymceWidget';
 
@@ -553,6 +554,7 @@ export const widgets = {
       <DatetimeWidget {...props} dateOnly={true} />
     ),
     data_insediamento: (props) => <DatetimeWidget {...props} dateOnly={true} />,
+    search_sections: SearchSectionsConfigurationWidget,
   },
   widget: {
     ...config.widgets.widget,

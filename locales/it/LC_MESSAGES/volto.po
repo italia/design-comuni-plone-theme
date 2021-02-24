@@ -433,7 +433,6 @@ msgstr "Altri documenti"
 msgid "always_show_image"
 msgstr "Mostra l'immagine per tutti gli elementi"
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "amministrazione"
@@ -742,13 +741,11 @@ msgstr "Dichiarazione dei redditi"
 msgid "dirigente"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "documenti"
 msgstr "Documenti"
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "documenti-e-dati"
@@ -1215,7 +1212,6 @@ msgstr ""
 msgid "notizie_in_evidenza"
 msgstr "Notizie in evidenza"
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "novita"
@@ -1591,7 +1587,7 @@ msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
 msgid "searchsectionswidget-title"
-msgstr ""
+msgstr "Sezioni"
 
 #: components/ItaliaTheme/Header/SearchModal
 msgid "sections"
@@ -1613,7 +1609,6 @@ msgstr "Seleziona un argomento nella barra a lato"
 msgid "service_not_active"
 msgstr "Il servizio non è attivo"
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "servizi"
@@ -1647,7 +1642,7 @@ msgstr "Mostra l'icona"
 
 #: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
 msgid "show_map_full_width"
-msgstr ""
+msgstr "Mostra la mappa a tutta larghezza"
 
 #: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
 msgid "show_only_first_ribbon"

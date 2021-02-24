@@ -149,15 +149,9 @@ const Search = () => {
   const [searchableText, setSearchableText] = useState(
     qs.parse(location.search)?.SearchableText ?? '',
   );
-  const [sections, setSections] = useState({
-    amministrazione: {},
-    servizi: {},
-    novita: {},
-    'documenti-e-dati': {},
-  });
 
+  const [sections, setSections] = useState({});
   const [topics, setTopics] = useState({});
-
   const [options, setOptions] = useState({
     ...SearchUtils.defaultOptions,
     ...parseFetchedOptions({}, location),
