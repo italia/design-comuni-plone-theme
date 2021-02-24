@@ -36,8 +36,8 @@ const renderImage = (image, showImage) =>
         <figure className="img-wrapper">
           <img
             src={`data:${image['content-type']};${image.encoding},${image.data}`}
-            alt="imgalt"
-            title="imgtitle"
+            alt=""
+            aria-hidden="true"
             loading="lazy"
           />
         </figure>

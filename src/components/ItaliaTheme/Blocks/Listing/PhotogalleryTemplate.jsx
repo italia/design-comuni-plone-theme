@@ -112,7 +112,8 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
                         <Image
                           className="img-fluid"
                           image={item.image}
-                          alt={item.title}
+                          alt=""
+                          aria-hidden="true"
                         />
                       )}
                       {getCaption(item) && (

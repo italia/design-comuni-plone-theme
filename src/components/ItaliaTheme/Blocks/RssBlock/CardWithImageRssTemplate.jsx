@@ -52,9 +52,9 @@ const CardWithImageRssTemplate = ({ items = [], isEditMode, data = {} }) => {
                       <div className="img-responsive img-responsive-panoramic">
                         <figure className="img-wrapper">
                           <img
+                            aria-hidden="true"
                             alt={item.title}
                             src={item.enclosure.url}
-                            title={item.title}
                             loading="lazy"
                           />
                         </figure>
