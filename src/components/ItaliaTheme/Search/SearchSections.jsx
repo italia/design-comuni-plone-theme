@@ -33,29 +33,6 @@ export default function SearchSections({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sections]);
 
-  const setSectionFilterChecked = (groupId, filterId, checked) => {
-    setSections((prevSections) => ({
-      ...prevSections,
-      [groupId]: {
-        ...prevSections[groupId],
-        [filterId]: {
-          ...prevSections[groupId][filterId],
-          value: checked,
-        },
-      },
-    }));
-  };
-
-  const setGroupChecked = (groupId, checked) => {
-    setSections((prevSections) => ({
-      ...prevSections,
-      [groupId]: SearchUtils.updateGroupCheckedStatus(
-        prevSections[groupId],
-        checked,
-      ),
-    }));
-  };
-
   const toggleCollapseGroup = (groupId) => {
     setCollapse((prevCollapse) => ({
       ...prevCollapse,
@@ -76,7 +53,11 @@ export default function SearchSections({
               )}
               checked={SearchUtils.isGroupChecked(sections[groupId])}
               onChange={(e) =>
-                setGroupChecked(groupId, e.currentTarget.checked)
+                SearchUtils.setGroupChecked(
+                  groupId,
+                  e.currentTarget.checked,
+                  setSections,
+                )
               }
             />
 
@@ -97,7 +78,7 @@ export default function SearchSections({
               {sections[groupId].title}
             </Label>
 
-            {toggleGroups && (
+            {toggleGroups && sections[groupId]?.items && (
               <a
                 className="float-right"
                 href={`#section${groupId}Collapse`}
@@ -118,40 +99,42 @@ export default function SearchSections({
               </a>
             )}
           </FormGroup>
-
-          <Collapse
-            isOpen={collapse[groupId] !== undefined && !collapse[groupId]}
-            id={`section${groupId}Collapse`}
-          >
-            {Object.keys(sections[groupId].items).map((filterId) => (
-              <FormGroup
-                check
-                tag="div"
-                key={filterId}
-                className={cx({ 'pl-4': toggleGroups })}
-              >
-                <Checkbox
-                  id={filterId}
-                  checked={sections[groupId].items[filterId].value}
-                  onChange={(e) =>
-                    setSectionFilterChecked(
-                      groupId,
-                      filterId,
-                      e.currentTarget.checked,
-                    )
-                  }
-                />
-                <Label
+          {sections[groupId]?.items && (
+            <Collapse
+              isOpen={collapse[groupId] !== undefined && !collapse[groupId]}
+              id={`section${groupId}Collapse`}
+            >
+              {Object.keys(sections[groupId].items).map((filterId) => (
+                <FormGroup
                   check
-                  for={filterId}
-                  tag="label"
-                  widths={['xs', 'sm', 'md', 'lg', 'xl']}
+                  tag="div"
+                  key={filterId}
+                  className={cx({ 'pl-4': toggleGroups })}
                 >
-                  {sections[groupId].items[filterId].label}
-                </Label>
-              </FormGroup>
-            ))}
-          </Collapse>
+                  <Checkbox
+                    id={filterId}
+                    checked={sections[groupId].items[filterId].value}
+                    onChange={(e) =>
+                      SearchUtils.setSectionFilterChecked(
+                        groupId,
+                        filterId,
+                        e.currentTarget.checked,
+                        setSections,
+                      )
+                    }
+                  />
+                  <Label
+                    check
+                    for={filterId}
+                    tag="label"
+                    widths={['xs', 'sm', 'md', 'lg', 'xl']}
+                  >
+                    {sections[groupId].items[filterId].label}
+                  </Label>
+                </FormGroup>
+              ))}
+            </Collapse>
+          )}
         </Col>
       ))}
     </>

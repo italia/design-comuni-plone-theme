@@ -42,6 +42,8 @@ const {
   parseFetchedTopics,
   parseFetchedOptions,
   getSearchParamsURL,
+  setSectionFilterChecked,
+  setGroupChecked,
 } = SearchUtils;
 
 const messages = defineMessages({
@@ -193,32 +195,6 @@ const SearchModal = ({ closeModal, show }) => {
         items: updateGroupCheckedStatus(group, false),
       })),
     );
-  };
-
-  const setGroupChecked = (groupId, checked) => {
-    setSections((prevSections) => ({
-      ...prevSections,
-      [groupId]: {
-        ...prevSections[groupId],
-        items: updateGroupCheckedStatus(prevSections[groupId], checked),
-      },
-    }));
-  };
-
-  const setSectionFilterChecked = (groupId, filterId, checked) => {
-    setSections((prevSections) => ({
-      ...prevSections,
-      [groupId]: {
-        ...prevSections[groupId],
-        items: {
-          ...prevSections[groupId].items,
-          [filterId]: {
-            ...prevSections[groupId].items[filterId],
-            value: checked,
-          },
-        },
-      },
-    }));
   };
 
   const resetTopics = () => {
@@ -373,7 +349,11 @@ const SearchModal = ({ closeModal, show }) => {
                       size="sm"
                       className="mr-2 mb-2"
                       onClick={() =>
-                        setGroupChecked(groupId, !checkedGroups[groupId])
+                        setGroupChecked(
+                          groupId,
+                          !checkedGroups[groupId],
+                          setSections,
+                        )
                       }
                     >
                       {sections[groupId].title}
@@ -589,6 +569,7 @@ const SearchModal = ({ closeModal, show }) => {
                                   setGroupChecked(
                                     groupId,
                                     e.currentTarget.checked,
+                                    setSections,
                                   )
                                 }
                               />
@@ -624,6 +605,7 @@ const SearchModal = ({ closeModal, show }) => {
                                         groupId,
                                         filterId,
                                         e.currentTarget.checked,
+                                        setSections,
                                       )
                                     }
                                   />

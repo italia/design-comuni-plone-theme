@@ -32,6 +32,32 @@ const updateGroupCheckedStatus = (group, checked) =>
     value: checked,
   }));
 
+const setSectionFilterChecked = (groupId, filterId, checked, setSections) => {
+  setSections((prevSections) => ({
+    ...prevSections,
+    [groupId]: {
+      ...prevSections[groupId],
+      items: {
+        ...prevSections[groupId].items,
+        [filterId]: {
+          ...prevSections[groupId].items[filterId],
+          value: checked,
+        },
+      },
+    },
+  }));
+};
+
+const setGroupChecked = (groupId, checked, setSections) => {
+  setSections((prevSections) => ({
+    ...prevSections,
+    [groupId]: {
+      ...prevSections[groupId],
+      items: updateGroupCheckedStatus(prevSections[groupId], checked),
+    },
+  }));
+};
+
 const parseFetchedSections = (fetchedSections, location) => {
   const qsSections = qs.parse(location?.search ?? '')['path.query'] ?? [];
 
@@ -49,15 +75,17 @@ const parseFetchedSections = (fetchedSections, location) => {
     acc[id] = {
       path: flattenToAppURL(sections[sec]['@id']),
       title: sections[sec].title,
-      items: sectionItems.reduce((itemsAcc, subSec) => {
-        let subSectionUrl = flattenToAppURL(subSec['@id']);
-        itemsAcc[subSectionUrl] = {
-          value: qsSections.indexOf(subSectionUrl) > -1,
-          label: subSec.title,
-        };
+      items:
+        sectionItems &&
+        sectionItems.reduce((itemsAcc, subSec) => {
+          let subSectionUrl = flattenToAppURL(subSec['@id']);
+          itemsAcc[subSectionUrl] = {
+            value: qsSections.indexOf(subSectionUrl) > -1,
+            label: subSec.title,
+          };
 
-        return itemsAcc;
-      }, {}),
+          return itemsAcc;
+        }, {}),
     };
 
     return acc;
@@ -129,10 +157,12 @@ const getSearchParamsURL = (
   customPath,
 ) => {
   const activeSections = Object.keys(sections).reduce((secAcc, secKey) => {
-    const sec = Object.keys(sections[secKey].items).reduce((acc, section) => {
-      if (sections[secKey].items[section].value) return [...acc, section];
-      return acc;
-    }, []);
+    const sec =
+      sections[secKey].items &&
+      Object.keys(sections[secKey].items).reduce((acc, section) => {
+        if (sections[secKey].items[section].value) return [...acc, section];
+        return acc;
+      }, []);
 
     if (sec?.length > 0) return [...secAcc, ...sec];
     return secAcc;
@@ -196,4 +226,6 @@ export default {
   parseFetchedTopics,
   parseFetchedOptions,
   getSearchParamsURL,
+  setSectionFilterChecked,
+  setGroupChecked,
 };
