@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-02-18T14:49:03.521Z\n"
+"POT-Creation-Date: 2021-02-23T17:05:51.321Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -529,7 +529,6 @@ msgstr ""
 msgid "always_show_image"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Amministrazione
@@ -911,14 +910,12 @@ msgstr ""
 msgid "dirigente"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 # defaultMessage: Documenti e dati
 msgid "documenti"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Documenti e dati
@@ -1494,7 +1491,6 @@ msgstr ""
 msgid "notizie_in_evidenza"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Novità
@@ -1897,6 +1893,71 @@ msgstr ""
 msgid "search_service_block_sections"
 msgstr ""
 
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+# defaultMessage: Sections
+msgid "searchsectionswidge-items-header"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+# defaultMessage: Add path
+msgid "searchsectionswidget-add-rootpath"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+# defaultMessage: Add item
+msgid "searchsectionswidget-additem"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+# defaultMessage: Delete path
+msgid "searchsectionswidget-delete-rootpath"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
+# defaultMessage: Delete section item
+msgid "searchsectionswidget-deleteitem-button"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+# defaultMessage: Add a new section, or select one.
+msgid "searchsectionswidget-emptyActiveItem"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+# defaultMessage: Select a path
+msgid "searchsectionswidget-emptyActiveRootPath"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
+# defaultMessage: Link
+msgid "searchsectionswidget-linkUrl"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
+# defaultMessage: Type an external url, or select an internal url clicking on the right button
+msgid "searchsectionswidget-linkUrl_description"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+# defaultMessage: Move item down
+msgid "searchsectionswidget-move-item-down"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+# defaultMessage: Move item up
+msgid "searchsectionswidget-move-item-up"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+# defaultMessage: Root path
+msgid "searchsectionswidget-rootpath"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
+# defaultMessage: Title
+msgid "searchsectionswidget-title"
+msgstr ""
+
 #: components/ItaliaTheme/Header/SearchModal
 # defaultMessage: Sezioni
 msgid "sections"
@@ -1922,7 +1983,6 @@ msgstr ""
 msgid "service_not_active"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Servizi
