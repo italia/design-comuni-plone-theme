@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import { useLocation } from 'react-router-dom';
@@ -41,6 +42,8 @@ const {
   parseFetchedTopics,
   parseFetchedOptions,
   getSearchParamsURL,
+  setSectionFilterChecked,
+  setGroupChecked,
 } = SearchUtils;
 
 const messages = defineMessages({
@@ -84,26 +87,7 @@ const messages = defineMessages({
     id: 'allFilters',
     defaultMessage: 'Tutto',
   },
-  amministrazione: {
-    id: 'amministrazione',
-    defaultMessage: 'Amministrazione',
-  },
-  servizi: {
-    id: 'servizi',
-    defaultMessage: 'Servizi',
-  },
-  novita: {
-    id: 'novita',
-    defaultMessage: 'Novità',
-  },
-  documenti: {
-    id: 'documenti',
-    defaultMessage: 'Documenti e dati',
-  },
-  'documenti-e-dati': {
-    id: 'documenti-e-dati',
-    defaultMessage: 'Documenti e dati',
-  },
+
   allTopics: {
     id: 'allTopics',
     defaultMessage: 'Tutti gli argomenti',
@@ -164,21 +148,37 @@ const SearchModal = ({ closeModal, show }) => {
   const [searchableText, setSearchableText] = useState(
     qs.parse(location.search)?.SearchableText ?? '',
   );
-  const [sections, setSections] = useState({
-    amministrazione: {},
-    servizi: {},
-    novita: {},
-    'documenti-e-dati': {},
-  });
+  const [sections, setSections] = useState({});
   const [topics, setTopics] = useState({});
   const [options, setOptions] = useState({ ...defaultOptions });
   const selectedTopics = fromPairs(toPairs(topics).filter((t) => t[1].value));
-  const checkedGroups = {
-    amministrazione: isGroupChecked(sections.amministrazione),
-    servizi: isGroupChecked(sections.servizi),
-    novita: isGroupChecked(sections.novita),
-    'documenti-e-dati': isGroupChecked(sections['documenti-e-dati']),
-  };
+
+  let checkedGroups = {};
+  Object.keys(sections).forEach((k) => {
+    checkedGroups[k] = isGroupChecked(sections[k]);
+  });
+
+  const searchFilters = useSelector((state) => state.searchFilters.result);
+
+  useEffect(() => {
+    if (!searchFilters || Object.keys(searchFilters).length === 0)
+      dispatch(getSearchFilters());
+  }, []);
+
+  useEffect(() => {
+    if (Object.keys(searchFilters?.sections ?? {}).length > 0) {
+      let pfs = parseFetchedSections(searchFilters.sections, location);
+
+      setSections(pfs);
+    }
+
+    if (searchFilters?.topics?.length > 0) {
+      setTopics(parseFetchedTopics(searchFilters.topics, location));
+    }
+
+    setOptions(parseFetchedOptions(defaultOptions, location));
+  }, [searchFilters]);
+
   // The "all" filter is checked if all groups are unchecked
   const allSectionsChecked = Object.keys(checkedGroups).reduce(
     (checked, groupId) => checked && !checkedGroups[groupId],
@@ -190,30 +190,11 @@ const SearchModal = ({ closeModal, show }) => {
 
   const resetSections = () => {
     setSections((prevSections) =>
-      mapValues(prevSections, (group) =>
-        updateGroupCheckedStatus(group, false),
-      ),
+      mapValues(prevSections, (group) => ({
+        ...group,
+        items: updateGroupCheckedStatus(group, false),
+      })),
     );
-  };
-
-  const setGroupChecked = (groupId, checked) => {
-    setSections((prevSections) => ({
-      ...prevSections,
-      [groupId]: updateGroupCheckedStatus(prevSections[groupId], checked),
-    }));
-  };
-
-  const setSectionFilterChecked = (groupId, filterId, checked) => {
-    setSections((prevSections) => ({
-      ...prevSections,
-      [groupId]: {
-        ...prevSections[groupId],
-        [filterId]: {
-          ...prevSections[groupId][filterId],
-          value: checked,
-        },
-      },
-    }));
   };
 
   const resetTopics = () => {
@@ -256,25 +237,6 @@ const SearchModal = ({ closeModal, show }) => {
           getSearchParamsURL(searchableText, sections, topics, options);
     }
   };
-
-  const searchFilters = useSelector((state) => state.searchFilters.result);
-
-  useEffect(() => {
-    if (!searchFilters || Object.keys(searchFilters).length === 0)
-      dispatch(getSearchFilters());
-  }, []);
-
-  useEffect(() => {
-    if (Object.keys(searchFilters?.sections ?? {}).length > 0) {
-      setSections(parseFetchedSections(searchFilters.sections, location));
-    }
-
-    if (searchFilters?.topics?.length > 0) {
-      setTopics(parseFetchedTopics(searchFilters.topics, location));
-    }
-
-    setOptions(parseFetchedOptions(defaultOptions, location));
-  }, [searchFilters]);
 
   return (
     <Modal
@@ -387,10 +349,14 @@ const SearchModal = ({ closeModal, show }) => {
                       size="sm"
                       className="mr-2 mb-2"
                       onClick={() =>
-                        setGroupChecked(groupId, !checkedGroups[groupId])
+                        setGroupChecked(
+                          groupId,
+                          !checkedGroups[groupId],
+                          setSections,
+                        )
                       }
                     >
-                      {intl.formatMessage(messages[groupId])}
+                      {sections[groupId].title}
                     </Button>
                   ))}
                   <Button
@@ -603,6 +569,7 @@ const SearchModal = ({ closeModal, show }) => {
                                   setGroupChecked(
                                     groupId,
                                     e.currentTarget.checked,
+                                    setSections,
                                   )
                                 }
                               />
@@ -621,33 +588,38 @@ const SearchModal = ({ closeModal, show }) => {
                                 )}
                                 widths={['xs', 'sm', 'md', 'lg', 'xl']}
                               >
-                                {intl.formatMessage(messages[groupId])}
+                                {sections[groupId].title}
                               </Label>
                             </FormGroup>
 
-                            {Object.keys(sections[groupId]).map((filterId) => (
-                              <FormGroup check tag="div" key={filterId}>
-                                <Checkbox
-                                  id={`modal-search-${filterId}`}
-                                  checked={sections[groupId][filterId].value}
-                                  onChange={(e) =>
-                                    setSectionFilterChecked(
-                                      groupId,
-                                      filterId,
-                                      e.currentTarget.checked,
-                                    )
-                                  }
-                                />
-                                <Label
-                                  check
-                                  for={`modal-search-${filterId}`}
-                                  tag="label"
-                                  widths={['xs', 'sm', 'md', 'lg', 'xl']}
-                                >
-                                  {sections[groupId][filterId].label}
-                                </Label>
-                              </FormGroup>
-                            ))}
+                            {Object.keys(sections[groupId].items).map(
+                              (filterId) => (
+                                <FormGroup check tag="div" key={filterId}>
+                                  <Checkbox
+                                    id={`modal-search-${filterId}`}
+                                    checked={
+                                      sections[groupId].items[filterId].value
+                                    }
+                                    onChange={(e) =>
+                                      setSectionFilterChecked(
+                                        groupId,
+                                        filterId,
+                                        e.currentTarget.checked,
+                                        setSections,
+                                      )
+                                    }
+                                  />
+                                  <Label
+                                    check
+                                    for={`modal-search-${filterId}`}
+                                    tag="label"
+                                    widths={['xs', 'sm', 'md', 'lg', 'xl']}
+                                  >
+                                    {sections[groupId].items[filterId].label}
+                                  </Label>
+                                </FormGroup>
+                              ),
+                            )}
                           </Col>
                         ))}
                       </Row>

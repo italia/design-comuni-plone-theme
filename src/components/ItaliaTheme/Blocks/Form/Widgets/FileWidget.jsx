@@ -7,12 +7,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Dimmer, Button } from 'design-react-kit/dist/design-react-kit';
 import { readAsDataURL } from 'promise-file-reader';
-import { injectIntl } from 'react-intl';
-import { Icon } from '@italia/components/ItaliaTheme';
+import { injectIntl, defineMessages, useIntl } from 'react-intl';
 import loadable from '@loadable/component';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { defineMessages, useIntl } from 'react-intl';
 
+import { Icon } from '@italia/components/ItaliaTheme';
+
+const Dropzone = loadable(() => import('react-dropzone'));
 const imageMimetypes = [
   'image/png',
   'image/jpeg',
@@ -21,9 +22,6 @@ const imageMimetypes = [
   'image/gif',
   'image/svg+xml',
 ];
-const Dropzone = loadable(() => import('react-dropzone'), {
-  resolveComponent: (components) => components.Dropzone,
-});
 
 const messages = defineMessages({
   releaseDrag: {
@@ -102,7 +100,7 @@ const FileWidget = (props) => {
 
   return (
     <div className="form-group ">
-      <label for={`field-${id}`} className="active">
+      <label htmlFor={`field-${id}`} className="active">
         {label}
       </label>
       <div className="form-input-file">
@@ -186,8 +184,8 @@ const FileWidget = (props) => {
  * @static
  */
 FileWidget.propTypes = {
-  id: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
+  id: PropTypes.string,
+  label: PropTypes.string,
   description: PropTypes.string,
   required: PropTypes.bool,
   error: PropTypes.arrayOf(PropTypes.string),

@@ -1,6 +1,7 @@
 import mapValues from 'lodash/mapValues';
 import moment from 'moment';
 import qs from 'query-string';
+import { flattenToAppURL } from '@plone/volto/helpers';
 
 const defaultOptions = {
   activeContent: false,
@@ -10,8 +11,8 @@ const defaultOptions = {
 
 // A group is checked if at least one filter is checked
 const isGroupChecked = (group) => {
-  return Object.keys(group || {}).reduce(
-    (checked, filterId) => checked || group[filterId].value,
+  return Object.keys(group.items || {}).reduce(
+    (checked, filterId) => checked || group.items[filterId].value,
     false,
   );
 };
@@ -19,30 +20,73 @@ const isGroupChecked = (group) => {
 // A group is indeterminate if at least one of its filters is checked, but not all of them
 const isGroupIndeterminate = (group, groupIsChecked) =>
   groupIsChecked &&
-  Object.keys(group).reduce(
-    (indet, filterId) => indet || !group[filterId].value,
+  Object.keys(group.items).reduce(
+    (indet, filterId) => indet || !group.items[filterId].value,
     false,
   );
 
 // Given a filters group, set all filters to the given state
 const updateGroupCheckedStatus = (group, checked) =>
-  mapValues(group, (filter) => ({
+  mapValues(group.items, (filter) => ({
     ...filter,
     value: checked,
   }));
 
-const parseFetchedSections = (sections, location) => {
+const setSectionFilterChecked = (groupId, filterId, checked, setSections) => {
+  setSections((prevSections) => ({
+    ...prevSections,
+    [groupId]: {
+      ...prevSections[groupId],
+      items: {
+        ...prevSections[groupId].items,
+        [filterId]: {
+          ...prevSections[groupId].items[filterId],
+          value: checked,
+        },
+      },
+    },
+  }));
+};
+
+const setGroupChecked = (groupId, checked, setSections) => {
+  setSections((prevSections) => ({
+    ...prevSections,
+    [groupId]: {
+      ...prevSections[groupId],
+      items: updateGroupCheckedStatus(prevSections[groupId], checked),
+    },
+  }));
+};
+
+const parseFetchedSections = (fetchedSections, location) => {
   const qsSections = qs.parse(location?.search ?? '')['path.query'] ?? [];
 
-  return Object.keys(sections).reduce((acc, sec) => {
-    acc[sec] = sections[sec].items.reduce((itemsAcc, subSec) => {
-      itemsAcc[subSec.path] = {
-        value: qsSections.indexOf(subSec.path) > -1,
-        label: subSec.title,
-      };
+  const pathname = location?.pathname?.length ? location.pathname : '/';
+  const sectionsConfig = fetchedSections?.filter((rootConfig) =>
+    pathname.match(new RegExp(rootConfig.rootPath)),
+  );
 
-      return itemsAcc;
-    }, {});
+  const sections =
+    sectionsConfig.length > 0 ? sectionsConfig[0].items || [] : [];
+
+  return Object.keys(sections).reduce((acc, sec) => {
+    let id = sections[sec].id;
+    let sectionItems = sections[sec].items;
+    acc[id] = {
+      path: flattenToAppURL(sections[sec]['@id']),
+      title: sections[sec].title,
+      items:
+        sectionItems &&
+        sectionItems.reduce((itemsAcc, subSec) => {
+          let subSectionUrl = flattenToAppURL(subSec['@id']);
+          itemsAcc[subSectionUrl] = {
+            value: qsSections.indexOf(subSectionUrl) > -1,
+            label: subSec.title,
+          };
+
+          return itemsAcc;
+        }, {}),
+    };
 
     return acc;
   }, {});
@@ -94,14 +138,14 @@ const parseFetchedOptions = (options, location) => {
   return opts;
 };
 
-const parseCustomPath = (location) => {
-  const qsOptions = qs.parse(location?.search ?? '');
-  const customPath = null;
-  if (qsOptions['custom_path']) {
-    customPath = qsOptions['custom_path'];
-  }
-  return customPath;
-};
+// const parseCustomPath = (location) => {
+//   const qsOptions = qs.parse(location?.search ?? '');
+//   const customPath = null;
+//   if (qsOptions['custom_path']) {
+//     customPath = qsOptions['custom_path'];
+//   }
+//   return customPath;
+// };
 
 const getSearchParamsURL = (
   searchableText,
@@ -113,10 +157,12 @@ const getSearchParamsURL = (
   customPath,
 ) => {
   const activeSections = Object.keys(sections).reduce((secAcc, secKey) => {
-    const sec = Object.keys(sections[secKey]).reduce((acc, section) => {
-      if (sections[secKey][section].value) return [...acc, section];
-      return acc;
-    }, []);
+    const sec =
+      sections[secKey].items &&
+      Object.keys(sections[secKey].items).reduce((acc, section) => {
+        if (sections[secKey].items[section].value) return [...acc, section];
+        return acc;
+      }, []);
 
     if (sec?.length > 0) return [...secAcc, ...sec];
     return secAcc;
@@ -180,4 +226,6 @@ export default {
   parseFetchedTopics,
   parseFetchedOptions,
   getSearchParamsURL,
+  setSectionFilterChecked,
+  setGroupChecked,
 };

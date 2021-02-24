@@ -452,7 +452,6 @@ msgstr ""
 msgid "always_show_image"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "amministrazione"
@@ -761,13 +760,11 @@ msgstr ""
 msgid "dirigente"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "documenti"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "documenti-e-dati"
@@ -1204,6 +1201,10 @@ msgstr ""
 msgid "modulo_formati_alternativi"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/NewsHome/Body
+msgid "newsHome-news"
+msgstr ""
+
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "no"
 msgstr ""
@@ -1230,7 +1231,6 @@ msgstr ""
 msgid "notizie_in_evidenza"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "novita"
@@ -1556,6 +1556,58 @@ msgstr ""
 msgid "search_service_block_sections"
 msgstr ""
 
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+msgid "searchsectionswidge-items-header"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+msgid "searchsectionswidget-add-rootpath"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+msgid "searchsectionswidget-additem"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+msgid "searchsectionswidget-delete-rootpath"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
+msgid "searchsectionswidget-deleteitem-button"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+msgid "searchsectionswidget-emptyActiveItem"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+msgid "searchsectionswidget-emptyActiveRootPath"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
+msgid "searchsectionswidget-linkUrl"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
+msgid "searchsectionswidget-linkUrl_description"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+msgid "searchsectionswidget-move-item-down"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+msgid "searchsectionswidget-move-item-up"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+msgid "searchsectionswidget-rootpath"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
+msgid "searchsectionswidget-title"
+msgstr ""
+
 #: components/ItaliaTheme/Header/SearchModal
 msgid "sections"
 msgstr ""
@@ -1576,7 +1628,6 @@ msgstr "Seleziona un argomento nella barra a lato"
 msgid "service_not_active"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "servizi"
@@ -1634,6 +1685,18 @@ msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "situazione_patrimoniale"
+msgstr ""
+
+#: components/ItaliaTheme/Skiplinks/Skiplinks
+msgid "skiplink-footer"
+msgstr ""
+
+#: components/ItaliaTheme/Skiplinks/Skiplinks
+msgid "skiplink-main-content"
+msgstr ""
+
+#: components/ItaliaTheme/Skiplinks/Skiplinks
+msgid "skiplink-navigation"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
