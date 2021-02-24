@@ -112,7 +112,7 @@ const Navigation = ({ pathname }) => {
                   </div>
                 </Link>
               </div>
-              <Nav navbar rol="navigation">
+              <Nav navbar role="navigation">
                 {menu
                   ?.filter((item) => item.visible)
                   ?.map((item, index) => (
