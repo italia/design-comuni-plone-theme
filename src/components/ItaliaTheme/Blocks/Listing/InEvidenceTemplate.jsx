@@ -77,7 +77,8 @@ const InEvidenceTemplate = ({
                             <Image
                               className="listing-image"
                               image={item.image}
-                              alt={item.title}
+                              alt=""
+                              aria-hidden="true"
                             />
                           </figure>
                         </UniversalLink>

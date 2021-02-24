@@ -43,7 +43,8 @@ const SmallBlockLinksTemplate = ({
                       <Image
                         image={item.image}
                         title={item.title}
-                        alt={item.title}
+                        alt=""
+                        aria-hidden="true"
                         className="listing-image"
                       />
                     </a>

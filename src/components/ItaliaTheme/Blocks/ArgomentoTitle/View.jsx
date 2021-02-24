@@ -52,6 +52,7 @@ const ArgomentoTitleView = ({ data, properties }) => {
               image={properties.image}
               alt={properties.caption || properties.title}
               title={properties.caption || properties.title}
+              aria-hidden="true"
             />
           </div>
         </Portal>

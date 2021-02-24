@@ -62,11 +62,11 @@ const CompleteBlockLinksTemplate = ({
                     {item.image && (
                       <div className="image-container">
                         <Image
-                          alt={item.title}
+                          alt=""
                           image={flattenToAppURL(
                             item.image.scales.preview.download,
                           )}
-                          title={item.title}
+                          aria-hidden="true"
                         />
                       </div>
                     )}
