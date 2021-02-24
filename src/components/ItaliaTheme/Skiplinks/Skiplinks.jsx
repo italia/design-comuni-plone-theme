@@ -17,24 +17,22 @@ const messages = defineMessages({
   },
 });
 
-const Skiplinks = () => {
+const SkipLinks = () => {
   const intl = useIntl();
 
   return (
-    <>
-      <Skiplink tag="div">
-        <SkiplinkItem href="#view" tag="a">
-          {intl.formatMessage(messages.mainView)}
-        </SkiplinkItem>
-        <SkiplinkItem href="#navigation" tag="a">
-          {intl.formatMessage(messages.navigation)}
-        </SkiplinkItem>
-        <SkiplinkItem href="#footer" tag="a">
-          {intl.formatMessage(messages.footer)}
-        </SkiplinkItem>
-      </Skiplink>
-    </>
+    <Skiplink tag="div">
+      <SkiplinkItem href="#view" tag="a">
+        {intl.formatMessage(messages.mainView)}
+      </SkiplinkItem>
+      <SkiplinkItem href="#navigation" tag="a">
+        {intl.formatMessage(messages.navigation)}
+      </SkiplinkItem>
+      <SkiplinkItem href="#footer" tag="a">
+        {intl.formatMessage(messages.footer)}
+      </SkiplinkItem>
+    </Skiplink>
   );
 };
 
-export default Skiplinks;
+export default SkipLinks;

@@ -10,7 +10,6 @@ import { join } from 'lodash';
 import { BodyClass } from '@plone/volto/helpers/';
 import { runtimeConfig } from '@plone/volto/runtime_config';
 import { settings } from '~/config';
-import Skiplinks from '@italia/components/ItaliaTheme/Skiplinks/Skiplinks';
 
 const CRITICAL_CSS_TEMPLATE = `function alter() {
   document.querySelectorAll("head link[rel='prefetch']").forEach(function(el) { el.rel = 'stylesheet'});
@@ -145,7 +144,6 @@ class Html extends Component {
           ) : undefined}
         </head>
         <body className={bodyClass}>
-          <Skiplinks />
           <div role="navigation" aria-label="Toolbar" id="toolbar" />
           <div id="main" dangerouslySetInnerHTML={{ __html: markup }} />
           <div id="sidebar" />
