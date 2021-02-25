@@ -40,6 +40,12 @@
     font-family: $font-family-sans-serif !important;
   }
 
+  h3.card-title {
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    line-height: 1.44444rem;
+  }
+
   .card:after {
     content: none;
   }

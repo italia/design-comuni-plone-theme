@@ -95,7 +95,7 @@ const InEvidenceTemplate = ({
                         item={item}
                       />
                     </CardCategory>
-                    <CardTitle tag="h4">
+                    <CardTitle tag="h3">
                       <UniversalLink
                         item={!isEditMode ? item : null}
                         href={isEditMode ? '#' : null}

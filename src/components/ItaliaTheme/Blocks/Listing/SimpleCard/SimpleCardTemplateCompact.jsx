@@ -48,7 +48,7 @@ const SimpleCardTemplateCompact = ({
           >
             {show_icon && <Icon icon={getItemIcon(item)} />}
             <CardBody>
-              <CardTitle tag="h5">
+              <CardTitle tag="h3">
                 <UniversalLink
                   item={!isEditMode ? item : null}
                   href={isEditMode ? '#' : null}

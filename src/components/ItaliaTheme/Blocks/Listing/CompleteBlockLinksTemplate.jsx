@@ -72,7 +72,7 @@ const CompleteBlockLinksTemplate = ({
                     )}
                     <div>
                       <CardBody>
-                        <CardTitle tag="h5" className="text-secondary">
+                        <CardTitle tag="h3" className="text-secondary">
                           {item.title}
                         </CardTitle>
                         <CardText tag="p" className="text-secondary">

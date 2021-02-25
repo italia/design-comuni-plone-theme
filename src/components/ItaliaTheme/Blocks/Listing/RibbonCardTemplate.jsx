@@ -101,7 +101,7 @@ const RibbonCardTemplate = ({
                       className={cx('', { 'mt-5': !showRibbon })}
                     >
                       {date && <div className="dates">{date}</div>}
-                      <CardTitle tag="h5">
+                      <CardTitle tag="h3">
                         <UniversalLink
                           item={!isEditMode ? item : null}
                           href={isEditMode ? '#' : null}

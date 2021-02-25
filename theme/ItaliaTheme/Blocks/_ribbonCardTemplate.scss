@@ -5,6 +5,12 @@
       text-transform: uppercase;
     }
 
+    h3.card-title {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.44444rem;
+    }
+
     &.show_detail_link {
       .card-title {
         a {

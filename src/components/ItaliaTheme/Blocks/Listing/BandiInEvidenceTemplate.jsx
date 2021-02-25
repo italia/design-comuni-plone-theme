@@ -80,7 +80,7 @@ const BandiInEvidenceTemplate = ({
               return (
                 <Card key={index} className={cx('listing-item card-bg', '')}>
                   <CardBody>
-                    <CardTitle tag="h4" className="title">
+                    <CardTitle tag="h3" className="title">
                       <UniversalLink
                         className="bando-title"
                         item={!isEditMode ? item : null}
