@@ -279,6 +279,43 @@ body.cms-ui {
       }
     }
   }
+
+  #page-login {
+    .help {
+      a {
+        color: $primary;
+
+        &:hover,
+        &:focus {
+          color: darken($primary, 10%);
+          text-decoration: underline;
+        }
+      }
+    }
+
+    button#login-form-submit.ui.basic.button.primary {
+      color: $primary !important;
+
+      &:hover,
+      &:focus {
+        color: darken($primary, 10%) !important;
+      }
+    }
+
+    button#login-form-submit.ui.basic.button.primary,
+    a#login-form-cancel.ui.basic.button.secondary {
+      &:hover,
+      &:focus {
+        svg {
+          box-shadow: 0 0 0.5em rgba($neutral-2-b5, 0.5);
+        }
+      }
+    }
+
+    .ui.secondary.segment {
+      color: $text-color;
+    }
+  }
 }
 
 body.public-ui.has-toolbar {
