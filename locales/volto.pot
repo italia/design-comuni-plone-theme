@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-02-25T08:35:50.354Z\n"
+"POT-Creation-Date: 2021-02-25T08:51:56.806Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -2061,17 +2061,17 @@ msgstr ""
 msgid "situazione_patrimoniale"
 msgstr ""
 
-#: components/ItaliaTheme/Skiplinks/Skiplinks
+#: components/ItaliaTheme/SkipLinks/SkipLinks
 # defaultMessage: Skip to footer
 msgid "skiplink-footer"
 msgstr ""
 
-#: components/ItaliaTheme/Skiplinks/Skiplinks
+#: components/ItaliaTheme/SkipLinks/SkipLinks
 # defaultMessage: Skip to main content
 msgid "skiplink-main-content"
 msgstr ""
 
-#: components/ItaliaTheme/Skiplinks/Skiplinks
+#: components/ItaliaTheme/SkipLinks/SkipLinks
 # defaultMessage: Skip to navigation
 msgid "skiplink-navigation"
 msgstr ""

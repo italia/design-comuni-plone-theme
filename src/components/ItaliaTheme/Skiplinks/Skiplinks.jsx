@@ -17,7 +17,7 @@ const messages = defineMessages({
   },
 });
 
-const Skiplinks = () => {
+const SkipLinks = () => {
   const intl = useIntl();
 
   return (
@@ -35,4 +35,4 @@ const Skiplinks = () => {
   );
 };
 
-export default Skiplinks;
+export default SkipLinks;

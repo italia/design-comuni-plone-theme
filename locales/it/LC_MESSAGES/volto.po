@@ -1668,15 +1668,15 @@ msgstr "Qui puoi selezionare, per il template 'Card semplice', un aspetto divers
 msgid "situazione_patrimoniale"
 msgstr "Situazione patrimoniale"
 
-#: components/ItaliaTheme/Skiplinks/Skiplinks
+#: components/ItaliaTheme/SkipLinks/SkipLinks
 msgid "skiplink-footer"
 msgstr "Vai al footer"
 
-#: components/ItaliaTheme/Skiplinks/Skiplinks
+#: components/ItaliaTheme/SkipLinks/SkipLinks
 msgid "skiplink-main-content"
 msgstr "Vai al contenuto"
 
-#: components/ItaliaTheme/Skiplinks/Skiplinks
+#: components/ItaliaTheme/SkipLinks/SkipLinks
 msgid "skiplink-navigation"
 msgstr "Vai alla navigazione"
 

@@ -1683,15 +1683,15 @@ msgstr ""
 msgid "situazione_patrimoniale"
 msgstr ""
 
-#: components/ItaliaTheme/Skiplinks/Skiplinks
+#: components/ItaliaTheme/SkipLinks/SkipLinks
 msgid "skiplink-footer"
 msgstr ""
 
-#: components/ItaliaTheme/Skiplinks/Skiplinks
+#: components/ItaliaTheme/SkipLinks/SkipLinks
 msgid "skiplink-main-content"
 msgstr ""
 
-#: components/ItaliaTheme/Skiplinks/Skiplinks
+#: components/ItaliaTheme/SkipLinks/SkipLinks
 msgid "skiplink-navigation"
 msgstr ""
 
