@@ -97,6 +97,32 @@ body.cms-ui {
     display: none;
   }
 
+  .skiplinks {
+    position: absolute;
+    top: -100%;
+
+    a {
+      display: inline-block;
+      color: $link-color;
+
+      &:focus {
+        position: fixed;
+        z-index: 9999;
+        top: 10px;
+        left: 10px;
+        padding: 10px;
+        border: 2px solid $link-color;
+        background: #fff;
+        outline: 3px solid $link-color;
+      }
+
+      &:hover {
+        border-color: $link-color;
+        color: $link-color;
+      }
+    }
+  }
+
   .react-select__menu {
     z-index: 11;
   }
@@ -261,6 +287,60 @@ body.cms-ui {
   .column.color-chooser {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+  }
+
+  .upload-row {
+    img.ui.image {
+      max-width: 100%;
+      height: auto;
+      max-height: 60px;
+    }
+  }
+
+  .ui.page.modals.dimmer {
+    .ui.modal {
+      .content {
+        max-height: 80vh;
+        overflow-y: scroll;
+      }
+    }
+  }
+
+  #page-login {
+    .help {
+      a {
+        color: $primary;
+
+        &:hover,
+        &:focus {
+          color: darken($primary, 10%);
+          text-decoration: underline;
+        }
+      }
+    }
+
+    button#login-form-submit.ui.basic.button.primary {
+      color: $primary !important;
+
+      &:hover,
+      &:focus {
+        color: darken($primary, 10%) !important;
+      }
+    }
+
+    button#login-form-submit.ui.basic.button.primary,
+    a#login-form-cancel.ui.basic.button.secondary {
+      &:hover,
+      &:focus {
+        svg {
+          box-shadow: 0 0 0.5em rgba($neutral-2-b5, 0.5);
+        }
+      }
+    }
+
+    .ui.secondary.segment {
+      color: $text-color;
+    }
   }
 }
 

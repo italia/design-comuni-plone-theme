@@ -37,7 +37,7 @@ const BandiInEvidenceTemplateSkeleton = ({
             <div className="bandi-in-evidence-cards-wrapper mb-5">
               {[0, 1, 2, 3, 4, 5].map((i) => {
                 return (
-                  <Card key={i} className="listing-item card-background">
+                  <Card key={i} className="listing-item card-bg">
                     <CardBody>
                       <CardTitle tag="h4" className="title">
                         -

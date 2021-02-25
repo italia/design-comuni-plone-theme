@@ -2,7 +2,7 @@ import React, { createRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { FormattedMessage, injectIntl } from 'react-intl';
-import { getQueryStringResults } from '@plone/volto/actions';
+import { getQueryStringResults, getContent } from '@plone/volto/actions';
 import { Pagination, Skeleton } from '@italia/components/ItaliaTheme';
 import { blocks, settings } from '~/config';
 
@@ -21,7 +21,7 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
   useEffect(() => {
     doSearch(data);
     /* eslint-disable react-hooks/exhaustive-deps */
-  }, [data.query]);
+  }, [data]);
 
   const doSearch = (data = { query: [] }, page = 1) => {
     if (data?.query?.length > 0 || additionalFilters.length > 0) {
@@ -93,12 +93,12 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
   const ListingBodyTemplate = templateConfig[templateName].template;
   const SkeletonTemplate = templateConfig[templateName].skeleton || Skeleton;
 
-  // function handleContentPaginationChange(e, { activePage }) {
-  //   !isEditMode && listingRef.current.scrollIntoView({ behavior: 'smooth' });
-  //   const current = activePage?.children ?? 1;
-  //   setCurrentPage(current);
-  //   dispatch(getContent(path, null, null, current));
-  // }
+  function handleContentPaginationChange(e, { activePage }) {
+    !isEditMode && listingRef.current.scrollIntoView({ behavior: 'smooth' });
+    const current = activePage?.children ?? 1;
+    setCurrentPage(current);
+    dispatch(getContent(path, null, null, current));
+  }
 
   function handleQueryPaginationChange(e, { activePage }) {
     !isEditMode && listingRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -160,7 +160,7 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
                   totalPages={Math.ceil(
                     content.items_total / settings.defaultPageSize,
                   )}
-                  onPageChange={handleQueryPaginationChange}
+                  onPageChange={handleContentPaginationChange}
                 />
               </div>
             )}

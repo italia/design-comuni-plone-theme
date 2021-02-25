@@ -36,7 +36,9 @@ const View = ({ data, pathname }) => {
                 <img
                   src={`data:${data.image['content-type']};${data.image.encoding},${data.image.data}`}
                   alt=""
+                  aria-hidden="true"
                   className="left-image"
+                  loading="lazy"
                 />
               </Col>
             )}

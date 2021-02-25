@@ -1,0 +1,157 @@
+@media print {
+  .block {
+    &.full-width,
+    .full-width {
+      right: unset !important;
+      left: unset !important;
+      width: 100% !important;
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+
+      .container {
+        max-width: 100% !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+
+        .items.row {
+          justify-content: center;
+        }
+
+        .col-item {
+          max-width: 33%;
+        }
+      }
+    }
+  }
+
+  .block.image {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+
+  .block.newsHome {
+    .col-lg-6 {
+      flex: 1 1 30%;
+      padding: 0;
+      text-align: right;
+    }
+
+    .col-lg-5 {
+      flex: 1 1 70%;
+      padding: 0;
+    }
+
+    .order-lg-2 {
+      order: 2;
+    }
+
+    img {
+      width: auto;
+      max-height: 200px;
+    }
+
+    .card {
+      border: none !important;
+    }
+  }
+
+  .block.simple-text-block {
+    .img-responsive-wrapper {
+      max-height: 200px;
+    }
+  }
+
+  .block.accordion {
+    .accordion-header {
+      button {
+        svg {
+          display: none;
+        }
+      }
+    }
+
+    .section.full-width .card .card-body .accordion-item .accordion-content {
+      max-height: unset;
+    }
+  }
+
+  .block {
+    .argumentInEvidence {
+      .argumentInEvidence-background {
+        display: none;
+      }
+
+      h2 {
+        color: $primary !important;
+      }
+
+      .grid {
+        display: flex;
+        justify-content: space-between;
+
+        .card {
+          flex: 1 1 30%;
+        }
+      }
+    }
+  }
+
+  .container {
+    .block {
+      .searchSections {
+        .searchSections-background {
+          display: none;
+        }
+
+        h2.text-secondary {
+          color: $primary !important;
+        }
+
+        border: 1px solid $gray-border;
+      }
+    }
+  }
+
+  div.block.listing {
+    .full-width {
+      right: unset !important;
+      left: unset !important;
+      width: 100% !important;
+      margin-right: 0 !important;
+      margin-left: 0 !important;
+
+      .container {
+        max-width: 100% !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+
+        .items.row {
+          justify-content: center;
+        }
+
+        .col-item {
+          max-width: 33%;
+        }
+      }
+    }
+
+    .row {
+      .col-sm-12.col-lg-4 {
+        max-width: 33.33333%;
+        flex: 0 0 33.33333%;
+      }
+    }
+
+    &.inEvidenceTemplate {
+      .in-evidence-cards-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .card-wrapper {
+          flex: 0 0 30%;
+        }
+      }
+    }
+  }
+}

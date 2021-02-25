@@ -3,16 +3,14 @@
  * @module components/ItaliaTheme/MenuSecondary
  */
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { isMatch } from 'lodash';
-import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { useIntl, defineMessages } from 'react-intl';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { getSecondaryMenu } from '@italia/addons/volto-secondarymenu';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { UniversalLink } from '@plone/volto/components';
 import { Nav, NavItem, NavLink } from 'design-react-kit/dist/design-react-kit';
-
-import { SubsiteMenuSecondary } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   menu_selected: {
@@ -21,44 +19,59 @@ const messages = defineMessages({
   },
 });
 
-const argumentsItems = [
-  { title: 'Ambiente', url: '/argomenti/ambiente' },
-  { title: 'Cantieri in città', url: '/argomenti/cantieri-in-citta' },
-  { title: 'Tutti gli argomenti...', url: '/argomenti', type: 'all' },
-];
-
 const MenuSecondary = ({ pathname }) => {
   const intl = useIntl();
+  const dispatch = useDispatch();
 
-  const isMenuActive = (url, pathname = '') =>
-    (url === '' && (pathname === '/' || pathname === '')) ||
-    (url !== '' && isMatch(pathname.split('/'), url.split('/')));
+  let items =
+    useSelector((state) => state.secondaryMenu?.result)
+      ?.filter((menu) =>
+        (pathname?.length ? pathname : '/').match(new RegExp(menu.rootPath)),
+      )
+      .pop()?.items ?? [];
+  items = items?.filter((item) => item.visible);
+
+  useEffect(() => {
+    dispatch(getSecondaryMenu());
+  }, [dispatch]);
+
+  const isMenuActive = (itemUrl = '') => {
+    const url = flattenToAppURL(itemUrl);
+    const currrentPath = pathname ?? '';
+
+    return (
+      (url === '' && (currrentPath === '/' || currrentPath === '')) ||
+      (url !== '' && isMatch(currrentPath.split('/'), url.split('/')))
+    );
+  };
 
   return (
-    <Nav navbar className="navbar-secondary">
-      {argumentsItems.map((item) => (
-        <NavItem
-          tag="li"
-          active={isMenuActive(flattenToAppURL(item.url), pathname)}
-          key={item.url}
-        >
-          <NavLink
-            to={item.url === '' ? '/' : flattenToAppURL(item.url)}
-            tag={Link}
-            active={isMenuActive(flattenToAppURL(item.url), pathname)}
-          >
-            <span className={item.type === 'all' ? 'font-weight-bold' : ''}>
-              {item.title}
-            </span>
-            {isMenuActive(flattenToAppURL(item.url), pathname) && (
-              <span className="sr-only">
-                {intl.formatMessage(messages.menu_selected)}
-              </span>
-            )}
-          </NavLink>
-        </NavItem>
-      ))}
-    </Nav>
+    items?.length > 0 && (
+      <Nav navbar className="navbar-secondary" role="navigation">
+        {items.map((item, i) => {
+          let url = item.href || item.linkUrl?.[0]?.['@id'] || '';
+
+          return (
+            <NavItem tag="li" active={isMenuActive(url)} key={i}>
+              <NavLink
+                href={url === '' ? '/' : flattenToAppURL(url)}
+                tag={UniversalLink}
+                active={isMenuActive(url)}
+              >
+                <span className={item.inEvidence ? 'font-weight-bold' : ''}>
+                  {item.title}
+                </span>
+                {isMenuActive(url) && (
+                  <span className="sr-only">
+                    {intl.formatMessage(messages.menu_selected)}
+                  </span>
+                )}
+              </NavLink>
+            </NavItem>
+          );
+        })}
+      </Nav>
+    )
   );
 };
 

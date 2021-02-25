@@ -23,6 +23,7 @@ import {
   ListingText,
   CardCategory,
 } from '@italia/components/ItaliaTheme';
+import Image from '@plone/volto/components/theme/Image/Image';
 
 const InEvidenceTemplate = ({
   items,
@@ -68,16 +69,16 @@ const InEvidenceTemplate = ({
                     <div className="img-responsive-wrapper">
                       <div className="img-responsive">
                         <UniversalLink
-                          href={flattenToAppURL(item['@id'])}
+                          item={!isEditMode ? item : null}
+                          href={isEditMode ? '#' : null}
                           className="img-link"
                         >
                           <figure className="img-wrapper">
-                            <img
+                            <Image
                               className="listing-image"
-                              src={flattenToAppURL(
-                                item.image.scales.preview.download,
-                              )}
-                              alt={item.title}
+                              image={item.image}
+                              alt=""
+                              aria-hidden="true"
                             />
                           </figure>
                         </UniversalLink>
@@ -94,8 +95,11 @@ const InEvidenceTemplate = ({
                         item={item}
                       />
                     </CardCategory>
-                    <CardTitle tag="h4">
-                      <UniversalLink href={flattenToAppURL(item['@id'])}>
+                    <CardTitle tag="h3">
+                      <UniversalLink
+                        item={!isEditMode ? item : null}
+                        href={isEditMode ? '#' : null}
+                      >
                         {item.title || item.id}
                       </UniversalLink>
                     </CardTitle>

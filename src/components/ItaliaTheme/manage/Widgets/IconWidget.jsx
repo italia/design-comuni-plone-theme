@@ -66,7 +66,11 @@ const IconWidget = ({ id, value, defaultOptions, onChange }) => {
       <IconPreviewWidget icon={iconString}>
         {intl.formatMessage(messages.description)}
         <span className="ml-4">
-          <a target="_blank" href="https://fontawesome.com/icons?d=gallery">
+          <a
+            target="_blank"
+            href="https://fontawesome.com/icons?d=gallery"
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon icon={'arrow-right'} />
           </a>
         </span>

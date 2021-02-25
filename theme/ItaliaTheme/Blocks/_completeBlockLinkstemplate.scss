@@ -13,7 +13,7 @@
     display: flex;
     width: 40px;
     height: 40px;
-
+    flex-shrink: 0;
     align-items: center;
     justify-content: center;
     margin: 18px 0px 0px 18px;
@@ -38,6 +38,12 @@
 
   .card-text {
     font-family: $font-family-sans-serif !important;
+  }
+
+  h3.card-title {
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    line-height: 1.44444rem;
   }
 
   .card:after {

@@ -1,7 +1,7 @@
 import React from 'react';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import Image from '@plone/volto/components/theme/Image/Image';
 
 /**
  * WideImage view component class.
@@ -14,11 +14,13 @@ const WideImage = ({ image, title, caption, fullWidth = true }) => {
     <div className={cx('row wide-image', { 'row-full-width my-3': fullWidth })}>
       <figure className="figure">
         {image && (
-          <img
-            src={flattenToAppURL(image.download)}
+          <Image
+            image={image}
             className={cx('', { 'full-width': fullWidth })}
             alt={caption || title}
             title={caption || title}
+            critical
+            loading="eager"
           />
         )}
         {caption && (

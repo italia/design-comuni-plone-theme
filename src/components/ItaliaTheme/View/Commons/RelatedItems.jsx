@@ -59,7 +59,7 @@ const RelatedItems = ({
   let related = [...related_items_content, ...list];
 
   if (related?.length > 0) {
-    related.map((item) => {
+    related.forEach((item) => {
       let itemSection = flattenToAppURL(item['@id']).split('/')[1];
       if (Object.keys(SITE_SECTIONS).indexOf(itemSection) >= 0) {
         if (!sections[itemSection]) {
@@ -90,19 +90,19 @@ const RelatedItems = ({
                         <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-4">
                           {Object.keys(sections).map((sectionId, i) => (
                             <div
-                              class="card card-teaser card-column shadow my-3 rounded"
+                              className="card card-teaser card-column shadow my-3 rounded"
                               key={i}
                             >
-                              <div class="card-header">
+                              <div className="card-header">
                                 <Icon icon={SITE_SECTIONS[sectionId].icon} />
 
-                                <h5 class="card-title">
+                                <h5 className="card-title">
                                   {intl.formatMessage(messages[sectionId])}
                                 </h5>
                               </div>
-                              <div class="card-body">
-                                <div class="link-list-wrapper mt-3">
-                                  <ul class="link-list">
+                              <div className="card-body">
+                                <div className="link-list-wrapper mt-3">
+                                  <ul className="link-list">
                                     {sections[sectionId].map((item, i) => (
                                       <li key={i}>
                                         <Link

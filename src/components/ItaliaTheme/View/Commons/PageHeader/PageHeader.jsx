@@ -3,7 +3,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import moment from 'moment/min/moment-with-locales';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
-import { flattenToAppURL } from '@plone/volto/helpers';
+import Image from '@plone/volto/components/theme/Image/Image';
 
 import {
   Sharing,
@@ -89,13 +89,11 @@ const PageHeader = (props) => {
       {props.imageinheader && props.content[props.imageinheader_field] ? (
         <div className="col-lg-2">
           <figure>
-            <img
-              src={flattenToAppURL(
-                props.content[props.imageinheader_field].scales.mini.download,
-              )}
+            <Image
+              image={props.content[props.imageinheader_field]}
               alt={props.content.title}
               className="img-fluid"
-            ></img>
+            />
           </figure>
         </div>
       ) : null}

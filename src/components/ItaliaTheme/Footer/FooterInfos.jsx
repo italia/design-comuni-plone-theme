@@ -6,9 +6,10 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+
 import { defineMessages, useIntl } from 'react-intl';
 import { Row, Col } from 'design-react-kit/dist/design-react-kit';
+import { ConditionalLink } from '@plone/volto/components';
 import { flattenHTMLToAppURL, flattenToAppURL } from '@plone/volto/helpers';
 import { getEditableFooterColumns } from '@italia/addons/volto-editablefooter';
 import {
@@ -64,22 +65,20 @@ const FooterInfos = () => {
             key={index}
           >
             <h4>
-              <Link
-                to={
-                  column.titleLink?.length > 0
-                    ? flattenToAppURL(column.titleLink[0]['@id'])
-                    : '/'
-                }
+              <ConditionalLink
+                condition={column.titleLink?.length > 0}
+                item={column.titleLink?.[0]}
+                to={column.titleLink?.[0]?.['@id'] ? null : ''}
                 title={
                   intl.formatMessage(messages.goToPage) + ':' + column.title
                 }
               >
                 {column.title}
-              </Link>
+              </ConditionalLink>
             </h4>
             {column.showSocial && <FooterSocials />}
 
-            <p
+            <div
               dangerouslySetInnerHTML={{
                 __html: flattenHTMLToAppURL(column.text.data),
               }}

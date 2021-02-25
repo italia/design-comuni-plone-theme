@@ -1,0 +1,32 @@
+.chip,
+.public-ui .chip {
+  cursor: pointer;
+
+  &:not(:disabled):not(.chip-primary):not(.chip-secondary) {
+    &.selected,
+    &:hover,
+    &:focus {
+      border-color: $neutral-2-b5;
+      background: $neutral-2-b5;
+
+      &,
+      span.chip-label {
+        color: #fff;
+      }
+
+      svg.icon {
+        fill: #fff;
+      }
+    }
+  }
+
+  // &.selected {
+  //   @extend .chip:hover;
+  // }
+}
+
+#metadata {
+  .chip.disabled:hover {
+    cursor: default;
+  }
+}

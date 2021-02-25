@@ -1,8 +1,17 @@
 .it-footer {
   .it-footer-main {
+    h4 {
+      color: $white;
+      font-size: 16px;
+      text-transform: uppercase;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+
     a {
       color: $white;
-      text-decoration: none;
 
       &:hover:not(.disabled) {
         text-decoration: underline;
@@ -17,6 +26,16 @@
     .it-brand-wrapper {
       a {
         display: inline-flex;
+      }
+    }
+
+    .link-list-wrapper {
+      ul {
+        li {
+          a {
+            text-decoration: underline;
+          }
+        }
       }
     }
 
@@ -40,6 +59,13 @@
           margin-right: 0;
         }
       }
+    }
+  }
+
+  .it-footer-small-prints {
+    a,
+    a:hover:not(.disabled) {
+      text-decoration: underline;
     }
   }
 }

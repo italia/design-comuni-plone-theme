@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
-import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
+import Image from '@plone/volto/components/theme/Image/Image';
 
 const messages = defineMessages({
   sponsors: {
@@ -31,8 +31,8 @@ const Sponsor = ({ item }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              src={flattenToAppURL(item.image.scales.mini.download)}
+            <Image
+              image={item.image}
               alt={item.image.filename}
               className="img-fluid"
             />

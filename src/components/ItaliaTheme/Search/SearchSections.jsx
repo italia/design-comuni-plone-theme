@@ -1,9 +1,8 @@
 /**
  * Sections for search
  */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import cx from 'classnames';
-import { defineMessages, useIntl } from 'react-intl';
 
 import {
   Col,
@@ -14,82 +13,25 @@ import {
 import { Icon } from '@italia/components/ItaliaTheme';
 import { SearchUtils, Checkbox } from '@italia/components';
 
-const messages = defineMessages({
-  amministrazione: {
-    id: 'amministrazione',
-    defaultMessage: 'Amministrazione',
-  },
-  servizi: {
-    id: 'servizi',
-    defaultMessage: 'Servizi',
-  },
-  novita: {
-    id: 'novita',
-    defaultMessage: 'Novità',
-  },
-  documenti: {
-    id: 'documenti',
-    defaultMessage: 'Documenti e dati',
-  },
-  'documenti-e-dati': {
-    id: 'documenti-e-dati',
-    defaultMessage: 'Documenti e dati',
-  },
-});
-
 export default function SearchSections({
   setSections,
   sections,
   cols,
   toggleGroups = false,
 }) {
-  const intl = useIntl();
-  // const [sections, setSections] = useState({
-  //   amministrazione: {},
-  //   servizi: {},
-  //   novita: {},
-  //   'documenti-e-dati': {},
-  // });
+  const [collapse, setCollapse] = useState({});
 
-  const [collapse, setCollapse] = useState({
-    amministrazione: toggleGroups,
-    servizi: toggleGroups,
-    novita: toggleGroups,
-    'documenti-e-dati': toggleGroups,
-  });
+  useEffect(() => {
+    if (Object.keys(collapse).length === 0) {
+      let defaultCollapse = {};
+      Object.keys(sections).forEach((k) => {
+        defaultCollapse[k] = toggleGroups;
+      });
 
-  const setSectionFilterChecked = (groupId, filterId, checked) => {
-    setSections((prevSections) => ({
-      ...prevSections,
-      [groupId]: {
-        ...prevSections[groupId],
-        [filterId]: {
-          ...prevSections[groupId][filterId],
-          value: checked,
-        },
-      },
-    }));
-  };
-
-  const setGroupChecked = (groupId, checked) => {
-    setSections((prevSections) => ({
-      ...prevSections,
-      [groupId]: SearchUtils.updateGroupCheckedStatus(
-        prevSections[groupId],
-        checked,
-      ),
-    }));
-  };
-
-  // useEffect(() => {
-  //   if (Object.keys(searchFilters ?? {}).length > 0) {
-  //     setSections(searchFilters);
-  //   }
-  // }, [searchFilters]);
-
-  // useEffect(() => {
-  //   onChange(sections);
-  // }, [sections]);
+      setCollapse(defaultCollapse);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [sections]);
 
   const toggleCollapseGroup = (groupId) => {
     setCollapse((prevCollapse) => ({
@@ -111,7 +53,11 @@ export default function SearchSections({
               )}
               checked={SearchUtils.isGroupChecked(sections[groupId])}
               onChange={(e) =>
-                setGroupChecked(groupId, e.currentTarget.checked)
+                SearchUtils.setGroupChecked(
+                  groupId,
+                  e.currentTarget.checked,
+                  setSections,
+                )
               }
             />
 
@@ -129,10 +75,10 @@ export default function SearchSections({
               })}
               widths={['xs', 'sm', 'md', 'lg', 'xl']}
             >
-              {intl.formatMessage(messages[groupId])}
+              {sections[groupId].title}
             </Label>
 
-            {toggleGroups && (
+            {toggleGroups && sections[groupId]?.items && (
               <a
                 className="float-right"
                 href={`#section${groupId}Collapse`}
@@ -153,40 +99,42 @@ export default function SearchSections({
               </a>
             )}
           </FormGroup>
-
-          <Collapse
-            isOpen={!collapse[groupId]}
-            id={`section${groupId}Collapse`}
-          >
-            {Object.keys(sections[groupId]).map((filterId) => (
-              <FormGroup
-                check
-                tag="div"
-                key={filterId}
-                className={cx({ 'pl-4': toggleGroups })}
-              >
-                <Checkbox
-                  id={filterId}
-                  checked={sections[groupId][filterId].value}
-                  onChange={(e) =>
-                    setSectionFilterChecked(
-                      groupId,
-                      filterId,
-                      e.currentTarget.checked,
-                    )
-                  }
-                />
-                <Label
+          {sections[groupId]?.items && (
+            <Collapse
+              isOpen={collapse[groupId] !== undefined && !collapse[groupId]}
+              id={`section${groupId}Collapse`}
+            >
+              {Object.keys(sections[groupId].items).map((filterId) => (
+                <FormGroup
                   check
-                  for={filterId}
-                  tag="label"
-                  widths={['xs', 'sm', 'md', 'lg', 'xl']}
+                  tag="div"
+                  key={filterId}
+                  className={cx({ 'pl-4': toggleGroups })}
                 >
-                  {sections[groupId][filterId].label}
-                </Label>
-              </FormGroup>
-            ))}
-          </Collapse>
+                  <Checkbox
+                    id={filterId}
+                    checked={sections[groupId].items[filterId].value}
+                    onChange={(e) =>
+                      SearchUtils.setSectionFilterChecked(
+                        groupId,
+                        filterId,
+                        e.currentTarget.checked,
+                        setSections,
+                      )
+                    }
+                  />
+                  <Label
+                    check
+                    for={filterId}
+                    tag="label"
+                    widths={['xs', 'sm', 'md', 'lg', 'xl']}
+                  >
+                    {sections[groupId].items[filterId].label}
+                  </Label>
+                </FormGroup>
+              ))}
+            </Collapse>
+          )}
         </Col>
       ))}
     </>

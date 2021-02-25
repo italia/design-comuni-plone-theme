@@ -3,6 +3,15 @@
     p {
       margin-bottom: 0.5rem;
     }
+
+    a {
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
   }
 
   .header-image {

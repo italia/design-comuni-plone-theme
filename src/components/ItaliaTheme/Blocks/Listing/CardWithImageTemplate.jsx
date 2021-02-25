@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { UniversalLink } from '@plone/volto/components';
+import { UniversalLink, ConditionalLink } from '@plone/volto/components';
 import { useIntl } from 'react-intl';
 import moment from 'moment';
 import 'moment/min/locales';
@@ -16,7 +16,7 @@ import {
   Chip,
   ChipLabel,
 } from 'design-react-kit/dist/design-react-kit';
-import { ConditionalLink } from '@plone/volto/components';
+import Image from '@plone/volto/components/theme/Image/Image';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { CardCategory } from '@italia/components/ItaliaTheme';
 import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
@@ -76,21 +76,20 @@ const CardWithImageTemplate = ({
                     {(index < 3 || always_show_image) && item.image && (
                       <div className="img-responsive-wrapper">
                         <div className="img-responsive img-responsive-panoramic">
-                          <ConditionalLink
-                            to={flattenToAppURL(item['@id'])}
-                            condition={!isEditMode}
+                          <UniversalLink
+                            item={!isEditMode ? item : null}
+                            href={isEditMode ? '#' : ''}
                             className="img-link"
                           >
                             <figure className="img-wrapper">
-                              <img
+                              <Image
                                 className="listing-image"
-                                src={flattenToAppURL(
-                                  item.image.scales.preview.download,
-                                )}
-                                alt={item.title}
+                                image={item.image}
+                                aria-hidden="true"
+                                alt=""
                               />
                             </figure>
-                          </ConditionalLink>
+                          </UniversalLink>
                           {item['@type'] === 'Event' && (
                             <CardCalendar start={item.start} end={item.end} />
                           )}
@@ -104,8 +103,11 @@ const CardWithImageTemplate = ({
                           item={item}
                         />
                       </CardCategory>
-                      <CardTitle tag="h4">
-                        <UniversalLink href={flattenToAppURL(item['@id'])}>
+                      <CardTitle tag="h3">
+                        <UniversalLink
+                          item={!isEditMode ? item : null}
+                          href={isEditMode ? '#' : ''}
+                        >
                           {item.title || item.id}
                         </UniversalLink>
                       </CardTitle>

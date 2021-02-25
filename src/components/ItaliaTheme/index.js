@@ -36,7 +36,6 @@ export SearchSections from '@italia/components/ItaliaTheme/Search/SearchSections
 export SearchTopics from '@italia/components/ItaliaTheme/Search/SearchTopics';
 export MegaMenu from '@italia/components/ItaliaTheme/MegaMenu/MegaMenu';
 export MenuSecondary from '@italia/components/ItaliaTheme/MenuSecondary/MenuSecondary';
-export SubsiteMenuSecondary from '@italia/components/ItaliaTheme/MenuSecondary/SubsiteMenuSecondary';
 export Logo from '@italia/components/ItaliaTheme/Logo/Logo';
 export LogoFooter from '@italia/components/ItaliaTheme/LogoFooter/LogoFooter';
 export FooterMain from '@italia/components/ItaliaTheme/Footer/FooterMain';
@@ -47,6 +46,7 @@ export FooterNewsletterSubscribe from '@italia/components/ItaliaTheme/Footer/Foo
 export FooterSocials from '@italia/components/ItaliaTheme/Footer/FooterSocials';
 export SubsiteFooter from '@italia/components/ItaliaTheme/Footer/SubsiteFooter';
 export Pagination from '@italia/components/ItaliaTheme/Pagination/Pagination';
+export SkipLinks from '@italia/components/ItaliaTheme/SkipLinks/SkipLinks';
 
 /********* BLOCKS ********* */
 export AlertSidebar from '@italia/components/ItaliaTheme/Blocks/Alert/Sidebar';

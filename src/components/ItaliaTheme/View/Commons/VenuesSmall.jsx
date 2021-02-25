@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Icon } from '@italia/components/ItaliaTheme';
+import Image from '@plone/volto/components/theme/Image/Image';
 
 const messages = defineMessages({
   VenuesSmall: {
@@ -34,7 +35,7 @@ const Location = ({ location, show_icon }) => {
   useEffect(() => {
     dispatch(getContent(url, null, key));
     return () => dispatch(resetContent(key));
-  }, []);
+  }, [dispatch, key, url]);
 
   let location_fo = locationContent[key]?.data;
   return location_fo ? (
@@ -62,10 +63,7 @@ const Location = ({ location, show_icon }) => {
       </div>
       {location_fo.immagine && (
         <div className="avatar size-xl">
-          <img
-            src={flattenToAppURL(location_fo.immagine.scales.mini.download)}
-            alt="Immagine"
-          ></img>
+          <Image image={location_fo.immagine} />
         </div>
       )}
     </div>

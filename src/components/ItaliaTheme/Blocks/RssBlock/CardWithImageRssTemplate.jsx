@@ -52,9 +52,10 @@ const CardWithImageRssTemplate = ({ items = [], isEditMode, data = {} }) => {
                       <div className="img-responsive img-responsive-panoramic">
                         <figure className="img-wrapper">
                           <img
+                            aria-hidden="true"
                             alt={item.title}
                             src={item.enclosure.url}
-                            title={item.title}
+                            loading="lazy"
                           />
                         </figure>
                       </div>
@@ -82,6 +83,8 @@ const CardWithImageRssTemplate = ({ items = [], isEditMode, data = {} }) => {
                     iconName="it-arrow-right"
                     className="ml-4"
                     tag="a"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     href={item?.link}
                     text={intl.formatMessage(messages.readMore)}
                   />

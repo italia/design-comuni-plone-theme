@@ -2,9 +2,7 @@
  * PageView view component.
  * @module components/theme/View/PageView
  */
-
 import React from 'react';
-
 import {
   SearchSectionForm,
   PageHeaderNav,
@@ -19,6 +17,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import { Container } from 'design-react-kit/dist/design-react-kit';
 import { getLayoutFieldname } from '@plone/volto/helpers';
 import { views } from '~/config';
+import Image from '@plone/volto/components/theme/Image/Image';
 
 /**
  * PageView view component class.
@@ -60,11 +59,11 @@ const PageView = ({ content, token, location, history }) => {
                 )}
               </div>
               <div className="col-lg-4 offset-lg-2">
-                {content.immagine_testata?.scales?.preview?.download && (
+                {content.immagine_testata?.scales && (
                   <div className="header-image px-4 mb-3">
-                    <img
-                      alt={content?.title || ''}
-                      src={content.immagine_testata?.scales?.preview?.download}
+                    <Image
+                      image={content.immagine_testata}
+                      alt={content.title}
                     />
                   </div>
                 )}
@@ -97,15 +96,15 @@ const PageView = ({ content, token, location, history }) => {
   else {
     const getViewByLayout = () => views.layoutViews[layout] || null;
     const Layout = getViewByLayout();
-    if (Layout)
-      return (
-        <Layout
-          content={content}
-          location={location}
-          token={token}
-          history={history}
-        />
-      );
+
+    return Layout ? (
+      <Layout
+        content={content}
+        location={location}
+        token={token}
+        history={history}
+      />
+    ) : null;
   }
 };
 

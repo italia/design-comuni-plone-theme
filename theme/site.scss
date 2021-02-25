@@ -4,7 +4,7 @@
 @import 'extras/blocks';
 @import 'extras/sidebar';
 @import 'extras/toolbar';
-@import 'extras/chips';
+// @import 'extras/chips';
 @import 'extras/modals';
 @import 'extras/search';
 @import 'extras/checkbox';
@@ -38,6 +38,7 @@
 @import 'ItaliaTheme/Blocks/completeBlockLinkstemplate';
 @import 'ItaliaTheme/Blocks/photogallerytemplate';
 @import 'ItaliaTheme/Blocks/inevidencetemplate';
+@import 'ItaliaTheme/Blocks/mapTemplate';
 @import 'ItaliaTheme/Blocks/bandiInEvidenceTemplate';
 @import 'ItaliaTheme/Blocks/argumentsInEvidence';
 @import 'ItaliaTheme/Blocks/gridGalleryTemplate';
@@ -62,6 +63,7 @@
 @import 'ItaliaTheme/Views/sponsors';
 @import 'ItaliaTheme/Views/slider';
 @import 'ItaliaTheme/Widgets/iconWidget';
+@import 'ItaliaTheme/Widgets/searchSectionsConfigurationWidget';
 @import 'ItaliaTheme/Components/megamenu';
 @import 'ItaliaTheme/Components/sharing';
 @import 'ItaliaTheme/Components/logo';
@@ -74,7 +76,7 @@
 @import 'ItaliaTheme/Print/persona';
 @import 'ItaliaTheme/Print/event';
 @import 'ItaliaTheme/Print/servizio';
-@import 'ItaliaTheme/Print/page';
+@import 'ItaliaTheme/Print/blocks';
 
 @import 'ItaliaTheme/Subsites/mixin';
 $subsite-yellow-primary: #fcab02;
