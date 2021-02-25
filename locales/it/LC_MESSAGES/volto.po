@@ -433,7 +433,6 @@ msgstr "Altri documenti"
 msgid "always_show_image"
 msgstr "Mostra l'immagine per tutti gli elementi"
 
-#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "amministrazione"
 msgstr "Amministrazione"
@@ -741,12 +740,10 @@ msgstr "Dichiarazione dei redditi"
 msgid "dirigente"
 msgstr ""
 
-#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "documenti"
 msgstr "Documenti"
 
-#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "documenti-e-dati"
 msgstr "Documenti e dati"
@@ -1184,7 +1181,7 @@ msgstr "Formati alternativi"
 
 #: components/ItaliaTheme/Blocks/NewsHome/Body
 msgid "newsHome-news"
-msgstr ""
+msgstr "Notizie"
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "no"
@@ -1212,7 +1209,6 @@ msgstr ""
 msgid "notizie_in_evidenza"
 msgstr "Notizie in evidenza"
 
-#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "novita"
 msgstr "Novità"
@@ -1539,55 +1535,55 @@ msgstr "Dove cercare"
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidge-items-header"
-msgstr "Sezioni"
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-add-rootpath"
-msgstr "Aggiungi la configurazione per un nuovo percorso"
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-additem"
-msgstr "Aggiungi una sezione di ricerca"
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-delete-rootpath"
-msgstr "Elimina la configurazione per questo percorso"
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
 msgid "searchsectionswidget-deleteitem-button"
-msgstr "Elimina la sezione di ricerca"
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-emptyActiveItem"
-msgstr "Aggiungi una nuova sezione di ricerca, oppure selezionane una."
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-emptyActiveRootPath"
-msgstr "Aggiungi una configurazione per un nuovo percorso, oppure scegline una esistente."
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
 msgid "searchsectionswidget-linkUrl"
-msgstr "Percorso"
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
 msgid "searchsectionswidget-linkUrl_description"
-msgstr "Inserisci un url esterno, oppure seleziona un link interno cliccando il bottone qui a destra"
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-move-item-down"
-msgstr "Sposta dopo"
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-move-item-up"
-msgstr "Sposta prima"
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-rootpath"
-msgstr "Percorso"
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
 msgid "searchsectionswidget-title"
-msgstr "Titolo"
+msgstr "Sezioni"
 
 #: components/ItaliaTheme/Header/SearchModal
 msgid "sections"
@@ -1609,7 +1605,6 @@ msgstr "Seleziona un argomento nella barra a lato"
 msgid "service_not_active"
 msgstr "Il servizio non è attivo"
 
-#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "servizi"
 msgstr "Servizi"
@@ -1668,17 +1663,20 @@ msgstr "Qui puoi selezionare, per il template 'Card semplice', un aspetto divers
 msgid "situazione_patrimoniale"
 msgstr "Situazione patrimoniale"
 
-#: components/ItaliaTheme/Skiplinks/Skiplinks
+#: components/ItaliaTheme/SkipLinks/SkipLinks
+#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 msgid "skiplink-footer"
-msgstr ""
+msgstr "Vai al footer"
 
-#: components/ItaliaTheme/Skiplinks/Skiplinks
+#: components/ItaliaTheme/SkipLinks/SkipLinks
+#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 msgid "skiplink-main-content"
-msgstr ""
+msgstr "Vai al contenuto"
 
-#: components/ItaliaTheme/Skiplinks/Skiplinks
+#: components/ItaliaTheme/SkipLinks/SkipLinks
+#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 msgid "skiplink-navigation"
-msgstr ""
+msgstr "Vai alla navigazione"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "spese_elettorali"

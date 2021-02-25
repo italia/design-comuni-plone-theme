@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-02-24T11:44:55.304Z\n"
+"POT-Creation-Date: 2021-02-25T08:58:25.274Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -529,7 +529,6 @@ msgstr ""
 msgid "always_show_image"
 msgstr ""
 
-#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Amministrazione
 msgid "amministrazione"
@@ -910,13 +909,11 @@ msgstr ""
 msgid "dirigente"
 msgstr ""
 
-#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/PersonaView/PersonaView
-# defaultMessage: Documenti e dati
+# defaultMessage: Documenti
 msgid "documenti"
 msgstr ""
 
-#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Documenti e dati
 msgid "documenti-e-dati"
@@ -1496,7 +1493,6 @@ msgstr ""
 msgid "notizie_in_evidenza"
 msgstr ""
 
-#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Novità
 msgid "novita"
@@ -1988,7 +1984,6 @@ msgstr ""
 msgid "service_not_active"
 msgstr ""
 
-#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Servizi
 msgid "servizi"
@@ -2061,17 +2056,20 @@ msgstr ""
 msgid "situazione_patrimoniale"
 msgstr ""
 
-#: components/ItaliaTheme/Skiplinks/Skiplinks
+#: components/ItaliaTheme/SkipLinks/SkipLinks
+#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 # defaultMessage: Skip to footer
 msgid "skiplink-footer"
 msgstr ""
 
-#: components/ItaliaTheme/Skiplinks/Skiplinks
+#: components/ItaliaTheme/SkipLinks/SkipLinks
+#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 # defaultMessage: Skip to main content
 msgid "skiplink-main-content"
 msgstr ""
 
-#: components/ItaliaTheme/Skiplinks/Skiplinks
+#: components/ItaliaTheme/SkipLinks/SkipLinks
+#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 # defaultMessage: Skip to navigation
 msgid "skiplink-navigation"
 msgstr ""

@@ -27,11 +27,11 @@ const Footer = ({ intl }) => {
   let content = (
     <>
       <SubsiteFooter />
-      <footer className="it-footer">
+      <footer className="it-footer" id="footer">
         <FooterMain />
         <FooterSmall />
-        {__CLIENT__ && <CookieBanner />}
       </footer>
+      {__CLIENT__ && <CookieBanner />}
     </>
   );
 
