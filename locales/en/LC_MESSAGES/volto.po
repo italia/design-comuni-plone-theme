@@ -1182,6 +1182,10 @@ msgstr ""
 msgid "modulo_formati_alternativi"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/NewsHome/Body
+msgid "newsHome-news"
+msgstr ""
+
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "no"
 msgstr ""
@@ -1662,6 +1666,18 @@ msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "situazione_patrimoniale"
+msgstr ""
+
+#: components/ItaliaTheme/Skiplinks/Skiplinks
+msgid "skiplink-footer"
+msgstr ""
+
+#: components/ItaliaTheme/Skiplinks/Skiplinks
+msgid "skiplink-main-content"
+msgstr ""
+
+#: components/ItaliaTheme/Skiplinks/Skiplinks
+msgid "skiplink-navigation"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
