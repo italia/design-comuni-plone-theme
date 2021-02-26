@@ -433,6 +433,7 @@ msgstr "Altri documenti"
 msgid "always_show_image"
 msgstr "Mostra l'immagine per tutti gli elementi"
 
+#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "amministrazione"
 msgstr "Amministrazione"
@@ -740,10 +741,12 @@ msgstr "Dichiarazione dei redditi"
 msgid "dirigente"
 msgstr ""
 
+#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "documenti"
 msgstr "Documenti"
 
+#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "documenti-e-dati"
 msgstr "Documenti e dati"
@@ -1209,6 +1212,7 @@ msgstr ""
 msgid "notizie_in_evidenza"
 msgstr "Notizie in evidenza"
 
+#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "novita"
 msgstr "Novità"
@@ -1605,6 +1609,7 @@ msgstr "Seleziona un argomento nella barra a lato"
 msgid "service_not_active"
 msgstr "Il servizio non è attivo"
 
+#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "servizi"
 msgstr "Servizi"
@@ -1664,17 +1669,14 @@ msgid "situazione_patrimoniale"
 msgstr "Situazione patrimoniale"
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
-#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 msgid "skiplink-footer"
 msgstr "Vai al footer"
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
-#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 msgid "skiplink-main-content"
 msgstr "Vai al contenuto"
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
-#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 msgid "skiplink-navigation"
 msgstr "Vai alla navigazione"
 
