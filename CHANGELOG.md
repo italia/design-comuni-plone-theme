@@ -1,3 +1,12 @@
+## [1.17.3](https://github.com/RedTurtle/design-volto-theme/compare/v1.17.2...v1.17.3) (2021-03-01)
+
+
+### Bug Fixes
+
+* added tag of addons in mrs developer ([5c5a665](https://github.com/RedTurtle/design-volto-theme/commit/5c5a665feb99ac0308072e8f65fd91acc339f68f))
+* fixed argomento portal-header-image height and added opacity ([a30249b](https://github.com/RedTurtle/design-volto-theme/commit/a30249bd269e36ead171f9503d70cf035508369d))
+* updated version tag in mrs developer ([f8ee123](https://github.com/RedTurtle/design-volto-theme/commit/f8ee1236f061b3c718cfc2c27f5e9eead967c3b3))
+
 ### Changelog
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
