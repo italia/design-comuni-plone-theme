@@ -9,7 +9,7 @@ import {
 import moment from 'moment/min/moment-with-locales';
 import cx from 'classnames';
 
-import { getQueryStringResults } from '@plone/volto/actions';
+import { getEventSearchResults } from '@italia/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import { Pagination } from '@italia/components/ItaliaTheme';
@@ -47,14 +47,14 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   const dispatch = useDispatch();
 
   const querystringResults = useSelector((state) => {
-    return state.querystringsearch?.subrequests?.results;
+    return state.eventSearchResults?.subrequests?.results;
   });
   const items = useSelector((state) => {
-    return state.querystringsearch?.subrequests?.results?.items ?? [];
+    return state.eventSearchResults?.subrequests?.results?.items ?? [];
   });
 
   const loading = useSelector((state) => {
-    return state.querystringsearch?.subrequests?.results?.loading || false;
+    return state.eventSearchResults?.subrequests?.results?.loading || false;
   });
 
   const resultsRef = createRef();
@@ -69,9 +69,11 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
     ];
 
     [filterOne, filterTwo, filterThree].forEach((f) => {
-      const value = f.widget.props.value;
-      if (f.query) {
-        f.query(value, query);
+      if (f?.widget) {
+        const value = f.widget.props.value;
+        if (f.query) {
+          f.query(value, query);
+        }
       }
     });
 
@@ -84,8 +86,8 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
     }
 
     dispatch(
-      getQueryStringResults(
-        subsite ? flattenToAppURL(subsite['@id']) : '/',
+      getEventSearchResults(
+        subsite ? flattenToAppURL(subsite['@id']) : '',
         {
           fullobjects: 1,
           query: query,
