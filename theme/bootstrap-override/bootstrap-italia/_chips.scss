@@ -1,6 +1,9 @@
 .chip,
 .public-ui .chip {
+  display: inline-block;
+  height: unset;
   cursor: pointer;
+  line-height: 1rem;
 
   &:not(:disabled):not(.chip-primary):not(.chip-secondary) {
     &.selected,
