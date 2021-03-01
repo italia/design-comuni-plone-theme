@@ -69,9 +69,11 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
     ];
 
     [filterOne, filterTwo, filterThree].forEach((f) => {
-      const value = f.widget.props.value;
-      if (f.query) {
-        f.query(value, query);
+      if (f?.widget) {
+        const value = f.widget.props.value;
+        if (f.query) {
+          f.query(value, query);
+        }
       }
     });
 
@@ -85,7 +87,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
 
     dispatch(
       getEventSearchResults(
-        subsite ? flattenToAppURL(subsite['@id']) : '/',
+        subsite ? flattenToAppURL(subsite['@id']) : '',
         {
           fullobjects: 1,
           query: query,
