@@ -14,6 +14,7 @@
 import { getSearchFilters, GET_SEARCH_FILTERS } from './getSearchFilters';
 import { getSearchResults, GET_SEARCH_RESULTS } from './getSearchResults';
 import { getCalendarResults, GET_CALENDAR_RESULTS } from './calendarSearch';
+import { getEventSearchResults, GET_EVENTSEARCH_RESULTS } from './eventSearch';
 
 import {
   getCalendarDayResults,
@@ -44,4 +45,6 @@ export {
   GET_DETTAGLI_PROCEDIMENTO,
   getTwitterPosts,
   GET_TWITTER_POSTS,
+  getEventSearchResults,
+  GET_EVENTSEARCH_RESULTS,
 };

@@ -115,16 +115,16 @@ const DefaultFilters = () => {
         if (value?.startDate) {
           let start = value.startDate.startOf('day')?.format(date_fmt);
           query.push({
-            i: 'end',
-            o: 'plone.app.querystring.operation.date.largerThan',
+            i: 'start', //end
+            o: '', //plone.app.querystring.operation.date.largerThan
             v: start,
           });
         }
         if (value?.endDate) {
           let end = value.endDate.endOf('day')?.format(date_fmt);
           query.push({
-            i: 'start',
-            o: 'plone.app.querystring.operation.date.lessThan',
+            i: 'end', //start
+            o: '', //plone.app.querystring.operation.date.lessThan
             v: end,
           });
         }
