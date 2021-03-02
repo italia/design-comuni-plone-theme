@@ -19,8 +19,7 @@ const messages = defineMessages({
   },
   linkUrl_description: {
     id: 'searchsectionswidget-linkUrl_description',
-    defaultMessage:
-      'Type an external url, or select an internal url clicking on the right button',
+    defaultMessage: 'Select an internal url clicking on the right button',
   },
   deleteButton: {
     id: 'searchsectionswidget-deleteitem-button',

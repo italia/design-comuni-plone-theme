@@ -16,7 +16,7 @@ import SearchSectionsConfigurationForm from '@italia/components/ItaliaTheme/mana
 
 const messages = defineMessages({
   rootItemsHeader: {
-    id: 'searchsectionswidge-items-header',
+    id: 'searchsectionswidget-items-header',
     defaultMessage: 'Sections',
   },
   addRootPath: {
