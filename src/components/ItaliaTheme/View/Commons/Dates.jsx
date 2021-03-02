@@ -77,7 +77,7 @@ const Dates = ({ content, show_image }) => {
               <CardBody tag="div" className={'card-body'}>
                 <CardTitle tag="h5">
                   {!content.whole_day &&
-                    `${moment(content.start).format('hh:mm')} - `}
+                    `${moment(content.start).format('HH:mm')} - `}
                   {intl.formatMessage(messages.start)}
                 </CardTitle>
               </CardBody>
@@ -102,7 +102,7 @@ const Dates = ({ content, show_image }) => {
               <CardBody tag="div" className={'card-body'}>
                 <CardTitle tag="h5">
                   {!content.whole_day &&
-                    `${moment(content.end).format('hh:mm')} - `}
+                    `${moment(content.end).format('HH:mm')} - `}
                   {intl.formatMessage(messages.end)}
                 </CardTitle>
               </CardBody>

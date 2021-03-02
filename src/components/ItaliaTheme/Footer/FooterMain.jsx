@@ -4,9 +4,8 @@
  */
 
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
-
+import { UniversalLink } from '@plone/volto/components';
 import {
   FooterNavigation,
   FooterInfos,
@@ -27,7 +26,7 @@ const FooterMain = () => {
           <Row className="clearfix" tag="div">
             <Col sm={12} tag="div" widths={['xs', 'sm', 'md', 'lg', 'xl']}>
               <div className="it-brand-wrapper">
-                <Link to="/">
+                <UniversalLink href="/">
                   <LogoFooter />
                   <div className="it-brand-text">
                     <h2 className="no_toc">
@@ -37,7 +36,7 @@ const FooterMain = () => {
                       {siteConfig.properties.siteSubtitle}
                     </h3>
                   </div>
-                </Link>
+                </UniversalLink>
               </div>
             </Col>
           </Row>

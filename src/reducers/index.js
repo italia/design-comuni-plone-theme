@@ -13,6 +13,7 @@ import { amministrazioneTrasparenteTree } from './amministrazioneTrasparenteTree
 import { dettagliProcedimento } from './dettagliProcedimento';
 import { sendActionForm } from './sendActionForm';
 import { twitterPosts } from './twitterPosts';
+import { eventSearchReducer } from './eventSearchReducer';
 
 /**
  * Root reducer.
@@ -32,6 +33,7 @@ const reducers = {
   dettagliProcedimento: dettagliProcedimento,
   sendActionForm: sendActionForm,
   twitterPosts: twitterPosts,
+  eventSearchResults: eventSearchReducer,
 };
 
 export default reducers;

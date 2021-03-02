@@ -21,7 +21,7 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
   useEffect(() => {
     doSearch(data);
     /* eslint-disable react-hooks/exhaustive-deps */
-  }, [data.query]);
+  }, [data]);
 
   const doSearch = (data = { query: [] }, page = 1) => {
     if (data?.query?.length > 0 || additionalFilters.length > 0) {

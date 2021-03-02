@@ -18,6 +18,7 @@ import {
   HeaderSlim,
   HeaderCenter,
   SubsiteHeader,
+  SkipLinks,
 } from '@italia/components/ItaliaTheme';
 import { Headers } from 'design-react-kit/dist/design-react-kit';
 
@@ -35,6 +36,7 @@ const Header = ({ pathname }) => {
 
   return (
     <>
+      <SkipLinks />
       <div className="public-ui">
         {/* <div
         className="sticky-placeholder"

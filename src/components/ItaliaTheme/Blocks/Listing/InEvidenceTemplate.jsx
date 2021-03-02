@@ -69,14 +69,16 @@ const InEvidenceTemplate = ({
                     <div className="img-responsive-wrapper">
                       <div className="img-responsive">
                         <UniversalLink
-                          href={flattenToAppURL(item['@id'])}
+                          item={!isEditMode ? item : null}
+                          href={isEditMode ? '#' : null}
                           className="img-link"
                         >
                           <figure className="img-wrapper">
                             <Image
                               className="listing-image"
                               image={item.image}
-                              alt={item.title}
+                              alt=""
+                              aria-hidden="true"
                             />
                           </figure>
                         </UniversalLink>
@@ -93,8 +95,11 @@ const InEvidenceTemplate = ({
                         item={item}
                       />
                     </CardCategory>
-                    <CardTitle tag="h4">
-                      <UniversalLink href={flattenToAppURL(item['@id'])}>
+                    <CardTitle tag="h3">
+                      <UniversalLink
+                        item={!isEditMode ? item : null}
+                        href={isEditMode ? '#' : null}
+                      >
                         {item.title || item.id}
                       </UniversalLink>
                     </CardTitle>

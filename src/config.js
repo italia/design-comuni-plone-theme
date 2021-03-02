@@ -87,6 +87,9 @@ import GridGalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/G
 import GridGalleryTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/GridGalleryTemplateSkeleton';
 import RibbonCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate';
 import RibbonCardTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/RibbonCardTemplateSkeleton';
+import MapTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/MapTemplate';
+import MapTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/MapTemplateSkeleton';
+
 import BandiInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate';
 import BandiInEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton';
 import AmministrazioneTrasparenteTablesTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
@@ -101,6 +104,7 @@ import { DatetimeWidget } from '@plone/volto/config/Widgets';
 
 import { MultilingualWidget } from '@italia/addons/volto-multilingual-widget';
 import IconWidget from '@italia/components/ItaliaTheme/manage/Widgets/IconWidget';
+import SearchSectionsConfigurationWidget from '@italia/components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget';
 import { defaultIconWidgetOptions } from '@italia/helpers/index';
 //import TinymceWidget from '@italia/components/ItaliaTheme/manage/Widgets/TinymceWidget';
 
@@ -160,6 +164,9 @@ const rssBlock = {
 };
 
 const listBlockTypes = config.settings.listBlockTypes; //config.settings.listBlockTypes.concat(['align-center']);
+const voltoDefaultListingTemplates =
+  config.blocks.blocksConfig.listing.templates;
+delete voltoDefaultListingTemplates.summary;
 
 const customBlocks = {
   newsHome: {
@@ -382,7 +389,7 @@ const customBlocks = {
   listing: {
     ...config.blocks.blocksConfig.listing,
     templates: {
-      ...config.blocks.blocksConfig.listing.templates,
+      ...voltoDefaultListingTemplates,
 
       default: {
         label: 'Card semplice',
@@ -402,6 +409,11 @@ const customBlocks = {
         label: 'Card con nastro',
         template: RibbonCardTemplate,
         skeleton: RibbonCardTemplateSkeleton,
+      },
+      mapTemplate: {
+        label: 'Mappa',
+        template: MapTemplate,
+        skeleton: MapTemplateSkeleton,
       },
       smallBlockLinksTemplate: {
         label: 'Blocco link solo immagini',
@@ -443,6 +455,7 @@ const customBlocks = {
 export const settings = {
   ...config.settings,
   devProxyToApiPath: 'http://localhost:8080/Plone',
+
   richTextEditorInlineToolbarButtons: ItaliaRichTextEditorInlineToolbarButtons,
   richTextEditorPlugins: [
     ...config.settings.richTextEditorPlugins,
@@ -556,6 +569,7 @@ export const widgets = {
       <DatetimeWidget {...props} dateOnly={true} />
     ),
     data_insediamento: (props) => <DatetimeWidget {...props} dateOnly={true} />,
+    search_sections: SearchSectionsConfigurationWidget,
   },
   widget: {
     ...config.widgets.widget,

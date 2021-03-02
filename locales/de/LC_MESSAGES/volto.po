@@ -115,6 +115,10 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
+msgid "Dimensione della mappa"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Form/Form
 msgid "Email Success"
 msgstr ""
@@ -205,6 +209,10 @@ msgstr ""
 
 #: components/ItaliaTheme/Pagination/PaginationItem
 msgid "Next page"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/MapTemplate
+msgid "Non ci sono punti da mostrare sulla mappa"
 msgstr ""
 
 #: components/ItaliaTheme/Footer/FooterSmall
@@ -366,6 +374,7 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/Accordion/Block/ViewBlock
 #: components/ItaliaTheme/Blocks/Form/Block/EditBlock
+#: components/ItaliaTheme/Blocks/Listing/MapTemplate
 #: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
 msgid "Vedi"
 msgstr ""
@@ -377,6 +386,7 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate
 #: components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate
 #: components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate
+#: components/ItaliaTheme/Blocks/Listing/MapTemplate
 #: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateCompact
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
@@ -438,7 +448,6 @@ msgstr ""
 msgid "always_show_image"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "amministrazione"
@@ -747,13 +756,11 @@ msgstr ""
 msgid "dirigente"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "documenti"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "documenti-e-dati"
@@ -1138,6 +1145,18 @@ msgstr ""
 msgid "mailto"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
+msgid "map_size_large"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
+msgid "map_size_medium"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
+msgid "map_size_small"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
 msgid "minutes"
 msgstr ""
@@ -1178,6 +1197,10 @@ msgstr ""
 msgid "modulo_formati_alternativi"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/NewsHome/Body
+msgid "newsHome-news"
+msgstr ""
+
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
 msgid "news_item_contenuto"
 msgstr ""
@@ -1208,7 +1231,6 @@ msgstr ""
 msgid "notizie_in_evidenza"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "novita"
@@ -1534,6 +1556,58 @@ msgstr ""
 msgid "search_service_block_sections"
 msgstr ""
 
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+msgid "searchsectionswidge-items-header"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+msgid "searchsectionswidget-add-rootpath"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+msgid "searchsectionswidget-additem"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+msgid "searchsectionswidget-delete-rootpath"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
+msgid "searchsectionswidget-deleteitem-button"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+msgid "searchsectionswidget-emptyActiveItem"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+msgid "searchsectionswidget-emptyActiveRootPath"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
+msgid "searchsectionswidget-linkUrl"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
+msgid "searchsectionswidget-linkUrl_description"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+msgid "searchsectionswidget-move-item-down"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+msgid "searchsectionswidget-move-item-up"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+msgid "searchsectionswidget-rootpath"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
+msgid "searchsectionswidget-title"
+msgstr ""
+
 #: components/ItaliaTheme/Header/SearchModal
 msgid "sections"
 msgstr ""
@@ -1554,7 +1628,6 @@ msgstr ""
 msgid "service_not_active"
 msgstr ""
 
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "servizi"
@@ -1586,6 +1659,10 @@ msgstr ""
 msgid "show_icon"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
+msgid "show_map_full_width"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
 msgid "show_only_first_ribbon"
 msgstr ""
@@ -1608,6 +1685,18 @@ msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "situazione_patrimoniale"
+msgstr ""
+
+#: components/ItaliaTheme/SkipLinks/SkipLinks
+msgid "skiplink-footer"
+msgstr ""
+
+#: components/ItaliaTheme/SkipLinks/SkipLinks
+msgid "skiplink-main-content"
+msgstr ""
+
+#: components/ItaliaTheme/SkipLinks/SkipLinks
+msgid "skiplink-navigation"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView

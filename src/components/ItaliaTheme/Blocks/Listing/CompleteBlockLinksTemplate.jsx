@@ -54,30 +54,25 @@ const CompleteBlockLinksTemplate = ({
                 noWrapper={false}
                 tag="div"
               >
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={
-                    item['remoteUrl'] && item['remoteUrl'] !== ''
-                      ? flattenToAppURL(item['remoteUrl'])
-                      : flattenToAppURL(item['@id'])
-                  }
+                <UniversalLink
+                  item={!isEditMode ? item : null}
+                  href={isEditMode ? '#' : null}
                 >
                   <div className="d-flex">
                     {item.image && (
                       <div className="image-container">
                         <Image
-                          alt={item.title}
+                          alt=""
                           image={flattenToAppURL(
                             item.image.scales.preview.download,
                           )}
-                          title={item.title}
+                          aria-hidden="true"
                         />
                       </div>
                     )}
                     <div>
                       <CardBody>
-                        <CardTitle tag="h5" className="text-secondary">
+                        <CardTitle tag="h3" className="text-secondary">
                           {item.title}
                         </CardTitle>
                         <CardText tag="p" className="text-secondary">
@@ -86,7 +81,7 @@ const CompleteBlockLinksTemplate = ({
                       </CardBody>
                     </div>
                   </div>
-                </a>
+                </UniversalLink>
               </Card>
             </Col>
           ))}

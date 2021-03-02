@@ -406,9 +406,9 @@ const EventoView = ({ content, location }) => {
                   {content?.event_url && (
                     <div className="mt-4">
                       <h5>{intl.formatMessage(messages.event_url)}</h5>
-                      <a href={content.event_url} rel="noopener noreferrer">
+                      <UniversalLink href={content.event_url}>
                         {content.event_url}
-                      </a>
+                      </UniversalLink>
                     </div>
                   )}
 

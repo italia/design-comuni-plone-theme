@@ -4,6 +4,7 @@ import cx from 'classnames';
 import { useIntl, defineMessages } from 'react-intl';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import Slider from 'react-slick';
+import { UniversalLink } from '@plone/volto/components';
 import Image from '@plone/volto/components/theme/Image/Image';
 import { Icon } from '@italia/components/ItaliaTheme';
 import 'slick-carousel/slick/slick.css';
@@ -101,10 +102,9 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
             <Slider {...settings}>
               {items.map((item) => (
                 <div className="it-single-slide-wrapper" key={item['@id']}>
-                  <a
-                    href={item['@id']}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <UniversalLink
+                    item={item}
+                    openLinkInNewTab={true}
                     title={intl.formatMessage(messages.viewImage)}
                   >
                     <figure className="img-wrapper">
@@ -112,14 +112,15 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
                         <Image
                           className="img-fluid"
                           image={item.image}
-                          alt={item.title}
+                          alt=""
+                          aria-hidden="true"
                         />
                       )}
                       {getCaption(item) && (
                         <figcaption>{getCaption(item)}</figcaption>
                       )}
                     </figure>
-                  </a>
+                  </UniversalLink>
                 </div>
               ))}
             </Slider>

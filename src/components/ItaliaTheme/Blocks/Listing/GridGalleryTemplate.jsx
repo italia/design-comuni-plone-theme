@@ -64,7 +64,8 @@ const GridGalleryTemplate = ({
                 className={cx('grid-gallery-item', `item-${index % 7}`)}
               >
                 <UniversalLink
-                  href={isEditMode ? '#' : flattenToAppURL(item['@id'])}
+                  item={!isEditMode ? item : null}
+                  href={isEditMode ? '#' : null}
                 >
                   {item.image && (
                     <Image
@@ -72,6 +73,7 @@ const GridGalleryTemplate = ({
                       alt=""
                       loading="lazy"
                       role="presentation"
+                      aria-hidden="true"
                     />
                   )}
                   <h3>{item.title}</h3>
