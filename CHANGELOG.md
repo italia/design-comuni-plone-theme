@@ -1,3 +1,22 @@
+# [2.0.0](https://github.com/RedTurtle/design-volto-theme/compare/v1.17.3...v2.0.0) (2021-03-02)
+
+
+### Bug Fixes
+
+* added operation in eventSearch dates ([52d8a8a](https://github.com/RedTurtle/design-volto-theme/commit/52d8a8a2d2351e2bed5881a237c1fab0c7f69177))
+* bug for no-filter setted ([16a6810](https://github.com/RedTurtle/design-volto-theme/commit/16a681017a23d2e9768fe4aa1bd0d840c702d760))
+* chip styles with long text ([dc9e1ec](https://github.com/RedTurtle/design-volto-theme/commit/dc9e1ece156379d6f6b8bb75bd2d8c3c949deff0))
+* chip text alignment ([6562670](https://github.com/RedTurtle/design-volto-theme/commit/656267026ded89b216c0bd6744a26003d699ea3c))
+* chip text alignment ([cbb2827](https://github.com/RedTurtle/design-volto-theme/commit/cbb2827472ea8d158b9a3a3b081b79482a740d7c))
+* removed duplicate in jsconfig ([d6f10e0](https://github.com/RedTurtle/design-volto-theme/commit/d6f10e02efa79957495646cfcac120a3329558fd))
+* resolve eslint errors ([00cf413](https://github.com/RedTurtle/design-volto-theme/commit/00cf4134352518ed9e7ac85bf4d0ee33c69bfdd9))
+
+
+### Features
+
+* added richtext widget with blocks ([2f1ef07](https://github.com/RedTurtle/design-volto-theme/commit/2f1ef0771d180a92570e86fc620562cb882b98e6))
+* added volto-blocks-widget addon ([89f19a7](https://github.com/RedTurtle/design-volto-theme/commit/89f19a72b7dfa624c4775ff00a2c8cd19d6068b3))
+
 ## [1.17.3](https://github.com/RedTurtle/design-volto-theme/compare/v1.17.2...v1.17.3) (2021-03-01)
 
 
