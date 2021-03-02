@@ -1,8 +1,10 @@
-FROM node:12-stretch-slim
+FROM node:14-buster-slim
+
+ENV BUILD_DEPS 'python-dev build-essential'
 
 RUN runDeps="git openssl ca-certificates" && \
     apt-get update && \
-    apt-get install -y --no-install-recommends $runDeps && \
+    apt-get install -y --no-install-recommends $runDeps $BUILD_DEPS && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
@@ -19,8 +21,13 @@ COPY --chown=node . .
 RUN RAZZLE_API_PATH=VOLTO_API_PATH RAZZLE_INTERNAL_API_PATH=VOLTO_INTERNAL_API_PATH yarn build && \
     rm -rf /home/node/.cache
 
+USER root
+RUN apt-get purge $BUILD_DEPS -y && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+USER node
 EXPOSE 3000 3001 4000 4001
 
 ENTRYPOINT ["/home/node/entrypoint.sh"]
 CMD ["yarn", "start:prod"]
-
