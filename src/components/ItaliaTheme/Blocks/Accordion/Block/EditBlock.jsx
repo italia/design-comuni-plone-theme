@@ -95,6 +95,7 @@ class EditBlock extends SubblockEdit {
               />
             </Button>
 
+            {/* eslint-disable */}
             <div
               onClick={() => {
                 this.setState({ focusOn: 'title' });
@@ -156,6 +157,7 @@ class EditBlock extends SubblockEdit {
             </div>
           )}
         </div>
+        {/* eslint-enable */}
       </Subblock>
     );
   }
