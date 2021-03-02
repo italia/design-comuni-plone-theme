@@ -4,7 +4,6 @@
  */
 
 import React, { useState, createRef, useEffect } from 'react';
-import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import Modules from '@italia/components/ItaliaTheme/View/DocumentoView/Modules';
@@ -24,6 +23,7 @@ import {
   DocumentoPlaceholderAfterContent,
   RichText,
   RelatedItemInEvidence,
+  richTextHasContent,
 } from '@italia/components/ItaliaTheme/View';
 
 const messages = defineMessages({
@@ -79,7 +79,7 @@ const DocumentoView = ({ content, location }) => {
   const intl = useIntl();
   let documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
-  const userLogged = useSelector((state) => state.userSession);
+  //const userLogged = useSelector((state) => state.userSession);
 
   useEffect(() => {
     if (documentBody.current) {
@@ -115,8 +115,7 @@ const DocumentoView = ({ content, location }) => {
 
             {/* DESCRIZIONE*/}
 
-            {(content.descrizione_estesa?.data.replace(/(<([^>]+)>)/g, '')
-              .length > 0 ||
+            {(richTextHasContent(content.descrizione_estesa) ||
               contentFolderHasItems(content, 'multimedia') ||
               content.autori?.length > 0 ||
               content.licenza_distribuzione?.length > 0) && (
@@ -124,7 +123,7 @@ const DocumentoView = ({ content, location }) => {
                 tag_id={'text-body'}
                 title={intl.formatMessage(messages.descrizione)}
                 show_title={true}
-                content={content.descrizione_estesa?.data}
+                content={content.descrizione_estesa}
               >
                 {contentFolderHasItems(content, 'multimedia') && (
                   <Gallery
@@ -207,7 +206,7 @@ const DocumentoView = ({ content, location }) => {
                     >
                       <RichText
                         serif={false}
-                        content={servizio.canale_digitale.data}
+                        content={servizio.canale_digitale}
                         add_class="mt-3"
                       />
                     </GenericCard>
@@ -236,21 +235,17 @@ const DocumentoView = ({ content, location }) => {
 
             {/* ULTERIORI INFORMAZIONI */}
             <Metadata content={content}>
-              {content?.ulteriori_informazioni?.data?.replace(
-                /(<([^>]+)>)/g,
-                '',
-              ).length > 0 && (
+              {richTextHasContent(content?.ulteriori_informazioni) && (
                 <HelpBox text={content?.ulteriori_informazioni} />
               )}
 
               {/* RIFERIMENTI NORMATIVI */}
-              {content?.riferimenti_normativi?.data?.replace(/(<([^>]+)>)/g, '')
-                .length > 0 && (
+              {richTextHasContent(content?.riferimenti_normativi) && (
                 <div className="mt-2">
                   <h5>{intl.formatMessage(messages.riferimenti_normativi)}</h5>
                   <RichText
                     serif={false}
-                    content={content.riferimenti_normativi.data}
+                    content={content.riferimenti_normativi}
                   />
                 </div>
               )}

@@ -17,15 +17,19 @@ import {
   CuredBy,
   Gallery,
   Attachments,
-  TextOrBlocks,
   RelatedItems,
   NewsItemPlaceholderAfterContent,
   RelatedItemInEvidence,
+  richTextHasContent,
 } from '@italia/components/ItaliaTheme/View';
 
 // import { getBaseUrl } from '@plone/volto/helpers';
 
 const messages = defineMessages({
+  news_item_contenuto: {
+    id: 'news_item_contenuto',
+    defaultMessage: 'Contenuto',
+  },
   notizie_in_evidenza: {
     id: 'notizie_in_evidenza',
     defaultMessage: 'Notizie in evidenza',
@@ -74,7 +78,7 @@ const NewsItemView = ({ content, location }) => {
         setSideMenuElements(documentBody.current);
       }
     }
-  }, [documentBody]);
+  }, [content.description, content.title, documentBody]);
 
   return (
     <>
@@ -99,17 +103,17 @@ const NewsItemView = ({ content, location }) => {
             className="col-lg-8 it-page-sections-container"
             ref={documentBody}
           >
-            <article
-              id="text-body"
-              className="it-page-section anchor-offset clearfix"
-            >
-              {/* HEADER IMAGE */}
-              <ContentImage content={content} position="documentBody" />
-              {/* TEXT OR BLOCKS */}
-              <div className="text-serif">
-                <TextOrBlocks content={content} location={location} />
-              </div>
-            </article>
+            {/* HEADER IMAGE */}
+            <ContentImage content={content} position="documentBody" />
+
+            {/* TEXT BODY */}
+            <RichTextArticle
+              content={content.descrizione_estesa}
+              tag_id={'text-body'}
+              field="descrizione_estesa"
+              title={intl.formatMessage(messages.news_item_contenuto)}
+              show_title={false}
+            />
 
             <Gallery content={content} folder_name={'multimedia'} />
 
@@ -133,9 +137,9 @@ const NewsItemView = ({ content, location }) => {
               </RichTextArticle>
             )}
 
-            {content.dataset?.data?.replace(/(<([^>]+)>)/g, '') && (
+            {richTextHasContent(content.dataset) && (
               <RichTextArticle
-                content={content.dataset.data}
+                content={content.dataset}
                 tag_id="dataset"
                 title={intl.formatMessage(messages.dataset)}
               />

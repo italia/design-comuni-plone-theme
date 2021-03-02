@@ -46,11 +46,11 @@ msgstr "Cerca"
 
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
 msgid "Cerca per parola chiave"
-msgstr ""
+msgstr "Cerca per parola chiave"
 
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 msgid "Clicca qui per sostituire il file"
-msgstr ""
+msgstr "Clicca qui per sostituire il file"
 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 #: components/ItaliaTheme/manage/Widgets/ColorListWidget
@@ -67,7 +67,7 @@ msgstr "Giallo"
 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Color_warning_orange"
-msgstr ""
+msgstr "Arancione"
 
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "Contatti"
@@ -102,7 +102,7 @@ msgstr "Description"
 
 #: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
 msgid "Dimensione della mappa"
-msgstr ""
+msgstr "Dimensione della mappa"
 
 #: components/ItaliaTheme/Blocks/Form/Form
 msgid "Email Success"
@@ -198,7 +198,7 @@ msgstr "Pagina successiva"
 
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
 msgid "Non ci sono punti da mostrare sulla mappa"
-msgstr ""
+msgstr "Non ci sono punti da mostrare sulla mappa"
 
 #: components/ItaliaTheme/Footer/FooterSmall
 msgid "Note legali"
@@ -214,7 +214,7 @@ msgstr "Filtro"
 
 #: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
 msgid "Pause slider"
-msgstr ""
+msgstr "Metti in pausa"
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 msgid "Percorso path filter"
@@ -222,7 +222,7 @@ msgstr "Percorso"
 
 #: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
 msgid "Play slider"
-msgstr ""
+msgstr "Play"
 
 #: components/ItaliaTheme/Pagination/PaginationItem
 msgid "Previous page"
@@ -235,7 +235,7 @@ msgstr "Required"
 
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 msgid "Rimuovi il file"
-msgstr ""
+msgstr "Rimuovi il file"
 
 #: components/ItaliaTheme/ScrollToTop/ScrollToTop
 msgid "Scroll to top"
@@ -260,7 +260,7 @@ msgstr "Seguici su"
 
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 msgid "Seleziona un file"
-msgstr ""
+msgstr "Seleziona un file"
 
 #: components/ItaliaTheme/Footer/FooterSmall
 msgid "Sezione Link Utili"
@@ -305,15 +305,15 @@ msgstr "Titolo"
 
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 msgid "Trascina qui il file ..."
-msgstr ""
+msgstr "Trascina qui il file..."
 
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 msgid "Trascina qui un file per caricare un nuovo file"
-msgstr ""
+msgstr "Trascina qui un file per caricare un nuovo file"
 
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 msgid "Trascina qui un file per sostituire quello esistente"
-msgstr ""
+msgstr "Trascina qui un file per sostituire quello esistente"
 
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "Twitter Posts"
@@ -366,7 +366,7 @@ msgstr "Vedi"
 
 #: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
 msgid "Vedi l'immagine"
-msgstr ""
+msgstr "Vedi l'immagine"
 
 #: components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate
 #: components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate
@@ -441,7 +441,7 @@ msgstr "Amministrazione"
 #: components/ItaliaTheme/Blocks/Listing/serviziAmministrazioneTrasparenteTemplate
 #: helpers/amministrazioneTrasparenteHelper
 msgid "area"
-msgstr ""
+msgstr "area"
 
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
 msgid "area_appartenenza"
@@ -510,7 +510,7 @@ msgstr "Data di pubblicazione"
 
 #: components/ItaliaTheme/View/BandoView/BandoView
 msgid "bando_ente"
-msgstr ""
+msgstr "Ente erogatore"
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
@@ -731,7 +731,7 @@ msgstr "Maggiori dettagli"
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "dettaglio_tipologia_procedimento"
-msgstr ""
+msgstr "Dettaglio tipologia procedimento"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "dichiarazione_dei_redditi"
@@ -739,7 +739,7 @@ msgstr "Dichiarazione dei redditi"
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "dirigente"
-msgstr ""
+msgstr "Dirigente"
 
 #: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/PersonaView/PersonaView
@@ -902,7 +902,7 @@ msgstr "Fax"
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "file_correlato"
-msgstr ""
+msgstr "File correlato"
 
 #: components/ItaliaTheme/Header/SearchModal
 msgid "filters"
@@ -975,7 +975,7 @@ msgstr "Tipo di campo"
 
 #: components/ItaliaTheme/Blocks/Form/Sidebar
 msgid "form_field_type_attachment"
-msgstr ""
+msgstr "Allegato"
 
 #: components/ItaliaTheme/Blocks/Form/Sidebar
 msgid "form_field_type_checkbox"
@@ -1067,7 +1067,7 @@ msgstr "Importi di viaggio e/o servizi"
 #: components/ItaliaTheme/Blocks/Listing/serviziAmministrazioneTrasparenteTemplate
 #: helpers/amministrazioneTrasparenteHelper
 msgid "incarico"
-msgstr ""
+msgstr "incarico"
 
 #: components/ItaliaTheme/View/Commons/SideMenu
 msgid "index"
@@ -1080,7 +1080,7 @@ msgstr "Inserire un filtro dal menù laterale per visualizzare i relativi risult
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "iter_del_procedimento"
-msgstr ""
+msgstr "Iter del procedimento"
 
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "legami_altre_strutture"
@@ -1112,7 +1112,7 @@ msgstr "Colore dell'elemento"
 
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "location_to_search"
-msgstr ""
+msgstr "Posizione in cui cercare"
 
 #: components/ItaliaTheme/View/Commons/LocationItem
 msgid "locations"
@@ -1132,15 +1132,15 @@ msgstr "Invia"
 
 #: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
 msgid "map_size_large"
-msgstr ""
+msgstr "Grande"
 
 #: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
 msgid "map_size_medium"
-msgstr ""
+msgstr "Media"
 
 #: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
 msgid "map_size_small"
-msgstr ""
+msgstr "Piccola"
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
 msgid "minutes"
@@ -1152,11 +1152,11 @@ msgstr "Modalità di accesso"
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "modalita_di_avvio"
-msgstr ""
+msgstr "Modalità di avvio"
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "modalita_richiedere_informazioni_procedimentodali"
-msgstr ""
+msgstr "Modalità per richiedere informazioni sul procedimento"
 
 #: components/ItaliaTheme/View/Commons/Metadata
 msgid "modified"
@@ -1186,9 +1186,13 @@ msgstr "Formati alternativi"
 msgid "newsHome-news"
 msgstr "Notizie"
 
+#: components/ItaliaTheme/View/NewsItemView/NewsItemView
+msgid "news_item_contenuto"
+msgstr "Contenuto"
+
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "no"
-msgstr ""
+msgstr "No"
 
 #: components/ItaliaTheme/Blocks/EventSearch/Body
 msgid "noResult"
@@ -1205,7 +1209,7 @@ msgstr "Nessun video selezionato. Aggiungi un elemento per mostrare un video"
 #: components/ItaliaTheme/Blocks/Listing/serviziAmministrazioneTrasparenteTemplate
 #: helpers/amministrazioneTrasparenteHelper
 msgid "nominativo"
-msgstr ""
+msgstr "nominativo"
 
 #: components/ItaliaTheme/View/EventoView/EventoView
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
@@ -1272,7 +1276,7 @@ msgstr "Organizzazione di riferimento"
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "organo_competente_provvedimento_finale"
-msgstr ""
+msgstr "Organo competente adozione provvedimento finale"
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody
 msgid "otherArguments"
@@ -1332,7 +1336,7 @@ msgstr "Procedure collegate all'esito"
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "provvedimento_finale"
-msgstr ""
+msgstr "Provvedimento finale"
 
 #: components/ItaliaTheme/View/Commons/LocationItem
 #: components/ItaliaTheme/View/VenueView/VenueView
@@ -1384,11 +1388,11 @@ msgstr "Responsabile"
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "responsabile_del_procedimento"
-msgstr ""
+msgstr "Responsabile del procedimento"
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "responsabile_del_procedimento_unità_organizzativa_competente"
-msgstr ""
+msgstr "Responsabile del procedimento e Unità Organizzativa competente"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "responsabile_di"
@@ -1396,7 +1400,7 @@ msgstr "Responsabile di"
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "riferimenti_normativi"
-msgstr ""
+msgstr "Riferimenti normativi"
 
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "riferimento_fax_luogo"
@@ -1436,7 +1440,7 @@ msgstr "Diritti"
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "risultati_indagini_customer_satisfaction"
-msgstr ""
+msgstr "Risultati indagini di customer satisfaction"
 
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
@@ -1538,52 +1542,52 @@ msgid "search_service_block_sections"
 msgstr "Dove cercare"
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
-msgid "searchsectionswidge-items-header"
-msgstr ""
-
-#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-add-rootpath"
-msgstr ""
+msgstr "Sezioni"
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-additem"
-msgstr ""
+msgstr "Aggiungi una sezione"
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-delete-rootpath"
-msgstr ""
+msgstr "Elimina radice di navigazione"
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
 msgid "searchsectionswidget-deleteitem-button"
-msgstr ""
+msgstr "Elimina"
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-emptyActiveItem"
-msgstr ""
+msgstr "Aggiungi una nuova sezione, o selezionane una."
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-emptyActiveRootPath"
-msgstr ""
+msgstr "Seleziona una radice di navigazione"
+
+#: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
+msgid "searchsectionswidget-items-header"
+msgstr "Sezioni"
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
 msgid "searchsectionswidget-linkUrl"
-msgstr ""
+msgstr "Destinazione"
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
 msgid "searchsectionswidget-linkUrl_description"
-msgstr ""
+msgstr "Seleziona un link interno cliccando sul bottone a destra"
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-move-item-down"
-msgstr ""
+msgstr "Sposta dopo"
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-move-item-up"
-msgstr ""
+msgstr "Sposta prima"
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-rootpath"
-msgstr ""
+msgstr "Radice di navigazione"
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
 msgid "searchsectionswidget-title"
@@ -1694,7 +1698,7 @@ msgstr "Inizio evento"
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "strumenti_di_tutela"
-msgstr ""
+msgstr "Strumenti di tutela"
 
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "struttura"
@@ -1767,7 +1771,7 @@ msgstr "Titolare del potere sostitutivo"
 
 #: helpers/amministrazioneTrasparenteHelper
 msgid "titolo"
-msgstr ""
+msgstr "titolo"
 
 #: components/ItaliaTheme/Blocks/Listing/Commons/CardCalendar
 #: helpers/ListingHelper
@@ -1811,12 +1815,13 @@ msgstr "Ulteriori informazioni"
 
 #: helpers/amministrazioneTrasparenteHelper
 msgid "unita_operativa"
-msgstr ""
+msgstr "unità operativa"
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "unita_organizzativa_competente"
-msgstr ""
+msgstr "Unità organizzativa competente del procedimento"
 
+#: components/ItaliaTheme/View/Commons/RenderBlocks
 #: components/ItaliaTheme/View/Commons/TextOrBlocks
 msgid "unknownBlock"
 msgstr "Blocco sconosciuto"
@@ -1857,4 +1862,4 @@ msgstr "Sito web"
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "yes"
-msgstr ""
+msgstr "Sì"

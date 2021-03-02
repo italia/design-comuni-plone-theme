@@ -61,7 +61,7 @@ const OfficeCard = ({
                 <RichText
                   serif={false}
                   add_class="card-text"
-                  content={office_fo.contact_info?.data}
+                  content={office_fo.contact_info}
                 />
               </>
             ) : null}

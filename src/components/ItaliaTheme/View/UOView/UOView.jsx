@@ -23,6 +23,7 @@ import {
   UOPlaceholderAfterContent,
   RichText,
   RelatedItemInEvidence,
+  richTextHasContent,
 } from '@italia/components/ItaliaTheme/View';
 
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
@@ -153,7 +154,7 @@ const UOView = ({ content }) => {
             <ContentImage content={content} position="documentBody" />
 
             {/*** COSA FA ***/}
-            {content?.competenze?.data?.replace(/(<([^>]+)>)/g, '') && (
+            {richTextHasContent(content?.competenze) && (
               <article
                 id="cosa-fa"
                 className="it-page-section anchor-offset mt-5"
@@ -163,7 +164,7 @@ const UOView = ({ content }) => {
                 </h4>
                 <div className="mb-5 mt-3">
                   {/* <h5>{intl.formatMessage(messages.competenze)}</h5> //rimosso il titolo 'competenze' perchè è l'unico sottotitolo di 'cosa fa' e ci sarebbero sempre due titoli, un po inutili*/}
-                  <RichText content={content.competenze.data} />
+                  <RichText content={content.competenze} />
                 </div>
               </article>
             )}
@@ -294,14 +295,14 @@ const UOView = ({ content }) => {
 
             {/*** CONTATTI ***/}
             {(content?.sedi_secondarie?.length > 0 ||
-              content?.contact_info?.data.replace(/(<([^>]+)>)/g, '') ||
+              richTextHasContent(content?.contact_info) ||
               content?.geolocation?.latitude > 0 ||
               content?.geolocation?.longitude > 0 ||
               content?.nome_sede?.length > 0 ||
               content?.street?.length > 0 ||
               content?.city?.length > 0 ||
               content?.zip_code?.length > 0 ||
-              content?.orario_pubblico?.data.replace(/(<([^>]+)>)/g, '') ||
+              richTextHasContent(content?.orario_pubblico) ||
               content?.telefono?.length > 0 ||
               content?.fax?.length > 0 ||
               content?.web?.length > 0 ||
@@ -333,15 +334,15 @@ const UOView = ({ content }) => {
                     />
                   </div>
                 )}
-                {content.contact_info?.data.replace(/(<([^>]+)>)/g, '') && (
+                {richTextHasContent(content.contact_info) && (
                   <div className="mb-5 mt-3">
-                    <RichText content={content.contact_info.data} />
+                    <RichText content={content.contact_info} />
                   </div>
                 )}
-                {content.orario_pubblico?.data.replace(/(<([^>]+)>)/g, '') && (
+                {richTextHasContent(content.orario_pubblico) && (
                   <div className="mb-5 mt-3">
                     <h5>{intl.formatMessage(messages.orario_pubblico)}</h5>
-                    <RichText content={content.orario_pubblico.data} />
+                    <RichText content={content.orario_pubblico} />
                   </div>
                 )}
                 <dl className="contatti-list">
@@ -424,10 +425,9 @@ const UOView = ({ content }) => {
 
             {/* ULTERIORI INFORMAZIONI */}
             <Metadata content={content} showTags={false}>
-              {content?.ulteriori_informazioni?.data?.replace(
-                /(<([^>]+)>)/g,
-                '',
-              ) && <HelpBox text={content.ulteriori_informazioni} />}
+              {richTextHasContent(content?.ulteriori_informazioni) && (
+                <HelpBox text={content.ulteriori_informazioni} />
+              )}
             </Metadata>
           </section>
         </div>

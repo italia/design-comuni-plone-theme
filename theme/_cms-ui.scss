@@ -63,13 +63,21 @@ body.cms-ui {
     .text-justify {
       text-align: justify;
     }
+
+    .block.text {
+      line-height: 1.555;
+    }
   }
 
-  &.contenttype-document {
-    .block {
-      font-family: $font-family-sans-serif;
-      font-weight: 300;
-      line-height: 1.555;
+  &.contenttype-document,
+  &.contenttype-argomento,
+  &.contenttype-cartellamodulistica {
+    &:not(.section-add) {
+      .block {
+        font-family: $font-family-sans-serif;
+        font-weight: 300;
+        line-height: 1.555;
+      }
     }
   }
 

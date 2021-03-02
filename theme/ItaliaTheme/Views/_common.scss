@@ -43,6 +43,21 @@ body {
   }
 }
 
+//richtext-blocks
+h2,
+h3,
+h4,
+h5,
+h6 {
+  ~ .richtext-blocks {
+    margin-top: 0.5rem;
+  }
+
+  + .richtext-blocks {
+    margin-bottom: 2.5rem;
+  }
+}
+
 @media (max-width: #{map-get($grid-breakpoints, lg)}) {
   .page-side-menu {
     display: none;
@@ -188,10 +203,10 @@ div.sticky-wrapper {
 }
 
 .event-center-cropped {
+  max-width: 12.5rem;
+  max-height: 18.75rem;
   object-fit: none;
   object-position: center;
-  max-height: 18.75rem;
-  max-width: 12.5rem;
 }
 
 #default-country {
@@ -205,21 +220,21 @@ div.sticky-wrapper {
 .card-wrapper {
   .custom-calendar-card {
     .card-calendar {
-      text-align: left;
       width: 6.4rem;
+      text-align: left;
 
       .date-label {
         width: 1.4rem;
-        font-size: 0.7rem;
-        text-align: center;
         font-family: $font-family-monospace;
+        font-size: 0.7rem;
         font-weight: 500;
+        text-align: center;
         text-transform: lowercase;
       }
 
       .date {
-        font-size: 1.3rem;
         font-family: $font-family-monospace;
+        font-size: 1.3rem;
         font-weight: 200;
       }
     }
@@ -250,8 +265,8 @@ div.sticky-wrapper {
   }
 
   svg {
-    fill: $tertiary;
     color: $tertiary;
+    fill: $tertiary;
   }
 }
 

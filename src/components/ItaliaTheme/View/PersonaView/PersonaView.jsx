@@ -22,6 +22,7 @@ import {
   PersonaPlaceholderAfterContent,
   ContactLink,
   RelatedItemInEvidence,
+  richTextHasContent,
 } from '@italia/components/ItaliaTheme/View';
 import { contentFolderHasItems } from '@italia/helpers';
 
@@ -173,14 +174,11 @@ const PersonaView = ({ content }) => {
                 (content?.organizzazione_riferimento?.length > 0 ||
                   content?.responsabile_di?.length > 0 ||
                   content?.assessore_di?.length > 0 ||
-                  content?.competenze?.data.replace(/(<([^>]+)>)/g, '').length >
-                    0 ||
-                  content?.deleghe?.data.replace(/(<([^>]+)>)/g, '').length >
-                    0 ||
+                  richTextHasContent(content?.competenze) ||
+                  richTextHasContent(content?.deleghe) ||
                   content?.tipologia_persona ||
                   content?.data_insediamento ||
-                  content?.biografia?.data.replace(/(<([^>]+)>)/g, '').length >
-                    0 ||
+                  richTextHasContent(content?.biografia) ||
                   contentFolderHasItems(
                     content,
                     'foto-e-attivita-politica',
@@ -233,24 +231,22 @@ const PersonaView = ({ content }) => {
                       </div>
                     )}
 
-                    {content?.competenze?.data.replace(/(<([^>]+)>)/g, '')
-                      .length > 0 && (
+                    {richTextHasContent(content?.competenze) && (
                       <div className="mb-5 mt-3">
                         <RichText
                           title_size="h5"
                           title={intl.formatMessage(messages.competenze)}
-                          content={content.competenze.data}
+                          content={content.competenze}
                         />
                       </div>
                     )}
 
-                    {content?.deleghe?.data.replace(/(<([^>]+)>)/g, '').length >
-                      0 && (
+                    {richTextHasContent(content?.deleghe) && (
                       <div className="mb-5 mt-3">
                         <RichText
                           title_size="h5"
                           title={intl.formatMessage(messages.deleghe)}
-                          content={content.deleghe.data}
+                          content={content.deleghe}
                         />
                       </div>
                     )}
@@ -273,13 +269,12 @@ const PersonaView = ({ content }) => {
                       </div>
                     )}
 
-                    {content?.biografia?.data.replace(/(<([^>]+)>)/g, '')
-                      .length > 0 && (
+                    {richTextHasContent(content?.biografia) > 0 && (
                       <div className="mb-5 mt-3">
                         <RichText
                           title_size="h5"
                           title={intl.formatMessage(messages.biografia)}
-                          content={content.biografia.data}
+                          content={content.biografia}
                         />
                       </div>
                     )}
@@ -444,10 +439,9 @@ const PersonaView = ({ content }) => {
               </RichTextArticle>
             )}
             <Metadata content={content}>
-              {content?.ulteriori_informazioni?.data?.replace(
-                /(<([^>]+)>)/g,
-                '',
-              ) && <HelpBox text={content?.ulteriori_informazioni} />}
+              {richTextHasContent(content?.ulteriori_informazioni) && (
+                <HelpBox text={content?.ulteriori_informazioni} />
+              )}
             </Metadata>
           </section>
         </div>
