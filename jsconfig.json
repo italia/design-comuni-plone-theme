@@ -28,9 +28,6 @@
             "@italia/addons/volto-editablefooter": [
                 "addons/volto-editablefooter/src"
             ],
-            "volto-blocks-widget": [
-                "addons/volto-blocks-widget"
-            ],
             "@italia/addons/volto-blocks-widget": [
                 "addons/volto-blocks-widget/src"
             ],
