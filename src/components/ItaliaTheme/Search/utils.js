@@ -140,7 +140,7 @@ const parseFetchedOptions = (options, location) => {
 
 // const parseCustomPath = (location) => {
 //   const qsOptions = qs.parse(location?.search ?? '');
-//   const customPath = null;
+//   let customPath = null;
 //   if (qsOptions['custom_path']) {
 //     customPath = qsOptions['custom_path'];
 //   }

@@ -54,8 +54,9 @@ class EditBlock extends SubblockEdit {
   }
 
   componentDidMount() {
+    // eslint-disable-next-line no-unused-expressions
     this.accordion_item_ref?.current?.addEventListener('keydown', (e) => {
-      if (e.keyCode == 13) {
+      if (e.keyCode === 13) {
         if (!(this.state.focusOn === 'text')) {
           this.setState({ focusOn: 'text' });
         }
@@ -94,6 +95,7 @@ class EditBlock extends SubblockEdit {
               />
             </Button>
 
+            {/* eslint-disable */}
             <div
               onClick={() => {
                 this.setState({ focusOn: 'title' });
@@ -155,6 +157,7 @@ class EditBlock extends SubblockEdit {
             </div>
           )}
         </div>
+        {/* eslint-enable */}
       </Subblock>
     );
   }

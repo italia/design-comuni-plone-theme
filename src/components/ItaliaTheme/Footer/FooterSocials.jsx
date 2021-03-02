@@ -5,20 +5,10 @@
 
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { defineMessages, useIntl } from 'react-intl';
-import { HeaderSocialsZone } from 'design-react-kit/dist/design-react-kit';
 import { Icon } from '@italia/components/ItaliaTheme';
 import { getSocialSettings } from '@italia/addons/volto-social-settings';
 
-const messages = defineMessages({
-  followUs: {
-    id: 'Seguici su',
-    defaultMessage: 'Seguici su',
-  },
-});
-
 const FooterSocials = () => {
-  const intl = useIntl();
   const socialSettings = useSelector((state) => state.socialSettings?.results);
   const dispatch = useDispatch();
 
