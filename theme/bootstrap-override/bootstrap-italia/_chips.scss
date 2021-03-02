@@ -4,6 +4,7 @@
   height: unset;
   cursor: pointer;
   line-height: 1rem;
+  text-align: center;
 
   &:not(:disabled):not(.chip-primary):not(.chip-secondary) {
     &.selected,
