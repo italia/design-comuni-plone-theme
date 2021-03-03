@@ -19,8 +19,8 @@ $sidebarFormBg: #fafafa;
       background: $sidebarFormBg;
 
       &:focus {
-        color: #666;
         background: $sidebarFormBg;
+        color: #666;
       }
     }
 
@@ -54,8 +54,8 @@ $sidebarFormBg: #fafafa;
       }
 
       .DraftEditor-root {
-        //background-color: transparent;
         border-bottom: none;
+        background-color: transparent;
       }
     }
   }
