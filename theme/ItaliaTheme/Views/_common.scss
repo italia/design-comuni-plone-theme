@@ -290,3 +290,7 @@ div.sticky-wrapper {
     margin-top: 0 !important;
   }
 }
+
+form.ui.form.vertical-form > fieldset.invisible {
+  min-width: 0;
+}
