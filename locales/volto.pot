@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-03-03T09:01:58.230Z\n"
+"POT-Creation-Date: 2021-03-03T09:14:25.592Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -13,6 +13,7 @@ msgstr ""
 "Preferred-Encodings: utf-8\n"
 "Domain: volto\n"
 
+#: components/ItaliaTheme/Header/HeaderSlim/ArLogin
 #: components/ItaliaTheme/Header/HeaderSlim/HeaderSlimRightZone
 # defaultMessage: Accedi all'area personale
 msgid "Accedi all'area personale"

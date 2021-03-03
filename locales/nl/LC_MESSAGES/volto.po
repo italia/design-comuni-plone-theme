@@ -30,6 +30,7 @@ msgstr ""
 "Language-Name: Nederlands\n"
 "Preferred-Encodings: utf-8\n"
 
+#: components/ItaliaTheme/Header/HeaderSlim/ArLogin
 #: components/ItaliaTheme/Header/HeaderSlim/HeaderSlimRightZone
 msgid "Accedi all'area personale"
 msgstr ""

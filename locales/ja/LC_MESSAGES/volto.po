@@ -18,6 +18,7 @@ msgstr ""
 "Preferred-Encodings: utf-8\n"
 "X-Is-Fallback-For: ja-jp\n"
 
+#: components/ItaliaTheme/Header/HeaderSlim/ArLogin
 #: components/ItaliaTheme/Header/HeaderSlim/HeaderSlimRightZone
 msgid "Accedi all'area personale"
 msgstr ""

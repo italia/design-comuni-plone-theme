@@ -26,6 +26,7 @@ export CardCategory from '@italia/components/ItaliaTheme/Cards/CardCategory';
 export LanguageSelector from '@italia/components/ItaliaTheme/LanguageSelector/LanguageSelector';
 export HeaderSlim from '@italia/components/ItaliaTheme/Header/HeaderSlim';
 export HeaderSlimRightZone from '@italia/components/ItaliaTheme/Header/HeaderSlim/HeaderSlimRightZone';
+export ArLogin from '@italia/components/ItaliaTheme/Header/HeaderSlim/ArLogin';
 export HeaderCenter from '@italia/components/ItaliaTheme/Header/HeaderCenter';
 export SocialHeader from '@italia/components/ItaliaTheme/Header/SocialHeader';
 export SubsiteSocialHeader from '@italia/components/ItaliaTheme/Header/SubsiteSocialHeader';
