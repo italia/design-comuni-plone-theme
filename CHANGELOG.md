@@ -1,3 +1,12 @@
+## [2.1.2](https://github.com/RedTurtle/design-volto-theme/compare/v2.1.1...v2.1.2) (2021-03-03)
+
+
+### Bug Fixes
+
+* alert block in blocks widget size ([20461d9](https://github.com/RedTurtle/design-volto-theme/commit/20461d91dc2b4105fe537dbc0887b9eacb7b8a59))
+* fieldset min-width ([42ca745](https://github.com/RedTurtle/design-volto-theme/commit/42ca745061fdf92de53ba944a4cd7dfd4a394004))
+* fieldset min-width ([f1cdffc](https://github.com/RedTurtle/design-volto-theme/commit/f1cdffc635606a52fb1d0a52005af96494babc3d))
+
 ## [2.1.1](https://github.com/RedTurtle/design-volto-theme/compare/v2.1.0...v2.1.1) (2021-03-03)
 
 # [2.1.0](https://github.com/RedTurtle/design-volto-theme/compare/v2.0.0...v2.1.0) (2021-03-03)
