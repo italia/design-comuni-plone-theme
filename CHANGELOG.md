@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/RedTurtle/design-volto-theme/compare/v2.0.0...v2.1.0) (2021-03-03)
+
+
+### Features
+
+* added arLoginUrl to siteConfig, to show login button in HeaderSlim ([db34c70](https://github.com/RedTurtle/design-volto-theme/commit/db34c7091937976599d2a08ec5df13a53741bd1e))
+
 # [2.0.0](https://github.com/RedTurtle/design-volto-theme/compare/v1.17.3...v2.0.0) (2021-03-02)
 
 
