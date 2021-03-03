@@ -1,3 +1,5 @@
+## [2.1.1](https://github.com/RedTurtle/design-volto-theme/compare/v2.1.0...v2.1.1) (2021-03-03)
+
 # [2.1.0](https://github.com/RedTurtle/design-volto-theme/compare/v2.0.0...v2.1.0) (2021-03-03)
 
 
