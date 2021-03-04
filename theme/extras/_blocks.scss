@@ -7,3 +7,14 @@
     margin-top: 0;
   }
 }
+
+#page-document {
+  div:not([class]):not(.block),
+  div[class=''] {
+    > .public-ui {
+      > .full-width {
+        height: auto;
+      }
+    }
+  }
+}
