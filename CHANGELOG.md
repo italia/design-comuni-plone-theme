@@ -1,3 +1,10 @@
+## [2.1.3](https://github.com/RedTurtle/design-volto-theme/compare/v2.1.2...v2.1.3) (2021-03-04)
+
+
+### Bug Fixes
+
+* prevent ssr bad html blocks overlap ([e72808d](https://github.com/RedTurtle/design-volto-theme/commit/e72808d7997a7b290bdc68167787fbdac753b652))
+
 ## [2.1.2](https://github.com/RedTurtle/design-volto-theme/compare/v2.1.1...v2.1.2) (2021-03-03)
 
 
