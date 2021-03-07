@@ -61,7 +61,7 @@
     "path": "src",
     "https": "https://github.com/collective/volto-blocks-widget.git",
     "url": "git@github.com:collective/volto-blocks-widget.git",
-    "branch": "volto12"
+    "tag":"v1.0.2"
   },
   "volto-google-analytics": {
     "package": "@italia/addons/volto-google-analytics",
