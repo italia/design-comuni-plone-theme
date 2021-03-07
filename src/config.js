@@ -1,9 +1,5 @@
 import React from 'react';
 
-import * as config from '@plone/volto/config';
-
-import ToHTMLRenderers from '@plone/volto/config/RichTextEditor/ToHTML';
-
 import newsSVG from '@plone/volto/icons/news.svg';
 import searchIcon from 'bootstrap-italia/src/svg/it-search.svg';
 import NewsHomeView from '@italia/components/ItaliaTheme/Blocks/NewsHome/View';
@@ -130,14 +126,9 @@ import faSitemapSVG from './icons/sitemap.svg';
 import faBuildingSVG from './icons/building.svg';
 import faFileDownloadSVG from './icons/file-download.svg';
 
-import {
-  ItaliaRichTextEditorInlineToolbarButtons,
-  ItaliaRichTextEditorPlugins,
-  extendedBlockRenderMap,
-  blockStyleFn,
-  ItaliaBlocksHtmlRenderers,
-  ItaliaFromHTMLCustomBlockFn,
-} from '@italia/config/RichTextEditor/config';
+import applyRichTextConfig from '@italia/config/RichTextEditor/config';
+
+import '@plone/volto/registry';
 
 const iconList = Object.keys(Icons.fas).map((icon) => Icons[icon]);
 const iconListRegular = Object.keys(IconsRegular.far).map(
@@ -146,463 +137,451 @@ const iconListRegular = Object.keys(IconsRegular.far).map(
 
 library.add(...iconList, ...iconListRegular);
 
-const rssBlock = {
-  ...customRssBlock,
-  templates: {
-    ...customRssBlock.templates,
-    default: {
-      label: 'Card senza immagine',
-      template: CardWithoutImageRssTemplate,
-      skeleton: CardWithoutImageRssTemplateSkeleton,
-    },
-    card_without_image: {
-      label: 'Card con immagine',
-      template: CardWithImageRssTemplate,
-      skeleton: CardWithImageRssTemplateSkeleton,
-    },
-  },
-};
+export default function applyConfig(voltoConfig) {
+  let config = applyRichTextConfig(voltoConfig);
+  // eslint-disable-next-line no-console
+  console.log(config);
 
-const listBlockTypes = config.settings.listBlockTypes; //config.settings.listBlockTypes.concat(['align-center']);
-const voltoDefaultListingTemplates =
-  config.blocks.blocksConfig.listing.templates;
-delete voltoDefaultListingTemplates.summary;
-
-const customBlocks = {
-  newsHome: {
-    id: 'newsHome',
-    title: 'News con immagine in primo piano',
-    icon: newsSVG,
-    group: 'news',
-    view: NewsHomeView,
-    edit: NewsHomeEdit,
-    restricted: false,
-    mostUsed: true,
-    security: {
-      addPermission: [],
-      view: [],
-    },
-    sidebarTab: 1,
-  },
-  searchSections: {
-    id: 'searchSections',
-    title: 'Ricerca nelle sezioni',
-    icon: searchIcon,
-    group: 'homePage',
-    view: SearchSectionsView,
-    edit: SearchSectionsEdit,
-    restricted: false,
-    mostUsed: false,
-    blockHasOwnFocusManagement: true,
-    security: {
-      addPermission: [],
-      view: [],
-    },
-    sidebarTab: 1,
-  },
-  calendar: {
-    id: 'calendar',
-    title: 'Calendario',
-    icon: calendarSvg,
-    group: 'homePage',
-    view: CalendarView,
-    edit: CalendarEdit,
-    restricted: false,
-    mostUsed: false,
-    blockHasOwnFocusManagement: true,
-    security: {
-      addPermission: [],
-      view: [],
-    },
-    sidebarTab: 1,
-  },
-  searchEvents: {
-    id: 'searchEvents',
-    title: 'Ricerca eventi',
-    icon: searchIcon,
-    group: 'homePage',
-    view: EventSearchView,
-    edit: EventSearchEdit,
-    restricted: false,
-    mostUsed: false,
-    blockHasOwnFocusManagement: true,
-    security: {
-      addPermission: [],
-      view: [],
-    },
-    sidebarTab: 1,
-  },
-  argumentsInEvidence: {
-    id: 'argumentsInEvidence',
-    title: 'Argomenti in evidenza',
-    icon: noteSvg,
-    group: 'homePage',
-    view: ArgumentsInEvidenceView,
-    edit: ArgumentsInEvidenceEdit,
-    restricted: false,
-    mostUsed: false,
-    blockHasOwnFocusManagement: true,
-    security: {
-      addPermission: [],
-      view: [],
-    },
-    sidebarTab: 1,
-  },
-  break: {
-    id: 'break',
-    title: 'Interruzione di pagina',
-    icon: divideHorizontalSVG,
-    group: 'text',
-    view: ViewBreak,
-    edit: EditBreak,
-    restricted: false,
-    mostUsed: false,
-    security: {
-      addPermission: [],
-      view: [],
-    },
-    sidebarTab: 1,
-  },
-  alert: {
-    id: 'alert',
-    title: 'Alert',
-    icon: alertSVG,
-    group: 'text',
-    view: AlertView,
-    edit: AlertEdit,
-    restricted: false,
-    mostUsed: false,
-    blockHasOwnFocusManagement: true,
-    security: {
-      addPermission: [],
-      view: [],
-    },
-    sidebarTab: 1,
-  },
-  pagina_argomento_title: {
-    id: 'pagina_argomento_title',
-    title: 'Titolo Pagina Argomento',
-    icon: titleSVG,
-    group: 'argomento',
-    view: ArgomentoTitleView,
-    edit: ArgomentoTitleEdit,
-    restricted: false,
-    mostUsed: false,
-    blockHasOwnFocusManagement: true,
-    security: {
-      addPermission: [],
-      view: [],
-    },
-    sidebarTab: 1,
-  },
-  testo_riquadro_semplice: {
-    id: 'testo_riquadro_semplice',
-    title: 'Testo in riquadro semplice',
-    icon: titleSVG,
-    group: 'text',
-    view: TextCardView,
-    edit: TextCardEdit,
-    restricted: false,
-    mostUsed: false,
-    blockHasOwnFocusManagement: true,
-    security: {
-      addPermission: [],
-      view: [],
-    },
-  },
-  testo_riquadro_immagine: {
-    id: 'testo_riquadro_immagine',
-    title: 'Testo in riquadro immagine',
-    icon: titleSVG,
-    group: 'text',
-    view: TextCardWithImageView,
-    edit: TextCardWithImageEdit,
-    restricted: false,
-    mostUsed: false,
-    blockHasOwnFocusManagement: true,
-    security: {
-      addPermission: [],
-      view: [],
-    },
-    sidebarTab: 1,
-  },
-  accordion: {
-    id: 'accordion',
-    title: 'Accordion',
-    icon: listArrowsSVG,
-    group: 'text',
-    view: AccordionView,
-    edit: AccordionEdit,
-    restricted: false,
-    mostUsed: false,
-    security: {
-      addPermission: [],
-      view: [],
-    },
-    sidebarTab: 1,
-  },
-  video_gallery: {
-    id: 'video_gallery',
-    title: 'Video Gallery',
-    icon: videoSVG,
-    group: 'media',
-    view: VideoGalleryView,
-    edit: VideoGalleryEdit,
-    restricted: false,
-    mostUsed: false,
-    security: {
-      addPermission: [],
-      view: [],
-    },
-    sidebarTab: 1,
-  },
-  twitter_posts: {
-    id: 'twitter_posts',
-    title: 'Twitter posts',
-    icon: faTwitter,
-    group: 'media',
-    view: TwitterPostsView,
-    edit: TwitterPostsEdit,
-    restricted: false,
-    mostUsed: false,
-    security: {
-      addPermission: [],
-      view: [],
-    },
-    sidebarTab: 1,
-  },
-  form: {
-    id: 'form',
-    title: 'Form',
-    icon: formSVG,
-    group: 'text',
-    view: FormView,
-    edit: FormEdit,
-    restricted: false,
-    mostUsed: true,
-    security: {
-      addPermission: [],
-      view: [],
-    },
-    sidebarTab: 1,
-  },
-  listing: {
-    ...config.blocks.blocksConfig.listing,
+  const rssBlock = {
+    ...customRssBlock,
     templates: {
-      ...voltoDefaultListingTemplates,
-
+      ...customRssBlock.templates,
       default: {
-        label: 'Card semplice',
-        template: SimpleCardTemplate,
+        label: 'Card senza immagine',
+        template: CardWithoutImageRssTemplate,
+        skeleton: CardWithoutImageRssTemplateSkeleton,
       },
-      cardWithImageTemplate: {
+      card_without_image: {
         label: 'Card con immagine',
-        template: CardWithImageTemplate,
-        skeleton: CardWithImageTemplateSkeleton,
-      },
-      inEvidenceTemplate: {
-        label: 'In evidenza',
-        template: InEvidenceTemplate,
-        skeleton: InEvidenceTemplateSkeleton,
-      },
-      ribbonCardTemplate: {
-        label: 'Card con nastro',
-        template: RibbonCardTemplate,
-        skeleton: RibbonCardTemplateSkeleton,
-      },
-      mapTemplate: {
-        label: 'Mappa',
-        template: MapTemplate,
-        skeleton: MapTemplateSkeleton,
-      },
-      smallBlockLinksTemplate: {
-        label: 'Blocco link solo immagini',
-        template: SmallBlockLinksTemplate,
-        skeleton: SmallBlockLinksTemplateSkeleton,
-      },
-      completeBlockLinksTemplate: {
-        label: 'Blocco link completo',
-        template: CompleteBlockLinksTemplate,
-        skeleton: CompleteBlockLinksTemplateSkeleton,
-      },
-      photogallery: {
-        label: 'Photogallery',
-        template: PhotogalleryTemplate,
-        skeleton: PhotogalleryTemplateSkeleton,
-      },
-      gridGalleryTemplate: {
-        label: 'Gallery a griglia',
-        template: GridGalleryTemplate,
-        skeleton: GridGalleryTemplateSkeleton,
-      },
-      bandiInEvidenceTemplate: {
-        label: 'Bandi',
-        template: BandiInEvidenceTemplate,
-        skeleton: BandiInEvidenceTemplateSkeleton,
-      },
-      amministrazioneTrasparenteTablesTemplate: {
-        label: 'Tabelle Amministrazione Trasparente',
-        template: AmministrazioneTrasparenteTablesTemplate,
-        skeleton: AmministrazioneTrasparenteTablesTemplateSkeleton,
+        template: CardWithImageRssTemplate,
+        skeleton: CardWithImageRssTemplateSkeleton,
       },
     },
-    listing_bg_colors: [], //{name:'blue', label:'Blu'},{name:'light-blue', label:'Light blue'},{name:'sidebar-background', label:'Grey'}
-    listing_items_colors: [], //{name:'blue', label:'Blu'},{name:'light-blue', label:'Light blue'},{name:'sidebar-background', label:'Grey'}
-  },
-  rssBlock,
-};
+  };
 
-export const settings = {
-  ...config.settings,
-  devProxyToApiPath: 'http://localhost:8080/Plone',
+  // const listBlockTypes = config.settings.listBlockTypes; //config.settings.listBlockTypes.concat(['align-center']);
+  delete config.blocks.blocksConfig.listing.templates.summary;
 
-  richTextEditorInlineToolbarButtons: ItaliaRichTextEditorInlineToolbarButtons,
-  richTextEditorPlugins: [
-    ...config.settings.richTextEditorPlugins,
-    ...ItaliaRichTextEditorPlugins,
-  ],
-  extendedBlockRenderMap: extendedBlockRenderMap,
-  blockStyleFn: blockStyleFn,
-  listBlockTypes: listBlockTypes,
-  isMultilingual: false,
-  supportedLanguages: ['it'],
-  defaultLanguage: 'it',
-  verticalFormTabs: true,
-  //TODO: rimuovere questa customizzazione quando sistemano https://github.com/plone/volto/issues/1601
-  ToHTMLRenderers: {
-    ...ToHTMLRenderers,
-    blocks: {
-      ...ToHTMLRenderers.blocks,
-      ...ItaliaBlocksHtmlRenderers,
+  const customBlocks = {
+    newsHome: {
+      id: 'newsHome',
+      title: 'News con immagine in primo piano',
+      icon: newsSVG,
+      group: 'news',
+      view: NewsHomeView,
+      edit: NewsHomeEdit,
+      restricted: false,
+      mostUsed: true,
+      security: {
+        addPermission: [],
+        view: [],
+      },
+      sidebarTab: 1,
     },
-    inline: { ...ToHTMLRenderers.inline },
-  },
-  FromHTMLCustomBlockFn: ItaliaFromHTMLCustomBlockFn,
-  contentIcons: {
-    ...config.settings.contentIcons,
-    Document: faFileInvoiceSVG,
-    Folder: faFolderOpenSVG,
-    'News Item': faNewspaperSVG,
-    Event: faCalendarAltSVG,
-    Image: faImageSVG,
-    File: faFileSVG,
-    Link: faLinkSVG,
+    searchSections: {
+      id: 'searchSections',
+      title: 'Ricerca nelle sezioni',
+      icon: searchIcon,
+      group: 'homePage',
+      view: SearchSectionsView,
+      edit: SearchSectionsEdit,
+      restricted: false,
+      mostUsed: false,
+      blockHasOwnFocusManagement: true,
+      security: {
+        addPermission: [],
+        view: [],
+      },
+      sidebarTab: 1,
+    },
+    calendar: {
+      id: 'calendar',
+      title: 'Calendario',
+      icon: calendarSvg,
+      group: 'homePage',
+      view: CalendarView,
+      edit: CalendarEdit,
+      restricted: false,
+      mostUsed: false,
+      blockHasOwnFocusManagement: true,
+      security: {
+        addPermission: [],
+        view: [],
+      },
+      sidebarTab: 1,
+    },
+    searchEvents: {
+      id: 'searchEvents',
+      title: 'Ricerca eventi',
+      icon: searchIcon,
+      group: 'homePage',
+      view: EventSearchView,
+      edit: EventSearchEdit,
+      restricted: false,
+      mostUsed: false,
+      blockHasOwnFocusManagement: true,
+      security: {
+        addPermission: [],
+        view: [],
+      },
+      sidebarTab: 1,
+    },
+    argumentsInEvidence: {
+      id: 'argumentsInEvidence',
+      title: 'Argomenti in evidenza',
+      icon: noteSvg,
+      group: 'homePage',
+      view: ArgumentsInEvidenceView,
+      edit: ArgumentsInEvidenceEdit,
+      restricted: false,
+      mostUsed: false,
+      blockHasOwnFocusManagement: true,
+      security: {
+        addPermission: [],
+        view: [],
+      },
+      sidebarTab: 1,
+    },
+    break: {
+      id: 'break',
+      title: 'Interruzione di pagina',
+      icon: divideHorizontalSVG,
+      group: 'text',
+      view: ViewBreak,
+      edit: EditBreak,
+      restricted: false,
+      mostUsed: false,
+      security: {
+        addPermission: [],
+        view: [],
+      },
+      sidebarTab: 1,
+    },
+    alert: {
+      id: 'alert',
+      title: 'Alert',
+      icon: alertSVG,
+      group: 'text',
+      view: AlertView,
+      edit: AlertEdit,
+      restricted: false,
+      mostUsed: false,
+      blockHasOwnFocusManagement: true,
+      security: {
+        addPermission: [],
+        view: [],
+      },
+      sidebarTab: 1,
+    },
+    pagina_argomento_title: {
+      id: 'pagina_argomento_title',
+      title: 'Titolo Pagina Argomento',
+      icon: titleSVG,
+      group: 'argomento',
+      view: ArgomentoTitleView,
+      edit: ArgomentoTitleEdit,
+      restricted: false,
+      mostUsed: false,
+      blockHasOwnFocusManagement: true,
+      security: {
+        addPermission: [],
+        view: [],
+      },
+      sidebarTab: 1,
+    },
+    testo_riquadro_semplice: {
+      id: 'testo_riquadro_semplice',
+      title: 'Testo in riquadro semplice',
+      icon: titleSVG,
+      group: 'text',
+      view: TextCardView,
+      edit: TextCardEdit,
+      restricted: false,
+      mostUsed: false,
+      blockHasOwnFocusManagement: true,
+      security: {
+        addPermission: [],
+        view: [],
+      },
+    },
+    testo_riquadro_immagine: {
+      id: 'testo_riquadro_immagine',
+      title: 'Testo in riquadro immagine',
+      icon: titleSVG,
+      group: 'text',
+      view: TextCardWithImageView,
+      edit: TextCardWithImageEdit,
+      restricted: false,
+      mostUsed: false,
+      blockHasOwnFocusManagement: true,
+      security: {
+        addPermission: [],
+        view: [],
+      },
+      sidebarTab: 1,
+    },
+    accordion: {
+      id: 'accordion',
+      title: 'Accordion',
+      icon: listArrowsSVG,
+      group: 'text',
+      view: AccordionView,
+      edit: AccordionEdit,
+      restricted: false,
+      mostUsed: false,
+      security: {
+        addPermission: [],
+        view: [],
+      },
+      sidebarTab: 1,
+    },
+    video_gallery: {
+      id: 'video_gallery',
+      title: 'Video Gallery',
+      icon: videoSVG,
+      group: 'media',
+      view: VideoGalleryView,
+      edit: VideoGalleryEdit,
+      restricted: false,
+      mostUsed: false,
+      security: {
+        addPermission: [],
+        view: [],
+      },
+      sidebarTab: 1,
+    },
+    twitter_posts: {
+      id: 'twitter_posts',
+      title: 'Twitter posts',
+      icon: faTwitter,
+      group: 'media',
+      view: TwitterPostsView,
+      edit: TwitterPostsEdit,
+      restricted: false,
+      mostUsed: false,
+      security: {
+        addPermission: [],
+        view: [],
+      },
+      sidebarTab: 1,
+    },
+    form: {
+      id: 'form',
+      title: 'Form',
+      icon: formSVG,
+      group: 'text',
+      view: FormView,
+      edit: FormEdit,
+      restricted: false,
+      mostUsed: true,
+      security: {
+        addPermission: [],
+        view: [],
+      },
+      sidebarTab: 1,
+    },
+    listing: {
+      ...config.blocks.blocksConfig.listing,
+      templates: {
+        ...config.blocks.blocksConfig.listing.templates,
 
-    Argomento: faBoxOpenSVG,
-    CartellaModulistica: faArchiveSVG,
-    Documento: faFileAltSVG,
-    Venue: faMapMarkedAltSVG,
-    Persona: faUserSVG,
-    Servizio: faCogSVG,
-    Subsite: faSitemapSVG,
-    UnitaOrganizzativa: faBuildingSVG,
-    Modulo: faFileDownloadSVG,
-  },
-  'volto-blocks-widget': {
-    allowedBlocks: [
-      'text',
-      'image',
-      'video',
-      'html',
-      'table',
-      'maps',
-      'break',
-      'testo_riquadro_semplice',
-      'testo_riquadro_immagine',
-      //se si aggiunge un nuovo blocco, verificare che in edit non ci siano bottoni che provocano il submit della form. Se succede, gestirli con e.prevenDefault() e.stopPropagation().
-    ],
-    showRestricted: false,
-  },
-};
+        default: {
+          label: 'Card semplice',
+          template: SimpleCardTemplate,
+        },
+        cardWithImageTemplate: {
+          label: 'Card con immagine',
+          template: CardWithImageTemplate,
+          skeleton: CardWithImageTemplateSkeleton,
+        },
+        inEvidenceTemplate: {
+          label: 'In evidenza',
+          template: InEvidenceTemplate,
+          skeleton: InEvidenceTemplateSkeleton,
+        },
+        ribbonCardTemplate: {
+          label: 'Card con nastro',
+          template: RibbonCardTemplate,
+          skeleton: RibbonCardTemplateSkeleton,
+        },
+        mapTemplate: {
+          label: 'Mappa',
+          template: MapTemplate,
+          skeleton: MapTemplateSkeleton,
+        },
+        smallBlockLinksTemplate: {
+          label: 'Blocco link solo immagini',
+          template: SmallBlockLinksTemplate,
+          skeleton: SmallBlockLinksTemplateSkeleton,
+        },
+        completeBlockLinksTemplate: {
+          label: 'Blocco link completo',
+          template: CompleteBlockLinksTemplate,
+          skeleton: CompleteBlockLinksTemplateSkeleton,
+        },
+        photogallery: {
+          label: 'Photogallery',
+          template: PhotogalleryTemplate,
+          skeleton: PhotogalleryTemplateSkeleton,
+        },
+        gridGalleryTemplate: {
+          label: 'Gallery a griglia',
+          template: GridGalleryTemplate,
+          skeleton: GridGalleryTemplateSkeleton,
+        },
+        bandiInEvidenceTemplate: {
+          label: 'Bandi',
+          template: BandiInEvidenceTemplate,
+          skeleton: BandiInEvidenceTemplateSkeleton,
+        },
+        amministrazioneTrasparenteTablesTemplate: {
+          label: 'Tabelle Amministrazione Trasparente',
+          template: AmministrazioneTrasparenteTablesTemplate,
+          skeleton: AmministrazioneTrasparenteTablesTemplateSkeleton,
+        },
+      },
+      listing_bg_colors: [], //{name:'blue', label:'Blu'},{name:'light-blue', label:'Light blue'},{name:'sidebar-background', label:'Grey'}
+      listing_items_colors: [], //{name:'blue', label:'Blu'},{name:'light-blue', label:'Light blue'},{name:'sidebar-background', label:'Grey'}
+    },
+    rssBlock,
+  };
 
-export const views = {
-  ...config.views,
-  contentTypesViews: {
-    ...config.views.contentTypesViews,
-    Document: PageView,
-    'News Item': NewsItemView,
-    UnitaOrganizzativa: UOView,
-    Persona: PersonaView,
-    Venue: VenueView,
-    Servizio: ServizioView,
-    Event: EventoView,
-    'Pagina Argomento': PaginaArgomentoView,
-    CartellaModulistica: CartellaModulisticaView,
-    Documento: DocumentoView,
-    Modulo: ModuloView,
-    Bando: BandoView,
-  },
-  layoutViews: {
-    ...config.views.layoutViews,
-    document_view: PageView,
-    trasparenza_view: TrasparenzaView,
-    dettagli_procedimenti_view: DettagliProcedimentiView,
-  },
-};
+  config.settings = {
+    ...config.settings,
+    devProxyToApiPath: 'http://localhost:8080/Plone',
 
-export const siteConfig = {
-  italiaThemeViewsConfig: {
-    imagePosition: 'afterHeader', // possible values: afterHeader, documentBody
-  },
-  properties: {
-    siteTitle: 'Nome del Comune',
-    siteSubtitle: "Uno dei tanti Comuni d'Italia",
-    parentSiteTitle: 'Nome della Regione',
-    parentSiteURL: 'https://www.governo.it',
-    subsiteParentSiteTitle: 'Nome del sito padre del sottosito',
-    footerInfos:
-      'Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000',
-    amministrazioneTrasparenteUrl: '/amministrazione-trasparente',
-    //arLoginUrl: '/area-riservata',
-  },
-};
+    // listBlockTypes: listBlockTypes,
+    isMultilingual: false,
+    supportedLanguages: ['it'],
+    defaultLanguage: 'it',
+    verticalFormTabs: true,
+    contentIcons: {
+      ...config.settings.contentIcons,
+      Document: faFileInvoiceSVG,
+      Folder: faFolderOpenSVG,
+      'News Item': faNewspaperSVG,
+      Event: faCalendarAltSVG,
+      Image: faImageSVG,
+      File: faFileSVG,
+      Link: faLinkSVG,
 
-export const widgets = {
-  ...config.widgets,
-  id: {
-    ...config.widgets.id,
-    description: CharCounterDescriptionWidget,
-    icona: (props) => (
-      <IconWidget {...props} defaultOptions={defaultIconWidgetOptions} />
-    ),
-    cookie_consent_configuration: MultilingualWidget(),
-    data_conclusione_incarico: (props) => (
-      <DatetimeWidget {...props} dateOnly={true} />
-    ),
-    data_insediamento: (props) => <DatetimeWidget {...props} dateOnly={true} />,
-    search_sections: SearchSectionsConfigurationWidget,
-  },
-  widget: {
-    ...config.widgets.widget,
-    // richtext: TinymceWidget
-  },
-};
+      Argomento: faBoxOpenSVG,
+      CartellaModulistica: faArchiveSVG,
+      Documento: faFileAltSVG,
+      Venue: faMapMarkedAltSVG,
+      Persona: faUserSVG,
+      Servizio: faCogSVG,
+      Subsite: faSitemapSVG,
+      UnitaOrganizzativa: faBuildingSVG,
+      Modulo: faFileDownloadSVG,
+    },
+    'volto-blocks-widget': {
+      allowedBlocks: [
+        'text',
+        'image',
+        'video',
+        'html',
+        'table',
+        'maps',
+        'break',
+        'testo_riquadro_semplice',
+        'testo_riquadro_immagine',
+        //se si aggiunge un nuovo blocco, verificare che in edit non ci siano bottoni che provocano il submit della form. Se succede, gestirli con e.prevenDefault() e.stopPropagation().
+      ],
+      showRestricted: false,
+    },
+  };
 
-const customBlocksOrder = [
-  { id: 'news', title: 'News' },
-  { id: 'homePage', title: 'Home Page' },
-];
-const customInitialBlocks = {
-  'Pagina Argomento': ['title', 'description', 'text'],
-  'Bando Folder Deepening': ['title', 'description', 'listing'],
-};
-const customRequiredBlocks = ['description'];
+  config.views = {
+    ...config.views,
+    contentTypesViews: {
+      ...config.views.contentTypesViews,
+      Document: PageView,
+      'News Item': NewsItemView,
+      UnitaOrganizzativa: UOView,
+      Persona: PersonaView,
+      Venue: VenueView,
+      Servizio: ServizioView,
+      Event: EventoView,
+      'Pagina Argomento': PaginaArgomentoView,
+      CartellaModulistica: CartellaModulisticaView,
+      Documento: DocumentoView,
+      Modulo: ModuloView,
+      Bando: BandoView,
+    },
+    layoutViews: {
+      ...config.views.layoutViews,
+      document_view: PageView,
+      trasparenza_view: TrasparenzaView,
+      dettagli_procedimenti_view: DettagliProcedimentiView,
+    },
+  };
 
-// BUG#10398
-// We chose to disallow leadimage block usage in editor. If you want it back someday,
-// comment out the following line and add the leadimage behavior in Document.xml file
-delete config.blocks.blocksConfig['leadimage'];
+  config.siteConfig = {
+    italiaThemeViewsConfig: {
+      imagePosition: 'afterHeader', // possible values: afterHeader, documentBody
+    },
+    properties: {
+      siteTitle: 'Nome del Comune',
+      siteSubtitle: "Uno dei tanti Comuni d'Italia",
+      parentSiteTitle: 'Nome della Regione',
+      parentSiteURL: 'https://www.governo.it',
+      subsiteParentSiteTitle: 'Nome del sito padre del sottosito',
+      footerInfos:
+        'Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000',
+      amministrazioneTrasparenteUrl: '/amministrazione-trasparente',
+      //arLoginUrl: '/area-riservata',
+    },
+  };
 
-export const blocks = {
-  ...config.blocks,
-  blocksConfig: { ...config.blocks.blocksConfig, ...customBlocks },
-  groupBlocksOrder: config.blocks.groupBlocksOrder.concat(customBlocksOrder),
-  initialBlocks: { ...config.blocks.initialBlocks, ...customInitialBlocks },
-  requiredBlocks: {
-    ...config.blocks.requiredBlocks.concat(...customRequiredBlocks),
-  },
-};
-delete blocks.blocksConfig.listing.templates.imageGallery; //removes imageGallery volto template, because we have our photoGallery template
+  config.widgets = {
+    ...config.widgets,
+    id: {
+      ...config.widgets.id,
+      description: CharCounterDescriptionWidget,
+      icona: (props) => (
+        <IconWidget {...props} defaultOptions={defaultIconWidgetOptions} />
+      ),
+      cookie_consent_configuration: MultilingualWidget(),
+      data_conclusione_incarico: (props) => (
+        <DatetimeWidget {...props} dateOnly={true} />
+      ),
+      data_insediamento: (props) => (
+        <DatetimeWidget {...props} dateOnly={true} />
+      ),
+      search_sections: SearchSectionsConfigurationWidget,
+    },
+    widget: {
+      ...config.widgets.widget,
+      // richtext: TinymceWidget
+    },
+  };
 
-export const addonReducers = { ...config.addonReducers };
-export const addonRoutes = [...(config.addonRoutes || [])];
+  const customBlocksOrder = [
+    { id: 'news', title: 'News' },
+    { id: 'homePage', title: 'Home Page' },
+  ];
+  const customInitialBlocks = {
+    'Pagina Argomento': ['title', 'description', 'text'],
+    'Bando Folder Deepening': ['title', 'description', 'listing'],
+  };
+  const customRequiredBlocks = ['description'];
+
+  // BUG#10398
+  // We chose to disallow leadimage block usage in editor. If you want it back someday,
+  // comment out the following line and add the leadimage behavior in Document.xml file
+  delete config.blocks.blocksConfig['leadimage'];
+
+  config.blocks = {
+    ...config.blocks,
+    blocksConfig: { ...config.blocks.blocksConfig, ...customBlocks },
+    groupBlocksOrder: config.blocks.groupBlocksOrder.concat(customBlocksOrder),
+    initialBlocks: { ...config.blocks.initialBlocks, ...customInitialBlocks },
+    requiredBlocks: {
+      ...config.blocks.requiredBlocks.concat(...customRequiredBlocks),
+    },
+  };
+  delete config.blocks.blocksConfig.listing.templates.imageGallery; //removes imageGallery volto template, because we have our photoGallery template
+
+  return config;
+}
