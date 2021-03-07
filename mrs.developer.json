@@ -34,7 +34,7 @@
     "path": "src",
     "https": "https://github.com/collective/volto-dropdownmenu.git",
     "url": "git@github.com:collective/volto-dropdownmenu.git",
-    "branch": "volto12"
+    "branch": "master"
   },
   "volto-subsites": {
     "package": "@italia/addons/volto-subsites",
