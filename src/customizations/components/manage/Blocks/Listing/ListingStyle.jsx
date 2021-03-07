@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { blocks } from '~/config';
+import config from '@plone/volto/registry';
 import TemplateWidget from '@plone/volto/components/manage/Blocks/Listing/TemplateWidget';
 import SimpleCardTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions';
 import RibbonCardTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions';
@@ -10,7 +10,7 @@ import CardWithImageTemplateOptions from '@italia/components/ItaliaTheme/Blocks/
 import DefaultOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions';
 
 const ListingStyle = ({ data, block, onChangeBlock, required = false }) => {
-  const templatesConfig = blocks.blocksConfig.listing.templates;
+  const templatesConfig = config.blocks.blocksConfig.listing.templates;
 
   if (templatesConfig && Object.keys(templatesConfig).length > 1) {
     return (

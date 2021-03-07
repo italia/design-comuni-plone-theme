@@ -9,7 +9,7 @@ import serialize from 'serialize-javascript';
 import { join } from 'lodash';
 import { BodyClass } from '@plone/volto/helpers/';
 import { runtimeConfig } from '@plone/volto/runtime_config';
-import { settings } from '~/config';
+import config from '@plone/volto/registry';
 
 const CRITICAL_CSS_TEMPLATE = `function alter() {
   document.querySelectorAll("head link[rel='prefetch']").forEach(function(el) { el.rel = 'stylesheet'});
@@ -24,7 +24,7 @@ export const loadReducers = (state = {}) => {
   return Object.assign(
     {},
     ...Object.keys(state).map((name) =>
-      settings.initialReducersBlacklist.includes(name)
+      config.settings.initialReducersBlacklist.includes(name)
         ? {}
         : { [name]: state[name] },
     ),

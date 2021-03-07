@@ -33,7 +33,7 @@ import {
 import { UniversalLink } from '@plone/volto/components';
 import { SearchUtils, TextInput, SelectInput } from '@italia/components';
 import { getSearchFilters, getSearchResults } from '@italia/actions';
-import { settings } from '~/config';
+import config from '@plone/volto/registry';
 
 const {
   parseFetchedSections,
@@ -240,7 +240,7 @@ const Search = () => {
       topics,
       options,
       searchOrderDict[sortOn] ?? {},
-      (currentPage - 1) * settings.defaultPageSize,
+      (currentPage - 1) * config.settings.defaultPageSize,
       customPath,
     );
 
@@ -252,7 +252,7 @@ const Search = () => {
           topics,
           options,
           searchOrderDict[sortOn] ?? {},
-          (currentPage - 1) * settings.defaultPageSize,
+          (currentPage - 1) * config.settings.defaultPageSize,
           customPath,
         ),
       );
@@ -499,7 +499,7 @@ const Search = () => {
                     activePage={currentPage}
                     totalPages={Math.ceil(
                       (searchResults?.result?.items_total ?? 0) /
-                        settings.defaultPageSize,
+                        config.settings.defaultPageSize,
                     )}
                     onPageChange={handleQueryPaginationChange}
                   />

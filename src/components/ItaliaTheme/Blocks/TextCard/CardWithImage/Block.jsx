@@ -9,10 +9,9 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import { defineMessages, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
-import { settings } from '~/config';
 import redraft from 'redraft';
-
 import { TextEditorWidget } from '@italia/components/ItaliaTheme';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   image_card_title: {
@@ -124,8 +123,8 @@ const Block = ({ data, block, inEditMode, onChange }) => {
                   <CardText>
                     {redraft(
                       content,
-                      settings.ToHTMLRenderers,
-                      settings.ToHTMLOptions,
+                      config.settings.ToHTMLRenderers,
+                      config.settings.ToHTMLOptions,
                     )}
                   </CardText>
                 </Col>

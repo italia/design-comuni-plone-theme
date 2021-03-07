@@ -10,8 +10,8 @@ import PropTypes from 'prop-types';
 import redraft from 'redraft';
 import { TextEditorWidget } from '@italia/components/ItaliaTheme';
 import { Divider } from 'semantic-ui-react';
-import { settings } from '~/config';
 import cx from 'classnames';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   simple_card_title: {
@@ -80,8 +80,8 @@ const Block = ({ inEditMode, data, block, onChange }) => {
                   <CardText>
                     {redraft(
                       content,
-                      settings.ToHTMLRenderers,
-                      settings.ToHTMLOptions,
+                      config.settings.ToHTMLRenderers,
+                      config.settings.ToHTMLOptions,
                     )}
                   </CardText>
                 </div>

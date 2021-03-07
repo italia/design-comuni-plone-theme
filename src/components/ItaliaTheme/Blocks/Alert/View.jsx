@@ -9,7 +9,7 @@ import cx from 'classnames';
 import redraft from 'redraft';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 //import { isCmsUi } from '@plone/volto/helpers';
-import { settings } from '~/config';
+import config from '@plone/volto/registry';
 
 /**
  * View Alert block class.
@@ -23,7 +23,11 @@ const View = ({ data, pathname }) => {
   //const isCmsUI = pathname ? isCmsUi(pathname) : false
 
   const content = data.text
-    ? redraft(data.text, settings.ToHTMLRenderers, settings.ToHTMLOptions)
+    ? redraft(
+        data.text,
+        config.settings.ToHTMLRenderers,
+        config.settings.ToHTMLOptions,
+      )
     : '';
 
   return (

@@ -29,7 +29,7 @@ import {
 } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
 import { Icon } from '@italia/components/ItaliaTheme';
-import { blocks } from '~/config';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   menu_selected: {
@@ -237,7 +237,7 @@ const MegaMenu = ({ item, pathname }) => {
                       return null;
 
                     const Block =
-                      blocks.blocksConfig[blockType]?.['view'] ?? null;
+                      config.blocks.blocksConfig[blockType]?.['view'] ?? null;
                     return Block !== null ? (
                       <Block
                         key={block}

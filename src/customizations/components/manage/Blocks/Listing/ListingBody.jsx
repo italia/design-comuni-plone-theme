@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { FormattedMessage, injectIntl } from 'react-intl';
 import { getQueryStringResults, getContent } from '@plone/volto/actions';
 import { Pagination, Skeleton } from '@italia/components/ItaliaTheme';
-import { blocks, settings } from '~/config';
+import config from '@plone/volto/registry';
 
 const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
   const [currentPage, setCurrentPage] = React.useState(1);
@@ -83,7 +83,7 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
         []
       : folderItems;
 
-  const templateConfig = blocks.blocksConfig.listing.templates;
+  const templateConfig = config.blocks.blocksConfig.listing.templates;
 
   let templateName =
     data.template && !!templateConfig[data.template]
@@ -153,12 +153,12 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
             firstLoading={firstLoading}
           />
           {data?.query?.length === 0 &&
-            content?.items_total > settings.defaultPageSize && (
+            content?.items_total > config.settings.defaultPageSize && (
               <div className="pagination-wrapper">
                 <Pagination
                   activePage={currentPage}
                   totalPages={Math.ceil(
-                    content.items_total / settings.defaultPageSize,
+                    content.items_total / config.settings.defaultPageSize,
                   )}
                   onPageChange={handleContentPaginationChange}
                 />
@@ -166,13 +166,13 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
             )}
           {(data?.query?.length > 0 || additionalFilters?.length > 0) &&
             querystringResults[data.block].total >
-              (data.b_size || settings.defaultPageSize) && (
+              (data.b_size || config.settings.defaultPageSize) && (
               <div className="pagination-wrapper" key={currentPage}>
                 <Pagination
                   activePage={currentPage}
                   totalPages={Math.ceil(
                     querystringResults[data.block].total /
-                      (data.b_size || settings.defaultPageSize),
+                      (data.b_size || config.settings.defaultPageSize),
                   )}
                   onPageChange={handleQueryPaginationChange}
                 />

@@ -26,7 +26,7 @@ import {
   SubsiteSocialHeader,
 } from '@italia/components/ItaliaTheme';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { siteConfig } from '~/config';
+import config from '@plone/volto/registry';
 
 const Navigation = ({ pathname }) => {
   const [collapseOpen, setCollapseOpen] = useState(false);
@@ -103,11 +103,11 @@ const Navigation = ({ pathname }) => {
                   <Logo />
                   <div className="it-brand-text">
                     <h2 className="no_toc">
-                      {subsite?.title || siteConfig.properties.siteTitle}
+                      {subsite?.title || config.siteConfig.properties.siteTitle}
                     </h2>
                     <h3 className="no_toc">
                       {subsite?.description ||
-                        siteConfig.properties.siteSubtitle}
+                        config.siteConfig.properties.siteSubtitle}
                     </h3>
                   </div>
                 </Link>

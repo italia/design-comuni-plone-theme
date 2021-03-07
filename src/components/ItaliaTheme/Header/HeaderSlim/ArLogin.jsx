@@ -8,10 +8,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { defineMessages, useIntl } from 'react-intl';
 import { Button } from 'design-react-kit/dist/design-react-kit';
-
-import { siteConfig } from '~/config';
-
 import { Icon } from '@italia/components/ItaliaTheme';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   arLogin: {
@@ -22,11 +20,11 @@ const messages = defineMessages({
 
 const ArLogin = () => {
   const intl = useIntl();
-  return siteConfig.properties.arLoginUrl ? (
+  return config.siteConfig.properties.arLoginUrl ? (
     <Button
       className="btn-icon"
       color="primary"
-      to={siteConfig.properties.arLoginUrl}
+      to={config.siteConfig.properties.arLoginUrl}
       icon={false}
       size="full"
       tag={Link}

@@ -4,7 +4,6 @@
  */
 
 import defaultReducers from '@plone/volto/reducers';
-import { addonReducers } from '~/config';
 import { searchFiltersReducer } from './searchFiltersReducer';
 import { searchResultsReducer } from './searchResultsReducer';
 import { calendarSearchReducer } from './calendarSearchReducer';
@@ -15,6 +14,8 @@ import { sendActionForm } from './sendActionForm';
 import { twitterPosts } from './twitterPosts';
 import { eventSearchReducer } from './eventSearchReducer';
 
+import config from '@plone/volto/registry';
+
 /**
  * Root reducer.
  * @function
@@ -24,7 +25,7 @@ import { eventSearchReducer } from './eventSearchReducer';
  */
 const reducers = {
   ...defaultReducers,
-  ...addonReducers,
+  ...config.addonReducers,
   searchFilters: searchFiltersReducer,
   searchResults: searchResultsReducer,
   calendarSearch: calendarSearchReducer,
