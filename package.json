@@ -88,7 +88,8 @@
       }
     },
     "setupFiles": [
-      "@plone/volto/test-setup.js"
+      "@plone/volto/test-setup-globals.js",
+      "@plone/volto/test-setup-config.js"
     ],
     "globals": {
       "__DEV__": true
@@ -160,6 +161,9 @@
   "engines": {
     "node": "^10 || ^12 || ^14"
   },
+  "peerDependencies": {
+    "@plone/volto": ">=12.0.0"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.30",
     "@fortawesome/free-regular-svg-icons": "5.14.0",
@@ -178,18 +182,18 @@
     "typeface-lora": "0.0.72",
     "typeface-roboto-mono": "0.0.75",
     "typeface-titillium-web": "0.0.72",
-    "volto-blocks-widget": "collective/volto-blocks-widget#v1.0.2",
+    "volto-blocks-widget": "collective/volto-blocks-widget#volto12",
     "volto-cookie-banner": "collective/volto-cookie-banner#v1.0.2",
     "volto-dropdownmenu": "collective/volto-dropdownmenu#master",
-    "volto-editablefooter": "RedTurtle/volto-editablefooter#v2.1.0",
+    "volto-editablefooter": "RedTurtle/volto-editablefooter#volto12",
     "volto-google-analytics": "collective/volto-google-analytics",
-    "volto-multilingual-widget": "collective/volto-multilingual-widget#v1.0.1",
-    "volto-rss-block": "redturtle/volto-rss-block#v1.2.0",
-    "volto-secondarymenu": "collective/volto-secondarymenu#v1.1.0",
+    "volto-multilingual-widget": "collective/volto-multilingual-widget#volto12",
+    "volto-rss-block": "redturtle/volto-rss-block#volto12",
+    "volto-secondarymenu": "collective/volto-secondarymenu#volto12",
     "volto-social-settings": "collective/volto-social-settings#v2.0.0",
     "volto-subblocks": "collective/volto-subblocks#v1.0.1",
-    "volto-subsites": "collective/volto-subsites#v1.1.0",
-    "volto-venue": "collective/volto-venue#v2.0.1"
+    "volto-subsites": "collective/volto-subsites#volto12",
+    "volto-venue": "collective/volto-venue#volto12"
   },
   "devDependencies": {
     "@babel/core": "7.11.1",
