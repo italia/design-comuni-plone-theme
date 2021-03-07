@@ -33,15 +33,13 @@
     "package": "@italia/addons/volto-dropdownmenu",
     "path": "src",
     "https": "https://github.com/collective/volto-dropdownmenu.git",
-    "url": "git@github.com:collective/volto-dropdownmenu.git",
-    "tag":"v1.3.0"
+    "url": "git@github.com:collective/volto-dropdownmenu.git"
   },
   "volto-subsites": {
     "package": "@italia/addons/volto-subsites",
     "path": "src",
     "https": "https://github.com/collective/volto-subsites.git",
-    "url": "git@github.com:collective/volto-subsites.git",
-    "tag":"v1.1.0"
+    "url": "git@github.com:collective/volto-subsites.git"
   },
   "volto-social-settings": {
     "package": "@italia/addons/volto-social-settings",
@@ -53,15 +51,13 @@
     "package": "@italia/addons/volto-editablefooter",
     "path": "src",
     "https": "https://github.com/RedTurtle/volto-editablefooter.git",
-    "url": "git@github.com:RedTurtle/volto-editablefooter.git",
-    "tag":"v2.1.0"
+    "url": "git@github.com:RedTurtle/volto-editablefooter.git"
   },
   "volto-blocks-widget": {
     "package": "@italia/addons/volto-blocks-widget",
     "path": "src",
     "https": "https://github.com/collective/volto-blocks-widget.git",
-    "url": "git@github.com:collective/volto-blocks-widget.git",
-    "tag":"v1.0.2"
+    "url": "git@github.com:collective/volto-blocks-widget.git"
   },
   "volto-google-analytics": {
     "package": "@italia/addons/volto-google-analytics",
@@ -73,7 +69,6 @@
     "package": "@italia/addons/volto-secondarymenu",
     "path": "src",
     "https": "https://github.com/collective/volto-secondarymenu.git",
-    "url": "git@github.com:collective/volto-secondarymenu.git",
-    "tag":"v1.1.0"
+    "url": "git@github.com:collective/volto-secondarymenu.git"
   }
 }

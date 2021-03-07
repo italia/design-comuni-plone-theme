@@ -87,6 +87,7 @@ class Html extends Component {
           {head.meta.toComponent()}
           {head.link.toComponent()}
           {head.script.toComponent()}
+          <meta property="og:type" content="website" />
           <script
             dangerouslySetInnerHTML={{
               __html: `window.env = ${serialize(runtimeConfig)};`,
