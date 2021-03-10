@@ -20,7 +20,7 @@ import upSVG from '@plone/volto/icons/up-key.svg';
 import downSVG from '@plone/volto/icons/down-key.svg';
 
 const messages = defineMessages({
-  to: {
+  default_to: {
     id: 'form_to',
     defaultMessage: 'Destinatari',
   },
@@ -102,6 +102,14 @@ const messages = defineMessages({
     defaultMessage:
       'Questo indirizzo verrà utilizzato come mittente della mail con i dati del form',
   },
+  save_persistent_data: {
+    id: 'form_save_persistent_data',
+    defaultMessage: 'Salva i dati compilati',
+  },
+  send_email: {
+    id: 'form_send_email',
+    defaultMessage: 'Invia email al destinatario',
+  },
 });
 
 const Sidebar = ({
@@ -115,6 +123,8 @@ const Sidebar = ({
 }) => {
   const intl = useIntl();
 
+  if (data.send_email === undefined) data.send_email = true;
+
   return (
     <Form>
       <Segment.Group raised form>
@@ -125,10 +135,10 @@ const Sidebar = ({
         </header>
         <Segment>
           <TextWidget
-            id="to"
-            title={intl.formatMessage(messages.to)}
+            id="default_to"
+            title={intl.formatMessage(messages.default_to)}
             required={true}
-            value={data.to}
+            value={data.default_to}
             onChange={(name, value) => {
               onChangeBlock(block, {
                 ...data,
@@ -167,6 +177,31 @@ const Sidebar = ({
             title={intl.formatMessage(messages.submit_label)}
             required={false}
             value={data.submit_label}
+            onChange={(name, value) => {
+              onChangeBlock(block, {
+                ...data,
+                [name]: value,
+              });
+            }}
+          />
+
+          <CheckboxWidget
+            id="save_persistent_data"
+            title={intl.formatMessage(messages.save_persistent_data)}
+            required={false}
+            value={data.save_persistent_data ?? false}
+            onChange={(name, value) => {
+              onChangeBlock(block, {
+                ...data,
+                [name]: value,
+              });
+            }}
+          />
+          <CheckboxWidget
+            id="send_email"
+            title={intl.formatMessage(messages.send_email)}
+            required={false}
+            value={data.send_email ?? false}
             onChange={(name, value) => {
               onChangeBlock(block, {
                 ...data,

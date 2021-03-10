@@ -125,19 +125,12 @@ const Form = ({ data, id, path }) => {
     e.preventDefault();
 
     if (isValidForm()) {
-      let content = '';
       let attachments = {};
 
       data.subblocks.forEach((subblock, index) => {
         let name = getFieldName(subblock.label);
         if (formData[name]?.value) {
           const isAttachment = subblock.field_type === 'attachment';
-
-          const value = isAttachment
-            ? formData[name].value.filename
-            : formData[name].value;
-
-          content += `${formData[name].label}: ${value}\n`;
 
           if (isAttachment) {
             attachments[name] = formData[name].value;
@@ -149,9 +142,11 @@ const Form = ({ data, id, path }) => {
         sendActionForm(
           path,
           id,
-          formData.from || data.default_from,
-          data.default_subject,
-          content,
+          Object.keys(formData).map((name) => ({
+            id: name,
+            label: formData[name].label,
+            value: formData[name].value,
+          })),
           attachments,
         ),
       );

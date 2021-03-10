@@ -8,21 +8,12 @@ export const EMAIL_SEND_ACTION_FORM = 'EMAIL_SEND_ACTION_FORM';
 /**
  * Email send function
  * @function sendActionForm
- * @param {string} name New password.
- * @param {string} from Sender mail address.
- * @param {string} to Receiver mail address.
- * @param {string} subject Email subject.
- * @param {string} message Email message.
- * @returns {Object} Edit sendActionForm action.
+ * @param {string} pat
+ * @param {string} block_id
+ * @param {Object} data
+ * @returns {Object} attachments
  */
-export function sendActionForm(
-  path = '',
-  block_id,
-  from,
-  subject,
-  message,
-  attachments,
-) {
+export function sendActionForm(path = '', block_id, data, attachments) {
   return {
     type: EMAIL_SEND_ACTION_FORM,
     request: {
@@ -30,9 +21,7 @@ export function sendActionForm(
       path: path + '/@send-action-form',
       data: {
         block_id,
-        from,
-        subject,
-        message,
+        data,
         attachments,
       },
     },
