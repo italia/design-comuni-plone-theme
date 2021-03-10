@@ -1,3 +1,10 @@
+## [2.1.6](https://github.com/RedTurtle/design-volto-theme/compare/v2.1.5...v2.1.6) (2021-03-10)
+
+
+### Bug Fixes
+
+* clear break block ([78bae38](https://github.com/RedTurtle/design-volto-theme/commit/78bae38173b495bcefef894b17047cca4d127255))
+
 ## [2.1.5](https://github.com/RedTurtle/design-volto-theme/compare/v2.1.4...v2.1.5) (2021-03-08)
 
 ## [2.1.4](https://github.com/RedTurtle/design-volto-theme/compare/v2.1.3...v2.1.4) (2021-03-08)
