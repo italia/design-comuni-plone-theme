@@ -20,7 +20,7 @@ const Body = ({ block, sections }) => {
 
   const searchFilters = () => {
     return block.sections.flatMap((section) => {
-      return sections[section.value].items.map((x) => x.path);
+      return sections[section.value]?.items?.map((x) => x.path) || [];
     });
   };
 
