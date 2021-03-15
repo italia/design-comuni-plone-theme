@@ -8,10 +8,10 @@ import { Button } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Icon, SearchSectionsBackground } from '@italia/components/ItaliaTheme';
 
-const navigate = (text, serivices) => {
+const navigate = (text, sections) => {
   window.location.href =
     window.location.origin +
-    `/search?SearchableText=${text}&path.query=${serivices}`;
+    `/search?SearchableText=${text}&path.query=${sections}`;
 };
 
 const Body = ({ block, sections }) => {
@@ -20,7 +20,8 @@ const Body = ({ block, sections }) => {
 
   const searchFilters = () => {
     return block.sections.flatMap((section) => {
-      return sections[section.value]?.items?.map((x) => x.path) || [];
+      let items = sections?.[section.value]?.items;
+      return items ? Object.keys(items) : [];
     });
   };
 
