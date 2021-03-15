@@ -1561,6 +1561,10 @@ msgstr "Cerca nel sito"
 msgid "search_service_block_sections"
 msgstr "Dove cercare"
 
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
+msgid "search_service_links"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-add-rootpath"
 msgstr "Sezioni"

@@ -1,12 +1,13 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { SidebarPortal } from '@plone/volto/components';
 import {
   BlockSearchSectionsSidebar,
   BlockSearchSectionsBody,
 } from '@italia/components/ItaliaTheme';
-
-import { useSelector } from 'react-redux';
+import { SearchUtils } from '@italia/components';
 
 const Edit = ({
   data,
@@ -16,9 +17,16 @@ const Edit = ({
   openObjectBrowser,
   selected,
 }) => {
-  const sections = useSelector(
+  const { parseFetchedSections } = SearchUtils;
+  const location = useLocation();
+
+  const fetched_sections = useSelector(
     (state) => state?.searchFilters?.result?.sections,
   );
+
+  const sections = fetched_sections
+    ? parseFetchedSections(fetched_sections, location)
+    : [];
 
   return (
     <>

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-03-15T11:33:06.806Z\n"
+"POT-Creation-Date: 2021-03-15T11:51:20.803Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1924,6 +1924,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Dove cercare
 msgid "search_service_block_sections"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
+# defaultMessage: Collegamenti
+msgid "search_service_links"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget

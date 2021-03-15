@@ -1,14 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
-
+import { useLocation } from 'react-router-dom';
 import { BlockSearchSectionsBody } from '@italia/components/ItaliaTheme';
+import { SearchUtils } from '@italia/components';
 
 const View = ({ data, id }) => {
+  const { parseFetchedSections } = SearchUtils;
+  const location = useLocation();
+
   const content = useSelector((state) => state.content.subrequests[id]?.data);
-  const sections = useSelector(
+  const fetched_sections = useSelector(
     (state) => state?.searchFilters?.result?.sections,
   );
+
+  const sections = parseFetchedSections(fetched_sections ?? [], location);
 
   return (
     <div className="block full-width">
