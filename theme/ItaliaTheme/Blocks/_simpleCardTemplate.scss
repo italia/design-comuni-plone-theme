@@ -29,9 +29,9 @@
     .categoryicon-top .icon {
       width: 32px;
       height: 32px;
-      font-weight: 600;
-      fill: $secondary;
       color: $secondary;
+      fill: $secondary;
+      font-weight: 600;
     }
 
     .card-body {
@@ -51,6 +51,7 @@
 
       .card-title {
         margin-bottom: 10px;
+
         a {
           &:hover,
           &:active {
@@ -97,6 +98,7 @@
         flex-wrap: nowrap;
 
         > .icon {
+          color: $secondary;
           fill: $secondary;
         }
       }
