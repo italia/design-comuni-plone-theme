@@ -52,7 +52,9 @@ msgstr "Cerca"
 msgid "Cerca per parola chiave"
 msgstr "Cerca per parola chiave"
 
+#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+#: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Clicca qui per sostituire il file"
 msgstr "Clicca qui per sostituire il file"
 
@@ -108,7 +110,7 @@ msgstr "Description"
 msgid "Dimensione della mappa"
 msgstr "Dimensione della mappa"
 
-#: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
 msgid "Email Success"
 msgstr "Email inviata correttamente"
 
@@ -116,7 +118,7 @@ msgstr "Email inviata correttamente"
 msgid "Email sent"
 msgstr "La tua mail è stata inviata correttamente"
 
-#: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
 msgid "Error"
 msgstr "Errore"
 
@@ -237,7 +239,9 @@ msgstr "Pagina precedente"
 msgid "Required"
 msgstr "Required"
 
+#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+#: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Rimuovi il file"
 msgstr "Rimuovi il file"
 
@@ -262,7 +266,9 @@ msgstr "Titolo"
 msgid "Seguici su"
 msgstr "Seguici su"
 
+#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+#: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Seleziona un file"
 msgstr "Seleziona un file"
 
@@ -307,15 +313,21 @@ msgstr "Title..."
 msgid "Titolo"
 msgstr "Titolo"
 
+#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+#: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Trascina qui il file ..."
 msgstr "Trascina qui il file..."
 
+#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+#: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Trascina qui un file per caricare un nuovo file"
 msgstr "Trascina qui un file per caricare un nuovo file"
 
+#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+#: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Trascina qui un file per sostituire quello esistente"
 msgstr "Trascina qui un file per sostituire quello esistente"
 
@@ -930,7 +942,7 @@ msgid "form_default_subject"
 msgstr "Oggetto della mail"
 
 #: components/ItaliaTheme/Blocks/Form/Edit
-#: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
 msgid "form_default_submit_label"
 msgstr "Invia"
 
@@ -942,7 +954,7 @@ msgstr "Attenzione!"
 msgid "form_edit_warning_from"
 msgstr "Inserire un campo di tipo 'E-mail mittente'. Se non è presente, oppure è presente ma non viene compilato dall'utente, l'indirizzo del mittente della mail sarà quello configurato dalla sidebar di destra."
 
-#: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
 msgid "form_empty_values_validation"
 msgstr "Compila i campi richiesti"
 

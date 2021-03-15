@@ -51,10 +51,6 @@ import faTwitter from './icons/twitter-brands.svg';
 import TwitterPostsView from '@italia/components/ItaliaTheme/Blocks/TwitterPosts/View';
 import TwitterPostsEdit from '@italia/components/ItaliaTheme/Blocks/TwitterPosts/Edit';
 
-import formSVG from '@plone/volto/icons/form.svg';
-import FormView from '@italia/components/ItaliaTheme/Blocks/Form/View';
-import FormEdit from '@italia/components/ItaliaTheme/Blocks/Form/Edit';
-
 import CharCounterDescriptionWidget from '@italia/components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget';
 import PageView from '@italia/components/ItaliaTheme/View/PageView/PageView';
 import NewsItemView from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemView';
@@ -365,21 +361,6 @@ const customBlocks = {
     edit: TwitterPostsEdit,
     restricted: false,
     mostUsed: false,
-    security: {
-      addPermission: [],
-      view: [],
-    },
-    sidebarTab: 1,
-  },
-  form: {
-    id: 'form',
-    title: 'Form',
-    icon: formSVG,
-    group: 'text',
-    view: FormView,
-    edit: FormEdit,
-    restricted: false,
-    mostUsed: true,
     security: {
       addPermission: [],
       view: [],

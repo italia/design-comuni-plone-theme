@@ -105,4 +105,3 @@ ImageGalleryTemplate.propTypes = {
 };
 
 export default ImageGalleryTemplate;
-

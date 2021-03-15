@@ -13,6 +13,7 @@
 export TextEditorWidget from '@italia/components/ItaliaTheme/manage/Widgets/TextEditorWidget';
 export LinkToWidget from '@italia/components/ItaliaTheme/manage/Widgets/LinkToWidget';
 export ColorListWidget from '@italia/components/ItaliaTheme/manage/Widgets/ColorListWidget';
+export FileWidget from '@italia/components/ItaliaTheme/manage/Widgets/FileWidget';
 
 /********* ICONS ********* */
 export getItemIcon from '@italia/components/ItaliaTheme/Icons/common/common';

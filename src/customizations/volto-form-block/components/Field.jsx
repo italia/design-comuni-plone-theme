@@ -12,7 +12,7 @@ import {
   Label,
 } from 'design-react-kit/dist/design-react-kit';
 import Select from 'react-select';
-import FileWidget from '@italia/components/ItaliaTheme/Blocks/Form/Widgets/FileWidget.jsx';
+import FileWidget from '@italia/components/ItaliaTheme/manage/Widgets/FileWidget';
 
 const messages = defineMessages({
   select_a_value: {
@@ -58,7 +58,7 @@ const Field = ({
           type="text"
           required={required}
           infoText={description}
-          invalid={isInvalid()}
+          invalid={isInvalid() ? 'true' : null}
           onChange={(e) => {
             onChange(name, e.target.value);
           }}
@@ -73,7 +73,7 @@ const Field = ({
           rows={10}
           required={required}
           infoText={description}
-          invalid={isInvalid()}
+          invalid={isInvalid() ? 'true' : null}
           onChange={(e) => {
             onChange(name, e.target.value);
           }}
@@ -131,7 +131,7 @@ const Field = ({
                   onChange={(e) => {
                     onChange(name, v);
                   }}
-                  invalid={isInvalid()}
+                  invalid={isInvalid() ? 'true' : null}
                 />
                 <Label for={v + name} check>
                   {v}
@@ -172,7 +172,7 @@ const Field = ({
                     }
                     onChange(name, values);
                   }}
-                  invalid={isInvalid()}
+                  invalid={isInvalid() ? 'true' : null}
                 />
                 <Label for={v + name} check>
                   {v}
@@ -193,7 +193,7 @@ const Field = ({
           type="date"
           required={required}
           infoText={description}
-          invalid={isInvalid()}
+          invalid={isInvalid() ? 'true' : null}
           onChange={(e) => {
             onChange(name, e.target.value);
           }}
@@ -207,7 +207,7 @@ const Field = ({
           type="file"
           required={required}
           infoText={description}
-          invalid={isInvalid()}
+          invalid={isInvalid() ? 'true' : null}
           onChange={onChange}
           onEdit={isOnEdit}
           value={value}
@@ -221,7 +221,7 @@ const Field = ({
           type="email"
           required={true}
           infoText={description}
-          invalid={isInvalid()}
+          invalid={isInvalid() ? 'true' : null}
           onChange={(e) => {
             onChange(name, e.target.value);
           }}

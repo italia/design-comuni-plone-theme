@@ -36,6 +36,9 @@
             ],
             "@italia/addons/volto-secondarymenu": [
                 "addons/volto-secondarymenu/src"
+            ],
+            "@italia/addons/volto-form-block": [
+                "addons/volto-form-block/src"
             ]
         },
         "baseUrl": "src"

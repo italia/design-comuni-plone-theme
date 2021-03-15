@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-03-10T10:48:19.300Z\n"
+"POT-Creation-Date: 2021-03-15T11:33:06.806Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -64,7 +64,9 @@ msgstr ""
 msgid "Cerca per parola chiave"
 msgstr ""
 
+#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+#: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Clicca qui per sostituire il file
 msgid "Clicca qui per sostituire il file"
 msgstr ""
@@ -133,7 +135,7 @@ msgstr ""
 msgid "Dimensione della mappa"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
 # defaultMessage: Email inviata correttamente
 msgid "Email Success"
 msgstr ""
@@ -143,7 +145,7 @@ msgstr ""
 msgid "Email sent"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
 # defaultMessage: Errore
 msgid "Error"
 msgstr ""
@@ -293,7 +295,9 @@ msgstr ""
 msgid "Required"
 msgstr ""
 
+#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+#: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Rimuovi il file
 msgid "Rimuovi il file"
 msgstr ""
@@ -324,7 +328,9 @@ msgstr ""
 msgid "Seguici su"
 msgstr ""
 
+#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+#: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Seleziona un file
 msgid "Seleziona un file"
 msgstr ""
@@ -378,17 +384,23 @@ msgstr ""
 msgid "Titolo"
 msgstr ""
 
+#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+#: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Trascina qui il file...
 msgid "Trascina qui il file ..."
 msgstr ""
 
+#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+#: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Trascina qui un file per caricare un nuovo file
 msgid "Trascina qui un file per caricare un nuovo file"
 msgstr ""
 
+#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+#: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Trascina qui un file per sostituire quello esistente
 msgid "Trascina qui un file per sostituire quello esistente"
 msgstr ""
@@ -1146,7 +1158,7 @@ msgid "form_default_subject"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Edit
-#: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
 # defaultMessage: Invia
 msgid "form_default_submit_label"
 msgstr ""
@@ -1161,7 +1173,7 @@ msgstr ""
 msgid "form_edit_warning_from"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
 # defaultMessage: Compila i campi richiesti
 msgid "form_empty_values_validation"
 msgstr ""

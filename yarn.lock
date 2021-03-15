@@ -7454,6 +7454,11 @@ file-loader@^4.3.0:
     loader-utils "^1.2.3"
     schema-utils "^2.5.0"
 
+file-saver@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/file-saver/-/file-saver-2.0.5.tgz#d61cfe2ce059f414d899e9dd6d4107ee25670c38"
+  integrity sha512-P9bmyZ3h/PRG+Nzga+rbdI4OEpNDzAVyy74uVO9ATgzLK6VtAsYybF/+TOCvrc0MO793d6+42lLyZTw7/ArVzA==
+
 file-selector@^0.1.12:
   version "0.1.19"
   resolved "https://registry.yarnpkg.com/file-selector/-/file-selector-0.1.19.tgz#8ecc9d069a6f544f2e4a096b64a8052e70ec8abf"
@@ -14542,6 +14547,13 @@ react-google-recaptcha-v3@1.7.0:
   dependencies:
     hoist-non-react-statics "3.3.2"
 
+react-google-recaptcha-v3@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/react-google-recaptcha-v3/-/react-google-recaptcha-v3-1.8.0.tgz#962cefc223e05a39a32b7fd67eaa1f45ae72d159"
+  integrity sha512-dZxuZFjP3vVhb84yOjxwmyshbJGqNDaJPBGp8hyXaMkyD0cDxrICW2WmqcYeQaHPl0jsoVR4gwTTY1p6nr4zhQ==
+  dependencies:
+    hoist-non-react-statics "3.3.2"
+
 react-image-gallery@1.0.7:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/react-image-gallery/-/react-image-gallery-1.0.7.tgz#75e0d3f995d1475762f80f5a6958b4a9bb88bf97"
@@ -17993,71 +18005,12 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
-volto-blocks-widget@collective/volto-blocks-widget#v1.0.2:
-  version "1.0.2"
-  resolved "https://codeload.github.com/collective/volto-blocks-widget/tar.gz/e2114c6dcd900a6f4c53d8283338161b9bfe1de0"
-
-volto-cookie-banner@collective/volto-cookie-banner#v1.0.2:
-  version "1.0.2"
-  resolved "https://codeload.github.com/collective/volto-cookie-banner/tar.gz/985b07b08c1a3d371190b47386d43f330e23f020"
-  dependencies:
-    react-cookie-consent "^3.0.0"
-
-volto-dropdownmenu@collective/volto-dropdownmenu#v1.3.0:
-  version "1.3.0"
-  resolved "https://codeload.github.com/collective/volto-dropdownmenu/tar.gz/43280a0489d0290085e7d6cc9a92323ed56312e1"
-  dependencies:
-    react-outside-click-handler "1.3.0"
-
-volto-editablefooter@RedTurtle/volto-editablefooter#v2.1.0:
-  version "2.1.0"
-  resolved "https://codeload.github.com/RedTurtle/volto-editablefooter/tar.gz/f50e374cbfb0fd83cb4e9f134e09a7593bee23f6"
-  dependencies:
-    react-outside-click-handler "1.3.0"
-
-volto-google-analytics@collective/volto-google-analytics:
-  version "1.0.0"
-  resolved "https://codeload.github.com/collective/volto-google-analytics/tar.gz/9bd9b49bde6bd6942454a1f6c87968e33eea041a"
-  dependencies:
-    react-ga "2.7.0"
-
-volto-multilingual-widget@collective/volto-multilingual-widget#v1.0.1:
-  version "1.0.1"
-  resolved "https://codeload.github.com/collective/volto-multilingual-widget/tar.gz/5a8478902be211419f372d52311d464e89e2f77e"
-  dependencies:
-    draft-js-export-html "^1.4.1"
-
-volto-rss-block@redturtle/volto-rss-block#v1.2.0:
-  version "1.2.0"
-  resolved "https://codeload.github.com/redturtle/volto-rss-block/tar.gz/4d42b69359f0cd327e5b66d748051d714ec63910"
-  dependencies:
-    rss-parser "3.7.5"
-
-volto-secondarymenu@collective/volto-secondarymenu#v1.1.0:
-  version "1.1.0"
-  resolved "https://codeload.github.com/collective/volto-secondarymenu/tar.gz/e0902489fdf759a930956bade70ed4ec0a3baafa"
-
-volto-social-settings@collective/volto-social-settings#v2.0.0:
-  version "2.0.0"
-  resolved "https://codeload.github.com/collective/volto-social-settings/tar.gz/f9d0fcb825fdfb6a61b37716b723e9369e078a63"
-
 volto-subblocks@collective/volto-subblocks#v1.0.1:
   version "1.0.1"
   resolved "https://codeload.github.com/collective/volto-subblocks/tar.gz/d565956e04521e46a186cbf8967d2c8883672e21"
   dependencies:
     react-dnd "^5.0.0"
     react-dnd-html5-backend "^5.0.1"
-
-volto-subsites@collective/volto-subsites#v1.1.0:
-  version "1.1.0"
-  resolved "https://codeload.github.com/collective/volto-subsites/tar.gz/42cfbcfe773db67de40e35f7c7f3592e802a6123"
-
-volto-venue@collective/volto-venue#v2.0.1:
-  version "2.0.1"
-  resolved "https://codeload.github.com/collective/volto-venue/tar.gz/9494fe427b1d77fc94a541e8d55f7fe4e95af9ab"
-  dependencies:
-    leaflet "1.6.0"
-    react-leaflet "2.7.0"
 
 w3c-hr-time@^1.0.1, w3c-hr-time@^1.0.2:
   version "1.0.2"

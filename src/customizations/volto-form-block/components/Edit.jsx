@@ -4,7 +4,10 @@
  */
 
 import React from 'react';
-import EditBlock from './Block/EditBlock';
+// eslint-disable-next-line import/no-unresolved
+import EditBlock from '@italia/addons/volto-form-block/components/EditBlock';
+// eslint-disable-next-line import/no-unresolved
+import Sidebar from '@italia/addons/volto-form-block/components/Sidebar';
 
 import {
   Card,
@@ -20,7 +23,6 @@ import {
 } from '@italia/addons/volto-subblocks';
 
 import { SidebarPortal } from '@plone/volto/components';
-import Sidebar from './Sidebar.jsx';
 
 import { defineMessages } from 'react-intl';
 
@@ -76,12 +78,7 @@ class Edit extends SubblocksEdit {
     return (
       <div className="public-ui">
         <div className="px-4 py-5">
-          <Card
-            className="card-bg rounded py-3"
-            noWrapper={false}
-            space
-            tag="div"
-          >
+          <Card className="card-bg rounded py-3" noWrapper={false} tag="div">
             <CardBody tag="div">
               <SubblocksWrapper node={this.node}>
                 {/*this.state.subblocks.filter((s) => s.field_type === 'from')

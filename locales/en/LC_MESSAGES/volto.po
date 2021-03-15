@@ -52,7 +52,9 @@ msgstr ""
 msgid "Cerca per parola chiave"
 msgstr ""
 
+#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+#: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Clicca qui per sostituire il file"
 msgstr ""
 
@@ -108,7 +110,7 @@ msgstr ""
 msgid "Dimensione della mappa"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
 msgid "Email Success"
 msgstr ""
 
@@ -116,7 +118,7 @@ msgstr ""
 msgid "Email sent"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
 msgid "Error"
 msgstr ""
 
@@ -237,7 +239,9 @@ msgstr ""
 msgid "Required"
 msgstr ""
 
+#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+#: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Rimuovi il file"
 msgstr ""
 
@@ -262,7 +266,9 @@ msgstr ""
 msgid "Seguici su"
 msgstr ""
 
+#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+#: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Seleziona un file"
 msgstr ""
 
@@ -307,15 +313,21 @@ msgstr ""
 msgid "Titolo"
 msgstr ""
 
+#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+#: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Trascina qui il file ..."
 msgstr ""
 
+#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+#: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Trascina qui un file per caricare un nuovo file"
 msgstr ""
 
+#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+#: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Trascina qui un file per sostituire quello esistente"
 msgstr ""
 
@@ -930,7 +942,7 @@ msgid "form_default_subject"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Edit
-#: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
 msgid "form_default_submit_label"
 msgstr ""
 
@@ -942,7 +954,7 @@ msgstr ""
 msgid "form_edit_warning_from"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
 msgid "form_empty_values_validation"
 msgstr ""
 
