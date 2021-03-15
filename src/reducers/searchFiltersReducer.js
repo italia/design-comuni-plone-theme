@@ -10,6 +10,7 @@ const initialState = {
   hasError: false,
   result: {},
   loadingResults: false,
+  loaded: false,
 };
 
 export const searchFiltersReducer = (state = initialState, action = {}) => {
@@ -18,6 +19,7 @@ export const searchFiltersReducer = (state = initialState, action = {}) => {
       return {
         ...state,
         loadingResults: true,
+        loaded: false,
       };
 
     case `${GET_SEARCH_FILTERS}_SUCCESS`:
@@ -25,6 +27,7 @@ export const searchFiltersReducer = (state = initialState, action = {}) => {
         ...state,
         result: action.result,
         loadingResults: false,
+        loaded: true,
       };
 
     case `${GET_SEARCH_FILTERS}_FAIL`:
@@ -33,6 +36,7 @@ export const searchFiltersReducer = (state = initialState, action = {}) => {
         error: action.error,
         hasError: true,
         loadingResults: false,
+        loaded: false,
       };
 
     default:
