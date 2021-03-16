@@ -6,7 +6,6 @@ import SimpleCardTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Lis
 import RibbonCardTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions';
 import MapTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions';
 import CardWithImageTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions';
-
 import DefaultOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions';
 
 const ListingStyle = ({ data, block, onChangeBlock, required = false }) => {
