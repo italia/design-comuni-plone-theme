@@ -153,6 +153,7 @@ const FileWidget = (props) => {
                   id={`field-${id}`}
                   name={id}
                   type="file"
+                  disabled={props.disabled || null}
                 />
               )}
             </div>

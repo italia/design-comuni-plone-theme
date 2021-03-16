@@ -104,6 +104,25 @@ const FormView = ({
                 </Alert>
               ) : (
                 <form onSubmit={onSubmit} noValidate method="post">
+                  {data.static_fields && (
+                    <fieldset disabled>
+                      {data.static_fields?.map((field) => (
+                        <Row key={field.field_id}>
+                          <Col className="py-2">
+                            <Field
+                              {...field}
+                              field_type={field.field_type || 'text'}
+                              name={field.label}
+                              value={field.value}
+                              onChange={() => {}}
+                              valid
+                              disabled
+                            />
+                          </Col>
+                        </Row>
+                      ))}
+                    </fieldset>
+                  )}
                   {data.subblocks.map((subblock, index) => {
                     let name = getFieldName(subblock.label);
                     return (

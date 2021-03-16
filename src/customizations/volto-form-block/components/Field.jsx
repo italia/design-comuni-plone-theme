@@ -37,6 +37,7 @@ const Field = ({
   onChange,
   isOnEdit,
   valid,
+  disabled = false,
 }) => {
   const intl = useIntl();
 
@@ -58,10 +59,13 @@ const Field = ({
           type="text"
           required={required}
           infoText={description}
+          disabled={disabled}
+          readOnly={disabled}
           invalid={isInvalid() ? 'true' : null}
           onChange={(e) => {
             onChange(name, e.target.value);
           }}
+          {...(value ? { value } : {})}
         />
       )}
       {field_type === 'textarea' && (
@@ -73,10 +77,13 @@ const Field = ({
           rows={10}
           required={required}
           infoText={description}
+          disabled={disabled}
+          readOnly={disabled}
           invalid={isInvalid() ? 'true' : null}
           onChange={(e) => {
             onChange(name, e.target.value);
           }}
+          {...(value ? { value } : {})}
         />
       )}
       {field_type === 'select' && (
@@ -102,6 +109,7 @@ const Field = ({
               options={[
                 ...(input_values?.map((v) => ({ value: v, label: v })) ?? []),
               ]}
+              isDisabled={disabled}
               placeholder={intl.formatMessage(messages.select_a_value)}
               aria-label={intl.formatMessage(messages.select_a_value)}
               classNamePrefix="react-select"
@@ -128,6 +136,8 @@ const Field = ({
                   id={v + name}
                   name={name}
                   type="radio"
+                  disabled={disabled}
+                  readOnly={disabled}
                   onChange={(e) => {
                     onChange(name, v);
                   }}
@@ -163,6 +173,8 @@ const Field = ({
                   name={name}
                   type="checkbox"
                   checked={value?.indexOf(v) > -1}
+                  disabled={disabled}
+                  readOnly={disabled}
                   onChange={(e) => {
                     let values = JSON.parse(JSON.stringify(value ?? []));
                     if (e.target.checked) {
@@ -193,6 +205,8 @@ const Field = ({
           type="date"
           required={required}
           infoText={description}
+          disabled={disabled}
+          readOnly={disabled}
           invalid={isInvalid() ? 'true' : null}
           onChange={(e) => {
             onChange(name, e.target.value);
@@ -207,13 +221,15 @@ const Field = ({
           type="file"
           required={required}
           infoText={description}
+          disabled={disabled}
+          readOnly={disabled}
           invalid={isInvalid() ? 'true' : null}
           onChange={onChange}
           onEdit={isOnEdit}
           value={value}
         />
       )}
-      {field_type === 'from' && (
+      {(field_type === 'from' || field_type === 'email') && (
         <Input
           id={name}
           name={name}
@@ -221,10 +237,13 @@ const Field = ({
           type="email"
           required={true}
           infoText={description}
+          disabled={disabled}
+          readOnly={disabled}
           invalid={isInvalid() ? 'true' : null}
           onChange={(e) => {
             onChange(name, e.target.value);
           }}
+          {...(value ? { value } : {})}
         />
       )}
     </div>

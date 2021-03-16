@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-03-15T11:51:20.803Z\n"
+"POT-Creation-Date: 2021-03-16T10:22:29.958Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -135,6 +135,7 @@ msgstr ""
 msgid "Dimensione della mappa"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Form/Form
 #: components/ItaliaTheme/Blocks/Form/FormView
 # defaultMessage: Email inviata correttamente
 msgid "Email Success"
@@ -145,6 +146,7 @@ msgstr ""
 msgid "Email sent"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Form/Form
 #: components/ItaliaTheme/Blocks/Form/FormView
 # defaultMessage: Errore
 msgid "Error"
@@ -1158,6 +1160,7 @@ msgid "form_default_subject"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Edit
+#: components/ItaliaTheme/Blocks/Form/Form
 #: components/ItaliaTheme/Blocks/Form/FormView
 # defaultMessage: Invia
 msgid "form_default_submit_label"
@@ -1173,6 +1176,7 @@ msgstr ""
 msgid "form_edit_warning_from"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Form/Form
 #: components/ItaliaTheme/Blocks/Form/FormView
 # defaultMessage: Compila i campi richiesti
 msgid "form_empty_values_validation"
@@ -1253,19 +1257,9 @@ msgstr ""
 msgid "form_field_type_textarea"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-# defaultMessage: Salva i dati compilati
-msgid "form_save_persistent_data"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/Form/Field
 # defaultMessage: Seleziona un valore
 msgid "form_select_a_value"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-# defaultMessage: Invia email al destinatario
-msgid "form_send_email"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Sidebar
