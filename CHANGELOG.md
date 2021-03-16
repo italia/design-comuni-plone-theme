@@ -1,3 +1,24 @@
+## [2.1.8](https://github.com/RedTurtle/design-volto-theme/compare/v2.1.7...v2.1.8) (2021-03-16)
+
+
+### Bug Fixes
+
+* updated version in mrs.developer for volto-blocks-widget ([c576cae](https://github.com/RedTurtle/design-volto-theme/commit/c576caed951d16ffeedc3344c1228f700b15a970))
+
+## [2.1.7](https://github.com/RedTurtle/design-volto-theme/compare/v2.1.6...v2.1.7) (2021-03-16)
+
+
+### Bug Fixes
+
+* added translations for login button ([a590e7c](https://github.com/RedTurtle/design-volto-theme/commit/a590e7c957683d583192029e2623f60d8395a881))
+* fix styles for SearchEvents results ([69276c2](https://github.com/RedTurtle/design-volto-theme/commit/69276c2f487dc22c2a2e96804da8e18670c97b48))
+* fixed chip-lg and simpleCardTemplate icons color ([8fcc94f](https://github.com/RedTurtle/design-volto-theme/commit/8fcc94f77d7461be0a4416e3ad8cb28388e28891))
+* fixed EventSearch query path ([0ca323c](https://github.com/RedTurtle/design-volto-theme/commit/0ca323cb9ff6a47edfb9d0c8572f930312e66c38))
+* fixed searchFilters for empty value ([fbe48ff](https://github.com/RedTurtle/design-volto-theme/commit/fbe48ff59d76031ff673cd091aa82e22c006729b))
+* removed multilingual ([0dfda6b](https://github.com/RedTurtle/design-volto-theme/commit/0dfda6bc627a1244b2a91c5ebdb7704a90206e85))
+* searchSeactions block to use new searchSections ([73310d7](https://github.com/RedTurtle/design-volto-theme/commit/73310d7076468b3c6119bee8053041736f751234))
+* view current lang on languageselector when lang changes ([a210de9](https://github.com/RedTurtle/design-volto-theme/commit/a210de90b38bbaab7b2ac2d3ca1f9519eb5060d6))
+
 ## [2.1.6](https://github.com/RedTurtle/design-volto-theme/compare/v2.1.5...v2.1.6) (2021-03-10)
 
 

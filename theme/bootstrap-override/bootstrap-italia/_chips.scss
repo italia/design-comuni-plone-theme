@@ -27,6 +27,11 @@
   // &.selected {
   //   @extend .chip:hover;
   // }
+
+  &.chip-lg {
+    height: unset;
+    line-height: 1.7em;
+  }
 }
 
 #metadata {
