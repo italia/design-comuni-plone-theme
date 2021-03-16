@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/interactive-supports-focus */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useIntl, defineMessages } from 'react-intl';
@@ -27,6 +30,25 @@ const messages = defineMessages({
 const SliderTemplate = ({ items, title, isEditMode, show_block_bg }) => {
   const intl = useIntl();
   const [autoplay, setAutoplay] = useState(false);
+
+  const NextArrow = (props) => {
+    const { className, style, onClick } = props;
+    return (
+      <div className={className} style={{ ...style }} onClick={onClick}>
+        <Icon icon="chevron-right" />
+      </div>
+    );
+  };
+
+  const PrevArrow = (props) => {
+    const { className, style, onClick } = props;
+    return (
+      <div className={className} style={{ ...style }} onClick={onClick}>
+        <Icon icon="chevron-left" />
+      </div>
+    );
+  };
+
   const settings = {
     dots: true,
     infinite: true,
@@ -35,6 +57,8 @@ const SliderTemplate = ({ items, title, isEditMode, show_block_bg }) => {
     slidesToScroll: 1,
     autoplay: autoplay,
     autoplaySpeed: 2000,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 1025,
@@ -61,23 +85,12 @@ const SliderTemplate = ({ items, title, isEditMode, show_block_bg }) => {
         },
       },
     ],
-    appendDots: (dots) => (
-      <div>
-        <div className="play-pause-wrapper">
-          <button
-            onClick={() => setAutoplay(!autoplay)}
-            title={
-              autoplay
-                ? intl.formatMessage(messages.pause)
-                : intl.formatMessage(messages.play)
-            }
-          >
-            <Icon icon={autoplay ? 'pause' : 'play'} />
-          </button>
-        </div>
-        <ul style={{ margin: '0px' }}> {dots} </ul>
-      </div>
-    ),
+    // appendDots: (dots) => (
+    //   <div>
+
+    //     <ul style={{ margin: '0px' }}> {dots} </ul>
+    //   </div>
+    // ),
   };
 
   const getCaption = (item) => item.description ?? item.rights ?? null;
@@ -94,6 +107,19 @@ const SliderTemplate = ({ items, title, isEditMode, show_block_bg }) => {
         )}
         <div className="slider-container px-4 px-md-0">
           <div className="it-carousel-all it-card-bg">
+            <div className="play-pause-wrapper">
+              <button
+                onClick={() => setAutoplay(!autoplay)}
+                title={
+                  autoplay
+                    ? intl.formatMessage(messages.pause)
+                    : intl.formatMessage(messages.play)
+                }
+              >
+                <Icon icon={autoplay ? 'pause' : 'play'} />
+                <span>{autoplay ? 'pause' : 'play'}</span>
+              </button>
+            </div>
             <Slider {...settings}>
               {items.map((item) => (
                 <div className="it-single-slide-wrapper" key={item['@id']}>
