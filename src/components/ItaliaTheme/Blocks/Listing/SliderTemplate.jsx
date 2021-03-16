@@ -59,41 +59,9 @@ const SliderTemplate = ({ items, title, isEditMode, show_block_bg }) => {
     autoplaySpeed: 2000,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-    responsive: [
-      {
-        breakpoint: 1025,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-    // appendDots: (dots) => (
-    //   <div>
-
-    //     <ul style={{ margin: '0px' }}> {dots} </ul>
-    //   </div>
-    // ),
   };
 
-  const getCaption = (item) => item.description ?? item.rights ?? null;
+  //const getCaption = (item) => item.description ?? item.rights ?? null;
 
   return (
     <div className="sliderTemplate">
@@ -123,11 +91,7 @@ const SliderTemplate = ({ items, title, isEditMode, show_block_bg }) => {
             <Slider {...settings}>
               {items.map((item) => (
                 <div className="it-single-slide-wrapper" key={item['@id']}>
-                  <UniversalLink
-                    item={item}
-                    openLinkInNewTab={true}
-                    title={intl.formatMessage(messages.viewImage)}
-                  >
+                  <div className="slide-wrapper">
                     <figure className="img-wrapper">
                       {item.image && (
                         <Image
@@ -137,11 +101,19 @@ const SliderTemplate = ({ items, title, isEditMode, show_block_bg }) => {
                           aria-hidden="true"
                         />
                       )}
-                      {getCaption(item) && (
+                      {/* {getCaption(item) && (
                         <figcaption>{getCaption(item)}</figcaption>
-                      )}
+                      )} */}
                     </figure>
-                  </UniversalLink>
+                    <UniversalLink
+                      item={item}
+                      title={intl.formatMessage(messages.viewImage)}
+                    >
+                      <div className="slide-title">
+                        {item.title} <Icon icon="arrow-right" />
+                      </div>
+                    </UniversalLink>
+                  </div>
                 </div>
               ))}
             </Slider>
