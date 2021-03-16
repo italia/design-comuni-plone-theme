@@ -81,6 +81,6 @@
     "path": "src",
     "https": "https://github.com/collective/volto-form-block.git",
     "url": "git@github.com:collective/volto-form-block.git",
-    "branch": "static_fields"
+    "branch": "main"
   }
 }
