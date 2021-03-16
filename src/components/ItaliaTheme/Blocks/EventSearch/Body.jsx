@@ -81,7 +81,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
       query.push({
         i: 'path',
         o: 'plone.app.querystring.operation.string.absolutePath',
-        v: data.location[0]['@id'],
+        v: flattenToAppURL(data.location[0]['@id']),
       });
     }
 

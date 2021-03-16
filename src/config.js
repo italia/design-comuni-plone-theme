@@ -464,8 +464,8 @@ export const settings = {
   extendedBlockRenderMap: extendedBlockRenderMap,
   blockStyleFn: blockStyleFn,
   listBlockTypes: listBlockTypes,
-  isMultilingual: false,
-  supportedLanguages: ['it'],
+  isMultilingual: true,
+  supportedLanguages: ['it', 'en'],
   defaultLanguage: 'it',
   verticalFormTabs: true,
   //TODO: rimuovere questa customizzazione quando sistemano https://github.com/plone/volto/issues/1601

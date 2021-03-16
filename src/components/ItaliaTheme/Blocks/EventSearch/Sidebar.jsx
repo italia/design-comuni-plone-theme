@@ -143,7 +143,7 @@ const Sidebar = (props) => {
             choices={filters}
           />
           <ObjectBrowserWidget
-            id={'ObjectBrowserWidget'}
+            id="location"
             title={props.intl.formatMessage(messages.location_to_search)}
             value={props.data.location}
             mode={'link'}
