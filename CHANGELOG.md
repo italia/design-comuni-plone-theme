@@ -1,3 +1,10 @@
+## [2.1.8](https://github.com/RedTurtle/design-volto-theme/compare/v2.1.7...v2.1.8) (2021-03-16)
+
+
+### Bug Fixes
+
+* updated version in mrs.developer for volto-blocks-widget ([c576cae](https://github.com/RedTurtle/design-volto-theme/commit/c576caed951d16ffeedc3344c1228f700b15a970))
+
 ## [2.1.7](https://github.com/RedTurtle/design-volto-theme/compare/v2.1.6...v2.1.7) (2021-03-16)
 
 
