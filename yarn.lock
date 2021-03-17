@@ -17747,9 +17747,9 @@ volto-editablefooter@RedTurtle/volto-editablefooter#v2.1.0:
   dependencies:
     react-outside-click-handler "1.3.0"
 
-volto-form-block@collective/volto-form-block#fix_imports:
-  version "1.1.1"
-  resolved "https://codeload.github.com/collective/volto-form-block/tar.gz/8bbe6f47e2e5e8860e5170b72861d040deba9e9e"
+volto-form-block@collective/volto-form-block#v1.1.2:
+  version "1.1.2"
+  resolved "https://codeload.github.com/collective/volto-form-block/tar.gz/83b8ae8ca1ff0a1ddd7688712b412b38d450794a"
   dependencies:
     file-saver "^2.0.5"
     react-google-recaptcha-v3 "^1.8.0"
