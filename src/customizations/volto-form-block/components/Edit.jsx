@@ -4,7 +4,10 @@
  */
 
 import React from 'react';
-import { EditBlock, Sidebar } from 'volto-form-block';
+// eslint-disable-next-line import/no-unresolved
+import EditBlock from 'volto-form-block/components/EditBlock';
+// eslint-disable-next-line import/no-unresolved
+import Sidebar from 'volto-form-block/components/Sidebar';
 
 import {
   Card,

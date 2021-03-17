@@ -11,7 +11,8 @@ import {
   Progress,
 } from 'design-react-kit/dist/design-react-kit';
 import { getFieldName } from 'volto-form-block';
-import Field from './Field';
+// eslint-disable-next-line import/no-unresolved
+import Field from 'volto-form-block/components/Field';
 
 const messages = defineMessages({
   default_submit_label: {
