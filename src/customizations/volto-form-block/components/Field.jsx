@@ -161,36 +161,23 @@ const Field = ({
               isInvalid() ? 'is-invalid' : ''
             }`}
           >
-            <label className="active">{getLabel()}</label>
-            {input_values?.map((v, index) => (
-              <FormGroup
-                check
-                className="form-check-group"
-                key={v + name + index}
-              >
-                <Input
-                  id={v + name}
-                  name={name}
-                  type="checkbox"
-                  checked={value?.indexOf(v) > -1}
-                  disabled={disabled}
-                  readOnly={disabled}
-                  onChange={(e) => {
-                    let values = JSON.parse(JSON.stringify(value ?? []));
-                    if (e.target.checked) {
-                      values.push(v);
-                    } else {
-                      values.splice(values.indexOf(v), 1);
-                    }
-                    onChange(name, values);
-                  }}
-                  invalid={isInvalid() ? 'true' : null}
-                />
-                <Label for={v + name} check>
-                  {v}
-                </Label>
-              </FormGroup>
-            ))}
+            <FormGroup check className="form-check-group" key={name}>
+              <Input
+                id={name}
+                name={name}
+                type="checkbox"
+                checked={value}
+                disabled={disabled}
+                readOnly={disabled}
+                onChange={(e) => {
+                  onChange(name, value);
+                }}
+                invalid={isInvalid() ? 'true' : null}
+              />
+              <Label for={name} check>
+                {getLabel()}
+              </Label>
+            </FormGroup>
             {description && (
               <small className="form-text text-muted">{description}</small>
             )}
