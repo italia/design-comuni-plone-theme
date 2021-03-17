@@ -10,8 +10,7 @@ import {
   Alert,
   Progress,
 } from 'design-react-kit/dist/design-react-kit';
-// eslint-disable-next-line import/no-unresolved
-import { getFieldName } from '@italia/addons/volto-form-block/components/utils';
+import { getFieldName } from 'volto-form-block';
 import Field from './Field';
 
 const messages = defineMessages({
