@@ -13,7 +13,6 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import cx from 'classnames';
 import { defineMessages, useIntl } from 'react-intl';
-import Image from '@plone/volto/components/theme/Image/Image';
 
 const messages = defineMessages({
   view_all: {
@@ -46,45 +45,47 @@ const CompleteBlockLinksTemplate = ({
           </Row>
         )}
         <Row className="items">
-          {items.map((item, index) => (
-            <Col md="6" lg="3" key={item['@id']} className="col-item">
-              <Card
-                color=""
-                className="card-bg rounded"
-                noWrapper={false}
-                tag="div"
-              >
-                <UniversalLink
-                  item={!isEditMode ? item : null}
-                  href={isEditMode ? '#' : null}
+          {items.map((item, index) => {
+            const image = item.image || item.immagine_testata;
+
+            return (
+              <Col md="6" lg="3" key={item['@id']} className="col-item">
+                <Card
+                  color=""
+                  className="card-bg rounded"
+                  noWrapper={false}
+                  tag="div"
                 >
-                  <div className="d-flex">
-                    {item.image && (
-                      <div className="image-container">
-                        <Image
-                          alt=""
-                          image={flattenToAppURL(
-                            item.image.scales.preview.download,
-                          )}
-                          aria-hidden="true"
-                        />
+                  <UniversalLink
+                    item={!isEditMode ? item : null}
+                    href={isEditMode ? '#' : null}
+                  >
+                    <div className="d-flex">
+                      {image && (
+                        <div className="image-container">
+                          <img
+                            src={flattenToAppURL(image.scales.preview.download)}
+                            alt=""
+                            aria-hidden="true"
+                          />
+                        </div>
+                      )}
+                      <div>
+                        <CardBody>
+                          <CardTitle tag="h3" className="text-secondary">
+                            {item.title}
+                          </CardTitle>
+                          <CardText tag="p" className="text-secondary">
+                            {item.description}
+                          </CardText>
+                        </CardBody>
                       </div>
-                    )}
-                    <div>
-                      <CardBody>
-                        <CardTitle tag="h3" className="text-secondary">
-                          {item.title}
-                        </CardTitle>
-                        <CardText tag="p" className="text-secondary">
-                          {item.description}
-                        </CardText>
-                      </CardBody>
                     </div>
-                  </div>
-                </UniversalLink>
-              </Card>
-            </Col>
-          ))}
+                  </UniversalLink>
+                </Card>
+              </Col>
+            );
+          })}
         </Row>
         {linkMore?.href && (
           <div className="link-button text-center my-4">

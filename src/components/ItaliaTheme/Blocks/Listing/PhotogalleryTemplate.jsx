@@ -100,29 +100,32 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
         <div className="slider-container px-4 px-md-0">
           <div className="it-carousel-all it-card-bg">
             <Slider {...settings}>
-              {items.map((item) => (
-                <div className="it-single-slide-wrapper" key={item['@id']}>
-                  <UniversalLink
-                    item={item}
-                    openLinkInNewTab={true}
-                    title={intl.formatMessage(messages.viewImage)}
-                  >
-                    <figure className="img-wrapper">
-                      {item.image && (
-                        <Image
-                          className="img-fluid"
-                          image={item.image}
-                          alt=""
-                          aria-hidden="true"
-                        />
-                      )}
-                      {getCaption(item) && (
-                        <figcaption>{getCaption(item)}</figcaption>
-                      )}
-                    </figure>
-                  </UniversalLink>
-                </div>
-              ))}
+              {items.map((item) => {
+                const image = item.image || item.immagine_testata;
+                return (
+                  <div className="it-single-slide-wrapper" key={item['@id']}>
+                    <UniversalLink
+                      item={item}
+                      openLinkInNewTab={true}
+                      title={intl.formatMessage(messages.viewImage)}
+                    >
+                      <figure className="img-wrapper">
+                        {image && (
+                          <Image
+                            className="img-fluid"
+                            image={image}
+                            alt=""
+                            aria-hidden="true"
+                          />
+                        )}
+                        {getCaption(item) && (
+                          <figcaption>{getCaption(item)}</figcaption>
+                        )}
+                      </figure>
+                    </UniversalLink>
+                  </div>
+                );
+              })}
             </Slider>
           </div>
         </div>
