@@ -130,8 +130,9 @@ const SimpleCardTemplateDefault = ({
           {path_filters_buttons && (
             <Col md={title ? 6 : 12} className="path-filter-buttons">
               <div className="path-filter-buttons-wrapper">
-                {path_filters_buttons.map((button) => (
+                {path_filters_buttons.map((button, i) => (
                   <Button
+                    key={i}
                     color="primary"
                     outline={button.path['@id'] !== pathFilter}
                     size="xs"
