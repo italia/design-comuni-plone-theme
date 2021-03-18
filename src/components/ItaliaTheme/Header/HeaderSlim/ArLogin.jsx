@@ -23,6 +23,8 @@ import {
 
 import { getUser, logout, purgeMessages } from '@plone/volto/actions';
 
+import { BodyClass } from '@plone/volto/helpers';
+
 import { siteConfig } from '~/config';
 import { Icon, UserLoggedMenu } from '@italia/components/ItaliaTheme';
 
@@ -56,9 +58,16 @@ const ArLogin = () => {
     dispatch(purgeMessages());
   };
 
+  let rolesBodyClasses = [];
+  // eslint-disable-next-line no-unused-expressions
+  userLogged?.roles?.forEach((role) => {
+    rolesBodyClasses.push(`role-${role.toLowerCase()}`);
+  });
+
   return siteConfig.properties.arLoginUrl ? (
     <>
       {!userId ? (
+        // not logged
         <Button
           className="btn-icon"
           color="primary"
@@ -75,47 +84,60 @@ const ArLogin = () => {
           </span>
         </Button>
       ) : (
-        <UncontrolledDropdown nav tag="div">
-          <DropdownToggle
-            aria-haspopup
-            caret
-            color="secondary"
-            nav
-            className="btn-icon"
-          >
-            <span class="rounded-icon">
-              <Icon color="primary" icon="it-user" size="" />
-            </span>
-            <span class="d-none d-lg-block">
-              {userLogged.fullname ? userLogged.fullname : userLogged.username}
-            </span>
-            <Icon color="" icon="it-expand" padding={false} size="" />
-          </DropdownToggle>
-          <DropdownMenu flip tag="div">
-            <Row tag="div">
-              <Col size="12" tag="div" widths={['xs', 'sm', 'md', 'lg', 'xl']}>
-                <LinkList tag="div">
-                  <UserLoggedMenu />
-                  <LinkListItem divider tag="a" />
-                  <LinkListItem
-                    to={siteConfig.properties.arLogoutUrl || '/'}
-                    title={intl.formatMessage(messages.arLogout)}
-                    tag={Link}
-                    onClick={() => {
-                      if (!siteConfig.properties.arLogoutUrl) {
-                        doLogout();
-                      }
-                    }}
-                    className="logout"
-                  >
-                    <Icon color="" icon="sign-out-alt" size="sm" left />
-                    <span>{intl.formatMessage(messages.arLogout)}</span>
-                  </LinkListItem>
-                </LinkList>
-              </Col>
-            </Row>
-          </DropdownMenu>
-        </UncontrolledDropdown>
+        // logged
+        <>
+          {/* add user roles classes to body */}
+          <BodyClass className={rolesBodyClasses.join(' ')} />
+
+          {/* dropdown */}
+          <UncontrolledDropdown nav tag="div">
+            <DropdownToggle
+              aria-haspopup
+              caret
+              color="secondary"
+              nav
+              className="btn-icon"
+            >
+              <span class="rounded-icon">
+                <Icon color="primary" icon="it-user" size="" />
+              </span>
+              <span class="d-none d-lg-block">
+                {userLogged.fullname
+                  ? userLogged.fullname
+                  : userLogged.username}
+              </span>
+              <Icon color="" icon="it-expand" padding={false} size="" />
+            </DropdownToggle>
+            <DropdownMenu flip tag="div">
+              <Row tag="div">
+                <Col
+                  size="12"
+                  tag="div"
+                  widths={['xs', 'sm', 'md', 'lg', 'xl']}
+                >
+                  <LinkList tag="div">
+                    <UserLoggedMenu />
+                    <LinkListItem divider tag="a" />
+                    <LinkListItem
+                      to={siteConfig.properties.arLogoutUrl || '/'}
+                      title={intl.formatMessage(messages.arLogout)}
+                      tag={Link}
+                      onClick={() => {
+                        if (!siteConfig.properties.arLogoutUrl) {
+                          doLogout();
+                        }
+                      }}
+                      className="logout"
+                    >
+                      <Icon color="" icon="sign-out-alt" size="sm" left />
+                      <span>{intl.formatMessage(messages.arLogout)}</span>
+                    </LinkListItem>
+                  </LinkList>
+                </Col>
+              </Row>
+            </DropdownMenu>
+          </UncontrolledDropdown>
+        </>
       )}
     </>
   ) : null;
