@@ -218,6 +218,7 @@ msgid "Path filter filtro"
 msgstr "Filtro"
 
 #: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
+#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
 msgid "Pause slider"
 msgstr "Metti in pausa"
 
@@ -226,6 +227,7 @@ msgid "Percorso path filter"
 msgstr "Percorso"
 
 #: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
+#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
 msgid "Play slider"
 msgstr "Play"
 
@@ -370,6 +372,7 @@ msgid "Vedi"
 msgstr "Vedi"
 
 #: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
+#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
 msgid "Vedi l'immagine"
 msgstr "Vedi l'immagine"
 
@@ -1639,6 +1642,10 @@ msgstr "Servizi"
 #: components/ItaliaTheme/View/Commons/Sharing
 msgid "share"
 msgstr "Condividi"
+
+#: components/ItaliaTheme/Blocks/Listing/Options/PhotogalleryTemplateOptions
+msgid "showOneSlide"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 msgid "show_description"
