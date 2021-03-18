@@ -116,7 +116,7 @@ const FormView = ({
                 <form
                   onSubmit={onSubmit}
                   noValidate
-                  autocomplete="off"
+                  autoComplete="off"
                   method="post"
                 >
                   {data.static_fields && (
