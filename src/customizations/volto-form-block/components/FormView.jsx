@@ -25,11 +25,15 @@ const messages = defineMessages({
   },
   success: {
     id: 'Email Success',
-    defaultMessage: 'Email inviata correttamente',
+    defaultMessage: 'Form inviato correttamente',
   },
   empty_values: {
     id: 'form_empty_values_validation',
     defaultMessage: 'Compila i campi richiesti',
+  },
+  reset: {
+    id: 'form_reset',
+    defaultMessage: 'Ricomincia',
   },
 });
 
@@ -90,6 +94,9 @@ const FormView = ({
                 >
                   <h4>{intl.formatMessage(messages.error)}</h4>
                   <p>{formState.error}</p>
+                  <Button type="clear" onClick={resetFormState}>
+                    {intl.formatMessage(messages.reset)}
+                  </Button>
                 </Alert>
               ) : formState.result ? (
                 <Alert
@@ -101,9 +108,17 @@ const FormView = ({
                 >
                   <h4>{intl.formatMessage(messages.success)}</h4>
                   <p>{formState.result}</p>
+                  <Button type="clear" onClick={resetFormState}>
+                    {intl.formatMessage(messages.reset)}
+                  </Button>
                 </Alert>
               ) : (
-                <form onSubmit={onSubmit} noValidate method="post">
+                <form
+                  onSubmit={onSubmit}
+                  noValidate
+                  autocomplete="off"
+                  method="post"
+                >
                   {data.static_fields && (
                     <fieldset disabled>
                       {data.static_fields?.map((field) => (
