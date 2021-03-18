@@ -113,7 +113,7 @@ msgstr "Dimensione della mappa"
 #: components/ItaliaTheme/Blocks/Form/Form
 #: components/ItaliaTheme/Blocks/Form/FormView
 msgid "Email Success"
-msgstr "Email inviata correttamente"
+msgstr "Form inviato correttamente"
 
 #: components/ItaliaTheme/Blocks/Form/Form
 msgid "Email sent"
