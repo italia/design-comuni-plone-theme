@@ -76,6 +76,8 @@ import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Li
 import CompleteBlockLinksTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CompleteBlockLinksTemplateSkeleton';
 import PhotogalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
 import PhotogalleryTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/PhotogalleryTemplateSkeleton';
+import SliderTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SliderTemplate';
+import SliderTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SliderTemplateSkeleton';
 import InEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate';
 import InEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/InEvidenceTemplateSkeleton';
 import SimpleCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplate';
@@ -410,6 +412,11 @@ const customBlocks = {
         label: 'Photogallery',
         template: PhotogalleryTemplate,
         skeleton: PhotogalleryTemplateSkeleton,
+      },
+      slider: {
+        label: 'Slider',
+        template: SliderTemplate,
+        skeleton: SliderTemplateSkeleton,
       },
       gridGalleryTemplate: {
         label: 'Gallery a griglia',

@@ -65,6 +65,8 @@ const CardWithImageTemplate = ({
                 isEditMode,
               );
               const listingText = <ListingText item={item} />;
+              const image = item.image || item.immagine_testata;
+
               return (
                 <Col lg="4" key={item['@id']} className="col-item mb-3">
                   <Card
@@ -73,7 +75,7 @@ const CardWithImageTemplate = ({
                     })}
                   >
                     {/* wrapperClassName="card-overlapping" */}
-                    {(index < 3 || always_show_image) && item.image && (
+                    {(index < 3 || always_show_image) && image && (
                       <div className="img-responsive-wrapper">
                         <div className="img-responsive img-responsive-panoramic">
                           <UniversalLink
@@ -84,7 +86,7 @@ const CardWithImageTemplate = ({
                             <figure className="img-wrapper">
                               <Image
                                 className="listing-image"
-                                image={item.image}
+                                image={image}
                                 aria-hidden="true"
                                 alt=""
                               />

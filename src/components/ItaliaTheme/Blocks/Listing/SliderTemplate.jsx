@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/interactive-supports-focus */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import cx from 'classnames';
 import { useIntl, defineMessages } from 'react-intl';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import Slider from 'react-slick';
@@ -25,70 +27,44 @@ const messages = defineMessages({
   },
 });
 
-const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
+const SliderTemplate = ({ items, title, isEditMode, show_block_bg }) => {
   const intl = useIntl();
   const [autoplay, setAutoplay] = useState(false);
+
+  const NextArrow = (props) => {
+    const { className, style, onClick } = props;
+    return (
+      <div className={className} style={{ ...style }} onClick={onClick}>
+        <Icon icon="chevron-right" />
+      </div>
+    );
+  };
+
+  const PrevArrow = (props) => {
+    const { className, style, onClick } = props;
+    return (
+      <div className={className} style={{ ...style }} onClick={onClick}>
+        <Icon icon="chevron-left" />
+      </div>
+    );
+  };
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: autoplay,
     autoplaySpeed: 2000,
-    responsive: [
-      {
-        breakpoint: 1025,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-    appendDots: (dots) => (
-      <div>
-        <div className="play-pause-wrapper">
-          <button
-            onClick={() => setAutoplay(!autoplay)}
-            title={
-              autoplay
-                ? intl.formatMessage(messages.pause)
-                : intl.formatMessage(messages.play)
-            }
-          >
-            <Icon icon={autoplay ? 'pause' : 'play'} />
-          </button>
-        </div>
-        <ul style={{ margin: '0px' }}> {dots} </ul>
-      </div>
-    ),
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   };
 
-  const getCaption = (item) => item.description ?? item.rights ?? null;
+  //const getCaption = (item) => item.description ?? item.rights ?? null;
 
   return (
-    <div
-      className={cx('photogallery', {
-        'public-ui': isEditMode,
-      })}
-    >
+    <div className="sliderTemplate">
       <Container className="px-4">
         {title && (
           <Row>
@@ -99,16 +75,26 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
         )}
         <div className="slider-container px-4 px-md-0">
           <div className="it-carousel-all it-card-bg">
+            <div className="play-pause-wrapper">
+              <button
+                onClick={() => setAutoplay(!autoplay)}
+                title={
+                  autoplay
+                    ? intl.formatMessage(messages.pause)
+                    : intl.formatMessage(messages.play)
+                }
+              >
+                <Icon icon={autoplay ? 'pause' : 'play'} />
+                <span>{autoplay ? 'pause' : 'play'}</span>
+              </button>
+            </div>
             <Slider {...settings}>
               {items.map((item) => {
                 const image = item.image || item.immagine_testata;
+
                 return (
                   <div className="it-single-slide-wrapper" key={item['@id']}>
-                    <UniversalLink
-                      item={item}
-                      openLinkInNewTab={true}
-                      title={intl.formatMessage(messages.viewImage)}
-                    >
+                    <div className="slide-wrapper">
                       <figure className="img-wrapper">
                         {image && (
                           <Image
@@ -118,11 +104,19 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
                             aria-hidden="true"
                           />
                         )}
-                        {getCaption(item) && (
-                          <figcaption>{getCaption(item)}</figcaption>
-                        )}
+                        {/* {getCaption(item) && (
+                        <figcaption>{getCaption(item)}</figcaption>
+                      )} */}
                       </figure>
-                    </UniversalLink>
+                      <UniversalLink
+                        item={item}
+                        title={intl.formatMessage(messages.viewImage)}
+                      >
+                        <div className="slide-title">
+                          {item.title} <Icon icon="arrow-right" />
+                        </div>
+                      </UniversalLink>
+                    </div>
                   </div>
                 );
               })}
@@ -134,11 +128,11 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
   );
 };
 
-PhotogalleryTemplate.propTypes = {
+SliderTemplate.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
   linkMore: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };
 
-export default PhotogalleryTemplate;
+export default SliderTemplate;

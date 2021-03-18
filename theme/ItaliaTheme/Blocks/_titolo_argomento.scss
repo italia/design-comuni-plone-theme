@@ -65,6 +65,14 @@ $header-image-argomento-height-mobile: 200px;
     }
   }
 
+  &.cms-ui {
+    #portal-header-image {
+      &:after {
+        content: none;
+      }
+    }
+  }
+
   .ArgomentoTitleWrapper {
     max-width: 95%;
     min-height: 350px;
