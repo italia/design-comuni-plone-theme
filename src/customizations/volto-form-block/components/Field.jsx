@@ -182,7 +182,7 @@ const Field = ({
                     }
                     onChange(name, values);
                   }}
-                  invalid={isInvalid()}
+                  invalid={isInvalid() ? 'true' : null}
                 />
                 <Label for={v + name} check>
                   {v}
