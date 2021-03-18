@@ -89,33 +89,37 @@ const SliderTemplate = ({ items, title, isEditMode, show_block_bg }) => {
               </button>
             </div>
             <Slider {...settings}>
-              {items.map((item) => (
-                <div className="it-single-slide-wrapper" key={item['@id']}>
-                  <div className="slide-wrapper">
-                    <figure className="img-wrapper">
-                      {item.image && (
-                        <Image
-                          className="img-fluid"
-                          image={item.image}
-                          alt=""
-                          aria-hidden="true"
-                        />
-                      )}
-                      {/* {getCaption(item) && (
+              {items.map((item) => {
+                const image = item.image || item.immagine_testata;
+
+                return (
+                  <div className="it-single-slide-wrapper" key={item['@id']}>
+                    <div className="slide-wrapper">
+                      <figure className="img-wrapper">
+                        {image && (
+                          <Image
+                            className="img-fluid"
+                            image={image}
+                            alt=""
+                            aria-hidden="true"
+                          />
+                        )}
+                        {/* {getCaption(item) && (
                         <figcaption>{getCaption(item)}</figcaption>
                       )} */}
-                    </figure>
-                    <UniversalLink
-                      item={item}
-                      title={intl.formatMessage(messages.viewImage)}
-                    >
-                      <div className="slide-title">
-                        {item.title} <Icon icon="arrow-right" />
-                      </div>
-                    </UniversalLink>
+                      </figure>
+                      <UniversalLink
+                        item={item}
+                        title={intl.formatMessage(messages.viewImage)}
+                      >
+                        <div className="slide-title">
+                          {item.title} <Icon icon="arrow-right" />
+                        </div>
+                      </UniversalLink>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </Slider>
           </div>
         </div>
