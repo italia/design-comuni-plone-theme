@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-03-15T10:00:24.632Z\n"
+"POT-Creation-Date: 2021-03-16T11:23:48.389Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -269,6 +269,7 @@ msgid "Path filter filtro"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
+#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
 # defaultMessage: Metti in pausa
 msgid "Pause slider"
 msgstr ""
@@ -279,6 +280,7 @@ msgid "Percorso path filter"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
+#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
 # defaultMessage: Play
 msgid "Play slider"
 msgstr ""
@@ -452,6 +454,7 @@ msgid "Vedi"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
+#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
 # defaultMessage: Vedi l'immagine
 msgid "Vedi l'immagine"
 msgstr ""
@@ -2024,6 +2027,11 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/Sharing
 # defaultMessage: Condividi
 msgid "share"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/Options/PhotogalleryTemplateOptions
+# defaultMessage: Mostra una sola slide
+msgid "showOneSlide"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions

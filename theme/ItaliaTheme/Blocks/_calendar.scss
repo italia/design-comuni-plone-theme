@@ -1,67 +1,73 @@
-.calendar{
-	margin: 3rem 0;
+.calendar {
+  margin: 3rem 0;
 
-	.full-width {
-		height: 604px;
-	}
+  .full-width {
+    height: 604px;
+  }
 
-	@media (max-width: 600px) {
-		margin: 0;
-	}
+  @media (max-width: 600px) {
+    margin: 0;
+  }
 
-	.calendar-header{
-		padding: 0.35rem;
-		background: $primary;
-		h3{
-			color: $white!important;
-			margin: 0!important;
-		}
-	}
+  .calendar-header {
+    padding: 0.35rem;
+    background: $primary;
 
-	.dot{
-		li{
-			button{
-				&:before{
-					font-size: 1rem;
-				}
-			}
-		}
-	}
+    h3 {
+      margin: 0 !important;
+      color: $white !important;
+    }
+  }
 
-	.calendar-body{
-		height: 368px;
-		padding: 0rem 1rem;
-		.body{
-			height: 368px;
-			padding: 1rem 1rem 1rem 1rem;
-			overflow-y: auto;
-		}
-		.body:not(:last-child){
-			box-shadow: 12px 0 9px -6px $neutral-1-a2;
-		}
+  .slick-dots {
+    bottom: -3rem;
+  }
 
-	}
+  .dot {
+    li {
+      button {
+        &:before {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
 
-	.card.card-bg {
-		&:after {
-			content: none;
-		}
-	}
+  .calendar-body {
+    height: 368px;
+    padding: 0rem 1rem;
 
-	.day{
+    .body {
+      height: 368px;
+      padding: 1rem 1rem 1rem 1rem;
+      overflow-y: auto;
+    }
+
+    .body:not(:last-child) {
+      box-shadow: 12px 0 9px -6px $neutral-1-a2;
+    }
+  }
+
+  .card.card-bg {
+    &:after {
+      content: none;
+    }
+  }
+
+  .day {
     font-family: $font-family-monospace;
-		font-size: 2.4rem;
+    font-size: 2.4rem;
     font-weight: 100;
-	}
+  }
 
-	.day-week {
+  .day-week {
     font-family: $font-family-monospace;
-		font-weight: 400;
-	}
+    font-weight: 400;
+  }
 
-	.calendar-type{
-		font-weight: 600;
-    text-transform: uppercase;
+  .calendar-type {
     font-size: 0.8rem;
-	}
+    font-weight: 600;
+    text-transform: uppercase;
+  }
 }
