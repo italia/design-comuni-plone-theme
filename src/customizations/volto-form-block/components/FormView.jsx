@@ -107,7 +107,7 @@ const FormView = ({
                   transition={alertTransition}
                 >
                   <h4>{intl.formatMessage(messages.success)}</h4>
-                  <p>{formState.result}</p>
+                  <br />
                   <Button type="clear" onClick={resetFormState}>
                     {intl.formatMessage(messages.reset)}
                   </Button>
