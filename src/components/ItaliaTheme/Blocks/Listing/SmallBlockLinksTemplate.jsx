@@ -23,35 +23,38 @@ const SmallBlockLinksTemplate = ({
             </Row>
           )}
           <Row className="items">
-            {items.map((item, index) => (
-              <Col
-                md="3"
-                key={item['@id']}
-                className="col-item col-sm-4 col-lg-2"
-              >
-                {item.image && (
-                  <div className="center-image-card">
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={
-                        item['remoteUrl'] && item['remoteUrl'] !== ''
-                          ? item['remoteUrl']
-                          : flattenToAppURL(item['@id'])
-                      }
-                    >
-                      <Image
-                        image={item.image}
-                        title={item.title}
-                        alt=""
-                        aria-hidden="true"
-                        className="listing-image"
-                      />
-                    </a>
-                  </div>
-                )}
-              </Col>
-            ))}
+            {items.map((item, index) => {
+              const image = item.image || item.immagine_testata;
+              return (
+                <Col
+                  md="3"
+                  key={item['@id']}
+                  className="col-item col-sm-4 col-lg-2"
+                >
+                  {image && (
+                    <div className="center-image-card">
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={
+                          item['remoteUrl'] && item['remoteUrl'] !== ''
+                            ? item['remoteUrl']
+                            : flattenToAppURL(item['@id'])
+                        }
+                      >
+                        <Image
+                          image={image}
+                          title={item.title}
+                          alt=""
+                          aria-hidden="true"
+                          className="listing-image"
+                        />
+                      </a>
+                    </div>
+                  )}
+                </Col>
+              );
+            })}
           </Row>
         </Container>
       </div>

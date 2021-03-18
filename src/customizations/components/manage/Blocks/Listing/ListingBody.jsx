@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { FormattedMessage, injectIntl } from 'react-intl';
 import { getQueryStringResults, getContent } from '@plone/volto/actions';
 import { Pagination, Skeleton } from '@italia/components/ItaliaTheme';
+import { setOriginalQuery } from '@italia/actions';
 import { blocks, settings } from '~/config';
 
 const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
@@ -15,17 +16,56 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
   const [firstLoading, setFirstLoading] = React.useState(true);
   const dispatch = useDispatch();
   const listingRef = createRef();
-
   const [additionalFilters, setAdditionalFilters] = React.useState([]);
+  const originalQuery = useSelector((state) =>
+    state.originalQuery?.[properties['@id']]?.[data.block]?.toArray(),
+  );
+
+  if (!originalQuery && properties['@id']) {
+    dispatch(
+      setOriginalQuery(
+        properties['@id'],
+        data.block,
+        JSON.parse(JSON.stringify(data.query)),
+      ),
+    );
+  }
 
   useEffect(() => {
-    doSearch(data);
+    if (
+      data?.query?.length > 0 &&
+      !querystringResults?.[data.block]?.loading &&
+      !querystringResults?.[data.block]?.loaded
+    ) {
+      doSearch(data);
+    }
     /* eslint-disable react-hooks/exhaustive-deps */
   }, [data]);
 
   const doSearch = (data = { query: [] }, page = 1) => {
     if (data?.query?.length > 0 || additionalFilters.length > 0) {
-      let _data = { ...data, query: [...data.query, ...additionalFilters] };
+      let query = [
+        ...(originalQuery
+          ? JSON.parse(JSON.stringify(originalQuery))
+          : data.query),
+      ];
+
+      //faccio l'override dei filtri di default
+      additionalFilters.forEach((filter) => {
+        let replaced = false;
+        query.forEach((f) => {
+          if (f.i === filter.i && f.o === filter.o) {
+            replaced = true;
+            f.v = filter.v;
+          }
+        });
+        if (!replaced) {
+          query.push(filter);
+        }
+      });
+
+      let _data = { ...data, query: query };
+
       dispatch(
         getQueryStringResults(
           path,
