@@ -104,7 +104,7 @@ const FileWidget = (props) => {
         {label}
       </label>
       <div className="form-input-file">
-        <Dropzone onDrop={onDrop}>
+        <Dropzone onDrop={onDrop} multiple={false}>
           {({ getRootProps, getInputProps, isDragActive }) => (
             <div className="file-widget-dropzone" {...getRootProps()}>
               {isDragActive && <Dimmer></Dimmer>}
