@@ -56,7 +56,7 @@ const messages = defineMessages({
  * @returns {string} Markup of the component.
  */
 const FileWidget = (props) => {
-  const { id, value, onChange, label, onEdit } = props;
+  const { id, value, onChange, label, onEdit, infoText } = props;
   const [isImage, setIsImage] = React.useState(false);
   const intl = useIntl();
 
@@ -159,6 +159,7 @@ const FileWidget = (props) => {
             </div>
           )}
         </Dropzone>
+        {infoText && <small className="form-text text-muted">{infoText}</small>}
         {value && (
           <div className="field-file-name">
             {value.filename}
