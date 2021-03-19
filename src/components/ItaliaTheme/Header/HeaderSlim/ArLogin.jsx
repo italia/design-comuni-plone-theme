@@ -68,8 +68,6 @@ const ArLogin = () => {
     rolesBodyClasses.push('no-user-roles');
   }
 
-  rolesBodyClasses.push('no-user-roles');
-
   return siteConfig.properties.arLoginUrl ? (
     <>
       {!userId ? (
