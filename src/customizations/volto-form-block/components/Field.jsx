@@ -127,11 +127,7 @@ const Field = ({
           >
             <label className="active">{getLabel()}</label>
             {input_values?.map((v, index) => (
-              <FormGroup
-                check
-                className="form-check-group"
-                key={v + name + index}
-              >
+              <FormGroup check key={v + name + index}>
                 <Input
                   id={v + name}
                   name={name}
@@ -163,11 +159,7 @@ const Field = ({
           >
             <label className="active">{getLabel()}</label>
             {input_values?.map((v, index) => (
-              <FormGroup
-                check
-                className="form-check-group"
-                key={v + name + index}
-              >
+              <FormGroup check key={v + name + index}>
                 <Input
                   id={v + name}
                   name={name}
