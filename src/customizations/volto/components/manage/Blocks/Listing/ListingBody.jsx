@@ -17,25 +17,28 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
   const dispatch = useDispatch();
   const listingRef = createRef();
   const [additionalFilters, setAdditionalFilters] = React.useState([]);
-  const originalQuery = useSelector((state) =>
-    state.originalQuery?.[properties['@id']]?.[data.block]?.toArray(),
-  );
+  const originalQuery = useSelector((state) => {
+    return state.originalQuery?.[properties['@id']]?.[data.block]?.toArray();
+  });
 
-  if (!originalQuery && properties['@id']) {
-    dispatch(
-      setOriginalQuery(
-        properties['@id'],
-        data.block,
-        JSON.parse(JSON.stringify(data.query)),
-      ),
-    );
-  }
+  useEffect(() => {
+    if (!originalQuery && properties['@id'] && data.block && data.query) {
+      dispatch(
+        setOriginalQuery(
+          properties['@id'],
+          data.block,
+          JSON.parse(JSON.stringify(data.query)),
+        ),
+      );
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     if (
       data?.query?.length > 0 &&
       !querystringResults?.[data.block]?.loading &&
-      !querystringResults?.[data.block]?.loaded
+      (isEditMode || (!isEditMode && !querystringResults?.[data.block]?.loaded))
     ) {
       doSearch(data);
     }
