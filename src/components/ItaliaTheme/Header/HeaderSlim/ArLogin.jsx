@@ -64,6 +64,12 @@ const ArLogin = () => {
     rolesBodyClasses.push(`role-${role.toLowerCase()}`);
   });
 
+  if (!userLogged?.roles || userLogged?.roles?.length === 0) {
+    rolesBodyClasses.push('no-user-roles');
+  }
+
+  rolesBodyClasses.push('no-user-roles');
+
   return siteConfig.properties.arLoginUrl ? (
     <>
       {!userId ? (
