@@ -123,10 +123,11 @@ export default function applyConfig(config) {
     .update('text-center', (element = 'p') => element)
     .merge(blockRenderMap);
 
+  config.settings.voltoBlockStyleFn = config.settings.blockStyleFn;
   config.settings.blockStyleFn = (contentBlock) => {
     const type = contentBlock.getType();
 
-    let r = config.settings.blockStyleFn(contentBlock) || '';
+    let r = config.settings.voltoBlockStyleFn(contentBlock) || '';
     r = r.length > 0 ? ' ' : r;
 
     const styles = {
