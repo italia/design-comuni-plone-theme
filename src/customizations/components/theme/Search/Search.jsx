@@ -297,6 +297,7 @@ const Search = () => {
                       />
                     </Button>
                   }
+                  aria-live="assertive"
                 />
               </Col>
             </Row>
@@ -378,6 +379,7 @@ const Search = () => {
                         )}
                         id="options-active-content"
                         checked={options.activeContent}
+                        aria-live="assertive"
                         onChange={(e) => {
                           const checked = e.currentTarget?.checked ?? false;
                           setOptions((opts) => ({
