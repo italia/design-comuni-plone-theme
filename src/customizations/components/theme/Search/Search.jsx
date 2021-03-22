@@ -475,7 +475,7 @@ const Search = () => {
                 </div>
                 <Row>
                   {searchResults?.result?.items?.map((i) => (
-                    <Col md={4} key={i['@id']}>
+                    <Col md={6} key={i['@id']}>
                       <Card
                         teaser
                         noWrapper={true}
