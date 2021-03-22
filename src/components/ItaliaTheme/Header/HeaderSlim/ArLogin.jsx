@@ -7,7 +7,6 @@
 import React, { useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { defineMessages, useIntl } from 'react-intl';
 import jwtDecode from 'jwt-decode';
 import {
@@ -24,6 +23,7 @@ import {
 import { getUser, logout, purgeMessages } from '@plone/volto/actions';
 
 import { BodyClass } from '@plone/volto/helpers';
+import { UniversalLink } from '@plone/volto/components';
 
 import { siteConfig } from '~/config';
 import { Icon, UserLoggedMenu } from '@italia/components/ItaliaTheme';
@@ -75,10 +75,11 @@ const ArLogin = () => {
         <Button
           className="btn-icon"
           color="primary"
-          to={siteConfig.properties.arLoginUrl}
+          href={siteConfig.properties.arLoginUrl}
           icon={false}
           size="full"
-          tag={Link}
+          tag={UniversalLink}
+          openLinkInNewTab={false}
         >
           <span className="rounded-icon">
             <Icon color="primary" icon="it-user" padding={false} size="" />
@@ -123,9 +124,10 @@ const ArLogin = () => {
                     <UserLoggedMenu />
                     <LinkListItem divider tag="a" />
                     <LinkListItem
-                      to={siteConfig.properties.arLogoutUrl || '/'}
+                      href={siteConfig.properties.arLogoutUrl || '/'}
                       title={intl.formatMessage(messages.arLogout)}
-                      tag={Link}
+                      tag={UniversalLink}
+                      openLinkInNewTab={false}
                       onClick={() => {
                         if (!siteConfig.properties.arLogoutUrl) {
                           doLogout();
