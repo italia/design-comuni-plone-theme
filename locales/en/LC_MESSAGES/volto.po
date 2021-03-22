@@ -824,11 +824,11 @@ msgstr "Elements of interest"
 #: components/ItaliaTheme/View/Commons/ContactLink
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "email_label"
-msgstr ""
+msgstr "E-mail"
 
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "email_sede"
-msgstr ""
+msgstr "E-mail"
 
 #: components/ItaliaTheme/Blocks/NewsHome/Edit
 msgid "emptySelection"
@@ -1158,7 +1158,7 @@ msgstr ""
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
 msgid "minutes"
-msgstr ""
+msgstr "min."
 
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "modalita_accesso"
@@ -1426,15 +1426,15 @@ msgstr "Fax"
 
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "riferimento_mail_luogo"
-msgstr ""
+msgstr "E-mail"
 
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "riferimento_mail_struttura"
-msgstr ""
+msgstr "E-mail"
 
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "riferimento_pec_luogo"
-msgstr ""
+msgstr "PEC"
 
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "riferimento_telefonico_luogo"
@@ -1442,11 +1442,11 @@ msgstr "Phone"
 
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "riferimento_telefonico_struttura"
-msgstr ""
+msgstr "Tel."
 
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "riferimento_web"
-msgstr ""
+msgstr "Web"
 
 #: components/ItaliaTheme/View/Commons/Metadata
 msgid "rights"

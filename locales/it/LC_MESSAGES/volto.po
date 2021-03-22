@@ -14,7 +14,7 @@ msgstr ""
 #: components/ItaliaTheme/Header/HeaderSlim/ArLogin
 #: components/ItaliaTheme/Header/HeaderSlim/HeaderSlimRightZone
 msgid "Accedi all'area personale"
-msgstr ""
+msgstr "Accedi all'area personale"
 
 #: components/ItaliaTheme/Blocks/Accordion/Edit
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
@@ -35,7 +35,7 @@ msgstr "Aspetto"
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 msgid "Bando"
-msgstr ""
+msgstr "Bando"
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 msgid "Block style"
@@ -1557,7 +1557,7 @@ msgstr "Dove cercare"
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "search_service_links"
-msgstr ""
+msgstr "Collegamenti"
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-add-rootpath"
@@ -1680,7 +1680,7 @@ msgstr "Mostra la sezione"
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "silenzio_assenso"
-msgstr ""
+msgstr "Silenzio assenso/Dichiarazione dell'interessato sostitutiva del provvedimento finale"
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 msgid "simplecard_listing_appearance_compact"
