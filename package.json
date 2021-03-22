@@ -54,7 +54,9 @@
       "^.+\\.(jpg)$": "jest-file",
       "^.+\\.(svg)$": "./node_modules/@plone/volto/jest-svgsystem-transform.js"
     },
-    "transformIgnorePatterns": ["/node_modules/(?!@plone/volto).+\\.js$"],
+    "transformIgnorePatterns": [
+      "/node_modules/(?!@plone/volto).+\\.js$"
+    ],
     "moduleNameMapper": {
       "@plone/volto/(.*)$": "<rootDir>/node_modules/@plone/volto/src/$1",
       "@plone/volto/babel": "<rootDir>/node_modules/@plone/volto/babel",
@@ -107,15 +109,23 @@
     ]
   },
   "stylelint": {
-    "extends": ["stylelint-config-idiomatic-order"],
-    "plugins": ["stylelint-prettier"],
+    "extends": [
+      "stylelint-config-idiomatic-order"
+    ],
+    "plugins": [
+      "stylelint-prettier"
+    ],
     "rules": {
       "prettier/prettier": true,
       "rule-empty-line-before": [
         "always-multi-line",
         {
-          "except": ["first-nested"],
-          "ignore": ["after-comment"]
+          "except": [
+            "first-nested"
+          ],
+          "ignore": [
+            "after-comment"
+          ]
         }
       ]
     },
@@ -132,11 +142,22 @@
       "npx eslint --max-warnings=0 --fix",
       "npx prettier --single-quote --write"
     ],
-    "src/**/*.jsx": ["yarn i18n", "git add ."],
-    "theme/**/*.{css,less,scss}": ["npx stylelint --fix"],
-    "src/**/*.{css,less,scss}": ["npx stylelint --fix"],
-    "theme/**/*.overrides": ["npx stylelint --fix --syntax less"],
-    "src/**/*.overrides": ["npx stylelint --fix --syntax less"]
+    "src/**/*.jsx": [
+      "yarn i18n",
+      "git add ."
+    ],
+    "theme/**/*.{css,less,scss}": [
+      "npx stylelint --fix"
+    ],
+    "src/**/*.{css,less,scss}": [
+      "npx stylelint --fix"
+    ],
+    "theme/**/*.overrides": [
+      "npx stylelint --fix --syntax less"
+    ],
+    "src/**/*.overrides": [
+      "npx stylelint --fix --syntax less"
+    ]
   },
   "engines": {
     "node": "^10 || ^12 || ^14"
