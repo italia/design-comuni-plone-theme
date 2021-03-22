@@ -7,7 +7,9 @@ import config from '@plone/volto/registry';
 
 const AppExtras = ({ pathname }) => {
   const subsite = useSelector((state) => state.subsite?.data);
-  const siteTitle = subsite?.title ?? config.siteConfig?.properties?.siteTitle;
+  const siteTitle =
+    subsite?.title ?? config.settings?.siteProperties?.siteTitle;
+
   return (
     <>
       <Helmet titleTemplate={`%s - ${siteTitle}`} />

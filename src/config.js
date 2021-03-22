@@ -128,7 +128,7 @@ import faFileDownloadSVG from './icons/file-download.svg';
 
 import applyRichTextConfig from '@italia/config/RichTextEditor/config';
 
-import '@plone/volto/registry';
+import '@plone/volto/config';
 
 const iconList = Object.keys(Icons.fas).map((icon) => Icons[icon]);
 const iconListRegular = Object.keys(IconsRegular.far).map(
@@ -139,8 +139,6 @@ library.add(...iconList, ...iconListRegular);
 
 export default function applyConfig(voltoConfig) {
   let config = applyRichTextConfig(voltoConfig);
-  // eslint-disable-next-line no-console
-  console.log(config);
 
   const rssBlock = {
     ...customRssBlock,
@@ -475,6 +473,20 @@ export default function applyConfig(voltoConfig) {
       UnitaOrganizzativa: faBuildingSVG,
       Modulo: faFileDownloadSVG,
     },
+    italiaThemeViewsConfig: {
+      imagePosition: 'afterHeader', // possible values: afterHeader, documentBody
+    },
+    siteProperties: {
+      siteTitle: 'Nome del Comune',
+      siteSubtitle: "Uno dei tanti Comuni d'Italia",
+      parentSiteTitle: 'Nome della Regione',
+      parentSiteURL: 'https://www.governo.it',
+      subsiteParentSiteTitle: 'Nome del sito padre del sottosito',
+      footerInfos:
+        'Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000',
+      amministrazioneTrasparenteUrl: '/amministrazione-trasparente',
+      //arLoginUrl: '/area-riservata',
+    },
     'volto-blocks-widget': {
       allowedBlocks: [
         'text',
@@ -514,23 +526,6 @@ export default function applyConfig(voltoConfig) {
       document_view: PageView,
       trasparenza_view: TrasparenzaView,
       dettagli_procedimenti_view: DettagliProcedimentiView,
-    },
-  };
-
-  config.siteConfig = {
-    italiaThemeViewsConfig: {
-      imagePosition: 'afterHeader', // possible values: afterHeader, documentBody
-    },
-    properties: {
-      siteTitle: 'Nome del Comune',
-      siteSubtitle: "Uno dei tanti Comuni d'Italia",
-      parentSiteTitle: 'Nome della Regione',
-      parentSiteURL: 'https://www.governo.it',
-      subsiteParentSiteTitle: 'Nome del sito padre del sottosito',
-      footerInfos:
-        'Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000',
-      amministrazioneTrasparenteUrl: '/amministrazione-trasparente',
-      //arLoginUrl: '/area-riservata',
     },
   };
 
@@ -581,7 +576,7 @@ export default function applyConfig(voltoConfig) {
       ...config.blocks.requiredBlocks.concat(...customRequiredBlocks),
     },
   };
-  delete config.blocks.blocksConfig.listing.templates.imageGallery; //removes imageGallery volto template, because we have our photoGallery template
+  delete config.blocks.blocksConfig.listing.templates.imageGallery; // removes imageGallery volto template, because we have our photoGallery template
 
   return config;
 }

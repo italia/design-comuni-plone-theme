@@ -113,7 +113,7 @@ const ItaliaFromHTMLCustomBlockFn = (element) => {
 
 export default function applyConfig(config) {
   config.settings.richTextEditorPlugins = [
-    ...config.settiings.richTextEditorPlugins,
+    ...config.settings.richTextEditorPlugins,
     ...ItaliaRichTextEditorPlugins,
   ];
 

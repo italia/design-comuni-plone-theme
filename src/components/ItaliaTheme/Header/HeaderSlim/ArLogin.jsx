@@ -20,11 +20,11 @@ const messages = defineMessages({
 
 const ArLogin = () => {
   const intl = useIntl();
-  return config.siteConfig.properties.arLoginUrl ? (
+  return config.settings.siteProperties.arLoginUrl ? (
     <Button
       className="btn-icon"
       color="primary"
-      to={config.siteConfig.properties.arLoginUrl}
+      to={config.settings.siteProperties.arLoginUrl}
       icon={false}
       size="full"
       tag={Link}

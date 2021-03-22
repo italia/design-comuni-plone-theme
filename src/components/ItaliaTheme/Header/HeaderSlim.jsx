@@ -19,10 +19,10 @@ const HeaderSlim = () => {
 
   const parentSiteURL = subsite
     ? '/'
-    : config.siteConfig.properties.parentSiteURL;
+    : config.settings.siteProperties.parentSiteURL;
   const parentSiteTile = subsite
-    ? config.siteConfig.properties.subsiteParentSiteTitle
-    : config.siteConfig.properties.parentSiteTitle;
+    ? config.settings.siteProperties.subsiteParentSiteTitle
+    : config.settings.siteProperties.parentSiteTitle;
 
   const target = subsite ? null : '_blank';
   return (

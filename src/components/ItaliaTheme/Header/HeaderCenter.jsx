@@ -46,11 +46,11 @@ const HeaderCenter = () => {
             <Logo />
             <div className="it-brand-text">
               <h2 className="no_toc">
-                {subsite?.title || config.siteConfig.properties.siteTitle}
+                {subsite?.title || config.settings.siteProperties.siteTitle}
               </h2>
               <h3 className="no_toc d-none d-md-block">
                 {subsite?.description ||
-                  config.siteConfig.properties.siteSubtitle}
+                  config.settings.siteProperties.siteSubtitle}
               </h3>
             </div>
           </UniversalLink>
