@@ -48,9 +48,12 @@ const ArLogin = () => {
   );
 
   const userLogged = useSelector((state) => state.users.user);
+  const userLoggedSt = useSelector((state) => state.users);
 
   useEffect(() => {
-    dispatch(getUser(userId));
+    if (!userLoggedSt?.get?.loading && userId) {
+      dispatch(getUser(userId));
+    }
   }, [userId]);
 
   const doLogout = () => {
@@ -68,9 +71,11 @@ const ArLogin = () => {
     rolesBodyClasses.push('no-user-roles');
   }
 
+  const isPublicUser = userLogged?.roles?.length === 0;
+
   return siteConfig.properties.arLoginUrl ? (
     <>
-      {!userId ? (
+      {!userId || !isPublicUser ? (
         // not logged
         <Button
           className="btn-icon"
