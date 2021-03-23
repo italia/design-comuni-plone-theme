@@ -54,6 +54,7 @@ msgid "Cerca per parola chiave"
 msgstr "Search by keyword"
 
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+#: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Clicca qui per sostituire il file"
 msgstr "Click here to replace file"
 
@@ -241,6 +242,7 @@ msgid "Required"
 msgstr "Required"
 
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+#: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Rimuovi il file"
 msgstr "Remove file"
 
@@ -266,6 +268,7 @@ msgid "Seguici su"
 msgstr "Follow us on"
 
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+#: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Seleziona un file"
 msgstr ""
 
@@ -311,14 +314,17 @@ msgid "Titolo"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+#: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Trascina qui il file ..."
 msgstr "Drop the file here ..."
 
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+#: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Trascina qui un file per caricare un nuovo file"
 msgstr "Drop the file here to upload a new file"
 
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
+#: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Trascina qui un file per sostituire quello esistente"
 msgstr "Drop the file here to replace existing file"
 
