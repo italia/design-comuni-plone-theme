@@ -541,7 +541,8 @@ export const siteConfig = {
     footerInfos:
       'Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000',
     amministrazioneTrasparenteUrl: '/amministrazione-trasparente',
-    //arLoginUrl: '/area-riservata',
+    arLoginUrl: '/login',
+    // arLogoutUrl: '/logout',
   },
 };
 
