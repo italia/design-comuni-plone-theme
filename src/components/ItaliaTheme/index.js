@@ -21,6 +21,7 @@ export SectionIcon from '@italia/components/ItaliaTheme/Icons/SectionIcon';
 
 /********* COMMONS ********* */
 export CardCategory from '@italia/components/ItaliaTheme/Cards/CardCategory';
+export RemoveBodyClass from '@italia/components/ItaliaTheme/RemoveBodyClass/RemoveBodyClass';
 
 /********* LAYOUT ********* */
 export LanguageSelector from '@italia/components/ItaliaTheme/LanguageSelector/LanguageSelector';

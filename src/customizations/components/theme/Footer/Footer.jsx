@@ -6,7 +6,6 @@
 import React from 'react';
 import { useGoogleAnalytics } from '@italia/addons/volto-google-analytics';
 
-// import { isCmsUi } from '@plone/volto/helpers';
 import {
   FooterMain,
   FooterSmall,
@@ -22,7 +21,6 @@ import { CookieBanner } from '@italia/addons/volto-cookie-banner';
 
 const Footer = ({ intl }) => {
   useGoogleAnalytics();
-  const isCmsUI = false; //isCmsUi(this.props.pathname);
 
   let content = (
     <>
@@ -35,7 +33,7 @@ const Footer = ({ intl }) => {
     </>
   );
 
-  return isCmsUI ? <div className="public-ui">{content}</div> : content;
+  return content;
 };
 
 export default Footer;
