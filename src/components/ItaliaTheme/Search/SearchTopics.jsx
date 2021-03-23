@@ -81,7 +81,7 @@ export default function SearchTopics({
               onChange={(e) =>
                 setTopicChecked(topicId, e.currentTarget.checked)
               }
-              aria-live="assertive"
+              aria-controls="search-results-region"
             />
             <Label
               check

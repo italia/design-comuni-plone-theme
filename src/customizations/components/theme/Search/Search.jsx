@@ -297,7 +297,7 @@ const Search = () => {
                       />
                     </Button>
                   }
-                  aria-live="assertive"
+                  aria-controls="search-results-region"
                 />
               </Col>
             </Row>
@@ -379,7 +379,7 @@ const Search = () => {
                         )}
                         id="options-active-content"
                         checked={options.activeContent}
-                        aria-live="assertive"
+                        aria-controls="search-results-region"
                         onChange={(e) => {
                           const checked = e.currentTarget?.checked ?? false;
                           setOptions((opts) => ({
@@ -451,7 +451,12 @@ const Search = () => {
             {searchResults.loadingResults ? (
               <Spinner active />
             ) : searchResults?.result?.items_total > 0 ? (
-              <div className="search-results-wrapper">
+              <div
+                className="search-results-wrapper"
+                role="region"
+                id="search-results-region"
+                aria-live="polite"
+              >
                 <div className="d-none d-lg-block d-xl-block">
                   <Row className="pb-3 px-4 border-bottom">
                     <Col xs={6} className="align-self-center">

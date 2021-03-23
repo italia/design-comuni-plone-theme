@@ -59,7 +59,7 @@ export default function SearchSections({
                   setSections,
                 )
               }
-              aria-live="assertive"
+              aria-controls="search-results-region"
             />
 
             <Label
@@ -123,7 +123,7 @@ export default function SearchSections({
                         setSections,
                       )
                     }
-                    aria-live="assertive"
+                    aria-controls="search-results-region"
                   />
                   <Label
                     check
