@@ -187,7 +187,7 @@
     "typeface-roboto-mono": "0.0.75",
     "typeface-titillium-web": "0.0.72",
     "volto-blocks-widget": "collective/volto-blocks-widget#volto12",
-    "volto-cookie-banner": "collective/volto-cookie-banner#v1.0.2",
+    "volto-cookie-banner": "collective/volto-cookie-banner#v1.1.0",
     "volto-dropdownmenu": "collective/volto-dropdownmenu#master",
     "volto-editablefooter": "RedTurtle/volto-editablefooter#volto12",
     "volto-form-block": "collective/volto-form-block#v1.4.2",

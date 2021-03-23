@@ -10,7 +10,8 @@
     "package": "@italia/addons/volto-cookie-banner",
     "path": "src",
     "https": "https://github.com/collective/volto-cookie-banner.git",
-    "url": "git@github.com:collective/volto-cookie-banner.git"
+    "url": "git@github.com:collective/volto-cookie-banner.git",
+    "tag": "v1.1.0"
   },
   "volto-multilingual-widget": {
     "package": "@italia/addons/volto-multilingual-widget",

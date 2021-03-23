@@ -17741,9 +17741,9 @@ volto-blocks-widget@collective/volto-blocks-widget#volto12:
   version "1.0.2"
   resolved "https://codeload.github.com/collective/volto-blocks-widget/tar.gz/88491385c80021f1c70469a5efefb54d7a1b6e78"
 
-volto-cookie-banner@collective/volto-cookie-banner#v1.0.2:
-  version "1.0.2"
-  resolved "https://codeload.github.com/collective/volto-cookie-banner/tar.gz/985b07b08c1a3d371190b47386d43f330e23f020"
+volto-cookie-banner@collective/volto-cookie-banner#v1.1.0:
+  version "1.1.0"
+  resolved "https://codeload.github.com/collective/volto-cookie-banner/tar.gz/10a6c51dfc0a81d5175db1082070e6078663d207"
   dependencies:
     react-cookie-consent "^3.0.0"
 
