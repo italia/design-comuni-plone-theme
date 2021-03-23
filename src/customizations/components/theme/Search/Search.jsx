@@ -10,6 +10,7 @@ import cx from 'classnames';
 import qs from 'query-string';
 import moment from 'moment';
 import { Helmet } from '@plone/volto/helpers';
+
 import {
   Container,
   Row,
@@ -262,7 +263,6 @@ const Search = () => {
   return (
     <div className="public-ui">
       <Helmet title={intl.formatMessage(messages.searchResults)} />
-
       <Container className="px-4 my-4">
         <Row>
           <Col>
