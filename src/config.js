@@ -541,8 +541,8 @@ export const siteConfig = {
     footerInfos:
       'Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000',
     amministrazioneTrasparenteUrl: '/amministrazione-trasparente',
-    arLoginUrl: '/login',
-    // arLogoutUrl: '/logout',
+    // arLoginUrl: 'https://io-comune.agamar.redturtle.it/login',
+    // arLogoutUrl: 'https://io-comune.agamar.redturtle.it/logout',
   },
 };
 
