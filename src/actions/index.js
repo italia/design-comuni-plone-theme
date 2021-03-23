@@ -16,6 +16,8 @@ import { getSearchResults, GET_SEARCH_RESULTS } from './getSearchResults';
 import { getCalendarResults, GET_CALENDAR_RESULTS } from './calendarSearch';
 import { getEventSearchResults, GET_EVENTSEARCH_RESULTS } from './eventSearch';
 
+import { setOriginalQuery, ORIGINAL_QUERY } from './setOriginalQuery';
+
 import {
   getCalendarDayResults,
   GET_CALENDAR_DAY_RESULTS,
@@ -47,4 +49,6 @@ export {
   GET_TWITTER_POSTS,
   getEventSearchResults,
   GET_EVENTSEARCH_RESULTS,
+  setOriginalQuery,
+  ORIGINAL_QUERY,
 };

@@ -60,3 +60,8 @@ $sidebarFormBg: #fafafa;
     }
   }
 }
+
+.cms-ui .ui.checkbox input:focus ~ label,
+#toolbar .ui.checkbox input:focus ~ label {
+  color: #000;
+}

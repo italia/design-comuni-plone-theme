@@ -80,23 +80,44 @@ export const SimpleCardTemplateAppearance_COMPACT = 'compact';
 const SimpleCardTemplateOptions = (props) => {
   const { data, block, onChangeBlock } = props;
   const intl = useIntl();
-  useEffect(() => {
+
+  const getDefaultValue = (field, data) => {
+    switch (field) {
+      case 'show_icon':
+        return data.show_icon === undefined ? true : data.show_icon;
+      case 'show_section':
+        return data.show_section === undefined
+          ? data.appearance !== SimpleCardTemplateAppearance_COMPACT
+            ? true
+            : false
+          : data.show_section;
+      case 'show_description':
+        return data.show_description === undefined
+          ? data.appearance !== SimpleCardTemplateAppearance_COMPACT
+            ? true
+            : false
+          : data.show_description;
+      default:
+        return undefined;
+    }
+  };
+
+  const setDefaults = () => {
     onChangeBlock(block, {
       ...data,
-      show_icon: data.show_icon === undefined ? true : data.show_icon,
-      show_section:
-        data.show_section === undefined
-          ? data.appearance !== SimpleCardTemplateAppearance_COMPACT
-            ? true
-            : undefined
-          : data.show_section,
-      show_description:
-        data.show_description === undefined
-          ? data.appearance !== SimpleCardTemplateAppearance_COMPACT
-            ? true
-            : undefined
-          : data.show_description,
+      show_icon: getDefaultValue('show_icon', data),
+      show_section: getDefaultValue('show_section', data),
+      show_description: getDefaultValue('show_description', data),
     });
+  };
+
+  // useEffect(() => {
+  //   console.log('init');
+  //   setDefaults();
+  // }, []);
+
+  useEffect(() => {
+    setDefaults();
   }, [data.appearance]);
 
   useEffect(() => {
@@ -117,7 +138,7 @@ const SimpleCardTemplateOptions = (props) => {
         description={intl.formatMessage(
           messages.simplecard_listing_appearance_description,
         )}
-        value={data.appearance}
+        value={data.appearance || ''}
         onChange={(id, value) => {
           onChangeBlock(block, {
             ...data,
@@ -131,13 +152,12 @@ const SimpleCardTemplateOptions = (props) => {
           ],
         ]}
       />
-
       <DefaultOptions {...props} />
 
       <CheckboxWidget
         id="show_icon"
         title={intl.formatMessage(messages.show_icon)}
-        value={data.show_icon ? data.show_icon : false}
+        value={getDefaultValue('show_icon', data)}
         onChange={(id, value) => {
           onChangeBlock(block, {
             ...data,
@@ -162,7 +182,7 @@ const SimpleCardTemplateOptions = (props) => {
         <CheckboxWidget
           id="show_section"
           title={intl.formatMessage(messages.show_section)}
-          value={data.show_section ? data.show_section : false}
+          value={getDefaultValue('show_section', data)}
           onChange={(id, value) => {
             onChangeBlock(block, {
               ...data,
@@ -175,7 +195,7 @@ const SimpleCardTemplateOptions = (props) => {
         <CheckboxWidget
           id="show_description"
           title={intl.formatMessage(messages.show_description)}
-          value={data.show_description ? data.show_description : false}
+          value={getDefaultValue('show_description', data)}
           onChange={(id, value) => {
             onChangeBlock(block, {
               ...data,
@@ -214,7 +234,6 @@ const SimpleCardTemplateOptions = (props) => {
           )}
         </>
       )}
-
       {data.appearance !== SimpleCardTemplateAppearance_COMPACT && (
         <>
           <CheckboxWidget

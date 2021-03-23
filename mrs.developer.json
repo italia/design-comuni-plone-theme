@@ -78,5 +78,12 @@
     "https": "https://github.com/collective/volto-secondarymenu.git",
     "url": "git@github.com:collective/volto-secondarymenu.git",
     "branch": "volto12"
+  },
+  "volto-form-block": {
+    "package": "@italia/addons/volto-form-block",
+    "path": "src",
+    "https": "https://github.com/collective/volto-form-block.git",
+    "url": "git@github.com:collective/volto-form-block.git",
+    "tag": "v1.4.2"
   }
 }

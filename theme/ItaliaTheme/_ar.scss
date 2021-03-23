@@ -1,0 +1,17 @@
+body.is-authenticated {
+  // se l'utente è autenticato e c'è la classe no-user-roles, allora si tratta di un utente del sito che accede solo all'area riservata
+  &.no-user-roles {
+    #toolbar,
+    #sidebar {
+      display: none;
+    }
+
+    &.has-toolbar,
+    &.has-toolbar-collapsed {
+      .full-width {
+        left: 50%;
+        width: 100vw !important;
+      }
+    }
+  }
+}

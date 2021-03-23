@@ -81,7 +81,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
       query.push({
         i: 'path',
         o: 'plone.app.querystring.operation.string.absolutePath',
-        v: data.location[0]['@id'],
+        v: flattenToAppURL(data.location[0]['@id']),
       });
     }
 
@@ -203,7 +203,9 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
       {!loading ? (
         items?.length > 0 ? (
           <div className="mt-4" ref={resultsRef}>
-            <CardWithImageTemplate items={items} full_width={false} />
+            <div className="block listing">
+              <CardWithImageTemplate items={items} full_width={false} />
+            </div>
             {querystringResults.total > b_size && (
               <Pagination
                 activePage={currentPage}

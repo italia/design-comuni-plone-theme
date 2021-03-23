@@ -1,0 +1,17 @@
+body.section-sitemap {
+  #page-sitemap {
+    margin: 3em 0;
+
+    h1 {
+      margin-bottom: 0.5em;
+    }
+
+    @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+      margin: 6em 0;
+
+      h1 {
+        margin-bottom: 1em;
+      }
+    }
+  }
+}

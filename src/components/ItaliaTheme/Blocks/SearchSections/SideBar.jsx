@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Segment, Accordion } from 'semantic-ui-react';
-import { defineMessages, FormattedMessage, useIntl } from 'react-intl';
+import { defineMessages, useIntl } from 'react-intl';
 import { TextWidget, ArrayWidget } from '@plone/volto/components';
 import ObjectBrowserWidget from '@plone/volto/components/manage/Widgets/ObjectBrowserWidget';
 
@@ -21,6 +21,10 @@ const messages = defineMessages({
   search_service_block_sections: {
     id: 'search_service_block_sections',
     defaultMessage: 'Dove cercare',
+  },
+  search_service_links: {
+    id: 'search_service_links',
+    defaultMessage: 'Collegamenti',
   },
   placeholder: {
     id: 'placeholder',
@@ -100,7 +104,7 @@ const Sidebar = ({
       </Accordion>
       <Accordion fluid styled className="form">
         <Accordion.Title active={true} index={0} onClick={() => {}}>
-          Collegamenti
+          {intl.formatMessage(messages.search_service_links)}
         </Accordion.Title>
         <Accordion.Content active={true}>
           <ObjectBrowserWidget

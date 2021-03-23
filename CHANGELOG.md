@@ -1,3 +1,73 @@
+# [2.2.0](https://github.com/RedTurtle/design-volto-theme/compare/v2.1.8...v2.2.0) (2021-03-23)
+
+
+### Bug Fixes
+
+* add single file selection filewidget ([6c73d16](https://github.com/RedTurtle/design-volto-theme/commit/6c73d16e197269c385f56d47e7b4c585e8c1db77))
+* added aria-live tag to search ([c8a1bc6](https://github.com/RedTurtle/design-volto-theme/commit/c8a1bc682a3244b69fa6914c312731aed4a100be))
+* changed width of single search result for ay11 ([fe536e5](https://github.com/RedTurtle/design-volto-theme/commit/fe536e5eb4df51f4a0b2f80c66ffc8846fdcc249))
+* checkbox focus styles ([969e57f](https://github.com/RedTurtle/design-volto-theme/commit/969e57fa330dee300e3057518390be4951ad3fba))
+* checkbox widget value ([6c71447](https://github.com/RedTurtle/design-volto-theme/commit/6c714476b63c2c33deb5215629ba0e529294f6ab))
+* fix originalQuery in listing ([72cf318](https://github.com/RedTurtle/design-volto-theme/commit/72cf318353e1b295a3f18641deb678fc9cf94606))
+* fixed default absolutePath when having additional filters in listing ([6774918](https://github.com/RedTurtle/design-volto-theme/commit/67749188c745b8a6eb36b00ced119cac45d36a62))
+* fixed default value for options in simplecardtemplate ([c411a3b](https://github.com/RedTurtle/design-volto-theme/commit/c411a3baef278d49d12394781c62fec45627b6b0))
+* fixed portal-header-image opacity on argument edit ([09af6cf](https://github.com/RedTurtle/design-volto-theme/commit/09af6cf94f7d0a204e6d446a14be45275e9ed1b0))
+* fixed usage of aria-live in search results ([a9e2156](https://github.com/RedTurtle/design-volto-theme/commit/a9e215673c713926fd21f628894a19b492bec31f))
+* form field invalid ([8670494](https://github.com/RedTurtle/design-volto-theme/commit/86704943d05e4f1f5e681e7f7255bf236d772605))
+* form subblock handles styles ([c9eeb65](https://github.com/RedTurtle/design-volto-theme/commit/c9eeb65d21cb353d2e35af205a8545618dce5ff8))
+* form subblock handles styles ([8ff50fb](https://github.com/RedTurtle/design-volto-theme/commit/8ff50fb9ed6787d1be3e6984130a4950b63f1643))
+* form subblock handles styles ([cd309d6](https://github.com/RedTurtle/design-volto-theme/commit/cd309d68c88fae6708ab05721c396a80cdac0427))
+* form success alert ([6979b3d](https://github.com/RedTurtle/design-volto-theme/commit/6979b3dd025599fffb452f94ad6b68eabf002674))
+* import paths form block ([ae9a9ac](https://github.com/RedTurtle/design-volto-theme/commit/ae9a9ac0e8e72adfd431dc6f863fd87aabea4ae6))
+* import paths form block ([64197cc](https://github.com/RedTurtle/design-volto-theme/commit/64197ccae8860127c6ae9c1d00283976ef18d287))
+* removed debug rolesClass ([59dabdd](https://github.com/RedTurtle/design-volto-theme/commit/59dabdd150746dd41b826c35c207c00e1c846601))
+* search events for text starting with ([b3756e4](https://github.com/RedTurtle/design-volto-theme/commit/b3756e4ac7ac5cd8941ae3e5594ce892de53dbd5))
+* show authenticated button only if userLogged has no roles ([2d10993](https://github.com/RedTurtle/design-volto-theme/commit/2d109936bc2d05bf7a72e3eeefb050f49e8488b7))
+* show immagine_testata in listing if image not exists ([01c25d1](https://github.com/RedTurtle/design-volto-theme/commit/01c25d18de27c61838eece1cbb6857381f5e78ea))
+* translations ([dd0f4c1](https://github.com/RedTurtle/design-volto-theme/commit/dd0f4c1e79bc1c095165c563f2949e250de7e6c1))
+* view footer in sitemap and search results page ([3d231b8](https://github.com/RedTurtle/design-volto-theme/commit/3d231b898b953ee19fed8cfecd4fb4033c35bdb1))
+
+
+### Features
+
+* add infoText to FileWidget ([51e7ad2](https://github.com/RedTurtle/design-volto-theme/commit/51e7ad2aba489115c2ae12a276320a1cb5309d33))
+* add multiple checkbox widget ([60bb330](https://github.com/RedTurtle/design-volto-theme/commit/60bb330804cc7a64756a54e1158a4da6ee83b99b))
+* add reset form ([9a2ffff](https://github.com/RedTurtle/design-volto-theme/commit/9a2ffff63ac1e3f6ac7482720b45aa43d25d7774))
+* add static fields rendering ([55a9048](https://github.com/RedTurtle/design-volto-theme/commit/55a9048ca50bc9463ecd2f4d5291f2cf1dc2572a))
+* form block persistent data ([8b74014](https://github.com/RedTurtle/design-volto-theme/commit/8b740145932dbb31f71d29c7f8575a1406fec6d2))
+
+## [2.1.8](https://github.com/RedTurtle/design-volto-theme/compare/v2.1.7...v2.1.8) (2021-03-16)
+
+
+### Bug Fixes
+
+* updated version in mrs.developer for volto-blocks-widget ([c576cae](https://github.com/RedTurtle/design-volto-theme/commit/c576caed951d16ffeedc3344c1228f700b15a970))
+
+## [2.1.7](https://github.com/RedTurtle/design-volto-theme/compare/v2.1.6...v2.1.7) (2021-03-16)
+
+
+### Bug Fixes
+
+* added translations for login button ([a590e7c](https://github.com/RedTurtle/design-volto-theme/commit/a590e7c957683d583192029e2623f60d8395a881))
+* fix styles for SearchEvents results ([69276c2](https://github.com/RedTurtle/design-volto-theme/commit/69276c2f487dc22c2a2e96804da8e18670c97b48))
+* fixed chip-lg and simpleCardTemplate icons color ([8fcc94f](https://github.com/RedTurtle/design-volto-theme/commit/8fcc94f77d7461be0a4416e3ad8cb28388e28891))
+* fixed EventSearch query path ([0ca323c](https://github.com/RedTurtle/design-volto-theme/commit/0ca323cb9ff6a47edfb9d0c8572f930312e66c38))
+* fixed searchFilters for empty value ([fbe48ff](https://github.com/RedTurtle/design-volto-theme/commit/fbe48ff59d76031ff673cd091aa82e22c006729b))
+* removed multilingual ([0dfda6b](https://github.com/RedTurtle/design-volto-theme/commit/0dfda6bc627a1244b2a91c5ebdb7704a90206e85))
+* searchSeactions block to use new searchSections ([73310d7](https://github.com/RedTurtle/design-volto-theme/commit/73310d7076468b3c6119bee8053041736f751234))
+* view current lang on languageselector when lang changes ([a210de9](https://github.com/RedTurtle/design-volto-theme/commit/a210de90b38bbaab7b2ac2d3ca1f9519eb5060d6))
+
+## [2.1.6](https://github.com/RedTurtle/design-volto-theme/compare/v2.1.5...v2.1.6) (2021-03-10)
+
+
+### Bug Fixes
+
+* clear break block ([78bae38](https://github.com/RedTurtle/design-volto-theme/commit/78bae38173b495bcefef894b17047cca4d127255))
+
+## [2.1.5](https://github.com/RedTurtle/design-volto-theme/compare/v2.1.4...v2.1.5) (2021-03-08)
+
+## [2.1.4](https://github.com/RedTurtle/design-volto-theme/compare/v2.1.3...v2.1.4) (2021-03-08)
+
 ## [2.1.3](https://github.com/RedTurtle/design-volto-theme/compare/v2.1.2...v2.1.3) (2021-03-04)
 
 

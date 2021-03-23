@@ -33,6 +33,19 @@ if (config.settings) {
   });
 }
 
+const languagesISO392 = {
+  de: 'deu',
+  en: 'eng',
+  es: 'spa',
+  eu: 'eus',
+  fr: 'fra',
+  it: 'ita',
+  ja: 'jpn',
+  nl: 'nld',
+  pt: 'por',
+  ro: 'ron',
+};
+
 /**
  * LanguageSelector component class.
  * @class LanguageSelector
@@ -41,6 +54,7 @@ if (config.settings) {
 const LanguageSelector = (props) => {
   const dispatch = useDispatch();
   const currentLang = useSelector((state) => state.intl.locale);
+
   const translations = useSelector(
     (state) => state.content.data?.['@components']?.translations?.items,
   );
@@ -48,7 +62,7 @@ const LanguageSelector = (props) => {
   return config.settings.isMultilingual ? (
     <UncontrolledDropdown nav tag="div">
       <DropdownToggle aria-haspopup caret color="secondary" nav>
-        ITA
+        {languagesISO392[currentLang]}
         <Icon color="" icon="it-expand" padding={false} size="" />
       </DropdownToggle>
       <DropdownMenu flip tag="div">

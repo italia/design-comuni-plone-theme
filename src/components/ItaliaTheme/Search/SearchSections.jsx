@@ -59,6 +59,7 @@ export default function SearchSections({
                   setSections,
                 )
               }
+              aria-controls="search-results-region"
             />
 
             <Label
@@ -122,6 +123,7 @@ export default function SearchSections({
                         setSections,
                       )
                     }
+                    aria-controls="search-results-region"
                   />
                   <Label
                     check

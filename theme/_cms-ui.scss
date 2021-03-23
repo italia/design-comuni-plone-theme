@@ -101,8 +101,10 @@ body.cms-ui {
     }
   }
 
-  .it-footer {
-    display: none;
+  &:not(.section-search):not(.section-sitemap) {
+    .it-footer {
+      display: none;
+    }
   }
 
   .skiplinks {
@@ -348,6 +350,27 @@ body.cms-ui {
 
     .ui.secondary.segment {
       color: $text-color;
+    }
+
+    .row .column {
+      width: 100% !important;
+
+      label {
+        margin-top: 1rem;
+        margin-bottom: 0;
+      }
+
+      .wrapper {
+        min-height: 0;
+      }
+    }
+
+    .ui.text.container {
+      max-width: 600px !important;
+    }
+
+    .ui.segment.form {
+      padding-top: 1rem;
     }
   }
 }

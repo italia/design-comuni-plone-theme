@@ -7373,6 +7373,11 @@ file-loader@^4.3.0:
     loader-utils "^1.2.3"
     schema-utils "^2.5.0"
 
+file-saver@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/file-saver/-/file-saver-2.0.5.tgz#d61cfe2ce059f414d899e9dd6d4107ee25670c38"
+  integrity sha512-P9bmyZ3h/PRG+Nzga+rbdI4OEpNDzAVyy74uVO9ATgzLK6VtAsYybF/+TOCvrc0MO793d6+42lLyZTw7/ArVzA==
+
 file-selector@^0.1.12:
   version "0.1.19"
   resolved "https://registry.yarnpkg.com/file-selector/-/file-selector-0.1.19.tgz#8ecc9d069a6f544f2e4a096b64a8052e70ec8abf"
@@ -14338,6 +14343,13 @@ react-google-recaptcha-v3@1.7.0:
   dependencies:
     hoist-non-react-statics "3.3.2"
 
+react-google-recaptcha-v3@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/react-google-recaptcha-v3/-/react-google-recaptcha-v3-1.8.0.tgz#962cefc223e05a39a32b7fd67eaa1f45ae72d159"
+  integrity sha512-dZxuZFjP3vVhb84yOjxwmyshbJGqNDaJPBGp8hyXaMkyD0cDxrICW2WmqcYeQaHPl0jsoVR4gwTTY1p6nr4zhQ==
+  dependencies:
+    hoist-non-react-statics "3.3.2"
+
 react-image-gallery@1.0.7:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/react-image-gallery/-/react-image-gallery-1.0.7.tgz#75e0d3f995d1475762f80f5a6958b4a9bb88bf97"
@@ -17746,6 +17758,14 @@ volto-editablefooter@RedTurtle/volto-editablefooter#volto12:
   resolved "https://codeload.github.com/RedTurtle/volto-editablefooter/tar.gz/afcaf561d62ee3b75d4a35b769ab009010783c26"
   dependencies:
     react-outside-click-handler "1.3.0"
+
+volto-form-block@collective/volto-form-block#v1.4.2:
+  version "1.4.2"
+  resolved "https://codeload.github.com/collective/volto-form-block/tar.gz/5234eff28b1a9db1b1e4178a4f3d11fc64664746"
+  dependencies:
+    file-saver "^2.0.5"
+    react-google-recaptcha-v3 "^1.8.0"
+    volto-subblocks collective/volto-subblocks#v1.0.1
 
 volto-google-analytics@collective/volto-google-analytics:
   version "1.0.0"

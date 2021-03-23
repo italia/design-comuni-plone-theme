@@ -473,6 +473,10 @@ msgstr ""
 msgid "amministrazione"
 msgstr ""
 
+#: components/ItaliaTheme/Header/HeaderSlim/ArLogin
+msgid "arLogout"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Listing/serviziAmministrazioneTrasparenteTemplate
 #: helpers/amministrazioneTrasparenteHelper
 msgid "area"
@@ -1573,6 +1577,10 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "search_service_block_sections"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
+msgid "search_service_links"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget

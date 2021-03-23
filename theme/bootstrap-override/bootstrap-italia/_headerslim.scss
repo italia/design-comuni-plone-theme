@@ -1,0 +1,40 @@
+//mobile
+.it-header-slim-wrapper {
+  .it-header-slim-wrapper-content {
+    a {
+      &.dropdown-toggle {
+        &[aria-expanded='true'] {
+          .rounded-icon {
+            .icon {
+              transform: none;
+            }
+          }
+        }
+      }
+    }
+
+    .logout {
+      .icon {
+        margin-right: 0.5rem;
+        color: $primary;
+      }
+    }
+  }
+}
+
+//Tablet horizontal / small desktop
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+  .it-header-slim-wrapper {
+    .it-header-slim-wrapper-content {
+      a {
+        &.dropdown-toggle {
+          .rounded-icon {
+            .icon {
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
