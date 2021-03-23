@@ -475,6 +475,10 @@ msgstr ""
 msgid "amministrazione"
 msgstr "Administration"
 
+#: components/ItaliaTheme/Header/HeaderSlim/ArLogin
+msgid "arLogout"
+msgstr "Sortir"
+
 #: components/ItaliaTheme/Blocks/Listing/serviziAmministrazioneTrasparenteTemplate
 #: helpers/amministrazioneTrasparenteHelper
 msgid "area"
