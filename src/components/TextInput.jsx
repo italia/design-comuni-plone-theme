@@ -5,16 +5,8 @@ import React, { useState } from 'react';
 import cx from 'classnames';
 //import { Icon } from '@italia/components/ItaliaTheme';
 
-export default function TextInput({
-  id,
-  label,
-  placeholder,
-  value,
-  onChange,
-  prepend,
-  append,
-  size,
-}) {
+export default function TextInput(props) {
+  const { id, label, placeholder, onChange, prepend, append, size } = props;
   const [isFocused, setIsFocused] = useState(false);
 
   const toggleFocusLabel = () => {
@@ -41,15 +33,14 @@ export default function TextInput({
         </label>
 
         <input
+          {...props}
           type="text"
           className={cx('form-control', size ? 'form-control-' + size : '', {
             'focus--mouse': isFocused,
           })}
           onFocus={toggleFocusLabel}
           onBlur={(e) => toggleBlurLabel(e)}
-          id={id}
           name={id}
-          value={value}
           onChange={(e) => {
             onChange(e.target.id, e.target.value);
           }}
