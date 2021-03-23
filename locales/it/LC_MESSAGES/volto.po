@@ -458,6 +458,10 @@ msgstr "Mostra l'immagine per tutti gli elementi"
 msgid "amministrazione"
 msgstr "Amministrazione"
 
+#: components/ItaliaTheme/Header/HeaderSlim/ArLogin
+msgid "arLogout"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Listing/serviziAmministrazioneTrasparenteTemplate
 #: helpers/amministrazioneTrasparenteHelper
 msgid "area"
