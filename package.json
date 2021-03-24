@@ -190,7 +190,7 @@
     "volto-cookie-banner": "collective/volto-cookie-banner#v1.1.0",
     "volto-dropdownmenu": "collective/volto-dropdownmenu#master",
     "volto-editablefooter": "RedTurtle/volto-editablefooter#volto12",
-    "volto-form-block": "collective/volto-form-block#v1.4.2",
+    "volto-form-block": "collective/volto-form-block#v1.4.3",
     "volto-google-analytics": "collective/volto-google-analytics",
     "volto-multilingual-widget": "collective/volto-multilingual-widget#volto12",
     "volto-rss-block": "redturtle/volto-rss-block#volto12",
