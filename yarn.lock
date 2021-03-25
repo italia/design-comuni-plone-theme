@@ -17747,15 +17747,15 @@ volto-editablefooter@RedTurtle/volto-editablefooter#v2.1.0:
   dependencies:
     react-outside-click-handler "1.3.0"
 
-volto-form-block@collective/volto-form-block#v1.4.2:
-  version "1.4.2"
-  resolved "https://codeload.github.com/collective/volto-form-block/tar.gz/5234eff28b1a9db1b1e4178a4f3d11fc64664746"
+volto-form-block@collective/volto-form-block#v1.4.4:
+  version "1.4.4"
+  resolved "https://codeload.github.com/collective/volto-form-block/tar.gz/36c69d93bfe6ed50503fc97d06bef96d88b1aa85"
   dependencies:
     file-saver "^2.0.5"
     react-google-recaptcha-v3 "^1.8.0"
     volto-subblocks collective/volto-subblocks#v1.0.1
 
-volto-google-analytics@collective/volto-google-analytics:
+volto-google-analytics@collective/volto-google-analytics#v1.0.0:
   version "1.0.0"
   resolved "https://codeload.github.com/collective/volto-google-analytics/tar.gz/9bd9b49bde6bd6942454a1f6c87968e33eea041a"
   dependencies:
@@ -17777,13 +17777,20 @@ volto-secondarymenu@collective/volto-secondarymenu#v1.1.0:
   version "1.1.0"
   resolved "https://codeload.github.com/collective/volto-secondarymenu/tar.gz/e0902489fdf759a930956bade70ed4ec0a3baafa"
 
-volto-social-settings@collective/volto-social-settings#v2.0.0:
-  version "2.0.0"
-  resolved "https://codeload.github.com/collective/volto-social-settings/tar.gz/f9d0fcb825fdfb6a61b37716b723e9369e078a63"
+volto-social-settings@collective/volto-social-settings#v2.1.0:
+  version "2.1.0"
+  resolved "https://codeload.github.com/collective/volto-social-settings/tar.gz/c770fb17e5b25887db0be5df39a128f32d2da51b"
 
 volto-subblocks@collective/volto-subblocks#v1.0.1:
   version "1.0.1"
   resolved "https://codeload.github.com/collective/volto-subblocks/tar.gz/d565956e04521e46a186cbf8967d2c8883672e21"
+  dependencies:
+    react-dnd "^5.0.0"
+    react-dnd-html5-backend "^5.0.1"
+
+volto-subblocks@collective/volto-subblocks#v1.1.0:
+  version "1.1.0"
+  resolved "https://codeload.github.com/collective/volto-subblocks/tar.gz/97ab1ca206085cd2f4d4ffe718b222b552a222a9"
   dependencies:
     react-dnd "^5.0.0"
     react-dnd-html5-backend "^5.0.1"
