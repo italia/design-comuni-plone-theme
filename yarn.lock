@@ -17747,15 +17747,15 @@ volto-cookie-banner@collective/volto-cookie-banner#v2.0.0:
   dependencies:
     react-cookie-consent "^3.0.0"
 
-volto-dropdownmenu@collective/volto-dropdownmenu#v2.0.0:
-  version "2.0.0"
-  resolved "https://codeload.github.com/collective/volto-dropdownmenu/tar.gz/2ec16c979c134f0096d3e958c777b191b50ebbf6"
+volto-dropdownmenu@collective/volto-dropdownmenu#v2.1.0:
+  version "2.1.0"
+  resolved "https://codeload.github.com/collective/volto-dropdownmenu/tar.gz/531bf4773c1ceecc171827a079d71ae4286b4998"
   dependencies:
     react-outside-click-handler "1.3.0"
 
-volto-editablefooter@RedTurtle/volto-editablefooter#v3.0.0:
-  version "3.0.0"
-  resolved "https://codeload.github.com/RedTurtle/volto-editablefooter/tar.gz/88066c32b679c2fafa4a373285a26857b119ff50"
+volto-editablefooter@RedTurtle/volto-editablefooter#v3.1.0:
+  version "3.1.0"
+  resolved "https://codeload.github.com/RedTurtle/volto-editablefooter/tar.gz/0386d8123676f67088b0c546552d2652b996f715"
   dependencies:
     react-outside-click-handler "1.3.0"
 
@@ -17785,9 +17785,9 @@ volto-rss-block@redturtle/volto-rss-block#v2.0.0:
   dependencies:
     rss-parser "3.7.5"
 
-volto-secondarymenu@collective/volto-secondarymenu#v2.0.0:
-  version "2.0.0"
-  resolved "https://codeload.github.com/collective/volto-secondarymenu/tar.gz/54037bf783afe6695301888d11203b9bb307b0cd"
+volto-secondarymenu@collective/volto-secondarymenu#v2.1.0:
+  version "2.1.0"
+  resolved "https://codeload.github.com/collective/volto-secondarymenu/tar.gz/2b9adadba89163ee08a32a8ae959c1fe2b3c3ce9"
 
 volto-social-settings@collective/volto-social-settings#v2.1.0:
   version "2.1.0"
