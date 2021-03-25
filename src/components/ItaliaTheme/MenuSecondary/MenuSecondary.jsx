@@ -8,6 +8,7 @@ import { isMatch } from 'lodash';
 import { useIntl, defineMessages } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 import { getSecondaryMenu } from '@italia/addons/volto-secondarymenu';
+import { getItemsByPath } from '@italia/helpers';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
 import { Nav, NavItem, NavLink } from 'design-react-kit/dist/design-react-kit';
@@ -23,13 +24,10 @@ const MenuSecondary = ({ pathname }) => {
   const intl = useIntl();
   const dispatch = useDispatch();
 
-  let items =
-    useSelector((state) => state.secondaryMenu?.result)
-      ?.filter((menu) =>
-        (pathname?.length ? pathname : '/').match(new RegExp(menu.rootPath)),
-      )
-      .pop()?.items ?? [];
-  items = items?.filter((item) => item.visible);
+  const menuItems = useSelector((state) => state.secondaryMenu?.result);
+  const items = getItemsByPath(menuItems, pathname)?.filter(
+    (item) => item.visible,
+  );
 
   useEffect(() => {
     dispatch(getSecondaryMenu());
