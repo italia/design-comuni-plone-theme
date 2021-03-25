@@ -9,7 +9,10 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { getDropdownMenuNavitems } from '@italia/addons/volto-dropdownmenu';
+import {
+  getDropdownMenuNavitems,
+  getItemsByPath,
+} from '@italia/addons/volto-dropdownmenu';
 import {
   Header,
   HeaderContent,
@@ -38,12 +41,7 @@ const Navigation = ({ pathname }) => {
     dispatch(getDropdownMenuNavitems());
   }, [dispatch]);
 
-  const menu =
-    items
-      ?.filter((menu) =>
-        (pathname?.length ? pathname : '/').match(new RegExp(menu.rootPath)),
-      )
-      .pop()?.items ?? [];
+  const menu = getItemsByPath(items, pathname);
 
   const getAnchorTarget = (nodeElement) => {
     if (nodeElement.nodeName === 'A') {

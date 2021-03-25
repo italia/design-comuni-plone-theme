@@ -10,8 +10,11 @@ import { useLocation } from 'react-router-dom';
 import { defineMessages, useIntl } from 'react-intl';
 import { Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { ConditionalLink } from '@plone/volto/components';
-import { flattenHTMLToAppURL, flattenToAppURL } from '@plone/volto/helpers';
-import { getEditableFooterColumns } from '@italia/addons/volto-editablefooter';
+import { flattenHTMLToAppURL } from '@plone/volto/helpers';
+import {
+  getEditableFooterColumns,
+  getItemsByPath,
+} from '@italia/addons/volto-editablefooter';
 import {
   FooterNewsletterSubscribe,
   FooterSocials,
@@ -39,14 +42,10 @@ const FooterInfos = () => {
   }, [dispatch]);
 
   //filter rootpaths
-  const footerColumns =
-    footerConfiguration
-      ?.filter((f) =>
-        (location?.pathname?.length ? location.pathname : '/').match(
-          new RegExp(flattenToAppURL(f.rootPath)),
-        ),
-      )
-      .pop()?.items ?? [];
+  const footerColumns = getItemsByPath(
+    footerConfiguration,
+    location?.pathname?.length ? location.pathname : '/',
+  );
 
   const colWidth =
     12 / (footerColumns.length < N_COLUMNS ? footerColumns.length : N_COLUMNS);
