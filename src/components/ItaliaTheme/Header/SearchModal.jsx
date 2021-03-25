@@ -177,7 +177,7 @@ const SearchModal = ({ closeModal, show }) => {
     }
 
     setOptions(parseFetchedOptions(defaultOptions, location));
-  }, [searchFilters]);
+  }, [searchFilters, location]);
 
   // The "all" filter is checked if all groups are unchecked
   const allSectionsChecked = Object.keys(checkedGroups).reduce(
