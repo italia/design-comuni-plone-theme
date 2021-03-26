@@ -51,10 +51,6 @@ import faTwitter from './icons/twitter-brands.svg';
 import TwitterPostsView from '@italia/components/ItaliaTheme/Blocks/TwitterPosts/View';
 import TwitterPostsEdit from '@italia/components/ItaliaTheme/Blocks/TwitterPosts/Edit';
 
-import formSVG from '@plone/volto/icons/form.svg';
-import FormView from '@italia/components/ItaliaTheme/Blocks/Form/View';
-import FormEdit from '@italia/components/ItaliaTheme/Blocks/Form/Edit';
-
 import CharCounterDescriptionWidget from '@italia/components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget';
 import PageView from '@italia/components/ItaliaTheme/View/PageView/PageView';
 import NewsItemView from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemView';
@@ -80,6 +76,8 @@ import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Li
 import CompleteBlockLinksTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CompleteBlockLinksTemplateSkeleton';
 import PhotogalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
 import PhotogalleryTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/PhotogalleryTemplateSkeleton';
+import SliderTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SliderTemplate';
+import SliderTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SliderTemplateSkeleton';
 import InEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate';
 import InEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/InEvidenceTemplateSkeleton';
 import SimpleCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplate';
@@ -371,21 +369,6 @@ const customBlocks = {
     },
     sidebarTab: 1,
   },
-  form: {
-    id: 'form',
-    title: 'Form',
-    icon: formSVG,
-    group: 'text',
-    view: FormView,
-    edit: FormEdit,
-    restricted: false,
-    mostUsed: true,
-    security: {
-      addPermission: [],
-      view: [],
-    },
-    sidebarTab: 1,
-  },
   listing: {
     ...config.blocks.blocksConfig.listing,
     templates: {
@@ -429,6 +412,11 @@ const customBlocks = {
         label: 'Photogallery',
         template: PhotogalleryTemplate,
         skeleton: PhotogalleryTemplateSkeleton,
+      },
+      slider: {
+        label: 'Slider',
+        template: SliderTemplate,
+        skeleton: SliderTemplateSkeleton,
       },
       gridGalleryTemplate: {
         label: 'Gallery a griglia',
@@ -553,7 +541,8 @@ export const siteConfig = {
     footerInfos:
       'Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000',
     amministrazioneTrasparenteUrl: '/amministrazione-trasparente',
-    //arLoginUrl: '/area-riservata',
+    // arLoginUrl: 'https://io-comune.agamar.redturtle.it/login',
+    // arLogoutUrl: 'https://io-comune.agamar.redturtle.it/logout',
   },
 };
 

@@ -18,7 +18,9 @@
 /*** ItaliaTheme ***/
 @import 'ItaliaTheme/common';
 @import 'ItaliaTheme/main';
+@import 'ItaliaTheme/ar';
 @import 'ItaliaTheme/home';
+@import 'ItaliaTheme/sitemap';
 @import 'ItaliaTheme/Components/parentSiteMenu';
 @import 'ItaliaTheme/Components/subsiteHeader';
 @import 'ItaliaTheme/Components/subsiteFooter';
@@ -37,6 +39,7 @@
 @import 'ItaliaTheme/Blocks/smallblockLinkstemplate';
 @import 'ItaliaTheme/Blocks/completeBlockLinkstemplate';
 @import 'ItaliaTheme/Blocks/photogallerytemplate';
+@import 'ItaliaTheme/Blocks/sliderTemplate';
 @import 'ItaliaTheme/Blocks/inevidencetemplate';
 @import 'ItaliaTheme/Blocks/mapTemplate';
 @import 'ItaliaTheme/Blocks/bandiInEvidenceTemplate';

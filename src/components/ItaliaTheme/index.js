@@ -13,6 +13,7 @@
 export TextEditorWidget from '@italia/components/ItaliaTheme/manage/Widgets/TextEditorWidget';
 export LinkToWidget from '@italia/components/ItaliaTheme/manage/Widgets/LinkToWidget';
 export ColorListWidget from '@italia/components/ItaliaTheme/manage/Widgets/ColorListWidget';
+export FileWidget from '@italia/components/ItaliaTheme/manage/Widgets/FileWidget';
 
 /********* ICONS ********* */
 export getItemIcon from '@italia/components/ItaliaTheme/Icons/common/common';
@@ -21,12 +22,14 @@ export SectionIcon from '@italia/components/ItaliaTheme/Icons/SectionIcon';
 
 /********* COMMONS ********* */
 export CardCategory from '@italia/components/ItaliaTheme/Cards/CardCategory';
+export RemoveBodyClass from '@italia/components/ItaliaTheme/RemoveBodyClass/RemoveBodyClass';
 
 /********* LAYOUT ********* */
 export LanguageSelector from '@italia/components/ItaliaTheme/LanguageSelector/LanguageSelector';
 export HeaderSlim from '@italia/components/ItaliaTheme/Header/HeaderSlim';
 export HeaderSlimRightZone from '@italia/components/ItaliaTheme/Header/HeaderSlim/HeaderSlimRightZone';
 export ArLogin from '@italia/components/ItaliaTheme/Header/HeaderSlim/ArLogin';
+export UserLoggedMenu from '@italia/components/ItaliaTheme/Header/HeaderSlim/UserLoggedMenu';
 export HeaderCenter from '@italia/components/ItaliaTheme/Header/HeaderCenter';
 export SocialHeader from '@italia/components/ItaliaTheme/Header/SocialHeader';
 export SubsiteSocialHeader from '@italia/components/ItaliaTheme/Header/SubsiteSocialHeader';

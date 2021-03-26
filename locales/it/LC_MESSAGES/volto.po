@@ -13,7 +13,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSlim/ArLogin
 msgid "Accedi all'area personale"
-msgstr ""
+msgstr "Accedi all'area personale"
 
 #: components/ItaliaTheme/Blocks/Accordion/Edit
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
@@ -34,7 +34,7 @@ msgstr "Aspetto"
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 msgid "Bando"
-msgstr ""
+msgstr "Bando"
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 msgid "Block style"
@@ -113,7 +113,7 @@ msgstr "Dimensione della mappa"
 #: components/ItaliaTheme/Blocks/Form/Form
 #: components/ItaliaTheme/Blocks/Form/FormView
 msgid "Email Success"
-msgstr "Email inviata correttamente"
+msgstr "Form inviato correttamente"
 
 #: components/ItaliaTheme/Blocks/Form/Form
 msgid "Email sent"
@@ -221,6 +221,7 @@ msgid "Path filter filtro"
 msgstr "Filtro"
 
 #: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
+#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
 msgid "Pause slider"
 msgstr "Metti in pausa"
 
@@ -229,6 +230,7 @@ msgid "Percorso path filter"
 msgstr "Percorso"
 
 #: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
+#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
 msgid "Play slider"
 msgstr "Play"
 
@@ -289,7 +291,7 @@ msgstr "Mostra tutto"
 
 #: components/ItaliaTheme/Footer/FooterNewsletterSubscribe
 msgid "Subscribe"
-msgstr "Subscribe"
+msgstr "Iscriviti"
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/Form/Block/EditBlock
@@ -383,6 +385,7 @@ msgid "Vedi"
 msgstr "Vedi"
 
 #: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
+#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
 msgid "Vedi l'immagine"
 msgstr "Vedi l'immagine"
 
@@ -454,6 +457,10 @@ msgstr "Mostra l'immagine per tutti gli elementi"
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "amministrazione"
 msgstr "Amministrazione"
+
+#: components/ItaliaTheme/Header/HeaderSlim/ArLogin
+msgid "arLogout"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/serviziAmministrazioneTrasparenteTemplate
 #: helpers/amministrazioneTrasparenteHelper
@@ -1559,7 +1566,7 @@ msgstr "Dove cercare"
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "search_service_links"
-msgstr ""
+msgstr "Collegamenti"
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-add-rootpath"
@@ -1677,7 +1684,7 @@ msgstr "Mostra la sezione"
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "silenzio_assenso"
-msgstr ""
+msgstr "Silenzio assenso/Dichiarazione dell'interessato sostitutiva del provvedimento finale"
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 msgid "simplecard_listing_appearance_compact"

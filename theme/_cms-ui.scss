@@ -101,8 +101,10 @@ body.cms-ui {
     }
   }
 
-  .it-footer {
-    display: none;
+  &:not(.section-search):not(.section-sitemap) {
+    .it-footer {
+      display: none;
+    }
   }
 
   .skiplinks {

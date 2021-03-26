@@ -58,14 +58,16 @@ const InEvidenceTemplate = ({
                 isEditMode,
               );
               const listingText = <ListingText item={item} />;
+              const image = item.image || item.immagine_testata;
+
               return (
                 <Card
                   key={index}
                   className={cx('listing-item card-bg', {
-                    'card-img': index === 0 && item.image,
+                    'card-img': index === 0 && image,
                   })}
                 >
-                  {index === 0 && item.image && (
+                  {index === 0 && image && (
                     <div className="img-responsive-wrapper">
                       <div className="img-responsive">
                         <UniversalLink
@@ -76,7 +78,7 @@ const InEvidenceTemplate = ({
                           <figure className="img-wrapper">
                             <Image
                               className="listing-image"
-                              image={item.image}
+                              image={image}
                               alt=""
                               aria-hidden="true"
                             />

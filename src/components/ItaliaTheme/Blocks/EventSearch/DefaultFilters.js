@@ -52,7 +52,7 @@ const DefaultFilters = () => {
           query.push({
             i: 'SearchableText',
             o: 'plone.app.querystring.operation.string.contains',
-            v: value,
+            v: value + '*',
           });
         }
       },

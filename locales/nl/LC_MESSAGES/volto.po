@@ -240,6 +240,7 @@ msgid "Path filter filtro"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
+#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
 msgid "Pause slider"
 msgstr ""
 
@@ -248,6 +249,7 @@ msgid "Percorso path filter"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
+#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
 msgid "Play slider"
 msgstr ""
 
@@ -402,6 +404,7 @@ msgid "Vedi"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
+#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
 msgid "Vedi l'immagine"
 msgstr ""
 
@@ -472,6 +475,10 @@ msgstr ""
 
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "amministrazione"
+msgstr ""
+
+#: components/ItaliaTheme/Header/HeaderSlim/ArLogin
+msgid "arLogout"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/serviziAmministrazioneTrasparenteTemplate

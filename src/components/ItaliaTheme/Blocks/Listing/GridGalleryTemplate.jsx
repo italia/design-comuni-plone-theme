@@ -58,28 +58,32 @@ const GridGalleryTemplate = ({
             </Alert>
           )}
           <div className="grid-gallery-grid">
-            {items.map((item, index) => (
-              <div
-                key={item['@id'] ?? index}
-                className={cx('grid-gallery-item', `item-${index % 7}`)}
-              >
-                <UniversalLink
-                  item={!isEditMode ? item : null}
-                  href={isEditMode ? '#' : null}
+            {items.map((item, index) => {
+              const image = item.image || item.immagine_testata;
+
+              return (
+                <div
+                  key={item['@id'] ?? index}
+                  className={cx('grid-gallery-item', `item-${index % 7}`)}
                 >
-                  {item.image && (
-                    <Image
-                      image={item.image}
-                      alt=""
-                      loading="lazy"
-                      role="presentation"
-                      aria-hidden="true"
-                    />
-                  )}
-                  <h3>{item.title}</h3>
-                </UniversalLink>
-              </div>
-            ))}
+                  <UniversalLink
+                    item={!isEditMode ? item : null}
+                    href={isEditMode ? '#' : null}
+                  >
+                    {image && (
+                      <Image
+                        image={image}
+                        alt=""
+                        loading="lazy"
+                        role="presentation"
+                        aria-hidden="true"
+                      />
+                    )}
+                    <h3>{item.title}</h3>
+                  </UniversalLink>
+                </div>
+              );
+            })}
           </div>
           {linkMore?.href && (
             <div className="link-button text-center my-5">
