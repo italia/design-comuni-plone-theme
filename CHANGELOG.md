@@ -1,3 +1,12 @@
+## [2.2.2](https://github.com/RedTurtle/design-volto-theme/compare/v2.2.1...v2.2.2) (2021-03-26)
+
+
+### Bug Fixes
+
+* view title filed in lrf ([a1834e8](https://github.com/RedTurtle/design-volto-theme/commit/a1834e899387c72b1e0a758202a509c52432c962))
+
+## [2.2.1](https://github.com/RedTurtle/design-volto-theme/compare/v2.2.0...v2.2.1) (2021-03-25)
+
 # [2.2.0](https://github.com/RedTurtle/design-volto-theme/compare/v2.1.8...v2.2.0) (2021-03-23)
 
 
