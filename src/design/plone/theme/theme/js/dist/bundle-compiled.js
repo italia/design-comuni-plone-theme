@@ -448,9 +448,12 @@ require(['jquery', 'ellipsed'], function($, ellipsed) {
     if ($('body').hasClass('userrole-anonymous')) {
       callEllipsis();
     } else {
-      $('.tiles-management').on('rtTilesLoaded', function() {
-        callEllipsis();
-      });
+      $('.tiles-management, .pat-tiles-management').on(
+        'rtTilesLoaded',
+        function() {
+          callEllipsis();
+        }
+      );
     }
 
     $(document).on('patSliderInit', function(e) {
