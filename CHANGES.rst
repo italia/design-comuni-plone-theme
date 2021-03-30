@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-5.1.1 (unreleased)
+5.1.1 (2021-03-30)
 ------------------
 
 - Extending tiles management events handling [nzambello]
