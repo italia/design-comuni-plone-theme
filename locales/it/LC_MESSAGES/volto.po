@@ -12,6 +12,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: components/ItaliaTheme/Header/HeaderSlim/ArLogin
+#: components/ItaliaTheme/Header/HeaderSlim/HeaderSlimRightZone
 msgid "Accedi all'area personale"
 msgstr "Accedi all'area personale"
 
@@ -52,7 +53,6 @@ msgstr "Cerca"
 msgid "Cerca per parola chiave"
 msgstr "Cerca per parola chiave"
 
-#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Clicca qui per sostituire il file"
@@ -111,7 +111,6 @@ msgid "Dimensione della mappa"
 msgstr "Dimensione della mappa"
 
 #: components/ItaliaTheme/Blocks/Form/Form
-#: components/ItaliaTheme/Blocks/Form/FormView
 msgid "Email Success"
 msgstr "Form inviato correttamente"
 
@@ -120,7 +119,6 @@ msgid "Email sent"
 msgstr "La tua mail è stata inviata correttamente"
 
 #: components/ItaliaTheme/Blocks/Form/Form
-#: components/ItaliaTheme/Blocks/Form/FormView
 msgid "Error"
 msgstr "Errore"
 
@@ -172,10 +170,6 @@ msgstr "Titolo per il link ad altro"
 msgid "Listing"
 msgstr "Listing"
 
-#: components/ItaliaTheme/Footer/FooterSmall
-msgid "Mappa del sito"
-msgstr "Mappa del sito"
-
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 #: components/ItaliaTheme/MenuSecondary/MenuSecondary
 msgid "Menu selezionato"
@@ -208,10 +202,6 @@ msgstr "Pagina successiva"
 msgid "Non ci sono punti da mostrare sulla mappa"
 msgstr "Non ci sono punti da mostrare sulla mappa"
 
-#: components/ItaliaTheme/Footer/FooterSmall
-msgid "Note legali"
-msgstr "Note legali"
-
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
 msgid "Open in a new tab"
 msgstr "Apri in un nuovo tab"
@@ -243,7 +233,6 @@ msgstr "Pagina precedente"
 msgid "Required"
 msgstr "Required"
 
-#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Rimuovi il file"
@@ -270,15 +259,10 @@ msgstr "Titolo"
 msgid "Seguici su"
 msgstr "Seguici su"
 
-#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Seleziona un file"
 msgstr "Seleziona un file"
-
-#: components/ItaliaTheme/Footer/FooterSmall
-msgid "Sezione Link Utili"
-msgstr "Sezione Link Utili"
 
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
@@ -317,19 +301,16 @@ msgstr "Title..."
 msgid "Titolo"
 msgstr "Titolo"
 
-#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Trascina qui il file ..."
 msgstr "Trascina qui il file..."
 
-#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Trascina qui un file per caricare un nuovo file"
 msgstr "Trascina qui un file per caricare un nuovo file"
 
-#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Trascina qui un file per sostituire quello esistente"
@@ -454,6 +435,7 @@ msgstr "Altri documenti"
 msgid "always_show_image"
 msgstr "Mostra l'immagine per tutti gli elementi"
 
+#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "amministrazione"
 msgstr "Amministrazione"
@@ -765,10 +747,12 @@ msgstr "Dichiarazione dei redditi"
 msgid "dirigente"
 msgstr "Dirigente"
 
+#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "documenti"
 msgstr "Documenti"
 
+#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "documenti-e-dati"
 msgstr "Documenti e dati"
@@ -952,7 +936,6 @@ msgstr "Oggetto della mail"
 
 #: components/ItaliaTheme/Blocks/Form/Edit
 #: components/ItaliaTheme/Blocks/Form/Form
-#: components/ItaliaTheme/Blocks/Form/FormView
 msgid "form_default_submit_label"
 msgstr "Invia"
 
@@ -965,7 +948,6 @@ msgid "form_edit_warning_from"
 msgstr "Inserire un campo di tipo 'E-mail mittente'. Se non è presente, oppure è presente ma non viene compilato dall'utente, l'indirizzo del mittente della mail sarà quello configurato dalla sidebar di destra."
 
 #: components/ItaliaTheme/Blocks/Form/Form
-#: components/ItaliaTheme/Blocks/Form/FormView
 msgid "form_empty_values_validation"
 msgstr "Compila i campi richiesti"
 
@@ -1240,6 +1222,7 @@ msgstr "nominativo"
 msgid "notizie_in_evidenza"
 msgstr "Notizie in evidenza"
 
+#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "novita"
 msgstr "Novità"
@@ -1640,6 +1623,7 @@ msgstr "Seleziona un argomento nella barra a lato"
 msgid "service_not_active"
 msgstr "Il servizio non è attivo"
 
+#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "servizi"
 msgstr "Servizi"
@@ -1656,6 +1640,10 @@ msgstr "Servizi"
 #: components/ItaliaTheme/View/Commons/Sharing
 msgid "share"
 msgstr "Condividi"
+
+#: components/ItaliaTheme/Blocks/Listing/Options/PhotogalleryTemplateOptions
+msgid "showOneSlide"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 msgid "show_description"
@@ -1699,17 +1687,14 @@ msgid "situazione_patrimoniale"
 msgstr "Situazione patrimoniale"
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
-#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 msgid "skiplink-footer"
 msgstr "Vai al footer"
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
-#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 msgid "skiplink-main-content"
 msgstr "Vai al contenuto"
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
-#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 msgid "skiplink-navigation"
 msgstr "Vai alla navigazione"
 

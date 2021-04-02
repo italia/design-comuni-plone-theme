@@ -468,11 +468,32 @@ export default function applyConfig(voltoConfig) {
       parentSiteTitle: 'Nome della Regione',
       parentSiteURL: 'https://www.governo.it',
       subsiteParentSiteTitle: 'Nome del sito padre del sottosito',
-      footerInfos:
-        'Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA: 000000000',
       amministrazioneTrasparenteUrl: '/amministrazione-trasparente',
       // arLoginUrl: 'https://io-comune.agamar.redturtle.it/login',
       // arLogoutUrl: 'https://io-comune.agamar.redturtle.it/logout',
+      smallFooterLinks: {
+        default: [
+          { title: 'Media policy', url: '/media-policy' },
+          { title: 'Note legali', url: '/note-legali' },
+          { title: 'Privacy policy', url: '/privacy-policy' },
+          { title: 'Mappa del sito', url: '/sitemap' },
+          { title: 'Credits', url: 'https://www.redturtle.it/' },
+        ],
+        it: [
+          { title: 'Media policy', url: '/it/media-policy' },
+          { title: 'Note legali', url: '/it/note-legali' },
+          { title: 'Privacy policy', url: '/it/privacy-policy' },
+          { title: 'Mappa del sito', url: '/it/sitemap' },
+          { title: 'Credits', url: 'https://www.redturtle.it/' },
+        ],
+        en: [
+          { title: 'Media policy', url: '/en/media-policy' },
+          { title: 'Note legali', url: '/en/legal-notes' },
+          { title: 'Privacy policy', url: '/en/privacy-policy' },
+          { title: 'Mappa del sito', url: '/en/sitemap' },
+          { title: 'Credits', url: 'https://www.redturtle.it/' },
+        ],
+      },
     },
     'volto-blocks-widget': {
       allowedBlocks: [
