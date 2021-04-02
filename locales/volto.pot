@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-04-02T10:35:39.194Z\n"
+"POT-Creation-Date: 2021-04-02T15:11:31.232Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -210,11 +210,6 @@ msgstr ""
 msgid "Listing"
 msgstr ""
 
-#: components/ItaliaTheme/Footer/FooterSmall
-# defaultMessage: Mappa del sito
-msgid "Mappa del sito"
-msgstr ""
-
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 #: components/ItaliaTheme/MenuSecondary/MenuSecondary
 # defaultMessage: Menu selezionato
@@ -328,11 +323,6 @@ msgstr ""
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Seleziona un file
 msgid "Seleziona un file"
-msgstr ""
-
-#: components/ItaliaTheme/Footer/FooterSmall
-# defaultMessage: Sezione Link Utili
-msgid "Sezione Link Utili"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
@@ -1141,46 +1131,6 @@ msgstr ""
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Fine termine
 msgid "fine_termine"
-msgstr ""
-
-#: components/ItaliaTheme/Footer/FooterSmall
-# defaultMessage: Note legali
-msgid "footer_legal_notes_title"
-msgstr ""
-
-#: components/ItaliaTheme/Footer/FooterSmall
-# defaultMessage: /note-legali
-msgid "footer_legal_notes_url"
-msgstr ""
-
-#: components/ItaliaTheme/Footer/FooterSmall
-# defaultMessage: Media policy
-msgid "footer_media_policy_title"
-msgstr ""
-
-#: components/ItaliaTheme/Footer/FooterSmall
-# defaultMessage: /media-policy
-msgid "footer_media_policy_url"
-msgstr ""
-
-#: components/ItaliaTheme/Footer/FooterSmall
-# defaultMessage: Privacy policy
-msgid "footer_privacy_policy_title"
-msgstr ""
-
-#: components/ItaliaTheme/Footer/FooterSmall
-# defaultMessage: /privacy-policy
-msgid "footer_privacy_policy_url"
-msgstr ""
-
-#: components/ItaliaTheme/Footer/FooterSmall
-# defaultMessage: Mappa del sito
-msgid "footer_sitemap_title"
-msgstr ""
-
-#: components/ItaliaTheme/Footer/FooterSmall
-# defaultMessage: /sitemap
-msgid "footer_sitemap_url"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Sidebar
