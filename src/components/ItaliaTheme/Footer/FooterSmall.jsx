@@ -7,6 +7,7 @@ import React from 'react';
 import { UniversalLink } from '@plone/volto/components';
 import { defineMessages, useIntl } from 'react-intl';
 import { Container } from 'design-react-kit/dist/design-react-kit';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   goToPage: {
@@ -17,13 +18,45 @@ const messages = defineMessages({
     id: 'Sezione Link Utili',
     defaultMessage: 'Sezione Link Utili',
   },
-  legalNotes: {
-    id: 'Note legali',
-    defaultMessage: 'Note legali',
-  },
+
   siteMap: {
     id: 'Mappa del sito',
     defaultMessage: 'Mappa del sito',
+  },
+
+  footer_media_policy_title: {
+    id: 'footer_media_policy_title',
+    defaultMessage: 'Media policy',
+  },
+  footer_media_policy_url: {
+    id: 'footer_media_policy_url',
+    defaultMessage: '/media-policy',
+  },
+
+  footer_legal_notes_title: {
+    id: 'footer_legal_notes_title',
+    defaultMessage: 'Note legali',
+  },
+  footer_legal_notes_url: {
+    id: 'footer_legal_notes_url',
+    defaultMessage: '/note-legali',
+  },
+
+  footer_privacy_policy_title: {
+    id: 'footer_privacy_policy_title',
+    defaultMessage: 'Privacy policy',
+  },
+  footer_privacy_policy_url: {
+    id: 'footer_privacy_policy_url',
+    defaultMessage: '/privacy-policy',
+  },
+  footer_sitemap_title: {
+    id: 'footer_sitemap_title',
+    defaultMessage: 'Mappa del sito',
+  },
+  footer_sitemap_url: {
+    id: 'footer_sitemap_url',
+    defaultMessage: '/sitemap',
   },
 });
 
@@ -35,6 +68,7 @@ const messages = defineMessages({
 const FooterSmall = () => {
   const intl = useIntl();
 
+  const langPath = config.settings.isMultilingual ? '/' + intl.locale : '';
   return (
     <div className="it-footer-small-prints clearfix">
       <Container tag="div">
@@ -42,31 +76,41 @@ const FooterSmall = () => {
         <ul className="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row">
           <li className="list-inline-item">
             <UniversalLink
-              href="#"
-              title={intl.formatMessage(messages.legalNotes)}
+              href={
+                langPath + intl.formatMessage(messages.footer_media_policy_url)
+              }
+              title={intl.formatMessage(messages.footer_media_policy_title)}
             >
-              Media policy
+              {intl.formatMessage(messages.footer_media_policy_title)}
             </UniversalLink>
           </li>
           <li className="list-inline-item">
             <UniversalLink
-              href="#"
-              title={intl.formatMessage(messages.legalNotes)}
+              href={
+                langPath + intl.formatMessage(messages.footer_legal_notes_url)
+              }
+              title={intl.formatMessage(messages.footer_legal_notes_title)}
             >
-              {intl.formatMessage(messages.legalNotes)}
-            </UniversalLink>
-          </li>
-          <li className="list-inline-item">
-            <UniversalLink href="#" title="Privacy-Cookies">
-              Privacy policy
+              {intl.formatMessage(messages.footer_legal_notes_title)}
             </UniversalLink>
           </li>
           <li className="list-inline-item">
             <UniversalLink
-              href="#"
-              title={intl.formatMessage(messages.siteMap)}
+              href={
+                langPath +
+                intl.formatMessage(messages.footer_privacy_policy_url)
+              }
+              title={intl.formatMessage(messages.footer_privacy_policy_title)}
             >
-              {intl.formatMessage(messages.siteMap)}
+              {intl.formatMessage(messages.footer_privacy_policy_title)}
+            </UniversalLink>
+          </li>
+          <li className="list-inline-item">
+            <UniversalLink
+              href={langPath + intl.formatMessage(messages.footer_sitemap_url)}
+              title={intl.formatMessage(messages.footer_sitemap_title)}
+            >
+              {intl.formatMessage(messages.footer_sitemap_title)}
             </UniversalLink>
           </li>
           <li className="list-inline-item">
