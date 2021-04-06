@@ -172,10 +172,6 @@ msgstr "Titolo per il link ad altro"
 msgid "Listing"
 msgstr "Listing"
 
-#: components/ItaliaTheme/Footer/FooterSmall
-msgid "Mappa del sito"
-msgstr "Mappa del sito"
-
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 #: components/ItaliaTheme/MenuSecondary/MenuSecondary
 msgid "Menu selezionato"
@@ -271,10 +267,6 @@ msgstr "Seguici su"
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Seleziona un file"
 msgstr "Seleziona un file"
-
-#: components/ItaliaTheme/Footer/FooterSmall
-msgid "Sezione Link Utili"
-msgstr "Sezione Link Utili"
 
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
@@ -456,7 +448,7 @@ msgstr "Amministrazione"
 
 #: components/ItaliaTheme/Header/HeaderSlim/ArLogin
 msgid "arLogout"
-msgstr ""
+msgstr "Logout"
 
 #: components/ItaliaTheme/Blocks/Listing/serviziAmministrazioneTrasparenteTemplate
 #: helpers/amministrazioneTrasparenteHelper
@@ -933,38 +925,6 @@ msgstr "Cerca"
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "fine_termine"
 msgstr "Fine termine"
-
-#: components/ItaliaTheme/Footer/FooterSmall
-msgid "footer_legal_notes_title"
-msgstr ""
-
-#: components/ItaliaTheme/Footer/FooterSmall
-msgid "footer_legal_notes_url"
-msgstr ""
-
-#: components/ItaliaTheme/Footer/FooterSmall
-msgid "footer_media_policy_title"
-msgstr ""
-
-#: components/ItaliaTheme/Footer/FooterSmall
-msgid "footer_media_policy_url"
-msgstr ""
-
-#: components/ItaliaTheme/Footer/FooterSmall
-msgid "footer_privacy_policy_title"
-msgstr ""
-
-#: components/ItaliaTheme/Footer/FooterSmall
-msgid "footer_privacy_policy_url"
-msgstr ""
-
-#: components/ItaliaTheme/Footer/FooterSmall
-msgid "footer_sitemap_title"
-msgstr ""
-
-#: components/ItaliaTheme/Footer/FooterSmall
-msgid "footer_sitemap_url"
-msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Sidebar
 msgid "form_default_from"

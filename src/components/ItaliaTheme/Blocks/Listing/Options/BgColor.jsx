@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ColorListWidget } from '@italia/components/ItaliaTheme';
 import { defineMessages, useIntl } from 'react-intl';
-import { blocks } from '~/config';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   bg_color: {
@@ -14,7 +14,7 @@ const messages = defineMessages({
 const BgColor = ({ data, block, onChangeBlock, required = false }) => {
   const intl = useIntl();
   let listing_bg_colors =
-    blocks?.blocksConfig?.listing?.listing_bg_colors || [];
+    config.blocks.blocksConfig.listing?.listing_bg_colors || [];
 
   return data.show_block_bg ? (
     <ColorListWidget

@@ -8,8 +8,8 @@ import PropTypes from 'prop-types';
 import redraft from 'redraft';
 import { useIntl, defineMessages } from 'react-intl';
 import cx from 'classnames';
-import { settings } from '~/config';
 import { Icon } from '@italia/components/ItaliaTheme';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   vedi: {
@@ -28,7 +28,7 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
   return (
     <div className="accordion-item subblock-view">
       {data.title && (
-        <h3 className="accordion-header" onClick={toggle()}>
+        <h3 className="accordion-header">
           <button
             onClick={toggle()}
             aria-expanded={isOpen}
@@ -43,8 +43,8 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
 
             {redraft(
               data.title,
-              settings.ToHTMLRenderers,
-              settings.ToHTMLOptions,
+              config.settings.ToHTMLRenderers,
+              config.settings.ToHTMLOptions,
             )}
           </button>
         </h3>
@@ -60,8 +60,8 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
           <div className="accordion-inner">
             {redraft(
               data.text,
-              settings.ToHTMLRenderers,
-              settings.ToHTMLOptions,
+              config.settings.ToHTMLRenderers,
+              config.settings.ToHTMLOptions,
             )}
           </div>
           {data.href && (

@@ -25,8 +25,9 @@ import { getUser, logout, purgeMessages } from '@plone/volto/actions';
 import { BodyClass } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
 
-import { siteConfig } from '~/config';
 import { Icon, UserLoggedMenu } from '@italia/components/ItaliaTheme';
+
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   arLogin: {
@@ -73,14 +74,14 @@ const ArLogin = () => {
 
   const isPublicUser = userLogged?.roles?.length === 0;
 
-  return siteConfig.properties.arLoginUrl ? (
+  return config.settings.siteProperties.arLoginUrl ? (
     <>
       {!userId || !isPublicUser ? (
         // not logged
         <Button
           className="btn-icon"
           color="primary"
-          href={siteConfig.properties.arLoginUrl}
+          href={config.settings.siteProperties.arLoginUrl}
           icon={false}
           size="full"
           tag={UniversalLink}
@@ -129,12 +130,12 @@ const ArLogin = () => {
                     <UserLoggedMenu />
                     <LinkListItem divider tag="a" />
                     <LinkListItem
-                      href={siteConfig.properties.arLogoutUrl || '/'}
+                      href={config.settings.siteProperties.arLogoutUrl || '/'}
                       title={intl.formatMessage(messages.arLogout)}
                       tag={UniversalLink}
                       openLinkInNewTab={false}
                       onClick={() => {
-                        if (!siteConfig.properties.arLogoutUrl) {
+                        if (!config.settings.siteProperties.arLogoutUrl) {
                           doLogout();
                         }
                       }}

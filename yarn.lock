@@ -1857,9 +1857,9 @@
     "@octokit/openapi-types" "^2.0.0"
     "@types/node" ">= 8"
 
-"@plone/volto@plone/volto#rt_development":
-  version "11.1.0"
-  resolved "https://codeload.github.com/plone/volto/tar.gz/7e364a82d92ab90820426e869ff8dac5c5cb052a"
+"@plone/volto@plone/volto#rt_dev_12":
+  version "12.3.0"
+  resolved "https://codeload.github.com/plone/volto/tar.gz/f498cc3ed5fc31128109081b6a2cfff043d1ac5d"
   dependencies:
     "@babel/plugin-proposal-export-default-from" "7.10.4"
     "@babel/plugin-proposal-export-namespace-from" "7.10.4"
@@ -1886,12 +1886,14 @@
     babel-plugin-root-import "6.1.0"
     bundlesize "0.18.0"
     bundlewatch "0.2.7"
+    circular-dependency-plugin "5.2.2"
     classnames "2.2.6"
     connected-react-router "6.8.0"
     coveralls "3.0.2"
     cypress "5.6.0"
     cypress-axe "0.8.1"
     cypress-file-upload "4.1.1"
+    dependency-graph "0.10.0"
     detect-browser "5.1.0"
     diff "3.5.0"
     draft-js "0.10.5"
@@ -1946,7 +1948,7 @@
     postcss-overrides "3.1.4"
     prettier "2.0.5"
     pretty-bytes "5.3.0"
-    prismjs "1.21.0"
+    prismjs "1.23.0"
     promise-file-reader "1.0.2"
     prop-types "15.7.2"
     query-string "4.1.0"
@@ -4531,6 +4533,11 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
+circular-dependency-plugin@5.2.2:
+  version "5.2.2"
+  resolved "https://registry.yarnpkg.com/circular-dependency-plugin/-/circular-dependency-plugin-5.2.2.tgz#39e836079db1d3cf2f988dc48c5188a44058b600"
+  integrity sha512-g38K9Cm5WRwlaH6g03B9OEz/0qRizI+2I7n+Gz+L5DxXJAPAiWQvwlYNm1V1jkdpUv95bOe/ASm2vfi/G560jQ==
+
 class-utils@^0.3.5:
   version "0.3.6"
   resolved "https://registry.yarnpkg.com/class-utils/-/class-utils-0.3.6.tgz#f93369ae8b9a7ce02fd41faad0ca83033190c463"
@@ -6020,6 +6027,11 @@ depd@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/depd/-/depd-1.1.2.tgz#9bcd52e14c097763e749b274c4346ed2e560b5a9"
   integrity sha1-m81S4UwJd2PnSbJ0xDRu0uVgtak=
+
+dependency-graph@0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/dependency-graph/-/dependency-graph-0.10.0.tgz#dfebe384f1f36faf7782be203a7a71102a6335a6"
+  integrity sha512-c9amUgpgxSi1bE5/sbLwcs5diLD0ygCQYmhfM5H1s5VH1mCsYkcmAL3CcNdv4kdSw6JuMoHeDGzLgj/gAXdWVg==
 
 deprecated-obj@2.0.0:
   version "2.0.0"
@@ -13709,10 +13721,10 @@ print-message@^3.0.1:
   dependencies:
     kleur "3.0.3"
 
-prismjs@1.21.0:
-  version "1.21.0"
-  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.21.0.tgz#36c086ec36b45319ec4218ee164c110f9fc015a3"
-  integrity sha512-uGdSIu1nk3kej2iZsLyDoJ7e9bnPzIgY0naW/HdknGj61zScaprVEVGHrPoXqI+M9sP0NDnTK2jpkvmldpuqDw==
+prismjs@1.23.0:
+  version "1.23.0"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.23.0.tgz#d3b3967f7d72440690497652a9d40ff046067f33"
+  integrity sha512-c29LVsqOaLbBHuIbsTxaKENh1N2EQBOHaWv7gkHN4dgRbxSREqDnDbtFJYdpPauS4YCplMSNCABQ6Eeor69bAA==
   optionalDependencies:
     clipboard "^2.0.0"
 
@@ -17725,25 +17737,25 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
-volto-blocks-widget@collective/volto-blocks-widget#v1.0.3:
-  version "1.0.3"
-  resolved "https://codeload.github.com/collective/volto-blocks-widget/tar.gz/23997371f2d69e064b0a841cda595c8e6ae792bc"
+volto-blocks-widget@collective/volto-blocks-widget#v2.0.0:
+  version "2.0.0"
+  resolved "https://codeload.github.com/collective/volto-blocks-widget/tar.gz/6cd9a70fb94476b1f135134cbb95d145581e517f"
 
-volto-cookie-banner@collective/volto-cookie-banner#v1.0.2:
-  version "1.0.2"
-  resolved "https://codeload.github.com/collective/volto-cookie-banner/tar.gz/985b07b08c1a3d371190b47386d43f330e23f020"
+volto-cookie-banner@collective/volto-cookie-banner#v2.0.0:
+  version "2.0.0"
+  resolved "https://codeload.github.com/collective/volto-cookie-banner/tar.gz/a18b5e357799134fdc47e4daf560f601e2f4091c"
   dependencies:
     react-cookie-consent "^3.0.0"
 
-volto-dropdownmenu@collective/volto-dropdownmenu#v1.3.0:
-  version "1.3.0"
-  resolved "https://codeload.github.com/collective/volto-dropdownmenu/tar.gz/43280a0489d0290085e7d6cc9a92323ed56312e1"
+volto-dropdownmenu@collective/volto-dropdownmenu#v2.2.1:
+  version "2.2.1"
+  resolved "https://codeload.github.com/collective/volto-dropdownmenu/tar.gz/bedbd461f148d3210cb514348d659b28aec2bdea"
   dependencies:
     react-outside-click-handler "1.3.0"
 
-volto-editablefooter@RedTurtle/volto-editablefooter#v2.1.0:
-  version "2.1.0"
-  resolved "https://codeload.github.com/RedTurtle/volto-editablefooter/tar.gz/f50e374cbfb0fd83cb4e9f134e09a7593bee23f6"
+volto-editablefooter@RedTurtle/volto-editablefooter#v3.1.0:
+  version "3.1.0"
+  resolved "https://codeload.github.com/RedTurtle/volto-editablefooter/tar.gz/0386d8123676f67088b0c546552d2652b996f715"
   dependencies:
     react-outside-click-handler "1.3.0"
 
@@ -17755,27 +17767,27 @@ volto-form-block@collective/volto-form-block#v1.4.4:
     react-google-recaptcha-v3 "^1.8.0"
     volto-subblocks collective/volto-subblocks#v1.0.1
 
-volto-google-analytics@collective/volto-google-analytics#v1.0.0:
-  version "1.0.0"
-  resolved "https://codeload.github.com/collective/volto-google-analytics/tar.gz/9bd9b49bde6bd6942454a1f6c87968e33eea041a"
+volto-google-analytics@collective/volto-google-analytics#v1.1.0:
+  version "1.1.0"
+  resolved "https://codeload.github.com/collective/volto-google-analytics/tar.gz/f42cba4def40a4654a0a1d950130319b4b688602"
   dependencies:
     react-ga "2.7.0"
 
-volto-multilingual-widget@collective/volto-multilingual-widget#v1.0.1:
-  version "1.0.1"
-  resolved "https://codeload.github.com/collective/volto-multilingual-widget/tar.gz/5a8478902be211419f372d52311d464e89e2f77e"
+volto-multilingual-widget@collective/volto-multilingual-widget#v2.0.0:
+  version "2.0.0"
+  resolved "https://codeload.github.com/collective/volto-multilingual-widget/tar.gz/b513dbd8f16f00b67e6c75efab0d553d433f3f10"
   dependencies:
     draft-js-export-html "^1.4.1"
 
-volto-rss-block@redturtle/volto-rss-block#v1.2.0:
-  version "1.2.0"
-  resolved "https://codeload.github.com/redturtle/volto-rss-block/tar.gz/4d42b69359f0cd327e5b66d748051d714ec63910"
+volto-rss-block@redturtle/volto-rss-block#v2.0.0:
+  version "2.0.0"
+  resolved "https://codeload.github.com/redturtle/volto-rss-block/tar.gz/c309835bf876e1ccb9fd3f6b07906ff10c2560c9"
   dependencies:
     rss-parser "3.7.5"
 
-volto-secondarymenu@collective/volto-secondarymenu#v1.1.0:
-  version "1.1.0"
-  resolved "https://codeload.github.com/collective/volto-secondarymenu/tar.gz/e0902489fdf759a930956bade70ed4ec0a3baafa"
+volto-secondarymenu@collective/volto-secondarymenu#v2.1.0:
+  version "2.1.0"
+  resolved "https://codeload.github.com/collective/volto-secondarymenu/tar.gz/2b9adadba89163ee08a32a8ae959c1fe2b3c3ce9"
 
 volto-social-settings@collective/volto-social-settings#v2.1.0:
   version "2.1.0"
@@ -17795,13 +17807,13 @@ volto-subblocks@collective/volto-subblocks#v1.1.0:
     react-dnd "^5.0.0"
     react-dnd-html5-backend "^5.0.1"
 
-volto-subsites@collective/volto-subsites#v1.1.0:
-  version "1.1.0"
-  resolved "https://codeload.github.com/collective/volto-subsites/tar.gz/42cfbcfe773db67de40e35f7c7f3592e802a6123"
+volto-subsites@collective/volto-subsites#v2.0.0:
+  version "2.0.0"
+  resolved "https://codeload.github.com/collective/volto-subsites/tar.gz/24a5cb5ee4dd14f5d69ce7231925e031fede9db8"
 
-volto-venue@collective/volto-venue#v2.0.1:
-  version "2.0.1"
-  resolved "https://codeload.github.com/collective/volto-venue/tar.gz/9494fe427b1d77fc94a541e8d55f7fe4e95af9ab"
+volto-venue@collective/volto-venue#v3.0.0:
+  version "3.0.0"
+  resolved "https://codeload.github.com/collective/volto-venue/tar.gz/650538eda0572047c2a307c28c89eef6b010820b"
   dependencies:
     leaflet "1.6.0"
     react-leaflet "2.7.0"

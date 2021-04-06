@@ -17,8 +17,8 @@ import {
 import { defineMessages, useIntl } from 'react-intl';
 import { Container } from 'design-react-kit/dist/design-react-kit';
 import { getLayoutFieldname } from '@plone/volto/helpers';
-import { views } from '~/config';
 import Image from '@plone/volto/components/theme/Image/Image';
+import config from '@plone/volto/registry';
 
 /**
  * PageView view component class.
@@ -92,7 +92,7 @@ const PageView = ({ content, token, location, history }) => {
       </>
     );
   else {
-    const getViewByLayout = () => views.layoutViews[layout] || null;
+    const getViewByLayout = () => config.views.layoutViews[layout] || null;
     const Layout = getViewByLayout();
 
     return Layout ? (

@@ -2,6 +2,7 @@ import mapValues from 'lodash/mapValues';
 import moment from 'moment';
 import qs from 'query-string';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { getItemsByPath } from '@italia/helpers';
 
 const defaultOptions = {
   activeContent: false,
@@ -60,14 +61,9 @@ const setGroupChecked = (groupId, checked, setSections) => {
 
 const parseFetchedSections = (fetchedSections, location) => {
   const qsSections = qs.parse(location?.search ?? '')['path.query'] ?? [];
-
   const pathname = location?.pathname?.length ? location.pathname : '/';
-  const sectionsConfig = fetchedSections?.filter((rootConfig) =>
-    pathname.match(new RegExp(rootConfig.rootPath)),
-  );
 
-  const sections =
-    sectionsConfig.length > 0 ? sectionsConfig[0].items || [] : [];
+  const sections = getItemsByPath(fetchedSections, pathname);
 
   return Object.keys(sections).reduce((acc, sec) => {
     let id = sections[sec].id;

@@ -1,4 +1,4 @@
-import { settings } from '~/config';
+import config from '@plone/volto/registry';
 
 export const GET_CALENDAR_RESULTS = 'GET_CALENDAR_RESULTS';
 
@@ -19,12 +19,12 @@ export function getCalendarResults(path, data, subrequest, page) {
       data: {
         ...data,
         ...(!data.b_size && {
-          b_size: settings.defaultPageSize,
+          b_size: config.settings.defaultPageSize,
         }),
         ...(page && {
           b_start: data.b_size
             ? data.b_size * (page - 1)
-            : settings.defaultPageSize * (page - 1),
+            : config.settings.defaultPageSize * (page - 1),
         }),
         query: data?.query,
       },
