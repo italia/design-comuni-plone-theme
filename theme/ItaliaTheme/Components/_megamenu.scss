@@ -2,12 +2,13 @@
 .dropdownmenu-blocks-column,
 .menu-configuration-widget .menu-blocks-container {
   .full-width {
-    left: auto !important;
     position: static;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    max-width: 100% !important;
+
+    left: auto !important;
     width: 100% !important;
+    max-width: 100% !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
   }
 
   body.cms-ui.has-toolbar.has-sidebar-collapsed & {
@@ -33,14 +34,14 @@
   @media (max-width: 767px) {
     button {
       position: absolute !important;
+      overflow: hidden !important;
       width: 1px !important;
       height: 1px !important;
       padding: 0 !important;
+      border: 0 !important;
       margin: -1px !important;
-      overflow: hidden !important;
       clip: rect(0, 0, 0, 0) !important;
       white-space: nowrap !important;
-      border: 0 !important;
     }
   }
 }

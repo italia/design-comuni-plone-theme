@@ -23,7 +23,6 @@ const messages = defineMessages({
  */
 const FooterSmall = () => {
   const intl = useIntl();
-
   const [links, setLinks] = useState([]);
 
   useEffect(() => {
