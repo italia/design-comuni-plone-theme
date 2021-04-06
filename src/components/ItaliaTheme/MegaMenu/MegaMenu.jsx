@@ -17,7 +17,6 @@ import {
   Row,
   Col,
   LinkList,
-  LinkListItem,
 } from 'design-react-kit/dist/design-react-kit';
 import { defineMessages, useIntl } from 'react-intl';
 import {
@@ -29,7 +28,7 @@ import {
 } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
 import { Icon } from '@italia/components/ItaliaTheme';
-import { blocks } from '~/config';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   menu_selected: {
@@ -204,24 +203,44 @@ const MegaMenu = ({ item, pathname }) => {
                   {childrenGroups.map((group, index) => (
                     <Col lg={12 / max_cols} key={'group_' + index}>
                       <LinkList className="bordered">
-                        {group.map((child) => {
+                        {group.map((child, idx) => {
                           return (
-                            <LinkListItem
-                              item={child}
-                              tag={UniversalLink}
-                              title={child.title}
-                              key={child['@id']}
-                              onClick={() => setMenuStatus(false)}
-                              header={child.showAsHeader}
-                              className={cx({
-                                active: isChildActive(
-                                  flattenToAppURL(child['@id']),
-                                  pathname,
-                                ),
-                              })}
-                            >
-                              <span>{child.title}</span>
-                            </LinkListItem>
+                            <li key={child['@id'] + idx}>
+                              {child.showAsHeader ? (
+                                <h3
+                                  className={cx('list-item', {
+                                    active: isChildActive(
+                                      flattenToAppURL(child['@id']),
+                                      pathname,
+                                    ),
+                                  })}
+                                >
+                                  <UniversalLink
+                                    item={child}
+                                    title={child.title}
+                                    key={child['@id']}
+                                    onClick={() => setMenuStatus(false)}
+                                  >
+                                    <span>{child.title}</span>
+                                  </UniversalLink>
+                                </h3>
+                              ) : (
+                                <UniversalLink
+                                  item={child}
+                                  title={child.title}
+                                  key={child['@id']}
+                                  onClick={() => setMenuStatus(false)}
+                                  className={cx('list-item', {
+                                    active: isChildActive(
+                                      flattenToAppURL(child['@id']),
+                                      pathname,
+                                    ),
+                                  })}
+                                >
+                                  <span>{child.title}</span>
+                                </UniversalLink>
+                              )}
+                            </li>
                           );
                         })}
                       </LinkList>
@@ -237,7 +256,7 @@ const MegaMenu = ({ item, pathname }) => {
                       return null;
 
                     const Block =
-                      blocks.blocksConfig[blockType]?.['view'] ?? null;
+                      config.blocks.blocksConfig[blockType]?.['view'] ?? null;
                     return Block !== null ? (
                       <Block
                         key={block}

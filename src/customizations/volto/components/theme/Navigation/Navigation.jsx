@@ -9,7 +9,10 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { getDropdownMenuNavitems } from '@italia/addons/volto-dropdownmenu';
+import {
+  getDropdownMenuNavitems,
+  getItemsByPath,
+} from '@italia/addons/volto-dropdownmenu';
 import {
   Header,
   HeaderContent,
@@ -26,7 +29,7 @@ import {
   SubsiteSocialHeader,
 } from '@italia/components/ItaliaTheme';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { siteConfig } from '~/config';
+import config from '@plone/volto/registry';
 
 const Navigation = ({ pathname }) => {
   const [collapseOpen, setCollapseOpen] = useState(false);
@@ -38,12 +41,7 @@ const Navigation = ({ pathname }) => {
     dispatch(getDropdownMenuNavitems());
   }, [dispatch]);
 
-  const menu =
-    items
-      ?.filter((menu) =>
-        (pathname?.length ? pathname : '/').match(new RegExp(menu.rootPath)),
-      )
-      .pop()?.items ?? [];
+  const menu = getItemsByPath(items, pathname);
 
   const getAnchorTarget = (nodeElement) => {
     if (nodeElement.nodeName === 'A') {
@@ -103,11 +101,12 @@ const Navigation = ({ pathname }) => {
                   <Logo />
                   <div className="it-brand-text">
                     <h2 className="no_toc">
-                      {subsite?.title || siteConfig.properties.siteTitle}
+                      {subsite?.title ||
+                        config.settings.siteProperties.siteTitle}
                     </h2>
                     <h3 className="no_toc">
                       {subsite?.description ||
-                        siteConfig.properties.siteSubtitle}
+                        config.settings.siteProperties.siteSubtitle}
                     </h3>
                   </div>
                 </Link>

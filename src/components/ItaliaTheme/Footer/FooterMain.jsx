@@ -11,7 +11,7 @@ import {
   FooterInfos,
   LogoFooter,
 } from '@italia/components/ItaliaTheme/';
-import { siteConfig } from '~/config';
+import config from '@plone/volto/registry';
 
 /**
  * FooterMain component class.
@@ -30,10 +30,10 @@ const FooterMain = () => {
                   <LogoFooter />
                   <div className="it-brand-text">
                     <h2 className="no_toc">
-                      {siteConfig.properties.siteTitle}
+                      {config.settings.siteProperties.siteTitle}
                     </h2>
                     <h3 className="no_toc d-none d-md-block">
-                      {siteConfig.properties.siteSubtitle}
+                      {config.settings.siteProperties.siteSubtitle}
                     </h3>
                   </div>
                 </UniversalLink>

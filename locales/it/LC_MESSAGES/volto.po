@@ -172,10 +172,6 @@ msgstr "Titolo per il link ad altro"
 msgid "Listing"
 msgstr "Listing"
 
-#: components/ItaliaTheme/Footer/FooterSmall
-msgid "Mappa del sito"
-msgstr "Mappa del sito"
-
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 #: components/ItaliaTheme/MenuSecondary/MenuSecondary
 msgid "Menu selezionato"
@@ -207,10 +203,6 @@ msgstr "Pagina successiva"
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
 msgid "Non ci sono punti da mostrare sulla mappa"
 msgstr "Non ci sono punti da mostrare sulla mappa"
-
-#: components/ItaliaTheme/Footer/FooterSmall
-msgid "Note legali"
-msgstr "Note legali"
 
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
 msgid "Open in a new tab"
@@ -275,10 +267,6 @@ msgstr "Seguici su"
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Seleziona un file"
 msgstr "Seleziona un file"
-
-#: components/ItaliaTheme/Footer/FooterSmall
-msgid "Sezione Link Utili"
-msgstr "Sezione Link Utili"
 
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
@@ -460,7 +448,7 @@ msgstr "Amministrazione"
 
 #: components/ItaliaTheme/Header/HeaderSlim/ArLogin
 msgid "arLogout"
-msgstr ""
+msgstr "Logout"
 
 #: components/ItaliaTheme/Blocks/Listing/serviziAmministrazioneTrasparenteTemplate
 #: helpers/amministrazioneTrasparenteHelper

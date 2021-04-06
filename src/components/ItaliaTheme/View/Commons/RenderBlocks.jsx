@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { blocks } from '~/config';
 import { map } from 'lodash';
 import { useLocation } from 'react-router-dom';
 import { defineMessages, useIntl } from 'react-intl';
@@ -9,6 +8,7 @@ import {
   getBlocksLayoutFieldname,
   getBaseUrl,
 } from '@plone/volto/helpers';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   unknownBlock: {
@@ -49,7 +49,7 @@ const RenderBlocks = ({ content, exclude = ['title', 'description'] }) => {
     <>
       {map(items, (block) => {
         const blockType = content[blocksFieldname]?.[block]?.['@type'];
-        const Block = blocks.blocksConfig[blockType]?.['view'] || null;
+        const Block = config.blocks.blocksConfig[blockType]?.['view'] || null;
         if (Block != null) {
           return (
             <Block

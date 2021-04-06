@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { siteConfig } from '~/config';
 import { WideImage } from '@italia/components/ItaliaTheme/View';
+import config from '@plone/volto/registry';
+
 /**
  * ContentImage view component class.
  * @function ContentImage
@@ -11,7 +12,7 @@ import { WideImage } from '@italia/components/ItaliaTheme/View';
 const ContentImage = ({ content, position }) => {
   const view =
     (content?.image || content?.image_caption) &&
-    siteConfig.italiaThemeViewsConfig.imagePosition === position;
+    config.settings.italiaThemeViewsConfig.imagePosition === position;
 
   return view ? (
     <div className="content-image">
@@ -20,7 +21,7 @@ const ContentImage = ({ content, position }) => {
         image={content?.image}
         caption={content?.image_caption}
         fullWidth={
-          siteConfig.italiaThemeViewsConfig.imagePosition === 'afterHeader'
+          config.settings.italiaThemeViewsConfig.imagePosition === 'afterHeader'
         }
       />
     </div>

@@ -7,7 +7,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Embed } from 'semantic-ui-react';
 import { isInternalURL, getParentUrl } from '@plone/volto/helpers';
-import { settings } from '~/config';
+import config from '@plone/volto/registry';
 
 /**
  * ViewBlock class.
@@ -59,7 +59,10 @@ const ViewBlock = ({ data, index }) => {
                 <video
                   src={
                     isInternalURL(
-                      data.url.replace(getParentUrl(settings.apiPath), ''),
+                      data.url.replace(
+                        getParentUrl(config.settings.apiPath),
+                        '',
+                      ),
                     )
                       ? `${data.url}/@@download/file`
                       : data.url

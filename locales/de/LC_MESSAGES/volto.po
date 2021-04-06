@@ -187,10 +187,6 @@ msgstr ""
 msgid "Listing"
 msgstr ""
 
-#: components/ItaliaTheme/Footer/FooterSmall
-msgid "Mappa del sito"
-msgstr ""
-
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 #: components/ItaliaTheme/MenuSecondary/MenuSecondary
 msgid "Menu selezionato"
@@ -221,10 +217,6 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
 msgid "Non ci sono punti da mostrare sulla mappa"
-msgstr ""
-
-#: components/ItaliaTheme/Footer/FooterSmall
-msgid "Note legali"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
@@ -289,10 +281,6 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Seleziona un file"
-msgstr ""
-
-#: components/ItaliaTheme/Footer/FooterSmall
-msgid "Sezione Link Utili"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget

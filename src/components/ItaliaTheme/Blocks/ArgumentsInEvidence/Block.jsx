@@ -8,11 +8,10 @@ import {
   CardText,
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
-import { settings } from '~/config';
 import redraft from 'redraft';
-import { useDispatch, useSelector } from 'react-redux';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { ArgumentIcon } from '@italia/components/ItaliaTheme/View';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   text: {
@@ -61,8 +60,8 @@ const Block = ({
             <div>
               {redraft(
                 data.title,
-                settings.ToHTMLRenderers,
-                settings.ToHTMLOptions,
+                config.settings.ToHTMLRenderers,
+                config.settings.ToHTMLOptions,
               )}
             </div>
           )}

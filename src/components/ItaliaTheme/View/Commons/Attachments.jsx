@@ -48,20 +48,38 @@ const Attachments = ({ content, folder_name, title, as_article = true }) => {
         dispatch(resetSearchContent(folder_name));
       };
     }
+    // eslint-disable-next-line
   }, []);
 
   const attachments = searchResults?.[folder_name]?.items || [];
 
   const attachments_view = (
     <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-      {attachments.map((item, _i) => (
-        <Attachment
-          key={item['@id']}
-          title={item.title}
-          description={item.description}
-          download_url={`${item['@id']}/@@download/file`}
-        />
-      ))}
+      {attachments.map((item, _i) => {
+        let itemURL = '#';
+
+        switch (item['@type']) {
+          case 'File':
+            itemURL = `${item['@id']}/@@download/file`;
+            break;
+
+          case 'Link':
+            itemURL = item.remoteUrl?.length > 0 ? item.remoteUrl : item['@id'];
+            break;
+
+          default:
+            itemURL = item['@id'];
+        }
+
+        return (
+          <Attachment
+            key={item['@id']}
+            title={item.title}
+            description={item.description}
+            download_url={itemURL}
+          />
+        );
+      })}
     </div>
   );
 

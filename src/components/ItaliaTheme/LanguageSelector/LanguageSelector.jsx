@@ -10,9 +10,7 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import cx from 'classnames';
 import langmap from 'langmap';
-import { settings } from '~/config';
 import { Helmet, changeLanguage, flattenToAppURL } from '@plone/volto/helpers';
-
 import {
   Row,
   Col,
@@ -23,11 +21,12 @@ import {
   UncontrolledDropdown,
 } from 'design-react-kit/dist/design-react-kit';
 import { Icon } from '@italia/components/ItaliaTheme';
+import config from '@plone/volto/registry';
 
 let locales = {};
 
-if (settings) {
-  settings.supportedLanguages.forEach((lang) => {
+if (config.settings) {
+  config.settings.supportedLanguages.forEach((lang) => {
     import('~/../locales/' + lang + '.json').then((locale) => {
       locales = { ...locales, [lang]: locale.default };
     });
@@ -60,7 +59,7 @@ const LanguageSelector = (props) => {
     (state) => state.content.data?.['@components']?.translations?.items,
   );
 
-  return settings.isMultilingual ? (
+  return config.settings.isMultilingual ? (
     <UncontrolledDropdown nav tag="div">
       <DropdownToggle aria-haspopup caret color="secondary" nav>
         {languagesISO392[currentLang]}
@@ -70,7 +69,7 @@ const LanguageSelector = (props) => {
         <Row tag="div">
           <Col size="12" tag="div" widths={['xs', 'sm', 'md', 'lg', 'xl']}>
             <LinkList tag="div">
-              {map(settings.supportedLanguages, (lang) => {
+              {map(config.settings.supportedLanguages, (lang) => {
                 const translation = find(translations, { language: lang });
                 return (
                   <LinkListItem
@@ -99,7 +98,7 @@ const LanguageSelector = (props) => {
     </UncontrolledDropdown>
   ) : (
     <Helmet>
-      <html lang={settings.defaultLanguage} />
+      <html lang={config.settings.defaultLanguage} />
     </Helmet>
   );
 };

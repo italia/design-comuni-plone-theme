@@ -11,8 +11,7 @@ import isSoftNewlineEvent from 'draft-js/lib/isSoftNewlineEvent';
 import createInlineToolbarPlugin from 'draft-js-inline-toolbar-plugin';
 import { defineMessages } from 'react-intl';
 import { isEqual } from 'lodash';
-
-import { settings } from '~/config';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   text: {
@@ -73,7 +72,7 @@ class TextEditorWidget extends Component {
       }
 
       const inlineToolbarPlugin = createInlineToolbarPlugin({
-        structure: settings.richTextEditorInlineToolbarButtons,
+        structure: config.settings.richTextEditorInlineToolbarButtons,
       });
 
       this.state = {
@@ -154,11 +153,11 @@ class TextEditorWidget extends Component {
             editorState={this.state.editorState}
             plugins={[
               this.state.inlineToolbarPlugin,
-              ...settings.richTextEditorPlugins,
+              ...config.settings.richTextEditorPlugins,
             ]}
-            blockRenderMap={settings.extendedBlockRenderMap}
-            blockStyleFn={settings.blockStyleFn}
-            customStyleMap={settings.customStyleMap}
+            blockRenderMap={config.settings.extendedBlockRenderMap}
+            blockStyleFn={config.settings.blockStyleFn}
+            customStyleMap={config.settings.customStyleMap}
             placeholder={placeholder}
             ref={(node) => {
               this.node = node;
@@ -167,7 +166,7 @@ class TextEditorWidget extends Component {
               if (isSoftNewlineEvent(e)) {
                 this.onChange(
                   RichUtils.insertSoftNewline(this.state.editorState),
-                );                
+                );
                 return 'handled';
               }
 

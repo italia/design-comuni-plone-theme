@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import loadable from '@loadable/component';
 import 'react-image-gallery/styles/css/image-gallery.css';
-import { settings } from '~/config';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Button } from 'semantic-ui-react';
 import { Icon } from '@plone/volto/components';
@@ -12,6 +11,7 @@ import galleryPlaySVG from '@plone/volto/icons/play.svg';
 import galleryPauseSVG from '@plone/volto/icons/pause.svg';
 import galleryFullScreenSVG from '@plone/volto/icons/fullscreen.svg';
 import galleryBackDownSVG from '@plone/volto/icons/back-down.svg';
+import config from '@plone/volto/registry';
 
 const ImageGallery = loadable(() => import('react-image-gallery'));
 
@@ -72,15 +72,17 @@ const renderFullscreenButton = (onClick, isFullscreen) => {
 
 const ImageGalleryTemplate = ({ items }) => {
   const renderItems = items.filter((content) =>
-    settings.imageObjects.includes(content['@type']),
+    config.settings.imageObjects.includes(content['@type']),
   );
   const imagesInfo = renderItems.map((item) => {
     return {
       original: flattenToAppURL(
-        item[settings.listingPreviewImageField]?.scales.large.download || '',
+        item[config.settings.listingPreviewImageField]?.scales.large.download ||
+          '',
       ),
       thumbnail: flattenToAppURL(
-        item[settings.listingPreviewImageField]?.scales.thumb.download || '',
+        item[config.settings.listingPreviewImageField]?.scales.thumb.download ||
+          '',
       ),
       description: item.description ?? item.rights ?? null,
     };

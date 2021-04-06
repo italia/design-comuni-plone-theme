@@ -78,20 +78,14 @@ const CardWithImageTemplate = ({
                     {(index < 3 || always_show_image) && image && (
                       <div className="img-responsive-wrapper">
                         <div className="img-responsive img-responsive-panoramic">
-                          <UniversalLink
-                            item={!isEditMode ? item : null}
-                            href={isEditMode ? '#' : ''}
-                            className="img-link"
-                          >
-                            <figure className="img-wrapper">
-                              <Image
-                                className="listing-image"
-                                image={image}
-                                aria-hidden="true"
-                                alt=""
-                              />
-                            </figure>
-                          </UniversalLink>
+                          <figure className="img-wrapper">
+                            <Image
+                              className="listing-image"
+                              image={image}
+                              aria-hidden="true"
+                              alt=""
+                            />
+                          </figure>
                           {item['@type'] === 'Event' && (
                             <CardCalendar start={item.start} end={item.end} />
                           )}

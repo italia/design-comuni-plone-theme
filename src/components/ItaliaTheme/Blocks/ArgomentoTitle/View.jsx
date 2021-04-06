@@ -9,7 +9,8 @@ import { Portal } from 'react-portal';
 import { defineMessages, useIntl } from 'react-intl';
 import redraft from 'redraft';
 import Image from '@plone/volto/components/theme/Image/Image';
-import { settings } from '~/config';
+import config from '@plone/volto/registry';
+
 /**
  * View title block class.
  * @class View
@@ -37,8 +38,8 @@ const ArgomentoTitleView = ({ data, properties }) => {
             <h6>{intl.formatMessage(messages.portata_di_click)}</h6>
             {redraft(
               data.portata_di_click,
-              settings.ToHTMLRenderers,
-              settings.ToHTMLOptions,
+              config.settings.ToHTMLRenderers,
+              config.settings.ToHTMLOptions,
             )}
           </div>
         )}

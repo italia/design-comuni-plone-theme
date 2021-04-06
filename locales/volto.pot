@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-03-26T11:10:28.679Z\n"
+"POT-Creation-Date: 2021-04-06T09:52:32.991Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -212,11 +212,6 @@ msgstr ""
 msgid "Listing"
 msgstr ""
 
-#: components/ItaliaTheme/Footer/FooterSmall
-# defaultMessage: Mappa del sito
-msgid "Mappa del sito"
-msgstr ""
-
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 #: components/ItaliaTheme/MenuSecondary/MenuSecondary
 # defaultMessage: Menu selezionato
@@ -254,11 +249,6 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
 # defaultMessage: Non ci sono punti da mostrare sulla mappa
 msgid "Non ci sono punti da mostrare sulla mappa"
-msgstr ""
-
-#: components/ItaliaTheme/Footer/FooterSmall
-# defaultMessage: Note legali
-msgid "Note legali"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
@@ -337,11 +327,6 @@ msgstr ""
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Seleziona un file
 msgid "Seleziona un file"
-msgstr ""
-
-#: components/ItaliaTheme/Footer/FooterSmall
-# defaultMessage: Sezione Link Utili
-msgid "Sezione Link Utili"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
