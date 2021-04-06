@@ -1,3 +1,19 @@
+# [3.0.0](https://github.com/RedTurtle/design-volto-theme/compare/v2.2.4...v3.0.0) (2021-04-06)
+
+
+### Bug Fixes
+
+* add key to megamenu li ([5398f7c](https://github.com/RedTurtle/design-volto-theme/commit/5398f7c2f2b581b8c7914f6ad85464057262fea1))
+* attachments url by type ([f1c28cf](https://github.com/RedTurtle/design-volto-theme/commit/f1c28cf2bcec2092295b454d7ac1b9544b967cc9))
+* menu config paths update ([4027e2b](https://github.com/RedTurtle/design-volto-theme/commit/4027e2bb0f913bc98d94dd58cd5853ecaf24b8a0))
+* richtext blockStyleFn config ([f930bc0](https://github.com/RedTurtle/design-volto-theme/commit/f930bc03a1ffc77ff0c001d83d731f44d0103158))
+
+
+### Features
+
+* add custom login ([2e157dd](https://github.com/RedTurtle/design-volto-theme/commit/2e157dd9083c8548a8c7f1ed02416460dad3735d))
+* upgrade to volto 12 ([184847f](https://github.com/RedTurtle/design-volto-theme/commit/184847f0ff7fbbfa06b8368f789f2b024722db23))
+
 ## [2.2.4](https://github.com/RedTurtle/design-volto-theme/compare/v2.2.3...v2.2.4) (2021-04-02)
 
 ## [2.2.3](https://github.com/RedTurtle/design-volto-theme/compare/v2.2.2...v2.2.3) (2021-04-02)
