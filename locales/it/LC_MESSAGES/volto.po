@@ -208,10 +208,6 @@ msgstr "Pagina successiva"
 msgid "Non ci sono punti da mostrare sulla mappa"
 msgstr "Non ci sono punti da mostrare sulla mappa"
 
-#: components/ItaliaTheme/Footer/FooterSmall
-msgid "Note legali"
-msgstr "Note legali"
-
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
 msgid "Open in a new tab"
 msgstr "Apri in un nuovo tab"
@@ -937,6 +933,38 @@ msgstr "Cerca"
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "fine_termine"
 msgstr "Fine termine"
+
+#: components/ItaliaTheme/Footer/FooterSmall
+msgid "footer_legal_notes_title"
+msgstr ""
+
+#: components/ItaliaTheme/Footer/FooterSmall
+msgid "footer_legal_notes_url"
+msgstr ""
+
+#: components/ItaliaTheme/Footer/FooterSmall
+msgid "footer_media_policy_title"
+msgstr ""
+
+#: components/ItaliaTheme/Footer/FooterSmall
+msgid "footer_media_policy_url"
+msgstr ""
+
+#: components/ItaliaTheme/Footer/FooterSmall
+msgid "footer_privacy_policy_title"
+msgstr ""
+
+#: components/ItaliaTheme/Footer/FooterSmall
+msgid "footer_privacy_policy_url"
+msgstr ""
+
+#: components/ItaliaTheme/Footer/FooterSmall
+msgid "footer_sitemap_title"
+msgstr ""
+
+#: components/ItaliaTheme/Footer/FooterSmall
+msgid "footer_sitemap_url"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Sidebar
 msgid "form_default_from"

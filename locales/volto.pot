@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-03-23T13:30:23.244Z\n"
+"POT-Creation-Date: 2021-04-06T09:22:34.635Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -254,11 +254,6 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
 # defaultMessage: Non ci sono punti da mostrare sulla mappa
 msgid "Non ci sono punti da mostrare sulla mappa"
-msgstr ""
-
-#: components/ItaliaTheme/Footer/FooterSmall
-# defaultMessage: Note legali
-msgid "Note legali"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
@@ -1150,6 +1145,46 @@ msgstr ""
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Fine termine
 msgid "fine_termine"
+msgstr ""
+
+#: components/ItaliaTheme/Footer/FooterSmall
+# defaultMessage: Note legali
+msgid "footer_legal_notes_title"
+msgstr ""
+
+#: components/ItaliaTheme/Footer/FooterSmall
+# defaultMessage: /note-legali
+msgid "footer_legal_notes_url"
+msgstr ""
+
+#: components/ItaliaTheme/Footer/FooterSmall
+# defaultMessage: Media policy
+msgid "footer_media_policy_title"
+msgstr ""
+
+#: components/ItaliaTheme/Footer/FooterSmall
+# defaultMessage: /media-policy
+msgid "footer_media_policy_url"
+msgstr ""
+
+#: components/ItaliaTheme/Footer/FooterSmall
+# defaultMessage: Privacy policy
+msgid "footer_privacy_policy_title"
+msgstr ""
+
+#: components/ItaliaTheme/Footer/FooterSmall
+# defaultMessage: /privacy-policy
+msgid "footer_privacy_policy_url"
+msgstr ""
+
+#: components/ItaliaTheme/Footer/FooterSmall
+# defaultMessage: Mappa del sito
+msgid "footer_sitemap_title"
+msgstr ""
+
+#: components/ItaliaTheme/Footer/FooterSmall
+# defaultMessage: /sitemap
+msgid "footer_sitemap_url"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Sidebar
