@@ -203,46 +203,44 @@ const MegaMenu = ({ item, pathname }) => {
                   {childrenGroups.map((group, index) => (
                     <Col lg={12 / max_cols} key={'group_' + index}>
                       <LinkList className="bordered">
-                        {group.map((child) => {
+                        {group.map((child, idx) => {
                           return (
-                            <>
-                              <li>
-                                {child.showAsHeader ? (
-                                  <h3
-                                    className={cx('list-item', {
-                                      active: isChildActive(
-                                        flattenToAppURL(child['@id']),
-                                        pathname,
-                                      ),
-                                    })}
-                                  >
-                                    <UniversalLink
-                                      item={child}
-                                      title={child.title}
-                                      key={child['@id']}
-                                      onClick={() => setMenuStatus(false)}
-                                    >
-                                      <span>{child.title}</span>
-                                    </UniversalLink>
-                                  </h3>
-                                ) : (
+                            <li key={child['@id'] + idx}>
+                              {child.showAsHeader ? (
+                                <h3
+                                  className={cx('list-item', {
+                                    active: isChildActive(
+                                      flattenToAppURL(child['@id']),
+                                      pathname,
+                                    ),
+                                  })}
+                                >
                                   <UniversalLink
                                     item={child}
                                     title={child.title}
                                     key={child['@id']}
                                     onClick={() => setMenuStatus(false)}
-                                    className={cx('list-item', {
-                                      active: isChildActive(
-                                        flattenToAppURL(child['@id']),
-                                        pathname,
-                                      ),
-                                    })}
                                   >
                                     <span>{child.title}</span>
                                   </UniversalLink>
-                                )}
-                              </li>
-                            </>
+                                </h3>
+                              ) : (
+                                <UniversalLink
+                                  item={child}
+                                  title={child.title}
+                                  key={child['@id']}
+                                  onClick={() => setMenuStatus(false)}
+                                  className={cx('list-item', {
+                                    active: isChildActive(
+                                      flattenToAppURL(child['@id']),
+                                      pathname,
+                                    ),
+                                  })}
+                                >
+                                  <span>{child.title}</span>
+                                </UniversalLink>
+                              )}
+                            </li>
                           );
                         })}
                       </LinkList>
