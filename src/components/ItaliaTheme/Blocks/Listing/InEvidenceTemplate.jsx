@@ -70,20 +70,14 @@ const InEvidenceTemplate = ({
                   {index === 0 && image && (
                     <div className="img-responsive-wrapper">
                       <div className="img-responsive">
-                        <UniversalLink
-                          item={!isEditMode ? item : null}
-                          href={isEditMode ? '#' : null}
-                          className="img-link"
-                        >
-                          <figure className="img-wrapper">
-                            <Image
-                              className="listing-image"
-                              image={image}
-                              alt=""
-                              aria-hidden="true"
-                            />
-                          </figure>
-                        </UniversalLink>
+                        <figure className="img-wrapper">
+                          <Image
+                            className="listing-image"
+                            image={image}
+                            alt=""
+                            aria-hidden="true"
+                          />
+                        </figure>
                         {item['@type'] === 'Event' && (
                           <CardCalendar start={item.start} end={item.end} />
                         )}

@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import cx from 'classnames';
 import Image from '@plone/volto/components/theme/Image/Image';
 
@@ -33,23 +32,13 @@ const SmallBlockLinksTemplate = ({
                 >
                   {image && (
                     <div className="center-image-card">
-                      <a
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={
-                          item['remoteUrl'] && item['remoteUrl'] !== ''
-                            ? item['remoteUrl']
-                            : flattenToAppURL(item['@id'])
-                        }
-                      >
-                        <Image
-                          image={image}
-                          title={item.title}
-                          alt=""
-                          aria-hidden="true"
-                          className="listing-image"
-                        />
-                      </a>
+                      <Image
+                        image={image}
+                        title={item.title}
+                        alt=""
+                        aria-hidden="true"
+                        className="listing-image"
+                      />
                     </div>
                   )}
                 </Col>
