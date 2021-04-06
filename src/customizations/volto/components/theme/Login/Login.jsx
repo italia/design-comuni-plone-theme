@@ -26,10 +26,10 @@ import { getNavigation, login } from '@plone/volto/actions';
 import { toast } from 'react-toastify';
 import { Toast } from '@plone/volto/components';
 
-import { settings } from '~/config';
-
 import aheadSVG from '@plone/volto/icons/ahead.svg';
 import clearSVG from '@plone/volto/icons/clear.svg';
+
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   login: {
@@ -148,18 +148,18 @@ class Login extends Component {
   }
 
   UNSAFE_componentWillMount() {
-    if (settings.isMultilingual) {
-      this.props.getNavigation(`/${this.props.lang}`, settings.navDepth);
+    if (config.settings.isMultilingual) {
+      this.props.getNavigation(`/${this.props.lang}`, config.settings.navDepth);
     } else {
-      this.props.getNavigation('/', settings.navDepth);
+      this.props.getNavigation('/', config.settings.navDepth);
     }
   }
 
   componentWillUnmount() {
-    if (settings.isMultilingual) {
-      this.props.getNavigation(`/${this.props.lang}`, settings.navDepth);
+    if (config.settings.isMultilingual) {
+      this.props.getNavigation(`/${this.props.lang}`, config.settings.navDepth);
     } else {
-      this.props.getNavigation('/', settings.navDepth);
+      this.props.getNavigation('/', config.settings.navDepth);
     }
 
     if (toast.isActive('loginFailed')) {
