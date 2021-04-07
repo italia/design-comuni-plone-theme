@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.0...v3.0.1) (2021-04-07)
+
+
+### Features
+
+* add rssBlock to blocks widget ([c691970](https://github.com/RedTurtle/design-volto-theme/commit/c691970078139f1e256f9008f1c82a0889f7caed))
+
 # [3.0.0](https://github.com/RedTurtle/design-volto-theme/compare/v2.2.4...v3.0.0) (2021-04-06)
 
 
