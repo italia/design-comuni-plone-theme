@@ -506,6 +506,7 @@ export default function applyConfig(voltoConfig) {
         'break',
         'testo_riquadro_semplice',
         'testo_riquadro_immagine',
+        'rssBlock',
         //se si aggiunge un nuovo blocco, verificare che in edit non ci siano bottoni che provocano il submit della form. Se succede, gestirli con e.prevenDefault() e.stopPropagation().
       ],
       showRestricted: false,
