@@ -12,7 +12,7 @@ import config from '@plone/volto/registry';
 const ContentImage = ({ content, position }) => {
   const view =
     (content?.image || content?.image_caption) &&
-    config.settings.italiaThemeViewsConfig.imagePosition === position;
+    config.settings.italiaThemeViewsConfig === position;
 
   return view ? (
     <div className="content-image">
@@ -20,9 +20,7 @@ const ContentImage = ({ content, position }) => {
         title={content?.title}
         image={content?.image}
         caption={content?.image_caption}
-        fullWidth={
-          config.settings.italiaThemeViewsConfig.imagePosition === 'afterHeader'
-        }
+        fullWidth={config.settings.italiaThemeViewsConfig === 'afterHeader'}
       />
     </div>
   ) : null;
