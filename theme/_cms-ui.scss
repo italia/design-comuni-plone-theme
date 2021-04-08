@@ -236,6 +236,16 @@ body.cms-ui {
     }
   }
 
+  &.section-controlpanel {
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
   [data-rbd-draggable-context-id] {
     margin-bottom: 1rem;
   }
