@@ -1,3 +1,11 @@
+## [3.0.2](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.1...v3.0.2) (2021-04-08)
+
+
+### Bug Fixes
+
+* bandiInEvidenceTemplate ([f0de554](https://github.com/RedTurtle/design-volto-theme/commit/f0de554947e3ad533efe74cbf0ae49d87a199a40))
+* fix styles between edit and view, and usability of Text block ([de21bbc](https://github.com/RedTurtle/design-volto-theme/commit/de21bbc7fb0db4843182783a7996365c6e00ba66))
+
 ## [3.0.1](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.0...v3.0.1) (2021-04-07)
 
 
