@@ -23,7 +23,12 @@ const ListingBody = ({ data, properties, intl, path, isEditMode }) => {
   });
 
   useEffect(() => {
-    if (!originalQuery && properties['@id'] && data.block && data.query) {
+    if (
+      !originalQuery &&
+      properties['@id'] &&
+      data.block &&
+      data.query?.length > 0
+    ) {
       dispatch(
         setOriginalQuery(
           properties['@id'],
