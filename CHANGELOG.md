@@ -1,3 +1,11 @@
+## [3.0.3](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.2...v3.0.3) (2021-04-08)
+
+
+### Bug Fixes
+
+* content image conditions ([fe95009](https://github.com/RedTurtle/design-volto-theme/commit/fe9500931e85216ef737fc890050a61202e48508))
+* listing bug when adding filters on listing block that was without filters ([76e74b2](https://github.com/RedTurtle/design-volto-theme/commit/76e74b27424621b44d43ecbb6d45a97a9b11de7d))
+
 ## [3.0.2](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.1...v3.0.2) (2021-04-08)
 
 
