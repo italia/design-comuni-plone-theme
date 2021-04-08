@@ -6,6 +6,12 @@
   }
 }
 
+.documentDescription {
+  color: $body-color;
+  font-size: 1rem;
+  white-space: pre-wrap;
+}
+
 a {
   cursor: pointer;
 

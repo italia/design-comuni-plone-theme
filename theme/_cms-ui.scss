@@ -44,6 +44,8 @@ body.cms-ui {
       font-weight: 600;
     }
 
+    @import 'bootstrap-italia/src/scss/custom/type'; //to apply styles for headers on different screen sizes
+
     // Placeholder block title
     .title {
       .public-DraftEditorPlaceholder-inner {
@@ -71,6 +73,7 @@ body.cms-ui {
 
   &.contenttype-document,
   &.contenttype-argomento,
+  &.contenttype-pagina-argomento,
   &.contenttype-cartellamodulistica {
     &:not(.section-add) {
       .block {
@@ -222,6 +225,58 @@ body.cms-ui {
       }
     }
   }
+
+  a {
+    color: $link-color;
+    text-decoration: $link-decoration;
+
+    &:hover {
+      color: $link-hover-color;
+      text-decoration: $link-decoration;
+    }
+  }
+
+  [data-rbd-draggable-context-id] {
+    margin-bottom: 1rem;
+  }
+
+  .block {
+    .block:not(.inner)::before {
+      top: -0.3rem;
+      height: calc(100% + 0.6rem);
+    }
+
+    h1 {
+      font-size: 2.66rem;
+      line-height: 1.25;
+    }
+  }
+
+  .block-editor-title,
+  .block-editor-description {
+    .DraftEditor-root {
+      padding: 0 1.333em;
+    }
+
+    & + [class^='block-editor'] {
+      margin-top: 2.8rem;
+    }
+  }
+
+  .block-editor-title + .block-editor-description {
+    margin-top: 0;
+  }
+
+  .block-editor-description {
+    &,
+    .documentDescription {
+      color: $body-color;
+      font-family: $font-family-sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+
   /////
 
   .draftJsToolbarDropdown {
