@@ -1,3 +1,10 @@
+## [3.0.4](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.3...v3.0.4) (2021-04-08)
+
+
+### Bug Fixes
+
+* removed underline styles from controlpanel ([9df3118](https://github.com/RedTurtle/design-volto-theme/commit/9df3118885cfdca0f95c8c623dcaadc1bf84119c))
+
 ## [3.0.3](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.2...v3.0.3) (2021-04-08)
 
 
