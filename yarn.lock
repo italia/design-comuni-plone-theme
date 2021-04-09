@@ -17747,15 +17747,15 @@ volto-cookie-banner@collective/volto-cookie-banner#v2.0.0:
   dependencies:
     react-cookie-consent "^3.0.0"
 
-volto-dropdownmenu@collective/volto-dropdownmenu#v2.2.1:
-  version "2.2.1"
-  resolved "https://codeload.github.com/collective/volto-dropdownmenu/tar.gz/bedbd461f148d3210cb514348d659b28aec2bdea"
+volto-dropdownmenu@collective/volto-dropdownmenu#v2.2.2:
+  version "2.2.2"
+  resolved "https://codeload.github.com/collective/volto-dropdownmenu/tar.gz/9d2b63db3bd822768924ec05ee753d96d135bf63"
   dependencies:
     react-outside-click-handler "1.3.0"
 
-volto-editablefooter@RedTurtle/volto-editablefooter#v3.1.0:
-  version "3.1.0"
-  resolved "https://codeload.github.com/RedTurtle/volto-editablefooter/tar.gz/0386d8123676f67088b0c546552d2652b996f715"
+volto-editablefooter@RedTurtle/volto-editablefooter#v3.1.2:
+  version "3.1.2"
+  resolved "https://codeload.github.com/RedTurtle/volto-editablefooter/tar.gz/7995b4464c7e0bd59e3106435709f40ad3bdba4b"
   dependencies:
     react-outside-click-handler "1.3.0"
 
@@ -17785,9 +17785,9 @@ volto-rss-block@redturtle/volto-rss-block#v2.0.0:
   dependencies:
     rss-parser "3.7.5"
 
-volto-secondarymenu@collective/volto-secondarymenu#v2.1.0:
-  version "2.1.0"
-  resolved "https://codeload.github.com/collective/volto-secondarymenu/tar.gz/2b9adadba89163ee08a32a8ae959c1fe2b3c3ce9"
+volto-secondarymenu@collective/volto-secondarymenu#v2.1.2:
+  version "2.1.2"
+  resolved "https://codeload.github.com/collective/volto-secondarymenu/tar.gz/43b9474b3c83d6f44693a99a83f1489e02e64450"
 
 volto-social-settings@collective/volto-social-settings#v2.1.0:
   version "2.1.0"
@@ -17807,9 +17807,9 @@ volto-subblocks@collective/volto-subblocks#v1.1.0:
     react-dnd "^5.0.0"
     react-dnd-html5-backend "^5.0.1"
 
-volto-subsites@collective/volto-subsites#v2.0.0:
-  version "2.0.0"
-  resolved "https://codeload.github.com/collective/volto-subsites/tar.gz/24a5cb5ee4dd14f5d69ce7231925e031fede9db8"
+volto-subsites@collective/volto-subsites#v2.0.1:
+  version "2.0.1"
+  resolved "https://codeload.github.com/collective/volto-subsites/tar.gz/cd119e86ff045c7e21199dab3a25ec3d9412e134"
 
 volto-venue@collective/volto-venue#v3.0.1:
   version "3.0.1"
