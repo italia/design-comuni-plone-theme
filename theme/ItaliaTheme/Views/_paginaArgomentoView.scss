@@ -37,15 +37,15 @@
   }
 
   .card.border-left-card:before {
-    content: '';
-    display: block;
     position: absolute;
-    left: 0;
     right: 0;
-    height: 100%;
-    width: 8px;
     bottom: 0;
+    left: 0;
+    display: block;
+    width: 8px;
+    height: 100%;
     background: $secondary;
+    content: '';
     @extend .rounded-left;
   }
 
@@ -58,8 +58,9 @@
     align-items: center;
     justify-content: center;
     background-color: $white;
+
     img {
-      width: 80px;
+      width: 80px !important;
       height: 80px;
       @extend .rounded-circle;
       margin: 0 auto;
@@ -80,8 +81,8 @@
   }
 
   .description {
-    font-weight: 400;
     font-family: $font-family-sans-serif;
+    font-weight: 400;
   }
 }
 
@@ -94,6 +95,7 @@
   &.has-image {
     #briciole {
       color: $white;
+
       a {
         color: $white;
       }
