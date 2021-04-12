@@ -102,6 +102,7 @@ const SliderTemplate = ({ items, title, isEditMode, show_block_bg }) => {
                             image={image}
                             alt=""
                             aria-hidden="true"
+                            loading="eager"
                           />
                         )}
                         {/* {getCaption(item) && (
