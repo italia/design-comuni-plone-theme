@@ -1,3 +1,11 @@
+## [3.0.6](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.5...v3.0.6) (2021-04-12)
+
+
+### Bug Fixes
+
+* argomento title img size ([7c0f11d](https://github.com/RedTurtle/design-volto-theme/commit/7c0f11da51d3106296658c612e17779f39ef05fd))
+* slider images loading ([1d4ede4](https://github.com/RedTurtle/design-volto-theme/commit/1d4ede4a2fd7ff52a05a8023f7f55c393f419e09))
+
 ## [3.0.5](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.4...v3.0.5) (2021-04-09)
 
 ## [3.0.4](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.3...v3.0.4) (2021-04-08)
