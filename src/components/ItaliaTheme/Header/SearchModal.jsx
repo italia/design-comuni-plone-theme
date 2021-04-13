@@ -525,17 +525,6 @@ const SearchModal = ({ closeModal, show }) => {
                 </button>
               </div>
               <div className="search-filters text-center">
-                {getSearchParamsURL(
-                  searchableText,
-                  sections,
-                  topics,
-                  options,
-                  null,
-                  null,
-                  null,
-                  subsite,
-                  intl.locale,
-                )}
                 <a
                   href={getSearchParamsURL(
                     searchableText,

@@ -11,6 +11,7 @@ import qs from 'query-string';
 import moment from 'moment';
 import { Helmet } from '@plone/volto/helpers';
 
+import { RemoveBodyClass } from '@italia/components/ItaliaTheme';
 import {
   Container,
   Row,
@@ -112,6 +113,15 @@ const messages = defineMessages({
   section_undefined: {
     id: 'section_undefined',
     defaultMessage: 'altro',
+  },
+  attenzione: { id: 'Attenzione!', defaultMessage: 'Attenzione!' },
+  errors_occured: {
+    id: 'Sono occorsi degli errori',
+    defaultMessage: 'Sono occorsi degli errori',
+  },
+  no_results: {
+    id: 'Nessun risultato ottenuto',
+    defaultMessage: 'Nessun risultato ottenuto',
   },
 });
 
@@ -273,6 +283,7 @@ const Search = () => {
   return (
     <>
       <Helmet title={intl.formatMessage(messages.searchResults)} />
+
       <div className="public-ui">
         <Container className="px-4 my-4">
           <Row>
@@ -533,15 +544,18 @@ const Search = () => {
                 </div>
               ) : searchResults.error ? (
                 <Alert color="danger">
-                  <strong>Attenzione!</strong> Sono occorsi degli errori
+                  <strong>{intl.formatMessage(messages.attenzione)}</strong>{' '}
+                  {intl.formatMessage(messages.errors_occured)}
                 </Alert>
               ) : (
-                <p>Nessun risultato ottenuto</p>
+                <p>{intl.formatMessage(messages.no_results)}</p>
               )}
             </Col>
           </Row>
         </Container>
       </div>
+      {/*force remove body class for subsite search pages*/}
+      <RemoveBodyClass className="cms-ui" />
     </>
   );
 };

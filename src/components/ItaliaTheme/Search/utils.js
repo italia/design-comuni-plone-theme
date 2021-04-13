@@ -205,7 +205,7 @@ const getSearchParamsURL = (
     pathQuery = { 'path.query': customPath };
   } else if (baseUrl?.length > 0) {
     pathQuery = {
-      'path.query': '/Plone' + baseUrl,
+      'path.query': baseUrl,
     };
   }
 
