@@ -10,6 +10,9 @@
     "release": true,
     "releaseName": "${version}"
   },
+  "hooks": {
+    "before:init": ["yarn install-full", "yarn i18n"]
+  },
   "plugins": {
     "@release-it/conventional-changelog": {
       "preset": "angular",
