@@ -459,9 +459,7 @@ export default function applyConfig(voltoConfig) {
       UnitaOrganizzativa: faBuildingSVG,
       Modulo: faFileDownloadSVG,
     },
-    italiaThemeViewsConfig: {
-      imagePosition: 'afterHeader', // possible values: afterHeader, documentBody
-    },
+    italiaThemeViewsConfig: 'afterHeader', // possible values: afterHeader, documentBody
     siteProperties: {
       siteTitle: 'Nome del Comune',
       siteSubtitle: "Uno dei tanti Comuni d'Italia",
