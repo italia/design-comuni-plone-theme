@@ -151,6 +151,7 @@ const SearchModal = ({ closeModal, show }) => {
   const [sections, setSections] = useState({});
   const [topics, setTopics] = useState({});
   const [options, setOptions] = useState({ ...defaultOptions });
+  const subsite = useSelector((state) => state.subsite?.data);
   const selectedTopics = fromPairs(toPairs(topics).filter((t) => t[1].value));
 
   let checkedGroups = {};
@@ -167,7 +168,7 @@ const SearchModal = ({ closeModal, show }) => {
 
   useEffect(() => {
     if (Object.keys(searchFilters?.sections ?? {}).length > 0) {
-      let pfs = parseFetchedSections(searchFilters.sections, location);
+      let pfs = parseFetchedSections(searchFilters.sections, location, subsite);
 
       setSections(pfs);
     }
@@ -177,7 +178,7 @@ const SearchModal = ({ closeModal, show }) => {
     }
 
     setOptions(parseFetchedOptions(defaultOptions, location));
-  }, [searchFilters, location]);
+  }, [searchFilters, location, subsite]);
 
   // The "all" filter is checked if all groups are unchecked
   const allSectionsChecked = Object.keys(checkedGroups).reduce(
@@ -231,10 +232,21 @@ const SearchModal = ({ closeModal, show }) => {
   const handleEnterSearch = (e) => {
     if (e.key === 'Enter') {
       submitSearch();
+
       if (__CLIENT__)
         window.location.href =
           window.location.origin +
-          getSearchParamsURL(searchableText, sections, topics, options);
+          getSearchParamsURL(
+            searchableText,
+            sections,
+            topics,
+            options,
+            null,
+            null,
+            null,
+            subsite,
+            intl.locale,
+          );
     }
   };
 
@@ -273,12 +285,18 @@ const SearchModal = ({ closeModal, show }) => {
                 advancedSearch ? messages.filters : messages.search,
               )}
             </p>
+
             <a
               href={getSearchParamsURL(
                 searchableText,
                 sections,
                 topics,
                 options,
+                null,
+                null,
+                null,
+                subsite,
+                intl.locale,
               )}
               className="ml-auto btn btn-outline-primary text-capitalize"
               style={{ visibility: advancedSearch ? 'visible' : 'hidden' }}
@@ -315,6 +333,11 @@ const SearchModal = ({ closeModal, show }) => {
                           sections,
                           topics,
                           options,
+                          null,
+                          null,
+                          null,
+                          subsite,
+                          intl.locale,
                         )}
                         onClick={submitSearch}
                         className="btn btn-link"
@@ -327,52 +350,55 @@ const SearchModal = ({ closeModal, show }) => {
                   </div>
                 </div>
               </div>
-              <div className="search-filters search-filters-section">
-                <div className="h6">
-                  {intl.formatMessage(messages.sections)}
-                </div>
-                <ButtonToolbar className="mb-3">
-                  <Button
-                    color="primary"
-                    outline={!allSectionsChecked}
-                    onClick={resetSections}
-                    size="sm"
-                    className="mr-2 mb-2"
-                  >
-                    {intl.formatMessage(messages.allFilters)}
-                  </Button>
-                  {Object.keys(sections).map((groupId) => (
+
+              {Object.keys(sections)?.length > 0 && (
+                <div className="search-filters search-filters-section">
+                  <div className="h6">
+                    {intl.formatMessage(messages.sections)}
+                  </div>
+                  <ButtonToolbar className="mb-3">
                     <Button
-                      key={groupId}
                       color="primary"
-                      outline={!checkedGroups[groupId]}
+                      outline={!allSectionsChecked}
+                      onClick={resetSections}
                       size="sm"
                       className="mr-2 mb-2"
-                      onClick={() =>
-                        setGroupChecked(
-                          groupId,
-                          !checkedGroups[groupId],
-                          setSections,
-                        )
-                      }
                     >
-                      {sections[groupId].title}
+                      {intl.formatMessage(messages.allFilters)}
                     </Button>
-                  ))}
-                  <Button
-                    color="primary"
-                    outline
-                    size="sm"
-                    className="mb-2"
-                    onClick={() => {
-                      setAdvancedTab('sections');
-                      setAdvancedSearch(true);
-                    }}
-                  >
-                    ...
-                  </Button>
-                </ButtonToolbar>
-              </div>
+                    {Object.keys(sections).map((groupId) => (
+                      <Button
+                        key={groupId}
+                        color="primary"
+                        outline={!checkedGroups[groupId]}
+                        size="sm"
+                        className="mr-2 mb-2"
+                        onClick={() =>
+                          setGroupChecked(
+                            groupId,
+                            !checkedGroups[groupId],
+                            setSections,
+                          )
+                        }
+                      >
+                        {sections[groupId].title}
+                      </Button>
+                    ))}
+                    <Button
+                      color="primary"
+                      outline
+                      size="sm"
+                      className="mb-2"
+                      onClick={() => {
+                        setAdvancedTab('sections');
+                        setAdvancedSearch(true);
+                      }}
+                    >
+                      ...
+                    </Button>
+                  </ButtonToolbar>
+                </div>
+              )}
               <div className="search-filters search-filters-topics">
                 <div className="h6">{intl.formatMessage(messages.topics)}</div>
                 <button
@@ -499,12 +525,28 @@ const SearchModal = ({ closeModal, show }) => {
                 </button>
               </div>
               <div className="search-filters text-center">
+                {getSearchParamsURL(
+                  searchableText,
+                  sections,
+                  topics,
+                  options,
+                  null,
+                  null,
+                  null,
+                  subsite,
+                  intl.locale,
+                )}
                 <a
                   href={getSearchParamsURL(
                     searchableText,
                     sections,
                     topics,
                     options,
+                    null,
+                    null,
+                    null,
+                    subsite,
+                    intl.locale,
                   )}
                   onClick={submitSearch}
                   className="btn-icon btn btn-primary"
@@ -521,15 +563,17 @@ const SearchModal = ({ closeModal, show }) => {
           {advancedSearch && (
             <div>
               <Nav tabs className="mb-3 nav-fill">
-                <NavItem>
-                  <NavLink
-                    href="#"
-                    active={advancedTab === 'sections'}
-                    onClick={() => setAdvancedTab('sections')}
-                  >
-                    <span>{intl.formatMessage(messages.sections)}</span>
-                  </NavLink>
-                </NavItem>
+                {Object.keys(sections)?.length > 0 && (
+                  <NavItem>
+                    <NavLink
+                      href="#"
+                      active={advancedTab === 'sections'}
+                      onClick={() => setAdvancedTab('sections')}
+                    >
+                      <span>{intl.formatMessage(messages.sections)}</span>
+                    </NavLink>
+                  </NavItem>
+                )}
                 <NavItem>
                   <NavLink
                     href="#"
@@ -551,81 +595,83 @@ const SearchModal = ({ closeModal, show }) => {
               </Nav>
 
               <TabContent activeTab={advancedTab}>
-                <TabPane className="p-3" tabId="sections">
-                  <Row>
-                    <div className="offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12">
-                      <Row>
-                        {Object.keys(sections).map((groupId) => (
-                          <Col sm={6} key={groupId} className="group-col">
-                            <FormGroup check tag="div">
-                              <Checkbox
-                                id={`modal-search-${groupId}`}
-                                indeterminate={isGroupIndeterminate(
-                                  sections[groupId],
-                                  checkedGroups[groupId],
-                                )}
-                                checked={checkedGroups[groupId]}
-                                onChange={(e) =>
-                                  setGroupChecked(
-                                    groupId,
-                                    e.currentTarget.checked,
-                                    setSections,
-                                  )
-                                }
-                              />
-                              <Label
-                                check
-                                for={`modal-search-${groupId}`}
-                                tag="label"
-                                className={cx(
-                                  'group-head font-weight-bold text-primary',
-                                  {
-                                    indeterminate: isGroupIndeterminate(
-                                      sections[groupId],
-                                      checkedGroups[groupId],
-                                    ),
-                                  },
-                                )}
-                                widths={['xs', 'sm', 'md', 'lg', 'xl']}
-                              >
-                                {sections[groupId].title}
-                              </Label>
-                            </FormGroup>
+                {Object.keys(sections)?.length > 0 && (
+                  <TabPane className="p-3" tabId="sections">
+                    <Row>
+                      <div className="offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12">
+                        <Row>
+                          {Object.keys(sections).map((groupId) => (
+                            <Col sm={6} key={groupId} className="group-col">
+                              <FormGroup check tag="div">
+                                <Checkbox
+                                  id={`modal-search-${groupId}`}
+                                  indeterminate={isGroupIndeterminate(
+                                    sections[groupId],
+                                    checkedGroups[groupId],
+                                  )}
+                                  checked={checkedGroups[groupId]}
+                                  onChange={(e) =>
+                                    setGroupChecked(
+                                      groupId,
+                                      e.currentTarget.checked,
+                                      setSections,
+                                    )
+                                  }
+                                />
+                                <Label
+                                  check
+                                  for={`modal-search-${groupId}`}
+                                  tag="label"
+                                  className={cx(
+                                    'group-head font-weight-bold text-primary',
+                                    {
+                                      indeterminate: isGroupIndeterminate(
+                                        sections[groupId],
+                                        checkedGroups[groupId],
+                                      ),
+                                    },
+                                  )}
+                                  widths={['xs', 'sm', 'md', 'lg', 'xl']}
+                                >
+                                  {sections[groupId].title}
+                                </Label>
+                              </FormGroup>
 
-                            {Object.keys(sections[groupId].items).map(
-                              (filterId) => (
-                                <FormGroup check tag="div" key={filterId}>
-                                  <Checkbox
-                                    id={`modal-search-${filterId}`}
-                                    checked={
-                                      sections[groupId].items[filterId].value
-                                    }
-                                    onChange={(e) =>
-                                      setSectionFilterChecked(
-                                        groupId,
-                                        filterId,
-                                        e.currentTarget.checked,
-                                        setSections,
-                                      )
-                                    }
-                                  />
-                                  <Label
-                                    check
-                                    for={`modal-search-${filterId}`}
-                                    tag="label"
-                                    widths={['xs', 'sm', 'md', 'lg', 'xl']}
-                                  >
-                                    {sections[groupId].items[filterId].label}
-                                  </Label>
-                                </FormGroup>
-                              ),
-                            )}
-                          </Col>
-                        ))}
-                      </Row>
-                    </div>
-                  </Row>
-                </TabPane>
+                              {Object.keys(sections[groupId].items).map(
+                                (filterId) => (
+                                  <FormGroup check tag="div" key={filterId}>
+                                    <Checkbox
+                                      id={`modal-search-${filterId}`}
+                                      checked={
+                                        sections[groupId].items[filterId].value
+                                      }
+                                      onChange={(e) =>
+                                        setSectionFilterChecked(
+                                          groupId,
+                                          filterId,
+                                          e.currentTarget.checked,
+                                          setSections,
+                                        )
+                                      }
+                                    />
+                                    <Label
+                                      check
+                                      for={`modal-search-${filterId}`}
+                                      tag="label"
+                                      widths={['xs', 'sm', 'md', 'lg', 'xl']}
+                                    >
+                                      {sections[groupId].items[filterId].label}
+                                    </Label>
+                                  </FormGroup>
+                                ),
+                              )}
+                            </Col>
+                          ))}
+                        </Row>
+                      </div>
+                    </Row>
+                  </TabPane>
+                )}
                 <TabPane className="p-3" tabId="topics">
                   <Row>
                     <div className="offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12">

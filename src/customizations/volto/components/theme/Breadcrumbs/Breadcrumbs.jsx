@@ -9,7 +9,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
 import { isEqual } from 'lodash';
 import { getBreadcrumbs } from '@plone/volto/actions';
-import { getBaseUrl } from '@plone/volto/helpers';
+import { getBaseUrl, flattenToAppURL } from '@plone/volto/helpers';
+
 import { UniversalLink } from '@plone/volto/components';
 import {
   Container,
@@ -31,10 +32,21 @@ const Breadcrumbs = ({ pathname }) => {
   const dispatch = useDispatch();
 
   let items = useSelector((state) => state.breadcrumbs.items, isEqual);
+  const subsite = useSelector((state) => state.subsite?.data);
 
   useEffect(() => {
     dispatch(getBreadcrumbs(getBaseUrl(pathname)));
   }, [dispatch, pathname]);
+
+  if (subsite) {
+    //se siamo nella root di un sottosito, non mostriamo le breadcrumbs. Serve anche per nasconderle dalla pagina dei risultati di ricerca quando si fa la ricerca in un sottosito
+    if (
+      items.length === 1 &&
+      items[0].url === flattenToAppURL(subsite['@id'])
+    ) {
+      items = [];
+    }
+  }
 
   return items?.length > 0 ? (
     <div className="public-ui">

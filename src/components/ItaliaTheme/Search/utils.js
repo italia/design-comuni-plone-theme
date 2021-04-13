@@ -2,6 +2,7 @@ import mapValues from 'lodash/mapValues';
 import moment from 'moment';
 import qs from 'query-string';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import config from '@plone/volto/registry';
 import { getItemsByPath } from '@italia/helpers';
 
 const defaultOptions = {
@@ -59,11 +60,11 @@ const setGroupChecked = (groupId, checked, setSections) => {
   }));
 };
 
-const parseFetchedSections = (fetchedSections, location) => {
+const parseFetchedSections = (fetchedSections, location, subsite) => {
   const qsSections = qs.parse(location?.search ?? '')['path.query'] ?? [];
   const pathname = location?.pathname?.length ? location.pathname : '/';
 
-  const sections = getItemsByPath(fetchedSections, pathname);
+  const sections = getItemsByPath(fetchedSections, pathname, !subsite);
 
   return Object.keys(sections).reduce((acc, sec) => {
     let id = sections[sec].id;
@@ -151,7 +152,16 @@ const getSearchParamsURL = (
   sortOn = {},
   currentPage,
   customPath,
+  subsite,
+  currentLang,
+  onlyParams = false,
 ) => {
+  let baseUrl = subsite
+    ? flattenToAppURL(subsite['@id'])
+    : config.settings.isMultilingual
+    ? '/' + currentLang
+    : '';
+
   const activeSections = Object.keys(sections).reduce((secAcc, secKey) => {
     const sec =
       sections[secKey].items &&
@@ -193,12 +203,20 @@ const getSearchParamsURL = (
     pathQuery = { 'path.query': activeSections };
   } else if (customPath?.length > 0) {
     pathQuery = { 'path.query': customPath };
+  } else if (baseUrl?.length > 0) {
+    pathQuery = {
+      'path.query': '/Plone' + baseUrl,
+    };
   }
 
   let text = searchableText ? { SearchableText: searchableText } : null;
-
+  baseUrl += '/search';
+  if (onlyParams) {
+    baseUrl = '';
+  }
   return (
-    '/search?' +
+    baseUrl +
+    '?' +
     qs.stringify(
       {
         ...(text ?? {}),
