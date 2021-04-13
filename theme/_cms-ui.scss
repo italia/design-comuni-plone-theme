@@ -244,6 +244,12 @@ body.cms-ui {
         text-decoration: none;
       }
     }
+
+    .menu-configuration-widget {
+      .menu-item-field-additionalClasses {
+        display: none;
+      }
+    }
   }
 
   [data-rbd-draggable-context-id] {
