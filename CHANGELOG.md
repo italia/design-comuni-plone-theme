@@ -1,3 +1,12 @@
+## [3.0.7](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.6...v3.0.7) (2021-04-13)
+
+
+### Bug Fixes
+
+* fixed og:tags and image header ([2e661d9](https://github.com/RedTurtle/design-volto-theme/commit/2e661d97c5e1c0a73720bee3edeae5f21fcdbb46))
+* italiaThemeViewsConfig ([edf015d](https://github.com/RedTurtle/design-volto-theme/commit/edf015d894007e112105f9525b026d46c041861f))
+* revert ContentImage ([588990b](https://github.com/RedTurtle/design-volto-theme/commit/588990bd1c515ca765317466a95e12ab63d82521))
+
 ## [3.0.6](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.5...v3.0.6) (2021-04-12)
 
 
