@@ -76,6 +76,8 @@ import SliderTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/Slider
 import SliderTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SliderTemplateSkeleton';
 import InEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate';
 import InEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/InEvidenceTemplateSkeleton';
+import ContentInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/ContentInEvidenceTemplate';
+import ContentInEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/ContentInEvidenceTemplateSkeleton';
 import SimpleCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplate';
 import GridGalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate';
 import GridGalleryTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/GridGalleryTemplateSkeleton';
@@ -377,6 +379,11 @@ export default function applyConfig(voltoConfig) {
           label: 'In evidenza',
           template: InEvidenceTemplate,
           skeleton: InEvidenceTemplateSkeleton,
+        },
+        contentInEvidenceTemplate: {
+          label: 'Contenuto in evidenza',
+          template: ContentInEvidenceTemplate,
+          skeleton: ContentInEvidenceTemplateSkeleton,
         },
         ribbonCardTemplate: {
           label: 'Card con nastro',
