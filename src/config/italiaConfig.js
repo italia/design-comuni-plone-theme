@@ -435,8 +435,8 @@ export default function applyConfig(voltoConfig) {
     devProxyToApiPath: 'http://localhost:8080/Plone',
 
     // listBlockTypes: listBlockTypes,
-    isMultilingual: false,
-    supportedLanguages: ['it'],
+    isMultilingual: true,
+    supportedLanguages: ['it', 'en'],
     defaultLanguage: 'it',
     verticalFormTabs: true,
     contentIcons: {
