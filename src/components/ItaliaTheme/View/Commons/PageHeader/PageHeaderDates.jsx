@@ -1,7 +1,8 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import moment from 'moment/min/moment-with-locales';
+
 import PropTypes from 'prop-types';
+import { viewDate } from '@italia/helpers';
 
 /**
  * PageHeaderDates view component class.
@@ -23,7 +24,6 @@ const messages = defineMessages({
 
 const PageHeaderDates = ({ content }) => {
   const intl = useIntl();
-  moment.locale(intl.locale);
 
   return (
     <>
@@ -34,7 +34,7 @@ const PageHeaderDates = ({ content }) => {
               <div className="col-12">
                 <small>{intl.formatMessage(messages.date)}:</small>
                 <p className="font-weight-semibold text-monospace">
-                  {moment(content.effective).format('DD-MM-Y')}
+                  {viewDate(intl.locale, content.effective, 'DD-MM-Y')}
                 </p>
               </div>
             </div>
@@ -44,7 +44,7 @@ const PageHeaderDates = ({ content }) => {
               <div className="col-12">
                 <small>{intl.formatMessage(messages.expire)}:</small>
                 <p className="font-weight-semibold text-monospace">
-                  {moment(content.expires).format('DD-MM-Y')}
+                  {viewDate(intl.locale, content.expires, 'DD-MM-Y')}
                 </p>
               </div>
             </div>

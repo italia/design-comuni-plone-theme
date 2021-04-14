@@ -14,8 +14,7 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import { ListingText } from '@italia/components/ItaliaTheme';
 import cx from 'classnames';
 import { defineMessages, useIntl } from 'react-intl';
-import moment from 'moment';
-import 'moment/min/locales';
+import { viewDate } from '@italia/helpers';
 
 const messages = defineMessages({
   vedi: {
@@ -60,7 +59,7 @@ const BandiInEvidenceTemplate = ({
   linkMore,
 }) => {
   const intl = useIntl();
-  moment.locale(intl.locale);
+
   return (
     <div
       className={cx('bandi-in-evidence', {
@@ -103,7 +102,7 @@ const BandiInEvidenceTemplate = ({
                       </div>
                       <span className="bando-dati-date">
                         {item.effective &&
-                          moment(item.effective).format('DD-MM-YYYY')}
+                          viewDate(intl.locale, item.effective, 'DD-MM-YYYY')}
                       </span>
                     </span>
                     {item.scadenza_bando && (
@@ -113,7 +112,11 @@ const BandiInEvidenceTemplate = ({
                         </div>
                         <span className="bando-dati-date">
                           {item.scadenza_bando &&
-                            moment(item.scadenza_bando).format('DD-MM-YYYY')}
+                            viewDate(
+                              intl.locale,
+                              item.scadenza_bando,
+                              'DD-MM-YYYY',
+                            )}
                         </span>
                       </span>
                     )}
@@ -124,7 +127,9 @@ const BandiInEvidenceTemplate = ({
                         </div>
                         <span className="bando-dati-date">
                           {item.chiusura_procedimento_bando &&
-                            moment(item.chiusura_procedimento_bando).format(
+                            viewDate(
+                              intl.locale,
+                              item.chiusura_procedimento_bando,
                               'DD-MM-YYYY',
                             )}
                         </span>

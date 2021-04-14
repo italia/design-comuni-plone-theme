@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
-import moment from 'moment/min/moment-with-locales';
 import { UniversalLink } from '@plone/volto/components';
 import PropTypes from 'prop-types';
 import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Icon } from '@italia/components/ItaliaTheme';
 import Image from '@plone/volto/components/theme/Image/Image';
+import { viewDate } from '@italia/helpers';
 
 const messages = defineMessages({
   events: {
@@ -28,7 +28,7 @@ const messages = defineMessages({
  */
 const Evento = ({ event, show_image }) => {
   const intl = useIntl();
-  moment.locale(intl.locale);
+
   return event ? (
     <div className="card card-teaser card-flex rounded shadow">
       <div className="card-body p-4">
@@ -56,7 +56,7 @@ const Evento = ({ event, show_image }) => {
       {show_image && event.image && (
         <div className="card-image card-image-rounded">
           <div className="card-date text-center rounded shadow">
-            {moment(event.start).format('DD MMM')}
+            {viewDate(intl.locale, event.start, 'DD MMM')}
           </div>
           <Image
             image={event.image}

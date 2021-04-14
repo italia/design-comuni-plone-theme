@@ -1,14 +1,14 @@
 import { defineMessages, useIntl } from 'react-intl';
 import React from 'react';
-import moment from 'moment/min/moment-with-locales';
-import { rrulestr } from 'rrule';
-import { rrulei18n } from '@plone/volto/components/manage/Widgets/RecurrenceWidget/Utils';
+
 import {
   Card,
   CardTitle,
   CardBody,
 } from 'design-react-kit/dist/design-react-kit';
 import PropTypes from 'prop-types';
+
+import { viewDate } from '@italia/helpers';
 
 const messages = defineMessages({
   effective: {
@@ -37,20 +37,33 @@ const messages = defineMessages({
  */
 const BandoDates = ({ content }) => {
   const intl = useIntl();
-  moment.locale(intl.locale);
+
+  const effective = content?.effective
+    ? viewDate(intl.locale, content.effective)
+    : null;
+  const scadenza_domande_bando = content?.scadenza_domande_bando
+    ? viewDate(intl.locale, content.scadenza_domande_bando)
+    : null;
+
+  const scadenza_bando = content?.scadenza_bando
+    ? viewDate(intl.locale, content.scadenza_bando)
+    : null;
+
+  const chiusura_procedimento_bando = content?.chiusura_procedimento_bando
+    ? viewDate(intl.locale, content.chiusura_procedimento_bando)
+    : null;
 
   return content ? (
     <>
       <div className="point-list-wrapper my-4 mb-5">
-        {content?.effective && (
+        {effective && (
           <div className="point-list">
             <div className="point-list-aside point-list-warning">
               <div className="point-date text-monospace">
-                {moment(content.effective).format('DD')}
+                {effective.format('DD')}
               </div>
               <div className="point-month text-monospace">
-                {moment(content.effective).format('MMM')}/
-                {moment(content.effective).format('YY')}
+                {effective.format('MMM')}/{effective.format('YY')}
               </div>
             </div>
             <div className="point-list-content">
@@ -68,15 +81,16 @@ const BandoDates = ({ content }) => {
             </div>
           </div>
         )}
-        {content?.scadenza_domande_bando && (
+
+        {scadenza_domande_bando && (
           <div className="point-list">
             <div className="point-list-aside point-list-warning">
               <div className="point-date text-monospace">
-                {moment(content.scadenza_domande_bando).format('DD')}
+                {scadenza_domande_bando.format('DD')}
               </div>
               <div className="point-month text-monospace">
-                {moment(content.scadenza_domande_bando).format('MMM')}/
-                {moment(content.scadenza_domande_bando).format('YY')}
+                {scadenza_domande_bando.format('MMM')}/
+                {scadenza_domande_bando.format('YY')}
               </div>
             </div>
             <div className="point-list-content">
@@ -87,10 +101,7 @@ const BandoDates = ({ content }) => {
               >
                 <CardBody tag="div" className={'card-body'}>
                   <CardTitle tag="h5">
-                    {`${moment
-                      .utc(content.scadenza_domande_bando)
-                      .local()
-                      .format('HH:mm')} - `}
+                    {`${scadenza_domande_bando.format('HH:mm')} - `}
                     {intl.formatMessage(messages.scadenza_domande_bando)}
                   </CardTitle>
                 </CardBody>
@@ -98,15 +109,15 @@ const BandoDates = ({ content }) => {
             </div>
           </div>
         )}
-        {content?.scadenza_bando && (
+
+        {scadenza_bando && (
           <div className="point-list">
             <div className="point-list-aside point-list-warning">
               <div className="point-date text-monospace">
-                {moment(content.scadenza_bando).format('DD')}
+                {scadenza_bando.format('DD')}
               </div>
               <div className="point-month text-monospace">
-                {moment(content.scadenza_bando).format('MMM')}/
-                {moment(content.scadenza_bando).format('YY')}
+                {scadenza_bando.format('MMM')}/{scadenza_bando.format('YY')}
               </div>
             </div>
             <div className="point-list-content">
@@ -117,10 +128,7 @@ const BandoDates = ({ content }) => {
               >
                 <CardBody tag="div" className={'card-body'}>
                   <CardTitle tag="h5">
-                    {`${moment
-                      .utc(content.scadenza_bando)
-                      .local()
-                      .format('HH:mm')} - `}
+                    {`${scadenza_bando.format('HH:mm')} - `}
                     {intl.formatMessage(messages.scadenza_bando)}
                   </CardTitle>
                 </CardBody>
@@ -128,15 +136,16 @@ const BandoDates = ({ content }) => {
             </div>
           </div>
         )}
-        {content?.chiusura_procedimento_bando && (
+
+        {chiusura_procedimento_bando && (
           <div className="point-list">
             <div className="point-list-aside point-list-warning">
               <div className="point-date text-monospace">
-                {moment(content.chiusura_procedimento_bando).format('DD')}
+                {chiusura_procedimento_bando.format('DD')}
               </div>
               <div className="point-month text-monospace">
-                {moment(content.chiusura_procedimento_bando).format('MMM')}/
-                {moment(content.chiusura_procedimento_bando).format('YY')}
+                {chiusura_procedimento_bando.format('MMM')}/
+                {chiusura_procedimento_bando.format('YY')}
               </div>
             </div>
             <div className="point-list-content">

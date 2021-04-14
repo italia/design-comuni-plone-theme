@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import 'moment/min/locales';
 import cx from 'classnames';
 
 import {

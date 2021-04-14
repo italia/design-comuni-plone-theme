@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useIntl, defineMessages } from 'react-intl';
-import moment from 'moment';
-import 'moment/min/locales';
+
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { When } from '@plone/volto/components/theme/View/EventDatesInfo';
+import { viewDate } from '@italia/helpers';
 
 const messages = defineMessages({
   from: {
@@ -21,10 +21,15 @@ const messages = defineMessages({
   },
 });
 
-export const getCalendarDate = (item) => {
+const Intl = () => {
   const intl = useIntl();
+  return intl;
+};
+
+export const getCalendarDate = (item) => {
+  const intl = Intl();
   const effective = item.effective && (
-    <span>{moment(item.effective).format('ll')}</span>
+    <span>{viewDate(intl.locale, item.effective, 'll')}</span>
   );
 
   switch (item['@type']) {
@@ -50,7 +55,7 @@ export const getCalendarDate = (item) => {
 };
 
 export const getEventRecurrenceMore = (item, isEditMode) => {
-  const intl = useIntl();
+  const intl = Intl();
   if (item['@type'] === 'Event') {
     if (item.recurrence) {
       return (

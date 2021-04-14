@@ -1,9 +1,10 @@
 import { defineMessages, useIntl } from 'react-intl';
 import React from 'react';
-import moment from 'moment';
+
 import cx from 'classnames';
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 import PropTypes from 'prop-types';
+import { viewDate } from '@italia/helpers';
 
 const messages = defineMessages({
   other_info: {
@@ -30,7 +31,12 @@ const messages = defineMessages({
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const Metadata = ({ content, showTags = false, noMargin = false, children }) => {
+const Metadata = ({
+  content,
+  showTags = false,
+  noMargin = false,
+  children,
+}) => {
   const intl = useIntl();
   return (
     <article
@@ -44,7 +50,9 @@ const Metadata = ({ content, showTags = false, noMargin = false, children }) => 
       <p className="text-serif mb-0 mt-4">
         {intl.formatMessage(messages.modified)}
       </p>
-      <strong>{moment(content.modified).format('DD-MM-Y HH:MM')}</strong>
+      <strong>
+        {viewDate(intl.locale, content.modified, 'DD-MM-Y HH:MM')}
+      </strong>
       {content.rights && (
         <>
           <p className="text-serif mb-0 mt-4">
