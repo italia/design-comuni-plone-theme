@@ -435,8 +435,8 @@ export default function applyConfig(voltoConfig) {
     devProxyToApiPath: 'http://localhost:8080/Plone',
 
     // listBlockTypes: listBlockTypes,
-    isMultilingual: false,
-    supportedLanguages: ['it'],
+    isMultilingual: true,
+    supportedLanguages: ['it', 'en'],
     defaultLanguage: 'it',
     verticalFormTabs: true,
     contentIcons: {
@@ -463,11 +463,11 @@ export default function applyConfig(voltoConfig) {
       imagePosition: 'afterHeader', // possible values: afterHeader, documentBody
     },
     siteProperties: {
-      siteTitle: 'Nome del Comune',
-      siteSubtitle: "Uno dei tanti Comuni d'Italia",
-      parentSiteTitle: 'Nome della Regione',
-      parentSiteURL: 'https://www.governo.it',
-      subsiteParentSiteTitle: 'Nome del sito padre del sottosito',
+      siteTitle: 'Nome del Comune', //può essere una stringa, o un oggetto nel caso di multilingua: {'it':'Nome del Comune', 'en':'Site name'}. Se multilingua il default è comunque la stringa.
+      siteSubtitle: "Uno dei tanti Comuni d'Italia", //può essere una stringa, o un oggetto nel caso di multilingua: {'it':'Uno dei tanti Comuni d'Italia', 'en':'Uno dei tanti Comuni d'Italia'}. Se multilingua il default è comunque la stringa.
+      parentSiteTitle: 'Nome della Regione', //può essere una stringa, o un oggetto nel caso di multilingua: {'it':'Nome della Regione', 'en':'Region name'}.Se multilingua il default è comunque la stringa.
+      parentSiteURL: 'https://www.governo.it', //può essere una stringa, o un oggetto nel caso di multilingua: {'it':'https://www.governo.it', 'en':'https://www.governo.it/en'}. Se multilingua il default è comunque la stringa.
+      subsiteParentSiteTitle: 'Nome del sito padre del sottosito', //può essere una stringa, o un oggetto nel caso di multilingua: {'it':'Nome del sito padre', 'en':'Parent site name'}. Se multilingua il default è comunque la stringa.
       amministrazioneTrasparenteUrl: '/amministrazione-trasparente',
       // arLoginUrl: 'https://io-comune.agamar.redturtle.it/login',
       // arLogoutUrl: 'https://io-comune.agamar.redturtle.it/logout',
@@ -488,9 +488,9 @@ export default function applyConfig(voltoConfig) {
         ],
         en: [
           { title: 'Media policy', url: '/en/media-policy' },
-          { title: 'Note legali', url: '/en/legal-notes' },
+          { title: 'Legal notes', url: '/en/legal-notes' },
           { title: 'Privacy policy', url: '/en/privacy-policy' },
-          { title: 'Mappa del sito', url: '/en/sitemap' },
+          { title: 'Sitemap', url: '/en/sitemap' },
           { title: 'Credits', url: 'https://www.redturtle.it/' },
         ],
       },
