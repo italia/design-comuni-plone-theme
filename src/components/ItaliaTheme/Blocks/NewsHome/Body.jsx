@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl, defineMessages } from 'react-intl';
 import { UniversalLink } from '@plone/volto/components';
-import moment from 'moment';
+
 import {
   Row,
   Col,
@@ -17,6 +17,7 @@ import Image from '@plone/volto/components/theme/Image/Image';
 
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { CardCategory } from '@italia/components/ItaliaTheme';
+import { viewDate } from '@italia/helpers';
 
 const messages = defineMessages({
   news: {
@@ -27,7 +28,6 @@ const messages = defineMessages({
 
 const Body = ({ content, pathname, block }) => {
   const intl = useIntl();
-  moment.locale(intl.locale);
 
   return (
     <Row>
@@ -45,7 +45,10 @@ const Body = ({ content, pathname, block }) => {
         <Card>
           <CardBody className="pb-2">
             <CardCategory
-              date={content.effective && moment(content.effective).format('ll')}
+              date={
+                content.effective &&
+                viewDate(intl.locale, content.effective, 'll')
+              }
             >
               {intl.formatMessage(messages.news)}
             </CardCategory>
