@@ -7,7 +7,7 @@ import React, { useState, useEffect } from 'react';
 import { UniversalLink } from '@plone/volto/components';
 import { defineMessages, useIntl } from 'react-intl';
 import { Container } from 'design-react-kit/dist/design-react-kit';
-import config from '@plone/volto/registry';
+import { getSiteProperty } from '@italia/helpers';
 
 const messages = defineMessages({
   goToPage: {
@@ -26,16 +26,7 @@ const FooterSmall = () => {
   const [links, setLinks] = useState([]);
 
   useEffect(() => {
-    const smallFooterLinks_config =
-      config.settings.siteProperties?.smallFooterLinks;
-    let _links = smallFooterLinks_config['default'] ?? [];
-    if (
-      config.settings.isMultilingual &&
-      smallFooterLinks_config?.[intl.locale]
-    ) {
-      _links = smallFooterLinks_config?.[intl.locale];
-    }
-
+    let _links = getSiteProperty('smallFooterLinks', intl.locale) ?? [];
     setLinks(_links);
   }, [intl.locale]);
 

@@ -5,20 +5,18 @@
 
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-
-import {
-  getDropdownMenuNavitems,
-  getItemsByPath,
-} from '@italia/addons/volto-dropdownmenu';
+import { useIntl } from 'react-intl';
 import {
   Header,
   HeaderContent,
   HeaderToggler,
   Nav,
 } from 'design-react-kit/dist/design-react-kit';
+
+import { flattenToAppURL } from '@plone/volto/helpers';
+
 import { Collapse } from '@italia/components';
 import {
   MegaMenu,
@@ -28,10 +26,14 @@ import {
   SocialHeader,
   SubsiteSocialHeader,
 } from '@italia/components/ItaliaTheme';
-import { flattenToAppURL } from '@plone/volto/helpers';
-import config from '@plone/volto/registry';
+import { getSiteProperty } from '@italia/helpers';
+import {
+  getDropdownMenuNavitems,
+  getItemsByPath,
+} from '@italia/addons/volto-dropdownmenu';
 
 const Navigation = ({ pathname }) => {
+  const intl = useIntl();
   const [collapseOpen, setCollapseOpen] = useState(false);
   const dispatch = useDispatch();
   const subsite = useSelector((state) => state.subsite?.data);
@@ -102,11 +104,11 @@ const Navigation = ({ pathname }) => {
                   <div className="it-brand-text">
                     <h2 className="no_toc">
                       {subsite?.title ||
-                        config.settings.siteProperties.siteTitle}
+                        getSiteProperty('siteTitle', intl.locale)}
                     </h2>
                     <h3 className="no_toc">
                       {subsite?.description ||
-                        config.settings.siteProperties.siteSubtitle}
+                        getSiteProperty('siteSubtitle', intl.locale)}
                     </h3>
                   </div>
                 </Link>

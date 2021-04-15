@@ -5,13 +5,15 @@
 
 import React from 'react';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
+import { useIntl } from 'react-intl';
+
 import { UniversalLink } from '@plone/volto/components';
 import {
   FooterNavigation,
   FooterInfos,
   LogoFooter,
 } from '@italia/components/ItaliaTheme/';
-import config from '@plone/volto/registry';
+import { getSiteProperty } from '@italia/helpers';
 
 /**
  * FooterMain component class.
@@ -19,6 +21,7 @@ import config from '@plone/volto/registry';
  * @extends Component
  */
 const FooterMain = () => {
+  const intl = useIntl();
   return (
     <div className="it-footer-main">
       <Container tag="div">
@@ -30,10 +33,10 @@ const FooterMain = () => {
                   <LogoFooter />
                   <div className="it-brand-text">
                     <h2 className="no_toc">
-                      {config.settings.siteProperties.siteTitle}
+                      {getSiteProperty('siteTitle', intl.locale)}
                     </h2>
                     <h3 className="no_toc d-none d-md-block">
-                      {config.settings.siteProperties.siteSubtitle}
+                      {getSiteProperty('siteSubtitle', intl.locale)}
                     </h3>
                   </div>
                 </UniversalLink>
