@@ -1,3 +1,13 @@
+## [3.0.10](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.9...v3.0.10) (2021-04-15)
+
+
+### Bug Fixes
+
+* fix view plone dates tmz ([bf8713e](https://github.com/RedTurtle/design-volto-theme/commit/bf8713e94fe24fff1c3a8116dfeb4fc5a56bcb27))
+* fixed loading locales on language change ([bb715cb](https://github.com/RedTurtle/design-volto-theme/commit/bb715cbcaad329b96f052fbd7fe647102c17f3c3))
+* remove multilingual config ([5c28dff](https://github.com/RedTurtle/design-volto-theme/commit/5c28dff7d72795181920590e25b6cb0df6a49e46))
+* remove multilingual config ([615998a](https://github.com/RedTurtle/design-volto-theme/commit/615998ab7395c7bc15fd6d2570466f80b6afa1df))
+
 ## [3.0.9](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.8...v3.0.9) (2021-04-15)
 
 ## [3.0.8](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.7...v3.0.8) (2021-04-15)
