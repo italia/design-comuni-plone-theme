@@ -46,4 +46,14 @@
       max-width: 100%;
     }
   }
+
+  .ordering-widget {
+    @media (max-width: 991px) {
+      .bootstrap-select-wrapper {
+        label[for='search-sort-on'] {
+          display: none;
+        }
+      }
+    }
+  }
 }
