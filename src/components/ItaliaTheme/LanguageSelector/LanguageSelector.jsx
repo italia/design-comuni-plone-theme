@@ -1,9 +1,10 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /**
  * LanguageSelector component.
  * @module components/ItaliaTheme/LanguageSelector/LanguageSelector
  */
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { find, map } from 'lodash';
 import { Link } from 'react-router-dom';
@@ -23,15 +24,15 @@ import {
 import { Icon } from '@italia/components/ItaliaTheme';
 import config from '@plone/volto/registry';
 
-let locales = {};
+// let locales = {};
 
-if (config.settings) {
-  config.settings.supportedLanguages.forEach((lang) => {
-    import('~/../locales/' + lang + '.json').then((locale) => {
-      locales = { ...locales, [lang]: locale.default };
-    });
-  });
-}
+// if (config.settings) {
+//   config.settings.supportedLanguages.forEach((lang) => {
+//     import('~/../locales/' + lang + '.json').then((locale) => {
+//       locales = { ...locales, [lang]: locale.default };
+//     });
+//   });
+// }
 
 const languagesISO392 = {
   de: 'deu',
@@ -59,6 +60,18 @@ const LanguageSelector = (props) => {
     (state) => state.content.data?.['@components']?.translations?.items,
   );
 
+  const [allLocales, setAllLocales] = useState({});
+
+  useEffect(() => {
+    if (config.settings) {
+      config.settings.supportedLanguages.forEach((lang) => {
+        import('~/../locales/' + lang + '.json').then((locale) => {
+          setAllLocales({ ...allLocales, [lang]: locale.default });
+        });
+      });
+    }
+  }, []);
+
   return config.settings.isMultilingual ? (
     <UncontrolledDropdown nav tag="div">
       <DropdownToggle aria-haspopup caret color="secondary" nav>
@@ -82,7 +95,7 @@ const LanguageSelector = (props) => {
                     title={langmap[lang].nativeName}
                     onClick={() => {
                       props.onClickAction();
-                      dispatch(changeLanguage(lang, locales));
+                      dispatch(changeLanguage(lang, allLocales));
                     }}
                     key={`language-selector-${lang}`}
                     tag={Link}
