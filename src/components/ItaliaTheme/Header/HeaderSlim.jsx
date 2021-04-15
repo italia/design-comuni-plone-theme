@@ -12,17 +12,20 @@ import {
   HeaderContent,
   HeaderRightZone,
 } from 'design-react-kit/dist/design-react-kit';
-import config from '@plone/volto/registry';
+import { useIntl } from 'react-intl';
+import { getSiteProperty } from '@italia/helpers';
 
 const HeaderSlim = () => {
   const subsite = useSelector((state) => state.subsite?.data);
+  const intl = useIntl();
 
   const parentSiteURL = subsite
     ? '/'
-    : config.settings.siteProperties.parentSiteURL;
+    : getSiteProperty('parentSiteURL', intl.locale);
+
   const parentSiteTile = subsite
-    ? config.settings.siteProperties.subsiteParentSiteTitle
-    : config.settings.siteProperties.parentSiteTitle;
+    ? getSiteProperty('subsiteParentSiteTitle', intl.locale)
+    : getSiteProperty('parentSiteTitle', intl.locale);
 
   const target = subsite ? null : '_blank';
   return (

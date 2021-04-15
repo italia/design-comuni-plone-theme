@@ -14,3 +14,4 @@ export { contentFolderHasItems } from '@italia/helpers/contentHelper';
 export { getTableRowData } from '@italia/helpers/amministrazioneTrasparenteHelper';
 export { getItemsByPath } from '@italia/helpers/getItemsByPath';
 export { viewDate } from '@italia/helpers/dates';
+export { getSiteProperty } from '@italia/helpers/config';

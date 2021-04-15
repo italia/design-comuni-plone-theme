@@ -21,7 +21,7 @@ import {
   SocialHeader,
   SubsiteSocialHeader,
 } from '@italia/components/ItaliaTheme';
-import config from '@plone/volto/registry';
+import { getSiteProperty } from '@italia/helpers';
 
 const messages = defineMessages({
   search: {
@@ -46,11 +46,11 @@ const HeaderCenter = () => {
             <Logo />
             <div className="it-brand-text">
               <h2 className="no_toc">
-                {subsite?.title || config.settings.siteProperties.siteTitle}
+                {subsite?.title || getSiteProperty('siteTitle', intl.locale)}
               </h2>
               <h3 className="no_toc d-none d-md-block">
                 {subsite?.description ||
-                  config.settings.siteProperties.siteSubtitle}
+                  getSiteProperty('siteSubtitle', intl.locale)}
               </h3>
             </div>
           </UniversalLink>
