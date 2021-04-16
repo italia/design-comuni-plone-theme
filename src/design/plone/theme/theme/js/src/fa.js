@@ -10,6 +10,7 @@ import faGooglePlusG from '@fortawesome/fontawesome-free-brands/faGooglePlusG';
 import faPinterest from '@fortawesome/fontawesome-free-brands/faPinterest';
 import faFlickr from '@fortawesome/fontawesome-free-brands/faFlickr';
 import faGetPocket from '@fortawesome/fontawesome-free-brands/faGetPocket';
+import faSpotify from '@fortawesome/fontawesome-free-brands/faSpotify';
 import faRss from '@fortawesome/fontawesome-free-solid/faRss';
 import faNewspaper from '@fortawesome/fontawesome-free-regular/faNewspaper';
 import faHome from '@fortawesome/fontawesome-free-solid/faHome';
@@ -50,6 +51,7 @@ export const init = () => {
     faPinterest,
     faFlickr,
     faGetPocket,
+    faSpotify,
     faRss,
     faNewspaper,
     faHome,

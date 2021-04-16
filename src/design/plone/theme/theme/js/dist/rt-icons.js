@@ -129,107 +129,111 @@ define('fa_rt', [], function() {
 
         var _faGetPocket2 = _interopRequireDefault(_faGetPocket);
 
-        var _faRss = __webpack_require__(13);
+        var _faSpotify = __webpack_require__(13);
+
+        var _faSpotify2 = _interopRequireDefault(_faSpotify);
+
+        var _faRss = __webpack_require__(14);
 
         var _faRss2 = _interopRequireDefault(_faRss);
 
-        var _faNewspaper = __webpack_require__(14);
+        var _faNewspaper = __webpack_require__(15);
 
         var _faNewspaper2 = _interopRequireDefault(_faNewspaper);
 
-        var _faHome = __webpack_require__(15);
+        var _faHome = __webpack_require__(16);
 
         var _faHome2 = _interopRequireDefault(_faHome);
 
-        var _faChevronUp = __webpack_require__(16);
+        var _faChevronUp = __webpack_require__(17);
 
         var _faChevronUp2 = _interopRequireDefault(_faChevronUp);
 
-        var _faChevronDown = __webpack_require__(17);
+        var _faChevronDown = __webpack_require__(18);
 
         var _faChevronDown2 = _interopRequireDefault(_faChevronDown);
 
-        var _faChevronLeft = __webpack_require__(18);
+        var _faChevronLeft = __webpack_require__(19);
 
         var _faChevronLeft2 = _interopRequireDefault(_faChevronLeft);
 
-        var _faChevronRight = __webpack_require__(19);
+        var _faChevronRight = __webpack_require__(20);
 
         var _faChevronRight2 = _interopRequireDefault(_faChevronRight);
 
-        var _faSearch = __webpack_require__(20);
+        var _faSearch = __webpack_require__(21);
 
         var _faSearch2 = _interopRequireDefault(_faSearch);
 
-        var _faCalendar = __webpack_require__(21);
+        var _faCalendar = __webpack_require__(22);
 
         var _faCalendar2 = _interopRequireDefault(_faCalendar);
 
-        var _faCalendarAlt = __webpack_require__(22);
+        var _faCalendarAlt = __webpack_require__(23);
 
         var _faCalendarAlt2 = _interopRequireDefault(_faCalendarAlt);
 
-        var _faTags = __webpack_require__(23);
+        var _faTags = __webpack_require__(24);
 
         var _faTags2 = _interopRequireDefault(_faTags);
 
-        var _faFolderOpen = __webpack_require__(24);
+        var _faFolderOpen = __webpack_require__(25);
 
         var _faFolderOpen2 = _interopRequireDefault(_faFolderOpen);
 
-        var _faFilter = __webpack_require__(25);
+        var _faFilter = __webpack_require__(26);
 
         var _faFilter2 = _interopRequireDefault(_faFilter);
 
-        var _faStar = __webpack_require__(26);
+        var _faStar = __webpack_require__(27);
 
         var _faStar2 = _interopRequireDefault(_faStar);
 
-        var _faBars = __webpack_require__(27);
+        var _faBars = __webpack_require__(28);
 
         var _faBars2 = _interopRequireDefault(_faBars);
 
-        var _faTimes = __webpack_require__(28);
+        var _faTimes = __webpack_require__(29);
 
         var _faTimes2 = _interopRequireDefault(_faTimes);
 
-        var _faPrint = __webpack_require__(29);
+        var _faPrint = __webpack_require__(30);
 
         var _faPrint2 = _interopRequireDefault(_faPrint);
 
-        var _faSortAlphaDown = __webpack_require__(30);
+        var _faSortAlphaDown = __webpack_require__(31);
 
         var _faSortAlphaDown2 = _interopRequireDefault(_faSortAlphaDown);
 
-        var _faAngleRight = __webpack_require__(31);
+        var _faAngleRight = __webpack_require__(32);
 
         var _faAngleRight2 = _interopRequireDefault(_faAngleRight);
 
-        var _faAngleUp = __webpack_require__(32);
+        var _faAngleUp = __webpack_require__(33);
 
         var _faAngleUp2 = _interopRequireDefault(_faAngleUp);
 
-        var _faAngleDown = __webpack_require__(33);
+        var _faAngleDown = __webpack_require__(34);
 
         var _faAngleDown2 = _interopRequireDefault(_faAngleDown);
 
-        var _faListUl = __webpack_require__(34);
+        var _faListUl = __webpack_require__(35);
 
         var _faListUl2 = _interopRequireDefault(_faListUl);
 
-        var _faCircle = __webpack_require__(35);
+        var _faCircle = __webpack_require__(36);
 
         var _faCircle2 = _interopRequireDefault(_faCircle);
 
-        var _faCrosshairs = __webpack_require__(36);
+        var _faCrosshairs = __webpack_require__(37);
 
         var _faCrosshairs2 = _interopRequireDefault(_faCrosshairs);
 
-        var _faEnvelope = __webpack_require__(37);
+        var _faEnvelope = __webpack_require__(38);
 
         var _faEnvelope2 = _interopRequireDefault(_faEnvelope);
 
-        var _faDownload = __webpack_require__(38);
+        var _faDownload = __webpack_require__(39);
 
         var _faDownload2 = _interopRequireDefault(_faDownload);
 
@@ -250,6 +254,7 @@ define('fa_rt', [], function() {
             _faPinterest2.default,
             _faFlickr2.default,
             _faGetPocket2.default,
+            _faSpotify2.default,
             _faRss2.default,
             _faNewspaper2.default,
             _faHome2.default,
@@ -2768,6 +2773,22 @@ define('fa_rt', [], function() {
       /* 13 */
       /***/ function(module, exports) {
         module.exports = {
+          prefix: 'fab',
+          iconName: 'spotify',
+          icon: [
+            496,
+            512,
+            [],
+            'f1bc',
+            'M248 8C111.1 8 0 119.1 0 256s111.1 248 248 248 248-111.1 248-248S384.9 8 248 8zm100.7 364.9c-4.2 0-6.8-1.3-10.7-3.6-62.4-37.6-135-39.2-206.7-24.5-3.9 1-9 2.6-11.9 2.6-9.7 0-15.8-7.7-15.8-15.8 0-10.3 6.1-15.2 13.6-16.8 81.9-18.1 165.6-16.5 237 26.2 6.1 3.9 9.7 7.4 9.7 16.5s-7.1 15.4-15.2 15.4zm26.9-65.6c-5.2 0-8.7-2.3-12.3-4.2-62.5-37-155.7-51.9-238.6-29.4-4.8 1.3-7.4 2.6-11.9 2.6-10.7 0-19.4-8.7-19.4-19.4s5.2-17.8 15.5-20.7c27.8-7.8 56.2-13.6 97.8-13.6 64.9 0 127.6 16.1 177 45.5 8.1 4.8 11.3 11 11.3 19.7-.1 10.8-8.5 19.5-19.4 19.5zm31-76.2c-5.2 0-8.4-1.3-12.9-3.9-71.2-42.5-198.5-52.7-280.9-29.7-3.6 1-8.1 2.6-12.9 2.6-13.2 0-23.3-10.3-23.3-23.6 0-13.6 8.4-21.3 17.4-23.9 35.2-10.3 74.6-15.2 117.5-15.2 73 0 149.5 15.2 205.4 47.8 7.8 4.5 12.9 10.7 12.9 22.6 0 13.6-11 23.3-23.2 23.3z',
+          ],
+        };
+
+        /***/
+      },
+      /* 14 */
+      /***/ function(module, exports) {
+        module.exports = {
           prefix: 'fas',
           iconName: 'rss',
           icon: [
@@ -2781,7 +2802,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 14 */
+      /* 15 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'far',
@@ -2797,7 +2818,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 15 */
+      /* 16 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -2813,7 +2834,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 16 */
+      /* 17 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -2829,7 +2850,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 17 */
+      /* 18 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -2845,7 +2866,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 18 */
+      /* 19 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -2861,7 +2882,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 19 */
+      /* 20 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -2877,7 +2898,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 20 */
+      /* 21 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -2893,7 +2914,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 21 */
+      /* 22 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'far',
@@ -2909,7 +2930,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 22 */
+      /* 23 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'far',
@@ -2925,7 +2946,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 23 */
+      /* 24 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -2941,7 +2962,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 24 */
+      /* 25 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -2957,7 +2978,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 25 */
+      /* 26 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -2973,7 +2994,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 26 */
+      /* 27 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -2989,7 +3010,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 27 */
+      /* 28 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -3005,7 +3026,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 28 */
+      /* 29 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -3021,7 +3042,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 29 */
+      /* 30 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -3037,7 +3058,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 30 */
+      /* 31 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -3053,7 +3074,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 31 */
+      /* 32 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -3069,7 +3090,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 32 */
+      /* 33 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -3085,7 +3106,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 33 */
+      /* 34 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -3101,7 +3122,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 34 */
+      /* 35 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -3117,7 +3138,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 35 */
+      /* 36 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -3133,7 +3154,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 36 */
+      /* 37 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
@@ -3149,7 +3170,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 37 */
+      /* 38 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'far',
@@ -3165,7 +3186,7 @@ define('fa_rt', [], function() {
 
         /***/
       },
-      /* 38 */
+      /* 39 */
       /***/ function(module, exports) {
         module.exports = {
           prefix: 'fas',
