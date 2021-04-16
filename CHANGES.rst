@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-5.1.2 (unreleased)
+5.1.2 (2021-04-16)
 ------------------
 
 - Add spotify icon for social header viewlet [nzambello]
