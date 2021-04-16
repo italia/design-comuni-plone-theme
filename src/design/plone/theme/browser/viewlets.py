@@ -35,6 +35,7 @@ socialCSSClassDict = {
     'pinterest': 'fab fa-pinterest',
     'flickr': 'fab fa-flickr',
     'pocket': 'fab fa-get-pocket',
+    'spotify': 'fab fa-spotify',
 }
 
 
