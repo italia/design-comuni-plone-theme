@@ -1,3 +1,10 @@
+## [3.0.11](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.10...v3.0.11) (2021-04-16)
+
+
+### Bug Fixes
+
+* re-add link to SmallblockLinkTemplate items ([e95c055](https://github.com/RedTurtle/design-volto-theme/commit/e95c05509909ba574d9bc32a9df5a0deb0e929e5))
+
 ## [3.0.10](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.9...v3.0.10) (2021-04-15)
 
 
