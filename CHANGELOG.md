@@ -1,3 +1,12 @@
+## [3.0.12](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.11...v3.0.12) (2021-04-19)
+
+
+### Bug Fixes
+
+* fixed view search sections ([b88654e](https://github.com/RedTurtle/design-volto-theme/commit/b88654ed7aed09a13d9d852d50af122f2036072c))
+* listing body selection state ([a424730](https://github.com/RedTurtle/design-volto-theme/commit/a42473060aeec8771967b038614c9933e0e8c197))
+* view delete button for long labels in objectbrowser selected values ([c5d88d3](https://github.com/RedTurtle/design-volto-theme/commit/c5d88d3b9b6e5503061893ba0537ffd1267467ae))
+
 ## [3.0.11](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.10...v3.0.11) (2021-04-16)
 
 
