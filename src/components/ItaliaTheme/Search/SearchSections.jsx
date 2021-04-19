@@ -79,26 +79,28 @@ export default function SearchSections({
               {sections[groupId].title}
             </Label>
 
-            {toggleGroups && sections[groupId]?.items && (
-              <a
-                className="float-right"
-                href={`#section${groupId}Collapse`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  toggleCollapseGroup(groupId);
-                }}
-                data-toggle="collapse"
-                aria-expanded="false"
-                aria-controls={`section${groupId}Collapse`}
-              >
-                <Icon
-                  color="primary"
-                  icon="it-more-items"
-                  padding={false}
-                  className="right"
-                />
-              </a>
-            )}
+            {toggleGroups &&
+              sections[groupId]?.items &&
+              Object.keys(sections[groupId]?.items).length > 0 && (
+                <a
+                  className="float-right"
+                  href={`#section${groupId}Collapse`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    toggleCollapseGroup(groupId);
+                  }}
+                  data-toggle="collapse"
+                  aria-expanded="false"
+                  aria-controls={`section${groupId}Collapse`}
+                >
+                  <Icon
+                    color="primary"
+                    icon="it-more-items"
+                    padding={false}
+                    className="right"
+                  />
+                </a>
+              )}
           </FormGroup>
           {sections[groupId]?.items && (
             <Collapse
