@@ -444,6 +444,23 @@ body.cms-ui {
       padding-top: 1rem;
     }
   }
+
+  .objectbrowser-field {
+    .selected-values {
+      .ui.label {
+        position: relative;
+        padding-right: 2em;
+
+        .icon.right {
+          position: absolute;
+          top: 50%;
+          right: 0.5em;
+          margin: 0;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
 }
 
 body.public-ui.has-toolbar {
