@@ -1,6 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
-import moment from 'moment';
-import 'moment/min/locales';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { Spinner } from 'design-react-kit/dist/design-react-kit';
 import { getCalendarDayResults } from '@italia/actions';
@@ -9,21 +9,24 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import { useIntl } from 'react-intl';
 import cx from 'classnames';
 
+import { viewDate } from '@italia/helpers';
+
 const Item = ({ day, path, data, inEdit }) => {
   const intl = useIntl();
-  moment.locale(intl.locale);
 
   const querystringResults = useSelector((state) => state.calendarDaySearch);
   const dispatch = useDispatch();
 
+  const _day = viewDate(intl.locale, day);
+
   React.useEffect(() => {
-    const newData = JSON.parse(JSON.stringify(data));
-    newData.query?.push({
+    let newData = JSON.parse(JSON.stringify(data ?? {}));
+    newData.query.push({
       i: 'start',
       o: 'plone.app.querystring.operation.date.between',
       v: [
-        moment(day).startOf('day').format('YYYY/MM/DD HH:mm'),
-        moment(day).endOf('day').format('YYYY/MM/DD HH:mm'),
+        _day.startOf('day').format('YYYY/MM/DD HH:mm'),
+        _day.endOf('day').format('YYYY/MM/DD HH:mm'),
       ],
     });
     dispatch(getCalendarDayResults(path, { ...newData, fullobjects: 1 }, day));
@@ -32,10 +35,8 @@ const Item = ({ day, path, data, inEdit }) => {
   return (
     <div>
       <div className="pl-3">
-        <div className={cx('day', { 'mb-3': inEdit })}>
-          {moment(day).format('DD')}
-        </div>
-        <div className="day-week">{moment(day).format('ddd')}</div>
+        <div className={cx('day', { 'mb-3': inEdit })}>{_day.format('DD')}</div>
+        <div className="day-week">{_day.format('ddd')}</div>
       </div>
       <div>
         <hr />

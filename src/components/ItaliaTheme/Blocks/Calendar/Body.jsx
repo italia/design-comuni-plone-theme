@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState } from 'react';
 import {
   Card,
@@ -5,13 +6,14 @@ import {
   Col,
   Container,
 } from 'design-react-kit/dist/design-react-kit';
-import moment from 'moment/min/moment-with-locales';
+
 import Slider from 'react-slick';
 import cx from 'classnames';
 import { getCalendarResults } from '@italia/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import Item from '@italia/components/ItaliaTheme/Blocks/Calendar/Item';
 import { useIntl, defineMessages } from 'react-intl';
+import { viewDate } from '@italia/helpers';
 
 const messages = defineMessages({
   insert_filter: {
@@ -23,14 +25,33 @@ const messages = defineMessages({
 
 const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   const intl = useIntl();
-  moment.locale(intl.locale);
 
   const [activePage, setActivePage] = useState(0);
-  const [monthName, setMonthName] = useState(getMonth);
 
   const querystringResults = useSelector((state) => state.calendarSearch);
 
   const dispatch = useDispatch();
+
+  const getMonth = () => {
+    const startIndex = activePage * (data.b_size || 4);
+
+    const months = querystringResults?.items
+      ?.slice(activePage, startIndex + (+data.b_size || 4))
+      .reduce((total, date) => {
+        const month = viewDate(intl.locale, date, 'MMMM');
+
+        if (!total.includes(month)) {
+          total.push(month);
+        }
+        return total;
+      }, []);
+
+    return months
+      ?.map((m) => m.charAt(0).toUpperCase() + m.slice(1))
+      .join(' / ');
+  };
+
+  const [monthName, setMonthName] = useState(getMonth);
 
   React.useEffect(() => {
     if (!data.query || data.query.length === 0) {
@@ -101,23 +122,6 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
         },
       },
     ],
-  };
-
-  const getMonth = () => {
-    const startIndex = activePage * (data.b_size || 4);
-    const months = querystringResults?.items
-      ?.slice(activePage, startIndex + (+data.b_size || 4))
-      .reduce((total, date) => {
-        const month = moment(date).format('MMMM');
-        if (!total.includes(month)) {
-          total.push(month);
-        }
-        return total;
-      }, []);
-
-    return months
-      ?.map((m) => m.charAt(0).toUpperCase() + m.slice(1))
-      .join(' / ');
   };
 
   return (

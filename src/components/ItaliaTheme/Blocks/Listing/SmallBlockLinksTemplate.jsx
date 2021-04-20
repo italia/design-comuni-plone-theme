@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import cx from 'classnames';
+import { UniversalLink } from '@plone/volto/components';
 import Image from '@plone/volto/components/theme/Image/Image';
 
 const SmallBlockLinksTemplate = ({
@@ -32,13 +33,19 @@ const SmallBlockLinksTemplate = ({
                 >
                   {image && (
                     <div className="center-image-card">
-                      <Image
-                        image={image}
-                        title={item.title}
-                        alt=""
-                        aria-hidden="true"
-                        className="listing-image"
-                      />
+                      <UniversalLink
+                        item={!isEditMode ? item : null}
+                        href={isEditMode ? '#' : ''}
+                        className="img-link"
+                      >
+                        <Image
+                          image={image}
+                          title={item.title}
+                          alt=""
+                          aria-hidden="true"
+                          className="listing-image"
+                        />
+                      </UniversalLink>
                     </div>
                   )}
                 </Col>

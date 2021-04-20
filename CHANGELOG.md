@@ -1,3 +1,29 @@
+## [3.0.12](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.11...v3.0.12) (2021-04-19)
+
+
+### Bug Fixes
+
+* fixed view search sections ([b88654e](https://github.com/RedTurtle/design-volto-theme/commit/b88654ed7aed09a13d9d852d50af122f2036072c))
+* listing body selection state ([a424730](https://github.com/RedTurtle/design-volto-theme/commit/a42473060aeec8771967b038614c9933e0e8c197))
+* view delete button for long labels in objectbrowser selected values ([c5d88d3](https://github.com/RedTurtle/design-volto-theme/commit/c5d88d3b9b6e5503061893ba0537ffd1267467ae))
+
+## [3.0.11](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.10...v3.0.11) (2021-04-16)
+
+
+### Bug Fixes
+
+* re-add link to SmallblockLinkTemplate items ([e95c055](https://github.com/RedTurtle/design-volto-theme/commit/e95c05509909ba574d9bc32a9df5a0deb0e929e5))
+
+## [3.0.10](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.9...v3.0.10) (2021-04-15)
+
+
+### Bug Fixes
+
+* fix view plone dates tmz ([bf8713e](https://github.com/RedTurtle/design-volto-theme/commit/bf8713e94fe24fff1c3a8116dfeb4fc5a56bcb27))
+* fixed loading locales on language change ([bb715cb](https://github.com/RedTurtle/design-volto-theme/commit/bb715cbcaad329b96f052fbd7fe647102c17f3c3))
+* remove multilingual config ([5c28dff](https://github.com/RedTurtle/design-volto-theme/commit/5c28dff7d72795181920590e25b6cb0df6a49e46))
+* remove multilingual config ([615998a](https://github.com/RedTurtle/design-volto-theme/commit/615998ab7395c7bc15fd6d2570466f80b6afa1df))
+
 ## [3.0.9](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.8...v3.0.9) (2021-04-15)
 
 ## [3.0.8](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.7...v3.0.8) (2021-04-15)

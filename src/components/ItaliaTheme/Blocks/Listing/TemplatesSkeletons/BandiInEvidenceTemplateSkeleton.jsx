@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import 'moment/min/locales';
 import { Link } from 'react-router-dom';
 import {
   Container,

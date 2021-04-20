@@ -43,6 +43,7 @@ const Header = ({ pathname }) => {
         {/* <Headers sticky={true} className={mini ? 'is-sticky' : undefined}> */}
         <Headers>
           <HeaderSlim />
+
           <div className="it-nav-wrapper">
             <HeaderCenter />
             <Navigation pathname={pathname} />

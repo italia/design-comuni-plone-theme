@@ -1,8 +1,9 @@
 import React from 'react';
-import moment from 'moment';
+import { useIntl } from 'react-intl';
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
+import { viewDate } from '@italia/helpers';
 /**
  *
  * NewsCard view component class.
@@ -12,6 +13,7 @@ import PropTypes from 'prop-types';
  */
 const NewsCard = ({ title, typology, effective, description, id }) => {
   let date = effective ? new Date(effective) : false;
+  const intl = useIntl();
   return (
     <div className="relatedNews card card-teaser shadow p-4 mt-3 rounded">
       <div className="card-body">
@@ -20,7 +22,7 @@ const NewsCard = ({ title, typology, effective, description, id }) => {
           {typology}
           {date ? (
             <span className="data">
-              {moment(date.toISOString()).format('DD MMM Y')}
+              {viewDate(intl.locale, date, 'DD MMM Y')}
             </span>
           ) : null}
         </div>

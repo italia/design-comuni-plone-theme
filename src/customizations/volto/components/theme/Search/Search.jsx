@@ -11,6 +11,7 @@ import qs from 'query-string';
 import moment from 'moment';
 import { Helmet } from '@plone/volto/helpers';
 
+import { RemoveBodyClass } from '@italia/components/ItaliaTheme';
 import {
   Container,
   Row,
@@ -113,6 +114,15 @@ const messages = defineMessages({
     id: 'section_undefined',
     defaultMessage: 'altro',
   },
+  attenzione: { id: 'Attenzione!', defaultMessage: 'Attenzione!' },
+  errors_occured: {
+    id: 'Sono occorsi degli errori',
+    defaultMessage: 'Sono occorsi degli errori',
+  },
+  no_results: {
+    id: 'Nessun risultato ottenuto',
+    defaultMessage: 'Nessun risultato ottenuto',
+  },
 });
 
 const searchOrderDict = {
@@ -157,6 +167,8 @@ const Search = () => {
     ...SearchUtils.defaultOptions,
     ...parseFetchedOptions({}, location),
   });
+
+  const subsite = useSelector((state) => state.subsite?.data);
 
   const [customPath] = useState(qs.parse(location.search)?.custom_path ?? '');
 
@@ -225,7 +237,9 @@ const Search = () => {
 
   useEffect(() => {
     if (Object.keys(searchFilters?.sections ?? {}).length > 0) {
-      setSections(parseFetchedSections(searchFilters.sections, location));
+      setSections(
+        parseFetchedSections(searchFilters.sections, location, subsite),
+      );
     }
 
     if (searchFilters?.topics?.length > 0) {
@@ -234,7 +248,7 @@ const Search = () => {
 
     setOptions(parseFetchedOptions({}, location));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchFilters]);
+  }, [searchFilters, subsite]);
 
   const searchResults = useSelector((state) => state.searchResults);
   useDebouncedEffect(
@@ -255,6 +269,9 @@ const Search = () => {
       searchOrderDict[sortOn] ?? {},
       (currentPage - 1) * config.settings.defaultPageSize,
       customPath,
+      subsite,
+      intl.locale,
+      true,
     );
 
     searchResults.result &&
@@ -267,283 +284,300 @@ const Search = () => {
           searchOrderDict[sortOn] ?? {},
           (currentPage - 1) * config.settings.defaultPageSize,
           customPath,
+          subsite,
+          intl.locale,
         ),
       );
-    dispatch(getSearchResults(queryString.replace('/search', '')));
+
+    dispatch(getSearchResults(queryString));
   };
 
   return (
-    <div className="public-ui">
+    <>
       <Helmet title={intl.formatMessage(messages.searchResults)} />
-      <Container className="px-4 my-4">
-        <Row>
-          <Col>
-            <Row>
-              <Col className="py-3 py-lg-5">
-                <h1>{intl.formatMessage(messages.searchResults)}</h1>
-              </Col>
-            </Row>
-            <Row>
-              <Col>
-                <TextInput
-                  id="searchableText"
-                  label={intl.formatMessage(messages.searchSite)}
-                  value={searchableText}
-                  onChange={(id, value) => {
-                    setSearchableText(value);
-                  }}
-                  size="lg"
-                  prepend={
-                    <Button
-                      icon
-                      tag="button"
-                      color="link"
-                      size="xs"
-                      onClick={doSearch}
-                    >
-                      <Icon
-                        color=""
-                        icon="it-search"
-                        padding={false}
-                        size="lg"
-                      />
-                    </Button>
-                  }
-                  aria-controls="search-results-region"
-                />
-              </Col>
-            </Row>
-            <div className="d-block d-lg-none d-xl-none">
-              <div className="row pb-3">
-                <div className="col-6">
-                  {searchResults?.result?.items_total > 0 && (
-                    <small>
-                      {intl.formatMessage(messages.foundNResults, {
-                        total: searchResults.result.items_total,
-                      })}
-                    </small>
-                  )}
-                </div>
-                <div className="col-6 align-self-center">
-                  <div className="float-right">
-                    <a
-                      onClick={() => setCollapseFilters((prev) => !prev)}
-                      href="#categoryCollapse"
-                      role="button"
-                      className={cx(
-                        'btn btn-sm font-weight-bold text-uppercase',
-                        {
-                          'btn-outline-primary': collapseFilters,
-                          'btn-primary': !collapseFilters,
-                        },
-                      )}
-                      data-toggle="collapse"
-                      aria-expanded={!collapseFilters}
-                      aria-controls="categoryCollapse"
-                    >
-                      {intl.formatMessage(messages.filtersCollapse)}
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Col>
-        </Row>
-        <Row>
-          <aside className="col-lg-3 py-lg-5">
-            <div className="pr-4"></div>
-            <Collapse
-              isOpen={!collapseFilters}
-              className="d-lg-block d-xl-block"
-              id="categoryCollapse"
-            >
-              <div className="pt-4 pt-lg-0">
-                <h6 className="text-uppercase">
-                  {intl.formatMessage(messages.sections)}
-                </h6>
-                <div className="form-checck mt-4">
-                  <SearchSections
-                    sections={sections}
-                    setSections={setSections}
-                    toggleGroups={true}
-                  />
-                </div>
-              </div>
-              <div className="pt-4 pt-lg-5">
-                <h6 className="text-uppercase">
-                  {intl.formatMessage(messages.topics)}
-                </h6>
-                <div className="form-check mt-4">
-                  <SearchTopics
-                    topics={topics}
-                    setTopics={setTopics}
-                    collapsable={true}
-                  />
-                </div>
-              </div>
 
-              {Object.values(options).filter(
-                (o) => o !== null && o !== undefined,
-              ).length > 0 && (
-                <div className="pt-4 pt-lg-5">
-                  <h6 className="text-uppercase">
-                    {intl.formatMessage(messages.options)}
-                  </h6>
-                  {options.activeContent !== undefined && (
-                    <div className="form-check mt-4">
-                      <Toggle
-                        label={intl.formatMessage(
-                          messages.optionActiveContentLabel,
-                        )}
-                        id="options-active-content"
-                        checked={options.activeContent}
-                        aria-controls="search-results-region"
-                        onChange={(e) => {
-                          const checked = e.currentTarget?.checked ?? false;
-                          setOptions((opts) => ({
-                            ...opts,
-                            activeContent: checked,
-                          }));
-                        }}
-                      />
-                      <p className="small">
-                        {intl.formatMessage(messages.optionActiveContentInfo)}
-                      </p>
-                    </div>
-                  )}
-                </div>
-              )}
-
-              <div className="form-check mt-4">
-                {options?.dateStart && (
-                  <div
-                    role="presentation"
-                    className="chip chip-lg selected"
-                    onClick={() =>
-                      setOptions((opts) => ({ ...opts, dateStart: null }))
+      <div className="public-ui">
+        <Container className="px-4 my-4">
+          <Row>
+            <Col>
+              <Row>
+                <Col className="py-3 py-lg-5">
+                  <h1>{intl.formatMessage(messages.searchResults)}</h1>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <TextInput
+                    id="searchableText"
+                    label={intl.formatMessage(messages.searchSite)}
+                    value={searchableText}
+                    onChange={(id, value) => {
+                      setSearchableText(value);
+                    }}
+                    size="lg"
+                    prepend={
+                      <Button
+                        icon
+                        tag="button"
+                        color="link"
+                        size="xs"
+                        onClick={doSearch}
+                      >
+                        <Icon
+                          color=""
+                          icon="it-search"
+                          padding={false}
+                          size="lg"
+                        />
+                      </Button>
                     }
-                  >
-                    <span className="chip-label">
-                      {`${intl.formatMessage(
-                        messages.optionDateStartButton,
-                      )} ${moment(options.dateStart)
-                        .locale(intl.locale)
-                        .format('LL')}`}
-                    </span>
-                    <button type="button">
-                      <Icon color="" icon="it-close" padding={false} />
-                      <span className="sr-only">
-                        {intl.formatMessage(messages.removeOption)}
-                      </span>
-                    </button>
-                  </div>
-                )}
-                {options?.dateEnd && (
-                  <div
-                    role="presentation"
-                    className="chip chip-lg selected"
-                    onClick={() =>
-                      setOptions((opts) => ({ ...opts, dateEnd: null }))
-                    }
-                  >
-                    <span className="chip-label">
-                      {`${intl.formatMessage(
-                        messages.optionDateEndButton,
-                      )} ${moment(options.dateEnd)
-                        .locale(intl.locale)
-                        .format('LL')}`}
-                    </span>
-                    <button type="button">
-                      <Icon color="" icon="it-close" padding={false} />
-                      <span className="sr-only">
-                        {intl.formatMessage(messages.removeOption)}
-                      </span>
-                    </button>
-                  </div>
-                )}
-              </div>
-            </Collapse>
-          </aside>
-
-          <Col lg={9} tag="section" className="py-lg-5">
-            {searchResults.loadingResults ? (
-              <Spinner active />
-            ) : searchResults?.result?.items_total > 0 ? (
-              <div
-                className="search-results-wrapper"
-                role="region"
-                id="search-results-region"
-                aria-live="polite"
-              >
-                <div className="d-block ordering-widget">
-                  <Row className="pb-3 border-bottom">
-                    <Col xs={6} className="align-self-center">
-                      <p className="d-none d-lg-block">
+                    aria-controls="search-results-region"
+                  />
+                </Col>
+              </Row>
+              <div className="d-block d-lg-none d-xl-none">
+                <div className="row pb-3">
+                  <div className="col-6">
+                    {searchResults?.result?.items_total > 0 && (
+                      <small>
                         {intl.formatMessage(messages.foundNResults, {
                           total: searchResults.result.items_total,
                         })}
-                      </p>
-                      <p className="d-block d-lg-none mb-0 text-right">
-                        {intl.formatMessage(messages.orderBy)}
-                      </p>
-                    </Col>
-                    <Col xs={6}>
-                      <SelectInput
-                        id="search-sort-on"
-                        value={
-                          sortOnOptions.filter((o) => o.value === sortOn)[0]
-                        }
-                        label={intl.formatMessage(messages.orderBy)}
-                        placeholder={intl.formatMessage(messages.orderBy)}
-                        onChange={(opt) => setSortOn(opt.value)}
-                        options={sortOnOptions}
-                      />
-                    </Col>
-                  </Row>
-                </div>
-                <Row>
-                  {searchResults?.result?.items?.map((i) => (
-                    <Col md={6} key={i['@id']}>
-                      <Card
-                        teaser
-                        noWrapper={true}
-                        className={cx('mt-3 mb-2 border-bottom-half', {
-                          'border-right border-light': i % 3 !== 2,
-                        })}
-                      >
-                        <CardBody>
-                          {i['@type'] && getSectionFromId(i['@id'])}
-                          <h4 className="card-title">
-                            <UniversalLink item={i}>{i.title}</UniversalLink>
-                          </h4>
-                          <p className="card-text">{i.description}</p>
-                        </CardBody>
-                      </Card>
-                    </Col>
-                  ))}
-                </Row>
-                {searchResults?.result?.batching && (
-                  <Pagination
-                    activePage={currentPage}
-                    totalPages={Math.ceil(
-                      (searchResults?.result?.items_total ?? 0) /
-                        config.settings.defaultPageSize,
+                      </small>
                     )}
-                    onPageChange={handleQueryPaginationChange}
-                  />
-                )}
+                  </div>
+                  <div className="col-6 align-self-center">
+                    <div className="float-right">
+                      <a
+                        onClick={() => setCollapseFilters((prev) => !prev)}
+                        href="#categoryCollapse"
+                        role="button"
+                        className={cx(
+                          'btn btn-sm font-weight-bold text-uppercase',
+                          {
+                            'btn-outline-primary': collapseFilters,
+                            'btn-primary': !collapseFilters,
+                          },
+                        )}
+                        data-toggle="collapse"
+                        aria-expanded={!collapseFilters}
+                        aria-controls="categoryCollapse"
+                      >
+                        {intl.formatMessage(messages.filtersCollapse)}
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
-            ) : searchResults.error ? (
-              <Alert color="danger">
-                <strong>Attenzione!</strong> Sono occorsi degli errori
-              </Alert>
-            ) : (
-              <p>Nessun risultato ottenuto</p>
-            )}
-          </Col>
-        </Row>
-      </Container>
-    </div>
+            </Col>
+          </Row>
+          <Row>
+            <aside className="col-lg-3 py-lg-5">
+              <div className="pr-4"></div>
+              <Collapse
+                isOpen={!collapseFilters}
+                className="d-lg-block d-xl-block"
+                id="categoryCollapse"
+              >
+                {Object.keys(sections)?.length > 0 && (
+                  <div className="pt-4 pt-lg-0">
+                    <h6 className="text-uppercase">
+                      {intl.formatMessage(messages.sections)}
+                    </h6>
+                    <div className="form-checck mt-4">
+                      <SearchSections
+                        sections={sections}
+                        setSections={setSections}
+                        toggleGroups={true}
+                      />
+                    </div>
+                  </div>
+                )}
+                <div
+                  className={
+                    Object.keys(sections)?.length > 0
+                      ? 'pt-4 pt-lg-5'
+                      : 'pt-4 pt-lg-0'
+                  }
+                >
+                  <h6 className="text-uppercase">
+                    {intl.formatMessage(messages.topics)}
+                  </h6>
+                  <div className="form-check mt-4">
+                    <SearchTopics
+                      topics={topics}
+                      setTopics={setTopics}
+                      collapsable={true}
+                    />
+                  </div>
+                </div>
+
+                {Object.values(options).filter(
+                  (o) => o !== null && o !== undefined,
+                ).length > 0 && (
+                  <div className="pt-4 pt-lg-5">
+                    <h6 className="text-uppercase">
+                      {intl.formatMessage(messages.options)}
+                    </h6>
+                    {options.activeContent !== undefined && (
+                      <div className="form-check mt-4">
+                        <Toggle
+                          label={intl.formatMessage(
+                            messages.optionActiveContentLabel,
+                          )}
+                          id="options-active-content"
+                          checked={options.activeContent}
+                          aria-controls="search-results-region"
+                          onChange={(e) => {
+                            const checked = e.currentTarget?.checked ?? false;
+                            setOptions((opts) => ({
+                              ...opts,
+                              activeContent: checked,
+                            }));
+                          }}
+                        />
+                        <p className="small">
+                          {intl.formatMessage(messages.optionActiveContentInfo)}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                <div className="form-check mt-4">
+                  {options?.dateStart && (
+                    <div
+                      role="presentation"
+                      className="chip chip-lg selected"
+                      onClick={() =>
+                        setOptions((opts) => ({ ...opts, dateStart: null }))
+                      }
+                    >
+                      <span className="chip-label">
+                        {`${intl.formatMessage(
+                          messages.optionDateStartButton,
+                        )} ${moment(options.dateStart)
+                          .locale(intl.locale)
+                          .format('LL')}`}
+                      </span>
+                      <button type="button">
+                        <Icon color="" icon="it-close" padding={false} />
+                        <span className="sr-only">
+                          {intl.formatMessage(messages.removeOption)}
+                        </span>
+                      </button>
+                    </div>
+                  )}
+                  {options?.dateEnd && (
+                    <div
+                      role="presentation"
+                      className="chip chip-lg selected"
+                      onClick={() =>
+                        setOptions((opts) => ({ ...opts, dateEnd: null }))
+                      }
+                    >
+                      <span className="chip-label">
+                        {`${intl.formatMessage(
+                          messages.optionDateEndButton,
+                        )} ${moment(options.dateEnd)
+                          .locale(intl.locale)
+                          .format('LL')}`}
+                      </span>
+                      <button type="button">
+                        <Icon color="" icon="it-close" padding={false} />
+                        <span className="sr-only">
+                          {intl.formatMessage(messages.removeOption)}
+                        </span>
+                      </button>
+                    </div>
+                  )}
+                </div>
+              </Collapse>
+            </aside>
+
+            <Col lg={9} tag="section" className="py-lg-5">
+              {searchResults.loadingResults ? (
+                <Spinner active />
+              ) : searchResults?.result?.items_total > 0 ? (
+                <div
+                  className="search-results-wrapper"
+                  role="region"
+                  id="search-results-region"
+                  aria-live="polite"
+                >
+                  <div className="d-block ordering-widget">
+                    <Row className="pb-3 border-bottom">
+                      <Col xs={6} className="align-self-center">
+                        <p className="d-none d-lg-block">
+                          {intl.formatMessage(messages.foundNResults, {
+                            total: searchResults.result.items_total,
+                          })}
+                        </p>
+                        <p className="d-block d-lg-none mb-0 text-right">
+                          {intl.formatMessage(messages.orderBy)}
+                        </p>
+                      </Col>
+                      <Col xs={6}>
+                        <SelectInput
+                          id="search-sort-on"
+                          value={
+                            sortOnOptions.filter((o) => o.value === sortOn)[0]
+                          }
+                          label={intl.formatMessage(messages.orderBy)}
+                          placeholder={intl.formatMessage(messages.orderBy)}
+                          onChange={(opt) => setSortOn(opt.value)}
+                          options={sortOnOptions}
+                        />
+                      </Col>
+                    </Row>
+                  </div>
+                  <Row>
+                    {searchResults?.result?.items?.map((i) => (
+                      <Col md={6} key={i['@id']}>
+                        <Card
+                          teaser
+                          noWrapper={true}
+                          className={cx('mt-3 mb-2 border-bottom-half', {
+                            'border-right border-light': i % 3 !== 2,
+                          })}
+                        >
+                          <CardBody>
+                            {i['@type'] && getSectionFromId(i['@id'])}
+                            <h4 className="card-title">
+                              <UniversalLink item={i}>{i.title}</UniversalLink>
+                            </h4>
+                            <p className="card-text">{i.description}</p>
+                          </CardBody>
+                        </Card>
+                      </Col>
+                    ))}
+                  </Row>
+                  {searchResults?.result?.batching && (
+                    <Pagination
+                      activePage={currentPage}
+                      totalPages={Math.ceil(
+                        (searchResults?.result?.items_total ?? 0) /
+                          config.settings.defaultPageSize,
+                      )}
+                      onPageChange={handleQueryPaginationChange}
+                    />
+                  )}
+                </div>
+              ) : searchResults.error ? (
+                <Alert color="danger">
+                  <strong>{intl.formatMessage(messages.attenzione)}</strong>{' '}
+                  {intl.formatMessage(messages.errors_occured)}
+                </Alert>
+              ) : (
+                <p>{intl.formatMessage(messages.no_results)}</p>
+              )}
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      {/*force remove body class for subsite search pages*/}
+      <RemoveBodyClass className="cms-ui" />
+    </>
   );
 };
 

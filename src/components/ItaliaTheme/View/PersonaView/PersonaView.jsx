@@ -5,7 +5,7 @@
 
 import React, { createRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import moment from 'moment';
+
 import { defineMessages, useIntl } from 'react-intl';
 import {
   Attachments,
@@ -24,7 +24,7 @@ import {
   RelatedItemInEvidence,
   richTextHasContent,
 } from '@italia/components/ItaliaTheme/View';
-import { contentFolderHasItems } from '@italia/helpers';
+import { contentFolderHasItems, viewDate } from '@italia/helpers';
 
 const messages = defineMessages({
   biografia: {
@@ -265,7 +265,11 @@ const PersonaView = ({ content }) => {
                         <h5>
                           {intl.formatMessage(messages.data_insediamento)}
                         </h5>
-                        {moment(content?.data_insediamento).format('DD-MM-Y')}
+                        {viewDate(
+                          intl.locale,
+                          content?.data_insediamento,
+                          'DD-MM-Y',
+                        )}
                       </div>
                     )}
 
@@ -294,7 +298,9 @@ const PersonaView = ({ content }) => {
                     <strong>
                       {intl.formatMessage(messages.data_conclusione_incarico)}:
                     </strong>{' '}
-                    {moment(content?.data_conclusione_incarico).format(
+                    {viewDate(
+                      intl.locale,
+                      content?.data_conclusione_incarico,
                       'DD-MM-Y',
                     )}
                   </p>

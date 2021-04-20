@@ -1,6 +1,5 @@
 import { defineMessages, useIntl } from 'react-intl';
 import React from 'react';
-import moment from 'moment/min/moment-with-locales';
 import { rrulestr } from 'rrule';
 import { rrulei18n } from '@plone/volto/components/manage/Widgets/RecurrenceWidget/Utils';
 import {
@@ -9,6 +8,7 @@ import {
   CardBody,
 } from 'design-react-kit/dist/design-react-kit';
 import PropTypes from 'prop-types';
+import { viewDate } from '@italia/helpers';
 
 const messages = defineMessages({
   start: {
@@ -37,7 +37,6 @@ const messages = defineMessages({
  */
 const Dates = ({ content, show_image }) => {
   const intl = useIntl();
-  moment.locale(intl.locale);
   let rruleSet = null;
   let recurrenceText = null;
 
@@ -56,16 +55,19 @@ const Dates = ({ content, show_image }) => {
     );
   }
 
+  const start = viewDate(intl.locale, content.start);
+  const end = viewDate(intl.locale, content.end);
+
   return content ? (
     <>
       <div className="point-list-wrapper my-4 mb-5">
         <div className="point-list">
           <div className="point-list-aside point-list-warning">
             <div className="point-date text-monospace">
-              {moment(content.start).format('DD')}
+              {start.format('DD')}
             </div>
             <div className="point-month text-monospace">
-              {moment(content.start).format('MMMM')}
+              {start.format('MMMM')}
             </div>
           </div>
           <div className="point-list-content">
@@ -76,8 +78,7 @@ const Dates = ({ content, show_image }) => {
             >
               <CardBody tag="div" className={'card-body'}>
                 <CardTitle tag="h5">
-                  {!content.whole_day &&
-                    `${moment(content.start).format('HH:mm')} - `}
+                  {!content.whole_day && `${start.format('HH:mm')} - `}
                   {intl.formatMessage(messages.start)}
                 </CardTitle>
               </CardBody>
@@ -86,11 +87,9 @@ const Dates = ({ content, show_image }) => {
         </div>
         <div className="point-list">
           <div className="point-list-aside point-list-warning">
-            <div className="point-date text-monospace">
-              {moment(content.end).format('DD')}
-            </div>
+            <div className="point-date text-monospace">{end.format('DD')}</div>
             <div className="point-month text-monospace">
-              {moment(content.end).format('MMMM')}
+              {end.format('MMMM')}
             </div>
           </div>
           <div className="point-list-content">
@@ -101,8 +100,7 @@ const Dates = ({ content, show_image }) => {
             >
               <CardBody tag="div" className={'card-body'}>
                 <CardTitle tag="h5">
-                  {!content.whole_day &&
-                    `${moment(content.end).format('HH:mm')} - `}
+                  {!content.whole_day && `${end.format('HH:mm')} - `}
                   {intl.formatMessage(messages.end)}
                 </CardTitle>
               </CardBody>
@@ -120,7 +118,7 @@ const Dates = ({ content, show_image }) => {
           <h5>{intl.formatMessage(messages.additional_dates)}</h5>
           {rruleSet.rdates().map((additionalDate) => (
             <div className="text-serif">
-              {moment(additionalDate).format('dddd DD MMMM YYYY')}
+              {viewDate(intl.locale, additionalDate, 'dddd DD MMMM YYYY')}
             </div>
           ))}
         </div>
@@ -130,7 +128,7 @@ const Dates = ({ content, show_image }) => {
           <h5>{intl.formatMessage(messages.excluded_dates)}</h5>
           {rruleSet.exdates().map((exDate) => (
             <div className="text-serif">
-              {moment(exDate).format('dddd DD MMMM YYYY')}
+              {viewDate(intl.locale, exDate, 'dddd DD MMMM YYYY')}
             </div>
           ))}
         </div>
