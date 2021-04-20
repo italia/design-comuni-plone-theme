@@ -19,7 +19,8 @@ const messages = defineMessages({
   },
   linkUrl_description: {
     id: 'searchsectionswidget-linkUrl_description',
-    defaultMessage: 'Select an internal url clicking on the right button',
+    defaultMessage:
+      'Select an internal url clicking on the right button. If section is empty (has no children), it will not be displayed.',
   },
   deleteButton: {
     id: 'searchsectionswidget-deleteitem-button',

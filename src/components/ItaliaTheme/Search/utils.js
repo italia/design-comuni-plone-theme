@@ -69,21 +69,23 @@ const parseFetchedSections = (fetchedSections, location, subsite) => {
   return Object.keys(sections).reduce((acc, sec) => {
     let id = sections[sec].id;
     let sectionItems = sections[sec].items;
-    acc[id] = {
-      path: flattenToAppURL(sections[sec]['@id']),
-      title: sections[sec].title,
-      items:
-        sectionItems &&
-        sectionItems.reduce((itemsAcc, subSec) => {
-          let subSectionUrl = flattenToAppURL(subSec['@id']);
-          itemsAcc[subSectionUrl] = {
-            value: qsSections.indexOf(subSectionUrl) > -1,
-            label: subSec.title,
-          };
+    if (sectionItems) {
+      acc[id] = {
+        path: flattenToAppURL(sections[sec]['@id']),
+        title: sections[sec].title,
+        items:
+          sectionItems &&
+          sectionItems.reduce((itemsAcc, subSec) => {
+            let subSectionUrl = flattenToAppURL(subSec['@id']);
+            itemsAcc[subSectionUrl] = {
+              value: qsSections.indexOf(subSectionUrl) > -1,
+              label: subSec.title,
+            };
 
-          return itemsAcc;
-        }, {}),
-    };
+            return itemsAcc;
+          }, {}),
+      };
+    }
 
     return acc;
   }, {});

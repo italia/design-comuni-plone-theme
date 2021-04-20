@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-04-19T08:06:01.426Z\n"
+"POT-Creation-Date: 2021-04-20T06:38:44.681Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1955,7 +1955,7 @@ msgid "searchsectionswidget-linkUrl"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
-# defaultMessage: Select an internal url clicking on the right button
+# defaultMessage: Select an internal url clicking on the right button. If section is empty (has no children), it will not be displayed.
 msgid "searchsectionswidget-linkUrl_description"
 msgstr ""
 

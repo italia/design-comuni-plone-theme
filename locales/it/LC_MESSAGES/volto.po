@@ -1586,7 +1586,7 @@ msgstr "Destinazione"
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm
 msgid "searchsectionswidget-linkUrl_description"
-msgstr "Seleziona un link interno cliccando sul bottone a destra"
+msgstr "Seleziona un link interno cliccando sul bottone a destra. Attenzione, se la sezione è vuota (non ha figli), non verrà mostrata."
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-move-item-down"
