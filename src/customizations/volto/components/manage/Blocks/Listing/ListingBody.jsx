@@ -47,7 +47,6 @@ const ListingBody = React.memo(
     useEffect(() => {
       if (
         data?.query?.length > 0 &&
-        !querystringResults?.loading &&
         (isEditMode || (!isEditMode && !querystringResults?.loaded))
       ) {
         doSearch(data);
