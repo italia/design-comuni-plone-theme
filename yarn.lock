@@ -17747,9 +17747,9 @@ volto-cookie-banner@collective/volto-cookie-banner#v2.0.0:
   dependencies:
     react-cookie-consent "^3.0.0"
 
-volto-dropdownmenu@collective/volto-dropdownmenu#v2.2.3:
-  version "2.2.3"
-  resolved "https://codeload.github.com/collective/volto-dropdownmenu/tar.gz/6296febd1f0524089fa6e77e58a5369d79e0c714"
+volto-dropdownmenu@collective/volto-dropdownmenu#v2.2.4:
+  version "2.2.4"
+  resolved "https://codeload.github.com/collective/volto-dropdownmenu/tar.gz/71a329d9b23a5276738344c484f02bf27fb0be0c"
   dependencies:
     react-outside-click-handler "1.3.0"
 
