@@ -174,7 +174,19 @@ const Search = () => {
 
   const [sortOn, setSortOn] = useState('relevance');
   const [currentPage, setCurrentPage] = useState(1);
-  const [collapseFilters, setCollapseFilters] = useState(true);
+  const [collapseFilters, _setCollapseFilters] = useState(true);
+
+  const setCollapseFilters = (collapse) => {
+    _setCollapseFilters(collapse);
+    if (window?.innerWidth <= 991 && collapse)
+      setTimeout(
+        () =>
+          document
+            .querySelector('main')
+            ?.scrollIntoView?.({ behavior: 'smooth' }),
+        100,
+      );
+  };
 
   const sortOnOptions = [
     {
@@ -334,15 +346,21 @@ const Search = () => {
                       </small>
                     )}
                   </div>
-                  <div className="col-6">
+                  <div className="col-6 align-self-center">
                     <div className="float-right">
                       <a
                         onClick={() => setCollapseFilters((prev) => !prev)}
                         href="#categoryCollapse"
                         role="button"
-                        className="font-weight-bold text-uppercase"
+                        className={cx(
+                          'btn btn-sm font-weight-bold text-uppercase',
+                          {
+                            'btn-outline-primary': collapseFilters,
+                            'btn-primary': !collapseFilters,
+                          },
+                        )}
                         data-toggle="collapse"
-                        aria-expanded={collapseFilters}
+                        aria-expanded={!collapseFilters}
                         aria-controls="categoryCollapse"
                       >
                         {intl.formatMessage(messages.filtersCollapse)}
@@ -378,7 +396,7 @@ const Search = () => {
                 <div
                   className={
                     Object.keys(sections)?.length > 0
-                      ? 'pt-2 pt-lg-5'
+                      ? 'pt-4 pt-lg-5'
                       : 'pt-4 pt-lg-0'
                   }
                 >
@@ -397,7 +415,7 @@ const Search = () => {
                 {Object.values(options).filter(
                   (o) => o !== null && o !== undefined,
                 ).length > 0 && (
-                  <div className="pt-2 pt-lg-5">
+                  <div className="pt-4 pt-lg-5">
                     <h6 className="text-uppercase">
                       {intl.formatMessage(messages.options)}
                     </h6>
@@ -487,13 +505,16 @@ const Search = () => {
                   id="search-results-region"
                   aria-live="polite"
                 >
-                  <div className="d-none d-lg-block d-xl-block">
-                    <Row className="pb-3 px-4 border-bottom">
+                  <div className="d-block ordering-widget">
+                    <Row className="pb-3 border-bottom">
                       <Col xs={6} className="align-self-center">
-                        <p>
+                        <p className="d-none d-lg-block">
                           {intl.formatMessage(messages.foundNResults, {
                             total: searchResults.result.items_total,
                           })}
+                        </p>
+                        <p className="d-block d-lg-none mb-0 text-right">
+                          {intl.formatMessage(messages.orderBy)}
                         </p>
                       </Col>
                       <Col xs={6}>
