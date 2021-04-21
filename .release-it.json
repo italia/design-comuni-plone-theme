@@ -15,26 +15,28 @@
   },
   "plugins": {
     "@release-it/conventional-changelog": {
-      "preset": "angular",
       "infile": "CHANGELOG.md",
-      "types": [
-        {
-          "type": "feat",
-          "section": "Features"
-        },
-        {
-          "type": "fix",
-          "section": "Bug Fixes"
-        },
-        {
-          "type": "refactor",
-          "section": "Changes"
-        },
-        {
-          "type": "chore",
-          "section": "Maintenance"
-        }
-      ]
+      "preset": {
+        "name": "conventionalcommits",
+        "types": [
+          {
+            "type": "feat",
+            "section": "Features"
+          },
+          {
+            "type": "fix",
+            "section": "Bug Fixes"
+          },
+          {
+            "type": "refactor",
+            "section": "Changes"
+          },
+          {
+            "type": "chore",
+            "section": "Maintenance"
+          }
+        ]
+      }
     }
   }
 }
