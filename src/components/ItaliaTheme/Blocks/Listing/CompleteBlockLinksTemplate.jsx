@@ -36,68 +36,72 @@ const CompleteBlockLinksTemplate = ({
         'public-ui': isEditMode,
       })}
     >
-      <Container className="px-4 px-md-0">
-        {title && (
-          <Row>
-            <Col>
-              <h2 className="mb-4">{title}</h2>
-            </Col>
-          </Row>
-        )}
-        <Row className="items">
-          {items.map((item, index) => {
-            const image = item.image || item.immagine_testata;
-
-            return (
-              <Col md="6" lg="3" key={item['@id']} className="col-item">
-                <Card
-                  color=""
-                  className="card-bg rounded"
-                  noWrapper={false}
-                  tag="div"
-                >
-                  <UniversalLink
-                    item={!isEditMode ? item : null}
-                    href={isEditMode ? '#' : null}
-                  >
-                    <div className="d-flex">
-                      {image && (
-                        <div className="image-container">
-                          <img
-                            src={flattenToAppURL(image.scales.preview.download)}
-                            alt=""
-                            aria-hidden="true"
-                          />
-                        </div>
-                      )}
-                      <div>
-                        <CardBody>
-                          <CardTitle tag="h3" className="text-secondary">
-                            {item.title}
-                          </CardTitle>
-                          <CardText tag="p" className="text-secondary">
-                            {item.description}
-                          </CardText>
-                        </CardBody>
-                      </div>
-                    </div>
-                  </UniversalLink>
-                </Card>
+      <div className="full-width">
+        <Container className="px-4">
+          {title && (
+            <Row>
+              <Col>
+                <h2 className="mb-4">{title}</h2>
               </Col>
-            );
-          })}
-        </Row>
-        {linkMore?.href && (
-          <div className="link-button text-center my-4">
-            <UniversalLink
-              href={flattenToAppURL(linkMore.href)}
-              className="btn btn-tertiary"
-            >
-              {linkMore.title || intl.formatMessage(messages.view_all)}
-            </UniversalLink>
-          </div>
-        )}
-      </Container>
+            </Row>
+          )}
+          <Row className="items">
+            {items.map((item, index) => {
+              const image = item.image || item.immagine_testata;
+
+              return (
+                <Col md="6" lg="3" key={item['@id']} className="col-item">
+                  <Card
+                    color=""
+                    className="card-bg rounded"
+                    noWrapper={false}
+                    tag="div"
+                  >
+                    <UniversalLink
+                      item={!isEditMode ? item : null}
+                      href={isEditMode ? '#' : null}
+                    >
+                      <div className="d-flex">
+                        {image && (
+                          <div className="image-container">
+                            <img
+                              src={flattenToAppURL(
+                                image.scales.preview.download,
+                              )}
+                              alt=""
+                              aria-hidden="true"
+                            />
+                          </div>
+                        )}
+                        <div>
+                          <CardBody>
+                            <CardTitle tag="h3" className="text-secondary">
+                              {item.title}
+                            </CardTitle>
+                            <CardText tag="p" className="text-secondary">
+                              {item.description}
+                            </CardText>
+                          </CardBody>
+                        </div>
+                      </div>
+                    </UniversalLink>
+                  </Card>
+                </Col>
+              );
+            })}
+          </Row>
+          {linkMore?.href && (
+            <div className="link-button text-center my-4">
+              <UniversalLink
+                href={flattenToAppURL(linkMore.href)}
+                className="btn btn-tertiary"
+              >
+                {linkMore.title || intl.formatMessage(messages.view_all)}
+              </UniversalLink>
+            </div>
+          )}
+        </Container>
+      </div>
     </div>
   );
 };
