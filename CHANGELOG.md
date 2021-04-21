@@ -1,3 +1,11 @@
+### [3.0.14](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.13...v3.0.14) (2021-04-21)
+
+
+### Maintenance
+
+* fix release-it config for changelog ([95dacfa](https://github.com/RedTurtle/design-volto-theme/commit/95dacfad9cd191680ab1f110d1d3580619f75b2c))
+* upgrade addons ([a0f7841](https://github.com/RedTurtle/design-volto-theme/commit/a0f7841b22a44947ecb17d20e8361ae2354cbd0a))
+
 ## [3.0.13](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.12...v3.0.13) (2021-04-21)
 
 
