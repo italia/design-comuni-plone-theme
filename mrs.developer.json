@@ -60,7 +60,7 @@
     "path": "src",
     "https": "https://github.com/RedTurtle/volto-editablefooter.git",
     "url": "git@github.com:RedTurtle/volto-editablefooter.git",
-    "tag": "v3.1.2"
+    "tag": "v3.1.3"
   },
   "volto-blocks-widget": {
     "package": "@italia/addons/volto-blocks-widget",
@@ -81,7 +81,7 @@
     "path": "src",
     "https": "https://github.com/collective/volto-secondarymenu.git",
     "url": "git@github.com:collective/volto-secondarymenu.git",
-    "tag": "v2.1.2"
+    "tag": "v2.1.3"
   },
   "volto-form-block": {
     "package": "@italia/addons/volto-form-block",

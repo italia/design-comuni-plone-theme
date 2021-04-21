@@ -18114,9 +18114,9 @@ volto-dropdownmenu@collective/volto-dropdownmenu#v2.2.4:
   dependencies:
     react-outside-click-handler "1.3.0"
 
-volto-editablefooter@RedTurtle/volto-editablefooter#v3.1.2:
-  version "3.1.2"
-  resolved "https://codeload.github.com/RedTurtle/volto-editablefooter/tar.gz/7995b4464c7e0bd59e3106435709f40ad3bdba4b"
+volto-editablefooter@RedTurtle/volto-editablefooter#v3.1.3:
+  version "3.1.3"
+  resolved "https://codeload.github.com/RedTurtle/volto-editablefooter/tar.gz/091e18af73e8dbf53f58b66e51e1c549d27c4860"
   dependencies:
     react-outside-click-handler "1.3.0"
 
@@ -18146,9 +18146,9 @@ volto-rss-block@redturtle/volto-rss-block#v2.0.0:
   dependencies:
     rss-parser "3.7.5"
 
-volto-secondarymenu@collective/volto-secondarymenu#v2.1.2:
-  version "2.1.2"
-  resolved "https://codeload.github.com/collective/volto-secondarymenu/tar.gz/43b9474b3c83d6f44693a99a83f1489e02e64450"
+volto-secondarymenu@collective/volto-secondarymenu#v2.1.3:
+  version "2.1.3"
+  resolved "https://codeload.github.com/collective/volto-secondarymenu/tar.gz/91a23823e46855c63b41e2c5c20b4d39a92311b7"
 
 volto-social-settings@collective/volto-social-settings#v2.1.0:
   version "2.1.0"
