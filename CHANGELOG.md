@@ -1,3 +1,11 @@
+## [3.0.13](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.12...v3.0.13) (2021-04-21)
+
+
+### Bug Fixes
+
+* fixed unload results in editMode if query params changes ([ba66125](https://github.com/RedTurtle/design-volto-theme/commit/ba6612532dd09778a09d2f0be449059921d2440c))
+* hide search section if is empty (hasn't children) ([4fac6cd](https://github.com/RedTurtle/design-volto-theme/commit/4fac6cdee72d017491248a38c171dd326cb80e87))
+
 ## [3.0.12](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.11...v3.0.12) (2021-04-19)
 
 
