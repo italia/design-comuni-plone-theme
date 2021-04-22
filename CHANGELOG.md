@@ -1,3 +1,16 @@
+### [3.0.15](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.14...v3.0.15) (2021-04-22)
+
+
+### Bug Fixes
+
+* fixed CompleteBlocksLinksTemplate container width on desktop ([d645129](https://github.com/RedTurtle/design-volto-theme/commit/d645129364dee35672b436877cf1cece45a89103))
+
+
+### Maintenance
+
+* updated translations ([3922514](https://github.com/RedTurtle/design-volto-theme/commit/3922514d76b814a88bec0cdcbe49892d85341d3a))
+* updated volto-blocks-widget addon ([7288983](https://github.com/RedTurtle/design-volto-theme/commit/728898397c5379d9d4740e463697b029b2e67654))
+
 ### [3.0.14](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.13...v3.0.14) (2021-04-21)
 
 
