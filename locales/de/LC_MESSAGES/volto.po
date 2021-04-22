@@ -27,7 +27,6 @@ msgstr ""
 "X-Is-Fallback-For: de-at de-li de-lu de-ch de-de\n"
 
 #: components/ItaliaTheme/Header/HeaderSlim/ArLogin
-#: components/ItaliaTheme/Header/HeaderSlim/HeaderSlimRightZone
 msgid "Accedi all'area personale"
 msgstr ""
 
@@ -68,6 +67,7 @@ msgstr ""
 msgid "Cerca per parola chiave"
 msgstr ""
 
+#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Clicca qui per sostituire il file"
@@ -126,6 +126,7 @@ msgid "Dimensione della mappa"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
 msgid "Email Success"
 msgstr ""
 
@@ -134,6 +135,7 @@ msgid "Email sent"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
 msgid "Error"
 msgstr ""
 
@@ -248,6 +250,7 @@ msgstr ""
 msgid "Required"
 msgstr ""
 
+#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Rimuovi il file"
@@ -274,6 +277,7 @@ msgstr ""
 msgid "Seguici su"
 msgstr ""
 
+#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Seleziona un file"
@@ -316,16 +320,19 @@ msgstr ""
 msgid "Titolo"
 msgstr ""
 
+#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Trascina qui il file ..."
 msgstr ""
 
+#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Trascina qui un file per caricare un nuovo file"
 msgstr ""
 
+#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Trascina qui un file per sostituire quello esistente"
@@ -450,7 +457,6 @@ msgstr ""
 msgid "always_show_image"
 msgstr ""
 
-#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "amministrazione"
 msgstr ""
@@ -763,12 +769,10 @@ msgstr ""
 msgid "dirigente"
 msgstr ""
 
-#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "documenti"
 msgstr ""
 
-#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "documenti-e-dati"
 msgstr ""
@@ -952,6 +956,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Edit
 #: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
 msgid "form_default_submit_label"
 msgstr ""
 
@@ -964,6 +969,7 @@ msgid "form_edit_warning_from"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
 msgid "form_empty_values_validation"
 msgstr ""
 
@@ -1238,7 +1244,6 @@ msgstr ""
 msgid "notizie_in_evidenza"
 msgstr ""
 
-#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "novita"
 msgstr ""
@@ -1639,7 +1644,6 @@ msgstr ""
 msgid "service_not_active"
 msgstr ""
 
-#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "servizi"
 msgstr ""
@@ -1655,10 +1659,6 @@ msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Sharing
 msgid "share"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Listing/Options/PhotogalleryTemplateOptions
-msgid "showOneSlide"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
@@ -1703,14 +1703,17 @@ msgid "situazione_patrimoniale"
 msgstr ""
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
+#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 msgid "skiplink-footer"
 msgstr ""
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
+#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 msgid "skiplink-main-content"
 msgstr ""
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
+#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 msgid "skiplink-navigation"
 msgstr ""
 
