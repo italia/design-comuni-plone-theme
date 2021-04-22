@@ -58,7 +58,9 @@ const Navigation = ({ pathname }) => {
   useEffect(() => {
     const blocksClickListener = (e) => {
       const menuLinks = [
-        ...document.querySelectorAll('.menu-wrapper a:not([aria-haspopup])'),
+        ...(document?.querySelectorAll(
+          '.menu-wrapper a:not([aria-haspopup])',
+        ) ?? []),
       ];
 
       if (

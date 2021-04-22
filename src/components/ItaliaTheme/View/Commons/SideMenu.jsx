@@ -126,7 +126,7 @@ const SideMenu = ({ data }) => {
 
   const handleClickAnchor = (id) => (e) => {
     e.preventDefault();
-    document.getElementById(id).scrollIntoView({
+    document.getElementById(id)?.scrollIntoView?.({
       behavior: 'smooth',
       block: 'start',
     });
