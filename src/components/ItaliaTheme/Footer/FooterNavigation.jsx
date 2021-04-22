@@ -18,8 +18,8 @@ import {
   LinkList,
   LinkListItem,
 } from 'design-react-kit/dist/design-react-kit';
-
 import { SectionIcon } from '@italia/components/ItaliaTheme';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   goToPage: {
@@ -30,12 +30,18 @@ const messages = defineMessages({
 
 const FooterNavigation = () => {
   const intl = useIntl();
+  const currentLang = useSelector((state) => state.intl.locale);
   const dispatch = useDispatch();
   const items = useSelector((state) => state.navigation.items, isEqual);
 
+  let path = '';
+  if (config.settings.isMultilingual) {
+    path = '/' + currentLang;
+  }
+
   useEffect(() => {
-    dispatch(getNavigation(getBaseUrl(''), 2));
-  }, [dispatch]);
+    dispatch(getNavigation(getBaseUrl(path), 2));
+  }, [path, dispatch]);
 
   return (
     <>

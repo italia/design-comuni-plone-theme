@@ -183,7 +183,6 @@ export default function applyConfig(voltoConfig) {
       edit: SearchSectionsEdit,
       restricted: false,
       mostUsed: false,
-      blockHasOwnFocusManagement: true,
       security: {
         addPermission: [],
         view: [],
@@ -199,7 +198,6 @@ export default function applyConfig(voltoConfig) {
       edit: CalendarEdit,
       restricted: false,
       mostUsed: false,
-      blockHasOwnFocusManagement: true,
       security: {
         addPermission: [],
         view: [],
@@ -215,7 +213,6 @@ export default function applyConfig(voltoConfig) {
       edit: EventSearchEdit,
       restricted: false,
       mostUsed: false,
-      blockHasOwnFocusManagement: true,
       security: {
         addPermission: [],
         view: [],

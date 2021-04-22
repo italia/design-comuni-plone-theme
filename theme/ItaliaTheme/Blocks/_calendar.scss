@@ -65,9 +65,16 @@
     font-weight: 400;
   }
 
-  .calendar-type {
-    font-size: 0.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
+  .calendar-item {
+    .calendar-type {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .scadenza_message {
+      color: $complementary-1-b5;
+      font-size: 0.8em;
+    }
   }
 }
