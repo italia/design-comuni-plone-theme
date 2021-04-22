@@ -18,8 +18,8 @@ import {
   LinkList,
   LinkListItem,
 } from 'design-react-kit/dist/design-react-kit';
-import config from '@plone/volto/registry';
 import { SectionIcon } from '@italia/components/ItaliaTheme';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   goToPage: {
