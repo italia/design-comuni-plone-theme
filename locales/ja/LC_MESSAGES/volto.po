@@ -595,6 +595,7 @@ msgstr ""
 msgid "chiama_il_numero_fax"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Calendar/Item
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 #: components/ItaliaTheme/View/Commons/BandoDates
 msgid "chiusura_procedimento_bando"
@@ -1471,10 +1472,12 @@ msgstr ""
 msgid "ruolo"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Calendar/Item
 #: components/ItaliaTheme/View/Commons/BandoDates
 msgid "scadenza_bando"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Calendar/Item
 #: components/ItaliaTheme/View/Commons/BandoDates
 msgid "scadenza_domande_bando"
 msgstr ""

@@ -605,6 +605,7 @@ msgstr "Appeler le numéro"
 msgid "chiama_il_numero_fax"
 msgstr "Appeler le numéro de fax"
 
+#: components/ItaliaTheme/Blocks/Calendar/Item
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 #: components/ItaliaTheme/View/Commons/BandoDates
 msgid "chiusura_procedimento_bando"
@@ -1481,10 +1482,12 @@ msgstr "Tout lire"
 msgid "ruolo"
 msgstr "Rôle"
 
+#: components/ItaliaTheme/Blocks/Calendar/Item
 #: components/ItaliaTheme/View/Commons/BandoDates
 msgid "scadenza_bando"
 msgstr "Date limite de participation à l'appel"
 
+#: components/ItaliaTheme/Blocks/Calendar/Item
 #: components/ItaliaTheme/View/Commons/BandoDates
 msgid "scadenza_domande_bando"
 msgstr "Date limite pour les demandes de clarification"
