@@ -74,7 +74,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
         '@scadenziario',
       ),
     );
-  }, [data]);
+  }, [data.query]);
 
   // Every time the page change check the name of the mounth
   React.useEffect(() => {
@@ -132,7 +132,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
         [data.bg_color]: data.bg_color,
       })}
     >
-      <Container>
+      <Container className="px-4">
         {data.title && (
           <Row>
             <Col>
