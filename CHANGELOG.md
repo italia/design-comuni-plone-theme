@@ -1,3 +1,16 @@
+### [3.0.16](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.15...v3.0.16) (2021-04-22)
+
+
+### Bug Fixes
+
+* config import order ([972e9b9](https://github.com/RedTurtle/design-volto-theme/commit/972e9b915fe682b1eaf072b4a727fda50b2236c1))
+* fixed FooterNavigation in multilingual sites ([d645d58](https://github.com/RedTurtle/design-volto-theme/commit/d645d589d4baa5fb61c4b4e83de1d305aefd98a6))
+
+
+### Maintenance
+
+* view Bando scadenza messages in Calendar block ([3fa3b79](https://github.com/RedTurtle/design-volto-theme/commit/3fa3b799cc81c68b21f65499357d9f78a792918a))
+
 ### [3.0.15](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.14...v3.0.15) (2021-04-22)
 
 
