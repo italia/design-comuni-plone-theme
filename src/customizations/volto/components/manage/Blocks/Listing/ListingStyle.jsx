@@ -3,16 +3,16 @@ import PropTypes from 'prop-types';
 import config from '@plone/volto/registry';
 import TemplateWidget from '@plone/volto/components/manage/Blocks/Listing/TemplateWidget';
 import SimpleCardTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions';
-import RibbonCardTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions';
-import MapTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions';
-import CardWithImageTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions';
+
 import DefaultOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions';
-import ExtendableOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/Placeholder/ExtendableOptions';
 
 const ListingStyle = ({ data, block, onChangeBlock, required = false }) => {
   const templatesConfig = config.blocks.blocksConfig.listing.templates;
 
   if (templatesConfig && Object.keys(templatesConfig).length > 1) {
+    const ExtandableOptions = data.template
+      ? templatesConfig[data.template].styleOptions
+      : null;
     return (
       <div className="sidebar-listing-data listing-style">
         <TemplateWidget
@@ -38,34 +38,15 @@ const ListingStyle = ({ data, block, onChangeBlock, required = false }) => {
             onChangeBlock={onChangeBlock}
           />
         )}
-        {data.template === 'ribbonCardTemplate' && (
-          <RibbonCardTemplateOptions
-            data={data}
-            block={block}
-            onChangeBlock={onChangeBlock}
-          />
-        )}
-        {data.template === 'cardWithImageTemplate' && (
-          <CardWithImageTemplateOptions
-            data={data}
-            block={block}
-            onChangeBlock={onChangeBlock}
-          />
-        )}
-        {data.template === 'mapTemplate' && (
-          <MapTemplateOptions
-            data={data}
-            block={block}
-            onChangeBlock={onChangeBlock}
-          />
-        )}
 
-        <ExtendableOptions
-          data={data}
-          block={block}
-          onChangeBlock={onChangeBlock}
-          required={required}
-        />
+        {ExtandableOptions && (
+          <ExtandableOptions
+            data={data}
+            block={block}
+            onChangeBlock={onChangeBlock}
+            required={required}
+          />
+        )}
       </div>
     );
   }
