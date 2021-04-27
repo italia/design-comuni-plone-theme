@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useIntl, defineMessages } from 'react-intl';
@@ -27,15 +27,35 @@ const messages = defineMessages({
 
 const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
   const intl = useIntl();
+  const slider = useRef(null);
   const [autoplay, setAutoplay] = useState(false);
+
+  const toggleAutoplay = () => {
+    if (!slider?.current) return;
+    if (autoplay) {
+      setAutoplay(false);
+      slider.current.slickPause();
+    } else {
+      setAutoplay(true);
+      slider.current.slickPlay();
+    }
+  };
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: autoplay,
     autoplaySpeed: 2000,
+    pauseOnHover: true,
+    pauseOnFocus: true,
+    pauseOnDotsHover: true,
+    swipe: true,
+    swipeToSlide: true,
+    focusOnSelect: true,
+    draggable: true,
+    accessibility: true,
     responsive: [
       {
         breakpoint: 1025,
@@ -66,7 +86,7 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
       <div>
         <div className="play-pause-wrapper">
           <button
-            onClick={() => setAutoplay(!autoplay)}
+            onClick={() => toggleAutoplay()}
             title={
               autoplay
                 ? intl.formatMessage(messages.pause)
@@ -99,7 +119,7 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
         )}
         <div className="slider-container px-4 px-md-0">
           <div className="it-carousel-all it-card-bg">
-            <Slider {...settings}>
+            <Slider {...settings} ref={slider}>
               {items.map((item) => {
                 const image = item.image || item.immagine_testata;
                 return (
@@ -117,6 +137,7 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
                             alt=""
                             aria-hidden="true"
                             loading="eager"
+                            useOriginal={false}
                           />
                         )}
                         {getCaption(item) && (

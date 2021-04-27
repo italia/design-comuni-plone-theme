@@ -76,6 +76,8 @@ const InEvidenceTemplate = ({
                             image={image}
                             alt=""
                             aria-hidden="true"
+                            useOriginal={false}
+                            maxSize={400}
                           />
                         </figure>
                         {item['@type'] === 'Event' && (

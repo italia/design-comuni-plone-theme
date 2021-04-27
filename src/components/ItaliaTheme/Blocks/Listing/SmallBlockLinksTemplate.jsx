@@ -44,6 +44,8 @@ const SmallBlockLinksTemplate = ({
                           alt=""
                           aria-hidden="true"
                           className="listing-image"
+                          useOriginal={false}
+                          maxSize={200}
                         />
                       </UniversalLink>
                     </div>

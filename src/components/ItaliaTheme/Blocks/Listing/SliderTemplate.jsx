@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/interactive-supports-focus */
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { useIntl, defineMessages } from 'react-intl';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
@@ -29,7 +29,19 @@ const messages = defineMessages({
 
 const SliderTemplate = ({ items, title, isEditMode, show_block_bg }) => {
   const intl = useIntl();
+  const slider = useRef(null);
   const [autoplay, setAutoplay] = useState(false);
+
+  const toggleAutoplay = () => {
+    if (!slider?.current) return;
+    if (autoplay) {
+      setAutoplay(false);
+      slider.current.slickPause();
+    } else {
+      setAutoplay(true);
+      slider.current.slickPlay();
+    }
+  };
 
   const NextArrow = (props) => {
     const { className, style, onClick } = props;
@@ -55,8 +67,15 @@ const SliderTemplate = ({ items, title, isEditMode, show_block_bg }) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: autoplay,
     autoplaySpeed: 2000,
+    pauseOnHover: true,
+    pauseOnFocus: true,
+    pauseOnDotsHover: true,
+    swipe: true,
+    swipeToSlide: true,
+    focusOnSelect: true,
+    draggable: true,
+    accessibility: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
@@ -77,7 +96,7 @@ const SliderTemplate = ({ items, title, isEditMode, show_block_bg }) => {
           <div className="it-carousel-all it-card-bg">
             <div className="play-pause-wrapper">
               <button
-                onClick={() => setAutoplay(!autoplay)}
+                onClick={() => toggleAutoplay()}
                 title={
                   autoplay
                     ? intl.formatMessage(messages.pause)
@@ -88,7 +107,7 @@ const SliderTemplate = ({ items, title, isEditMode, show_block_bg }) => {
                 <span>{autoplay ? 'pause' : 'play'}</span>
               </button>
             </div>
-            <Slider {...settings}>
+            <Slider {...settings} ref={slider}>
               {items.map((item) => {
                 const image = item.image || item.immagine_testata;
 
@@ -103,6 +122,7 @@ const SliderTemplate = ({ items, title, isEditMode, show_block_bg }) => {
                             alt=""
                             aria-hidden="true"
                             loading="eager"
+                            useOriginal={false}
                           />
                         )}
                         {/* {getCaption(item) && (

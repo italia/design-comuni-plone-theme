@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
+import Image from '@plone/volto/components/theme/Image/Image';
 import {
   Card,
   CardBody,
@@ -64,12 +65,12 @@ const CompleteBlockLinksTemplate = ({
                       <div className="d-flex">
                         {image && (
                           <div className="image-container">
-                            <img
-                              src={flattenToAppURL(
-                                image.scales.preview.download,
-                              )}
-                              alt=""
+                            <Image
+                              image={image}
                               aria-hidden="true"
+                              alt=""
+                              useOriginal={false}
+                              maxSize={400}
                             />
                           </div>
                         )}

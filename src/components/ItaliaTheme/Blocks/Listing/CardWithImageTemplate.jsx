@@ -84,6 +84,8 @@ const CardWithImageTemplate = ({
                               image={image}
                               aria-hidden="true"
                               alt=""
+                              useOriginal={false}
+                              maxSize={400}
                             />
                           </figure>
                           {item['@type'] === 'Event' && (
