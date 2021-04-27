@@ -232,7 +232,6 @@ export default function applyConfig(voltoConfig) {
       edit: ArgumentsInEvidenceEdit,
       restricted: false,
       mostUsed: false,
-      blockHasOwnFocusManagement: true,
       security: {
         addPermission: [],
         view: [],

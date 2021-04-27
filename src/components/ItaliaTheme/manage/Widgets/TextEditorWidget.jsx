@@ -41,6 +41,8 @@ class TextEditorWidget extends Component {
     focusOn: PropTypes.func,
     nextFocus: PropTypes.any,
     showToolbar: PropTypes.bool,
+    onSelectBlock: PropTypes.func,
+    onAddBlock: PropTypes.func,
   };
 
   /**
@@ -145,6 +147,7 @@ class TextEditorWidget extends Component {
     let placeholder = this.props.placeholder
       ? this.props.placeholder
       : this.props.intl.formatMessage(messages.text);
+
     return (
       <>
         <div className={[this.props.fieldName]}>
@@ -166,6 +169,13 @@ class TextEditorWidget extends Component {
               if (isSoftNewlineEvent(e)) {
                 this.onChange(
                   RichUtils.insertSoftNewline(this.state.editorState),
+                );
+                return 'handled';
+              }
+
+              if (this.props.onSelectBlock && this.props.onAddBlock) {
+                this.props.onSelectBlock(
+                  this.props.onAddBlock('text', this.props.index + 1),
                 );
                 return 'handled';
               }
