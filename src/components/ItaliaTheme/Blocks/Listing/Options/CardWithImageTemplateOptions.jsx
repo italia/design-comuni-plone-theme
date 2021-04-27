@@ -12,6 +12,10 @@ const messages = defineMessages({
     id: 'hide_dates',
     defaultMessage: 'Nascondi le date',
   },
+  natural_image_size: {
+    id: 'natural_image_size',
+    defineMessages: "Non alterare le dimensioni naturali dell'immagine",
+  },
 });
 
 const CardWithImageTemplateOptions = ({
@@ -39,6 +43,17 @@ const CardWithImageTemplateOptions = ({
         id="hide_dates"
         title={intl.formatMessage(messages.hide_dates)}
         value={data.hide_dates ? data.hide_dates : false}
+        onChange={(id, value) => {
+          onChangeBlock(block, {
+            ...data,
+            [id]: value,
+          });
+        }}
+      />
+      <CheckboxWidget
+        id="natural_image_size"
+        title={intl.formatMessage(messages.natural_image_size)}
+        value={data.natural_image_size ? data.natural_image_size : false}
         onChange={(id, value) => {
           onChangeBlock(block, {
             ...data,
