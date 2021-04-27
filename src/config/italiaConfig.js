@@ -375,7 +375,7 @@ export default function applyConfig(voltoConfig) {
           label: 'Card con immagine',
           template: CardWithImageTemplate,
           skeleton: CardWithImageTemplateSkeleton,
-          styleOptions: CardWithImageTemplateOptions,
+          templateOptions: CardWithImageTemplateOptions,
         },
         inEvidenceTemplate: {
           label: 'In evidenza',
@@ -391,13 +391,13 @@ export default function applyConfig(voltoConfig) {
           label: 'Card con nastro',
           template: RibbonCardTemplate,
           skeleton: RibbonCardTemplateSkeleton,
-          styleOptions: RibbonCardTemplateOptions,
+          templateOptions: RibbonCardTemplateOptions,
         },
         mapTemplate: {
           label: 'Mappa',
           template: MapTemplate,
           skeleton: MapTemplateSkeleton,
-          styleOptions: MapTemplateOptions,
+          templateOptions: MapTemplateOptions,
         },
         smallBlockLinksTemplate: {
           label: 'Blocco link solo immagini',
@@ -440,7 +440,7 @@ export default function applyConfig(voltoConfig) {
         //   label: 'Template label',
         //   template: TemplateComponent,
         //   skeleton: TemplateSkeletonComponent,
-        //   styleOptions: TemplateSidebarOptionsComponent
+        //   templateOptions: TemplateSidebarOptionsComponent
         // },
       },
       listing_bg_colors: [], //{name:'blue', label:'Blu'},{name:'light-blue', label:'Light blue'},{name:'sidebar-background', label:'Grey'}

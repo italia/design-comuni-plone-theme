@@ -10,8 +10,8 @@ const ListingStyle = ({ data, block, onChangeBlock, required = false }) => {
   const templatesConfig = config.blocks.blocksConfig.listing.templates;
 
   if (templatesConfig && Object.keys(templatesConfig).length > 1) {
-    const ExtandableOptions = data.template
-      ? templatesConfig[data.template].styleOptions
+    const TemplateOptions = data.template
+      ? templatesConfig[data.template].templateOptions
       : null;
     return (
       <div className="sidebar-listing-data listing-style">
@@ -39,8 +39,8 @@ const ListingStyle = ({ data, block, onChangeBlock, required = false }) => {
           />
         )}
 
-        {ExtandableOptions && (
-          <ExtandableOptions
+        {TemplateOptions && (
+          <TemplateOptions
             data={data}
             block={block}
             onChangeBlock={onChangeBlock}
