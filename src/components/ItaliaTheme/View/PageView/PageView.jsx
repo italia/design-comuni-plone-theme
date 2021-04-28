@@ -3,6 +3,7 @@
  * @module components/theme/View/PageView
  */
 import React from 'react';
+import cx from 'classnames';
 import {
   SearchSectionForm,
   PageHeaderNav,
@@ -42,14 +43,22 @@ const PageView = ({ content, token, location, history }) => {
   const intl = useIntl();
   const layout = content[getLayoutFieldname(content)];
 
-  if (layout === 'document_view')
+  if (layout === 'document_view') {
+    const rightHeaderHasContent =
+      content.immagine_testata?.scales ||
+      richTextHasContent(content.info_testata) ||
+      content.mostra_navigazione;
     return (
       <>
         <div id="page-document" className="ui container">
           {/*-----Testata-----*/}
           <Container className="PageHeaderWrapper px-3 px-md-4 mb-4">
             <div className="row">
-              <div className="title-description-wrapper col-lg-6">
+              <div
+                className={cx('title-description-wrapper', {
+                  'col-lg-6': rightHeaderHasContent,
+                })}
+              >
                 <PagePlaceholderTitle content={content}>
                   <h1 className="mb-3">{content?.title}</h1>
                 </PagePlaceholderTitle>
@@ -59,27 +68,29 @@ const PageView = ({ content, token, location, history }) => {
                   <SearchSectionForm content={content} />
                 )}
               </div>
-              <div className="col-lg-4 offset-lg-2">
-                {content.immagine_testata?.scales && (
-                  <div className="header-image px-4 mb-3">
-                    <Image
-                      image={content.immagine_testata}
-                      alt={content.title}
+              {rightHeaderHasContent && (
+                <div className="col-lg-4 offset-lg-2">
+                  {content.immagine_testata?.scales && (
+                    <div className="header-image px-4 mb-3">
+                      <Image
+                        image={content.immagine_testata}
+                        alt={content.title}
+                      />
+                    </div>
+                  )}
+                  {richTextHasContent(content.info_testata) && (
+                    <div className="header-infos px-4 mb-5">
+                      <RichText serif={false} content={content.info_testata} />
+                    </div>
+                  )}
+                  {content.mostra_navigazione && (
+                    <PageHeaderNav
+                      content={content}
+                      title={intl.formatMessage(messages.inThisSection)}
                     />
-                  </div>
-                )}
-                {richTextHasContent(content.info_testata) && (
-                  <div className="header-infos px-4 mb-5">
-                    <RichText serif={false} content={content.info_testata} />
-                  </div>
-                )}
-                {content.mostra_navigazione && (
-                  <PageHeaderNav
-                    content={content}
-                    title={intl.formatMessage(messages.inThisSection)}
-                  />
-                )}
-              </div>
+                  )}
+                </div>
+              )}
             </div>
           </Container>
 
@@ -91,7 +102,7 @@ const PageView = ({ content, token, location, history }) => {
         <RelatedItemInEvidence content={content} />
       </>
     );
-  else {
+  } else {
     const getViewByLayout = () => config.views.layoutViews[layout] || null;
     const Layout = getViewByLayout();
 
