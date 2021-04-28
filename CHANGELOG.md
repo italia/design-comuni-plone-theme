@@ -1,3 +1,16 @@
+### [3.1.1](https://github.com/RedTurtle/design-volto-theme/compare/v3.1.0...v3.1.1) (2021-04-28)
+
+
+### Bug Fixes
+
+* fixed focus blocks manangement ([e6ab360](https://github.com/RedTurtle/design-volto-theme/commit/e6ab360f0dc74a281a8ff3dec476e568e6357aee))
+
+
+### Maintenance
+
+* **i18n:** update translations ([08d907b](https://github.com/RedTurtle/design-volto-theme/commit/08d907ba7561bbbaaea0c42810fb0a5cddbfd2c7))
+* update secondarymenu ([b6906b1](https://github.com/RedTurtle/design-volto-theme/commit/b6906b1b5f51b1d2ee0c0a2b446eabd8c5311514))
+
 ## [3.1.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.16...v3.1.0) (2021-04-27)
 
 
