@@ -183,6 +183,8 @@ const Search = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [collapseFilters, _setCollapseFilters] = useState(true);
 
+  const [defaultPortalTypesFilter, setDefaultPortalTypesFilter] = useState([]);
+
   const setCollapseFilters = (collapse) => {
     _setCollapseFilters(collapse);
     if (window?.innerWidth <= 991 && collapse)
@@ -253,22 +255,22 @@ const Search = () => {
       setTopics(parseFetchedTopics(searchFilters.topics, location));
     }
 
-    /* TODO:
-     * parseFetchedPortalTypes con defaultSearchByCT
-     */
-    setPortalTypes(
-      parseFetchedPortalTypes(
-        [
-          { id: 'Document', title: 'Pagina' },
-          { id: 'Folder', title: 'Cartella' },
-          { id: 'News Item', title: 'Notizia' },
-          { id: 'Event', title: 'Evento' },
-          { id: 'Bando', title: 'Bando' },
-        ],
-        config.settings.defaultSearchByCT,
-        location,
-      ),
-    );
+    if (searchFilters?.portal_types?.length > 0) {
+      setPortalTypes(
+        parseFetchedPortalTypes(
+          searchFilters.portal_types,
+          config.settings.defaultExcludedFromSearch?.portalTypes,
+          location,
+        ),
+      );
+      setDefaultPortalTypesFilter(
+        parseFetchedPortalTypes(
+          searchFilters.portal_types,
+          config.settings.defaultExcludedFromSearch?.portalTypes,
+          location,
+        ),
+      );
+    }
 
     setOptions(parseFetchedOptions({}, location));
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -315,7 +317,10 @@ const Search = () => {
           sections,
           topics,
           options,
-          portalTypes,
+          JSON.stringify(portalTypes) !==
+            JSON.stringify(defaultPortalTypesFilter)
+            ? portalTypes
+            : {},
           searchOrderDict[sortOn] ?? {},
           (currentPage - 1) * config.settings.defaultPageSize,
           customPath,

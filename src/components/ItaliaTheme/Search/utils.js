@@ -104,14 +104,14 @@ const parseFetchedTopics = (topics, location) => {
   }, {});
 };
 
-const parseFetchedPortalTypes = (portalTypes, defaultActiveCTs, location) => {
+const parseFetchedPortalTypes = (portalTypes, defaultExcludedCT, location) => {
   const qsCTs = qs.parse(location?.search ?? '')?.['portal_type:list'] ?? [];
 
   return portalTypes.reduce((acc, ct) => {
     acc[ct.id] = {
-      value: qsCTs.includes(ct.id) || defaultActiveCTs.includes(ct.id),
-      label: ct.title,
-      defaultChecked: defaultActiveCTs.includes(ct.id),
+      value: qsCTs.includes(ct.id) || !defaultExcludedCT.includes(ct.id),
+      label: ct.label,
+      defaultChecked: !defaultExcludedCT.includes(ct.id),
     };
 
     return acc;
