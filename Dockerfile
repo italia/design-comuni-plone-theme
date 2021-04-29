@@ -20,7 +20,7 @@ RUN buildDeps="build-essential python-dev" && \
 FROM node:14-alpine
 
 WORKDIR /home/node/app
-COPY --chown=node --from=build /home/node/app /home/node/
+COPY --chown=node --from=build /home/node/app /home/node/app
 
 EXPOSE 3000 3001 4000 4001
 ENTRYPOINT ["/home/node/app/entrypoint.sh"]
