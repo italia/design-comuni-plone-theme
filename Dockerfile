@@ -1,33 +1,27 @@
-FROM node:14-buster-slim
+FROM node:14-buster-slim as build
 
-ENV BUILD_DEPS 'python-dev build-essential'
-
-RUN runDeps="git openssl ca-certificates" && \
-    apt-get update && \
-    apt-get install -y --no-install-recommends $runDeps $BUILD_DEPS && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
-WORKDIR /home/node
-USER node
-
-COPY --chown=node mrs.developer.json jsconfig.json package.json yarn.lock ./
-RUN mkdir src && \
-    yarn set version 1.19.1 && \
-    RAZZLE_API_PATH=VOLTO_API_PATH RAZZLE_INTERNAL_API_PATH=VOLTO_INTERNAL_API_PATH yarn --frozen-lockfile
-
-COPY --chown=node . .
-
-RUN RAZZLE_API_PATH=VOLTO_API_PATH RAZZLE_INTERNAL_API_PATH=VOLTO_INTERNAL_API_PATH yarn build && \
-    rm -rf /home/node/.cache
-
+WORKDIR /home/node/app
 USER root
-RUN apt-get purge $BUILD_DEPS -y && \
+
+COPY . .
+
+RUN buildDeps="build-essential python-dev" && \
+    runDeps="git-core openssl ca-certificates" && \
+    apt-get update && \
+    apt-get install -y --no-install-recommends $runDeps $buildDeps && \
+    yarn policies set-version 1.19.1 && \
+    RAZZLE_API_PATH=VOLTO_API_PATH RAZZLE_INTERNAL_API_PATH=VOLTO_INTERNAL_API_PATH yarn --frozen-lockfile && \
+    RAZZLE_API_PATH=VOLTO_API_PATH RAZZLE_INTERNAL_API_PATH=VOLTO_INTERNAL_API_PATH yarn build && \
+    rm -rf /home/node/.cache && \
+    apt-get purge $buildDeps -y && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-USER node
-EXPOSE 3000 3001 4000 4001
+FROM node:14-alpine
 
-ENTRYPOINT ["/home/node/entrypoint.sh"]
+WORKDIR /home/node/app
+COPY --chown=node --from=build /home/node/app /home/node/
+
+EXPOSE 3000 3001 4000 4001
+ENTRYPOINT ["/home/node/app/entrypoint.sh"]
 CMD ["yarn", "start:prod"]

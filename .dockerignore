@@ -7,6 +7,7 @@ npm-debug.log*
 coverage
 node_modules
 build
+src/addons
 .env.local
 .env.development.local
 .env.test.local
