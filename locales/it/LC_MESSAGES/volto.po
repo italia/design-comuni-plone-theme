@@ -132,6 +132,11 @@ msgstr "Etichetta"
 msgid "Form"
 msgstr "Form"
 
+#: components/ItaliaTheme/Search/SearchCTs
+#: components/ItaliaTheme/Search/SearchTopics
+msgid "Hide"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Image"
 msgstr "Immagine"
@@ -273,6 +278,7 @@ msgstr "Seleziona un file"
 msgid "Short Name"
 msgstr "Short Name"
 
+#: components/ItaliaTheme/Search/SearchCTs
 #: components/ItaliaTheme/Search/SearchTopics
 msgid "Show all"
 msgstr "Mostra tutto"

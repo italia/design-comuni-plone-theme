@@ -139,6 +139,11 @@ msgstr ""
 msgid "Form"
 msgstr ""
 
+#: components/ItaliaTheme/Search/SearchCTs
+#: components/ItaliaTheme/Search/SearchTopics
+msgid "Hide"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Image"
 msgstr ""
@@ -280,6 +285,7 @@ msgstr ""
 msgid "Short Name"
 msgstr ""
 
+#: components/ItaliaTheme/Search/SearchCTs
 #: components/ItaliaTheme/Search/SearchTopics
 msgid "Show all"
 msgstr ""

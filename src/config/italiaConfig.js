@@ -477,6 +477,7 @@ export default function applyConfig(voltoConfig) {
       UnitaOrganizzativa: faBuildingSVG,
       Modulo: faFileDownloadSVG,
     },
+    defaultSearchByCT: ['Document', 'News Item', 'Event'],
     italiaThemeViewsConfig: {
       imagePosition: 'afterHeader', // possible values: afterHeader, documentBody
     },

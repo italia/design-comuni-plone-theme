@@ -30,6 +30,7 @@ import {
   Pagination,
   SearchSections,
   SearchTopics,
+  SearchCTs,
   Icon,
 } from '@italia/components/ItaliaTheme';
 import { UniversalLink } from '@plone/volto/components';
@@ -40,6 +41,7 @@ import config from '@plone/volto/registry';
 const {
   parseFetchedSections,
   parseFetchedTopics,
+  parseFetchedPortalTypes,
   parseFetchedOptions,
   getSearchParamsURL,
 } = SearchUtils;
@@ -123,6 +125,10 @@ const messages = defineMessages({
     id: 'Nessun risultato ottenuto',
     defaultMessage: 'Nessun risultato ottenuto',
   },
+  content_types: {
+    id: 'search_content_types',
+    defaultMessage: 'Tipologia',
+  },
 });
 
 const searchOrderDict = {
@@ -163,6 +169,7 @@ const Search = () => {
 
   const [sections, setSections] = useState({});
   const [topics, setTopics] = useState({});
+  const [portalTypes, setPortalTypes] = useState({});
   const [options, setOptions] = useState({
     ...SearchUtils.defaultOptions,
     ...parseFetchedOptions({}, location),
@@ -246,6 +253,23 @@ const Search = () => {
       setTopics(parseFetchedTopics(searchFilters.topics, location));
     }
 
+    /* TODO:
+     * parseFetchedPortalTypes con defaultSearchByCT
+     */
+    setPortalTypes(
+      parseFetchedPortalTypes(
+        [
+          { id: 'Document', title: 'Pagina' },
+          { id: 'Folder', title: 'Cartella' },
+          { id: 'News Item', title: 'Notizia' },
+          { id: 'Event', title: 'Evento' },
+          { id: 'Bando', title: 'Bando' },
+        ],
+        config.settings.defaultSearchByCT,
+        location,
+      ),
+    );
+
     setOptions(parseFetchedOptions({}, location));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchFilters, subsite]);
@@ -257,7 +281,16 @@ const Search = () => {
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
     600,
-    [dispatch, searchableText, sections, topics, options, sortOn, currentPage],
+    [
+      dispatch,
+      searchableText,
+      sections,
+      topics,
+      options,
+      sortOn,
+      currentPage,
+      portalTypes,
+    ],
   );
 
   const doSearch = () => {
@@ -266,6 +299,7 @@ const Search = () => {
       sections,
       topics,
       options,
+      portalTypes,
       searchOrderDict[sortOn] ?? {},
       (currentPage - 1) * config.settings.defaultPageSize,
       customPath,
@@ -281,6 +315,7 @@ const Search = () => {
           sections,
           topics,
           options,
+          portalTypes,
           searchOrderDict[sortOn] ?? {},
           (currentPage - 1) * config.settings.defaultPageSize,
           customPath,
@@ -291,6 +326,13 @@ const Search = () => {
 
     dispatch(getSearchResults(queryString));
   };
+
+  let activeSections = Object.values(sections).reduce((acc, sec) => {
+    return acc + Object.values(sec.items).filter((i) => i.value).length;
+  }, 0);
+  let activeTopics = Object.values(topics).filter((t) => t.value).length;
+  let activePortalTypes = Object.values(portalTypes).filter((ct) => ct.value)
+    .length;
 
   return (
     <>
@@ -383,6 +425,11 @@ const Search = () => {
                   <div className="pt-4 pt-lg-0">
                     <h6 className="text-uppercase">
                       {intl.formatMessage(messages.sections)}
+                      {activeSections > 0 && (
+                        <span className="badge badge-secondary ml-3">
+                          {activeSections}
+                        </span>
+                      )}
                     </h6>
                     <div className="form-checck mt-4">
                       <SearchSections
@@ -393,24 +440,59 @@ const Search = () => {
                     </div>
                   </div>
                 )}
-                <div
-                  className={
-                    Object.keys(sections)?.length > 0
-                      ? 'pt-4 pt-lg-5'
-                      : 'pt-4 pt-lg-0'
-                  }
-                >
-                  <h6 className="text-uppercase">
-                    {intl.formatMessage(messages.topics)}
-                  </h6>
-                  <div className="form-check mt-4">
-                    <SearchTopics
-                      topics={topics}
-                      setTopics={setTopics}
-                      collapsable={true}
-                    />
+
+                {Object.keys(topics)?.length > 0 && (
+                  <div
+                    className={
+                      Object.keys(sections)?.length > 0
+                        ? 'pt-4 pt-lg-5'
+                        : 'pt-4 pt-lg-0'
+                    }
+                  >
+                    <h6 className="text-uppercase">
+                      {intl.formatMessage(messages.topics)}
+                      {activeTopics > 0 && (
+                        <span className="badge badge-secondary ml-3">
+                          {activeTopics}
+                        </span>
+                      )}
+                    </h6>
+                    <div className="form-check mt-4">
+                      <SearchTopics
+                        topics={topics}
+                        setTopics={setTopics}
+                        collapsable={true}
+                      />
+                    </div>
                   </div>
-                </div>
+                )}
+
+                {Object.keys(portalTypes).length > 0 && (
+                  <div
+                    className={
+                      Object.keys(sections)?.length > 0 ||
+                      Object.keys(topics)?.length > 0
+                        ? 'pt-4 pt-lg-5'
+                        : 'pt-4 pt-lg-0'
+                    }
+                  >
+                    <h6 className="text-uppercase">
+                      {intl.formatMessage(messages.content_types)}
+                      {activePortalTypes > 0 && (
+                        <span className="badge badge-secondary ml-3">
+                          {activePortalTypes}
+                        </span>
+                      )}
+                    </h6>
+                    <div className="form-checck mt-4">
+                      <SearchCTs
+                        portalTypes={portalTypes}
+                        setPortalTypes={setPortalTypes}
+                        collapsable
+                      />
+                    </div>
+                  </div>
+                )}
 
                 {Object.values(options).filter(
                   (o) => o !== null && o !== undefined,
