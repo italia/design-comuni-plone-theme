@@ -32,6 +32,10 @@ msgstr "Alert"
 msgid "Aspetto"
 msgstr "Aspetto"
 
+#: components/ItaliaTheme/Search/Search
+msgid "Attenzione!"
+msgstr "Attenzione!"
+
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 msgid "Bando"
 msgstr "Bando"
@@ -135,7 +139,7 @@ msgstr "Form"
 #: components/ItaliaTheme/Search/SearchCTs
 #: components/ItaliaTheme/Search/SearchTopics
 msgid "Hide"
-msgstr ""
+msgstr "Nascondi"
 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Image"
@@ -192,6 +196,10 @@ msgstr "Mostra i filtri per percorso"
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 msgid "Mostra lo sfondo del blocco"
 msgstr "Mostra lo sfondo del blocco"
+
+#: components/ItaliaTheme/Search/Search
+msgid "Nessun risultato ottenuto"
+msgstr "Nessun risultato ottenuto"
 
 #: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 msgid "News"
@@ -250,6 +258,14 @@ msgstr "Rimuovi il file"
 msgid "Scroll to top"
 msgstr "Torna su"
 
+#: components/ItaliaTheme/Search/Search
+msgid "Search results"
+msgstr "Risultati della ricerca"
+
+#: components/ItaliaTheme/Search/Search
+msgid "Search site"
+msgstr "Cerca nel sito"
+
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "SearchEventsBlock"
 msgstr "Blocco di Ricerca eventi"
@@ -282,6 +298,10 @@ msgstr "Short Name"
 #: components/ItaliaTheme/Search/SearchTopics
 msgid "Show all"
 msgstr "Mostra tutto"
+
+#: components/ItaliaTheme/Search/Search
+msgid "Sono occorsi degli errori"
+msgstr "Sono occorsi degli errori"
 
 #: components/ItaliaTheme/Footer/FooterNewsletterSubscribe
 msgid "Subscribe"
@@ -926,6 +946,10 @@ msgstr "File correlato"
 msgid "filters"
 msgstr "Filtri"
 
+#: components/ItaliaTheme/Search/Search
+msgid "filtersCollapse"
+msgstr "Filtri"
+
 #: components/ItaliaTheme/Blocks/EventSearch/Body
 msgid "find"
 msgstr "Cerca"
@@ -1040,6 +1064,10 @@ msgstr "Destinatari"
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "foto_attivita_politica"
 msgstr "Foto dell'attività politica"
+
+#: components/ItaliaTheme/Search/Search
+msgid "found_n_results"
+msgstr "Trovati {total} risultati"
 
 #: components/ItaliaTheme/Blocks/Listing/Commons/CardCalendar
 #: helpers/ListingHelper
@@ -1253,10 +1281,12 @@ msgid "optionActiveContentButton"
 msgstr "Contenuto attivo"
 
 #: components/ItaliaTheme/Header/SearchModal
+#: components/ItaliaTheme/Search/Search
 msgid "optionActiveContentInfo"
 msgstr "Verranno esclusi dalla ricerca i contenuti archiviati e non più validi come gli eventi terminati o i bandi scaduti."
 
 #: components/ItaliaTheme/Header/SearchModal
+#: components/ItaliaTheme/Search/Search
 msgid "optionActiveContentLabel"
 msgstr "Cerca solo tra i contenuti attivi"
 
@@ -1265,6 +1295,7 @@ msgid "optionDateEnd"
 msgstr "Data fine"
 
 #: components/ItaliaTheme/Header/SearchModal
+#: components/ItaliaTheme/Search/Search
 msgid "optionDateEndButton"
 msgstr "Al"
 
@@ -1277,10 +1308,12 @@ msgid "optionDateStart"
 msgstr "Data inizio"
 
 #: components/ItaliaTheme/Header/SearchModal
+#: components/ItaliaTheme/Search/Search
 msgid "optionDateStartButton"
 msgstr "Dal"
 
 #: components/ItaliaTheme/Header/SearchModal
+#: components/ItaliaTheme/Search/Search
 msgid "options"
 msgstr "Opzioni"
 
@@ -1292,6 +1325,10 @@ msgstr "Orari"
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "orario_pubblico"
 msgstr "Orari di apertura"
+
+#: components/ItaliaTheme/Search/Search
+msgid "order_by"
+msgstr "Ordina per"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "organizzazione_riferimento"
@@ -1398,6 +1435,7 @@ msgid "related_uo"
 msgstr "Amministrazione"
 
 #: components/ItaliaTheme/Header/SearchModal
+#: components/ItaliaTheme/Search/Search
 msgid "removeOption"
 msgstr "Rimuovi opzione"
 
@@ -1562,6 +1600,14 @@ msgstr "Filtro per luogo"
 msgid "searchLabel"
 msgstr "Cerca nel sito"
 
+#: components/ItaliaTheme/Search/Search
+msgid "search_adv_filters"
+msgstr "Filtri avanzati"
+
+#: components/ItaliaTheme/Search/Search
+msgid "search_content_types"
+msgstr "Tipologia"
+
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "search_service_block_sections"
 msgstr "Dove cercare"
@@ -1622,7 +1668,12 @@ msgstr "Radice di navigazione"
 msgid "searchsectionswidget-title"
 msgstr "Sezioni"
 
+#: components/ItaliaTheme/Search/Search
+msgid "section_undefined"
+msgstr "altro"
+
 #: components/ItaliaTheme/Header/SearchModal
+#: components/ItaliaTheme/Search/Search
 msgid "sections"
 msgstr "Sezioni"
 
@@ -1714,6 +1765,18 @@ msgstr "Vai al contenuto"
 #: components/ItaliaTheme/SkipLinksC/SkipLinksC
 msgid "skiplink-navigation"
 msgstr "Vai alla navigazione"
+
+#: components/ItaliaTheme/Search/Search
+msgid "sort_on_date"
+msgstr "Data (prima i più recenti)"
+
+#: components/ItaliaTheme/Search/Search
+msgid "sort_on_relevance"
+msgstr "Rilevanza"
+
+#: components/ItaliaTheme/Search/Search
+msgid "sort_on_title"
+msgstr "Alfabeticamente"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "spese_elettorali"
@@ -1810,6 +1873,7 @@ msgid "to"
 msgstr "al"
 
 #: components/ItaliaTheme/Header/SearchModal
+#: components/ItaliaTheme/Search/Search
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderTassonomiaArgomenti
 msgid "topics"
 msgstr "Argomenti"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-04-29T07:06:00.922Z\n"
+"POT-Creation-Date: 2021-04-29T12:11:24.930Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -37,6 +37,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 # defaultMessage: Aspetto
 msgid "Aspetto"
+msgstr ""
+
+#: components/ItaliaTheme/Search/Search
+# defaultMessage: Attenzione!
+msgid "Attenzione!"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
@@ -237,6 +242,11 @@ msgstr ""
 msgid "Mostra lo sfondo del blocco"
 msgstr ""
 
+#: components/ItaliaTheme/Search/Search
+# defaultMessage: Nessun risultato ottenuto
+msgid "Nessun risultato ottenuto"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 # defaultMessage: News
 msgid "News"
@@ -307,6 +317,16 @@ msgstr ""
 msgid "Scroll to top"
 msgstr ""
 
+#: components/ItaliaTheme/Search/Search
+# defaultMessage: Risultati della ricerca
+msgid "Search results"
+msgstr ""
+
+#: components/ItaliaTheme/Search/Search
+# defaultMessage: Cerca nel sito
+msgid "Search site"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 # defaultMessage: Ricerca eventi
 msgid "SearchEventsBlock"
@@ -345,6 +365,11 @@ msgstr ""
 #: components/ItaliaTheme/Search/SearchTopics
 # defaultMessage: Mostra tutto
 msgid "Show all"
+msgstr ""
+
+#: components/ItaliaTheme/Search/Search
+# defaultMessage: Sono occorsi degli errori
+msgid "Sono occorsi degli errori"
 msgstr ""
 
 #: components/ItaliaTheme/Footer/FooterNewsletterSubscribe
@@ -1136,6 +1161,11 @@ msgstr ""
 msgid "filters"
 msgstr ""
 
+#: components/ItaliaTheme/Search/Search
+# defaultMessage: Filtri
+msgid "filtersCollapse"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/EventSearch/Body
 # defaultMessage: Cerca
 msgid "find"
@@ -1277,6 +1307,11 @@ msgstr ""
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 # defaultMessage: Foto dell'attività politica
 msgid "foto_attivita_politica"
+msgstr ""
+
+#: components/ItaliaTheme/Search/Search
+# defaultMessage: Trovati {total} risultati.
+msgid "found_n_results"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Commons/CardCalendar
@@ -1542,11 +1577,13 @@ msgid "optionActiveContentButton"
 msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
+#: components/ItaliaTheme/Search/Search
 # defaultMessage: Verranno esclusi dalla ricerca i contenuti archiviati e non più validi come gli eventi terminati o i bandi scaduti.
 msgid "optionActiveContentInfo"
 msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
+#: components/ItaliaTheme/Search/Search
 # defaultMessage: Cerca solo tra i contenuti attivi
 msgid "optionActiveContentLabel"
 msgstr ""
@@ -1557,6 +1594,7 @@ msgid "optionDateEnd"
 msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
+#: components/ItaliaTheme/Search/Search
 # defaultMessage: Al
 msgid "optionDateEndButton"
 msgstr ""
@@ -1572,11 +1610,13 @@ msgid "optionDateStart"
 msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
+#: components/ItaliaTheme/Search/Search
 # defaultMessage: Dal
 msgid "optionDateStartButton"
 msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
+#: components/ItaliaTheme/Search/Search
 # defaultMessage: Opzioni
 msgid "options"
 msgstr ""
@@ -1590,6 +1630,11 @@ msgstr ""
 #: components/ItaliaTheme/View/VenueView/VenueView
 # defaultMessage: Orario per il pubblico
 msgid "orario_pubblico"
+msgstr ""
+
+#: components/ItaliaTheme/Search/Search
+# defaultMessage: Ordina per
+msgid "order_by"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
@@ -1721,6 +1766,7 @@ msgid "related_uo"
 msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
+#: components/ItaliaTheme/Search/Search
 # defaultMessage: Rimuovi opzione
 msgid "removeOption"
 msgstr ""
@@ -1924,6 +1970,16 @@ msgstr ""
 msgid "searchLabel"
 msgstr ""
 
+#: components/ItaliaTheme/Search/Search
+# defaultMessage: Filtri avanzati
+msgid "search_adv_filters"
+msgstr ""
+
+#: components/ItaliaTheme/Search/Search
+# defaultMessage: Tipologia
+msgid "search_content_types"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Dove cercare
 msgid "search_service_block_sections"
@@ -1999,7 +2055,13 @@ msgstr ""
 msgid "searchsectionswidget-title"
 msgstr ""
 
+#: components/ItaliaTheme/Search/Search
+# defaultMessage: altro
+msgid "section_undefined"
+msgstr ""
+
 #: components/ItaliaTheme/Header/SearchModal
+#: components/ItaliaTheme/Search/Search
 # defaultMessage: Sezioni
 msgid "sections"
 msgstr ""
@@ -2112,6 +2174,21 @@ msgstr ""
 #: components/ItaliaTheme/SkipLinksC/SkipLinksC
 # defaultMessage: Skip to navigation
 msgid "skiplink-navigation"
+msgstr ""
+
+#: components/ItaliaTheme/Search/Search
+# defaultMessage: Data (prima i più recenti)
+msgid "sort_on_date"
+msgstr ""
+
+#: components/ItaliaTheme/Search/Search
+# defaultMessage: Rilevanza
+msgid "sort_on_relevance"
+msgstr ""
+
+#: components/ItaliaTheme/Search/Search
+# defaultMessage: Alfabeticamente
+msgid "sort_on_title"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
@@ -2231,6 +2308,7 @@ msgid "to"
 msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
+#: components/ItaliaTheme/Search/Search
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderTassonomiaArgomenti
 # defaultMessage: Argomenti
 msgid "topics"
