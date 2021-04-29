@@ -129,6 +129,10 @@ const messages = defineMessages({
     id: 'search_content_types',
     defaultMessage: 'Tipologia',
   },
+  advFilters: {
+    id: 'search_adv_filters',
+    defaultMessage: 'Filtri avanzati',
+  },
 });
 
 const searchOrderDict = {
@@ -182,7 +186,7 @@ const Search = () => {
   const [sortOn, setSortOn] = useState('relevance');
   const [currentPage, setCurrentPage] = useState(1);
   const [collapseFilters, _setCollapseFilters] = useState(true);
-
+  const [advFiltersOpen, setAdvFiltersOpen] = useState(false);
   const [defaultPortalTypesFilter, setDefaultPortalTypesFilter] = useState([]);
 
   const setCollapseFilters = (collapse) => {
@@ -473,29 +477,40 @@ const Search = () => {
                 )}
 
                 {Object.keys(portalTypes).length > 0 && (
-                  <div
-                    className={
-                      Object.keys(sections)?.length > 0 ||
-                      Object.keys(topics)?.length > 0
-                        ? 'pt-4 pt-lg-5'
-                        : 'pt-4 pt-lg-0'
-                    }
-                  >
-                    <h6 className="text-uppercase">
-                      {intl.formatMessage(messages.content_types)}
-                      {activePortalTypes > 0 && (
-                        <span className="badge badge-secondary ml-3">
-                          {activePortalTypes}
-                        </span>
-                      )}
-                    </h6>
-                    <div className="form-checck mt-4">
-                      <SearchCTs
-                        portalTypes={portalTypes}
-                        setPortalTypes={setPortalTypes}
-                        collapsable
+                  <div className="pt-5">
+                    <Button
+                      color="secondary"
+                      outline
+                      icon
+                      size="small"
+                      onClick={() => setAdvFiltersOpen(!advFiltersOpen)}
+                      className="justify-content-start w-100 pl-2"
+                    >
+                      <Icon
+                        icon={advFiltersOpen ? 'it-minus' : 'it-plus'}
+                        padding
                       />
-                    </div>
+                      {intl.formatMessage(messages.advFilters)}
+                    </Button>
+                    <Collapse isOpen={advFiltersOpen} id="advFilters">
+                      <div className="p-3 shadow-sm bg-white">
+                        <h6 className="text-uppercase">
+                          {intl.formatMessage(messages.content_types)}
+                          {activePortalTypes > 0 && (
+                            <span className="badge badge-secondary ml-3">
+                              {activePortalTypes}
+                            </span>
+                          )}
+                        </h6>
+                        <div className="form-checck mt-4">
+                          <SearchCTs
+                            portalTypes={portalTypes}
+                            setPortalTypes={setPortalTypes}
+                            collapsable
+                          />
+                        </div>
+                      </div>
+                    </Collapse>
                   </div>
                 )}
 
