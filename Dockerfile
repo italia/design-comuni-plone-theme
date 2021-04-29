@@ -17,7 +17,7 @@ RUN buildDeps="build-essential python-dev" && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-FROM node:14-alpine
+FROM node:14-buster-slim
 
 WORKDIR /home/node/app
 COPY --chown=node --from=build /home/node/app /home/node/app
