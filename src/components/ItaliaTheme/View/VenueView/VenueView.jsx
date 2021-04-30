@@ -529,7 +529,12 @@ const VenueView = ({ content }) => {
         </div>
       </div>
       <VenuePlaceholderAfterContent content={content} />
-      <RelatedItems list={content.related_news ?? []} />
+      <RelatedItems
+        list={[
+          ...(content.relatedItems ?? []),
+          ...(content.related_news ?? []),
+        ]}
+      />
       <RelatedItemInEvidence content={content} />
     </>
   );

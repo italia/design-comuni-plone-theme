@@ -57,6 +57,7 @@ const PageView = ({ content, token, location, history }) => {
               <div
                 className={cx('title-description-wrapper', {
                   'col-lg-6': rightHeaderHasContent,
+                  'col-lg-12': !rightHeaderHasContent,
                 })}
               >
                 <PagePlaceholderTitle content={content}>
