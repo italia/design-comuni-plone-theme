@@ -9,7 +9,7 @@ import {
 import moment from 'moment/min/moment-with-locales';
 import cx from 'classnames';
 
-import { getEventSearchResults } from '@italia/actions';
+import { getQueryStringResults } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import { Pagination } from '@italia/components/ItaliaTheme';
@@ -47,14 +47,16 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   const dispatch = useDispatch();
 
   const querystringResults = useSelector((state) => {
-    return state.eventSearchResults?.subrequests?.results;
+    return state.querystringsearch?.subrequests?.events_search;
   });
   const items = useSelector((state) => {
-    return state.eventSearchResults?.subrequests?.results?.items ?? [];
+    return state.querystringsearch?.subrequests?.events_search?.items ?? [];
   });
 
   const loading = useSelector((state) => {
-    return state.eventSearchResults?.subrequests?.results?.loading || false;
+    return (
+      state.querystringsearch?.subrequests?.events_search?.loading || false
+    );
   });
 
   const resultsRef = createRef();
@@ -86,14 +88,14 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
     }
 
     dispatch(
-      getEventSearchResults(
+      getQueryStringResults(
         subsite ? flattenToAppURL(subsite['@id']) : '',
         {
           fullobjects: 1,
           query: query,
           b_size: b_size,
         },
-        'results',
+        'events_search',
         page,
       ),
     );
