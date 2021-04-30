@@ -54,6 +54,8 @@ const ContentInEvidenceTemplate = ({
                     alt={item.title}
                     className="item-image"
                     role="presentation"
+                    useOriginal={false}
+                    maxSize={400}
                   />
                 </Col>
               )}
