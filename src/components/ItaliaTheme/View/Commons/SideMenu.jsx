@@ -1,3 +1,6 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable no-unused-expressions */
 import { defineMessages, useIntl } from 'react-intl';
 import React, { useEffect, useState } from 'react';
 import { throttle } from 'lodash';
