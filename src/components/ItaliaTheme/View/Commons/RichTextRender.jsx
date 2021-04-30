@@ -9,8 +9,14 @@ import { RenderBlocks } from '@italia/components/ItaliaTheme/View';
 const richTextHasContent = (content) => {
   if (hasBlocksData(content)) {
     //ReactDOMServer.renderToStaticMarkup(RenderBlocks({ content: content })),
+    const renderedBlocks = RenderBlocks({ content: content });
+    const textContent = Object.values(content.blocks)
+      .map((block) => block.text?.blocks?.map((b) => b.text))
+      .flat(3)?.[0];
 
-    return RenderBlocks({ content: content }) != null;
+    return (
+      renderedBlocks !== null && textContent?.length > 0 && textContent !== ''
+    );
   } else {
     const textToDisplay = content?.data?.replace(/(<([^>]+)>)/g, '') ?? '';
     return textToDisplay.length > 0 ? true : false;
