@@ -1,3 +1,15 @@
+### [3.2.1](https://github.com/RedTurtle/design-volto-theme/compare/v3.2.0...v3.2.1) (2021-04-30)
+
+
+### Bug Fixes
+
+* fixed page change in editing listing block bug_18320 ([780acc9](https://github.com/RedTurtle/design-volto-theme/commit/780acc99e634201411b8fc777167d84617e9de42))
+
+
+### Maintenance
+
+* **i18n:** updated translations ([7cb653a](https://github.com/RedTurtle/design-volto-theme/commit/7cb653a6ec04d819091a7222640f8a354ae2cb42))
+
 ## [3.2.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.1.1...v3.2.0) (2021-04-30)
 
 
