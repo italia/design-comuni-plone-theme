@@ -605,6 +605,7 @@ export default function applyConfig(voltoConfig) {
     requiredBlocks: {
       ...config.blocks.requiredBlocks.concat(...customRequiredBlocks),
     },
+    showEditBlocksInBabelView: true,
   };
   delete config.blocks.blocksConfig.listing.templates.imageGallery; // removes imageGallery volto template, because we have our photoGallery template
 

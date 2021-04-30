@@ -11,7 +11,8 @@ import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import cx from 'classnames';
 import langmap from 'langmap';
-import { Helmet, changeLanguage, flattenToAppURL } from '@plone/volto/helpers';
+import { Helmet, flattenToAppURL } from '@plone/volto/helpers';
+import { changeLanguage } from '@plone/volto/actions';
 import {
   Row,
   Col,
@@ -23,16 +24,6 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import { Icon } from '@italia/components/ItaliaTheme';
 import config from '@plone/volto/registry';
-
-// let locales = {};
-
-// if (config.settings) {
-//   config.settings.supportedLanguages.forEach((lang) => {
-//     import('~/../locales/' + lang + '.json').then((locale) => {
-//       locales = { ...locales, [lang]: locale.default };
-//     });
-//   });
-// }
 
 const languagesISO392 = {
   de: 'deu',
@@ -95,7 +86,13 @@ const LanguageSelector = (props) => {
                     title={langmap[lang].nativeName}
                     onClick={() => {
                       props.onClickAction();
-                      dispatch(changeLanguage(lang, allLocales));
+                      if (config.settings.supportedLanguages.includes(lang)) {
+                        import('~/../locales/' + lang + '.json').then(
+                          (locale) => {
+                            dispatch(changeLanguage(lang, locale.default));
+                          },
+                        );
+                      }
                     }}
                     key={`language-selector-${lang}`}
                     tag={Link}
