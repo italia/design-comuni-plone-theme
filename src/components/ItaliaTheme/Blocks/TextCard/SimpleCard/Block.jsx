@@ -1,4 +1,6 @@
-import React from 'react';
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+import React, { useState, useRef } from 'react';
 import {
   Card,
   CardBody,
@@ -28,10 +30,21 @@ const messages = defineMessages({
   },
 });
 
-const Block = ({ inEditMode, data, block, onChange }) => {
+const Block = ({
+  inEditMode,
+  data,
+  block,
+  onChange,
+  onSelectBlock,
+  onAddBlock,
+  index,
+}) => {
   const intl = useIntl();
   const title = data?.simple_card_title?.blocks[0]?.text;
   const content = data?.simple_card_content;
+  const [selected, setSelected] = useState('title');
+  const titleRef = useRef();
+  const contentRef = useRef();
 
   return (
     <div className="simple-text-card-wrapper">
@@ -41,36 +54,81 @@ const Block = ({ inEditMode, data, block, onChange }) => {
         noWrapper={false}
         space
         tag="div"
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' && !e.shiftKey) {
+            if (
+              !titleRef.current.contains(e.target) &&
+              !contentRef.current.contains(e.target)
+            ) {
+              this.props.onAddBlock('text', index + 1);
+            }
+
+            if (titleRef.current.contains(e.target)) {
+              setSelected('content');
+            }
+          }
+        }}
       >
         <CardBody>
           <div className={cx('simple-text-card', { 'cms-ui': inEditMode })}>
             {inEditMode ? (
               <>
                 <CardTitle tag="h4">
-                  <TextEditorWidget
-                    data={data}
-                    fieldName="simple_card_title"
-                    selected={true}
-                    block={block}
-                    onChangeBlock={(data) =>
-                      onChange(data, 'simple_card_title')
-                    }
-                    placeholder={intl.formatMessage(messages.simple_card_title)}
-                    showToolbar={false}
-                  />
+                  <div
+                    ref={titleRef}
+                    onClick={() => {
+                      setSelected('title');
+                    }}
+                    onFocus={() => {
+                      setSelected('title');
+                    }}
+                  >
+                    <TextEditorWidget
+                      data={data}
+                      fieldName="simple_card_title"
+                      selected={selected === 'title'}
+                      block={block}
+                      onChangeBlock={(data) =>
+                        onChange(data, 'simple_card_title')
+                      }
+                      placeholder={intl.formatMessage(
+                        messages.simple_card_title,
+                      )}
+                      showToolbar={false}
+                      onSelectBlock={() => {}}
+                      onAddBlock={() => {
+                        setSelected('content');
+                      }}
+                    />
+                  </div>
                 </CardTitle>
                 <Divider />
-                <TextEditorWidget
-                  data={data}
-                  fieldName="simple_card_content"
-                  selected={false}
-                  block={block}
-                  onChangeBlock={(data) =>
-                    onChange(data, 'simple_card_content')
-                  }
-                  placeholder={intl.formatMessage(messages.simple_card_content)}
-                  showToolbar={true}
-                />
+                <div
+                  ref={contentRef}
+                  onClick={() => {
+                    setSelected('content');
+                  }}
+                  onFocus={() => {
+                    setSelected('content');
+                  }}
+                >
+                  <TextEditorWidget
+                    data={data}
+                    fieldName="simple_card_content"
+                    selected={selected === 'content'}
+                    block={block}
+                    onChangeBlock={(data) =>
+                      onChange(data, 'simple_card_content')
+                    }
+                    placeholder={intl.formatMessage(
+                      messages.simple_card_content,
+                    )}
+                    showToolbar={true}
+                    onSelectBlock={onSelectBlock}
+                    onAddBlock={onAddBlock}
+                    index={index}
+                  />
+                </div>
               </>
             ) : (
               <>

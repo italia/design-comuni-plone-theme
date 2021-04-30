@@ -10,7 +10,9 @@ export function getItemsByPath(items, pathname, defaultRootPath = true) {
   const matchingPaths = Object.keys(itemsByPath)
     .filter((path) => pathname.startsWith(path))
     .sort((a, b) => {
-      return a.length < b.length;
+      if (a.length > b.length) return -1;
+      else if (a.length < b.length) return 1;
+      else return 0;
     });
 
   if (matchingPaths.length > 0) return itemsByPath[matchingPaths[0]].items;

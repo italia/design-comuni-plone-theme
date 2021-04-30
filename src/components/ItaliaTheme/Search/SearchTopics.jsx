@@ -15,6 +15,10 @@ const messages = defineMessages({
     id: 'Show all',
     defaultMessage: 'Mostra tutto',
   },
+  hide: {
+    id: 'Hide',
+    defaultMessage: 'Nascondi',
+  },
 });
 
 export default function SearchTopics({
@@ -117,7 +121,7 @@ export default function SearchTopics({
               aria-expanded="false"
               aria-controls="collapseList"
             >
-              {intl.formatMessage(messages.showAll)}
+              {intl.formatMessage(collapse ? messages.showAll : messages.hide)}
             </a>
           </div>
         </>

@@ -38,6 +38,7 @@ export ParentSiteMenu from '@italia/components/ItaliaTheme/Header/ParentSiteMenu
 export SearchModal from '@italia/components/ItaliaTheme/Header/SearchModal';
 export SearchSections from '@italia/components/ItaliaTheme/Search/SearchSections';
 export SearchTopics from '@italia/components/ItaliaTheme/Search/SearchTopics';
+export SearchCTs from '@italia/components/ItaliaTheme/Search/SearchCTs';
 export MegaMenu from '@italia/components/ItaliaTheme/MegaMenu/MegaMenu';
 export MenuSecondary from '@italia/components/ItaliaTheme/MenuSecondary/MenuSecondary';
 export Logo from '@italia/components/ItaliaTheme/Logo/Logo';

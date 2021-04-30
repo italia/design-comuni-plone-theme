@@ -37,6 +37,7 @@ const CardWithImageTemplate = ({
   always_show_image = false,
   hide_dates = false,
   full_width = true,
+  natural_image_size = false,
 }) => {
   const intl = useIntl();
   moment.locale(intl.locale);
@@ -76,7 +77,11 @@ const CardWithImageTemplate = ({
                   >
                     {/* wrapperClassName="card-overlapping" */}
                     {(index < 3 || always_show_image) && image && (
-                      <div className="img-responsive-wrapper">
+                      <div
+                        className={cx('img-responsive-wrapper', {
+                          'natural-image-size': natural_image_size,
+                        })}
+                      >
                         <div className="img-responsive img-responsive-panoramic">
                           <figure className="img-wrapper">
                             <Image

@@ -99,6 +99,9 @@ class Edit extends Component {
             block={this.props.block}
             onChange={(obj, fieldname) => this.onChange(obj, fieldname)}
             inEditMode={true}
+            onSelectBlock={this.props.onSelectBlock}
+            onAddBlock={this.props.onAddBlock}
+            index={this.props.index}
           />
         </BodyWrapper>
 

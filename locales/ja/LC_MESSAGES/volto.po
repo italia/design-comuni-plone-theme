@@ -39,6 +39,10 @@ msgstr ""
 msgid "Aspetto"
 msgstr ""
 
+#: components/ItaliaTheme/Search/Search
+msgid "Attenzione!"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 msgid "Bando"
 msgstr ""
@@ -139,6 +143,11 @@ msgstr ""
 msgid "Form"
 msgstr ""
 
+#: components/ItaliaTheme/Search/SearchCTs
+#: components/ItaliaTheme/Search/SearchTopics
+msgid "Hide"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Image"
 msgstr ""
@@ -193,6 +202,10 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 msgid "Mostra lo sfondo del blocco"
+msgstr ""
+
+#: components/ItaliaTheme/Search/Search
+msgid "Nessun risultato ottenuto"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/NewsHome/Sidebar
@@ -252,6 +265,14 @@ msgstr ""
 msgid "Scroll to top"
 msgstr ""
 
+#: components/ItaliaTheme/Search/Search
+msgid "Search results"
+msgstr ""
+
+#: components/ItaliaTheme/Search/Search
+msgid "Search site"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "SearchEventsBlock"
 msgstr ""
@@ -280,8 +301,13 @@ msgstr ""
 msgid "Short Name"
 msgstr ""
 
+#: components/ItaliaTheme/Search/SearchCTs
 #: components/ItaliaTheme/Search/SearchTopics
 msgid "Show all"
+msgstr ""
+
+#: components/ItaliaTheme/Search/Search
+msgid "Sono occorsi degli errori"
 msgstr ""
 
 #: components/ItaliaTheme/Footer/FooterNewsletterSubscribe
@@ -601,6 +627,7 @@ msgstr ""
 msgid "chiama_il_numero_fax"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Calendar/Item
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 #: components/ItaliaTheme/View/Commons/BandoDates
 msgid "chiusura_procedimento_bando"
@@ -926,6 +953,10 @@ msgstr ""
 msgid "filters"
 msgstr ""
 
+#: components/ItaliaTheme/Search/Search
+msgid "filtersCollapse"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/EventSearch/Body
 msgid "find"
 msgstr ""
@@ -1039,6 +1070,10 @@ msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "foto_attivita_politica"
+msgstr ""
+
+#: components/ItaliaTheme/Search/Search
+msgid "found_n_results"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Commons/CardCalendar
@@ -1202,6 +1237,10 @@ msgstr ""
 msgid "modulo_formati_alternativi"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
+msgid "natural_image_size"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/NewsHome/Body
 msgid "newsHome-news"
 msgstr ""
@@ -1249,10 +1288,12 @@ msgid "optionActiveContentButton"
 msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
+#: components/ItaliaTheme/Search/Search
 msgid "optionActiveContentInfo"
 msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
+#: components/ItaliaTheme/Search/Search
 msgid "optionActiveContentLabel"
 msgstr ""
 
@@ -1261,6 +1302,7 @@ msgid "optionDateEnd"
 msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
+#: components/ItaliaTheme/Search/Search
 msgid "optionDateEndButton"
 msgstr ""
 
@@ -1273,10 +1315,12 @@ msgid "optionDateStart"
 msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
+#: components/ItaliaTheme/Search/Search
 msgid "optionDateStartButton"
 msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
+#: components/ItaliaTheme/Search/Search
 msgid "options"
 msgstr ""
 
@@ -1287,6 +1331,10 @@ msgstr ""
 #: components/ItaliaTheme/View/UOView/UOView
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "orario_pubblico"
+msgstr ""
+
+#: components/ItaliaTheme/Search/Search
+msgid "order_by"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
@@ -1394,6 +1442,7 @@ msgid "related_uo"
 msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
+#: components/ItaliaTheme/Search/Search
 msgid "removeOption"
 msgstr ""
 
@@ -1476,10 +1525,12 @@ msgstr ""
 msgid "ruolo"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Calendar/Item
 #: components/ItaliaTheme/View/Commons/BandoDates
 msgid "scadenza_bando"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Calendar/Item
 #: components/ItaliaTheme/View/Commons/BandoDates
 msgid "scadenza_domande_bando"
 msgstr ""
@@ -1556,6 +1607,14 @@ msgstr ""
 msgid "searchLabel"
 msgstr ""
 
+#: components/ItaliaTheme/Search/Search
+msgid "search_adv_filters"
+msgstr ""
+
+#: components/ItaliaTheme/Search/Search
+msgid "search_content_types"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "search_service_block_sections"
 msgstr ""
@@ -1616,7 +1675,12 @@ msgstr ""
 msgid "searchsectionswidget-title"
 msgstr ""
 
+#: components/ItaliaTheme/Search/Search
+msgid "section_undefined"
+msgstr ""
+
 #: components/ItaliaTheme/Header/SearchModal
+#: components/ItaliaTheme/Search/Search
 msgid "sections"
 msgstr ""
 
@@ -1707,6 +1771,18 @@ msgstr ""
 #: components/ItaliaTheme/SkipLinks/SkipLinks
 #: components/ItaliaTheme/SkipLinksC/SkipLinksC
 msgid "skiplink-navigation"
+msgstr ""
+
+#: components/ItaliaTheme/Search/Search
+msgid "sort_on_date"
+msgstr ""
+
+#: components/ItaliaTheme/Search/Search
+msgid "sort_on_relevance"
+msgstr ""
+
+#: components/ItaliaTheme/Search/Search
+msgid "sort_on_title"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
@@ -1804,6 +1880,7 @@ msgid "to"
 msgstr ""
 
 #: components/ItaliaTheme/Header/SearchModal
+#: components/ItaliaTheme/Search/Search
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderTassonomiaArgomenti
 msgid "topics"
 msgstr ""

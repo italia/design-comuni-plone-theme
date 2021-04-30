@@ -11,7 +11,6 @@ import { calendarDaySearchReducer } from './calendarDaySearchReducer';
 import { amministrazioneTrasparenteTree } from './amministrazioneTrasparenteTree';
 import { dettagliProcedimento } from './dettagliProcedimento';
 import { twitterPosts } from './twitterPosts';
-import { eventSearchReducer } from './eventSearchReducer';
 import { originalQueryReducer } from './originalQueryReducer';
 
 import config from '@plone/volto/registry';
@@ -33,7 +32,6 @@ const reducers = {
   amministrazioneTrasparenteTree: amministrazioneTrasparenteTree,
   dettagliProcedimento: dettagliProcedimento,
   twitterPosts: twitterPosts,
-  eventSearchResults: eventSearchReducer,
   originalQuery: originalQueryReducer,
 };
 

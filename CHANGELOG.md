@@ -1,3 +1,65 @@
+### [3.1.1](https://github.com/RedTurtle/design-volto-theme/compare/v3.1.0...v3.1.1) (2021-04-28)
+
+
+### Bug Fixes
+
+* fixed focus blocks manangement ([e6ab360](https://github.com/RedTurtle/design-volto-theme/commit/e6ab360f0dc74a281a8ff3dec476e568e6357aee))
+
+
+### Maintenance
+
+* **i18n:** update translations ([08d907b](https://github.com/RedTurtle/design-volto-theme/commit/08d907ba7561bbbaaea0c42810fb0a5cddbfd2c7))
+* update secondarymenu ([b6906b1](https://github.com/RedTurtle/design-volto-theme/commit/b6906b1b5f51b1d2ee0c0a2b446eabd8c5311514))
+
+## [3.1.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.16...v3.1.0) (2021-04-27)
+
+
+### Features
+
+* add natural-size opt in card with image listing template ([c1dde0a](https://github.com/RedTurtle/design-volto-theme/commit/c1dde0ae4cf6caf9049c724d942b75c0de3dcff6))
+* extendable options for listing block ([b09b407](https://github.com/RedTurtle/design-volto-theme/commit/b09b407549f10d6a041679f02cf55027882cdd81))
+* extendable options for listing block ([0a27eca](https://github.com/RedTurtle/design-volto-theme/commit/0a27ecad8d6df959d49d79b8f857269cf892f528))
+
+
+### Bug Fixes
+
+* fixed image style in PageHeader ([56804e2](https://github.com/RedTurtle/design-volto-theme/commit/56804e2dcf8b9818906f8124ccb511cf84caf42e))
+* getItemsByPath sorting stability ([3883048](https://github.com/RedTurtle/design-volto-theme/commit/3883048bcd25f6e54577b4b83fc33ab15562b03d))
+* scrollIntoView of null ([ffbd2b8](https://github.com/RedTurtle/design-volto-theme/commit/ffbd2b8aa4626450976f7508b62b0700a27071f4))
+
+
+### Maintenance
+
+* moved styleOptions to config ([17c41af](https://github.com/RedTurtle/design-volto-theme/commit/17c41af2843f789d653a28f09d05226c4c20b736))
+* renamed variable styleOptions into templateOptions for ListingStyle template ([63104a8](https://github.com/RedTurtle/design-volto-theme/commit/63104a884d68701f3a53271aaf4acf28adb16031))
+* update react-slick, update dropdownmenu, avoid spread and querySelector issues ([4e943cb](https://github.com/RedTurtle/design-volto-theme/commit/4e943cb3b18d9f23a2c6a2e48aa075cb7f9da044))
+
+### [3.0.16](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.15...v3.0.16) (2021-04-22)
+
+
+### Bug Fixes
+
+* config import order ([972e9b9](https://github.com/RedTurtle/design-volto-theme/commit/972e9b915fe682b1eaf072b4a727fda50b2236c1))
+* fixed FooterNavigation in multilingual sites ([d645d58](https://github.com/RedTurtle/design-volto-theme/commit/d645d589d4baa5fb61c4b4e83de1d305aefd98a6))
+
+
+### Maintenance
+
+* view Bando scadenza messages in Calendar block ([3fa3b79](https://github.com/RedTurtle/design-volto-theme/commit/3fa3b799cc81c68b21f65499357d9f78a792918a))
+
+### [3.0.15](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.14...v3.0.15) (2021-04-22)
+
+
+### Bug Fixes
+
+* fixed CompleteBlocksLinksTemplate container width on desktop ([d645129](https://github.com/RedTurtle/design-volto-theme/commit/d645129364dee35672b436877cf1cece45a89103))
+
+
+### Maintenance
+
+* updated translations ([3922514](https://github.com/RedTurtle/design-volto-theme/commit/3922514d76b814a88bec0cdcbe49892d85341d3a))
+* updated volto-blocks-widget addon ([7288983](https://github.com/RedTurtle/design-volto-theme/commit/728898397c5379d9d4740e463697b029b2e67654))
+
 ### [3.0.14](https://github.com/RedTurtle/design-volto-theme/compare/v3.0.13...v3.0.14) (2021-04-21)
 
 
