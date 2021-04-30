@@ -78,6 +78,9 @@ const ListingBody = React.memo(
 
         let _data = { ...data, query: query };
 
+        if (page !== currentPage) {
+          setCurrentPage(page);
+        }
         dispatch(
           getQueryStringResults(
             path,
