@@ -152,6 +152,7 @@ msgid "Form"
 msgstr ""
 
 #: components/ItaliaTheme/Search/SearchCTs
+#: components/ItaliaTheme/Search/SearchTopics
 msgid "Hide"
 msgstr ""
 

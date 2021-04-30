@@ -34,7 +34,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Search/Search
 msgid "Attenzione!"
-msgstr ""
+msgstr "Warning!"
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
 msgid "Bando"
@@ -137,8 +137,9 @@ msgid "Form"
 msgstr ""
 
 #: components/ItaliaTheme/Search/SearchCTs
+#: components/ItaliaTheme/Search/SearchTopics
 msgid "Hide"
-msgstr ""
+msgstr "Hide"
 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Image"
@@ -198,7 +199,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Search/Search
 msgid "Nessun risultato ottenuto"
-msgstr ""
+msgstr "No results found"
 
 #: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 msgid "News"
@@ -259,11 +260,11 @@ msgstr "Scroll to top"
 
 #: components/ItaliaTheme/Search/Search
 msgid "Search results"
-msgstr ""
+msgstr "Search results"
 
 #: components/ItaliaTheme/Search/Search
 msgid "Search site"
-msgstr ""
+msgstr "Search site"
 
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "SearchEventsBlock"
@@ -300,7 +301,7 @@ msgstr "Show all"
 
 #: components/ItaliaTheme/Search/Search
 msgid "Sono occorsi degli errori"
-msgstr ""
+msgstr "Some errors occured"
 
 #: components/ItaliaTheme/Footer/FooterNewsletterSubscribe
 msgid "Subscribe"
@@ -947,7 +948,7 @@ msgstr "Filters"
 
 #: components/ItaliaTheme/Search/Search
 msgid "filtersCollapse"
-msgstr ""
+msgstr "Filters"
 
 #: components/ItaliaTheme/Blocks/EventSearch/Body
 msgid "find"
@@ -1066,7 +1067,7 @@ msgstr "Photo of political activity"
 
 #: components/ItaliaTheme/Search/Search
 msgid "found_n_results"
-msgstr ""
+msgstr "Found {total} results"
 
 #: components/ItaliaTheme/Blocks/Listing/Commons/CardCalendar
 #: helpers/ListingHelper
@@ -1327,7 +1328,7 @@ msgstr "Opening time"
 
 #: components/ItaliaTheme/Search/Search
 msgid "order_by"
-msgstr ""
+msgstr "Order by"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "organizzazione_riferimento"
@@ -1601,11 +1602,11 @@ msgstr "Search site"
 
 #: components/ItaliaTheme/Search/Search
 msgid "search_adv_filters"
-msgstr ""
+msgstr "Advanced filters"
 
 #: components/ItaliaTheme/Search/Search
 msgid "search_content_types"
-msgstr ""
+msgstr "Types"
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "search_service_block_sections"
@@ -1767,15 +1768,15 @@ msgstr "Go to navigation"
 
 #: components/ItaliaTheme/Search/Search
 msgid "sort_on_date"
-msgstr ""
+msgstr "Date (newest first)"
 
 #: components/ItaliaTheme/Search/Search
 msgid "sort_on_relevance"
-msgstr ""
+msgstr "Relevance"
 
 #: components/ItaliaTheme/Search/Search
 msgid "sort_on_title"
-msgstr ""
+msgstr "Alphabetically"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "spese_elettorali"

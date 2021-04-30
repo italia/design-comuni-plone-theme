@@ -104,6 +104,20 @@ const parseFetchedTopics = (topics, location) => {
   }, {});
 };
 
+const parseFetchedPortalTypes = (portalTypes, defaultExcludedCT, location) => {
+  const qsCTs = qs.parse(location?.search ?? '')?.['portal_type:list'] ?? [];
+
+  return portalTypes.reduce((acc, ct) => {
+    acc[ct.id] = {
+      value: qsCTs.includes(ct.id) || !defaultExcludedCT.includes(ct.id),
+      label: ct.label,
+      defaultChecked: !defaultExcludedCT.includes(ct.id),
+    };
+
+    return acc;
+  }, {});
+};
+
 const parseFetchedOptions = (options, location) => {
   const qsOptions = qs.parse(location?.search ?? '');
   const opts = JSON.parse(JSON.stringify(options));
@@ -151,6 +165,7 @@ const getSearchParamsURL = (
   sections,
   topics,
   options,
+  portalTypes,
   sortOn = {},
   currentPage,
   customPath,
@@ -211,11 +226,22 @@ const getSearchParamsURL = (
     };
   }
 
+  const activePortalTypes = Object.keys(portalTypes).reduce((acc, ct) => {
+    if (portalTypes[ct].value) return [...acc, ct];
+    return acc;
+  }, []);
+  let portal_type =
+    activePortalTypes?.length > 0
+      ? { 'portal_type:list': activePortalTypes }
+      : null;
+
   let text = searchableText ? { SearchableText: searchableText } : null;
+
   baseUrl += '/search';
   if (onlyParams) {
     baseUrl = '';
   }
+
   return (
     baseUrl +
     '?' +
@@ -226,6 +252,7 @@ const getSearchParamsURL = (
         tassonomia_argomenti: activeTopics,
         ...optionsQuery,
         ...sortOn,
+        ...portal_type,
       },
       { skipNull: true },
     ) +
@@ -240,6 +267,7 @@ export default {
   updateGroupCheckedStatus,
   parseFetchedSections,
   parseFetchedTopics,
+  parseFetchedPortalTypes,
   parseFetchedOptions,
   getSearchParamsURL,
   setSectionFilterChecked,

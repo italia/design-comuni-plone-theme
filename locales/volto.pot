@@ -168,6 +168,7 @@ msgid "Form"
 msgstr ""
 
 #: components/ItaliaTheme/Search/SearchCTs
+#: components/ItaliaTheme/Search/SearchTopics
 # defaultMessage: Nascondi
 msgid "Hide"
 msgstr ""

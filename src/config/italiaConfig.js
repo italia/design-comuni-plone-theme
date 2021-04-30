@@ -477,6 +477,9 @@ export default function applyConfig(voltoConfig) {
       UnitaOrganizzativa: faBuildingSVG,
       Modulo: faFileDownloadSVG,
     },
+    defaultExcludedFromSearch: {
+      portalTypes: ['Image', 'File'],
+    },
     italiaThemeViewsConfig: {
       imagePosition: 'afterHeader', // possible values: afterHeader, documentBody
     },
