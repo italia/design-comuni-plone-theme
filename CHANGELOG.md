@@ -1,3 +1,36 @@
+## [3.2.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.1.1...v3.2.0) (2021-04-30)
+
+
+### Features
+
+* add advanced search filters collapse ([ed84330](https://github.com/RedTurtle/design-volto-theme/commit/ed8433018f564494a584f66436f3067c428f6c17))
+* add multilingual widget for settings controlpanel ([33c9388](https://github.com/RedTurtle/design-volto-theme/commit/33c93885026c5f5498e32644d49723c9a53a7577))
+* search by ct ([fcd74bf](https://github.com/RedTurtle/design-volto-theme/commit/fcd74bfe67f7be3a124d7318d5e5d60eb744e328))
+
+
+### Bug Fixes
+
+* **docker:** fix docker image ([0cf0f67](https://github.com/RedTurtle/design-volto-theme/commit/0cf0f6726ff64452404bb6d76e0db856a998b113))
+* **docker:** fix dockerfile ([a8f13c3](https://github.com/RedTurtle/design-volto-theme/commit/a8f13c3b9f8a7fe2e48cd006b82a2ff94e41f997))
+* **docker:** improve docker image size ([90906a5](https://github.com/RedTurtle/design-volto-theme/commit/90906a5df766aeb1567e023158e86cd2eee75544))
+* avoid rendering empty text blocks ([8a57b90](https://github.com/RedTurtle/design-volto-theme/commit/8a57b90447245b833b9e45f22aecbfbc4baab842))
+* fixed page header width if it hasn't data on the right ([6fdd965](https://github.com/RedTurtle/design-volto-theme/commit/6fdd96546322cac7dc43435d55f82d4a646e2f90))
+* revert config multilingual test ([86e7b05](https://github.com/RedTurtle/design-volto-theme/commit/86e7b0551cf35be5db93fd294aa8d4d8b3ec9618))
+
+
+### Changes
+
+* fix slider, improve imgs ([dc775c9](https://github.com/RedTurtle/design-volto-theme/commit/dc775c99ab8d83ffce6ec71b4785bf7b8b2e066c))
+* move Search into ItaliaTheme, add translations ([508d554](https://github.com/RedTurtle/design-volto-theme/commit/508d55469394c54f768e6f4f8ef472aee8afedc5))
+* search default config ([83ba246](https://github.com/RedTurtle/design-volto-theme/commit/83ba2466c5c7023108748ec89632c552dd44dbad))
+
+
+### Maintenance
+
+* remove eventsSearch action ([4ab3bab](https://github.com/RedTurtle/design-volto-theme/commit/4ab3bab7123142b0c9f231d78f908463a208096b))
+* update multilingual widget ([c30bd6e](https://github.com/RedTurtle/design-volto-theme/commit/c30bd6ebd60c6aac3dc4cf0e85dfecf536974fbb))
+* yarn install prerelease ([4143bcd](https://github.com/RedTurtle/design-volto-theme/commit/4143bcdd1bff727431e43ab175a4d916f0bc06cc))
+
 ### [3.1.1](https://github.com/RedTurtle/design-volto-theme/compare/v3.1.0...v3.1.1) (2021-04-28)
 
 
