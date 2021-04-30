@@ -101,6 +101,7 @@ import CardWithImageRssTemplateSkeleton from '@italia/components/ItaliaTheme/Blo
 import CardWithoutImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
 import CardWithoutImageRssTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton';
 import { DatetimeWidget } from '@plone/volto/config/Widgets';
+import { ArrayWidget } from '@plone/volto/components';
 
 import { MultilingualWidget } from '@italia/addons/volto-multilingual-widget';
 import IconWidget from '@italia/components/ItaliaTheme/manage/Widgets/IconWidget';
@@ -588,6 +589,22 @@ export default function applyConfig(voltoConfig) {
         <DatetimeWidget {...props} dateOnly={true} />
       ),
       search_sections: SearchSectionsConfigurationWidget,
+      tipologie_notizia: MultilingualWidget(
+        (props) => <ArrayWidget {...props} wrapped={false} />,
+        [],
+      ),
+      tipologie_unita_organizzativa: MultilingualWidget(
+        (props) => <ArrayWidget {...props} wrapped={false} />,
+        [],
+      ),
+      tipologie_documento: MultilingualWidget(
+        (props) => <ArrayWidget {...props} wrapped={false} />,
+        [],
+      ),
+      tipologie_persona: MultilingualWidget(
+        (props) => <ArrayWidget {...props} wrapped={false} />,
+        [],
+      ),
     },
     widget: {
       ...config.widgets.widget,
