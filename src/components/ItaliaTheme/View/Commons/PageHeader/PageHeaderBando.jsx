@@ -38,7 +38,7 @@ const PageHeaderBando = ({ content }) => {
 
   return content['@type'] === 'Bando' ? (
     <>
-      {content?.review_state === 'published' && content?.bando_state && (
+      {content?.bando_state && (
         <div
           className={cx(
             'genericcard card card-teaser shadow p-3 mt-3 rounded bando_state',
