@@ -1,3 +1,10 @@
+### [3.2.3](https://github.com/RedTurtle/design-volto-theme/compare/v3.2.2...v3.2.3) (2021-05-03)
+
+
+### Bug Fixes
+
+* fix default path in ListingBody ([88cd573](https://github.com/RedTurtle/design-volto-theme/commit/88cd5733ae82eca959460c34310b38a18dcbbda9))
+
 ### [3.2.2](https://github.com/RedTurtle/design-volto-theme/compare/v3.2.1...v3.2.2) (2021-05-03)
 
 
