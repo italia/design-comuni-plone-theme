@@ -105,6 +105,7 @@ import { ArrayWidget } from '@plone/volto/components';
 
 import { MultilingualWidget } from '@italia/addons/volto-multilingual-widget';
 import IconWidget from '@italia/components/ItaliaTheme/manage/Widgets/IconWidget';
+import SubsiteSocialLinksWidget from '@italia/components/ItaliaTheme/manage/Widgets/SubsiteSocialLinksWidget';
 import SearchSectionsConfigurationWidget from '@italia/components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget';
 import { defaultIconWidgetOptions } from '@italia/helpers/index';
 //import TinymceWidget from '@italia/components/ItaliaTheme/manage/Widgets/TinymceWidget';
@@ -605,6 +606,7 @@ export default function applyConfig(voltoConfig) {
         (props) => <ArrayWidget {...props} wrapped={false} />,
         [],
       ),
+      subsite_social_links: SubsiteSocialLinksWidget,
     },
     widget: {
       ...config.widgets.widget,

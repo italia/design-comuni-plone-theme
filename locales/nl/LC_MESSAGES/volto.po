@@ -840,6 +840,10 @@ msgstr ""
 msgid "documento_ufficio_responsabile"
 msgstr ""
 
+#: components/ItaliaTheme/manage/Widgets/SubsiteSocialLinksWidget
+msgid "done_edit_social_links"
+msgstr ""
+
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "dove"
 msgstr ""
@@ -854,6 +858,10 @@ msgstr ""
 
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 msgid "dropdownmenu-close-menu-button"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SubsiteSocialLinksWidget
+msgid "edit_social_links"
 msgstr ""
 
 #: components/ItaliaTheme/View/VenueView/VenueView
