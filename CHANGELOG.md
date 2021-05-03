@@ -1,3 +1,11 @@
+### [3.2.2](https://github.com/RedTurtle/design-volto-theme/compare/v3.2.1...v3.2.2) (2021-05-03)
+
+
+### Bug Fixes
+
+* fix page header width with search and no right side, and venue related_items ([1e8be7f](https://github.com/RedTurtle/design-volto-theme/commit/1e8be7f2917cc736910025737ba9f7bc1671353d))
+* fixed viewDate moment warning, type of correlato_in_evidenza, view bando state ([212e1f6](https://github.com/RedTurtle/design-volto-theme/commit/212e1f6ce3b21603acf685ac0aa1b99a0f7bcb6f))
+
 ### [3.2.1](https://github.com/RedTurtle/design-volto-theme/compare/v3.2.0...v3.2.1) (2021-04-30)
 
 
