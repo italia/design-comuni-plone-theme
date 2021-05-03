@@ -838,6 +838,10 @@ msgstr "Références normatives"
 msgid "documento_ufficio_responsabile"
 msgstr "Bureau responsable"
 
+#: components/ItaliaTheme/manage/Widgets/SubsiteSocialLinksWidget
+msgid "done_edit_social_links"
+msgstr ""
+
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "dove"
 msgstr "Où est-ce"
@@ -853,6 +857,10 @@ msgstr "Télécharger"
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 msgid "dropdownmenu-close-menu-button"
 msgstr "Fermer le menu"
+
+#: components/ItaliaTheme/manage/Widgets/SubsiteSocialLinksWidget
+msgid "edit_social_links"
+msgstr ""
 
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "elementi_di_interesse"

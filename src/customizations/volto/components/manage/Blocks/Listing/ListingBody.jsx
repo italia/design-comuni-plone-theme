@@ -10,7 +10,7 @@ import { isEqual } from 'lodash';
 import config from '@plone/volto/registry';
 
 const ListingBody = React.memo(
-  ({ data, properties, intl, path, isEditMode }) => {
+  ({ data, properties, intl, path = '', isEditMode }) => {
     const [currentPage, setCurrentPage] = React.useState(1);
     const content = properties;
     const querystringResults = useSelector(

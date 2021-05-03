@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-04-30T12:15:57.019Z\n"
+"POT-Creation-Date: 2021-05-03T15:04:03.565Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1006,6 +1006,11 @@ msgstr ""
 msgid "documento_ufficio_responsabile"
 msgstr ""
 
+#: components/ItaliaTheme/manage/Widgets/SubsiteSocialLinksWidget
+# defaultMessage: Fatto
+msgid "done_edit_social_links"
+msgstr ""
+
 #: components/ItaliaTheme/View/VenueView/VenueView
 # defaultMessage: Dove
 msgid "dove"
@@ -1024,6 +1029,11 @@ msgstr ""
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 # defaultMessage: Close menu
 msgid "dropdownmenu-close-menu-button"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SubsiteSocialLinksWidget
+# defaultMessage: Modifica i social
+msgid "edit_social_links"
 msgstr ""
 
 #: components/ItaliaTheme/View/VenueView/VenueView
