@@ -1,3 +1,17 @@
+### [3.2.5](https://github.com/RedTurtle/design-volto-theme/compare/v3.2.4...v3.2.5) (2021-05-04)
+
+
+### Bug Fixes
+
+* default value for SubsiteSocialLinksWidget ([e684075](https://github.com/RedTurtle/design-volto-theme/commit/e684075207d0245c66a16e99201a264cbef5dc6a))
+
+
+### Maintenance
+
+* **i18n:** update translations ([53ab14e](https://github.com/RedTurtle/design-volto-theme/commit/53ab14e460a2b8427aee097d7e8ab723e0cc7276))
+* update volto ([ace1031](https://github.com/RedTurtle/design-volto-theme/commit/ace1031d15587d38cf74c7dca0cdff49dfa192ac))
+* update volto fixing sort_on in querystringSearch ([d354bbb](https://github.com/RedTurtle/design-volto-theme/commit/d354bbb5b5f83cdbfdb6aeafa75258c73128d1e5))
+
 ### [3.2.4](https://github.com/RedTurtle/design-volto-theme/compare/v3.2.3...v3.2.4) (2021-05-04)
 
 
