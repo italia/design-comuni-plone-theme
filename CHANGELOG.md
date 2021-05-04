@@ -1,3 +1,17 @@
+### [3.2.4](https://github.com/RedTurtle/design-volto-theme/compare/v3.2.3...v3.2.4) (2021-05-04)
+
+
+### Bug Fixes
+
+* fixed locales ([16f6389](https://github.com/RedTurtle/design-volto-theme/commit/16f6389d01d8418ebabfa64526bb4dd2f618c88d))
+
+
+### Maintenance
+
+* **i18n:** updated translations ([b94a9f3](https://github.com/RedTurtle/design-volto-theme/commit/b94a9f3f95925632498a64d4262c3ff8f4e2c24a))
+* edit and view subsite social ([1506e7b](https://github.com/RedTurtle/design-volto-theme/commit/1506e7baa991705729aeb694eef8a69fd12ab033))
+* update volto rt_dev_12 to 12.14.0 ([6d872ee](https://github.com/RedTurtle/design-volto-theme/commit/6d872eea07c99079ba5c954a54135b90ce0fa17d))
+
 ### [3.2.3](https://github.com/RedTurtle/design-volto-theme/compare/v3.2.2...v3.2.3) (2021-05-03)
 
 
