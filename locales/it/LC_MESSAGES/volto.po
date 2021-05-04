@@ -823,7 +823,7 @@ msgstr "Ufficio responsabile"
 
 #: components/ItaliaTheme/manage/Widgets/SubsiteSocialLinksWidget
 msgid "done_edit_social_links"
-msgstr ""
+msgstr "Fatto"
 
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "dove"
@@ -843,7 +843,7 @@ msgstr "Chiudi il menu"
 
 #: components/ItaliaTheme/manage/Widgets/SubsiteSocialLinksWidget
 msgid "edit_social_links"
-msgstr ""
+msgstr "Modifica i social"
 
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "elementi_di_interesse"

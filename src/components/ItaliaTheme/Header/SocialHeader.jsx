@@ -21,16 +21,22 @@ const SocialHeader = () => {
   const intl = useIntl();
   const dispatch = useDispatch();
   const socialSettings = useSelector((state) => state?.socialSettings?.results); //useSelector((state) => state?.socialSettings?.results);
+  const subsite = useSelector((state) => state.subsite?.data);
 
   useEffect(() => {
     dispatch(getSocialSettings());
   }, [dispatch]);
 
+  const socials =
+    subsite?.subsite_social_links?.length > 0
+      ? JSON.parse(subsite.subsite_social_links)
+      : socialSettings;
+
   return (
-    socialSettings?.length > 0 && (
+    socials?.length > 0 && (
       <HeaderSocialsZone label={intl.formatMessage(messages.followUs)}>
         <ul>
-          {socialSettings?.map((social, idx) => (
+          {socials?.map((social, idx) => (
             <li key={idx}>
               <a
                 title={social.title}

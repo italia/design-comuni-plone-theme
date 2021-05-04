@@ -32,7 +32,6 @@ export ArLogin from '@italia/components/ItaliaTheme/Header/HeaderSlim/ArLogin';
 export UserLoggedMenu from '@italia/components/ItaliaTheme/Header/HeaderSlim/UserLoggedMenu';
 export HeaderCenter from '@italia/components/ItaliaTheme/Header/HeaderCenter';
 export SocialHeader from '@italia/components/ItaliaTheme/Header/SocialHeader';
-export SubsiteSocialHeader from '@italia/components/ItaliaTheme/Header/SubsiteSocialHeader';
 export SubsiteHeader from '@italia/components/ItaliaTheme/Header/SubsiteHeader';
 export ParentSiteMenu from '@italia/components/ItaliaTheme/Header/ParentSiteMenu';
 export SearchModal from '@italia/components/ItaliaTheme/Header/SearchModal';

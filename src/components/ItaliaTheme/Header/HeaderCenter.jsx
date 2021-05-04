@@ -19,7 +19,6 @@ import {
   SearchModal,
   Logo,
   SocialHeader,
-  SubsiteSocialHeader,
 } from '@italia/components/ItaliaTheme';
 import { getSiteProperty } from '@italia/helpers';
 
@@ -56,7 +55,7 @@ const HeaderCenter = () => {
           </UniversalLink>
         </div>
         <HeaderRightZone>
-          {!subsite ? <SocialHeader /> : <SubsiteSocialHeader />}
+          <SocialHeader />
 
           <div className="it-search-wrapper">
             <span className="d-none d-md-block">
