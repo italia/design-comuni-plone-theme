@@ -24,7 +24,6 @@ import {
   Logo,
   Icon,
   SocialHeader,
-  SubsiteSocialHeader,
 } from '@italia/components/ItaliaTheme';
 import { getSiteProperty } from '@italia/helpers';
 import {
@@ -129,7 +128,7 @@ const Navigation = ({ pathname }) => {
 
               <MenuSecondary pathname={pathname} />
 
-              {!subsite ? <SocialHeader /> : <SubsiteSocialHeader />}
+              <SocialHeader />
             </div>
           </Collapse>
         </HeaderContent>
