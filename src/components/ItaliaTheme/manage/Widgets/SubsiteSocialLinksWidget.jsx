@@ -20,7 +20,7 @@ const SubsiteSocialLinksWidget = (props) => {
   const intl = useIntl();
   const [open, setOpen] = useState(false);
 
-  const value = JSON.parse(props.value);
+  const value = props.value?.length > 0 ? JSON.parse(props.value) : [];
   return (
     <FormFieldWrapper {...props} className="subsite-social-links-widget">
       {props.value?.length > 0 && (
