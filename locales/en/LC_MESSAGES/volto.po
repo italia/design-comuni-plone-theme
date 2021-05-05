@@ -282,7 +282,7 @@ msgstr "Follow us on"
 
 #: components/ItaliaTheme/Search/SearchCTs
 msgid "Select all or none"
-msgstr ""
+msgstr "Select all or none"
 
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
