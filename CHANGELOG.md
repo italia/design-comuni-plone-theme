@@ -1,3 +1,13 @@
+### [3.2.6](https://github.com/RedTurtle/design-volto-theme/compare/v3.2.5...v3.2.6) (2021-05-05)
+
+
+### Bug Fixes
+
+* fixed richTextHasContent ([bd8ded5](https://github.com/RedTurtle/design-volto-theme/commit/bd8ded55a581654655d3362bb0b4e548287f3473))
+* read content from redux state in ListingBody, to handle page change in folder content view ([4f03488](https://github.com/RedTurtle/design-volto-theme/commit/4f03488594eb3afb50241a59375b27c1a518182a))
+* search cts ([7ec41d9](https://github.com/RedTurtle/design-volto-theme/commit/7ec41d9be50f8fc35817f5f4865c421f58cd8ce9))
+* updated translations ([5511793](https://github.com/RedTurtle/design-volto-theme/commit/5511793008f16ef6708071031220ea8105a4e26d))
+
 ### [3.2.5](https://github.com/RedTurtle/design-volto-theme/compare/v3.2.4...v3.2.5) (2021-05-04)
 
 
