@@ -280,6 +280,10 @@ msgstr "Titolo"
 msgid "Seguici su"
 msgstr "Seguici su"
 
+#: components/ItaliaTheme/Search/SearchCTs
+msgid "Select all or none"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Seleziona un file"

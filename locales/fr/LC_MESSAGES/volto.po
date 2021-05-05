@@ -297,6 +297,10 @@ msgstr ""
 msgid "Seguici su"
 msgstr "Suivez-nous sur"
 
+#: components/ItaliaTheme/Search/SearchCTs
+msgid "Select all or none"
+msgstr "Sélectionner tout ou aucun"
+
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Seleziona un file"
