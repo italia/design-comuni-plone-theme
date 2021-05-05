@@ -8,6 +8,7 @@ import {
   FormGroup,
   Label,
   Collapse,
+  Button,
 } from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
@@ -19,6 +20,10 @@ const messages = defineMessages({
     id: 'Hide',
     defaultMessage: 'Nascondi',
   },
+  selectAll: {
+    id: 'Select all or none',
+    defaultMessage: 'Seleziona tutti o nessuno',
+  },
 });
 
 export default function SearchCTs({
@@ -29,6 +34,18 @@ export default function SearchCTs({
   const intl = useIntl();
   const [collapse, setCollapse] = useState(true);
 
+  const toggleAll = (cts) => {
+    setCollapse(false);
+    let select_all = false;
+    Object.keys(cts).forEach((ctId) => {
+      if (!cts[ctId].value) {
+        select_all = true;
+      }
+    });
+    Object.keys(cts).forEach((ctId) => {
+      setCtChecked(ctId, select_all);
+    });
+  };
   const setCtChecked = (ctId, checked) => {
     setPortalTypes((prevCts) => ({
       ...prevCts,
@@ -110,6 +127,19 @@ export default function SearchCTs({
   );
   return (
     <>
+      <Button
+        color="link"
+        size="mini"
+        className="select-all-cts"
+        title={intl.formatMessage(messages.selectAll)}
+        rel="noopener noreferrer"
+        onClick={(e) => {
+          e.preventDefault();
+          toggleAll({ ...cts_chunks[0], ...cts_chunks[1] });
+        }}
+      >
+        {intl.formatMessage(messages.selectAll)}
+      </Button>
       {drawFilter(cts_chunks[0])}
       {collapsable && cts_chunks[1] && (
         <>

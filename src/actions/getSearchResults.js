@@ -9,12 +9,13 @@ export const GET_SEARCH_RESULTS = 'GET_SEARCH_RESULTS';
  * @function searchResults
  * @returns {Object} Get search results action.
  */
-export function getSearchResults(path) {
+export function getSearchResults(params) {
   return {
     type: GET_SEARCH_RESULTS,
     request: {
       op: 'get',
-      path: `/@search${path}`,
+      path: `/@search`,
+      params: params,
     },
   };
 }

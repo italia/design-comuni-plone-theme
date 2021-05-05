@@ -105,7 +105,7 @@ const parseFetchedTopics = (topics, location) => {
 };
 
 const parseFetchedPortalTypes = (portalTypes, defaultExcludedCT, location) => {
-  const qsCTs = qs.parse(location?.search ?? '')?.['portal_type:list'] ?? [];
+  const qsCTs = qs.parse(location?.search ?? '')?.['portal_type'] ?? [];
 
   return portalTypes.reduce((acc, ct) => {
     acc[ct.id] = {
@@ -171,7 +171,7 @@ const getSearchParamsURL = (
   customPath,
   subsite,
   currentLang,
-  onlyParams = false,
+  getObject = false,
 ) => {
   let baseUrl = subsite
     ? flattenToAppURL(subsite['@id'])
@@ -231,15 +231,26 @@ const getSearchParamsURL = (
     return acc;
   }, []);
   let portal_type =
-    activePortalTypes?.length > 0
-      ? { 'portal_type:list': activePortalTypes }
-      : null;
+    activePortalTypes?.length > 0 ? { portal_type: activePortalTypes } : null;
 
   let text = searchableText ? { SearchableText: searchableText } : null;
 
   baseUrl += '/search';
-  if (onlyParams) {
-    baseUrl = '';
+
+  if (getObject) {
+    let obj = {
+      ...(text ?? {}),
+      ...(pathQuery ?? {}),
+      tassonomia_argomenti: activeTopics,
+      ...optionsQuery,
+      ...sortOn,
+      ...portal_type,
+      skipNull: true,
+      b_start: currentPage ?? 0,
+      use_site_search_settings: true,
+    };
+
+    return obj;
   }
 
   return (
