@@ -12,7 +12,9 @@ import config from '@plone/volto/registry';
 const ListingBody = React.memo(
   ({ data, properties, intl, path = '', isEditMode }) => {
     const [currentPage, setCurrentPage] = React.useState(1);
-    const content = properties;
+    //const content = properties;
+    const content = useSelector((state) => state.content.data);
+
     const querystringResults = useSelector(
       (state) => state.querystringsearch.subrequests?.[data.block],
     );

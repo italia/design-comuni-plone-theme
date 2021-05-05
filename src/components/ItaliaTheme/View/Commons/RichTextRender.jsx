@@ -10,12 +10,22 @@ const richTextHasContent = (content) => {
   if (hasBlocksData(content)) {
     //ReactDOMServer.renderToStaticMarkup(RenderBlocks({ content: content })),
     const renderedBlocks = RenderBlocks({ content: content });
-    const textContent = Object.values(content.blocks)
+
+    const textBlocks = Object.values(content.blocks).filter(
+      (b) => b['@type'] === 'text',
+    );
+    const noTextBlocks = Object.values(content.blocks).filter(
+      (b) => b['@type'] !== 'text',
+    );
+
+    const textContent = textBlocks
       .map((block) => block.text?.blocks?.map((b) => b.text))
       .flat(3)?.[0];
 
     return (
-      renderedBlocks !== null && textContent?.length > 0 && textContent !== ''
+      renderedBlocks !== null &&
+      ((textBlocks?.length > 0 && textContent !== '') ||
+        noTextBlocks.length > 0)
     );
   } else {
     const textToDisplay = content?.data?.replace(/(<([^>]+)>)/g, '') ?? '';
