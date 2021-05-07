@@ -16,3 +16,18 @@
         }
     }
 }
+
+body.template-usergroup-groupprefs,
+body.template-usergroup-userprefs,
+body.template-usergroup-citizens {
+    #content-core {
+        form {
+            overflow: visible;
+
+            table.listing {
+                display: block;
+                overflow: auto;
+            }
+        }
+    }
+}
