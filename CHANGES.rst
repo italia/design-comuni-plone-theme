@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-5.1.3 (unreleased)
+5.1.3 (2021-05-07)
 ------------------
 
 - Fix users controlpanel form scroll [nzambello]
