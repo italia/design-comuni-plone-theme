@@ -1,3 +1,10 @@
+### [3.2.7](https://github.com/RedTurtle/design-volto-theme/compare/v3.2.6...v3.2.7) (2021-05-07)
+
+
+### Bug Fixes
+
+* fixed RichTextRender bug to recognize content ([5511da8](https://github.com/RedTurtle/design-volto-theme/commit/5511da81a503e790fbb491d2218fde660ecc47d7))
+
 ### [3.2.6](https://github.com/RedTurtle/design-volto-theme/compare/v3.2.5...v3.2.6) (2021-05-05)
 
 
