@@ -59,7 +59,8 @@ const GridGalleryTemplate = ({
           )}
           <div className="grid-gallery-grid">
             {items.map((item, index) => {
-              const image = item.image || item.immagine_testata;
+              const image =
+                item.image || item.immagine_testata || item.foto_persona;
 
               return (
                 <div

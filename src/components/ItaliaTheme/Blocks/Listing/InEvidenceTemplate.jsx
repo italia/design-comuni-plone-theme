@@ -22,6 +22,7 @@ import {
   ListingCategory,
   ListingText,
   CardCategory,
+  CardPersona,
 } from '@italia/components/ItaliaTheme';
 import Image from '@plone/volto/components/theme/Image/Image';
 
@@ -58,9 +59,19 @@ const InEvidenceTemplate = ({
                 isEditMode,
               );
               const listingText = <ListingText item={item} />;
-              const image = item.image || item.immagine_testata;
+              const image =
+                item.image || item.immagine_testata || item.foto_persona;
 
-              return (
+              return item['@type'] === 'Persona' ? (
+                <CardPersona
+                  item={item}
+                  className="listing-item card-bg"
+                  showImage={image ? true : false}
+                  listingText={listingText}
+                  icon={icon}
+                  isEditMode={isEditMode}
+                />
+              ) : (
                 <Card
                   key={index}
                   className={cx('listing-item card-bg', {
