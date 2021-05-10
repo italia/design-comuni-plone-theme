@@ -643,7 +643,7 @@ const Search = () => {
                       </Col>
                     </Row>
                   </div>
-                  <Row id="search-results">
+                  <Row>
                     {searchResults?.result?.items?.map((i) => (
                       <Col md={6} key={i['@id']}>
                         <Card
