@@ -1,3 +1,26 @@
+## [3.3.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.2.8...v3.3.0) (2021-05-10)
+
+
+### Features
+
+* add role note to callouts ([0d1576d](https://github.com/RedTurtle/design-volto-theme/commit/0d1576d093fbbe3350d6c73dceedce3b563a7186))
+* add skip to search results ([83c8101](https://github.com/RedTurtle/design-volto-theme/commit/83c8101d129837aeddcc707f2fdda489122ad383))
+
+
+### Bug Fixes
+
+* fixed view UO sede ([05fcdc9](https://github.com/RedTurtle/design-volto-theme/commit/05fcdc97657fbbc96f36a7a94c0dfc5c02479890))
+
+
+### Changes
+
+* remove unused id ([583e91f](https://github.com/RedTurtle/design-volto-theme/commit/583e91f041c892fbb9f648f64febd4c88e91bc71))
+
+
+### Maintenance
+
+* updated rt_dev_12 ([ad72a36](https://github.com/RedTurtle/design-volto-theme/commit/ad72a36c66d6b354d9a01e8c1c76f5809c1b8acb))
+
 ### [3.2.8](https://github.com/RedTurtle/design-volto-theme/compare/v3.2.7...v3.2.8) (2021-05-10)
 
 
