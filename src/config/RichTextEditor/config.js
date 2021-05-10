@@ -79,9 +79,15 @@ const ItaliaBlocksHtmlRenderers = {
         {child}
       </p>
     )),
+  callout: (children, { keys }) =>
+    children.map((child, i) => (
+      <p id={keys[i]} key={keys[i]} className="callout" role="note">
+        {child}
+      </p>
+    )),
   'callout-bg': (children, { keys }) =>
     children.map((child, i) => (
-      <p id={keys[i]} key={keys[i]} className="callout-bg">
+      <p id={keys[i]} key={keys[i]} className="callout-bg" role="note">
         {child}
       </p>
     )),
