@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-05-08T14:43:07.939Z\n"
+"POT-Creation-Date: 2021-05-10T15:16:52.675Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -14,6 +14,7 @@ msgstr ""
 "Domain: volto\n"
 
 #: components/ItaliaTheme/Header/HeaderSlim/ArLogin
+#: components/ItaliaTheme/Header/HeaderSlim/HeaderSlimRightZone
 # defaultMessage: Accedi all'area personale
 msgid "Accedi all'area personale"
 msgstr ""
@@ -69,7 +70,6 @@ msgstr ""
 msgid "Cerca per parola chiave"
 msgstr ""
 
-#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Clicca qui per sostituire il file
@@ -141,7 +141,6 @@ msgid "Dimensione della mappa"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Form
-#: components/ItaliaTheme/Blocks/Form/FormView
 # defaultMessage: Email inviata correttamente
 msgid "Email Success"
 msgstr ""
@@ -152,7 +151,6 @@ msgid "Email sent"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Form
-#: components/ItaliaTheme/Blocks/Form/FormView
 # defaultMessage: Errore
 msgid "Error"
 msgstr ""
@@ -305,7 +303,6 @@ msgstr ""
 msgid "Required"
 msgstr ""
 
-#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Rimuovi il file
@@ -353,7 +350,6 @@ msgstr ""
 msgid "Select all or none"
 msgstr ""
 
-#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Seleziona un file
@@ -410,21 +406,18 @@ msgstr ""
 msgid "Titolo"
 msgstr ""
 
-#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Trascina qui il file...
 msgid "Trascina qui il file ..."
 msgstr ""
 
-#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Trascina qui un file per caricare un nuovo file
 msgid "Trascina qui un file per caricare un nuovo file"
 msgstr ""
 
-#: components/FileWidget
 #: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Trascina qui un file per sostituire quello esistente
@@ -573,6 +566,7 @@ msgstr ""
 msgid "always_show_image"
 msgstr ""
 
+#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Amministrazione
 msgid "amministrazione"
@@ -960,11 +954,13 @@ msgstr ""
 msgid "dirigente"
 msgstr ""
 
+#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/PersonaView/PersonaView
-# defaultMessage: Documenti
+# defaultMessage: Documenti e dati
 msgid "documenti"
 msgstr ""
 
+#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Documenti e dati
 msgid "documenti-e-dati"
@@ -1208,7 +1204,6 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Edit
 #: components/ItaliaTheme/Blocks/Form/Form
-#: components/ItaliaTheme/Blocks/Form/FormView
 # defaultMessage: Invia
 msgid "form_default_submit_label"
 msgstr ""
@@ -1224,7 +1219,6 @@ msgid "form_edit_warning_from"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Form/Form
-#: components/ItaliaTheme/Blocks/Form/FormView
 # defaultMessage: Compila i campi richiesti
 msgid "form_empty_values_validation"
 msgstr ""
@@ -1576,6 +1570,7 @@ msgstr ""
 msgid "notizie_in_evidenza"
 msgstr ""
 
+#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Novità
 msgid "novita"
@@ -2106,6 +2101,7 @@ msgstr ""
 msgid "service_not_active"
 msgstr ""
 
+#: components/ItaliaTheme/Search/SearchSections
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Servizi
 msgid "servizi"
@@ -2125,6 +2121,11 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/Sharing
 # defaultMessage: Condividi
 msgid "share"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/Options/PhotogalleryTemplateOptions
+# defaultMessage: Mostra una sola slide
+msgid "showOneSlide"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
@@ -2179,19 +2180,16 @@ msgid "situazione_patrimoniale"
 msgstr ""
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
-#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 # defaultMessage: Skip to footer
 msgid "skiplink-footer"
 msgstr ""
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
-#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 # defaultMessage: Skip to main content
 msgid "skiplink-main-content"
 msgstr ""
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
-#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 # defaultMessage: Skip to navigation
 msgid "skiplink-navigation"
 msgstr ""
