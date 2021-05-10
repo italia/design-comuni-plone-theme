@@ -1,3 +1,10 @@
+### [3.2.8](https://github.com/RedTurtle/design-volto-theme/compare/v3.2.7...v3.2.8) (2021-05-10)
+
+
+### Bug Fixes
+
+* added more controls in RichTextRender ([0a2e60f](https://github.com/RedTurtle/design-volto-theme/commit/0a2e60f287cfa8a95fda8afa012b970e4e4d28cc))
+
 ### [3.2.7](https://github.com/RedTurtle/design-volto-theme/compare/v3.2.6...v3.2.7) (2021-05-07)
 
 
