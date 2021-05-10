@@ -19,8 +19,8 @@ const richTextHasContent = (content) => {
     );
 
     const textContent = textBlocks
-      .map((block) => block.text?.blocks?.map((b) => b.text))
-      .flat(3)
+      ?.map((block) => block.text?.blocks?.map((b) => b.text))
+      ?.flat(3)
       ?.filter((b) => b != null && b.trim().length > 0)?.[0];
 
     return (
