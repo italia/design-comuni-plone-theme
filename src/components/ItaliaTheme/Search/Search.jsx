@@ -25,6 +25,7 @@ import {
   Alert,
   Spinner,
 } from 'design-react-kit/dist/design-react-kit';
+import { Skiplink, SkiplinkItem } from 'design-react-kit/dist/design-react-kit';
 import { useLocation, useHistory } from 'react-router-dom';
 import {
   Pagination,
@@ -132,6 +133,10 @@ const messages = defineMessages({
   advFilters: {
     id: 'search_adv_filters',
     defaultMessage: 'Filtri avanzati',
+  },
+  skipToSearchResults: {
+    id: 'search_skip_to_search_results',
+    defaultMessage: 'Vai ai risultati di ricerca',
   },
 });
 
@@ -386,6 +391,11 @@ const Search = () => {
                   />
                 </Col>
               </Row>
+              <Skiplink tag="div">
+                <SkiplinkItem href="#search-results-region" tag="a">
+                  {intl.formatMessage(messages.skipToSearchResults)}
+                </SkiplinkItem>
+              </Skiplink>
               <div className="d-block d-lg-none d-xl-none">
                 <div className="row pb-3">
                   <div className="col-6">
