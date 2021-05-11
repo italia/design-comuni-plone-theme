@@ -294,7 +294,8 @@ const UOView = ({ content }) => {
             )}
 
             {/*** CONTATTI ***/}
-            {(content?.sedi_secondarie?.length > 0 ||
+            {(content?.sede?.length > 0 ||
+              content?.sedi_secondarie?.length > 0 ||
               richTextHasContent(content?.contact_info) ||
               content?.geolocation?.latitude > 0 ||
               content?.geolocation?.longitude > 0 ||
