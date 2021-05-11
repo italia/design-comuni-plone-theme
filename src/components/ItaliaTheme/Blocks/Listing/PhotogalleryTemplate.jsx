@@ -121,7 +121,8 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
           <div className="it-carousel-all it-card-bg">
             <Slider {...settings} ref={slider}>
               {items.map((item) => {
-                const image = item.image || item.immagine_testata;
+                const image =
+                  item.image || item.immagine_testata || item.foto_persona;
                 return (
                   <div className="it-single-slide-wrapper" key={item['@id']}>
                     <UniversalLink

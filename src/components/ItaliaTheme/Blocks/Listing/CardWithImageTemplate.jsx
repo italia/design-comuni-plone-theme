@@ -26,6 +26,7 @@ import {
   CardCalendar,
   ListingCategory,
   ListingText,
+  CardPersona,
 } from '@italia/components/ItaliaTheme';
 
 const CardWithImageTemplate = ({
@@ -66,95 +67,113 @@ const CardWithImageTemplate = ({
                 isEditMode,
               );
               const listingText = <ListingText item={item} />;
-              const image = item.image || item.immagine_testata;
+              const image =
+                item.image || item.immagine_testata || item.foto_persona;
+              const showImage = (index < 3 || always_show_image) && image;
 
               return (
                 <Col lg="4" key={item['@id']} className="col-item mb-3">
-                  <Card
-                    className={cx('listing-item card-bg', {
-                      'card-img': index < 3 && item.image,
-                    })}
-                  >
-                    {/* wrapperClassName="card-overlapping" */}
-                    {(index < 3 || always_show_image) && image && (
-                      <div
-                        className={cx('img-responsive-wrapper', {
-                          'natural-image-size': natural_image_size,
-                        })}
-                      >
-                        <div className="img-responsive img-responsive-panoramic">
-                          <figure className="img-wrapper">
-                            <Image
-                              className="listing-image"
-                              image={image}
-                              aria-hidden="true"
-                              alt=""
-                              useOriginal={false}
-                              maxSize={400}
-                            />
-                          </figure>
-                          {item['@type'] === 'Event' && (
-                            <CardCalendar start={item.start} end={item.end} />
-                          )}
-                        </div>
-                      </div>
-                    )}
-                    <CardBody>
-                      <CardCategory iconName={icon} date={date}>
-                        <ListingCategory
-                          category={item?.design_italia_meta_type}
-                          item={item}
-                        />
-                      </CardCategory>
-                      <CardTitle tag="h3">
-                        <UniversalLink
-                          item={!isEditMode ? item : null}
-                          href={isEditMode ? '#' : ''}
-                        >
-                          {item.title || item.id}
-                        </UniversalLink>
-                      </CardTitle>
-                      {listingText && (
-                        <CardText
-                          className={cx('', {
-                            'mb-3': item.tassonomia_argomenti?.length > 0,
-                          })}
-                        >
-                          {listingText}
-                        </CardText>
-                      )}
-                      {item.tassonomia_argomenti?.length > 0 && (
+                  {item['@type'] === 'Persona' ? (
+                    <CardPersona
+                      item={item}
+                      className="listing-item card-bg"
+                      showImage={showImage}
+                      natural_image_size={natural_image_size}
+                      listingText={listingText}
+                      icon={icon}
+                      isEditMode={isEditMode}
+                    />
+                  ) : (
+                    <Card
+                      className={cx('listing-item card-bg', {
+                        'card-img': showImage,
+                        'card-teaser-image card-flex no-after':
+                          item['@type'] === 'Persona',
+                      })}
+                    >
+                      {/* wrapperClassName="card-overlapping" */}
+                      {showImage && (
                         <div
-                          className={cx('', {
-                            'mb-3': eventRecurrenceMore,
+                          className={cx('img-responsive-wrapper', {
+                            'natural-image-size': natural_image_size,
                           })}
                         >
-                          {item.tassonomia_argomenti?.map((argument, index) => (
-                            <UniversalLink
-                              href={flattenToAppURL(argument['@id'])}
-                              key={index}
-                              title={argument.title}
-                              className="text-decoration-none"
-                            >
-                              <Chip
-                                color="primary"
-                                disabled={false}
-                                simple
-                                tag="div"
-                                className="mr-2"
-                              >
-                                <ChipLabel tag="span">
-                                  {argument.title}
-                                </ChipLabel>
-                              </Chip>
-                            </UniversalLink>
-                          ))}
+                          <div className="img-responsive img-responsive-panoramic">
+                            <figure className="img-wrapper">
+                              <Image
+                                className="listing-image"
+                                image={image}
+                                aria-hidden="true"
+                                alt=""
+                                useOriginal={false}
+                                maxSize={400}
+                              />
+                            </figure>
+                            {item['@type'] === 'Event' && (
+                              <CardCalendar start={item.start} end={item.end} />
+                            )}
+                          </div>
                         </div>
                       )}
+                      <CardBody>
+                        <CardCategory iconName={icon} date={date}>
+                          <ListingCategory
+                            category={item?.design_italia_meta_type}
+                            item={item}
+                          />
+                        </CardCategory>
+                        <CardTitle tag="h3">
+                          <UniversalLink
+                            item={!isEditMode ? item : null}
+                            href={isEditMode ? '#' : ''}
+                          >
+                            {item.title || item.id}
+                          </UniversalLink>
+                        </CardTitle>
+                        {listingText && (
+                          <CardText
+                            className={cx('', {
+                              'mb-3': item.tassonomia_argomenti?.length > 0,
+                            })}
+                          >
+                            {listingText}
+                          </CardText>
+                        )}
+                        {item.tassonomia_argomenti?.length > 0 && (
+                          <div
+                            className={cx('', {
+                              'mb-3': eventRecurrenceMore,
+                            })}
+                          >
+                            {item.tassonomia_argomenti?.map(
+                              (argument, index) => (
+                                <UniversalLink
+                                  href={flattenToAppURL(argument['@id'])}
+                                  key={index}
+                                  title={argument.title}
+                                  className="text-decoration-none"
+                                >
+                                  <Chip
+                                    color="primary"
+                                    disabled={false}
+                                    simple
+                                    tag="div"
+                                    className="mr-2"
+                                  >
+                                    <ChipLabel tag="span">
+                                      {argument.title}
+                                    </ChipLabel>
+                                  </Chip>
+                                </UniversalLink>
+                              ),
+                            )}
+                          </div>
+                        )}
 
-                      {eventRecurrenceMore}
-                    </CardBody>
-                  </Card>
+                        {eventRecurrenceMore}
+                      </CardBody>
+                    </Card>
+                  )}{' '}
                 </Col>
               );
             })}

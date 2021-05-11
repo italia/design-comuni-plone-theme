@@ -13,4 +13,16 @@
     font-size: $card-category-size;
     letter-spacing: $card-category-l-spacing;
   }
+
+  .card-persona {
+    .card-image-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+
+      .card-image {
+        flex: 1 1 30%;
+      }
+    }
+  }
 }

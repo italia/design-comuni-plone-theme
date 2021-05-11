@@ -48,7 +48,8 @@ const CompleteBlockLinksTemplate = ({
           )}
           <Row className="items">
             {items.map((item, index) => {
-              const image = item.image || item.immagine_testata;
+              const image =
+                item.image || item.immagine_testata || item.foto_persona;
 
               return (
                 <Col md="6" lg="3" key={item['@id']} className="col-item">
