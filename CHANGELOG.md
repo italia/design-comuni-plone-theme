@@ -1,3 +1,17 @@
+### [3.3.1](https://github.com/RedTurtle/design-volto-theme/compare/v3.3.0...v3.3.1) (2021-05-11)
+
+
+### Features
+
+* view Persona in listing CardWithImage template ([e5cfa2a](https://github.com/RedTurtle/design-volto-theme/commit/e5cfa2acb158e93e9d4245469b815c18f5c357d4))
+
+
+### Maintenance
+
+* **i18n:** update translations ([cdfbc49](https://github.com/RedTurtle/design-volto-theme/commit/cdfbc49b91b80e8015e3f36a64d8bf3e1bfddab7))
+* added foto_persona to listing image ([834e29d](https://github.com/RedTurtle/design-volto-theme/commit/834e29d3a52eda33045349d058d8720a5ddaea88))
+* update volto for internal url blacklist ([0fdba1e](https://github.com/RedTurtle/design-volto-theme/commit/0fdba1e90ce89370337a763eeadc5cc1d8983c61))
+
 ## [3.3.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.2.8...v3.3.0) (2021-05-10)
 
 
