@@ -1,9 +1,19 @@
 # design-volto-theme
 
-Volto Theme for Italia design guidelines
+Volto Theme for [Italia design guidelines](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/it/stabile/index.html) using [bootstrap-italia](https://italia.github.io/bootstrap-italia/).
 
-[bootstrap-italia](https://italia.github.io/bootstrap-italia/)  
-[Linee guida](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/it/stabile/index.html)
+It is built on guidelines' version 2020.1 and it's the successor on Volto of Plone's [design.plone.theme](https://github.com/italia/design.plone.theme/).
+
+
+## Examples
+
+- [Comune di Modena](https://www.comune.modena.it/)
+- [CCIAA Umbria](https://www.umbria.camcom.it/)
+- [Comune di Medolla](https://www.comune.medolla.mo.it/)
+- [Comune di Mirandola](https://www.comune.mirandola.mo.it/)
+- [Comune di San Possidonio](https://www.comune.sanpossidonio.mo.it/)
+- [ASP Comuni Modenesi Area Nord](https://www.aspareanord.it/)
+
 
 ## Documentation
 
