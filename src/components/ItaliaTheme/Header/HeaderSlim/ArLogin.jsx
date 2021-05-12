@@ -132,7 +132,6 @@ const ArLogin = () => {
                       href={config.settings.siteProperties.arLogoutUrl || '/'}
                       title={intl.formatMessage(messages.arLogout)}
                       tag="a"
-                      openLinkInNewTab={false}
                       onClick={() => {
                         if (!config.settings.siteProperties.arLogoutUrl) {
                           doLogout();
