@@ -84,7 +84,6 @@ const ArLogin = () => {
           icon={false}
           size="full"
           tag="a"
-          openLinkInNewTab={false}
         >
           <span className="rounded-icon">
             <Icon color="primary" icon="it-user" padding={false} size="" />
