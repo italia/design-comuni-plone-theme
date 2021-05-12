@@ -1,3 +1,12 @@
+### [3.3.2](https://github.com/RedTurtle/design-volto-theme/compare/v3.3.1...v3.3.2) (2021-05-12)
+
+
+### Changes
+
+* ar login link ([76cd342](https://github.com/RedTurtle/design-volto-theme/commit/76cd342a73be1f27aaa79d514db01d640e7e478f))
+* ar login link ([1f3330f](https://github.com/RedTurtle/design-volto-theme/commit/1f3330fd1ff64520acbdb0a264387e64f8101f62))
+* ar logout link ([4a38b32](https://github.com/RedTurtle/design-volto-theme/commit/4a38b325a04e699d010109bbe436db8e1cd31714))
+
 ### [3.3.1](https://github.com/RedTurtle/design-volto-theme/compare/v3.3.0...v3.3.1) (2021-05-11)
 
 
