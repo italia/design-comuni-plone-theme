@@ -23,7 +23,6 @@ import {
 import { getUser, logout, purgeMessages } from '@plone/volto/actions';
 
 import { BodyClass } from '@plone/volto/helpers';
-import { UniversalLink } from '@plone/volto/components';
 
 import { Icon, UserLoggedMenu } from '@italia/components/ItaliaTheme';
 
@@ -84,7 +83,7 @@ const ArLogin = () => {
           href={config.settings.siteProperties.arLoginUrl}
           icon={false}
           size="full"
-          tag={UniversalLink}
+          tag="a"
           openLinkInNewTab={false}
         >
           <span className="rounded-icon">
@@ -132,7 +131,7 @@ const ArLogin = () => {
                     <LinkListItem
                       href={config.settings.siteProperties.arLogoutUrl || '/'}
                       title={intl.formatMessage(messages.arLogout)}
-                      tag={UniversalLink}
+                      tag="a"
                       openLinkInNewTab={false}
                       onClick={() => {
                         if (!config.settings.siteProperties.arLogoutUrl) {
