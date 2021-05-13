@@ -1,3 +1,10 @@
+### [3.3.3](https://github.com/RedTurtle/design-volto-theme/compare/v3.3.2...v3.3.3) (2021-05-13)
+
+
+### Maintenance
+
+* moved header search to a dedicated component ([e020f50](https://github.com/RedTurtle/design-volto-theme/commit/e020f5068b09138f706406ce3f443e1dd2c1d06b))
+
 ### [3.3.2](https://github.com/RedTurtle/design-volto-theme/compare/v3.3.1...v3.3.2) (2021-05-12)
 
 
