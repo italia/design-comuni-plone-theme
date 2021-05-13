@@ -19,11 +19,14 @@ import HeadingsButton from '@italia/config/RichTextEditor/ToolbarButtons/Heading
 import AlignButton from '@italia/config/RichTextEditor/ToolbarButtons/AlignButton';
 import CalloutsButton from '@italia/config/RichTextEditor/ToolbarButtons/CalloutsButton';
 import ButtonsButton from '@italia/config/RichTextEditor/ToolbarButtons/ButtonsButton';
+import TextSizeButton from '@italia/config/RichTextEditor/ToolbarButtons/TextSizeButton';
 
 const linkPlugin = createLinkPlugin();
 
 const ItaliaRichTextEditorPlugins = [];
 const ItaliaRichTextEditorInlineToolbarButtons = [
+  TextSizeButton,
+  Separator,
   AlignButton,
   Separator,
   BoldButton,
@@ -99,6 +102,19 @@ const ItaliaBlocksHtmlRenderers = {
     )),
 };
 
+const ItaliaInlineHtmlRenderers = {
+  TEXT_LARGER: (children, { key }) => (
+    <span key={key} className="draftjs-text-larger">
+      {children}
+    </span>
+  ),
+  TEXT_SMALLER: (children, { key }) => (
+    <span key={key} className="draftjs-text-smaller">
+      {children}
+    </span>
+  ),
+};
+
 const ItaliaFromHTMLCustomBlockFn = (element) => {
   let ret = FromHTML(element); //get default from plone/volto
 
@@ -107,10 +123,17 @@ const ItaliaFromHTMLCustomBlockFn = (element) => {
       ret = {
         type: 'callout-bg',
       };
-    }
-    if (element.className === 'draftjs-buttons') {
+    } else if (element.className === 'draftjs-buttons') {
       ret = {
         type: 'buttons',
+      };
+    } else if (element.className === 'draftjs-text-smaller') {
+      ret = {
+        type: 'TEXT_SMALLER',
+      };
+    } else if (element.className === 'draftjs-text-larger') {
+      ret = {
+        type: 'TEXT_LARGER',
       };
     }
   }
@@ -157,10 +180,15 @@ export default function applyConfig(config) {
       ...ToHTMLRenderers.blocks,
       ...ItaliaBlocksHtmlRenderers,
     },
-    inline: { ...ToHTMLRenderers.inline },
+    inline: { ...ToHTMLRenderers.inline, ...ItaliaInlineHtmlRenderers },
   };
 
   config.settings.FromHTMLCustomBlockFn = ItaliaFromHTMLCustomBlockFn;
+  config.settings.customStyleMap = {
+    ...(config.settings.customStyleMap ?? {}),
+    TEXT_LARGER: { fontSize: '1.75rem' },
+    TEXT_SMALLER: { fontSize: '0.75rem' },
+  };
 
   return config;
 }
