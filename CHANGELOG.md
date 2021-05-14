@@ -1,3 +1,10 @@
+### [3.4.2](https://github.com/RedTurtle/design-volto-theme/compare/v3.4.1...v3.4.2) (2021-05-14)
+
+
+### Bug Fixes
+
+* fixed twitter body block tweet wrapper ([d871832](https://github.com/RedTurtle/design-volto-theme/commit/d8718326fd16785c1ac2879687d3c29294923382))
+
 ### [3.4.1](https://github.com/RedTurtle/design-volto-theme/compare/v3.4.0...v3.4.1) (2021-05-14)
 
 
