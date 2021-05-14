@@ -1,3 +1,15 @@
+## [3.4.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.3.3...v3.4.0) (2021-05-14)
+
+
+### Features
+
+* add font size in rich text editor ([7224401](https://github.com/RedTurtle/design-volto-theme/commit/7224401bcbd5603d25019c8c512645efc2beb7ed))
+
+
+### Maintenance
+
+* update translations ([d85bb93](https://github.com/RedTurtle/design-volto-theme/commit/d85bb93a6989ce60e192b38759c4a2eb9d9eafe1))
+
 ### [3.3.3](https://github.com/RedTurtle/design-volto-theme/compare/v3.3.2...v3.3.3) (2021-05-13)
 
 
