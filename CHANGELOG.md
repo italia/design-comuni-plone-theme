@@ -1,3 +1,15 @@
+### [3.4.1](https://github.com/RedTurtle/design-volto-theme/compare/v3.4.0...v3.4.1) (2021-05-14)
+
+
+### Bug Fixes
+
+* fix viewDate for dates like 'yyyy-mm-dd' ([15b0c8b](https://github.com/RedTurtle/design-volto-theme/commit/15b0c8b36a48cac9ffe118649c6644c03741f84b))
+
+
+### Maintenance
+
+* updated locales ([9cab6a8](https://github.com/RedTurtle/design-volto-theme/commit/9cab6a8eefdf86edcfb8e49e7db2d8defc745304))
+
 ## [3.4.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.3.3...v3.4.0) (2021-05-14)
 
 
