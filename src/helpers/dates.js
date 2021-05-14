@@ -10,8 +10,9 @@ export const viewDate = (locale, value, format) => {
     datetime = value.match(/T(.)*(-|\+|Z)/g)
       ? // Since we assume UTC everywhere, then transform to local (momentjs default)
         moment(value)
-      : // This might happen in old Plone versions dates
-        moment(`${value}Z`);
+      : value.match(/T(.)/g)
+      ? moment(`${value}Z`) // This might happen in old Plone versions dates
+      : moment(value); //This when date is like '2021-05-05'
   }
 
   if (format && datetime) {
