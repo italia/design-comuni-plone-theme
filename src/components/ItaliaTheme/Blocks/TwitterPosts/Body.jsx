@@ -96,45 +96,49 @@ const Body = ({ data, isEditMode }) => {
 
         <Slider {...twitter_slider_settings}>
           {twitter_posts.map((tweet, index) => (
-            <div className="it-single-slide-wrapper tweet rounded" key={index}>
-              <div className="author">
-                <figure>
-                  <img
-                    src={tweet.author.profile_image_url}
-                    alt={tweet.author.name}
-                    aria-hidden="true"
-                    className="rounded-circle"
-                    loading="lazy"
-                  />
-                </figure>
-                <div className="user-infos">
-                  <div className="user-name">{tweet.author.name}</div>
-                  <div className="user-username">@{tweet.author.username}</div>
+            <div className="it-single-slide-wrapper" key={index}>
+              <div className="tweet rounded">
+                <div className="author">
+                  <figure>
+                    <img
+                      src={tweet.author.profile_image_url}
+                      alt={tweet.author.name}
+                      aria-hidden="true"
+                      className="rounded-circle"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <div className="user-infos">
+                    <div className="user-name">{tweet.author.name}</div>
+                    <div className="user-username">
+                      @{tweet.author.username}
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div
-                className="tweet-text"
-                dangerouslySetInnerHTML={{
-                  __html: tweet.text,
-                }}
-              />
-              <div className="date-time">
-                {moment(tweet.created_at)
-                  .locale(intl.locale)
-                  .format('HH:mm - DD MMM YYYY')}
-              </div>
-              <div className="numbers">
-                <div className="number reply" title="Replies">
-                  <Icon icon="reply" />
-                  {tweet.reply_count > 0 && tweet.reply_count}
+                <div
+                  className="tweet-text"
+                  dangerouslySetInnerHTML={{
+                    __html: tweet.text,
+                  }}
+                />
+                <div className="date-time">
+                  {moment(tweet.created_at)
+                    .locale(intl.locale)
+                    .format('HH:mm - DD MMM YYYY')}
                 </div>
-                <div className="number retweet" title="Retweets">
-                  <Icon icon="retweet" />{' '}
-                  {tweet.retweet_count > 0 && tweet.retweet_count}
-                </div>
-                <div className="number like" title="Likes">
-                  <Icon icon="heart" />
-                  {tweet.like_count > 0 && tweet.like_count}
+                <div className="numbers">
+                  <div className="number reply" title="Replies">
+                    <Icon icon="reply" />
+                    {tweet.reply_count > 0 && tweet.reply_count}
+                  </div>
+                  <div className="number retweet" title="Retweets">
+                    <Icon icon="retweet" />{' '}
+                    {tweet.retweet_count > 0 && tweet.retweet_count}
+                  </div>
+                  <div className="number like" title="Likes">
+                    <Icon icon="heart" />
+                    {tweet.like_count > 0 && tweet.like_count}
+                  </div>
                 </div>
               </div>
             </div>
