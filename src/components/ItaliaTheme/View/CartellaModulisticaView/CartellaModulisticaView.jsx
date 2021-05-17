@@ -98,9 +98,10 @@ const CartellaModulisticaView = ({ content }) => {
           </section>
         )}
       </div>
-
       <PagePlaceholderAfterContent content={content} />
-      <RelatedItems content={content} />
+
+      <RelatedItems content={content} list={content?.servizi_collegati ?? []} />
+
       <RelatedItemInEvidence content={content} />
     </>
   );
