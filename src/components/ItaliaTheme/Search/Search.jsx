@@ -192,7 +192,6 @@ const Search = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [collapseFilters, _setCollapseFilters] = useState(true);
   const [advFiltersOpen, setAdvFiltersOpen] = useState(false);
-  const [defaultPortalTypesFilter, setDefaultPortalTypesFilter] = useState([]);
 
   const setCollapseFilters = (collapse) => {
     _setCollapseFilters(collapse);
@@ -272,13 +271,6 @@ const Search = () => {
           location,
         ),
       );
-      setDefaultPortalTypesFilter(
-        parseFetchedPortalTypes(
-          searchFilters.portal_types,
-          config.settings.defaultExcludedFromSearch?.portalTypes,
-          location,
-        ),
-      );
     }
 
     setOptions(parseFetchedOptions({}, location));
@@ -326,10 +318,7 @@ const Search = () => {
           sections,
           topics,
           options,
-          JSON.stringify(portalTypes) !==
-            JSON.stringify(defaultPortalTypesFilter)
-            ? portalTypes
-            : {},
+          {},
           searchOrderDict[sortOn] ?? {},
           (currentPage - 1) * config.settings.defaultPageSize,
           customPath,
