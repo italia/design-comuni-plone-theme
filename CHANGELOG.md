@@ -1,3 +1,10 @@
+### [3.5.1](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.0...v3.5.1) (2021-05-17)
+
+
+### Bug Fixes
+
+* fixed typo ([f0b1141](https://github.com/RedTurtle/design-volto-theme/commit/f0b1141995c4b056e0173f30fa876a3d96281164))
+
 ## [3.5.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.4.2...v3.5.0) (2021-05-17)
 
 
