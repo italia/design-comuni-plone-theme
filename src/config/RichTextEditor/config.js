@@ -25,13 +25,12 @@ const linkPlugin = createLinkPlugin();
 
 const ItaliaRichTextEditorPlugins = [];
 const ItaliaRichTextEditorInlineToolbarButtons = [
-  TextSizeButton,
-  Separator,
   AlignButton,
   Separator,
   BoldButton,
   ItalicButton,
   UnderlineButton,
+  TextSizeButton,
   Separator,
   HeadingsButton,
   linkPlugin.LinkButton,
@@ -108,11 +107,6 @@ const ItaliaInlineHtmlRenderers = {
       {children}
     </span>
   ),
-  TEXT_SMALLER: (children, { key }) => (
-    <span key={key} className="draftjs-text-smaller">
-      {children}
-    </span>
-  ),
 };
 
 const ItaliaFromHTMLCustomBlockFn = (element) => {
@@ -126,10 +120,6 @@ const ItaliaFromHTMLCustomBlockFn = (element) => {
     } else if (element.className === 'draftjs-buttons') {
       ret = {
         type: 'buttons',
-      };
-    } else if (element.className === 'draftjs-text-smaller') {
-      ret = {
-        type: 'TEXT_SMALLER',
       };
     } else if (element.className === 'draftjs-text-larger') {
       ret = {
@@ -187,7 +177,6 @@ export default function applyConfig(config) {
   config.settings.customStyleMap = {
     ...(config.settings.customStyleMap ?? {}),
     TEXT_LARGER: { fontSize: '1.75rem' },
-    TEXT_SMALLER: { fontSize: '0.75rem' },
   };
 
   return config;

@@ -2,10 +2,11 @@ import React from 'react';
 import createInlineStyleButton from 'draft-js-buttons/lib/utils/createInlineStyleButton';
 import Icon from '@plone/volto/components/theme/Icon/Icon';
 
-import DraftJsDropdownButton from '@italia/config/RichTextEditor/ToolbarButtons/DraftJsDropdownButton';
+// import DraftJsDropdownButton from '@italia/config/RichTextEditor/ToolbarButtons/DraftJsDropdownButton';
 
 import formatSVG from '@plone/volto/icons/format.svg';
 
+/*
 const TextSizeButton = (props) => {
   const options = [
     {
@@ -32,5 +33,11 @@ const TextSizeButton = (props) => {
     />
   );
 };
+*/
+
+const TextSizeButton = createInlineStyleButton({
+  style: 'TEXT_LARGER',
+  children: <Icon name={formatSVG} size="1.25em" title="Più grande" />,
+});
 
 export default React.memo(TextSizeButton);
