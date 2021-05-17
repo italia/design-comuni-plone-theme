@@ -1,3 +1,26 @@
+## [3.5.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.4.2...v3.5.0) (2021-05-17)
+
+
+### Features
+
+* text size button ([#312](https://github.com/RedTurtle/design-volto-theme/issues/312)) ([ea45ac3](https://github.com/RedTurtle/design-volto-theme/commit/ea45ac332644f2d84415bdcf3784d525baa948c2))
+
+
+### Bug Fixes
+
+* fixed get siteproperty for no-multilingual sites ([f4f5a3c](https://github.com/RedTurtle/design-volto-theme/commit/f4f5a3c26674ff313f1280e1767b539f2f764bf5))
+* updated locales ([26164d0](https://github.com/RedTurtle/design-volto-theme/commit/26164d031e6f9305b3ee7d1dd5543f9e0459e10d))
+
+
+### Changes
+
+* remove portalTypes from search qs ([9592e41](https://github.com/RedTurtle/design-volto-theme/commit/9592e41abb12e7b2d62654eb4b4d458ffe6fcc04))
+
+
+### Maintenance
+
+* added servizi_collegati in CartellaModulisticaView ([058fcf3](https://github.com/RedTurtle/design-volto-theme/commit/058fcf3babb3e5a362ce7ea505c8f8453d2c257a))
+
 ### [3.4.2](https://github.com/RedTurtle/design-volto-theme/compare/v3.4.1...v3.4.2) (2021-05-14)
 
 
