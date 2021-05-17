@@ -8,12 +8,16 @@ export const getSiteProperty = (property, locale) => {
       case 'string':
         return value;
       case 'object':
-        return (
-          value[locale] ??
-          value.default ??
-          value[config.settings.defaultLanguage] ??
-          value
-        );
+        if (config.settings.isMultilingual) {
+          return (
+            value[locale] ??
+            value[config.settings.defaultLanguage] ??
+            value.default ??
+            value
+          );
+        } else {
+          return value.defalut ?? value;
+        }
       default:
         break;
     }
