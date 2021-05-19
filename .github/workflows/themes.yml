@@ -1,0 +1,14 @@
+name: Update releated themes
+on: [release]
+jobs:
+  update:
+    name: Update themes
+    runs-on: ubuntu-latest
+    steps:
+      - name: trigger Job
+        uses: appleboy/gitlab-ci-action@master
+        with:
+          token: ${{ secrets.TOKEN }}
+          project_id: ${{ secrets.PROJECT_ID }}
+          ref: master
+          debug: true
