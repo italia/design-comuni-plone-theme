@@ -41,6 +41,10 @@ const messages = defineMessages({
     id: 'show_section',
     defaultMessage: 'Mostra la sezione',
   },
+  show_type: {
+    id: 'show_type',
+    defaultMessage: 'Mostra il tipo',
+  },
   show_description: {
     id: 'show_description',
     defaultMessage: 'Mostra la descrizione',
@@ -91,6 +95,12 @@ const SimpleCardTemplateOptions = (props) => {
             ? true
             : false
           : data.show_section;
+      case 'show_type':
+        return data.show_type === undefined
+          ? data.appearance !== SimpleCardTemplateAppearance_COMPACT
+            ? true
+            : false
+          : data.show_type;
       case 'show_description':
         return data.show_description === undefined
           ? data.appearance !== SimpleCardTemplateAppearance_COMPACT
@@ -107,14 +117,10 @@ const SimpleCardTemplateOptions = (props) => {
       ...data,
       show_icon: getDefaultValue('show_icon', data),
       show_section: getDefaultValue('show_section', data),
+      show_type: getDefaultValue('show_type', data),
       show_description: getDefaultValue('show_description', data),
     });
   };
-
-  // useEffect(() => {
-  //   console.log('init');
-  //   setDefaults();
-  // }, []);
 
   useEffect(() => {
     setDefaults();
@@ -191,6 +197,20 @@ const SimpleCardTemplateOptions = (props) => {
           }}
         />
       )}
+      {data.appearance !== SimpleCardTemplateAppearance_COMPACT && (
+        <CheckboxWidget
+          id="show_type"
+          title={intl.formatMessage(messages.show_type)}
+          value={getDefaultValue('show_type', data)}
+          onChange={(id, value) => {
+            onChangeBlock(block, {
+              ...data,
+              [id]: value,
+            });
+          }}
+        />
+      )}
+
       {data.appearance !== SimpleCardTemplateAppearance_COMPACT && (
         <CheckboxWidget
           id="show_description"

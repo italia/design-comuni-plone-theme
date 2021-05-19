@@ -1607,6 +1607,7 @@ msgstr "Services"
 msgid "share"
 msgstr "Share"
 
+#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 msgid "show_description"
 msgstr ""
@@ -1616,6 +1617,7 @@ msgstr ""
 msgid "show_detail_link"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 msgid "show_icon"
 msgstr ""
@@ -1628,8 +1630,14 @@ msgstr ""
 msgid "show_only_first_ribbon"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 msgid "show_section"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+msgid "show_type"
 msgstr ""
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView

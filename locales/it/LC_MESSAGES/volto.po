@@ -1607,6 +1607,7 @@ msgstr "Servizi"
 msgid "share"
 msgstr "Condividi"
 
+#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 msgid "show_description"
 msgstr "Mostra la descrizione"
@@ -1616,6 +1617,7 @@ msgstr "Mostra la descrizione"
 msgid "show_detail_link"
 msgstr "Mostra il link al dettaglio"
 
+#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 msgid "show_icon"
 msgstr "Mostra l'icona"
@@ -1628,9 +1630,15 @@ msgstr "Mostra la mappa a tutta larghezza"
 msgid "show_only_first_ribbon"
 msgstr "Mostra il nastro solo sulla prima card"
 
+#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 msgid "show_section"
 msgstr "Mostra la sezione"
+
+#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+msgid "show_type"
+msgstr ""
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "silenzio_assenso"

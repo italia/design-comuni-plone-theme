@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-05-17T13:31:31.703Z\n"
+"POT-Creation-Date: 2021-05-19T13:33:06.744Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1978,6 +1978,7 @@ msgstr ""
 msgid "share"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 # defaultMessage: Mostra la descrizione
 msgid "show_description"
@@ -1989,6 +1990,7 @@ msgstr ""
 msgid "show_detail_link"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 # defaultMessage: Mostra l'icona
 msgid "show_icon"
@@ -2004,9 +2006,16 @@ msgstr ""
 msgid "show_only_first_ribbon"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 # defaultMessage: Mostra la sezione
 msgid "show_section"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+# defaultMessage: Mostra il tipo
+msgid "show_type"
 msgstr ""
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView

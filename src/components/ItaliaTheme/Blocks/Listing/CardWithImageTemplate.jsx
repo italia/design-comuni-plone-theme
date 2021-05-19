@@ -20,6 +20,7 @@ import Image from '@plone/volto/components/theme/Image/Image';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { CardCategory } from '@italia/components/ItaliaTheme';
 import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
+import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 
 import {
   getItemIcon,
@@ -36,6 +37,10 @@ const CardWithImageTemplate = ({
   linkMore,
   show_block_bg = false,
   always_show_image = false,
+  show_type = true,
+  show_section,
+  show_icon = true,
+  show_description = true,
   hide_dates = false,
   full_width = true,
   natural_image_size = false,
@@ -70,6 +75,7 @@ const CardWithImageTemplate = ({
               const image =
                 item.image || item.immagine_testata || item.foto_persona;
               const showImage = (index < 3 || always_show_image) && image;
+              const category = getCategory(item, show_type, show_section);
 
               return (
                 <Col lg="4" key={item['@id']} className="col-item mb-3">
@@ -79,8 +85,8 @@ const CardWithImageTemplate = ({
                       className="listing-item card-bg"
                       showImage={showImage}
                       natural_image_size={natural_image_size}
-                      listingText={listingText}
-                      icon={icon}
+                      listingText={show_description ? listingText : null}
+                      icon={show_icon ? icon : null}
                       isEditMode={isEditMode}
                     />
                   ) : (
@@ -116,12 +122,14 @@ const CardWithImageTemplate = ({
                         </div>
                       )}
                       <CardBody>
-                        <CardCategory iconName={icon} date={date}>
-                          <ListingCategory
-                            category={item?.design_italia_meta_type}
-                            item={item}
-                          />
-                        </CardCategory>
+                        {(icon || category || date) && (
+                          <CardCategory
+                            iconName={show_icon ? icon : null}
+                            date={date}
+                          >
+                            <ListingCategory category={category} item={item} />
+                          </CardCategory>
+                        )}
                         <CardTitle tag="h3">
                           <UniversalLink
                             item={!isEditMode ? item : null}
@@ -130,7 +138,7 @@ const CardWithImageTemplate = ({
                             {item.title || item.id}
                           </UniversalLink>
                         </CardTitle>
-                        {listingText && (
+                        {show_description && listingText && (
                           <CardText
                             className={cx('', {
                               'mb-3': item.tassonomia_argomenti?.length > 0,

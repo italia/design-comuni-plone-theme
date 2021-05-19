@@ -18,6 +18,8 @@ import {
 import { CardCategory } from '@italia/components/ItaliaTheme';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
+import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
+
 import {
   getItemIcon,
   ListingCategory,
@@ -39,6 +41,7 @@ const SimpleCardTemplateDefault = ({
   linkMore,
   show_icon = true,
   show_section = true,
+  show_type,
   show_description = true,
   show_detail_link,
   detail_link_label,
@@ -159,6 +162,7 @@ const SimpleCardTemplateDefault = ({
           const date = hide_dates ? null : getCalendarDate(item);
           const eventRecurrenceMore = getEventRecurrenceMore(item, isEditMode);
           const listingText = <ListingText item={item} />;
+          const category = getCategory(item, show_type, show_section);
 
           return (
             <Card
@@ -172,14 +176,11 @@ const SimpleCardTemplateDefault = ({
                   'pb-5': show_detail_link || eventRecurrenceMore,
                 })}
               >
-                {(show_icon || show_section || date) && (
+                {(show_icon || category || date) && (
                   <CardCategory iconName={show_icon ? icon : null} date={date}>
-                    {show_section && (
+                    {category && (
                       <span className="text font-weight-bold">
-                        <ListingCategory
-                          category={item.parent?.title}
-                          item={item}
-                        />
+                        <ListingCategory category={category} item={item} />
                       </span>
                     )}
                   </CardCategory>
