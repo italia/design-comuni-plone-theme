@@ -78,6 +78,7 @@ import SliderTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/Slider
 import SliderTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SliderTemplateSkeleton';
 import InEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate';
 import InEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/InEvidenceTemplateSkeleton';
+import InEvidenceTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/InEvidenceTemplateOptions';
 import ContentInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/ContentInEvidenceTemplate';
 import ContentInEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/ContentInEvidenceTemplateSkeleton';
 import SimpleCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplate';
@@ -382,6 +383,7 @@ export default function applyConfig(voltoConfig) {
           label: 'In evidenza',
           template: InEvidenceTemplate,
           skeleton: InEvidenceTemplateSkeleton,
+          templateOptions: InEvidenceTemplateOptions,
         },
         contentInEvidenceTemplate: {
           label: 'Contenuto in evidenza',

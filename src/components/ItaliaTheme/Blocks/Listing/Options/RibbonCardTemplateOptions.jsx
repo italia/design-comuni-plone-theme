@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { TextWidget, CheckboxWidget } from '@plone/volto/components';
@@ -28,6 +29,22 @@ const messages = defineMessages({
     id: 'hide_dates',
     defaultMessage: 'Nascondi le date',
   },
+  show_icon: {
+    id: 'show_icon',
+    defaultMessage: "Mostra l'icona",
+  },
+  show_section: {
+    id: 'show_section',
+    defaultMessage: 'Mostra la sezione',
+  },
+  show_type: {
+    id: 'show_type',
+    defaultMessage: 'Mostra il tipo',
+  },
+  show_description: {
+    id: 'show_description',
+    defaultMessage: 'Mostra la descrizione',
+  },
 });
 
 const RibbonCardTemplateOptions = ({
@@ -37,6 +54,22 @@ const RibbonCardTemplateOptions = ({
   required = false,
 }) => {
   const intl = useIntl();
+
+  const setDefaults = () => {
+    onChangeBlock(block, {
+      ...data,
+      show_section: data.show_section === undefined ? true : data.show_section,
+      show_type: data.show_type === undefined ? false : data.show_type,
+      show_icon: data.show_icon === undefined ? true : data.show_icon,
+      show_description:
+        data.show_description === undefined ? true : data.show_description,
+    });
+  };
+
+  useEffect(() => {
+    setDefaults();
+  }, []);
+
   useEffect(() => {
     if (!data.show_detail_link) {
       onChangeBlock(block, {
@@ -61,6 +94,43 @@ const RibbonCardTemplateOptions = ({
           });
         }}
       />
+
+      <CheckboxWidget
+        id="show_icon"
+        title={intl.formatMessage(messages.show_icon)}
+        value={data.show_icon ? data.show_icon : false}
+        onChange={(id, value) => {
+          onChangeBlock(block, {
+            ...data,
+            [id]: value,
+          });
+        }}
+      />
+
+      <CheckboxWidget
+        id="show_section"
+        title={intl.formatMessage(messages.show_section)}
+        value={data.show_section ? data.show_section : false}
+        onChange={(id, value) => {
+          onChangeBlock(block, {
+            ...data,
+            [id]: value,
+          });
+        }}
+      />
+
+      <CheckboxWidget
+        id="show_type"
+        title={intl.formatMessage(messages.show_type)}
+        value={data.show_type ? data.show_type : false}
+        onChange={(id, value) => {
+          onChangeBlock(block, {
+            ...data,
+            [id]: value,
+          });
+        }}
+      />
+
       <CheckboxWidget
         id="hide_dates"
         title={intl.formatMessage(messages.hide_dates)}
@@ -72,6 +142,18 @@ const RibbonCardTemplateOptions = ({
           });
         }}
       />
+      <CheckboxWidget
+        id="show_description"
+        title={intl.formatMessage(messages.show_description)}
+        value={data.show_description ? data.show_description : false}
+        onChange={(id, value) => {
+          onChangeBlock(block, {
+            ...data,
+            [id]: value,
+          });
+        }}
+      />
+
       <CheckboxWidget
         id="show_detail_link"
         title={intl.formatMessage(messages.show_detail_link)}

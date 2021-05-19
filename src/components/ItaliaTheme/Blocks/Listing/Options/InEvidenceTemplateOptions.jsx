@@ -5,17 +5,9 @@ import { CheckboxWidget } from '@plone/volto/components';
 import { defineMessages, useIntl } from 'react-intl';
 
 const messages = defineMessages({
-  always_show_image: {
-    id: 'always_show_image',
-    defaultMessage: "Mostra l'immagine per tutti gli elementi",
-  },
   hide_dates: {
     id: 'hide_dates',
     defaultMessage: 'Nascondi le date',
-  },
-  natural_image_size: {
-    id: 'natural_image_size',
-    defineMessages: "Non alterare le dimensioni naturali dell'immagine",
   },
   show_icon: {
     id: 'show_icon',
@@ -39,7 +31,7 @@ const messages = defineMessages({
   },
 });
 
-const CardWithImageTemplateOptions = ({
+const InEvidenceTemplateOptions = ({
   data,
   block,
   onChangeBlock,
@@ -65,28 +57,6 @@ const CardWithImageTemplateOptions = ({
 
   return (
     <>
-      <CheckboxWidget
-        id="always_show_image"
-        title={intl.formatMessage(messages.always_show_image)}
-        value={data.always_show_image ? data.always_show_image : false}
-        onChange={(id, value) => {
-          onChangeBlock(block, {
-            ...data,
-            [id]: value,
-          });
-        }}
-      />
-      <CheckboxWidget
-        id="natural_image_size"
-        title={intl.formatMessage(messages.natural_image_size)}
-        value={data.natural_image_size ? data.natural_image_size : false}
-        onChange={(id, value) => {
-          onChangeBlock(block, {
-            ...data,
-            [id]: value,
-          });
-        }}
-      />
       <CheckboxWidget
         id="show_icon"
         title={intl.formatMessage(messages.show_icon)}
@@ -162,10 +132,10 @@ const CardWithImageTemplateOptions = ({
   );
 };
 
-CardWithImageTemplateOptions.propTypes = {
+InEvidenceTemplateOptions.propTypes = {
   data: PropTypes.objectOf(PropTypes.any).isRequired,
   block: PropTypes.string.isRequired,
   onChangeBlock: PropTypes.func.isRequired,
 };
 
-export default CardWithImageTemplateOptions;
+export default InEvidenceTemplateOptions;
