@@ -518,6 +518,7 @@ msgstr "Destinatari del bando"
 msgid "bando_effective"
 msgstr "Data di pubblicazione"
 
+#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 #: components/ItaliaTheme/View/BandoView/BandoView
 msgid "bando_ente"
 msgstr "Ente erogatore"
@@ -539,6 +540,10 @@ msgstr "Scadenza partecipazione"
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 msgid "bando_stato"
 msgstr "Stato"
+
+#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
+msgid "bando_tipologia"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 msgid "bando_vedi"
@@ -1614,6 +1619,10 @@ msgstr "Mostra la descrizione"
 msgid "show_detail_link"
 msgstr "Mostra il link al dettaglio"
 
+#: components/ItaliaTheme/Blocks/Listing/Options/BandiInEvidenceTemplateOptions
+msgid "show_ente"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "show_icon"
 msgstr "Mostra l'icona"
@@ -1629,6 +1638,10 @@ msgstr "Mostra il nastro solo sulla prima card"
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "show_section"
 msgstr "Mostra la sezione"
+
+#: components/ItaliaTheme/Blocks/Listing/Options/BandiInEvidenceTemplateOptions
+msgid "show_tipologia"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/CompleteBlockLinksTemplateTemplateOptions

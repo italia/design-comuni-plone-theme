@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-05-20T13:34:06.339Z\n"
+"POT-Creation-Date: 2021-05-20T14:02:41.617Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -633,8 +633,9 @@ msgstr ""
 msgid "bando_effective"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 #: components/ItaliaTheme/View/BandoView/BandoView
-# defaultMessage: Ente erogatore
+# defaultMessage: Ente
 msgid "bando_ente"
 msgstr ""
 
@@ -658,6 +659,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 # defaultMessage: Stato:
 msgid "bando_stato"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
+# defaultMessage: Tipo
+msgid "bando_tipologia"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
@@ -1987,6 +1993,11 @@ msgstr ""
 msgid "show_detail_link"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/Options/BandiInEvidenceTemplateOptions
+# defaultMessage: Mostra l'ente
+msgid "show_ente"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Mostra l'icona
 msgid "show_icon"
@@ -2005,6 +2016,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Mostra la sezione
 msgid "show_section"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/Options/BandiInEvidenceTemplateOptions
+# defaultMessage: Mostra la tipologia
+msgid "show_tipologia"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions

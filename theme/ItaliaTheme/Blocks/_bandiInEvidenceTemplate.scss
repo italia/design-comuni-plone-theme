@@ -100,6 +100,10 @@
     }
   }
 
+  .card-title + .bando-dati {
+    margin-top: 0;
+  }
+
   .read-more {
     display: flex;
     align-items: flex-end;

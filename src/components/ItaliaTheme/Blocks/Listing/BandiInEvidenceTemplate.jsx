@@ -49,6 +49,14 @@ const messages = defineMessages({
     id: 'bando_inProgress',
     defaultMessage: 'In corso',
   },
+  ente: {
+    id: 'bando_ente',
+    defaultMessage: 'Ente',
+  },
+  tipologia: {
+    id: 'bando_tipologia',
+    defaultMessage: 'Tipo',
+  },
 });
 
 const BandiInEvidenceTemplate = ({
@@ -56,6 +64,9 @@ const BandiInEvidenceTemplate = ({
   title,
   isEditMode,
   show_block_bg,
+  show_ente,
+  show_tipologia,
+  show_description,
   linkMore,
 }) => {
   const intl = useIntl();
@@ -92,11 +103,35 @@ const BandiInEvidenceTemplate = ({
                     </UniversalLink>
                   </CardTitle>
 
-                  {listingText && (
+                  {show_description && listingText && (
                     <div className="bando-description">{listingText}</div>
                   )}
 
                   <div className="bando-dati mb-2">
+                    {/* Ente */}
+                    {show_ente && item.ente_bando?.length > 0 && (
+                      <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
+                        <div className="bando-dati-label mr-2">
+                          {intl.formatMessage(messages.ente)}:
+                        </div>
+                        <span className="bando-dati-date">
+                          {item.ente_bando[0]}
+                        </span>
+                      </span>
+                    )}
+
+                    {/* Tipologia */}
+                    {show_tipologia && item.tipologia_bando?.title?.length > 0 && (
+                      <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
+                        <div className="bando-dati-label mr-2">
+                          {intl.formatMessage(messages.tipologia)}:
+                        </div>
+                        <span className="bando-dati-date">
+                          {item.tipologia_bando?.title}
+                        </span>
+                      </span>
+                    )}
+
                     {/* Pubblicazione */}
                     {item.effective && (
                       <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
