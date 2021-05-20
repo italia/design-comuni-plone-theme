@@ -95,16 +95,21 @@ const BandiInEvidenceTemplate = ({
                   {listingText && (
                     <div className="bando-description">{listingText}</div>
                   )}
+
                   <div className="bando-dati mb-2">
-                    <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
-                      <div className="bando-dati-label mr-2">
-                        {intl.formatMessage(messages.pubblicazione)}:
-                      </div>
-                      <span className="bando-dati-date">
-                        {item.effective &&
-                          viewDate(intl.locale, item.effective, 'DD-MM-YYYY')}
+                    {/* Pubblicazione */}
+                    {item.effective && (
+                      <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
+                        <div className="bando-dati-label mr-2">
+                          {intl.formatMessage(messages.pubblicazione)}:
+                        </div>
+                        <span className="bando-dati-date">
+                          {viewDate(intl.locale, item.effective, 'DD-MM-YYYY')}
+                        </span>
                       </span>
-                    </span>
+                    )}
+
+                    {/* Scadenza */}
                     {item.scadenza_bando && (
                       <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
                         <div className="bando-dati-label mr-2">
@@ -120,6 +125,8 @@ const BandiInEvidenceTemplate = ({
                         </span>
                       </span>
                     )}
+
+                    {/* Chiusura procedimento */}
                     {item.chiusura_procedimento_bando && (
                       <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
                         <div className="bando-dati-label mr-2">
@@ -135,11 +142,14 @@ const BandiInEvidenceTemplate = ({
                         </span>
                       </span>
                     )}
-                    <span className="d-flex align-items-baseline bando-dati-info">
-                      <div className="bando-dati-label mr-3">
-                        {intl.formatMessage(messages.stato)}:
-                      </div>
-                      {item?.bando_state && (
+
+                    {/* Stato */}
+                    {item?.bando_state?.length > 0 && (
+                      <span className="d-flex align-items-baseline bando-dati-info">
+                        <div className="bando-dati-label mr-3">
+                          {intl.formatMessage(messages.stato)}:
+                        </div>
+
                         <span className="bando-dati-date">
                           <div
                             className={cx('bando-state', {
@@ -153,8 +163,8 @@ const BandiInEvidenceTemplate = ({
                             {intl.formatMessage(messages[item.bando_state[0]])}
                           </div>
                         </span>
-                      )}
-                    </span>
+                      </span>
+                    )}
                   </div>
                   <div className="read-more">
                     <CardReadMore
