@@ -8,9 +8,11 @@
           span {
             color: $subsite-link-color;
           }
+
           p {
             color: $subsite-link-color;
           }
+
           .icon {
             fill: $subsite-link-color;
           }
@@ -18,6 +20,21 @@
 
         span {
           color: $subsite-link-color;
+        }
+      }
+    }
+  }
+}
+
+//Tablet horizontal / small desktop
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+  .link-list-wrapper {
+    // classe modificatore per menu laterale
+    &.menu-link-list {
+      h3,
+      h4 {
+        &:after {
+          background-color: $subsite-primary;
         }
       }
     }
