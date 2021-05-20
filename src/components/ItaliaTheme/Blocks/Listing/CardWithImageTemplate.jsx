@@ -20,6 +20,7 @@ import Image from '@plone/volto/components/theme/Image/Image';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { CardCategory } from '@italia/components/ItaliaTheme';
 import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
+import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 
 import {
   getItemIcon,
@@ -36,6 +37,11 @@ const CardWithImageTemplate = ({
   linkMore,
   show_block_bg = false,
   always_show_image = false,
+  show_type = true,
+  show_section,
+  show_icon = true,
+  show_description = true,
+  show_topics = true,
   hide_dates = false,
   full_width = true,
   natural_image_size = false,
@@ -60,16 +66,19 @@ const CardWithImageTemplate = ({
           )}
           <Row className="items">
             {items.map((item, index) => {
-              const icon = getItemIcon(item);
+              const icon = show_icon ? getItemIcon(item) : null;
               const date = hide_dates ? null : getCalendarDate(item);
-              const eventRecurrenceMore = getEventRecurrenceMore(
-                item,
-                isEditMode,
-              );
-              const listingText = <ListingText item={item} />;
+              const eventRecurrenceMore = hide_dates
+                ? null
+                : getEventRecurrenceMore(item, isEditMode);
+              const listingText = show_description ? (
+                <ListingText item={item} />
+              ) : null;
               const image =
                 item.image || item.immagine_testata || item.foto_persona;
               const showImage = (index < 3 || always_show_image) && image;
+              const category = getCategory(item, show_type, show_section);
+              const topics = show_topics ? item.tassonomia_argomenti : null;
 
               return (
                 <Col lg="4" key={item['@id']} className="col-item mb-3">
@@ -116,12 +125,11 @@ const CardWithImageTemplate = ({
                         </div>
                       )}
                       <CardBody>
-                        <CardCategory iconName={icon} date={date}>
-                          <ListingCategory
-                            category={item?.design_italia_meta_type}
-                            item={item}
-                          />
-                        </CardCategory>
+                        {(icon || category || date) && (
+                          <CardCategory iconName={icon} date={date}>
+                            <ListingCategory category={category} item={item} />
+                          </CardCategory>
+                        )}
                         <CardTitle tag="h3">
                           <UniversalLink
                             item={!isEditMode ? item : null}
@@ -133,47 +141,46 @@ const CardWithImageTemplate = ({
                         {listingText && (
                           <CardText
                             className={cx('', {
-                              'mb-3': item.tassonomia_argomenti?.length > 0,
+                              'mb-3': topics?.length > 0,
                             })}
                           >
                             {listingText}
                           </CardText>
                         )}
-                        {item.tassonomia_argomenti?.length > 0 && (
+
+                        {topics?.length > 0 && (
                           <div
                             className={cx('', {
                               'mb-3': eventRecurrenceMore,
                             })}
                           >
-                            {item.tassonomia_argomenti?.map(
-                              (argument, index) => (
-                                <UniversalLink
-                                  href={flattenToAppURL(argument['@id'])}
-                                  key={index}
-                                  title={argument.title}
-                                  className="text-decoration-none"
+                            {topics.map((argument, index) => (
+                              <UniversalLink
+                                href={flattenToAppURL(argument['@id'])}
+                                key={index}
+                                title={argument.title}
+                                className="text-decoration-none"
+                              >
+                                <Chip
+                                  color="primary"
+                                  disabled={false}
+                                  simple
+                                  tag="div"
+                                  className="mr-2"
                                 >
-                                  <Chip
-                                    color="primary"
-                                    disabled={false}
-                                    simple
-                                    tag="div"
-                                    className="mr-2"
-                                  >
-                                    <ChipLabel tag="span">
-                                      {argument.title}
-                                    </ChipLabel>
-                                  </Chip>
-                                </UniversalLink>
-                              ),
-                            )}
+                                  <ChipLabel tag="span">
+                                    {argument.title}
+                                  </ChipLabel>
+                                </Chip>
+                              </UniversalLink>
+                            ))}
                           </div>
                         )}
 
                         {eventRecurrenceMore}
                       </CardBody>
                     </Card>
-                  )}{' '}
+                  )}
                 </Col>
               );
             })}

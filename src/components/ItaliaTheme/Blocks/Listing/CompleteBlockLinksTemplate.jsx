@@ -28,6 +28,7 @@ const CompleteBlockLinksTemplate = ({
   isEditMode,
   linkMore,
   show_block_bg,
+  show_description = true,
 }) => {
   const intl = useIntl();
 
@@ -80,9 +81,11 @@ const CompleteBlockLinksTemplate = ({
                             <CardTitle tag="h3" className="text-secondary">
                               {item.title}
                             </CardTitle>
-                            <CardText tag="p" className="text-secondary">
-                              {item.description}
-                            </CardText>
+                            {show_description && (
+                              <CardText tag="p" className="text-secondary">
+                                {item.description}
+                              </CardText>
+                            )}
                           </CardBody>
                         </div>
                       </div>

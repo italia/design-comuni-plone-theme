@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-05-20T09:39:23.754Z\n"
+"POT-Creation-Date: 2021-05-20T12:57:07.575Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -24,17 +24,13 @@ msgstr ""
 msgid "Add accordion item"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Form/Edit
-# defaultMessage: Aggiungi un campo
-msgid "Add field"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 # defaultMessage: Alert
 msgid "Alert"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Aspetto
 msgid "Aspetto"
 msgstr ""
@@ -70,8 +66,6 @@ msgstr ""
 msgid "Cerca per parola chiave"
 msgstr ""
 
-#: components/FileWidget
-#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Clicca qui per sostituire il file
 msgid "Clicca qui per sostituire il file"
@@ -141,31 +135,9 @@ msgstr ""
 msgid "Dimensione della mappa"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Form/Form
-#: components/ItaliaTheme/Blocks/Form/FormView
-# defaultMessage: Email inviata correttamente
-msgid "Email Success"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Form
-# defaultMessage: La tua mail è stata inviata correttamente
-msgid "Email sent"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Form
-#: components/ItaliaTheme/Blocks/Form/FormView
-# defaultMessage: Errore
-msgid "Error"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Etichetta
 msgid "Etichetta path filter"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-# defaultMessage: Form
-msgid "Form"
 msgstr ""
 
 #: components/ItaliaTheme/Search/SearchCTs
@@ -230,15 +202,14 @@ msgstr ""
 msgid "Menu selezionato"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Mostra i filtri per percorso
 msgid "Mostra i filtri per percorso"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 #: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Mostra lo sfondo del blocco
 msgid "Mostra lo sfondo del blocco"
 msgstr ""
@@ -273,7 +244,7 @@ msgstr ""
 msgid "Open in a new tab"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Filtro
 msgid "Path filter filtro"
 msgstr ""
@@ -284,7 +255,7 @@ msgstr ""
 msgid "Pause slider"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Percorso
 msgid "Percorso path filter"
 msgstr ""
@@ -306,8 +277,6 @@ msgstr ""
 msgid "Required"
 msgstr ""
 
-#: components/FileWidget
-#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Rimuovi il file
 msgid "Rimuovi il file"
@@ -343,7 +312,6 @@ msgstr ""
 msgid "SearchServicesTitle"
 msgstr ""
 
-#: components/ItaliaTheme/Footer/FooterSocials
 #: components/ItaliaTheme/Header/SocialHeader
 # defaultMessage: Seguici su
 msgid "Seguici su"
@@ -354,8 +322,6 @@ msgstr ""
 msgid "Select all or none"
 msgstr ""
 
-#: components/FileWidget
-#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Seleziona un file
 msgid "Seleziona un file"
@@ -384,7 +350,6 @@ msgid "Subscribe"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
-#: components/ItaliaTheme/Blocks/Form/Block/EditBlock
 # defaultMessage: Text...
 msgid "Text placeholder"
 msgstr ""
@@ -398,35 +363,28 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
-#: components/ItaliaTheme/Blocks/Form/Block/EditBlock
 # defaultMessage: Title...
 msgid "Title placeholder"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 #: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Titolo
 msgid "Titolo"
 msgstr ""
 
-#: components/FileWidget
-#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Trascina qui il file...
 msgid "Trascina qui il file ..."
 msgstr ""
 
-#: components/FileWidget
-#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Trascina qui un file per caricare un nuovo file
 msgid "Trascina qui un file per caricare un nuovo file"
 msgstr ""
 
-#: components/FileWidget
-#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Trascina qui un file per sostituire quello esistente
 msgid "Trascina qui un file per sostituire quello esistente"
@@ -482,7 +440,6 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/Accordion/Block/ViewBlock
-#: components/ItaliaTheme/Blocks/Form/Block/EditBlock
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
 #: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
 # defaultMessage: Vedi
@@ -573,6 +530,7 @@ msgid "altri_documenti"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/CompleteBlockLinksTemplateTemplateOptions
 # defaultMessage: Mostra l'immagine per tutti gli elementi
 msgid "always_show_image"
 msgstr ""
@@ -940,8 +898,7 @@ msgstr ""
 msgid "descrizione_estesa"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Testo per il link al dettaglio
 msgid "detail_link_label"
 msgstr ""
@@ -1199,134 +1156,6 @@ msgstr ""
 msgid "fine_termine"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-# defaultMessage: Mittente di default
-msgid "form_default_from"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-# defaultMessage: Questo indirizzo verrà utilizzato come mittente della mail con i dati del form
-msgid "form_default_from_description"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-# defaultMessage: Oggetto della mail
-msgid "form_default_subject"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Edit
-#: components/ItaliaTheme/Blocks/Form/Form
-#: components/ItaliaTheme/Blocks/Form/FormView
-# defaultMessage: Invia
-msgid "form_default_submit_label"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Edit
-# defaultMessage: Attenzione!
-msgid "form_edit_warning"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Edit
-# defaultMessage: Inserire un campo di tipo "E-mail mittente". Se non è presente, oppure è presente ma non viene compilato dall'utente, l'indirizzo del mittente della mail sarà quello configurato dalla sidebar di destra.
-msgid "form_edit_warning_from"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Form
-#: components/ItaliaTheme/Blocks/Form/FormView
-# defaultMessage: Compila i campi richiesti
-msgid "form_empty_values_validation"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-# defaultMessage: Descrizione
-msgid "form_field_description"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-# defaultMessage: Valori possibili
-msgid "form_field_input_values"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-# defaultMessage: Etichetta
-msgid "form_field_label"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-# defaultMessage: Nome
-msgid "form_field_name"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-# defaultMessage: Il nome deve contenere spazi, e può contenere solo caratteri alfanumerici oltre ai caratteri "-" e "_". Il nome coincide con il nome del parametro.
-msgid "form_field_name_description"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-# defaultMessage: Obbligatorio
-msgid "form_field_required"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-# defaultMessage: Tipo di campo
-msgid "form_field_type"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-# defaultMessage: Allegato
-msgid "form_field_type_attachment"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-# defaultMessage: Scelta multipla
-msgid "form_field_type_checkbox"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-# defaultMessage: Data
-msgid "form_field_type_date"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-# defaultMessage: E-mail
-msgid "form_field_type_from"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-# defaultMessage: Scelta singola
-msgid "form_field_type_radio"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-# defaultMessage: Lista
-msgid "form_field_type_select"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-# defaultMessage: Testo
-msgid "form_field_type_text"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-# defaultMessage: Area di testo
-msgid "form_field_type_textarea"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Field
-# defaultMessage: Seleziona un valore
-msgid "form_select_a_value"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-# defaultMessage: Testo sul bottone di invio
-msgid "form_submit_label"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-# defaultMessage: Destinatari
-msgid "form_to"
-msgstr ""
-
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 # defaultMessage: Foto dell'attività politica
 msgid "foto_attivita_politica"
@@ -1368,9 +1197,7 @@ msgstr ""
 msgid "grid-gallery-max-items-exceeded"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Nascondi le date
 msgid "hide_dates"
 msgstr ""
@@ -1538,6 +1365,7 @@ msgid "modulo_formati_alternativi"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/CompleteBlockLinksTemplateTemplateOptions
 # defaultMessage: undefined
 msgid "natural_image_size"
 msgstr ""
@@ -2149,18 +1977,17 @@ msgstr ""
 msgid "share"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Mostra la descrizione
 msgid "show_description"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Mostra il link al dettaglio
 msgid "show_detail_link"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Mostra l'icona
 msgid "show_icon"
 msgstr ""
@@ -2175,9 +2002,21 @@ msgstr ""
 msgid "show_only_first_ribbon"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Mostra la sezione
 msgid "show_section"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/CompleteBlockLinksTemplateTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/InEvidenceTemplateOptions
+# defaultMessage: Mostra gli argomenti
+msgid "show_topics"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+# defaultMessage: Mostra il tipo
+msgid "show_type"
 msgstr ""
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
@@ -2186,11 +2025,13 @@ msgid "silenzio_assenso"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Compatto
 msgid "simplecard_listing_appearance_compact"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 # defaultMessage: Qui puoi selezionare, per il template 'Card semplice', un aspetto diverso da quello di default.
 msgid "simplecard_listing_appearance_description"
 msgstr ""
@@ -2201,19 +2042,16 @@ msgid "situazione_patrimoniale"
 msgstr ""
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
-#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 # defaultMessage: Skip to footer
 msgid "skiplink-footer"
 msgstr ""
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
-#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 # defaultMessage: Skip to main content
 msgid "skiplink-main-content"
 msgstr ""
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
-#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 # defaultMessage: Skip to navigation
 msgid "skiplink-navigation"
 msgstr ""
@@ -2404,7 +2242,6 @@ msgid "unita_organizzativa_competente"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/RenderBlocks
-#: components/ItaliaTheme/View/Commons/TextOrBlocks
 # defaultMessage: Blocco sconosciuto
 msgid "unknownBlock"
 msgstr ""

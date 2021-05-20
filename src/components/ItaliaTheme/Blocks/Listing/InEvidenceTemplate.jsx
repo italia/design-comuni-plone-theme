@@ -25,12 +25,19 @@ import {
   CardPersona,
 } from '@italia/components/ItaliaTheme';
 import Image from '@plone/volto/components/theme/Image/Image';
+import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 
 const InEvidenceTemplate = ({
   items,
   title,
   isEditMode,
   show_block_bg,
+  show_icon = true,
+  show_section,
+  show_type = true,
+  show_description = true,
+  show_topics = true,
+  hide_dates,
   linkMore,
 }) => {
   return (
@@ -52,15 +59,18 @@ const InEvidenceTemplate = ({
           )}
           <div className="in-evidence-cards-wrapper mb-5">
             {items.map((item, index) => {
-              const icon = getItemIcon(item);
-              const date = getCalendarDate(item);
-              const eventRecurrenceMore = getEventRecurrenceMore(
-                item,
-                isEditMode,
-              );
-              const listingText = <ListingText item={item} />;
+              const icon = show_icon ? getItemIcon(item) : null;
+              const date = hide_dates ? null : getCalendarDate(item);
+              const eventRecurrenceMore = hide_dates
+                ? null
+                : getEventRecurrenceMore(item, isEditMode);
+              const listingText = show_description ? (
+                <ListingText item={item} />
+              ) : null;
               const image =
                 item.image || item.immagine_testata || item.foto_persona;
+              const category = getCategory(item, show_type, show_section);
+              const topics = show_topics ? item.tassonomia_argomenti : null;
 
               return item['@type'] === 'Persona' ? (
                 <CardPersona
@@ -98,12 +108,13 @@ const InEvidenceTemplate = ({
                     </div>
                   )}
                   <CardBody>
-                    <CardCategory iconName={icon} date={date}>
-                      <ListingCategory
-                        category={item?.design_italia_meta_type}
-                        item={item}
-                      />
-                    </CardCategory>
+                    {(icon || category || date) && (
+                      <CardCategory iconName={icon} date={date}>
+                        {category && (
+                          <ListingCategory category={category} item={item} />
+                        )}
+                      </CardCategory>
+                    )}
                     <CardTitle tag="h3">
                       <UniversalLink
                         item={!isEditMode ? item : null}
@@ -115,19 +126,20 @@ const InEvidenceTemplate = ({
                     {listingText && (
                       <CardText
                         className={cx('', {
-                          'mb-3': item.tassonomia_argomenti?.length > 0,
+                          'mb-3': topics?.length > 0,
                         })}
                       >
                         {listingText}
                       </CardText>
                     )}
-                    {item.tassonomia_argomenti?.length > 0 && (
+
+                    {topics?.length > 0 && (
                       <div
                         className={cx('', {
                           'mb-3': eventRecurrenceMore,
                         })}
                       >
-                        {item.tassonomia_argomenti?.map((argument, index) => (
+                        {topics.map((argument, index) => (
                           <Link
                             to={flattenToAppURL(argument['@id'])}
                             key={index}

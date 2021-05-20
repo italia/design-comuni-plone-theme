@@ -72,12 +72,14 @@ import SmallBlockLinksTemplateSkeleton from '@italia/components/ItaliaTheme/Bloc
 
 import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate';
 import CompleteBlockLinksTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CompleteBlockLinksTemplateSkeleton';
+import CompleteBlockLinksTemplateTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/CompleteBlockLinksTemplateTemplateOptions';
 import PhotogalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
 import PhotogalleryTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/PhotogalleryTemplateSkeleton';
 import SliderTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SliderTemplate';
 import SliderTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SliderTemplateSkeleton';
 import InEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate';
 import InEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/InEvidenceTemplateSkeleton';
+import InEvidenceTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/InEvidenceTemplateOptions';
 import ContentInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/ContentInEvidenceTemplate';
 import ContentInEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/ContentInEvidenceTemplateSkeleton';
 import SimpleCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplate';
@@ -382,6 +384,7 @@ export default function applyConfig(voltoConfig) {
           label: 'In evidenza',
           template: InEvidenceTemplate,
           skeleton: InEvidenceTemplateSkeleton,
+          templateOptions: InEvidenceTemplateOptions,
         },
         contentInEvidenceTemplate: {
           label: 'Contenuto in evidenza',
@@ -409,6 +412,7 @@ export default function applyConfig(voltoConfig) {
           label: 'Blocco link completo',
           template: CompleteBlockLinksTemplate,
           skeleton: CompleteBlockLinksTemplateSkeleton,
+          templateOptions: CompleteBlockLinksTemplateTemplateOptions,
         },
         photogallery: {
           label: 'Photogallery',

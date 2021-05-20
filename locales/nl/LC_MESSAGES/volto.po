@@ -39,15 +39,12 @@ msgstr ""
 msgid "Add accordion item"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Form/Edit
-msgid "Add field"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Alert"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "Aspetto"
 msgstr ""
 
@@ -76,8 +73,6 @@ msgstr ""
 msgid "Cerca per parola chiave"
 msgstr ""
 
-#: components/FileWidget
-#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Clicca qui per sostituire il file"
 msgstr ""
@@ -134,26 +129,8 @@ msgstr ""
 msgid "Dimensione della mappa"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Form/Form
-#: components/ItaliaTheme/Blocks/Form/FormView
-msgid "Email Success"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Form
-msgid "Email sent"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Form
-#: components/ItaliaTheme/Blocks/Form/FormView
-msgid "Error"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "Etichetta path filter"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-msgid "Form"
 msgstr ""
 
 #: components/ItaliaTheme/Search/SearchCTs
@@ -206,14 +183,13 @@ msgstr ""
 msgid "Menu selezionato"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "Mostra i filtri per percorso"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 #: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "Mostra lo sfondo del blocco"
 msgstr ""
 
@@ -241,7 +217,7 @@ msgstr ""
 msgid "Open in a new tab"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "Path filter filtro"
 msgstr ""
 
@@ -250,7 +226,7 @@ msgstr ""
 msgid "Pause slider"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "Percorso path filter"
 msgstr ""
 
@@ -268,8 +244,6 @@ msgstr ""
 msgid "Required"
 msgstr ""
 
-#: components/FileWidget
-#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Rimuovi il file"
 msgstr ""
@@ -298,7 +272,6 @@ msgstr ""
 msgid "SearchServicesTitle"
 msgstr ""
 
-#: components/ItaliaTheme/Footer/FooterSocials
 #: components/ItaliaTheme/Header/SocialHeader
 msgid "Seguici su"
 msgstr ""
@@ -307,8 +280,6 @@ msgstr ""
 msgid "Select all or none"
 msgstr ""
 
-#: components/FileWidget
-#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Seleziona un file"
 msgstr ""
@@ -332,7 +303,6 @@ msgid "Subscribe"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
-#: components/ItaliaTheme/Blocks/Form/Block/EditBlock
 msgid "Text placeholder"
 msgstr ""
 
@@ -344,31 +314,24 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
-#: components/ItaliaTheme/Blocks/Form/Block/EditBlock
 msgid "Title placeholder"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 #: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "Titolo"
 msgstr ""
 
-#: components/FileWidget
-#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Trascina qui il file ..."
 msgstr ""
 
-#: components/FileWidget
-#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Trascina qui un file per caricare un nuovo file"
 msgstr ""
 
-#: components/FileWidget
-#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Trascina qui un file per sostituire quello esistente"
 msgstr ""
@@ -416,7 +379,6 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/Accordion/Block/ViewBlock
-#: components/ItaliaTheme/Blocks/Form/Block/EditBlock
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
 #: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
 msgid "Vedi"
@@ -492,6 +454,7 @@ msgid "altri_documenti"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/CompleteBlockLinksTemplateTemplateOptions
 msgid "always_show_image"
 msgstr ""
 
@@ -789,8 +752,7 @@ msgstr ""
 msgid "descrizione_estesa"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "detail_link_label"
 msgstr ""
 
@@ -997,109 +959,6 @@ msgstr ""
 msgid "fine_termine"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-msgid "form_default_from"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-msgid "form_default_from_description"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-msgid "form_default_subject"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Edit
-#: components/ItaliaTheme/Blocks/Form/Form
-#: components/ItaliaTheme/Blocks/Form/FormView
-msgid "form_default_submit_label"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Edit
-msgid "form_edit_warning"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Edit
-msgid "form_edit_warning_from"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Form
-#: components/ItaliaTheme/Blocks/Form/FormView
-msgid "form_empty_values_validation"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-msgid "form_field_description"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-msgid "form_field_input_values"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-msgid "form_field_label"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-msgid "form_field_name"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-msgid "form_field_name_description"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-msgid "form_field_required"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-msgid "form_field_type"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-msgid "form_field_type_attachment"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-msgid "form_field_type_checkbox"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-msgid "form_field_type_date"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-msgid "form_field_type_from"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-msgid "form_field_type_radio"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-msgid "form_field_type_select"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-msgid "form_field_type_text"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-msgid "form_field_type_textarea"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Field
-msgid "form_select_a_value"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-msgid "form_submit_label"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Form/Sidebar
-msgid "form_to"
-msgstr ""
-
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "foto_attivita_politica"
 msgstr ""
@@ -1133,9 +992,7 @@ msgstr ""
 msgid "grid-gallery-max-items-exceeded"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "hide_dates"
 msgstr ""
 
@@ -1270,6 +1127,7 @@ msgid "modulo_formati_alternativi"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/CompleteBlockLinksTemplateTemplateOptions
 msgid "natural_image_size"
 msgstr ""
 
@@ -1767,16 +1625,15 @@ msgstr ""
 msgid "share"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "show_description"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "show_detail_link"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "show_icon"
 msgstr ""
 
@@ -1788,8 +1645,18 @@ msgstr ""
 msgid "show_only_first_ribbon"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "show_section"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/CompleteBlockLinksTemplateTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/InEvidenceTemplateOptions
+msgid "show_topics"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+msgid "show_type"
 msgstr ""
 
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
@@ -1797,10 +1664,12 @@ msgid "silenzio_assenso"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "simplecard_listing_appearance_compact"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
+#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "simplecard_listing_appearance_description"
 msgstr ""
 
@@ -1809,17 +1678,14 @@ msgid "situazione_patrimoniale"
 msgstr ""
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
-#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 msgid "skiplink-footer"
 msgstr ""
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
-#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 msgid "skiplink-main-content"
 msgstr ""
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
-#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 msgid "skiplink-navigation"
 msgstr ""
 
@@ -1975,7 +1841,6 @@ msgid "unita_organizzativa_competente"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/RenderBlocks
-#: components/ItaliaTheme/View/Commons/TextOrBlocks
 msgid "unknownBlock"
 msgstr ""
 
