@@ -37,7 +37,9 @@ const TextSizeButton = (props) => {
 
 const TextSizeButton = createInlineStyleButton({
   style: 'TEXT_LARGER',
-  children: <Icon name={formatSVG} size="1.25em" title="Più grande" />,
+  children: (
+    <Icon name={formatSVG} size="1.25em" title="Dimensione del testo" />
+  ),
 });
 
 export default React.memo(TextSizeButton);
