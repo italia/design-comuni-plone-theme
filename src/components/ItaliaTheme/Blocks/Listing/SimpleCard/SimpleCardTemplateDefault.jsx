@@ -18,6 +18,8 @@ import {
 import { CardCategory } from '@italia/components/ItaliaTheme';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
+import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
+
 import {
   getItemIcon,
   ListingCategory,
@@ -39,6 +41,7 @@ const SimpleCardTemplateDefault = ({
   linkMore,
   show_icon = true,
   show_section = true,
+  show_type,
   show_description = true,
   show_detail_link,
   detail_link_label,
@@ -154,11 +157,16 @@ const SimpleCardTemplateDefault = ({
 
       <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-3 mb-3">
         {items.map((item, index) => {
-          const icon = getItemIcon(item);
+          const icon = show_icon ? getItemIcon(item) : null;
           const itemTitle = item.title || item.id;
           const date = hide_dates ? null : getCalendarDate(item);
-          const eventRecurrenceMore = getEventRecurrenceMore(item, isEditMode);
-          const listingText = <ListingText item={item} />;
+          const eventRecurrenceMore = hide_dates
+            ? null
+            : getEventRecurrenceMore(item, isEditMode);
+          const listingText = show_description ? (
+            <ListingText item={item} />
+          ) : null;
+          const category = getCategory(item, show_type, show_section);
 
           return (
             <Card
@@ -172,14 +180,11 @@ const SimpleCardTemplateDefault = ({
                   'pb-5': show_detail_link || eventRecurrenceMore,
                 })}
               >
-                {(show_icon || show_section || date) && (
-                  <CardCategory iconName={show_icon ? icon : null} date={date}>
-                    {show_section && (
+                {(icon || category || date) && (
+                  <CardCategory iconName={icon} date={date}>
+                    {category && (
                       <span className="text font-weight-bold">
-                        <ListingCategory
-                          category={item.parent?.title}
-                          item={item}
-                        />
+                        <ListingCategory category={category} item={item} />
                       </span>
                     )}
                   </CardCategory>
@@ -192,7 +197,7 @@ const SimpleCardTemplateDefault = ({
                     {itemTitle}
                   </UniversalLink>
                 </CardTitle>
-                {show_description && listingText && (
+                {listingText && (
                   <CardText className={cx('', { 'mb-5': eventRecurrenceMore })}>
                     {listingText}
                   </CardText>

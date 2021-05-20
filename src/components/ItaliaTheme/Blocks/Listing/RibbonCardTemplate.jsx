@@ -20,8 +20,9 @@ import { UniversalLink } from '@plone/volto/components';
 
 import { flattenToAppURL } from '@plone/volto/helpers';
 
-import { Icon, getItemIcon } from '@italia/components/ItaliaTheme';
+import { Icon, getItemIcon, ListingText } from '@italia/components/ItaliaTheme';
 import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
+import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 
 const messages = defineMessages({
   view_all: {
@@ -43,6 +44,10 @@ const RibbonCardTemplate = ({
   show_detail_link,
   detail_link_label,
   show_block_bg,
+  show_section = true,
+  show_icon = true,
+  show_description = true,
+  show_type,
   hide_dates,
 }) => {
   const intl = useIntl();
@@ -70,12 +75,16 @@ const RibbonCardTemplate = ({
               const showRibbon =
                 !show_only_first_ribbon ||
                 (show_only_first_ribbon && index === 0);
-              const icon = getItemIcon(item);
+              const icon = show_icon ? getItemIcon(item) : null;
               const date = hide_dates ? null : getCalendarDate(item);
-              const eventRecurrenceMore = getEventRecurrenceMore(
-                item,
-                isEditMode,
-              );
+              const eventRecurrenceMore = hide_dates
+                ? null
+                : getEventRecurrenceMore(item, isEditMode);
+              const category = getCategory(item, show_type, show_section);
+              const listingText = show_description ? (
+                <ListingText item={item} />
+              ) : null;
+
               return (
                 <Col lg={4} sm={12} key={index}>
                   <Card
@@ -90,12 +99,13 @@ const RibbonCardTemplate = ({
                   >
                     {showRibbon && <div className="flag-icon" />}
 
-                    {item.parent?.title && (
+                    {(category || icon) && (
                       <div className="etichetta">
                         {icon && <Icon icon={icon} />}
-                        <span> {item.parent?.title}</span>
+                        {category && <span>{category}</span>}
                       </div>
                     )}
+
                     <CardBody
                       tag="div"
                       className={cx('', { 'mt-5': !showRibbon })}
@@ -109,7 +119,8 @@ const RibbonCardTemplate = ({
                           {itemTitle}
                         </UniversalLink>
                       </CardTitle>
-                      <CardText>{item.description}</CardText>
+                      {listingText && <CardText>{listingText}</CardText>}
+
                       {eventRecurrenceMore}
                       {show_detail_link && (
                         <CardReadMore
