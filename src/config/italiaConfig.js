@@ -72,6 +72,7 @@ import SmallBlockLinksTemplateSkeleton from '@italia/components/ItaliaTheme/Bloc
 
 import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate';
 import CompleteBlockLinksTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CompleteBlockLinksTemplateSkeleton';
+import CompleteBlockLinksTemplateTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/CompleteBlockLinksTemplateTemplateOptions';
 import PhotogalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
 import PhotogalleryTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/PhotogalleryTemplateSkeleton';
 import SliderTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SliderTemplate';
@@ -411,6 +412,7 @@ export default function applyConfig(voltoConfig) {
           label: 'Blocco link completo',
           template: CompleteBlockLinksTemplate,
           skeleton: CompleteBlockLinksTemplateSkeleton,
+          templateOptions: CompleteBlockLinksTemplateTemplateOptions,
         },
         photogallery: {
           label: 'Photogallery',
