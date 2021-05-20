@@ -14,7 +14,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  build_develop:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -81,7 +81,7 @@ jobs:
           api-password: ${{ secrets.RANCHER_API_PASSWORD }}
           cluster-id: ${{ secrets.RANCHER_CLUSTER_ID }}
           project-id: ${{ secrets.RANCHER_PROJECT_ID }}
-          namespace: ${{ secrets.RANCHER_NAMESPACE }}
+          namespace: ${{ secrets.RANCHER_NAMESPACE_DEVELOP }}
           workload: ${{ secrets.RANCHER_WORKLOAD_DEVELOP }}
           image: redturtletech/io-comune-base:develop
           slack-hook-url: ${{ secrets.RANCHER_SLACK_HOOK_URL }}
