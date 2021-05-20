@@ -86,3 +86,8 @@ jobs:
           image: redturtletech/io-comune-base:develop
           slack-hook-url: ${{ secrets.RANCHER_SLACK_HOOK_URL }}
 
+      - uses: christianvuerings/add-labels@v1
+        with:
+          labels: deployed
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
