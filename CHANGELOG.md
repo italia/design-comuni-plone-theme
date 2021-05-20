@@ -1,3 +1,26 @@
+### [3.5.2](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.1...v3.5.2) (2021-05-20)
+
+
+### Bug Fixes
+
+* added menu-link-list style for subsites ([90c5243](https://github.com/RedTurtle/design-volto-theme/commit/90c52434b03dbb4a205421823d353bef60531752))
+* fix label view in listing template Bandi if value is empty ([e91868a](https://github.com/RedTurtle/design-volto-theme/commit/e91868ad9cf846f9af94712d873536253e1ffabc))
+* fixed translations ([b7d4015](https://github.com/RedTurtle/design-volto-theme/commit/b7d401505921b9f26aaa8d27d251c9ce1f1d94e1))
+
+
+### Changes
+
+* text size button title ([7e8d66c](https://github.com/RedTurtle/design-volto-theme/commit/7e8d66ceed1e4371f361f4722bc6608c5b15ae87))
+
+
+### Maintenance
+
+* add action to trigger themes updates ([49cac92](https://github.com/RedTurtle/design-volto-theme/commit/49cac923f1803eb0389d8a530657a5f04827fdea))
+* added listing options to other templates ([8195bdd](https://github.com/RedTurtle/design-volto-theme/commit/8195bddd31d2e767477f26e47073f07231d3320c))
+* added options for BandiInEvidenceTemplate ([99bbfac](https://github.com/RedTurtle/design-volto-theme/commit/99bbfac617ec8a9f795cf170fde577f834a1c2cb))
+* expanded options for card_with_image_template ([4ad3874](https://github.com/RedTurtle/design-volto-theme/commit/4ad3874f178119d84d479b2a1cd71890fbd944a2))
+* moved templates options to a component ([92c6792](https://github.com/RedTurtle/design-volto-theme/commit/92c67923b15f5e55e7a99d59eff6a4b0e314d99b))
+
 ### [3.5.1](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.0...v3.5.1) (2021-05-17)
 
 
