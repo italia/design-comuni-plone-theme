@@ -518,6 +518,7 @@ msgstr "Recipients of the competition notice"
 msgid "bando_effective"
 msgstr "Publication date"
 
+#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 #: components/ItaliaTheme/View/BandoView/BandoView
 msgid "bando_ente"
 msgstr "Supplying authority"
@@ -539,6 +540,10 @@ msgstr "Expiration date:"
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 msgid "bando_stato"
 msgstr "Status:"
+
+#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
+msgid "bando_tipologia"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 msgid "bando_vedi"
@@ -1614,6 +1619,10 @@ msgstr ""
 msgid "show_detail_link"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/Options/BandiInEvidenceTemplateOptions
+msgid "show_ente"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "show_icon"
 msgstr ""
@@ -1628,6 +1637,10 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 msgid "show_section"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/Options/BandiInEvidenceTemplateOptions
+msgid "show_tipologia"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions

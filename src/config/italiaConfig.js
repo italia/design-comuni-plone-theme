@@ -94,6 +94,7 @@ import MapTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Op
 
 import BandiInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate';
 import BandiInEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton';
+import BandiInEvidenceTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/BandiInEvidenceTemplateOptions';
 import AmministrazioneTrasparenteTablesTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
 import AmministrazioneTrasparenteTablesTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/AmministrazioneTrasparenteTablesTemplateSkeleton';
 
@@ -433,6 +434,7 @@ export default function applyConfig(voltoConfig) {
           label: 'Bandi',
           template: BandiInEvidenceTemplate,
           skeleton: BandiInEvidenceTemplateSkeleton,
+          templateOptions: BandiInEvidenceTemplateOptions,
         },
         amministrazioneTrasparenteTablesTemplate: {
           label: 'Tabelle Amministrazione Trasparente',
