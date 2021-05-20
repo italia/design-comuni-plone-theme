@@ -86,7 +86,8 @@ jobs:
           image: redturtletech/io-comune-base:develop
           slack-hook-url: ${{ secrets.RANCHER_SLACK_HOOK_URL }}
 
-      - uses: christianvuerings/add-labels@v1
+      - name: Add 'deployed' label
+        uses: christianvuerings/add-labels@v1
         with:
           labels: deployed
         env:
