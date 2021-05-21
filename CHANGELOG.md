@@ -1,3 +1,10 @@
+### [3.5.4](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.3...v3.5.4) (2021-05-21)
+
+
+### Bug Fixes
+
+* fixed react-slick duplication items ([c1d7e46](https://github.com/RedTurtle/design-volto-theme/commit/c1d7e4666ece50729900094f0c726dabffaa6785))
+
 ### [3.5.3](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.2...v3.5.3) (2021-05-21)
 
 
