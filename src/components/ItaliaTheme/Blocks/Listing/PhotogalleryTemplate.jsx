@@ -45,7 +45,7 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: items.length < 3 ? items.length : 3,
     slidesToScroll: 1,
     autoplaySpeed: 2000,
     pauseOnHover: true,
@@ -60,7 +60,7 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
       {
         breakpoint: 1025,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: items.length < 3 ? items.length : 3,
           slidesToScroll: 3,
           infinite: true,
           dots: true,
@@ -69,7 +69,7 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: items.length < 2 ? items.length : 2,
           slidesToScroll: 2,
           initialSlide: 2,
         },

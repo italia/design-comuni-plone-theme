@@ -20,38 +20,40 @@ const messages = defineMessages({
   },
 });
 
-const twitter_slider_settings = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 1025,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true,
+const getTwitterSliderSettings = (nItems) => {
+  return {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: nItems < 4 ? nItems : 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: nItems < 3 ? nItems : 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
       },
-    },
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        initialSlide: 2,
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: nItems < 2 ? nItems : 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
       },
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
       },
-    },
-  ],
+    ],
+  };
 };
 
 /**
@@ -94,7 +96,7 @@ const Body = ({ data, isEditMode }) => {
           </div>
         )}
 
-        <Slider {...twitter_slider_settings}>
+        <Slider {...getTwitterSliderSettings(twitter_posts.length)}>
           {twitter_posts.map((tweet, index) => (
             <div className="it-single-slide-wrapper" key={index}>
               <div className="tweet rounded">

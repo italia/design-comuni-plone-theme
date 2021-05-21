@@ -16,18 +16,18 @@ import { Icon } from '@italia/components/ItaliaTheme';
  * @class Body
  * @extends Component
  */
-const Body = ({ data, children }) => {
+const Body = ({ data, children, nItems = 0 }) => {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: nItems < 3 ? nItems : 3,
     slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 1025,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: nItems < 3 ? nItems : 3,
           slidesToScroll: 3,
           infinite: true,
           dots: true,
@@ -36,7 +36,7 @@ const Body = ({ data, children }) => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: nItems < 2 ? nItems : 2,
           slidesToScroll: 2,
           initialSlide: 2,
         },
