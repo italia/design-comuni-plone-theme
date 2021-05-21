@@ -1,3 +1,10 @@
+### [3.5.3](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.2...v3.5.3) (2021-05-21)
+
+
+### Bug Fixes
+
+* fixed richTextHasContent when textContent is undefined ([8b39c05](https://github.com/RedTurtle/design-volto-theme/commit/8b39c057c0d98bd595b04b27688044865dd5f21c))
+
 ### [3.5.2](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.1...v3.5.2) (2021-05-20)
 
 
