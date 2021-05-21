@@ -26,6 +26,9 @@ import CalendarEdit from '@italia/components/ItaliaTheme/Blocks/Calendar/Edit';
 import EventSearchView from '@italia/components/ItaliaTheme/Blocks/EventSearch/View';
 import EventSearchEdit from '@italia/components/ItaliaTheme/Blocks/EventSearch/Edit';
 
+import BandiSearchView from '@italia/components/ItaliaTheme/Blocks/BandiSearch/View';
+import BandiSearchEdit from '@italia/components/ItaliaTheme/Blocks/BandiSearch/Edit';
+
 import titleSVG from '@plone/volto/icons/text.svg';
 import ArgomentoTitleView from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/View';
 import ArgomentoTitleEdit from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/Edit';
@@ -187,7 +190,7 @@ export default function applyConfig(voltoConfig) {
       id: 'searchSections',
       title: 'Ricerca nelle sezioni',
       icon: searchIcon,
-      group: 'homePage',
+      group: 'search',
       view: SearchSectionsView,
       edit: SearchSectionsEdit,
       restricted: false,
@@ -217,9 +220,24 @@ export default function applyConfig(voltoConfig) {
       id: 'searchEvents',
       title: 'Ricerca eventi',
       icon: searchIcon,
-      group: 'homePage',
+      group: 'search',
       view: EventSearchView,
       edit: EventSearchEdit,
+      restricted: false,
+      mostUsed: false,
+      security: {
+        addPermission: [],
+        view: [],
+      },
+      sidebarTab: 1,
+    },
+    searchBandi: {
+      id: 'searchBandi',
+      title: 'Ricerca bandi',
+      icon: searchIcon,
+      group: 'search',
+      view: BandiSearchView,
+      edit: BandiSearchEdit,
       restricted: false,
       mostUsed: false,
       security: {
@@ -623,6 +641,7 @@ export default function applyConfig(voltoConfig) {
   const customBlocksOrder = [
     { id: 'news', title: 'News' },
     { id: 'homePage', title: 'Home Page' },
+    { id: 'search', title: 'Ricerca' },
   ];
   const customInitialBlocks = {
     'Pagina Argomento': ['title', 'description', 'text'],

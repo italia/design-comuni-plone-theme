@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react';
 import { SelectInput } from '@italia/components';
 import { useDispatch, useSelector } from 'react-redux';
@@ -30,6 +31,7 @@ const SelectFilter = ({ options, value, id, onChange, placeholder }) => {
             fullobjects: options?.dispatch?.fullobjects,
             metadata_fields: 'UID',
             b_size: options?.dispatch?.b_size,
+            ...(options?.dispatch?.additionalParams ?? {}),
           },
           options?.dispatch?.subrequests_name,
         ),

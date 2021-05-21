@@ -7,11 +7,11 @@ import 'react-dates/lib/css/_datepicker.css';
 
 const messages = defineMessages({
   eventSearchStartDate: {
-    id: 'event_search_startDate',
+    id: 'search_startDate',
     defaultMessage: 'Data inizio',
   },
   eventSearchEndDate: {
-    id: 'event_search_endDate',
+    id: 'search_endDate',
     defaultMessage: 'Data fine',
   },
 });
@@ -30,12 +30,14 @@ const DateFilter = (props) => {
         {...props}
         startDate={value?.startDate || props.defaultStart}
         startDateId="start-date-filter"
-        startDatePlaceholderText={intl.formatMessage(
-          messages.eventSearchStartDate,
-        )}
+        startDatePlaceholderText={
+          props.startLabel ?? intl.formatMessage(messages.eventSearchStartDate)
+        }
         endDate={value?.endDate || props.defaultEnd}
         endDateId="end-date-filter"
-        endDatePlaceholderText={intl.formatMessage(messages.eventSearchEndDate)}
+        endDatePlaceholderText={
+          props.endLabel ?? intl.formatMessage(messages.eventSearchEndDate)
+        }
         onDatesChange={({ startDate, endDate }) => {
           let start = startDate || props.defaultStart;
           let end = endDate || props.defaultEnd;
