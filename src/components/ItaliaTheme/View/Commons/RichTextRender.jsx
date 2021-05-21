@@ -25,7 +25,7 @@ const richTextHasContent = (content) => {
 
     return (
       renderedBlocks !== null &&
-      ((textBlocks?.length > 0 && textContent !== '') ||
+      ((textBlocks?.length > 0 && textContent && textContent !== '') ||
         noTextBlocks.length > 0)
     );
   } else {
