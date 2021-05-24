@@ -465,6 +465,13 @@ export default function applyConfig(voltoConfig) {
     supportedLanguages: ['it'],
     defaultLanguage: 'it',
     verticalFormTabs: true,
+    serverConfig: {
+      ...config.settings.serverConfig,
+      extractScripts: {
+        ...config.settings.serverConfig.extractScripts,
+        errorPages: true,
+      },
+    },
     contentIcons: {
       ...config.settings.contentIcons,
       Document: faFileInvoiceSVG,
