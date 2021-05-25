@@ -135,6 +135,12 @@
     },
     "ignoreFiles": "theme/themes/default/**/*.overrides"
   },
+  "browserslist": [
+    ">1%",
+    "last 2 versions",
+    "not ie 11",
+    "not dead"
+  ],
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
