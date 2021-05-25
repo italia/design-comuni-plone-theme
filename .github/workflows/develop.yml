@@ -1,6 +1,27 @@
 # This is a basic workflow to help you get started with Actions
 name: Docker build for latest develop version
 
+
+############################################################
+#                                                          #
+#         TODO: When we can achieve our dreams             #
+#                                                          #
+#                                                          #
+#   1. on pull request review                              #
+#   on:                                                    #
+#     pull_request_review:                                 #
+#       types: [submitted]                                 #
+#       branches: [master]                                 #
+#                                                          #
+#   2. runs if pull request is approved                    #
+#   build_develop:                                         #
+#     if: github.event.review.state == 'approved'          #
+#     steps:                                               #
+#       ...                                                #
+#                                                          #
+############################################################
+
+
 # Controls when the action will run.
 on:
   # Triggers the workflow when a pull request is approved
@@ -21,7 +42,7 @@ jobs:
     runs-on: ubuntu-latest
 
     # Runs only if pull request is approved
-    if: github.event.review.state == 'approved'
+    # if: github.event.review.state == 'approved'
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     # Will be run if pull request is approved
