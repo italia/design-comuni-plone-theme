@@ -33,43 +33,44 @@ const Gallery = ({
   title_video,
   className,
 }) => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
+  const getSettings = (nItems, slideToScroll) => {
+    return {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: nItems < 3 ? nItems : 3,
+      slidesToScroll: slideToScroll ?? 3,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: nItems < 3 ? nItems : 3,
+            slidesToScroll: nItems < 3 ? nItems : slideToScroll ?? 3,
+            infinite: true,
+            dots: true,
+          },
         },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: slideToScroll < 2 ? slideToScroll : 2,
+            slidesToScroll: nItems < 2 ? nItems : slideToScroll ?? 2,
+            initialSlide: 2,
+          },
         },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
         },
-      },
-    ],
+      ],
+    };
   };
+
   const video_settings = {
-    ...settings,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    ...getSettings(1, 1),
   };
 
   const intl = useIntl();
@@ -118,7 +119,7 @@ const Gallery = ({
               </div>
             </div>
             <div className="it-carousel-all it-card-bg">
-              <Slider {...settings}>
+              <Slider {...getSettings(images.length)}>
                 {images.map((item, i) => (
                   <div className="it-single-slide-wrapper" key={item['@id']}>
                     <figure>

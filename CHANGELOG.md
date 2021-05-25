@@ -1,3 +1,19 @@
+### [3.5.5](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.4...v3.5.5) (2021-05-25)
+
+
+### Bug Fixes
+
+* enabled js in error pages ([d71d4fa](https://github.com/RedTurtle/design-volto-theme/commit/d71d4fa4f6a17d7a10d092fd5e1406e817ff136c))
+* fix viewDate when value is a date ([4572b43](https://github.com/RedTurtle/design-volto-theme/commit/4572b432765711618b86c377a2e16e6875fcbcec))
+* translations ([2a85fed](https://github.com/RedTurtle/design-volto-theme/commit/2a85fed48227e250c4cbc9effd8f36d4b2d2d1fa))
+
+### [3.5.4](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.3...v3.5.4) (2021-05-21)
+
+
+### Bug Fixes
+
+* fixed react-slick duplication items ([c1d7e46](https://github.com/RedTurtle/design-volto-theme/commit/c1d7e4666ece50729900094f0c726dabffaa6785))
+
 ### [3.5.3](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.2...v3.5.3) (2021-05-21)
 
 

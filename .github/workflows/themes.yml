@@ -1,5 +1,8 @@
 name: Update releated themes
-on: [release]
+on:
+  # Triggers the workflow on releases
+  release:
+    types: [published]
 jobs:
   update:
     name: Update themes

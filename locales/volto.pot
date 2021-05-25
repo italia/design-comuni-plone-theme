@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-05-20T14:02:41.617Z\n"
+"POT-Creation-Date: 2021-05-25T06:03:55.127Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -61,6 +61,7 @@ msgstr ""
 msgid "Cerca"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
 # defaultMessage: Cerca per parola chiave
 msgid "Cerca per parola chiave"
@@ -295,6 +296,11 @@ msgstr ""
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Cerca nel sito
 msgid "Search site"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Ricerca bandi
+msgid "SearchBandiBlock"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
@@ -610,6 +616,11 @@ msgstr ""
 #: components/ItaliaTheme/Header/SearchModal
 # defaultMessage: Torna alla ricerca
 msgid "backToSearch"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Edit
+# defaultMessage: Nessun filtro da mostrare. Seleziona i filtri di ricerca da mostrare dalla sidebar laterale.
+msgid "bandi_search_no_filters"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
@@ -1152,6 +1163,7 @@ msgstr ""
 msgid "filtersCollapse"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/BandiSearch/Body
 #: components/ItaliaTheme/Blocks/EventSearch/Body
 # defaultMessage: Cerca
 msgid "find"
@@ -1234,6 +1246,7 @@ msgstr ""
 msgid "index"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/BandiSearch/Body
 #: components/ItaliaTheme/Blocks/Calendar/Body
 #: components/ItaliaTheme/Blocks/EventSearch/Body
 # defaultMessage: Inserire un filtro dal menù laterale per visualizzare i relativi risultati
@@ -1280,6 +1293,7 @@ msgstr ""
 msgid "listing_items_color"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 # defaultMessage: Posizione in cui cercare
 msgid "location_to_search"
@@ -1391,6 +1405,7 @@ msgstr ""
 msgid "no"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/BandiSearch/Body
 #: components/ItaliaTheme/Blocks/EventSearch/Body
 # defaultMessage: Nessun risultato trovato
 msgid "noResult"
@@ -1737,6 +1752,26 @@ msgstr ""
 msgid "ruolo"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
+# defaultMessage: Categoria
+msgid "sarchBandi_categoria_placeholder"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
+# defaultMessage: Ente
+msgid "sarchBandi_ente_placeholder"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
+# defaultMessage: Tipologia
+msgid "sarchBandi_tipologia_placeholder"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
+# defaultMessage: Ufficio responsabile
+msgid "sarchBandi_ufficio_responsabile_placeholder"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Calendar/Item
 #: components/ItaliaTheme/View/Commons/BandoDates
 # defaultMessage: Scadenza dei termini per partecipare al bando
@@ -1759,6 +1794,97 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/SearchSectionForm
 # defaultMessage: Cerca
 msgid "search"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Colore di sfondo
+msgid "searchBlock_bg_color"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Colore del bottone
+msgid "searchBlock_button_color"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
+# defaultMessage: Filtro per Categoria
+msgid "searchBlock_categoria_filter"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Filtro per date
+msgid "searchBlock_date_filter"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
+# defaultMessage: Filtro per Ente
+msgid "searchBlock_ente_filter"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Filtro 1
+msgid "searchBlock_filter_one"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Filtro 3
+msgid "searchBlock_filter_three"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Filtro 2
+msgid "searchBlock_filter_two"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Seleziona i filtri di ricerca da mostrare nel blocco.
+msgid "searchBlock_help"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Primario
+msgid "searchBlock_primarycolor"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
+# defaultMessage: Filtro per data di scadenza del bando
+msgid "searchBlock_scadenza_filter"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Secondario
+msgid "searchBlock_secondaryColor"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Aspetto
+msgid "searchBlock_style"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Ternario
+msgid "searchBlock_tertiaryColor"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Filtro di testo
+msgid "searchBlock_text_filter"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
+# defaultMessage: Filtro per tipologia
+msgid "searchBlock_tipologia_filter"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
+# defaultMessage: Filtro per Ufficio responsabile
+msgid "searchBlock_ufficio_responsabile_filter"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Filtro per luoghi
+msgid "searchBlock_venue_filter"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/SearchSectionForm
@@ -1850,6 +1976,11 @@ msgstr ""
 msgid "search_content_types"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+# defaultMessage: Data fine
+msgid "search_endDate"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Dove cercare
 msgid "search_service_block_sections"
@@ -1863,6 +1994,11 @@ msgstr ""
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Vai ai risultati di ricerca
 msgid "search_skip_to_search_results"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+# defaultMessage: Data inizio
+msgid "search_startDate"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
@@ -2159,6 +2295,7 @@ msgstr ""
 msgid "termini_del_procedimento"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/TextFilter
 #: components/ItaliaTheme/Blocks/EventSearch/Filters/TextFilter
 # defaultMessage: Inserisci un valore
 msgid "text_filter_placeholder"
@@ -2283,6 +2420,7 @@ msgstr ""
 msgid "variazione_situazione_patrimoniale"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/BandiSearch/Body
 #: components/ItaliaTheme/Blocks/EventSearch/Body
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
 # defaultMessage: Luoghi

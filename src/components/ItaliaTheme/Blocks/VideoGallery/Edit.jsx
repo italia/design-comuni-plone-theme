@@ -47,7 +47,7 @@ class Edit extends SubblocksEdit {
     return (
       <div className="public-ui">
         <SubblocksWrapper node={this.node}>
-          <Body {...this.props}>
+          <Body {...this.props} nItems={this.state.subblocks?.length}>
             {this.state.subblocks.map((subblock, subindex) => (
               <div className="it-single-slide-wrapper" key={subblock.id}>
                 <EditBlock

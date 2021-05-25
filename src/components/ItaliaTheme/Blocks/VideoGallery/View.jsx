@@ -16,7 +16,7 @@ import ViewBlock from './Block/ViewBlock';
 const View = ({ data, block }) => {
   return (
     <div className="block video_gallery">
-      <Body data={data}>
+      <Body data={data} nItems={data.subblocks?.length}>
         {data.subblocks.map((subblock, subindex) => (
           <div className="it-single-slide-wrapper" key={subindex}>
             <ViewBlock data={subblock} />
