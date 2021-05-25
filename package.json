@@ -214,5 +214,9 @@
     "stylelint-prettier": "1.1.2",
     "svg-inline-loader": "0.8.0",
     "svg-inline-react": "3.2.0"
+  },
+  "volta": {
+    "node": "12.22.1",
+    "yarn": "1.19.1"
   }
 }
