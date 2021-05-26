@@ -14,6 +14,7 @@ import {
   RichText,
   RelatedItemInEvidence,
   richTextHasContent,
+  PageHeaderTassonomiaArgomenti,
 } from '@italia/components/ItaliaTheme/View';
 import { defineMessages, useIntl } from 'react-intl';
 import { Container } from 'design-react-kit/dist/design-react-kit';
@@ -47,7 +48,9 @@ const PageView = ({ content, token, location, history }) => {
     const rightHeaderHasContent =
       content.immagine_testata?.scales ||
       richTextHasContent(content.info_testata) ||
-      content.mostra_navigazione;
+      content.mostra_navigazione ||
+      content?.tassonomia_argomenti?.length > 0;
+
     return (
       <>
         <div id="page-document" className="ui container">
@@ -84,11 +87,17 @@ const PageView = ({ content, token, location, history }) => {
                       <RichText serif={false} content={content.info_testata} />
                     </div>
                   )}
+
                   {content.mostra_navigazione && (
                     <PageHeaderNav
                       content={content}
                       title={intl.formatMessage(messages.inThisSection)}
                     />
+                  )}
+                  {content?.tassonomia_argomenti?.length > 0 && (
+                    <div className="px-4">
+                      <PageHeaderTassonomiaArgomenti content={content} />
+                    </div>
                   )}
                 </div>
               )}

@@ -62,7 +62,12 @@ const CartellaModulisticaView = ({ content }) => {
   return (
     <>
       <div className="container px-4 my-4 cartellamodulistica-view">
-        <PageHeader content={content} />
+        <PageHeader
+          content={content}
+          imageinheader={true}
+          imageinheader_field="image"
+        />
+
         <TextOrBlocks content={content} />
         {modulistica.length > 0 && (
           <section className="modulistica">
