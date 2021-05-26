@@ -1,3 +1,13 @@
+### [3.5.6](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.5...v3.5.6) (2021-05-26)
+
+
+### Maintenance
+
+* add volta config ([500f149](https://github.com/RedTurtle/design-volto-theme/commit/500f14961176ce8420acf75fdb439ea7ea77d08c))
+* added leadimage in cartellaModulisitica ([59fe992](https://github.com/RedTurtle/design-volto-theme/commit/59fe992433085b5159c1364bb9a32434c8065c64))
+* browserslist in package.json ([a1cc111](https://github.com/RedTurtle/design-volto-theme/commit/a1cc11123bafd4be02a43cfdf4b451e58f86f668))
+* view Tassonomia argomenti in Page header (Document) ([3f3cb3c](https://github.com/RedTurtle/design-volto-theme/commit/3f3cb3c6e49fededc9cd73ed21b2182f72886d6f))
+
 ### [3.5.5](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.4...v3.5.5) (2021-05-25)
 
 
