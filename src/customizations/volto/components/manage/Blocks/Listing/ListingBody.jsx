@@ -10,7 +10,7 @@ import { isEqual } from 'lodash';
 import config from '@plone/volto/registry';
 
 const ListingBody = React.memo(
-  ({ data, properties, intl, path = '', isEditMode }) => {
+  ({ data, properties, path = '', isEditMode, variation }) => {
     const [currentPage, setCurrentPage] = React.useState(1);
     //const content = properties;
     const content = useSelector((state) => state.content.data);
@@ -92,7 +92,8 @@ const ListingBody = React.memo(
           ),
         );
       } else if (
-        data.template === 'imageGallery' &&
+        ((!data.variation && data.template === 'imageGallery') ||
+          data.variation === 'imageGallery') &&
         data?.query?.length === 0
       ) {
         dispatch(
@@ -137,15 +138,31 @@ const ListingBody = React.memo(
     const listingItems =
       data?.query?.length > 0 ? querystringResults?.items || [] : folderItems;
 
-    const templateConfig = config.blocks.blocksConfig.listing.templates;
+    let ListingBodyTemplate;
+    let templateConfig;
 
-    let templateName =
-      data.template && !!templateConfig[data.template]
-        ? data.template
-        : 'default';
+    // Legacy support if template is present
+    if (data.template && !data.variation) {
+      const variations =
+        config.blocks?.blocksConfig['listing']?.variations || [];
 
-    const ListingBodyTemplate = templateConfig[templateName].template;
-    const SkeletonTemplate = templateConfig[templateName].skeleton || Skeleton;
+      let legacyTemplateConfig = variations.find(
+        (item) => item.id === data.template,
+      );
+
+      if (!legacyTemplateConfig) {
+        legacyTemplateConfig = variations.find(
+          (item) => item.isDefault === true,
+        );
+      }
+      templateConfig = legacyTemplateConfig;
+      ListingBodyTemplate = legacyTemplateConfig.template;
+    } else {
+      templateConfig = variation;
+      ListingBodyTemplate = variation.template;
+    }
+
+    const SkeletonTemplate = templateConfig.skeleton || Skeleton;
 
     function handleContentPaginationChange(e, { activePage }) {
       !isEditMode && listingRef.current.scrollIntoView({ behavior: 'smooth' });

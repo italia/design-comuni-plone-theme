@@ -6,6 +6,12 @@ import NewsHomeView from '@italia/components/ItaliaTheme/Blocks/NewsHome/View';
 import NewsHomeEdit from '@italia/components/ItaliaTheme/Blocks/NewsHome/Edit';
 import noteSvg from 'bootstrap-italia/src/svg/it-note.svg';
 import calendarSvg from 'bootstrap-italia/src/svg/it-calendar.svg';
+import menuSVG from '@plone/volto/icons/menu.svg';
+import menuAltSVG from '@plone/volto/icons/menu-alt.svg';
+import navSVG from '@plone/volto/icons/nav.svg';
+import contentSVG from '@plone/volto/icons/content.svg';
+import bookSVG from '@plone/volto/icons/book.svg';
+import shareSVG from '@plone/volto/icons/share.svg';
 
 import alertSVG from '@plone/volto/icons/alert.svg';
 import AlertView from '@italia/components/ItaliaTheme/Blocks/Alert/View';
@@ -165,7 +171,17 @@ export default function applyConfig(voltoConfig) {
   };
 
   // const listBlockTypes = config.settings.listBlockTypes; //config.settings.listBlockTypes.concat(['align-center']);
-  delete config.blocks.blocksConfig.listing.templates.summary;
+
+  const removeListingVariation = (id) => {
+    let indexOfVariation = config.blocks.blocksConfig.listing.variations.findIndex(
+      (x) => x.id === id,
+    );
+    config.blocks.blocksConfig.listing.variations.splice(indexOfVariation, 1);
+  };
+
+  removeListingVariation('default'); // removes default volto template, because it will be overrided
+  removeListingVariation('summary'); // removes summary volto template, because is unused
+  removeListingVariation('imageGallery'); // removes imageGallery volto template, because we have our photoGallery template
 
   const customBlocks = {
     newsHome: {
@@ -368,88 +384,115 @@ export default function applyConfig(voltoConfig) {
     },
     listing: {
       ...config.blocks.blocksConfig.listing,
-      templates: {
-        ...config.blocks.blocksConfig.listing.templates,
-
-        default: {
-          label: 'Card semplice',
+      showLinkMore: true,
+      variations: [
+        ...config.blocks.blocksConfig.listing.variations,
+        {
+          id: 'simpleCard',
+          isDefault: true,
+          title: 'Card semplice',
           template: SimpleCardTemplate,
         },
-        cardWithImageTemplate: {
-          label: 'Card con immagine',
+        {
+          id: 'cardWithImageTemplate',
+          isDefault: false,
+          title: 'Card con immagine',
           template: CardWithImageTemplate,
           skeleton: CardWithImageTemplateSkeleton,
           templateOptions: CardWithImageTemplateOptions,
         },
-        inEvidenceTemplate: {
-          label: 'In evidenza',
+        {
+          id: 'inEvidenceTemplate',
+          isDefault: false,
+          title: 'In evidenza',
           template: InEvidenceTemplate,
           skeleton: InEvidenceTemplateSkeleton,
           templateOptions: InEvidenceTemplateOptions,
         },
-        contentInEvidenceTemplate: {
-          label: 'Contenuto in evidenza',
+        {
+          id: 'contentInEvidenceTemplate',
+          isDefault: false,
+          title: 'Contenuto in evidenza',
           template: ContentInEvidenceTemplate,
           skeleton: ContentInEvidenceTemplateSkeleton,
         },
-        ribbonCardTemplate: {
-          label: 'Card con nastro',
+        {
+          id: 'ribbonCardTemplate',
+          isDefault: false,
+          title: 'Card con nastro',
           template: RibbonCardTemplate,
           skeleton: RibbonCardTemplateSkeleton,
           templateOptions: RibbonCardTemplateOptions,
         },
-        mapTemplate: {
-          label: 'Mappa',
+        {
+          id: 'mapTemplate',
+          isDefault: false,
+          title: 'Mappa',
           template: MapTemplate,
           skeleton: MapTemplateSkeleton,
           templateOptions: MapTemplateOptions,
         },
-        smallBlockLinksTemplate: {
-          label: 'Blocco link solo immagini',
+        {
+          id: 'smallBlockLinksTemplate',
+          isDefault: false,
+          title: 'Blocco link solo immagini',
           template: SmallBlockLinksTemplate,
           skeleton: SmallBlockLinksTemplateSkeleton,
         },
-        completeBlockLinksTemplate: {
-          label: 'Blocco link completo',
+        {
+          id: 'completeBlockLinksTemplate',
+          isDefault: false,
+          title: 'Blocco link completo',
           template: CompleteBlockLinksTemplate,
           skeleton: CompleteBlockLinksTemplateSkeleton,
           templateOptions: CompleteBlockLinksTemplateTemplateOptions,
         },
-        photogallery: {
-          label: 'Photogallery',
+        {
+          id: 'photogallery',
+          isDefault: false,
+          title: 'Photogallery',
           template: PhotogalleryTemplate,
           skeleton: PhotogalleryTemplateSkeleton,
         },
-        slider: {
-          label: 'Slider',
+        {
+          id: 'slider',
+          isDefault: false,
+          title: 'Slider',
           template: SliderTemplate,
           skeleton: SliderTemplateSkeleton,
         },
-        gridGalleryTemplate: {
-          label: 'Gallery a griglia',
+        {
+          id: 'gridGalleryTemplate',
+          isDefault: false,
+          title: 'Gallery a griglia',
           template: GridGalleryTemplate,
           skeleton: GridGalleryTemplateSkeleton,
         },
-        bandiInEvidenceTemplate: {
-          label: 'Bandi',
+        {
+          id: 'bandiInEvidenceTemplate',
+          isDefault: false,
+          title: 'Bandi',
           template: BandiInEvidenceTemplate,
           skeleton: BandiInEvidenceTemplateSkeleton,
           templateOptions: BandiInEvidenceTemplateOptions,
         },
-        amministrazioneTrasparenteTablesTemplate: {
-          label: 'Tabelle Amministrazione Trasparente',
+        {
+          id: 'amministrazioneTrasparenteTablesTemplate',
+          isDefault: false,
+          title: 'Tabelle Amministrazione Trasparente',
           template: AmministrazioneTrasparenteTablesTemplate,
           skeleton: AmministrazioneTrasparenteTablesTemplateSkeleton,
         },
 
         // ****** Example: ******
-        //template_name: {
-        //   label: 'Template label',
+        // { id:template_id,
+        //   isDefault: false,
+        //   title: 'Template label',
         //   template: TemplateComponent,
         //   skeleton: TemplateSkeletonComponent,
         //   templateOptions: TemplateSidebarOptionsComponent
         // },
-      },
+      ],
       listing_bg_colors: [], //{name:'blue', label:'Blu'},{name:'light-blue', label:'Light blue'},{name:'sidebar-background', label:'Grey'}
       listing_items_colors: [], //{name:'blue', label:'Blu'},{name:'light-blue', label:'Light blue'},{name:'sidebar-background', label:'Grey'}
     },
@@ -465,6 +508,8 @@ export default function applyConfig(voltoConfig) {
     supportedLanguages: ['it'],
     defaultLanguage: 'it',
     verticalFormTabs: true,
+    showTags: false,
+    showSelfRegistration: false,
     serverConfig: {
       ...config.settings.serverConfig,
       extractScripts: {
@@ -504,6 +549,15 @@ export default function applyConfig(voltoConfig) {
       larger: 1000,
       great: 1200,
       huge: 1600,
+    },
+    controlPanelsIcons: {
+      ...config.settings.controlPanelsIcons,
+      'dropdown-menu-settings': menuSVG,
+      'secondary-menu-settings': menuAltSVG,
+      'subsites-settings': navSVG,
+      'design-plone-settings': contentSVG,
+      'bandi-settings': bookSVG,
+      'social-settings': shareSVG,
     },
     defaultExcludedFromSearch: {
       portalTypes: ['Image', 'File'],
@@ -652,7 +706,6 @@ export default function applyConfig(voltoConfig) {
     },
     showEditBlocksInBabelView: true,
   };
-  delete config.blocks.blocksConfig.listing.templates.imageGallery; // removes imageGallery volto template, because we have our photoGallery template
 
   return config;
 }

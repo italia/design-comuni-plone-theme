@@ -79,6 +79,7 @@ const PageView = ({ content, token, location, history }) => {
                       <Image
                         image={content.immagine_testata}
                         alt={content.title}
+                        maxSize={300}
                       />
                     </div>
                   )}
