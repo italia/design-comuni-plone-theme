@@ -39,6 +39,14 @@ const ContentInEvidenceTemplate = ({
           'px-4': isEditMode,
         })}
       >
+        {title && (
+          <Row>
+            <Col>
+              <h2 className="mb-4">{title}</h2>
+            </Col>
+          </Row>
+        )}
+
         {items.map((item, index) => {
           const date = getCalendarDate(item);
           const eventRecurrenceMore = getEventRecurrenceMore(item, isEditMode);

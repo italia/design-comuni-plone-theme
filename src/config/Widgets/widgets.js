@@ -7,6 +7,11 @@ import IconWidget from '@italia/components/ItaliaTheme/manage/Widgets/IconWidget
 import SubsiteSocialLinksWidget from '@italia/components/ItaliaTheme/manage/Widgets/SubsiteSocialLinksWidget';
 import SearchSectionsConfigurationWidget from '@italia/components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget';
 import { defaultIconWidgetOptions } from '@italia/helpers/index';
+import {
+  ColorListWidget,
+  PathFiltersWidget,
+} from '@italia/components/ItaliaTheme';
+
 //import TinymceWidget from '@italia/components/ItaliaTheme/manage/Widgets/TinymceWidget';
 
 const getItaliaWidgets = (config) => {
@@ -46,6 +51,8 @@ const getItaliaWidgets = (config) => {
     widget: {
       ...config.widgets.widget,
       // richtext: TinymceWidget
+      color_list: ColorListWidget,
+      path_filters: PathFiltersWidget,
     },
   };
 };

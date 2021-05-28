@@ -5,7 +5,7 @@ import { Container } from 'design-react-kit/dist/design-react-kit';
 import SimpleCardTemplateDefault from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault';
 import SimpleCardTemplateCompact from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateCompact';
 
-import { SimpleCardTemplateAppearance_COMPACT } from '@italia/components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions';
+import { SimpleCardTemplateAppearance_COMPACT } from '@italia/config/Blocks/ListingOptions';
 
 const SimpleCardTemplate = (data) => {
   let content = null;

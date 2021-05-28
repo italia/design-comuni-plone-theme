@@ -34,7 +34,7 @@ const MapTemplate = ({
   linkMore,
   title,
   show_map_full_width,
-  map_size,
+  map_size = 'medium',
 }) => {
   const intl = useIntl();
   let history = useHistory();

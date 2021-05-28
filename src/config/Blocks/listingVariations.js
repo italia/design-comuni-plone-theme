@@ -2,29 +2,24 @@ import SimpleCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/Si
 
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
 import CardWithImageTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CardWithImageTemplateSkeleton';
-import CardWithImageTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions';
 
 import InEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate';
 import InEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/InEvidenceTemplateSkeleton';
-import InEvidenceTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/InEvidenceTemplateOptions';
 
 import ContentInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/ContentInEvidenceTemplate';
 import ContentInEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/ContentInEvidenceTemplateSkeleton';
 
 import RibbonCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate';
 import RibbonCardTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/RibbonCardTemplateSkeleton';
-import RibbonCardTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions';
 
 import MapTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/MapTemplate';
 import MapTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/MapTemplateSkeleton';
-import MapTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions';
 
 import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
 import SmallBlockLinksTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SmallBlockLinksTemplateSkeleton';
 
 import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate';
 import CompleteBlockLinksTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CompleteBlockLinksTemplateSkeleton';
-import CompleteBlockLinksTemplateTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/CompleteBlockLinksTemplateTemplateOptions';
 
 import PhotogalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
 import PhotogalleryTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/PhotogalleryTemplateSkeleton';
@@ -37,10 +32,20 @@ import GridGalleryTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/L
 
 import BandiInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate';
 import BandiInEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton';
-import BandiInEvidenceTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/BandiInEvidenceTemplateOptions';
 
 import AmministrazioneTrasparenteTablesTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
 import AmministrazioneTrasparenteTablesTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/AmministrazioneTrasparenteTablesTemplateSkeleton';
+
+import {
+  addSimpleCardTemplateOptions,
+  addCardWithImageTemplateOptions,
+  addInEvidenceTemplateOptions,
+  addRibbonCardTemplateOptions,
+  addMapTemplateOptions,
+  addCompleteBlockLinksTemplateOptions,
+  addBandiInEvidenceTemplateOptions,
+  addDefaultOptions,
+} from '@italia/config/Blocks/ListingOptions';
 
 const italiaListingVariations = [
   {
@@ -48,6 +53,10 @@ const italiaListingVariations = [
     isDefault: true,
     title: 'Card semplice',
     template: SimpleCardTemplate,
+    schemaEnhancer: ({ schema, formData, intl }) => {
+      addSimpleCardTemplateOptions(schema, formData, intl);
+      return schema;
+    },
   },
   {
     id: 'cardWithImageTemplate',
@@ -55,7 +64,11 @@ const italiaListingVariations = [
     title: 'Card con immagine',
     template: CardWithImageTemplate,
     skeleton: CardWithImageTemplateSkeleton,
-    templateOptions: CardWithImageTemplateOptions,
+    schemaEnhancer: ({ schema, formData, intl }) => {
+      let pos = addDefaultOptions(schema, formData, intl);
+      addCardWithImageTemplateOptions(schema, formData, intl, pos);
+      return schema;
+    },
   },
   {
     id: 'inEvidenceTemplate',
@@ -63,7 +76,11 @@ const italiaListingVariations = [
     title: 'In evidenza',
     template: InEvidenceTemplate,
     skeleton: InEvidenceTemplateSkeleton,
-    templateOptions: InEvidenceTemplateOptions,
+    schemaEnhancer: ({ schema, formData, intl }) => {
+      let pos = addDefaultOptions(schema, formData, intl);
+      addInEvidenceTemplateOptions(schema, formData, intl, pos);
+      return schema;
+    },
   },
   {
     id: 'contentInEvidenceTemplate',
@@ -71,6 +88,10 @@ const italiaListingVariations = [
     title: 'Contenuto in evidenza',
     template: ContentInEvidenceTemplate,
     skeleton: ContentInEvidenceTemplateSkeleton,
+    schemaEnhancer: ({ schema, formData, intl }) => {
+      /*let pos = */ addDefaultOptions(schema, formData, intl);
+      return schema;
+    },
   },
   {
     id: 'ribbonCardTemplate',
@@ -78,7 +99,11 @@ const italiaListingVariations = [
     title: 'Card con nastro',
     template: RibbonCardTemplate,
     skeleton: RibbonCardTemplateSkeleton,
-    templateOptions: RibbonCardTemplateOptions,
+    schemaEnhancer: ({ schema, formData, intl }) => {
+      let pos = addDefaultOptions(schema, formData, intl);
+      addRibbonCardTemplateOptions(schema, formData, intl, pos);
+      return schema;
+    },
   },
   {
     id: 'mapTemplate',
@@ -86,7 +111,11 @@ const italiaListingVariations = [
     title: 'Mappa',
     template: MapTemplate,
     skeleton: MapTemplateSkeleton,
-    templateOptions: MapTemplateOptions,
+    schemaEnhancer: ({ schema, formData, intl }) => {
+      let pos = addDefaultOptions(schema, formData, intl);
+      addMapTemplateOptions(schema, formData, intl, pos);
+      return schema;
+    },
   },
   {
     id: 'smallBlockLinksTemplate',
@@ -94,6 +123,10 @@ const italiaListingVariations = [
     title: 'Blocco link solo immagini',
     template: SmallBlockLinksTemplate,
     skeleton: SmallBlockLinksTemplateSkeleton,
+    schemaEnhancer: ({ schema, formData, intl }) => {
+      /*let pos = */ addDefaultOptions(schema, formData, intl);
+      return schema;
+    },
   },
   {
     id: 'completeBlockLinksTemplate',
@@ -101,7 +134,11 @@ const italiaListingVariations = [
     title: 'Blocco link completo',
     template: CompleteBlockLinksTemplate,
     skeleton: CompleteBlockLinksTemplateSkeleton,
-    templateOptions: CompleteBlockLinksTemplateTemplateOptions,
+    schemaEnhancer: ({ schema, formData, intl }) => {
+      let pos = addDefaultOptions(schema, formData, intl);
+      addCompleteBlockLinksTemplateOptions(schema, formData, intl, pos);
+      return schema;
+    },
   },
   {
     id: 'photogallery',
@@ -109,6 +146,10 @@ const italiaListingVariations = [
     title: 'Photogallery',
     template: PhotogalleryTemplate,
     skeleton: PhotogalleryTemplateSkeleton,
+    schemaEnhancer: ({ schema, formData, intl }) => {
+      /*let pos = */ addDefaultOptions(schema, formData, intl);
+      return schema;
+    },
   },
   {
     id: 'slider',
@@ -116,6 +157,10 @@ const italiaListingVariations = [
     title: 'Slider',
     template: SliderTemplate,
     skeleton: SliderTemplateSkeleton,
+    schemaEnhancer: ({ schema, formData, intl }) => {
+      /*let pos = */ addDefaultOptions(schema, formData, intl);
+      return schema;
+    },
   },
   {
     id: 'gridGalleryTemplate',
@@ -123,6 +168,10 @@ const italiaListingVariations = [
     title: 'Gallery a griglia',
     template: GridGalleryTemplate,
     skeleton: GridGalleryTemplateSkeleton,
+    schemaEnhancer: ({ schema, formData, intl }) => {
+      /*let pos = */ addDefaultOptions(schema, formData, intl);
+      return schema;
+    },
   },
   {
     id: 'bandiInEvidenceTemplate',
@@ -130,7 +179,11 @@ const italiaListingVariations = [
     title: 'Bandi',
     template: BandiInEvidenceTemplate,
     skeleton: BandiInEvidenceTemplateSkeleton,
-    templateOptions: BandiInEvidenceTemplateOptions,
+    schemaEnhancer: ({ schema, formData, intl }) => {
+      let pos = addDefaultOptions(schema, formData, intl);
+      addBandiInEvidenceTemplateOptions(schema, formData, intl, pos);
+      return schema;
+    },
   },
   {
     id: 'amministrazioneTrasparenteTablesTemplate',
@@ -138,6 +191,10 @@ const italiaListingVariations = [
     title: 'Tabelle Amministrazione Trasparente',
     template: AmministrazioneTrasparenteTablesTemplate,
     skeleton: AmministrazioneTrasparenteTablesTemplateSkeleton,
+    schemaEnhancer: ({ schema, formData, intl }) => {
+      /*let pos = */ addDefaultOptions(schema, formData, intl);
+      return schema;
+    },
   },
 
   // ****** Example: ******
@@ -146,7 +203,10 @@ const italiaListingVariations = [
   //   title: 'Template label',
   //   template: TemplateComponent,
   //   skeleton: TemplateSkeletonComponent,
-  //   templateOptions: TemplateSidebarOptionsComponent
+  //   schemaEnhancer: ({ schema, formData, intl }) => {
+  //        let pos = addDefaultOptions(schema, formData, intl);
+  //        return schema;
+  //    },
   // },
 ];
 

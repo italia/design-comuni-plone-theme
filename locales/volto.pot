@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-05-25T06:03:55.127Z\n"
+"POT-Creation-Date: 2021-05-28T15:01:04.144Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -31,6 +31,9 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: config/Blocks/listingOptions
+#: config/Blocks/ListingOptions/simpleCardTemplate
+#: config/Blocks/listingVariations
 # defaultMessage: Aspetto
 msgid "Aspetto"
 msgstr ""
@@ -132,11 +135,14 @@ msgid "Description"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
+#: config/Blocks/ListingOptions/mapTemplate
 # defaultMessage: Dimensione della mappa
 msgid "Dimensione della mappa"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
+#: config/Blocks/ListingOptions/utils
 # defaultMessage: Etichetta
 msgid "Etichetta path filter"
 msgstr ""
@@ -204,6 +210,8 @@ msgid "Menu selezionato"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
+#: config/Blocks/ListingOptions/utils
 # defaultMessage: Mostra i filtri per percorso
 msgid "Mostra i filtri per percorso"
 msgstr ""
@@ -211,6 +219,8 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 #: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: config/Blocks/ListingOptions/defaultOptions
+#: config/Blocks/ListingOptions/utils
 # defaultMessage: Mostra lo sfondo del blocco
 msgid "Mostra lo sfondo del blocco"
 msgstr ""
@@ -246,6 +256,8 @@ msgid "Open in a new tab"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
+#: config/Blocks/ListingOptions/utils
 # defaultMessage: Filtro
 msgid "Path filter filtro"
 msgstr ""
@@ -257,6 +269,8 @@ msgid "Pause slider"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
+#: config/Blocks/ListingOptions/utils
 # defaultMessage: Percorso
 msgid "Percorso path filter"
 msgstr ""
@@ -377,6 +391,8 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: config/Blocks/ListingOptions/defaultOptions
+#: config/Blocks/listingVariations
 # defaultMessage: Titolo
 msgid "Titolo"
 msgstr ""
@@ -537,6 +553,8 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/CompleteBlockLinksTemplateTemplateOptions
+#: config/Blocks/ListingOptions/cardWithImageTemplate
+#: config/Blocks/ListingOptions/completeBlockLinksTemplate
 # defaultMessage: Mostra l'immagine per tutti gli elementi
 msgid "always_show_image"
 msgstr ""
@@ -688,6 +706,7 @@ msgid "biografia"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/BgColor
+#: config/Blocks/ListingOptions/defaultOptions
 # defaultMessage: Colore di sfondo
 msgid "block_bg_color"
 msgstr ""
@@ -916,6 +935,7 @@ msgid "descrizione_estesa"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: config/Blocks/ListingOptions/utils
 # defaultMessage: Testo per il link al dettaglio
 msgid "detail_link_label"
 msgstr ""
@@ -1216,6 +1236,7 @@ msgid "grid-gallery-max-items-exceeded"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: config/Blocks/ListingOptions/utils
 # defaultMessage: Nascondi le date
 msgid "hide_dates"
 msgstr ""
@@ -1289,6 +1310,7 @@ msgid "listing_event_recurrence_label"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/ItemsColor
+#: config/Blocks/ListingOptions/defaultOptions
 # defaultMessage: Colore dell'elemento
 msgid "listing_items_color"
 msgstr ""
@@ -1320,16 +1342,19 @@ msgid "mailto"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
+#: config/Blocks/ListingOptions/mapTemplate
 # defaultMessage: Grande
 msgid "map_size_large"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
+#: config/Blocks/ListingOptions/mapTemplate
 # defaultMessage: Media
 msgid "map_size_medium"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
+#: config/Blocks/ListingOptions/mapTemplate
 # defaultMessage: Piccola
 msgid "map_size_small"
 msgstr ""
@@ -1386,6 +1411,8 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/CompleteBlockLinksTemplateTemplateOptions
+#: config/Blocks/ListingOptions/cardWithImageTemplate
+#: config/Blocks/ListingOptions/completeBlockLinksTemplate
 # defaultMessage: undefined
 msgid "natural_image_size"
 msgstr ""
@@ -2120,41 +2147,49 @@ msgid "share"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: config/Blocks/ListingOptions/utils
 # defaultMessage: Mostra la descrizione
 msgid "show_description"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: config/Blocks/ListingOptions/utils
 # defaultMessage: Mostra il link al dettaglio
 msgid "show_detail_link"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/BandiInEvidenceTemplateOptions
+#: config/Blocks/ListingOptions/bandiInEvidenceTemplate
 # defaultMessage: Mostra l'ente
 msgid "show_ente"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: config/Blocks/ListingOptions/utils
 # defaultMessage: Mostra l'icona
 msgid "show_icon"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
+#: config/Blocks/ListingOptions/mapTemplate
 # defaultMessage: Mostra la mappa a tutta larghezza
 msgid "show_map_full_width"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
+#: config/Blocks/ListingOptions/ribbonCardTemplate
 # defaultMessage: Mostra il nastro solo sulla prima card
 msgid "show_only_first_ribbon"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: config/Blocks/ListingOptions/utils
 # defaultMessage: Mostra la sezione
 msgid "show_section"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/BandiInEvidenceTemplateOptions
+#: config/Blocks/ListingOptions/bandiInEvidenceTemplate
 # defaultMessage: Mostra la tipologia
 msgid "show_tipologia"
 msgstr ""
@@ -2162,11 +2197,15 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/CompleteBlockLinksTemplateTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/InEvidenceTemplateOptions
+#: config/Blocks/ListingOptions/cardWithImageTemplate
+#: config/Blocks/ListingOptions/completeBlockLinksTemplate
+#: config/Blocks/ListingOptions/inEvidenceTemplate
 # defaultMessage: Mostra gli argomenti
 msgid "show_topics"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: config/Blocks/ListingOptions/utils
 # defaultMessage: Mostra il tipo
 msgid "show_type"
 msgstr ""
@@ -2178,12 +2217,18 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: config/Blocks/listingOptions
+#: config/Blocks/ListingOptions/simpleCardTemplate
+#: config/Blocks/listingVariations
 # defaultMessage: Compatto
 msgid "simplecard_listing_appearance_compact"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: config/Blocks/listingOptions
+#: config/Blocks/ListingOptions/simpleCardTemplate
+#: config/Blocks/listingVariations
 # defaultMessage: Qui puoi selezionare, per il template 'Card semplice', un aspetto diverso da quello di default.
 msgid "simplecard_listing_appearance_description"
 msgstr ""

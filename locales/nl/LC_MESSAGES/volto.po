@@ -45,6 +45,9 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: config/Blocks/listingOptions
+#: config/Blocks/ListingOptions/simpleCardTemplate
+#: config/Blocks/listingVariations
 msgid "Aspetto"
 msgstr ""
 
@@ -127,10 +130,13 @@ msgid "Description"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
+#: config/Blocks/ListingOptions/mapTemplate
 msgid "Dimensione della mappa"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
+#: config/Blocks/ListingOptions/utils
 msgid "Etichetta path filter"
 msgstr ""
 
@@ -185,12 +191,16 @@ msgid "Menu selezionato"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
+#: config/Blocks/ListingOptions/utils
 msgid "Mostra i filtri per percorso"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 #: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: config/Blocks/ListingOptions/defaultOptions
+#: config/Blocks/ListingOptions/utils
 msgid "Mostra lo sfondo del blocco"
 msgstr ""
 
@@ -219,6 +229,8 @@ msgid "Open in a new tab"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
+#: config/Blocks/ListingOptions/utils
 msgid "Path filter filtro"
 msgstr ""
 
@@ -228,6 +240,8 @@ msgid "Pause slider"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
+#: config/Blocks/ListingOptions/utils
 msgid "Percorso path filter"
 msgstr ""
 
@@ -326,6 +340,8 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: config/Blocks/ListingOptions/defaultOptions
+#: config/Blocks/listingVariations
 msgid "Titolo"
 msgstr ""
 
@@ -460,6 +476,8 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/CompleteBlockLinksTemplateTemplateOptions
+#: config/Blocks/ListingOptions/cardWithImageTemplate
+#: config/Blocks/ListingOptions/completeBlockLinksTemplate
 msgid "always_show_image"
 msgstr ""
 
@@ -582,6 +600,7 @@ msgid "biografia"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/BgColor
+#: config/Blocks/ListingOptions/defaultOptions
 msgid "block_bg_color"
 msgstr ""
 
@@ -767,6 +786,7 @@ msgid "descrizione_estesa"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: config/Blocks/ListingOptions/utils
 msgid "detail_link_label"
 msgstr ""
 
@@ -1008,6 +1028,7 @@ msgid "grid-gallery-max-items-exceeded"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: config/Blocks/ListingOptions/utils
 msgid "hide_dates"
 msgstr ""
 
@@ -1067,6 +1088,7 @@ msgid "listing_event_recurrence_label"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/ItemsColor
+#: config/Blocks/ListingOptions/defaultOptions
 msgid "listing_items_color"
 msgstr ""
 
@@ -1092,14 +1114,17 @@ msgid "mailto"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
+#: config/Blocks/ListingOptions/mapTemplate
 msgid "map_size_large"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
+#: config/Blocks/ListingOptions/mapTemplate
 msgid "map_size_medium"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
+#: config/Blocks/ListingOptions/mapTemplate
 msgid "map_size_small"
 msgstr ""
 
@@ -1145,6 +1170,8 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/CompleteBlockLinksTemplateTemplateOptions
+#: config/Blocks/ListingOptions/cardWithImageTemplate
+#: config/Blocks/ListingOptions/completeBlockLinksTemplate
 msgid "natural_image_size"
 msgstr ""
 
@@ -1741,44 +1768,56 @@ msgid "share"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: config/Blocks/ListingOptions/utils
 msgid "show_description"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: config/Blocks/ListingOptions/utils
 msgid "show_detail_link"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/BandiInEvidenceTemplateOptions
+#: config/Blocks/ListingOptions/bandiInEvidenceTemplate
 msgid "show_ente"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: config/Blocks/ListingOptions/utils
 msgid "show_icon"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
+#: config/Blocks/ListingOptions/mapTemplate
 msgid "show_map_full_width"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
+#: config/Blocks/ListingOptions/ribbonCardTemplate
 msgid "show_only_first_ribbon"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: config/Blocks/ListingOptions/utils
 msgid "show_section"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/BandiInEvidenceTemplateOptions
+#: config/Blocks/ListingOptions/bandiInEvidenceTemplate
 msgid "show_tipologia"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/CompleteBlockLinksTemplateTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/InEvidenceTemplateOptions
+#: config/Blocks/ListingOptions/cardWithImageTemplate
+#: config/Blocks/ListingOptions/completeBlockLinksTemplate
+#: config/Blocks/ListingOptions/inEvidenceTemplate
 msgid "show_topics"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: config/Blocks/ListingOptions/utils
 msgid "show_type"
 msgstr ""
 
@@ -1788,11 +1827,17 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: config/Blocks/listingOptions
+#: config/Blocks/ListingOptions/simpleCardTemplate
+#: config/Blocks/listingVariations
 msgid "simplecard_listing_appearance_compact"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
+#: config/Blocks/listingOptions
+#: config/Blocks/ListingOptions/simpleCardTemplate
+#: config/Blocks/listingVariations
 msgid "simplecard_listing_appearance_description"
 msgstr ""
 
