@@ -1,3 +1,10 @@
+### [3.5.7](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.6...v3.5.7) (2021-05-31)
+
+
+### Bug Fixes
+
+* fixed searchSectionForm and other bugs ([93811c8](https://github.com/RedTurtle/design-volto-theme/commit/93811c85ce3059de83d4c0a4fffd5aaf2e9aaf3e))
+
 ### [3.5.6](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.5...v3.5.6) (2021-05-26)
 
 
