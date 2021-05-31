@@ -80,6 +80,7 @@ const InEvidenceTemplate = ({
                   listingText={listingText}
                   icon={icon}
                   isEditMode={isEditMode}
+                  key={index}
                 />
               ) : (
                 <Card
