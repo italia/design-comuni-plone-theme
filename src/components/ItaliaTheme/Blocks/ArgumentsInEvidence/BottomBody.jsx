@@ -1,6 +1,6 @@
 import React from 'react';
 import { defineMessages } from 'react-intl';
-import { UniversalLink } from '@plone/volto/components';
+import { UniversalLink, ConditionalLink } from '@plone/volto/components';
 import {
   Chip,
   ChipLabel,
@@ -30,7 +30,8 @@ const BottomBody = ({ data, intl }) => {
           </div>
           <div className="col-lg-9">
             {data?.arguments?.map((argument, index) => (
-              <UniversalLink
+              <ConditionalLink
+                condition={argument['@id']}
                 item={argument}
                 key={index}
                 title={argument.title}
@@ -46,7 +47,7 @@ const BottomBody = ({ data, intl }) => {
                 >
                   <ChipLabel tag="span">{argument.title}</ChipLabel>
                 </Chip>
-              </UniversalLink>
+              </ConditionalLink>
             ))}
           </div>
         </div>

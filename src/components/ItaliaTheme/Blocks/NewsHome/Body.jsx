@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl, defineMessages } from 'react-intl';
-import { UniversalLink } from '@plone/volto/components';
+import { ConditionalLink, UniversalLink } from '@plone/volto/components';
 
 import {
   Row,
@@ -53,9 +53,12 @@ const Body = ({ content, pathname, block }) => {
               {intl.formatMessage(messages.news)}
             </CardCategory>
             <CardTitle tag="h2">
-              <UniversalLink href={flattenToAppURL(content['@id'])}>
+              <ConditionalLink
+                condition={content['@id']}
+                to={flattenToAppURL(content['@id'])}
+              >
                 {content.title}
-              </UniversalLink>
+              </ConditionalLink>
             </CardTitle>
             <CardText>{content.description}</CardText>
 
@@ -64,12 +67,13 @@ const Body = ({ content, pathname, block }) => {
                 <>
                   {content.tassonomia_argomenti.map((argomento) => (
                     <Chip simple color="primary" key={argomento['@id']}>
-                      <UniversalLink
-                        href={flattenToAppURL(argomento['@id'])}
+                      <ConditionalLink
+                        condition={flattenToAppURL(argomento['@id'])}
+                        to={flattenToAppURL(argomento['@id'])}
                         className="chip-label text-decoration-none"
                       >
                         {argomento.title}
-                      </UniversalLink>
+                      </ConditionalLink>
                     </Chip>
                   ))}
                 </>
