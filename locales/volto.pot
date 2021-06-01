@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-05-31T15:02:38.290Z\n"
+"POT-Creation-Date: 2021-06-01T09:24:09.495Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -24,6 +24,11 @@ msgstr ""
 msgid "Add accordion item"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Form/Edit
+# defaultMessage: Aggiungi un campo
+msgid "Add field"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 # defaultMessage: Alert
 msgid "Alert"
@@ -31,9 +36,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
-#: config/Blocks/listingOptions
 #: config/Blocks/ListingOptions/simpleCardTemplate
-#: config/Blocks/listingVariations
 # defaultMessage: Aspetto
 msgid "Aspetto"
 msgstr ""
@@ -64,12 +67,13 @@ msgstr ""
 msgid "Cerca"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
 # defaultMessage: Cerca per parola chiave
 msgid "Cerca per parola chiave"
 msgstr ""
 
+#: components/FileWidget
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Clicca qui per sostituire il file
 msgid "Clicca qui per sostituire il file"
@@ -140,11 +144,33 @@ msgstr ""
 msgid "Dimensione della mappa"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
+# defaultMessage: Email inviata correttamente
+msgid "Email Success"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Form
+# defaultMessage: La tua mail è stata inviata correttamente
+msgid "Email sent"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
+# defaultMessage: Errore
+msgid "Error"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Etichetta
 msgid "Etichetta path filter"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Form
+msgid "Form"
 msgstr ""
 
 #: components/ItaliaTheme/Search/SearchCTs
@@ -292,6 +318,8 @@ msgstr ""
 msgid "Required"
 msgstr ""
 
+#: components/FileWidget
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Rimuovi il file
 msgid "Rimuovi il file"
@@ -312,11 +340,6 @@ msgstr ""
 msgid "Search site"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
-# defaultMessage: Ricerca bandi
-msgid "SearchBandiBlock"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 # defaultMessage: Ricerca eventi
 msgid "SearchEventsBlock"
@@ -332,6 +355,7 @@ msgstr ""
 msgid "SearchServicesTitle"
 msgstr ""
 
+#: components/ItaliaTheme/Footer/FooterSocials
 #: components/ItaliaTheme/Header/SocialHeader
 # defaultMessage: Seguici su
 msgid "Seguici su"
@@ -342,6 +366,8 @@ msgstr ""
 msgid "Select all or none"
 msgstr ""
 
+#: components/FileWidget
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Seleziona un file
 msgid "Seleziona un file"
@@ -370,6 +396,7 @@ msgid "Subscribe"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
+#: components/ItaliaTheme/Blocks/Form/Block/EditBlock
 # defaultMessage: Text...
 msgid "Text placeholder"
 msgstr ""
@@ -383,6 +410,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
+#: components/ItaliaTheme/Blocks/Form/Block/EditBlock
 # defaultMessage: Title...
 msgid "Title placeholder"
 msgstr ""
@@ -392,21 +420,26 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/defaultOptions
-#: config/Blocks/listingVariations
 # defaultMessage: Titolo
 msgid "Titolo"
 msgstr ""
 
+#: components/FileWidget
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Trascina qui il file...
 msgid "Trascina qui il file ..."
 msgstr ""
 
+#: components/FileWidget
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Trascina qui un file per caricare un nuovo file
 msgid "Trascina qui un file per caricare un nuovo file"
 msgstr ""
 
+#: components/FileWidget
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Trascina qui un file per sostituire quello esistente
 msgid "Trascina qui un file per sostituire quello esistente"
@@ -462,6 +495,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/Accordion/Block/ViewBlock
+#: components/ItaliaTheme/Blocks/Form/Block/EditBlock
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
 #: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
 # defaultMessage: Vedi
@@ -552,9 +586,7 @@ msgid "altri_documenti"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/CompleteBlockLinksTemplateTemplateOptions
 #: config/Blocks/ListingOptions/cardWithImageTemplate
-#: config/Blocks/ListingOptions/completeBlockLinksTemplate
 # defaultMessage: Mostra l'immagine per tutti gli elementi
 msgid "always_show_image"
 msgstr ""
@@ -634,11 +666,6 @@ msgstr ""
 #: components/ItaliaTheme/Header/SearchModal
 # defaultMessage: Torna alla ricerca
 msgid "backToSearch"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/BandiSearch/Edit
-# defaultMessage: Nessun filtro da mostrare. Seleziona i filtri di ricerca da mostrare dalla sidebar laterale.
-msgid "bandi_search_no_filters"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
@@ -1183,7 +1210,6 @@ msgstr ""
 msgid "filtersCollapse"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/BandiSearch/Body
 #: components/ItaliaTheme/Blocks/EventSearch/Body
 # defaultMessage: Cerca
 msgid "find"
@@ -1192,6 +1218,134 @@ msgstr ""
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Fine termine
 msgid "fine_termine"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Mittente di default
+msgid "form_default_from"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Questo indirizzo verrà utilizzato come mittente della mail con i dati del form
+msgid "form_default_from_description"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Oggetto della mail
+msgid "form_default_subject"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Edit
+#: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
+# defaultMessage: Invia
+msgid "form_default_submit_label"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Edit
+# defaultMessage: Attenzione!
+msgid "form_edit_warning"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Edit
+# defaultMessage: Inserire un campo di tipo "E-mail mittente". Se non è presente, oppure è presente ma non viene compilato dall'utente, l'indirizzo del mittente della mail sarà quello configurato dalla sidebar di destra.
+msgid "form_edit_warning_from"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
+# defaultMessage: Compila i campi richiesti
+msgid "form_empty_values_validation"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Descrizione
+msgid "form_field_description"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Valori possibili
+msgid "form_field_input_values"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Etichetta
+msgid "form_field_label"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Nome
+msgid "form_field_name"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Il nome deve contenere spazi, e può contenere solo caratteri alfanumerici oltre ai caratteri "-" e "_". Il nome coincide con il nome del parametro.
+msgid "form_field_name_description"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Obbligatorio
+msgid "form_field_required"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Tipo di campo
+msgid "form_field_type"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Allegato
+msgid "form_field_type_attachment"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Scelta multipla
+msgid "form_field_type_checkbox"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Data
+msgid "form_field_type_date"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: E-mail
+msgid "form_field_type_from"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Scelta singola
+msgid "form_field_type_radio"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Lista
+msgid "form_field_type_select"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Testo
+msgid "form_field_type_text"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Area di testo
+msgid "form_field_type_textarea"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Field
+# defaultMessage: Seleziona un valore
+msgid "form_select_a_value"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Testo sul bottone di invio
+msgid "form_submit_label"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Destinatari
+msgid "form_to"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
@@ -1267,7 +1421,6 @@ msgstr ""
 msgid "index"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/BandiSearch/Body
 #: components/ItaliaTheme/Blocks/Calendar/Body
 #: components/ItaliaTheme/Blocks/EventSearch/Body
 # defaultMessage: Inserire un filtro dal menù laterale per visualizzare i relativi risultati
@@ -1315,7 +1468,6 @@ msgstr ""
 msgid "listing_items_color"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 # defaultMessage: Posizione in cui cercare
 msgid "location_to_search"
@@ -1410,9 +1562,7 @@ msgid "modulo_formati_alternativi"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/CompleteBlockLinksTemplateTemplateOptions
 #: config/Blocks/ListingOptions/cardWithImageTemplate
-#: config/Blocks/ListingOptions/completeBlockLinksTemplate
 # defaultMessage: undefined
 msgid "natural_image_size"
 msgstr ""
@@ -1432,7 +1582,6 @@ msgstr ""
 msgid "no"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/BandiSearch/Body
 #: components/ItaliaTheme/Blocks/EventSearch/Body
 # defaultMessage: Nessun risultato trovato
 msgid "noResult"
@@ -1779,26 +1928,6 @@ msgstr ""
 msgid "ruolo"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
-# defaultMessage: Categoria
-msgid "sarchBandi_categoria_placeholder"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
-# defaultMessage: Ente
-msgid "sarchBandi_ente_placeholder"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
-# defaultMessage: Tipologia
-msgid "sarchBandi_tipologia_placeholder"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
-# defaultMessage: Ufficio responsabile
-msgid "sarchBandi_ufficio_responsabile_placeholder"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/Calendar/Item
 #: components/ItaliaTheme/View/Commons/BandoDates
 # defaultMessage: Scadenza dei termini per partecipare al bando
@@ -1821,97 +1950,6 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/SearchSectionForm
 # defaultMessage: Cerca
 msgid "search"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
-# defaultMessage: Colore di sfondo
-msgid "searchBlock_bg_color"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
-# defaultMessage: Colore del bottone
-msgid "searchBlock_button_color"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
-# defaultMessage: Filtro per Categoria
-msgid "searchBlock_categoria_filter"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
-# defaultMessage: Filtro per date
-msgid "searchBlock_date_filter"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
-# defaultMessage: Filtro per Ente
-msgid "searchBlock_ente_filter"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
-# defaultMessage: Filtro 1
-msgid "searchBlock_filter_one"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
-# defaultMessage: Filtro 3
-msgid "searchBlock_filter_three"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
-# defaultMessage: Filtro 2
-msgid "searchBlock_filter_two"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
-# defaultMessage: Seleziona i filtri di ricerca da mostrare nel blocco.
-msgid "searchBlock_help"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
-# defaultMessage: Primario
-msgid "searchBlock_primarycolor"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
-# defaultMessage: Filtro per data di scadenza del bando
-msgid "searchBlock_scadenza_filter"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
-# defaultMessage: Secondario
-msgid "searchBlock_secondaryColor"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
-# defaultMessage: Aspetto
-msgid "searchBlock_style"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
-# defaultMessage: Ternario
-msgid "searchBlock_tertiaryColor"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
-#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
-# defaultMessage: Filtro di testo
-msgid "searchBlock_text_filter"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
-# defaultMessage: Filtro per tipologia
-msgid "searchBlock_tipologia_filter"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
-# defaultMessage: Filtro per Ufficio responsabile
-msgid "searchBlock_ufficio_responsabile_filter"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
-# defaultMessage: Filtro per luoghi
-msgid "searchBlock_venue_filter"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/SearchSectionForm
@@ -2003,11 +2041,6 @@ msgstr ""
 msgid "search_content_types"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
-# defaultMessage: Data fine
-msgid "search_endDate"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Dove cercare
 msgid "search_service_block_sections"
@@ -2021,11 +2054,6 @@ msgstr ""
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Vai ai risultati di ricerca
 msgid "search_skip_to_search_results"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
-# defaultMessage: Data inizio
-msgid "search_startDate"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
@@ -2195,10 +2223,8 @@ msgid "show_tipologia"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/CompleteBlockLinksTemplateTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/InEvidenceTemplateOptions
 #: config/Blocks/ListingOptions/cardWithImageTemplate
-#: config/Blocks/ListingOptions/completeBlockLinksTemplate
 #: config/Blocks/ListingOptions/inEvidenceTemplate
 # defaultMessage: Mostra gli argomenti
 msgid "show_topics"
@@ -2217,18 +2243,14 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
-#: config/Blocks/listingOptions
 #: config/Blocks/ListingOptions/simpleCardTemplate
-#: config/Blocks/listingVariations
 # defaultMessage: Compatto
 msgid "simplecard_listing_appearance_compact"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
-#: config/Blocks/listingOptions
 #: config/Blocks/ListingOptions/simpleCardTemplate
-#: config/Blocks/listingVariations
 # defaultMessage: Qui puoi selezionare, per il template 'Card semplice', un aspetto diverso da quello di default.
 msgid "simplecard_listing_appearance_description"
 msgstr ""
@@ -2239,16 +2261,19 @@ msgid "situazione_patrimoniale"
 msgstr ""
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
+#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 # defaultMessage: Skip to footer
 msgid "skiplink-footer"
 msgstr ""
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
+#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 # defaultMessage: Skip to main content
 msgid "skiplink-main-content"
 msgstr ""
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
+#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 # defaultMessage: Skip to navigation
 msgid "skiplink-navigation"
 msgstr ""
@@ -2340,7 +2365,6 @@ msgstr ""
 msgid "termini_del_procedimento"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Common/SearchFilters/TextFilter
 #: components/ItaliaTheme/Blocks/EventSearch/Filters/TextFilter
 # defaultMessage: Inserisci un valore
 msgid "text_filter_placeholder"
@@ -2440,6 +2464,7 @@ msgid "unita_organizzativa_competente"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/RenderBlocks
+#: components/ItaliaTheme/View/Commons/TextOrBlocks
 # defaultMessage: Blocco sconosciuto
 msgid "unknownBlock"
 msgstr ""
@@ -2465,7 +2490,6 @@ msgstr ""
 msgid "variazione_situazione_patrimoniale"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/BandiSearch/Body
 #: components/ItaliaTheme/Blocks/EventSearch/Body
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
 # defaultMessage: Luoghi
