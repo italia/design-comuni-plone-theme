@@ -1,3 +1,11 @@
+### [3.5.9](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.8...v3.5.9) (2021-06-01)
+
+
+### Bug Fixes
+
+* fixed sitemap link in footer for multilingual sites ([0ed9884](https://github.com/RedTurtle/design-volto-theme/commit/0ed98846dedb3fca1416a2b94881507af50c6fcf))
+* updated locales ([9ec7c85](https://github.com/RedTurtle/design-volto-theme/commit/9ec7c85d1d12fd384eab38aaf223c0da28c6aeea))
+
 ### [3.5.8](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.7...v3.5.8) (2021-06-01)
 
 
