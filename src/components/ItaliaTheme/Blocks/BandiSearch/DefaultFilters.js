@@ -7,6 +7,7 @@ import {
   SelectFilter,
   DateFilter,
 } from '@italia/components/ItaliaTheme/Blocks/Common/SearchFilters';
+import { getSearchBandiFilters } from '@italia/actions';
 
 const messages = defineMessages({
   text_filter: {
@@ -41,13 +42,21 @@ const messages = defineMessages({
     id: 'searchBlock_categoria_filter',
     defaultMessage: 'Filtro per Categoria',
   },
-  categoria: {
+  categoria_filter_placeholder: {
     id: 'sarchBandi_categoria_placeholder',
     defaultMessage: 'Categoria',
   },
   scadenza_filter: {
     id: 'searchBlock_scadenza_filter',
     defaultMessage: 'Filtro per data di scadenza del bando',
+  },
+  scadenza_dal: {
+    id: 'searchBlock_scadenza_filter_from',
+    defaultMessage: 'Scadenza dal',
+  },
+  scadenza_al: {
+    id: 'searchBlock_scadenza_filter_to',
+    defaultMessage: 'Scadenza al',
   },
   search_keyword: {
     id: 'Cerca per parola chiave',
@@ -136,12 +145,10 @@ const DefaultFilters = () => {
           value: null,
           options: {
             dispatch: {
+              action: getSearchBandiFilters,
               path: subsite ? flattenToAppURL(subsite['@id']) : '/',
-              portal_types: ['UnitaOrganizzativa'],
-              fullobjects: 0,
-              b_size: 10000,
-              additionalParams: { bandiSearch: true },
-              subrequests_name: 'search_bandi_ufficio_responsabile',
+              stateSelector: 'searchBandiFilters',
+              resultProp: 'offices',
             },
             placeholder: intl.formatMessage(messages.ufficio_responsabile),
           },
@@ -165,15 +172,22 @@ const DefaultFilters = () => {
         props: {
           value: null,
           options: {
-            vocabulary: 'plone.app.vocabularies.Keywords',
-            placeholder: intl.formatMessage(messages.categoria_filter),
+            dispatch: {
+              action: getSearchBandiFilters,
+              path: subsite ? flattenToAppURL(subsite['@id']) : '/',
+              stateSelector: 'searchBandiFilters',
+              resultProp: 'subjects',
+            },
+            placeholder: intl.formatMessage(
+              messages.categoria_filter_placeholder,
+            ),
           },
         },
       },
       query: (value, query) => {
         if (value?.value) {
           query.push({
-            i: 'subjects',
+            i: 'Subject',
             o: 'plone.app.querystring.operation.selection.any',
             v: value.value,
           });
@@ -191,9 +205,11 @@ const DefaultFilters = () => {
             endDate: moment().endOf('day'),
           },
           showClearDates: true,
-          defaultStart: moment().startOf('day'),
-          defaultEnd: moment().endOf('day'),
+          // defaultStart: moment().startOf('day'),
+          // defaultEnd: moment().endOf('day'),
           isOutsideRange: () => false,
+          startLabel: intl.formatMessage(messages.scadenza_dal),
+          endLabel: intl.formatMessage(messages.scadenza_al),
         },
       },
 
@@ -205,29 +221,30 @@ const DefaultFilters = () => {
       },
       query: (value, query) => {
         const date_fmt = 'YYYY-MM-DD HH:mm';
-
-        if (value?.startDate && !value.endDate) {
-          let start = value.startDate.startOf('day')?.format(date_fmt);
-          query.push({
-            i: 'scadenza_bando',
-            o: 'plone.app.querystring.operation.date.largerThan', //plone.app.querystring.operation.date.largerThan
-            v: start,
-          });
-        } else if (!value?.startDate && value?.endDate) {
-          let end = value.endDate.endOf('day')?.format(date_fmt);
-          query.push({
-            i: 'scadenza_bando',
-            o: 'plone.app.querystring.operation.date.lessThan', //plone.app.querystring.operation.date.lessThan
-            v: end,
-          });
-        } else {
-          let start = value.startDate.startOf('day')?.format(date_fmt);
-          let end = value.endDate.endOf('day')?.format(date_fmt);
-          query.push({
-            i: 'scadenza_bando',
-            o: 'plone.app.querystring.operation.date.between',
-            v: [start, end],
-          });
+        if (value?.startDate || value?.endDate) {
+          if (value?.startDate && !value.endDate) {
+            let start = value.startDate.startOf('day')?.format(date_fmt);
+            query.push({
+              i: 'scadenza_bando',
+              o: 'plone.app.querystring.operation.date.largerThan', //plone.app.querystring.operation.date.largerThan
+              v: start,
+            });
+          } else if (!value?.startDate && value?.endDate) {
+            let end = value.endDate.endOf('day')?.format(date_fmt);
+            query.push({
+              i: 'scadenza_bando',
+              o: 'plone.app.querystring.operation.date.lessThan', //plone.app.querystring.operation.date.lessThan
+              v: end,
+            });
+          } else {
+            let start = value.startDate.startOf('day')?.format(date_fmt);
+            let end = value.endDate.endOf('day')?.format(date_fmt);
+            query.push({
+              i: 'scadenza_bando',
+              o: 'plone.app.querystring.operation.date.between',
+              v: [start, end],
+            });
+          }
         }
       },
     },

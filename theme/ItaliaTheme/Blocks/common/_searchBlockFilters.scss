@@ -47,6 +47,10 @@
             border: none;
             background-color: transparent;
             color: #fff;
+
+            &::placeholder {
+              color: #fff;
+            }
           }
 
           .DateRangePickerInput_arrow {
