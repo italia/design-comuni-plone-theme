@@ -223,22 +223,28 @@ const DefaultFilters = () => {
         const date_fmt = 'YYYY-MM-DD HH:mm';
         if (value?.startDate || value?.endDate) {
           if (value?.startDate && !value.endDate) {
-            let start = value.startDate.startOf('day')?.format(date_fmt);
+            let start_v = value.startDate.clone();
+            let start = start_v?.startOf('day')?.utc().format(date_fmt);
             query.push({
               i: 'scadenza_bando',
               o: 'plone.app.querystring.operation.date.largerThan', //plone.app.querystring.operation.date.largerThan
               v: start,
             });
           } else if (!value?.startDate && value?.endDate) {
-            let end = value.endDate.endOf('day')?.format(date_fmt);
+            let end_v = value.endDate.clone();
+            let end = end_v.add(1, 'd').startOf('day')?.utc()?.format(date_fmt);
             query.push({
               i: 'scadenza_bando',
               o: 'plone.app.querystring.operation.date.lessThan', //plone.app.querystring.operation.date.lessThan
               v: end,
             });
           } else {
-            let start = value.startDate.startOf('day')?.format(date_fmt);
-            let end = value.endDate.endOf('day')?.format(date_fmt);
+            let start_v = value.startDate.clone();
+            let start = start_v.startOf('day')?.utc()?.format(date_fmt);
+
+            let end_v = value.endDate.clone();
+            let end = end_v.add(1, 'd').startOf('day')?.utc()?.format(date_fmt);
+
             query.push({
               i: 'scadenza_bando',
               o: 'plone.app.querystring.operation.date.between',
