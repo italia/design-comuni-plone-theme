@@ -1,3 +1,19 @@
+### [3.5.8](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.7...v3.5.8) (2021-06-01)
+
+
+### Bug Fixes
+
+* avoid errors in UniversalLink ([0ee578a](https://github.com/RedTurtle/design-volto-theme/commit/0ee578acb57d6544c9639f55e32526f98338d431))
+* fixed cms ui styles in babel view ([3bdc382](https://github.com/RedTurtle/design-volto-theme/commit/3bdc3829230d0e52173f999db372cf6a728b5ab1))
+* usage of ConditionalLink conditions ([49bf4e0](https://github.com/RedTurtle/design-volto-theme/commit/49bf4e083c2b030a2e88a71af4e910c157685713))
+
+
+### Maintenance
+
+* fix lockfile ([80b750a](https://github.com/RedTurtle/design-volto-theme/commit/80b750a0372de3e635be0a444944d5dcfda45cd5))
+* update volto ([65edb0b](https://github.com/RedTurtle/design-volto-theme/commit/65edb0b776f12e86ef44a20b8dc6117fb6f120a5))
+* update volto ([54da90c](https://github.com/RedTurtle/design-volto-theme/commit/54da90c4a5f01a6f3c700bba18969ae9018b364d))
+
 ### [3.5.7](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.6...v3.5.7) (2021-05-31)
 
 
