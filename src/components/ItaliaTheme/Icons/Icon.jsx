@@ -22,10 +22,16 @@ const Icon = (props) => {
       size,
     );
 
+    const parts = icon.split(' ');
     return icon.indexOf('it-') === 0 ? (
       <DesignIcon {...props} className={classes} />
     ) : icon === 'telegram' ? (
       <TelegramSVG className={classes} />
+    ) : parts.length > 1 ? (
+      <FontAwesomeIcon
+        icon={[parts[0], parts[1]]}
+        className={`fal ${classes}`}
+      />
     ) : (
       <FontAwesomeIcon icon={icon} className={`fal ${classes}`} />
     );
