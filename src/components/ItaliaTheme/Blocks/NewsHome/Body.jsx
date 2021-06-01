@@ -53,10 +53,7 @@ const Body = ({ content, pathname, block }) => {
               {intl.formatMessage(messages.news)}
             </CardCategory>
             <CardTitle tag="h2">
-              <ConditionalLink
-                condition={content['@id']}
-                to={flattenToAppURL(content['@id'])}
-              >
+              <ConditionalLink condition={content['@id']} item={content}>
                 {content.title}
               </ConditionalLink>
             </CardTitle>
@@ -65,11 +62,15 @@ const Body = ({ content, pathname, block }) => {
             {content.tassonomia_argomenti &&
               content.tassonomia_argomenti.length > 0 && (
                 <>
-                  {content.tassonomia_argomenti.map((argomento) => (
-                    <Chip simple color="primary" key={argomento['@id']}>
+                  {content.tassonomia_argomenti.map((argomento, idx) => (
+                    <Chip
+                      simple
+                      color="primary"
+                      key={`${idx} ${argomento['@id']}`}
+                    >
                       <ConditionalLink
-                        condition={flattenToAppURL(argomento['@id'])}
-                        to={flattenToAppURL(argomento['@id'])}
+                        condition={argomento['@id']}
+                        item={argomento}
                         className="chip-label text-decoration-none"
                       >
                         {argomento.title}
