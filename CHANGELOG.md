@@ -1,3 +1,17 @@
+### [3.5.11](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.10...v3.5.11) (2021-06-03)
+
+
+### Bug Fixes
+
+* conditionalLink conditions ([6412e7f](https://github.com/RedTurtle/design-volto-theme/commit/6412e7f626e4037c1be3b669e9f383b84c93c420))
+* fix ConditionalLink condition ([4f00914](https://github.com/RedTurtle/design-volto-theme/commit/4f00914d5bf6c2d82e21c0c905137e010888f9ae))
+
+
+### Maintenance
+
+* updated locales ([fcdd8da](https://github.com/RedTurtle/design-volto-theme/commit/fcdd8da5d3ff4e56dbc871ce5456c87d6ed4c9d8))
+* updated voltoù ([b2f13dd](https://github.com/RedTurtle/design-volto-theme/commit/b2f13dd526459e228ac34bbeb5b9b1b50c7b0c23))
+
 ### [3.5.10](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.9...v3.5.10) (2021-06-03)
 
 
