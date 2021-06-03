@@ -1,3 +1,10 @@
+### [3.5.10](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.9...v3.5.10) (2021-06-03)
+
+
+### Bug Fixes
+
+* changed .flat and .flatMap fn with lodash fn ([22b57f5](https://github.com/RedTurtle/design-volto-theme/commit/22b57f597e47675fd28e2bdbc864d28bd35fd09c))
+
 ### [3.5.9](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.8...v3.5.9) (2021-06-01)
 
 
