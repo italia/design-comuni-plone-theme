@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useIntl, defineMessages } from 'react-intl';
 import { useLocation } from 'react-router-dom';
+import { flatMapDeep } from 'lodash';
 import moment from 'moment';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
@@ -83,7 +84,7 @@ const AmministrazioneTrasparenteTablesTemplate = ({
             </tr>
           </thead>
           <tbody>
-            {tableData.body?.flatMap((row, index) => {
+            {flatMapDeep(tableData.body ?? [], (row, index) => {
               return (
                 <tr key={index}>
                   {row.map((column, index) => (

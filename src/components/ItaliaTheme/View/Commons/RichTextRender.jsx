@@ -2,6 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { flattenDeep } from 'lodash';
 import { flattenHTMLToAppURL } from '@plone/volto/helpers';
 import { hasBlocksData } from '@plone/volto/helpers';
 import { RenderBlocks } from '@italia/components/ItaliaTheme/View';
@@ -18,10 +19,9 @@ const richTextHasContent = (content) => {
       (b) => b['@type'] !== 'text',
     );
 
-    const textContent = textBlocks
-      ?.map((block) => block.text?.blocks?.map((b) => b.text))
-      ?.flat(3)
-      ?.filter((b) => b != null && b.trim().length > 0)?.[0];
+    const textContent = flattenDeep(
+      textBlocks?.map((block) => block.text?.blocks?.map((b) => b.text) ?? []),
+    )?.filter((b) => b != null && b.trim().length > 0)?.[0];
 
     return (
       renderedBlocks !== null &&
