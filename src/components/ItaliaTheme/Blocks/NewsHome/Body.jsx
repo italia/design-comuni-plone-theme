@@ -53,10 +53,7 @@ const Body = ({ content, pathname, block }) => {
               {intl.formatMessage(messages.news)}
             </CardCategory>
             <CardTitle tag="h2">
-              <ConditionalLink
-                condition={content['@id'] != null}
-                item={content}
-              >
+              <ConditionalLink condition={!!content['@id']} item={content}>
                 {content.title}
               </ConditionalLink>
             </CardTitle>
@@ -72,7 +69,7 @@ const Body = ({ content, pathname, block }) => {
                       key={`${idx} ${argomento['@id']}`}
                     >
                       <ConditionalLink
-                        condition={argomento['@id'] != null}
+                        condition={!!argomento['@id']}
                         item={argomento}
                         className="chip-label text-decoration-none"
                       >
