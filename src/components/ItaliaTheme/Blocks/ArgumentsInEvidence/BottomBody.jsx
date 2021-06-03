@@ -31,7 +31,7 @@ const BottomBody = ({ data, intl }) => {
           <div className="col-lg-9">
             {data?.arguments?.map((argument, index) => (
               <ConditionalLink
-                condition={argument['@id']}
+                condition={argument['@id'] != null}
                 item={argument}
                 key={index}
                 title={argument.title}

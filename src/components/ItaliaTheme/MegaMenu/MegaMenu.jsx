@@ -218,7 +218,7 @@ const MegaMenu = ({ item, pathname }) => {
                                   <ConditionalLink
                                     item={child}
                                     title={child.title}
-                                    condition={child['@id']}
+                                    condition={child['@id'] != null}
                                     key={child['@id']}
                                     onClick={() => setMenuStatus(false)}
                                   >
@@ -229,7 +229,7 @@ const MegaMenu = ({ item, pathname }) => {
                                 <ConditionalLink
                                   item={child}
                                   title={child.title}
-                                  condition={child['@id']}
+                                  condition={child['@id'] != null}
                                   key={child['@id']}
                                   onClick={() => setMenuStatus(false)}
                                   className={cx('list-item', {
