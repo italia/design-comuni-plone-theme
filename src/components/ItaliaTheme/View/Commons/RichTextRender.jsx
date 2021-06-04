@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { flattenDeep } from 'lodash';
+import { flattenDeep, values } from 'lodash';
 import { flattenHTMLToAppURL } from '@plone/volto/helpers';
 import { hasBlocksData } from '@plone/volto/helpers';
 import { RenderBlocks } from '@italia/components/ItaliaTheme/View';
@@ -12,10 +12,10 @@ const richTextHasContent = (content) => {
     //ReactDOMServer.renderToStaticMarkup(RenderBlocks({ content: content })),
     const renderedBlocks = RenderBlocks({ content: content });
 
-    const textBlocks = Object.values(content.blocks).filter(
+    const textBlocks = values(content.blocks).filter(
       (b) => b['@type'] === 'text',
     );
-    const noTextBlocks = Object.values(content.blocks).filter(
+    const noTextBlocks = values(content.blocks).filter(
       (b) => b['@type'] !== 'text',
     );
 
