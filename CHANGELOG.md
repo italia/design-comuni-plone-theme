@@ -1,3 +1,10 @@
+### [3.5.12](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.11...v3.5.12) (2021-06-04)
+
+
+### Bug Fixes
+
+* replaced Object.values with values() from lodash ([32bef86](https://github.com/RedTurtle/design-volto-theme/commit/32bef869e728d27cb2a58bf0ec523fb432424509))
+
 ### [3.5.11](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.10...v3.5.11) (2021-06-03)
 
 
