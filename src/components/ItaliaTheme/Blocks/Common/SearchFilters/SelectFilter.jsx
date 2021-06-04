@@ -10,11 +10,11 @@ const SelectFilter = ({ options, value, id, onChange, placeholder }) => {
   const state = useSelector((state) => {
     return state;
   });
-  const selectOptions = (options.dispatch.action
+  const selectOptions = (options.dispatch?.action
     ? state?.[options.dispatch.stateSelector]?.result[
         options.dispatch.resultProp ?? 'items'
       ]
-    : state?.search?.subrequests[options?.dispatch?.subrequests_name]?.items
+    : state?.search?.subrequests?.[options?.dispatch?.subrequests_name]?.items
   )?.map((i) => {
     return {
       value: i.UID,
