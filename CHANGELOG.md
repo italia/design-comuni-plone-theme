@@ -1,3 +1,10 @@
+### [3.5.13](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.12...v3.5.13) (2021-06-04)
+
+
+### Maintenance
+
+* updated volto to fix new line in bold styles ([77b180d](https://github.com/RedTurtle/design-volto-theme/commit/77b180dba6cf9806d7383c7f9fcfefa331658a0f))
+
 ### [3.5.12](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.11...v3.5.12) (2021-06-04)
 
 
