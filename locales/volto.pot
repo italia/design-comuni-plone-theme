@@ -1379,7 +1379,9 @@ msgstr ""
 msgid "modalita_richiedere_informazioni_procedimentodali"
 msgstr ""
 
+#: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
 #: components/ItaliaTheme/View/Commons/Metadata
+#: components/ItaliaTheme/View/PageView/PageView
 # defaultMessage: Ultimo aggiornamento
 msgid "modified"
 msgstr ""

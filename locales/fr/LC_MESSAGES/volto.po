@@ -1142,7 +1142,9 @@ msgstr "Mode d'amorçage"
 msgid "modalita_richiedere_informazioni_procedimentodali"
 msgstr "Comment demander des informations sur la procédure"
 
+#: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
 #: components/ItaliaTheme/View/Commons/Metadata
+#: components/ItaliaTheme/View/PageView/PageView
 msgid "modified"
 msgstr "Dernière mise à jour"
 

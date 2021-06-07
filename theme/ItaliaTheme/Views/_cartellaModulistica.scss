@@ -1,4 +1,5 @@
 $docs-section-margin: 3em;
+
 .contenttype-cartellamodulistica {
   section.modulistica {
     .documents-section,
@@ -79,6 +80,7 @@ $docs-section-margin: 3em;
             .downloads {
               flex: 1 1 100%;
               justify-content: flex-end;
+
               a {
                 width: 2em;
               }
@@ -91,5 +93,9 @@ $docs-section-margin: 3em;
     .document-row-section + .documents-section {
       margin-top: $docs-section-margin;
     }
+  }
+
+  #metadata {
+    margin-top: 3rem;
   }
 }
