@@ -1,3 +1,20 @@
+### [3.5.14](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.13...v3.5.14) (2021-06-07)
+
+
+### Bug Fixes
+
+* fixed html block render in draftjs ([328b831](https://github.com/RedTurtle/design-volto-theme/commit/328b831f3f55950837ceeefbd011053c379c1886))
+
+
+### Maintenance
+
+* added brand icons and enabled usage of regular icons ([729929d](https://github.com/RedTurtle/design-volto-theme/commit/729929d17244b087c99cedcc50a2515d8143f7fb))
+
+
+### Changes
+
+* remove listing amministrazioneTrasparenteTablesTemplate ([e122321](https://github.com/RedTurtle/design-volto-theme/commit/e12232115e86a7c06830f4886217c2477982e1ba))
+
 ### [3.5.13](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.12...v3.5.13) (2021-06-04)
 
 
