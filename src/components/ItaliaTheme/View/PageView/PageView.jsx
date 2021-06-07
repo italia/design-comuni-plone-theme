@@ -112,12 +112,14 @@ const PageView = ({ content, token, location, history }) => {
 
           <TextOrBlocks content={content} />
 
-          <article id="metadata" className="bottom-metadata">
-            <span className="text-serif mb-0 mt-4">
-              {intl.formatMessage(messages.modified)}:
-            </span>{' '}
-            {viewDate(intl.locale, content.modified, 'DD-MM-Y HH:MM')}
-          </article>
+          {content.show_modified && (
+            <article id="metadata" className="bottom-metadata">
+              <span className="text-serif mb-0 mt-4">
+                {intl.formatMessage(messages.modified)}:
+              </span>{' '}
+              {viewDate(intl.locale, content.modified, 'DD-MM-Y HH:MM')}
+            </article>
+          )}
         </div>
 
         <PagePlaceholderAfterContent content={content} />
