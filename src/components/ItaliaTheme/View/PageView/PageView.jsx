@@ -14,11 +14,14 @@ import {
   RichText,
   RelatedItemInEvidence,
   richTextHasContent,
+  PageHeaderTassonomiaArgomenti,
 } from '@italia/components/ItaliaTheme/View';
 import { defineMessages, useIntl } from 'react-intl';
 import { Container } from 'design-react-kit/dist/design-react-kit';
 import { getLayoutFieldname } from '@plone/volto/helpers';
 import Image from '@plone/volto/components/theme/Image/Image';
+import { viewDate } from '@italia/helpers';
+
 import config from '@plone/volto/registry';
 
 /**
@@ -37,6 +40,10 @@ const messages = defineMessages({
     id: 'In this section',
     defaultMessage: 'In questa sezione',
   },
+  modified: {
+    id: 'modified',
+    defaultMessage: 'Ultimo aggiornamento',
+  },
 });
 
 const PageView = ({ content, token, location, history }) => {
@@ -47,7 +54,9 @@ const PageView = ({ content, token, location, history }) => {
     const rightHeaderHasContent =
       content.immagine_testata?.scales ||
       richTextHasContent(content.info_testata) ||
-      content.mostra_navigazione;
+      content.mostra_navigazione ||
+      content?.tassonomia_argomenti?.length > 0;
+
     return (
       <>
         <div id="page-document" className="ui container">
@@ -84,11 +93,17 @@ const PageView = ({ content, token, location, history }) => {
                       <RichText serif={false} content={content.info_testata} />
                     </div>
                   )}
+
                   {content.mostra_navigazione && (
                     <PageHeaderNav
                       content={content}
                       title={intl.formatMessage(messages.inThisSection)}
                     />
+                  )}
+                  {content?.tassonomia_argomenti?.length > 0 && (
+                    <div className="px-4">
+                      <PageHeaderTassonomiaArgomenti content={content} />
+                    </div>
                   )}
                 </div>
               )}
@@ -96,6 +111,15 @@ const PageView = ({ content, token, location, history }) => {
           </Container>
 
           <TextOrBlocks content={content} />
+
+          {content.show_modified && (
+            <article id="metadata" className="bottom-metadata">
+              <span className="text-serif mb-0 mt-4">
+                {intl.formatMessage(messages.modified)}:
+              </span>{' '}
+              {viewDate(intl.locale, content.modified, 'DD-MM-Y HH:MM')}
+            </article>
+          )}
         </div>
 
         <PagePlaceholderAfterContent content={content} />

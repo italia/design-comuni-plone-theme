@@ -49,7 +49,7 @@ const RibbonCardTemplateSkeleton = ({
                   !show_only_first_ribbon ||
                   (show_only_first_ribbon && i === 0);
                 return (
-                  <Col lg={4} sm={12}>
+                  <Col lg={4} sm={12} key={i}>
                     <Card
                       className={cx(
                         `card-bg card-big align-items-top rounded shadow`,

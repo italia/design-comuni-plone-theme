@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-06-01T13:04:58.500Z\n"
+"POT-Creation-Date: 2021-06-07T14:25:55.864Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1374,7 +1374,9 @@ msgstr ""
 msgid "modalita_richiedere_informazioni_procedimentodali"
 msgstr ""
 
+#: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
 #: components/ItaliaTheme/View/Commons/Metadata
+#: components/ItaliaTheme/View/PageView/PageView
 # defaultMessage: Ultimo aggiornamento
 msgid "modified"
 msgstr ""

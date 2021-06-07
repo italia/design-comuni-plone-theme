@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 import moment from 'moment';
+import { flatMapDeep } from 'lodash';
 import { useHistory } from 'react-router-dom';
 import { Button } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -19,7 +20,7 @@ const Body = ({ block, sections }) => {
   const [inputText, setInputText] = useState('');
 
   const searchFilters = () => {
-    return block.sections.flatMap((section) => {
+    return flatMapDeep(block.sections ?? [], (section) => {
       let items = sections?.[section.value]?.items;
       return items ? Object.keys(items) : [];
     });

@@ -1121,7 +1121,9 @@ msgstr "Modalità di avvio"
 msgid "modalita_richiedere_informazioni_procedimentodali"
 msgstr "Modalità per richiedere informazioni sul procedimento"
 
+#: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
 #: components/ItaliaTheme/View/Commons/Metadata
+#: components/ItaliaTheme/View/PageView/PageView
 msgid "modified"
 msgstr "Ultimo aggiornamento"
 
@@ -1491,12 +1493,12 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_bg_color"
-msgstr "Colore di sfondo"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_button_color"
-msgstr "Colore del bottone"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 msgid "searchBlock_categoria_filter"
@@ -1506,7 +1508,7 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_date_filter"
-msgstr "Filtro per date"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 msgid "searchBlock_ente_filter"
@@ -1515,27 +1517,27 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_filter_one"
-msgstr "Filtro 1"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_filter_three"
-msgstr "Filtro 3"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_filter_two"
-msgstr "Filtro 2"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_help"
-msgstr "Seleziona i filtri di ricerca da mostrare nel blocco."
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_primarycolor"
-msgstr "Primario"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 msgid "searchBlock_scadenza_filter"
@@ -1552,24 +1554,24 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_secondaryColor"
-msgstr "Secondario"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_style"
-msgstr "Aspetto"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_tertiaryColor"
-msgstr "Ternario"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_text_filter"
-msgstr "Filtro di testo"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 msgid "searchBlock_tipologia_filter"
@@ -1583,7 +1585,7 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_venue_filter"
-msgstr "Filtro per luogo"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/SearchSectionForm
 msgid "searchContentIn"

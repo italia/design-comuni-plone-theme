@@ -98,8 +98,8 @@ import MapTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Op
 import BandiInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate';
 import BandiInEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton';
 import BandiInEvidenceTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/BandiInEvidenceTemplateOptions';
-import AmministrazioneTrasparenteTablesTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
-import AmministrazioneTrasparenteTablesTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/AmministrazioneTrasparenteTablesTemplateSkeleton';
+// import AmministrazioneTrasparenteTablesTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
+// import AmministrazioneTrasparenteTablesTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/AmministrazioneTrasparenteTablesTemplateSkeleton';
 
 import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
 import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
@@ -119,6 +119,7 @@ import { defaultIconWidgetOptions } from '@italia/helpers/index';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import * as Icons from '@fortawesome/free-solid-svg-icons';
 import * as IconsRegular from '@fortawesome/free-regular-svg-icons';
+import * as IconsBrands from '@fortawesome/free-brands-svg-icons';
 
 // CTs icons
 import faFileInvoiceSVG from '@italia/icons/file-invoice.svg';
@@ -145,7 +146,11 @@ const iconListRegular = Object.keys(IconsRegular.far).map(
   (icon) => IconsRegular[icon],
 );
 
-library.add(...iconList, ...iconListRegular);
+const iconListBrands = Object.keys(IconsBrands.fab).map(
+  (icon) => IconsBrands[icon],
+);
+
+library.add(...iconList, ...iconListRegular, ...iconListBrands);
 
 export default function applyConfig(voltoConfig) {
   let config = applyRichTextConfig(voltoConfig);
@@ -454,11 +459,11 @@ export default function applyConfig(voltoConfig) {
           skeleton: BandiInEvidenceTemplateSkeleton,
           templateOptions: BandiInEvidenceTemplateOptions,
         },
-        amministrazioneTrasparenteTablesTemplate: {
-          label: 'Tabelle Amministrazione Trasparente',
-          template: AmministrazioneTrasparenteTablesTemplate,
-          skeleton: AmministrazioneTrasparenteTablesTemplateSkeleton,
-        },
+        // amministrazioneTrasparenteTablesTemplate: {
+        //   label: 'Tabelle Amministrazione Trasparente',
+        //   template: AmministrazioneTrasparenteTablesTemplate,
+        //   skeleton: AmministrazioneTrasparenteTablesTemplateSkeleton,
+        // },
 
         // ****** Example: ******
         //template_name: {
@@ -483,6 +488,13 @@ export default function applyConfig(voltoConfig) {
     supportedLanguages: ['it'],
     defaultLanguage: 'it',
     verticalFormTabs: true,
+    serverConfig: {
+      ...config.settings.serverConfig,
+      extractScripts: {
+        ...config.settings.serverConfig.extractScripts,
+        errorPages: true,
+      },
+    },
     contentIcons: {
       ...config.settings.contentIcons,
       Document: faFileInvoiceSVG,
@@ -543,14 +555,14 @@ export default function applyConfig(voltoConfig) {
           { title: 'Media policy', url: '/it/media-policy' },
           { title: 'Note legali', url: '/it/note-legali' },
           { title: 'Privacy policy', url: '/it/privacy-policy' },
-          { title: 'Mappa del sito', url: '/it/sitemap' },
+          { title: 'Mappa del sito', url: '/sitemap' },
           { title: 'Credits', url: 'https://www.redturtle.it/' },
         ],
         en: [
           { title: 'Media policy', url: '/en/media-policy' },
           { title: 'Legal notes', url: '/en/legal-notes' },
           { title: 'Privacy policy', url: '/en/privacy-policy' },
-          { title: 'Sitemap', url: '/en/sitemap' },
+          { title: 'Sitemap', url: '/sitemap' },
           { title: 'Credits', url: 'https://www.redturtle.it/' },
         ],
       },

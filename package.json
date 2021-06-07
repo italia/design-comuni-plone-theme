@@ -2,7 +2,7 @@
   "name": "design-volto-theme",
   "description": "Volto Theme for Italia design guidelines",
   "license": "MIT",
-  "version": "3.5.4",
+  "version": "3.5.14",
   "private": true,
   "workspaces": [
     "src/addons/volto-cookie-banner",
@@ -135,6 +135,12 @@
     },
     "ignoreFiles": "theme/themes/default/**/*.overrides"
   },
+  "browserslist": [
+    ">1%",
+    "last 2 versions",
+    "not ie 11",
+    "not dead"
+  ],
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
@@ -168,10 +174,11 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.30",
+    "@fortawesome/free-brands-svg-icons": "5.14.0",
     "@fortawesome/free-regular-svg-icons": "5.14.0",
     "@fortawesome/free-solid-svg-icons": "5.14.0",
     "@fortawesome/react-fontawesome": "0.1.11",
-    "@plone/volto": "plone/volto#rt_dev_12",
+    "@plone/volto": "plone/volto#fdf4eeb4d5a4bb08066487f70e809b9d64392afc",
     "@tinymce/tinymce-react": "3.8.1",
     "bootstrap-italia": "1.3.9",
     "classnames": "2.2.6",
@@ -214,5 +221,9 @@
     "stylelint-prettier": "1.1.2",
     "svg-inline-loader": "0.8.0",
     "svg-inline-react": "3.2.0"
+  },
+  "volta": {
+    "node": "12.22.1",
+    "yarn": "1.19.1"
   }
 }

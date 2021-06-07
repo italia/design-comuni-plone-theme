@@ -98,7 +98,7 @@ const PageHeader = (props) => {
         </div>
       ) : null}
 
-      <div className="col-lg-3 offset-lg-1 page-header-right">
+      <div className="col-lg-3 page-header-right offset-lg-1">
         <Sharing url={props.content['@id']} title={props.content.title} />
         <Actions url={props.content['@id']} title={props.content.title} />
 

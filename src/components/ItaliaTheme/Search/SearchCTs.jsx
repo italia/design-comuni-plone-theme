@@ -3,6 +3,7 @@
  */
 import React, { useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
+import { values } from 'lodash';
 import {
   Input,
   FormGroup,
@@ -62,7 +63,7 @@ export default function SearchCTs({
      * i valori attivi di default siano in cima e non spariscano nel collapse
      */
     const ctsOrderedKeys = [
-      ...Object.values(
+      ...values(
         Object.keys(cts).reduce(
           (acc, ct) => {
             // quindi mi creo due liste con quelli attivi di default

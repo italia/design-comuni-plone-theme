@@ -1138,7 +1138,9 @@ msgstr "Mode d'amorçage"
 msgid "modalita_richiedere_informazioni_procedimentodali"
 msgstr "Comment demander des informations sur la procédure"
 
+#: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
 #: components/ItaliaTheme/View/Commons/Metadata
+#: components/ItaliaTheme/View/PageView/PageView
 msgid "modified"
 msgstr "Dernière mise à jour"
 
@@ -1621,7 +1623,7 @@ msgstr "Type d'éléments"
 
 #: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
 msgid "search_endDate"
-msgstr "Date de fin"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "search_service_block_sections"
@@ -1637,7 +1639,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
 msgid "search_startDate"
-msgstr "Date de début"
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-add-rootpath"

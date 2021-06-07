@@ -1121,7 +1121,9 @@ msgstr "Startup mode"
 msgid "modalita_richiedere_informazioni_procedimentodali"
 msgstr "Modalità per richiedere informazioni sul procedimento"
 
+#: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
 #: components/ItaliaTheme/View/Commons/Metadata
+#: components/ItaliaTheme/View/PageView/PageView
 msgid "modified"
 msgstr "Last update"
 
@@ -1604,7 +1606,7 @@ msgstr "Types"
 
 #: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
 msgid "search_endDate"
-msgstr "End date"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "search_service_block_sections"
@@ -1620,7 +1622,7 @@ msgstr "Skip to search results"
 
 #: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
 msgid "search_startDate"
-msgstr "Start date"
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 msgid "searchsectionswidget-add-rootpath"
