@@ -185,16 +185,16 @@ const italiaListingVariations = [
       return schema;
     },
   },
-  {
-    id: 'amministrazioneTrasparenteTablesTemplate',
-    isDefault: false,
-    title: 'Tabelle Amministrazione Trasparente',
-    template: AmministrazioneTrasparenteTablesTemplate,
-    skeleton: AmministrazioneTrasparenteTablesTemplateSkeleton,
-    schemaEnhancer: ({ schema, formData, intl }) => {
-      /*let pos = */ addDefaultOptions(schema, formData, intl);
-      return schema;
-    },
+//  {
+//    id: 'amministrazioneTrasparenteTablesTemplate',
+//    isDefault: false,
+//    title: 'Tabelle Amministrazione Trasparente',
+//    template: AmministrazioneTrasparenteTablesTemplate,
+//    skeleton: AmministrazioneTrasparenteTablesTemplateSkeleton,
+//    schemaEnhancer: ({ schema, formData, intl }) => {
+//      /*let pos = */ addDefaultOptions(schema, formData, intl);
+//      return schema;
+//    },
   },
 
   // ****** Example: ******
