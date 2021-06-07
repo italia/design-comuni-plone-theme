@@ -60,43 +60,66 @@ const blockRenderMap = Map({
   },
 });
 
+const renderHTMLBlock = (child) => {
+  return child.map((subchild) => {
+    if (Array.isArray(subchild)) {
+      return subchild.map((subchildren) => {
+        if (typeof subchildren === 'string') {
+          const last = subchildren.split('\n').length - 1;
+          return subchildren.split('\n').map((item, index) => (
+            <React.Fragment key={index}>
+              {item}
+              {index !== last && <br />}
+            </React.Fragment>
+          ));
+        } else {
+          return subchildren;
+        }
+      });
+    } else {
+      return subchild;
+    }
+  });
+};
 const ItaliaBlocksHtmlRenderers = {
   blockquote: (children, { keys }) =>
-    children.map((child, i) => <blockquote key={keys[i]}>{child}</blockquote>),
+    children.map((child, i) => (
+      <blockquote key={keys[i]}>{renderHTMLBlock(child)}</blockquote>
+    )),
   'align-center': (children, { keys }) =>
     children.map((child, i) => (
       <p id={keys[i]} key={keys[i]} className="text-center">
-        {child}
+        {renderHTMLBlock(child)}
       </p>
     )),
   'align-right': (children, { keys }) =>
     children.map((child, i) => (
       <p id={keys[i]} key={keys[i]} className="text-right">
-        {child}
+        {renderHTMLBlock(child)}
       </p>
     )),
   'align-justify': (children, { keys }) =>
     children.map((child, i) => (
       <p id={keys[i]} key={keys[i]} className="text-justify">
-        {child}
+        {renderHTMLBlock(child)}
       </p>
     )),
   callout: (children, { keys }) =>
     children.map((child, i) => (
       <p id={keys[i]} key={keys[i]} className="callout" role="note">
-        {child}
+        {renderHTMLBlock(child)}
       </p>
     )),
   'callout-bg': (children, { keys }) =>
     children.map((child, i) => (
       <p id={keys[i]} key={keys[i]} className="callout-bg" role="note">
-        {child}
+        {renderHTMLBlock(child)}
       </p>
     )),
   buttons: (children, { keys }) =>
     children.map((child, i) => (
       <p id={keys[i]} key={keys[i]} className="draftjs-buttons">
-        {child}
+        {renderHTMLBlock(child)}
       </p>
     )),
 };
