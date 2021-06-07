@@ -116,6 +116,7 @@ import { defaultIconWidgetOptions } from '@italia/helpers/index';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import * as Icons from '@fortawesome/free-solid-svg-icons';
 import * as IconsRegular from '@fortawesome/free-regular-svg-icons';
+import * as IconsBrands from '@fortawesome/free-brands-svg-icons';
 
 // CTs icons
 import faFileInvoiceSVG from '@italia/icons/file-invoice.svg';
@@ -142,7 +143,11 @@ const iconListRegular = Object.keys(IconsRegular.far).map(
   (icon) => IconsRegular[icon],
 );
 
-library.add(...iconList, ...iconListRegular);
+const iconListBrands = Object.keys(IconsBrands.fab).map(
+  (icon) => IconsBrands[icon],
+);
+
+library.add(...iconList, ...iconListRegular, ...iconListBrands);
 
 export default function applyConfig(voltoConfig) {
   let config = applyRichTextConfig(voltoConfig);
