@@ -95,8 +95,8 @@ import MapTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Op
 import BandiInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate';
 import BandiInEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton';
 import BandiInEvidenceTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/BandiInEvidenceTemplateOptions';
-import AmministrazioneTrasparenteTablesTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
-import AmministrazioneTrasparenteTablesTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/AmministrazioneTrasparenteTablesTemplateSkeleton';
+// import AmministrazioneTrasparenteTablesTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
+// import AmministrazioneTrasparenteTablesTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/AmministrazioneTrasparenteTablesTemplateSkeleton';
 
 import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
 import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
@@ -436,11 +436,11 @@ export default function applyConfig(voltoConfig) {
           skeleton: BandiInEvidenceTemplateSkeleton,
           templateOptions: BandiInEvidenceTemplateOptions,
         },
-        amministrazioneTrasparenteTablesTemplate: {
-          label: 'Tabelle Amministrazione Trasparente',
-          template: AmministrazioneTrasparenteTablesTemplate,
-          skeleton: AmministrazioneTrasparenteTablesTemplateSkeleton,
-        },
+        // amministrazioneTrasparenteTablesTemplate: {
+        //   label: 'Tabelle Amministrazione Trasparente',
+        //   template: AmministrazioneTrasparenteTablesTemplate,
+        //   skeleton: AmministrazioneTrasparenteTablesTemplateSkeleton,
+        // },
 
         // ****** Example: ******
         //template_name: {
