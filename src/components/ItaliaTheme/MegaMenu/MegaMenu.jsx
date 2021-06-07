@@ -26,7 +26,7 @@ import {
   getBlocksLayoutFieldname,
   getBaseUrl,
 } from '@plone/volto/helpers';
-import { UniversalLink } from '@plone/volto/components';
+import { UniversalLink, ConditionalLink } from '@plone/volto/components';
 import { Icon } from '@italia/components/ItaliaTheme';
 import config from '@plone/volto/registry';
 
@@ -115,7 +115,7 @@ const MegaMenu = ({ item, pathname }) => {
       <NavItem tag="li" active={isItemActive}>
         <NavLink
           href={item.linkUrl === '' ? '/' : null}
-          item={item.linkUrl[0]}
+          item={item.linkUrl[0]?.['@id'] ? item.linkUrl[0] : '#'}
           tag={UniversalLink}
           active={isItemActive}
         >
@@ -215,19 +215,21 @@ const MegaMenu = ({ item, pathname }) => {
                                     ),
                                   })}
                                 >
-                                  <UniversalLink
+                                  <ConditionalLink
                                     item={child}
                                     title={child.title}
+                                    condition={!!child['@id']}
                                     key={child['@id']}
                                     onClick={() => setMenuStatus(false)}
                                   >
                                     <span>{child.title}</span>
-                                  </UniversalLink>
+                                  </ConditionalLink>
                                 </h3>
                               ) : (
-                                <UniversalLink
+                                <ConditionalLink
                                   item={child}
                                   title={child.title}
+                                  condition={!!child['@id']}
                                   key={child['@id']}
                                   onClick={() => setMenuStatus(false)}
                                   className={cx('list-item', {
@@ -238,7 +240,7 @@ const MegaMenu = ({ item, pathname }) => {
                                   })}
                                 >
                                   <span>{child.title}</span>
-                                </UniversalLink>
+                                </ConditionalLink>
                               )}
                             </li>
                           );

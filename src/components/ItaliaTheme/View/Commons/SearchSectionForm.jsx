@@ -1,4 +1,5 @@
 import { defineMessages, useIntl } from 'react-intl';
+import { useSelector } from 'react-redux';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Button } from 'design-react-kit/dist/design-react-kit';
@@ -27,14 +28,25 @@ const messages = defineMessages({
 
 const SearchSectionForm = ({ content }) => {
   const intl = useIntl();
-
+  const subsite = useSelector((state) => state.subsite?.data);
   const [searchableText, setSearchableText] = useState('');
   const doSearch = (e) => {
     if (!e || e.key === 'Enter') {
       if (__CLIENT__)
         window.location.href =
           window.location.origin +
-          getSearchParamsURL(searchableText, {}, {}, {}) +
+          getSearchParamsURL(
+            searchableText,
+            {},
+            {},
+            {},
+            {},
+            null,
+            null,
+            null,
+            subsite,
+            intl.locale,
+          ) +
           '&custom_path=' +
           flattenToAppURL(content['@id']);
     }

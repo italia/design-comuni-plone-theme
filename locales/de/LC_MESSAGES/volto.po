@@ -1549,6 +1549,14 @@ msgstr ""
 msgid "searchBlock_scadenza_filter"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
+msgid "searchBlock_scadenza_filter_from"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
+msgid "searchBlock_scadenza_filter_to"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 msgid "searchBlock_secondaryColor"
 msgstr ""
