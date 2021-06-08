@@ -1,3 +1,12 @@
+### [3.5.15](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.14...v3.5.15) (2021-06-08)
+
+
+### Maintenance
+
+* **i18n:** update translations ([f2dff42](https://github.com/RedTurtle/design-volto-theme/commit/f2dff420b81f77c6b09c6712e70962da4b5cce67))
+* added last-modified date for Page and CartellaModulistica ([ac619ae](https://github.com/RedTurtle/design-volto-theme/commit/ac619ae9a61968f4a26d0c25d40f3341a13fcd0c))
+* view modified date only if show_modified is true ([17256db](https://github.com/RedTurtle/design-volto-theme/commit/17256db48911825baadde8e225b60a6ddce07057))
+
 ### [3.5.14](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.13...v3.5.14) (2021-06-07)
 
 
