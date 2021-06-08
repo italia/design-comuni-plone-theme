@@ -22,7 +22,7 @@ const BottomBody = ({ data, intl }) => {
   return data?.arguments?.length > 0 ? (
     <>
       <div className="col-lg-10 col-xl-8 offset-lg-1 offset-xl-3 pt-5">
-        <div className="row d-lg-inline-flex w-100">
+        <div className="row d-lg-inline-flex">
           <div className="col-lg-3">
             <h6 className="text-uppercase text-center mt-1">
               {intl?.formatMessage(messages.otherArguments)}
