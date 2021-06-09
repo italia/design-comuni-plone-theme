@@ -1,4 +1,4 @@
-.subblock-edit {
+.single-block.subblock-edit {
   .dragsubblock,
   .ui.basic.button.delete-button {
     z-index: 3;
@@ -17,6 +17,18 @@
 
       svg {
         fill: #000 !important;
+      }
+    }
+  }
+
+  .ui.basic.button.delete-button {
+    &:hover,
+    &:active {
+      background-color: #e40166 !important;
+      color: #fff;
+
+      svg {
+        fill: #fff !important;
       }
     }
   }
