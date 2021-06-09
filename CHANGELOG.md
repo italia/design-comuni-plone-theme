@@ -1,3 +1,10 @@
+### [3.5.17](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.16...v3.5.17) (2021-06-09)
+
+
+### Maintenance
+
+* added icon to NewsHome block and ContentInEvidence template ([b86867e](https://github.com/RedTurtle/design-volto-theme/commit/b86867e1e9a250d8dcd013e3f9a1a84d89f4f7e7))
+
 ### [3.5.16](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.15...v3.5.16) (2021-06-09)
 
 

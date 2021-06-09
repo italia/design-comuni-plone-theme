@@ -16,7 +16,7 @@ import {
 import Image from '@plone/volto/components/theme/Image/Image';
 
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { CardCategory } from '@italia/components/ItaliaTheme';
+import { CardCategory, getItemIcon } from '@italia/components/ItaliaTheme';
 import { viewDate } from '@italia/helpers';
 
 const messages = defineMessages({
@@ -28,6 +28,7 @@ const messages = defineMessages({
 
 const Body = ({ content, pathname, block }) => {
   const intl = useIntl();
+  const icon = getItemIcon(content);
 
   return (
     <Row>
@@ -49,6 +50,7 @@ const Body = ({ content, pathname, block }) => {
                 content.effective &&
                 viewDate(intl.locale, content.effective, 'll')
               }
+              iconName={icon}
             >
               {intl.formatMessage(messages.news)}
             </CardCategory>

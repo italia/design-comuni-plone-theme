@@ -18,6 +18,7 @@ import {
   ListingCategory,
   ListingText,
   CardCategory,
+  getItemIcon,
 } from '@italia/components/ItaliaTheme';
 import Image from '@plone/volto/components/theme/Image/Image';
 
@@ -45,7 +46,7 @@ const ContentInEvidenceTemplate = ({
           const listingText = <ListingText item={item} />;
           const image =
             item.image || item.immagine_testata || item.foto_persona;
-
+          const icon = getItemIcon(item);
           return (
             <Row key={item['@id']} className="content-in-evidence">
               {image && (
@@ -63,7 +64,7 @@ const ContentInEvidenceTemplate = ({
               <Col lg={{ size: 5, order: 1 }}>
                 <Card>
                   <CardBody className="pb-2">
-                    <CardCategory date={date}>
+                    <CardCategory date={date} iconName={icon}>
                       <ListingCategory
                         category={item.parent?.title}
                         date={date}
