@@ -1,3 +1,11 @@
+### [3.5.16](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.15...v3.5.16) (2021-06-09)
+
+
+### Bug Fixes
+
+* fixed ArgumentsInEvidence other arguments width ([b5479b5](https://github.com/RedTurtle/design-volto-theme/commit/b5479b5a25af549bf51eb1a49df8a3fa4603195a))
+* fixed icon preview widget ([0a940d9](https://github.com/RedTurtle/design-volto-theme/commit/0a940d9ea2ef5a645f7f313e969f633b4cfd4ab9))
+
 ### [3.5.15](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.14...v3.5.15) (2021-06-08)
 
 
