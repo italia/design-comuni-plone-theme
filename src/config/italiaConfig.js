@@ -70,6 +70,9 @@ import CardWithImageTemplateOptions from '@italia/components/ItaliaTheme/Blocks/
 import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
 import SmallBlockLinksTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SmallBlockLinksTemplateSkeleton';
 
+import SquaresImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SquaresImageTemplate';
+import SquaresImageTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SquaresImageTemplateSkeleton';
+
 import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate';
 import CompleteBlockLinksTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CompleteBlockLinksTemplateSkeleton';
 import CompleteBlockLinksTemplateTemplateOptions from '@italia/components/ItaliaTheme/Blocks/Listing/Options/CompleteBlockLinksTemplateTemplateOptions';
@@ -402,6 +405,11 @@ export default function applyConfig(voltoConfig) {
           template: RibbonCardTemplate,
           skeleton: RibbonCardTemplateSkeleton,
           templateOptions: RibbonCardTemplateOptions,
+        },
+        squaresImageTemplate: {
+          label: 'Quadratoni con immagine',
+          template: SquaresImageTemplate,
+          skeleton: SquaresImageTemplateSkeleton,
         },
         mapTemplate: {
           label: 'Mappa',
