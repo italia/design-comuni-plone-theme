@@ -31,6 +31,7 @@ msgid "Accedi all'area personale"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Edit
+#: components/ItaliaTheme/Blocks/IconBlocks/Edit
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
 msgid "Add accordion item"
 msgstr ""
@@ -120,6 +121,7 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/IconBlocks/Edit
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
 msgid "Description"
@@ -299,6 +301,10 @@ msgstr ""
 msgid "Seleziona un file"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
+msgid "Seleziona un'icona"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
 msgid "Short Name"
@@ -318,9 +324,11 @@ msgid "Subscribe"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
+#: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 msgid "Text placeholder"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/IconBlocks/Edit
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
@@ -329,6 +337,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
+#: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 msgid "Title placeholder"
 msgstr ""
 
@@ -366,6 +375,7 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Accordion/TextEditorWidget
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
+#: components/ItaliaTheme/Blocks/IconBlocks/TextEditorWidget
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 #: components/ItaliaTheme/manage/Widgets/TextEditorWidget
@@ -396,6 +406,8 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/Accordion/Block/ViewBlock
+#: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
+#: components/ItaliaTheme/Blocks/IconBlocks/Block/ViewBlock
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
 #: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
 msgid "Vedi"
@@ -413,6 +425,7 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateCompact
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
+#: components/ItaliaTheme/Blocks/Listing/SquaresImageTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
 #: components/ItaliaTheme/MegaMenu/MegaMenu
@@ -537,6 +550,10 @@ msgstr ""
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 #: components/ItaliaTheme/Header/SearchModal
 msgid "backToSearch"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
+msgid "backgroundImage"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Edit
@@ -758,6 +775,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
 msgid "default"
 msgstr ""
@@ -1068,10 +1086,12 @@ msgid "link"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
+#: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
 msgid "linkMore"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
+#: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
 msgid "linkMoreTitle"
 msgstr ""
 

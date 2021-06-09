@@ -13,7 +13,7 @@ const messages = defineMessages({
 
 const IconPreviewWidget = ({ icon, onEdit, title, description, children }) => {
   const intl = useIntl();
-  const parts = icon.split(' ');
+  const parts = icon?.split(' ') ?? [];
   return (
     <Form.Field inline className="help" id="icon-preview-widget-id">
       <Grid>
