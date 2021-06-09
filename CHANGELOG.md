@@ -1,3 +1,10 @@
+## [3.6.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.17...v3.6.0) (2021-06-09)
+
+
+### Features
+
+* added SquaresImageTemplate for listing block ([0b69fc2](https://github.com/RedTurtle/design-volto-theme/commit/0b69fc2aa49c8206af599ff9110ec145fe0982ac))
+
 ### [3.5.17](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.16...v3.5.17) (2021-06-09)
 
 
