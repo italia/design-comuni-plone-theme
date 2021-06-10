@@ -1,22 +1,19 @@
-import React from 'react'
-import { injectIntl, defineMessages } from 'react-intl'
-import { compose } from 'redux'
-import { DNDSubblocks, SubblockEdit, Subblock } from '@italia/addons/volto-subblocks'
-import Block from './Block'
-
-const messages = defineMessages({
-  titlePlaceholder: {
-    id: 'Title placeholder',
-    defaultMessage: 'Title...',
-  },
-})
+import React from 'react';
+import { injectIntl } from 'react-intl';
+import { compose } from 'redux';
+import {
+  DNDSubblocks,
+  SubblockEdit,
+  Subblock,
+} from '@italia/addons/volto-subblocks';
+import Block from './Block';
 
 class Body extends SubblockEdit {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       focusOn: 'title',
-    }
+    };
     if (!__SERVER__) {
     }
   }
@@ -28,7 +25,7 @@ class Body extends SubblockEdit {
    */
   render() {
     return (
-      <Subblock subblock={this}>
+      <Subblock subblock={this} className="subblock-edit">
         <Block
           data={this.props.data}
           index={this.props.index}
@@ -41,7 +38,7 @@ class Body extends SubblockEdit {
           onChange={this.onChange}
         />
       </Subblock>
-    )
+    );
   }
 }
-export default React.memo(compose(injectIntl, ...DNDSubblocks)(Body))
+export default React.memo(compose(injectIntl, ...DNDSubblocks)(Body));

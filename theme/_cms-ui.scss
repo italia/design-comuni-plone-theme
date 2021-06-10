@@ -470,5 +470,23 @@ body.public-ui.has-toolbar {
         content: none;
       }
     }
+
+    .toolbar-content.show {
+      max-height: 100vh;
+      overflow-y: scroll !important;
+    }
+  }
+}
+
+#page-add-translation {
+  .block {
+    .ui.container {
+      width: 100% !important;
+    }
+
+    .row.row-full-width {
+      max-width: 100%;
+      margin: 0;
+    }
   }
 }

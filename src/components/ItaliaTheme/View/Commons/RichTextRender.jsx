@@ -2,6 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { flattenDeep, values } from 'lodash';
 import { flattenHTMLToAppURL } from '@plone/volto/helpers';
 import { hasBlocksData } from '@plone/volto/helpers';
 import { RenderBlocks } from '@italia/components/ItaliaTheme/View';
@@ -11,17 +12,16 @@ const richTextHasContent = (content) => {
     //ReactDOMServer.renderToStaticMarkup(RenderBlocks({ content: content })),
     const renderedBlocks = RenderBlocks({ content: content });
 
-    const textBlocks = Object.values(content.blocks).filter(
+    const textBlocks = values(content.blocks).filter(
       (b) => b['@type'] === 'text',
     );
-    const noTextBlocks = Object.values(content.blocks).filter(
+    const noTextBlocks = values(content.blocks).filter(
       (b) => b['@type'] !== 'text',
     );
 
-    const textContent = textBlocks
-      ?.map((block) => block.text?.blocks?.map((b) => b.text))
-      ?.flat(3)
-      ?.filter((b) => b != null && b.trim().length > 0)?.[0];
+    const textContent = flattenDeep(
+      textBlocks?.map((block) => block.text?.blocks?.map((b) => b.text) ?? []),
+    )?.filter((b) => b != null && b.trim().length > 0)?.[0];
 
     return (
       renderedBlocks !== null &&

@@ -20,6 +20,8 @@ import { defineMessages, useIntl } from 'react-intl';
 import { Container } from 'design-react-kit/dist/design-react-kit';
 import { getLayoutFieldname } from '@plone/volto/helpers';
 import Image from '@plone/volto/components/theme/Image/Image';
+import { viewDate } from '@italia/helpers';
+
 import config from '@plone/volto/registry';
 
 /**
@@ -37,6 +39,10 @@ const messages = defineMessages({
   inThisSection: {
     id: 'In this section',
     defaultMessage: 'In questa sezione',
+  },
+  modified: {
+    id: 'modified',
+    defaultMessage: 'Ultimo aggiornamento',
   },
 });
 
@@ -106,6 +112,15 @@ const PageView = ({ content, token, location, history }) => {
           </Container>
 
           <TextOrBlocks content={content} />
+
+          {content.show_modified && (
+            <article id="metadata" className="bottom-metadata">
+              <span className="text-serif mb-0 mt-4">
+                {intl.formatMessage(messages.modified)}:
+              </span>{' '}
+              {viewDate(intl.locale, content.modified, 'DD-MM-Y HH:MM')}
+            </article>
+          )}
         </div>
 
         <PagePlaceholderAfterContent content={content} />

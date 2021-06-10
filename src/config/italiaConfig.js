@@ -22,6 +22,7 @@ import CardWithoutImageRssTemplateSkeleton from '@italia/components/ItaliaTheme/
 import { library } from '@fortawesome/fontawesome-svg-core';
 import * as Icons from '@fortawesome/free-solid-svg-icons';
 import * as IconsRegular from '@fortawesome/free-regular-svg-icons';
+import * as IconsBrands from '@fortawesome/free-brands-svg-icons';
 
 // CTs icons
 import faFileInvoiceSVG from '@italia/icons/file-invoice.svg';
@@ -48,7 +49,11 @@ const iconListRegular = Object.keys(IconsRegular.far).map(
   (icon) => IconsRegular[icon],
 );
 
-library.add(...iconList, ...iconListRegular);
+const iconListBrands = Object.keys(IconsBrands.fab).map(
+  (icon) => IconsBrands[icon],
+);
+
+library.add(...iconList, ...iconListRegular, ...iconListBrands);
 
 export default function applyConfig(voltoConfig) {
   let config = applyRichTextConfig(voltoConfig);
@@ -145,14 +150,14 @@ export default function applyConfig(voltoConfig) {
           { title: 'Media policy', url: '/it/media-policy' },
           { title: 'Note legali', url: '/it/note-legali' },
           { title: 'Privacy policy', url: '/it/privacy-policy' },
-          { title: 'Mappa del sito', url: '/it/sitemap' },
+          { title: 'Mappa del sito', url: '/sitemap' },
           { title: 'Credits', url: 'https://www.redturtle.it/' },
         ],
         en: [
           { title: 'Media policy', url: '/en/media-policy' },
           { title: 'Legal notes', url: '/en/legal-notes' },
           { title: 'Privacy policy', url: '/en/privacy-policy' },
-          { title: 'Sitemap', url: '/en/sitemap' },
+          { title: 'Sitemap', url: '/sitemap' },
           { title: 'Credits', url: 'https://www.redturtle.it/' },
         ],
       },

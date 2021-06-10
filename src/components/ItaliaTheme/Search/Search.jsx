@@ -6,6 +6,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useIntl, defineMessages } from 'react-intl';
+import { values } from 'lodash';
 import cx from 'classnames';
 import qs from 'query-string';
 import moment from 'moment';
@@ -330,12 +331,11 @@ const Search = () => {
     dispatch(getSearchResults(queryString));
   };
 
-  let activeSections = Object.values(sections).reduce((acc, sec) => {
-    return acc + Object.values(sec.items).filter((i) => i.value).length;
+  let activeSections = values(sections).reduce((acc, sec) => {
+    return acc + values(sec.items).filter((i) => i.value).length;
   }, 0);
-  let activeTopics = Object.values(topics).filter((t) => t.value).length;
-  let activePortalTypes = Object.values(portalTypes).filter((ct) => ct.value)
-    .length;
+  let activeTopics = values(topics).filter((t) => t.value).length;
+  let activePortalTypes = values(portalTypes).filter((ct) => ct.value).length;
 
   return (
     <>
@@ -513,9 +513,8 @@ const Search = () => {
                   </div>
                 )}
 
-                {Object.values(options).filter(
-                  (o) => o !== null && o !== undefined,
-                ).length > 0 && (
+                {values(options).filter((o) => o !== null && o !== undefined)
+                  .length > 0 && (
                   <div className="pt-4 pt-lg-5">
                     <h6 className="text-uppercase">
                       {intl.formatMessage(messages.options)}

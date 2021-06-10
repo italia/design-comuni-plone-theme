@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl, defineMessages } from 'react-intl';
-import { UniversalLink } from '@plone/volto/components';
+import { ConditionalLink, UniversalLink } from '@plone/volto/components';
 
 import {
   Row,
@@ -16,7 +16,7 @@ import {
 import Image from '@plone/volto/components/theme/Image/Image';
 
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { CardCategory } from '@italia/components/ItaliaTheme';
+import { CardCategory, getItemIcon } from '@italia/components/ItaliaTheme';
 import { viewDate } from '@italia/helpers';
 
 const messages = defineMessages({
@@ -28,6 +28,7 @@ const messages = defineMessages({
 
 const Body = ({ content, pathname, block }) => {
   const intl = useIntl();
+  const icon = getItemIcon(content);
 
   return (
     <Row>
@@ -49,27 +50,33 @@ const Body = ({ content, pathname, block }) => {
                 content.effective &&
                 viewDate(intl.locale, content.effective, 'll')
               }
+              iconName={icon}
             >
               {intl.formatMessage(messages.news)}
             </CardCategory>
             <CardTitle tag="h2">
-              <UniversalLink href={flattenToAppURL(content['@id'])}>
+              <ConditionalLink condition={!!content['@id']} item={content}>
                 {content.title}
-              </UniversalLink>
+              </ConditionalLink>
             </CardTitle>
             <CardText>{content.description}</CardText>
 
             {content.tassonomia_argomenti &&
               content.tassonomia_argomenti.length > 0 && (
                 <>
-                  {content.tassonomia_argomenti.map((argomento) => (
-                    <Chip simple color="primary" key={argomento['@id']}>
-                      <UniversalLink
-                        href={flattenToAppURL(argomento['@id'])}
+                  {content.tassonomia_argomenti.map((argomento, idx) => (
+                    <Chip
+                      simple
+                      color="primary"
+                      key={`${idx} ${argomento['@id']}`}
+                    >
+                      <ConditionalLink
+                        condition={!!argomento['@id']}
+                        item={argomento}
                         className="chip-label text-decoration-none"
                       >
                         {argomento.title}
-                      </UniversalLink>
+                      </ConditionalLink>
                     </Chip>
                   ))}
                 </>

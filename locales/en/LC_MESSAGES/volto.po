@@ -16,6 +16,8 @@ msgid "Accedi all'area personale"
 msgstr "Login to your personal area"
 
 #: components/ItaliaTheme/Blocks/Accordion/Edit
+#: components/ItaliaTheme/Blocks/IconBlocks/Edit
+#: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
 msgid "Add accordion item"
 msgstr ""
@@ -105,6 +107,8 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/IconBlocks/Edit
+#: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
 msgid "Description"
@@ -284,6 +288,10 @@ msgstr "Select all or none"
 msgid "Seleziona un file"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
+msgid "Seleziona un'icona"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
 msgid "Short Name"
@@ -303,9 +311,13 @@ msgid "Subscribe"
 msgstr "Subscribe"
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
+#: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
+#: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
 msgid "Text placeholder"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/IconBlocks/Edit
+#: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
@@ -314,6 +326,8 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
+#: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
+#: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
 msgid "Title placeholder"
 msgstr "Title..."
 
@@ -351,6 +365,7 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Accordion/TextEditorWidget
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
+#: components/ItaliaTheme/Blocks/IconBlocks/TextEditorWidget
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 #: components/ItaliaTheme/manage/Widgets/TextEditorWidget
@@ -381,8 +396,11 @@ msgstr "Go to page"
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/Accordion/Block/ViewBlock
+#: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
+#: components/ItaliaTheme/Blocks/IconBlocks/Block/ViewBlock
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
 #: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
+#: components/ItaliaTheme/Blocks/NumbersBlock/Block/ViewBlock
 msgid "Vedi"
 msgstr "View"
 
@@ -398,6 +416,7 @@ msgstr "View image"
 #: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateCompact
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
+#: components/ItaliaTheme/Blocks/Listing/SquaresImageTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
 #: components/ItaliaTheme/MegaMenu/MegaMenu
@@ -523,6 +542,11 @@ msgstr "back"
 #: components/ItaliaTheme/Header/SearchModal
 msgid "backToSearch"
 msgstr "Back to search"
+
+#: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
+#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
+msgid "backgroundImage"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Edit
 msgid "bandi_search_no_filters"
@@ -743,6 +767,8 @@ msgstr "Term effective date"
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
+#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
 msgid "default"
 msgstr "Default"
@@ -1053,10 +1079,14 @@ msgid "link"
 msgstr "Link"
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
+#: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
+#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 msgid "linkMore"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
+#: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
+#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 msgid "linkMoreTitle"
 msgstr ""
 
@@ -1125,7 +1155,9 @@ msgstr "Startup mode"
 msgid "modalita_richiedere_informazioni_procedimentodali"
 msgstr "Modalità per richiedere informazioni sul procedimento"
 
+#: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
 #: components/ItaliaTheme/View/Commons/Metadata
+#: components/ItaliaTheme/View/PageView/PageView
 msgid "modified"
 msgstr "Last update"
 
@@ -1530,6 +1562,14 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 msgid "searchBlock_scadenza_filter"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
+msgid "searchBlock_scadenza_filter_from"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
+msgid "searchBlock_scadenza_filter_to"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar

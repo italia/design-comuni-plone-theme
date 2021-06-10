@@ -1,3 +1,117 @@
+## [3.6.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.17...v3.6.0) (2021-06-09)
+
+
+### Features
+
+* added SquaresImageTemplate for listing block ([0b69fc2](https://github.com/RedTurtle/design-volto-theme/commit/0b69fc2aa49c8206af599ff9110ec145fe0982ac))
+
+### [3.5.17](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.16...v3.5.17) (2021-06-09)
+
+
+### Maintenance
+
+* added icon to NewsHome block and ContentInEvidence template ([b86867e](https://github.com/RedTurtle/design-volto-theme/commit/b86867e1e9a250d8dcd013e3f9a1a84d89f4f7e7))
+
+### [3.5.16](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.15...v3.5.16) (2021-06-09)
+
+
+### Bug Fixes
+
+* fixed ArgumentsInEvidence other arguments width ([b5479b5](https://github.com/RedTurtle/design-volto-theme/commit/b5479b5a25af549bf51eb1a49df8a3fa4603195a))
+* fixed icon preview widget ([0a940d9](https://github.com/RedTurtle/design-volto-theme/commit/0a940d9ea2ef5a645f7f313e969f633b4cfd4ab9))
+
+### [3.5.15](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.14...v3.5.15) (2021-06-08)
+
+
+### Maintenance
+
+* **i18n:** update translations ([f2dff42](https://github.com/RedTurtle/design-volto-theme/commit/f2dff420b81f77c6b09c6712e70962da4b5cce67))
+* added last-modified date for Page and CartellaModulistica ([ac619ae](https://github.com/RedTurtle/design-volto-theme/commit/ac619ae9a61968f4a26d0c25d40f3341a13fcd0c))
+* view modified date only if show_modified is true ([17256db](https://github.com/RedTurtle/design-volto-theme/commit/17256db48911825baadde8e225b60a6ddce07057))
+
+### [3.5.14](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.13...v3.5.14) (2021-06-07)
+
+
+### Bug Fixes
+
+* fixed html block render in draftjs ([328b831](https://github.com/RedTurtle/design-volto-theme/commit/328b831f3f55950837ceeefbd011053c379c1886))
+
+
+### Maintenance
+
+* added brand icons and enabled usage of regular icons ([729929d](https://github.com/RedTurtle/design-volto-theme/commit/729929d17244b087c99cedcc50a2515d8143f7fb))
+
+
+### Changes
+
+* remove listing amministrazioneTrasparenteTablesTemplate ([e122321](https://github.com/RedTurtle/design-volto-theme/commit/e12232115e86a7c06830f4886217c2477982e1ba))
+
+### [3.5.13](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.12...v3.5.13) (2021-06-04)
+
+
+### Maintenance
+
+* updated volto to fix new line in bold styles ([77b180d](https://github.com/RedTurtle/design-volto-theme/commit/77b180dba6cf9806d7383c7f9fcfefa331658a0f))
+
+### [3.5.12](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.11...v3.5.12) (2021-06-04)
+
+
+### Bug Fixes
+
+* replaced Object.values with values() from lodash ([32bef86](https://github.com/RedTurtle/design-volto-theme/commit/32bef869e728d27cb2a58bf0ec523fb432424509))
+
+### [3.5.11](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.10...v3.5.11) (2021-06-03)
+
+
+### Bug Fixes
+
+* conditionalLink conditions ([6412e7f](https://github.com/RedTurtle/design-volto-theme/commit/6412e7f626e4037c1be3b669e9f383b84c93c420))
+* fix ConditionalLink condition ([4f00914](https://github.com/RedTurtle/design-volto-theme/commit/4f00914d5bf6c2d82e21c0c905137e010888f9ae))
+
+
+### Maintenance
+
+* updated locales ([fcdd8da](https://github.com/RedTurtle/design-volto-theme/commit/fcdd8da5d3ff4e56dbc871ce5456c87d6ed4c9d8))
+* updated voltoù ([b2f13dd](https://github.com/RedTurtle/design-volto-theme/commit/b2f13dd526459e228ac34bbeb5b9b1b50c7b0c23))
+
+### [3.5.10](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.9...v3.5.10) (2021-06-03)
+
+
+### Bug Fixes
+
+* changed .flat and .flatMap fn with lodash fn ([22b57f5](https://github.com/RedTurtle/design-volto-theme/commit/22b57f597e47675fd28e2bdbc864d28bd35fd09c))
+
+### [3.5.9](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.8...v3.5.9) (2021-06-01)
+
+
+### Bug Fixes
+
+* fixed sitemap link in footer for multilingual sites ([0ed9884](https://github.com/RedTurtle/design-volto-theme/commit/0ed98846dedb3fca1416a2b94881507af50c6fcf))
+* updated locales ([9ec7c85](https://github.com/RedTurtle/design-volto-theme/commit/9ec7c85d1d12fd384eab38aaf223c0da28c6aeea))
+
+### [3.5.8](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.7...v3.5.8) (2021-06-01)
+
+
+### Bug Fixes
+
+* avoid errors in UniversalLink ([0ee578a](https://github.com/RedTurtle/design-volto-theme/commit/0ee578acb57d6544c9639f55e32526f98338d431))
+* fixed cms ui styles in babel view ([3bdc382](https://github.com/RedTurtle/design-volto-theme/commit/3bdc3829230d0e52173f999db372cf6a728b5ab1))
+* usage of ConditionalLink conditions ([49bf4e0](https://github.com/RedTurtle/design-volto-theme/commit/49bf4e083c2b030a2e88a71af4e910c157685713))
+
+
+### Maintenance
+
+* fix lockfile ([80b750a](https://github.com/RedTurtle/design-volto-theme/commit/80b750a0372de3e635be0a444944d5dcfda45cd5))
+* update volto ([65edb0b](https://github.com/RedTurtle/design-volto-theme/commit/65edb0b776f12e86ef44a20b8dc6117fb6f120a5))
+* update volto ([54da90c](https://github.com/RedTurtle/design-volto-theme/commit/54da90c4a5f01a6f3c700bba18969ae9018b364d))
+
+### [3.5.7](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.6...v3.5.7) (2021-05-31)
+
+
+### Bug Fixes
+
+* fixed searchSectionForm and other bugs ([93811c8](https://github.com/RedTurtle/design-volto-theme/commit/93811c85ce3059de83d4c0a4fffd5aaf2e9aaf3e))
+
 ### [3.5.6](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.5...v3.5.6) (2021-05-26)
 
 

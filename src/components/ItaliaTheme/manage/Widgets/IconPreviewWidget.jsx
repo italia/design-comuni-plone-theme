@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { defineMessages, useIntl } from 'react-intl';
-import { Form, Grid, Label } from 'semantic-ui-react';
+import { Form, Grid } from 'semantic-ui-react';
 
 const messages = defineMessages({
   previewIconSelected: {
@@ -13,7 +13,7 @@ const messages = defineMessages({
 
 const IconPreviewWidget = ({ icon, onEdit, title, description, children }) => {
   const intl = useIntl();
-
+  const parts = icon?.split(' ') ?? [];
   return (
     <Form.Field inline className="help" id="icon-preview-widget-id">
       <Grid>
@@ -27,7 +27,16 @@ const IconPreviewWidget = ({ icon, onEdit, title, description, children }) => {
             <div className="ui input flex-center">
               <p className="help">
                 {icon ? (
-                  <FontAwesomeIcon icon={icon} className="show-icon" />
+                  <>
+                    {parts.length > 1 ? (
+                      <FontAwesomeIcon
+                        icon={[parts[0], parts[1]]}
+                        className="show-icon"
+                      />
+                    ) : (
+                      <FontAwesomeIcon icon={icon} className="show-icon" />
+                    )}
+                  </>
                 ) : (
                   <span>
                     {intl.formatMessage(messages.previewIconSelected)}
