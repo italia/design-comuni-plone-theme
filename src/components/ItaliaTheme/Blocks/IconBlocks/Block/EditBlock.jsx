@@ -20,8 +20,7 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import { Icon } from '@italia/components/ItaliaTheme';
 
-// import { TextEditorWidget } from '@italia/components/ItaliaTheme';
-import TextEditorWidget from '../TextEditorWidget';
+import { TextEditorWidget } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   titlePlaceholder: {
@@ -120,6 +119,7 @@ class EditBlock extends SubblockEdit {
                   placeholder={this.props.intl.formatMessage(
                     messages.titlePlaceholder,
                   )}
+                  prevFocus="text"
                   nextFocus="text"
                   setFocus={(f) => {
                     this.setState({ focusOn: f });
@@ -146,6 +146,7 @@ class EditBlock extends SubblockEdit {
                   messages.textPlaceholder,
                 )}
                 prevFocus="title"
+                nextFocus="title"
                 setFocus={(f) => {
                   this.setState({ focusOn: f });
                 }}
