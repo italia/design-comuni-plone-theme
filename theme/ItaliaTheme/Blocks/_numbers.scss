@@ -5,7 +5,7 @@
     height: auto;
   }
 
-  .ui.basic.button.delete-button {
+  > .ui.basic.button.delete-button {
     top: -0.2rem;
     padding: 0.2rem;
     border-radius: 100%;
@@ -38,6 +38,18 @@
       height: 100%;
       background-color: rgba(#000, 0.5);
       content: '';
+    }
+  }
+
+  .single-block.subblock-edit {
+    .dragsubblock {
+      top: -1.2rem;
+      left: -0.75rem;
+    }
+
+    .ui.basic.icon.button.delete-button {
+      top: -1.2rem;
+      padding: 0.4rem;
     }
   }
 
