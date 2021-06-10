@@ -1,0 +1,110 @@
+.squares-image-template {
+  .data:before {
+    content: none;
+  }
+
+  .grid {
+    display: grid;
+    gap: 1rem 2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    .bg-img {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  .box {
+    position: relative;
+    display: flex;
+    height: 195px;
+    align-items: flex-end;
+    padding: 1.2rem;
+    text-decoration: none;
+
+    .title {
+      z-index: 2;
+      color: #fff;
+      font-size: 1.2rem;
+    }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba($primary, 0.85);
+      content: '';
+    }
+
+    &:focus,
+    &:hover {
+      text-decoration-color: #fff;
+
+      &:before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: $primary;
+        content: '';
+        -webkit-transition: background-color 150ms linear;
+        -ms-transition: background-color 150ms linear;
+        transition: background-color 150ms linear;
+      }
+    }
+  }
+
+  .skeleton-template {
+    .listing-item.box {
+      &:before {
+        content: none;
+      }
+      background-color: $skeleton-bg;
+
+      .skeleton-item-title {
+        position: absolute;
+        bottom: 2rem;
+        width: 100%;
+        width: 80%;
+        height: 1rem;
+        background-color: #fff;
+      }
+    }
+  }
+
+  //xl monitor
+  @media (max-width: #{map-get($grid-breakpoints, xl)}) {
+    .grid {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  //large monitor
+  @media (max-width: #{map-get($grid-breakpoints, lg)}) {
+    .grid {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  // tablet
+
+  @media (max-width: #{map-get($grid-breakpoints, md)}) {
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  // smartphone
+
+  @media (max-width: #{map-get($grid-breakpoints, sm)}) {
+    .grid {
+      justify-content: center;
+      gap: 0;
+      grid-template-columns: 1fr;
+    }
+  }
+}
