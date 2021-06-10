@@ -45,6 +45,10 @@ import faTwitter from '@italia/icons/twitter-brands.svg';
 import TwitterPostsView from '@italia/components/ItaliaTheme/Blocks/TwitterPosts/View';
 import TwitterPostsEdit from '@italia/components/ItaliaTheme/Blocks/TwitterPosts/Edit';
 
+import iconBlocksSVG from '@plone/volto/icons/apps.svg';
+import IconBlocksView from '@italia/components/ItaliaTheme/Blocks/IconBlocks/View';
+import IconBlocksEdit from '@italia/components/ItaliaTheme/Blocks/IconBlocks/Edit';
+
 const italiaBlocks = {
   newsHome: {
     id: 'newsHome',
@@ -208,6 +212,21 @@ const italiaBlocks = {
     edit: AccordionEdit,
     restricted: false,
     mostUsed: false,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
+  iconBlocks: {
+    id: 'iconBlocks',
+    title: 'Blocchi con icone',
+    icon: iconBlocksSVG,
+    group: 'text',
+    view: IconBlocksView,
+    edit: IconBlocksEdit,
+    restricted: false,
+    mostUsed: true,
     security: {
       addPermission: [],
       view: [],

@@ -33,6 +33,9 @@ import GridGalleryTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/L
 import BandiInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate';
 import BandiInEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton';
 
+import SquaresImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SquaresImageTemplate';
+import SquaresImageTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SquaresImageTemplateSkeleton';
+
 // import AmministrazioneTrasparenteTablesTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
 // import AmministrazioneTrasparenteTablesTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/AmministrazioneTrasparenteTablesTemplateSkeleton';
 
@@ -102,6 +105,17 @@ const italiaListingVariations = [
     schemaEnhancer: ({ schema, formData, intl }) => {
       let pos = addDefaultOptions(schema, formData, intl);
       addRibbonCardTemplateOptions(schema, formData, intl, pos);
+      return schema;
+    },
+  },
+  {
+    id: 'quaresImageTemplate',
+    isDefault: false,
+    title: 'Quadratoni con immagine',
+    template: SquaresImageTemplate,
+    skeleton: SquaresImageTemplateSkeleton,
+    schemaEnhancer: ({ schema, formData, intl }) => {
+      /*let pos = */ addDefaultOptions(schema, formData, intl);
       return schema;
     },
   },
