@@ -1,3 +1,22 @@
+## [3.7.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.6.0...v3.7.0) (2021-06-10)
+
+
+### Features
+
+* added iconBlocks block ([3ca1dd9](https://github.com/RedTurtle/design-volto-theme/commit/3ca1dd970210b2d3b8340cd33b01ef5cf6df1acd))
+
+
+### Bug Fixes
+
+* unified usage of TextEditorWidget ([3dcc62d](https://github.com/RedTurtle/design-volto-theme/commit/3dcc62db3195b075406bdcabfec7f42f40e6d895))
+
+
+### Maintenance
+
+* **i18n:** updated translations ([224b3f1](https://github.com/RedTurtle/design-volto-theme/commit/224b3f19b9c99faa890c6b66e119ff5062169f57))
+* unifed styles for subblock drag and delete buttons ([dc0c3a8](https://github.com/RedTurtle/design-volto-theme/commit/dc0c3a8a3faa285bd0bf5c345076ddf740a00d15))
+* update volto with fix_sidebar_popup_clickoutside (plone/volto[#2509](https://github.com/RedTurtle/design-volto-theme/issues/2509)) ([e16a69d](https://github.com/RedTurtle/design-volto-theme/commit/e16a69d2bc36e1fcf4d9695bb78e3e90d77cf3a9))
+
 ## [3.6.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.17...v3.6.0) (2021-06-09)
 
 
