@@ -118,7 +118,7 @@ class Edit extends SubblocksEdit {
                 </Col>
 
                 {this.state.subblocks.map((subblock, subindex) => (
-                  <Col lg="4" key={subblock.id}>
+                  <Col sm="6" lg="4" key={subblock.id}>
                     <EditBlock
                       data={subblock}
                       index={subindex}

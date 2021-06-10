@@ -75,4 +75,30 @@
       line-height: 1.5rem;
     }
   }
+
+  @media (max-width: #{map-get($grid-breakpoints, xl)}) {
+    .block-header {
+      .icons {
+        .icon {
+          height: 2rem;
+        }
+      }
+
+      .title {
+        font-size: 2rem;
+        line-height: 2.5rem;
+      }
+    }
+
+    .block-number {
+      .subblock-title {
+        font-size: 5rem;
+      }
+
+      .subblock-text {
+        font-size: 1.2rem;
+        line-height: 1.35rem;
+      }
+    }
+  }
 }
