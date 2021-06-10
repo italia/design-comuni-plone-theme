@@ -32,6 +32,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Edit
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
+#: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
 msgid "Add accordion item"
 msgstr ""
@@ -122,6 +123,7 @@ msgid "Delete"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
+#: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
 msgid "Description"
@@ -325,10 +327,12 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
+#: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
 msgid "Text placeholder"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
+#: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
@@ -338,6 +342,7 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
+#: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
 msgid "Title placeholder"
 msgstr ""
 
@@ -410,6 +415,7 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/ViewBlock
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
 #: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
+#: components/ItaliaTheme/Blocks/NumbersBlock/Block/ViewBlock
 msgid "Vedi"
 msgstr ""
 
@@ -553,6 +559,7 @@ msgid "backToSearch"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
+#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 msgid "backgroundImage"
 msgstr ""
 
@@ -776,6 +783,7 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
+#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
 msgid "default"
 msgstr ""
@@ -1087,11 +1095,13 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
+#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 msgid "linkMore"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
+#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 msgid "linkMoreTitle"
 msgstr ""
 

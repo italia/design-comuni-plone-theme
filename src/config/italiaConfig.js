@@ -47,6 +47,10 @@ import faTwitter from '@italia/icons/twitter-brands.svg';
 import TwitterPostsView from '@italia/components/ItaliaTheme/Blocks/TwitterPosts/View';
 import TwitterPostsEdit from '@italia/components/ItaliaTheme/Blocks/TwitterPosts/Edit';
 
+import numbersBlockSVG from '@plone/volto/icons/apps.svg';
+import NumbersBlockView from '@italia/components/ItaliaTheme/Blocks/NumbersBlock/View';
+import NumbersBlockEdit from '@italia/components/ItaliaTheme/Blocks/NumbersBlock/Edit';
+
 import CharCounterDescriptionWidget from '@italia/components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget';
 import PageView from '@italia/components/ItaliaTheme/View/PageView/PageView';
 import NewsItemView from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemView';
@@ -465,6 +469,21 @@ export default function applyConfig(voltoConfig) {
       },
       listing_bg_colors: [], //{name:'blue', label:'Blu'},{name:'light-blue', label:'Light blue'},{name:'sidebar-background', label:'Grey'}
       listing_items_colors: [], //{name:'blue', label:'Blu'},{name:'light-blue', label:'Light blue'},{name:'sidebar-background', label:'Grey'}
+    },
+    numbersBlock: {
+      id: 'numbersBlock',
+      title: 'Blocco Numeri',
+      icon: numbersBlockSVG,
+      group: 'text',
+      view: NumbersBlockView,
+      edit: NumbersBlockEdit,
+      restricted: false,
+      mostUsed: true,
+      security: {
+        addPermission: [],
+        view: [],
+      },
+      sidebarTab: 1,
     },
     rssBlock,
   };
