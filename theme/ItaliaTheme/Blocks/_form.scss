@@ -8,14 +8,14 @@
   .form-field {
     .single-block {
       .dragsubblock {
-        top: 0.5rem;
-        left: -1rem;
+        top: 0.3rem;
+        left: -1.7rem;
       }
 
       &.subblock-draggable {
         .ui.basic.button.delete-button {
-          top: 0.5rem;
-          right: 0;
+          top: 0.3rem;
+          right: -0.15rem;
           left: unset;
         }
       }

@@ -8,9 +8,11 @@
       height: 400px;
     }
   }
+
   .add-block-wrapper {
     text-align: center;
   }
+
   .channel {
     display: flex;
     align-items: center;
@@ -25,16 +27,16 @@
     margin-bottom: 1.5em;
 
     .ui.embed {
+      width: auto;
       max-width: unset;
       height: unset;
       padding: unset;
-      width: auto;
       background: transparent;
 
       > .embed {
         iframe {
-          width: auto !important;
           position: relative;
+          width: auto !important;
         }
       }
     }
@@ -42,13 +44,15 @@
 
   .subblock-edit {
     padding-top: 1.3em;
+
     .dragsubblock {
       top: 0;
-      left: -3px;
+      left: 0;
     }
+
     .ui.basic.button.delete-button {
-      right: 5.2em;
-      top: -4px;
+      top: 0;
+      right: 6rem;
       left: unset;
     }
   }

@@ -47,6 +47,10 @@ import faTwitter from '@italia/icons/twitter-brands.svg';
 import TwitterPostsView from '@italia/components/ItaliaTheme/Blocks/TwitterPosts/View';
 import TwitterPostsEdit from '@italia/components/ItaliaTheme/Blocks/TwitterPosts/Edit';
 
+import iconBlocksSVG from '@plone/volto/icons/apps.svg';
+import IconBlocksView from '@italia/components/ItaliaTheme/Blocks/IconBlocks/View';
+import IconBlocksEdit from '@italia/components/ItaliaTheme/Blocks/IconBlocks/Edit';
+
 import CharCounterDescriptionWidget from '@italia/components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget';
 import PageView from '@italia/components/ItaliaTheme/View/PageView/PageView';
 import NewsItemView from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemView';
@@ -465,6 +469,21 @@ export default function applyConfig(voltoConfig) {
       },
       listing_bg_colors: [], //{name:'blue', label:'Blu'},{name:'light-blue', label:'Light blue'},{name:'sidebar-background', label:'Grey'}
       listing_items_colors: [], //{name:'blue', label:'Blu'},{name:'light-blue', label:'Light blue'},{name:'sidebar-background', label:'Grey'}
+    },
+    iconBlocks: {
+      id: 'iconBlocks',
+      title: 'Blocchi con icone',
+      icon: iconBlocksSVG,
+      group: 'text',
+      view: IconBlocksView,
+      edit: IconBlocksEdit,
+      restricted: false,
+      mostUsed: true,
+      security: {
+        addPermission: [],
+        view: [],
+      },
+      sidebarTab: 1,
     },
     rssBlock,
   };

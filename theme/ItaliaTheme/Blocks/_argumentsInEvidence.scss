@@ -53,4 +53,16 @@
       margin-left: 0;
     }
   }
+
+  .subblock-edit {
+    .dragsubblock {
+      top: -1rem;
+      left: -0.5rem;
+    }
+
+    .ui.basic.icon.button.delete-button {
+      top: -1rem !important;
+      left: 1.5rem;
+    }
+  }
 }
