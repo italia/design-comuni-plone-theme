@@ -21,7 +21,7 @@ const messages = defineMessages({
 });
 
 /**
- * Edit text block class.
+ * TextEditorWidget class.
  * @class Edit
  * @extends Component
  */
@@ -40,9 +40,11 @@ class TextEditorWidget extends Component {
     placeholder: PropTypes.string,
     focusOn: PropTypes.func,
     nextFocus: PropTypes.any,
+    prevFocus: PropTypes.any,
     showToolbar: PropTypes.bool,
     onSelectBlock: PropTypes.func,
     onAddBlock: PropTypes.func,
+    disableMoveToNearest: PropTypes.bool,
   };
 
   /**
@@ -166,6 +168,9 @@ class TextEditorWidget extends Component {
               this.node = node;
             }}
             handleReturn={(e) => {
+              if (this.props.disableMoveToNearest) {
+                e.stopPropagation();
+              }
               if (isSoftNewlineEvent(e)) {
                 this.onChange(
                   RichUtils.insertSoftNewline(this.state.editorState),
@@ -181,6 +186,26 @@ class TextEditorWidget extends Component {
               }
 
               return {};
+            }}
+            onUpArrow={(e) => {
+              if (this.props.prevFocus) {
+                this.props.setFocus(this.props.prevFocus);
+                e.stopPropagation();
+              } else {
+                if (this.props.disableMoveToNearest) {
+                  e.stopPropagation();
+                }
+              }
+            }}
+            onDownArrow={(e) => {
+              if (this.props.nextFocus) {
+                this.props.setFocus(this.props.nextFocus);
+                e.stopPropagation();
+              } else {
+                if (this.props.disableMoveToNearest) {
+                  e.stopPropagation();
+                }
+              }
             }}
           />
           {this.props.showToolbar && <InlineToolbar />}

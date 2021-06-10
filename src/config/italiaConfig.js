@@ -51,6 +51,10 @@ import numbersBlockSVG from '@plone/volto/icons/apps.svg';
 import NumbersBlockView from '@italia/components/ItaliaTheme/Blocks/NumbersBlock/View';
 import NumbersBlockEdit from '@italia/components/ItaliaTheme/Blocks/NumbersBlock/Edit';
 
+import iconBlocksSVG from '@plone/volto/icons/apps.svg';
+import IconBlocksView from '@italia/components/ItaliaTheme/Blocks/IconBlocks/View';
+import IconBlocksEdit from '@italia/components/ItaliaTheme/Blocks/IconBlocks/Edit';
+
 import CharCounterDescriptionWidget from '@italia/components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget';
 import PageView from '@italia/components/ItaliaTheme/View/PageView/PageView';
 import NewsItemView from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemView';
@@ -477,6 +481,21 @@ export default function applyConfig(voltoConfig) {
       group: 'text',
       view: NumbersBlockView,
       edit: NumbersBlockEdit,
+      restricted: false,
+      mostUsed: true,
+      security: {
+        addPermission: [],
+        view: [],
+      },
+      sidebarTab: 1,
+    },
+    iconBlocks: {
+      id: 'iconBlocks',
+      title: 'Blocchi con icone',
+      icon: iconBlocksSVG,
+      group: 'text',
+      view: IconBlocksView,
+      edit: IconBlocksEdit,
       restricted: false,
       mostUsed: true,
       security: {
