@@ -4,7 +4,9 @@ name: Docker build for PRs
 # Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
-  push: [ volto_13 ]
+  push:
+    branches:
+      - volto_13
   #branches: [ master ]
   #pull_request:
   #  branches: [master]
