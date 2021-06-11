@@ -166,24 +166,22 @@ const ListingBody = React.memo(
     let templateConfig;
 
     // Legacy support if template is present
-    if (data.template && !data.variation) {
-      const variations =
-        config.blocks?.blocksConfig['listing']?.variations || [];
+    const variations = config.blocks?.blocksConfig['listing']?.variations || [];
+    const defaultVariation = variations.filter((item) => item.isDefault)?.[0];
 
+    if (data.template && !data.variation) {
       let legacyTemplateConfig = variations.find(
         (item) => item.id === data.template,
       );
 
       if (!legacyTemplateConfig) {
-        legacyTemplateConfig = variations.find(
-          (item) => item.isDefault === true,
-        );
+        legacyTemplateConfig = defaultVariation;
       }
       templateConfig = legacyTemplateConfig;
       ListingBodyTemplate = legacyTemplateConfig.template;
     } else {
-      templateConfig = variation;
-      ListingBodyTemplate = variation.template;
+      templateConfig = variation ?? defaultVariation;
+      ListingBodyTemplate = templateConfig?.template;
     }
 
     const SkeletonTemplate = templateConfig.skeleton || Skeleton;
