@@ -1,5 +1,5 @@
 //import { useSelector } from 'react-redux';
-import DefaultFilters from '@italia/components/ItaliaTheme/Blocks/EventSearch/DefaultFilters';
+import DefaultFilters from '@italia/components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters';
 
 /*
   ***
