@@ -1,0 +1,251 @@
+/*
+CUSTOMIZATIONS:
+- get content from state.content.data and not from data.properties.content,
+- added listingRef to scroll to start of listing, and not to start of page
+- added additional filters
+*/
+import React, { createRef, useEffect } from 'react';
+import hoistNonReactStatics from 'hoist-non-react-statics';
+import { getContent, getQueryStringResults } from '@plone/volto/actions';
+import { useDispatch, useSelector } from 'react-redux';
+import config from '@plone/volto/registry';
+
+import { setOriginalQuery } from '@italia/actions';
+
+function getDisplayName(WrappedComponent) {
+  return WrappedComponent.displayName || WrappedComponent.name || 'Component';
+}
+
+const getAdaptedQuery = (querystring, b_size) => {
+  const copyFields = ['limit', 'query', 'sort_on', 'sort_order', 'depth'];
+
+  return Object.assign(
+    {
+      b_size: b_size,
+      fullobjects: 1,
+    },
+    ...copyFields.map((name) =>
+      Object.keys(querystring).includes(name)
+        ? { [name]: querystring[name] }
+        : {},
+    ),
+  );
+};
+
+export default function withQuerystringResults(WrappedComponent) {
+  function WithQuerystringResults(props) {
+    const { data = {}, path, properties, isEditMode } = props; //properties: content,
+    const content = useSelector((state) => state.content.data);
+    const { settings } = config;
+    const querystring = data.querystring || data; // For backwards compat with data saved before Blocks schema
+    const { block } = data;
+    const { batch_size = settings.defaultPageSize } = querystring;
+    const [firstLoading, setFirstLoading] = React.useState(true);
+    // save the path so it won't trigger dispatch on eager router location change
+    const [initialPath] = React.useState(path);
+
+    const [currentPage, setCurrentPage] = React.useState(1);
+    const querystringResults = useSelector(
+      (state) => state.querystringsearch.subrequests,
+    );
+
+    const dispatch = useDispatch();
+    const listingRef = createRef();
+    const [additionalFilters, setAdditionalFilters] = React.useState([]);
+
+    const originalQuery = useSelector((state) => {
+      return state.originalQuery?.[properties['@id']]?.[
+        data.block
+      ]?.toArray?.();
+    });
+
+    const folderItems = content?.is_folderish ? content.items : [];
+    const hasQuery = querystring?.query?.length > 0;
+    const hasLoaded = hasQuery ? !querystringResults?.[block]?.loading : true;
+    const loadingQuery =
+      querystring?.query?.length > 0 && querystringResults?.[block]?.loading;
+
+    const listingItems =
+      hasQuery && querystringResults?.[block]
+        ? querystringResults?.[block]?.items || []
+        : folderItems;
+
+    const showAsFolderListing = !hasQuery && content?.items_total > batch_size;
+    const showAsQueryListing =
+      hasQuery && querystringResults?.[block]?.total > batch_size;
+
+    const itemsTotal = showAsFolderListing
+      ? content.items_total
+      : querystringResults?.[block]?.total;
+
+    const totalPages = itemsTotal ? Math.ceil(itemsTotal / batch_size) : 0;
+
+    const prevBatch = showAsFolderListing
+      ? content.batching?.prev
+      : showAsQueryListing
+      ? querystringResults[block].batching?.prev
+      : null;
+    const nextBatch = showAsFolderListing
+      ? content.batching?.next
+      : showAsQueryListing
+      ? querystringResults[block].batching?.next
+      : null;
+
+    function handleContentPaginationChange(e, { activePage }) {
+      !isEditMode && listingRef.current.scrollIntoView({ behavior: 'smooth' });
+      const current = activePage?.children ?? 1;
+      setCurrentPage(current);
+      dispatch(getContent(initialPath, null, null, activePage));
+    }
+
+    function handleQueryPaginationChange(e, { activePage }) {
+      !isEditMode && listingRef.current.scrollIntoView({ behavior: 'smooth' });
+      const current = activePage?.children ?? 1;
+      setCurrentPage(current);
+      doSearch(data, current);
+    }
+
+    // const isImageGallery =
+    //   (!data.variation && data.template === 'imageGallery') ||
+    //   data.variation === 'imageGallery';
+
+    //set original query on loading component
+    useEffect(() => {
+      if (
+        !originalQuery &&
+        properties['@id'] &&
+        data.block &&
+        querystring.query?.length > 0
+      ) {
+        dispatch(
+          setOriginalQuery(
+            properties['@id'],
+            data.block,
+            JSON.parse(JSON.stringify(querystring.query)),
+          ),
+        );
+      }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    if (firstLoading && querystringResults[block] && !loadingQuery) {
+      setFirstLoading(false);
+    }
+
+    useEffect(() => {
+      if (
+        hasQuery > 0 &&
+        (isEditMode || (!isEditMode && !querystringResults[block]?.loaded))
+      ) {
+        doSearch(data);
+      }
+      /* eslint-disable react-hooks/exhaustive-deps */
+    }, [data]);
+
+    const doSearch = (data = { querystring: { query: [] } }, page = 1) => {
+      const _dataQuerystring = data?.querystring ?? data; //Backward compatibility before blockSchema
+
+      if (data.querystring.query?.length > 0 || additionalFilters.length > 0) {
+        let query = [
+          ...(originalQuery && additionalFilters.length > 0
+            ? JSON.parse(JSON.stringify(originalQuery))
+            : _dataQuerystring.query),
+        ];
+
+        //faccio l'override dei filtri di default
+        additionalFilters.forEach((filter) => {
+          let replaced = false;
+          query.forEach((f) => {
+            if (f.i === filter.i && f.o === filter.o) {
+              replaced = true;
+              f.v = filter.v;
+            }
+          });
+          if (!replaced) {
+            query.push(filter);
+          }
+        });
+
+        let _querystring = { ..._dataQuerystring, query: query };
+
+        if (page !== currentPage) {
+          setCurrentPage(page);
+        }
+        dispatch(
+          getQueryStringResults(
+            path,
+            getAdaptedQuery(_querystring, batch_size),
+            data.block,
+            page,
+          ),
+        );
+      } else if (
+        ((!data.variation && data.template === 'imageGallery') ||
+          data.variation === 'imageGallery') &&
+        _dataQuerystring?.query?.length === 0
+      ) {
+        dispatch(
+          getQueryStringResults(
+            path,
+            {
+              ...getAdaptedQuery(_dataQuerystring, batch_size),
+              query: [
+                {
+                  i: 'path',
+                  o: 'plone.app.querystring.operation.string.relativePath',
+                  v: '',
+                },
+              ],
+            },
+            data.block,
+            page,
+          ),
+        );
+      }
+    };
+
+    useEffect(() => {
+      if (!firstLoading) {
+        doSearch(data);
+      }
+    }, [additionalFilters]);
+
+    const addFilters = (filters = []) => {
+      setCurrentPage(1);
+      setAdditionalFilters(filters);
+    };
+
+    return (
+      <WrappedComponent
+        {...props}
+        onPaginationChange={(e, { activePage }) => {
+          showAsFolderListing
+            ? handleContentPaginationChange(e, { activePage })
+            : handleQueryPaginationChange(e, { activePage });
+        }}
+        total={querystringResults?.[block]?.total}
+        batch_size={batch_size}
+        currentPage={currentPage}
+        totalPages={totalPages}
+        itemsTotal={itemsTotal}
+        prevBatch={prevBatch}
+        nextBatch={nextBatch}
+        listingItems={listingItems}
+        hasLoaded={hasLoaded}
+        isFolderContentsListing={showAsFolderListing}
+        addFilters={addFilters}
+        firstLoading={firstLoading}
+        loadingQuery={loadingQuery}
+        listingRef={listingRef}
+        hasQuery={hasQuery}
+        additionalFilters={additionalFilters}
+      />
+    );
+  }
+
+  WithQuerystringResults.displayName = `WithQuerystringResults(${getDisplayName(
+    WrappedComponent,
+  )})`;
+
+  return hoistNonReactStatics(WithQuerystringResults, WrappedComponent);
+}
