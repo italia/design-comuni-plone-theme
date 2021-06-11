@@ -1,0 +1,200 @@
+.block.iconBlocks {
+  .full-width {
+    height: auto;
+  }
+
+  .ui.basic.button.delete-button {
+    top: -0.2rem;
+    padding: 0.2rem;
+    border-radius: 100%;
+    line-height: 1rem;
+
+    svg:not(:hover) {
+      fill: #fff !important;
+    }
+
+    &:hover,
+    &:active {
+      background-color: #fff !important;
+    }
+  }
+
+  .background-image {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &:after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($primary, 0.85);
+      content: '';
+    }
+  }
+
+  .block-header {
+    .title {
+      margin: 1rem 0 2rem 0;
+      color: #fff;
+      font-size: 2.35rem;
+      font-weight: bold;
+      line-height: 3rem;
+      text-align: center;
+
+      .DraftEditor-root {
+        .public-DraftEditor-content {
+          text-align: center;
+        }
+
+        .public-DraftEditorPlaceholder-root {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+
+    .description {
+      margin-bottom: 2rem;
+      color: #fff;
+      line-height: 1.65em;
+      text-align: center;
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: #fff;
+      }
+
+      .DraftEditor-root {
+        .public-DraftEditor-content {
+          text-align: center;
+        }
+
+        .public-DraftEditorPlaceholder-root {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .row > .col-lg-4 {
+    margin-bottom: 1rem;
+  }
+
+  .single-block.subblock-edit {
+    height: 100%;
+
+    .card-wrapper {
+      height: 100%;
+    }
+
+    .dragsubblock,
+    .ui.basic.button.delete-button {
+      z-index: 3;
+      padding: 0.3rem;
+      background-color: #8bb3b5 !important;
+      border-radius: 100%;
+      line-height: 1rem;
+
+      svg:not(:hover) {
+        fill: #fff !important;
+      }
+
+      &:hover,
+      &:active {
+        background-color: #a4dee1 !important;
+
+        svg {
+          fill: #000 !important;
+        }
+      }
+    }
+
+    .dragsubblock {
+      top: -0.75rem;
+      left: -0.55rem;
+    }
+
+    .ui.basic.button.delete-button {
+      top: -0.7rem;
+      width: unset;
+      height: unset;
+      padding: 0.36rem;
+      text-align: center;
+    }
+  }
+
+  .card {
+    padding-top: 2.5rem;
+
+    .iconblock-icon {
+      margin-bottom: 2rem;
+      text-align: center;
+
+      .icon-placeholder {
+        display: inline-block;
+        width: 6rem;
+        height: 6rem;
+        padding: 0.5rem 1rem;
+        background-color: #ededed;
+        border-radius: 100%;
+        font-size: 0.8rem;
+        vertical-align: middle;
+      }
+
+      .icon {
+        width: 3.35rem;
+        height: auto;
+        color: $tertiary;
+      }
+    }
+
+    .iconblock-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      line-height: 1.8rem;
+      text-align: center;
+
+      .public-DraftEditor-content {
+        text-align: center;
+      }
+    }
+
+    .iconblock-text {
+      text-align: center;
+
+      .public-DraftEditor-content {
+        text-align: center;
+      }
+    }
+
+    a.read-more {
+      left: 0;
+      display: block;
+      width: 100%;
+      color: $secondary;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: #{map-get($grid-breakpoints, md)}) {
+    .card {
+      padding-top: 1rem;
+    }
+
+    .row > .col-lg-4 {
+      margin-bottom: 0;
+    }
+  }
+}

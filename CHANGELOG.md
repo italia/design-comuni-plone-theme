@@ -1,3 +1,53 @@
+## [3.7.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.6.0...v3.7.0) (2021-06-10)
+
+
+### Features
+
+* added iconBlocks block ([3ca1dd9](https://github.com/RedTurtle/design-volto-theme/commit/3ca1dd970210b2d3b8340cd33b01ef5cf6df1acd))
+
+
+### Bug Fixes
+
+* unified usage of TextEditorWidget ([3dcc62d](https://github.com/RedTurtle/design-volto-theme/commit/3dcc62db3195b075406bdcabfec7f42f40e6d895))
+
+
+### Maintenance
+
+* **i18n:** updated translations ([224b3f1](https://github.com/RedTurtle/design-volto-theme/commit/224b3f19b9c99faa890c6b66e119ff5062169f57))
+* unifed styles for subblock drag and delete buttons ([dc0c3a8](https://github.com/RedTurtle/design-volto-theme/commit/dc0c3a8a3faa285bd0bf5c345076ddf740a00d15))
+* update volto with fix_sidebar_popup_clickoutside (plone/volto[#2509](https://github.com/RedTurtle/design-volto-theme/issues/2509)) ([e16a69d](https://github.com/RedTurtle/design-volto-theme/commit/e16a69d2bc36e1fcf4d9695bb78e3e90d77cf3a9))
+
+## [3.6.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.17...v3.6.0) (2021-06-09)
+
+
+### Features
+
+* added SquaresImageTemplate for listing block ([0b69fc2](https://github.com/RedTurtle/design-volto-theme/commit/0b69fc2aa49c8206af599ff9110ec145fe0982ac))
+
+### [3.5.17](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.16...v3.5.17) (2021-06-09)
+
+
+### Maintenance
+
+* added icon to NewsHome block and ContentInEvidence template ([b86867e](https://github.com/RedTurtle/design-volto-theme/commit/b86867e1e9a250d8dcd013e3f9a1a84d89f4f7e7))
+
+### [3.5.16](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.15...v3.5.16) (2021-06-09)
+
+
+### Bug Fixes
+
+* fixed ArgumentsInEvidence other arguments width ([b5479b5](https://github.com/RedTurtle/design-volto-theme/commit/b5479b5a25af549bf51eb1a49df8a3fa4603195a))
+* fixed icon preview widget ([0a940d9](https://github.com/RedTurtle/design-volto-theme/commit/0a940d9ea2ef5a645f7f313e969f633b4cfd4ab9))
+
+### [3.5.15](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.14...v3.5.15) (2021-06-08)
+
+
+### Maintenance
+
+* **i18n:** update translations ([f2dff42](https://github.com/RedTurtle/design-volto-theme/commit/f2dff420b81f77c6b09c6712e70962da4b5cce67))
+* added last-modified date for Page and CartellaModulistica ([ac619ae](https://github.com/RedTurtle/design-volto-theme/commit/ac619ae9a61968f4a26d0c25d40f3341a13fcd0c))
+* view modified date only if show_modified is true ([17256db](https://github.com/RedTurtle/design-volto-theme/commit/17256db48911825baadde8e225b60a6ddce07057))
+
 ### [3.5.14](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.13...v3.5.14) (2021-06-07)
 
 

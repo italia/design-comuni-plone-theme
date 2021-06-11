@@ -30,7 +30,14 @@ $accordion-icon-color: #7fb2e5;
           margin-top: 0.5em;
 
           .dragsubblock {
-            top: -17px;
+            top: -7px;
+            left: -1.5rem;
+          }
+
+          .ui.basic.button.delete-button {
+            top: -7px;
+            right: 0;
+            left: unset;
           }
 
           .accordion-header {
@@ -118,8 +125,8 @@ $accordion-icon-color: #7fb2e5;
                 font-weight: bold;
 
                 svg {
-                  fill: $link-color;
                   width: 1.2em;
+                  fill: $link-color;
                 }
               }
             }
