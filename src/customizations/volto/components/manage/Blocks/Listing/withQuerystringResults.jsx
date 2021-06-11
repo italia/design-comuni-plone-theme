@@ -145,7 +145,7 @@ export default function withQuerystringResults(WrappedComponent) {
     const doSearch = (data = { querystring: { query: [] } }, page = 1) => {
       const _dataQuerystring = data?.querystring ?? data; //Backward compatibility before blockSchema
 
-      if (data.querystring.query?.length > 0 || additionalFilters.length > 0) {
+      if (data.querystring?.query?.length > 0 || additionalFilters.length > 0) {
         let query = [
           ...(originalQuery && additionalFilters.length > 0
             ? JSON.parse(JSON.stringify(originalQuery))
