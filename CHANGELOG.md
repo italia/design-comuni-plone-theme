@@ -1,3 +1,24 @@
+## [3.8.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.7.0...v3.8.0) (2021-06-11)
+
+
+### Features
+
+* added block searchBandi ([678088a](https://github.com/RedTurtle/design-volto-theme/commit/678088add7b368d1c948530344430443648ca16a))
+
+
+### Bug Fixes
+
+* dates in search bandi ([c9b3a20](https://github.com/RedTurtle/design-volto-theme/commit/c9b3a208cc048f197863a449835c52071535c15b))
+* fix search by scadenza_bando ([820151e](https://github.com/RedTurtle/design-volto-theme/commit/820151e43e8e47173f858ea2442ec276ba2b89ed))
+* fixed SelectFilter for searches ([01be112](https://github.com/RedTurtle/design-volto-theme/commit/01be1128095a75d3c5b0a68b2fdbd2ef44ae18e8))
+* removed utc from search data_scadenza of bandi ([de94f43](https://github.com/RedTurtle/design-volto-theme/commit/de94f434ac0e06c205039b75b8b7b43218d2840a))
+
+
+### Maintenance
+
+* added action to get search bandi filters ([11752f3](https://github.com/RedTurtle/design-volto-theme/commit/11752f3825c69f5c8240ea3df51d1618b14796d0))
+* updated translations ([351b771](https://github.com/RedTurtle/design-volto-theme/commit/351b771f9ef040dae2e2f7161223ffd1d6e8d4b6))
+
 ## [3.7.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.6.0...v3.7.0) (2021-06-10)
 
 
