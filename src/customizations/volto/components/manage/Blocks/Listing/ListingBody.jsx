@@ -24,6 +24,7 @@ const getAdaptedQuery = (querystring, b_size) => {
     ),
   );
 };
+
 const ListingBody = React.memo(
   ({ data, properties, path = '', isEditMode, variation }) => {
     const querystring = data.querystring || data; // For backwards compat with data saved before Blocks schema
