@@ -9,11 +9,29 @@ import { isEqual } from 'lodash';
 
 import config from '@plone/volto/registry';
 
+const getAdaptedQuery = (querystring, b_size) => {
+  const copyFields = ['limit', 'query', 'sort_on', 'sort_order', 'depth'];
+
+  return Object.assign(
+    {
+      b_size: b_size,
+      fullobjects: 1,
+    },
+    ...copyFields.map((name) =>
+      Object.keys(querystring).includes(name)
+        ? { [name]: querystring[name] }
+        : {},
+    ),
+  );
+};
 const ListingBody = React.memo(
   ({ data, properties, path = '', isEditMode, variation }) => {
+    const querystring = data.querystring || data; // For backwards compat with data saved before Blocks schema
     const [currentPage, setCurrentPage] = React.useState(1);
     //const content = properties;
     const content = useSelector((state) => state.content.data);
+    const { settings } = config;
+    const { b_size = settings.defaultPageSize } = querystring;
 
     const querystringResults = useSelector(
       (state) => state.querystringsearch.subrequests?.[data.block],
@@ -22,10 +40,11 @@ const ListingBody = React.memo(
     const dispatch = useDispatch();
     const listingRef = createRef();
     const [additionalFilters, setAdditionalFilters] = React.useState([]);
+
     const originalQuery = useSelector((state) => {
       return state.originalQuery?.[properties['@id']]?.[
         data.block
-      ]?.toArray?.();
+      ]?.querystring?.toArray?.();
     });
 
     useEffect(() => {
@@ -33,13 +52,13 @@ const ListingBody = React.memo(
         !originalQuery &&
         properties['@id'] &&
         data.block &&
-        data.query?.length > 0
+        querystring.query?.length > 0
       ) {
         dispatch(
           setOriginalQuery(
             properties['@id'],
             data.block,
-            JSON.parse(JSON.stringify(data.query)),
+            JSON.parse(JSON.stringify(querystring.query)),
           ),
         );
       }
@@ -48,7 +67,7 @@ const ListingBody = React.memo(
 
     useEffect(() => {
       if (
-        data?.query?.length > 0 &&
+        querystring?.query?.length > 0 &&
         (isEditMode || (!isEditMode && !querystringResults?.loaded))
       ) {
         doSearch(data);
@@ -56,12 +75,14 @@ const ListingBody = React.memo(
       /* eslint-disable react-hooks/exhaustive-deps */
     }, [data]);
 
-    const doSearch = (data = { query: [] }, page = 1) => {
-      if (data.query?.length > 0 || additionalFilters.length > 0) {
+    const doSearch = (data = { querystring: { query: [] } }, page = 1) => {
+      const _dataQuerystring = data?.querystring ?? data; //Backward compatibility before blockSchema
+
+      if (data.querystring.query?.length > 0 || additionalFilters.length > 0) {
         let query = [
           ...(originalQuery && additionalFilters.length > 0
             ? JSON.parse(JSON.stringify(originalQuery))
-            : data.query),
+            : _dataQuerystring.query),
         ];
 
         //faccio l'override dei filtri di default
@@ -78,7 +99,7 @@ const ListingBody = React.memo(
           }
         });
 
-        let _data = { ...data, query: query };
+        let _querystring = { ..._dataQuerystring, query: query };
 
         if (page !== currentPage) {
           setCurrentPage(page);
@@ -86,7 +107,7 @@ const ListingBody = React.memo(
         dispatch(
           getQueryStringResults(
             path,
-            { ..._data, fullobjects: 1 },
+            getAdaptedQuery(_querystring, b_size),
             data.block,
             page,
           ),
@@ -94,14 +115,13 @@ const ListingBody = React.memo(
       } else if (
         ((!data.variation && data.template === 'imageGallery') ||
           data.variation === 'imageGallery') &&
-        data?.query?.length === 0
+        _dataQuerystring?.query?.length === 0
       ) {
         dispatch(
           getQueryStringResults(
             path,
             {
-              ...data,
-              fullobjects: 1,
+              ...getAdaptedQuery(_dataQuerystring, b_size),
               query: [
                 {
                   i: 'path',
@@ -130,13 +150,16 @@ const ListingBody = React.memo(
 
     const folderItems = content?.is_folderish ? content.items : [];
 
-    const loadingQuery = data?.query?.length > 0 && querystringResults?.loading;
+    const loadingQuery =
+      querystring?.query?.length > 0 && querystringResults?.loading;
 
     if (firstLoading && querystringResults && !loadingQuery) {
       setFirstLoading(false);
     }
     const listingItems =
-      data?.query?.length > 0 ? querystringResults?.items || [] : folderItems;
+      querystring?.query?.length > 0
+        ? querystringResults?.items || []
+        : folderItems;
 
     let ListingBodyTemplate;
     let templateConfig;
@@ -218,35 +241,29 @@ const ListingBody = React.memo(
               addFilters={addFilters}
               additionalFilters={additionalFilters}
               items_total={
-                data?.query?.length === 0
+                querystring?.query?.length === 0
                   ? content?.items_total
                   : querystringResults?.total
               }
               loading={loadingQuery}
               firstLoading={firstLoading}
             />
-            {data?.query?.length === 0 &&
-              content?.items_total > config.settings.defaultPageSize && (
-                <div className="pagination-wrapper">
-                  <Pagination
-                    activePage={currentPage}
-                    totalPages={Math.ceil(
-                      content.items_total / config.settings.defaultPageSize,
-                    )}
-                    onPageChange={handleContentPaginationChange}
-                  />
-                </div>
-              )}
-            {(data?.query?.length > 0 || additionalFilters?.length > 0) &&
-              querystringResults.total >
-                (data.b_size || config.settings.defaultPageSize) && (
+            {querystring?.query?.length === 0 && content?.items_total > b_size && (
+              <div className="pagination-wrapper">
+                <Pagination
+                  activePage={currentPage}
+                  totalPages={Math.ceil(content.items_total / b_size)}
+                  onPageChange={handleContentPaginationChange}
+                />
+              </div>
+            )}
+            {(querystring?.query?.length > 0 ||
+              additionalFilters?.length > 0) &&
+              querystringResults.total > b_size && (
                 <div className="pagination-wrapper" key={currentPage}>
                   <Pagination
                     activePage={currentPage}
-                    totalPages={Math.ceil(
-                      querystringResults.total /
-                        (data.b_size || config.settings.defaultPageSize),
-                    )}
+                    totalPages={Math.ceil(querystringResults.total / b_size)}
                     onPageChange={handleQueryPaginationChange}
                   />
                 </div>
@@ -254,13 +271,13 @@ const ListingBody = React.memo(
           </div>
         ) : isEditMode ? (
           <div className="listing message">
-            {data?.query?.length === 0 && (
+            {querystring?.query?.length === 0 && (
               <FormattedMessage
                 id="No items found in this container."
                 defaultMessage="No items found in this container."
               />
             )}
-            {!loadingQuery && data?.query?.length > 0 && (
+            {!loadingQuery && querystring?.query?.length > 0 && (
               <FormattedMessage
                 id="No results found."
                 defaultMessage="No results found."
