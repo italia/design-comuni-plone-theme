@@ -31,7 +31,7 @@ const messages = defineMessages({
     defaultMessage: 'Titolo...',
   },
   description: {
-    id: 'Description',
+    id: 'Description placeholder',
     defaultMessage: 'Descrizione...',
   },
 });

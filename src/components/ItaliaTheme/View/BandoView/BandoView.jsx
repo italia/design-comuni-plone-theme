@@ -146,7 +146,10 @@ const BandoView = ({ content, location }) => {
                   <>
                     <h5>{intl.formatMessage(messages.ente)}</h5>
                     {content.ente_bando.map((item, i) => (
-                      <span>{item}</span>
+                      <span>
+                        {item}
+                        {i < content.ente_bando.length - 1 ? ', ' : ''}
+                      </span>
                     ))}
                   </>
                 )}

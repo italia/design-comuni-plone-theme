@@ -108,16 +108,16 @@ msgstr "Default"
 msgid "Delete"
 msgstr "Delete"
 
-#: components/ItaliaTheme/Blocks/IconBlocks/Edit
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
 msgid "Description"
-msgstr "Description"
+msgstr "Descrizione"
 
+#: components/ItaliaTheme/Blocks/IconBlocks/Edit
 #: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
 msgid "Description placeholder"
-msgstr ""
+msgstr "Descrizione..."
 
 #: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
 #: config/Blocks/ListingOptions/mapTemplate
@@ -137,7 +137,7 @@ msgstr "Nascondi"
 
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 msgid "Icons placeholder"
-msgstr ""
+msgstr "Seleziona le icone dalla barra a lato"
 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Image"
@@ -220,7 +220,7 @@ msgstr "Non ci sono punti da mostrare sulla mappa"
 
 #: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
 msgid "Number placeholder"
-msgstr ""
+msgstr "Seleziona le icone dalla barra a lato"
 
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
 msgid "Open in a new tab"
@@ -334,7 +334,7 @@ msgstr "Titolo"
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 msgid "Title placeholder"
-msgstr "Title..."
+msgstr "Titolo..."
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 #: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
@@ -589,7 +589,7 @@ msgstr "Stato"
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 msgid "bando_tipologia"
-msgstr ""
+msgstr "Tipo"
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 msgid "bando_vedi"
@@ -1465,19 +1465,19 @@ msgstr "Ruolo"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 msgid "sarchBandi_categoria_placeholder"
-msgstr ""
+msgstr "Categoria"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 msgid "sarchBandi_ente_placeholder"
-msgstr ""
+msgstr "Ente"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 msgid "sarchBandi_tipologia_placeholder"
-msgstr ""
+msgstr "Tipologia"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 msgid "sarchBandi_ufficio_responsabile_placeholder"
-msgstr ""
+msgstr "Ufficio responsabile"
 
 #: components/ItaliaTheme/Blocks/Calendar/Item
 #: components/ItaliaTheme/View/Commons/BandoDates
