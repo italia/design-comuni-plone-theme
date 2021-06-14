@@ -5,8 +5,7 @@ name: Docker build for PRs
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
    push:
-    branches:
-      - volto_13
+    branches: [volto_13]
   #branches: [ master ]
   #pull_request:
     #branches: [master]
