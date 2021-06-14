@@ -39,7 +39,7 @@ export default function withQuerystringResults(WrappedComponent) {
     const { settings } = config;
     const querystring = data.querystring || data; // For backwards compat with data saved before Blocks schema
     const { block } = data;
-    const { batch_size = settings.defaultPageSize } = querystring;
+    const { b_size = settings.defaultPageSize } = querystring;
     const [firstLoading, setFirstLoading] = React.useState(true);
     // save the path so it won't trigger dispatch on eager router location change
     const [initialPath] = React.useState(path);
@@ -70,15 +70,15 @@ export default function withQuerystringResults(WrappedComponent) {
         ? querystringResults?.[block]?.items || []
         : folderItems;
 
-    const showAsFolderListing = !hasQuery && content?.items_total > batch_size;
+    const showAsFolderListing = !hasQuery && content?.items_total > b_size;
     const showAsQueryListing =
-      hasQuery && querystringResults?.[block]?.total > batch_size;
+      hasQuery && querystringResults?.[block]?.total > b_size;
 
     const itemsTotal = showAsFolderListing
       ? content.items_total
       : querystringResults?.[block]?.total;
 
-    const totalPages = itemsTotal ? Math.ceil(itemsTotal / batch_size) : 0;
+    const totalPages = itemsTotal ? Math.ceil(itemsTotal / b_size) : 0;
 
     const prevBatch = showAsFolderListing
       ? content.batching?.prev
@@ -174,7 +174,7 @@ export default function withQuerystringResults(WrappedComponent) {
         dispatch(
           getQueryStringResults(
             path,
-            getAdaptedQuery(_querystring, batch_size),
+            getAdaptedQuery(_querystring, b_size),
             data.block,
             page,
           ),
@@ -188,7 +188,7 @@ export default function withQuerystringResults(WrappedComponent) {
           getQueryStringResults(
             path,
             {
-              ...getAdaptedQuery(_dataQuerystring, batch_size),
+              ...getAdaptedQuery(_dataQuerystring, b_size),
               query: [
                 {
                   i: 'path',
@@ -224,7 +224,7 @@ export default function withQuerystringResults(WrappedComponent) {
             : handleQueryPaginationChange(e, { activePage });
         }}
         total={querystringResults?.[block]?.total}
-        batch_size={batch_size}
+        batch_size={b_size}
         currentPage={currentPage}
         totalPages={totalPages}
         itemsTotal={itemsTotal}
