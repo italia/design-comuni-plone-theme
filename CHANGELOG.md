@@ -1,3 +1,10 @@
+### [3.8.3](https://github.com/RedTurtle/design-volto-theme/compare/v3.8.2...v3.8.3) (2021-06-14)
+
+
+### Bug Fixes
+
+* fixed Bando View ente ([2441c2e](https://github.com/RedTurtle/design-volto-theme/commit/2441c2e6d5440d09ced18ecc6e96a01ce6f378e0))
+
 ### [3.8.2](https://github.com/RedTurtle/design-volto-theme/compare/v3.8.1...v3.8.2) (2021-06-14)
 
 
