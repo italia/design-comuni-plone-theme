@@ -1928,9 +1928,9 @@
   dependencies:
     "@octokit/openapi-types" "^6.0.0"
 
-"@plone/volto@plone/volto#5d74ef0b3ab75f75c0061efa95c08b87735522c0":
+"@plone/volto@plone/volto#d8aceabcc533540470020643e3137325ce9fd441":
   version "13.2.0"
-  resolved "https://codeload.github.com/plone/volto/tar.gz/5d74ef0b3ab75f75c0061efa95c08b87735522c0"
+  resolved "https://codeload.github.com/plone/volto/tar.gz/d8aceabcc533540470020643e3137325ce9fd441"
   dependencies:
     "@babel/plugin-proposal-export-default-from" "7.10.4"
     "@babel/plugin-proposal-export-namespace-from" "7.10.4"
