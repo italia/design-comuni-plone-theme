@@ -1,3 +1,10 @@
+### [3.8.4](https://github.com/RedTurtle/design-volto-theme/compare/v3.8.3...v3.8.4) (2021-06-14)
+
+
+### Bug Fixes
+
+* updated volto for sidebar and fixed search results sectionFromId ([de831dd](https://github.com/RedTurtle/design-volto-theme/commit/de831dd72c5e98f84280ee75d494316fddd1bff0))
+
 ### [3.8.3](https://github.com/RedTurtle/design-volto-theme/compare/v3.8.2...v3.8.3) (2021-06-14)
 
 
