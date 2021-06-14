@@ -36,6 +36,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Edit
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
+#: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
 msgid "Add accordion item"
 msgstr ""
@@ -123,6 +124,7 @@ msgid "Delete"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
+#: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
 msgid "Description"
@@ -278,10 +280,6 @@ msgstr ""
 msgid "SearchBandiBlock"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "SearchEventsBlock"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "SearchServices"
 msgstr ""
@@ -326,10 +324,12 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
+#: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
 msgid "Text placeholder"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
+#: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
@@ -338,6 +338,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
+#: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
 msgid "Title placeholder"
 msgstr ""
 
@@ -544,6 +545,7 @@ msgid "backToSearch"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
+#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 msgid "backgroundImage"
 msgstr ""
 
@@ -765,6 +767,7 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
+#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
 msgid "default"
 msgstr ""
@@ -1075,11 +1078,13 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
+#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 msgid "linkMore"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
+#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 msgid "linkMoreTitle"
 msgstr ""
 
@@ -1499,11 +1504,17 @@ msgstr ""
 msgid "search"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
+msgid "searchBlock"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_bg_color"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_button_color"
 msgstr ""
 
@@ -1512,6 +1523,8 @@ msgid "searchBlock_categoria_filter"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_date_filter"
 msgstr ""
 
@@ -1520,22 +1533,27 @@ msgid "searchBlock_ente_filter"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_filter_one"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_filter_three"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_filter_two"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_help"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_primarycolor"
 msgstr ""
 
@@ -1552,19 +1570,24 @@ msgid "searchBlock_scadenza_filter_to"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_secondaryColor"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_style"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_tertiaryColor"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_text_filter"
 msgstr ""
 
@@ -1577,66 +1600,13 @@ msgid "searchBlock_ufficio_responsabile_filter"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_venue_filter"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/SearchSectionForm
 msgid "searchContentIn"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_bg_color"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_button_color"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_date_filter"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_filter_one"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_filter_three"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_filter_two"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_help"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_primarycolor"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_secondaryColor"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_style"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_tertiaryColor"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_text_filter"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_venue_filter"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal

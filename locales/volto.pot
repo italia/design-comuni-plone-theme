@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-06-11T15:06:26.176Z\n"
+"POT-Creation-Date: 2021-06-14T08:58:23.541Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -20,6 +20,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Edit
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
+#: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
 # defaultMessage: Aggiungi elemento
 msgid "Add accordion item"
@@ -127,6 +128,7 @@ msgid "Delete"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
+#: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
 # defaultMessage: Descrizione...
@@ -316,11 +318,6 @@ msgstr ""
 msgid "SearchBandiBlock"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-# defaultMessage: Ricerca eventi
-msgid "SearchEventsBlock"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Ricerca servizi
 msgid "SearchServices"
@@ -375,11 +372,13 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
+#: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
 # defaultMessage: Text...
 msgid "Text placeholder"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
+#: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
@@ -389,6 +388,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
+#: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
 # defaultMessage: Title...
 msgid "Title placeholder"
 msgstr ""
@@ -638,6 +638,7 @@ msgid "backToSearch"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
+#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 # defaultMessage: Immagine di sfondo
 msgid "backgroundImage"
 msgstr ""
@@ -911,6 +912,7 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
+#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
 # defaultMessage: Default
 msgid "default"
@@ -1295,12 +1297,14 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
+#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 # defaultMessage: Link ad altro
 msgid "linkMore"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
+#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 # defaultMessage: Titolo per il link ad altro
 msgid "linkMoreTitle"
 msgstr ""
@@ -1817,12 +1821,19 @@ msgstr ""
 msgid "search"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
+# defaultMessage: Ricerca eventi
+msgid "searchBlock"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 # defaultMessage: Colore di sfondo
 msgid "searchBlock_bg_color"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 # defaultMessage: Colore del bottone
 msgid "searchBlock_button_color"
 msgstr ""
@@ -1833,6 +1844,8 @@ msgid "searchBlock_categoria_filter"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 # defaultMessage: Filtro per date
 msgid "searchBlock_date_filter"
 msgstr ""
@@ -1843,26 +1856,31 @@ msgid "searchBlock_ente_filter"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 # defaultMessage: Filtro 1
 msgid "searchBlock_filter_one"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 # defaultMessage: Filtro 3
 msgid "searchBlock_filter_three"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 # defaultMessage: Filtro 2
 msgid "searchBlock_filter_two"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 # defaultMessage: Seleziona i filtri di ricerca da mostrare nel blocco.
 msgid "searchBlock_help"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 # defaultMessage: Primario
 msgid "searchBlock_primarycolor"
 msgstr ""
@@ -1883,22 +1901,27 @@ msgid "searchBlock_scadenza_filter_to"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 # defaultMessage: Secondario
 msgid "searchBlock_secondaryColor"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 # defaultMessage: Aspetto
 msgid "searchBlock_style"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 # defaultMessage: Ternario
 msgid "searchBlock_tertiaryColor"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 # defaultMessage: Filtro di testo
 msgid "searchBlock_text_filter"
 msgstr ""
@@ -1914,6 +1937,8 @@ msgid "searchBlock_ufficio_responsabile_filter"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 # defaultMessage: Filtro per luoghi
 msgid "searchBlock_venue_filter"
 msgstr ""
@@ -1921,74 +1946,6 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/SearchSectionForm
 # defaultMessage: Cerca contenuti in
 msgid "searchContentIn"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-# defaultMessage: Colore di sfondo
-msgid "searchEventsBlock_bg_color"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-# defaultMessage: Colore del bottone
-msgid "searchEventsBlock_button_color"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-# defaultMessage: Filtro per date
-msgid "searchEventsBlock_date_filter"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-# defaultMessage: Filtro 1
-msgid "searchEventsBlock_filter_one"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-# defaultMessage: Filtro 3
-msgid "searchEventsBlock_filter_three"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-# defaultMessage: Filtro 2
-msgid "searchEventsBlock_filter_two"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-# defaultMessage: Seleziona i filtri di ricerca da mostrare nel blocco.
-msgid "searchEventsBlock_help"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-# defaultMessage: Primario
-msgid "searchEventsBlock_primarycolor"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-# defaultMessage: Secondario
-msgid "searchEventsBlock_secondaryColor"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-# defaultMessage: Aspetto
-msgid "searchEventsBlock_style"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-# defaultMessage: Ternario
-msgid "searchEventsBlock_tertiaryColor"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-# defaultMessage: Filtro di testo
-msgid "searchEventsBlock_text_filter"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-# defaultMessage: Filtro per luoghi
-msgid "searchEventsBlock_venue_filter"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal

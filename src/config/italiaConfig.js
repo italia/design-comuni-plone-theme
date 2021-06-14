@@ -219,6 +219,7 @@ export default function applyConfig(voltoConfig) {
   const customBlocksOrder = [
     { id: 'news', title: 'News' },
     { id: 'homePage', title: 'Home Page' },
+    { id: 'search', title: 'Ricerca' },
   ];
   const customInitialBlocks = {
     'Pagina Argomento': ['title', 'description', 'text'],

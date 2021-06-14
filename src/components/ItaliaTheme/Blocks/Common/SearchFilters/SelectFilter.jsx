@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react';
 import { SelectInput } from '@italia/components';
 import { useDispatch, useSelector } from 'react-redux';
@@ -9,9 +10,12 @@ const SelectFilter = ({ options, value, id, onChange, placeholder }) => {
   const state = useSelector((state) => {
     return state;
   });
-  const selectOptions = state?.search?.subrequests[
-    options?.dispatch?.subrequests_name
-  ]?.items?.map((i) => {
+  const selectOptions = (options.dispatch?.action
+    ? state?.[options.dispatch.stateSelector]?.result[
+        options.dispatch.resultProp ?? 'items'
+      ]
+    : state?.search?.subrequests?.[options?.dispatch?.subrequests_name]?.items
+  )?.map((i) => {
     return {
       value: i.UID,
       label: i.title,
@@ -22,18 +26,23 @@ const SelectFilter = ({ options, value, id, onChange, placeholder }) => {
 
   useEffect(() => {
     if (options.dispatch) {
-      dispatch(
-        searchContent(
-          options?.dispatch?.path,
-          {
-            portal_type: options?.dispatch?.portal_types,
-            fullobjects: options?.dispatch?.fullobjects,
-            metadata_fields: 'UID',
-            b_size: options?.dispatch?.b_size,
-          },
-          options?.dispatch?.subrequests_name,
-        ),
-      );
+      if (options.dispatch.action) {
+        dispatch(options.dispatch.action(options?.dispatch?.path));
+      } else {
+        dispatch(
+          searchContent(
+            options?.dispatch?.path,
+            {
+              portal_type: options?.dispatch?.portal_types,
+              fullobjects: options?.dispatch?.fullobjects,
+              metadata_fields: 'UID',
+              b_size: options?.dispatch?.b_size,
+              ...(options?.dispatch?.additionalParams ?? {}),
+            },
+            options?.dispatch?.subrequests_name,
+          ),
+        );
+      }
     } else if (options.vocabulary) {
       dispatch(getVocabulary(options.vocabulary));
     }

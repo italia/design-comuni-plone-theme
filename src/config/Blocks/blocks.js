@@ -49,6 +49,10 @@ import iconBlocksSVG from '@plone/volto/icons/apps.svg';
 import IconBlocksView from '@italia/components/ItaliaTheme/Blocks/IconBlocks/View';
 import IconBlocksEdit from '@italia/components/ItaliaTheme/Blocks/IconBlocks/Edit';
 
+import numbersBlockSVG from '@plone/volto/icons/apps.svg';
+import NumbersBlockView from '@italia/components/ItaliaTheme/Blocks/NumbersBlock/View';
+import NumbersBlockEdit from '@italia/components/ItaliaTheme/Blocks/NumbersBlock/Edit';
+
 const italiaBlocks = {
   newsHome: {
     id: 'newsHome',
@@ -212,6 +216,21 @@ const italiaBlocks = {
     edit: AccordionEdit,
     restricted: false,
     mostUsed: false,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
+  numbersBlock: {
+    id: 'numbersBlock',
+    title: 'Blocco Numeri',
+    icon: numbersBlockSVG,
+    group: 'text',
+    view: NumbersBlockView,
+    edit: NumbersBlockEdit,
+    restricted: false,
+    mostUsed: true,
     security: {
       addPermission: [],
       view: [],

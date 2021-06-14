@@ -9,8 +9,7 @@ on:
       - volto_13
   #branches: [ master ]
   #pull_request:
-  #  branches: [master]
-
+  #branches: [master]
   # Allows you to run this workflow manually from the Actions tab
   #workflow_dispatch:
 
@@ -58,4 +57,3 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
-

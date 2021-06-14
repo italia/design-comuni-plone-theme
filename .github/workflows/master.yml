@@ -6,8 +6,8 @@ on:
   # Triggers the workflow on releases
   release:
     types: [published]
-  #pull_request:
-  #branches: [ master ]
+  pull_request:
+    branches: [ master ]
   # Allows you to run this workflow manually from the Actions tab
   #workflow_dispatch:
 
@@ -20,6 +20,9 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: pull request
+        if: github.event_name == 'release' && github.event.action == 'published' || github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
+    
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 

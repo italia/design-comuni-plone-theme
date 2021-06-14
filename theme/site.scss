@@ -31,6 +31,7 @@
 @import 'ItaliaTheme/Blocks/listing';
 @import 'ItaliaTheme/Blocks/skeleton';
 @import 'ItaliaTheme/Components/pageHeader';
+@import 'ItaliaTheme/Blocks/common/searchBlockFilters';
 @import 'ItaliaTheme/Blocks/calendar';
 @import 'ItaliaTheme/Blocks/alert';
 @import 'ItaliaTheme/Blocks/titolo_argomento';
@@ -53,11 +54,14 @@
 @import 'ItaliaTheme/Blocks/break';
 @import 'ItaliaTheme/Blocks/accordion';
 @import 'ItaliaTheme/Blocks/simpleCardTemplate';
+
 @import 'ItaliaTheme/Blocks/eventSearch';
+@import 'ItaliaTheme/Blocks/bandiSearch';
 @import 'ItaliaTheme/Blocks/form';
 @import 'ItaliaTheme/Blocks/videoGallery';
 @import 'ItaliaTheme/Blocks/twitterPosts';
 @import 'ItaliaTheme/Blocks/rssBlock';
+@import 'ItaliaTheme/Blocks/numbers';
 @import 'ItaliaTheme/Views/uo';
 @import 'ItaliaTheme/Views/evento';
 @import 'ItaliaTheme/Views/common';
