@@ -57,6 +57,10 @@ msgstr "Avertissement!"
 msgid "Bando"
 msgstr "Annonce"
 
+#: components/ItaliaTheme/Blocks/NumbersBlock/Edit
+msgid "Block Title"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 msgid "Block style"
 msgstr ""
@@ -128,6 +132,10 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
+msgid "Description placeholder"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
 #: config/Blocks/ListingOptions/mapTemplate
 msgid "Dimensione della mappa"
@@ -143,6 +151,10 @@ msgstr ""
 #: components/ItaliaTheme/Search/SearchTopics
 msgid "Hide"
 msgstr "Cacher"
+
+#: components/ItaliaTheme/Blocks/NumbersBlock/Edit
+msgid "Icons placeholder"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Image"
@@ -222,6 +234,10 @@ msgstr "Page suivante"
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
 msgid "Non ci sono punti da mostrare sulla mappa"
 msgstr "Il n'y a aucun point à afficher sur la carte"
+
+#: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
+msgid "Number placeholder"
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
 msgid "Open in a new tab"
@@ -322,12 +338,10 @@ msgstr "S'abonner"
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
-#: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
 msgid "Text placeholder"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
-#: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
@@ -336,7 +350,6 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
-#: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
 msgid "Title placeholder"
 msgstr ""
 
