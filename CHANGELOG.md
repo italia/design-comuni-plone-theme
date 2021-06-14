@@ -1,3 +1,16 @@
+### [3.8.1](https://github.com/RedTurtle/design-volto-theme/compare/v3.8.0...v3.8.1) (2021-06-14)
+
+
+### Bug Fixes
+
+* fixed styles on edit for NumbersBlock ([c53e203](https://github.com/RedTurtle/design-volto-theme/commit/c53e203361b5880d0c29d536409ed136c2b59f39))
+
+
+### Maintenance
+
+* added mobile styles for NumbersBlock ([29f149c](https://github.com/RedTurtle/design-volto-theme/commit/29f149cff70c7d5ac648ea7274f0387d23fe2db2))
+* added number blocks ([b6ec3f0](https://github.com/RedTurtle/design-volto-theme/commit/b6ec3f023a89c2688849aea942410b01bc7b99a5))
+
 ## [3.8.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.7.0...v3.8.0) (2021-06-11)
 
 
