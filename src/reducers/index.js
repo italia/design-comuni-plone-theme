@@ -12,6 +12,7 @@ import { amministrazioneTrasparenteTree } from './amministrazioneTrasparenteTree
 import { dettagliProcedimento } from './dettagliProcedimento';
 import { twitterPosts } from './twitterPosts';
 import { originalQueryReducer } from './originalQueryReducer';
+import { searchBandiFiltersReducer } from './searchBandiFiltersReducer';
 
 import config from '@plone/volto/registry';
 
@@ -33,6 +34,7 @@ const reducers = {
   dettagliProcedimento: dettagliProcedimento,
   twitterPosts: twitterPosts,
   originalQuery: originalQueryReducer,
+  searchBandiFilters: searchBandiFiltersReducer,
 };
 
 export default reducers;

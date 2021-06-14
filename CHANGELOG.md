@@ -1,3 +1,43 @@
+## [3.8.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.7.0...v3.8.0) (2021-06-11)
+
+
+### Features
+
+* added block searchBandi ([678088a](https://github.com/RedTurtle/design-volto-theme/commit/678088add7b368d1c948530344430443648ca16a))
+
+
+### Bug Fixes
+
+* dates in search bandi ([c9b3a20](https://github.com/RedTurtle/design-volto-theme/commit/c9b3a208cc048f197863a449835c52071535c15b))
+* fix search by scadenza_bando ([820151e](https://github.com/RedTurtle/design-volto-theme/commit/820151e43e8e47173f858ea2442ec276ba2b89ed))
+* fixed SelectFilter for searches ([01be112](https://github.com/RedTurtle/design-volto-theme/commit/01be1128095a75d3c5b0a68b2fdbd2ef44ae18e8))
+* removed utc from search data_scadenza of bandi ([de94f43](https://github.com/RedTurtle/design-volto-theme/commit/de94f434ac0e06c205039b75b8b7b43218d2840a))
+
+
+### Maintenance
+
+* added action to get search bandi filters ([11752f3](https://github.com/RedTurtle/design-volto-theme/commit/11752f3825c69f5c8240ea3df51d1618b14796d0))
+* updated translations ([351b771](https://github.com/RedTurtle/design-volto-theme/commit/351b771f9ef040dae2e2f7161223ffd1d6e8d4b6))
+
+## [3.7.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.6.0...v3.7.0) (2021-06-10)
+
+
+### Features
+
+* added iconBlocks block ([3ca1dd9](https://github.com/RedTurtle/design-volto-theme/commit/3ca1dd970210b2d3b8340cd33b01ef5cf6df1acd))
+
+
+### Bug Fixes
+
+* unified usage of TextEditorWidget ([3dcc62d](https://github.com/RedTurtle/design-volto-theme/commit/3dcc62db3195b075406bdcabfec7f42f40e6d895))
+
+
+### Maintenance
+
+* **i18n:** updated translations ([224b3f1](https://github.com/RedTurtle/design-volto-theme/commit/224b3f19b9c99faa890c6b66e119ff5062169f57))
+* unifed styles for subblock drag and delete buttons ([dc0c3a8](https://github.com/RedTurtle/design-volto-theme/commit/dc0c3a8a3faa285bd0bf5c345076ddf740a00d15))
+* update volto with fix_sidebar_popup_clickoutside (plone/volto[#2509](https://github.com/RedTurtle/design-volto-theme/issues/2509)) ([e16a69d](https://github.com/RedTurtle/design-volto-theme/commit/e16a69d2bc36e1fcf4d9695bb78e3e90d77cf3a9))
+
 ## [3.6.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.5.17...v3.6.0) (2021-06-09)
 
 

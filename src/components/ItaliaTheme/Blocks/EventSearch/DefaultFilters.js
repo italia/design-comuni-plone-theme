@@ -6,19 +6,19 @@ import {
   TextFilter,
   SelectFilter,
   DateFilter,
-} from '@italia/components/ItaliaTheme/Blocks/EventSearch/Filters';
+} from '@italia/components/ItaliaTheme/Blocks/Common/SearchFilters';
 
 const messages = defineMessages({
   text_filter: {
-    id: 'searchEventsBlock_text_filter',
+    id: 'searchBlock_text_filter',
     defaultMessage: 'Filtro di testo',
   },
   venue_filter: {
-    id: 'searchEventsBlock_venue_filter',
+    id: 'searchBlock_venue_filter',
     defaultMessage: 'Filtro per luoghi',
   },
   date_filter: {
-    id: 'searchEventsBlock_date_filter',
+    id: 'searchBlock_date_filter',
     defaultMessage: 'Filtro per date',
   },
   venues: {

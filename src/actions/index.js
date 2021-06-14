@@ -29,6 +29,10 @@ import {
   getDettagliProcedimento,
   GET_DETTAGLI_PROCEDIMENTO,
 } from './getDettagliProcedimento';
+import {
+  getSearchBandiFilters,
+  GET_SEARCH_BANDI_FILTERS,
+} from './getSearchBandiFilters';
 import { getTwitterPosts, GET_TWITTER_POSTS } from './getTwitterPosts';
 
 export {
@@ -48,4 +52,6 @@ export {
   GET_TWITTER_POSTS,
   setOriginalQuery,
   ORIGINAL_QUERY,
+  getSearchBandiFilters,
+  GET_SEARCH_BANDI_FILTERS,
 };

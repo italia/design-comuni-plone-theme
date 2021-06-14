@@ -2,7 +2,7 @@
   "name": "design-volto-theme",
   "description": "Volto Theme for Italia design guidelines",
   "license": "MIT",
-  "version": "3.6.0",
+  "version": "3.8.0",
   "private": true,
   "workspaces": [
     "src/addons/volto-cookie-banner",
@@ -170,7 +170,7 @@
     ]
   },
   "engines": {
-    "node": "^10 || ^12 || ^14"
+    "node": "^12 || ^14"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.30",
@@ -178,7 +178,7 @@
     "@fortawesome/free-regular-svg-icons": "5.14.0",
     "@fortawesome/free-solid-svg-icons": "5.14.0",
     "@fortawesome/react-fontawesome": "0.1.11",
-    "@plone/volto": "plone/volto#fdf4eeb4d5a4bb08066487f70e809b9d64392afc",
+    "@plone/volto": "plone/volto#bbb15cd1dca8a7ec9de3127cf27b0fe3eee5f3f4",
     "@tinymce/tinymce-react": "3.8.1",
     "bootstrap-italia": "1.3.9",
     "classnames": "2.2.6",

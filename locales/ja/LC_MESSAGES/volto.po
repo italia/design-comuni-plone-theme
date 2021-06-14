@@ -35,9 +35,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
-#: config/Blocks/listingOptions
 #: config/Blocks/ListingOptions/simpleCardTemplate
-#: config/Blocks/listingVariations
 msgid "Aspetto"
 msgstr ""
 
@@ -57,7 +55,6 @@ msgstr ""
 msgid "Card detail label"
 msgstr ""
 
-#: components/ItaliaTheme/Header/HeaderCenter
 #: components/ItaliaTheme/Header/HeaderSearch/HeaderSearch
 msgid "Cerca"
 msgstr ""
@@ -271,10 +268,6 @@ msgstr ""
 msgid "SearchBandiBlock"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "SearchEventsBlock"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "SearchServices"
 msgstr ""
@@ -332,7 +325,6 @@ msgid "Title"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 #: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
 msgid "Title placeholder"
@@ -343,7 +335,6 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/defaultOptions
-#: config/Blocks/listingVariations
 msgid "Titolo"
 msgstr ""
 
@@ -369,10 +360,8 @@ msgstr ""
 msgid "Type description…"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Accordion/TextEditorWidget
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
-#: components/ItaliaTheme/Blocks/IconBlocks/TextEditorWidget
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 #: components/ItaliaTheme/manage/Widgets/TextEditorWidget
@@ -407,7 +396,6 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/ViewBlock
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
 #: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
-#: components/ItaliaTheme/Blocks/NumbersBlock/Block/ViewBlock
 msgid "Vedi"
 msgstr ""
 
@@ -455,17 +443,14 @@ msgid "actions"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-#: components/ItaliaTheme/Header/SearchModal
 msgid "allFilters"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-#: components/ItaliaTheme/Header/SearchModal
 msgid "allOptions"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-#: components/ItaliaTheme/Header/SearchModal
 msgid "allTopics"
 msgstr ""
 
@@ -482,9 +467,7 @@ msgid "altri_documenti"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/CompleteBlockLinksTemplateTemplateOptions
 #: config/Blocks/ListingOptions/cardWithImageTemplate
-#: config/Blocks/ListingOptions/completeBlockLinksTemplate
 msgid "always_show_image"
 msgstr ""
 
@@ -546,7 +529,6 @@ msgid "back"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-#: components/ItaliaTheme/Header/SearchModal
 msgid "backToSearch"
 msgstr ""
 
@@ -672,7 +654,6 @@ msgid "close"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-#: components/ItaliaTheme/Header/SearchModal
 msgid "closeSearch"
 msgstr ""
 
@@ -690,7 +671,6 @@ msgid "competenze"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-#: components/ItaliaTheme/Header/SearchModal
 msgid "confirmSearch"
 msgstr ""
 
@@ -991,7 +971,6 @@ msgid "file_correlato"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-#: components/ItaliaTheme/Header/SearchModal
 msgid "filters"
 msgstr ""
 
@@ -1189,9 +1168,7 @@ msgid "modulo_formati_alternativi"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/CompleteBlockLinksTemplateTemplateOptions
 #: config/Blocks/ListingOptions/cardWithImageTemplate
-#: config/Blocks/ListingOptions/completeBlockLinksTemplate
 msgid "natural_image_size"
 msgstr ""
 
@@ -1239,51 +1216,42 @@ msgid "numero_progressivo_cs"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-#: components/ItaliaTheme/Header/SearchModal
 msgid "optionActiveContentButton"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 msgid "optionActiveContentInfo"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 msgid "optionActiveContentLabel"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-#: components/ItaliaTheme/Header/SearchModal
 msgid "optionDateEnd"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 msgid "optionDateEndButton"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-#: components/ItaliaTheme/Header/SearchModal
 msgid "optionDatePlaceholder"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-#: components/ItaliaTheme/Header/SearchModal
 msgid "optionDateStart"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 msgid "optionDateStartButton"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 msgid "options"
 msgstr ""
@@ -1406,13 +1374,11 @@ msgid "related_uo"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 msgid "removeOption"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-#: components/ItaliaTheme/Header/SearchModal
 msgid "removeTopic"
 msgstr ""
 
@@ -1522,16 +1488,21 @@ msgid "scrivi_a_mail"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/View/Commons/SearchSectionForm
 msgid "search"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
+msgid "searchBlock"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_bg_color"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_button_color"
 msgstr ""
 
@@ -1540,6 +1511,8 @@ msgid "searchBlock_categoria_filter"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_date_filter"
 msgstr ""
 
@@ -1548,22 +1521,27 @@ msgid "searchBlock_ente_filter"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_filter_one"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_filter_three"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_filter_two"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_help"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_primarycolor"
 msgstr ""
 
@@ -1580,19 +1558,24 @@ msgid "searchBlock_scadenza_filter_to"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_secondaryColor"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_style"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_tertiaryColor"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_text_filter"
 msgstr ""
 
@@ -1605,6 +1588,8 @@ msgid "searchBlock_ufficio_responsabile_filter"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+#: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock_venue_filter"
 msgstr ""
 
@@ -1612,63 +1597,7 @@ msgstr ""
 msgid "searchContentIn"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_bg_color"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_button_color"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_date_filter"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_filter_one"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_filter_three"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_filter_two"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_help"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_primarycolor"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_secondaryColor"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_style"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_tertiaryColor"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_text_filter"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
-#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-msgid "searchEventsBlock_venue_filter"
-msgstr ""
-
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-#: components/ItaliaTheme/Header/SearchModal
 msgid "searchLabel"
 msgstr ""
 
@@ -1757,7 +1686,6 @@ msgid "section_undefined"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 msgid "sections"
 msgstr ""
@@ -1836,10 +1764,8 @@ msgid "show_tipologia"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/CompleteBlockLinksTemplateTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/InEvidenceTemplateOptions
 #: config/Blocks/ListingOptions/cardWithImageTemplate
-#: config/Blocks/ListingOptions/completeBlockLinksTemplate
 #: config/Blocks/ListingOptions/inEvidenceTemplate
 msgid "show_topics"
 msgstr ""
@@ -1855,17 +1781,13 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
-#: config/Blocks/listingOptions
 #: config/Blocks/ListingOptions/simpleCardTemplate
-#: config/Blocks/listingVariations
 msgid "simplecard_listing_appearance_compact"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
-#: config/Blocks/listingOptions
 #: config/Blocks/ListingOptions/simpleCardTemplate
-#: config/Blocks/listingVariations
 msgid "simplecard_listing_appearance_description"
 msgstr ""
 
@@ -1993,7 +1915,6 @@ msgid "to"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderTassonomiaArgomenti
 msgid "topics"
