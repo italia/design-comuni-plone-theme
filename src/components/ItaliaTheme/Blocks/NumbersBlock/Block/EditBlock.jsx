@@ -18,7 +18,7 @@ import { TextEditorWidget } from '@italia/components/ItaliaTheme';
 const messages = defineMessages({
   numberPlaceholder: {
     id: 'Number placeholder',
-    defaultMessage: 'Numero...',
+    defaultMessage: 'Numero',
   },
   descriptionPlaceholder: {
     id: 'Description placeholder',
@@ -68,7 +68,7 @@ class EditBlock extends SubblockEdit {
     return (
       <Subblock subblock={this} className="subblock-edit">
         <div className="block-number">
-          <div className="subblock-title text-monospace">
+          <div className="subblock-title">
             {/* eslint-disable */}
             <div
               onClick={() => {
@@ -115,6 +115,7 @@ class EditBlock extends SubblockEdit {
               setFocus={(f) => {
                 this.setState({ focusOn: f });
               }}
+              showToolbar={false}
               key="text"
             />
           </div>

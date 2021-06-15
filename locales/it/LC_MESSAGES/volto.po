@@ -220,7 +220,7 @@ msgstr "Non ci sono punti da mostrare sulla mappa"
 
 #: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
 msgid "Number placeholder"
-msgstr "Seleziona le icone dalla barra a lato"
+msgstr "Numero"
 
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
 msgid "Open in a new tab"

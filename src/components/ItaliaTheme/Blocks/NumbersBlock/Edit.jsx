@@ -100,7 +100,7 @@ class Edit extends SubblocksEdit {
                         <Icon icon="square" />
                         <Icon icon="square" />
                         <Icon icon="square" />
-                        <Icon icon="square" />
+
                         <div className="placeholder-text">
                           {this.props.intl.formatMessage(
                             messages.icons_placeholder,
