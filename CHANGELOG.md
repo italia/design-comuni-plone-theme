@@ -1,3 +1,10 @@
+### [3.8.5](https://github.com/RedTurtle/design-volto-theme/compare/v3.8.4...v3.8.5) (2021-06-15)
+
+
+### Bug Fixes
+
+* fixed numbers block ([ceee313](https://github.com/RedTurtle/design-volto-theme/commit/ceee3135d1e3045aaa9aac85d903a3272ac96c82))
+
 ### [3.8.4](https://github.com/RedTurtle/design-volto-theme/compare/v3.8.3...v3.8.4) (2021-06-14)
 
 
