@@ -5,6 +5,12 @@
 }
 
 #search-modal {
+  .btn-link {
+    &:focus {
+      box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba($primary, 0.5);
+    }
+  }
+
   .modal-header {
     flex-shrink: 0;
 

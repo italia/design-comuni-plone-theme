@@ -153,7 +153,7 @@ const SearchModal = ({ closeModal, show }) => {
   const [options, setOptions] = useState({ ...defaultOptions });
   const subsite = useSelector((state) => state.subsite?.data);
   const selectedTopics = fromPairs(toPairs(topics).filter((t) => t[1].value));
-
+  const inputRef = React.useRef(null);
   let checkedGroups = {};
   Object.keys(sections).forEach((k) => {
     checkedGroups[k] = isGroupChecked(sections[k]);
@@ -165,6 +165,15 @@ const SearchModal = ({ closeModal, show }) => {
     if (!searchFilters || Object.keys(searchFilters).length === 0)
       dispatch(getSearchFilters());
   }, []);
+
+  useEffect(() => {
+    //setta il focus sul campo di ricerca all'apertura della modale
+    if (show) {
+      setTimeout(() => {
+        inputRef.current.focus();
+      }, 100);
+    }
+  }, [show]);
 
   useEffect(() => {
     if (Object.keys(searchFilters?.sections ?? {}).length > 0) {
@@ -327,6 +336,15 @@ const SearchModal = ({ closeModal, show }) => {
                       placeholder={intl.formatMessage(messages.searchLabel)}
                       aria-label={intl.formatMessage(messages.searchLabel)}
                       aria-describedby="search-button"
+                      ref={inputRef}
+                      // ref={(input) => {
+                      //   console.log('----');
+                      //   if (input) {
+                      //     setTimeout(() => {
+                      //       input.focus();
+                      //     }, 100);
+                      //   }
+                      // }}
                     />
                     <div className="input-group-append">
                       <a
