@@ -1,3 +1,11 @@
+### [3.8.6](https://github.com/RedTurtle/design-volto-theme/compare/v3.8.5...v3.8.6) (2021-06-16)
+
+
+### Bug Fixes
+
+* fix chip styles in blocks ([6723210](https://github.com/RedTurtle/design-volto-theme/commit/67232105499f80f6c8b8951e373048b5a3385c95))
+* handled view malformed date in RSS ([0bb8095](https://github.com/RedTurtle/design-volto-theme/commit/0bb80956772e8bccbc501cc120b3449c74f23834))
+
 ### [3.8.5](https://github.com/RedTurtle/design-volto-theme/compare/v3.8.4...v3.8.5) (2021-06-15)
 
 
