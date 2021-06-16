@@ -69,6 +69,7 @@ const Body = ({ content, pathname, block }) => {
                       simple
                       color="primary"
                       key={`${idx} ${argomento['@id']}`}
+                      className="mr-2"
                     >
                       <ConditionalLink
                         condition={!!argomento['@id']}

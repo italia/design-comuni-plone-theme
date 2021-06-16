@@ -82,7 +82,12 @@ const ContentInEvidenceTemplate = ({
                       item.tassonomia_argomenti.length > 0 && (
                         <>
                           {item.tassonomia_argomenti.map((argomento) => (
-                            <Chip simple color="primary" key={argomento['@id']}>
+                            <Chip
+                              simple
+                              color="primary"
+                              key={argomento['@id']}
+                              className="mr-2"
+                            >
                               <UniversalLink
                                 href={flattenToAppURL(argomento['@id'])}
                                 className="chip-label text-decoration-none"
