@@ -71,6 +71,14 @@ msgstr ""
 msgid "Cerca"
 msgstr ""
 
+#: components/ItaliaTheme/Search/SearchCTs
+msgid "Cerca i contenuti di tipo"
+msgstr ""
+
+#: components/ItaliaTheme/Search/SearchTopics
+msgid "Cerca per argomento"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
 msgid "Cerca per parola chiave"
@@ -150,6 +158,10 @@ msgstr ""
 msgid "Hide"
 msgstr ""
 
+#: components/ItaliaTheme/Search/SearchCTs
+msgid "Hide all content types"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 msgid "Icons placeholder"
 msgstr ""
@@ -213,6 +225,10 @@ msgstr ""
 msgid "Mostra lo sfondo del blocco"
 msgstr ""
 
+#: components/ItaliaTheme/Search/SearchTopics
+msgid "Mostra tutti gli argomenti"
+msgstr ""
+
 #: components/ItaliaTheme/Search/Search
 msgid "Nessun risultato ottenuto"
 msgstr ""
@@ -231,6 +247,10 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
 msgid "Non ci sono punti da mostrare sulla mappa"
+msgstr ""
+
+#: components/ItaliaTheme/Search/SearchTopics
+msgid "Non mostrare tutti gli argomenti"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
@@ -305,6 +325,10 @@ msgid "Seguici su"
 msgstr ""
 
 #: components/ItaliaTheme/Search/SearchCTs
+msgid "Select all content types or none"
+msgstr ""
+
+#: components/ItaliaTheme/Search/SearchCTs
 msgid "Select all or none"
 msgstr ""
 
@@ -324,6 +348,10 @@ msgstr ""
 #: components/ItaliaTheme/Search/SearchCTs
 #: components/ItaliaTheme/Search/SearchTopics
 msgid "Show all"
+msgstr ""
+
+#: components/ItaliaTheme/Search/SearchCTs
+msgid "Show all content types"
 msgstr ""
 
 #: components/ItaliaTheme/Search/Search
