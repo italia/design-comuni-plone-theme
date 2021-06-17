@@ -110,6 +110,10 @@ const messages = defineMessages({
     id: 'uo_documenti',
     defaultMessage: 'Documenti',
   },
+  content: {
+    id: 'Go to content',
+    defaultMessage: 'Vai al contenuto',
+  },
 });
 
 /**
@@ -132,6 +136,9 @@ const UOView = ({ content }) => {
   return (
     <>
       <div className="container px-4 my-4 uo-view">
+        <a className="sr-only" href="#main-content-section">
+          {intl.formatMessage(messages.content)}
+        </a>
         <PageHeader
           content={content}
           readingtime={null}
@@ -148,6 +155,7 @@ const UOView = ({ content }) => {
           </aside>
           <section
             ref={documentBody}
+            id="main-content-section"
             className="col-lg-8 it-page-sections-container"
           >
             {/* HEADER IMAGE */}

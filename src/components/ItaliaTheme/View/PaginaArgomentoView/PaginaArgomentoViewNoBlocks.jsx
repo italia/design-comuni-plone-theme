@@ -53,6 +53,10 @@ const messages = defineMessages({
     id: 'related_uo',
     defaultMessage: 'Amministrazione',
   },
+  content: {
+    id: 'Go to content',
+    defaultMessage: 'Vai al contenuto',
+  },
 });
 
 /**
@@ -77,6 +81,9 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
   return (
     <>
       <div className="container px-4 my-4 uo-view">
+        <a className="sr-only" href="#main-content-section">
+          {intl.formatMessage(messages.content)}
+        </a>
         <PageHeader
           content={content}
           readingtime={null}
@@ -93,6 +100,7 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
           </aside>
           <section
             className="col-lg-8 it-page-sections-container"
+            id="main-content-section"
             ref={documentBody}
           >
             {/* HEADER IMAGE */}

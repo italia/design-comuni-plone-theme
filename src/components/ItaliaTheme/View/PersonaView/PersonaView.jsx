@@ -127,6 +127,10 @@ const messages = defineMessages({
     id: 'documenti',
     defaultMessage: 'Documenti',
   },
+  content: {
+    id: 'Go to content',
+    defaultMessage: 'Vai al contenuto',
+  },
 });
 
 /**
@@ -151,6 +155,9 @@ const PersonaView = ({ content }) => {
   return (
     <>
       <div className="container px-4 my-4 persona-view">
+        <a className="sr-only" href="#main-content-section">
+          {intl.formatMessage(messages.content)}
+        </a>
         <PageHeader
           content={content}
           readingtime={null}
@@ -166,6 +173,7 @@ const PersonaView = ({ content }) => {
           </aside>
           <section
             className="col-lg-8 it-page-sections-container"
+            id="main-content-section"
             ref={documentBody}
           >
             {(content.ruolo ||

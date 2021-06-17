@@ -46,6 +46,10 @@ const messages = defineMessages({
     id: 'luoghi_notizia',
     defaultMessage: 'Luoghi',
   },
+  content: {
+    id: 'Go to content',
+    defaultMessage: 'Vai al contenuto',
+  },
 });
 
 /**
@@ -83,6 +87,9 @@ const NewsItemView = ({ content, location }) => {
   return (
     <>
       <div className="container px-4 my-4 newsitem-view">
+        <a className="sr-only" href="#main-content-section">
+          {intl.formatMessage(messages.content)}
+        </a>
         <PageHeader
           content={content}
           readingtime={readingtime}
@@ -101,6 +108,7 @@ const NewsItemView = ({ content, location }) => {
           </aside>
           <section
             className="col-lg-8 it-page-sections-container"
+            id="main-content-section"
             ref={documentBody}
           >
             {/* HEADER IMAGE */}

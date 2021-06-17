@@ -130,6 +130,10 @@ const messages = defineMessages({
     id: 'Video',
     defaultMessage: 'Video',
   },
+  content: {
+    id: 'Go to content',
+    defaultMessage: 'Vai al contenuto',
+  },
 });
 
 /**
@@ -163,6 +167,9 @@ const VenueView = ({ content }) => {
   return (
     <>
       <div className="container px-4 my-4 luogo-view">
+        <a className="sr-only" href="#main-content-section">
+          {intl.formatMessage(messages.content)}
+        </a>
         <PageHeader
           content={content}
           readingtime={null}
@@ -179,6 +186,7 @@ const VenueView = ({ content }) => {
           </aside>
           <section
             className="col-lg-8 it-page-sections-container"
+            id="main-content-section"
             ref={documentBody}
           >
             {/* HEADER IMAGE */}

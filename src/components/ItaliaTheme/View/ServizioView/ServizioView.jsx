@@ -123,10 +123,13 @@ const messages = defineMessages({
     id: 'servizi_collegati',
     defaultMessage: 'Servizi collegati',
   },
-
   modulistica: {
     id: 'modulistica',
     defaultMessage: 'Modulistica',
+  },
+  content: {
+    id: 'Go to content',
+    defaultMessage: 'Vai al contenuto',
   },
 });
 
@@ -152,6 +155,9 @@ const ServizioView = ({ content }) => {
   return (
     <>
       <div className="container px-4 my-4 servizio-view">
+        <a className="sr-only" href="#main-content-section">
+          {intl.formatMessage(messages.content)}
+        </a>
         <PageHeader
           content={content}
           readingtime={null}
@@ -167,6 +173,7 @@ const ServizioView = ({ content }) => {
             <SideMenu data={sideMenuElements} />
           </aside>
           <section
+            id="main-content-section"
             className="col-lg-8 it-page-sections-container"
             ref={documentBody}
           >

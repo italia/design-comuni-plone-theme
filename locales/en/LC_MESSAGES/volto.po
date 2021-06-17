@@ -22,6 +22,10 @@ msgstr "Login to your personal area"
 msgid "Add accordion item"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Form/Edit
+msgid "Add field"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Alert"
 msgstr ""
@@ -52,6 +56,7 @@ msgstr ""
 msgid "Card detail label"
 msgstr "Show"
 
+#: components/ItaliaTheme/Header/HeaderCenter
 #: components/ItaliaTheme/Header/HeaderSearch/HeaderSearch
 msgid "Cerca"
 msgstr "Search"
@@ -61,6 +66,8 @@ msgstr "Search"
 msgid "Cerca per parola chiave"
 msgstr "Search by keyword"
 
+#: components/FileWidget
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Clicca qui per sostituire il file"
 msgstr "Click here to replace file"
@@ -124,11 +131,41 @@ msgstr ""
 msgid "Dimensione della mappa"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
+msgid "Email Success"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Form
+msgid "Email sent"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
+msgid "Error"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 msgid "Etichetta path filter"
 msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+msgid "Form"
+msgstr ""
+
+#: components/ItaliaTheme/View/BandoView/BandoView
+#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/NewsItemView/NewsItemView
+#: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
+#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/VenueView/VenueView
+msgid "Go to content"
+msgstr "Skip to content"
 
 #: components/ItaliaTheme/Search/SearchCTs
 #: components/ItaliaTheme/Search/SearchTopics
@@ -257,6 +294,8 @@ msgstr "Previous page"
 msgid "Required"
 msgstr "Required"
 
+#: components/FileWidget
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Rimuovi il file"
 msgstr "Remove file"
@@ -285,6 +324,7 @@ msgstr ""
 msgid "SearchServicesTitle"
 msgstr ""
 
+#: components/ItaliaTheme/Footer/FooterSocials
 #: components/ItaliaTheme/Header/SocialHeader
 msgid "Seguici su"
 msgstr "Follow us on"
@@ -293,6 +333,8 @@ msgstr "Follow us on"
 msgid "Select all or none"
 msgstr "Select all or none"
 
+#: components/FileWidget
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Seleziona un file"
 msgstr ""
@@ -320,6 +362,7 @@ msgid "Subscribe"
 msgstr "Subscribe"
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
+#: components/ItaliaTheme/Blocks/Form/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 msgid "Text placeholder"
 msgstr ""
@@ -332,6 +375,8 @@ msgid "Title"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
+#: components/ItaliaTheme/Blocks/Form/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 msgid "Title placeholder"
 msgstr "Title..."
@@ -344,14 +389,20 @@ msgstr "Title..."
 msgid "Titolo"
 msgstr ""
 
+#: components/FileWidget
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Trascina qui il file ..."
 msgstr "Drop the file here ..."
 
+#: components/FileWidget
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Trascina qui un file per caricare un nuovo file"
 msgstr "Drop the file here to upload a new file"
 
+#: components/FileWidget
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 msgid "Trascina qui un file per sostituire quello esistente"
 msgstr "Drop the file here to replace existing file"
@@ -366,6 +417,7 @@ msgstr ""
 msgid "Type description…"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Accordion/TextEditorWidget
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
@@ -398,6 +450,7 @@ msgstr "Go to page"
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/Accordion/Block/ViewBlock
+#: components/ItaliaTheme/Blocks/Form/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/ViewBlock
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
@@ -449,14 +502,17 @@ msgid "actions"
 msgstr "View actions"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 msgid "allFilters"
 msgstr "All"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 msgid "allOptions"
 msgstr "All options"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 msgid "allTopics"
 msgstr "All topics"
 
@@ -535,6 +591,7 @@ msgid "back"
 msgstr "back"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 msgid "backToSearch"
 msgstr "Back to search"
 
@@ -660,6 +717,7 @@ msgid "close"
 msgstr "close"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 msgid "closeSearch"
 msgstr "Close search"
 
@@ -677,6 +735,7 @@ msgid "competenze"
 msgstr "Skills"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 msgid "confirmSearch"
 msgstr "Confirm"
 
@@ -977,6 +1036,7 @@ msgid "file_correlato"
 msgstr "Related file"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 msgid "filters"
 msgstr "Filters"
 
@@ -992,6 +1052,109 @@ msgstr "Search"
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "fine_termine"
 msgstr "End of term"
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+msgid "form_default_from"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+msgid "form_default_from_description"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+msgid "form_default_subject"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Edit
+#: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
+msgid "form_default_submit_label"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Edit
+msgid "form_edit_warning"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Edit
+msgid "form_edit_warning_from"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
+msgid "form_empty_values_validation"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+msgid "form_field_description"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+msgid "form_field_input_values"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+msgid "form_field_label"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+msgid "form_field_name"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+msgid "form_field_name_description"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+msgid "form_field_required"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+msgid "form_field_type"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+msgid "form_field_type_attachment"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+msgid "form_field_type_checkbox"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+msgid "form_field_type_date"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+msgid "form_field_type_from"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+msgid "form_field_type_radio"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+msgid "form_field_type_select"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+msgid "form_field_type_text"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+msgid "form_field_type_textarea"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Field
+msgid "form_select_a_value"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+msgid "form_submit_label"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+msgid "form_to"
+msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "foto_attivita_politica"
@@ -1222,42 +1385,51 @@ msgid "numero_progressivo_cs"
 msgstr "Press release number"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 msgid "optionActiveContentButton"
 msgstr "Active content"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 msgid "optionActiveContentInfo"
 msgstr "Archived and no longer valid contents, such as finished events or expired calls, will be excluded from the search."
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 msgid "optionActiveContentLabel"
 msgstr "Search only active content"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 msgid "optionDateEnd"
 msgstr "End date"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 msgid "optionDateEndButton"
 msgstr "To"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 msgid "optionDatePlaceholder"
 msgstr "insert date in format dd/mm/yyyy"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 msgid "optionDateStart"
 msgstr "Start date"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 msgid "optionDateStartButton"
 msgstr "From"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 msgid "options"
 msgstr "Options"
@@ -1380,11 +1552,13 @@ msgid "related_uo"
 msgstr "Government"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 msgid "removeOption"
 msgstr "Remove option"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 msgid "removeTopic"
 msgstr "Remove topic"
 
@@ -1494,6 +1668,7 @@ msgid "scrivi_a_mail"
 msgstr "Write to"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/View/Commons/SearchSectionForm
 msgid "search"
 msgstr "Search"
@@ -1604,6 +1779,7 @@ msgid "searchContentIn"
 msgstr "Search contents in"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 msgid "searchLabel"
 msgstr "Search site"
 
@@ -1692,6 +1868,7 @@ msgid "section_undefined"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 msgid "sections"
 msgstr "Sections"
@@ -1802,14 +1979,17 @@ msgid "situazione_patrimoniale"
 msgstr "Patrimonial situation"
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
+#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 msgid "skiplink-footer"
 msgstr "Go to footer"
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
+#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 msgid "skiplink-main-content"
 msgstr "Go to content"
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
+#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 msgid "skiplink-navigation"
 msgstr "Go to navigation"
 
@@ -1921,6 +2101,7 @@ msgid "to"
 msgstr "to"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderTassonomiaArgomenti
 msgid "topics"
@@ -1965,6 +2146,7 @@ msgid "unita_organizzativa_competente"
 msgstr "Competent organizational unit for the procedure"
 
 #: components/ItaliaTheme/View/Commons/RenderBlocks
+#: components/ItaliaTheme/View/Commons/TextOrBlocks
 msgid "unknownBlock"
 msgstr "Unknown block"
 

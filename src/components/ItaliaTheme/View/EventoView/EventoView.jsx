@@ -118,6 +118,10 @@ const messages = defineMessages({
     id: 'event_cos_e',
     defaultMessage: "Cos'è",
   },
+  content: {
+    id: 'Go to content',
+    defaultMessage: 'Vai al contenuto',
+  },
 });
 
 /**
@@ -167,6 +171,9 @@ const EventoView = ({ content, location }) => {
   return (
     <>
       <div className="container px-4 my-4 newsitem-view">
+        <a className="sr-only" href="#main-content-section">
+          {intl.formatMessage(messages.content)}
+        </a>
         <PageHeader
           content={content}
           readingtime={null}
@@ -185,6 +192,7 @@ const EventoView = ({ content, location }) => {
           </aside>
           <section
             ref={documentBody}
+            id="main-content-section"
             className="col-lg-8 it-page-sections-container"
           >
             {/* HEADER IMAGE */}
