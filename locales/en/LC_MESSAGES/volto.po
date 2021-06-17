@@ -58,11 +58,11 @@ msgstr "Search"
 
 #: components/ItaliaTheme/Search/SearchCTs
 msgid "Cerca i contenuti di tipo"
-msgstr ""
+msgstr "Search contents of type"
 
 #: components/ItaliaTheme/Search/SearchTopics
 msgid "Cerca per argomento"
-msgstr ""
+msgstr "Search by topic"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
@@ -145,7 +145,7 @@ msgstr "Hide"
 
 #: components/ItaliaTheme/Search/SearchCTs
 msgid "Hide all content types"
-msgstr ""
+msgstr "Hide all content types"
 
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 msgid "Icons placeholder"
@@ -212,7 +212,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Search/SearchTopics
 msgid "Mostra tutti gli argomenti"
-msgstr ""
+msgstr "Show all topics"
 
 #: components/ItaliaTheme/Search/Search
 msgid "Nessun risultato ottenuto"
@@ -236,7 +236,7 @@ msgstr "There are no points to show on the map"
 
 #: components/ItaliaTheme/Search/SearchTopics
 msgid "Non mostrare tutti gli argomenti"
-msgstr ""
+msgstr "Do not show all topics"
 
 #: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
 msgid "Number placeholder"
@@ -311,7 +311,7 @@ msgstr "Follow us on"
 
 #: components/ItaliaTheme/Search/SearchCTs
 msgid "Select all content types or none"
-msgstr ""
+msgstr "Select all content types or none"
 
 #: components/ItaliaTheme/Search/SearchCTs
 msgid "Select all or none"
@@ -337,7 +337,7 @@ msgstr "Show all"
 
 #: components/ItaliaTheme/Search/SearchCTs
 msgid "Show all content types"
-msgstr ""
+msgstr "Show all content types"
 
 #: components/ItaliaTheme/Search/Search
 msgid "Sono occorsi degli errori"
@@ -478,7 +478,7 @@ msgstr "View actions"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "advandedSectionsFilters"
-msgstr ""
+msgstr "Go to advanced search by sections"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "allFilters"
@@ -819,7 +819,7 @@ msgstr "Extended description"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "deselectSearchSection"
-msgstr ""
+msgstr "Do not search in section"
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
@@ -1537,11 +1537,11 @@ msgstr "Search"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "searchAllSections"
-msgstr ""
+msgstr "Search in all sections"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "searchAllTopics"
-msgstr ""
+msgstr "Search by all topics"
 
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock"
@@ -1651,7 +1651,7 @@ msgstr "Search contents in"
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 msgid "searchInSection"
-msgstr ""
+msgstr "Search in section"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "searchLabel"
@@ -1756,7 +1756,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "selectTopicFilters"
-msgstr ""
+msgstr "Select topics you want search for"
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 msgid "select_argument_sidebar"
@@ -1781,7 +1781,7 @@ msgstr "Services"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "setMoreSearchOptions"
-msgstr ""
+msgstr "Go to other search options"
 
 #: components/ItaliaTheme/View/Commons/Sharing
 msgid "share"
