@@ -1,3 +1,52 @@
+### [3.8.6](https://github.com/RedTurtle/design-volto-theme/compare/v3.8.5...v3.8.6) (2021-06-16)
+
+
+### Bug Fixes
+
+* fix chip styles in blocks ([6723210](https://github.com/RedTurtle/design-volto-theme/commit/67232105499f80f6c8b8951e373048b5a3385c95))
+* handled view malformed date in RSS ([0bb8095](https://github.com/RedTurtle/design-volto-theme/commit/0bb80956772e8bccbc501cc120b3449c74f23834))
+
+### [3.8.5](https://github.com/RedTurtle/design-volto-theme/compare/v3.8.4...v3.8.5) (2021-06-15)
+
+
+### Bug Fixes
+
+* fixed numbers block ([ceee313](https://github.com/RedTurtle/design-volto-theme/commit/ceee3135d1e3045aaa9aac85d903a3272ac96c82))
+
+### [3.8.4](https://github.com/RedTurtle/design-volto-theme/compare/v3.8.3...v3.8.4) (2021-06-14)
+
+
+### Bug Fixes
+
+* updated volto for sidebar and fixed search results sectionFromId ([de831dd](https://github.com/RedTurtle/design-volto-theme/commit/de831dd72c5e98f84280ee75d494316fddd1bff0))
+
+### [3.8.3](https://github.com/RedTurtle/design-volto-theme/compare/v3.8.2...v3.8.3) (2021-06-14)
+
+
+### Bug Fixes
+
+* fixed Bando View ente ([2441c2e](https://github.com/RedTurtle/design-volto-theme/commit/2441c2e6d5440d09ced18ecc6e96a01ce6f378e0))
+
+### [3.8.2](https://github.com/RedTurtle/design-volto-theme/compare/v3.8.1...v3.8.2) (2021-06-14)
+
+
+### Bug Fixes
+
+* fixed styles for NumbersBlock ([6d3284d](https://github.com/RedTurtle/design-volto-theme/commit/6d3284def25483575376e7654ddf644d6ab64678))
+
+### [3.8.1](https://github.com/RedTurtle/design-volto-theme/compare/v3.8.0...v3.8.1) (2021-06-14)
+
+
+### Bug Fixes
+
+* fixed styles on edit for NumbersBlock ([c53e203](https://github.com/RedTurtle/design-volto-theme/commit/c53e203361b5880d0c29d536409ed136c2b59f39))
+
+
+### Maintenance
+
+* added mobile styles for NumbersBlock ([29f149c](https://github.com/RedTurtle/design-volto-theme/commit/29f149cff70c7d5ac648ea7274f0387d23fe2db2))
+* added number blocks ([b6ec3f0](https://github.com/RedTurtle/design-volto-theme/commit/b6ec3f023a89c2688849aea942410b01bc7b99a5))
+
 ## [3.8.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.7.0...v3.8.0) (2021-06-11)
 
 

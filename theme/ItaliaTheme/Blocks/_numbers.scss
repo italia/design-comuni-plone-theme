@@ -65,6 +65,15 @@
       .icon + .icon {
         margin-left: 0.8rem;
       }
+
+      &.placeholder {
+        color: $placeholder;
+
+        .placeholder-text {
+          margin-top: 0.5rem;
+          font-size: 0.9rem;
+        }
+      }
     }
 
     .title {
@@ -79,6 +88,14 @@
       font-size: 5.5rem;
       font-weight: 500;
       line-height: 1em;
+
+      .DraftEditor-root
+        .DraftEditor-editorContainer
+        .public-DraftEditor-content
+        span,
+      .public-DraftEditorPlaceholder-root .public-DraftEditorPlaceholder-inner {
+        font-family: $font-family-monospace !important;
+      }
     }
 
     .subblock-text {

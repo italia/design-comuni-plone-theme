@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl, defineMessages } from 'react-intl';
-import moment from 'moment';
 import cx from 'classnames';
 
 import {
@@ -15,6 +14,7 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
+import { getViewDate } from '@italia/components/ItaliaTheme/Blocks/RssBlock/utils';
 
 const messages = defineMessages({
   readMore: { id: 'rss_read_more', defaultMessage: 'Read more' },
@@ -30,7 +30,6 @@ const messages = defineMessages({
 
 const CardWithoutImageRssTemplate = ({ items = [], isEditMode, data = {} }) => {
   const intl = useIntl();
-  moment.locale(intl.locale);
 
   return (
     <div className={cx('', { 'public-ui': isEditMode })}>
@@ -59,7 +58,7 @@ const CardWithoutImageRssTemplate = ({ items = [], isEditMode, data = {} }) => {
                       )}
                       {(item.pubDate || item.date) && (
                         <span>
-                          {moment(item.pubDate || item.date).format('DD-MMM-Y')}
+                          {getViewDate(item.pubDate || item.date, intl.locale)}
                         </span>
                       )}
                     </div>

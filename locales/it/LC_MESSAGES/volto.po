@@ -40,6 +40,10 @@ msgstr "Attenzione!"
 msgid "Bando"
 msgstr "Bando"
 
+#: components/ItaliaTheme/Blocks/NumbersBlock/Edit
+msgid "Block Title"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 msgid "Block style"
 msgstr "Stile del blocco"
@@ -104,11 +108,15 @@ msgstr "Default"
 msgid "Delete"
 msgstr "Elimina"
 
-#: components/ItaliaTheme/Blocks/IconBlocks/Edit
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
 msgid "Description"
+msgstr "Descrizione"
+
+#: components/ItaliaTheme/Blocks/IconBlocks/Edit
+#: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
+msgid "Description placeholder"
 msgstr "Descrizione..."
 
 #: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
@@ -126,6 +134,10 @@ msgstr "Etichetta"
 #: components/ItaliaTheme/Search/SearchTopics
 msgid "Hide"
 msgstr "Nascondi"
+
+#: components/ItaliaTheme/Blocks/NumbersBlock/Edit
+msgid "Icons placeholder"
+msgstr "Seleziona le icone dalla barra a lato"
 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Image"
@@ -205,6 +217,10 @@ msgstr "Pagina successiva"
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
 msgid "Non ci sono punti da mostrare sulla mappa"
 msgstr "Non ci sono punti da mostrare sulla mappa"
+
+#: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
+msgid "Number placeholder"
+msgstr "Numero"
 
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
 msgid "Open in a new tab"
@@ -305,12 +321,10 @@ msgstr "Iscriviti"
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
-#: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
 msgid "Text placeholder"
 msgstr "Testo..."
 
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
-#: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
@@ -319,7 +333,6 @@ msgstr "Titolo"
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
-#: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
 msgid "Title placeholder"
 msgstr "Titolo..."
 
@@ -576,7 +589,7 @@ msgstr "Stato"
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 msgid "bando_tipologia"
-msgstr ""
+msgstr "Tipo"
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 msgid "bando_vedi"
@@ -1452,19 +1465,19 @@ msgstr "Ruolo"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 msgid "sarchBandi_categoria_placeholder"
-msgstr ""
+msgstr "Categoria"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 msgid "sarchBandi_ente_placeholder"
-msgstr ""
+msgstr "Ente"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 msgid "sarchBandi_tipologia_placeholder"
-msgstr ""
+msgstr "Tipologia"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 msgid "sarchBandi_ufficio_responsabile_placeholder"
-msgstr ""
+msgstr "Ufficio responsabile"
 
 #: components/ItaliaTheme/Blocks/Calendar/Item
 #: components/ItaliaTheme/View/Commons/BandoDates
@@ -1589,6 +1602,10 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/SearchSectionForm
 msgid "searchContentIn"
 msgstr "Cerca contenuti in"
+
+#: components/ItaliaTheme/Search/SearchSections
+msgid "searchInSection"
+msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "searchLabel"

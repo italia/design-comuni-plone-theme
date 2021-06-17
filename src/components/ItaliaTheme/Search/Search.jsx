@@ -10,7 +10,7 @@ import { values } from 'lodash';
 import cx from 'classnames';
 import qs from 'query-string';
 import moment from 'moment';
-import { Helmet } from '@plone/volto/helpers';
+import { Helmet, flattenToAppURL } from '@plone/volto/helpers';
 
 import { RemoveBodyClass } from '@italia/components/ItaliaTheme';
 import {
@@ -222,13 +222,13 @@ const Search = () => {
   ];
 
   const getSectionFromId = (id) => {
-    let itemSection = Object.keys(sections).filter((s) => id.indexOf(s) > -1);
+    let itemSection = Object.keys(sections).filter(
+      (s) => flattenToAppURL(id).indexOf(s) > -1,
+    );
 
     if (itemSection?.length > 0) {
-      let sectionURL = `/${itemSection[0]}`;
-      let sectionLabel = itemSection[0].replace(/-/g, ' ');
-
-      return <CardCategory href={sectionURL}>{sectionLabel}</CardCategory>;
+      const section = sections[itemSection[0]];
+      return <CardCategory href={section.path}>{section.title}</CardCategory>;
     } else {
       return (
         <div className="category-top">

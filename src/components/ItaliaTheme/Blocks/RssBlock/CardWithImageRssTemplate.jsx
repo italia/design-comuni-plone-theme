@@ -14,7 +14,7 @@ import {
 
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
-import { viewDate } from '@italia/helpers';
+import { getViewDate } from '@italia/components/ItaliaTheme/Blocks/RssBlock/utils';
 
 const messages = defineMessages({
   readMore: { id: 'rss_read_more', defaultMessage: 'Read more' },
@@ -62,19 +62,15 @@ const CardWithImageRssTemplate = ({ items = [], isEditMode, data = {} }) => {
                   )}
                   <CardBody tag="div">
                     <div className="category-top">
-                      {item?.categories?.length > 0 && item.categories[0]._ ? (
+                      {item?.categories?.length > 0 && item.categories[0]._ && (
                         <>
                           <span className="category">
                             {item.categories[0]._}
                           </span>
                           <span className="mx-1">&mdash;</span>
                         </>
-                      ) : (
-                        ''
                       )}
-                      <span>
-                        {viewDate(intl.locale, item.pubDate, 'DD-MMM-Y')}
-                      </span>{' '}
+                      <span>{getViewDate(item.pubDate, intl.locale)}</span>{' '}
                     </div>
                     <CardTitle className="big-heading" tag="h6">
                       {item.title}

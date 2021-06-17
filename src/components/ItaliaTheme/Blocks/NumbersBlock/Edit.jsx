@@ -27,12 +27,16 @@ const messages = defineMessages({
     defaultMessage: 'Aggiungi elemento',
   },
   title: {
-    id: 'Title',
-    defaultMessage: 'Titolo...',
+    id: 'Block Title',
+    defaultMessage: 'Titolo del blocco...',
   },
   description: {
     id: 'Description',
     defaultMessage: 'Descrizione...',
+  },
+  icons_placeholder: {
+    id: 'Icons placeholder',
+    defaultMessage: 'Seleziona le icone dalla barra a lato',
   },
 });
 /**
@@ -77,9 +81,9 @@ class Edit extends SubblocksEdit {
               <Row>
                 <Col lg="4">
                   <div className="block-header">
-                    {(this.props.data.icon1 ||
-                      this.props.data.icon2 ||
-                      this.props.data.icon3) && (
+                    {this.props.data.icon1 ||
+                    this.props.data.icon2 ||
+                    this.props.data.icon3 ? (
                       <div className="icons">
                         {this.props.data.icon1?.length > 0 && (
                           <Icon icon={this.props.data.icon1} />
@@ -90,6 +94,18 @@ class Edit extends SubblocksEdit {
                         {this.props.data.icon3?.length > 0 && (
                           <Icon icon={this.props.data.icon3} />
                         )}
+                      </div>
+                    ) : (
+                      <div className="icons placeholder">
+                        <Icon icon="square" />
+                        <Icon icon="square" />
+                        <Icon icon="square" />
+
+                        <div className="placeholder-text">
+                          {this.props.intl.formatMessage(
+                            messages.icons_placeholder,
+                          )}
+                        </div>
                       </div>
                     )}
 
