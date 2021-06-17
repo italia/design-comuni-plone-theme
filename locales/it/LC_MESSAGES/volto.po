@@ -449,6 +449,10 @@ msgid "actions"
 msgstr "Vedi azioni"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+msgid "advandedSectionsFilters"
+msgstr ""
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "allFilters"
 msgstr "Tutto"
 
@@ -784,6 +788,10 @@ msgstr "Descrizione"
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "descrizione_estesa"
 msgstr "Descrizione estesa"
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+msgid "deselectSearchSection"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
@@ -1494,9 +1502,18 @@ msgid "scrivi_a_mail"
 msgstr "Scrivi all'indirizzo"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Search/Search
 #: components/ItaliaTheme/View/Commons/SearchSectionForm
 msgid "search"
 msgstr "Cerca"
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+msgid "searchAllSections"
+msgstr ""
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+msgid "searchAllTopics"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock"
@@ -1604,6 +1621,11 @@ msgid "searchContentIn"
 msgstr "Cerca contenuti in"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Search/SearchSections
+msgid "searchInSection"
+msgstr ""
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "searchLabel"
 msgstr "Cerca nel sito"
 
@@ -1704,6 +1726,10 @@ msgstr "Sede di"
 msgid "selectOtherArguments"
 msgstr "Seleziona gli altri argomenti"
 
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+msgid "selectTopicFilters"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 msgid "select_argument_sidebar"
 msgstr "Seleziona un argomento nella barra a lato"
@@ -1724,6 +1750,10 @@ msgstr "Servizi collegati"
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "servizi_offerti"
 msgstr "Servizi"
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+msgid "setMoreSearchOptions"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Sharing
 msgid "share"

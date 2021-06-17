@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-06-15T07:10:48.431Z\n"
+"POT-Creation-Date: 2021-06-17T13:14:38.947Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -543,6 +543,11 @@ msgid "actions"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+# defaultMessage: Vai alla ricerca per sezioni avanzata
+msgid "advandedSectionsFilters"
+msgstr ""
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Tutto
 msgid "allFilters"
 msgstr ""
@@ -956,6 +961,11 @@ msgstr ""
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 # defaultMessage: Descrizione estesa
 msgid "descrizione_estesa"
+msgstr ""
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+# defaultMessage: Non cercare nella sezione
+msgid "deselectSearchSection"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
@@ -1833,9 +1843,20 @@ msgid "scrivi_a_mail"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Search/Search
 #: components/ItaliaTheme/View/Commons/SearchSectionForm
 # defaultMessage: Cerca
 msgid "search"
+msgstr ""
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+# defaultMessage: Cerca in tutte le sezioni
+msgid "searchAllSections"
+msgstr ""
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+# defaultMessage: Cerca tutti gli argomenti
+msgid "searchAllTopics"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
@@ -1966,6 +1987,12 @@ msgid "searchContentIn"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Search/SearchSections
+# defaultMessage: Cerca nella sezione
+msgid "searchInSection"
+msgstr ""
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Cerca nel sito
 msgid "searchLabel"
 msgstr ""
@@ -2091,6 +2118,11 @@ msgstr ""
 msgid "selectOtherArguments"
 msgstr ""
 
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+# defaultMessage: Seleziona gli argomenti che vuoi cercare
+msgid "selectTopicFilters"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 # defaultMessage: Seleziona un argomento nella barra a lato
 msgid "select_argument_sidebar"
@@ -2115,6 +2147,11 @@ msgstr ""
 #: components/ItaliaTheme/View/UOView/UOView
 # defaultMessage: Servizi
 msgid "servizi_offerti"
+msgstr ""
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+# defaultMessage: Vai alle altre opzioni di ricerca
+msgid "setMoreSearchOptions"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Sharing
