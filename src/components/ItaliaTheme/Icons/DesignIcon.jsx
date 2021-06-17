@@ -45,6 +45,7 @@ const Icon = ({ icon, title, className, size }) => {
         viewBox={name.attributes && name.attributes.viewBox}
         style={{ height: size, width: 'auto' }}
         className={className}
+        aria-hidden="true"
         dangerouslySetInnerHTML={{
           __html: title
             ? `<title>${title}</title>${name.content}`
