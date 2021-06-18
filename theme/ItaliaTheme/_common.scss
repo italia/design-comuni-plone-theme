@@ -1,6 +1,6 @@
 .public-ui {
   .btn-tertiary {
-    @include button-variant($tertiary, $tertiary-text);
+    @include button-variant($tertiary, $tertiary);
 
     svg {
       fill: $tertiary-text;
@@ -20,5 +20,11 @@
 
   .btn-outline-tertiary {
     @include button-outline-variant($tertiary);
+  }
+
+  button.chip {
+    &:focus {
+      outline: none;
+    }
   }
 }

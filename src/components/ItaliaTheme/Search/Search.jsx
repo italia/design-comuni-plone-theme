@@ -49,6 +49,10 @@ const {
 } = SearchUtils;
 
 const messages = defineMessages({
+  search: {
+    id: 'search',
+    defaultMessage: 'Cerca',
+  },
   searchResults: {
     id: 'Search results',
     defaultMessage: 'Risultati della ricerca',
@@ -367,6 +371,7 @@ const Search = () => {
                         color="link"
                         size="xs"
                         onClick={doSearch}
+                        aria-label={intl.formatMessage(messages.search)}
                       >
                         <Icon
                           color=""

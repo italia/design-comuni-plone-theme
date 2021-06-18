@@ -87,14 +87,41 @@ const messages = defineMessages({
     id: 'allFilters',
     defaultMessage: 'Tutto',
   },
-
+  searchAllSections: {
+    id: 'searchAllSections',
+    defaultMessage: 'Cerca in tutte le sezioni',
+  },
+  searchInSection: {
+    id: 'searchInSection',
+    defaultMessage: 'Cerca nella sezione',
+  },
+  deselectSection: {
+    id: 'deselectSearchSection',
+    defaultMessage: 'Non cercare nella sezione',
+  },
+  advandedSectionsFilters: {
+    id: 'advandedSectionsFilters',
+    defaultMessage: 'Vai alla ricerca per sezioni avanzata',
+  },
   allTopics: {
     id: 'allTopics',
     defaultMessage: 'Tutti gli argomenti',
   },
+  searchAllTopics: {
+    id: 'searchAllTopics',
+    defaultMessage: 'Cerca tutti gli argomenti',
+  },
+  selectTopicFilters: {
+    id: 'selectTopicFilters',
+    defaultMessage: 'Seleziona gli argomenti che vuoi cercare',
+  },
   allOptions: {
     id: 'allOptions',
     defaultMessage: 'Tutte le date',
+  },
+  setMoreSearchOptions: {
+    id: 'setMoreSearchOptions',
+    defaultMessage: 'Vai alle altre opzioni di ricerca',
   },
   removeTopic: {
     id: 'removeTopic',
@@ -153,7 +180,7 @@ const SearchModal = ({ closeModal, show }) => {
   const [options, setOptions] = useState({ ...defaultOptions });
   const subsite = useSelector((state) => state.subsite?.data);
   const selectedTopics = fromPairs(toPairs(topics).filter((t) => t[1].value));
-
+  const inputRef = React.useRef(null);
   let checkedGroups = {};
   Object.keys(sections).forEach((k) => {
     checkedGroups[k] = isGroupChecked(sections[k]);
@@ -165,6 +192,15 @@ const SearchModal = ({ closeModal, show }) => {
     if (!searchFilters || Object.keys(searchFilters).length === 0)
       dispatch(getSearchFilters());
   }, []);
+
+  useEffect(() => {
+    //setta il focus sul campo di ricerca all'apertura della modale
+    if (show) {
+      setTimeout(() => {
+        inputRef.current.focus();
+      }, 100);
+    }
+  }, [show]);
 
   useEffect(() => {
     if (Object.keys(searchFilters?.sections ?? {}).length > 0) {
@@ -273,7 +309,7 @@ const SearchModal = ({ closeModal, show }) => {
             {advancedSearch && (
               <Button
                 color="link"
-                title={intl.formatMessage(messages.backToSearch)}
+                aria-label={intl.formatMessage(messages.backToSearch)}
                 className="back-to-search text-reset"
                 onClick={() => setAdvancedSearch(false)}
               >
@@ -302,7 +338,7 @@ const SearchModal = ({ closeModal, show }) => {
               )}
               className="ml-auto btn btn-outline-primary text-capitalize"
               style={{ visibility: advancedSearch ? 'visible' : 'hidden' }}
-              title={intl.formatMessage(messages.confirmSearch)}
+              aria-label={intl.formatMessage(messages.search)}
               onClick={submitSearch}
             >
               {intl.formatMessage(messages.confirmSearch)}
@@ -327,6 +363,15 @@ const SearchModal = ({ closeModal, show }) => {
                       placeholder={intl.formatMessage(messages.searchLabel)}
                       aria-label={intl.formatMessage(messages.searchLabel)}
                       aria-describedby="search-button"
+                      ref={inputRef}
+                      // ref={(input) => {
+                      //   console.log('----');
+                      //   if (input) {
+                      //     setTimeout(() => {
+                      //       input.focus();
+                      //     }, 100);
+                      //   }
+                      // }}
                     />
                     <div className="input-group-append">
                       <a
@@ -366,6 +411,9 @@ const SearchModal = ({ closeModal, show }) => {
                       onClick={resetSections}
                       size="sm"
                       className="mr-2 mb-2"
+                      aria-label={intl.formatMessage(
+                        messages.searchAllSections,
+                      )}
                     >
                       {intl.formatMessage(messages.allFilters)}
                     </Button>
@@ -376,6 +424,11 @@ const SearchModal = ({ closeModal, show }) => {
                         outline={!checkedGroups[groupId]}
                         size="sm"
                         className="mr-2 mb-2"
+                        aria-label={
+                          intl.formatMessage(messages.deselectSection) +
+                          ' ' +
+                          sections[groupId].title
+                        }
                         onClick={() =>
                           setGroupChecked(
                             groupId,
@@ -396,6 +449,9 @@ const SearchModal = ({ closeModal, show }) => {
                         setAdvancedTab('sections');
                         setAdvancedSearch(true);
                       }}
+                      aria-label={intl.formatMessage(
+                        messages.advandedSectionsFilters,
+                      )}
                     >
                       ...
                     </Button>
@@ -410,6 +466,7 @@ const SearchModal = ({ closeModal, show }) => {
                   })}
                   type="button"
                   onClick={resetTopics}
+                  aria-label={intl.formatMessage(messages.searchAllTopics)}
                 >
                   <span className="chip-label">
                     {intl.formatMessage(messages.allTopics)}
@@ -428,7 +485,8 @@ const SearchModal = ({ closeModal, show }) => {
                     <button type="button">
                       <Icon color="" icon="it-close" padding={false} />
                       <span className="sr-only">
-                        {intl.formatMessage(messages.removeTopic)}
+                        {intl.formatMessage(messages.removeTopic)}{' '}
+                        {selectedTopics[topicId].label}
                       </span>
                     </button>
                   </div>
@@ -440,6 +498,7 @@ const SearchModal = ({ closeModal, show }) => {
                     setAdvancedSearch(true);
                   }}
                   type="button"
+                  aria-label={intl.formatMessage(messages.selectTopicFilters)}
                 >
                   <span className="chip-label">...</span>
                 </button>
@@ -469,7 +528,8 @@ const SearchModal = ({ closeModal, show }) => {
                     <button type="button">
                       <Icon color="" icon="it-close" padding={false} />
                       <span className="sr-only">
-                        {intl.formatMessage(messages.removeOption)}
+                        {intl.formatMessage(messages.removeOption)}{' '}
+                        {intl.formatMessage(messages.optionActiveContentButton)}
                       </span>
                     </button>
                   </div>
@@ -490,7 +550,12 @@ const SearchModal = ({ closeModal, show }) => {
                     <button type="button">
                       <Icon color="" icon="it-close" padding={false} />
                       <span className="sr-only">
-                        {intl.formatMessage(messages.removeOption)}
+                        {intl.formatMessage(messages.removeOption)}{' '}
+                        {`${intl.formatMessage(
+                          messages.optionDateStartButton,
+                        )} ${moment(options.dateStart)
+                          .locale(intl.locale)
+                          .format('LL')}`}
                       </span>
                     </button>
                   </div>
@@ -511,7 +576,12 @@ const SearchModal = ({ closeModal, show }) => {
                     <button type="button">
                       <Icon color="" icon="it-close" padding={false} />
                       <span className="sr-only">
-                        {intl.formatMessage(messages.removeOption)}
+                        {intl.formatMessage(messages.removeOption)}{' '}
+                        {`${intl.formatMessage(
+                          messages.optionDateEndButton,
+                        )} ${moment(options.dateEnd)
+                          .locale(intl.locale)
+                          .format('LL')}`}
                       </span>
                     </button>
                   </div>
@@ -523,6 +593,7 @@ const SearchModal = ({ closeModal, show }) => {
                     setAdvancedSearch(true);
                   }}
                   type="button"
+                  aria-label={intl.formatMessage(messages.setMoreSearchOptions)}
                 >
                   <span className="chip-label">...</span>
                 </button>

@@ -17,13 +17,29 @@ const messages = defineMessages({
     id: 'Show all',
     defaultMessage: 'Mostra tutto',
   },
+  showAllCTS: {
+    id: 'Show all content types',
+    defaultMessage: 'Mostra tutti i tipi di contenuto',
+  },
   hide: {
     id: 'Hide',
     defaultMessage: 'Nascondi',
   },
+  hideAllCTS: {
+    id: 'Hide all content types',
+    defaultMessage: 'Nascondi tutti i tipi di contenuto',
+  },
   selectAll: {
     id: 'Select all or none',
     defaultMessage: 'Seleziona tutti o nessuno',
+  },
+  selectAllCT: {
+    id: 'Select all content types or none',
+    defaultMessage: 'Seleziona tutti i tipi di contenuti o nessuno',
+  },
+  searchCTOf: {
+    id: 'Cerca i contenuti di tipo',
+    defaultMessage: 'Cerca i contenuti di tipo',
   },
 });
 
@@ -112,6 +128,9 @@ export default function SearchCTs({
               checked={cts[ctId].value}
               onChange={(e) => setCtChecked(ctId, e.currentTarget.checked)}
               aria-controls="search-results-region"
+              aria-label={
+                intl.formatMessage(messages.searchCTOf) + ' ' + cts[ctId].label
+              }
             />
             <Label
               check
@@ -133,6 +152,7 @@ export default function SearchCTs({
         size="mini"
         className="select-all-cts"
         title={intl.formatMessage(messages.selectAll)}
+        aria-label={intl.formatMessage(messages.selectAllCT)}
         rel="noopener noreferrer"
         onClick={(e) => {
           e.preventDefault();
@@ -159,6 +179,9 @@ export default function SearchCTs({
               role="button"
               aria-expanded="false"
               aria-controls="collapseList"
+              aria-label={intl.formatMessage(
+                collapse ? messages.showAllCTS : messages.hideAllCTS,
+              )}
             >
               {intl.formatMessage(collapse ? messages.showAll : messages.hide)}
             </a>
