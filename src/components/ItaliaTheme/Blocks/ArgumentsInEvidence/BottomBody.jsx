@@ -30,39 +30,34 @@ const BottomBody = ({ data, intl }) => {
         </div>
         <div className="col-lg-9 text-left">
           {data?.arguments?.map((argument, index) => (
-            <ConditionalLink
+            <Chip
+              color="primary"
+              disabled={false}
+              large
+              simple
+              tag={ConditionalLink}
               condition={!!argument['@id']}
               item={argument}
               key={index}
               title={argument.title}
-              className="text-decoration-none"
+              className="mr-2 text-decoration-none"
             >
-              <Chip
-                color="primary"
-                disabled={false}
-                large
-                simple
-                tag="div"
-                className="mr-2"
-              >
-                <ChipLabel tag="span">{argument.title}</ChipLabel>
-              </Chip>
-            </ConditionalLink>
+              <ChipLabel tag="span">{argument.title}</ChipLabel>
+            </Chip>
           ))}
         </div>
       </div>
 
       <div className="link-button mt-5">
-        <UniversalLink href="/argomenti" className="text-decoration-none">
-          <Button
-            color="primary"
-            className="view-all"
-            icon={false}
-            tag="button"
-          >
-            {intl?.formatMessage(messages.view_all)}
-          </Button>
-        </UniversalLink>
+        <Button
+          color="primary"
+          icon={false}
+          tag={UniversalLink}
+          href="/argomenti"
+          className="view-all text-decoration-none"
+        >
+          {intl?.formatMessage(messages.view_all)}
+        </Button>
       </div>
     </Container>
   ) : null;

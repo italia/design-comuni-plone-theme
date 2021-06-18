@@ -19,6 +19,18 @@ const messages = defineMessages({
     id: 'Hide',
     defaultMessage: 'Nascondi',
   },
+  searchTopic: {
+    id: 'Cerca per argomento',
+    defaultMessage: 'Cerca per argomento',
+  },
+  showAllTopics: {
+    id: 'Mostra tutti gli argomenti',
+    defaultMessage: 'Mostra tutti gli argomenti',
+  },
+  hideAllTopics: {
+    id: 'Non mostrare tutti gli argomenti',
+    defaultMessage: 'Non mostrare tutti gli argomenti',
+  },
 });
 
 export default function SearchTopics({
@@ -86,6 +98,11 @@ export default function SearchTopics({
                 setTopicChecked(topicId, e.currentTarget.checked)
               }
               aria-controls="search-results-region"
+              aria-label={
+                intl.formatMessage(messages.searchTopic) +
+                ' ' +
+                topics[topicId].label
+              }
             />
             <Label
               check
@@ -120,6 +137,9 @@ export default function SearchTopics({
               role="button"
               aria-expanded="false"
               aria-controls="collapseList"
+              aria-label={intl.formatMessage(
+                collapse ? messages.showAllTopics : messages.hideAllTopics,
+              )}
             >
               {intl.formatMessage(collapse ? messages.showAll : messages.hide)}
             </a>
