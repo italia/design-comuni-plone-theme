@@ -56,6 +56,14 @@ msgstr "Vedi"
 msgid "Cerca"
 msgstr "Cerca"
 
+#: components/ItaliaTheme/Search/SearchCTs
+msgid "Cerca i contenuti di tipo"
+msgstr ""
+
+#: components/ItaliaTheme/Search/SearchTopics
+msgid "Cerca per argomento"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
 msgid "Cerca per parola chiave"
@@ -135,6 +143,10 @@ msgstr "Etichetta"
 msgid "Hide"
 msgstr "Nascondi"
 
+#: components/ItaliaTheme/Search/SearchCTs
+msgid "Hide all content types"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 msgid "Icons placeholder"
 msgstr "Seleziona le icone dalla barra a lato"
@@ -198,6 +210,10 @@ msgstr "Mostra i filtri per percorso"
 msgid "Mostra lo sfondo del blocco"
 msgstr "Mostra lo sfondo del blocco"
 
+#: components/ItaliaTheme/Search/SearchTopics
+msgid "Mostra tutti gli argomenti"
+msgstr ""
+
 #: components/ItaliaTheme/Search/Search
 msgid "Nessun risultato ottenuto"
 msgstr "Nessun risultato ottenuto"
@@ -217,6 +233,10 @@ msgstr "Pagina successiva"
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
 msgid "Non ci sono punti da mostrare sulla mappa"
 msgstr "Non ci sono punti da mostrare sulla mappa"
+
+#: components/ItaliaTheme/Search/SearchTopics
+msgid "Non mostrare tutti gli argomenti"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
 msgid "Number placeholder"
@@ -290,6 +310,10 @@ msgid "Seguici su"
 msgstr "Seguici su"
 
 #: components/ItaliaTheme/Search/SearchCTs
+msgid "Select all content types or none"
+msgstr ""
+
+#: components/ItaliaTheme/Search/SearchCTs
 msgid "Select all or none"
 msgstr "Seleziona tutti o nessuno"
 
@@ -310,6 +334,10 @@ msgstr "Short Name"
 #: components/ItaliaTheme/Search/SearchTopics
 msgid "Show all"
 msgstr "Mostra tutto"
+
+#: components/ItaliaTheme/Search/SearchCTs
+msgid "Show all content types"
+msgstr ""
 
 #: components/ItaliaTheme/Search/Search
 msgid "Sono occorsi degli errori"
@@ -444,6 +472,10 @@ msgstr "Accedere al servizio"
 #: components/ItaliaTheme/View/Commons/Actions
 msgid "actions"
 msgstr "Vedi azioni"
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+msgid "advandedSectionsFilters"
+msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "allFilters"
@@ -781,6 +813,10 @@ msgstr "Descrizione"
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "descrizione_estesa"
 msgstr "Descrizione estesa"
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+msgid "deselectSearchSection"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
@@ -1491,9 +1527,18 @@ msgid "scrivi_a_mail"
 msgstr "Scrivi all'indirizzo"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Search/Search
 #: components/ItaliaTheme/View/Commons/SearchSectionForm
 msgid "search"
 msgstr "Cerca"
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+msgid "searchAllSections"
+msgstr ""
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+msgid "searchAllTopics"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock"
@@ -1600,6 +1645,7 @@ msgstr ""
 msgid "searchContentIn"
 msgstr "Cerca contenuti in"
 
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 msgid "searchInSection"
 msgstr ""
@@ -1705,6 +1751,10 @@ msgstr "Sede di"
 msgid "selectOtherArguments"
 msgstr "Seleziona gli altri argomenti"
 
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+msgid "selectTopicFilters"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 msgid "select_argument_sidebar"
 msgstr "Seleziona un argomento nella barra a lato"
@@ -1725,6 +1775,10 @@ msgstr "Servizi collegati"
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "servizi_offerti"
 msgstr "Servizi"
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+msgid "setMoreSearchOptions"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Sharing
 msgid "share"

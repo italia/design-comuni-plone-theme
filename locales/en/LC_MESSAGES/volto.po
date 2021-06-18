@@ -56,6 +56,14 @@ msgstr "Show"
 msgid "Cerca"
 msgstr "Search"
 
+#: components/ItaliaTheme/Search/SearchCTs
+msgid "Cerca i contenuti di tipo"
+msgstr "Search contents of type"
+
+#: components/ItaliaTheme/Search/SearchTopics
+msgid "Cerca per argomento"
+msgstr "Search by topic"
+
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
 msgid "Cerca per parola chiave"
@@ -135,6 +143,10 @@ msgstr ""
 msgid "Hide"
 msgstr "Hide"
 
+#: components/ItaliaTheme/Search/SearchCTs
+msgid "Hide all content types"
+msgstr "Hide all content types"
+
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 msgid "Icons placeholder"
 msgstr ""
@@ -198,6 +210,10 @@ msgstr ""
 msgid "Mostra lo sfondo del blocco"
 msgstr ""
 
+#: components/ItaliaTheme/Search/SearchTopics
+msgid "Mostra tutti gli argomenti"
+msgstr "Show all topics"
+
 #: components/ItaliaTheme/Search/Search
 msgid "Nessun risultato ottenuto"
 msgstr "No results found"
@@ -217,6 +233,10 @@ msgstr "Next page"
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
 msgid "Non ci sono punti da mostrare sulla mappa"
 msgstr "There are no points to show on the map"
+
+#: components/ItaliaTheme/Search/SearchTopics
+msgid "Non mostrare tutti gli argomenti"
+msgstr "Do not show all topics"
 
 #: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
 msgid "Number placeholder"
@@ -290,6 +310,10 @@ msgid "Seguici su"
 msgstr "Follow us on"
 
 #: components/ItaliaTheme/Search/SearchCTs
+msgid "Select all content types or none"
+msgstr "Select all content types or none"
+
+#: components/ItaliaTheme/Search/SearchCTs
 msgid "Select all or none"
 msgstr "Select all or none"
 
@@ -310,6 +334,10 @@ msgstr ""
 #: components/ItaliaTheme/Search/SearchTopics
 msgid "Show all"
 msgstr "Show all"
+
+#: components/ItaliaTheme/Search/SearchCTs
+msgid "Show all content types"
+msgstr "Show all content types"
 
 #: components/ItaliaTheme/Search/Search
 msgid "Sono occorsi degli errori"
@@ -444,6 +472,10 @@ msgstr "Log in to the service"
 #: components/ItaliaTheme/View/Commons/Actions
 msgid "actions"
 msgstr "View actions"
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+msgid "advandedSectionsFilters"
+msgstr "Go to advanced search by sections"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "allFilters"
@@ -781,6 +813,10 @@ msgstr "Description"
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "descrizione_estesa"
 msgstr "Extended description"
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+msgid "deselectSearchSection"
+msgstr "Do not search in section"
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
@@ -1491,9 +1527,18 @@ msgid "scrivi_a_mail"
 msgstr "Write to"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Search/Search
 #: components/ItaliaTheme/View/Commons/SearchSectionForm
 msgid "search"
 msgstr "Search"
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+msgid "searchAllSections"
+msgstr "Search in all sections"
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+msgid "searchAllTopics"
+msgstr "Search by all topics"
 
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock"
@@ -1600,6 +1645,7 @@ msgstr ""
 msgid "searchContentIn"
 msgstr "Search contents in"
 
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 msgid "searchInSection"
 msgstr ""
@@ -1705,6 +1751,10 @@ msgstr "Headquarters of"
 msgid "selectOtherArguments"
 msgstr ""
 
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+msgid "selectTopicFilters"
+msgstr "Select topics you want search for"
+
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 msgid "select_argument_sidebar"
 msgstr ""
@@ -1725,6 +1775,10 @@ msgstr "Related services"
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "servizi_offerti"
 msgstr "Services"
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+msgid "setMoreSearchOptions"
+msgstr "Go to other search options"
 
 #: components/ItaliaTheme/View/Commons/Sharing
 msgid "share"

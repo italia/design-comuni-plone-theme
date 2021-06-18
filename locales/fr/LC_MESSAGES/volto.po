@@ -73,6 +73,14 @@ msgstr "Voir"
 msgid "Cerca"
 msgstr "Rechercher"
 
+#: components/ItaliaTheme/Search/SearchCTs
+msgid "Cerca i contenuti di tipo"
+msgstr "Rechercher un contenu de type"
+
+#: components/ItaliaTheme/Search/SearchTopics
+msgid "Cerca per argomento"
+msgstr "Recherche par sujet"
+
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
 msgid "Cerca per parola chiave"
@@ -152,6 +160,10 @@ msgstr ""
 msgid "Hide"
 msgstr "Cacher"
 
+#: components/ItaliaTheme/Search/SearchCTs
+msgid "Hide all content types"
+msgstr "Masquer tous les types de contenu"
+
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 msgid "Icons placeholder"
 msgstr ""
@@ -215,6 +227,10 @@ msgstr ""
 msgid "Mostra lo sfondo del blocco"
 msgstr ""
 
+#: components/ItaliaTheme/Search/SearchTopics
+msgid "Mostra tutti gli argomenti"
+msgstr "Afficher tous les sujets"
+
 #: components/ItaliaTheme/Search/Search
 msgid "Nessun risultato ottenuto"
 msgstr "Aucun résultat obtenu"
@@ -234,6 +250,10 @@ msgstr "Page suivante"
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
 msgid "Non ci sono punti da mostrare sulla mappa"
 msgstr "Il n'y a aucun point à afficher sur la carte"
+
+#: components/ItaliaTheme/Search/SearchTopics
+msgid "Non mostrare tutti gli argomenti"
+msgstr "Ne pas afficher tous les sujets"
 
 #: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
 msgid "Number placeholder"
@@ -307,6 +327,10 @@ msgid "Seguici su"
 msgstr "Suivez-nous sur"
 
 #: components/ItaliaTheme/Search/SearchCTs
+msgid "Select all content types or none"
+msgstr "Sélectionner tous les types de contenu ou aucun"
+
+#: components/ItaliaTheme/Search/SearchCTs
 msgid "Select all or none"
 msgstr "Sélectionner tout ou aucun"
 
@@ -327,6 +351,10 @@ msgstr ""
 #: components/ItaliaTheme/Search/SearchTopics
 msgid "Show all"
 msgstr "Afficher tout"
+
+#: components/ItaliaTheme/Search/SearchCTs
+msgid "Show all content types"
+msgstr "Afficher tous les types de contenu"
 
 #: components/ItaliaTheme/Search/Search
 msgid "Sono occorsi degli errori"
@@ -461,6 +489,10 @@ msgstr "Accéder au service"
 #: components/ItaliaTheme/View/Commons/Actions
 msgid "actions"
 msgstr "Voir les actions"
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+msgid "advandedSectionsFilters"
+msgstr "Aller à la recherche avancée par rubrique"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "allFilters"
@@ -798,6 +830,10 @@ msgstr "Description"
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "descrizione_estesa"
 msgstr "Description détaillée"
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+msgid "deselectSearchSection"
+msgstr "Ne pas chercher dans les sections"
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
@@ -1508,9 +1544,18 @@ msgid "scrivi_a_mail"
 msgstr "Ecrire à l'adresse"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Search/Search
 #: components/ItaliaTheme/View/Commons/SearchSectionForm
 msgid "search"
 msgstr "Rechercher"
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+msgid "searchAllSections"
+msgstr "Rechercher dans toutes les sections"
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+msgid "searchAllTopics"
+msgstr "Rechercher tous les sujets"
 
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 msgid "searchBlock"
@@ -1617,6 +1662,7 @@ msgstr "Lieu"
 msgid "searchContentIn"
 msgstr "Rechercher du contenu dans"
 
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 msgid "searchInSection"
 msgstr ""
@@ -1722,6 +1768,10 @@ msgstr "Siège de"
 msgid "selectOtherArguments"
 msgstr ""
 
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+msgid "selectTopicFilters"
+msgstr "Sélectionnez les sujets que vous souhaitez rechercher"
+
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 msgid "select_argument_sidebar"
 msgstr ""
@@ -1742,6 +1792,10 @@ msgstr "Services associés"
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "servizi_offerti"
 msgstr "Services"
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+msgid "setMoreSearchOptions"
+msgstr "Aller à d'autres options de recherche"
 
 #: components/ItaliaTheme/View/Commons/Sharing
 msgid "share"

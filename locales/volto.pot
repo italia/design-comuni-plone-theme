@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-06-18T08:40:04.775Z\n"
+"POT-Creation-Date: 2021-06-18T10:25:05.018Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -66,6 +66,16 @@ msgstr ""
 #: components/ItaliaTheme/Header/HeaderSearch/HeaderSearch
 # defaultMessage: Cerca
 msgid "Cerca"
+msgstr ""
+
+#: components/ItaliaTheme/Search/SearchCTs
+# defaultMessage: Cerca i contenuti di tipo
+msgid "Cerca i contenuti di tipo"
+msgstr ""
+
+#: components/ItaliaTheme/Search/SearchTopics
+# defaultMessage: Cerca per argomento
+msgid "Cerca per argomento"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
@@ -164,6 +174,11 @@ msgstr ""
 msgid "Hide"
 msgstr ""
 
+#: components/ItaliaTheme/Search/SearchCTs
+# defaultMessage: Nascondi tutti i tipi di contenuto
+msgid "Hide all content types"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 # defaultMessage: Seleziona le icone dalla barra a lato
 msgid "Icons placeholder"
@@ -241,6 +256,11 @@ msgstr ""
 msgid "Mostra lo sfondo del blocco"
 msgstr ""
 
+#: components/ItaliaTheme/Search/SearchTopics
+# defaultMessage: Mostra tutti gli argomenti
+msgid "Mostra tutti gli argomenti"
+msgstr ""
+
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Nessun risultato ottenuto
 msgid "Nessun risultato ottenuto"
@@ -264,6 +284,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
 # defaultMessage: Non ci sono punti da mostrare sulla mappa
 msgid "Non ci sono punti da mostrare sulla mappa"
+msgstr ""
+
+#: components/ItaliaTheme/Search/SearchTopics
+# defaultMessage: Non mostrare tutti gli argomenti
+msgid "Non mostrare tutti gli argomenti"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/NumbersBlock/Block/EditBlock
@@ -354,6 +379,11 @@ msgid "Seguici su"
 msgstr ""
 
 #: components/ItaliaTheme/Search/SearchCTs
+# defaultMessage: Seleziona tutti i tipi di contenuti o nessuno
+msgid "Select all content types or none"
+msgstr ""
+
+#: components/ItaliaTheme/Search/SearchCTs
 # defaultMessage: Seleziona tutti o nessuno
 msgid "Select all or none"
 msgstr ""
@@ -378,6 +408,11 @@ msgstr ""
 #: components/ItaliaTheme/Search/SearchTopics
 # defaultMessage: Mostra tutto
 msgid "Show all"
+msgstr ""
+
+#: components/ItaliaTheme/Search/SearchCTs
+# defaultMessage: Mostra tutti i tipi di contenuto
+msgid "Show all content types"
 msgstr ""
 
 #: components/ItaliaTheme/Search/Search
@@ -537,6 +572,11 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/Actions
 # defaultMessage: Vedi azioni
 msgid "actions"
+msgstr ""
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+# defaultMessage: Vai alla ricerca per sezioni avanzata
+msgid "advandedSectionsFilters"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
@@ -953,6 +993,11 @@ msgstr ""
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 # defaultMessage: Descrizione estesa
 msgid "descrizione_estesa"
+msgstr ""
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+# defaultMessage: Non cercare nella sezione
+msgid "deselectSearchSection"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
@@ -1830,9 +1875,20 @@ msgid "scrivi_a_mail"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Search/Search
 #: components/ItaliaTheme/View/Commons/SearchSectionForm
 # defaultMessage: Cerca
 msgid "search"
+msgstr ""
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+# defaultMessage: Cerca in tutte le sezioni
+msgid "searchAllSections"
+msgstr ""
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+# defaultMessage: Cerca tutti gli argomenti
+msgid "searchAllTopics"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
@@ -1962,6 +2018,7 @@ msgstr ""
 msgid "searchContentIn"
 msgstr ""
 
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 # defaultMessage: Cerca nella sezione
 msgid "searchInSection"
@@ -2093,6 +2150,11 @@ msgstr ""
 msgid "selectOtherArguments"
 msgstr ""
 
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+# defaultMessage: Seleziona gli argomenti che vuoi cercare
+msgid "selectTopicFilters"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 # defaultMessage: Seleziona un argomento nella barra a lato
 msgid "select_argument_sidebar"
@@ -2117,6 +2179,11 @@ msgstr ""
 #: components/ItaliaTheme/View/UOView/UOView
 # defaultMessage: Servizi
 msgid "servizi_offerti"
+msgstr ""
+
+#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+# defaultMessage: Vai alle altre opzioni di ricerca
+msgid "setMoreSearchOptions"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Sharing

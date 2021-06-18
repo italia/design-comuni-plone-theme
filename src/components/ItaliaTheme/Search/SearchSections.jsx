@@ -3,6 +3,7 @@
  */
 import React, { useState, useEffect } from 'react';
 import cx from 'classnames';
+import { useIntl, defineMessages } from 'react-intl';
 
 import {
   Col,
@@ -13,6 +14,13 @@ import {
 import { Icon } from '@italia/components/ItaliaTheme';
 import { SearchUtils, Checkbox } from '@italia/components';
 
+const messages = defineMessages({
+  searchInSection: {
+    id: 'searchInSection',
+    defaultMessage: 'Cerca nella sezione',
+  },
+});
+
 export default function SearchSections({
   setSections,
   sections,
@@ -20,7 +28,7 @@ export default function SearchSections({
   toggleGroups = false,
 }) {
   const [collapse, setCollapse] = useState({});
-
+  const intl = useIntl();
   useEffect(() => {
     if (Object.keys(collapse).length === 0) {
       let defaultCollapse = {};
@@ -60,6 +68,11 @@ export default function SearchSections({
                 )
               }
               aria-controls="search-results-region"
+              aria-label={
+                intl.formatMessage(messages.searchInSection) +
+                ' ' +
+                sections[groupId].title
+              }
             />
 
             <Label
@@ -126,6 +139,11 @@ export default function SearchSections({
                       )
                     }
                     aria-controls="search-results-region"
+                    aria-label={
+                      intl.formatMessage(messages.searchInSection) +
+                      ' ' +
+                      sections[groupId].items[filterId].label
+                    }
                   />
                   <Label
                     check
