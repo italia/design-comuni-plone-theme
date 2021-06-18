@@ -17,7 +17,7 @@ const SliderTemplateSkeleton = (data) => {
 };
 
 SliderTemplateSkeleton.propTypes = {
-  linkMore: PropTypes.any,
+  linkHref: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };

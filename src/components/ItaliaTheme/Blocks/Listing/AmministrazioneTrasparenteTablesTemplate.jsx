@@ -1,27 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { useIntl, defineMessages } from 'react-intl';
+import { useIntl } from 'react-intl';
 import { useLocation } from 'react-router-dom';
 import { flatMapDeep } from 'lodash';
 import moment from 'moment';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
-import { flattenHTMLToAppURL, flattenToAppURL } from '@plone/volto/helpers';
+import { flattenHTMLToAppURL } from '@plone/volto/helpers';
 import { getTableRowData } from '@italia/helpers';
-
-const messages = defineMessages({
-  view_all: {
-    id: 'Vedi tutto',
-    defaultMessage: 'Vedi tutto',
-  },
-});
+import { ListingLinkMore } from '@italia/components/ItaliaTheme';
 
 const AmministrazioneTrasparenteTablesTemplate = ({
   items,
   isEditMode,
   title,
-  linkMore,
+  linkTitle,
+  linkHref,
   show_block_bg,
 }) => {
   const intl = useIntl();
@@ -95,16 +90,8 @@ const AmministrazioneTrasparenteTablesTemplate = ({
             })}
           </tbody>
         </table>
-        {linkMore?.href && (
-          <div className="link-button text-center my-4">
-            <UniversalLink
-              href={flattenToAppURL(linkMore.href)}
-              className="btn btn-tertiary"
-            >
-              {linkMore.title || intl.formatMessage(messages.view_all)}
-            </UniversalLink>
-          </div>
-        )}
+
+        <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
       </Container>
     </div>
   );
@@ -112,7 +99,8 @@ const AmministrazioneTrasparenteTablesTemplate = ({
 
 AmministrazioneTrasparenteTablesTemplate.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
-  linkMore: PropTypes.any,
+  linkTitle: PropTypes.any,
+  linkHref: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };

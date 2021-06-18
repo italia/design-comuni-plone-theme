@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { UniversalLink, ConditionalLink } from '@plone/volto/components';
+import { UniversalLink } from '@plone/volto/components';
 import { useIntl } from 'react-intl';
 import moment from 'moment';
 import 'moment/min/locales';
@@ -18,7 +18,7 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import Image from '@plone/volto/components/theme/Image/Image';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { CardCategory } from '@italia/components/ItaliaTheme';
+import { CardCategory, ListingLinkMore } from '@italia/components/ItaliaTheme';
 import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
 import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 
@@ -34,7 +34,8 @@ const CardWithImageTemplate = ({
   items,
   isEditMode,
   title,
-  linkMore,
+  linkTitle,
+  linkHref,
   show_block_bg = false,
   always_show_image = false,
   show_type = true,
@@ -185,13 +186,7 @@ const CardWithImageTemplate = ({
               );
             })}
           </Row>
-          {linkMore?.href && (
-            <div className="link-more">
-              <ConditionalLink condition={!isEditMode} to={linkMore.href}>
-                {linkMore.title}
-              </ConditionalLink>
-            </div>
-          )}
+          <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
         </Container>
       </div>
     </div>
@@ -200,7 +195,8 @@ const CardWithImageTemplate = ({
 
 CardWithImageTemplate.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
-  linkMore: PropTypes.any,
+  linkTitle: PropTypes.any,
+  linkHref: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };

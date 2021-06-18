@@ -10,8 +10,7 @@ import {
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
-import { flattenToAppURL } from '@plone/volto/helpers';
-import { ListingText } from '@italia/components/ItaliaTheme';
+import { ListingText, ListingLinkMore } from '@italia/components/ItaliaTheme';
 import cx from 'classnames';
 import { defineMessages, useIntl } from 'react-intl';
 import { viewDate } from '@italia/helpers';
@@ -67,7 +66,8 @@ const BandiInEvidenceTemplate = ({
   show_ente,
   show_tipologia,
   show_description,
-  linkMore,
+  linkTitle,
+  linkHref,
 }) => {
   const intl = useIntl();
 
@@ -215,16 +215,8 @@ const BandiInEvidenceTemplate = ({
             );
           })}
         </div>
-        {linkMore?.href && (
-          <div className="link-button text-center my-4">
-            <UniversalLink
-              href={flattenToAppURL(linkMore.href)}
-              className="btn btn-tertiary"
-            >
-              {linkMore.title || intl.formatMessage(messages.view_all)}
-            </UniversalLink>
-          </div>
-        )}
+
+        <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
       </Container>
     </div>
   );
@@ -232,7 +224,8 @@ const BandiInEvidenceTemplate = ({
 
 BandiInEvidenceTemplate.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
-  linkMore: PropTypes.any,
+  linkTitle: PropTypes.any,
+  linkHref: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };

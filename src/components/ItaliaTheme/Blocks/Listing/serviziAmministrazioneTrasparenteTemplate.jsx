@@ -6,6 +6,7 @@ import moment from 'moment';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
+import { ListingLinkMore } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   nominativo: {
@@ -26,7 +27,8 @@ const GridGalleryTemplate = ({
   items,
   isEditMode,
   title,
-  linkMore,
+  linkTitle,
+  linkHref,
   show_block_bg,
 }) => {
   const intl = useIntl();
@@ -92,6 +94,7 @@ const GridGalleryTemplate = ({
             ))}
           </tbody>
         </table>
+        <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
       </Container>
     </div>
   );
@@ -99,7 +102,8 @@ const GridGalleryTemplate = ({
 
 GridGalleryTemplate.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
-  linkMore: PropTypes.any,
+  linkTitle: PropTypes.any,
+  linkHref: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };

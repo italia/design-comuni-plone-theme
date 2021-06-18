@@ -31,7 +31,8 @@ const SimpleCardTemplate = (data) => {
 SimpleCardTemplate.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
   isEditMode: PropTypes.bool,
-  linkMore: PropTypes.any,
+  linkTitle: PropTypes.any,
+  linkHref: PropTypes.any,
 };
 
 export default SimpleCardTemplate;

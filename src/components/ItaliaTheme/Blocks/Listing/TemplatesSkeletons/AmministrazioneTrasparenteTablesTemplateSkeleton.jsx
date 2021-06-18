@@ -6,7 +6,8 @@ import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 const AmministrazioneTrasparenteTablesTemplate = ({
   isEditMode,
   title,
-  linkMore,
+  linkTitle,
+  linkHref,
   show_block_bg,
 }) => {
   return (
@@ -47,7 +48,7 @@ const AmministrazioneTrasparenteTablesTemplate = ({
               })}
             </tbody>
           </table>
-          {linkMore?.href && <div className="link-more text-center my-4"></div>}
+          {linkHref && <div className="link-more text-center my-4"></div>}
         </div>
       </Container>
     </div>
@@ -55,7 +56,8 @@ const AmministrazioneTrasparenteTablesTemplate = ({
 };
 
 AmministrazioneTrasparenteTablesTemplate.propTypes = {
-  linkMore: PropTypes.any,
+  linkTitle: PropTypes.any,
+  linkHref: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };

@@ -67,3 +67,4 @@ export Skeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSke
 export CardCalendar from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/CardCalendar';
 export ListingCategory from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/ListingCategory';
 export ListingText from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/ListingText';
+export ListingLinkMore from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/ListingLinkMore';

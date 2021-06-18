@@ -8,16 +8,9 @@ import 'moment/min/locales';
 import cx from 'classnames';
 import { OSMMap } from '@italia/addons/volto-venue';
 import { Row, Col, Container } from 'design-react-kit/dist/design-react-kit';
-
-import { UniversalLink } from '@plone/volto/components';
-
-import { flattenToAppURL } from '@plone/volto/helpers';
+import { ListingLinkMore } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
-  view_all: {
-    id: 'Vedi tutto',
-    defaultMessage: 'Vedi tutto',
-  },
   default_detail_link: {
     id: 'Vedi',
     defaultMessage: 'Vedi',
@@ -31,7 +24,8 @@ const messages = defineMessages({
 const MapTemplate = ({
   items,
   isEditMode,
-  linkMore,
+  linkTitle,
+  linkHref,
   title,
   show_map_full_width,
   map_size = 'medium',
@@ -92,16 +86,7 @@ const MapTemplate = ({
             intl.formatMessage(messages.no_markers)
           )}
 
-          {linkMore?.href && (
-            <div className="link-button text-center my-5">
-              <UniversalLink
-                href={flattenToAppURL(linkMore.href)}
-                className="btn btn-tertiary"
-              >
-                {linkMore.title || intl.formatMessage(messages.view_all)}
-              </UniversalLink>
-            </div>
-          )}
+          <ListingLinkMore title={linkTitle} href={linkHref} className="my-5" />
         </Container>
       </div>
     </div>
@@ -111,7 +96,8 @@ const MapTemplate = ({
 MapTemplate.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
   isEditMode: PropTypes.bool,
-  linkMore: PropTypes.any,
+  linkTitle: PropTypes.any,
+  linkHref: PropTypes.any,
 };
 
 export default MapTemplate;
