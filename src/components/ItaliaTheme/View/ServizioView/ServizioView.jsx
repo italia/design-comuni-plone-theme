@@ -21,6 +21,7 @@ import {
   HelpBox,
   ServizioPlaceholderAfterContent,
   RelatedItemInEvidence,
+  SkipToMainContent,
 } from '@italia/components/ItaliaTheme/View';
 
 import { Card, CardBody } from 'design-react-kit/dist/design-react-kit';
@@ -127,10 +128,6 @@ const messages = defineMessages({
     id: 'modulistica',
     defaultMessage: 'Modulistica',
   },
-  content: {
-    id: 'Go to content',
-    defaultMessage: 'Vai al contenuto',
-  },
 });
 
 /**
@@ -155,9 +152,7 @@ const ServizioView = ({ content }) => {
   return (
     <>
       <div className="container px-4 my-4 servizio-view">
-        <a className="sr-only" href="#main-content-section">
-          {intl.formatMessage(messages.content)}
-        </a>
+        <SkipToMainContent />
         <PageHeader
           content={content}
           readingtime={null}

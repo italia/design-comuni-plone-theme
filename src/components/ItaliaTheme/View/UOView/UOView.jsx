@@ -24,6 +24,7 @@ import {
   RichText,
   RelatedItemInEvidence,
   richTextHasContent,
+  SkipToMainContent,
 } from '@italia/components/ItaliaTheme/View';
 
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
@@ -110,10 +111,6 @@ const messages = defineMessages({
     id: 'uo_documenti',
     defaultMessage: 'Documenti',
   },
-  content: {
-    id: 'Go to content',
-    defaultMessage: 'Vai al contenuto',
-  },
 });
 
 /**
@@ -136,9 +133,7 @@ const UOView = ({ content }) => {
   return (
     <>
       <div className="container px-4 my-4 uo-view">
-        <a className="sr-only" href="#main-content-section">
-          {intl.formatMessage(messages.content)}
-        </a>
+        <SkipToMainContent />
         <PageHeader
           content={content}
           readingtime={null}

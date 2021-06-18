@@ -28,6 +28,7 @@ import {
   VenuePlaceholderAfterContent,
   RelatedItemInEvidence,
   richTextHasContent,
+  SkipToMainContent,
 } from '@italia/components/ItaliaTheme/View';
 import { contentFolderHasItems } from '@italia/helpers';
 import { OSMMap } from '@italia/addons/volto-venue';
@@ -130,10 +131,6 @@ const messages = defineMessages({
     id: 'Video',
     defaultMessage: 'Video',
   },
-  content: {
-    id: 'Go to content',
-    defaultMessage: 'Vai al contenuto',
-  },
 });
 
 /**
@@ -167,9 +164,7 @@ const VenueView = ({ content }) => {
   return (
     <>
       <div className="container px-4 my-4 luogo-view">
-        <a className="sr-only" href="#main-content-section">
-          {intl.formatMessage(messages.content)}
-        </a>
+        <SkipToMainContent />
         <PageHeader
           content={content}
           readingtime={null}

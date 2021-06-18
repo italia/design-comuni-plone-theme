@@ -170,15 +170,8 @@ msgstr ""
 msgid "Form"
 msgstr ""
 
-#: components/ItaliaTheme/View/BandoView/BandoView
-#: components/ItaliaTheme/View/DocumentoView/DocumentoView
-#: components/ItaliaTheme/View/EventoView/EventoView
-#: components/ItaliaTheme/View/NewsItemView/NewsItemView
+#: components/ItaliaTheme/View/Commons/SkipToMainContent
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/PersonaView/PersonaView
-#: components/ItaliaTheme/View/ServizioView/ServizioView
-#: components/ItaliaTheme/View/UOView/UOView
-#: components/ItaliaTheme/View/VenueView/VenueView
 msgid "Go to content"
 msgstr ""
 

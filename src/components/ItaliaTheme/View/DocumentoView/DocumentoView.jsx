@@ -24,6 +24,7 @@ import {
   RichText,
   RelatedItemInEvidence,
   richTextHasContent,
+  SkipToMainContent,
 } from '@italia/components/ItaliaTheme/View';
 
 const messages = defineMessages({
@@ -67,10 +68,6 @@ const messages = defineMessages({
     id: 'ulteriori_informazioni',
     defaultMessage: "Box d'aiuto",
   },
-  content: {
-    id: 'Go to content',
-    defaultMessage: 'Vai al contenuto',
-  },
 });
 
 /**
@@ -96,9 +93,7 @@ const DocumentoView = ({ content, location }) => {
   return (
     <>
       <div className="container px-4 my-4 newsitem-view">
-        <a className="sr-only" href="#main-content-section">
-          {intl.formatMessage(messages.content)}
-        </a>
+        <SkipToMainContent />
         <PageHeader
           content={content}
           readingtime={null}
