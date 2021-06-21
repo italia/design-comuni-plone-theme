@@ -171,7 +171,6 @@ msgid "Form"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/SkipToMainContent
-#: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
 msgid "Go to content"
 msgstr ""
 

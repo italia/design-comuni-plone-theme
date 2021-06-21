@@ -16,6 +16,7 @@ import {
   Metadata,
   NewsCard,
   PaginaArgomentoPlaceholderAfterContent,
+  SkipToMainContent,
 } from '@italia/components/ItaliaTheme/View';
 
 // import { getBaseUrl } from '@plone/volto/helpers';
@@ -53,10 +54,6 @@ const messages = defineMessages({
     id: 'related_uo',
     defaultMessage: 'Amministrazione',
   },
-  content: {
-    id: 'Go to content',
-    defaultMessage: 'Vai al contenuto',
-  },
 });
 
 /**
@@ -81,9 +78,7 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
   return (
     <>
       <div className="container px-4 my-4 uo-view">
-        <a className="sr-only" href="#main-content-section">
-          {intl.formatMessage(messages.content)}
-        </a>
+        <SkipToMainContent />
         <PageHeader
           content={content}
           readingtime={null}
