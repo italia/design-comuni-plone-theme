@@ -21,6 +21,7 @@ import {
   BandoPlaceholderAfterContent,
   RelatedItemInEvidence,
   richTextHasContent,
+  SkipToMainContent,
 } from '@italia/components/ItaliaTheme/View';
 
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -91,6 +92,7 @@ const BandoView = ({ content, location }) => {
   return (
     <>
       <div className="container px-4 my-4 bando-view">
+        <SkipToMainContent />
         <PageHeader
           content={content}
           readingtime={null}
@@ -106,6 +108,7 @@ const BandoView = ({ content, location }) => {
           </aside>
           <section
             ref={documentBody}
+            id="main-content-section"
             className="col-lg-8 it-page-sections-container"
           >
             {(richTextHasContent(content?.text) ||

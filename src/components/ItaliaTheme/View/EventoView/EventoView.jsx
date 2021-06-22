@@ -39,6 +39,7 @@ import {
   ContactLink,
   RelatedItemInEvidence,
   richTextHasContent,
+  SkipToMainContent,
 } from '@italia/components/ItaliaTheme/View';
 
 const messages = defineMessages({
@@ -167,6 +168,7 @@ const EventoView = ({ content, location }) => {
   return (
     <>
       <div className="container px-4 my-4 newsitem-view">
+        <SkipToMainContent />
         <PageHeader
           content={content}
           readingtime={null}
@@ -185,6 +187,7 @@ const EventoView = ({ content, location }) => {
           </aside>
           <section
             ref={documentBody}
+            id="main-content-section"
             className="col-lg-8 it-page-sections-container"
           >
             {/* HEADER IMAGE */}

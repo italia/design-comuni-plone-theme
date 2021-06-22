@@ -24,6 +24,7 @@ import {
   RichText,
   RelatedItemInEvidence,
   richTextHasContent,
+  SkipToMainContent,
 } from '@italia/components/ItaliaTheme/View';
 
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
@@ -132,6 +133,7 @@ const UOView = ({ content }) => {
   return (
     <>
       <div className="container px-4 my-4 uo-view">
+        <SkipToMainContent />
         <PageHeader
           content={content}
           readingtime={null}
@@ -148,6 +150,7 @@ const UOView = ({ content }) => {
           </aside>
           <section
             ref={documentBody}
+            id="main-content-section"
             className="col-lg-8 it-page-sections-container"
           >
             {/* HEADER IMAGE */}

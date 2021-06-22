@@ -21,6 +21,7 @@ import {
   HelpBox,
   ServizioPlaceholderAfterContent,
   RelatedItemInEvidence,
+  SkipToMainContent,
 } from '@italia/components/ItaliaTheme/View';
 
 import { Card, CardBody } from 'design-react-kit/dist/design-react-kit';
@@ -123,7 +124,6 @@ const messages = defineMessages({
     id: 'servizi_collegati',
     defaultMessage: 'Servizi collegati',
   },
-
   modulistica: {
     id: 'modulistica',
     defaultMessage: 'Modulistica',
@@ -152,6 +152,7 @@ const ServizioView = ({ content }) => {
   return (
     <>
       <div className="container px-4 my-4 servizio-view">
+        <SkipToMainContent />
         <PageHeader
           content={content}
           readingtime={null}
@@ -167,6 +168,7 @@ const ServizioView = ({ content }) => {
             <SideMenu data={sideMenuElements} />
           </aside>
           <section
+            id="main-content-section"
             className="col-lg-8 it-page-sections-container"
             ref={documentBody}
           >

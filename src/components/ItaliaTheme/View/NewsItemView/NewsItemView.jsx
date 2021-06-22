@@ -21,6 +21,7 @@ import {
   NewsItemPlaceholderAfterContent,
   RelatedItemInEvidence,
   richTextHasContent,
+  SkipToMainContent,
 } from '@italia/components/ItaliaTheme/View';
 
 // import { getBaseUrl } from '@plone/volto/helpers';
@@ -83,6 +84,7 @@ const NewsItemView = ({ content, location }) => {
   return (
     <>
       <div className="container px-4 my-4 newsitem-view">
+        <SkipToMainContent />
         <PageHeader
           content={content}
           readingtime={readingtime}
@@ -101,6 +103,7 @@ const NewsItemView = ({ content, location }) => {
           </aside>
           <section
             className="col-lg-8 it-page-sections-container"
+            id="main-content-section"
             ref={documentBody}
           >
             {/* HEADER IMAGE */}
