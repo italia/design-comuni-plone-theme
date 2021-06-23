@@ -1,3 +1,10 @@
+### [3.9.1](https://github.com/RedTurtle/design-volto-theme/compare/v3.9.0...v3.9.1) (2021-06-23)
+
+
+### Bug Fixes
+
+* fix VideoGallery editing video url ([1e1ce8e](https://github.com/RedTurtle/design-volto-theme/commit/1e1ce8ed081034f92e4282f1c137a1c587197eae))
+
 ## [3.9.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.8.6...v3.9.0) (2021-06-23)
 
 
