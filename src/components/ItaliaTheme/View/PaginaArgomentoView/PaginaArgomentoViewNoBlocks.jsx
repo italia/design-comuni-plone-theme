@@ -17,6 +17,8 @@ import {
   NewsCard,
   PaginaArgomentoPlaceholderAfterContent,
   SkipToMainContent,
+  RelatedItems,
+  RelatedItemInEvidence,
 } from '@italia/components/ItaliaTheme/View';
 
 // import { getBaseUrl } from '@plone/volto/helpers';
@@ -230,6 +232,8 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
         </div>
         <PaginaArgomentoPlaceholderAfterContent content={content} />
       </div>
+      <RelatedItems content={content} />
+      <RelatedItemInEvidence content={content} />
     </>
   );
 };
