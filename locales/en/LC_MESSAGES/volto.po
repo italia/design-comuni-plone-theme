@@ -1215,6 +1215,7 @@ msgid "modulo_formati_alternativi"
 msgstr "Alternative formats"
 
 #: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
+#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 msgid "natural_image_size"
 msgstr "Do not alter natural image sizes"

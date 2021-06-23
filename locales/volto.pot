@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-06-23T06:27:31.913Z\n"
+"POT-Creation-Date: 2021-06-22T15:43:03.843Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1490,6 +1490,7 @@ msgid "modulo_formati_alternativi"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
+#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 # defaultMessage: undefined
 msgid "natural_image_size"
