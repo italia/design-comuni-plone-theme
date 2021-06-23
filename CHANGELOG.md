@@ -1,3 +1,31 @@
+## [3.9.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.8.6...v3.9.0) (2021-06-23)
+
+
+### Features
+
+* add opt for natural img size for newshome block ([d3df8e6](https://github.com/RedTurtle/design-volto-theme/commit/d3df8e6bf5e53fdff4bb4f0299a78e29798d0900))
+* **a11y:** add skiplink in main content area ([78fada8](https://github.com/RedTurtle/design-volto-theme/commit/78fada84e8d4ed31d6bd1b12415e105d02c849cb))
+
+
+### Bug Fixes
+
+* ay11 fixes ([46e24f4](https://github.com/RedTurtle/design-volto-theme/commit/46e24f47fddb1b3ddbf4796a439380464173a79f))
+* ay11 searchResults ([910f1b0](https://github.com/RedTurtle/design-volto-theme/commit/910f1b0867f09fe1ebdf4f0a9cf932104f688863))
+* **a11y:** add aria-hidden to design icon ([1052419](https://github.com/RedTurtle/design-volto-theme/commit/1052419ec42a1f0bc5b6f70da26ea000fdb20bda))
+* fixed ay11 for search modal ([3932fe4](https://github.com/RedTurtle/design-volto-theme/commit/3932fe4b4958851f5ee84de5e7445e3428482051))
+
+
+### Changes
+
+* moved as common SkipToMainContent ([823e94b](https://github.com/RedTurtle/design-volto-theme/commit/823e94b91c1f71c9de766cdf485c5d4a75aef2dd))
+* skip to main content ([ee1a97f](https://github.com/RedTurtle/design-volto-theme/commit/ee1a97f0341b7cde787bea278ca41c3b364a6fe5))
+
+
+### Maintenance
+
+* updated translations ([b7f6186](https://github.com/RedTurtle/design-volto-theme/commit/b7f6186d5a97e839dd8768572d8a931282f252ad))
+* viewed related items in Argomento ([3e8acb5](https://github.com/RedTurtle/design-volto-theme/commit/3e8acb5dfd111bd39fad3679678ea743e52111fa))
+
 ### [3.8.6](https://github.com/RedTurtle/design-volto-theme/compare/v3.8.5...v3.8.6) (2021-06-16)
 
 
