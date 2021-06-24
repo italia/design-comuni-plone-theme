@@ -161,6 +161,10 @@ msgstr ""
 msgid "Go to content"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
+msgid "Hero"
+msgstr ""
+
 #: components/ItaliaTheme/Search/SearchCTs
 #: components/ItaliaTheme/Search/SearchTopics
 msgid "Hide"
@@ -535,6 +539,10 @@ msgstr ""
 
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "amministrazione"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
+msgid "appStoreLink"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSlim/ArLogin
@@ -1382,6 +1390,10 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "placeholder"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
+msgid "playStoreLink"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/View
