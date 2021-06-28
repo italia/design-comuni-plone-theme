@@ -294,3 +294,17 @@ div.sticky-wrapper {
 form.ui.form.vertical-form fieldset.invisible {
   min-width: 0;
 }
+
+dl.trasparenza-fields {
+  margin-top: 1rem;
+
+  > div {
+    dd {
+      margin-bottom: 1rem;
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

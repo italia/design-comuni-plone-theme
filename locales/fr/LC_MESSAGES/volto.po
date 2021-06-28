@@ -510,6 +510,10 @@ msgstr "Documents attachés"
 msgid "altre_cariche"
 msgstr "Autres bureaux"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "altre_modalita_invio"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "altri_documenti"
 msgstr "Autres documents"
@@ -562,6 +566,10 @@ msgstr "Pièce jointe"
 #: components/ItaliaTheme/View/Commons/Attachments
 msgid "attachments"
 msgstr "Pièces jointes"
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "atti_documenti_corredo"
+msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "atto_nomina"
@@ -790,6 +798,10 @@ msgstr "Gens"
 msgid "curriculum_vitae"
 msgstr "Curriculum vitae"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "customer_satisfaction"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "data_conclusione_incarico"
 msgstr "Date de conclusion de la mission"
@@ -810,6 +822,7 @@ msgstr "Date"
 msgid "date_e_orari"
 msgstr "Dates et horaires"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "decorrenza_termine"
 msgstr "Date effective"
@@ -832,6 +845,7 @@ msgid "desc"
 msgstr "Liens rapides"
 
 #: components/ItaliaTheme/View/BandoView/BandoView
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 #: components/ItaliaTheme/View/VenueView/VenueView
 #: helpers/amministrazioneTrasparenteHelper
@@ -863,6 +877,7 @@ msgstr "Détail type de procédure"
 msgid "dichiarazione_dei_redditi"
 msgstr "Déclaration d'impôts"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "dirigente"
 msgstr "Directeur"
@@ -1024,6 +1039,7 @@ msgstr ""
 msgid "fax_sede"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "file_correlato"
 msgstr "Dossier connexe"
@@ -1041,6 +1057,7 @@ msgstr "Filtres"
 msgid "find"
 msgstr "Rechercher"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "fine_termine"
 msgstr "Fin du mandat"
@@ -1109,6 +1126,7 @@ msgstr "Index des pages"
 msgid "insert_filter"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "iter_del_procedimento"
 msgstr "Procédure"
@@ -1186,6 +1204,7 @@ msgstr "min"
 msgid "modalita_accesso"
 msgstr "Mode d'accès"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "modalita_di_avvio"
 msgstr "Mode d'amorçage"
@@ -1193,6 +1212,10 @@ msgstr "Mode d'amorçage"
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "modalita_richiedere_informazioni_procedimentodali"
 msgstr "Comment demander des informations sur la procédure"
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "modalita_richiesta_informazioni"
+msgstr ""
 
 #: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
 #: components/ItaliaTheme/View/Commons/Metadata
@@ -1233,6 +1256,7 @@ msgstr "Nouvelles"
 msgid "news_item_contenuto"
 msgstr "Contenu"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "no"
 msgstr "No"
@@ -1330,6 +1354,7 @@ msgstr "Trier par"
 msgid "organizzazione_riferimento"
 msgstr "Organisation de référence"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "organo_competente_provvedimento_finale"
 msgstr "Organisme compétent adoptant la disposition finale"
@@ -1345,6 +1370,10 @@ msgstr "Autres sujets"
 #: components/ItaliaTheme/View/Commons/Metadata
 msgid "other_info"
 msgstr "Informations complémentaires"
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "pagamenti"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/CuredBy
 msgid "page_cured_by"
@@ -1386,10 +1415,15 @@ msgstr ""
 msgid "print"
 msgstr "Imprimer"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "procedura_online"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "procedure_collegate"
 msgstr "Procédures liées au résultat"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "provvedimento_finale"
 msgstr "Disposition finale"
@@ -1439,10 +1473,15 @@ msgstr "Supprimer l'option"
 msgid "removeTopic"
 msgstr "Supprimer le sujet"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "reperimento_modulistica"
+msgstr ""
+
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "responsabile"
 msgstr "Responsable"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "responsabile_del_procedimento"
 msgstr "Responsable de la procédure"
@@ -1455,6 +1494,11 @@ msgstr "Responsable de la procédure et unité organisationnelle compétente"
 msgid "responsabile_di"
 msgstr "Responsable de"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "responsabile_procedimento"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "riferimenti_normativi"
 msgstr "Exigences normatives"
@@ -1843,6 +1887,7 @@ msgstr ""
 msgid "show_type"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "silenzio_assenso"
 msgstr "Silence assentiment"
@@ -1873,6 +1918,10 @@ msgstr "Aller au contenu"
 msgid "skiplink-navigation"
 msgstr "Aller à la navigation"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "soggetti_esterni"
+msgstr ""
+
 #: components/ItaliaTheme/Search/Search
 msgid "sort_on_date"
 msgstr "Date (la plus récente en premier)"
@@ -1900,6 +1949,10 @@ msgstr "Début de l'événement"
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "strumenti_di_tutela"
 msgstr "Outils de protection"
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "strumenti_tutela"
+msgstr ""
 
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "struttura"
@@ -1931,6 +1984,7 @@ msgstr "Téléphone"
 msgid "tempi_e_scadenze"
 msgstr "Délais et délais"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "tempo_medio"
 msgstr "Temps moyen"
@@ -1939,6 +1993,7 @@ msgstr "Temps moyen"
 msgid "termine"
 msgstr "terme"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "termini_del_procedimento"
 msgstr "Termes de la procédure"
@@ -1966,6 +2021,7 @@ msgstr "Type de personne"
 msgid "title"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "titolare_potere_sostitutivo"
 msgstr "Détenteur du pouvoir de substitution"
@@ -1984,6 +2040,10 @@ msgstr "au"
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderTassonomiaArgomenti
 msgid "topics"
 msgstr "Sujets"
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "trasparenza"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccountLink"
@@ -2006,6 +2066,7 @@ msgid "ufficio_responsabile"
 msgstr "Bureau responsable"
 
 #: components/ItaliaTheme/View/BandoView/BandoView
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/DocumentoView/DocumentoView
 #: components/ItaliaTheme/View/EventoView/EventoView
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
@@ -2019,6 +2080,7 @@ msgstr "Informations complémentaires"
 msgid "unita_operativa"
 msgstr "unité opérationnelle"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "unita_organizzativa_competente"
 msgstr "Unité organisationnelle compétente pour la procédure"
@@ -2062,6 +2124,7 @@ msgstr "Contraintes"
 msgid "website"
 msgstr "Site Internet"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "yes"
 msgstr "Oui"
