@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-06-22T15:43:03.843Z\n"
+"POT-Creation-Date: 2021-06-24T13:58:00.274Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -24,6 +24,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
 # defaultMessage: Aggiungi elemento
 msgid "Add accordion item"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Edit
+# defaultMessage: Aggiungi un campo
+msgid "Add field"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
@@ -63,6 +68,7 @@ msgstr ""
 msgid "Card detail label"
 msgstr ""
 
+#: components/ItaliaTheme/Header/HeaderCenter
 #: components/ItaliaTheme/Header/HeaderSearch/HeaderSearch
 # defaultMessage: Cerca
 msgid "Cerca"
@@ -84,6 +90,8 @@ msgstr ""
 msgid "Cerca per parola chiave"
 msgstr ""
 
+#: components/FileWidget
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Clicca qui per sostituire il file
 msgid "Clicca qui per sostituire il file"
@@ -161,11 +169,33 @@ msgstr ""
 msgid "Dimensione della mappa"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
+# defaultMessage: Email inviata correttamente
+msgid "Email Success"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Form
+# defaultMessage: La tua mail è stata inviata correttamente
+msgid "Email sent"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
+# defaultMessage: Errore
+msgid "Error"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Etichetta
 msgid "Etichetta path filter"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Form
+msgid "Form"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/SkipToMainContent
@@ -343,6 +373,8 @@ msgstr ""
 msgid "Required"
 msgstr ""
 
+#: components/FileWidget
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Rimuovi il file
 msgid "Rimuovi il file"
@@ -378,6 +410,7 @@ msgstr ""
 msgid "SearchServicesTitle"
 msgstr ""
 
+#: components/ItaliaTheme/Footer/FooterSocials
 #: components/ItaliaTheme/Header/SocialHeader
 # defaultMessage: Seguici su
 msgid "Seguici su"
@@ -393,6 +426,8 @@ msgstr ""
 msgid "Select all or none"
 msgstr ""
 
+#: components/FileWidget
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Seleziona un file
 msgid "Seleziona un file"
@@ -431,6 +466,7 @@ msgid "Subscribe"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
+#: components/ItaliaTheme/Blocks/Form/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 # defaultMessage: Text...
 msgid "Text placeholder"
@@ -445,6 +481,8 @@ msgid "Title"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body
+#: components/ItaliaTheme/Blocks/Form/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 # defaultMessage: Title...
 msgid "Title placeholder"
@@ -459,16 +497,22 @@ msgstr ""
 msgid "Titolo"
 msgstr ""
 
+#: components/FileWidget
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Trascina qui il file...
 msgid "Trascina qui il file ..."
 msgstr ""
 
+#: components/FileWidget
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Trascina qui un file per caricare un nuovo file
 msgid "Trascina qui un file per caricare un nuovo file"
 msgstr ""
 
+#: components/FileWidget
+#: components/ItaliaTheme/Blocks/Form/Widgets/FileWidget
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Trascina qui un file per sostituire quello esistente
 msgid "Trascina qui un file per sostituire quello esistente"
@@ -486,12 +530,13 @@ msgstr ""
 msgid "Type description…"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Accordion/TextEditorWidget
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 #: components/ItaliaTheme/manage/Widgets/TextEditorWidget
-# defaultMessage: Digita il testo…
+# defaultMessage: Type text…
 msgid "Type text…"
 msgstr ""
 
@@ -523,6 +568,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/Accordion/Block/ViewBlock
+#: components/ItaliaTheme/Blocks/Form/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/ViewBlock
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
@@ -538,7 +584,6 @@ msgid "Vedi l'immagine"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate
-#: components/ItaliaTheme/Blocks/Listing/Commons/ListingLinkMore
 #: components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate
 #: components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
@@ -589,16 +634,19 @@ msgid "advandedSectionsFilters"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 # defaultMessage: Tutto
 msgid "allFilters"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 # defaultMessage: Tutte le date
 msgid "allOptions"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 # defaultMessage: Tutti gli argomenti
 msgid "allTopics"
 msgstr ""
@@ -611,6 +659,11 @@ msgstr ""
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 # defaultMessage: Altre cariche
 msgid "altre_cariche"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+# defaultMessage: Altre modalità di invio
+msgid "altre_modalita_invio"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView
@@ -680,6 +733,11 @@ msgstr ""
 msgid "attachments"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+# defaultMessage: Atti e documenti a corredo dell'istanza
+msgid "atti_documenti_corredo"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 # defaultMessage: Atto di nomina
 msgid "atto_nomina"
@@ -696,6 +754,7 @@ msgid "back"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 # defaultMessage: Torna alla ricerca
 msgid "backToSearch"
 msgstr ""
@@ -850,6 +909,7 @@ msgid "close"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 # defaultMessage: Chiudi cerca
 msgid "closeSearch"
 msgstr ""
@@ -871,6 +931,7 @@ msgid "competenze"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 # defaultMessage: Conferma
 msgid "confirmSearch"
 msgstr ""
@@ -942,6 +1003,11 @@ msgstr ""
 msgid "curriculum_vitae"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+# defaultMessage: Risultati indagini di customer satisfaction
+msgid "customer_satisfaction"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 # defaultMessage: Ha fatto parte dell'organizzazione comunale fino al
 msgid "data_conclusione_incarico"
@@ -967,6 +1033,7 @@ msgstr ""
 msgid "date_e_orari"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Decorrenza termine
 msgid "decorrenza_termine"
@@ -992,6 +1059,7 @@ msgid "desc"
 msgstr ""
 
 #: components/ItaliaTheme/View/BandoView/BandoView
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 #: components/ItaliaTheme/View/VenueView/VenueView
 #: helpers/amministrazioneTrasparenteHelper
@@ -1031,6 +1099,7 @@ msgstr ""
 msgid "dichiarazione_dei_redditi"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Dirigente
 msgid "dirigente"
@@ -1242,12 +1311,14 @@ msgstr ""
 msgid "fax_sede"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: File correlato
 msgid "file_correlato"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 # defaultMessage: Filtri
 msgid "filters"
 msgstr ""
@@ -1263,9 +1334,138 @@ msgstr ""
 msgid "find"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Fine termine
 msgid "fine_termine"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Mittente di default
+msgid "form_default_from"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Questo indirizzo verrà utilizzato come mittente della mail con i dati del form
+msgid "form_default_from_description"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Oggetto della mail
+msgid "form_default_subject"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Edit
+#: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
+# defaultMessage: Invia
+msgid "form_default_submit_label"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Edit
+# defaultMessage: Attenzione!
+msgid "form_edit_warning"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Edit
+# defaultMessage: Inserire un campo di tipo "E-mail mittente". Se non è presente, oppure è presente ma non viene compilato dall'utente, l'indirizzo del mittente della mail sarà quello configurato dalla sidebar di destra.
+msgid "form_edit_warning_from"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Form
+#: components/ItaliaTheme/Blocks/Form/FormView
+# defaultMessage: Compila i campi richiesti
+msgid "form_empty_values_validation"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Descrizione
+msgid "form_field_description"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Valori possibili
+msgid "form_field_input_values"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Etichetta
+msgid "form_field_label"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Nome
+msgid "form_field_name"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Il nome deve contenere spazi, e può contenere solo caratteri alfanumerici oltre ai caratteri "-" e "_". Il nome coincide con il nome del parametro.
+msgid "form_field_name_description"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Obbligatorio
+msgid "form_field_required"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Tipo di campo
+msgid "form_field_type"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Allegato
+msgid "form_field_type_attachment"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Scelta multipla
+msgid "form_field_type_checkbox"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Data
+msgid "form_field_type_date"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: E-mail
+msgid "form_field_type_from"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Scelta singola
+msgid "form_field_type_radio"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Lista
+msgid "form_field_type_select"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Testo
+msgid "form_field_type_text"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Area di testo
+msgid "form_field_type_textarea"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Field
+# defaultMessage: Seleziona un valore
+msgid "form_select_a_value"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Testo sul bottone di invio
+msgid "form_submit_label"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Form/Sidebar
+# defaultMessage: Destinatari
+msgid "form_to"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
@@ -1348,6 +1548,7 @@ msgstr ""
 msgid "insert_filter"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Iter del procedimento
 msgid "iter_del_procedimento"
@@ -1447,6 +1648,7 @@ msgstr ""
 msgid "modalita_accesso"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Modalità di avvio
 msgid "modalita_di_avvio"
@@ -1455,6 +1657,11 @@ msgstr ""
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Modalità per richiedere informazioni sul procedimento
 msgid "modalita_richiedere_informazioni_procedimentodali"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+# defaultMessage: Modalità per richiedere informazioni sul procedimento
+msgid "modalita_richiesta_informazioni"
 msgstr ""
 
 #: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
@@ -1506,6 +1713,7 @@ msgstr ""
 msgid "news_item_contenuto"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: No
 msgid "no"
@@ -1550,50 +1758,59 @@ msgid "numero_progressivo_cs"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 # defaultMessage: Contenuto attivo
 msgid "optionActiveContentButton"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Verranno esclusi dalla ricerca i contenuti archiviati e non più validi come gli eventi terminati o i bandi scaduti.
 msgid "optionActiveContentInfo"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Cerca solo tra i contenuti attivi
 msgid "optionActiveContentLabel"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 # defaultMessage: Data fine
 msgid "optionDateEnd"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Al
 msgid "optionDateEndButton"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 # defaultMessage: inserisci la data in formato gg/mm/aaaa
 msgid "optionDatePlaceholder"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 # defaultMessage: Data inizio
 msgid "optionDateStart"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Dal
 msgid "optionDateStartButton"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Opzioni
 msgid "options"
@@ -1620,6 +1837,7 @@ msgstr ""
 msgid "organizzazione_riferimento"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Organo competente adozione provvedimento finale
 msgid "organo_competente_provvedimento_finale"
@@ -1638,6 +1856,11 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/Metadata
 # defaultMessage: Ulteriori informazioni
 msgid "other_info"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+# defaultMessage: Pagamenti previsti e modalità
+msgid "pagamenti"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/CuredBy
@@ -1690,11 +1913,17 @@ msgstr ""
 msgid "print"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+# defaultMessage: Procedura informatizzata online
+msgid "procedura_online"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 # defaultMessage: Procedure collegate all'esito
 msgid "procedure_collegate"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Provvedimento finale
 msgid "provvedimento_finale"
@@ -1744,14 +1973,21 @@ msgid "related_uo"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Rimuovi opzione
 msgid "removeOption"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 # defaultMessage: Rimuovi argomento
 msgid "removeTopic"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+# defaultMessage: Dove reperire la modulistica
+msgid "reperimento_modulistica"
 msgstr ""
 
 #: components/ItaliaTheme/View/UOView/UOView
@@ -1759,6 +1995,7 @@ msgstr ""
 msgid "responsabile"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Responsabile del procedimento
 msgid "responsabile_del_procedimento"
@@ -1774,6 +2011,12 @@ msgstr ""
 msgid "responsabile_di"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+# defaultMessage: Responsabile del procedimento
+msgid "responsabile_procedimento"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Riferimenti normativi
 msgid "riferimenti_normativi"
@@ -1885,6 +2128,7 @@ msgid "scrivi_a_mail"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 #: components/ItaliaTheme/View/Commons/SearchSectionForm
 # defaultMessage: Cerca
@@ -2035,6 +2279,7 @@ msgid "searchInSection"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 # defaultMessage: Cerca nel sito
 msgid "searchLabel"
 msgstr ""
@@ -2145,6 +2390,7 @@ msgid "section_undefined"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Sezioni
 msgid "sections"
@@ -2263,6 +2509,7 @@ msgstr ""
 msgid "show_type"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Silenzio assenso/Dichiarazione dell'interessato sostitutiva del provvedimento finale
 msgid "silenzio_assenso"
@@ -2288,18 +2535,26 @@ msgid "situazione_patrimoniale"
 msgstr ""
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
+#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 # defaultMessage: Skip to footer
 msgid "skiplink-footer"
 msgstr ""
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
+#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 # defaultMessage: Skip to main content
 msgid "skiplink-main-content"
 msgstr ""
 
 #: components/ItaliaTheme/SkipLinks/SkipLinks
+#: components/ItaliaTheme/SkipLinksC/SkipLinksC
 # defaultMessage: Skip to navigation
 msgid "skiplink-navigation"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+# defaultMessage: Soggetti esterni, nonché, strutture interne coinvolte nel procedimento
+msgid "soggetti_esterni"
 msgstr ""
 
 #: components/ItaliaTheme/Search/Search
@@ -2335,6 +2590,11 @@ msgstr ""
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Strumenti di tutela
 msgid "strumenti_di_tutela"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+# defaultMessage: Strumenti di tutela
+msgid "strumenti_tutela"
 msgstr ""
 
 #: components/ItaliaTheme/View/UOView/UOView
@@ -2374,6 +2634,7 @@ msgstr ""
 msgid "tempi_e_scadenze"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Tempo medio
 msgid "tempo_medio"
@@ -2384,6 +2645,7 @@ msgstr ""
 msgid "termine"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Termini del procedimento
 msgid "termini_del_procedimento"
@@ -2418,6 +2680,7 @@ msgstr ""
 msgid "title"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Titolare del potere sostitutivo
 msgid "titolare_potere_sostitutivo"
@@ -2435,10 +2698,16 @@ msgid "to"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
+#: components/ItaliaTheme/Header/SearchModal
 #: components/ItaliaTheme/Search/Search
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderTassonomiaArgomenti
 # defaultMessage: Argomenti
 msgid "topics"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+# defaultMessage: Trasparenza
+msgid "trasparenza"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
@@ -2467,6 +2736,7 @@ msgid "ufficio_responsabile"
 msgstr ""
 
 #: components/ItaliaTheme/View/BandoView/BandoView
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/DocumentoView/DocumentoView
 #: components/ItaliaTheme/View/EventoView/EventoView
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
@@ -2482,12 +2752,14 @@ msgstr ""
 msgid "unita_operativa"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Unità organizzativa competente del procedimento
 msgid "unita_organizzativa_competente"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/RenderBlocks
+#: components/ItaliaTheme/View/Commons/TextOrBlocks
 # defaultMessage: Blocco sconosciuto
 msgid "unknownBlock"
 msgstr ""
@@ -2535,6 +2807,7 @@ msgstr ""
 msgid "website"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Si
 msgid "yes"
