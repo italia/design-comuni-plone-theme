@@ -15,6 +15,8 @@ import {
   RelatedItemInEvidence,
   richTextHasContent,
   PageHeaderTassonomiaArgomenti,
+  Sharing,
+  Actions,
 } from '@italia/components/ItaliaTheme/View';
 import { defineMessages, useIntl } from 'react-intl';
 import { Container } from 'design-react-kit/dist/design-react-kit';
@@ -55,7 +57,8 @@ const PageView = ({ content, token, location, history }) => {
       content.immagine_testata?.scales ||
       richTextHasContent(content.info_testata) ||
       content.mostra_navigazione ||
-      content?.tassonomia_argomenti?.length > 0;
+      content?.tassonomia_argomenti?.length > 0 ||
+      content.mostra_bottoni_condivisione;
 
     return (
       <>
@@ -80,6 +83,12 @@ const PageView = ({ content, token, location, history }) => {
               </div>
               {rightHeaderHasContent && (
                 <div className="col-lg-4 offset-lg-2">
+                  {content.mostra_bottoni_condivisione && (
+                    <div className="px-4 mb-4">
+                      <Sharing url={content['@id']} title={content.title} />
+                      <Actions url={content['@id']} title={content.title} />
+                    </div>
+                  )}
                   {content.immagine_testata?.scales && (
                     <div className="header-image px-4 mb-3">
                       <Image
