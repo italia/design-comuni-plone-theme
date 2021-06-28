@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import redraft from 'redraft';
 import cx from 'classnames';
 import { TextEditorWidget } from '@italia/components/ItaliaTheme';
-import { ConditionalLink } from '@plone/volto/components';
+import { UniversalLink } from '@plone/volto/components';
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({
@@ -143,9 +143,9 @@ const Block = ({
                 icon={false}
                 size="lg"
                 outline
-                tag={ConditionalLink}
-                condition={!inEditMode}
-                to={data.ctaLink}
+                tag={UniversalLink}
+                disabled={inEditMode}
+                href={data.ctaLink}
                 openLinkInNewTab={!!data.openLinkInNewTab}
                 title={
                   !!data.openLinkInNewTab
