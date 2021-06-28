@@ -58,6 +58,10 @@ import iconBlocksSVG from '@plone/volto/icons/apps.svg';
 import IconBlocksView from '@italia/components/ItaliaTheme/Blocks/IconBlocks/View';
 import IconBlocksEdit from '@italia/components/ItaliaTheme/Blocks/IconBlocks/Edit';
 
+import flashSVG from '@plone/volto/icons/flash.svg';
+import CTABlockView from '@italia/components/ItaliaTheme/Blocks/CTABlock/View';
+import CTABlockEdit from '@italia/components/ItaliaTheme/Blocks/CTABlock/Edit';
+
 import CharCounterDescriptionWidget from '@italia/components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget';
 import PageView from '@italia/components/ItaliaTheme/View/PageView/PageView';
 import NewsItemView from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemView';
@@ -394,6 +398,22 @@ export default function applyConfig(voltoConfig) {
       edit: TwitterPostsEdit,
       restricted: false,
       mostUsed: false,
+      security: {
+        addPermission: [],
+        view: [],
+      },
+      sidebarTab: 1,
+    },
+    cta_block: {
+      id: 'cta_block',
+      title: 'Blocco CTA',
+      icon: flashSVG,
+      group: 'text',
+      view: CTABlockView,
+      edit: CTABlockEdit,
+      restricted: false,
+      mostUsed: false,
+      blockHasOwnFocusManagement: true,
       security: {
         addPermission: [],
         view: [],
