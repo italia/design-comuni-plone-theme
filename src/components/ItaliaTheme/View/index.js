@@ -38,6 +38,8 @@ export CuredBy from '@italia/components/ItaliaTheme/View/Commons/CuredBy';
 export Metadata from '@italia/components/ItaliaTheme/View/Commons/Metadata';
 export SearchSectionForm from '@italia/components/ItaliaTheme/View/Commons/SearchSectionForm';
 export PageHeaderNav from '@italia/components/ItaliaTheme/View/Commons/PageHeaderNav';
+export SkipToMainContent from '@italia/components/ItaliaTheme/View/Commons/SkipToMainContent';
+export TrasparenzaFields from '@italia/components/ItaliaTheme/View/Commons/TrasparenzaFields';
 
 export GenericCard from '@italia/components/ItaliaTheme/View/Commons/GenericCard';
 export NewsCard from '@italia/components/ItaliaTheme/View/Commons/NewsCard';

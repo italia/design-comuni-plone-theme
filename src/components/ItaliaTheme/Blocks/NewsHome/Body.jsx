@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl, defineMessages } from 'react-intl';
 import { ConditionalLink, UniversalLink } from '@plone/volto/components';
-
+import cx from 'classnames';
 import {
   Row,
   Col,
@@ -37,7 +37,9 @@ const Body = ({ content, pathname, block }) => {
           <Image
             image={content.image}
             alt={content.title}
-            className="item-image"
+            className={cx('item-image', {
+              'natural-image-size': block.natural_image_size,
+            })}
             role="presentation"
           />
         </Col>

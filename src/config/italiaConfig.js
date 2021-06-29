@@ -178,6 +178,7 @@ export default function applyConfig(voltoConfig) {
       ],
       showRestricted: false,
     },
+    showTrasparenzaFields: false,
   };
 
   /******************************************************************************

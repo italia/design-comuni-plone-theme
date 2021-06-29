@@ -36,8 +36,8 @@ const ViewBlock = ({ data, index }) => {
             <Embed
               id={
                 data.url.match(/.be\//)
-                  ? data.url.match(/^.*\.be\/(.*)/)[1]
-                  : data.url.match(/^.*\?v=(.*)$/)[1]
+                  ? data.url.match(/^.*\.be\/(.*)/)?.[1]
+                  : data.url.match(/^.*\?v=(.*)$/)?.[1]
               }
               source="youtube"
               {...embedSettings}

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-06-18T10:25:05.018Z\n"
+"POT-Creation-Date: 2021-06-29T07:26:39.755Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -166,6 +166,16 @@ msgstr ""
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Etichetta
 msgid "Etichetta path filter"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/SkipToMainContent
+# defaultMessage: Vai al contenuto
+msgid "Go to content"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
+# defaultMessage: Hero
+msgid "Hero"
 msgstr ""
 
 #: components/ItaliaTheme/Search/SearchCTs
@@ -604,6 +614,11 @@ msgstr ""
 msgid "altre_cariche"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+# defaultMessage: Altre modalità di invio
+msgid "altre_modalita_invio"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 # defaultMessage: Documenti correlati
 msgid "altri_documenti"
@@ -618,6 +633,11 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Amministrazione
 msgid "amministrazione"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
+# defaultMessage: APPStore Link
+msgid "appStoreLink"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSlim/ArLogin
@@ -669,6 +689,11 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/Attachments
 # defaultMessage: Allegati
 msgid "attachments"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+# defaultMessage: Atti e documenti a corredo dell'istanza
+msgid "atti_documenti_corredo"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
@@ -933,6 +958,11 @@ msgstr ""
 msgid "curriculum_vitae"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+# defaultMessage: Risultati indagini di customer satisfaction
+msgid "customer_satisfaction"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 # defaultMessage: Ha fatto parte dell'organizzazione comunale fino al
 msgid "data_conclusione_incarico"
@@ -958,6 +988,7 @@ msgstr ""
 msgid "date_e_orari"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Decorrenza termine
 msgid "decorrenza_termine"
@@ -983,6 +1014,7 @@ msgid "desc"
 msgstr ""
 
 #: components/ItaliaTheme/View/BandoView/BandoView
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 #: components/ItaliaTheme/View/VenueView/VenueView
 #: helpers/amministrazioneTrasparenteHelper
@@ -1022,6 +1054,7 @@ msgstr ""
 msgid "dichiarazione_dei_redditi"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Dirigente
 msgid "dirigente"
@@ -1233,6 +1266,7 @@ msgstr ""
 msgid "fax_sede"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: File correlato
 msgid "file_correlato"
@@ -1254,6 +1288,7 @@ msgstr ""
 msgid "find"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Fine termine
 msgid "fine_termine"
@@ -1339,6 +1374,7 @@ msgstr ""
 msgid "insert_filter"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Iter del procedimento
 msgid "iter_del_procedimento"
@@ -1438,6 +1474,7 @@ msgstr ""
 msgid "modalita_accesso"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Modalità di avvio
 msgid "modalita_di_avvio"
@@ -1446,6 +1483,11 @@ msgstr ""
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Modalità per richiedere informazioni sul procedimento
 msgid "modalita_richiedere_informazioni_procedimentodali"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+# defaultMessage: Modalità per richiedere informazioni sul procedimento
+msgid "modalita_richiesta_informazioni"
 msgstr ""
 
 #: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
@@ -1481,6 +1523,7 @@ msgid "modulo_formati_alternativi"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
+#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 # defaultMessage: undefined
 msgid "natural_image_size"
@@ -1496,6 +1539,7 @@ msgstr ""
 msgid "news_item_contenuto"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: No
 msgid "no"
@@ -1610,6 +1654,7 @@ msgstr ""
 msgid "organizzazione_riferimento"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Organo competente adozione provvedimento finale
 msgid "organo_competente_provvedimento_finale"
@@ -1628,6 +1673,11 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/Metadata
 # defaultMessage: Ulteriori informazioni
 msgid "other_info"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+# defaultMessage: Pagamenti previsti e modalità
+msgid "pagamenti"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/CuredBy
@@ -1665,6 +1715,11 @@ msgstr ""
 msgid "placeholder"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
+# defaultMessage: PlayStore Link
+msgid "playStoreLink"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/View
 # defaultMessage: A PORTATA DI CLICK
 msgid "portata_di_click"
@@ -1680,11 +1735,17 @@ msgstr ""
 msgid "print"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+# defaultMessage: Procedura informatizzata online
+msgid "procedura_online"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 # defaultMessage: Procedure collegate all'esito
 msgid "procedure_collegate"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Provvedimento finale
 msgid "provvedimento_finale"
@@ -1744,11 +1805,17 @@ msgstr ""
 msgid "removeTopic"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+# defaultMessage: Dove reperire la modulistica
+msgid "reperimento_modulistica"
+msgstr ""
+
 #: components/ItaliaTheme/View/UOView/UOView
 # defaultMessage: Responsabile
 msgid "responsabile"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Responsabile del procedimento
 msgid "responsabile_del_procedimento"
@@ -1764,6 +1831,12 @@ msgstr ""
 msgid "responsabile_di"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+# defaultMessage: Responsabile del procedimento
+msgid "responsabile_procedimento"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Riferimenti normativi
 msgid "riferimenti_normativi"
@@ -2253,6 +2326,7 @@ msgstr ""
 msgid "show_type"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Silenzio assenso/Dichiarazione dell'interessato sostitutiva del provvedimento finale
 msgid "silenzio_assenso"
@@ -2292,6 +2366,11 @@ msgstr ""
 msgid "skiplink-navigation"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+# defaultMessage: Soggetti esterni, nonché, strutture interne coinvolte nel procedimento
+msgid "soggetti_esterni"
+msgstr ""
+
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Data (prima i più recenti)
 msgid "sort_on_date"
@@ -2325,6 +2404,11 @@ msgstr ""
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Strumenti di tutela
 msgid "strumenti_di_tutela"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+# defaultMessage: Strumenti di tutela
+msgid "strumenti_tutela"
 msgstr ""
 
 #: components/ItaliaTheme/View/UOView/UOView
@@ -2364,6 +2448,7 @@ msgstr ""
 msgid "tempi_e_scadenze"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Tempo medio
 msgid "tempo_medio"
@@ -2374,6 +2459,7 @@ msgstr ""
 msgid "termine"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Termini del procedimento
 msgid "termini_del_procedimento"
@@ -2408,6 +2494,7 @@ msgstr ""
 msgid "title"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Titolare del potere sostitutivo
 msgid "titolare_potere_sostitutivo"
@@ -2429,6 +2516,11 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderTassonomiaArgomenti
 # defaultMessage: Argomenti
 msgid "topics"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+# defaultMessage: Trasparenza
+msgid "trasparenza"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
@@ -2457,6 +2549,7 @@ msgid "ufficio_responsabile"
 msgstr ""
 
 #: components/ItaliaTheme/View/BandoView/BandoView
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/DocumentoView/DocumentoView
 #: components/ItaliaTheme/View/EventoView/EventoView
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
@@ -2472,6 +2565,7 @@ msgstr ""
 msgid "unita_operativa"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Unità organizzativa competente del procedimento
 msgid "unita_organizzativa_competente"
@@ -2525,6 +2619,7 @@ msgstr ""
 msgid "website"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Si
 msgid "yes"

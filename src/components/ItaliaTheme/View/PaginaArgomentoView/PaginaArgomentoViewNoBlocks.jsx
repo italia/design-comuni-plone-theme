@@ -16,6 +16,9 @@ import {
   Metadata,
   NewsCard,
   PaginaArgomentoPlaceholderAfterContent,
+  SkipToMainContent,
+  RelatedItems,
+  RelatedItemInEvidence,
 } from '@italia/components/ItaliaTheme/View';
 
 // import { getBaseUrl } from '@plone/volto/helpers';
@@ -77,6 +80,7 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
   return (
     <>
       <div className="container px-4 my-4 uo-view">
+        <SkipToMainContent />
         <PageHeader
           content={content}
           readingtime={null}
@@ -93,6 +97,7 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
           </aside>
           <section
             className="col-lg-8 it-page-sections-container"
+            id="main-content-section"
             ref={documentBody}
           >
             {/* HEADER IMAGE */}
@@ -227,6 +232,8 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
         </div>
         <PaginaArgomentoPlaceholderAfterContent content={content} />
       </div>
+      <RelatedItems content={content} />
+      <RelatedItemInEvidence content={content} />
     </>
   );
 };

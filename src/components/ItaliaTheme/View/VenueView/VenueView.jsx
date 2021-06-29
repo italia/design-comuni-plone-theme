@@ -28,6 +28,7 @@ import {
   VenuePlaceholderAfterContent,
   RelatedItemInEvidence,
   richTextHasContent,
+  SkipToMainContent,
 } from '@italia/components/ItaliaTheme/View';
 import { contentFolderHasItems } from '@italia/helpers';
 import { OSMMap } from '@italia/addons/volto-venue';
@@ -163,6 +164,7 @@ const VenueView = ({ content }) => {
   return (
     <>
       <div className="container px-4 my-4 luogo-view">
+        <SkipToMainContent />
         <PageHeader
           content={content}
           readingtime={null}
@@ -179,6 +181,7 @@ const VenueView = ({ content }) => {
           </aside>
           <section
             className="col-lg-8 it-page-sections-container"
+            id="main-content-section"
             ref={documentBody}
           >
             {/* HEADER IMAGE */}

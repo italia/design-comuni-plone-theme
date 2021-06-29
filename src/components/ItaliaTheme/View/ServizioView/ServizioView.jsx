@@ -21,9 +21,13 @@ import {
   HelpBox,
   ServizioPlaceholderAfterContent,
   RelatedItemInEvidence,
+  SkipToMainContent,
+  TrasparenzaFields,
 } from '@italia/components/ItaliaTheme/View';
 
 import { Card, CardBody } from 'design-react-kit/dist/design-react-kit';
+
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   service_not_active: {
@@ -123,7 +127,6 @@ const messages = defineMessages({
     id: 'servizi_collegati',
     defaultMessage: 'Servizi collegati',
   },
-
   modulistica: {
     id: 'modulistica',
     defaultMessage: 'Modulistica',
@@ -152,6 +155,7 @@ const ServizioView = ({ content }) => {
   return (
     <>
       <div className="container px-4 my-4 servizio-view">
+        <SkipToMainContent />
         <PageHeader
           content={content}
           readingtime={null}
@@ -167,6 +171,7 @@ const ServizioView = ({ content }) => {
             <SideMenu data={sideMenuElements} />
           </aside>
           <section
+            id="main-content-section"
             className="col-lg-8 it-page-sections-container"
             ref={documentBody}
           >
@@ -335,7 +340,6 @@ const ServizioView = ({ content }) => {
               <RichTextArticle
                 tag_id="contatti"
                 title={intl.formatMessage(messages.contatti)}
-                field="ufficio_responsabile,area"
               >
                 <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                   {content.ufficio_responsabile?.length > 0 && (
@@ -405,6 +409,11 @@ const ServizioView = ({ content }) => {
               folder_name={'modulistica'}
               title={intl.formatMessage(messages.modulistica)}
             />
+
+            {/* TRASPARENZA */}
+            {config.settings.showTrasparenzaFields && (
+              <TrasparenzaFields content={content} />
+            )}
 
             {/* CORRELATI */}
             {(content.servizi_collegati?.length > 0 ||

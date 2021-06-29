@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Segment, Accordion } from 'semantic-ui-react';
 import { defineMessages, FormattedMessage, useIntl } from 'react-intl';
-import { TextWidget } from '@plone/volto/components';
+import { TextWidget, CheckboxWidget } from '@plone/volto/components';
 import { LinkToWidget } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
@@ -18,15 +18,13 @@ const messages = defineMessages({
     id: 'LinkMore',
     defaultMessage: 'Link ad altro',
   },
+  natural_image_size: {
+    id: 'natural_image_size',
+    defineMessages: "Non alterare le dimensioni naturali dell'immagine",
+  },
 });
 
-const Sidebar = ({
-  block,
-  data,
-  onChangeBlock,
-  openObjectBrowser,
-  required,
-}) => {
+const Sidebar = ({ block, data, onChangeBlock, openObjectBrowser }) => {
   const intl = useIntl();
 
   return (
@@ -52,6 +50,18 @@ const Sidebar = ({
               [name]: value,
             })
           }
+        />
+
+        <CheckboxWidget
+          id="natural_image_size"
+          title={intl.formatMessage(messages.natural_image_size)}
+          value={data.natural_image_size ? data.natural_image_size : false}
+          onChange={(id, value) => {
+            onChangeBlock(block, {
+              ...data,
+              [id]: value,
+            });
+          }}
         />
       </Segment>
       <Accordion fluid styled className="form">
