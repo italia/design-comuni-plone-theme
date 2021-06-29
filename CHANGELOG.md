@@ -1,3 +1,10 @@
+### [4.0.1](https://github.com/RedTurtle/design-volto-theme/compare/v4.0.0...v4.0.1) (2021-06-29)
+
+
+### Bug Fixes
+
+* querystring loading ([ec32631](https://github.com/RedTurtle/design-volto-theme/commit/ec32631c9ae1eb12310b07029c1bd2978a321e0e))
+
 ## [4.0.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.10.0...v4.0.0) (2021-06-29)
 
 
