@@ -1,3 +1,16 @@
+## [3.10.0](https://github.com/RedTurtle/design-volto-theme/compare/v3.9.1...v3.10.0) (2021-06-29)
+
+
+### Features
+
+* add Trasparenza fields in Servizio View (with config) ([0644b72](https://github.com/RedTurtle/design-volto-theme/commit/0644b726e8b3bcc0487a524f9b0f4a73328528b6))
+
+
+### Maintenance
+
+* **i18n:** update translations ([b086a13](https://github.com/RedTurtle/design-volto-theme/commit/b086a13da3782b703b4c8c2d9eca4188bd474d83))
+* viewed share buttons in content-type Document ([3efbd26](https://github.com/RedTurtle/design-volto-theme/commit/3efbd26e6dddd9b15e7b9ba73de323290250b730))
+
 ### [3.9.1](https://github.com/RedTurtle/design-volto-theme/compare/v3.9.0...v3.9.1) (2021-06-23)
 
 
