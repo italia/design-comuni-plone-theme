@@ -21,7 +21,7 @@ import { CardCategory } from '@italia/components/ItaliaTheme';
 const CardWithImageTemplateSkeleton = ({
   isEditMode,
   title,
-  linkMore,
+  linkHref,
   show_block_bg = false,
   always_show_image = false,
   hide_dates = false,
@@ -87,7 +87,7 @@ const CardWithImageTemplateSkeleton = ({
                 );
               })}
             </Row>
-            {linkMore?.href && <div className="link-more"></div>}
+            {linkHref && <div className="link-more"></div>}
           </div>
         </Container>
       </div>
@@ -96,7 +96,7 @@ const CardWithImageTemplateSkeleton = ({
 };
 
 CardWithImageTemplateSkeleton.propTypes = {
-  linkMore: PropTypes.any,
+  linkHref: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };

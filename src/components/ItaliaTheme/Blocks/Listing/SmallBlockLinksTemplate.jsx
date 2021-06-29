@@ -4,12 +4,15 @@ import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import cx from 'classnames';
 import { UniversalLink } from '@plone/volto/components';
 import Image from '@plone/volto/components/theme/Image/Image';
+import { ListingLinkMore } from '@italia/components/ItaliaTheme';
 
 const SmallBlockLinksTemplate = ({
   items,
   title,
   isEditMode,
   show_block_bg,
+  linkTitle,
+  linkHref,
 }) => {
   return (
     <div className={cx('small-block-links', { 'public-ui': isEditMode })}>
@@ -55,6 +58,7 @@ const SmallBlockLinksTemplate = ({
               );
             })}
           </Row>
+          <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
         </Container>
       </div>
     </div>
@@ -63,7 +67,8 @@ const SmallBlockLinksTemplate = ({
 
 SmallBlockLinksTemplate.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
-  linkMore: PropTypes.any,
+  linkTitle: PropTypes.any,
+  linkHref: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };

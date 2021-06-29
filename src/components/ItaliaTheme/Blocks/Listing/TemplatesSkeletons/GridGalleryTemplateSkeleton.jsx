@@ -9,7 +9,7 @@ import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 const GridGalleryTemplateSkeleton = ({
   isEditMode,
   title,
-  linkMore,
+  linkHref,
   show_block_bg,
 }) => {
   return (
@@ -41,9 +41,7 @@ const GridGalleryTemplateSkeleton = ({
                 </div>
               ))}
             </div>
-            {linkMore?.href && (
-              <div className="link-more text-center my-5"></div>
-            )}
+            {linkHref && <div className="link-more text-center my-5"></div>}
           </div>
         </Container>
       </div>
@@ -52,7 +50,7 @@ const GridGalleryTemplateSkeleton = ({
 };
 
 GridGalleryTemplateSkeleton.propTypes = {
-  linkMore: PropTypes.any,
+  linkHref: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };

@@ -18,7 +18,7 @@ import { Link } from 'react-router-dom';
 
 const RibbonCardTemplateSkeleton = ({
   isEditMode,
-  linkMore,
+  linkHref,
   title,
   show_only_first_ribbon,
   show_detail_link,
@@ -83,9 +83,7 @@ const RibbonCardTemplateSkeleton = ({
                 );
               })}
             </Row>
-            {linkMore?.href && (
-              <div className="link-more text-center my-5"></div>
-            )}
+            {linkHref && <div className="link-more text-center my-5"></div>}
           </div>
         </Container>
       </div>
@@ -95,7 +93,7 @@ const RibbonCardTemplateSkeleton = ({
 
 RibbonCardTemplateSkeleton.propTypes = {
   isEditMode: PropTypes.bool,
-  linkMore: PropTypes.any,
+  linkHref: PropTypes.any,
 };
 
 export default RibbonCardTemplateSkeleton;

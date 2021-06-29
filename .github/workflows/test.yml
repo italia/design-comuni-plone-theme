@@ -4,14 +4,13 @@ name: Docker build for PRs
 # Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
- push:
+  push:
     branches: [develop]
-  #branches: [ master ]
-  #pull_request:
+    #branches: [ master ]
+    #pull_request:
     #branches: [master]
-
-  # Allows you to run this workflow manually from the Actions tab
-  #workflow_dispatch:
+    # Allows you to run this workflow manually from the Actions tab
+    #workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -57,4 +56,3 @@ jobs:
           builder: ${{ steps.buildx.outputs.name }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
-

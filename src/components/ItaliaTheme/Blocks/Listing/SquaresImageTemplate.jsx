@@ -1,27 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { defineMessages, useIntl } from 'react-intl';
 import { Container } from 'design-react-kit/dist/design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { ListingLinkMore } from '@italia/components/ItaliaTheme';
 import cx from 'classnames';
-
-const messages = defineMessages({
-  view_all: {
-    id: 'Vedi tutto',
-    defaultMessage: 'Vedi tutto',
-  },
-});
 
 const SquaresImageTemplate = ({
   items,
   title,
   show_block_bg,
   isEditMode,
-  linkMore,
+  linkTitle,
+  linkHref,
 }) => {
-  const intl = useIntl();
-
   return (
     <div className={cx('squares-image-template', { 'public-ui': isEditMode })}>
       <Container className="px-4">
@@ -44,16 +36,7 @@ const SquaresImageTemplate = ({
           ))}
         </div>
 
-        {linkMore?.href && (
-          <div className="link-button text-center my-5">
-            <UniversalLink
-              href={flattenToAppURL(linkMore.href)}
-              className="btn btn-tertiary"
-            >
-              {linkMore.title || intl.formatMessage(messages.view_all)}
-            </UniversalLink>
-          </div>
-        )}
+        <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
       </Container>
     </div>
   );
@@ -62,7 +45,8 @@ const SquaresImageTemplate = ({
 SquaresImageTemplate.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
   isEditMode: PropTypes.bool,
-  linkMore: PropTypes.any,
+  linkTitle: PropTypes.any,
+  linkHrefs: PropTypes.any,
 };
 
 export default SquaresImageTemplate;
