@@ -63,7 +63,9 @@ export default function withQuerystringResults(WrappedComponent) {
     const hasQuery = querystring?.query?.length > 0;
     const hasLoaded = hasQuery ? !querystringResults?.[block]?.loading : true;
     const loadingQuery =
-      querystring?.query?.length > 0 && querystringResults?.[block]?.loading;
+      querystring?.query?.length > 0 &&
+      (querystringResults?.[block]?.loading ||
+        !querystringResults?.[block]?.loaded);
 
     const listingItems =
       hasQuery && querystringResults?.[block]

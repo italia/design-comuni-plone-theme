@@ -43,8 +43,6 @@ msgstr ""
 msgid "Alert"
 msgstr "Alerte"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/simpleCardTemplate
 msgid "Aspetto"
 msgstr ""
@@ -144,12 +142,10 @@ msgstr ""
 msgid "Description placeholder"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
 #: config/Blocks/ListingOptions/mapTemplate
 msgid "Dimensione della mappa"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 msgid "Etichetta path filter"
@@ -217,15 +213,12 @@ msgstr ""
 msgid "Menu selezionato"
 msgstr "Menu sélectionné"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 msgid "Mostra i filtri per percorso"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
-#: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/defaultOptions
 #: config/Blocks/ListingOptions/utils
 msgid "Mostra lo sfondo del blocco"
@@ -267,7 +260,6 @@ msgstr ""
 msgid "Open in a new tab"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 msgid "Path filter filtro"
@@ -278,7 +270,6 @@ msgstr ""
 msgid "Pause slider"
 msgstr "Pause"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 msgid "Percorso path filter"
@@ -386,9 +377,6 @@ msgid "Title placeholder"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
-#: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/defaultOptions
 msgid "Titolo"
 msgstr ""
@@ -410,7 +398,6 @@ msgid "Twitter Posts"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
-#: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type description…"
@@ -425,7 +412,6 @@ msgid "Type text…"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
-#: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type the title…"
@@ -461,11 +447,7 @@ msgstr "Voyez"
 msgid "Vedi l'immagine"
 msgstr "Regarder la photo"
 
-#: components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate
 #: components/ItaliaTheme/Blocks/Listing/Commons/ListingLinkMore
-#: components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate
-#: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateCompact
-#: components/ItaliaTheme/Blocks/Listing/SquaresImageTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
 #: components/ItaliaTheme/MegaMenu/MegaMenu
@@ -528,7 +510,6 @@ msgstr ""
 msgid "altri_documenti"
 msgstr "Autres documents"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 msgid "always_show_image"
 msgstr ""
@@ -659,7 +640,6 @@ msgstr "Voir"
 msgid "biografia"
 msgstr "Biographie"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/BgColor
 #: config/Blocks/ListingOptions/defaultOptions
 msgid "block_bg_color"
 msgstr ""
@@ -782,22 +762,6 @@ msgstr "Coûts"
 msgid "costi_e_vincoli"
 msgstr "Coûts et contraintes"
 
-#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
-msgid "ctaImage"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
-msgid "ctaImageEnable"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
-msgid "ctaLink"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
-msgid "ctaLinkTitle"
-msgstr ""
-
 #: components/ItaliaTheme/View/Commons/CuredBy
 msgid "cured_by"
 msgstr "Édité par"
@@ -841,7 +805,6 @@ msgstr "Date effective"
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
-#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
 #: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
@@ -872,7 +835,6 @@ msgstr "Description détaillée"
 msgid "deselectSearchSection"
 msgstr "Ne pas chercher dans les sections"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
 msgid "detail_link_label"
 msgstr ""
@@ -1108,7 +1070,6 @@ msgstr ""
 msgid "grid-gallery-max-items-exceeded"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
 msgid "hide_dates"
 msgstr ""
@@ -1173,7 +1134,6 @@ msgstr "Liens utiles"
 msgid "listing_event_recurrence_label"
 msgstr "Cet événement a plusieurs dates: tout voir"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/ItemsColor
 #: config/Blocks/ListingOptions/defaultOptions
 msgid "listing_items_color"
 msgstr ""
@@ -1199,17 +1159,14 @@ msgstr "Lieu"
 msgid "mailto"
 msgstr "Soumettre"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
 #: config/Blocks/ListingOptions/mapTemplate
 msgid "map_size_large"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
 #: config/Blocks/ListingOptions/mapTemplate
 msgid "map_size_medium"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
 #: config/Blocks/ListingOptions/mapTemplate
 msgid "map_size_small"
 msgstr ""
@@ -1261,7 +1218,6 @@ msgstr "Dossier principal"
 msgid "modulo_formati_alternativi"
 msgstr "Formats alternatifs"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
 #: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 msgid "natural_image_size"
@@ -1310,10 +1266,6 @@ msgstr "Annonces"
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderNewsItem
 msgid "numero_progressivo_cs"
 msgstr "Numéro du communiqué de presse"
-
-#: components/ItaliaTheme/Blocks/CTABlock/Block
-msgid "openLinkInNewTab"
-msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "optionActiveContentButton"
@@ -1865,54 +1817,43 @@ msgstr "Aller à d'autres options de recherche"
 msgid "share"
 msgstr "Partager"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
 msgid "show_description"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
 msgid "show_detail_link"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/BandiInEvidenceTemplateOptions
 #: config/Blocks/ListingOptions/bandiInEvidenceTemplate
 msgid "show_ente"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
 msgid "show_icon"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
 #: config/Blocks/ListingOptions/mapTemplate
 msgid "show_map_full_width"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
 #: config/Blocks/ListingOptions/ribbonCardTemplate
 msgid "show_only_first_ribbon"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
 msgid "show_section"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/BandiInEvidenceTemplateOptions
 #: config/Blocks/ListingOptions/bandiInEvidenceTemplate
 msgid "show_tipologia"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/InEvidenceTemplateOptions
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 #: config/Blocks/ListingOptions/inEvidenceTemplate
 msgid "show_topics"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
 msgid "show_type"
 msgstr ""
@@ -1922,14 +1863,10 @@ msgstr ""
 msgid "silenzio_assenso"
 msgstr "Silence assentiment"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/simpleCardTemplate
 msgid "simplecard_listing_appearance_compact"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/simpleCardTemplate
 msgid "simplecard_listing_appearance_description"
 msgstr ""
