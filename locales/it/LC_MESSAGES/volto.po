@@ -142,10 +142,6 @@ msgstr "Etichetta"
 msgid "Go to content"
 msgstr "Salta al contenuto"
 
-#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
-msgid "Hero"
-msgstr ""
-
 #: components/ItaliaTheme/Search/SearchCTs
 #: components/ItaliaTheme/Search/SearchTopics
 msgid "Hide"
@@ -397,6 +393,7 @@ msgid "Twitter Posts"
 msgstr "Twitter Posts"
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
+#: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type description…"
@@ -411,6 +408,7 @@ msgid "Type text…"
 msgstr "Digita testo…"
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
+#: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type the title…"
@@ -521,10 +519,6 @@ msgstr "Mostra l'immagine per tutti gli elementi"
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "amministrazione"
 msgstr "Amministrazione"
-
-#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
-msgid "appStoreLink"
-msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSlim/ArLogin
 msgid "arLogout"
@@ -771,6 +765,22 @@ msgstr "Costi"
 msgid "costi_e_vincoli"
 msgstr "Costi e vincoli"
 
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "ctaImage"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "ctaImageEnable"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "ctaLink"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "ctaLinkTitle"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/CuredBy
 msgid "cured_by"
 msgstr "A cura di"
@@ -814,6 +824,7 @@ msgstr "Decorrenza termine"
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
 #: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
@@ -972,17 +983,9 @@ msgstr "L'evento è di interesse per"
 msgid "event_documenti"
 msgstr "Documenti"
 
-#: components/ItaliaTheme/Blocks/EventSearch/Filters/DateFilter
-msgid "event_search_endDate"
-msgstr "Data fine"
-
 #: components/ItaliaTheme/Blocks/EventSearch/Edit
 msgid "event_search_no_filters"
 msgstr "Nessun filtro da mostrare. Seleziona i filtri di ricerca da mostrare dalla sidebar laterale."
-
-#: components/ItaliaTheme/Blocks/EventSearch/Filters/DateFilter
-msgid "event_search_startDate"
-msgstr "Data inizio"
 
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "event_strutture_politiche"
@@ -1291,6 +1294,10 @@ msgstr "Novità"
 msgid "numero_progressivo_cs"
 msgstr "Numero del comunicato stampa"
 
+#: components/ItaliaTheme/Blocks/CTABlock/Block
+msgid "openLinkInNewTab"
+msgstr ""
+
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "optionActiveContentButton"
 msgstr "Contenuto attivo"
@@ -1397,10 +1404,6 @@ msgstr "Persone"
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "placeholder"
 msgstr "Testo di aiuto"
-
-#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
-msgid "playStoreLink"
-msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/View
 msgid "portata_di_click"
@@ -2011,7 +2014,6 @@ msgid "termini_del_procedimento"
 msgstr "Termini del procedimento"
 
 #: components/ItaliaTheme/Blocks/Common/SearchFilters/TextFilter
-#: components/ItaliaTheme/Blocks/EventSearch/Filters/TextFilter
 msgid "text_filter_placeholder"
 msgstr "Inserisci un valore"
 

@@ -157,10 +157,6 @@ msgstr ""
 msgid "Go to content"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
-msgid "Hero"
-msgstr ""
-
 #: components/ItaliaTheme/Search/SearchCTs
 #: components/ItaliaTheme/Search/SearchTopics
 msgid "Hide"
@@ -412,6 +408,7 @@ msgid "Twitter Posts"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
+#: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type description…"
@@ -426,6 +423,7 @@ msgid "Type text…"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
+#: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type the title…"
@@ -535,10 +533,6 @@ msgstr ""
 
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "amministrazione"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
-msgid "appStoreLink"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSlim/ArLogin
@@ -786,6 +780,22 @@ msgstr ""
 msgid "costi_e_vincoli"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "ctaImage"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "ctaImageEnable"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "ctaLink"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "ctaLinkTitle"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/CuredBy
 msgid "cured_by"
 msgstr ""
@@ -829,6 +839,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
 #: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
@@ -987,16 +998,8 @@ msgstr ""
 msgid "event_documenti"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/EventSearch/Filters/DateFilter
-msgid "event_search_endDate"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/EventSearch/Edit
 msgid "event_search_no_filters"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Filters/DateFilter
-msgid "event_search_startDate"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView/EventoView
@@ -1306,6 +1309,10 @@ msgstr ""
 msgid "numero_progressivo_cs"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/CTABlock/Block
+msgid "openLinkInNewTab"
+msgstr ""
+
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "optionActiveContentButton"
 msgstr ""
@@ -1411,10 +1418,6 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "placeholder"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
-msgid "playStoreLink"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/View
@@ -2026,7 +2029,6 @@ msgid "termini_del_procedimento"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Common/SearchFilters/TextFilter
-#: components/ItaliaTheme/Blocks/EventSearch/Filters/TextFilter
 msgid "text_filter_placeholder"
 msgstr ""
 

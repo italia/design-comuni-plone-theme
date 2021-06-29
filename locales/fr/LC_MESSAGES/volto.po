@@ -159,10 +159,6 @@ msgstr ""
 msgid "Go to content"
 msgstr "Aller au contenu"
 
-#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
-msgid "Hero"
-msgstr ""
-
 #: components/ItaliaTheme/Search/SearchCTs
 #: components/ItaliaTheme/Search/SearchTopics
 msgid "Hide"
@@ -414,6 +410,7 @@ msgid "Twitter Posts"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
+#: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type description…"
@@ -428,6 +425,7 @@ msgid "Type text…"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
+#: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type the title…"
@@ -538,10 +536,6 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "amministrazione"
 msgstr "Administration"
-
-#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
-msgid "appStoreLink"
-msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSlim/ArLogin
 msgid "arLogout"
@@ -788,6 +782,22 @@ msgstr "Coûts"
 msgid "costi_e_vincoli"
 msgstr "Coûts et contraintes"
 
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "ctaImage"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "ctaImageEnable"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "ctaLink"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "ctaLinkTitle"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/CuredBy
 msgid "cured_by"
 msgstr "Édité par"
@@ -831,6 +841,7 @@ msgstr "Date effective"
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
 #: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
@@ -989,17 +1000,9 @@ msgstr "Destinataires"
 msgid "event_documenti"
 msgstr "Documents"
 
-#: components/ItaliaTheme/Blocks/EventSearch/Filters/DateFilter
-msgid "event_search_endDate"
-msgstr "Date de fin"
-
 #: components/ItaliaTheme/Blocks/EventSearch/Edit
 msgid "event_search_no_filters"
 msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Filters/DateFilter
-msgid "event_search_startDate"
-msgstr "Date de début"
 
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "event_strutture_politiche"
@@ -1308,6 +1311,10 @@ msgstr "Annonces"
 msgid "numero_progressivo_cs"
 msgstr "Numéro du communiqué de presse"
 
+#: components/ItaliaTheme/Blocks/CTABlock/Block
+msgid "openLinkInNewTab"
+msgstr ""
+
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "optionActiveContentButton"
 msgstr "Contenu actif"
@@ -1413,10 +1420,6 @@ msgstr "Gens"
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "placeholder"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
-msgid "playStoreLink"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/View
@@ -2028,7 +2031,6 @@ msgid "termini_del_procedimento"
 msgstr "Termes de la procédure"
 
 #: components/ItaliaTheme/Blocks/Common/SearchFilters/TextFilter
-#: components/ItaliaTheme/Blocks/EventSearch/Filters/TextFilter
 msgid "text_filter_placeholder"
 msgstr "Entrez du texte"
 

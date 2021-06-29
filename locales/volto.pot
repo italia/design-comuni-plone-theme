@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-06-29T07:26:39.755Z\n"
+"POT-Creation-Date: 2021-06-29T08:11:16.969Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -171,11 +171,6 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/SkipToMainContent
 # defaultMessage: Vai al contenuto
 msgid "Go to content"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
-# defaultMessage: Hero
-msgid "Hero"
 msgstr ""
 
 #: components/ItaliaTheme/Search/SearchCTs
@@ -485,6 +480,7 @@ msgid "Twitter Posts"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
+#: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 # defaultMessage: Digita la descrizione…
@@ -501,6 +497,7 @@ msgid "Type text…"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
+#: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 # defaultMessage: Type the title…
@@ -633,11 +630,6 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Amministrazione
 msgid "amministrazione"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
-# defaultMessage: APPStore Link
-msgid "appStoreLink"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSlim/ArLogin
@@ -943,6 +935,26 @@ msgstr ""
 msgid "costi_e_vincoli"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+# defaultMessage: Seleziona l'immagine da mostrare
+msgid "ctaImage"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+# defaultMessage: Mostra l'immagine
+msgid "ctaImageEnable"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+# defaultMessage: Link della CTA
+msgid "ctaLink"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+# defaultMessage: Titolo per il link della CTA
+msgid "ctaLinkTitle"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/CuredBy
 # defaultMessage: A cura di
 msgid "cured_by"
@@ -996,6 +1008,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
 #: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
@@ -1191,19 +1204,9 @@ msgstr ""
 msgid "event_documenti"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/EventSearch/Filters/DateFilter
-# defaultMessage: Data fine
-msgid "event_search_endDate"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/EventSearch/Edit
 # defaultMessage: Nessun filtro da mostrare. Seleziona i filtri di ricerca da mostrare dalla sidebar laterale.
 msgid "event_search_no_filters"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Filters/DateFilter
-# defaultMessage: Data inizio
-msgid "event_search_startDate"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView/EventoView
@@ -1583,6 +1586,11 @@ msgstr ""
 msgid "numero_progressivo_cs"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/CTABlock/Block
+# defaultMessage: Apri link in un nuovo tab
+msgid "openLinkInNewTab"
+msgstr ""
+
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Contenuto attivo
 msgid "optionActiveContentButton"
@@ -1713,11 +1721,6 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Testo di aiuto
 msgid "placeholder"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
-# defaultMessage: PlayStore Link
-msgid "playStoreLink"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/View
@@ -2466,7 +2469,6 @@ msgid "termini_del_procedimento"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Common/SearchFilters/TextFilter
-#: components/ItaliaTheme/Blocks/EventSearch/Filters/TextFilter
 # defaultMessage: Inserisci un valore
 msgid "text_filter_placeholder"
 msgstr ""
