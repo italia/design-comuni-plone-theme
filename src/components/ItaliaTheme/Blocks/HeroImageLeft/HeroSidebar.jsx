@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Segment } from 'semantic-ui-react';
 import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
-import { TextWidget } from '@plone/volto/components';
+import { TextWidget, CheckboxWidget } from '@plone/volto/components';
 
 import clearSVG from '@plone/volto/icons/clear.svg';
 
@@ -16,6 +16,10 @@ const messages = defineMessages({
     id: 'playStoreLink',
     defaultMessage: 'PlayStore Link',
   },
+  show_block_bg: {
+    id: 'Mostra lo sfondo del blocco',
+    defaultMessage: 'Mostra lo sfondo del blocco',
+  },
 });
 
 const HeroSidebar = ({
@@ -26,6 +30,13 @@ const HeroSidebar = ({
   required = false,
   intl,
 }) => {
+  if (data.show_block_bg === undefined) {
+    onChangeBlock(block, {
+      ...data,
+      show_block_bg: true,
+    });
+  }
+
   return (
     <Segment.Group raised>
       <header className="header pulled">
@@ -35,6 +46,17 @@ const HeroSidebar = ({
       </header>
 
       <Segment className="form">
+        <CheckboxWidget
+          id="show_block_bg"
+          title={intl.formatMessage(messages.show_block_bg)}
+          value={data.show_block_bg ? data.show_block_bg : false}
+          onChange={(id, value) => {
+            onChangeBlock(block, {
+              ...data,
+              [id]: value,
+            });
+          }}
+        />
         <TextWidget
           id="appStoreLink"
           title={intl.formatMessage(messages.appStoreLink)}

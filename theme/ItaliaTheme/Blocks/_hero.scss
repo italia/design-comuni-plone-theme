@@ -33,6 +33,9 @@
   }
 
   .hero-body {
+    &.no-bg {
+      background: none;
+    }
     max-height: unset;
     padding: 3em;
 

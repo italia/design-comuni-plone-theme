@@ -362,7 +362,11 @@ class Edit extends Component {
                 </Message>
               </div>
             )}
-            <div className="hero-body">
+            <div
+              className={cx('hero-body', {
+                'no-bg': !this.props.data.show_block_bg,
+              })}
+            >
               <Editor
                 ref={(node) => {
                   this.titleEditor = node;

@@ -8,14 +8,14 @@ import { UniversalLink } from '@plone/volto/components';
 const StoresButtons = ({ data }) => (
   <div className="stores-buttons">
     {data.playStoreLink && (
-      <Button tag={UniversalLink} href={data.playStoreLink}>
+      <Button tag={UniversalLink} href={data.playStoreLink} color="primary">
         <span>PLAY STORE</span>
         <Icon icon="fab google-play" />
       </Button>
     )}
 
     {data.appStoreLink && (
-      <Button tag={UniversalLink} href={data.appStoreLink}>
+      <Button tag={UniversalLink} href={data.appStoreLink} color="primary">
         <span>APP STORE</span>
         <Icon icon="fab apple" />
       </Button>
