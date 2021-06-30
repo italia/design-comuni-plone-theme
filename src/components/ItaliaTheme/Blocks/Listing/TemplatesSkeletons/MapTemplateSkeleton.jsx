@@ -7,7 +7,7 @@ import { Container } from 'design-react-kit/dist/design-react-kit';
 
 const MapTemplateSkeleton = ({
   isEditMode,
-  linkMore,
+  linkHref,
   title,
   show_only_first_ribbon,
   show_detail_link,
@@ -29,9 +29,7 @@ const MapTemplateSkeleton = ({
             <div className="mb-4">
               <div className="map-skeleton"></div>
             </div>
-            {linkMore?.href && (
-              <div className="link-more text-center my-5"></div>
-            )}
+            {linkHref && <div className="link-more text-center my-5"></div>}
           </div>
         </Container>
       </div>
@@ -41,7 +39,7 @@ const MapTemplateSkeleton = ({
 
 MapTemplateSkeleton.propTypes = {
   isEditMode: PropTypes.bool,
-  linkMore: PropTypes.any,
+  linkHref: PropTypes.any,
 };
 
 export default MapTemplateSkeleton;

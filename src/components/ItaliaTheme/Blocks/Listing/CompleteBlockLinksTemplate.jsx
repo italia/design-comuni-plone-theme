@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
 import Image from '@plone/volto/components/theme/Image/Image';
 import {
@@ -13,25 +12,17 @@ import {
   Col,
 } from 'design-react-kit/dist/design-react-kit';
 import cx from 'classnames';
-import { defineMessages, useIntl } from 'react-intl';
-
-const messages = defineMessages({
-  view_all: {
-    id: 'Vedi tutto',
-    defaultMessage: 'Vedi tutto',
-  },
-});
+import { ListingLinkMore } from '@italia/components/ItaliaTheme';
 
 const CompleteBlockLinksTemplate = ({
   items,
   title,
   isEditMode,
-  linkMore,
+  linkTitle,
+  linkHref,
   show_block_bg,
   show_description = true,
 }) => {
-  const intl = useIntl();
-
   return (
     <div
       className={cx('complete-block-links-template', {
@@ -95,16 +86,7 @@ const CompleteBlockLinksTemplate = ({
               );
             })}
           </Row>
-          {linkMore?.href && (
-            <div className="link-button text-center my-4">
-              <UniversalLink
-                href={flattenToAppURL(linkMore.href)}
-                className="btn btn-tertiary"
-              >
-                {linkMore.title || intl.formatMessage(messages.view_all)}
-              </UniversalLink>
-            </div>
-          )}
+          <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
         </Container>
       </div>
     </div>
@@ -113,7 +95,8 @@ const CompleteBlockLinksTemplate = ({
 
 CompleteBlockLinksTemplate.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
-  linkMore: PropTypes.any,
+  linkTitle: PropTypes.any,
+  linkHref: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };

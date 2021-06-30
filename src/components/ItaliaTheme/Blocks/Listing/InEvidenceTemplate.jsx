@@ -13,7 +13,7 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
-import { ConditionalLink, UniversalLink } from '@plone/volto/components';
+import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
 import {
@@ -21,6 +21,7 @@ import {
   getItemIcon,
   ListingCategory,
   ListingText,
+  ListingLinkMore,
   CardCategory,
   CardPersona,
 } from '@italia/components/ItaliaTheme';
@@ -38,7 +39,8 @@ const InEvidenceTemplate = ({
   show_description = true,
   show_topics = true,
   hide_dates,
-  linkMore,
+  linkTitle,
+  linkHref,
 }) => {
   return (
     <div
@@ -167,13 +169,7 @@ const InEvidenceTemplate = ({
               );
             })}
           </div>
-          {linkMore?.href && (
-            <div className="link-more">
-              <ConditionalLink condition={!isEditMode} to={linkMore.href}>
-                {linkMore.title}
-              </ConditionalLink>
-            </div>
-          )}
+          <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
         </Container>
       </div>
     </div>
@@ -182,7 +178,8 @@ const InEvidenceTemplate = ({
 
 InEvidenceTemplate.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
-  linkMore: PropTypes.any,
+  linkTitle: PropTypes.any,
+  linkHref: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };

@@ -18,7 +18,7 @@ const ContentInEvidenceTemplateSkeleton = ({
   title,
   isEditMode,
   show_block_bg,
-  linkMore,
+  linkHref,
 }) => {
   return (
     <div
@@ -75,14 +75,14 @@ const ContentInEvidenceTemplateSkeleton = ({
             );
           })}
         </div>
-        {linkMore?.href && <div className="link-more"></div>}
+        {linkHref && <div className="link-more"></div>}
       </Container>
     </div>
   );
 };
 
 ContentInEvidenceTemplateSkeleton.propTypes = {
-  linkMore: PropTypes.any,
+  linkHref: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };

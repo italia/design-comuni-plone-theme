@@ -6,6 +6,7 @@ import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import Slider from 'react-slick';
 import { UniversalLink } from '@plone/volto/components';
 import Image from '@plone/volto/components/theme/Image/Image';
+import { ListingLinkMore } from '@italia/components/ItaliaTheme';
 import { Icon } from '@italia/components/ItaliaTheme';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -25,7 +26,14 @@ const messages = defineMessages({
   },
 });
 
-const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
+const PhotogalleryTemplate = ({
+  items,
+  title,
+  isEditMode,
+  show_block_bg,
+  linkTitle,
+  linkHref,
+}) => {
   const intl = useIntl();
   const slider = useRef(null);
   const [autoplay, setAutoplay] = useState(false);
@@ -152,6 +160,7 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
             </Slider>
           </div>
         </div>
+        <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
       </Container>
     </div>
   );
@@ -159,7 +168,8 @@ const PhotogalleryTemplate = ({ items, title, isEditMode, show_block_bg }) => {
 
 PhotogalleryTemplate.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
-  linkMore: PropTypes.any,
+  linkTitle: PropTypes.any,
+  linkHref: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };

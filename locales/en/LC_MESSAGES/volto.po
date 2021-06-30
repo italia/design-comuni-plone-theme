@@ -26,8 +26,6 @@ msgstr ""
 msgid "Alert"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/simpleCardTemplate
 msgid "Aspetto"
 msgstr ""
@@ -127,12 +125,10 @@ msgstr ""
 msgid "Description placeholder"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
 #: config/Blocks/ListingOptions/mapTemplate
 msgid "Dimensione della mappa"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 msgid "Etichetta path filter"
@@ -204,15 +200,12 @@ msgstr ""
 msgid "Menu selezionato"
 msgstr "Menu selected"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 msgid "Mostra i filtri per percorso"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
-#: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/defaultOptions
 #: config/Blocks/ListingOptions/utils
 msgid "Mostra lo sfondo del blocco"
@@ -254,7 +247,6 @@ msgstr ""
 msgid "Open in a new tab"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 msgid "Path filter filtro"
@@ -265,7 +257,6 @@ msgstr ""
 msgid "Pause slider"
 msgstr "Pause"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 msgid "Percorso path filter"
@@ -373,9 +364,6 @@ msgid "Title placeholder"
 msgstr "Title..."
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
-#: components/ItaliaTheme/Blocks/Listing/Options/DefaultOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/defaultOptions
 msgid "Titolo"
 msgstr ""
@@ -446,15 +434,7 @@ msgstr "View"
 msgid "Vedi l'immagine"
 msgstr "View image"
 
-#: components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate
 #: components/ItaliaTheme/Blocks/Listing/Commons/ListingLinkMore
-#: components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate
-#: components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate
-#: components/ItaliaTheme/Blocks/Listing/MapTemplate
-#: components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate
-#: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateCompact
-#: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
-#: components/ItaliaTheme/Blocks/Listing/SquaresImageTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
 #: components/ItaliaTheme/MegaMenu/MegaMenu
@@ -509,11 +489,14 @@ msgstr "Attached documents"
 msgid "altre_cariche"
 msgstr "Other positions"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "altre_modalita_invio"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "altri_documenti"
 msgstr "Other documents"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 msgid "always_show_image"
 msgstr ""
@@ -566,6 +549,10 @@ msgstr "Attachment"
 #: components/ItaliaTheme/View/Commons/Attachments
 msgid "attachments"
 msgstr "Attachments"
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "atti_documenti_corredo"
+msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "atto_nomina"
@@ -644,7 +631,6 @@ msgstr "View"
 msgid "biografia"
 msgstr "Biography"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/BgColor
 #: config/Blocks/ListingOptions/defaultOptions
 msgid "block_bg_color"
 msgstr ""
@@ -779,6 +765,10 @@ msgstr "People"
 msgid "curriculum_vitae"
 msgstr "Curriculum vitae"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "customer_satisfaction"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "data_conclusione_incarico"
 msgstr "He was part of the municipal organization until"
@@ -799,6 +789,7 @@ msgstr "Date"
 msgid "date_e_orari"
 msgstr "Dates and times"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "decorrenza_termine"
 msgstr "Term effective date"
@@ -820,6 +811,7 @@ msgid "desc"
 msgstr "Quick links"
 
 #: components/ItaliaTheme/View/BandoView/BandoView
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 #: components/ItaliaTheme/View/VenueView/VenueView
 #: helpers/amministrazioneTrasparenteHelper
@@ -834,7 +826,6 @@ msgstr "Extended description"
 msgid "deselectSearchSection"
 msgstr "Do not search in section"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
 msgid "detail_link_label"
 msgstr ""
@@ -852,6 +843,7 @@ msgstr "Details of the type of procedure"
 msgid "dichiarazione_dei_redditi"
 msgstr "Tax declaration"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "dirigente"
 msgstr "Manager"
@@ -961,17 +953,9 @@ msgstr "The event is of interest to"
 msgid "event_documenti"
 msgstr "Documents"
 
-#: components/ItaliaTheme/Blocks/EventSearch/Filters/DateFilter
-msgid "event_search_endDate"
-msgstr "End date"
-
 #: components/ItaliaTheme/Blocks/EventSearch/Edit
 msgid "event_search_no_filters"
 msgstr ""
-
-#: components/ItaliaTheme/Blocks/EventSearch/Filters/DateFilter
-msgid "event_search_startDate"
-msgstr "Start date"
 
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "event_strutture_politiche"
@@ -1021,6 +1005,7 @@ msgstr "Fax"
 msgid "fax_sede"
 msgstr "Fax"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "file_correlato"
 msgstr "Related file"
@@ -1038,6 +1023,7 @@ msgstr "Filters"
 msgid "find"
 msgstr "Search"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "fine_termine"
 msgstr "End of term"
@@ -1075,7 +1061,6 @@ msgstr ""
 msgid "grid-gallery-max-items-exceeded"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
 msgid "hide_dates"
 msgstr ""
@@ -1107,6 +1092,7 @@ msgstr "Page index"
 msgid "insert_filter"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "iter_del_procedimento"
 msgstr "Procedure of the procedure"
@@ -1139,7 +1125,6 @@ msgstr "Useful links"
 msgid "listing_event_recurrence_label"
 msgstr "This event has multiple dates: see all"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/ItemsColor
 #: config/Blocks/ListingOptions/defaultOptions
 msgid "listing_items_color"
 msgstr ""
@@ -1165,17 +1150,14 @@ msgstr "Venue"
 msgid "mailto"
 msgstr "Send"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
 #: config/Blocks/ListingOptions/mapTemplate
 msgid "map_size_large"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
 #: config/Blocks/ListingOptions/mapTemplate
 msgid "map_size_medium"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
 #: config/Blocks/ListingOptions/mapTemplate
 msgid "map_size_small"
 msgstr ""
@@ -1188,6 +1170,7 @@ msgstr "min."
 msgid "modalita_accesso"
 msgstr "Access mode"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "modalita_di_avvio"
 msgstr "Startup mode"
@@ -1195,6 +1178,10 @@ msgstr "Startup mode"
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "modalita_richiedere_informazioni_procedimentodali"
 msgstr "Modalità per richiedere informazioni sul procedimento"
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "modalita_richiesta_informazioni"
+msgstr ""
 
 #: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
 #: components/ItaliaTheme/View/Commons/Metadata
@@ -1222,7 +1209,6 @@ msgstr "Main file"
 msgid "modulo_formati_alternativi"
 msgstr "Alternative formats"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
 #: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 msgid "natural_image_size"
@@ -1236,6 +1222,7 @@ msgstr "News"
 msgid "news_item_contenuto"
 msgstr "Content"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "no"
 msgstr "No"
@@ -1329,6 +1316,7 @@ msgstr "Order by"
 msgid "organizzazione_riferimento"
 msgstr "Reference organization"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "organo_competente_provvedimento_finale"
 msgstr "Competent unit adopting final provision"
@@ -1344,6 +1332,10 @@ msgstr "Ohter topics"
 #: components/ItaliaTheme/View/Commons/Metadata
 msgid "other_info"
 msgstr "Further information"
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "pagamenti"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/CuredBy
 msgid "page_cured_by"
@@ -1389,10 +1381,15 @@ msgstr ""
 msgid "print"
 msgstr "Print"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "procedura_online"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "procedure_collegate"
 msgstr "Procedures related to outcome"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "provvedimento_finale"
 msgstr "Final provision"
@@ -1442,10 +1439,15 @@ msgstr "Remove option"
 msgid "removeTopic"
 msgstr "Remove topic"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "reperimento_modulistica"
+msgstr ""
+
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "responsabile"
 msgstr "Responsible"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "responsabile_del_procedimento"
 msgstr "Responsibile for the procedure"
@@ -1458,6 +1460,11 @@ msgstr "Responsible for the procedure and competent Organizational Unit"
 msgid "responsabile_di"
 msgstr "Responsible of"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "responsabile_procedimento"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "riferimenti_normativi"
 msgstr "Normative requirements"
@@ -1669,7 +1676,7 @@ msgstr "Search contents in"
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 #: components/ItaliaTheme/Search/SearchSections
 msgid "searchInSection"
-msgstr "Search in section"
+msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "searchLabel"
@@ -1805,70 +1812,56 @@ msgstr "Go to other search options"
 msgid "share"
 msgstr "Share"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
 msgid "show_description"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
 msgid "show_detail_link"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/BandiInEvidenceTemplateOptions
 #: config/Blocks/ListingOptions/bandiInEvidenceTemplate
 msgid "show_ente"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
 msgid "show_icon"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
 #: config/Blocks/ListingOptions/mapTemplate
 msgid "show_map_full_width"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
 #: config/Blocks/ListingOptions/ribbonCardTemplate
 msgid "show_only_first_ribbon"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
 msgid "show_section"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/BandiInEvidenceTemplateOptions
 #: config/Blocks/ListingOptions/bandiInEvidenceTemplate
 msgid "show_tipologia"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/InEvidenceTemplateOptions
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 #: config/Blocks/ListingOptions/inEvidenceTemplate
 msgid "show_topics"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/utils
 msgid "show_type"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "silenzio_assenso"
 msgstr "Silence assent"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/simpleCardTemplate
 msgid "simplecard_listing_appearance_compact"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/SimpleCardTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/TemplatesOptions
 #: config/Blocks/ListingOptions/simpleCardTemplate
 msgid "simplecard_listing_appearance_description"
 msgstr ""
@@ -1888,6 +1881,10 @@ msgstr "Go to content"
 #: components/ItaliaTheme/SkipLinks/SkipLinks
 msgid "skiplink-navigation"
 msgstr "Go to navigation"
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "soggetti_esterni"
+msgstr ""
 
 #: components/ItaliaTheme/Search/Search
 msgid "sort_on_date"
@@ -1916,6 +1913,10 @@ msgstr "Event start"
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "strumenti_di_tutela"
 msgstr "Protection tools"
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "strumenti_tutela"
+msgstr ""
 
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "struttura"
@@ -1947,6 +1948,7 @@ msgstr "Phone"
 msgid "tempi_e_scadenze"
 msgstr "Times and deadlines"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "tempo_medio"
 msgstr "Average time"
@@ -1955,12 +1957,12 @@ msgstr "Average time"
 msgid "termine"
 msgstr "end"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "termini_del_procedimento"
 msgstr "Terms of the procedure"
 
 #: components/ItaliaTheme/Blocks/Common/SearchFilters/TextFilter
-#: components/ItaliaTheme/Blocks/EventSearch/Filters/TextFilter
 msgid "text_filter_placeholder"
 msgstr "Insert a value"
 
@@ -1983,6 +1985,7 @@ msgstr "Person type"
 msgid "title"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "titolare_potere_sostitutivo"
 msgstr "Holder of substitute power"
@@ -2001,6 +2004,10 @@ msgstr "to"
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderTassonomiaArgomenti
 msgid "topics"
 msgstr "Topics"
+
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+msgid "trasparenza"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccountLink"
@@ -2023,6 +2030,7 @@ msgid "ufficio_responsabile"
 msgstr "Responsible office"
 
 #: components/ItaliaTheme/View/BandoView/BandoView
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/DocumentoView/DocumentoView
 #: components/ItaliaTheme/View/EventoView/EventoView
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
@@ -2036,6 +2044,7 @@ msgstr "Further information"
 msgid "unita_operativa"
 msgstr "operational unit"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "unita_organizzativa_competente"
 msgstr "Competent organizational unit for the procedure"
@@ -2079,6 +2088,7 @@ msgstr "Constraints"
 msgid "website"
 msgstr "Web site"
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "yes"
 msgstr "Yes"

@@ -8,7 +8,7 @@ import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import Slider from 'react-slick';
 import { UniversalLink } from '@plone/volto/components';
 import Image from '@plone/volto/components/theme/Image/Image';
-import { Icon } from '@italia/components/ItaliaTheme';
+import { Icon, ListingLinkMore } from '@italia/components/ItaliaTheme';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -27,7 +27,14 @@ const messages = defineMessages({
   },
 });
 
-const SliderTemplate = ({ items, title, isEditMode, show_block_bg }) => {
+const SliderTemplate = ({
+  items,
+  title,
+  isEditMode,
+  show_block_bg,
+  linkTitle,
+  linkHref,
+}) => {
   const intl = useIntl();
   const slider = useRef(null);
   const [autoplay, setAutoplay] = useState(false);
@@ -145,6 +152,7 @@ const SliderTemplate = ({ items, title, isEditMode, show_block_bg }) => {
             </Slider>
           </div>
         </div>
+        <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
       </Container>
     </div>
   );
@@ -152,7 +160,8 @@ const SliderTemplate = ({ items, title, isEditMode, show_block_bg }) => {
 
 SliderTemplate.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
-  linkMore: PropTypes.any,
+  linkTitle: PropTypes.any,
+  linkHref: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };

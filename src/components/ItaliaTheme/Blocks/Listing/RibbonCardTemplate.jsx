@@ -18,17 +18,16 @@ import {
 
 import { UniversalLink } from '@plone/volto/components';
 
-import { flattenToAppURL } from '@plone/volto/helpers';
-
-import { Icon, getItemIcon, ListingText } from '@italia/components/ItaliaTheme';
+import {
+  Icon,
+  getItemIcon,
+  ListingText,
+  ListingLinkMore,
+} from '@italia/components/ItaliaTheme';
 import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
 import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 
 const messages = defineMessages({
-  view_all: {
-    id: 'Vedi tutto',
-    defaultMessage: 'Vedi tutto',
-  },
   default_detail_link: {
     id: 'Vedi',
     defaultMessage: 'Vedi',
@@ -38,7 +37,8 @@ const messages = defineMessages({
 const RibbonCardTemplate = ({
   items,
   isEditMode,
-  linkMore,
+  linkTitle,
+  linkHref,
   title,
   show_only_first_ribbon,
   show_detail_link,
@@ -140,16 +140,7 @@ const RibbonCardTemplate = ({
               );
             })}
           </Row>
-          {linkMore?.href && (
-            <div className="link-button text-center my-5">
-              <UniversalLink
-                href={flattenToAppURL(linkMore.href)}
-                className="btn btn-tertiary"
-              >
-                {linkMore.title || intl.formatMessage(messages.view_all)}
-              </UniversalLink>
-            </div>
-          )}
+          <ListingLinkMore title={linkTitle} href={linkHref} className="my-5" />
         </Container>
       </div>
     </div>
@@ -159,7 +150,8 @@ const RibbonCardTemplate = ({
 RibbonCardTemplate.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
   isEditMode: PropTypes.bool,
-  linkMore: PropTypes.any,
+  linkTitle: PropTypes.any,
+  linkHref: PropTypes.any,
 };
 
 export default RibbonCardTemplate;

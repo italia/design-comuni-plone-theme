@@ -14,7 +14,7 @@ import cx from 'classnames';
 const CompleteBlockLinksTemplateSkeleton = ({
   title,
   isEditMode,
-  linkMore,
+  linkHref,
   show_block_bg,
 }) => {
   return (
@@ -55,7 +55,7 @@ const CompleteBlockLinksTemplateSkeleton = ({
               </Col>
             ))}
           </Row>
-          {linkMore?.href && <div className="link-more text-center my-4"></div>}
+          {linkHref && <div className="link-more text-center my-4"></div>}
         </div>
       </Container>
     </div>
@@ -63,7 +63,7 @@ const CompleteBlockLinksTemplateSkeleton = ({
 };
 
 CompleteBlockLinksTemplateSkeleton.propTypes = {
-  linkMore: PropTypes.any,
+  linkHref: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };

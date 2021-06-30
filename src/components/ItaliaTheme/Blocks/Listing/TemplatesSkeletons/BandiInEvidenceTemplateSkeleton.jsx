@@ -16,7 +16,7 @@ const BandiInEvidenceTemplateSkeleton = ({
   title,
   isEditMode,
   show_block_bg,
-  linkMore,
+  linkHref,
 }) => {
   return (
     <div className={'bandi-in-evidence public-ui'}>
@@ -56,9 +56,7 @@ const BandiInEvidenceTemplateSkeleton = ({
                 );
               })}
             </div>
-            {linkMore?.href && (
-              <div className="link-more text-center my-4"></div>
-            )}
+            {linkHref && <div className="link-more text-center my-4"></div>}
           </div>
         </Container>
       </div>
@@ -67,7 +65,7 @@ const BandiInEvidenceTemplateSkeleton = ({
 };
 
 BandiInEvidenceTemplateSkeleton.propTypes = {
-  linkMore: PropTypes.any,
+  linkHref: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };

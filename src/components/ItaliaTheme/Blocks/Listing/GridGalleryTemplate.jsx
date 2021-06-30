@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { flattenToAppURL } from '@plone/volto/helpers';
+
 import { UniversalLink } from '@plone/volto/components';
 import { useIntl, defineMessages } from 'react-intl';
-import moment from 'moment';
 import Image from '@plone/volto/components/theme/Image/Image';
 
+import { ListingLinkMore } from '@italia/components/ItaliaTheme';
 import {
   Container,
   Row,
@@ -20,21 +20,17 @@ const messages = defineMessages({
     defaultMessage:
       'Per questo template il numero di risultati per pagina deve essere 7. Controlla le impostazioni.',
   },
-  view_all: {
-    id: 'Vedi tutto',
-    defaultMessage: 'Vedi tutto',
-  },
 });
 
 const GridGalleryTemplate = ({
   items,
   isEditMode,
   title,
-  linkMore,
+  linkTitle,
+  linkHref,
   show_block_bg,
 }) => {
   const intl = useIntl();
-  moment.locale(intl.locale);
 
   return (
     <div
@@ -88,16 +84,7 @@ const GridGalleryTemplate = ({
               );
             })}
           </div>
-          {linkMore?.href && (
-            <div className="link-button text-center my-5">
-              <UniversalLink
-                href={flattenToAppURL(linkMore.href)}
-                className="btn btn-tertiary"
-              >
-                {linkMore.title || intl.formatMessage(messages.view_all)}
-              </UniversalLink>
-            </div>
-          )}
+          <ListingLinkMore title={linkTitle} href={linkHref} className="my-5" />
         </Container>
       </div>
     </div>
@@ -106,7 +93,8 @@ const GridGalleryTemplate = ({
 
 GridGalleryTemplate.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
-  linkMore: PropTypes.any,
+  linkTitle: PropTypes.any,
+  linkHref: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };
