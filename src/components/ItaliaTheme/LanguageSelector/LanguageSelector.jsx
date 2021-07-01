@@ -10,8 +10,8 @@ import { find, map } from 'lodash';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import cx from 'classnames';
-import langmap from 'langmap';
-import { Helmet, flattenToAppURL } from '@plone/volto/helpers';
+
+import { Helmet, flattenToAppURL, langmap } from '@plone/volto/helpers';
 import { changeLanguage } from '@plone/volto/actions';
 import {
   Row,

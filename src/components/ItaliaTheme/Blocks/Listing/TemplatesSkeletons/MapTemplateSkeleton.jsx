@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import cx from 'classnames';
-
 import { Container } from 'design-react-kit/dist/design-react-kit';
 
 const MapTemplateSkeleton = ({
   isEditMode,
-  linkMore,
+  linkHref,
   title,
   show_only_first_ribbon,
   show_detail_link,
@@ -16,32 +14,24 @@ const MapTemplateSkeleton = ({
   hide_dates,
 }) => {
   return (
-    <div
-      className={cx('map-template', {
-        'public-ui': isEditMode,
-      })}
-    >
-      <div className="full-width">
-        <Container className="px-4">
-          <div className="template-skeleton">
-            {title && <h2 className="mb-4">{title}</h2>}
+    <div className="map-template">
+      <Container className="px-4">
+        <div className="template-skeleton">
+          {title && <h2 className="mb-4">{title}</h2>}
 
-            <div className="mb-4">
-              <div className="map-skeleton"></div>
-            </div>
-            {linkMore?.href && (
-              <div className="link-more text-center my-5"></div>
-            )}
+          <div className="mb-4">
+            <div className="map-skeleton"></div>
           </div>
-        </Container>
-      </div>
+          {linkHref && <div className="link-more text-center my-5"></div>}
+        </div>
+      </Container>
     </div>
   );
 };
 
 MapTemplateSkeleton.propTypes = {
   isEditMode: PropTypes.bool,
-  linkMore: PropTypes.any,
+  linkHref: PropTypes.any,
 };
 
 export default MapTemplateSkeleton;

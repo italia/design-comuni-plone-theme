@@ -9,20 +9,15 @@ import {
   Row,
   Col,
 } from 'design-react-kit/dist/design-react-kit';
-import cx from 'classnames';
 
 const CompleteBlockLinksTemplateSkeleton = ({
   title,
   isEditMode,
-  linkMore,
+  linkHref,
   show_block_bg,
 }) => {
   return (
-    <div
-      className={cx('complete-block-links-template', {
-        'public-ui': isEditMode,
-      })}
-    >
+    <div className="complete-block-links-template">
       <Container className="px-4 px-md-0">
         <div className="skeleton-template">
           {title && (
@@ -55,7 +50,7 @@ const CompleteBlockLinksTemplateSkeleton = ({
               </Col>
             ))}
           </Row>
-          {linkMore?.href && <div className="link-more text-center my-4"></div>}
+          {linkHref && <div className="link-more text-center my-4"></div>}
         </div>
       </Container>
     </div>
@@ -63,7 +58,7 @@ const CompleteBlockLinksTemplateSkeleton = ({
 };
 
 CompleteBlockLinksTemplateSkeleton.propTypes = {
-  linkMore: PropTypes.any,
+  linkHref: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };

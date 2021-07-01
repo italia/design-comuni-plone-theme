@@ -14,6 +14,7 @@ export TextEditorWidget from '@italia/components/ItaliaTheme/manage/Widgets/Text
 export LinkToWidget from '@italia/components/ItaliaTheme/manage/Widgets/LinkToWidget';
 export ColorListWidget from '@italia/components/ItaliaTheme/manage/Widgets/ColorListWidget';
 export FileWidget from '@italia/components/ItaliaTheme/manage/Widgets/FileWidget';
+export PathFiltersWidget from '@italia/components/ItaliaTheme/manage/Widgets/PathFiltersWidget';
 
 /********* ICONS ********* */
 export getItemIcon from '@italia/components/ItaliaTheme/Icons/common/common';
@@ -66,3 +67,4 @@ export Skeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSke
 export CardCalendar from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/CardCalendar';
 export ListingCategory from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/ListingCategory';
 export ListingText from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/ListingText';
+export ListingLinkMore from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/ListingLinkMore';

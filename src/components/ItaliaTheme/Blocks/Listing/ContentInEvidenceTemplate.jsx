@@ -19,6 +19,7 @@ import {
   ListingText,
   CardCategory,
   getItemIcon,
+  ListingLinkMore,
 } from '@italia/components/ItaliaTheme';
 import Image from '@plone/volto/components/theme/Image/Image';
 
@@ -27,19 +28,24 @@ const ContentInEvidenceTemplate = ({
   title,
   isEditMode,
   show_block_bg,
-  linkMore,
+  linkTitle,
+  linkHref,
 }) => {
   return (
-    <div
-      className={cx('contentInEvidenceTemplate', {
-        'public-ui': isEditMode,
-      })}
-    >
+    <div className="contentInEvidenceTemplate">
       <Container
         className={cx('', {
           'px-4': isEditMode,
         })}
       >
+        {title && (
+          <Row>
+            <Col>
+              <h2 className="mb-4">{title}</h2>
+            </Col>
+          </Row>
+        )}
+
         {items.map((item, index) => {
           const date = getCalendarDate(item);
           const eventRecurrenceMore = getEventRecurrenceMore(item, isEditMode);
@@ -106,6 +112,8 @@ const ContentInEvidenceTemplate = ({
             </Row>
           );
         })}
+
+        <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
       </Container>
     </div>
   );
@@ -113,7 +121,8 @@ const ContentInEvidenceTemplate = ({
 
 ContentInEvidenceTemplate.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
-  linkMore: PropTypes.any,
+  linkTitle: PropTypes.any,
+  linkHref: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };

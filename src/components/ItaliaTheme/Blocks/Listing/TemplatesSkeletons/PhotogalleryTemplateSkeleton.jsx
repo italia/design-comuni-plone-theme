@@ -8,16 +8,14 @@ const PhotogalleryTemplateSkeleton = (data) => {
     items.push({ '@id': i + '' });
   });
   return (
-    <div className="public-ui ">
-      <div className="skeleton-template">
-        <PhotogalleryTemplate {...data} items={items} />
-      </div>
+    <div className="skeleton-template">
+      <PhotogalleryTemplate {...data} items={items} />
     </div>
   );
 };
 
 PhotogalleryTemplateSkeleton.propTypes = {
-  linkMore: PropTypes.any,
+  linkHref: PropTypes.any,
   isEditMode: PropTypes.bool,
   title: PropTypes.string,
 };

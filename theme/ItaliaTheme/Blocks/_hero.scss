@@ -1,0 +1,96 @@
+.block.hero {
+  .toolbar {
+    position: absolute;
+    top: 0;
+    width: auto;
+    height: unset;
+  }
+
+  .block-inner-wrapper {
+    align-items: stretch;
+  }
+
+  .hero-image {
+    display: flex;
+    overflow: hidden;
+    max-width: unset;
+    height: unset;
+
+    max-height: unset;
+
+    flex: 0 1 50%;
+
+    justify-content: center;
+
+    picture {
+      max-width: unset;
+      object-fit: cover;
+    }
+
+    img {
+      object-fit: cover;
+    }
+  }
+
+  .hero-body {
+    &.no-bg {
+      background: none;
+    }
+    max-height: unset;
+    padding: 3em;
+
+    p {
+      max-height: unset;
+    }
+  }
+
+  .stores-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+
+    .btn {
+      display: flex;
+      align-items: center;
+      padding: 1em 1.2em;
+      margin: 0.7rem 1.5rem;
+      margin-left: 0;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      .icon {
+        max-width: 1.5rem;
+        max-height: 1.5rem;
+        margin: 0;
+        margin-left: 0.7em;
+        vertical-align: baseline;
+      }
+    }
+  }
+  @media (max-width: #{map-get($grid-breakpoints, lg)}) {
+    .block-inner-wrapper {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+
+    .hero-image {
+      max-width: 100%;
+      max-height: unset;
+      margin: auto;
+    }
+
+    .hero-body {
+      padding: 2em;
+    }
+
+    .stores-buttons {
+      justify-content: space-around;
+
+      .btn {
+        margin-right: 0;
+      }
+    }
+  }
+}

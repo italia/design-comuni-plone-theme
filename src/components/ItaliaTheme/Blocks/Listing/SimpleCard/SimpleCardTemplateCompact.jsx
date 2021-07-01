@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { defineMessages, useIntl } from 'react-intl';
 import { UniversalLink } from '@plone/volto/components';
 import {
   Card,
@@ -11,24 +10,21 @@ import {
   Col,
 } from 'design-react-kit/dist/design-react-kit';
 
-import { flattenToAppURL } from '@plone/volto/helpers';
-import { Icon, getItemIcon } from '@italia/components/ItaliaTheme';
+import {
+  Icon,
+  getItemIcon,
+  ListingLinkMore,
+} from '@italia/components/ItaliaTheme';
 
-const messages = defineMessages({
-  view_all: {
-    id: 'Vedi tutto',
-    defaultMessage: 'Vedi tutto',
-  },
-});
 const SimpleCardTemplateCompact = ({
   items,
   isEditMode,
-  linkMore,
+  linkTitle,
+  linkHref,
   show_icon = true,
   show_block_bg,
   title,
 }) => {
-  const intl = useIntl();
   return (
     <div className="simple-card-compact-template">
       {title && (
@@ -60,16 +56,8 @@ const SimpleCardTemplateCompact = ({
           </Card>
         ))}
       </div>
-      {linkMore?.href && (
-        <div className="link-button text-center my-4">
-          <UniversalLink
-            href={flattenToAppURL(linkMore.href)}
-            className="btn btn-tertiary"
-          >
-            {linkMore.title || intl.formatMessage(messages.view_all)}
-          </UniversalLink>
-        </div>
-      )}
+
+      <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
     </div>
   );
 };
@@ -77,7 +65,8 @@ const SimpleCardTemplateCompact = ({
 SimpleCardTemplateCompact.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
   isEditMode: PropTypes.bool,
-  linkMore: PropTypes.any,
+  linkTitle: PropTypes.any,
+  c: PropTypes.any,
 };
 
 export default SimpleCardTemplateCompact;

@@ -17,9 +17,6 @@ import config from '@plone/volto/registry';
  * @extends Component
  */
 const View = ({ data, pathname }) => {
-  if (__SERVER__) {
-    return <div />;
-  }
   //const isCmsUI = pathname ? isCmsUi(pathname) : false
 
   const content = data.text

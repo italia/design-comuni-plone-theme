@@ -16,29 +16,25 @@ import {
   Col,
 } from 'design-react-kit/dist/design-react-kit';
 import { CardCategory } from '@italia/components/ItaliaTheme';
-import { flattenToAppURL } from '@plone/volto/helpers';
-
 import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 
 import {
   getItemIcon,
   ListingCategory,
   ListingText,
+  ListingLinkMore,
 } from '@italia/components/ItaliaTheme';
 import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
 
 const messages = defineMessages({
-  view_all: {
-    id: 'Vedi tutto',
-    defaultMessage: 'Vedi tutto',
-  },
   card_detail_label: { id: 'Card detail label', defaultMessage: 'Vedi' },
 });
 
 const SimpleCardTemplateDefault = ({
   items,
   isEditMode,
-  linkMore,
+  linkTitle,
+  linkHref,
   show_icon = true,
   show_section = true,
   show_type,
@@ -220,16 +216,8 @@ const SimpleCardTemplateDefault = ({
           );
         })}
       </div>
-      {linkMore?.href && (
-        <div className="link-button text-center my-4">
-          <UniversalLink
-            href={flattenToAppURL(linkMore.href)}
-            className="btn btn-tertiary"
-          >
-            {linkMore.title || intl.formatMessage(messages.view_all)}
-          </UniversalLink>
-        </div>
-      )}
+
+      <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
     </div>
   );
 };
@@ -237,7 +225,8 @@ const SimpleCardTemplateDefault = ({
 SimpleCardTemplateDefault.propTypes = {
   items: PropTypes.arrayOf(PropTypes.any).isRequired,
   isEditMode: PropTypes.bool,
-  linkMore: PropTypes.any,
+  linkTitle: PropTypes.any,
+  linkHref: PropTypes.any,
 };
 
 export default SimpleCardTemplateDefault;
