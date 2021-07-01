@@ -21,11 +21,7 @@ const ContentInEvidenceTemplateSkeleton = ({
   linkHref,
 }) => {
   return (
-    <div
-      className={cx('contentInEvidence', {
-        'public-ui': isEditMode,
-      })}
-    >
+    <div className="contentInEvidence">
       <Container>
         <div className="skeleton-template">
           {title && (

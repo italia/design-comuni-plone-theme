@@ -8,10 +8,8 @@ const PhotogalleryTemplateSkeleton = (data) => {
     items.push({ '@id': i + '' });
   });
   return (
-    <div className="public-ui ">
-      <div className="skeleton-template">
-        <PhotogalleryTemplate {...data} items={items} />
-      </div>
+    <div className="skeleton-template">
+      <PhotogalleryTemplate {...data} items={items} />
     </div>
   );
 };

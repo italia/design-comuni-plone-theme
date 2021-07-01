@@ -33,60 +33,54 @@ const GridGalleryTemplate = ({
   const intl = useIntl();
 
   return (
-    <div
-      className={cx('grid-gallery-template', {
-        'public-ui': isEditMode,
-      })}
-    >
-      <div className="full-width">
-        <Container className="px-4">
-          {title && (
-            <Row>
-              <Col>
-                <h2 className="mb-4">{title}</h2>
-              </Col>
-            </Row>
-          )}
+    <div className="grid-gallery-template">
+      <Container className="px-4">
+        {title && (
+          <Row>
+            <Col>
+              <h2 className="mb-4">{title}</h2>
+            </Col>
+          </Row>
+        )}
 
-          {isEditMode && items.length > 7 && (
-            <Alert color="danger">
-              {intl.formatMessage(messages.maxItemsExceeded)}
-            </Alert>
-          )}
-          <div className="grid-gallery-grid">
-            {items.map((item, index) => {
-              const image =
-                item.image || item.immagine_testata || item.foto_persona;
+        {isEditMode && items.length > 7 && (
+          <Alert color="danger">
+            {intl.formatMessage(messages.maxItemsExceeded)}
+          </Alert>
+        )}
+        <div className="grid-gallery-grid">
+          {items.map((item, index) => {
+            const image =
+              item.image || item.immagine_testata || item.foto_persona;
 
-              return (
-                <div
-                  key={item['@id'] ?? index}
-                  className={cx('grid-gallery-item', `item-${index % 7}`)}
+            return (
+              <div
+                key={item['@id'] ?? index}
+                className={cx('grid-gallery-item', `item-${index % 7}`)}
+              >
+                <UniversalLink
+                  item={!isEditMode ? item : null}
+                  href={isEditMode ? '#' : null}
                 >
-                  <UniversalLink
-                    item={!isEditMode ? item : null}
-                    href={isEditMode ? '#' : null}
-                  >
-                    {image && (
-                      <Image
-                        image={image}
-                        alt=""
-                        loading="lazy"
-                        role="presentation"
-                        aria-hidden="true"
-                        useOriginal={false}
-                        maxSize={450}
-                      />
-                    )}
-                    <h3>{item.title}</h3>
-                  </UniversalLink>
-                </div>
-              );
-            })}
-          </div>
-          <ListingLinkMore title={linkTitle} href={linkHref} className="my-5" />
-        </Container>
-      </div>
+                  {image && (
+                    <Image
+                      image={image}
+                      alt=""
+                      loading="lazy"
+                      role="presentation"
+                      aria-hidden="true"
+                      useOriginal={false}
+                      maxSize={450}
+                    />
+                  )}
+                  <h3>{item.title}</h3>
+                </UniversalLink>
+              </div>
+            );
+          })}
+        </div>
+        <ListingLinkMore title={linkTitle} href={linkHref} className="my-5" />
+      </Container>
     </div>
   );
 };

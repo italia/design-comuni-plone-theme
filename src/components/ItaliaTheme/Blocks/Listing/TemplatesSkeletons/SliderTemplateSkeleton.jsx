@@ -8,10 +8,8 @@ const SliderTemplateSkeleton = (data) => {
     items.push({ '@id': i + '' });
   });
   return (
-    <div className="public-ui ">
-      <div className="skeleton-template">
-        <SliderTemplate {...data} items={items} />
-      </div>
+    <div className="skeleton-template">
+      <SliderTemplate {...data} items={items} />
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
-import cx from 'classnames';
 import { useIntl, defineMessages } from 'react-intl';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import Slider from 'react-slick';
@@ -112,11 +111,7 @@ const PhotogalleryTemplate = ({
   const getCaption = (item) => item.description ?? item.rights ?? null;
 
   return (
-    <div
-      className={cx('photogallery', {
-        'public-ui': isEditMode,
-      })}
-    >
+    <div className="photogallery">
       <Container className="px-4">
         {title && (
           <Row>

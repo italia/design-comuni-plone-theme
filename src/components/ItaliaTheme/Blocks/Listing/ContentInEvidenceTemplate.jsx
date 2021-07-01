@@ -32,11 +32,7 @@ const ContentInEvidenceTemplate = ({
   linkHref,
 }) => {
   return (
-    <div
-      className={cx('contentInEvidenceTemplate', {
-        'public-ui': isEditMode,
-      })}
-    >
+    <div className="contentInEvidenceTemplate">
       <Container
         className={cx('', {
           'px-4': isEditMode,

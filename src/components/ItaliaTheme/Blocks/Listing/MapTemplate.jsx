@@ -59,36 +59,30 @@ const MapTemplate = ({
   }, [items]);
 
   return (
-    <div
-      className={cx('map-template', {
-        'public-ui': isEditMode,
-      })}
-    >
-      <div className="full-width">
-        <Container className="px-4">
-          {title && (
-            <Row>
-              <Col>
-                <h2 className="mb-4">{title}</h2>
-              </Col>
-            </Row>
-          )}
-          {items?.length > 0 && markers?.length > 0 ? (
-            <Row
-              className={cx('mb-4 map-wrapper', {
-                'full-width': show_map_full_width,
-                ['size_' + map_size]: map_size,
-              })}
-            >
-              <OSMMap markers={markers} showTooltip />
-            </Row>
-          ) : (
-            intl.formatMessage(messages.no_markers)
-          )}
+    <div className="map-template">
+      <Container className="px-4">
+        {title && (
+          <Row>
+            <Col>
+              <h2 className="mb-4">{title}</h2>
+            </Col>
+          </Row>
+        )}
+        {items?.length > 0 && markers?.length > 0 ? (
+          <Row
+            className={cx('mb-4 map-wrapper', {
+              'full-width': show_map_full_width,
+              ['size_' + map_size]: map_size,
+            })}
+          >
+            <OSMMap markers={markers} showTooltip />
+          </Row>
+        ) : (
+          intl.formatMessage(messages.no_markers)
+        )}
 
-          <ListingLinkMore title={linkTitle} href={linkHref} className="my-5" />
-        </Container>
-      </div>
+        <ListingLinkMore title={linkTitle} href={linkHref} className="my-5" />
+      </Container>
     </div>
   );
 };
