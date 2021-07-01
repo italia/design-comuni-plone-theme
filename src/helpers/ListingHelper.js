@@ -5,6 +5,10 @@ import { useIntl, defineMessages } from 'react-intl';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { When } from '@plone/volto/components/theme/View/EventDatesInfo';
 import { viewDate } from '@italia/helpers';
+import {
+  getCalendarDate_extend,
+  getEventRecurrenceMore_extend,
+} from '@italia/helpers/ListingHelper_extend';
 
 const messages = defineMessages({
   from: {
@@ -32,9 +36,10 @@ export const getCalendarDate = (item) => {
     <span>{viewDate(intl.locale, item.effective, 'll')}</span>
   );
 
+  let ret = null;
   switch (item['@type']) {
     case 'Event':
-      return (
+      ret = (
         <When
           start={item.start}
           end={item.end}
@@ -47,18 +52,25 @@ export const getCalendarDate = (item) => {
           show_time={false}
         />
       );
+      break;
     case 'News Item':
-      return effective;
+      ret = effective;
+      break;
     default:
-      return null;
+      ret = null;
   }
+
+  const custom_ret = getCalendarDate_extend(item);
+
+  return custom_ret || ret;
 };
 
 export const getEventRecurrenceMore = (item, isEditMode) => {
   const intl = Intl();
+  let ret = null;
   if (item['@type'] === 'Event') {
     if (item.recurrence) {
-      return (
+      ret = (
         <Link
           to={!isEditMode ? flattenToAppURL(item['@id']) : '#'}
           className="event-recurrences-more"
@@ -68,5 +80,6 @@ export const getEventRecurrenceMore = (item, isEditMode) => {
       );
     }
   }
-  return null;
+  const custom_ret = getEventRecurrenceMore_extend(item, isEditMode);
+  return custom_ret || ret;
 };
