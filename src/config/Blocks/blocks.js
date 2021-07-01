@@ -290,7 +290,7 @@ const italiaBlocks = {
     id: 'cta_block',
     title: 'Blocco CTA',
     icon: flashSVG,
-    group: 'text',
+    group: 'common',
     view: CTABlockView,
     edit: CTABlockEdit,
     restricted: false,

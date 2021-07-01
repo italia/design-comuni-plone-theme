@@ -13,10 +13,15 @@
       margin: auto;
       text-align: center;
 
+      h2,
       h3 {
         margin: 0 0 1.5rem;
         color: $secondary-text;
         font-size: 2.25rem;
+      }
+
+      p:last-of-type {
+        margin-bottom: 0;
       }
 
       a.btn-outline-info {
@@ -39,8 +44,15 @@
     }
 
     /* EDIT */
-    .cta_title {
-      .public-DraftEditor-content {
+    .cta_title,
+    .cta_content {
+      .public-DraftEditor-content,
+      .public-DraftStyleDefault-block {
+        text-align: center;
+      }
+
+      .public-DraftEditorPlaceholder-root {
+        width: 100%;
         text-align: center;
       }
     }
@@ -49,7 +61,8 @@
       overflow: hidden;
       background: none;
 
-      figure.img-wrapper {
+      figure.img-wrapper,
+      picture {
         position: absolute;
         z-index: -1;
         top: 0;
@@ -73,7 +86,7 @@
           left: 0;
           width: 100%;
           height: 100%;
-          background: rgba(0, 0, 0, 0.4);
+          background: rgba(0, 0, 0, 0.5);
           content: '';
         }
       }

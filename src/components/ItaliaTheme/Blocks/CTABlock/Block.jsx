@@ -8,6 +8,8 @@ import redraft from 'redraft';
 import cx from 'classnames';
 import { TextEditorWidget } from '@italia/components/ItaliaTheme';
 import { UniversalLink } from '@plone/volto/components';
+import Image from '@plone/volto/components/theme/Image/Image';
+
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({
@@ -25,24 +27,11 @@ const messages = defineMessages({
   },
 });
 
-const renderImage = (image, showImage) =>
-  showImage && image ? (
-    <figure className="img-wrapper">
-      <img
-        src={`data:${image['content-type']};${image.encoding},${image.data}`}
-        alt=""
-        aria-hidden="true"
-        loading="lazy"
-        role="presentation"
-      />
-    </figure>
-  ) : null;
-
 const Block = ({
   data,
   block,
   inEditMode,
-  onChange,
+  onChangeBlock,
   onSelectBlock,
   onAddBlock,
   index,
@@ -74,10 +63,19 @@ const Block = ({
         }
       }}
     >
-      {hasImage && renderImage(data?.image, hasImage)}
+      {hasImage && data?.ctaImage?.length > 0 && (
+        <Image
+          image={data.ctaImage[0]?.['@id']}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          useOriginal={false}
+          role="presentation"
+        />
+      )}
       <Container tag="div" className="px-3 px-md-4">
         <div className="cta-tile-text">
-          <h3 className="title mt-0">
+          <h2 className="title mt-0">
             {inEditMode ? (
               <div
                 ref={titleRef}
@@ -93,7 +91,7 @@ const Block = ({
                   fieldName="cta_title"
                   selected={selected === 'title'}
                   block={block}
-                  onChangeBlock={(data) => onChange(data, 'cta_title')}
+                  onChangeBlock={(data) => onChangeBlock(block, data)}
                   placeholder={intl.formatMessage(messages.cta_title)}
                   showToolbar={false}
                   onSelectBlock={() => {}}
@@ -105,7 +103,7 @@ const Block = ({
             ) : (
               title
             )}
-          </h3>
+          </h2>
           {inEditMode ? (
             <div
               ref={contentRef}
@@ -121,7 +119,7 @@ const Block = ({
                 fieldName="cta_content"
                 selected={selected === 'content'}
                 block={block}
-                onChangeBlock={(data) => onChange(data, 'cta_content')}
+                onChangeBlock={(data) => onChangeBlock(block, data)}
                 placeholder={intl.formatMessage(messages.cta_content)}
                 showToolbar={true}
                 onSelectBlock={onSelectBlock}

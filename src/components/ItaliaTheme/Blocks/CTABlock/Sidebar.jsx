@@ -4,7 +4,7 @@ import { Segment, Accordion } from 'semantic-ui-react';
 import { FormattedMessage, injectIntl } from 'react-intl';
 import { defineMessages, useIntl } from 'react-intl';
 import {
-  FileWidget,
+  ObjectBrowserWidget,
   CheckboxWidget,
   TextWidget,
 } from '@plone/volto/components';
@@ -31,8 +31,6 @@ const messages = defineMessages({
 
 const Sidebar = ({ data, block, onChangeBlock, openObjectBrowser }) => {
   const intl = useIntl();
-  const [imageShow, setImageShow] = React.useState(data['showImage'] || false);
-  const currentData = data;
 
   return (
     <Segment.Group raised key={block.id || block}>
@@ -43,57 +41,53 @@ const Sidebar = ({ data, block, onChangeBlock, openObjectBrowser }) => {
       </header>
       <Accordion className="form">
         <Accordion.Content active={true}>
-          <FileWidget
-            id="CTAImage"
+          <ObjectBrowserWidget
+            id="ctaImage"
             title={intl.formatMessage(messages.ctaImage)}
-            value={currentData.image}
+            value={data.ctaImage || []}
+            mode="image"
+            widgetOptions={{
+              pattern_options: { selectableTypes: ['Image'] },
+            }}
             onChange={(name, value) => {
-              setImageShow(value ? true : false);
-              onChangeBlock({ ...currentData, image: value }, 'image');
-              onChangeBlock(
-                { ...currentData, showImage: !!value },
-                'showImage',
-              );
+              onChangeBlock(block, {
+                ...data,
+                [name]: value || [],
+                showImage: !!value,
+              });
             }}
           />
           <CheckboxWidget
-            id={'CTAImageEnable'}
+            id="showImage"
             title={intl.formatMessage(messages.ctaImageEnable)}
-            value={imageShow}
-            onChange={(name, value) => {
-              setImageShow(!imageShow);
-              onChangeBlock({ ...currentData, showImage: value }, 'showImage');
-            }}
-          />
-          <TextWidget
-            id="ctaLinkTitle"
-            title={intl.formatMessage(messages.ctaLinkTitle)}
-            value={currentData.ctaLinkTitle}
-            onChange={(_name, value) => {
-              onChangeBlock(
-                {
-                  ...currentData,
-                  ctaLinkTitle: value,
-                },
-                'ctaLinkTitle',
-              );
+            value={data.showImage ? data.showImage : false}
+            onChange={(name, checked) => {
+              onChangeBlock(block, { ...data, [name]: checked });
             }}
           />
 
+          <TextWidget
+            id="ctaLinkTitle"
+            title={intl.formatMessage(messages.ctaLinkTitle)}
+            value={data.ctaLinkTitle}
+            onChange={(name, value) => {
+              onChangeBlock(block, {
+                ...data,
+                [name]: value,
+              });
+            }}
+          />
           <LinkToWidget
-            data={currentData}
+            data={data}
             openObjectBrowser={openObjectBrowser}
             linkField="ctaLink"
             title={intl.formatMessage(messages.ctaLink)}
             showTarget={true}
             onChange={(name, value) =>
-              onChangeBlock(
-                {
-                  ...currentData,
-                  [name]: value,
-                },
-                name,
-              )
+              onChangeBlock(block, {
+                ...data,
+                [name]: value,
+              })
             }
           />
         </Accordion.Content>
