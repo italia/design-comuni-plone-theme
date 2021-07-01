@@ -88,9 +88,6 @@ class Edit extends Component {
    * @returns {string} Markup for the component.
    */
   render() {
-    if (__SERVER__) {
-      return <div />;
-    }
     return (
       <div>
         <BodyWrapper data={this.state.currentBlockData} inEditMode={true}>
