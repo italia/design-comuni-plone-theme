@@ -138,6 +138,10 @@ msgstr "Etichetta"
 msgid "Go to content"
 msgstr "Salta al contenuto"
 
+#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
+msgid "Hero"
+msgstr ""
+
 #: components/ItaliaTheme/Search/SearchCTs
 #: components/ItaliaTheme/Search/SearchTopics
 msgid "Hide"
@@ -202,6 +206,7 @@ msgid "Mostra i filtri per percorso"
 msgstr "Mostra i filtri per percorso"
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
 #: config/Blocks/ListingOptions/defaultOptions
 #: config/Blocks/ListingOptions/utils
 msgid "Mostra lo sfondo del blocco"
@@ -500,6 +505,10 @@ msgstr "Mostra l'immagine per tutti gli elementi"
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "amministrazione"
 msgstr "Amministrazione"
+
+#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
+msgid "appStoreLink"
+msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSlim/ArLogin
 msgid "arLogout"
@@ -1356,6 +1365,10 @@ msgstr "Persone"
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "placeholder"
 msgstr "Testo di aiuto"
+
+#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
+msgid "playStoreLink"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/View
 msgid "portata_di_click"
