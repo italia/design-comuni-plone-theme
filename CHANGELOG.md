@@ -1,3 +1,18 @@
+### [4.0.2](https://github.com/RedTurtle/design-volto-theme/compare/v4.0.1...v4.0.2) (2021-07-01)
+
+
+### Bug Fixes
+
+* fix listing mismatched layout client-server ([1fd098d](https://github.com/RedTurtle/design-volto-theme/commit/1fd098da072f14498993830a128230f390f31284))
+* fixed squaresTemplate overflow ([2ea8d54](https://github.com/RedTurtle/design-volto-theme/commit/2ea8d54afafdd1aa90c6b2a456ec19ac891289f1))
+
+
+### Maintenance
+
+* added option 'show block bg' in hero block ([d54fd40](https://github.com/RedTurtle/design-volto-theme/commit/d54fd40d63a2dddef294c2796b6b52c70286e03c))
+* changed HeroImageLeft block to have store links ([df2131f](https://github.com/RedTurtle/design-volto-theme/commit/df2131f39ea99a719d06611f5767a36bb03e3c46))
+* update to volto 13.5 ([728fcff](https://github.com/RedTurtle/design-volto-theme/commit/728fcffbdb9a450f6ea74dc450bfe9294ec641c1))
+
 ### [4.0.1](https://github.com/RedTurtle/design-volto-theme/compare/v4.0.0...v4.0.1) (2021-06-29)
 
 
