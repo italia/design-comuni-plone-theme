@@ -9,7 +9,6 @@ import {
   Row,
   Col,
 } from 'design-react-kit/dist/design-react-kit';
-import cx from 'classnames';
 
 const CompleteBlockLinksTemplateSkeleton = ({
   title,
@@ -18,11 +17,7 @@ const CompleteBlockLinksTemplateSkeleton = ({
   show_block_bg,
 }) => {
   return (
-    <div
-      className={cx('complete-block-links-template', {
-        'public-ui': isEditMode,
-      })}
-    >
+    <div className="complete-block-links-template">
       <Container className="px-4 px-md-0">
         <div className="skeleton-template">
           {title && (

@@ -53,11 +53,7 @@ const AmministrazioneTrasparenteTablesTemplate = ({
   const tableData = getTableRowData(items, intl, location.pathname);
 
   return (
-    <div
-      className={cx('persone-amministrazione-trasparente', {
-        'public-ui': isEditMode,
-      })}
-    >
+    <div className="persone-amministrazione-trasparente">
       <Container className="px-4">
         {title && (
           <Row>

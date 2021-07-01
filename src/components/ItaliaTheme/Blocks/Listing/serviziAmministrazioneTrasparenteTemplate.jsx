@@ -34,11 +34,7 @@ const GridGalleryTemplate = ({
   const intl = useIntl();
   moment.locale(intl.locale);
   return (
-    <div
-      className={cx('persone-amministrazione-trasparente', {
-        'public-ui': isEditMode,
-      })}
-    >
+    <div className="persone-amministrazione-trasparente">
       <Container className="px-4">
         {title && (
           <Row>

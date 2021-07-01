@@ -4,7 +4,6 @@ import { Container } from 'design-react-kit/dist/design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { ListingLinkMore } from '@italia/components/ItaliaTheme';
-import cx from 'classnames';
 
 const SquaresImageTemplate = ({
   items,
@@ -15,7 +14,7 @@ const SquaresImageTemplate = ({
   linkHref,
 }) => {
   return (
-    <div className={cx('squares-image-template', { 'public-ui': isEditMode })}>
+    <div className="squares-image-template">
       <Container className="px-4">
         <div className="title">{title && <h2>{title}</h2>}</div>
         <div className="grid mb-3 mt-5">

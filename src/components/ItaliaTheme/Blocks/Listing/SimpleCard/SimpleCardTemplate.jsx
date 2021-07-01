@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import cx from 'classnames';
 import { Container } from 'design-react-kit/dist/design-react-kit';
 import SimpleCardTemplateDefault from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault';
 import SimpleCardTemplateCompact from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateCompact';
@@ -17,15 +16,7 @@ const SimpleCardTemplate = (data) => {
       content = <SimpleCardTemplateDefault {...data} />;
   }
 
-  return (
-    <div
-      className={cx('', {
-        'public-ui': data.isEditMode,
-      })}
-    >
-      <Container className="px-4">{content}</Container>
-    </div>
-  );
+  return <Container className="px-4">{content}</Container>;
 };
 
 SimpleCardTemplate.propTypes = {

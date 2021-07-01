@@ -72,11 +72,7 @@ const BandiInEvidenceTemplate = ({
   const intl = useIntl();
 
   return (
-    <div
-      className={cx('bandi-in-evidence', {
-        'public-ui': isEditMode,
-      })}
-    >
+    <div className="bandi-in-evidence">
       <Container className="px-4">
         {title && (
           <Row>
