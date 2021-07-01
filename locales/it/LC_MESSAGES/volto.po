@@ -1288,7 +1288,7 @@ msgstr "Numero del comunicato stampa"
 
 #: components/ItaliaTheme/Blocks/CTABlock/Block
 msgid "openLinkInNewTab"
-msgstr "Apri link in un nuovo tab"
+msgstr "Apri link in una nuova scheda"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "optionActiveContentButton"

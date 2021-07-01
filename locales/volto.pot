@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-07-01T10:15:14.120Z\n"
+"POT-Creation-Date: 2021-07-01T10:24:41.121Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1581,7 +1581,7 @@ msgid "numero_progressivo_cs"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/CTABlock/Block
-# defaultMessage: Apri link in un nuovo tab
+# defaultMessage: Apri link in una nuova scheda
 msgid "openLinkInNewTab"
 msgstr ""
 

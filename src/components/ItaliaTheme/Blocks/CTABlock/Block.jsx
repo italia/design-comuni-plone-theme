@@ -21,7 +21,7 @@ const messages = defineMessages({
   },
   openLinkInNewTab: {
     id: 'openLinkInNewTab',
-    defaultMessage: 'Apri link in un nuovo tab',
+    defaultMessage: 'Apri link in una nuova scheda',
   },
 });
 
