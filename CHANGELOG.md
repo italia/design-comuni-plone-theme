@@ -1,3 +1,10 @@
+### [4.0.3](https://github.com/RedTurtle/design-volto-theme/compare/v4.0.2...v4.0.3) (2021-07-01)
+
+
+### Maintenance
+
+* added extendable ListingHelper ([b587941](https://github.com/RedTurtle/design-volto-theme/commit/b5879419f2e2775b63fcbbaf7055348f4263428f))
+
 ### [4.0.2](https://github.com/RedTurtle/design-volto-theme/compare/v4.0.1...v4.0.2) (2021-07-01)
 
 
