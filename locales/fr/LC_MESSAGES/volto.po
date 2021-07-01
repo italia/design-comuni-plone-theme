@@ -155,6 +155,10 @@ msgstr ""
 msgid "Go to content"
 msgstr "Aller au contenu"
 
+#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
+msgid "Hero"
+msgstr ""
+
 #: components/ItaliaTheme/Search/SearchCTs
 #: components/ItaliaTheme/Search/SearchTopics
 msgid "Hide"
@@ -219,6 +223,7 @@ msgid "Mostra i filtri per percorso"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
 #: config/Blocks/ListingOptions/defaultOptions
 #: config/Blocks/ListingOptions/utils
 msgid "Mostra lo sfondo del blocco"
@@ -517,6 +522,10 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "amministrazione"
 msgstr "Administration"
+
+#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
+msgid "appStoreLink"
+msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSlim/ArLogin
 msgid "arLogout"
@@ -1372,6 +1381,10 @@ msgstr "Gens"
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "placeholder"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
+msgid "playStoreLink"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgomentoTitle/View

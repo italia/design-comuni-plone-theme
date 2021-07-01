@@ -1,0 +1,3 @@
+RAZZLE_API_PATH=http://localhost:8080/Plone
+RAZZLE_INTERNAL_API_PATH=http://localhost:8080/Plone
+PORT=4000
