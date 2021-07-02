@@ -1,0 +1,15 @@
+.block.twitter_posts {
+  &,
+  .public-ui {
+    .authors {
+      a {
+        color: #fff;
+
+        &:hover,
+        &:active {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

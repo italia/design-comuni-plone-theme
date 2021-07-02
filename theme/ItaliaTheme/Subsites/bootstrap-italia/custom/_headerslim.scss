@@ -1,0 +1,14 @@
+//mobile
+&.cms-ui .public-ui {
+  .it-header-slim-wrapper {
+    .it-header-slim-wrapper-content {
+      a {
+        color: $primary-text;
+
+        &:hover {
+          color: $primary-text;
+        }
+      }
+    }
+  }
+}
