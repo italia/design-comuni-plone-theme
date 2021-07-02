@@ -6,7 +6,8 @@
   $subsite-secondary-text: $secondary-text,
   $subsite-tertiary: $tertiary,
   $subsite-tertiary-text: $tertiary-text,
-  $subsite-link-color: $link-color
+  $subsite-link-color: $link-color,
+  $subsite-light-theme: false
 ) {
   body.subsite-#{$subsite-style} {
     @import 'bootstrap-italia/custom/header';

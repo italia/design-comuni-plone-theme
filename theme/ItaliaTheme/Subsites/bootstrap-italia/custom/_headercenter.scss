@@ -16,19 +16,24 @@
         .it-socials {
           ul {
             .icon {
-              fill: $subsite-primary-text;
               color: $subsite-primary-text;
+              fill: $subsite-primary-text;
             }
           }
         }
       }
 
       //-search
+
       .it-search-wrapper {
         a {
           &.rounded-icon {
             svg {
-              fill: $subsite-primary-text;
+              @if $subsite-light-theme {
+                fill: $subsite-primary-text;
+              } @else {
+                fill: $subsite-primary;
+              }
             }
           }
         }
@@ -47,8 +52,8 @@
               a {
                 &:hover {
                   svg {
-                    fill: darken($subsite-primary-text, 5%);
                     color: darken($subsite-primary-text, 5%);
+                    fill: darken($subsite-primary-text, 5%);
                   }
                 }
               }
@@ -61,7 +66,11 @@
           a {
             &.rounded-icon {
               svg {
-                fill: $subsite-primary;
+                @if $subsite-light-theme {
+                  fill: $subsite-primary-text;
+                } @else {
+                  fill: $subsite-primary;
+                }
               }
             }
           }
