@@ -113,6 +113,10 @@ msgstr "Contacts"
 msgid "Content"
 msgstr "Contenu"
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+msgid "Content in evidence"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/SideMenu
 msgid "Contenuto"
 msgstr "Contenu"
@@ -200,10 +204,12 @@ msgstr ""
 msgid "Link to"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 msgid "LinkMore"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 msgid "Linkto title"
 msgstr ""
@@ -645,6 +651,10 @@ msgstr ""
 msgid "bando_vedi"
 msgstr "Voir"
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+msgid "bg_color"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "biografia"
 msgstr "Biographie"
@@ -712,6 +722,14 @@ msgstr "Fermer"
 msgid "closeSearch"
 msgstr "Fermer la recherche"
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+msgid "color_primary"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+msgid "color_transparent"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "come_si_fa"
 msgstr "Comment tu fais"
@@ -746,6 +764,10 @@ msgstr "Contacts externes"
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "contatti_interni"
 msgstr "Contacts internes"
+
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Body
+msgid "content-in-evidence-news"
+msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "copertura_geografica"
@@ -947,6 +969,7 @@ msgstr ""
 msgid "email_sede"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Edit
 #: components/ItaliaTheme/Blocks/NewsHome/Edit
 msgid "emptySelection"
 msgstr ""
@@ -1227,6 +1250,7 @@ msgstr "Dossier principal"
 msgid "modulo_formati_alternativi"
 msgstr "Formats alternatifs"
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 msgid "natural_image_size"
@@ -1854,6 +1878,7 @@ msgstr ""
 msgid "show_only_first_ribbon"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: config/Blocks/ListingOptions/utils
 msgid "show_section"
 msgstr ""
@@ -1867,6 +1892,7 @@ msgstr ""
 msgid "show_topics"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: config/Blocks/ListingOptions/utils
 msgid "show_type"
 msgstr ""

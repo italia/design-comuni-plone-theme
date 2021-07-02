@@ -57,8 +57,6 @@ export SkipLinks from '@italia/components/ItaliaTheme/SkipLinks/SkipLinks';
 
 /********* BLOCKS ********* */
 export AlertSidebar from '@italia/components/ItaliaTheme/Blocks/Alert/Sidebar';
-export NewsHomeBody from '@italia/components/ItaliaTheme/Blocks/NewsHome/Body';
-export NewsHomeSidebar from '@italia/components/ItaliaTheme/Blocks/NewsHome/Sidebar';
 export BlockSearchSectionsSidebar from '@italia/components/ItaliaTheme/Blocks/SearchSections/SideBar';
 export BlockSearchSectionsBody from '@italia/components/ItaliaTheme/Blocks/SearchSections/Body';
 export ArgumentsInEvidenceBackground from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Background';
