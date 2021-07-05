@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-07-02T15:11:51.050Z\n"
+"POT-Creation-Date: 2021-07-05T11:00:25.514Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -119,6 +119,7 @@ msgid "Content"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 # defaultMessage: Contenuto in primo piano
 msgid "Content in evidence"
 msgstr ""
@@ -231,12 +232,14 @@ msgid "Link to"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 # defaultMessage: Link ad altro
 msgid "LinkMore"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 # defaultMessage: Testo per il link ad altro
 msgid "Linkto title"
@@ -778,6 +781,7 @@ msgid "bando_vedi"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 # defaultMessage: Colore di sfondo
 msgid "bg_color"
 msgstr ""
@@ -866,11 +870,13 @@ msgid "closeSearch"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 # defaultMessage: Primario
 msgid "color_primary"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 # defaultMessage: Trasparente
 msgid "color_transparent"
 msgstr ""
@@ -1171,6 +1177,7 @@ msgid "email_sede"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Edit
+#: components/ItaliaTheme/Blocks/HighlightedContent/Edit
 #: components/ItaliaTheme/Blocks/NewsHome/Edit
 # defaultMessage: Please select an item in the sidebar in order to show it here
 msgid "emptySelection"
@@ -1518,6 +1525,7 @@ msgid "modulo_formati_alternativi"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 # defaultMessage: undefined
@@ -2290,6 +2298,7 @@ msgid "show_only_first_ribbon"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Mostra la sezione
 msgid "show_section"
@@ -2307,6 +2316,7 @@ msgid "show_topics"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Mostra il tipo
 msgid "show_type"

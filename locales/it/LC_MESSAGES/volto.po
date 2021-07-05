@@ -97,6 +97,7 @@ msgid "Content"
 msgstr "Contenuto"
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "Content in evidence"
 msgstr ""
 
@@ -188,11 +189,13 @@ msgid "Link to"
 msgstr "Link a"
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 msgid "LinkMore"
 msgstr "Link ad altro"
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 msgid "Linkto title"
 msgstr "Titolo per il link ad altro"
@@ -635,6 +638,7 @@ msgid "bando_vedi"
 msgstr "Vedi"
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "bg_color"
 msgstr ""
 
@@ -706,10 +710,12 @@ msgid "closeSearch"
 msgstr "Chiudi ricerca"
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "color_primary"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "color_transparent"
 msgstr ""
 
@@ -953,6 +959,7 @@ msgid "email_sede"
 msgstr "E-mail"
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Edit
+#: components/ItaliaTheme/Blocks/HighlightedContent/Edit
 #: components/ItaliaTheme/Blocks/NewsHome/Edit
 msgid "emptySelection"
 msgstr "Seleziona un elemento nella barra laterale per mostrarlo qui."
@@ -1234,6 +1241,7 @@ msgid "modulo_formati_alternativi"
 msgstr "Formati alternativi"
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 msgid "natural_image_size"
@@ -1862,6 +1870,7 @@ msgid "show_only_first_ribbon"
 msgstr "Mostra il nastro solo sulla prima card"
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: config/Blocks/ListingOptions/utils
 msgid "show_section"
 msgstr "Mostra la sezione"
@@ -1876,6 +1885,7 @@ msgid "show_topics"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: config/Blocks/ListingOptions/utils
 msgid "show_type"
 msgstr ""

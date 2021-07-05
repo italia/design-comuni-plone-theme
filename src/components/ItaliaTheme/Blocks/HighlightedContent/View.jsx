@@ -5,8 +5,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
-import Body from '@italia/components/ItaliaTheme/Blocks/ContentInEvidence/Body';
-import Skeleton from '@italia/components/ItaliaTheme/Blocks/ContentInEvidence/Skeleton';
+import Body from '@italia/components/ItaliaTheme/Blocks/HighlightedContent/Body';
+import Skeleton from '@italia/components/ItaliaTheme/Blocks/HighlightedContent/Skeleton';
 
 const View = ({ data, id }) => {
   const content = useSelector((state) => state.content.subrequests[id]?.data);
@@ -30,13 +30,13 @@ const View = ({ data, id }) => {
   return loaded ? (
     <>
       {data.href && content && (
-        <div className="block contentInEvidence">
+        <div className="block highlitedContent">
           <Body content={content} block={data} />
         </div>
       )}
     </>
   ) : (
-    <div className="block contentInEvidence">
+    <div className="block highlitedContent">
       <Skeleton block={data} />
     </div>
   );

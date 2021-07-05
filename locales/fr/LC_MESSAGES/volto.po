@@ -114,6 +114,7 @@ msgid "Content"
 msgstr "Contenu"
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "Content in evidence"
 msgstr ""
 
@@ -205,11 +206,13 @@ msgid "Link to"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 msgid "LinkMore"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 msgid "Linkto title"
 msgstr ""
@@ -652,6 +655,7 @@ msgid "bando_vedi"
 msgstr "Voir"
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "bg_color"
 msgstr ""
 
@@ -723,10 +727,12 @@ msgid "closeSearch"
 msgstr "Fermer la recherche"
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "color_primary"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "color_transparent"
 msgstr ""
 
@@ -970,6 +976,7 @@ msgid "email_sede"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Edit
+#: components/ItaliaTheme/Blocks/HighlightedContent/Edit
 #: components/ItaliaTheme/Blocks/NewsHome/Edit
 msgid "emptySelection"
 msgstr ""
@@ -1251,6 +1258,7 @@ msgid "modulo_formati_alternativi"
 msgstr "Formats alternatifs"
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 msgid "natural_image_size"
@@ -1879,6 +1887,7 @@ msgid "show_only_first_ribbon"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: config/Blocks/ListingOptions/utils
 msgid "show_section"
 msgstr ""
@@ -1893,6 +1902,7 @@ msgid "show_topics"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: config/Blocks/ListingOptions/utils
 msgid "show_type"
 msgstr ""

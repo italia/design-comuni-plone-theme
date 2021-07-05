@@ -1,7 +1,7 @@
 import newsSVG from '@plone/volto/icons/news.svg';
 import searchIcon from 'bootstrap-italia/src/svg/it-search.svg';
-import ContentInEvidenceView from '@italia/components/ItaliaTheme/Blocks/ContentInEvidence/View';
-import ContentInEvidenceEdit from '@italia/components/ItaliaTheme/Blocks/ContentInEvidence/Edit';
+import HighlightedContentView from '@italia/components/ItaliaTheme/Blocks/HighlightedContent/View';
+import HighlightedContentEdit from '@italia/components/ItaliaTheme/Blocks/HighlightedContent/Edit';
 import noteSvg from 'bootstrap-italia/src/svg/it-note.svg';
 import calendarSvg from 'bootstrap-italia/src/svg/it-calendar.svg';
 
@@ -54,13 +54,13 @@ import NumbersBlockView from '@italia/components/ItaliaTheme/Blocks/NumbersBlock
 import NumbersBlockEdit from '@italia/components/ItaliaTheme/Blocks/NumbersBlock/Edit';
 
 const italiaBlocks = {
-  contentInEvidence: {
-    id: 'contentInEvidence',
+  highlitedContent: {
+    id: 'highlitedContent',
     title: 'Contenuto in primo piano',
     icon: newsSVG,
     group: 'homePage',
-    view: ContentInEvidenceView,
-    edit: ContentInEvidenceEdit,
+    view: HighlightedContentView,
+    edit: HighlightedContentEdit,
     restricted: false,
     mostUsed: true,
     security: {
