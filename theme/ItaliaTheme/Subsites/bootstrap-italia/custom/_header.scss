@@ -23,7 +23,11 @@
               a {
                 &.rounded-icon {
                   svg {
-                    fill: $subsite-primary;
+                    @if $subsite-light-theme {
+                      fill: $subsite-primary-text;
+                    } @else {
+                      fill: $subsite-primary;
+                    }
                   }
                 }
               }

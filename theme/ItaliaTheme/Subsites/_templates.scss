@@ -1,0 +1,160 @@
+@import 'ItaliaTheme/Subsites/mixin';
+
+// ----------------- YELLOW ----------------- //
+$subsite-yellow-primary: #d4a418;
+$subsite-yellow-primary-text: black;
+$subsite-yellow-secondary: green;
+$subsite-yellow-secondary-text: white;
+$subsite-yellow-link-color: #b77d04;
+
+@include define-subsite(
+  'yellow',
+  $subsite-yellow-primary,
+  $subsite-yellow-primary-text,
+  $subsite-yellow-secondary,
+  $subsite-yellow-secondary-text,
+  $tertiary,
+  $tertiary-text,
+  $subsite-yellow-link-color,
+  true
+);
+
+// ----------------- LIGHT YELLOW ----------------- //
+$subsite-light-yellow-primary: #f6eac5;
+$subsite-light-yellow-primary-text: #000;
+$subsite-light-yellow-secondary: #b77d04;
+$subsite-light-yellow-secondary-text: #000;
+$subsite-light-yellow-tertiary: #8b5d0a;
+$subsite-light-yellow-tertiary-text: #fff;
+$subsite-light-yellow-link-color: #b77d04;
+
+@include define-subsite(
+  'light-yellow',
+  $subsite-light-yellow-primary,
+  $subsite-light-yellow-primary-text,
+  $subsite-light-yellow-secondary,
+  $subsite-light-yellow-secondary-text,
+  $subsite-light-yellow-tertiary,
+  $subsite-light-yellow-tertiary-text,
+  $subsite-light-yellow-link-color,
+  true
+);
+@import 'ItaliaTheme/Subsites/templates/light-yellow';
+
+// ----------------- LIGHT-BLUE ----------------- //
+$subsite-light-blue-primary: #72a9f9;
+$subsite-light-blue-primary-text: #000;
+$subsite-light-blue-tertiary: #2e4d7b;
+$subsite-light-blue-tertiary-text: #fff;
+$subsite-light-blue-link-color: #235eb6;
+
+@include define-subsite(
+  'light-blue',
+  $subsite-light-blue-primary,
+  $subsite-light-blue-primary-text,
+  $subsite-light-blue-primary,
+  $subsite-light-blue-primary-text,
+  $subsite-light-blue-tertiary,
+  $subsite-light-blue-tertiary-text,
+  $subsite-light-blue-link-color,
+  true
+);
+
+// ----------------- TEAL ----------------- //
+$subsite-teal-primary: #2f707b;
+$subsite-teal-primary-text: white;
+$subsite-teal-tertiary: #178567;
+$subsite-teal-tertiary-text: white;
+
+@include define-subsite(
+  'teal',
+  $subsite-teal-primary,
+  $subsite-teal-primary-text,
+  $subsite-teal-primary,
+  $subsite-teal-primary-text,
+  $subsite-teal-tertiary,
+  $subsite-teal-tertiary-text,
+  $subsite-teal-primary
+);
+
+// ----------------- LIGHT TEAL ----------------- //
+$subsite-light-teal-primary: #d9e9e8;
+$subsite-light-teal-primary-text: #000;
+$subsite-light-teal-secondary: #d9e9e8;
+$subsite-light-teal-secondary-text: #000;
+$subsite-light-teal-tertiary: #2c7b78;
+$subsite-light-teal-tertiary-text: #fff;
+$subsite-light-teal-link-color: #2c7b78;
+
+@include define-subsite(
+  'light-teal',
+  $subsite-light-teal-primary,
+  $subsite-light-teal-primary-text,
+  $subsite-light-teal-secondary,
+  $subsite-light-teal-secondary-text,
+  $subsite-light-teal-tertiary,
+  $subsite-light-teal-tertiary-text,
+  $subsite-light-teal-link-color,
+  true
+);
+@import 'ItaliaTheme/Subsites/templates/light-teal';
+
+// ----------------- WHITE ----------------- //
+$subsite-white-primary: #0066cc;
+$subsite-white-primary-text: #fff;
+$subsite-white-secondary: #000eb3;
+$subsite-white-secondary-text: #fff;
+$subsite-white-link-color: #0066cc;
+
+@include define-subsite(
+  'white',
+  $subsite-white-primary,
+  $subsite-white-primary-text,
+  $subsite-white-primary,
+  $subsite-white-primary-text,
+  $tertiary,
+  $tertiary-text,
+  $subsite-white-link-color
+);
+
+@import 'ItaliaTheme/Subsites/templates/white';
+
+// ----------------- MAGENTA ----------------- //
+$subsite-magenta-primary: #be0042;
+$subsite-magenta-primary-text: #fff;
+$subsite-magenta-secondary: #3f091b;
+$subsite-magenta-secondary-text: #fff;
+$subsite-magenta-link-color: #be0042;
+
+@include define-subsite(
+  'magenta',
+  $subsite-magenta-primary,
+  $subsite-magenta-primary-text,
+  $subsite-magenta-primary,
+  $subsite-magenta-primary-text,
+  $subsite-magenta-primary,
+  $subsite-magenta-primary-text,
+  $subsite-magenta-link-color
+);
+
+// ----------------- LIGHT PINK ----------------- //
+$subsite-light-pink-primary: #faeef1;
+$subsite-light-pink-primary-text: #000;
+$subsite-light-pink-secondary: #faeef1;
+$subsite-light-pink-secondary-text: #000;
+$subsite-light-pink-tertiary: #b97787;
+$subsite-light-pink-tertiary-text: #fff;
+$subsite-light-pink-link-color: #9a264d;
+
+@include define-subsite(
+  'light-pink',
+  $subsite-light-pink-primary,
+  $subsite-light-pink-primary-text,
+  $subsite-light-pink-secondary,
+  $subsite-light-pink-secondary-text,
+  $subsite-light-pink-tertiary,
+  $subsite-light-pink-tertiary-text,
+  $subsite-light-pink-link-color,
+  true
+);
+@import 'ItaliaTheme/Subsites/templates/light-pink';
