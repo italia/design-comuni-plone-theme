@@ -10,43 +10,47 @@
   $subsite-light-theme: false
 ) {
   body.subsite-#{$subsite-style} {
-    @import 'bootstrap-italia/custom/header';
-    @import 'bootstrap-italia/custom/headercenter';
-    @import 'bootstrap-italia/brand-text';
-    @import 'bootstrap-italia/custom/headernavbar';
-    @import 'bootstrap-italia/custom/headerslim';
-    @import 'bootstrap-italia/custom/navigation';
-    @import 'bootstrap-italia/custom/megamenu';
-    @import 'bootstrap-italia/custom/header';
-    @import 'bootstrap-italia/custom/buttons';
-    @import 'bootstrap-italia/custom/chips';
-    @import 'bootstrap-italia/custom/card';
-    @import 'bootstrap-italia/custom/dropdown';
-    @import 'bootstrap-italia/custom/linklist';
-    @import 'bootstrap-italia/custom/navscroll';
-    @import 'ItaliaTheme/Components/subsiteFooter';
-    @import 'ItaliaTheme/Blocks/cardWithImageAndInEvidence';
-    @import 'ItaliaTheme/Blocks/completeBlockLinktemplate';
-    @import 'ItaliaTheme/Blocks/ribbonCardTemplate';
-    @import 'ItaliaTheme/Blocks/highlitedContent';
-    @import 'ItaliaTheme/Blocks/argumentsInEvidence';
-    @import 'ItaliaTheme/Blocks/searchSections';
-    @import 'ItaliaTheme/Blocks/twitterPosts';
-    @import 'ItaliaTheme/Views/common';
-    @import 'ItaliaTheme/common';
-    @import 'homepage';
+    &,
+    .public-ui {
+      @import 'bootstrap-italia/custom/header';
+      @import 'bootstrap-italia/custom/headercenter';
+      @import 'bootstrap-italia/brand-text';
+      @import 'bootstrap-italia/custom/headernavbar';
+      @import 'bootstrap-italia/custom/headerslim';
+      @import 'bootstrap-italia/custom/navigation';
+      @import 'bootstrap-italia/custom/nav';
+      @import 'bootstrap-italia/custom/megamenu';
+      @import 'bootstrap-italia/custom/header';
+      @import 'bootstrap-italia/custom/buttons';
+      @import 'bootstrap-italia/custom/chips';
+      @import 'bootstrap-italia/custom/card';
+      @import 'bootstrap-italia/custom/dropdown';
+      @import 'bootstrap-italia/custom/linklist';
+      @import 'bootstrap-italia/custom/navscroll';
+      @import 'ItaliaTheme/Components/subsiteFooter';
+      @import 'ItaliaTheme/Blocks/cardWithImageAndInEvidence';
+      @import 'ItaliaTheme/Blocks/completeBlockLinktemplate';
+      @import 'ItaliaTheme/Blocks/ribbonCardTemplate';
+      @import 'ItaliaTheme/Blocks/highlitedContent';
+      @import 'ItaliaTheme/Blocks/argumentsInEvidence';
+      @import 'ItaliaTheme/Blocks/searchSections';
+      @import 'ItaliaTheme/Blocks/twitterPosts';
+      @import 'ItaliaTheme/Views/common';
+      @import 'ItaliaTheme/common';
+      @import 'homepage';
 
-    a,
-    &.cms-ui .public-ui a {
-      color: $subsite-link-color;
+      a,
+      &.cms-ui .public-ui a {
+        color: $subsite-link-color;
 
-      &:hover {
-        color: color-hover($subsite-link-color);
+        &:hover {
+          color: color-hover($subsite-link-color);
+        }
       }
-    }
 
-    .icon-primary {
-      fill: $subsite-primary !important;
+      .icon-primary {
+        fill: $subsite-primary !important;
+      }
     }
   }
 }

@@ -44,6 +44,8 @@ $subsite-light-yellow-link-color: #b77d04;
 // ----------------- LIGHT-BLUE ----------------- //
 $subsite-light-blue-primary: #72a9f9;
 $subsite-light-blue-primary-text: #000;
+$subsite-light-blue-secondary: #2e4d7b;
+$subsite-light-blue-secondary-text: #fff;
 $subsite-light-blue-tertiary: #2e4d7b;
 $subsite-light-blue-tertiary-text: #fff;
 $subsite-light-blue-link-color: #235eb6;
@@ -52,8 +54,8 @@ $subsite-light-blue-link-color: #235eb6;
   'light-blue',
   $subsite-light-blue-primary,
   $subsite-light-blue-primary-text,
-  $subsite-light-blue-primary,
-  $subsite-light-blue-primary-text,
+  $subsite-light-blue-secondary,
+  $subsite-light-blue-secondary-text,
   $subsite-light-blue-tertiary,
   $subsite-light-blue-tertiary-text,
   $subsite-light-blue-link-color,
@@ -80,8 +82,8 @@ $subsite-teal-tertiary-text: white;
 // ----------------- LIGHT TEAL ----------------- //
 $subsite-light-teal-primary: #d9e9e8;
 $subsite-light-teal-primary-text: #000;
-$subsite-light-teal-secondary: #d9e9e8;
-$subsite-light-teal-secondary-text: #000;
+$subsite-light-teal-secondary: #2c7b78;
+$subsite-light-teal-secondary-text: #fff;
 $subsite-light-teal-tertiary: #2c7b78;
 $subsite-light-teal-tertiary-text: #fff;
 $subsite-light-teal-link-color: #2c7b78;
@@ -140,8 +142,8 @@ $subsite-magenta-link-color: #be0042;
 // ----------------- LIGHT PINK ----------------- //
 $subsite-light-pink-primary: #faeef1;
 $subsite-light-pink-primary-text: #000;
-$subsite-light-pink-secondary: #faeef1;
-$subsite-light-pink-secondary-text: #000;
+$subsite-light-pink-secondary: #9a264d;
+$subsite-light-pink-secondary-text: #fff;
 $subsite-light-pink-tertiary: #b97787;
 $subsite-light-pink-tertiary-text: #fff;
 $subsite-light-pink-link-color: #9a264d;
