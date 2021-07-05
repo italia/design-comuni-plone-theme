@@ -252,7 +252,7 @@ const TrasparenzaFields = ({ content }) => {
           {content[field.attr][0].title}
         </UniversalLink>
       );
-    if (field.type === 'download') {
+    if (field.type === 'download' && content[field.attr].download) {
       return (
         <p>
           <a
@@ -270,7 +270,8 @@ const TrasparenzaFields = ({ content }) => {
   };
 
   let fields = fieldsMap.map((field) => {
-    if (content[field.attr] === undefined) return null;
+    if (content[field.attr] === undefined || content[field.attr] === null)
+      return null;
     const data = renderTrasparenzaField(field);
     if (!data) return null;
 
