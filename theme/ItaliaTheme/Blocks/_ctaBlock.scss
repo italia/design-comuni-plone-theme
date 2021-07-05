@@ -1,0 +1,113 @@
+.block.cta-block {
+  margin-bottom: 0;
+
+  .cta-block-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $secondary;
+    color: $secondary-text;
+
+    .cta-tile-text {
+      width: 80%;
+      margin: auto;
+      text-align: center;
+
+      h2,
+      h3 {
+        margin: 0 0 1.5rem;
+        color: $secondary-text;
+        font-size: 2.25rem;
+      }
+
+      p:last-of-type {
+        margin-bottom: 0;
+      }
+
+      a.btn-outline-info {
+        max-width: 300px;
+        box-shadow: inset 0 0 0 1px $secondary-text;
+        color: $secondary-text;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+
+        &:hover,
+        &:focus {
+          background: $secondary-text;
+          color: $secondary;
+        }
+      }
+
+      @media (max-width: 600px) {
+        width: 100%;
+      }
+    }
+
+    /* EDIT */
+    .cta_title,
+    .cta_content {
+      .public-DraftEditor-content,
+      .public-DraftStyleDefault-block {
+        text-align: center;
+      }
+
+      .public-DraftEditorPlaceholder-root {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    &.has-image {
+      overflow: hidden;
+      background: none;
+
+      figure.img-wrapper,
+      picture {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          min-width: 100%;
+          min-height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        &::after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          content: '';
+        }
+      }
+
+      .cta-tile-text {
+        &,
+        h3 {
+          color: #fff;
+        }
+
+        a.btn-outline-info {
+          box-shadow: inset 0 0 0 1px #fff;
+          color: #fff;
+
+          &:hover,
+          &:focus {
+            background: #fff;
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}

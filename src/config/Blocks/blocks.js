@@ -53,6 +53,10 @@ import numbersBlockSVG from '@plone/volto/icons/apps.svg';
 import NumbersBlockView from '@italia/components/ItaliaTheme/Blocks/NumbersBlock/View';
 import NumbersBlockEdit from '@italia/components/ItaliaTheme/Blocks/NumbersBlock/Edit';
 
+import flashSVG from '@plone/volto/icons/flash.svg';
+import CTABlockView from '@italia/components/ItaliaTheme/Blocks/CTABlock/View';
+import CTABlockEdit from '@italia/components/ItaliaTheme/Blocks/CTABlock/Edit';
+
 const italiaBlocks = {
   newsHome: {
     id: 'newsHome',
@@ -276,6 +280,22 @@ const italiaBlocks = {
     edit: TwitterPostsEdit,
     restricted: false,
     mostUsed: false,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
+  cta_block: {
+    id: 'cta_block',
+    title: 'Blocco CTA',
+    icon: flashSVG,
+    group: 'common',
+    view: CTABlockView,
+    edit: CTABlockEdit,
+    restricted: false,
+    mostUsed: false,
+    blockHasOwnFocusManagement: true,
     security: {
       addPermission: [],
       view: [],
