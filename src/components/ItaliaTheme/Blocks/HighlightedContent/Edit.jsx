@@ -7,7 +7,8 @@ import { getContent, resetContent } from '@plone/volto/actions';
 import { SidebarPortal } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
-import { NewsHomeBody, NewsHomeSidebar } from '@italia/components/ItaliaTheme';
+import Body from '@italia/components/ItaliaTheme/Blocks/HighlightedContent/Body';
+import Sidebar from '@italia/components/ItaliaTheme/Blocks/HighlightedContent/Sidebar';
 
 const messages = defineMessages({
   emptySelection: {
@@ -42,7 +43,7 @@ const Edit = ({
     <>
       {content ? (
         <div className="public-ui">
-          <NewsHomeBody content={content} pathname={pathname} block={data} />
+          <Body content={content} pathname={pathname} block={data} />
         </div>
       ) : (
         <p className="empty-selection">
@@ -50,7 +51,7 @@ const Edit = ({
         </p>
       )}
       <SidebarPortal selected={selected}>
-        <NewsHomeSidebar
+        <Sidebar
           block={block}
           data={data}
           onChangeBlock={onChangeBlock}

@@ -1,0 +1,147 @@
+.block.highlitedContent {
+  .empty-selection {
+    padding: 0.5em;
+    background-color: #eee;
+    text-align: center;
+  }
+
+  .item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    &.natural-image-size {
+      object-fit: contain !important;
+    }
+  }
+
+  .card-title {
+    a {
+      color: $text-color;
+      font-size: 1.8rem;
+      line-height: 2.3rem;
+      text-decoration: none;
+      transition: 0.2s color ease;
+
+      &:hover,
+      &:focus {
+        color: $link-color;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .bg-primary {
+    .card {
+      background-color: transparent;
+
+      .card-body {
+        color: $primary-text;
+
+        .categoryicon-top {
+          .icon {
+            color: $primary-text;
+            fill: $primary-text;
+          }
+
+          .text {
+            color: $primary-text;
+          }
+        }
+
+        .category-top,
+        .card-title,
+        .card-text {
+          color: $primary-text;
+
+          a {
+            color: $primary-text;
+          }
+        }
+
+        .chip.chip-primary {
+          border-color: $primary-text;
+          color: $primary-text;
+
+          > .chip-label {
+            color: $primary-text;
+          }
+
+          &:hover,
+          &:active {
+            background-color: $primary-text;
+
+            > .chip-label {
+              color: $primary;
+            }
+          }
+        }
+
+        a.read-more {
+          color: $primary-text;
+
+          .icon {
+            fill: $primary-text;
+          }
+        }
+      }
+    }
+  }
+
+  .bg-secondary {
+    .card {
+      background-color: transparent;
+
+      .card-body {
+        color: $secondary-text;
+
+        .categoryicon-top {
+          .icon {
+            color: $secondary-text;
+            fill: $secondary-text;
+          }
+
+          .text {
+            color: $secondary-text;
+          }
+        }
+
+        .category-top,
+        .card-title,
+        .card-text {
+          color: $secondary-text;
+
+          a {
+            color: $secondary-text;
+          }
+        }
+
+        .chip.chip-primary {
+          border-color: $secondary-text;
+          color: $secondary-text;
+
+          > .chip-label {
+            color: $secondary-text;
+          }
+
+          &:hover,
+          &:active {
+            background-color: $secondary-text;
+
+            > .chip-label {
+              color: $secondary;
+            }
+          }
+        }
+
+        a.read-more {
+          color: $secondary-text;
+
+          .icon {
+            fill: $secondary-text;
+          }
+        }
+      }
+    }
+  }
+}

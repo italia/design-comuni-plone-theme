@@ -99,7 +99,7 @@ msgstr "Contenuto"
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "Content in evidence"
-msgstr ""
+msgstr "Contenuto in evidenza"
 
 #: components/ItaliaTheme/View/Commons/SideMenu
 msgid "Contenuto"
@@ -642,7 +642,7 @@ msgstr "Vedi"
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "bg_color"
-msgstr ""
+msgstr "Colore di sfondo"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "biografia"
@@ -714,12 +714,12 @@ msgstr "Chiudi ricerca"
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "color_primary"
-msgstr ""
+msgstr "Colore primario"
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "color_transparent"
-msgstr ""
+msgstr "Trasparente"
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "come_si_fa"
@@ -758,7 +758,7 @@ msgstr "Contatti interni"
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Body
 msgid "content-in-evidence-news"
-msgstr ""
+msgstr "News"
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "copertura_geografica"
@@ -1905,13 +1905,13 @@ msgstr ""
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 #: config/Blocks/ListingOptions/inEvidenceTemplate
 msgid "show_topics"
-msgstr ""
+msgstr "Mostra gli argomenti"
 
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: config/Blocks/ListingOptions/utils
 msgid "show_type"
-msgstr ""
+msgstr "Mostra il tipo"
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView

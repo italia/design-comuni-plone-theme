@@ -1,7 +1,7 @@
 import newsSVG from '@plone/volto/icons/news.svg';
 import searchIcon from 'bootstrap-italia/src/svg/it-search.svg';
-import NewsHomeView from '@italia/components/ItaliaTheme/Blocks/NewsHome/View';
-import NewsHomeEdit from '@italia/components/ItaliaTheme/Blocks/NewsHome/Edit';
+import HighlightedContentView from '@italia/components/ItaliaTheme/Blocks/HighlightedContent/View';
+import HighlightedContentEdit from '@italia/components/ItaliaTheme/Blocks/HighlightedContent/Edit';
 import noteSvg from 'bootstrap-italia/src/svg/it-note.svg';
 import calendarSvg from 'bootstrap-italia/src/svg/it-calendar.svg';
 
@@ -58,13 +58,13 @@ import CTABlockView from '@italia/components/ItaliaTheme/Blocks/CTABlock/View';
 import CTABlockEdit from '@italia/components/ItaliaTheme/Blocks/CTABlock/Edit';
 
 const italiaBlocks = {
-  newsHome: {
-    id: 'newsHome',
-    title: 'News con immagine in primo piano',
+  highlitedContent: {
+    id: 'highlitedContent',
+    title: 'Contenuto in primo piano',
     icon: newsSVG,
-    group: 'news',
-    view: NewsHomeView,
-    edit: NewsHomeEdit,
+    group: 'homePage',
+    view: HighlightedContentView,
+    edit: HighlightedContentEdit,
     restricted: false,
     mostUsed: true,
     security: {

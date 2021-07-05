@@ -185,6 +185,21 @@ body.cms-ui {
         border: 2px solid $primary;
       }
     }
+
+    .button.transparent,
+    .button.transparent.active {
+      background-color: transparent;
+    }
+
+    .button.primary,
+    .button.primary.active {
+      background-color: $primary;
+    }
+
+    .button.secondary,
+    .button.secondary.active {
+      background-color: $secondary;
+    }
   }
 
   .path-filter-widget {
