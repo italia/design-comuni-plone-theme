@@ -5,10 +5,18 @@
     .navbar-nav {
       li {
         a.nav-link {
-          color: $subsite-primary;
+          @if $subsite-light-theme {
+            color: $subsite-primary-text;
+          } @else {
+            color: $subsite-primary;
+          }
 
           &.active {
-            border-left-color: $subsite-primary;
+            @if $subsite-light-theme {
+              border-left-color: $subsite-primary-text;
+            } @else {
+              border-left-color: $subsite-primary;
+            }
           }
         }
       }
@@ -25,7 +33,11 @@
           }
 
           span {
-            color: $subsite-link-color;
+            @if $subsite-light-theme {
+              color: darken($subsite-link-color, 10);
+            } @else {
+              color: $subsite-link-color;
+            }
           }
 
           i {
