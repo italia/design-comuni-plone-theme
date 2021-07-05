@@ -46,7 +46,7 @@ class Edit extends SubblocksEdit {
 
     return (
       <div className="public-ui">
-        <div className="full-width section section-muted section-inset-shadow py-5">
+        <div className="full-width section section-muted section-inset-shadow py-5 is-edit-mode">
           <Container className="px-md-4">
             <Card className="card-bg rounded" noWrapper={false} space tag="div">
               <CardBody tag="div">
