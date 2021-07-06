@@ -1,4 +1,4 @@
-@import 'ItaliaTheme/Subsites/mixin';
+@import 'mixin';
 
 // ----------------- YELLOW ----------------- //
 $subsite-yellow-primary: #d4a418;
@@ -39,7 +39,7 @@ $subsite-light-yellow-link-color: #b77d04;
   $subsite-light-yellow-link-color,
   true
 );
-@import 'ItaliaTheme/Subsites/templates/light-yellow';
+@import 'templates/light-yellow';
 
 // ----------------- LIGHT-BLUE ----------------- //
 $subsite-light-blue-primary: #72a9f9;
@@ -99,7 +99,7 @@ $subsite-light-teal-link-color: #2c7b78;
   $subsite-light-teal-link-color,
   true
 );
-@import 'ItaliaTheme/Subsites/templates/light-teal';
+@import 'templates/light-teal';
 
 // ----------------- WHITE ----------------- //
 $subsite-white-primary: #0066cc;
@@ -119,7 +119,7 @@ $subsite-white-link-color: #0066cc;
   $subsite-white-link-color
 );
 
-@import 'ItaliaTheme/Subsites/templates/white';
+@import 'templates/white';
 
 // ----------------- MAGENTA ----------------- //
 $subsite-magenta-primary: #be0042;
@@ -159,4 +159,4 @@ $subsite-light-pink-link-color: #9a264d;
   $subsite-light-pink-link-color,
   true
 );
-@import 'ItaliaTheme/Subsites/templates/light-pink';
+@import 'templates/light-pink';
