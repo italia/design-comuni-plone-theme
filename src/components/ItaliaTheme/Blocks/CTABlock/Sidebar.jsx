@@ -32,6 +32,10 @@ const messages = defineMessages({
 const Sidebar = ({ data, block, onChangeBlock, openObjectBrowser }) => {
   const intl = useIntl();
 
+  if (data.showImage === null || data.showImage === undefined) {
+    data.showImage = false;
+  }
+
   return (
     <Segment.Group raised key={block.id || block}>
       <header className="header pulled">
@@ -60,10 +64,11 @@ const Sidebar = ({ data, block, onChangeBlock, openObjectBrowser }) => {
           <CheckboxWidget
             id="showImage"
             title={intl.formatMessage(messages.ctaImageEnable)}
-            value={data.showImage ? data.showImage : false}
+            value={data.ctaImage?.length > 0 && data.showImage}
             onChange={(name, checked) => {
               onChangeBlock(block, { ...data, [name]: checked });
             }}
+            isDisabled={!data.ctaImage?.length > 0}
           />
 
           <TextWidget

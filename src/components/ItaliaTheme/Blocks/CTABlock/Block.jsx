@@ -38,7 +38,7 @@ const Block = ({
 }) => {
   const intl = useIntl();
   const title = data?.cta_title?.blocks[0]?.text;
-  const hasImage = data?.showImage;
+  const hasImage = data?.showImage && data?.ctaImage?.length > 0;
   const content = data?.cta_content;
 
   const [selected, setSelected] = useState('title');
@@ -65,7 +65,8 @@ const Block = ({
     >
       {hasImage && data?.ctaImage?.length > 0 && (
         <Image
-          image={data.ctaImage[0]?.['@id']}
+          image={data.ctaImage[0]['@id']}
+          key={data.ctaImage[0]['@id']}
           alt=""
           aria-hidden="true"
           loading="lazy"
