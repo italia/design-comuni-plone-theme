@@ -6,6 +6,11 @@
       .it-brand-wrapper {
         a {
           color: $subsite-primary-text;
+
+          .icon {
+            color: $subsite-primary-text;
+            fill: $subsite-primary-text;
+          }
         }
       }
 

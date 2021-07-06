@@ -1,18 +1,20 @@
 body.subsite-light-pink {
-  .chip.chip-primary {
-    border-color: $subsite-light-pink-link-color;
-    color: $subsite-light-pink-link-color;
-
-    & > .chip-label {
-      color: $subsite-light-pink-link-color;
-    }
-
-    &:hover {
+  .public-ui {
+    .chip.chip-primary {
       border-color: $subsite-light-pink-link-color;
-      background-color: $subsite-light-pink-link-color;
+      color: $subsite-light-pink-link-color;
 
       & > .chip-label {
-        color: #fff;
+        color: $subsite-light-pink-link-color;
+      }
+
+      &:hover {
+        border-color: $subsite-light-pink-link-color;
+        background-color: $subsite-light-pink-link-color;
+
+        & > .chip-label {
+          color: #fff;
+        }
       }
     }
   }

@@ -1,53 +1,60 @@
 body.subsite-white {
-  //mobile
-  .it-header-wrapper {
-    box-shadow: 0px -10px 20px 0px $subsite-white-primary;
+  .public-ui {
+    //mobile
+    .it-header-wrapper {
+      box-shadow: 0px -10px 20px 0px $subsite-white-primary;
 
-    .it-header-center-wrapper {
-      background-color: $subsite-white-primary-text;
-      color: $subsite-white-primary;
+      .it-header-center-wrapper {
+        background-color: $subsite-white-primary-text;
+        color: $subsite-white-primary;
 
-      //-search
-      .it-header-center-content-wrapper {
-        .it-brand-wrapper {
-          a {
-            color: $subsite-white-primary;
-          }
-
-          .it-brand-text {
-            h2,
-            h3 {
+        //-search
+        .it-header-center-content-wrapper {
+          .it-brand-wrapper {
+            a {
               color: $subsite-white-primary;
-            }
-          }
-        }
 
-        .it-search-wrapper {
-          a {
-            width: 48px;
-            height: 48px;
-          }
-        }
-
-        .it-right-zone {
-          color: $subsite-white-primary;
-
-          a {
-            color: $subsite-white-primary;
-          }
-
-          .it-socials {
-            ul {
               .icon {
                 color: $subsite-white-primary;
                 fill: $subsite-white-primary;
               }
+            }
 
-              a {
-                &:hover {
-                  .icon {
-                    color: lighten($subsite-white-primary, 10);
-                    fill: lighten($subsite-white-primary, 10);
+            .it-brand-text {
+              h2,
+              h3 {
+                color: $subsite-white-primary;
+              }
+            }
+          }
+
+          .it-search-wrapper {
+            a {
+              width: 48px;
+              height: 48px;
+            }
+          }
+
+          .it-right-zone {
+            color: $subsite-white-primary;
+
+            a {
+              color: $subsite-white-primary;
+            }
+
+            .it-socials {
+              ul {
+                .icon {
+                  color: $subsite-white-primary;
+                  fill: $subsite-white-primary;
+                }
+
+                a {
+                  &:hover {
+                    .icon {
+                      color: lighten($subsite-white-primary, 10);
+                      fill: lighten($subsite-white-primary, 10);
+                    }
                   }
                 }
               }
@@ -55,41 +62,41 @@ body.subsite-white {
           }
         }
       }
-    }
 
-    .it-header-navbar-wrapper {
-      background-color: $subsite-white-primary-text;
-      color: $subsite-white-primary;
-
-      a {
-        color: $subsite-white-primary;
-      }
-
-      .navbar {
+      .it-header-navbar-wrapper {
         background-color: $subsite-white-primary-text;
-      }
+        color: $subsite-white-primary;
 
-      .custom-navbar-toggler {
-        svg {
+        a {
           color: $subsite-white-primary;
-          fill: $subsite-white-primary;
+        }
+
+        .navbar {
+          background-color: $subsite-white-primary-text;
+        }
+
+        .custom-navbar-toggler {
+          svg {
+            color: $subsite-white-primary;
+            fill: $subsite-white-primary;
+          }
         }
       }
     }
-  }
 
-  .navbar .navbar-collapsable .navbar-nav li a.nav-link {
-    color: $subsite-white-primary;
-    @media (min-width: #{map-get($grid-breakpoints, lg)}) {
-      &.active {
-        border-color: $subsite-white-primary;
+    .navbar .navbar-collapsable .navbar-nav li a.nav-link {
+      color: $subsite-white-primary;
+      @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+        &.active {
+          border-color: $subsite-white-primary;
+        }
       }
     }
-  }
 
-  .megamenu {
-    .megamenu-toggle-icon {
-      fill: $subsite-white-primary;
+    .megamenu {
+      .megamenu-toggle-icon {
+        fill: $subsite-white-primary;
+      }
     }
   }
 }
