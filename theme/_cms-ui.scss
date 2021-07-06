@@ -152,6 +152,15 @@ body.cms-ui {
     }
   }
 
+  .menu-configuration-widget,
+  .footer-configuration-widget,
+  .secondary-menu-configuration-widget,
+  .search-sections-configuration-widget {
+    .ui.pointing.secondary.menu {
+      flex-wrap: wrap;
+    }
+  }
+
   .menu-configuration-widget {
     .menu-blocks-container {
       .DraftEditor-editorContainer .public-DraftEditor-content {
