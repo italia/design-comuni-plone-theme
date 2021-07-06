@@ -64,11 +64,7 @@ const Sidebar = ({ data, block, onChangeBlock, openObjectBrowser }) => {
           <CheckboxWidget
             id="showImage"
             title={intl.formatMessage(messages.ctaImageEnable)}
-            value={
-              data.ctaImage?.length > 0 && data.showImage
-                ? data.showImage
-                : false
-            }
+            value={data.ctaImage?.length > 0 && data.showImage}
             onChange={(name, checked) => {
               onChangeBlock(block, { ...data, [name]: checked });
             }}
