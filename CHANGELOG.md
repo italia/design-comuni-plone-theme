@@ -1,3 +1,40 @@
+## [4.1.0](https://github.com/RedTurtle/design-volto-theme/compare/v4.0.3...v4.1.0) (2021-07-07)
+
+
+### Features
+
+* add CTA block ([1250ba9](https://github.com/RedTurtle/design-volto-theme/commit/1250ba9db9f4ff4495093f6b1ba122417c0a73de))
+* added new subsites colors ([b440e82](https://github.com/RedTurtle/design-volto-theme/commit/b440e82dcefb098dbc6a1fb8f3a144ea9086e726))
+
+
+### Bug Fixes
+
+* change CTA block link component ([f8456d0](https://github.com/RedTurtle/design-volto-theme/commit/f8456d077ca85403008042dcd3eb109a0057d3e4))
+* cta block data change ([20c9764](https://github.com/RedTurtle/design-volto-theme/commit/20c9764b42355d079d945d5a886530e20ffbf86b))
+* cta block data change ([b5815ad](https://github.com/RedTurtle/design-volto-theme/commit/b5815ad55db4e78b55f92ad4cacbdcdd33768427))
+* fix toolabar overflow in Accordion block ([6d8cb07](https://github.com/RedTurtle/design-volto-theme/commit/6d8cb07deca07538d21f8bdb2b7fff7a1c110a7d))
+* fixed import for subsites templates ([92e797c](https://github.com/RedTurtle/design-volto-theme/commit/92e797c54dd43beb4dc18e8cd52b1c019e6ae976))
+* fixed styles for subsite link colors ([53b8b1a](https://github.com/RedTurtle/design-volto-theme/commit/53b8b1ad401f341badad9c7065dce0e6b7b90f8e))
+* fixed subsite light colors ([46ced61](https://github.com/RedTurtle/design-volto-theme/commit/46ced6117442e3f85763f4fe9d2fa64b55d7335b))
+* fixed subsite light colors ([4f578bc](https://github.com/RedTurtle/design-volto-theme/commit/4f578bc5430073e5e93bd7bcbcaaf08792088e57))
+* new tab translation ([30f8ece](https://github.com/RedTurtle/design-volto-theme/commit/30f8ecedbcb6e7715b50adf3f752a1d03f024709))
+* remove server condition on edit cta block ([8730413](https://github.com/RedTurtle/design-volto-theme/commit/8730413cfa1e790bab4f46c6405dab600f439ddd))
+* tabs overflow in controlpanels widgets ([a926165](https://github.com/RedTurtle/design-volto-theme/commit/a926165d1af2f8196029ab805c7ec55f623db9c9))
+* trasparenza file download condition ([4fe52e7](https://github.com/RedTurtle/design-volto-theme/commit/4fe52e705dd8a8e7ef693bfe0388ee9f2b10fa4e))
+
+
+### Changes
+
+* cta block ([36f6c72](https://github.com/RedTurtle/design-volto-theme/commit/36f6c722bf09ec7c64e0daa7ae9dae2b1bb8fcc7))
+* rename block NewsHome in ContentInEvidence ([442aba6](https://github.com/RedTurtle/design-volto-theme/commit/442aba656004bd2c520cb1ad14d5d7edcfeef416))
+* renamed ContentInEvidence block in HighlitedContent block ([cee395f](https://github.com/RedTurtle/design-volto-theme/commit/cee395f6facb9d0b0a87eef556c7fff52ca05475))
+
+
+### Maintenance
+
+* added PageHeaderExtend component to extend header in custom content-types ([f6c28a1](https://github.com/RedTurtle/design-volto-theme/commit/f6c28a1fd7a862710c7fee751eec86e6c7d9dc9e))
+* updated locales ([09ecd37](https://github.com/RedTurtle/design-volto-theme/commit/09ecd37858345ab6b3f92733aa59414b729fc7aa))
+
 ### [4.0.3](https://github.com/RedTurtle/design-volto-theme/compare/v4.0.2...v4.0.3) (2021-07-01)
 
 ### Maintenance
