@@ -21,16 +21,27 @@ const messages = defineMessages({
  * @params {string} folder name where to find images.
  * @returns {string} Markup of the component.
  */
-const Attachments = ({ content, folder_name, title, as_article = true }) => {
+const Attachments = ({
+  content,
+  folder_name,
+  items,
+  title,
+  as_article = true,
+  article_id = folder_name,
+}) => {
   const intl = useIntl();
-  const url = `${flattenToAppURL(content['@id'])}/${folder_name}`;
+  const url = content
+    ? `${flattenToAppURL(content['@id'])}/${folder_name}`
+    : null;
   const searchResults = useSelector((state) => state.search.subrequests);
   const dispatch = useDispatch();
 
-  const hasChildren = contentFolderHasItems(content, folder_name);
+  const hasChildren = folder_name
+    ? contentFolderHasItems(content, folder_name)
+    : items?.length > 0;
 
   useEffect(() => {
-    if (hasChildren) {
+    if (folder_name && hasChildren) {
       dispatch(
         searchContent(
           url,
@@ -51,7 +62,7 @@ const Attachments = ({ content, folder_name, title, as_article = true }) => {
     // eslint-disable-next-line
   }, []);
 
-  const attachments = searchResults?.[folder_name]?.items || [];
+  const attachments = searchResults?.[folder_name]?.items || items || [];
 
   const attachments_view = (
     <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
@@ -84,11 +95,11 @@ const Attachments = ({ content, folder_name, title, as_article = true }) => {
   );
 
   return !hasChildren ? null : as_article ? (
-    <article id={folder_name} className="it-page-section anchor-offset mt-5">
+    <article id={article_id} className="it-page-section anchor-offset mt-5">
       {title ? (
-        <h4 id={`header-${folder_name}`}>{title}</h4>
+        <h4 id={`header-${article_id}`}>{title}</h4>
       ) : (
-        <h4 id={`header-${folder_name}`}>
+        <h4 id={`header-${article_id}`}>
           {intl.formatMessage(messages.attachments)}
         </h4>
       )}
