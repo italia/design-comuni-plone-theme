@@ -14,6 +14,7 @@ import {
   PageHeaderBando,
   PageHeaderNewsItem,
   PageHeaderTassonomiaArgomenti,
+  PageHeaderExtend,
 } from '@italia/components/ItaliaTheme/View';
 
 /**
@@ -63,6 +64,8 @@ const PageHeader = (props) => {
         <PageHeaderPersona content={props.content} />
 
         <PageHeaderNewsItem content={props.content} />
+
+        <PageHeaderExtend {...props} />
 
         {(props.showreadingtime || props.showdates) && (
           <div className="row mt-5 mb-4 readingtime-dates">

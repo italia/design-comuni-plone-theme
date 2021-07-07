@@ -27,6 +27,7 @@ export Venue from '@italia/components/ItaliaTheme/View/Commons/Venue';
 
 export PageHeader from '@italia/components/ItaliaTheme/View/Commons/PageHeader/PageHeader';
 export PageHeaderDates from '@italia/components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDates';
+export PageHeaderExtend from '@italia/components/ItaliaTheme/View/Commons/PageHeader/PageHeaderExtend';
 export PageHeaderEventDates from '@italia/components/ItaliaTheme/View/Commons/PageHeader/PageHeaderEventDates';
 export PageHeaderPersona from '@italia/components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona';
 export PageHeaderBando from '@italia/components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando';
