@@ -1,3 +1,10 @@
+### [4.1.1](https://github.com/RedTurtle/design-volto-theme/compare/v4.1.0...v4.1.1) (2021-07-07)
+
+
+### Maintenance
+
+* pass items to Attachments component ([d250696](https://github.com/RedTurtle/design-volto-theme/commit/d250696b7b1ad945c6a30a654db30ae137f092bf))
+
 ## [4.1.0](https://github.com/RedTurtle/design-volto-theme/compare/v4.0.3...v4.1.0) (2021-07-07)
 
 
