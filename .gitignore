@@ -18,3 +18,5 @@ build
 
 data
 omelette
+
+locales/*.json
