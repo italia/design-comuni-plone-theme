@@ -1,3 +1,15 @@
+## [5.0.0](https://github.com/RedTurtle/design-volto-theme/compare/v4.1.1...v5.0.0) (2021-07-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* **i18n:** remove locales json files
+
+### Maintenance
+
+* **i18n:** remove locales json files ([a7a170b](https://github.com/RedTurtle/design-volto-theme/commit/a7a170bd02a22ae2942234b7e91b53225b54a80d))
+* updated en translations ([d73a1fd](https://github.com/RedTurtle/design-volto-theme/commit/d73a1fd775f1fd67c06f89b893ec01522f66daeb))
+
 ### [4.1.1](https://github.com/RedTurtle/design-volto-theme/compare/v4.1.0...v4.1.1) (2021-07-07)
 
 
