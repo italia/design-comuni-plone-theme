@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-07-13T07:44:45.194Z\n"
+"POT-Creation-Date: 2021-07-13T15:58:00.165Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -29,6 +29,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 # defaultMessage: Alert
 msgid "Alert"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
+# defaultMessage: Allow Externals
+msgid "Allow Externals"
 msgstr ""
 
 #: config/Blocks/ListingOptions/simpleCardTemplate

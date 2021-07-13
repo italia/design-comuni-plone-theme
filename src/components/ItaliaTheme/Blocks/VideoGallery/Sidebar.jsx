@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Segment, Accordion, Form } from 'semantic-ui-react';
 import { FormattedMessage, injectIntl } from 'react-intl';
-import { Icon, TextWidget } from '@plone/volto/components';
+import { Icon, TextWidget, CheckboxWidget } from '@plone/volto/components';
 import upSVG from '@plone/volto/icons/up-key.svg';
 import downSVG from '@plone/volto/icons/down-key.svg';
 import { defineMessages, useIntl } from 'react-intl';
@@ -29,6 +29,10 @@ const messages = defineMessages({
     id: 'gallery_video_title_description',
     defaultMessage:
       "Non viene mostrato. Serve al redattore per identificare meglio il video all'interno della gallery.",
+  },
+  allowExternals: {
+    id: 'Allow Externals',
+    defaultMessage: 'Allow Externals',
   },
 });
 
@@ -85,6 +89,17 @@ const Sidebar = ({
               onChangeBlock(block, {
                 ...data,
                 [name]: value,
+              });
+            }}
+          />
+          <CheckboxWidget
+            id="allowExternals"
+            title={intl.formatMessage(messages.allowExternals)}
+            value={data.allowExternals ? data.allowExternals : false}
+            onChange={(name, value) => {
+              onChangeBlock(block, {
+                ...data,
+                allowExternals: value,
               });
             }}
           />
