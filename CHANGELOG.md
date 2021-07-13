@@ -1,3 +1,15 @@
+### [5.0.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.0.0...v5.0.1) (2021-07-13)
+
+
+### Bug Fixes
+
+* restore searchBandi ([ef44b7f](https://github.com/RedTurtle/design-volto-theme/commit/ef44b7f5969045c98b2b5271fab48cf16cf307df))
+
+
+### Maintenance
+
+* update locales ([751b276](https://github.com/RedTurtle/design-volto-theme/commit/751b276be24e6d6ce3d07b09581e5545a2cc42bf))
+
 ## [5.0.0](https://github.com/RedTurtle/design-volto-theme/compare/v4.1.1...v5.0.0) (2021-07-08)
 
 
