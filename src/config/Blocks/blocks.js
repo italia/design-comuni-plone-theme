@@ -53,6 +53,9 @@ import numbersBlockSVG from '@plone/volto/icons/apps.svg';
 import NumbersBlockView from '@italia/components/ItaliaTheme/Blocks/NumbersBlock/View';
 import NumbersBlockEdit from '@italia/components/ItaliaTheme/Blocks/NumbersBlock/Edit';
 
+import BandiSearchView from '@italia/components/ItaliaTheme/Blocks/BandiSearch/View';
+import BandiSearchEdit from '@italia/components/ItaliaTheme/Blocks/BandiSearch/Edit';
+
 import flashSVG from '@plone/volto/icons/flash.svg';
 import CTABlockView from '@italia/components/ItaliaTheme/Blocks/CTABlock/View';
 import CTABlockEdit from '@italia/components/ItaliaTheme/Blocks/CTABlock/Edit';
@@ -110,6 +113,21 @@ const italiaBlocks = {
     group: 'homePage',
     view: EventSearchView,
     edit: EventSearchEdit,
+    restricted: false,
+    mostUsed: false,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
+  searchBandi: {
+    id: 'searchBandi',
+    title: 'Ricerca bandi',
+    icon: searchIcon,
+    group: 'search',
+    view: BandiSearchView,
+    edit: BandiSearchEdit,
     restricted: false,
     mostUsed: false,
     security: {
