@@ -1928,7 +1928,7 @@
   dependencies:
     "@octokit/openapi-types" "^6.0.0"
 
-"@plone/volto@plone/volto#4c7dfc6503130a5cfe5ac74e31efacfa8e9892cc":
+"@plone/volto@plone/volto#a62e2bc373194bdfd55aa9067fd59ee7c9e1c41d":
   version "13.8.0"
   resolved "https://codeload.github.com/plone/volto/tar.gz/4c7dfc6503130a5cfe5ac74e31efacfa8e9892cc"
   dependencies:
