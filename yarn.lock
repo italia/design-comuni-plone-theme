@@ -1928,9 +1928,9 @@
   dependencies:
     "@octokit/openapi-types" "^6.0.0"
 
-"@plone/volto@plone/volto#2a235a6009f81bdc8fa608df19f457ba77000702":
-  version "13.5.0"
-  resolved "https://codeload.github.com/plone/volto/tar.gz/2a235a6009f81bdc8fa608df19f457ba77000702"
+"@plone/volto@plone/volto#4c7dfc6503130a5cfe5ac74e31efacfa8e9892cc":
+  version "13.8.0"
+  resolved "https://codeload.github.com/plone/volto/tar.gz/4c7dfc6503130a5cfe5ac74e31efacfa8e9892cc"
   dependencies:
     "@babel/plugin-proposal-export-default-from" "7.10.4"
     "@babel/plugin-proposal-export-namespace-from" "7.10.4"
@@ -2009,6 +2009,7 @@
     lodash "4.17.21"
     lodash-move "1.1.1"
     lodash-webpack-plugin "0.11.5"
+    luxon "1.22.0"
     mem "4.0.0"
     mini-css-extract-plugin "0.9.0"
     moment "2.24.0"
@@ -11155,6 +11156,11 @@ lru_map@^0.3.3:
   resolved "https://registry.yarnpkg.com/lru_map/-/lru_map-0.3.3.tgz#b5c8351b9464cbd750335a79650a0ec0e56118dd"
   integrity sha1-tcg1G5Rky9dQM1p5ZQoOwOVhGN0=
 
+luxon@1.22.0:
+  version "1.22.0"
+  resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.22.0.tgz#639525c7c69e594953c7b142794466b8ea85b868"
+  integrity sha512-3sLvlfbFo+AxVEY3IqxymbumtnlgBwjDExxK60W3d+trrUzErNAz/PfvPT+mva+vEUrdIodeCOs7fB6zHtRSrw==
+
 luxon@^1.21.3:
   version "1.25.0"
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.25.0.tgz#d86219e90bc0102c0eb299d65b2f5e95efe1fe72"
@@ -17825,13 +17831,6 @@ volto-secondarymenu@collective/volto-secondarymenu#v2.1.4:
 volto-social-settings@collective/volto-social-settings#v2.1.0:
   version "2.1.0"
   resolved "https://codeload.github.com/collective/volto-social-settings/tar.gz/c770fb17e5b25887db0be5df39a128f32d2da51b"
-
-volto-subblocks@collective/volto-subblocks#v1.0.1:
-  version "1.0.1"
-  resolved "https://codeload.github.com/collective/volto-subblocks/tar.gz/d565956e04521e46a186cbf8967d2c8883672e21"
-  dependencies:
-    react-dnd "^5.0.0"
-    react-dnd-html5-backend "^5.0.1"
 
 volto-subblocks@collective/volto-subblocks#v1.1.0:
   version "1.1.0"
