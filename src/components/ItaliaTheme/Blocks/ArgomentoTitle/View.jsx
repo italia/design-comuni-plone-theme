@@ -51,7 +51,7 @@ const ArgomentoTitleView = ({ data, properties }) => {
           <div>
             <Image
               image={properties.image}
-              alt={properties.caption || properties.title}
+              alt={properties.caption || properties.title || ''}
               title={properties.caption || properties.title}
               aria-hidden="true"
             />
