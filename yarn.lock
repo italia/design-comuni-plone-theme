@@ -17832,6 +17832,13 @@ volto-social-settings@collective/volto-social-settings#v2.1.0:
   version "2.1.0"
   resolved "https://codeload.github.com/collective/volto-social-settings/tar.gz/c770fb17e5b25887db0be5df39a128f32d2da51b"
 
+volto-subblocks@collective/volto-subblocks#v1.0.1:
+  version "1.0.1"
+  resolved "https://codeload.github.com/collective/volto-subblocks/tar.gz/d565956e04521e46a186cbf8967d2c8883672e21"
+  dependencies:
+    react-dnd "^5.0.0"
+    react-dnd-html5-backend "^5.0.1"
+
 volto-subblocks@collective/volto-subblocks#v1.1.0:
   version "1.1.0"
   resolved "https://codeload.github.com/collective/volto-subblocks/tar.gz/97ab1ca206085cd2f4d4ffe718b222b552a222a9"
