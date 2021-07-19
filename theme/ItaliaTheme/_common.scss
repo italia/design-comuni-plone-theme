@@ -27,4 +27,15 @@
       outline: none;
     }
   }
+
+  .btn-primary {
+    &,
+    &:hover,
+    &:active {
+      svg.icon {
+        color: $primary-text;
+        fill: $primary-text;
+      }
+    }
+  }
 }
