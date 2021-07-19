@@ -425,7 +425,9 @@ const SearchModal = ({ closeModal, show }) => {
                         size="sm"
                         className="mr-2 mb-2"
                         aria-label={
-                          intl.formatMessage(messages.deselectSection) +
+                          (!checkedGroups[groupId]
+                            ? intl.formatMessage(messages.searchInSection)
+                            : intl.formatMessage(messages.deselectSection)) +
                           ' ' +
                           sections[groupId].title
                         }
@@ -626,9 +628,13 @@ const SearchModal = ({ closeModal, show }) => {
           )}
           {advancedSearch && (
             <div>
-              <Nav tabs className="mb-3 nav-fill">
+              <Nav tabs className="mb-3 nav-fill" role="tablist">
                 {Object.keys(sections)?.length > 0 && (
-                  <NavItem>
+                  <NavItem
+                    role="tab"
+                    aria-controls="sections-tab"
+                    aria-selected={advancedTab === 'sections'}
+                  >
                     <NavLink
                       href="#"
                       active={advancedTab === 'sections'}
@@ -638,7 +644,11 @@ const SearchModal = ({ closeModal, show }) => {
                     </NavLink>
                   </NavItem>
                 )}
-                <NavItem>
+                <NavItem
+                  role="tab"
+                  aria-controls="topics-tab"
+                  aria-selected={advancedTab === 'topics'}
+                >
                   <NavLink
                     href="#"
                     active={advancedTab === 'topics'}
@@ -647,7 +657,11 @@ const SearchModal = ({ closeModal, show }) => {
                     <span>{intl.formatMessage(messages.topics)}</span>
                   </NavLink>
                 </NavItem>
-                <NavItem>
+                <NavItem
+                  role="tab"
+                  aria-controls="options-tab"
+                  aria-selected={advancedTab === 'options'}
+                >
                   <NavLink
                     href="#"
                     active={advancedTab === 'options'}
@@ -660,75 +674,97 @@ const SearchModal = ({ closeModal, show }) => {
 
               <TabContent activeTab={advancedTab}>
                 {Object.keys(sections)?.length > 0 && (
-                  <TabPane className="p-3" tabId="sections">
+                  <TabPane
+                    className="p-3"
+                    tabId="sections"
+                    role="tabpanel"
+                    id="sections-tab"
+                    aria-expanded={advancedTab === 'sections'}
+                    hidden={!(advancedTab === 'sections')}
+                  >
                     <Row>
                       <div className="offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12">
                         <Row>
                           {Object.keys(sections).map((groupId) => (
                             <Col sm={6} key={groupId} className="group-col">
-                              <FormGroup check tag="div">
-                                <Checkbox
-                                  id={`modal-search-${groupId}`}
-                                  indeterminate={isGroupIndeterminate(
-                                    sections[groupId],
-                                    checkedGroups[groupId],
-                                  )}
-                                  checked={checkedGroups[groupId]}
-                                  onChange={(e) =>
-                                    setGroupChecked(
-                                      groupId,
-                                      e.currentTarget.checked,
-                                      setSections,
-                                    )
-                                  }
-                                />
-                                <Label
-                                  check
-                                  for={`modal-search-${groupId}`}
-                                  tag="label"
-                                  className={cx(
-                                    'group-head font-weight-bold text-primary',
-                                    {
-                                      indeterminate: isGroupIndeterminate(
-                                        sections[groupId],
-                                        checkedGroups[groupId],
-                                      ),
-                                    },
-                                  )}
-                                  widths={['xs', 'sm', 'md', 'lg', 'xl']}
-                                >
-                                  {sections[groupId].title}
-                                </Label>
-                              </FormGroup>
-
-                              {Object.keys(sections[groupId].items).map(
-                                (filterId) => (
-                                  <FormGroup check tag="div" key={filterId}>
-                                    <Checkbox
-                                      id={`modal-search-${filterId}`}
-                                      checked={
-                                        sections[groupId].items[filterId].value
-                                      }
-                                      onChange={(e) =>
-                                        setSectionFilterChecked(
-                                          groupId,
-                                          filterId,
-                                          e.currentTarget.checked,
-                                          setSections,
-                                        )
-                                      }
-                                    />
-                                    <Label
+                              <div role="tablist">
+                                <FormGroup check tag="div">
+                                  <Checkbox
+                                    id={`modal-search-${groupId}`}
+                                    indeterminate={isGroupIndeterminate(
+                                      sections[groupId],
+                                      checkedGroups[groupId],
+                                    )}
+                                    checked={checkedGroups[groupId]}
+                                    onChange={(e) =>
+                                      setGroupChecked(
+                                        groupId,
+                                        e.currentTarget.checked,
+                                        setSections,
+                                      )
+                                    }
+                                    role="tab"
+                                    aria-controls={groupId + '-section'}
+                                    aria-selected={checkedGroups[groupId]}
+                                  />
+                                  <Label
+                                    check
+                                    for={`modal-search-${groupId}`}
+                                    tag="label"
+                                    className={cx(
+                                      'group-head font-weight-bold text-primary',
+                                      {
+                                        indeterminate: isGroupIndeterminate(
+                                          sections[groupId],
+                                          checkedGroups[groupId],
+                                        ),
+                                      },
+                                    )}
+                                    widths={['xs', 'sm', 'md', 'lg', 'xl']}
+                                  >
+                                    {sections[groupId].title}
+                                  </Label>
+                                </FormGroup>
+                                {Object.keys(sections[groupId].items).map(
+                                  (filterId) => (
+                                    <FormGroup
                                       check
-                                      for={`modal-search-${filterId}`}
-                                      tag="label"
-                                      widths={['xs', 'sm', 'md', 'lg', 'xl']}
+                                      tag="div"
+                                      key={filterId}
+                                      role="tabpanel"
+                                      id={groupId + '-section'}
+                                      aria-label={sections[groupId].title}
                                     >
-                                      {sections[groupId].items[filterId].label}
-                                    </Label>
-                                  </FormGroup>
-                                ),
-                              )}
+                                      <Checkbox
+                                        id={`modal-search-${filterId}`}
+                                        checked={
+                                          sections[groupId].items[filterId]
+                                            .value
+                                        }
+                                        onChange={(e) =>
+                                          setSectionFilterChecked(
+                                            groupId,
+                                            filterId,
+                                            e.currentTarget.checked,
+                                            setSections,
+                                          )
+                                        }
+                                      />
+                                      <Label
+                                        check
+                                        for={`modal-search-${filterId}`}
+                                        tag="label"
+                                        widths={['xs', 'sm', 'md', 'lg', 'xl']}
+                                      >
+                                        {
+                                          sections[groupId].items[filterId]
+                                            .label
+                                        }
+                                      </Label>
+                                    </FormGroup>
+                                  ),
+                                )}
+                              </div>
                             </Col>
                           ))}
                         </Row>
@@ -736,7 +772,14 @@ const SearchModal = ({ closeModal, show }) => {
                     </Row>
                   </TabPane>
                 )}
-                <TabPane className="p-3" tabId="topics">
+                <TabPane
+                  className="p-3"
+                  tabId="topics"
+                  role="tabpanel"
+                  id="topics-tab"
+                  aria-expanded={advancedTab === 'topics'}
+                  hidden={!(advancedTab === 'topics')}
+                >
                   <Row>
                     <div className="offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12">
                       <div className="group-col columns">
@@ -769,7 +812,14 @@ const SearchModal = ({ closeModal, show }) => {
                     </div>
                   </Row>
                 </TabPane>
-                <TabPane className="p-3" tabId="options">
+                <TabPane
+                  className="p-3"
+                  tabId="options"
+                  role="tabpanel"
+                  id="options-tab"
+                  aria-expanded={advancedTab === 'options'}
+                  hidden={!(advancedTab === 'options')}
+                >
                   <Row>
                     <div className="offset-lg-2 col-lg-8 offset-md-1 col-md-10 col-sm-12">
                       <FormGroup check className="form-check-group mb-5">
