@@ -156,6 +156,10 @@ msgstr "Hide"
 msgid "Hide all content types"
 msgstr "Hide all content types"
 
+#: components/ItaliaTheme/Breadcrumbs/Breadcrumbs
+msgid "Home"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 msgid "Icons placeholder"
 msgstr ""

@@ -54,6 +54,7 @@ export FooterSocials from '@italia/components/ItaliaTheme/Footer/FooterSocials';
 export SubsiteFooter from '@italia/components/ItaliaTheme/Footer/SubsiteFooter';
 export Pagination from '@italia/components/ItaliaTheme/Pagination/Pagination';
 export SkipLinks from '@italia/components/ItaliaTheme/SkipLinks/SkipLinks';
+export Breadcrumbs from '@italia/components/ItaliaTheme/Breadcrumbs/Breadcrumbs';
 
 /********* BLOCKS ********* */
 export AlertSidebar from '@italia/components/ItaliaTheme/Blocks/Alert/Sidebar';
