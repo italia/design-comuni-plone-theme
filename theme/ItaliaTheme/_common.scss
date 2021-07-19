@@ -9,7 +9,7 @@
     &:hover,
     &:active {
       svg {
-        fill: $tertiary-text-hover;
+        fill: $tertiary-text;
       }
     }
   }
@@ -25,6 +25,17 @@
   button.chip {
     &:focus {
       outline: none;
+    }
+  }
+
+  .btn-primary {
+    &,
+    &:hover,
+    &:active {
+      svg.icon {
+        color: $primary-text;
+        fill: $primary-text;
+      }
     }
   }
 }
