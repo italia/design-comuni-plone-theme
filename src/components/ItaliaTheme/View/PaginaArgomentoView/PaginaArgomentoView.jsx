@@ -65,7 +65,7 @@ const PaginaArgomentoView = ({ content }) => {
   return hasBlocksData(content) ? (
     <div id="page-document">
       <div className="ui container">
-        <div className="ArgomentoTitleWrapper mb-5">
+        <div className="ArgomentoTitleWrapper rounded shadow mt-5  mb-5">
           <div className="title-description-wrapper col-lg-6">
             <Breadcrumbs pathname={location.pathname} />
 
@@ -114,7 +114,8 @@ const PaginaArgomentoView = ({ content }) => {
                   </div>
                 );
               })}
-            {content?.image ? (
+
+            {content?.image && (
               <>
                 <Portal
                   node={
@@ -131,8 +132,6 @@ const PaginaArgomentoView = ({ content }) => {
                 </Portal>
                 <BodyClass className="has-image" />
               </>
-            ) : (
-              ''
             )}
           </div>
         </div>
