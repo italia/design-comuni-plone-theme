@@ -34,7 +34,7 @@ const PageHeaderTassonomiaArgomenti = ({ content }) => {
           href={flattenToAppURL(item['@id'])}
           key={item['@id']}
           title={item.title}
-          className="text-decoration-none mr-2"
+          className="text-decoration-none mr-2 d-inline-block"
         >
           <Chip color="primary" disabled={false} large={false} simple tag="div">
             <ChipLabel tag="span">{item.title}</ChipLabel>

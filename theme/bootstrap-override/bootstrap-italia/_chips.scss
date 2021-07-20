@@ -42,3 +42,14 @@
     cursor: default;
   }
 }
+
+a {
+  &:hover,
+  &:focus,
+  &:active {
+    .chip,
+    .public-ui .chip {
+      @extend .chip:hover;
+    }
+  }
+}

@@ -59,7 +59,7 @@ const ContentInEvidenceTemplate = ({
                 <Col lg={{ size: 6, offset: 1, order: 2 }}>
                   <Image
                     image={image}
-                    alt={item.title}
+                    alt=""
                     className="item-image"
                     role="presentation"
                     useOriginal={false}
