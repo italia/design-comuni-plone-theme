@@ -103,7 +103,9 @@ export default function SearchSections({
                     toggleCollapseGroup(groupId);
                   }}
                   data-toggle="collapse"
-                  aria-expanded="false"
+                  aria-expanded={
+                    collapse[groupId] !== undefined && !collapse[groupId]
+                  }
                   aria-controls={`section${groupId}Collapse`}
                 >
                   <Icon
