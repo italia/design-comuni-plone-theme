@@ -196,7 +196,7 @@ const italiaBlocks = {
       addPermission: [],
       view: [],
     },
-    sidebarTab: 1,
+    sidebarTab: 0,
   },
   testo_riquadro_semplice: {
     id: 'testo_riquadro_semplice',

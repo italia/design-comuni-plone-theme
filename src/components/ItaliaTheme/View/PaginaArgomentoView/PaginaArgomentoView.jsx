@@ -65,7 +65,7 @@ const PaginaArgomentoView = ({ content }) => {
   return hasBlocksData(content) ? (
     <div id="page-document">
       <div className="ui container">
-        <div className="ArgomentoTitleWrapper mb-5">
+        <div className="ArgomentoTitleWrapper rounded shadow mt-2 mt-lg-5 mb-5">
           <div className="title-description-wrapper col-lg-6">
             <Breadcrumbs pathname={location.pathname} />
 

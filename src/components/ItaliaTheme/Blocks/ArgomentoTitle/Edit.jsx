@@ -4,12 +4,24 @@
  */
 
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import { Map } from 'immutable';
+import { Portal } from 'react-portal';
 import PropTypes from 'prop-types';
 import { stateFromHTML } from 'draft-js-import-html';
 import { Editor, DefaultDraftBlockRenderMap, EditorState } from 'draft-js';
 import { defineMessages, injectIntl } from 'react-intl';
-import { TextEditorWidget } from '@italia/components/ItaliaTheme';
+import {
+  Card,
+  CardBody,
+  CardText,
+} from 'design-react-kit/dist/design-react-kit';
+import { UniversalLink } from '@plone/volto/components';
+import { BodyClass, flattenToAppURL } from '@plone/volto/helpers';
+import Image from '@plone/volto/components/theme/Image/Image';
+
+import { CardCategory, Breadcrumbs } from '@italia/components/ItaliaTheme';
+import { ArgumentIcon, RichText } from '@italia/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   title: {
@@ -20,9 +32,9 @@ const messages = defineMessages({
     id: 'Type description…',
     defaultMessage: 'Digita la descrizione…',
   },
-  click: {
-    id: 'Type text…',
-    defaultMessage: 'Digita il testo…',
+  ulteriori_informazioni: {
+    id: 'Ulteriori informazioni placeholder',
+    defaultMessage: 'Digita ulteriori informazioni…',
   },
 });
 
@@ -211,52 +223,123 @@ class Edit extends Component {
     }
 
     return (
-      <div className="ArgomentoHeader">
-        <div className="title-description-wrapper">
-          <h4>Titolo</h4>
-          <Editor
-            onChange={this.onChange}
-            editorState={this.state.editorState}
-            blockRenderMap={extendedBlockRenderMap}
-            handleReturn={() => {
-              this.props.onSelectBlock(
-                this.props.onAddBlock('text', this.props.index + 1),
-              );
-              return 'handled';
-            }}
-            placeholder={this.props.intl.formatMessage(messages.title)}
-            ref={(node) => {
-              this.node = node;
-            }}
-          />
-          <h4>Descrizione</h4>
-          <Editor
-            onChange={this.onChangeDescription}
-            editorState={this.state.editorStateDescription}
-            blockRenderMap={extendedBlockRenderMap}
-            placeholder={this.props.intl.formatMessage(messages.description)}
-            ref={(node_description) => {
-              this.node_description = node_description;
-            }}
-          />
-        </div>
-        <div className="a-portata-di-click">
-          <h4>A PORTATA DI CLICK</h4>
-          <TextEditorWidget
-            data={this.props.data}
-            fieldName="portata_di_click"
-            selected={true}
-            block={this.props.block}
-            onChangeBlock={(data) =>
-              this.props.onChangeBlock(this.props.block, data)
-            }
-            placeholder={this.props.intl.formatMessage(messages.title)}
-            showToolbar={true}
-          />
+      <div className="public-ui">
+        <div className="ArgomentoTitleWrapper rounded shadow mt-2 mt-lg-5 mb-5">
+          <div className="title-description-wrapper col-lg-6">
+            <Breadcrumbs pathname={this.props.location.pathname} />
+            <ArgumentIcon icon={this.props.properties.icona} />
+            <h1 className="mb-3">
+              <Editor
+                onChange={this.onChange}
+                editorState={this.state.editorState}
+                blockRenderMap={extendedBlockRenderMap}
+                handleReturn={() => {
+                  this.props.onSelectBlock(
+                    this.props.onAddBlock('text', this.props.index + 1),
+                  );
+                  return 'handled';
+                }}
+                placeholder={this.props.intl.formatMessage(messages.title)}
+                ref={(node) => {
+                  this.node = node;
+                }}
+              />
+            </h1>
+            <p className="description">
+              <Editor
+                onChange={this.onChangeDescription}
+                editorState={this.state.editorStateDescription}
+                blockRenderMap={extendedBlockRenderMap}
+                placeholder={this.props.intl.formatMessage(
+                  messages.description,
+                )}
+                ref={(node_description) => {
+                  this.node_description = node_description;
+                }}
+              />
+            </p>
+          </div>
+          <div className="col-lg-4 offset-lg-2">
+            <RichText
+              serif={false}
+              content={this.props.properties.ulteriori_informazioni}
+            />
+            {this.props.properties?.unita_amministrative_responsabili?.length >
+              0 &&
+              this.props.properties?.unita_amministrative_responsabili?.map(
+                (u, index) => {
+                  return (
+                    <div className="row mb-3" key={index}>
+                      <div className="w-100">
+                        <Card
+                          className={'listing-item card-bg border-left-card'}
+                        >
+                          <div className="d-flex">
+                            <CardBody className="">
+                              <CardCategory>
+                                <span className="text font-weight-bold">
+                                  <UniversalLink
+                                    href={flattenToAppURL(u['@id'])}
+                                  >
+                                    {u.title || u.id}
+                                  </UniversalLink>
+                                </span>
+                              </CardCategory>
+                              <CardText>
+                                {/* {searchResults[u['@id']]?.data?.street} */}
+                              </CardText>
+                            </CardBody>
+                            {/* {searchResults[u['@id']]?.data?.image && (
+                              <div className="image-container mr-3">
+                                <Image
+                                  image={searchResults[u['@id']].data?.image}
+                                  alt={
+                                    searchResults[u['@id'].data?.image_caption]
+                                  }
+                                  title={
+                                    searchResults[u['@id'].data?.image_caption]
+                                  }
+                                />
+                              </div>
+                            )} */}
+                          </div>
+                        </Card>
+                      </div>
+                    </div>
+                  );
+                },
+              )}
+            {this.props.properties?.image ? (
+              <>
+                <Portal
+                  node={
+                    __CLIENT__ && document.getElementById('portal-header-image')
+                  }
+                >
+                  <div>
+                    <Image
+                      image={this.props.properties.image}
+                      alt={
+                        this.props.properties.caption ??
+                        this.props.properties.title
+                      }
+                      title={
+                        this.props.properties.caption ??
+                        this.props.properties.title
+                      }
+                    />
+                  </div>
+                </Portal>
+                <BodyClass className="has-image" />
+              </>
+            ) : (
+              ''
+            )}
+          </div>
         </div>
       </div>
     );
   }
 }
 
-export default injectIntl(Edit);
+export default injectIntl(withRouter(Edit));
