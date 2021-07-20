@@ -83,8 +83,8 @@ const Navigation = ({ pathname }) => {
       {menu?.length > 0 ? (
         <HeaderContent expand="lg" megamenu id="navigation">
           <HeaderToggler
-            aria-controls="nav1"
-            aria-expanded="false"
+            aria-controls="#it-navigation-collapse"
+            aria-expanded={collapseOpen}
             aria-label="Toggle navigation"
             onClick={() => setCollapseOpen(!collapseOpen)}
           >
@@ -95,6 +95,7 @@ const Navigation = ({ pathname }) => {
             isOpen={collapseOpen}
             navbar
             onOverlayClick={() => setCollapseOpen(!collapseOpen)}
+            id="it-navigation-collapse"
           >
             <div className="menu-wrapper">
               <div className="it-brand-wrapper" role="navigation">
