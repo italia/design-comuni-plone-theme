@@ -97,7 +97,7 @@ const Navigation = ({ pathname }) => {
             onOverlayClick={() => setCollapseOpen(!collapseOpen)}
           >
             <div className="menu-wrapper">
-              <div className="it-brand-wrapper">
+              <div className="it-brand-wrapper" role="navigation">
                 <Link
                   to={subsite?.['@id'] ? flattenToAppURL(subsite['@id']) : '/'}
                 >
@@ -114,7 +114,7 @@ const Navigation = ({ pathname }) => {
                   </div>
                 </Link>
               </div>
-              <Nav navbar role="navigation">
+              <Nav navbar>
                 {menu
                   ?.filter((item) => item.visible)
                   ?.map((item, index) => (
