@@ -494,12 +494,11 @@ msgstr ""
 msgid "Type description…"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 #: components/ItaliaTheme/manage/Widgets/TextEditorWidget
-# defaultMessage: Digita il testo…
+# defaultMessage: Digita un testo…
 msgid "Type text…"
 msgstr ""
 
@@ -509,6 +508,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 # defaultMessage: Type the title…
 msgid "Type the title…"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
+# defaultMessage: Digita ulteriori informazioni…
+msgid "Ulteriori informazioni placeholder"
 msgstr ""
 
 #: components/ItaliaTheme/View/PageView/PageView

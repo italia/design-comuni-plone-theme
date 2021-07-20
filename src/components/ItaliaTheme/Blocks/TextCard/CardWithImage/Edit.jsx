@@ -40,7 +40,7 @@ class Edit extends Component {
    * Constructor
    * @method constructor
    * @param {Object} props Component properties
-   * @constructs ArgomentoTitle Edit block
+   * @constructs CardWithImage Edit block
    */
   constructor(props) {
     super(props);
