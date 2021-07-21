@@ -174,7 +174,6 @@ const EventoView = ({ content, location }) => {
           readingtime={null}
           showreadingtime={true}
           showdates={true}
-          showtopics={true}
           showtassonomiaargomenti={true}
         />
 

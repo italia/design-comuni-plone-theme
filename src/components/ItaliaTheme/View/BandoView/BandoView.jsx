@@ -98,7 +98,6 @@ const BandoView = ({ content, location }) => {
           readingtime={null}
           showreadingtime={false}
           showdates={false}
-          showtopics={false}
           showtassonomiaargomenti={true}
           showbandostate={true}
         />

@@ -1,9 +1,9 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /**
  * TrasparenzaView view component.
  * @module components/theme/View/TrasparenzaView
  */
 
-import { defineMessages, useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -15,8 +15,6 @@ import {
 import { getAmministrazioneTrasparenteTree } from '@italia/actions';
 import { LinkList, LinkListItem } from 'design-react-kit/dist/design-react-kit';
 
-const messages = defineMessages({});
-
 /**
  * TrasparenzaView component class.
  * @function TrasparenzaView
@@ -24,7 +22,6 @@ const messages = defineMessages({});
  * @returns {string} Markup of the component.
  */
 const TrasparenzaView = ({ content }) => {
-  const intl = useIntl();
   const locationContent = useSelector(
     (state) => state.amministrazioneTrasparenteTree,
   );
@@ -44,7 +41,6 @@ const TrasparenzaView = ({ content }) => {
           readingtime={null}
           showreadingtime={null}
           showdates={null}
-          showtopics={true}
           showtassonomiaargomenti={true}
         />
         <section id="trasparenza-page-content">
