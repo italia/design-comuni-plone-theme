@@ -22,7 +22,7 @@ import {
 
 const FaqView = ({ content }) => {
   return (
-    <div id="faq-view">
+    <div id="page-document">
       <div className="ui container">
         <SkipToMainContent />
         <PageHeader
