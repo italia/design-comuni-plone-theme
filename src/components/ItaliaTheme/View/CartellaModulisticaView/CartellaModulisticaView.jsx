@@ -14,8 +14,8 @@ import {
   PagePlaceholderAfterContent,
   TextOrBlocks,
   RelatedItemInEvidence,
+  PageMetadata,
 } from '@italia/components/ItaliaTheme/View';
-import { viewDate } from '@italia/helpers';
 
 import DocRow from './DocRow';
 
@@ -23,10 +23,6 @@ const messages = defineMessages({
   formati_scaricabili: {
     id: 'cartellamodulistica_formati_scaricabili',
     defaultMessage: 'Formati scaricabili',
-  },
-  modified: {
-    id: 'modified',
-    defaultMessage: 'Ultimo aggiornamento',
   },
 });
 
@@ -108,12 +104,7 @@ const CartellaModulisticaView = ({ content }) => {
           </section>
         )}
 
-        <article id="metadata" className="bottom-metadata">
-          <span className="text-serif mb-0 mt-4">
-            {intl.formatMessage(messages.modified)}:
-          </span>{' '}
-          {viewDate(intl.locale, content.modified, 'DD-MM-Y HH:MM')}
-        </article>
+        <PageMetadata content={content} />
       </div>
       <PagePlaceholderAfterContent content={content} />
 

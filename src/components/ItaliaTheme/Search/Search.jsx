@@ -3,7 +3,7 @@
  * @module components/theme/Search/Search
  */
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useIntl, defineMessages } from 'react-intl';
 import { values } from 'lodash';
@@ -38,6 +38,7 @@ import {
 import { UniversalLink } from '@plone/volto/components';
 import { SearchUtils, TextInput, SelectInput } from '@italia/components';
 import { getSearchFilters, getSearchResults } from '@italia/actions';
+import { useDebouncedEffect } from '@italia/helpers';
 import config from '@plone/volto/registry';
 
 const {
@@ -154,21 +155,6 @@ const searchOrderDict = {
   sortable_title: {
     sort_on: 'sortable_title',
   },
-};
-
-const useDebouncedEffect = (effect, delay, deps) => {
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const callback = useCallback(effect, deps);
-
-  useEffect(() => {
-    const handler = setTimeout(() => {
-      callback();
-    }, delay);
-
-    return () => {
-      clearTimeout(handler);
-    };
-  }, [callback, delay]);
 };
 
 const Search = () => {

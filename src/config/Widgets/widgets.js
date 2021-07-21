@@ -22,6 +22,9 @@ const getItaliaWidgets = (config) => {
       icona: (props) => (
         <IconWidget {...props} defaultOptions={defaultIconWidgetOptions} />
       ),
+      icon: (
+        props, //per il content-type FaqFolder
+      ) => <IconWidget {...props} defaultOptions={defaultIconWidgetOptions} />,
       cookie_consent_configuration: MultilingualWidget(),
       data_conclusione_incarico: (props) => (
         <DatetimeWidget {...props} dateOnly={true} />
