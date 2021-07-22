@@ -158,7 +158,7 @@ msgstr ""
 
 #: components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderView
 msgid "Faq Folder: Nessun risultato trovato"
-msgstr ""
+msgstr "Aucun résultat obtenu"
 
 #: components/ItaliaTheme/View/Commons/SkipToMainContent
 msgid "Go to content"

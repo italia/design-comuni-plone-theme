@@ -141,7 +141,7 @@ msgstr "Etichetta"
 
 #: components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderView
 msgid "Faq Folder: Nessun risultato trovato"
-msgstr ""
+msgstr "Non ho trovato la risposta che cercavi"
 
 #: components/ItaliaTheme/View/Commons/SkipToMainContent
 msgid "Go to content"
