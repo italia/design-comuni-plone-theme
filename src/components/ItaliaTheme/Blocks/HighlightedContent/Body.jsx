@@ -38,7 +38,7 @@ const Body = ({ content, pathname, block }) => {
               className={cx('item-image', {
                 'natural-image-size': block.natural_image_size,
               })}
-              role="presentation"
+              role={null}
             />
           </Col>
         )}
