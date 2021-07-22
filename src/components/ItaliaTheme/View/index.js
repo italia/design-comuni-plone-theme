@@ -76,5 +76,6 @@ export DocumentoPlaceholderAfterContent from '@italia/components/ItaliaTheme/Vie
 export BandoPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/BandoView/Placeholder/AfterContent';
 export TrasparenzaPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/TrasparenzaView/Placeholder/AfterContent';
 export FaqFolderPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/FAQ/FaqFolder/Placeholder/AfterContent';
+export FaqPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/FAQ/FaqView/Placeholder/AfterContent';
 export FaqFolderSearchBar from '@italia/components/ItaliaTheme/View/FAQ/FaqFolder/SearchBar';
 export FaqFolderTree from '@italia/components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderTree';

@@ -12,6 +12,7 @@ import {
   SkipToMainContent,
   PageHeader,
   PageMetadata,
+  FaqPlaceholderAfterContent,
 } from '@italia/components/ItaliaTheme/View';
 
 /**
@@ -35,8 +36,10 @@ const FaqView = ({ content }) => {
 
         <PaginaArgomentoPlaceholderAfterContent content={content} />
 
-        {content.show_modified && <PageMetadata content={content} />}
+        <PageMetadata content={content} />
       </div>
+
+      <FaqPlaceholderAfterContent content={content} />
       <RelatedItems content={content} />
       <RelatedItemInEvidence content={content} />
     </div>
