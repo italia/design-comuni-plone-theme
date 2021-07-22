@@ -139,6 +139,10 @@ msgstr ""
 msgid "Etichetta path filter"
 msgstr ""
 
+#: components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderView
+msgid "Faq Folder: Nessun risultato trovato"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/SkipToMainContent
 msgid "Go to content"
 msgstr "Skip to content"
@@ -1055,7 +1059,6 @@ msgid "exploreArgument"
 msgstr "Explore topic"
 
 #: components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderTree
-#: components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderView
 #: components/ItaliaTheme/View/FAQ/FaqFolder/SearchBar
 msgid "faq_search"
 msgstr ""

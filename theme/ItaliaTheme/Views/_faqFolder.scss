@@ -16,7 +16,13 @@ body.contenttype-faqfolder {
     margin: 2rem 0;
 
     .faq-folder {
+      padding-left: 1rem;
       margin-bottom: 3rem;
+
+      &.level-0,
+      &.level-1 {
+        padding-left: 0;
+      }
 
       .folder-title {
         a {

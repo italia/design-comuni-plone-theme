@@ -4,7 +4,6 @@
  */
 
 import React, { useState } from 'react';
-
 import { Icon } from '@italia/components/ItaliaTheme';
 import { TextOrBlocks } from '@italia/components/ItaliaTheme/View';
 import { UniversalLink } from '@plone/volto/components';
@@ -32,12 +31,11 @@ const FaqFolderTree = ({ tree }) => {
     );
 
     const children_folders =
-      item.res_items?.filter((i) => i['@type'] === 'FaqFolder') || [];
-    const children_faq =
-      item.res_items?.filter((i) => i['@type'] === 'Faq') || [];
+      item.items?.filter((i) => i['@type'] === 'FaqFolder') || [];
+    const children_faq = item.items?.filter((i) => i['@type'] === 'Faq') || [];
 
     return (
-      <div className={'faq-folder'}>
+      <div className={`faq-folder level-${level}`}>
         {level > 0 && (
           <>
             {level === 1 && <h2 className="folder-title">{title}</h2>}
@@ -52,7 +50,7 @@ const FaqFolderTree = ({ tree }) => {
           </>
         )}
 
-        {item.res_items?.length > 0 && (
+        {item.items?.length > 0 && (
           <>
             {children_faq?.length > 0 && (
               <Accordion>
@@ -80,7 +78,9 @@ const FaqFolderTree = ({ tree }) => {
                         aria-hidden={!isOpen}
                         role="region"
                       >
-                        <div className="faq-description">{r.description}</div>
+                        {r.description?.length > 0 && (
+                          <div className="faq-description">{r.description}</div>
+                        )}
                         <div className="faq-text">
                           <TextOrBlocks content={r} />
                         </div>
@@ -94,7 +94,7 @@ const FaqFolderTree = ({ tree }) => {
         )}
 
         {children_folders.map((r) => (
-          <FaqFolder item={r} level={level + 1} />
+          <FaqFolder key={r['@id']} item={r} level={level + 1} />
         ))}
       </div>
     );

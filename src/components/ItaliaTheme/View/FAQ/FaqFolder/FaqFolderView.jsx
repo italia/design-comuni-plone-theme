@@ -6,8 +6,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useLocation } from 'react-router-dom';
-import { Container } from 'design-react-kit/dist/design-react-kit';
+
+import { defineMessages, useIntl } from 'react-intl';
+import { Container, Spinner } from 'design-react-kit/dist/design-react-kit';
 import {
   PageHeader,
   RelatedItems,
@@ -19,8 +20,15 @@ import {
   FaqFolderTree,
 } from '@italia/components/ItaliaTheme/View';
 import { useDebouncedEffect } from '@italia/helpers';
-import { searchContent, resetSearchContent } from '@plone/volto/actions';
-import { getBaseUrl, flattenToAppURL } from '@plone/volto/helpers';
+import { getContent, resetContent } from '@plone/volto/actions';
+import { flattenToAppURL } from '@plone/volto/helpers';
+
+const messages = defineMessages({
+  no_results: {
+    id: 'Faq Folder: Nessun risultato trovato',
+    defaultMessage: 'Non ho trovato la risposta che cercavi',
+  },
+});
 
 /**
  * FaqFolderView view component class.
@@ -30,37 +38,33 @@ import { getBaseUrl, flattenToAppURL } from '@plone/volto/helpers';
  */
 
 const FaqFolderView = ({ content }) => {
+  const intl = useIntl();
+
+  const FAQ_FOLDER_KEY = 'FAQ_FOLDER';
+  const structure_url = content?.['@components']?.['faq-structure']?.['@id'];
   const dispatch = useDispatch();
-  const location = useLocation();
-  const pathname = getBaseUrl(location?.pathname || '');
   //const intl = useIntl();
 
-  const searchResults = useSelector(
-    (state) => state.search.subrequests['faq_folder'],
+  const faq_structure = useSelector(
+    (state) => state.content.subrequests?.[FAQ_FOLDER_KEY],
   );
   const [searchableText, setSearchableText] = useState('');
-  const [faqFolderTree, setFaqFolderTree] = useState({});
 
   const doSearch = () => {
-    dispatch(
-      searchContent(
-        pathname,
-        {
-          'path.depth': 3,
-          fullobjects: true,
-          SearchableText: searchableText || undefined,
-        },
-        'faq_folder',
-      ),
-    );
-    return () => {
-      dispatch(resetSearchContent('faq_folder'));
-    };
+    const url =
+      structure_url +
+      (searchableText ? '?SearchableText=' + searchableText : '');
+
+    dispatch(getContent(flattenToAppURL(url), null, FAQ_FOLDER_KEY));
+
+    return () => dispatch(resetContent(FAQ_FOLDER_KEY));
   };
 
   useEffect(() => {
-    return doSearch();
-  }, [pathname]);
+    if (structure_url) {
+      doSearch();
+    }
+  }, [structure_url]);
 
   useDebouncedEffect(
     () => {
@@ -69,45 +73,6 @@ const FaqFolderView = ({ content }) => {
     600,
     [searchableText],
   );
-
-  const addToTree = (tree, item) => {
-    let added = false;
-    tree.res_items.forEach((r) => {
-      if (
-        flattenToAppURL(item.parent['@id']).indexOf(
-          flattenToAppURL(r['@id']),
-        ) >= 0
-      ) {
-        r = addToTree(r, item);
-        added = true;
-      }
-    });
-    if (!added) {
-      tree.res_items.push({ ...item, res_items: [] });
-    }
-
-    return tree;
-  };
-
-  useEffect(() => {
-    let tree = { ...content, res_items: [] };
-    const items = (searchResults?.items || [])
-      .filter(
-        (r) => flattenToAppURL(r['@id']) !== flattenToAppURL(content['@id']),
-      )
-      .sort((a, b) => {
-        return flattenToAppURL(a['@id']) > flattenToAppURL(b['@id']) ? 1 : -1;
-      });
-
-    if (items.length > 0) {
-      items.forEach((r) => {
-        tree = addToTree(tree, r);
-      });
-
-      setFaqFolderTree(tree);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchResults]);
 
   return (
     <>
@@ -126,8 +91,28 @@ const FaqFolderView = ({ content }) => {
       {/* -------CONTENT------- */}
       <Container className="px-4">
         <TextOrBlocks content={content} />
-        <FaqFolderTree tree={faqFolderTree} />
-        {content.show_modified && <PageMetadata content={content} />}
+
+        {faq_structure && (
+          <>
+            {faq_structure.loaded &&
+              searchableText?.lenght > 0 &&
+              faq_structure.data?.items?.lenght === 0 && (
+                <>{intl.formatMessage(messages.no_results)}</>
+              )}
+
+            {faq_structure.loading && (
+              <div className="mt-5 mb-5 loading">
+                <Spinner active double={false} small={false} tag="div" />
+              </div>
+            )}
+
+            {!faq_structure.loading && faq_structure.data?.items?.[0] && (
+              <FaqFolderTree tree={faq_structure.data.items[0]} />
+            )}
+          </>
+        )}
+
+        <PageMetadata content={content} />
       </Container>
 
       {/* -------BOTTOM------- */}
