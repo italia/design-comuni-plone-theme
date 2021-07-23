@@ -15,6 +15,7 @@ import {
   PageHeaderNewsItem,
   PageHeaderTassonomiaArgomenti,
   PageHeaderExtend,
+  ArgumentIcon,
 } from '@italia/components/ItaliaTheme/View';
 
 /**
@@ -47,6 +48,9 @@ const PageHeader = (props) => {
           'col-lg-8': !props.imageinheader,
         })}
       >
+        {(props.content.icon || props.content.icona) && (
+          <ArgumentIcon icon={props.content.icon || props.content.icona} />
+        )}
         <h1>
           {props.content.title}
           {props.content.subtitle && ` - ${props.content.subtitle}`}

@@ -145,7 +145,7 @@ msgstr "Etichetta"
 
 #: components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderView
 msgid "Faq Folder: Nessun risultato trovato"
-msgstr ""
+msgstr "Non ho trovato la risposta che cercavi"
 
 #: components/ItaliaTheme/View/Commons/SkipToMainContent
 msgid "Go to content"
@@ -1065,7 +1065,7 @@ msgstr "Esplora argomento"
 #: components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderTree
 #: components/ItaliaTheme/View/FAQ/FaqFolder/SearchBar
 msgid "faq_search"
-msgstr ""
+msgstr "Digita una parola chiave per trovare le risposte"
 
 #: components/ItaliaTheme/View/Commons/ContactLink
 msgid "fax"
@@ -1253,7 +1253,6 @@ msgstr "Modalità per richiedere informazioni sul procedimento"
 msgid "modalita_richiesta_informazioni"
 msgstr "Modalità per richiedere informazioni sul procedimento"
 
-#: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
 #: components/ItaliaTheme/View/Commons/Metadata
 #: components/ItaliaTheme/View/Commons/PageMetadata
 #: components/ItaliaTheme/View/PageView/PageView

@@ -37,6 +37,7 @@ export Attachment from '@italia/components/ItaliaTheme/View/Commons/Attachment';
 export Attachments from '@italia/components/ItaliaTheme/View/Commons/Attachments';
 export CuredBy from '@italia/components/ItaliaTheme/View/Commons/CuredBy';
 export Metadata from '@italia/components/ItaliaTheme/View/Commons/Metadata';
+export PageMetadata from '@italia/components/ItaliaTheme/View/Commons/PageMetadata';
 export SearchSectionForm from '@italia/components/ItaliaTheme/View/Commons/SearchSectionForm';
 export PageHeaderNav from '@italia/components/ItaliaTheme/View/Commons/PageHeaderNav';
 export SkipToMainContent from '@italia/components/ItaliaTheme/View/Commons/SkipToMainContent';
@@ -74,3 +75,7 @@ export VenuePlaceholderAfterContent from '@italia/components/ItaliaTheme/View/Ve
 export DocumentoPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/DocumentoView/Placeholder/AfterContent';
 export BandoPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/BandoView/Placeholder/AfterContent';
 export TrasparenzaPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/TrasparenzaView/Placeholder/AfterContent';
+export FaqFolderPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/FAQ/FaqFolder/Placeholder/AfterContent';
+export FaqPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/FAQ/FaqView/Placeholder/AfterContent';
+export FaqFolderSearchBar from '@italia/components/ItaliaTheme/View/FAQ/FaqFolder/SearchBar';
+export FaqFolderTree from '@italia/components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderTree';

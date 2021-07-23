@@ -97,7 +97,6 @@ const DocumentoView = ({ content, location }) => {
         <PageHeader
           content={content}
           readingtime={null}
-          showtopics={true}
           showtassonomiaargomenti={true}
         />
 

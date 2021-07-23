@@ -11,6 +11,9 @@ import DocumentoView from '@italia/components/ItaliaTheme/View/DocumentoView/Doc
 import ModuloView from '@italia/components/ItaliaTheme/View/ModuloView/ModuloView';
 import BandoView from '@italia/components/ItaliaTheme/View/BandoView/BandoView';
 
+import FaqFolderView from '@italia/components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderView';
+import FaqView from '@italia/components/ItaliaTheme/View/FAQ/FaqView/FaqView';
+
 import TrasparenzaView from '@italia/components/ItaliaTheme/View/TrasparenzaView/TrasparenzaView';
 import DettagliProcedimentiView from '@italia/components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView';
 
@@ -28,6 +31,8 @@ const italiaContentTypesViews = {
   Documento: DocumentoView,
   Modulo: ModuloView,
   Bando: BandoView,
+  FaqFolder: FaqFolderView,
+  Faq: FaqView,
 };
 
 /* LAYOUT VIEWS */

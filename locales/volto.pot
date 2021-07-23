@@ -1540,7 +1540,6 @@ msgstr ""
 msgid "modalita_richiesta_informazioni"
 msgstr ""
 
-#: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
 #: components/ItaliaTheme/View/Commons/Metadata
 #: components/ItaliaTheme/View/Commons/PageMetadata
 #: components/ItaliaTheme/View/PageView/PageView

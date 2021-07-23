@@ -90,7 +90,6 @@ const NewsItemView = ({ content, location }) => {
           readingtime={readingtime}
           showreadingtime={true}
           showdates={true}
-          showtopics={true}
           showtassonomiaargomenti={true}
         />
 

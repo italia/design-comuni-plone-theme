@@ -15,3 +15,4 @@ export { getTableRowData } from '@italia/helpers/amministrazioneTrasparenteHelpe
 export { getItemsByPath } from '@italia/helpers/getItemsByPath';
 export { viewDate } from '@italia/helpers/dates';
 export { getSiteProperty } from '@italia/helpers/config';
+export { useDebouncedEffect } from '@italia/helpers/debounce';

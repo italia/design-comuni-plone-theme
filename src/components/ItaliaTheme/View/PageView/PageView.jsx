@@ -17,12 +17,12 @@ import {
   PageHeaderTassonomiaArgomenti,
   Sharing,
   Actions,
+  PageMetadata,
 } from '@italia/components/ItaliaTheme/View';
 import { defineMessages, useIntl } from 'react-intl';
 import { Container } from 'design-react-kit/dist/design-react-kit';
 import { getLayoutFieldname } from '@plone/volto/helpers';
 import Image from '@plone/volto/components/theme/Image/Image';
-import { viewDate } from '@italia/helpers';
 
 import config from '@plone/volto/registry';
 
@@ -122,14 +122,7 @@ const PageView = ({ content, token, location, history }) => {
 
           <TextOrBlocks content={content} />
 
-          {content.show_modified && (
-            <article id="metadata" className="bottom-metadata">
-              <span className="text-serif mb-0 mt-4">
-                {intl.formatMessage(messages.modified)}:
-              </span>{' '}
-              {viewDate(intl.locale, content.modified, 'DD-MM-Y HH:MM')}
-            </article>
-          )}
+          {content.show_modified && <PageMetadata content={content} />}
         </div>
 
         <PagePlaceholderAfterContent content={content} />
