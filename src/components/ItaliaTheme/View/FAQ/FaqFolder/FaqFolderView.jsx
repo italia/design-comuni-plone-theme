@@ -53,7 +53,7 @@ const FaqFolderView = ({ content }) => {
   const doSearch = () => {
     const url =
       structure_url +
-      (searchableText ? '?SearchableText=' + searchableText : '');
+      (searchableText ? '?SearchableText=' + searchableText + '*' : '');
 
     dispatch(getContent(flattenToAppURL(url), null, FAQ_FOLDER_KEY));
 
