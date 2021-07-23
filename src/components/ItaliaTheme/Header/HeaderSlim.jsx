@@ -29,7 +29,7 @@ const HeaderSlim = () => {
 
   const target = subsite ? null : '_blank';
   return (
-    <Header small={false} theme="" type="slim">
+    <Header small={false} theme="" type="slim" role="navigation">
       <HeaderContent>
         <HeaderBrand
           responsive

@@ -8,7 +8,6 @@ import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 
 import { Breadcrumbs as ItaliaBreadcrumbs } from '@italia/components/ItaliaTheme';
-import { Container } from 'design-react-kit/dist/design-react-kit';
 
 const Breadcrumbs = ({ pathname }) => {
   let brdc = ItaliaBreadcrumbs({ pathname: pathname });
@@ -21,9 +20,9 @@ const Breadcrumbs = ({ pathname }) => {
   }
   return brdc ? (
     <div className="public-ui">
-      <Container as="section" id="briciole" className="px-4 my-4">
+      <section id="briciole" className="container px-4 my-4">
         <div className="px-lg-4">{brdc}</div>
-      </Container>
+      </section>
     </div>
   ) : null;
 };

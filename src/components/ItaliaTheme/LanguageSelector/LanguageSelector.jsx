@@ -71,7 +71,7 @@ const LanguageSelector = (props) => {
       </DropdownToggle>
       <DropdownMenu flip tag="div">
         <Row tag="div">
-          <Col size="12" tag="div" widths={['xs', 'sm', 'md', 'lg', 'xl']}>
+          <Col tag="div" widths={['xs', 'sm', 'md', 'lg', 'xl']}>
             <LinkList tag="div">
               {map(config.settings.supportedLanguages, (lang) => {
                 const translation = find(translations, { language: lang });
