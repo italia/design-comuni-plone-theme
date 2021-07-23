@@ -1,57 +1,15 @@
-.ArgomentoTitleWrapper,
-.ArgomentoHeader {
+$header-image-argomento-height: 390px;
+$header-image-argomento-height-mobile: 300px;
+
+.ArgomentoTitleWrapper {
   display: flex;
+  max-width: 95%;
+  min-height: 350px;
   flex-wrap: wrap;
+  padding: 50px 70px 80px 70px;
+  margin: auto;
 
-  .title-description-wrapper {
-    flex: 1 1 500px;
-    padding-right: 30px;
-
-    ::placeholder {
-      color: $placeholder;
-    }
-
-    h2 {
-      font-size: 1em;
-    }
-  }
-
-  .card-body a:link {
-    text-decoration: none;
-  }
-
-  .card-body a:visited {
-    text-decoration: none;
-  }
-
-  .card-body a:hover {
-    text-decoration: underline;
-  }
-
-  .card-body a:active {
-    text-decoration: underline;
-  }
-
-  .card:after {
-    content: none;
-  }
-
-  .card.border-left-card:before {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: block;
-    width: 8px;
-    height: 100%;
-    background: $secondary;
-    content: '';
-    @extend .rounded-left;
-  }
-
-  .card .card-body .category-top .data:before {
-    content: none;
-  }
+  background-color: $white;
 
   .image-container {
     display: flex;
@@ -67,6 +25,20 @@
     }
   }
 
+  .title-description-wrapper {
+    flex: 1 1 500px;
+    padding-right: 30px;
+
+    h2 {
+      font-size: 1em;
+    }
+  }
+
+  .description {
+    font-family: $font-family-sans-serif;
+    font-weight: 400;
+  }
+
   .link-button {
     display: flex;
     align-items: center;
@@ -74,30 +46,129 @@
     margin: 30px 0;
   }
 
-  .card .card-body .card-text {
-    font-family: $font-family-sans-serif;
-    font-size: 0.889em;
-    font-weight: 400;
-  }
+  .card {
+    &::after {
+      content: none;
+    }
 
-  .description {
-    font-family: $font-family-sans-serif;
-    font-weight: 400;
+    .card-body {
+      a {
+        &:link {
+          text-decoration: none;
+        }
+
+        &:active {
+          text-decoration: underline;
+        }
+
+        &:visited {
+          text-decoration: none;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .category-top {
+        .data:before {
+          content: none;
+        }
+      }
+
+      .card-text {
+        font-family: $font-family-sans-serif;
+        font-size: 0.889em;
+        font-weight: 400;
+      }
+    }
+
+    &.border-left-card {
+      &::before {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 8px;
+        height: 100%;
+        background: $secondary;
+        content: '';
+        @extend .rounded-left;
+      }
+    }
   }
 }
 
 .contenttype-pagina-argomento {
-  #briciole {
-    padding-left: 90px !important;
-    margin-bottom: 0 !important;
+  #portal-header-image {
+    position: relative;
+
+    div {
+      position: absolute;
+      z-index: -1;
+      overflow: hidden;
+
+      width: 100%;
+      height: $header-image-argomento-height;
+
+      img {
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        width: unset !important;
+        min-width: 100%;
+        min-height: $header-image-argomento-height;
+        margin: 0;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &:after {
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: $header-image-argomento-height;
+      background-color: black;
+      content: '';
+      opacity: 0.3;
+    }
   }
 
-  &.has-image {
-    #briciole {
-      color: $white;
+  &.cms-ui {
+    #portal-header-image {
+      &:after {
+        content: none;
+      }
+    }
+  }
+}
 
-      a {
-        color: $white;
+@include media-breakpoint-down(sm) {
+  .contenttype-pagina-argomento {
+    #portal-header-image {
+      position: relative;
+
+      div {
+        height: $header-image-argomento-height-mobile;
+
+        img {
+          min-height: $header-image-argomento-height-mobile;
+        }
+      }
+
+      &::after {
+        height: $header-image-argomento-height-mobile;
+      }
+    }
+
+    .ArgomentoTitleWrapper {
+      padding: 40px 35px 40px 35px;
+
+      .a-portata-di-click {
+        margin-top: 20px;
       }
     }
   }

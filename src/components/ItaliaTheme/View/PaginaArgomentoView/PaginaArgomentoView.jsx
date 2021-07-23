@@ -4,6 +4,9 @@
  */
 
 import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { Portal } from 'react-portal';
 
 import { UniversalLink } from '@plone/volto/components';
 import {
@@ -11,15 +14,14 @@ import {
   CardBody,
   CardText,
 } from 'design-react-kit/dist/design-react-kit';
-import { useDispatch, useSelector } from 'react-redux';
-import { Portal } from 'react-portal';
+import Image from '@plone/volto/components/theme/Image/Image';
 import {
   BodyClass,
   flattenToAppURL,
   hasBlocksData,
 } from '@plone/volto/helpers';
 import { getContent, resetContent } from '@plone/volto/actions';
-import { CardCategory } from '@italia/components/ItaliaTheme';
+import { CardCategory, Breadcrumbs } from '@italia/components/ItaliaTheme';
 import {
   ArgumentIcon,
   PaginaArgomentoPlaceholderAfterContent,
@@ -29,7 +31,6 @@ import {
   RelatedItems,
   RelatedItemInEvidence,
 } from '@italia/components/ItaliaTheme/View';
-import Image from '@plone/volto/components/theme/Image/Image';
 
 /**
  * PaginaArgomentoView view component class.
@@ -39,8 +40,10 @@ import Image from '@plone/volto/components/theme/Image/Image';
  */
 
 const PaginaArgomentoView = ({ content }) => {
-  const searchResults = useSelector((state) => state.content?.subrequests);
+  const location = useLocation();
   const dispatch = useDispatch();
+
+  const searchResults = useSelector((state) => state.content?.subrequests);
 
   // one request is made for every 'unita_amministrative_responsabili' selected
   useEffect(() => {
@@ -62,8 +65,10 @@ const PaginaArgomentoView = ({ content }) => {
   return hasBlocksData(content) ? (
     <div id="page-document">
       <div className="ui container">
-        <div className="ArgomentoTitleWrapper mb-5">
+        <div className="ArgomentoTitleWrapper rounded shadow mt-5  mb-5">
           <div className="title-description-wrapper col-lg-6">
+            <Breadcrumbs pathname={location.pathname} />
+
             <ArgumentIcon icon={content.icona} />
             <h1 className="mb-3">{content?.title}</h1>
             <p className="description">{content?.description}</p>
@@ -109,7 +114,8 @@ const PaginaArgomentoView = ({ content }) => {
                   </div>
                 );
               })}
-            {content?.image ? (
+
+            {content?.image && (
               <>
                 <Portal
                   node={
@@ -126,8 +132,6 @@ const PaginaArgomentoView = ({ content }) => {
                 </Portal>
                 <BodyClass className="has-image" />
               </>
-            ) : (
-              ''
             )}
           </div>
         </div>

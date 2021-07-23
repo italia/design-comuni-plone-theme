@@ -34,11 +34,11 @@ const Body = ({ content, pathname, block }) => {
           <Col lg={{ size: 6, offset: 1, order: 2 }}>
             <Image
               image={content.image}
-              alt={content.title}
+              alt=""
               className={cx('item-image', {
                 'natural-image-size': block.natural_image_size,
               })}
-              role="presentation"
+              role={null}
             />
           </Col>
         )}

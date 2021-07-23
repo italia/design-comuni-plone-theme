@@ -25,8 +25,6 @@ import EventSearchView from '@italia/components/ItaliaTheme/Blocks/EventSearch/V
 import EventSearchEdit from '@italia/components/ItaliaTheme/Blocks/EventSearch/Edit';
 
 import titleSVG from '@plone/volto/icons/text.svg';
-import ArgomentoTitleView from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/View';
-import ArgomentoTitleEdit from '@italia/components/ItaliaTheme/Blocks/ArgomentoTitle/Edit';
 
 import TextCardView from '@italia/components/ItaliaTheme/Blocks/TextCard/SimpleCard/View';
 import TextCardEdit from '@italia/components/ItaliaTheme/Blocks/TextCard/SimpleCard/Edit';
@@ -182,22 +180,7 @@ const italiaBlocks = {
     },
     sidebarTab: 1,
   },
-  pagina_argomento_title: {
-    id: 'pagina_argomento_title',
-    title: 'Titolo Pagina Argomento',
-    icon: titleSVG,
-    group: 'argomento',
-    view: ArgomentoTitleView,
-    edit: ArgomentoTitleEdit,
-    restricted: false,
-    mostUsed: false,
-    blockHasOwnFocusManagement: true,
-    security: {
-      addPermission: [],
-      view: [],
-    },
-    sidebarTab: 1,
-  },
+
   testo_riquadro_semplice: {
     id: 'testo_riquadro_semplice',
     title: 'Testo in riquadro semplice',
