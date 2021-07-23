@@ -41,6 +41,7 @@ import faCogSVG from '@italia/icons/cog.svg';
 import faSitemapSVG from '@italia/icons/sitemap.svg';
 import faBuildingSVG from '@italia/icons/building.svg';
 import faFileDownloadSVG from '@italia/icons/file-download.svg';
+import faQuestionSVG from '@italia/icons/question-solid.svg';
 
 import applyRichTextConfig from '@italia/config/RichTextEditor/config';
 
@@ -100,6 +101,7 @@ export default function applyConfig(voltoConfig) {
       Subsite: faSitemapSVG,
       UnitaOrganizzativa: faBuildingSVG,
       Modulo: faFileDownloadSVG,
+      Faq: faQuestionSVG,
     },
     imageScales: {
       listing: 16,
