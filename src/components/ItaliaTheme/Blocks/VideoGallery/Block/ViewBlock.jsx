@@ -70,6 +70,8 @@ const ViewBlock = ({ data, index }) => {
                   controls
                   type="video/mp4"
                 />
+              ) : data.allowExternals ? (
+                <Embed url={data.url} {...embedSettings} />
               ) : (
                 <div className="invalidVideoFormat" />
               )}
