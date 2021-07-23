@@ -26,6 +26,10 @@ msgstr ""
 msgid "Alert"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
+msgid "Allow Externals"
+msgstr "Accept external URL to embed"
+
 #: config/Blocks/ListingOptions/simpleCardTemplate
 msgid "Aspetto"
 msgstr ""

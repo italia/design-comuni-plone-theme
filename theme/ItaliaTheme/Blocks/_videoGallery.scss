@@ -40,6 +40,13 @@
         }
       }
     }
+
+    video {
+      display: block;
+      max-width: 300px;
+      max-height: 150px;
+      margin: 0 auto;
+    }
   }
 
   .subblock-edit {
