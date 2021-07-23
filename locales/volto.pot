@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-07-23T09:36:56.190Z\n"
+"POT-Creation-Date: 2021-07-23T14:54:54.514Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -2287,6 +2287,21 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 # defaultMessage: Seleziona un argomento nella barra a lato
 msgid "select_argument_sidebar"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+# defaultMessage: Nessuna opzione
+msgid "select_noOptionsMessage"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+# defaultMessage: risultati
+msgid "select_risultati"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+# defaultMessage: risultato
+msgid "select_risultato"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView

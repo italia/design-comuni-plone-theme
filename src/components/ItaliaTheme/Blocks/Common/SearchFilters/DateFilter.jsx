@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useIntl, defineMessages } from 'react-intl';
 import { DateRangePicker } from 'react-dates';
 
@@ -23,6 +23,36 @@ const DateFilter = (props) => {
 
   let isMobile = false;
   if (__CLIENT__) isMobile = window && window.innerWidth < 992;
+
+  useEffect(() => {
+    let startDateInput = document.getElementById('start-date-filter');
+
+    if (startDateInput) {
+      let removeStartDateListener = startDateInput.addEventListener(
+        'keydown',
+        (e) => {
+          if (e.key === 'Tab' && e.shiftKey) setFocusedDateInput(null);
+        },
+      );
+
+      if (removeStartDateListener) return () => removeStartDateListener();
+    }
+  }, []);
+
+  useEffect(() => {
+    let endDateInput = document.getElementById('end-date-filter');
+
+    if (endDateInput) {
+      let removeEndDateListener = endDateInput.addEventListener(
+        'keydown',
+        (e) => {
+          if (e.key === 'Tab' && !e.shiftKey) setFocusedDateInput(null);
+        },
+      );
+
+      if (removeEndDateListener) return () => removeEndDateListener();
+    }
+  }, []);
 
   return (
     <div className="mr-lg-3 my-2 my-lg-1 filter-wrapper date-filter">
@@ -50,6 +80,7 @@ const DateFilter = (props) => {
         onFocusChange={(focusedInput) => setFocusedDateInput(focusedInput)}
         displayFormat="DD/MM/YYYY"
         hideKeyboardShortcutsPanel={true}
+        showClearDates
       />
     </div>
   );

@@ -3,6 +3,16 @@ import PropTypes from 'prop-types';
 import Select, { components } from 'react-select';
 import { Icon } from '@italia/components/ItaliaTheme';
 import './select-styles.css';
+import { defineMessages, useIntl } from 'react-intl';
+
+const messages = defineMessages({
+  select_noOptionsMessage: {
+    id: 'select_noOptionsMessage',
+    defaultMessage: 'Nessuna opzione',
+  },
+  risultato: { id: 'select_risultato', defaultMessage: 'risultato' },
+  risultati: { id: 'select_risultati', defaultMessage: 'risultati' },
+});
 
 const SelectContainer = ({ children, ...props }) => {
   return (
@@ -86,34 +96,50 @@ const SelectInput = ({
   onChange,
   options,
   components = {},
-}) => (
-  <div className="bootstrap-select-wrapper">
-    {label && <label htmlFor={id}>{label}</label>}
-    <Select
-      components={{
-        MenuList,
-        Option,
-        SelectContainer,
-        DropdownIndicator,
-        ClearIndicator,
-        GroupHeading,
-        IndicatorSeparator: null,
-        ...components,
-      }}
-      id={id}
-      value={value}
-      onChange={onChange}
-      options={options}
-      placeholder={placeholder}
-      isDisabled={isDisabled}
-      isSearchable={isSearchable}
-      isMulti={isMulti}
-      isClearable={isClearable}
-      aria-label={placeholder}
-      classNamePrefix={'react-select'}
-    />
-  </div>
-);
+}) => {
+  const intl = useIntl();
+
+  return (
+    <div className="bootstrap-select-wrapper">
+      {label && <label htmlFor={id}>{label}</label>}
+
+      <Select
+        components={{
+          MenuList,
+          Option,
+          SelectContainer,
+          DropdownIndicator,
+          ClearIndicator,
+          GroupHeading,
+          IndicatorSeparator: null,
+          ...components,
+        }}
+        id={id}
+        value={value}
+        onChange={onChange}
+        options={options}
+        placeholder={placeholder}
+        isDisabled={isDisabled}
+        isSearchable={isSearchable}
+        isMulti={isMulti}
+        isClearable={isClearable}
+        aria-label={placeholder}
+        noOptionsMessage={() =>
+          intl.formatMessage(messages.select_noOptionsMessage)
+        }
+        escapeClearsValue={true}
+        screenReaderStatus={({ count }) =>
+          `${count} ${
+            count !== 1
+              ? intl.formatMessage(messages.risultato)
+              : intl.formatMessage(messages.risultati)
+          }`
+        }
+        classNamePrefix={'react-select'}
+      />
+    </div>
+  );
+};
 
 SelectInput.propTypes = {
   id: PropTypes.string,

@@ -1863,6 +1863,18 @@ msgstr ""
 msgid "select_argument_sidebar"
 msgstr "Seleziona un argomento nella barra a lato"
 
+#: components/SelectInput/SelectInput
+msgid "select_noOptionsMessage"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "select_risultati"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "select_risultato"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "service_not_active"
 msgstr "Il servizio non è attivo"
