@@ -192,6 +192,11 @@ const MegaMenu = ({ item, pathname }) => {
               <Button
                 color="link"
                 onClick={() => setMenuStatus(false)}
+                onKeyDown={(e) => {
+                  if (e.keyCode === 13) {
+                    setMenuStatus(false);
+                  }
+                }}
                 title={intl.formatMessage(messages.closeMenu)}
               >
                 <Icon icon="it-close" />
