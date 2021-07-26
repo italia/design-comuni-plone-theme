@@ -1,3 +1,10 @@
+### [5.1.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.1.0...v5.1.1) (2021-07-26)
+
+
+### Bug Fixes
+
+* fixed pagination in ContentPaginationChange listing block ([24e4c44](https://github.com/RedTurtle/design-volto-theme/commit/24e4c44647e41fe6ce506113b627519da4abb5c1))
+
 ## [5.1.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.0.1...v5.1.0) (2021-07-23)
 
 
