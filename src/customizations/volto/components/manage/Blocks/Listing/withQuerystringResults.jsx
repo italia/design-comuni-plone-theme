@@ -97,7 +97,8 @@ export default function withQuerystringResults(WrappedComponent) {
       !isEditMode && listingRef.current.scrollIntoView({ behavior: 'smooth' });
       const current = activePage?.children ?? 1;
       setCurrentPage(current);
-      dispatch(getContent(initialPath, null, null, activePage));
+
+      dispatch(getContent(initialPath, null, null, current));
     }
 
     function handleQueryPaginationChange(e, { activePage }) {
