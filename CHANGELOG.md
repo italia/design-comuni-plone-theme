@@ -1,3 +1,10 @@
+### [5.1.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.1.1...v5.1.2) (2021-07-26)
+
+
+### Maintenance
+
+* new customizable components 'BrandText' and 'BrandTextFooter' ([e7991a7](https://github.com/RedTurtle/design-volto-theme/commit/e7991a7e70eef9b4f59ad94dc001da479faff661))
+
 ### [5.1.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.1.0...v5.1.1) (2021-07-26)
 
 
