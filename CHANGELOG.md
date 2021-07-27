@@ -1,3 +1,10 @@
+## [5.2.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.1.2...v5.2.0) (2021-07-27)
+
+
+### Features
+
+* added Contacts block ([cdc0c3c](https://github.com/RedTurtle/design-volto-theme/commit/cdc0c3c3856a3494b29c0e73a4d0c46cc370dd73))
+
 ### [5.1.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.1.1...v5.1.2) (2021-07-26)
 
 
