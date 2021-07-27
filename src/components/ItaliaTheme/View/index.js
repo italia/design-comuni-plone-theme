@@ -63,6 +63,7 @@ export BandoDates from '@italia/components/ItaliaTheme/View/Commons/BandoDates';
 
 /* --- View --- */
 export PaginaArgomentoViewNoBlocks from '@italia/components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks';
+export CartellaModulisticaAfterContent from '@italia/components/ItaliaTheme/View/CartellaModulisticaView/Placeholder/AfterContent';
 export EventoPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/EventoView/Placeholder/AfterContent';
 export NewsItemPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/NewsItemView/Placeholder/AfterContent';
 export PagePlaceholderTitle from '@italia/components/ItaliaTheme/View/PageView/Placeholder/Title';
