@@ -1,0 +1,194 @@
+.block.contacts {
+  .full-width {
+    height: auto;
+  }
+
+  .ui.basic.button.delete-button {
+    padding: 0.5rem;
+    text-align: center;
+
+    svg:not(:hover) {
+      fill: #fff !important;
+    }
+
+    &:hover {
+      border-radius: 100%;
+    }
+  }
+
+  .block-header {
+    .title {
+      margin: 1rem 0 2rem 0;
+      color: #fff;
+      font-size: 2.2rem;
+      font-weight: bold;
+      line-height: 3rem;
+      text-align: center;
+
+      .DraftEditor-root {
+        .public-DraftEditor-content {
+          text-align: center;
+        }
+
+        .public-DraftEditorPlaceholder-root {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+
+    .description {
+      margin-bottom: 2rem;
+      color: #fff;
+      line-height: 1.65em;
+      text-align: center;
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: #fff;
+      }
+
+      .DraftEditor-root {
+        .public-DraftEditor-content {
+          text-align: center;
+        }
+
+        .public-DraftEditorPlaceholder-root {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .col-md-4 {
+    margin-bottom: 1rem;
+  }
+
+  .single-block.subblock-edit {
+    height: 100%;
+
+    .card-wrapper {
+      height: 100%;
+    }
+
+    .dragsubblock,
+    .ui.basic.button.delete-button {
+      z-index: 3;
+      padding: 0.3rem;
+      background-color: #8bb3b5 !important;
+      border-radius: 100%;
+      line-height: 1rem;
+
+      svg:not(:hover) {
+        fill: #fff !important;
+      }
+
+      &:hover,
+      &:active {
+        background-color: #a4dee1 !important;
+
+        svg {
+          fill: #000 !important;
+        }
+      }
+    }
+
+    .dragsubblock {
+      top: -0.75rem;
+      left: -0.55rem;
+    }
+
+    .ui.basic.button.delete-button {
+      top: -0.7rem;
+      width: unset;
+      height: unset;
+      padding: 0.36rem;
+      text-align: center;
+    }
+  }
+
+  .card {
+    &:after {
+      content: none;
+    }
+
+    .contact-title {
+      font-size: 1.35rem;
+      font-weight: bold;
+      line-height: 1.4em;
+    }
+
+    .contact-text {
+      font-size: 0.9rem;
+    }
+
+    .contact-info {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-of-type) {
+        margin-bottom: 1rem;
+      }
+
+      .icon-wrapper {
+        margin-right: 1rem;
+      }
+
+      .tel {
+        font-size: 1.8rem;
+      }
+
+      .email {
+        font-size: 1.26rem;
+      }
+
+      .tel,
+      .email {
+        flex: 1 1 auto;
+
+        .DraftEditor-editorContainer {
+          line-height: 1.48em;
+        }
+
+        p {
+          line-height: 1.48em;
+
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+
+      .public-DraftStyleDefault-block {
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: #{map-get($grid-breakpoints, md)}) {
+    .card {
+      .contact-info {
+        .icon {
+          width: 20px;
+          height: 20px;
+        }
+
+        .tel {
+          font-size: 1.5rem;
+          word-break: break-word;
+        }
+
+        .email {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
