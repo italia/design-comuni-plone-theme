@@ -108,7 +108,7 @@ class Edit extends SubblocksEdit {
             <SubblocksWrapper node={this.node}>
               <Row>
                 {this.state.subblocks.map((subblock, subindex) => (
-                  <Col md="4" key={subblock.id}>
+                  <Col lg="4" key={subblock.id}>
                     <EditBlock
                       data={subblock}
                       index={subindex}
@@ -120,7 +120,7 @@ class Edit extends SubblocksEdit {
                 ))}
 
                 {this.props.selected && (
-                  <Col md={4}>
+                  <Col lg={4}>
                     {this.renderAddBlockButton(
                       this.props.intl.formatMessage(messages.addItem),
                     )}

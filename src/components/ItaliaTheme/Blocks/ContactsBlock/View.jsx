@@ -44,7 +44,7 @@ const AccordionView = ({ data, block }) => {
             </div>
             <Row>
               {data.subblocks.map((subblock, index) => (
-                <Col md="4" key={subblock.id}>
+                <Col lg="4" key={subblock.id}>
                   <ViewBlock
                     data={subblock}
                     key={index}
