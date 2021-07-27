@@ -1,3 +1,10 @@
+### [5.2.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.1...v5.2.2) (2021-07-27)
+
+
+### Maintenance
+
+* added cartellaModulistica placeholder aftercontent ([02f739b](https://github.com/RedTurtle/design-volto-theme/commit/02f739bae0317737d94380e3cf9a84fd035d8bc6))
+
 ### [5.2.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.0...v5.2.1) (2021-07-27)
 
 
