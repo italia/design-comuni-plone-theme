@@ -418,6 +418,7 @@ msgstr "Twitter Posts"
 msgid "Type description…"
 msgstr "Digita la descrizione…"
 
+#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/Blocks/ContactsBlock/TextEditorWidget
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
@@ -432,10 +433,6 @@ msgstr "Digita testo…"
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type the title…"
 msgstr "Digita il titolo…"
-
-#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
-msgid "Ulteriori informazioni placeholder"
-msgstr ""
 
 #: components/ItaliaTheme/View/PageView/PageView
 msgid "Unknown Block"

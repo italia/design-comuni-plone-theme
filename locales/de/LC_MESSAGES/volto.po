@@ -433,6 +433,7 @@ msgstr ""
 msgid "Type description…"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/Blocks/ContactsBlock/TextEditorWidget
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
@@ -446,10 +447,6 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type the title…"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
-msgid "Ulteriori informazioni placeholder"
 msgstr ""
 
 #: components/ItaliaTheme/View/PageView/PageView
