@@ -1,3 +1,11 @@
+### [5.2.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.2...v5.2.3) (2021-07-27)
+
+
+### Maintenance
+
+* updated locales ([28c667e](https://github.com/RedTurtle/design-volto-theme/commit/28c667e41376d01a2e9de83188851b30e8da3370))
+* updated volto to fix BlockChooser ([0133ea1](https://github.com/RedTurtle/design-volto-theme/commit/0133ea1ff4ad51c48b383d79104fe7d0946a30d5))
+
 ### [5.2.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.1...v5.2.2) (2021-07-27)
 
 
