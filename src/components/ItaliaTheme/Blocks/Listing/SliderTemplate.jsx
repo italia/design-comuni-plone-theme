@@ -34,10 +34,12 @@ const SliderTemplate = ({
   show_block_bg,
   linkTitle,
   linkHref,
+  slidesToShow = '1',
 }) => {
   const intl = useIntl();
   const slider = useRef(null);
   const [autoplay, setAutoplay] = useState(false);
+  const nSlidesToShow = parseInt(slidesToShow);
 
   const toggleAutoplay = () => {
     if (!slider?.current) return;
@@ -72,8 +74,8 @@ const SliderTemplate = ({
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: nSlidesToShow,
+    slidesToScroll: nSlidesToShow,
     autoplaySpeed: 2000,
     pauseOnHover: true,
     pauseOnFocus: true,
@@ -85,12 +87,20 @@ const SliderTemplate = ({
     accessibility: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    responsive: [
+      {
+        breakpoint: 980,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   //const getCaption = (item) => item.description ?? item.rights ?? null;
 
   return (
-    <div className="sliderTemplate">
+    <div className={`sliderTemplate slidesToShow-${nSlidesToShow || 1}`}>
       <Container className="px-4">
         {title && (
           <Row>
@@ -101,26 +111,32 @@ const SliderTemplate = ({
         )}
         <div className="slider-container px-4 px-md-0">
           <div className="it-carousel-all it-card-bg">
-            <div className="play-pause-wrapper">
-              <button
-                onClick={() => toggleAutoplay()}
-                title={
-                  autoplay
-                    ? intl.formatMessage(messages.pause)
-                    : intl.formatMessage(messages.play)
-                }
-              >
-                <Icon icon={autoplay ? 'pause' : 'play'} />
-                <span>{autoplay ? 'pause' : 'play'}</span>
-              </button>
-            </div>
+            {items?.length > nSlidesToShow && (
+              <div className="play-pause-wrapper">
+                <button
+                  onClick={() => toggleAutoplay()}
+                  title={
+                    autoplay
+                      ? intl.formatMessage(messages.pause)
+                      : intl.formatMessage(messages.play)
+                  }
+                >
+                  <Icon icon={autoplay ? 'pause' : 'play'} />
+                  <span>{autoplay ? 'pause' : 'play'}</span>
+                </button>
+              </div>
+            )}
+
             <Slider {...settings} ref={slider}>
-              {items.map((item) => {
+              {items.map((item, index) => {
                 const image =
                   item.image || item.immagine_testata || item.foto_persona;
 
                 return (
-                  <div className="it-single-slide-wrapper" key={item['@id']}>
+                  <div
+                    className="it-single-slide-wrapper"
+                    key={item['@id'] + index}
+                  >
                     <div className="slide-wrapper">
                       <figure className="img-wrapper">
                         {image && (

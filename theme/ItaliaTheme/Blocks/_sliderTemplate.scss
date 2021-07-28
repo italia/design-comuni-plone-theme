@@ -153,6 +153,30 @@
       }
     }
   }
+
+  &.slidesToShow-2,
+  &.slidesToShow-3,
+  &.slidesToShow-4,
+  &.slidesToShow-5,
+  &.slidesToShow-6 {
+    .slider-container {
+      .slick-slide {
+        margin-right: 0.65rem;
+        margin-left: 0.65rem;
+
+        .slide-wrapper {
+          figure.img-wrapper {
+            height: 300px;
+
+            img {
+              min-height: 300px;
+            }
+          }
+        }
+      }
+    }
+  }
+
   @media (max-width: #{map-get($grid-breakpoints, sm)}) {
     .slider-container {
       .it-carousel-all {

@@ -1983,6 +1983,10 @@ msgstr "Vai al contenuto"
 msgid "skiplink-navigation"
 msgstr "Vai alla navigazione"
 
+#: config/Blocks/ListingOptions/sliderTemplate
+msgid "slidesToShow"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 msgid "soggetti_esterni"
 msgstr "Soggetti esterni"
