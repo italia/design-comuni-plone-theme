@@ -1998,6 +1998,10 @@ msgstr ""
 msgid "skiplink-navigation"
 msgstr ""
 
+#: config/Blocks/ListingOptions/sliderTemplate
+msgid "slidesToShow"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 msgid "soggetti_esterni"
 msgstr ""
