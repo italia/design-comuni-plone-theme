@@ -1,3 +1,10 @@
+### [5.2.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.3...v5.2.4) (2021-07-28)
+
+
+### Maintenance
+
+* added slidesToShow prop to sliderTemplate Listing ([5411e93](https://github.com/RedTurtle/design-volto-theme/commit/5411e932f043857a7502d1aaf8dabac785787f06))
+
 ### [5.2.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.2...v5.2.3) (2021-07-27)
 
 
