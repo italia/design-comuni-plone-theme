@@ -16,10 +16,39 @@
     }
   }
 
+  &.bg-primary {
+    .block-header {
+      .title,
+      .description,
+      .description h1,
+      .description h2,
+      .description h3,
+      .description h4,
+      .description h5,
+      .description h6 {
+        color: $text-primary;
+      }
+    }
+  }
+
+  &.bg-secondary {
+    .block-header {
+      .title,
+      .description,
+      .description h1,
+      .description h2,
+      .description h3,
+      .description h4,
+      .description h5,
+      .description h6 {
+        color: $text-secondary;
+      }
+    }
+  }
+
   .block-header {
     .title {
       margin: 1rem 0 2rem 0;
-      color: #fff;
       font-size: 2.2rem;
       font-weight: bold;
       line-height: 3rem;
@@ -39,18 +68,9 @@
 
     .description {
       margin-bottom: 2rem;
-      color: #fff;
+
       line-height: 1.65em;
       text-align: center;
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        color: #fff;
-      }
 
       .DraftEditor-root {
         .public-DraftEditor-content {
