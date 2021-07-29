@@ -10,7 +10,7 @@ import { Icon } from '@italia/components/ItaliaTheme';
  */
 const ArgumentIcon = ({ icon }) => {
   return icon ? (
-    <div className="icon-argument-container d-flex align-items-center justify-content-center mb-2 lightgrey-bg-c2">
+    <div className="icon-argument-container mb-2">
       <Icon icon={icon} />
     </div>
   ) : null;

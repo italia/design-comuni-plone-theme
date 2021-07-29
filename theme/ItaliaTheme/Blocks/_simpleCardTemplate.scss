@@ -93,6 +93,16 @@
 
 .simple-card-compact-template {
   .card-teaser-wrapper {
+    .icon-argument-container + .card-body {
+      margin-left: 1em;
+    }
+
+    .card-teaser {
+      .icon {
+        min-width: unset;
+      }
+    }
+
     &.card-teaser-block-3 {
       & > .card-teaser {
         flex-wrap: nowrap;
