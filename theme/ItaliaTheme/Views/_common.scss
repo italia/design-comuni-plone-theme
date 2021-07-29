@@ -254,19 +254,25 @@ div.sticky-wrapper {
 }
 
 .icon-argument-container {
+  display: flex;
+
   width: 44px;
+  min-width: 44px;
+
   height: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $argument-icon-bg;
   border-radius: 44px;
 
-  .show-icon {
+  .icon,
+  svg {
     width: 24px;
     height: 24px;
-    color: $tertiary;
-  }
-
-  svg {
-    color: $tertiary;
-    fill: $tertiary;
+    color: $argument-icon-color;
+    fill: $argument-icon-color;
   }
 }
 

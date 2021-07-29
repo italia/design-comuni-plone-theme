@@ -42,7 +42,11 @@ const SimpleCardTemplateCompact = ({
             teaser
             key={index}
           >
-            {show_icon && <Icon icon={getItemIcon(item)} />}
+            {show_icon && (
+              <div className="icon-argument-container">
+                <Icon icon={getItemIcon(item)} />
+              </div>
+            )}
             <CardBody>
               <CardTitle tag="h3">
                 <UniversalLink
