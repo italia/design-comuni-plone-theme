@@ -96,40 +96,13 @@
       height: 100%;
     }
 
-    .dragsubblock,
     .ui.basic.button.delete-button {
-      z-index: 3;
-      padding: 0.3rem;
-      background-color: #8bb3b5 !important;
-      border-radius: 100%;
-      line-height: 1rem;
-
-      svg:not(:hover) {
-        fill: #fff !important;
-      }
-
-      &:hover,
-      &:active {
-        background-color: #a4dee1 !important;
-
-        svg {
-          fill: #000 !important;
-        }
-      }
-    }
-
-    .dragsubblock {
-      top: -0.75rem;
-      left: -0.55rem;
-    }
-
-    .ui.basic.button.delete-button {
-      top: -0.7rem;
-      width: unset;
-      height: unset;
       padding: 0.36rem;
-      text-align: center;
     }
+  }
+
+  .button.add-element {
+    margin-top: 1em;
   }
 
   .card {
