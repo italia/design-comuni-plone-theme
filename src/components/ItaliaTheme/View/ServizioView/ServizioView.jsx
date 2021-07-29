@@ -20,6 +20,7 @@ import {
   SmallVenue,
   HelpBox,
   ServizioPlaceholderAfterContent,
+  ServizioPlaceholderAfterRelatedItems,
   RelatedItemInEvidence,
   SkipToMainContent,
   TrasparenzaFields,
@@ -485,6 +486,7 @@ const ServizioView = ({ content }) => {
       </div>
       <ServizioPlaceholderAfterContent content={content} />
       <RelatedItemInEvidence content={content} />
+      <ServizioPlaceholderAfterRelatedItems content={content} />
     </>
   );
 };

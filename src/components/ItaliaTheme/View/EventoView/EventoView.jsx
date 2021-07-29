@@ -36,6 +36,7 @@ import {
   RelatedItems,
   RichText,
   EventoPlaceholderAfterContent,
+  EventoPlaceholderAfterRelatedItems,
   ContactLink,
   RelatedItemInEvidence,
   richTextHasContent,
@@ -458,6 +459,7 @@ const EventoView = ({ content, location }) => {
       <EventoPlaceholderAfterContent content={content} />
       <RelatedItems content={content} />
       <RelatedItemInEvidence content={content} />
+      <EventoPlaceholderAfterRelatedItems content={content} />
     </>
   );
 };

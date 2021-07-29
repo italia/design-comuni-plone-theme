@@ -21,6 +21,7 @@ import {
   SideMenu,
   ContentImage,
   UOPlaceholderAfterContent,
+  UOPlaceholderAfterRelatedItems,
   RichText,
   RelatedItemInEvidence,
   richTextHasContent,
@@ -439,6 +440,7 @@ const UOView = ({ content }) => {
       <UOPlaceholderAfterContent content={content} />
       <RelatedItems content={content} list={content?.related_news ?? []} />
       <RelatedItemInEvidence content={content} />
+      <UOPlaceholderAfterRelatedItems content={content} />
     </>
   );
 };

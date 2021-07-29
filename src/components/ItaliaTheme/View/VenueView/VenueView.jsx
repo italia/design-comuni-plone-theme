@@ -26,6 +26,7 @@ import {
   GenericCard,
   Metadata,
   VenuePlaceholderAfterContent,
+  VenuePlaceholderAfterRelatedItems,
   RelatedItemInEvidence,
   richTextHasContent,
   SkipToMainContent,
@@ -539,6 +540,7 @@ const VenueView = ({ content }) => {
         ]}
       />
       <RelatedItemInEvidence content={content} />
+      <VenuePlaceholderAfterRelatedItems content={content} />
     </>
   );
 };

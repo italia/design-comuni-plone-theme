@@ -26,6 +26,7 @@ import { CardCategory, Breadcrumbs } from '@italia/components/ItaliaTheme';
 import {
   ArgumentIcon,
   PaginaArgomentoPlaceholderAfterContent,
+  PaginaArgomentoPlaceholderAfterRelatedItems,
   TextOrBlocks,
   RichText,
   PaginaArgomentoViewNoBlocks,
@@ -161,6 +162,7 @@ const PaginaArgomentoView = ({ content }) => {
       </div>
       <RelatedItems content={content} />
       <RelatedItemInEvidence content={content} />
+      <PaginaArgomentoPlaceholderAfterRelatedItems content={content} />
     </div>
   ) : (
     <PaginaArgomentoViewNoBlocks content={content} />

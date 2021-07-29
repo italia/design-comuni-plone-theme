@@ -19,6 +19,7 @@ import {
   Attachments,
   RelatedItems,
   NewsItemPlaceholderAfterContent,
+  NewsItemPlaceholderAfterRelatedItems,
   RelatedItemInEvidence,
   richTextHasContent,
   SkipToMainContent,
@@ -153,6 +154,7 @@ const NewsItemView = ({ content, location }) => {
       <NewsItemPlaceholderAfterContent content={content} />
       <RelatedItems list={related_items} />
       <RelatedItemInEvidence content={content} />
+      <NewsItemPlaceholderAfterRelatedItems content={content} />
     </>
   );
 };
