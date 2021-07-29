@@ -16,7 +16,7 @@
     }
   }
 
-  &.bg-primary {
+  .bg-primary {
     .block-header {
       .title,
       .description,
@@ -26,12 +26,12 @@
       .description h4,
       .description h5,
       .description h6 {
-        color: $text-primary;
+        color: $primary-text;
       }
     }
   }
 
-  &.bg-secondary {
+  .bg-secondary {
     .block-header {
       .title,
       .description,
@@ -41,7 +41,7 @@
       .description h4,
       .description h5,
       .description h6 {
-        color: $text-secondary;
+        color: $secondary-text;
       }
     }
   }
