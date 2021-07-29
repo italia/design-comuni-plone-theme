@@ -1,3 +1,10 @@
+### [5.2.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.4...v5.2.5) (2021-07-29)
+
+
+### Maintenance
+
+* added placeholder After Related Items in content types view ([a1d800b](https://github.com/RedTurtle/design-volto-theme/commit/a1d800b57fd89ddd41424181dc0c858b9f2e8524))
+
 ### [5.2.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.3...v5.2.4) (2021-07-28)
 
 
