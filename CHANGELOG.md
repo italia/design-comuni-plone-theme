@@ -1,3 +1,10 @@
+### [5.2.7](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.6...v5.2.7) (2021-07-29)
+
+
+### Bug Fixes
+
+* fixed styles for contacts block ([13bcd59](https://github.com/RedTurtle/design-volto-theme/commit/13bcd598999e7c7fbb44de791a5a665f6e7814ff))
+
 ### [5.2.6](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.5...v5.2.6) (2021-07-29)
 
 
