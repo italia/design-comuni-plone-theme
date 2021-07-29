@@ -1,3 +1,10 @@
+### [5.2.6](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.5...v5.2.6) (2021-07-29)
+
+
+### Maintenance
+
+* fixed argument icon styles ([ebab34e](https://github.com/RedTurtle/design-volto-theme/commit/ebab34ea029887c654ffdd69567291452a1f3051))
+
 ### [5.2.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.4...v5.2.5) (2021-07-29)
 
 
