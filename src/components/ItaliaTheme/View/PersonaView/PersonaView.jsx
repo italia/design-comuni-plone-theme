@@ -20,6 +20,7 @@ import {
   HelpBox,
   RelatedItems,
   PersonaPlaceholderAfterContent,
+  PersonaPlaceholderAfterRelatedItems,
   ContactLink,
   RelatedItemInEvidence,
   richTextHasContent,
@@ -458,6 +459,7 @@ const PersonaView = ({ content }) => {
       <PersonaPlaceholderAfterContent content={content} />
       <RelatedItems content={content} />
       <RelatedItemInEvidence content={content} />
+      <PersonaPlaceholderAfterRelatedItems content={content} />
     </>
   );
 };

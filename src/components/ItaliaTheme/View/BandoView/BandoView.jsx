@@ -19,6 +19,7 @@ import {
   RelatedItems,
   RichText,
   BandoPlaceholderAfterContent,
+  BandoPlaceholderAfterRelatedItems,
   RelatedItemInEvidence,
   richTextHasContent,
   SkipToMainContent,
@@ -318,6 +319,7 @@ const BandoView = ({ content, location }) => {
       <BandoPlaceholderAfterContent content={content} />
       <RelatedItems content={content} />
       <RelatedItemInEvidence content={content} />
+      <BandoPlaceholderAfterRelatedItems content={content} />
     </>
   );
 };

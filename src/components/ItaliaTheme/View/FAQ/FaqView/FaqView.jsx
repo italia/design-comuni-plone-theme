@@ -13,6 +13,7 @@ import {
   PageHeader,
   PageMetadata,
   FaqPlaceholderAfterContent,
+  FaqPlaceholderAfterRelatedItems,
 } from '@italia/components/ItaliaTheme/View';
 
 /**
@@ -40,8 +41,11 @@ const FaqView = ({ content }) => {
       </div>
 
       <FaqPlaceholderAfterContent content={content} />
+
       <RelatedItems content={content} />
       <RelatedItemInEvidence content={content} />
+
+      <FaqPlaceholderAfterRelatedItems content={content} />
     </div>
   );
 };

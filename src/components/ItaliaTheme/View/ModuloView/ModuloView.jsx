@@ -3,21 +3,19 @@
  * @module components/theme/View/ModuloView
  */
 
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
-import { getContent, resetContent } from '@plone/volto/actions';
-import { flattenToAppURL } from '@plone/volto/helpers';
+import React from 'react';
+
 import {
   PageHeader,
   RelatedItems,
   PagePlaceholderAfterContent,
+  ModuloPlaceholderAfterContent,
+  ModuloPlaceholderAfterRelatedItems,
   TextOrBlocks,
   DownloadFileFormat,
   RelatedItemInEvidence,
 } from '@italia/components/ItaliaTheme/View';
 import { defineMessages, useIntl } from 'react-intl';
-import cx from 'classnames';
 
 /**
  * ModuloView view component class.
@@ -83,9 +81,13 @@ const ModuloView = ({ content }) => {
         <TextOrBlocks content={content} />
       </div>
 
+      <ModuloPlaceholderAfterContent content={content} />
       <PagePlaceholderAfterContent content={content} />
+
       <RelatedItems content={content} />
       <RelatedItemInEvidence content={content} />
+
+      <ModuloPlaceholderAfterRelatedItems content={content} />
     </>
   );
 };

@@ -13,6 +13,7 @@ import {
   PageHeader,
   RelatedItems,
   FaqFolderPlaceholderAfterContent,
+  FaqFolderPlaceholderAfterRelatedItems,
   TextOrBlocks,
   RelatedItemInEvidence,
   PageMetadata,
@@ -120,8 +121,9 @@ const FaqFolderView = ({ content }) => {
       <FaqFolderPlaceholderAfterContent content={content} />
 
       <RelatedItems content={content} list={content?.servizi_collegati ?? []} />
-
       <RelatedItemInEvidence content={content} />
+
+      <FaqFolderPlaceholderAfterRelatedItems content={content} />
     </>
   );
 };

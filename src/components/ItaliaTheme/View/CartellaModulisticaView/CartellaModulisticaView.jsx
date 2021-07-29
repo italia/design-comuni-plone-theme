@@ -12,6 +12,7 @@ import {
   PageHeader,
   RelatedItems,
   CartellaModulisticaAfterContent,
+  CartellaModulisticaAfterRelatedItems,
   PagePlaceholderAfterContent,
   TextOrBlocks,
   RelatedItemInEvidence,
@@ -112,8 +113,9 @@ const CartellaModulisticaView = ({ content }) => {
       <PagePlaceholderAfterContent content={content} />
 
       <RelatedItems content={content} list={content?.servizi_collegati ?? []} />
-
       <RelatedItemInEvidence content={content} />
+
+      <CartellaModulisticaAfterRelatedItems content={content} />
     </>
   );
 };
