@@ -1,3 +1,16 @@
+### [5.2.9](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.8...v5.2.9) (2021-07-30)
+
+
+### Bug Fixes
+
+* fixed some styles ([6dbbae5](https://github.com/RedTurtle/design-volto-theme/commit/6dbbae549ea8f2044d892407fcc0993606d67ba9))
+
+
+### Maintenance
+
+* updated volto ([abc0303](https://github.com/RedTurtle/design-volto-theme/commit/abc0303b3e2656efb2a70ae27564ec29188c92e3))
+* **upd8:** update dvt v5.2.8 ([8adf552](https://github.com/RedTurtle/design-volto-theme/commit/8adf55254bbc991f6cc3b0da05151cfe5880ae3b))
+
 ### [5.2.8](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.7...v5.2.8) (2021-07-29)
 
 
