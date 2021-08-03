@@ -2083,9 +2083,9 @@
     yarn-deduplicate "3.1.0"
     yarnhook "0.5.1"
 
-"@plone/volto@plone/volto#540d5a1ae31169aba29fb98cfdc75740bcfa5e1f":
+"@plone/volto@plone/volto#8fba24fc57bcf2d4205ad355adbe51b30c5843f5":
   version "13.8.2"
-  resolved "https://codeload.github.com/plone/volto/tar.gz/540d5a1ae31169aba29fb98cfdc75740bcfa5e1f"
+  resolved "https://codeload.github.com/plone/volto/tar.gz/8fba24fc57bcf2d4205ad355adbe51b30c5843f5"
   dependencies:
     "@babel/plugin-proposal-export-default-from" "7.10.4"
     "@babel/plugin-proposal-export-namespace-from" "7.10.4"
