@@ -40,6 +40,7 @@ const Field = ({
   isOnEdit,
   valid,
   disabled = false,
+  formHasErrors = false,
 }) => {
   const intl = useIntl();
 
@@ -251,6 +252,7 @@ const Field = ({
               onChange={onChange}
               value={value}
               isDisabled={disabled}
+              formHasErrors={formHasErrors}
               invalid={isInvalid().toString()}
               {...(isInvalid() ? { className: 'is-invalid' } : {})}
             />,
@@ -275,6 +277,7 @@ Field.propTypes = {
   field_type: PropTypes.string,
   input_values: PropTypes.any,
   value: PropTypes.any,
+  formHasErrors: PropTypes.bool,
   onChange: PropTypes.func,
 };
 

@@ -132,6 +132,7 @@ const FormView = ({
                               onChange={() => {}}
                               valid
                               disabled
+                              formHasErrors={formErrors.length > 0}
                             />
                           </Col>
                         </Row>
