@@ -1,3 +1,10 @@
+### [5.2.10](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.9...v5.2.10) (2021-08-03)
+
+
+### Maintenance
+
+* updated volto ([4306f06](https://github.com/RedTurtle/design-volto-theme/commit/4306f0670a21d5a0225de063fc375f1f7b0bf93c))
+
 ### [5.2.9](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.8...v5.2.9) (2021-07-30)
 
 
