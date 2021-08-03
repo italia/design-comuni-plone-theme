@@ -14,6 +14,8 @@ import {
 import Select from 'react-select';
 import FileWidget from '@italia/components/ItaliaTheme/manage/Widgets/FileWidget';
 
+import config from '@plone/volto/registry';
+
 const messages = defineMessages({
   select_a_value: {
     id: 'form_select_a_value',
@@ -236,6 +238,26 @@ const Field = ({
           {...(value ? { value } : {})}
         />
       )}
+      {config.blocks.blocksConfig.form.additionalFields?.reduce((acc, val) => {
+        if (val.id === field_type)
+          return [
+            ...acc,
+            <val.component
+              id={name}
+              name={name}
+              title={label}
+              description={description}
+              required={required}
+              onChange={onChange}
+              value={value}
+              isDisabled={disabled}
+              invalid={isInvalid().toString()}
+              {...(isInvalid() ? { className: 'is-invalid' } : {})}
+            />,
+          ];
+
+        return acc;
+      }, []) ?? []}
     </div>
   );
 };
