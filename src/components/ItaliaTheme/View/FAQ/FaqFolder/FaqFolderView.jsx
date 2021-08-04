@@ -21,8 +21,10 @@ import {
   FaqFolderTree,
 } from '@italia/components/ItaliaTheme/View';
 import { useDebouncedEffect } from '@italia/helpers';
-import { getContent, resetContent } from '@plone/volto/actions';
+import { resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
+
+import { GET_CONTENT } from '@plone/volto/constants/ActionTypes';
 
 const messages = defineMessages({
   no_results: {
@@ -56,7 +58,15 @@ const FaqFolderView = ({ content }) => {
       structure_url +
       (searchableText ? '?SearchableText=' + searchableText + '*' : '');
 
-    dispatch(getContent(flattenToAppURL(url), null, FAQ_FOLDER_KEY));
+    const dispatch_obj = {
+      type: GET_CONTENT,
+      subrequest: FAQ_FOLDER_KEY,
+      request: {
+        op: 'get',
+        path: `${flattenToAppURL(url)}`,
+      },
+    };
+    dispatch(dispatch_obj);
 
     return () => dispatch(resetContent(FAQ_FOLDER_KEY));
   };
