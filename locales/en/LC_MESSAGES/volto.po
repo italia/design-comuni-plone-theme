@@ -76,10 +76,6 @@ msgstr "Search by keyword"
 msgid "Clicca qui per sostituire il file"
 msgstr "Click here to replace file"
 
-#: config/RichiedentiWidget
-msgid "Cognome"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 #: components/ItaliaTheme/manage/Widgets/ColorListWidget
 msgid "Color"
@@ -139,7 +135,6 @@ msgstr ""
 msgid "Description placeholder"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
 #: config/Blocks/ListingOptions/mapTemplate
 msgid "Dimensione della mappa"
 msgstr ""
@@ -207,12 +202,10 @@ msgid "Link to"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
-#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 msgid "LinkMore"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
-#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 msgid "Linkto title"
 msgstr ""
 
@@ -244,14 +237,6 @@ msgstr "Show all topics"
 #: components/ItaliaTheme/Search/Search
 msgid "Nessun risultato ottenuto"
 msgstr "No results found"
-
-#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
-msgid "News"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
-msgid "NewsHome"
-msgstr ""
 
 #: components/ItaliaTheme/Pagination/PaginationItem
 msgid "Next page"
@@ -413,14 +398,12 @@ msgstr "Drop the file here to replace existing file"
 msgid "Twitter Posts"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type description…"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/Blocks/ContactsBlock/TextEditorWidget
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
@@ -429,7 +412,6 @@ msgstr ""
 msgid "Type text…"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
@@ -468,8 +450,6 @@ msgid "Vedi l'immagine"
 msgstr "View image"
 
 #: components/ItaliaTheme/Blocks/Listing/Commons/ListingLinkMore
-#: components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate
-#: components/ItaliaTheme/Blocks/Listing/SquaresImageTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
 #: components/ItaliaTheme/MegaMenu/MegaMenu
@@ -499,14 +479,6 @@ msgstr "Log in to the service"
 #: components/ItaliaTheme/View/Commons/Actions
 msgid "actions"
 msgstr "View actions"
-
-#: config/RichiedentiWidget
-msgid "add"
-msgstr ""
-
-#: config/RichiedentiWidget
-msgid "addFamilyMembers"
-msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "advandedSectionsFilters"
@@ -540,7 +512,6 @@ msgstr ""
 msgid "altri_documenti"
 msgstr "Other documents"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 msgid "always_show_image"
 msgstr ""
@@ -743,14 +714,6 @@ msgstr "close"
 msgid "closeSearch"
 msgstr "Close search"
 
-#: config/RichiedentiWidget
-msgid "codiceFiscale"
-msgstr ""
-
-#: config/RichiedentiWidget
-msgid "codiceID"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "color_primary"
@@ -851,10 +814,6 @@ msgstr "Curriculum vitae"
 msgid "customer_satisfaction"
 msgstr ""
 
-#: config/RichiedentiWidget
-msgid "dataNascita"
-msgstr ""
-
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "data_conclusione_incarico"
 msgstr "He was part of the municipal organization until"
@@ -893,10 +852,6 @@ msgstr "Default"
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "deleghe"
 msgstr "Delegations"
-
-#: config/RichiedentiWidget
-msgid "delete"
-msgstr ""
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "desc"
@@ -1022,7 +977,6 @@ msgid "email_sede"
 msgstr "E-mail"
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Edit
-#: components/ItaliaTheme/Blocks/NewsHome/Edit
 msgid "emptySelection"
 msgstr ""
 
@@ -1245,25 +1199,18 @@ msgstr "Venues"
 msgid "luogo"
 msgstr "Venue"
 
-#: config/RichiedentiWidget
-msgid "luogoNascita"
-msgstr ""
-
 #: components/ItaliaTheme/View/Commons/Actions
 msgid "mailto"
 msgstr "Send"
 
-#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
 #: config/Blocks/ListingOptions/mapTemplate
 msgid "map_size_large"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
 #: config/Blocks/ListingOptions/mapTemplate
 msgid "map_size_medium"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
 #: config/Blocks/ListingOptions/mapTemplate
 msgid "map_size_small"
 msgstr ""
@@ -1316,15 +1263,9 @@ msgid "modulo_formati_alternativi"
 msgstr "Alternative formats"
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
-#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
-#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 msgid "natural_image_size"
 msgstr "Do not alter natural image sizes"
-
-#: components/ItaliaTheme/Blocks/NewsHome/Body
-msgid "newsHome-news"
-msgstr "News"
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
 msgid "news_item_contenuto"
@@ -1346,10 +1287,6 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
 msgid "noVideos"
-msgstr ""
-
-#: config/RichiedentiWidget
-msgid "nome"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/serviziAmministrazioneTrasparenteTemplate
@@ -1485,10 +1422,6 @@ msgstr ""
 msgid "playStoreLink"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ArgomentoTitle/View
-msgid "portata_di_click"
-msgstr "A CLICK AWAY"
-
 #: components/ItaliaTheme/manage/Widgets/IconPreviewWidget
 msgid "previewIconSelected"
 msgstr ""
@@ -1578,10 +1511,6 @@ msgstr "Responsible of"
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 msgid "responsabile_procedimento"
-msgstr ""
-
-#: config/RichiedentiWidget
-msgid "richiedoPerAltri"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
@@ -1899,10 +1828,6 @@ msgstr "Headquarters of"
 msgid "selectOtherArguments"
 msgstr ""
 
-#: config/RichiedentiWidget
-msgid "selectPlaceholder"
-msgstr ""
-
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "selectTopicFilters"
 msgstr "Select topics you want search for"
@@ -1944,7 +1869,6 @@ msgstr ""
 msgid "show_detail_link"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/BandiInEvidenceTemplateOptions
 #: config/Blocks/ListingOptions/bandiInEvidenceTemplate
 msgid "show_ente"
 msgstr ""
@@ -1953,12 +1877,10 @@ msgstr ""
 msgid "show_icon"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/MapTemplateOptions
 #: config/Blocks/ListingOptions/mapTemplate
 msgid "show_map_full_width"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/RibbonCardTemplateOptions
 #: config/Blocks/ListingOptions/ribbonCardTemplate
 msgid "show_only_first_ribbon"
 msgstr ""
@@ -1968,13 +1890,10 @@ msgstr ""
 msgid "show_section"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/BandiInEvidenceTemplateOptions
 #: config/Blocks/ListingOptions/bandiInEvidenceTemplate
 msgid "show_tipologia"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/Options/CardWithImageTemplateOptions
-#: components/ItaliaTheme/Blocks/Listing/Options/InEvidenceTemplateOptions
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 #: config/Blocks/ListingOptions/inEvidenceTemplate
 msgid "show_topics"
