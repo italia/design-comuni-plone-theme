@@ -1,3 +1,23 @@
+### [5.2.13](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.12...v5.2.13) (2021-08-05)
+
+
+### Bug Fixes
+
+* lockfile ([20dd644](https://github.com/RedTurtle/design-volto-theme/commit/20dd6440416525c257e753c44bce3c0c465c761d))
+* lockfile ([660357b](https://github.com/RedTurtle/design-volto-theme/commit/660357b3c356a299950f801e5d226b8e9dc14afb))
+
+
+### Changes
+
+* adapt form block field for additionalFields ([73348d5](https://github.com/RedTurtle/design-volto-theme/commit/73348d51cdb3fa7196dfcfc7b24f305d4a6c4c7a))
+* adapt form block field for additionalFields ([5fe8da8](https://github.com/RedTurtle/design-volto-theme/commit/5fe8da8ad6acb9210a24d0f055ec7460e502ea04))
+
+
+### Maintenance
+
+* update translations ([0f6b63d](https://github.com/RedTurtle/design-volto-theme/commit/0f6b63d5e59e3277aa6e86845bd62b2ec5c58741))
+* update volto-form-block 1.7.0 ([dc12b05](https://github.com/RedTurtle/design-volto-theme/commit/dc12b05590e3f83607ad4ce87045596234445564))
+
 ### [5.2.12](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.11...v5.2.12) (2021-08-04)
 
 
