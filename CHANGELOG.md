@@ -1,3 +1,24 @@
+### [5.2.12](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.11...v5.2.12) (2021-08-04)
+
+
+### Bug Fixes
+
+* fix FaqFolder search in multilingual sites ([c2c6414](https://github.com/RedTurtle/design-volto-theme/commit/c2c641460042a474bb2840668569a1e4b55bfdd6))
+
+### [5.2.11](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.10...v5.2.11) (2021-08-03)
+
+
+### Maintenance
+
+* updated volto ([d254bb2](https://github.com/RedTurtle/design-volto-theme/commit/d254bb258d8be195667ce1c0c1199adfef333196))
+
+### [5.2.10](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.9...v5.2.10) (2021-08-03)
+
+
+### Maintenance
+
+* updated volto ([4306f06](https://github.com/RedTurtle/design-volto-theme/commit/4306f0670a21d5a0225de063fc375f1f7b0bf93c))
+
 ### [5.2.9](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.8...v5.2.9) (2021-07-30)
 
 
