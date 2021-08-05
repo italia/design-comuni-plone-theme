@@ -6274,42 +6274,6 @@ design-react-kit@3.1.3:
     reactstrap "^8.0.0"
     webfontloader "^1.6.28"
 
-design-volto-theme@redturtle/design-volto-theme#v5.2.8:
-  version "5.2.8"
-  resolved "https://codeload.github.com/redturtle/design-volto-theme/tar.gz/6aa8494cc5733986aa1834afeda555c77f853334"
-  dependencies:
-    "@fortawesome/fontawesome-svg-core" "1.2.30"
-    "@fortawesome/free-brands-svg-icons" "5.14.0"
-    "@fortawesome/free-regular-svg-icons" "5.14.0"
-    "@fortawesome/free-solid-svg-icons" "5.14.0"
-    "@fortawesome/react-fontawesome" "0.1.11"
-    "@plone/volto" plone/volto#1e96a7fe59b427c82d57ce28692a00e68cc6f8e8
-    "@tinymce/tinymce-react" "3.8.1"
-    bootstrap-italia "1.3.9"
-    classnames "2.2.6"
-    design-react-kit "3.1.3"
-    react-dropzone "11.0.1"
-    react-google-recaptcha-v3 "1.7.0"
-    react-slick "^0.28.1"
-    sass "^1.32.8"
-    slick-carousel "1.8.1"
-    typeface-lora "0.0.72"
-    typeface-roboto-mono "0.0.75"
-    typeface-titillium-web "0.0.72"
-    volto-blocks-widget collective/volto-blocks-widget#v2.0.1
-    volto-cookie-banner collective/volto-cookie-banner#v2.0.0
-    volto-dropdownmenu collective/volto-dropdownmenu#v2.2.5
-    volto-editablefooter RedTurtle/volto-editablefooter#v3.1.3
-    volto-form-block collective/volto-form-block#v1.5.0
-    volto-google-analytics collective/volto-google-analytics#v1.1.0
-    volto-multilingual-widget collective/volto-multilingual-widget#v2.1.0
-    volto-rss-block redturtle/volto-rss-block#v2.0.0
-    volto-secondarymenu collective/volto-secondarymenu#v2.1.4
-    volto-social-settings collective/volto-social-settings#v2.1.0
-    volto-subblocks collective/volto-subblocks#v1.1.0
-    volto-subsites collective/volto-subsites#v2.0.1
-    volto-venue collective/volto-venue#v3.0.1
-
 destroy@~1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
@@ -17989,9 +17953,9 @@ volto-editablefooter@RedTurtle/volto-editablefooter#v3.1.3:
   dependencies:
     react-outside-click-handler "1.3.0"
 
-volto-form-block@collective/volto-form-block#v1.5.0:
-  version "1.5.0"
-  resolved "https://codeload.github.com/collective/volto-form-block/tar.gz/4c17ad77f4ba755a3ee9414587cd2c961cb0d401"
+volto-form-block@collective/volto-form-block#v1.7.0:
+  version "1.7.0"
+  resolved "https://codeload.github.com/collective/volto-form-block/tar.gz/6ea859278b4945e681163083adffcf373bd51d1a"
   dependencies:
     file-saver "^2.0.5"
     react-google-recaptcha-v3 "^1.8.0"
