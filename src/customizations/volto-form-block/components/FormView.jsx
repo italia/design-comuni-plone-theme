@@ -122,7 +122,7 @@ const FormView = ({
                   {data.static_fields && (
                     <fieldset disabled>
                       {data.static_fields?.map((field) => (
-                        <Row key={field.field_id}>
+                        <Row key={field.field_id} className="static-field">
                           <Col className="py-2">
                             <Field
                               {...field}

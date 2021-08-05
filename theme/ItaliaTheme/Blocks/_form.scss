@@ -125,6 +125,23 @@
       }
     }
   }
+
+  .static-field.row {
+    display: inline-block;
+    width: calc(50% - 0.5rem);
+  }
+
+  .static-field.row:nth-of-type(2n) {
+    margin-left: 1rem;
+  }
+
+  .static-field.row .form-group {
+    margin-bottom: 2rem;
+  }
+
+  fieldset[disabled] {
+    margin-bottom: 2rem;
+  }
 }
 
 .grecaptcha-badge {
