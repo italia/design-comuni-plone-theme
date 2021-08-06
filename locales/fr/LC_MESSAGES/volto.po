@@ -33,6 +33,7 @@ msgid "Accedi all'area personale"
 msgstr "Accéder à l'espace personnel"
 
 #: components/ItaliaTheme/Blocks/Accordion/Edit
+#: components/ItaliaTheme/Blocks/ContactsBlock/Edit
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
@@ -140,6 +141,7 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ContactsBlock/Edit
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
@@ -386,10 +388,12 @@ msgid "Subscribe"
 msgstr "S'abonner"
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
+#: components/ItaliaTheme/Blocks/ContactsBlock/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 msgid "Text placeholder"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ContactsBlock/Edit
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
@@ -398,6 +402,7 @@ msgid "Title"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
+#: components/ItaliaTheme/Blocks/ContactsBlock/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 msgid "Title placeholder"
 msgstr ""
@@ -430,7 +435,9 @@ msgstr ""
 msgid "Type description…"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
+#: components/ItaliaTheme/Blocks/ContactsBlock/TextEditorWidget
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 #: components/ItaliaTheme/manage/Widgets/TextEditorWidget
@@ -442,10 +449,6 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type the title…"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
-msgid "Ulteriori informazioni placeholder"
 msgstr ""
 
 #: components/ItaliaTheme/View/PageView/PageView
@@ -466,6 +469,7 @@ msgstr "Aller à la page"
 
 #: components/ItaliaTheme/Blocks/Accordion/Block/EditBlock
 #: components/ItaliaTheme/Blocks/Accordion/Block/ViewBlock
+#: components/ItaliaTheme/Blocks/ContactsBlock/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/ViewBlock
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
@@ -606,6 +610,86 @@ msgstr "Acte de nomination"
 msgid "autenticazione"
 msgstr "Authentification"
 
+#: config/Blocks/ListingOptions/sliderTemplate
+msgid "autoplay"
+msgstr ""
+
+#: config/Blocks/ListingOptions/sliderTemplate
+msgid "autoplay_speed"
+msgstr ""
+
+#: config/Blocks/ListingOptions/sliderTemplate
+msgid "autoplay_speed_description"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_Use Up and Down to choose options"
+msgstr "Utilisez Haut et Bas pour choisir les options"
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select deselected"
+msgstr "désélectionné"
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select disabled"
+msgstr "désactivé"
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select focused"
+msgstr "souligné"
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select for search term"
+msgstr "pour le terme de recherche"
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select is disabled. Select another option."
+msgstr "est désactivé. Sélectionnez une autre option."
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select option"
+msgstr "option"
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select selected"
+msgstr "sélectionnée"
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select value"
+msgstr "valeur"
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select_Use left and right to toggle between focused values, press Backspace to remove the currently focused value"
+msgstr "Utilisez la gauche et la droite pour basculer entre les valeurs focalisées, appuyez sur Retour arrière pour supprimer la valeur actuellement focalisée"
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select__press Tab to select the option and exit the menu"
+msgstr "appuyez sur Tab pour sélectionner l'option et quitter le menu"
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select__type to refine list"
+msgstr "tapez pour affiner la liste"
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select_is_focused"
+msgstr "est surligné"
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select_press Down to open the menu"
+msgstr "appuyez sur Bas pour ouvrir le menu"
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select_press Enter to select the currently focused option"
+msgstr "appuyez sur Entrée pour sélectionner l'option actuellement ciblée"
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select_press Escape to exit the menu"
+msgstr "appuyez sur Echap pour quitter le menu"
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select_press left to focus selected values"
+msgstr "appuyez sur la gauche pour mettre au point les valeurs sélectionnées"
+
 #: components/ItaliaTheme/View/Commons/SideMenu
 msgid "back"
 msgstr "retourner"
@@ -671,6 +755,7 @@ msgstr ""
 msgid "bando_vedi"
 msgstr "Voir"
 
+#: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "bg_color"
@@ -743,6 +828,7 @@ msgstr "Fermer"
 msgid "closeSearch"
 msgstr "Fermer la recherche"
 
+#: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "color_primary"
@@ -875,6 +961,7 @@ msgstr "Date effective"
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/CTABlock/Sidebar
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
 #: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
@@ -1193,12 +1280,14 @@ msgid "link"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
+#: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
 #: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 msgid "linkMore"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
+#: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
 #: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
 msgid "linkMoreTitle"
@@ -1925,12 +2014,24 @@ msgstr ""
 msgid "show_detail_link"
 msgstr ""
 
+#: config/Blocks/ListingOptions/sliderTemplate
+msgid "show_dots"
+msgstr ""
+
 #: config/Blocks/ListingOptions/bandiInEvidenceTemplate
 msgid "show_ente"
 msgstr ""
 
+#: config/Blocks/ListingOptions/sliderTemplate
+msgid "show_full_width"
+msgstr ""
+
 #: config/Blocks/ListingOptions/utils
 msgid "show_icon"
+msgstr ""
+
+#: config/Blocks/ListingOptions/sliderTemplate
+msgid "show_image_title"
 msgstr ""
 
 #: config/Blocks/ListingOptions/mapTemplate
@@ -1990,6 +2091,10 @@ msgstr "Aller au contenu"
 #: components/ItaliaTheme/SkipLinks/SkipLinks
 msgid "skiplink-navigation"
 msgstr "Aller à la navigation"
+
+#: config/Blocks/ListingOptions/sliderTemplate
+msgid "slidesToShow"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 msgid "soggetti_esterni"
