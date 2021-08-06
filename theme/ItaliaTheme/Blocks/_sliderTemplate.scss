@@ -177,6 +177,23 @@
     }
   }
 
+  &.no-margin {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .slider-container.full-width {
+    .slick-arrow.slick-prev {
+      z-index: 1;
+      left: 1rem;
+    }
+
+    .slick-arrow.slick-next {
+      z-index: 1;
+      right: 1rem;
+    }
+  }
+
   @media (max-width: #{map-get($grid-breakpoints, sm)}) {
     .slider-container {
       .it-carousel-all {

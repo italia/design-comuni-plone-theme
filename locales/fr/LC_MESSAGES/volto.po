@@ -118,6 +118,7 @@ msgstr "Contacts"
 msgid "Content"
 msgstr "Contenu"
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "Content in evidence"
 msgstr ""
@@ -218,11 +219,15 @@ msgstr ""
 msgid "Link to"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 msgid "LinkMore"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 msgid "Linkto title"
 msgstr ""
 
@@ -254,6 +259,14 @@ msgstr "Afficher tous les sujets"
 #: components/ItaliaTheme/Search/Search
 msgid "Nessun risultato ottenuto"
 msgstr "Aucun résultat obtenu"
+
+#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
+msgid "News"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
+msgid "NewsHome"
+msgstr ""
 
 #: components/ItaliaTheme/Pagination/PaginationItem
 msgid "Next page"
@@ -415,12 +428,14 @@ msgstr "Faites glisser un fichier ici pour remplacer l'existant"
 msgid "Twitter Posts"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type description…"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/Blocks/ContactsBlock/TextEditorWidget
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
@@ -429,6 +444,7 @@ msgstr ""
 msgid "Type text…"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
@@ -594,6 +610,86 @@ msgstr "Acte de nomination"
 msgid "autenticazione"
 msgstr "Authentification"
 
+#: config/Blocks/ListingOptions/sliderTemplate
+msgid "autoplay"
+msgstr ""
+
+#: config/Blocks/ListingOptions/sliderTemplate
+msgid "autoplay_speed"
+msgstr ""
+
+#: config/Blocks/ListingOptions/sliderTemplate
+msgid "autoplay_speed_description"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_Use Up and Down to choose options"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select deselected"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select disabled"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select focused"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select for search term"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select is disabled. Select another option."
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select option"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select selected"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select value"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select_Use left and right to toggle between focused values, press Backspace to remove the currently focused value"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select__press Tab to select the option and exit the menu"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select__type to refine list"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select_is_focused"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select_press Down to open the menu"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select_press Enter to select the currently focused option"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select_press Escape to exit the menu"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select_press left to focus selected values"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/SideMenu
 msgid "back"
 msgstr "retourner"
@@ -660,6 +756,7 @@ msgid "bando_vedi"
 msgstr "Voir"
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "bg_color"
 msgstr ""
@@ -732,10 +829,12 @@ msgid "closeSearch"
 msgstr "Fermer la recherche"
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "color_primary"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "color_transparent"
 msgstr ""
@@ -774,6 +873,10 @@ msgstr "Contacts externes"
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "contatti_interni"
 msgstr "Contacts internes"
+
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Body
+msgid "content-in-evidence-news"
+msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "copertura_geografica"
@@ -993,7 +1096,9 @@ msgstr ""
 msgid "email_sede"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Edit
 #: components/ItaliaTheme/Blocks/HighlightedContent/Edit
+#: components/ItaliaTheme/Blocks/NewsHome/Edit
 msgid "emptySelection"
 msgstr ""
 
@@ -1061,6 +1166,7 @@ msgstr "Explorer"
 msgid "exploreArgument"
 msgstr "Explorer le sujet"
 
+#: components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderTree
 #: components/ItaliaTheme/View/FAQ/FaqFolder/SearchBar
 msgid "faq_search"
 msgstr "Tapez un mot-clé pour trouver des réponses"
@@ -1279,9 +1385,15 @@ msgstr "Dossier principal"
 msgid "modulo_formati_alternativi"
 msgstr "Formats alternatifs"
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 msgid "natural_image_size"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/NewsHome/Body
+msgid "newsHome-news"
 msgstr ""
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
@@ -1437,6 +1549,10 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
 msgid "playStoreLink"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/ArgomentoTitle/View
+msgid "portata_di_click"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/IconPreviewWidget
@@ -1853,6 +1969,18 @@ msgstr "Sélectionnez les sujets que vous souhaitez rechercher"
 msgid "select_argument_sidebar"
 msgstr ""
 
+#: components/SelectInput/SelectInput
+msgid "select_noOptionsMessage"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "select_risultati"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "select_risultato"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "service_not_active"
 msgstr "Le service n'est pas actif"
@@ -1886,12 +2014,24 @@ msgstr ""
 msgid "show_detail_link"
 msgstr ""
 
+#: config/Blocks/ListingOptions/sliderTemplate
+msgid "show_dots"
+msgstr ""
+
 #: config/Blocks/ListingOptions/bandiInEvidenceTemplate
 msgid "show_ente"
 msgstr ""
 
+#: config/Blocks/ListingOptions/sliderTemplate
+msgid "show_full_width"
+msgstr ""
+
 #: config/Blocks/ListingOptions/utils
 msgid "show_icon"
+msgstr ""
+
+#: config/Blocks/ListingOptions/sliderTemplate
+msgid "show_image_title"
 msgstr ""
 
 #: config/Blocks/ListingOptions/mapTemplate
@@ -1902,6 +2042,7 @@ msgstr ""
 msgid "show_only_first_ribbon"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: config/Blocks/ListingOptions/utils
 msgid "show_section"
@@ -1916,6 +2057,7 @@ msgstr ""
 msgid "show_topics"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: config/Blocks/ListingOptions/utils
 msgid "show_type"
