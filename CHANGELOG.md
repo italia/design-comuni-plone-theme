@@ -1,3 +1,15 @@
+### [5.2.14](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.13...v5.2.14) (2021-08-06)
+
+
+### Bug Fixes
+
+* fix styles for full-width slider template ([88a42e0](https://github.com/RedTurtle/design-volto-theme/commit/88a42e01497038c5a8d40304430413261424f387))
+
+
+### Maintenance
+
+* added listing SliderTemplate features ([c4c7d17](https://github.com/RedTurtle/design-volto-theme/commit/c4c7d1719aef5dd8fc211046b5a330444cbe02e4))
+
 ### [5.2.13](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.12...v5.2.13) (2021-08-05)
 
 
