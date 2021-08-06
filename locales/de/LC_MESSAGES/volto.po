@@ -948,6 +948,118 @@ msgstr ""
 msgid "date"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_calendarLabel"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_choose"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_clearDate"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_clearDates"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_closeDatePicker"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_enterKey"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_escape"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_focusStartDate"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_hideKeyboardShortcutsPanel"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_homeEnd"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_jumpToNextMonth"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_jumpToPrevMonth"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_keyboardBackwardNavigationInstructions"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_keyboardForwardNavigationInstructions"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_keyboardShortcuts"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_leftArrowRightArrow"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_moveFocusByOneDay"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_moveFocusByOneMonth"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_moveFocusByOneWeek"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_moveFocustoStartAndEndOfWeek"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_openThisPanel"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_pageUpPageDown"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_questionMark"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_returnFocusToInput"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_roleDescription"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_selectFocusedDate"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_showKeyboardShortcutsPanel"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_upArrowDownArrow"
+msgstr ""
+
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "date_e_orari"
 msgstr ""

@@ -933,6 +933,118 @@ msgstr "Dataset"
 msgid "date"
 msgstr "Date"
 
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_calendarLabel"
+msgstr "Calendar"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_choose"
+msgstr "Choose"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_clearDate"
+msgstr "Clear date"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_clearDates"
+msgstr "Clear dates"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_closeDatePicker"
+msgstr "Close datepicker"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_enterKey"
+msgstr "Enter key"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_escape"
+msgstr "Escape key"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_focusStartDate"
+msgstr "Interact with the calendar and add the check-in date for your trip."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_hideKeyboardShortcutsPanel"
+msgstr "Close the shortcuts panel"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_homeEnd"
+msgstr "Home and end keys"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_jumpToNextMonth"
+msgstr "Move forward to switch to the next month."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_jumpToPrevMonth"
+msgstr "Move backward to switch to the previous month."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_keyboardBackwardNavigationInstructions"
+msgstr "Navigate backward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_keyboardForwardNavigationInstructions"
+msgstr "Navigate forward to interact with the calendar and select a date. Press the question mark key to get the keyboard shortcuts for changing dates."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_keyboardShortcuts"
+msgstr "Keyboard Shortcuts"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_leftArrowRightArrow"
+msgstr "Right and left arrow keys"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_moveFocusByOneDay"
+msgstr "Move backward (left) and forward (right) by one day."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_moveFocusByOneMonth"
+msgstr "Switch months."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_moveFocusByOneWeek"
+msgstr "Move backward (up) and forward (down) by one week."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_moveFocustoStartAndEndOfWeek"
+msgstr "Go to the first or last day of a week."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_openThisPanel"
+msgstr "Open this panel."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_pageUpPageDown"
+msgstr "page up and page down keys"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_questionMark"
+msgstr "Question mark"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_returnFocusToInput"
+msgstr "Return to the date input field."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_roleDescription"
+msgstr "datepicker"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_selectFocusedDate"
+msgstr "Select the date in focus."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_showKeyboardShortcutsPanel"
+msgstr "Open the keyboard shortcuts panel."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_upArrowDownArrow"
+msgstr "up and down arrow keys"
+
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "date_e_orari"
 msgstr "Dates and times"
