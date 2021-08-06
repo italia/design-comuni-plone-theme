@@ -3,6 +3,7 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 import { useIntl, defineMessages } from 'react-intl';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import Slider from 'react-slick';
@@ -35,19 +36,24 @@ const SliderTemplate = ({
   linkTitle,
   linkHref,
   slidesToShow = '1',
+  full_width = false,
+  show_image_title = true,
+  show_dots = true,
+  autoplay = false,
+  autoplay_speed = 2, //seconds
 }) => {
   const intl = useIntl();
   const slider = useRef(null);
-  const [autoplay, setAutoplay] = useState(false);
+  const [userAutoplay, setUserAutoplay] = useState(autoplay);
   const nSlidesToShow = parseInt(slidesToShow);
 
   const toggleAutoplay = () => {
     if (!slider?.current) return;
-    if (autoplay) {
-      setAutoplay(false);
+    if (userAutoplay) {
+      setUserAutoplay(false);
       slider.current.slickPause();
     } else {
-      setAutoplay(true);
+      setUserAutoplay(true);
       slider.current.slickPlay();
     }
   };
@@ -71,12 +77,13 @@ const SliderTemplate = ({
   };
 
   const settings = {
-    dots: true,
+    dots: show_dots,
     infinite: true,
+    autoplay: autoplay,
     speed: 500,
     slidesToShow: nSlidesToShow,
     slidesToScroll: nSlidesToShow,
-    autoplaySpeed: 2000,
+    autoplaySpeed: autoplay_speed * 1000,
     pauseOnHover: true,
     pauseOnFocus: true,
     pauseOnDotsHover: true,
@@ -109,20 +116,25 @@ const SliderTemplate = ({
             </Col>
           </Row>
         )}
-        <div className="slider-container px-4 px-md-0">
+        <div
+          className={cx('slider-container', {
+            'px-4 px-md-0': !full_width,
+            'full-width': full_width,
+          })}
+        >
           <div className="it-carousel-all it-card-bg">
             {items?.length > nSlidesToShow && (
               <div className="play-pause-wrapper">
                 <button
                   onClick={() => toggleAutoplay()}
                   title={
-                    autoplay
+                    userAutoplay
                       ? intl.formatMessage(messages.pause)
                       : intl.formatMessage(messages.play)
                   }
                 >
-                  <Icon icon={autoplay ? 'pause' : 'play'} />
-                  <span>{autoplay ? 'pause' : 'play'}</span>
+                  <Icon icon={userAutoplay ? 'pause' : 'play'} />
+                  <span>{userAutoplay ? 'pause' : 'play'}</span>
                 </button>
               </div>
             )}
@@ -153,14 +165,16 @@ const SliderTemplate = ({
                         <figcaption>{getCaption(item)}</figcaption>
                       )} */}
                       </figure>
-                      <UniversalLink
-                        item={item}
-                        title={intl.formatMessage(messages.viewImage)}
-                      >
-                        <div className="slide-title">
-                          {item.title} <Icon icon="arrow-right" />
-                        </div>
-                      </UniversalLink>
+                      {show_image_title && (
+                        <UniversalLink
+                          item={item}
+                          title={intl.formatMessage(messages.viewImage)}
+                        >
+                          <div className="slide-title">
+                            {item.title} <Icon icon="arrow-right" />
+                          </div>
+                        </UniversalLink>
+                      )}
                     </div>
                   </div>
                 );
