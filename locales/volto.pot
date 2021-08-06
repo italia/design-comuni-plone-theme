@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-08-06T07:20:23.535Z\n"
+"POT-Creation-Date: 2021-08-06T09:12:27.930Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -737,6 +737,91 @@ msgstr ""
 #: config/Blocks/ListingOptions/sliderTemplate
 # defaultMessage: La velocità di autoplay deve essere espressa in secondi.
 msgid "autoplay_speed_description"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+# defaultMessage: Usa le frecce Su e Giu per scegliere un'opzione
+msgid "ay11_Use Up and Down to choose options"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+# defaultMessage: deselezionata
+msgid "ay11_select deselected"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+# defaultMessage: disabilitato
+msgid "ay11_select disabled"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+# defaultMessage: evidenziato
+msgid "ay11_select focused"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+# defaultMessage: per la ricerca
+msgid "ay11_select for search term"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+# defaultMessage: è disabilitata. Seleziona un'altra opzione
+msgid "ay11_select is disabled. Select another option."
+msgstr ""
+
+#: components/SelectInput/SelectInput
+# defaultMessage: opzione
+msgid "ay11_select option"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+# defaultMessage: selezionata
+msgid "ay11_select selected"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+# defaultMessage: valore
+msgid "ay11_select value"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+# defaultMessage: Usa le frecce destra e sinistra per attivare o disattivare i valori evidenziati, premi Backspace per rimuovere il valore corrente evidenziato
+msgid "ay11_select_Use left and right to toggle between focused values, press Backspace to remove the currently focused value"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+# defaultMessage: premi Tab per selezionare l'opzione e uscire dal menu
+msgid "ay11_select__press Tab to select the option and exit the menu"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+# defaultMessage: digita per filtrare la lista
+msgid "ay11_select__type to refine list"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+# defaultMessage: è selezionato
+msgid "ay11_select_is_focused"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+# defaultMessage: premi freccia giu per aprire il menu, premi Backspace per rimuovere il valore selezionato
+msgid "ay11_select_press Down to open the menu"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+# defaultMessage: premi Invio per selezionare l'opzione corrente
+msgid "ay11_select_press Enter to select the currently focused option"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+# defaultMessage: premi Esc per uscire dal menu
+msgid "ay11_select_press Escape to exit the menu"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+# defaultMessage: premi la freccia a sinistra per evidenziare i valori selezionati
+msgid "ay11_select_press left to focus selected values"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/SideMenu

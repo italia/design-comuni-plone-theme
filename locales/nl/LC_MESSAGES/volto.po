@@ -624,6 +624,74 @@ msgstr ""
 msgid "autoplay_speed_description"
 msgstr ""
 
+#: components/SelectInput/SelectInput
+msgid "ay11_Use Up and Down to choose options"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select deselected"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select disabled"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select focused"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select for search term"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select is disabled. Select another option."
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select option"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select selected"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select value"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select_Use left and right to toggle between focused values, press Backspace to remove the currently focused value"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select__press Tab to select the option and exit the menu"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select__type to refine list"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select_is_focused"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select_press Down to open the menu"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select_press Enter to select the currently focused option"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select_press Escape to exit the menu"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+msgid "ay11_select_press left to focus selected values"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/SideMenu
 msgid "back"
 msgstr ""

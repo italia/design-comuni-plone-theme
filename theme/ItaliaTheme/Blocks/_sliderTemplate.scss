@@ -177,6 +177,11 @@
     }
   }
 
+  &.no-margin {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   .slider-container.full-width {
     .slick-arrow.slick-prev {
       z-index: 1;

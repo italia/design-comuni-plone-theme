@@ -107,7 +107,11 @@ const SliderTemplate = ({
   //const getCaption = (item) => item.description ?? item.rights ?? null;
 
   return (
-    <div className={`sliderTemplate slidesToShow-${nSlidesToShow || 1}`}>
+    <div
+      className={cx(`sliderTemplate slidesToShow-${nSlidesToShow || 1}`, {
+        'no-margin': full_width,
+      })}
+    >
       <Container className="px-4">
         {title && (
           <Row>
