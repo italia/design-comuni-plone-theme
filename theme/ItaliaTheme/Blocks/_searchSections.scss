@@ -1,7 +1,7 @@
 .container .block {
   height: auto;
 
-  .searchSections {
+  .searchSections:not(.button) {
     width: 100%;
     height: auto;
     min-height: 280px;
