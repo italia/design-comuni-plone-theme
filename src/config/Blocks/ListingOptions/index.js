@@ -13,3 +13,4 @@ export { addRibbonCardTemplateOptions } from '@italia/config/Blocks/ListingOptio
 export { addMapTemplateOptions } from '@italia/config/Blocks/ListingOptions/mapTemplate';
 export { addCompleteBlockLinksTemplateOptions } from '@italia/config/Blocks/ListingOptions/completeBlockLinksTemplate';
 export { addBandiInEvidenceTemplateOptions } from '@italia/config/Blocks/ListingOptions/bandiInEvidenceTemplate';
+export { addSliderTemplateOptions } from '@italia/config/Blocks/ListingOptions/sliderTemplate';

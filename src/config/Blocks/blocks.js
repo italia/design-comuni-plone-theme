@@ -47,6 +47,10 @@ import iconBlocksSVG from '@plone/volto/icons/apps.svg';
 import IconBlocksView from '@italia/components/ItaliaTheme/Blocks/IconBlocks/View';
 import IconBlocksEdit from '@italia/components/ItaliaTheme/Blocks/IconBlocks/Edit';
 
+import emailSVG from '@plone/volto/icons/email.svg';
+import ContactsBlockView from '@italia/components/ItaliaTheme/Blocks/ContactsBlock/View';
+import ContactsBlockEdit from '@italia/components/ItaliaTheme/Blocks/ContactsBlock/Edit';
+
 import numbersBlockSVG from '@plone/volto/icons/apps.svg';
 import NumbersBlockView from '@italia/components/ItaliaTheme/Blocks/NumbersBlock/View';
 import NumbersBlockEdit from '@italia/components/ItaliaTheme/Blocks/NumbersBlock/Edit';
@@ -257,6 +261,22 @@ const italiaBlocks = {
     },
     sidebarTab: 1,
   },
+  contacts: {
+    id: 'contacts',
+    title: 'Contatti',
+    icon: emailSVG,
+    group: 'text',
+    view: ContactsBlockView,
+    edit: ContactsBlockEdit,
+    restricted: false,
+    mostUsed: false,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
+
   video_gallery: {
     id: 'video_gallery',
     title: 'Video Gallery',

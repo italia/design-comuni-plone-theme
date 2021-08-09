@@ -1,3 +1,147 @@
+### [5.2.14](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.13...v5.2.14) (2021-08-06)
+
+
+### Bug Fixes
+
+* fix styles for full-width slider template ([88a42e0](https://github.com/RedTurtle/design-volto-theme/commit/88a42e01497038c5a8d40304430413261424f387))
+
+
+### Maintenance
+
+* added listing SliderTemplate features ([c4c7d17](https://github.com/RedTurtle/design-volto-theme/commit/c4c7d1719aef5dd8fc211046b5a330444cbe02e4))
+
+### [5.2.13](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.12...v5.2.13) (2021-08-05)
+
+
+### Bug Fixes
+
+* lockfile ([20dd644](https://github.com/RedTurtle/design-volto-theme/commit/20dd6440416525c257e753c44bce3c0c465c761d))
+* lockfile ([660357b](https://github.com/RedTurtle/design-volto-theme/commit/660357b3c356a299950f801e5d226b8e9dc14afb))
+
+
+### Changes
+
+* adapt form block field for additionalFields ([73348d5](https://github.com/RedTurtle/design-volto-theme/commit/73348d51cdb3fa7196dfcfc7b24f305d4a6c4c7a))
+* adapt form block field for additionalFields ([5fe8da8](https://github.com/RedTurtle/design-volto-theme/commit/5fe8da8ad6acb9210a24d0f055ec7460e502ea04))
+
+
+### Maintenance
+
+* update translations ([0f6b63d](https://github.com/RedTurtle/design-volto-theme/commit/0f6b63d5e59e3277aa6e86845bd62b2ec5c58741))
+* update volto-form-block 1.7.0 ([dc12b05](https://github.com/RedTurtle/design-volto-theme/commit/dc12b05590e3f83607ad4ce87045596234445564))
+
+### [5.2.12](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.11...v5.2.12) (2021-08-04)
+
+
+### Bug Fixes
+
+* fix FaqFolder search in multilingual sites ([c2c6414](https://github.com/RedTurtle/design-volto-theme/commit/c2c641460042a474bb2840668569a1e4b55bfdd6))
+
+### [5.2.11](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.10...v5.2.11) (2021-08-03)
+
+
+### Maintenance
+
+* updated volto ([d254bb2](https://github.com/RedTurtle/design-volto-theme/commit/d254bb258d8be195667ce1c0c1199adfef333196))
+
+### [5.2.10](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.9...v5.2.10) (2021-08-03)
+
+
+### Maintenance
+
+* updated volto ([4306f06](https://github.com/RedTurtle/design-volto-theme/commit/4306f0670a21d5a0225de063fc375f1f7b0bf93c))
+
+### [5.2.9](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.8...v5.2.9) (2021-07-30)
+
+
+### Bug Fixes
+
+* fixed some styles ([6dbbae5](https://github.com/RedTurtle/design-volto-theme/commit/6dbbae549ea8f2044d892407fcc0993606d67ba9))
+
+
+### Maintenance
+
+* updated volto ([abc0303](https://github.com/RedTurtle/design-volto-theme/commit/abc0303b3e2656efb2a70ae27564ec29188c92e3))
+* **upd8:** update dvt v5.2.8 ([8adf552](https://github.com/RedTurtle/design-volto-theme/commit/8adf55254bbc991f6cc3b0da05151cfe5880ae3b))
+
+### [5.2.8](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.7...v5.2.8) (2021-07-29)
+
+
+### Bug Fixes
+
+* fix contact block styles ([96d861a](https://github.com/RedTurtle/design-volto-theme/commit/96d861ac2b1ae4d699ade2d1f3c6e9928f2c3644))
+
+### [5.2.7](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.6...v5.2.7) (2021-07-29)
+
+
+### Bug Fixes
+
+* fixed styles for contacts block ([13bcd59](https://github.com/RedTurtle/design-volto-theme/commit/13bcd598999e7c7fbb44de791a5a665f6e7814ff))
+
+### [5.2.6](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.5...v5.2.6) (2021-07-29)
+
+
+### Maintenance
+
+* fixed argument icon styles ([ebab34e](https://github.com/RedTurtle/design-volto-theme/commit/ebab34ea029887c654ffdd69567291452a1f3051))
+
+### [5.2.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.4...v5.2.5) (2021-07-29)
+
+
+### Maintenance
+
+* added placeholder After Related Items in content types view ([a1d800b](https://github.com/RedTurtle/design-volto-theme/commit/a1d800b57fd89ddd41424181dc0c858b9f2e8524))
+
+### [5.2.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.3...v5.2.4) (2021-07-28)
+
+
+### Maintenance
+
+* added slidesToShow prop to sliderTemplate Listing ([5411e93](https://github.com/RedTurtle/design-volto-theme/commit/5411e932f043857a7502d1aaf8dabac785787f06))
+
+### [5.2.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.2...v5.2.3) (2021-07-27)
+
+
+### Maintenance
+
+* updated locales ([28c667e](https://github.com/RedTurtle/design-volto-theme/commit/28c667e41376d01a2e9de83188851b30e8da3370))
+* updated volto to fix BlockChooser ([0133ea1](https://github.com/RedTurtle/design-volto-theme/commit/0133ea1ff4ad51c48b383d79104fe7d0946a30d5))
+
+### [5.2.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.1...v5.2.2) (2021-07-27)
+
+
+### Maintenance
+
+* added cartellaModulistica placeholder aftercontent ([02f739b](https://github.com/RedTurtle/design-volto-theme/commit/02f739bae0317737d94380e3cf9a84fd035d8bc6))
+
+### [5.2.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.0...v5.2.1) (2021-07-27)
+
+
+### Bug Fixes
+
+* fixed styles for Contacts block on mobile ([1ae385d](https://github.com/RedTurtle/design-volto-theme/commit/1ae385d7a9a09a40a1733000202f8e0cfb25b50a))
+
+## [5.2.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.1.2...v5.2.0) (2021-07-27)
+
+
+### Features
+
+* added Contacts block ([cdc0c3c](https://github.com/RedTurtle/design-volto-theme/commit/cdc0c3c3856a3494b29c0e73a4d0c46cc370dd73))
+
+### [5.1.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.1.1...v5.1.2) (2021-07-26)
+
+
+### Maintenance
+
+* new customizable components 'BrandText' and 'BrandTextFooter' ([e7991a7](https://github.com/RedTurtle/design-volto-theme/commit/e7991a7e70eef9b4f59ad94dc001da479faff661))
+
+### [5.1.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.1.0...v5.1.1) (2021-07-26)
+
+
+### Bug Fixes
+
+* fixed pagination in ContentPaginationChange listing block ([24e4c44](https://github.com/RedTurtle/design-volto-theme/commit/24e4c44647e41fe6ce506113b627519da4abb5c1))
+
 ## [5.1.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.0.1...v5.1.0) (2021-07-23)
 
 

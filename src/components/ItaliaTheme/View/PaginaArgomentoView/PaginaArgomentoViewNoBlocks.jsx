@@ -16,6 +16,7 @@ import {
   Metadata,
   NewsCard,
   PaginaArgomentoPlaceholderAfterContent,
+  PaginaArgomentoPlaceholderAfterRelatedItems,
   SkipToMainContent,
   RelatedItems,
   RelatedItemInEvidence,
@@ -234,6 +235,7 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
       </div>
       <RelatedItems content={content} />
       <RelatedItemInEvidence content={content} />
+      <PaginaArgomentoPlaceholderAfterRelatedItems content={content} />
     </>
   );
 };

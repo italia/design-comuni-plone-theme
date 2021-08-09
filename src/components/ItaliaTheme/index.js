@@ -44,6 +44,8 @@ export SearchCTs from '@italia/components/ItaliaTheme/Search/SearchCTs';
 export MegaMenu from '@italia/components/ItaliaTheme/MegaMenu/MegaMenu';
 export MenuSecondary from '@italia/components/ItaliaTheme/MenuSecondary/MenuSecondary';
 export Logo from '@italia/components/ItaliaTheme/Logo/Logo';
+export BrandText from '@italia/components/ItaliaTheme/BrandText/BrandText';
+export BrandTextFooter from '@italia/components/ItaliaTheme/BrandTextFooter/BrandTextFooter';
 export LogoFooter from '@italia/components/ItaliaTheme/LogoFooter/LogoFooter';
 export FooterMain from '@italia/components/ItaliaTheme/Footer/FooterMain';
 export FooterInfos from '@italia/components/ItaliaTheme/Footer/FooterInfos';

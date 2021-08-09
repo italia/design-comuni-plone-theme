@@ -11,6 +11,8 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import {
   PageHeader,
   RelatedItems,
+  CartellaModulisticaAfterContent,
+  CartellaModulisticaAfterRelatedItems,
   PagePlaceholderAfterContent,
   TextOrBlocks,
   RelatedItemInEvidence,
@@ -106,11 +108,14 @@ const CartellaModulisticaView = ({ content }) => {
 
         <PageMetadata content={content} />
       </div>
+
+      <CartellaModulisticaAfterContent content={content} />
       <PagePlaceholderAfterContent content={content} />
 
       <RelatedItems content={content} list={content?.servizi_collegati ?? []} />
-
       <RelatedItemInEvidence content={content} />
+
+      <CartellaModulisticaAfterRelatedItems content={content} />
     </>
   );
 };

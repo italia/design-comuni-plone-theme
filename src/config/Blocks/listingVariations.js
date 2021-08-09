@@ -48,6 +48,7 @@ import {
   addCompleteBlockLinksTemplateOptions,
   addBandiInEvidenceTemplateOptions,
   addDefaultOptions,
+  addSliderTemplateOptions,
 } from '@italia/config/Blocks/ListingOptions';
 
 const italiaListingVariations = [
@@ -172,7 +173,8 @@ const italiaListingVariations = [
     template: SliderTemplate,
     skeleton: SliderTemplateSkeleton,
     schemaEnhancer: ({ schema, formData, intl }) => {
-      /*let pos = */ addDefaultOptions(schema, formData, intl);
+      let pos = addDefaultOptions(schema, formData, intl);
+      addSliderTemplateOptions(schema, formData, intl, pos);
       return schema;
     },
   },

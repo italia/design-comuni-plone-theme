@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { useIntl } from 'react-intl';
+
 import {
   Header,
   HeaderContent,
@@ -24,15 +24,15 @@ import {
   Logo,
   Icon,
   SocialHeader,
+  BrandText,
 } from '@italia/components/ItaliaTheme';
-import { getSiteProperty } from '@italia/helpers';
+
 import {
   getDropdownMenuNavitems,
   getItemsByPath,
 } from '@italia/addons/volto-dropdownmenu';
 
 const Navigation = ({ pathname }) => {
-  const intl = useIntl();
   const [collapseOpen, setCollapseOpen] = useState(false);
   const dispatch = useDispatch();
   const subsite = useSelector((state) => state.subsite?.data);
@@ -103,16 +103,7 @@ const Navigation = ({ pathname }) => {
                   to={subsite?.['@id'] ? flattenToAppURL(subsite['@id']) : '/'}
                 >
                   <Logo />
-                  <div className="it-brand-text">
-                    <h2 className="no_toc">
-                      {subsite?.title ||
-                        getSiteProperty('siteTitle', intl.locale)}
-                    </h2>
-                    <h3 className="no_toc">
-                      {subsite?.description ||
-                        getSiteProperty('siteSubtitle', intl.locale)}
-                    </h3>
-                  </div>
+                  <BrandText mobile={true} subsite={subsite} />
                 </Link>
               </div>
               <Nav navbar>

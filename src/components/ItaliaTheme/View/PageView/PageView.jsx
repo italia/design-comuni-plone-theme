@@ -9,6 +9,7 @@ import {
   PageHeaderNav,
   RelatedItems,
   PagePlaceholderAfterContent,
+  PagePlaceholderAfterRelatedItems,
   PagePlaceholderTitle,
   TextOrBlocks,
   RichText,
@@ -128,6 +129,7 @@ const PageView = ({ content, token, location, history }) => {
         <PagePlaceholderAfterContent content={content} />
         <RelatedItems content={content} />
         <RelatedItemInEvidence content={content} />
+        <PagePlaceholderAfterRelatedItems content={content} />
       </>
     );
   } else {

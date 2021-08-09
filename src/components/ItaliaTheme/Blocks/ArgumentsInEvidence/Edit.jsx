@@ -16,7 +16,7 @@ class Edit extends SubblocksEdit {
   render() {
     return (
       <div className="argumentInEvidence public-ui">
-        <ArgumentsInEvidenceBackground />
+        <ArgumentsInEvidenceBackground inEditMode={true} />
         <SubblocksWrapper node={this.node}>
           <BodyWrapper data={this.props.data} inEditMode={false}>
             {this.state.subblocks.map((subblock, subindex) => (

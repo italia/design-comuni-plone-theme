@@ -1,0 +1,187 @@
+.block.contacts {
+  .full-width {
+    height: auto;
+  }
+
+  .ui.basic.button.delete-button {
+    padding: 0.5rem;
+    text-align: center;
+
+    svg:not(:hover) {
+      fill: #fff !important;
+    }
+
+    &:hover {
+      border-radius: 100%;
+    }
+  }
+
+  .bg-primary {
+    .block-header {
+      .title,
+      .description,
+      .description h1,
+      .description h2,
+      .description h3,
+      .description h4,
+      .description h5,
+      .description h6 {
+        color: $primary-text;
+      }
+    }
+  }
+
+  .bg-secondary {
+    .block-header {
+      .title,
+      .description,
+      .description h1,
+      .description h2,
+      .description h3,
+      .description h4,
+      .description h5,
+      .description h6 {
+        color: $secondary-text;
+      }
+    }
+  }
+
+  .block-header {
+    .title {
+      margin: 1rem 0 2rem 0;
+      font-size: 2.2rem;
+      font-weight: bold;
+      line-height: 3rem;
+      text-align: center;
+
+      .DraftEditor-root {
+        .public-DraftEditor-content {
+          text-align: center;
+        }
+
+        .public-DraftEditorPlaceholder-root {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+
+    .description {
+      margin-bottom: 2rem;
+
+      line-height: 1.65em;
+      text-align: center;
+
+      .DraftEditor-root {
+        .public-DraftEditor-content {
+          text-align: center;
+        }
+
+        .public-DraftEditorPlaceholder-root {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .col-md-4 {
+    margin-bottom: 1rem;
+  }
+
+  .single-block.subblock-edit {
+    height: 100%;
+
+    .card-wrapper {
+      height: 100%;
+    }
+
+    .ui.basic.button.delete-button {
+      padding: 0.36rem;
+    }
+  }
+
+  .button.add-element {
+    margin-top: 1em;
+  }
+
+  .card {
+    &:after {
+      content: none;
+    }
+
+    .contact-title {
+      font-size: 1.35rem;
+      font-weight: bold;
+      line-height: 1.4em;
+    }
+
+    .contact-text {
+      font-size: 0.9rem;
+    }
+
+    .contact-info {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-of-type) {
+        margin-bottom: 1rem;
+      }
+
+      .icon-wrapper {
+        margin-right: 1rem;
+      }
+
+      .tel {
+        font-size: 1.8rem;
+      }
+
+      .email {
+        font-size: 1.26rem;
+      }
+
+      .tel,
+      .email {
+        flex: 1 1 auto;
+
+        .DraftEditor-editorContainer {
+          line-height: 1.48em;
+        }
+
+        p {
+          line-height: 1.48em;
+
+          &:last-child {
+            margin: 0;
+          }
+        }
+      }
+
+      .public-DraftStyleDefault-block {
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: #{map-get($grid-breakpoints, lg)}) {
+    .card {
+      .contact-info {
+        .icon {
+          width: 20px;
+          height: 20px;
+        }
+
+        .tel {
+          font-size: 1.5rem;
+          word-break: break-word;
+        }
+
+        .email {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}

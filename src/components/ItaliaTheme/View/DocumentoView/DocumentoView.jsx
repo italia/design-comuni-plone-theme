@@ -21,6 +21,7 @@ import {
   GenericCard,
   RelatedItems,
   DocumentoPlaceholderAfterContent,
+  DocumentoPlaceholderAfterRelatedItems,
   RichText,
   RelatedItemInEvidence,
   richTextHasContent,
@@ -258,6 +259,7 @@ const DocumentoView = ({ content, location }) => {
       <DocumentoPlaceholderAfterContent content={content} />
       <RelatedItems content={content} />
       <RelatedItemInEvidence content={content} />
+      <DocumentoPlaceholderAfterRelatedItems content={content} />
     </>
   );
 };
