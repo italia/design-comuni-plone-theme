@@ -118,7 +118,6 @@ msgstr "Contacts"
 msgid "Content"
 msgstr "Contenu"
 
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "Content in evidence"
 msgstr ""
@@ -219,15 +218,11 @@ msgstr ""
 msgid "Link to"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
-#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 msgid "LinkMore"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
-#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 msgid "Linkto title"
 msgstr ""
 
@@ -259,14 +254,6 @@ msgstr "Afficher tous les sujets"
 #: components/ItaliaTheme/Search/Search
 msgid "Nessun risultato ottenuto"
 msgstr "Aucun résultat obtenu"
-
-#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
-msgid "News"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
-msgid "NewsHome"
-msgstr ""
 
 #: components/ItaliaTheme/Pagination/PaginationItem
 msgid "Next page"
@@ -428,14 +415,12 @@ msgstr "Faites glisser un fichier ici pour remplacer l'existant"
 msgid "Twitter Posts"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type description…"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/Blocks/ContactsBlock/TextEditorWidget
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
@@ -444,7 +429,6 @@ msgstr ""
 msgid "Type text…"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
@@ -624,71 +608,71 @@ msgstr ""
 
 #: components/SelectInput/SelectInput
 msgid "ay11_Use Up and Down to choose options"
-msgstr ""
+msgstr "Utilisez Haut et Bas pour choisir les options"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select deselected"
-msgstr ""
+msgstr "désélectionné"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select disabled"
-msgstr ""
+msgstr "désactivé"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select focused"
-msgstr ""
+msgstr "souligné"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select for search term"
-msgstr ""
+msgstr "pour le terme de recherche"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select is disabled. Select another option."
-msgstr ""
+msgstr "est désactivé. Sélectionnez une autre option."
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select option"
-msgstr ""
+msgstr "option"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select selected"
-msgstr ""
+msgstr "sélectionnée"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select value"
-msgstr ""
+msgstr "valeur"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select_Use left and right to toggle between focused values, press Backspace to remove the currently focused value"
-msgstr ""
+msgstr "Utilisez la gauche et la droite pour basculer entre les valeurs focalisées, appuyez sur Retour arrière pour supprimer la valeur actuellement focalisée"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select__press Tab to select the option and exit the menu"
-msgstr ""
+msgstr "appuyez sur Tab pour sélectionner l'option et quitter le menu"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select__type to refine list"
-msgstr ""
+msgstr "tapez pour affiner la liste"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select_is_focused"
-msgstr ""
+msgstr "est surligné"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select_press Down to open the menu"
-msgstr ""
+msgstr "appuyez sur Bas pour ouvrir le menu"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select_press Enter to select the currently focused option"
-msgstr ""
+msgstr "appuyez sur Entrée pour sélectionner l'option actuellement ciblée"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select_press Escape to exit the menu"
-msgstr ""
+msgstr "appuyez sur Echap pour quitter le menu"
 
 #: components/SelectInput/SelectInput
 msgid "ay11_select_press left to focus selected values"
-msgstr ""
+msgstr "appuyez sur la gauche pour mettre au point les valeurs sélectionnées"
 
 #: components/ItaliaTheme/View/Commons/SideMenu
 msgid "back"
@@ -756,7 +740,6 @@ msgid "bando_vedi"
 msgstr "Voir"
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "bg_color"
 msgstr ""
@@ -829,12 +812,10 @@ msgid "closeSearch"
 msgstr "Fermer la recherche"
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "color_primary"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "color_transparent"
 msgstr ""
@@ -873,10 +854,6 @@ msgstr "Contacts externes"
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "contatti_interni"
 msgstr "Contacts internes"
-
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Body
-msgid "content-in-evidence-news"
-msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "copertura_geografica"
@@ -949,6 +926,118 @@ msgstr "Dataset"
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDates
 msgid "date"
 msgstr "Date"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_calendarLabel"
+msgstr "Calendrier"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_choose"
+msgstr "Choisir"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_clearDate"
+msgstr "Effacer la date"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_clearDates"
+msgstr "Effacer les dates"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_closeDatePicker"
+msgstr "Fermer le sélecteur de date"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_enterKey"
+msgstr "Enter key"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_escape"
+msgstr "Touche d'échappement"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_focusStartDate"
+msgstr "Interagissez avec le calendrier et ajoutez la date d'arrivée pour votre voyage."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_hideKeyboardShortcutsPanel"
+msgstr "Fermer le panneau des raccourcis"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_homeEnd"
+msgstr "Touches d'accueil et de fin"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_jumpToNextMonth"
+msgstr "Avancez pour passer au mois suivant."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_jumpToPrevMonth"
+msgstr "Revenir en arrière pour passer au mois précédent."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_keyboardBackwardNavigationInstructions"
+msgstr "Naviguez en arrière pour interagir avec le calendrier et sélectionnez une date. Appuyez sur la touche point d'interrogation pour obtenir les raccourcis clavier permettant de modifier les dates."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_keyboardForwardNavigationInstructions"
+msgstr "Naviguez vers l'avant pour interagir avec le calendrier et sélectionnez une date. Appuyez sur la touche point d'interrogation pour obtenir les raccourcis clavier permettant de modifier les dates."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_keyboardShortcuts"
+msgstr "Raccourcis clavier"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_leftArrowRightArrow"
+msgstr "Touches fléchées droite et gauche"
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_moveFocusByOneDay"
+msgstr "Reculez (gauche) et avancez (droite) d'un jour."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_moveFocusByOneMonth"
+msgstr "Changez de mois."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_moveFocusByOneWeek"
+msgstr "Reculez (vers le haut) et vers l'avant (vers le bas) d'une semaine."
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_moveFocustoStartAndEndOfWeek"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_openThisPanel"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_pageUpPageDown"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_questionMark"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_returnFocusToInput"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_roleDescription"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_selectFocusedDate"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_showKeyboardShortcutsPanel"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Common/SearchFilters/DateFilter
+msgid "dateRangePicker_upArrowDownArrow"
+msgstr ""
 
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "date_e_orari"
@@ -1096,9 +1185,7 @@ msgstr ""
 msgid "email_sede"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Edit
 #: components/ItaliaTheme/Blocks/HighlightedContent/Edit
-#: components/ItaliaTheme/Blocks/NewsHome/Edit
 msgid "emptySelection"
 msgstr ""
 
@@ -1166,7 +1253,6 @@ msgstr "Explorer"
 msgid "exploreArgument"
 msgstr "Explorer le sujet"
 
-#: components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderTree
 #: components/ItaliaTheme/View/FAQ/FaqFolder/SearchBar
 msgid "faq_search"
 msgstr "Tapez un mot-clé pour trouver des réponses"
@@ -1385,15 +1471,9 @@ msgstr "Dossier principal"
 msgid "modulo_formati_alternativi"
 msgstr "Formats alternatifs"
 
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
-#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 msgid "natural_image_size"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/NewsHome/Body
-msgid "newsHome-news"
 msgstr ""
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
@@ -1549,10 +1629,6 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
 msgid "playStoreLink"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/ArgomentoTitle/View
-msgid "portata_di_click"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/IconPreviewWidget
@@ -2042,7 +2118,6 @@ msgstr ""
 msgid "show_only_first_ribbon"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: config/Blocks/ListingOptions/utils
 msgid "show_section"
@@ -2057,7 +2132,6 @@ msgstr ""
 msgid "show_topics"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: config/Blocks/ListingOptions/utils
 msgid "show_type"

@@ -408,6 +408,13 @@ body.cms-ui {
         max-height: 80vh;
         overflow-y: scroll;
       }
+
+      .occurences {
+        .content {
+          max-height: unset;
+          overflow-y: unset;
+        }
+      }
     }
   }
 
