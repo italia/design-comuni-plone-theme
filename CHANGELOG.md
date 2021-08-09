@@ -1,3 +1,13 @@
+### [5.2.15](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.14...v5.2.15) (2021-08-09)
+
+
+### Maintenance
+
+* ay11 for react-select and datepicker ([9406d43](https://github.com/RedTurtle/design-volto-theme/commit/9406d43a47d7b53138b04115f0196f307cb25bc8))
+* ay11 selectInput ([739e4f6](https://github.com/RedTurtle/design-volto-theme/commit/739e4f6927baffcea28db8bcedc705e1708abe9d))
+* dateFilter accessibility ([094419a](https://github.com/RedTurtle/design-volto-theme/commit/094419af2746981eb77db5e7a49cd9a06ee591b8))
+* update form block ([f156b94](https://github.com/RedTurtle/design-volto-theme/commit/f156b94f0b1e8a418603f3388c2a5a397efd88c0))
+
 ### [5.2.14](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.13...v5.2.14) (2021-08-06)
 
 
