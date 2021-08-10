@@ -67,10 +67,6 @@ const messages = defineMessages({
     id: 'filters',
     defaultMessage: 'Filtri',
   },
-  confirmSearch: {
-    id: 'confirmSearch',
-    defaultMessage: 'Conferma',
-  },
   sections: {
     id: 'sections',
     defaultMessage: 'Sezioni',
