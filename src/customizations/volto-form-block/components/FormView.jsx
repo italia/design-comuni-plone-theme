@@ -157,6 +157,7 @@ const FormView = ({
                             }
                             value={formData[name]?.value}
                             valid={isValidField(name)}
+                            formHasErrors={formErrors.length > 0}
                           />
                         </Col>
                       </Row>

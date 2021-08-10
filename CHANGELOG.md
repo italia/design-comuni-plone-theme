@@ -1,3 +1,15 @@
+### [5.2.16](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.15...v5.2.16) (2021-08-10)
+
+
+### Bug Fixes
+
+* searchSections block chooser style ([3c5c1ff](https://github.com/RedTurtle/design-volto-theme/commit/3c5c1ffbc14a28d68b3f4406ab1cf8bd5bf8703e))
+
+
+### Maintenance
+
+* update volto-form-block ([c609475](https://github.com/RedTurtle/design-volto-theme/commit/c609475386ca6ce03c13ba2cd5f6bcc43268021f))
+
 ### [5.2.15](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.14...v5.2.15) (2021-08-09)
 
 
