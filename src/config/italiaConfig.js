@@ -180,6 +180,7 @@ export default function applyConfig(voltoConfig) {
       ],
       showRestricted: false,
     },
+    videoAllowExternalsDefault: false,
     showTrasparenzaFields: false,
   };
 
