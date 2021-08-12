@@ -817,10 +817,6 @@ msgstr "Compensi"
 msgid "competenze"
 msgstr "Competenze"
 
-#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-msgid "confirmSearch"
-msgstr "Conferma"
-
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "contacts"
 msgstr "Contatti"

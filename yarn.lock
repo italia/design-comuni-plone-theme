@@ -2088,9 +2088,9 @@
   dependencies:
     "@octokit/openapi-types" "^6.0.0"
 
-"@plone/volto@plone/volto#8fba24fc57bcf2d4205ad355adbe51b30c5843f5":
+"@plone/volto@plone/volto#ef9a9aca83faf234756a947decbf498771dc7b46":
   version "13.8.2"
-  resolved "https://codeload.github.com/plone/volto/tar.gz/8fba24fc57bcf2d4205ad355adbe51b30c5843f5"
+  resolved "https://codeload.github.com/plone/volto/tar.gz/ef9a9aca83faf234756a947decbf498771dc7b46"
   dependencies:
     "@babel/plugin-proposal-export-default-from" "7.10.4"
     "@babel/plugin-proposal-export-namespace-from" "7.10.4"
@@ -17976,9 +17976,9 @@ volto-editablefooter@RedTurtle/volto-editablefooter#v3.1.3:
   dependencies:
     react-outside-click-handler "1.3.0"
 
-volto-form-block@collective/volto-form-block#v1.8.0:
-  version "1.8.0"
-  resolved "https://codeload.github.com/collective/volto-form-block/tar.gz/96b5c38bd79b7f54ffaf040a323547dd0159ba19"
+volto-form-block@collective/volto-form-block#v1.8.1:
+  version "1.8.1"
+  resolved "https://codeload.github.com/collective/volto-form-block/tar.gz/8625706352dafaa593132c1994ed2c8125803337"
   dependencies:
     "@hcaptcha/react-hcaptcha" "^0.3.6"
     file-saver "^2.0.5"

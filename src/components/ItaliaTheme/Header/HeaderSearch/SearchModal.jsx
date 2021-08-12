@@ -67,10 +67,6 @@ const messages = defineMessages({
     id: 'filters',
     defaultMessage: 'Filtri',
   },
-  confirmSearch: {
-    id: 'confirmSearch',
-    defaultMessage: 'Conferma',
-  },
   sections: {
     id: 'sections',
     defaultMessage: 'Sezioni',
@@ -309,12 +305,11 @@ const SearchModal = ({ closeModal, show }) => {
             {advancedSearch && (
               <Button
                 color="link"
-                aria-label={intl.formatMessage(messages.backToSearch)}
+                title={intl.formatMessage(messages.backToSearch)}
                 className="back-to-search text-reset"
                 onClick={() => setAdvancedSearch(false)}
               >
                 <Icon color="" icon="it-arrow-left-circle" padding={false} />
-                {intl.formatMessage(messages.search)}
               </Button>
             )}
             <p className="modal-title-centered h1">
@@ -338,10 +333,9 @@ const SearchModal = ({ closeModal, show }) => {
               )}
               className="ml-auto btn btn-outline-primary text-capitalize"
               style={{ visibility: advancedSearch ? 'visible' : 'hidden' }}
-              aria-label={intl.formatMessage(messages.search)}
               onClick={submitSearch}
             >
-              {intl.formatMessage(messages.confirmSearch)}
+              {intl.formatMessage(messages.search)}
             </a>
           </div>
         </Container>

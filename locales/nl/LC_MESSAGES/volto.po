@@ -836,10 +836,6 @@ msgstr ""
 msgid "competenze"
 msgstr ""
 
-#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-msgid "confirmSearch"
-msgstr ""
-
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "contacts"
 msgstr ""
