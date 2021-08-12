@@ -155,7 +155,7 @@ const View = ({ data }) => {
                   ) : data.url && allowsExternals ? (
                     // eslint-disable-next-line jsx-a11y/media-has-caption
                     <video
-                      url={data.url}
+                      src={data.url}
                       controls
                       poster={
                         data.preview_image
