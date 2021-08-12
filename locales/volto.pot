@@ -1002,11 +1002,6 @@ msgstr ""
 msgid "competenze"
 msgstr ""
 
-#: components/ItaliaTheme/Header/HeaderSearch/SearchModal
-# defaultMessage: Conferma
-msgid "confirmSearch"
-msgstr ""
-
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 # defaultMessage: Contatti
 msgid "contacts"
