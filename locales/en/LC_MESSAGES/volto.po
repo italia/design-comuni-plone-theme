@@ -69,7 +69,6 @@ msgstr "Search by topic"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
-#: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
 msgid "Cerca per parola chiave"
 msgstr "Search by keyword"
 
@@ -1194,7 +1193,6 @@ msgid "event_documenti"
 msgstr "Documents"
 
 #: components/ItaliaTheme/Blocks/EventSearch/Edit
-#: components/ItaliaTheme/Blocks/UOSearch/Edit
 msgid "event_search_no_filters"
 msgstr ""
 
@@ -1265,7 +1263,6 @@ msgstr "Filters"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Body
 #: components/ItaliaTheme/Blocks/EventSearch/Body
-#: components/ItaliaTheme/Blocks/UOSearch/Body
 msgid "find"
 msgstr "Search"
 
@@ -1335,7 +1332,6 @@ msgstr "Page index"
 #: components/ItaliaTheme/Blocks/BandiSearch/Body
 #: components/ItaliaTheme/Blocks/Calendar/Body
 #: components/ItaliaTheme/Blocks/EventSearch/Body
-#: components/ItaliaTheme/Blocks/UOSearch/Body
 msgid "insert_filter"
 msgstr ""
 
@@ -1380,7 +1376,6 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "location_to_search"
 msgstr ""
 
@@ -1475,7 +1470,6 @@ msgstr "No"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Body
 #: components/ItaliaTheme/Blocks/EventSearch/Body
-#: components/ItaliaTheme/Blocks/UOSearch/Body
 msgid "noResult"
 msgstr "No results found"
 
@@ -1816,19 +1810,16 @@ msgid "searchAllTopics"
 msgstr "Search by all topics"
 
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_bg_color"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_button_color"
 msgstr ""
 
@@ -1839,7 +1830,6 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_date_filter"
 msgstr ""
 
@@ -1849,31 +1839,26 @@ msgstr "Authority"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_filter_one"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_filter_three"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_filter_two"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_help"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_primarycolor"
 msgstr ""
 
@@ -1891,19 +1876,16 @@ msgstr "Deadline to"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_secondaryColor"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_style"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_tertiaryColor"
 msgstr ""
 
@@ -1911,8 +1893,6 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-#: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
-#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_text_filter"
 msgstr "Search by keyword"
 
@@ -1924,15 +1904,9 @@ msgstr "Type"
 msgid "searchBlock_ufficio_responsabile_filter"
 msgstr "Responsible office"
 
-#: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
-msgid "searchBlock_uo_type_filter"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
-#: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
-#: components/ItaliaTheme/Blocks/UOSearch/Sidebar
 msgid "searchBlock_venue_filter"
 msgstr ""
 
@@ -2363,10 +2337,6 @@ msgstr "Documents"
 msgid "uo_related_news"
 msgstr "Featured news"
 
-#: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
-msgid "uo_type"
-msgstr ""
-
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "variazione_situazione_patrimoniale"
 msgstr "Change in balance sheet"
@@ -2374,8 +2344,6 @@ msgstr "Change in balance sheet"
 #: components/ItaliaTheme/Blocks/BandiSearch/Body
 #: components/ItaliaTheme/Blocks/EventSearch/Body
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
-#: components/ItaliaTheme/Blocks/UOSearch/Body
-#: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
 msgid "venues"
 msgstr "Venues"
 

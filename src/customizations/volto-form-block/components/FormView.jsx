@@ -155,7 +155,11 @@ const FormView = ({
                                 subblock.label,
                               )
                             }
-                            value={formData[name]?.value}
+                            value={
+                              subblock.field_type === 'static_text'
+                                ? subblock.value
+                                : formData[name]?.value
+                            }
                             valid={isValidField(name)}
                             formHasErrors={formErrors.length > 0}
                           />
