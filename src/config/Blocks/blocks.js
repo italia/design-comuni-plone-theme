@@ -58,6 +58,9 @@ import NumbersBlockEdit from '@italia/components/ItaliaTheme/Blocks/NumbersBlock
 import BandiSearchView from '@italia/components/ItaliaTheme/Blocks/BandiSearch/View';
 import BandiSearchEdit from '@italia/components/ItaliaTheme/Blocks/BandiSearch/Edit';
 
+import UOSearchView from '@italia/components/ItaliaTheme/Blocks/UOSearch/View';
+import UOSearchEdit from '@italia/components/ItaliaTheme/Blocks/UOSearch/Edit';
+
 import flashSVG from '@plone/volto/icons/flash.svg';
 import CTABlockView from '@italia/components/ItaliaTheme/Blocks/CTABlock/View';
 import CTABlockEdit from '@italia/components/ItaliaTheme/Blocks/CTABlock/Edit';
@@ -130,6 +133,21 @@ const italiaBlocks = {
     group: 'search',
     view: BandiSearchView,
     edit: BandiSearchEdit,
+    restricted: false,
+    mostUsed: false,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
+  searchUO: {
+    id: 'searchUO',
+    title: 'Ricerca Unità Organizzative',
+    icon: searchIcon,
+    group: 'search',
+    view: UOSearchView,
+    edit: UOSearchEdit,
     restricted: false,
     mostUsed: false,
     security: {

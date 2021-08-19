@@ -61,7 +61,7 @@ const SelectFilter = ({ options, value, id, onChange, placeholder }) => {
         onChange={(opt) => {
           onChange(id, opt);
         }}
-        options={select_options ?? []}
+        options={select_options?.filter((opt) => !!opt.value?.toString()) ?? []}
         isClearable={true}
         // components={{
         //   ClearIndicator: (props) => {
