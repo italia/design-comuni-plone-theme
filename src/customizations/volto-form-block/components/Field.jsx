@@ -122,7 +122,7 @@ const Field = ({
           </div>
         </div>
       )}
-      {field_type === 'radio' && (
+      {field_type === 'single_choice' && (
         <div className="form-group">
           <div
             className={`bootstrap-checkbox-radio-wrapper ${
@@ -154,7 +154,7 @@ const Field = ({
           </div>
         </div>
       )}
-      {field_type === 'checkbox' && (
+      {field_type === 'multiple_choice' && (
         <div className="form-group">
           <div
             className={`bootstrap-checkbox-radio-wrapper ${
@@ -185,6 +185,35 @@ const Field = ({
                 </Label>
               </FormGroup>
             ))}
+            {description && (
+              <small className="form-text text-muted">{description}</small>
+            )}
+          </div>
+        </div>
+      )}
+      {field_type === 'checkbox' && (
+        <div className="form-group">
+          <div
+            className={`bootstrap-checkbox-radio-wrapper ${
+              isInvalid() ? 'is-invalid' : ''
+            }`}
+          >
+            <FormGroup check key={name}>
+              <Input
+                id={name}
+                name={name}
+                type="checkbox"
+                checked={!!value}
+                onChange={(e) => {
+                  onChange(name, e.target.checked);
+                }}
+                invalid={isInvalid() ? 'true' : null}
+                required={required}
+              />
+              <Label for={name} check>
+                {getLabel()}
+              </Label>
+            </FormGroup>
             {description && (
               <small className="form-text text-muted">{description}</small>
             )}
