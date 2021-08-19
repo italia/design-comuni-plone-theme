@@ -1,3 +1,26 @@
+## [5.3.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.17...v5.3.0) (2021-08-19)
+
+
+### Features
+
+* add UO search block ([0e46c16](https://github.com/RedTurtle/design-volto-theme/commit/0e46c163e13cf21dec0c51af71b9367b5710c9c5))
+
+
+### Bug Fixes
+
+* search filter empty value ([e345cf2](https://github.com/RedTurtle/design-volto-theme/commit/e345cf24c02688b8c62d54eeccf5f77371d02333))
+
+
+### Changes
+
+* change form customizations for new field ([d711baf](https://github.com/RedTurtle/design-volto-theme/commit/d711baf82640784f252fecac4e20fe90b0c79175))
+
+
+### Maintenance
+
+* update form customization ([4c7c562](https://github.com/RedTurtle/design-volto-theme/commit/4c7c562bbae2c04c382643dd4a7846c1859ebbe5))
+* update volto form block ([618eca3](https://github.com/RedTurtle/design-volto-theme/commit/618eca3dbbc228f0429859875692fe25b2ecce85))
+
 ### [5.2.17](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.16...v5.2.17) (2021-08-12)
 
 
