@@ -1,6 +1,5 @@
-import React, { useCallback, useState, useEffect } from 'react';
+import React, { useCallback, useRef } from 'react';
 import { useIntl, defineMessages } from 'react-intl';
-import { GoogleReCaptcha } from 'react-google-recaptcha-v3';
 import {
   Card,
   CardBody,
@@ -11,8 +10,9 @@ import {
   Progress,
 } from 'design-react-kit/dist/design-react-kit';
 import { getFieldName } from 'volto-form-block';
-// eslint-disable-next-line import/no-unresolved
 import Field from 'volto-form-block/components/Field';
+import GoogleReCaptchaWidget from 'volto-form-block/components/Widget/GoogleReCaptchaWidget';
+import HCaptchaWidget from 'volto-form-block/components/Widget/HCaptchaWidget';
 
 const messages = defineMessages({
   default_submit_label: {
@@ -60,19 +60,19 @@ const FormView = ({
     unmountOnExit: true,
   };
 
-  const [loadedRecaptcha, setLoadedRecaptcha] = useState(null);
-  let validToken = '';
+  const captcha = process.env.RAZZLE_HCAPTCHA_KEY
+    ? 'HCaptcha'
+    : process.env.RAZZLE_RECAPTCHA_KEY
+    ? 'GoogleReCaptcha'
+    : null;
+
+  let validToken = useRef(null);
   const onVerifyCaptcha = useCallback(
     (token) => {
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      validToken = token;
+      validToken.current = token;
     },
     [validToken],
   );
-
-  useEffect(() => {
-    setLoadedRecaptcha(true);
-  }, [loadedRecaptcha]);
 
   const isValidField = (field) => {
     return formErrors?.indexOf(field) < 0;
@@ -155,7 +155,11 @@ const FormView = ({
                                 subblock.label,
                               )
                             }
-                            value={formData[name]?.value}
+                            value={
+                              subblock.field_type === 'static_text'
+                                ? subblock.value
+                                : formData[name]?.value
+                            }
                             valid={isValidField(name)}
                             formHasErrors={formErrors.length > 0}
                           />
@@ -164,12 +168,16 @@ const FormView = ({
                     );
                   })}
 
-                  {process.env.RAZZLE_RECAPTCHA_KEY && (
-                    <Row>
-                      <Col className="py-2">
-                        <GoogleReCaptcha onVerify={onVerifyCaptcha} />
-                      </Col>
-                    </Row>
+                  {captcha === 'GoogleReCaptcha' && (
+                    <GoogleReCaptchaWidget onVerify={onVerifyCaptcha} />
+                  )}
+
+                  {captcha === 'HCaptcha' && (
+                    <HCaptchaWidget
+                      sitekey={process.env.RAZZLE_HCAPTCHA_KEY}
+                      onVerify={onVerifyCaptcha}
+                      size={data.invisibleHCaptcha ? 'invisible' : 'normal'}
+                    />
                   )}
 
                   {formErrors.length > 0 && (
@@ -191,8 +199,9 @@ const FormView = ({
                         color="primary"
                         type="submit"
                         disabled={
-                          (!loadedRecaptcha &&
-                            process.env.RAZZLE_RECAPTCHA_KEY) ||
+                          (!validToken?.current &&
+                            (!!process.env.RAZZLE_RECAPTCHA_KEY ||
+                              !!process.env.RAZZLE_HCAPTCHA_KEY)) ||
                           formState.loading
                         }
                       >

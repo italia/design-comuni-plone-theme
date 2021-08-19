@@ -13,6 +13,7 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import Select from 'react-select';
 import FileWidget from '@italia/components/ItaliaTheme/manage/Widgets/FileWidget';
+import WysiwygWidget from '@plone/volto/components/manage/Widgets/WysiwygWidget';
 
 import config from '@plone/volto/registry';
 
@@ -239,6 +240,25 @@ const Field = ({
           {...(value ? { value } : {})}
         />
       )}
+      {field_type === 'static_text' &&
+        (isOnEdit ? (
+          <WysiwygWidget
+            wrapped={false}
+            id={name}
+            name={name}
+            title={label}
+            description={description}
+            onChange={onChange}
+            value={value}
+          />
+        ) : value?.data ? (
+          <div
+            className="static-text"
+            dangerouslySetInnerHTML={{ __html: value.data }}
+          />
+        ) : (
+          <br />
+        ))}
       {config.blocks.blocksConfig.form.additionalFields?.reduce((acc, val) => {
         if (val.id === field_type)
           return [
