@@ -146,6 +146,12 @@ class Edit extends Component {
     const placeholder =
       this.props.data.placeholder ||
       this.props.intl.formatMessage(messages.VideoBlockInputPlaceholder);
+
+    const allowsExternals =
+      data.allowExternals !== undefined
+        ? !!data.allowExternals
+        : !!config.settings.videoAllowExternalsDefault;
+
     return (
       <div
         className={cx(
@@ -278,10 +284,12 @@ class Edit extends Component {
                         }
                         type="video/mp4"
                       />
-                    ) : data.allowExternals ? (
-                      <Embed
-                        url={data.url}
-                        placeholder={
+                    ) : data.url && allowsExternals ? (
+                      // eslint-disable-next-line jsx-a11y/media-has-caption
+                      <video
+                        src={data.url}
+                        controls
+                        poster={
                           data.preview_image
                             ? isInternalURL(data.preview_image)
                               ? `${flattenToAppURL(
@@ -290,6 +298,7 @@ class Edit extends Component {
                               : data.preview_image
                             : null
                         }
+                        type="video/mp4"
                       />
                     ) : (
                       <div>

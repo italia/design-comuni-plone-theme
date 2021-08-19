@@ -12,6 +12,8 @@ import upSVG from '@plone/volto/icons/up-key.svg';
 import downSVG from '@plone/volto/icons/down-key.svg';
 import navTreeSVG from '@plone/volto/icons/nav.svg';
 
+import config from '@plone/volto/registry';
+
 const messages = defineMessages({
   LinkTo: {
     id: 'Link to',
@@ -45,6 +47,10 @@ const VideoSidebar = ({
   intl,
 }) => {
   const [activeAccIndex, setActiveAccIndex] = useState(0);
+  const allowsExternals =
+    data.allowExternals !== undefined
+      ? !!data.allowExternals
+      : !!config.settings.videoAllowExternalsDefault;
 
   function handleAccClick(e, titleProps) {
     const { index } = titleProps;
@@ -122,8 +128,8 @@ const VideoSidebar = ({
                 <CheckboxWidget
                   id="allowExternals"
                   title={intl.formatMessage(messages.allowExternals)}
-                  value={data.allowExternals ? data.allowExternals : false}
-                  onChange={(name, value) => {
+                  value={allowsExternals}
+                  onChange={(_name, value) => {
                     onChangeBlock(block, {
                       ...data,
                       allowExternals: value,
