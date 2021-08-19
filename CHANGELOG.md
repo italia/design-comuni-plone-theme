@@ -1,3 +1,10 @@
+### [5.3.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.3.0...v5.3.1) (2021-08-19)
+
+
+### Bug Fixes
+
+* checkbox form field, refactor ([068c657](https://github.com/RedTurtle/design-volto-theme/commit/068c657e0d153589732bf5c63c3e064e303ce94e))
+
 ## [5.3.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.2.17...v5.3.0) (2021-08-19)
 
 
