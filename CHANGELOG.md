@@ -1,3 +1,10 @@
+### [5.3.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.3.2...v5.3.3) (2021-08-20)
+
+
+### Bug Fixes
+
+* fix volto-form-block version ([a39a921](https://github.com/RedTurtle/design-volto-theme/commit/a39a9219158feed782ce61519602f780201b0717))
+
 ### [5.3.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.3.1...v5.3.2) (2021-08-20)
 
 
