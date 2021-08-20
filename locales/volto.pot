@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-08-12T15:21:48.687Z\n"
+"POT-Creation-Date: 2021-08-20T07:47:10.201Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -125,6 +125,7 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 # defaultMessage: Contenuto in primo piano
 msgid "Content in evidence"
@@ -248,12 +249,16 @@ msgstr ""
 msgid "Link to"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 # defaultMessage: Link ad altro
 msgid "LinkMore"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 # defaultMessage: Testo per il link ad altro
 msgid "Linkto title"
 msgstr ""
@@ -291,6 +296,16 @@ msgstr ""
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Nessun risultato ottenuto
 msgid "Nessun risultato ottenuto"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
+# defaultMessage: News
+msgid "News"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
+# defaultMessage: News con immagine in primo piano
+msgid "NewsHome"
 msgstr ""
 
 #: components/ItaliaTheme/Pagination/PaginationItem
@@ -489,6 +504,7 @@ msgstr ""
 msgid "Twitter Posts"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
@@ -496,15 +512,17 @@ msgstr ""
 msgid "Type description…"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/Blocks/ContactsBlock/TextEditorWidget
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 #: components/ItaliaTheme/manage/Widgets/TextEditorWidget
-# defaultMessage: Digita un testo…
+# defaultMessage: Digita il testo…
 msgid "Type text…"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
@@ -888,6 +906,7 @@ msgid "bando_vedi"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 # defaultMessage: Colore di sfondo
 msgid "bg_color"
@@ -977,11 +996,13 @@ msgid "closeSearch"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 # defaultMessage: Primario
 msgid "color_primary"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 # defaultMessage: Trasparente
 msgid "color_transparent"
@@ -1023,6 +1044,11 @@ msgstr ""
 #: components/ItaliaTheme/View/EventoView/EventoView
 # defaultMessage: Contatti interni
 msgid "contatti_interni"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Body
+# defaultMessage: News
+msgid "content-in-evidence-news"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView
@@ -1434,7 +1460,9 @@ msgstr ""
 msgid "email_sede"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Edit
 #: components/ItaliaTheme/Blocks/HighlightedContent/Edit
+#: components/ItaliaTheme/Blocks/NewsHome/Edit
 # defaultMessage: Please select an item in the sidebar in order to show it here
 msgid "emptySelection"
 msgstr ""
@@ -1520,6 +1548,7 @@ msgstr ""
 msgid "exploreArgument"
 msgstr ""
 
+#: components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderTree
 #: components/ItaliaTheme/View/FAQ/FaqFolder/SearchBar
 # defaultMessage: Type in a keyword to find answers
 msgid "faq_search"
@@ -1791,10 +1820,17 @@ msgstr ""
 msgid "modulo_formati_alternativi"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 # defaultMessage: undefined
 msgid "natural_image_size"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/NewsHome/Body
+# defaultMessage: undefined
+msgid "newsHome-news"
 msgstr ""
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
@@ -1987,6 +2023,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
 # defaultMessage: PlayStore Link
 msgid "playStoreLink"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/ArgomentoTitle/View
+# defaultMessage: A PORTATA DI CLICK
+msgid "portata_di_click"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/IconPreviewWidget
@@ -2609,6 +2650,7 @@ msgstr ""
 msgid "show_only_first_ribbon"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Mostra la sezione
@@ -2626,6 +2668,7 @@ msgstr ""
 msgid "show_topics"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Mostra il tipo

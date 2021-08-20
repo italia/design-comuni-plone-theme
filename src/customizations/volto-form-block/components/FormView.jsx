@@ -9,10 +9,12 @@ import {
   Alert,
   Progress,
 } from 'design-react-kit/dist/design-react-kit';
-import { getFieldName } from 'volto-form-block';
-import Field from 'volto-form-block/components/Field';
-import GoogleReCaptchaWidget from 'volto-form-block/components/Widget/GoogleReCaptchaWidget';
-import HCaptchaWidget from 'volto-form-block/components/Widget/HCaptchaWidget';
+import {
+  getFieldName,
+  Field,
+  GoogleReCaptchaWidget,
+  HCaptchaWidget,
+} from '@italia/addons/volto-form-block';
 
 const messages = defineMessages({
   default_submit_label: {
