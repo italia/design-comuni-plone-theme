@@ -1,3 +1,10 @@
+### [5.3.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.3.3...v5.3.4) (2021-08-20)
+
+
+### Bug Fixes
+
+* mrs dev ([48d3f27](https://github.com/RedTurtle/design-volto-theme/commit/48d3f27137dcbf72dbb54c36cdebd01332ce797e))
+
 ### [5.3.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.3.2...v5.3.3) (2021-08-20)
 
 
