@@ -88,7 +88,6 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
-#: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
 msgid "Cerca per parola chiave"
 msgstr ""
 
@@ -2414,6 +2413,10 @@ msgstr ""
 #: components/ItaliaTheme/View/UOView/UOView
 #: components/ItaliaTheme/View/VenueView/VenueView
 msgid "uo_related_news"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
+msgid "uo_search_keyword"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters

@@ -69,7 +69,6 @@ msgstr "Search by topic"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
-#: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
 msgid "Cerca per parola chiave"
 msgstr "Search by keyword"
 
@@ -2398,8 +2397,12 @@ msgid "uo_related_news"
 msgstr "Featured news"
 
 #: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
+msgid "uo_search_keyword"
+msgstr "Search for a structure"
+
+#: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
 msgid "uo_type"
-msgstr ""
+msgstr "Type"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "variazione_situazione_patrimoniale"

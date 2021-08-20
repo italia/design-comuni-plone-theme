@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-08-20T07:47:10.201Z\n"
+"POT-Creation-Date: 2021-08-20T08:53:37.788Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -84,7 +84,6 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/DefaultFilters
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
-#: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
 # defaultMessage: Cerca per parola chiave
 msgid "Cerca per parola chiave"
 msgstr ""
@@ -2939,6 +2938,11 @@ msgstr ""
 #: components/ItaliaTheme/View/VenueView/VenueView
 # defaultMessage: Notizie in evidenza
 msgid "uo_related_news"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
+# defaultMessage: Cerca una struttura
+msgid "uo_search_keyword"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters

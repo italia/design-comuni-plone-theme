@@ -29,8 +29,8 @@ const messages = defineMessages({
     defaultMessage: 'Tipologia',
   },
   search_keyword: {
-    id: 'Cerca per parola chiave',
-    defaultMessage: 'Cerca per parola chiave',
+    id: 'uo_search_keyword',
+    defaultMessage: 'Cerca una struttura',
   },
 });
 
