@@ -9,12 +9,14 @@ import {
   Alert,
   Progress,
 } from 'design-react-kit/dist/design-react-kit';
-import {
-  getFieldName,
-  Field,
-  GoogleReCaptchaWidget,
-  HCaptchaWidget,
-} from '@italia/addons/volto-form-block';
+// eslint-disable-next-line import/no-unresolved
+import { getFieldName } from '@italia/addons/volto-form-block/components/utils';
+// eslint-disable-next-line import/no-unresolved
+import Field from 'volto-form-block/components/Field';
+// eslint-disable-next-line import/no-unresolved
+import GoogleReCaptchaWidget from '@italia/addons/volto-form-block/components/Widget/GoogleReCaptchaWidget';
+// eslint-disable-next-line import/no-unresolved
+import HCaptchaWidget from '@italia/addons/volto-form-block/components/Widget/HCaptchaWidget';
 
 const messages = defineMessages({
   default_submit_label: {
