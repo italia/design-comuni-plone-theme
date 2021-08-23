@@ -35,6 +35,7 @@ const Metadata = ({
   content,
   showTags = false,
   noMargin = false,
+  title,
   children,
 }) => {
   const intl = useIntl();
@@ -44,7 +45,7 @@ const Metadata = ({
       className={cx('it-page-section', 'anchor-offset', { 'mt-5': !noMargin })}
     >
       <h4 id="header-metadata" className="mb-3">
-        {intl.formatMessage(messages.other_info)}
+        {title || intl.formatMessage(messages.other_info)}
       </h4>
       {children}
       <p className="text-serif mb-0 mt-4">
@@ -90,4 +91,5 @@ Metadata.propTypes = {
   content: PropTypes.object,
   showTags: PropTypes.bool,
   noMargin: PropTypes.bool,
+  title: PropTypes.string,
 };
