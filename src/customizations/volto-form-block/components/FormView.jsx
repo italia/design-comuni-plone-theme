@@ -10,13 +10,13 @@ import {
   Progress,
 } from 'design-react-kit/dist/design-react-kit';
 // eslint-disable-next-line import/no-unresolved
-import { getFieldName } from '@italia/addons/volto-form-block/components/utils';
+import { getFieldName } from 'volto-form-block/components/utils';
 // eslint-disable-next-line import/no-unresolved
 import Field from 'volto-form-block/components/Field';
 // eslint-disable-next-line import/no-unresolved
-import GoogleReCaptchaWidget from '@italia/addons/volto-form-block/components/Widget/GoogleReCaptchaWidget';
+import GoogleReCaptchaWidget from 'volto-form-block/components/Widget/GoogleReCaptchaWidget';
 // eslint-disable-next-line import/no-unresolved
-import HCaptchaWidget from '@italia/addons/volto-form-block/components/Widget/HCaptchaWidget';
+import HCaptchaWidget from 'volto-form-block/components/Widget/HCaptchaWidget';
 
 const messages = defineMessages({
   default_submit_label: {
