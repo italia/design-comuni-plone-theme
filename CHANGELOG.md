@@ -1,3 +1,16 @@
+### [5.3.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.3.4...v5.3.5) (2021-08-23)
+
+
+### Bug Fixes
+
+* search uo sidebar label ([d92d32c](https://github.com/RedTurtle/design-volto-theme/commit/d92d32ca80ba4515f2ddc7553a1b9c31ac0d6e48))
+
+
+### Maintenance
+
+* changed UO Search placeholder and translations ([1c29af6](https://github.com/RedTurtle/design-volto-theme/commit/1c29af6a281c5c0c5f13dd4704889589e79a834a))
+* update volto-form-block ([57d1a50](https://github.com/RedTurtle/design-volto-theme/commit/57d1a50c09a3aba79cd783d7763ccf9cb2ff3252))
+
 ### [5.3.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.3.3...v5.3.4) (2021-08-20)
 
 
