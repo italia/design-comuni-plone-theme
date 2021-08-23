@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Segment, Accordion } from 'semantic-ui-react';
-import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
+import { defineMessages, injectIntl } from 'react-intl';
 import {
   SelectWidget,
   Icon,
@@ -12,6 +12,10 @@ import downSVG from '@plone/volto/icons/down-key.svg';
 import FiltersConfig from '@italia/components/ItaliaTheme/Blocks/UOSearch/FiltersConfig';
 
 const messages = defineMessages({
+  searchBlockUO: {
+    id: 'search-block-uo',
+    defaultMessage: 'Ricerca Unità Organizzative',
+  },
   help: {
     id: 'searchBlock_help',
     defaultMessage: 'Seleziona i filtri di ricerca da mostrare nel blocco.',
@@ -95,9 +99,7 @@ const Sidebar = (props) => {
   return (
     <Segment.Group raised>
       <header className="header pulled">
-        <h2>
-          <FormattedMessage id="searchBlock" defaultMessage="Ricerca eventi" />
-        </h2>
+        <h2>{props.intl.formatMessage(messages.searchBlockUO)}</h2>
       </header>
       <Segment>
         <div className="ui form">
