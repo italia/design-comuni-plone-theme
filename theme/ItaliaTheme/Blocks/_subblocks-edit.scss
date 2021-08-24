@@ -1,16 +1,4 @@
 .single-block.subblock-edit {
-  .draftJsToolbar__toolbar__dNtBH {
-    //transform: translate(-50%, -50%, 0) !important;
-  }
-
-  &.subblock-draggable {
-    //transform: unset !important;
-
-    // &.isDragging {
-    //   transform: translateZ(0) !important;
-    // }
-  }
-
   .dragsubblock,
   .ui.basic.button.delete-button {
     z-index: 3;
