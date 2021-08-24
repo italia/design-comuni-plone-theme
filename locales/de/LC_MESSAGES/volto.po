@@ -116,7 +116,6 @@ msgstr ""
 msgid "Content"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "Content in evidence"
 msgstr ""
@@ -217,15 +216,11 @@ msgstr ""
 msgid "Link to"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
-#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 msgid "LinkMore"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
-#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 msgid "Linkto title"
 msgstr ""
 
@@ -256,14 +251,6 @@ msgstr ""
 
 #: components/ItaliaTheme/Search/Search
 msgid "Nessun risultato ottenuto"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
-msgid "News"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
-msgid "NewsHome"
 msgstr ""
 
 #: components/ItaliaTheme/Pagination/PaginationItem
@@ -426,14 +413,12 @@ msgstr ""
 msgid "Twitter Posts"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type description…"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/Blocks/ContactsBlock/TextEditorWidget
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
@@ -442,7 +427,6 @@ msgstr ""
 msgid "Type text…"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ArgomentoTitle/Edit
 #: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
@@ -754,7 +738,6 @@ msgid "bando_vedi"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "bg_color"
 msgstr ""
@@ -827,12 +810,10 @@ msgid "closeSearch"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "color_primary"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "color_transparent"
 msgstr ""
@@ -866,10 +847,6 @@ msgstr ""
 
 #: components/ItaliaTheme/View/EventoView/EventoView
 msgid "contatti_interni"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Body
-msgid "content-in-evidence-news"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView
@@ -1202,9 +1179,7 @@ msgstr ""
 msgid "email_sede"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Edit
 #: components/ItaliaTheme/Blocks/HighlightedContent/Edit
-#: components/ItaliaTheme/Blocks/NewsHome/Edit
 msgid "emptySelection"
 msgstr ""
 
@@ -1273,7 +1248,6 @@ msgstr ""
 msgid "exploreArgument"
 msgstr ""
 
-#: components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderTree
 #: components/ItaliaTheme/View/FAQ/FaqFolder/SearchBar
 msgid "faq_search"
 msgstr "Typ een trefwoord om antwoorden te vinden"
@@ -1495,15 +1469,9 @@ msgstr ""
 msgid "modulo_formati_alternativi"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
-#: components/ItaliaTheme/Blocks/NewsHome/Sidebar
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 msgid "natural_image_size"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/NewsHome/Body
-msgid "newsHome-news"
 msgstr ""
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
@@ -1660,10 +1628,6 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
 msgid "playStoreLink"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/ArgomentoTitle/View
-msgid "portata_di_click"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/IconPreviewWidget
@@ -2176,7 +2140,6 @@ msgstr ""
 msgid "show_only_first_ribbon"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: config/Blocks/ListingOptions/utils
 msgid "show_section"
@@ -2191,7 +2154,6 @@ msgstr ""
 msgid "show_topics"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/ContentInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: config/Blocks/ListingOptions/utils
 msgid "show_type"
