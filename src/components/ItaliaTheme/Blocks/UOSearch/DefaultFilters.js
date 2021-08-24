@@ -1,7 +1,5 @@
-import { useSelector } from 'react-redux';
 import moment from 'moment/min/moment-with-locales';
 import { useIntl, defineMessages } from 'react-intl';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import {
   TextFilter,
   SelectFilter,
@@ -37,7 +35,6 @@ const messages = defineMessages({
 const DefaultFilters = () => {
   const intl = useIntl();
   moment.locale(intl.locale);
-  const subsite = useSelector((state) => state.subsite?.data);
 
   return {
     text_filter: {
@@ -68,13 +65,7 @@ const DefaultFilters = () => {
         props: {
           value: null,
           options: {
-            dispatch: {
-              path: subsite ? flattenToAppURL(subsite['@id']) : '/',
-              portal_types: ['Venue'],
-              fullobjects: 0,
-              b_size: 10000,
-              subrequests_name: 'uo_venues',
-            },
+            vocabulary: 'design.plone.vocabularies.uo_locations',
             placeholder: intl.formatMessage(messages.venues),
           },
         },
