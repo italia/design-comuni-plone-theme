@@ -1,3 +1,21 @@
+## [5.4.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.3.6...v5.4.0) (2021-08-24)
+
+
+### Features
+
+* add title in metadata ([d5b694b](https://github.com/RedTurtle/design-volto-theme/commit/d5b694bd07953214b39106a68b9a1c50efe8da41))
+
+
+### Bug Fixes
+
+* fix image in template Quadratoni ([50243da](https://github.com/RedTurtle/design-volto-theme/commit/50243da3176287db28601ce084a131b3615b5e4c))
+* fixed locales ([bcce2ef](https://github.com/RedTurtle/design-volto-theme/commit/bcce2ef27810da4d9de181848fc9e302d7f23d26))
+
+
+### Maintenance
+
+* update volto-form-block ([da57475](https://github.com/RedTurtle/design-volto-theme/commit/da57475c2216dca965ec264d77aece59b421f462))
+
 ### [5.3.6](https://github.com/RedTurtle/design-volto-theme/compare/v5.3.5...v5.3.6) (2021-08-23)
 
 
