@@ -144,7 +144,8 @@ const FormView = ({
                     </fieldset>
                   )}
                   {data.subblocks.map((subblock, index) => {
-                    let name = getFieldName(subblock.label);
+                    let name = getFieldName(subblock.label, subblock.id);
+
                     return (
                       <Row key={'row' + index}>
                         <Col className="py-2">
