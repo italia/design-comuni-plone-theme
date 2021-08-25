@@ -1,3 +1,22 @@
+### [5.4.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.4.0...v5.4.1) (2021-08-25)
+
+
+### Bug Fixes
+
+* fix form validation description color ([4fa3ae8](https://github.com/RedTurtle/design-volto-theme/commit/4fa3ae8c991c32c122c925302ab873e7dc8b28d2))
+* fix get field name of volto-form-block ([6a38b29](https://github.com/RedTurtle/design-volto-theme/commit/6a38b29266e8b5f57ca274fa93e42611b4b0b24c))
+
+
+### Changes
+
+* uo seach with vocabularies for venues ([4643ce9](https://github.com/RedTurtle/design-volto-theme/commit/4643ce9a4e321089bc3893a9c2df5724877ced43))
+
+
+### Maintenance
+
+* added form validation styles ([d3550aa](https://github.com/RedTurtle/design-volto-theme/commit/d3550aad113cc797cb0fbccdb7fbdb325f02e624))
+* updated volto-form-block ([a5125b2](https://github.com/RedTurtle/design-volto-theme/commit/a5125b293a90b250a305c253836d2f9f7dde83a5))
+
 ## [5.4.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.3.6...v5.4.0) (2021-08-24)
 
 
