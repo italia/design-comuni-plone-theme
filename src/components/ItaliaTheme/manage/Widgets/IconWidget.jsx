@@ -27,9 +27,11 @@ const IconWidget = ({ id, value, defaultOptions, onChange }) => {
   const CustomSelectOption = (props) => {
     return (
       <Option {...props}>
-        <span className="icon-container">
-          <FontAwesomeIcon icon={props.data.value} size="1x" />
-        </span>
+        {props.data.value !== 'no-value' && (
+          <span className="icon-container">
+            <FontAwesomeIcon icon={props.data.value} size="1x" />
+          </span>
+        )}
         <span className="label-container">{props.data.label}</span>
       </Option>
     );

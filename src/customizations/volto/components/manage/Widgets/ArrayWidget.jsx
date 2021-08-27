@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import { isObject, intersection } from 'lodash';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
-import loadable from '@loadable/component';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 import {
   getVocabFromHint,
@@ -26,9 +26,6 @@ import {
 } from '@plone/volto/components/manage/Widgets/SelectStyling';
 
 import { FormFieldWrapper } from '@plone/volto/components';
-
-const AsyncPaginate = loadable(() => import('react-select-async-paginate'));
-const CreatableSelect = loadable(() => import('react-select/creatable'));
 
 const messages = defineMessages({
   select: {
@@ -164,13 +161,13 @@ class ArrayWidget extends Component {
    * @param {string} additional Additional arguments to pass to the next loadOptions.
    * @returns {undefined}
    */
-  loadOptions(search, previousOptions, additional) {
+  loadOptions = (search, previousOptions, additional) => {
     let hasMore = this.props.itemsTotal > previousOptions.length;
-    if (hasMore) {
-      const offset = this.state.search !== search ? 0 : additional.offset;
+    const offset = this.state.search !== search ? 0 : additional.offset;
+    this.setState({ search });
 
+    if (hasMore || this.state.search !== search) {
       this.props.getVocabulary(this.vocabBaseUrl, search, offset);
-      this.setState({ search });
 
       return {
         options:
@@ -184,8 +181,9 @@ class ArrayWidget extends Component {
         },
       };
     }
-    return null;
-  }
+    // We should return always an object like this, if not it complains:
+    return { options: [] };
+  };
 
   /**
    * Handle the field change, store it in the local state and back to simple
@@ -236,11 +234,16 @@ class ArrayWidget extends Component {
    */
   render() {
     const { selectedOption } = this.state;
+    const CreatableSelect = this.props.reactSelectCreateable.default;
+    const AsyncPaginate =
+      this.props.reactSelectAsyncPaginate.AsyncPaginate ??
+      this.props.reactSelectAsyncPaginate.default;
 
     return (
       <FormFieldWrapper {...this.props}>
         {!this.props.items?.choices && this.vocabBaseUrl ? (
           <AsyncPaginate
+            isDisabled={this.props.isDisabled}
             className="react-select-container"
             classNamePrefix="react-select"
             options={this.props.choices || []}
@@ -280,6 +283,7 @@ class ArrayWidget extends Component {
 
 export default compose(
   injectIntl,
+  injectLazyLibs(['reactSelectCreateable', 'reactSelectAsyncPaginate']),
   connect(
     (state, props) => {
       const vocabBaseUrl =
