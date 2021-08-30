@@ -111,3 +111,14 @@
     }
   }
 }
+
+.block.cta_block {
+  .ui.basic.button.delete-button {
+    color: #fff !important;
+
+    &:hover,
+    &:focus {
+      color: #000 !important;
+    }
+  }
+}
