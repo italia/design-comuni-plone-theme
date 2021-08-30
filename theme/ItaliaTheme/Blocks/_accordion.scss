@@ -113,7 +113,7 @@ $accordion-icon-color: #7fb2e5;
             transition: max-height 0.3s ease-in-out;
 
             &.open {
-              max-height: 100vh;
+              max-height: 1000vh;
             }
 
             .accordion-inner {
