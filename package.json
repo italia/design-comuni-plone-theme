@@ -17,7 +17,8 @@
     "src/addons/volto-blocks-widget",
     "src/addons/volto-google-analytics",
     "src/addons/volto-secondarymenu",
-    "src/addons/volto-form-block"
+    "src/addons/volto-form-block",
+    "src/addons/volto-subfooter"
   ],
   "addons": [
     "volto-cookie-banner",
@@ -32,7 +33,8 @@
     "volto-blocks-widget",
     "volto-google-analytics",
     "volto-secondarymenu",
-    "volto-form-block"
+    "volto-form-block",
+    "volto-subfooter"
   ],
   "scripts": {
     "start": "razzle start",
@@ -76,7 +78,8 @@
       "volto-blocks-widget/(.*)$": "<rootDir>/src/addons/volto-blocks-widget/src/$1",
       "volto-google-analytics/(.*)$": "<rootDir>/src/addons/volto-google-analytics/src/$1",
       "volto-secondarymenu/(.*)$": "<rootDir>/src/addons/volto-secondarymenu/src/$1",
-      "volto-form-block/(.*)$": "<rootDir>/src/addons/volto-form-block/src/$1"
+      "volto-form-block/(.*)$": "<rootDir>/src/addons/volto-form-block/src/$1",
+      "volto-subfooter/(.*)$": "<rootDir>/src/addons/volto-subfooter/src/$1"
     },
     "testMatch": [
       "**/__tests__/**/*.[jt]s?(x)",
@@ -203,6 +206,7 @@
     "volto-secondarymenu": "collective/volto-secondarymenu#v2.1.4",
     "volto-social-settings": "collective/volto-social-settings#v2.1.0",
     "volto-subblocks": "collective/volto-subblocks#v1.1.0",
+    "volto-subfooter": "collective/volto-subfooter#be7fb753244381a5a99c6b48148c0141dce3b466",
     "volto-subsites": "collective/volto-subsites#v2.0.1",
     "volto-venue": "collective/volto-venue#v3.0.1"
   },
