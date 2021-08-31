@@ -244,6 +244,8 @@ const BandoView = ({ content, location }) => {
                               icon={
                                 item.type === 'File'
                                   ? 'it-clip'
+                                  : item.type === 'Modulo'
+                                  ? 'it-download'
                                   : 'it-external-link'
                               }
                               padding={false}
