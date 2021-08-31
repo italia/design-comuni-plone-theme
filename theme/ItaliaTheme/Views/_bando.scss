@@ -27,6 +27,11 @@
         text-decoration: none;
       }
     }
+
+    .download-formats {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   #text-body {
