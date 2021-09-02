@@ -23,8 +23,8 @@ import {
   RelatedItemInEvidence,
   richTextHasContent,
   SkipToMainContent,
+  Module,
 } from '@italia/components/ItaliaTheme/View';
-import Module from '@italia/components/ItaliaTheme/View/DocumentoView/Module';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
 import { Icon } from '@italia/components/ItaliaTheme';
