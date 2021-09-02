@@ -23,8 +23,8 @@ import {
   RelatedItemInEvidence,
   richTextHasContent,
   SkipToMainContent,
+  Module,
 } from '@italia/components/ItaliaTheme/View';
-
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
 import { Icon } from '@italia/components/ItaliaTheme';
@@ -231,75 +231,99 @@ const BandoView = ({ content, location }) => {
                 aggiungo gli altri titoli */}
                 {content?.approfondimento?.length === 1 ? (
                   <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                    {content.approfondimento[0].children.map((item, _i) => (
-                      <div
-                        className={
-                          'genericcard card card-teaser shadow p-3 mt-3 rounded'
-                        }
-                      >
-                        <div className="card-body">
-                          <div className="card-text">
-                            <Icon
-                              className={undefined}
-                              icon={
-                                item.type === 'File'
-                                  ? 'it-clip'
-                                  : 'it-external-link'
-                              }
-                              padding={false}
-                            />
-                            <UniversalLink href={flattenToAppURL(item.url)}>
-                              {item.title}
-                            </UniversalLink>
+                    {content.approfondimento[0].children.map((item, i) =>
+                      item.type === 'Modulo' ? (
+                        <Module
+                          item={{
+                            ...item,
+                            '@id': item.url.replace(/\/view$/, ''),
+                          }}
+                          key={item.url + i}
+                        />
+                      ) : (
+                        <div
+                          className={
+                            'genericcard card card-teaser shadow p-3 mt-3 rounded'
+                          }
+                          key={item.url + i}
+                        >
+                          <div className="card-body">
+                            <div className="card-text">
+                              <Icon
+                                className={undefined}
+                                icon={
+                                  item.type === 'File'
+                                    ? 'it-clip'
+                                    : 'it-external-link'
+                                }
+                                padding={false}
+                              />
+                              <UniversalLink href={flattenToAppURL(item.path)}>
+                                {item.title}
+                              </UniversalLink>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    ))}
+                      ),
+                    )}
                   </div>
                 ) : (
                   <>
-                    {content.approfondimento.map((item, _i) => (
+                    {content.approfondimento.map((item, i) => (
                       <>
                         <h5>{item.title}</h5>
                         <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                          {content.approfondimento[_i].children.map(
-                            (inner_item, _x) => (
-                              <div
-                                className={
-                                  'genericcard card card-teaser shadow p-3 mt-3 rounded'
-                                }
-                              >
-                                <div className="card-body">
-                                  <div className="card-text">
-                                    <p>{item.Type}</p>
-                                    <Icon
-                                      className={undefined}
-                                      icon={
-                                        inner_item.type === 'File'
-                                          ? 'it-clip'
-                                          : 'it-external-link'
-                                      }
-                                      padding={false}
-                                    />
-                                    {inner_item.type === 'File' ? (
-                                      <UniversalLink
-                                        href={flattenToAppURL(inner_item.url)}
-                                      >
-                                        {inner_item.title}
-                                      </UniversalLink>
-                                    ) : (
-                                      <UniversalLink
-                                        openLinkInNewTab={true}
-                                        href={flattenToAppURL(inner_item.url)}
-                                        rel="noopener noreferrer"
-                                      >
-                                        {inner_item.title}
-                                      </UniversalLink>
-                                    )}
+                          {content.approfondimento[i].children.map(
+                            (inner_item, x) =>
+                              inner_item.type === 'Modulo' ? (
+                                <Module
+                                  item={{
+                                    ...inner_item,
+                                    '@id': inner_item.url.replace(
+                                      /\/view$/,
+                                      '',
+                                    ),
+                                  }}
+                                  key={inner_item.url + x}
+                                />
+                              ) : (
+                                <div
+                                  className={
+                                    'genericcard card card-teaser shadow p-3 mt-3 rounded'
+                                  }
+                                  key={inner_item.url + x}
+                                >
+                                  <div className="card-body">
+                                    <div className="card-text">
+                                      <p>{item.Type}</p>
+                                      <Icon
+                                        className={undefined}
+                                        icon={
+                                          inner_item.type === 'File'
+                                            ? 'it-clip'
+                                            : 'it-external-link'
+                                        }
+                                        padding={false}
+                                      />
+                                      {inner_item.type === 'File' ? (
+                                        <UniversalLink
+                                          href={flattenToAppURL(inner_item.url)}
+                                        >
+                                          {inner_item.title}
+                                        </UniversalLink>
+                                      ) : (
+                                        <UniversalLink
+                                          openLinkInNewTab={true}
+                                          href={flattenToAppURL(inner_item.url)}
+                                          rel="noopener noreferrer"
+                                        >
+                                          {inner_item.title}
+                                        </UniversalLink>
+                                      )}
+                                    </div>
                                   </div>
                                 </div>
-                              </div>
-                            ),
+                              ),
                           )}
                         </div>
                       </>

@@ -43,6 +43,9 @@ export PageHeaderNav from '@italia/components/ItaliaTheme/View/Commons/PageHeade
 export SkipToMainContent from '@italia/components/ItaliaTheme/View/Commons/SkipToMainContent';
 export TrasparenzaFields from '@italia/components/ItaliaTheme/View/Commons/TrasparenzaFields';
 
+export Modules from '@italia/components/ItaliaTheme/View/Commons/Modules';
+export Module from '@italia/components/ItaliaTheme/View/Commons/Module';
+
 export GenericCard from '@italia/components/ItaliaTheme/View/Commons/GenericCard';
 export NewsCard from '@italia/components/ItaliaTheme/View/Commons/NewsCard';
 export OfficeCard from '@italia/components/ItaliaTheme/View/Commons/OfficeCard';

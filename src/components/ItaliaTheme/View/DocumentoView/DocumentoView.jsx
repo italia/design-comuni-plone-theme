@@ -6,7 +6,6 @@
 import React, { useState, createRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import Modules from '@italia/components/ItaliaTheme/View/DocumentoView/Modules';
 import { contentFolderHasItems } from '@italia/helpers';
 import {
   Gallery,
@@ -26,6 +25,7 @@ import {
   RelatedItemInEvidence,
   richTextHasContent,
   SkipToMainContent,
+  Modules,
 } from '@italia/components/ItaliaTheme/View';
 
 const messages = defineMessages({
