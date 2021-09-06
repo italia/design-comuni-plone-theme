@@ -5,8 +5,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import Module from '@italia/components/ItaliaTheme/View/DocumentoView/Module';
-import { RichTextArticle } from '@italia/components/ItaliaTheme/View';
+import { RichTextArticle, Module } from '@italia/components/ItaliaTheme/View';
 
 /**
  * Modules view component class.
