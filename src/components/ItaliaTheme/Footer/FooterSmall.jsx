@@ -11,6 +11,7 @@ import { getSiteProperty } from '@italia/helpers';
 import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getSubFooter, getItemsByPath } from '@italia/addons/volto-subfooter';
+import { flattenToAppURL } from '@plone/volto/helpers';
 
 const messages = defineMessages({
   goToPage: {
@@ -30,8 +31,8 @@ const FooterSmall = () => {
   const dispatch = useDispatch();
   const [links, setLinks] = useState([]);
 
-  const menuItems = useSelector((state) => state.subFooter?.result);
-  const items = getItemsByPath(menuItems, pathname)?.filter(
+  const subFooter = useSelector((state) => state.subFooter?.result);
+  const subFooterItems = getItemsByPath(subFooter, pathname)?.filter(
     (item) => item.visible,
   );
 
@@ -44,19 +45,23 @@ const FooterSmall = () => {
     setLinks(_links);
   }, [intl.locale]);
 
-  return items?.length > 0 || links.length > 0 ? (
+  return subFooterItems?.length > 0 || links.length > 0 ? (
     <div className="it-footer-small-prints clearfix">
       <Container tag="div">
         <h3 className="sr-only">{intl.formatMessage(messages.goToPage)}</h3>
         <ul className="it-footer-small-prints-list list-inline mb-0 d-flex flex-column flex-md-row">
-          {items?.length > 0 &&
-            items.map((item) => (
-              <li className="list-inline-item" key={item.url}>
-                <UniversalLink href={item.url} title={item.title}>
-                  {item.title}
-                </UniversalLink>
-              </li>
-            ))}
+          {subFooterItems?.length > 0 &&
+            subFooterItems.map((item, index) => {
+              let url =
+                item.href || flattenToAppURL(item.linkUrl?.[0]?.['@id']) || '/';
+              return (
+                <li className="list-inline-item" key={url + index}>
+                  <UniversalLink href={url} title={item.title}>
+                    {item.title}
+                  </UniversalLink>
+                </li>
+              );
+            })}
           {links?.length > 0 &&
             links.map((link) => (
               <li className="list-inline-item" key={link.url}>
