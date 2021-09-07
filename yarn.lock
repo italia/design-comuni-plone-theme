@@ -17852,9 +17852,9 @@ volto-subblocks@collective/volto-subblocks#v1.1.0:
     react-dnd "^5.0.0"
     react-dnd-html5-backend "^5.0.1"
 
-volto-subfooter@collective/volto-subfooter#v1.0.0:
-  version "1.0.0"
-  resolved "https://codeload.github.com/collective/volto-subfooter/tar.gz/5bb372e22c7c134ecccf0a0ebbc3eb38d6fd107b"
+volto-subfooter@collective/volto-subfooter#v1.0.1:
+  version "1.0.1"
+  resolved "https://codeload.github.com/collective/volto-subfooter/tar.gz/2ae54ffb5e5cd7f682ffc9407c1f242010d1ea8d"
 
 volto-subsites@collective/volto-subsites#v2.0.1:
   version "2.0.1"

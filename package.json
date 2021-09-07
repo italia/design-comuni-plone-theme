@@ -206,7 +206,7 @@
     "volto-secondarymenu": "collective/volto-secondarymenu#v2.1.4",
     "volto-social-settings": "collective/volto-social-settings#v2.1.0",
     "volto-subblocks": "collective/volto-subblocks#v1.1.0",
-    "volto-subfooter": "collective/volto-subfooter#v1.0.0",
+    "volto-subfooter": "collective/volto-subfooter#v1.0.1",
     "volto-subsites": "collective/volto-subsites#v2.0.1",
     "volto-venue": "collective/volto-venue#v3.0.1"
   },

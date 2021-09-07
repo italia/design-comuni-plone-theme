@@ -95,6 +95,6 @@
     "path": "src",
     "https": "https://github.com/collective/volto-subfooter.git",
     "url": "git@github.com:collective/volto-subfooter.git",
-    "branch": "main"
+    "tag": "v1.0.1"
   }
 }
