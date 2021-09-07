@@ -258,7 +258,7 @@ const BandoView = ({ content, location }) => {
                                 }
                                 padding={false}
                               />
-                              <UniversalLink href={flattenToAppURL(item.path)}>
+                              <UniversalLink href={flattenToAppURL(item.url)}>
                                 {item.title}
                               </UniversalLink>
                             </div>
