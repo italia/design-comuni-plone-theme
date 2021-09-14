@@ -71,6 +71,18 @@ $docs-section-margin: 3em;
             }
           }
 
+          a.modulistica-link {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+
+            svg {
+              width: 2em;
+              font-size: 1.2em;
+            }
+          }
+
           @media (max-width: #{map-get($grid-breakpoints, md)}) {
             flex-wrap: wrap;
             align-items: unset;
