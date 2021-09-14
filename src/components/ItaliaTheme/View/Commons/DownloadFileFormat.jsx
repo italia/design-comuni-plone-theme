@@ -26,7 +26,7 @@ const DownloadFileFormat = ({
   const formats = {
     'text/rtf': { icon: { lib: 'far', name: 'file-alt' }, format_name: 'rtf' },
     'application/pdf': {
-      icon: { lib: 'far', name: 'file-pdf'},
+      icon: { lib: 'far', name: 'file-pdf' },
       format_name: 'pdf',
     },
     'application/zip': {

@@ -7,6 +7,7 @@ import React from 'react';
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { DownloadFileFormat } from '@italia/components/ItaliaTheme/View';
+import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
 import cx from 'classnames';
 
 /**
@@ -15,6 +16,33 @@ import cx from 'classnames';
  * @params {object} content Content object.
  * @returns {string} Markup of the component.
  */
+
+const Downloads = ({ item }) => {
+  return item['@type'] === 'Modulo' ? (
+    <React.Fragment>
+      <div className="title">{item.title}</div>
+      <div className="downloads">
+        <DownloadFileFormat file={item?.file_principale} />
+        <DownloadFileFormat file={item?.formato_alternativo_1} />
+        <DownloadFileFormat file={item?.formato_alternativo_2} />
+      </div>
+    </React.Fragment>
+  ) : (
+    <UniversalLink
+      href={flattenToAppURL(item['@id'])}
+      title={item.title}
+      className="modulistica-link"
+    >
+      <div className="title">{item.title}</div>
+      <Icon
+        icon={['fas', 'link']}
+        alt={item.title}
+        role="presentation"
+        aria-hidden={true}
+      />
+    </UniversalLink>
+  );
+};
 
 const DocRow = ({ doc }) => {
   return (
@@ -31,24 +59,13 @@ const DocRow = ({ doc }) => {
             {/* {doc.items?.length > 1 && ` - ${doc.items[0]?.title}`} */}
           </UniversalLink>
         </div>
-        {doc.items?.length === 1 && (
-          <div className="downloads">
-            <DownloadFileFormat file={doc.items[0]?.file_principale} />
-            <DownloadFileFormat file={doc.items[0]?.formato_alternativo_1} />
-            <DownloadFileFormat file={doc.items[0]?.formato_alternativo_2} />
-          </div>
-        )}
+        {doc.items?.length === 1 && <Downloads item={doc.items[0]} />}
       </div>
       {doc.items?.length > 1 && (
         <>
           {doc.items.map((modulo) => (
             <div className="doc modulo" key={modulo['@id']}>
-              <div className="title">{modulo.title}</div>
-              <div className="downloads">
-                <DownloadFileFormat file={modulo?.file_principale} />
-                <DownloadFileFormat file={modulo?.formato_alternativo_1} />
-                <DownloadFileFormat file={modulo?.formato_alternativo_2} />
-              </div>
+              <Downloads item={modulo} />
             </div>
           ))}
         </>
