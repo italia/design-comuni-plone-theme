@@ -1,3 +1,32 @@
+## [5.5.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.4.2...v5.5.0) (2021-09-14)
+
+
+### Features
+
+* add link handling in cartella modulistica ([34a4094](https://github.com/RedTurtle/design-volto-theme/commit/34a40943f0c7d5ca424414193fc12ab9dff46481))
+* add modulo in bando attachments ([eb8cfdc](https://github.com/RedTurtle/design-volto-theme/commit/eb8cfdc23c2e2e9011a45d84f85bd8eb7897cbcf))
+
+
+### Bug Fixes
+
+* accordion content max height ([2107754](https://github.com/RedTurtle/design-volto-theme/commit/2107754c5c38098214e218c0d85c90b7f94a78b8))
+* bando attachment url ([c2db361](https://github.com/RedTurtle/design-volto-theme/commit/c2db361b7b0a35d37921989725054357c3d3e0ae))
+* cta block delete button color ([f0ee2a6](https://github.com/RedTurtle/design-volto-theme/commit/f0ee2a681ff67672fe7a266013c63ce0368a26e0))
+
+
+### Changes
+
+* modules in bando view with Module component for different formats ([7b0489e](https://github.com/RedTurtle/design-volto-theme/commit/7b0489e625c899cd2cccb2a0f967d0e1a70f2129))
+
+
+### Maintenance
+
+* expand folder-contents width ([423deb7](https://github.com/RedTurtle/design-volto-theme/commit/423deb70ebe2fa78f48ed5c04ace7416e488148e))
+* move module(s) component(s) to commons ([25a84d2](https://github.com/RedTurtle/design-volto-theme/commit/25a84d29b0cb4fbb6d9f696ed5a6370ebd9a72c0))
+* update volto ([07a18b7](https://github.com/RedTurtle/design-volto-theme/commit/07a18b7da9147d3180731e55ead8ad8fa79c5029))
+* update volto ([8f0ed31](https://github.com/RedTurtle/design-volto-theme/commit/8f0ed312048fcfc86f4b7ecf87621b84fbe31398))
+* update volto-dropdownmenu ([36995ec](https://github.com/RedTurtle/design-volto-theme/commit/36995ec3edca31b93b16833f158a031c5b795574))
+
 ### [5.4.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.4.1...v5.4.2) (2021-08-30)
 
 
