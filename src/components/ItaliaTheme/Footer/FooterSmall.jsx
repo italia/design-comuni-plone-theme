@@ -4,6 +4,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
+import cx from 'classnames';
 import { UniversalLink } from '@plone/volto/components';
 import { defineMessages, useIntl } from 'react-intl';
 import { Container } from 'design-react-kit/dist/design-react-kit';
@@ -55,7 +56,12 @@ const FooterSmall = () => {
               let url =
                 item.href || flattenToAppURL(item.linkUrl?.[0]?.['@id']) || '/';
               return (
-                <li className="list-inline-item" key={url + index}>
+                <li
+                  className={cx('list-inline-item', {
+                    'in-evidence': item.inEvidence,
+                  })}
+                  key={url + index}
+                >
                   <UniversalLink href={url} title={item.title}>
                     {item.title}
                   </UniversalLink>
