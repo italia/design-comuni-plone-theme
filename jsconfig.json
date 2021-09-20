@@ -39,6 +39,9 @@
             ],
             "@italia/addons/volto-form-block": [
                 "addons/volto-form-block/src"
+            ],
+            "@italia/addons/volto-subfooter": [
+                "addons/volto-subfooter/src"
             ]
         },
         "baseUrl": "src"
