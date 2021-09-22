@@ -3,6 +3,7 @@ CUSTOMIZATIONS:
 - get content from state.content.data and not from data.properties.content,
 - added listingRef to scroll to start of listing, and not to start of page
 - added additional filters
+- added additional fields to pass to @querystring-search (config.settings.querystringAdditionalFields)
 */
 import React, { createRef, useEffect } from 'react';
 import hoistNonReactStatics from 'hoist-non-react-statics';
@@ -17,7 +18,14 @@ function getDisplayName(WrappedComponent) {
 }
 
 const getAdaptedQuery = (querystring, b_size) => {
-  const copyFields = ['limit', 'query', 'sort_on', 'sort_order', 'depth'];
+  const copyFields = [
+    'limit',
+    'query',
+    'sort_on',
+    'sort_order',
+    'depth',
+    ...(config.settings.querystringAdditionalFields ?? []),
+  ];
 
   return Object.assign(
     {
@@ -146,7 +154,16 @@ export default function withQuerystringResults(WrappedComponent) {
     }, [data]);
 
     const doSearch = (data = { querystring: { query: [] } }, page = 1) => {
-      const _dataQuerystring = data?.querystring ?? data; //Backward compatibility before blockSchema
+      let _dataQuerystring = data?.querystring ?? data; //Backward compatibility before blockSchema
+
+      //additional fields to pass to @querystring-search
+      if (config.settings.querystringAdditionalFields?.length > 0) {
+        config.settings.querystringAdditionalFields.forEach((f) => {
+          if (data[f] != null) {
+            _dataQuerystring[f] = data[f];
+          }
+        });
+      }
 
       if (data.querystring?.query?.length > 0 || additionalFilters.length > 0) {
         let query = [
