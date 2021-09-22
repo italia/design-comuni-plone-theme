@@ -1,3 +1,29 @@
+## [5.6.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.5.0...v5.6.0) (2021-09-22)
+
+
+### Features
+
+* add subfooter ([16a33b7](https://github.com/RedTurtle/design-volto-theme/commit/16a33b79b342832cf363991dce8ec924686f2b78))
+* added settings.querystringAdditionalFieldsto pass more params to [@querystring-search](https://github.com/querystring-search) ([912becc](https://github.com/RedTurtle/design-volto-theme/commit/912beccbd0366c6103ed6ca85258e98f5a95b382))
+
+
+### Bug Fixes
+
+* subfooter branch ([3487aa4](https://github.com/RedTurtle/design-volto-theme/commit/3487aa4a1480db4393b54cf4f9031a63da181301))
+
+
+### Changes
+
+* subfooter links ([17f5094](https://github.com/RedTurtle/design-volto-theme/commit/17f5094d39e66031a561623fc207682b73ae7429))
+
+
+### Maintenance
+
+* add volto-subfooter 1.0.0 ([ccf34e4](https://github.com/RedTurtle/design-volto-theme/commit/ccf34e45aafc95d604f44bd7de7bfbc5ed4b675d))
+* update subfooter ([88ba579](https://github.com/RedTurtle/design-volto-theme/commit/88ba57911462047bb2e89cdda14e518a8ef5ffa2))
+* update subfooter ([dfb3242](https://github.com/RedTurtle/design-volto-theme/commit/dfb32426e149dd8e9de7ddfbb0a74a7b1e039c58))
+* updated volto and added in-evidence class to footerSmall ([d9f2b0b](https://github.com/RedTurtle/design-volto-theme/commit/d9f2b0b07390a4c55857c92c7d153314dea6fc8d))
+
 ## [5.5.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.4.2...v5.5.0) (2021-09-14)
 
 
