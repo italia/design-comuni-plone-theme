@@ -1,5 +1,9 @@
 import { defineMessages } from 'react-intl';
-import { addSchemaField } from '@italia/config/Blocks/ListingOptions';
+import {
+  addSchemaField,
+  addDefaultAdditionalOptions,
+} from '@italia/config/Blocks/ListingOptions';
+
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({
@@ -73,6 +77,8 @@ const addDefaultOptions = (schema, formData, intl, position = 0) => {
     );
     pos++;
   }
+
+  pos = addDefaultAdditionalOptions(schema, formData, intl, pos);
 
   return pos;
 };

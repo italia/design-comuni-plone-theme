@@ -3,6 +3,7 @@ export {
   templatesOptions,
 } from '@italia/config/Blocks/ListingOptions/utils';
 export addDefaultOptions from '@italia/config/Blocks/ListingOptions/defaultOptions';
+export addDefaultAdditionalOptions from '@italia/config/Blocks/ListingOptions/defaultAdditionalOptions';
 export {
   addSimpleCardTemplateOptions,
   SimpleCardTemplateAppearance_COMPACT,
