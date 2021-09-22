@@ -1,3 +1,10 @@
+### [5.6.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.6.1...v5.6.2) (2021-09-22)
+
+
+### Maintenance
+
+* added defaultAdditionalOptions for listing variations ([6250250](https://github.com/RedTurtle/design-volto-theme/commit/62502508b14408ed172980d3363f73ca52484c9d))
+
 ### [5.6.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.6.0...v5.6.1) (2021-09-22)
 
 
