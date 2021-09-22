@@ -1,3 +1,10 @@
+### [5.6.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.6.0...v5.6.1) (2021-09-22)
+
+
+### Maintenance
+
+* changed default for smallFooterLinks to empty because is editable from control panel ([f217d0f](https://github.com/RedTurtle/design-volto-theme/commit/f217d0f5ca8c65c80e908238774dd7ad4ee03e85))
+
 ## [5.6.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.5.0...v5.6.0) (2021-09-22)
 
 
