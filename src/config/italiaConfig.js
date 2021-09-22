@@ -82,6 +82,7 @@ export default function applyConfig(voltoConfig) {
         errorPages: true,
       },
     },
+    querystringAdditionalFields: [],
     contentIcons: {
       ...config.settings.contentIcons,
       Document: faFileInvoiceSVG,
