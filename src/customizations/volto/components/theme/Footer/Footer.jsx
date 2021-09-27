@@ -5,13 +5,14 @@
 
 import React from 'react';
 import { useGoogleAnalytics } from '@italia/addons/volto-google-analytics';
-
+import { Container } from 'design-react-kit/dist/design-react-kit';
 import {
   FooterMain,
   FooterSmall,
   SubsiteFooter,
 } from '@italia/components/ItaliaTheme/';
 import { CookieBanner } from '@italia/addons/volto-cookie-banner';
+import { CustomerSatisfaction } from '@italia/addons/volto-customer-satisfaction';
 
 /**
  * Footer component class.
@@ -24,6 +25,10 @@ const Footer = ({ intl }) => {
 
   let content = (
     <>
+      <Container>
+        <CustomerSatisfaction />
+      </Container>
+
       <SubsiteFooter />
       <footer className="it-footer" id="footer">
         <FooterMain />
