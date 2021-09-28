@@ -16,8 +16,7 @@ import {
   resetSubmitCustomerSatisfaction,
   GoogleReCaptchaWidget,
 } from 'volto-customer-satisfaction';
-
-import 'volto-customer-satisfaction/components/CustomerSatisfaction/customer-satisfaction.css';
+import { isCmsUi } from '@plone/volto/helpers';
 
 const messages = defineMessages({
   title: {
@@ -70,11 +69,14 @@ const CustomerSatisfaction = () => {
       setSatisfaction(s);
     }
   };
+
   useEffect(() => {
+    setSatisfaction(null);
+    setValidToken(null);
     return () => {
       dispatch(resetSubmitCustomerSatisfaction());
     };
-  }, []);
+  }, [path]);
 
   useEffect(() => {
     setFormData({
@@ -110,83 +112,120 @@ const CustomerSatisfaction = () => {
     action = 'homepage';
   }
 
+  if (isCmsUi(path)) {
+    return;
+  }
+
+  const alertTransition = {
+    appear: true,
+    baseClass: 'fade',
+    baseClassActive: 'show',
+    enter: true,
+    exit: true,
+    in: true,
+    mountOnEnter: false,
+    tag: 'div',
+    timeout: 150,
+    unmountOnExit: true,
+  };
+
   return (
     <div className="customer-satisfaction">
       <h2 id="cs-radiogroup-label">{intl.formatMessage(messages.title)}</h2>
-      {!submitResults?.loading && !submitResults.loaded && (
-        <form
-          onSubmit={() => {
-            sendFormData();
-          }}
+      {submitResults?.error && (
+        <Alert
+          color="danger"
+          fade
+          isOpen
+          tag="div"
+          transition={alertTransition}
+          className="mt-4"
         >
-          <div className="buttons" aria-labelledby="cs-radiogroup-label">
-            <Button
-              color="success"
-              icon
-              outline={satisfaction !== true}
-              onClick={(e) => {
-                changeSatisfaction(e, true);
-              }}
-              aria-controls="cs-more"
-              active={satisfaction === true}
-              title={intl.formatMessage(messages.yes)}
-            >
-              <FontAwesomeIcon icon={['far', 'thumbs-up']} />
-            </Button>
-
-            <Button
-              color="danger"
-              icon
-              outline={satisfaction !== false}
-              onClick={(e) => {
-                changeSatisfaction(e, false);
-              }}
-              aria-controls="cs-more"
-              active={satisfaction === false}
-              title={intl.formatMessage(messages.no)}
-            >
-              <FontAwesomeIcon icon={['far', 'thumbs-down']} />
-            </Button>
-          </div>
-
-          <div
-            id="cs-more"
-            role="region"
-            aria-expanded={satisfaction !== null}
-            aria-hidden={satisfaction != null}
+          <h4>Error</h4>
+          {submitResults.error.response.body.message}
+        </Alert>
+      )}
+      {!submitResults.error &&
+        !submitResults?.loading &&
+        !submitResults.loaded && (
+          <form
+            onSubmit={() => {
+              sendFormData();
+            }}
           >
-            <div className="comment">
-              <Input
-                id="cs-comment"
-                label={intl.formatMessage(messages.suggestions_placeholder)}
-                onChange={(e) => {
-                  setFormData({ ...formData, comment: e.target.value });
-                }}
-                rows="3"
-                type="textarea"
-              />
-            </div>
-
-            <GoogleReCaptchaWidget
-              key={action}
-              onVerify={onVerifyCaptcha}
-              action={action}
-            />
-
-            <div className="submit-wrapper">
+            <div className="buttons" aria-labelledby="cs-radiogroup-label">
               <Button
-                type="submit"
-                color="primary"
-                disabled={captcha && !validToken}
+                color="success"
+                icon
+                outline={satisfaction !== true}
+                onClick={(e) => {
+                  changeSatisfaction(e, true);
+                }}
+                aria-controls="cs-more"
+                active={satisfaction === true}
+                title={intl.formatMessage(messages.yes)}
               >
-                {intl.formatMessage(messages.submit)}
+                <FontAwesomeIcon icon={['far', 'thumbs-up']} />
+              </Button>
+
+              <Button
+                color="danger"
+                icon
+                outline={satisfaction !== false}
+                onClick={(e) => {
+                  changeSatisfaction(e, false);
+                }}
+                aria-controls="cs-more"
+                active={satisfaction === false}
+                title={intl.formatMessage(messages.no)}
+              >
+                <FontAwesomeIcon icon={['far', 'thumbs-down']} />
               </Button>
             </div>
-          </div>
-        </form>
-      )}
+
+            <div
+              id="cs-more"
+              role="region"
+              aria-expanded={satisfaction !== null}
+              aria-hidden={satisfaction != null}
+            >
+              <div className="comment">
+                <Input
+                  id="cs-comment"
+                  label={intl.formatMessage(messages.suggestions_placeholder)}
+                  onChange={(e) => {
+                    setFormData({ ...formData, comment: e.target.value });
+                  }}
+                  rows="3"
+                  type="textarea"
+                />
+              </div>
+
+              <GoogleReCaptchaWidget
+                key={action}
+                onVerify={onVerifyCaptcha}
+                action={action}
+              />
+
+              <div className="submit-wrapper">
+                <Button
+                  type="submit"
+                  color="primary"
+                  disabled={captcha && !validToken}
+                >
+                  {intl.formatMessage(messages.submit)}
+                </Button>
+              </div>
+            </div>
+          </form>
+        )}
       {submitResults?.loading && (
-        <Progress indeterminate={true} role="progressbar" tag="div" />
+        <Progress
+          indeterminate={true}
+          role="progressbar"
+          tag="div"
+          className="mt-4"
+        />
       )}
       {submitResults?.loaded && (
         <Alert
@@ -194,18 +233,8 @@ const CustomerSatisfaction = () => {
           fade
           isOpen
           tag="div"
-          transition={{
-            appear: true,
-            baseClass: 'fade',
-            baseClassActive: 'show',
-            enter: true,
-            exit: true,
-            in: true,
-            mountOnEnter: false,
-            tag: 'div',
-            timeout: 150,
-            unmountOnExit: true,
-          }}
+          transition={alertTransition}
+          className="mt-4"
         >
           <h4>{intl.formatMessage(messages.thank_you)}</h4>
         </Alert>

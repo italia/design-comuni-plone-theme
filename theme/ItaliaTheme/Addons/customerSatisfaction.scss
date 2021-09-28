@@ -1,6 +1,5 @@
 .customer-satisfaction {
-  border-top: 1px solid $gray-border;
-  padding-top: 1rem;
+  margin: 1rem 0;
 
   h2 {
     font-size: 1.2rem;
@@ -11,6 +10,29 @@
 
     .btn {
       margin-right: 0.5rem;
+    }
+  }
+
+  .comment {
+    margin: 1rem 0;
+
+    textarea {
+      height: 6rem;
+    }
+  }
+
+  .submit-wrapper {
+    margin: 2rem 0;
+  }
+
+  #cs-more {
+    overflow: hidden;
+    max-height: 0;
+
+    transition: 0.6s max-height ease;
+
+    &[aria-expanded='true'] {
+      max-height: 800px;
     }
   }
 }
