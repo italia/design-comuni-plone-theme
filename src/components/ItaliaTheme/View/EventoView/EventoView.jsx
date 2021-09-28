@@ -290,7 +290,10 @@ const EventoView = ({ content, location }) => {
             {(richTextHasContent(content?.organizzato_da_esterno) ||
               content?.organizzato_da_interno.length > 0 ||
               content?.supportato_da?.length > 0 ||
-              content.web?.length > 0) && (
+              content.web?.length > 0 ||
+              content?.telefono ||
+              content?.email ||
+              content?.fax) && (
               <RichTextArticle
                 tag_id="contatti"
                 title={intl.formatMessage(messages.contatti)}
@@ -314,7 +317,10 @@ const EventoView = ({ content, location }) => {
                 )}
 
                 {/* ---organizzato da esterno */}
-                {richTextHasContent(content?.organizzato_da_esterno) ? (
+                {richTextHasContent(content?.organizzato_da_esterno) ||
+                content?.telefono ||
+                content?.email ||
+                content?.fax ? (
                   <div className="mb-5">
                     <Card
                       className="card card-teaser rounded shadow mt-3"
@@ -336,7 +342,8 @@ const EventoView = ({ content, location }) => {
                             <ContactLink fax={content.fax} label={true} />
                           </p>
                         )}
-                        {richTextHasContent(content?.reperibilita) && (
+                        {content?.reperibilita?.replace(/(<([^>]+)>)/g, '')
+                          .length > 0 && (
                           <p className="card-text mt-3">
                             {content?.reperibilita?.replace(/(<([^>]+)>)/g, '')}
                           </p>
