@@ -17798,9 +17798,9 @@ volto-cookie-banner@collective/volto-cookie-banner#v2.0.0:
   dependencies:
     react-cookie-consent "^3.0.0"
 
-volto-customer-satisfaction@collective/volto-customer-satisfaction#v0.2.0:
-  version "0.1.0"
-  resolved "https://codeload.github.com/collective/volto-customer-satisfaction/tar.gz/3bebe89f45963c83a4acc488d5ca7a192a139f5b"
+volto-customer-satisfaction@collective/volto-customer-satisfaction#v0.2.2:
+  version "0.2.2"
+  resolved "https://codeload.github.com/collective/volto-customer-satisfaction/tar.gz/fa1f345c1eb9a7deddd7cbb7c14733e3e55e7507"
   dependencies:
     react-google-recaptcha-v3 "1.9.5"
 
