@@ -14,7 +14,7 @@ import {
   SubsiteFooter,
 } from '@italia/components/ItaliaTheme/';
 import { CookieBanner } from '@italia/addons/volto-cookie-banner';
-import { CustomerSatisfaction } from 'volto-customer-satisfaction';
+import { CustomerSatisfaction } from '@italia/components';
 
 /**
  * Footer component class.

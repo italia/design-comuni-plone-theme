@@ -905,6 +905,30 @@ msgstr ""
 msgid "customer_satisfaction"
 msgstr ""
 
+#: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
+msgid "customer_satisfaction_no"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
+msgid "customer_satisfaction_submit"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
+msgid "customer_satisfaction_suggestions_placeholder"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
+msgid "customer_satisfaction_thank_you"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
+msgid "customer_satisfaction_title"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
+msgid "customer_satisfaction_yes"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "data_conclusione_incarico"
 msgstr ""

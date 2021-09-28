@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-08-24T08:02:07.803Z\n"
+"POT-Creation-Date: 2021-09-28T14:00:52.226Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1092,6 +1092,36 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 # defaultMessage: Risultati indagini di customer satisfaction
 msgid "customer_satisfaction"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
+# defaultMessage: No
+msgid "customer_satisfaction_no"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
+# defaultMessage: Submit your comment
+msgid "customer_satisfaction_submit"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
+# defaultMessage: Explain us why, and help us improve the quality of the site
+msgid "customer_satisfaction_suggestions_placeholder"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
+# defaultMessage: Thank you for your feedback!
+msgid "customer_satisfaction_thank_you"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
+# defaultMessage: Was this page useful to you?
+msgid "customer_satisfaction_title"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
+# defaultMessage: Yes
+msgid "customer_satisfaction_yes"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
