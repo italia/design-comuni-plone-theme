@@ -18,6 +18,7 @@ export const CardPersona = ({
   natural_image_size,
   listingText,
   icon,
+  type,
   isEditMode,
 }) => {
   return (
@@ -28,12 +29,11 @@ export const CardPersona = ({
     >
       <div className="card-image-wrapper">
         <CardBody>
-          <CardCategory iconName={icon}>
-            <ListingCategory
-              category={item?.design_italia_meta_type}
-              item={item}
-            />
-          </CardCategory>
+          {(icon || type) && (
+            <CardCategory iconName={icon}>
+              <ListingCategory category={type} item={item} />
+            </CardCategory>
+          )}
           <CardTitle tag="h3">
             <UniversalLink
               item={!isEditMode ? item : null}
