@@ -12,3 +12,17 @@
     }
   }
 }
+
+//tablet and desktop
+@media (min-width: #{map-get($grid-breakpoints, md)}) {
+  .parent-site-menu {
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+
+    li.nav-item {
+      display: flex;
+      max-width: 10rem;
+      align-items: center;
+    }
+  }
+}
