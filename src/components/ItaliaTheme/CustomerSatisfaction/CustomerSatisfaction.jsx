@@ -113,7 +113,7 @@ const CustomerSatisfaction = () => {
   }
 
   if (isCmsUi(path)) {
-    return;
+    return null;
   }
 
   const alertTransition = {
