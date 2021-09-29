@@ -24,7 +24,8 @@ const ParentSiteMenu = () => {
     while (i > 0) {
       let s = url_split.slice(0, i).join('/');
       s = s.length === 0 ? '/' : s;
-      dropdownMenu.map((m) => {
+      // eslint-disable-next-line no-loop-func
+      dropdownMenu.forEach((m) => {
         if (m.rootPath === s) {
           menu = m;
           i = 0;
@@ -35,7 +36,7 @@ const ParentSiteMenu = () => {
   }
 
   return subsite && menu ? (
-    <Nav vertical={false} className="parent-site-menu d-none d-md-flex">
+    <Nav vertical={false} className="parent-site-menu d-none d-lg-flex">
       {menu.items.map((navitem, id) => (
         <NavItem tag="li" key={id}>
           <NavLink
