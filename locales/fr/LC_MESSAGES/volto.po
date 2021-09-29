@@ -905,31 +905,31 @@ msgstr "Curriculum vitae"
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 msgid "customer_satisfaction"
-msgstr ""
+msgstr "Résultats des enquêtes de satisfaction client"
 
 #: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
 msgid "customer_satisfaction_no"
-msgstr ""
+msgstr "No"
 
 #: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
 msgid "customer_satisfaction_submit"
-msgstr ""
+msgstr "Soumettez votre commentaire"
 
 #: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
 msgid "customer_satisfaction_suggestions_placeholder"
-msgstr ""
+msgstr "Dites-nous pourquoi et aidez-nous à améliorer le service"
 
 #: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
 msgid "customer_satisfaction_thank_you"
-msgstr ""
+msgstr "Merci pour vos commentaires!"
 
 #: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
 msgid "customer_satisfaction_title"
-msgstr ""
+msgstr "Est-ce que cette page vous a été utile?"
 
 #: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
 msgid "customer_satisfaction_yes"
-msgstr ""
+msgstr "Oui"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "data_conclusione_incarico"
