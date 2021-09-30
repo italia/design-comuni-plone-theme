@@ -53,7 +53,7 @@ const CustomerSatisfaction = () => {
   const dispatch = useDispatch();
   const [satisfaction, setSatisfaction] = useState(null);
   const [formData, setFormData] = useState({});
-  const captcha = !!process.env.RAZZLE_RECAPTCHA_KEY ? 'GoogleReCaptcha' : null;
+
   const submitResults = useSelector(
     (state) => state.submitCustomerSatisfaction,
   );
@@ -200,19 +200,13 @@ const CustomerSatisfaction = () => {
                   type="textarea"
                 />
               </div>
-
               <GoogleReCaptchaWidget
                 key={action}
                 onVerify={onVerifyCaptcha}
                 action={action}
               />
-
               <div className="submit-wrapper">
-                <Button
-                  type="submit"
-                  color="primary"
-                  disabled={captcha && !validToken}
-                >
+                <Button type="submit" color="primary" disabled={!validToken}>
                   {intl.formatMessage(messages.submit)}
                 </Button>
               </div>
