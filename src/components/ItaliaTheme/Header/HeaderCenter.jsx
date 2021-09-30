@@ -22,6 +22,12 @@ import {
 const HeaderCenter = () => {
   const subsite = useSelector((state) => state.subsite?.data);
 
+  let logoSubsite = (
+    <figure className="icon">
+      <img src={subsite?.subsite_logo.scales.mini.download} alt="" />
+    </figure>
+  );
+
   return (
     <Header small={false} theme="" type="center">
       <HeaderContent>
@@ -29,7 +35,7 @@ const HeaderCenter = () => {
           <UniversalLink
             href={subsite?.['@id'] ? flattenToAppURL(subsite['@id']) : '/'}
           >
-            <Logo />
+            {subsite?.subsite_logo ? logoSubsite : <Logo />}
             <BrandText subsite={subsite} />
           </UniversalLink>
         </div>
