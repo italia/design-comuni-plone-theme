@@ -11,3 +11,9 @@ a.read-more {
     fill: $subsite-link-color;
   }
 }
+
+a {
+  .card .card-body .card-title a:hover {
+    color: darken($subsite-link-color, 10%);
+  }
+}
