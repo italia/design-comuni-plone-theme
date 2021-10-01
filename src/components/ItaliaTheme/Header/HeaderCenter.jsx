@@ -24,7 +24,10 @@ const HeaderCenter = () => {
 
   let logoSubsite = subsite?.subsite_logo && (
     <figure className="icon">
-      <img src={subsite.subsite_logo.scales?.mini?.download} alt="Logo" />
+      <img
+        src={flattenToAppURL(subsite.subsite_logo.scales?.mini?.download)}
+        alt="Logo"
+      />
     </figure>
   );
 
