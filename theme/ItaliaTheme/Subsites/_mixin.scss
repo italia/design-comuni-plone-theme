@@ -51,6 +51,10 @@
       .icon-primary {
         fill: $subsite-primary !important;
       }
+
+      .card .card-body .card-title a:hover {
+        color: darken($subsite-link-color, 10%);
+      }
     }
   }
 }
