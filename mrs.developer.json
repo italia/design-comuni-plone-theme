@@ -102,6 +102,6 @@
     "path": "src",
     "https": "https://github.com/collective/volto-customer-satisfaction.git",
     "url": "git@github.com:collective/volto-customer-satisfaction.git",
-    "tag": "v0.2.0"
+    "tag": "v0.2.5"
   }
 }
