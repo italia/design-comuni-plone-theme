@@ -200,7 +200,7 @@
     "typeface-titillium-web": "0.0.72",
     "volto-blocks-widget": "collective/volto-blocks-widget#v2.0.1",
     "volto-cookie-banner": "collective/volto-cookie-banner#v2.0.0",
-    "volto-customer-satisfaction": "collective/volto-customer-satisfaction#v0.2.3",
+    "volto-customer-satisfaction": "collective/volto-customer-satisfaction#v0.2.5",
     "volto-dropdownmenu": "collective/volto-dropdownmenu#v2.2.9",
     "volto-editablefooter": "RedTurtle/volto-editablefooter#v3.1.3",
     "volto-form-block": "collective/volto-form-block#v2.0.2",
