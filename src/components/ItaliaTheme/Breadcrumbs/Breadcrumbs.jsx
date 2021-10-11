@@ -7,7 +7,6 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
-import { isEqual } from 'lodash';
 import { getBreadcrumbs } from '@plone/volto/actions';
 import { getBaseUrl, flattenToAppURL } from '@plone/volto/helpers';
 
@@ -30,12 +29,17 @@ const Breadcrumbs = ({ pathname }) => {
   const intl = useIntl();
   const dispatch = useDispatch();
 
-  let items = useSelector((state) => state.breadcrumbs.items, isEqual);
+  const breadcrumbs = useSelector((state) => state.breadcrumbs);
+  let items = breadcrumbs?.items;
   const subsite = useSelector((state) => state.subsite?.data);
 
   useEffect(() => {
-    dispatch(getBreadcrumbs(getBaseUrl(pathname)));
-  }, [dispatch, pathname]);
+    if (breadcrumbs) {
+      if (!breadcrumbs.loaded && items.length === 0) {
+        dispatch(getBreadcrumbs(getBaseUrl(pathname)));
+      }
+    }
+  }, [dispatch, pathname, breadcrumbs, items]);
 
   if (subsite) {
     //se siamo nella root di un sottosito, non mostriamo le breadcrumbs. Serve anche per nasconderle dalla pagina dei risultati di ricerca quando si fa la ricerca in un sottosito

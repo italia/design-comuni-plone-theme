@@ -20,17 +20,19 @@ const messages = defineMessages({
 const SocialHeader = () => {
   const intl = useIntl();
   const dispatch = useDispatch();
-  const socialSettings = useSelector((state) => state?.socialSettings?.results); //useSelector((state) => state?.socialSettings?.results);
+  const socialSettings = useSelector((state) => state?.socialSettings); //useSelector((state) => state?.socialSettings?.results);
   const subsite = useSelector((state) => state.subsite?.data);
 
   useEffect(() => {
-    dispatch(getSocialSettings());
-  }, [dispatch]);
+    if (!socialSettings?.loadingResults && socialSettings?.results === null) {
+      dispatch(getSocialSettings());
+    }
+  }, [dispatch, socialSettings]);
 
   const socials =
     subsite?.subsite_social_links?.length > 0
       ? JSON.parse(subsite.subsite_social_links)
-      : socialSettings;
+      : socialSettings?.results;
 
   return (
     socials?.length > 0 && (

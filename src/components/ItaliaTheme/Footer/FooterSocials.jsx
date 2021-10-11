@@ -10,12 +10,14 @@ import { Icon } from '@italia/components/ItaliaTheme';
 import { getSocialSettings } from '@italia/addons/volto-social-settings';
 
 const FooterSocials = () => {
-  const socialSettings = useSelector((state) => state.socialSettings?.results);
+  const socialSettings = useSelector((state) => state.socialSettings);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getSocialSettings());
-  }, [dispatch]);
+    if (!socialSettings?.loadingResults && socialSettings?.results === null) {
+      dispatch(getSocialSettings());
+    }
+  }, [dispatch, socialSettings]);
 
   return (
     socialSettings?.length > 0 && (
