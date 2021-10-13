@@ -892,27 +892,27 @@ msgstr "Risultati indagini di customer satisfaction"
 
 #: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
 msgid "customer_satisfaction_no"
-msgstr ""
+msgstr "No"
 
 #: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
 msgid "customer_satisfaction_submit"
-msgstr ""
+msgstr "Invia il tuo commento"
 
 #: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
 msgid "customer_satisfaction_suggestions_placeholder"
-msgstr ""
+msgstr "Spiegaci perchè, e aiutaci a migliorare il servizio"
 
 #: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
 msgid "customer_satisfaction_thank_you"
-msgstr ""
+msgstr "Grazie per il tuo feedback!"
 
 #: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
 msgid "customer_satisfaction_title"
-msgstr ""
+msgstr "Questa pagina ti è stata utile?"
 
 #: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
 msgid "customer_satisfaction_yes"
-msgstr ""
+msgstr "Sì"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "data_conclusione_incarico"
