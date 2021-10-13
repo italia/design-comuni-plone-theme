@@ -1,3 +1,30 @@
+## [5.7.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.6.3...v5.7.0) (2021-10-13)
+
+
+### Features
+
+* added customer satisfaction ([24fd56c](https://github.com/RedTurtle/design-volto-theme/commit/24fd56c1f841350189235fbd8af8731d4a88bc17))
+
+
+### Bug Fixes
+
+* fix develop:npx cmd ([ed88643](https://github.com/RedTurtle/design-volto-theme/commit/ed88643c46779ce6b460cf3f07b62a661d2e0b0b))
+* fix return ([c738b13](https://github.com/RedTurtle/design-volto-theme/commit/c738b1310415f3acbd8855a1cb41af8c7bccf43a))
+* fix view submit button if no recaptcha is set ([3717e70](https://github.com/RedTurtle/design-volto-theme/commit/3717e708e439efe1662941723f89abcd18bc2c5d))
+* fixed import ([5aa7e85](https://github.com/RedTurtle/design-volto-theme/commit/5aa7e85e212d52137891403761a35e4916c8b34f))
+* layout Indice dei Contenuti list ([a3f3b00](https://github.com/RedTurtle/design-volto-theme/commit/a3f3b005b26904c7392f8e9ea1db741b2a44c02e))
+
+
+### Maintenance
+
+* import volto-customer-satisfaction[#0](https://github.com/RedTurtle/design-volto-theme/issues/0)v.2.0 ([fe39d9c](https://github.com/RedTurtle/design-volto-theme/commit/fe39d9cb1712c7aad42da4a186a0d48cc70f4487))
+* moved CustomerSatisfaction component ([ab54709](https://github.com/RedTurtle/design-volto-theme/commit/ab54709a094582ee89d2485d3642bd94828ac089))
+* updated italian translations ([257e0dd](https://github.com/RedTurtle/design-volto-theme/commit/257e0dd0a4932581c3b28f14e212da620d58f885))
+* updated mrs.dev addon tag ([2aa99cb](https://github.com/RedTurtle/design-volto-theme/commit/2aa99cbc91b90653672f78dd50b38c92504052b5))
+* updated volto-customer-satisfaction ([68b7cd6](https://github.com/RedTurtle/design-volto-theme/commit/68b7cd645063c7371c66068c592f5dd262661205))
+* updated volto-customer-satisfaction ([90c0de6](https://github.com/RedTurtle/design-volto-theme/commit/90c0de64a8f58b1cfecece4bcb4fd9243fd7f753))
+* updated volto-customer-satisfaction version ([992c329](https://github.com/RedTurtle/design-volto-theme/commit/992c3296e324a1ee7a21174664b733c1f740d181))
+
 ### [5.6.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.6.2...v5.6.3) (2021-10-05)
 
 
