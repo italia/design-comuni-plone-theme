@@ -1,3 +1,22 @@
+### [5.6.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.6.2...v5.6.3) (2021-10-05)
+
+
+### Bug Fixes
+
+* fix subsite logo if not exists ([1db5bcf](https://github.com/RedTurtle/design-volto-theme/commit/1db5bcfbea4b6f9aad39129dca24b10afb0b9064))
+* fix subsite logo url ([732ee49](https://github.com/RedTurtle/design-volto-theme/commit/732ee4903d73fe2d5bcb23fedf3a26f5426297d8))
+* moved card subsite styles to card.scss file ([77957de](https://github.com/RedTurtle/design-volto-theme/commit/77957de5ea7a8b0906d4183adec5c2d042d95b3d))
+* organizzatore eventi ([b2dae96](https://github.com/RedTurtle/design-volto-theme/commit/b2dae967c26993c9b57ffb6ec1f41d717e4dc2ee))
+* type card persona ([775b3fb](https://github.com/RedTurtle/design-volto-theme/commit/775b3fb3021cd6d53240091ec501cc8ef632a2ea))
+* update hover card title subsites ([801f203](https://github.com/RedTurtle/design-volto-theme/commit/801f2035f2031be3b201bb1362b1344ecd06fe0c))
+* voci parent site menu sottosito ([df2d935](https://github.com/RedTurtle/design-volto-theme/commit/df2d935ecf5673789b3087e51b1a64549a131f40))
+
+
+### Maintenance
+
+* added subsite logo ([8f7cbf6](https://github.com/RedTurtle/design-volto-theme/commit/8f7cbf64258522992e97f044b0a8070098d3e4fc))
+* updated volto to 14.0.0-alpha.8 ([2de5306](https://github.com/RedTurtle/design-volto-theme/commit/2de530670a758cc4e5443c0a9d0af34aabbdd713))
+
 ### [5.6.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.6.1...v5.6.2) (2021-09-22)
 
 

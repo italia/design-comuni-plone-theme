@@ -88,6 +88,7 @@ const CardWithImageTemplate = ({
                     natural_image_size={natural_image_size}
                     listingText={listingText}
                     icon={icon}
+                    type={category}
                     isEditMode={isEditMode}
                   />
                 ) : (
