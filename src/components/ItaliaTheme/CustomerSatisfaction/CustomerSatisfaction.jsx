@@ -46,6 +46,22 @@ const messages = defineMessages({
   },
 });
 
+const hashFnv32a = (str, seed) => {
+  /*jshint bitwise:false */
+  var i,
+    l,
+    hval = seed === undefined ? 0x811c9dc5 : seed;
+
+  for (i = 0, l = str.length; i < l; i++) {
+    hval ^= str.charCodeAt(i);
+    hval +=
+      (hval << 1) + (hval << 4) + (hval << 7) + (hval << 8) + (hval << 24);
+  }
+
+  // Convert to 8 digit hex string
+  return ('0000000' + (hval >>> 0).toString(16)).substr(-8);
+};
+
 const CustomerSatisfaction = () => {
   const intl = useIntl();
   const location = useLocation();
@@ -111,6 +127,8 @@ const CustomerSatisfaction = () => {
   } else {
     action = 'homepage';
   }
+
+  action = hashFnv32a(action); //serve per evitare action con caratteri > 100. GoogleRecaptchaWidget richiede al max  100 caratteri per la action
 
   if (isCmsUi(path)) {
     return null;
@@ -200,6 +218,7 @@ const CustomerSatisfaction = () => {
                   type="textarea"
                 />
               </div>
+
               <GoogleReCaptchaWidget
                 key={action}
                 onVerify={onVerifyCaptcha}
