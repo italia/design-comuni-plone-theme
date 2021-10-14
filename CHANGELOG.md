@@ -1,3 +1,10 @@
+### [5.7.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.0...v5.7.1) (2021-10-14)
+
+
+### Bug Fixes
+
+* fix customer satisfaction action length ([94a19a2](https://github.com/RedTurtle/design-volto-theme/commit/94a19a216db4854f67cc517796f203cf7b209380))
+
 ## [5.7.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.6.3...v5.7.0) (2021-10-13)
 
 
