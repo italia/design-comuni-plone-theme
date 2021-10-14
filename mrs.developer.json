@@ -46,14 +46,14 @@
     "path": "src",
     "https": "https://github.com/collective/volto-subsites.git",
     "url": "git@github.com:collective/volto-subsites.git",
-    "tag": "v2.0.1"
+    "tag": "v2.0.3"
   },
   "volto-social-settings": {
     "package": "@italia/addons/volto-social-settings",
     "path": "src",
     "https": "https://github.com/collective/volto-social-settings.git",
     "url": "git@github.com:collective/volto-social-settings.git",
-    "tag": "v2.1.0"
+    "tag": "v2.1.2"
   },
   "volto-editablefooter": {
     "package": "@italia/addons/volto-editablefooter",
