@@ -7,11 +7,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
-import { Icon as IconOld } from 'semantic-ui-react';
-import { map, intersection, isObject, isBoolean, find } from 'lodash';
+import { map, intersection } from 'lodash';
 import { defineMessages, injectIntl } from 'react-intl';
 import {
-  getBoolean,
   getVocabFromHint,
   getVocabFromField,
   getVocabFromItems,
@@ -160,8 +158,23 @@ class SelectWidget extends Component {
    * @returns {undefined}
    */
   componentDidMount() {
-    if (!this.props.choices && this.props.vocabBaseUrl) {
+    if (
+      (!this.props.choices || this.props.choices?.length === 0) &&
+      this.props.vocabBaseUrl
+    ) {
       this.props.getVocabulary(this.props.vocabBaseUrl);
+    }
+  }
+
+  componentDidUpdate() {
+    if (
+      !this.state.selectedOption &&
+      this.props.value &&
+      this.props.choices?.length > 0
+    ) {
+      this.setState({
+        selectedOption: normalizeValue(this.props.choices, this.props.value),
+      });
     }
   }
 
@@ -209,111 +222,25 @@ class SelectWidget extends Component {
     this.props.onChange(this.props.id, selectedOption.value);
   };
 
-  getDefaultValues(choices, value) {
-    if (!isObject(value) && isBoolean(value)) {
-      // We have a boolean value, which means we need to provide a "No value"
-      // option
-      const label = find(choices, (o) => getBoolean(o[0]) === value);
-      return label
-        ? {
-            label: label[1],
-            value,
-          }
-        : {};
-    }
-    if (value === 'no-value') {
-      return {
-        label: this.props.intl.formatMessage(messages.no_value),
-        value: 'no-value',
-      };
-    }
-
-    if (isObject(value)) {
-      return {
-        label:
-          value.title !== 'None' && value.title ? value.title : value.token,
-        value: value.token,
-      };
-    }
-
-    if (value && choices.length > 0) {
-      const choice = find(choices, (o) => o[0] === value);
-      return choice ? { label: choice[1], value } : { label: '', value: '' };
-    } else {
-      return {};
-    }
-  }
-
   /**
    * Render method.
    * @method render
    * @returns {string} Markup for the component.
    */
   render() {
-    const { onEdit, id, onDelete, choices, onChange } = this.props;
-
+    const { id, choices, onChange } = this.props;
     // Make sure that both disabled and isDisabled (from the DX layout feat work)
     const disabled = this.props.disabled || this.props.isDisabled;
+    const isMulti = this.props.isMulti
+      ? this.props.isMulti
+      : id === 'roles' || id === 'groups';
     const Select = this.props.reactSelect.default;
-
     const AsyncPaginate =
       this.props.reactSelectAsyncPaginate.AsyncPaginate ||
       this.props.reactSelectAsyncPaginate.default;
 
-    const schema = {
-      fieldsets: [
-        {
-          id: 'default',
-          title: this.props.intl.formatMessage(messages.default),
-          fields: ['title', 'id', 'description', 'choices', 'required'],
-        },
-      ],
-      properties: {
-        id: {
-          type: 'string',
-          title: this.props.intl.formatMessage(messages.idTitle),
-          description: this.props.intl.formatMessage(messages.idDescription),
-        },
-        title: {
-          type: 'string',
-          title: this.props.intl.formatMessage(messages.title),
-        },
-        description: {
-          type: 'string',
-          widget: 'textarea',
-          title: this.props.intl.formatMessage(messages.description),
-        },
-        choices: {
-          type: 'array',
-          title: this.props.intl.formatMessage(messages.choices),
-        },
-        required: {
-          type: 'boolean',
-          title: this.props.intl.formatMessage(messages.required),
-        },
-      },
-      required: ['id', 'title', 'choices'],
-    };
-
     return (
-      <FormFieldWrapper {...this.props} draggable={true}>
-        {onEdit && (
-          <div className="toolbar">
-            <button
-              onClick={() => onEdit(id, schema)}
-              className="item ui noborder button"
-            >
-              <IconOld name="write square" size="large" color="blue" />
-            </button>
-            <button
-              aria-label={this.props.intl.formatMessage(messages.close)}
-              className="item ui noborder button"
-              onClick={() => onDelete(id)}
-            >
-              <IconOld name="close" size="large" color="red" />
-            </button>
-          </div>
-        )}
+      <FormFieldWrapper {...this.props}>
         {this.props.vocabBaseUrl ? (
           <>
             <AsyncPaginate
@@ -344,11 +271,7 @@ class SelectWidget extends Component {
             isDisabled={disabled}
             className="react-select-container"
             classNamePrefix="react-select"
-            isMulti={
-              this.props.isMulti
-                ? this.props.isMulti
-                : id === 'roles' || id === 'groups'
-            }
+            isMulti={isMulti}
             options={[
               ...map(choices, (option) => ({
                 value: option[0],
@@ -379,7 +302,8 @@ class SelectWidget extends Component {
             onChange={(selectedOption) => {
               this.setState({ selectedOption });
               let dataValue = [];
-              if (Array.isArray(selectedOption)) {
+              if (isMulti) {
+                //selectedOption is an array
                 for (let obj of selectedOption) {
                   dataValue.push(obj.value);
                 }
@@ -398,6 +322,8 @@ class SelectWidget extends Component {
     );
   }
 }
+
+export const SelectWidgetComponent = injectIntl(SelectWidget);
 
 export default compose(
   injectIntl,
