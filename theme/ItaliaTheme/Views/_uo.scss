@@ -7,6 +7,17 @@ body.contenttype-unitaorganizzativa {
     a:first-of-type {
       margin-left: 0;
     }
+
+    .ruolo-persone-struttura {
+      margin-bottom: 0.3rem;
+
+      h5 {
+        display: inline-block;
+        margin-right: 0.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+    }
   }
 
   #geocoded-result {
