@@ -48,6 +48,14 @@ const messages = defineMessages({
     id: 'tipologia_organizzazione',
     defaultMessage: 'Tipologia organizzazione',
   },
+  legami_struttura_padre: {
+    id: 'legami_struttura_padre',
+    defaultMessage: 'Servizio o ufficio padre',
+  },
+  legami_strutture_figlie: {
+    id: 'legami_strutture_figlie',
+    defaultMessage: 'Servizi o uffici figli',
+  },
   legami_altre_strutture: {
     id: 'legami_altre_strutture',
     defaultMessage: 'Servizi o uffici di riferimento',
@@ -125,6 +133,11 @@ const UOView = ({ content }) => {
   let documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
 
+  // check uo in items
+  let uoRelatedList = content.items?.filter((item) => {
+    return item['@type'] === 'UnitaOrganizzativa';
+  });
+
   useEffect(() => {
     if (documentBody.current && __CLIENT__) {
       setSideMenuElements(documentBody.current);
@@ -177,6 +190,8 @@ const UOView = ({ content }) => {
             {(content?.legami_con_altre_strutture?.length > 0 ||
               content?.responsabile?.length > 0 ||
               content?.tipologia_organizzazione ||
+              content?.parent ||
+              content?.items?.length > 0 ||
               content?.assessore_riferimento?.length > 0) && (
               <article
                 id="struttura"
@@ -185,6 +200,33 @@ const UOView = ({ content }) => {
                 <h4 id="header-struttura" className="mb-3">
                   {intl.formatMessage(messages.struttura)}
                 </h4>
+                {content.parent && (
+                  <div className="mb-5 mt-3">
+                    <h5>
+                      {intl.formatMessage(messages.legami_struttura_padre)}
+                    </h5>
+                    <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal mb-3">
+                      <OfficeCard
+                        key={content.parent['@id']}
+                        office={content.parent}
+                      />
+                    </div>
+                  </div>
+                )}
+                {uoRelatedList &&
+                  uoRelatedList.length > 0 &&
+                  uoRelatedList.map((uo) => {
+                    return (
+                      <div className="mb-5 mt-3">
+                        <h5>
+                          {intl.formatMessage(messages.legami_strutture_figlie)}
+                        </h5>
+                        <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal mb-3">
+                          <OfficeCard key={uo['@id']} office={uo} />
+                        </div>
+                      </div>
+                    );
+                  })}
                 {content.legami_con_altre_strutture?.length > 0 && (
                   <div className="mb-5 mt-3">
                     <h5>
