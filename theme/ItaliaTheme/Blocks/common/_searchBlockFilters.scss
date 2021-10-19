@@ -109,4 +109,52 @@
       }
     }
   }
+
+  .bg-secondary {
+    .search-container {
+      .filter-wrapper {
+        &.text-filter input,
+        &.text-filter input::placeholder {
+          border-color: $secondary-text;
+          background-color: transparent;
+          color: $secondary-text;
+        }
+
+        &.text-filter input:focus {
+          border-color: #ff9900;
+          -webkit-box-shadow: 0 0 0 2px #ff9900;
+          box-shadow: 0 0 0 2px #ff9900;
+        }
+
+        &.select-filter {
+          .react-select__placeholder {
+            color: $secondary-text !important;
+          }
+
+          .react-select__indicators {
+            svg {
+              fill: $secondary-text;
+            }
+          }
+
+          .react-select__single-value {
+            color: $secondary-text !important;
+          }
+        }
+
+        &.date-filter .DateRangePickerInput {
+          .DateInput_input,
+          .DateInput_input::placeholder,
+          .DateRangePickerInput_arrow {
+            color: $secondary-text !important;
+          }
+
+          .DateRangePickerInput_arrow .DateRangePickerInput_arrow_svg,
+          .DateRangePickerInput_clearDates svg {
+            fill: $secondary-text !important;
+          }
+        }
+      }
+    }
+  }
 }
