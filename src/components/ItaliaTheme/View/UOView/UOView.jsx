@@ -132,7 +132,7 @@ const UOView = ({ content }) => {
   }, [documentBody]);
 
   // create object Ruolo: Persone
-  let roles = content?.persone_struttura.reduce((r, a) => {
+  let roles = content?.persone_struttura?.reduce((r, a) => {
     r[a.ruolo] = r[a.ruolo] || [];
     r[a.ruolo].push(a);
     return r;
