@@ -1369,11 +1369,11 @@ msgstr "Servizi o uffici di riferimento"
 
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "legami_struttura_padre"
-msgstr ""
+msgstr "Servizio o ufficio di appartenenza"
 
 #: components/ItaliaTheme/View/UOView/UOView
 msgid "legami_strutture_figlie"
-msgstr ""
+msgstr "Servizi o uffici interni"
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "link"

@@ -50,11 +50,11 @@ const messages = defineMessages({
   },
   legami_struttura_padre: {
     id: 'legami_struttura_padre',
-    defaultMessage: 'Servizio o ufficio padre',
+    defaultMessage: 'Servizio o ufficio di appartenenza',
   },
   legami_strutture_figlie: {
     id: 'legami_strutture_figlie',
-    defaultMessage: 'Servizi o uffici figli',
+    defaultMessage: 'Servizi o uffici interni',
   },
   legami_altre_strutture: {
     id: 'legami_altre_strutture',
@@ -133,11 +133,6 @@ const UOView = ({ content }) => {
   let documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
 
-  // check uo in items
-  let uoRelatedList = content.items?.filter((item) => {
-    return item['@type'] === 'UnitaOrganizzativa';
-  });
-
   useEffect(() => {
     if (documentBody.current && __CLIENT__) {
       setSideMenuElements(documentBody.current);
@@ -190,7 +185,8 @@ const UOView = ({ content }) => {
             {(content?.legami_con_altre_strutture?.length > 0 ||
               content?.responsabile?.length > 0 ||
               content?.tipologia_organizzazione ||
-              content?.parent ||
+              content?.uo_children?.length > 0 ||
+              content?.uo_parent ||
               content?.items?.length > 0 ||
               content?.assessore_riferimento?.length > 0) && (
               <article
@@ -200,29 +196,33 @@ const UOView = ({ content }) => {
                 <h4 id="header-struttura" className="mb-3">
                   {intl.formatMessage(messages.struttura)}
                 </h4>
-                {content.parent && (
+                {content.uo_parent && (
                   <div className="mb-5 mt-3">
                     <h5>
                       {intl.formatMessage(messages.legami_struttura_padre)}
                     </h5>
                     <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal mb-3">
                       <OfficeCard
-                        key={content.parent['@id']}
-                        office={content.parent}
+                        key={content.uo_parent['@id']}
+                        office={content.uo_parent}
+                        load_data={false}
                       />
                     </div>
                   </div>
                 )}
-                {uoRelatedList &&
-                  uoRelatedList.length > 0 &&
-                  uoRelatedList.map((uo) => {
+                {content.uo_children?.length > 0 &&
+                  content.uo_children.map((uo) => {
                     return (
                       <div className="mb-5 mt-3">
                         <h5>
                           {intl.formatMessage(messages.legami_strutture_figlie)}
                         </h5>
                         <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal mb-3">
-                          <OfficeCard key={uo['@id']} office={uo} />
+                          <OfficeCard
+                            key={uo['@id']}
+                            office={uo}
+                            load_data={false}
+                          />
                         </div>
                       </div>
                     );
