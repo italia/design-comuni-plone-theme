@@ -1,3 +1,10 @@
+### [5.7.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.2...v5.7.3) (2021-10-19)
+
+
+### Maintenance
+
+* added secondary color variant event search ([d7b17d6](https://github.com/RedTurtle/design-volto-theme/commit/d7b17d614b34d3742200138b6648e42564354b7d))
+
 ### [5.7.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.1...v5.7.2) (2021-10-19)
 
 
