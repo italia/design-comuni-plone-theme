@@ -203,7 +203,7 @@
     "volto-customer-satisfaction": "collective/volto-customer-satisfaction#v0.2.5",
     "volto-dropdownmenu": "collective/volto-dropdownmenu#v2.2.9",
     "volto-editablefooter": "RedTurtle/volto-editablefooter#v3.1.3",
-    "volto-form-block": "collective/volto-form-block#v2.0.2",
+    "volto-form-block": "collective/volto-form-block#v2.0.3",
     "volto-google-analytics": "collective/volto-google-analytics#v1.1.0",
     "volto-multilingual-widget": "collective/volto-multilingual-widget#v2.1.0",
     "volto-rss-block": "redturtle/volto-rss-block#v2.0.0",
