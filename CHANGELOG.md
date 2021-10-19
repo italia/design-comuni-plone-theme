@@ -1,3 +1,19 @@
+### [5.7.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.1...v5.7.2) (2021-10-19)
+
+
+### Bug Fixes
+
+* fix select widget as in volto ([18130d6](https://github.com/RedTurtle/design-volto-theme/commit/18130d6de6113cf5c0ae37ea6894a0ab34fea937))
+* fixed IconWidget ([ab731b8](https://github.com/RedTurtle/design-volto-theme/commit/ab731b80cde79d7644800c2247fcca0f307bf9af))
+* fixed SelectWidget selected value on tab change ([e85153b](https://github.com/RedTurtle/design-volto-theme/commit/e85153b2cb8c6bb7becc256c4c7b93337a8c281a))
+
+
+### Maintenance
+
+* udpated yarn.lock ([2ee5f36](https://github.com/RedTurtle/design-volto-theme/commit/2ee5f36d3ae4a68675dc4d905ea756d45666a696))
+* updated volto ([5ad9645](https://github.com/RedTurtle/design-volto-theme/commit/5ad964573a34e48f67346794a5164f36a163e40b))
+* updated volto-form-block ([a9ce01c](https://github.com/RedTurtle/design-volto-theme/commit/a9ce01ccf6ba2ddbc5393df8ac36d326634024f6))
+
 ### [5.7.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.0...v5.7.1) (2021-10-14)
 
 
