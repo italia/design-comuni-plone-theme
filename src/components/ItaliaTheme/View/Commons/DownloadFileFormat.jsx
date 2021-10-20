@@ -2,8 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon as IconFA } from '@fortawesome/react-fontawesome';
 import { defineMessages, useIntl } from 'react-intl';
+import { Icon } from '@plone/volto/components';
+import faFileXml from '@italia/icons/file-xml.svg';
+import faFileXsd from '@italia/icons/file-xsd.svg';
 
 const messages = defineMessages({
   download_in_format: {
@@ -94,7 +97,16 @@ const DownloadFileFormat = ({
       icon: { lib: 'far', name: 'file-ppt' },
       format_name: 'PowerPoint',
     },
+    'text/xml': {
+      icon: { lib: '', name: faFileXml, svg_format: true },
+      format_name: 'XML',
+    },
+    'text/xsd': {
+      icon: { lib: '', name: faFileXsd, svg_format: true },
+      format_name: 'XSD',
+    },
   };
+
   const defaultIcon = { lib: 'far', name: 'file' };
 
   const icon = file ? formats[file['content-type']]?.icon ?? defaultIcon : null;
@@ -111,12 +123,16 @@ const DownloadFileFormat = ({
       title={file.filename}
       className={className}
     >
-      <Icon
-        icon={[icon.lib, icon.name]}
-        alt={file.filename}
-        title={file.filename}
-        size={formatsize}
-      />
+      {!icon.svg_format ? (
+        <IconFA
+          icon={[icon.lib, icon.name]}
+          alt={file.filename}
+          title={file.filename}
+          size={formatsize}
+        />
+      ) : (
+        <Icon className="icon-svg-custom" name={icon.name} />
+      )}
       {showLabel && <span className="ml-4">{label}</span>}
     </a>
   ) : null;
