@@ -15,7 +15,7 @@ import {
 } from '@italia/components/ItaliaTheme/';
 import { CookieBanner } from '@italia/addons/volto-cookie-banner';
 import { CustomerSatisfaction } from '@italia/components/ItaliaTheme';
-
+import config from '@plone/volto/registry';
 /**
  * Footer component class.
  * @class Footer
@@ -34,7 +34,8 @@ const Footer = ({ intl }) => {
   let content = (
     <>
       {contentType != null &&
-        NoCustomerSatisfactionFor.indexOf(contentType) < 0 && (
+        NoCustomerSatisfactionFor.indexOf(contentType) < 0 &&
+        config.settings.siteProperties.enableCustomerSatisfaction && (
           <div className="section section-inset-shadow py-3">
             <Container>
               <CustomerSatisfaction />
