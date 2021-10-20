@@ -1,3 +1,15 @@
+### [5.7.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.4...v5.7.5) (2021-10-20)
+
+
+### Bug Fixes
+
+* fixed persone undefined and select widget ([66fe912](https://github.com/RedTurtle/design-volto-theme/commit/66fe9127c1443494ee48eda805114e9eb04405f2))
+
+
+### Maintenance
+
+* temprarly disable customer satisfaction ([9440519](https://github.com/RedTurtle/design-volto-theme/commit/944051927566c92dbe298ead64fc10bf8d733d67))
+
 ### [5.7.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.3...v5.7.4) (2021-10-20)
 
 
