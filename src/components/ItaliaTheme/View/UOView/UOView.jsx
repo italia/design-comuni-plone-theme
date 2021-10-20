@@ -131,6 +131,13 @@ const UOView = ({ content }) => {
     }
   }, [documentBody]);
 
+  // create object Ruolo: Persone
+  let roles = content?.persone_struttura?.reduce((r, a) => {
+    r[a.ruolo] = r[a.ruolo] || [];
+    r[a.ruolo].push(a);
+    return r;
+  }, Object.create(null));
+
   return (
     <>
       <div className="container px-4 my-4 uo-view">
@@ -267,24 +274,33 @@ const UOView = ({ content }) => {
                 <h4 id="header-persone-struttura">
                   {intl.formatMessage(messages.persone_struttura)}
                 </h4>
-                {content.persone_struttura.map((item, _i) => (
-                  <Link
-                    to={flattenToAppURL(item['@id'])}
-                    key={item['@id']}
-                    title={item.title}
-                    className="text-decoration-none mr-2"
-                  >
-                    <Chip
-                      color="primary"
-                      disabled={false}
-                      large={false}
-                      simple
-                      tag="div"
-                    >
-                      <ChipLabel tag="span">{item.title}</ChipLabel>
-                    </Chip>
-                  </Link>
-                ))}
+                {Object.keys(roles).map((role, _i) => {
+                  return (
+                    <div className="ruolo-persone-struttura">
+                      <h5>{role}: </h5>
+                      {roles[role]
+                        .sort((a, b) => (a.title > b.title ? 1 : -1))
+                        .map((item) => (
+                          <Link
+                            to={flattenToAppURL(item['@id'])}
+                            key={item['@id']}
+                            title={item.title}
+                            className="text-decoration-none mr-2"
+                          >
+                            <Chip
+                              color="primary"
+                              disabled={false}
+                              large={false}
+                              simple
+                              tag="div"
+                            >
+                              <ChipLabel tag="span">{item.title}</ChipLabel>
+                            </Chip>
+                          </Link>
+                        ))}
+                    </div>
+                  );
+                })}
               </article>
             )}
 
