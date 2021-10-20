@@ -1374,6 +1374,14 @@ msgstr ""
 msgid "legami_altre_strutture"
 msgstr ""
 
+#: components/ItaliaTheme/View/UOView/UOView
+msgid "legami_struttura_padre"
+msgstr ""
+
+#: components/ItaliaTheme/View/UOView/UOView
+msgid "legami_strutture_figlie"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "link"
 msgstr ""

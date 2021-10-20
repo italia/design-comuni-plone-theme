@@ -48,6 +48,14 @@ const messages = defineMessages({
     id: 'tipologia_organizzazione',
     defaultMessage: 'Tipologia organizzazione',
   },
+  legami_struttura_padre: {
+    id: 'legami_struttura_padre',
+    defaultMessage: 'Servizio o ufficio di appartenenza',
+  },
+  legami_strutture_figlie: {
+    id: 'legami_strutture_figlie',
+    defaultMessage: 'Servizi o uffici interni',
+  },
   legami_altre_strutture: {
     id: 'legami_altre_strutture',
     defaultMessage: 'Servizi o uffici di riferimento',
@@ -131,6 +139,14 @@ const UOView = ({ content }) => {
     }
   }, [documentBody]);
 
+  // create object Ruolo: Persone
+  let roles = content?.persone_struttura?.reduce((r, a) => {
+    const role = a.ruolo ?? '';
+    r[role] = r[role] || [];
+    r[role].push(a);
+    return r;
+  }, Object.create(null));
+
   return (
     <>
       <div className="container px-4 my-4 uo-view">
@@ -177,6 +193,8 @@ const UOView = ({ content }) => {
             {(content?.legami_con_altre_strutture?.length > 0 ||
               content?.responsabile?.length > 0 ||
               content?.tipologia_organizzazione ||
+              content?.uo_children?.length > 0 ||
+              content?.uo_parent ||
               content?.assessore_riferimento?.length > 0) && (
               <article
                 id="struttura"
@@ -185,6 +203,37 @@ const UOView = ({ content }) => {
                 <h4 id="header-struttura" className="mb-3">
                   {intl.formatMessage(messages.struttura)}
                 </h4>
+                {content.uo_parent && (
+                  <div className="mb-5 mt-3">
+                    <h5>
+                      {intl.formatMessage(messages.legami_struttura_padre)}
+                    </h5>
+                    <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal mb-3">
+                      <OfficeCard
+                        key={content.uo_parent['@id']}
+                        office={content.uo_parent}
+                        load_data={false}
+                      />
+                    </div>
+                  </div>
+                )}
+                {content.uo_children?.length > 0 &&
+                  content.uo_children.map((uo) => {
+                    return (
+                      <div className="mb-5 mt-3">
+                        <h5>
+                          {intl.formatMessage(messages.legami_strutture_figlie)}
+                        </h5>
+                        <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal mb-3">
+                          <OfficeCard
+                            key={uo['@id']}
+                            office={uo}
+                            load_data={false}
+                          />
+                        </div>
+                      </div>
+                    );
+                  })}
                 {content.legami_con_altre_strutture?.length > 0 && (
                   <div className="mb-5 mt-3">
                     <h5>
@@ -267,24 +316,33 @@ const UOView = ({ content }) => {
                 <h4 id="header-persone-struttura">
                   {intl.formatMessage(messages.persone_struttura)}
                 </h4>
-                {content.persone_struttura.map((item, _i) => (
-                  <Link
-                    to={flattenToAppURL(item['@id'])}
-                    key={item['@id']}
-                    title={item.title}
-                    className="text-decoration-none mr-2"
-                  >
-                    <Chip
-                      color="primary"
-                      disabled={false}
-                      large={false}
-                      simple
-                      tag="div"
-                    >
-                      <ChipLabel tag="span">{item.title}</ChipLabel>
-                    </Chip>
-                  </Link>
-                ))}
+                {Object.keys(roles).map((role, _i) => {
+                  return (
+                    <div className="ruolo-persone-struttura">
+                      {role?.length > 0 && <h5>{role}: </h5>}
+                      {roles[role]
+                        .sort((a, b) => (a.title > b.title ? 1 : -1))
+                        .map((item) => (
+                          <Link
+                            to={flattenToAppURL(item['@id'])}
+                            key={item['@id']}
+                            title={item.title}
+                            className="text-decoration-none mr-2"
+                          >
+                            <Chip
+                              color="primary"
+                              disabled={false}
+                              large={false}
+                              simple
+                              tag="div"
+                            >
+                              <ChipLabel tag="span">{item.title}</ChipLabel>
+                            </Chip>
+                          </Link>
+                        ))}
+                    </div>
+                  );
+                })}
               </article>
             )}
 

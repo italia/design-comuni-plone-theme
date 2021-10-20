@@ -1,3 +1,88 @@
+### [5.7.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.4...v5.7.5) (2021-10-20)
+
+
+### Bug Fixes
+
+* fixed persone undefined and select widget ([66fe912](https://github.com/RedTurtle/design-volto-theme/commit/66fe9127c1443494ee48eda805114e9eb04405f2))
+
+
+### Maintenance
+
+* temprarly disable customer satisfaction ([9440519](https://github.com/RedTurtle/design-volto-theme/commit/944051927566c92dbe298ead64fc10bf8d733d67))
+
+### [5.7.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.3...v5.7.4) (2021-10-20)
+
+
+### Bug Fixes
+
+* bugfix ([0178fde](https://github.com/RedTurtle/design-volto-theme/commit/0178fded5a72c22b00deed8354cd08fc8409e938))
+* fix reduce function ([7922df8](https://github.com/RedTurtle/design-volto-theme/commit/7922df88e9884ed21e45c186326d2bfa9fd42257))
+
+
+### Maintenance
+
+* added list of roles ([485e386](https://github.com/RedTurtle/design-volto-theme/commit/485e3862729011a61db5445092ab3bff3d08a64c))
+* added related uo ([5309824](https://github.com/RedTurtle/design-volto-theme/commit/530982473468f224c52006ec546448d7a625b26e))
+* added related uo ([0ad3e75](https://github.com/RedTurtle/design-volto-theme/commit/0ad3e753f422a11a7622026c8fb86ac42aa1ad24))
+* added xml and xsd icon file ([95416bf](https://github.com/RedTurtle/design-volto-theme/commit/95416bfea2f37c329fad7c4d41c1e11987c4478c))
+
+### [5.7.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.2...v5.7.3) (2021-10-19)
+
+
+### Maintenance
+
+* added secondary color variant event search ([d7b17d6](https://github.com/RedTurtle/design-volto-theme/commit/d7b17d614b34d3742200138b6648e42564354b7d))
+
+### [5.7.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.1...v5.7.2) (2021-10-19)
+
+
+### Bug Fixes
+
+* fix select widget as in volto ([18130d6](https://github.com/RedTurtle/design-volto-theme/commit/18130d6de6113cf5c0ae37ea6894a0ab34fea937))
+* fixed IconWidget ([ab731b8](https://github.com/RedTurtle/design-volto-theme/commit/ab731b80cde79d7644800c2247fcca0f307bf9af))
+* fixed SelectWidget selected value on tab change ([e85153b](https://github.com/RedTurtle/design-volto-theme/commit/e85153b2cb8c6bb7becc256c4c7b93337a8c281a))
+
+
+### Maintenance
+
+* udpated yarn.lock ([2ee5f36](https://github.com/RedTurtle/design-volto-theme/commit/2ee5f36d3ae4a68675dc4d905ea756d45666a696))
+* updated volto ([5ad9645](https://github.com/RedTurtle/design-volto-theme/commit/5ad964573a34e48f67346794a5164f36a163e40b))
+* updated volto-form-block ([a9ce01c](https://github.com/RedTurtle/design-volto-theme/commit/a9ce01ccf6ba2ddbc5393df8ac36d326634024f6))
+
+### [5.7.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.0...v5.7.1) (2021-10-14)
+
+
+### Bug Fixes
+
+* fix customer satisfaction action length ([94a19a2](https://github.com/RedTurtle/design-volto-theme/commit/94a19a216db4854f67cc517796f203cf7b209380))
+
+## [5.7.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.6.3...v5.7.0) (2021-10-13)
+
+
+### Features
+
+* added customer satisfaction ([24fd56c](https://github.com/RedTurtle/design-volto-theme/commit/24fd56c1f841350189235fbd8af8731d4a88bc17))
+
+
+### Bug Fixes
+
+* fix develop:npx cmd ([ed88643](https://github.com/RedTurtle/design-volto-theme/commit/ed88643c46779ce6b460cf3f07b62a661d2e0b0b))
+* fix return ([c738b13](https://github.com/RedTurtle/design-volto-theme/commit/c738b1310415f3acbd8855a1cb41af8c7bccf43a))
+* fix view submit button if no recaptcha is set ([3717e70](https://github.com/RedTurtle/design-volto-theme/commit/3717e708e439efe1662941723f89abcd18bc2c5d))
+* fixed import ([5aa7e85](https://github.com/RedTurtle/design-volto-theme/commit/5aa7e85e212d52137891403761a35e4916c8b34f))
+* layout Indice dei Contenuti list ([a3f3b00](https://github.com/RedTurtle/design-volto-theme/commit/a3f3b005b26904c7392f8e9ea1db741b2a44c02e))
+
+
+### Maintenance
+
+* import volto-customer-satisfaction[#0](https://github.com/RedTurtle/design-volto-theme/issues/0)v.2.0 ([fe39d9c](https://github.com/RedTurtle/design-volto-theme/commit/fe39d9cb1712c7aad42da4a186a0d48cc70f4487))
+* moved CustomerSatisfaction component ([ab54709](https://github.com/RedTurtle/design-volto-theme/commit/ab54709a094582ee89d2485d3642bd94828ac089))
+* updated italian translations ([257e0dd](https://github.com/RedTurtle/design-volto-theme/commit/257e0dd0a4932581c3b28f14e212da620d58f885))
+* updated mrs.dev addon tag ([2aa99cb](https://github.com/RedTurtle/design-volto-theme/commit/2aa99cbc91b90653672f78dd50b38c92504052b5))
+* updated volto-customer-satisfaction ([68b7cd6](https://github.com/RedTurtle/design-volto-theme/commit/68b7cd645063c7371c66068c592f5dd262661205))
+* updated volto-customer-satisfaction ([90c0de6](https://github.com/RedTurtle/design-volto-theme/commit/90c0de64a8f58b1cfecece4bcb4fd9243fd7f753))
+* updated volto-customer-satisfaction version ([992c329](https://github.com/RedTurtle/design-volto-theme/commit/992c3296e324a1ee7a21174664b733c1f740d181))
+
 ### [5.6.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.6.2...v5.6.3) (2021-10-05)
 
 

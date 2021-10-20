@@ -1367,6 +1367,14 @@ msgstr "Procedure of the procedure"
 msgid "legami_altre_strutture"
 msgstr "Reference services or offices"
 
+#: components/ItaliaTheme/View/UOView/UOView
+msgid "legami_struttura_padre"
+msgstr "Association service or office"
+
+#: components/ItaliaTheme/View/UOView/UOView
+msgid "legami_strutture_figlie"
+msgstr "Internal services or offices"
+
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 msgid "link"
 msgstr "Link"

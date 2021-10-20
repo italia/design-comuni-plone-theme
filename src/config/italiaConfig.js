@@ -164,6 +164,7 @@ export default function applyConfig(voltoConfig) {
           // { title: 'Credits', url: 'https://www.redturtle.it/' },
         ],
       },
+      enableCustomerSatisfaction: false,
     },
     'volto-blocks-widget': {
       allowedBlocks: [

@@ -42,6 +42,9 @@
             ],
             "@italia/addons/volto-subfooter": [
                 "addons/volto-subfooter/src"
+            ],
+            "@italia/addons/volto-customer-satisfaction": [
+                "addons/volto-customer-satisfaction/src"
             ]
         },
         "baseUrl": "src"

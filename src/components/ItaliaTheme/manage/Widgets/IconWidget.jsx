@@ -52,7 +52,7 @@ const IconWidget = ({ id, value, defaultOptions, onChange }) => {
             onChange(id, value);
           }}
           choices={defaultOptions}
-          customOption={CustomSelectOption}
+          customOptionStyling={CustomSelectOption}
         />
       )}
       <TextWidget
