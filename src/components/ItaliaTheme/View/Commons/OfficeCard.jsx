@@ -16,6 +16,7 @@ import { RichText } from '@italia/components/ItaliaTheme/View';
  */
 const OfficeCard = ({
   office,
+  load_data = true,
   extended,
   icon,
   children,
@@ -27,11 +28,14 @@ const OfficeCard = ({
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getContent(url, null, key));
-    return () => dispatch(resetContent(key));
-  }, [dispatch, office, url, key]);
+    if (load_data) {
+      dispatch(getContent(url, null, key));
+      return () => dispatch(resetContent(key));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [url]);
 
-  let office_fo = officeContent[key]?.data;
+  let office_fo = load_data ? officeContent[key]?.data : office;
 
   return office_fo ? (
     <div
