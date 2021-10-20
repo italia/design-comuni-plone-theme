@@ -187,7 +187,6 @@ const UOView = ({ content }) => {
               content?.tipologia_organizzazione ||
               content?.uo_children?.length > 0 ||
               content?.uo_parent ||
-              content?.items?.length > 0 ||
               content?.assessore_riferimento?.length > 0) && (
               <article
                 id="struttura"
