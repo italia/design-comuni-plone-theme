@@ -1,3 +1,19 @@
+### [5.7.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.3...v5.7.4) (2021-10-20)
+
+
+### Bug Fixes
+
+* bugfix ([0178fde](https://github.com/RedTurtle/design-volto-theme/commit/0178fded5a72c22b00deed8354cd08fc8409e938))
+* fix reduce function ([7922df8](https://github.com/RedTurtle/design-volto-theme/commit/7922df88e9884ed21e45c186326d2bfa9fd42257))
+
+
+### Maintenance
+
+* added list of roles ([485e386](https://github.com/RedTurtle/design-volto-theme/commit/485e3862729011a61db5445092ab3bff3d08a64c))
+* added related uo ([5309824](https://github.com/RedTurtle/design-volto-theme/commit/530982473468f224c52006ec546448d7a625b26e))
+* added related uo ([0ad3e75](https://github.com/RedTurtle/design-volto-theme/commit/0ad3e753f422a11a7622026c8fb86ac42aa1ad24))
+* added xml and xsd icon file ([95416bf](https://github.com/RedTurtle/design-volto-theme/commit/95416bfea2f37c329fad7c4d41c1e11987c4478c))
+
 ### [5.7.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.2...v5.7.3) (2021-10-19)
 
 
