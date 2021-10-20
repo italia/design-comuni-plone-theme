@@ -141,8 +141,9 @@ const UOView = ({ content }) => {
 
   // create object Ruolo: Persone
   let roles = content?.persone_struttura?.reduce((r, a) => {
-    r[a.ruolo] = r[a.ruolo] || [];
-    r[a.ruolo].push(a);
+    const role = a.ruolo ?? '';
+    r[role] = r[role] || [];
+    r[role].push(a);
     return r;
   }, Object.create(null));
 
@@ -318,7 +319,7 @@ const UOView = ({ content }) => {
                 {Object.keys(roles).map((role, _i) => {
                   return (
                     <div className="ruolo-persone-struttura">
-                      <h5>{role}: </h5>
+                      {role?.length > 0 && <h5>{role}: </h5>}
                       {roles[role]
                         .sort((a, b) => (a.title > b.title ? 1 : -1))
                         .map((item) => (

@@ -164,9 +164,7 @@ class SelectWidget extends Component {
     ) {
       this.props.getVocabulary(this.props.vocabBaseUrl);
     }
-  }
 
-  componentDidUpdate() {
     if (
       !this.state.selectedOption &&
       this.props.value &&
