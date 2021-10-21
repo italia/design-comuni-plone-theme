@@ -101,20 +101,40 @@ const DownloadFileFormat = ({
       icon: { lib: '', name: faFileXml, svg_format: true },
       format_name: 'XML',
     },
-    'text/xsd': {
+    'application/xml': {
+      icon: { lib: '', name: faFileXml, svg_format: true },
+      format_name: 'XML',
+    },
+  };
+
+  const extensions = {
+    xsd: {
       icon: { lib: '', name: faFileXsd, svg_format: true },
       format_name: 'XSD',
     },
   };
 
-  const defaultIcon = { lib: 'far', name: 'file' };
-
-  const icon = file ? formats[file['content-type']]?.icon ?? defaultIcon : null;
+  const defaultIcon = { lib: 'far', name: 'file', svg_format: false };
   let label = intl.formatMessage(messages.download_file);
-  if (file && formats[file['content-type']]?.icon) {
-    label = `${intl.formatMessage(messages.download_in_format)} ${
-      formats[file['content-type']].format_name
-    }`;
+  let icon = null;
+
+  if (file) {
+    // check XSD file extension
+    const regexEx = /(?:\.([^.]+))?$/;
+    const extensionFile = regexEx.exec(file.filename)[1];
+
+    icon = !icon ? formats[file['content-type']]?.icon : defaultIcon;
+
+    if (extensions[extensionFile]) {
+      icon = extensions[extensionFile].icon;
+      label = `${intl.formatMessage(messages.download_in_format)} ${
+        extensions[extensionFile].format_name
+      }`;
+    } else {
+      label = `${intl.formatMessage(messages.download_in_format)} ${
+        formats[file['content-type']].format_name
+      }`;
+    }
   }
 
   return file ? (
