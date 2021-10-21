@@ -346,14 +346,22 @@ const ServizioView = ({ content }) => {
                   {content.ufficio_responsabile?.length > 0 && (
                     <>
                       {content.ufficio_responsabile.map((item, i) => (
-                        <OfficeCard key={item['@id']} office={item} />
+                        <OfficeCard
+                          key={item['@id']}
+                          office={item}
+                          load_data={false}
+                        />
                       ))}
                     </>
                   )}
                   {content.area?.length > 0 && (
                     <>
                       {content.area.map((item, i) => (
-                        <OfficeCard key={item['@id']} office={item} />
+                        <OfficeCard
+                          key={item['@id']}
+                          office={item}
+                          load_data={false}
+                        />
                       ))}
                     </>
                   )}

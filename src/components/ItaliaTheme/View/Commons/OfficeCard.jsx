@@ -7,6 +7,7 @@ import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Icon } from '@italia/components/ItaliaTheme';
 import { RichText } from '@italia/components/ItaliaTheme/View';
+import ContactLink from '../Commons/ContactLink';
 
 /**
  * OfficeCard view component class.
@@ -57,6 +58,13 @@ const OfficeCard = ({
             {(office_fo.city || office_fo.zip_code) && (
               <p>
                 {office_fo.zip_code} {office_fo.city}
+              </p>
+            )}
+            {(office_fo.telefono || office_fo.email) && (
+              <p>
+                <ContactLink tel={office_fo.telefono} label={true} />
+                <br />
+                <ContactLink email={office_fo.email} label={true} />
               </p>
             )}
 
