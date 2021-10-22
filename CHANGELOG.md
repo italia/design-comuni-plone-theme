@@ -1,3 +1,10 @@
+### [5.7.8](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.7...v5.7.8) (2021-10-22)
+
+
+### Bug Fixes
+
+* fix view legami_strutture_figlie ([78d44e0](https://github.com/RedTurtle/design-volto-theme/commit/78d44e0980b66968b3d960dfc75ce614711e476a))
+
 ### [5.7.7](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.6...v5.7.7) (2021-10-22)
 
 
