@@ -1,3 +1,10 @@
+### [5.7.7](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.6...v5.7.7) (2021-10-22)
+
+
+### Bug Fixes
+
+* fix view persone in uo ([ee23c3e](https://github.com/RedTurtle/design-volto-theme/commit/ee23c3e93a11a89a625615a867223315054c99ac))
+
 ### [5.7.6](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.5...v5.7.6) (2021-10-22)
 
 
