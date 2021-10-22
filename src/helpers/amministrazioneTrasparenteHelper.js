@@ -58,7 +58,7 @@ export const getTableRowData = (items, intl, currentLocation) => {
           },
           {
             type: 'text',
-            text: item.ruolo,
+            text: item.ruolo.title,
           },
           {
             type: 'link',
@@ -115,6 +115,7 @@ export const getTableRowData = (items, intl, currentLocation) => {
           },
         ];
       });
+      break;
     default:
       break;
   }

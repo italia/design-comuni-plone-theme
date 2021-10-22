@@ -29,15 +29,15 @@ const PageHeaderPersona = ({ content }) => {
     <>
       {content?.tipologia_persona && !content.data_conclusione_incarico && (
         <p className="mb-0">
-          <strong>{intl.formatMessage(messages.tipologia_persona)}:</strong>
-          {` ${content.tipologia_persona.title}`}
+          <strong>{intl.formatMessage(messages.tipologia_persona)}:</strong>{' '}
+          {content.tipologia_persona.title}
         </p>
       )}
 
-      {content?.ruolo && !content.data_conclusione_incarico && (
+      {content?.ruolo?.token && !content.data_conclusione_incarico && (
         <p className="mb-0">
-          <strong>{intl.formatMessage(messages.ruolo)}:</strong>
-          {` ${content.ruolo}`}
+          <strong>{intl.formatMessage(messages.ruolo)}:</strong>{' '}
+          {content.ruolo.title}
         </p>
       )}
     </>
