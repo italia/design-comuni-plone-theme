@@ -1,3 +1,17 @@
+### [5.7.6](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.5...v5.7.6) (2021-10-22)
+
+
+### Bug Fixes
+
+* added contacts info officeCard in services ([489a601](https://github.com/RedTurtle/design-volto-theme/commit/489a601ded61b8911d66b5b8409e41a2d535a859))
+* added xsd file icon ([4b650d3](https://github.com/RedTurtle/design-volto-theme/commit/4b650d34f0101d64e7942fdf8617802cc6391891))
+
+
+### Maintenance
+
+* enabled customer satisfaction by default ([a2fb7e8](https://github.com/RedTurtle/design-volto-theme/commit/a2fb7e8984092c06f34a7cdd4fad752aae826f47))
+* selectable persona role ([424a30c](https://github.com/RedTurtle/design-volto-theme/commit/424a30cf39a2931f939744a262ca1afcc80d9037))
+
 ### [5.7.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.4...v5.7.5) (2021-10-20)
 
 
