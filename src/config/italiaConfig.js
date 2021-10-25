@@ -75,6 +75,7 @@ export default function applyConfig(voltoConfig) {
     verticalFormTabs: true,
     showTags: false,
     showSelfRegistration: false,
+    defaultPageSize: 24,
     serverConfig: {
       ...config.settings.serverConfig,
       extractScripts: {
