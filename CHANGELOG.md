@@ -1,3 +1,15 @@
+### [5.7.9](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.8...v5.7.9) (2021-10-26)
+
+
+### Bug Fixes
+
+* changed defaultPageSize parameter to 24 results ([b0c184b](https://github.com/RedTurtle/design-volto-theme/commit/b0c184b61973e39185fcd1837816fa167f577577))
+
+
+### Maintenance
+
+* added new format file download and fix default icon ([e13c60c](https://github.com/RedTurtle/design-volto-theme/commit/e13c60cac03636ddc3503e6ba817a73930fe8234))
+
 ### [5.7.8](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.7...v5.7.8) (2021-10-22)
 
 
