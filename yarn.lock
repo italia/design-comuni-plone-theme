@@ -1922,9 +1922,20 @@
   dependencies:
     "@octokit/openapi-types" "^6.0.0"
 
-"@plone/volto@plone/volto#ee5ee1cde9987e47e42db9f1ef18f105bf7b7258":
-  version "14.0.0-alpha.8"
-  resolved "https://codeload.github.com/plone/volto/tar.gz/ee5ee1cde9987e47e42db9f1ef18f105bf7b7258"
+"@plone/scripts@*", "@plone/scripts@1.0.3", "@plone/scripts@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@plone/scripts/-/scripts-1.0.3.tgz#ea3e5f29b6fcb8f088b32e43394d71748d5538b4"
+  integrity sha512-wE0vsWpOI5jeoVJVP0T2IpBGz6wdlQrOqicK0EsC0+6hYqmPJb2cGUXNe0JhUDONF6Gi/Ubklcgd05Lpb2+bjA==
+  dependencies:
+    babel-plugin-react-intl "5.1.17"
+    babel-preset-razzle "3.4.5"
+    commander "8.2.0"
+    pofile "1.0.10"
+    razzle "3.4.5"
+
+"@plone/volto@plone/volto#5b5a618837b3004b5b2af65f7351a85f7933d978":
+  version "14.0.0-alpha.23"
+  resolved "https://codeload.github.com/plone/volto/tar.gz/5b5a618837b3004b5b2af65f7351a85f7933d978"
   dependencies:
     "@babel/plugin-proposal-export-default-from" "7.10.4"
     "@babel/plugin-proposal-export-namespace-from" "7.10.4"
@@ -1934,6 +1945,7 @@
     "@loadable/component" "5.14.1"
     "@loadable/server" "5.14.0"
     "@loadable/webpack-plugin" "5.14.0"
+    "@plone/scripts" "1.0.3"
     "@sentry/browser" "5.12.1"
     "@sentry/integrations" "5.27.3"
     "@sentry/node" "5.12.3"
@@ -1953,11 +1965,13 @@
     bundlewatch "0.2.7"
     circular-dependency-plugin "5.2.2"
     classnames "2.2.6"
+    commander "8.2.0"
     connected-react-router "6.8.0"
     coveralls "3.0.2"
     cypress "7.3.0"
     cypress-axe "0.12.2"
     cypress-file-upload "5.0.7"
+    debug "4.3.2"
     dependency-graph "0.10.0"
     detect-browser "5.1.0"
     diff "3.5.0"
@@ -1986,7 +2000,7 @@
     hamburgers "1.1.3"
     handlebars "4.7.7"
     history "4.10.1"
-    http-proxy-middleware "1.0.4"
+    http-proxy-middleware "2.0.1"
     husky "4.2.5"
     identity-obj-proxy "3.0.0"
     jest-css-modules "1.1.0"
@@ -2017,7 +2031,7 @@
     promise-file-reader "1.0.2"
     prop-types "15.7.2"
     query-string "7.0.0"
-    razzle "3.3.7"
+    razzle "3.4.5"
     razzle-plugin-bundle-analyzer "1.2.0"
     rc-time-picker "3.7.3"
     react "16.14.0"
@@ -2434,10 +2448,10 @@
   resolved "https://registry.yarnpkg.com/@types/http-cache-semantics/-/http-cache-semantics-4.0.0.tgz#9140779736aa2655635ee756e2467d787cfe8a2a"
   integrity sha512-c3Xy026kOF7QOTn00hbIllV1dLR9hG9NkSrLQgCVs8NF6sBU+VGWjD3wLPhmh1TYAc7ugCFsvHYMN4VcBN1U1A==
 
-"@types/http-proxy@^1.17.4":
-  version "1.17.4"
-  resolved "https://registry.yarnpkg.com/@types/http-proxy/-/http-proxy-1.17.4.tgz#e7c92e3dbe3e13aa799440ff42e6d3a17a9d045b"
-  integrity sha512-IrSHl2u6AWXduUaDLqYpt45tLVCtYv7o4Z0s1KghBCDgIIS9oW5K1H8mZG/A2CfeLdEa7rTd1ACOiHBc1EMT2Q==
+"@types/http-proxy@^1.17.5":
+  version "1.17.7"
+  resolved "https://registry.yarnpkg.com/@types/http-proxy/-/http-proxy-1.17.7.tgz#30ea85cc2c868368352a37f0d0d3581e24834c6f"
+  integrity sha512-9hdj6iXH64tHSLTY+Vt2eYOGzSogC+JQ2H7bdPWkuh7KXP5qLllWx++t+K9Wk556c3dkDdPws/SpMRi0sdCT1w==
   dependencies:
     "@types/node" "*"
 
@@ -3681,10 +3695,10 @@ babel-preset-jest@^24.9.0:
     "@babel/plugin-syntax-object-rest-spread" "^7.0.0"
     babel-plugin-jest-hoist "^24.9.0"
 
-babel-preset-razzle@latest:
-  version "3.3.8"
-  resolved "https://registry.yarnpkg.com/babel-preset-razzle/-/babel-preset-razzle-3.3.8.tgz#c572be11794f762faca466c360c477eff65bee98"
-  integrity sha512-73JVmiGrgf8OzA0KvrdfhRAa4Nb2DakYMNHkbdoX3D2mbXT+UTBAaM99i1Rc8Rgd8lOXU5BCRtblOZI/KLybTQ==
+babel-preset-razzle@3.4.5:
+  version "3.4.5"
+  resolved "https://registry.yarnpkg.com/babel-preset-razzle/-/babel-preset-razzle-3.4.5.tgz#203be645cd707686bdf41bcb3d3da4ecdef0d9f6"
+  integrity sha512-0GU6pKSSUjKBH5wcmp+MMdSE06dh7mrRfJmQ9D6uDdQ4dVgqyw4DbpJd6RIv7g92c/K99ZTY964P4Q7UrX5TSQ==
   dependencies:
     "@babel/core" "7.11.1"
     "@babel/plugin-proposal-class-properties" "^7.8.3"
@@ -4900,6 +4914,11 @@ combined-stream@^1.0.6, combined-stream@^1.0.8, combined-stream@~1.0.6:
   integrity sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==
   dependencies:
     delayed-stream "~1.0.0"
+
+commander@8.2.0:
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-8.2.0.tgz#37fe2bde301d87d47a53adeff8b5915db1381ca8"
+  integrity sha512-LLKxDvHeL91/8MIyTAD5BFMNtoIwztGPMiM/7Bl8rIPmHCZXRxmSWr91h57dpOpnQ6jIUqEWdXE/uBYMfiVZDA==
 
 commander@^2.11.0, commander@^2.20.0:
   version "2.20.3"
@@ -8659,15 +8678,15 @@ http-proxy-middleware@0.19.1:
     lodash "^4.17.11"
     micromatch "^3.1.10"
 
-http-proxy-middleware@1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-1.0.4.tgz#425ea177986a0cda34f9c81ec961c719adb6c2a9"
-  integrity sha512-8wiqujNWlsZNbeTSSWMLUl/u70xbJ5VYRwPR8RcAbvsNxzAZbgwLzRvT96btbm3fAitZUmo5i8LY6WKGyHDgvA==
+http-proxy-middleware@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-2.0.1.tgz#7ef3417a479fb7666a571e09966c66a39bd2c15f"
+  integrity sha512-cfaXRVoZxSed/BmkA7SwBVNI9Kj7HFltaE5rqYOub5kWzWZ+gofV2koVN1j2rMW7pEfSSlCHGJ31xmuyFyfLOg==
   dependencies:
-    "@types/http-proxy" "^1.17.4"
+    "@types/http-proxy" "^1.17.5"
     http-proxy "^1.18.1"
     is-glob "^4.0.1"
-    lodash "^4.17.15"
+    is-plain-obj "^3.0.0"
     micromatch "^4.0.2"
 
 http-proxy@^1.17.0, http-proxy@^1.18.1:
@@ -9470,6 +9489,11 @@ is-plain-obj@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/is-plain-obj/-/is-plain-obj-2.1.0.tgz#45e42e37fccf1f40da8e5f76ee21515840c09287"
   integrity sha512-YWnfyRwxL/+SsrWYfOpUtz5b3YD+nyfkHvjbcanzk8zgyO4ASD67uVMRt8k5bM4lLMDnXfriRhOpemw+NfT1eA==
+
+is-plain-obj@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/is-plain-obj/-/is-plain-obj-3.0.0.tgz#af6f2ea14ac5a646183a5bbdb5baabbc156ad9d7"
+  integrity sha512-gwsOE28k+23GP1B6vFl1oVh/WOzmawBrKwo5Ev6wMKzPkaXaCDIQKzLnvsA42DRlbVTWorkgTKIviAKCWkfUwA==
 
 is-plain-object@^2.0.3, is-plain-object@^2.0.4:
   version "2.0.4"
@@ -10519,6 +10543,11 @@ lcov-parse@^0.0.10:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/lcov-parse/-/lcov-parse-0.0.10.tgz#1b0b8ff9ac9c7889250582b70b71315d9da6d9a3"
   integrity sha1-GwuP+ayceIklBYK3C3ExXZ2m2aM=
+
+leaflet.markercluster@1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/leaflet.markercluster/-/leaflet.markercluster-1.5.0.tgz#54db42485da32fc3d92c7ae22d0d7982879e0b67"
+  integrity sha512-Fvf/cq4o806mJL50n+fZW9+QALDDLPvt7vuAjlD2vfnxx3srMDs2vWINJze4nKYJYRY45OC6tM/669C3pLwMCA==
 
 leaflet@1.6.0:
   version "1.6.0"
@@ -14055,10 +14084,10 @@ raw-body@2.4.0:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
-razzle-dev-utils@latest:
-  version "3.3.8"
-  resolved "https://registry.yarnpkg.com/razzle-dev-utils/-/razzle-dev-utils-3.3.8.tgz#1a2cbfd3685526fd773109bb23ebe7d79197306f"
-  integrity sha512-gw++mONgoLdYwBEIgW6Qm9EwBbeiLWxI/bF36rRzuySMHa5yKp8E4BoWRD4EtV/9jEVh0/pp2TO3ArCG02EuQw==
+razzle-dev-utils@3.4.5:
+  version "3.4.5"
+  resolved "https://registry.yarnpkg.com/razzle-dev-utils/-/razzle-dev-utils-3.4.5.tgz#08830de9b75757b2b415c88a0ed83c3f77a7b0ad"
+  integrity sha512-4aosuS8aJPCq6SwCTH6DQbSKaO1lQf5P0YzJwkdxlzLbjuaP6yP+a4T/ttQ3Jd10LAjTw0ceug03z1guvsZD5A==
   dependencies:
     "@babel/code-frame" "^7.8.3"
     chalk "3.0.0"
@@ -14091,10 +14120,10 @@ razzle-plugin-scss@3.1.5:
     resolve-url-loader "^2.3.0"
     sass-loader "^7.0.3"
 
-razzle@3.3.7:
-  version "3.3.7"
-  resolved "https://registry.yarnpkg.com/razzle/-/razzle-3.3.7.tgz#aca0ee4f50729f904f39208cedc43e00fd0d60a7"
-  integrity sha512-R9P50/Hgi3wEpBERskSAx1u13uBSimtxg7xWX/de57PMMLoQhr4fDwxUZxLBGHIe1sN1xm+jp7zcx9Y70EU/Og==
+razzle@3.4.5:
+  version "3.4.5"
+  resolved "https://registry.yarnpkg.com/razzle/-/razzle-3.4.5.tgz#c8c6e2d37623aa40990de90ff6af9aeea3c60a3e"
+  integrity sha512-SKZJjLJXTaVT9USiBlZAppU94/Jr8yJWL+9UDigGqLgxembKnoWqS9+deCJM25RrL+FMFRdxCXwi/4wOmp5Ivw==
   dependencies:
     "@babel/core" "7.11.1"
     "@pmmmwh/react-refresh-webpack-plugin" "0.3.0"
@@ -14104,7 +14133,7 @@ razzle@3.3.7:
     babel-loader "^8.0.6"
     babel-plugin-syntax-jsx "6.18.0"
     babel-plugin-transform-define "2.0.0"
-    babel-preset-razzle latest
+    babel-preset-razzle "3.4.5"
     chalk "^3.0.0"
     copy-webpack-plugin "5.1.2"
     css-loader "3.5.3"
@@ -14123,7 +14152,7 @@ razzle@3.3.7:
     postcss-loader "^3.0.0"
     postcss-preset-env "^6.7.0"
     postcss-safe-parser "^4.0.2"
-    razzle-dev-utils latest
+    razzle-dev-utils "3.4.5"
     react-dev-utils "10.2.0"
     react-error-overlay "^6.0.6"
     react-refresh "^0.8.1"
@@ -17788,68 +17817,102 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
-volto-blocks-widget@collective/volto-blocks-widget#v2.0.1:
-  version "2.0.1"
-  resolved "https://codeload.github.com/collective/volto-blocks-widget/tar.gz/f420b3b25d580e35fe9dcb26f76195ebe0aba071"
-
-volto-cookie-banner@collective/volto-cookie-banner#v2.0.0:
-  version "2.0.0"
-  resolved "https://codeload.github.com/collective/volto-cookie-banner/tar.gz/a18b5e357799134fdc47e4daf560f601e2f4091c"
+volto-blocks-widget@2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/volto-blocks-widget/-/volto-blocks-widget-2.1.0.tgz#06e9cbddf03f8455f2bc96e3e744ce8b765fa246"
+  integrity sha512-vKp2839xT50PQLIRL7D5CgcVYS8N6fwfQmW3euue0x6+CCFAcyBU92gYgT6a6gk78FhaEYCk1NlsZ0MvChsWZA==
   dependencies:
+    "@plone/scripts" "*"
+
+volto-cookie-banner@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/volto-cookie-banner/-/volto-cookie-banner-2.1.0.tgz#da7fd184146260cf04f489fa7f8b387533fb0b13"
+  integrity sha512-PsMQTz+yxYgLf/1RGiIho5KEw+4nXAsy7hymPNaAEzgBNtrPE8UygK44WtDSiqgdrMmzxW3FRWuGcSWiiUf+fg==
+  dependencies:
+    "@plone/scripts" "^1.0.3"
     react-cookie-consent "^3.0.0"
 
-volto-customer-satisfaction@collective/volto-customer-satisfaction#v0.2.5:
-  version "0.2.5"
-  resolved "https://codeload.github.com/collective/volto-customer-satisfaction/tar.gz/0282bb883c756ce7b89146d326705ab1c968b433"
+volto-customer-satisfaction@^0.2.6:
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/volto-customer-satisfaction/-/volto-customer-satisfaction-0.2.6.tgz#afd37a25ca5d8d1eef134098e981e1cc9eb0a740"
+  integrity sha512-LiduLAMYXBmyjkrwAhrYTDxGQG9hN/exyEy2q2YQOEqsj6YbVNirSZpyA9bvQnk7bmMn6tEIILoWXda/QeAudQ==
   dependencies:
+    "@plone/scripts" "*"
     react-google-recaptcha-v3 "1.9.5"
 
-volto-dropdownmenu@collective/volto-dropdownmenu#v2.2.9:
-  version "2.2.9"
-  resolved "https://codeload.github.com/collective/volto-dropdownmenu/tar.gz/7f2cbca43e11ca997725a0b86221a1d889880253"
+volto-dropdownmenu@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/volto-dropdownmenu/-/volto-dropdownmenu-2.3.0.tgz#cba0aa1f7fe0067c06c10bcfb131f6059f6708ce"
+  integrity sha512-DIWCg/FowZJUbDOA1ZGJAsd+UdhN5+KC1F0bXwo5G2yQyD47H6U6V1ebhj1sPA67Ljz5obkscwVR7B/mzJDkDA==
   dependencies:
+    "@plone/scripts" "*"
     react-outside-click-handler "1.3.0"
 
-volto-editablefooter@RedTurtle/volto-editablefooter#v3.1.3:
-  version "3.1.3"
-  resolved "https://codeload.github.com/RedTurtle/volto-editablefooter/tar.gz/091e18af73e8dbf53f58b66e51e1c549d27c4860"
+volto-editablefooter@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/volto-editablefooter/-/volto-editablefooter-4.1.1.tgz#40b34bd318308cd501dabf908d6be4231a7b047f"
+  integrity sha512-5O7A4abKVlRQlo4cTtia7ZoXb4H0wDstTDawyllzfd22HhSE4KTrBJ4IpkqUyQg3j50GSCCa50Q8Np17BbwzEw==
   dependencies:
+    "@plone/scripts" "^1.0.3"
     react-outside-click-handler "1.3.0"
 
-volto-form-block@collective/volto-form-block#v2.0.3:
-  version "2.0.3"
-  resolved "https://codeload.github.com/collective/volto-form-block/tar.gz/da44ab2ca03a333e6a8ec01fcecd7701873b1445"
+volto-form-block@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/volto-form-block/-/volto-form-block-2.1.0.tgz#80e0bc993fb6bf1ccc4b378efda983dea1eb5538"
+  integrity sha512-X59cOVBjd7Du+bOWQe0sORyfQxNxKtYnQZjsdt2Le9Mu2cwpkIXHGmpTRKD8XZ6dn2Wx5Z2mbr9xjT3Y1wf/mQ==
   dependencies:
     "@hcaptcha/react-hcaptcha" "^0.3.6"
+    "@plone/scripts" "^1.0.3"
     file-saver "^2.0.5"
     react-google-recaptcha-v3 "^1.8.0"
     volto-subblocks collective/volto-subblocks#v1.0.1
 
-volto-google-analytics@collective/volto-google-analytics#v1.1.0:
-  version "1.1.0"
-  resolved "https://codeload.github.com/collective/volto-google-analytics/tar.gz/f42cba4def40a4654a0a1d950130319b4b688602"
+volto-google-analytics@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/volto-google-analytics/-/volto-google-analytics-1.2.0.tgz#df2d5660773468b2ec39ce609b760a010f498607"
+  integrity sha512-LdDodQoWPq3lFI61bRPRUmRyuaTPHEePenithHrPWYdFzHeX0L7UMjzEaLca+Vjx4zp3JawMEN2A7eGDLZHSSw==
   dependencies:
+    "@plone/scripts" "*"
     react-ga "2.7.0"
 
-volto-multilingual-widget@collective/volto-multilingual-widget#v2.1.0:
-  version "2.1.0"
-  resolved "https://codeload.github.com/collective/volto-multilingual-widget/tar.gz/fdd1c13b4afc02bcdea0ddf840863063f8c8b5de"
+volto-multilingual-widget@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/volto-multilingual-widget/-/volto-multilingual-widget-2.2.0.tgz#31ab276d0f9b3793f103150232aecb31c291355e"
+  integrity sha512-KEM6hjVZ8jctkgL92p7X/UMVq4Z9Ceeup9rXoK0b1W82UirF1BaYKojCAtpmp/utDsM9Id6dijYs/1IGvk1oJg==
   dependencies:
+    "@plone/scripts" "^1.0.3"
     draft-js-export-html "^1.4.1"
 
-volto-rss-block@redturtle/volto-rss-block#v2.0.0:
-  version "2.0.0"
-  resolved "https://codeload.github.com/redturtle/volto-rss-block/tar.gz/c309835bf876e1ccb9fd3f6b07906ff10c2560c9"
+volto-rss-block@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/volto-rss-block/-/volto-rss-block-2.2.0.tgz#2f15b152b7a125400cf80212748bb300c2d515e0"
+  integrity sha512-HE+fdQCOUgLRJ+Q6eMEAvHMnOMlwKSqpoxHBzt71pliES7IrHisA7/oYzcGydrwOFadTCIKHX79Fx3j9LYR+RQ==
   dependencies:
+    "@plone/scripts" "*"
     rss-parser "3.7.5"
 
-volto-secondarymenu@collective/volto-secondarymenu#v2.1.4:
-  version "2.1.4"
-  resolved "https://codeload.github.com/collective/volto-secondarymenu/tar.gz/eb9cf3aa708e3f738022fc30b29a80b088b51d60"
+volto-secondarymenu@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/volto-secondarymenu/-/volto-secondarymenu-2.2.0.tgz#3e50dce95970233f4ffdb228cc0c22a16290cafd"
+  integrity sha512-vPLU4+KnQs+uzNGhW3kdZKJTOLjrWGUDCQrCUAtFeoxuRs6dzI9AXLz6ATKyesyqO1gWK04i89dxlgVfRK0y8w==
+  dependencies:
+    "@plone/scripts" "*"
 
-volto-social-settings@collective/volto-social-settings#v2.1.0:
-  version "2.1.0"
-  resolved "https://codeload.github.com/collective/volto-social-settings/tar.gz/c770fb17e5b25887db0be5df39a128f32d2da51b"
+volto-social-settings@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/volto-social-settings/-/volto-social-settings-2.2.0.tgz#5d89f2f57b24a44c40b5c815d680e164f4a2dd81"
+  integrity sha512-MzvqCjOF891iLE5+ALApj9NnXaz9gt9Hmh6f1AQdq38PljQ6LVnRjhWI5y+1p5Ir6ZBtfCSEaihjZ+BPJhQ+FA==
+  dependencies:
+    "@plone/scripts" "^1.0.3"
+
+volto-subblocks@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/volto-subblocks/-/volto-subblocks-1.2.0.tgz#ca48d991830309e257311045e9065aaece9d7818"
+  integrity sha512-JkkDz8VjSf9tkbQG1kmJb87vXS8iQI7eGtM0E41KS/jjkeJbx++40LhJla5oVd1z/964l8GQWk/SQk4B4fpLhA==
+  dependencies:
+    "@plone/scripts" "^1.0.3"
+    react-dnd "^5.0.0"
+    react-dnd-html5-backend "^5.0.1"
 
 volto-subblocks@collective/volto-subblocks#v1.0.1:
   version "1.0.1"
@@ -17858,26 +17921,28 @@ volto-subblocks@collective/volto-subblocks#v1.0.1:
     react-dnd "^5.0.0"
     react-dnd-html5-backend "^5.0.1"
 
-volto-subblocks@collective/volto-subblocks#v1.1.0:
-  version "1.1.0"
-  resolved "https://codeload.github.com/collective/volto-subblocks/tar.gz/97ab1ca206085cd2f4d4ffe718b222b552a222a9"
+volto-subfooter@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/volto-subfooter/-/volto-subfooter-1.0.3.tgz#9c85b3e2a183b93fe4e7dd3f2043179635d87424"
+  integrity sha512-x1DWFgCtDXtmMn2/gthTwdHAEbtF+x0Txun+1TJVavBq9R/OB/APRm+1gwrNEZsvlIXXo/wiAILcAyc08PBHaA==
   dependencies:
-    react-dnd "^5.0.0"
-    react-dnd-html5-backend "^5.0.1"
+    "@plone/scripts" "*"
 
-volto-subfooter@collective/volto-subfooter#v1.0.1:
-  version "1.0.1"
-  resolved "https://codeload.github.com/collective/volto-subfooter/tar.gz/2ae54ffb5e5cd7f682ffc9407c1f242010d1ea8d"
-
-volto-subsites@collective/volto-subsites#v2.0.1:
-  version "2.0.1"
-  resolved "https://codeload.github.com/collective/volto-subsites/tar.gz/cd119e86ff045c7e21199dab3a25ec3d9412e134"
-
-volto-venue@collective/volto-venue#v3.0.1:
-  version "3.0.1"
-  resolved "https://codeload.github.com/collective/volto-venue/tar.gz/93585b5ba1ce9a1a5e13c661d849aae5f2b83160"
+volto-subsites@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/volto-subsites/-/volto-subsites-2.1.0.tgz#0ba1fea022fa893613ca926481470c8420d30b33"
+  integrity sha512-DWaHVQpM9Ee2Z60wV+8im19LTLP6uS9p4FjfEuUOB25WCJg3EHShzV+Vw20wJcQjdrrV5NgneWyVMCkleCDzQg==
   dependencies:
+    "@plone/scripts" "^1.0.3"
+
+volto-venue@^3.1.2:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/volto-venue/-/volto-venue-3.1.2.tgz#e1fb17c4134c8344278f59566aa984e267ff2632"
+  integrity sha512-m1OSkSBYJ7NdT2zksRrStDw9qmtdd7kKrtZj9b+pmluR8AMtAsDiJ8HU0yfORKtGzh4sbbDATtaJFbPt/YgM2w==
+  dependencies:
+    "@plone/scripts" "*"
     leaflet "1.6.0"
+    leaflet.markercluster "1.5.0"
     react-leaflet "2.7.0"
 
 w3c-hr-time@^1.0.1, w3c-hr-time@^1.0.2:
