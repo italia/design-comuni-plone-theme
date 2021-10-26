@@ -111,9 +111,25 @@ const Body = ({ data, isEditMode }) => {
                     />
                   </figure>
                   <div className="user-infos">
-                    <div className="user-name">{tweet.author.name}</div>
+                    <div className="user-name">
+                      <a
+                        href={`https://twitter.com/${tweet.author.username}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        key={tweet.author.username}
+                      >
+                        {tweet.author.name}
+                      </a>
+                    </div>
                     <div className="user-username">
-                      @{tweet.author.username}
+                      <a
+                        href={`https://twitter.com/${tweet.author.username}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        key={tweet.author.username}
+                      >
+                        @{tweet.author.username}
+                      </a>
                     </div>
                   </div>
                 </div>
