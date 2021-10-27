@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
 import Slider from 'react-slick';
 import moment from 'moment';
+import { UniversalLink } from '@plone/volto/components';
 import { Container, Row } from 'design-react-kit/dist/design-react-kit';
 import { getTwitterPosts } from '@italia/actions';
 import { Icon } from '@italia/components/ItaliaTheme';
@@ -84,14 +85,9 @@ const Body = ({ data, isEditMode }) => {
           <div className="authors">
             <Icon icon="it-twitter" />{' '}
             {authors.map((author) => (
-              <a
-                href={`https://twitter.com/${author}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                key={author}
-              >
+              <UniversalLink href={`https://twitter.com/${author}`}>
                 @{author}
-              </a>
+              </UniversalLink>
             ))}
           </div>
         )}
@@ -112,24 +108,18 @@ const Body = ({ data, isEditMode }) => {
                   </figure>
                   <div className="user-infos">
                     <div className="user-name">
-                      <a
+                      <UniversalLink
                         href={`https://twitter.com/${tweet.author.username}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        key={tweet.author.username}
                       >
                         {tweet.author.name}
-                      </a>
+                      </UniversalLink>
                     </div>
                     <div className="user-username">
-                      <a
+                      <UniversalLink
                         href={`https://twitter.com/${tweet.author.username}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        key={tweet.author.username}
                       >
                         @{tweet.author.username}
-                      </a>
+                      </UniversalLink>
                     </div>
                   </div>
                 </div>
