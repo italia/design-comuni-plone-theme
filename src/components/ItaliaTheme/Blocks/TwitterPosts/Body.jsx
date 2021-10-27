@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
 import Slider from 'react-slick';
 import moment from 'moment';
+import { UniversalLink } from '@plone/volto/components';
 import { Container, Row } from 'design-react-kit/dist/design-react-kit';
 import { getTwitterPosts } from '@italia/actions';
 import { Icon } from '@italia/components/ItaliaTheme';
@@ -84,14 +85,9 @@ const Body = ({ data, isEditMode }) => {
           <div className="authors">
             <Icon icon="it-twitter" />{' '}
             {authors.map((author) => (
-              <a
-                href={`https://twitter.com/${author}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                key={author}
-              >
+              <UniversalLink href={`https://twitter.com/${author}`}>
                 @{author}
-              </a>
+              </UniversalLink>
             ))}
           </div>
         )}
@@ -111,9 +107,19 @@ const Body = ({ data, isEditMode }) => {
                     />
                   </figure>
                   <div className="user-infos">
-                    <div className="user-name">{tweet.author.name}</div>
+                    <div className="user-name">
+                      <UniversalLink
+                        href={`https://twitter.com/${tweet.author.username}`}
+                      >
+                        {tweet.author.name}
+                      </UniversalLink>
+                    </div>
                     <div className="user-username">
-                      @{tweet.author.username}
+                      <UniversalLink
+                        href={`https://twitter.com/${tweet.author.username}`}
+                      >
+                        @{tweet.author.username}
+                      </UniversalLink>
                     </div>
                   </div>
                 </div>
