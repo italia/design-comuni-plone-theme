@@ -2160,7 +2160,7 @@ msgstr "Mostra il nastro solo sulla prima card"
 
 #: config/Blocks/ListingOptions/simpleListTemplate
 msgid "show_pointer_list"
-msgstr ""
+msgstr "Mostra elenco puntato"
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: config/Blocks/ListingOptions/utils
