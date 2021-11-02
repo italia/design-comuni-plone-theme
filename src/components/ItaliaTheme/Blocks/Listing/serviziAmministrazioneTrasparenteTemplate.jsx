@@ -70,7 +70,7 @@ const GridGalleryTemplate = ({
                     {item.title}
                   </UniversalLink>
                 </td>
-                <td>{item.ruolo}</td>
+                <td>{item.ruolo?.title}</td>
                 <td>
                   {item.organizzazione_riferimento &&
                   item.organizzazione_riferimento.length > 0 ? (

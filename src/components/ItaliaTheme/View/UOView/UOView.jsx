@@ -141,7 +141,7 @@ const UOView = ({ content }) => {
 
   // create object Ruolo: Persone
   let roles = content?.persone_struttura?.reduce((r, a) => {
-    const role = a.ruolo ?? '';
+    const role = a.ruolo.title ?? '';
     r[role] = r[role] || [];
     r[role].push(a);
     return r;
@@ -217,13 +217,14 @@ const UOView = ({ content }) => {
                     </div>
                   </div>
                 )}
-                {content.uo_children?.length > 0 &&
-                  content.uo_children.map((uo) => {
-                    return (
-                      <div className="mb-5 mt-3">
-                        <h5>
-                          {intl.formatMessage(messages.legami_strutture_figlie)}
-                        </h5>
+
+                {content.uo_children?.length > 0 && (
+                  <div className="mb-5 mt-3">
+                    <h5>
+                      {intl.formatMessage(messages.legami_strutture_figlie)}
+                    </h5>
+                    {content.uo_children.map((uo) => {
+                      return (
                         <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal mb-3">
                           <OfficeCard
                             key={uo['@id']}
@@ -231,9 +232,11 @@ const UOView = ({ content }) => {
                             load_data={false}
                           />
                         </div>
-                      </div>
-                    );
-                  })}
+                      );
+                    })}
+                  </div>
+                )}
+
                 {content.legami_con_altre_strutture?.length > 0 && (
                   <div className="mb-5 mt-3">
                     <h5>

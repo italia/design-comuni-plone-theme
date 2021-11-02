@@ -49,6 +49,10 @@ const getItaliaWidgets = (config) => {
         (props) => <ArrayWidget {...props} wrapped={false} />,
         [],
       ),
+      ruoli_persona: MultilingualWidget(
+        (props) => <ArrayWidget {...props} wrapped={false} />,
+        [],
+      ),
       subsite_social_links: SubsiteSocialLinksWidget,
     },
     widget: {

@@ -172,7 +172,7 @@ const PersonaView = ({ content }) => {
             id="main-content-section"
             ref={documentBody}
           >
-            {(content.ruolo ||
+            {(content.ruolo?.token ||
               content?.data_conclusione_incarico ||
               (!content?.data_conclusione_incarico &&
                 (content?.organizzazione_riferimento?.length > 0 ||
@@ -191,8 +191,8 @@ const PersonaView = ({ content }) => {
                 tag_id="ruolo"
                 title={intl.formatMessage(messages.ruolo)}
               >
-                {content?.ruolo?.length > 0 && (
-                  <div className="mb-5">{content.ruolo}</div>
+                {content?.ruolo?.token?.length > 0 && (
+                  <div className="mb-5">{content.ruolo.title}</div>
                 )}
                 {!content?.data_conclusione_incarico && (
                   <>
@@ -502,7 +502,7 @@ PersonaView.propTypes = {
     }),
     organizzazione_riferimento: PropTypes.array.isRequired,
     responsabile_di: PropTypes.array,
-    ruolo: PropTypes.string.isRequired,
+    ruolo: PropTypes.object.isRequired,
     telefono: PropTypes.string,
     tipologia_persona: PropTypes.shape({
       title: PropTypes.string.isRequired,

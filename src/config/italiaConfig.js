@@ -75,6 +75,7 @@ export default function applyConfig(voltoConfig) {
     verticalFormTabs: true,
     showTags: false,
     showSelfRegistration: false,
+    defaultPageSize: 24,
     serverConfig: {
       ...config.settings.serverConfig,
       extractScripts: {
@@ -164,7 +165,7 @@ export default function applyConfig(voltoConfig) {
           // { title: 'Credits', url: 'https://www.redturtle.it/' },
         ],
       },
-      enableCustomerSatisfaction: false,
+      enableCustomerSatisfaction: true,
     },
     'volto-blocks-widget': {
       allowedBlocks: [

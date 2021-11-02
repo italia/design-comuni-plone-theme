@@ -1,3 +1,43 @@
+### [5.7.9](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.8...v5.7.9) (2021-10-26)
+
+
+### Bug Fixes
+
+* changed defaultPageSize parameter to 24 results ([b0c184b](https://github.com/RedTurtle/design-volto-theme/commit/b0c184b61973e39185fcd1837816fa167f577577))
+
+
+### Maintenance
+
+* added new format file download and fix default icon ([e13c60c](https://github.com/RedTurtle/design-volto-theme/commit/e13c60cac03636ddc3503e6ba817a73930fe8234))
+
+### [5.7.8](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.7...v5.7.8) (2021-10-22)
+
+
+### Bug Fixes
+
+* fix view legami_strutture_figlie ([78d44e0](https://github.com/RedTurtle/design-volto-theme/commit/78d44e0980b66968b3d960dfc75ce614711e476a))
+
+### [5.7.7](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.6...v5.7.7) (2021-10-22)
+
+
+### Bug Fixes
+
+* fix view persone in uo ([ee23c3e](https://github.com/RedTurtle/design-volto-theme/commit/ee23c3e93a11a89a625615a867223315054c99ac))
+
+### [5.7.6](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.5...v5.7.6) (2021-10-22)
+
+
+### Bug Fixes
+
+* added contacts info officeCard in services ([489a601](https://github.com/RedTurtle/design-volto-theme/commit/489a601ded61b8911d66b5b8409e41a2d535a859))
+* added xsd file icon ([4b650d3](https://github.com/RedTurtle/design-volto-theme/commit/4b650d34f0101d64e7942fdf8617802cc6391891))
+
+
+### Maintenance
+
+* enabled customer satisfaction by default ([a2fb7e8](https://github.com/RedTurtle/design-volto-theme/commit/a2fb7e8984092c06f34a7cdd4fad752aae826f47))
+* selectable persona role ([424a30c](https://github.com/RedTurtle/design-volto-theme/commit/424a30cf39a2931f939744a262ca1afcc80d9037))
+
 ### [5.7.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.4...v5.7.5) (2021-10-20)
 
 
