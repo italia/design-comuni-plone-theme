@@ -22,15 +22,9 @@ a {
   }
 }
 
-.listing-item {
-  img {
-    max-width: unset;
-    margin-right: unset;
-  }
-
-  h2 a {
-    display: inline;
-  }
+.listing-item img {
+  max-width: unset;
+  margin-right: unset;
 }
 
 .public-ui .text-secondary {
