@@ -29,13 +29,19 @@ const Location = ({ location, show_icon }) => {
   const intl = useIntl();
   const key = `luogo${location['@id']}`;
   const url = flattenToAppURL(location['@id']);
-  const locationContent = useSelector((state) => state.content.subrequests);
+  const locationContent = useSelector(
+    (state) => state.content.subrequests?.[key],
+  );
+  const loaded = locationContent.loading || locationContent.loaded;
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getContent(url, null, key));
+    if (!loaded) {
+      dispatch(getContent(url, null, key));
+    }
     return () => dispatch(resetContent(key));
-  }, [dispatch, key, url]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [url]);
 
   let location_fo = locationContent[key]?.data;
   return location_fo ? (

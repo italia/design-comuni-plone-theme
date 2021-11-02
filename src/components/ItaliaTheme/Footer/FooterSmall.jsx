@@ -39,7 +39,8 @@ const FooterSmall = () => {
 
   useEffect(() => {
     dispatch(getSubFooter());
-  }, [dispatch]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     let _links = getSiteProperty('smallFooterLinks', intl.locale) ?? [];

@@ -83,7 +83,8 @@ const Sponsors = ({ content, folder_name, title }) => {
     return () => {
       dispatch(resetSearchContent(folder_name));
     };
-  }, [dispatch, content, url, folder_name]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [url]);
 
   const sponsors = searchResults?.[folder_name]?.items || [];
   const sponsors_no_logos = sponsors.filter((sponsor) => !sponsor.image);
