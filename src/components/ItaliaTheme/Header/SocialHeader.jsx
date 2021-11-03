@@ -6,6 +6,8 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
+import { isEmpty } from 'lodash';
+
 import { HeaderSocialsZone } from 'design-react-kit/dist/design-react-kit';
 import { Icon } from '@italia/components/ItaliaTheme';
 import { getSocialSettings } from '@italia/addons/volto-social-settings';
@@ -23,16 +25,19 @@ const SocialHeader = () => {
   const socialSettings = useSelector((state) => state?.socialSettings); //useSelector((state) => state?.socialSettings?.results);
   const subsite = useSelector((state) => state.subsite?.data);
 
+  const items = isEmpty(socialSettings.results) ? [] : socialSettings.results;
+
   useEffect(() => {
-    if (!socialSettings?.loadingResults && socialSettings?.results === null) {
+    if (!socialSettings?.loadingResults && items.length === 0) {
       dispatch(getSocialSettings());
     }
-  }, [dispatch, socialSettings]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dispatch]);
 
   const socials =
     subsite?.subsite_social_links?.length > 0
       ? JSON.parse(subsite.subsite_social_links)
-      : socialSettings?.results;
+      : items;
 
   return (
     socials?.length > 0 && (
