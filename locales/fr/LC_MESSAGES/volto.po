@@ -1329,7 +1329,7 @@ msgstr "Galerie d'images"
 
 #: components/ItaliaTheme/GalleryPreview/GalleryPreview
 msgid "gallery_close_preview"
-msgstr ""
+msgstr "Fermer l'aperçu de l'image"
 
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "gallery_video_title"
@@ -1345,15 +1345,15 @@ msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Gallery
 msgid "gallery_viewPreview"
-msgstr ""
+msgstr "Voir l'aperçu de"
 
 #: components/ItaliaTheme/GalleryPreview/GalleryPreview
 msgid "gallery_view_next"
-msgstr ""
+msgstr "Voir l'image suivante"
 
 #: components/ItaliaTheme/GalleryPreview/GalleryPreview
 msgid "gallery_view_prev"
-msgstr ""
+msgstr "Voir l'image précédente"
 
 #: components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate
 msgid "grid-gallery-max-items-exceeded"
