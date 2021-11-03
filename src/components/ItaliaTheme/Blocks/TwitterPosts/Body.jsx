@@ -157,7 +157,7 @@ const Body = ({ data, isEditMode }) => {
       intl.formatMessage(messages.no_results)
     ) : null;
 
-  return request.loadingResults ? (
+  return request?.loadingResults ? (
     <TwitterSkeleton data={data} authors={authors} isEditMode={isEditMode} />
   ) : request.error ? (
     <Row className="row-full-width">

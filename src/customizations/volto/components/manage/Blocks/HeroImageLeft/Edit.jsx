@@ -174,8 +174,8 @@ class Edit extends Component {
    */
   UNSAFE_componentWillReceiveProps(nextProps) {
     if (
-      this.props.request.loading &&
-      nextProps.request.loaded &&
+      this.props.request?.loading &&
+      nextProps.request?.loaded &&
       this.state.uploading
     ) {
       this.setState({

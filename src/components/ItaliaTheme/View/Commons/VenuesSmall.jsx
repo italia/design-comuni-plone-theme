@@ -32,7 +32,7 @@ const Location = ({ location, show_icon }) => {
   const locationContent = useSelector(
     (state) => state.content.subrequests?.[key],
   );
-  const loaded = locationContent.loading || locationContent.loaded;
+  const loaded = locationContent?.loading || locationContent?.loaded;
   const dispatch = useDispatch();
 
   useEffect(() => {
