@@ -1327,6 +1327,10 @@ msgstr "du"
 msgid "gallery"
 msgstr "Galerie d'images"
 
+#: components/ItaliaTheme/GalleryPreview/GalleryPreview
+msgid "gallery_close_preview"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "gallery_video_title"
 msgstr ""
@@ -1337,6 +1341,18 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "gallery_video_url"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/Gallery
+msgid "gallery_viewPreview"
+msgstr ""
+
+#: components/ItaliaTheme/GalleryPreview/GalleryPreview
+msgid "gallery_view_next"
+msgstr ""
+
+#: components/ItaliaTheme/GalleryPreview/GalleryPreview
+msgid "gallery_view_prev"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate
@@ -2172,6 +2188,10 @@ msgstr ""
 
 #: config/Blocks/ListingOptions/ribbonCardTemplate
 msgid "show_only_first_ribbon"
+msgstr ""
+
+#: config/Blocks/ListingOptions/simpleListTemplate
+msgid "show_pointer_list"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
