@@ -409,6 +409,7 @@ msgstr ""
 msgid "Trascina qui un file per sostituire quello esistente"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "Twitter Posts"
 msgstr ""
@@ -2172,6 +2173,10 @@ msgstr ""
 msgid "show_only_first_ribbon"
 msgstr ""
 
+#: config/Blocks/ListingOptions/simpleListTemplate
+msgid "show_pointer_list"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: config/Blocks/ListingOptions/utils
 msgid "show_section"
@@ -2322,6 +2327,7 @@ msgid "tipologia_persona"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "title"
@@ -2351,14 +2357,17 @@ msgstr ""
 msgid "trasparenza"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccountLink"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccounts"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccounts_description"
 msgstr ""
