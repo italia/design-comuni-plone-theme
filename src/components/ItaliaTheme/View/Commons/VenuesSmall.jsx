@@ -43,7 +43,7 @@ const Location = ({ location, show_icon }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [url]);
 
-  let location_fo = locationContent[key]?.data;
+  let location_fo = locationContent?.[key]?.data;
   return location_fo ? (
     <div className="card card-teaser shadow mt-3 rounded">
       {show_icon && <Icon icon={'it-pin'} />}

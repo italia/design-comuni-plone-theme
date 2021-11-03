@@ -36,7 +36,7 @@ const OfficeCard = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [url]);
 
-  let office_fo = load_data ? officeContent[key]?.data : office;
+  let office_fo = load_data ? officeContent?.[key]?.data : office;
 
   return office_fo ? (
     <div

@@ -35,7 +35,7 @@ const Module = ({ item }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  let modulo = subrequests[key]?.data;
+  let modulo = subrequests?.[key]?.data;
 
   return modulo ? (
     <Card
