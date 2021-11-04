@@ -1,3 +1,11 @@
+### [5.8.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.0...v5.8.1) (2021-11-04)
+
+
+### Maintenance
+
+* added simpleList variation listing block ([0069648](https://github.com/RedTurtle/design-volto-theme/commit/00696486393002736019c1c4994faadff0d1b41c))
+* updated locales file ([b296780](https://github.com/RedTurtle/design-volto-theme/commit/b2967809c2714b8d83b1cb4765772719e65a8d70))
+
 ## [5.8.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.9...v5.8.0) (2021-11-04)
 
 
