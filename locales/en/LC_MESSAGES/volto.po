@@ -2175,7 +2175,7 @@ msgstr ""
 
 #: config/Blocks/ListingOptions/simpleListTemplate
 msgid "show_pointer_list"
-msgstr ""
+msgstr "Show bulleted list"
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 #: config/Blocks/ListingOptions/utils
