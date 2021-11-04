@@ -1310,6 +1310,10 @@ msgstr "dal"
 msgid "gallery"
 msgstr "Galleria di immagini"
 
+#: components/ItaliaTheme/GalleryPreview/GalleryPreview
+msgid "gallery_close_preview"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "gallery_video_title"
 msgstr "Titolo del video"
@@ -1321,6 +1325,18 @@ msgstr "Non viene mostrato. Serve al redattore per identificare meglio il video 
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "gallery_video_url"
 msgstr "Video URL"
+
+#: components/ItaliaTheme/View/Commons/Gallery
+msgid "gallery_viewPreview"
+msgstr ""
+
+#: components/ItaliaTheme/GalleryPreview/GalleryPreview
+msgid "gallery_view_next"
+msgstr ""
+
+#: components/ItaliaTheme/GalleryPreview/GalleryPreview
+msgid "gallery_view_prev"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate
 msgid "grid-gallery-max-items-exceeded"

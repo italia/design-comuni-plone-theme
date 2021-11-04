@@ -1,0 +1,42 @@
+.modal .modal-dialog.gallery-preview {
+  .modal-content {
+    max-height: calc(100vh - 6rem);
+
+    .item-preview {
+      position: relative;
+      margin-bottom: 1.25rem;
+
+      .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      img {
+        width: auto !important;
+        max-width: 100%;
+
+        height: auto;
+        max-height: calc(100vh - 12rem);
+      }
+
+      button.btn {
+        position: absolute;
+        z-index: 1;
+
+        top: 50%;
+
+        border-radius: 100%;
+        transform: translateY(-50%);
+
+        &.prev {
+          left: -2.75rem;
+        }
+
+        &.next {
+          right: -2.75rem;
+        }
+      }
+    }
+  }
+}

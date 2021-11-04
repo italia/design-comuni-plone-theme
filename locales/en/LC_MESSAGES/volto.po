@@ -1310,6 +1310,10 @@ msgstr "from"
 msgid "gallery"
 msgstr "Image gallery"
 
+#: components/ItaliaTheme/GalleryPreview/GalleryPreview
+msgid "gallery_close_preview"
+msgstr "Close preview"
+
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "gallery_video_title"
 msgstr ""
@@ -1321,6 +1325,18 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "gallery_video_url"
 msgstr ""
+
+#: components/ItaliaTheme/View/Commons/Gallery
+msgid "gallery_viewPreview"
+msgstr "View preview of "
+
+#: components/ItaliaTheme/GalleryPreview/GalleryPreview
+msgid "gallery_view_next"
+msgstr "View next image"
+
+#: components/ItaliaTheme/GalleryPreview/GalleryPreview
+msgid "gallery_view_prev"
+msgstr "View previous image"
 
 #: components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate
 msgid "grid-gallery-max-items-exceeded"
