@@ -394,6 +394,7 @@ msgstr "Trascina qui un file per caricare un nuovo file"
 msgid "Trascina qui un file per sostituire quello esistente"
 msgstr "Trascina qui un file per sostituire quello esistente"
 
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "Twitter Posts"
 msgstr "Twitter Posts"
@@ -513,6 +514,7 @@ msgid "altri_documenti"
 msgstr "Altri documenti"
 
 #: config/Blocks/ListingOptions/cardWithImageTemplate
+#: config/Blocks/ListingOptions/cardWithSlideUpTextTemplate
 msgid "always_show_image"
 msgstr "Mostra l'immagine per tutti gli elementi"
 
@@ -746,6 +748,11 @@ msgstr "Seleziona l'immagine da mostrare"
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
 msgid "cardImageEnable"
 msgstr "Mostra l'immagine"
+
+#: components/ItaliaTheme/Blocks/Listing/CardWithSlideUpTextTemplate
+#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CardWithSlideUpTextTemplateSkeleton
+msgid "card_vedi"
+msgstr "Vedi"
 
 #: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
 msgid "cartellamodulistica_formati_scaricabili"
@@ -2327,6 +2334,7 @@ msgid "tipologia_persona"
 msgstr "Tipologia persona"
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "title"
@@ -2356,14 +2364,17 @@ msgstr "Argomenti"
 msgid "trasparenza"
 msgstr "Trasparenza"
 
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccountLink"
 msgstr "Link alla pagina del profilo"
 
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccounts"
 msgstr "Accounts"
 
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccounts_description"
 msgstr "Inserisci i nomi degli account di cui vuoi visualizzare i post, separati da virgola. Ad esempio, se vuoi mostrare i tweet di Repubblica e del Corriere della Sera, inserisci “repubblica,Corriere"."
