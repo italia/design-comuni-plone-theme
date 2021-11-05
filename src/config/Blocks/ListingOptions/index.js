@@ -15,3 +15,4 @@ export { addMapTemplateOptions } from '@italia/config/Blocks/ListingOptions/mapT
 export { addCompleteBlockLinksTemplateOptions } from '@italia/config/Blocks/ListingOptions/completeBlockLinksTemplate';
 export { addBandiInEvidenceTemplateOptions } from '@italia/config/Blocks/ListingOptions/bandiInEvidenceTemplate';
 export { addSliderTemplateOptions } from '@italia/config/Blocks/ListingOptions/sliderTemplate';
+export { addSimpleListTemplateOptions } from '@italia/config/Blocks/ListingOptions/simpleListTemplate';

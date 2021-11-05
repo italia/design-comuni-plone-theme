@@ -17,10 +17,14 @@ import cx from 'classnames';
  * @returns {string} Markup of the component.
  */
 
-const Downloads = ({ item }) => {
+const Downloads = ({ item, titleDoc }) => {
   return item['@type'] === 'Modulo' ? (
     <React.Fragment>
-      <div className="title">{item.title}</div>
+      {!titleDoc ? (
+        <div className="title">{item.title}</div>
+      ) : (
+        titleDoc !== item.title && <div className="title">{item.title}</div>
+      )}
       <div className="downloads">
         <DownloadFileFormat file={item?.file_principale} />
         <DownloadFileFormat file={item?.formato_alternativo_1} />
@@ -59,13 +63,15 @@ const DocRow = ({ doc }) => {
             {/* {doc.items?.length > 1 && ` - ${doc.items[0]?.title}`} */}
           </UniversalLink>
         </div>
-        {doc.items?.length === 1 && <Downloads item={doc.items[0]} />}
+        {doc.items?.length === 1 && (
+          <Downloads item={doc.items[0]} titleDoc={doc.title} />
+        )}
       </div>
       {doc.items?.length > 1 && (
         <>
           {doc.items.map((modulo) => (
             <div className="doc modulo" key={modulo['@id']}>
-              <Downloads item={modulo} />
+              <Downloads item={modulo} titleDoc={null} />
             </div>
           ))}
         </>

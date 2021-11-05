@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-11-04T14:05:09.257Z\n"
+"POT-Creation-Date: 2021-11-05T15:07:53.614Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -483,7 +483,6 @@ msgstr ""
 msgid "Trascina qui un file per sostituire quello esistente"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 # defaultMessage: Twitter Posts
 msgid "Twitter Posts"
@@ -1615,6 +1614,11 @@ msgstr ""
 msgid "gallery"
 msgstr ""
 
+#: components/ItaliaTheme/GalleryPreview/GalleryPreview
+# defaultMessage: Chiudi l'anteprima
+msgid "gallery_close_preview"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 # defaultMessage: Titolo del video
 msgid "gallery_video_title"
@@ -1628,6 +1632,21 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 # defaultMessage: Video URL
 msgid "gallery_video_url"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/Gallery
+# defaultMessage: Vedi l'anteprima di
+msgid "gallery_viewPreview"
+msgstr ""
+
+#: components/ItaliaTheme/GalleryPreview/GalleryPreview
+# defaultMessage: Immagine successiva
+msgid "gallery_view_next"
+msgstr ""
+
+#: components/ItaliaTheme/GalleryPreview/GalleryPreview
+# defaultMessage: Immagine precedente
+msgid "gallery_view_prev"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate
@@ -2843,7 +2862,6 @@ msgid "tipologia_persona"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 # defaultMessage: Titolo
@@ -2879,19 +2897,16 @@ msgstr ""
 msgid "trasparenza"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 # defaultMessage: Link alla pagina del profilo
 msgid "twitterAccountLink"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 # defaultMessage: Accounts
 msgid "twitterAccounts"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 # defaultMessage: Inserisci i nomi degli account di cui vuoi visualizzare i post, separati da virgola. Ad esempio, se vuoi mostrare i tweet di Repubblica e del Corriere della Sera, inserisci “repubblica,Corriere".
 msgid "twitterAccounts_description"

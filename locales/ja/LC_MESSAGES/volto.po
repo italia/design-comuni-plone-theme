@@ -401,7 +401,6 @@ msgstr ""
 msgid "Trascina qui un file per sostituire quello esistente"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "Twitter Posts"
 msgstr ""
@@ -1318,6 +1317,10 @@ msgstr ""
 msgid "gallery"
 msgstr ""
 
+#: components/ItaliaTheme/GalleryPreview/GalleryPreview
+msgid "gallery_close_preview"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "gallery_video_title"
 msgstr ""
@@ -1328,6 +1331,18 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "gallery_video_url"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/Gallery
+msgid "gallery_viewPreview"
+msgstr ""
+
+#: components/ItaliaTheme/GalleryPreview/GalleryPreview
+msgid "gallery_view_next"
+msgstr ""
+
+#: components/ItaliaTheme/GalleryPreview/GalleryPreview
+msgid "gallery_view_prev"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate
@@ -2319,7 +2334,6 @@ msgid "tipologia_persona"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "title"
@@ -2349,17 +2363,14 @@ msgstr ""
 msgid "trasparenza"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccountLink"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccounts"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccounts_description"
 msgstr ""

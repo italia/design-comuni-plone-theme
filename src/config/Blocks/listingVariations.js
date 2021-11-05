@@ -36,6 +36,9 @@ import BandiInEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Bloc
 import SquaresImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SquaresImageTemplate';
 import SquaresImageTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SquaresImageTemplateSkeleton';
 
+import SimpleListTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleListTemplate';
+import SimpleListTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SimpleListTemplateSkeleton';
+
 // import AmministrazioneTrasparenteTablesTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
 // import AmministrazioneTrasparenteTablesTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/AmministrazioneTrasparenteTablesTemplateSkeleton';
 
@@ -49,6 +52,7 @@ import {
   addBandiInEvidenceTemplateOptions,
   addDefaultOptions,
   addSliderTemplateOptions,
+  addSimpleListTemplateOptions,
 } from '@italia/config/Blocks/ListingOptions';
 
 const italiaListingVariations = [
@@ -198,6 +202,18 @@ const italiaListingVariations = [
     schemaEnhancer: ({ schema, formData, intl }) => {
       let pos = addDefaultOptions(schema, formData, intl);
       addBandiInEvidenceTemplateOptions(schema, formData, intl, pos);
+      return schema;
+    },
+  },
+  {
+    id: 'simpleListTemplate',
+    isDefault: false,
+    title: 'Lista semplice',
+    template: SimpleListTemplate,
+    skeleton: SimpleListTemplateSkeleton,
+    schemaEnhancer: ({ schema, formData, intl }) => {
+      let pos = addDefaultOptions(schema, formData, intl);
+      addSimpleListTemplateOptions(schema, formData, intl, pos);
       return schema;
     },
   },
