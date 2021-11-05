@@ -1,3 +1,12 @@
+### [5.8.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.1...v5.8.2) (2021-11-05)
+
+
+### Bug Fixes
+
+* bugfix responsive header-slim nav links ([9c31533](https://github.com/RedTurtle/design-volto-theme/commit/9c31533841bac719b0999c8f89ac851621dbef8b))
+* fixed mobile styles for parentsite menu ([375af32](https://github.com/RedTurtle/design-volto-theme/commit/375af327d8de67179f1f8c1135446f4ef9991b4d))
+* wrapped titles text in folder content ([eb2fb5d](https://github.com/RedTurtle/design-volto-theme/commit/eb2fb5da66910ce96e5ccd08978bbcbf5a6df587))
+
 ### [5.8.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.0...v5.8.1) (2021-11-04)
 
 
