@@ -36,7 +36,7 @@ const ParentSiteMenu = () => {
   }
 
   return subsite && menu ? (
-    <Nav vertical={false} className="parent-site-menu d-none d-lg-flex">
+    <Nav vertical={false} className="parent-site-menu">
       {menu.items.map((navitem, id) => (
         <NavItem tag="li" key={id}>
           <NavLink
