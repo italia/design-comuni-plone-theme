@@ -11,7 +11,6 @@ import {
   ListingLinkMore,
   ListingCategory,
 } from '@italia/components/ItaliaTheme';
-import cx from 'classnames';
 import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 import { defineMessages, useIntl } from 'react-intl';
 
@@ -29,7 +28,6 @@ const CardWithSlideUpTextTemplate = ({
   linkTitle,
   linkHref,
   show_block_bg = false,
-  always_show_image = true,
   show_type = true,
   show_section,
   show_description = true,
@@ -56,9 +54,7 @@ const CardWithSlideUpTextTemplate = ({
                     image?.scales?.preview?.download || '',
                   )})`,
                 }}
-                className={cx('listing-item box bg-img', {
-                  'no-image': !always_show_image,
-                })}
+                className="listing-item box bg-img"
                 key={index}
               >
                 <div className="bg-gradient"></div>
