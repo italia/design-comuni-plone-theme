@@ -5,22 +5,28 @@
 
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { isEmpty } from 'lodash';
 
 import { Icon } from '@italia/components/ItaliaTheme';
 import { getSocialSettings } from '@italia/addons/volto-social-settings';
 
 const FooterSocials = () => {
-  const socialSettings = useSelector((state) => state.socialSettings?.results);
+  const socialSettings = useSelector((state) => state.socialSettings);
   const dispatch = useDispatch();
 
+  const items = isEmpty(socialSettings.results) ? [] : socialSettings.results;
+
   useEffect(() => {
-    dispatch(getSocialSettings());
+    if (!socialSettings?.loadingResults && items.length === 0) {
+      dispatch(getSocialSettings());
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch]);
 
   return (
-    socialSettings?.length > 0 && (
+    items.length > 0 && (
       <ul className="list-inline text-left social">
-        {socialSettings?.map((social, idx) => (
+        {items.map((social, idx) => (
           <li className="list-inline-item" key={idx}>
             <a
               title={social.title}

@@ -52,7 +52,12 @@ const PaginaArgomentoView = ({ content }) => {
   useEffect(() => {
     if (content?.unita_amministrative_responsabili?.length > 0) {
       content.unita_amministrative_responsabili.forEach((x) => {
-        dispatch(getContent(flattenToAppURL(x['@id']), null, x['@id']));
+        const id = x['@id'];
+        const loaded =
+          searchResults?.[id]?.loading || searchResults?.[id]?.loaded;
+        if (!loaded) {
+          dispatch(getContent(flattenToAppURL(id), null, id));
+        }
       });
     }
 
@@ -63,7 +68,8 @@ const PaginaArgomentoView = ({ content }) => {
         });
       }
     };
-  }, [dispatch, content]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [content]);
 
   const rightHeaderHasContent =
     richTextHasContent(content.ulteriori_informazioni) ||

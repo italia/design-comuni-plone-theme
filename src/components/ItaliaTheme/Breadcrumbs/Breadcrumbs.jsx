@@ -35,7 +35,8 @@ const Breadcrumbs = ({ pathname }) => {
 
   useEffect(() => {
     dispatch(getBreadcrumbs(getBaseUrl(pathname)));
-  }, [dispatch, pathname]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
 
   if (subsite) {
     //se siamo nella root di un sottosito, non mostriamo le breadcrumbs. Serve anche per nasconderle dalla pagina dei risultati di ricerca quando si fa la ricerca in un sottosito

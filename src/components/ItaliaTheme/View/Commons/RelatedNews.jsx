@@ -19,7 +19,8 @@ const RelatedNews = ({ item, showimage, content }) => {
     dispatch(getContent(url, null, key));
     return () => dispatch(resetContent(key));
   }, [dispatch, item, url, key]);
-  const news_fo = locationContent[key]?.data;
+
+  const news_fo = locationContent?.[key]?.data;
   return news_fo ? (
     <NewsCard
       title={news_fo.title}

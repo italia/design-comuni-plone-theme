@@ -56,7 +56,7 @@ const GenericCard = ({
     }
   }, [dispatch, key, showimage, url]);
 
-  item_fo = locationContent[key]?.data || item;
+  item_fo = locationContent?.[key]?.data || item;
 
   return item_fo ? (
     showimage && item_fo[image_field] ? (
