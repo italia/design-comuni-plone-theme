@@ -1,20 +1,29 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
-import React, { useEffect } from 'react';
-import { searchContent, resetSearchContent } from '@plone/volto/actions';
-import { flattenToAppURL } from '@plone/volto/helpers';
-import { contentFolderHasItems } from '@italia/helpers';
-import EmbeddedVideo from './EmbeddedVideo';
+import PropTypes from 'prop-types';
+
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import PropTypes from 'prop-types';
+
+import { searchContent, resetSearchContent } from '@plone/volto/actions';
+import { flattenToAppURL } from '@plone/volto/helpers';
 import Image from '@plone/volto/components/theme/Image/Image';
+
+import { GalleryPreview } from '@italia/components/ItaliaTheme';
+import { contentFolderHasItems } from '@italia/helpers';
+import EmbeddedVideo from './EmbeddedVideo';
 
 const messages = defineMessages({
   gallery: {
     id: 'gallery',
     defaultMessage: 'Galleria immagini',
+  },
+  viewPreview: {
+    id: 'gallery_viewPreview',
+    defaultMessage: "Vedi l'anteprima di",
   },
 });
 
@@ -69,11 +78,13 @@ const Gallery = ({
     };
   };
 
+  const intl = useIntl();
+  const [viewImageIndex, setViewImageIndex] = useState(null);
+
   const video_settings = {
     ...getSettings(1, 1),
   };
 
-  const intl = useIntl();
   const url = `${flattenToAppURL(content['@id'])}/${folder_name}`;
   const searchResults = useSelector((state) => state.search.subrequests);
   const dispatch = useDispatch();
@@ -98,7 +109,7 @@ const Gallery = ({
     return () => {
       dispatch(resetSearchContent(folder_name));
     };
-  }, [dispatch, folder_name, hasChildren, url]);
+  }, [url]);
 
   const multimedia = searchResults?.[folder_name]?.items || [];
   let images = multimedia.filter((item) => item['@type'] === 'Image');
@@ -123,11 +134,30 @@ const Gallery = ({
                 {images.map((item, i) => (
                   <div className="it-single-slide-wrapper" key={item['@id']}>
                     <figure>
-                      <Image
-                        image={item.image}
-                        alt={item.title}
-                        className="img-fluid"
-                      />
+                      <a
+                        href={flattenToAppURL(item.image.scales.large.download)}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          setViewImageIndex(i);
+                        }}
+                        onKeyDown={(e) => {
+                          if (e.keyCode === 13) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            setViewImageIndex(i);
+                          }
+                        }}
+                        aria-label={`${intl.formatMessage(
+                          messages.viewPreview,
+                        )} ${item.title}`}
+                      >
+                        <Image
+                          image={item.image}
+                          alt={item.title}
+                          className="img-fluid"
+                        />
+                      </a>
                       <figcaption className="figure-caption mt-2">
                         {item.title}
                       </figcaption>
@@ -135,6 +165,13 @@ const Gallery = ({
                   </div>
                 ))}
               </Slider>
+
+              <GalleryPreview
+                id={`image-gallery-${folder_name}`}
+                viewIndex={viewImageIndex}
+                setViewIndex={setViewImageIndex}
+                items={images}
+              />
             </div>
           </div>
         </div>

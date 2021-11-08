@@ -1,4 +1,3 @@
-//mobile
 .it-header-slim-wrapper {
   .it-header-slim-wrapper-content {
     a {
@@ -19,18 +18,49 @@
         color: $primary;
       }
     }
-  }
-}
 
-//Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
-  .it-header-slim-wrapper {
-    .it-header-slim-wrapper-content {
+    // Tablet / desktop
+    @media (min-width: #{map-get($grid-breakpoints, md)}) {
+      ul.parent-site-menu {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+
+        li.nav-item {
+          display: flex;
+          max-width: 10rem;
+          align-items: center;
+        }
+      }
+    }
+
+    // Tablet horizontal / small desktop
+    @media (min-width: #{map-get($grid-breakpoints, lg)}) {
       a {
         &.dropdown-toggle {
           .rounded-icon {
             .icon {
               margin: 0;
+            }
+          }
+        }
+      }
+    }
+
+    // Mobile / Tablet horizontal / small desktop
+    @media (max-width: #{map-get($grid-breakpoints, lg)}) {
+      flex-wrap: wrap;
+
+      .it-header-slim-right-zone.header-slim-right-zone {
+        flex: 1 0 auto;
+        justify-content: center;
+
+        ul.parent-site-menu {
+          justify-content: center !important;
+          justify-self: center;
+
+          li {
+            .nav-link {
+              padding: 0.3rem;
             }
           }
         }

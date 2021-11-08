@@ -1,3 +1,55 @@
+### [5.8.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.1...v5.8.2) (2021-11-05)
+
+
+### Bug Fixes
+
+* bugfix responsive header-slim nav links ([9c31533](https://github.com/RedTurtle/design-volto-theme/commit/9c31533841bac719b0999c8f89ac851621dbef8b))
+* fixed mobile styles for parentsite menu ([375af32](https://github.com/RedTurtle/design-volto-theme/commit/375af327d8de67179f1f8c1135446f4ef9991b4d))
+* wrapped titles text in folder content ([eb2fb5d](https://github.com/RedTurtle/design-volto-theme/commit/eb2fb5da66910ce96e5ccd08978bbcbf5a6df587))
+
+### [5.8.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.0...v5.8.1) (2021-11-04)
+
+
+### Maintenance
+
+* added simpleList variation listing block ([0069648](https://github.com/RedTurtle/design-volto-theme/commit/00696486393002736019c1c4994faadff0d1b41c))
+* updated locales file ([b296780](https://github.com/RedTurtle/design-volto-theme/commit/b2967809c2714b8d83b1cb4765772719e65a8d70))
+
+## [5.8.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.9...v5.8.0) (2021-11-04)
+
+
+### Features
+
+* added gallery preview image for component Gallery ([ff23754](https://github.com/RedTurtle/design-volto-theme/commit/ff23754d47848bf9895b9dcd7d58e7784ac9d413))
+
+
+### Bug Fixes
+
+* added title of content type folder ([39a8a9f](https://github.com/RedTurtle/design-volto-theme/commit/39a8a9fa8dc9f686bc623a70c9f72066cedb12e6))
+* bugfix link content type folder ([5f55f44](https://github.com/RedTurtle/design-volto-theme/commit/5f55f44d7c3f12ea423a2f77d46ea53badba9e6d))
+* changed behavior to the module title for documents ([587bf31](https://github.com/RedTurtle/design-volto-theme/commit/587bf3108ccfa23f5eff616dac08c669868f3e1c))
+
+
+### Maintenance
+
+* added account link on username and name twitter blocks ([4706289](https://github.com/RedTurtle/design-volto-theme/commit/4706289d9e0a9813669df5b4c7eaaf6c715c84c3))
+* added gallery translations ([3ed9a56](https://github.com/RedTurtle/design-volto-theme/commit/3ed9a568067f3055ed3a1e2b4fc217aac58b6c6d))
+* changed a tag with UniversalLink ([baab8bd](https://github.com/RedTurtle/design-volto-theme/commit/baab8bd618729236aad1ecd50e7bc24e7f6d38c9))
+* updated translations ([88b9f56](https://github.com/RedTurtle/design-volto-theme/commit/88b9f560a84069f22906876dbe150b0ff1db8195))
+* updated volto ([ed197ed](https://github.com/RedTurtle/design-volto-theme/commit/ed197ed52b19230c0116acac238fc93f04db1f24))
+
+### [5.7.9](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.8...v5.7.9) (2021-10-26)
+
+
+### Bug Fixes
+
+* changed defaultPageSize parameter to 24 results ([b0c184b](https://github.com/RedTurtle/design-volto-theme/commit/b0c184b61973e39185fcd1837816fa167f577577))
+
+
+### Maintenance
+
+* added new format file download and fix default icon ([e13c60c](https://github.com/RedTurtle/design-volto-theme/commit/e13c60cac03636ddc3503e6ba817a73930fe8234))
+
 ### [5.7.8](https://github.com/RedTurtle/design-volto-theme/compare/v5.7.7...v5.7.8) (2021-10-22)
 
 

@@ -33,9 +33,9 @@ const Module = ({ item }) => {
     dispatch(getContent(item['@id'], null, key));
     return () => dispatch(resetContent(key));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dispatch]);
+  }, []);
 
-  let modulo = subrequests[key]?.data;
+  let modulo = subrequests?.[key]?.data;
 
   return modulo ? (
     <Card

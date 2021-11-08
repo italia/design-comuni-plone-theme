@@ -493,9 +493,14 @@ body.cms-ui {
     }
   }
 
-  @media (min-width: 992px) {
-    #page-contents.ui.container.folder-contents {
+  #page-contents.ui.container.folder-contents {
+    @media (min-width: 992px) {
       width: 90% !important;
+    }
+
+    table.ui.single.line {
+      white-space: normal;
+      word-break: break-word;
     }
   }
 }

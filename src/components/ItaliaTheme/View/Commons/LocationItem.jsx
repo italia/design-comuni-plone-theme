@@ -37,15 +37,17 @@ const LocationItem = ({
   const key = `luogo${location['@id']}`;
   const url = flattenToAppURL(location['@id']);
   const locationContent = useSelector((state) => state.content.subrequests);
+  const loaded =
+    locationContent?.[key]?.loading || locationContent?.[key]?.loaded;
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (load) {
+    if (load && !loaded) {
       dispatch(getContent(url, null, key));
       return () => dispatch(resetContent(key));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dispatch, location]);
+  }, [location]);
 
   let location_fo = locationContent?.[key]?.data || location;
 
