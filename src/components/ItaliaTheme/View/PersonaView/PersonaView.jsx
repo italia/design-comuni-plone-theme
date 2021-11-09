@@ -22,6 +22,7 @@ import {
   PersonaPlaceholderAfterContent,
   PersonaPlaceholderAfterRelatedItems,
   ContactLink,
+  Telephones,
   RelatedItemInEvidence,
   richTextHasContent,
   SkipToMainContent,
@@ -40,10 +41,6 @@ const messages = defineMessages({
   contacts: {
     id: 'contacts',
     defaultMessage: 'Contatti',
-  },
-  telefono: {
-    id: 'telefono',
-    defaultMessage: 'Tel',
   },
   email_label: {
     id: 'email_label',
@@ -149,6 +146,8 @@ const PersonaView = ({ content }) => {
       }
     }
   }, [documentBody]);
+
+  const telefono = content && Telephones({ content: content });
 
   return (
     <>
@@ -312,23 +311,12 @@ const PersonaView = ({ content }) => {
               </RichTextArticle>
             )}
 
-            {(content?.telefono?.length > 0 ||
-              content?.fax ||
-              content?.email?.length > 0) && (
+            {(telefono || content?.fax || content?.email?.length > 0) && (
               <RichTextArticle
                 title={intl.formatMessage(messages.contacts)}
                 tag_id="contacts"
               >
-                {content?.telefono?.length > 0 && (
-                  <p>
-                    <strong>{intl.formatMessage(messages.telefono)}: </strong>
-                    {content.telefono.map((tel) => (
-                      <>
-                        <ContactLink tel={tel} label={false} />{' '}
-                      </>
-                    ))}
-                  </p>
-                )}
+                {telefono && telefono}
 
                 {content?.fax && (
                   <p>
@@ -503,7 +491,7 @@ PersonaView.propTypes = {
     organizzazione_riferimento: PropTypes.array.isRequired,
     responsabile_di: PropTypes.array,
     ruolo: PropTypes.object.isRequired,
-    telefono: PropTypes.string,
+    telefono: PropTypes.array,
     tipologia_persona: PropTypes.shape({
       title: PropTypes.string.isRequired,
       token: PropTypes.string.isRequired,

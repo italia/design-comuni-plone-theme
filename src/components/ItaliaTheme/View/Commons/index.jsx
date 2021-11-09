@@ -19,3 +19,4 @@ export NewsCard from '@italia/components/ItaliaTheme/View/Commons/NewsCard';
 export TextOrBlocks from '@italia/components/ItaliaTheme/View/Commons/TextOrBlocks';
 export RelatedItems from '@italia/components/ItaliaTheme/View/Commons/RelatedItems';
 export SkipToMainContent from '@italia/components/ItaliaTheme/View/Commons/SkipToMainContent';
+export Telephones from '@italia/components/ItaliaTheme/View/Commons/Telephones';

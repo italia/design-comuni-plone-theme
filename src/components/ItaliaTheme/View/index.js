@@ -63,6 +63,7 @@ export RelatedItems from '@italia/components/ItaliaTheme/View/Commons/RelatedIte
 export RelatedItemInEvidence from '@italia/components/ItaliaTheme/View/Commons/RelatedItemInEvidence/RelatedItemInEvidence';
 export DownloadFileFormat from '@italia/components/ItaliaTheme/View/Commons/DownloadFileFormat';
 export BandoDates from '@italia/components/ItaliaTheme/View/Commons/BandoDates';
+export Telephones from '@italia/components/ItaliaTheme/View/Commons/Telephones';
 
 /* --- View --- */
 export BandoPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/BandoView/Placeholder/AfterContent';
