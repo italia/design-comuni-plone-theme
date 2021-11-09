@@ -352,6 +352,7 @@ const PersonaView = ({ content }) => {
             )}
 
             {(content?.curriculum_vitae?.download ||
+              contentFolderHasItems(content, 'curriculum-vitae') ||
               contentFolderHasItems(content, 'compensi') ||
               contentFolderHasItems(
                 content,
@@ -370,15 +371,25 @@ const PersonaView = ({ content }) => {
                 title={intl.formatMessage(messages.documenti)}
                 tag_id="documenti"
               >
-                {content.curriculum_vitae?.download && (
+                {(content.curriculum_vitae?.download ||
+                  contentFolderHasItems(content, 'curriculum-vitae')) && (
                   <div className="mb-5 mt-3">
                     <h5>{intl.formatMessage(messages.curriculum_vitae)}</h5>
                     <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                      <Attachment
-                        download_url={content.curriculum_vitae.download}
-                        title={content.curriculum_vitae.filename}
-                      />
+                      {content.curriculum_vitae?.download && (
+                        <Attachment
+                          download_url={content.curriculum_vitae.download}
+                          title={content.curriculum_vitae.filename}
+                        />
+                      )}
                     </div>
+                    {contentFolderHasItems(content, 'curriculum-vitae') && (
+                      <Attachments
+                        content={content}
+                        folder_name={'curriculum-vitae'}
+                        as_article={false}
+                      />
+                    )}
                   </div>
                 )}
 
