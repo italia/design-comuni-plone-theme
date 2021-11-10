@@ -16,3 +16,4 @@ export { addCompleteBlockLinksTemplateOptions } from '@italia/config/Blocks/List
 export { addBandiInEvidenceTemplateOptions } from '@italia/config/Blocks/ListingOptions/bandiInEvidenceTemplate';
 export { addSliderTemplateOptions } from '@italia/config/Blocks/ListingOptions/sliderTemplate';
 export { addSimpleListTemplateOptions } from '@italia/config/Blocks/ListingOptions/simpleListTemplate';
+export { addCardWithSlideUpTextTemplateOption } from '@italia/config/Blocks/ListingOptions/cardWithSlideUpTextTemplate';

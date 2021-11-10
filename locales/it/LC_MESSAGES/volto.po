@@ -752,7 +752,7 @@ msgstr "Mostra l'immagine"
 #: components/ItaliaTheme/Blocks/Listing/CardWithSlideUpTextTemplate
 #: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CardWithSlideUpTextTemplateSkeleton
 msgid "card_vedi"
-msgstr ""
+msgstr "Vedi"
 
 #: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
 msgid "cartellamodulistica_formati_scaricabili"
