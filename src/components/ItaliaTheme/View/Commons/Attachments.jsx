@@ -107,7 +107,7 @@ const Attachments = ({
     </article>
   ) : (
     <div className="mb-5 mt-3">
-      <h5>{title}</h5>
+      {title && <h5>{title}</h5>}
       {attachments.length > 0 && attachments_view}
     </div>
   );
