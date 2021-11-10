@@ -15,15 +15,19 @@ import { UniversalLink } from '@plone/volto/components';
 const SmallVenue = ({ venue }) => {
   const key = `${venue['@id']}_venue`;
   const url = flattenToAppURL(venue['@id']);
-  const venueContent = useSelector((state) => state.content.subrequests);
+  const venueContent = useSelector((state) => state.content.subrequests?.[key]);
+  const loaded = venueContent?.loaded || venueContent?.loading;
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getContent(url, null, key));
+    if (!loaded) {
+      dispatch(getContent(url, null, key));
+    }
     return () => dispatch(resetContent(key));
-  }, [dispatch, venue, url, key]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [venue]);
 
-  let venue_fo = venueContent[key]?.data;
+  let venue_fo = venueContent?.data;
 
   return venue_fo ? (
     <>

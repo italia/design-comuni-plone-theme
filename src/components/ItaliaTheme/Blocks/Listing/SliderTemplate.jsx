@@ -161,7 +161,7 @@ const SliderTemplate = ({
                             image={image}
                             alt=""
                             aria-hidden="true"
-                            loading="eager"
+                            loading="lazy"
                             useOriginal={false}
                           />
                         )}

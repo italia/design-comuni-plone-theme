@@ -80,8 +80,9 @@ const Events = ({ content, title, show_image, folder_name, isChild }) => {
   const path = isChild ? content.parent['@id'] : content['@id'];
   const searchResults = useSelector((state) => state.search.subrequests);
   const dispatch = useDispatch();
+
   useEffect(() => {
-    if (isChild) {
+    if (isChild && !searchResults?.[folder_name]?.loading) {
       dispatch(
         searchContent(
           flattenToAppURL(path),
@@ -98,7 +99,8 @@ const Events = ({ content, title, show_image, folder_name, isChild }) => {
     return () => {
       dispatch(resetSearchContent(folder_name));
     };
-  }, [dispatch, content, path, folder_name, isChild]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [content]);
 
   let events = isChild
     ? searchResults?.[folder_name]?.items || []

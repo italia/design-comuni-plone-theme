@@ -105,19 +105,19 @@ const FaqFolderView = ({ content }) => {
 
         {faq_structure && (
           <>
-            {faq_structure.loaded &&
+            {faq_structure?.loaded &&
               searchableText?.lenght > 0 &&
               faq_structure.data?.items?.lenght === 0 && (
                 <>{intl.formatMessage(messages.no_results)}</>
               )}
 
-            {faq_structure.loading && (
+            {faq_structure?.loading && (
               <div className="mt-5 mb-5 loading">
                 <Spinner active double={false} small={false} tag="div" />
               </div>
             )}
 
-            {!faq_structure.loading && faq_structure.data?.items?.[0] && (
+            {!faq_structure?.loading && faq_structure.data?.items?.[0] && (
               <FaqFolderTree tree={faq_structure.data.items[0]} />
             )}
           </>

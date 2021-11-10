@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
@@ -108,7 +109,7 @@ const Gallery = ({
     return () => {
       dispatch(resetSearchContent(folder_name));
     };
-  }, [dispatch, folder_name, hasChildren, url]);
+  }, [url]);
 
   const multimedia = searchResults?.[folder_name]?.items || [];
   let images = multimedia.filter((item) => item['@type'] === 'Image');

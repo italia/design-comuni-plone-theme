@@ -208,10 +208,10 @@
     "volto-multilingual-widget": "collective/volto-multilingual-widget#v2.1.0",
     "volto-rss-block": "redturtle/volto-rss-block#v2.0.0",
     "volto-secondarymenu": "collective/volto-secondarymenu#v2.1.4",
-    "volto-social-settings": "collective/volto-social-settings#v2.1.0",
+    "volto-social-settings": "collective/volto-social-settings#v2.1.2",
     "volto-subblocks": "collective/volto-subblocks#v1.1.0",
     "volto-subfooter": "collective/volto-subfooter#v1.0.1",
-    "volto-subsites": "collective/volto-subsites#v2.0.1",
+    "volto-subsites": "collective/volto-subsites#v2.0.3",
     "volto-venue": "collective/volto-venue#v3.0.1"
   },
   "devDependencies": {

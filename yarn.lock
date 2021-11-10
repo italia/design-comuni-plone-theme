@@ -17847,9 +17847,9 @@ volto-secondarymenu@collective/volto-secondarymenu#v2.1.4:
   version "2.1.4"
   resolved "https://codeload.github.com/collective/volto-secondarymenu/tar.gz/eb9cf3aa708e3f738022fc30b29a80b088b51d60"
 
-volto-social-settings@collective/volto-social-settings#v2.1.0:
-  version "2.1.0"
-  resolved "https://codeload.github.com/collective/volto-social-settings/tar.gz/c770fb17e5b25887db0be5df39a128f32d2da51b"
+volto-social-settings@collective/volto-social-settings#v2.1.2:
+  version "2.1.2"
+  resolved "https://codeload.github.com/collective/volto-social-settings/tar.gz/87ba7a4869adf56b3988d0af150cfdb615740901"
 
 volto-subblocks@collective/volto-subblocks#v1.0.1:
   version "1.0.1"
@@ -17869,9 +17869,9 @@ volto-subfooter@collective/volto-subfooter#v1.0.1:
   version "1.0.1"
   resolved "https://codeload.github.com/collective/volto-subfooter/tar.gz/2ae54ffb5e5cd7f682ffc9407c1f242010d1ea8d"
 
-volto-subsites@collective/volto-subsites#v2.0.1:
-  version "2.0.1"
-  resolved "https://codeload.github.com/collective/volto-subsites/tar.gz/cd119e86ff045c7e21199dab3a25ec3d9412e134"
+volto-subsites@collective/volto-subsites#v2.0.3:
+  version "2.0.3"
+  resolved "https://codeload.github.com/collective/volto-subsites/tar.gz/65269849cfa69568597d811e2e3b2ac68291b09f"
 
 volto-venue@collective/volto-venue#v3.0.1:
   version "3.0.1"

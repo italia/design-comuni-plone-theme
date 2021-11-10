@@ -17,6 +17,7 @@ const EmbeddedVideo = ({ video_url, title, id }) => {
       id={`embedded-video-${id}`}
     >
       <iframe
+        loading="lazy"
         className="embed-responsive-item"
         title={title || `YouTube Video ${id}`}
         allowFullScreen
