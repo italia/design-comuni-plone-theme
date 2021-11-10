@@ -63,7 +63,6 @@ export RelatedItems from '@italia/components/ItaliaTheme/View/Commons/RelatedIte
 export RelatedItemInEvidence from '@italia/components/ItaliaTheme/View/Commons/RelatedItemInEvidence/RelatedItemInEvidence';
 export DownloadFileFormat from '@italia/components/ItaliaTheme/View/Commons/DownloadFileFormat';
 export BandoDates from '@italia/components/ItaliaTheme/View/Commons/BandoDates';
-export Telephones from '@italia/components/ItaliaTheme/View/Commons/Telephones';
 
 /* --- View --- */
 export BandoPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/BandoView/Placeholder/AfterContent';
@@ -92,10 +91,12 @@ export PaginaArgomentoPlaceholderAfterRelatedItems from '@italia/components/Ital
 export PaginaArgomentoViewNoBlocks from '@italia/components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks';
 export PersonaPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/PersonaView/Placeholder/AfterContent';
 export PersonaPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/PersonaView/Placeholder/AfterRelatedItems';
+export PersonaTelephones from '@italia/components/ItaliaTheme/View/PersonaView/PersonaTelephones';
 export ServizioPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/ServizioView/Placeholder/AfterContent';
 export ServizioPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/ServizioView/Placeholder/AfterRelatedItems';
 export TrasparenzaPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/TrasparenzaView/Placeholder/AfterContent';
 export UOPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/UOView/Placeholder/AfterContent';
 export UOPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/UOView/Placeholder/AfterRelatedItems';
+export UOTelephones from '@italia/components/ItaliaTheme/View/UOView/UOTelephones';
 export VenuePlaceholderAfterContent from '@italia/components/ItaliaTheme/View/VenueView/Placeholder/AfterContent';
 export VenuePlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/VenueView/Placeholder/AfterRelatedItems';

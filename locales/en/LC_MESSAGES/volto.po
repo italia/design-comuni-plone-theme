@@ -2291,10 +2291,11 @@ msgstr "Supported by"
 #: components/ItaliaTheme/View/Commons/ContactLink
 #: components/ItaliaTheme/View/Commons/Telephones
 #: components/ItaliaTheme/View/Commons/TelephonLink
+#: components/ItaliaTheme/View/PersonaView/PersonaTelephones
 msgid "telefono"
 msgstr "Phone"
 
-#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/UOView/UOTelephones
 msgid "telefono_sede"
 msgstr "Phone"
 

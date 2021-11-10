@@ -5,8 +5,8 @@ import { defineMessages, useIntl } from 'react-intl';
 import { ContactLink } from '@italia/components/ItaliaTheme/View';
 
 /**
- * Telephones component class.
- * @function Telephones
+ * PersonaTelephones component class.
+ * @function PersonaTelephones
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
@@ -18,7 +18,7 @@ const messages = defineMessages({
   },
 });
 
-const Telephones = ({ content }) => {
+const PersonaTelephones = ({ content }) => {
   const intl = useIntl();
   const nItems = content?.telefono?.length;
 
@@ -35,8 +35,8 @@ const Telephones = ({ content }) => {
   ) : null;
 };
 
-export default Telephones;
+export default PersonaTelephones;
 
-Telephones.propTypes = {
+PersonaTelephones.propTypes = {
   content: PropTypes.object,
 };

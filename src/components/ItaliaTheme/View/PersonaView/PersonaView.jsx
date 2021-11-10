@@ -22,7 +22,7 @@ import {
   PersonaPlaceholderAfterContent,
   PersonaPlaceholderAfterRelatedItems,
   ContactLink,
-  Telephones,
+  PersonaTelephones,
   RelatedItemInEvidence,
   richTextHasContent,
   SkipToMainContent,
@@ -147,7 +147,7 @@ const PersonaView = ({ content }) => {
     }
   }, [documentBody]);
 
-  const telefono = content && Telephones({ content: content });
+  const telefono = content && PersonaTelephones({ content: content });
 
   return (
     <>
