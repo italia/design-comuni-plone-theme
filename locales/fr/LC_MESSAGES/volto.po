@@ -190,6 +190,10 @@ msgstr ""
 msgid "Icons placeholder"
 msgstr ""
 
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}."
+msgstr "Si vous êtes certain que l'adresse est bonne, mais que vous avez un erreur, veuillez contacter le {site_admin}."
+
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Image"
 msgstr ""
@@ -366,6 +370,10 @@ msgstr "Afficher tout"
 msgid "Show all content types"
 msgstr "Afficher tous les types de contenu"
 
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "Site Administration"
+msgstr "Administration du site"
+
 #: components/ItaliaTheme/Search/Search
 msgid "Sono occorsi degli errori"
 msgstr "Des erreurs se sont produites"
@@ -379,6 +387,10 @@ msgstr "S'abonner"
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 msgid "Text placeholder"
 msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "Thank you."
+msgstr "Merci."
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Edit
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
@@ -435,6 +447,10 @@ msgstr ""
 msgid "Type the title…"
 msgstr ""
 
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "Unauthorized"
+msgstr "Non autorisé"
+
 #: components/ItaliaTheme/View/PageView/PageView
 msgid "Unknown Block"
 msgstr "Bloc inconnu"
@@ -484,6 +500,10 @@ msgstr "Vidéo"
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "VideoGalleryBlock"
 msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "You are trying to access a protected resource, please {login} first."
+msgstr "Vous essayez d'accéder à une ressource protégée, veuillez d'abord {login}."
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "a_chi_si_rivolge"
@@ -1452,6 +1472,22 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/LocationItem
 msgid "locations"
 msgstr "Lieux"
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "log in"
+msgstr "se connecter"
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "login_admin_message"
+msgstr "ou connectez-vous en tant qu'administrateur du site"
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "login_spid_message"
+msgstr "se connecter avec Spid"
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "login_with_spid"
+msgstr "Connectez-vous avec Spid"
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
 msgid "luoghi_notizia"
