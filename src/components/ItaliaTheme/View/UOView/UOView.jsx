@@ -22,6 +22,7 @@ import {
   ContentImage,
   UOPlaceholderAfterContent,
   UOPlaceholderAfterRelatedItems,
+  UOTelephones,
   RichText,
   RelatedItemInEvidence,
   richTextHasContent,
@@ -100,10 +101,6 @@ const messages = defineMessages({
     id: 'pec_sede',
     defaultMessage: 'PEC',
   },
-  telefono_sede: {
-    id: 'telefono_sede',
-    defaultMessage: 'Telefono',
-  },
   fax_sede: {
     id: 'fax_sede',
     defaultMessage: 'Fax',
@@ -132,6 +129,7 @@ const UOView = ({ content }) => {
   const intl = useIntl();
   let documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
+  const telefono = content && UOTelephones({ content: content });
 
   useEffect(() => {
     if (documentBody.current && __CLIENT__) {
@@ -412,14 +410,7 @@ const UOView = ({ content }) => {
                   </div>
                 )}
                 <dl className="contatti-list">
-                  {content.telefono && (
-                    <div className="text-serif contatti">
-                      <dt>{intl.formatMessage(messages.telefono_sede)}: </dt>
-                      <dd>
-                        <ContactLink tel={content.telefono} label={false} />
-                      </dd>
-                    </div>
-                  )}
+                  {telefono && telefono}
 
                   {content.fax && (
                     <div className="text-serif contatti">
