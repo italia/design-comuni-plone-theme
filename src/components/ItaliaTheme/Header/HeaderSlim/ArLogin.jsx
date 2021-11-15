@@ -5,7 +5,6 @@
  */
 
 import React, { useEffect } from 'react';
-
 import { useDispatch, useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
 import jwtDecode from 'jwt-decode';
@@ -73,14 +72,20 @@ const ArLogin = () => {
 
   const isPublicUser = userLogged?.roles?.length === 0;
 
-  return config.settings.siteProperties.arLoginUrl ? (
+  let loginURL = config.settings.siteProperties?.arLoginUrl;
+  if (loginURL) {
+    loginURL += loginURL.indexOf('?') >= 0 ? '&' : '?';
+    loginURL += 'came_from=' + window.location.href;
+  }
+
+  return loginURL ? (
     <>
       {!userId || !isPublicUser ? (
         // not logged
         <Button
           className="btn-icon"
           color="primary"
-          href={config.settings.siteProperties.arLoginUrl}
+          href={loginURL}
           icon={false}
           size="full"
           tag="a"
