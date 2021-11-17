@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-11-10T11:08:04.773Z\n"
+"POT-Creation-Date: 2021-11-17T07:06:24.323Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -210,6 +210,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 # defaultMessage: Seleziona le icone dalla barra a lato
 msgid "Icons placeholder"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}.
+msgid "If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}."
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
@@ -429,6 +434,11 @@ msgstr ""
 msgid "Show all content types"
 msgstr ""
 
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: Site Administration
+msgid "Site Administration"
+msgstr ""
+
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Sono occorsi degli errori
 msgid "Sono occorsi degli errori"
@@ -444,6 +454,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 # defaultMessage: Text...
 msgid "Text placeholder"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: Thank you.
+msgid "Thank you."
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Edit
@@ -483,7 +498,6 @@ msgstr ""
 msgid "Trascina qui un file per sostituire quello esistente"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 # defaultMessage: Twitter Posts
 msgid "Twitter Posts"
@@ -510,6 +524,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 # defaultMessage: Type the title…
 msgid "Type the title…"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: Unauthorized
+msgid "Unauthorized"
 msgstr ""
 
 #: components/ItaliaTheme/View/PageView/PageView
@@ -571,6 +590,11 @@ msgstr ""
 msgid "VideoGalleryBlock"
 msgstr ""
 
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: You are trying to access a protected resource, please {login} first.
+msgid "You are trying to access a protected resource, please {login} first."
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 # defaultMessage: A chi si rivolge
 msgid "a_chi_si_rivolge"
@@ -627,7 +651,6 @@ msgid "altri_documenti"
 msgstr ""
 
 #: config/Blocks/ListingOptions/cardWithImageTemplate
-#: config/Blocks/ListingOptions/cardWithSlideUpTextTemplate
 # defaultMessage: Mostra l'immagine per tutti gli elementi
 msgid "always_show_image"
 msgstr ""
@@ -1770,6 +1793,26 @@ msgstr ""
 msgid "locations"
 msgstr ""
 
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: log in
+msgid "log in"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: or login as an administrator
+msgid "login_admin_message"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: login with Spid
+msgid "login_spid_message"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: Login with Spid
+msgid "login_with_spid"
+msgstr ""
+
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
 # defaultMessage: Luoghi
 msgid "luoghi_notizia"
@@ -2815,8 +2858,6 @@ msgid "supported_by"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/ContactLink
-#: components/ItaliaTheme/View/Commons/Telephones
-#: components/ItaliaTheme/View/Commons/TelephonLink
 #: components/ItaliaTheme/View/PersonaView/PersonaTelephones
 # defaultMessage: Tel
 msgid "telefono"
@@ -2872,7 +2913,6 @@ msgid "tipologia_persona"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 # defaultMessage: Titolo
@@ -2908,19 +2948,16 @@ msgstr ""
 msgid "trasparenza"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 # defaultMessage: Link alla pagina del profilo
 msgid "twitterAccountLink"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 # defaultMessage: Accounts
 msgid "twitterAccounts"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 # defaultMessage: Inserisci i nomi degli account di cui vuoi visualizzare i post, separati da virgola. Ad esempio, se vuoi mostrare i tweet di Repubblica e del Corriere della Sera, inserisci “repubblica,Corriere".
 msgid "twitterAccounts_description"
