@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-11-17T07:06:24.323Z\n"
+"POT-Creation-Date: 2021-11-18T17:28:30.859Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -210,11 +210,6 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 # defaultMessage: Seleziona le icone dalla barra a lato
 msgid "Icons placeholder"
-msgstr ""
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-# defaultMessage: If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}.
-msgid "If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}."
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
@@ -434,11 +429,6 @@ msgstr ""
 msgid "Show all content types"
 msgstr ""
 
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-# defaultMessage: Site Administration
-msgid "Site Administration"
-msgstr ""
-
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Sono occorsi degli errori
 msgid "Sono occorsi degli errori"
@@ -454,11 +444,6 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 # defaultMessage: Text...
 msgid "Text placeholder"
-msgstr ""
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-# defaultMessage: Thank you.
-msgid "Thank you."
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Edit
@@ -526,11 +511,6 @@ msgstr ""
 msgid "Type the title…"
 msgstr ""
 
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-# defaultMessage: Unauthorized
-msgid "Unauthorized"
-msgstr ""
-
 #: components/ItaliaTheme/View/PageView/PageView
 # defaultMessage: Unknown Block {block}
 msgid "Unknown Block"
@@ -588,11 +568,6 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 # defaultMessage: Video Gallery
 msgid "VideoGalleryBlock"
-msgstr ""
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-# defaultMessage: You are trying to access a protected resource, please {login} first.
-msgid "You are trying to access a protected resource, please {login} first."
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView
@@ -1791,26 +1766,6 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/LocationItem
 # defaultMessage: Luoghi
 msgid "locations"
-msgstr ""
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-# defaultMessage: log in
-msgid "log in"
-msgstr ""
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-# defaultMessage: or login as an administrator
-msgid "login_admin_message"
-msgstr ""
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-# defaultMessage: login with Spid
-msgid "login_spid_message"
-msgstr ""
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-# defaultMessage: Login with Spid
-msgid "login_with_spid"
 msgstr ""
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView

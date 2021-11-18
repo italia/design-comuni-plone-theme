@@ -173,10 +173,6 @@ msgstr ""
 msgid "Icons placeholder"
 msgstr "Seleziona le icone dalla barra a lato"
 
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}."
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Image"
 msgstr "Immagine"
@@ -353,10 +349,6 @@ msgstr "Mostra tutto"
 msgid "Show all content types"
 msgstr ""
 
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "Site Administration"
-msgstr ""
-
 #: components/ItaliaTheme/Search/Search
 msgid "Sono occorsi degli errori"
 msgstr "Sono occorsi degli errori"
@@ -370,10 +362,6 @@ msgstr "Iscriviti"
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 msgid "Text placeholder"
 msgstr "Testo..."
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "Thank you."
-msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Edit
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
@@ -430,10 +418,6 @@ msgstr "Digita testo…"
 msgid "Type the title…"
 msgstr "Digita il titolo…"
 
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "Unauthorized"
-msgstr ""
-
 #: components/ItaliaTheme/View/PageView/PageView
 msgid "Unknown Block"
 msgstr "Blocco sconosciuto"
@@ -483,10 +467,6 @@ msgstr "Video"
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "VideoGalleryBlock"
 msgstr "Video gallery"
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "You are trying to access a protected resource, please {login} first."
-msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "a_chi_si_rivolge"
@@ -1455,22 +1435,6 @@ msgstr "Posizione in cui cercare"
 #: components/ItaliaTheme/View/Commons/LocationItem
 msgid "locations"
 msgstr "Luoghi"
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "log in"
-msgstr ""
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "login_admin_message"
-msgstr ""
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "login_spid_message"
-msgstr ""
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "login_with_spid"
-msgstr ""
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
 msgid "luoghi_notizia"
