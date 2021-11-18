@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Background = (props) => (
+const Background = ({ inEditMode, ...props }) => (
   <div
     className={`argumentInEvidence-background ${
-      props.inEditMode ? 'full-width' : ''
+      inEditMode ? 'full-width' : ''
     }`}
     {...props}
   />
