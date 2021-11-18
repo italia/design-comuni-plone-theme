@@ -1,3 +1,30 @@
+### [5.8.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.2...v5.8.3) (2021-11-18)
+
+
+### Bug Fixes
+
+* avoid duplicated calls ([e9771de](https://github.com/RedTurtle/design-volto-theme/commit/e9771de33be9e227593ed507e9c94012f9ee933d))
+* bugfix content folder ([b6b0eaa](https://github.com/RedTurtle/design-volto-theme/commit/b6b0eaa76d2932ebb7b7e9d89890f6c28a60922a))
+* bugfix style and removed always_show_image paramether ([6ecee34](https://github.com/RedTurtle/design-volto-theme/commit/6ecee347d91379378e03abda5a7e31a45144e2f5))
+* calendar block query parameters ([#418](https://github.com/RedTurtle/design-volto-theme/issues/418)) ([cee3b88](https://github.com/RedTurtle/design-volto-theme/commit/cee3b88e9f29bc9dfe16c566775938ff84e68d42))
+* fix breadcrumbs calls ([c15ac8b](https://github.com/RedTurtle/design-volto-theme/commit/c15ac8bb42e83848f7566ae4b61c7f12fbada72d))
+* fix null ([082f66b](https://github.com/RedTurtle/design-volto-theme/commit/082f66b63185132f5b09efc8fb20d2f67c33b26a))
+* fix reading state ([57350c8](https://github.com/RedTurtle/design-volto-theme/commit/57350c8f75f6ad31514cae9d4905ff57b3369e5f))
+* fixed calls ([c54a28f](https://github.com/RedTurtle/design-volto-theme/commit/c54a28f8682a5a770a53ca57481bd19a049574ce))
+* i18n ([d2df78f](https://github.com/RedTurtle/design-volto-theme/commit/d2df78f700133c8d11f1f1a173d0ab8f831f9d16))
+* removed duplicate ccalls ([2d4c3d6](https://github.com/RedTurtle/design-volto-theme/commit/2d4c3d6c8f6bbb58fba7bc17160c4d05333b729e))
+* uo View ruolo persone ([1241fda](https://github.com/RedTurtle/design-volto-theme/commit/1241fdac74af6553c6eb741e37c4b5a30a6a3af8))
+
+
+### Maintenance
+
+* added block listing with slide up text ([afd01f1](https://github.com/RedTurtle/design-volto-theme/commit/afd01f137ac3352e8467d791f9c2264e1e69fe75))
+* added multi curriculum vitae ([43c3460](https://github.com/RedTurtle/design-volto-theme/commit/43c34603b44e7a8303b36a06279491d71f4396d6))
+* added telephones component for object person ([e4e6ae6](https://github.com/RedTurtle/design-volto-theme/commit/e4e6ae61ebcf08c33a22460d3e7b41c1384bb817))
+* added UOTelephones component ([72a541d](https://github.com/RedTurtle/design-volto-theme/commit/72a541d0d19b3db3d81460f0bcdab30a3b9a347e))
+* updated volto for image fix for user logged ([ca182eb](https://github.com/RedTurtle/design-volto-theme/commit/ca182eb88672f543fdaa86f5ee8d38d3c21d07d7))
+* updated volto-subsite and volto-social-settings ([9fff601](https://github.com/RedTurtle/design-volto-theme/commit/9fff601fdeba128457896f6698ea13bb931dd639))
+
 ### [5.8.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.1...v5.8.2) (2021-11-05)
 
 
