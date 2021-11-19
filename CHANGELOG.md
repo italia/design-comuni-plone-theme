@@ -1,3 +1,16 @@
+### [5.8.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.3...v5.8.4) (2021-11-19)
+
+
+### Bug Fixes
+
+* fixed multilingual routes ([5327ad8](https://github.com/RedTurtle/design-volto-theme/commit/5327ad8ee53b4c9ccceecf97f82aa640014bc900))
+
+
+### Maintenance
+
+* updated locales ([e330fd2](https://github.com/RedTurtle/design-volto-theme/commit/e330fd2e8a5684903a3eb96ed915389fa389988f))
+* updated volto ([3af8289](https://github.com/RedTurtle/design-volto-theme/commit/3af82893d5a6f94e7d586fe10bf60b56d59e77da))
+
 ### [5.8.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.2...v5.8.3) (2021-11-18)
 
 
