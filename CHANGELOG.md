@@ -1,3 +1,10 @@
+### [5.8.6](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.5...v5.8.6) (2021-11-22)
+
+
+### Bug Fixes
+
+* fix login button ([2b18933](https://github.com/RedTurtle/design-volto-theme/commit/2b18933c25917fc933c86ac85198fc88df878663))
+
 ### [5.8.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.4...v5.8.5) (2021-11-22)
 
 
