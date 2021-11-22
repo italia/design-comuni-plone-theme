@@ -1,7 +1,7 @@
 /* Variation Lista Semplice of Listing block */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { UniversalLink } from '@plone/volto/components';
+import { ConditionalLink } from '@plone/volto/components';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { ListingLinkMore } from '@italia/components/ItaliaTheme';
 
@@ -31,12 +31,9 @@ const SimpleListTemplate = ({
                 {items.map((item, index) => {
                   return (
                     <li>
-                      <UniversalLink
-                        item={!isEditMode ? item : null}
-                        href={isEditMode ? '#' : null}
-                      >
+                      <ConditionalLink condition={!isEditMode} item={item}>
                         {item.title}
-                      </UniversalLink>
+                      </ConditionalLink>
                     </li>
                   );
                 })}
