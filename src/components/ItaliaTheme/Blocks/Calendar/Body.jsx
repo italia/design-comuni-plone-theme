@@ -1,5 +1,4 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import {
   Card,
   Row,
@@ -14,6 +13,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Item from '@italia/components/ItaliaTheme/Blocks/Calendar/Item';
 import { useIntl, defineMessages } from 'react-intl';
 import { viewDate } from '@italia/helpers';
+import useDeepCompareEffect from 'use-deep-compare-effect';
 
 const messages = defineMessages({
   insert_filter: {
@@ -23,19 +23,23 @@ const messages = defineMessages({
   },
 });
 
-const Body = ({ data, inEditMode, path, onChangeBlock }) => {
+const copyFields = ['limit', 'query', 'sort_on', 'sort_order', 'depth'];
+
+const Body = ({ data, block, inEditMode, path, onChangeBlock }) => {
   const intl = useIntl();
 
   const [activePage, setActivePage] = useState(0);
 
-  const querystringResults = useSelector((state) => state.calendarSearch);
+  const calendarResults = useSelector(
+    (state) => state.calendarSearch.subrequests,
+  );
 
   const dispatch = useDispatch();
 
-  const getMonth = () => {
+  const getMonth = useCallback(() => {
     const startIndex = activePage * (data.b_size || 4);
 
-    const months = querystringResults?.items
+    const months = calendarResults[block]?.items
       ?.slice(activePage, startIndex + (+data.b_size || 4))
       .reduce((total, date) => {
         const month = viewDate(intl.locale, date, 'MMMM');
@@ -49,42 +53,51 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
     return months
       ?.map((m) => m.charAt(0).toUpperCase() + m.slice(1))
       .join(' / ');
-  };
+  }, [activePage, block, calendarResults, data.b_size, intl.locale]);
 
   const [monthName, setMonthName] = useState(getMonth);
 
-  React.useEffect(() => {
-    if (!data.query || data.query.length === 0) {
-      data.query = [
-        {
-          i: 'portal_type',
-          o: 'plone.app.querystring.operation.selection.any',
-          v: ['Event'],
-        },
-      ];
+  const querystring = data.querystring || data; // For backwards compat with data saved before Blocks schema
+  const adaptedQuery = Object.assign(
+    {
+      fullobjects: 1,
+    },
+    ...copyFields.map((name) =>
+      Object.keys(querystring).includes(name)
+        ? { [name]: querystring[name] }
+        : {},
+    ),
+  );
+  const hasQuery = querystring?.query?.length > 0;
+
+  useDeepCompareEffect(() => {
+    if (hasQuery) {
+      dispatch(getCalendarResults(path, adaptedQuery, block));
+    } else {
+      dispatch(
+        getCalendarResults(
+          path,
+          {
+            query: [
+              {
+                i: 'portal_type',
+                o: 'plone.app.querystring.operation.selection.any',
+                v: ['Event'],
+              },
+            ],
+            fullobjects: 1,
+          },
+          block,
+        ),
+      );
     }
-  }, []);
+  }, [adaptedQuery, block, hasQuery, path, dispatch]);
 
-  React.useEffect(() => {
-    dispatch(
-      getCalendarResults(
-        path,
-        { ...data, fullobjects: 1 },
-        data.block,
-        '@scadenziario',
-      ),
-    );
-  }, [data.query]);
-
-  // Every time the page change check the name of the mounth
-  React.useEffect(() => {
+  // Every time the page changes check the name of the month, and
+  // update the month name when the call to getCalendarResults returns
+  useEffect(() => {
     setMonthName(getMonth);
-  }, [activePage]);
-
-  // update the mounth name when the call to getCalendarResults is ended
-  React.useEffect(() => {
-    setMonthName(getMonth);
-  }, [querystringResults]);
+  }, [activePage, calendarResults, getMonth]);
 
   const settings = {
     dots: true,
@@ -140,20 +153,20 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
             </Col>
           </Row>
         )}
-        <Card className={'card-bg'}>
+        <Card className="card-bg">
           <div className="text-center calendar-header">
             <h3>{monthName}</h3>
           </div>
           <div className="calendar-body">
             {data.query?.length > 0 ? (
               <Slider {...settings}>
-                {querystringResults?.items?.map((day, index) => (
+                {calendarResults[block]?.items?.map((day, index) => (
                   <div key={index} className="body">
                     <Item
                       day={day}
-                      data={data}
+                      query={adaptedQuery}
                       path={path}
-                      inEdit={inEditMode}
+                      inEditMode={inEditMode}
                     />
                   </div>
                 ))}

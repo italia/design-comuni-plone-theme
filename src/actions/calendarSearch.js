@@ -9,7 +9,6 @@ export const GET_CALENDAR_RESULTS = 'GET_CALENDAR_RESULTS';
  * @returns {Object} Get querystringsearch results action.
  */
 export function getCalendarResults(path, data, subrequest, page) {
-  // fixes https://github.com/plone/volto/issues/1059
   return {
     type: GET_CALENDAR_RESULTS,
     subrequest,

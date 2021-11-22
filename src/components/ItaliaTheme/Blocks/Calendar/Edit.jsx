@@ -6,10 +6,15 @@ import { getBaseUrl } from '@plone/volto/helpers';
 import ListingSidebar from '@italia/components/ItaliaTheme/Blocks/Calendar/ListingSidebar';
 
 const Edit = ({ data, block, onChangeBlock, selected, pathname }) => {
-
   return (
     <div className="calendar public-ui">
-      <Body data={data} path={getBaseUrl(pathname)} inEditMode={true} onChangeBlock={onChangeBlock}/>
+      <Body
+        data={data}
+        block={block}
+        path={getBaseUrl(pathname)}
+        inEditMode={true}
+        onChangeBlock={onChangeBlock}
+      />
       <SidebarPortal selected={selected}>
         <ListingSidebar
           data={data}
@@ -19,7 +24,7 @@ const Edit = ({ data, block, onChangeBlock, selected, pathname }) => {
       </SidebarPortal>
     </div>
   );
-}
+};
 /**
  * Property types.
  * @property {Object} propTypes Property types.
