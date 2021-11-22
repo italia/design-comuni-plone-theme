@@ -175,7 +175,7 @@ msgstr "Seleziona le icone dalla barra a lato"
 
 #: components/ItaliaTheme/Unauthorized/Unauthorized
 msgid "If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}."
-msgstr ""
+msgstr "Se sei sicuro di aver inserito l'indirizzo corretto ma ottieni comunque un errore, contatta l' {site_admin}."
 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Image"
@@ -355,7 +355,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Unauthorized/Unauthorized
 msgid "Site Administration"
-msgstr ""
+msgstr "Amministratore del sito"
 
 #: components/ItaliaTheme/Search/Search
 msgid "Sono occorsi degli errori"
@@ -373,7 +373,7 @@ msgstr "Testo..."
 
 #: components/ItaliaTheme/Unauthorized/Unauthorized
 msgid "Thank you."
-msgstr ""
+msgstr "Grazie."
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Edit
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
@@ -432,7 +432,7 @@ msgstr "Digita il titolo…"
 
 #: components/ItaliaTheme/Unauthorized/Unauthorized
 msgid "Unauthorized"
-msgstr ""
+msgstr "Non autorizzato"
 
 #: components/ItaliaTheme/View/PageView/PageView
 msgid "Unknown Block"
@@ -486,7 +486,7 @@ msgstr "Video gallery"
 
 #: components/ItaliaTheme/Unauthorized/Unauthorized
 msgid "You are trying to access a protected resource, please {login} first."
-msgstr ""
+msgstr "Stai provando ad accedere ad una risorsa protetta, per favore fai prima il {login}."
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "a_chi_si_rivolge"
@@ -1108,7 +1108,7 @@ msgstr "Descrizione estesa"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "deselectSearchSection"
-msgstr ""
+msgstr "Non cercare nella sezione"
 
 #: config/Blocks/ListingOptions/utils
 msgid "detail_link_label"
@@ -1337,7 +1337,7 @@ msgstr "Galleria di immagini"
 
 #: components/ItaliaTheme/GalleryPreview/GalleryPreview
 msgid "gallery_close_preview"
-msgstr ""
+msgstr "Chiudi l'anteprima"
 
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "gallery_video_title"
@@ -1353,15 +1353,15 @@ msgstr "Video URL"
 
 #: components/ItaliaTheme/View/Commons/Gallery
 msgid "gallery_viewPreview"
-msgstr ""
+msgstr "Vedi l'anteprima di"
 
 #: components/ItaliaTheme/GalleryPreview/GalleryPreview
 msgid "gallery_view_next"
-msgstr ""
+msgstr "Immagine successiva"
 
 #: components/ItaliaTheme/GalleryPreview/GalleryPreview
 msgid "gallery_view_prev"
-msgstr ""
+msgstr "Immagine precedente"
 
 #: components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate
 msgid "grid-gallery-max-items-exceeded"
@@ -1458,19 +1458,19 @@ msgstr "Luoghi"
 
 #: components/ItaliaTheme/Unauthorized/Unauthorized
 msgid "log in"
-msgstr ""
+msgstr "Log in"
 
 #: components/ItaliaTheme/Unauthorized/Unauthorized
 msgid "login_admin_message"
-msgstr ""
+msgstr "oppure accedi come amministratore del sito"
 
 #: components/ItaliaTheme/Unauthorized/Unauthorized
 msgid "login_spid_message"
-msgstr ""
+msgstr "login con Spid"
 
 #: components/ItaliaTheme/Unauthorized/Unauthorized
 msgid "login_with_spid"
-msgstr ""
+msgstr "Accedi con Spid"
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
 msgid "luoghi_notizia"

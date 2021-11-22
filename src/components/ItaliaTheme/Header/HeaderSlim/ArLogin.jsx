@@ -5,12 +5,10 @@
  */
 
 import React, { useEffect } from 'react';
-
 import { useDispatch, useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
 import jwtDecode from 'jwt-decode';
 import {
-  Button,
   Row,
   Col,
   DropdownMenu,
@@ -24,7 +22,11 @@ import { getUser, logout, purgeMessages } from '@plone/volto/actions';
 
 import { BodyClass } from '@plone/volto/helpers';
 
-import { Icon, UserLoggedMenu } from '@italia/components/ItaliaTheme';
+import {
+  Icon,
+  UserLoggedMenu,
+  LoginButton,
+} from '@italia/components/ItaliaTheme';
 
 import config from '@plone/volto/registry';
 
@@ -73,25 +75,18 @@ const ArLogin = () => {
 
   const isPublicUser = userLogged?.roles?.length === 0;
 
-  return config.settings.siteProperties.arLoginUrl ? (
+  return config.settings.siteProperties?.arLoginUrl ? (
     <>
       {!userId || !isPublicUser ? (
         // not logged
-        <Button
-          className="btn-icon"
-          color="primary"
-          href={config.settings.siteProperties.arLoginUrl}
-          icon={false}
-          size="full"
-          tag="a"
-        >
+        <LoginButton>
           <span className="rounded-icon">
             <Icon color="primary" icon="it-user" padding={false} size="" />
           </span>
           <span className="d-none d-lg-block">
             {intl.formatMessage(messages.arLogin)}
           </span>
-        </Button>
+        </LoginButton>
       ) : (
         // logged
         <>
