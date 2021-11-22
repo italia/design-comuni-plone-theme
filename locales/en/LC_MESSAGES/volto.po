@@ -173,10 +173,6 @@ msgstr ""
 msgid "Icons placeholder"
 msgstr ""
 
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}."
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Image"
 msgstr ""
@@ -353,10 +349,6 @@ msgstr "Show all"
 msgid "Show all content types"
 msgstr "Show all content types"
 
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "Site Administration"
-msgstr ""
-
 #: components/ItaliaTheme/Search/Search
 msgid "Sono occorsi degli errori"
 msgstr "Some errors occured"
@@ -369,10 +361,6 @@ msgstr "Subscribe"
 #: components/ItaliaTheme/Blocks/ContactsBlock/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 msgid "Text placeholder"
-msgstr ""
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "Thank you."
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Edit
@@ -406,6 +394,7 @@ msgstr "Drop the file here to upload a new file"
 msgid "Trascina qui un file per sostituire quello esistente"
 msgstr "Drop the file here to replace existing file"
 
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "Twitter Posts"
 msgstr ""
@@ -428,10 +417,6 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type the title…"
-msgstr ""
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "Unauthorized"
 msgstr ""
 
 #: components/ItaliaTheme/View/PageView/PageView
@@ -484,10 +469,6 @@ msgstr "Video"
 msgid "VideoGalleryBlock"
 msgstr ""
 
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "You are trying to access a protected resource, please {login} first."
-msgstr ""
-
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "a_chi_si_rivolge"
 msgstr "Who is it for"
@@ -533,6 +514,7 @@ msgid "altri_documenti"
 msgstr "Other documents"
 
 #: config/Blocks/ListingOptions/cardWithImageTemplate
+#: config/Blocks/ListingOptions/cardWithSlideUpTextTemplate
 msgid "always_show_image"
 msgstr ""
 
@@ -1456,22 +1438,6 @@ msgstr ""
 msgid "locations"
 msgstr "Venues"
 
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "log in"
-msgstr ""
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "login_admin_message"
-msgstr ""
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "login_spid_message"
-msgstr ""
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "login_with_spid"
-msgstr ""
-
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
 msgid "luoghi_notizia"
 msgstr "Venues"
@@ -2323,6 +2289,8 @@ msgid "supported_by"
 msgstr "Supported by"
 
 #: components/ItaliaTheme/View/Commons/ContactLink
+#: components/ItaliaTheme/View/Commons/Telephones
+#: components/ItaliaTheme/View/Commons/TelephonLink
 #: components/ItaliaTheme/View/PersonaView/PersonaTelephones
 msgid "telefono"
 msgstr "Phone"
@@ -2368,6 +2336,7 @@ msgid "tipologia_persona"
 msgstr "Person type"
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "title"
@@ -2397,14 +2366,17 @@ msgstr "Topics"
 msgid "trasparenza"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccountLink"
 msgstr "Link to profile page"
 
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccounts"
 msgstr "Accounts"
 
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccounts_description"
 msgstr ""

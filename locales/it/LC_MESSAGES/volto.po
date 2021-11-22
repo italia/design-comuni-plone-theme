@@ -173,10 +173,6 @@ msgstr ""
 msgid "Icons placeholder"
 msgstr "Seleziona le icone dalla barra a lato"
 
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}."
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Image"
 msgstr "Immagine"
@@ -353,10 +349,6 @@ msgstr "Mostra tutto"
 msgid "Show all content types"
 msgstr ""
 
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "Site Administration"
-msgstr ""
-
 #: components/ItaliaTheme/Search/Search
 msgid "Sono occorsi degli errori"
 msgstr "Sono occorsi degli errori"
@@ -370,10 +362,6 @@ msgstr "Iscriviti"
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 msgid "Text placeholder"
 msgstr "Testo..."
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "Thank you."
-msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Edit
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
@@ -406,6 +394,7 @@ msgstr "Trascina qui un file per caricare un nuovo file"
 msgid "Trascina qui un file per sostituire quello esistente"
 msgstr "Trascina qui un file per sostituire quello esistente"
 
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "Twitter Posts"
 msgstr "Twitter Posts"
@@ -429,10 +418,6 @@ msgstr "Digita testo…"
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 msgid "Type the title…"
 msgstr "Digita il titolo…"
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "Unauthorized"
-msgstr ""
 
 #: components/ItaliaTheme/View/PageView/PageView
 msgid "Unknown Block"
@@ -484,10 +469,6 @@ msgstr "Video"
 msgid "VideoGalleryBlock"
 msgstr "Video gallery"
 
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "You are trying to access a protected resource, please {login} first."
-msgstr ""
-
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "a_chi_si_rivolge"
 msgstr "A chi si rivolge"
@@ -533,6 +514,7 @@ msgid "altri_documenti"
 msgstr "Altri documenti"
 
 #: config/Blocks/ListingOptions/cardWithImageTemplate
+#: config/Blocks/ListingOptions/cardWithSlideUpTextTemplate
 msgid "always_show_image"
 msgstr "Mostra l'immagine per tutti gli elementi"
 
@@ -1456,22 +1438,6 @@ msgstr "Posizione in cui cercare"
 msgid "locations"
 msgstr "Luoghi"
 
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "log in"
-msgstr ""
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "login_admin_message"
-msgstr ""
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "login_spid_message"
-msgstr ""
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-msgid "login_with_spid"
-msgstr ""
-
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
 msgid "luoghi_notizia"
 msgstr "Luoghi"
@@ -2323,6 +2289,8 @@ msgid "supported_by"
 msgstr "Con il supporto di"
 
 #: components/ItaliaTheme/View/Commons/ContactLink
+#: components/ItaliaTheme/View/Commons/Telephones
+#: components/ItaliaTheme/View/Commons/TelephonLink
 #: components/ItaliaTheme/View/PersonaView/PersonaTelephones
 msgid "telefono"
 msgstr "Tel."
@@ -2368,6 +2336,7 @@ msgid "tipologia_persona"
 msgstr "Tipologia persona"
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "title"
@@ -2397,14 +2366,17 @@ msgstr "Argomenti"
 msgid "trasparenza"
 msgstr "Trasparenza"
 
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccountLink"
 msgstr "Link alla pagina del profilo"
 
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccounts"
 msgstr "Accounts"
 
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccounts_description"
 msgstr "Inserisci i nomi degli account di cui vuoi visualizzare i post, separati da virgola. Ad esempio, se vuoi mostrare i tweet di Repubblica e del Corriere della Sera, inserisci “repubblica,Corriere"."
