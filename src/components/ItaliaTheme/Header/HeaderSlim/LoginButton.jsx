@@ -4,20 +4,26 @@
  * @module components/ItaliaTheme/Header/HeaderSlim/LoginButton
  */
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { Button } from 'design-react-kit/dist/design-react-kit';
 
 import config from '@plone/volto/registry';
 
 const LoginButton = ({ children, size = 'full' }) => {
-  let loginURL = config.settings.siteProperties?.arLoginUrl;
-  if (loginURL) {
-    loginURL += loginURL.indexOf('?') >= 0 ? '&' : '?';
-    if (__CLIENT__) {
-      loginURL += 'came_from=' + window?.location?.href ?? '';
+  let [loginURL, setLoginURL] = useState(
+    config.settings.siteProperties?.arLoginUrl,
+  );
+
+  useEffect(() => {
+    if (loginURL && __CLIENT__) {
+      if (loginURL.indexOf('came_from') < 0) {
+        let came_from = loginURL.indexOf('?') >= 0 ? '&' : '?';
+        came_from += 'came_from=' + window?.location?.href ?? '';
+        setLoginURL(loginURL + came_from);
+      }
     }
-  }
+  }, []);
 
   return loginURL ? (
     <Button

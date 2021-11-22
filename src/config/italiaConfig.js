@@ -140,7 +140,7 @@ export default function applyConfig(voltoConfig) {
       parentSiteURL: 'https://www.governo.it', //può essere una stringa, o un oggetto nel caso di multilingua: {'it':'https://www.governo.it', 'en':'https://www.governo.it/en'}. Se multilingua il default è comunque la stringa.
       subsiteParentSiteTitle: 'Nome del sito padre del sottosito', //può essere una stringa, o un oggetto nel caso di multilingua: {'it':'Nome del sito padre', 'en':'Parent site name'}. Se multilingua il default è comunque la stringa.
       amministrazioneTrasparenteUrl: '/amministrazione-trasparente',
-      //arLoginUrl: 'https://io-comune.agamar.redturtle.it/login',
+      arLoginUrl: 'https://io-comune.agamar.redturtle.it/login',
       // arLogoutUrl: 'https://io-comune.agamar.redturtle.it/logout',
       //spidLogin: true, //se true, nella pagina di errore Unauthorized, mostra il pulsante per il login a Spid.
       smallFooterLinks: {
