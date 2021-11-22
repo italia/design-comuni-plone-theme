@@ -173,6 +173,10 @@ msgstr ""
 msgid "Icons placeholder"
 msgstr ""
 
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}."
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Image"
 msgstr ""
@@ -349,6 +353,10 @@ msgstr "Show all"
 msgid "Show all content types"
 msgstr "Show all content types"
 
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "Site Administration"
+msgstr ""
+
 #: components/ItaliaTheme/Search/Search
 msgid "Sono occorsi degli errori"
 msgstr "Some errors occured"
@@ -361,6 +369,10 @@ msgstr "Subscribe"
 #: components/ItaliaTheme/Blocks/ContactsBlock/Block/EditBlock
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 msgid "Text placeholder"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "Thank you."
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Edit
@@ -419,6 +431,10 @@ msgstr ""
 msgid "Type the title…"
 msgstr ""
 
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "Unauthorized"
+msgstr ""
+
 #: components/ItaliaTheme/View/PageView/PageView
 msgid "Unknown Block"
 msgstr "Unknown Block"
@@ -467,6 +483,10 @@ msgstr "Video"
 
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "VideoGalleryBlock"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "You are trying to access a protected resource, please {login} first."
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView
@@ -1437,6 +1457,22 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/LocationItem
 msgid "locations"
 msgstr "Venues"
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "log in"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "login_admin_message"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "login_spid_message"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "login_with_spid"
+msgstr ""
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
 msgid "luoghi_notizia"

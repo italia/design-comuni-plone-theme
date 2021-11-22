@@ -173,6 +173,10 @@ msgstr ""
 msgid "Icons placeholder"
 msgstr "Seleziona le icone dalla barra a lato"
 
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}."
+msgstr "Se sei sicuro di aver inserito l'indirizzo corretto ma ottieni comunque un errore, contatta l' {site_admin}."
+
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Image"
 msgstr "Immagine"
@@ -349,6 +353,10 @@ msgstr "Mostra tutto"
 msgid "Show all content types"
 msgstr ""
 
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "Site Administration"
+msgstr "Amministratore del sito"
+
 #: components/ItaliaTheme/Search/Search
 msgid "Sono occorsi degli errori"
 msgstr "Sono occorsi degli errori"
@@ -362,6 +370,10 @@ msgstr "Iscriviti"
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 msgid "Text placeholder"
 msgstr "Testo..."
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "Thank you."
+msgstr "Grazie."
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Edit
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
@@ -419,6 +431,10 @@ msgstr "Digita testo…"
 msgid "Type the title…"
 msgstr "Digita il titolo…"
 
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "Unauthorized"
+msgstr "Non autorizzato"
+
 #: components/ItaliaTheme/View/PageView/PageView
 msgid "Unknown Block"
 msgstr "Blocco sconosciuto"
@@ -468,6 +484,10 @@ msgstr "Video"
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "VideoGalleryBlock"
 msgstr "Video gallery"
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "You are trying to access a protected resource, please {login} first."
+msgstr "Stai provando ad accedere ad una risorsa protetta, per favore fai prima il {login}."
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "a_chi_si_rivolge"
@@ -1090,7 +1110,7 @@ msgstr "Descrizione estesa"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 msgid "deselectSearchSection"
-msgstr ""
+msgstr "Non cercare nella sezione"
 
 #: config/Blocks/ListingOptions/utils
 msgid "detail_link_label"
@@ -1319,7 +1339,7 @@ msgstr "Galleria di immagini"
 
 #: components/ItaliaTheme/GalleryPreview/GalleryPreview
 msgid "gallery_close_preview"
-msgstr ""
+msgstr "Chiudi l'anteprima"
 
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "gallery_video_title"
@@ -1335,15 +1355,15 @@ msgstr "Video URL"
 
 #: components/ItaliaTheme/View/Commons/Gallery
 msgid "gallery_viewPreview"
-msgstr ""
+msgstr "Vedi l'anteprima di"
 
 #: components/ItaliaTheme/GalleryPreview/GalleryPreview
 msgid "gallery_view_next"
-msgstr ""
+msgstr "Immagine successiva"
 
 #: components/ItaliaTheme/GalleryPreview/GalleryPreview
 msgid "gallery_view_prev"
-msgstr ""
+msgstr "Immagine precedente"
 
 #: components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate
 msgid "grid-gallery-max-items-exceeded"
@@ -1437,6 +1457,22 @@ msgstr "Posizione in cui cercare"
 #: components/ItaliaTheme/View/Commons/LocationItem
 msgid "locations"
 msgstr "Luoghi"
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "log in"
+msgstr "Log in"
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "login_admin_message"
+msgstr "oppure accedi come amministratore del sito"
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "login_spid_message"
+msgstr "login con Spid"
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+msgid "login_with_spid"
+msgstr "Accedi con Spid"
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
 msgid "luoghi_notizia"
