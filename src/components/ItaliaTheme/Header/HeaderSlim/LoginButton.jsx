@@ -14,7 +14,9 @@ const LoginButton = ({ children, size = 'full' }) => {
   let loginURL = config.settings.siteProperties?.arLoginUrl;
   if (loginURL) {
     loginURL += loginURL.indexOf('?') >= 0 ? '&' : '?';
-    loginURL += 'came_from=' + window?.location?.href ?? '';
+    if (__CLIENT__) {
+      loginURL += 'came_from=' + window?.location?.href ?? '';
+    }
   }
 
   return loginURL ? (
