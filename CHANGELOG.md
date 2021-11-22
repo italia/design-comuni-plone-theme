@@ -1,3 +1,17 @@
+### [5.8.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.4...v5.8.5) (2021-11-22)
+
+
+### Bug Fixes
+
+* fix ruolo persone UO e loginButton ([00927e6](https://github.com/RedTurtle/design-volto-theme/commit/00927e6bc76e3e2a9f1bdcf283a78c9e12947fb8))
+
+
+### Maintenance
+
+* added came_from param in login url ([92edac2](https://github.com/RedTurtle/design-volto-theme/commit/92edac292df9c047f9b175030ee35df03921c81e))
+* customized Unauthorized view for login spid ([03a8345](https://github.com/RedTurtle/design-volto-theme/commit/03a8345bb25d304e73a12af73daab68f1192a16c))
+* remove old tinymce dependency and fix mrs-developer version ([#420](https://github.com/RedTurtle/design-volto-theme/issues/420)) ([9ae338b](https://github.com/RedTurtle/design-volto-theme/commit/9ae338b0c932b67b1d06e01bdbebb16bbf75835c))
+
 ### [5.8.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.3...v5.8.4) (2021-11-19)
 
 
