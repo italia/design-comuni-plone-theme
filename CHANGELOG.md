@@ -1,3 +1,12 @@
+### [5.8.8](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.7...v5.8.8) (2021-11-23)
+
+
+### Bug Fixes
+
+* added conditionalLink component ([48972d0](https://github.com/RedTurtle/design-volto-theme/commit/48972d0796bf5b7f1bd9f93f6f7aeee604975a43))
+* fix telefono label and Unuthorized page classes ([37c59d5](https://github.com/RedTurtle/design-volto-theme/commit/37c59d52fa692041c863b09dc92813988e616eec))
+* link simple list block ([8a73499](https://github.com/RedTurtle/design-volto-theme/commit/8a7349984f067796c21eb07491304082d56fd54f))
+
 ### [5.8.7](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.6...v5.8.7) (2021-11-22)
 
 
