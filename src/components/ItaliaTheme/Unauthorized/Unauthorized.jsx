@@ -9,8 +9,13 @@ import { Container } from 'semantic-ui-react';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { withServerErrorCode } from '@plone/volto/helpers/Utils/Utils';
-import { getBaseUrl } from '@plone/volto/helpers';
-import { Icon, LoginButton } from '@italia/components/ItaliaTheme';
+import { getBaseUrl, BodyClass } from '@plone/volto/helpers';
+import {
+  Icon,
+  LoginButton,
+  RemoveBodyClass,
+} from '@italia/components/ItaliaTheme';
+
 import config from '@plone/volto/registry';
 /**
  * unauthorized function.
@@ -23,6 +28,8 @@ const Unauthorized = () => {
 
   return (
     <Container className="view-wrapper">
+      <BodyClass className="public-ui" />
+      <RemoveBodyClass className="cms-ui" />
       <h1>
         <FormattedMessage id="Unauthorized" defaultMessage="Unauthorized" />
       </h1>
