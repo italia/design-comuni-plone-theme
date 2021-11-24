@@ -1,3 +1,10 @@
+### [5.8.9](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.8...v5.8.9) (2021-11-24)
+
+
+### Bug Fixes
+
+* fixed imports ([1a4ab96](https://github.com/RedTurtle/design-volto-theme/commit/1a4ab9637fea3762b632dd0e3bc090ec909d123b))
+
 ### [5.8.8](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.7...v5.8.8) (2021-11-23)
 
 
