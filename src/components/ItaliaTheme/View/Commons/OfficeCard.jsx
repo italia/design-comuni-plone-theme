@@ -6,8 +6,7 @@ import cx from 'classnames';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Icon } from '@italia/components/ItaliaTheme';
-import { RichText } from '@italia/components/ItaliaTheme/View';
-import ContactLink from '../Commons/ContactLink';
+import { RichText, ContactLink } from '@italia/components/ItaliaTheme/View';
 
 /**
  * OfficeCard view component class.

@@ -27,10 +27,10 @@ import {
   RelatedItemInEvidence,
   richTextHasContent,
   SkipToMainContent,
+  ContactLink,
 } from '@italia/components/ItaliaTheme/View';
 
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
-import ContactLink from '../Commons/ContactLink';
 
 const messages = defineMessages({
   cosa_fa: {
