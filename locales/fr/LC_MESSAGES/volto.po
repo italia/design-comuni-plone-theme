@@ -423,6 +423,7 @@ msgstr "Déposez un fichier ici pour télécharger un nouveau fichier"
 msgid "Trascina qui un file per sostituire quello esistente"
 msgstr "Faites glisser un fichier ici pour remplacer l'existant"
 
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "Twitter Posts"
 msgstr ""
@@ -550,6 +551,7 @@ msgid "altri_documenti"
 msgstr "Autres documents"
 
 #: config/Blocks/ListingOptions/cardWithImageTemplate
+#: config/Blocks/ListingOptions/cardWithSlideUpTextTemplate
 msgid "always_show_image"
 msgstr ""
 
@@ -2191,6 +2193,10 @@ msgstr "Services"
 msgid "setMoreSearchOptions"
 msgstr "Aller à d'autres options de recherche"
 
+#: config/Blocks/ListingOptions/cardWithImageTemplate
+msgid "set_four_columns"
+msgstr "Disposer sur 4 colonnes"
+
 #: components/ItaliaTheme/View/Commons/Sharing
 msgid "share"
 msgstr "Partager"
@@ -2340,6 +2346,8 @@ msgid "supported_by"
 msgstr "Avec le soutien de"
 
 #: components/ItaliaTheme/View/Commons/ContactLink
+#: components/ItaliaTheme/View/Commons/Telephones
+#: components/ItaliaTheme/View/Commons/TelephonLink
 #: components/ItaliaTheme/View/PersonaView/PersonaTelephones
 msgid "telefono"
 msgstr "Tél."
@@ -2385,6 +2393,7 @@ msgid "tipologia_persona"
 msgstr "Type de personne"
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "title"
@@ -2414,14 +2423,17 @@ msgstr "Sujets"
 msgid "trasparenza"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccountLink"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccounts"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccounts_description"
 msgstr ""
