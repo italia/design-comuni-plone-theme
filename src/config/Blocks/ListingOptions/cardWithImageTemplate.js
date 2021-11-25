@@ -15,6 +15,10 @@ const messages = defineMessages({
     id: 'show_topics',
     defaultMessage: 'Mostra gli argomenti',
   },
+  set_four_columns: {
+    id: 'set_four_columns',
+    defaultMessage: 'Disponi su 4 colonne',
+  },
 });
 
 export const addCardWithImageTemplateOptions = (
@@ -32,6 +36,7 @@ export const addCardWithImageTemplateOptions = (
     [
       'always_show_image',
       'natural_image_size',
+      'set_four_columns',
       'show_icon',
       'show_section',
       'show_type',
@@ -47,6 +52,10 @@ export const addCardWithImageTemplateOptions = (
       natural_image_size: {
         default: false,
         label: intl.formatMessage(messages.natural_image_size),
+      },
+      set_four_columns: {
+        default: false,
+        label: intl.formatMessage(messages.set_four_columns),
       },
       show_section: { default: false },
       hide_dates: { default: false },

@@ -38,6 +38,7 @@ const CardWithImageTemplate = ({
   linkHref,
   show_block_bg = false,
   always_show_image = false,
+  set_four_columns = false,
   show_type = true,
   show_section,
   show_icon = true,
@@ -79,7 +80,11 @@ const CardWithImageTemplate = ({
             const topics = show_topics ? item.tassonomia_argomenti : null;
 
             return (
-              <Col lg="4" key={item['@id']} className="col-item mb-3">
+              <Col
+                lg={set_four_columns ? '3' : '4'}
+                key={item['@id']}
+                className="col-item mb-3"
+              >
                 {item['@type'] === 'Persona' ? (
                   <CardPersona
                     item={item}
