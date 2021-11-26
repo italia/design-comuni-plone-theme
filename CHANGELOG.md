@@ -1,3 +1,16 @@
+### [5.8.10](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.9...v5.8.10) (2021-11-26)
+
+
+### Bug Fixes
+
+* removed arLoginUrl default ([1f6537d](https://github.com/RedTurtle/design-volto-theme/commit/1f6537d9a1e921de069d3cdd2e815c5b40484a03))
+
+
+### Maintenance
+
+* added four columns variation ([f0cbad7](https://github.com/RedTurtle/design-volto-theme/commit/f0cbad77f8cd3e4f569d6ac13142e072a7041959))
+* updated locales ([2d8f2b9](https://github.com/RedTurtle/design-volto-theme/commit/2d8f2b9d0d79bf1840528c65d566cdae017b3ebc))
+
 ### [5.8.9](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.8...v5.8.9) (2021-11-24)
 
 
