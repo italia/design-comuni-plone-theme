@@ -48,6 +48,7 @@ const SimpleCardTemplateDefault = ({
   show_path_filters,
   addFilters,
   additionalFilters = [],
+  ...other_props
 }) => {
   const intl = useIntl();
   moment.locale(intl.locale);
@@ -162,7 +163,9 @@ const SimpleCardTemplateDefault = ({
           const listingText = show_description ? (
             <ListingText item={item} />
           ) : null;
-          const category = getCategory(item, show_type, show_section);
+          const category = getCategory(item, show_type, show_section, {
+            ...other_props,
+          });
 
           return (
             <Card

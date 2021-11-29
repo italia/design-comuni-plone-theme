@@ -47,6 +47,7 @@ const CardWithImageTemplate = ({
   hide_dates = false,
   full_width = true,
   natural_image_size = false,
+  ...other_props
 }) => {
   const intl = useIntl();
   moment.locale(intl.locale);
@@ -76,7 +77,9 @@ const CardWithImageTemplate = ({
             const image =
               item.image || item.immagine_testata || item.foto_persona;
             const showImage = (index < 3 || always_show_image) && image;
-            const category = getCategory(item, show_type, show_section);
+            const category = getCategory(item, show_type, show_section, {
+              ...other_props,
+            });
             const topics = show_topics ? item.tassonomia_argomenti : null;
 
             return (

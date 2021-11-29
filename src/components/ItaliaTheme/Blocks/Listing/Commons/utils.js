@@ -1,4 +1,4 @@
-export const getCategory = (item, show_type, show_section) => {
+export const getCategory = (item, show_type, show_section, ...other_props) => {
   let cat = [];
   if (item) {
     if (show_section) {

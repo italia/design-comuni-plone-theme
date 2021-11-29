@@ -32,6 +32,7 @@ const CardWithSlideUpTextTemplate = ({
   show_section,
   show_description = true,
   hide_dates = false,
+  ...other_props
 }) => {
   const intl = useIntl();
 
@@ -42,7 +43,9 @@ const CardWithSlideUpTextTemplate = ({
         <div className="grid mb-3 mt-5">
           {items.map((item, index) => {
             let image = item?.image || item?.immagine_testata;
-            const category = getCategory(item, show_type, show_section);
+            const category = getCategory(item, show_type, show_section, {
+              ...other_props,
+            });
             const date = hide_dates ? null : getCalendarDate(item);
 
             return (

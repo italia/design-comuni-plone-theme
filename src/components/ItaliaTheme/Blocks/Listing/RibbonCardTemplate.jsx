@@ -49,6 +49,7 @@ const RibbonCardTemplate = ({
   show_description = true,
   show_type,
   hide_dates,
+  ...other_props
 }) => {
   const intl = useIntl();
   moment.locale(intl.locale);
@@ -75,7 +76,9 @@ const RibbonCardTemplate = ({
             const eventRecurrenceMore = hide_dates
               ? null
               : getEventRecurrenceMore(item, isEditMode);
-            const category = getCategory(item, show_type, show_section);
+            const category = getCategory(item, show_type, show_section, {
+              ...other_props,
+            });
             const listingText = show_description ? (
               <ListingText item={item} />
             ) : null;

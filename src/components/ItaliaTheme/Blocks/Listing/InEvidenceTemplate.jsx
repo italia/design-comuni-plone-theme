@@ -41,6 +41,7 @@ const InEvidenceTemplate = ({
   hide_dates,
   linkTitle,
   linkHref,
+  ...other_props
 }) => {
   return (
     <div className="in-evidence">
@@ -66,7 +67,9 @@ const InEvidenceTemplate = ({
             ) : null;
             const image =
               item.image || item.immagine_testata || item.foto_persona;
-            const category = getCategory(item, show_type, show_section);
+            const category = getCategory(item, show_type, show_section, {
+              ...other_props,
+            });
             const topics = show_topics ? item.tassonomia_argomenti : null;
 
             return item['@type'] === 'Persona' ? (
