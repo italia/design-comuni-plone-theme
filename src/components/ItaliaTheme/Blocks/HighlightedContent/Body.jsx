@@ -20,14 +20,13 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import { CardCategory, getItemIcon } from '@italia/components/ItaliaTheme';
 import { viewDate } from '@italia/helpers';
 
-const Body = ({ content, pathname, block, ...other_props }) => {
+const Body = (props) => {
+  const { content, block } = props;
   const intl = useIntl();
   const icon = getItemIcon(content);
 
   const { show_type = true, show_section } = block;
-  const category = getCategory(content, show_type, show_section, {
-    ...other_props,
-  });
+  const category = getCategory(content, show_type, show_section, props);
 
   return (
     <div className={`${block.bg_color ? 'bg-' + block.bg_color : ''}`}>

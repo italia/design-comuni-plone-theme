@@ -28,21 +28,22 @@ import {
 import Image from '@plone/volto/components/theme/Image/Image';
 import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 
-const InEvidenceTemplate = ({
-  items,
-  title,
-  isEditMode,
-  show_block_bg,
-  show_icon = true,
-  show_section,
-  show_type = true,
-  show_description = true,
-  show_topics = true,
-  hide_dates,
-  linkTitle,
-  linkHref,
-  ...other_props
-}) => {
+const InEvidenceTemplate = (props) => {
+  const {
+    items,
+    title,
+    isEditMode,
+    show_block_bg,
+    show_icon = true,
+    show_section,
+    show_type = true,
+    show_description = true,
+    show_topics = true,
+    hide_dates,
+    linkTitle,
+    linkHref,
+  } = props;
+
   return (
     <div className="in-evidence">
       <Container className="px-4">
@@ -67,9 +68,7 @@ const InEvidenceTemplate = ({
             ) : null;
             const image =
               item.image || item.immagine_testata || item.foto_persona;
-            const category = getCategory(item, show_type, show_section, {
-              ...other_props,
-            });
+            const category = getCategory(item, show_type, show_section, props);
             const topics = show_topics ? item.tassonomia_argomenti : null;
 
             return item['@type'] === 'Persona' ? (
