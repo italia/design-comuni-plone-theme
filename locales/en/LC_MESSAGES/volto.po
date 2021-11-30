@@ -406,7 +406,6 @@ msgstr "Drop the file here to upload a new file"
 msgid "Trascina qui un file per sostituire quello esistente"
 msgstr "Drop the file here to replace existing file"
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "Twitter Posts"
 msgstr ""
@@ -534,7 +533,6 @@ msgid "altri_documenti"
 msgstr "Other documents"
 
 #: config/Blocks/ListingOptions/cardWithImageTemplate
-#: config/Blocks/ListingOptions/cardWithSlideUpTextTemplate
 msgid "always_show_image"
 msgstr ""
 
@@ -2333,8 +2331,6 @@ msgid "supported_by"
 msgstr "Supported by"
 
 #: components/ItaliaTheme/View/Commons/ContactLink
-#: components/ItaliaTheme/View/Commons/Telephones
-#: components/ItaliaTheme/View/Commons/TelephonLink
 #: components/ItaliaTheme/View/PersonaView/PersonaTelephones
 msgid "telefono"
 msgstr "Phone"
@@ -2380,7 +2376,6 @@ msgid "tipologia_persona"
 msgstr "Person type"
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "title"
@@ -2410,17 +2405,14 @@ msgstr "Topics"
 msgid "trasparenza"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccountLink"
 msgstr "Link to profile page"
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccounts"
 msgstr "Accounts"
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccounts_description"
 msgstr ""
