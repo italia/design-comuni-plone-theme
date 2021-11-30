@@ -34,24 +34,25 @@ const messages = defineMessages({
   },
 });
 
-const RibbonCardTemplate = ({
-  items,
-  isEditMode,
-  linkTitle,
-  linkHref,
-  title,
-  show_only_first_ribbon,
-  show_detail_link,
-  detail_link_label,
-  show_block_bg,
-  show_section = true,
-  show_icon = true,
-  show_description = true,
-  show_type,
-  hide_dates,
-}) => {
+const RibbonCardTemplate = (props) => {
   const intl = useIntl();
   moment.locale(intl.locale);
+
+  const {
+    items,
+    isEditMode,
+    linkTitle,
+    linkHref,
+    title,
+    show_only_first_ribbon,
+    show_detail_link,
+    detail_link_label,
+    show_section = true,
+    show_icon = true,
+    show_description = true,
+    show_type,
+    hide_dates,
+  } = props;
 
   return (
     <div className="ribbon-card-template">
@@ -75,7 +76,7 @@ const RibbonCardTemplate = ({
             const eventRecurrenceMore = hide_dates
               ? null
               : getEventRecurrenceMore(item, isEditMode);
-            const category = getCategory(item, show_type, show_section);
+            const category = getCategory(item, show_type, show_section, props);
             const listingText = show_description ? (
               <ListingText item={item} />
             ) : null;
