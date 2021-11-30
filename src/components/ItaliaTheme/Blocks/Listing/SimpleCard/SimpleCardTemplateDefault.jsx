@@ -30,27 +30,29 @@ const messages = defineMessages({
   card_detail_label: { id: 'Card detail label', defaultMessage: 'Vedi' },
 });
 
-const SimpleCardTemplateDefault = ({
-  items,
-  isEditMode,
-  linkTitle,
-  linkHref,
-  show_icon = true,
-  show_section = true,
-  show_type,
-  show_description = true,
-  show_detail_link,
-  detail_link_label,
-  title,
-  show_block_bg,
-  hide_dates,
-  path_filters,
-  show_path_filters,
-  addFilters,
-  additionalFilters = [],
-}) => {
+const SimpleCardTemplateDefault = (props) => {
   const intl = useIntl();
   moment.locale(intl.locale);
+
+  const {
+    items,
+    isEditMode,
+    linkTitle,
+    linkHref,
+    show_icon = true,
+    show_section = true,
+    show_type,
+    show_description = true,
+    show_detail_link,
+    detail_link_label,
+    title,
+    show_block_bg,
+    hide_dates,
+    path_filters,
+    show_path_filters,
+    addFilters,
+    additionalFilters = [],
+  } = props;
 
   let currentPathFilter = additionalFilters
     ?.filter((f) => {
@@ -162,7 +164,7 @@ const SimpleCardTemplateDefault = ({
           const listingText = show_description ? (
             <ListingText item={item} />
           ) : null;
-          const category = getCategory(item, show_type, show_section);
+          const category = getCategory(item, show_type, show_section, props);
 
           return (
             <Card

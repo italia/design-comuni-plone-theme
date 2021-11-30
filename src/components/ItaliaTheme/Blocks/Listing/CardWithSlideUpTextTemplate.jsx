@@ -21,19 +21,20 @@ const messages = defineMessages({
   },
 });
 
-const CardWithSlideUpTextTemplate = ({
-  items,
-  title,
-  isEditMode,
-  linkTitle,
-  linkHref,
-  show_block_bg = false,
-  show_type = true,
-  show_section,
-  show_description = true,
-  hide_dates = false,
-}) => {
+const CardWithSlideUpTextTemplate = (props) => {
   const intl = useIntl();
+
+  const {
+    items,
+    title,
+    isEditMode,
+    linkTitle,
+    linkHref,
+    show_type = true,
+    show_section,
+    show_description = true,
+    hide_dates = false,
+  } = props;
 
   return (
     <div className="card-slide-text-template">
@@ -42,7 +43,7 @@ const CardWithSlideUpTextTemplate = ({
         <div className="grid mb-3 mt-5">
           {items.map((item, index) => {
             let image = item?.image || item?.immagine_testata;
-            const category = getCategory(item, show_type, show_section);
+            const category = getCategory(item, show_type, show_section, props);
             const date = hide_dates ? null : getCalendarDate(item);
 
             return (
