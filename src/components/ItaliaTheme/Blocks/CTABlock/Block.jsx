@@ -40,6 +40,7 @@ const Block = ({
   const title = data?.cta_title?.blocks[0]?.text;
   const hasImage = data?.showImage && data?.ctaImage?.length > 0;
   const content = data?.cta_content;
+  const showFullwidth = data?.showFullWidth;
 
   const [selected, setSelected] = useState('title');
   const titleRef = useRef();
@@ -47,7 +48,10 @@ const Block = ({
 
   return (
     <div
-      className={cx('cta-block-wrapper full-width', { 'has-image': hasImage })}
+      className={cx('cta-block-wrapper', {
+        'has-image': hasImage,
+        'full-width': showFullwidth,
+      })}
       onKeyDown={(e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
           if (
