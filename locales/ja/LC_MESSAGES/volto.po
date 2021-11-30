@@ -893,6 +893,10 @@ msgid "costi_e_vincoli"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "ctaFullWidth"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
 msgid "ctaImage"
 msgstr ""
 

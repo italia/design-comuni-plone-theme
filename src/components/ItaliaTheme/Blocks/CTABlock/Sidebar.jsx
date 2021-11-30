@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Segment, Accordion } from 'semantic-ui-react';
 import { FormattedMessage, injectIntl } from 'react-intl';
@@ -19,6 +20,10 @@ const messages = defineMessages({
     id: 'ctaImageEnable',
     defaultMessage: "Mostra l'immagine",
   },
+  ctaFullWidth: {
+    id: 'ctaFullWidth',
+    defaultMessage: 'Mostra a pieno schermo',
+  },
   ctaLinkTitle: {
     id: 'ctaLinkTitle',
     defaultMessage: 'Titolo per il link della CTA',
@@ -31,6 +36,15 @@ const messages = defineMessages({
 
 const Sidebar = ({ data, block, onChangeBlock, openObjectBrowser }) => {
   const intl = useIntl();
+
+  useEffect(() => {
+    if (data.showFullWidth === undefined) {
+      onChangeBlock(block, {
+        ...data,
+        showFullWidth: true,
+      });
+    }
+  }, []);
 
   if (data.showImage === null || data.showImage === undefined) {
     data.showImage = false;
@@ -69,6 +83,14 @@ const Sidebar = ({ data, block, onChangeBlock, openObjectBrowser }) => {
               onChangeBlock(block, { ...data, [name]: checked });
             }}
             isDisabled={!data.ctaImage?.length > 0}
+          />
+          <CheckboxWidget
+            id="showFullWidth"
+            title={intl.formatMessage(messages.ctaFullWidth)}
+            value={data.showFullWidth ? data.showFullWidth : false}
+            onChange={(name, checked) => {
+              onChangeBlock(block, { ...data, [name]: checked });
+            }}
           />
 
           <TextWidget

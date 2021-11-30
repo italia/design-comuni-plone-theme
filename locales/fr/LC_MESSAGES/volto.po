@@ -903,6 +903,10 @@ msgid "costi_e_vincoli"
 msgstr "Coûts et contraintes"
 
 #: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "ctaFullWidth"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
 msgid "ctaImage"
 msgstr "Sélectionnez l'image à afficher"
 

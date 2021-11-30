@@ -886,6 +886,10 @@ msgid "costi_e_vincoli"
 msgstr "Costs and constraints"
 
 #: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "ctaFullWidth"
+msgstr "Show full width"
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
 msgid "ctaImage"
 msgstr "Select an image"
 
