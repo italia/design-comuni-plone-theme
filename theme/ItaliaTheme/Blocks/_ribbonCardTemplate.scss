@@ -5,6 +5,26 @@
       text-transform: uppercase;
     }
 
+    &.card-big {
+      .etichetta {
+        position: absolute;
+        top: 3rem;
+        right: 0;
+        left: 0;
+        width: 100%;
+        justify-content: inherit;
+        padding: 0 3rem;
+
+        .icon {
+          margin-left: auto;
+        }
+      }
+
+      .card-body {
+        padding: 3.75rem 3rem 2.75rem;
+      }
+    }
+
     h3.card-title {
       font-size: 1rem;
       font-weight: 700;
