@@ -1,3 +1,10 @@
+## [5.9.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.11...v5.9.0) (2021-12-01)
+
+
+### Features
+
+* added sentry ignoreErrors ([02734a5](https://github.com/RedTurtle/design-volto-theme/commit/02734a510b302c78530c32f30ecfc31c37a27fd8))
+
 ### [5.8.11](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.10...v5.8.11) (2021-11-30)
 
 
