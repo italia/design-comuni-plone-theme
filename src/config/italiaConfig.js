@@ -67,7 +67,14 @@ export default function applyConfig(voltoConfig) {
   config.settings = {
     ...config.settings,
     devProxyToApiPath: 'http://localhost:8080/Plone',
-
+    sentryOptions: {
+      ...(config.settings.sentryOptions ?? {}),
+      ignoreErrors: [
+        'ChunkLoadError',
+        'Timeout (n)', //errori di recaptcha nella customer satisfaction
+        'Uncaught (in promise) Timeout (n)', //errori di recaptcha nella customer satisfaction
+      ],
+    },
     // listBlockTypes: listBlockTypes,
     isMultilingual: false,
     supportedLanguages: ['it'],
