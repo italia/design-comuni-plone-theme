@@ -7,13 +7,20 @@ import { UniversalLink } from '@plone/volto/components';
 import Image from '@plone/volto/components/theme/Image/Image';
 import { ListingLinkMore } from '@italia/components/ItaliaTheme';
 import { Icon } from '@italia/components/ItaliaTheme';
+import { flattenToAppURL } from '@plone/volto/helpers';
+import { GalleryPreview } from '@italia/components/ItaliaTheme';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
 
 const messages = defineMessages({
   viewImage: {
     id: "Vedi l'immagine",
     defaultMessage: "Vedi l'immagine",
+  },
+  viewPreview: {
+    id: 'gallery_viewPreview',
+    defaultMessage: "Vedi l'anteprima di",
   },
   play: {
     id: 'Play slider',
@@ -30,12 +37,14 @@ const PhotogalleryTemplate = ({
   title,
   isEditMode,
   show_block_bg,
+  show_image_popup,
   linkTitle,
   linkHref,
 }) => {
   const intl = useIntl();
   const slider = useRef(null);
   const [autoplay, setAutoplay] = useState(false);
+  const [viewImageIndex, setViewImageIndex] = useState(null);
 
   const toggleAutoplay = () => {
     if (!slider?.current) return;
@@ -110,6 +119,24 @@ const PhotogalleryTemplate = ({
 
   const getCaption = (item) => item.description ?? item.rights ?? null;
 
+  const figure = (image, item) => (
+    <figure className="img-wrapper">
+      {image ? (
+        <Image
+          className="img-fluid"
+          image={image}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          useOriginal={false}
+        />
+      ) : (
+        <img src={DefaultImageSVG} alt="" />
+      )}
+      {getCaption(item) && <figcaption>{getCaption(item)}</figcaption>}
+    </figure>
+  );
+
   return (
     <div className="photogallery">
       <Container className="px-4">
@@ -123,36 +150,59 @@ const PhotogalleryTemplate = ({
         <div className="slider-container px-4 px-md-0">
           <div className="it-carousel-all it-card-bg">
             <Slider {...settings} ref={slider}>
-              {items.map((item) => {
+              {items.map((item, i) => {
                 const image =
                   item.image || item.immagine_testata || item.foto_persona;
+
                 return (
                   <div className="it-single-slide-wrapper" key={item['@id']}>
-                    <UniversalLink
-                      item={item}
-                      openLinkInNewTab={true}
-                      title={intl.formatMessage(messages.viewImage)}
-                    >
-                      <figure className="img-wrapper">
-                        {image && (
-                          <Image
-                            className="img-fluid"
-                            image={image}
-                            alt=""
-                            aria-hidden="true"
-                            loading="lazy"
-                            useOriginal={false}
-                          />
-                        )}
-                        {getCaption(item) && (
-                          <figcaption>{getCaption(item)}</figcaption>
-                        )}
-                      </figure>
-                    </UniversalLink>
+                    {!show_image_popup ? (
+                      <UniversalLink
+                        item={item}
+                        openLinkInNewTab={true}
+                        title={intl.formatMessage(messages.viewImage)}
+                      >
+                        {figure(image, item)}
+                      </UniversalLink>
+                    ) : (
+                      <a
+                        href={
+                          item?.image?.scales
+                            ? flattenToAppURL(item.image.scales.large.download)
+                            : '#'
+                        }
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          setViewImageIndex(i);
+                        }}
+                        onKeyDown={(e) => {
+                          if (e.keyCode === 13) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            setViewImageIndex(i);
+                          }
+                        }}
+                        aria-label={`${intl.formatMessage(
+                          messages.viewPreview,
+                        )} ${item.title}`}
+                      >
+                        {figure(image, item)}
+                      </a>
+                    )}
                   </div>
                 );
               })}
             </Slider>
+
+            {viewImageIndex !== null ? (
+              <GalleryPreview
+                id={`image-gallery-custom`}
+                viewIndex={viewImageIndex}
+                setViewIndex={setViewImageIndex}
+                items={items}
+              />
+            ) : null}
           </div>
         </div>
         <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />

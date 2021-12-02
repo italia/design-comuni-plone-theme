@@ -56,7 +56,8 @@ import {
   addDefaultOptions,
   addSliderTemplateOptions,
   addSimpleListTemplateOptions,
-  addCardWithSlideUpTextTemplateOption,
+  addCardWithSlideUpTextTemplateOptions,
+  addPhotogalleryTemplateOptions,
 } from '@italia/config/Blocks/ListingOptions';
 
 const italiaListingVariations = [
@@ -125,7 +126,7 @@ const italiaListingVariations = [
     skeleton: CardWithSlideUpTextTemplateSkeleton,
     schemaEnhancer: ({ schema, formData, intl }) => {
       let pos = addDefaultOptions(schema, formData, intl);
-      addCardWithSlideUpTextTemplateOption(schema, formData, intl, pos);
+      addCardWithSlideUpTextTemplateOptions(schema, formData, intl, pos);
       return schema;
     },
   },
@@ -182,7 +183,8 @@ const italiaListingVariations = [
     template: PhotogalleryTemplate,
     skeleton: PhotogalleryTemplateSkeleton,
     schemaEnhancer: ({ schema, formData, intl }) => {
-      /*let pos = */ addDefaultOptions(schema, formData, intl);
+      let pos = addDefaultOptions(schema, formData, intl);
+      addPhotogalleryTemplateOptions(schema, formData, intl, pos);
       return schema;
     },
   },
