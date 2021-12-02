@@ -39,7 +39,7 @@ const PageHeaderDates = ({ content }) => {
               </div>
             </div>
           )}
-          {content.expires && (
+          {content.expires && content['@type'] !== 'News Item' && (
             <div className="row">
               <div className="col-12">
                 <small>{intl.formatMessage(messages.expire)}:</small>
