@@ -154,6 +154,7 @@ const PaginaArgomentoView = ({ content }) => {
                     image={content.image}
                     alt={content.caption ?? content.title}
                     title={content.caption ?? content.title}
+                    key={content.image.download}
                   />
                 </div>
               </Portal>
