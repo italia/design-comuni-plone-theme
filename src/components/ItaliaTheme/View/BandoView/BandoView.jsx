@@ -104,7 +104,9 @@ const BandoView = ({ content, location }) => {
         />
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
-            {__CLIENT__ && <SideMenu data={sideMenuElements} />}
+            {__CLIENT__ && (
+              <SideMenu data={sideMenuElements} content_uid={content?.UID} />
+            )}
           </aside>
           <section
             ref={documentBody}
