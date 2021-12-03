@@ -22,7 +22,7 @@ const SimpleListTemplateSkeleton = ({
             </Row>
           )}
 
-          <ul className={show_pointer_list && 'decoration-pointer'}>
+          <ul className={show_pointer_list ? 'decoration-pointer' : ''}>
             {[0, 1, 2, 3, 4, 5, 6].map((i) => (
               <li key={i}>
                 <UniversalLink href="#">

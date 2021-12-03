@@ -1,6 +1,6 @@
 import { templatesOptions } from '@italia/config/Blocks/ListingOptions';
 
-export const addCardWithSlideUpTextTemplateOption = (
+export const addCardWithSlideUpTextTemplateOptions = (
   schema,
   formData,
   intl,

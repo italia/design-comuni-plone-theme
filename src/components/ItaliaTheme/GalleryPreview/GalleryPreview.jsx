@@ -11,6 +11,7 @@ import {
   Button,
 } from 'design-react-kit/dist/design-react-kit';
 import { Icon } from '@italia/components/ItaliaTheme';
+import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
 
 const messages = defineMessages({
   view_prev: {
@@ -92,12 +93,16 @@ const GalleryPreview = ({ id, viewIndex, setViewIndex, items }) => {
               </Button>
 
               <div className="image">
-                <Image
-                  src={flattenToAppURL(
-                    items[viewIndex].image.scales.larger.download,
-                  )}
-                  loading="lazy"
-                />
+                {items[viewIndex].image ? (
+                  <Image
+                    src={flattenToAppURL(
+                      items[viewIndex].image.scales.larger.download,
+                    )}
+                    loading="lazy"
+                  />
+                ) : (
+                  <img src={DefaultImageSVG} alt="" />
+                )}
               </div>
 
               <Button

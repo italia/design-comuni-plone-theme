@@ -1372,6 +1372,7 @@ msgstr ""
 msgid "gallery_video_url"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
 #: components/ItaliaTheme/View/Commons/Gallery
 msgid "gallery_viewPreview"
 msgstr "Voir l'aperçu de"
@@ -2225,6 +2226,10 @@ msgstr ""
 
 #: config/Blocks/ListingOptions/utils
 msgid "show_icon"
+msgstr ""
+
+#: config/Blocks/ListingOptions/photogalleryTemplate
+msgid "show_image_popup"
 msgstr ""
 
 #: config/Blocks/ListingOptions/sliderTemplate

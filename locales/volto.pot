@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-12-02T16:11:46.209Z\n"
+"POT-Creation-Date: 2021-12-03T09:28:59.298Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1670,6 +1670,7 @@ msgstr ""
 msgid "gallery_video_url"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
 #: components/ItaliaTheme/View/Commons/Gallery
 # defaultMessage: Vedi l'anteprima di
 msgid "gallery_viewPreview"
@@ -2716,6 +2717,11 @@ msgstr ""
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Mostra l'icona
 msgid "show_icon"
+msgstr ""
+
+#: config/Blocks/ListingOptions/photogalleryTemplate
+# defaultMessage: Apri l'immagine in popup
+msgid "show_image_popup"
 msgstr ""
 
 #: config/Blocks/ListingOptions/sliderTemplate

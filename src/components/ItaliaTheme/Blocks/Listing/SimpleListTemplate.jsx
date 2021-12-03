@@ -27,10 +27,10 @@ const SimpleListTemplate = ({
         {items.length > 0 && (
           <Row>
             <Col>
-              <ul className={show_pointer_list && 'decoration-pointer'}>
+              <ul className={show_pointer_list ? 'decoration-pointer' : ''}>
                 {items.map((item, index) => {
                   return (
-                    <li>
+                    <li key={index}>
                       <ConditionalLink condition={!isEditMode} item={item}>
                         {item.title}
                       </ConditionalLink>
