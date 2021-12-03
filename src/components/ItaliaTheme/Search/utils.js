@@ -95,7 +95,7 @@ const parseFetchedTopics = (topics, location) => {
   const qsTopics = qs.parse(location?.search ?? '')?.tassonomia_argomenti ?? [];
 
   return topics.reduce((acc, topic) => {
-    acc[topic.path] = {
+    acc[flattenToAppURL(topic['@id'])] = {
       value: qsTopics.indexOf(topic.title) > -1,
       label: topic.title,
     };
