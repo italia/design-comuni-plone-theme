@@ -1,3 +1,21 @@
+### [5.9.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.9.0...v5.9.1) (2021-12-03)
+
+
+### Bug Fixes
+
+* bugfix Etichetta layout of listing ribbon cards ([052c9cb](https://github.com/RedTurtle/design-volto-theme/commit/052c9cbd9a872fcc5113c79dd775cc80ed3da024))
+* change SideMenu basing useEffect reload on content uid; change consequentially other views ([f869e04](https://github.com/RedTurtle/design-volto-theme/commit/f869e049e15e04ad6c445da70171804f6d50edc2))
+* fix Header image in Argument view on page change ([300de68](https://github.com/RedTurtle/design-volto-theme/commit/300de688b81a012fb17be6394f688ce89df83d71))
+* fixed header-image in Pages ([672db8f](https://github.com/RedTurtle/design-volto-theme/commit/672db8f3f232d4ce1b9395ae193d21706b144a02))
+* fixed topics in search ([0abb174](https://github.com/RedTurtle/design-volto-theme/commit/0abb174760f1fc39f824be16134bbc4ded1511c3))
+* fixed WideImage on route change ([fe37bdb](https://github.com/RedTurtle/design-volto-theme/commit/fe37bdb32cde4021bef2c0339230dc99d2096475))
+* removed expiration date from news ([3ec6d88](https://github.com/RedTurtle/design-volto-theme/commit/3ec6d88f4c0569958621203982e8ed99544f8d66))
+
+
+### Maintenance
+
+* update photogallery with popup function and general codereview ([d421755](https://github.com/RedTurtle/design-volto-theme/commit/d4217559dd2e30b9b9ddebc48dec7c90cc93f670))
+
 ## [5.9.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.8.11...v5.9.0) (2021-12-01)
 
 
