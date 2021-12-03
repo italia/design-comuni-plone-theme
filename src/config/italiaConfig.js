@@ -71,6 +71,7 @@ export default function applyConfig(voltoConfig) {
       ...(config.settings.sentryOptions ?? {}),
       ignoreErrors: [
         'ChunkLoadError',
+        'Loading CSS chunk',
         'Timeout (n)', //errori di recaptcha nella customer satisfaction
         'Uncaught (in promise) Timeout (n)', //errori di recaptcha nella customer satisfaction
       ],

@@ -21,6 +21,7 @@ const WideImage = ({ image, title, caption, fullWidth = true }) => {
             title={caption || title}
             critical
             loading="eager"
+            key={image?.download}
           />
         )}
         {caption && (
