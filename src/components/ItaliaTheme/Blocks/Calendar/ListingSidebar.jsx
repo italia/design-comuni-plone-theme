@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Segment, Accordion } from 'semantic-ui-react';
-import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
+import { defineMessages, useIntl } from 'react-intl';
 
 import { ListingBlockData as ListingData, Icon } from '@plone/volto/components';
+import { CheckboxWidget, TextWidget } from '@plone/volto/components';
+import { LocationFiltersWidget } from '@italia/components/ItaliaTheme';
 
 import upSVG from '@plone/volto/icons/up-key.svg';
 import downSVG from '@plone/volto/icons/down-key.svg';
-import { CheckboxWidget, TextWidget } from '@plone/volto/components';
 
 const messages = defineMessages({
+  calendarBlockSidebarTitle: {
+    id: 'calendarBlockSidebarTitle',
+    defaultMessage: 'Calendario',
+  },
   blockStyle: {
     id: 'Block style',
     defaultMessage: 'Block style',
@@ -30,9 +35,14 @@ const messages = defineMessages({
     id: 'Mostra lo sfondo del blocco',
     defaultMessage: 'Mostra lo sfondo del blocco',
   },
+  show_location_filters: {
+    id: 'Mostra i filtri per luogo',
+    defaultMessage: 'Mostra i filtri per luogo',
+  },
 });
 
 const ListingSidebar = (props) => {
+  const intl = useIntl();
   const [activeAccIndex, setActiveAccIndex] = useState(1);
 
   function handleAccClick(e, titleProps) {
@@ -45,15 +55,13 @@ const ListingSidebar = (props) => {
   return (
     <Segment.Group raised>
       <header className="header pulled">
-        <h2>
-          <FormattedMessage id="Listing" defaultMessage="Listing" />
-        </h2>
+        <h2>{intl.formatMessage(messages.calendarBlockSidebarTitle)}</h2>
       </header>
 
       <Accordion fluid styled className="form">
         <TextWidget
           id="title"
-          title={props.intl.formatMessage(messages.title)}
+          title={intl.formatMessage(messages.title)}
           required={false}
           value={props.data.title}
           onChange={(name, value) => {
@@ -66,7 +74,7 @@ const ListingSidebar = (props) => {
 
         <CheckboxWidget
           id="show_block_bg"
-          title={props.intl.formatMessage(messages.show_block_bg)}
+          title={intl.formatMessage(messages.show_block_bg)}
           value={props.data.show_block_bg ? props.data.show_block_bg : false}
           onChange={(id, value) => {
             props.onChangeBlock(props.block, {
@@ -76,12 +84,25 @@ const ListingSidebar = (props) => {
           }}
         />
 
+        <LocationFiltersWidget
+          id="show_location_filters"
+          title={intl.formatMessage(messages.show_location_filters)}
+          value={props.data.show_location_filters ?? false}
+          onChange={(id, value) => {
+            props.onChangeBlock(props.block, {
+              ...props.data,
+              [id]: value,
+            });
+          }}
+          formData={props.data}
+        />
+
         <Accordion.Title
           active={activeAccIndex === 1}
           index={1}
           onClick={handleAccClick}
         >
-          {props.intl.formatMessage(messages.content)}
+          {intl.formatMessage(messages.content)}
           {activeAccIndex === 1 ? (
             <Icon name={upSVG} size="20px" />
           ) : (
@@ -102,4 +123,4 @@ ListingSidebar.propTypes = {
   onChangeBlock: PropTypes.func.isRequired,
 };
 
-export default injectIntl(ListingSidebar);
+export default ListingSidebar;

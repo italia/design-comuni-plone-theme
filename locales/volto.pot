@@ -170,6 +170,11 @@ msgstr ""
 msgid "Dimensione della mappa"
 msgstr ""
 
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+# defaultMessage: Etichetta
+msgid "Etichetta location filter"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Etichetta
@@ -179,6 +184,11 @@ msgstr ""
 #: components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderView
 # defaultMessage: Non ho trovato la risposta che cercavi
 msgid "Faq Folder: Nessun risultato trovato"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+# defaultMessage: Filtro
+msgid "Filtro location filter"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/SkipToMainContent
@@ -262,15 +272,21 @@ msgstr ""
 msgid "Linkto title"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
-# defaultMessage: Listing
-msgid "Listing"
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+# defaultMessage: Luogo
+msgid "Luogo location filter"
 msgstr ""
 
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 #: components/ItaliaTheme/MenuSecondary/MenuSecondary
 # defaultMessage: Menu selezionato
 msgid "Menu selezionato"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+# defaultMessage: Mostra i filtri per luogo
+msgid "Mostra i filtri per luogo"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
@@ -925,6 +941,26 @@ msgstr ""
 #: config/Blocks/ListingOptions/defaultOptions
 # defaultMessage: Colore di sfondo
 msgid "block_bg_color"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+# defaultMessage: Calendario
+msgid "calendarBlockSidebarTitle"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/Body
+# defaultMessage: Prossimo
+msgid "calendar_next_arrow"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/Body
+# defaultMessage: Nessun evento disponibile al momento
+msgid "calendar_no_results"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/Body
+# defaultMessage: Precedente
+msgid "calendar_prev_arrow"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView

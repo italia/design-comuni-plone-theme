@@ -158,6 +158,10 @@ msgstr ""
 msgid "Dimensione della mappa"
 msgstr ""
 
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+msgid "Etichetta location filter"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 msgid "Etichetta path filter"
@@ -165,6 +169,10 @@ msgstr ""
 
 #: components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderView
 msgid "Faq Folder: Nessun risultato trovato"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+msgid "Filtro location filter"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/SkipToMainContent
@@ -232,13 +240,18 @@ msgstr ""
 msgid "Linkto title"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
-msgid "Listing"
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+msgid "Luogo location filter"
 msgstr ""
 
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 #: components/ItaliaTheme/MenuSecondary/MenuSecondary
 msgid "Menu selezionato"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+msgid "Mostra i filtri per luogo"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
@@ -772,6 +785,22 @@ msgstr ""
 
 #: config/Blocks/ListingOptions/defaultOptions
 msgid "block_bg_color"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+msgid "calendarBlockSidebarTitle"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/Body
+msgid "calendar_next_arrow"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/Body
+msgid "calendar_no_results"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/Body
+msgid "calendar_prev_arrow"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView

@@ -139,6 +139,10 @@ msgstr "Descrizione..."
 msgid "Dimensione della mappa"
 msgstr "Dimensione della mappa"
 
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+msgid "Etichetta location filter"
+msgstr "Etichetta"
+
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 msgid "Etichetta path filter"
@@ -147,6 +151,10 @@ msgstr "Etichetta"
 #: components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderView
 msgid "Faq Folder: Nessun risultato trovato"
 msgstr "Non ho trovato la risposta che cercavi"
+
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+msgid "Filtro location filter"
+msgstr "Filtro"
 
 #: components/ItaliaTheme/View/Commons/SkipToMainContent
 msgid "Go to content"
@@ -213,14 +221,19 @@ msgstr "Link ad altro"
 msgid "Linkto title"
 msgstr "Titolo per il link ad altro"
 
-#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
-msgid "Listing"
-msgstr "Listing"
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+msgid "Luogo location filter"
+msgstr "Luogo"
 
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 #: components/ItaliaTheme/MenuSecondary/MenuSecondary
 msgid "Menu selezionato"
 msgstr "Menu selezionato"
+
+#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+msgid "Mostra i filtri per luogo"
+msgstr "Mostra i filtri per luogo"
 
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
@@ -236,7 +249,7 @@ msgstr "Mostra lo sfondo del blocco"
 
 #: components/ItaliaTheme/Search/SearchTopics
 msgid "Mostra tutti gli argomenti"
-msgstr ""
+msgstr "Mostra tutti gli argomenti"
 
 #: components/ItaliaTheme/Search/Search
 msgid "Nessun risultato ottenuto"
@@ -754,6 +767,22 @@ msgstr "Biografia"
 #: config/Blocks/ListingOptions/defaultOptions
 msgid "block_bg_color"
 msgstr "Colore di sfondo"
+
+#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+msgid "calendarBlockSidebarTitle"
+msgstr "Calendario"
+
+#: components/ItaliaTheme/Blocks/Calendar/Body
+msgid "calendar_next_arrow"
+msgstr "Prossimo"
+
+#: components/ItaliaTheme/Blocks/Calendar/Body
+msgid "calendar_no_results"
+msgstr "Nessun evento disponibile al momento"
+
+#: components/ItaliaTheme/Blocks/Calendar/Body
+msgid "calendar_prev_arrow"
+msgstr "Precedente"
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 msgid "canale_digitale"
