@@ -1,3 +1,10 @@
+### [5.9.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.9.1...v5.9.2) (2021-12-05)
+
+
+### Bug Fixes
+
+* add new calendar block now works properly ([ecc1710](https://github.com/RedTurtle/design-volto-theme/commit/ecc1710b8b22b5598bfa9d57c9995d5590fb2702))
+
 ### [5.9.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.9.0...v5.9.1) (2021-12-03)
 
 
