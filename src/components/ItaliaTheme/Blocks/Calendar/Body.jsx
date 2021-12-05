@@ -106,7 +106,7 @@ const Body = ({ data, block, inEditMode, path, onChangeBlock }) => {
   let query = [
     ...(originalQuery && additionalFilters.length > 0
       ? JSON.parse(JSON.stringify(originalQuery))
-      : querystring.query),
+      : querystring.query ?? []),
   ];
   //faccio l'override dei filtri di default
   additionalFilters.forEach((filter) => {
