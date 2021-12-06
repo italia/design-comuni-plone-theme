@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useIntl, defineMessages } from 'react-intl';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import Slider from 'react-slick';
+import cx from 'classnames';
 import { UniversalLink } from '@plone/volto/components';
 import Image from '@plone/volto/components/theme/Image/Image';
 import { ListingLinkMore } from '@italia/components/ItaliaTheme';
@@ -155,7 +156,12 @@ const PhotogalleryTemplate = ({
                   item.image || item.immagine_testata || item.foto_persona;
 
                 return (
-                  <div className="it-single-slide-wrapper" key={item['@id']}>
+                  <div
+                    className={cx('it-single-slide-wrapper', {
+                      'single-slide': items.length === 1,
+                    })}
+                    key={item['@id']}
+                  >
                     {!show_image_popup ? (
                       <UniversalLink
                         item={item}

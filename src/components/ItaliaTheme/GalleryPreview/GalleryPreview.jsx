@@ -78,19 +78,21 @@ const GalleryPreview = ({ id, viewIndex, setViewIndex, items }) => {
           </ModalHeader>
           <ModalBody>
             <div className="item-preview">
-              <Button
-                color="white"
-                size="xs"
-                title={intl.formatMessage(messages.view_prev)}
-                onClick={() => {
-                  setViewIndex(
-                    viewIndex - 1 >= 0 ? viewIndex - 1 : items.length - 1,
-                  );
-                }}
-                className="prev"
-              >
-                <Icon color="" icon="it-arrow-left" padding={false} />
-              </Button>
+              {items.length > 1 && (
+                <Button
+                  color="white"
+                  size="xs"
+                  title={intl.formatMessage(messages.view_prev)}
+                  onClick={() => {
+                    setViewIndex(
+                      viewIndex - 1 >= 0 ? viewIndex - 1 : items.length - 1,
+                    );
+                  }}
+                  className="prev"
+                >
+                  <Icon color="" icon="it-arrow-left" padding={false} />
+                </Button>
+              )}
 
               <div className="image">
                 {items[viewIndex].image ? (
@@ -105,19 +107,21 @@ const GalleryPreview = ({ id, viewIndex, setViewIndex, items }) => {
                 )}
               </div>
 
-              <Button
-                color="white"
-                size="xs"
-                title={intl.formatMessage(messages.view_next)}
-                onClick={() => {
-                  setViewIndex(
-                    viewIndex + 1 < items.length ? viewIndex + 1 : 0,
-                  );
-                }}
-                className="next"
-              >
-                <Icon color="" icon="it-arrow-right" padding={false} />
-              </Button>
+              {items.length > 1 && (
+                <Button
+                  color="white"
+                  size="xs"
+                  title={intl.formatMessage(messages.view_next)}
+                  onClick={() => {
+                    setViewIndex(
+                      viewIndex + 1 < items.length ? viewIndex + 1 : 0,
+                    );
+                  }}
+                  className="next"
+                >
+                  <Icon color="" icon="it-arrow-right" padding={false} />
+                </Button>
+              )}
             </div>
           </ModalBody>
         </>

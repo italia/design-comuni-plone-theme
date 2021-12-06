@@ -5,10 +5,27 @@
     margin-bottom: 22px;
   }
 
+  .single-slide {
+    figure.img-wrapper {
+      height: auto;
+      max-height: 500px;
+
+      @media (max-width: #{map-get($grid-breakpoints, sm)}) {
+        max-height: 300px;
+      }
+    }
+  }
+
   figure.img-wrapper {
+    height: 300px;
+    max-height: 300px;
+    margin-right: auto;
+    margin-left: auto;
+
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
     }
 
     figcaption {
@@ -39,6 +56,11 @@
     }
   }
 
+  .slick-prev,
+  .slick-next {
+    top: calc(50% - 2rem - 5px);
+  }
+
   .slick-dots {
     position: unset;
     bottom: unset;
@@ -66,7 +88,7 @@
 
   .slick-track {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
 
   @media (max-width: #{map-get($grid-breakpoints, md)}) {
