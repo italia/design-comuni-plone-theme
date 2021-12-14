@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { UniversalLink } from '@plone/volto/components';
 import PropTypes from 'prop-types';
@@ -21,6 +22,7 @@ const OfficeCard = ({
   icon,
   children,
   margin_bottom = false,
+  show_contacts = true,
 }) => {
   const key = `${office['@id']}_office`;
   const url = flattenToAppURL(office['@id']);
@@ -51,33 +53,34 @@ const OfficeCard = ({
           </UniversalLink>
         </h5>
         <p className="card-text">{office_fo.description}</p>
-        {(office_fo.city || office_fo.zip_code || office_fo.street) && (
-          <div className="card-text">
-            {office_fo.street && <p>{office_fo.street}</p>}
-            {(office_fo.city || office_fo.zip_code) && (
-              <p>
-                {office_fo.zip_code} {office_fo.city}
-              </p>
-            )}
-            {(office_fo.telefono || office_fo.email) && (
-              <p>
-                <ContactLink tel={office_fo.telefono} label={true} />
-                <br />
-                <ContactLink email={office_fo.email} label={true} />
-              </p>
-            )}
+        {show_contacts &&
+          (office_fo.city || office_fo.zip_code || office_fo.street) && (
+            <div className="card-text">
+              {office_fo.street && <p>{office_fo.street}</p>}
+              {(office_fo.city || office_fo.zip_code) && (
+                <p>
+                  {office_fo.zip_code} {office_fo.city}
+                </p>
+              )}
+              {(office_fo.telefono || office_fo.email) && (
+                <p>
+                  <ContactLink tel={office_fo.telefono} label={true} />
+                  <br />
+                  <ContactLink email={office_fo.email} label={true} />
+                </p>
+              )}
 
-            {extended ? (
-              <>
-                <RichText
-                  serif={false}
-                  add_class="card-text"
-                  content={office_fo.contact_info}
-                />
-              </>
-            ) : null}
-          </div>
-        )}
+              {extended ? (
+                <>
+                  <RichText
+                    serif={false}
+                    add_class="card-text"
+                    content={office_fo.contact_info}
+                  />
+                </>
+              ) : null}
+            </div>
+          )}
         {children && <div className="card-text">{children}</div>}
       </div>
     </div>

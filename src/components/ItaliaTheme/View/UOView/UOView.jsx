@@ -213,6 +213,7 @@ const UOView = ({ content }) => {
                         key={content.uo_parent['@id']}
                         office={content.uo_parent}
                         load_data={false}
+                        show_contacts={false}
                       />
                     </div>
                   </div>
@@ -230,6 +231,7 @@ const UOView = ({ content }) => {
                             key={uo['@id']}
                             office={uo}
                             load_data={false}
+                            show_contacts={false}
                           />
                         </div>
                       );
