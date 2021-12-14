@@ -1,3 +1,10 @@
+### [5.9.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.9.3...v5.9.4) (2021-12-14)
+
+
+### Maintenance
+
+* removed contacts from uo parent and children in UOView to avoid citizens misurunderstanding ([fa96670](https://github.com/RedTurtle/design-volto-theme/commit/fa96670e4da4db8b9f50300f4da08ed53e10cf02))
+
 ### [5.9.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.9.2...v5.9.3) (2021-12-09)
 
 
