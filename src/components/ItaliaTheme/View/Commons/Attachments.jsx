@@ -88,6 +88,7 @@ const Attachments = ({
             title={item.title}
             description={item.description}
             download_url={itemURL}
+            item={item}
           />
         );
       })}

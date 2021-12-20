@@ -368,6 +368,7 @@ const PersonaView = ({ content }) => {
                         <Attachment
                           download_url={content.curriculum_vitae.download}
                           title={content.curriculum_vitae.filename}
+                          item={content.curriculum_vitae}
                         />
                       )}
                     </div>
