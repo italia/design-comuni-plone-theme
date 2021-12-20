@@ -1,3 +1,16 @@
+### [5.9.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.9.4...v5.9.5) (2021-12-20)
+
+
+### Bug Fixes
+
+* fix d&d styles in form block ([dd2e37c](https://github.com/RedTurtle/design-volto-theme/commit/dd2e37c4dd0eacddd30fa20bf5c2d827939d8d4d))
+* fix iconBlocks draftjs toolbar overlay ([7fcb0c6](https://github.com/RedTurtle/design-volto-theme/commit/7fcb0c6312f3e93a64b4ac68823ca793ad95bc8f))
+
+
+### Maintenance
+
+* passed 'item' to Attachment component, and moved fileformat utils in files.js helper ([521ee2b](https://github.com/RedTurtle/design-volto-theme/commit/521ee2be1245a18aa7e6bf32ff366f01287cd2a7))
+
 ### [5.9.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.9.3...v5.9.4) (2021-12-14)
 
 
