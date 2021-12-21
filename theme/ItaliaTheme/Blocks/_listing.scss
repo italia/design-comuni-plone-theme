@@ -3,6 +3,11 @@
     height: unset;
   }
 
+  .listing-item picture {
+    max-width: unset;
+    margin: 0;
+  }
+
   .event-recurrences-more {
     position: absolute;
     bottom: $v-gap * 8;

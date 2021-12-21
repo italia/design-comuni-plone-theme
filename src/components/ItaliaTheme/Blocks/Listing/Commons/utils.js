@@ -1,5 +1,6 @@
 export const getCategory = (item, show_type, show_section, props) => {
   let cat = [];
+
   if (item) {
     if (show_section) {
       cat.push(item.parent?.title);

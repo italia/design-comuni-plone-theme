@@ -5,8 +5,8 @@ import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import Slider from 'react-slick';
 import cx from 'classnames';
 import { UniversalLink } from '@plone/volto/components';
-import Image from '@plone/volto/components/theme/Image/Image';
-import { ListingLinkMore } from '@italia/components/ItaliaTheme';
+
+import { ListingLinkMore, ListingImage } from '@italia/components/ItaliaTheme';
 import { Icon } from '@italia/components/ItaliaTheme';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { GalleryPreview } from '@italia/components/ItaliaTheme';
@@ -122,18 +122,7 @@ const PhotogalleryTemplate = ({
 
   const figure = (image, item) => (
     <figure className="img-wrapper">
-      {image ? (
-        <Image
-          className="img-fluid"
-          image={image}
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-          useOriginal={false}
-        />
-      ) : (
-        <img src={DefaultImageSVG} alt="" />
-      )}
+      {image ? <>{image}</> : <img src={DefaultImageSVG} alt="" />}
       {getCaption(item) && <figcaption>{getCaption(item)}</figcaption>}
     </figure>
   );
@@ -152,8 +141,7 @@ const PhotogalleryTemplate = ({
           <div className="it-carousel-all it-card-bg">
             <Slider {...settings} ref={slider}>
               {items.map((item, i) => {
-                const image =
-                  item.image || item.immagine_testata || item.foto_persona;
+                const image = ListingImage({ item });
 
                 return (
                   <div

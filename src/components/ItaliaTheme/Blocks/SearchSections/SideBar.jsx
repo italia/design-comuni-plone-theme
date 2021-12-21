@@ -81,7 +81,7 @@ const Sidebar = ({
             <ArrayWidget
               id="groups"
               title={intl.formatMessage(messages.search_service_block_sections)}
-              noValuePresent={false}
+              noValueOption={false}
               choices={Object.keys(sections).map((key) => [
                 key,
                 sections[key].title,

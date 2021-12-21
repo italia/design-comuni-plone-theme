@@ -17,7 +17,7 @@ function getDisplayName(WrappedComponent) {
   return WrappedComponent.displayName || WrappedComponent.name || 'Component';
 }
 
-const getAdaptedQuery = (querystring, b_size) => {
+const getAdaptedQuery = (querystring, b_size, variation) => {
   const copyFields = [
     'limit',
     'query',
@@ -28,9 +28,9 @@ const getAdaptedQuery = (querystring, b_size) => {
   ];
 
   return Object.assign(
+    variation?.fullobjects ? { fullobjects: 1 } : { metadata_fields: '_all' },
     {
       b_size: b_size,
-      fullobjects: 1,
     },
     ...copyFields.map((name) =>
       Object.keys(querystring).includes(name)
@@ -43,6 +43,7 @@ const getAdaptedQuery = (querystring, b_size) => {
 export default function withQuerystringResults(WrappedComponent) {
   function WithQuerystringResults(props) {
     const { data = {}, path, properties, isEditMode } = props; //properties: content,
+
     const content = useSelector((state) => state.content.data);
     const { settings } = config;
     const querystring = data.querystring || data; // For backwards compat with data saved before Blocks schema
@@ -194,7 +195,7 @@ export default function withQuerystringResults(WrappedComponent) {
         dispatch(
           getQueryStringResults(
             path,
-            getAdaptedQuery(_querystring, b_size),
+            getAdaptedQuery(_querystring, b_size, data.variation),
             data.block,
             page,
           ),
@@ -208,7 +209,7 @@ export default function withQuerystringResults(WrappedComponent) {
           getQueryStringResults(
             path,
             {
-              ...getAdaptedQuery(_dataQuerystring, b_size),
+              ...getAdaptedQuery(_dataQuerystring, b_size, data.variation),
               query: [
                 {
                   i: 'path',

@@ -20,8 +20,8 @@ import {
   CardCategory,
   getItemIcon,
   ListingLinkMore,
+  ListingImage,
 } from '@italia/components/ItaliaTheme';
-import Image from '@plone/volto/components/theme/Image/Image';
 
 const ContentInEvidenceTemplate = ({
   items,
@@ -50,22 +50,12 @@ const ContentInEvidenceTemplate = ({
           const date = getCalendarDate(item);
           const eventRecurrenceMore = getEventRecurrenceMore(item, isEditMode);
           const listingText = <ListingText item={item} />;
-          const image =
-            item.image || item.immagine_testata || item.foto_persona;
+          const image = ListingImage({ item, className: 'item-image' });
           const icon = getItemIcon(item);
           return (
             <Row key={item['@id']} className="content-in-evidence">
               {image && (
-                <Col lg={{ size: 6, offset: 1, order: 2 }}>
-                  <Image
-                    image={image}
-                    alt=""
-                    className="item-image"
-                    role={null}
-                    useOriginal={false}
-                    maxSize={400}
-                  />
-                </Col>
+                <Col lg={{ size: 6, offset: 1, order: 2 }}>{image}</Col>
               )}
               <Col lg={{ size: 5, order: 1 }}>
                 <Card>

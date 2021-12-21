@@ -8,8 +8,12 @@ import { useIntl, defineMessages } from 'react-intl';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import Slider from 'react-slick';
 import { UniversalLink } from '@plone/volto/components';
-import Image from '@plone/volto/components/theme/Image/Image';
-import { Icon, ListingLinkMore } from '@italia/components/ItaliaTheme';
+
+import {
+  Icon,
+  ListingLinkMore,
+  ListingImage,
+} from '@italia/components/ItaliaTheme';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -145,8 +149,7 @@ const SliderTemplate = ({
 
             <Slider {...settings} ref={slider}>
               {items.map((item, index) => {
-                const image =
-                  item.image || item.immagine_testata || item.foto_persona;
+                const image = ListingImage({ item, loading: 'lazy' });
 
                 return (
                   <div
@@ -155,16 +158,7 @@ const SliderTemplate = ({
                   >
                     <div className="slide-wrapper">
                       <figure className="img-wrapper">
-                        {image && (
-                          <Image
-                            className="img-fluid"
-                            image={image}
-                            alt=""
-                            aria-hidden="true"
-                            loading="lazy"
-                            useOriginal={false}
-                          />
-                        )}
+                        {image && { image }}
                         {/* {getCaption(item) && (
                         <figcaption>{getCaption(item)}</figcaption>
                       )} */}

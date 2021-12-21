@@ -22,10 +22,11 @@ import {
   ListingCategory,
   ListingText,
   ListingLinkMore,
+  ListingImage,
   CardCategory,
   CardPersona,
 } from '@italia/components/ItaliaTheme';
-import Image from '@plone/volto/components/theme/Image/Image';
+
 import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 
 const InEvidenceTemplate = (props) => {
@@ -66,8 +67,7 @@ const InEvidenceTemplate = (props) => {
             const listingText = show_description ? (
               <ListingText item={item} />
             ) : null;
-            const image =
-              item.image || item.immagine_testata || item.foto_persona;
+            const image = ListingImage({ item });
             const category = getCategory(item, show_type, show_section, props);
             const topics = show_topics ? item.tassonomia_argomenti : null;
 
@@ -91,16 +91,7 @@ const InEvidenceTemplate = (props) => {
                 {index === 0 && image && (
                   <div className="img-responsive-wrapper">
                     <div className="img-responsive">
-                      <figure className="img-wrapper">
-                        <Image
-                          className="listing-image"
-                          image={image}
-                          alt=""
-                          aria-hidden="true"
-                          useOriginal={false}
-                          maxSize={400}
-                        />
-                      </figure>
+                      <figure className="img-wrapper">{image}</figure>
                       {item['@type'] === 'Event' && (
                         <CardCalendar start={item.start} end={item.end} />
                       )}

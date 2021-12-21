@@ -68,9 +68,7 @@ const SimpleCardTemplateDefault = (props) => {
     let className = null;
     switch (item['@type']) {
       case 'News Item':
-        className = item.tipologia_notizia?.token
-          .toLowerCase()
-          .replace(' ', '_');
+        className = item.tipologia_notizia.toLowerCase().replace(' ', '_');
         break;
       default:
         className = null;
