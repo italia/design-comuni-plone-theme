@@ -99,6 +99,10 @@
       height: 100%;
     }
 
+    &.subblock-draggable {
+      transform: unset;
+    }
+
     .dragsubblock,
     .ui.basic.button.delete-button {
       z-index: 3;
@@ -132,6 +136,14 @@
       height: unset;
       padding: 0.36rem;
       text-align: center;
+    }
+
+    .link-form-container {
+      .ui.input {
+        > input {
+          height: 2rem;
+        }
+      }
     }
   }
 

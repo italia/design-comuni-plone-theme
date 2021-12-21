@@ -144,7 +144,6 @@ const ServizioView = ({ content }) => {
   const intl = useIntl();
   let documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
-
   useEffect(() => {
     if (documentBody.current) {
       if (__CLIENT__) {
@@ -169,7 +168,7 @@ const ServizioView = ({ content }) => {
 
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4 ">
-            <SideMenu data={sideMenuElements} />
+            <SideMenu data={sideMenuElements} content_uid={content?.UID} />
           </aside>
           <section
             id="main-content-section"

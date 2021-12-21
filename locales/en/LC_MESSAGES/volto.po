@@ -168,6 +168,11 @@ msgstr ""
 msgid "Dimensione della mappa"
 msgstr ""
 
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+# defaultMessage: Etichetta
+msgid "Etichetta location filter"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Etichetta
@@ -178,6 +183,11 @@ msgstr ""
 # defaultMessage: Non ho trovato la risposta che cercavi
 msgid "Faq Folder: Nessun risultato trovato"
 msgstr "No answers found for your question"
+
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+# defaultMessage: Filtro
+msgid "Filtro location filter"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/SkipToMainContent
 # defaultMessage: Vai al contenuto
@@ -208,6 +218,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 # defaultMessage: Seleziona le icone dalla barra a lato
 msgid "Icons placeholder"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}.
+msgid "If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}."
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
@@ -255,9 +270,9 @@ msgstr ""
 msgid "Linkto title"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
-# defaultMessage: Listing
-msgid "Listing"
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+# defaultMessage: Luogo
+msgid "Luogo location filter"
 msgstr ""
 
 #: components/ItaliaTheme/MegaMenu/MegaMenu
@@ -265,6 +280,12 @@ msgstr ""
 # defaultMessage: Menu selezionato
 msgid "Menu selezionato"
 msgstr "Menu selected"
+
+#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+# defaultMessage: Mostra i filtri per luogo
+msgid "Mostra i filtri per luogo"
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
@@ -427,6 +448,11 @@ msgstr "Show all"
 msgid "Show all content types"
 msgstr "Show all content types"
 
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: Site Administration
+msgid "Site Administration"
+msgstr ""
+
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Sono occorsi degli errori
 msgid "Sono occorsi degli errori"
@@ -442,6 +468,11 @@ msgstr "Subscribe"
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 # defaultMessage: Text...
 msgid "Text placeholder"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: Thank you.
+msgid "Thank you."
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Edit
@@ -509,6 +540,11 @@ msgstr ""
 msgid "Type the title…"
 msgstr ""
 
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: Unauthorized
+msgid "Unauthorized"
+msgstr ""
+
 #: components/ItaliaTheme/View/PageView/PageView
 # defaultMessage: Unknown Block {block}
 msgid "Unknown Block"
@@ -566,6 +602,11 @@ msgstr "Video"
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 # defaultMessage: Video Gallery
 msgid "VideoGalleryBlock"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: You are trying to access a protected resource, please {login} first.
+msgid "You are trying to access a protected resource, please {login} first."
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView
@@ -900,6 +941,26 @@ msgstr "Biography"
 msgid "block_bg_color"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+# defaultMessage: Calendario
+msgid "calendarBlockSidebarTitle"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/Body
+# defaultMessage: Prossimo
+msgid "calendar_next_arrow"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/Body
+# defaultMessage: Nessun evento disponibile al momento
+msgid "calendar_no_results"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/Body
+# defaultMessage: Precedente
+msgid "calendar_prev_arrow"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 # defaultMessage: Canale digitale
 msgid "canale_digitale"
@@ -914,6 +975,12 @@ msgstr ""
 # defaultMessage: Mostra l'immagine
 msgid "cardImageEnable"
 msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/CardWithSlideUpTextTemplate
+#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CardWithSlideUpTextTemplateSkeleton
+# defaultMessage: Vedi
+msgid "card_vedi"
+msgstr "Read more"
 
 #: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
 # defaultMessage: Formati scaricabili
@@ -1051,6 +1118,11 @@ msgstr "Costs"
 # defaultMessage: Costi e vincoli
 msgid "costi_e_vincoli"
 msgstr "Costs and constraints"
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+# defaultMessage: Mostra a pieno schermo
+msgid "ctaFullWidth"
+msgstr "Show full width"
 
 #: components/ItaliaTheme/Blocks/CTABlock/Sidebar
 # defaultMessage: Seleziona l'immagine da mostrare
@@ -1632,6 +1704,7 @@ msgstr ""
 msgid "gallery_video_url"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
 #: components/ItaliaTheme/View/Commons/Gallery
 # defaultMessage: Vedi l'anteprima di
 msgid "gallery_viewPreview"
@@ -1759,6 +1832,26 @@ msgstr ""
 # defaultMessage: Luoghi
 msgid "locations"
 msgstr "Venues"
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: log in
+msgid "log in"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: or login as an administrator
+msgid "login_admin_message"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: login with Spid
+msgid "login_spid_message"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: Login with Spid
+msgid "login_with_spid"
+msgstr ""
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
 # defaultMessage: Luoghi
@@ -2620,6 +2713,11 @@ msgstr "Services"
 msgid "setMoreSearchOptions"
 msgstr "Go to other search options"
 
+#: config/Blocks/ListingOptions/cardWithImageTemplate
+# defaultMessage: Disponi su 4 colonne
+msgid "set_four_columns"
+msgstr "Arrange on 4 columns"
+
 #: components/ItaliaTheme/View/Commons/Sharing
 # defaultMessage: Condividi
 msgid "share"
@@ -2653,6 +2751,11 @@ msgstr ""
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Mostra l'icona
 msgid "show_icon"
+msgstr ""
+
+#: config/Blocks/ListingOptions/photogalleryTemplate
+# defaultMessage: Apri l'immagine in popup
+msgid "show_image_popup"
 msgstr ""
 
 #: config/Blocks/ListingOptions/sliderTemplate
@@ -2805,12 +2908,12 @@ msgid "supported_by"
 msgstr "Supported by"
 
 #: components/ItaliaTheme/View/Commons/ContactLink
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaTelephones
 # defaultMessage: Tel
 msgid "telefono"
 msgstr "Phone"
 
-#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/UOView/UOTelephones
 # defaultMessage: Telefono
 msgid "telefono_sede"
 msgstr "Phone"

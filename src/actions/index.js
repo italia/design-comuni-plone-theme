@@ -20,7 +20,7 @@ import { setOriginalQuery, ORIGINAL_QUERY } from './setOriginalQuery';
 import {
   getCalendarDayResults,
   GET_CALENDAR_DAY_RESULTS,
-} from './canlendarDaySearch';
+} from './calendarDaySearch';
 import {
   getAmministrazioneTrasparenteTree,
   GET_AMMINISTRAZIONE_TRASPARENTE,

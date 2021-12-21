@@ -22,6 +22,7 @@ import {
   PersonaPlaceholderAfterContent,
   PersonaPlaceholderAfterRelatedItems,
   ContactLink,
+  PersonaTelephones,
   RelatedItemInEvidence,
   richTextHasContent,
   SkipToMainContent,
@@ -40,10 +41,6 @@ const messages = defineMessages({
   contacts: {
     id: 'contacts',
     defaultMessage: 'Contatti',
-  },
-  telefono: {
-    id: 'telefono',
-    defaultMessage: 'Tel',
   },
   email_label: {
     id: 'email_label',
@@ -150,6 +147,8 @@ const PersonaView = ({ content }) => {
     }
   }, [documentBody]);
 
+  const telefono = content && PersonaTelephones({ content: content });
+
   return (
     <>
       <div className="container px-4 my-4 persona-view">
@@ -165,7 +164,7 @@ const PersonaView = ({ content }) => {
         />
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
-            <SideMenu data={sideMenuElements} />
+            <SideMenu data={sideMenuElements} content_uid={content?.UID} />
           </aside>
           <section
             className="col-lg-8 it-page-sections-container"
@@ -312,23 +311,12 @@ const PersonaView = ({ content }) => {
               </RichTextArticle>
             )}
 
-            {(content?.telefono?.length > 0 ||
-              content?.fax ||
-              content?.email?.length > 0) && (
+            {(telefono || content?.fax || content?.email?.length > 0) && (
               <RichTextArticle
                 title={intl.formatMessage(messages.contacts)}
                 tag_id="contacts"
               >
-                {content?.telefono?.length > 0 && (
-                  <p>
-                    <strong>{intl.formatMessage(messages.telefono)}: </strong>
-                    {content.telefono.map((tel) => (
-                      <>
-                        <ContactLink tel={tel} label={false} />{' '}
-                      </>
-                    ))}
-                  </p>
-                )}
+                {telefono && telefono}
 
                 {content?.fax && (
                   <p>
@@ -352,6 +340,7 @@ const PersonaView = ({ content }) => {
             )}
 
             {(content?.curriculum_vitae?.download ||
+              contentFolderHasItems(content, 'curriculum-vitae') ||
               contentFolderHasItems(content, 'compensi') ||
               contentFolderHasItems(
                 content,
@@ -370,15 +359,26 @@ const PersonaView = ({ content }) => {
                 title={intl.formatMessage(messages.documenti)}
                 tag_id="documenti"
               >
-                {content.curriculum_vitae?.download && (
+                {(content.curriculum_vitae?.download ||
+                  contentFolderHasItems(content, 'curriculum-vitae')) && (
                   <div className="mb-5 mt-3">
                     <h5>{intl.formatMessage(messages.curriculum_vitae)}</h5>
                     <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                      <Attachment
-                        download_url={content.curriculum_vitae.download}
-                        title={content.curriculum_vitae.filename}
-                      />
+                      {content.curriculum_vitae?.download && (
+                        <Attachment
+                          download_url={content.curriculum_vitae.download}
+                          title={content.curriculum_vitae.filename}
+                          item={content.curriculum_vitae}
+                        />
+                      )}
                     </div>
+                    {contentFolderHasItems(content, 'curriculum-vitae') && (
+                      <Attachments
+                        content={content}
+                        folder_name={'curriculum-vitae'}
+                        as_article={false}
+                      />
+                    )}
                   </div>
                 )}
 
@@ -503,7 +503,7 @@ PersonaView.propTypes = {
     organizzazione_riferimento: PropTypes.array.isRequired,
     responsabile_di: PropTypes.array,
     ruolo: PropTypes.object.isRequired,
-    telefono: PropTypes.string,
+    telefono: PropTypes.array,
     tipologia_persona: PropTypes.shape({
       title: PropTypes.string.isRequired,
       token: PropTypes.string.isRequired,

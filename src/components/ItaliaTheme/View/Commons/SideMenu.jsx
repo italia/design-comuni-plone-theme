@@ -59,7 +59,7 @@ const extractHeaders = (elements, intl) => {
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const SideMenu = ({ data }) => {
+const SideMenu = ({ data, content_uid }) => {
   const intl = useIntl();
   const [headers, _setHeaders] = useState([]);
   const headersRef = React.useRef(headers);
@@ -91,7 +91,7 @@ const SideMenu = ({ data }) => {
       }
       setWindowScrollY(window.scrollY);
     }
-  }, [data]);
+  }, [data, content_uid]);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);

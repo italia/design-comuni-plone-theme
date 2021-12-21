@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-11-05T15:07:53.614Z\n"
+"POT-Creation-Date: 2021-12-21T08:33:48.487Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -170,6 +170,11 @@ msgstr ""
 msgid "Dimensione della mappa"
 msgstr ""
 
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+# defaultMessage: Etichetta
+msgid "Etichetta location filter"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Etichetta
@@ -179,6 +184,11 @@ msgstr ""
 #: components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderView
 # defaultMessage: Non ho trovato la risposta che cercavi
 msgid "Faq Folder: Nessun risultato trovato"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+# defaultMessage: Filtro
+msgid "Filtro location filter"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/SkipToMainContent
@@ -210,6 +220,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 # defaultMessage: Seleziona le icone dalla barra a lato
 msgid "Icons placeholder"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}.
+msgid "If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}."
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
@@ -257,15 +272,21 @@ msgstr ""
 msgid "Linkto title"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
-# defaultMessage: Listing
-msgid "Listing"
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+# defaultMessage: Luogo
+msgid "Luogo location filter"
 msgstr ""
 
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 #: components/ItaliaTheme/MenuSecondary/MenuSecondary
 # defaultMessage: Menu selezionato
 msgid "Menu selezionato"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+#: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
+# defaultMessage: Mostra i filtri per luogo
+msgid "Mostra i filtri per luogo"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
@@ -429,6 +450,11 @@ msgstr ""
 msgid "Show all content types"
 msgstr ""
 
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: Site Administration
+msgid "Site Administration"
+msgstr ""
+
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Sono occorsi degli errori
 msgid "Sono occorsi degli errori"
@@ -444,6 +470,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/IconBlocks/Block/EditBlock
 # defaultMessage: Text...
 msgid "Text placeholder"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: Thank you.
+msgid "Thank you."
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Edit
@@ -511,6 +542,11 @@ msgstr ""
 msgid "Type the title…"
 msgstr ""
 
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: Unauthorized
+msgid "Unauthorized"
+msgstr ""
+
 #: components/ItaliaTheme/View/PageView/PageView
 # defaultMessage: Unknown Block {block}
 msgid "Unknown Block"
@@ -568,6 +604,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 # defaultMessage: Video Gallery
 msgid "VideoGalleryBlock"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: You are trying to access a protected resource, please {login} first.
+msgid "You are trying to access a protected resource, please {login} first."
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView
@@ -902,6 +943,26 @@ msgstr ""
 msgid "block_bg_color"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+# defaultMessage: Calendario
+msgid "calendarBlockSidebarTitle"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/Body
+# defaultMessage: Prossimo
+msgid "calendar_next_arrow"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/Body
+# defaultMessage: Nessun evento disponibile al momento
+msgid "calendar_no_results"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/Body
+# defaultMessage: Precedente
+msgid "calendar_prev_arrow"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 # defaultMessage: Canale digitale
 msgid "canale_digitale"
@@ -915,6 +976,12 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
 # defaultMessage: Mostra l'immagine
 msgid "cardImageEnable"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/CardWithSlideUpTextTemplate
+#: components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CardWithSlideUpTextTemplateSkeleton
+# defaultMessage: Vedi
+msgid "card_vedi"
 msgstr ""
 
 #: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
@@ -1052,6 +1119,11 @@ msgstr ""
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 # defaultMessage: Costi e vincoli
 msgid "costi_e_vincoli"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+# defaultMessage: Mostra a pieno schermo
+msgid "ctaFullWidth"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/CTABlock/Sidebar
@@ -1634,6 +1706,7 @@ msgstr ""
 msgid "gallery_video_url"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
 #: components/ItaliaTheme/View/Commons/Gallery
 # defaultMessage: Vedi l'anteprima di
 msgid "gallery_viewPreview"
@@ -1760,6 +1833,26 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/LocationItem
 # defaultMessage: Luoghi
 msgid "locations"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: log in
+msgid "log in"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: or login as an administrator
+msgid "login_admin_message"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: login with Spid
+msgid "login_spid_message"
+msgstr ""
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: Login with Spid
+msgid "login_with_spid"
 msgstr ""
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
@@ -2622,6 +2715,11 @@ msgstr ""
 msgid "setMoreSearchOptions"
 msgstr ""
 
+#: config/Blocks/ListingOptions/cardWithImageTemplate
+# defaultMessage: Disponi su 4 colonne
+msgid "set_four_columns"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Sharing
 # defaultMessage: Condividi
 msgid "share"
@@ -2655,6 +2753,11 @@ msgstr ""
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Mostra l'icona
 msgid "show_icon"
+msgstr ""
+
+#: config/Blocks/ListingOptions/photogalleryTemplate
+# defaultMessage: Apri l'immagine in popup
+msgid "show_image_popup"
 msgstr ""
 
 #: config/Blocks/ListingOptions/sliderTemplate
@@ -2807,12 +2910,12 @@ msgid "supported_by"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/ContactLink
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaTelephones
 # defaultMessage: Tel
 msgid "telefono"
 msgstr ""
 
-#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/UOView/UOTelephones
 # defaultMessage: Telefono
 msgid "telefono_sede"
 msgstr ""

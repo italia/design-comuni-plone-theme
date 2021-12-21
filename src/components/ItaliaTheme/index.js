@@ -15,6 +15,7 @@ export LinkToWidget from '@italia/components/ItaliaTheme/manage/Widgets/LinkToWi
 export ColorListWidget from '@italia/components/ItaliaTheme/manage/Widgets/ColorListWidget';
 export FileWidget from '@italia/components/ItaliaTheme/manage/Widgets/FileWidget';
 export PathFiltersWidget from '@italia/components/ItaliaTheme/manage/Widgets/PathFiltersWidget';
+export LocationFiltersWidget from '@italia/components/ItaliaTheme/manage/Widgets/LocationFiltersWidget';
 
 /********* ICONS ********* */
 export getItemIcon from '@italia/components/ItaliaTheme/Icons/common/common';
@@ -32,6 +33,7 @@ export LanguageSelector from '@italia/components/ItaliaTheme/LanguageSelector/La
 export HeaderSlim from '@italia/components/ItaliaTheme/Header/HeaderSlim';
 export HeaderSlimRightZone from '@italia/components/ItaliaTheme/Header/HeaderSlim/HeaderSlimRightZone';
 export ArLogin from '@italia/components/ItaliaTheme/Header/HeaderSlim/ArLogin';
+export LoginButton from '@italia/components/ItaliaTheme/Header/HeaderSlim/LoginButton';
 export UserLoggedMenu from '@italia/components/ItaliaTheme/Header/HeaderSlim/UserLoggedMenu';
 export HeaderCenter from '@italia/components/ItaliaTheme/Header/HeaderCenter';
 export SocialHeader from '@italia/components/ItaliaTheme/Header/SocialHeader';
@@ -71,3 +73,6 @@ export CardCalendar from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/
 export ListingCategory from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/ListingCategory';
 export ListingText from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/ListingText';
 export ListingLinkMore from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/ListingLinkMore';
+
+/********* ERROR PAGES ********* */
+export Unauthorized from '@italia/components/ItaliaTheme/Unauthorized/Unauthorized';

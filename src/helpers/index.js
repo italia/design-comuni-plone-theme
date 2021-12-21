@@ -16,3 +16,8 @@ export { getItemsByPath } from '@italia/helpers/getItemsByPath';
 export { viewDate } from '@italia/helpers/dates';
 export { getSiteProperty } from '@italia/helpers/config';
 export { useDebouncedEffect } from '@italia/helpers/debounce';
+export {
+  FILE_FORMATS,
+  FILE_EXTENSIONS,
+  getFileViewFormat,
+} from '@italia/helpers/files';

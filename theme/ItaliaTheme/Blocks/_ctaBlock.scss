@@ -5,8 +5,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 3.5rem 2.5rem;
     background-color: $secondary;
     color: $secondary-text;
+
+    &.full-width {
+      padding: 0;
+    }
 
     .cta-tile-text {
       width: 80%;
@@ -58,8 +63,14 @@
     }
 
     &.has-image {
+      position: relative;
+      display: block;
       overflow: hidden;
       background: none;
+
+      &.full-width {
+        display: flex;
+      }
 
       figure.img-wrapper,
       picture {

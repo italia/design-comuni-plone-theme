@@ -11,6 +11,7 @@ import {
   Button,
 } from 'design-react-kit/dist/design-react-kit';
 import { Icon } from '@italia/components/ItaliaTheme';
+import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
 
 const messages = defineMessages({
   view_prev: {
@@ -77,42 +78,50 @@ const GalleryPreview = ({ id, viewIndex, setViewIndex, items }) => {
           </ModalHeader>
           <ModalBody>
             <div className="item-preview">
-              <Button
-                color="white"
-                size="xs"
-                title={intl.formatMessage(messages.view_prev)}
-                onClick={() => {
-                  setViewIndex(
-                    viewIndex - 1 >= 0 ? viewIndex - 1 : items.length - 1,
-                  );
-                }}
-                className="prev"
-              >
-                <Icon color="" icon="it-arrow-left" padding={false} />
-              </Button>
+              {items.length > 1 && (
+                <Button
+                  color="white"
+                  size="xs"
+                  title={intl.formatMessage(messages.view_prev)}
+                  onClick={() => {
+                    setViewIndex(
+                      viewIndex - 1 >= 0 ? viewIndex - 1 : items.length - 1,
+                    );
+                  }}
+                  className="prev"
+                >
+                  <Icon color="" icon="it-arrow-left" padding={false} />
+                </Button>
+              )}
 
               <div className="image">
-                <Image
-                  src={flattenToAppURL(
-                    items[viewIndex].image.scales.larger.download,
-                  )}
-                  loading="lazy"
-                />
+                {items[viewIndex].image ? (
+                  <Image
+                    src={flattenToAppURL(
+                      items[viewIndex].image.scales.larger.download,
+                    )}
+                    loading="lazy"
+                  />
+                ) : (
+                  <img src={DefaultImageSVG} alt="" />
+                )}
               </div>
 
-              <Button
-                color="white"
-                size="xs"
-                title={intl.formatMessage(messages.view_next)}
-                onClick={() => {
-                  setViewIndex(
-                    viewIndex + 1 < items.length ? viewIndex + 1 : 0,
-                  );
-                }}
-                className="next"
-              >
-                <Icon color="" icon="it-arrow-right" padding={false} />
-              </Button>
+              {items.length > 1 && (
+                <Button
+                  color="white"
+                  size="xs"
+                  title={intl.formatMessage(messages.view_next)}
+                  onClick={() => {
+                    setViewIndex(
+                      viewIndex + 1 < items.length ? viewIndex + 1 : 0,
+                    );
+                  }}
+                  className="next"
+                >
+                  <Icon color="" icon="it-arrow-right" padding={false} />
+                </Button>
+              )}
             </div>
           </ModalBody>
         </>

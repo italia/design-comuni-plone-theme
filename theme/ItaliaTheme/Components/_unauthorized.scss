@@ -1,0 +1,9 @@
+.unauthorized-spid-login {
+  margin: 1rem 0;
+
+  .btn.btn-primary {
+    &:hover {
+      color: $primary-text !important;
+    }
+  }
+}

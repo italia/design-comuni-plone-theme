@@ -3,7 +3,7 @@ body.cms-ui {
     font-family: $font-family-serif;
 
     %heading {
-      margin-top: 0; // 1
+      margin-top: 0; /* 1*/
       margin-bottom: $headings-margin-bottom;
       color: $headings-color;
       font-family: $font-family-sans-serif;
@@ -223,17 +223,17 @@ body.cms-ui {
     }
   }
 
-  // .DraftEditor-root {
-  //   font-family: $font-family-serif;
-  //   h1,
-  //   h2,
-  //   h3,
-  //   h4,
-  //   h5,
-  //   h6 {
-  //     font-family: $font-family-sans-serif;
-  //   }
-  // }
+  /*.DraftEditor-root {
+    font-family: $font-family-serif;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: $font-family-sans-serif;
+    }
+  }*/
 
   //stili per l'editor di testo dei ct con i campi
   .DraftEditor-root {
@@ -498,7 +498,7 @@ body.cms-ui {
       width: 90% !important;
     }
 
-    table.ui.single.line {
+    table.ui.single.line tbody {
       white-space: normal;
       word-break: break-word;
     }

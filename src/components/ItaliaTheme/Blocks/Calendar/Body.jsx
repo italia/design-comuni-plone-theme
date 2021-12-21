@@ -1,19 +1,21 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import {
   Card,
   Row,
   Col,
   Container,
+  Button,
 } from 'design-react-kit/dist/design-react-kit';
 
 import Slider from 'react-slick';
 import cx from 'classnames';
-import { getCalendarResults } from '@italia/actions';
+import { getCalendarResults, setOriginalQuery } from '@italia/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import Item from '@italia/components/ItaliaTheme/Blocks/Calendar/Item';
 import { useIntl, defineMessages } from 'react-intl';
 import { viewDate } from '@italia/helpers';
+import useDeepCompareEffect from 'use-deep-compare-effect';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const messages = defineMessages({
   insert_filter: {
@@ -21,21 +23,52 @@ const messages = defineMessages({
     defaultMessage:
       'Inserire un filtro dal menù laterale per visualizzare i relativi risultati',
   },
+  calendar_no_results: {
+    id: 'calendar_no_results',
+    defaultMessage: 'Nessun evento disponibile al momento',
+  },
+  calendar_next_arrow: {
+    id: 'calendar_next_arrow',
+    defaultMessage: 'Prossimo',
+  },
+  calendar_prev_arrow: {
+    id: 'calendar_prev_arrow',
+    defaultMessage: 'Precedente',
+  },
 });
 
-const Body = ({ data, inEditMode, path, onChangeBlock }) => {
+const copyFields = ['limit', 'query', 'sort_on', 'sort_order', 'depth'];
+
+const Body = ({ data, block, inEditMode, path, onChangeBlock }) => {
   const intl = useIntl();
 
   const [activePage, setActivePage] = useState(0);
+  const [additionalFilters, setAdditionalFilters] = useState([]);
 
-  const querystringResults = useSelector((state) => state.calendarSearch);
+  let currentLocationFilter = additionalFilters
+    ?.filter((f) => {
+      return f.i === 'event_location';
+    })
+    ?.map((f) => {
+      return f.v;
+    });
+  const [locationFilter, setLocationFilter] = useState(
+    currentLocationFilter?.[0] || null,
+  );
+
+  const calendarResults = useSelector(
+    (state) => state.calendarSearch.subrequests,
+  );
+  const originalQuery = useSelector((state) =>
+    state.originalQuery?.[block]?.[block]?.toArray?.(),
+  );
 
   const dispatch = useDispatch();
 
-  const getMonth = () => {
+  const getMonth = useCallback(() => {
     const startIndex = activePage * (data.b_size || 4);
 
-    const months = querystringResults?.items
+    const months = calendarResults[block]?.items
       ?.slice(activePage, startIndex + (+data.b_size || 4))
       .reduce((total, date) => {
         const month = viewDate(intl.locale, date, 'MMMM');
@@ -49,46 +82,105 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
     return months
       ?.map((m) => m.charAt(0).toUpperCase() + m.slice(1))
       .join(' / ');
-  };
+  }, [activePage, block, calendarResults, data.b_size, intl.locale]);
 
   const [monthName, setMonthName] = useState(getMonth);
 
-  React.useEffect(() => {
-    if (!data.query || data.query.length === 0) {
-      data.query = [
-        {
-          i: 'portal_type',
-          o: 'plone.app.querystring.operation.selection.any',
-          v: ['Event'],
-        },
-      ];
+  const querystring = data.querystring || data; // For backwards compat with data saved before Blocks schema
+  const hasQuery = querystring?.query?.length > 0;
+
+  //set original query on loading component
+  useEffect(() => {
+    if (!originalQuery && block && hasQuery) {
+      dispatch(
+        setOriginalQuery(
+          block,
+          block,
+          JSON.parse(JSON.stringify(querystring.query)),
+        ),
+      );
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  React.useEffect(() => {
-    dispatch(
-      getCalendarResults(
-        path,
-        { ...data, fullobjects: 1 },
-        data.block,
-        '@scadenziario',
-      ),
-    );
-  }, [data.query]);
+  let query = [
+    ...(originalQuery && additionalFilters.length > 0
+      ? JSON.parse(JSON.stringify(originalQuery))
+      : querystring.query ?? []),
+  ];
+  //faccio l'override dei filtri di default
+  additionalFilters.forEach((filter) => {
+    let replaced = false;
+    query.forEach((f) => {
+      if (f.i === filter.i && f.o === filter.o) {
+        replaced = true;
+        f.v = filter.v;
+      }
+    });
+    if (!replaced) {
+      query.push(filter);
+    }
+  });
+  let _querystring = { ...querystring, query: query };
+  const adaptedQuery = Object.assign(
+    {
+      fullobjects: 1,
+    },
+    ...copyFields.map((name) =>
+      Object.keys(_querystring).includes(name)
+        ? { [name]: _querystring[name] }
+        : {},
+    ),
+  );
 
-  // Every time the page change check the name of the mounth
-  React.useEffect(() => {
-    setMonthName(getMonth);
-  }, [activePage]);
+  useDeepCompareEffect(() => {
+    if (hasQuery || additionalFilters.length > 0) {
+      dispatch(getCalendarResults(path, adaptedQuery, block));
+    } else {
+      dispatch(
+        getCalendarResults(
+          path,
+          {
+            query: [
+              {
+                i: 'portal_type',
+                o: 'plone.app.querystring.operation.selection.any',
+                v: ['Event'],
+              },
+            ],
+            fullobjects: 1,
+          },
+          block,
+        ),
+      );
+    }
+  }, [adaptedQuery, block, hasQuery, path, dispatch, additionalFilters]);
 
-  // update the mounth name when the call to getCalendarResults is ended
-  React.useEffect(() => {
+  // Every time the page changes check the name of the month, and
+  // update the month name when the call to getCalendarResults returns
+  useEffect(() => {
     setMonthName(getMonth);
-  }, [querystringResults]);
+  }, [activePage, calendarResults, getMonth]);
+
+  const addFilters = (filters = []) => {
+    setAdditionalFilters(filters);
+  };
 
   const settings = {
     dots: true,
-    arrows: false,
+    arrows: true,
+    nextArrow: (
+      <FontAwesomeIcon
+        title={intl.formatMessage(messages.calendar_next_arrow)}
+        icon={['fas', 'chevron-right']}
+      />
+    ),
+    prevArrow: (
+      <FontAwesomeIcon
+        title={intl.formatMessage(messages.calendar_prev_arrow)}
+        icon={['fas', 'chevron-left']}
+      />
+    ),
     speed: 500,
     slidesToShow: data.b_size || 4,
     slidesToScroll: data.b_size || 4,
@@ -117,11 +209,40 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
       {
         breakpoint: 600,
         settings: {
+          dots: false,
           slidesToShow: 1,
           slidesToScroll: 1,
         },
       },
     ],
+  };
+
+  const location_filters_buttons =
+    data.show_location_filters && data.location_filters
+      ? Object.keys(data.location_filters)
+          .map((k) => {
+            return {
+              label: data.location_filters[k].label,
+              location: data.location_filters[k].location?.[0],
+            };
+          })
+          .filter((f) => f.location)
+      : null;
+
+  const addLocationFilter = (location) => {
+    let new_location = locationFilter === location ? null : location;
+    setLocationFilter(new_location);
+    let filters = [];
+    if (new_location) {
+      filters = [
+        {
+          i: 'event_location',
+          o: 'plone.app.querystring.operation.selection.any',
+          v: new_location,
+        },
+      ];
+    }
+    addFilters(filters);
   };
 
   return (
@@ -133,35 +254,73 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
       })}
     >
       <Container className="px-4">
-        {data.title && (
-          <Row>
-            <Col>
-              <h2 className="mb-4">{data.title}</h2>
-            </Col>
+        {(data.title || location_filters_buttons) && (
+          <Row
+            className={cx('template-header', {
+              'with-filters': location_filters_buttons,
+            })}
+          >
+            {data.title && (
+              <Col md={location_filters_buttons ? 6 : 12}>
+                <h2
+                  className={cx('', {
+                    'mt-5': !data.show_block_bg,
+                    'mb-4': !location_filters_buttons,
+                  })}
+                >
+                  {data.title}
+                </h2>
+              </Col>
+            )}
+            {location_filters_buttons && (
+              <Col md={data.title ? 6 : 12} className="path-filter-buttons">
+                <div className="path-filter-buttons-wrapper">
+                  {location_filters_buttons.map((button, i) => (
+                    <Button
+                      key={i}
+                      color="primary"
+                      outline={button.location['UID'] !== locationFilter}
+                      size="xs"
+                      icon={false}
+                      tag="button"
+                      onClick={(e) => {
+                        addLocationFilter(button.location['UID']);
+                      }}
+                    >
+                      {button.label}
+                    </Button>
+                  ))}
+                </div>
+              </Col>
+            )}
           </Row>
         )}
-        <Card className={'card-bg'}>
-          <div className="text-center calendar-header">
-            <h3>{monthName}</h3>
+        <Card className="card-bg rounded">
+          <div className="text-center calendar-header rounded-top">
+            <h3>{monthName || <span>&nbsp;</span>}</h3>
           </div>
           <div className="calendar-body">
-            {data.query?.length > 0 ? (
+            {calendarResults[block]?.items?.length > 0 ? (
               <Slider {...settings}>
-                {querystringResults?.items?.map((day, index) => (
+                {calendarResults[block].items.map((day, index) => (
                   <div key={index} className="body">
                     <Item
                       day={day}
-                      data={data}
+                      query={adaptedQuery}
                       path={path}
-                      inEdit={inEditMode}
+                      inEditMode={inEditMode}
                     />
                   </div>
                 ))}
               </Slider>
+            ) : inEditMode ? (
+              <span className="no-results">
+                {intl.formatMessage(messages.insert_filter)}
+              </span>
             ) : (
-              inEditMode && (
-                <span>{intl.formatMessage(messages.insert_filter)}</span>
-              )
+              <span className="no-results">
+                {intl.formatMessage(messages.calendar_no_results)}
+              </span>
             )}
           </div>
         </Card>

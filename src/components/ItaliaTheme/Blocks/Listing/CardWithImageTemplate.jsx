@@ -30,25 +30,27 @@ import {
   CardPersona,
 } from '@italia/components/ItaliaTheme';
 
-const CardWithImageTemplate = ({
-  items,
-  isEditMode,
-  title,
-  linkTitle,
-  linkHref,
-  show_block_bg = false,
-  always_show_image = false,
-  show_type = true,
-  show_section,
-  show_icon = true,
-  show_description = true,
-  show_topics = true,
-  hide_dates = false,
-  full_width = true,
-  natural_image_size = false,
-}) => {
+const CardWithImageTemplate = (props) => {
   const intl = useIntl();
   moment.locale(intl.locale);
+
+  const {
+    items,
+    isEditMode,
+    title,
+    linkTitle,
+    linkHref,
+    show_block_bg = false,
+    always_show_image = false,
+    set_four_columns = false,
+    show_type = true,
+    show_section,
+    show_icon = true,
+    show_description = true,
+    show_topics = true,
+    hide_dates = false,
+    natural_image_size = false,
+  } = props;
 
   return (
     <div className="card-with-image-template">
@@ -75,11 +77,15 @@ const CardWithImageTemplate = ({
             const image =
               item.image || item.immagine_testata || item.foto_persona;
             const showImage = (index < 3 || always_show_image) && image;
-            const category = getCategory(item, show_type, show_section);
+            const category = getCategory(item, show_type, show_section, props);
             const topics = show_topics ? item.tassonomia_argomenti : null;
 
             return (
-              <Col lg="4" key={item['@id']} className="col-item mb-3">
+              <Col
+                lg={set_four_columns ? '3' : '4'}
+                key={item['@id']}
+                className="col-item mb-3"
+              >
                 {item['@type'] === 'Persona' ? (
                   <CardPersona
                     item={item}

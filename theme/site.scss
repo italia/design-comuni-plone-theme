@@ -4,7 +4,7 @@
 @import 'extras/blocks';
 @import 'extras/sidebar';
 @import 'extras/toolbar';
-// @import 'extras/chips';
+/* @import 'extras/chips';*/
 @import 'extras/modals';
 @import 'extras/search';
 @import 'extras/checkbox';
@@ -22,6 +22,7 @@
 @import 'ItaliaTheme/home';
 @import 'ItaliaTheme/sitemap';
 @import 'ItaliaTheme/Addons/customerSatisfaction';
+@import 'ItaliaTheme/Components/unauthorized';
 @import 'ItaliaTheme/Components/parentSiteMenu';
 @import 'ItaliaTheme/Components/subsiteHeader';
 @import 'ItaliaTheme/Components/subsiteFooter';
@@ -41,6 +42,7 @@
 @import 'ItaliaTheme/Blocks/iconBlocks';
 @import 'ItaliaTheme/Blocks/searchSections';
 @import 'ItaliaTheme/Blocks/cardWithImageAndInEvidence';
+@import 'ItaliaTheme/Blocks/cardWithSlideUpTextTemplate';
 @import 'ItaliaTheme/Blocks/smallblockLinkstemplate';
 @import 'ItaliaTheme/Blocks/completeBlockLinkstemplate';
 @import 'ItaliaTheme/Blocks/squaresImageTemplate';

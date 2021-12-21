@@ -22,14 +22,15 @@ import {
   ContentImage,
   UOPlaceholderAfterContent,
   UOPlaceholderAfterRelatedItems,
+  UOTelephones,
   RichText,
   RelatedItemInEvidence,
   richTextHasContent,
   SkipToMainContent,
+  ContactLink,
 } from '@italia/components/ItaliaTheme/View';
 
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
-import ContactLink from '../Commons/ContactLink';
 
 const messages = defineMessages({
   cosa_fa: {
@@ -100,10 +101,6 @@ const messages = defineMessages({
     id: 'pec_sede',
     defaultMessage: 'PEC',
   },
-  telefono_sede: {
-    id: 'telefono_sede',
-    defaultMessage: 'Telefono',
-  },
   fax_sede: {
     id: 'fax_sede',
     defaultMessage: 'Fax',
@@ -132,6 +129,7 @@ const UOView = ({ content }) => {
   const intl = useIntl();
   let documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
+  const telefono = content && UOTelephones({ content: content });
 
   useEffect(() => {
     if (documentBody.current && __CLIENT__) {
@@ -141,7 +139,7 @@ const UOView = ({ content }) => {
 
   // create object Ruolo: Persone
   let roles = content?.persone_struttura?.reduce((r, a) => {
-    const role = a.ruolo.title ?? '';
+    const role = a.ruolo ?? '';
     r[role] = r[role] || [];
     r[role].push(a);
     return r;
@@ -163,7 +161,9 @@ const UOView = ({ content }) => {
 
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
-            {__CLIENT__ && <SideMenu data={sideMenuElements} />}
+            {__CLIENT__ && (
+              <SideMenu data={sideMenuElements} content_uid={content?.UID} />
+            )}
           </aside>
           <section
             ref={documentBody}
@@ -213,6 +213,7 @@ const UOView = ({ content }) => {
                         key={content.uo_parent['@id']}
                         office={content.uo_parent}
                         load_data={false}
+                        show_contacts={false}
                       />
                     </div>
                   </div>
@@ -230,6 +231,7 @@ const UOView = ({ content }) => {
                             key={uo['@id']}
                             office={uo}
                             load_data={false}
+                            show_contacts={false}
                           />
                         </div>
                       );
@@ -412,14 +414,7 @@ const UOView = ({ content }) => {
                   </div>
                 )}
                 <dl className="contatti-list">
-                  {content.telefono && (
-                    <div className="text-serif contatti">
-                      <dt>{intl.formatMessage(messages.telefono_sede)}: </dt>
-                      <dd>
-                        <ContactLink tel={content.telefono} label={false} />
-                      </dd>
-                    </div>
-                  )}
+                  {telefono && telefono}
 
                   {content.fax && (
                     <div className="text-serif contatti">

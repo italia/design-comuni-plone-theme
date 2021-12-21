@@ -10,6 +10,7 @@ import { defaultIconWidgetOptions } from '@italia/helpers/index';
 import {
   ColorListWidget,
   PathFiltersWidget,
+  LocationFiltersWidget,
 } from '@italia/components/ItaliaTheme';
 
 //import TinymceWidget from '@italia/components/ItaliaTheme/manage/Widgets/TinymceWidget';
@@ -60,6 +61,7 @@ const getItaliaWidgets = (config) => {
       // richtext: TinymceWidget
       color_list: ColorListWidget,
       path_filters: PathFiltersWidget,
+      location_filter: LocationFiltersWidget,
     },
   };
 };
