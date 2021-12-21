@@ -55,7 +55,7 @@ const PageView = ({ content, token, location, history }) => {
 
   if (layout === 'document_view') {
     const rightHeaderHasContent =
-      content.immagine_testata?.scales ||
+      content.image?.scales ||
       richTextHasContent(content.info_testata) ||
       content.mostra_navigazione ||
       content?.tassonomia_argomenti?.length > 0 ||
