@@ -4,8 +4,8 @@
             "@italia/addons/volto-rss-block": [
                 "addons/volto-rss-block/src"
             ],
-            "@italia/addons/volto-cookie-banner": [
-                "addons/volto-cookie-banner/src"
+            "@italia/addons/volto-gdpr-privacy": [
+                "addons/volto-gdpr-privacy/src"
             ],
             "@italia/addons/volto-multilingual-widget": [
                 "addons/volto-multilingual-widget/src"

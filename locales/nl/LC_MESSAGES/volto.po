@@ -1167,7 +1167,6 @@ msgid "detail_link_label"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/LocationItem
-#: components/ItaliaTheme/View/Commons/OfficeCard
 #: components/ItaliaTheme/View/Commons/VenuesSmall
 msgid "details"
 msgstr ""

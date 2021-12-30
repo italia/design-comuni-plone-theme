@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2021-12-14T12:54:08.309Z\n"
+"POT-Creation-Date: 2021-12-30T15:31:53.924Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1413,7 +1413,6 @@ msgid "detail_link_label"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/LocationItem
-#: components/ItaliaTheme/View/Commons/OfficeCard
 #: components/ItaliaTheme/View/Commons/VenuesSmall
 # defaultMessage: Maggiori dettagli
 msgid "details"
