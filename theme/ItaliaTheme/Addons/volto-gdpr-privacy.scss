@@ -70,6 +70,10 @@
         box-shadow: none;
       }
 
+      input:focus ~ label {
+        color: #878f93;
+      }
+
       &.toggle {
         min-height: 1.5rem;
 

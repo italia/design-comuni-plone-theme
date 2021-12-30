@@ -211,7 +211,7 @@
     "volto-subfooter": "collective/volto-subfooter#v1.0.1",
     "volto-subsites": "collective/volto-subsites#v2.0.3",
     "volto-venue": "collective/volto-venue#v3.0.1",
-    "volto-gdpr-privacy": "git+ssh://git@github.com:collective/volto-gdpr-privacy.git#1ac6fd413fde6e7d641d293f4e58bd9f6a493925"
+    "volto-gdpr-privacy": "git+ssh://git@github.com:collective/volto-gdpr-privacy.git#2572f19def60cbcbe855cbb45b2dec73342eb50e"
   },
   "devDependencies": {
     "@babel/core": "7.11.1",
