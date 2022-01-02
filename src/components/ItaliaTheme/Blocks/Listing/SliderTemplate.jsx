@@ -109,7 +109,6 @@ const SliderTemplate = ({
   };
 
   //const getCaption = (item) => item.description ?? item.rights ?? null;
-
   return (
     <div
       className={cx(`sliderTemplate slidesToShow-${nSlidesToShow || 1}`, {
@@ -150,19 +149,14 @@ const SliderTemplate = ({
             <Slider {...settings} ref={slider}>
               {items.map((item, index) => {
                 const image = ListingImage({ item, loading: 'lazy' });
-
+                if (!image) return null;
                 return (
                   <div
                     className="it-single-slide-wrapper"
                     key={item['@id'] + index}
                   >
                     <div className="slide-wrapper">
-                      <figure className="img-wrapper">
-                        {image && { image }}
-                        {/* {getCaption(item) && (
-                        <figcaption>{getCaption(item)}</figcaption>
-                      )} */}
-                      </figure>
+                      <figure className="img-wrapper">{image}</figure>
                       {show_image_title && (
                         <UniversalLink
                           item={item}

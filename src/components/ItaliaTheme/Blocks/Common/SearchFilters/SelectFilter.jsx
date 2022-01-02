@@ -44,7 +44,7 @@ const SelectFilter = ({ options, value, id, onChange, placeholder }) => {
         );
       }
     } else if (options.vocabulary) {
-      dispatch(getVocabulary(options.vocabulary));
+      dispatch(getVocabulary({ vocabNameOrURL: options.vocabulary }));
     }
   }, []);
 
