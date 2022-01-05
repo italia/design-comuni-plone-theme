@@ -69,21 +69,67 @@ const defaultPanelConfig = {
     choices: [
       {
         config_key: 'YOUTUBE',
-        referenceUrls: ['youtube.com', 'youtube-nocookie.com'],
+        referenceUrls: ['youtube.com', 'youtube-nocookie.com', 'youtu.be'],
         text: {
           it: {
             title: 'Youtube',
-            description: 'Cookie correlati a Youtube... ',
+            description:
+              "I cookie di profilazione di Youtube permettono di mostrarti le pubblicità che potrebbero interessarti di più, fare analisi di accesso alla pagina e sul comportamento dell'utente, facilitare l'accesso ai servizi di Google.",
             //text to show in conditional embed if that cookies are not enabled
             conditional_embed_text:
               'Per vedere il video, accetta i cookies di Youtube.',
           },
           en: {
             title: 'Youtube',
-            description: 'Related youtube cookies... ',
+            description:
+              'Youtube profiling cookies allow you to show advertisements that may interest you the most, analyze page access and user behavior, facilitate access to Google services. ',
             //text to show in conditional embed if that cookies are not enabled
             conditional_embed_text:
               'To view the video, please accept Youtube cookies.',
+          },
+        },
+      },
+      {
+        config_key: 'VIMEO',
+        referenceUrls: ['vimeo.com'],
+        text: {
+          it: {
+            title: 'Vimeo',
+            description:
+              "I cookie di profilazione di Vimeo permettono di fare analisi di accesso alla pagina e sul comportamento dell'utente, e di mostrarti le pubblicità che potrebbero interessarti di più.",
+            //text to show in conditional embed if that cookies are not enabled
+            conditional_embed_text:
+              'Per vedere il video, accetta i cookies di Vimeo.',
+          },
+          en: {
+            title: 'Vimeo',
+            description:
+              'Vimeo profiling cookies allow you to analyze page access and user behavior, and to show you the advertisements that may interest you the most.',
+            //text to show in conditional embed if that cookies are not enabled
+            conditional_embed_text:
+              'To view the video, please accept Vimeo cookies.',
+          },
+        },
+      },
+      {
+        config_key: 'GOOGLEMAPS',
+        referenceUrls: ['google.com/maps'],
+        text: {
+          it: {
+            title: 'Google Maps',
+            description:
+              "I cookie di profilazione di Google permettono di fare analisi di accesso alla pagina e sul comportamento dell'utente, e di mostrarti le pubblicità che potrebbero interessarti di più.",
+            //text to show in conditional embed if that cookies are not enabled
+            conditional_embed_text:
+              'Per vedere la mappa, accetta i cookies di Google Maps.',
+          },
+          en: {
+            title: 'Google Maps',
+            description:
+              'Google profiling cookies allow you to analyze page access and user behavior, and to show you the advertisements that may interest you the most.',
+            //text to show in conditional embed if that cookies are not enabled
+            conditional_embed_text:
+              'To view map, please accept Google Maps cookies.',
           },
         },
       },
