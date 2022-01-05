@@ -17794,9 +17794,9 @@ volto-form-block@collective/volto-form-block#v2.0.3:
     react-google-recaptcha-v3 "^1.8.0"
     volto-subblocks collective/volto-subblocks#v1.0.1
 
-"volto-gdpr-privacy@https://github.com/collective/volto-gdpr-privacy.git#2ee967de0411faf5216bec4f7641785bddbc6c1e":
+"volto-gdpr-privacy@https://github.com/collective/volto-gdpr-privacy.git#c21a09f60da90d22ccedf23d71d1dd4a74996df1":
   version "0.1.0"
-  resolved "https://github.com/collective/volto-gdpr-privacy.git#2ee967de0411faf5216bec4f7641785bddbc6c1e"
+  resolved "https://github.com/collective/volto-gdpr-privacy.git#c21a09f60da90d22ccedf23d71d1dd4a74996df1"
 
 volto-google-analytics@collective/volto-google-analytics#v1.1.0:
   version "1.1.0"
