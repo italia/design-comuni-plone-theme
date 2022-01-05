@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { ConditionalEmbed } from '@italia/addons/volto-gdpr-privacy';
 
 const EmbeddedVideo = ({ video_url, title, id }) => {
   /* Needed to fix error:
@@ -10,19 +11,22 @@ const EmbeddedVideo = ({ video_url, title, id }) => {
     Need to reformat url to /embed endpoint
   */
   const video_id = video_url.split('/').splice(-1);
+  const src = `https://youtube.com/embed/${video_id}`;
   return video_url ? (
     <div
       key={id}
       className="embed-responsive embed-responsive-16by9 my4"
       id={`embedded-video-${id}`}
     >
-      <iframe
-        loading="lazy"
-        className="embed-responsive-item"
-        title={title || `YouTube Video ${id}`}
-        allowFullScreen
-        src={`https://youtube.com/embed/${video_id}`}
-      ></iframe>
+      <ConditionalEmbed url={src}>
+        <iframe
+          loading="lazy"
+          className="embed-responsive-item"
+          title={title || `YouTube Video ${id}`}
+          allowFullScreen
+          src={src}
+        ></iframe>
+      </ConditionalEmbed>
     </div>
   ) : null;
 };

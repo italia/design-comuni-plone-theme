@@ -7,6 +7,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Embed } from 'semantic-ui-react';
 import { isInternalURL, getParentUrl } from '@plone/volto/helpers';
+import { ConditionalEmbed } from '@italia/addons/volto-gdpr-privacy';
 import config from '@plone/volto/registry';
 
 /**
@@ -14,7 +15,7 @@ import config from '@plone/volto/registry';
  * @class ViewBlock
  * @extends Component
  */
-const ViewBlock = ({ data, index }) => {
+const ViewBlock = ({ data, index, isEditMode = false }) => {
   const embedSettings = {
     icon: 'play',
     defaultActive: true,
@@ -23,62 +24,64 @@ const ViewBlock = ({ data, index }) => {
   };
   return data?.url ? (
     <div className="video-wrapper">
-      {data.url.match('youtu') ? (
-        <>
-          {data.url.match('list') ? (
-            <Embed
-              url={`https://www.youtube.com/embed/videoseries?list=${
-                data.url.match(/^.*\?list=(.*)$/)[1]
-              }`}
-              {...embedSettings}
-            />
-          ) : (
-            <Embed
-              id={
-                data.url.match(/.be\//)
-                  ? data.url.match(/^.*\.be\/(.*)/)?.[1]
-                  : data.url.match(/^.*\?v=(.*)$/)?.[1]
-              }
-              source="youtube"
-              {...embedSettings}
-            />
-          )}
-        </>
-      ) : (
-        <>
-          {data.url.match('vimeo') ? (
-            <Embed
-              id={data.url.match(/^.*\.com\/(.*)/)[1]}
-              source="vimeo"
-              {...embedSettings}
-            />
-          ) : (
-            <>
-              {data.url.match('.mp4') ? (
-                // eslint-disable-next-line jsx-a11y/media-has-caption
-                <video
-                  src={
-                    isInternalURL(
-                      data.url.replace(
-                        getParentUrl(config.settings.apiPath),
-                        '',
-                      ),
-                    )
-                      ? `${data.url}/@@download/file`
-                      : data.url
-                  }
-                  controls
-                  type="video/mp4"
-                />
-              ) : data.allowExternals ? (
-                <Embed url={data.url} {...embedSettings} />
-              ) : (
-                <div className="invalidVideoFormat" />
-              )}
-            </>
-          )}
-        </>
-      )}
+      <ConditionalEmbed url={!isEditMode ? data.url : null}>
+        {data.url.match('youtu') ? (
+          <>
+            {data.url.match('list') ? (
+              <Embed
+                url={`https://www.youtube.com/embed/videoseries?list=${
+                  data.url.match(/^.*\?list=(.*)$/)[1]
+                }`}
+                {...embedSettings}
+              />
+            ) : (
+              <Embed
+                id={
+                  data.url.match(/.be\//)
+                    ? data.url.match(/^.*\.be\/(.*)/)?.[1]
+                    : data.url.match(/^.*\?v=(.*)$/)?.[1]
+                }
+                source="youtube"
+                {...embedSettings}
+              />
+            )}
+          </>
+        ) : (
+          <>
+            {data.url.match('vimeo') ? (
+              <Embed
+                id={data.url.match(/^.*\.com\/(.*)/)[1]}
+                source="vimeo"
+                {...embedSettings}
+              />
+            ) : (
+              <>
+                {data.url.match('.mp4') ? (
+                  // eslint-disable-next-line jsx-a11y/media-has-caption
+                  <video
+                    src={
+                      isInternalURL(
+                        data.url.replace(
+                          getParentUrl(config.settings.apiPath),
+                          '',
+                        ),
+                      )
+                        ? `${data.url}/@@download/file`
+                        : data.url
+                    }
+                    controls
+                    type="video/mp4"
+                  />
+                ) : data.allowExternals ? (
+                  <Embed url={data.url} {...embedSettings} />
+                ) : (
+                  <div className="invalidVideoFormat" />
+                )}
+              </>
+            )}
+          </>
+        )}
+      </ConditionalEmbed>
     </div>
   ) : null;
 };
