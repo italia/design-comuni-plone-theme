@@ -14,7 +14,7 @@ import getItaliaViews from '@italia/config/Views/views';
 import getItaliaWidgets from '@italia/config/Widgets/widgets';
 
 import { rssBlock as customRssBlock } from '@italia/addons/volto-rss-block';
-
+import { GdprPrivacyManager } from '@italia/addons/volto-gdpr-privacy';
 import CardWithImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
 import CardWithImageRssTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithImageRssTemplateSkeleton';
 import CardWithoutImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
@@ -141,7 +141,13 @@ export default function applyConfig(voltoConfig) {
     defaultExcludedFromSearch: {
       portalTypes: ['Image', 'File'],
     },
-
+    appExtras: [
+      ...(config.settings.appExtras ?? []),
+      {
+        match: '',
+        component: GdprPrivacyManager,
+      },
+    ],
     italiaThemeViewsConfig: {
       imagePosition: 'afterHeader', // possible values: afterHeader, documentBody
     },
