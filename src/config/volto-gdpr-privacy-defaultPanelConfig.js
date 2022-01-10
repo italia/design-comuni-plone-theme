@@ -6,12 +6,17 @@ const defaultPanelConfig = {
     it: {
       title: 'Usiamo i cookies',
       description:
-        "Questo sito utilizza i cookie tecnici di navigazione e di sessione per garantire un miglior servizio di navigazione del sito, e cookies analitici per raccogliere informazioni sull'uso del sito da parte degli utenti.  Utilizza anche cookies di profilazione dell'utente per fini statistici e di remarketing. Per i cookie di profilazione puoi decidere se abilitarli o meno cliccando sul pulsante 'Impostazioni'. Per saperne di più, su come disabilitare i cookies oppure abilitarne solo alcuni, consulta la nostra Cookie Policy.",
+        "Questo sito utilizza i cookie tecnici di navigazione e di sessione per garantire un miglior servizio di navigazione del sito, e cookies analitici per raccogliere informazioni sull'uso del sito da parte degli utenti.  Utilizza anche cookies di profilazione dell'utente per fini statistici. Per i cookie di profilazione puoi decidere se abilitarli o meno cliccando sul pulsante 'Impostazioni'. Per saperne di più, su come disabilitare i cookies oppure abilitarne solo alcuni, consulta la nostra Cookie Policy.",
     },
     en: {
       title: 'We use cookies',
       description:
-        "This site uses technical navigation and session cookies to ensure a better site navigation service, and analytical cookies to collect information on the use of the site by users. It also uses user profiling cookies for statistical and remarketing purposes. For profiling cookies you can decide whether to enable them or not by clicking on the 'Settings' button. To find out more, on how to disable cookies or enable only some of them, consult our Cookie Policy.",
+        "This site uses technical navigation and session cookies to ensure a better site navigation service, and analytical cookies to collect information on the use of the site by users. It also uses user profiling cookies for statistical. For profiling cookies you can decide whether to enable them or not by clicking on the 'Settings' button. To find out more, on how to disable cookies or enable only some of them, consult our Cookie Policy.",
+    },
+    fr: {
+      title: 'We use cookies',
+      description:
+        "Ce site utilise des cookies techniques de navigation et de session pour assurer un meilleur service de navigation sur le site, et des cookies analytiques pour collecter des informations sur l'utilisation du site par les utilisateurs. Il utilise également des cookies de profilage des utilisateurs à des fins statistiques. Pour les cookies de profilage, vous pouvez décider de les activer ou non en cliquant sur le bouton « Paramètres ». Pour en savoir plus, sur la façon de désactiver les cookies ou d'en activer seulement certains, consultez notre Politique relative aux cookies.",
     },
   },
 
@@ -28,6 +33,11 @@ const defaultPanelConfig = {
         title: 'Technical cookies',
         description:
           'The site uses technical cookies to analyze traffic to and from the site. Technical cookies also allow us to provide a better navigation service on the site, and collect navigation information for this purpose.',
+      },
+      fr: {
+        title: 'Cookies techniques',
+        description:
+          'Le site utilise des cookies techniques pour analyser le trafic vers et depuis le site. Les cookies techniques nous permettent également de fournir un meilleur service de navigation sur le site, et de collecter des informations de navigation à cette fin.',
       },
     },
 
@@ -46,6 +56,31 @@ const defaultPanelConfig = {
             description:
               'Google Analytics cookies are used to analyze navigation on the site in order to improve it and provide the user with the best possible browsing experience.',
           },
+          fr: {
+            title: 'Google Analytics',
+            description:
+              "Les cookies de Google Analytics sont utilisés pour analyser la navigation sur le site afin de l'améliorer et offrir à l'utilisateur la meilleure expérience de navigation possible.",
+          },
+        },
+      },
+      {
+        config_key: 'GRECAPTCHA',
+        text: {
+          it: {
+            title: 'Google Re-Captcha',
+            description:
+              "I cookie di Google Re-Captcha sono usati per analizzare la navigazione sul sito al fine di migliorarla e fornire all'utente un'esperienza di navigazione migliore possibile.",
+          },
+          en: {
+            title: 'Google Re-Captcha',
+            description:
+              'Google Re-Captcha cookies are used to analyze navigation on the site in order to improve it and provide the user with the best possible browsing experience.',
+          },
+          fr: {
+            title: 'Google Re-Captcha',
+            description:
+              "Les cookies de Google Re-Captcha sont utilisés pour analyser la navigation sur le site afin de l'améliorer et offrir à l'utilisateur la meilleure expérience de navigation possible.",
+          },
         },
       },
     ],
@@ -63,6 +98,11 @@ const defaultPanelConfig = {
         title: 'Profiling cookies',
         description:
           "The site uses profiling cookies to analyze user behavior and choices in order to propose targeted content corresponding to the user's profile",
+      },
+      fr: {
+        title: 'Cookies de profilage',
+        description:
+          "Le site utilise des cookies de profilage pour analyser le comportement et les choix de l'utilisateur afin de proposer un contenu ciblé correspondant au profil de l'utilisateur",
       },
     },
 
@@ -87,6 +127,14 @@ const defaultPanelConfig = {
             conditional_embed_text:
               'To view the video, please accept Youtube cookies.',
           },
+          fr: {
+            title: 'Youtube',
+            description:
+              "Les cookies de profilage Youtube vous permettent d'afficher les publicités susceptibles de vous intéresser le plus, d'analyser l'accès aux pages et le comportement des utilisateurs, de faciliter l'accès aux services Google.",
+            //text to show in conditional embed if that cookies are not enabled
+            conditional_embed_text:
+              'Pour voir la vidéo, veuillez accepter les cookies Youtube.',
+          },
         },
       },
       {
@@ -109,6 +157,14 @@ const defaultPanelConfig = {
             conditional_embed_text:
               'To view the video, please accept Vimeo cookies.',
           },
+          fr: {
+            title: 'Vimeo',
+            description:
+              "Les cookies de profilage Vimeo vous permettent d'analyser l'accès aux pages et le comportement des utilisateurs, et de vous montrer les publicités qui pourraient vous intéresser le plus.",
+            //text to show in conditional embed if that cookies are not enabled
+            conditional_embed_text:
+              'Pour voir la vidéo, veuillez accepter les cookies Vimeo.',
+          },
         },
       },
       {
@@ -130,6 +186,44 @@ const defaultPanelConfig = {
             //text to show in conditional embed if that cookies are not enabled
             conditional_embed_text:
               'To view map, please accept Google Maps cookies.',
+          },
+          fr: {
+            title: 'Google Maps',
+            description:
+              "Les cookies de profilage Google vous permettent d'analyser l'accès aux pages et le comportement des utilisateurs, et de vous montrer les publicités qui pourraient vous intéresser le plus.",
+            //text to show in conditional embed if that cookies are not enabled
+            conditional_embed_text:
+              'Pour afficher la carte, veuillez accepter les cookies de Google Maps.',
+          },
+        },
+      },
+      {
+        config_key: 'META',
+        referenceUrls: ['facebook.com', 'instagram.com'],
+        text: {
+          it: {
+            title: 'Facebook e Instagram (prodotti Meta)',
+            description:
+              "I cookie di profilazione di Meta permettono di fare analisi di accesso alla pagina e sul comportamento dell'utente, e di mostrarti le pubblicità che potrebbero interessarti di più, solo se sei iscritto a Facebook o Instagram o ad uno dei prodotti di Meta.",
+            //text to show in conditional embed if that cookies are not enabled
+            conditional_embed_text:
+              'Per vedere i contenuti di Meta (Facebook, Instagram), accetta i cookies di Meta.',
+          },
+          en: {
+            title: 'Facebook and Instagram (Meta products)',
+            description:
+              'Meta profiling cookies allow you to analyze page access and user behavior, and to show you the advertisements that may interest you the most, only if you are subscribed into Facebook or Instagram or in one of Meta products.',
+            //text to show in conditional embed if that cookies are not enabled
+            conditional_embed_text:
+              'To view Meta contents, please accept Meta cookies.',
+          },
+          fr: {
+            title: 'Facebook et Instagram (produits Meta)',
+            description:
+              "Les cookies de méta profilage vous permettent d'analyser l'accès aux pages et le comportement des utilisateurs, et de vous montrer les publicités susceptibles de vous intéresser le plus, uniquement si vous êtes abonné à Facebook ou Instagram ou à l'un des produits Meta.",
+            //text to show in conditional embed if that cookies are not enabled
+            conditional_embed_text:
+              'Pour afficher le contenu Meta, veuillez accepter les cookies Meta.',
           },
         },
       },
