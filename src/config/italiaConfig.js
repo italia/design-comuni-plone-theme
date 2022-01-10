@@ -45,6 +45,8 @@ import faQuestionSVG from '@italia/icons/question-solid.svg';
 
 import applyRichTextConfig from '@italia/config/RichTextEditor/config';
 
+import gdprPrivacyPanelConfig from '@italia/config/volto-gdpr-privacy-defaultPanelConfig.js';
+
 const iconList = Object.keys(Icons.fas).map((icon) => Icons[icon]);
 const iconListRegular = Object.keys(IconsRegular.far).map(
   (icon) => IconsRegular[icon],
@@ -138,6 +140,7 @@ export default function applyConfig(voltoConfig) {
     defaultExcludedFromSearch: {
       portalTypes: ['Image', 'File'],
     },
+
     italiaThemeViewsConfig: {
       imagePosition: 'afterHeader', // possible values: afterHeader, documentBody
     },
@@ -190,7 +193,13 @@ export default function applyConfig(voltoConfig) {
         'rssBlock',
         //se si aggiunge un nuovo blocco, verificare che in edit non ci siano bottoni che provocano il submit della form. Se succede, gestirli con e.prevenDefault() e.stopPropagation().
       ],
+
       showRestricted: false,
+    },
+
+    'volto-gdpr-privacy': {
+      ...config.settings['volto-gdpr-privacy'],
+      defaultPanelConfig: gdprPrivacyPanelConfig,
     },
     videoAllowExternalsDefault: false,
     showTrasparenzaFields: false,

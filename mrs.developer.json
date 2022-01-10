@@ -6,13 +6,7 @@
     "url": "git@github.com:redturtle/volto-rss-block.git",
     "tag": "v2.0.0"
   },
-  "volto-cookie-banner": {
-    "package": "@italia/addons/volto-cookie-banner",
-    "path": "src",
-    "https": "https://github.com/collective/volto-cookie-banner.git",
-    "url": "git@github.com:collective/volto-cookie-banner.git",
-    "tag": "v2.0.0"
-  },
+
   "volto-multilingual-widget": {
     "package": "@italia/addons/volto-multilingual-widget",
     "path": "src",
@@ -103,5 +97,12 @@
     "https": "https://github.com/collective/volto-customer-satisfaction.git",
     "url": "git@github.com:collective/volto-customer-satisfaction.git",
     "tag": "v0.2.5"
+  },
+  "volto-gdpr-privacy": {
+    "package": "@italia/addons/volto-gdpr-privacy",
+    "path": "src",
+    "https": "https://github.com/collective/volto-gdpr-privacy.git",
+    "url": "git@github.com:collective/volto-gdpr-privacy.git",
+    "tag": "v1.1.7"
   }
 }
