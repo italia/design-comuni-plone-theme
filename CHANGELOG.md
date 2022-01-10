@@ -1,3 +1,10 @@
+### [5.9.6](https://github.com/RedTurtle/design-volto-theme/compare/v5.9.5...v5.9.6) (2022-01-10)
+
+
+### Bug Fixes
+
+* related news is now correctly shown in NewsItem view ([8180948](https://github.com/RedTurtle/design-volto-theme/commit/8180948d485430ed232fce475c890acd15121eed))
+
 ### [5.9.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.9.4...v5.9.5) (2021-12-20)
 
 
