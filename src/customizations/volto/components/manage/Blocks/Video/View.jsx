@@ -16,7 +16,7 @@ import {
   getParentUrl,
   flattenToAppURL,
 } from '@plone/volto/helpers';
-import { ConditionalEmbed } from '@italia/addons/volto-gdpr-privacy';
+import { ConditionalEmbed } from 'volto-gdpr-privacy';
 import config from '@plone/volto/registry';
 
 /**

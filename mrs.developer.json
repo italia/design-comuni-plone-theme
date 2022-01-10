@@ -99,7 +99,7 @@
     "tag": "v0.2.5"
   },
   "volto-gdpr-privacy": {
-    "package": "@italia/addons/volto-gdpr-privacy",
+    "package": "volto-gdpr-privacy",
     "path": "src",
     "https": "https://github.com/collective/volto-gdpr-privacy.git",
     "url": "git@github.com:collective/volto-gdpr-privacy.git",

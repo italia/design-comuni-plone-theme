@@ -7,7 +7,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Embed } from 'semantic-ui-react';
 import { isInternalURL, getParentUrl } from '@plone/volto/helpers';
-import { ConditionalEmbed } from '@italia/addons/volto-gdpr-privacy';
+import { ConditionalEmbed } from 'volto-gdpr-privacy';
 import config from '@plone/volto/registry';
 
 /**

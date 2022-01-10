@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ConditionalEmbed } from '@italia/addons/volto-gdpr-privacy';
+import { ConditionalEmbed } from 'volto-gdpr-privacy';
 
 const EmbeddedVideo = ({ video_url, title, id }) => {
   /* Needed to fix error:
@@ -18,7 +18,7 @@ const EmbeddedVideo = ({ video_url, title, id }) => {
       className="embed-responsive embed-responsive-16by9 my4"
       id={`embedded-video-${id}`}
     >
-      <ConditionalEmbed url={src}>
+      <ConditionalEmbed url={src} key={'embedvideo' + id}>
         <iframe
           loading="lazy"
           className="embed-responsive-item"

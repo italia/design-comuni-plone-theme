@@ -15,6 +15,8 @@ const Button = (props) => {
     otherProps.outline = true;
   }
 
+  delete otherProps.basic;
+
   otherProps.className = className;
   return <DesignButton {...otherProps} />;
 };
