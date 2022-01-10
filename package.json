@@ -5,7 +5,6 @@
   "version": "5.9.5",
   "private": true,
   "workspaces": [
-    "src/addons/volto-gdpr-privacy",
     "src/addons/volto-multilingual-widget",
     "src/addons/volto-rss-block",
     "src/addons/volto-venue",
@@ -19,10 +18,10 @@
     "src/addons/volto-secondarymenu",
     "src/addons/volto-form-block",
     "src/addons/volto-subfooter",
-    "src/addons/volto-customer-satisfaction"
+    "src/addons/volto-customer-satisfaction",
+    "src/addons/volto-gdpr-privacy"
   ],
   "addons": [
-    "volto-gdpr-privacy",
     "volto-multilingual-widget",
     "volto-rss-block",
     "volto-venue",
@@ -36,7 +35,8 @@
     "volto-secondarymenu",
     "volto-form-block",
     "volto-subfooter",
-    "volto-customer-satisfaction"
+    "volto-customer-satisfaction",
+    "volto-gdpr-privacy"
   ],
   "scripts": {
     "start": "razzle start",
@@ -70,7 +70,6 @@
       "@italia/(.*)$": "<rootDir>/src/$1",
       "@package/config": "<rootDir>/jest-addons-loader.js",
       "volto-rss-block/(.*)$": "<rootDir>/src/addons/volto-rss-block/src/$1",
-      "volto-gdpr-privacy/(.*)$": "<rootDir>/src/addons/volto-gdpr-privacy/src/$1",
       "volto-multilingual-widget/(.*)$": "<rootDir>/src/addons/volto-multilingual-widget/src/$1",
       "volto-dropdownmenu/(.*)$": "<rootDir>/src/addons/volto-dropdownmenu/src/$1",
       "~/(.*)$": "<rootDir>/src/$1",
@@ -82,7 +81,8 @@
       "volto-secondarymenu/(.*)$": "<rootDir>/src/addons/volto-secondarymenu/src/$1",
       "volto-form-block/(.*)$": "<rootDir>/src/addons/volto-form-block/src/$1",
       "volto-subfooter/(.*)$": "<rootDir>/src/addons/volto-subfooter/src/$1",
-      "volto-customer-satisfaction/(.*)$": "<rootDir>/src/addons/volto-customer-satisfaction/src/$1"
+      "volto-customer-satisfaction/(.*)$": "<rootDir>/src/addons/volto-customer-satisfaction/src/$1",
+      "volto-gdpr-privacy/(.*)$": "<rootDir>/src/addons/volto-gdpr-privacy/src/$1"
     },
     "testMatch": [
       "**/__tests__/**/*.[jt]s?(x)",
