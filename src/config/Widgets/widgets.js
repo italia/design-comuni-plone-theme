@@ -35,23 +35,23 @@ const getItaliaWidgets = (config) => {
       ),
       search_sections: SearchSectionsConfigurationWidget,
       tipologie_notizia: MultilingualWidget(
-        (props) => <ArrayWidget {...props} wrapped={false} />,
+        (props) => <ArrayWidget {...props} creatable={true} wrapped={false} />,
         [],
       ),
       tipologie_unita_organizzativa: MultilingualWidget(
-        (props) => <ArrayWidget {...props} wrapped={false} />,
+        (props) => <ArrayWidget {...props} creatable={true} wrapped={false} />,
         [],
       ),
       tipologie_documento: MultilingualWidget(
-        (props) => <ArrayWidget {...props} wrapped={false} />,
+        (props) => <ArrayWidget {...props} creatable={true} wrapped={false} />,
         [],
       ),
       tipologie_persona: MultilingualWidget(
-        (props) => <ArrayWidget {...props} wrapped={false} />,
+        (props) => <ArrayWidget {...props} creatable={true} wrapped={false} />,
         [],
       ),
       ruoli_persona: MultilingualWidget(
-        (props) => <ArrayWidget {...props} wrapped={false} />,
+        (props) => <ArrayWidget {...props} creatable={true} wrapped={false} />,
         [],
       ),
       subsite_social_links: SubsiteSocialLinksWidget,

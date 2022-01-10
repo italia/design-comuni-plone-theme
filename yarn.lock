@@ -2153,9 +2153,9 @@
     pofile "1.0.10"
     razzle "3.4.5"
 
-"@plone/volto@plone/volto#c39bfb22f0ce62d09f6eaddec6aa167da9ea8c16":
-  version "14.1.1"
-  resolved "https://codeload.github.com/plone/volto/tar.gz/c39bfb22f0ce62d09f6eaddec6aa167da9ea8c16"
+"@plone/volto@plone/volto#66270da755d268906feb550c832ca24379ecf025":
+  version "14.2.0"
+  resolved "https://codeload.github.com/plone/volto/tar.gz/66270da755d268906feb550c832ca24379ecf025"
   dependencies:
     "@babel/plugin-proposal-export-default-from" "7.10.4"
     "@babel/plugin-proposal-export-namespace-from" "7.10.4"
@@ -2251,7 +2251,7 @@
     prismjs "1.25.0"
     promise-file-reader "1.0.2"
     prop-types "15.7.2"
-    query-string "7.0.0"
+    query-string "7.1.0"
     razzle "3.4.5"
     razzle-plugin-bundle-analyzer "1.2.0"
     rc-time-picker "3.7.3"
@@ -14141,10 +14141,10 @@ qs@~6.5.2:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
   integrity sha512-N5ZAX4/LxJmF+7wN74pUD6qAh9/wnvdQcjq9TZjevvXzSUo7bfmw91saqMjzGS2xq91/odN2dW/WOl7qQHNDGA==
 
-query-string@7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/query-string/-/query-string-7.0.0.tgz#aaad2c8d5c6a6d0c6afada877fecbd56af79e609"
-  integrity sha512-Iy7moLybliR5ZgrK/1R3vjrXq03S13Vz4Rbm5Jg3EFq1LUmQppto0qtXz4vqZ386MSRjZgnTSZ9QC+NZOSd/XA==
+query-string@7.1.0:
+  version "7.1.0"
+  resolved "https://registry.yarnpkg.com/query-string/-/query-string-7.1.0.tgz#96b88f27b39794f97b8c8ccd060bc900495078ef"
+  integrity sha512-wnJ8covk+S9isYR5JIXPt93kFUmI2fQ4R/8130fuq+qwLiGVTurg7Klodgfw4NSz/oe7xnyi09y3lSrogUeM3g==
   dependencies:
     decode-uri-component "^0.2.0"
     filter-obj "^1.1.0"
@@ -17973,14 +17973,6 @@ volto-blocks-widget@2.1.0:
   integrity sha512-vKp2839xT50PQLIRL7D5CgcVYS8N6fwfQmW3euue0x6+CCFAcyBU92gYgT6a6gk78FhaEYCk1NlsZ0MvChsWZA==
   dependencies:
     "@plone/scripts" "*"
-
-volto-cookie-banner@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/volto-cookie-banner/-/volto-cookie-banner-2.1.0.tgz#da7fd184146260cf04f489fa7f8b387533fb0b13"
-  integrity sha512-PsMQTz+yxYgLf/1RGiIho5KEw+4nXAsy7hymPNaAEzgBNtrPE8UygK44WtDSiqgdrMmzxW3FRWuGcSWiiUf+fg==
-  dependencies:
-    "@plone/scripts" "^1.0.3"
-    react-cookie-consent "^3.0.0"
 
 volto-customer-satisfaction@^0.2.6:
   version "0.2.6"
