@@ -6,17 +6,17 @@ const defaultPanelConfig = {
     it: {
       title: 'Usiamo i cookies',
       description:
-        "Questo sito utilizza i cookie tecnici di navigazione e di sessione per garantire un miglior servizio di navigazione del sito, e cookies analitici per raccogliere informazioni sull'uso del sito da parte degli utenti.  Utilizza anche cookies di profilazione dell'utente per fini statistici. Per i cookie di profilazione puoi decidere se abilitarli o meno cliccando sul pulsante 'Impostazioni'. Per saperne di più, su come disabilitare i cookies oppure abilitarne solo alcuni, consulta la nostra Cookie Policy.",
+        "Questo sito utilizza i cookie tecnici di navigazione e di sessione per garantire un miglior servizio di navigazione del sito, e cookies analitici per raccogliere informazioni sull'uso del sito da parte degli utenti.  Utilizza anche cookies di profilazione dell'utente per fini statistici. Per i cookie di profilazione puoi decidere se abilitarli o meno cliccando sul pulsante 'Impostazioni'. Per saperne di più, su come disabilitare i cookies oppure abilitarne solo alcuni, consulta la nostra <a href='/privacy-policy'>Cookie Policy</a>.",
     },
     en: {
       title: 'We use cookies',
       description:
-        "This site uses technical navigation and session cookies to ensure a better site navigation service, and analytical cookies to collect information on the use of the site by users. It also uses user profiling cookies for statistical. For profiling cookies you can decide whether to enable them or not by clicking on the 'Settings' button. To find out more, on how to disable cookies or enable only some of them, consult our Cookie Policy.",
+        "This site uses technical navigation and session cookies to ensure a better site navigation service, and analytical cookies to collect information on the use of the site by users. It also uses user profiling cookies for statistical. For profiling cookies you can decide whether to enable them or not by clicking on the 'Settings' button. To find out more, on how to disable cookies or enable only some of them, consult our <a href='/en/privacy-policy'>Cookie Policy</a>.",
     },
     fr: {
       title: 'We use cookies',
       description:
-        "Ce site utilise des cookies techniques de navigation et de session pour assurer un meilleur service de navigation sur le site, et des cookies analytiques pour collecter des informations sur l'utilisation du site par les utilisateurs. Il utilise également des cookies de profilage des utilisateurs à des fins statistiques. Pour les cookies de profilage, vous pouvez décider de les activer ou non en cliquant sur le bouton « Paramètres ». Pour en savoir plus, sur la façon de désactiver les cookies ou d'en activer seulement certains, consultez notre Politique relative aux cookies.",
+        "Ce site utilise des cookies techniques de navigation et de session pour assurer un meilleur service de navigation sur le site, et des cookies analytiques pour collecter des informations sur l'utilisation du site par les utilisateurs. Il utilise également des cookies de profilage des utilisateurs à des fins statistiques. Pour les cookies de profilage, vous pouvez décider de les activer ou non en cliquant sur le bouton « Paramètres ». Pour en savoir plus, sur la façon de désactiver les cookies ou d'en activer seulement certains, consultez notre <a href='/fr/privacy-policy'>Politique relative aux cookies</a>.",
     },
   },
 

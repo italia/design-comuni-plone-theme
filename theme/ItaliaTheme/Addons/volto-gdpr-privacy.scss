@@ -182,6 +182,18 @@ button.gdpr-privacy-show-banner {
   border-top-left-radius: 5px;
 }
 
+body.has-toolbar {
+  .gdpr-privacy-banner {
+    width: calc(100vw - 80px) !important;
+  }
+}
+
+body.has-toolbar-collapsed {
+  .gdpr-privacy-banner {
+    width: calc(100vw - 20px) !important;
+  }
+}
+
 @media (max-width: #{map-get($grid-breakpoints, md)}) {
   .gdpr-privacy-banner {
     .gdpr-privacy-content-wrapper {
