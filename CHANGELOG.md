@@ -1,3 +1,10 @@
+### [5.10.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.10.0...v5.10.1) (2022-01-11)
+
+
+### Bug Fixes
+
+* fixed gdpr-privacy banner ([bcd59c2](https://github.com/RedTurtle/design-volto-theme/commit/bcd59c20a2d5aafea9d61999f6dac2af9251935c))
+
 ## [5.10.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.9.6...v5.10.0) (2022-01-10)
 
 
