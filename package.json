@@ -2,10 +2,9 @@
   "name": "design-volto-theme",
   "description": "Volto Theme for Italia design guidelines",
   "license": "MIT",
-  "version": "5.9.5",
+  "version": "5.10.1",
   "private": true,
   "workspaces": [
-    "src/addons/volto-cookie-banner",
     "src/addons/volto-multilingual-widget",
     "src/addons/volto-rss-block",
     "src/addons/volto-venue",
@@ -19,10 +18,10 @@
     "src/addons/volto-secondarymenu",
     "src/addons/volto-form-block",
     "src/addons/volto-subfooter",
-    "src/addons/volto-customer-satisfaction"
+    "src/addons/volto-customer-satisfaction",
+    "src/addons/volto-gdpr-privacy"
   ],
   "addons": [
-    "volto-cookie-banner",
     "volto-multilingual-widget",
     "volto-rss-block",
     "volto-venue",
@@ -36,7 +35,8 @@
     "volto-secondarymenu",
     "volto-form-block",
     "volto-subfooter",
-    "volto-customer-satisfaction"
+    "volto-customer-satisfaction",
+    "volto-gdpr-privacy"
   ],
   "scripts": {
     "start": "razzle start",
@@ -70,7 +70,6 @@
       "@italia/(.*)$": "<rootDir>/src/$1",
       "@package/config": "<rootDir>/jest-addons-loader.js",
       "volto-rss-block/(.*)$": "<rootDir>/src/addons/volto-rss-block/src/$1",
-      "volto-cookie-banner/(.*)$": "<rootDir>/src/addons/volto-cookie-banner/src/$1",
       "volto-multilingual-widget/(.*)$": "<rootDir>/src/addons/volto-multilingual-widget/src/$1",
       "volto-dropdownmenu/(.*)$": "<rootDir>/src/addons/volto-dropdownmenu/src/$1",
       "~/(.*)$": "<rootDir>/src/$1",
@@ -82,7 +81,8 @@
       "volto-secondarymenu/(.*)$": "<rootDir>/src/addons/volto-secondarymenu/src/$1",
       "volto-form-block/(.*)$": "<rootDir>/src/addons/volto-form-block/src/$1",
       "volto-subfooter/(.*)$": "<rootDir>/src/addons/volto-subfooter/src/$1",
-      "volto-customer-satisfaction/(.*)$": "<rootDir>/src/addons/volto-customer-satisfaction/src/$1"
+      "volto-customer-satisfaction/(.*)$": "<rootDir>/src/addons/volto-customer-satisfaction/src/$1",
+      "volto-gdpr-privacy/(.*)$": "<rootDir>/src/addons/volto-gdpr-privacy/src/$1"
     },
     "testMatch": [
       "**/__tests__/**/*.[jt]s?(x)",
@@ -198,7 +198,6 @@
     "typeface-roboto-mono": "0.0.75",
     "typeface-titillium-web": "0.0.72",
     "volto-blocks-widget": "collective/volto-blocks-widget#v2.0.1",
-    "volto-cookie-banner": "collective/volto-cookie-banner#v2.0.0",
     "volto-customer-satisfaction": "collective/volto-customer-satisfaction#v0.2.5",
     "volto-dropdownmenu": "collective/volto-dropdownmenu#v2.2.9",
     "volto-editablefooter": "RedTurtle/volto-editablefooter#v3.1.3",
@@ -211,7 +210,8 @@
     "volto-subblocks": "collective/volto-subblocks#v1.1.0",
     "volto-subfooter": "collective/volto-subfooter#v1.0.1",
     "volto-subsites": "collective/volto-subsites#v2.0.3",
-    "volto-venue": "collective/volto-venue#v3.0.1"
+    "volto-venue": "collective/volto-venue#v3.0.1",
+    "volto-gdpr-privacy": "collective/volto-gdpr-privacy#v1.1.11"
   },
   "devDependencies": {
     "@babel/core": "7.11.1",

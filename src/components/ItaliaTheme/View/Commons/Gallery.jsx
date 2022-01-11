@@ -194,8 +194,8 @@ const Gallery = ({
                   <div className="it-single-slide-wrapper" key={item['@id']}>
                     <EmbeddedVideo
                       title={item.title}
-                      key={item['@id'] || i}
-                      id={item['@id'] || i}
+                      key={item['@id'] ?? i}
+                      id={item['@id'] ?? i}
                       video_url={item?.remoteUrl || item}
                     />
                   </div>

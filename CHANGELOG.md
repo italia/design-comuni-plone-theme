@@ -1,3 +1,52 @@
+### [5.10.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.10.0...v5.10.1) (2022-01-11)
+
+
+### Bug Fixes
+
+* fixed gdpr-privacy banner ([bcd59c2](https://github.com/RedTurtle/design-volto-theme/commit/bcd59c20a2d5aafea9d61999f6dac2af9251935c))
+
+## [5.10.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.9.6...v5.10.0) (2022-01-10)
+
+
+### Features
+
+* added ConditionalEmbed in ItaliaTheme blocks ([146d368](https://github.com/RedTurtle/design-volto-theme/commit/146d3685b449ca2de902b1e3cdbd0f3999d2c147))
+* added volto-gdpr-privacy ([764fcff](https://github.com/RedTurtle/design-volto-theme/commit/764fcff78db209763b1cc5c53993f581450a354b))
+* added volto-gdpr-privacy ([4fc84d9](https://github.com/RedTurtle/design-volto-theme/commit/4fc84d9a90c774135c957c6f7c97f168551a560d))
+
+
+### Bug Fixes
+
+* fixed imports ([5e8d755](https://github.com/RedTurtle/design-volto-theme/commit/5e8d75560f19c4373fc847d5ef5545fa97db1905))
+* fixed volto-gdpr-privacy styles and accessibility ([d4e06cc](https://github.com/RedTurtle/design-volto-theme/commit/d4e06cc43ca31fcdf90a557ba9a0eacd3739070d))
+
+
+### Maintenance
+
+* change import of volto-gdpr-privacy ([cd5e7ea](https://github.com/RedTurtle/design-volto-theme/commit/cd5e7ea00a13d97ec65fc1aa0b67372e75b76c17))
+* import GdprPrivacyManager ([1640ce8](https://github.com/RedTurtle/design-volto-theme/commit/1640ce8ab91fe860c2c9699aabd3bef04a6445d4))
+* updated customization for Video block view with ConditionalEmbed ([d73ba14](https://github.com/RedTurtle/design-volto-theme/commit/d73ba14f7338bf5200ccacd624749932df6ce7c5))
+* updated depedencies ([c7763bb](https://github.com/RedTurtle/design-volto-theme/commit/c7763bbc29aa725620f343e16b5a620e897be662))
+* updated dependencies ([09a28f8](https://github.com/RedTurtle/design-volto-theme/commit/09a28f8ae229689a0a63b845d12f36cdfc0a2bcb))
+* updated dependencies ([4166ace](https://github.com/RedTurtle/design-volto-theme/commit/4166acedf49e5095bd963517fa57afcb314d8396))
+* updated dependencies ([1580ee7](https://github.com/RedTurtle/design-volto-theme/commit/1580ee76aec037438eff2d02798fe699f9bb3827))
+* updated dependencies ([7d7599c](https://github.com/RedTurtle/design-volto-theme/commit/7d7599c4dbb568305aa5669a0d5f77a4611946c0))
+* updated dependency ([ec88b54](https://github.com/RedTurtle/design-volto-theme/commit/ec88b54e928390a8b104c7486f0a2f4fe61330ca))
+* updated gdpr-privacy config ([9f321ad](https://github.com/RedTurtle/design-volto-theme/commit/9f321ada85b0e72502c365f71cee4b4c1f65f6c8))
+* updated volto-gdpr-privacy ([84d6222](https://github.com/RedTurtle/design-volto-theme/commit/84d622208eff63fa62e9b59fe9718e12a8e408d3))
+* updated volto-gdpr-privacy ([a935de8](https://github.com/RedTurtle/design-volto-theme/commit/a935de8af74bd8056225f6042c742fe6b518e095))
+* updated volto-gdpr-privacy ([722147b](https://github.com/RedTurtle/design-volto-theme/commit/722147b8680fe44e0611611c51f7b45f695bed0a))
+* updated volto-gdpr-privacy ([35df1c7](https://github.com/RedTurtle/design-volto-theme/commit/35df1c7a4a8d88a7b3ef1456bb828892a4e43c9f))
+* updated volto-gdpr-privacy ([4b59717](https://github.com/RedTurtle/design-volto-theme/commit/4b5971733f954999bc11aca61960b4e8d1d8b881))
+* updated volto-gdpr-privacy ([873adea](https://github.com/RedTurtle/design-volto-theme/commit/873adeac40a07f1d2ae69b359f9052e42a6436c6))
+
+### [5.9.6](https://github.com/RedTurtle/design-volto-theme/compare/v5.9.5...v5.9.6) (2022-01-10)
+
+
+### Bug Fixes
+
+* related news is now correctly shown in NewsItem view ([8180948](https://github.com/RedTurtle/design-volto-theme/commit/8180948d485430ed232fce475c890acd15121eed))
+
 ### [5.9.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.9.4...v5.9.5) (2021-12-20)
 
 

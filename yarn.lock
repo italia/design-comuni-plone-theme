@@ -10136,11 +10136,6 @@ js-base64@^2.1.8:
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.6.4.tgz#f4e686c5de1ea1f867dbcad3d46d969428df98c4"
   integrity sha512-pZe//GGmwJndub7ZghVHz7vjb2LgC1m8B07Au3eYqeqv9emhESByMXxaEgkUkEqJe87oBbSniGYoQNIBklc7IQ==
 
-js-cookie@^2.2.0:
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/js-cookie/-/js-cookie-2.2.1.tgz#69e106dc5d5806894562902aa5baec3744e9b2b8"
-  integrity sha512-HvdH2LzI/EAZcUwA8+0nKNtWHqS+ZmijLA30RwZA0bo7ToCckjK5MkGhjED9KoRcXO6BaGI3I9UIzSA1FKFPOQ==
-
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
@@ -14229,13 +14224,6 @@ react-beautiful-dnd@13.0.0:
     redux "^4.0.4"
     use-memo-one "^1.1.1"
 
-react-cookie-consent@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/react-cookie-consent/-/react-cookie-consent-3.0.0.tgz#4780f142326c301c06957a94f885dd70d3c566f5"
-  integrity sha512-H9vD+vUENkOSjh8ZsGG9Pgb30K58ys/roHNOTRFafTJvoC9NEeHO8XC//z54k+ZbVbsqcYe4Tiv7EYfFSq2y7Q==
-  dependencies:
-    js-cookie "^2.2.0"
-
 react-cookie@1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/react-cookie/-/react-cookie-1.0.5.tgz#234190bd55ddfea361444a89c873077ab6abf651"
@@ -17779,12 +17767,6 @@ volto-blocks-widget@collective/volto-blocks-widget#v2.0.1:
   version "2.0.1"
   resolved "https://codeload.github.com/collective/volto-blocks-widget/tar.gz/f420b3b25d580e35fe9dcb26f76195ebe0aba071"
 
-volto-cookie-banner@collective/volto-cookie-banner#v2.0.0:
-  version "2.0.0"
-  resolved "https://codeload.github.com/collective/volto-cookie-banner/tar.gz/a18b5e357799134fdc47e4daf560f601e2f4091c"
-  dependencies:
-    react-cookie-consent "^3.0.0"
-
 volto-customer-satisfaction@collective/volto-customer-satisfaction#v0.2.5:
   version "0.2.5"
   resolved "https://codeload.github.com/collective/volto-customer-satisfaction/tar.gz/0282bb883c756ce7b89146d326705ab1c968b433"
@@ -17811,6 +17793,10 @@ volto-form-block@collective/volto-form-block#v2.0.3:
     file-saver "^2.0.5"
     react-google-recaptcha-v3 "^1.8.0"
     volto-subblocks collective/volto-subblocks#v1.0.1
+
+volto-gdpr-privacy@collective/volto-gdpr-privacy#v1.1.11:
+  version "1.1.11"
+  resolved "https://codeload.github.com/collective/volto-gdpr-privacy/tar.gz/ede98f2d44eb9b14f7c2288b26f0f2be5c033299"
 
 volto-google-analytics@collective/volto-google-analytics#v1.1.0:
   version "1.1.0"
