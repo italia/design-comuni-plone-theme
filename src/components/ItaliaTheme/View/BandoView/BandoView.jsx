@@ -91,7 +91,7 @@ const BandoView = ({ content, location }) => {
   const [sideMenuElements, setSideMenuElements] = useState(null);
 
   let getAttachment = (item, i) => {
-    if (item.type === 'File') {
+    if (item.type === 'File' || item.type === 'Image') {
       return (
         <Attachment
           key={item.url + i}
