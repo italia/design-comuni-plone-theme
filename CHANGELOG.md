@@ -1,3 +1,16 @@
+### [5.10.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.10.1...v5.10.2) (2022-01-12)
+
+
+### Bug Fixes
+
+* 4th element now shows image in CardWithImageTemplate with 4 columns setting enabled ([7c3bd49](https://github.com/RedTurtle/design-volto-theme/commit/7c3bd4925b24ab963cce2f3de77defcccb4c59bb))
+
+
+### Maintenance
+
+* updated locales ([699fc9e](https://github.com/RedTurtle/design-volto-theme/commit/699fc9e91e287f9497e398d6a49277b796f0ea73))
+* updated volto-gdpr-privacy ([9332f0a](https://github.com/RedTurtle/design-volto-theme/commit/9332f0acd81742993519373f5e8f3ed872ccd021))
+
 ### [5.10.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.10.0...v5.10.1) (2022-01-11)
 
 
