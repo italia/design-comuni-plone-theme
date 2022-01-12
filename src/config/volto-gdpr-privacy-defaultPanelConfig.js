@@ -4,9 +4,9 @@ const defaultPanelConfig = {
   text: {
     //Text that is shown when the banner appears
     it: {
-      title: 'Usiamo i cookies',
+      title: 'Usiamo i cookie',
       description:
-        "Questo sito utilizza i cookie tecnici di navigazione e di sessione per garantire un miglior servizio di navigazione del sito, e cookies analitici per raccogliere informazioni sull'uso del sito da parte degli utenti.  Utilizza anche cookies di profilazione dell'utente per fini statistici. Per i cookie di profilazione puoi decidere se abilitarli o meno cliccando sul pulsante 'Impostazioni'. Per saperne di più, su come disabilitare i cookies oppure abilitarne solo alcuni, consulta la nostra <a href='/privacy-policy'>Cookie Policy</a>.",
+        "Questo sito utilizza i cookie tecnici di navigazione e di sessione per garantire un miglior servizio di navigazione del sito, e cookie analitici per raccogliere informazioni sull'uso del sito da parte degli utenti.  Utilizza anche cookie di profilazione dell'utente per fini statistici. Per i cookie di profilazione puoi decidere se abilitarli o meno cliccando sul pulsante 'Impostazioni'. Per saperne di più, su come disabilitare i cookie oppure abilitarne solo alcuni, consulta la nostra <a href='/privacy-policy'>Cookie Policy</a>.",
     },
     en: {
       title: 'We use cookies',
@@ -27,7 +27,7 @@ const defaultPanelConfig = {
       it: {
         title: 'Cookie tecnici',
         description:
-          'Il sito utilizza cookie tecnici per analizzare il traffico da e verso il sito. I cookies tecnici consento anche di fornire un migliore servizio di navigazione sul sito, e raccolgono informazioni di navigazione a questo scopo.',
+          'Il sito utilizza cookie tecnici per analizzare il traffico da e verso il sito. I cookie tecnici consento anche di fornire un migliore servizio di navigazione sul sito, e raccolgono informazioni di navigazione a questo scopo.',
       },
       en: {
         title: 'Technical cookies',
