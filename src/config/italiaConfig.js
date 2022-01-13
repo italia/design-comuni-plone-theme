@@ -19,7 +19,11 @@ import CardWithImageRssTemplateSkeleton from '@italia/components/ItaliaTheme/Blo
 import CardWithoutImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
 import CardWithoutImageRssTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton';
 
-import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  config as faConfig,
+  dom as faDom,
+  library as faLibrary,
+} from '@fortawesome/fontawesome-svg-core';
 import * as Icons from '@fortawesome/free-solid-svg-icons';
 import * as IconsRegular from '@fortawesome/free-regular-svg-icons';
 import * as IconsBrands from '@fortawesome/free-brands-svg-icons';
@@ -45,6 +49,8 @@ import faQuestionSVG from '@italia/icons/question-solid.svg';
 
 import applyRichTextConfig from '@italia/config/RichTextEditor/config';
 
+import gdprPrivacyPanelConfig from '@italia/config/volto-gdpr-privacy-defaultPanelConfig.js';
+
 const iconList = Object.keys(Icons.fas).map((icon) => Icons[icon]);
 const iconListRegular = Object.keys(IconsRegular.far).map(
   (icon) => IconsRegular[icon],
@@ -54,7 +60,9 @@ const iconListBrands = Object.keys(IconsBrands.fab).map(
   (icon) => IconsBrands[icon],
 );
 
-library.add(...iconList, ...iconListRegular, ...iconListBrands);
+//fontawessome config
+faConfig.autoAddCss = false;
+faLibrary.add(...iconList, ...iconListRegular, ...iconListBrands);
 
 export default function applyConfig(voltoConfig) {
   let config = applyRichTextConfig(voltoConfig);
@@ -138,6 +146,7 @@ export default function applyConfig(voltoConfig) {
     defaultExcludedFromSearch: {
       portalTypes: ['Image', 'File'],
     },
+
     italiaThemeViewsConfig: {
       imagePosition: 'afterHeader', // possible values: afterHeader, documentBody
     },
@@ -190,10 +199,24 @@ export default function applyConfig(voltoConfig) {
         'rssBlock',
         //se si aggiunge un nuovo blocco, verificare che in edit non ci siano bottoni che provocano il submit della form. Se succede, gestirli con e.prevenDefault() e.stopPropagation().
       ],
+
       showRestricted: false,
+    },
+
+    'volto-gdpr-privacy': {
+      ...config.settings['volto-gdpr-privacy'],
+      defaultPanelConfig: gdprPrivacyPanelConfig,
     },
     videoAllowExternalsDefault: false,
     showTrasparenzaFields: false,
+
+    appExtras: [
+      ...config.settings.appExtras,
+      {
+        match: '',
+        component: () => <style type="text/css">{faDom.css()}</style>, //load fontawesom dom css
+      },
+    ],
   };
 
   /******************************************************************************

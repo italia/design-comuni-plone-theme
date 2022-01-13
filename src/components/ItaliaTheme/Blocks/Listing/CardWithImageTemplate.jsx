@@ -52,6 +52,8 @@ const CardWithImageTemplate = (props) => {
     natural_image_size = false,
   } = props;
 
+  const imagesToShow = set_four_columns ? 4 : 3;
+
   return (
     <div className="card-with-image-template">
       <Container className="px-4">
@@ -75,7 +77,8 @@ const CardWithImageTemplate = (props) => {
               <ListingText item={item} />
             ) : null;
             const image = ListingImage({ item });
-            const showImage = (index < 3 || always_show_image) && image != null;
+            const showImage =
+              (index < imagesToShow || always_show_image) && image != null;
             const category = getCategory(item, show_type, show_section, props);
             const topics = show_topics ? item.tassonomia_argomenti : null;
 

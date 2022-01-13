@@ -64,8 +64,8 @@ const NewsItemView = ({ content, location }) => {
   const [sideMenuElements, setSideMenuElements] = useState(null);
 
   let related_items = [];
-  if (content?.related_news?.length > 0) {
-    related_items = [...related_items, ...content.related_news];
+  if (content?.notizie_correlate?.length > 0) {
+    related_items = [...related_items, ...content.notizie_correlate];
   }
   if (content?.relatedItems?.length > 0) {
     related_items = [...related_items, ...content.relatedItems];

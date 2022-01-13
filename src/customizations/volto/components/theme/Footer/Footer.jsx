@@ -13,7 +13,7 @@ import {
   FooterSmall,
   SubsiteFooter,
 } from '@italia/components/ItaliaTheme/';
-import { CookieBanner } from '@italia/addons/volto-cookie-banner';
+
 import { CustomerSatisfaction } from '@italia/components/ItaliaTheme';
 import config from '@plone/volto/registry';
 /**
@@ -48,7 +48,6 @@ const Footer = ({ intl }) => {
         <FooterMain />
         <FooterSmall />
       </footer>
-      {__CLIENT__ && <CookieBanner />}
     </>
   );
 
