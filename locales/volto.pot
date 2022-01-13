@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2022-01-12T11:30:27.696Z\n"
+"POT-Creation-Date: 2022-01-13T11:46:50.563Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -514,6 +514,7 @@ msgstr ""
 msgid "Trascina qui un file per sostituire quello esistente"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 # defaultMessage: Twitter Posts
 msgid "Twitter Posts"
@@ -667,6 +668,7 @@ msgid "altri_documenti"
 msgstr ""
 
 #: config/Blocks/ListingOptions/cardWithImageTemplate
+#: config/Blocks/ListingOptions/cardWithSlideUpTextTemplate
 # defaultMessage: Mostra l'immagine per tutti gli elementi
 msgid "always_show_image"
 msgstr ""
@@ -2755,7 +2757,7 @@ msgstr ""
 msgid "show_icon"
 msgstr ""
 
-#: config/Blocks/ListingOptions/photogalleryTemplate
+#: config/Blocks/ListingOptions/PhotogalleryTemplate
 # defaultMessage: Apri l'immagine in popup
 msgid "show_image_popup"
 msgstr ""
@@ -2910,6 +2912,8 @@ msgid "supported_by"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/ContactLink
+#: components/ItaliaTheme/View/Commons/Telephones
+#: components/ItaliaTheme/View/Commons/TelephonLink
 #: components/ItaliaTheme/View/PersonaView/PersonaTelephones
 # defaultMessage: Tel
 msgid "telefono"
@@ -2965,6 +2969,7 @@ msgid "tipologia_persona"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 # defaultMessage: Titolo
@@ -3000,16 +3005,19 @@ msgstr ""
 msgid "trasparenza"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 # defaultMessage: Link alla pagina del profilo
 msgid "twitterAccountLink"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 # defaultMessage: Accounts
 msgid "twitterAccounts"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 # defaultMessage: Inserisci i nomi degli account di cui vuoi visualizzare i post, separati da virgola. Ad esempio, se vuoi mostrare i tweet di Repubblica e del Corriere della Sera, inserisci “repubblica,Corriere".
 msgid "twitterAccounts_description"
