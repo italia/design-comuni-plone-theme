@@ -22,14 +22,14 @@ const SquaresImageTemplate = ({
         <div className="title">{title && <h2>{title}</h2>}</div>
         <div className="grid mb-3 mt-5">
           {items.map((item, index) => {
-            const image = getListingImageBackground(item, true);
+            const image = getListingImageBackground(item, 'preview');
 
             return (
               <UniversalLink
                 item={!isEditMode ? item : null}
                 href={isEditMode ? '#' : null}
                 style={{
-                  backgroundImage: `url(${image}/preview)`,
+                  backgroundImage: `url(${image})`,
                 }}
                 className="listing-item box bg-img"
                 key={index}

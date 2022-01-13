@@ -33,12 +33,18 @@ const ListingImage = ({
   }
 };
 
-export const getListingImageBackground = (item, useOriginal) => {
-  return item.image_field
-    ? getImageAttributes(item['@id'], {
-        imageField: item.image_field,
-        useOriginal,
-      })?.src
-    : null;
+export const getListingImageBackground = (item, size) => {
+  let url = null;
+  if (item.image_field) {
+    url = getImageAttributes(item['@id'], {
+      imageField: item.image_field,
+    })?.src;
+
+    if (size) {
+      url = url.replace('/listing', '/' + size);
+    }
+  }
+
+  return url;
 };
 export default ListingImage;
