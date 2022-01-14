@@ -81,6 +81,10 @@
       background: none;
       color: #fff;
       font-size: 15px;
+
+      &:focus {
+        outline: none;
+      }
     }
   }
 }
