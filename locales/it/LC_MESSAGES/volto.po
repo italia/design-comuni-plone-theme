@@ -230,6 +230,11 @@ msgstr "Se sei sicuro di aver inserito l'indirizzo corretto ma ottieni comunque 
 msgid "Image"
 msgstr "Immagine"
 
+#: components/ItaliaTheme/Footer/FooterSmall
+# defaultMessage: Impostazioni cookie
+msgid "Impostazioni cookie footer"
+msgstr ""
+
 #: components/ItaliaTheme/View/PageView/PageView
 # defaultMessage: In questa sezione
 msgid "In this section"

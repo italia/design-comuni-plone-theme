@@ -245,6 +245,11 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
+#: components/ItaliaTheme/Footer/FooterSmall
+# defaultMessage: Impostazioni cookie
+msgid "Impostazioni cookie footer"
+msgstr ""
+
 #: components/ItaliaTheme/View/PageView/PageView
 # defaultMessage: In questa sezione
 msgid "In this section"

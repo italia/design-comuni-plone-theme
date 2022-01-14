@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2022-01-14T09:19:28.197Z\n"
+"POT-Creation-Date: 2022-01-14T11:00:04.743Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -230,6 +230,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 # defaultMessage: Immagine
 msgid "Image"
+msgstr ""
+
+#: components/ItaliaTheme/Footer/FooterSmall
+# defaultMessage: Impostazioni cookie
+msgid "Impostazioni cookie footer"
 msgstr ""
 
 #: components/ItaliaTheme/View/PageView/PageView

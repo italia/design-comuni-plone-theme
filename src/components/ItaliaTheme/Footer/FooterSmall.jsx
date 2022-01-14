@@ -13,11 +13,16 @@ import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getSubFooter, getItemsByPath } from '@italia/addons/volto-subfooter';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { displayBanner } from '@italia/addons/volto-gdpr-privacy';
 
 const messages = defineMessages({
   goToPage: {
     id: 'Vai alla pagina',
     defaultMessage: 'Vai alla pagina',
+  },
+  cookieSettings: {
+    id: 'Impostazioni cookie footer',
+    defaultMessage: 'Impostazioni cookie',
   },
 });
 
@@ -47,7 +52,7 @@ const FooterSmall = () => {
     setLinks(_links);
   }, [intl.locale]);
 
-  return subFooterItems?.length > 0 || links.length > 0 ? (
+  return subFooterItems?.length > 0 || links.length > 0 || true ? (
     <div className="it-footer-small-prints clearfix">
       <Container tag="div">
         <h3 className="sr-only">{intl.formatMessage(messages.goToPage)}</h3>
@@ -77,6 +82,18 @@ const FooterSmall = () => {
                 </UniversalLink>
               </li>
             ))}
+          <li className="list-inline-item">
+            <button
+              className="footer-gdpr-privacy-show-banner"
+              onClick={(e) => {
+                e.preventDefault();
+                dispatch(displayBanner(true, true));
+              }}
+              title={intl.formatMessage(messages.cookieSettings)}
+            >
+              {intl.formatMessage(messages.cookieSettings)}
+            </button>
+          </li>
         </ul>
       </Container>
     </div>

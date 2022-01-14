@@ -1,3 +1,18 @@
+### [5.10.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.10.4...v5.10.5) (2022-01-14)
+
+
+### Bug Fixes
+
+* fix focus style on button in smallfooter ([3996346](https://github.com/RedTurtle/design-volto-theme/commit/3996346fd13bcf0c92c5441a479334765d294812))
+* fix label ([5c0681e](https://github.com/RedTurtle/design-volto-theme/commit/5c0681e9bc8f07041f4cfa67f6d0e70c5012fc8f))
+* fix TextCard blocks and labels ([1240ee9](https://github.com/RedTurtle/design-volto-theme/commit/1240ee9fdfaa67b3b052bf737aefc4d172b08e48))
+
+
+### Maintenance
+
+* added cookies settings button in footer small ([a66d9e6](https://github.com/RedTurtle/design-volto-theme/commit/a66d9e64e75a3220e535cbc0fda1bca690e146ed))
+* updated volto-gdpr-privacy ([88468a5](https://github.com/RedTurtle/design-volto-theme/commit/88468a5216c43f5ee5cf2492a18d7c66b90fe50c))
+
 ### [5.10.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.10.3...v5.10.4) (2022-01-13)
 
 
