@@ -1,3 +1,4 @@
+import React from 'react';
 import menuSVG from '@plone/volto/icons/menu.svg';
 import menuAltSVG from '@plone/volto/icons/menu-alt.svg';
 import navSVG from '@plone/volto/icons/nav.svg';
