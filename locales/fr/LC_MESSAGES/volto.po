@@ -413,16 +413,6 @@ msgstr "Rechercher"
 msgid "SearchBandiBlock"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SearchSections/SideBar
-# defaultMessage: Ricerca servizi
-msgid "SearchServices"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/SearchSections/SideBar
-# defaultMessage: Titolo
-msgid "SearchServicesTitle"
-msgstr ""
-
 #: components/ItaliaTheme/Header/SocialHeader
 # defaultMessage: Seguici su
 msgid "Seguici su"
@@ -636,6 +626,11 @@ msgstr "A qui il est adressé"
 msgid "accedere_al_servizio"
 msgstr "Accéder au service"
 
+#: components/ItaliaTheme/Blocks/Accordion/Sidebar
+# defaultMessage: Accordion
+msgid "accordion_block"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Actions
 # defaultMessage: Vedi azioni
 msgid "actions"
@@ -721,6 +716,11 @@ msgstr "Zone responsable"
 # defaultMessage: Argomento
 msgid "argoment"
 msgstr "Sujet"
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+# defaultMessage: Argomenti in evidenza
+msgid "arguments_in_evidence_block"
+msgstr ""
 
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
 # defaultMessage: Assessorati di riferimento
@@ -999,6 +999,11 @@ msgstr ""
 msgid "card_vedi"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
+# defaultMessage: Card con immagine
+msgid "card_width_image"
+msgstr ""
+
 #: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
 # defaultMessage: Formati scaricabili
 msgid "cartellamodulistica_formati_scaricabili"
@@ -1089,6 +1094,11 @@ msgstr "Compétences"
 msgid "contacts"
 msgstr "Contacts"
 
+#: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
+# defaultMessage: Contatti
+msgid "contacts_block"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 #: components/ItaliaTheme/View/UOView/UOView
 #: components/ItaliaTheme/View/VenueView/VenueView
@@ -1160,6 +1170,11 @@ msgstr "Lien pour le CTA"
 # defaultMessage: Titolo per il link della CTA
 msgid "ctaLinkTitle"
 msgstr "Titre du lien CTA"
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+# defaultMessage: Blocco CTA
+msgid "cta_block"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/CuredBy
 # defaultMessage: A cura di
@@ -1381,17 +1396,6 @@ msgstr "Dates et horaires"
 # defaultMessage: Decorrenza termine
 msgid "decorrenza_termine"
 msgstr "Date effective"
-
-#: components/ItaliaTheme/Blocks/Accordion/Sidebar
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
-#: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
-#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
-#: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
-#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
-#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
-# defaultMessage: Default
-msgid "default"
-msgstr "Défaut"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 # defaultMessage: Deleghe
@@ -1757,6 +1761,11 @@ msgstr ""
 msgid "iconDescription"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
+# defaultMessage: Blocco con icone
+msgid "iconss_blocks"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 # defaultMessage: Importi di viaggio e/o servizi
 msgid "importi_di_viaggio_e_o_servizi"
@@ -2008,6 +2017,11 @@ msgstr "Nouvelles en vedette"
 # defaultMessage: Novità
 msgid "novita"
 msgstr "Annonces"
+
+#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
+# defaultMessage: Blocco numeri
+msgid "numbers_block"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderNewsItem
 # defaultMessage: Numero del comunicato stampa
@@ -2575,12 +2589,17 @@ msgstr "Date de fin"
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Dove cercare
-msgid "search_service_block_sections"
-msgstr "Où regarder"
+msgid "search_sections"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
+# defaultMessage: Ricerca nelle sezioni
+msgid "search_sections_block"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Collegamenti
-msgid "search_service_links"
+msgid "search_sections_links"
 msgstr ""
 
 #: components/ItaliaTheme/Search/Search
@@ -2980,6 +2999,7 @@ msgid "tipologia_persona"
 msgstr "Type de personne"
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 # defaultMessage: Titolo

@@ -10,7 +10,7 @@ import { convertFromRaw, convertToRaw, EditorState, RichUtils } from 'draft-js';
 import isSoftNewlineEvent from 'draft-js/lib/isSoftNewlineEvent';
 import createInlineToolbarPlugin from 'draft-js-inline-toolbar-plugin';
 import { defineMessages } from 'react-intl';
-import { isEqual } from 'lodash';
+import { includes, isEqual } from 'lodash';
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({
@@ -149,6 +149,7 @@ class TextEditorWidget extends Component {
     let placeholder = this.props.placeholder
       ? this.props.placeholder
       : this.props.intl.formatMessage(messages.text);
+    let disableMoveToNearest = this.props.disableMoveToNearest;
 
     return (
       <>
@@ -164,13 +165,10 @@ class TextEditorWidget extends Component {
             blockStyleFn={config.settings.blockStyleFn}
             customStyleMap={config.settings.customStyleMap}
             placeholder={placeholder}
-            ref={(node) => {
-              this.node = node;
-            }}
             handleReturn={(e) => {
-              if (this.props.disableMoveToNearest) {
-                e.stopPropagation();
-              }
+              // if (disableMoveToNearest) {
+              //   e.stopPropagation();
+              // }
               if (isSoftNewlineEvent(e)) {
                 this.onChange(
                   RichUtils.insertSoftNewline(this.state.editorState),
@@ -178,11 +176,25 @@ class TextEditorWidget extends Component {
                 return 'handled';
               }
 
-              if (this.props.onSelectBlock && this.props.onAddBlock) {
-                this.props.onSelectBlock(
-                  this.props.onAddBlock('text', this.props.index + 1),
+              if (
+                !disableMoveToNearest &&
+                this.props.onSelectBlock &&
+                this.props.onAddBlock
+              ) {
+                const selectionState = this.state.editorState.getSelection();
+                const anchorKey = selectionState.getAnchorKey();
+                const currentContent = this.state.editorState.getCurrentContent();
+                const currentContentBlock = currentContent.getBlockForKey(
+                  anchorKey,
                 );
-                return 'handled';
+                const blockType = currentContentBlock.getType();
+                if (!includes(config.settings.listBlockTypes, blockType)) {
+                  this.props.onSelectBlock(
+                    this.props.onAddBlock('text', this.props.index + 1),
+                  );
+                  return 'handled';
+                }
+                return 'un-handled';
               }
 
               return {};
@@ -206,6 +218,9 @@ class TextEditorWidget extends Component {
                   e.stopPropagation();
                 }
               }
+            }}
+            ref={(node) => {
+              this.node = node;
             }}
           />
           {this.props.showToolbar && <InlineToolbar />}

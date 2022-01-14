@@ -1,3 +1,16 @@
+### [5.10.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.10.3...v5.10.4) (2022-01-13)
+
+
+### Bug Fixes
+
+* email address with dash ([6808300](https://github.com/RedTurtle/design-volto-theme/commit/6808300e0a5429e66ac90f6287b1004f0c3cb686))
+
+
+### Maintenance
+
+* updated tranlations ([8405b8b](https://github.com/RedTurtle/design-volto-theme/commit/8405b8b5d68a5e9bbb777151b64140b0f7e7e6b3))
+* updated volto-gdpr-privacy ([a76e704](https://github.com/RedTurtle/design-volto-theme/commit/a76e704da9be201056477ed802fffeff0e923a3a))
+
 ### [5.10.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.10.2...v5.10.3) (2022-01-12)
 
 

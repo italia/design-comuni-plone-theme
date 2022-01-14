@@ -184,7 +184,6 @@ const italiaBlocks = {
       addPermission: [],
       view: [],
     },
-    sidebarTab: 1,
   },
   alert: {
     id: 'alert',
@@ -205,7 +204,7 @@ const italiaBlocks = {
 
   testo_riquadro_semplice: {
     id: 'testo_riquadro_semplice',
-    title: 'Testo in riquadro semplice',
+    title: 'Testo Card semplice',
     icon: titleSVG,
     group: 'text',
     view: TextCardView,
@@ -220,7 +219,7 @@ const italiaBlocks = {
   },
   testo_riquadro_immagine: {
     id: 'testo_riquadro_immagine',
-    title: 'Testo in riquadro immagine',
+    title: 'Testo Card con immagine',
     icon: titleSVG,
     group: 'text',
     view: TextCardWithImageView,

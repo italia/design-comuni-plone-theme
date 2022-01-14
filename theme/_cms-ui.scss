@@ -240,6 +240,12 @@ body.cms-ui {
     .public-DraftStyleDefault-block {
       margin-bottom: 1rem;
     }
+
+    li {
+      .public-DraftStyleDefault-block {
+        margin-bottom: unset;
+      }
+    }
   }
 
   .block.text {
