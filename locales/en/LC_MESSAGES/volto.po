@@ -324,14 +324,6 @@ msgstr "Search site"
 msgid "SearchBandiBlock"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SearchSections/SideBar
-msgid "SearchServices"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/SearchSections/SideBar
-msgid "SearchServicesTitle"
-msgstr ""
-
 #: components/ItaliaTheme/Header/SocialHeader
 msgid "Seguici su"
 msgstr "Follow us on"
@@ -509,6 +501,10 @@ msgstr "Who is it for"
 msgid "accedere_al_servizio"
 msgstr "Log in to the service"
 
+#: components/ItaliaTheme/Blocks/Accordion/Sidebar
+msgid "accordion_block"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Actions
 msgid "actions"
 msgstr "View actions"
@@ -577,6 +573,10 @@ msgstr "Responsible area"
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 msgid "argoment"
 msgstr "Topic"
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+msgid "arguments_in_evidence_block"
+msgstr ""
 
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
 msgid "assessorati_riferimento"
@@ -801,6 +801,10 @@ msgstr ""
 msgid "card_vedi"
 msgstr "Read more"
 
+#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
+msgid "card_width_image"
+msgstr ""
+
 #: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
 msgid "cartellamodulistica_formati_scaricabili"
 msgstr "Downloadable formats"
@@ -874,6 +878,10 @@ msgstr "Skills"
 msgid "contacts"
 msgstr "Contacts"
 
+#: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
+msgid "contacts_block"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 #: components/ItaliaTheme/View/UOView/UOView
 #: components/ItaliaTheme/View/VenueView/VenueView
@@ -931,6 +939,10 @@ msgstr "CTA link"
 #: components/ItaliaTheme/Blocks/CTABlock/Sidebar
 msgid "ctaLinkTitle"
 msgstr "Title for CTA link"
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "cta_block"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/CuredBy
 msgid "cured_by"
@@ -1108,16 +1120,6 @@ msgstr "Dates and times"
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "decorrenza_termine"
 msgstr "Term effective date"
-
-#: components/ItaliaTheme/Blocks/Accordion/Sidebar
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
-#: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
-#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
-#: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
-#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
-#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
-msgid "default"
-msgstr "Default"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "deleghe"
@@ -1413,6 +1415,10 @@ msgstr ""
 msgid "iconDescription"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
+msgid "iconss_blocks"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "importi_di_viaggio_e_o_servizi"
 msgstr "Travel and / or service charges"
@@ -1618,6 +1624,10 @@ msgstr "News in evidence"
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "novita"
 msgstr "News"
+
+#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
+msgid "numbers_block"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderNewsItem
 msgid "numero_progressivo_cs"
@@ -2083,11 +2093,15 @@ msgid "search_endDate"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
-msgid "search_service_block_sections"
+msgid "search_sections"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
-msgid "search_service_links"
+msgid "search_sections_block"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
+msgid "search_sections_links"
 msgstr ""
 
 #: components/ItaliaTheme/Search/Search
@@ -2410,6 +2424,7 @@ msgid "tipologia_persona"
 msgstr "Person type"
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "title"

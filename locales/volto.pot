@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2022-01-13T12:20:18.295Z\n"
+"POT-Creation-Date: 2022-01-14T09:19:28.197Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -398,16 +398,6 @@ msgstr ""
 msgid "SearchBandiBlock"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SearchSections/SideBar
-# defaultMessage: Ricerca servizi
-msgid "SearchServices"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/SearchSections/SideBar
-# defaultMessage: Titolo
-msgid "SearchServicesTitle"
-msgstr ""
-
 #: components/ItaliaTheme/Header/SocialHeader
 # defaultMessage: Seguici su
 msgid "Seguici su"
@@ -621,6 +611,11 @@ msgstr ""
 msgid "accedere_al_servizio"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Accordion/Sidebar
+# defaultMessage: Accordion
+msgid "accordion_block"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Actions
 # defaultMessage: Vedi azioni
 msgid "actions"
@@ -705,6 +700,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 # defaultMessage: Argomento
 msgid "argoment"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+# defaultMessage: Argomenti in evidenza
+msgid "arguments_in_evidence_block"
 msgstr ""
 
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
@@ -984,6 +984,11 @@ msgstr ""
 msgid "card_vedi"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
+# defaultMessage: Card con immagine
+msgid "card_width_image"
+msgstr ""
+
 #: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
 # defaultMessage: Formati scaricabili
 msgid "cartellamodulistica_formati_scaricabili"
@@ -1074,6 +1079,11 @@ msgstr ""
 msgid "contacts"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
+# defaultMessage: Contatti
+msgid "contacts_block"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 #: components/ItaliaTheme/View/UOView/UOView
 #: components/ItaliaTheme/View/VenueView/VenueView
@@ -1144,6 +1154,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/CTABlock/Sidebar
 # defaultMessage: Titolo per il link della CTA
 msgid "ctaLinkTitle"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+# defaultMessage: Blocco CTA
+msgid "cta_block"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/CuredBy
@@ -1365,17 +1380,6 @@ msgstr ""
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Decorrenza termine
 msgid "decorrenza_termine"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Accordion/Sidebar
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
-#: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
-#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
-#: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
-#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
-#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
-# defaultMessage: Default
-msgid "default"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
@@ -1742,6 +1746,11 @@ msgstr ""
 msgid "iconDescription"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
+# defaultMessage: Blocco con icone
+msgid "iconss_blocks"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 # defaultMessage: Importi di viaggio e/o servizi
 msgid "importi_di_viaggio_e_o_servizi"
@@ -1992,6 +2001,11 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Novità
 msgid "novita"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
+# defaultMessage: Blocco numeri
+msgid "numbers_block"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderNewsItem
@@ -2560,12 +2574,17 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Dove cercare
-msgid "search_service_block_sections"
+msgid "search_sections"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
+# defaultMessage: Ricerca nelle sezioni
+msgid "search_sections_block"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Collegamenti
-msgid "search_service_links"
+msgid "search_sections_links"
 msgstr ""
 
 #: components/ItaliaTheme/Search/Search
@@ -2965,6 +2984,7 @@ msgid "tipologia_persona"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 # defaultMessage: Titolo

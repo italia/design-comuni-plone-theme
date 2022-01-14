@@ -184,7 +184,6 @@ const italiaBlocks = {
       addPermission: [],
       view: [],
     },
-    sidebarTab: 1,
   },
   alert: {
     id: 'alert',

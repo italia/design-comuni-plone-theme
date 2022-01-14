@@ -99,6 +99,7 @@ const Block = ({
                       onAddBlock={() => {
                         setSelected('content');
                       }}
+                      disableMoveToNearest={true}
                     />
                   </div>
                 </CardTitle>
@@ -112,22 +113,25 @@ const Block = ({
                     setSelected('content');
                   }}
                 >
-                  <TextEditorWidget
-                    data={data}
-                    fieldName="simple_card_content"
-                    selected={selected === 'content'}
-                    block={block}
-                    onChangeBlock={(data) =>
-                      onChange(data, 'simple_card_content')
-                    }
-                    placeholder={intl.formatMessage(
-                      messages.simple_card_content,
-                    )}
-                    showToolbar={true}
-                    onSelectBlock={onSelectBlock}
-                    onAddBlock={onAddBlock}
-                    index={index}
-                  />
+                  <CardText>
+                    <TextEditorWidget
+                      data={data}
+                      fieldName="simple_card_content"
+                      selected={selected === 'content'}
+                      block={block}
+                      onChangeBlock={(data) =>
+                        onChange(data, 'simple_card_content')
+                      }
+                      placeholder={intl.formatMessage(
+                        messages.simple_card_content,
+                      )}
+                      showToolbar={true}
+                      onSelectBlock={onSelectBlock}
+                      onAddBlock={onAddBlock}
+                      index={index}
+                      disableMoveToNearest={true}
+                    />
+                  </CardText>
                 </div>
               </>
             ) : (

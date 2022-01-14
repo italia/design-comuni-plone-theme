@@ -54,7 +54,7 @@ const Sidebar = ({ data, block, onChangeBlock, openObjectBrowser }) => {
     <Segment.Group raised key={block.id || block}>
       <header className="header pulled">
         <h2>
-          <FormattedMessage id="default" defaultMessage="Default" />
+          <FormattedMessage id="cta_block" defaultMessage="Blocco CTA" />
         </h2>
       </header>
       <Accordion className="form">

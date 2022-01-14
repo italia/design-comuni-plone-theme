@@ -105,6 +105,7 @@ const Block = ({
               onAddBlock={() => {
                 setSelected('content');
               }}
+              disableMoveToNearest={true}
             />
           </div>
         ) : (
@@ -161,6 +162,7 @@ const Block = ({
                         onSelectBlock={onSelectBlock}
                         onAddBlock={onAddBlock}
                         index={index}
+                        disableMoveToNearest={true}
                       />
                     </CardText>
                   </div>

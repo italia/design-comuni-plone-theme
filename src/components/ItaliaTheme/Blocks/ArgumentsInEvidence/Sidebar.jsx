@@ -36,7 +36,10 @@ const Sidebar = ({
     <Segment.Group raised>
       <header className="header pulled">
         <h2>
-          <FormattedMessage id="default" defaultMessage="Default" />
+          <FormattedMessage
+            id="arguments_in_evidence_block"
+            defaultMessage="Argomenti in evidenza"
+          />
         </h2>
       </header>
       <Accordion className="form">

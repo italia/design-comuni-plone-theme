@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Segment, Accordion } from 'semantic-ui-react';
-import { defineMessages, useIntl } from 'react-intl';
+import { defineMessages, useIntl, FormattedMessage } from 'react-intl';
 import { TextWidget, ArrayWidget } from '@plone/volto/components';
 import ObjectBrowserWidget from '@plone/volto/components/manage/Widgets/ObjectBrowserWidget';
 
 const messages = defineMessages({
   title: {
-    id: 'SearchServicesTitle',
+    id: 'title',
     defaultMessage: 'Titolo',
   },
   link: {
@@ -18,21 +18,17 @@ const messages = defineMessages({
     id: 'desc',
     defaultMessage: 'Link rapidi',
   },
-  search_service_block_sections: {
-    id: 'search_service_block_sections',
+  search_sections: {
+    id: 'search_sections',
     defaultMessage: 'Dove cercare',
   },
-  search_service_links: {
-    id: 'search_service_links',
+  search_sections_links: {
+    id: 'search_sections_links',
     defaultMessage: 'Collegamenti',
   },
   placeholder: {
     id: 'placeholder',
     defaultMessage: 'Testo di aiuto',
-  },
-  searchServices: {
-    id: 'SearchServices',
-    defaultMessage: 'Ricerca servizi',
   },
 });
 
@@ -49,12 +45,17 @@ const Sidebar = ({
   return (
     <Segment.Group raised>
       <header className="header pulled">
-        <h2>{intl.formatMessage(messages.searchServices)}</h2>
+        <h2>
+          <FormattedMessage
+            id="search_sections_block"
+            defaultMessage="Ricerca nelle sezioni"
+          />
+        </h2>
       </header>
       <Accordion className="form">
         <Accordion.Content active={true}>
           <TextWidget
-            id="SearchServicesTitle"
+            id="title"
             title={intl.formatMessage(messages.title)}
             required={true}
             value={data.title}
@@ -66,7 +67,7 @@ const Sidebar = ({
             }}
           />
           <TextWidget
-            id="SearchServicesPlaceholder"
+            id="placeholder"
             title={intl.formatMessage(messages.placeholder)}
             required={true}
             value={data.placeholder}
@@ -80,7 +81,7 @@ const Sidebar = ({
           {sections && (
             <ArrayWidget
               id="groups"
-              title={intl.formatMessage(messages.search_service_block_sections)}
+              title={intl.formatMessage(messages.search_sections)}
               noValuePresent={false}
               choices={Object.keys(sections).map((key) => [
                 key,
@@ -104,7 +105,7 @@ const Sidebar = ({
       </Accordion>
       <Accordion fluid styled className="form">
         <Accordion.Title active={true} index={0} onClick={() => {}}>
-          {intl.formatMessage(messages.search_service_links)}
+          {intl.formatMessage(messages.search_sections_links)}
         </Accordion.Title>
         <Accordion.Content active={true}>
           <ObjectBrowserWidget
