@@ -10,7 +10,7 @@ RUN buildDeps="build-essential python-dev" && \
     apt-get update && \
     apt-get install -y --no-install-recommends $runDeps $buildDeps && \
     yarn policies set-version 1.19.1 && \
-    RAZZLE_API_PATH=VOLTO_API_PATH RAZZLE_INTERNAL_API_PATH=VOLTO_INTERNAL_API_PATH yarn && \
+    RAZZLE_API_PATH=VOLTO_API_PATH RAZZLE_INTERNAL_API_PATH=VOLTO_INTERNAL_API_PATH yarn && yarn develop &&\
     RAZZLE_API_PATH=VOLTO_API_PATH RAZZLE_INTERNAL_API_PATH=VOLTO_INTERNAL_API_PATH yarn build && \
     rm -rf /home/node/.cache && \
     apt-get purge $buildDeps -y && \

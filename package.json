@@ -41,7 +41,7 @@
   "scripts": {
     "start": "razzle start",
     "develop:npx": "npx -p mrs-developer missdev --config=jsconfig.json --output=addons --fetch-https",
-    "develop": "missdev --config=jsconfig.json --output=addons",
+    "develop": "missdev --config=jsconfig.json --output=addons --fetch-https",
     "postinstall": "yarn omelette",
     "omelette": "ln -sf node_modules/@plone/volto/ omelette",
     "build": "razzle build",
