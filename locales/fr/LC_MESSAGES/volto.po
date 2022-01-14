@@ -206,6 +206,10 @@ msgstr "Si vous êtes certain que l'adresse est bonne, mais que vous avez un err
 msgid "Image"
 msgstr ""
 
+#: components/ItaliaTheme/Footer/FooterSmall
+msgid "Impostazioni cookie footer"
+msgstr "Paramètres des cookies"
+
 #: components/ItaliaTheme/View/PageView/PageView
 msgid "In this section"
 msgstr "Dans cette section"

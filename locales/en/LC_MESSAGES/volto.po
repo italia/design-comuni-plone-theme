@@ -189,6 +189,10 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
+#: components/ItaliaTheme/Footer/FooterSmall
+msgid "Impostazioni cookie footer"
+msgstr "Cookies settings"
+
 #: components/ItaliaTheme/View/PageView/PageView
 msgid "In this section"
 msgstr "In this section"

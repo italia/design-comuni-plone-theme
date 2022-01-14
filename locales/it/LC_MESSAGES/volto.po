@@ -189,6 +189,10 @@ msgstr "Se sei sicuro di aver inserito l'indirizzo corretto ma ottieni comunque 
 msgid "Image"
 msgstr "Immagine"
 
+#: components/ItaliaTheme/Footer/FooterSmall
+msgid "Impostazioni cookie footer"
+msgstr ""
+
 #: components/ItaliaTheme/View/PageView/PageView
 msgid "In this section"
 msgstr "In questa sezione"
