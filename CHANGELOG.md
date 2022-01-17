@@ -1,3 +1,51 @@
+### [5.10.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.10.4...v5.10.5) (2022-01-14)
+
+
+### Bug Fixes
+
+* fix focus style on button in smallfooter ([3996346](https://github.com/RedTurtle/design-volto-theme/commit/3996346fd13bcf0c92c5441a479334765d294812))
+* fix label ([5c0681e](https://github.com/RedTurtle/design-volto-theme/commit/5c0681e9bc8f07041f4cfa67f6d0e70c5012fc8f))
+* fix TextCard blocks and labels ([1240ee9](https://github.com/RedTurtle/design-volto-theme/commit/1240ee9fdfaa67b3b052bf737aefc4d172b08e48))
+
+
+### Maintenance
+
+* added cookies settings button in footer small ([a66d9e6](https://github.com/RedTurtle/design-volto-theme/commit/a66d9e64e75a3220e535cbc0fda1bca690e146ed))
+* updated volto-gdpr-privacy ([88468a5](https://github.com/RedTurtle/design-volto-theme/commit/88468a5216c43f5ee5cf2492a18d7c66b90fe50c))
+
+### [5.10.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.10.3...v5.10.4) (2022-01-13)
+
+
+### Bug Fixes
+
+* email address with dash ([6808300](https://github.com/RedTurtle/design-volto-theme/commit/6808300e0a5429e66ac90f6287b1004f0c3cb686))
+
+
+### Maintenance
+
+* updated tranlations ([8405b8b](https://github.com/RedTurtle/design-volto-theme/commit/8405b8b5d68a5e9bbb777151b64140b0f7e7e6b3))
+* updated volto-gdpr-privacy ([a76e704](https://github.com/RedTurtle/design-volto-theme/commit/a76e704da9be201056477ed802fffeff0e923a3a))
+
+### [5.10.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.10.2...v5.10.3) (2022-01-12)
+
+
+### Bug Fixes
+
+* fix gdpr privacy text ([34670b7](https://github.com/RedTurtle/design-volto-theme/commit/34670b7d5de28c4a42fb0a76f09ea1ac11f2f725))
+
+### [5.10.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.10.1...v5.10.2) (2022-01-12)
+
+
+### Bug Fixes
+
+* 4th element now shows image in CardWithImageTemplate with 4 columns setting enabled ([7c3bd49](https://github.com/RedTurtle/design-volto-theme/commit/7c3bd4925b24ab963cce2f3de77defcccb4c59bb))
+
+
+### Maintenance
+
+* updated locales ([699fc9e](https://github.com/RedTurtle/design-volto-theme/commit/699fc9e91e287f9497e398d6a49277b796f0ea73))
+* updated volto-gdpr-privacy ([9332f0a](https://github.com/RedTurtle/design-volto-theme/commit/9332f0acd81742993519373f5e8f3ed872ccd021))
+
 ### [5.10.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.10.0...v5.10.1) (2022-01-11)
 
 

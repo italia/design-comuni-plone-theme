@@ -34,7 +34,7 @@ const Sidebar = ({
     <Segment.Group raised>
       <header className="header pulled">
         <h2>
-          <FormattedMessage id="default" defaultMessage="Default" />
+          <FormattedMessage id="accordion_block" defaultMessage="Accordion" />
         </h2>
       </header>
       <Accordion className="form">

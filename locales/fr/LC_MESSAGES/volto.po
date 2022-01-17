@@ -206,6 +206,10 @@ msgstr "Si vous êtes certain que l'adresse est bonne, mais que vous avez un err
 msgid "Image"
 msgstr ""
 
+#: components/ItaliaTheme/Footer/FooterSmall
+msgid "Impostazioni cookie footer"
+msgstr "Paramètres des cookies"
+
 #: components/ItaliaTheme/View/PageView/PageView
 msgid "In this section"
 msgstr "Dans cette section"
@@ -341,14 +345,6 @@ msgstr "Rechercher"
 msgid "SearchBandiBlock"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SearchSections/SideBar
-msgid "SearchServices"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/SearchSections/SideBar
-msgid "SearchServicesTitle"
-msgstr ""
-
 #: components/ItaliaTheme/Header/SocialHeader
 msgid "Seguici su"
 msgstr "Suivez-nous sur"
@@ -436,7 +432,6 @@ msgstr "Déposez un fichier ici pour télécharger un nouveau fichier"
 msgid "Trascina qui un file per sostituire quello esistente"
 msgstr "Faites glisser un fichier ici pour remplacer l'existant"
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "Twitter Posts"
 msgstr ""
@@ -527,6 +522,10 @@ msgstr "A qui il est adressé"
 msgid "accedere_al_servizio"
 msgstr "Accéder au service"
 
+#: components/ItaliaTheme/Blocks/Accordion/Sidebar
+msgid "accordion_block"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Actions
 msgid "actions"
 msgstr "Voir les actions"
@@ -564,7 +563,6 @@ msgid "altri_documenti"
 msgstr "Autres documents"
 
 #: config/Blocks/ListingOptions/cardWithImageTemplate
-#: config/Blocks/ListingOptions/cardWithSlideUpTextTemplate
 msgid "always_show_image"
 msgstr ""
 
@@ -596,6 +594,10 @@ msgstr "Zone responsable"
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 msgid "argoment"
 msgstr "Sujet"
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+msgid "arguments_in_evidence_block"
+msgstr ""
 
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
 msgid "assessorati_riferimento"
@@ -820,6 +822,10 @@ msgstr ""
 msgid "card_vedi"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
+msgid "card_width_image"
+msgstr ""
+
 #: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
 msgid "cartellamodulistica_formati_scaricabili"
 msgstr "Formats téléchargeables"
@@ -893,6 +899,10 @@ msgstr "Compétences"
 msgid "contacts"
 msgstr "Contacts"
 
+#: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
+msgid "contacts_block"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 #: components/ItaliaTheme/View/UOView/UOView
 #: components/ItaliaTheme/View/VenueView/VenueView
@@ -950,6 +960,10 @@ msgstr "Lien pour le CTA"
 #: components/ItaliaTheme/Blocks/CTABlock/Sidebar
 msgid "ctaLinkTitle"
 msgstr "Titre du lien CTA"
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "cta_block"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/CuredBy
 msgid "cured_by"
@@ -1127,16 +1141,6 @@ msgstr "Dates et horaires"
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "decorrenza_termine"
 msgstr "Date effective"
-
-#: components/ItaliaTheme/Blocks/Accordion/Sidebar
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
-#: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
-#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
-#: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
-#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
-#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
-msgid "default"
-msgstr "Défaut"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "deleghe"
@@ -1432,6 +1436,10 @@ msgstr ""
 msgid "iconDescription"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
+msgid "iconss_blocks"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "importi_di_viaggio_e_o_servizi"
 msgstr "Frais de déplacement et services"
@@ -1637,6 +1645,10 @@ msgstr "Nouvelles en vedette"
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "novita"
 msgstr "Annonces"
+
+#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
+msgid "numbers_block"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderNewsItem
 msgid "numero_progressivo_cs"
@@ -2102,11 +2114,15 @@ msgid "search_endDate"
 msgstr "Date de fin"
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
-msgid "search_service_block_sections"
-msgstr "Où regarder"
+msgid "search_sections"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
-msgid "search_service_links"
+msgid "search_sections_block"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
+msgid "search_sections_links"
 msgstr ""
 
 #: components/ItaliaTheme/Search/Search
@@ -2259,7 +2275,7 @@ msgstr ""
 msgid "show_icon"
 msgstr ""
 
-#: config/Blocks/ListingOptions/PhotogalleryTemplate
+#: config/Blocks/ListingOptions/photogalleryTemplate
 msgid "show_image_popup"
 msgstr ""
 
@@ -2384,8 +2400,6 @@ msgid "supported_by"
 msgstr "Avec le soutien de"
 
 #: components/ItaliaTheme/View/Commons/ContactLink
-#: components/ItaliaTheme/View/Commons/Telephones
-#: components/ItaliaTheme/View/Commons/TelephonLink
 #: components/ItaliaTheme/View/PersonaView/PersonaTelephones
 msgid "telefono"
 msgstr "Tél."
@@ -2431,7 +2445,7 @@ msgid "tipologia_persona"
 msgstr "Type de personne"
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "title"
@@ -2461,17 +2475,14 @@ msgstr "Sujets"
 msgid "trasparenza"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccountLink"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccounts"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccounts_description"
 msgstr ""

@@ -26,7 +26,10 @@ const Sidebar = ({ data, block, onChangeBlock }) => {
     <Segment.Group raised>
       <header className="header pulled">
         <h2>
-          <FormattedMessage id="default" defaultMessage="Default" />
+          <FormattedMessage
+            id="card_width_image"
+            defaultMessage="Card con immagine"
+          />
         </h2>
       </header>
       <Accordion className="form">

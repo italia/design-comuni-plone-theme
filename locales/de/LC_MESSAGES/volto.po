@@ -204,6 +204,10 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
+#: components/ItaliaTheme/Footer/FooterSmall
+msgid "Impostazioni cookie footer"
+msgstr ""
+
 #: components/ItaliaTheme/View/PageView/PageView
 msgid "In this section"
 msgstr ""
@@ -339,14 +343,6 @@ msgstr ""
 msgid "SearchBandiBlock"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SearchSections/SideBar
-msgid "SearchServices"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/SearchSections/SideBar
-msgid "SearchServicesTitle"
-msgstr ""
-
 #: components/ItaliaTheme/Header/SocialHeader
 msgid "Seguici su"
 msgstr ""
@@ -434,7 +430,6 @@ msgstr ""
 msgid "Trascina qui un file per sostituire quello esistente"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "Twitter Posts"
 msgstr ""
@@ -525,6 +520,10 @@ msgstr ""
 msgid "accedere_al_servizio"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Accordion/Sidebar
+msgid "accordion_block"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Actions
 msgid "actions"
 msgstr ""
@@ -562,7 +561,6 @@ msgid "altri_documenti"
 msgstr ""
 
 #: config/Blocks/ListingOptions/cardWithImageTemplate
-#: config/Blocks/ListingOptions/cardWithSlideUpTextTemplate
 msgid "always_show_image"
 msgstr ""
 
@@ -593,6 +591,10 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 msgid "argoment"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+msgid "arguments_in_evidence_block"
 msgstr ""
 
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
@@ -818,6 +820,10 @@ msgstr ""
 msgid "card_vedi"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
+msgid "card_width_image"
+msgstr ""
+
 #: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
 msgid "cartellamodulistica_formati_scaricabili"
 msgstr ""
@@ -891,6 +897,10 @@ msgstr ""
 msgid "contacts"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
+msgid "contacts_block"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 #: components/ItaliaTheme/View/UOView/UOView
 #: components/ItaliaTheme/View/VenueView/VenueView
@@ -947,6 +957,10 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/CTABlock/Sidebar
 msgid "ctaLinkTitle"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "cta_block"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/CuredBy
@@ -1124,16 +1138,6 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "decorrenza_termine"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Accordion/Sidebar
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
-#: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
-#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
-#: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
-#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
-#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
-msgid "default"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
@@ -1430,6 +1434,10 @@ msgstr ""
 msgid "iconDescription"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
+msgid "iconss_blocks"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "importi_di_viaggio_e_o_servizi"
 msgstr ""
@@ -1634,6 +1642,10 @@ msgstr ""
 
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "novita"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
+msgid "numbers_block"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderNewsItem
@@ -2100,11 +2112,15 @@ msgid "search_endDate"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
-msgid "search_service_block_sections"
+msgid "search_sections"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
-msgid "search_service_links"
+msgid "search_sections_block"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
+msgid "search_sections_links"
 msgstr ""
 
 #: components/ItaliaTheme/Search/Search
@@ -2257,7 +2273,7 @@ msgstr ""
 msgid "show_icon"
 msgstr ""
 
-#: config/Blocks/ListingOptions/PhotogalleryTemplate
+#: config/Blocks/ListingOptions/photogalleryTemplate
 msgid "show_image_popup"
 msgstr ""
 
@@ -2382,8 +2398,6 @@ msgid "supported_by"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/ContactLink
-#: components/ItaliaTheme/View/Commons/Telephones
-#: components/ItaliaTheme/View/Commons/TelephonLink
 #: components/ItaliaTheme/View/PersonaView/PersonaTelephones
 msgid "telefono"
 msgstr ""
@@ -2429,7 +2443,7 @@ msgid "tipologia_persona"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "title"
@@ -2459,17 +2473,14 @@ msgstr ""
 msgid "trasparenza"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccountLink"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccounts"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccounts_description"
 msgstr ""

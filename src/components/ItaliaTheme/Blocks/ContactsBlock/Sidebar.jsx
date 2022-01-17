@@ -49,7 +49,7 @@ const Sidebar = ({
     <Segment.Group raised>
       <header className="header pulled">
         <h2>
-          <FormattedMessage id="default" defaultMessage="Default" />
+          <FormattedMessage id="contacts_block" defaultMessage="Contatti" />
         </h2>
       </header>
       <Accordion className="form">

@@ -61,7 +61,7 @@ const ContactLink = ({ tel, fax, email, label = true, strong = false }) => {
       function (v) {
         let r =
           "<a href='mailto:" +
-          v.trim().replace(/-|\/|\s/gm, '') +
+          v.trim().replace(/|\/|\s/gm, '') +
           "' title='" +
           intl.formatMessage(messages.write_to) +
           "' >" +

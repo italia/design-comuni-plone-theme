@@ -103,7 +103,7 @@ msgstr "Contenuto"
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 msgid "Content in evidence"
-msgstr "Contenuto in evidenza"
+msgstr "Contenuto in primo piano"
 
 #: components/ItaliaTheme/View/Commons/SideMenu
 msgid "Contenuto"
@@ -188,6 +188,10 @@ msgstr "Se sei sicuro di aver inserito l'indirizzo corretto ma ottieni comunque 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 msgid "Image"
 msgstr "Immagine"
+
+#: components/ItaliaTheme/Footer/FooterSmall
+msgid "Impostazioni cookie footer"
+msgstr ""
 
 #: components/ItaliaTheme/View/PageView/PageView
 msgid "In this section"
@@ -324,14 +328,6 @@ msgstr "Cerca nel sito"
 msgid "SearchBandiBlock"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/SearchSections/SideBar
-msgid "SearchServices"
-msgstr "Ricerca servizi"
-
-#: components/ItaliaTheme/Blocks/SearchSections/SideBar
-msgid "SearchServicesTitle"
-msgstr "Titolo"
-
 #: components/ItaliaTheme/Header/SocialHeader
 msgid "Seguici su"
 msgstr "Seguici su"
@@ -419,7 +415,6 @@ msgstr "Trascina qui un file per caricare un nuovo file"
 msgid "Trascina qui un file per sostituire quello esistente"
 msgstr "Trascina qui un file per sostituire quello esistente"
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "Twitter Posts"
 msgstr "Twitter Posts"
@@ -510,6 +505,10 @@ msgstr "A chi si rivolge"
 msgid "accedere_al_servizio"
 msgstr "Accedere al servizio"
 
+#: components/ItaliaTheme/Blocks/Accordion/Sidebar
+msgid "accordion_block"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Actions
 msgid "actions"
 msgstr "Vedi azioni"
@@ -547,7 +546,6 @@ msgid "altri_documenti"
 msgstr "Altri documenti"
 
 #: config/Blocks/ListingOptions/cardWithImageTemplate
-#: config/Blocks/ListingOptions/cardWithSlideUpTextTemplate
 msgid "always_show_image"
 msgstr "Mostra l'immagine per tutti gli elementi"
 
@@ -579,6 +577,10 @@ msgstr "Area responsabile"
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 msgid "argoment"
 msgstr "Argomento"
+
+#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
+msgid "arguments_in_evidence_block"
+msgstr ""
 
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
 msgid "assessorati_riferimento"
@@ -803,6 +805,10 @@ msgstr "Mostra l'immagine"
 msgid "card_vedi"
 msgstr "Vedi"
 
+#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
+msgid "card_width_image"
+msgstr ""
+
 #: components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView
 msgid "cartellamodulistica_formati_scaricabili"
 msgstr "Formati scaricabili"
@@ -876,6 +882,10 @@ msgstr "Competenze"
 msgid "contacts"
 msgstr "Contatti"
 
+#: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
+msgid "contacts_block"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 #: components/ItaliaTheme/View/UOView/UOView
 #: components/ItaliaTheme/View/VenueView/VenueView
@@ -933,6 +943,10 @@ msgstr "Link della CTA"
 #: components/ItaliaTheme/Blocks/CTABlock/Sidebar
 msgid "ctaLinkTitle"
 msgstr "Titolo per il link della CTA"
+
+#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
+msgid "cta_block"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/CuredBy
 msgid "cured_by"
@@ -1110,16 +1124,6 @@ msgstr "Date e orari"
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 msgid "decorrenza_termine"
 msgstr "Decorrenza termine"
-
-#: components/ItaliaTheme/Blocks/Accordion/Sidebar
-#: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
-#: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
-#: components/ItaliaTheme/Blocks/CTABlock/Sidebar
-#: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
-#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
-#: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
-msgid "default"
-msgstr "Default"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "deleghe"
@@ -1415,6 +1419,10 @@ msgstr "Icona"
 msgid "iconDescription"
 msgstr "Puoi selezionare un’icona fra quelle proposte nel menu a tendina oppure puoi scrivere/incollare nel campo di testo il nome di un’icona di fontawesome 5"
 
+#: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
+msgid "iconss_blocks"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView/PersonaView
 msgid "importi_di_viaggio_e_o_servizi"
 msgstr "Importi di viaggio e/o servizi"
@@ -1620,6 +1628,10 @@ msgstr "Notizie in evidenza"
 #: components/ItaliaTheme/View/Commons/RelatedItems
 msgid "novita"
 msgstr "Novità"
+
+#: components/ItaliaTheme/Blocks/NumbersBlock/Sidebar
+msgid "numbers_block"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderNewsItem
 msgid "numero_progressivo_cs"
@@ -2085,12 +2097,16 @@ msgid "search_endDate"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
-msgid "search_service_block_sections"
-msgstr "Dove cercare"
+msgid "search_sections"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
-msgid "search_service_links"
-msgstr "Collegamenti"
+msgid "search_sections_block"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
+msgid "search_sections_links"
+msgstr ""
 
 #: components/ItaliaTheme/Search/Search
 msgid "search_skip_to_search_results"
@@ -2242,7 +2258,7 @@ msgstr ""
 msgid "show_icon"
 msgstr "Mostra l'icona"
 
-#: config/Blocks/ListingOptions/PhotogalleryTemplate
+#: config/Blocks/ListingOptions/photogalleryTemplate
 msgid "show_image_popup"
 msgstr ""
 
@@ -2367,8 +2383,6 @@ msgid "supported_by"
 msgstr "Con il supporto di"
 
 #: components/ItaliaTheme/View/Commons/ContactLink
-#: components/ItaliaTheme/View/Commons/Telephones
-#: components/ItaliaTheme/View/Commons/TelephonLink
 #: components/ItaliaTheme/View/PersonaView/PersonaTelephones
 msgid "telefono"
 msgstr "Telefono"
@@ -2414,7 +2428,7 @@ msgid "tipologia_persona"
 msgstr "Tipologia persona"
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 msgid "title"
@@ -2444,17 +2458,14 @@ msgstr "Argomenti"
 msgid "trasparenza"
 msgstr "Trasparenza"
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccountLink"
 msgstr "Link alla pagina del profilo"
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccounts"
 msgstr "Accounts"
 
-#: components/ItaliaTheme/Blocks/SimpleList/Sidebar
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 msgid "twitterAccounts_description"
 msgstr "Inserisci i nomi degli account di cui vuoi visualizzare i post, separati da virgola. Ad esempio, se vuoi mostrare i tweet di Repubblica e del Corriere della Sera, inserisci “repubblica,Corriere"."
