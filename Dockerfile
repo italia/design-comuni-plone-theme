@@ -16,6 +16,7 @@ RUN buildDeps="build-essential ca-certificates git-core openssl python-dev" && \
     apt-get install -y --no-install-recommends $buildDeps && \
     yarn policies set-version 1.19.1 && \
     yarn --frozen-lockfile && \
+    yarn develop && \
     yarn build && \
     rm -rf /home/node/.cache && \
     apt-get purge $buildDeps -y && \
