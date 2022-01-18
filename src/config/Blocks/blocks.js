@@ -247,6 +247,7 @@ const italiaBlocks = {
       view: [],
     },
     sidebarTab: 1,
+    blockHasOwnFocusManagement: true,
   },
   numbersBlock: {
     id: 'numbersBlock',
