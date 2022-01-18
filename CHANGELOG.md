@@ -1,3 +1,23 @@
+## [5.11.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.10.5...v5.11.0) (2022-01-18)
+
+
+### Features
+
+* added google breadcrumbs Structured data ([2b16316](https://github.com/RedTurtle/design-volto-theme/commit/2b16316ccbb06133d665c4d80de715498658d740))
+
+
+### Bug Fixes
+
+* added image condition ([4c7eca6](https://github.com/RedTurtle/design-volto-theme/commit/4c7eca60406b45c6bcc8ce4762ab657dae257645))
+* bugfix mobile toolbar layout of load image into image block ([4e9fa45](https://github.com/RedTurtle/design-volto-theme/commit/4e9fa451634514908a7bc03d1e3ea2900e98b9d1))
+* do not create new line in accordion block on Enter press ([e9a6062](https://github.com/RedTurtle/design-volto-theme/commit/e9a60624e894f458e48457f7cb4a5fd6365fa9a8))
+* titles margin ([968f31a](https://github.com/RedTurtle/design-volto-theme/commit/968f31a5663ceb04d4b81ad5a19b1e0e976a910b))
+
+
+### Maintenance
+
+* added Attachment component in BandoView ([7b75562](https://github.com/RedTurtle/design-volto-theme/commit/7b755621d8b25ffa18d830e7ad587c83da784a7d))
+
 ### [5.10.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.10.4...v5.10.5) (2022-01-14)
 
 
