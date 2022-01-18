@@ -8,6 +8,7 @@ import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 
 import {
+  Attachment,
   SideMenu,
   HelpBox,
   PageHeader,
@@ -25,9 +26,15 @@ import {
   SkipToMainContent,
   Module,
 } from '@italia/components/ItaliaTheme/View';
+
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
 import { Icon } from '@italia/components/ItaliaTheme';
+import {
+  Card,
+  CardBody,
+  CardTitle,
+} from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
   descrizione: {
@@ -82,6 +89,45 @@ const BandoView = ({ content, location }) => {
   const intl = useIntl();
   let documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
+
+  let getAttachment = (item, i) => {
+    if (item.type === 'File' || item.type === 'Image') {
+      return (
+        <Attachment
+          key={item.url + i}
+          title={item.title}
+          description={item.description}
+          download_url={item.url}
+          item={item}
+        />
+        // item={item} viene utilizzato nelle customizzazioni per ottenere altre proprietà
+      );
+    } else if (item.type === 'Link') {
+      return (
+        <Card
+          className="card card-teaser shadow p-4 mt-3 rounded attachment"
+          noWrapper={true}
+          tag="div"
+        >
+          <Icon
+            className={undefined}
+            icon={'it-external-link'}
+            padding={false}
+          />
+          <CardBody>
+            <CardTitle tag="h3" className="title">
+              <UniversalLink
+                href={flattenToAppURL(item.url)}
+                rel="noopener noreferrer"
+              >
+                {item.title}
+              </UniversalLink>
+            </CardTitle>
+          </CardBody>
+        </Card>
+      );
+    }
+  };
 
   useEffect(() => {
     if (documentBody.current) {
@@ -224,6 +270,7 @@ const BandoView = ({ content, location }) => {
                 <BandoDates content={content} />
               </RichTextArticle>
             )}
+            {/* ALLEGATI (CARTELLE APPROFONDIMENTI) */}
             {content?.approfondimento?.length > 0 && (
               <RichTextArticle
                 tag_id="allegati"
@@ -243,29 +290,7 @@ const BandoView = ({ content, location }) => {
                           key={item.url + i}
                         />
                       ) : (
-                        <div
-                          className={
-                            'genericcard card card-teaser shadow p-3 mt-3 rounded'
-                          }
-                          key={item.url + i}
-                        >
-                          <div className="card-body">
-                            <div className="card-text">
-                              <Icon
-                                className={undefined}
-                                icon={
-                                  item.type === 'File'
-                                    ? 'it-clip'
-                                    : 'it-external-link'
-                                }
-                                padding={false}
-                              />
-                              <UniversalLink href={flattenToAppURL(item.url)}>
-                                {item.title}
-                              </UniversalLink>
-                            </div>
-                          </div>
-                        </div>
+                        getAttachment(item, i)
                       ),
                     )}
                   </div>
@@ -289,42 +314,7 @@ const BandoView = ({ content, location }) => {
                                   key={inner_item.url + x}
                                 />
                               ) : (
-                                <div
-                                  className={
-                                    'genericcard card card-teaser shadow p-3 mt-3 rounded'
-                                  }
-                                  key={inner_item.url + x}
-                                >
-                                  <div className="card-body">
-                                    <div className="card-text">
-                                      <p>{item.Type}</p>
-                                      <Icon
-                                        className={undefined}
-                                        icon={
-                                          inner_item.type === 'File'
-                                            ? 'it-clip'
-                                            : 'it-external-link'
-                                        }
-                                        padding={false}
-                                      />
-                                      {inner_item.type === 'File' ? (
-                                        <UniversalLink
-                                          href={flattenToAppURL(inner_item.url)}
-                                        >
-                                          {inner_item.title}
-                                        </UniversalLink>
-                                      ) : (
-                                        <UniversalLink
-                                          openLinkInNewTab={true}
-                                          href={flattenToAppURL(inner_item.url)}
-                                          rel="noopener noreferrer"
-                                        >
-                                          {inner_item.title}
-                                        </UniversalLink>
-                                      )}
-                                    </div>
-                                  </div>
-                                </div>
+                                getAttachment(inner_item, x)
                               ),
                           )}
                         </div>
