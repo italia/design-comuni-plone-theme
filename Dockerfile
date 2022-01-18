@@ -5,13 +5,24 @@ USER root
 
 COPY . .
 
-RUN buildDeps="build-essential python-dev" && \
-    runDeps="git-core openssl ca-certificates" && \
+ENV RAZZLE_API_PATH=VOLTO_API_PATH
+ENV RAZZLE_INTERNAL_API_PATH=VOLTO_INTERNAL_API_PATH
+ENV RAZZLE_RECAPTCHA_KEY=VOLTO_RECAPTCHA_KEY
+# ENV RAZZLE_GA_CODE=VOLTO_GA_CODE
+# ENV SENTRY_DSN=VOLTO_SENTRY_DSN
+
+RUN buildDeps="build-essential ca-certificates git-core openssl python-dev" && \
     apt-get update && \
-    apt-get install -y --no-install-recommends $runDeps $buildDeps && \
+    apt-get install -y --no-install-recommends $buildDeps && \
     yarn policies set-version 1.19.1 && \
+<<<<<<< HEAD
     RAZZLE_API_PATH=VOLTO_API_PATH RAZZLE_INTERNAL_API_PATH=VOLTO_INTERNAL_API_PATH yarn && yarn develop &&\
     RAZZLE_API_PATH=VOLTO_API_PATH RAZZLE_INTERNAL_API_PATH=VOLTO_INTERNAL_API_PATH yarn build && \
+=======
+    yarn --frozen-lockfile && \
+    yarn develop && \
+    yarn build && \
+>>>>>>> master
     rm -rf /home/node/.cache && \
     apt-get purge $buildDeps -y && \
     apt-get clean && \
@@ -25,3 +36,4 @@ COPY --chown=node --from=build /home/node/app /home/node/app
 EXPOSE 3000 3001 4000 4001
 ENTRYPOINT ["/home/node/app/entrypoint.sh"]
 CMD ["yarn", "start:prod"]
+

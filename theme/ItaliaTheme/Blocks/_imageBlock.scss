@@ -1,0 +1,12 @@
+.block.image {
+  .no-image-wrapper {
+    .toolbar-inner {
+      height: auto;
+      flex-wrap: wrap;
+
+      .input {
+        max-width: calc(100% - 16px);
+      }
+    }
+  }
+}

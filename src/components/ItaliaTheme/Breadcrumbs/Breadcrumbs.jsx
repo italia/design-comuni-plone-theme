@@ -18,6 +18,7 @@ import {
   Breadcrumb,
   BreadcrumbItem,
 } from 'design-react-kit/dist/design-react-kit';
+import GoogleBreadcrumbs from '@italia/components/ItaliaTheme/Breadcrumbs/GoogleBreadcrumbs';
 
 const messages = defineMessages({
   home: {
@@ -49,28 +50,31 @@ const Breadcrumbs = ({ pathname }) => {
   }
 
   return items?.length > 0 ? (
-    <Row>
-      <Col>
-        <nav className="breadcrumb-container">
-          <Breadcrumb aria-label="breadcrumb" listTag="ol" tag="nav">
-            <BreadcrumbItem tag="li">
-              <UniversalLink href="/">
-                {intl.formatMessage(messages.home)}
-              </UniversalLink>
-              <span className="separator">/</span>
-            </BreadcrumbItem>
-            {items.slice(0, -1).map((item, index, items) => (
-              <BreadcrumbItem tag="li" key={item.url}>
-                <UniversalLink href={item.url}>{item.title}</UniversalLink>
-                {index < items.length - 1 && (
-                  <span className="separator">/</span>
-                )}
+    <>
+      <GoogleBreadcrumbs items={items} />
+      <Row>
+        <Col>
+          <nav className="breadcrumb-container">
+            <Breadcrumb aria-label="breadcrumb" listTag="ol" tag="nav">
+              <BreadcrumbItem tag="li">
+                <UniversalLink href="/">
+                  {intl.formatMessage(messages.home)}
+                </UniversalLink>
+                <span className="separator">/</span>
               </BreadcrumbItem>
-            ))}
-          </Breadcrumb>
-        </nav>
-      </Col>
-    </Row>
+              {items.slice(0, -1).map((item, index, items) => (
+                <BreadcrumbItem tag="li" key={item.url}>
+                  <UniversalLink href={item.url}>{item.title}</UniversalLink>
+                  {index < items.length - 1 && (
+                    <span className="separator">/</span>
+                  )}
+                </BreadcrumbItem>
+              ))}
+            </Breadcrumb>
+          </nav>
+        </Col>
+      </Row>
+    </>
   ) : null;
 };
 

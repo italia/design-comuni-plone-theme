@@ -14,6 +14,12 @@ function apply_path {
     sed -i "s#VOLTO_API_PATH#${RAZZLE_API_PATH}#g" $bundlejs
     sed -i "s#VOLTO_INTERNAL_API_PATH#${RAZZLE_INTERNAL_API_PATH}#g" $mainjs
     sed -i "s#VOLTO_INTERNAL_API_PATH#${RAZZLE_INTERNAL_API_PATH}#g" $bundlejs
+    sed -i "s#VOLTO_RECAPTCHA_KEY#${RAZZLE_RECAPTCHA_KEY}#g" $mainjs
+    sed -i "s#VOLTO_RECAPTCHA_KEY#${RAZZLE_RECAPTCHA_KEY}#g" $bundlejs
+    # sed -i "s#VOLTO_GA_CODE#${RAZZLE_GA_CODE}#g" $mainjs
+    # sed -i "s#VOLTO_GA_CODE#${RAZZLE_GA_CODE}#g" $bundlejs
+    # sed -i "s#VOLTO_SENTRY_DSN#${SENTRY_DSN}#g" $mainjs
+    # sed -i "s#VOLTO_SENTRY_DSN#${SENTRY_DSN}#g" $bundlejs
 
     echo "Zipping JS Files"
     gzip -fk $mainjs
@@ -26,4 +32,3 @@ test -n "$RAZZLE_API_PATH" && apply_path
 
 echo "Starting Volto"
 exec "$@"
-
