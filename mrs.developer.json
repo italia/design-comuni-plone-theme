@@ -4,99 +4,98 @@
     "path": "src",
     "https": "https://github.com/redturtle/volto-rss-block.git",
     "url": "git@github.com:redturtle/volto-rss-block.git",
-    "tag": "v2.0.0"
+    "tag": "v2.2.0"
   },
-
   "volto-multilingual-widget": {
     "package": "@italia/addons/volto-multilingual-widget",
     "path": "src",
     "https": "https://github.com/collective/volto-multilingual-widget.git",
     "url": "git@github.com:collective/volto-multilingual-widget.git",
-    "tag": "v2.1.0"
+    "tag": "v2.2.0"
   },
   "volto-venue": {
     "package": "@italia/addons/volto-venue",
     "path": "src",
     "https": "https://github.com/collective/volto-venue.git",
     "url": "git@github.com:collective/volto-venue.git",
-    "tag": "v3.0.1"
+    "tag": "v3.1.2"
   },
   "volto-subblocks": {
     "package": "@italia/addons/volto-subblocks",
     "path": "src",
     "https": "https://github.com/collective/volto-subblocks.git",
     "url": "git@github.com:collective/volto-subblocks.git",
-    "tag": "v1.1.0"
+    "tag": "v1.2.0"
   },
   "volto-dropdownmenu": {
     "package": "@italia/addons/volto-dropdownmenu",
     "path": "src",
     "https": "https://github.com/collective/volto-dropdownmenu.git",
     "url": "git@github.com:collective/volto-dropdownmenu.git",
-    "tag": "v2.2.9"
+    "tag": "v2.3.0"
   },
   "volto-subsites": {
     "package": "@italia/addons/volto-subsites",
     "path": "src",
     "https": "https://github.com/collective/volto-subsites.git",
     "url": "git@github.com:collective/volto-subsites.git",
-    "tag": "v2.0.3"
+    "tag": "v2.1.0"
   },
   "volto-social-settings": {
     "package": "@italia/addons/volto-social-settings",
     "path": "src",
     "https": "https://github.com/collective/volto-social-settings.git",
     "url": "git@github.com:collective/volto-social-settings.git",
-    "tag": "v2.1.2"
+    "tag": "v2.2.0"
   },
   "volto-editablefooter": {
     "package": "@italia/addons/volto-editablefooter",
     "path": "src",
     "https": "https://github.com/RedTurtle/volto-editablefooter.git",
     "url": "git@github.com:RedTurtle/volto-editablefooter.git",
-    "tag": "v3.1.3"
+    "tag": "v4.1.1"
   },
   "volto-blocks-widget": {
     "package": "@italia/addons/volto-blocks-widget",
     "path": "src",
     "https": "https://github.com/collective/volto-blocks-widget.git",
     "url": "git@github.com:collective/volto-blocks-widget.git",
-    "tag": "v2.0.1"
+    "tag": "v2.1.0"
   },
   "volto-google-analytics": {
     "package": "@italia/addons/volto-google-analytics",
     "path": "src",
     "https": "https://github.com/collective/volto-google-analytics.git",
     "url": "git@github.com:collective/volto-google-analytics.git",
-    "tag": "v1.1.0"
+    "tag": "v1.2.0"
   },
   "volto-secondarymenu": {
     "package": "@italia/addons/volto-secondarymenu",
     "path": "src",
     "https": "https://github.com/collective/volto-secondarymenu.git",
     "url": "git@github.com:collective/volto-secondarymenu.git",
-    "tag": "v2.1.4"
+    "tag": "v2.2.0"
   },
   "volto-form-block": {
     "package": "@italia/addons/volto-form-block",
     "path": "src",
     "https": "https://github.com/collective/volto-form-block.git",
     "url": "git@github.com:collective/volto-form-block.git",
-    "tag": "v2.0.3"
+    "tag": "v2.1.0"
   },
   "volto-subfooter": {
     "package": "@italia/addons/volto-subfooter",
     "path": "src",
     "https": "https://github.com/collective/volto-subfooter.git",
     "url": "git@github.com:collective/volto-subfooter.git",
-    "tag": "v1.0.1"
+    "tag": "v1.0.3"
   },
   "volto-customer-satisfaction": {
     "package": "@italia/addons/volto-customer-satisfaction",
     "path": "src",
     "https": "https://github.com/collective/volto-customer-satisfaction.git",
     "url": "git@github.com:collective/volto-customer-satisfaction.git",
-    "tag": "v0.2.5"
+    "tag": "v0.2.6"
   },
   "volto-gdpr-privacy": {
     "package": "@italia/addons/volto-gdpr-privacy",

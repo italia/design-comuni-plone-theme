@@ -7,9 +7,8 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 
 import { UniversalLink } from '@plone/volto/components';
-import Image from '@plone/volto/components/theme/Image/Image';
 import { CardCategory } from '@italia/components/ItaliaTheme';
-import { ListingCategory } from '@italia/components/ItaliaTheme';
+import { ListingCategory, ListingImage } from '@italia/components/ItaliaTheme';
 
 export const CardPersona = ({
   item,
@@ -21,6 +20,7 @@ export const CardPersona = ({
   type,
   isEditMode,
 }) => {
+  const image = ListingImage({ item, maxSize: 300, useOriginal: false });
   return (
     <Card
       className={`card-persona card-teaser-image card-flex no-after ${
@@ -45,16 +45,7 @@ export const CardPersona = ({
           {listingText && <CardText>{listingText}</CardText>}
         </CardBody>
         {showImage && (
-          <div className="card-image card-image-rounded">
-            <Image
-              className="listing-image"
-              image={item.foto_persona}
-              aria-hidden="true"
-              alt=""
-              useOriginal={false}
-              maxSize={300}
-            />
-          </div>
+          <div className="card-image card-image-rounded">{image}</div>
         )}
       </div>
     </Card>

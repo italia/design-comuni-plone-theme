@@ -73,6 +73,9 @@ export CardCalendar from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/
 export ListingCategory from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/ListingCategory';
 export ListingText from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/ListingText';
 export ListingLinkMore from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/ListingLinkMore';
+export ListingImage, {
+  getListingImageBackground,
+} from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/ListingImage';
 
 /********* ERROR PAGES ********* */
 export Unauthorized from '@italia/components/ItaliaTheme/Unauthorized/Unauthorized';

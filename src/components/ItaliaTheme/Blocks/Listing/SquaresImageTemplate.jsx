@@ -2,8 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Container } from 'design-react-kit/dist/design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
-import { flattenToAppURL } from '@plone/volto/helpers';
-import { ListingLinkMore } from '@italia/components/ItaliaTheme';
+
+import {
+  ListingLinkMore,
+  getListingImageBackground,
+} from '@italia/components/ItaliaTheme';
 
 const SquaresImageTemplate = ({
   items,
@@ -19,15 +22,14 @@ const SquaresImageTemplate = ({
         <div className="title">{title && <h2>{title}</h2>}</div>
         <div className="grid mb-3 mt-5">
           {items.map((item, index) => {
-            let image = item?.image || item?.immagine_testata;
+            const image = getListingImageBackground(item, 'preview');
+
             return (
               <UniversalLink
                 item={!isEditMode ? item : null}
                 href={isEditMode ? '#' : null}
                 style={{
-                  backgroundImage: `url(${flattenToAppURL(
-                    image?.scales?.preview?.download || '',
-                  )})`,
+                  backgroundImage: `url(${image})`,
                 }}
                 className="listing-item box bg-img"
                 key={index}

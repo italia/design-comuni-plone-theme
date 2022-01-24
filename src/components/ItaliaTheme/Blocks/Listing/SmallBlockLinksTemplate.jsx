@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
-import Image from '@plone/volto/components/theme/Image/Image';
-import { ListingLinkMore } from '@italia/components/ItaliaTheme';
+
+import { ListingLinkMore, ListingImage } from '@italia/components/ItaliaTheme';
 
 const SmallBlockLinksTemplate = ({
   items,
@@ -25,8 +25,8 @@ const SmallBlockLinksTemplate = ({
         )}
         <Row className="items">
           {items.map((item, index) => {
-            const image =
-              item.image || item.immagine_testata || item.foto_persona;
+            const image = ListingImage({ item, maxSize: 200 });
+
             return (
               <Col
                 md="3"
@@ -40,15 +40,7 @@ const SmallBlockLinksTemplate = ({
                       href={isEditMode ? '#' : ''}
                       className="img-link"
                     >
-                      <Image
-                        image={image}
-                        title={item.title}
-                        alt=""
-                        aria-hidden="true"
-                        className="listing-image"
-                        useOriginal={false}
-                        maxSize={200}
-                      />
+                      {image}
                     </UniversalLink>
                   </div>
                 )}

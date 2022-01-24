@@ -48,14 +48,14 @@
       }
     }
 
-    // Removed link list in PageHeader
+    /* Removed link list in PageHeader*/
     .PageHeaderWrapper {
       .link-list-wrapper {
         display: none;
       }
     }
 
-    // Removed shadow and card's padding. Add border
+    /* Removed shadow and card's padding. Add border*/
     .card {
       border: 1px solid $gray-border !important;
       page-break-inside: avoid;
@@ -126,9 +126,9 @@
           display: none;
         }
 
-        // .block { //i blocchi devono essere visibili per quei CT che hanno i blocchi
-        //   display: none;
-        // }
+        /*.block { //i blocchi devono essere visibili per quei CT che hanno i blocchi
+          display: none;
+        }*/
       }
     }
 

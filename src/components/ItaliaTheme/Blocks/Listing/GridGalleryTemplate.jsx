@@ -1,12 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-
 import { UniversalLink } from '@plone/volto/components';
 import { useIntl, defineMessages } from 'react-intl';
-import Image from '@plone/volto/components/theme/Image/Image';
-
-import { ListingLinkMore } from '@italia/components/ItaliaTheme';
+import { ListingLinkMore, ListingImage } from '@italia/components/ItaliaTheme';
 import {
   Container,
   Row,
@@ -50,8 +47,11 @@ const GridGalleryTemplate = ({
         )}
         <div className="grid-gallery-grid">
           {items.map((item, index) => {
-            const image =
-              item.image || item.immagine_testata || item.foto_persona;
+            const image = ListingImage({
+              item,
+              useOriginal: true,
+              className: '',
+            });
 
             return (
               <div
@@ -62,17 +62,7 @@ const GridGalleryTemplate = ({
                   item={!isEditMode ? item : null}
                   href={isEditMode ? '#' : null}
                 >
-                  {image && (
-                    <Image
-                      image={image}
-                      alt=""
-                      loading="lazy"
-                      role="presentation"
-                      aria-hidden="true"
-                      useOriginal={false}
-                      maxSize={450}
-                    />
-                  )}
+                  {image && image}
                   <h3>{item.title}</h3>
                 </UniversalLink>
               </div>

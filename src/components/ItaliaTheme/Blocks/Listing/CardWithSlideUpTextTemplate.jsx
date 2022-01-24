@@ -5,11 +5,11 @@ import {
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import { getCalendarDate } from '@italia/helpers';
 import {
   ListingLinkMore,
   ListingCategory,
+  getListingImageBackground,
 } from '@italia/components/ItaliaTheme';
 import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 import { defineMessages, useIntl } from 'react-intl';
@@ -42,7 +42,7 @@ const CardWithSlideUpTextTemplate = (props) => {
         <div className="title">{title && <h2>{title}</h2>}</div>
         <div className="grid mb-3 mt-5">
           {items.map((item, index) => {
-            let image = item?.image || item?.immagine_testata;
+            let image = getListingImageBackground(item, 'preview');
             const category = getCategory(item, show_type, show_section, props);
             const date = hide_dates ? null : getCalendarDate(item);
 
@@ -51,9 +51,7 @@ const CardWithSlideUpTextTemplate = (props) => {
                 item={!isEditMode ? item : null}
                 href={isEditMode ? '#' : null}
                 style={{
-                  backgroundImage: `url(${flattenToAppURL(
-                    image?.scales?.preview?.download || '',
-                  )})`,
+                  backgroundImage: `url(${image})`,
                 }}
                 className="listing-item box bg-img"
                 key={index}

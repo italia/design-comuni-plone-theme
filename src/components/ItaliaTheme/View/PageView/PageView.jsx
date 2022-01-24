@@ -55,7 +55,7 @@ const PageView = ({ content, token, location, history }) => {
 
   if (layout === 'document_view') {
     const rightHeaderHasContent =
-      content.immagine_testata?.scales ||
+      content.image?.scales ||
       richTextHasContent(content.info_testata) ||
       content.mostra_navigazione ||
       content?.tassonomia_argomenti?.length > 0 ||
@@ -90,13 +90,13 @@ const PageView = ({ content, token, location, history }) => {
                       <Actions url={content['@id']} title={content.title} />
                     </div>
                   )}
-                  {content.immagine_testata?.scales && (
+                  {content.image?.scales && (
                     <div className="header-image px-4 mb-3">
                       <Image
-                        image={content.immagine_testata}
+                        image={content.image}
                         alt={content.title}
                         maxSize={300}
-                        key={content.immagine_testata?.download}
+                        key={content.image?.download}
                       />
                     </div>
                   )}

@@ -1,3 +1,4 @@
+import React from 'react';
 import menuSVG from '@plone/volto/icons/menu.svg';
 import menuAltSVG from '@plone/volto/icons/menu-alt.svg';
 import navSVG from '@plone/volto/icons/nav.svg';
@@ -19,7 +20,11 @@ import CardWithImageRssTemplateSkeleton from '@italia/components/ItaliaTheme/Blo
 import CardWithoutImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
 import CardWithoutImageRssTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton';
 
-import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  config as faConfig,
+  dom as faDom,
+  library as faLibrary,
+} from '@fortawesome/fontawesome-svg-core';
 import * as Icons from '@fortawesome/free-solid-svg-icons';
 import * as IconsRegular from '@fortawesome/free-regular-svg-icons';
 import * as IconsBrands from '@fortawesome/free-brands-svg-icons';
@@ -56,7 +61,9 @@ const iconListBrands = Object.keys(IconsBrands.fab).map(
   (icon) => IconsBrands[icon],
 );
 
-library.add(...iconList, ...iconListRegular, ...iconListBrands);
+//fontawessome config
+faConfig.autoAddCss = false;
+faLibrary.add(...iconList, ...iconListRegular, ...iconListBrands);
 
 export default function applyConfig(voltoConfig) {
   let config = applyRichTextConfig(voltoConfig);
@@ -203,6 +210,14 @@ export default function applyConfig(voltoConfig) {
     },
     videoAllowExternalsDefault: false,
     showTrasparenzaFields: false,
+
+    appExtras: [
+      ...config.settings.appExtras,
+      {
+        match: '',
+        component: () => <style type="text/css">{faDom.css()}</style>, //load fontawesom dom css
+      },
+    ],
   };
 
   /******************************************************************************
@@ -263,6 +278,7 @@ export default function applyConfig(voltoConfig) {
       ],
       listing_bg_colors: [], //{name:'blue', label:'Blu'},{name:'light-blue', label:'Light blue'},{name:'sidebar-background', label:'Grey'}
       listing_items_colors: [], //{name:'blue', label:'Blu'},{name:'light-blue', label:'Light blue'},{name:'sidebar-background', label:'Grey'}
+      getAsyncData: null, // questo disabilita il ssr dei listing perché rallenta vistosamente la pagina (per ora continuiamo con rendertron)
     },
     hero: {
       ...config.blocks.blocksConfig.hero,

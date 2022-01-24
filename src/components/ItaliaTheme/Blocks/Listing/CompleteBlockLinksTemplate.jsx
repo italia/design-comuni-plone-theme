@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { UniversalLink } from '@plone/volto/components';
-import Image from '@plone/volto/components/theme/Image/Image';
 import {
   Card,
   CardBody,
@@ -11,7 +10,7 @@ import {
   Row,
   Col,
 } from 'design-react-kit/dist/design-react-kit';
-import { ListingLinkMore } from '@italia/components/ItaliaTheme';
+import { ListingLinkMore, ListingImage } from '@italia/components/ItaliaTheme';
 
 const CompleteBlockLinksTemplate = ({
   items,
@@ -34,8 +33,7 @@ const CompleteBlockLinksTemplate = ({
         )}
         <Row className="items">
           {items.map((item, index) => {
-            const image =
-              item.image || item.immagine_testata || item.foto_persona;
+            const image = ListingImage({ item, className: '' });
 
             return (
               <Col md="6" lg="3" key={item['@id']} className="col-item">
@@ -50,17 +48,7 @@ const CompleteBlockLinksTemplate = ({
                     href={isEditMode ? '#' : null}
                   >
                     <div className="d-flex">
-                      {image && (
-                        <div className="image-container">
-                          <Image
-                            image={image}
-                            aria-hidden="true"
-                            alt=""
-                            useOriginal={false}
-                            maxSize={400}
-                          />
-                        </div>
-                      )}
+                      {image && <div className="image-container">{image}</div>}
                       <div>
                         <CardBody>
                           <CardTitle tag="h3" className="text-secondary">
