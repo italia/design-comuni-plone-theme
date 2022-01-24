@@ -141,7 +141,7 @@ const PhotogalleryTemplate = ({
           <div className="it-carousel-all it-card-bg">
             <Slider {...settings} ref={slider}>
               {items.map((item, i) => {
-                const image = <ListingImage item={item} />;
+                const image = ListingImage({ item });
 
                 return (
                   <div
