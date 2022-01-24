@@ -42,6 +42,7 @@
     "start": "razzle start",
     "develop:npx": "npx -p mrs-developer missdev --config=jsconfig.json --output=addons --fetch-https",
     "develop": "missdev --config=jsconfig.json --output=addons --fetch-https",
+    "preinstall": "if [ -f $(pwd)/node_modules/.bin/missdev ]; then yarn develop; else yarn develop:npx; fi",
     "postinstall": "yarn omelette",
     "omelette": "ln -sf node_modules/@plone/volto/ omelette",
     "build": "razzle build",
