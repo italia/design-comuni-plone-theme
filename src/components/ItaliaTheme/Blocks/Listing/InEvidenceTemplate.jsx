@@ -67,7 +67,7 @@ const InEvidenceTemplate = (props) => {
             const listingText = show_description ? (
               <ListingText item={item} />
             ) : null;
-            const image = ListingImage({ item });
+            const image = <ListingImage item={item} />;
             const category = getCategory(item, show_type, show_section, props);
             const topics = show_topics ? item.tassonomia_argomenti : null;
 

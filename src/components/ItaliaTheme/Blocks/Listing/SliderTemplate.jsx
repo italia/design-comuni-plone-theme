@@ -148,7 +148,7 @@ const SliderTemplate = ({
 
             <Slider {...settings} ref={slider}>
               {items.map((item, index) => {
-                const image = ListingImage({ item, loading: 'lazy' });
+                const image = <ListingImage item={item} loading="lazy" />;
                 if (!image) return null;
                 return (
                   <div

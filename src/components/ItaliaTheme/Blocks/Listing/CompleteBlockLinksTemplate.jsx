@@ -33,7 +33,7 @@ const CompleteBlockLinksTemplate = ({
         )}
         <Row className="items">
           {items.map((item, index) => {
-            const image = ListingImage({ item, className: '' });
+            const image = <ListingImage item={item} className="" />;
 
             return (
               <Col md="6" lg="3" key={item['@id']} className="col-item">

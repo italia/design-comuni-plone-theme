@@ -47,11 +47,9 @@ const GridGalleryTemplate = ({
         )}
         <div className="grid-gallery-grid">
           {items.map((item, index) => {
-            const image = ListingImage({
-              item,
-              useOriginal: true,
-              className: '',
-            });
+            const image = (
+              <ListingImage item={item} useOriginal={true} className="" />
+            );
 
             return (
               <div

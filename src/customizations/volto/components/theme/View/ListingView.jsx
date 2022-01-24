@@ -23,7 +23,7 @@ const ListingView = ({ content }) => (
     <PageHeader content={content} />
     <section id="content-core">
       {content.items.map((item) => {
-        const image = ListingImage({ item });
+        const image = <ListingImage item={item} />;
 
         return (
           <div key={item.url} className="listing-item mx-3 my-4">

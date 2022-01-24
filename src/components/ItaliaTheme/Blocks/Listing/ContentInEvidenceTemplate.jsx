@@ -50,7 +50,7 @@ const ContentInEvidenceTemplate = ({
           const date = getCalendarDate(item);
           const eventRecurrenceMore = getEventRecurrenceMore(item, isEditMode);
           const listingText = <ListingText item={item} />;
-          const image = ListingImage({ item, className: 'item-image' });
+          const image = <ListingImage item={item} className="item-image" />;
           const icon = getItemIcon(item);
           return (
             <Row key={item['@id']} className="content-in-evidence">

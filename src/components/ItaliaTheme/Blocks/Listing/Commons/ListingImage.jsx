@@ -9,7 +9,7 @@ const ListingImage = ({
   useOriginal = false,
   maxSize = 400,
   className = 'listing-image',
-  loading,
+  ...imageProps
 }) => {
   if (!item.image_field) {
     if (showDefault) {
@@ -26,8 +26,8 @@ const ListingImage = ({
         role="presentation"
         imageField={item.image_field}
         useOriginal={useOriginal}
-        loading={loading}
         maxSize={maxSize}
+        {...imageProps}
       />
     );
   }
