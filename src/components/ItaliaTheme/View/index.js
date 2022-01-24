@@ -98,5 +98,11 @@ export TrasparenzaPlaceholderAfterContent from '@italia/components/ItaliaTheme/V
 export UOPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/UOView/Placeholder/AfterContent';
 export UOPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/UOView/Placeholder/AfterRelatedItems';
 export UOTelephones from '@italia/components/ItaliaTheme/View/UOView/UOTelephones';
+export UOPeople from '@italia/components/ItaliaTheme/View/UOView/UOPeople';
+export UOStructure from '@italia/components/ItaliaTheme/View/UOView/UOStructure';
+export UOServices from '@italia/components/ItaliaTheme/View/UOView/UOServices';
+export UOContacts from '@italia/components/ItaliaTheme/View/UOView/UOContacts';
+export UODocuments from '@italia/components/ItaliaTheme/View/UOView/UODocuments';
+export UOWhatDoesItDo from '@italia/components/ItaliaTheme/View/UOView/UOWhatDoesItDo';
 export VenuePlaceholderAfterContent from '@italia/components/ItaliaTheme/View/VenueView/Placeholder/AfterContent';
 export VenuePlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/VenueView/Placeholder/AfterRelatedItems';

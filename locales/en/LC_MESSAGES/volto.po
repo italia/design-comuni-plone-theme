@@ -720,7 +720,7 @@ msgstr "Reference departments"
 msgid "assessore_di"
 msgstr "Councilor of"
 
-#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/UOView/UOStructure
 # defaultMessage: Assessore di riferimento
 msgid "assessore_riferimento"
 msgstr "Reference councilor"
@@ -1072,7 +1072,7 @@ msgid "compensi"
 msgstr "Remunerations"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaView
-#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/UOView/UOWhatDoesItDo
 # defaultMessage: Competenze
 msgid "competenze"
 msgstr "Skills"
@@ -1088,7 +1088,7 @@ msgid "contacts_block"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView
-#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/UOView/UOContacts
 #: components/ItaliaTheme/View/VenueView/VenueView
 # defaultMessage: Contatti
 msgid "contatti"
@@ -1109,7 +1109,7 @@ msgstr "Internal contacts"
 msgid "copertura_geografica"
 msgstr "Geographic coverage of the service"
 
-#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/UOView/UOWhatDoesItDo
 # defaultMessage: Cosa fa
 msgid "cosa_fa"
 msgstr "What does it do"
@@ -1537,7 +1537,7 @@ msgstr "Elements of interest"
 msgid "email_label"
 msgstr "E-mail"
 
-#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/UOView/UOContacts
 # defaultMessage: E-mail
 msgid "email_sede"
 msgstr "E-mail"
@@ -1638,7 +1638,7 @@ msgstr "Type a keyword to find answers"
 msgid "fax"
 msgstr "Fax"
 
-#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/UOView/UOContacts
 # defaultMessage: Fax
 msgid "fax_sede"
 msgstr "Fax"
@@ -1784,17 +1784,17 @@ msgstr ""
 msgid "iter_del_procedimento"
 msgstr "Procedure of the procedure"
 
-#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/UOView/UOStructure
 # defaultMessage: Servizi o uffici di riferimento
 msgid "legami_altre_strutture"
 msgstr "Reference services or offices"
 
-#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/UOView/UOStructure
 # defaultMessage: Servizio o ufficio di appartenenza
 msgid "legami_struttura_padre"
 msgstr "Association service or office"
 
-#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/UOView/UOStructure
 # defaultMessage: Servizi o uffici interni
 msgid "legami_strutture_figlie"
 msgstr "Internal services or offices"
@@ -2076,7 +2076,7 @@ msgstr "Options"
 msgid "orari"
 msgstr "Times"
 
-#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/UOView/UOContacts
 #: components/ItaliaTheme/View/VenueView/VenueView
 # defaultMessage: Orario per il pubblico
 msgid "orario_pubblico"
@@ -2138,12 +2138,12 @@ msgstr "Sponsored by"
 msgid "pec"
 msgstr "PEC"
 
-#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/UOView/UOContacts
 # defaultMessage: PEC
 msgid "pec_sede"
 msgstr "PEC"
 
-#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/UOView/UOPeople
 # defaultMessage: Persone
 msgid "persone_struttura"
 msgstr "People"
@@ -2204,7 +2204,6 @@ msgstr "Documents"
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/ServizioView/ServizioView
-#: components/ItaliaTheme/View/UOView/UOView
 #: components/ItaliaTheme/View/VenueView/VenueView
 # defaultMessage: Contenuti correlati
 msgid "related_items"
@@ -2243,7 +2242,7 @@ msgstr "Remove topic"
 msgid "reperimento_modulistica"
 msgstr ""
 
-#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/UOView/UOStructure
 # defaultMessage: Responsabile
 msgid "responsabile"
 msgstr "Responsible"
@@ -2727,7 +2726,7 @@ msgstr "Services"
 msgid "servizi_collegati"
 msgstr "Related services"
 
-#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/UOView/UOServices
 # defaultMessage: Servizi
 msgid "servizi_offerti"
 msgstr "Services"
@@ -2911,7 +2910,7 @@ msgstr "Protection tools"
 msgid "strumenti_tutela"
 msgstr ""
 
-#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/UOView/UOStructure
 # defaultMessage: Struttura
 msgid "struttura"
 msgstr "Structure"
@@ -2975,7 +2974,7 @@ msgstr "Insert a value"
 msgid "tipologia_bando"
 msgstr "Type of call"
 
-#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/UOView/UOStructure
 # defaultMessage: Tipologia organizzazione
 msgid "tipologia_organizzazione"
 msgstr "Type of organization"
@@ -3076,17 +3075,16 @@ msgstr "Competent organizational unit for the procedure"
 msgid "unknownBlock"
 msgstr "Unknown block"
 
-#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/UOView/UOContacts
 # defaultMessage: Altre sedi
 msgid "uo_altre_sedi"
 msgstr "Other locations"
 
-#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/UOView/UODocuments
 # defaultMessage: Documenti
 msgid "uo_documenti"
 msgstr "Documents"
 
-#: components/ItaliaTheme/View/UOView/UOView
 #: components/ItaliaTheme/View/VenueView/VenueView
 # defaultMessage: Notizie in evidenza
 msgid "uo_related_news"
@@ -3126,7 +3124,7 @@ msgstr "View all"
 msgid "vincoli"
 msgstr "Constraints"
 
-#: components/ItaliaTheme/View/UOView/UOView
+#: components/ItaliaTheme/View/UOView/UOContacts
 # defaultMessage: Sito web
 msgid "website"
 msgstr "Web site"
