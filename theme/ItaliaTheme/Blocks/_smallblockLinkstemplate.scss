@@ -9,6 +9,7 @@
     display: flex;
     height: 100px;
     align-items: center;
+    justify-content: center;
     padding: 56px 8px;
     border-right: none;
     background: white;
@@ -16,9 +17,10 @@
 
     img,
     .img-skeleton {
-      width: 100%;
-      height: auto;
-      max-height: 100px;
+      width: auto;
+      max-width: 100%;
+      height: 100px;
+      object-fit: contain;
     }
 
     .img-skeleton {
