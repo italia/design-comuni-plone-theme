@@ -1,3 +1,38 @@
+## [5.12.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.11.0...v5.12.0) (2022-01-24)
+
+
+### Features
+
+* added ImageListing component and removed fullobjects from listing ([7b3bf8e](https://github.com/RedTurtle/design-volto-theme/commit/7b3bf8e784f04b0aed3c35e2100ecacaa91c0051))
+* upgraded to volto 14 ([c478446](https://github.com/RedTurtle/design-volto-theme/commit/c478446fc51759ce31fd84074de1b9a488edf64a))
+
+
+### Bug Fixes
+
+* disable listing blocks ssr ([aa5943d](https://github.com/RedTurtle/design-volto-theme/commit/aa5943d1799955b566cdcb5227a79e90a1025053))
+* fix background images ([ffcd8a2](https://github.com/RedTurtle/design-volto-theme/commit/ffcd8a2517d46025358a76f9c36928d02273a233))
+* fix CardPersona image ([15974e9](https://github.com/RedTurtle/design-volto-theme/commit/15974e9fafc12102e66aaac4b18ed76dadd35ac1))
+* fix gridGallery template image ([4b04e76](https://github.com/RedTurtle/design-volto-theme/commit/4b04e76ce7d89c087d6a258aad040137c96c0806))
+* handle exception and new way to call getVocabulary ([4d1331c](https://github.com/RedTurtle/design-volto-theme/commit/4d1331c40d08123d4e44cc10ce0353e10032e8ac))
+
+
+### Maintenance
+
+* changed image field in PageView and fixed ListingView ([937ee7d](https://github.com/RedTurtle/design-volto-theme/commit/937ee7d4792c064e53e7b2a33bb77822ba0155b2))
+* changed port ([fa2e488](https://github.com/RedTurtle/design-volto-theme/commit/fa2e4887004978ca56b1b95329ea1cc67311c733))
+* updated dependencies ([d12176c](https://github.com/RedTurtle/design-volto-theme/commit/d12176cd9d8175993b22c18f80a833d12dd63589))
+* updated dockerfile ([96d6327](https://github.com/RedTurtle/design-volto-theme/commit/96d632776282479013d210c5c15bc35eaf9c9fb0))
+* updated scripts ([4741939](https://github.com/RedTurtle/design-volto-theme/commit/47419395122aa810bd7acea3957c5825cffd0260))
+* updated volto ([3f0732a](https://github.com/RedTurtle/design-volto-theme/commit/3f0732a170cb358a6577b1d58741b56b66c3242d))
+* updated volto ([9978ec8](https://github.com/RedTurtle/design-volto-theme/commit/9978ec821d524aa3762ee6495ac8ac66f37d9146))
+* updated volto ([3846e5a](https://github.com/RedTurtle/design-volto-theme/commit/3846e5a28ea09b2ec37b998e7b3776778341b154))
+* updated volto ([c3182fb](https://github.com/RedTurtle/design-volto-theme/commit/c3182fbbce86b39082dcdfb76fdb2f8066bcaedb))
+* updated volto ([6af3ad0](https://github.com/RedTurtle/design-volto-theme/commit/6af3ad0b522bb5da70a6b114449038e7a8ddb9fc))
+* updated volto ([d600deb](https://github.com/RedTurtle/design-volto-theme/commit/d600debd73a26cc3a9f6be6f273af9233a325f42))
+* updated volto 14 ([9a0504a](https://github.com/RedTurtle/design-volto-theme/commit/9a0504ae37bc23375c3ef0cc3d3eb494dad00636))
+* updated volto14 branch ([025bbdc](https://github.com/RedTurtle/design-volto-theme/commit/025bbdc23558bf6441548e0ea6d4dec51604de25))
+* yarn ([1a5f4e2](https://github.com/RedTurtle/design-volto-theme/commit/1a5f4e202cf76d6b67aee85a0e0d66aef3bb766f))
+
 ## [5.11.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.10.5...v5.11.0) (2022-01-18)
 
 
