@@ -1,3 +1,19 @@
+### [5.12.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.0...v5.12.1) (2022-01-26)
+
+
+### Bug Fixes
+
+* cleanup conflicts in Dockerfile ([cd9cba3](https://github.com/RedTurtle/design-volto-theme/commit/cd9cba3b1bd537fc1250d5086be69c273c3b7a05))
+* reintrodotto preinstall script ([4774650](https://github.com/RedTurtle/design-volto-theme/commit/477465025e7da660184757a5a8d65c2fb722ec6b))
+* revert changes to function calls ([a7d3f7a](https://github.com/RedTurtle/design-volto-theme/commit/a7d3f7a6a94aefc0cbef389ac9454b548e2d823e))
+* update yarn.lock ([bf81f08](https://github.com/RedTurtle/design-volto-theme/commit/bf81f0847deb943f977e487f705eeeacfc43c0fb))
+
+
+### Maintenance
+
+* added list of ente_bando in bandiInEvidence listing template ([52b0fbf](https://github.com/RedTurtle/design-volto-theme/commit/52b0fbf8ee5e2d017c30c5938d0a8c148323f264))
+* normalize ListingImage syntax ([47baccd](https://github.com/RedTurtle/design-volto-theme/commit/47baccdefa9df2dd58ce966f8ca97a2608882cf7))
+
 ## [5.12.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.11.0...v5.12.0) (2022-01-24)
 
 
