@@ -1,3 +1,10 @@
+### [5.12.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.1...v5.12.2) (2022-01-26)
+
+
+### Bug Fixes
+
+* fix listing template SimpleCard ([0fc26df](https://github.com/RedTurtle/design-volto-theme/commit/0fc26df625d2dcfa43237cccd9b74988264d567c))
+
 ### [5.12.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.0...v5.12.1) (2022-01-26)
 
 
