@@ -15,7 +15,7 @@ const LocationsMap = ({ center, locations }) => {
   const dispatch = useDispatch();
   const fetchedLocations = useSelector((state) => state.content.subrequests);
   const venues = locations.map((location) => ({
-    key: `luogo${location['@id']}`,
+    key: `luogo${location['UID']}`,
     url: flattenToAppURL(location['@id']),
   }));
 

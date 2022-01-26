@@ -32,7 +32,7 @@ const GenericCard = ({
   let item_fo = null;
   const locationContent = useSelector((state) => state.content.subrequests);
   const dispatch = useDispatch();
-  const key = `generic_card_${item['@id']}`;
+  const key = `generic_card_${item['UID']}`;
   const url = flattenToAppURL(item['@id']);
   const icon = getItemIcon(item);
 

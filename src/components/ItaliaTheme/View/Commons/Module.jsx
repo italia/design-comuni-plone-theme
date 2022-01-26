@@ -27,7 +27,7 @@ import { DownloadFileFormat } from '@italia/components/ItaliaTheme/View';
 const Module = ({ item }) => {
   const dispatch = useDispatch();
   const subrequests = useSelector((state) => state.content.subrequests);
-  const key = 'module_' + item['@id'];
+  const key = 'module_' + item['UID'];
 
   useEffect(() => {
     dispatch(getContent(item['@id'], null, key));
