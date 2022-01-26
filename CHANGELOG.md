@@ -1,3 +1,10 @@
+### [5.12.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.2...v5.12.3) (2022-01-26)
+
+
+### Bug Fixes
+
+* le references ora funzionano correttamente nelle viste dei contenuti ([c806db6](https://github.com/RedTurtle/design-volto-theme/commit/c806db6adfc3177ff2f24eea33d7ee7c480b967b))
+
 ### [5.12.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.1...v5.12.2) (2022-01-26)
 
 
