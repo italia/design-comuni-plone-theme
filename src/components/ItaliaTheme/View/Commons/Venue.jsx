@@ -11,7 +11,7 @@ import { RichText } from '@italia/components/ItaliaTheme/View';
  * @returns {string} Markup of the component.
  */
 const Venue = ({ venue, display_title = true }) => {
-  const key = `${venue['@id']}_venue`;
+  const key = `${venue['UID']}_venue`;
   const url = flattenToAppURL(venue['@id']);
   const venueContent = useSelector((state) => state.content.subrequests?.[key]);
   const loaded = venueContent?.loaded || venueContent?.loading;
