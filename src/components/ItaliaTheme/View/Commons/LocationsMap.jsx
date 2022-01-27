@@ -14,10 +14,13 @@ import PropTypes from 'prop-types';
 const LocationsMap = ({ center, locations }) => {
   const dispatch = useDispatch();
   const fetchedLocations = useSelector((state) => state.content.subrequests);
-  const venues = locations.map((location) => ({
-    key: `luogo${location['UID']}`,
-    url: flattenToAppURL(location['@id']),
-  }));
+  const venues = locations.map((location) => {
+    let url = flattenToAppURL(location['@id']);
+    return {
+      key: `luogo${url}`,
+      url: url,
+    };
+  });
 
   useEffect(() => {
     venues.forEach((loc) => {

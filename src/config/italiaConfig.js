@@ -208,6 +208,11 @@ export default function applyConfig(voltoConfig) {
       ...config.settings['volto-gdpr-privacy'],
       defaultPanelConfig: gdprPrivacyPanelConfig,
     },
+
+    'volto-editablefooter': {
+      ...config.settings['volto-editablefooter'],
+      options: { socials: true, newsletterSubscribe: true },
+    },
     videoAllowExternalsDefault: false,
     showTrasparenzaFields: false,
 
