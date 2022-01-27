@@ -34,8 +34,8 @@ const LocationItem = ({
   details_link = true,
 }) => {
   const intl = useIntl();
-  const key = `luogo${location['@id']}`;
   const url = flattenToAppURL(location['@id']);
+  const key = `luogo${url}`;
   const locationContent = useSelector((state) => state.content.subrequests);
   const loaded =
     locationContent?.[key]?.loading || locationContent?.[key]?.loaded;

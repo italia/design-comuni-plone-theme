@@ -24,8 +24,9 @@ const OfficeCard = ({
   margin_bottom = false,
   show_contacts = true,
 }) => {
-  const key = `${office['@id']}_office`;
   const url = flattenToAppURL(office['@id']);
+  const key = `${url}_office`;
+
   const officeContent = useSelector((state) => state.content.subrequests);
   const dispatch = useDispatch();
 

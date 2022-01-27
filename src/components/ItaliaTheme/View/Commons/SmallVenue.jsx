@@ -13,8 +13,9 @@ import { UniversalLink } from '@plone/volto/components';
  * @returns {string} Markup of the component.
  */
 const SmallVenue = ({ venue }) => {
-  const key = `${venue['@id']}_venue`;
   const url = flattenToAppURL(venue['@id']);
+  const key = `${url}_venue`;
+
   const venueContent = useSelector((state) => state.content.subrequests?.[key]);
   const loaded = venueContent?.loaded || venueContent?.loading;
   const dispatch = useDispatch();

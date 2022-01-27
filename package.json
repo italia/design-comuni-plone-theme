@@ -2,7 +2,7 @@
   "name": "design-volto-theme",
   "description": "Volto Theme for Italia design guidelines",
   "license": "MIT",
-  "version": "5.12.1",
+  "version": "5.12.7",
   "private": true,
   "workspaces": [
     "src/addons/volto-multilingual-widget",
@@ -184,7 +184,7 @@
     "@fortawesome/free-regular-svg-icons": "5.14.0",
     "@fortawesome/free-solid-svg-icons": "5.14.0",
     "@fortawesome/react-fontawesome": "0.1.11",
-    "@plone/volto": "plone/volto#45b9de1f6c0d5ff494532e1eaa78cbe4b401af8c",
+    "@plone/volto": "plone/volto#86dd377cf439575eb8946fb65a75a319f1fdc0f1",
     "@tinymce/tinymce-react": "3.8.1",
     "bootstrap-italia": "1.3.9",
     "classnames": "2.2.6",
