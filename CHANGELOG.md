@@ -1,3 +1,10 @@
+### [5.12.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.4...v5.12.5) (2022-01-27)
+
+
+### Bug Fixes
+
+* small block links template responsive fix for safari ([41f2a7f](https://github.com/RedTurtle/design-volto-theme/commit/41f2a7ffaa5b750607998dcc9fe734715d14060d))
+
 ### [5.12.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.3...v5.12.4) (2022-01-27)
 
 
