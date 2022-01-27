@@ -1,3 +1,11 @@
+### [5.12.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.3...v5.12.4) (2022-01-27)
+
+
+### Bug Fixes
+
+* fix ssr getcontent ([a17808b](https://github.com/RedTurtle/design-volto-theme/commit/a17808bf19bc7a5b30373eb3deacc035f4293597))
+* pagina argomento view getContent subrequests ([bea51ac](https://github.com/RedTurtle/design-volto-theme/commit/bea51ac36f08d344b73721f86d6b56e80ec6e5ce))
+
 ### [5.12.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.2...v5.12.3) (2022-01-26)
 
 
