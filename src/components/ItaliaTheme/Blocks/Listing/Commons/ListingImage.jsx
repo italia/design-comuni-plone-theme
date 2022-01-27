@@ -7,7 +7,7 @@ const ListingImage = ({
   item,
   showDefault = false,
   useOriginal = false,
-  maxSize = 400,
+  maxSize,
   className = 'listing-image',
   ...imageProps
 }) => {

@@ -76,7 +76,9 @@ const CardWithImageTemplate = (props) => {
             const listingText = show_description ? (
               <ListingText item={item} />
             ) : null;
+
             const image = ListingImage({ item });
+
             const showImage =
               (index < imagesToShow || always_show_image) && image != null;
             const category = getCategory(item, show_type, show_section, props);
