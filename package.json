@@ -2,7 +2,7 @@
   "name": "design-volto-theme",
   "description": "Volto Theme for Italia design guidelines",
   "license": "MIT",
-  "version": "5.12.5",
+  "version": "5.12.6",
   "private": true,
   "workspaces": [
     "src/addons/volto-multilingual-widget",
