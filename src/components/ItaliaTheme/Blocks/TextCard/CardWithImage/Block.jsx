@@ -14,6 +14,7 @@ import PropTypes from 'prop-types';
 import redraft from 'redraft';
 import { TextEditorWidget } from '@italia/components/ItaliaTheme';
 import config from '@plone/volto/registry';
+import cx from 'classnames';
 
 const messages = defineMessages({
   image_card_title: {
@@ -30,10 +31,14 @@ const messages = defineMessages({
   },
 });
 
-const renderImage = (image, showImage) =>
+const renderImage = (image, showImage, sizeNatural) =>
   showImage && image ? (
     <div className="img-responsive-wrapper">
-      <div className="img-responsive img-responsive-panoramic">
+      <div
+        className={cx({
+          'img-responsive': !sizeNatural,
+        })}
+      >
         <figure className="img-wrapper">
           <img
             src={`data:${image['content-type']};${image.encoding},${image.data}`}
@@ -82,7 +87,7 @@ const Block = ({
         }
       }}
     >
-      <h3 className="title mt-5">
+      <h2 className="mb-4 mt-5">
         {inEditMode ? (
           <div
             ref={titleRef}
@@ -98,7 +103,7 @@ const Block = ({
               fieldName="image_card_title"
               selected={selected === 'title'}
               block={block}
-              onChangeBlock={(data) => onChange(data, 'image_card_title')}
+              onChangeBlock={(data) => onChange(data)}
               placeholder={intl.formatMessage(messages.image_card_title)}
               showToolbar={false}
               onSelectBlock={() => {}}
@@ -111,27 +116,32 @@ const Block = ({
         ) : (
           title
         )}
-      </h3>
-      <Card
-        color="white"
-        className="card-bg rounded"
-        noWrapper={false}
-        tag="div"
-      >
-        <CardBody>
+      </h2>
+      <Card color="white" className="card-bg rounded" noWrapper={false}>
+        <CardBody className="pb-0">
           {inEditMode ? (
-            <Container tag="div">
-              <Row tag="div" className={`${hasImage ? '' : 'no-image'}`}>
+            <Container>
+              <Row
+                className={cx('card-body-row', {
+                  'revert-row': data?.rightImage,
+                  'no-image': !hasImage,
+                })}
+              >
                 {hasImage && (
-                  <Col tag="div" className="p-0" key={'col-0'}>
-                    {renderImage(data?.image, hasImage)}
+                  <Col className="py-4 px-0" key={'col-0'}>
+                    {renderImage(data?.image, hasImage, data?.sizeNatural)}
                   </Col>
                 )}
-                <Col
+                <div
                   key={'col-1'}
-                  tag="div"
-                  xs={hasImage ? '8' : '12'}
-                  className=" p-4 mb-2"
+                  className={cx('p-4 mb-2', {
+                    'col-12': !hasImage,
+                    'col-8':
+                      (hasImage && data?.sizeImage === 's') ||
+                      (hasImage && !data?.sizeImage),
+                    'col-6': hasImage && data?.sizeImage === 'm',
+                    'col-4': hasImage && data?.sizeImage === 'l',
+                  })}
                 >
                   <div
                     ref={contentRef}
@@ -143,7 +153,6 @@ const Block = ({
                     }}
                   >
                     <CardText
-                      tag="div"
                       className="simple-text-card text"
                       style={{ padding: 0 }}
                     >
@@ -152,9 +161,7 @@ const Block = ({
                         fieldName="image_card_content"
                         selected={selected === 'content'}
                         block={block}
-                        onChangeBlock={(data) =>
-                          onChange(data, 'image_card_content')
-                        }
+                        onChangeBlock={(data) => onChange(data)}
                         placeholder={intl.formatMessage(
                           messages.image_card_content,
                         )}
@@ -166,20 +173,29 @@ const Block = ({
                       />
                     </CardText>
                   </div>
-                </Col>
+                </div>
               </Row>
             </Container>
           ) : (
-            <Container tag="div">
-              <Row tag="div">
-                <Col tag="div" className="p-0" key={'col-0'}>
-                  {renderImage(data?.image, hasImage)}
+            <Container>
+              <Row
+                className={cx('card-body-row', {
+                  'revert-row': data?.rightImage,
+                })}
+              >
+                <Col className="py-4 px-0" key={'col-0'}>
+                  {renderImage(data?.image, hasImage, data?.sizeNatural)}
                 </Col>
-                <Col
+                <div
                   key={'col-1'}
-                  tag="div"
-                  xs={hasImage ? '8' : '12'}
-                  className="p-4 mb-2 ml-3"
+                  className={cx('p-4', {
+                    'col-12': !hasImage,
+                    'col-8':
+                      (hasImage && data?.sizeImage === 's') ||
+                      (hasImage && !data?.sizeImage),
+                    'col-6': hasImage && data?.sizeImage === 'm',
+                    'col-4': hasImage && data?.sizeImage === 'l',
+                  })}
                 >
                   <CardText>
                     {redraft(
@@ -188,7 +204,7 @@ const Block = ({
                       config.settings.ToHTMLOptions,
                     )}
                   </CardText>
-                </Col>
+                </div>
               </Row>
             </Container>
           )}
