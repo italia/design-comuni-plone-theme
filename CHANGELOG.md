@@ -1,3 +1,10 @@
+### [5.12.7](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.6...v5.12.7) (2022-01-27)
+
+
+### Maintenance
+
+* updated volto and added new image scale ([1cd7c99](https://github.com/RedTurtle/design-volto-theme/commit/1cd7c993a116c05bc2e0019cb5354833873cc71e))
+
 ### [5.12.6](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.5...v5.12.6) (2022-01-27)
 
 
