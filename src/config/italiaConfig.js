@@ -128,6 +128,7 @@ export default function applyConfig(voltoConfig) {
       tile: 64,
       thumb: 128,
       mini: 200,
+      midi: 300,
       preview: 400,
       teaser: 600,
       large: 800,
