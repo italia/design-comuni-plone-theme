@@ -14,6 +14,10 @@ export const FILE_FORMATS = {
     icon: { lib: 'far', name: 'file-archive' },
     format_name: 'zip',
   },
+  'application/x-zip-compressed': {
+    icon: { lib: 'far', name: 'file-archive' },
+    format_name: 'zip',
+  },
   'application/gzip': {
     icon: { lib: 'far', name: 'file-archive' },
     format_name: 'gzip',
