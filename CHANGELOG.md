@@ -1,3 +1,10 @@
+### [5.12.8](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.7...v5.12.8) (2022-01-28)
+
+
+### Maintenance
+
+* added icon for application/x-zip-compressed ([0a2023a](https://github.com/RedTurtle/design-volto-theme/commit/0a2023ab2259941e84fe2a7cb565dded94491f8b))
+
 ### [5.12.7](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.6...v5.12.7) (2022-01-27)
 
 
