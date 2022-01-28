@@ -6,7 +6,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { injectIntl } from 'react-intl';
-import { isEqual } from 'lodash';
 import { SidebarPortal } from '@plone/volto/components';
 import Sidebar from './Sidebar.jsx';
 import BodyWrapper from './BodyWrapper.jsx';
@@ -70,15 +69,13 @@ class Edit extends Component {
    * @param {object} editorState Editor state.
    * @returns {undefined}
    */
-  onChange(obj, fieldname) {
-    const newData = {
+  onChange(obj) {
+    let newData = {
       ...this.props.data,
-      [fieldname]: obj[fieldname],
+      ...obj,
     };
 
-    if (!isEqual(obj[fieldname], this.props.data[fieldname])) {
-      this.props.onChangeBlock(this.props.block, newData);
-    }
+    this.props.onChangeBlock(this.props.block, newData);
     this.setState({ currentBlockData: newData }, () => this.forceUpdate());
   }
 
@@ -97,20 +94,19 @@ class Edit extends Component {
           <Block
             data={this.state.currentBlockData}
             block={this.props.block}
-            onChange={(obj, fieldname) => this.onChange(obj, fieldname)}
+            onChange={(obj) => this.onChange(obj)}
             inEditMode={true}
             onSelectBlock={this.props.onSelectBlock}
             onAddBlock={this.props.onAddBlock}
             index={this.props.index}
           />
         </BodyWrapper>
-
         <SidebarPortal selected={this.props.selected || false}>
           <Sidebar
             {...this.props}
             data={this.state.currentBlockData}
             block={this.props.block}
-            onChangeBlock={(obj, fieldname) => this.onChange(obj, fieldname)}
+            onChangeBlock={(obj) => this.onChange(obj)}
           />
         </SidebarPortal>
       </div>

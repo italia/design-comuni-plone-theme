@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Segment } from 'semantic-ui-react';
+import { Segment, Accordion } from 'semantic-ui-react';
 import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
 import { TextWidget, CheckboxWidget } from '@plone/volto/components';
+import { LinkToWidget } from '@italia/components/ItaliaTheme';
 
 import clearSVG from '@plone/volto/icons/clear.svg';
 
@@ -19,6 +20,14 @@ const messages = defineMessages({
   show_block_bg: {
     id: 'Mostra lo sfondo del blocco',
     defaultMessage: 'Mostra lo sfondo del blocco',
+  },
+  LinkToTitle: {
+    id: 'Linkto title',
+    defaultMessage: 'Testo per il link ad altro',
+  },
+  LinkMore: {
+    id: 'LinkMore',
+    defaultMessage: 'Link ad altro',
   },
 });
 
@@ -97,6 +106,39 @@ const HeroSidebar = ({
           }}
         />
       </Segment>
+
+      <Accordion fluid styled className="form">
+        <Accordion.Title active={true} index={0} onClick={() => {}}>
+          {intl.formatMessage(messages.LinkMore)}
+        </Accordion.Title>
+        <Accordion.Content active={true}>
+          <TextWidget
+            id="moreTitle"
+            title={intl.formatMessage(messages.LinkToTitle)}
+            required={false}
+            value={data.moreTitle}
+            onChange={(name, value) => {
+              onChangeBlock(block, {
+                ...data,
+                [name]: value,
+              });
+            }}
+          />
+
+          <LinkToWidget
+            data={data}
+            openObjectBrowser={openObjectBrowser}
+            linkField="moreHref"
+            showTarget={false}
+            onChange={(name, value) =>
+              onChangeBlock(block, {
+                ...data,
+                [name]: value,
+              })
+            }
+          />
+        </Accordion.Content>
+      </Accordion>
     </Segment.Group>
   );
 };

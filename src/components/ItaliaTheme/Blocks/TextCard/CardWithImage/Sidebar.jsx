@@ -4,7 +4,12 @@ import { Segment, Accordion } from 'semantic-ui-react';
 import { FormattedMessage, injectIntl } from 'react-intl';
 import { defineMessages, useIntl } from 'react-intl';
 
-import { FileWidget, CheckboxWidget } from '@plone/volto/components';
+import {
+  FileWidget,
+  CheckboxWidget,
+  FormFieldWrapper,
+} from '@plone/volto/components';
+import ImageSizeWidget from '@plone/volto/components/manage/Blocks/Image/ImageSizeWidget';
 
 const messages = defineMessages({
   cardImage: {
@@ -15,12 +20,34 @@ const messages = defineMessages({
     id: 'cardImageEnable',
     defaultMessage: "Mostra l'immagine",
   },
+  CardImageRight: {
+    id: 'CardImageRight',
+    defaultMessage: 'Allinea immagine a destra',
+  },
+  CardImageSize: {
+    id: 'CardImageSize',
+    defaultMessage: 'Dimensione immagine',
+  },
+  natural_image_size: {
+    id: 'natural_image_size',
+    defineMessages: "Non alterare le dimensioni naturali dell'immagine",
+  },
+  small: {
+    id: 'Piccolo',
+    defineMessages: 'Piccolo',
+  },
+  medium: {
+    id: 'Medio',
+    defineMessages: 'Medio',
+  },
+  large: {
+    id: 'Grande',
+    defineMessages: 'Grande',
+  },
 });
 
 const Sidebar = ({ data, block, onChangeBlock }) => {
   const intl = useIntl();
-  const [imageShow, setImageShow] = React.useState(data['showImage'] || false);
-  const currentData = data;
 
   return (
     <Segment.Group raised>
@@ -37,25 +64,47 @@ const Sidebar = ({ data, block, onChangeBlock }) => {
           <FileWidget
             id="CardImage"
             title={intl.formatMessage(messages.cardImage)}
-            value={currentData.image}
+            value={data.image}
             onChange={(name, value) => {
-              setImageShow(value ? true : false);
-              onChangeBlock({ ...currentData, image: value }, 'image');
-              onChangeBlock(
-                { ...currentData, showImage: !!value },
-                'showImage',
-              );
+              onChangeBlock({ ...data, image: value, showImage: !!value });
             }}
           />
           <CheckboxWidget
             id={'CardImageEnable'}
             title={intl.formatMessage(messages.cardImageEnable)}
-            value={imageShow}
+            value={data.showImage || false}
             onChange={(name, value) => {
-              setImageShow(!imageShow);
-              onChangeBlock({ ...currentData, showImage: value }, 'showImage');
+              onChangeBlock({ ...data, showImage: value });
             }}
           />
+          <CheckboxWidget
+            id="natural_image_size"
+            title={intl.formatMessage(messages.natural_image_size)}
+            value={data.sizeNatural || false}
+            onChange={(name, value) => {
+              onChangeBlock({ ...data, sizeNatural: value });
+            }}
+          />
+          <CheckboxWidget
+            id="CardImageRight"
+            title={intl.formatMessage(messages.CardImageRight)}
+            value={data.rightImage || false}
+            onChange={(name, value) => {
+              onChangeBlock({ ...data, rightImage: value });
+            }}
+          />
+          <FormFieldWrapper
+            id="image_size"
+            title={intl.formatMessage(messages.CardImageSize)}
+          >
+            <ImageSizeWidget
+              onChangeBlock={(b, value) => {
+                onChangeBlock({ ...data, sizeImage: value.size });
+              }}
+              data={{ ...data, size: data.sizeImage || 's' }}
+              block={block}
+            />
+          </FormFieldWrapper>
         </Accordion.Content>
       </Accordion>
     </Segment.Group>
