@@ -3,7 +3,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
 import PropTypes from 'prop-types';
-import Image from '@plone/volto/components/theme/Image/Image';
+
 import {
   Modal,
   ModalHeader,
@@ -96,11 +96,12 @@ const GalleryPreview = ({ id, viewIndex, setViewIndex, items }) => {
 
               <div className="image">
                 {items[viewIndex].image ? (
-                  <Image
+                  <img
                     src={flattenToAppURL(
                       items[viewIndex].image.scales.larger.download,
                     )}
                     loading="lazy"
+                    alt={items[viewIndex].title}
                   />
                 ) : (
                   <img src={DefaultImageSVG} alt="" />
