@@ -1,3 +1,10 @@
+### [5.12.9](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.8...v5.12.9) (2022-01-28)
+
+
+### Bug Fixes
+
+* fix gallery preview image ([6e1c46e](https://github.com/RedTurtle/design-volto-theme/commit/6e1c46ef5c9935bc41d0fc3363d63f2d802c2399))
+
 ### [5.12.8](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.7...v5.12.8) (2022-01-28)
 
 
