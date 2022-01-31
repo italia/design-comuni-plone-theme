@@ -1,3 +1,10 @@
+### [5.13.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.13.1...v5.13.2) (2022-01-31)
+
+
+### Bug Fixes
+
+* fix image size to avoid lower quality ([31e4d04](https://github.com/RedTurtle/design-volto-theme/commit/31e4d0446747bde65051f749f068cecc21c4b919))
+
 ### [5.13.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.13.0...v5.13.1) (2022-01-31)
 
 
