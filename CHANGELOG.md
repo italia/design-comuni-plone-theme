@@ -1,3 +1,17 @@
+## [5.13.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.9...v5.13.0) (2022-01-31)
+
+
+### Features
+
+* added new features of cardWithImageText and Hero blocks ([5dad43b](https://github.com/RedTurtle/design-volto-theme/commit/5dad43b84dc974d8a43e4a3e51ce8637014152e0))
+
+
+### Bug Fixes
+
+* added hero button translation ([f2393a5](https://github.com/RedTurtle/design-volto-theme/commit/f2393a552386fda4e6fd312433a5d4c87bc6db79))
+* fix image loading width ([55c8d31](https://github.com/RedTurtle/design-volto-theme/commit/55c8d312efdab4c161d9067ec93f2e21550d4f4e))
+* z-index of card with slide up text template ([a56ac88](https://github.com/RedTurtle/design-volto-theme/commit/a56ac88f921828cdd194649b6e92a06123a46750))
+
 ### [5.12.9](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.8...v5.12.9) (2022-01-28)
 
 
