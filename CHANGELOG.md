@@ -1,3 +1,10 @@
+### [5.13.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.13.0...v5.13.1) (2022-01-31)
+
+
+### Bug Fixes
+
+* fix image Persona in listing ([2817cc3](https://github.com/RedTurtle/design-volto-theme/commit/2817cc3c26cc2915b0743fec2a87923cc37a1890))
+
 ## [5.13.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.12.9...v5.13.0) (2022-01-31)
 
 
