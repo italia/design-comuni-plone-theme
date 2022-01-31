@@ -27,6 +27,11 @@
 
       .card-image {
         flex: 1 1 30%;
+
+        picture {
+          display: block;
+          min-width: 130px;
+        }
       }
     }
   }
