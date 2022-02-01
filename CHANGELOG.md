@@ -1,3 +1,11 @@
+### [5.13.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.13.3...v5.13.4) (2022-02-01)
+
+
+### Bug Fixes
+
+* backward  compatibility for listing MapTempalate ([576f41b](https://github.com/RedTurtle/design-volto-theme/commit/576f41b5a9ba8be66ac770cc66a80c18320820b2))
+* trasparenza_view query condition ([a57cd05](https://github.com/RedTurtle/design-volto-theme/commit/a57cd05165c73bf4ef0995af5cf5d29f88b76c98))
+
 ### [5.13.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.13.2...v5.13.3) (2022-02-01)
 
 
