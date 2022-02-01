@@ -51,6 +51,7 @@ const GridGalleryTemplate = ({
               item,
               useOriginal: true,
               className: '',
+              maxSize: 600,
             });
 
             return (

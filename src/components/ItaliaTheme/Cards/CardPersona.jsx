@@ -20,7 +20,11 @@ export const CardPersona = ({
   type,
   isEditMode,
 }) => {
-  const image = ListingImage({ item, maxSize: 300, useOriginal: false });
+  const image = ListingImage({
+    item,
+    maxSize: 300,
+    useOriginal: false,
+  });
   return (
     <Card
       className={`card-persona card-teaser-image card-flex no-after ${

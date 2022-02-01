@@ -140,7 +140,7 @@ UOView.propTypes = {
     tipologia_organizzazione: PropTypes.shape({
       title: PropTypes.string,
       token: PropTypes.string,
-    }).isRequired,
+    }),
     title: PropTypes.string.isRequired,
   }),
 };

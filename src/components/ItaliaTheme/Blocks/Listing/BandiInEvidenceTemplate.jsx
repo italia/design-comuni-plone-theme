@@ -111,7 +111,12 @@ const BandiInEvidenceTemplate = ({
                           {intl.formatMessage(messages.ente)}:
                         </div>
                         <span className="bando-dati-date">
-                          {item.ente_bando[0]}
+                          {item.ente_bando.map((ente, i) => (
+                            <span>
+                              {ente}
+                              {i < item.ente_bando.length - 1 ? ', ' : ''}
+                            </span>
+                          ))}
                         </span>
                       </span>
                     )}

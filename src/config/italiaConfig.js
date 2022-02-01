@@ -128,6 +128,7 @@ export default function applyConfig(voltoConfig) {
       tile: 64,
       thumb: 128,
       mini: 200,
+      midi: 300,
       preview: 400,
       teaser: 600,
       large: 800,
@@ -207,6 +208,11 @@ export default function applyConfig(voltoConfig) {
     'volto-gdpr-privacy': {
       ...config.settings['volto-gdpr-privacy'],
       defaultPanelConfig: gdprPrivacyPanelConfig,
+    },
+
+    'volto-editablefooter': {
+      ...config.settings['volto-editablefooter'],
+      options: { socials: true, newsletterSubscribe: true },
     },
     videoAllowExternalsDefault: false,
     showTrasparenzaFields: false,

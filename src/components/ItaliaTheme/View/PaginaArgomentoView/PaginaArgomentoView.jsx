@@ -52,11 +52,11 @@ const PaginaArgomentoView = ({ content }) => {
   useEffect(() => {
     if (content?.unita_amministrative_responsabili?.length > 0) {
       content.unita_amministrative_responsabili.forEach((x) => {
-        const id = x['@id'];
+        const url = flattenToAppURL(x['@id']);
         const loaded =
-          searchResults?.[id]?.loading || searchResults?.[id]?.loaded;
+          searchResults?.[url]?.loading || searchResults?.[url]?.loaded;
         if (!loaded) {
-          dispatch(getContent(flattenToAppURL(id), null, id));
+          dispatch(getContent(url, null, url));
         }
       });
     }

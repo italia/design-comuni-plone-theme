@@ -112,6 +112,11 @@ $header-image-argomento-height-mobile: 300px;
       width: 100%;
       height: $header-image-argomento-height;
 
+      picture {
+        display: block;
+        width: 100%;
+      }
+
       img {
         position: absolute;
         z-index: -1;

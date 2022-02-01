@@ -28,8 +28,10 @@ const TrasparenzaView = ({ content }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const url = content['@components']['trasparenza-items']['@id'];
-    dispatch(getAmministrazioneTrasparenteTree(url));
+    const url = content['@components']['trasparenza-items']?.['@id'];
+    if (!!url) {
+      dispatch(getAmministrazioneTrasparenteTree(url));
+    }
   }, []);
 
   const items = locationContent?.result?.items || [];

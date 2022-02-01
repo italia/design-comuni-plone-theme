@@ -11,8 +11,8 @@ import PropTypes from 'prop-types';
  * @returns {string} Markup of the component.
  */
 const RelatedNews = ({ item, showimage, content }) => {
-  const key = `news${item['@id']}`;
   const url = flattenToAppURL(item['@id']);
+  const key = `news${url}`;
   const locationContent = useSelector((state) => state.content.subrequests);
   const dispatch = useDispatch();
   useEffect(() => {
