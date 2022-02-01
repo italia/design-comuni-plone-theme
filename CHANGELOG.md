@@ -1,3 +1,10 @@
+### [5.13.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.13.2...v5.13.3) (2022-02-01)
+
+
+### Maintenance
+
+* added responsive layout of header slim for tablet and small desktop ([26f882b](https://github.com/RedTurtle/design-volto-theme/commit/26f882be6aee8669488a780a5d1bb5ad9f0400d6))
+
 ### [5.13.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.13.1...v5.13.2) (2022-01-31)
 
 
