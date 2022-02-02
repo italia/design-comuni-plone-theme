@@ -1,3 +1,15 @@
+## [5.14.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.13.4...v5.14.0) (2022-02-02)
+
+
+### Features
+
+* splitted UOView in separated sections components ([16027af](https://github.com/RedTurtle/design-volto-theme/commit/16027afebb6ad06f3b498a11b3cde4247a174b6b))
+
+
+### Maintenance
+
+* updated volto to fix srcSet image ([9333a08](https://github.com/RedTurtle/design-volto-theme/commit/9333a084dc45040eda89a987324c6bb560ed7a63))
+
 ### [5.13.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.13.3...v5.13.4) (2022-02-01)
 
 
