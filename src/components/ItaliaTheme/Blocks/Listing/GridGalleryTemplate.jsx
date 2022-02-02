@@ -10,6 +10,7 @@ import {
   Col,
   Alert,
 } from 'design-react-kit/dist/design-react-kit';
+import { flattenToAppURL } from '@plone/volto/helpers';
 
 const messages = defineMessages({
   maxItemsExceeded: {
@@ -47,12 +48,28 @@ const GridGalleryTemplate = ({
         )}
         <div className="grid-gallery-grid">
           {items.map((item, index) => {
-            const image = ListingImage({
+            let image = ListingImage({
               item,
               useOriginal: true,
               className: '',
-              maxSize: 600,
             });
+
+            if (item[item.image_field]?.scales?.large) {
+              let src = item[item.image_field].scales.large.download;
+
+              image = (
+                <picture className="volto-image">
+                  <img
+                    src={flattenToAppURL(src)}
+                    alt=""
+                    role="presentation"
+                    loading="lazy"
+                    aria-hidden="true"
+                    style={{ width: '100%', 'object-fit': 'cover' }}
+                  />
+                </picture>
+              );
+            }
 
             return (
               <div
