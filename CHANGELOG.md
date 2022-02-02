@@ -1,3 +1,10 @@
+### [5.14.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.14.0...v5.14.1) (2022-02-02)
+
+
+### Bug Fixes
+
+* fix image view in GridGallery ([66e8610](https://github.com/RedTurtle/design-volto-theme/commit/66e8610b2251a136598e93fee5c55dea33487367))
+
 ## [5.14.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.13.4...v5.14.0) (2022-02-02)
 
 
