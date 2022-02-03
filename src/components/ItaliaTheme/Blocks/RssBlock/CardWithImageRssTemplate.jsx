@@ -82,7 +82,7 @@ const CardWithImageRssTemplate = ({ items = [], isEditMode, data = {} }) => {
                     tag="a"
                     target="_blank"
                     rel="noopener noreferrer"
-                    href={item?.link}
+                    href={item?.url}
                     text={intl.formatMessage(messages.readMore)}
                   />
                 </Card>
