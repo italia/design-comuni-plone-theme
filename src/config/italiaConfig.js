@@ -75,7 +75,6 @@ export default function applyConfig(voltoConfig) {
 
   config.settings = {
     ...config.settings,
-    devProxyToApiPath: 'http://localhost:8080/Plone',
     sentryOptions: {
       ...(config.settings.sentryOptions ?? {}),
       ignoreErrors: [
