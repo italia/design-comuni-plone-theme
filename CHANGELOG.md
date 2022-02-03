@@ -1,3 +1,15 @@
+### [5.14.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.14.1...v5.14.2) (2022-02-03)
+
+
+### Bug Fixes
+
+* fix rss template item link ([39c1262](https://github.com/RedTurtle/design-volto-theme/commit/39c1262e189bc51f9600b07851a9de72ecba44ee))
+
+
+### Maintenance
+
+* remove fixed dev proxy to api path ([bc732a7](https://github.com/RedTurtle/design-volto-theme/commit/bc732a74db9a7761b6aefead36e7044ff3182987))
+
 ### [5.14.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.14.0...v5.14.1) (2022-02-02)
 
 
