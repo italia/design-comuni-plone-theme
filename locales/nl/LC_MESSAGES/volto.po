@@ -1241,7 +1241,7 @@ msgid "customer_satisfaction_submit"
 msgstr ""
 
 #: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
-# defaultMessage: Explain us why, and help us improve the quality of the site
+# defaultMessage: Explain us why, and help us improve the quality of the site. (Leave your email address for any communications on the outcome of the report)
 msgid "customer_satisfaction_suggestions_placeholder"
 msgstr ""
 

@@ -34,7 +34,7 @@ const messages = defineMessages({
   suggestions_placeholder: {
     id: 'customer_satisfaction_suggestions_placeholder',
     defaultMessage:
-      'Explain us why, and help us improve the quality of the site',
+      'Explain us why, and help us improve the quality of the site. (Leave your email address for any communications on the outcome of the report)',
   },
   submit: {
     id: 'customer_satisfaction_submit',
