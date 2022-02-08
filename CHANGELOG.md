@@ -1,3 +1,10 @@
+### [5.14.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.14.2...v5.14.3) (2022-02-08)
+
+
+### Bug Fixes
+
+* changed text of customer satisfaction ([f8e9aa8](https://github.com/RedTurtle/design-volto-theme/commit/f8e9aa839277fad900ba5a0f26b0e8028ec1e715))
+
 ### [5.14.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.14.1...v5.14.2) (2022-02-03)
 
 
