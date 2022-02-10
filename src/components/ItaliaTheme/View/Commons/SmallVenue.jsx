@@ -17,6 +17,7 @@ const SmallVenue = ({ venue }) => {
   const key = `${url}_venue`;
 
   const venueContent = useSelector((state) => state.content.subrequests?.[key]);
+
   const loaded = venueContent?.loaded || venueContent?.loading;
   const dispatch = useDispatch();
 
@@ -26,7 +27,7 @@ const SmallVenue = ({ venue }) => {
     }
     return () => dispatch(resetContent(key));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [venue]);
+  }, [key]);
 
   let venue_fo = venueContent?.data;
 

@@ -24,7 +24,7 @@ const Venue = ({ venue, display_title = true }) => {
     }
     return () => dispatch(resetContent(key));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [venue]);
+  }, [key]);
 
   let venue_fo = venueContent?.data;
   return venue_fo ? (

@@ -34,7 +34,7 @@ const Module = ({ item }) => {
     dispatch(getContent(url, null, key));
     return () => dispatch(resetContent(key));
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [key]);
 
   let modulo = subrequests?.[key]?.data;
 
