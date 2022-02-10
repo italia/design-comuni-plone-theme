@@ -93,6 +93,13 @@ body.subsite-white {
       }
     }
 
+    .navbar-collapsable .it-brand-wrapper .it-brand-text {
+      h2,
+      h3 {
+        color: $subsite-white-primary;
+      }
+    }
+
     .megamenu {
       .megamenu-toggle-icon {
         fill: $subsite-white-primary;
