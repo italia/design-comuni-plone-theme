@@ -1,3 +1,10 @@
+### [5.14.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.14.3...v5.14.4) (2022-02-10)
+
+
+### Bug Fixes
+
+* fix get module ([b4878ab](https://github.com/RedTurtle/design-volto-theme/commit/b4878ab22a800f207e6595ea03832d6f82b553c5))
+
 ### [5.14.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.14.2...v5.14.3) (2022-02-08)
 
 
