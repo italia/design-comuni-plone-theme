@@ -1,3 +1,10 @@
+### [5.14.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.14.4...v5.14.5) (2022-02-10)
+
+
+### Bug Fixes
+
+* fixed loading subrequests on content redirect ([5512024](https://github.com/RedTurtle/design-volto-theme/commit/551202447503fda0dd0d6587bd9356d9b0b62f12))
+
 ### [5.14.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.14.3...v5.14.4) (2022-02-10)
 
 
