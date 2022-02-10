@@ -27,10 +27,11 @@ import { DownloadFileFormat } from '@italia/components/ItaliaTheme/View';
 const Module = ({ item }) => {
   const dispatch = useDispatch();
   const subrequests = useSelector((state) => state.content.subrequests);
-  const key = 'module_' + flattenToAppURL(item['@id']);
+  const url = flattenToAppURL(item['@id']);
+  const key = 'module_' + url;
 
   useEffect(() => {
-    dispatch(getContent(item['@id'], null, key));
+    dispatch(getContent(url, null, key));
     return () => dispatch(resetContent(key));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
