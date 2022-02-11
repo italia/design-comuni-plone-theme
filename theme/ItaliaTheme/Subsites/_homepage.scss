@@ -1,6 +1,9 @@
-&.subsite-root {
-  .documentFirstHeading,
-  #briciole {
-    display: none;
+body.subsite.subsite-root {
+  &,
+  .public-ui {
+    .documentFirstHeading,
+    #briciole {
+      display: none;
+    }
   }
 }
