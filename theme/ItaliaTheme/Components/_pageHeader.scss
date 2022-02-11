@@ -21,4 +21,16 @@
       max-height: 8em;
     }
   }
+
+  .link-list-wrapper .link-list {
+    li a {
+      display: flex;
+
+      &::before {
+        display: inline-block;
+        margin-right: 0.3rem;
+        content: '○';
+      }
+    }
+  }
 }
