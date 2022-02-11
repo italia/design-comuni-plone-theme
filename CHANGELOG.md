@@ -1,3 +1,10 @@
+### [5.14.6](https://github.com/RedTurtle/design-volto-theme/compare/v5.14.5...v5.14.6) (2022-02-11)
+
+
+### Bug Fixes
+
+* fixed text brand of white template subsite and hamburger menu ([13a54d4](https://github.com/RedTurtle/design-volto-theme/commit/13a54d4e3b030551f11f8bca24203562b850016f))
+
 ### [5.14.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.14.4...v5.14.5) (2022-02-10)
 
 
