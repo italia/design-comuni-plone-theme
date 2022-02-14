@@ -184,7 +184,7 @@
     "@fortawesome/free-regular-svg-icons": "5.14.0",
     "@fortawesome/free-solid-svg-icons": "5.14.0",
     "@fortawesome/react-fontawesome": "0.1.11",
-    "@plone/volto": "plone/volto#bdefc2dd21a5ff0310003a96d25f7a5e61566ba1",
+    "@plone/volto": "plone/volto#f7d79cbd453610fb912e70c53cb3158ece25b855",
     "@tinymce/tinymce-react": "3.8.1",
     "bootstrap-italia": "1.3.9",
     "classnames": "2.2.6",
@@ -212,7 +212,7 @@
     "volto-subfooter": "collective/volto-subfooter#v1.0.3",
     "volto-subsites": "collective/volto-subsites#v2.1.0",
     "volto-venue": "collective/volto-venue#v3.1.2",
-    "volto-gdpr-privacy": "collective/volto-gdpr-privacy#v1.1.16"
+    "volto-gdpr-privacy": "collective/volto-gdpr-privacy#33c59b4d74f4b2395657b751bb5b440d075f0e52"
   },
   "devDependencies": {
     "@babel/core": "7.11.1",
