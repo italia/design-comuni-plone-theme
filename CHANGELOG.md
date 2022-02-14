@@ -1,3 +1,10 @@
+### [5.14.7](https://github.com/RedTurtle/design-volto-theme/compare/v5.14.6...v5.14.7) (2022-02-14)
+
+
+### Bug Fixes
+
+* removed main title even in subsite without theme ([461881c](https://github.com/RedTurtle/design-volto-theme/commit/461881c8ecc60e4258db6ebef550bdffc63b50bf))
+
 ### [5.14.6](https://github.com/RedTurtle/design-volto-theme/compare/v5.14.5...v5.14.6) (2022-02-11)
 
 
