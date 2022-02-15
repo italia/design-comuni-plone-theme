@@ -89,6 +89,7 @@
 
   .slick-track {
     display: flex;
+    min-height: 400px;
     align-items: center;
   }
 
@@ -213,6 +214,10 @@
           width: 20px;
           height: 30px;
         }
+      }
+
+      .slick-track {
+        min-height: 150px;
       }
 
       .slick-slide {
