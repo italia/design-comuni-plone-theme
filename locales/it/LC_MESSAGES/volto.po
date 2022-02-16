@@ -676,7 +676,7 @@ msgstr "Tutti gli argomenti"
 msgid "allegati"
 msgstr "Documenti allegati"
 
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
 # defaultMessage: Altre cariche
 msgid "altre_cariche"
 msgstr "Altre cariche"
@@ -742,7 +742,7 @@ msgstr ""
 msgid "assessorati_riferimento"
 msgstr "Assessorati di riferimento"
 
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Assessore di
 msgid "assessore_di"
 msgstr "Assessore di"
@@ -767,7 +767,7 @@ msgstr "Allegati"
 msgid "atti_documenti_corredo"
 msgstr "Atti e documenti a corredo dell'istanza"
 
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
 # defaultMessage: Atto di nomina
 msgid "atto_nomina"
 msgstr "Atto di nomina"
@@ -963,7 +963,7 @@ msgstr "Vedi"
 msgid "bg_color"
 msgstr "Colore di sfondo"
 
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Biografia
 msgid "biografia"
 msgstr "Biografia"
@@ -1093,18 +1093,18 @@ msgstr "Trasparente"
 msgid "come_si_fa"
 msgstr "Come si fa"
 
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
 # defaultMessage: Compensi
 msgid "compensi"
 msgstr "Compensi"
 
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 #: components/ItaliaTheme/View/UOView/UOWhatDoesItDo
 # defaultMessage: Competenze
 msgid "competenze"
 msgstr "Competenze"
 
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaContatti
 # defaultMessage: Contatti
 msgid "contacts"
 msgstr "Contatti"
@@ -1201,7 +1201,7 @@ msgstr "A cura di"
 msgid "cured_by_people"
 msgstr "Persone"
 
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
 # defaultMessage: Curriculum vitae
 msgid "curriculum_vitae"
 msgstr "Curriculum vitae"
@@ -1241,12 +1241,12 @@ msgstr "Questa pagina ti è stata utile?"
 msgid "customer_satisfaction_yes"
 msgstr "Sì"
 
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Ha fatto parte dell'organizzazione comunale fino al
 msgid "data_conclusione_incarico"
 msgstr "Ha fatto parte dell'organizzazione comunale fino al"
 
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Data di insediamento
 msgid "data_insediamento"
 msgstr "Data di insediamento"
@@ -1412,7 +1412,7 @@ msgstr "Date e orari"
 msgid "decorrenza_termine"
 msgstr "Decorrenza termine"
 
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Deleghe
 msgid "deleghe"
 msgstr "Deleghe"
@@ -1457,7 +1457,7 @@ msgstr "Maggiori dettagli"
 msgid "dettaglio_tipologia_procedimento"
 msgstr "Dettaglio tipologia procedimento"
 
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
 # defaultMessage: Dichiarazione dei redditi
 msgid "dichiarazione_dei_redditi"
 msgstr "Dichiarazione dei redditi"
@@ -1468,7 +1468,7 @@ msgstr "Dichiarazione dei redditi"
 msgid "dirigente"
 msgstr "Dirigente"
 
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
 # defaultMessage: Documenti
 msgid "documenti"
 msgstr "Documenti"
@@ -1559,7 +1559,7 @@ msgid "elementi_di_interesse"
 msgstr "Elementi di interesse"
 
 #: components/ItaliaTheme/View/Commons/ContactLink
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaContatti
 # defaultMessage: E-mail
 msgid "email_label"
 msgstr "E-mail"
@@ -1699,7 +1699,7 @@ msgstr "Cerca"
 msgid "fine_termine"
 msgstr "Fine termine"
 
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Foto dell'attività politica
 msgid "foto_attivita_politica"
 msgstr "Foto dell'attività politica"
@@ -1781,7 +1781,7 @@ msgstr "Puoi selezionare un’icona fra quelle proposte nel menu a tendina oppur
 msgid "iconss_blocks"
 msgstr ""
 
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
 # defaultMessage: Importi di viaggio e/o servizi
 msgid "importi_di_viaggio_e_o_servizi"
 msgstr "Importi di viaggio e/o servizi"
@@ -2116,7 +2116,7 @@ msgstr "Orari di apertura"
 msgid "order_by"
 msgstr "Ordina per"
 
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Organizzazione di riferimento
 msgid "organizzazione_riferimento"
 msgstr "Organizzazione di riferimento"
@@ -2287,7 +2287,7 @@ msgstr "Responsabile del procedimento"
 msgid "responsabile_del_procedimento_unità_organizzativa_competente"
 msgstr "Responsabile del procedimento e Unità Organizzativa competente"
 
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Responsabile di
 msgid "responsabile_di"
 msgstr "Responsabile di"
@@ -2366,7 +2366,7 @@ msgid "rss_read_more"
 msgstr "Leggi tutto"
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Ruolo
 msgid "ruolo"
 msgstr "Ruolo"
@@ -2869,7 +2869,7 @@ msgstr "Compatto"
 msgid "simplecard_listing_appearance_description"
 msgstr "Qui puoi selezionare, per il template 'Card semplice', un aspetto diverso da quello di default."
 
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
 # defaultMessage: Situazione patrimoniale
 msgid "situazione_patrimoniale"
 msgstr "Situazione patrimoniale"
@@ -2914,7 +2914,7 @@ msgstr "Rilevanza"
 msgid "sort_on_title"
 msgstr "Alfabeticamente"
 
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
 # defaultMessage: Spese elettorali
 msgid "spese_elettorali"
 msgstr "Spese elettorali"
@@ -3009,7 +3009,7 @@ msgid "tipologia_organizzazione"
 msgstr "Tipologia organizzazione"
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Tipologia persona
 msgid "tipologia_persona"
 msgstr "Tipologia persona"
@@ -3081,7 +3081,6 @@ msgstr "Ufficio responsabile"
 #: components/ItaliaTheme/View/DocumentoView/DocumentoView
 #: components/ItaliaTheme/View/EventoView/EventoView
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/PersonaView/PersonaView
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 #: components/ItaliaTheme/View/VenueView/VenueView
 # defaultMessage: Ulteriori informazioni
@@ -3129,7 +3128,7 @@ msgstr "Cerca una struttura"
 msgid "uo_type"
 msgstr ""
 
-#: components/ItaliaTheme/View/PersonaView/PersonaView
+#: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
 # defaultMessage: Variazione situazione patrimoniale
 msgid "variazione_situazione_patrimoniale"
 msgstr "Variazione situazione patrimoniale"

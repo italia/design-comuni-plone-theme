@@ -2,7 +2,7 @@
   "name": "design-volto-theme",
   "description": "Volto Theme for Italia design guidelines",
   "license": "MIT",
-  "version": "5.14.6",
+  "version": "5.14.7",
   "private": true,
   "workspaces": [
     "src/addons/volto-multilingual-widget",
@@ -212,7 +212,7 @@
     "volto-subfooter": "collective/volto-subfooter#v1.0.3",
     "volto-subsites": "collective/volto-subsites#v2.1.0",
     "volto-venue": "collective/volto-venue#v3.1.2",
-    "volto-gdpr-privacy": "collective/volto-gdpr-privacy#v1.1.16"
+    "volto-gdpr-privacy": "collective/volto-gdpr-privacy#v1.3.0"
   },
   "devDependencies": {
     "@babel/core": "7.11.1",

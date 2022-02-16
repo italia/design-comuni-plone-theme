@@ -21,7 +21,8 @@ body {
   }
 }
 
-.full-width {
+.full-width,
+.ui.image img.full-width {
   position: relative;
   right: 50%;
   left: 50%;
