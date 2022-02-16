@@ -24,13 +24,12 @@
 
   .link-list-wrapper .link-list {
     li a {
-      display: flex;
+      margin-bottom: 0.9rem;
+      line-height: 1.4rem;
+    }
 
-      &::before {
-        display: inline-block;
-        margin-right: 0.3rem;
-        content: '○';
-      }
+    li:last-child a {
+      margin-bottom: 0;
     }
   }
 }
