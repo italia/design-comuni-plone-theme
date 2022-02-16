@@ -21,4 +21,15 @@
       max-height: 8em;
     }
   }
+
+  .link-list-wrapper .link-list {
+    li a {
+      margin-bottom: 0.9rem;
+      line-height: 1.4rem;
+    }
+
+    li:last-child a {
+      margin-bottom: 0;
+    }
+  }
 }
