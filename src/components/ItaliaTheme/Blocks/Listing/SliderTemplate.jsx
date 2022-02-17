@@ -167,7 +167,15 @@ const SliderTemplate = ({
                           title={intl.formatMessage(messages.viewImage)}
                         >
                           <div className="slide-title">
-                            {item.title} <Icon icon="arrow-right" />
+                            {full_width ? (
+                              <Container>
+                                {item.title} <Icon icon="arrow-right" />
+                              </Container>
+                            ) : (
+                              <>
+                                {item.title} <Icon icon="arrow-right" />
+                              </>
+                            )}
                           </div>
                         </UniversalLink>
                       )}
