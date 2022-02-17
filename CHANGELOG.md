@@ -1,3 +1,15 @@
+## [5.15.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.14.8...v5.15.0) (2022-02-17)
+
+
+### Features
+
+* added megamenu splittable columns config splitMegamenuColumns ([fcb2d69](https://github.com/RedTurtle/design-volto-theme/commit/fcb2d69e91ddda10f7381048c956148c9c1264d5))
+
+
+### Bug Fixes
+
+* fix slider full-width title ([9c92b25](https://github.com/RedTurtle/design-volto-theme/commit/9c92b2545fb9fe2e4041ebc5e9a3724578c97fd9))
+
 ### [5.14.8](https://github.com/RedTurtle/design-volto-theme/compare/v5.14.7...v5.14.8) (2022-02-17)
 
 
