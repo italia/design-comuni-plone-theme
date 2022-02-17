@@ -1,3 +1,20 @@
+### [5.14.8](https://github.com/RedTurtle/design-volto-theme/compare/v5.14.7...v5.14.8) (2022-02-17)
+
+
+### Bug Fixes
+
+* fix image blcoks ([92db1cf](https://github.com/RedTurtle/design-volto-theme/commit/92db1cf0c9be7e2783ff090b7ad28fcc0cd4aa7e))
+* fix slider template min height ([fc1ae20](https://github.com/RedTurtle/design-volto-theme/commit/fc1ae208166cffaed084dd9bb1da447dafe0819f))
+* fixed line-height of link list items ([d29d599](https://github.com/RedTurtle/design-volto-theme/commit/d29d5996a82a89bc71af7906dbc624648257465a))
+* layout navigation list internal pages ([d2fd288](https://github.com/RedTurtle/design-volto-theme/commit/d2fd288811344676fdaa071dfdab6902e6109b66))
+* some styles fixes ([074e329](https://github.com/RedTurtle/design-volto-theme/commit/074e329b816b53ce2f3f4d8b89e7da6a32d9df6c))
+
+
+### Maintenance
+
+* splitted personaView in multiple components ([5f784d2](https://github.com/RedTurtle/design-volto-theme/commit/5f784d2e232fe8c1575f6e5c19bf31bda3c0247f))
+* updated volto-gdpr-privacy ([17aee2a](https://github.com/RedTurtle/design-volto-theme/commit/17aee2a8be43d2666659c3398552af219604a165))
+
 ### [5.14.7](https://github.com/RedTurtle/design-volto-theme/compare/v5.14.6...v5.14.7) (2022-02-14)
 
 
