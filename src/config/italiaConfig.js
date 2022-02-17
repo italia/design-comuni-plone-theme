@@ -185,6 +185,7 @@ export default function applyConfig(voltoConfig) {
         ],
       },
       enableCustomerSatisfaction: true,
+      splitMegamenuColumns: true, //se impostato a false, non spezza le colonne con intestazioni nel megamenu
     },
     'volto-blocks-widget': {
       allowedBlocks: [
