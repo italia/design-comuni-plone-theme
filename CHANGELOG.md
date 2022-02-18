@@ -1,3 +1,10 @@
+### [5.15.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.15.0...v5.15.1) (2022-02-18)
+
+
+### Bug Fixes
+
+* fix recaptcha in volto-customer-satisfaction ([ca20862](https://github.com/RedTurtle/design-volto-theme/commit/ca2086230120bfc497f55cbd00919d435d47d0fa))
+
 ## [5.15.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.14.8...v5.15.0) (2022-02-17)
 
 
