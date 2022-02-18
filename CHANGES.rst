@@ -5,7 +5,7 @@ Changelog
 5.1.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- added spotify icon [gghisini]
 
 
 5.1.3 (2021-05-07)
