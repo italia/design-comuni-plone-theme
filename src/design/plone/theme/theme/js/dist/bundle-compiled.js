@@ -255,6 +255,11 @@ require(['jquery', 'ellipsed'], function($, ellipsed) {
       prepend: true,
     },
     {
+      selector: '.footer-social .spotify',
+      icon: 'fab fa-spotify',
+      prepend: true,
+    },
+    {
       selector:
         '.navigationTile a.navTreeFolderish:not(.navTreeCurrentNode):not(.navTreeItemInPath), .portletNavigationTree a.navTreeFolderish:not(.navTreeCurrentNode):not(.navTreeItemInPath)',
       icon: 'fas fa-angle-down',
