@@ -1,3 +1,10 @@
+### [5.15.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.15.1...v5.15.2) (2022-02-18)
+
+
+### Bug Fixes
+
+* fix smallVenue reload on redirect and subsite style ([641d25a](https://github.com/RedTurtle/design-volto-theme/commit/641d25aa81d0c95b89f3e945ff65fe40a23233e7))
+
 ### [5.15.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.15.0...v5.15.1) (2022-02-18)
 
 
