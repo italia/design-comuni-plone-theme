@@ -95,7 +95,7 @@
     "path": "src",
     "https": "https://github.com/collective/volto-customer-satisfaction.git",
     "url": "git@github.com:collective/volto-customer-satisfaction.git",
-    "tag": "v0.2.6"
+    "tag": "v0.2.8"
   },
   "volto-gdpr-privacy": {
     "package": "@italia/addons/volto-gdpr-privacy",
