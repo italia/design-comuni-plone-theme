@@ -11,6 +11,7 @@ Il primo tema Plone conforme a `Italia design system`__.
 __ https://design-italia.readthedocs.io/it/stable/index.html
 
 Questo tema si basa sulla versione 2017.1 delle linee guida.
+
 warning::
 Questo tema è stato superato dalla nuova versione che rispetta le nuove linee guida (versione 2020.1).
 
