@@ -12,6 +12,9 @@ __ https://design-italia.readthedocs.io/it/stable/index.html
 
 Questo tema si basa sulla versione 2017.1 delle linee guida.
 
+Questo tema è stato superato dalla nuova versione che rispetta le nuove linee guida (versione 2020.1)
+Il nuovo tema implementa un layout per Volto, la nuova interfaccia di gestione di Plone.
+
 |
 
 This is the first Plone theme that is compliant with the `Italia design system`__ guidelines.
