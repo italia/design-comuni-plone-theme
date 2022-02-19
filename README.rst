@@ -16,6 +16,9 @@ Questo tema si basa sulla versione 2017.1 delle linee guida.
 
 **Il nuovo tema implementa un layout per Volto, la nuova interfaccia di gestione di Plone.**
 
+Il nuovo tema lo puoi trovare a questo `indirizzo`__.
+__ https://github.com/RedTurtle/design-volto-theme
+
 |
 
 This is the first Plone theme that is compliant with the `Italia design system`__ guidelines.
