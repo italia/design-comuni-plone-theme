@@ -2541,6 +2541,11 @@ msgstr "Date limite de"
 msgid "searchBlock_secondaryColor"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/EventSearch/Sidebar
+# defaultMessage: Di default, mostra i risultati
+msgid "searchBlock_show_default_results"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 #: components/ItaliaTheme/Blocks/UOSearch/Sidebar

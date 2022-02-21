@@ -59,6 +59,13 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
     );
   });
 
+  const firstLoading = useSelector((state) => {
+    return (
+      !state.querystringsearch?.subrequests?.events_search?.loading &&
+      !state.querystringsearch?.subrequests?.events_search?.loaded
+    );
+  });
+
   const resultsRef = createRef();
 
   const doRequest = (page = currentPage) => {
@@ -104,6 +111,10 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   // Se cambia uno dei tre filtri resetto lo stato dei filtri
   useEffect(() => {
     dispatchFilter({ type: 'reset' });
+    if (data.show_default_results && firstLoading) {
+      doRequest();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
   const filtersReducer = (state = getInitialState(), action) => {
