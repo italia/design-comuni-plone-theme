@@ -1,3 +1,10 @@
+### [5.15.3](https://github.com/redturtle/design-volto-theme/compare/v5.15.2...v5.15.3) (2022-02-21)
+
+
+### Bug Fixes
+
+* reading fullobjects from variation config ([31e88d6](https://github.com/redturtle/design-volto-theme/commit/31e88d63a9f9cc7cd231a8a98b7441d9a25bb296))
+
 ### [5.15.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.15.1...v5.15.2) (2022-02-18)
 
 
