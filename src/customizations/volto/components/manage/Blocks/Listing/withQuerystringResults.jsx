@@ -17,6 +17,12 @@ function getDisplayName(WrappedComponent) {
   return WrappedComponent.displayName || WrappedComponent.name || 'Component';
 }
 
+const getVariationSettings = (variation) => {
+  return config?.blocks?.blocksConfig?.listing?.variations?.find(
+    (v) => v.id === variation,
+  );
+};
+
 const getAdaptedQuery = (querystring, b_size, variation) => {
   const copyFields = [
     'limit',
@@ -27,8 +33,12 @@ const getAdaptedQuery = (querystring, b_size, variation) => {
     ...(config.settings.querystringAdditionalFields ?? []),
   ];
 
+  const variationSettings = getVariationSettings(variation) ?? {};
+
   return Object.assign(
-    variation?.fullobjects ? { fullobjects: 1 } : { metadata_fields: '_all' },
+    variationSettings?.fullobjects
+      ? { fullobjects: 1 }
+      : { metadata_fields: '_all' },
     {
       b_size: b_size,
     },
