@@ -616,7 +616,7 @@ msgstr "Vedi tutto"
 msgid "VenuesSmall"
 msgstr "Luoghi"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueDescription
 # defaultMessage: Video
 msgid "Video"
 msgstr "Video"
@@ -1062,7 +1062,7 @@ msgid "chiusura_procedimento_bando"
 msgstr "Chiusura del procedimento"
 
 #: components/ItaliaTheme/View/Commons/LocationItem
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueWhere
 # defaultMessage: Circoscrizione
 msgid "circoscrizione"
 msgstr "Circoscrizione"
@@ -1116,7 +1116,7 @@ msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 #: components/ItaliaTheme/View/UOView/UOContacts
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueContacts
 # defaultMessage: Contatti
 msgid "contatti"
 msgstr "Contatti"
@@ -1425,7 +1425,7 @@ msgstr "Link rapidi"
 #: components/ItaliaTheme/View/BandoView/BandoView
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueDescription
 #: helpers/amministrazioneTrasparenteHelper
 # defaultMessage: Descrizione
 msgid "descrizione"
@@ -1528,7 +1528,7 @@ msgstr "Ufficio responsabile"
 msgid "done_edit_social_links"
 msgstr "Fatto"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueWhere
 # defaultMessage: Dove
 msgid "dove"
 msgstr "Dove"
@@ -1553,7 +1553,7 @@ msgstr "Chiudi il menu"
 msgid "edit_social_links"
 msgstr "Modifica i social"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueDescription
 # defaultMessage: Elementi di interesse
 msgid "elementi_di_interesse"
 msgstr "Elementi di interesse"
@@ -1930,7 +1930,7 @@ msgstr "Piccola"
 msgid "minutes"
 msgstr "min"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueAccessMode
 # defaultMessage: Modalità di accesso
 msgid "modalita_accesso"
 msgstr "Modalità di accesso"
@@ -2106,7 +2106,7 @@ msgid "orari"
 msgstr "Orari"
 
 #: components/ItaliaTheme/View/UOView/UOContacts
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenuePublicTimetable
 # defaultMessage: Orario per il pubblico
 msgid "orario_pubblico"
 msgstr "Orari di apertura"
@@ -2162,7 +2162,7 @@ msgstr "Parteciperanno"
 msgid "patrocinato_da"
 msgstr "Patrocinato da"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueContacts
 # defaultMessage: PEC
 msgid "pec"
 msgstr "PEC"
@@ -2214,7 +2214,7 @@ msgid "provvedimento_finale"
 msgstr "Provvedimento finale"
 
 #: components/ItaliaTheme/View/Commons/LocationItem
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueWhere
 # defaultMessage: Quartiere
 msgid "quartiere"
 msgstr "Quartiere "
@@ -2245,7 +2245,7 @@ msgid "related_news"
 msgstr "Novità"
 
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueServices
 # defaultMessage: Servizi
 msgid "related_services"
 msgstr "Servizi"
@@ -2303,42 +2303,42 @@ msgstr "Responsabile del procedimento"
 msgid "riferimenti_normativi"
 msgstr "Riferimenti normativi"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueContacts
 # defaultMessage: Fax
 msgid "riferimento_fax_luogo"
 msgstr "Fax"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueContacts
 # defaultMessage: Fax
 msgid "riferimento_fax_struttura"
 msgstr "Fax"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueContacts
 # defaultMessage: E-mail
 msgid "riferimento_mail_luogo"
 msgstr "E-mail"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueContacts
 # defaultMessage: E-mail
 msgid "riferimento_mail_struttura"
 msgstr "E-mail"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueContacts
 # defaultMessage: PEC
 msgid "riferimento_pec_luogo"
 msgstr "PEC"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueContacts
 # defaultMessage: Telefono
 msgid "riferimento_telefonico_luogo"
 msgstr "Telefono"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueContacts
 # defaultMessage: Telefono
 msgid "riferimento_telefonico_struttura"
 msgstr "Telefono"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueContacts
 # defaultMessage: Web
 msgid "riferimento_web"
 msgstr "Web"
@@ -2949,7 +2949,7 @@ msgstr "Strumenti di tutela"
 msgid "struttura"
 msgstr "Struttura"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueContacts
 # defaultMessage: Struttura responsabile
 msgid "struttura_responsabile"
 msgstr "Struttura responsabile"
