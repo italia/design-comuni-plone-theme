@@ -1,3 +1,10 @@
+### [5.16.1](https://github.com/redturtle/design-volto-theme/compare/v5.16.0...v5.16.1) (2022-02-22)
+
+
+### Bug Fixes
+
+* add image and title on ListingImage component ([d0da2bd](https://github.com/redturtle/design-volto-theme/commit/d0da2bd46004d5e68e888d1a563793fe7b9d0608))
+
 ## [5.16.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.15.3...v5.16.0) (2022-02-22)
 
 
