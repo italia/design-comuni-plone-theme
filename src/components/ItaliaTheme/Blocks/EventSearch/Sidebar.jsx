@@ -6,6 +6,7 @@ import {
   SelectWidget,
   Icon,
   ObjectBrowserWidget,
+  CheckboxWidget,
 } from '@plone/volto/components';
 import upSVG from '@plone/volto/icons/up-key.svg';
 import downSVG from '@plone/volto/icons/down-key.svg';
@@ -67,6 +68,10 @@ const messages = defineMessages({
   date_filter: {
     id: 'searchBlock_date_filter',
     defaultMessage: 'Filtro per date',
+  },
+  show_default_results: {
+    id: 'searchBlock_show_default_results',
+    defaultMessage: 'Di default, mostra i risultati',
   },
 });
 
@@ -148,6 +153,21 @@ const Sidebar = (props) => {
               props.onChangeBlock(props.block, {
                 ...props.data,
                 location: value,
+              });
+            }}
+          />
+          <CheckboxWidget
+            id="show_default_results"
+            title={props.intl.formatMessage(messages.show_default_results)}
+            value={
+              props.data.show_default_results
+                ? props.data.show_default_results
+                : false
+            }
+            onChange={(id, value) => {
+              props.onChangeBlock(props.block, {
+                ...props.data,
+                [id]: value,
               });
             }}
           />
