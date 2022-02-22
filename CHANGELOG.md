@@ -1,3 +1,10 @@
+## [5.16.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.15.3...v5.16.0) (2022-02-22)
+
+
+### Features
+
+* added show_default_results in EventsSearch block ([050e25a](https://github.com/RedTurtle/design-volto-theme/commit/050e25a4c6851d84f727789016fa93668c5dec10))
+
 ### [5.15.3](https://github.com/redturtle/design-volto-theme/compare/v5.15.2...v5.15.3) (2022-02-21)
 
 
