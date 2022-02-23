@@ -67,6 +67,14 @@ export BandoDates from '@italia/components/ItaliaTheme/View/Commons/BandoDates';
 /* --- View --- */
 export BandoPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/BandoView/Placeholder/AfterContent';
 export BandoPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/BandoView/Placeholder/AfterRelatedItems';
+export BandoText from '@italia/components/ItaliaTheme/View/BandoView/BandoText';
+export BandoUfficioResponsabile from '@italia/components/ItaliaTheme/View/BandoView/BandoUfficioResponsabile';
+export BandoAreaResponsabile from '@italia/components/ItaliaTheme/View/BandoView/BandoAreaResponsabile';
+export BandoServizi from '@italia/components/ItaliaTheme/View/BandoView/BandoServizi';
+export BandoDate from '@italia/components/ItaliaTheme/View/BandoView/BandoDate';
+export BandoApprofondimenti from '@italia/components/ItaliaTheme/View/BandoView/BandoApprofondimenti';
+export BandoUlterioriInformazioni from '@italia/components/ItaliaTheme/View/BandoView/BandoUlterioriInformazioni';
+
 export CartellaModulisticaAfterContent from '@italia/components/ItaliaTheme/View/CartellaModulisticaView/Placeholder/AfterContent';
 export CartellaModulisticaAfterRelatedItems from '@italia/components/ItaliaTheme/View/CartellaModulisticaView/Placeholder/AfterRelatedItems';
 export DocumentoPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/DocumentoView/Placeholder/AfterContent';

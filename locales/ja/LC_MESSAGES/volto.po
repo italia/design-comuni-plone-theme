@@ -678,7 +678,7 @@ msgstr ""
 msgid "allTopics"
 msgstr ""
 
-#: components/ItaliaTheme/View/BandoView/BandoView
+#: components/ItaliaTheme/View/BandoView/BandoApprofondimenti
 # defaultMessage: Documenti allegati
 msgid "allegati"
 msgstr ""
@@ -729,7 +729,7 @@ msgstr ""
 msgid "area_appartenenza"
 msgstr ""
 
-#: components/ItaliaTheme/View/BandoView/BandoView
+#: components/ItaliaTheme/View/BandoView/BandoAreaResponsabile
 # defaultMessage: Area responsabile
 msgid "area_responsabile"
 msgstr ""
@@ -916,7 +916,7 @@ msgstr ""
 msgid "bando_data_pubblicazione"
 msgstr ""
 
-#: components/ItaliaTheme/View/BandoView/BandoView
+#: components/ItaliaTheme/View/BandoView/BandoText
 # defaultMessage: Destinatari del bando
 msgid "bando_destinatari"
 msgstr ""
@@ -927,7 +927,7 @@ msgid "bando_effective"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
-#: components/ItaliaTheme/View/BandoView/BandoView
+#: components/ItaliaTheme/View/BandoView/BandoText
 # defaultMessage: Ente
 msgid "bando_ente"
 msgstr ""
@@ -1429,7 +1429,7 @@ msgstr ""
 msgid "desc"
 msgstr ""
 
-#: components/ItaliaTheme/View/BandoView/BandoView
+#: components/ItaliaTheme/View/BandoView/BandoText
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 #: components/ItaliaTheme/View/VenueView/VenueView
@@ -2761,7 +2761,7 @@ msgstr ""
 msgid "servizi"
 msgstr ""
 
-#: components/ItaliaTheme/View/BandoView/BandoView
+#: components/ItaliaTheme/View/BandoView/BandoServizi
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 # defaultMessage: Servizi collegati
 msgid "servizi_collegati"
@@ -2982,7 +2982,7 @@ msgstr ""
 msgid "telefono_sede"
 msgstr ""
 
-#: components/ItaliaTheme/View/BandoView/BandoView
+#: components/ItaliaTheme/View/BandoView/BandoDate
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 # defaultMessage: Tempi e scadenze
 msgid "tempi_e_scadenze"
@@ -3010,7 +3010,7 @@ msgstr ""
 msgid "text_filter_placeholder"
 msgstr ""
 
-#: components/ItaliaTheme/View/BandoView/BandoView
+#: components/ItaliaTheme/View/BandoView/BandoText
 # defaultMessage: Tipologia del bando
 msgid "tipologia_bando"
 msgstr ""
@@ -3083,12 +3083,11 @@ msgstr ""
 msgid "twitter_posts_no_results"
 msgstr ""
 
-#: components/ItaliaTheme/View/BandoView/BandoView
+#: components/ItaliaTheme/View/BandoView/BandoUfficioResponsabile
 # defaultMessage: Ufficio responsabile
 msgid "ufficio_responsabile"
 msgstr ""
 
-#: components/ItaliaTheme/View/BandoView/BandoView
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/DocumentoView/DocumentoView
 #: components/ItaliaTheme/View/EventoView/EventoView
