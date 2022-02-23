@@ -111,3 +111,10 @@ export UOWhatDoesItDo from '@italia/components/ItaliaTheme/View/UOView/UOWhatDoe
 export UOMoreInfos from '@italia/components/ItaliaTheme/View/UOView/UOMoreInfos';
 export VenuePlaceholderAfterContent from '@italia/components/ItaliaTheme/View/VenueView/Placeholder/AfterContent';
 export VenuePlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/VenueView/Placeholder/AfterRelatedItems';
+export VenueDescription from '@italia/components/ItaliaTheme/View/VenueView/VenueDescription';
+export VenueServices from '@italia/components/ItaliaTheme/View/VenueView/VenueServices';
+export VenueAccessMode from '@italia/components/ItaliaTheme/View/VenueView/VenueAccessMode';
+export VenueWhere from '@italia/components/ItaliaTheme/View/VenueView/VenueWhere';
+export VenuePublicTimetable from '@italia/components/ItaliaTheme/View/VenueView/VenuePublicTimetable';
+export VenueContacts from '@italia/components/ItaliaTheme/View/VenueView/VenueContacts';
+export VenueMoreInfos from '@italia/components/ItaliaTheme/View/VenueView/VenueMoreInfos';
