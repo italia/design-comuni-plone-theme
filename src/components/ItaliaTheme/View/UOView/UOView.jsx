@@ -7,8 +7,6 @@ import React, { createRef, useEffect, useState } from 'react';
 
 import PropTypes from 'prop-types';
 import {
-  HelpBox,
-  Metadata,
   PageHeader,
   UOServices,
   RelatedItems,
@@ -21,8 +19,8 @@ import {
   UOContacts,
   UODocuments,
   UOWhatDoesItDo,
+  UOMoreInfos,
   RelatedItemInEvidence,
-  richTextHasContent,
   SkipToMainContent,
 } from '@italia/components/ItaliaTheme/View';
 
@@ -89,11 +87,7 @@ const UOView = ({ content }) => {
             <UODocuments content={content} />
 
             {/* ULTERIORI INFORMAZIONI */}
-            <Metadata content={content} showTags={false}>
-              {richTextHasContent(content?.ulteriori_informazioni) && (
-                <HelpBox text={content.ulteriori_informazioni} />
-              )}
-            </Metadata>
+            <UOMoreInfos content={content} />
           </section>
         </div>
       </div>
