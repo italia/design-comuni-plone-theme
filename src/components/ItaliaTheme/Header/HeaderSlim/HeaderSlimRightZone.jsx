@@ -4,17 +4,21 @@
  */
 
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 import {
   ParentSiteMenu,
   LanguageSelector,
   ArLogin,
+  TertiaryMenu,
 } from '@italia/components/ItaliaTheme';
 
 const HeaderSlimRightZone = () => {
+  const subsite = useSelector((state) => state.subsite?.data);
   return (
     <>
       <ParentSiteMenu />
+      {!subsite && <TertiaryMenu />}
       <LanguageSelector />
       <ArLogin />
     </>

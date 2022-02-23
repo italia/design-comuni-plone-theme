@@ -34,6 +34,7 @@ export HeaderSlim from '@italia/components/ItaliaTheme/Header/HeaderSlim';
 export HeaderSlimRightZone from '@italia/components/ItaliaTheme/Header/HeaderSlim/HeaderSlimRightZone';
 export ArLogin from '@italia/components/ItaliaTheme/Header/HeaderSlim/ArLogin';
 export LoginButton from '@italia/components/ItaliaTheme/Header/HeaderSlim/LoginButton';
+export TertiaryMenu from '@italia/components/ItaliaTheme/Header/HeaderSlim/TertiaryMenu';
 export UserLoggedMenu from '@italia/components/ItaliaTheme/Header/HeaderSlim/UserLoggedMenu';
 export HeaderCenter from '@italia/components/ItaliaTheme/Header/HeaderCenter';
 export SocialHeader from '@italia/components/ItaliaTheme/Header/SocialHeader';

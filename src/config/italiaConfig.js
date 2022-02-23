@@ -161,6 +161,16 @@ export default function applyConfig(voltoConfig) {
       //arLoginUrl: 'https://io-comune.agamar.redturtle.it/login',
       // arLogoutUrl: 'https://io-comune.agamar.redturtle.it/logout',
       //spidLogin: true, //se true, nella pagina di errore Unauthorized, mostra il pulsante per il login a Spid.
+      headerslimTertiaryMenu: {
+        it: [
+          //{ title: 'Contatti', url: '/it/contatti' },
+          //{ title: 'Novità', url: '/it/novita' },
+        ],
+        en: [
+          //{ title: 'Contacts', url: '/en/contacts' },
+          //{ title: 'News', url: '/en/news' },
+        ],
+      },
       smallFooterLinks: {
         default: [
           // { title: 'Media policy', url: '/media-policy' },

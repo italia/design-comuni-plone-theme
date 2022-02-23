@@ -11,3 +11,22 @@
     }
   }
 }
+
+// Mobile menu
+@media (max-width: #{map-get($grid-breakpoints, lg)}) {
+  .navbar {
+    .navbar-collapsable {
+      .menu-wrapper {
+        .it-brand-text {
+          h2 {
+            font-size: 1.5rem;
+          }
+
+          h3 {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
