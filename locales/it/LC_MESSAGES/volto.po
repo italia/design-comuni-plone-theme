@@ -1251,7 +1251,7 @@ msgstr "Ha fatto parte dell'organizzazione comunale fino al"
 msgid "data_insediamento"
 msgstr "Data di insediamento"
 
-#: components/ItaliaTheme/View/NewsItemView/NewsItemView
+#: components/ItaliaTheme/View/NewsItemView/NewsItemDataset
 # defaultMessage: Dataset
 msgid "dataset"
 msgstr "Dataset"
@@ -1895,7 +1895,7 @@ msgstr "login con Spid"
 msgid "login_with_spid"
 msgstr "Accedi con Spid"
 
-#: components/ItaliaTheme/View/NewsItemView/NewsItemView
+#: components/ItaliaTheme/View/NewsItemView/NewsItemLuoghiCorrelati
 # defaultMessage: Luoghi
 msgid "luoghi_notizia"
 msgstr "Luoghi"
@@ -1990,7 +1990,7 @@ msgstr "Formati alternativi"
 msgid "natural_image_size"
 msgstr "Non alterare le dimensioni naturali dell'immagine"
 
-#: components/ItaliaTheme/View/NewsItemView/NewsItemView
+#: components/ItaliaTheme/View/NewsItemView/NewsItemText
 # defaultMessage: Contenuto
 msgid "news_item_contenuto"
 msgstr "Contenuto"
@@ -2025,7 +2025,6 @@ msgid "nominativo"
 msgstr "nominativo"
 
 #: components/ItaliaTheme/View/EventoView/EventoView
-#: components/ItaliaTheme/View/NewsItemView/NewsItemView
 # defaultMessage: Notizie in evidenza
 msgid "notizie_in_evidenza"
 msgstr "Notizie in evidenza"
@@ -2230,7 +2229,6 @@ msgid "related_doc"
 msgstr "Documenti"
 
 #: components/ItaliaTheme/View/Commons/RelatedItems
-#: components/ItaliaTheme/View/NewsItemView/NewsItemView
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/ServizioView/ServizioView
 #: components/ItaliaTheme/View/VenueView/VenueView

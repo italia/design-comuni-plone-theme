@@ -83,6 +83,14 @@ export ModuloPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/M
 export ModuloPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/ModuloView/Placeholder/AfterRelatedItems';
 export NewsItemPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/NewsItemView/Placeholder/AfterContent';
 export NewsItemPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/NewsItemView/Placeholder/AfterRelatedItems';
+export NewsItemText from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemText';
+export NewsItemGallery from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemGallery';
+export NewsItemAllegati from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemAllegati';
+export NewsItemACuraDi from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemACuraDi';
+export NewsItemLuoghiCorrelati from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemLuoghiCorrelati';
+export NewsItemDataset from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemDataset';
+export NewsItemMetadata from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemMetadata';
+
 export PagePlaceholderAfterContent from '@italia/components/ItaliaTheme/View/PageView/Placeholder/AfterContent';
 export PagePlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/PageView/Placeholder/AfterRelatedItems';
 export PagePlaceholderTitle from '@italia/components/ItaliaTheme/View/PageView/Placeholder/Title';
