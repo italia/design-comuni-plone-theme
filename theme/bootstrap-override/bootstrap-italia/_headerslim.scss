@@ -19,20 +19,6 @@
       }
     }
 
-    // Tablet / desktop
-    @media (min-width: #{map-get($grid-breakpoints, md)}) {
-      ul.parent-site-menu {
-        flex-wrap: wrap;
-        justify-content: flex-end;
-
-        li.nav-item {
-          display: flex;
-          max-width: 10rem;
-          align-items: center;
-        }
-      }
-    }
-
     // Tablet horizontal / small desktop
     @media (min-width: #{map-get($grid-breakpoints, lg)}) {
       a {
@@ -52,34 +38,7 @@
 
       .it-header-slim-right-zone.header-slim-right-zone {
         flex: 1 0 auto;
-        justify-content: center;
-
-        ul.parent-site-menu {
-          justify-content: center !important;
-          justify-self: center;
-
-          li {
-            .nav-link {
-              padding: 0.3rem;
-            }
-          }
-        }
-      }
-    }
-
-    // Tablet / Small desktop
-    @media screen and (min-width: #{map-get($grid-breakpoints, sm)}) and (max-width: #{map-get($grid-breakpoints, xl)}) {
-      .it-header-slim-right-zone.header-slim-right-zone {
         justify-content: flex-end;
-      }
-    }
-
-    // Mobile
-    @media (max-width: #{map-get($grid-breakpoints, sm)}) {
-      .parent-site-menu.nav {
-        .nav-item:last-child {
-          border-right-color: transparent;
-        }
       }
     }
   }

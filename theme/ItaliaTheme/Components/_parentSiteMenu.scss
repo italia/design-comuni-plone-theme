@@ -7,6 +7,22 @@
 
       a.nav-link {
         color: $primary-text;
+
+        @media (max-width: #{map-get($grid-breakpoints, xl)}) {
+          padding: 0.3rem;
+        }
+      }
+    }
+
+    // Tablet / desktop
+    @media (min-width: #{map-get($grid-breakpoints, md)}) {
+      flex-wrap: wrap;
+      justify-content: flex-end;
+
+      li.nav-item {
+        display: flex;
+        max-width: 10rem;
+        align-items: center;
       }
     }
   }
