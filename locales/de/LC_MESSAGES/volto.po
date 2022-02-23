@@ -1266,7 +1266,7 @@ msgstr ""
 msgid "data_insediamento"
 msgstr ""
 
-#: components/ItaliaTheme/View/NewsItemView/NewsItemView
+#: components/ItaliaTheme/View/NewsItemView/NewsItemDataset
 # defaultMessage: Dataset
 msgid "dataset"
 msgstr ""
@@ -1905,7 +1905,7 @@ msgstr ""
 msgid "login_with_spid"
 msgstr ""
 
-#: components/ItaliaTheme/View/NewsItemView/NewsItemView
+#: components/ItaliaTheme/View/NewsItemView/NewsItemLuoghiCorrelati
 # defaultMessage: Luoghi
 msgid "luoghi_notizia"
 msgstr ""
@@ -2000,7 +2000,7 @@ msgstr ""
 msgid "natural_image_size"
 msgstr ""
 
-#: components/ItaliaTheme/View/NewsItemView/NewsItemView
+#: components/ItaliaTheme/View/NewsItemView/NewsItemText
 # defaultMessage: Contenuto
 msgid "news_item_contenuto"
 msgstr ""
@@ -2035,7 +2035,6 @@ msgid "nominativo"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView/EventoView
-#: components/ItaliaTheme/View/NewsItemView/NewsItemView
 # defaultMessage: Notizie in evidenza
 msgid "notizie_in_evidenza"
 msgstr ""
@@ -2240,7 +2239,6 @@ msgid "related_doc"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/RelatedItems
-#: components/ItaliaTheme/View/NewsItemView/NewsItemView
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/ServizioView/ServizioCorrelati
 # defaultMessage: Contenuti correlati

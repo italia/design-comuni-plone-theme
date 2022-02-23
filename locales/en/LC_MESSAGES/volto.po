@@ -1251,7 +1251,7 @@ msgstr "He was part of the municipal organization until"
 msgid "data_insediamento"
 msgstr "Settlement date"
 
-#: components/ItaliaTheme/View/NewsItemView/NewsItemView
+#: components/ItaliaTheme/View/NewsItemView/NewsItemDataset
 # defaultMessage: Dataset
 msgid "dataset"
 msgstr "Dataset"
@@ -1890,7 +1890,7 @@ msgstr ""
 msgid "login_with_spid"
 msgstr ""
 
-#: components/ItaliaTheme/View/NewsItemView/NewsItemView
+#: components/ItaliaTheme/View/NewsItemView/NewsItemLuoghiCorrelati
 # defaultMessage: Luoghi
 msgid "luoghi_notizia"
 msgstr "Venues"
@@ -1985,7 +1985,7 @@ msgstr "Alternative formats"
 msgid "natural_image_size"
 msgstr "Do not alter natural image sizes"
 
-#: components/ItaliaTheme/View/NewsItemView/NewsItemView
+#: components/ItaliaTheme/View/NewsItemView/NewsItemText
 # defaultMessage: Contenuto
 msgid "news_item_contenuto"
 msgstr "Content"
@@ -2020,7 +2020,6 @@ msgid "nominativo"
 msgstr "nominative"
 
 #: components/ItaliaTheme/View/EventoView/EventoView
-#: components/ItaliaTheme/View/NewsItemView/NewsItemView
 # defaultMessage: Notizie in evidenza
 msgid "notizie_in_evidenza"
 msgstr "News in evidence"
@@ -2225,7 +2224,6 @@ msgid "related_doc"
 msgstr "Documents"
 
 #: components/ItaliaTheme/View/Commons/RelatedItems
-#: components/ItaliaTheme/View/NewsItemView/NewsItemView
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/ServizioView/ServizioCorrelati
 # defaultMessage: Contenuti correlati
