@@ -21,8 +21,21 @@ import {
   BandoUlterioriInformazioni,
   RelatedItemInEvidence,
   SkipToMainContent,
+  ContentTypeViewSections,
 } from '@italia/components/ItaliaTheme/View';
 
+export const BandoViewSectionsOrder = [
+  { /* Testo */ component: BandoText },
+  /* Responsabili */
+  { /* UFFICIO */ component: BandoUfficioResponsabile },
+  { /* AREA */ component: BandoAreaResponsabile },
+  { /* SERVIZI */ component: BandoServizi },
+  { /* DATE IMPORTANTI  */ component: BandoDate },
+  {
+    /* ALLEGATI (CARTELLE APPROFONDIMENTI)  */ component: BandoApprofondimenti,
+  },
+  { /* ULTERIORI INFORMAZIONI  */ component: BandoUlterioriInformazioni },
+];
 /**
  * BandoView view component class.
  * @function BandoView
@@ -63,25 +76,11 @@ const BandoView = ({ content, location }) => {
             id="main-content-section"
             className="col-lg-8 it-page-sections-container"
           >
-            <BandoText content={content} />
-
-            {/* Responsabili */}
-            {/* UFFICIO */}
-            <BandoUfficioResponsabile content={content} />
-
-            {/* AREA */}
-            <BandoAreaResponsabile content={content} />
-
-            {/* SERVIZI */}
-            <BandoServizi content={content} />
-
-            {/* DATE IMPORTANTI */}
-            <BandoDate content={content} />
-
-            {/* ALLEGATI (CARTELLE APPROFONDIMENTI) */}
-            <BandoApprofondimenti content={content} />
-
-            <BandoUlterioriInformazioni content={content} />
+            {/* SEZIONI */}
+            <ContentTypeViewSections
+              content={content}
+              defaultSections={BandoViewSectionsOrder}
+            />
           </section>
         </div>
       </div>

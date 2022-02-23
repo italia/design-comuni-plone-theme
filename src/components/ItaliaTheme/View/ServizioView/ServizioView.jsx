@@ -29,7 +29,49 @@ import {
   ServizioTrasparenza,
   ServizioCorrelati,
   ServizioUlterioriInformazioni,
+  ContentTypeViewSections,
 } from '@italia/components/ItaliaTheme/View';
+
+export const VenueViewSectionsOrder = [
+  {
+    /* HEADER IMAGE */
+
+    component: ContentImage,
+    props: { position: 'documentBody' },
+  },
+
+  { /* STATO DEL SERVIZIO */ component: ServizioStato },
+
+  { /* TEXT BODY */ component: ServizioCosE },
+
+  { /* A CHI SI RIVOLGE */ component: ServizioAChiSiRivolge },
+
+  { /* ACCEDERE AL SERVIZIO */ component: ServizioComeAccedere },
+
+  { /* COSA SERVE */ component: ServizioCosaServe },
+
+  { /* COSTI E VINCOLI */ component: ServizioCostiVincoli },
+
+  { /* TEMPI E SCADENZE */ component: ServizioTempiScadenze },
+
+  { /* CASI PARTICOLARI */ component: ServizioCasiParticolari },
+
+  { /* CONTATTI */ component: ServizioContatti },
+
+  { /* ALTRI DOCUMENTI */ component: ServizioAltriDocumenti },
+
+  { /* SITI ESTERNI */ component: ServizioSitiEsterni },
+
+  { /* ALLEGATI */ component: ServizioAllegati },
+
+  { /* MODULISTICA */ component: ServizioModulistica },
+
+  { /* TRASPARENZA */ component: ServizioTrasparenza },
+
+  { /* CORRELATI */ component: ServizioCorrelati },
+
+  { /* ULTERIORI INFORMAZIONI */ component: ServizioUlterioriInformazioni },
+];
 
 /**
  * ServizioView view component class.
@@ -71,56 +113,11 @@ const ServizioView = ({ content }) => {
             className="col-lg-8 it-page-sections-container"
             ref={documentBody}
           >
-            {/* HEADER IMAGE */}
-            <ContentImage content={content} position="documentBody" />
-
-            {/* STATO DEL SERVIZIO */}
-            <ServizioStato content={content} />
-
-            {/* TEXT BODY */}
-            <ServizioCosE content={content} />
-
-            {/* A CHI SI RIVOLGE */}
-            <ServizioAChiSiRivolge content={content} />
-
-            {/* ACCEDERE AL SERVIZIO */}
-            <ServizioComeAccedere content={content} />
-
-            {/* COSA SERVE */}
-            <ServizioCosaServe content={content} />
-
-            {/* COSTI E VINCOLI */}
-            <ServizioCostiVincoli content={content} />
-
-            {/* TEMPI E SCADENZE */}
-            <ServizioTempiScadenze content={content} />
-
-            {/* CASI PARTICOLARI */}
-            <ServizioCasiParticolari content={content} />
-
-            {/* CONTATTI */}
-            <ServizioContatti content={content} />
-
-            {/* ALTRI DOCUMENTI */}
-            <ServizioAltriDocumenti content={content} />
-
-            {/* SITI ESTERNI */}
-            <ServizioSitiEsterni content={content} />
-
-            {/* ALLEGATI */}
-            <ServizioAllegati content={content} />
-
-            {/* MODULISTICA */}
-            <ServizioModulistica content={content} />
-
-            {/* TRASPARENZA */}
-            <ServizioTrasparenza content={content} />
-
-            {/* CORRELATI */}
-            <ServizioCorrelati content={content} />
-
-            {/* ULTERIORI INFORMAZIONI */}
-            <ServizioUlterioriInformazioni content={content} />
+            {/* SEZIONI */}
+            <ContentTypeViewSections
+              content={content}
+              defaultSections={VenueViewSectionsOrder}
+            />
           </section>
         </div>
       </div>

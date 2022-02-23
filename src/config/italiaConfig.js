@@ -47,6 +47,7 @@ import faSitemapSVG from '@italia/icons/sitemap.svg';
 import faBuildingSVG from '@italia/icons/building.svg';
 import faFileDownloadSVG from '@italia/icons/file-download.svg';
 import faQuestionSVG from '@italia/icons/question-solid.svg';
+import bandoSVG from '@italia/icons/bando.svg';
 
 import applyRichTextConfig from '@italia/config/RichTextEditor/config';
 
@@ -103,6 +104,7 @@ export default function applyConfig(voltoConfig) {
     contentIcons: {
       ...config.settings.contentIcons,
       Document: faFileInvoiceSVG,
+      Bando: bandoSVG,
       Folder: faFolderOpenSVG,
       'News Item': faNewspaperSVG,
       Event: faCalendarAltSVG,
@@ -150,6 +152,11 @@ export default function applyConfig(voltoConfig) {
 
     italiaThemeViewsConfig: {
       imagePosition: 'afterHeader', // possible values: afterHeader, documentBody
+      // Venue: {
+      //   sections: [
+      //     //sections order for Venue content-type view. See components/ItaliaTheme/View/VenueView/VenueView.jsx for default VenueViewSectionsOrder
+      //   ],
+      // },
     },
     siteProperties: {
       siteTitle: 'Nome del Comune', //può essere una stringa, o un oggetto nel caso di multilingua: {'it':'Nome del Comune', 'en':'Site name'}. Se multilingua il default è comunque la stringa.

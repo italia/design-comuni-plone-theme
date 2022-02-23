@@ -14,7 +14,13 @@ import {
   ModuloPlaceholderAfterContent,
   ModuloPlaceholderAfterRelatedItems,
   RelatedItemInEvidence,
+  ContentTypeViewSections,
 } from '@italia/components/ItaliaTheme/View';
+
+export const ModuloViewSectionsOrder = [
+  { /* FILES */ component: ModuloFiles },
+  { /* TESTO */ component: ModuloText },
+];
 
 /**
  * ModuloView view component class.
@@ -29,9 +35,11 @@ const ModuloView = ({ content }) => {
       <div className="container px-4 my-4 modulo-view">
         <PageHeader content={content} />
 
-        <ModuloFiles content={content} />
-
-        <ModuloText content={content} />
+        {/* SEZIONI */}
+        <ContentTypeViewSections
+          content={content}
+          defaultSections={ModuloViewSectionsOrder}
+        />
       </div>
 
       <ModuloPlaceholderAfterContent content={content} />

@@ -23,7 +23,25 @@ import {
   EventoUlterioriInformazioni,
   RelatedItemInEvidence,
   SkipToMainContent,
+  ContentTypeViewSections,
 } from '@italia/components/ItaliaTheme/View';
+
+export const EventoViewSectionsOrder = [
+  {
+    /* HEADER IMAGE */
+
+    component: ContentImage,
+    props: { position: 'documentBody' },
+  },
+  { /* COS'è */ component: EventoCosE },
+  { /* LUOGHI */ component: EventoLuoghi },
+  { /* DATE E ORARI */ component: EventoDateOrari },
+  { /* COSTI */ component: EventoCosti },
+  { /* DOCUMENTI */ component: EventoDocumenti },
+  { /* CONTATTI */ component: EventoContatti },
+  { /* EVENTS */ component: EventoPadreEFigli },
+  { /* ULTERIORI INFORMAZIONI */ component: EventoUlterioriInformazioni },
+];
 
 /**
  * EventoView view component class.
@@ -69,32 +87,11 @@ const EventoView = ({ content, location }) => {
             id="main-content-section"
             className="col-lg-8 it-page-sections-container"
           >
-            {/* HEADER IMAGE */}
-            <ContentImage content={content} position="documentBody" />
-
-            {/* COS'è */}
-            <EventoCosE content={content} />
-
-            {/* LUOGHI */}
-            <EventoLuoghi content={content} />
-
-            {/* DATE E ORARI */}
-            <EventoDateOrari content={content} />
-
-            {/* COSTI */}
-            <EventoCosti content={content} />
-
-            {/* DOCUMENTI */}
-            <EventoDocumenti content={content} />
-
-            {/* CONTATTI */}
-            <EventoContatti content={content} />
-
-            {/* EVENTS */}
-            <EventoPadreEFigli content={content} />
-
-            {/* ULTERIORI INFORMAZIONI */}
-            <EventoUlterioriInformazioni content={content} />
+            {/* SEZIONI */}
+            <ContentTypeViewSections
+              content={content}
+              defaultSections={EventoViewSectionsOrder}
+            />
           </section>
         </div>
       </div>

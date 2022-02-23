@@ -24,6 +24,7 @@ export HelpBox from '@italia/components/ItaliaTheme/View/Commons/HelpBox';
 export EmbeddedVideo from '@italia/components/ItaliaTheme/View/Commons/EmbeddedVideo';
 export Events from '@italia/components/ItaliaTheme/View/Commons/Events';
 export Venue from '@italia/components/ItaliaTheme/View/Commons/Venue';
+export ContentTypeViewSections from '@italia/components/ItaliaTheme/View/Commons/ContentTypeViewSections';
 
 export PageHeader from '@italia/components/ItaliaTheme/View/Commons/PageHeader/PageHeader';
 export PageHeaderDates from '@italia/components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDates';
@@ -160,6 +161,10 @@ export UOPeople from '@italia/components/ItaliaTheme/View/UOView/UOPeople';
 export UOStructure from '@italia/components/ItaliaTheme/View/UOView/UOStructure';
 export UOServices from '@italia/components/ItaliaTheme/View/UOView/UOServices';
 export UOContacts from '@italia/components/ItaliaTheme/View/UOView/UOContacts';
+export UOContactsLocations from '@italia/components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsLocations';
+export UOContactsContacts from '@italia/components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsContacts';
+export UOContactsSediSecondarie from '@italia/components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsSediSecondarie';
+
 export UODocuments from '@italia/components/ItaliaTheme/View/UOView/UODocuments';
 export UOWhatDoesItDo from '@italia/components/ItaliaTheme/View/UOView/UOWhatDoesItDo';
 export UOMoreInfos from '@italia/components/ItaliaTheme/View/UOView/UOMoreInfos';

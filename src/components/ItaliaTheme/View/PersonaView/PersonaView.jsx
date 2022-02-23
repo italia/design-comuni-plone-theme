@@ -18,7 +18,15 @@ import {
   PersonaPlaceholderAfterRelatedItems,
   RelatedItemInEvidence,
   SkipToMainContent,
+  ContentTypeViewSections,
 } from '@italia/components/ItaliaTheme/View';
+
+export const PersonaViewSectionsOrder = [
+  { /* RUOLO */ component: PersonaRuolo },
+  { /* CONTATTI */ component: PersonaContatti },
+  { /* DOCUMENTI */ component: PersonaDocumenti },
+  { /* ULTERIORI INFORMAZIONI */ component: PersonaUlterioriInformazioni },
+];
 
 /**
  * PersonaView view component class.
@@ -60,13 +68,11 @@ const PersonaView = ({ content }) => {
             id="main-content-section"
             ref={documentBody}
           >
-            <PersonaRuolo content={content} />
-
-            <PersonaContatti content={content} />
-
-            <PersonaDocumenti content={content} />
-
-            <PersonaUlterioriInformazioni content={content} />
+            {/* SEZIONI */}
+            <ContentTypeViewSections
+              content={content}
+              defaultSections={PersonaViewSectionsOrder}
+            />
           </section>
         </div>
       </div>

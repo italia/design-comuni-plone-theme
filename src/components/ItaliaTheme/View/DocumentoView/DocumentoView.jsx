@@ -22,7 +22,23 @@ import {
   RelatedItems,
   RelatedItemInEvidence,
   SkipToMainContent,
+  ContentTypeViewSections,
 } from '@italia/components/ItaliaTheme/View';
+
+export const DocumentoViewSectionsOrder = [
+  {
+    /* HEADER IMAGE */
+    component: ContentImage,
+    props: { position: 'documentBody' },
+  },
+  { /* DESCRIZIONE*/ component: DocumentoDescrizione },
+  { /* DOCUMENTI */ component: DocumentoDocumenti },
+  { /* UFFICIO RESPONSABILE */ component: DocumentoUfficioResponsabile },
+  { /* AREA RESPONSABILE */ component: DocumentoAreaResponsabile },
+  { /* ACCEDERE AL SERVIZIO */ component: DocumentoAccedereServizio },
+  { /* DOCUMENTI ALLEGATI */ component: DocumentoDocAllegati },
+  { /* ULTERIORI INFORMAZIONI */ component: DocumentoUlterioriInformazioni },
+];
 
 /**
  * DocumentoView view component class.
@@ -67,30 +83,11 @@ const DocumentoView = ({ content, location }) => {
             id="main-content-section"
             className="col-lg-8 it-page-sections-container"
           >
-            {/* HEADER IMAGE */}
-            <ContentImage content={content} position="documentBody" />
-
-            {/* DESCRIZIONE*/}
-
-            <DocumentoDescrizione content={content} />
-
-            {/* DOCUMENTI */}
-            <DocumentoDocumenti content={content} />
-
-            {/* UFFICIO RESPONSABILE */}
-            <DocumentoUfficioResponsabile content={content} />
-
-            {/* AREA RESPONSABILE */}
-            <DocumentoAreaResponsabile content={content} />
-
-            {/* ACCEDERE AL SERVIZIO */}
-            <DocumentoAccedereServizio content={content} />
-
-            {/* DOCUMENTI ALLEGATI */}
-            <DocumentoDocAllegati content={content} />
-
-            {/* ULTERIORI INFORMAZIONI */}
-            <DocumentoUlterioriInformazioni content={content} />
+            {/* SEZIONI */}
+            <ContentTypeViewSections
+              content={content}
+              defaultSections={DocumentoViewSectionsOrder}
+            />
           </section>
         </div>
       </div>

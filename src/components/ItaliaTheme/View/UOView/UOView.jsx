@@ -22,7 +22,31 @@ import {
   UOMoreInfos,
   RelatedItemInEvidence,
   SkipToMainContent,
+  ContentTypeViewSections,
 } from '@italia/components/ItaliaTheme/View';
+
+export const UOViewSectionsOrder = [
+  {
+    /* HEADER IMAGE */
+
+    component: ContentImage,
+    props: { position: 'documentBody' },
+  },
+
+  { /*** COSA FA ***/ component: UOWhatDoesItDo },
+
+  { /*** STRUTTURA ***/ component: UOStructure },
+
+  { /*** PERSONE ***/ component: UOPeople },
+
+  { /*** SERVIZI ***/ component: UOServices },
+
+  { /*** CONTATTI ***/ component: UOContacts },
+
+  { /* DOCUMENTI */ component: UODocuments },
+
+  { /* ULTERIORI INFORMAZIONI */ component: UOMoreInfos },
+];
 
 /**
  * UOView view component class.
@@ -65,29 +89,11 @@ const UOView = ({ content }) => {
             id="main-content-section"
             className="col-lg-8 it-page-sections-container"
           >
-            {/* HEADER IMAGE */}
-            <ContentImage content={content} position="documentBody" />
-
-            {/*** COSA FA ***/}
-            <UOWhatDoesItDo content={content} />
-
-            {/*** STRUTTURA ***/}
-            <UOStructure content={content} />
-
-            {/*** PERSONE ***/}
-            <UOPeople content={content} />
-
-            {/*** SERVIZI ***/}
-            <UOServices content={content} />
-
-            {/*** CONTATTI ***/}
-            <UOContacts content={content} />
-
-            {/* DOCUMENTI */}
-            <UODocuments content={content} />
-
-            {/* ULTERIORI INFORMAZIONI */}
-            <UOMoreInfos content={content} />
+            {/* SEZIONI */}
+            <ContentTypeViewSections
+              content={content}
+              defaultSections={UOViewSectionsOrder}
+            />
           </section>
         </div>
       </div>
