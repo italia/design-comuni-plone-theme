@@ -24,6 +24,7 @@ export HelpBox from '@italia/components/ItaliaTheme/View/Commons/HelpBox';
 export EmbeddedVideo from '@italia/components/ItaliaTheme/View/Commons/EmbeddedVideo';
 export Events from '@italia/components/ItaliaTheme/View/Commons/Events';
 export Venue from '@italia/components/ItaliaTheme/View/Commons/Venue';
+export ContentTypeViewSections from '@italia/components/ItaliaTheme/View/Commons/ContentTypeViewSections';
 
 export PageHeader from '@italia/components/ItaliaTheme/View/Commons/PageHeader/PageHeader';
 export PageHeaderDates from '@italia/components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDates';

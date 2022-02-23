@@ -22,7 +22,31 @@ import {
   VenuePublicTimetable,
   VenueContacts,
   VenueMoreInfos,
+  ContentTypeViewSections,
 } from '@italia/components/ItaliaTheme/View';
+
+export const VenueViewSectionsOrder = [
+  {
+    /* HEADER IMAGE */
+
+    component: ContentImage,
+    props: { position: 'documentBody' },
+  },
+
+  { /* DESCRIZIONE */ component: VenueDescription },
+
+  { /* SERVIZI CORRELATI */ component: VenueServices },
+
+  { /* MODALITA DI ACCESSO */ component: VenueAccessMode },
+
+  { /* MAPPA */ component: VenueWhere },
+
+  { /* ORARIO AL PUBBLICO */ component: VenuePublicTimetable },
+
+  { /* CONTATTI */ component: VenueContacts },
+
+  { /* ULTERIORI INFORMAZIONI */ component: VenueMoreInfos },
+];
 
 /**
  * VenueView view component class.
@@ -76,29 +100,11 @@ const VenueView = ({ content }) => {
             id="main-content-section"
             ref={documentBody}
           >
-            {/* HEADER IMAGE */}
-
-            <ContentImage content={content} position="documentBody" />
-            {/* DESCRIZIONE */}
-            <VenueDescription content={content} />
-
-            {/* SERVIZI CORRELATI */}
-            <VenueServices content={content} />
-
-            {/* MODALITA DI ACCESSO */}
-            <VenueAccessMode content={content} />
-
-            {/* MAPPA */}
-            <VenueWhere content={content} />
-
-            {/* ORARIO AL PUBBLICO */}
-            <VenuePublicTimetable content={content} />
-
-            {/* CONTATTI */}
-            <VenueContacts content={content} />
-
-            {/* ULTERIORI INFORMAZIONI */}
-            <VenueMoreInfos content={content} />
+            {/* SEZIONI */}
+            <ContentTypeViewSections
+              content={content}
+              defaultSections={VenueViewSectionsOrder}
+            />
           </section>
         </div>
       </div>
