@@ -22,7 +22,23 @@ import {
   NewsItemLuoghiCorrelati,
   NewsItemDataset,
   NewsItemMetadata,
+  ContentTypeViewSections,
 } from '@italia/components/ItaliaTheme/View';
+
+export const NewsItemViewSectionsOrder = [
+  {
+    /* HEADER IMAGE */
+    component: ContentImage,
+    props: { position: 'documentBody' },
+  },
+  { /* TEXT BODY */ component: NewsItemText },
+  { /* GALLERY */ component: NewsItemGallery },
+  { /* ALLEGATI */ component: NewsItemAllegati },
+  { /* A CURA DI */ component: NewsItemACuraDi },
+  { /* LUOGHI CORRELATI */ component: NewsItemLuoghiCorrelati },
+  { /* DATASET */ component: NewsItemDataset },
+  { /* ULTERIORI INFORMAZIONI */ component: NewsItemMetadata },
+];
 
 /**
  * NewsItemView view component class.
@@ -78,23 +94,11 @@ const NewsItemView = ({ content, location }) => {
             id="main-content-section"
             ref={documentBody}
           >
-            {/* HEADER IMAGE */}
-            <ContentImage content={content} position="documentBody" />
-
-            {/* TEXT BODY */}
-            <NewsItemText content={content} />
-
-            <NewsItemGallery content={content} />
-
-            <NewsItemAllegati content={content} />
-
-            <NewsItemACuraDi content={content} />
-
-            <NewsItemLuoghiCorrelati content={content} />
-
-            <NewsItemDataset content={content} />
-
-            <NewsItemMetadata content={content} />
+            {/* SEZIONI */}
+            <ContentTypeViewSections
+              content={content}
+              defaultSections={NewsItemViewSectionsOrder}
+            />
           </section>
         </div>
       </div>

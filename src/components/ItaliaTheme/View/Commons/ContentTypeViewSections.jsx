@@ -10,7 +10,7 @@ const ContentTypeViewSections = ({ content, defaultSections }) => {
   const sections =
     config.settings?.italiaThemeViewsConfig?.[content['@type']]?.sections ??
     defaultSections;
-  console.log(content, sections);
+
   return sections?.length > 0 ? (
     sections.map((section, i) => (
       <section.component
