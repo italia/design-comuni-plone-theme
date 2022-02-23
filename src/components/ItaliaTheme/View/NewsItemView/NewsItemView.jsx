@@ -5,50 +5,24 @@
 
 import React, { createRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { defineMessages, useIntl } from 'react-intl';
 import { readingTime } from '../ViewUtils';
 import {
-  Metadata,
-  RichTextArticle,
   PageHeader,
   SideMenu,
   ContentImage,
-  VenuesSmall,
-  CuredBy,
-  Gallery,
-  Attachments,
   RelatedItems,
   NewsItemPlaceholderAfterContent,
   NewsItemPlaceholderAfterRelatedItems,
   RelatedItemInEvidence,
-  richTextHasContent,
   SkipToMainContent,
+  NewsItemText,
+  NewsItemGallery,
+  NewsItemAllegati,
+  NewsItemACuraDi,
+  NewsItemLuoghiCorrelati,
+  NewsItemDataset,
+  NewsItemMetadata,
 } from '@italia/components/ItaliaTheme/View';
-
-// import { getBaseUrl } from '@plone/volto/helpers';
-
-const messages = defineMessages({
-  news_item_contenuto: {
-    id: 'news_item_contenuto',
-    defaultMessage: 'Contenuto',
-  },
-  notizie_in_evidenza: {
-    id: 'notizie_in_evidenza',
-    defaultMessage: 'Notizie in evidenza',
-  },
-  related_items: {
-    id: 'related_items',
-    defaultMessage: 'Contenuti correlati',
-  },
-  dataset: {
-    id: 'dataset',
-    defaultMessage: 'Dataset',
-  },
-  luoghi: {
-    id: 'luoghi_notizia',
-    defaultMessage: 'Luoghi',
-  },
-});
 
 /**
  * NewsItemView view component class.
@@ -57,8 +31,6 @@ const messages = defineMessages({
  * @returns {string} Markup of the component.
  */
 const NewsItemView = ({ content, location }) => {
-  const intl = useIntl();
-
   const [readingtime, setReadingtime] = useState(0);
   let documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
@@ -110,44 +82,19 @@ const NewsItemView = ({ content, location }) => {
             <ContentImage content={content} position="documentBody" />
 
             {/* TEXT BODY */}
-            <RichTextArticle
-              content={content.descrizione_estesa}
-              tag_id={'text-body'}
-              field="descrizione_estesa"
-              title={intl.formatMessage(messages.news_item_contenuto)}
-              show_title={false}
-            />
+            <NewsItemText content={content} />
 
-            <Gallery content={content} folder_name={'multimedia'} />
+            <NewsItemGallery content={content} />
 
-            <Attachments content={content} folder_name={'documenti-allegati'} />
+            <NewsItemAllegati content={content} />
 
-            {((content.a_cura_di && content.a_cura_di.length > 0) ||
-              (content.a_cura_di_persone &&
-                content.a_cura_di_persone.length > 0)) && (
-              <CuredBy
-                office={content.a_cura_di ? content.a_cura_di[0] : null}
-                people={content.a_cura_di_persone}
-              />
-            )}
+            <NewsItemACuraDi content={content} />
 
-            {content.luoghi_correlati?.length > 0 && (
-              <RichTextArticle
-                tag_id="luoghi"
-                title={intl.formatMessage(messages.luoghi)}
-              >
-                <VenuesSmall venues={content.luoghi_correlati} />
-              </RichTextArticle>
-            )}
+            <NewsItemLuoghiCorrelati content={content} />
 
-            {richTextHasContent(content.dataset) && (
-              <RichTextArticle
-                content={content.dataset}
-                tag_id="dataset"
-                title={intl.formatMessage(messages.dataset)}
-              />
-            )}
-            <Metadata content={content} />
+            <NewsItemDataset content={content} />
+
+            <NewsItemMetadata content={content} />
           </section>
         </div>
       </div>

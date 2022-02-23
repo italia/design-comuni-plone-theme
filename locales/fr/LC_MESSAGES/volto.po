@@ -139,7 +139,7 @@ msgstr ""
 msgid "Color_warning_orange"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoContatti
 # defaultMessage: Contatti
 msgid "Contatti"
 msgstr "Contacts"
@@ -633,7 +633,7 @@ msgstr "Voir tout"
 msgid "VenuesSmall"
 msgstr "Lieux"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueDescription
 # defaultMessage: Video
 msgid "Video"
 msgstr "Vidéo"
@@ -648,12 +648,12 @@ msgstr ""
 msgid "You are trying to access a protected resource, please {login} first."
 msgstr "Vous essayez d'accéder à une ressource protégée, veuillez d'abord {login}."
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioAChiSiRivolge
 # defaultMessage: A chi si rivolge
 msgid "a_chi_si_rivolge"
 msgstr "A qui il est adressé"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioComeAccedere
 # defaultMessage: Accedere al servizio
 msgid "accedere_al_servizio"
 msgstr "Accéder au service"
@@ -703,7 +703,7 @@ msgstr "Autres bureaux"
 msgid "altre_modalita_invio"
 msgstr ""
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioAltriDocumenti
 # defaultMessage: Documenti correlati
 msgid "altri_documenti"
 msgstr "Autres documents"
@@ -789,7 +789,7 @@ msgstr ""
 msgid "atto_nomina"
 msgstr "Acte de nomination"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioComeAccedere
 # defaultMessage: Metodi di autenticazione al servizio
 msgid "autenticazione"
 msgstr "Authentification"
@@ -1010,7 +1010,7 @@ msgstr ""
 msgid "calendar_prev_arrow"
 msgstr ""
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioComeAccedere
 # defaultMessage: Canale digitale
 msgid "canale_digitale"
 msgstr "Canal numérique"
@@ -1041,7 +1041,7 @@ msgstr ""
 msgid "cartellamodulistica_formati_scaricabili"
 msgstr "Formats téléchargeables"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioCasiParticolari
 # defaultMessage: Casi particolari
 msgid "casi_particolari"
 msgstr "Cas spéciaux"
@@ -1056,7 +1056,7 @@ msgstr ""
 msgid "channel_link_title"
 msgstr ""
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioAChiSiRivolge
 # defaultMessage: Chi può presentare
 msgid "chi_puo_presentare"
 msgstr "Qui peut présenter"
@@ -1079,7 +1079,7 @@ msgid "chiusura_procedimento_bando"
 msgstr "Clôture de la procédure"
 
 #: components/ItaliaTheme/View/Commons/LocationItem
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueWhere
 # defaultMessage: Circoscrizione
 msgid "circoscrizione"
 msgstr "Quartier"
@@ -1105,7 +1105,7 @@ msgstr ""
 msgid "color_transparent"
 msgstr ""
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioComeAccedere
 # defaultMessage: Come si fa
 msgid "come_si_fa"
 msgstr "Comment tu fais"
@@ -1131,24 +1131,19 @@ msgstr "Contacts"
 msgid "contacts_block"
 msgstr ""
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioContatti
 #: components/ItaliaTheme/View/UOView/UOContacts
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueContacts
 # defaultMessage: Contatti
 msgid "contatti"
 msgstr "Contacts"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
-# defaultMessage: Contatti esterni
-msgid "contatti_esterni"
-msgstr "Contacts externes"
-
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoContatti
 # defaultMessage: Contatti interni
 msgid "contatti_interni"
 msgstr "Contacts internes"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioAChiSiRivolge
 # defaultMessage: Copertura geografica del servizio
 msgid "copertura_geografica"
 msgstr "Couverture géographique"
@@ -1158,22 +1153,22 @@ msgstr "Couverture géographique"
 msgid "cosa_fa"
 msgstr "Qu'est-ce qu'il fait"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioCosaServe
 # defaultMessage: Cosa serve
 msgid "cosa_serve"
 msgstr "Ce qui est necessaire"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioComeAccedere
 # defaultMessage: Cosa si ottiene
 msgid "cosa_si_ottiene"
 msgstr "Qu'est ce que tu obtiens"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioCostiVincoli
 # defaultMessage: Costi
 msgid "costi"
 msgstr "Coûts"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioCostiVincoli
 # defaultMessage: Costi e vincoli
 msgid "costi_e_vincoli"
 msgstr "Coûts et contraintes"
@@ -1268,7 +1263,7 @@ msgstr "Date de conclusion de la mission"
 msgid "data_insediamento"
 msgstr "Date de règlement"
 
-#: components/ItaliaTheme/View/NewsItemView/NewsItemView
+#: components/ItaliaTheme/View/NewsItemView/NewsItemDataset
 # defaultMessage: Dataset
 msgid "dataset"
 msgstr "Dataset"
@@ -1418,7 +1413,7 @@ msgstr ""
 msgid "dateRangePicker_upArrowDownArrow"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoDateOrari
 # defaultMessage: Date e orari
 msgid "date_e_orari"
 msgstr "Dates et horaires"
@@ -1442,16 +1437,11 @@ msgstr "Liens rapides"
 #: components/ItaliaTheme/View/BandoView/BandoView
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueDescription
 #: helpers/amministrazioneTrasparenteHelper
 # defaultMessage: Descrizione
 msgid "descrizione"
 msgstr "Description"
-
-#: components/ItaliaTheme/View/ServizioView/ServizioView
-# defaultMessage: Descrizione estesa
-msgid "descrizione_estesa"
-msgstr "Description détaillée"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Non cercare nella sezione
@@ -1545,12 +1535,12 @@ msgstr "Bureau responsable"
 msgid "done_edit_social_links"
 msgstr ""
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueWhere
 # defaultMessage: Dove
 msgid "dove"
 msgstr "Où est-ce"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioComeAccedere
 # defaultMessage: Dove rivolgersi
 msgid "dove_rivolgersi"
 msgstr "Où contacter"
@@ -1570,7 +1560,7 @@ msgstr "Fermer le menu"
 msgid "edit_social_links"
 msgstr ""
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueDescription
 # defaultMessage: Elementi di interesse
 msgid "elementi_di_interesse"
 msgstr "Objets d'intérêt"
@@ -1596,22 +1586,22 @@ msgstr ""
 msgid "end"
 msgstr "fin"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoCosE
 # defaultMessage: Cos'è
 msgid "event_cos_e"
 msgstr "Qu'est-ce que"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoCosti
 # defaultMessage: Costi
 msgid "event_costi"
 msgstr "Coûts"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoCosE
 # defaultMessage: L'evento è di interesse per
 msgid "event_destinatari"
 msgstr "Destinataires"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoDocumenti
 # defaultMessage: Documenti
 msgid "event_documenti"
 msgstr "Documents"
@@ -1622,7 +1612,7 @@ msgstr "Documents"
 msgid "event_search_no_filters"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoUlterioriInformazioni
 # defaultMessage: Strutture politiche coinvolte
 msgid "event_strutture_politiche"
 msgstr "Structures politiques impliquées"
@@ -1632,17 +1622,12 @@ msgstr "Structures politiques impliquées"
 msgid "event_title"
 msgstr "Événements"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
-# defaultMessage: Ulteriori informazioni sull'evento
-msgid "event_ulteriori_informazioni"
-msgstr "En savoir plus sur l'événement"
-
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoUlterioriInformazioni
 # defaultMessage: Url dell'evento
 msgid "event_url"
 msgstr "URL de l'événement"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoContatti
 # defaultMessage: Sito web dell'evento
 msgid "event_web_site"
 msgstr "Site Web de l'événement"
@@ -1865,7 +1850,7 @@ msgstr ""
 msgid "linkMoreTitle"
 msgstr ""
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioSitiEsterni
 # defaultMessage: Link utili
 msgid "link_siti_esterni"
 msgstr "Liens utiles"
@@ -1912,12 +1897,12 @@ msgstr "se connecter avec Spid"
 msgid "login_with_spid"
 msgstr "Connectez-vous avec Spid"
 
-#: components/ItaliaTheme/View/NewsItemView/NewsItemView
+#: components/ItaliaTheme/View/NewsItemView/NewsItemLuoghiCorrelati
 # defaultMessage: Luoghi
 msgid "luoghi_notizia"
 msgstr "Lieux"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoLuoghi
 # defaultMessage: Luogo
 msgid "luogo"
 msgstr "Lieu"
@@ -1947,7 +1932,7 @@ msgstr ""
 msgid "minutes"
 msgstr "min"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueAccessMode
 # defaultMessage: Modalità di accesso
 msgid "modalita_accesso"
 msgstr "Mode d'accès"
@@ -1975,7 +1960,7 @@ msgstr ""
 msgid "modified"
 msgstr "Dernière mise à jour"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioModulistica
 # defaultMessage: Modulistica
 msgid "modulistica"
 msgstr "Formes"
@@ -1990,12 +1975,12 @@ msgstr "Téléchargez le fichier"
 msgid "modulo_download_in_format"
 msgstr "Télécharger en"
 
-#: components/ItaliaTheme/View/ModuloView/ModuloView
+#: components/ItaliaTheme/View/ModuloView/ModuloFilePrincipale
 # defaultMessage: File principale
 msgid "modulo_file_principale"
 msgstr "Dossier principal"
 
-#: components/ItaliaTheme/View/ModuloView/ModuloView
+#: components/ItaliaTheme/View/ModuloView/ModuloFormatiAlternativi
 # defaultMessage: Formati alternativi
 msgid "modulo_formati_alternativi"
 msgstr "Formats alternatifs"
@@ -2007,7 +1992,7 @@ msgstr "Formats alternatifs"
 msgid "natural_image_size"
 msgstr ""
 
-#: components/ItaliaTheme/View/NewsItemView/NewsItemView
+#: components/ItaliaTheme/View/NewsItemView/NewsItemText
 # defaultMessage: Contenuto
 msgid "news_item_contenuto"
 msgstr "Contenu"
@@ -2040,12 +2025,6 @@ msgstr ""
 # defaultMessage: nominativo
 msgid "nominativo"
 msgstr "nominatif"
-
-#: components/ItaliaTheme/View/EventoView/EventoView
-#: components/ItaliaTheme/View/NewsItemView/NewsItemView
-# defaultMessage: Notizie in evidenza
-msgid "notizie_in_evidenza"
-msgstr "Nouvelles en vedette"
 
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Novità
@@ -2117,13 +2096,13 @@ msgstr "Du"
 msgid "options"
 msgstr "Options"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoDateOrari
 # defaultMessage: Orari
 msgid "orari"
 msgstr "Horaires"
 
 #: components/ItaliaTheme/View/UOView/UOContacts
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenuePublicTimetable
 # defaultMessage: Orario per il pubblico
 msgid "orario_pubblico"
 msgstr "Horaire d'ouverture"
@@ -2169,17 +2148,17 @@ msgstr ""
 msgid "page_cured_by"
 msgstr "Cette page est gérée par"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoCosE
 # defaultMessage: Parteciperanno
 msgid "parteciperanno"
 msgstr "Participants"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoUlterioriInformazioni
 # defaultMessage: Patrocinato da
 msgid "patrocinato_da"
 msgstr "Sponsorisé par"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueContacts
 # defaultMessage: PEC
 msgid "pec"
 msgstr "PEC"
@@ -2219,7 +2198,7 @@ msgstr "Imprimer"
 msgid "procedura_online"
 msgstr ""
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioComeAccedere
 # defaultMessage: Procedure collegate all'esito
 msgid "procedure_collegate"
 msgstr "Procédures liées au résultat"
@@ -2231,7 +2210,7 @@ msgid "provvedimento_finale"
 msgstr "Disposition finale"
 
 #: components/ItaliaTheme/View/Commons/LocationItem
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueWhere
 # defaultMessage: Quartiere
 msgid "quartiere"
 msgstr "Quartier "
@@ -2247,22 +2226,20 @@ msgid "related_doc"
 msgstr "Documents"
 
 #: components/ItaliaTheme/View/Commons/RelatedItems
-#: components/ItaliaTheme/View/NewsItemView/NewsItemView
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/ServizioView/ServizioView
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/ServizioView/ServizioCorrelati
 # defaultMessage: Contenuti correlati
 msgid "related_items"
 msgstr "Contenu connexe"
 
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioCorrelati
 # defaultMessage: Novità
 msgid "related_news"
 msgstr "Nouvelles"
 
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueServices
 # defaultMessage: Servizi
 msgid "related_services"
 msgstr "Services"
@@ -2320,42 +2297,42 @@ msgstr ""
 msgid "riferimenti_normativi"
 msgstr "Exigences normatives"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueContacts
 # defaultMessage: Fax
 msgid "riferimento_fax_luogo"
 msgstr "Fax"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueContacts
 # defaultMessage: Fax
 msgid "riferimento_fax_struttura"
 msgstr "Fax"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueContacts
 # defaultMessage: E-mail
 msgid "riferimento_mail_luogo"
 msgstr "E-mail"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueContacts
 # defaultMessage: E-mail
 msgid "riferimento_mail_struttura"
 msgstr "E-mail"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueContacts
 # defaultMessage: PEC
 msgid "riferimento_pec_luogo"
 msgstr "PEC"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueContacts
 # defaultMessage: Telefono
 msgid "riferimento_telefonico_luogo"
 msgstr "Téléphone"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueContacts
 # defaultMessage: Telefono
 msgid "riferimento_telefonico_struttura"
 msgstr "Téléphone"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueContacts
 # defaultMessage: Web
 msgid "riferimento_web"
 msgstr "Web"
@@ -2726,7 +2703,7 @@ msgstr "autre"
 msgid "sections"
 msgstr "Sections"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueMoreInfos
 # defaultMessage: Sede di
 msgid "sede_di"
 msgstr "Siège de"
@@ -2761,7 +2738,12 @@ msgstr ""
 msgid "select_risultato"
 msgstr ""
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioCosE
+# defaultMessage: Cos'è
+msgid "service_cos_e"
+msgstr ""
+
+#: components/ItaliaTheme/View/ServizioView/ServizioStato
 # defaultMessage: Il servizio non è attivo
 msgid "service_not_active"
 msgstr "Le service n'est pas actif"
@@ -2772,7 +2754,7 @@ msgid "servizi"
 msgstr "Services"
 
 #: components/ItaliaTheme/View/BandoView/BandoView
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioCorrelati
 # defaultMessage: Servizi collegati
 msgid "servizi_collegati"
 msgstr "Services associés"
@@ -2966,7 +2948,7 @@ msgstr ""
 msgid "struttura"
 msgstr "Structure"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueContacts
 # defaultMessage: Struttura responsabile
 msgid "struttura_responsabile"
 msgstr "Structure responsable"
@@ -2976,7 +2958,7 @@ msgstr "Structure responsable"
 msgid "subjects"
 msgstr "Sujettes"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoContatti
 # defaultMessage: Con il supporto di
 msgid "supported_by"
 msgstr "Avec le soutien de"
@@ -2993,7 +2975,7 @@ msgid "telefono_sede"
 msgstr "Téléphone"
 
 #: components/ItaliaTheme/View/BandoView/BandoView
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioTempiScadenze
 # defaultMessage: Tempi e scadenze
 msgid "tempi_e_scadenze"
 msgstr "Délais et délais"
@@ -3100,10 +3082,8 @@ msgstr "Bureau responsable"
 
 #: components/ItaliaTheme/View/BandoView/BandoView
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
-#: components/ItaliaTheme/View/EventoView/EventoView
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
-#: components/ItaliaTheme/View/VenueView/VenueView
 # defaultMessage: Ulteriori informazioni
 msgid "ulteriori_informazioni"
 msgstr "Informations complémentaires"
@@ -3134,11 +3114,6 @@ msgstr "Autres endroits"
 msgid "uo_documenti"
 msgstr "Documents"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
-# defaultMessage: Notizie in evidenza
-msgid "uo_related_news"
-msgstr "Nouvelles en vedette"
-
 #: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
 # defaultMessage: Cerca una struttura
 msgid "uo_search_keyword"
@@ -3168,7 +3143,7 @@ msgstr "Lieux"
 msgid "view_all"
 msgstr "Voir tous"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioCostiVincoli
 # defaultMessage: Vincoli
 msgid "vincoli"
 msgstr "Contraintes"
