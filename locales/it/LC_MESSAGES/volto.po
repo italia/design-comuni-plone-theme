@@ -1968,12 +1968,12 @@ msgstr "Scarica il file"
 msgid "modulo_download_in_format"
 msgstr "Scarica in formato"
 
-#: components/ItaliaTheme/View/ModuloView/ModuloView
+#: components/ItaliaTheme/View/ModuloView/ModuloFilePrincipale
 # defaultMessage: File principale
 msgid "modulo_file_principale"
 msgstr "File principale"
 
-#: components/ItaliaTheme/View/ModuloView/ModuloView
+#: components/ItaliaTheme/View/ModuloView/ModuloFormatiAlternativi
 # defaultMessage: Formati alternativi
 msgid "modulo_formati_alternativi"
 msgstr "Formati alternativi"
