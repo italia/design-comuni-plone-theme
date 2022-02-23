@@ -81,6 +81,11 @@ export FaqPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/FAQ/
 export FaqPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/FAQ/FaqView/Placeholder/AfterRelatedItems';
 export ModuloPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/ModuloView/Placeholder/AfterContent';
 export ModuloPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/ModuloView/Placeholder/AfterRelatedItems';
+export ModuloFilePrincipale from '@italia/components/ItaliaTheme/View/ModuloView/ModuloFilePrincipale';
+export ModuloFormatiAlternativi from '@italia/components/ItaliaTheme/View/ModuloView/ModuloFormatiAlternativi';
+export ModuloFiles from '@italia/components/ItaliaTheme/View/ModuloView/ModuloFiles';
+export ModuloText from '@italia/components/ItaliaTheme/View/ModuloView/ModuloText';
+
 export NewsItemPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/NewsItemView/Placeholder/AfterContent';
 export NewsItemPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/NewsItemView/Placeholder/AfterRelatedItems';
 export PagePlaceholderAfterContent from '@italia/components/ItaliaTheme/View/PageView/Placeholder/AfterContent';

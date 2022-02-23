@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2022-02-21T15:51:39.715Z\n"
+"POT-Creation-Date: 2022-02-23T09:03:10.696Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1975,12 +1975,12 @@ msgstr ""
 msgid "modulo_download_in_format"
 msgstr ""
 
-#: components/ItaliaTheme/View/ModuloView/ModuloView
+#: components/ItaliaTheme/View/ModuloView/ModuloFilePrincipale
 # defaultMessage: File principale
 msgid "modulo_file_principale"
 msgstr ""
 
-#: components/ItaliaTheme/View/ModuloView/ModuloView
+#: components/ItaliaTheme/View/ModuloView/ModuloFormatiAlternativi
 # defaultMessage: Formati alternativi
 msgid "modulo_formati_alternativi"
 msgstr ""

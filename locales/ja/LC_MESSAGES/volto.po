@@ -1980,12 +1980,12 @@ msgstr ""
 msgid "modulo_download_in_format"
 msgstr ""
 
-#: components/ItaliaTheme/View/ModuloView/ModuloView
+#: components/ItaliaTheme/View/ModuloView/ModuloFilePrincipale
 # defaultMessage: File principale
 msgid "modulo_file_principale"
 msgstr ""
 
-#: components/ItaliaTheme/View/ModuloView/ModuloView
+#: components/ItaliaTheme/View/ModuloView/ModuloFormatiAlternativi
 # defaultMessage: Formati alternativi
 msgid "modulo_formati_alternativi"
 msgstr "<<<<<<< HEAD"
