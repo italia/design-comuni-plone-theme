@@ -98,6 +98,23 @@ export PersonaDocumenti from '@italia/components/ItaliaTheme/View/PersonaView/Pe
 export PersonaUlterioriInformazioni from '@italia/components/ItaliaTheme/View/PersonaView/PersonaUlterioriInformazioni';
 export ServizioPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/ServizioView/Placeholder/AfterContent';
 export ServizioPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/ServizioView/Placeholder/AfterRelatedItems';
+export ServizioStato from '@italia/components/ItaliaTheme/View/ServizioView/ServizioStato';
+export ServizioCosE from '@italia/components/ItaliaTheme/View/ServizioView/ServizioCosE';
+export ServizioAChiSiRivolge from '@italia/components/ItaliaTheme/View/ServizioView/ServizioAChiSiRivolge';
+export ServizioComeAccedere from '@italia/components/ItaliaTheme/View/ServizioView/ServizioComeAccedere';
+export ServizioCosaServe from '@italia/components/ItaliaTheme/View/ServizioView/ServizioCosaServe';
+export ServizioCostiVincoli from '@italia/components/ItaliaTheme/View/ServizioView/ServizioCostiVincoli';
+export ServizioTempiScadenze from '@italia/components/ItaliaTheme/View/ServizioView/ServizioTempiScadenze';
+export ServizioCasiParticolari from '@italia/components/ItaliaTheme/View/ServizioView/ServizioCasiParticolari';
+export ServizioContatti from '@italia/components/ItaliaTheme/View/ServizioView/ServizioContatti';
+export ServizioAltriDocumenti from '@italia/components/ItaliaTheme/View/ServizioView/ServizioAltriDocumenti';
+export ServizioSitiEsterni from '@italia/components/ItaliaTheme/View/ServizioView/ServizioSitiEsterni';
+export ServizioAllegati from '@italia/components/ItaliaTheme/View/ServizioView/ServizioAllegati';
+export ServizioModulistica from '@italia/components/ItaliaTheme/View/ServizioView/ServizioModulistica';
+export ServizioTrasparenza from '@italia/components/ItaliaTheme/View/ServizioView/ServizioTrasparenza';
+export ServizioCorrelati from '@italia/components/ItaliaTheme/View/ServizioView/ServizioCorrelati';
+export ServizioUlterioriInformazioni from '@italia/components/ItaliaTheme/View/ServizioView/ServizioUlterioriInformazioni';
+
 export TrasparenzaPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/TrasparenzaView/Placeholder/AfterContent';
 export UOPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/UOView/Placeholder/AfterContent';
 export UOPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/UOView/Placeholder/AfterRelatedItems';
