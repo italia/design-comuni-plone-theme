@@ -112,3 +112,4 @@ export VenueAccessMode from '@italia/components/ItaliaTheme/View/VenueView/Venue
 export VenueWhere from '@italia/components/ItaliaTheme/View/VenueView/VenueWhere';
 export VenuePublicTimetable from '@italia/components/ItaliaTheme/View/VenueView/VenuePublicTimetable';
 export VenueContacts from '@italia/components/ItaliaTheme/View/VenueView/VenueContacts';
+export VenueMoreInfos from '@italia/components/ItaliaTheme/View/VenueView/VenueMoreInfos';

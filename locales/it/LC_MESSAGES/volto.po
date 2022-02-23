@@ -2233,7 +2233,6 @@ msgstr "Documenti"
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/ServizioView/ServizioView
-#: components/ItaliaTheme/View/VenueView/VenueView
 # defaultMessage: Contenuti correlati
 msgid "related_items"
 msgstr "Contenuti correlati"
@@ -2709,7 +2708,7 @@ msgstr "altro"
 msgid "sections"
 msgstr "Sezioni"
 
-#: components/ItaliaTheme/View/VenueView/VenueView
+#: components/ItaliaTheme/View/VenueView/VenueMoreInfos
 # defaultMessage: Sede di
 msgid "sede_di"
 msgstr "Sede di"
@@ -3087,7 +3086,6 @@ msgstr "Ufficio responsabile"
 #: components/ItaliaTheme/View/EventoView/EventoView
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
-#: components/ItaliaTheme/View/VenueView/VenueView
 # defaultMessage: Ulteriori informazioni
 msgid "ulteriori_informazioni"
 msgstr "Ulteriori informazioni"
@@ -3117,11 +3115,6 @@ msgstr "Altre sedi"
 # defaultMessage: Documenti
 msgid "uo_documenti"
 msgstr "Documenti"
-
-#: components/ItaliaTheme/View/VenueView/VenueView
-# defaultMessage: Notizie in evidenza
-msgid "uo_related_news"
-msgstr "Notizie in evidenza"
 
 #: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
 # defaultMessage: Cerca una struttura

@@ -5,20 +5,15 @@
 
 import React, { createRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { defineMessages, useIntl } from 'react-intl';
 
 import {
   SideMenu,
   PageHeader,
   ContentImage,
   RelatedItems,
-  RelatedArticles,
-  HelpBox,
-  Metadata,
   VenuePlaceholderAfterContent,
   VenuePlaceholderAfterRelatedItems,
   RelatedItemInEvidence,
-  richTextHasContent,
   SkipToMainContent,
   VenueDescription,
   VenueServices,
@@ -26,27 +21,8 @@ import {
   VenueWhere,
   VenuePublicTimetable,
   VenueContacts,
+  VenueMoreInfos,
 } from '@italia/components/ItaliaTheme/View';
-
-const messages = defineMessages({
-  sede_di: {
-    id: 'sede_di',
-    defaultMessage: 'Sede di',
-  },
-  uo_related_news: {
-    id: 'uo_related_news',
-    defaultMessage: 'Notizie in evidenza',
-  },
-  ulteriori_informazioni: {
-    id: 'ulteriori_informazioni',
-    defaultMessage: 'Ulteriori informazioni',
-  },
-
-  related_items: {
-    id: 'related_items',
-    defaultMessage: 'Contenuti correlati',
-  },
-});
 
 /**
  * VenueView view component class.
@@ -55,7 +31,6 @@ const messages = defineMessages({
  * @returns {string} Markup of the component.
  */
 const VenueView = ({ content }) => {
-  const intl = useIntl();
   let documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
 
@@ -123,29 +98,7 @@ const VenueView = ({ content }) => {
             <VenueContacts content={content} />
 
             {/* ULTERIORI INFORMAZIONI */}
-            <Metadata content={content}>
-              {(richTextHasContent(content?.ulteriori_informazioni) ||
-                content.sede_di?.length > 0) && (
-                <>
-                  {/* SEDE DI */}
-                  {content.sede_di?.length > 0 && (
-                    <div className="mb-5">
-                      <RelatedArticles
-                        title_size={'h5'}
-                        items={content.sede_di}
-                        title={intl.formatMessage(messages.sede_di)}
-                        noMargin
-                      />
-                    </div>
-                  )}
-
-                  {/* HELP BOX - ULTERIORI INFORMAZIONI */}
-                  {richTextHasContent(content?.ulteriori_informazioni) && (
-                    <HelpBox text={content?.ulteriori_informazioni} />
-                  )}
-                </>
-              )}
-            </Metadata>
+            <VenueMoreInfos content={content} />
           </section>
         </div>
       </div>
