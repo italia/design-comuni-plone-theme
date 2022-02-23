@@ -161,6 +161,10 @@ export UOPeople from '@italia/components/ItaliaTheme/View/UOView/UOPeople';
 export UOStructure from '@italia/components/ItaliaTheme/View/UOView/UOStructure';
 export UOServices from '@italia/components/ItaliaTheme/View/UOView/UOServices';
 export UOContacts from '@italia/components/ItaliaTheme/View/UOView/UOContacts';
+export UOContactsLocations from '@italia/components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsLocations';
+export UOContactsContacts from '@italia/components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsContacts';
+export UOContactsSediSecondarie from '@italia/components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsSediSecondarie';
+
 export UODocuments from '@italia/components/ItaliaTheme/View/UOView/UODocuments';
 export UOWhatDoesItDo from '@italia/components/ItaliaTheme/View/UOView/UOWhatDoesItDo';
 export UOMoreInfos from '@italia/components/ItaliaTheme/View/UOView/UOMoreInfos';

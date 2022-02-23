@@ -1571,7 +1571,7 @@ msgstr "Objets d'intérêt"
 msgid "email_label"
 msgstr ""
 
-#: components/ItaliaTheme/View/UOView/UOContacts
+#: components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsContacts
 # defaultMessage: E-mail
 msgid "email_sede"
 msgstr ""
@@ -1667,7 +1667,7 @@ msgstr "Tapez un mot-clé pour trouver des réponses"
 msgid "fax"
 msgstr ""
 
-#: components/ItaliaTheme/View/UOView/UOContacts
+#: components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsContacts
 # defaultMessage: Fax
 msgid "fax_sede"
 msgstr ""
@@ -2163,7 +2163,7 @@ msgstr "Sponsorisé par"
 msgid "pec"
 msgstr "PEC"
 
-#: components/ItaliaTheme/View/UOView/UOContacts
+#: components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsContacts
 # defaultMessage: PEC
 msgid "pec_sede"
 msgstr "PEC"
@@ -3103,7 +3103,7 @@ msgstr "Unité organisationnelle compétente pour la procédure"
 msgid "unknownBlock"
 msgstr "Bloc inconnu"
 
-#: components/ItaliaTheme/View/UOView/UOContacts
+#: components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsSediSecondarie
 # defaultMessage: Altre sedi
 msgid "uo_altre_sedi"
 msgstr "Autres endroits"
@@ -3147,7 +3147,7 @@ msgstr "Voir tous"
 msgid "vincoli"
 msgstr "Contraintes"
 
-#: components/ItaliaTheme/View/UOView/UOContacts
+#: components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsContacts
 # defaultMessage: Sito web
 msgid "website"
 msgstr "Site Internet"
