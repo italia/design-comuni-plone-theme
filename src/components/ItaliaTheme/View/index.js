@@ -73,6 +73,15 @@ export DocumentoPlaceholderAfterContent from '@italia/components/ItaliaTheme/Vie
 export DocumentoPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/DocumentoView/Placeholder/AfterRelatedItems';
 export EventoPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/EventoView/Placeholder/AfterContent';
 export EventoPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/EventoView/Placeholder/AfterRelatedItems';
+export EventoCosE from '@italia/components/ItaliaTheme/View/EventoView/EventoCosE';
+export EventoLuoghi from '@italia/components/ItaliaTheme/View/EventoView/EventoLuoghi';
+export EventoDateOrari from '@italia/components/ItaliaTheme/View/EventoView/EventoDateOrari';
+export EventoCosti from '@italia/components/ItaliaTheme/View/EventoView/EventoCosti';
+export EventoDocumenti from '@italia/components/ItaliaTheme/View/EventoView/EventoDocumenti';
+export EventoContatti from '@italia/components/ItaliaTheme/View/EventoView/EventoContatti';
+export EventoPadreEFigli from '@italia/components/ItaliaTheme/View/EventoView/EventoPadreEFigli';
+export EventoUlterioriInformazioni from '@italia/components/ItaliaTheme/View/EventoView/EventoUlterioriInformazioni';
+
 export FaqFolderPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/FAQ/FaqFolder/Placeholder/AfterContent';
 export FaqFolderPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/FAQ/FaqFolder/Placeholder/AfterRelatedItems';
 export FaqFolderSearchBar from '@italia/components/ItaliaTheme/View/FAQ/FaqFolder/SearchBar';

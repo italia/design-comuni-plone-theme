@@ -122,7 +122,7 @@ msgstr "Giallo"
 msgid "Color_warning_orange"
 msgstr "Arancione"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoContatti
 # defaultMessage: Contatti
 msgid "Contatti"
 msgstr "Contatti"
@@ -1121,12 +1121,7 @@ msgstr ""
 msgid "contatti"
 msgstr "Contatti"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
-# defaultMessage: Contatti esterni
-msgid "contatti_esterni"
-msgstr "Contatti esterni"
-
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoContatti
 # defaultMessage: Contatti interni
 msgid "contatti_interni"
 msgstr "Contatti interni"
@@ -1401,7 +1396,7 @@ msgstr "Apri il pannello dei tasti rapidi"
 msgid "dateRangePicker_upArrowDownArrow"
 msgstr "Tasti freccia su e giu"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoDateOrari
 # defaultMessage: Date e orari
 msgid "date_e_orari"
 msgstr "Date e orari"
@@ -1579,22 +1574,22 @@ msgstr "Seleziona un elemento nella barra laterale per mostrarlo qui."
 msgid "end"
 msgstr "Fine evento"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoCosE
 # defaultMessage: Cos'è
 msgid "event_cos_e"
 msgstr "Cos'è"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoCosti
 # defaultMessage: Costi
 msgid "event_costi"
 msgstr "Costi"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoCosE
 # defaultMessage: L'evento è di interesse per
 msgid "event_destinatari"
 msgstr "L'evento è di interesse per"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoDocumenti
 # defaultMessage: Documenti
 msgid "event_documenti"
 msgstr "Documenti"
@@ -1605,7 +1600,7 @@ msgstr "Documenti"
 msgid "event_search_no_filters"
 msgstr "Nessun filtro da mostrare. Seleziona i filtri di ricerca da mostrare dalla sidebar laterale."
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoUlterioriInformazioni
 # defaultMessage: Strutture politiche coinvolte
 msgid "event_strutture_politiche"
 msgstr "Strutture politiche coinvolte"
@@ -1615,17 +1610,12 @@ msgstr "Strutture politiche coinvolte"
 msgid "event_title"
 msgstr "Eventi"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
-# defaultMessage: Ulteriori informazioni sull'evento
-msgid "event_ulteriori_informazioni"
-msgstr "Ulteriori informazioni sull'evento"
-
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoUlterioriInformazioni
 # defaultMessage: Url dell'evento
 msgid "event_url"
 msgstr "Url dell'evento"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoContatti
 # defaultMessage: Sito web dell'evento
 msgid "event_web_site"
 msgstr "Sito web dell'evento"
@@ -1900,7 +1890,7 @@ msgstr "Accedi con Spid"
 msgid "luoghi_notizia"
 msgstr "Luoghi"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoLuoghi
 # defaultMessage: Luogo
 msgid "luogo"
 msgstr "Luogo"
@@ -2024,7 +2014,6 @@ msgstr "Nessun video selezionato. Aggiungi un elemento per mostrare un video"
 msgid "nominativo"
 msgstr "nominativo"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
 # defaultMessage: Notizie in evidenza
 msgid "notizie_in_evidenza"
@@ -2100,7 +2089,7 @@ msgstr "Dal"
 msgid "options"
 msgstr "Opzioni"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoDateOrari
 # defaultMessage: Orari
 msgid "orari"
 msgstr "Orari"
@@ -2152,12 +2141,12 @@ msgstr "Pagamenti previsti e modalità"
 msgid "page_cured_by"
 msgstr "Questa pagina è gestita da"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoCosE
 # defaultMessage: Parteciperanno
 msgid "parteciperanno"
 msgstr "Parteciperanno"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoUlterioriInformazioni
 # defaultMessage: Patrocinato da
 msgid "patrocinato_da"
 msgstr "Patrocinato da"
@@ -2959,7 +2948,7 @@ msgstr "Struttura responsabile"
 msgid "subjects"
 msgstr "Tags"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoContatti
 # defaultMessage: Con il supporto di
 msgid "supported_by"
 msgstr "Con il supporto di"
@@ -3084,7 +3073,6 @@ msgstr "Ufficio responsabile"
 #: components/ItaliaTheme/View/BandoView/BandoView
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/DocumentoView/DocumentoView
-#: components/ItaliaTheme/View/EventoView/EventoView
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 #: components/ItaliaTheme/View/VenueView/VenueView
