@@ -92,6 +92,10 @@ export PaginaArgomentoViewNoBlocks from '@italia/components/ItaliaTheme/View/Pag
 export PersonaPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/PersonaView/Placeholder/AfterContent';
 export PersonaPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/PersonaView/Placeholder/AfterRelatedItems';
 export PersonaTelephones from '@italia/components/ItaliaTheme/View/PersonaView/PersonaTelephones';
+export PersonaRuolo from '@italia/components/ItaliaTheme/View/PersonaView/PersonaRuolo';
+export PersonaContatti from '@italia/components/ItaliaTheme/View/PersonaView/PersonaContatti';
+export PersonaDocumenti from '@italia/components/ItaliaTheme/View/PersonaView/PersonaDocumenti';
+export PersonaUlterioriInformazioni from '@italia/components/ItaliaTheme/View/PersonaView/PersonaUlterioriInformazioni';
 export ServizioPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/ServizioView/Placeholder/AfterContent';
 export ServizioPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/ServizioView/Placeholder/AfterRelatedItems';
 export TrasparenzaPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/TrasparenzaView/Placeholder/AfterContent';
