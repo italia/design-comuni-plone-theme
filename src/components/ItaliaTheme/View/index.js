@@ -104,5 +104,6 @@ export UOServices from '@italia/components/ItaliaTheme/View/UOView/UOServices';
 export UOContacts from '@italia/components/ItaliaTheme/View/UOView/UOContacts';
 export UODocuments from '@italia/components/ItaliaTheme/View/UOView/UODocuments';
 export UOWhatDoesItDo from '@italia/components/ItaliaTheme/View/UOView/UOWhatDoesItDo';
+export UOMoreInfos from '@italia/components/ItaliaTheme/View/UOView/UOMoreInfos';
 export VenuePlaceholderAfterContent from '@italia/components/ItaliaTheme/View/VenueView/Placeholder/AfterContent';
 export VenuePlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/VenueView/Placeholder/AfterRelatedItems';
