@@ -88,6 +88,14 @@ export ModuloText from '@italia/components/ItaliaTheme/View/ModuloView/ModuloTex
 
 export NewsItemPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/NewsItemView/Placeholder/AfterContent';
 export NewsItemPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/NewsItemView/Placeholder/AfterRelatedItems';
+export NewsItemText from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemText';
+export NewsItemGallery from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemGallery';
+export NewsItemAllegati from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemAllegati';
+export NewsItemACuraDi from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemACuraDi';
+export NewsItemLuoghiCorrelati from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemLuoghiCorrelati';
+export NewsItemDataset from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemDataset';
+export NewsItemMetadata from '@italia/components/ItaliaTheme/View/NewsItemView/NewsItemMetadata';
+
 export PagePlaceholderAfterContent from '@italia/components/ItaliaTheme/View/PageView/Placeholder/AfterContent';
 export PagePlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/PageView/Placeholder/AfterRelatedItems';
 export PagePlaceholderTitle from '@italia/components/ItaliaTheme/View/PageView/Placeholder/Title';
@@ -103,6 +111,23 @@ export PersonaDocumenti from '@italia/components/ItaliaTheme/View/PersonaView/Pe
 export PersonaUlterioriInformazioni from '@italia/components/ItaliaTheme/View/PersonaView/PersonaUlterioriInformazioni';
 export ServizioPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/ServizioView/Placeholder/AfterContent';
 export ServizioPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/ServizioView/Placeholder/AfterRelatedItems';
+export ServizioStato from '@italia/components/ItaliaTheme/View/ServizioView/ServizioStato';
+export ServizioCosE from '@italia/components/ItaliaTheme/View/ServizioView/ServizioCosE';
+export ServizioAChiSiRivolge from '@italia/components/ItaliaTheme/View/ServizioView/ServizioAChiSiRivolge';
+export ServizioComeAccedere from '@italia/components/ItaliaTheme/View/ServizioView/ServizioComeAccedere';
+export ServizioCosaServe from '@italia/components/ItaliaTheme/View/ServizioView/ServizioCosaServe';
+export ServizioCostiVincoli from '@italia/components/ItaliaTheme/View/ServizioView/ServizioCostiVincoli';
+export ServizioTempiScadenze from '@italia/components/ItaliaTheme/View/ServizioView/ServizioTempiScadenze';
+export ServizioCasiParticolari from '@italia/components/ItaliaTheme/View/ServizioView/ServizioCasiParticolari';
+export ServizioContatti from '@italia/components/ItaliaTheme/View/ServizioView/ServizioContatti';
+export ServizioAltriDocumenti from '@italia/components/ItaliaTheme/View/ServizioView/ServizioAltriDocumenti';
+export ServizioSitiEsterni from '@italia/components/ItaliaTheme/View/ServizioView/ServizioSitiEsterni';
+export ServizioAllegati from '@italia/components/ItaliaTheme/View/ServizioView/ServizioAllegati';
+export ServizioModulistica from '@italia/components/ItaliaTheme/View/ServizioView/ServizioModulistica';
+export ServizioTrasparenza from '@italia/components/ItaliaTheme/View/ServizioView/ServizioTrasparenza';
+export ServizioCorrelati from '@italia/components/ItaliaTheme/View/ServizioView/ServizioCorrelati';
+export ServizioUlterioriInformazioni from '@italia/components/ItaliaTheme/View/ServizioView/ServizioUlterioriInformazioni';
+
 export TrasparenzaPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/TrasparenzaView/Placeholder/AfterContent';
 export UOPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/UOView/Placeholder/AfterContent';
 export UOPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/UOView/Placeholder/AfterRelatedItems';
@@ -116,3 +141,10 @@ export UOWhatDoesItDo from '@italia/components/ItaliaTheme/View/UOView/UOWhatDoe
 export UOMoreInfos from '@italia/components/ItaliaTheme/View/UOView/UOMoreInfos';
 export VenuePlaceholderAfterContent from '@italia/components/ItaliaTheme/View/VenueView/Placeholder/AfterContent';
 export VenuePlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/VenueView/Placeholder/AfterRelatedItems';
+export VenueDescription from '@italia/components/ItaliaTheme/View/VenueView/VenueDescription';
+export VenueServices from '@italia/components/ItaliaTheme/View/VenueView/VenueServices';
+export VenueAccessMode from '@italia/components/ItaliaTheme/View/VenueView/VenueAccessMode';
+export VenueWhere from '@italia/components/ItaliaTheme/View/VenueView/VenueWhere';
+export VenuePublicTimetable from '@italia/components/ItaliaTheme/View/VenueView/VenuePublicTimetable';
+export VenueContacts from '@italia/components/ItaliaTheme/View/VenueView/VenueContacts';
+export VenueMoreInfos from '@italia/components/ItaliaTheme/View/VenueView/VenueMoreInfos';
