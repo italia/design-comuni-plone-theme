@@ -139,7 +139,7 @@ msgstr ""
 msgid "Color_warning_orange"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoContatti
 # defaultMessage: Contatti
 msgid "Contatti"
 msgstr "Contacts"
@@ -1138,12 +1138,7 @@ msgstr ""
 msgid "contatti"
 msgstr "Contacts"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
-# defaultMessage: Contatti esterni
-msgid "contatti_esterni"
-msgstr "Contacts externes"
-
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoContatti
 # defaultMessage: Contatti interni
 msgid "contatti_interni"
 msgstr "Contacts internes"
@@ -1418,7 +1413,7 @@ msgstr ""
 msgid "dateRangePicker_upArrowDownArrow"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoDateOrari
 # defaultMessage: Date e orari
 msgid "date_e_orari"
 msgstr "Dates et horaires"
@@ -1591,22 +1586,22 @@ msgstr ""
 msgid "end"
 msgstr "fin"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoCosE
 # defaultMessage: Cos'è
 msgid "event_cos_e"
 msgstr "Qu'est-ce que"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoCosti
 # defaultMessage: Costi
 msgid "event_costi"
 msgstr "Coûts"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoCosE
 # defaultMessage: L'evento è di interesse per
 msgid "event_destinatari"
 msgstr "Destinataires"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoDocumenti
 # defaultMessage: Documenti
 msgid "event_documenti"
 msgstr "Documents"
@@ -1617,7 +1612,7 @@ msgstr "Documents"
 msgid "event_search_no_filters"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoUlterioriInformazioni
 # defaultMessage: Strutture politiche coinvolte
 msgid "event_strutture_politiche"
 msgstr "Structures politiques impliquées"
@@ -1627,17 +1622,12 @@ msgstr "Structures politiques impliquées"
 msgid "event_title"
 msgstr "Événements"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
-# defaultMessage: Ulteriori informazioni sull'evento
-msgid "event_ulteriori_informazioni"
-msgstr "En savoir plus sur l'événement"
-
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoUlterioriInformazioni
 # defaultMessage: Url dell'evento
 msgid "event_url"
 msgstr "URL de l'événement"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoContatti
 # defaultMessage: Sito web dell'evento
 msgid "event_web_site"
 msgstr "Site Web de l'événement"
@@ -1912,7 +1902,7 @@ msgstr "Connectez-vous avec Spid"
 msgid "luoghi_notizia"
 msgstr "Lieux"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoLuoghi
 # defaultMessage: Luogo
 msgid "luogo"
 msgstr "Lieu"
@@ -2036,11 +2026,6 @@ msgstr ""
 msgid "nominativo"
 msgstr "nominatif"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
-# defaultMessage: Notizie in evidenza
-msgid "notizie_in_evidenza"
-msgstr "Nouvelles en vedette"
-
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Novità
 msgid "novita"
@@ -2111,7 +2096,7 @@ msgstr "Du"
 msgid "options"
 msgstr "Options"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoDateOrari
 # defaultMessage: Orari
 msgid "orari"
 msgstr "Horaires"
@@ -2163,12 +2148,12 @@ msgstr ""
 msgid "page_cured_by"
 msgstr "Cette page est gérée par"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoCosE
 # defaultMessage: Parteciperanno
 msgid "parteciperanno"
 msgstr "Participants"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoUlterioriInformazioni
 # defaultMessage: Patrocinato da
 msgid "patrocinato_da"
 msgstr "Sponsorisé par"
@@ -2973,7 +2958,7 @@ msgstr "Structure responsable"
 msgid "subjects"
 msgstr "Sujettes"
 
-#: components/ItaliaTheme/View/EventoView/EventoView
+#: components/ItaliaTheme/View/EventoView/EventoContatti
 # defaultMessage: Con il supporto di
 msgid "supported_by"
 msgstr "Avec le soutien de"
@@ -3098,7 +3083,6 @@ msgstr "Bureau responsable"
 #: components/ItaliaTheme/View/BandoView/BandoView
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/DocumentoView/DocumentoView
-#: components/ItaliaTheme/View/EventoView/EventoView
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Ulteriori informazioni
