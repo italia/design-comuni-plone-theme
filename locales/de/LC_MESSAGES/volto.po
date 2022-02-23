@@ -1483,47 +1483,47 @@ msgstr ""
 msgid "documenti-e-dati"
 msgstr ""
 
-#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+#: components/ItaliaTheme/View/DocumentoView/DocumentoAccedereServizio
 # defaultMessage: Accedere al servizio
 msgid "documento_accedere_al_servizio"
 msgstr ""
 
-#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+#: components/ItaliaTheme/View/DocumentoView/DocumentoAreaResponsabile
 # defaultMessage: Area responsabile
 msgid "documento_area_responsabile"
 msgstr ""
 
-#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+#: components/ItaliaTheme/View/DocumentoView/DocumentoDescrizione
 # defaultMessage: Autori
 msgid "documento_autori"
 msgstr ""
 
-#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+#: components/ItaliaTheme/View/DocumentoView/DocumentoDescrizione
 # defaultMessage: Descrizione
 msgid "documento_descrizione"
 msgstr ""
 
-#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+#: components/ItaliaTheme/View/DocumentoView/DocumentoDocumenti
 # defaultMessage: Documenti
 msgid "documento_documenti"
 msgstr ""
 
-#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+#: components/ItaliaTheme/View/DocumentoView/DocumentoDocAllegati
 # defaultMessage: Documenti allegati
 msgid "documento_documenti_allegati"
 msgstr ""
 
-#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+#: components/ItaliaTheme/View/DocumentoView/DocumentoDescrizione
 # defaultMessage: Licenza di distribuzione
 msgid "documento_licenza_distribuzione"
 msgstr ""
 
-#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+#: components/ItaliaTheme/View/DocumentoView/DocumentoUlterioriInformazioni
 # defaultMessage: Riferimenti normativi
 msgid "documento_riferimenti_normativi"
 msgstr ""
 
-#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+#: components/ItaliaTheme/View/DocumentoView/DocumentoUfficioResponsabile
 # defaultMessage: Ufficio responsabile
 msgid "documento_ufficio_responsabile"
 msgstr ""
@@ -3080,7 +3080,6 @@ msgstr ""
 
 #: components/ItaliaTheme/View/BandoView/BandoView
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
-#: components/ItaliaTheme/View/DocumentoView/DocumentoView
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Ulteriori informazioni

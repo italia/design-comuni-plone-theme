@@ -1485,47 +1485,47 @@ msgstr "Documents"
 msgid "documenti-e-dati"
 msgstr "Documents et données"
 
-#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+#: components/ItaliaTheme/View/DocumentoView/DocumentoAccedereServizio
 # defaultMessage: Accedere al servizio
 msgid "documento_accedere_al_servizio"
 msgstr "Accéder au service"
 
-#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+#: components/ItaliaTheme/View/DocumentoView/DocumentoAreaResponsabile
 # defaultMessage: Area responsabile
 msgid "documento_area_responsabile"
 msgstr "Zone responsable"
 
-#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+#: components/ItaliaTheme/View/DocumentoView/DocumentoDescrizione
 # defaultMessage: Autori
 msgid "documento_autori"
 msgstr "Auteurs"
 
-#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+#: components/ItaliaTheme/View/DocumentoView/DocumentoDescrizione
 # defaultMessage: Descrizione
 msgid "documento_descrizione"
 msgstr "Description"
 
-#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+#: components/ItaliaTheme/View/DocumentoView/DocumentoDocumenti
 # defaultMessage: Documenti
 msgid "documento_documenti"
 msgstr "Documents"
 
-#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+#: components/ItaliaTheme/View/DocumentoView/DocumentoDocAllegati
 # defaultMessage: Documenti allegati
 msgid "documento_documenti_allegati"
 msgstr "Documents attachés"
 
-#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+#: components/ItaliaTheme/View/DocumentoView/DocumentoDescrizione
 # defaultMessage: Licenza di distribuzione
 msgid "documento_licenza_distribuzione"
 msgstr "Licence de distribution"
 
-#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+#: components/ItaliaTheme/View/DocumentoView/DocumentoUlterioriInformazioni
 # defaultMessage: Riferimenti normativi
 msgid "documento_riferimenti_normativi"
 msgstr "Références normatives"
 
-#: components/ItaliaTheme/View/DocumentoView/DocumentoView
+#: components/ItaliaTheme/View/DocumentoView/DocumentoUfficioResponsabile
 # defaultMessage: Ufficio responsabile
 msgid "documento_ufficio_responsabile"
 msgstr "Bureau responsable"
@@ -3082,7 +3082,6 @@ msgstr "Bureau responsable"
 
 #: components/ItaliaTheme/View/BandoView/BandoView
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
-#: components/ItaliaTheme/View/DocumentoView/DocumentoView
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Ulteriori informazioni

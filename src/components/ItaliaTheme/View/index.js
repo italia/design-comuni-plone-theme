@@ -71,6 +71,13 @@ export CartellaModulisticaAfterContent from '@italia/components/ItaliaTheme/View
 export CartellaModulisticaAfterRelatedItems from '@italia/components/ItaliaTheme/View/CartellaModulisticaView/Placeholder/AfterRelatedItems';
 export DocumentoPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/DocumentoView/Placeholder/AfterContent';
 export DocumentoPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/DocumentoView/Placeholder/AfterRelatedItems';
+export DocumentoDescrizione from '@italia/components/ItaliaTheme/View/DocumentoView/DocumentoDescrizione';
+export DocumentoDocumenti from '@italia/components/ItaliaTheme/View/DocumentoView/DocumentoDocumenti';
+export DocumentoUfficioResponsabile from '@italia/components/ItaliaTheme/View/DocumentoView/DocumentoUfficioResponsabile';
+export DocumentoAreaResponsabile from '@italia/components/ItaliaTheme/View/DocumentoView/DocumentoAreaResponsabile';
+export DocumentoAccedereServizio from '@italia/components/ItaliaTheme/View/DocumentoView/DocumentoAccedereServizio';
+export DocumentoDocAllegati from '@italia/components/ItaliaTheme/View/DocumentoView/DocumentoDocAllegati';
+export DocumentoUlterioriInformazioni from '@italia/components/ItaliaTheme/View/DocumentoView/DocumentoUlterioriInformazioni';
 export EventoPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/EventoView/Placeholder/AfterContent';
 export EventoPlaceholderAfterRelatedItems from '@italia/components/ItaliaTheme/View/EventoView/Placeholder/AfterRelatedItems';
 export EventoCosE from '@italia/components/ItaliaTheme/View/EventoView/EventoCosE';
