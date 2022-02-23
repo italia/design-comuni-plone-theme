@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2022-02-23T10:58:22.238Z\n"
+"POT-Creation-Date: 2022-02-23T14:32:21.229Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1556,7 +1556,7 @@ msgstr ""
 msgid "email_label"
 msgstr ""
 
-#: components/ItaliaTheme/View/UOView/UOContacts
+#: components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsContacts
 # defaultMessage: E-mail
 msgid "email_sede"
 msgstr ""
@@ -1652,7 +1652,7 @@ msgstr ""
 msgid "fax"
 msgstr ""
 
-#: components/ItaliaTheme/View/UOView/UOContacts
+#: components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsContacts
 # defaultMessage: Fax
 msgid "fax_sede"
 msgstr ""
@@ -2148,7 +2148,7 @@ msgstr ""
 msgid "pec"
 msgstr ""
 
-#: components/ItaliaTheme/View/UOView/UOContacts
+#: components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsContacts
 # defaultMessage: PEC
 msgid "pec_sede"
 msgstr ""
@@ -3088,7 +3088,7 @@ msgstr ""
 msgid "unknownBlock"
 msgstr ""
 
-#: components/ItaliaTheme/View/UOView/UOContacts
+#: components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsSediSecondarie
 # defaultMessage: Altre sedi
 msgid "uo_altre_sedi"
 msgstr ""
@@ -3132,7 +3132,7 @@ msgstr ""
 msgid "vincoli"
 msgstr ""
 
-#: components/ItaliaTheme/View/UOView/UOContacts
+#: components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsContacts
 # defaultMessage: Sito web
 msgid "website"
 msgstr ""
