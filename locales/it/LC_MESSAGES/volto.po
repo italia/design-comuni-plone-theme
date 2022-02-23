@@ -631,12 +631,12 @@ msgstr "Video gallery"
 msgid "You are trying to access a protected resource, please {login} first."
 msgstr "Stai provando ad accedere ad una risorsa protetta, per favore fai prima il {login}."
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioAChiSiRivolge
 # defaultMessage: A chi si rivolge
 msgid "a_chi_si_rivolge"
 msgstr "A chi si rivolge"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioComeAccedere
 # defaultMessage: Accedere al servizio
 msgid "accedere_al_servizio"
 msgstr "Accedere al servizio"
@@ -686,7 +686,7 @@ msgstr "Altre cariche"
 msgid "altre_modalita_invio"
 msgstr "Altre modalità di invio"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioAltriDocumenti
 # defaultMessage: Documenti correlati
 msgid "altri_documenti"
 msgstr "Altri documenti"
@@ -772,7 +772,7 @@ msgstr "Atti e documenti a corredo dell'istanza"
 msgid "atto_nomina"
 msgstr "Atto di nomina"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioComeAccedere
 # defaultMessage: Metodi di autenticazione al servizio
 msgid "autenticazione"
 msgstr "Autenticazione"
@@ -993,7 +993,7 @@ msgstr "Nessun evento disponibile al momento"
 msgid "calendar_prev_arrow"
 msgstr "Precedente"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioComeAccedere
 # defaultMessage: Canale digitale
 msgid "canale_digitale"
 msgstr "Canale digitale"
@@ -1024,7 +1024,7 @@ msgstr ""
 msgid "cartellamodulistica_formati_scaricabili"
 msgstr "Formati scaricabili"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioCasiParticolari
 # defaultMessage: Casi particolari
 msgid "casi_particolari"
 msgstr "Casi particolari"
@@ -1039,7 +1039,7 @@ msgstr "Link al canale"
 msgid "channel_link_title"
 msgstr "Titolo del canale"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioAChiSiRivolge
 # defaultMessage: Chi può presentare
 msgid "chi_puo_presentare"
 msgstr "Chi può presentare"
@@ -1088,7 +1088,7 @@ msgstr "Colore primario"
 msgid "color_transparent"
 msgstr "Trasparente"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioComeAccedere
 # defaultMessage: Come si fa
 msgid "come_si_fa"
 msgstr "Come si fa"
@@ -1114,7 +1114,7 @@ msgstr "Contatti"
 msgid "contacts_block"
 msgstr ""
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioContatti
 #: components/ItaliaTheme/View/UOView/UOContacts
 #: components/ItaliaTheme/View/VenueView/VenueView
 # defaultMessage: Contatti
@@ -1131,7 +1131,7 @@ msgstr "Contatti esterni"
 msgid "contatti_interni"
 msgstr "Contatti interni"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioAChiSiRivolge
 # defaultMessage: Copertura geografica del servizio
 msgid "copertura_geografica"
 msgstr "Copertura geografica del servizio"
@@ -1141,22 +1141,22 @@ msgstr "Copertura geografica del servizio"
 msgid "cosa_fa"
 msgstr "Cosa fa"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioCosaServe
 # defaultMessage: Cosa serve
 msgid "cosa_serve"
 msgstr "Cosa serve"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioComeAccedere
 # defaultMessage: Cosa si ottiene
 msgid "cosa_si_ottiene"
 msgstr "Cosa si ottiene"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioCostiVincoli
 # defaultMessage: Costi
 msgid "costi"
 msgstr "Costi"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioCostiVincoli
 # defaultMessage: Costi e vincoli
 msgid "costi_e_vincoli"
 msgstr "Costi e vincoli"
@@ -1431,11 +1431,6 @@ msgstr "Link rapidi"
 msgid "descrizione"
 msgstr "Descrizione"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
-# defaultMessage: Descrizione estesa
-msgid "descrizione_estesa"
-msgstr "Descrizione estesa"
-
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Non cercare nella sezione
 msgid "deselectSearchSection"
@@ -1533,7 +1528,7 @@ msgstr "Fatto"
 msgid "dove"
 msgstr "Dove"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioComeAccedere
 # defaultMessage: Dove rivolgersi
 msgid "dove_rivolgersi"
 msgstr "Dove rivolgersi"
@@ -1848,7 +1843,7 @@ msgstr "Link ad altro"
 msgid "linkMoreTitle"
 msgstr "Titolo per il link ad altro"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioSitiEsterni
 # defaultMessage: Link utili
 msgid "link_siti_esterni"
 msgstr "Link utili"
@@ -1958,7 +1953,7 @@ msgstr "Modalità per richiedere informazioni sul procedimento"
 msgid "modified"
 msgstr "Ultimo aggiornamento"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioModulistica
 # defaultMessage: Modulistica
 msgid "modulistica"
 msgstr "Modulistica"
@@ -2202,7 +2197,7 @@ msgstr "Stampa"
 msgid "procedura_online"
 msgstr "Procedura informatizzata online"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioComeAccedere
 # defaultMessage: Procedure collegate all'esito
 msgid "procedure_collegate"
 msgstr "Procedure collegate all'esito"
@@ -2232,14 +2227,14 @@ msgstr "Documenti"
 #: components/ItaliaTheme/View/Commons/RelatedItems
 #: components/ItaliaTheme/View/NewsItemView/NewsItemView
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioCorrelati
 #: components/ItaliaTheme/View/VenueView/VenueView
 # defaultMessage: Contenuti correlati
 msgid "related_items"
 msgstr "Contenuti correlati"
 
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioCorrelati
 # defaultMessage: Novità
 msgid "related_news"
 msgstr "Novità"
@@ -2744,7 +2739,12 @@ msgstr ""
 msgid "select_risultato"
 msgstr ""
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioCosE
+# defaultMessage: Cos'è
+msgid "service_cos_e"
+msgstr ""
+
+#: components/ItaliaTheme/View/ServizioView/ServizioStato
 # defaultMessage: Il servizio non è attivo
 msgid "service_not_active"
 msgstr "Il servizio non è attivo"
@@ -2755,7 +2755,7 @@ msgid "servizi"
 msgstr "Servizi"
 
 #: components/ItaliaTheme/View/BandoView/BandoView
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioCorrelati
 # defaultMessage: Servizi collegati
 msgid "servizi_collegati"
 msgstr "Servizi collegati"
@@ -2976,7 +2976,7 @@ msgid "telefono_sede"
 msgstr "Telefono"
 
 #: components/ItaliaTheme/View/BandoView/BandoView
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioTempiScadenze
 # defaultMessage: Tempi e scadenze
 msgid "tempi_e_scadenze"
 msgstr "Tempi e scadenze"
@@ -3152,7 +3152,7 @@ msgstr "Luoghi"
 msgid "view_all"
 msgstr "Vedi tutti"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioView
+#: components/ItaliaTheme/View/ServizioView/ServizioCostiVincoli
 # defaultMessage: Vincoli
 msgid "vincoli"
 msgstr "Vincoli"
