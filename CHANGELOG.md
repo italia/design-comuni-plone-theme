@@ -1,3 +1,33 @@
+## [5.17.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.16.1...v5.17.0) (2022-02-24)
+
+
+### Features
+
+* added configuration for headerslim tertiary menu and fixed layout mobile ([58bad5e](https://github.com/RedTurtle/design-volto-theme/commit/58bad5e6198b11595d4888bcbacee6951fdb622b))
+* added content-type sections in Venue ([c03ebeb](https://github.com/RedTurtle/design-volto-theme/commit/c03ebeb1851e3dfe0a22905f68d5e2968d60d747))
+* added ContentTypeViewSections to content-types views ([0dbd0b5](https://github.com/RedTurtle/design-volto-theme/commit/0dbd0b50d3e04e164b9307586c06d7158ac003a7))
+
+
+### Bug Fixes
+
+* layout mobile menu ([156fef5](https://github.com/RedTurtle/design-volto-theme/commit/156fef54b9755e8dfefe966312ee130de54ecf34))
+
+
+### Maintenance
+
+* added component UOMoreInfos ([ef74b3b](https://github.com/RedTurtle/design-volto-theme/commit/ef74b3b2e776d7a6a3b8afb46693de5bc3544b57))
+* added component VenueMoreInfos ([ccd1b6e](https://github.com/RedTurtle/design-volto-theme/commit/ccd1b6e4c5d49a3ba520518e1f234181decd33c5))
+* created PersonaUlterioriInformazioni component ([382e7ff](https://github.com/RedTurtle/design-volto-theme/commit/382e7ffe1eadf1b9b73735f6b4b4ba1d47e68eb0))
+* refactor BandoView ([a3cdfb3](https://github.com/RedTurtle/design-volto-theme/commit/a3cdfb36986933f944a55293e887df155fa4d7c3))
+* refactor Documento view ([d478df7](https://github.com/RedTurtle/design-volto-theme/commit/d478df706aa1c9645c8f54a5354c3a2ff21f0090))
+* refactor Event view ([b74f4dc](https://github.com/RedTurtle/design-volto-theme/commit/b74f4dcbfc8cb79eefd6c052e35a6638ce4e355d))
+* refactor ModuloView ([ad42461](https://github.com/RedTurtle/design-volto-theme/commit/ad424612fc588d9b305ca59c2912e659fbab1184))
+* refactor NewsItem view ([9d2ec8d](https://github.com/RedTurtle/design-volto-theme/commit/9d2ec8d13aacd88eabd7adeec27dd52505dfc35c))
+* refactor Servizio View ([2d3d3f3](https://github.com/RedTurtle/design-volto-theme/commit/2d3d3f31296a56aea417354480062d3aa6011dfb))
+* splitted UOContacts in multiple components ([24ec68f](https://github.com/RedTurtle/design-volto-theme/commit/24ec68f30256f56a5607bd32e1912e8c355d2bfa))
+* splitted Venue view in multiple components ([e3c4a36](https://github.com/RedTurtle/design-volto-theme/commit/e3c4a367c8ed6196a14b4f0f96e1115956296e13))
+* uo_children side by side ([faa20b7](https://github.com/RedTurtle/design-volto-theme/commit/faa20b772b833b463abf05bd15ad47aa818dd2be))
+
 ### [5.16.1](https://github.com/redturtle/design-volto-theme/compare/v5.16.0...v5.16.1) (2022-02-22)
 
 
