@@ -1,35 +1,23 @@
-.header-slim-right-zone {
-  .parent-site-menu {
-    font-size: 0.778em;
+.tertiary-menu {
+  align-self: center;
+  font-size: 0.778em;
 
-    li.nav-item {
-      border-right: 1px solid $primary-text;
+  li.nav-item {
+    display: flex;
+    align-items: center;
+    border-right: 1px solid $primary-text;
 
-      a.nav-link {
-        color: $primary-text;
-
-        @media (max-width: #{map-get($grid-breakpoints, xl)}) {
-          padding: 0.3rem;
-        }
-      }
-    }
-
-    // Tablet / desktop
-    @media (min-width: #{map-get($grid-breakpoints, md)}) {
-      flex-wrap: wrap;
-      justify-content: flex-end;
-
-      li.nav-item {
-        display: flex;
-        max-width: 10rem;
-        align-items: center;
+    @media (max-width: #{map-get($grid-breakpoints, xl)}) {
+      a {
+        padding: 0.3rem;
+        font-weight: 300;
       }
     }
   }
 }
 
 .has-megamenu .navbar-collapsable {
-  .parent-site-menu {
+  .tertiary-menu {
     flex-direction: column;
 
     &::before {
@@ -60,7 +48,7 @@
 // Tablet / Mobile (Headerslim)
 @media (max-width: #{map-get($grid-breakpoints, lg)}) {
   .header-slim-right-zone {
-    .parent-site-menu {
+    .tertiary-menu {
       display: none;
     }
   }
@@ -69,7 +57,7 @@
 // Tablet / Desktop (Megamenu)
 @media (min-width: #{map-get($grid-breakpoints, lg)}) {
   .has-megamenu .navbar-collapsable {
-    .parent-site-menu {
+    .tertiary-menu {
       display: none;
     }
   }

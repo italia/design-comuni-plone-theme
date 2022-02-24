@@ -21,6 +21,8 @@ import { Collapse } from '@italia/components';
 import {
   MegaMenu,
   MenuSecondary,
+  ParentSiteMenu,
+  TertiaryMenu,
   Logo,
   Icon,
   SocialHeader,
@@ -106,6 +108,7 @@ const Navigation = ({ pathname }) => {
                   <BrandText mobile={true} subsite={subsite} />
                 </Link>
               </div>
+              {/* Main Menu */}
               <Nav navbar>
                 {menu
                   ?.filter((item) => item.visible)
@@ -118,9 +121,17 @@ const Navigation = ({ pathname }) => {
                   ))}
               </Nav>
 
+              {/* Secondary Menu */}
               <MenuSecondary pathname={pathname} />
 
+              {/* Headerslim Menu - main site */}
+              {!subsite && <TertiaryMenu />}
+
+              {/* Social Links */}
               <SocialHeader />
+
+              {/* Headerslim Menu - parent site (if subsite) */}
+              {subsite && <ParentSiteMenu />}
             </div>
           </Collapse>
         </HeaderContent>
