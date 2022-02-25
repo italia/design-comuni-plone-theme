@@ -32,10 +32,12 @@ const DownloadFileFormat = ({
   if (file) {
     const viewFormat = getFileViewFormat(file);
 
-    label =
-      `${intl.formatMessage(messages.download_in_format)} ${
-        viewFormat?.label
-      }` ?? intl.formatMessage(messages.download_file);
+    label = viewFormat?.label
+      ? `${intl.formatMessage(messages.download_in_format)} ${
+          viewFormat?.label
+        }`
+      : intl.formatMessage(messages.download_file);
+
     icon = viewFormat?.icon ?? defaultIcon;
   }
 
