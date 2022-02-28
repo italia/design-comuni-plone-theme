@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-5.1.4 (unreleased)
+5.1.4 (2022-02-28)
 ------------------
 
 - added spotify icon [gghisini]
