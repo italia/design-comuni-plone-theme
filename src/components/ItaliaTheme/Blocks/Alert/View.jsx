@@ -22,8 +22,8 @@ const View = ({ data, pathname }) => {
   const content = data.text
     ? redraft(
         data.text,
-        config.settings.ToHTMLRenderers,
-        config.settings.ToHTMLOptions,
+        config.settings.richtextViewSettings.ToHTMLRenderers,
+        config.settings.richtextViewSettings.ToHTMLOptions,
       )
     : '';
 

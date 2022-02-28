@@ -20,8 +20,8 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
         <div className="subblock-title text-monospace">
           {redraft(
             data.title,
-            config.settings.ToHTMLRenderers,
-            config.settings.ToHTMLOptions,
+            config.settings.richtextViewSettings.ToHTMLRenderers,
+            config.settings.richtextViewSettings.ToHTMLOptions,
           )}
         </div>
       )}
@@ -29,8 +29,8 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
         <div className="subblock-text">
           {redraft(
             data.text,
-            config.settings.ToHTMLRenderers,
-            config.settings.ToHTMLOptions,
+            config.settings.richtextViewSettings.ToHTMLRenderers,
+            config.settings.richtextViewSettings.ToHTMLOptions,
           )}
         </div>
       )}

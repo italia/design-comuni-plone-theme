@@ -2,27 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { RelatedNews } from '@italia/components/ItaliaTheme/View';
 /**
- * RichTextArticle view component class.
+ * RelatedNewsArticles view component class.
  * @function RelatedNewsArticles
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const RelatedNewsArticles = ({ id='related-news', news, title }) => {
+const RelatedNewsArticles = ({ id = 'related-news', news, title }) => {
   return (
-    <article
-      id={id}
-      className="it-page-section anchor-offset mt-5"
-    >
-      <h4 id={`header-${id}`}>
-        {title}
-      </h4>
+    <article id={id} className="it-page-section anchor-offset mt-5">
+      <h4 id={`header-${id}`}>{title}</h4>
       <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
         {news?.map((item, i) => (
-          <RelatedNews
-            key={item['@id']}
-            item={item}
-            showimage={false}
-          />
+          <RelatedNews key={item['@id']} item={item} showimage={false} />
         ))}
       </div>
     </article>

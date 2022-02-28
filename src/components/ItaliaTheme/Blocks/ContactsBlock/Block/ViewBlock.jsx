@@ -29,8 +29,9 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
           <div className="contact-title">
             {redraft(
               data.title,
-              config.settings.ToHTMLRenderers,
-              config.settings.ToHTMLOptions,
+              config.settings.richtextViewSettingsconfig.settings
+                .ToHTMLRenderers,
+              config.settings.richtextViewSettings.ToHTMLOptions,
             )}
           </div>
         )}
@@ -38,8 +39,8 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
           <div className="contact-text">
             {redraft(
               data.text,
-              config.settings.ToHTMLRenderers,
-              config.settings.ToHTMLOptions,
+              config.settings.richtextViewSettings.ToHTMLRenderers,
+              config.settings.richtextViewSettings.ToHTMLOptions,
             )}
           </div>
         )}
@@ -52,8 +53,8 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
             <div className="tel">
               {redraft(
                 data.tel,
-                config.settings.ToHTMLRenderers,
-                config.settings.ToHTMLOptions,
+                config.settings.richtextViewSettings.ToHTMLRenderers,
+                config.settings.richtextViewSettings.ToHTMLOptions,
               )}
             </div>
           </div>
@@ -67,8 +68,8 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
             <div className="email">
               {redraft(
                 data.email,
-                config.settings.ToHTMLRenderers,
-                config.settings.ToHTMLOptions,
+                config.settings.richtextViewSettings.ToHTMLRenderers,
+                config.settings.richtextViewSettings.ToHTMLOptions,
               )}
             </div>
           </div>

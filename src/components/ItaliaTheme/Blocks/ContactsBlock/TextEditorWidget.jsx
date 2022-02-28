@@ -5,12 +5,12 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Editor from 'draft-js-plugins-editor';
-import { convertFromRaw, convertToRaw, EditorState, RichUtils } from 'draft-js';
-import isSoftNewlineEvent from 'draft-js/lib/isSoftNewlineEvent';
-import createInlineToolbarPlugin from 'draft-js-inline-toolbar-plugin';
-import { defineMessages } from 'react-intl';
+import { compose } from 'redux';
+
+import { defineMessages, injectIntl } from 'react-intl';
 import { isEqual } from 'lodash';
+import loadable from '@loadable/component';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 import config from '@plone/volto/registry';
 
@@ -21,12 +21,14 @@ const messages = defineMessages({
   },
 });
 
+const Editor = loadable(() => import('draft-js-plugins-editor'));
+
 /**
  * TextEditorWidget class.
  * @class Edit
  * @extends Component
  */
-class TextEditorWidget extends Component {
+class TextEditorWidgetComponent extends Component {
   /**
    * Property types.
    * @property {Object} propTypes Property types.
@@ -63,6 +65,12 @@ class TextEditorWidget extends Component {
   constructor(props) {
     super(props);
 
+    const { settings } = config;
+    this.draftConfig = settings.richtextEditorSettings(props);
+
+    const { EditorState, convertFromRaw } = props.draftJs;
+    const createInlineToolbarPlugin = props.draftJsInlineToolbarPlugin.default;
+
     if (!__SERVER__) {
       let editorState;
       if (props.data && props.data[props.fieldName]) {
@@ -74,7 +82,7 @@ class TextEditorWidget extends Component {
       }
 
       const inlineToolbarPlugin = createInlineToolbarPlugin({
-        structure: config.settings.richTextEditorInlineToolbarButtons,
+        structure: this.draftConfig.richTextEditorInlineToolbarButtons,
       });
 
       this.state = {
@@ -116,6 +124,7 @@ class TextEditorWidget extends Component {
    * @returns {undefined}
    */
   onChange = (editorState) => {
+    const { convertToRaw } = this.props.draftJs;
     if (
       !isEqual(
         convertToRaw(editorState.getCurrentContent()),
@@ -141,6 +150,9 @@ class TextEditorWidget extends Component {
     }
 
     const { InlineToolbar } = this.state.inlineToolbarPlugin;
+    const isSoftNewlineEvent = this.props.draftJsLibIsSoftNewlineEvent.default;
+    const { RichUtils } = this.props.draftJs;
+
     let placeholder = this.props.placeholder
       ? this.props.placeholder
       : this.props.intl.formatMessage(messages.text);
@@ -152,11 +164,11 @@ class TextEditorWidget extends Component {
             editorState={this.state.editorState}
             plugins={[
               this.state.inlineToolbarPlugin,
-              ...config.settings.richTextEditorPlugins,
+              ...this.draftConfig.richTextEditorPlugins,
             ]}
-            blockRenderMap={config.settings.extendedBlockRenderMap}
-            blockStyleFn={config.settings.blockStyleFn}
-            customStyleMap={config.settings.customStyleMap}
+            blockRenderMap={this.draftConfig.extendedBlockRenderMap}
+            blockStyleFn={this.draftConfig.blockStyleFn}
+            customStyleMap={this.draftConfig.customStyleMap}
             placeholder={placeholder}
             ref={(node) => {
               this.node = node;
@@ -186,4 +198,26 @@ class TextEditorWidget extends Component {
   }
 }
 
-export default TextEditorWidget;
+export const TextEditorWidget = compose(
+  injectIntl,
+  injectLazyLibs([
+    'draftJs',
+    'draftJsLibIsSoftNewlineEvent',
+    'draftJsFilters',
+    'draftJsInlineToolbarPlugin',
+    'draftJsBlockBreakoutPlugin',
+    'draftJsCreateInlineStyleButton',
+    'draftJsCreateBlockStyleButton',
+    'immutableLib',
+  ]),
+)(TextEditorWidgetComponent);
+
+const Preloader = (props) => {
+  const [loaded, setLoaded] = React.useState(false);
+  React.useEffect(() => {
+    Editor.load().then(() => setLoaded(true));
+  }, []);
+  return loaded ? <TextEditorWidgetComponent {...props} /> : null;
+};
+
+export default Preloader;

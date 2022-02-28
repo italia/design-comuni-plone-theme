@@ -67,7 +67,6 @@ faLibrary.add(...iconList, ...iconListRegular, ...iconListBrands);
 
 export default function applyConfig(voltoConfig) {
   let config = applyRichTextConfig(voltoConfig);
-  // const listBlockTypes = config.settings.listBlockTypes; //config.settings.listBlockTypes.concat(['align-center']);
 
   /******************************************************************************
    * SETTINGS
@@ -84,7 +83,6 @@ export default function applyConfig(voltoConfig) {
         'Uncaught (in promise) Timeout (n)', //errori di recaptcha nella customer satisfaction
       ],
     },
-    // listBlockTypes: listBlockTypes,
     isMultilingual: true,
     supportedLanguages: ['it', 'en'],
     defaultLanguage: 'it',

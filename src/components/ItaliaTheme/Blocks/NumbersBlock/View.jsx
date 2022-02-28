@@ -49,8 +49,8 @@ const NumbersView = ({ data, block }) => {
                     <div className="title">
                       {redraft(
                         data.title,
-                        config.settings.ToHTMLRenderers,
-                        config.settings.ToHTMLOptions,
+                        config.settings.richtextViewSettings.ToHTMLRenderers,
+                        config.settings.richtextViewSettings.ToHTMLOptions,
                       )}
                     </div>
                   )}

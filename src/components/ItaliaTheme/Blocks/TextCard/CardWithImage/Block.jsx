@@ -200,8 +200,8 @@ const Block = ({
                   <CardText>
                     {redraft(
                       content,
-                      config.settings.ToHTMLRenderers,
-                      config.settings.ToHTMLOptions,
+                      config.settings.richtextViewSettings.ToHTMLRenderers,
+                      config.settings.richtextViewSettings.ToHTMLOptions,
                     )}
                   </CardText>
                 </div>
