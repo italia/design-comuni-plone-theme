@@ -15,7 +15,7 @@ const ContentTypeViewSections = ({ content, defaultSections }) => {
     sections.map((section, i) => (
       <section.component
         content={content}
-        {...section.params}
+        {...section.props}
         key={'section' + i}
       />
     ))
