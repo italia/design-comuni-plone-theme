@@ -1,3 +1,11 @@
+### [5.17.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.17.0...v5.17.1) (2022-02-28)
+
+
+### Bug Fixes
+
+* fix ContentTypeViewSections to handle props ([ee02b80](https://github.com/RedTurtle/design-volto-theme/commit/ee02b80a36d6a7837ebf2c8a6b14edf0d7420dd0))
+* fixed generic file label and added application/rtf format ([5e0da31](https://github.com/RedTurtle/design-volto-theme/commit/5e0da311c75563ea14f6a3ef4e85b7dab1448bb3))
+
 ## [5.17.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.16.1...v5.17.0) (2022-02-24)
 
 
