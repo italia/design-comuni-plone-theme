@@ -67,7 +67,7 @@
     "path": "src",
     "https": "https://github.com/collective/volto-google-analytics.git",
     "url": "git@github.com:collective/volto-google-analytics.git",
-    "tag": "v1.2.0"
+    "tag": "v1.2.5"
   },
   "volto-secondarymenu": {
     "package": "@italia/addons/volto-secondarymenu",
@@ -102,6 +102,6 @@
     "path": "src",
     "https": "https://github.com/collective/volto-gdpr-privacy.git",
     "url": "git@github.com:collective/volto-gdpr-privacy.git",
-    "tag": "v1.3.0"
+    "tag": "v1.3.1"
   }
 }
