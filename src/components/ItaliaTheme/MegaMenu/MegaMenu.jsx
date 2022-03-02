@@ -160,13 +160,64 @@ const MegaMenu = ({ item, pathname }) => {
       rows = rows === 0 ? 1 : rows;
       let col = 0;
 
+      let row_counter = 1;
+      let is_last_row = false;
+      let is_last_col = false;
+
       for (var i = 0; i < items.length; i++) {
+        is_last_row = row_counter === rows;
+        is_last_col = col === MEGAMENU_MAX_COLS - 1;
+
         if (!childrenGroups[col]) {
           childrenGroups.push([]);
         }
-        childrenGroups[col].push(items[i]);
-        if ((i + 1) % rows === 0) {
+
+        /***************** Manage columns split *************** */
+        if (
+          !is_last_col &&
+          is_last_row &&
+          items[i].showAsHeader &&
+          items[i].items?.length > 0
+        ) {
+          //se è una intestazione, non la mette come ultimo elemento della colonna, ma la mette dirattemente nella colonna successiva
+          if (!childrenGroups[col + 1]) {
+            childrenGroups.push([]);
+          }
+          childrenGroups[col + 1].push(items[i]);
+          row_counter = 2;
           col++;
+          continue;
+        }
+
+        if (
+          row_counter === 1 &&
+          !items[i]?.showAsHeader &&
+          (!items[i + 1] || items[i + 1]?.showAsHeader) &&
+          col > 0
+        ) {
+          //se l'elemento corrente viene messo da solo nella colonna successiva, lo metto in quella precedente.
+          childrenGroups[col - 1].push(items[i]);
+          continue;
+        }
+
+        if (!config.settings.siteProperties.splitMegamenuColumns) {
+          if (item.navigationRoot?.length > 1) {
+            //se c'è più di una root navigation
+            if (row_counter === 1 && !items[i].showAsHeader && col > 0) {
+              //se l'elemento corrente non è una intestazione, ed è il primo elemento della colonna, lo metto nella colonna precedente
+              childrenGroups[col - 1].push(items[i]);
+              continue;
+            }
+          }
+        }
+
+        /***************** end managing columns split *************** */
+
+        childrenGroups[col].push(items[i]);
+        row_counter++;
+        if ((i + 1) % rows === 0 && col < MEGAMENU_MAX_COLS - 1) {
+          col++;
+          row_counter = 1;
         }
       }
     }

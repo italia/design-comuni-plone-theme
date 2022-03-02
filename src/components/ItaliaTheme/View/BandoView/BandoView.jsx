@@ -5,80 +5,37 @@
 
 import React, { useState, createRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { defineMessages, useIntl } from 'react-intl';
 
 import {
-  Attachment,
   SideMenu,
-  HelpBox,
   PageHeader,
-  RichTextArticle,
-  Metadata,
-  OfficeCard,
-  GenericCard,
-  BandoDates,
   RelatedItems,
-  RichText,
   BandoPlaceholderAfterContent,
   BandoPlaceholderAfterRelatedItems,
+  BandoText,
+  BandoUfficioResponsabile,
+  BandoAreaResponsabile,
+  BandoServizi,
+  BandoDate,
+  BandoApprofondimenti,
+  BandoUlterioriInformazioni,
   RelatedItemInEvidence,
-  richTextHasContent,
   SkipToMainContent,
-  Module,
+  ContentTypeViewSections,
 } from '@italia/components/ItaliaTheme/View';
 
-import { flattenToAppURL } from '@plone/volto/helpers';
-import { UniversalLink } from '@plone/volto/components';
-import { Icon } from '@italia/components/ItaliaTheme';
-import {
-  Card,
-  CardBody,
-  CardTitle,
-} from 'design-react-kit/dist/design-react-kit';
-
-const messages = defineMessages({
-  descrizione: {
-    id: 'descrizione',
-    defaultMessage: 'Descrizione',
+export const BandoViewSectionsOrder = [
+  { /* Testo */ component: BandoText },
+  /* Responsabili */
+  { /* UFFICIO */ component: BandoUfficioResponsabile },
+  { /* AREA */ component: BandoAreaResponsabile },
+  { /* SERVIZI */ component: BandoServizi },
+  { /* DATE IMPORTANTI  */ component: BandoDate },
+  {
+    /* ALLEGATI (CARTELLE APPROFONDIMENTI)  */ component: BandoApprofondimenti,
   },
-  tempi_scadenze: {
-    id: 'tempi_e_scadenze',
-    defaultMessage: 'Tempi e scadenze',
-  },
-  tipologia_bando: {
-    id: 'tipologia_bando',
-    defaultMessage: 'Tipologia del bando',
-  },
-  destinatari: {
-    id: 'bando_destinatari',
-    defaultMessage: 'Destinatari del bando',
-  },
-  ente: {
-    id: 'bando_ente',
-    defaultMessage: 'Ente erogatore',
-  },
-  ufficio_responsabile: {
-    id: 'ufficio_responsabile',
-    defaultMessage: 'Ufficio responsabile',
-  },
-  area_responsabile: {
-    id: 'area_responsabile',
-    defaultMessage: 'Area responsabile',
-  },
-  servizi_correlati: {
-    id: 'servizi_collegati',
-    defaultMessage: 'Servizi collegati',
-  },
-  ulteriori_informazioni: {
-    id: 'ulteriori_informazioni',
-    defaultMessage: 'Ulteriori informazioni',
-  },
-  allegati: {
-    id: 'allegati',
-    defaultMessage: 'Documenti allegati',
-  },
-});
-
+  { /* ULTERIORI INFORMAZIONI  */ component: BandoUlterioriInformazioni },
+];
 /**
  * BandoView view component class.
  * @function BandoView
@@ -86,48 +43,8 @@ const messages = defineMessages({
  * @returns {string} Markup of the component.
  */
 const BandoView = ({ content, location }) => {
-  const intl = useIntl();
   let documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
-
-  let getAttachment = (item, i) => {
-    if (item.type === 'File' || item.type === 'Image') {
-      return (
-        <Attachment
-          key={item.url + i}
-          title={item.title}
-          description={item.description}
-          download_url={item.url}
-          item={item}
-        />
-        // item={item} viene utilizzato nelle customizzazioni per ottenere altre proprietà
-      );
-    } else if (item.type === 'Link') {
-      return (
-        <Card
-          className="card card-teaser shadow p-4 mt-3 rounded attachment"
-          noWrapper={true}
-          tag="div"
-        >
-          <Icon
-            className={undefined}
-            icon={'it-external-link'}
-            padding={false}
-          />
-          <CardBody>
-            <CardTitle tag="h3" className="title">
-              <UniversalLink
-                href={flattenToAppURL(item.url)}
-                rel="noopener noreferrer"
-              >
-                {item.title}
-              </UniversalLink>
-            </CardTitle>
-          </CardBody>
-        </Card>
-      );
-    }
-  };
 
   useEffect(() => {
     if (documentBody.current) {
@@ -159,176 +76,11 @@ const BandoView = ({ content, location }) => {
             id="main-content-section"
             className="col-lg-8 it-page-sections-container"
           >
-            {(richTextHasContent(content?.text) ||
-              content?.tipologia_bando ||
-              content?.destinatari?.length > 0 ||
-              content?.ente_bando?.length > 0) && (
-              <RichTextArticle
-                tag_id={'text-body'}
-                title={intl.formatMessage(messages.descrizione)}
-                show_title={true}
-              >
-                {/* DESCRIZIONE DEL BANDO */}
-                {richTextHasContent(content?.text) && (
-                  <RichText
-                    title_size="h5"
-                    title={''}
-                    content={content?.text}
-                  />
-                )}
-                {/* TIPOLOGIA DEL BANDO */}
-                {content?.tipologia_bando && (
-                  <>
-                    <h5>{intl.formatMessage(messages.tipologia_bando)}</h5>
-                    <span>{content.tipologia_bando.title}</span>
-                  </>
-                )}
-                {/* DESTINATARI DEL BANDO */}
-                {content?.destinatari?.length > 0 && (
-                  <>
-                    <h5>{intl.formatMessage(messages.destinatari)}</h5>
-                    {content.destinatari.map((item, i) => (
-                      <p>{item.title}</p>
-                    ))}
-                  </>
-                )}
-                {/* ENTE DEL BANDO */}
-                {content?.ente_bando?.length > 0 && (
-                  <>
-                    <h5>{intl.formatMessage(messages.ente)}</h5>
-                    {content.ente_bando.map((item, i) => (
-                      <span>
-                        {item}
-                        {i < content.ente_bando.length - 1 ? ', ' : ''}
-                      </span>
-                    ))}
-                  </>
-                )}
-              </RichTextArticle>
-            )}
-            {/* Responsabili */}
-            {/* UFFICIO */}
-            {content?.ufficio_responsabile?.length > 0 && (
-              <RichTextArticle
-                tag_id="ufficio_responsabile"
-                title={intl.formatMessage(messages.ufficio_responsabile)}
-              >
-                <div className="mb-5 mt-3">
-                  <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                    {content?.ufficio_responsabile?.map((item, i) => (
-                      <OfficeCard key={item['@id']} office={item} />
-                    ))}
-                  </div>
-                </div>
-              </RichTextArticle>
-            )}
-            {/* AREA */}
-            {content?.area_responsabile?.length > 0 && (
-              <RichTextArticle
-                tag_id="area_responsabile"
-                title={intl.formatMessage(messages.area_responsabile)}
-              >
-                <div className="mb-5 mt-3">
-                  <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                    {content?.area_responsabile?.map((item, i) => (
-                      <OfficeCard key={item['@id']} office={item} />
-                    ))}
-                  </div>
-                </div>
-              </RichTextArticle>
-            )}
-            {/* SERVIZI */}
-            {content?.servizi_correlati?.length > 0 && (
-              <RichTextArticle
-                tag_id="servizi_collegati"
-                title={intl.formatMessage(messages.servizi_correlati)}
-              >
-                <div className="mb-5 mt-3">
-                  <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                    {content?.servizi_correlati?.map((item, i) => (
-                      <GenericCard
-                        key={item['@id']}
-                        index={item['@id']}
-                        item={item}
-                        showimage={false}
-                        showDescription={true}
-                      />
-                    ))}
-                  </div>
-                </div>
-              </RichTextArticle>
-            )}
-            {/* DATE IMPORTANTI */}
-            {(content?.effective ||
-              content?.scadenza_bando ||
-              content?.scadenza_domande_bando ||
-              content?.chiusura_procedimento_bando) && (
-              <RichTextArticle
-                tag_id="tempi_e_scadenze"
-                title={intl.formatMessage(messages.tempi_scadenze)}
-              >
-                <BandoDates content={content} />
-              </RichTextArticle>
-            )}
-            {/* ALLEGATI (CARTELLE APPROFONDIMENTI) */}
-            {content?.approfondimento?.length > 0 && (
-              <RichTextArticle
-                tag_id="allegati"
-                title={intl.formatMessage(messages.allegati)}
-              >
-                {/* Se ho una sola cartella lascio solo "allegati" altrimenti
-                aggiungo gli altri titoli */}
-                {content?.approfondimento?.length === 1 ? (
-                  <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                    {content.approfondimento[0].children.map((item, i) =>
-                      item.type === 'Modulo' ? (
-                        <Module
-                          item={{
-                            ...item,
-                            '@id': item.url.replace(/\/view$/, ''),
-                          }}
-                          key={item.url + i}
-                        />
-                      ) : (
-                        getAttachment(item, i)
-                      ),
-                    )}
-                  </div>
-                ) : (
-                  <>
-                    {content.approfondimento.map((item, i) => (
-                      <>
-                        <h5>{item.title}</h5>
-                        <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                          {content.approfondimento[i].children.map(
-                            (inner_item, x) =>
-                              inner_item.type === 'Modulo' ? (
-                                <Module
-                                  item={{
-                                    ...inner_item,
-                                    '@id': inner_item.url.replace(
-                                      /\/view$/,
-                                      '',
-                                    ),
-                                  }}
-                                  key={inner_item.url + x}
-                                />
-                              ) : (
-                                getAttachment(inner_item, x)
-                              ),
-                          )}
-                        </div>
-                      </>
-                    ))}
-                  </>
-                )}
-              </RichTextArticle>
-            )}
-            <Metadata content={content}>
-              {richTextHasContent(content?.riferimenti_bando) && (
-                <HelpBox text={content?.riferimenti_bando} />
-              )}
-            </Metadata>
+            {/* SEZIONI */}
+            <ContentTypeViewSections
+              content={content}
+              defaultSections={BandoViewSectionsOrder}
+            />
           </section>
         </div>
       </div>

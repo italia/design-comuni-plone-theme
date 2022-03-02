@@ -6,6 +6,10 @@ import faFileOdt from '@italia/icons/file-odt.svg';
 
 export const FILE_FORMATS = {
   'text/rtf': { icon: { lib: 'far', name: 'file-alt' }, format_name: 'rtf' },
+  'application/rtf': {
+    icon: { lib: 'far', name: 'file-alt' },
+    format_name: 'rtf',
+  },
   'application/pdf': {
     icon: { lib: 'far', name: 'file-pdf' },
     format_name: 'pdf',

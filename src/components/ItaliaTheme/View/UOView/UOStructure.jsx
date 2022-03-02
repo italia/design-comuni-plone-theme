@@ -66,18 +66,18 @@ const UOStructure = ({ content }) => {
       {content.uo_children?.length > 0 && (
         <div className="mb-5 mt-3">
           <h5>{intl.formatMessage(messages.legami_strutture_figlie)}</h5>
-          {content.uo_children.map((uo) => {
-            return (
-              <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal mb-3">
+          <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal mb-3">
+            {content.uo_children.map((uo, i) => {
+              return (
                 <OfficeCard
                   key={uo['@id']}
                   office={uo}
                   load_data={false}
                   show_contacts={false}
                 />
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       )}
 

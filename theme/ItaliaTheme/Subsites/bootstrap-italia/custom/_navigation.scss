@@ -21,6 +21,15 @@
         }
       }
     }
+
+    .menu-wrapper {
+      .it-brand-wrapper {
+        @if $subsite-light-theme {
+        } @else {
+          //background-color: $subsite-primary;
+        }
+      }
+    }
   }
 
   //Dropdown style tipo collapse
@@ -66,10 +75,10 @@
 
     // navbar mobile
     .navbar-collapsable {
-      // menu vrapper
-      // .menu-wrapper {
-      //   background: $navigation-bg-color-desktop;
-      // }
+      /*menu vrapper
+      .menu-wrapper {
+        background: $navigation-bg-color-desktop;
+      }*/
 
       /*lista menu*/
       .navbar-nav {
@@ -91,37 +100,62 @@
       }
     }
 
-    // Dropdown style tipo collapse
-    // .dropdown-menu {
-    //   color: $body-color;
-    //   background-color: $dropdown-bg;
+    /* Dropdown style tipo collapse
+    .dropdown-menu {
+      color: $body-color;
+      background-color: $dropdown-bg;
 
-    //   border: $dropdown-border-width solid $dropdown-border-color;
+      border: $dropdown-border-width solid $dropdown-border-color;
 
-    //   .link-list-wrapper {
-    //     ul li {
-    //       a {
-    //         span,
-    //         i,
-    //         h3 {
-    //           color: $primary;
-    //         }
-    //       }
+      .link-list-wrapper {
+        ul li {
+          a {
+            span,
+            i,
+            h3 {
+              color: $primary;
+            }
+          }
 
-    //       h3 {
-    //         color: $body-color;
-    //       }
-    //     }
-    //   }
-    // }
+          h3 {
+            color: $body-color;
+          }
+        }
+      }
+    }*/
   }
 
-  // .nav-item.megamenu {
-  //   > a.dropdown-toggle {
-  //     &:before {
-  //       content: '';
-  //       background-color: $dropdown-bg;
-  //     }
-  //   }
-  // }
+  /*.nav-item.megamenu {
+    > a.dropdown-toggle {
+      &:before {
+        content: '';
+        background-color: $dropdown-bg;
+      }
+    }
+  }*/
+}
+
+// Mobile
+@media (max-width: #{map-get($grid-breakpoints, lg)}) {
+  .navbar {
+    .navbar-collapsable {
+      .navbar-nav {
+        li a.nav-link {
+          font-size: 16px;
+        }
+      }
+
+      .link-list-wrapper {
+        ul li {
+          a {
+            font-size: 14px;
+          }
+
+          h3 {
+            font-size: 0.833em;
+          }
+        }
+      }
+    }
+  }
 }

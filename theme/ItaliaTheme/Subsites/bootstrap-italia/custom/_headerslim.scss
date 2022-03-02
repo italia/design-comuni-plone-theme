@@ -25,3 +25,14 @@
     }
   }
 }
+
+//mobile
+@media (max-width: #{map-get($grid-breakpoints, lg)}) {
+  .parent-site-menu {
+    li.nav-item {
+      a.nav-link {
+        color: $subsite-primary-text;
+      }
+    }
+  }
+}

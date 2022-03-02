@@ -2,10 +2,13 @@
   .no-image-wrapper {
     .toolbar-inner {
       height: auto;
-      flex-wrap: wrap;
 
       .input {
         max-width: calc(100% - 16px);
+      }
+
+      @media (max-width: #{map-get($grid-breakpoints, md)}) {
+        flex-wrap: wrap;
       }
     }
   }

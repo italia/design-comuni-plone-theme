@@ -239,6 +239,7 @@ const italiaListingVariations = [
   //    id: 'amministrazioneTrasparenteTablesTemplate',
   //    isDefault: false,
   //    title: 'Tabelle Amministrazione Trasparente',
+  //    fullobjects: 1,
   //    template: AmministrazioneTrasparenteTablesTemplate,
   //    skeleton: AmministrazioneTrasparenteTablesTemplateSkeleton,
   //    schemaEnhancer: ({ schema, formData, intl }) => {

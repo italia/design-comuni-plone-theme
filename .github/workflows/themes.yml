@@ -1,17 +1,23 @@
-name: Update releated themes
+name: Update related themes
+
 on:
-  # Triggers the workflow on releases
-  release:
-    types: [published]
+  push:
+    tags:
+      - '*'
+
 jobs:
   update:
     name: Update themes
     runs-on: ubuntu-latest
     steps:
-      - name: trigger Job
-        uses: appleboy/gitlab-ci-action@master
-        with:
-          token: ${{ secrets.TOKEN }}
-          project_id: ${{ secrets.PROJECT_ID }}
-          ref: master
-          debug: true
+      - name: Get the version
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+
+      - name: Trigger job
+        run: |
+          curl --fail --request POST \
+          --form token=${{ secrets.TOKEN }} \
+          --form ref=master \
+          --form "variables[GITHUB_TAG]=${{ steps.get_version.outputs.VERSION }}" \
+          "https://gitlab.com/api/v4/projects/${{ secrets.PROJECT_ID }}/trigger/pipeline"

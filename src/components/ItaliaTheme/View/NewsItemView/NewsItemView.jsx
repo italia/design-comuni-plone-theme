@@ -5,50 +5,40 @@
 
 import React, { createRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { defineMessages, useIntl } from 'react-intl';
 import { readingTime } from '../ViewUtils';
 import {
-  Metadata,
-  RichTextArticle,
   PageHeader,
   SideMenu,
   ContentImage,
-  VenuesSmall,
-  CuredBy,
-  Gallery,
-  Attachments,
   RelatedItems,
   NewsItemPlaceholderAfterContent,
   NewsItemPlaceholderAfterRelatedItems,
   RelatedItemInEvidence,
-  richTextHasContent,
   SkipToMainContent,
+  NewsItemText,
+  NewsItemGallery,
+  NewsItemAllegati,
+  NewsItemACuraDi,
+  NewsItemLuoghiCorrelati,
+  NewsItemDataset,
+  NewsItemMetadata,
+  ContentTypeViewSections,
 } from '@italia/components/ItaliaTheme/View';
 
-// import { getBaseUrl } from '@plone/volto/helpers';
-
-const messages = defineMessages({
-  news_item_contenuto: {
-    id: 'news_item_contenuto',
-    defaultMessage: 'Contenuto',
+export const NewsItemViewSectionsOrder = [
+  {
+    /* HEADER IMAGE */
+    component: ContentImage,
+    props: { position: 'documentBody' },
   },
-  notizie_in_evidenza: {
-    id: 'notizie_in_evidenza',
-    defaultMessage: 'Notizie in evidenza',
-  },
-  related_items: {
-    id: 'related_items',
-    defaultMessage: 'Contenuti correlati',
-  },
-  dataset: {
-    id: 'dataset',
-    defaultMessage: 'Dataset',
-  },
-  luoghi: {
-    id: 'luoghi_notizia',
-    defaultMessage: 'Luoghi',
-  },
-});
+  { /* TEXT BODY */ component: NewsItemText },
+  { /* GALLERY */ component: NewsItemGallery },
+  { /* ALLEGATI */ component: NewsItemAllegati },
+  { /* A CURA DI */ component: NewsItemACuraDi },
+  { /* LUOGHI CORRELATI */ component: NewsItemLuoghiCorrelati },
+  { /* DATASET */ component: NewsItemDataset },
+  { /* ULTERIORI INFORMAZIONI */ component: NewsItemMetadata },
+];
 
 /**
  * NewsItemView view component class.
@@ -57,8 +47,6 @@ const messages = defineMessages({
  * @returns {string} Markup of the component.
  */
 const NewsItemView = ({ content, location }) => {
-  const intl = useIntl();
-
   const [readingtime, setReadingtime] = useState(0);
   let documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
@@ -106,48 +94,11 @@ const NewsItemView = ({ content, location }) => {
             id="main-content-section"
             ref={documentBody}
           >
-            {/* HEADER IMAGE */}
-            <ContentImage content={content} position="documentBody" />
-
-            {/* TEXT BODY */}
-            <RichTextArticle
-              content={content.descrizione_estesa}
-              tag_id={'text-body'}
-              field="descrizione_estesa"
-              title={intl.formatMessage(messages.news_item_contenuto)}
-              show_title={false}
+            {/* SEZIONI */}
+            <ContentTypeViewSections
+              content={content}
+              defaultSections={NewsItemViewSectionsOrder}
             />
-
-            <Gallery content={content} folder_name={'multimedia'} />
-
-            <Attachments content={content} folder_name={'documenti-allegati'} />
-
-            {((content.a_cura_di && content.a_cura_di.length > 0) ||
-              (content.a_cura_di_persone &&
-                content.a_cura_di_persone.length > 0)) && (
-              <CuredBy
-                office={content.a_cura_di ? content.a_cura_di[0] : null}
-                people={content.a_cura_di_persone}
-              />
-            )}
-
-            {content.luoghi_correlati?.length > 0 && (
-              <RichTextArticle
-                tag_id="luoghi"
-                title={intl.formatMessage(messages.luoghi)}
-              >
-                <VenuesSmall venues={content.luoghi_correlati} />
-              </RichTextArticle>
-            )}
-
-            {richTextHasContent(content.dataset) && (
-              <RichTextArticle
-                content={content.dataset}
-                tag_id="dataset"
-                title={intl.formatMessage(messages.dataset)}
-              />
-            )}
-            <Metadata content={content} />
           </section>
         </div>
       </div>

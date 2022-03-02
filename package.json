@@ -2,7 +2,7 @@
   "name": "design-volto-theme",
   "description": "Volto Theme for Italia design guidelines",
   "license": "MIT",
-  "version": "5.14.7",
+  "version": "5.17.1",
   "private": true,
   "workspaces": [
     "src/addons/volto-multilingual-widget",
@@ -199,11 +199,11 @@
     "typeface-roboto-mono": "0.0.75",
     "typeface-titillium-web": "0.0.72",
     "volto-blocks-widget": "collective/volto-blocks-widget#v2.1.0",
-    "volto-customer-satisfaction": "collective/volto-customer-satisfaction#v0.2.6",
+    "volto-customer-satisfaction": "collective/volto-customer-satisfaction#v0.2.8",
     "volto-dropdownmenu": "collective/volto-dropdownmenu#v2.3.0",
     "volto-editablefooter": "RedTurtle/volto-editablefooter#v4.1.1",
     "volto-form-block": "collective/volto-form-block#v2.1.0",
-    "volto-google-analytics": "collective/volto-google-analytics#v1.2.0",
+    "volto-google-analytics": "collective/volto-google-analytics#v1.2.5",
     "volto-multilingual-widget": "collective/volto-multilingual-widget#v2.2.0",
     "volto-rss-block": "redturtle/volto-rss-block#v2.2.0",
     "volto-secondarymenu": "collective/volto-secondarymenu#v2.2.0",
@@ -212,7 +212,7 @@
     "volto-subfooter": "collective/volto-subfooter#v1.0.3",
     "volto-subsites": "collective/volto-subsites#v2.1.0",
     "volto-venue": "collective/volto-venue#v3.1.2",
-    "volto-gdpr-privacy": "collective/volto-gdpr-privacy#33c59b4d74f4b2395657b751bb5b440d075f0e52"
+    "volto-gdpr-privacy": "collective/volto-gdpr-privacy#v1.3.1"
   },
   "devDependencies": {
     "@babel/core": "7.11.1",

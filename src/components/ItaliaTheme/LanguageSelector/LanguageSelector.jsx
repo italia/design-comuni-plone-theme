@@ -4,7 +4,7 @@
  * @module components/ItaliaTheme/LanguageSelector/LanguageSelector
  */
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { find, map } from 'lodash';
 import { Link } from 'react-router-dom';
@@ -47,18 +47,6 @@ const LanguageSelector = (props) => {
   const translations = useSelector(
     (state) => state.content.data?.['@components']?.translations?.items,
   );
-
-  // const [allLocales, setAllLocales] = useState({});
-
-  // useEffect(() => {
-  //   if (config.settings) {
-  //     config.settings.supportedLanguages.forEach((lang) => {
-  //       import('~/../locales/' + lang + '.json').then((locale) => {
-  //         setAllLocales({ ...allLocales, [lang]: locale.default });
-  //       });
-  //     });
-  //   }
-  // }, []);
 
   return config.settings.isMultilingual ? (
     <UncontrolledDropdown nav tag="div">

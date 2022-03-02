@@ -1,3 +1,105 @@
+### [5.17.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.17.0...v5.17.1) (2022-02-28)
+
+
+### Bug Fixes
+
+* fix ContentTypeViewSections to handle props ([ee02b80](https://github.com/RedTurtle/design-volto-theme/commit/ee02b80a36d6a7837ebf2c8a6b14edf0d7420dd0))
+* fixed generic file label and added application/rtf format ([5e0da31](https://github.com/RedTurtle/design-volto-theme/commit/5e0da311c75563ea14f6a3ef4e85b7dab1448bb3))
+
+## [5.17.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.16.1...v5.17.0) (2022-02-24)
+
+
+### Features
+
+* added configuration for headerslim tertiary menu and fixed layout mobile ([58bad5e](https://github.com/RedTurtle/design-volto-theme/commit/58bad5e6198b11595d4888bcbacee6951fdb622b))
+* added content-type sections in Venue ([c03ebeb](https://github.com/RedTurtle/design-volto-theme/commit/c03ebeb1851e3dfe0a22905f68d5e2968d60d747))
+* added ContentTypeViewSections to content-types views ([0dbd0b5](https://github.com/RedTurtle/design-volto-theme/commit/0dbd0b50d3e04e164b9307586c06d7158ac003a7))
+
+
+### Bug Fixes
+
+* layout mobile menu ([156fef5](https://github.com/RedTurtle/design-volto-theme/commit/156fef54b9755e8dfefe966312ee130de54ecf34))
+
+
+### Maintenance
+
+* added component UOMoreInfos ([ef74b3b](https://github.com/RedTurtle/design-volto-theme/commit/ef74b3b2e776d7a6a3b8afb46693de5bc3544b57))
+* added component VenueMoreInfos ([ccd1b6e](https://github.com/RedTurtle/design-volto-theme/commit/ccd1b6e4c5d49a3ba520518e1f234181decd33c5))
+* created PersonaUlterioriInformazioni component ([382e7ff](https://github.com/RedTurtle/design-volto-theme/commit/382e7ffe1eadf1b9b73735f6b4b4ba1d47e68eb0))
+* refactor BandoView ([a3cdfb3](https://github.com/RedTurtle/design-volto-theme/commit/a3cdfb36986933f944a55293e887df155fa4d7c3))
+* refactor Documento view ([d478df7](https://github.com/RedTurtle/design-volto-theme/commit/d478df706aa1c9645c8f54a5354c3a2ff21f0090))
+* refactor Event view ([b74f4dc](https://github.com/RedTurtle/design-volto-theme/commit/b74f4dcbfc8cb79eefd6c052e35a6638ce4e355d))
+* refactor ModuloView ([ad42461](https://github.com/RedTurtle/design-volto-theme/commit/ad424612fc588d9b305ca59c2912e659fbab1184))
+* refactor NewsItem view ([9d2ec8d](https://github.com/RedTurtle/design-volto-theme/commit/9d2ec8d13aacd88eabd7adeec27dd52505dfc35c))
+* refactor Servizio View ([2d3d3f3](https://github.com/RedTurtle/design-volto-theme/commit/2d3d3f31296a56aea417354480062d3aa6011dfb))
+* splitted UOContacts in multiple components ([24ec68f](https://github.com/RedTurtle/design-volto-theme/commit/24ec68f30256f56a5607bd32e1912e8c355d2bfa))
+* splitted Venue view in multiple components ([e3c4a36](https://github.com/RedTurtle/design-volto-theme/commit/e3c4a367c8ed6196a14b4f0f96e1115956296e13))
+* uo_children side by side ([faa20b7](https://github.com/RedTurtle/design-volto-theme/commit/faa20b772b833b463abf05bd15ad47aa818dd2be))
+
+### [5.16.1](https://github.com/redturtle/design-volto-theme/compare/v5.16.0...v5.16.1) (2022-02-22)
+
+
+### Bug Fixes
+
+* add image and title on ListingImage component ([d0da2bd](https://github.com/redturtle/design-volto-theme/commit/d0da2bd46004d5e68e888d1a563793fe7b9d0608))
+
+## [5.16.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.15.3...v5.16.0) (2022-02-22)
+
+
+### Features
+
+* added show_default_results in EventsSearch block ([050e25a](https://github.com/RedTurtle/design-volto-theme/commit/050e25a4c6851d84f727789016fa93668c5dec10))
+
+### [5.15.3](https://github.com/redturtle/design-volto-theme/compare/v5.15.2...v5.15.3) (2022-02-21)
+
+
+### Bug Fixes
+
+* reading fullobjects from variation config ([31e88d6](https://github.com/redturtle/design-volto-theme/commit/31e88d63a9f9cc7cd231a8a98b7441d9a25bb296))
+
+### [5.15.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.15.1...v5.15.2) (2022-02-18)
+
+
+### Bug Fixes
+
+* fix smallVenue reload on redirect and subsite style ([641d25a](https://github.com/RedTurtle/design-volto-theme/commit/641d25aa81d0c95b89f3e945ff65fe40a23233e7))
+
+### [5.15.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.15.0...v5.15.1) (2022-02-18)
+
+
+### Bug Fixes
+
+* fix recaptcha in volto-customer-satisfaction ([ca20862](https://github.com/RedTurtle/design-volto-theme/commit/ca2086230120bfc497f55cbd00919d435d47d0fa))
+
+## [5.15.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.14.8...v5.15.0) (2022-02-17)
+
+
+### Features
+
+* added megamenu splittable columns config splitMegamenuColumns ([fcb2d69](https://github.com/RedTurtle/design-volto-theme/commit/fcb2d69e91ddda10f7381048c956148c9c1264d5))
+
+
+### Bug Fixes
+
+* fix slider full-width title ([9c92b25](https://github.com/RedTurtle/design-volto-theme/commit/9c92b2545fb9fe2e4041ebc5e9a3724578c97fd9))
+
+### [5.14.8](https://github.com/RedTurtle/design-volto-theme/compare/v5.14.7...v5.14.8) (2022-02-17)
+
+
+### Bug Fixes
+
+* fix image blcoks ([92db1cf](https://github.com/RedTurtle/design-volto-theme/commit/92db1cf0c9be7e2783ff090b7ad28fcc0cd4aa7e))
+* fix slider template min height ([fc1ae20](https://github.com/RedTurtle/design-volto-theme/commit/fc1ae208166cffaed084dd9bb1da447dafe0819f))
+* fixed line-height of link list items ([d29d599](https://github.com/RedTurtle/design-volto-theme/commit/d29d5996a82a89bc71af7906dbc624648257465a))
+* layout navigation list internal pages ([d2fd288](https://github.com/RedTurtle/design-volto-theme/commit/d2fd288811344676fdaa071dfdab6902e6109b66))
+* some styles fixes ([074e329](https://github.com/RedTurtle/design-volto-theme/commit/074e329b816b53ce2f3f4d8b89e7da6a32d9df6c))
+
+
+### Maintenance
+
+* splitted personaView in multiple components ([5f784d2](https://github.com/RedTurtle/design-volto-theme/commit/5f784d2e232fe8c1575f6e5c19bf31bda3c0247f))
+* updated volto-gdpr-privacy ([17aee2a](https://github.com/RedTurtle/design-volto-theme/commit/17aee2a8be43d2666659c3398552af219604a165))
+
 ### [5.14.7](https://github.com/RedTurtle/design-volto-theme/compare/v5.14.6...v5.14.7) (2022-02-14)
 
 
