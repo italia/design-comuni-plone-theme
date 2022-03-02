@@ -1,3 +1,10 @@
+### [5.17.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.17.1...v5.17.2) (2022-03-02)
+
+
+### Bug Fixes
+
+* hotfix: removed broken search block ([50af391](https://github.com/RedTurtle/design-volto-theme/commit/50af39155d01df4511a79373e6050a2bc0adaa25))
+
 ### [5.17.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.17.0...v5.17.1) (2022-02-28)
 
 
