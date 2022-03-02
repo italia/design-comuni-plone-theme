@@ -101,7 +101,7 @@ class TextEditorWidgetComponent extends Component {
    * @returns {undefined}
    */
   componentDidMount() {
-    if (this.props.selected) {
+    if (this.props.selected && this.node) {
       setTimeout(this.node.focus, 0);
     }
   }
@@ -265,7 +265,7 @@ const Preloader = (props) => {
   React.useEffect(() => {
     Editor.load().then(() => setLoaded(true));
   }, []);
-  return loaded ? <TextEditorWidgetComponent {...props} /> : null;
+  return loaded ? <TextEditorWidget {...props} /> : null;
 };
 
 export default Preloader;

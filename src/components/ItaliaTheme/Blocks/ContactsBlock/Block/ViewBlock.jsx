@@ -29,8 +29,7 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
           <div className="contact-title">
             {redraft(
               data.title,
-              config.settings.richtextViewSettingsconfig.settings
-                .ToHTMLRenderers,
+              config.settings.richtextViewSettings.ToHTMLRenderers,
               config.settings.richtextViewSettings.ToHTMLOptions,
             )}
           </div>

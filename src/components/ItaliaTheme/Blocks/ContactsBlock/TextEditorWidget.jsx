@@ -217,7 +217,7 @@ const Preloader = (props) => {
   React.useEffect(() => {
     Editor.load().then(() => setLoaded(true));
   }, []);
-  return loaded ? <TextEditorWidgetComponent {...props} /> : null;
+  return loaded ? <TextEditorWidget {...props} /> : null;
 };
 
 export default Preloader;
