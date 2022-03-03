@@ -1,3 +1,10 @@
+## [5.18.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.17.2...v5.18.0) (2022-03-03)
+
+
+### Features
+
+* updated volto, volto-gdpr-privacy and volto-google-analytics for cookie expiration ([1f706b8](https://github.com/RedTurtle/design-volto-theme/commit/1f706b8ccbfc9da4ea37655f9b14df0e8dcf2dbc))
+
 ### [5.17.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.17.1...v5.17.2) (2022-03-02)
 
 
