@@ -1,3 +1,10 @@
+### [5.18.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.0...v5.18.1) (2022-03-03)
+
+
+### Maintenance
+
+* updatd last_updated date for cookie consent ([0d354fe](https://github.com/RedTurtle/design-volto-theme/commit/0d354feb5c0d19ea1011a4d6f94f9bd67fbc5113))
+
 ## [5.18.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.17.2...v5.18.0) (2022-03-03)
 
 
