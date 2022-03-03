@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="597px" height="391px" viewBox="0 0 597 391" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>blocco-icone</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="blocco-icone" transform="translate(1.000000, 1.000000)">
+            <g id="Group">
+                <rect id="Rectangle" stroke="currentColor" stroke-width="3" x="0.5" y="0.5" width="280" height="388" rx="9"></rect>
+                <g id="star-solid" transform="translate(85.000000, 68.000000)" fill="currentColor" fill-rule="nonzero">
+                    <path d="M75.0582738,31.7081902 L105.261918,36.1795063 C107.763125,36.5380552 109.864979,38.3097087 110.663684,40.7351868 C111.462388,43.181756 110.810813,45.8392363 109.003219,47.653072 L87.1018982,69.20819 L92.2724595,100.127762 C92.6928303,102.658696 91.6629218,105.231812 89.5610676,106.729281 C87.4802319,108.22675 84.726803,108.41657 82.477819,107.214377 L55.4900114,92.7669638 L28.5232222,107.214377 C26.2532197,108.41657 23.4997908,108.22675 21.4189551,106.729281 C19.3381195,105.231812 18.2871924,102.658696 18.7285818,100.127762 L23.8991431,69.20819 L1.99361881,47.653072 C0.18392236,45.8392363 -0.459245018,43.181756 0.335255861,40.7351868 C1.12765489,38.3097087 3.2232035,36.5380552 5.74332666,36.1795063 L35.921749,31.7081902 L49.4576899,3.79831972 C50.5716726,1.47492266 52.9257493,0 55.4900114,0 C58.075292,0 60.4293687,1.47492266 61.5433514,3.79831972 L75.0582738,31.7081902 Z" id="Path"></path>
+                </g>
+                <rect id="Rectangle" fill="currentColor" fill-rule="nonzero" x="29" y="233" width="224" height="31"></rect>
+                <rect id="Rectangle" fill="currentColor" fill-rule="nonzero" x="29" y="291" width="224" height="15"></rect>
+                <rect id="Rectangle" fill="currentColor" fill-rule="nonzero" x="29" y="324" width="150" height="15"></rect>
+            </g>
+            <g id="Group" transform="translate(314.000000, 0.000000)">
+                <rect id="Rectangle" stroke="currentColor" stroke-width="3" x="0.5" y="0.5" width="280" height="388" rx="9"></rect>
+                <g id="star-solid" transform="translate(85.000000, 68.000000)" fill="currentColor" fill-rule="nonzero">
+                    <path d="M75.0582738,31.7081902 L105.261918,36.1795063 C107.763125,36.5380552 109.864979,38.3097087 110.663684,40.7351868 C111.462388,43.181756 110.810813,45.8392363 109.003219,47.653072 L87.1018982,69.20819 L92.2724595,100.127762 C92.6928303,102.658696 91.6629218,105.231812 89.5610676,106.729281 C87.4802319,108.22675 84.726803,108.41657 82.477819,107.214377 L55.4900114,92.7669638 L28.5232222,107.214377 C26.2532197,108.41657 23.4997908,108.22675 21.4189551,106.729281 C19.3381195,105.231812 18.2871924,102.658696 18.7285818,100.127762 L23.8991431,69.20819 L1.99361881,47.653072 C0.18392236,45.8392363 -0.459245018,43.181756 0.335255861,40.7351868 C1.12765489,38.3097087 3.2232035,36.5380552 5.74332666,36.1795063 L35.921749,31.7081902 L49.4576899,3.79831972 C50.5716726,1.47492266 52.9257493,0 55.4900114,0 C58.075292,0 60.4293687,1.47492266 61.5433514,3.79831972 L75.0582738,31.7081902 Z" id="Path"></path>
+                </g>
+                <rect id="Rectangle" fill="currentColor" fill-rule="nonzero" x="29" y="233" width="224" height="31"></rect>
+                <rect id="Rectangle" fill="currentColor" fill-rule="nonzero" x="29" y="291" width="224" height="15"></rect>
+                <rect id="Rectangle" fill="currentColor" fill-rule="nonzero" x="29" y="324" width="150" height="15"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

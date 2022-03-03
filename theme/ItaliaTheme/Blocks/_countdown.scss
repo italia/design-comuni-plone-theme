@@ -1,0 +1,100 @@
+.block.count_down .public-ui {
+  color: $white;
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  a {
+    color: $white;
+  }
+
+  .full-width {
+    height: unset;
+    min-height: 480px;
+  }
+
+  .background-image {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &:after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#000, 0.5);
+      content: '';
+    }
+  }
+
+  .countdown_text {
+    margin-top: 1rem;
+  }
+
+  .countdown_text,
+  .text {
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: #{map-get($grid-breakpoints, lg) - 1px}) {
+    .order-last {
+      margin-top: 2rem;
+    }
+  }
+
+  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+    .order-last {
+      &.text {
+        padding-left: 2rem;
+      }
+    }
+  }
+}
+
+.count-down-timer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .interval {
+    margin: 0.5rem;
+    text-align: center;
+
+    .number {
+      padding: 1.3rem;
+      border: 1px solid $white;
+      background-color: rgba(255, 255, 255, 0.06);
+      border-radius: 0.5rem;
+      font-family: $font-family-monospace !important;
+      font-size: 5rem;
+      font-weight: bold;
+      line-height: 1em;
+    }
+
+    .label {
+      font-size: 1.2rem;
+      line-height: 2;
+      text-transform: uppercase;
+    }
+  }
+
+  .expired {
+    padding: 1.5rem;
+    border: 1px solid $white;
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 0.5rem;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+  }
+}

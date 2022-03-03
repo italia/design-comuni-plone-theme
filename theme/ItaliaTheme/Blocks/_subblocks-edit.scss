@@ -2,10 +2,13 @@
   .dragsubblock,
   .ui.basic.button.delete-button {
     z-index: 3;
+    width: 1.8rem !important;
+    height: 1.8rem !important;
     padding: 0.3rem;
     background-color: #8bb3b5 !important;
     border-radius: 100%;
     line-height: 1rem;
+    text-align: center;
 
     svg:not(:hover) {
       fill: #fff !important;
