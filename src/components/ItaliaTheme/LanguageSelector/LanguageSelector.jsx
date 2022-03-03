@@ -4,15 +4,14 @@
  * @module components/ItaliaTheme/LanguageSelector/LanguageSelector
  */
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { find, map } from 'lodash';
 import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import cx from 'classnames';
 
 import { Helmet, flattenToAppURL, langmap } from '@plone/volto/helpers';
-import { changeLanguage } from '@plone/volto/actions';
 import {
   Row,
   Col,
@@ -44,24 +43,11 @@ const languagesISO392 = {
  * @extends Component
  */
 const LanguageSelector = (props) => {
-  const dispatch = useDispatch();
   const currentLang = useSelector((state) => state.intl.locale);
 
   const translations = useSelector(
     (state) => state.content.data?.['@components']?.translations?.items,
   );
-
-  const [allLocales, setAllLocales] = useState({});
-
-  useEffect(() => {
-    if (config.settings) {
-      config.settings.supportedLanguages.forEach((lang) => {
-        import('~/../locales/' + lang + '.json').then((locale) => {
-          setAllLocales({ ...allLocales, [lang]: locale.default });
-        });
-      });
-    }
-  }, []);
 
   return config.settings.isMultilingual ? (
     <UncontrolledDropdown nav tag="div">
@@ -86,13 +72,6 @@ const LanguageSelector = (props) => {
                     title={langmap[lang].nativeName}
                     onClick={() => {
                       props.onClickAction();
-                      if (config.settings.supportedLanguages.includes(lang)) {
-                        import('~/../locales/' + lang + '.json').then(
-                          (locale) => {
-                            dispatch(changeLanguage(lang, locale.default));
-                          },
-                        );
-                      }
                     }}
                     key={`language-selector-${lang}`}
                     tag={Link}

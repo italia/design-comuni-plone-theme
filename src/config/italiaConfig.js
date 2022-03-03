@@ -93,6 +93,7 @@ export default function applyConfig(voltoConfig) {
     showTags: false,
     showSelfRegistration: false,
     defaultPageSize: 24,
+    cookieExpires: 15552000, //6 month
     serverConfig: {
       ...config.settings.serverConfig,
       extractScripts: {
