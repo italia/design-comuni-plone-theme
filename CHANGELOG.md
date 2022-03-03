@@ -1,3 +1,10 @@
+### [5.18.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.1...v5.18.2) (2022-03-03)
+
+
+### Maintenance
+
+* added countdown block and updated block-chooser icons ([8225e64](https://github.com/RedTurtle/design-volto-theme/commit/8225e646e3adaa7cb2000d3ed8a63cae754ef70d))
+
 ### [5.18.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.0...v5.18.1) (2022-03-03)
 
 
