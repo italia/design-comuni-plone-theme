@@ -62,6 +62,29 @@ const BandoApprofondimenti = ({ content }) => {
           </CardBody>
         </Card>
       );
+    } else if (item.type === 'Documento') {
+      return (
+        <Card
+          className="card card-teaser shadow p-4 mt-3 rounded attachment"
+          noWrapper={true}
+          tag="div"
+        >
+          <Icon className={undefined} icon={'it-file'} padding={false} />
+          <CardBody>
+            <CardTitle tag="h3" className="title">
+              <UniversalLink
+                item={{
+                  ...item,
+                  '@id': item.url.replace(/\/view$/, ''),
+                }}
+                rel="noopener noreferrer"
+              >
+                {item.title}
+              </UniversalLink>
+            </CardTitle>
+          </CardBody>
+        </Card>
+      );
     }
   };
 
