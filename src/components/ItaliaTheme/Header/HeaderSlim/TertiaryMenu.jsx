@@ -4,10 +4,8 @@
  */
 
 import React from 'react';
-
-import { Link } from 'react-router-dom';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import { Nav, NavItem, NavLink } from 'design-react-kit/dist/design-react-kit';
+import { UniversalLink } from '@plone/volto/components';
 import { useIntl } from 'react-intl';
 import config from '@plone/volto/registry';
 
@@ -20,7 +18,7 @@ const TertiaryMenu = () => {
     <Nav vertical={false} className="tertiary-menu">
       {items.map((navitem, id) => (
         <NavItem tag="li" key={id}>
-          <NavLink to={flattenToAppURL(navitem.url)} tag={Link}>
+          <NavLink href={navitem.url} tag={UniversalLink}>
             <span>{navitem.title}</span>
           </NavLink>
         </NavItem>
