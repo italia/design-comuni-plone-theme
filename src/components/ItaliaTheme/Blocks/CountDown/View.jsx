@@ -3,15 +3,24 @@ import PropTypes from 'prop-types';
 import redraft from 'redraft';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { addAppURL, flattenToAppURL } from '@plone/volto/helpers';
-
+import cx from 'classnames';
 import CountDown from '@italia/components/ItaliaTheme/Blocks/CountDown/CountDown';
 import config from '@plone/volto/registry';
 
 const View = ({ data, id }) => {
+  const checkHasContent = (text) => {
+    if (text) {
+      let blocks = text.blocks.filter((block) => block?.text !== '');
+      return blocks.length > 0 ? true : false;
+    }
+  };
+
   return (
     <div className="block count_down">
       <div className="public-ui">
-        <div className="full-width section py-5">
+        <div
+          className={cx('block-content', { 'full-width': data.showFullWidth })}
+        >
           {data.background?.[0] ? (
             <div
               className="background-image"
@@ -30,29 +39,31 @@ const View = ({ data, id }) => {
           )}
           <Container className="px-md-4">
             <Row>
-              <Col
-                xs={{
-                  size: 12,
-                  order: data.countDownPosition === 'left' ? 'last' : 'first',
-                }}
-                lg={{
-                  size: 4,
-                }}
-                className="text"
-              >
-                {redraft(
-                  data.text,
-                  config.settings.ToHTMLRenderers,
-                  config.settings.ToHTMLOptions,
-                )}
-              </Col>
+              {checkHasContent(data.text) && (
+                <Col
+                  xs={{
+                    size: 12,
+                    order: data.countDownPosition === 'left' ? 'last' : 'first',
+                  }}
+                  lg={{
+                    size: data.countDownPosition !== 'center' ? 4 : 12,
+                  }}
+                  className="text"
+                >
+                  {redraft(
+                    data.text,
+                    config.settings.ToHTMLRenderers,
+                    config.settings.ToHTMLOptions,
+                  )}
+                </Col>
+              )}
               <Col
                 xs={{
                   size: 12,
                   order: data.countDownPosition === 'left' ? 'first' : 'last',
                 }}
                 lg={{
-                  size: 8,
+                  size: data.countDownPosition !== 'center' ? 8 : 12,
                 }}
                 className="countdown"
               >
@@ -62,13 +73,15 @@ const View = ({ data, id }) => {
                   showMinutes={data.showMinutes}
                   showSeconds={data.showSeconds}
                 />
-                <div className="countdown_text">
-                  {redraft(
-                    data.countdown_text,
-                    config.settings.ToHTMLRenderers,
-                    config.settings.ToHTMLOptions,
-                  )}
-                </div>
+                {checkHasContent(data.countdown_text) && (
+                  <div className="countdown_text">
+                    {redraft(
+                      data.countdown_text,
+                      config.settings.ToHTMLRenderers,
+                      config.settings.ToHTMLOptions,
+                    )}
+                  </div>
+                )}
               </Col>
             </Row>
           </Container>
