@@ -1,3 +1,10 @@
+### [5.18.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.3...v5.18.4) (2022-03-09)
+
+
+### Maintenance
+
+* added fullwidth and center countdown option, layout changed ([afca656](https://github.com/RedTurtle/design-volto-theme/commit/afca656ab57a726b1dfd2cd7dbcfb7fb4738f1d1))
+
 ### [5.18.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.2...v5.18.3) (2022-03-08)
 
 
