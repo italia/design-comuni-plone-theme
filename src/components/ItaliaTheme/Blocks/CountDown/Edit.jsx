@@ -4,6 +4,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { SidebarPortal } from '@plone/volto/components';
 import { addAppURL, flattenToAppURL } from '@plone/volto/helpers';
+import cx from 'classnames';
 import { TextEditorWidget } from '@italia/components/ItaliaTheme';
 import Sidebar from '@italia/components/ItaliaTheme/Blocks/CountDown/Sidebar';
 import CountDown from '@italia/components/ItaliaTheme/Blocks/CountDown/CountDown';
@@ -30,7 +31,9 @@ const Edit = (props) => {
   return (
     <>
       <div className="public-ui">
-        <div className="full-width section py-5">
+        <div
+          className={cx('block-content', { 'full-width': data.showFullWidth })}
+        >
           {data.background?.[0] ? (
             <div
               className="background-image"
@@ -55,7 +58,7 @@ const Edit = (props) => {
                   order: data.countDownPosition === 'left' ? 'last' : 'first',
                 }}
                 lg={{
-                  size: 4,
+                  size: data.countDownPosition !== 'center' ? 4 : 12,
                   order: data.countDownPosition === 'left' ? 'last' : 'first',
                 }}
                 className="text"
@@ -80,7 +83,7 @@ const Edit = (props) => {
                   order: data.countDownPosition === 'left' ? 'first' : 'last',
                 }}
                 lg={{
-                  size: 8,
+                  size: data.countDownPosition !== 'center' ? 8 : 12,
                   order: data.countDownPosition === 'left' ? 'first' : 'last',
                 }}
                 className="countdown"

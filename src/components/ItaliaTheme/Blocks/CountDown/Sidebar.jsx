@@ -18,6 +18,10 @@ const messages = defineMessages({
     id: 'backgroundImage',
     defaultMessage: 'Immagine di sfondo',
   },
+  showFullWidth: {
+    id: 'show_full_width',
+    defaultMessage: 'A tutta larghezza',
+  },
   showHours: {
     id: 'countDown_showHours',
     defaultMessage: 'Mostra le ore',
@@ -42,6 +46,8 @@ const Sidebar = ({ block, data, onChangeBlock, required }) => {
   useEffect(() => {
     onChangeBlock(block, {
       ...data,
+      showFullWidth:
+        data.showFullWidth === undefined ? true : data.showFullWidth,
       showHours: data.showHours === undefined ? true : data.showHours,
       showMinutes: data.showMinutes === undefined ? true : data.showMinutes,
       showSeconds: data.showSeconds === undefined ? true : data.showSeconds,
@@ -75,6 +81,14 @@ const Sidebar = ({ block, data, onChangeBlock, required }) => {
             onChangeBlock(block, { ...data, [id]: value })
           }
         />
+        <CheckboxWidget
+          id="showFullWidth"
+          title={intl.formatMessage(messages.showFullWidth)}
+          value={data.showFullWidth ? data.showFullWidth : false}
+          onChange={(name, checked) => {
+            onChangeBlock(block, { ...data, [name]: checked });
+          }}
+        />
         <SelectWidget
           id="countDownPosition"
           title={intl.formatMessage(messages.countDownPosition)}
@@ -87,6 +101,7 @@ const Sidebar = ({ block, data, onChangeBlock, required }) => {
           choices={[
             ['right', 'Destra'],
             ['left', 'Sinistra'],
+            ['center', 'Centrato'],
           ]}
         />
         <DatetimeWidget

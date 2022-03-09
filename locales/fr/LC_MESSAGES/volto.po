@@ -2860,6 +2860,7 @@ msgstr ""
 msgid "show_ente"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/CountDown/Sidebar
 #: config/Blocks/ListingOptions/sliderTemplate
 # defaultMessage: A tutta larghezza
 msgid "show_full_width"
