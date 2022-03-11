@@ -1280,7 +1280,7 @@ msgstr "Invia il tuo commento"
 #: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
 # defaultMessage: Explain us why, and help us improve the quality of the site. (Leave your email address for any communications on the outcome of the report)
 msgid "customer_satisfaction_suggestions_placeholder"
-msgstr "Spiegaci perchè, e aiutaci a migliorare il servizio. (Lasciare un proprio indirizzo email per eventuali comunicazioni sull'esito della segnalazione)"
+msgstr "Spiegaci perchè e aiutaci a migliorare il servizio. (Lascia il tuo indirizzo email per eventuali comunicazioni sull'esito della segnalazione)"
 
 #: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
 # defaultMessage: Thank you for your feedback!
