@@ -126,6 +126,11 @@
           }
         }
 
+        .img-placeholder {
+          height: 400px;
+          background-color: rgba(0, 0, 0, 0.15);
+        }
+
         .slide-title {
           position: absolute;
           right: auto;
@@ -167,6 +172,7 @@
         margin-left: 0.65rem;
 
         .slide-wrapper {
+          .img-placeholder,
           figure.img-wrapper {
             height: 300px;
 
@@ -222,6 +228,7 @@
 
       .slick-slide {
         .slide-wrapper {
+          .img-placeholder,
           figure.img-wrapper {
             height: 150px;
 
