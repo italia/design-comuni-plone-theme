@@ -1,3 +1,15 @@
+### [5.18.6](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.5...v5.18.6) (2022-03-16)
+
+
+### Bug Fixes
+
+* added placeholder background in slider template ([f388643](https://github.com/RedTurtle/design-volto-theme/commit/f388643a248e00ce15d8edc28a62dcce695482a5))
+
+
+### Maintenance
+
+* updated volto-form-block ([1ae2368](https://github.com/RedTurtle/design-volto-theme/commit/1ae2368a22523d0412e501f45df4b000e7b7f2b6))
+
 ### [5.18.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.4...v5.18.5) (2022-03-11)
 
 
