@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import redraft from 'redraft';
+import { checkRedraftHasContent } from '@italia/helpers';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { addAppURL, flattenToAppURL } from '@plone/volto/helpers';
 import cx from 'classnames';
@@ -8,13 +9,6 @@ import CountDown from '@italia/components/ItaliaTheme/Blocks/CountDown/CountDown
 import config from '@plone/volto/registry';
 
 const View = ({ data, id }) => {
-  const checkHasContent = (text) => {
-    if (text) {
-      let blocks = text.blocks.filter((block) => block?.text !== '');
-      return blocks.length > 0 ? true : false;
-    }
-  };
-
   return (
     <div className="block count_down">
       <div className="public-ui">
@@ -39,7 +33,7 @@ const View = ({ data, id }) => {
           )}
           <Container className="px-md-4">
             <Row>
-              {checkHasContent(data.text) && (
+              {checkRedraftHasContent(data.text) && (
                 <Col
                   xs={{
                     size: 12,
@@ -73,7 +67,7 @@ const View = ({ data, id }) => {
                   showMinutes={data.showMinutes}
                   showSeconds={data.showSeconds}
                 />
-                {checkHasContent(data.countdown_text) && (
+                {checkRedraftHasContent(data.countdown_text) && (
                   <div className="countdown_text">
                     {redraft(
                       data.countdown_text,

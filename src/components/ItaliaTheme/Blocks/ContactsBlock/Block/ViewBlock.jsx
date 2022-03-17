@@ -10,6 +10,7 @@ import redraft from 'redraft';
 import { Icon } from '@italia/components/ItaliaTheme';
 import { Card, CardBody } from 'design-react-kit/dist/design-react-kit';
 import config from '@plone/volto/registry';
+import { checkRedraftHasContent } from '@italia/helpers';
 
 /**
  * ViewBlock class.
@@ -25,7 +26,7 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
       tag="div"
     >
       <CardBody tag="div">
-        {data.title && (
+        {checkRedraftHasContent(data.title) && (
           <div className="contact-title">
             {redraft(
               data.title,
@@ -34,7 +35,7 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
             )}
           </div>
         )}
-        {data.text && (
+        {checkRedraftHasContent(data.text) && (
           <div className="contact-text">
             {redraft(
               data.text,
@@ -44,7 +45,7 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
           </div>
         )}
 
-        {data.tel && (
+        {checkRedraftHasContent(data.tel) && (
           <div className="contact-info">
             <div className="icon-wrapper">
               <Icon icon="phone-alt" />
@@ -59,7 +60,7 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
           </div>
         )}
 
-        {data.email && (
+        {checkRedraftHasContent(data.email) && (
           <div className="contact-info">
             <div className="icon-wrapper">
               <Icon icon="envelope" />
