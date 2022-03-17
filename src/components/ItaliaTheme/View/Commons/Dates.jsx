@@ -2,6 +2,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import React from 'react';
 import { rrulestr } from 'rrule';
 import { rrulei18n } from '@plone/volto/components/manage/Widgets/RecurrenceWidget/Utils';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import {
   Card,
   CardTitle,
@@ -35,13 +36,17 @@ const messages = defineMessages({
  * @params {object} Dates: object.
  * @returns {string} Markup of the component.
  */
-const Dates = ({ content, show_image }) => {
+const Dates = ({ content, show_image, moment }) => {
   const intl = useIntl();
+
+  const Moment = moment.default;
+  Moment.locale(intl.locale);
+
   let rruleSet = null;
   let recurrenceText = null;
 
   if (content.recurrence) {
-    const RRULE_LANGUAGE = rrulei18n(intl);
+    const RRULE_LANGUAGE = rrulei18n(intl, Moment);
     rruleSet = rrulestr(content.recurrence, {
       compatible: true, //If set to True, the parser will operate in RFC-compatible mode. Right now it means that unfold will be turned on, and if a DTSTART is found, it will be considered the first recurrence instance, as documented in the RFC.
       forceset: true,
@@ -137,7 +142,7 @@ const Dates = ({ content, show_image }) => {
   ) : null;
 };
 
-export default Dates;
+export default injectLazyLibs(['moment'])(Dates);
 
 Dates.propTypes = {
   content: PropTypes.object.isRequired,
