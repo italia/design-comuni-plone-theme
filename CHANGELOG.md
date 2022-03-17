@@ -1,3 +1,10 @@
+### [5.18.7](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.6...v5.18.7) (2022-03-17)
+
+
+### Bug Fixes
+
+* fix the use of moment.js with rrulei18n as in volto ([ff67ebd](https://github.com/RedTurtle/design-volto-theme/commit/ff67ebd861f974b1beb52cc3eaaeb9e7b90ecba7))
+
 ### [5.18.6](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.5...v5.18.6) (2022-03-16)
 
 
