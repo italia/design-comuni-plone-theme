@@ -63,6 +63,7 @@
     input[type='radio'] ~ label {
       overflow: inherit;
       height: auto;
+      margin: 1px 0;
       line-height: 30px;
       white-space: normal;
     }
