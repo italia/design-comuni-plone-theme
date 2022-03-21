@@ -1,3 +1,16 @@
+### [5.18.8](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.7...v5.18.8) (2022-03-21)
+
+
+### Bug Fixes
+
+* added more readability of form block labels ([ea3de55](https://github.com/RedTurtle/design-volto-theme/commit/ea3de5510f8dc202cafda50c86185e7749b9f53f))
+* fixed nowrap label block form ([faf182b](https://github.com/RedTurtle/design-volto-theme/commit/faf182b24c185c0fd9393df51e382c3973a4114c))
+
+
+### Maintenance
+
+* added readraft helper function and fixed text of contacts form ([43c6c97](https://github.com/RedTurtle/design-volto-theme/commit/43c6c9777487d676b7f200f8344ee8312623518a))
+
 ### [5.18.7](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.6...v5.18.7) (2022-03-17)
 
 
