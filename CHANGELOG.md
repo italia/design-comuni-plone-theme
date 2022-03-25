@@ -1,3 +1,16 @@
+### [5.18.10](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.9...v5.18.10) (2022-03-25)
+
+
+### Bug Fixes
+
+* codeview ([1c98ae3](https://github.com/RedTurtle/design-volto-theme/commit/1c98ae3c6a9225dbf0cfcf09e4b748bc48fb491f))
+* fix megamenu empty blocks ([73bb446](https://github.com/RedTurtle/design-volto-theme/commit/73bb44682cb704b7869fab87a6caf8297c708276))
+
+
+### Maintenance
+
+* added update note in bando listing template ([adc7bc5](https://github.com/RedTurtle/design-volto-theme/commit/adc7bc5ac1f64dacc2008df9bda0942e606cccec))
+
 ### [5.18.9](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.8...v5.18.9) (2022-03-23)
 
 
