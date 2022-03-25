@@ -81,7 +81,7 @@
     "path": "src",
     "https": "https://github.com/collective/volto-form-block.git",
     "url": "git@github.com:collective/volto-form-block.git",
-    "branch": "use_as_bcc"
+    "tag": "v2.3.0"
   },
   "volto-subfooter": {
     "package": "@italia/addons/volto-subfooter",
