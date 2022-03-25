@@ -1,3 +1,20 @@
+## [5.19.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.10...v5.19.0) (2022-03-25)
+
+
+### Features
+
+* updated volto-form-block to have use_as_bcc flag in email field ([2231ac1](https://github.com/RedTurtle/design-volto-theme/commit/2231ac17f9d5473a6d064dc4152cd141ed997d5a))
+
+
+### Bug Fixes
+
+* fixed onChangeFormData to sent fields defined in schema ([1813bbf](https://github.com/RedTurtle/design-volto-theme/commit/1813bbf2d9dae897f6234aea7fb7f9bfa41fd111))
+
+
+### Maintenance
+
+* updated volto-form-block ([7884433](https://github.com/RedTurtle/design-volto-theme/commit/788443336e0c485811c6e95d259a5fac6ef79ac4))
+
 ### [5.18.10](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.9...v5.18.10) (2022-03-25)
 
 
