@@ -206,7 +206,7 @@ const BandiInEvidenceTemplate = ({
                     {item.update_note &&
                       (item.bando_state?.includes('open') ||
                         item.bando_state?.includes('inProgress')) && (
-                        <span className="d-flex">
+                        <span className="d-flex bando-note">
                           <strong>{item.update_note}</strong>
                         </span>
                       )}
