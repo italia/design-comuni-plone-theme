@@ -1,3 +1,10 @@
+### [5.19.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.19.0...v5.19.1) (2022-03-28)
+
+
+### Bug Fixes
+
+* fix map template for items without coordinates ([8cbe61b](https://github.com/RedTurtle/design-volto-theme/commit/8cbe61bdaf47c16fa636841fdf7c86916c7c23d7))
+
 ## [5.19.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.10...v5.19.0) (2022-03-25)
 
 
