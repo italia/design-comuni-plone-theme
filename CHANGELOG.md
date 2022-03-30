@@ -1,3 +1,10 @@
+### [5.19.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.19.2...v5.19.3) (2022-03-30)
+
+
+### Bug Fixes
+
+* avoid unload attachments navigating from UO to UO ([0e94c08](https://github.com/RedTurtle/design-volto-theme/commit/0e94c082a7de2fae98cd90635823a978b8b15631))
+
 ### [5.19.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.19.1...v5.19.2) (2022-03-30)
 
 
