@@ -1,3 +1,10 @@
+### [5.19.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.19.1...v5.19.2) (2022-03-30)
+
+
+### Bug Fixes
+
+* attachments component view all attachments, no limit to 25 ([cbe9096](https://github.com/RedTurtle/design-volto-theme/commit/cbe9096d2f849424b0b6d33a3178d638001c87b8))
+
 ### [5.19.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.19.0...v5.19.1) (2022-03-28)
 
 
