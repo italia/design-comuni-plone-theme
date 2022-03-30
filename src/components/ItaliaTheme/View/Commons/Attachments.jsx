@@ -50,6 +50,7 @@ const Attachments = ({
             sort_on: 'getObjPositionInParent',
             metadata_fields: '_all',
             fullobjects: 1,
+            b_size: 900,
           },
           folder_name,
         ),
