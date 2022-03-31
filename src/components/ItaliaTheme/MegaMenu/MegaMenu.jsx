@@ -291,6 +291,7 @@ const MegaMenu = ({ item, pathname }) => {
                                     condition={!!child['@id']}
                                     key={child['@id']}
                                     onClick={() => setMenuStatus(false)}
+                                    role="menuitem"
                                   >
                                     <span>{child.title}</span>
                                   </ConditionalLink>
@@ -308,6 +309,7 @@ const MegaMenu = ({ item, pathname }) => {
                                       pathname,
                                     ),
                                   })}
+                                  role="menuitem"
                                 >
                                   <span>{child.title}</span>
                                 </ConditionalLink>
