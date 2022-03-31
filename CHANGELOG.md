@@ -1,3 +1,10 @@
+### [5.19.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.19.3...v5.19.4) (2022-03-31)
+
+
+### Maintenance
+
+* improve srcset image quality ([1fd154a](https://github.com/RedTurtle/design-volto-theme/commit/1fd154a4a7c2222d4ee069946cfac3be5d4251e9))
+
 ### [5.19.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.19.2...v5.19.3) (2022-03-30)
 
 
