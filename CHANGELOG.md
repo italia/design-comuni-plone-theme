@@ -1,3 +1,10 @@
+### [5.19.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.19.4...v5.19.5) (2022-03-31)
+
+
+### Bug Fixes
+
+* fix megamenu keyboard navigation ([f01047b](https://github.com/RedTurtle/design-volto-theme/commit/f01047b2cca62ef67c8a69fa022e2870136170a7))
+
 ### [5.19.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.19.3...v5.19.4) (2022-03-31)
 
 
