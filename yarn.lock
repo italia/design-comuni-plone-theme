@@ -17695,9 +17695,9 @@ volto-multilingual-widget@collective/volto-multilingual-widget#v2.2.0:
     "@plone/scripts" "^1.0.3"
     draft-js-export-html "^1.4.1"
 
-volto-rss-block@redturtle/volto-rss-block#v2.2.0:
-  version "2.2.0"
-  resolved "https://codeload.github.com/redturtle/volto-rss-block/tar.gz/c216bfa0940abd2a6708e7bd47fb6c7737ac0d8a"
+volto-rss-block@redturtle/volto-rss-block#v2.3.0:
+  version "2.3.0"
+  resolved "https://codeload.github.com/redturtle/volto-rss-block/tar.gz/34df7c269aca433618f94aa45e790bd589de850b"
   dependencies:
     "@plone/scripts" "*"
     rss-parser "3.7.5"

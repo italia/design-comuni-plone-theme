@@ -4,7 +4,7 @@
     "path": "src",
     "https": "https://github.com/redturtle/volto-rss-block.git",
     "url": "git@github.com:redturtle/volto-rss-block.git",
-    "tag": "v2.2.0"
+    "tag": "v2.3.0"
   },
   "volto-multilingual-widget": {
     "package": "@italia/addons/volto-multilingual-widget",
