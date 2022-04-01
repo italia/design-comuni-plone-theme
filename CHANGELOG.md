@@ -1,3 +1,10 @@
+## [5.20.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.19.5...v5.20.0) (2022-04-01)
+
+
+### Features
+
+* updated volto-rss-block to avoid secuirty problems ([4570b61](https://github.com/RedTurtle/design-volto-theme/commit/4570b61d185be65fa137a791d423c232613534bb))
+
 ### [5.19.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.19.4...v5.19.5) (2022-03-31)
 
 
