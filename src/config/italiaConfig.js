@@ -92,8 +92,8 @@ export default function applyConfig(voltoConfig) {
       //  return event;
       // },
     },
-    isMultilingual: true,
-    supportedLanguages: ['it', 'en'],
+    isMultilingual: false,
+    supportedLanguages: ['it'],
     defaultLanguage: 'it',
     verticalFormTabs: true,
     showTags: false,
