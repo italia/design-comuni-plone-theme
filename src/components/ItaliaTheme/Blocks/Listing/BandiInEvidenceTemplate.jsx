@@ -201,6 +201,15 @@ const BandiInEvidenceTemplate = ({
                         </span>
                       </span>
                     )}
+
+                    {/* Note aggiornamenti */}
+                    {item.update_note &&
+                      (item.bando_state?.includes('open') ||
+                        item.bando_state?.includes('inProgress')) && (
+                        <span className="d-flex bando-note">
+                          <strong>{item.update_note}</strong>
+                        </span>
+                      )}
                   </div>
                   <div className="read-more">
                     <CardReadMore

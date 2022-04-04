@@ -33,6 +33,7 @@ const Attachments = ({
   const url = content
     ? `${flattenToAppURL(content['@id'])}/${folder_name}`
     : null;
+  const key = folder_name + url;
   const searchResults = useSelector((state) => state.search.subrequests);
   const dispatch = useDispatch();
 
@@ -50,19 +51,20 @@ const Attachments = ({
             sort_on: 'getObjPositionInParent',
             metadata_fields: '_all',
             fullobjects: 1,
+            b_size: 900,
           },
-          folder_name,
+          key,
         ),
       );
 
       return () => {
-        dispatch(resetSearchContent(folder_name));
+        dispatch(resetSearchContent(key));
       };
     }
     // eslint-disable-next-line
-  }, []);
+  }, [key]);
 
-  const attachments = searchResults?.[folder_name]?.items || items || [];
+  const attachments = searchResults?.[key]?.items || items || [];
 
   const attachments_view = (
     <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">

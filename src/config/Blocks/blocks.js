@@ -24,10 +24,10 @@ import CalendarEdit from '@italia/components/ItaliaTheme/Blocks/Calendar/Edit';
 import EventSearchView from '@italia/components/ItaliaTheme/Blocks/EventSearch/View';
 import EventSearchEdit from '@italia/components/ItaliaTheme/Blocks/EventSearch/Edit';
 
-import titleSVG from '@plone/volto/icons/text.svg';
-
+import simpleTextCardSVG from '@italia/icons/card-semplice.svg';
 import TextCardView from '@italia/components/ItaliaTheme/Blocks/TextCard/SimpleCard/View';
 import TextCardEdit from '@italia/components/ItaliaTheme/Blocks/TextCard/SimpleCard/Edit';
+import imageTextCardSVG from '@italia/icons/card-immagine.svg';
 import TextCardWithImageView from '@italia/components/ItaliaTheme/Blocks/TextCard/CardWithImage/View';
 import TextCardWithImageEdit from '@italia/components/ItaliaTheme/Blocks/TextCard/CardWithImage/Edit';
 
@@ -43,7 +43,7 @@ import faTwitter from '@italia/icons/twitter-brands.svg';
 import TwitterPostsView from '@italia/components/ItaliaTheme/Blocks/TwitterPosts/View';
 import TwitterPostsEdit from '@italia/components/ItaliaTheme/Blocks/TwitterPosts/Edit';
 
-import iconBlocksSVG from '@plone/volto/icons/apps.svg';
+import iconBlocksSVG from '@italia/icons/blocco-icone.svg';
 import IconBlocksView from '@italia/components/ItaliaTheme/Blocks/IconBlocks/View';
 import IconBlocksEdit from '@italia/components/ItaliaTheme/Blocks/IconBlocks/Edit';
 
@@ -51,7 +51,7 @@ import emailSVG from '@plone/volto/icons/email.svg';
 import ContactsBlockView from '@italia/components/ItaliaTheme/Blocks/ContactsBlock/View';
 import ContactsBlockEdit from '@italia/components/ItaliaTheme/Blocks/ContactsBlock/Edit';
 
-import numbersBlockSVG from '@plone/volto/icons/apps.svg';
+import numbersBlockSVG from '@italia/icons/numeri.svg';
 import NumbersBlockView from '@italia/components/ItaliaTheme/Blocks/NumbersBlock/View';
 import NumbersBlockEdit from '@italia/components/ItaliaTheme/Blocks/NumbersBlock/Edit';
 
@@ -64,6 +64,10 @@ import UOSearchEdit from '@italia/components/ItaliaTheme/Blocks/UOSearch/Edit';
 import flashSVG from '@plone/volto/icons/flash.svg';
 import CTABlockView from '@italia/components/ItaliaTheme/Blocks/CTABlock/View';
 import CTABlockEdit from '@italia/components/ItaliaTheme/Blocks/CTABlock/Edit';
+
+import countDownSVG from '@italia/icons/count-down.svg';
+import CountDownBlockView from '@italia/components/ItaliaTheme/Blocks/CountDown/View';
+import CountDownBlockEdit from '@italia/components/ItaliaTheme/Blocks/CountDown/Edit';
 
 const italiaBlocks = {
   highlitedContent: {
@@ -204,8 +208,8 @@ const italiaBlocks = {
 
   testo_riquadro_semplice: {
     id: 'testo_riquadro_semplice',
-    title: 'Testo Card semplice',
-    icon: titleSVG,
+    title: 'Card semplice',
+    icon: simpleTextCardSVG,
     group: 'text',
     view: TextCardView,
     edit: TextCardEdit,
@@ -219,8 +223,8 @@ const italiaBlocks = {
   },
   testo_riquadro_immagine: {
     id: 'testo_riquadro_immagine',
-    title: 'Testo Card con immagine',
-    icon: titleSVG,
+    title: 'Card con immagine',
+    icon: imageTextCardSVG,
     group: 'text',
     view: TextCardWithImageView,
     edit: TextCardWithImageEdit,
@@ -341,9 +345,25 @@ const italiaBlocks = {
     },
     sidebarTab: 1,
   },
+  count_down: {
+    id: 'count_down',
+    title: 'Count Down',
+    icon: countDownSVG,
+    group: 'common',
+    view: CountDownBlockView,
+    edit: CountDownBlockEdit,
+    restricted: false,
+    mostUsed: false,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
 };
 
 const getItaliaBlocks = (config) => {
+  delete config.blocks.blocksConfig.search;
   return italiaBlocks;
 };
 export default getItaliaBlocks;

@@ -11,6 +11,7 @@ export {
   getEventRecurrenceMore,
 } from '@italia/helpers/ListingHelper';
 export { contentFolderHasItems } from '@italia/helpers/contentHelper';
+export { checkRedraftHasContent } from '@italia/helpers/redraftHelper';
 export { getTableRowData } from '@italia/helpers/amministrazioneTrasparenteHelper';
 export { getItemsByPath } from '@italia/helpers/getItemsByPath';
 export { viewDate } from '@italia/helpers/dates';

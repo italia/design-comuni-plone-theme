@@ -1,3 +1,175 @@
+## [5.20.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.19.5...v5.20.0) (2022-04-01)
+
+
+### Features
+
+* updated volto-rss-block to avoid secuirty problems ([4570b61](https://github.com/RedTurtle/design-volto-theme/commit/4570b61d185be65fa137a791d423c232613534bb))
+
+### [5.19.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.19.4...v5.19.5) (2022-03-31)
+
+
+### Bug Fixes
+
+* fix megamenu keyboard navigation ([f01047b](https://github.com/RedTurtle/design-volto-theme/commit/f01047b2cca62ef67c8a69fa022e2870136170a7))
+
+### [5.19.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.19.3...v5.19.4) (2022-03-31)
+
+
+### Maintenance
+
+* improve srcset image quality ([1fd154a](https://github.com/RedTurtle/design-volto-theme/commit/1fd154a4a7c2222d4ee069946cfac3be5d4251e9))
+
+### [5.19.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.19.2...v5.19.3) (2022-03-30)
+
+
+### Bug Fixes
+
+* avoid unload attachments navigating from UO to UO ([0e94c08](https://github.com/RedTurtle/design-volto-theme/commit/0e94c082a7de2fae98cd90635823a978b8b15631))
+
+### [5.19.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.19.1...v5.19.2) (2022-03-30)
+
+
+### Bug Fixes
+
+* attachments component view all attachments, no limit to 25 ([cbe9096](https://github.com/RedTurtle/design-volto-theme/commit/cbe9096d2f849424b0b6d33a3178d638001c87b8))
+
+### [5.19.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.19.0...v5.19.1) (2022-03-28)
+
+
+### Bug Fixes
+
+* fix map template for items without coordinates ([8cbe61b](https://github.com/RedTurtle/design-volto-theme/commit/8cbe61bdaf47c16fa636841fdf7c86916c7c23d7))
+
+## [5.19.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.10...v5.19.0) (2022-03-25)
+
+
+### Features
+
+* updated volto-form-block to have use_as_bcc flag in email field ([2231ac1](https://github.com/RedTurtle/design-volto-theme/commit/2231ac17f9d5473a6d064dc4152cd141ed997d5a))
+
+
+### Bug Fixes
+
+* fixed onChangeFormData to sent fields defined in schema ([1813bbf](https://github.com/RedTurtle/design-volto-theme/commit/1813bbf2d9dae897f6234aea7fb7f9bfa41fd111))
+
+
+### Maintenance
+
+* updated volto-form-block ([7884433](https://github.com/RedTurtle/design-volto-theme/commit/788443336e0c485811c6e95d259a5fac6ef79ac4))
+
+### [5.18.10](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.9...v5.18.10) (2022-03-25)
+
+
+### Bug Fixes
+
+* codeview ([1c98ae3](https://github.com/RedTurtle/design-volto-theme/commit/1c98ae3c6a9225dbf0cfcf09e4b748bc48fb491f))
+* fix megamenu empty blocks ([73bb446](https://github.com/RedTurtle/design-volto-theme/commit/73bb44682cb704b7869fab87a6caf8297c708276))
+
+
+### Maintenance
+
+* added update note in bando listing template ([adc7bc5](https://github.com/RedTurtle/design-volto-theme/commit/adc7bc5ac1f64dacc2008df9bda0942e606cccec))
+
+### [5.18.9](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.8...v5.18.9) (2022-03-23)
+
+
+### Bug Fixes
+
+* mrs-developer main or master ([b27aff0](https://github.com/RedTurtle/design-volto-theme/commit/b27aff00b62dfffe8ec16936a22ef34162e90ab5))
+
+
+### Maintenance
+
+* updated mrs.developer ([ba3feaf](https://github.com/RedTurtle/design-volto-theme/commit/ba3feafc5118689ebc401b8b20f0d33a37633931))
+
+### [5.18.8](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.7...v5.18.8) (2022-03-21)
+
+
+### Bug Fixes
+
+* added more readability of form block labels ([ea3de55](https://github.com/RedTurtle/design-volto-theme/commit/ea3de5510f8dc202cafda50c86185e7749b9f53f))
+* fixed nowrap label block form ([faf182b](https://github.com/RedTurtle/design-volto-theme/commit/faf182b24c185c0fd9393df51e382c3973a4114c))
+
+
+### Maintenance
+
+* added readraft helper function and fixed text of contacts form ([43c6c97](https://github.com/RedTurtle/design-volto-theme/commit/43c6c9777487d676b7f200f8344ee8312623518a))
+
+### [5.18.7](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.6...v5.18.7) (2022-03-17)
+
+
+### Bug Fixes
+
+* fix the use of moment.js with rrulei18n as in volto ([ff67ebd](https://github.com/RedTurtle/design-volto-theme/commit/ff67ebd861f974b1beb52cc3eaaeb9e7b90ecba7))
+
+### [5.18.6](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.5...v5.18.6) (2022-03-16)
+
+
+### Bug Fixes
+
+* added placeholder background in slider template ([f388643](https://github.com/RedTurtle/design-volto-theme/commit/f388643a248e00ce15d8edc28a62dcce695482a5))
+
+
+### Maintenance
+
+* updated volto-form-block ([1ae2368](https://github.com/RedTurtle/design-volto-theme/commit/1ae2368a22523d0412e501f45df4b000e7b7f2b6))
+
+### [5.18.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.4...v5.18.5) (2022-03-11)
+
+
+### Bug Fixes
+
+* fixed customer satisfaction description ([841f467](https://github.com/RedTurtle/design-volto-theme/commit/841f4673a9853941a8249151398e21390a960650))
+
+### [5.18.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.3...v5.18.4) (2022-03-09)
+
+
+### Maintenance
+
+* added fullwidth and center countdown option, layout changed ([afca656](https://github.com/RedTurtle/design-volto-theme/commit/afca656ab57a726b1dfd2cd7dbcfb7fb4738f1d1))
+
+### [5.18.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.2...v5.18.3) (2022-03-08)
+
+
+### Bug Fixes
+
+* added condition of document attachment in bando view ([9d126b5](https://github.com/RedTurtle/design-volto-theme/commit/9d126b54a487e73bd3de026ee14779a6eb6b82a5))
+* added universal link of item tertiary menu ([4fa8eb4](https://github.com/RedTurtle/design-volto-theme/commit/4fa8eb4a0454edb15fdc1bb099926fdec5694a9a))
+
+
+### Maintenance
+
+* scrub data for sentry (example) ([eaca96a](https://github.com/RedTurtle/design-volto-theme/commit/eaca96a4c8a789612a2fee0099923d8d3bf51755))
+* update nvmrc ([e22aa73](https://github.com/RedTurtle/design-volto-theme/commit/e22aa73198bef4b62f54439d933a79a576ad35b8))
+
+### [5.18.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.1...v5.18.2) (2022-03-03)
+
+
+### Maintenance
+
+* added countdown block and updated block-chooser icons ([8225e64](https://github.com/RedTurtle/design-volto-theme/commit/8225e646e3adaa7cb2000d3ed8a63cae754ef70d))
+
+### [5.18.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.18.0...v5.18.1) (2022-03-03)
+
+
+### Maintenance
+
+* updatd last_updated date for cookie consent ([0d354fe](https://github.com/RedTurtle/design-volto-theme/commit/0d354feb5c0d19ea1011a4d6f94f9bd67fbc5113))
+
+## [5.18.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.17.2...v5.18.0) (2022-03-03)
+
+
+### Features
+
+* updated volto, volto-gdpr-privacy and volto-google-analytics for cookie expiration ([1f706b8](https://github.com/RedTurtle/design-volto-theme/commit/1f706b8ccbfc9da4ea37655f9b14df0e8dcf2dbc))
+
+### [5.17.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.17.1...v5.17.2) (2022-03-02)
+
+
+### Bug Fixes
+
+* hotfix: removed broken search block ([50af391](https://github.com/RedTurtle/design-volto-theme/commit/50af39155d01df4511a79373e6050a2bc0adaa25))
+
 ### [5.17.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.17.0...v5.17.1) (2022-02-28)
 
 

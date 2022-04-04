@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36" viewBox="0 0 36 36">
+  <defs>
+    <clipPath id="clip-numeri-icone">
+      <rect width="36" height="36"/>
+    </clipPath>
+  </defs>
+  <g id="numeri-icone" clip-path="url(#clip-numeri-icone)">
+    <g id="numeri">
+      <path id="Tracciato_23" data-name="Tracciato 23" d="M7.448,15.592V8.782H7.359L5.416,10.148V8.443L7.448,7H9.254v8.59Z" transform="translate(10.344 7.241)" fill-rule="evenodd"/>
+      <g id="image-fit" transform="translate(-7 -4)">
+        <path id="Tracciato_27" data-name="Tracciato 27" d="M7,13l2-2V33.89l-2-2H42.983l-2,2V11l2,2Zm35.983-2V33.89H7V11Z"/>
+      </g>
+    </g>
+    <path id="Tracciato_30" data-name="Tracciato 30" d="M6.128,13.819,3,14.273,5.263,16.48l-.534,3.115,2.8-1.471,2.8,1.471L9.789,16.48l2.263-2.207-3.128-.454-1.4-2.835Zm.5,2.219-.9-.88,1.248-.181.558-1.131.558,1.131,1.247.181-.9.88.213,1.242-1.116-.586L6.41,17.28Z" transform="translate(0.876 3.277)" fill-rule="evenodd"/>
+    <g id="Raggruppa_3" data-name="Raggruppa 3">
+      <path id="Ellisse_5" data-name="Ellisse 5" d="M1.806.884a.922.922,0,1,0,.922.922A.923.923,0,0,0,1.806.884m0-.884A1.806,1.806,0,1,1,0,1.806,1.806,1.806,0,0,1,1.806,0Z" transform="translate(25 14.262)"/>
+      <path id="Ellisse_5-2" data-name="Ellisse 5" d="M1.806.884a.922.922,0,1,0,.922.922A.923.923,0,0,0,1.806.884m0-.884A1.806,1.806,0,1,1,0,1.806,1.806,1.806,0,0,1,1.806,0Z" transform="translate(25 19.261)"/>
+      <path id="Linea_1" data-name="Linea 1" d="M6,.5H0v-1H6Z" transform="translate(23.806 18.567)"/>
+    </g>
+  </g>
+</svg>

@@ -153,14 +153,18 @@ const SliderTemplate = ({
                   loading: 'lazy',
                   maxSize: 1600,
                 });
-                if (!image) return null;
+                //if (!image) return null;
                 return (
                   <div
                     className="it-single-slide-wrapper"
                     key={item['@id'] + index}
                   >
                     <div className="slide-wrapper">
-                      <figure className="img-wrapper">{image}</figure>
+                      {image ? (
+                        <figure className="img-wrapper">{image}</figure>
+                      ) : (
+                        <div className="img-placeholder"></div>
+                      )}
                       {show_image_title && (
                         <UniversalLink
                           item={item}

@@ -131,10 +131,24 @@ const MegaMenu = ({ item, pathname }) => {
   } else {
     //megamenu
     let hasBlocks = hasBlocksData(item);
+
     if (item?.blocks && Object.keys(item.blocks).length === 1) {
       let b = item.blocks[Object.keys(item.blocks)[0]];
-      if (b['@type'] === 'text' && (!b.text || b.text?.length === 0)) {
-        hasBlocks = false;
+
+      if (b['@type'] === 'text') {
+        if (!b.text || b.text?.length === 0) {
+          hasBlocks = false;
+        }
+        if (b.text?.blocks?.length > 0) {
+          const empty_blocks = b.text.blocks.filter(
+            (bb) => !bb.text || bb.text?.length === 0,
+          ).length;
+
+          if (empty_blocks === b.text.blocks.length) {
+            //se sono tutti vuoti
+            hasBlocks = false;
+          }
+        }
       }
     }
 
@@ -277,6 +291,7 @@ const MegaMenu = ({ item, pathname }) => {
                                     condition={!!child['@id']}
                                     key={child['@id']}
                                     onClick={() => setMenuStatus(false)}
+                                    role="menuitem"
                                   >
                                     <span>{child.title}</span>
                                   </ConditionalLink>
@@ -294,6 +309,7 @@ const MegaMenu = ({ item, pathname }) => {
                                       pathname,
                                     ),
                                   })}
+                                  role="menuitem"
                                 >
                                   <span>{child.title}</span>
                                 </ConditionalLink>
