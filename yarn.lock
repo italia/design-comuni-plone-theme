@@ -1974,9 +1974,9 @@
     pofile "1.0.10"
     razzle "3.4.5"
 
-"@plone/volto@plone/volto#51ba1ef77c765f3ffe8b37639f60698f7f3cde16":
-  version "15.2.3"
-  resolved "https://codeload.github.com/plone/volto/tar.gz/51ba1ef77c765f3ffe8b37639f60698f7f3cde16"
+"@plone/volto@plone/volto#acd16efc89cdb936faf01deeb001ad2a9771df33":
+  version "15.3.0"
+  resolved "https://codeload.github.com/plone/volto/tar.gz/acd16efc89cdb936faf01deeb001ad2a9771df33"
   dependencies:
     "@babel/plugin-proposal-export-default-from" "7.10.4"
     "@babel/plugin-proposal-export-namespace-from" "7.10.4"
