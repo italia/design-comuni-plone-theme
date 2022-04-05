@@ -10,8 +10,6 @@ import Plugins from '@plone/volto/config/RichTextEditor/Plugins';
 import Blocks from '@plone/volto/config/RichTextEditor/Blocks';
 //import FromHTMLCustomBlockFn from '@plone/volto/config/RichTextEditor/FromHTML';
 
-import createLinkPlugin from '@plone/volto/components/manage/AnchorPlugin';
-
 import UnderlineButton from '@italia/config/RichTextEditor/ToolbarButtons/UnderlineButton';
 import HeadingsButton from '@italia/config/RichTextEditor/ToolbarButtons/HeadingsButton';
 import AlignButton from '@italia/config/RichTextEditor/ToolbarButtons/AlignButton';
@@ -19,10 +17,10 @@ import CalloutsButton from '@italia/config/RichTextEditor/ToolbarButtons/Callout
 import ButtonsButton from '@italia/config/RichTextEditor/ToolbarButtons/ButtonsButton';
 import TextSizeButton from '@italia/config/RichTextEditor/ToolbarButtons/TextSizeButton';
 
-const linkPlugin = createLinkPlugin();
-
 const ItaliaRichTextEditorPlugins = (props) => [];
-const ItaliaRichTextEditorInlineToolbarButtons = (props) => {
+const ItaliaRichTextEditorInlineToolbarButtons = (props, plugins) => {
+  const linkPlugin = plugins.filter((p) => p.LinkButton != null)[0];
+
   const buttons = Styles(props);
   const {
     BoldButton,
@@ -199,9 +197,13 @@ export default function applyConfig(config) {
       voltoBlockStyleFn: blockStyleFn,
       blockStyleFn: italiaBlockStyleFunction,
       listBlockTypes: listBlockTypes,
-      richTextEditorPlugins: [plugins, ...ItaliaRichTextEditorPlugins(props)],
+      richTextEditorPlugins: [
+        ...plugins,
+        ...ItaliaRichTextEditorPlugins(props),
+      ],
       richTextEditorInlineToolbarButtons: ItaliaRichTextEditorInlineToolbarButtons(
         props,
+        plugins,
       ), //[inlineToolbarButtons,...ItaliaRichTextEditorInlineToolbarButtons(props)]
       FromHTMLCustomBlockFn: ItaliaFromHTMLCustomBlockFn, //FromHTMLCustomBlockFn
       customStyleMap: {

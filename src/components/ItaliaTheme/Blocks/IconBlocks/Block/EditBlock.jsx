@@ -121,6 +121,7 @@ class EditBlock extends SubblockEdit {
                   )}
                   prevFocus="text"
                   nextFocus="text"
+                  disableMoveToNearest={true}
                   setFocus={(f) => {
                     this.setState({ focusOn: f });
                   }}
@@ -145,6 +146,7 @@ class EditBlock extends SubblockEdit {
                 placeholder={this.props.intl.formatMessage(
                   messages.textPlaceholder,
                 )}
+                disableMoveToNearest={true}
                 prevFocus="title"
                 nextFocus="title"
                 setFocus={(f) => {

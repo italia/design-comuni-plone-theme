@@ -236,7 +236,7 @@ class TextEditorWidgetComponent extends Component {
               this.node = node;
             }}
           />
-          {this.props.showToolbar && <InlineToolbar />}
+          {this.props.showToolbar && this.node && <InlineToolbar />}
         </div>
       </>
     );
