@@ -6404,13 +6404,6 @@ draft-js-buttons@2.0.2, draft-js-buttons@^2.0.1:
   dependencies:
     clsx "^1.0.4"
 
-draft-js-export-html@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/draft-js-export-html/-/draft-js-export-html-1.4.1.tgz#7cdad970c6f7f2cdd19ce4c1f5073fdf0f313b4d"
-  integrity sha512-G4VGBSalPowktIE4wp3rFbhjs+Ln9IZ2FhXeHjsZDSw0a2+h+BjKu5Enq+mcsyVb51RW740GBK8Xbf7Iic51tw==
-  dependencies:
-    draft-js-utils "^1.4.0"
-
 draft-js-import-element@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/draft-js-import-element/-/draft-js-import-element-1.4.0.tgz#8760acbfeb60ed824a1c8319ec049f702681df66"
@@ -17693,12 +17686,11 @@ volto-google-analytics@collective/volto-google-analytics#v1.2.5:
     "@plone/scripts" "*"
     react-ga "2.7.0"
 
-volto-multilingual-widget@collective/volto-multilingual-widget#v2.2.1:
-  version "2.2.1"
-  resolved "https://codeload.github.com/collective/volto-multilingual-widget/tar.gz/038c5d03696786ddfaf2f83afa10c93452240fec"
+volto-multilingual-widget@collective/volto-multilingual-widget#v2.2.2:
+  version "2.2.2"
+  resolved "https://codeload.github.com/collective/volto-multilingual-widget/tar.gz/d574054350aa15c6ef0842b87e77cf988cbb667d"
   dependencies:
     "@plone/scripts" "^1.0.3"
-    draft-js-export-html "^1.4.1"
 
 volto-rss-block@redturtle/volto-rss-block#v2.3.0:
   version "2.3.0"
