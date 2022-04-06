@@ -16,8 +16,7 @@ import {
 import { Card, CardBody } from 'design-react-kit/dist/design-react-kit';
 import { Icon } from '@italia/components/ItaliaTheme';
 
-// import { TextEditorWidget } from '@italia/components/ItaliaTheme';
-import TextEditorWidget from '../TextEditorWidget';
+import { TextEditorWidget } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   titlePlaceholder: {
@@ -128,6 +127,7 @@ class EditBlock extends SubblockEdit {
                   messages.textPlaceholder,
                 )}
                 prevFocus="title"
+                nextFocus="tel"
                 setFocus={(f) => {
                   this.setState({ focusOn: f });
                 }}

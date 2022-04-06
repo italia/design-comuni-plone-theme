@@ -68,7 +68,6 @@ faLibrary.add(...iconList, ...iconListRegular, ...iconListBrands);
 
 export default function applyConfig(voltoConfig) {
   let config = applyRichTextConfig(voltoConfig);
-  // const listBlockTypes = config.settings.listBlockTypes; //config.settings.listBlockTypes.concat(['align-center']);
 
   /******************************************************************************
    * SETTINGS
@@ -93,7 +92,6 @@ export default function applyConfig(voltoConfig) {
       //  return event;
       // },
     },
-    // listBlockTypes: listBlockTypes,
     isMultilingual: false,
     supportedLanguages: ['it'],
     defaultLanguage: 'it',

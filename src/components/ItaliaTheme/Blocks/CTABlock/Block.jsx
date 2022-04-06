@@ -135,8 +135,8 @@ const Block = ({
           ) : (
             redraft(
               content,
-              config.settings.ToHTMLRenderers,
-              config.settings.ToHTMLOptions,
+              config.settings.richtextViewSettings.ToHTMLRenderers,
+              config.settings.richtextViewSettings.ToHTMLOptions,
             )
           )}
           {data.ctaLink?.length > 0 && data.ctaLinkTitle?.length > 0 && (

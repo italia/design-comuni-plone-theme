@@ -66,6 +66,7 @@ const Block = ({
   const content = data?.image_card_content;
 
   const [selected, setSelected] = useState('title');
+
   const titleRef = useRef();
   const contentRef = useRef();
 
@@ -109,6 +110,10 @@ const Block = ({
               onSelectBlock={() => {}}
               onAddBlock={() => {
                 setSelected('content');
+              }}
+              nextFocus="content"
+              setFocus={(f) => {
+                setSelected(f);
               }}
               disableMoveToNearest={true}
             />
@@ -168,6 +173,10 @@ const Block = ({
                         showToolbar={true}
                         onSelectBlock={onSelectBlock}
                         onAddBlock={onAddBlock}
+                        prevFocus="title"
+                        setFocus={(f) => {
+                          setSelected(f);
+                        }}
                         index={index}
                         disableMoveToNearest={true}
                       />
@@ -200,8 +209,8 @@ const Block = ({
                   <CardText>
                     {redraft(
                       content,
-                      config.settings.ToHTMLRenderers,
-                      config.settings.ToHTMLOptions,
+                      config.settings.richtextViewSettings.ToHTMLRenderers,
+                      config.settings.richtextViewSettings.ToHTMLOptions,
                     )}
                   </CardText>
                 </div>

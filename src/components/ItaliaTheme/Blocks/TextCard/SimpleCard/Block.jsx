@@ -99,6 +99,10 @@ const Block = ({
                       onAddBlock={() => {
                         setSelected('content');
                       }}
+                      nextFocus="content"
+                      setFocus={(f) => {
+                        setSelected(f);
+                      }}
                       disableMoveToNearest={true}
                     />
                   </div>
@@ -129,6 +133,10 @@ const Block = ({
                       onSelectBlock={onSelectBlock}
                       onAddBlock={onAddBlock}
                       index={index}
+                      prevFocus="title"
+                      setFocus={(f) => {
+                        setSelected(f);
+                      }}
                       disableMoveToNearest={true}
                     />
                   </CardText>
@@ -142,8 +150,8 @@ const Block = ({
                   <CardText>
                     {redraft(
                       content,
-                      config.settings.ToHTMLRenderers,
-                      config.settings.ToHTMLOptions,
+                      config.settings.richtextViewSettings.ToHTMLRenderers,
+                      config.settings.richtextViewSettings.ToHTMLOptions,
                     )}
                   </CardText>
                 </div>

@@ -60,8 +60,8 @@ const Block = ({
             <div>
               {redraft(
                 data.title,
-                config.settings.ToHTMLRenderers,
-                config.settings.ToHTMLOptions,
+                config.settings.richtextViewSettings.ToHTMLRenderers,
+                config.settings.richtextViewSettings.ToHTMLOptions,
               )}
             </div>
           )}

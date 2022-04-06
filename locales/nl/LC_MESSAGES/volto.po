@@ -571,7 +571,6 @@ msgid "Type description…"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
-#: components/ItaliaTheme/Blocks/ContactsBlock/TextEditorWidget
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 #: components/ItaliaTheme/manage/Widgets/TextEditorWidget

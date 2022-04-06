@@ -43,8 +43,8 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
 
             {redraft(
               data.title,
-              config.settings.ToHTMLRenderers,
-              config.settings.ToHTMLOptions,
+              config.settings.richtextViewSettings.ToHTMLRenderers,
+              config.settings.richtextViewSettings.ToHTMLOptions,
             )}
           </button>
         </h3>
@@ -60,8 +60,8 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
           <div className="accordion-inner">
             {redraft(
               data.text,
-              config.settings.ToHTMLRenderers,
-              config.settings.ToHTMLOptions,
+              config.settings.richtextViewSettings.ToHTMLRenderers,
+              config.settings.richtextViewSettings.ToHTMLOptions,
             )}
           </div>
           {data.href && (

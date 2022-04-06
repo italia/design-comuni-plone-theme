@@ -2,18 +2,14 @@ import React from 'react';
 import { Separator } from 'draft-js-inline-toolbar-plugin';
 import { Map } from 'immutable';
 
-import {
-  BlockquoteButton,
-  BoldButton,
-  ItalicButton,
-  OrderedListButton,
-  UnorderedListButton,
-} from '@plone/volto/config/RichTextEditor/Styles';
+import Styles from '@plone/volto/config/RichTextEditor/Styles';
 
 import ToHTMLRenderers from '@plone/volto/config/RichTextEditor/ToHTML';
-
 import FromHTML from '@plone/volto/config/RichTextEditor/FromHTML';
-import createLinkPlugin from '@plone/volto/components/manage/AnchorPlugin';
+import Plugins from '@plone/volto/config/RichTextEditor/Plugins';
+import Blocks from '@plone/volto/config/RichTextEditor/Blocks';
+//import FromHTMLCustomBlockFn from '@plone/volto/config/RichTextEditor/FromHTML';
+
 import UnderlineButton from '@italia/config/RichTextEditor/ToolbarButtons/UnderlineButton';
 import HeadingsButton from '@italia/config/RichTextEditor/ToolbarButtons/HeadingsButton';
 import AlignButton from '@italia/config/RichTextEditor/ToolbarButtons/AlignButton';
@@ -21,26 +17,40 @@ import CalloutsButton from '@italia/config/RichTextEditor/ToolbarButtons/Callout
 import ButtonsButton from '@italia/config/RichTextEditor/ToolbarButtons/ButtonsButton';
 import TextSizeButton from '@italia/config/RichTextEditor/ToolbarButtons/TextSizeButton';
 
-const linkPlugin = createLinkPlugin();
+const ItaliaRichTextEditorPlugins = (props) => [];
+const ItaliaRichTextEditorInlineToolbarButtons = (props, plugins) => {
+  const linkPlugin = plugins.filter((p) => p.LinkButton != null)[0];
 
-const ItaliaRichTextEditorPlugins = [];
-const ItaliaRichTextEditorInlineToolbarButtons = [
-  AlignButton,
-  Separator,
-  BoldButton,
-  ItalicButton,
-  UnderlineButton,
-  TextSizeButton,
-  Separator,
-  HeadingsButton,
-  linkPlugin.LinkButton,
-  ButtonsButton,
-  Separator,
-  UnorderedListButton,
-  OrderedListButton,
-  BlockquoteButton,
-  CalloutsButton,
-];
+  const buttons = Styles(props);
+  const {
+    BoldButton,
+    ItalicButton,
+    // HeadlineTwoButton,
+    // HeadlineThreeButton,
+    UnorderedListButton,
+    OrderedListButton,
+    BlockquoteButton,
+    // CalloutButton,
+  } = buttons;
+
+  return [
+    AlignButton,
+    Separator,
+    BoldButton,
+    ItalicButton,
+    UnderlineButton,
+    TextSizeButton,
+    Separator,
+    HeadingsButton,
+    linkPlugin.LinkButton,
+    ButtonsButton,
+    Separator,
+    UnorderedListButton,
+    OrderedListButton,
+    BlockquoteButton,
+    CalloutsButton,
+  ];
+};
 
 const blockRenderMap = Map({
   'align-center': {
@@ -154,52 +164,62 @@ const ItaliaFromHTMLCustomBlockFn = (element) => {
 };
 
 export default function applyConfig(config) {
-  config.settings.richTextEditorPlugins = [
-    ...config.settings.richTextEditorPlugins,
-    ...ItaliaRichTextEditorPlugins,
-  ];
+  config.settings.richtextEditorSettings = (props) => {
+    const { plugins /*, inlineToolbarButtons*/ } = Plugins(props); // volto plugins
+    const { extendedBlockRenderMap, blockStyleFn, listBlockTypes } = Blocks(
+      props,
+    );
 
-  config.settings.richTextEditorInlineToolbarButtons = ItaliaRichTextEditorInlineToolbarButtons;
+    const italiaBlockStyleFunction = (contentBlock) => {
+      const type = contentBlock.getType();
 
-  config.settings.extendedBlockRenderMap = config.settings.extendedBlockRenderMap
-    .update('text-center', (element = 'p') => element)
-    .merge(blockRenderMap);
+      let r = blockStyleFn(contentBlock) || '';
+      r = r.length > 0 ? ' ' : r;
 
-  config.settings.voltoBlockStyleFn = config.settings.blockStyleFn;
-  config.settings.blockStyleFn = (contentBlock) => {
-    const type = contentBlock.getType();
+      const styles = {
+        'align-center': 'text-center',
+        'align-right': 'text-right',
+        'align-justify': 'text-justify',
+        callout: 'callout',
+        'callout-bg': 'callout-bg',
+        buttons: 'draftjs-buttons',
+      };
 
-    let r = config.settings.voltoBlockStyleFn(contentBlock) || '';
-    r = r.length > 0 ? ' ' : r;
+      r += styles[type] ?? '';
 
-    const styles = {
-      'align-center': 'text-center',
-      'align-right': 'text-right',
-      'align-justify': 'text-justify',
-      callout: 'callout',
-      'callout-bg': 'callout-bg',
-      buttons: 'draftjs-buttons',
+      return r;
     };
 
-    r += styles[type] ?? '';
-
-    return r;
+    return {
+      extendedBlockRenderMap: extendedBlockRenderMap
+        .update('text-center', (element = 'p') => element)
+        .merge(blockRenderMap),
+      voltoBlockStyleFn: blockStyleFn,
+      blockStyleFn: italiaBlockStyleFunction,
+      listBlockTypes: listBlockTypes,
+      richTextEditorPlugins: [
+        ...plugins,
+        ...ItaliaRichTextEditorPlugins(props),
+      ],
+      richTextEditorInlineToolbarButtons: ItaliaRichTextEditorInlineToolbarButtons(
+        props,
+        plugins,
+      ), //[inlineToolbarButtons,...ItaliaRichTextEditorInlineToolbarButtons(props)]
+      FromHTMLCustomBlockFn: ItaliaFromHTMLCustomBlockFn, //FromHTMLCustomBlockFn
+      customStyleMap: {
+        TEXT_LARGER: { fontSize: '1.75rem' },
+      },
+    };
   };
 
   // TODO: rimuovere questa customizzazione quando sistemano https://github.com/plone/volto/issues/1601
-  config.settings.ToHTMLRenderers = {
-    ...config.settings.ToHTMLRenderers,
+  config.settings.richtextViewSettings.ToHTMLRenderers = {
+    ...config.settings.richtextViewSettings.ToHTMLRenderers,
     blocks: {
       ...ToHTMLRenderers.blocks,
       ...ItaliaBlocksHtmlRenderers,
     },
     inline: { ...ToHTMLRenderers.inline, ...ItaliaInlineHtmlRenderers },
-  };
-
-  config.settings.FromHTMLCustomBlockFn = ItaliaFromHTMLCustomBlockFn;
-  config.settings.customStyleMap = {
-    ...(config.settings.customStyleMap ?? {}),
-    TEXT_LARGER: { fontSize: '1.75rem' },
   };
 
   return config;

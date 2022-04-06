@@ -10,7 +10,6 @@ import { find, map } from 'lodash';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import cx from 'classnames';
-
 import { Helmet, flattenToAppURL, langmap } from '@plone/volto/helpers';
 import {
   Row,

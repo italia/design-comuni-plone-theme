@@ -104,8 +104,8 @@ const Sidebar = ({
                   {subblock.title
                     ? redraft(
                         subblock.title,
-                        config.settings.ToHTMLRenderers,
-                        config.settings.ToHTMLOptions,
+                        config.settings.richtextViewSettings.ToHTMLRenderers,
+                        config.settings.richtextViewSettings.ToHTMLOptions,
                       )
                     : `Blocco ${index + 1}`}
                   {selected === index ? (

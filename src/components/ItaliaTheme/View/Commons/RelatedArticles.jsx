@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { GenericCard } from '@italia/components/ItaliaTheme/View';
 /**
- * RichTextArticle view component class.
+ * RelateedArticles view component class.
  * @function RelatedArticles
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
