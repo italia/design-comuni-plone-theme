@@ -1,22 +1,3 @@
-### [5.20.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.20.0...v5.20.1) (2022-04-06)
-
-
-### Bug Fixes
-
-* fix draftjs in blocks ([4fbfdc4](https://github.com/RedTurtle/design-volto-theme/commit/4fbfdc48d3e0f563003f8823fd74d3b72ecd943f))
-* fix some bugs of draftjss ([0e1f2ad](https://github.com/RedTurtle/design-volto-theme/commit/0e1f2ad2d37d8005999a30c4df03b2d73e224b5c))
-
-
-### Maintenance
-
-* removed multilingual config ([a9107e0](https://github.com/RedTurtle/design-volto-theme/commit/a9107e0fc035e34fe5f9951fb2c3cdb483466c39))
-* updated to volto 15.0.0.alpha9 ([c2e2f11](https://github.com/RedTurtle/design-volto-theme/commit/c2e2f1123cb9e14308c61ece05af7addf8400359))
-* updated volto ([e060f59](https://github.com/RedTurtle/design-volto-theme/commit/e060f59edeb8ee8a76b700906f0c4e431fa8c656))
-* updated volto ([4c387f2](https://github.com/RedTurtle/design-volto-theme/commit/4c387f2c5ac766c8820e2f98ff84bfb9cecf3260))
-* updated volto version ([adae589](https://github.com/RedTurtle/design-volto-theme/commit/adae5893f6fc1110b491d61d5a07fb30c0fdcffd))
-* updated volto-multilingual-widget ([ac93e2d](https://github.com/RedTurtle/design-volto-theme/commit/ac93e2d17a1148a3246315c9e57627b8df683891))
-* updated volto-multilingual-widget ([af2a93d](https://github.com/RedTurtle/design-volto-theme/commit/af2a93daf29ddfddd4eaf99a167ceb5105cf2338))
-
 ## [5.20.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.19.5...v5.20.0) (2022-04-01)
 
 
