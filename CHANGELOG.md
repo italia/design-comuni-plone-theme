@@ -1,3 +1,10 @@
+### [5.21.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.21.0...v5.21.1) (2022-04-13)
+
+
+### Bug Fixes
+
+* fixed formatting countdown texts ([f6ebb7a](https://github.com/RedTurtle/design-volto-theme/commit/f6ebb7a0ad6303b944f334df8b3455a3ec95fb7b))
+
 ### [5.21.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.20.0...v5.21.0) (2022-04-06)
 
 ### Bug Fixes
