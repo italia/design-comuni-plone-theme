@@ -8,7 +8,7 @@ import { defineMessages } from 'react-intl';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 
 import { SidebarPortal } from '@plone/volto/components';
-import { addAppURL } from '@plone/volto/helpers';
+import { addAppURL, flattenToAppURL } from '@plone/volto/helpers';
 import { Icon } from '@italia/components/ItaliaTheme';
 
 import {
@@ -62,13 +62,17 @@ class Edit extends SubblocksEdit {
     return (
       <div className="public-ui">
         <div className="full-width section py-5">
-          {this.props.data.background?.[0] ? (
+          {this.props.data?.background?.[0] ? (
             <div
               className="background-image"
               style={{
                 backgroundImage: `url(${
-                  this.props.data.background[0]?.image?.download ??
-                  addAppURL(this.props.data.background[0]?.['@id'])
+                  this.props.data.background[0]?.image
+                    ? flattenToAppURL(
+                        this.props.data.background[0]['@id'] +
+                          '/@@images/image',
+                      )
+                    : addAppURL(this.props.data.background[0]?.['@id'])
                 })`,
               }}
             ></div>
