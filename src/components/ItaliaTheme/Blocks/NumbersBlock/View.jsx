@@ -9,6 +9,7 @@ import redraft from 'redraft';
 import ViewBlock from './Block/ViewBlock';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { Icon } from '@italia/components/ItaliaTheme';
+import { addAppURL, flattenToAppURL } from '@plone/volto/helpers';
 import config from '@plone/volto/registry';
 
 /**
@@ -23,11 +24,17 @@ const NumbersView = ({ data, block }) => {
     <div className="block numbersBlock">
       <div className="public-ui">
         <div className="full-width section py-5">
-          {data.background?.[0]?.image?.download ? (
+          {data?.background?.[0] ? (
             <div
               className="background-image"
               style={{
-                backgroundImage: `url(${data.background[0].image.download})`,
+                backgroundImage: `url(${
+                  data.background[0]?.image
+                    ? flattenToAppURL(
+                        data.background[0]['@id'] + '/@@images/image',
+                      )
+                    : addAppURL(data.background[0]?.['@id'])
+                })`,
               }}
             ></div>
           ) : (
