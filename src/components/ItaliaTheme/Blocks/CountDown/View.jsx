@@ -46,8 +46,8 @@ const View = ({ data, id }) => {
                 >
                   {redraft(
                     data.text,
-                    config.settings.ToHTMLRenderers,
-                    config.settings.ToHTMLOptions,
+                    config.settings.richtextViewSettings.ToHTMLRenderers,
+                    config.settings.richtextViewSettings.ToHTMLOptions,
                   )}
                 </Col>
               )}
@@ -71,8 +71,8 @@ const View = ({ data, id }) => {
                   <div className="countdown_text">
                     {redraft(
                       data.countdown_text,
-                      config.settings.ToHTMLRenderers,
-                      config.settings.ToHTMLOptions,
+                      config.settings.richtextViewSettings.ToHTMLRenderers,
+                      config.settings.richtextViewSettings.ToHTMLOptions,
                     )}
                   </div>
                 )}
