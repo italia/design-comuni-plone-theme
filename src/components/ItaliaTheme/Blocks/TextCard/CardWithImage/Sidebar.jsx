@@ -30,19 +30,19 @@ const messages = defineMessages({
   },
   natural_image_size: {
     id: 'natural_image_size',
-    defineMessages: "Non alterare le dimensioni naturali dell'immagine",
+    defaultMessage: "Non alterare le dimensioni naturali dell'immagine",
   },
   small: {
     id: 'Piccolo',
-    defineMessages: 'Piccolo',
+    defaultMessage: 'Piccolo',
   },
   medium: {
     id: 'Medio',
-    defineMessages: 'Medio',
+    defaultMessage: 'Medio',
   },
   large: {
     id: 'Grande',
-    defineMessages: 'Grande',
+    defaultMessage: 'Grande',
   },
 });
 

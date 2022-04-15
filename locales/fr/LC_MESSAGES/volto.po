@@ -222,7 +222,7 @@ msgid "Go to content"
 msgstr "Aller au contenu"
 
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
-# defaultMessage: undefined
+# defaultMessage: Grande
 msgid "Grande"
 msgstr ""
 
@@ -320,7 +320,7 @@ msgid "Luogo location filter"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
-# defaultMessage: undefined
+# defaultMessage: Medio
 msgid "Medio"
 msgstr ""
 
@@ -404,7 +404,7 @@ msgid "Percorso path filter"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
-# defaultMessage: undefined
+# defaultMessage: Piccolo
 msgid "Piccolo"
 msgstr ""
 

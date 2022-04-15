@@ -205,9 +205,9 @@ msgid "Go to content"
 msgstr "Salta al contenuto"
 
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
-# defaultMessage: undefined
+# defaultMessage: Grande
 msgid "Grande"
-msgstr ""
+msgstr "Grande"
 
 #: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
 # defaultMessage: Hero
@@ -303,9 +303,9 @@ msgid "Luogo location filter"
 msgstr "Luogo"
 
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
-# defaultMessage: undefined
+# defaultMessage: Medio
 msgid "Medio"
-msgstr ""
+msgstr "Medio"
 
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 #: components/ItaliaTheme/MenuSecondary/MenuSecondary
@@ -387,7 +387,7 @@ msgid "Percorso path filter"
 msgstr "Percorso"
 
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
-# defaultMessage: undefined
+# defaultMessage: Piccolo
 msgid "Piccolo"
 msgstr ""
 

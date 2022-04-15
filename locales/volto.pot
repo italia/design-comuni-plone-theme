@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2022-04-05T09:53:07.431Z\n"
+"POT-Creation-Date: 2022-04-15T12:13:54.270Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -207,7 +207,7 @@ msgid "Go to content"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
-# defaultMessage: undefined
+# defaultMessage: Grande
 msgid "Grande"
 msgstr ""
 
@@ -305,7 +305,7 @@ msgid "Luogo location filter"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
-# defaultMessage: undefined
+# defaultMessage: Medio
 msgid "Medio"
 msgstr ""
 
@@ -389,7 +389,7 @@ msgid "Percorso path filter"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
-# defaultMessage: undefined
+# defaultMessage: Piccolo
 msgid "Piccolo"
 msgstr ""
 
