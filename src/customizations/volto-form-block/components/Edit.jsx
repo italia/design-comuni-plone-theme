@@ -78,6 +78,12 @@ class Edit extends SubblocksEdit {
     return (
       <div className="public-ui">
         <div className="px-4 py-5">
+          {this.props?.data?.title && <h2>{this.props.data.title}</h2>}
+          {this.props?.data?.description && (
+            <div className="block-description">
+              {this.props.data.description}
+            </div>
+          )}
           <Card className="card-bg rounded py-3" noWrapper={false} tag="div">
             <CardBody tag="div">
               <SubblocksWrapper node={this.node}>

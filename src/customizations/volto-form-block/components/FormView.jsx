@@ -96,6 +96,10 @@ const FormView = ({
     <div className="block form">
       <div className="public-ui">
         <div className="p-4">
+          {data?.title && <h2>{data.title}</h2>}
+          {data?.description && (
+            <div className="block-description">{data.description}</div>
+          )}
           <Card className="card-bg rounded py-3" noWrapper={false} tag="div">
             <CardBody tag="div">
               {formState.error ? (
