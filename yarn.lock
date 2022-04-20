@@ -17661,9 +17661,9 @@ volto-google-analytics@collective/volto-google-analytics#v1.2.5:
     "@plone/scripts" "*"
     react-ga "2.7.0"
 
-volto-multilingual-widget@collective/volto-multilingual-widget#v2.2.2:
-  version "2.2.2"
-  resolved "https://codeload.github.com/collective/volto-multilingual-widget/tar.gz/d574054350aa15c6ef0842b87e77cf988cbb667d"
+volto-multilingual-widget@collective/volto-multilingual-widget#v2.2.3:
+  version "2.2.3"
+  resolved "https://codeload.github.com/collective/volto-multilingual-widget/tar.gz/f795ea0250db3f13ab5668e696e5fe832d44ccc8"
   dependencies:
     "@plone/scripts" "^1.0.3"
 
