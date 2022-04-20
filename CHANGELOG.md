@@ -1,3 +1,17 @@
+### [5.21.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.21.1...v5.21.2) (2022-04-20)
+
+
+### Bug Fixes
+
+* display title and description of Form block ([769ca37](https://github.com/RedTurtle/design-volto-theme/commit/769ca379b67fec9ff74a24a6c89eab30b57983c4))
+* fixed background image of number block ([f8989d2](https://github.com/RedTurtle/design-volto-theme/commit/f8989d2bf45b3885a6a30dc134511ffea1b1b7ce))
+
+
+### Maintenance
+
+* updated volto for translations ([ba25687](https://github.com/RedTurtle/design-volto-theme/commit/ba256874963a8fe8a2ef1dbd9ec8e67cd3b96606))
+* updated volto-multilingual-widget ([d7b946a](https://github.com/RedTurtle/design-volto-theme/commit/d7b946a5765bf32f8e7d652d854241acfc4c2c52))
+
 ### [5.21.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.21.0...v5.21.1) (2022-04-13)
 
 
