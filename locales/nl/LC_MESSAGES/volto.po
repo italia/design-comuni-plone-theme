@@ -1927,6 +1927,12 @@ msgstr ""
 msgid "listing_items_color"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/VideoGallery/Block/ViewBlock
+#: components/ItaliaTheme/View/Commons/EmbeddedVideo
+# defaultMessage: Premi Invio per caricare il video, poi premi Tab per navigare sul video.
+msgid "loadVideo"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 #: components/ItaliaTheme/Blocks/EventSearch/Sidebar
 #: components/ItaliaTheme/Blocks/UOSearch/Sidebar
