@@ -102,6 +102,6 @@
     "path": "src",
     "https": "https://github.com/collective/volto-gdpr-privacy.git",
     "url": "git@github.com:collective/volto-gdpr-privacy.git",
-    "tag": "v1.3.2"
+    "tag": "v1.3.3"
   }
 }
