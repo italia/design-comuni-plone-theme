@@ -40,9 +40,10 @@ const ViewBlock = ({ data, index, isEditMode = false }) => {
     if (data.url.match('youtu')) {
       if (!placeholder) {
         //load video preview image from youtube
-        const videoID = data.url
-          .match(/youtube\.com.*(\?v=|\/embed\/)(.{11})/)
-          .pop();
+
+        const videoID = data.url.match(/.be\//)
+          ? data.url.match(/^.*\.be\/(.*)/)?.[1]
+          : data.url.match(/^.*\?v=(.*)$/)?.[1];
         placeholder =
           'https://img.youtube.com/vi/' + videoID + '/sddefault.jpg';
       }
