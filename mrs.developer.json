@@ -11,7 +11,7 @@
     "path": "src",
     "https": "https://github.com/collective/volto-multilingual-widget.git",
     "url": "git@github.com:collective/volto-multilingual-widget.git",
-    "tag": "v2.2.3"
+    "tag": "v2.2.4"
   },
   "volto-venue": {
     "package": "@italia/addons/volto-venue",
