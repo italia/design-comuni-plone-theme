@@ -75,76 +75,84 @@ const ArLogin = () => {
 
   const isPublicUser = userLogged?.roles?.length === 0;
 
-  return config.settings.siteProperties?.arLoginUrl ? (
+  return (
     <>
-      {!userId || !isPublicUser ? (
-        // not logged
-        <LoginButton>
-          <span className="rounded-icon">
-            <Icon color="primary" icon="it-user" padding={false} size="" />
-          </span>
-          <span className="d-none d-lg-block">
-            {intl.formatMessage(messages.arLogin)}
-          </span>
-        </LoginButton>
-      ) : (
-        // logged
-        <>
-          {/* add user roles classes to body */}
-          <BodyClass className={rolesBodyClasses.join(' ')} />
-
-          {/* dropdown */}
-          <UncontrolledDropdown nav tag="div">
-            <DropdownToggle
-              aria-haspopup
-              caret
-              color="secondary"
-              nav
-              className="btn-icon"
-            >
-              <span class="rounded-icon">
-                <Icon color="primary" icon="it-user" size="" />
-              </span>
-              <span class="d-none d-lg-block">
-                {userLogged.fullname
-                  ? userLogged.fullname
-                  : userLogged.username}
-              </span>
-              <Icon color="" icon="it-expand" padding={false} size="" />
-            </DropdownToggle>
-            <DropdownMenu flip tag="div">
-              <Row tag="div">
-                <Col
-                  size="12"
-                  tag="div"
-                  widths={['xs', 'sm', 'md', 'lg', 'xl']}
-                >
-                  <LinkList tag="div">
-                    <UserLoggedMenu />
-                    <LinkListItem divider tag="a" />
-                    <LinkListItem
-                      href={config.settings.siteProperties.arLogoutUrl || '/'}
-                      title={intl.formatMessage(messages.arLogout)}
-                      tag="a"
-                      onClick={() => {
-                        if (!config.settings.siteProperties.arLogoutUrl) {
-                          doLogout();
-                        }
-                      }}
-                      className="logout"
-                    >
-                      <Icon color="" icon="sign-out-alt" size="sm" left />
-                      <span>{intl.formatMessage(messages.arLogout)}</span>
-                    </LinkListItem>
-                  </LinkList>
-                </Col>
-              </Row>
-            </DropdownMenu>
-          </UncontrolledDropdown>
-        </>
+      {/* add user roles classes to body */}
+      {rolesBodyClasses?.length > 0 && (
+        <BodyClass className={rolesBodyClasses.join(' ')} />
       )}
+
+      {config.settings.siteProperties?.arLoginUrl ? (
+        <>
+          {!userId || !isPublicUser ? (
+            // not logged
+            <LoginButton>
+              <span className="rounded-icon">
+                <Icon color="primary" icon="it-user" padding={false} size="" />
+              </span>
+              <span className="d-none d-lg-block">
+                {intl.formatMessage(messages.arLogin)}
+              </span>
+            </LoginButton>
+          ) : (
+            // logged
+            <>
+              {/* dropdown */}
+              <UncontrolledDropdown nav tag="div">
+                <DropdownToggle
+                  aria-haspopup
+                  caret
+                  color="secondary"
+                  nav
+                  className="btn-icon"
+                >
+                  <span class="rounded-icon">
+                    <Icon color="primary" icon="it-user" size="" />
+                  </span>
+                  <span class="d-none d-lg-block">
+                    {userLogged.fullname
+                      ? userLogged.fullname
+                      : userLogged.username}
+                  </span>
+                  <Icon color="" icon="it-expand" padding={false} size="" />
+                </DropdownToggle>
+                <DropdownMenu flip tag="div">
+                  <Row tag="div">
+                    <Col
+                      size="12"
+                      tag="div"
+                      widths={['xs', 'sm', 'md', 'lg', 'xl']}
+                    >
+                      <LinkList tag="div">
+                        <UserLoggedMenu />
+                        <LinkListItem divider tag="a" />
+                        <LinkListItem
+                          href={
+                            config.settings.siteProperties.arLogoutUrl || '/'
+                          }
+                          title={intl.formatMessage(messages.arLogout)}
+                          tag="a"
+                          onClick={() => {
+                            if (!config.settings.siteProperties.arLogoutUrl) {
+                              doLogout();
+                            }
+                          }}
+                          className="logout"
+                        >
+                          <Icon color="" icon="sign-out-alt" size="sm" left />
+                          <span>{intl.formatMessage(messages.arLogout)}</span>
+                        </LinkListItem>
+                      </LinkList>
+                    </Col>
+                  </Row>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+            </>
+          )}
+        </>
+      ) : null}
     </>
-  ) : null;
+  );
 };
 
 export default ArLogin;
