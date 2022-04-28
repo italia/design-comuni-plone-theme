@@ -1,3 +1,17 @@
+### [5.21.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.21.2...v5.21.3) (2022-04-28)
+
+
+### Bug Fixes
+
+* fix paste links and image urls ([c60ff7f](https://github.com/RedTurtle/design-volto-theme/commit/c60ff7fe19fd91f82314ed31c298d5891ad267b8))
+* updated volto-gdpr-privacy to fix conditional embed prerender ([1f31195](https://github.com/RedTurtle/design-volto-theme/commit/1f3119596dc2fc39a013eb9c389f0c1600f421e1))
+
+
+### Maintenance
+
+* updated volto-gdpr-privacy to prevent SSR undesired embed ([abbc13f](https://github.com/RedTurtle/design-volto-theme/commit/abbc13f5e9dfccfe99f42446cbaac6b9fb30c346))
+* updated volto-multilingual widget to fix onchange bug ([7d25ad1](https://github.com/RedTurtle/design-volto-theme/commit/7d25ad1f88021642826163e9abf5261d921b044a))
+
 ### [5.21.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.21.1...v5.21.2) (2022-04-20)
 
 
