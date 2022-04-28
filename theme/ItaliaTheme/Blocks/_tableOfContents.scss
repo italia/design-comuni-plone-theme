@@ -16,19 +16,19 @@ $space-left: 1rem;
         text-decoration: none;
       }
 
-      &::before {
+      &:not(.header-two)::before {
         position: relative;
         display: inline-block;
         width: 0.55rem;
         min-width: 0.55rem;
         height: 0.55rem;
         min-height: 0.55rem;
-        border: 1px solid $primary;
-        margin-right: 0.6rem;
-        background-color: transparent;
-        border-radius: 50%;
+        border-top: 0.1rem solid $primary;
+        border-right: 0.1rem solid $primary;
+        margin-right: 1rem;
         content: '' !important;
         list-style: none;
+        transform: rotate(45deg);
       }
 
       &.header-two {
@@ -37,7 +37,14 @@ $space-left: 1rem;
         font-weight: 600;
 
         &::before {
-          background-color: $primary;
+          width: 0;
+          height: 0;
+          border-top: 0.4rem solid transparent;
+          border-bottom: 0.4rem solid transparent;
+          border-left: 0.5rem solid $primary;
+          margin-right: 0.8rem;
+          content: '' !important;
+          list-style: none;
         }
       }
 
