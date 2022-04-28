@@ -1,3 +1,10 @@
+### [5.21.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.21.3...v5.21.4) (2022-04-28)
+
+
+### Bug Fixes
+
+* fix handle add new block in TextCard blocks ([da17820](https://github.com/RedTurtle/design-volto-theme/commit/da17820a19bffef430e6e51a9e9276565d065112))
+
 ### [5.21.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.21.2...v5.21.3) (2022-04-28)
 
 
