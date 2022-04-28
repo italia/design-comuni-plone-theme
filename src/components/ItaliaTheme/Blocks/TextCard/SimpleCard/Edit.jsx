@@ -88,6 +88,7 @@ class Edit extends Component {
           onSelectBlock={this.props.onSelectBlock}
           onAddBlock={this.props.onAddBlock}
           index={this.props.index}
+          blockIsSelected={this.props.selected}
         />
       </BodyWrapper>
     );
