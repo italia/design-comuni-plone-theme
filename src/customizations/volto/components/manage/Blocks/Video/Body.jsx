@@ -64,7 +64,7 @@ const Body = ({ data, isEditMode }) => {
 
   const ref = React.createRef();
   const onKeyDown = (e) => {
-    if (e.nativeEvent.keyCode === 13) {
+    if (e.nativeEvent.keyCode === 13) { //Enter
       ref.current.handleClick();
     }
   };
