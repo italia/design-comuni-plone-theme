@@ -1,3 +1,22 @@
+## [5.22.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.21.4...v5.22.0) (2022-04-29)
+
+
+### Features
+
+* light loading of videos ([86dea34](https://github.com/RedTurtle/design-volto-theme/commit/86dea34c015df9f541f2e55cec38e9b2700c2b85))
+
+
+### Bug Fixes
+
+* changed index icon ([0402ce0](https://github.com/RedTurtle/design-volto-theme/commit/0402ce084951478221245c0beb33af2a48400dae))
+* moved user roles classes outside arLoginUrl condition to handle ldap login ([a2bb312](https://github.com/RedTurtle/design-volto-theme/commit/a2bb312513d00c4b618f5188806f7fb2b702e43d))
+* readability of index block ([6a7f378](https://github.com/RedTurtle/design-volto-theme/commit/6a7f378996a690532ad00048be0143b97b61aaa9))
+
+
+### Maintenance
+
+* updated volto and fixed video block ([e5d11bf](https://github.com/RedTurtle/design-volto-theme/commit/e5d11bf0a3f983c40cf49e9fb8b12afc4811683f))
+
 ### [5.21.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.21.3...v5.21.4) (2022-04-28)
 
 
