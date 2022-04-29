@@ -1,0 +1,47 @@
+.block.video {
+  .ui.embed {
+    position: relative;
+
+    img.placeholder {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      transform: translateY(-50%);
+    }
+
+    .icon-play {
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      width: 4rem;
+      height: 2.6rem;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 15px;
+      color: $white;
+      cursor: pointer;
+      line-height: 2.6rem;
+      text-align: center;
+      transform: translateX(-50%) translateY(-50%);
+
+      svg {
+        width: 1.2rem;
+        height: 1.2rem;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $primary;
+        color: $primary-text;
+      }
+    }
+
+    &.active {
+      .icon-play {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2022-04-15T12:13:54.270Z\n"
+"POT-Creation-Date: 2022-04-21T15:21:55.145Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1908,6 +1908,12 @@ msgstr ""
 #: config/Blocks/ListingOptions/defaultOptions
 # defaultMessage: Colore dell'elemento
 msgid "listing_items_color"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/VideoGallery/Block/ViewBlock
+#: components/ItaliaTheme/View/Commons/EmbeddedVideo
+# defaultMessage: Premi Invio per caricare il video, poi premi Tab per navigare sul video.
+msgid "loadVideo"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
