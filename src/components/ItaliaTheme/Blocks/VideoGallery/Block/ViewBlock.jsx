@@ -38,7 +38,6 @@ const ViewBlock = ({ data, index, isEditMode = false }) => {
 
   if (!placeholder && data.url) {
     if (data.url.match('youtu')) {
-      if (!placeholder) {
         //load video preview image from youtube
 
         const videoID = data.url.match(/.be\//)
@@ -46,7 +45,6 @@ const ViewBlock = ({ data, index, isEditMode = false }) => {
           : data.url.match(/^.*\?v=(.*)$/)?.[1];
         placeholder =
           'https://img.youtube.com/vi/' + videoID + '/sddefault.jpg';
-      }
     } else if (data.url.match('vimeo')) {
       const videoID = data.url.match(/^.*\.com\/(.*)/)[1];
       placeholder = 'https://vumbnail.com/' + videoID + '.jpg';
