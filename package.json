@@ -199,7 +199,7 @@
     "typeface-roboto-mono": "0.0.75",
     "typeface-titillium-web": "0.0.72",
     "volto-blocks-widget": "collective/volto-blocks-widget#v2.1.0",
-    "volto-customer-satisfaction": "collective/volto-customer-satisfaction#v0.2.8",
+    "volto-customer-satisfaction": "collective/volto-customer-satisfaction#v0.2.9",
     "volto-dropdownmenu": "collective/volto-dropdownmenu#v2.3.0",
     "volto-editablefooter": "RedTurtle/volto-editablefooter#v4.1.1",
     "volto-form-block": "collective/volto-form-block#v2.3.0",
