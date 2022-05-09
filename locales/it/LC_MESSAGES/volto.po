@@ -178,6 +178,11 @@ msgstr "Descrizione..."
 msgid "Dimensione della mappa"
 msgstr "Dimensione della mappa"
 
+#: components/ItaliaTheme/overrideTranslations
+# defaultMessage: Enter your username for verification.
+msgid "Enter your username for verification."
+msgstr "Inserisci il tuo nome utente per verifica."
+
 #: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
 # defaultMessage: Etichetta
 msgid "Etichetta location filter"
@@ -337,6 +342,11 @@ msgstr "Mostra lo sfondo del blocco"
 # defaultMessage: Mostra tutti gli argomenti
 msgid "Mostra tutti gli argomenti"
 msgstr "Mostra tutti gli argomenti"
+
+#: components/ItaliaTheme/overrideTranslations
+# defaultMessage: My username is
+msgid "My username is"
+msgstr "Il mio nome utente è"
 
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Nessun risultato ottenuto
@@ -634,6 +644,11 @@ msgstr "Video gallery"
 # defaultMessage: You are trying to access a protected resource, please {login} first.
 msgid "You are trying to access a protected resource, please {login} first."
 msgstr "Stai provando ad accedere ad una risorsa protetta, per favore fai prima il {login}."
+
+#: components/ItaliaTheme/overrideTranslations
+# defaultMessage: Your username is required for reset your password.
+msgid "Your username is required for reset your password."
+msgstr "Il tuo nome utente è obbligatorio per richiedere il reset della password."
 
 #: components/ItaliaTheme/View/ServizioView/ServizioAChiSiRivolge
 # defaultMessage: A chi si rivolge
@@ -1855,6 +1870,11 @@ msgstr "Inserire un filtro dal menù laterale per visualizzare i relativi risult
 # defaultMessage: Iter del procedimento
 msgid "iter_del_procedimento"
 msgstr "Iter del procedimento"
+
+#: components/ItaliaTheme/overrideTranslations
+# defaultMessage: My username is
+msgid "label_my_email_address_is"
+msgstr "Il mio nome utente è "
 
 #: components/ItaliaTheme/View/UOView/UOStructure
 # defaultMessage: Servizi o uffici di riferimento
