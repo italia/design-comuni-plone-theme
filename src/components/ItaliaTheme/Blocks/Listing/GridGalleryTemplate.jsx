@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { UniversalLink } from '@plone/volto/components';
+import { flattenToAppURL } from '@plone/volto/helpers';
 import { useIntl, defineMessages } from 'react-intl';
 import { ListingLinkMore, ListingImage } from '@italia/components/ItaliaTheme';
 import {
@@ -52,6 +53,37 @@ const GridGalleryTemplate = ({
               useOriginal: false,
               className: '',
             });
+
+            let scale = null;
+            if (index % 7 === 0 || index % 7 === 6) {
+              scale = 'great';
+            }
+            if (index % 7 === 1 || index % 7 === 5) {
+              scale = 'teaser';
+            }
+            if (index % 7 === 2 || index % 7 === 4) {
+              scale = 'large';
+            }
+
+            if (scale) {
+              image = (
+                <picture class="volto-image responsive">
+                  <img
+                    src={flattenToAppURL(
+                      item['@id'] +
+                        '/@@images/' +
+                        (item.image_field ?? 'image') +
+                        '/' +
+                        scale,
+                    )}
+                    alt={item.title}
+                    role="presentation"
+                    aria-hidden="true"
+                    title={item.title}
+                  />
+                </picture>
+              );
+            }
 
             return (
               <div
