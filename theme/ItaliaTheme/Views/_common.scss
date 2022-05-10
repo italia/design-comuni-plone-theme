@@ -21,8 +21,16 @@ body {
   }
 }
 
+picture.volto-image {
+  display: block;
+  width: 100%;
+}
+
 .full-width,
-.ui.image img.full-width {
+.ui.image img.full-width,
+picture.volto-image.responsive.full-width img,
+picture.volto-image.full-width img,
+picture.volto-image.responsive img.full-width {
   position: relative;
   right: 50%;
   left: 50%;

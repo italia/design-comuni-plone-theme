@@ -152,6 +152,7 @@ const SliderTemplate = ({
                   item,
                   loading: 'lazy',
                   maxSize: 1600,
+                  critical: true,
                 });
                 //if (!image) return null;
                 return (
