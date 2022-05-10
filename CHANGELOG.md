@@ -1,3 +1,22 @@
+### [5.22.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.0...v5.22.1) (2022-05-10)
+
+
+### Bug Fixes
+
+* fix image full-width ([ff7c926](https://github.com/RedTurtle/design-volto-theme/commit/ff7c926efd3c0676475b845d142e81019f0cc9b4))
+* fixed focus a11y of menu mobile button close ([65aea72](https://github.com/RedTurtle/design-volto-theme/commit/65aea72177714f644dfecbf365611050d89f6973))
+
+
+### Maintenance
+
+* chaged label for Password reset ([1e4764c](https://github.com/RedTurtle/design-volto-theme/commit/1e4764c03574fbc9af6427fd093372ba1a79bb03))
+* improved image loading ([53975c4](https://github.com/RedTurtle/design-volto-theme/commit/53975c4e408b3a69597deda9a54f88a36ef549b8))
+* updated CustomerSatisfaction v0.2.9 and fixed ay11 ([d5049a3](https://github.com/RedTurtle/design-volto-theme/commit/d5049a3884a29134d90783e5e63a69d7b878b5e4))
+* updated volto and gridGalleryTemplate ([16149e6](https://github.com/RedTurtle/design-volto-theme/commit/16149e66b1f408a7650af5c76ddd2e3f3193207e))
+* updated volto and volto-gdpr-privacy for safe cookie on https ([5a28f35](https://github.com/RedTurtle/design-volto-theme/commit/5a28f35af2da24411fdd13291c41fccc5f8a83c1))
+* updated volto for fix cookie safe ([f96aca7](https://github.com/RedTurtle/design-volto-theme/commit/f96aca7247fdf83eb1227cc8de2ae29cc38200db))
+* updated volto for images ([9c686b6](https://github.com/RedTurtle/design-volto-theme/commit/9c686b6dc6d9829d5bb1ccc9bcf2d43934be5342))
+
 ## [5.22.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.21.4...v5.22.0) (2022-04-29)
 
 
