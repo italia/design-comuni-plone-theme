@@ -69,7 +69,7 @@ const Field = ({
           onChange={(e) => {
             onChange(name, e.target.value);
           }}
-          {...(value ? { value } : {})}
+          value={value ?? ''}
         />
       )}
       {field_type === 'textarea' && (
