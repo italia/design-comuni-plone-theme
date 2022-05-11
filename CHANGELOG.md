@@ -1,3 +1,16 @@
+### [5.22.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.3...v5.22.4) (2022-05-11)
+
+
+### Bug Fixes
+
+* disabled scroll on mousewheel on maps on desktop ([7c54b05](https://github.com/RedTurtle/design-volto-theme/commit/7c54b05bf0d568439a31cf00b90c50dfe97de7b9))
+* fixed image width in slider template listing ([b80ac44](https://github.com/RedTurtle/design-volto-theme/commit/b80ac4444cf570829e39471151b25ed00507d535))
+
+
+### Maintenance
+
+* updated volto for configurable identifier login field ([7313b7a](https://github.com/RedTurtle/design-volto-theme/commit/7313b7ac01b266d857c0fd581c819f7372e70095))
+
 ### [5.22.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.2...v5.22.3) (2022-05-11)
 
 
