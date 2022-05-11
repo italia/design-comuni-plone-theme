@@ -184,7 +184,7 @@
     "@fortawesome/free-regular-svg-icons": "5.14.0",
     "@fortawesome/free-solid-svg-icons": "5.14.0",
     "@fortawesome/react-fontawesome": "0.1.11",
-    "@plone/volto": "plone/volto#c64183d7694bb1cc89957b2bd18448c4e40e448c",
+    "@plone/volto": "plone/volto#bf037ee6a4bca11d6b9a3c30b3268638ca12964b",
     "@tinymce/tinymce-react": "3.8.1",
     "bootstrap-italia": "1.3.9",
     "classnames": "2.2.6",

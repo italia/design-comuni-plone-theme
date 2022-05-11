@@ -98,6 +98,7 @@ export default function applyConfig(voltoConfig) {
     verticalFormTabs: true,
     showTags: false,
     showSelfRegistration: false,
+    useEmailAsLogin: false,
     defaultPageSize: 24,
     cookieExpires: 15552000, //6 month
     serverConfig: {
