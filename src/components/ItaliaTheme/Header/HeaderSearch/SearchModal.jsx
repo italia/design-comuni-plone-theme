@@ -195,6 +195,9 @@ const SearchModal = ({ closeModal, show }) => {
       setTimeout(() => {
         inputRef.current.focus();
       }, 100);
+      document.body.setAttribute('style', 'overflow: hidden'); //to prevent scroll body
+    } else {
+      document.body.removeAttribute('style'); //re-enable scroll body
     }
   }, [show]);
 
