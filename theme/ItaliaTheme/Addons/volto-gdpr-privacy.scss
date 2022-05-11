@@ -14,6 +14,15 @@
 
     .gdpr-privacy-settings {
       .settings-column {
+        .settings-title {
+          .ui.checkbox.toggle label {
+            display: flex;
+            align-items: center;
+            padding-right: 4.5rem;
+            line-height: 1.2rem;
+          }
+        }
+
         .ui.checkbox {
           position: relative;
           display: inline-block;
@@ -29,7 +38,6 @@
           label {
             position: relative;
             display: block;
-            font-size: 1em;
             outline: none;
             transition: color 0.1s ease;
 
@@ -45,7 +53,7 @@
             }
           }
 
-          input[type='radio'] {
+          input[type='checkbox'] {
             position: absolute;
             top: 0px;
             left: 0px;
@@ -60,22 +68,11 @@
 
           input[disabled] ~ label {
             cursor: default !important;
-            opacity: 0.5;
           }
 
           input.hidden + label {
             cursor: pointer;
             user-select: none;
-          }
-
-          input:checked ~ label:before {
-            border: 1px solid $primary;
-            background: #ffffff;
-            box-shadow: none;
-          }
-
-          input:focus ~ label {
-            color: #878f93;
           }
 
           &.toggle {
@@ -111,6 +108,7 @@
             label {
               min-height: 1.5rem;
               padding-top: 0.15em;
+              padding-right: 3.5rem;
               color: rgba(0, 0, 0, 0.87);
 
               &:before {
@@ -121,9 +119,7 @@
                 width: 3.5rem;
                 height: 1.5rem;
                 border: none;
-                background: rgba(0, 0, 0, 0.05);
                 border-radius: 500rem;
-                box-shadow: none;
                 content: '';
                 transform: none;
               }
