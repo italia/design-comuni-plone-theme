@@ -74,6 +74,11 @@ const LocationsMap = ({ center, locations }) => {
           center={[venuesData[0].latitude, venuesData[0].longitude]}
           markers={venuesData}
           showTooltip
+          mapOptions={{
+            scrollWheelZoom: false,
+            // tap: false,
+            // dragging: false,
+          }}
         />
       )}
     </>

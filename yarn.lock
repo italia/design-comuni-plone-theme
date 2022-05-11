@@ -17716,9 +17716,9 @@ volto-subsites@collective/volto-subsites#v2.1.0:
   dependencies:
     "@plone/scripts" "^1.0.3"
 
-volto-venue@collective/volto-venue#v3.1.2:
-  version "3.1.2"
-  resolved "https://codeload.github.com/collective/volto-venue/tar.gz/dfa0ac263f0a4ebbc61a0805c3d8704caf719a50"
+volto-venue@collective/volto-venue#v3.2.0:
+  version "3.2.0"
+  resolved "https://codeload.github.com/collective/volto-venue/tar.gz/f54c581cd24e61d86e5062a1414c7846592b67f7"
   dependencies:
     "@plone/scripts" "*"
     leaflet "1.6.0"
