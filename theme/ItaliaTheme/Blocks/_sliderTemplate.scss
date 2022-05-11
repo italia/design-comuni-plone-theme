@@ -114,8 +114,11 @@
           }
 
           img {
+            width: auto;
             min-width: 100%;
             min-height: 400px;
+            margin-left: 50%;
+            transform: translateX(-50%);
           }
 
           figcaption {
