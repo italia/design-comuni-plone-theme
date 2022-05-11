@@ -1,3 +1,10 @@
+### [5.22.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.2...v5.22.3) (2022-05-11)
+
+
+### Bug Fixes
+
+* form uncontrolled field and formatted date sent ([8e38451](https://github.com/RedTurtle/design-volto-theme/commit/8e384516618b9f219443314160951533647cedc3))
+
 ### [5.22.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.1...v5.22.2) (2022-05-11)
 
 
