@@ -83,7 +83,15 @@ const MapTemplate = ({
               ['size_' + map_size]: map_size,
             })}
           >
-            <OSMMap markers={markers} showTooltip />
+            <OSMMap
+              markers={markers}
+              showTooltip
+              mapOptions={{
+                scrollWheelZoom: false,
+                // tap: false,
+                // dragging: false,
+              }}
+            />
           </Row>
         ) : (
           intl.formatMessage(messages.no_markers)

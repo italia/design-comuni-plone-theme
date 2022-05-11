@@ -74,6 +74,11 @@ const VenueWhere = ({ content }) => {
                 title: content.title,
               },
             ]}
+            mapOptions={{
+              scrollWheelZoom: false,
+              // tap: false,
+              // dragging: false,
+            }}
           />
         )}
       {content.circoscrizione && (

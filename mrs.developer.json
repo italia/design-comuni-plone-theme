@@ -18,7 +18,7 @@
     "path": "src",
     "https": "https://github.com/collective/volto-venue.git",
     "url": "git@github.com:collective/volto-venue.git",
-    "tag": "v3.1.2"
+    "tag": "v3.2.0"
   },
   "volto-subblocks": {
     "package": "@italia/addons/volto-subblocks",
