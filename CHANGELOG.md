@@ -1,3 +1,15 @@
+### [5.22.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.1...v5.22.2) (2022-05-11)
+
+
+### Bug Fixes
+
+* fixed volto version ([6fdcd73](https://github.com/RedTurtle/design-volto-theme/commit/6fdcd73370211d23f56703a33b501e48b7c2a45d))
+
+
+### Maintenance
+
+* update volto-gdpr-privacy v1.3.6 ([4ddd56b](https://github.com/RedTurtle/design-volto-theme/commit/4ddd56be55f07d3ce3cd904d45fe89f86b0b22e6))
+
 ### [5.22.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.0...v5.22.1) (2022-05-10)
 
 
