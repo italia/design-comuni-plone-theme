@@ -1,3 +1,17 @@
+### [5.22.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.4...v5.22.5) (2022-05-12)
+
+
+### Bug Fixes
+
+* fix video ([77a9913](https://github.com/RedTurtle/design-volto-theme/commit/77a991325eb3b12396bb46c92630e2d0d3c9e2d1))
+* prevent body scroll on search modal opened ([c5b2a84](https://github.com/RedTurtle/design-volto-theme/commit/c5b2a84a32dd363dc55cbd7c433252377bea1377))
+
+
+### Maintenance
+
+* added class search-modal-opened to body ([588729a](https://github.com/RedTurtle/design-volto-theme/commit/588729acbc1716c2ef934c671e84baa402e67997))
+* updated volto-gdpr-privacy to fix video view list ([e8a894e](https://github.com/RedTurtle/design-volto-theme/commit/e8a894ec97a6a068bf46961145b4515c3a45826a))
+
 ### [5.22.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.3...v5.22.4) (2022-05-11)
 
 
