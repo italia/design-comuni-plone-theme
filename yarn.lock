@@ -1954,9 +1954,9 @@
     pofile "1.0.10"
     razzle "3.4.5"
 
-"@plone/volto@plone/volto#bf037ee6a4bca11d6b9a3c30b3268638ca12964b":
-  version "15.10.0"
-  resolved "https://codeload.github.com/plone/volto/tar.gz/bf037ee6a4bca11d6b9a3c30b3268638ca12964b"
+"@plone/volto@plone/volto#88184a72cab99f09d2e16733adabf8f7adf4c992":
+  version "15.10.1"
+  resolved "https://codeload.github.com/plone/volto/tar.gz/88184a72cab99f09d2e16733adabf8f7adf4c992"
   dependencies:
     "@babel/plugin-proposal-export-default-from" "7.10.4"
     "@babel/plugin-proposal-export-namespace-from" "7.10.4"
@@ -17653,9 +17653,9 @@ volto-form-block@collective/volto-form-block#v2.3.1:
     react-google-recaptcha-v3 "^1.8.0"
     volto-subblocks collective/volto-subblocks#v1.0.1
 
-volto-gdpr-privacy@collective/volto-gdpr-privacy#v1.3.7:
-  version "1.3.7"
-  resolved "https://codeload.github.com/collective/volto-gdpr-privacy/tar.gz/521c87f3eac8c74c0b2f28c25ee94b679971b164"
+volto-gdpr-privacy@collective/volto-gdpr-privacy#v1.3.8:
+  version "1.3.8"
+  resolved "https://codeload.github.com/collective/volto-gdpr-privacy/tar.gz/bec1d74672f27df3f6edb2fab185361c2aa87add"
 
 volto-google-analytics@collective/volto-google-analytics#v1.2.5:
   version "1.2.5"
