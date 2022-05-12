@@ -190,11 +190,13 @@ const SearchModal = ({ closeModal, show }) => {
   }, []);
 
   useEffect(() => {
-    //setta il focus sul campo di ricerca all'apertura della modale
     if (show) {
       setTimeout(() => {
-        inputRef.current.focus();
+        inputRef.current.focus(); //setta il focus sul campo di ricerca all'apertura della modale
       }, 100);
+      document.body.classList.add('search-modal-opened'); //to prevent scroll body
+    } else {
+      document.body.classList.remove('search-modal-opened'); //re-enable scroll body
     }
   }, [show]);
 

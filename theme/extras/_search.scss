@@ -1,3 +1,7 @@
+body.search-modal-opened {
+  overflow: hidden; /*to disable scroll on search modal opened*/
+}
+
 .it-search-wrapper {
   .search-link {
     cursor: pointer;
