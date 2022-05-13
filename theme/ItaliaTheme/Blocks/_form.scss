@@ -162,6 +162,11 @@
   }
 }
 
+.public-ui .form-control:disabled + label,
+.public-ui .form-control[readonly] + label {
+  @extend .active;
+}
+
 .grecaptcha-badge {
   bottom: 115px !important;
 }
