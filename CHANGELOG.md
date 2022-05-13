@@ -1,3 +1,10 @@
+### [5.22.6](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.5...v5.22.6) (2022-05-13)
+
+
+### Bug Fixes
+
+* fixed nowrap of startic form label ([91ace05](https://github.com/RedTurtle/design-volto-theme/commit/91ace052adc8c1e4d2a8f9689391ae3a98184d96))
+
 ### [5.22.5](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.4...v5.22.5) (2022-05-12)
 
 
