@@ -1,3 +1,15 @@
+### [5.22.7](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.6...v5.22.7) (2022-05-13)
+
+
+### Bug Fixes
+
+* fixed static form fields id and disabled field label style ([1764a89](https://github.com/RedTurtle/design-volto-theme/commit/1764a899349820902590814cf0151de5e4c7faab))
+
+
+### Maintenance
+
+* updated volto-form-block ([ec34c9c](https://github.com/RedTurtle/design-volto-theme/commit/ec34c9c7523c2475ae674dc552c5329d3b4c625a))
+
 ### [5.22.6](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.5...v5.22.6) (2022-05-13)
 
 
