@@ -33,7 +33,9 @@
       position: unset;
       margin-bottom: 0;
       line-height: 1rem;
+      line-height: 1.3rem;
       transform: unset;
+      white-space: normal;
     }
 
     &.is-invalid {
@@ -53,8 +55,9 @@
       color: $select-label-color;
       font-size: $select-label-size;
       font-weight: $select-label-weight;
-      line-height: calc(2.5rem - 1px);
+      line-height: 1.3rem;
       transform: none;
+      white-space: normal;
     }
 
     small {
