@@ -6,8 +6,9 @@ E' basato sulle linee guida versione 2020.1 e questo tema estende il tema base d
 
 Inoltre questo prodotto gestisce e implementa anche tutte le tipologia di contenuto (Content Type) delle linee guida.
 Il sistema implementa anche un tipo di contenuto ad hoc per la gestione di sottositi, in linee con le indicazioni generali.
+
 Si veda ad esempio:
-[Comune di Modena: Informagiovani] (https://www.comune.modena.it/informagiovani)
+[Comune di Modena: Informagiovani](https://www.comune.modena.it/informagiovani)
 
 ## Esempi di siti che usano questo tema
 
