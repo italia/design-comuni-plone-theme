@@ -30,7 +30,6 @@ It is built on guidelines' version 2020.1 and it's the successor on Volto of Plo
 - [NNB Ispra Ambiente](https://www.nnb.isprambiente.it)
 - [Nuovo Circondario Imolese](https://www.nuovocircondarioimolese.it)
 - [Ospedali Galliera - Bilancio Sociale](https://bilanciosociale.galliera.it)
-- [Ospedale S.Anna Ferrara](https://www.ospfe.it/)
 - [Provincia di Pisa](https://www.provincia.pisa.it/)
 - [UCMAN (Unione dei Comuni Modenesi Area Nord)](https://www.unioneareanord.mo.it/)
 - [Unione Val d'Enza](https://www.unionevaldenza.it/)
