@@ -1,3 +1,42 @@
+.public-ui {
+  .block.form {
+    .form-group {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        @extend .active;
+
+        order: 1;
+        position: relative;
+        transform: none;
+        white-space: normal;
+        line-height: 1.3rem;
+
+        &.active {
+          transform: none;
+        }
+      }
+
+      input,
+      textarea,
+      .form-input-file {
+        order: 2;
+      }
+
+      input[type='date'] ~ label {
+        font-size: 0.777rem;
+        // transform: translateY(-75%);
+      }
+
+      small.form-text {
+        order: 3;
+        position: relative;
+      }
+    }
+  }
+}
+
 .block.form {
   .block-description {
     margin-bottom: 1rem;
@@ -32,7 +71,6 @@
     > label {
       position: unset;
       margin-bottom: 0;
-      line-height: 1rem;
       line-height: 1.3rem;
       transform: unset;
       white-space: normal;
@@ -98,11 +136,6 @@
     }
   }
 
-  .form-group input[type='date'] ~ label {
-    font-size: 0.777rem;
-    transform: translateY(-75%);
-  }
-
   textarea {
     border: 1px solid rgba(1, 1, 1, 0.1);
 
@@ -123,6 +156,10 @@
 
     .dropzone-text {
       margin: 0;
+    }
+
+    .dropzone-placeholder {
+      margin-top: 0;
     }
 
     .image-preview {
