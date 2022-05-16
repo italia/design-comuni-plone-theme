@@ -1,4 +1,4 @@
-# design-volto-theme
+# Tema di Plone per la Pubblica Amministrazione
 
 Volto Theme for [Italia design guidelines](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/it/stabile/index.html) using [bootstrap-italia](https://italia.github.io/bootstrap-italia/).
 
