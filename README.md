@@ -4,13 +4,13 @@ Tema Volto per il CMS Plone che rispetta le indicazioni [Linee guida di design p
 
 E' basato sulle linee guida versione 2020.1 e questo tema estende il tema base di Volto [design.plone.theme](https://github.com/italia/design.plone.theme/).
 
-Inoltre questo prodotto gestisce e implementa anche tutte le tipologia di contenuto (Content Type) delle linee guida.
+Questo prodotto non è solo un tema grafico ma gestisce e implementa anche tutte le tipologia di contenuto (Content Type) delle linee guida.
 Il sistema implementa anche un tipo di contenuto ad hoc per la gestione di sottositi, in linee con le indicazioni generali.
 
 Si veda ad esempio:
 [Comune di Modena: Informagiovani](https://www.comune.modena.it/informagiovani)
 
-## Esempi di siti che usano questo tema
+## Esempi di siti che usano questo tema/sistema:
 
 - [ASP Comuni Modenesi Area Nord](https://www.aspareanord.it/)
 - [Azienda Ospedaliero-Universitaria di Ferrara](https://www.ospfe.it/)
