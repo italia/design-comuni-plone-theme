@@ -7,6 +7,7 @@ It is built on guidelines' version 2020.1 and it's the successor on Volto of Plo
 ## Examples
 
 - [Comune di Modena](https://www.comune.modena.it/)
+- [Comune di Parma](https://www.comune.parma.it/)
 - [CCIAA Umbria](https://www.umbria.camcom.it/)
 - [Comune di Medolla](https://www.comune.medolla.mo.it/)
 - [Comune di Mirandola](https://www.comune.mirandola.mo.it/)
