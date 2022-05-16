@@ -12,7 +12,7 @@ It is built on guidelines' version 2020.1 and it's the successor on Volto of Plo
 - [Biblioteche Pianura Est](https://bibest.it)
 - [Camera di Commercio dell'Umbria](https://www.umbria.camcom.it/)
 - [Camera di Commercio di Reggio Emilia](https://www.re.camcom.gov.it/)
-- [Comune di Bibbiano (Val d'Enza)](https://www.comune.bibbiano.re.it/)
+- [Comune di Bibbiano](https://www.comune.bibbiano.re.it/)
 - [Comune di Camposanto](https://www.comune.camposanto.mo.it/)
 - [Comune di Cantagallo](https://www.comune.cantagallo.po.it/)
 - [Comune di Imola](https://www.comune.imola.bo.it)
