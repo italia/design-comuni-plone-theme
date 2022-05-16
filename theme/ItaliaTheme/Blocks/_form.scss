@@ -6,12 +6,12 @@
 
       label {
         @extend .active;
+        position: relative;
 
         order: 1;
-        position: relative;
+        line-height: 1.3rem;
         transform: none;
         white-space: normal;
-        line-height: 1.3rem;
 
         &.active {
           transform: none;
@@ -26,12 +26,12 @@
 
       input[type='date'] ~ label {
         font-size: 0.777rem;
-        // transform: translateY(-75%);
+        transform: none;
       }
 
       small.form-text {
-        order: 3;
         position: relative;
+        order: 3;
       }
     }
   }
@@ -134,6 +134,11 @@
         }
       }
     }
+  }
+
+  .form-group input[type='date'] ~ label {
+    font-size: 0.777rem;
+    transform: translateY(-75%);
   }
 
   textarea {
