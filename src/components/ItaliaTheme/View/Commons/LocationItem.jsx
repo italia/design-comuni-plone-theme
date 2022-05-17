@@ -61,7 +61,20 @@ const LocationItem = ({
       {show_icon && <Icon icon={'it-pin'} />}
       <div className="card-body">
         <h5 className="card-title">
-          {location_fo.nome_sede || location_fo.title}
+          {location_fo.nome_sede || (
+            <>
+              {location_fo['@type'] === 'Venue' ? (
+                <Link
+                  to={flattenToAppURL(location_fo['@id'])}
+                  title={location_fo.title || ''}
+                >
+                  {location_fo.title}
+                </Link>
+              ) : (
+                location_fo.title
+              )}
+            </>
+          )}
         </h5>
         <div className="card-text">
           <p>{address}</p>
