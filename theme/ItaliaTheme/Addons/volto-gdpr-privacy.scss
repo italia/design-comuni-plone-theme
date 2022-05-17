@@ -1,4 +1,6 @@
 .gdpr-privacy-banner {
+  z-index: 9999;
+
   .close-button {
     color: #000;
 
@@ -15,10 +17,13 @@
     .gdpr-privacy-settings {
       .settings-column {
         .settings-title {
+          padding-bottom: 0.5rem;
+
           .ui.checkbox.toggle label {
             display: flex;
             align-items: center;
             padding-right: 4.5rem;
+            margin-bottom: 0;
             line-height: 1.2rem;
           }
         }
@@ -166,6 +171,10 @@
             }
           }
         }
+      }
+
+      .choices .choice-title .ui.toggle.checkbox label {
+        margin-bottom: 0;
       }
     }
   }
