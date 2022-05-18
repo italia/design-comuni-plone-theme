@@ -1,3 +1,16 @@
+### [5.22.8](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.7...v5.22.8) (2022-05-18)
+
+
+### Bug Fixes
+
+* updated volto to fix missing node 12 engine ([3b1d9e3](https://github.com/RedTurtle/design-volto-theme/commit/3b1d9e34447e15c62b31667c1140563343f4a347))
+
+
+### Maintenance
+
+* added more example sites ([c7abfc8](https://github.com/RedTurtle/design-volto-theme/commit/c7abfc8086d7b615b87692a6e1b22fb33caa911a))
+* extended compatibility to node 16 ([a369282](https://github.com/RedTurtle/design-volto-theme/commit/a36928267c300525b87bc51f651f55be6b388fca))
+
 ### [5.22.7](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.6...v5.22.7) (2022-05-13)
 
 
