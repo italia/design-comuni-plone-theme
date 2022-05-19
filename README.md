@@ -28,6 +28,8 @@ Si veda ad esempio:
 - [Comune di Modena](https://www.comune.modena.it/)
 - [Comune di Montecchio Emilia](https://www.comune.montecchio-emilia.re.it/)
 - [Comune di Parma](https://www.comune.parma.it/)
+- [Comune di Piacenza](https://www.comune.piacenza.it/)
+- [Comune di Reggio Emilia](https://www.comune.re.it/)
 - [Comune di San Lazzaro di Savena](https://www.comune.sanlazzaro.bo.it)
 - [Comune di San Polo d'Enza](https://www.comune.sanpolodenza.re.it/)
 - [Comune di San Possidonio](https://www.comune.sanpossidonio.mo.it/)
