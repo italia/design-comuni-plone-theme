@@ -1,6 +1,6 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import moment from 'moment/min/moment-with-locales';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import PropTypes from 'prop-types';
 
 /**
@@ -17,8 +17,9 @@ const messages = defineMessages({
   },
 });
 
-const PageHeaderNewsItem = ({ content }) => {
+const PageHeaderNewsItem = ({ content, moment: Moment }) => {
   const intl = useIntl();
+  const moment = Moment.default;
   moment.locale(intl.locale);
 
   return (
@@ -34,7 +35,7 @@ const PageHeaderNewsItem = ({ content }) => {
     </>
   );
 };
-export default PageHeaderNewsItem;
+export default injectLazyLibs(['moment'])(PageHeaderNewsItem);
 
 PageHeaderNewsItem.propTypes = {
   params: PropTypes.shape({

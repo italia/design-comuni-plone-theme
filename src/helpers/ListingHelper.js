@@ -30,10 +30,10 @@ const Intl = () => {
   return intl;
 };
 
-export const getCalendarDate = (item) => {
+export const getCalendarDate = (item, moment) => {
   const intl = Intl();
   const effective = item.effective && (
-    <span>{viewDate(intl.locale, item.effective, 'll')}</span>
+    <span>{viewDate(intl.locale, moment, item.effective, 'll')}</span>
   );
 
   let ret = null;
@@ -60,7 +60,7 @@ export const getCalendarDate = (item) => {
       ret = null;
   }
 
-  const custom_ret = getCalendarDate_extend(item);
+  const custom_ret = getCalendarDate_extend(item, moment);
 
   return custom_ret || ret;
 };

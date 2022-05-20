@@ -157,7 +157,7 @@ const SimpleCardTemplateDefault = (props) => {
         {items.map((item, index) => {
           const icon = show_icon ? getItemIcon(item) : null;
           const itemTitle = item.title || item.id;
-          const date = hide_dates ? null : getCalendarDate(item);
+          const date = hide_dates ? null : getCalendarDate(item, moment);
           const eventRecurrenceMore = hide_dates
             ? null
             : getEventRecurrenceMore(item, isEditMode);

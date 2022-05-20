@@ -1,9 +1,11 @@
-import { defineMessages, useIntl } from 'react-intl';
 import React from 'react';
-
+import { defineMessages, useIntl } from 'react-intl';
 import cx from 'classnames';
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 import PropTypes from 'prop-types';
+
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+
 import { viewDate } from '@italia/helpers';
 
 const messages = defineMessages({
@@ -37,8 +39,12 @@ const Metadata = ({
   noMargin = false,
   title,
   children,
+  moment: Moment,
 }) => {
   const intl = useIntl();
+  const moment = Moment.default;
+  moment.locale(intl.locale);
+
   return (
     <article
       id="metadata"
@@ -52,7 +58,7 @@ const Metadata = ({
         {intl.formatMessage(messages.modified)}
       </p>
       <strong>
-        {viewDate(intl.locale, content.modified, 'DD-MM-Y HH:MM')}
+        {viewDate(intl.locale, moment, content.modified, 'DD-MM-Y HH:MM')}
       </strong>
       {content.rights && (
         <>
@@ -85,7 +91,8 @@ const Metadata = ({
     </article>
   );
 };
-export default Metadata;
+
+export default injectLazyLibs(['moment'])(Metadata);
 
 Metadata.propTypes = {
   content: PropTypes.object,

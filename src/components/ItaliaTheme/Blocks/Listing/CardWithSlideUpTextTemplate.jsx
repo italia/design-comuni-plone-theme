@@ -4,7 +4,10 @@ import {
   Container,
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
+
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
+
 import { getCalendarDate } from '@italia/helpers';
 import {
   ListingLinkMore,
@@ -23,6 +26,8 @@ const messages = defineMessages({
 
 const CardWithSlideUpTextTemplate = (props) => {
   const intl = useIntl();
+  const moment = props.moment.default;
+  moment.locale(intl.locale);
 
   const {
     items,
@@ -44,7 +49,7 @@ const CardWithSlideUpTextTemplate = (props) => {
           {items.map((item, index) => {
             let image = getListingImageBackground(item, 'teaser');
             const category = getCategory(item, show_type, show_section, props);
-            const date = hide_dates ? null : getCalendarDate(item);
+            const date = hide_dates ? null : getCalendarDate(item, moment);
 
             return (
               <UniversalLink
@@ -98,4 +103,4 @@ CardWithSlideUpTextTemplate.propTypes = {
   linkHrefs: PropTypes.any,
 };
 
-export default CardWithSlideUpTextTemplate;
+export default injectLazyLibs(['moment'])(CardWithSlideUpTextTemplate);

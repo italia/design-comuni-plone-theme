@@ -8,6 +8,7 @@ import useDeepCompareEffect from 'use-deep-compare-effect';
 import { getCalendarDayResults } from '@italia/actions';
 import { ConditionalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 import { viewDate } from '@italia/helpers';
 
@@ -26,15 +27,17 @@ const messages = defineMessages({
   },
 });
 
-const Item = ({ day, path, query, inEditMode }) => {
+const Item = ({ day, path, query, inEditMode, moment: Moment }) => {
   const intl = useIntl();
+  const moment = Moment.default;
+  moment.locale(intl.locale);
 
   const calendarDayResults = useSelector(
     (state) => state.calendarDaySearch.subrequests,
   );
   const dispatch = useDispatch();
 
-  const _day = viewDate(intl.locale, day);
+  const _day = viewDate(intl.locale, moment, day);
   const dayStart = _day.startOf('day').format('YYYY/MM/DD HH:mm');
   const dayEnd = _day.endOf('day').format('YYYY/MM/DD HH:mm');
 
@@ -113,4 +116,5 @@ const Item = ({ day, path, query, inEditMode }) => {
     </div>
   );
 };
-export default Item;
+
+export default injectLazyLibs(['moment'])(Item);

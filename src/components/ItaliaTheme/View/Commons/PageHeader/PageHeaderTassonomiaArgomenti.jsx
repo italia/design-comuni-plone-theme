@@ -1,9 +1,9 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import moment from 'moment/min/moment-with-locales';
 import PropTypes from 'prop-types';
-
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
+
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
 /**
@@ -20,8 +20,9 @@ const messages = defineMessages({
   },
 });
 
-const PageHeaderTassonomiaArgomenti = ({ content }) => {
+const PageHeaderTassonomiaArgomenti = ({ content, moment: Moment }) => {
   const intl = useIntl();
+  const moment = Moment.default;
   moment.locale(intl.locale);
 
   return content?.tassonomia_argomenti?.length > 0 ? (
@@ -44,7 +45,8 @@ const PageHeaderTassonomiaArgomenti = ({ content }) => {
     </div>
   ) : null;
 };
-export default PageHeaderTassonomiaArgomenti;
+
+export default injectLazyLibs(['moment'])(PageHeaderTassonomiaArgomenti);
 
 PageHeaderTassonomiaArgomenti.propTypes = {
   params: PropTypes.shape({

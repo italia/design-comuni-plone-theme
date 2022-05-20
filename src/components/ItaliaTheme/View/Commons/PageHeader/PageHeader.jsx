@@ -1,8 +1,8 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import moment from 'moment/min/moment-with-locales';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import Image from '@plone/volto/components/theme/Image/Image';
 
 import {
@@ -38,6 +38,7 @@ const messages = defineMessages({
 
 const PageHeader = (props) => {
   const intl = useIntl();
+  const moment = props.moment.default;
   moment.locale(intl.locale);
 
   return (
@@ -117,7 +118,8 @@ const PageHeader = (props) => {
     </div>
   );
 };
-export default PageHeader;
+
+export default injectLazyLibs(['moment'])(PageHeader);
 
 PageHeader.propTypes = {
   params: PropTypes.shape({
