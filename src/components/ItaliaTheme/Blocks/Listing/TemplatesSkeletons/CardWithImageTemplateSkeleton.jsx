@@ -2,9 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import { useIntl } from 'react-intl';
-import moment from 'moment';
-import 'moment/min/locales';
 import {
   Container,
   Row,
@@ -27,9 +24,6 @@ const CardWithImageTemplateSkeleton = ({
   hide_dates = false,
   full_width = true,
 }) => {
-  const intl = useIntl();
-  moment.locale(intl.locale);
-
   return (
     <div className="card-with-image-template">
       <Container className="px-4">

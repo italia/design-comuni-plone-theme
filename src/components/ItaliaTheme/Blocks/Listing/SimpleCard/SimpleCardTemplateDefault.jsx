@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import moment from 'moment';
 import 'moment/min/locales';
-import { UniversalLink } from '@plone/volto/components';
 import cx from 'classnames';
 import {
   Card,
@@ -15,9 +13,12 @@ import {
   Row,
   Col,
 } from 'design-react-kit/dist/design-react-kit';
+
+import { UniversalLink } from '@plone/volto/components';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+
 import { CardCategory } from '@italia/components/ItaliaTheme';
 import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
-
 import {
   getItemIcon,
   ListingCategory,
@@ -32,6 +33,7 @@ const messages = defineMessages({
 
 const SimpleCardTemplateDefault = (props) => {
   const intl = useIntl();
+  const moment = props.moment.default;
   moment.locale(intl.locale);
 
   const {
@@ -229,4 +231,4 @@ SimpleCardTemplateDefault.propTypes = {
   linkHref: PropTypes.any,
 };
 
-export default SimpleCardTemplateDefault;
+export default injectLazyLibs(['moment'])(SimpleCardTemplateDefault);
