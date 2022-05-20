@@ -104,6 +104,10 @@
     margin-top: 0;
   }
 
+  div.read-more {
+    position: relative;
+  }
+
   .read-more {
     display: flex;
     align-items: flex-end;
@@ -113,6 +117,11 @@
     margin-right: -0.35rem;
 
     a.read-more {
+      bottom: 0;
+      right: 0;
+      top: 1rem;
+      padding-top: 0.75rem;
+
       @media (max-width: 585px) {
         display: flex;
         flex-direction: row;
@@ -144,6 +153,10 @@
   .open {
     // background-color: #00cf86;
     background-color: $complementary-3-a5;
+  }
+
+  .scheduled {
+    background-color: $analogue-1-b5;
   }
 
   .closed {

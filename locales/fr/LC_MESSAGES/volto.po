@@ -722,6 +722,11 @@ msgstr ""
 msgid "amministrazione"
 msgstr "Administration"
 
+#: components/ItaliaTheme/View/Commons/BandoDates
+# defaultMessage: Apertura del bando
+msgid "apertura_bando"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
 # defaultMessage: APPStore Link
 msgid "appStoreLink"
@@ -963,6 +968,12 @@ msgstr "Actif"
 # defaultMessage: Scadenza partecipazione
 msgid "bando_scadenza"
 msgstr "Date d'expiration"
+
+#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
+# defaultMessage: Programmato
+msgid "bando_scheduled"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 # defaultMessage: Stato:
