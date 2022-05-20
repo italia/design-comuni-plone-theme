@@ -141,9 +141,6 @@ const Block = ({
                   onClick={() => {
                     setSelected('content');
                   }}
-                  onFocus={() => {
-                    setSelected('content');
-                  }}
                 >
                   <CardText>
                     <TextEditorWidget
@@ -162,9 +159,6 @@ const Block = ({
                       onAddBlock={onAddBlock}
                       index={index}
                       prevFocus="title"
-                      setFocus={(f) => {
-                        setSelected(f);
-                      }}
                       disableMoveToNearest={true}
                     />
                   </CardText>

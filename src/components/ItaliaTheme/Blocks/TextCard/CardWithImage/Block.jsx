@@ -176,9 +176,6 @@ const Block = ({
                     onClick={() => {
                       setSelected('content');
                     }}
-                    onFocus={() => {
-                      setSelected('content');
-                    }}
                   >
                     <CardText
                       className="simple-text-card text"
@@ -197,9 +194,6 @@ const Block = ({
                         onSelectBlock={onSelectBlock}
                         onAddBlock={onAddBlock}
                         prevFocus="title"
-                        setFocus={(f) => {
-                          setSelected(f);
-                        }}
                         index={index}
                         disableMoveToNearest={true}
                       />
