@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
-import { Link } from 'react-router-dom';
+import { UniversalLink } from '@plone/volto/components';
 import PropTypes from 'prop-types';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -61,7 +61,20 @@ const LocationItem = ({
       {show_icon && <Icon icon={'it-pin'} />}
       <div className="card-body">
         <h5 className="card-title">
-          {location_fo.nome_sede || location_fo.title}
+          {(location_fo.nome_sede || location_fo.title) && (
+            <>
+              {location_fo['@type'] === 'Venue' ? (
+                <UniversalLink
+                  href={flattenToAppURL(location_fo['@id'])}
+                  title={location_fo.title || ''}
+                >
+                  {location_fo.nome_sede || location_fo.title}
+                </UniversalLink>
+              ) : (
+                location_fo.nome_sede || location_fo.title
+              )}
+            </>
+          )}
         </h5>
         <div className="card-text">
           <p>{address}</p>
@@ -84,12 +97,12 @@ const LocationItem = ({
           )}
           {details_link && (
             <p className="mt-3">
-              <Link
-                to={flattenToAppURL(location_fo['@id'])}
+              <UniversalLink
+                href={flattenToAppURL(location_fo['@id'])}
                 title={location_fo.title || ''}
               >
                 {intl.formatMessage(messages.details)}
-              </Link>
+              </UniversalLink>
             </p>
           )}
         </div>

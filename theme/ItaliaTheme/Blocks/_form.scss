@@ -1,3 +1,51 @@
+.public-ui {
+  .block.form {
+    @media (max-width: #{map-get($grid-breakpoints, md)}) {
+      .form-group {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          position: relative;
+          order: 1;
+          font-size: 0.777rem;
+          line-height: 1.375rem;
+          transform: none;
+          transform: none;
+          white-space: normal;
+
+          &.active {
+            font-size: 0.777rem;
+            transform: none;
+          }
+        }
+
+        input,
+        textarea,
+        .form-input-file {
+          order: 2;
+        }
+
+        input[type='date'] ~ label {
+          font-size: 0.777rem;
+          transform: none;
+        }
+
+        small.form-text {
+          position: relative;
+          order: 3;
+        }
+      }
+
+      .form-input-file {
+        .dropzone-placeholder {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
 .block.form {
   .block-description {
     margin-bottom: 1rem;
@@ -32,8 +80,7 @@
     > label {
       position: unset;
       margin-bottom: 0;
-      line-height: 1rem;
-      line-height: 1.3rem;
+      line-height: 1.375rem;
       transform: unset;
       white-space: normal;
     }
@@ -55,7 +102,7 @@
       color: $select-label-color;
       font-size: $select-label-size;
       font-weight: $select-label-weight;
-      line-height: 1.3rem;
+      line-height: 1.375rem;
       transform: none;
       white-space: normal;
     }
@@ -71,8 +118,13 @@
       overflow: inherit;
       height: auto;
       margin: 1px 0;
-      line-height: 30px;
+      line-height: 1.875rem;
       white-space: normal;
+
+      @media (max-width: #{map-get($grid-breakpoints, md)}) {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+      }
     }
 
     .form-check-group {

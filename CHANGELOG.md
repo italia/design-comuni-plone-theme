@@ -1,3 +1,33 @@
+### [5.22.9](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.8...v5.22.9) (2022-05-18)
+
+
+### Bug Fixes
+
+* added animation in edit view ([a2499ab](https://github.com/RedTurtle/design-volto-theme/commit/a2499ab532d7cf4e09568ca5c613738cfcb6811b))
+* changed css rules for mobile and tablet device ([bf98fde](https://github.com/RedTurtle/design-volto-theme/commit/bf98fdee126b99a748ab863ea9af88259cab3565))
+* changed Link with UniversalLink ([578415c](https://github.com/RedTurtle/design-volto-theme/commit/578415c7ca8f50590ab2089a36a1402b6c7d38ee))
+* fixed click under disabled button and z-index cookie banner ([8be022e](https://github.com/RedTurtle/design-volto-theme/commit/8be022e7ae6283cd7cd5212656f29a673072e870))
+* fixed condition ([d168602](https://github.com/RedTurtle/design-volto-theme/commit/d1686024496180049cd11f74ef3b09a0f0ce9160))
+* wrap labels in form block and removed animation ([924e533](https://github.com/RedTurtle/design-volto-theme/commit/924e5333c302d482e1c6c41d5f743b209c24a5e3))
+
+
+### Maintenance
+
+* added link to location contact ([4fb00a3](https://github.com/RedTurtle/design-volto-theme/commit/4fb00a3508fb8d86110e0a8cf5845cba966d4113))
+
+### [5.22.8](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.7...v5.22.8) (2022-05-18)
+
+
+### Bug Fixes
+
+* updated volto to fix missing node 12 engine ([3b1d9e3](https://github.com/RedTurtle/design-volto-theme/commit/3b1d9e34447e15c62b31667c1140563343f4a347))
+
+
+### Maintenance
+
+* added more example sites ([c7abfc8](https://github.com/RedTurtle/design-volto-theme/commit/c7abfc8086d7b615b87692a6e1b22fb33caa911a))
+* extended compatibility to node 16 ([a369282](https://github.com/RedTurtle/design-volto-theme/commit/a36928267c300525b87bc51f651f55be6b388fca))
+
 ### [5.22.7](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.6...v5.22.7) (2022-05-13)
 
 
