@@ -115,7 +115,7 @@ const CountDown = ({
       ) : (
         <div className="expired">
           {intl.formatMessage(messages.expired)}{' '}
-          {viewDate(intl.locale, end, 'DD/MM/YYYY HH:mm')}
+          {viewDate(intl.locale, moment, end, 'DD/MM/YYYY HH:mm')}
         </div>
       )}
     </div>

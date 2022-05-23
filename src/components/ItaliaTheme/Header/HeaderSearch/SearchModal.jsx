@@ -271,7 +271,7 @@ const SearchModal = ({ closeModal, show, moment: Moment }) => {
     if (e.key === 'Enter') {
       submitSearch();
 
-      if (__CLIENT__)
+      if (__CLIENT__) {
         window.location.href =
           window.location.origin +
           getSearchParamsURL(
@@ -286,6 +286,7 @@ const SearchModal = ({ closeModal, show, moment: Moment }) => {
             subsite,
             intl.locale,
           );
+      }
     }
   };
 

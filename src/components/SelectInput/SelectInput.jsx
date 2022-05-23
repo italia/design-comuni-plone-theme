@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Select, { components } from 'react-select';
+import { defineMessages, useIntl } from 'react-intl';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { Icon } from '@italia/components/ItaliaTheme';
 import './select-styles.css';
-import { defineMessages, useIntl } from 'react-intl';
 
 const messages = defineMessages({
   select_noOptionsMessage: {
@@ -87,52 +87,62 @@ const messages = defineMessages({
   },
 });
 
-const SelectContainer = ({ children, ...props }) => {
-  return (
-    <div>
-      <components.SelectContainer {...props}>
-        {children}
-      </components.SelectContainer>
-    </div>
-  );
-};
+const SelectContainer = injectLazyLibs('reactSelect')(
+  ({ children, ...props }) => {
+    const components = props.reactSelect.components;
+    return (
+      <div>
+        <components.SelectContainer {...props}>
+          {children}
+        </components.SelectContainer>
+      </div>
+    );
+  },
+);
 
 SelectContainer.propTypes = {
   children: PropTypes.node,
 };
 
-const Option = (props) => {
+const Option = injectLazyLibs('reactSelect')((props) => {
+  const components = props.reactSelect.components;
   return (
     <div className="select-pill text-primary">
       <components.Option {...props} />
     </div>
   );
-};
-const MenuList = ({ children, ...props }) => {
+});
+
+const MenuList = injectLazyLibs('reactSelect')(({ children, ...props }) => {
+  const components = props.reactSelect.components;
   return (
     <div>
       <components.MenuList {...props}>{children}</components.MenuList>
     </div>
   );
-};
+});
 
 MenuList.propTypes = {
   children: PropTypes.node,
 };
 
-const DropdownIndicator = (props) => {
+const DropdownIndicator = injectLazyLibs('reactSelect')((props) => {
+  const components = props.reactSelect.components;
   return (
     <components.DropdownIndicator {...props}>
       <Icon icon="it-arrow-down-triangle" style={{ ariaHidden: true }} />
     </components.DropdownIndicator>
   );
-};
+});
 
-const GroupHeading = (props) => (
-  <div>
-    <components.GroupHeading {...props} />
-  </div>
-);
+const GroupHeading = injectLazyLibs('reactSelect')((props) => {
+  const components = props.reactSelect.components;
+  return (
+    <div>
+      <components.GroupHeading {...props} />
+    </div>
+  );
+});
 
 const ClearIndicator = (props) => {
   const {
@@ -285,9 +295,10 @@ const SelectInput = ({
   onChange,
   options,
   components = {},
+  reactSelect,
 }) => {
   const intl = useIntl();
-
+  const Select = reactSelect.default;
   return (
     <div className="bootstrap-select-wrapper">
       {label && <label htmlFor={id}>{label}</label>}
@@ -344,4 +355,4 @@ SelectInput.propTypes = {
   options: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
-export default SelectInput;
+export default injectLazyLibs('reactSelect')(SelectInput);

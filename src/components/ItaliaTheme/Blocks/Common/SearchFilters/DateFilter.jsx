@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useIntl, defineMessages } from 'react-intl';
-import { DateRangePicker } from 'react-dates';
+
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
@@ -177,6 +178,7 @@ const DateFilter = (props) => {
   const intl = useIntl();
   const [focusedDateInput, setFocusedDateInput] = useState(null);
   const { value, id, onChange } = props;
+  const { DateRangePicker } = props.reactDates;
 
   let isMobile = false;
   if (__CLIENT__) isMobile = window && window.innerWidth < 992;
@@ -244,4 +246,4 @@ const DateFilter = (props) => {
   );
 };
 
-export default DateFilter;
+export default injectLazyLibs(['reactDates', 'moment'])(DateFilter);

@@ -1,6 +1,4 @@
 import React from 'react';
-import { Separator } from 'draft-js-inline-toolbar-plugin';
-import { Map } from 'immutable';
 
 import Styles from '@plone/volto/config/RichTextEditor/Styles';
 
@@ -20,6 +18,7 @@ import TextSizeButton from '@italia/config/RichTextEditor/ToolbarButtons/TextSiz
 const ItaliaRichTextEditorPlugins = (props) => [];
 const ItaliaRichTextEditorInlineToolbarButtons = (props, plugins) => {
   const linkPlugin = plugins.filter((p) => p.LinkButton != null)[0];
+  const Separator = props.draftJsInlineToolbarPlugin.Separator;
 
   const buttons = Styles(props);
   const {
@@ -38,37 +37,19 @@ const ItaliaRichTextEditorInlineToolbarButtons = (props, plugins) => {
     Separator,
     BoldButton,
     ItalicButton,
-    UnderlineButton,
-    TextSizeButton,
+    UnderlineButton(props),
+    TextSizeButton(props),
     Separator,
-    HeadingsButton,
+    HeadingsButton(props),
     linkPlugin.LinkButton,
-    ButtonsButton,
+    ButtonsButton(props),
     Separator,
     UnorderedListButton,
     OrderedListButton,
     BlockquoteButton,
-    CalloutsButton,
+    CalloutsButton(props),
   ];
 };
-
-const blockRenderMap = Map({
-  'align-center': {
-    element: 'p',
-  },
-  'align-right': {
-    element: 'p',
-  },
-  'align-justify': {
-    element: 'p',
-  },
-  'callout-bg': {
-    element: 'p',
-  },
-  buttons: {
-    element: 'p',
-  },
-});
 
 const renderHTMLBlock = (child) => {
   return child.map((subchild) => {
@@ -169,6 +150,27 @@ export default function applyConfig(config) {
     const { extendedBlockRenderMap, blockStyleFn, listBlockTypes } = Blocks(
       props,
     );
+
+    const { immutableLib } = props;
+    const { Map } = immutableLib;
+
+    const blockRenderMap = Map({
+      'align-center': {
+        element: 'p',
+      },
+      'align-right': {
+        element: 'p',
+      },
+      'align-justify': {
+        element: 'p',
+      },
+      'callout-bg': {
+        element: 'p',
+      },
+      buttons: {
+        element: 'p',
+      },
+    });
 
     const italiaBlockStyleFunction = (contentBlock) => {
       const type = contentBlock.getType();

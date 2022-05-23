@@ -62,6 +62,7 @@ const setGroupChecked = (groupId, checked, setSections) => {
 
 const parseFetchedSections = (fetchedSections, location, subsite) => {
   const qsSections = qs.parse(location?.search ?? '')['path.query'] ?? [];
+
   const pathname = location?.pathname?.length ? location.pathname : '/';
 
   const sections = getItemsByPath(fetchedSections, pathname, !subsite);

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import { TextWidget, SelectWidget } from '@plone/volto/components';
-import { components } from 'react-select';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import IconPreviewWidget from '@italia/components/ItaliaTheme/manage/Widgets/IconPreviewWidget';
 
@@ -18,12 +18,12 @@ const messages = defineMessages({
   },
 });
 
-const IconWidget = ({ id, value, defaultOptions, onChange }) => {
+const IconWidget = ({ id, value, defaultOptions, onChange, reactSelect }) => {
   const intl = useIntl();
   const [iconString, setIconString] = useState(value);
   const [selectValue, setSelectValue] = useState(value);
 
-  const { Option } = components;
+  const { Option } = reactSelect.components;
   const CustomSelectOption = (props) => {
     return (
       <Option {...props}>
@@ -90,4 +90,4 @@ IconWidget.propTypes = {
   onChange: PropTypes.func,
 };
 
-export default IconWidget;
+export default injectLazyLibs('reactSelect')(IconWidget);
