@@ -97,16 +97,8 @@ const Block = ({
           if (!selected) {
             onAddBlock('text', index + 1);
           }
-
           if (titleRef.current.contains(e.target)) {
             setSelected('content');
-          }
-        }
-      }}
-      onClick={(e) => {
-        if (inEditMode) {
-          if (wrapperRef.current.contains(e.target)) {
-            setSelected(null);
           }
         }
       }}
@@ -176,6 +168,9 @@ const Block = ({
                     onClick={() => {
                       setSelected('content');
                     }}
+                    onFocus={() => {
+                      setSelected('content');
+                    }}
                   >
                     <CardText
                       className="simple-text-card text"
@@ -195,6 +190,9 @@ const Block = ({
                         onAddBlock={onAddBlock}
                         prevFocus="title"
                         index={index}
+                        setFocus={(f) => {
+                          setSelected(f);
+                        }}
                         disableMoveToNearest={true}
                       />
                     </CardText>

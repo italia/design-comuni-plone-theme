@@ -65,17 +65,7 @@ const Block = ({
   });
 
   return (
-    <div
-      className="simple-text-card-wrapper"
-      ref={wrapperRef}
-      onClick={(e) => {
-        if (inEditMode) {
-          if (wrapperRef.current.contains(e.target)) {
-            setSelected(null);
-          }
-        }
-      }}
-    >
+    <div className="simple-text-card-wrapper" ref={wrapperRef}>
       <Card
         color="white"
         className=" card-bg rounded"
@@ -90,7 +80,6 @@ const Block = ({
             ) {
               onAddBlock('text', index + 1);
             }
-
             if (titleRef.current.contains(e.target)) {
               setSelected('content');
             }
@@ -141,6 +130,9 @@ const Block = ({
                   onClick={() => {
                     setSelected('content');
                   }}
+                  onFocus={() => {
+                    setSelected('content');
+                  }}
                 >
                   <CardText>
                     <TextEditorWidget
@@ -159,6 +151,9 @@ const Block = ({
                       onAddBlock={onAddBlock}
                       index={index}
                       prevFocus="title"
+                      setFocus={(f) => {
+                        setSelected(f);
+                      }}
                       disableMoveToNearest={true}
                     />
                   </CardText>
