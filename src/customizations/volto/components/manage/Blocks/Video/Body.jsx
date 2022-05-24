@@ -43,19 +43,20 @@ const Body = ({ data, isEditMode }) => {
   let listID = null;
 
   if (!placeholder && data.url) {
-    if (data.url.match('youtu')) {      
-        //load video preview image from youtube
-        if (data.url.match('list')) {
-          listID = data.url.match(/^.*\?list=|^.*&list=(.*)$/)[1];
-          videoID = data.url.match(/^.*\?v=(.*)&(.*)$/)[1];
-        } else {
-          videoID = data.url.match(/.be\//)
-            ? data.url.match(/^.*\.be\/(.*)/)[1]
-            : data.url.match(/^.*\?v=(.*)$/)[1];
+    if (data.url.match('youtu')) {
+      //load video preview image from youtube
+      if (data.url.match('list')) {
+        listID = data.url.match(/^.*\?list=|^.*&list=(.*)$/)[1];
+        if (data.url.match('v=')) {
+          videoID = data.url.match(/^.*\?v=(.*)&(.*)$/)?.[1] || null;
         }
+      } else {
+        videoID = data.url.match(/.be\//)
+          ? data.url.match(/^.*\.be\/(.*)/)[1]
+          : data.url.match(/^.*\?v=(.*)$/)[1];
+      }
 
-        placeholder =
-          'https://img.youtube.com/vi/' + videoID + '/sddefault.jpg';      
+      placeholder = 'https://img.youtube.com/vi/' + videoID + '/sddefault.jpg';
     } else if (data.url.match('vimeo')) {
       videoID = data.url.match(/^.*\.com\/(.*)/)[1];
       placeholder = 'https://vumbnail.com/' + videoID + '.jpg';
@@ -64,7 +65,8 @@ const Body = ({ data, isEditMode }) => {
 
   const ref = React.createRef();
   const onKeyDown = (e) => {
-    if (e.nativeEvent.keyCode === 13) { //Enter
+    if (e.nativeEvent.keyCode === 13) {
+      //Enter
       ref.current.handleClick();
     }
   };
