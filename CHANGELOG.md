@@ -1,3 +1,18 @@
+### [5.22.10](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.9...v5.22.10) (2022-05-24)
+
+
+### Bug Fixes
+
+* fix video list ([9f0f43b](https://github.com/RedTurtle/design-volto-theme/commit/9f0f43bd4a80859722e52c56994925ea7f3b509a))
+* fixed headerimage rerender ([483aebc](https://github.com/RedTurtle/design-volto-theme/commit/483aebcb1aea6a1b03a44e78e914802ad189eee6))
+* removed focus from simple and image card blocks to fix draftjs link ([cf48370](https://github.com/RedTurtle/design-volto-theme/commit/cf483704c80815eb3d9b6fa31d3470a501508537))
+* removed setSelect(null) on content wrap in edit view ([0c11855](https://github.com/RedTurtle/design-volto-theme/commit/0c11855c40f837bf0ab8c8bb284bdce3b9049ab4))
+
+
+### Maintenance
+
+* added analyze cmd ([c838754](https://github.com/RedTurtle/design-volto-theme/commit/c8387543ffd108f6a4ee1d43312338ed0f2a86c0))
+
 ### [5.22.9](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.8...v5.22.9) (2022-05-18)
 
 
