@@ -17643,15 +17643,15 @@ volto-editablefooter@RedTurtle/volto-editablefooter#v4.1.1:
     "@plone/scripts" "^1.0.3"
     react-outside-click-handler "1.3.0"
 
-volto-form-block@collective/volto-form-block#v2.3.4:
-  version "2.3.4"
-  resolved "https://codeload.github.com/collective/volto-form-block/tar.gz/bc836585f4e9479ce0d2d494495e1df256a52664"
+volto-form-block@collective/volto-form-block#v2.3.5:
+  version "2.3.5"
+  resolved "https://codeload.github.com/collective/volto-form-block/tar.gz/7e13bfda44afaa8199f9a8f29b157f325fba7f5c"
   dependencies:
     "@hcaptcha/react-hcaptcha" "^0.3.6"
     "@plone/scripts" "^1.0.3"
     file-saver "^2.0.5"
     react-google-recaptcha-v3 "^1.8.0"
-    volto-subblocks collective/volto-subblocks#v1.2.1
+    volto-subblocks collective/volto-subblocks#v1.2.2
 
 volto-gdpr-privacy@collective/volto-gdpr-privacy#v1.3.8:
   version "1.3.8"
@@ -17689,9 +17689,9 @@ volto-social-settings@collective/volto-social-settings#v2.2.0:
   dependencies:
     "@plone/scripts" "^1.0.3"
 
-volto-subblocks@collective/volto-subblocks#v1.2.1:
-  version "1.2.1"
-  resolved "https://codeload.github.com/collective/volto-subblocks/tar.gz/ce2171ec6fbaf76b705652da6650d7e77f263eff"
+volto-subblocks@collective/volto-subblocks#v1.2.2:
+  version "1.2.2"
+  resolved "https://codeload.github.com/collective/volto-subblocks/tar.gz/42f9d6f2c874015676adbe55f96b55c978025bde"
   dependencies:
     "@plone/scripts" "^1.0.3"
     react-dnd "^5.0.0"

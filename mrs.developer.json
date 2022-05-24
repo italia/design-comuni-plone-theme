@@ -25,8 +25,7 @@
     "path": "src",
     "https": "https://github.com/collective/volto-subblocks.git",
     "url": "git@github.com:collective/volto-subblocks.git",
-    "tag": "v1.2.1",
-    "develop": true
+    "tag": "v1.2.2"
   },
   "volto-dropdownmenu": {
     "package": "@italia/addons/volto-dropdownmenu",
@@ -82,7 +81,7 @@
     "path": "src",
     "https": "https://github.com/collective/volto-form-block.git",
     "url": "git@github.com:collective/volto-form-block.git",
-    "tag": "v2.3.4"
+    "tag": "v2.3.5"
   },
   "volto-subfooter": {
     "package": "@italia/addons/volto-subfooter",

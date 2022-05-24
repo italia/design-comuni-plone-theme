@@ -10,7 +10,6 @@ import {
   Container,
   Button,
 } from 'design-react-kit/dist/design-react-kit';
-import Slider from 'react-slick';
 import cx from 'classnames';
 
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
@@ -48,9 +47,12 @@ const Body = ({
   path,
   onChangeBlock,
   moment: Moment,
+  reactSlick,
 }) => {
   const intl = useIntl();
   const moment = Moment.default;
+
+  const Slider = reactSlick.default;
 
   const [activePage, setActivePage] = useState(0);
   const [additionalFilters, setAdditionalFilters] = useState([]);
@@ -338,4 +340,4 @@ const Body = ({
     </div>
   );
 };
-export default injectLazyLibs(['moment'])(Body);
+export default injectLazyLibs(['moment', 'reactSlick'])(Body);
