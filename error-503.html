@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Template Comuni Vuoto · Bootstrap Italia</title>
+
+    <!-- Favicons -->
+    <link
+      rel="shortcut icon"
+      href="data:image/x-icon;base64,AAABAAMAMDAAAAEACACoDgAANgAAACAgAAABAAgAqAgAAN4OAAAQEAAAAQAIAGgFAACGFwAAKAAAADAAAABgAAAAAQAIAAAAAAAACQAAAAAAAAAAAAAAAQAAAAAAAOzGoQDSeR8A1YIvAP369gDObAoA0XUaAM1oBQDy17wAz24NANJ3HQDtyqcAy2QAAPLZvwDPcBAA/fr3AM5sCwDntoUA03sjAO/OrQD+/PoAz24OAO/QsADmtIMA8tnAAMxnAQD//v0A6LqLAPDSswDkrXYA89vDAM1pBADQchQA786uAP78+wDkr3kAz24PAPTdxgDRdBcA79CxAPz17gDMZwIAz3ASAOi6jADRdhoA1H8qAOStdwDNaQUA0HIVAPXhzAD46twA4aZqAMxlAAD03ccAzmsIAN2ZVQDRdBgA1oMwAMxnAwDlsX0A6LqNAPTfygDObQsA3ptYAO3JpQDZjkMA9eHNAOm8kADSeB4A7suoAPbj0AD57OAA359eAM5tDADbkkkA6sCWAN6bWQD57uMA1oU0AP79+wDPbw8A0ngfAO7LqQD9+fYA46x0ANN6IgDfn18A7s2sAPvy6QD++/kA25JKAPPcxADLYwAA/v38AMxmAADPbxAA8NGyAP///wDNaAMA5K54APDTtQDz3MUA4KFjAPjr3QDvz7AAzGYBAPHVuAD03sgA3ZpWAOCjZgD57eAA8NGzANaEMQDNaAQA9eDLAOvEngD46dsA0nccAPDTtgDaj0QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABdXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dCwsLCwszXV1dXV1dXTMLMyguKDNbC11dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXTMUdklJSVlUM11dXV1dMx82O1FfRCpsTWFdXV1dXV1dXV1dXV1dXV1dXV1dXV1dXQs4VxNYWFxTC11dXV0zAgwhYGBgYGBgDEhdXV1dXV1dXV1dXV1dXV1dXV1dXV1dXQtvJ2BgYGAtC11dXTNeaWBgYGBgYGBgBzVdXV1dXV1dXV1dXV1dXV1dXV1dXV1dXQtvJ2BgYGAtC11dXQtZA2BgYGBgYGBgJh5dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXQtvJ2BgYGAtC11dXQsWYGBgYGBgYGBgPxhdXV1dXV1dXV1dXV1dXV1dXV1dXV1dXQtvJ2BgYGAtC11dXSgKYGBgYA5KVWUyQF1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXQtvJ2BgYGAtC11dXTUHYGBgYCQjW1tbC11dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXQtvJ2BgYGAtC11dXUhkYGBgYGdwXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXQtvJ2BgYGAtC11dXQhqYGBgYFZhXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXQtvJ2BgYGAtC11dXQhqYGBgYFZhXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXQtvJ2BgYGAtC11dXQhqYGBgYFZhXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXQtvJ2BgYGAtC11dXQhqYGBgYFZhXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXQtvJ2BgYGAtC11dXQhqYGBgYFZhXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXQtvJ2BgYGAtC11dXQhqYGBgYFZhXV1dXV1dXV1dXV1dXV1dXV1dXTMLCwszXV1dXQtvJ2BgYGAtC11dXQhqYGBgYFZhXV1dXV1dXV1dXV1dXV1dXV1dMy8+YksvM11dXQtvJ2BgYGAtC11dXQhqYGBgYFY5MzMzXV1dXV1dXV1dXV1dXV0zCWNcYFx1dDNdXQtvJ2BgYGAtC11dXQhqYGBgYBUpT09PSGhdXV1dXV1dXV1dXV1dEGBgYGBgOjNdXQtvJ2BgYGAtC11dXQhqYGBgYCdxPDxBcgRdXV1dXV1dXV1dXV09HWBgYGBgGy5dXQtvJ2BgYGAtC11dXQhqYGBgYGBgYGBgNAhdXV1dXV1dXV1dXV1IWmBgYGBgJi5dXQtvJ2BgYGAtC11dXQhqYGBgYGBgYGBgJAhdXV1dXV1dXV1dXV1dGmBgYGBgHDNdXQtvJ2BgYGAtC11dXQhqYGBgYGBgYGBgJAhdXV1dXV1dXV1dXV0zERcZYE4SJTNdXQssMDFzc2ZsC11dXQhqYGBgYFJtRkZMID1dXV1dXV1dXV1dXV1dMwVHImspM11dXV0uNwUFBStIXV1dXQhqYGBgYAcRQ1ABNyhdXV1dXV1dXV1dXV1dXTMLCwszXV1dXV1dMzMzMzNdXV1dXQhqYGBgYG4GMzMzM11dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXQhqYGBgYG4uXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXQhqYGBgYG4uXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXQhqYGBgYG4uXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXQ8ARUFBRUJwXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXWhIDQ0NDT1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dMzMzM11dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAAAIAAAAEAAAAABAAgAAAAAAAAEAAAAAAAAAAAAAAABAAAAAAAA3ZhUANWCLwDip2wAzGYCAP369gDakUcAzmwKAOCjZwDWhDIA4qlvAPXgzADbk0oA3pxaANJ3HQDLZAAA/fj0APLZvwDaj0UAz3AQAP369wDXiDgA9uTSAPnt4gD78+oA/vz6AM9uDgD67+UA1H0mANeGNgDy2cAA//79APrx6AD25NMA0HIUANiKPAD03cYA3ZlUAMxnAgD//v4A9N/JAPfo2QD89/EA89vEANmOQgDNaQUAzGUAAP359AD03ccA3ZlVAM1qCwDObQsA3ptYAOGkaADZjkMA4aZrAM5rCQDpvpMA9uPQANaDMQD++/gAzm0MANN8JAD14c4A14c3ANqQRwD///4A9uPRANBxEgDrxJwA89zEANuSSgD25dQAy2MAANBzFQDgoWIA/v38AMxmAADRdRgA1H4oANeHOAD///8AzWgDANBxEwDz3MUA+/TtAMxmAQDObAkA4KNmAM5rDADNaAQA3JZRAOi7jgDSdxwA1YAsAM1qBwDaj0QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMLQ4ODi1MTExMTExMTExMTExMTExMTCw8PDxZTExMTFVJARxOQyVMTExMTExMTExMTExMTEwOAC8jKisOTExeCRVUKR8nCA5MTExMTExMTExMTExMTEgCUFAeMEhMDlouUFBQUA8iDkxMTExMTExMTExMTExMSAJQUB4wSExVRFBQUEsYFzoOTExMTExMTExMTExMTExIAlBQHjBITAYdUFAXNAVAGS1MTExMTExMTExMTExMTEgCUFAeMEgtEj5QUFNYSA5MTExMTExMTExMTExMTExMSAJQUB4wSC1DQlBQHVZMTExMTExMTExMTExMTExMTExIAlBQHjBILUNCUFAQVkxMTExMTExMTExMTExMTExMTEgCUFAeMEgtQ0JQUBBWTExMTExMTExMTExMTC0tTExMSAJQUB4wSC1DQlBQEFZMTExMTExMTExMTEwDISEDTExIAlBQHjBILUNCUFAQNy0tTExMTExMTExMJVcVFQclTEgCUFAeMEgtQ0JQUEVcUlIsTExMTExMTA5dGlBQFhstSAJQUB4wSC1DQlBQD0cgChQOTExMTExMDjUTUFApPw5IAlBQHjBILUNCUFBQUFA7EQ5MTExMTEwtDTlQUEVJLUg2QR4YJEgtQ0JQUFAmQQRfDkxMTExMTEwtTzhbAS1MLT0wMABcLS1DQlBQKEoMM00tTExMTExMTEwtLS0tTExMLUhISC1MLUNCUFAqMUhILUxMTExMTExMTExMTExMTExMTExMTEwtQ0JQUEUyTExMTExMTExMTExMTExMTExMTExMTExMTC1DCkseHTJMTExMTExMTExMTExMTExMTExMTExMTExMTCwiRgsUUUxMTExMTExMTExMTExMTExMTExMTExMTExMTA4OSA5MTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTExMTEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAADMZgAA+u/kAM9vDwD9+vYA03ohAOe2hgDObQwA2pBFAOCiZADPcBMA0XYbAPHVuQDRdBgA////ANR/KgDntoUA0HIVAP79/ADmtIIAzGUAANyVTgDlsn8A+OnaANF0FwDXhjYAzGcCANqRSADiqW8A9uXUAM9wEQDPbxMA+e7jAOGlaQDPbg4AzGcBAOi7jQD89/IAy2QAAOi5igDrxJwA7s2rAPjq3ADNagcA9+jZANuSSgDQcxYA9+bWAMxmAQDUfigA4qhuAP78+gD46tsA03wlAO/QsQDXhzcA9+jYAM1oAwDvzq4A0HMVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlJRMAEyUlEwAAAAAAAAAiLCAXJTAVIwcAAAAAAAAAODkDNjgoDTImEwAAAAAAADg5AxgdLh8aCgAAAAAAAAA4OQMYECkcHiUAAAAAEyUTODkDGBApHAkTAAAAEzQbNBk5AxgQMzcOIQAAABMmDQ8AOQMYECsRAQ8AAAATFAsaADEnBC0WJDUIAAAAAC8qLwAALxMMKS46AAAAAAAAAAAAAAATAgUSBhMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+    />
+
+    <style>
+      /* --------------- */
+      /*   FONT-FAMILY   */
+      /* --------------- */
+
+      /* titillium-web-300 - latin-ext_latin */
+      @font-face {
+        font-family: "Titillium Web";
+        font-style: normal;
+        font-weight: 300;
+        src: url("https://italia.github.io/bootstrap-italia/dist/fonts/Titillium_Web/titillium-web-v10-latin-ext_latin-300.eot"); /* IE9 Compat Modes */
+        src: local(""),
+          url("https://italia.github.io/bootstrap-italia/dist/fonts/Titillium_Web/titillium-web-v10-latin-ext_latin-300.eot?#iefix")
+            format("embedded-opentype"),
+          /* IE6-IE8 */
+            url("https://italia.github.io/bootstrap-italia/dist/fonts/Titillium_Web/titillium-web-v10-latin-ext_latin-300.woff2")
+            format("woff2"),
+          /* Super Modern Browsers */
+            url("https://italia.github.io/bootstrap-italia/dist/fonts/Titillium_Web/titillium-web-v10-latin-ext_latin-300.woff")
+            format("woff"),
+          /* Modern Browsers */
+            url("https://italia.github.io/bootstrap-italia/dist/fonts/Titillium_Web/titillium-web-v10-latin-ext_latin-300.ttf")
+            format("truetype"),
+          /* Safari, Android, iOS */
+            url("https://italia.github.io/bootstrap-italia/dist/fonts/Titillium_Web/titillium-web-v10-latin-ext_latin-300.svg#TitilliumWeb")
+            format("svg"); /* Legacy iOS */
+      }
+
+      /* titillium-web-regular - latin-ext_latin */
+      @font-face {
+        font-family: "Titillium Web";
+        font-style: normal;
+        font-weight: 400;
+        src: url("https://italia.github.io/bootstrap-italia/dist/fonts/Titillium_Web/titillium-web-v10-latin-ext_latin-regular.eot"); /* IE9 Compat Modes */
+        src: local(""),
+          url("https://italia.github.io/bootstrap-italia/dist/fonts/Titillium_Web/titillium-web-v10-latin-ext_latin-regular.eot?#iefix")
+            format("embedded-opentype"),
+          /* IE6-IE8 */
+            url("https://italia.github.io/bootstrap-italia/dist/fonts/Titillium_Web/titillium-web-v10-latin-ext_latin-regular.woff2")
+            format("woff2"),
+          /* Super Modern Browsers */
+            url("https://italia.github.io/bootstrap-italia/dist/fonts/Titillium_Web/titillium-web-v10-latin-ext_latin-regular.woff")
+            format("woff"),
+          /* Modern Browsers */
+            url("https://italia.github.io/bootstrap-italia/dist/fonts/Titillium_Web/titillium-web-v10-latin-ext_latin-regular.ttf")
+            format("truetype"),
+          /* Safari, Android, iOS */
+            url("https://italia.github.io/bootstrap-italia/dist/fonts/Titillium_Web/titillium-web-v10-latin-ext_latin-regular.svg#TitilliumWeb")
+            format("svg"); /* Legacy iOS */
+      }
+
+      /* titillium-web-600 - latin-ext_latin */
+      @font-face {
+        font-family: "Titillium Web";
+        font-style: normal;
+        font-weight: 600;
+        src: url("https://italia.github.io/bootstrap-italia/dist/fonts/Titillium_Web/titillium-web-v10-latin-ext_latin-600.eot"); /* IE9 Compat Modes */
+        src: local(""),
+          url("https://italia.github.io/bootstrap-italia/dist/fonts/Titillium_Web/titillium-web-v10-latin-ext_latin-600.eot?#iefix")
+            format("embedded-opentype"),
+          /* IE6-IE8 */
+            url("https://italia.github.io/bootstrap-italia/dist/fonts/Titillium_Web/titillium-web-v10-latin-ext_latin-600.woff2")
+            format("woff2"),
+          /* Super Modern Browsers */
+            url("https://italia.github.io/bootstrap-italia/dist/fonts/Titillium_Web/titillium-web-v10-latin-ext_latin-600.woff")
+            format("woff"),
+          /* Modern Browsers */
+            url("https://italia.github.io/bootstrap-italia/dist/fonts/Titillium_Web/titillium-web-v10-latin-ext_latin-600.ttf")
+            format("truetype"),
+          /* Safari, Android, iOS */
+            url("https://italia.github.io/bootstrap-italia/dist/fonts/Titillium_Web/titillium-web-v10-latin-ext_latin-600.svg#TitilliumWeb")
+            format("svg"); /* Legacy iOS */
+      }
+
+      /* -------------- */
+      /*   VARIABILES   */
+      /* -------------- */
+
+      :root {
+        --body-bg-color: #fff;
+        --body-text: #19191a;
+        --pre-header-bg: #0059b3;
+        --pre-header-text: #fff;
+        --header-bg-color: #06c;
+        --header-text: #fff;
+        --footer-bg-color: #036;
+        --footer-text: #fff;
+      }
+
+      /* --------------------- */
+      /* IMPOSTAZIONI GENERALE */
+      /* --------------------- */
+
+      body,
+      html {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      body {
+        margin: 0;
+        font-family: "Titillium Web", Geneva, Tahoma, sans-serif;
+        font-weight: 300;
+        color: var(--body-text);
+        text-align: left;
+        background-color: var(--body-bg-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh;
+      }
+      footer,
+      header,
+      main,
+      section {
+        display: block;
+      }
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+      a {
+        text-decoration: none;
+        background-color: transparent;
+      }
+      h2,
+      h3,
+      h4 {
+        margin-top: 0;
+      }
+      .h2,
+      h2 {
+        line-height: 1.25;
+        letter-spacing: normal;
+      }
+
+      .h3,
+      h3 {
+        line-height: 1.1428;
+        letter-spacing: normal;
+      }
+      .h4,
+      h4 {
+        line-height: 1.1666;
+        letter-spacing: normal;
+      }
+      strong {
+        font-weight: 600;
+      }
+      p,
+      ul {
+        margin-top: 0;
+        margin-bottom: 1rem;
+      }
+      footer,
+      main,
+      section {
+        display: block;
+      }
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 100%;
+        padding-right: 6px;
+        padding-left: 6px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -6px;
+        margin-left: -6px;
+      }
+      .col-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      .col-12,
+      .col-sm-12,
+      .col-md-3,
+      .col-lg-3 {
+        position: relative;
+        width: 100%;
+        padding-right: 6px;
+        padding-left: 6px;
+      }
+      .icon {
+        width: 32px;
+        height: 32px;
+        vertical-align: middle;
+      }
+      @media (min-width: 576px) {
+        body,
+        html {
+          font-size: 18px;
+          line-height: 1.555;
+        }
+        .h2,
+        h2 {
+          font-size: 2.222rem;
+          line-height: 1.2;
+        }
+        .h3,
+        h3 {
+          font-size: 1.777rem;
+          line-height: 1.25;
+        }
+        .h4,
+        h4 {
+          font-size: 1.555rem;
+          line-height: 1.428;
+          font-weight: 600;
+        }
+        .container {
+          max-width: 540px;
+        }
+        .col-sm-12 {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+      @media (min-width: 768px) {
+        .container {
+          max-width: 668px;
+        }
+      }
+      @media (min-width: 992px) {
+        .container {
+          max-width: 960px;
+        }
+      }
+      @media (min-width: 1200px) {
+        .container {
+          max-width: 1184px;
+        }
+      }
+
+      /* ------------ */
+      /*  PRE-HEADER  */
+      /* ------------ */
+
+      .it-header-slim-wrapper {
+        background: var(--pre-header-bg);
+        padding: 6.5px 18px;
+      }
+      .it-header-slim-wrapper .it-header-slim-wrapper-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .it-header-slim-wrapper .it-header-slim-wrapper-content .navbar-brand {
+        color: var(--pre-header-text);
+        font-size: 0.778em;
+        padding: 0;
+      }
+      .it-header-slim-wrapper .it-header-slim-wrapper-content a {
+        color: var(--pre-header-text);
+        text-decoration: none;
+      }
+      .navbar-brand {
+        display: inline-block;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        margin-right: 16px;
+        font-size: 1rem;
+        line-height: inherit;
+        white-space: nowrap;
+      }
+      @media (min-width: 992px) {
+        .it-header-slim-wrapper {
+          height: 48px;
+          padding: 0;
+        }
+        .d-lg-block {
+          display: block !important;
+        }
+        .it-header-slim-wrapper .it-header-slim-wrapper-content a.navbar-brand {
+          padding-top: 12px;
+          padding-bottom: 12px;
+        }
+        .it-header-slim-wrapper .it-header-slim-wrapper-content {
+          padding: 0 18px;
+          height: 48px;
+          align-items: center;
+        }
+      }
+
+      /* ---------- */
+      /*   HEADER   */
+      /* ---------- */
+
+      .it-header-wrapper .it-nav-wrapper {
+        position: relative;
+      }
+
+      .it-header-center-wrapper {
+        background: var(--header-bg-color);
+        height: 80px;
+        display: flex;
+        align-items: center;
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .it-header-center-wrapper .it-header-center-content-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-basis: 100%;
+      }
+
+      .it-header-center-wrapper
+        .it-header-center-content-wrapper
+        .it-brand-wrapper
+        a {
+        display: flex;
+        color: var(--header-text);
+        align-items: center;
+        text-decoration: none;
+      }
+
+      .it-header-center-wrapper
+        .it-header-center-content-wrapper
+        .it-brand-wrapper
+        a
+        .icon {
+        fill: #fff;
+        width: 48px;
+        height: 48px;
+        margin-right: 8px;
+        flex-shrink: 0;
+      }
+      .it-header-center-wrapper
+        .it-header-center-content-wrapper
+        .it-brand-wrapper
+        .it-brand-text {
+        padding-right: 24px;
+      }
+      .it-header-center-wrapper
+        .it-header-center-content-wrapper
+        .it-brand-wrapper
+        a
+        .it-brand-title,
+      .it-header-center-wrapper
+        .it-header-center-content-wrapper
+        .it-brand-wrapper
+        a
+        h2 {
+        font-size: 1.25em;
+        margin-bottom: 0;
+        font-weight: 600;
+        letter-spacing: unset;
+        line-height: 1.1;
+      }
+      .it-header-center-wrapper
+        .it-header-center-content-wrapper
+        .it-brand-wrapper
+        a
+        .it-brand-tagline,
+      .it-header-center-wrapper
+        .it-header-center-content-wrapper
+        .it-brand-wrapper
+        a
+        h3 {
+        font-size: 0.889em;
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+      @media (min-width: 992px) {
+        .it-header-wrapper .it-nav-wrapper {
+          position: relative;
+        }
+        .it-header-center-wrapper {
+          height: 120px;
+          padding-left: 0;
+          padding-right: 0;
+          padding-top: 6px;
+        }
+        .it-header-center-wrapper .it-header-center-content-wrapper {
+          padding-left: 18px;
+          padding-right: 18px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-basis: 100%;
+        }
+        .it-header-center-wrapper
+          .it-header-center-content-wrapper
+          .it-brand-wrapper {
+          margin-left: 0;
+        }
+        .it-header-center-wrapper
+          .it-header-center-content-wrapper
+          .it-brand-wrapper
+          a {
+          display: flex;
+          align-items: center;
+        }
+        .it-header-center-wrapper
+          .it-header-center-content-wrapper
+          .it-brand-wrapper
+          a
+          .icon {
+          width: 82px;
+          height: 82px;
+          margin-right: 16px;
+        }
+        .it-header-center-wrapper
+          .it-header-center-content-wrapper
+          .it-brand-wrapper
+          a
+          .it-brand-title,
+        .it-header-center-wrapper
+          .it-header-center-content-wrapper
+          .it-brand-wrapper
+          a
+          h2 {
+          font-size: 1.778em;
+          margin-bottom: 0;
+          font-weight: 600;
+        }
+        .it-header-center-wrapper
+          .it-header-center-content-wrapper
+          .it-brand-wrapper
+          a
+          .it-brand-tagline,
+        .it-header-center-wrapper
+          .it-header-center-content-wrapper
+          .it-brand-wrapper
+          a
+          h3 {
+          font-size: 0.889em;
+          font-weight: 400;
+          margin-bottom: 0;
+        }
+      }
+      /* -------- */
+      /*   MAIN   */
+      /* -------- */
+
+      main {
+        min-height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      main .container {
+        padding-left: 28px;
+      }
+      .my-4 {
+        margin-bottom: 24px !important;
+        margin-top: 24px !important;
+      }
+
+      /* ---------- */
+      /*   FOOTER   */
+      /* ---------- */
+
+      .it-footer-main {
+        background-color: var(--footer-bg-color);
+        color: var(--footer-text);
+        font-size: 16px;
+      }
+      .it-footer-main section {
+        padding: 0 16px;
+      }
+      .it-footer-main .it-brand-wrapper {
+        padding: 32px 0;
+      }
+      .it-footer-main .it-brand-wrapper a {
+        display: flex;
+        color: var(--footer-text);
+        align-items: center;
+        text-decoration: none;
+      }
+      .it-footer-main .it-brand-wrapper a .icon {
+        fill: var(--logo);
+        width: 48px;
+        height: 48px;
+        margin-right: 8px;
+        flex-shrink: 0;
+      }
+      .it-footer-main .it-brand-wrapper a h2 {
+        font-size: 1.25em;
+        margin-bottom: 0;
+        font-weight: 600;
+        letter-spacing: unset;
+        line-height: 1.1;
+      }
+      .it-footer-main .it-brand-wrapper a h3 {
+        font-size: 0.889em;
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+      .d-none {
+        display: none !important;
+      }
+      .py-4 {
+        padding-bottom: 24px !important;
+        padding-top: 24px !important;
+      }
+      .border-white {
+        border-color: #fff !important;
+      }
+      .border-top {
+        border-top: 1px solid #b1b1b3 !important;
+      }
+      .pb-2 {
+        padding-bottom: 8px !important;
+      }
+
+      .it-footer-main h4 a {
+        color: var(--footer-text);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 16px;
+      }
+      @media (min-width: 768px) {
+        .d-md-block {
+          display: block !important;
+        }
+        .col-md-3 {
+          flex: 0 0 25%;
+          max-width: 25%;
+        }
+      }
+      @media (min-width: 992px) {
+        .col-lg-3 {
+          flex: 0 0 25%;
+          max-width: 25%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="it-header-wrapper it-header-sticky">
+      <div class="it-header-slim-wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="it-header-slim-wrapper-content">
+                <a class="d-lg-block navbar-brand">Nome della Regione</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="it-nav-wrapper">
+        <div class="it-header-center-wrapper">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="it-header-center-content-wrapper">
+                  <div class="it-brand-wrapper">
+                    <a>
+                      <img
+                        class="icon"
+                        alt=""
+                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIKICAgICB2aWV3Qm94PSIwIDAgMjQgMjQiPgogIDx0aXRsZT5QQTwvdGl0bGU+CiAgPGc+CiAgICA8cGF0aAogICAgZmlsbD0iI2ZmZiIKICAgICAgZD0iTTMsMjFIMjF2MUgzWm0wLTFIMjFWMTlIM1pNMjIsOUgyTDEyLDJaTTUuMiw4SDE4LjhMMTIsMy4yWk02LDE4VjEwSDV2OFptNCwwVjEwSDl2OFptNSwwVjEwSDE0djhabTQsMFYxMEgxOHY4WiIKICAgICAgLz4KICA8L2c+CiAgPGc+CiAgICA8cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiLz4KICA8L2c+Cjwvc3ZnPgo="
+                      />
+
+                      <div class="it-brand-text">
+                        <div class="it-brand-title">Nome del Comune</div>
+                        <div class="it-brand-tagline d-none d-md-block">
+                          Uno dei tanti Comuni d'Italia
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container my-4">
+        <h2>Servizio non disponibile</h2>
+        <p>Il sito è <strong>momentaneamente</strong> non raggiungibile.</p>
+        <p>Stiamo lavorando per risolvere il problema.</p>
+      </div>
+    </main>
+
+    <footer class="it-footer">
+      <div class="it-footer-main">
+        <div class="container">
+          <section>
+            <div class="row clearfix">
+              <div class="col-sm-12">
+                <div class="it-brand-wrapper">
+                  <a>
+                    <img
+                      class="icon"
+                      alt=""
+                      src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIKICAgICB2aWV3Qm94PSIwIDAgMjQgMjQiPgogIDx0aXRsZT5QQTwvdGl0bGU+CiAgPGc+CiAgICA8cGF0aAogICAgZmlsbD0iI2ZmZiIKICAgICAgZD0iTTMsMjFIMjF2MUgzWm0wLTFIMjFWMTlIM1pNMjIsOUgyTDEyLDJaTTUuMiw4SDE4LjhMMTIsMy4yWk02LDE4VjEwSDV2OFptNCwwVjEwSDl2OFptNSwwVjEwSDE0djhabTQsMFYxMEgxOHY4WiIKICAgICAgLz4KICA8L2c+CiAgPGc+CiAgICA8cmVjdCB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIGZpbGw9Im5vbmUiLz4KICA8L2c+Cjwvc3ZnPgo="
+                    />
+                    <div class="it-brand-text">
+                      <h2 class="no_toc">Nome del Comune</h2>
+                      <h3 class="no_toc d-none d-md-block">
+                        Uno dei tanti Comuni d'Italia
+                      </h3>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="py-4 border-white border-top">
+            <div class="row">
+              <div class="col-lg-3 col-md-3 pb-2">
+                <h4>
+                  <a>Amministrazione trasparente</a>
+                </h4>
+                <p>
+                  I dati personali pubblicati sono riutilizzabili solo alle
+                  condizioni previste dalla direttiva comunitaria 2003/98/CE e
+                  dal d.lgs. 36/2006
+                </p>
+              </div>
+              <div class="col-lg-3 col-md-3 pb-2">
+                <h4>
+                  <a>Contatti</a>
+                </h4>
+                <p>
+                  <strong>Nome del Comune</strong><br />
+                  Via Roma 0 - 00000 Lorem Ipsum Codice fiscale / P. IVA:
+                  000000000
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
