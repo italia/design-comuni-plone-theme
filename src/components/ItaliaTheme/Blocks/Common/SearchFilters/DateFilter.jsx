@@ -246,4 +246,4 @@ const DateFilter = (props) => {
   );
 };
 
-export default injectLazyLibs(['reactDates', 'moment'])(DateFilter);
+export default injectLazyLibs(['reactDates'])(DateFilter);
