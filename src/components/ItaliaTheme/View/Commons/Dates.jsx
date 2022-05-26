@@ -1,6 +1,5 @@
 import { defineMessages, useIntl } from 'react-intl';
 import React from 'react';
-import { rrulestr } from 'rrule';
 import { rrulei18n } from '@plone/volto/components/manage/Widgets/RecurrenceWidget/Utils';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import {
@@ -36,11 +35,13 @@ const messages = defineMessages({
  * @params {object} Dates: object.
  * @returns {string} Markup of the component.
  */
-const Dates = ({ content, show_image, moment: Moment }) => {
+const Dates = ({ content, show_image, moment: Moment, rrule }) => {
   const intl = useIntl();
 
   const moment = Moment.default;
   moment.locale(intl.locale);
+
+  const rrulestr = rrule.rrulestr;
 
   let rruleSet = null;
   let recurrenceText = null;
@@ -123,7 +124,12 @@ const Dates = ({ content, show_image, moment: Moment }) => {
           <h5>{intl.formatMessage(messages.additional_dates)}</h5>
           {rruleSet.rdates().map((additionalDate) => (
             <div className="text-serif">
-              {viewDate(intl.locale, additionalDate, 'dddd DD MMMM YYYY')}
+              {viewDate(
+                intl.locale,
+                moment,
+                additionalDate,
+                'dddd DD MMMM YYYY',
+              )}
             </div>
           ))}
         </div>
@@ -133,7 +139,7 @@ const Dates = ({ content, show_image, moment: Moment }) => {
           <h5>{intl.formatMessage(messages.excluded_dates)}</h5>
           {rruleSet.exdates().map((exDate) => (
             <div className="text-serif">
-              {viewDate(intl.locale, exDate, 'dddd DD MMMM YYYY')}
+              {viewDate(intl.locale, moment, exDate, 'dddd DD MMMM YYYY')}
             </div>
           ))}
         </div>
@@ -142,7 +148,7 @@ const Dates = ({ content, show_image, moment: Moment }) => {
   ) : null;
 };
 
-export default injectLazyLibs(['moment'])(Dates);
+export default injectLazyLibs(['moment', 'rrule'])(Dates);
 
 Dates.propTypes = {
   content: PropTypes.object.isRequired,

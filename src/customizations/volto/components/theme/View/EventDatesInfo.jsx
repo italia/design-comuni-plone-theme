@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { List } from 'semantic-ui-react';
 import cx from 'classnames';
-import { RRule, rrulestr } from 'rrule';
+
 import { useIntl } from 'react-intl';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
@@ -208,10 +208,12 @@ When.propTypes = {
   open_end: PropTypes.bool,
 };
 
-const _Recurrence = ({ recurrence, start, moment: Moment }) => {
+const _Recurrence = ({ recurrence, start, moment: Moment, rrule }) => {
   const intl = useIntl();
   const moment = Moment.default;
   moment.locale(intl.locale);
+  const rrulestr = rrule.rrulestr;
+  const RRule = rrule.RRule;
 
   if (recurrence.indexOf('DTSTART') < 0) {
     var dtstart = RRule.optionsToString({
@@ -219,11 +221,11 @@ const _Recurrence = ({ recurrence, start, moment: Moment }) => {
     });
     recurrence = dtstart + '\n' + recurrence;
   }
-  const rrule = rrulestr(recurrence, { unfold: true, forceset: true });
+  const rule = rrulestr(recurrence, { unfold: true, forceset: true });
 
   return (
     <List
-      items={rrule
+      items={rule
         .all()
         .map((date) =>
           datesForDisplay(date, null, null, null, null, null, moment),
@@ -232,7 +234,7 @@ const _Recurrence = ({ recurrence, start, moment: Moment }) => {
     />
   );
 };
-export const Recurrence = injectLazyLibs(['moment'])(_Recurrence);
+export const Recurrence = injectLazyLibs(['moment', 'rrule'])(_Recurrence);
 
 Recurrence.propTypes = {
   recurrence: PropTypes.string.isRequired,

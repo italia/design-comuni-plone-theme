@@ -1,7 +1,7 @@
 import React from 'react';
 import { useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
-import { rrulestr } from 'rrule';
+
 import { rrulei18n } from '@plone/volto/components/manage/Widgets/RecurrenceWidget/Utils';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
@@ -12,10 +12,12 @@ import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
  * @returns {string} Markup of the component.
  */
 
-const PageHeaderEventDates = ({ content, moment }) => {
+const PageHeaderEventDates = ({ content, moment, rrule }) => {
   const intl = useIntl();
   const Moment = moment.default;
   Moment.locale(intl.locale);
+
+  const rrulestr = rrule.rrulestr;
 
   let eventRecurrenceText = null;
 
@@ -50,7 +52,7 @@ const PageHeaderEventDates = ({ content, moment }) => {
   ) : null;
 };
 
-export default injectLazyLibs(['moment'])(PageHeaderEventDates);
+export default injectLazyLibs(['moment', 'rrule'])(PageHeaderEventDates);
 
 PageHeaderEventDates.propTypes = {
   params: PropTypes.shape({
