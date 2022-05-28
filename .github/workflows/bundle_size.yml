@@ -11,7 +11,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       with:
-        ref: ${{ github.base_ref }}
+        ref: develop
+        # ref: ${{ github.base_ref }}
     - uses: actions/setup-node@v3
       with:
         node-version: 14
