@@ -1,3 +1,5 @@
+module.exports = require('@plone/volto/babel');
+/*
 //const babelVolto = require('@plone/volto/babel');
 module.exports = function (api) {
   api.cache(true);
@@ -71,3 +73,4 @@ module.exports = function (api) {
     presets,
   };
 };
+*/
