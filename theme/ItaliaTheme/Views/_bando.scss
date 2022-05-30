@@ -65,6 +65,15 @@
       }
     }
 
+    &.scheduled {
+      border-left: 5px solid $analogue-1-b5;
+
+      svg {
+        padding-right: 10px;
+        fill: $analogue-1-b5;
+      }
+    }
+
     &.inProgress {
       border-left: 5px solid $analogue-1-a7;
 

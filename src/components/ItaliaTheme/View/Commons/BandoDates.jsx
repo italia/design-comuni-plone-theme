@@ -15,6 +15,10 @@ const messages = defineMessages({
     id: 'bando_effective',
     defaultMessage: 'Data di pubblicazione',
   },
+  apertura_bando: {
+    id: 'apertura_bando',
+    defaultMessage: 'Apertura del bando',
+  },
   scadenza_bando: {
     id: 'scadenza_bando',
     defaultMessage: 'Scadenza dei termini per partecipare al bando',
@@ -41,6 +45,11 @@ const BandoDates = ({ content }) => {
   const effective = content?.effective
     ? viewDate(intl.locale, content.effective)
     : null;
+
+  const apertura_bando = content?.apertura_bando
+    ? viewDate(intl.locale, content.apertura_bando)
+    : null;
+
   const scadenza_domande_bando = content?.scadenza_domande_bando
     ? viewDate(intl.locale, content.scadenza_domande_bando)
     : null;
@@ -75,6 +84,33 @@ const BandoDates = ({ content }) => {
                 <CardBody tag="div" className={'card-body'}>
                   <CardTitle tag="h5">
                     {intl.formatMessage(messages.effective)}
+                  </CardTitle>
+                </CardBody>
+              </Card>
+            </div>
+          </div>
+        )}
+
+        {apertura_bando && (
+          <div className="point-list">
+            <div className="point-list-aside point-list-warning">
+              <div className="point-date text-monospace">
+                {apertura_bando.format('DD')}
+              </div>
+              <div className="point-month text-monospace">
+                {apertura_bando.format('MMM')}/{apertura_bando.format('YY')}
+              </div>
+            </div>
+            <div className="point-list-content">
+              <Card
+                className="card card-teaser rounded shadow"
+                noWrapper={true}
+                tag="div"
+              >
+                <CardBody tag="div" className={'card-body'}>
+                  <CardTitle tag="h5">
+                    {`${apertura_bando.format('HH:mm')} - `}
+                    {intl.formatMessage(messages.apertura_bando)}
                   </CardTitle>
                 </CardBody>
               </Card>

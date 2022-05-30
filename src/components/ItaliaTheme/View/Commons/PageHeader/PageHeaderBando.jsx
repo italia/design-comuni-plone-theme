@@ -30,6 +30,10 @@ const messages = defineMessages({
     id: 'bando_inProgress',
     defaultMessage: 'in corso',
   },
+  scheduled: {
+    id: 'bando_scheduled',
+    defaultMessage: 'programmato',
+  },
 });
 
 const PageHeaderBando = ({ content }) => {
@@ -48,13 +52,14 @@ const PageHeaderBando = ({ content }) => {
           <div className="card-body">
             <div className="card-text">
               <Icon
-                className={undefined}
+                className="mr-2"
                 color=""
                 icon={
                   {
                     open: 'it-check-circle',
                     closed: 'it-error',
                     inProgress: 'it-info-circle',
+                    scheduled: 'it-calendar',
                   }[content.bando_state[0]]
                 }
                 padding={false}
