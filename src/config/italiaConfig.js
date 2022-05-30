@@ -63,7 +63,7 @@ const iconListBrands = Object.keys(IconsBrands.fab).map(
   (icon) => IconsBrands[icon],
 );
 
-//fontawessome config
+//fontawesome config
 faConfig.autoAddCss = false;
 faLibrary.add(...iconList, ...iconListRegular, ...iconListBrands);
 
