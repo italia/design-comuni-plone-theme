@@ -99,6 +99,7 @@ jobs:
       with:
         base_path: './base/stats.json'
         pr_path: './pr/stats.json'
+        excluded_assets: '\.map$'
 
     - name: Comment
       uses: NejcZdovc/comment-pr@v1
