@@ -152,7 +152,7 @@
 
   .open {
     // background-color: #00cf86;
-    background-color: $complementary-3-a5;
+    background-color: $complementary-3-a9;
   }
 
   .scheduled {
@@ -160,10 +160,11 @@
   }
 
   .closed {
-    background-color: $neutral-1-a6;
+    background-color: $neutral-1-a7;
   }
 
-  .in-progress {
+  .in-progress,
+  .inProgress {
     background-color: $analogue-1-a9;
   }
 

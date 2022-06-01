@@ -28,10 +28,12 @@
   #cs-more {
     overflow: hidden;
     max-height: 0;
+    visibility: hidden; //needed for ay11
 
     transition: 0.6s max-height ease;
 
     &[aria-expanded='true'] {
+      visibility: visible; //needed for ay11
       max-height: 800px;
     }
   }
