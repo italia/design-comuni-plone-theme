@@ -1,3 +1,10 @@
+### [5.22.13](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.12...v5.22.13) (2022-06-01)
+
+
+### Bug Fixes
+
+* fix image width for documentBody image ([6f54fc2](https://github.com/RedTurtle/design-volto-theme/commit/6f54fc217aa1cf53b5bbf41979aa230b164b79a7))
+
 ### [5.22.12](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.11...v5.22.12) (2022-06-01)
 
 
