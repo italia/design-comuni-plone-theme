@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import { useHistory } from 'react-router-dom';
-import 'moment/min/locales';
 import cx from 'classnames';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { OSMMap } from '@italia/addons/volto-venue';

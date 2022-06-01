@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import { useIntl } from 'react-intl';
-import 'moment/min/locales';
 import {
   Container,
   Row,
