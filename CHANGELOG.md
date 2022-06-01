@@ -1,3 +1,10 @@
+### [5.22.12](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.11...v5.22.12) (2022-06-01)
+
+
+### Bug Fixes
+
+* fix slider image width ([6d85bc5](https://github.com/RedTurtle/design-volto-theme/commit/6d85bc5f545bd4231b96880e356aaa9409e5ff48))
+
 ### [5.22.11](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.10...v5.22.11) (2022-05-31)
 
 
