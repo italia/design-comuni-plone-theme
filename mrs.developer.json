@@ -25,7 +25,7 @@
     "path": "src",
     "https": "https://github.com/collective/volto-subblocks.git",
     "url": "git@github.com:collective/volto-subblocks.git",
-    "tag": "v1.2.2"
+    "tag": "v1.2.3"
   },
   "volto-dropdownmenu": {
     "package": "@italia/addons/volto-dropdownmenu",
