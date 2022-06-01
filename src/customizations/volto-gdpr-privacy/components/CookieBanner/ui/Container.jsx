@@ -6,6 +6,7 @@ import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 const Container = (props) => {
   const { Container: DesignContainer } = props.designReactKit;
+
   return <DesignContainer {...props} />;
 };
 

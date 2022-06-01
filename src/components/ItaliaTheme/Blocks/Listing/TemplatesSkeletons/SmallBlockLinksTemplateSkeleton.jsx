@@ -7,9 +7,9 @@ const SmallBlockLinksTemplateSkeleton = ({
   title,
   isEditMode,
   show_block_bg,
-  desingReactKit,
+  designReactKit,
 }) => {
-  const { Container, Row, Col } = desingReactKit;
+  const { Container, Row, Col } = designReactKit;
 
   return (
     <div className="small-block-links">
