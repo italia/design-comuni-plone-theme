@@ -7,13 +7,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-
-import {
-  Header,
-  HeaderContent,
-  HeaderToggler,
-  Nav,
-} from 'design-react-kit/dist/design-react-kit';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 import { flattenToAppURL } from '@plone/volto/helpers';
 
@@ -34,7 +28,7 @@ import {
   getItemsByPath,
 } from '@italia/addons/volto-dropdownmenu';
 
-const Navigation = ({ pathname }) => {
+const Navigation = ({ pathname, designReactKit }) => {
   const [collapseOpen, setCollapseOpen] = useState(false);
   const dispatch = useDispatch();
   const subsite = useSelector((state) => state.subsite?.data);
@@ -79,6 +73,8 @@ const Navigation = ({ pathname }) => {
     return () =>
       document.body.removeEventListener('click', blocksClickListener);
   }, []);
+
+  const { Header, HeaderContent, HeaderToggler, Nav } = designReactKit;
 
   return (
     <Header theme="" type="navbar">
@@ -144,4 +140,4 @@ Navigation.propTypes = {
   pathname: PropTypes.string.isRequired,
 };
 
-export default Navigation;
+export default injectLazyLibs(['designReactKit'])(Navigation);

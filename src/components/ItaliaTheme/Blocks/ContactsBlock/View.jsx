@@ -7,18 +7,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import redraft from 'redraft';
 import ViewBlock from './Block/ViewBlock';
-import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import config from '@plone/volto/registry';
 
 /**
- * View Accordion block class.
+ * View Contacts block class.
  * @class View
  * @extends Component
  */
-const AccordionView = ({ data, block }) => {
+const ContactsView = ({ data, block, designReactKit }) => {
+  const { Container, Row, Col } = designReactKit;
   const id = new Date().getTime();
+
   return (
     <div className="block contacts">
       <div className="public-ui">
@@ -77,8 +79,8 @@ const AccordionView = ({ data, block }) => {
  * @property {Object} propTypes Property types.
  * @static
  */
-AccordionView.propTypes = {
+ContactsView.propTypes = {
   data: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
-export default AccordionView;
+export default injectLazyLibs(['designReactKit'])(ContactsView);

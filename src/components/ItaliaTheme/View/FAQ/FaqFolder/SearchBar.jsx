@@ -5,7 +5,8 @@
 
 import React, { useState } from 'react';
 import { useIntl, defineMessages } from 'react-intl';
-import { Container } from 'design-react-kit/dist/design-react-kit';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+
 import { Icon } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
@@ -22,10 +23,10 @@ const messages = defineMessages({
  * @returns {string} Markup of the component.
  */
 
-const SearchBar = ({ setSearchableText }) => {
+const SearchBar = ({ setSearchableText, designReactKit }) => {
   const intl = useIntl();
   const [focusSearch, setFocusSearch] = useState(false);
-
+  const { Container } = designReactKit;
   return (
     <div className="section section-muted search-section">
       <Container className="px-4">
@@ -72,4 +73,4 @@ const SearchBar = ({ setSearchableText }) => {
   );
 };
 
-export default SearchBar;
+export default injectLazyLibs(['designReactKit'])(SearchBar);

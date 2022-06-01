@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
+
 import { SidebarPortal } from '@plone/volto/components';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+
 import { addAppURL, flattenToAppURL } from '@plone/volto/helpers';
 import cx from 'classnames';
 import { TextEditorWidget } from '@italia/components/ItaliaTheme';
@@ -25,8 +27,10 @@ const Edit = (props) => {
     onSelectBlock,
     onAddBlock,
     index,
+    designReactKit,
   } = props;
   const intl = useIntl();
+  const { Container, Row, Col } = designReactKit;
 
   return (
     <>
@@ -131,4 +135,4 @@ Edit.propTypes = {
   block: PropTypes.string.isRequired,
 };
 
-export default Edit;
+export default injectLazyLibs(['designReactKit'])(Edit);

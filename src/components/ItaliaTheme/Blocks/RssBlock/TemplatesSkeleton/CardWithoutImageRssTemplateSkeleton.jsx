@@ -1,17 +1,22 @@
 import React from 'react';
 import cx from 'classnames';
 
-import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
-  CardReadMore,
-  Row,
-  Col,
-} from 'design-react-kit/dist/design-react-kit';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
-const CardWithoutImageRssTemplateSkeleton = ({ isEditMode, data = {} }) => {
+const CardWithoutImageRssTemplateSkeleton = ({
+  isEditMode,
+  data = {},
+  designReactKit,
+}) => {
+  const {
+    Card,
+    CardBody,
+    CardTitle,
+    CardText,
+    CardReadMore,
+    Row,
+    Col,
+  } = designReactKit;
   return (
     <div className={cx('', { 'public-ui': isEditMode })}>
       <div className="skeleton-template">
@@ -50,4 +55,6 @@ const CardWithoutImageRssTemplateSkeleton = ({ isEditMode, data = {} }) => {
   );
 };
 
-export default CardWithoutImageRssTemplateSkeleton;
+export default injectLazyLibs(['designReactKit'])(
+  CardWithoutImageRssTemplateSkeleton,
+);

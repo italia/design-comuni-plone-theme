@@ -1,14 +1,6 @@
 import React, { useCallback, useRef } from 'react';
 import { useIntl, defineMessages } from 'react-intl';
-import {
-  Card,
-  CardBody,
-  Row,
-  Col,
-  Button,
-  Alert,
-  Progress,
-} from 'design-react-kit/dist/design-react-kit';
+
 // eslint-disable-next-line import/no-unresolved
 import { getFieldName } from 'volto-form-block/components/utils';
 // eslint-disable-next-line import/no-unresolved
@@ -17,6 +9,7 @@ import Field from 'volto-form-block/components/Field';
 import GoogleReCaptchaWidget from 'volto-form-block/components/Widget/GoogleReCaptchaWidget';
 // eslint-disable-next-line import/no-unresolved
 import HCaptchaWidget from 'volto-form-block/components/Widget/HCaptchaWidget';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({
@@ -50,6 +43,7 @@ const FormView = ({
   data,
   onSubmit,
   resetFormState,
+  designReactKit,
 }) => {
   const intl = useIntl();
   const alertTransition = {
@@ -92,6 +86,7 @@ const FormView = ({
     }
   }
 
+  const { Card, CardBody, Row, Col, Button, Alert, Progress } = designReactKit;
   return (
     <div className="block form">
       <div className="public-ui">
@@ -261,4 +256,4 @@ const FormView = ({
   );
 };
 
-export default FormView;
+export default injectLazyLibs(['designReactKit'])(FormView);

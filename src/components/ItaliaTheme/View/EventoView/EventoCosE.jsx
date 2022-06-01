@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import { defineMessages, useIntl } from 'react-intl';
 
-import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
 import {
   RichText,
@@ -28,8 +28,9 @@ const messages = defineMessages({
   },
 });
 
-const EventoCosE = ({ content }) => {
+const EventoCosE = ({ content, designReactKit }) => {
   const intl = useIntl();
+  const { Chip, ChipLabel } = designReactKit;
 
   return (
     <RichTextArticle
@@ -86,4 +87,4 @@ EventoCosE.propTypes = {
   }).isRequired,
 };
 
-export default EventoCosE;
+export default injectLazyLibs(['designReactKit'])(EventoCosE);

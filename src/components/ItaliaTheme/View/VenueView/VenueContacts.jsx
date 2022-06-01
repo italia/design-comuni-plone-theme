@@ -1,13 +1,9 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
-} from 'design-react-kit/dist/design-react-kit';
-import { Icon } from '@italia/components/ItaliaTheme';
 
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+
+import { Icon } from '@italia/components/ItaliaTheme';
 import {
   richTextHasContent,
   RichTextArticle,
@@ -63,9 +59,9 @@ const messages = defineMessages({
   },
 });
 
-const VenueContacts = ({ content }) => {
+const VenueContacts = ({ content, designReactKit }) => {
   const intl = useIntl();
-
+  const { Card, CardBody, CardTitle, CardText } = designReactKit;
   return content?.telefono ||
     content?.email ||
     content?.pec ||
@@ -248,4 +244,4 @@ const VenueContacts = ({ content }) => {
   );
 };
 
-export default VenueContacts;
+export default injectLazyLibs(['designReactKit'])(VenueContacts);

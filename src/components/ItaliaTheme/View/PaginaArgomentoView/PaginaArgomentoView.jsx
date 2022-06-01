@@ -9,12 +9,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Portal } from 'react-portal';
 import cx from 'classnames';
 
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
-import {
-  Card,
-  CardBody,
-  CardText,
-} from 'design-react-kit/dist/design-react-kit';
 import Image from '@plone/volto/components/theme/Image/Image';
 import {
   BodyClass,
@@ -22,6 +18,7 @@ import {
   hasBlocksData,
 } from '@plone/volto/helpers';
 import { getContent, resetContent } from '@plone/volto/actions';
+
 import { CardCategory, Breadcrumbs } from '@italia/components/ItaliaTheme';
 import {
   ArgumentIcon,
@@ -42,7 +39,7 @@ import {
  * @returns {string} Markup of the component.
  */
 
-const PaginaArgomentoView = ({ content }) => {
+const PaginaArgomentoView = ({ content, designReactKit }) => {
   const location = useLocation();
   const dispatch = useDispatch();
 
@@ -75,6 +72,7 @@ const PaginaArgomentoView = ({ content }) => {
     richTextHasContent(content.ulteriori_informazioni) ||
     content?.unita_amministrative_responsabili?.length > 0;
 
+  const { Card, CardBody, CardText } = designReactKit;
   return hasBlocksData(content) ? (
     <div id="page-document">
       <div className="ui container">
@@ -176,4 +174,4 @@ const PaginaArgomentoView = ({ content }) => {
   );
 };
 
-export default PaginaArgomentoView;
+export default injectLazyLibs(['designReactKit'])(PaginaArgomentoView);

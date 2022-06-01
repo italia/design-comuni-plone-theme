@@ -3,17 +3,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import { useIntl } from 'react-intl';
-import {
-  Container,
-  Row,
-  Col,
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
-  Chip,
-  ChipLabel,
-} from 'design-react-kit/dist/design-react-kit';
+
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -50,12 +40,25 @@ const CardWithImageTemplate = (props) => {
     hide_dates = false,
     natural_image_size = false,
     moment: Moment,
+    designReactKit,
   } = props;
 
   const moment = Moment.default;
   moment.locale(intl.locale);
 
   const imagesToShow = set_four_columns ? 4 : 3;
+
+  const {
+    Container,
+    Row,
+    Col,
+    Card,
+    CardBody,
+    CardTitle,
+    CardText,
+    Chip,
+    ChipLabel,
+  } = designReactKit;
 
   return (
     <div className="card-with-image-template">
@@ -202,4 +205,6 @@ CardWithImageTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-export default injectLazyLibs(['moment'])(CardWithImageTemplate);
+export default injectLazyLibs(['moment', 'designReactKit'])(
+  CardWithImageTemplate,
+);

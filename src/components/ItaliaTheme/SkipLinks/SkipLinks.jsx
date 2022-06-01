@@ -1,6 +1,7 @@
 import React from 'react';
 import { useIntl, defineMessages } from 'react-intl';
-import { Skiplink, SkiplinkItem } from 'design-react-kit/dist/design-react-kit';
+
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 const messages = defineMessages({
   mainView: {
@@ -17,8 +18,9 @@ const messages = defineMessages({
   },
 });
 
-const SkipLinks = () => {
+const SkipLinks = ({ designReactKit }) => {
   const intl = useIntl();
+  const { Skiplink, SkiplinkItem } = designReactKit;
 
   return (
     <Skiplink tag="div">
@@ -35,4 +37,4 @@ const SkipLinks = () => {
   );
 };
 
-export default SkipLinks;
+export default injectLazyLibs(['designReactKit'])(SkipLinks);

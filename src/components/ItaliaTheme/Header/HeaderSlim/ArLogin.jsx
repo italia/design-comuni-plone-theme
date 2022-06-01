@@ -8,16 +8,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
 import jwtDecode from 'jwt-decode';
-import {
-  Row,
-  Col,
-  DropdownMenu,
-  DropdownToggle,
-  LinkList,
-  LinkListItem,
-  UncontrolledDropdown,
-} from 'design-react-kit/dist/design-react-kit';
 
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { getUser, logout, purgeMessages } from '@plone/volto/actions';
 
 import { BodyClass } from '@plone/volto/helpers';
@@ -41,7 +33,7 @@ const messages = defineMessages({
   },
 });
 
-const ArLogin = () => {
+const ArLogin = ({ designReactKit }) => {
   const intl = useIntl();
   const dispatch = useDispatch();
 
@@ -74,6 +66,16 @@ const ArLogin = () => {
   }
 
   const isPublicUser = userLogged?.roles?.length === 0;
+
+  const {
+    Row,
+    Col,
+    DropdownMenu,
+    DropdownToggle,
+    LinkList,
+    LinkListItem,
+    UncontrolledDropdown,
+  } = designReactKit;
 
   return (
     <>
@@ -155,4 +157,4 @@ const ArLogin = () => {
   );
 };
 
-export default ArLogin;
+export default injectLazyLibs(['designReactKit'])(ArLogin);

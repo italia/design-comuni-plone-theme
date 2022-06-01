@@ -11,9 +11,9 @@ import {
   getSecondaryMenu,
   getItemsByPath,
 } from '@italia/addons/volto-secondarymenu';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
-import { Nav, NavItem, NavLink } from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
   menu_selected: {
@@ -22,7 +22,7 @@ const messages = defineMessages({
   },
 });
 
-const MenuSecondary = ({ pathname }) => {
+const MenuSecondary = ({ pathname, designReactKit }) => {
   const intl = useIntl();
   const dispatch = useDispatch();
 
@@ -44,6 +44,8 @@ const MenuSecondary = ({ pathname }) => {
       (url !== '' && isMatch(currrentPath.split('/'), url.split('/')))
     );
   };
+
+  const { Nav, NavItem, NavLink } = designReactKit;
 
   return (
     items?.length > 0 && (
@@ -77,4 +79,4 @@ const MenuSecondary = ({ pathname }) => {
 
 MenuSecondary.propTypes = {};
 
-export default MenuSecondary;
+export default injectLazyLibs(['designReactKit'])(MenuSecondary);

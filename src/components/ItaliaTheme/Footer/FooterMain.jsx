@@ -4,8 +4,8 @@
  */
 
 import React from 'react';
-import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
 import {
   FooterNavigation,
@@ -19,7 +19,8 @@ import {
  * @class FooterMain
  * @extends Component
  */
-const FooterMain = () => {
+const FooterMain = ({ designReactKit }) => {
+  const { Container, Row, Col } = designReactKit;
   return (
     <div className="it-footer-main">
       <Container tag="div">
@@ -46,4 +47,4 @@ const FooterMain = () => {
   );
 };
 
-export default FooterMain;
+export default injectLazyLibs(['designReactKit'])(FooterMain);

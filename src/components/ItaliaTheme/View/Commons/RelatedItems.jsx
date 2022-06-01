@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { defineMessages, useIntl } from 'react-intl';
-import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+
 import { Icon } from '@italia/components/ItaliaTheme';
 import { GenericCard } from '@italia/components/ItaliaTheme/View';
 
@@ -48,6 +49,7 @@ const RelatedItems = ({
   list = [],
   children,
   view_sections = false,
+  designReactKit,
 }) => {
   const intl = useIntl();
 
@@ -69,6 +71,8 @@ const RelatedItems = ({
       }
     });
   }
+
+  const { Container, Row, Col } = designReactKit;
 
   return related?.length > 0 || children ? (
     <section id="contenuti-correlati">
@@ -164,7 +168,7 @@ const RelatedItems = ({
   ) : null;
 };
 
-export default RelatedItems;
+export default injectLazyLibs(['designReactKit'])(RelatedItems);
 
 RelatedItems.propTypes = {
   content: PropTypes.shape({

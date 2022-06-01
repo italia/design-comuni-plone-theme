@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import { flattenToAppURL } from '@plone/volto/helpers';
-
 import PropTypes from 'prop-types';
 
-import {
-  Modal,
-  ModalHeader,
-  ModalBody,
-  Button,
-} from 'design-react-kit/dist/design-react-kit';
-import { Icon } from '@italia/components/ItaliaTheme';
+import { flattenToAppURL } from '@plone/volto/helpers';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
+
+import { Icon } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   view_prev: {
@@ -35,7 +30,13 @@ const messages = defineMessages({
  * @params {string} folder name where to find images.
  * @returns {string} Markup of the component.
  */
-const GalleryPreview = ({ id, viewIndex, setViewIndex, items }) => {
+const GalleryPreview = ({
+  id,
+  viewIndex,
+  setViewIndex,
+  items,
+  designReactKit,
+}) => {
   const intl = useIntl();
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
@@ -50,6 +51,8 @@ const GalleryPreview = ({ id, viewIndex, setViewIndex, items }) => {
       setModalIsOpen(false);
     }
   }, [viewIndex]);
+
+  const { Modal, ModalHeader, ModalBody, Button } = designReactKit;
 
   return items?.length > 0 ? (
     <Modal
@@ -131,7 +134,7 @@ const GalleryPreview = ({ id, viewIndex, setViewIndex, items }) => {
   ) : null;
 };
 
-export default GalleryPreview;
+export default injectLazyLibs(['designReactKit'])(GalleryPreview);
 
 GalleryPreview.propTypes = {
   id: PropTypes.string,

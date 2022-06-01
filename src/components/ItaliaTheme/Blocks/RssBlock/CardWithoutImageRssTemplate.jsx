@@ -3,15 +3,6 @@ import PropTypes from 'prop-types';
 import { useIntl, defineMessages } from 'react-intl';
 import cx from 'classnames';
 
-import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
-  CardReadMore,
-  Row,
-  Col,
-} from 'design-react-kit/dist/design-react-kit';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
@@ -34,11 +25,22 @@ const CardWithoutImageRssTemplate = ({
   isEditMode,
   data = {},
   moment: Moment,
+  designReactKit,
 }) => {
   const intl = useIntl();
 
   const moment = Moment.default;
   moment.locale(intl.locale);
+
+  const {
+    Card,
+    CardBody,
+    CardTitle,
+    CardText,
+    CardReadMore,
+    Row,
+    Col,
+  } = designReactKit;
 
   return (
     <div className={cx('', { 'public-ui': isEditMode })}>
@@ -114,4 +116,6 @@ const CardWithoutImageRssTemplate = ({
 CardWithoutImageRssTemplate.propTypes = {
   items: PropTypes.arrayOf(PropTypes.object),
 };
-export default injectLazyLibs(['moment'])(CardWithoutImageRssTemplate);
+export default injectLazyLibs(['moment', 'designReactKit'])(
+  CardWithoutImageRssTemplate,
+);

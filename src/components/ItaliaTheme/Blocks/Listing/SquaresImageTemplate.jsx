@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container } from 'design-react-kit/dist/design-react-kit';
+
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
 
 import {
@@ -15,7 +16,9 @@ const SquaresImageTemplate = ({
   isEditMode,
   linkTitle,
   linkHref,
+  designReactKit,
 }) => {
+  const { Container } = designReactKit;
   return (
     <div className="squares-image-template">
       <Container className="px-4">
@@ -53,4 +56,4 @@ SquaresImageTemplate.propTypes = {
   linkHrefs: PropTypes.any,
 };
 
-export default SquaresImageTemplate;
+export default injectLazyLibs(['designReactKit'])(SquaresImageTemplate);

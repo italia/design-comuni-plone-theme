@@ -1,16 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
+import { useIntl, defineMessages } from 'react-intl';
+
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { useIntl, defineMessages } from 'react-intl';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+
 import { ListingLinkMore, ListingImage } from '@italia/components/ItaliaTheme';
-import {
-  Container,
-  Row,
-  Col,
-  Alert,
-} from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
   maxItemsExceeded: {
@@ -27,8 +24,11 @@ const GridGalleryTemplate = ({
   linkTitle,
   linkHref,
   show_block_bg,
+  designReactKit,
 }) => {
   const intl = useIntl();
+
+  const { Container, Row, Col, Alert } = designReactKit;
 
   return (
     <div className="grid-gallery-template">
@@ -115,4 +115,4 @@ GridGalleryTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-export default GridGalleryTemplate;
+export default injectLazyLibs(['designReactKit'])(GridGalleryTemplate);

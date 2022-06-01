@@ -1,10 +1,6 @@
 import { defineMessages, useIntl } from 'react-intl';
 import React from 'react';
-import {
-  Card,
-  CardTitle,
-  CardBody,
-} from 'design-react-kit/dist/design-react-kit';
+
 import PropTypes from 'prop-types';
 
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
@@ -36,7 +32,7 @@ const messages = defineMessages({
  * @params {object} Dates: object.
  * @returns {string} Markup of the component.
  */
-const BandoDates = ({ content, moment: Moment }) => {
+const BandoDates = ({ content, moment: Moment, designReactKit }) => {
   const intl = useIntl();
   const moment = Moment.default;
   moment.locale(intl.locale);
@@ -55,6 +51,8 @@ const BandoDates = ({ content, moment: Moment }) => {
   const chiusura_procedimento_bando = content?.chiusura_procedimento_bando
     ? viewDate(intl.locale, moment, content.chiusura_procedimento_bando)
     : null;
+
+  const { Card, CardTitle, CardBody } = designReactKit;
 
   return content ? (
     <>
@@ -171,7 +169,7 @@ const BandoDates = ({ content, moment: Moment }) => {
   ) : null;
 };
 
-export default injectLazyLibs(['moment'])(BandoDates);
+export default injectLazyLibs(['moment', 'designReactKit'])(BandoDates);
 
 BandoDates.propTypes = {
   content: PropTypes.object.isRequired,

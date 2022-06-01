@@ -6,18 +6,14 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-
 import { defineMessages, useIntl } from 'react-intl';
 import { isEqual } from 'lodash';
+
 import { getBaseUrl } from '@plone/volto/helpers';
 import { getNavigation } from '@plone/volto/actions';
 import { UniversalLink } from '@plone/volto/components';
-import {
-  Row,
-  Col,
-  LinkList,
-  LinkListItem,
-} from 'design-react-kit/dist/design-react-kit';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+
 import { SectionIcon } from '@italia/components/ItaliaTheme';
 import config from '@plone/volto/registry';
 
@@ -28,7 +24,7 @@ const messages = defineMessages({
   },
 });
 
-const FooterNavigation = () => {
+const FooterNavigation = ({ designReactKit }) => {
   const intl = useIntl();
   const currentLang = useSelector((state) => state.intl.locale);
   const dispatch = useDispatch();
@@ -42,6 +38,8 @@ const FooterNavigation = () => {
   useEffect(() => {
     dispatch(getNavigation(getBaseUrl(path), 2));
   }, [path, dispatch]);
+
+  const { Row, Col, LinkList, LinkListItem } = designReactKit;
 
   return (
     <>
@@ -98,4 +96,4 @@ const FooterNavigation = () => {
   );
 };
 
-export default FooterNavigation;
+export default injectLazyLibs(['designReactKit'])(FooterNavigation);

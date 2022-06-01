@@ -2,7 +2,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import { useSelector } from 'react-redux';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Button } from 'design-react-kit/dist/design-react-kit';
+
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { SearchUtils } from '@italia/components';
@@ -27,7 +27,7 @@ const messages = defineMessages({
   },
 });
 
-const SearchSectionForm = ({ content, moment: Moment }) => {
+const SearchSectionForm = ({ content, moment: Moment, designReactKit }) => {
   const intl = useIntl();
   const moment = Moment.default;
   moment.locale(intl.locale);
@@ -57,6 +57,9 @@ const SearchSectionForm = ({ content, moment: Moment }) => {
           flattenToAppURL(content['@id']);
     }
   };
+
+  const { Button } = designReactKit;
+
   return (
     <div className="form-group mt-5">
       <div className="input-group mb-3">
@@ -91,7 +94,7 @@ const SearchSectionForm = ({ content, moment: Moment }) => {
   );
 };
 
-export default injectLazyLibs(['moment'])(SearchSectionForm);
+export default injectLazyLibs(['moment', 'designReactKit'])(SearchSectionForm);
 
 SearchSectionForm.propTypes = {
   params: PropTypes.shape({

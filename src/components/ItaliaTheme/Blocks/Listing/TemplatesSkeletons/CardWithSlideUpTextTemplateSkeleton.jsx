@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container } from 'design-react-kit/dist/design-react-kit';
-import { UniversalLink } from '@plone/volto/components';
 import { defineMessages, useIntl } from 'react-intl';
+
+import { UniversalLink } from '@plone/volto/components';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 const messages = defineMessages({
   vedi: {
@@ -17,8 +18,10 @@ const CardWithSlideUpTextTemplateSkeleton = ({
   linkTitle,
   linkHref,
   show_description = true,
+  designReactKit,
 }) => {
   const intl = useIntl();
+  const { Container } = designReactKit;
 
   return (
     <div className="card-slide-text-template">
@@ -58,4 +61,6 @@ CardWithSlideUpTextTemplateSkeleton.propTypes = {
   linkHrefs: PropTypes.any,
 };
 
-export default CardWithSlideUpTextTemplateSkeleton;
+export default injectLazyLibs(['designReactKit'])(
+  CardWithSlideUpTextTemplateSkeleton,
+);

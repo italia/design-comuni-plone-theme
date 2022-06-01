@@ -7,17 +7,14 @@ import React from 'react';
 import { compose } from 'redux';
 import { injectIntl, defineMessages } from 'react-intl';
 import { UniversalLink } from '@plone/volto/components';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+
 import {
   injectDNDSubblocks,
   SubblockEdit,
   Subblock,
 } from '@italia/addons/volto-subblocks';
 
-import {
-  Card,
-  CardBody,
-  CardReadMore,
-} from 'design-react-kit/dist/design-react-kit';
 import { Icon } from '@italia/components/ItaliaTheme';
 
 import { TextEditorWidget } from '@italia/components/ItaliaTheme';
@@ -79,6 +76,7 @@ class EditBlock extends SubblockEdit {
     if (__SERVER__) {
       return <div />;
     }
+    const { Card, CardBody, CardReadMore } = this.props.designReactKit;
 
     return (
       <Subblock subblock={this} className="subblock-edit">
@@ -176,4 +174,8 @@ class EditBlock extends SubblockEdit {
   }
 }
 
-export default compose(injectIntl, injectDNDSubblocks)(EditBlock);
+export default compose(
+  injectIntl,
+  injectDNDSubblocks,
+  injectLazyLibs(['designReactKit']),
+)(EditBlock);

@@ -3,16 +3,6 @@ import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 
 import cx from 'classnames';
-import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
-  CardReadMore,
-  Button,
-  Row,
-  Col,
-} from 'design-react-kit/dist/design-react-kit';
 
 import { UniversalLink } from '@plone/volto/components';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
@@ -106,6 +96,17 @@ const SimpleCardTemplateDefault = (props) => {
     }
     addFilters(filters);
   };
+
+  const {
+    Card,
+    CardBody,
+    CardTitle,
+    CardText,
+    CardReadMore,
+    Button,
+    Row,
+    Col,
+  } = props.designReactKit;
 
   return (
     <div className="simple-card-default">
@@ -231,4 +232,6 @@ SimpleCardTemplateDefault.propTypes = {
   linkHref: PropTypes.any,
 };
 
-export default injectLazyLibs(['moment'])(SimpleCardTemplateDefault);
+export default injectLazyLibs(['moment', 'designReactKit'])(
+  SimpleCardTemplateDefault,
+);

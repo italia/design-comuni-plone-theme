@@ -1,16 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
-import {
-  Container,
-  Row,
-  Col,
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
-  Chip,
-} from 'design-react-kit/dist/design-react-kit';
+
 import cx from 'classnames';
 
 import { UniversalLink } from '@plone/volto/components';
@@ -35,10 +26,22 @@ const ContentInEvidenceTemplate = ({
   linkTitle,
   linkHref,
   moment: Moment,
+  designReactKit,
 }) => {
   const intl = useIntl();
   const moment = Moment.default;
   moment.locale(intl.locale);
+
+  const {
+    Container,
+    Row,
+    Col,
+    Card,
+    CardBody,
+    CardTitle,
+    CardText,
+    Chip,
+  } = designReactKit;
   return (
     <div className="contentInEvidenceTemplate">
       <Container
@@ -125,4 +128,6 @@ ContentInEvidenceTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-export default injectLazyLibs(['moment'])(ContentInEvidenceTemplate);
+export default injectLazyLibs(['moment', 'designReactKit'])(
+  ContentInEvidenceTemplate,
+);

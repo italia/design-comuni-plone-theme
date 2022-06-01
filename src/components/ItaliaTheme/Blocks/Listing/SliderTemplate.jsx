@@ -5,7 +5,6 @@ import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useIntl, defineMessages } from 'react-intl';
-import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 
 import { UniversalLink } from '@plone/volto/components';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
@@ -47,6 +46,7 @@ const SliderTemplate = ({
   autoplay = false,
   autoplay_speed = 2, //seconds
   reactSlick,
+  designReactKit,
 }) => {
   const intl = useIntl();
   const slider = useRef(null);
@@ -112,6 +112,8 @@ const SliderTemplate = ({
   };
 
   //const getCaption = (item) => item.description ?? item.rights ?? null;
+
+  const { Container, Row, Col } = designReactKit;
   return (
     <div
       className={cx(`sliderTemplate slidesToShow-${nSlidesToShow || 1}`, {
@@ -208,4 +210,4 @@ SliderTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-export default injectLazyLibs(['reactSlick'])(SliderTemplate);
+export default injectLazyLibs(['reactSlick', 'designReactKit'])(SliderTemplate);

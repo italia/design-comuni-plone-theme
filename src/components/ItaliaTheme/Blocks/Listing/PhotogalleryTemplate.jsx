@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { useIntl, defineMessages } from 'react-intl';
-import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 
 import cx from 'classnames';
 import { UniversalLink } from '@plone/volto/components';
@@ -43,12 +42,14 @@ const PhotogalleryTemplate = ({
   linkTitle,
   linkHref,
   reactSlick,
+  designReactKit,
 }) => {
   const intl = useIntl();
   const slider = useRef(null);
   const [autoplay, setAutoplay] = useState(false);
   const [viewImageIndex, setViewImageIndex] = useState(null);
   const Slider = reactSlick.default;
+  const { Container, Row, Col } = designReactKit;
 
   const toggleAutoplay = () => {
     if (!slider?.current) return;
@@ -216,4 +217,6 @@ PhotogalleryTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-export default injectLazyLibs(['reactSlick'])(PhotogalleryTemplate);
+export default injectLazyLibs(['reactSlick', 'designReactKit'])(
+  PhotogalleryTemplate,
+);

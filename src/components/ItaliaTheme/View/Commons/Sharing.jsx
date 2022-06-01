@@ -1,15 +1,7 @@
 import { defineMessages, useIntl } from 'react-intl';
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import {
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  LinkList,
-  LinkListItem,
-} from 'design-react-kit/dist/design-react-kit';
-
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { toPublicURL } from '@plone/volto/helpers';
 import { Icon } from '@italia/components/ItaliaTheme';
 
@@ -27,7 +19,7 @@ const messages = defineMessages({
   },
 });
 
-const Sharing = ({ url, title }) => {
+const Sharing = ({ url, title, designReactKit }) => {
   const intl = useIntl();
   const publicUrl = toPublicURL(url);
 
@@ -63,6 +55,14 @@ const Sharing = ({ url, title }) => {
       icon: 'telegram',
     },
   ];
+
+  const {
+    UncontrolledDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    LinkList,
+    LinkListItem,
+  } = designReactKit;
 
   return (
     <UncontrolledDropdown className="d-inline page-sharing">
@@ -104,7 +104,7 @@ const Sharing = ({ url, title }) => {
     </UncontrolledDropdown>
   );
 };
-export default Sharing;
+export default injectLazyLibs(['designReactKit'])(Sharing);
 
 Sharing.propTypes = {
   params: PropTypes.shape({

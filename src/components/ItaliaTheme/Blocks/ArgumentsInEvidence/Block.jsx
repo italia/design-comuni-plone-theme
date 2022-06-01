@@ -1,15 +1,10 @@
 import React from 'react';
 import { defineMessages } from 'react-intl';
 import { TextEditorWidget } from '@italia/components/ItaliaTheme';
-import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
-  CardReadMore,
-} from 'design-react-kit/dist/design-react-kit';
+
 import redraft from 'redraft';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { ArgumentIcon } from '@italia/components/ItaliaTheme/View';
 import config from '@plone/volto/registry';
 
@@ -36,7 +31,9 @@ const Block = ({
   block,
   onChange,
   intl,
+  designReactKit,
 }) => {
+  const { Card, CardBody, CardTitle, CardText, CardReadMore } = designReactKit;
   const argument = data?.argument ? data?.argument[0] : null;
 
   return (
@@ -82,4 +79,4 @@ const Block = ({
     </Card>
   );
 };
-export default Block;
+export default injectLazyLibs(['designReactKit'])(Block);

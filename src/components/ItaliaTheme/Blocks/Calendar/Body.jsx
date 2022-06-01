@@ -3,13 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useIntl, defineMessages } from 'react-intl';
 import useDeepCompareEffect from 'use-deep-compare-effect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  Card,
-  Row,
-  Col,
-  Container,
-  Button,
-} from 'design-react-kit/dist/design-react-kit';
+
 import cx from 'classnames';
 
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
@@ -48,11 +42,13 @@ const Body = ({
   onChangeBlock,
   moment: Moment,
   reactSlick,
+  designReactKit,
 }) => {
   const intl = useIntl();
   const moment = Moment.default;
 
   const Slider = reactSlick.default;
+  const { Card, Row, Col, Container, Button } = designReactKit;
 
   const [activePage, setActivePage] = useState(0);
   const [additionalFilters, setAdditionalFilters] = useState([]);
@@ -340,4 +336,4 @@ const Body = ({
     </div>
   );
 };
-export default injectLazyLibs(['moment', 'reactSlick'])(Body);
+export default injectLazyLibs(['moment', 'reactSlick', 'designReactKit'])(Body);

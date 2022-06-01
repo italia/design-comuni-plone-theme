@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import { Button } from 'design-react-kit/dist/design-react-kit';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { Icon } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
@@ -15,7 +15,7 @@ const messages = defineMessages({
   },
 });
 
-const ScrollToTop = () => {
+const ScrollToTop = ({ designReactKit }) => {
   const intl = useIntl();
   const [isVisible, setIsVisible] = useState(false);
 
@@ -40,6 +40,8 @@ const ScrollToTop = () => {
       behavior: 'smooth',
     });
   };
+
+  const { Button } = designReactKit;
   return (
     <>
       {isVisible && (
@@ -59,4 +61,4 @@ const ScrollToTop = () => {
   );
 };
 
-export default ScrollToTop;
+export default injectLazyLibs(['designReactKit'])(ScrollToTop);

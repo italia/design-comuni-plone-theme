@@ -4,13 +4,7 @@
 import React, { useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import { values } from 'lodash';
-import {
-  Input,
-  FormGroup,
-  Label,
-  Collapse,
-  Button,
-} from 'design-react-kit/dist/design-react-kit';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 const messages = defineMessages({
   showAll: {
@@ -43,13 +37,16 @@ const messages = defineMessages({
   },
 });
 
-export default function SearchCTs({
+const SearchCTs = ({
   portalTypes,
   setPortalTypes,
   collapsable = false,
-}) {
+  designReactKit,
+}) => {
   const intl = useIntl();
   const [collapse, setCollapse] = useState(true);
+
+  const { Input, FormGroup, Label, Collapse, Button } = designReactKit;
 
   const toggleAll = (cts) => {
     setCollapse(false);
@@ -190,4 +187,5 @@ export default function SearchCTs({
       )}
     </>
   );
-}
+};
+export default injectLazyLibs(['designReactKit'])(SearchCTs);

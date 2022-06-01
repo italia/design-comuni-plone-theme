@@ -9,11 +9,10 @@ import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { injectIntl } from 'react-intl';
 import cx from 'classnames';
-import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 
 import { createContent } from '@plone/volto/actions';
-import { SidebarPortal } from '@plone/volto/components';
-import { EditTextBlock } from '@plone/volto/components';
+import { SidebarPortal, EditTextBlock } from '@plone/volto/components';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 import { AlertSidebar } from '@italia/components/ItaliaTheme';
 /**
@@ -59,6 +58,8 @@ class Edit extends Component {
     if (__SERVER__) {
       return <div />;
     }
+    const { Container, Row, Col } = this.props.designReactKit;
+
     return (
       <div className="public-ui">
         <div
@@ -114,6 +115,7 @@ class Edit extends Component {
 
 export default compose(
   injectIntl,
+  injectLazyLibs(['designReactKit']),
   connect(
     (state) => ({
       request: state.content.create,

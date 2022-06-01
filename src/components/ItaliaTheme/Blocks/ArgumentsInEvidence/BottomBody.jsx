@@ -1,12 +1,7 @@
 import React from 'react';
 import { defineMessages } from 'react-intl';
 import { UniversalLink, ConditionalLink } from '@plone/volto/components';
-import {
-  Chip,
-  ChipLabel,
-  Button,
-  Container,
-} from 'design-react-kit/dist/design-react-kit';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 const messages = defineMessages({
   view_all: {
@@ -19,7 +14,9 @@ const messages = defineMessages({
   },
 });
 
-const BottomBody = ({ data, intl }) => {
+const BottomBody = ({ data, intl, designReactKit }) => {
+  const { Chip, ChipLabel, Button, Container } = designReactKit;
+
   return data?.arguments?.length > 0 ? (
     <Container className="text-center">
       <div className="row d-lg-inline-flex pt-5">
@@ -62,4 +59,4 @@ const BottomBody = ({ data, intl }) => {
     </Container>
   ) : null;
 };
-export default BottomBody;
+export default injectLazyLibs(['designReactKit'])(BottomBody);

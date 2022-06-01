@@ -7,18 +7,10 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { map } from 'lodash';
 import cx from 'classnames';
-import {
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  Button,
-  Row,
-  Col,
-  LinkList,
-} from 'design-react-kit/dist/design-react-kit';
+
 import { defineMessages, useIntl } from 'react-intl';
+
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import {
   flattenToAppURL,
   hasBlocksData,
@@ -27,6 +19,7 @@ import {
   getBaseUrl,
 } from '@plone/volto/helpers';
 import { UniversalLink, ConditionalLink } from '@plone/volto/components';
+
 import { Icon } from '@italia/components/ItaliaTheme';
 import config from '@plone/volto/registry';
 
@@ -70,13 +63,25 @@ const isChildActive = (itemUrl, pathname) => {
   return pathname.indexOf(itemUrl) > -1;
 };
 
-const MegaMenu = ({ item, pathname }) => {
+const MegaMenu = ({ item, pathname, designReactKit }) => {
   const intl = useIntl();
   const blocksFieldname = getBlocksFieldname(item);
   const blocksLayoutFieldname = getBlocksLayoutFieldname(item);
   const isItemActive = isActive(item, pathname);
 
   const [menuStatus, setMenuStatus] = useState(false);
+
+  const {
+    NavItem,
+    NavLink,
+    UncontrolledDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    Button,
+    Row,
+    Col,
+    LinkList,
+  } = designReactKit;
 
   const getAnchorTarget = (nodeElement) => {
     if (nodeElement.nodeName === 'A') {
@@ -397,4 +402,4 @@ MegaMenu.propTypes = {
   }).isRequired,
 };
 
-export default MegaMenu;
+export default injectLazyLibs(['designReactKit'])(MegaMenu);

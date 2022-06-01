@@ -5,11 +5,10 @@
 
 import React from 'react';
 import { defineMessages } from 'react-intl';
-import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 
-import { SidebarPortal } from '@plone/volto/components';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import { SidebarPortal, UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { UniversalLink } from '@plone/volto/components';
 
 import {
   withDNDContext,
@@ -54,6 +53,7 @@ class Edit extends SubblocksEdit {
     if (__SERVER__) {
       return <div />;
     }
+    const { Container, Row, Col } = this.props.designReactKit;
 
     return (
       <div className="public-ui">
@@ -158,4 +158,6 @@ class Edit extends SubblocksEdit {
   }
 }
 
-export default React.memo(withDNDContext(Edit));
+export default React.memo(
+  injectLazyLibs(['designReactKit'])(withDNDContext(Edit)),
+);

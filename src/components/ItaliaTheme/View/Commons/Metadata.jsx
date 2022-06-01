@@ -1,7 +1,6 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import cx from 'classnames';
-import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 import PropTypes from 'prop-types';
 
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
@@ -40,10 +39,13 @@ const Metadata = ({
   title,
   children,
   moment: Moment,
+  designReactKit,
 }) => {
   const intl = useIntl();
   const moment = Moment.default;
   moment.locale(intl.locale);
+
+  const { Chip, ChipLabel } = designReactKit;
 
   return (
     <article
@@ -92,7 +94,7 @@ const Metadata = ({
   );
 };
 
-export default injectLazyLibs(['moment'])(Metadata);
+export default injectLazyLibs(['moment', 'designReactKit'])(Metadata);
 
 Metadata.propTypes = {
   content: PropTypes.object,

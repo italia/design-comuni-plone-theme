@@ -8,7 +8,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
 import { isEmpty } from 'lodash';
 
-import { HeaderSocialsZone } from 'design-react-kit/dist/design-react-kit';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+
 import { Icon } from '@italia/components/ItaliaTheme';
 import { getSocialSettings } from '@italia/addons/volto-social-settings';
 
@@ -19,7 +20,7 @@ const messages = defineMessages({
   },
 });
 
-const SocialHeader = () => {
+const SocialHeader = ({ designReactKit }) => {
   const intl = useIntl();
   const dispatch = useDispatch();
   const socialSettings = useSelector((state) => state?.socialSettings); //useSelector((state) => state?.socialSettings?.results);
@@ -38,6 +39,8 @@ const SocialHeader = () => {
     subsite?.subsite_social_links?.length > 0
       ? JSON.parse(subsite.subsite_social_links)
       : items;
+
+  const { HeaderSocialsZone } = designReactKit;
 
   return (
     socials?.length > 0 && (
@@ -61,4 +64,4 @@ const SocialHeader = () => {
   );
 };
 
-export default SocialHeader;
+export default injectLazyLibs(['designReactKit'])(SocialHeader);

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container } from 'design-react-kit/dist/design-react-kit';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import SimpleCardTemplateDefault from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault';
 import SimpleCardTemplateCompact from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateCompact';
 
@@ -8,6 +8,7 @@ import { SimpleCardTemplateAppearance_COMPACT } from '@italia/config/Blocks/List
 
 const SimpleCardTemplate = (data) => {
   let content = null;
+  const { Container } = data.designReactKit;
   switch (data.appearance) {
     case SimpleCardTemplateAppearance_COMPACT:
       content = <SimpleCardTemplateCompact {...data} />;
@@ -26,4 +27,4 @@ SimpleCardTemplate.propTypes = {
   linkHref: PropTypes.any,
 };
 
-export default SimpleCardTemplate;
+export default injectLazyLibs(['designReactKit'])(SimpleCardTemplate);
