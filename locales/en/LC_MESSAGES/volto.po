@@ -418,6 +418,12 @@ msgstr "Remove file"
 msgid "Scroll to top"
 msgstr "Scroll to top"
 
+#: components/ItaliaTheme/Blocks/CountDown/Body
+#: components/ItaliaTheme/Blocks/SearchSections/Body
+# defaultMessage: Cerca
+msgid "Search"
+msgstr ""
+
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Risultati della ricerca
 msgid "Search results"
