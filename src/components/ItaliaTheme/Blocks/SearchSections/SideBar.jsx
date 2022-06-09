@@ -30,6 +30,10 @@ const messages = defineMessages({
     id: 'placeholder',
     defaultMessage: 'Testo di aiuto',
   },
+  img: {
+    id: 'imageBackground',
+    defaultMessage: 'Immagine per lo sfondo',
+  },
 });
 
 const Sidebar = ({
@@ -65,6 +69,23 @@ const Sidebar = ({
                 title: value,
               });
             }}
+          />
+          <ObjectBrowserWidget
+            id="image"
+            title={intl.formatMessage(messages.img)}
+            mode="image"
+            allowExternals={false}
+            value={data.image}
+            widgetOptions={{
+              pattern_options: { selectableTypes: ['Image'] },
+            }}
+            onChange={(name, value) => {
+              onChangeBlock(block, {
+                ...data,
+                image: value,
+              });
+            }}
+            return="single"
           />
           <TextWidget
             id="placeholder"

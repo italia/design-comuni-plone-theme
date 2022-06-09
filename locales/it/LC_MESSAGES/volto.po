@@ -1843,6 +1843,11 @@ msgstr "Puoi selezionare un’icona fra quelle proposte nel menu a tendina oppur
 msgid "iconss_blocks"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
+# defaultMessage: Immagine per lo sfondo
+msgid "imageBackground"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
 # defaultMessage: Importi di viaggio e/o servizi
 msgid "importi_di_viaggio_e_o_servizi"
