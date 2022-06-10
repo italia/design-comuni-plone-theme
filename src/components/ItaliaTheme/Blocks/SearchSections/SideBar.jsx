@@ -34,6 +34,10 @@ const messages = defineMessages({
     id: 'imageBackground',
     defaultMessage: 'Immagine per lo sfondo',
   },
+  background_section: {
+    id: 'background_section',
+    defaultMessage: 'Sfondo del blocco',
+  },
 });
 
 const Sidebar = ({
@@ -69,23 +73,6 @@ const Sidebar = ({
                 title: value,
               });
             }}
-          />
-          <ObjectBrowserWidget
-            id="image"
-            title={intl.formatMessage(messages.img)}
-            mode="image"
-            allowExternals={false}
-            value={data.image}
-            widgetOptions={{
-              pattern_options: { selectableTypes: ['Image'] },
-            }}
-            onChange={(name, value) => {
-              onChangeBlock(block, {
-                ...data,
-                image: value,
-              });
-            }}
-            return="single"
           />
           <TextWidget
             id="placeholder"
@@ -124,6 +111,32 @@ const Sidebar = ({
           )}
         </Accordion.Content>
       </Accordion>
+
+      <Accordion fluid styled className="form">
+        <Accordion.Title active={true} index={0} onClick={() => {}}>
+          {intl.formatMessage(messages.background_section)}
+        </Accordion.Title>
+        <Accordion.Content active={true}>
+          <ObjectBrowserWidget
+            id="image"
+            title={intl.formatMessage(messages.img)}
+            mode="image"
+            allowExternals={false}
+            value={data.image}
+            widgetOptions={{
+              pattern_options: { selectableTypes: ['Image'] },
+            }}
+            onChange={(name, value) => {
+              onChangeBlock(block, {
+                ...data,
+                image: value,
+              });
+            }}
+            return="single"
+          />
+        </Accordion.Content>
+      </Accordion>
+
       <Accordion fluid styled className="form">
         <Accordion.Title active={true} index={0} onClick={() => {}}>
           {intl.formatMessage(messages.search_sections_links)}
