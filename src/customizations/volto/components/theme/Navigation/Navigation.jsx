@@ -107,7 +107,7 @@ const Navigation = ({ pathname }) => {
                   }
                   onClick={() => setCollapseOpen(false)}
                 >
-                  <Logo />
+                  <Logo subsite={subsite} />
                   <BrandText mobile={true} subsite={subsite} />
                 </UniversalLink>
               </div>
