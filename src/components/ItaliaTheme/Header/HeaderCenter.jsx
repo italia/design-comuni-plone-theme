@@ -21,7 +21,6 @@ import {
 
 const HeaderCenter = () => {
   const subsite = useSelector((state) => state.subsite?.data);
-
   let logoSubsite = subsite?.subsite_logo && (
     <figure className="icon">
       <img
