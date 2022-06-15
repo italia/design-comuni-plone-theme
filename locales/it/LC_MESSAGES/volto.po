@@ -909,6 +909,11 @@ msgstr "Torna alla ricerca"
 msgid "backgroundImage"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
+# defaultMessage: Sfondo del blocco
+msgid "background_section"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/BandiSearch/Edit
 # defaultMessage: Nessun filtro da mostrare. Seleziona i filtri di ricerca da mostrare dalla sidebar laterale.
 msgid "bandi_search_no_filters"
@@ -1841,6 +1846,11 @@ msgstr "Puoi selezionare un’icona fra quelle proposte nel menu a tendina oppur
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
 # defaultMessage: Blocco con icone
 msgid "iconss_blocks"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
+# defaultMessage: Immagine per lo sfondo
+msgid "imageBackground"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
