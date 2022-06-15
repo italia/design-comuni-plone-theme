@@ -4,7 +4,8 @@ const Background = (props) => (
   <div
     className="searchSections-background"
     style={{
-      backgroundImage: 'url(' + props?.image?.image?.huge?.download,
+      backgroundImage:
+        'url(' + props?.image?.image?.scales?.huge?.download + ')',
     }}
   />
 );

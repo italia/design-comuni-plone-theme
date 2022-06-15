@@ -43,12 +43,13 @@ const Body = ({ block, sections }) => {
 
   const intl = useIntl();
   moment.locale(intl.locale);
+
   return (
     <div className="public-ui searchSections">
-      {!block?.image ? (
-        <SearchSectionsBackground />
-      ) : (
+      {block?.image ? (
         <BackgroundUser image={block.image} />
+      ) : (
+        <SearchSectionsBackground />
       )}
       <div className="container">
         <div className="searchContainer d-flex w-100">
