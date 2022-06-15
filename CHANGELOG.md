@@ -1,3 +1,11 @@
+### [5.23.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.23.0...v5.23.1) (2022-06-15)
+
+
+### Bug Fixes
+
+* conditional fixed ([0799ca6](https://github.com/RedTurtle/design-volto-theme/commit/0799ca64b0afe730fe3ede29fae703e9b2aacdd2))
+* iconBlock background image path fixed, scales.huge added to components edit/view ([ed2bbba](https://github.com/RedTurtle/design-volto-theme/commit/ed2bbba6d5002e705009c76810ed541ca270a239))
+
 ## [5.23.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.13...v5.23.0) (2022-06-15)
 
 
