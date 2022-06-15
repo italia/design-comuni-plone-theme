@@ -29,7 +29,7 @@ const AccordionView = ({ data, block }) => {
               className="background-image"
               style={{
                 backgroundImage: `url(${
-                  data.background[0]?.image?.scales.huge.download ??
+                  data.background[0]?.image?.scales?.huge?.download ??
                   addAppURL(data.background[0]?.['@id'])
                 })`,
               }}
