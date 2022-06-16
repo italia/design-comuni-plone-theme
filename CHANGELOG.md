@@ -1,3 +1,11 @@
+### [5.23.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.23.1...v5.23.2) (2022-06-16)
+
+
+### Bug Fixes
+
+* fix video view ([38d23df](https://github.com/RedTurtle/design-volto-theme/commit/38d23dfe17307978bd315fa7fa8571a653cb74ba))
+* small changes on logo sizes, footer links and title ([0e21e7f](https://github.com/RedTurtle/design-volto-theme/commit/0e21e7ff4211c54b2e1eac94f95bcefdcd4261bd))
+
 ### [5.23.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.23.0...v5.23.1) (2022-06-15)
 
 
