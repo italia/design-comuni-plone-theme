@@ -126,7 +126,11 @@ const Body = ({ data, isEditMode }) => {
                               '',
                             ),
                           )
-                            ? `${data.url}/@@download/file`
+                            ? `${data.url}${
+                                data.url.indexOf('@@download/file') < 0
+                                  ? '/@@download/file'
+                                  : ''
+                              }`
                             : data.url
                         }
                         controls
