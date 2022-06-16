@@ -7,7 +7,11 @@ import { flatMapDeep } from 'lodash';
 import { useHistory } from 'react-router-dom';
 import { Button } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { Icon, SearchSectionsBackground } from '@italia/components/ItaliaTheme';
+import {
+  Icon,
+  BackgroundUser,
+  SearchSectionsBackground,
+} from '@italia/components/ItaliaTheme';
 
 const navigate = (text, sections) => {
   window.location.href =
@@ -39,9 +43,14 @@ const Body = ({ block, sections }) => {
 
   const intl = useIntl();
   moment.locale(intl.locale);
+
   return (
     <div className="public-ui searchSections">
-      <SearchSectionsBackground />
+      {block?.image ? (
+        <BackgroundUser image={block.image} />
+      ) : (
+        <SearchSectionsBackground />
+      )}
       <div className="container">
         <div className="searchContainer d-flex w-100">
           <h2 className="text-secondary mb-4">{block.title}</h2>

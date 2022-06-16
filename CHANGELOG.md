@@ -1,3 +1,27 @@
+### [5.23.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.23.0...v5.23.1) (2022-06-15)
+
+
+### Bug Fixes
+
+* conditional fixed ([0799ca6](https://github.com/RedTurtle/design-volto-theme/commit/0799ca64b0afe730fe3ede29fae703e9b2aacdd2))
+* iconBlock background image path fixed, scales.huge added to components edit/view ([ed2bbba](https://github.com/RedTurtle/design-volto-theme/commit/ed2bbba6d5002e705009c76810ed541ca270a239))
+
+## [5.23.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.13...v5.23.0) (2022-06-15)
+
+
+### Features
+
+* new background option on searchBlock ([9cdc917](https://github.com/RedTurtle/design-volto-theme/commit/9cdc91799f85791238c3e66f05cf3be9adc44f14))
+* new component for background image ([162699e](https://github.com/RedTurtle/design-volto-theme/commit/162699e8dbaaafce653b390e65bd27405c01ac04))
+* searchSections block with image background selection ([9e3e0c1](https://github.com/RedTurtle/design-volto-theme/commit/9e3e0c144e381ee2c03c2b68916ea8f7551d35c9))
+
+
+### Bug Fixes
+
+* ay11 styles ([d6f25e5](https://github.com/RedTurtle/design-volto-theme/commit/d6f25e52722d864ce61d728c83d838f2ab26d504))
+* fix ay11 search ([3098ac3](https://github.com/RedTurtle/design-volto-theme/commit/3098ac32bb8e19e9e41498b0bc1931c6c71141a9))
+* fix searchSeactions bg ([2d9cec6](https://github.com/RedTurtle/design-volto-theme/commit/2d9cec6c8270d83c140e0510f2fd2f25ee5912f2))
+
 ### [5.22.13](https://github.com/RedTurtle/design-volto-theme/compare/v5.22.12...v5.22.13) (2022-06-01)
 
 
