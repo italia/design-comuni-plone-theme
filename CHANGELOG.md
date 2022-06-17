@@ -1,3 +1,10 @@
+### [5.23.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.23.3...v5.23.4) (2022-06-17)
+
+
+### Bug Fixes
+
+* fixed subsite header menu styles ([30d262f](https://github.com/RedTurtle/design-volto-theme/commit/30d262f6d6fb10c0dee12be4eca0eeffca528153))
+
 ### [5.23.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.23.2...v5.23.3) (2022-06-17)
 
 
