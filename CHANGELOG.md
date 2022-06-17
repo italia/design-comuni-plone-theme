@@ -1,3 +1,10 @@
+## [5.24.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.23.4...v5.24.0) (2022-06-17)
+
+
+### Features
+
+* inject HTML in volto-dropdownmenu item title ([35a72fb](https://github.com/RedTurtle/design-volto-theme/commit/35a72fb1a10c763ba08461177d0a5cd0905d9bae))
+
 ### [5.23.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.23.3...v5.23.4) (2022-06-17)
 
 
