@@ -36,3 +36,14 @@
     fill: $subsite-primary-text;
   }
 }
+
+@if $subsite-light-theme {
+} @else {
+  @media (max-width: #{map-get($grid-breakpoints, lg)}) {
+    .megamenu {
+      .megamenu-toggle-icon {
+        fill: $subsite-primary;
+      }
+    }
+  }
+}
