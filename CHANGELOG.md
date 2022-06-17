@@ -1,3 +1,17 @@
+### [5.23.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.23.2...v5.23.3) (2022-06-17)
+
+
+### Features
+
+* lobo mobile subsite - headerCenter + Navigation ([9b96030](https://github.com/RedTurtle/design-volto-theme/commit/9b96030cb37da732fc85b1752eee529b785f01a1))
+
+
+### Bug Fixes
+
+* fixed vertical alignment logo ([28ae12a](https://github.com/RedTurtle/design-volto-theme/commit/28ae12a3b80f5574249c5dba9a6c27e7ee97ac06))
+* logo on menu mobile on subsite fixed ([2f32971](https://github.com/RedTurtle/design-volto-theme/commit/2f32971d7774827cfb522e1453b026274b60f0ee))
+* new solution to logo menu mobile subsite ([fab5d34](https://github.com/RedTurtle/design-volto-theme/commit/fab5d34784c21b7aaf043deb1888abe4a06a1c5b))
+
 ### [5.23.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.23.1...v5.23.2) (2022-06-16)
 
 
