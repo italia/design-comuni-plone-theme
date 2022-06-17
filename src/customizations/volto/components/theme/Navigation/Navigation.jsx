@@ -37,7 +37,16 @@ import {
 const Navigation = ({ pathname }) => {
   const [collapseOpen, setCollapseOpen] = useState(false);
   const dispatch = useDispatch();
+
   const subsite = useSelector((state) => state.subsite?.data);
+  const logoSubsite = subsite?.subsite_logo && (
+    <figure className="icon">
+      <img
+        src={flattenToAppURL(subsite.subsite_logo.scales?.mini?.download)}
+        alt="Logo"
+      />
+    </figure>
+  );
 
   const items = useSelector((state) => state.dropdownMenuNavItems?.result);
   useEffect(() => {
@@ -107,7 +116,7 @@ const Navigation = ({ pathname }) => {
                   }
                   onClick={() => setCollapseOpen(false)}
                 >
-                  <Logo />
+                  {subsite?.subsite_logo ? logoSubsite : <Logo />}
                   <BrandText mobile={true} subsite={subsite} />
                 </UniversalLink>
               </div>
