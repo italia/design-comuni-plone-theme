@@ -39,7 +39,7 @@ const Navigation = ({ pathname }) => {
   const dispatch = useDispatch();
 
   const subsite = useSelector((state) => state.subsite?.data);
-  let logoSubsite = subsite?.subsite_logo && (
+  const logoSubsite = subsite?.subsite_logo && (
     <figure className="icon">
       <img
         src={flattenToAppURL(subsite.subsite_logo.scales?.mini?.download)}
