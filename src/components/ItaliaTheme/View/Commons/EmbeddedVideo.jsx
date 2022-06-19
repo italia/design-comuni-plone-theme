@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ConditionalEmbed } from 'volto-gdpr-privacy';
 import { Embed } from 'semantic-ui-react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
 import { useIntl, defineMessages } from 'react-intl';
 
 const messages = defineMessages({
@@ -28,7 +28,8 @@ const EmbeddedVideo = ({ video_url, title, id }) => {
 
   const ref = React.createRef();
   const onKeyDown = (e) => {
-    if (e.nativeEvent.keyCode === 13) { //Enter
+    if (e.nativeEvent.keyCode === 13) {
+      //Enter
       ref.current.handleClick();
     }
   };

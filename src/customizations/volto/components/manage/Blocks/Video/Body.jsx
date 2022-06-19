@@ -19,7 +19,7 @@ import {
   flattenToAppURL,
 } from '@plone/volto/helpers';
 import { ConditionalEmbed } from 'volto-gdpr-privacy';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
 import config from '@plone/volto/registry';
 
 /**

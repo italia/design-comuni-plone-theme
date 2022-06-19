@@ -15,7 +15,7 @@ import Item from '@italia/components/ItaliaTheme/Blocks/Calendar/Item';
 import { useIntl, defineMessages } from 'react-intl';
 import { viewDate } from '@italia/helpers';
 import useDeepCompareEffect from 'use-deep-compare-effect';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
   insert_filter: {

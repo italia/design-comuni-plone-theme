@@ -7,7 +7,7 @@ import React from 'react';
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { DownloadFileFormat } from '@italia/components/ItaliaTheme/View';
-import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
 import cx from 'classnames';
 
 /**

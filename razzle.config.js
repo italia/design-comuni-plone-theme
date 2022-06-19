@@ -42,7 +42,7 @@ module.exports = Object.assign({}, volto_config, {
       test: /bootstrap-italia\/src\/svg\/.*\.svg$/,
       use: [
         {
-          loader: 'svg-loader',
+          loader: 'file-loader',
         },
         {
           loader: 'svgo-loader',

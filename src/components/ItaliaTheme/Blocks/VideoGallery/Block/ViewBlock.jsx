@@ -12,7 +12,7 @@ import {
   flattenToAppURL,
 } from '@plone/volto/helpers';
 import { ConditionalEmbed } from 'volto-gdpr-privacy';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
 import { useIntl, defineMessages } from 'react-intl';
 import config from '@plone/volto/registry';
 
@@ -38,13 +38,12 @@ const ViewBlock = ({ data, index, isEditMode = false }) => {
 
   if (!placeholder && data.url) {
     if (data.url.match('youtu')) {
-        //load video preview image from youtube
+      //load video preview image from youtube
 
-        const videoID = data.url.match(/.be\//)
-          ? data.url.match(/^.*\.be\/(.*)/)?.[1]
-          : data.url.match(/^.*\?v=(.*)$/)?.[1];
-        placeholder =
-          'https://img.youtube.com/vi/' + videoID + '/sddefault.jpg';
+      const videoID = data.url.match(/.be\//)
+        ? data.url.match(/^.*\.be\/(.*)/)?.[1]
+        : data.url.match(/^.*\?v=(.*)$/)?.[1];
+      placeholder = 'https://img.youtube.com/vi/' + videoID + '/sddefault.jpg';
     } else if (data.url.match('vimeo')) {
       const videoID = data.url.match(/^.*\.com\/(.*)/)[1];
       placeholder = 'https://vumbnail.com/' + videoID + '.jpg';
@@ -53,7 +52,8 @@ const ViewBlock = ({ data, index, isEditMode = false }) => {
 
   const ref = React.createRef();
   const onKeyDown = (e) => {
-    if (e.nativeEvent.keyCode === 13) { //Enter
+    if (e.nativeEvent.keyCode === 13) {
+      //Enter
       ref.current.handleClick();
     }
   };

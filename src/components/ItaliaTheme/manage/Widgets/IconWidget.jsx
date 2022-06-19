@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import { TextWidget, SelectWidget } from '@plone/volto/components';
 import { components } from 'react-select';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
 import IconPreviewWidget from '@italia/components/ItaliaTheme/manage/Widgets/IconPreviewWidget';
 
 const messages = defineMessages({

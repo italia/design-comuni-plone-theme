@@ -10,7 +10,7 @@ import {
   Alert,
 } from 'design-react-kit/dist/design-react-kit';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
 import {
   submitCustomerSatisfaction,
   resetSubmitCustomerSatisfaction,

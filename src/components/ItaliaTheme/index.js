@@ -20,6 +20,7 @@ export LocationFiltersWidget from '@italia/components/ItaliaTheme/manage/Widgets
 /********* ICONS ********* */
 export getItemIcon from '@italia/components/ItaliaTheme/Icons/common/common';
 export Icon from '@italia/components/ItaliaTheme/Icons/Icon';
+export FontAwesomeIcon from '@italia/components/ItaliaTheme/Icons/FontAwesomeIcon';
 export SectionIcon from '@italia/components/ItaliaTheme/Icons/SectionIcon';
 
 /********* COMMONS ********* */
