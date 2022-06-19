@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import { useHistory } from 'react-router-dom';
 import moment from 'moment';
-import 'moment/min/locales';
+
 import cx from 'classnames';
 import { OSMMap } from '@italia/addons/volto-venue';
 import { Row, Col, Container } from 'design-react-kit/dist/design-react-kit';

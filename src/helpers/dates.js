@@ -1,4 +1,4 @@
-import moment from 'moment/min/moment-with-locales';
+import moment from 'moment';
 
 export const viewDate = (locale, value, format) => {
   //  Used to set a server timezone or UTC as default

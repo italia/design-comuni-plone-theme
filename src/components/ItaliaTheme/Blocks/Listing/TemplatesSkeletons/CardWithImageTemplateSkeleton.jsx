@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 import { useIntl } from 'react-intl';
 import moment from 'moment';
-import 'moment/min/locales';
+
 import {
   Container,
   Row,

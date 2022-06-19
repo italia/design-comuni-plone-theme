@@ -4,7 +4,7 @@ import cx from 'classnames';
 import { UniversalLink } from '@plone/volto/components';
 import { useIntl } from 'react-intl';
 import moment from 'moment';
-import 'moment/min/locales';
+
 import {
   Container,
   Row,

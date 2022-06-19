@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import moment from 'moment';
-import 'moment/min/locales';
+
 import { UniversalLink } from '@plone/volto/components';
 import cx from 'classnames';
 import {
