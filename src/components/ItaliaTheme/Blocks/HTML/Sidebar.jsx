@@ -17,7 +17,7 @@ const messages = defineMessages({
   },
 });
 
-const Sidebar = ({ data, block, onChangeBlock, openObjectBrowser }) => {
+const Sidebar = ({ data, block, onChangeBlock }) => {
   const intl = useIntl();
 
   return (
@@ -31,7 +31,7 @@ const Sidebar = ({ data, block, onChangeBlock, openObjectBrowser }) => {
         <CheckboxWidget
           id="bgColor"
           title={intl.formatMessage(messages.bgColor)}
-          value={data.bgColor}
+          value={data.bgColor ? data.bgColor : false}
           onChange={(name, checked) => {
             onChangeBlock(block, { ...data, [name]: checked });
           }}
