@@ -13,8 +13,8 @@ import PropTypes from 'prop-types';
 const View = ({ data }) => (
   <>
     <div
-      className={`block html ${data.showFullWidth ?? 'full-width'} ${
-        data.bgColor ?? 'bg-light'
+      className={`block html ${!data.showFullWidth || 'full-width'} ${
+        !data.bgColor || 'bg-light'
       } py-5`}
     >
       <div

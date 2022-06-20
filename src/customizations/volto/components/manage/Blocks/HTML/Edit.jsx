@@ -243,104 +243,112 @@ class Edit extends Component {
       this.props.intl.formatMessage(messages.placeholder);
     const value = this.getValue();
     return (
-      <>
-        {this.props.selected && value && (
-          <div className="toolbar">
-            <Popup
-              trigger={
-                <Button
-                  icon
-                  basic
-                  aria-label={this.props.intl.formatMessage(messages.source)}
-                  active={!this.state.isPreview}
-                  onClick={this.onCodeEditor}
-                >
-                  <Icon name={codeSVG} size="24px" />
-                </Button>
-              }
-              position="top center"
-              content={this.props.intl.formatMessage(messages.code)}
-              size="mini"
-            />
-            <Popup
-              trigger={
-                <Button
-                  icon
-                  basic
-                  aria-label={this.props.intl.formatMessage(messages.preview)}
-                  active={this.state.isPreview}
-                  onClick={this.onPreview}
-                >
-                  <Icon name={showSVG} size="24px" />
-                </Button>
-              }
-              position="top center"
-              content={this.props.intl.formatMessage(messages.preview)}
-              size="mini"
-            />
-            <Popup
-              trigger={
-                <Button
-                  icon
-                  basic
-                  aria-label={this.props.intl.formatMessage(messages.prettier)}
-                  onClick={this.onPrettify}
-                >
-                  <Icon name={indentSVG} size="24px" />
-                </Button>
-              }
-              position="top center"
-              content={this.props.intl.formatMessage(messages.prettier)}
-              size="mini"
-            />
-            <div className="separator" />
-            <Popup
-              trigger={
-                <Button.Group>
-                  <Button icon basic onClick={() => this.onChangeCode('')}>
-                    <Icon name={clearSVG} size="24px" color="#e40166" />
+      <div className="public-ui">
+        <div
+          className={`block html ${
+            !this.props.data.showFullWidth || 'full-width'
+          } ${!this.props.data.bgColor || 'bg-light'} py-5`}
+        >
+          {this.props.selected && value && (
+            <div className="toolbar">
+              <Popup
+                trigger={
+                  <Button
+                    icon
+                    basic
+                    aria-label={this.props.intl.formatMessage(messages.source)}
+                    active={!this.state.isPreview}
+                    onClick={this.onCodeEditor}
+                  >
+                    <Icon name={codeSVG} size="24px" />
                   </Button>
-                </Button.Group>
+                }
+                position="top center"
+                content={this.props.intl.formatMessage(messages.code)}
+                size="mini"
+              />
+              <Popup
+                trigger={
+                  <Button
+                    icon
+                    basic
+                    aria-label={this.props.intl.formatMessage(messages.preview)}
+                    active={this.state.isPreview}
+                    onClick={this.onPreview}
+                  >
+                    <Icon name={showSVG} size="24px" />
+                  </Button>
+                }
+                position="top center"
+                content={this.props.intl.formatMessage(messages.preview)}
+                size="mini"
+              />
+              <Popup
+                trigger={
+                  <Button
+                    icon
+                    basic
+                    aria-label={this.props.intl.formatMessage(
+                      messages.prettier,
+                    )}
+                    onClick={this.onPrettify}
+                  >
+                    <Icon name={indentSVG} size="24px" />
+                  </Button>
+                }
+                position="top center"
+                content={this.props.intl.formatMessage(messages.prettier)}
+                size="mini"
+              />
+              <div className="separator" />
+              <Popup
+                trigger={
+                  <Button.Group>
+                    <Button icon basic onClick={() => this.onChangeCode('')}>
+                      <Icon name={clearSVG} size="24px" color="#e40166" />
+                    </Button>
+                  </Button.Group>
+                }
+                position="top center"
+                content={this.props.intl.formatMessage(messages.clear)}
+                size="mini"
+              />
+            </div>
+          )}
+          {this.state.isPreview ? (
+            <div dangerouslySetInnerHTML={{ __html: value }} />
+          ) : (
+            <Editor
+              value={this.getValue()}
+              readOnly={!this.props.editable}
+              placeholder={placeholder}
+              onValueChange={(code) => this.onChangeCode(code)}
+              highlight={
+                this.props.prismCore?.highlight &&
+                this.props.prismCore?.languages?.html
+                  ? (code) =>
+                      this.props.prismCore.highlight(
+                        code,
+                        this.props.prismCore.languages.html,
+                        'html',
+                      )
+                  : () => {}
               }
-              position="top center"
-              content={this.props.intl.formatMessage(messages.clear)}
-              size="mini"
+              padding={8}
+              className="html-editor container px-4"
+              ref={(node) => {
+                if (node) {
+                  this.codeEditorRef.current = node;
+                }
+              }}
+              ignoreTabKey={true}
             />
-          </div>
-        )}
-        {this.state.isPreview ? (
-          <div dangerouslySetInnerHTML={{ __html: value }} />
-        ) : (
-          <Editor
-            value={this.getValue()}
-            readOnly={!this.props.editable}
-            placeholder={placeholder}
-            onValueChange={(code) => this.onChangeCode(code)}
-            highlight={
-              this.props.prismCore?.highlight &&
-              this.props.prismCore?.languages?.html
-                ? (code) =>
-                    this.props.prismCore.highlight(
-                      code,
-                      this.props.prismCore.languages.html,
-                      'html',
-                    )
-                : () => {}
-            }
-            padding={8}
-            className="html-editor"
-            ref={(node) => {
-              if (node) {
-                this.codeEditorRef.current = node;
-              }
-            }}
-            ignoreTabKey={true}
-          />
-        )}
-        <SidebarPortal selected={this.props.selected || false}>
-          <Sidebar {...this.props} />
-        </SidebarPortal>
-      </>
+          )}
+          <SidebarPortal selected={this.props.selected || false}>
+            <Sidebar {...this.props} />
+          </SidebarPortal>
+        </div>
+      </div>
     );
   }
 }
