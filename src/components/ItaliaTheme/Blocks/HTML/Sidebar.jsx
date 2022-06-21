@@ -13,7 +13,7 @@ const messages = defineMessages({
   },
   htmlFullWidth: {
     id: 'htmlFullWidth',
-    defaultMessage: 'Schermo pieno',
+    defaultMessage: 'Mostra lo sfondo a tutta larghezza',
   },
 });
 

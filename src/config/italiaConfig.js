@@ -285,6 +285,10 @@ export default function applyConfig(voltoConfig) {
       ...config.blocks.blocksConfig.hero,
       sidebarTab: 1,
     },
+    html: {
+      ...config.blocks.blocksConfig.html,
+      sidebarTab: 1,
+    },
     rssBlock,
   };
 
