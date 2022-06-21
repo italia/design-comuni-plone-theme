@@ -69,6 +69,11 @@ import countDownSVG from '@italia/icons/count-down.svg';
 import CountDownBlockView from '@italia/components/ItaliaTheme/Blocks/CountDown/View';
 import CountDownBlockEdit from '@italia/components/ItaliaTheme/Blocks/CountDown/Edit';
 
+import ViewHTMLBlock from '@plone/volto/components/manage/Blocks/HTML/View';
+import EditHTMLBlock from '@plone/volto/components/manage/Blocks/HTML/Edit';
+import BlockSettingsSchema from '@plone/volto/components/manage/Blocks/Block/Schema';
+import codeSVG from '@plone/volto/icons/code.svg';
+
 const italiaBlocks = {
   highlitedContent: {
     id: 'highlitedContent',
@@ -159,6 +164,22 @@ const italiaBlocks = {
       view: [],
     },
     sidebarTab: 1,
+  },
+  html: {
+    id: 'html',
+    title: 'HTML',
+    icon: codeSVG,
+    group: 'common',
+    view: ViewHTMLBlock,
+    edit: EditHTMLBlock,
+    schema: BlockSettingsSchema,
+    restricted: false,
+    mostUsed: false,
+    sidebarTab: 1,
+    security: {
+      addPermission: [],
+      view: [],
+    },
   },
   argumentsInEvidence: {
     id: 'argumentsInEvidence',
