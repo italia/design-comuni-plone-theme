@@ -65,7 +65,8 @@ class Edit extends SubblocksEdit {
               className="background-image"
               style={{
                 backgroundImage: `url(${
-                  this.props.data.background[0]?.image?.download ??
+                  this.props.data.background[0]?.image?.scales?.huge
+                    ?.download ??
                   addAppURL(this.props.data.background[0]?.['@id'])
                 })`,
               }}

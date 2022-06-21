@@ -5,9 +5,7 @@ name: Docker build for latest master version
 on:
   # Triggers the workflow on releases
   release:
-    types: [published]
-  pull_request:
-    branches: [ master ]
+    types: [published]  
   # Allows you to run this workflow manually from the Actions tab
   #workflow_dispatch:
 

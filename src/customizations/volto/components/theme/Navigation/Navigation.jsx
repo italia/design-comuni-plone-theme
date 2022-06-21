@@ -6,7 +6,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { UniversalLink } from '@plone/volto/components';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -31,7 +31,16 @@ import {
 const Navigation = ({ pathname, designReactKit }) => {
   const [collapseOpen, setCollapseOpen] = useState(false);
   const dispatch = useDispatch();
+
   const subsite = useSelector((state) => state.subsite?.data);
+  const logoSubsite = subsite?.subsite_logo && (
+    <figure className="icon">
+      <img
+        src={flattenToAppURL(subsite.subsite_logo.scales?.mini?.download)}
+        alt="Logo"
+      />
+    </figure>
+  );
 
   const items = useSelector((state) => state.dropdownMenuNavItems?.result);
   useEffect(() => {
@@ -54,7 +63,7 @@ const Navigation = ({ pathname, designReactKit }) => {
     const blocksClickListener = (e) => {
       const menuLinks = [
         ...(document?.querySelectorAll(
-          '.menu-wrapper a:not([aria-haspopup])',
+          '.menu-wrapper a:not([aria-haspopup]), .menu-wrapper .it-brand-wrapper a',
         ) ?? []),
       ];
 
@@ -97,12 +106,15 @@ const Navigation = ({ pathname, designReactKit }) => {
           >
             <div className="menu-wrapper">
               <div className="it-brand-wrapper" role="navigation">
-                <Link
-                  to={subsite?.['@id'] ? flattenToAppURL(subsite['@id']) : '/'}
+                <UniversalLink
+                  href={
+                    subsite?.['@id'] ? flattenToAppURL(subsite['@id']) : '/'
+                  }
+                  onClick={() => setCollapseOpen(false)}
                 >
-                  <Logo />
+                  {subsite?.subsite_logo ? logoSubsite : <Logo />}
                   <BrandText mobile={true} subsite={subsite} />
-                </Link>
+                </UniversalLink>
               </div>
               {/* Main Menu */}
               <Nav navbar>

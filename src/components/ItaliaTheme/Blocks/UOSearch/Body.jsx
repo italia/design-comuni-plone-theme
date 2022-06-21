@@ -1,7 +1,6 @@
 import React, { useState, useReducer, useEffect, createRef } from 'react';
 import { useIntl, defineMessages } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
-
 import cx from 'classnames';
 
 import { getQueryStringResults } from '@plone/volto/actions';

@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useIntl, defineMessages } from 'react-intl';
 import useDeepCompareEffect from 'use-deep-compare-effect';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
 
 import cx from 'classnames';
 

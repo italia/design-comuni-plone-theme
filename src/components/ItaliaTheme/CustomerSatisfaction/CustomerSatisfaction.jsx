@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { useIntl, defineMessages } from 'react-intl';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
 import {
   submitCustomerSatisfaction,
   resetSubmitCustomerSatisfaction,

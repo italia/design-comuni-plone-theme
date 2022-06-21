@@ -7,7 +7,7 @@ import React from 'react';
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { DownloadFileFormat } from '@italia/components/ItaliaTheme/View';
-import { FontAwesomeIcon as Icon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
 import cx from 'classnames';
 
 /**
@@ -38,7 +38,7 @@ const Downloads = ({ item, titleDoc }) => {
       className="modulistica-link"
     >
       <div className="title">{item.title}</div>
-      <Icon
+      <FontAwesomeIcon
         icon={['fas', 'link']}
         alt={item.title}
         role="presentation"

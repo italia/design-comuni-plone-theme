@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-
 import cx from 'classnames';
 
 import { UniversalLink } from '@plone/volto/components';

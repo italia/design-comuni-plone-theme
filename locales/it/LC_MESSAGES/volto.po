@@ -418,6 +418,12 @@ msgstr "Rimuovi il file"
 msgid "Scroll to top"
 msgstr "Torna su"
 
+#: components/ItaliaTheme/Blocks/CountDown/Body
+#: components/ItaliaTheme/Blocks/SearchSections/Body
+# defaultMessage: Cerca
+msgid "Search"
+msgstr ""
+
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Risultati della ricerca
 msgid "Search results"
@@ -705,6 +711,11 @@ msgstr "Mostra l'immagine per tutti gli elementi"
 msgid "amministrazione"
 msgstr "Amministrazione"
 
+#: components/ItaliaTheme/View/Commons/BandoDates
+# defaultMessage: Apertura del bando
+msgid "apertura_bando"
+msgstr "Apertura del bando"
+
 #: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
 # defaultMessage: APPStore Link
 msgid "appStoreLink"
@@ -898,6 +909,11 @@ msgstr "Torna alla ricerca"
 msgid "backgroundImage"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
+# defaultMessage: Sfondo del blocco
+msgid "background_section"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/BandiSearch/Edit
 # defaultMessage: Nessun filtro da mostrare. Seleziona i filtri di ricerca da mostrare dalla sidebar laterale.
 msgid "bandi_search_no_filters"
@@ -948,6 +964,12 @@ msgid "bando_scadenza"
 msgstr "Scadenza partecipazione"
 
 #: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando
+# defaultMessage: Programmato
+msgid "bando_scheduled"
+msgstr "Programmato"
+
+#: components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate
 # defaultMessage: Stato:
 msgid "bando_stato"
 msgstr "Stato"
@@ -961,6 +983,11 @@ msgstr "Tipo"
 # defaultMessage: Vedi
 msgid "bando_vedi"
 msgstr "Vedi"
+
+#: components/ItaliaTheme/Blocks/HTML/Sidebar
+# defaultMessage: Mostra lo sfondo del blocco
+msgid "bgColor"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
@@ -1811,6 +1838,16 @@ msgstr "Per questo template il numero di risultati per pagina deve essere 7. Con
 msgid "hide_dates"
 msgstr "Nascondi le date"
 
+#: components/ItaliaTheme/Blocks/HTML/Sidebar
+# defaultMessage: Mostra lo sfondo a tutta larghezza
+msgid "htmlFullWidth"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/HTML/Sidebar
+# defaultMessage: Blocco HTML
+msgid "html_block"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/IconWidget
 # defaultMessage: Icona
 msgid "icon"
@@ -1824,6 +1861,11 @@ msgstr "Puoi selezionare un’icona fra quelle proposte nel menu a tendina oppur
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
 # defaultMessage: Blocco con icone
 msgid "iconss_blocks"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/SearchSections/SideBar
+# defaultMessage: Immagine per lo sfondo
+msgid "imageBackground"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti

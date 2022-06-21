@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import redraft from 'redraft';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
-import { flattenToAppURL } from '@plone/volto/helpers';
+import { flattenToAppURL, addAppURL } from '@plone/volto/helpers';
 import ViewBlock from './Block/ViewBlock';
 import { UniversalLink } from '@plone/volto/components';
 import config from '@plone/volto/registry';
@@ -26,11 +26,14 @@ const AccordionView = ({ data, block, designReactKit }) => {
     <div className="block iconBlocks">
       <div className="public-ui">
         <div className="full-width section py-5">
-          {data.background?.[0]?.image?.download ? (
+          {data.background?.[0] ? (
             <div
               className="background-image"
               style={{
-                backgroundImage: `url(${data.background[0].image.download})`,
+                backgroundImage: `url(${
+                  data.background[0]?.image?.scales?.huge?.download ??
+                  addAppURL(data.background[0]?.['@id'])
+                })`,
               }}
             ></div>
           ) : (

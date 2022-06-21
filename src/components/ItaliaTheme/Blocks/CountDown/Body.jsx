@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useIntl } from 'react-intl';
+import { useIntl, defineMessages } from 'react-intl';
 import { flatMapDeep } from 'lodash';
 import { useHistory } from 'react-router-dom';
 
@@ -14,6 +14,13 @@ const navigate = (text, sections) => {
     window.location.origin +
     `/search?SearchableText=${text}&path.query=${sections}`;
 };
+
+const messages = defineMessages({
+  doSearch: {
+    id: 'Search',
+    defaultMessage: 'Cerca',
+  },
+});
 
 const Body = ({ block, sections, moment: Moment, designReactKit }) => {
   const history = useHistory();
@@ -51,10 +58,12 @@ const Body = ({ block, sections, moment: Moment, designReactKit }) => {
               onKeyDown={(e) =>
                 e.key === 'Enter' ? navigate(inputText, searchFilters()) : null
               }
+              aria-label={block.placeholder}
             ></input>
             <button
               className="rounded-right"
               onClick={(e) => navigate(inputText, searchFilters())}
+              aria-label={intl.formatMessage(messages.doSearch)}
             >
               <Icon icon="it-search" padding={false} size="sm" color="white" />
             </button>
