@@ -246,8 +246,8 @@ class Edit extends Component {
       <div className="public-ui">
         <div
           className={`block html ${
-            !this.props.data.showFullWidth || 'full-width'
-          } ${!this.props.data.bgColor || 'bg-light'} py-5`}
+            !this.props.data.showFullWidth ? 'full-width' : ''
+          } ${!this.props.data.bgColor ? 'bg-light' : ''} py-5`}
         >
           {this.props.selected && value && (
             <div className="toolbar">
