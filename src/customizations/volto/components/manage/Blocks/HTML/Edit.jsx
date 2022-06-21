@@ -316,7 +316,10 @@ class Edit extends Component {
             </div>
           )}
           {this.state.isPreview ? (
-            <div dangerouslySetInnerHTML={{ __html: value }} />
+            <div
+              className="container px-4"
+              dangerouslySetInnerHTML={{ __html: value }}
+            />
           ) : (
             <Editor
               value={this.getValue()}
