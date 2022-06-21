@@ -1,3 +1,29 @@
+## [5.25.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.24.0...v5.25.0) (2022-06-21)
+
+
+### Features
+
+* background on embed block started ([8674daf](https://github.com/RedTurtle/design-volto-theme/commit/8674daf81d9ef151183561653f8d24c7c6480bd3))
+
+
+### Bug Fixes
+
+* block style fixed ([e80cf6b](https://github.com/RedTurtle/design-volto-theme/commit/e80cf6b86d269fb456daf0de1b21d4ab26b161b5))
+* class public-ui moved ([f35ad16](https://github.com/RedTurtle/design-volto-theme/commit/f35ad164f8eca6bee38a868e13c5531b8a339bc7))
+* condicional fixed ([f46b381](https://github.com/RedTurtle/design-volto-theme/commit/f46b381c4d8aa9f39a6d56ca320cfd78871bade2))
+* cx on className added ([c5d2c37](https://github.com/RedTurtle/design-volto-theme/commit/c5d2c37413ef769488ceeebb0c6451dd8d331f46))
+* fix import for italia icons ([1a0f064](https://github.com/RedTurtle/design-volto-theme/commit/1a0f064c8133d2daecb8ff0e0bfddf534ef241fb))
+* fix svg loader bootstrap italia ([0a321d2](https://github.com/RedTurtle/design-volto-theme/commit/0a321d2564092318f7c40426e37d4d89bb73f1da))
+* full-width ([96fdf7d](https://github.com/RedTurtle/design-volto-theme/commit/96fdf7d519d72bfccfaf972feb5dba1a581c56a3))
+* isPreview with container class ([586a859](https://github.com/RedTurtle/design-volto-theme/commit/586a85932bd9e8bf69222e16b3acbaed576a9fc4))
+* revert ([a9d5ab7](https://github.com/RedTurtle/design-volto-theme/commit/a9d5ab75b257bfb2354632ecb732f45773e87d17))
+* view and sidebar ok ([7e1eabc](https://github.com/RedTurtle/design-volto-theme/commit/7e1eabcfe37a8bb157da1905c92911a920442ad9))
+
+
+### Maintenance
+
+* added conditionalEmbed to html block view customization ([b5bcb37](https://github.com/RedTurtle/design-volto-theme/commit/b5bcb37e4aae78f3aac438a618179126f2e04576))
+
 ## [5.24.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.23.4...v5.24.0) (2022-06-17)
 
 

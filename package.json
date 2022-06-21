@@ -2,7 +2,7 @@
   "name": "design-volto-theme",
   "description": "Volto Theme for Italia design guidelines",
   "license": "MIT",
-  "version": "5.24.0",
+  "version": "5.25.0",
   "private": true,
   "workspaces": [
     "src/addons/volto-multilingual-widget",
@@ -232,16 +232,20 @@
     "node": "12.22.1",
     "yarn": "1.19.1"
   },
-  "bundlewatch" : {
+  "bundlewatch": {
     "files": [
       {
         "path": "build/public/static/js/*.js",
-	"normalizeFilenames": "^.+?(\\..+?)\\.\\w+$",
+        "normalizeFilenames": "^.+?(\\..+?)\\.\\w+$",
         "maxSize": "2000kB"
       }
     ],
     "ci": {
-      "trackBranches": ["master", "develop", "bundlesize"]
+      "trackBranches": [
+        "master",
+        "develop",
+        "bundlesize"
+      ]
     }
   },
   "resolutions": {
