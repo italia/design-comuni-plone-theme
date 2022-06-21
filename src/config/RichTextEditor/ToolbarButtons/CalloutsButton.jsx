@@ -2,7 +2,7 @@ import React from 'react';
 import Icon from '@plone/volto/components/theme/Icon/Icon';
 
 import DraftJsDropdownButton from './DraftJsDropdownButton';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
 
 import calloutSVG from '@plone/volto/icons/megaphone.svg';
 

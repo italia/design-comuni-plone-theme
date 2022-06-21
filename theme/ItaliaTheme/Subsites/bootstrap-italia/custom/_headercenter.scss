@@ -8,6 +8,9 @@
           color: $subsite-primary-text;
 
           .icon {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
             color: $subsite-primary-text;
             fill: $subsite-primary-text;
           }

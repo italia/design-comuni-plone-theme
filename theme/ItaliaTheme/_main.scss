@@ -175,3 +175,88 @@ iframe {
     margin-left: auto;
   }
 }
+
+.public-ui,
+* {
+  .fa,
+  .fas,
+  .far,
+  .fal,
+  .fad,
+  .fab {
+    display: inline-block;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+  }
+
+  .fa-lg {
+    font-size: 1.33333em;
+    line-height: 0.75em;
+    vertical-align: -0.0667em;
+  }
+
+  .fa-xs {
+    font-size: 0.75em;
+  }
+
+  .fa-sm {
+    font-size: 0.875em;
+  }
+
+  .fa-1x {
+    font-size: 1em;
+  }
+
+  .fa-2x {
+    font-size: 2em;
+  }
+
+  .fa-3x {
+    font-size: 3em;
+  }
+
+  .fa-4x {
+    font-size: 4em;
+  }
+
+  .fa-5x {
+    font-size: 5em;
+  }
+
+  .fa-6x {
+    font-size: 6em;
+  }
+
+  .fa-7x {
+    font-size: 7em;
+  }
+
+  .fa-8x {
+    font-size: 8em;
+  }
+
+  .fa-9x {
+    font-size: 9em;
+  }
+
+  .fa-10x {
+    font-size: 10em;
+  }
+
+  svg.fa-icon {
+    width: 1em;
+    fill: currentColor;
+  }
+
+  .icon.fa-icon.placeholder {
+    //to prevent layout shift
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+  }
+}

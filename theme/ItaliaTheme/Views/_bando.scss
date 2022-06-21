@@ -48,20 +48,29 @@
     text-transform: uppercase;
 
     &.open {
-      border-left: 5px solid $complementary-3-a5;
+      border-left: 5px solid $complementary-3-a9;
 
       svg {
         padding-right: 10px;
-        fill: $complementary-3-a5;
+        fill: $complementary-3-a9;
       }
     }
 
     &.closed {
-      border-left: 5px solid $neutral-1-a6;
+      border-left: 5px solid $neutral-1-a7;
 
       svg {
         padding-right: 10px;
-        fill: $neutral-1-a6;
+        fill: $neutral-1-a7;
+      }
+    }
+
+    &.scheduled {
+      border-left: 5px solid $analogue-1-b5;
+
+      svg {
+        padding-right: 10px;
+        fill: $analogue-1-b5;
       }
     }
 

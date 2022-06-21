@@ -119,7 +119,7 @@ const MegaMenu = ({ item, pathname }) => {
           tag={UniversalLink}
           active={isItemActive}
         >
-          <span>{item.title}</span>
+          <span dangerouslySetInnerHTML={{ __html: item.title }}></span>
           {isItemActive && (
             <span className="sr-only">
               {intl.formatMessage(messages.menu_selected)}
@@ -246,7 +246,7 @@ const MegaMenu = ({ item, pathname }) => {
           toggle={() => setMenuStatus(!menuStatus)}
         >
           <DropdownToggle aria-haspopup color="secondary" nav>
-            {item.title}
+            <span dangerouslySetInnerHTML={{ __html: item.title }}></span>
             <Icon
               icon="it-expand"
               className={cx('megamenu-toggle-icon', { open: menuStatus })}

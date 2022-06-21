@@ -1451,46 +1451,6 @@
   resolved "https://registry.yarnpkg.com/@formatjs/macro/-/macro-0.2.8.tgz#e43228e02d0159817734ad80cc0326cfefaeeb6c"
   integrity sha512-5IBdn5+D8VGdi6Px0M/PidtqzHVrOj3dVJdV+YmWNRaWHdSvBd1wUd0gMcZnQXAxN+RzlGS/ddfOxFkjSlyQuA==
 
-"@fortawesome/fontawesome-common-types@^0.2.30":
-  version "0.2.32"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.32.tgz#3436795d5684f22742989bfa08f46f50f516f259"
-  integrity sha512-ux2EDjKMpcdHBVLi/eWZynnPxs0BtFVXJkgHIxXRl+9ZFaHPvYamAfCzeeQFqHRjuJtX90wVnMRaMQAAlctz3w==
-
-"@fortawesome/fontawesome-svg-core@1.2.30":
-  version "1.2.30"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.30.tgz#f56dc6791861fe5d1af04fb8abddb94658c576db"
-  integrity sha512-E3sAXATKCSVnT17HYmZjjbcmwihrNOCkoU7dVMlasrcwiJAHxSKeZ+4WN5O+ElgO/FaYgJmASl8p9N7/B/RttA==
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.30"
-
-"@fortawesome/free-brands-svg-icons@5.14.0":
-  version "5.14.0"
-  resolved "https://registry.yarnpkg.com/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-5.14.0.tgz#98555518ba41bdff82fbae2f4d1bc36cd3b1c043"
-  integrity sha512-WsqPFTvJFI7MYkcy0jeFE2zY+blC4OrnB9MJOcn1NxRXT/sSfEEhrI7CwzIkiYajLiVDBKWeErYOvpsMeodmCQ==
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.30"
-
-"@fortawesome/free-regular-svg-icons@5.14.0":
-  version "5.14.0"
-  resolved "https://registry.yarnpkg.com/@fortawesome/free-regular-svg-icons/-/free-regular-svg-icons-5.14.0.tgz#ca513ac7699625af42938744297ac483361da043"
-  integrity sha512-6LCFvjGSMPoUQbn3NVlgiG4CY5iIY8fOm+to/D6QS/GvdqhDt+xZklQeERdCvVRbnFa1ITc1rJHPRXqkX5wztQ==
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.30"
-
-"@fortawesome/free-solid-svg-icons@5.14.0":
-  version "5.14.0"
-  resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.14.0.tgz#970453f5e8c4915ad57856c3a0252ac63f6fec18"
-  integrity sha512-M933RDM8cecaKMWDSk3FRYdnzWGW7kBBlGNGfvqLVwcwhUPNj9gcw+xZMrqBdRqxnSXdl3zWzTCNNGEtFUq67Q==
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.30"
-
-"@fortawesome/react-fontawesome@0.1.11":
-  version "0.1.11"
-  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.1.11.tgz#c1a95a2bdb6a18fa97b355a563832e248bf6ef4a"
-  integrity sha512-sClfojasRifQKI0OPqTy8Ln8iIhnxR/Pv/hukBhWnBz9kQRmqi6JSH3nghlhAY7SUeIIM7B5/D2G8WjX0iepVg==
-  dependencies:
-    prop-types "^15.7.2"
-
 "@hapi/hoek@^9.0.0":
   version "9.3.0"
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.3.0.tgz#8368869dcb735be2e7f5cb7647de78e167a251fb"
@@ -3598,6 +3558,13 @@ axios@^0.21.1:
   dependencies:
     follow-redirects "^1.14.0"
 
+axios@^0.24.0:
+  version "0.24.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.24.0.tgz#804e6fa1e4b9c5288501dd9dff56a7a0940d20d6"
+  integrity sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==
+  dependencies:
+    follow-redirects "^1.14.4"
+
 axobject-query@^2.0.2:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/axobject-query/-/axobject-query-2.2.0.tgz#943d47e10c0b704aa42275e20edf3722648989be"
@@ -4381,6 +4348,22 @@ bundlewatch@0.2.7:
     lodash.merge "^4.6.1"
     read-pkg-up "^7.0.1"
 
+bundlewatch@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/bundlewatch/-/bundlewatch-0.3.3.tgz#6226f2317a8183cfccdd1ea016bdf10373c9498c"
+  integrity sha512-qzSVWrZyyWXa546JpAPRPTFmnXms9YNVnfzB05DRJKmN6wRRa7SkxE4OgKQmbAY74Z6CM2mKAc6vwvd2R+1lUQ==
+  dependencies:
+    axios "^0.24.0"
+    bytes "^3.1.1"
+    chalk "^4.0.0"
+    ci-env "^1.17.0"
+    commander "^5.0.0"
+    glob "^7.1.2"
+    gzip-size "^6.0.0"
+    jsonpack "^1.1.5"
+    lodash.merge "^4.6.1"
+    read-pkg-up "^7.0.1"
+
 bytes@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-3.0.0.tgz#d32815404d689699f85a4ea4fa8755dd13a96048"
@@ -4790,6 +4773,11 @@ ci-env@^1.14.0:
   version "1.16.0"
   resolved "https://registry.yarnpkg.com/ci-env/-/ci-env-1.16.0.tgz#e97f3b5001a8daf7da6e46f418bc6892a238704d"
   integrity sha512-ucF9caQEX5wQlY449KZBIJPx91+kRg9tJ3tWSc4+KzrvC5KNiPm/3g1noP8VhdI3046+Vw3jLmKAD0fjCRJTmw==
+
+ci-env@^1.17.0:
+  version "1.17.0"
+  resolved "https://registry.yarnpkg.com/ci-env/-/ci-env-1.17.0.tgz#386b8821ce5da1cd0b2b6a06c1f52b1433f8889a"
+  integrity sha512-NtTjhgSEqv4Aj90TUYHQLxHdnCPXnjdtuGG1X8lTfp/JqeXTdw0FTWl/vUAPuvbWZTF8QVpv6ASe/XacE+7R2A==
 
 ci-info@^1.6.0:
   version "1.6.0"
@@ -7978,6 +7966,11 @@ follow-redirects@^1.14.0:
   version "1.14.9"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.9.tgz#dd4ea157de7bfaf9ea9b3fbd85aa16951f78d8d7"
   integrity sha512-MQDfihBQYMcyy5dhRDJUHcw7lb2Pv/TuE6xP1vyraLukNDHKbDxDNaOE3NbCAdKQApno+GPRyo1YAp89yCjK4w==
+
+follow-redirects@^1.14.4:
+  version "1.15.1"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.1.tgz#0ca6a452306c9b276e4d3127483e29575e207ad5"
+  integrity sha512-yLAMQs+k0b2m7cVxpS1VKJVvoz7SS9Td1zss3XRwXj+ZDH00RJgnuLx7E44wx02kQLrdM3aOOy+FpzS7+8OizA==
 
 for-in@^1.0.1, for-in@^1.0.2:
   version "1.0.2"
@@ -11652,17 +11645,7 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@4.17.15:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
-
-lodash@4.17.20, "lodash@>=3.5 <5", lodash@^4.0.0, lodash@^4.1.1, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.6.1, lodash@~4.17.10:
-  version "4.17.20"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
-  integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
-
-lodash@4.17.21, lodash@^4.17.21:
+lodash@4.17.15, lodash@4.17.20, lodash@4.17.21, "lodash@>=3.5 <5", lodash@^4.0.0, lodash@^4.1.1, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@^4.17.21, lodash@^4.17.4, lodash@^4.17.5, lodash@^4.6.1, lodash@~4.17.10:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -11804,15 +11787,10 @@ lru_map@^0.3.3:
   resolved "https://registry.yarnpkg.com/lru_map/-/lru_map-0.3.3.tgz#b5c8351b9464cbd750335a79650a0ec0e56118dd"
   integrity sha1-tcg1G5Rky9dQM1p5ZQoOwOVhGN0=
 
-luxon@1.22.0:
+luxon@1.22.0, luxon@^1.21.3:
   version "1.22.0"
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.22.0.tgz#639525c7c69e594953c7b142794466b8ea85b868"
   integrity sha512-3sLvlfbFo+AxVEY3IqxymbumtnlgBwjDExxK60W3d+trrUzErNAz/PfvPT+mva+vEUrdIodeCOs7fB6zHtRSrw==
-
-luxon@^1.21.3:
-  version "1.25.0"
-  resolved "https://registry.yarnpkg.com/luxon/-/luxon-1.25.0.tgz#d86219e90bc0102c0eb299d65b2f5e95efe1fe72"
-  integrity sha512-hEgLurSH8kQRjY6i4YLey+mcKVAWXbDNlZRmM6AgWDJ1cY3atl8Ztf5wEY7VBReFbmGnwQPz7KYJblL8B2k0jQ==
 
 lz-string@^1.4.4:
   version "1.4.4"
@@ -12325,15 +12303,10 @@ modify-values@^1.0.0:
   resolved "https://registry.yarnpkg.com/modify-values/-/modify-values-1.0.1.tgz#b3939fa605546474e3e3e3c63d64bd43b4ee6022"
   integrity sha512-xV2bxeN6F7oYjZWTe/YPAy6MN2M+sL4u/Rlm2AHCIVGfo2p1yGmBHQ6vHehl4bRTZBdHu3TSkWdYgkwpYzAGSw==
 
-moment@2.24.0:
-  version "2.24.0"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
-  integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
-
-moment@2.x, moment@>=1.6.0:
-  version "2.29.1"
-  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
-  integrity sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
+moment@2.24.0, moment@2.29.3, moment@2.x, moment@>=1.6.0:
+  version "2.29.3"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.3.tgz#edd47411c322413999f7a5940d526de183c031f3"
+  integrity sha512-c6YRvhEo//6T2Jz/vVtYzqBzwvPT95JBQ+smCytzf7c50oMZRsR/a4w88aD34I+/QVSfnoAnSBFPJHItlOMJVw==
 
 move-concurrently@^1.0.1:
   version "1.0.1"

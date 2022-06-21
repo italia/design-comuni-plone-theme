@@ -65,17 +65,7 @@ const Block = ({
   });
 
   return (
-    <div
-      className="simple-text-card-wrapper"
-      ref={wrapperRef}
-      onClick={(e) => {
-        if (inEditMode) {
-          if (wrapperRef.current.contains(e.target)) {
-            setSelected(null);
-          }
-        }
-      }}
-    >
+    <div className="simple-text-card-wrapper" ref={wrapperRef}>
       <Card
         color="white"
         className=" card-bg rounded"
@@ -90,7 +80,6 @@ const Block = ({
             ) {
               onAddBlock('text', index + 1);
             }
-
             if (titleRef.current.contains(e.target)) {
               setSelected('content');
             }

@@ -1,17 +1,29 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import { useIntl, defineMessages } from 'react-intl';
 import { flatMapDeep } from 'lodash';
 import { useHistory } from 'react-router-dom';
 import { Button } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { Icon, SearchSectionsBackground } from '@italia/components/ItaliaTheme';
+import {
+  Icon,
+  BackgroundUser,
+  SearchSectionsBackground,
+} from '@italia/components/ItaliaTheme';
 
 const navigate = (text, sections) => {
   window.location.href =
     window.location.origin +
     `/search?SearchableText=${text}&path.query=${sections}`;
 };
+
+const messages = defineMessages({
+  doSearch: {
+    id: 'Search',
+    defaultMessage: 'Cerca',
+  },
+});
 
 const Body = ({ block, sections }) => {
   const history = useHistory();
@@ -29,9 +41,15 @@ const Body = ({ block, sections }) => {
     history.push(flattenToAppURL(link['@id']));
   };
 
+  const intl = useIntl();
+
   return (
     <div className="public-ui searchSections">
-      <SearchSectionsBackground />
+      {block?.image ? (
+        <BackgroundUser image={block.image} />
+      ) : (
+        <SearchSectionsBackground />
+      )}
       <div className="container">
         <div className="searchContainer d-flex w-100">
           <h2 className="text-secondary mb-4">{block.title}</h2>
@@ -44,10 +62,12 @@ const Body = ({ block, sections }) => {
               onKeyDown={(e) =>
                 e.key === 'Enter' ? navigate(inputText, searchFilters()) : null
               }
+              aria-label={block.placeholder}
             ></input>
             <button
               className="rounded-right"
               onClick={(e) => navigate(inputText, searchFilters())}
+              aria-label={intl.formatMessage(messages.doSearch)}
             >
               <Icon icon="it-search" padding={false} size="sm" color="white" />
             </button>

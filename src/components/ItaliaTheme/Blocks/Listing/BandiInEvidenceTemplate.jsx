@@ -42,6 +42,10 @@ const messages = defineMessages({
     id: 'bando_open',
     defaultMessage: 'Attivo',
   },
+  scheduled: {
+    id: 'bando_scheduled',
+    defaultMessage: 'Programmato',
+  },
   closed: {
     id: 'bando_closed',
     defaultMessage: 'Scaduto',
@@ -203,6 +207,9 @@ const BandiInEvidenceTemplate = ({
                             className={cx('bando-state', {
                               open: item.bando_state?.includes('open'),
                               closed: item.bando_state?.includes('closed'),
+                              scheduled: item.bando_state?.includes(
+                                'scheduled',
+                              ),
                               'in-progress': item.bando_state?.includes(
                                 'inProgress',
                               ),

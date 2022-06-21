@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux';
-
 import { useIntl, defineMessages } from 'react-intl';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import {

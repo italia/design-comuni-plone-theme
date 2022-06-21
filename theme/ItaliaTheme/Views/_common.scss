@@ -291,6 +291,12 @@ div.sticky-wrapper {
   }
 }
 
+.content-image {
+  figure {
+    width: 100%;
+  }
+}
+
 @media (min-width: #{map-get($grid-breakpoints, md)}) {
   .it-page-sections-container {
     .wide-image:not(.row-full-width) {
