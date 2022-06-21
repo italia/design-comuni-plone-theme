@@ -1,6 +1,10 @@
 /**
  * Edit html block.
  * @module components/manage/Blocks/HTML/Edit
+ *
+ * Customizations:
+ * - added bgColor
+ * - added showFullWidths
  */
 
 import { compose } from 'redux';

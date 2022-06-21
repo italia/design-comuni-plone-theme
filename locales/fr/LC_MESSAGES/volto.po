@@ -1856,7 +1856,7 @@ msgid "hide_dates"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/HTML/Sidebar
-# defaultMessage: Schermo pieno
+# defaultMessage: Mostra lo sfondo a tutta larghezza
 msgid "htmlFullWidth"
 msgstr ""
 
