@@ -5,6 +5,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 /**
  * View html block class.
  * @class View
@@ -13,9 +14,10 @@ import PropTypes from 'prop-types';
 const View = ({ data }) => (
   <>
     <div
-      className={`block html ${!data.showFullWidth ? 'full-width' : ''} ${
-        !data.bgColor ? 'bg-light' : ''
-      } py-5`}
+      className={cx('block html py-5', {
+        'full-width': data.showFullWidth,
+        'bg-light': data.bgColor,
+      })}
     >
       <div
         className="container px-4"

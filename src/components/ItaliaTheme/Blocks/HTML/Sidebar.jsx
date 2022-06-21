@@ -31,7 +31,7 @@ const Sidebar = ({ data, block, onChangeBlock }) => {
         <CheckboxWidget
           id="bgColor"
           title={intl.formatMessage(messages.bgColor)}
-          value={data.bgColor ? data.bgColor : false}
+          value={data.bgColor}
           onChange={(name, checked) => {
             onChangeBlock(block, { ...data, [name]: checked });
           }}
@@ -39,7 +39,7 @@ const Sidebar = ({ data, block, onChangeBlock }) => {
         <CheckboxWidget
           id="showFullWidth"
           title={intl.formatMessage(messages.htmlFullWidth)}
-          value={data.showFullWidth ? data.showFullWidth : false}
+          value={data.showFullWidth}
           onChange={(name, checked) => {
             onChangeBlock(block, { ...data, [name]: checked });
           }}

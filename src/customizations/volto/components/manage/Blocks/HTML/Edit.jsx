@@ -10,6 +10,7 @@ import { Button, Popup } from 'semantic-ui-react';
 import { defineMessages, injectIntl } from 'react-intl';
 import loadable from '@loadable/component';
 import { isEqual } from 'lodash';
+import cx from 'classnames';
 
 import { Icon, SidebarPortal } from '@plone/volto/components';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
@@ -245,9 +246,10 @@ class Edit extends Component {
     return (
       <div className="public-ui">
         <div
-          className={`block html ${
-            !this.props.data.showFullWidth ? 'full-width' : ''
-          } ${!this.props.data.bgColor ? 'bg-light' : ''} py-5`}
+          className={cx('block html py-5', {
+            'full-width': this.props.data.showFullWidth,
+            'bg-light': this.props.data.bgColor,
+          })}
         >
           {this.props.selected && value && (
             <div className="toolbar">
