@@ -984,6 +984,11 @@ msgstr "Tipo"
 msgid "bando_vedi"
 msgstr "Vedi"
 
+#: components/ItaliaTheme/Blocks/HTML/Sidebar
+# defaultMessage: Mostra lo sfondo del blocco
+msgid "bgColor"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 # defaultMessage: Colore di sfondo
@@ -1832,6 +1837,16 @@ msgstr "Per questo template il numero di risultati per pagina deve essere 7. Con
 # defaultMessage: Nascondi le date
 msgid "hide_dates"
 msgstr "Nascondi le date"
+
+#: components/ItaliaTheme/Blocks/HTML/Sidebar
+# defaultMessage: Mostra lo sfondo a tutta larghezza
+msgid "htmlFullWidth"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/HTML/Sidebar
+# defaultMessage: Blocco HTML
+msgid "html_block"
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/IconWidget
 # defaultMessage: Icona

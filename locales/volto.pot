@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2022-06-10T08:26:58.836Z\n"
+"POT-Creation-Date: 2022-06-21T14:20:29.802Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -986,6 +986,11 @@ msgstr ""
 msgid "bando_vedi"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/HTML/Sidebar
+# defaultMessage: Mostra lo sfondo del blocco
+msgid "bgColor"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 # defaultMessage: Colore di sfondo
@@ -1833,6 +1838,16 @@ msgstr ""
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Nascondi le date
 msgid "hide_dates"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/HTML/Sidebar
+# defaultMessage: Mostra lo sfondo a tutta larghezza
+msgid "htmlFullWidth"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/HTML/Sidebar
+# defaultMessage: Blocco HTML
+msgid "html_block"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/IconWidget
