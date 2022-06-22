@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import {
-  Card,
-  CardBody,
-  CardTitle,
-} from 'design-react-kit/dist/design-react-kit';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { Icon } from '@italia/components/ItaliaTheme';
 
@@ -16,8 +13,10 @@ const messages = defineMessages({
   },
 });
 
-const Attachment = ({ title, description, download_url }) => {
+const Attachment = ({ title, description, download_url, designReactKit }) => {
   const intl = useIntl();
+  const { Card, CardBody, CardTitle } = designReactKit;
+
   return (
     <Card
       className="card card-teaser shadow p-4 mt-3 rounded attachment"
@@ -43,4 +42,4 @@ Attachment.propTypes = {
   download_url: PropTypes.string,
 };
 
-export default Attachment;
+export default injectLazyLibs(['designReactKit'])(Attachment);

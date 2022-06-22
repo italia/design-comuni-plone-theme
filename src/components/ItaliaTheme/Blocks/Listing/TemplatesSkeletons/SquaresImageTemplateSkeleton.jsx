@@ -2,15 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { UniversalLink } from '@plone/volto/components';
-
-import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 const SquaresImageTemplateSkeleton = ({
   isEditMode,
   title,
   linkHref,
   show_block_bg,
+  designReactKit,
 }) => {
+  const { Container, Row, Col } = designReactKit;
+
   return (
     <div className="squares-image-template">
       <Container className="px-4">
@@ -47,4 +49,4 @@ SquaresImageTemplateSkeleton.propTypes = {
   title: PropTypes.string,
 };
 
-export default SquaresImageTemplateSkeleton;
+export default injectLazyLibs(['designReactKit'])(SquaresImageTemplateSkeleton);

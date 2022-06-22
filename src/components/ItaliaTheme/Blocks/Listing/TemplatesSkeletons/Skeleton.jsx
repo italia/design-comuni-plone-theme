@@ -1,16 +1,17 @@
 import React from 'react';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
-import {
-  Container,
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
-  Row,
-  Col,
-} from 'design-react-kit/dist/design-react-kit';
+const Skeleton = ({ isEditMode, title, designReactKit }) => {
+  const {
+    Container,
+    Card,
+    CardBody,
+    CardTitle,
+    CardText,
+    Row,
+    Col,
+  } = designReactKit;
 
-const Skeleton = ({ isEditMode, title }) => {
   return (
     <Container className="px-4">
       <div className="skeleton-template">
@@ -41,4 +42,4 @@ const Skeleton = ({ isEditMode, title }) => {
   );
 };
 
-export default Skeleton;
+export default injectLazyLibs(['designReactKit'])(Skeleton);

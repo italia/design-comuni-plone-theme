@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button } from 'design-react-kit/dist/design-react-kit';
+
 import { defineMessages, useIntl } from 'react-intl';
 import { Icon } from '@italia/components/ItaliaTheme';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
-import { CardReadMore } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
 const messages = defineMessages({
@@ -14,8 +14,9 @@ const messages = defineMessages({
   },
 });
 
-const StoresButtons = ({ data }) => {
+const StoresButtons = ({ data, designReactKit }) => {
   const intl = useIntl();
+  const { Button, CardReadMore } = designReactKit;
 
   return (
     <div className="stores-buttons">
@@ -51,4 +52,4 @@ StoresButtons.propTypes = {
   data: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
-export default StoresButtons;
+export default injectLazyLibs(['designReactKit'])(StoresButtons);

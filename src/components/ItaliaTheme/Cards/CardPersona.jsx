@@ -1,11 +1,6 @@
 import React from 'react';
-import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
-} from 'design-react-kit/dist/design-react-kit';
 
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
 import { CardCategory } from '@italia/components/ItaliaTheme';
 import { ListingCategory, ListingImage } from '@italia/components/ItaliaTheme';
@@ -19,12 +14,16 @@ export const CardPersona = ({
   icon,
   type,
   isEditMode,
+  designReactKit,
 }) => {
   const image = ListingImage({
     item,
     maxSize: 300,
     useOriginal: false,
   });
+
+  const { Card, CardBody, CardTitle, CardText } = designReactKit;
+
   return (
     <Card
       className={`card-persona card-teaser-image card-flex no-after ${
@@ -56,4 +55,4 @@ export const CardPersona = ({
   );
 };
 
-export default CardPersona;
+export default injectLazyLibs(['designReactKit'])(CardPersona);

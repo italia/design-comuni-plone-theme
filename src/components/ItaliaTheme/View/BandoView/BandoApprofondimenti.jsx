@@ -3,12 +3,9 @@ import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+
 import { Icon } from '@italia/components/ItaliaTheme';
-import {
-  Card,
-  CardBody,
-  CardTitle,
-} from 'design-react-kit/dist/design-react-kit';
 
 import {
   Attachment,
@@ -23,8 +20,9 @@ const messages = defineMessages({
   },
 });
 
-const BandoApprofondimenti = ({ content }) => {
+const BandoApprofondimenti = ({ content, designReactKit }) => {
   const intl = useIntl();
+  const { Card, CardBody, CardTitle } = designReactKit;
 
   const getAttachment = (item, i) => {
     if (item.type === 'File' || item.type === 'Image') {
@@ -149,4 +147,4 @@ BandoApprofondimenti.propTypes = {
     effective: PropTypes.string,
   }).isRequired,
 };
-export default BandoApprofondimenti;
+export default injectLazyLibs(['designReactKit'])(BandoApprofondimenti);

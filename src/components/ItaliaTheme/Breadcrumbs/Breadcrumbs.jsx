@@ -8,16 +8,12 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
 import { isEqual } from 'lodash';
+
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { getBreadcrumbs } from '@plone/volto/actions';
 import { getBaseUrl, flattenToAppURL } from '@plone/volto/helpers';
-
 import { UniversalLink } from '@plone/volto/components';
-import {
-  Row,
-  Col,
-  Breadcrumb,
-  BreadcrumbItem,
-} from 'design-react-kit/dist/design-react-kit';
+
 import GoogleBreadcrumbs from '@italia/components/ItaliaTheme/Breadcrumbs/GoogleBreadcrumbs';
 
 const messages = defineMessages({
@@ -27,7 +23,7 @@ const messages = defineMessages({
   },
 });
 
-const Breadcrumbs = ({ pathname }) => {
+const Breadcrumbs = ({ pathname, designReactKit }) => {
   const intl = useIntl();
   const dispatch = useDispatch();
 
@@ -48,6 +44,8 @@ const Breadcrumbs = ({ pathname }) => {
       items = [];
     }
   }
+
+  const { Row, Col, Breadcrumb, BreadcrumbItem } = designReactKit;
 
   return items?.length > 0 ? (
     <>
@@ -82,4 +80,4 @@ Breadcrumbs.propTypes = {
   pathname: PropTypes.string.isRequired,
 };
 
-export default Breadcrumbs;
+export default injectLazyLibs(['designReactKit'])(Breadcrumbs);

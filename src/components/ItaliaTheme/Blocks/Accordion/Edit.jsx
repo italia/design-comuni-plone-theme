@@ -4,22 +4,17 @@
  */
 
 import React from 'react';
-import EditBlock from './Block/EditBlock';
+import { SidebarPortal } from '@plone/volto/components';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
-import {
-  Container,
-  Card,
-  CardBody,
-} from 'design-react-kit/dist/design-react-kit';
 import {
   withDNDContext,
   SubblocksEdit,
   SubblocksWrapper,
 } from '@italia/addons/volto-subblocks';
 
-import { SidebarPortal } from '@plone/volto/components';
 import Sidebar from './Sidebar.jsx';
-
+import EditBlock from './Block/EditBlock';
 import { defineMessages } from 'react-intl';
 
 const messages = defineMessages({
@@ -43,6 +38,7 @@ class Edit extends SubblocksEdit {
     if (__SERVER__) {
       return <div />;
     }
+    const { Container, Card, CardBody } = this.props.designReactKit;
 
     return (
       <div className="public-ui">
@@ -93,4 +89,6 @@ class Edit extends SubblocksEdit {
   }
 }
 
-export default React.memo(withDNDContext(Edit));
+export default React.memo(
+  injectLazyLibs(['designReactKit'])(withDNDContext(Edit)),
+);

@@ -1,13 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
-  CardReadMore,
-} from 'design-react-kit/dist/design-react-kit';
+
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { ArgumentIcon } from '@italia/components/ItaliaTheme/View';
 
@@ -24,9 +19,10 @@ const messages = defineMessages({
  * @params {object} location: object.
  * @returns {string} Markup of the component.
  */
-const ItemInEvidence = ({ content }) => {
+const ItemInEvidence = ({ content, designReactKit }) => {
   const intl = useIntl();
   const correlato_in_evidenza = content.correlato_in_evidenza[0];
+  const { Card, CardBody, CardTitle, CardText, CardReadMore } = designReactKit;
   return (
     <div className="card-wrapper">
       <Card className="card-bg rounded " noWrapper={true} tag="div">
@@ -46,7 +42,7 @@ const ItemInEvidence = ({ content }) => {
   );
 };
 
-export default ItemInEvidence;
+export default injectLazyLibs(['designReactKit'])(ItemInEvidence);
 
 ItemInEvidence.propTypes = {
   content: PropTypes.shape({

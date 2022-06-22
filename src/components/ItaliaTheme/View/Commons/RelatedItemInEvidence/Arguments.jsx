@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
 const messages = defineMessages({
@@ -17,8 +17,9 @@ const messages = defineMessages({
  * @params {object} location: object.
  * @returns {string} Markup of the component.
  */
-const Arguments = ({ content }) => {
+const Arguments = ({ content, designReactKit }) => {
   const intl = useIntl();
+  const { Chip, ChipLabel } = designReactKit;
 
   return content?.tassonomia_argomenti?.length > 0 ? (
     <div className="other-arguments">
@@ -41,7 +42,7 @@ const Arguments = ({ content }) => {
   ) : null;
 };
 
-export default Arguments;
+export default injectLazyLibs(['designReactKit'])(Arguments);
 
 Arguments.propTypes = {
   content: PropTypes.shape({

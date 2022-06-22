@@ -8,12 +8,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+
 import {
   TrasparenzaPlaceholderAfterContent,
   PageHeader,
 } from '@italia/components/ItaliaTheme/View';
 import { getAmministrazioneTrasparenteTree } from '@italia/actions';
-import { LinkList, LinkListItem } from 'design-react-kit/dist/design-react-kit';
 
 /**
  * TrasparenzaView component class.
@@ -21,7 +22,7 @@ import { LinkList, LinkListItem } from 'design-react-kit/dist/design-react-kit';
  * @params {object} content Content object.
  * @returns {string} Markup of the component.
  */
-const TrasparenzaView = ({ content }) => {
+const TrasparenzaView = ({ content, designReactKit }) => {
   const locationContent = useSelector(
     (state) => state.amministrazioneTrasparenteTree,
   );
@@ -35,6 +36,9 @@ const TrasparenzaView = ({ content }) => {
   }, []);
 
   const items = locationContent?.result?.items || [];
+
+  const { LinkList, LinkListItem } = designReactKit;
+
   return (
     <>
       <div id="page-document" className="ui container">
@@ -82,4 +86,4 @@ TrasparenzaView.propTypes = {
   content: PropTypes.any,
 };
 
-export default TrasparenzaView;
+export default injectLazyLibs(['designReactKit'])(TrasparenzaView);

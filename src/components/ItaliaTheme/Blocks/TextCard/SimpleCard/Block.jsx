@@ -1,18 +1,16 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState, useRef, useEffect } from 'react';
-import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
-} from 'design-react-kit/dist/design-react-kit';
+import { Divider } from 'semantic-ui-react';
+import cx from 'classnames';
 import { defineMessages, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import redraft from 'redraft';
+
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+
 import { TextEditorWidget } from '@italia/components/ItaliaTheme';
-import { Divider } from 'semantic-ui-react';
-import cx from 'classnames';
+
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({
@@ -39,6 +37,7 @@ const Block = ({
   onAddBlock,
   index,
   blockIsSelected,
+  designReactKit,
 }) => {
   const intl = useIntl();
   const title = data?.simple_card_title?.blocks[0]?.text;
@@ -64,6 +63,7 @@ const Block = ({
     };
   });
 
+  const { Card, CardBody, CardTitle, CardText } = designReactKit;
   return (
     <div className="simple-text-card-wrapper" ref={wrapperRef}>
       <Card
@@ -189,4 +189,4 @@ Block.propTypes = {
   onChange: PropTypes.func,
 };
 
-export default Block;
+export default injectLazyLibs(['designReactKit'])(Block);

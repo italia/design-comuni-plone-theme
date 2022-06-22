@@ -1,10 +1,13 @@
 import React from 'react';
-import { Container as DesignContainer } from 'design-react-kit/dist/design-react-kit';
+
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 /*This component facilitates the customization of Container*/
 
 const Container = (props) => {
+  const { Container: DesignContainer } = props.designReactKit;
+
   return <DesignContainer {...props} />;
 };
 
-export default Container;
+export default injectLazyLibs(['designReactKit'])(Container);

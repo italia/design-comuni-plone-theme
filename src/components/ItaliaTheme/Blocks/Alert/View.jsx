@@ -7,8 +7,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import redraft from 'redraft';
-import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
+
 //import { isCmsUi } from '@plone/volto/helpers';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import config from '@plone/volto/registry';
 
 /**
@@ -16,9 +17,9 @@ import config from '@plone/volto/registry';
  * @class View
  * @extends Component
  */
-const View = ({ data, pathname }) => {
+const View = ({ data, pathname, designReactKit }) => {
   //const isCmsUI = pathname ? isCmsUi(pathname) : false
-
+  const { Container, Row, Col } = designReactKit;
   const content = data.text
     ? redraft(
         data.text,
@@ -60,4 +61,4 @@ View.propTypes = {
   data: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
-export default React.memo(View);
+export default React.memo(injectLazyLibs(['designReactKit'])(View));

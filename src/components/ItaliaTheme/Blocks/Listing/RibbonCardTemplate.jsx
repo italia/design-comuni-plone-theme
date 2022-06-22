@@ -3,17 +3,6 @@ import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import cx from 'classnames';
 
-import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardReadMore,
-  CardText,
-  Row,
-  Col,
-  Container,
-} from 'design-react-kit/dist/design-react-kit';
-
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
 
@@ -53,6 +42,17 @@ const RibbonCardTemplate = (props) => {
     show_type,
     hide_dates,
   } = props;
+
+  const {
+    Card,
+    CardBody,
+    CardTitle,
+    CardReadMore,
+    CardText,
+    Row,
+    Col,
+    Container,
+  } = props.designReactKit;
 
   return (
     <div className="ribbon-card-template">
@@ -149,4 +149,4 @@ RibbonCardTemplate.propTypes = {
   linkHref: PropTypes.any,
 };
 
-export default injectLazyLibs(['moment'])(RibbonCardTemplate);
+export default injectLazyLibs(['moment', 'designReactKit'])(RibbonCardTemplate);

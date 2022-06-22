@@ -5,7 +5,6 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container } from 'design-react-kit/dist/design-react-kit';
 
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
@@ -16,7 +15,7 @@ import { Icon } from '@italia/components/ItaliaTheme';
  * @class Body
  * @extends Component
  */
-const Body = ({ data, children, nItems = 0, reactSlick }) => {
+const Body = ({ data, children, nItems = 0, reactSlick, designReactKit }) => {
   const Slider = reactSlick.default;
 
   const settings = {
@@ -52,6 +51,8 @@ const Body = ({ data, children, nItems = 0, reactSlick }) => {
       },
     ],
   };
+
+  const { Container } = designReactKit;
 
   return (
     <div className="full-width py-5">
@@ -93,4 +94,4 @@ Body.propTypes = {
   data: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
-export default injectLazyLibs(['reactSlick'])(Body);
+export default injectLazyLibs(['reactSlick', 'designReactKit'])(Body);

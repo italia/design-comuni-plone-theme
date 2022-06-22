@@ -2,11 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { defineMessages, useIntl } from 'react-intl';
-import {
-  Card,
-  CardBody,
-  CardTitle,
-} from 'design-react-kit/dist/design-react-kit';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 import { Icon } from '@italia/components/ItaliaTheme';
 import {
@@ -36,7 +32,7 @@ const messages = defineMessages({
   },
 });
 
-const EventoDocumenti = ({ content }) => {
+const EventoDocumenti = ({ content, designReactKit }) => {
   const intl = useIntl();
   const getSupportatoDa = () => {
     return (
@@ -57,6 +53,7 @@ const EventoDocumenti = ({ content }) => {
       )
     );
   };
+  const { Card, CardBody, CardTitle } = designReactKit;
 
   return richTextHasContent(content?.organizzato_da_esterno) ||
     content?.organizzato_da_interno.length > 0 ||
@@ -165,4 +162,4 @@ EventoDocumenti.propTypes = {
   content: PropTypes.object.isRequired,
 };
 
-export default EventoDocumenti;
+export default injectLazyLibs(['designReactKit'])(EventoDocumenti);

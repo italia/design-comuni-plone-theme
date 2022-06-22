@@ -2,11 +2,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import React from 'react';
 import { rrulei18n } from '@plone/volto/components/manage/Widgets/RecurrenceWidget/Utils';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-import {
-  Card,
-  CardTitle,
-  CardBody,
-} from 'design-react-kit/dist/design-react-kit';
+
 import PropTypes from 'prop-types';
 import { viewDate } from '@italia/helpers';
 
@@ -35,13 +31,21 @@ const messages = defineMessages({
  * @params {object} Dates: object.
  * @returns {string} Markup of the component.
  */
-const Dates = ({ content, show_image, moment: Moment, rrule }) => {
+const Dates = ({
+  content,
+  show_image,
+  moment: Moment,
+  rrule,
+  designReactKit,
+}) => {
   const intl = useIntl();
 
   const moment = Moment.default;
   moment.locale(intl.locale);
 
   const rrulestr = rrule.rrulestr;
+
+  const { Card, CardTitle, CardBody } = designReactKit;
 
   let rruleSet = null;
   let recurrenceText = null;
@@ -148,7 +152,7 @@ const Dates = ({ content, show_image, moment: Moment, rrule }) => {
   ) : null;
 };
 
-export default injectLazyLibs(['moment', 'rrule'])(Dates);
+export default injectLazyLibs(['moment', 'rrule', 'designReactKit'])(Dates);
 
 Dates.propTypes = {
   content: PropTypes.object.isRequired,

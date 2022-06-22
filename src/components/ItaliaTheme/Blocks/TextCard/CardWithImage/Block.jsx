@@ -1,20 +1,15 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState, useRef, useEffect } from 'react';
-import {
-  Card,
-  CardBody,
-  CardText,
-  Container,
-  Row,
-  Col,
-} from 'design-react-kit/dist/design-react-kit';
+import cx from 'classnames';
+
 import { defineMessages, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import redraft from 'redraft';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+
 import { TextEditorWidget } from '@italia/components/ItaliaTheme';
 import config from '@plone/volto/registry';
-import cx from 'classnames';
 
 const messages = defineMessages({
   image_card_title: {
@@ -60,6 +55,7 @@ const Block = ({
   onAddBlock,
   index,
   blockIsSelected,
+  designReactKit,
 }) => {
   const intl = useIntl();
   const title = data?.image_card_title?.blocks[0]?.text;
@@ -87,6 +83,8 @@ const Block = ({
       window.removeEventListener('keydown', handleKeydownNothingSelected);
     };
   });
+
+  const { Card, CardBody, CardText, Container, Row, Col } = designReactKit;
 
   return (
     <div
@@ -244,4 +242,4 @@ Block.propTypes = {
   content: PropTypes.any,
 };
 
-export default Block;
+export default injectLazyLibs(['designReactKit'])(Block);

@@ -6,12 +6,10 @@
 import React from 'react';
 import { UniversalLink } from '@plone/volto/components';
 import { useSelector } from 'react-redux';
-import {
-  Header,
-  HeaderContent,
-  HeaderRightZone,
-} from 'design-react-kit/dist/design-react-kit';
+
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+
 import {
   Logo,
   SocialHeader,
@@ -19,7 +17,7 @@ import {
   BrandText,
 } from '@italia/components/ItaliaTheme';
 
-const HeaderCenter = () => {
+const HeaderCenter = ({ designReactKit }) => {
   const subsite = useSelector((state) => state.subsite?.data);
   const logoSubsite = subsite?.subsite_logo && (
     <figure className="icon">
@@ -29,7 +27,7 @@ const HeaderCenter = () => {
       />
     </figure>
   );
-
+  const { Header, HeaderContent, HeaderRightZone } = designReactKit;
   return (
     <Header small={false} theme="" type="center">
       <HeaderContent>
@@ -50,4 +48,4 @@ const HeaderCenter = () => {
   );
 };
 
-export default HeaderCenter;
+export default injectLazyLibs(['designReactKit'])(HeaderCenter);

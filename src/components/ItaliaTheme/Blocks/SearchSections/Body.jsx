@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useIntl, defineMessages } from 'react-intl';
 import { flatMapDeep } from 'lodash';
 import { useHistory } from 'react-router-dom';
-import { Button } from 'design-react-kit/dist/design-react-kit';
+import { useIntl, defineMessages } from 'react-intl';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import {
   Icon,
@@ -25,7 +25,7 @@ const messages = defineMessages({
   },
 });
 
-const Body = ({ block, sections }) => {
+const Body = ({ block, sections, designReactKit }) => {
   const history = useHistory();
 
   const [inputText, setInputText] = useState('');
@@ -41,6 +41,7 @@ const Body = ({ block, sections }) => {
     history.push(flattenToAppURL(link['@id']));
   };
 
+  const { Button } = designReactKit;
   const intl = useIntl();
 
   return (
@@ -102,4 +103,4 @@ Body.propTypes = {
   block: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
-export default Body;
+export default injectLazyLibs(['designReactKit'])(Body);
