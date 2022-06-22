@@ -1,5 +1,8 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
+
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+
 import {
   richTextHasContent,
   RichTextArticle,
@@ -56,8 +59,10 @@ const messages = defineMessages({
   },
 });
 
-const PersonaRuolo = ({ content }) => {
+const PersonaRuolo = ({ content, moment: Moment }) => {
   const intl = useIntl();
+  const moment = Moment.default;
+  moment.locale(intl.locale);
 
   const showSection =
     content.ruolo?.token ||
@@ -143,7 +148,12 @@ const PersonaRuolo = ({ content }) => {
           {content?.data_insediamento && (
             <div className="mb-5 mt-3">
               <h5>{intl.formatMessage(messages.data_insediamento)}</h5>
-              {viewDate(intl.locale, content?.data_insediamento, 'DD-MM-Y')}
+              {viewDate(
+                intl.locale,
+                moment,
+                content?.data_insediamento,
+                'DD-MM-Y',
+              )}
             </div>
           )}
 
@@ -170,7 +180,12 @@ const PersonaRuolo = ({ content }) => {
           <strong>
             {intl.formatMessage(messages.data_conclusione_incarico)}:
           </strong>{' '}
-          {viewDate(intl.locale, content?.data_conclusione_incarico, 'DD-MM-Y')}
+          {viewDate(
+            intl.locale,
+            moment,
+            content?.data_conclusione_incarico,
+            'DD-MM-Y',
+          )}
         </p>
       )}
     </RichTextArticle>
@@ -179,4 +194,4 @@ const PersonaRuolo = ({ content }) => {
   );
 };
 
-export default PersonaRuolo;
+export default injectLazyLibs(['moment'])(PersonaRuolo);

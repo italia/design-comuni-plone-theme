@@ -42,6 +42,7 @@ import bandoSVG from '@italia/icons/bando.svg';
 import applyRichTextConfig from '@italia/config/RichTextEditor/config';
 
 import gdprPrivacyPanelConfig from '@italia/config/volto-gdpr-privacy-defaultPanelConfig.js';
+import { loadables } from '@italia/config/loadables';
 
 export default function applyConfig(voltoConfig) {
   let config = applyRichTextConfig(voltoConfig);
@@ -108,6 +109,7 @@ export default function applyConfig(voltoConfig) {
       Modulo: faFileDownloadSVG,
       Faq: faQuestionSVG,
     },
+    loadables: { ...config.settings.loadables, ...loadables },
     imageScales: {
       listing: 16,
       icon: 32,

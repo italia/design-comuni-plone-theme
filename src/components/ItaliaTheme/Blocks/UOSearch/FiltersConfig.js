@@ -6,9 +6,9 @@ import DefaultFilters from '@italia/components/ItaliaTheme/Blocks/UOSearch/Defau
   componente da customizzare nel proprio sito per modificare/aggiungere tipologie di Filtri
   ***
  */
-const FiltersConfig = (dispatchFilter) => {
+const FiltersConfig = (dispatchFilter, moment) => {
   // const subsite = useSelector((state) => state.subsite?.data);
-  const defaultFilters = DefaultFilters(dispatchFilter);
+  const defaultFilters = DefaultFilters(moment);
 
   return {
     ...defaultFilters,

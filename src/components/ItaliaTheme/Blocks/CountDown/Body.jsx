@@ -2,11 +2,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useIntl, defineMessages } from 'react-intl';
-import moment from 'moment';
 import { flatMapDeep } from 'lodash';
 import { useHistory } from 'react-router-dom';
 import { Button } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { Icon, SearchSectionsBackground } from '@italia/components/ItaliaTheme';
 
 const navigate = (text, sections) => {
@@ -22,7 +22,7 @@ const messages = defineMessages({
   },
 });
 
-const Body = ({ block, sections }) => {
+const Body = ({ block, sections, moment: Moment }) => {
   const history = useHistory();
   const [inputText, setInputText] = useState('');
 
@@ -38,7 +38,9 @@ const Body = ({ block, sections }) => {
   };
 
   const intl = useIntl();
+  const moment = Moment.default;
   moment.locale(intl.locale);
+
   return (
     <div className="public-ui searchSections">
       <SearchSectionsBackground />
@@ -94,4 +96,4 @@ Body.propTypes = {
   block: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
-export default Body;
+export default injectLazyLibs(['moment'])(Body);

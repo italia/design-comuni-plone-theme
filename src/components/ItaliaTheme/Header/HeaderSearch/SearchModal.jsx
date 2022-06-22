@@ -7,7 +7,7 @@ import mapValues from 'lodash/mapValues';
 import toPairs from 'lodash/toPairs';
 import fromPairs from 'lodash/fromPairs';
 import cx from 'classnames';
-import moment from 'moment';
+
 import qs from 'query-string';
 import {
   Modal,
@@ -29,6 +29,7 @@ import {
   Toggle,
 } from 'design-react-kit/dist/design-react-kit';
 
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { Icon } from '@italia/components/ItaliaTheme';
 import { getSearchFilters } from '@italia/actions';
 import { SearchUtils, Checkbox } from '@italia/components';
@@ -162,10 +163,13 @@ const messages = defineMessages({
   },
 });
 
-const SearchModal = ({ closeModal, show }) => {
+const SearchModal = ({ closeModal, show, moment: Moment }) => {
   const intl = useIntl();
+  const moment = Moment.default;
+  moment.locale(intl.locale);
   const dispatch = useDispatch();
   const location = useLocation();
+
   const [advancedSearch, setAdvancedSearch] = useState(false);
   const [advancedTab, setAdvancedTab] = useState('sections');
   const [searchableText, setSearchableText] = useState(
@@ -267,7 +271,7 @@ const SearchModal = ({ closeModal, show }) => {
     if (e.key === 'Enter') {
       submitSearch();
 
-      if (__CLIENT__)
+      if (__CLIENT__) {
         window.location.href =
           window.location.origin +
           getSearchParamsURL(
@@ -282,6 +286,7 @@ const SearchModal = ({ closeModal, show }) => {
             subsite,
             intl.locale,
           );
+      }
     }
   };
 
@@ -332,6 +337,8 @@ const SearchModal = ({ closeModal, show }) => {
                 null,
                 subsite,
                 intl.locale,
+                false,
+                moment,
               )}
               className="ml-auto btn btn-outline-primary text-capitalize"
               style={{ visibility: advancedSearch ? 'visible' : 'hidden' }}
@@ -382,6 +389,8 @@ const SearchModal = ({ closeModal, show }) => {
                           null,
                           subsite,
                           intl.locale,
+                          false,
+                          moment,
                         )}
                         onClick={submitSearch}
                         className="btn btn-link"
@@ -609,6 +618,8 @@ const SearchModal = ({ closeModal, show }) => {
                     null,
                     subsite,
                     intl.locale,
+                    false,
+                    moment,
                   )}
                   onClick={submitSearch}
                   className="btn-icon btn btn-primary"
@@ -874,4 +885,4 @@ const SearchModal = ({ closeModal, show }) => {
   );
 };
 
-export default SearchModal;
+export default injectLazyLibs(['moment'])(SearchModal);

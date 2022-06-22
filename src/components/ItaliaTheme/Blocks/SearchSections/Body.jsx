@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useIntl, defineMessages } from 'react-intl';
-import moment from 'moment';
 import { flatMapDeep } from 'lodash';
 import { useHistory } from 'react-router-dom';
 import { Button } from 'design-react-kit/dist/design-react-kit';
@@ -28,6 +27,7 @@ const messages = defineMessages({
 
 const Body = ({ block, sections }) => {
   const history = useHistory();
+
   const [inputText, setInputText] = useState('');
 
   const searchFilters = () => {
@@ -42,7 +42,6 @@ const Body = ({ block, sections }) => {
   };
 
   const intl = useIntl();
-  moment.locale(intl.locale);
 
   return (
     <div className="public-ui searchSections">

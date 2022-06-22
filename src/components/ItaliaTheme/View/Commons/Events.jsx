@@ -1,10 +1,13 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
+
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
-import PropTypes from 'prop-types';
 import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
+
 import { Icon } from '@italia/components/ItaliaTheme';
 import Image from '@plone/volto/components/theme/Image/Image';
 import { viewDate } from '@italia/helpers';
@@ -26,7 +29,7 @@ const messages = defineMessages({
  * @params {object} Evento: object.
  * @returns {string} Markup of the component.
  */
-const Evento = ({ event, show_image }) => {
+const Evento = ({ event, show_image, moment }) => {
   const intl = useIntl();
 
   return event ? (
@@ -56,7 +59,7 @@ const Evento = ({ event, show_image }) => {
       {show_image && event.image && (
         <div className="card-image card-image-rounded">
           <div className="card-date text-center rounded shadow">
-            {viewDate(intl.locale, event.start, 'DD MMM')}
+            {viewDate(intl.locale, moment, event.start, 'DD MMM')}
           </div>
           <Image
             image={event.image}
@@ -75,8 +78,18 @@ const Evento = ({ event, show_image }) => {
  * @params {object} content: Eventi object.
  * @returns {string} Markup of the component.
  */
-const Events = ({ content, title, show_image, folder_name, isChild }) => {
+const Events = ({
+  content,
+  title,
+  show_image,
+  folder_name,
+  isChild,
+  moment: Moment,
+}) => {
   const intl = useIntl();
+  const moment = Moment.default;
+  moment.locale(intl.locale);
+
   const path = isChild ? content.parent['@id'] : content['@id'];
   const searchResults = useSelector((state) => state.search.subrequests);
   const dispatch = useDispatch();
@@ -125,7 +138,12 @@ const Events = ({ content, title, show_image, folder_name, isChild }) => {
           )}
           <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
             {events.map((item, i) => (
-              <Evento key={item['@id']} event={item} show_image={show_image} />
+              <Evento
+                key={item['@id']}
+                event={item}
+                show_image={show_image}
+                moment={moment}
+              />
             ))}
           </div>
         </article>
@@ -133,7 +151,8 @@ const Events = ({ content, title, show_image, folder_name, isChild }) => {
     </>
   );
 };
-export default Events;
+
+export default injectLazyLibs(['moment'])(Events);
 
 Events.propTypes = {
   content: PropTypes.object,

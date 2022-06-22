@@ -3,9 +3,8 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import { useHistory } from 'react-router-dom';
-import moment from 'moment';
-
 import cx from 'classnames';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { OSMMap } from '@italia/addons/volto-venue';
 import { Row, Col, Container } from 'design-react-kit/dist/design-react-kit';
 import { ListingLinkMore } from '@italia/components/ItaliaTheme';
@@ -29,9 +28,12 @@ const MapTemplate = ({
   title,
   show_map_full_width,
   map_size = 'medium',
+  moment: Moment,
 }) => {
   const intl = useIntl();
   let history = useHistory();
+
+  const moment = Moment.default;
   moment.locale(intl.locale);
 
   const [markers, setMarkers] = useState([]);
@@ -110,4 +112,4 @@ MapTemplate.propTypes = {
   linkHref: PropTypes.any,
 };
 
-export default MapTemplate;
+export default injectLazyLibs(['moment'])(MapTemplate);

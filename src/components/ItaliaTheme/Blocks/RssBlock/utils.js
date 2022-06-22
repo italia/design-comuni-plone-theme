@@ -1,7 +1,4 @@
-import moment from 'moment';
-
-export const getViewDate = (date, locale) => {
-  moment.locale(locale);
+export const getViewDate = (date, moment) => {
   let d = date;
 
   try {

@@ -4,8 +4,8 @@
  */
 
 import React from 'react';
-import Slider from 'react-slick';
 import { Container, Row } from 'design-react-kit/dist/design-react-kit';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 const twitter_slider_settings = {
   dots: true,
@@ -45,7 +45,8 @@ const twitter_slider_settings = {
  * @class TwitterPostsSkeleton
  * @extends Component
  */
-const Skeleton = ({ data, authors, isEditMode }) => {
+const Skeleton = ({ data, authors, isEditMode, reactSlick }) => {
+  const Slider = reactSlick.default;
   return (
     <Row className="row-full-width">
       <Container className="p-2">
@@ -80,4 +81,4 @@ const Skeleton = ({ data, authors, isEditMode }) => {
   );
 };
 
-export default Skeleton;
+export default injectLazyLibs(['reactSlick'])(Skeleton);

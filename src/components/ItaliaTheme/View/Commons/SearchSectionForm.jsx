@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Button } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { SearchUtils } from '@italia/components';
 import { Icon } from '@italia/components/ItaliaTheme';
 
@@ -26,8 +27,11 @@ const messages = defineMessages({
   },
 });
 
-const SearchSectionForm = ({ content }) => {
+const SearchSectionForm = ({ content, moment: Moment }) => {
   const intl = useIntl();
+  const moment = Moment.default;
+  moment.locale(intl.locale);
+
   const subsite = useSelector((state) => state.subsite?.data);
   const [searchableText, setSearchableText] = useState('');
   const doSearch = (e) => {
@@ -46,6 +50,8 @@ const SearchSectionForm = ({ content }) => {
             null,
             subsite,
             intl.locale,
+            false,
+            moment,
           ) +
           '&custom_path=' +
           flattenToAppURL(content['@id']);
@@ -84,7 +90,8 @@ const SearchSectionForm = ({ content }) => {
     </div>
   );
 };
-export default SearchSectionForm;
+
+export default injectLazyLibs(['moment'])(SearchSectionForm);
 
 SearchSectionForm.propTypes = {
   params: PropTypes.shape({
