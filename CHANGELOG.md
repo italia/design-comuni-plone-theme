@@ -1,3 +1,10 @@
+### [5.26.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.26.2...v5.26.3) (2022-06-22)
+
+
+### Maintenance
+
+* updated volto to fix imageObject url ([8519889](https://github.com/RedTurtle/design-volto-theme/commit/8519889eb32ddfff1eb2ac80732424c23919ad94))
+
 ### [5.26.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.26.1...v5.26.2) (2022-06-22)
 
 
