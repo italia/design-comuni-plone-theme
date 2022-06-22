@@ -1,3 +1,10 @@
+### [5.26.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.26.1...v5.26.2) (2022-06-22)
+
+
+### Bug Fixes
+
+* fix import for SearchResultItem ([1bae94d](https://github.com/RedTurtle/design-volto-theme/commit/1bae94de124fdd236d159bec80ae81aa236400d7))
+
 ### [5.26.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.26.0...v5.26.1) (2022-06-22)
 
 
