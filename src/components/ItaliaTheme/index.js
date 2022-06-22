@@ -46,6 +46,7 @@ export SearchModal from '@italia/components/ItaliaTheme/Header/HeaderSearch/Sear
 export SearchSections from '@italia/components/ItaliaTheme/Search/SearchSections';
 export SearchTopics from '@italia/components/ItaliaTheme/Search/SearchTopics';
 export SearchCTs from '@italia/components/ItaliaTheme/Search/SearchCTs';
+export SearchResultItem from '@italia/components/ItaliaTheme/Search/ResultItem';
 export MegaMenu from '@italia/components/ItaliaTheme/MegaMenu/MegaMenu';
 export MenuSecondary from '@italia/components/ItaliaTheme/MenuSecondary/MenuSecondary';
 export Logo from '@italia/components/ItaliaTheme/Logo/Logo';

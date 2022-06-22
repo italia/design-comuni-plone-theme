@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useIntl, defineMessages } from 'react-intl';
 import useDeepCompareEffect from 'use-deep-compare-effect';
 import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
-
 import cx from 'classnames';
 
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
