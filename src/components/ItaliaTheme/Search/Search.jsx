@@ -18,8 +18,6 @@ import {
   Row,
   Col,
   Collapse,
-  Card,
-  CardBody,
   CardCategory,
   Button,
   Toggle,
@@ -35,8 +33,9 @@ import {
   SearchCTs,
   Icon,
 } from '@italia/components/ItaliaTheme';
-import { UniversalLink } from '@plone/volto/components';
+
 import { SearchUtils, TextInput, SelectInput } from '@italia/components';
+import ResultItem from '@italia/components/ItaliaTheme/Search/ResultItem.jsx';
 import { getSearchFilters, getSearchResults } from '@italia/actions';
 import { useDebouncedEffect } from '@italia/helpers';
 import config from '@plone/volto/registry';
@@ -623,23 +622,13 @@ const Search = () => {
                     </Row>
                   </div>
                   <Row>
-                    {searchResults?.result?.items?.map((i) => (
-                      <Col md={6} key={i['@id']}>
-                        <Card
-                          teaser
-                          noWrapper={true}
-                          className={cx('mt-3 mb-2 border-bottom-half', {
-                            'border-right border-light': i % 3 !== 2,
-                          })}
-                        >
-                          <CardBody>
-                            {i['@type'] && getSectionFromId(i['@id'])}
-                            <h4 className="card-title">
-                              <UniversalLink item={i}>{i.title}</UniversalLink>
-                            </h4>
-                            <p className="card-text">{i.description}</p>
-                          </CardBody>
-                        </Card>
+                    {searchResults?.result?.items?.map((item, index) => (
+                      <Col md={6} key={item['@id']}>
+                        <ResultItem
+                          item={item}
+                          index={index}
+                          section={getSectionFromId(item['@id'])}
+                        />
                       </Col>
                     ))}
                   </Row>
