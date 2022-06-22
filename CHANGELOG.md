@@ -1,3 +1,31 @@
+### [5.26.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.26.2...v5.26.3) (2022-06-22)
+
+
+### Maintenance
+
+* updated volto to fix imageObject url ([8519889](https://github.com/RedTurtle/design-volto-theme/commit/8519889eb32ddfff1eb2ac80732424c23919ad94))
+
+### [5.26.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.26.1...v5.26.2) (2022-06-22)
+
+
+### Bug Fixes
+
+* fix import for SearchResultItem ([1bae94d](https://github.com/RedTurtle/design-volto-theme/commit/1bae94de124fdd236d159bec80ae81aa236400d7))
+
+### [5.26.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.26.0...v5.26.1) (2022-06-22)
+
+
+### Maintenance
+
+* moved search ResultItem into a component ([2e6c403](https://github.com/RedTurtle/design-volto-theme/commit/2e6c4032e1b14088b862afc2a738dd22d3bcc2f9))
+
+## [5.26.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.25.0...v5.26.0) (2022-06-22)
+
+
+### Features
+
+* added footerNavigationDepth property to avoid customizations ([b814d1d](https://github.com/RedTurtle/design-volto-theme/commit/b814d1d755f8cab40100fab24a89c1818d979688))
+
 ## [5.25.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.24.0...v5.25.0) (2022-06-21)
 
 

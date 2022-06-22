@@ -14,8 +14,6 @@ import {
   Row,
   Col,
   Collapse,
-  Card,
-  CardBody,
   CardCategory,
   Button,
   Toggle,
@@ -25,7 +23,6 @@ import {
 import { Skiplink, SkiplinkItem } from 'design-react-kit/dist/design-react-kit';
 import { useLocation, useHistory } from 'react-router-dom';
 
-import { UniversalLink } from '@plone/volto/components';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { Helmet, flattenToAppURL } from '@plone/volto/helpers';
 
@@ -36,6 +33,7 @@ import {
   SearchCTs,
   Icon,
   RemoveBodyClass,
+  SearchResultItem,
 } from '@italia/components/ItaliaTheme';
 import { SearchUtils, TextInput, SelectInput } from '@italia/components';
 import { getSearchFilters, getSearchResults } from '@italia/actions';
@@ -629,23 +627,13 @@ const Search = ({ moment: Moment }) => {
                     </Row>
                   </div>
                   <Row>
-                    {searchResults?.result?.items?.map((i) => (
-                      <Col md={6} key={i['@id']}>
-                        <Card
-                          teaser
-                          noWrapper={true}
-                          className={cx('mt-3 mb-2 border-bottom-half', {
-                            'border-right border-light': i % 3 !== 2,
-                          })}
-                        >
-                          <CardBody>
-                            {i['@type'] && getSectionFromId(i['@id'])}
-                            <h4 className="card-title">
-                              <UniversalLink item={i}>{i.title}</UniversalLink>
-                            </h4>
-                            <p className="card-text">{i.description}</p>
-                          </CardBody>
-                        </Card>
+                    {searchResults?.result?.items?.map((item, index) => (
+                      <Col md={6} key={item['@id']}>
+                        <SearchResultItem
+                          item={item}
+                          index={index}
+                          section={getSectionFromId(item['@id'])}
+                        />
                       </Col>
                     ))}
                   </Row>
