@@ -1,3 +1,10 @@
+## [5.26.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.25.0...v5.26.0) (2022-06-22)
+
+
+### Features
+
+* added footerNavigationDepth property to avoid customizations ([b814d1d](https://github.com/RedTurtle/design-volto-theme/commit/b814d1d755f8cab40100fab24a89c1818d979688))
+
 ## [5.25.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.24.0...v5.25.0) (2022-06-21)
 
 
