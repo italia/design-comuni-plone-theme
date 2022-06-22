@@ -40,7 +40,12 @@ const FooterNavigation = () => {
   }
 
   useEffect(() => {
-    dispatch(getNavigation(getBaseUrl(path), 2));
+    dispatch(
+      getNavigation(
+        getBaseUrl(path),
+        config.settings.siteProperties.footerNavigationDepth,
+      ),
+    );
   }, [path, dispatch]);
 
   return (

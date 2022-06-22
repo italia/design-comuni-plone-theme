@@ -1,4 +1,3 @@
-import React from 'react';
 import menuSVG from '@plone/volto/icons/menu.svg';
 import menuAltSVG from '@plone/volto/icons/menu-alt.svg';
 import navSVG from '@plone/volto/icons/nav.svg';
@@ -189,6 +188,7 @@ export default function applyConfig(voltoConfig) {
       },
       enableCustomerSatisfaction: true,
       splitMegamenuColumns: true, //se impostato a false, non spezza le colonne con intestazioni nel megamenu
+      footerNavigationDepth: 2, //valori possibili: [1,2]. Se impostato ad 1 non verranno mostrati nel footer i link agli elementi contenuti nelle sezioni di primo livello.
     },
     'volto-blocks-widget': {
       allowedBlocks: [
