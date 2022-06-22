@@ -1,3 +1,31 @@
+## [6.0.0-alpha.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.26.3...v6.0.0-alpha.0) (2022-06-22)
+
+
+### Features
+
+* added babel-plugin-transform-imports ([ce5c738](https://github.com/RedTurtle/design-volto-theme/commit/ce5c738c48764f189a6cdfd2236b4a734c5adbcb))
+* added lazy loading of moment ([0a571d3](https://github.com/RedTurtle/design-volto-theme/commit/0a571d3195a670be7f20054774225024704c7341))
+* replaced moment-with-locales with lazyloaded moment ([c66aac5](https://github.com/RedTurtle/design-volto-theme/commit/c66aac533ce66cfb0a5f3bf966457b9c527eee4b))
+
+
+### Bug Fixes
+
+* fix dnd subblocks duplicate html5 ([01d92cf](https://github.com/RedTurtle/design-volto-theme/commit/01d92cfb4c369d98ba828a5c2cf65b43cbe25fab))
+* fix import ([e53b510](https://github.com/RedTurtle/design-volto-theme/commit/e53b510a5760574eafd6ba2ea3c1bf68273b6416))
+* removed unused moment/min/locale import ([bde0119](https://github.com/RedTurtle/design-volto-theme/commit/bde01196385220022b7a13cd30299e365d9083fd))
+* removed unusefull lib ([58e4859](https://github.com/RedTurtle/design-volto-theme/commit/58e48598193f6f6614f555f55dd5b72df05b6844))
+
+
+### Maintenance
+
+* added lazy loading rrule ([9d60cc1](https://github.com/RedTurtle/design-volto-theme/commit/9d60cc1a455f82d7e7a88290b5b409e2d5efd26b))
+* lazy loading of some libraries ([6c30217](https://github.com/RedTurtle/design-volto-theme/commit/6c30217ab0d2b6b2edde90182ebd6d692b1e1c01))
+* lazyloading react-dnd ([5f8f429](https://github.com/RedTurtle/design-volto-theme/commit/5f8f4296c5dc64ed2f8ebc73f0ee62e36624fafe))
+* lazyloading slick ([eff9a3e](https://github.com/RedTurtle/design-volto-theme/commit/eff9a3ecee8208102ac45cc512735a197f961566))
+* removed unuseful babel-plugin-transform-immport ([4606b9a](https://github.com/RedTurtle/design-volto-theme/commit/4606b9aad6739a8636b8e3685fd82eb995c2fcde))
+* updated volto-subblocks in mrs developer ([3467627](https://github.com/RedTurtle/design-volto-theme/commit/34676278a8979abfc9f8e060975b0d7f3a729311))
+* updated volto-subblockss ([42855fc](https://github.com/RedTurtle/design-volto-theme/commit/42855fcea30d6761f1feb8738cf1116a065368f6))
+
 ### [5.26.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.26.2...v5.26.3) (2022-06-22)
 
 
