@@ -180,7 +180,7 @@
     "node": "^12 || ^14 || ^16"
   },
   "dependencies": {
-    "@plone/volto": "plone/volto#12cb285c20bd23568cc0f778a84d685d0504e719",
+    "@plone/volto": "plone/volto#f4cfbd09f7c653a03acdb3f43dca5ff386c25a29",
     "@tinymce/tinymce-react": "3.8.1",
     "bootstrap-italia": "1.3.9",
     "classnames": "2.2.6",
