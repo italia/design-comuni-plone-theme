@@ -32,10 +32,10 @@ import {
   SearchTopics,
   SearchCTs,
   Icon,
+  SearchResultItem,
 } from '@italia/components/ItaliaTheme';
 
 import { SearchUtils, TextInput, SelectInput } from '@italia/components';
-import ResultItem from '@italia/components/ItaliaTheme/Search/ResultItem.jsx';
 import { getSearchFilters, getSearchResults } from '@italia/actions';
 import { useDebouncedEffect } from '@italia/helpers';
 import config from '@plone/volto/registry';
@@ -624,7 +624,7 @@ const Search = () => {
                   <Row>
                     {searchResults?.result?.items?.map((item, index) => (
                       <Col md={6} key={item['@id']}>
-                        <ResultItem
+                        <SearchResultItem
                           item={item}
                           index={index}
                           section={getSectionFromId(item['@id'])}
