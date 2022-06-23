@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import moment from 'moment';
-
 import cx from 'classnames';
 
 import {
@@ -16,6 +14,7 @@ import {
   Container,
 } from 'design-react-kit/dist/design-react-kit';
 
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
 
 import {
@@ -36,6 +35,7 @@ const messages = defineMessages({
 
 const RibbonCardTemplate = (props) => {
   const intl = useIntl();
+  const moment = props.moment.default;
   moment.locale(intl.locale);
 
   const {
@@ -72,7 +72,7 @@ const RibbonCardTemplate = (props) => {
               !show_only_first_ribbon ||
               (show_only_first_ribbon && index === 0);
             const icon = show_icon ? getItemIcon(item) : null;
-            const date = hide_dates ? null : getCalendarDate(item);
+            const date = hide_dates ? null : getCalendarDate(item, moment);
             const eventRecurrenceMore = hide_dates
               ? null
               : getEventRecurrenceMore(item, isEditMode);
@@ -149,4 +149,4 @@ RibbonCardTemplate.propTypes = {
   linkHref: PropTypes.any,
 };
 
-export default RibbonCardTemplate;
+export default injectLazyLibs(['moment'])(RibbonCardTemplate);

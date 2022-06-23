@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useIntl } from 'react-intl';
 import {
   Container,
   Row,
@@ -13,8 +14,11 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
+
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
+
 import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
 import {
   CardCalendar,
@@ -26,10 +30,12 @@ import {
   CardCategory,
   CardPersona,
 } from '@italia/components/ItaliaTheme';
-
 import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 
 const InEvidenceTemplate = (props) => {
+  const intl = useIntl();
+  const moment = props.moment.default;
+  moment.locale(intl.locale);
   const {
     items,
     title,
@@ -60,7 +66,7 @@ const InEvidenceTemplate = (props) => {
         <div className="in-evidence-cards-wrapper mb-5">
           {items.map((item, index) => {
             const icon = show_icon ? getItemIcon(item) : null;
-            const date = hide_dates ? null : getCalendarDate(item);
+            const date = hide_dates ? null : getCalendarDate(item, moment);
             const eventRecurrenceMore = hide_dates
               ? null
               : getEventRecurrenceMore(item, isEditMode);
@@ -171,4 +177,4 @@ InEvidenceTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-export default InEvidenceTemplate;
+export default injectLazyLibs(['moment'])(InEvidenceTemplate);

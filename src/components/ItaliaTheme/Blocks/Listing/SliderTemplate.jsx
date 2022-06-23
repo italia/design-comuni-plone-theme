@@ -6,8 +6,9 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { useIntl, defineMessages } from 'react-intl';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
-import Slider from 'react-slick';
+
 import { UniversalLink } from '@plone/volto/components';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 import {
   Icon,
@@ -45,11 +46,13 @@ const SliderTemplate = ({
   show_dots = true,
   autoplay = false,
   autoplay_speed = 2, //seconds
+  reactSlick,
 }) => {
   const intl = useIntl();
   const slider = useRef(null);
   const [userAutoplay, setUserAutoplay] = useState(autoplay);
   const nSlidesToShow = parseInt(slidesToShow);
+  const Slider = reactSlick.default;
 
   const toggleAutoplay = () => {
     if (!slider?.current) return;
@@ -205,4 +208,4 @@ SliderTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-export default SliderTemplate;
+export default injectLazyLibs(['reactSlick'])(SliderTemplate);

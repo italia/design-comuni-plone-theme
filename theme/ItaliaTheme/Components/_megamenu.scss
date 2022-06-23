@@ -28,6 +28,15 @@
   .DraftEditor-root {
     padding: 0.5rem 1rem;
   }
+
+  .category-top {
+    display: flex;
+    flex-wrap: wrap;
+
+    .data {
+      flex: 1 1 100%;
+    }
+  }
 }
 
 .megamenu-close-button {

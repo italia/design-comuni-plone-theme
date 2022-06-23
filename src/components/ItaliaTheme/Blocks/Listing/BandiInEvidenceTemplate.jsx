@@ -1,5 +1,7 @@
 import React from 'react';
+import cx from 'classnames';
 import PropTypes from 'prop-types';
+import { defineMessages, useIntl } from 'react-intl';
 import {
   Container,
   Row,
@@ -9,10 +11,10 @@ import {
   CardTitle,
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
+
 import { ListingText, ListingLinkMore } from '@italia/components/ItaliaTheme';
-import cx from 'classnames';
-import { defineMessages, useIntl } from 'react-intl';
 import { viewDate } from '@italia/helpers';
 
 const messages = defineMessages({
@@ -72,8 +74,11 @@ const BandiInEvidenceTemplate = ({
   show_description,
   linkTitle,
   linkHref,
+  moment: Moment,
 }) => {
   const intl = useIntl();
+  const moment = Moment.default;
+  moment.locale(intl.locale);
 
   return (
     <div className="bandi-in-evidence">
@@ -144,7 +149,12 @@ const BandiInEvidenceTemplate = ({
                           {intl.formatMessage(messages.pubblicazione)}:
                         </div>
                         <span className="bando-dati-date">
-                          {viewDate(intl.locale, item.effective, 'DD-MM-YYYY')}
+                          {viewDate(
+                            intl.locale,
+                            moment,
+                            item.effective,
+                            'DD-MM-YYYY',
+                          )}
                         </span>
                       </span>
                     )}
@@ -159,6 +169,7 @@ const BandiInEvidenceTemplate = ({
                           {item.scadenza_bando &&
                             viewDate(
                               intl.locale,
+                              moment,
                               item.scadenza_bando,
                               'DD-MM-YYYY',
                             )}
@@ -176,6 +187,7 @@ const BandiInEvidenceTemplate = ({
                           {item.chiusura_procedimento_bando &&
                             viewDate(
                               intl.locale,
+                              moment,
                               item.chiusura_procedimento_bando,
                               'DD-MM-YYYY',
                             )}
@@ -247,4 +259,4 @@ BandiInEvidenceTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-export default BandiInEvidenceTemplate;
+export default injectLazyLibs(['moment'])(BandiInEvidenceTemplate);

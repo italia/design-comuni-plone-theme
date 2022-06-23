@@ -7,6 +7,7 @@ import {
   Icon,
   ObjectBrowserWidget,
 } from '@plone/volto/components';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import upSVG from '@plone/volto/icons/up-key.svg';
 import downSVG from '@plone/volto/icons/down-key.svg';
 import FiltersConfig from '@italia/components/ItaliaTheme/Blocks/UOSearch/FiltersConfig';
@@ -75,6 +76,8 @@ const messages = defineMessages({
 });
 
 const Sidebar = (props) => {
+  const moment = props.moment.default;
+  moment.locale(props.intl.locale);
   const [activeAccIndex, setActiveAccIndex] = useState(1);
 
   function handleAccClick(e, titleProps) {
@@ -84,7 +87,7 @@ const Sidebar = (props) => {
     setActiveAccIndex(newIndex);
   }
 
-  let filtersConfig = FiltersConfig();
+  let filtersConfig = FiltersConfig(null, moment);
 
   const filters = Object.keys(filtersConfig).map((k) => [
     k,
@@ -208,4 +211,4 @@ Sidebar.propTypes = {
   onChangeBlock: PropTypes.func.isRequired,
 };
 
-export default injectIntl(Sidebar);
+export default injectLazyLibs(['moment'])(injectIntl(Sidebar));

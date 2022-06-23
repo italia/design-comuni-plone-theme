@@ -1,5 +1,4 @@
 import React from 'react';
-import createBlockStyleButton from 'draft-js-buttons/lib/utils/createBlockStyleButton';
 import Icon from '@plone/volto/components/theme/Icon/Icon';
 
 import DraftJsDropdownButton from './DraftJsDropdownButton';
@@ -8,6 +7,8 @@ import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
 import calloutSVG from '@plone/volto/icons/megaphone.svg';
 
 const CalloutsButton = (props) => {
+  const createBlockStyleButton = props.draftJsCreateBlockStyleButton.default;
+
   const options = [
     {
       block_type: 'callout',
@@ -25,13 +26,13 @@ const CalloutsButton = (props) => {
     },
   ];
 
-  return (
+  return (_props) => (
     <DraftJsDropdownButton
-      {...props}
+      {..._props}
       optionsList={options}
       content={<Icon name={calloutSVG} size="24px" />}
     />
   );
 };
 
-export default React.memo(CalloutsButton);
+export default CalloutsButton;

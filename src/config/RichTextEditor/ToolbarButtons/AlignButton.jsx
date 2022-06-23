@@ -1,5 +1,5 @@
 import React from 'react';
-import createBlockStyleButton from 'draft-js-buttons/lib/utils/createBlockStyleButton';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import Icon from '@plone/volto/components/theme/Icon/Icon';
 import alignCenterSVG from '@plone/volto/icons/align-center.svg';
 import alignLeftSVG from '@plone/volto/icons/align-left.svg';
@@ -8,7 +8,8 @@ import alignJustifySVG from '@plone/volto/icons/align-justify.svg';
 
 import DraftJsDropdownButton from './DraftJsDropdownButton';
 
-const AlignButton = (props) => {
+const AlignButtonComponent = (props) => {
+  const createBlockStyleButton = props.draftJsCreateBlockStyleButton.default;
   const options = [
     {
       block_type: 'align-left',
@@ -52,5 +53,9 @@ const AlignButton = (props) => {
     />
   );
 };
+
+export const AlignButton = injectLazyLibs(['draftJsCreateBlockStyleButton'])(
+  AlignButtonComponent,
+);
 
 export default React.memo(AlignButton);

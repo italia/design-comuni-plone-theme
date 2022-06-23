@@ -1,6 +1,4 @@
-import moment from 'moment';
-
-export const viewDate = (locale, value, format) => {
+export const viewDate = (locale, moment, value, format) => {
   //  Used to set a server timezone or UTC as default
   moment.updateLocale(locale, moment.localeData(locale)._config); // copy locale to moment-timezone
   let datetime = null;

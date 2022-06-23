@@ -4,7 +4,7 @@
     "path": "src",
     "https": "https://github.com/redturtle/volto-rss-block.git",
     "url": "git@github.com:redturtle/volto-rss-block.git",
-    "tag": "v2.3.0"
+    "tag": "v2.3.2"
   },
   "volto-multilingual-widget": {
     "package": "@italia/addons/volto-multilingual-widget",
@@ -25,7 +25,7 @@
     "path": "src",
     "https": "https://github.com/collective/volto-subblocks.git",
     "url": "git@github.com:collective/volto-subblocks.git",
-    "tag": "v1.2.0"
+    "tag": "v1.2.3"
   },
   "volto-dropdownmenu": {
     "package": "@italia/addons/volto-dropdownmenu",
@@ -81,7 +81,7 @@
     "path": "src",
     "https": "https://github.com/collective/volto-form-block.git",
     "url": "git@github.com:collective/volto-form-block.git",
-    "tag": "v2.3.2"
+    "tag": "v2.3.6"
   },
   "volto-subfooter": {
     "package": "@italia/addons/volto-subfooter",
@@ -95,7 +95,7 @@
     "path": "src",
     "https": "https://github.com/collective/volto-customer-satisfaction.git",
     "url": "git@github.com:collective/volto-customer-satisfaction.git",
-    "tag": "v0.2.9"
+    "tag": "v0.2.11"
   },
   "volto-gdpr-privacy": {
     "package": "@italia/addons/volto-gdpr-privacy",

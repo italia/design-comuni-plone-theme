@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { UniversalLink } from '@plone/volto/components';
-import { useIntl } from 'react-intl';
-import moment from 'moment';
 
+import { useIntl } from 'react-intl';
 import {
   Container,
   Row,
@@ -16,6 +14,8 @@ import {
   Chip,
   ChipLabel,
 } from 'design-react-kit/dist/design-react-kit';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { CardCategory, ListingLinkMore } from '@italia/components/ItaliaTheme';
 import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
@@ -32,7 +32,6 @@ import {
 
 const CardWithImageTemplate = (props) => {
   const intl = useIntl();
-  moment.locale(intl.locale);
 
   const {
     items,
@@ -50,7 +49,11 @@ const CardWithImageTemplate = (props) => {
     show_topics = true,
     hide_dates = false,
     natural_image_size = false,
+    moment: Moment,
   } = props;
+
+  const moment = Moment.default;
+  moment.locale(intl.locale);
 
   const imagesToShow = set_four_columns ? 4 : 3;
 
@@ -69,7 +72,7 @@ const CardWithImageTemplate = (props) => {
         <Row className="items">
           {items.map((item, index) => {
             const icon = show_icon ? getItemIcon(item) : null;
-            const date = hide_dates ? null : getCalendarDate(item);
+            const date = hide_dates ? null : getCalendarDate(item, moment);
             const eventRecurrenceMore = hide_dates
               ? null
               : getEventRecurrenceMore(item, isEditMode);
@@ -199,4 +202,4 @@ CardWithImageTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-export default CardWithImageTemplate;
+export default injectLazyLibs(['moment'])(CardWithImageTemplate);

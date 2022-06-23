@@ -13,16 +13,20 @@ import {
   CardTitle,
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
-import Image from '@plone/volto/components/theme/Image/Image';
-import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import Image from '@plone/volto/components/theme/Image/Image';
 import { flattenToAppURL } from '@plone/volto/helpers';
+
+import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 import { CardCategory, getItemIcon } from '@italia/components/ItaliaTheme';
 import { viewDate } from '@italia/helpers';
 
 const Body = (props) => {
   const { content, block } = props;
   const intl = useIntl();
+  const moment = props.moment.default;
+  moment.locale(intl.locale);
   const icon = getItemIcon(content);
 
   const { show_type = true, show_section } = block;
@@ -49,7 +53,7 @@ const Body = (props) => {
               <CardCategory
                 date={
                   content.effective &&
-                  viewDate(intl.locale, content.effective, 'll')
+                  viewDate(intl.locale, moment, content.effective, 'll')
                 }
                 iconName={icon}
               >
@@ -110,4 +114,4 @@ Body.propTypes = {
   pathname: PropTypes.string,
 };
 
-export default Body;
+export default injectLazyLibs(['moment'])(Body);

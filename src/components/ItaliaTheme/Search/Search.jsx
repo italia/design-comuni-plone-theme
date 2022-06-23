@@ -9,10 +9,6 @@ import { useIntl, defineMessages } from 'react-intl';
 import { values } from 'lodash';
 import cx from 'classnames';
 import qs from 'query-string';
-import moment from 'moment';
-import { Helmet, flattenToAppURL } from '@plone/volto/helpers';
-
-import { RemoveBodyClass } from '@italia/components/ItaliaTheme';
 import {
   Container,
   Row,
@@ -26,15 +22,19 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import { Skiplink, SkiplinkItem } from 'design-react-kit/dist/design-react-kit';
 import { useLocation, useHistory } from 'react-router-dom';
+
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import { Helmet, flattenToAppURL } from '@plone/volto/helpers';
+
 import {
   Pagination,
   SearchSections,
   SearchTopics,
   SearchCTs,
   Icon,
+  RemoveBodyClass,
   SearchResultItem,
 } from '@italia/components/ItaliaTheme';
-
 import { SearchUtils, TextInput, SelectInput } from '@italia/components';
 import { getSearchFilters, getSearchResults } from '@italia/actions';
 import { useDebouncedEffect } from '@italia/helpers';
@@ -156,11 +156,13 @@ const searchOrderDict = {
   },
 };
 
-const Search = () => {
+const Search = ({ moment: Moment }) => {
   const intl = useIntl();
   const dispatch = useDispatch();
   const location = useLocation();
   const history = useHistory();
+  const moment = Moment.default;
+  moment.locale(intl.locale);
 
   const [searchableText, setSearchableText] = useState(
     qs.parse(location.search)?.SearchableText ?? '',
@@ -299,6 +301,7 @@ const Search = () => {
       subsite,
       intl.locale,
       true,
+      moment,
     );
 
     searchResults.result &&
@@ -314,6 +317,8 @@ const Search = () => {
           customPath,
           subsite,
           intl.locale,
+          false,
+          moment,
         ),
       );
 
@@ -661,4 +666,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default injectLazyLibs(['moment'])(Search);

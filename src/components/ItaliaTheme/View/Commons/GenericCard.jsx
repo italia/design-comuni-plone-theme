@@ -1,10 +1,15 @@
 import React, { useEffect } from 'react';
+import { useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
-import cx from 'classnames';
-import { UniversalLink } from '@plone/volto/components';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
+
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import { UniversalLink } from '@plone/volto/components';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import Image from '@plone/volto/components/theme/Image/Image';
+
 import { getCalendarDate } from '@italia/helpers';
 import {
   Icon,
@@ -12,7 +17,6 @@ import {
   getItemIcon,
   ListingCategory,
 } from '@italia/components/ItaliaTheme';
-import Image from '@plone/volto/components/theme/Image/Image';
 
 /**
  * GenericCard view component class.
@@ -28,7 +32,12 @@ const GenericCard = ({
   showDescription = true,
   showInfos = false,
   children,
+  moment: Moment,
 }) => {
+  const intl = useIntl();
+  const moment = Moment.default;
+  moment.locale(intl.locale);
+
   let item_fo = null;
   const locationContent = useSelector((state) => state.content.subrequests);
   const dispatch = useDispatch();
@@ -39,7 +48,7 @@ const GenericCard = ({
   const infos = (
     <>
       {showInfos && (
-        <CardCategory iconName={icon} date={getCalendarDate(item)}>
+        <CardCategory iconName={icon} date={getCalendarDate(item, moment)}>
           <ListingCategory
             category={item?.design_italia_meta_type}
             item={item}
@@ -108,7 +117,7 @@ const GenericCard = ({
   ) : null;
 };
 
-export default GenericCard;
+export default injectLazyLibs(['moment'])(GenericCard);
 
 GenericCard.propTypes = {
   item: PropTypes.shape({
