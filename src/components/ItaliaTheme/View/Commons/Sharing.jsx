@@ -22,7 +22,8 @@ const messages = defineMessages({
 const Sharing = ({ url, title, designReactKit }) => {
   const intl = useIntl();
   const publicUrl = toPublicURL(url);
-  const socials = [
+
+  let socials = [
     {
       id: 'facebook',
       title: 'Facebook',

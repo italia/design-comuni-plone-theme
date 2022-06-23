@@ -84,7 +84,6 @@ const PersonaView = ({ content }) => {
   );
 };
 
-// TODO: items
 PersonaView.propTypes = {
   content: PropTypes.shape({
     title: PropTypes.string.isRequired,
@@ -110,7 +109,7 @@ PersonaView.propTypes = {
       data: PropTypes.string,
     }),
     description: PropTypes.string,
-    email: PropTypes.array,
+    email: PropTypes.string,
     foto_persona: PropTypes.shape({
       scales: PropTypes.shape({
         preview: PropTypes.shape({

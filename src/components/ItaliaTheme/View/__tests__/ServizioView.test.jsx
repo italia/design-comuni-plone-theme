@@ -1,25 +1,18 @@
 import React from 'react';
 import { render, waitForElement } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import ServizioView from '../ServizioView/ServizioView';
+import ServizioView from '../ServizioView';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-intl-redux';
 import { MemoryRouter } from 'react-router-dom';
-import thunk from 'redux-thunk';
 
-const middlewares = [thunk];
-const mockStore = configureStore(middlewares);
-
-// Warning: An update to Icon inside a test was not wrapped in act(...).
-// When testing, code that causes React state updates should be wrapped into act(...):
-jest.mock('@italia/components/ItaliaTheme/Icons/Icon');
+const mockStore = configureStore();
 
 const mock_mandatory = {
   '@id': 'http://loremipsum.com/autocertificazione',
   '@type': 'Servizio',
   id: 'autocertificazione',
   title: 'Autocertificazione',
-  items: [],
   tassonomia_argomenti: [
     {
       title: 'Tassonomia: Istruzione',
@@ -155,12 +148,10 @@ const mock_other_fields = {
     {
       '@id': 'http://loremipsum.com/autocertificazione/modulistica',
       id: 'modulistica',
-      has_children: true,
     },
     {
       '@id': 'http://loremipsum.com/autocertificazione/allegati',
       id: 'allegati',
-      has_children: true,
     },
   ],
   link_siti_esterni: {
@@ -213,8 +204,6 @@ const mock_servizio_chiuso = {
     encoding: 'utf-8',
   },
   stato_servizio: true,
-  items: [],
-  area: [],
 };
 
 const store = mockStore({
@@ -322,24 +311,24 @@ test('expect to have all mandatory fields in page', async () => {
   // come_si_fa
   expect(getByText(/Come si fa ad ottenere il servizio/i)).toBeInTheDocument();
   // cosa_si_ottiene
-  // expect(queryAllByText(/Cosa si ottiene dal servizio/i)).toHaveLength(2);
+  expect(queryAllByText(/Cosa si ottiene dal servizio/i)).toHaveLength(2);
   // procedure_collegate
   expect(getByText(/Procedure collegate al servizio/i)).toBeInTheDocument();
   // canale_fisico
-  // expect(
-  //   getByText(/Canale fisico per usufruire del servizio/i),
-  // ).toBeInTheDocument();
+  expect(
+    getByText(/Canale fisico per usufruire del servizio/i),
+  ).toBeInTheDocument();
   // sedi_e_luoghi
-  // const sedi_e_luoghi = await waitForElement(() =>
-  //   getByText(/Ufficio anagrafe/i),
-  // );
-  // expect(sedi_e_luoghi).toBeInTheDocument();
+  const sedi_e_luoghi = await waitForElement(() =>
+    getByText(/Ufficio anagrafe/i),
+  );
+  expect(sedi_e_luoghi).toBeInTheDocument();
   // cosa_serve
   expect(
     getByText(/Cosa serve per ottenere l'erogazione del servizio/i),
   ).toBeInTheDocument();
   // fasi_scadenze
-  // expect(getByText(/Quali sono le fasi e le scadenze da/i)).toBeInTheDocument();
+  expect(getByText(/Quali sono le fasi e le scadenze da/i)).toBeInTheDocument();
   // ufficio_responsabile
   const ufficio_responsabile = await waitForElement(() =>
     getByText(/Ufficio responsabile del servizio/i),
@@ -350,10 +339,10 @@ test('expect to have all mandatory fields in page', async () => {
     getByText(/Diritti pagina, per mostrare i metadati/i),
   ).toBeInTheDocument();
   // area
-  // const area = await waitForElement(() =>
-  //   getByText(/Area legata al servizio/i),
-  // );
-  // expect(area).toBeInTheDocument();
+  const area = await waitForElement(() =>
+    getByText(/Area legata al servizio/i),
+  );
+  expect(area).toBeInTheDocument();
 });
 
 test('expect to have all fields in page', async () => {
@@ -364,23 +353,23 @@ test('expect to have all fields in page', async () => {
       </MemoryRouter>
     </Provider>,
   );
-  // // altri_documenti
-  // const altri_documenti = await waitForElement(() =>
-  //   getByText(/Documenti correlati/i),
-  // );
-  // expect(altri_documenti).toBeInTheDocument();
+  // altri_documenti
+  const altri_documenti = await waitForElement(() =>
+    getByText(/Documenti correlati/i),
+  );
+  expect(altri_documenti).toBeInTheDocument();
   // autenticazione
   expect(getByText(/Tipi di autenticazione richiesti/i)).toBeInTheDocument();
   // ulteriori_informazioni
   expect(getByText(/Indicazioni d'uso del servizio/i)).toBeInTheDocument();
   // canale_digitale
-  // expect(
-  //   getByText(/https:\/\/www.loremipsum.com\/canale_digitale/i),
-  // ).toBeInTheDocument();
+  expect(
+    getByText(/https:\/\/www.loremipsum.com\/canale_digitale/i),
+  ).toBeInTheDocument();
   // canale_fisico_prenotazione
-  // expect(
-  //   getByText(/Canale fisicio di prenotazione del servizio/i),
-  // ).toBeInTheDocument();
+  expect(
+    getByText(/Canale fisicio di prenotazione del servizio/i),
+  ).toBeInTheDocument();
   // casi_particolari
   expect(
     getByText(/Casi particolari per usufruire del servizio/i),
@@ -409,14 +398,14 @@ test('expect to have all fields in page', async () => {
   );
   expect(related_iteems).toBeInTheDocument();
   // related_news
-  // expect(
-  //   getByText(/Descrizione della news collegata al servizio/i),
-  // ).toBeInTheDocument();
+  expect(
+    getByText(/Descrizione della news collegata al servizio/i),
+  ).toBeInTheDocument();
   // servizi_collegati
-  // const servizi_collegati = await waitForElement(() =>
-  //   getByText(/Servizi collegati/i),
-  // );
-  // expect(servizi_collegati).toBeInTheDocument();
+  const servizi_collegati = await waitForElement(() =>
+    getByText(/Servizi collegati/i),
+  );
+  expect(servizi_collegati).toBeInTheDocument();
   // subtitle
   expect(getByText(/IoAutocertifico/i)).toBeInTheDocument();
   // vincoli
@@ -433,10 +422,12 @@ test('Check parts loaded from child folders', async () => {
       </MemoryRouter>
     </Provider>,
   );
-  // const modulistica = await waitForElement(() => getByText(/Modulistica/i));
-  // expect(modulistica).toBeInTheDocument();
-  // const allegati = await waitForElement(() => getByText(/Allegati/i));
-  // expect(allegati).toBeInTheDocument();
+  // compensi
+  const modulistica = await waitForElement(() => getByText(/Modulistica/i));
+  expect(modulistica).toBeInTheDocument();
+  // compensi
+  const allegati = await waitForElement(() => getByText(/Allegati/i));
+  expect(allegati).toBeInTheDocument();
 });
 
 test('Check servizio sospeso', async () => {
@@ -449,11 +440,4 @@ test('Check servizio sospeso', async () => {
   );
   // motivo_stato_servizio
   expect(getByText(/Il servizio non è più erogato/i)).toBeInTheDocument();
-});
-
-test('todo', () => {
-  expect(mock_other_fields).toBeDefined();
-  expect(mock_servizio_chiuso).toBeDefined();
-  expect(store).toBeDefined();
-  expect(true).toBe(true);
 });

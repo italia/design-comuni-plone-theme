@@ -2,6 +2,7 @@ name: Bundlewatch
 
 on:
   pull_request:
+  push:
 
 jobs:
   build-pr:
