@@ -3,7 +3,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { OfficeCard } from '@italia/components/ItaliaTheme/View';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
   struttura: {
@@ -36,9 +36,8 @@ const messages = defineMessages({
   },
 });
 
-const UOStructure = ({ content, designReactKit }) => {
+const UOStructure = ({ content }) => {
   const intl = useIntl();
-  const { Chip, ChipLabel } = designReactKit;
 
   return content?.legami_con_altre_strutture?.length > 0 ||
     content?.responsabile?.length > 0 ||
@@ -150,4 +149,4 @@ const UOStructure = ({ content, designReactKit }) => {
   );
 };
 
-export default injectLazyLibs(['designReactKit'])(UOStructure);
+export default UOStructure;

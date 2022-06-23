@@ -1,6 +1,11 @@
 import React, { useState, useReducer, useEffect, createRef } from 'react';
 import { useIntl, defineMessages } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
+import {
+  Container,
+  Button,
+  Spinner,
+} from 'design-react-kit/dist/design-react-kit';
 import cx from 'classnames';
 
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
@@ -31,14 +36,7 @@ const messages = defineMessages({
   },
 });
 
-const Body = ({
-  data,
-  inEditMode,
-  path,
-  onChangeBlock,
-  moment: Moment,
-  designReactKit,
-}) => {
+const Body = ({ data, inEditMode, path, onChangeBlock, moment: Moment }) => {
   const intl = useIntl();
   const b_size = 6;
   const moment = Moment.default;
@@ -159,8 +157,6 @@ const Body = ({
     doRequest(current);
   }
 
-  const { Container, Button, Spinner } = designReactKit;
-
   return filterOne || filterTwo || filterThree ? (
     <Container>
       <div
@@ -250,4 +246,4 @@ const Body = ({
   ) : null;
 };
 
-export default injectLazyLibs(['moment', 'designReactKit'])(Body);
+export default injectLazyLibs(['moment'])(Body);

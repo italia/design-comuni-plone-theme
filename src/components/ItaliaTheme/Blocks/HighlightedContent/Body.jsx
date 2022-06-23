@@ -3,6 +3,16 @@ import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
 import { ConditionalLink, UniversalLink } from '@plone/volto/components';
 import cx from 'classnames';
+import {
+  Row,
+  Col,
+  Chip,
+  Card,
+  CardBody,
+  CardText,
+  CardTitle,
+  CardReadMore,
+} from 'design-react-kit/dist/design-react-kit';
 
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import Image from '@plone/volto/components/theme/Image/Image';
@@ -21,17 +31,6 @@ const Body = (props) => {
 
   const { show_type = true, show_section } = block;
   const category = getCategory(content, show_type, show_section, props);
-
-  const {
-    Row,
-    Col,
-    Chip,
-    Card,
-    CardBody,
-    CardText,
-    CardTitle,
-    CardReadMore,
-  } = props.designReactKit;
 
   return (
     <div className={`${block.bg_color ? 'bg-' + block.bg_color : ''}`}>
@@ -115,4 +114,4 @@ Body.propTypes = {
   pathname: PropTypes.string,
 };
 
-export default injectLazyLibs(['moment', 'designReactKit'])(Body);
+export default injectLazyLibs(['moment'])(Body);

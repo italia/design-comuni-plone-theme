@@ -1,9 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
+import {
+  Card,
+  CardBody,
+  CardTitle,
+  Row,
+  Col,
+} from 'design-react-kit/dist/design-react-kit';
 
 import {
   Icon,
@@ -19,10 +24,7 @@ const SimpleCardTemplateCompact = ({
   show_icon = true,
   show_block_bg,
   title,
-  designReactKit,
 }) => {
-  const { Card, CardBody, CardTitle, Row, Col } = designReactKit;
-
   return (
     <div className="simple-card-compact-template">
       {title && (
@@ -71,4 +73,4 @@ SimpleCardTemplateCompact.propTypes = {
   c: PropTypes.any,
 };
 
-export default injectLazyLibs(['designReactKit'])(SimpleCardTemplateCompact);
+export default SimpleCardTemplateCompact;

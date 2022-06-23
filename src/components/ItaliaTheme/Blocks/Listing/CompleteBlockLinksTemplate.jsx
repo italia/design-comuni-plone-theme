@@ -1,8 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { UniversalLink } from '@plone/volto/components';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
+import {
+  Card,
+  CardBody,
+  CardTitle,
+  CardText,
+  Container,
+  Row,
+  Col,
+} from 'design-react-kit/dist/design-react-kit';
 import { ListingLinkMore, ListingImage } from '@italia/components/ItaliaTheme';
 
 const CompleteBlockLinksTemplate = ({
@@ -13,18 +20,7 @@ const CompleteBlockLinksTemplate = ({
   linkHref,
   show_block_bg,
   show_description = true,
-  designReactKit,
 }) => {
-  const {
-    Card,
-    CardBody,
-    CardTitle,
-    CardText,
-    Container,
-    Row,
-    Col,
-  } = designReactKit;
-
   return (
     <div className="complete-block-links-template">
       <Container className="px-4">
@@ -86,4 +82,4 @@ CompleteBlockLinksTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-export default injectLazyLibs(['designReactKit'])(CompleteBlockLinksTemplate);
+export default CompleteBlockLinksTemplate;

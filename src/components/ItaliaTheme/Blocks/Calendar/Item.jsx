@@ -2,6 +2,7 @@ import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
+import { Spinner } from 'design-react-kit/dist/design-react-kit';
 import cx from 'classnames';
 import useDeepCompareEffect from 'use-deep-compare-effect';
 import { getCalendarDayResults } from '@italia/actions';
@@ -26,19 +27,10 @@ const messages = defineMessages({
   },
 });
 
-const Item = ({
-  day,
-  path,
-  query,
-  inEditMode,
-  moment: Moment,
-  designReactKit,
-}) => {
+const Item = ({ day, path, query, inEditMode, moment: Moment }) => {
   const intl = useIntl();
   const moment = Moment.default;
   moment.locale(intl.locale);
-
-  const { Spinner } = designReactKit;
 
   const calendarDayResults = useSelector(
     (state) => state.calendarDaySearch.subrequests,
@@ -125,4 +117,4 @@ const Item = ({
   );
 };
 
-export default injectLazyLibs(['moment', 'designReactKit'])(Item);
+export default injectLazyLibs(['moment'])(Item);

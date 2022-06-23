@@ -2,7 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import cx from 'classnames';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+
+import {
+  Card,
+  CardBody,
+  CardTitle,
+  CardReadMore,
+  CardText,
+  Row,
+  Col,
+  Container,
+} from 'design-react-kit/dist/design-react-kit';
 
 import { Link } from 'react-router-dom';
 
@@ -15,19 +25,7 @@ const RibbonCardTemplateSkeleton = ({
   detail_link_label,
   show_block_bg,
   hide_dates,
-  designReactKit,
 }) => {
-  const {
-    Card,
-    CardBody,
-    CardTitle,
-    CardReadMore,
-    CardText,
-    Row,
-    Col,
-    Container,
-  } = designReactKit;
-
   return (
     <div className="ribbon-card-template">
       <Container className="px-4">
@@ -91,4 +89,4 @@ RibbonCardTemplateSkeleton.propTypes = {
   linkHref: PropTypes.any,
 };
 
-export default injectLazyLibs(['designReactKit'])(RibbonCardTemplateSkeleton);
+export default RibbonCardTemplateSkeleton;

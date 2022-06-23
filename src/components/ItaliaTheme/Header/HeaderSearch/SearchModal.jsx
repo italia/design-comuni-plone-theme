@@ -9,6 +9,25 @@ import fromPairs from 'lodash/fromPairs';
 import cx from 'classnames';
 
 import qs from 'query-string';
+import {
+  Modal,
+  ModalHeader,
+  ModalBody,
+  Container,
+  Row,
+  Col,
+  Button,
+  ButtonToolbar,
+  Nav,
+  NavItem,
+  NavLink,
+  TabContent,
+  TabPane,
+  FormGroup,
+  Input,
+  Label,
+  Toggle,
+} from 'design-react-kit/dist/design-react-kit';
 
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { Icon } from '@italia/components/ItaliaTheme';
@@ -144,7 +163,7 @@ const messages = defineMessages({
   },
 });
 
-const SearchModal = ({ closeModal, show, moment: Moment, designReactKit }) => {
+const SearchModal = ({ closeModal, show, moment: Moment }) => {
   const intl = useIntl();
   const moment = Moment.default;
   moment.locale(intl.locale);
@@ -270,26 +289,6 @@ const SearchModal = ({ closeModal, show, moment: Moment, designReactKit }) => {
       }
     }
   };
-
-  const {
-    Modal,
-    ModalHeader,
-    ModalBody,
-    Container,
-    Row,
-    Col,
-    Button,
-    ButtonToolbar,
-    Nav,
-    NavItem,
-    NavLink,
-    TabContent,
-    TabPane,
-    FormGroup,
-    Input,
-    Label,
-    Toggle,
-  } = designReactKit;
 
   return (
     <Modal
@@ -886,4 +885,4 @@ const SearchModal = ({ closeModal, show, moment: Moment, designReactKit }) => {
   );
 };
 
-export default injectLazyLibs(['moment', 'designReactKit'])(SearchModal);
+export default injectLazyLibs(['moment'])(SearchModal);

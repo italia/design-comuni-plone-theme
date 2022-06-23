@@ -6,6 +6,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl, defineMessages } from 'react-intl';
+import {
+  Input,
+  FormGroup,
+  Label,
+} from 'design-react-kit/dist/design-react-kit';
 
 import FileWidget from '@italia/components/ItaliaTheme/manage/Widgets/FileWidget';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
@@ -39,7 +44,6 @@ const Field = ({
   disabled = false,
   formHasErrors = false,
   reactSelect,
-  designReactKit,
 }) => {
   const intl = useIntl();
   const Select = reactSelect.default;
@@ -51,8 +55,6 @@ const Field = ({
   const isInvalid = () => {
     return !isOnEdit && !valid;
   };
-
-  const { Input, FormGroup, Label } = designReactKit;
 
   return (
     <div className="field">
@@ -331,4 +333,4 @@ Field.propTypes = {
   onChange: PropTypes.func,
 };
 
-export default injectLazyLibs(['reactSelect', 'designReactKit'])(Field);
+export default injectLazyLibs('reactSelect')(Field);

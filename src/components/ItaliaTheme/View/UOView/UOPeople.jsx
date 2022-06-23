@@ -2,7 +2,7 @@ import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
   persone_struttura: {
@@ -11,7 +11,7 @@ const messages = defineMessages({
   },
 });
 
-const UOPeople = ({ content, designReactKit }) => {
+const UOPeople = ({ content }) => {
   const intl = useIntl();
   // create object Ruolo: Persone
   let roles = content?.persone_struttura?.reduce((r, a) => {
@@ -20,8 +20,6 @@ const UOPeople = ({ content, designReactKit }) => {
     r[role].push(a);
     return r;
   }, Object.create(null));
-
-  const { Chip, ChipLabel } = designReactKit;
 
   return content?.persone_struttura?.length > 0 ? (
     <article
@@ -64,4 +62,4 @@ const UOPeople = ({ content, designReactKit }) => {
   );
 };
 
-export default injectLazyLibs(['designReactKit'])(UOPeople);
+export default UOPeople;

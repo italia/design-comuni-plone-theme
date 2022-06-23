@@ -2,16 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import redraft from 'redraft';
 import { checkRedraftHasContent } from '@italia/helpers';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
+import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { addAppURL, flattenToAppURL } from '@plone/volto/helpers';
 import cx from 'classnames';
 import CountDown from '@italia/components/ItaliaTheme/Blocks/CountDown/CountDown';
 import config from '@plone/volto/registry';
 
-const View = ({ data, id, designReactKit }) => {
-  const { Container, Row, Col } = designReactKit;
-
+const View = ({ data, id }) => {
   return (
     <div className="block count_down">
       <div className="public-ui">
@@ -98,4 +95,4 @@ View.propTypes = {
   id: PropTypes.string.isRequired,
 };
 
-export default injectLazyLibs(['designReactKit'])(View);
+export default View;

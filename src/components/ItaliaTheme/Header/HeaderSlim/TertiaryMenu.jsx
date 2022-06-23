@@ -4,19 +4,15 @@
  */
 
 import React from 'react';
-
+import { Nav, NavItem, NavLink } from 'design-react-kit/dist/design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
 import { useIntl } from 'react-intl';
 import config from '@plone/volto/registry';
 
-const TertiaryMenu = ({ designReactKit }) => {
+const TertiaryMenu = () => {
   const intl = useIntl();
   let menu = config.settings.siteProperties.headerslimTertiaryMenu;
   const items = menu[intl.locale];
-
-  const { Nav, NavItem, NavLink } = designReactKit;
 
   return items?.length > 0 ? (
     <Nav vertical={false} className="tertiary-menu">
@@ -31,4 +27,4 @@ const TertiaryMenu = ({ designReactKit }) => {
   ) : null;
 };
 
-export default injectLazyLibs(['designReactKit'])(TertiaryMenu);
+export default TertiaryMenu;

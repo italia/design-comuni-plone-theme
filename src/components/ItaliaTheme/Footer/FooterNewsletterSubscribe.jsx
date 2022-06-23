@@ -6,8 +6,12 @@
 import React from 'react';
 
 import { defineMessages, useIntl } from 'react-intl';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
+import {
+  Form,
+  Label,
+  Input,
+  Button,
+} from 'design-react-kit/dist/design-react-kit';
 import { Icon } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
@@ -21,10 +25,8 @@ const messages = defineMessages({
   },
 });
 
-const FooterNewsletterSubscribe = ({ designReactKit }) => {
+const FooterNewsletterSubscribe = () => {
   const intl = useIntl();
-  const { Form, Label, Input, Button } = designReactKit;
-
   return (
     <Form action="#" className="form-newsletter" method="post" tag="form">
       <Label
@@ -59,4 +61,4 @@ const FooterNewsletterSubscribe = ({ designReactKit }) => {
   );
 };
 
-export default injectLazyLibs(['designReactKit'])(FooterNewsletterSubscribe);
+export default FooterNewsletterSubscribe;

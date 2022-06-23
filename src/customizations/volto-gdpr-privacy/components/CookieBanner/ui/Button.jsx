@@ -1,10 +1,11 @@
 import React from 'react';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+
+import { Button as DesignButton } from 'design-react-kit/dist/design-react-kit';
 
 /*This component facilitates the customization of buttons*/
 
 const Button = (props) => {
-  let { className, designReactKit, ...otherProps } = props;
+  let { className, ...otherProps } = props;
   className = (className || '') + ' gdpr-privacy-banner-button';
   if (props.className?.indexOf('primary') >= 0) {
     otherProps.color = 'primary';
@@ -17,9 +18,7 @@ const Button = (props) => {
   delete otherProps.basic;
 
   otherProps.className = className;
-  const { Button: DesignButton } = designReactKit;
-
   return <DesignButton {...otherProps} />;
 };
 
-export default injectLazyLibs(['designReactKit'])(Button);
+export default Button;

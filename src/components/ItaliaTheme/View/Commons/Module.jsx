@@ -6,11 +6,15 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
 import { getContent, resetContent } from '@plone/volto/actions';
+
+import {
+  Card,
+  CardBody,
+  CardTitle,
+} from 'design-react-kit/dist/design-react-kit';
 
 import { DownloadFileFormat } from '@italia/components/ItaliaTheme/View';
 
@@ -20,7 +24,7 @@ import { DownloadFileFormat } from '@italia/components/ItaliaTheme/View';
  * @params {object} content Content object.
  * @returns {string} Markup of the component.
  */
-const Module = ({ item, designReactKit }) => {
+const Module = ({ item }) => {
   const dispatch = useDispatch();
   const subrequests = useSelector((state) => state.content.subrequests);
   const url = flattenToAppURL(item['@id']);
@@ -33,8 +37,6 @@ const Module = ({ item, designReactKit }) => {
   }, [key]);
 
   let modulo = subrequests?.[key]?.data;
-
-  const { Card, CardBody, CardTitle } = designReactKit;
 
   return modulo ? (
     <Card
@@ -93,4 +95,4 @@ Module.propTypes = {
   }).isRequired,
 };
 
-export default injectLazyLibs(['designReactKit'])(Module);
+export default Module;

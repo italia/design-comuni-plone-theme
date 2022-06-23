@@ -8,8 +8,14 @@ import React from 'react';
 import EditBlock from '@italia/addons/volto-form-block/components/EditBlock';
 // eslint-disable-next-line import/no-unresolved
 import Sidebar from '@italia/addons/volto-form-block/components/Sidebar';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
+import {
+  Card,
+  CardBody,
+  Button,
+  Row,
+  Col,
+} from 'design-react-kit/dist/design-react-kit';
 import {
   withDNDContext,
   SubblocksEdit,
@@ -68,7 +74,6 @@ class Edit extends SubblocksEdit {
     if (__SERVER__) {
       return <div />;
     }
-    const { Card, CardBody, Button, Row, Col } = this.props.designReactKit;
 
     return (
       <div className="public-ui">
@@ -144,6 +149,4 @@ class Edit extends SubblocksEdit {
   }
 }
 
-export default React.memo(
-  injectLazyLibs(['designReactKit'])(withDNDContext(Edit)),
-);
+export default React.memo(withDNDContext(Edit));

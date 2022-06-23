@@ -1,13 +1,10 @@
 import React from 'react';
 import _ from 'lodash';
-import { compose } from 'redux';
 import keyboardKey from 'keyboard-key';
 import PropTypes from 'prop-types';
 import { Component } from 'react';
 import { injectIntl, defineMessages } from 'react-intl';
-
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
+import { PagerItem, PagerLink } from 'design-react-kit/dist/design-react-kit';
 import { Icon } from '@italia/components/ItaliaTheme';
 
 const messages = defineMessages({
@@ -64,8 +61,6 @@ class PaginationItem extends Component {
   render() {
     const { active, type, children, intl, ellipsisItem } = this.props;
     const disabled = this.props.disabled || type === 'ellipsisItem';
-    const { PagerItem, PagerLink } = this.props.designReactKit;
-
     return (
       <PagerItem disabled={disabled}>
         <PagerLink
@@ -115,7 +110,4 @@ class PaginationItem extends Component {
   }
 }
 
-export default compose(
-  injectIntl,
-  injectLazyLibs(['designReactKit']),
-)(PaginationItem);
+export default injectIntl(PaginationItem);

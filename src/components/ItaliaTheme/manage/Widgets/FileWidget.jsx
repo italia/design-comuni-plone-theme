@@ -5,12 +5,11 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { compose } from 'redux';
+import { Dimmer, Button } from 'design-react-kit/dist/design-react-kit';
 import { readAsDataURL } from 'promise-file-reader';
 import { injectIntl, defineMessages, useIntl } from 'react-intl';
 import loadable from '@loadable/component';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 import { Icon } from '@italia/components/ItaliaTheme';
 
@@ -99,7 +98,6 @@ const FileWidget = (props) => {
     reader.readAsDataURL(files[0]);
   };
 
-  const { Dimmer, Button } = props.designReactKit;
   return (
     <div className="form-group ">
       <label htmlFor={`field-${id}`} className="active">
@@ -214,7 +212,4 @@ FileWidget.defaultProps = {
   value: null,
 };
 
-export default compose(
-  injectIntl,
-  injectLazyLibs(['designReactKit']),
-)(FileWidget);
+export default injectIntl(FileWidget);

@@ -11,8 +11,15 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import cx from 'classnames';
 import { Helmet, flattenToAppURL, langmap } from '@plone/volto/helpers';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
+import {
+  Row,
+  Col,
+  DropdownMenu,
+  DropdownToggle,
+  LinkList,
+  LinkListItem,
+  UncontrolledDropdown,
+} from 'design-react-kit/dist/design-react-kit';
 import { Icon } from '@italia/components/ItaliaTheme';
 import config from '@plone/volto/registry';
 
@@ -40,15 +47,6 @@ const LanguageSelector = (props) => {
   const translations = useSelector(
     (state) => state.content.data?.['@components']?.translations?.items,
   );
-  const {
-    Row,
-    Col,
-    DropdownMenu,
-    DropdownToggle,
-    LinkList,
-    LinkListItem,
-    UncontrolledDropdown,
-  } = props.designReactKit;
 
   return config.settings.isMultilingual ? (
     <UncontrolledDropdown nav tag="div">
@@ -101,4 +99,4 @@ LanguageSelector.defaultProps = {
   onClickAction: () => {},
 };
 
-export default injectLazyLibs(['designReactKit'])(LanguageSelector);
+export default LanguageSelector;

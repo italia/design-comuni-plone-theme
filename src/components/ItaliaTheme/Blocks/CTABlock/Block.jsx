@@ -1,13 +1,12 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useState, useRef } from 'react';
-
+import { Container, Button } from 'design-react-kit/dist/design-react-kit';
 import { defineMessages, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import redraft from 'redraft';
 import cx from 'classnames';
 import { TextEditorWidget } from '@italia/components/ItaliaTheme';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
 import Image from '@plone/volto/components/theme/Image/Image';
 
@@ -36,7 +35,6 @@ const Block = ({
   onSelectBlock,
   onAddBlock,
   index,
-  designReactKit,
 }) => {
   const intl = useIntl();
   const title = data?.cta_title?.blocks[0]?.text;
@@ -47,8 +45,6 @@ const Block = ({
   const [selected, setSelected] = useState('title');
   const titleRef = useRef();
   const contentRef = useRef();
-
-  const { Container, Button } = designReactKit;
 
   return (
     <div
@@ -176,4 +172,4 @@ Block.propTypes = {
   content: PropTypes.any,
 };
 
-export default injectLazyLibs(['designReactKit'])(Block);
+export default Block;

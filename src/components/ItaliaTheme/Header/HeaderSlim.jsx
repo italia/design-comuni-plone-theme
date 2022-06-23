@@ -5,13 +5,17 @@
 
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { useIntl } from 'react-intl';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
 import { HeaderSlimRightZone } from '@italia/components/ItaliaTheme';
+import {
+  Header,
+  HeaderBrand,
+  HeaderContent,
+  HeaderRightZone,
+} from 'design-react-kit/dist/design-react-kit';
+import { useIntl } from 'react-intl';
 import { getSiteProperty } from '@italia/helpers';
 
-const HeaderSlim = ({ designReactKit }) => {
+const HeaderSlim = () => {
   const subsite = useSelector((state) => state.subsite?.data);
   const intl = useIntl();
 
@@ -24,14 +28,6 @@ const HeaderSlim = ({ designReactKit }) => {
     : getSiteProperty('parentSiteTitle', intl.locale);
 
   const target = subsite ? null : '_blank';
-
-  const {
-    Header,
-    HeaderBrand,
-    HeaderContent,
-    HeaderRightZone,
-  } = designReactKit;
-
   return (
     <Header small={false} theme="" type="slim" role="navigation">
       <HeaderContent>
@@ -51,4 +47,4 @@ const HeaderSlim = ({ designReactKit }) => {
   );
 };
 
-export default injectLazyLibs(['designReactKit'])(HeaderSlim);
+export default HeaderSlim;

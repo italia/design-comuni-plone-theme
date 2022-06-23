@@ -13,15 +13,15 @@ import {
   Navigation,
   /* SearchWidget,*/
 } from '@plone/volto/components';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 import {
   HeaderSlim,
   HeaderCenter,
   SubsiteHeader,
 } from '@italia/components/ItaliaTheme';
+import { Headers } from 'design-react-kit/dist/design-react-kit';
 
-const Header = ({ pathname, designReactKit }) => {
+const Header = ({ pathname }) => {
   // const [mini, setMini] = useState(false);
 
   // const handleScroll = () => {
@@ -32,8 +32,6 @@ const Header = ({ pathname, designReactKit }) => {
   //   window.addEventListener('scroll', handleScroll);
   //   return () => window.removeEventListener('scroll', handleScroll);
   // }, []);
-
-  const { Headers } = designReactKit;
 
   return (
     <>
@@ -62,4 +60,4 @@ Header.propTypes = {
   pathname: PropTypes.string.isRequired,
 };
 
-export default injectLazyLibs(['designReactKit'])(Header);
+export default Header;

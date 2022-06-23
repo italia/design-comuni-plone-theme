@@ -1,8 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
+import {
+  Card,
+  CardBody,
+  CardTitle,
+  CardText,
+} from 'design-react-kit/dist/design-react-kit';
 import { Icon } from '@italia/components/ItaliaTheme';
 import {
   richTextHasContent,
@@ -26,9 +30,8 @@ const messages = defineMessages({
   },
 });
 
-const VenueWhere = ({ content, designReactKit }) => {
+const VenueWhere = ({ content }) => {
   const intl = useIntl();
-  const { Card, CardBody, CardTitle, CardText } = designReactKit;
 
   return (content.geolocation?.latitude && content.geolocation?.longitude) ||
     content.street ||
@@ -115,4 +118,4 @@ VenueWhere.propTypes = {
   }).isRequired,
 };
 
-export default injectLazyLibs(['designReactKit'])(VenueWhere);
+export default VenueWhere;

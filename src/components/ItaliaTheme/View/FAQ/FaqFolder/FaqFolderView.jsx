@@ -8,12 +8,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { defineMessages, useIntl } from 'react-intl';
-
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-import { GET_CONTENT } from '@plone/volto/constants/ActionTypes';
-import { useDebouncedEffect } from '@italia/helpers';
-import { resetContent } from '@plone/volto/actions';
-import { flattenToAppURL } from '@plone/volto/helpers';
+import { Container, Spinner } from 'design-react-kit/dist/design-react-kit';
 import {
   PageHeader,
   RelatedItems,
@@ -25,6 +20,11 @@ import {
   FaqFolderSearchBar,
   FaqFolderTree,
 } from '@italia/components/ItaliaTheme/View';
+import { useDebouncedEffect } from '@italia/helpers';
+import { resetContent } from '@plone/volto/actions';
+import { flattenToAppURL } from '@plone/volto/helpers';
+
+import { GET_CONTENT } from '@plone/volto/constants/ActionTypes';
 
 const messages = defineMessages({
   no_results: {
@@ -40,7 +40,7 @@ const messages = defineMessages({
  * @returns {string} Markup of the component.
  */
 
-const FaqFolderView = ({ content, designReactKit }) => {
+const FaqFolderView = ({ content }) => {
   const intl = useIntl();
 
   const FAQ_FOLDER_KEY = 'FAQ_FOLDER';
@@ -84,8 +84,6 @@ const FaqFolderView = ({ content, designReactKit }) => {
     600,
     [searchableText],
   );
-
-  const { Container, Spinner } = designReactKit;
 
   return (
     <>
@@ -140,4 +138,4 @@ const FaqFolderView = ({ content, designReactKit }) => {
   );
 };
 
-export default injectLazyLibs(['designReactKit'])(FaqFolderView);
+export default FaqFolderView;

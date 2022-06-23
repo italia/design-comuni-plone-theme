@@ -3,17 +3,15 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import { UniversalLink } from '@plone/volto/components';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+
+import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 
 const GridGalleryTemplateSkeleton = ({
   isEditMode,
   title,
   linkHref,
   show_block_bg,
-  designReactKit,
 }) => {
-  const { Container, Row, Col } = designReactKit;
-
   return (
     <div className="grid-gallery-template">
       <Container className="px-4">
@@ -48,4 +46,4 @@ GridGalleryTemplateSkeleton.propTypes = {
   title: PropTypes.string,
 };
 
-export default injectLazyLibs(['designReactKit'])(GridGalleryTemplateSkeleton);
+export default GridGalleryTemplateSkeleton;

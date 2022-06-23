@@ -1,5 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {
+  Container,
+  CardReadMore,
+} from 'design-react-kit/dist/design-react-kit';
 
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
@@ -36,8 +40,6 @@ const CardWithSlideUpTextTemplate = (props) => {
     show_description = true,
     hide_dates = false,
   } = props;
-
-  const { Container, CardReadMore } = props.designReactKit;
 
   return (
     <div className="card-slide-text-template">
@@ -101,6 +103,4 @@ CardWithSlideUpTextTemplate.propTypes = {
   linkHrefs: PropTypes.any,
 };
 
-export default injectLazyLibs(['moment', 'designReactKit'])(
-  CardWithSlideUpTextTemplate,
-);
+export default injectLazyLibs(['moment'])(CardWithSlideUpTextTemplate);

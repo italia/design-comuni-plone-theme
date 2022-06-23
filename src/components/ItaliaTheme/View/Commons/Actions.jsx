@@ -1,7 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import {
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  LinkList,
+  LinkListItem,
+  Button,
+} from 'design-react-kit/dist/design-react-kit';
 
 import { toPublicURL } from '@plone/volto/helpers';
 import { Icon } from '@italia/components/ItaliaTheme';
@@ -51,16 +58,6 @@ const Actions = (props) => {
       icon: 'it-mail',
     },
   ];
-
-  const {
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    LinkList,
-    LinkListItem,
-    Button,
-  } = props.designReactKit;
-
   return (
     <UncontrolledDropdown className="d-inline page-actions">
       <DropdownToggle
@@ -123,7 +120,7 @@ const Actions = (props) => {
     </UncontrolledDropdown>
   );
 };
-export default injectLazyLibs(['designReactKit'])(Actions);
+export default Actions;
 
 Actions.propTypes = {
   params: PropTypes.shape({

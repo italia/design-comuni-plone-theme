@@ -2,25 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { Link } from 'react-router-dom';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import {
+  Container,
+  Row,
+  Col,
+  Card,
+  CardBody,
+  CardTitle,
+  CardReadMore,
+} from 'design-react-kit/dist/design-react-kit';
 
 const BandiInEvidenceTemplateSkeleton = ({
   title,
   isEditMode,
   show_block_bg,
   linkHref,
-  designReactKit,
 }) => {
-  const {
-    Container,
-    Row,
-    Col,
-    Card,
-    CardBody,
-    CardTitle,
-    CardReadMore,
-  } = designReactKit;
-
   return (
     <div className={'bandi-in-evidence public-ui'}>
       <div className="full-width">
@@ -73,6 +70,4 @@ BandiInEvidenceTemplateSkeleton.propTypes = {
   title: PropTypes.string,
 };
 
-export default injectLazyLibs(['designReactKit'])(
-  BandiInEvidenceTemplateSkeleton,
-);
+export default BandiInEvidenceTemplateSkeleton;

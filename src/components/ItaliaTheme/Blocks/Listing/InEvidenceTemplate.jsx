@@ -1,7 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl } from 'react-intl';
-
+import {
+  Container,
+  Row,
+  Col,
+  Card,
+  CardBody,
+  CardTitle,
+  CardText,
+  Chip,
+  ChipLabel,
+} from 'design-react-kit/dist/design-react-kit';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
 
@@ -40,18 +50,6 @@ const InEvidenceTemplate = (props) => {
     linkTitle,
     linkHref,
   } = props;
-
-  const {
-    Container,
-    Row,
-    Col,
-    Card,
-    CardBody,
-    CardTitle,
-    CardText,
-    Chip,
-    ChipLabel,
-  } = props.designReactKit;
 
   return (
     <div className="in-evidence">
@@ -179,4 +177,4 @@ InEvidenceTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-export default injectLazyLibs(['moment', 'designReactKit'])(InEvidenceTemplate);
+export default injectLazyLibs(['moment'])(InEvidenceTemplate);

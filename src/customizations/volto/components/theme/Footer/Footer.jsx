@@ -6,8 +6,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useGoogleAnalytics } from '@italia/addons/volto-google-analytics';
-
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import { Container } from 'design-react-kit/dist/design-react-kit';
 
 import {
   FooterMain,
@@ -23,7 +22,7 @@ import config from '@plone/volto/registry';
  * @extends Component
  */
 
-const Footer = ({ intl, designReactKit }) => {
+const Footer = ({ intl }) => {
   useGoogleAnalytics();
   const currentContent = useSelector((state) => state.content?.data);
   let contentType = null;
@@ -32,7 +31,6 @@ const Footer = ({ intl, designReactKit }) => {
   }
   const NoCustomerSatisfactionFor = ['Plone Site', 'LRF', 'Subsite'];
 
-  const { Container } = designReactKit;
   let content = (
     <>
       {contentType != null &&
@@ -56,4 +54,4 @@ const Footer = ({ intl, designReactKit }) => {
   return content;
 };
 
-export default injectLazyLibs(['designReactKit'])(Footer);
+export default Footer;

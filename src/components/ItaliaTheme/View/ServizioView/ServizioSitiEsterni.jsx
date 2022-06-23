@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
+import { Card, CardBody } from 'design-react-kit/dist/design-react-kit';
 import {
   RichText,
   RichTextArticle,
@@ -16,9 +15,8 @@ const messages = defineMessages({
   },
 });
 
-const ServizioSitiEsterni = ({ content, designReactKit }) => {
+const ServizioSitiEsterni = ({ content }) => {
   const intl = useIntl();
-  const { Card, CardBody } = designReactKit;
   return richTextHasContent(content.link_siti_esterni) ? (
     <RichTextArticle
       tag_id="link-esterni"
@@ -46,4 +44,4 @@ ServizioSitiEsterni.propTypes = {
     }),
   }),
 };
-export default injectLazyLibs(['designReactKit'])(ServizioSitiEsterni);
+export default ServizioSitiEsterni;

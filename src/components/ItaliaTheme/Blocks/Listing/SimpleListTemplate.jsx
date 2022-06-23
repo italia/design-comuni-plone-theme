@@ -2,8 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ConditionalLink } from '@plone/volto/components';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
+import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { ListingLinkMore } from '@italia/components/ItaliaTheme';
 
 const SimpleListTemplate = ({
@@ -14,9 +13,7 @@ const SimpleListTemplate = ({
   linkHref,
   show_block_bg,
   show_pointer_list,
-  designReactKit,
 }) => {
-  const { Container, Row, Col } = designReactKit;
   return (
     <div className="simple-list-template">
       <Container className="px-4">
@@ -58,4 +55,4 @@ SimpleListTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-export default injectLazyLibs(['designReactKit'])(SimpleListTemplate);
+export default SimpleListTemplate;

@@ -1,16 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 
 const SmallBlockLinksTemplateSkeleton = ({
   title,
   isEditMode,
   show_block_bg,
-  designReactKit,
 }) => {
-  const { Container, Row, Col } = designReactKit;
-
   return (
     <div className="small-block-links">
       <Container className="px-4">
@@ -43,6 +39,4 @@ SmallBlockLinksTemplateSkeleton.propTypes = {
   title: PropTypes.string,
 };
 
-export default injectLazyLibs(['designReactKit'])(
-  SmallBlockLinksTemplateSkeleton,
-);
+export default SmallBlockLinksTemplateSkeleton;

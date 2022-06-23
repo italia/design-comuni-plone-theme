@@ -6,11 +6,10 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { Nav, NavItem, NavLink } from 'design-react-kit/dist/design-react-kit';
 
-const ParentSiteMenu = ({ designReactKit }) => {
+const ParentSiteMenu = () => {
   const dropdownMenu = useSelector(
     (state) => state.dropdownMenuNavItems?.result,
   );
@@ -36,8 +35,6 @@ const ParentSiteMenu = ({ designReactKit }) => {
     }
   }
 
-  const { Nav, NavItem, NavLink } = designReactKit;
-
   return subsite && menu ? (
     <Nav vertical={false} className="parent-site-menu">
       {menu.items.map((navitem, id) => (
@@ -59,4 +56,4 @@ const ParentSiteMenu = ({ designReactKit }) => {
   ) : null;
 };
 
-export default injectLazyLibs(['designReactKit'])(ParentSiteMenu);
+export default ParentSiteMenu;

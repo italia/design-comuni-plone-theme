@@ -6,6 +6,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
+import { Container, Row } from 'design-react-kit/dist/design-react-kit';
 
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
@@ -61,18 +62,11 @@ const getTwitterSliderSettings = (nItems) => {
  * @class TwitterPostsBody
  * @extends Component
  */
-const Body = ({
-  data,
-  isEditMode,
-  moment: Moment,
-  reactSlick,
-  designReactKit,
-}) => {
+const Body = ({ data, isEditMode, moment: Moment, reactSlick }) => {
   const intl = useIntl();
   const moment = Moment.default;
   moment.locale(intl.locale);
   const Slider = reactSlick.default;
-  const { Container, Row } = designReactKit;
 
   const dispatch = useDispatch();
   const request = useSelector((state) => state.twitterPosts);
@@ -185,4 +179,4 @@ const Body = ({
   ) : null;
 };
 
-export default injectLazyLibs(['moment', 'reactSlick', 'designReactKit'])(Body);
+export default injectLazyLibs(['moment', 'reactSlick'])(Body);

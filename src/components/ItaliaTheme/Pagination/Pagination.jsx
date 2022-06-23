@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
 import createPaginationItems from '@italia/components/ItaliaTheme/Pagination/createPaginationItems';
+import { Pager, PagerList } from 'design-react-kit/dist/design-react-kit';
 import PaginationItem from '@italia/components/ItaliaTheme/Pagination/PaginationItem';
 import { invoke, isNil, map } from 'lodash';
 
 /**
  * A component to render a pagination.
  */
-class Pagination extends Component {
+export default class Pagination extends Component {
   static propTypes = {
     /** A pagination item can have an aria label. */
     'aria-label': PropTypes.string,
@@ -85,8 +84,6 @@ class Pagination extends Component {
       totalPages,
     });
 
-    const { Pager, PagerList } = this.props.designReactKit;
-
     return (
       <Pager className="justify-content-center mt-5">
         <PagerList>
@@ -110,5 +107,3 @@ class Pagination extends Component {
     );
   }
 }
-
-export default injectLazyLibs(['designReactKit'])(Pagination);

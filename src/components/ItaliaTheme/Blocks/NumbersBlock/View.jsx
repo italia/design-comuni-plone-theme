@@ -6,13 +6,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import redraft from 'redraft';
-
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-import { addAppURL, flattenToAppURL } from '@plone/volto/helpers';
-
-import { Icon } from '@italia/components/ItaliaTheme';
-
 import ViewBlock from './Block/ViewBlock';
+import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
+import { Icon } from '@italia/components/ItaliaTheme';
+import { addAppURL, flattenToAppURL } from '@plone/volto/helpers';
 import config from '@plone/volto/registry';
 
 /**
@@ -20,9 +17,8 @@ import config from '@plone/volto/registry';
  * @class View
  * @extends Component
  */
-const NumbersView = ({ data, block, designReactKit }) => {
+const NumbersView = ({ data, block }) => {
   const id = new Date().getTime();
-  const { Container, Row, Col } = designReactKit;
 
   return (
     <div className="block numbersBlock">
@@ -95,4 +91,4 @@ NumbersView.propTypes = {
   data: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
-export default injectLazyLibs(['designReactKit'])(NumbersView);
+export default NumbersView;

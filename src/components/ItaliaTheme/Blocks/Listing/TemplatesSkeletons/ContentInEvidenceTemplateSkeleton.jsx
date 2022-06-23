@@ -1,7 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
+import {
+  Row,
+  Col,
+  Card,
+  CardBody,
+  CardTitle,
+  CardText,
+  Chip,
+  Container,
+} from 'design-react-kit/dist/design-react-kit';
 import cx from 'classnames';
 
 import { CardCategory } from '@italia/components/ItaliaTheme';
@@ -11,19 +19,7 @@ const ContentInEvidenceTemplateSkeleton = ({
   isEditMode,
   show_block_bg,
   linkHref,
-  designReactKit,
 }) => {
-  const {
-    Row,
-    Col,
-    Card,
-    CardBody,
-    CardTitle,
-    CardText,
-    Chip,
-    Container,
-  } = designReactKit;
-
   return (
     <div className="contentInEvidence">
       <Container>
@@ -87,6 +83,4 @@ ContentInEvidenceTemplateSkeleton.propTypes = {
   title: PropTypes.string,
 };
 
-export default injectLazyLibs(['designReactKit'])(
-  ContentInEvidenceTemplateSkeleton,
-);
+export default ContentInEvidenceTemplateSkeleton;

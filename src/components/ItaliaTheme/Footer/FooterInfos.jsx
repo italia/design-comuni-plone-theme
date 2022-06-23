@@ -6,12 +6,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
-import { defineMessages, useIntl } from 'react-intl';
 
+import { defineMessages, useIntl } from 'react-intl';
+import { Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { ConditionalLink } from '@plone/volto/components';
 import { flattenHTMLToAppURL } from '@plone/volto/helpers';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
 import {
   getEditableFooterColumns,
   getItemsByPath,
@@ -28,7 +27,7 @@ const messages = defineMessages({
   },
 });
 
-const FooterInfos = ({ designReactKit }) => {
+const FooterInfos = () => {
   const intl = useIntl();
   const N_COLUMNS = 4;
   const location = useLocation();
@@ -51,7 +50,6 @@ const FooterInfos = ({ designReactKit }) => {
   const colWidth =
     12 / (footerColumns.length < N_COLUMNS ? footerColumns.length : N_COLUMNS);
 
-  const { Row, Col } = designReactKit;
   return (
     <Row tag="div">
       {footerColumns
@@ -92,4 +90,4 @@ const FooterInfos = ({ designReactKit }) => {
   );
 };
 
-export default injectLazyLibs(['designReactKit'])(FooterInfos);
+export default FooterInfos;

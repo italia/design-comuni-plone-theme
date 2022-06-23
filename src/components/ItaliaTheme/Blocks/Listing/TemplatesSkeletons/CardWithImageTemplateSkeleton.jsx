@@ -1,7 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+
+import {
+  Container,
+  Row,
+  Col,
+  Card,
+  CardBody,
+  CardTitle,
+  CardText,
+  Chip,
+} from 'design-react-kit/dist/design-react-kit';
 
 import { CardCategory } from '@italia/components/ItaliaTheme';
 
@@ -13,19 +23,7 @@ const CardWithImageTemplateSkeleton = ({
   always_show_image = false,
   hide_dates = false,
   full_width = true,
-  designReactKit,
 }) => {
-  const {
-    Container,
-    Row,
-    Col,
-    Card,
-    CardBody,
-    CardTitle,
-    CardText,
-    Chip,
-  } = designReactKit;
-
   return (
     <div className="card-with-image-template">
       <Container className="px-4">
@@ -93,6 +91,4 @@ CardWithImageTemplateSkeleton.propTypes = {
   title: PropTypes.string,
 };
 
-export default injectLazyLibs(['designReactKit'])(
-  CardWithImageTemplateSkeleton,
-);
+export default CardWithImageTemplateSkeleton;

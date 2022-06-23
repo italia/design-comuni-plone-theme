@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
-
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
+import {
+  LinkList,
+  LinkListItem,
+  Collapse,
+} from 'design-react-kit/dist/design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
 import { Icon } from '@italia/components/ItaliaTheme';
 
@@ -22,7 +24,7 @@ const messages = defineMessages({
 });
 
 const MAX_VISIBLE_ITEMS = 6;
-const PageHeaderNav = ({ content, title, designReactKit }) => {
+const PageHeaderNav = ({ content, title }) => {
   const intl = useIntl();
   const [isExpanded, setIsExpanded] = useState(false);
   const excluded_types = ['Image', 'File', 'Folder'];
@@ -41,9 +43,6 @@ const PageHeaderNav = ({ content, title, designReactKit }) => {
   const expanded = {
     'aria-expanded': true,
   };
-
-  const { LinkList, LinkListItem, Collapse } = designReactKit;
-
   return visible_links ? (
     <LinkList tag="div">
       {title && (
@@ -100,7 +99,7 @@ const PageHeaderNav = ({ content, title, designReactKit }) => {
     </LinkList>
   ) : null;
 };
-export default injectLazyLibs(['designReactKit'])(PageHeaderNav);
+export default PageHeaderNav;
 
 PageHeaderNav.propTypes = {
   params: PropTypes.shape({

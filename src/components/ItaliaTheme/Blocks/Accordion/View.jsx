@@ -5,24 +5,24 @@
 
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
 import ViewBlock from './Block/ViewBlock';
+import {
+  Container,
+  Card,
+  CardBody,
+} from 'design-react-kit/dist/design-react-kit';
 
 /**
  * View Accordion block class.
  * @class View
  * @extends Component
  */
-const AccordionView = ({ data, block, ...rest }) => {
-  const { Container, Card, CardBody } = rest.designReactKit;
-
+const AccordionView = ({ data, block }) => {
   const [itemOpen, setItemOpen] = useState(-1);
   const toggle = (index) => {
     setItemOpen(index === itemOpen ? -1 : index);
   };
   const id = new Date().getTime();
-
   return (
     <div className="block accordion">
       <div className="public-ui">
@@ -60,4 +60,4 @@ AccordionView.propTypes = {
   data: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
-export default injectLazyLibs(['designReactKit'])(AccordionView);
+export default AccordionView;

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import ItemInEvidence from '@italia/components/ItaliaTheme/View/Commons/RelatedItemInEvidence/ItemInEvidence';
 import Arguments from '@italia/components/ItaliaTheme/View/Commons/RelatedItemInEvidence/Arguments';
+import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 
 /**
  * RelatedItems view component class.
@@ -10,8 +10,7 @@ import Arguments from '@italia/components/ItaliaTheme/View/Commons/RelatedItemIn
  * @params {object} location: object.
  * @returns {string} Markup of the component.
  */
-const RelatedItemInEvidence = ({ content, designReactKit }) => {
-  const { Container, Row, Col } = designReactKit;
+const RelatedItemInEvidence = ({ content }) => {
   return (
     content?.correlato_in_evidenza?.length > 0 && (
       <section id="correlato-in-evidenza">
@@ -34,7 +33,7 @@ const RelatedItemInEvidence = ({ content, designReactKit }) => {
   );
 };
 
-export default injectLazyLibs(['designReactKit'])(RelatedItemInEvidence);
+export default RelatedItemInEvidence;
 
 RelatedItemInEvidence.propTypes = {
   content: PropTypes.shape({

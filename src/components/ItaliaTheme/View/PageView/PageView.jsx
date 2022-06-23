@@ -4,7 +4,6 @@
  */
 import React from 'react';
 import cx from 'classnames';
-
 import {
   SearchSectionForm,
   PageHeaderNav,
@@ -21,11 +20,11 @@ import {
   Actions,
   PageMetadata,
 } from '@italia/components/ItaliaTheme/View';
-
 import { defineMessages, useIntl } from 'react-intl';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import { Container } from 'design-react-kit/dist/design-react-kit';
 import { getLayoutFieldname } from '@plone/volto/helpers';
 import Image from '@plone/volto/components/theme/Image/Image';
+
 import config from '@plone/volto/registry';
 
 /**
@@ -50,7 +49,7 @@ const messages = defineMessages({
   },
 });
 
-const PageView = ({ content, token, location, history, designReactKit }) => {
+const PageView = ({ content, token, location, history }) => {
   const intl = useIntl();
   const layout = content[getLayoutFieldname(content)];
 
@@ -61,8 +60,6 @@ const PageView = ({ content, token, location, history, designReactKit }) => {
       content.mostra_navigazione ||
       content?.tassonomia_argomenti?.length > 0 ||
       content.mostra_bottoni_condivisione;
-
-    const { Container } = designReactKit;
 
     return (
       <>
@@ -151,4 +148,4 @@ const PageView = ({ content, token, location, history, designReactKit }) => {
   }
 };
 
-export default injectLazyLibs(['designReactKit'])(PageView);
+export default PageView;

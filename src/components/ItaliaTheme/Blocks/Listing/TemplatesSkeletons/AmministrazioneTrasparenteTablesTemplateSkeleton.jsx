@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 
 const AmministrazioneTrasparenteTablesTemplate = ({
   isEditMode,
@@ -9,9 +9,7 @@ const AmministrazioneTrasparenteTablesTemplate = ({
   linkTitle,
   linkHref,
   show_block_bg,
-  desigReactKit,
 }) => {
-  const { Container, Row, Col } = desigReactKit;
   return (
     <div
       className={cx('persone-amministrazione-trasparente', {
@@ -64,6 +62,4 @@ AmministrazioneTrasparenteTablesTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-export default injectLazyLibs(['designReactKit'])(
-  AmministrazioneTrasparenteTablesTemplate,
-);
+export default AmministrazioneTrasparenteTablesTemplate;

@@ -1,6 +1,11 @@
 import React, { useState, useReducer, useEffect, createRef } from 'react';
 import { useIntl, defineMessages } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
+import {
+  Container,
+  Button,
+  Spinner,
+} from 'design-react-kit/dist/design-react-kit';
 import cx from 'classnames';
 
 import { getQueryStringResults } from '@plone/volto/actions';
@@ -31,19 +36,11 @@ const messages = defineMessages({
   },
 });
 
-const Body = ({
-  data,
-  inEditMode,
-  path,
-  onChangeBlock,
-  moment: Moment,
-  designReactKit,
-}) => {
+const Body = ({ data, inEditMode, path, onChangeBlock, moment: Moment }) => {
   const intl = useIntl();
   const b_size = 6;
   const moment = Moment.default;
   moment.locale(intl.locale);
-  const { Container, Button, Spinner } = designReactKit;
 
   const [currentPage, setCurrentPage] = useState(1);
   const subsite = useSelector((state) => state.subsite?.data);
@@ -235,4 +232,4 @@ const Body = ({
     </Container>
   ) : null;
 };
-export default injectLazyLibs(['moment', 'designReactKit'])(Body);
+export default injectLazyLibs(['moment'])(Body);

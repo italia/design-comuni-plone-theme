@@ -6,11 +6,11 @@
 
 import React, { useState, useEffect } from 'react';
 
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import { Button } from 'design-react-kit/dist/design-react-kit';
 
 import config from '@plone/volto/registry';
 
-const LoginButton = ({ children, size = 'full', designReactKit }) => {
+const LoginButton = ({ children, size = 'full' }) => {
   let [loginURL, setLoginURL] = useState(
     config.settings.siteProperties?.arLoginUrl,
   );
@@ -25,7 +25,6 @@ const LoginButton = ({ children, size = 'full', designReactKit }) => {
     }
   }, []);
 
-  const { Button } = designReactKit;
   return loginURL ? (
     <Button
       className="btn-icon"
@@ -42,4 +41,4 @@ const LoginButton = ({ children, size = 'full', designReactKit }) => {
   );
 };
 
-export default injectLazyLibs(['designReactKit'])(LoginButton);
+export default LoginButton;

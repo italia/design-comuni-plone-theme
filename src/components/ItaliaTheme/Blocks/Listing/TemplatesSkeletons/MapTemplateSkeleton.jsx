@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+
+import { Container } from 'design-react-kit/dist/design-react-kit';
 
 const MapTemplateSkeleton = ({
   isEditMode,
@@ -11,9 +12,7 @@ const MapTemplateSkeleton = ({
   detail_link_label,
   show_block_bg,
   hide_dates,
-  designReactKit,
 }) => {
-  const { Container } = designReactKit;
   return (
     <div className="map-template">
       <Container className="px-4">
@@ -35,4 +34,4 @@ MapTemplateSkeleton.propTypes = {
   linkHref: PropTypes.any,
 };
 
-export default injectLazyLibs(['designReactKit'])(MapTemplateSkeleton);
+export default MapTemplateSkeleton;

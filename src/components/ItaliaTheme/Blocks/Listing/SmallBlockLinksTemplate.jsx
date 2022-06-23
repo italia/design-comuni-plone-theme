@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 import { ListingLinkMore, ListingImage } from '@italia/components/ItaliaTheme';
 
@@ -13,10 +12,7 @@ const SmallBlockLinksTemplate = ({
   show_block_bg,
   linkTitle,
   linkHref,
-  designReactKit,
 }) => {
-  const { Container, Row, Col } = designReactKit;
-
   return (
     <div className="small-block-links">
       <Container className="px-4">
@@ -66,4 +62,4 @@ SmallBlockLinksTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-export default injectLazyLibs(['designReactKit'])(SmallBlockLinksTemplate);
+export default SmallBlockLinksTemplate;

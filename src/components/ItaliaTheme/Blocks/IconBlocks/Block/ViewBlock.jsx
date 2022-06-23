@@ -8,10 +8,13 @@ import PropTypes from 'prop-types';
 import redraft from 'redraft';
 import { useIntl, defineMessages } from 'react-intl';
 import { UniversalLink } from '@plone/volto/components';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 import { Icon } from '@italia/components/ItaliaTheme';
-
+import {
+  Card,
+  CardBody,
+  CardReadMore,
+} from 'design-react-kit/dist/design-react-kit';
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({
@@ -26,10 +29,8 @@ const messages = defineMessages({
  * @class ViewBlock
  * @extends Component
  */
-const ViewBlock = ({ data, isOpen, toggle, id, index, designReactKit }) => {
+const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
   const intl = useIntl();
-  const { Card, CardBody, CardReadMore } = designReactKit;
-
   return (
     <Card
       className="card-bg rounded subblock-view"
@@ -84,4 +85,4 @@ ViewBlock.propTypes = {
   data: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
-export default injectLazyLibs(['designReactKit'])(ViewBlock);
+export default ViewBlock;

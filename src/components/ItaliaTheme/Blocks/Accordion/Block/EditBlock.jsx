@@ -6,7 +6,6 @@
 import React from 'react';
 import { compose } from 'redux';
 import { injectIntl, defineMessages } from 'react-intl';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 import {
   injectDNDSubblocks,
@@ -14,6 +13,7 @@ import {
   Subblock,
 } from '@italia/addons/volto-subblocks';
 
+import { Button } from 'design-react-kit/dist/design-react-kit';
 import { Icon } from '@italia/components/ItaliaTheme';
 
 import { TextEditorWidget } from '@italia/components/ItaliaTheme';
@@ -71,7 +71,6 @@ class EditBlock extends SubblockEdit {
     if (__SERVER__) {
       return <div />;
     }
-    const { Button } = this.props.designReactKit;
 
     return (
       <Subblock subblock={this} className="subblock-edit">
@@ -167,8 +166,4 @@ class EditBlock extends SubblockEdit {
   }
 }
 
-export default compose(
-  injectIntl,
-  injectDNDSubblocks,
-  injectLazyLibs(['designReactKit']),
-)(EditBlock);
+export default compose(injectIntl, injectDNDSubblocks)(EditBlock);

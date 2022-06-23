@@ -9,6 +9,18 @@ import { useIntl, defineMessages } from 'react-intl';
 import { values } from 'lodash';
 import cx from 'classnames';
 import qs from 'query-string';
+import {
+  Container,
+  Row,
+  Col,
+  Collapse,
+  CardCategory,
+  Button,
+  Toggle,
+  Alert,
+  Spinner,
+} from 'design-react-kit/dist/design-react-kit';
+import { Skiplink, SkiplinkItem } from 'design-react-kit/dist/design-react-kit';
 import { useLocation, useHistory } from 'react-router-dom';
 
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
@@ -144,27 +156,13 @@ const searchOrderDict = {
   },
 };
 
-const Search = ({ moment: Moment, designReactKit }) => {
+const Search = ({ moment: Moment }) => {
   const intl = useIntl();
   const dispatch = useDispatch();
   const location = useLocation();
   const history = useHistory();
   const moment = Moment.default;
   moment.locale(intl.locale);
-
-  const {
-    Container,
-    Row,
-    Col,
-    Collapse,
-    CardCategory,
-    Button,
-    Toggle,
-    Alert,
-    Spinner,
-    Skiplink,
-    SkiplinkItem,
-  } = designReactKit;
 
   const [searchableText, setSearchableText] = useState(
     qs.parse(location.search)?.SearchableText ?? '',
@@ -668,4 +666,4 @@ const Search = ({ moment: Moment, designReactKit }) => {
   );
 };
 
-export default injectLazyLibs(['moment', 'designReactKit'])(Search);
+export default injectLazyLibs(['moment'])(Search);

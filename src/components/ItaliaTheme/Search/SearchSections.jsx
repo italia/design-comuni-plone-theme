@@ -4,8 +4,13 @@
 import React, { useState, useEffect } from 'react';
 import cx from 'classnames';
 import { useIntl, defineMessages } from 'react-intl';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
+import {
+  Col,
+  FormGroup,
+  Label,
+  Collapse,
+} from 'design-react-kit/dist/design-react-kit';
 import { Icon } from '@italia/components/ItaliaTheme';
 import { SearchUtils, Checkbox } from '@italia/components';
 
@@ -16,13 +21,12 @@ const messages = defineMessages({
   },
 });
 
-const SearchSections = ({
+export default function SearchSections({
   setSections,
   sections,
   cols,
   toggleGroups = false,
-  designReactKit,
-}) => {
+}) {
   const [collapse, setCollapse] = useState({});
   const intl = useIntl();
   useEffect(() => {
@@ -44,7 +48,6 @@ const SearchSections = ({
     }));
   };
 
-  const { Col, FormGroup, Label, Collapse } = designReactKit;
   return (
     <>
       {Object.keys(sections).map((groupId) => (
@@ -160,6 +163,4 @@ const SearchSections = ({
       ))}
     </>
   );
-};
-
-export default injectLazyLibs(['designReactKit'])(SearchSections);
+}

@@ -1,9 +1,8 @@
 import { defineMessages, useIntl } from 'react-intl';
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 import { Link } from 'react-router-dom';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { OfficeCard } from '@italia/components/ItaliaTheme/View';
 
@@ -30,10 +29,8 @@ const messages = defineMessages({
  * @params {string} office_field: field where people is related
  * @returns {string} Markup of the component.
  */
-const CuredBy = ({ office, people, title, designReactKit }) => {
+const CuredBy = ({ office, people, title }) => {
   const intl = useIntl();
-  const { Chip, ChipLabel } = designReactKit;
-
   return (
     <article id="a-cura-di" className="it-page-section anchor-offset mt-5">
       <h4 id="header-a-cura-di">
@@ -78,7 +75,7 @@ const CuredBy = ({ office, people, title, designReactKit }) => {
     </article>
   );
 };
-export default injectLazyLibs(['designReactKit'])(CuredBy);
+export default CuredBy;
 
 CuredBy.propTypes = {
   office: PropTypes.shape({

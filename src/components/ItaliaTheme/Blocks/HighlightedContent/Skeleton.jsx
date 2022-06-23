@@ -2,22 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import {
+  Row,
+  Col,
+  Chip,
+  Card,
+  CardBody,
+  CardText,
+  CardTitle,
+  CardReadMore,
+} from 'design-react-kit/dist/design-react-kit';
 
 import { CardCategory } from '@italia/components/ItaliaTheme';
 
-const Skeleton = ({ content, pathname, block, designReactKit }) => {
-  const {
-    Row,
-    Col,
-    Chip,
-    Card,
-    CardBody,
-    CardText,
-    CardTitle,
-    CardReadMore,
-  } = designReactKit;
-
+const Skeleton = ({ content, pathname, block }) => {
   return (
     <div className="skeleton-template">
       <Row>
@@ -62,4 +60,4 @@ Skeleton.propTypes = {
   pathname: PropTypes.string,
 };
 
-export default injectLazyLibs(['designReactKit'])(Skeleton);
+export default Skeleton;

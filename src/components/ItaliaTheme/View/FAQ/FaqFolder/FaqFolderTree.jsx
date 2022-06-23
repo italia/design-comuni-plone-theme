@@ -7,7 +7,11 @@ import React, { useState } from 'react';
 import { Icon } from '@italia/components/ItaliaTheme';
 import { TextOrBlocks } from '@italia/components/ItaliaTheme/View';
 import { UniversalLink } from '@plone/volto/components';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import {
+  Accordion,
+  AccordionHeader,
+  AccordionBody,
+} from 'design-react-kit/dist/design-react-kit';
 
 /**
  * FaqFolderTree view component class.
@@ -16,7 +20,7 @@ import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
  * @returns {string} Markup of the component.
  */
 
-const FaqFolderTree = ({ tree, designReactKit }) => {
+const FaqFolderTree = ({ tree }) => {
   const FaqFolder = ({ item, level = 0 }) => {
     const [itemOpened, setItemOpened] = useState(null);
     let title = (
@@ -29,8 +33,6 @@ const FaqFolderTree = ({ tree, designReactKit }) => {
     const children_folders =
       item.items?.filter((i) => i['@type'] === 'FaqFolder') || [];
     const children_faq = item.items?.filter((i) => i['@type'] === 'Faq') || [];
-
-    const { Accordion, AccordionHeader, AccordionBody } = designReactKit;
 
     return (
       <div className={`faq-folder level-${level}`}>
@@ -105,4 +107,4 @@ const FaqFolderTree = ({ tree, designReactKit }) => {
   );
 };
 
-export default injectLazyLibs(['designReactKit'])(FaqFolderTree);
+export default FaqFolderTree;

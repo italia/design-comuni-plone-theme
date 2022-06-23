@@ -7,13 +7,12 @@ import React from 'react';
 //import { Link } from 'react-router-dom';
 //import { defineMessages, useIntl } from 'react-intl';
 
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+//import { LinkListItem } from 'design-react-kit/dist/design-react-kit';
 
 //const messages = defineMessages({});
 
-const UserLoggedMenu = ({ designReactKit }) => {
+const UserLoggedMenu = () => {
   //const intl = useIntl();
-  //const { Nav, NavItem, NavLink } = designReactKit;
 
   return <></>;
 
@@ -47,4 +46,4 @@ const UserLoggedMenu = ({ designReactKit }) => {
   */
 };
 
-export default injectLazyLibs(['designReactKit'])(UserLoggedMenu);
+export default UserLoggedMenu;

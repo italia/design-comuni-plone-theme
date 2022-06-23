@@ -3,7 +3,12 @@
  */
 import React, { useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import {
+  Input,
+  FormGroup,
+  Label,
+  Collapse,
+} from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
   showAll: {
@@ -28,17 +33,14 @@ const messages = defineMessages({
   },
 });
 
-const SearchTopics = ({
+export default function SearchTopics({
   setTopics,
   topics,
   collapsable = false,
-  designReactKit,
-}) => {
+}) {
   const intl = useIntl();
   // const [topics, setTopics] = useState({});
   const [collapse, setCollapse] = useState(true);
-
-  const { Input, FormGroup, Label, Collapse } = designReactKit;
 
   // useEffect(() => {
   //   if (searchFilters?.length > 0) {
@@ -146,6 +148,4 @@ const SearchTopics = ({
       )}
     </>
   );
-};
-
-export default injectLazyLibs(['designReactKit'])(SearchTopics);
+}

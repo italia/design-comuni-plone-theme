@@ -8,8 +8,7 @@ import PropTypes from 'prop-types';
 import redraft from 'redraft';
 
 import { Icon } from '@italia/components/ItaliaTheme';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
+import { Card, CardBody } from 'design-react-kit/dist/design-react-kit';
 import config from '@plone/volto/registry';
 import { checkRedraftHasContent } from '@italia/helpers';
 
@@ -18,8 +17,7 @@ import { checkRedraftHasContent } from '@italia/helpers';
  * @class ViewBlock
  * @extends Component
  */
-const ViewBlock = ({ data, isOpen, toggle, id, index, designReactKit }) => {
-  const { Card, CardBody } = designReactKit;
+const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
   return (
     <Card
       className="card-bg rounded subblock-view"
@@ -90,4 +88,4 @@ ViewBlock.propTypes = {
   data: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
-export default injectLazyLibs(['designReactKit'])(ViewBlock);
+export default ViewBlock;

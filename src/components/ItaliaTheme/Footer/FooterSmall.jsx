@@ -5,17 +5,14 @@
 
 import React, { useState, useEffect } from 'react';
 import cx from 'classnames';
+import { UniversalLink } from '@plone/volto/components';
 import { defineMessages, useIntl } from 'react-intl';
-
+import { Container } from 'design-react-kit/dist/design-react-kit';
+import { getSiteProperty } from '@italia/helpers';
 import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-
-import { UniversalLink } from '@plone/volto/components';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-import { flattenToAppURL } from '@plone/volto/helpers';
-
-import { getSiteProperty } from '@italia/helpers';
 import { getSubFooter, getItemsByPath } from '@italia/addons/volto-subfooter';
+import { flattenToAppURL } from '@plone/volto/helpers';
 import { displayBanner } from '@italia/addons/volto-gdpr-privacy';
 
 const messages = defineMessages({
@@ -34,7 +31,7 @@ const messages = defineMessages({
  * @class FooterSmall
  * @extends Component
  */
-const FooterSmall = ({ designReactKit }) => {
+const FooterSmall = () => {
   const intl = useIntl();
   const pathname = useLocation().pathname;
   const dispatch = useDispatch();
@@ -54,8 +51,6 @@ const FooterSmall = ({ designReactKit }) => {
     let _links = getSiteProperty('smallFooterLinks', intl.locale) ?? [];
     setLinks(_links);
   }, [intl.locale]);
-
-  const { Container } = designReactKit;
 
   return subFooterItems?.length > 0 || links.length > 0 || true ? (
     <div className="it-footer-small-prints clearfix">
@@ -105,4 +100,4 @@ const FooterSmall = ({ designReactKit }) => {
   ) : null;
 };
 
-export default injectLazyLibs(['designReactKit'])(FooterSmall);
+export default FooterSmall;
