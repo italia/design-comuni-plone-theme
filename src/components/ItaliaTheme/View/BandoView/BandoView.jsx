@@ -109,12 +109,10 @@ BandoView.propTypes = {
     text: PropTypes.shape({
       data: PropTypes.string,
     }),
-    ufficio_responsabile: PropTypes.arrayOf(
-      PropTypes.shape({
-        title: PropTypes.string,
-        description: PropTypes.string,
-      }),
-    ),
+    ufficio_responsabile: PropTypes.shape({
+      title: PropTypes.string,
+      description: PropTypes.string,
+    }),
     area_responsabile: PropTypes.arrayOf(
       PropTypes.shape({
         title: PropTypes.string,

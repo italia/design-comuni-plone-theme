@@ -2,7 +2,7 @@
 Queto file contiene le estensioni per le funzioni presenti in ListingHelper.js, in modo da poter definire comportamenti diversi nel proprio progetto.
 Sovrascrivere questo file nel progetto figlio ed implementare le proprie estensioni.*/
 
-const getCalendarDate_extend = (item, moment) => {
+const getCalendarDate_extend = (item) => {
   let date = null;
   return date;
 };

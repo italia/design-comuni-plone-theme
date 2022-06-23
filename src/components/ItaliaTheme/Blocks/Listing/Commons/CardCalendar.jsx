@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import { useIntl, defineMessages } from 'react-intl';
-
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
 import { viewDate } from '@italia/helpers';
 
 const messages = defineMessages({
@@ -17,13 +15,11 @@ const messages = defineMessages({
   },
 });
 
-export const CardCalendar = ({ start, end, moment: Moment }) => {
+export const CardCalendar = ({ start, end }) => {
   const intl = useIntl();
-  const moment = Moment.default;
-  moment.locale(intl.locale);
 
-  const _start = viewDate(intl.locale, moment, start);
-  const _end = viewDate(intl.locale, moment, end);
+  const _start = viewDate(intl.locale, start);
+  const _end = viewDate(intl.locale, end);
 
   if (_start.isSame(_end, 'day')) {
     return (
@@ -59,4 +55,4 @@ CardCalendar.propTypes = {
   end: PropTypes.string.isRequired,
 };
 
-export default injectLazyLibs(['moment'])(CardCalendar);
+export default CardCalendar;

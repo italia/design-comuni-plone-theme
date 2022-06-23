@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useIntl } from 'react-intl';
 import {
   Container,
   Row,
@@ -12,11 +11,8 @@ import {
   Chip,
 } from 'design-react-kit/dist/design-react-kit';
 import cx from 'classnames';
-
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
 import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
 import {
   ListingCategory,
@@ -34,11 +30,7 @@ const ContentInEvidenceTemplate = ({
   show_block_bg,
   linkTitle,
   linkHref,
-  moment: Moment,
 }) => {
-  const intl = useIntl();
-  const moment = Moment.default;
-  moment.locale(intl.locale);
   return (
     <div className="contentInEvidenceTemplate">
       <Container
@@ -55,7 +47,7 @@ const ContentInEvidenceTemplate = ({
         )}
 
         {items.map((item, index) => {
-          const date = getCalendarDate(item, moment);
+          const date = getCalendarDate(item);
           const eventRecurrenceMore = getEventRecurrenceMore(item, isEditMode);
           const listingText = <ListingText item={item} />;
           const image = ListingImage({ item, className: 'item-image' });
@@ -125,4 +117,4 @@ ContentInEvidenceTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-export default injectLazyLibs(['moment'])(ContentInEvidenceTemplate);
+export default ContentInEvidenceTemplate;

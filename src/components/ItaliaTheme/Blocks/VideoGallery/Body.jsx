@@ -5,9 +5,9 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container } from 'design-react-kit/dist/design-react-kit';
+import Slider from 'react-slick';
 
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import { Container } from 'design-react-kit/dist/design-react-kit';
 
 import { Icon } from '@italia/components/ItaliaTheme';
 
@@ -16,9 +16,7 @@ import { Icon } from '@italia/components/ItaliaTheme';
  * @class Body
  * @extends Component
  */
-const Body = ({ data, children, nItems = 0, reactSlick }) => {
-  const Slider = reactSlick.default;
-
+const Body = ({ data, children, nItems = 0 }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -93,4 +91,4 @@ Body.propTypes = {
   data: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
-export default injectLazyLibs(['reactSlick'])(Body);
+export default Body;

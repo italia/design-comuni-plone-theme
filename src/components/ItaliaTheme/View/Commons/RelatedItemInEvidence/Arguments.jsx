@@ -48,6 +48,6 @@ Arguments.propTypes = {
     '@id': PropTypes.string,
     '@type': PropTypes.string,
     title: PropTypes.string,
-    correlato_in_evidenza: PropTypes.arrayOf(PropTypes.object),
+    correlato_in_evidenza: PropTypes.object,
   }),
 };

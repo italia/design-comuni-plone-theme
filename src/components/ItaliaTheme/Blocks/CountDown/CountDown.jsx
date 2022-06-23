@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { viewDate } from '@italia/helpers';
 
 const messages = defineMessages({
@@ -26,8 +25,8 @@ const messages = defineMessages({
   },
 });
 
-const calculateTimeLeft = (end, intl, moment) => {
-  const endDate = viewDate(intl.locale, moment, end);
+const calculateTimeLeft = (end, intl) => {
+  const endDate = viewDate(intl.locale, end);
   let difference = +endDate - +new Date();
 
   let timeLeft = {};
@@ -61,19 +60,14 @@ const CountDown = ({
   showHours = true,
   showMinutes = true,
   showSeconds = true,
-  moment: Moment,
 }) => {
   const intl = useIntl();
-  const moment = Moment.default;
-  moment.locale(intl.locale);
 
-  const [timeLeft, setTimeLeft] = useState(
-    calculateTimeLeft(end, intl, moment),
-  );
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(end, intl));
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setTimeLeft(calculateTimeLeft(end, intl, moment));
+      setTimeLeft(calculateTimeLeft(end, intl));
     }, 1000);
     return () => clearTimeout(timer);
   });
@@ -115,11 +109,10 @@ const CountDown = ({
       ) : (
         <div className="expired">
           {intl.formatMessage(messages.expired)}{' '}
-          {viewDate(intl.locale, moment, end, 'DD/MM/YYYY HH:mm')}
+          {viewDate(intl.locale, end, 'DD/MM/YYYY HH:mm')}
         </div>
       )}
     </div>
   );
 };
-
-export default injectLazyLibs(['moment'])(CountDown);
+export default CountDown;

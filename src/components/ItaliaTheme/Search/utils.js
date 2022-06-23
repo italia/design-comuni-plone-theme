@@ -1,5 +1,5 @@
 import mapValues from 'lodash/mapValues';
-
+import moment from 'moment';
 import qs from 'query-string';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import config from '@plone/volto/registry';
@@ -62,7 +62,6 @@ const setGroupChecked = (groupId, checked, setSections) => {
 
 const parseFetchedSections = (fetchedSections, location, subsite) => {
   const qsSections = qs.parse(location?.search ?? '')['path.query'] ?? [];
-
   const pathname = location?.pathname?.length ? location.pathname : '/';
 
   const sections = getItemsByPath(fetchedSections, pathname, !subsite);
@@ -173,7 +172,6 @@ const getSearchParamsURL = (
   subsite,
   currentLang,
   getObject = false,
-  moment,
 ) => {
   let baseUrl = subsite
     ? flattenToAppURL(subsite['@id'])

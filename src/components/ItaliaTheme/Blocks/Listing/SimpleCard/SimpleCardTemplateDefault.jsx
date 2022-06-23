@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
+import moment from 'moment';
+
+import { UniversalLink } from '@plone/volto/components';
 import cx from 'classnames';
 import {
   Card,
@@ -12,12 +15,9 @@ import {
   Row,
   Col,
 } from 'design-react-kit/dist/design-react-kit';
-
-import { UniversalLink } from '@plone/volto/components';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
 import { CardCategory } from '@italia/components/ItaliaTheme';
 import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
+
 import {
   getItemIcon,
   ListingCategory,
@@ -32,7 +32,6 @@ const messages = defineMessages({
 
 const SimpleCardTemplateDefault = (props) => {
   const intl = useIntl();
-  const moment = props.moment.default;
   moment.locale(intl.locale);
 
   const {
@@ -156,7 +155,7 @@ const SimpleCardTemplateDefault = (props) => {
         {items.map((item, index) => {
           const icon = show_icon ? getItemIcon(item) : null;
           const itemTitle = item.title || item.id;
-          const date = hide_dates ? null : getCalendarDate(item, moment);
+          const date = hide_dates ? null : getCalendarDate(item);
           const eventRecurrenceMore = hide_dates
             ? null
             : getEventRecurrenceMore(item, isEditMode);
@@ -230,4 +229,4 @@ SimpleCardTemplateDefault.propTypes = {
   linkHref: PropTypes.any,
 };
 
-export default injectLazyLibs(['moment'])(SimpleCardTemplateDefault);
+export default SimpleCardTemplateDefault;

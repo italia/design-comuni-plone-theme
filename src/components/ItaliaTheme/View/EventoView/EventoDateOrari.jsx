@@ -29,6 +29,7 @@ const EventoDateOrari = ({ content }) => {
       title={intl.formatMessage(messages.date_e_orari)}
     >
       <Dates content={content} />
+
       <RichText
         title={intl.formatMessage(messages.orari)}
         content={content?.orari}

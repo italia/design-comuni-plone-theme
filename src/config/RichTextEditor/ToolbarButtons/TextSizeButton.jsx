@@ -1,4 +1,5 @@
 import React from 'react';
+import createInlineStyleButton from 'draft-js-buttons/lib/utils/createInlineStyleButton';
 import Icon from '@plone/volto/components/theme/Icon/Icon';
 
 // import DraftJsDropdownButton from '@italia/config/RichTextEditor/ToolbarButtons/DraftJsDropdownButton';
@@ -7,8 +8,6 @@ import formatSVG from '@plone/volto/icons/format.svg';
 
 /*
 const TextSizeButton = (props) => {
-  const createInlineStyleButton = props.draftJsCreateInlineStyleButton.default;
-
   const options = [
     {
       block_type: 'text-larger',
@@ -26,9 +25,9 @@ const TextSizeButton = (props) => {
     },
   ];
 
-  return (_props)=>(
+  return (
     <DraftJsDropdownButton
-      {..._props}
+      {...props}
       optionsList={options}
       content={<Icon name={formatSVG} size="1em" />}
     />
@@ -36,13 +35,11 @@ const TextSizeButton = (props) => {
 };
 */
 
-const TextSizeButton = (props) => {
-  const createInlineStyleButton = props.draftJsCreateInlineStyleButton.default;
-  return createInlineStyleButton({
-    style: 'TEXT_LARGER',
-    children: (
-      <Icon name={formatSVG} size="1.25em" title="Dimensione del testo" />
-    ),
-  });
-};
-export default TextSizeButton;
+const TextSizeButton = createInlineStyleButton({
+  style: 'TEXT_LARGER',
+  children: (
+    <Icon name={formatSVG} size="1.25em" title="Dimensione del testo" />
+  ),
+});
+
+export default React.memo(TextSizeButton);

@@ -12,7 +12,6 @@ import {
   Row,
   Col,
 } from 'design-react-kit/dist/design-react-kit';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
 import { getViewDate } from '@italia/components/ItaliaTheme/Blocks/RssBlock/utils';
@@ -29,16 +28,8 @@ const messages = defineMessages({
   },
 });
 
-const CardWithoutImageRssTemplate = ({
-  items = [],
-  isEditMode,
-  data = {},
-  moment: Moment,
-}) => {
+const CardWithoutImageRssTemplate = ({ items = [], isEditMode, data = {} }) => {
   const intl = useIntl();
-
-  const moment = Moment.default;
-  moment.locale(intl.locale);
 
   return (
     <div className={cx('', { 'public-ui': isEditMode })}>
@@ -67,7 +58,7 @@ const CardWithoutImageRssTemplate = ({
                       )}
                       {(item.pubDate || item.date) && (
                         <span>
-                          {getViewDate(item.pubDate || item.date, moment)}
+                          {getViewDate(item.pubDate || item.date, intl.locale)}
                         </span>
                       )}
                     </div>
@@ -114,4 +105,5 @@ const CardWithoutImageRssTemplate = ({
 CardWithoutImageRssTemplate.propTypes = {
   items: PropTypes.arrayOf(PropTypes.object),
 };
-export default injectLazyLibs(['moment'])(CardWithoutImageRssTemplate);
+
+export default CardWithoutImageRssTemplate;

@@ -2,7 +2,6 @@ import React from 'react';
 import { useIntl } from 'react-intl';
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import PropTypes from 'prop-types';
 import { viewDate } from '@italia/helpers';
 /**
@@ -12,20 +11,9 @@ import { viewDate } from '@italia/helpers';
  * @params {object} news: object.
  * @returns {string} Markup of the component.
  */
-const NewsCard = ({
-  title,
-  typology,
-  effective,
-  description,
-  id,
-  moment: Moment,
-}) => {
-  const intl = useIntl();
-  const moment = Moment.default;
-  moment.locale(intl.locale);
-
+const NewsCard = ({ title, typology, effective, description, id }) => {
   let date = effective ? new Date(effective) : false;
-
+  const intl = useIntl();
   return (
     <div className="relatedNews card card-teaser shadow p-4 mt-3 rounded">
       <div className="card-body">
@@ -34,7 +22,7 @@ const NewsCard = ({
           {typology}
           {date ? (
             <span className="data">
-              {viewDate(intl.locale, moment, date, 'DD MMM Y')}
+              {viewDate(intl.locale, date, 'DD MMM Y')}
             </span>
           ) : null}
         </div>
@@ -47,7 +35,7 @@ const NewsCard = ({
   );
 };
 
-export default injectLazyLibs(['moment'])(NewsCard);
+export default NewsCard;
 
 NewsCard.propTypes = {
   title: PropTypes.string,

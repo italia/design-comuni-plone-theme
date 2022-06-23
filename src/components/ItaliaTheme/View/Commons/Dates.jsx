@@ -1,5 +1,6 @@
 import { defineMessages, useIntl } from 'react-intl';
 import React from 'react';
+import { rrulestr } from 'rrule';
 import { rrulei18n } from '@plone/volto/components/manage/Widgets/RecurrenceWidget/Utils';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import {
@@ -35,19 +36,17 @@ const messages = defineMessages({
  * @params {object} Dates: object.
  * @returns {string} Markup of the component.
  */
-const Dates = ({ content, show_image, moment: Moment, rrule }) => {
+const Dates = ({ content, show_image, moment }) => {
   const intl = useIntl();
 
-  const moment = Moment.default;
-  moment.locale(intl.locale);
-
-  const rrulestr = rrule.rrulestr;
+  const Moment = moment.default;
+  Moment.locale(intl.locale);
 
   let rruleSet = null;
   let recurrenceText = null;
 
   if (content.recurrence) {
-    const RRULE_LANGUAGE = rrulei18n(intl, moment);
+    const RRULE_LANGUAGE = rrulei18n(intl, Moment);
     rruleSet = rrulestr(content.recurrence, {
       compatible: true, //If set to True, the parser will operate in RFC-compatible mode. Right now it means that unfold will be turned on, and if a DTSTART is found, it will be considered the first recurrence instance, as documented in the RFC.
       forceset: true,
@@ -61,8 +60,8 @@ const Dates = ({ content, show_image, moment: Moment, rrule }) => {
     );
   }
 
-  const start = viewDate(intl.locale, moment, content.start);
-  const end = viewDate(intl.locale, moment, content.end);
+  const start = viewDate(intl.locale, content.start);
+  const end = viewDate(intl.locale, content.end);
 
   return content ? (
     <>
@@ -124,12 +123,7 @@ const Dates = ({ content, show_image, moment: Moment, rrule }) => {
           <h5>{intl.formatMessage(messages.additional_dates)}</h5>
           {rruleSet.rdates().map((additionalDate) => (
             <div className="text-serif">
-              {viewDate(
-                intl.locale,
-                moment,
-                additionalDate,
-                'dddd DD MMMM YYYY',
-              )}
+              {viewDate(intl.locale, additionalDate, 'dddd DD MMMM YYYY')}
             </div>
           ))}
         </div>
@@ -139,7 +133,7 @@ const Dates = ({ content, show_image, moment: Moment, rrule }) => {
           <h5>{intl.formatMessage(messages.excluded_dates)}</h5>
           {rruleSet.exdates().map((exDate) => (
             <div className="text-serif">
-              {viewDate(intl.locale, moment, exDate, 'dddd DD MMMM YYYY')}
+              {viewDate(intl.locale, exDate, 'dddd DD MMMM YYYY')}
             </div>
           ))}
         </div>
@@ -148,7 +142,7 @@ const Dates = ({ content, show_image, moment: Moment, rrule }) => {
   ) : null;
 };
 
-export default injectLazyLibs(['moment', 'rrule'])(Dates);
+export default injectLazyLibs(['moment'])(Dates);
 
 Dates.propTypes = {
   content: PropTypes.object.isRequired,

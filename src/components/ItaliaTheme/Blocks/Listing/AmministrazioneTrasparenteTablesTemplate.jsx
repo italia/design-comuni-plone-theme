@@ -4,9 +4,8 @@ import cx from 'classnames';
 import { useIntl } from 'react-intl';
 import { useLocation } from 'react-router-dom';
 import { flatMapDeep } from 'lodash';
+import moment from 'moment';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
-
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
 import { flattenHTMLToAppURL } from '@plone/volto/helpers';
 import { getTableRowData } from '@italia/helpers';
@@ -19,12 +18,9 @@ const AmministrazioneTrasparenteTablesTemplate = ({
   linkTitle,
   linkHref,
   show_block_bg,
-  moment: Moment,
 }) => {
   const intl = useIntl();
-  const moment = Moment.default;
   moment.locale(intl.locale);
-
   const location = useLocation();
 
   const getColumn = (item) => {
@@ -105,6 +101,4 @@ AmministrazioneTrasparenteTablesTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-export default injectLazyLibs(['moment'])(
-  AmministrazioneTrasparenteTablesTemplate,
-);
+export default AmministrazioneTrasparenteTablesTemplate;

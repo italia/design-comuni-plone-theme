@@ -8,7 +8,7 @@ import { compose } from 'redux';
 import { injectIntl, defineMessages } from 'react-intl';
 
 import {
-  injectDNDSubblocks,
+  DNDSubblocks,
   SubblockEdit,
   Subblock,
 } from '@italia/addons/volto-subblocks';
@@ -166,4 +166,4 @@ class EditBlock extends SubblockEdit {
   }
 }
 
-export default compose(injectIntl, injectDNDSubblocks)(EditBlock);
+export default React.memo(compose(injectIntl, ...DNDSubblocks)(EditBlock));

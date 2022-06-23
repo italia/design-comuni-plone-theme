@@ -53,7 +53,7 @@ const BandoText = ({ content }) => {
         <>
           <h5>{intl.formatMessage(messages.destinatari)}</h5>
           {content.destinatari.map((item, i) => (
-            <p key={'destinatari-' + i}>{item.title}</p>
+            <p>{item.title}</p>
           ))}
         </>
       )}
@@ -62,7 +62,7 @@ const BandoText = ({ content }) => {
         <>
           <h5>{intl.formatMessage(messages.ente)}</h5>
           {content.ente_bando.map((item, i) => (
-            <span key={'ente_' + i}>
+            <span>
               {item}
               {i < content.ente_bando.length - 1 ? ', ' : ''}
             </span>

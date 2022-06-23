@@ -4,10 +4,10 @@ import { defineMessages, useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 
+import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import Image from '@plone/volto/components/theme/Image/Image';
@@ -41,9 +41,7 @@ const Gallery = ({
   title_type = 'h4',
   title_video,
   className,
-  reactSlick,
 }) => {
-  const Slider = reactSlick.default;
   const getSettings = (nItems, slideToScroll) => {
     return {
       dots: true,
@@ -210,7 +208,7 @@ const Gallery = ({
     </>
   );
 };
-export default injectLazyLibs(['reactSlick'])(Gallery);
+export default Gallery;
 
 Gallery.propTypes = {
   content: PropTypes.object,

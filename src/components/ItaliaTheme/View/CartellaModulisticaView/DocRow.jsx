@@ -38,7 +38,7 @@ const Downloads = ({ item, titleDoc }) => {
       className="modulistica-link"
     >
       <div className="title">{item.title}</div>
-      <FontAwesomeIcon
+      <Icon
         icon={['fas', 'link']}
         alt={item.title}
         role="presentation"

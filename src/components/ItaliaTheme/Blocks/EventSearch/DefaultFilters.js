@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import moment from 'moment';
 import { useIntl, defineMessages } from 'react-intl';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import {
@@ -30,7 +31,7 @@ const messages = defineMessages({
   },
 });
 
-const DefaultFilters = (moment) => {
+const DefaultFilters = () => {
   const intl = useIntl();
   moment.locale(intl.locale);
   const subsite = useSelector((state) => state.subsite?.data);

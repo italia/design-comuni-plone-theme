@@ -1,8 +1,7 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
+import moment from 'moment';
 import PropTypes from 'prop-types';
-
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 /**
  * PageHeaderPersona view component class.
@@ -22,9 +21,8 @@ const messages = defineMessages({
   },
 });
 
-const PageHeaderPersona = ({ content, moment: Moment }) => {
+const PageHeaderPersona = ({ content }) => {
   const intl = useIntl();
-  const moment = Moment.default;
   moment.locale(intl.locale);
 
   return content['@type'] === 'Persona' ? (
@@ -45,8 +43,7 @@ const PageHeaderPersona = ({ content, moment: Moment }) => {
     </>
   ) : null;
 };
-
-export default injectLazyLibs(['moment'])(PageHeaderPersona);
+export default PageHeaderPersona;
 
 PageHeaderPersona.propTypes = {
   params: PropTypes.shape({
