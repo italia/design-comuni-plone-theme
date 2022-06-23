@@ -1,20 +1,3 @@
-## [6.0.0-alpha.1](https://github.com/RedTurtle/design-volto-theme/compare/v6.0.0-alpha.0...v6.0.0-alpha.1) (2022-06-22)
-
-
-### Features
-
-* added lazy loading of design-react-kit ([51142f5](https://github.com/RedTurtle/design-volto-theme/commit/51142f5d8744dc85072ef7cac83266d1da0e8285))
-
-
-### Bug Fixes
-
-* fix designReactKit import ([d967a83](https://github.com/RedTurtle/design-volto-theme/commit/d967a8387127822c0507776c5331a1e251a1e8c3))
-
-
-### Maintenance
-
-* updated dependencies ([678a39b](https://github.com/RedTurtle/design-volto-theme/commit/678a39b074fffbf4839186fff19daf1af636edb4))
-
 ## [6.0.0-alpha.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.26.3...v6.0.0-alpha.0) (2022-06-22)
 
 
