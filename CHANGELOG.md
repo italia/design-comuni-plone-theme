@@ -1,3 +1,10 @@
+### [5.26.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.26.3...v5.26.4) (2022-06-28)
+
+
+### Bug Fixes
+
+* fixed fontAwesome icon in Modulistica view ([14dee4e](https://github.com/RedTurtle/design-volto-theme/commit/14dee4e944c63d996551c59cb653fe7c30c71d93))
+
 ### [5.26.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.26.2...v5.26.3) (2022-06-22)
 
 
