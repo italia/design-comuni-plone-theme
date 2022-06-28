@@ -58,9 +58,10 @@ const MenuSecondary = ({ pathname }) => {
                 tag={UniversalLink}
                 active={isMenuActive(url)}
               >
-                <span className={item.inEvidence ? 'font-weight-bold' : ''}>
-                  {item.title}
-                </span>
+                <span
+                  className={item.inEvidence ? 'font-weight-bold' : ''}
+                  dangerouslySetInnerHTML={{ __html: item.title }}
+                ></span>
                 {isMenuActive(url) && (
                   <span className="sr-only">
                     {intl.formatMessage(messages.menu_selected)}
