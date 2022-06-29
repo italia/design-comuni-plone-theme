@@ -41,4 +41,5 @@ class Body extends SubblockEdit {
     );
   }
 }
+
 export default React.memo(compose(injectIntl, ...DNDSubblocks)(Body));
