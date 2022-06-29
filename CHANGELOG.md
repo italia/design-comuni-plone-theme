@@ -1,3 +1,17 @@
+## [5.27.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.26.4...v5.27.0) (2022-06-29)
+
+
+### Features
+
+* added innerHtml in secondary menu items ([1d87f2c](https://github.com/RedTurtle/design-volto-theme/commit/1d87f2c98e4b2792507155f3ff5f149bf092be41))
+
+
+### Bug Fixes
+
+* fix dependencies ([f8c7624](https://github.com/RedTurtle/design-volto-theme/commit/f8c7624bed39640d3b10ee71081083624ccf3424))
+* handle anchor url ([8fcf79a](https://github.com/RedTurtle/design-volto-theme/commit/8fcf79aef2a39f44f8ed415a59cfca61fd092df3))
+* padding block html ([172a55e](https://github.com/RedTurtle/design-volto-theme/commit/172a55e9a98c5b4bf0e6374330ade9278f3922ed))
+
 ### [5.26.4](https://github.com/RedTurtle/design-volto-theme/compare/v5.26.3...v5.26.4) (2022-06-28)
 
 
