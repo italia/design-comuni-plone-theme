@@ -19,6 +19,8 @@ import CardWithImageRssTemplateSkeleton from '@italia/components/ItaliaTheme/Blo
 import CardWithoutImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
 import CardWithoutImageRssTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton';
 
+import HandleAnchor from '@italia/components/ItaliaTheme/HandleAnchor/HandleAnchor';
+
 // CTs icons
 import faFileInvoiceSVG from '@italia/icons/file-invoice.svg';
 import faFolderOpenSVG from '@italia/icons/folder-open.svg';
@@ -192,6 +194,13 @@ export default function applyConfig(voltoConfig) {
       splitMegamenuColumns: true, //se impostato a false, non spezza le colonne con intestazioni nel megamenu
       footerNavigationDepth: 2, //valori possibili: [1,2]. Se impostato ad 1 non verranno mostrati nel footer i link agli elementi contenuti nelle sezioni di primo livello.
     },
+    appExtras: [
+      ...config.settings.appExtras,
+      {
+        match: '',
+        component: HandleAnchor,
+      },
+    ],
     'volto-blocks-widget': {
       allowedBlocks: [
         'text',
