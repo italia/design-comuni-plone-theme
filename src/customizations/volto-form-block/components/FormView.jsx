@@ -1,3 +1,7 @@
+/*Customizatinos:
+- usati i componenti di design-react-kit
+- disabilitato il captcha se nelle siteProperties del config è stato disabilitato.
+*/
 import React, { useCallback, useRef } from 'react';
 import { useIntl, defineMessages } from 'react-intl';
 import {
@@ -70,6 +74,9 @@ const FormView = ({
     : process.env.RAZZLE_RECAPTCHA_KEY
     ? 'GoogleReCaptcha'
     : null;
+
+  const enableCaptcha =
+    config.settings.siteProperties.enableVoltoFormBlockCaptcha;
 
   let validToken = useRef(null);
   const onVerifyCaptcha = useCallback(
@@ -199,11 +206,11 @@ const FormView = ({
                     );
                   })}
 
-                  {captcha === 'GoogleReCaptcha' && (
+                  {enableCaptcha && captcha === 'GoogleReCaptcha' && (
                     <GoogleReCaptchaWidget onVerify={onVerifyCaptcha} />
                   )}
 
-                  {captcha === 'HCaptcha' && (
+                  {enableCaptcha && captcha === 'HCaptcha' && (
                     <HCaptchaWidget
                       sitekey={process.env.RAZZLE_HCAPTCHA_KEY}
                       onVerify={onVerifyCaptcha}
@@ -230,10 +237,11 @@ const FormView = ({
                         color="primary"
                         type="submit"
                         disabled={
-                          (!validToken?.current &&
+                          enableCaptcha &&
+                          ((!validToken?.current &&
                             (!!process.env.RAZZLE_RECAPTCHA_KEY ||
                               !!process.env.RAZZLE_HCAPTCHA_KEY)) ||
-                          formState.loading
+                            formState.loading)
                         }
                       >
                         {data.submit_label ||
