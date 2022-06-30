@@ -1,3 +1,10 @@
+## [5.28.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.27.0...v5.28.0) (2022-06-30)
+
+
+### Features
+
+* added enableVoltoFormBlockCaptcha siteProperty to disable captcha in form-block ([7e38083](https://github.com/RedTurtle/design-volto-theme/commit/7e38083292bc2142d47877f12ced7b3ee6d3b294))
+
 ## [5.27.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.26.4...v5.27.0) (2022-06-29)
 
 
