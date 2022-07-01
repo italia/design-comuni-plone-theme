@@ -48,7 +48,7 @@ const ParentSiteMenu = () => {
             )}
             tag={Link}
           >
-            <span>{navitem.title}</span>
+            <span dangerouslySetInnerHTML={{ __html: navitem.title }}></span>
           </NavLink>
         </NavItem>
       ))}
