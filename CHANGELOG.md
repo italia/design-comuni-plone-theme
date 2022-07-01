@@ -1,3 +1,11 @@
+### [5.28.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.28.0...v5.28.1) (2022-07-01)
+
+
+### Bug Fixes
+
+* fix search back from subsite's result ([eb7ab2c](https://github.com/RedTurtle/design-volto-theme/commit/eb7ab2c1bb9893925abd5294eb0308f672324e13))
+* fixed ParentSiteMenu item html ([7ac27a9](https://github.com/RedTurtle/design-volto-theme/commit/7ac27a97eb0dee31479e040d8562060a9088c48e))
+
 ## [5.28.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.27.0...v5.28.0) (2022-06-30)
 
 
