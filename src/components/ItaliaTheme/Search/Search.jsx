@@ -11,6 +11,7 @@ import cx from 'classnames';
 import qs from 'query-string';
 import moment from 'moment';
 import { Helmet, flattenToAppURL } from '@plone/volto/helpers';
+import { resetSubsite } from '@italia/addons/volto-subsites';
 
 import { RemoveBodyClass } from '@italia/components/ItaliaTheme';
 import {
@@ -266,6 +267,18 @@ const Search = () => {
     setOptions(parseFetchedOptions({}, location));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchFilters, subsite]);
+
+  useEffect(() => {
+    if (
+      subsite &&
+      !location.pathname.startsWith(flattenToAppURL(subsite['@id']))
+    ) {
+      /*la ricerca è stata fatta dal sito padre,
+      poi dai risultati si è passato a un subsite,
+      poi è stato fatto back dal browser per tornare ai risultati di ricerca del sito padre*/
+      dispatch(resetSubsite());
+    }
+  }, [subsite, dispatch, location.pathname]);
 
   const searchResults = useSelector((state) => state.searchResults);
   useDebouncedEffect(
