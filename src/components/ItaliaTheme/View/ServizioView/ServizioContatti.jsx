@@ -45,6 +45,8 @@ const ServizioContatti = ({ content }) => {
 
 ServizioContatti.propTypes = {
   content: PropTypes.shape({
+    // TODO: se ufficio_responsabile è requeired non serve ? in content.ufficio_responsabile?.length
+    // se non è required va tolto isRequired
     ufficio_responsabile: PropTypes.array.isRequired,
     area: PropTypes.array.isRequired,
   }),

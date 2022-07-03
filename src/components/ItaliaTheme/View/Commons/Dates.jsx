@@ -35,10 +35,9 @@ const messages = defineMessages({
  * @params {object} Dates: object.
  * @returns {string} Markup of the component.
  */
-const Dates = ({ content, show_image, moment: Moment, rrule }) => {
+const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
   const intl = useIntl();
-
-  const moment = Moment.default;
+  const moment = momentlib.default;
   moment.locale(intl.locale);
 
   const rrulestr = rrule.rrulestr;
