@@ -228,7 +228,14 @@ const CustomerSatisfaction = () => {
                 />
               )}
               <div className="submit-wrapper">
-                <Button type="submit" color="primary" disabled={!validToken}>
+                <Button
+                  type="submit"
+                  color="primary"
+                  disabled={
+                    config.settings.siteProperties
+                      .enableCustomerSatisfactionCaptcha && !validToken
+                  }
+                >
                   {intl.formatMessage(messages.submit)}
                 </Button>
               </div>
