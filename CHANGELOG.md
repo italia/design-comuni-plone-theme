@@ -1,3 +1,16 @@
+## [5.29.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.28.1...v5.29.0) (2022-07-06)
+
+
+### Features
+
+* added enableCustomerSatisfactionCaptcha prop in config.settings.siteProperties ([cd90ace](https://github.com/RedTurtle/design-volto-theme/commit/cd90ace661f059298de868d11c9596665e658904))
+
+
+### Bug Fixes
+
+* added enableCustomerSatisfactionCaptcha on submit button in customer satisfaction form ([8ee2e02](https://github.com/RedTurtle/design-volto-theme/commit/8ee2e02adab1e6f0283e1d2fa7da508d2befafc8))
+* fix default value for enableCustomerSatisfactionCaptcha ([83bd6e0](https://github.com/RedTurtle/design-volto-theme/commit/83bd6e0fdb85f88ea392aa9273c681deb5e29c0f))
+
 ### [5.28.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.28.0...v5.28.1) (2022-07-01)
 
 
