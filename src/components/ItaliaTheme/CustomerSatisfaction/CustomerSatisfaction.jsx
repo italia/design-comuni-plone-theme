@@ -17,6 +17,7 @@ import {
   GoogleReCaptchaWidget,
 } from 'volto-customer-satisfaction';
 import { isCmsUi } from '@plone/volto/helpers';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   title: {
@@ -113,12 +114,11 @@ const CustomerSatisfaction = () => {
   );
 
   const sendFormData = () => {
-    dispatch(
-      submitCustomerSatisfaction(path, {
-        ...formData,
-        'g-recaptcha-response': validToken,
-      }),
-    );
+    const data = { ...formData };
+    if (config.settings.siteProperties.enableCustomerSatisfactionCaptcha) {
+      data['g-recaptcha-response'] = validToken;
+    }
+    dispatch(submitCustomerSatisfaction(path, data));
   };
 
   let action = path?.length > 1 ? path.replace(/\//g, '') : path;
@@ -219,13 +219,23 @@ const CustomerSatisfaction = () => {
                 />
               </div>
 
-              <GoogleReCaptchaWidget
-                key={action}
-                onVerify={onVerifyCaptcha}
-                action={action}
-              />
+              {config.settings.siteProperties
+                .enableCustomerSatisfactionCaptcha && (
+                <GoogleReCaptchaWidget
+                  key={action}
+                  onVerify={onVerifyCaptcha}
+                  action={action}
+                />
+              )}
               <div className="submit-wrapper">
-                <Button type="submit" color="primary" disabled={!validToken}>
+                <Button
+                  type="submit"
+                  color="primary"
+                  disabled={
+                    config.settings.siteProperties
+                      .enableCustomerSatisfactionCaptcha && !validToken
+                  }
+                >
                   {intl.formatMessage(messages.submit)}
                 </Button>
               </div>
