@@ -77,7 +77,7 @@ const RibbonCardTemplateSkeleton = ({
               );
             })}
           </Row>
-          {linkHref && <div className="link-more text-center my-5"></div>}
+          {linkHref && <div className="link-button text-center my-5"></div>}
         </div>
       </Container>
     </div>

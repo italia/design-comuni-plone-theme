@@ -28,7 +28,6 @@ $skeleton-bg: $lightgrey-c2;
 
     .card-title,
     .card-body h5.card-title {
-      // min-height: 1.5em;
       color: transparent;
     }
 
@@ -129,20 +128,6 @@ $skeleton-bg: $lightgrey-c2;
     }
   }
 
-  .link-more {
-    @extend .skeleton-animation;
-    margin-bottom: 1em;
-    text-align: center;
-
-    &:after {
-      display: inline-block;
-      width: 10em;
-      min-height: 1em;
-      background-color: $skeleton-bg;
-      content: '';
-    }
-  }
-
   table {
     @extend .skeleton-animation;
 
@@ -171,6 +156,7 @@ $skeleton-bg: $lightgrey-c2;
     }
   }
 }
+
 // Loader animation
 @keyframes loader-animate {
   from {

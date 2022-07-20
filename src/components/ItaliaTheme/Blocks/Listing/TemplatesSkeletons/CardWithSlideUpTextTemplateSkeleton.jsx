@@ -45,7 +45,7 @@ const CardWithSlideUpTextTemplateSkeleton = ({
           })}
         </div>
 
-        {linkHref && <div className="link-more"></div>}
+        {linkHref && <div className="link-button text-center"></div>}
       </Container>
     </div>
   );

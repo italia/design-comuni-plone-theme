@@ -48,7 +48,7 @@ const CardWithImageRssTemplateSkeleton = ({ isEditMode, data = {} }) => {
           ))}
         </Row>
         {data.linkMore && data.linkMoreTitle && (
-          <div className="link-morre text-center my-4"></div>
+          <div className="link-button text-center my-4"></div>
         )}
       </div>
     </div>

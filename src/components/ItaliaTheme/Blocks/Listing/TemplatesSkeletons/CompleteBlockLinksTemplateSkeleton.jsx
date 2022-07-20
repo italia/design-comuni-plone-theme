@@ -50,7 +50,7 @@ const CompleteBlockLinksTemplateSkeleton = ({
               </Col>
             ))}
           </Row>
-          {linkHref && <div className="link-more text-center my-4"></div>}
+          {linkHref && <div className="link-button text-center my-4"></div>}
         </div>
       </Container>
     </div>

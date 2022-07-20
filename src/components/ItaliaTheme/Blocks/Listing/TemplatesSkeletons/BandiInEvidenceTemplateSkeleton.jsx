@@ -56,7 +56,9 @@ const BandiInEvidenceTemplateSkeleton = ({
                 );
               })}
             </div>
-            {linkHref && <div className="link-more text-center my-4"></div>}
+            {linkHref && (
+              <div className="link-button text-center text-center my-4"></div>
+            )}
           </div>
         </Container>
       </div>
