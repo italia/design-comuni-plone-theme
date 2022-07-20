@@ -1,3 +1,12 @@
+### [5.29.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.29.0...v5.29.1) (2022-07-20)
+
+
+### Maintenance
+
+* removed unused css class link-more ([bae0506](https://github.com/RedTurtle/design-volto-theme/commit/bae0506b9c6651e6691b30dc7e6319df53e725df))
+* updated branches and addon customizations docs ([7a6d46c](https://github.com/RedTurtle/design-volto-theme/commit/7a6d46c72db4e1fc6b06b34c6c011c4c8b526382))
+* updated volto-branches.md ([631ae99](https://github.com/RedTurtle/design-volto-theme/commit/631ae995ab23e6072cd79905f2f60469e36a5de1))
+
 ## [5.29.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.28.1...v5.29.0) (2022-07-06)
 
 
