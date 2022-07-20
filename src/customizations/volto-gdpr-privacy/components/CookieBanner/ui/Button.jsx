@@ -1,3 +1,8 @@
+/*
+ * CUSTOMIZATIONS:
+ * - customized to use design-react-kit elements instead semantic-ui elements
+ * */
+
 import React from 'react';
 
 import { Button as DesignButton } from 'design-react-kit/dist/design-react-kit';
