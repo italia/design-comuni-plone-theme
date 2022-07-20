@@ -1,6 +1,9 @@
 /**
  * Edit Form block.
  * @module components/ItaliaTheme/Blocks/Form/Edit
+ *
+ * CUSTOMIZATIONS:
+ * - customized to use design-react-kit elements instead semantic-ui elements
  */
 
 import React from 'react';
