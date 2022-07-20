@@ -48,26 +48,11 @@
       height: 100%;
     }
   }
+
   // tablet
   @media (max-width: 1367px) and (min-width: 586px) {
     .bandi-in-evidence-cards-wrapper {
       grid-template-columns: auto auto;
-    }
-  }
-
-  .link-more {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .view-all {
-      background-color: $analogue-1-a9;
-      font-size: 18px;
-
-      a {
-        color: $primary-text;
-        text-decoration: none;
-      }
     }
   }
 
@@ -91,7 +76,6 @@
 
       .bando-dati-label {
         font-weight: 550;
-        // text-transform: lowercase;
       }
 
       .bando-dati-date {
@@ -117,9 +101,9 @@
     margin-right: -0.35rem;
 
     a.read-more {
-      bottom: 0;
-      right: 0;
       top: 1rem;
+      right: 0;
+      bottom: 0;
       padding-top: 0.75rem;
 
       @media (max-width: 585px) {
@@ -151,7 +135,7 @@
   }
 
   .open {
-    // background-color: #00cf86;
+    /* background-color: #00cf86;*/
     background-color: $complementary-3-a9;
   }
 
