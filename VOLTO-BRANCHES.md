@@ -1,9 +1,10 @@
-## VOLTO BRANCHES
+## VOLTO BRANCH
 
-EXAMPLE: |pr_id| - |pr_title_or_description| |[redturtles's branches of volto where pr is merged]|
+https://github.com/plone/volto/tree/rt_dev_15_latest 
 
-#2103 - Add Image for srcset and lazy loading [rt_development | rt_dev_12 | rt_dev_13 | rt_dev_14 | rt_dev_15 | rt_dev_15_2_1 | rt_dev_15_latest]
-#2990 - Widget placeholder [rt_dev_14 | rt_dev_15 | rt_dev_15_2_1 | rt_dev_15_latest]
+* Volto 15.10.1
+* https://github.com/plone/volto/pull/2103 - Add Image for srcset and lazy loading 
+* https://github.com/plone/volto/pull/2990 - Widget placeholder
 
 ---
 
