@@ -150,7 +150,6 @@ const SliderTemplate = ({
               {items.map((item, index) => {
                 const image = ListingImage({
                   item,
-                  loading: 'lazy',
                   maxSize: 1600,
                   critical: true,
                 });
