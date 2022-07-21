@@ -1,6 +1,6 @@
 $skeleton-bg: $lightgrey-c2;
 
-.skeleton-animation {
+%skeleton-animation {
   &::before {
     position: absolute;
     top: 0;
@@ -24,7 +24,7 @@ $skeleton-bg: $lightgrey-c2;
 .skeleton-template {
   .card {
     overflow: hidden;
-    @extend .skeleton-animation;
+    @extend %skeleton-animation;
 
     .card-title,
     .card-body h5.card-title {
@@ -99,7 +99,7 @@ $skeleton-bg: $lightgrey-c2;
   }
 
   .img-skeleton {
-    @extend .skeleton-animation;
+    @extend %skeleton-animation;
     height: 100%;
     background-color: $skeleton-bg;
   }
@@ -111,7 +111,7 @@ $skeleton-bg: $lightgrey-c2;
   .slick-slider {
     .slick-slide {
       .img-wrapper {
-        @extend .skeleton-animation;
+        @extend %skeleton-animation;
         height: 10em;
         background-color: $skeleton-bg;
       }
@@ -129,7 +129,7 @@ $skeleton-bg: $lightgrey-c2;
   }
 
   table {
-    @extend .skeleton-animation;
+    @extend %skeleton-animation;
 
     th,
     td {
