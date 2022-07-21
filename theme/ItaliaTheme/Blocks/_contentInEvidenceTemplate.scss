@@ -60,7 +60,7 @@
 
   .skeleton-template {
     .item-image {
-      @extend .skeleton-animation;
+      @extend %skeleton-animation;
       min-height: 2em;
       background-color: $skeleton-bg;
     }
