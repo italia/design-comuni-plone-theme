@@ -1,3 +1,25 @@
+## [5.30.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.29.2...v5.30.0) (2022-07-21)
+
+
+### Features
+
+* added critical.css file ([c65b7b9](https://github.com/RedTurtle/design-volto-theme/commit/c65b7b94fc355d775d3dc04ad02bc5672941c937))
+* use download/width/height from item.image.scales in gridgallerytemplate ([5de1fd7](https://github.com/RedTurtle/design-volto-theme/commit/5de1fd79d128d431892fe27d359652bfef870f19))
+
+
+### Bug Fixes
+
+* fix criticalCss path ([42b8bea](https://github.com/RedTurtle/design-volto-theme/commit/42b8beabafecdc70a59d460cf410c112f99ff6e5))
+* fix criticalCss path ([4e2e363](https://github.com/RedTurtle/design-volto-theme/commit/4e2e363c978ccc039fc2d29de945b438a20a2565))
+* fix criticalCss path ([7098c93](https://github.com/RedTurtle/design-volto-theme/commit/7098c9383fd4278bfbd08fdb2c7cff7c0a39857c))
+* fix criticalCss path ([1765f05](https://github.com/RedTurtle/design-volto-theme/commit/1765f059d3f721989beddc0645e6f271711849cc))
+* fixed criticalCssPath ([a3ea932](https://github.com/RedTurtle/design-volto-theme/commit/a3ea932515b3348c383db9fbd26c925ef835e04d))
+
+
+### Maintenance
+
+* updated criticalCssPath comment ([862b17c](https://github.com/RedTurtle/design-volto-theme/commit/862b17c8678c049265d579dbd982b9d7077c9eee))
+
 ### [5.29.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.29.1...v5.29.2) (2022-07-21)
 
 
