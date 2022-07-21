@@ -23,7 +23,12 @@ const View = ({ data }) => {
         <div className="block-inner-wrapper">
           {data.url && (
             <div className="hero-image">
-              <img src={`${flattenToAppURL(data.url)}/@@images/image`} alt="" />
+              <img
+                src={`${flattenToAppURL(data.url)}/@@images/image/teaser`}
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+              />
             </div>
           )}
           <div
