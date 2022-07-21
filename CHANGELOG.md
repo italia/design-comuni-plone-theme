@@ -1,3 +1,11 @@
+### [5.29.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.29.1...v5.29.2) (2022-07-21)
+
+
+### Maintenance
+
+* css optimizations ([5458f2e](https://github.com/RedTurtle/design-volto-theme/commit/5458f2e3e28a622cbf317fa042c3b05d4302dbea))
+* hero block optimization for lightouse ([ea104ad](https://github.com/RedTurtle/design-volto-theme/commit/ea104adbdc3216efb3807b281d3b9eff57f1ebad))
+
 ### [5.29.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.29.0...v5.29.1) (2022-07-20)
 
 
