@@ -82,7 +82,7 @@ export default function applyConfig(voltoConfig) {
     cookieExpires: 15552000, //6 month
     serverConfig: {
       ...config.settings.serverConfig,
-      criticalCssPath: '/node-modules/design-volto-theme/public/critical.css',
+      criticalCssPath: '../node-modules/design-volto-theme/public/critical.css',
       extractScripts: {
         ...config.settings.serverConfig.extractScripts,
         errorPages: true,
