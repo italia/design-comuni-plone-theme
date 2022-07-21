@@ -134,13 +134,13 @@
 
     .skeleton-template {
       .authors {
-        @extend .skeleton-animation;
+        @extend %skeleton-animation;
         min-height: 2em;
         background-color: $skeleton-bg;
       }
 
       .tweet {
-        @extend .skeleton-animation;
+        @extend %skeleton-animation;
 
         .author {
           .user-infos {
