@@ -9,6 +9,7 @@ import { getSiteProperty } from '@italia/helpers';
 import ScrollToTop from '@italia/components/ItaliaTheme/ScrollToTop/ScrollToTop';
 import { SubsiteLoader } from '@italia/addons/volto-subsites';
 import config from '@plone/volto/registry';
+// import { useLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 const AppExtras = (props) => {
   const intl = useIntl();
@@ -16,8 +17,14 @@ const AppExtras = (props) => {
   const { appExtras = [] } = settings;
   const { pathname } = props;
 
-  const subsite = useSelector((state) => state.subsite?.data);
+  const subsiteState = useSelector((state) => state.subsite);
+  // const subsite = useSelector((state) => state.subsite?.data);
+  const subsite = subsiteState?.data;
   const siteTitle = subsite?.title ?? getSiteProperty('siteTitle', intl.locale);
+  if (config.settings.loadables[subsite?.subsite_css_class?.token]) {
+    config.settings.loadables[subsite?.subsite_css_class?.token].load();
+    // .then(() => { console.log('css loaded'); });
+  }
 
   const location = useLocation();
 
