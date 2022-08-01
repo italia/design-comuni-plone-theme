@@ -106,6 +106,10 @@
           height: 400px;
           margin: 0;
 
+          .volto-image.responsive img {
+            width: auto;
+          }
+
           picture {
             position: absolute;
             top: 50%;
