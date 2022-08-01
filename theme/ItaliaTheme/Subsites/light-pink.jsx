@@ -1,1 +1,1 @@
-import '../../../theme/ItaliaTheme/Subsites/light-pink.scss';i
+import '../../../theme/ItaliaTheme/Subsites/light-pink.scss';
