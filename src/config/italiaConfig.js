@@ -55,7 +55,6 @@ export default function applyConfig(voltoConfig) {
 
   config.settings = {
     ...config.settings,
-    legacyTraverse: true,
     sentryOptions: {
       ...(config.settings.sentryOptions ?? {}),
       ignoreErrors: [
