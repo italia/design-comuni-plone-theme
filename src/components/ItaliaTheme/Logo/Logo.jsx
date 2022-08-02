@@ -1,5 +1,4 @@
 import React from 'react';
-import { Icon } from '@italia/components/ItaliaTheme';
 
 /*
  * Customization with image
@@ -13,6 +12,19 @@ import { Icon } from '@italia/components/ItaliaTheme';
  * Note the icon class.
  */
 
-const Logo = () => <Icon color="" icon="it-pa" padding={false} size="" />;
+/* SVG example */
+/* import { Icon } from '@italia/components/ItaliaTheme'; */
+/* const Logo = () => <Icon color="" icon="it-pa" padding={false} size="" />; */
+
+/* PNG example using https://www.npmjs.com/package/webpack-image-resize-loader */
+
+// eslint-disable-next-line import/no-unresolved
+import logo from './it-pa-white.png?width=82';
+
+const Logo = () => (
+  <figure className="icon">
+    <img src={logo} width="82" height="82" alt="Logo" />
+  </figure>
+);
 
 export default Logo;
