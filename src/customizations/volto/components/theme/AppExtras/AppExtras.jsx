@@ -17,12 +17,12 @@ const AppExtras = (props) => {
   const { appExtras = [] } = settings;
   const { pathname } = props;
 
-  const subsiteState = useSelector((state) => state.subsite);
-  // const subsite = useSelector((state) => state.subsite?.data);
-  const subsite = subsiteState?.data;
+  const subsite = useSelector((state) => state.subsite?.data);
   const siteTitle = subsite?.title ?? getSiteProperty('siteTitle', intl.locale);
-  if (config.settings.loadables[subsite?.subsite_css_class?.token]) {
-    config.settings.loadables[subsite?.subsite_css_class?.token].load();
+  const subsiteLoadable =
+    config.settings.loadables['subsite-' + subsite?.subsite_css_class?.token];
+  if (subsiteLoadable) {
+    subsiteLoadable.load();
     // .then(() => { console.log('css loaded'); });
   }
 
