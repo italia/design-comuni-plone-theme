@@ -63,12 +63,12 @@ module.exports = Object.assign({}, volto_config, {
 
     const urlLoader = base_config.module.rules.find(urlLoaderFinder);
     urlLoader.exclude = [
-      /\.(png|jpe?g|webp|gif)$/i,
+      /\.(png|jpe?g|webp)$/i,
       ...(urlLoader.exclude || []),
     ];
     // see: node_modules/razzle/config/createConfig.js
     const IMG_LOADER = {
-      test: /\.(png|jpe?g|webp|gif)$/i,
+      test: /\.(png|jpe?g|webp)$/i,
       use: [
         {
           loader: 'url-loader',
