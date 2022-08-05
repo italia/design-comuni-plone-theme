@@ -1,3 +1,17 @@
+### [5.30.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.30.0...v5.30.1) (2022-08-05)
+
+
+### Bug Fixes
+
+* width auto to slider image ([c596ee2](https://github.com/RedTurtle/design-volto-theme/commit/c596ee27c93d714d2d738ee75823fdecc1260159))
+
+
+### Maintenance
+
+* removed recaptcha for testing hcaptcha ([88ef50c](https://github.com/RedTurtle/design-volto-theme/commit/88ef50c314c96e7bc894669fb9e908530f6864bc))
+* revert to recaptcha ([f3a52cc](https://github.com/RedTurtle/design-volto-theme/commit/f3a52cc3f1cf09a359c5b9503b66579d53b02c81))
+* upgraded volto-gdpr-privacy to v1.3.9 ([5ff699c](https://github.com/RedTurtle/design-volto-theme/commit/5ff699c4e7d0db2b42f68d6767381e6cc5a4ad48))
+
 ## [5.30.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.29.2...v5.30.0) (2022-07-21)
 
 
