@@ -312,6 +312,11 @@ msgstr ""
 msgid "Linkto title"
 msgstr ""
 
+#: components/ItaliaTheme/AppExtras/PageLoader
+# defaultMessage: Sto caricando la pagina richiesta...
+msgid "Loading page..."
+msgstr "Seite wird geladen..."
+
 #: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
 # defaultMessage: Luogo
 msgid "Luogo location filter"
@@ -326,7 +331,7 @@ msgstr ""
 #: components/ItaliaTheme/MenuSecondary/MenuSecondary
 # defaultMessage: Menu selezionato
 msgid "Menu selezionato"
-msgstr ""
+msgstr "Ausgewähltes Menü"
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 #: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
@@ -356,12 +361,12 @@ msgstr ""
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Nessun risultato ottenuto
 msgid "Nessun risultato ottenuto"
-msgstr ""
+msgstr "Keine Ergebnisse erhalten"
 
 #: components/ItaliaTheme/Pagination/PaginationItem
 # defaultMessage: Pagina successiva
 msgid "Next page"
-msgstr ""
+msgstr "Nächste Seite"
 
 #: components/ItaliaTheme/Blocks/Listing/MapTemplate
 # defaultMessage: Non ci sono punti da mostrare sulla mappa
@@ -393,7 +398,7 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/SliderTemplate
 # defaultMessage: Metti in pausa
 msgid "Pause slider"
-msgstr ""
+msgstr "Pause"
 
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
@@ -415,7 +420,7 @@ msgstr ""
 #: components/ItaliaTheme/Pagination/PaginationItem
 # defaultMessage: Pagina precedente
 msgid "Previous page"
-msgstr ""
+msgstr "Vorherige Seite"
 
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget

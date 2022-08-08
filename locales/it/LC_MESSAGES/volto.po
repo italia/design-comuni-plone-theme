@@ -297,6 +297,11 @@ msgstr "Link ad altro"
 msgid "Linkto title"
 msgstr "Titolo per il link ad altro"
 
+#: components/ItaliaTheme/AppExtras/PageLoader
+# defaultMessage: Sto caricando la pagina richiesta...
+msgid "Loading page..."
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
 # defaultMessage: Luogo
 msgid "Luogo location filter"

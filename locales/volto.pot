@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2022-06-21T14:20:29.802Z\n"
+"POT-Creation-Date: 2022-08-08T09:49:08.786Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -297,6 +297,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 # defaultMessage: Testo per il link ad altro
 msgid "Linkto title"
+msgstr ""
+
+#: components/ItaliaTheme/AppExtras/PageLoader
+# defaultMessage: Sto caricando la pagina richiesta...
+msgid "Loading page..."
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
