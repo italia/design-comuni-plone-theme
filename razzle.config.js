@@ -8,6 +8,7 @@ const path = require('path');
 
 const makeLoaderFinder = require('razzle-dev-utils/makeLoaderFinder');
 const fileLoaderFinder = makeLoaderFinder('file-loader');
+const urlLoaderFinder = makeLoaderFinder('url-loader');
 const projectRootPath = path.resolve('.');
 
 const pathsConfig = jsConfig.paths;
@@ -59,6 +60,41 @@ module.exports = Object.assign({}, volto_config, {
     };
 
     base_config.module.rules.push(SVG_LOADER);
+
+    const urlLoader = base_config.module.rules.find(urlLoaderFinder);
+    urlLoader.exclude = [
+      /\.(png|jpe?g|webp)$/i,
+      ...(urlLoader.exclude || []),
+    ];
+    // see: node_modules/razzle/config/createConfig.js
+    const IMG_LOADER = {
+      test: /\.(png|jpe?g|webp)$/i,
+      use: [
+        {
+          loader: 'url-loader',
+          options: {
+            limit: 8192,
+            name: 'static/media/[name].[hash:8].[ext]',
+            emitFile: target === 'web',
+          },
+        },
+        {
+          // currently webpack 5 w/ asset is not supported by webpack-image-resize-loader
+          // see https://github.com/Calvin-LL/webpack-image-resize-loader/issues/491
+          // when Volto moves to webpack 5 w/ asset, this loader need to be reevaluated
+          // or substituted by responsive-loader
+          loader: 'webpack-image-resize-loader',
+          // see https://github.com/Calvin-LL/webpack-image-resize-loader for options.
+          // options: {
+          //   width: 1000,
+          // },
+        },
+      ],
+    };
+
+    base_config.module.rules.push(IMG_LOADER);
+    // RegExp.prototype.toJSON = function() { return this.source; };
+    // console.log(JSON.stringify(base_config.module.rules, null, 2))
 
     webpackConfig.resolve.alias = {
       ...webpackConfig.resolve.alias,
