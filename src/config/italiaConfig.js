@@ -19,7 +19,9 @@ import CardWithImageRssTemplateSkeleton from '@italia/components/ItaliaTheme/Blo
 import CardWithoutImageRssTemplate from '@italia/components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
 import CardWithoutImageRssTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton';
 
-import HandleAnchor from '@italia/components/ItaliaTheme/HandleAnchor/HandleAnchor';
+import HandleAnchor from '@italia/components/ItaliaTheme/AppExtras/HandleAnchor';
+import GenericAppExtras from '@italia/components/ItaliaTheme/AppExtras/GenericAppExtras';
+import PageLoader from '@italia/components/ItaliaTheme/AppExtras/PageLoader';
 
 // CTs icons
 import faFileInvoiceSVG from '@italia/icons/file-invoice.svg';
@@ -202,6 +204,14 @@ export default function applyConfig(voltoConfig) {
       {
         match: '',
         component: HandleAnchor,
+      },
+      {
+        match: '',
+        component: GenericAppExtras,
+      },
+      {
+        match: '',
+        component: PageLoader,
       },
     ],
     'volto-blocks-widget': {
