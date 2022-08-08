@@ -1,0 +1,18 @@
+@import './common';
+
+$subsite-magenta-primary: #be0042;
+$subsite-magenta-primary-text: #fff;
+$subsite-magenta-secondary: #3f091b;
+$subsite-magenta-secondary-text: #fff;
+$subsite-magenta-link-color: #be0042;
+
+@include define-subsite(
+  'magenta',
+  $subsite-magenta-primary,
+  $subsite-magenta-primary-text,
+  $subsite-magenta-primary,
+  $subsite-magenta-primary-text,
+  $subsite-magenta-primary,
+  $subsite-magenta-primary-text,
+  $subsite-magenta-link-color
+);

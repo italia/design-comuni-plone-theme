@@ -1,0 +1,22 @@
+@import './common';
+
+$subsite-light-pink-primary: #faeef1;
+$subsite-light-pink-primary-text: #000;
+$subsite-light-pink-secondary: #9a264d;
+$subsite-light-pink-secondary-text: #fff;
+$subsite-light-pink-tertiary: #b97787;
+$subsite-light-pink-tertiary-text: #fff;
+$subsite-light-pink-link-color: #9a264d;
+
+@include define-subsite(
+  'light-pink',
+  $subsite-light-pink-primary,
+  $subsite-light-pink-primary-text,
+  $subsite-light-pink-secondary,
+  $subsite-light-pink-secondary-text,
+  $subsite-light-pink-tertiary,
+  $subsite-light-pink-tertiary-text,
+  $subsite-light-pink-link-color,
+  true
+);
+@import 'templates/light-pink';
