@@ -7,12 +7,19 @@ import { RemoveBodyClass } from '@italia/components/ItaliaTheme';
 import { getSiteProperty } from '@italia/helpers';
 import ScrollToTop from '@italia/components/ItaliaTheme/ScrollToTop/ScrollToTop';
 import { SubsiteLoader } from '@italia/addons/volto-subsites';
+import config from '@plone/volto/registry';
 
 const GenericAppExtras = (props) => {
   const intl = useIntl();
   const location = useLocation();
 
   const subsite = useSelector((state) => state.subsite?.data);
+  const subsiteLoadable =
+    config.settings.loadables['subsite-' + subsite?.subsite_css_class?.token];
+  if (subsiteLoadable) {
+    subsiteLoadable.load();
+    // .then(() => { console.log('css loaded'); });
+  }
   const siteTitle = subsite?.title ?? getSiteProperty('siteTitle', intl.locale);
 
   const FORCE_PUBLIC_UI = ['/sitemap', '/search'];
