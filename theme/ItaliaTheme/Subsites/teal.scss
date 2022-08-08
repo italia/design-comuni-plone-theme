@@ -1,0 +1,17 @@
+@import './common';
+
+$subsite-teal-primary: #2f707b;
+$subsite-teal-primary-text: white;
+$subsite-teal-tertiary: #178567;
+$subsite-teal-tertiary-text: white;
+
+@include define-subsite(
+  'teal',
+  $subsite-teal-primary,
+  $subsite-teal-primary-text,
+  $subsite-teal-primary,
+  $subsite-teal-primary-text,
+  $subsite-teal-tertiary,
+  $subsite-teal-tertiary-text,
+  $subsite-teal-primary
+);
