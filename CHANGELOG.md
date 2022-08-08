@@ -1,3 +1,21 @@
+## [5.31.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.30.1...v5.31.0) (2022-08-08)
+
+
+### Features
+
+* added page-loader ([3f3a067](https://github.com/RedTurtle/design-volto-theme/commit/3f3a0679e4ce96ed6012b5cb34962330d465d100))
+
+
+### Bug Fixes
+
+* removed critical css file for children sites ([7a96595](https://github.com/RedTurtle/design-volto-theme/commit/7a96595bc7a5e7b873ff9c5cdccc5a884a575871))
+
+
+### Maintenance
+
+* added page-loader styles ([a2502e9](https://github.com/RedTurtle/design-volto-theme/commit/a2502e9b791b7b3d162c4d5b795e48447635a854))
+* removed customization for AppExtras ([d3814c5](https://github.com/RedTurtle/design-volto-theme/commit/d3814c5be8cab73e8fd6ce7bf39cc6f724c5b3b8))
+
 ### [5.30.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.30.0...v5.30.1) (2022-08-05)
 
 
