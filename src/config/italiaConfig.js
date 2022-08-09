@@ -23,6 +23,8 @@ import HandleAnchor from '@italia/components/ItaliaTheme/AppExtras/HandleAnchor'
 import GenericAppExtras from '@italia/components/ItaliaTheme/AppExtras/GenericAppExtras';
 import PageLoader from '@italia/components/ItaliaTheme/AppExtras/PageLoader';
 
+import { loadables as ItaliaLoadables } from '@italia/config/loadables';
+
 // CTs icons
 import faFileInvoiceSVG from '@italia/icons/file-invoice.svg';
 import faFolderOpenSVG from '@italia/icons/folder-open.svg';
@@ -92,6 +94,7 @@ export default function applyConfig(voltoConfig) {
       },
     },
     querystringAdditionalFields: [],
+    loadables: { ...config.settings.loadables, ...ItaliaLoadables },
     contentIcons: {
       ...config.settings.contentIcons,
       Document: faFileInvoiceSVG,
@@ -141,7 +144,6 @@ export default function applyConfig(voltoConfig) {
     defaultExcludedFromSearch: {
       portalTypes: ['Image', 'File'],
     },
-
     italiaThemeViewsConfig: {
       imagePosition: 'afterHeader', // possible values: afterHeader, documentBody
       // Venue: {
