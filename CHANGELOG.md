@@ -1,3 +1,10 @@
+### [5.32.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.32.1...v5.32.2) (2022-08-09)
+
+
+### Bug Fixes
+
+* fixed subsites import ([#570](https://github.com/RedTurtle/design-volto-theme/issues/570)) ([7b0733b](https://github.com/RedTurtle/design-volto-theme/commit/7b0733be28a60c09207d2cdef050273415a08d86))
+
 ### [5.32.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.32.0...v5.32.1) (2022-08-09)
 
 
