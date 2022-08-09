@@ -1,3 +1,10 @@
+### [5.32.1](https://github.com/RedTurtle/design-volto-theme/compare/v5.32.0...v5.32.1) (2022-08-09)
+
+
+### Bug Fixes
+
+* fix dependencies webpack-image-resize-loader ([a527be1](https://github.com/RedTurtle/design-volto-theme/commit/a527be10ef4d95e883b3f0b8b03d929816c8592b))
+
 ## [5.32.0](https://github.com/RedTurtle/design-volto-theme/compare/v5.31.0...v5.32.0) (2022-08-08)
 
 ### Features
