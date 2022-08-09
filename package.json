@@ -206,6 +206,7 @@
     "typeface-lora": "0.0.72",
     "typeface-roboto-mono": "0.0.75",
     "typeface-titillium-web": "0.0.72",
+    "webpack-image-resize-loader": "^5.0.0",
     "volto-blocks-widget": "collective/volto-blocks-widget#v2.1.0",
     "volto-customer-satisfaction": "collective/volto-customer-satisfaction#v0.2.11",
     "volto-dropdownmenu": "collective/volto-dropdownmenu#v2.3.0",
@@ -240,8 +241,7 @@
     "stylelint-config-prettier": "8.0.1",
     "stylelint-prettier": "1.1.2",
     "svg-inline-loader": "0.8.0",
-    "svg-inline-react": "3.2.0",
-    "webpack-image-resize-loader": "^5.0.0"
+    "svg-inline-react": "3.2.0"
   },
   "volta": {
     "node": "12.22.1",
