@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-5.1.5 (unreleased)
+6.0.0 (2022-08-11)
 ------------------
 
 - Move Titillium font into the theme to not download it from Google everytime (and for the GDPR).
