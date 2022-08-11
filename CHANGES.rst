@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-6.0.1 (unreleased)
+6.0.1 (2022-08-11)
 ------------------
 
 - Fix fonts urls to be extensible from other themes.
