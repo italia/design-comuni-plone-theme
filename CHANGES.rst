@@ -2,6 +2,13 @@ Changelog
 =========
 
 
+6.0.1 (unreleased)
+------------------
+
+- Fix fonts urls to be extensible from other themes.
+  [cekk]
+
+
 6.0.0 (2022-08-11)
 ------------------
 
