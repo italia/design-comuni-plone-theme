@@ -43,7 +43,7 @@
             href="{$portal_url}/++theme++design.plone.theme/favicon.ico" />
       <link rel="stylesheet" href="{$portal_url}/++theme++design.plone.theme/barceloneta/barceloneta-backend.css" />
 
-      <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600" rel="stylesheet"/>
+      <link href="++theme++design.plone.theme/css/fonts.css" rel="stylesheet"/>
     </after>
 
     <rules css:if-content="#portal-top">
