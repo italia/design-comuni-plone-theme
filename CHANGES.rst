@@ -5,7 +5,8 @@ Changelog
 5.1.5 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Move Titillium font into the theme to not download it from Google everytime (and for the GDPR).
+  [cekk]
 
 
 5.1.4 (2022-02-28)
