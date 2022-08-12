@@ -5,7 +5,8 @@ Changelog
 6.0.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Remove unused font-face (700).
+  [cekk]
 
 
 6.0.1 (2022-08-11)
