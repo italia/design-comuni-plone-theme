@@ -17,8 +17,10 @@
   }
 
   figure.img-wrapper {
+    display: flex;
     height: 300px;
     max-height: 300px;
+    align-items: center;
     margin-right: auto;
     margin-left: auto;
 

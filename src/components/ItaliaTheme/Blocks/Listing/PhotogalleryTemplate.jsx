@@ -64,6 +64,7 @@ const PhotogalleryTemplate = ({
   const settings = {
     dots: true,
     infinite: true,
+    autoplay: autoplay,
     speed: 500,
     slidesToShow: items.length < 3 ? items.length : 3,
     slidesToScroll: 1,
@@ -113,7 +114,10 @@ const PhotogalleryTemplate = ({
                 : intl.formatMessage(messages.play)
             }
           >
-            <Icon icon={autoplay ? 'pause' : 'play'} />
+            <Icon
+              key={autoplay ? 'pause' : 'play'}
+              icon={autoplay ? 'pause' : 'play'}
+            />
           </button>
         </div>
         <ul style={{ margin: '0px' }}> {dots} </ul>
