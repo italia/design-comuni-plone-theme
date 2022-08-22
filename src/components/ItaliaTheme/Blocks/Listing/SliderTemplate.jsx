@@ -140,7 +140,10 @@ const SliderTemplate = ({
                       : intl.formatMessage(messages.play)
                   }
                 >
-                  <Icon icon={userAutoplay ? 'pause' : 'play'} />
+                  <Icon
+                    key={userAutoplay ? 'pause' : 'play'}
+                    icon={userAutoplay ? 'pause' : 'play'}
+                  />
                   <span>{userAutoplay ? 'pause' : 'play'}</span>
                 </button>
               </div>
@@ -150,7 +153,7 @@ const SliderTemplate = ({
               {items.map((item, index) => {
                 const image = ListingImage({
                   item,
-                  loading: (index === 0) ? 'eager': 'lazy',
+                  loading: index === 0 ? 'eager' : 'lazy',
                   maxSize: 1600,
                   critical: true,
                 });
