@@ -1,3 +1,11 @@
+### [5.32.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.32.2...v5.32.3) (2022-08-23)
+
+
+### Bug Fixes
+
+* fix styles for content image ([#574](https://github.com/RedTurtle/design-volto-theme/issues/574)) ([7b6c54b](https://github.com/RedTurtle/design-volto-theme/commit/7b6c54b36336774b3e793bbf445826fc6ef19074))
+* fixed autoplay and play button of photogallery and slider listing templates ([#572](https://github.com/RedTurtle/design-volto-theme/issues/572)) ([f732a11](https://github.com/RedTurtle/design-volto-theme/commit/f732a1142bc3ef08a84e69f1a1baacb106f4e56c))
+
 ### [5.32.2](https://github.com/RedTurtle/design-volto-theme/compare/v5.32.1...v5.32.2) (2022-08-09)
 
 
