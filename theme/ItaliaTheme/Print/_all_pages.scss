@@ -101,12 +101,28 @@
         width: 100%;
         max-width: 100%;
 
+        .row.row-full-width {
+          margin-right: 0;
+          margin-left: 0;
+        }
+
         figure {
           display: flex;
           justify-content: center;
 
           img {
             max-width: 300px !important;
+
+            &.full-width {
+              position: initial;
+              right: unset;
+              left: unset;
+              width: auto !important;
+              height: auto;
+              max-height: 300px;
+              margin: 0 !important;
+              object-fit: unset;
+            }
           }
         }
       }
