@@ -177,8 +177,18 @@ const getDateRangePickerPhrases = (intl) => {
 const DateFilter = (props) => {
   const intl = useIntl();
   const [focusedDateInput, setFocusedDateInput] = useState(null);
-  const { value, id, onChange } = props;
-  const { DateRangePicker } = props.reactDates;
+  const {
+    value,
+    id,
+    onChange,
+    reactDates,
+    startLabel,
+    endLabel,
+    defaultStart,
+    defaultEnd,
+    ...rest
+  } = props;
+  const { DateRangePicker } = reactDates;
 
   let isMobile = false;
   if (__CLIENT__) isMobile = window && window.innerWidth < 992;
@@ -216,20 +226,20 @@ const DateFilter = (props) => {
   return (
     <div className="mr-lg-3 my-2 my-lg-1 filter-wrapper date-filter">
       <DateRangePicker
-        {...props}
-        startDate={value?.startDate || props.defaultStart}
+        {...rest}
+        startDate={value?.startDate || defaultStart}
         startDateId="start-date-filter"
         startDatePlaceholderText={
-          props.startLabel ?? intl.formatMessage(messages.eventSearchStartDate)
+          startLabel ?? intl.formatMessage(messages.eventSearchStartDate)
         }
-        endDate={value?.endDate || props.defaultEnd}
+        endDate={value?.endDate || defaultEnd}
         endDateId="end-date-filter"
         endDatePlaceholderText={
-          props.endLabel ?? intl.formatMessage(messages.eventSearchEndDate)
+          endLabel ?? intl.formatMessage(messages.eventSearchEndDate)
         }
         onDatesChange={({ startDate, endDate }) => {
-          let start = startDate || props.defaultStart;
-          let end = endDate || props.defaultEnd;
+          let start = startDate || defaultStart;
+          let end = endDate || defaultEnd;
           onChange(id, { start, end });
         }}
         noBorder={true}

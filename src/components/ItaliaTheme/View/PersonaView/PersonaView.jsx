@@ -95,8 +95,8 @@ PersonaView.propTypes = {
     biografia: PropTypes.shape({
       data: PropTypes.string,
     }),
-    collegamenti_organizzazione_l1: PropTypes.array.isRequired,
-    collegamenti_organizzazione_l2: PropTypes.array.isRequired,
+    collegamenti_organizzazione_l1: PropTypes.array,
+    collegamenti_organizzazione_l2: PropTypes.array,
     competenze: PropTypes.shape({
       data: PropTypes.string,
     }),

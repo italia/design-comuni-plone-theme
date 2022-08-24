@@ -60,8 +60,8 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
     );
   }
 
-  const start = viewDate(intl.locale, moment, content.start);
-  const end = viewDate(intl.locale, moment, content.end);
+  const start = viewDate(intl.locale, content.start);
+  const end = viewDate(intl.locale, content.end);
 
   return content ? (
     <>
@@ -123,12 +123,7 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
           <h5>{intl.formatMessage(messages.additional_dates)}</h5>
           {rruleSet.rdates().map((additionalDate) => (
             <div className="text-serif">
-              {viewDate(
-                intl.locale,
-                moment,
-                additionalDate,
-                'dddd DD MMMM YYYY',
-              )}
+              {viewDate(intl.locale, additionalDate, 'dddd DD MMMM YYYY')}
             </div>
           ))}
         </div>
@@ -138,7 +133,7 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
           <h5>{intl.formatMessage(messages.excluded_dates)}</h5>
           {rruleSet.exdates().map((exDate) => (
             <div className="text-serif">
-              {viewDate(intl.locale, moment, exDate, 'dddd DD MMMM YYYY')}
+              {viewDate(intl.locale, exDate, 'dddd DD MMMM YYYY')}
             </div>
           ))}
         </div>

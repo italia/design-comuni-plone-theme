@@ -1,5 +1,5 @@
 import mapValues from 'lodash/mapValues';
-
+import moment from 'moment';
 import qs from 'query-string';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import config from '@plone/volto/registry';
@@ -173,7 +173,6 @@ const getSearchParamsURL = (
   subsite,
   currentLang,
   getObject = false,
-  moment,
 ) => {
   let baseUrl = subsite
     ? flattenToAppURL(subsite['@id'])

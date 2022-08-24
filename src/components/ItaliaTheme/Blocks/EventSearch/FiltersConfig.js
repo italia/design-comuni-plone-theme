@@ -6,9 +6,9 @@ import DefaultFilters from '@italia/components/ItaliaTheme/Blocks/EventSearch/De
   componente da customizzare nel proprio sito per modificare/aggiungere tipologie di Filtri
   ***
  */
-const FiltersConfig = (dispatchFilter, moment) => {
+const FiltersConfig = (dispatchFilter) => {
   // const subsite = useSelector((state) => state.subsite?.data);
-  const defaultFilters = DefaultFilters(moment);
+  const defaultFilters = DefaultFilters();
 
   return {
     ...defaultFilters,

@@ -1,4 +1,5 @@
 import { useIntl, defineMessages } from 'react-intl';
+import moment from 'moment';
 import {
   TextFilter,
   SelectFilter,
@@ -31,7 +32,7 @@ const messages = defineMessages({
   },
 });
 
-const DefaultFilters = (moment) => {
+const DefaultFilters = () => {
   const intl = useIntl();
   moment.locale(intl.locale);
 

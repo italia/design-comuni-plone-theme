@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import { useIntl } from 'react-intl';
 import {
   Container,
   Row,
@@ -14,7 +13,7 @@ import {
   Chip,
   ChipLabel,
 } from 'design-react-kit/dist/design-react-kit';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { CardCategory, ListingLinkMore } from '@italia/components/ItaliaTheme';
@@ -31,8 +30,6 @@ import {
 } from '@italia/components/ItaliaTheme';
 
 const CardWithImageTemplate = (props) => {
-  const intl = useIntl();
-
   const {
     items,
     isEditMode,
@@ -49,11 +46,7 @@ const CardWithImageTemplate = (props) => {
     show_topics = true,
     hide_dates = false,
     natural_image_size = false,
-    moment: Moment,
   } = props;
-
-  const moment = Moment.default;
-  moment.locale(intl.locale);
 
   const imagesToShow = set_four_columns ? 4 : 3;
 
@@ -72,7 +65,7 @@ const CardWithImageTemplate = (props) => {
         <Row className="items">
           {items.map((item, index) => {
             const icon = show_icon ? getItemIcon(item) : null;
-            const date = hide_dates ? null : getCalendarDate(item, moment);
+            const date = hide_dates ? null : getCalendarDate(item);
             const eventRecurrenceMore = hide_dates
               ? null
               : getEventRecurrenceMore(item, isEditMode);
@@ -202,4 +195,4 @@ CardWithImageTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-export default injectLazyLibs(['moment'])(CardWithImageTemplate);
+export default CardWithImageTemplate;

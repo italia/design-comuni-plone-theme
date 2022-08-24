@@ -14,7 +14,6 @@ import {
 
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 import { getViewDate } from '@italia/components/ItaliaTheme/Blocks/RssBlock/utils';
 
@@ -37,8 +36,6 @@ const CardWithImageRssTemplate = ({
   moment: Moment,
 }) => {
   const intl = useIntl();
-  const moment = Moment.default;
-  moment.locale(intl.locale);
 
   return (
     <div className={cx('', { 'public-ui': isEditMode })}>
@@ -79,7 +76,7 @@ const CardWithImageRssTemplate = ({
                           <span className="mx-1">&mdash;</span>
                         </>
                       )}
-                      <span>{getViewDate(item.pubDate, moment)}</span>{' '}
+                      <span>{getViewDate(item.pubDate, intl.locale)}</span>{' '}
                     </div>
                     <CardTitle className="big-heading" tag="h6">
                       {item.title}
@@ -122,4 +119,4 @@ CardWithImageRssTemplate.propTypes = {
   items: PropTypes.arrayOf(PropTypes.object),
 };
 
-export default injectLazyLibs(['moment'])(CardWithImageRssTemplate);
+export default CardWithImageRssTemplate;

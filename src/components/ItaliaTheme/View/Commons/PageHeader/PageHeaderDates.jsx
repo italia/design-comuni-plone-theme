@@ -2,8 +2,6 @@ import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
 import { viewDate } from '@italia/helpers';
 
 /**
@@ -24,10 +22,8 @@ const messages = defineMessages({
   },
 });
 
-const PageHeaderDates = ({ content, moment: Moment }) => {
+const PageHeaderDates = ({ content }) => {
   const intl = useIntl();
-  const moment = Moment.default;
-  moment.locale(intl.locale);
 
   return (
     <>
@@ -38,7 +34,7 @@ const PageHeaderDates = ({ content, moment: Moment }) => {
               <div className="col-12">
                 <small>{intl.formatMessage(messages.date)}:</small>
                 <p className="font-weight-semibold text-monospace">
-                  {viewDate(intl.locale, moment, content.effective, 'DD-MM-Y')}
+                  {viewDate(intl.locale, content.effective, 'DD-MM-Y')}
                 </p>
               </div>
             </div>
@@ -48,7 +44,7 @@ const PageHeaderDates = ({ content, moment: Moment }) => {
               <div className="col-12">
                 <small>{intl.formatMessage(messages.expire)}:</small>
                 <p className="font-weight-semibold text-monospace">
-                  {viewDate(intl.locale, moment, content.expires, 'DD-MM-Y')}
+                  {viewDate(intl.locale, content.expires, 'DD-MM-Y')}
                 </p>
               </div>
             </div>
@@ -59,7 +55,7 @@ const PageHeaderDates = ({ content, moment: Moment }) => {
   );
 };
 
-export default injectLazyLibs(['moment'])(PageHeaderDates);
+export default PageHeaderDates;
 
 PageHeaderDates.propTypes = {
   params: PropTypes.shape({

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
 import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -29,7 +28,7 @@ const messages = defineMessages({
  * @params {object} Evento: object.
  * @returns {string} Markup of the component.
  */
-const Evento = ({ event, show_image, moment }) => {
+const Evento = ({ event, show_image }) => {
   const intl = useIntl();
 
   return event ? (
@@ -59,7 +58,7 @@ const Evento = ({ event, show_image, moment }) => {
       {show_image && event.image && (
         <div className="card-image card-image-rounded">
           <div className="card-date text-center rounded shadow">
-            {viewDate(intl.locale, moment, event.start, 'DD MMM')}
+            {viewDate(intl.locale, event.start, 'DD MMM')}
           </div>
           <Image
             image={event.image}
@@ -78,17 +77,8 @@ const Evento = ({ event, show_image, moment }) => {
  * @params {object} content: Eventi object.
  * @returns {string} Markup of the component.
  */
-const Events = ({
-  content,
-  title,
-  show_image,
-  folder_name,
-  isChild,
-  moment: Moment,
-}) => {
+const Events = ({ content, title, show_image, folder_name, isChild }) => {
   const intl = useIntl();
-  const moment = Moment.default;
-  moment.locale(intl.locale);
 
   const path = isChild ? content.parent['@id'] : content['@id'];
   const searchResults = useSelector((state) => state.search.subrequests);
@@ -138,12 +128,7 @@ const Events = ({
           )}
           <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
             {events.map((item, i) => (
-              <Evento
-                key={item['@id']}
-                event={item}
-                show_image={show_image}
-                moment={moment}
-              />
+              <Evento key={item['@id']} event={item} show_image={show_image} />
             ))}
           </div>
         </article>
@@ -152,7 +137,7 @@ const Events = ({
   );
 };
 
-export default injectLazyLibs(['moment'])(Events);
+export default Events;
 
 Events.propTypes = {
   content: PropTypes.object,

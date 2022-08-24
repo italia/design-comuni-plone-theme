@@ -40,17 +40,8 @@ const messages = defineMessages({
 
 const copyFields = ['limit', 'query', 'sort_on', 'sort_order', 'depth'];
 
-const Body = ({
-  data,
-  block,
-  inEditMode,
-  path,
-  onChangeBlock,
-  moment: Moment,
-  reactSlick,
-}) => {
+const Body = ({ data, block, inEditMode, path, onChangeBlock, reactSlick }) => {
   const intl = useIntl();
-  const moment = Moment.default;
 
   const Slider = reactSlick.default;
 
@@ -78,12 +69,12 @@ const Body = ({
   const dispatch = useDispatch();
 
   const getMonth = useCallback(() => {
-    const startIndex = activePage * (data.b_size || 4);
+    const startIndex = activePage;
 
     const months = calendarResults[block]?.items
-      ?.slice(activePage, startIndex + (+data.b_size || 4))
+      ?.slice(startIndex, startIndex + 4)
       .reduce((total, date) => {
-        const month = viewDate(intl.locale, moment, date, 'MMMM');
+        const month = viewDate(intl.locale, date, 'MMMM');
 
         if (!total.includes(month)) {
           total.push(month);
@@ -94,7 +85,7 @@ const Body = ({
     return months
       ?.map((m) => m.charAt(0).toUpperCase() + m.slice(1))
       .join(' / ');
-  }, [activePage, block, calendarResults, data.b_size, intl.locale, moment]);
+  }, [activePage, block, calendarResults, intl.locale]);
 
   const [monthName, setMonthName] = useState(getMonth);
 
@@ -340,4 +331,4 @@ const Body = ({
     </div>
   );
 };
-export default injectLazyLibs(['moment', 'reactSlick'])(Body);
+export default injectLazyLibs(['reactSlick'])(Body);

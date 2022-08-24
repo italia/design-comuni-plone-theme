@@ -105,6 +105,12 @@
     font-weight: 400;
   }
 
+  .month {
+    margin-left: -1rem;
+    font-family: $font-family-monospace;
+    font-size: 0.8rem;
+  }
+
   .calendar-item {
     .calendar-type {
       font-size: 0.8rem;

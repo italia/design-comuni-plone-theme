@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { List } from 'semantic-ui-react';
 import cx from 'classnames';
-
+import moment from 'moment';
 import { useIntl } from 'react-intl';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
@@ -13,7 +13,6 @@ export const datesForDisplay = (
   end_date_format,
   start_time_format,
   end_time_format,
-  moment,
 ) => {
   const mStart = moment(start);
   const mEnd = moment(end);
@@ -37,7 +36,7 @@ export const datesForDisplay = (
   };
 };
 
-const _When = ({
+export const When = ({
   start,
   end,
   start_date_format = 'll',
@@ -49,9 +48,7 @@ const _When = ({
   start_label,
   end_label,
   show_time = true,
-  moment: Moment,
 }) => {
-  const moment = Moment.default;
   const datesInfo = datesForDisplay(
     start,
     end,
@@ -59,7 +56,6 @@ const _When = ({
     end_date_format,
     start_time_format,
     end_time_format,
-    moment,
   );
 
   if (!datesInfo) {
@@ -199,7 +195,6 @@ const _When = ({
     </span>
   );
 };
-export const When = injectLazyLibs(['moment'])(_When);
 
 When.propTypes = {
   start: PropTypes.string.isRequired,
@@ -208,9 +203,8 @@ When.propTypes = {
   open_end: PropTypes.bool,
 };
 
-const _Recurrence = ({ recurrence, start, moment: Moment, rrule }) => {
+const _Recurrence = ({ recurrence, start, rrule }) => {
   const intl = useIntl();
-  const moment = Moment.default;
   moment.locale(intl.locale);
   const rrulestr = rrule.rrulestr;
   const RRule = rrule.RRule;
@@ -227,9 +221,7 @@ const _Recurrence = ({ recurrence, start, moment: Moment, rrule }) => {
     <List
       items={rule
         .all()
-        .map((date) =>
-          datesForDisplay(date, null, null, null, null, null, moment),
-        )
+        .map((date) => datesForDisplay(date, null, null, null, null, null))
         .map((date) => date.startDate)}
     />
   );

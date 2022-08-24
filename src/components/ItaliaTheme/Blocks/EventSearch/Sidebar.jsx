@@ -9,7 +9,6 @@ import {
   ObjectBrowserWidget,
   CheckboxWidget,
 } from '@plone/volto/components';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import upSVG from '@plone/volto/icons/up-key.svg';
 import downSVG from '@plone/volto/icons/down-key.svg';
 import FiltersConfig from '@italia/components/ItaliaTheme/Blocks/EventSearch/FiltersConfig';
@@ -78,9 +77,6 @@ const messages = defineMessages({
 });
 
 const Sidebar = (props) => {
-  const intl = props.intl;
-  const moment = props.moment.default;
-  moment.locale(intl.locale);
   const [activeAccIndex, setActiveAccIndex] = useState(1);
 
   function handleAccClick(e, titleProps) {
@@ -90,7 +86,7 @@ const Sidebar = (props) => {
     setActiveAccIndex(newIndex);
   }
 
-  let filtersConfig = FiltersConfig(null, moment);
+  let filtersConfig = FiltersConfig(null);
 
   const filters = Object.keys(filtersConfig).map((k) => [
     k,
@@ -231,4 +227,4 @@ Sidebar.propTypes = {
   onChangeBlock: PropTypes.func.isRequired,
 };
 
-export default injectLazyLibs(['moment'])(injectIntl(Sidebar));
+export default injectIntl(Sidebar);

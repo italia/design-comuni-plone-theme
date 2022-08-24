@@ -9,6 +9,7 @@ import { useIntl, defineMessages } from 'react-intl';
 import { values } from 'lodash';
 import cx from 'classnames';
 import qs from 'query-string';
+import moment from 'moment';
 import {
   Container,
   Row,
@@ -23,7 +24,6 @@ import {
 import { Skiplink, SkiplinkItem } from 'design-react-kit/dist/design-react-kit';
 import { useLocation, useHistory } from 'react-router-dom';
 
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { Helmet, flattenToAppURL } from '@plone/volto/helpers';
 import { resetSubsite } from '@italia/addons/volto-subsites';
 
@@ -157,13 +157,11 @@ const searchOrderDict = {
   },
 };
 
-const Search = ({ moment: Moment }) => {
+const Search = () => {
   const intl = useIntl();
   const dispatch = useDispatch();
   const location = useLocation();
   const history = useHistory();
-  const moment = Moment.default;
-  moment.locale(intl.locale);
 
   const [searchableText, setSearchableText] = useState(
     qs.parse(location.search)?.SearchableText ?? '',
@@ -314,7 +312,6 @@ const Search = ({ moment: Moment }) => {
       subsite,
       intl.locale,
       true,
-      moment,
     );
 
     searchResults.result &&
@@ -331,7 +328,6 @@ const Search = ({ moment: Moment }) => {
           subsite,
           intl.locale,
           false,
-          moment,
         ),
       );
 
@@ -679,4 +675,4 @@ const Search = ({ moment: Moment }) => {
   );
 };
 
-export default injectLazyLibs(['moment'])(Search);
+export default Search;

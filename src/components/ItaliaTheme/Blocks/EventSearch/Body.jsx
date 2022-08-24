@@ -6,9 +6,9 @@ import {
   Button,
   Spinner,
 } from 'design-react-kit/dist/design-react-kit';
+import moment from 'moment';
 import cx from 'classnames';
 
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { getQueryStringResults } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
@@ -36,10 +36,10 @@ const messages = defineMessages({
   },
 });
 
-const Body = ({ data, inEditMode, path, onChangeBlock, moment: Moment }) => {
+const Body = ({ data, inEditMode, path, onChangeBlock }) => {
   const intl = useIntl();
   const b_size = 6;
-  const moment = Moment.default;
+
   moment.locale(intl.locale);
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -136,7 +136,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock, moment: Moment }) => {
     return newState;
   };
 
-  const filtersConfig = FiltersConfig(null, moment);
+  const filtersConfig = FiltersConfig(null);
   const getInitialState = () => {
     return {
       filterOne: filtersConfig[data?.filter_one],
@@ -246,4 +246,4 @@ const Body = ({ data, inEditMode, path, onChangeBlock, moment: Moment }) => {
   ) : null;
 };
 
-export default injectLazyLibs(['moment'])(Body);
+export default Body;

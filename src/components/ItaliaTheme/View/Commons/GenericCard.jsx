@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react';
-import { useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
@@ -32,12 +30,7 @@ const GenericCard = ({
   showDescription = true,
   showInfos = false,
   children,
-  moment: Moment,
 }) => {
-  const intl = useIntl();
-  const moment = Moment.default;
-  moment.locale(intl.locale);
-
   let item_fo = null;
   const locationContent = useSelector((state) => state.content.subrequests);
   const dispatch = useDispatch();
@@ -48,7 +41,7 @@ const GenericCard = ({
   const infos = (
     <>
       {showInfos && (
-        <CardCategory iconName={icon} date={getCalendarDate(item, moment)}>
+        <CardCategory iconName={icon} date={getCalendarDate(item)}>
           <ListingCategory
             category={item?.design_italia_meta_type}
             item={item}
@@ -117,7 +110,7 @@ const GenericCard = ({
   ) : null;
 };
 
-export default injectLazyLibs(['moment'])(GenericCard);
+export default GenericCard;
 
 GenericCard.propTypes = {
   item: PropTypes.shape({

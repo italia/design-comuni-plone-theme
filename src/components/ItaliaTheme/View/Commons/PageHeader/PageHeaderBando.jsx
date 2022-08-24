@@ -3,8 +3,6 @@ import { defineMessages, useIntl } from 'react-intl';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
 
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
 import { Icon } from '@italia/components/ItaliaTheme';
 
 /**
@@ -37,10 +35,8 @@ const messages = defineMessages({
   },
 });
 
-const PageHeaderBando = ({ content, moment: Moment }) => {
+const PageHeaderBando = ({ content }) => {
   const intl = useIntl();
-  const moment = Moment.default;
-  moment.locale(intl.locale);
 
   return content['@type'] === 'Bando' ? (
     <>
@@ -77,7 +73,7 @@ const PageHeaderBando = ({ content, moment: Moment }) => {
   ) : null;
 };
 
-export default injectLazyLibs(['moment'])(PageHeaderBando);
+export default PageHeaderBando;
 
 PageHeaderBando.propTypes = {
   params: PropTypes.shape({

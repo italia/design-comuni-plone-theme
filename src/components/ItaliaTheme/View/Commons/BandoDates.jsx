@@ -7,8 +7,6 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import PropTypes from 'prop-types';
 
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
 import { viewDate } from '@italia/helpers';
 
 const messages = defineMessages({
@@ -40,13 +38,11 @@ const messages = defineMessages({
  * @params {object} Dates: object.
  * @returns {string} Markup of the component.
  */
-const BandoDates = ({ content, moment: Moment }) => {
+const BandoDates = ({ content }) => {
   const intl = useIntl();
-  const moment = Moment.default;
-  moment.locale(intl.locale);
 
   const effective = content?.effective
-    ? viewDate(intl.locale, moment, content.effective)
+    ? viewDate(intl.locale, content.effective)
     : null;
 
   const apertura_bando = content?.apertura_bando
@@ -54,15 +50,15 @@ const BandoDates = ({ content, moment: Moment }) => {
     : null;
 
   const scadenza_domande_bando = content?.scadenza_domande_bando
-    ? viewDate(intl.locale, moment, content.scadenza_domande_bando)
+    ? viewDate(intl.locale, content.scadenza_domande_bando)
     : null;
 
   const scadenza_bando = content?.scadenza_bando
-    ? viewDate(intl.locale, moment, content.scadenza_bando)
+    ? viewDate(intl.locale, content.scadenza_bando)
     : null;
 
   const chiusura_procedimento_bando = content?.chiusura_procedimento_bando
-    ? viewDate(intl.locale, moment, content.chiusura_procedimento_bando)
+    ? viewDate(intl.locale, content.chiusura_procedimento_bando)
     : null;
 
   return content ? (
@@ -207,7 +203,7 @@ const BandoDates = ({ content, moment: Moment }) => {
   ) : null;
 };
 
-export default injectLazyLibs(['moment'])(BandoDates);
+export default BandoDates;
 
 BandoDates.propTypes = {
   content: PropTypes.object.isRequired,

@@ -7,6 +7,7 @@ import mapValues from 'lodash/mapValues';
 import toPairs from 'lodash/toPairs';
 import fromPairs from 'lodash/fromPairs';
 import cx from 'classnames';
+import moment from 'moment';
 
 import qs from 'query-string';
 import {
@@ -29,7 +30,6 @@ import {
   Toggle,
 } from 'design-react-kit/dist/design-react-kit';
 
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { Icon } from '@italia/components/ItaliaTheme';
 import { getSearchFilters } from '@italia/actions';
 import { SearchUtils, Checkbox } from '@italia/components';
@@ -163,10 +163,9 @@ const messages = defineMessages({
   },
 });
 
-const SearchModal = ({ closeModal, show, moment: Moment }) => {
+const SearchModal = ({ closeModal, show }) => {
   const intl = useIntl();
-  const moment = Moment.default;
-  moment.locale(intl.locale);
+
   const dispatch = useDispatch();
   const location = useLocation();
 
@@ -338,7 +337,6 @@ const SearchModal = ({ closeModal, show, moment: Moment }) => {
                 subsite,
                 intl.locale,
                 false,
-                moment,
               )}
               className="ml-auto btn btn-outline-primary text-capitalize"
               style={{ visibility: advancedSearch ? 'visible' : 'hidden' }}
@@ -390,7 +388,6 @@ const SearchModal = ({ closeModal, show, moment: Moment }) => {
                           subsite,
                           intl.locale,
                           false,
-                          moment,
                         )}
                         onClick={submitSearch}
                         className="btn btn-link"
@@ -619,7 +616,6 @@ const SearchModal = ({ closeModal, show, moment: Moment }) => {
                     subsite,
                     intl.locale,
                     false,
-                    moment,
                   )}
                   onClick={submitSearch}
                   className="btn-icon btn btn-primary"
@@ -885,4 +881,4 @@ const SearchModal = ({ closeModal, show, moment: Moment }) => {
   );
 };
 
-export default injectLazyLibs(['moment'])(SearchModal);
+export default SearchModal;
