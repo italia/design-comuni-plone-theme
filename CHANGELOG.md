@@ -1,3 +1,51 @@
+## [6.0.0](https://github.com/RedTurtle/design-volto-theme/compare/v6.0.0-alpha.1...v6.0.0) (2022-08-24)
+
+
+### Features
+
+* added criticalCss ([9881546](https://github.com/RedTurtle/design-volto-theme/commit/9881546d5a8fc3e8a3b4b8dc71b7115f10192231))
+* added enableCustomerSatisfactionCaptcha prop in config.settings.siteProperties ([124a479](https://github.com/RedTurtle/design-volto-theme/commit/124a479da417f09546240d00bf8031a68ade2fe3))
+* added enableVoltoForrmBlockCaptcha siteProperty to disable captcha in form-block ([692acab](https://github.com/RedTurtle/design-volto-theme/commit/692acabfa2ac29731df4ff8237ff3aeb6edfc99d))
+* added innerHtml in secondary menu items ([976d4fd](https://github.com/RedTurtle/design-volto-theme/commit/976d4fd885a90a421f15ede5ae6a22db1f851ff3))
+* added page-loader ([792a661](https://github.com/RedTurtle/design-volto-theme/commit/792a66121c550979a4001f80b1e498a318898076))
+* lazyload subsites css ([f78b006](https://github.com/RedTurtle/design-volto-theme/commit/f78b006d85f02794949b8a2ce78c1b0f78bf98ec))
+* resize asset images ([9e1fc48](https://github.com/RedTurtle/design-volto-theme/commit/9e1fc484ee7d9f6982ca1d49856eb03221628d94))
+* use download/width/height from item.image.scales in gridgallerytemplate ([5cc9eae](https://github.com/RedTurtle/design-volto-theme/commit/5cc9eae4a2c996148dc0f787df7bec06548334c0))
+
+
+### Bug Fixes
+
+* fix default value for enableCustomerSatisfactionCaptcha ([c93a7a6](https://github.com/RedTurtle/design-volto-theme/commit/c93a7a666dcf946f67dd8c681d2ed0d812bea3e1))
+* fix dependencies webpack-image-resize-loader ([#569](https://github.com/RedTurtle/design-volto-theme/issues/569)) ([d2da668](https://github.com/RedTurtle/design-volto-theme/commit/d2da6682332cc9408dfa2a898738ab5032109e11))
+* fix print styles for content-image ([#573](https://github.com/RedTurtle/design-volto-theme/issues/573)) ([c943fe9](https://github.com/RedTurtle/design-volto-theme/commit/c943fe97dd911fac9c7d661cd7821b534dcc2630))
+* fix search back from subsite's result ([91a031e](https://github.com/RedTurtle/design-volto-theme/commit/91a031ea074c848a3bfc0b2fa4b4f4d2656b3de5))
+* fixed autoplay and play button of photogallery and slider listing templates ([#571](https://github.com/RedTurtle/design-volto-theme/issues/571)) ([ec5f7a4](https://github.com/RedTurtle/design-volto-theme/commit/ec5f7a468ec76178e76f4ef9e8471f5709760eb0))
+* fixed ParentSiteMenu item html ([d58d921](https://github.com/RedTurtle/design-volto-theme/commit/d58d9217d20fe4dae5ed952109150b3fa8247bbc))
+* fixed subsites import ([#570](https://github.com/RedTurtle/design-volto-theme/issues/570)) ([884c626](https://github.com/RedTurtle/design-volto-theme/commit/884c626443095c465d68ffe00af745baef11e992))
+* gif removed ([550325e](https://github.com/RedTurtle/design-volto-theme/commit/550325e74dd9d68b858ad56a55ad651be78fa37d))
+* handle anchor ([f7ebee9](https://github.com/RedTurtle/design-volto-theme/commit/f7ebee901c0228c951ad14370724d2391a3de5a9))
+* padding block html ([895d98b](https://github.com/RedTurtle/design-volto-theme/commit/895d98b34cb3f245494fcfebcd7d53fd103235fb))
+* removed critical css file for children sites ([d8e0c02](https://github.com/RedTurtle/design-volto-theme/commit/d8e0c0231f8d19d0a54ab74a765314a153b06319))
+* subsite scss ([7e92a97](https://github.com/RedTurtle/design-volto-theme/commit/7e92a9714b64f4a659277f1f02ec566594f4b0f9))
+* version ([cc54e4f](https://github.com/RedTurtle/design-volto-theme/commit/cc54e4f427dab8017fb9c4c96e2b47820ef2069d))
+* width auto to slider image ([c71b840](https://github.com/RedTurtle/design-volto-theme/commit/c71b840a102a81a7db22d52b89df0a5d1839597e))
+
+
+### Maintenance
+
+* added page-loader styles ([d2e01e9](https://github.com/RedTurtle/design-volto-theme/commit/d2e01e97304d18e9e491788f3bcfb59bfdcaf75a))
+* changed loadable names ([4ca97e7](https://github.com/RedTurtle/design-volto-theme/commit/4ca97e748f4e06d3d4fb49dcaa7cbb06be8d2316))
+* css optimizations ([8056002](https://github.com/RedTurtle/design-volto-theme/commit/805600280df0d5afd902fbf6b1c54b6930d3e2be))
+* hero block optimization for lightouse ([c1f6dd4](https://github.com/RedTurtle/design-volto-theme/commit/c1f6dd442fa5024df9a511b89a217b81ee2d10f3))
+* removed AppExtras customization ([09eb1fd](https://github.com/RedTurtle/design-volto-theme/commit/09eb1fda9c76e0a5bde4ae81c74b0b9c1719914f))
+* removed customization for AppExtras ([45c68c0](https://github.com/RedTurtle/design-volto-theme/commit/45c68c0dcc55fc9a7b275821b6dabd34c9029abe))
+* updated volto ([cb5a239](https://github.com/RedTurtle/design-volto-theme/commit/cb5a2397bd47b6e8a6282bc89133d8d92a732bcb))
+* upgraded volto-gdpr-privacy to v1.3.9 ([f2ec64a](https://github.com/RedTurtle/design-volto-theme/commit/f2ec64afcbf03d60f93607d2033e5917b725f81f))
+* **deps:** bump async from 2.6.3 to 2.6.4 ([#498](https://github.com/RedTurtle/design-volto-theme/issues/498)) ([a86232f](https://github.com/RedTurtle/design-volto-theme/commit/a86232f1488ad59b3235a2005d469ca173683697))
+* **deps:** bump terser from 4.8.0 to 4.8.1 ([#557](https://github.com/RedTurtle/design-volto-theme/issues/557)) ([bc4e3b7](https://github.com/RedTurtle/design-volto-theme/commit/bc4e3b7f8a0617b571bd8ca6df5877d4383d96b4))
+* removed unused css class link-more ([56649f2](https://github.com/RedTurtle/design-volto-theme/commit/56649f2aca0e64c764762483563c2b0837da5acf))
+* updated branches and addon customizations docs ([d77cca1](https://github.com/RedTurtle/design-volto-theme/commit/d77cca1487515b113baa8a6ff1f7397931269c0f))
+
 ### [5.32.3](https://github.com/RedTurtle/design-volto-theme/compare/v5.32.2...v5.32.3) (2022-08-23)
 
 ### Bug Fixes
