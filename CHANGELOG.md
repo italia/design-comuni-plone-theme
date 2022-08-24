@@ -1,3 +1,10 @@
+### [6.0.2](https://github.com/RedTurtle/design-volto-theme/compare/v6.0.1...v6.0.2) (2022-08-24)
+
+
+### Maintenance
+
+* updated volto-gdpr-privacy ([7969986](https://github.com/RedTurtle/design-volto-theme/commit/7969986ec5db77eece02119472a7a87230993ca7))
+
 ### [6.0.1](https://github.com/RedTurtle/design-volto-theme/compare/v6.0.0...v6.0.1) (2022-08-24)
 
 
