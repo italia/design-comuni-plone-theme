@@ -1,10 +1,9 @@
 ## VOLTO BRANCH
 
-https://github.com/plone/volto/tree/rt_dev_15_latest 
+https://github.com/plone/volto/tree/rt_dev_15_latest
 
-* Volto 15.10.1
-* https://github.com/plone/volto/pull/2103 - Add Image for srcset and lazy loading 
-* https://github.com/plone/volto/pull/2990 - Widget placeholder
+- Volto 15.10.1
+- https://github.com/plone/volto/pull/2103 - Add Image for srcset and lazy loading
 
 ---
 
