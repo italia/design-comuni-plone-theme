@@ -1,3 +1,15 @@
+## [6.1.0](https://github.com/RedTurtle/design-volto-theme/compare/v6.0.2...v6.1.0) (2022-08-25)
+
+
+### Features
+
+* staticize google fonts ([3c3c7e5](https://github.com/RedTurtle/design-volto-theme/commit/3c3c7e5dc6797ea446fcffd2e1596b11146bacbc))
+
+
+### Maintenance
+
+* updated VOLTO-BRANCHES.md ([01ac0ff](https://github.com/RedTurtle/design-volto-theme/commit/01ac0ff28864bcb41cc91d287a0dcbb322986684))
+
 ### [6.0.2](https://github.com/RedTurtle/design-volto-theme/compare/v6.0.1...v6.0.2) (2022-08-24)
 
 
