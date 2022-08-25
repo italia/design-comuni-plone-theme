@@ -13,6 +13,7 @@ const Locations = ({
   content = {},
   locations = [],
   show_icon,
+  show_title_link = false,
   load = true,
   details_link = true,
 }) => {
@@ -37,6 +38,7 @@ const Locations = ({
             key={item['@id'] + i}
             location={item}
             show_icon={show_icon}
+            show_title_link={show_title_link}
             load={item['@id'] === content['@id'] ? false : load}
             details_link={item['@id'] === content['@id'] ? false : details_link}
           />

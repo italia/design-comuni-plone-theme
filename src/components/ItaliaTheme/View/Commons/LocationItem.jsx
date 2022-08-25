@@ -30,6 +30,7 @@ const messages = defineMessages({
 const LocationItem = ({
   location,
   show_icon,
+  show_title_link,
   load = true,
   details_link = true,
 }) => {
@@ -63,7 +64,9 @@ const LocationItem = ({
         <h5 className="card-title">
           {(location_fo.nome_sede || location_fo.title) && (
             <>
-              {location_fo['@type'] === 'Venue' ? (
+              {location_fo['@type'] === 'Venue' ||
+              (location_fo['@type'] === 'UnitaOrganizzativa' &&
+                show_title_link) ? (
                 <UniversalLink
                   href={flattenToAppURL(location_fo['@id'])}
                   title={location_fo.title || ''}
