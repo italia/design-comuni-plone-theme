@@ -1,3 +1,10 @@
+### [6.1.1](https://github.com/RedTurtle/design-volto-theme/compare/v6.1.0...v6.1.1) (2022-08-25)
+
+
+### Features
+
+* added map Where to contact section of Service CT ([#576](https://github.com/RedTurtle/design-volto-theme/issues/576)) ([53db880](https://github.com/RedTurtle/design-volto-theme/commit/53db880a9a142d435e82adaee39b908f9f464a54))
+
 ## [6.1.0](https://github.com/RedTurtle/design-volto-theme/compare/v6.0.2...v6.1.0) (2022-08-25)
 
 
