@@ -3254,6 +3254,21 @@ msgstr ""
 msgid "view_all"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/LocationsMap
+# defaultMessage: Vedi su Apple Maps
+msgid "view_on_applemaps"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/LocationsMap
+# defaultMessage: Vedi su Bing Maps
+msgid "view_on_bingmaps"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/LocationsMap
+# defaultMessage: Vedi su Google Maps
+msgid "view_on_googlemaps"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioCostiVincoli
 # defaultMessage: Vincoli
 msgid "vincoli"
