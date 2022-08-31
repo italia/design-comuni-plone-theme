@@ -106,23 +106,14 @@
           height: 400px;
           margin: 0;
 
-          .volto-image.responsive img {
-            width: auto;
-          }
-
-          picture {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            transform: translateY(-50%);
-          }
-
           img {
             min-width: 100%;
             min-height: 400px;
-            margin-left: 50%;
-            //width: auto;
-            transform: translateX(-50%);
+          }
+
+          .volto-image.responsive img,
+          img {
+            object-fit: cover;
           }
 
           figcaption {
