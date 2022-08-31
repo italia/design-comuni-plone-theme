@@ -1,3 +1,20 @@
+### [6.1.2](https://github.com/RedTurtle/design-volto-theme/compare/v6.1.1...v6.1.2) (2022-08-31)
+
+
+### Features
+
+* added popup on map pin ([#577](https://github.com/RedTurtle/design-volto-theme/issues/577)) ([adf902a](https://github.com/RedTurtle/design-volto-theme/commit/adf902ae761cb94bc191f99ce0d9118ac4c40045))
+
+
+### Bug Fixes
+
+* fixed width and height of slider images ([8d4cfab](https://github.com/RedTurtle/design-volto-theme/commit/8d4cfabe4c4170bf8efc9820c3aabeb28345e2e8))
+
+
+### Maintenance
+
+* updated volto-subsites ([dd2b41d](https://github.com/RedTurtle/design-volto-theme/commit/dd2b41d5738c20e9212507d718c0ad92cab584bc))
+
 ### [6.1.1](https://github.com/RedTurtle/design-volto-theme/compare/v6.1.0...v6.1.1) (2022-08-25)
 
 
