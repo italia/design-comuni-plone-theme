@@ -42,7 +42,7 @@ const Body = ({ data, isEditMode }) => {
   let videoID = null;
   let listID = null;
 
-  if (!placeholder && data.url) {
+  if (data.url) {
     if (data.url.match('youtu')) {
       //load video preview image from youtube
       if (data.url.match('list')) {
@@ -55,11 +55,15 @@ const Body = ({ data, isEditMode }) => {
           ? data.url.match(/^.*\.be\/(.*)/)[1]
           : data.url.match(/^.*\?v=(.*)$/)[1];
       }
-
-      placeholder = 'https://img.youtube.com/vi/' + videoID + '/sddefault.jpg';
+      if (!placeholder) {
+        placeholder =
+          'https://img.youtube.com/vi/' + videoID + '/sddefault.jpg';
+      }
     } else if (data.url.match('vimeo')) {
       videoID = data.url.match(/^.*\.com\/(.*)/)[1];
-      placeholder = 'https://vumbnail.com/' + videoID + '.jpg';
+      if (!placeholder) {
+        placeholder = 'https://vumbnail.com/' + videoID + '.jpg';
+      }
     }
   }
 
