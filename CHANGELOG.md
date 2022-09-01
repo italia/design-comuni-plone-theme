@@ -1,3 +1,12 @@
+### [6.1.3](https://github.com/RedTurtle/design-volto-theme/compare/v6.1.2...v6.1.3) (2022-09-01)
+
+
+### Bug Fixes
+
+* fixed few imports for CTABlock and ArgumentsInEvidence blocks ([#581](https://github.com/RedTurtle/design-volto-theme/issues/581)) ([8879606](https://github.com/RedTurtle/design-volto-theme/commit/88796069cf0d4c92576763d976d15562dc264de4))
+* fixed video preview when an image is loaded ([#579](https://github.com/RedTurtle/design-volto-theme/issues/579)) ([b16db1d](https://github.com/RedTurtle/design-volto-theme/commit/b16db1d918cf0e8d998e1f5756aa9648d02a61ad))
+* updated volto-subsites ([e7934aa](https://github.com/RedTurtle/design-volto-theme/commit/e7934aadbdfb2466c4496d3e28f5c7b081109f9f))
+
 ### [6.1.2](https://github.com/RedTurtle/design-volto-theme/compare/v6.1.1...v6.1.2) (2022-08-31)
 
 
