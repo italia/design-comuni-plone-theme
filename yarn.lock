@@ -18099,9 +18099,9 @@ volto-subfooter@collective/volto-subfooter#v1.0.3:
   dependencies:
     "@plone/scripts" "*"
 
-volto-subsites@collective/volto-subsites#v3.0.0:
-  version "3.0.0"
-  resolved "https://codeload.github.com/collective/volto-subsites/tar.gz/d3c94a84954dd43008dc234cf9ca98cdd7c473ea"
+volto-subsites@collective/volto-subsites#v3.0.1:
+  version "3.0.1"
+  resolved "https://codeload.github.com/collective/volto-subsites/tar.gz/97e9c24221ee2b78fa358128fa832e485b3e20fb"
   dependencies:
     "@plone/scripts" "^1.0.3"
 
