@@ -6,7 +6,7 @@ import {
   SubblockEdit,
   Subblock,
 } from '@italia/addons/volto-subblocks';
-import Block from './Block';
+import Block from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block';
 
 class Body extends SubblockEdit {
   constructor(props) {

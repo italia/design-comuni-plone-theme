@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import BodyWrapper from './BodyWrapper';
-import BottomBody from './BottomBody';
-import Block from './Block';
+import BodyWrapper from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper';
+import BottomBody from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody';
+import Block from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block';
 import { ArgumentsInEvidenceBackground } from '@italia/components/ItaliaTheme';
 import { useIntl } from 'react-intl';
 

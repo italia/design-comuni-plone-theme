@@ -1,15 +1,15 @@
 import React from 'react';
-import BodyWrapper from './BodyWrapper';
+import BodyWrapper from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper';
 import PropTypes from 'prop-types';
-import BottomBody from './BottomBody';
-import Body from './Body';
+import BottomBody from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody';
+import Body from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body';
 import {
   withDNDContext,
   SubblocksEdit,
   SubblocksWrapper,
 } from '@italia/addons/volto-subblocks';
 import { SidebarPortal } from '@plone/volto/components';
-import Sidebar from './Sidebar.jsx';
+import Sidebar from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar.jsx';
 import { ArgumentsInEvidenceBackground } from '@italia/components/ItaliaTheme';
 
 class Edit extends SubblocksEdit {
