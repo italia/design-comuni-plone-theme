@@ -1,3 +1,10 @@
+### [6.1.4](https://github.com/RedTurtle/design-volto-theme/compare/v6.1.3...v6.1.4) (2022-09-02)
+
+
+### Maintenance
+
+* added classes to pageheader to enable css customizations ([12f3ec6](https://github.com/RedTurtle/design-volto-theme/commit/12f3ec6912f118e8be1b48ffb256233e2c7e8c10))
+
 ### [6.1.3](https://github.com/RedTurtle/design-volto-theme/compare/v6.1.2...v6.1.3) (2022-09-01)
 
 
