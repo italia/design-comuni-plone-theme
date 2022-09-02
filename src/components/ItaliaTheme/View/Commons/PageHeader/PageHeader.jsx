@@ -40,9 +40,9 @@ const PageHeader = (props) => {
   const intl = useIntl();
 
   return (
-    <div className="row mb-2 mb-lg-0">
+    <div className="row mb-2 mb-lg-0 page-header">
       <div
-        className={cx('px-lg-4 py-lg-2', {
+        className={cx('px-lg-4 py-lg-2 page-header-left', {
           'col-lg-6': props.imageinheader,
           'col-lg-8': !props.imageinheader,
         })}
@@ -93,7 +93,7 @@ const PageHeader = (props) => {
       </div>
 
       {props.imageinheader && props.content[props.imageinheader_field] ? (
-        <div className="col-lg-2">
+        <div className="col-lg-2 page-header-image">
           <figure>
             <Image
               image={props.content[props.imageinheader_field]}
