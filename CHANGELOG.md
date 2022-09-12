@@ -1,3 +1,10 @@
+### [6.1.7](https://github.com/RedTurtle/design-volto-theme/compare/v6.1.6...v6.1.7) (2022-09-12)
+
+
+### Bug Fixes
+
+* fixed change grid-gallery listing template ([#582](https://github.com/RedTurtle/design-volto-theme/issues/582)) ([f4882e1](https://github.com/RedTurtle/design-volto-theme/commit/f4882e15ef2ccf2e0754bd813775026d6f058154))
+
 ### [6.1.6](https://github.com/RedTurtle/design-volto-theme/compare/v6.1.5...v6.1.6) (2022-09-07)
 
 
