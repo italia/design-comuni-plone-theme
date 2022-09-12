@@ -67,7 +67,7 @@ const GridGalleryTemplate = ({
               scale = 'large';
             }
 
-            if (scale && item.image.scales[scale]) {
+            if (scale && item?.image?.scales?.[scale]) {
               image = (
                 <picture class="volto-image responsive">
                   <img
