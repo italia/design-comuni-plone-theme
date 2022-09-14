@@ -18,11 +18,15 @@
 
   figure.img-wrapper {
     display: flex;
-    height: 300px;
-    max-height: 300px;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     margin-right: auto;
     margin-left: auto;
+
+    picture.volto-image.responsive {
+      height: 300px;
+      max-height: 300px;
+    }
 
     img {
       width: 100%;
@@ -90,7 +94,7 @@
 
   .slick-track {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
   }
 
   @media (max-width: #{map-get($grid-breakpoints, md)}) {
