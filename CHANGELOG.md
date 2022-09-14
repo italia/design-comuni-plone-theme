@@ -1,3 +1,10 @@
+### [6.1.8](https://github.com/RedTurtle/design-volto-theme/compare/v6.1.7...v6.1.8) (2022-09-14)
+
+
+### Bug Fixes
+
+* fixed description alignment of photogallery listing template ([#583](https://github.com/RedTurtle/design-volto-theme/issues/583)) ([b16e314](https://github.com/RedTurtle/design-volto-theme/commit/b16e3141406d84bc622e24f701e4bf00c3575a92))
+
 ### [6.1.7](https://github.com/RedTurtle/design-volto-theme/compare/v6.1.6...v6.1.7) (2022-09-12)
 
 
