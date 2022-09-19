@@ -19,15 +19,15 @@ import { ListingImage } from '@italia/components/ItaliaTheme';
  */
 
 const ListingView = ({ content }) => (
-  <div id="page-home" className="ui container">
+  <div id="page-home" className="ui container px-4">
     <PageHeader content={content} />
     <section id="content-core">
       {content.items.map((item) => {
         const image = ListingImage({ item });
 
         return (
-          <div key={item.url} className="listing-item mx-3 my-4">
-            <div className="container">
+          <div key={item.url} className="listing-item my-4">
+            <div>
               <h2>
                 <Link to={item.url} title={item['@type']}>
                   {item.title}

@@ -77,7 +77,7 @@ const PaginaArgomentoView = ({ content }) => {
 
   return hasBlocksData(content) ? (
     <div id="page-document">
-      <div className="ui container">
+      <div className="ui container px-4">
         <div className="ArgomentoTitleWrapper rounded shadow mt-5  mb-5">
           <div
             className={cx('title-description-wrapper', {

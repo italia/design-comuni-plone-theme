@@ -21,7 +21,6 @@ import {
   PageMetadata,
 } from '@italia/components/ItaliaTheme/View';
 import { defineMessages, useIntl } from 'react-intl';
-import { Container } from 'design-react-kit/dist/design-react-kit';
 import { getLayoutFieldname } from '@plone/volto/helpers';
 import Image from '@plone/volto/components/theme/Image/Image';
 
@@ -63,9 +62,9 @@ const PageView = ({ content, token, location, history }) => {
 
     return (
       <>
-        <div id="page-document" className="ui container">
+        <div id="page-document" className="ui container px-4">
           {/*-----Testata-----*/}
-          <Container className="PageHeaderWrapper px-3 px-md-4 mb-4">
+          <div className="PageHeaderWrapper mb-4">
             <div className="row">
               <div
                 className={cx('title-description-wrapper', {
@@ -120,7 +119,7 @@ const PageView = ({ content, token, location, history }) => {
                 </div>
               )}
             </div>
-          </Container>
+          </div>
 
           <TextOrBlocks content={content} />
 

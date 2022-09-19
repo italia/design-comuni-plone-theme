@@ -36,8 +36,8 @@ const Footer = ({ intl }) => {
       {contentType != null &&
         NoCustomerSatisfactionFor.indexOf(contentType) < 0 &&
         config.settings.siteProperties.enableCustomerSatisfaction && (
-          <div className="section section-inset-shadow py-3">
-            <Container>
+          <div className="section section-inset-shadow py-3 px-0">
+            <Container className="px-4">
               <CustomerSatisfaction />
             </Container>
           </div>

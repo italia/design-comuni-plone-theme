@@ -91,7 +91,7 @@ const FaqFolderView = ({ content }) => {
       <Container className="px-4 my-4 faqfolder-view">
         <PageHeader
           content={content}
-          imageinheader={true}
+          imageinheader={!!content.image}
           imageinheader_field="image"
         />
       </Container>

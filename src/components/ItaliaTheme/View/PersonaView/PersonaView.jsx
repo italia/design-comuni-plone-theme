@@ -54,7 +54,7 @@ const PersonaView = ({ content }) => {
           content={content}
           readingtime={null}
           showreadingtime={false}
-          imageinheader={true}
+          imageinheader={!!content.foto_persona}
           imageinheader_field={'foto_persona'}
           showdates={false}
           showtassonomiaargomenti={true}

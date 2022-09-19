@@ -26,7 +26,7 @@ import {
 const FaqView = ({ content }) => {
   return (
     <div id="page-document">
-      <div className="ui container">
+      <div className="ui container px-4">
         <SkipToMainContent />
         <PageHeader
           content={content}

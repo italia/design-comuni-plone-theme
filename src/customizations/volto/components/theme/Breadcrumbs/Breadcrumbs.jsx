@@ -21,7 +21,7 @@ const Breadcrumbs = ({ pathname }) => {
   return brdc ? (
     <div className="public-ui">
       <section id="briciole" className="container px-4 my-4">
-        <div className="px-lg-4">{brdc}</div>
+        <div className="">{brdc}</div>
       </section>
     </div>
   ) : null;

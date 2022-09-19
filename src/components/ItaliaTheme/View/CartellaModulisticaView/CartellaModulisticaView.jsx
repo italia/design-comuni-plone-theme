@@ -67,7 +67,7 @@ const CartellaModulisticaView = ({ content }) => {
       <div className="container px-4 my-4 cartellamodulistica-view">
         <PageHeader
           content={content}
-          imageinheader={true}
+          imageinheader={!!content.image}
           imageinheader_field="image"
         />
 
