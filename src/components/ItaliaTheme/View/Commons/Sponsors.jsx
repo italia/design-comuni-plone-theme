@@ -74,7 +74,6 @@ const Sponsors = ({ content, folder_name, title }) => {
             'path.depth': 1,
             sort_on: 'getObjPositionInParent',
             metadata_fields: '_all',
-            fullobjects: true,
           },
           folder_name,
         ),

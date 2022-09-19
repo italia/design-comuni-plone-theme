@@ -7,7 +7,10 @@ import {
 
 const PersonaUlterioriInformazioni = ({ content }) => {
   return (
-    <Metadata content={content}>
+    <Metadata
+      content={content}
+      showSectionTitle={richTextHasContent(content?.ulteriori_informazioni)}
+    >
       {richTextHasContent(content?.ulteriori_informazioni) && (
         <HelpBox text={content?.ulteriori_informazioni} />
       )}

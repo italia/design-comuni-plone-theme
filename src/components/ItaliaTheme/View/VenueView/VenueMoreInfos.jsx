@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 
 import {
@@ -17,29 +17,28 @@ const messages = defineMessages({
 
 const VenueMoreInfos = ({ content }) => {
   const intl = useIntl();
-
+  const showSectionTitle = useMemo(
+    () =>
+      richTextHasContent(content?.ulteriori_informazioni) ||
+      content.sede_di?.length > 0,
+    [content],
+  );
   return (
-    <Metadata content={content}>
-      {(richTextHasContent(content?.ulteriori_informazioni) ||
-        content.sede_di?.length > 0) && (
-        <>
-          {/* SEDE DI */}
-          {content.sede_di?.length > 0 && (
-            <div className="mb-5">
-              <RelatedArticles
-                title_size={'h5'}
-                items={content.sede_di}
-                title={intl.formatMessage(messages.sede_di)}
-                noMargin
-              />
-            </div>
-          )}
-
-          {/* HELP BOX - ULTERIORI INFORMAZIONI */}
-          {richTextHasContent(content?.ulteriori_informazioni) && (
-            <HelpBox text={content?.ulteriori_informazioni} />
-          )}
-        </>
+    <Metadata content={content} showSectionTitle={showSectionTitle}>
+      {/* SEDE DI */}
+      {content.sede_di?.length > 0 && (
+        <div className="mb-5">
+          <RelatedArticles
+            title_size={'h5'}
+            items={content.sede_di}
+            title={intl.formatMessage(messages.sede_di)}
+            noMargin
+          />
+        </div>
+      )}
+      {/* HELP BOX - ULTERIORI INFORMAZIONI */}
+      {richTextHasContent(content?.ulteriori_informazioni) && (
+        <HelpBox text={content?.ulteriori_informazioni} />
       )}
     </Metadata>
   );

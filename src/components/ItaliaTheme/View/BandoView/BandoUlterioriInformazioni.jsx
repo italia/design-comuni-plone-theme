@@ -9,7 +9,10 @@ import {
 
 const BandoUlterioriInformazioni = ({ content }) => {
   return (
-    <Metadata content={content}>
+    <Metadata
+      content={content}
+      showSectionTitle={richTextHasContent(content?.riferimenti_bando)}
+    >
       {richTextHasContent(content?.riferimenti_bando) && (
         <HelpBox text={content?.riferimenti_bando} />
       )}

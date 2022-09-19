@@ -35,6 +35,7 @@ const Metadata = ({
   content,
   showTags = false,
   noMargin = false,
+  showSectionTitle = true,
   title,
   children,
 }) => {
@@ -45,9 +46,11 @@ const Metadata = ({
       id="metadata"
       className={cx('it-page-section', 'anchor-offset', { 'mt-5': !noMargin })}
     >
-      <h4 id="header-metadata" className="mb-3">
-        {title || intl.formatMessage(messages.other_info)}
-      </h4>
+      {showSectionTitle && (
+        <h4 id="header-metadata" className="mb-3">
+          {title || intl.formatMessage(messages.other_info)}
+        </h4>
+      )}
       {children}
       <p className="text-serif mb-0 mt-4">
         {intl.formatMessage(messages.modified)}
@@ -92,6 +95,7 @@ export default Metadata;
 Metadata.propTypes = {
   content: PropTypes.object,
   showTags: PropTypes.bool,
+  showSectionTitle: PropTypes.bool,
   noMargin: PropTypes.bool,
   title: PropTypes.string,
 };

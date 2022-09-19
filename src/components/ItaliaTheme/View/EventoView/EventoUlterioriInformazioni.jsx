@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 
 import { defineMessages, useIntl } from 'react-intl';
@@ -8,7 +8,6 @@ import {
   richTextHasContent,
   Metadata,
   HelpBox,
-  Sponsors,
   GenericCard,
 } from '@italia/components/ItaliaTheme/View';
 
@@ -29,60 +28,54 @@ const messages = defineMessages({
 
 const EventoUlterioriInformazioni = ({ content }) => {
   const intl = useIntl();
+  const showSectionTitle = useMemo(
+    () =>
+      richTextHasContent(content?.ulteriori_informazioni) ||
+      content?.event_url ||
+      content?.patrocinato_da ||
+      content?.strutture_politiche.length > 0,
+    [content],
+  );
 
   return (
-    <Metadata content={content}>
-      {(richTextHasContent(content?.ulteriori_informazioni) ||
-        content?.event_url ||
-        content?.patrocinato_da ||
-        content?.strutture_politiche.length > 0 ||
-        content?.items?.some((e) => e.id === 'sponsor_evento')) && (
-        <>
-          {richTextHasContent(content?.ulteriori_informazioni) && (
-            <HelpBox text={content?.ulteriori_informazioni} />
-          )}
-
-          {content?.event_url && (
-            <div className="mt-4">
-              <h5>{intl.formatMessage(messages.event_url)}</h5>
-              <UniversalLink href={content.event_url}>
-                {content.event_url}
-              </UniversalLink>
-            </div>
-          )}
-
-          {content?.patrocinato_da && (
-            <div className="mt-4">
-              <h5>{intl.formatMessage(messages.patrocinato_da)}</h5>
-              {content.patrocinato_da}
-            </div>
-          )}
-
-          {content?.items?.some((e) => e.id === 'sponsor_evento') && (
-            <div className="mt-4">
-              <Sponsors content={content} folder_name={'sponsor_evento'} />
-            </div>
-          )}
-
-          {content?.strutture_politiche.length > 0 && (
-            <div className="mt-4">
-              <h5>{intl.formatMessage(messages.strutture_politiche)}</h5>
-              <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                {content.strutture_politiche.map((item, i) => (
-                  <GenericCard
-                    key={i}
-                    index={item['@id']}
-                    item={item}
-                    showimage={false}
-                    showDescription={false}
-                  />
-                ))}
-              </div>
-            </div>
-          )}
-          <div className="mt-4"></div>
-        </>
+    <Metadata content={content} showSectionTitle={showSectionTitle}>
+      {richTextHasContent(content?.ulteriori_informazioni) && (
+        <HelpBox text={content?.ulteriori_informazioni} />
       )}
+
+      {content?.event_url && (
+        <div className="mt-4">
+          <h5>{intl.formatMessage(messages.event_url)}</h5>
+          <UniversalLink href={content.event_url}>
+            {content.event_url}
+          </UniversalLink>
+        </div>
+      )}
+
+      {content?.patrocinato_da && (
+        <div className="mt-4">
+          <h5>{intl.formatMessage(messages.patrocinato_da)}</h5>
+          {content.patrocinato_da}
+        </div>
+      )}
+
+      {content?.strutture_politiche.length > 0 && (
+        <div className="mt-4">
+          <h5>{intl.formatMessage(messages.strutture_politiche)}</h5>
+          <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+            {content.strutture_politiche.map((item, i) => (
+              <GenericCard
+                key={i}
+                index={item['@id']}
+                item={item}
+                showimage={false}
+                showDescription={false}
+              />
+            ))}
+          </div>
+        </div>
+      )}
+      <div className="mt-4"></div>
     </Metadata>
   );
 };

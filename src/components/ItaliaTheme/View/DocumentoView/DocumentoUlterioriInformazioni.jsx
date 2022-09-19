@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 
 import {
@@ -17,9 +17,14 @@ const messages = defineMessages({
 
 const DocumentoUlterioriInformazioni = ({ content }) => {
   const intl = useIntl();
-
+  const showSectionTitle = useMemo(
+    () =>
+      richTextHasContent(content?.ulteriori_informazioni) ||
+      richTextHasContent(content?.riferimenti_normativi),
+    [content],
+  );
   return (
-    <Metadata content={content}>
+    <Metadata content={content} showSectionTitle={showSectionTitle}>
       {richTextHasContent(content?.ulteriori_informazioni) && (
         <HelpBox text={content?.ulteriori_informazioni} />
       )}

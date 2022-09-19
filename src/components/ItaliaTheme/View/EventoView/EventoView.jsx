@@ -24,6 +24,7 @@ import {
   RelatedItemInEvidence,
   SkipToMainContent,
   ContentTypeViewSections,
+  EventoSponsors,
 } from '@italia/components/ItaliaTheme/View';
 
 export const EventoViewSectionsOrder = [
@@ -40,6 +41,7 @@ export const EventoViewSectionsOrder = [
   { /* DOCUMENTI */ component: EventoDocumenti },
   { /* CONTATTI */ component: EventoContatti },
   { /* EVENTS */ component: EventoPadreEFigli },
+  { /* SPONSORS */ component: EventoSponsors },
   { /* ULTERIORI INFORMAZIONI */ component: EventoUlterioriInformazioni },
 ];
 

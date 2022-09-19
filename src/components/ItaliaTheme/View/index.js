@@ -96,6 +96,7 @@ export EventoCosti from '@italia/components/ItaliaTheme/View/EventoView/EventoCo
 export EventoDocumenti from '@italia/components/ItaliaTheme/View/EventoView/EventoDocumenti';
 export EventoContatti from '@italia/components/ItaliaTheme/View/EventoView/EventoContatti';
 export EventoPadreEFigli from '@italia/components/ItaliaTheme/View/EventoView/EventoPadreEFigli';
+export EventoSponsors from '@italia/components/ItaliaTheme/View/EventoView/EventoSponsors';
 export EventoUlterioriInformazioni from '@italia/components/ItaliaTheme/View/EventoView/EventoUlterioriInformazioni';
 
 export FaqFolderPlaceholderAfterContent from '@italia/components/ItaliaTheme/View/FAQ/FaqFolder/Placeholder/AfterContent';
