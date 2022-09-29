@@ -46,6 +46,7 @@ const Field = ({
   valid,
   disabled = false,
   formHasErrors = false,
+  id,
   reactSelect,
 }) => {
   const intl = useIntl();

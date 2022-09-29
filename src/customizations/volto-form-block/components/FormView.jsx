@@ -2,7 +2,7 @@
 - usati i componenti di design-react-kit
 - disabilitato il captcha se nelle siteProperties del config è stato disabilitato.
 */
-import React, { useCallback, useRef } from 'react';
+import React from 'react';
 import { useIntl, defineMessages } from 'react-intl';
 import {
   Card,
@@ -18,9 +18,6 @@ import { getFieldName } from 'volto-form-block/components/utils';
 // eslint-disable-next-line import/no-unresolved
 import Field from 'volto-form-block/components/Field';
 // eslint-disable-next-line import/no-unresolved
-import GoogleReCaptchaWidget from 'volto-form-block/components/Widget/GoogleReCaptchaWidget';
-// eslint-disable-next-line import/no-unresolved
-import HCaptchaWidget from 'volto-form-block/components/Widget/HCaptchaWidget';
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({
@@ -54,6 +51,7 @@ const FormView = ({
   data,
   onSubmit,
   resetFormState,
+  captcha,
 }) => {
   const intl = useIntl();
   const alertTransition = {
@@ -69,22 +67,8 @@ const FormView = ({
     unmountOnExit: true,
   };
 
-  const captcha = process.env.RAZZLE_HCAPTCHA_KEY
-    ? 'HCaptcha'
-    : process.env.RAZZLE_RECAPTCHA_KEY
-    ? 'GoogleReCaptcha'
-    : null;
-
   const enableCaptcha =
     config.settings.siteProperties.enableVoltoFormBlockCaptcha;
-
-  let validToken = useRef(null);
-  const onVerifyCaptcha = useCallback(
-    (token) => {
-      validToken.current = token;
-    },
-    [validToken],
-  );
 
   const isValidField = (field) => {
     return formErrors?.indexOf(field) < 0;
@@ -206,17 +190,7 @@ const FormView = ({
                     );
                   })}
 
-                  {enableCaptcha && captcha === 'GoogleReCaptcha' && (
-                    <GoogleReCaptchaWidget onVerify={onVerifyCaptcha} />
-                  )}
-
-                  {enableCaptcha && captcha === 'HCaptcha' && (
-                    <HCaptchaWidget
-                      sitekey={process.env.RAZZLE_HCAPTCHA_KEY}
-                      onVerify={onVerifyCaptcha}
-                      size={data.invisibleHCaptcha ? 'invisible' : 'normal'}
-                    />
-                  )}
+                  {enableCaptcha && <>{captcha.render()}</>}
 
                   {formErrors.length > 0 && (
                     <Alert
@@ -237,11 +211,9 @@ const FormView = ({
                         color="primary"
                         type="submit"
                         disabled={
-                          enableCaptcha &&
-                          ((!validToken?.current &&
-                            (!!process.env.RAZZLE_RECAPTCHA_KEY ||
-                              !!process.env.RAZZLE_HCAPTCHA_KEY)) ||
-                            formState.loading)
+                          (enableCaptcha &&
+                            !captcha?.props?.captchaToken?.current) ||
+                          formState.loading
                         }
                       >
                         {data.submit_label ||
