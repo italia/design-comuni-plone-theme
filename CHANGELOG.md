@@ -1,3 +1,10 @@
+## [6.2.0](https://github.com/RedTurtle/design-volto-theme/compare/v6.1.9...v6.2.0) (2022-09-29)
+
+
+### Maintenance
+
+* updated volto-customer-satisfaction v0.3.2 ([13d418a](https://github.com/RedTurtle/design-volto-theme/commit/13d418a2961946b2dd2b4590474ab942ebfda370))
+
 ### [6.1.9](https://github.com/redturtle/design-volto-theme/compare/v6.1.8...v6.1.9) (2022-09-19)
 
 
