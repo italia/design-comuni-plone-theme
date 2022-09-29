@@ -57,7 +57,7 @@ const FooterNavigation = () => {
               lg={3}
               md={3}
               sm={6}
-              className="pb-2"
+              className="pb-4"
               widths={['xs', 'sm', 'md', 'lg', 'xl']}
               key={item.url}
             >

@@ -38,7 +38,7 @@ const FooterMain = () => {
         <section>
           <FooterNavigation />
         </section>
-        <section className="py-4 border-white border-top">
+        <section className="py-4">
           <FooterInfos />
         </section>
       </Container>

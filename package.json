@@ -175,10 +175,10 @@
       "yarn i18n",
       "git add ."
     ],
-    "theme/**/*.{css,less,scss}": [
+    "theme/**/*.{css,less}": [
       "npx stylelint --fix"
     ],
-    "src/**/*.{css,less,scss}": [
+    "src/**/*.{css,less}": [
       "npx stylelint --fix"
     ],
     "theme/**/*.overrides": [

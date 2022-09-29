@@ -1,12 +1,31 @@
 .it-footer {
   .it-footer-main {
+    .it-brand-wrapper {
+      a {
+        h2 {
+          font-size: 1.777778rem;
+        }
+        h3 {
+          font-weight: 600;
+        }
+        .icon {
+          width: 75px;
+          height: 75px;
+          margin-right: 27px;
+        }
+      }
+    }
+
     h4 {
       color: $white;
       font-size: 16px;
       text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
 
       a {
-        text-decoration: underline;
+        font-weight: 700;
       }
     }
 
@@ -52,7 +71,6 @@
 
       .list-inline-item {
         margin-bottom: 1em;
-        margin-left: 0.5rem;
 
         &,
         &:not(:last-child) {
@@ -80,7 +98,7 @@
       margin: 0;
       background: none;
       color: #fff;
-      font-size: 15px;
+      font-size: 16px;
 
       &:focus {
         outline: none;

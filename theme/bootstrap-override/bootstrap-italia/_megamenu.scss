@@ -1,5 +1,16 @@
 // external link stule
 .navbar {
+  .navbar-collapsable {
+    .navbar-nav {
+      li {
+        a.nav-link {
+          padding-top: $dvt-navigation-v-padding;
+          padding-bottom: $dvt-navigation-v-padding;
+        }
+      }
+    }
+  }
+
   &.has-megamenu {
     li.nav-item {
       &.active {
