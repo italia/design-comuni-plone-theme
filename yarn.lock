@@ -18016,9 +18016,9 @@ volto-blocks-widget@collective/volto-blocks-widget#v2.1.0:
   dependencies:
     "@plone/scripts" "*"
 
-volto-customer-satisfaction@collective/volto-customer-satisfaction#v0.3.1:
-  version "0.3.1"
-  resolved "https://codeload.github.com/collective/volto-customer-satisfaction/tar.gz/985936954a7783d8dc8dc57f2ea2d17c4d0958c2"
+volto-customer-satisfaction@collective/volto-customer-satisfaction#v0.3.2:
+  version "0.3.2"
+  resolved "https://codeload.github.com/collective/volto-customer-satisfaction/tar.gz/509f2f73bc413299dd62a365d45d8f38cf376b09"
   dependencies:
     "@plone/scripts" "*"
     react-google-recaptcha-v3 "1.9.5"
