@@ -1,3 +1,12 @@
+### [6.2.1](https://github.com/RedTurtle/design-volto-theme/compare/v6.2.0...v6.2.1) (2022-09-30)
+
+
+### Bug Fixes
+
+* fixed dates of cardCalendar component ([#590](https://github.com/RedTurtle/design-volto-theme/issues/590)) ([eebaef0](https://github.com/RedTurtle/design-volto-theme/commit/eebaef07fc78e47180b3a197e21a9edde614dbd7))
+* fixed window.env of customer satisfaction addon ([#591](https://github.com/RedTurtle/design-volto-theme/issues/591)) ([7e892a1](https://github.com/RedTurtle/design-volto-theme/commit/7e892a14268b91a0ac38d079368c9541a611bc3a))
+* various ui fixes ([#586](https://github.com/RedTurtle/design-volto-theme/issues/586)) ([4ef3426](https://github.com/RedTurtle/design-volto-theme/commit/4ef3426242105469f28b677451eed28d31f0c261))
+
 ## [6.2.0](https://github.com/RedTurtle/design-volto-theme/compare/v6.1.9...v6.2.0) (2022-09-29)
 
 
