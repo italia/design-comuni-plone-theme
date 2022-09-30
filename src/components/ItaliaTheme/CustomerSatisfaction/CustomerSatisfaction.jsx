@@ -76,8 +76,11 @@ const CustomerSatisfaction = () => {
     (state) => state.submitCustomerSatisfaction,
   );
   const [validToken, setValidToken] = useState(null);
-  const fieldHoney =
-    process?.env?.RAZZLE_HONEYPOT_FIELD ?? window?.env?.RAZZLE_HONEYPOT_FIELD;
+  let fieldHoney = process.env.RAZZLE_HONEYPOT_FIELD;
+
+  if (__CLIENT__) {
+    fieldHoney = window.env.RAZZLE_HONEYPOT_FIELD;
+  }
 
   const changeSatisfaction = (e, s) => {
     e.stopPropagation();

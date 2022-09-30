@@ -208,7 +208,7 @@
     "typeface-titillium-web": "0.0.72",
     "webpack-image-resize-loader": "^5.0.0",
     "volto-blocks-widget": "collective/volto-blocks-widget#v2.1.0",
-    "volto-customer-satisfaction": "collective/volto-customer-satisfaction#v0.3.2",
+    "volto-customer-satisfaction": "collective/volto-customer-satisfaction#v0.3.3",
     "volto-dropdownmenu": "collective/volto-dropdownmenu#v2.3.0",
     "volto-editablefooter": "RedTurtle/volto-editablefooter#v4.1.1",
     "volto-form-block": "collective/volto-form-block#v2.6.1",
