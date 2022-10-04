@@ -1,3 +1,10 @@
+### [6.2.2](https://github.com/redturtle/design-volto-theme/compare/v6.2.1...v6.2.2) (2022-10-04)
+
+
+### Bug Fixes
+
+* reverted header height change ([cd6eec6](https://github.com/redturtle/design-volto-theme/commit/cd6eec6ce275c39a9cfd49e006bedd85417ac366))
+
 ### [6.2.1](https://github.com/RedTurtle/design-volto-theme/compare/v6.2.0...v6.2.1) (2022-09-30)
 
 
