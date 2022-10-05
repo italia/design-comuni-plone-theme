@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2022-08-26T16:04:26.195Z\n"
+"POT-Creation-Date: 2022-10-05T10:57:53.086Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -3002,6 +3002,21 @@ msgstr ""
 msgid "soggetti_esterni"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Data di apertura
+msgid "sort_apertura_bando"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Chiusura procedimento bando
+msgid "sort_chiusura_procedimento_bando"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Ordina per
+msgid "sort_on"
+msgstr ""
+
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Data (prima i più recenti)
 msgid "sort_on_date"
@@ -3015,6 +3030,16 @@ msgstr ""
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Alfabeticamente
 msgid "sort_on_title"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Ordine inverso
+msgid "sort_order"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Scadenza termini partecipazione
+msgid "sort_scadenza_bando"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti

@@ -93,6 +93,8 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
           fullobjects: 1,
           query: query,
           b_size: b_size,
+          sort_on: data.sort_on,
+          sort_order: data.sort_order ? 'descending' : 'ascending',
         },
         'bandi_search',
         page,

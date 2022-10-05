@@ -3000,6 +3000,21 @@ msgstr ""
 msgid "soggetti_esterni"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Data di apertura
+msgid "sort_apertura_bando"
+msgstr "Opening date"
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Chiusura procedimento bando
+msgid "sort_chiusura_procedimento_bando"
+msgstr "Closing of procedure"
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Ordina per
+msgid "sort_on"
+msgstr "Sort on"
+
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Data (prima i più recenti)
 msgid "sort_on_date"
@@ -3014,6 +3029,16 @@ msgstr "Relevance"
 # defaultMessage: Alfabeticamente
 msgid "sort_on_title"
 msgstr "Alphabetically"
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Ordine inverso
+msgid "sort_order"
+msgstr "Sort order"
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Scadenza termini partecipazione
+msgid "sort_scadenza_bando"
+msgstr "Call deadline"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
 # defaultMessage: Spese elettorali

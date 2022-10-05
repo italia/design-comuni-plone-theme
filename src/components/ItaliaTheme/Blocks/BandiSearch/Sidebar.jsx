@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Segment, Accordion } from 'semantic-ui-react';
-import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
+import { defineMessages, FormattedMessage, useIntl } from 'react-intl';
 import {
   SelectWidget,
   Icon,
   ObjectBrowserWidget,
+  CheckboxWidget,
 } from '@plone/volto/components';
 import upSVG from '@plone/volto/icons/up-key.svg';
 import downSVG from '@plone/volto/icons/down-key.svg';
@@ -68,9 +69,30 @@ const messages = defineMessages({
     id: 'searchBlock_date_filter',
     defaultMessage: 'Filtro per date',
   },
+  sort_on: {
+    id: 'sort_on',
+    defaultMessage: 'Ordina per',
+  },
+  sort_order: {
+    id: 'sort_order',
+    defaultMessage: 'Ordine inverso',
+  },
+  sort_apertura_bando: {
+    id: 'sort_apertura_bando',
+    defaultMessage: 'Data di apertura',
+  },
+  sort_chiusura_procedimento_bando: {
+    id: 'sort_chiusura_procedimento_bando',
+    defaultMessage: 'Chiusura procedimento bando',
+  },
+  sort_scadenza_bando: {
+    id: 'sort_scadenza_bando',
+    defaultMessage: 'Scadenza termini partecipazione',
+  },
 });
 
-const Sidebar = (props) => {
+const Sidebar = ({ block, data, onChangeBlock, required }) => {
+  const intl = useIntl();
   const [activeAccIndex, setActiveAccIndex] = useState(1);
 
   function handleAccClick(e, titleProps) {
@@ -88,8 +110,17 @@ const Sidebar = (props) => {
   ]);
 
   const colors = [
-    ['primary', props.intl.formatMessage(messages.primary)],
-    ['secondary', props.intl.formatMessage(messages.secondary)],
+    ['primary', intl.formatMessage(messages.primary)],
+    ['secondary', intl.formatMessage(messages.secondary)],
+  ];
+
+  const sortOptions = [
+    ['apertura_bando', intl.formatMessage(messages.sort_apertura_bando)],
+    [
+      'chiusura_procedimento_bando',
+      intl.formatMessage(messages.sort_chiusura_procedimento_bando),
+    ],
+    ['scadenza_bando', intl.formatMessage(messages.sort_scadenza_bando)],
   ];
 
   return (
@@ -104,14 +135,14 @@ const Sidebar = (props) => {
       </header>
       <Segment>
         <div className="ui form">
-          <p className="help">{props.intl.formatMessage(messages.help)}</p>
+          <p className="help">{intl.formatMessage(messages.help)}</p>
           <SelectWidget
             id="filter_one"
-            title={props.intl.formatMessage(messages.filter_one)}
-            value={props.data.filter_one}
+            title={intl.formatMessage(messages.filter_one)}
+            value={data.filter_one}
             onChange={(id, value) => {
-              props.onChangeBlock(props.block, {
-                ...props.data,
+              onChangeBlock(block, {
+                ...data,
                 filter_one: value,
               });
             }}
@@ -120,11 +151,11 @@ const Sidebar = (props) => {
           />
           <SelectWidget
             id="filter_two"
-            title={props.intl.formatMessage(messages.filter_two)}
-            value={props.data.filter_two}
+            title={intl.formatMessage(messages.filter_two)}
+            value={data.filter_two}
             onChange={(id, value) => {
-              props.onChangeBlock(props.block, {
-                ...props.data,
+              onChangeBlock(block, {
+                ...data,
                 filter_two: value,
               });
             }}
@@ -132,24 +163,44 @@ const Sidebar = (props) => {
           />
           <SelectWidget
             id="filter_three"
-            title={props.intl.formatMessage(messages.filter_three)}
-            value={props.data.filter_three}
+            title={intl.formatMessage(messages.filter_three)}
+            value={data.filter_three}
             onChange={(id, value) => {
-              props.onChangeBlock(props.block, {
-                ...props.data,
+              onChangeBlock(block, {
+                ...data,
                 filter_three: value,
               });
             }}
             choices={filters}
           />
+          <SelectWidget
+            id="sort_on"
+            title={intl.formatMessage(messages.sort_on)}
+            value={data.sort_on}
+            onChange={(id, value) => {
+              onChangeBlock(block, {
+                ...data,
+                sort_on: value,
+              });
+            }}
+            choices={sortOptions}
+          />
+          <CheckboxWidget
+            id="sort_order"
+            title={intl.formatMessage(messages.sort_order)}
+            value={data.sort_order ? data.sort_order : false}
+            onChange={(name, checked) => {
+              onChangeBlock(block, { ...data, [name]: checked });
+            }}
+          />
           <ObjectBrowserWidget
             id="location"
-            title={props.intl.formatMessage(messages.location_to_search)}
-            value={props.data.location}
+            title={intl.formatMessage(messages.location_to_search)}
+            value={data.location}
             mode={'link'}
             onChange={(name, value) => {
-              props.onChangeBlock(props.block, {
-                ...props.data,
+              onChangeBlock(block, {
+                ...data,
                 location: value,
               });
             }}
@@ -162,7 +213,7 @@ const Sidebar = (props) => {
           index={1}
           onClick={handleAccClick}
         >
-          {props.intl.formatMessage(messages.styles)}
+          {intl.formatMessage(messages.styles)}
           {activeAccIndex === 1 ? (
             <Icon name={upSVG} size="20px" />
           ) : (
@@ -172,11 +223,11 @@ const Sidebar = (props) => {
         <Accordion.Content active={activeAccIndex === 1}>
           <SelectWidget
             id="bg_color"
-            title={props.intl.formatMessage(messages.bg_color)}
-            value={props.data.bg_color}
+            title={intl.formatMessage(messages.bg_color)}
+            value={data.bg_color}
             onChange={(id, value) => {
-              props.onChangeBlock(props.block, {
-                ...props.data,
+              onChangeBlock(block, {
+                ...data,
                 bg_color: value,
               });
             }}
@@ -184,17 +235,17 @@ const Sidebar = (props) => {
           />
           <SelectWidget
             id="button_color"
-            title={props.intl.formatMessage(messages.button_color)}
-            value={props.data.button_color}
+            title={intl.formatMessage(messages.button_color)}
+            value={data.button_color}
             onChange={(id, value) => {
-              props.onChangeBlock(props.block, {
-                ...props.data,
+              onChangeBlock(block, {
+                ...data,
                 button_color: value,
               });
             }}
             choices={[
               ...colors,
-              ['tertiary', props.intl.formatMessage(messages.tertiary)],
+              ['tertiary', intl.formatMessage(messages.tertiary)],
             ]}
           />
         </Accordion.Content>
@@ -209,4 +260,4 @@ Sidebar.propTypes = {
   onChangeBlock: PropTypes.func.isRequired,
 };
 
-export default injectIntl(Sidebar);
+export default Sidebar;
