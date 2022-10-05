@@ -22,3 +22,7 @@ export {
   FILE_EXTENSIONS,
   getFileViewFormat,
 } from '@italia/helpers/files';
+export {
+  videoUrlHelper,
+  checkIfValidVideoLink,
+} from '@italia/helpers/videoUrlHelper';

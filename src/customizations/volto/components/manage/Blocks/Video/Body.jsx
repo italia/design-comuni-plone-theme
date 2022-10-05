@@ -6,6 +6,7 @@
  * - support external sources for preview image
  * - added ConditionalEmbed
  * - changed icon for preview with FontAwesome icon
+ * - overhauled url checking, it would break on correct links and allow incorrect ones
  */
 
 import React from 'react';
@@ -13,11 +14,8 @@ import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import { Embed, Message } from 'semantic-ui-react';
 import cx from 'classnames';
-import {
-  isInternalURL,
-  getParentUrl,
-  flattenToAppURL,
-} from '@plone/volto/helpers';
+import { isInternalURL, getParentUrl } from '@plone/volto/helpers';
+import { videoUrlHelper } from '@italia/helpers';
 import { ConditionalEmbed } from 'volto-gdpr-privacy';
 import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
 import config from '@plone/volto/registry';
@@ -33,40 +31,22 @@ const Body = ({ data, isEditMode }) => {
       ? !!data.allowExternals
       : !!config.settings.videoAllowExternalsDefault;
 
-  let placeholder = data.preview_image
-    ? isInternalURL(data.preview_image)
-      ? `${flattenToAppURL(data.preview_image)}/@@images/image`
-      : data.preview_image
-    : null;
-
+  let placeholder = null;
   let videoID = null;
   let listID = null;
 
   if (data.url) {
-    if (data.url.match('youtu')) {
-      //load video preview image from youtube
-      if (data.url.match('list')) {
-        listID = data.url.match(/^.*\?list=|^.*&list=(.*)$/)[1];
-        if (data.url.match('v=')) {
-          videoID = data.url.match(/^.*\?v=(.*)&(.*)$/)?.[1] || null;
-        }
-      } else {
-        videoID = data.url.match(/.be\//)
-          ? data.url.match(/^.*\.be\/(.*)/)[1]
-          : data.url.match(/^.*\?v=(.*)$/)[1];
-      }
-      if (!placeholder) {
-        placeholder =
-          'https://img.youtube.com/vi/' + videoID + '/sddefault.jpg';
-      }
-    } else if (data.url.match('vimeo')) {
-      videoID = data.url.match(/^.*\.com\/(.*)/)[1];
-      if (!placeholder) {
-        placeholder = 'https://vumbnail.com/' + videoID + '.jpg';
-      }
+    const [computedID, computedPlaceholder] = videoUrlHelper(
+      data.url,
+      data?.preview_image,
+    );
+    if (computedID) {
+      videoID = computedID;
+    }
+    if (computedPlaceholder) {
+      placeholder = computedPlaceholder;
     }
   }
-
   const ref = React.createRef();
   const onKeyDown = (e) => {
     if (e.nativeEvent.keyCode === 13) {

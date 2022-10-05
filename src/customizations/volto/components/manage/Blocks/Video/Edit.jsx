@@ -1,6 +1,8 @@
 /**
  * Edit video block.
  * @module components/manage/Blocks/Title/Edit
+ * CUSTOMIZATIONS:
+ * - handle url validation and show users errors
  */
 
 import React, { Component } from 'react';
@@ -9,12 +11,20 @@ import { defineMessages, injectIntl } from 'react-intl';
 import { Button, Input, Message } from 'semantic-ui-react';
 import cx from 'classnames';
 import { isEqual } from 'lodash';
-
-import { Icon, SidebarPortal, VideoSidebar } from '@plone/volto/components';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import {
+  Icon,
+  SidebarPortal,
+  VideoSidebar,
+  Toast,
+} from '@plone/volto/components';
 import clearSVG from '@plone/volto/icons/clear.svg';
 import aheadSVG from '@plone/volto/icons/ahead.svg';
 import videoBlockSVG from '@plone/volto/components/manage/Blocks/Video/block-video.svg';
 import Body from './Body.jsx';
+import { checkIfValidVideoLink } from '@italia/helpers/index.js';
+import { compose } from 'redux';
+import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   VideoFormDescription: {
@@ -24,6 +34,15 @@ const messages = defineMessages({
   VideoBlockInputPlaceholder: {
     id: 'Type a Video (YouTube, Vimeo or mp4) URL',
     defaultMessage: 'Type a Video (YouTube, Vimeo or mp4) URL',
+  },
+  VideoBlockInvalidLink: {
+    id: 'VideoBlockInvalidLink',
+    defaultMessage:
+      "L'URL fornito è invalido e non può essere processato. Per favore, inserisci un URL valido (YouTube, Vimeo or mp4).",
+  },
+  error: {
+    id: 'Error',
+    defaultMessage: 'Error',
   },
 });
 
@@ -65,6 +84,7 @@ class Edit extends Component {
     this.onKeyDownVariantMenuForm = this.onKeyDownVariantMenuForm.bind(this);
     this.state = {
       url: '',
+      error: null,
     };
   }
 
@@ -77,6 +97,7 @@ class Edit extends Component {
   onChangeUrl({ target }) {
     this.setState({
       url: target.value,
+      error: null,
     });
   }
 
@@ -99,15 +120,40 @@ class Edit extends Component {
    * @returns {undefined}
    */
   onSubmitUrl() {
-    this.props.onChangeBlock(this.props.block, {
-      ...this.props.data,
-      url: this.state.url,
-    });
+    const allowsExternals =
+      this.props.data.allowExternals !== undefined
+        ? !!this.props.data.allowExternals
+        : !!config.settings.videoAllowExternalsDefault;
+    if (checkIfValidVideoLink(this.state.url, allowsExternals)) {
+      this.props.onChangeBlock(this.props.block, {
+        ...this.props.data,
+        url: this.state.url,
+      });
+      if (this.state.error) {
+        this.setState({
+          error: null,
+        });
+      }
+    } else {
+      this.setState({
+        error: 'VideoBlockInvalidLink',
+      });
+      this.props.toastify.toast.error(
+        <Toast
+          error
+          title={this.props.intl.formatMessage(messages.error)}
+          content={this.props.intl.formatMessage(
+            messages['VideoBlockInvalidLink'],
+          )}
+        />,
+      );
+    }
   }
 
   resetSubmitUrl = () => {
     this.setState({
       url: '',
+      error: null,
     });
   };
 
@@ -164,6 +210,7 @@ class Edit extends Component {
                   onChange={this.onChangeUrl}
                   placeholder={placeholder}
                   value={this.state.url}
+                  error={!!this.state.error}
                   // Prevents propagation to the Dropzone and the opening
                   // of the upload browser dialog
                   onClick={(e) => e.stopPropagation()}
@@ -206,4 +253,4 @@ class Edit extends Component {
   }
 }
 
-export default injectIntl(Edit);
+export default compose(injectIntl, injectLazyLibs(['toastify']))(Edit);
