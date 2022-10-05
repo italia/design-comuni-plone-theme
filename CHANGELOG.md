@@ -1,3 +1,15 @@
+## [6.3.0](https://github.com/RedTurtle/design-volto-theme/compare/v6.2.2...v6.3.0) (2022-10-05)
+
+
+### Features
+
+* added sorting of bandi search results ([#593](https://github.com/RedTurtle/design-volto-theme/issues/593)) ([76f621c](https://github.com/RedTurtle/design-volto-theme/commit/76f621cc0da7c2514add8e2fcb396475dfb2eb8d))
+
+
+### Bug Fixes
+
+* overhaul url checking system of Video Block, added tests, added error message in edit ([#592](https://github.com/RedTurtle/design-volto-theme/issues/592)) ([83bdb0e](https://github.com/RedTurtle/design-volto-theme/commit/83bdb0eed076fa91e2cb0f1712fe26db644a02d0))
+
 ### [6.2.2](https://github.com/redturtle/design-volto-theme/compare/v6.2.1...v6.2.2) (2022-10-04)
 
 
