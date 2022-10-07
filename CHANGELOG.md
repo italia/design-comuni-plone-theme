@@ -1,3 +1,10 @@
+### [6.3.1](https://github.com/redturtle/design-volto-theme/compare/v6.3.0...v6.3.1) (2022-10-07)
+
+
+### Maintenance
+
+* updated volto-subsites v3.0.4 ([eb23f5f](https://github.com/redturtle/design-volto-theme/commit/eb23f5f79929039d2b85158e461bdb393dee5679))
+
 ## [6.3.0](https://github.com/RedTurtle/design-volto-theme/compare/v6.2.2...v6.3.0) (2022-10-05)
 
 
