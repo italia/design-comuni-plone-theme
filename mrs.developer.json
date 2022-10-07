@@ -39,7 +39,7 @@
     "path": "src",
     "https": "https://github.com/collective/volto-subsites.git",
     "url": "git@github.com:collective/volto-subsites.git",
-    "tag": "v3.0.3"
+    "tag": "v3.0.4"
   },
   "volto-social-settings": {
     "package": "@italia/addons/volto-social-settings",
