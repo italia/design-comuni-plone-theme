@@ -8,9 +8,9 @@
 
 import React from 'react';
 // eslint-disable-next-line import/no-unresolved
-import EditBlock from '@italia/addons/volto-form-block/components/EditBlock';
+import EditBlock from 'volto-form-block/components/EditBlock';
 // eslint-disable-next-line import/no-unresolved
-import Sidebar from '@italia/addons/volto-form-block/components/Sidebar';
+import Sidebar from 'volto-form-block/components/Sidebar';
 
 import {
   Card,
