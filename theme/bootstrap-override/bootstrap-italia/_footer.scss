@@ -81,6 +81,9 @@
   }
 
   .it-footer-small-prints {
+    a {
+        word-break: normal;
+      }
     a,
     button,
     a:hover:not(.disabled),
