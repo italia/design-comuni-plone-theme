@@ -37,6 +37,9 @@ $docs-section-margin: 3em;
         &.has-children {
           padding-bottom: 1em;
         }
+        .description {
+          font-size: 0.9rem;
+        }
 
         .doc {
           display: flex;
@@ -44,9 +47,15 @@ $docs-section-margin: 3em;
           justify-content: space-between;
           padding: 0.4em 0;
 
-          .title {
-            font-size: 1.2em;
-            font-weight: 500;
+          .title-wrap {
+            flex: 1;
+            &.single-row {
+              max-width: 70%;
+            }
+            .title {
+              font-size: 1.2em;
+              font-weight: 500;
+            }
           }
 
           &.modulo {
@@ -84,12 +93,33 @@ $docs-section-margin: 3em;
               font-size: 1.2em;
             }
           }
+        }
+      }
+    }
 
-          @media (max-width: #{map-get($grid-breakpoints, md)}) {
+    .document-row-section + .documents-section {
+      margin-top: $docs-section-margin;
+    }
+  }
+
+  #metadata {
+    margin-top: 3rem;
+  }
+
+  @media (max-width: #{map-get($grid-breakpoints, lg)}) {
+    section.modulistica {
+      .documents-section,
+      .document-row-section {
+        .doc-row {
+          .doc {
             flex-wrap: wrap;
             align-items: unset;
             justify-content: unset;
-
+            .title-wrap {
+              &.single-row {
+                max-width: none;
+              }
+            }
             .title,
             .downloads {
               flex: 1 1 100%;
@@ -103,13 +133,5 @@ $docs-section-margin: 3em;
         }
       }
     }
-
-    .document-row-section + .documents-section {
-      margin-top: $docs-section-margin;
-    }
-  }
-
-  #metadata {
-    margin-top: 3rem;
   }
 }

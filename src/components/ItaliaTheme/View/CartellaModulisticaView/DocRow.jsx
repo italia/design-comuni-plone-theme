@@ -57,11 +57,22 @@ const DocRow = ({ doc }) => {
       key={doc['@id']}
     >
       <div className="doc">
-        <div className="title">
-          <UniversalLink href={flattenToAppURL(doc['@id'])}>
-            {doc.title}
-            {/* {doc.items?.length > 1 && ` - ${doc.items[0]?.title}`} */}
-          </UniversalLink>
+        <div
+          className={cx('title-wrap', {
+            'single-row': doc.items?.length === 1,
+          })}
+        >
+          <div className="title">
+            <UniversalLink href={flattenToAppURL(doc['@id'])}>
+              {doc.title}
+              {/* {doc.items?.length > 1 && ` - ${doc.items[0]?.title}`} */}
+            </UniversalLink>
+          </div>
+          {doc?.description && (
+            <div className="description single-row text-muted">
+              {doc.description}
+            </div>
+          )}
         </div>
         {doc.items?.length === 1 && (
           <Downloads item={doc.items[0]} titleDoc={doc.title} />
