@@ -10,7 +10,8 @@
     color: $secondary-text;
 
     &.full-width {
-      padding: 0;
+      height: auto;
+      padding: 70px 0;
     }
 
     .cta-tile-text {
@@ -111,6 +112,9 @@
         a.btn-outline-info {
           box-shadow: inset 0 0 0 1px #fff;
           color: #fff;
+          padding: 18px 60px;
+          font-weight: bold;
+          font-size: 1rem;
 
           &:hover,
           &:focus {
