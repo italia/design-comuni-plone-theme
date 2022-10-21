@@ -194,7 +194,7 @@ const SideMenu = ({ data, content_uid }) => {
           <div className="menu-wrapper">
             <div className="link-list-wrapper menu-link-list">
               <h3>{intl.formatMessage(messages.index)}</h3>
-              <ul className="link-list">
+              <ul className="link-list" data-element="page-index">
                 {headers.map((item, i) => (
                   <li className="nav-item" key={item.id}>
                     <a

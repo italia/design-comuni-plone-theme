@@ -51,7 +51,7 @@ const PageHeader = (props) => {
           {(props.content.icon || props.content.icona) && (
             <ArgumentIcon icon={props.content.icon || props.content.icona} />
           )}
-          <h1>
+          <h1 data-element="service-title">
             {props.content.title}
             {props.content.subtitle && ` - ${props.content.subtitle}`}
             {props.content.sottotitolo && ` - ${props.content.sottotitolo}`}
@@ -60,7 +60,12 @@ const PageHeader = (props) => {
           <PageHeaderEventDates content={props.content} />
 
           {props.content.description && (
-            <p className="documentDescription">{props.content.description}</p>
+            <p
+              className="documentDescription"
+              data-element="service-description"
+            >
+              {props.content.description}
+            </p>
           )}
 
           <PageHeaderBando content={props.content} />

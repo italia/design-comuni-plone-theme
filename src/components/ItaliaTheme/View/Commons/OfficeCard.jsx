@@ -49,7 +49,11 @@ const OfficeCard = ({
       {icon && <Icon icon={icon}></Icon>}
       <div className="card-body pr-3">
         <h5 className="card-title">
-          <UniversalLink item={office_fo} title={office_fo.title}>
+          <UniversalLink
+            item={office_fo}
+            title={office_fo.title}
+            data-element="service-area"
+          >
             {office_fo.title}
           </UniversalLink>
         </h5>
