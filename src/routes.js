@@ -3,7 +3,7 @@
  * @module routes
  */
 
-import { App, Search } from '@plone/volto/components';
+import { App, Search, Contents } from '@plone/volto/components';
 import { defaultRoutes, multilingualRoutes } from '@plone/volto/routes';
 import config from '@plone/volto/registry';
 
@@ -12,6 +12,11 @@ export const italiaRoutes = [
   {
     path: '/**/search',
     component: Search,
+  },
+  // TO DO: DA RIMUOVERE QUANDO AGGIORNIAMO A VOLTO16
+  {
+    path: ['/contents', '/**/contents'],
+    component: Contents,
   },
 ];
 
