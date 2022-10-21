@@ -38,6 +38,9 @@ $accordion-icon-color: #7fb2e5;
             top: -7px;
             right: 0;
             left: unset;
+            &:focus {
+              outline: 1px solid $focus-outline-color;
+            }
           }
 
           .accordion-header {
@@ -46,6 +49,10 @@ $accordion-icon-color: #7fb2e5;
             color: $secondary;
             font-size: 1.2rem;
             font-weight: bold;
+
+            & > div {
+              width: 100%;
+            }
 
             p {
               margin: 0;
@@ -56,6 +63,9 @@ $accordion-icon-color: #7fb2e5;
               padding: 0 0.4em;
               border: none;
               background: none;
+              &:focus {
+                outline: 1px solid $focus-outline-color;
+              }
 
               .icon {
                 width: 1.2rem;
