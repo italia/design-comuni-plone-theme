@@ -129,7 +129,8 @@ $docs-section-margin: 3em;
           transition: max-height 0.3s ease;
 
           &.open {
-            max-height: 100vh;
+            max-height: 1000vh;
+            overflow-y: auto;
           }
 
           .accordion-inner {
