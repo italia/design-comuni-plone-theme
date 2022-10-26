@@ -3,11 +3,12 @@
  * @module components/theme/View/DocRow
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { DownloadFileFormat } from '@italia/components/ItaliaTheme/View';
 import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
+import { Icon } from '@italia/components/ItaliaTheme';
 import cx from 'classnames';
 
 /**
@@ -49,6 +50,25 @@ const Downloads = ({ item, titleDoc }) => {
 };
 
 const DocRow = ({ doc }) => {
+  const [itemOpen, setItemOpen] = useState(false);
+
+  const titleWrapper = (
+    <div
+      className={cx('title-wrap', {
+        'single-row': doc.items?.length === 1,
+      })}
+    >
+      <div id={`title-${doc.id}`} className="title">
+        <UniversalLink href={flattenToAppURL(doc['@id'])}>
+          {doc.title}
+        </UniversalLink>
+        {doc?.description && (
+          <p className="description text-muted">{doc.description}</p>
+        )}
+      </div>
+    </div>
+  );
+
   return (
     <div
       className={cx('doc-row', {
@@ -56,35 +76,55 @@ const DocRow = ({ doc }) => {
       })}
       key={doc['@id']}
     >
-      <div className="doc">
-        <div
-          className={cx('title-wrap', {
-            'single-row': doc.items?.length === 1,
-          })}
-        >
-          <div className="title">
-            <UniversalLink href={flattenToAppURL(doc['@id'])}>
-              {doc.title}
-              {/* {doc.items?.length > 1 && ` - ${doc.items[0]?.title}`} */}
-            </UniversalLink>
-          </div>
-          {doc?.description && (
-            <div className="description single-row text-muted">
-              {doc.description}
-            </div>
+      {/*Only title and/or description, no files */}
+      {!doc.items && <div className="doc">{titleWrapper}</div>}
+
+      {/*Single file*/}
+      {doc.items?.length === 1 && (
+        <div className="doc">
+          {titleWrapper}
+          {doc.items?.length === 1 && (
+            <Downloads item={doc.items[0]} titleDoc={doc.title} />
           )}
         </div>
-        {doc.items?.length === 1 && (
-          <Downloads item={doc.items[0]} titleDoc={doc.title} />
-        )}
-      </div>
+      )}
+
+      {/*Accordion*/}
       {doc.items?.length > 1 && (
         <>
-          {doc.items.map((modulo) => (
-            <div className="doc modulo" key={modulo['@id']}>
-              <Downloads item={modulo} titleDoc={null} />
+          <div className="accordion-wrapper">
+            <div id="headingAccordion" className="accordion-header doc">
+              {titleWrapper}
             </div>
-          ))}
+            <button
+              onClick={() => {
+                setItemOpen(itemOpen ? false : true);
+              }}
+              aria-expanded={itemOpen}
+              aria-controls="collapsedContent"
+              aria-labelledby={`title-${doc.id}`}
+            >
+              <Icon
+                color="primary"
+                icon={itemOpen ? 'it-minus' : 'it-plus'}
+                padding={false}
+              />
+            </button>
+          </div>
+          <div
+            id="collapsedContent"
+            className={cx('accordion-content', { open: itemOpen })}
+            role="region"
+            aria-labelledby="headingAccordion"
+          >
+            <div className="accordion-inner">
+              {doc.items.map((modulo) => (
+                <div className="doc modulo" key={modulo['@id']}>
+                  <Downloads item={modulo} titleDoc={null} />
+                </div>
+              ))}
+            </div>
+          </div>
         </>
       )}
     </div>

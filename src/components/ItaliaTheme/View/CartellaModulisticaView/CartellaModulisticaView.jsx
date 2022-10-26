@@ -84,7 +84,7 @@ const CartellaModulisticaView = ({ content }) => {
                   )}
 
                   {section.items?.length > 0 && (
-                    <div className="items">
+                    <div className="accordion items">
                       <div className="items-header">
                         <div></div>
                         <div className="downloads">
