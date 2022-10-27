@@ -1,23 +1,33 @@
 import React from 'react';
-import cx from 'classnames';
 import { Card, CardBody } from 'design-react-kit/dist/design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
+import Highlighter from 'react-highlight-words';
 
-const ResultItem = ({ item, index, section }) => {
+const ResultItem = ({ item, index, section, searchableText }) => {
+  const filteredWords = searchableText.split(' ');
+
   return (
-    <Card
-      teaser
-      noWrapper={true}
-      className={cx('mt-3 mb-2 border-bottom-half', {
-        'border-right border-light': index % 3 !== 2,
-      })}
-    >
-      <CardBody>
+    <Card noWrapper={true} className="mt-3 mb-3">
+      <CardBody className="shadow-sm px-4 pt-4 pb-4 rounded">
         {section}
         <h4 className="card-title">
-          <UniversalLink item={item}>{item.title}</UniversalLink>
+          <UniversalLink item={item}>
+            <Highlighter
+              highlightClassName="highlighted-text"
+              searchWords={filteredWords}
+              autoEscape={true}
+              textToHighlight={item.title}
+            />
+          </UniversalLink>
         </h4>
-        <p className="card-text">{item.description}</p>
+        <p className="text-paragraph">
+          <Highlighter
+            highlightClassName="highlighted-text"
+            searchWords={filteredWords}
+            autoEscape={true}
+            textToHighlight={item.description}
+          />
+        </p>
       </CardBody>
     </Card>
   );

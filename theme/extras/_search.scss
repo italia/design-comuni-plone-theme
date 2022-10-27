@@ -49,11 +49,20 @@ body.search-modal-opened {
 }
 
 .search-results-wrapper {
-  .card.card-teaser {
-    height: 100%;
+  mark.highlighted-text {
+    background-color: $highlight-search;
+  }
 
+  .card {
+    &::after{
+      content: none;
+    }
     .card-body {
-      max-width: 100%;
+      .category-top {
+        .data:before {
+          content: none;
+        }
+      }
     }
   }
 

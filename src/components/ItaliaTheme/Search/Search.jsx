@@ -637,10 +637,11 @@ const Search = () => {
                   </div>
                   <Row>
                     {searchResults?.result?.items?.map((item, index) => (
-                      <Col md={6} key={item['@id']}>
+                      <Col md={12} key={item['@id']} className="p-0">
                         <SearchResultItem
                           item={item}
                           index={index}
+                          searchableText={searchableText}
                           section={getSectionFromId(item['@id'])}
                         />
                       </Col>
