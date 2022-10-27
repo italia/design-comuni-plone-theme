@@ -1,3 +1,27 @@
+## [6.4.0](https://github.com/RedTurtle/design-volto-theme/compare/v6.3.3...v6.4.0) (2022-10-27)
+
+
+### Features
+
+* accordion modulistica ([#595](https://github.com/RedTurtle/design-volto-theme/issues/595)) ([51fbce4](https://github.com/RedTurtle/design-volto-theme/commit/51fbce496ed6de377c57d9c0fa7da4a97ff46c8b)), closes [#592](https://github.com/RedTurtle/design-volto-theme/issues/592) [#593](https://github.com/RedTurtle/design-volto-theme/issues/593) [volto-form-block#v2](https://github.com/RedTurtle/volto-form-block/issues/v2) [#594](https://github.com/RedTurtle/design-volto-theme/issues/594)
+* react-highlight-words implementation inside general Search page ([#587](https://github.com/RedTurtle/design-volto-theme/issues/587)) ([72343d1](https://github.com/RedTurtle/design-volto-theme/commit/72343d1f822a4da9952c5493178905f0e0bfb1d1))
+
+
+### Bug Fixes
+
+* a11y-focus fixed inside editor ([#596](https://github.com/RedTurtle/design-volto-theme/issues/596)) ([17f375a](https://github.com/RedTurtle/design-volto-theme/commit/17f375a76f750c917d5476ee7c2206be6fbb1351))
+* customize password reset routes until we use Volto 16 (volto [#3448](https://github.com/RedTurtle/design-volto-theme/issues/3448)) ([#602](https://github.com/RedTurtle/design-volto-theme/issues/602)) ([40ac240](https://github.com/RedTurtle/design-volto-theme/commit/40ac24014bede155ca355dedff9a954c8d1c6d97))
+* fixed accordion height in cartellaModulistica ([52acab5](https://github.com/RedTurtle/design-volto-theme/commit/52acab5e059388fc452cffd98a4090f95d1069b5))
+* fixed more action from the toolbar ([#601](https://github.com/RedTurtle/design-volto-theme/issues/601)) ([e343b44](https://github.com/RedTurtle/design-volto-theme/commit/e343b44e780900aab22720a8266a5c2d640e14f0))
+* table horizontal scroll on mobile ([#600](https://github.com/RedTurtle/design-volto-theme/issues/600)) ([eff89bf](https://github.com/RedTurtle/design-volto-theme/commit/eff89bf1097bc4dfa0bb7a433e6e862174a2bdb4))
+* word-break setted to normal only insite footer-small-prints ([#594](https://github.com/RedTurtle/design-volto-theme/issues/594)) ([c5c2956](https://github.com/RedTurtle/design-volto-theme/commit/c5c29569e5dc2ad648357dd8606c4ef5eaabfa22))
+
+
+### Maintenance
+
+* description added to document on modulistica folder ([#597](https://github.com/RedTurtle/design-volto-theme/issues/597)) ([9d571bb](https://github.com/RedTurtle/design-volto-theme/commit/9d571bbf32fe1645d3e1d8e5b2cc87f5d0125b28))
+* description added to gallery image popup ([#603](https://github.com/RedTurtle/design-volto-theme/issues/603)) ([59bebef](https://github.com/RedTurtle/design-volto-theme/commit/59bebefe9db1b79cd74749fd25b7e8649f4ba51b))
+
 ### [6.3.3](https://github.com/RedTurtle/design-volto-theme/compare/v6.3.2...v6.3.3) (2022-10-19)
 
 
