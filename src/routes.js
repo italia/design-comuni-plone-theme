@@ -5,6 +5,7 @@
 
 import { App, Search, Contents } from '@plone/volto/components';
 import { defaultRoutes, multilingualRoutes } from '@plone/volto/routes';
+import { PasswordReset, RequestPasswordReset } from '@plone/volto/components'; // TO DO: DA RIMUOVERE QUANDO AGGIORNIAMO A VOLTO16
 import config from '@plone/volto/registry';
 
 export const italiaRoutes = [
@@ -17,6 +18,28 @@ export const italiaRoutes = [
   {
     path: ['/contents', '/**/contents'],
     component: Contents,
+  },
+  {
+    path: `/(${config.settings?.supportedLanguages.join('|')})/passwordreset`,
+    component: RequestPasswordReset,
+    exact: true,
+  },
+  {
+    path: `/(${config.settings?.supportedLanguages.join(
+      '|',
+    )})/passwordreset/:token`,
+    component: PasswordReset,
+    exact: true,
+  },
+  {
+    path: '/passwordreset',
+    component: RequestPasswordReset,
+    exact: true,
+  },
+  {
+    path: '/passwordreset/:token',
+    component: PasswordReset,
+    exact: true,
   },
 ];
 
