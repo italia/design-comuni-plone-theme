@@ -74,9 +74,12 @@ const GalleryPreview = ({ id, viewIndex, setViewIndex, items }) => {
             closeAriaLabel={intl.formatMessage(messages.close_preview)}
             toggle={closeModal}
           >
-            {items[viewIndex].title}{' '}
+            {items[viewIndex].title}
           </ModalHeader>
           <ModalBody>
+            {items[viewIndex].description && (
+              <p className="pb-3">{items[viewIndex].description}</p>
+            )}
             <div className="item-preview">
               {items.length > 1 && (
                 <Button
@@ -93,7 +96,6 @@ const GalleryPreview = ({ id, viewIndex, setViewIndex, items }) => {
                   <Icon color="" icon="it-arrow-left" padding={false} />
                 </Button>
               )}
-
               <div className="image">
                 {items[viewIndex].image ? (
                   <img
