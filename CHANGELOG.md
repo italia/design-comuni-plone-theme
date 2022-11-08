@@ -1,3 +1,22 @@
+## [6.5.0](https://github.com/RedTurtle/design-volto-theme/compare/v6.4.0...v6.5.0) (2022-11-08)
+
+
+### Features
+
+* added data element attribute (lighthouse_id) in listing block ([#607](https://github.com/RedTurtle/design-volto-theme/issues/607)) ([0f03480](https://github.com/RedTurtle/design-volto-theme/commit/0f03480d7a1c7e2600bf063e86dfbd557e1437c9))
+
+
+### Bug Fixes
+
+* conditional added to backgroundImage on single card ([b3b2e58](https://github.com/RedTurtle/design-volto-theme/commit/b3b2e583b992a464d299767ee1a96199e863ce2d))
+* fixed arrows and dots stiles of slider listing template ([#608](https://github.com/RedTurtle/design-volto-theme/issues/608)) ([9b941ae](https://github.com/RedTurtle/design-volto-theme/commit/9b941ae50b71c20c7e489716a88ede53c6e570c6))
+* fixed person image inside card with image template ([#606](https://github.com/RedTurtle/design-volto-theme/issues/606)) ([5f003ec](https://github.com/RedTurtle/design-volto-theme/commit/5f003ec2afabb3b46faff6430c65c1e51ed5badc))
+
+
+### Maintenance
+
+* updated i18n ([604f9b6](https://github.com/RedTurtle/design-volto-theme/commit/604f9b6dfc78597ce45487e2356f3899c394ac42))
+
 ## [6.4.0](https://github.com/RedTurtle/design-volto-theme/compare/v6.3.3...v6.4.0) (2022-10-27)
 
 
