@@ -683,11 +683,6 @@ msgstr ""
 msgid "actions"
 msgstr ""
 
-#: config/Blocks/ListingOptions/utils
-# defaultMessage: administration-element
-msgid "administration-element"
-msgstr ""
-
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Vai alla ricerca per sezioni avanzata
 msgid "advandedSectionsFilters"
@@ -2856,16 +2851,6 @@ msgstr ""
 msgid "select_risultato"
 msgstr ""
 
-#: config/Blocks/ListingOptions/utils
-# defaultMessage: service-category-link
-msgid "service-category-link"
-msgstr ""
-
-#: config/Blocks/ListingOptions/utils
-# defaultMessage: service-link
-msgid "service-link"
-msgstr ""
-
 #: components/ItaliaTheme/View/ServizioView/ServizioCosE
 # defaultMessage: Cos'è
 msgid "service_cos_e"
@@ -3195,11 +3180,6 @@ msgstr ""
 #: helpers/ListingHelper
 # defaultMessage: al
 msgid "to"
-msgstr ""
-
-#: config/Blocks/ListingOptions/utils
-# defaultMessage: topic-element
-msgid "topic-element"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
