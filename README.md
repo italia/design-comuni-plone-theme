@@ -1,6 +1,6 @@
 # Tema di Plone per la Pubblica Amministrazione
 
-[io-Comune] (https://www.io-comune.it/) è il tema Volto per il CMS [Plone](https://plone.org/) che rispetta le indicazioni [Linee guida di design per i servizi digitali della PA](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/it/stabile/index.html) usando [bootstrap-italia](https://italia.github.io/bootstrap-italia/).
+[io-Comune](https://www.io-comune.it/) è il tema Volto per il CMS [Plone](https://plone.org/) che rispetta le indicazioni [Linee guida di design per i servizi digitali della PA](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/it/stabile/index.html) usando [bootstrap-italia](https://italia.github.io/bootstrap-italia/).
 
 E' basato sulle linee guida versione 2020.1 e questo tema estende il tema base di Volto [design.plone.theme](https://github.com/italia/design.plone.theme/).
 
