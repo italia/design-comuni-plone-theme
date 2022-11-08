@@ -15,6 +15,7 @@ const SquaresImageTemplate = ({
   isEditMode,
   linkTitle,
   linkHref,
+  id_lighthouse,
 }) => {
   return (
     <div className="squares-image-template">
@@ -33,6 +34,7 @@ const SquaresImageTemplate = ({
                 }}
                 className="listing-item box bg-img"
                 key={index}
+                data-element={id_lighthouse}
               >
                 <span className="title font-weight-bold">{item?.title}</span>
               </UniversalLink>

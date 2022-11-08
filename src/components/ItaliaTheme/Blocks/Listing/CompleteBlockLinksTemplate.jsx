@@ -20,6 +20,7 @@ const CompleteBlockLinksTemplate = ({
   linkHref,
   show_block_bg,
   show_description = true,
+  id_lighthouse,
 }) => {
   return (
     <div className="complete-block-links-template">
@@ -46,6 +47,7 @@ const CompleteBlockLinksTemplate = ({
                   <UniversalLink
                     item={!isEditMode ? item : null}
                     href={isEditMode ? '#' : null}
+                    data-element={id_lighthouse}
                   >
                     <div className="d-flex">
                       {image && <div className="image-container">{image}</div>}

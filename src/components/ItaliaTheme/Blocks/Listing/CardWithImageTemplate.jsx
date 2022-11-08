@@ -46,6 +46,7 @@ const CardWithImageTemplate = (props) => {
     show_topics = true,
     hide_dates = false,
     natural_image_size = false,
+    id_lighthouse,
   } = props;
 
   const imagesToShow = set_four_columns ? 4 : 3;
@@ -130,6 +131,7 @@ const CardWithImageTemplate = (props) => {
                         <UniversalLink
                           item={!isEditMode ? item : null}
                           href={isEditMode ? '#' : ''}
+                          data-element={id_lighthouse}
                         >
                           {item.title || item.id}
                         </UniversalLink>

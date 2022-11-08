@@ -230,6 +230,16 @@ msgstr "Hide all content types"
 msgid "Home"
 msgstr ""
 
+#: config/Blocks/ListingOptions/utils
+# defaultMessage: ID Lighthouse
+msgid "ID Lighthouse"
+msgstr ""
+
+#: config/Blocks/ListingOptions/utils
+# defaultMessage: Identificativo di servizio a solo uso interno, utilizzato per le verifiche AgID inerenti al PNRR.
+msgid "ID Lighthouse Help Description"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 # defaultMessage: Seleziona le icone dalla barra a lato
 msgid "Icons placeholder"
@@ -665,6 +675,11 @@ msgstr ""
 # defaultMessage: Vedi azioni
 msgid "actions"
 msgstr "View actions"
+
+#: config/Blocks/ListingOptions/utils
+# defaultMessage: administration-element
+msgid "administration-element"
+msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Vai alla ricerca per sezioni avanzata
@@ -2834,6 +2849,16 @@ msgstr ""
 msgid "select_risultato"
 msgstr ""
 
+#: config/Blocks/ListingOptions/utils
+# defaultMessage: service-category-link
+msgid "service-category-link"
+msgstr ""
+
+#: config/Blocks/ListingOptions/utils
+# defaultMessage: service-link
+msgid "service-link"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioCosE
 # defaultMessage: Cos'è
 msgid "service_cos_e"
@@ -3164,6 +3189,11 @@ msgstr "title"
 # defaultMessage: al
 msgid "to"
 msgstr "to"
+
+#: config/Blocks/ListingOptions/utils
+# defaultMessage: topic-element
+msgid "topic-element"
+msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 #: components/ItaliaTheme/Search/Search

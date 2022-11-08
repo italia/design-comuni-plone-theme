@@ -49,6 +49,15 @@ const messages = defineMessages({
     id: 'Path filter filtro',
     defaultMessage: 'Filtro',
   },
+  id_lighthouse: {
+    id: 'ID Lighthouse',
+    defaultMessage: 'ID Lighthouse',
+  },
+  id_lighthouse_description: {
+    id: 'ID Lighthouse Help Description',
+    defaultMessage:
+      'Identificativo di servizio a solo uso interno, utilizzato per le verifiche AgID inerenti al PNRR.',
+  },
 });
 
 export const addSchemaField = (
@@ -128,6 +137,30 @@ export const templatesOptions = (
     }
     pos++;
   });
+
+  return pos;
+};
+
+export const addLighthouseField = (schema, intl, position = 0) => {
+  let pos = position;
+
+  addSchemaField(
+    schema,
+    'id_lighthouse',
+    intl.formatMessage(messages.id_lighthouse),
+    intl.formatMessage(messages.id_lighthouse_description),
+    {
+      choices: [
+        ['service-category-link', 'service-category-link'],
+        ['topic-element', 'topic-element'],
+        ['service-link', 'service-link'],
+        ['administration-element', 'administration-element'],
+      ],
+      /* default: 'medium', */
+    },
+    pos,
+  );
+  pos++;
 
   return pos;
 };

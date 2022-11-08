@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2022-10-05T10:57:53.086Z\n"
+"POT-Creation-Date: 2022-11-02T10:44:36.493Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -230,6 +230,16 @@ msgstr ""
 #: components/ItaliaTheme/Breadcrumbs/Breadcrumbs
 # defaultMessage: Home
 msgid "Home"
+msgstr ""
+
+#: config/Blocks/ListingOptions/utils
+# defaultMessage: ID Lighthouse
+msgid "ID Lighthouse"
+msgstr ""
+
+#: config/Blocks/ListingOptions/utils
+# defaultMessage: Identificativo di servizio a solo uso interno, utilizzato per le verifiche AgID inerenti al PNRR.
+msgid "ID Lighthouse Help Description"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
@@ -666,6 +676,11 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/Actions
 # defaultMessage: Vedi azioni
 msgid "actions"
+msgstr ""
+
+#: config/Blocks/ListingOptions/utils
+# defaultMessage: administration-element
+msgid "administration-element"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
@@ -2836,6 +2851,16 @@ msgstr ""
 msgid "select_risultato"
 msgstr ""
 
+#: config/Blocks/ListingOptions/utils
+# defaultMessage: service-category-link
+msgid "service-category-link"
+msgstr ""
+
+#: config/Blocks/ListingOptions/utils
+# defaultMessage: service-link
+msgid "service-link"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioCosE
 # defaultMessage: Cos'è
 msgid "service_cos_e"
@@ -3165,6 +3190,11 @@ msgstr ""
 #: helpers/ListingHelper
 # defaultMessage: al
 msgid "to"
+msgstr ""
+
+#: config/Blocks/ListingOptions/utils
+# defaultMessage: topic-element
+msgid "topic-element"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal

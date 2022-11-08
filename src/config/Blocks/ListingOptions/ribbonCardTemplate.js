@@ -1,6 +1,11 @@
 import { defineMessages } from 'react-intl';
 
-import { templatesOptions } from '@italia/config/Blocks/ListingOptions';
+import {
+  templatesOptions,
+  addDefaultOptions,
+} from '@italia/config/Blocks/ListingOptions';
+
+import { addLighthouseField } from '@italia/config/Blocks/ListingOptions/utils';
 
 const messages = defineMessages({
   show_only_first_ribbon: {
@@ -16,6 +21,10 @@ export const addRibbonCardTemplateOptions = (
   position = 0,
 ) => {
   let pos = position;
+
+  pos = addLighthouseField(schema, intl, pos);
+
+  pos = addDefaultOptions(schema, formData, intl, pos);
 
   pos = templatesOptions(
     schema,

@@ -60,6 +60,8 @@ import {
   addPhotogalleryTemplateOptions,
 } from '@italia/config/Blocks/ListingOptions';
 
+import { addLighthouseField } from '@italia/config/Blocks/ListingOptions/utils';
+
 const italiaListingVariations = [
   {
     id: 'simpleCard',
@@ -78,8 +80,7 @@ const italiaListingVariations = [
     template: CardWithImageTemplate,
     skeleton: CardWithImageTemplateSkeleton,
     schemaEnhancer: ({ schema, formData, intl }) => {
-      let pos = addDefaultOptions(schema, formData, intl);
-      addCardWithImageTemplateOptions(schema, formData, intl, pos);
+      addCardWithImageTemplateOptions(schema, formData, intl);
       return schema;
     },
   },
@@ -90,8 +91,7 @@ const italiaListingVariations = [
     template: InEvidenceTemplate,
     skeleton: InEvidenceTemplateSkeleton,
     schemaEnhancer: ({ schema, formData, intl }) => {
-      let pos = addDefaultOptions(schema, formData, intl);
-      addInEvidenceTemplateOptions(schema, formData, intl, pos);
+      addInEvidenceTemplateOptions(schema, formData, intl);
       return schema;
     },
   },
@@ -102,7 +102,8 @@ const italiaListingVariations = [
     template: ContentInEvidenceTemplate,
     skeleton: ContentInEvidenceTemplateSkeleton,
     schemaEnhancer: ({ schema, formData, intl }) => {
-      /*let pos = */ addDefaultOptions(schema, formData, intl);
+      let pos = addLighthouseField(schema, intl);
+      addDefaultOptions(schema, formData, intl, pos);
       return schema;
     },
   },
@@ -113,8 +114,7 @@ const italiaListingVariations = [
     template: RibbonCardTemplate,
     skeleton: RibbonCardTemplateSkeleton,
     schemaEnhancer: ({ schema, formData, intl }) => {
-      let pos = addDefaultOptions(schema, formData, intl);
-      addRibbonCardTemplateOptions(schema, formData, intl, pos);
+      addRibbonCardTemplateOptions(schema, formData, intl);
       return schema;
     },
   },
@@ -125,8 +125,7 @@ const italiaListingVariations = [
     template: CardWithSlideUpTextTemplate,
     skeleton: CardWithSlideUpTextTemplateSkeleton,
     schemaEnhancer: ({ schema, formData, intl }) => {
-      let pos = addDefaultOptions(schema, formData, intl);
-      addCardWithSlideUpTextTemplateOptions(schema, formData, intl, pos);
+      addCardWithSlideUpTextTemplateOptions(schema, formData, intl);
       return schema;
     },
   },
@@ -137,7 +136,8 @@ const italiaListingVariations = [
     template: SquaresImageTemplate,
     skeleton: SquaresImageTemplateSkeleton,
     schemaEnhancer: ({ schema, formData, intl }) => {
-      /*let pos = */ addDefaultOptions(schema, formData, intl);
+      let pos = addLighthouseField(schema, intl);
+      addDefaultOptions(schema, formData, intl, pos);
       return schema;
     },
   },
@@ -171,8 +171,7 @@ const italiaListingVariations = [
     template: CompleteBlockLinksTemplate,
     skeleton: CompleteBlockLinksTemplateSkeleton,
     schemaEnhancer: ({ schema, formData, intl }) => {
-      let pos = addDefaultOptions(schema, formData, intl);
-      addCompleteBlockLinksTemplateOptions(schema, formData, intl, pos);
+      addCompleteBlockLinksTemplateOptions(schema, formData, intl);
       return schema;
     },
   },

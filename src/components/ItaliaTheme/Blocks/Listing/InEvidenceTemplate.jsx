@@ -44,6 +44,7 @@ const InEvidenceTemplate = (props) => {
     hide_dates,
     linkTitle,
     linkHref,
+    id_lighthouse,
   } = props;
 
   return (
@@ -111,6 +112,7 @@ const InEvidenceTemplate = (props) => {
                     <UniversalLink
                       item={!isEditMode ? item : null}
                       href={isEditMode ? '#' : null}
+                      data-element={id_lighthouse}
                     >
                       {item.title || item.id}
                     </UniversalLink>

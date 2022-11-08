@@ -36,6 +36,7 @@ const CardWithSlideUpTextTemplate = (props) => {
     show_section,
     show_description = true,
     hide_dates = false,
+    id_lighthouse,
   } = props;
 
   return (
@@ -59,6 +60,7 @@ const CardWithSlideUpTextTemplate = (props) => {
                 }
                 className="listing-item box bg-img"
                 key={index}
+                data-element={id_lighthouse}
               >
                 <div className="bg-gradient"></div>
                 {(category || date) && (

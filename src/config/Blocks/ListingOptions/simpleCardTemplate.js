@@ -6,6 +6,8 @@ import {
   templatesOptions,
 } from '@italia/config/Blocks/ListingOptions';
 
+import { addLighthouseField } from '@italia/config/Blocks/ListingOptions/utils';
+
 const messages = defineMessages({
   appearance: {
     id: 'Aspetto',
@@ -32,6 +34,9 @@ export const addSimpleCardTemplateOptions = (
   position = 0,
 ) => {
   let pos = position;
+
+  pos = addLighthouseField(schema, intl, pos);
+
   addSchemaField(
     schema,
     'appearance',

@@ -24,6 +24,7 @@ const SimpleCardTemplateCompact = ({
   show_icon = true,
   show_block_bg,
   title,
+  id_lighthouse,
 }) => {
   return (
     <div className="simple-card-compact-template">
@@ -52,6 +53,7 @@ const SimpleCardTemplateCompact = ({
                 <UniversalLink
                   item={!isEditMode ? item : null}
                   href={isEditMode ? '#' : null}
+                  data-element={id_lighthouse}
                 >
                   {item.title || item.id}
                 </UniversalLink>

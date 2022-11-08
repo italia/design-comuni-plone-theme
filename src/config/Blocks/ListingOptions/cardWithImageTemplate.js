@@ -1,6 +1,11 @@
 import { defineMessages } from 'react-intl';
 
-import { templatesOptions } from '@italia/config/Blocks/ListingOptions';
+import {
+  templatesOptions,
+  addDefaultOptions,
+} from '@italia/config/Blocks/ListingOptions';
+
+import { addLighthouseField } from '@italia/config/Blocks/ListingOptions/utils';
 
 const messages = defineMessages({
   always_show_image: {
@@ -28,6 +33,10 @@ export const addCardWithImageTemplateOptions = (
   position = 0,
 ) => {
   let pos = position;
+
+  pos = addLighthouseField(schema, intl, pos);
+
+  pos = addDefaultOptions(schema, formData, intl, pos);
 
   pos = templatesOptions(
     schema,
@@ -63,5 +72,6 @@ export const addCardWithImageTemplateOptions = (
     },
     pos,
   );
+
   return pos;
 };
