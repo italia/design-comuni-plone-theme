@@ -36,6 +36,7 @@ Si veda ad esempio:
 - [Comune di Santilario d'Enza](https://www.comune.santilariodenza.re.it/)
 - [Comune di Vaiano](https://www.comune.vaiano.po.it/)
 - [Comune di Vernio](https://www.comune.vernio.po.it/)
+- [Comando Generale della Guardia di Finanza](https://www.gdf.gov.it/it)
 - [NNB Ispra Ambiente](https://www.nnb.isprambiente.it)
 - [Nuovo Circondario Imolese](https://www.nuovocircondarioimolese.it)
 - [Ospedali Galliera - Bilancio Sociale](https://bilanciosociale.galliera.it)
