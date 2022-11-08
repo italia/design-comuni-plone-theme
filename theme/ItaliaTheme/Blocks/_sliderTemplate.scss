@@ -46,12 +46,16 @@
     .icon {
       width: 25px;
       height: 40px;
+      color: lighten($primary, 40%);
+      fill: lighten($primary, 40%);
+    }
+    &:hover .icon {
       color: $primary;
       fill: $primary;
     }
 
     &.slick-prev {
-      left: -30px;
+      left: -40px;
       outline: none !important;
 
       &:before {
@@ -60,7 +64,7 @@
     }
 
     &.slick-next {
-      right: -30px;
+      right: -40px;
       outline: none !important;
 
       &:before {
@@ -69,19 +73,15 @@
     }
   }
 
-  .slick-dots {
+  ul.slick-dots {
     position: unset;
     bottom: unset;
-
-    ul {
-      padding: 0;
-      margin: 0;
-
-      li {
-        button {
-          &:before {
-            font-size: 0.8rem;
-          }
+    margin-top: 0.5rem !important;
+    li {
+      margin: 0 10px;
+      button {
+        &::before {
+          font-size: 1rem;
         }
       }
     }
