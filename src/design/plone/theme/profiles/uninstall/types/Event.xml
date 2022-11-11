@@ -7,7 +7,7 @@
 
   <!-- Enabled behaviors -->
   <property name="behaviors" purge="false">
-    <element value="plone.app.contenttypes.behaviors.leadimage.ILeadImage" remove="True"/>
+    <element value"plone.leadimage" remove="True"/>
   </property>
 
 </object>
