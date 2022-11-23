@@ -51,7 +51,7 @@ const BandoApprofondimenti = ({ content }) => {
             padding={false}
           />
           <CardBody>
-            <CardTitle tag="h3" className="title">
+            <CardTitle tag="h5" className="title">
               <UniversalLink
                 href={flattenToAppURL(item.url)}
                 rel="noopener noreferrer"
@@ -71,7 +71,7 @@ const BandoApprofondimenti = ({ content }) => {
         >
           <Icon className={undefined} icon={'it-file'} padding={false} />
           <CardBody>
-            <CardTitle tag="h3" className="title">
+            <CardTitle tag="h5" className="title">
               <UniversalLink
                 item={{
                   ...item,
