@@ -7,13 +7,9 @@ import React from 'react';
 import { compose } from 'redux';
 import { injectIntl, defineMessages } from 'react-intl';
 
-import {
-  injectDNDSubblocks,
-  SubblockEdit,
-  Subblock,
-} from '@italia/addons/volto-subblocks';
+import { injectDNDSubblocks, SubblockEdit, Subblock } from 'volto-subblocks';
 
-import { TextEditorWidget } from '@italia/components/ItaliaTheme';
+import { TextEditorWidget } from 'design-volto-theme/components/ItaliaTheme';
 
 const messages = defineMessages({
   numberPlaceholder: {

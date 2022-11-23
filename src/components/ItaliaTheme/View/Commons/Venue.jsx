@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
-import { RichText } from '@italia/components/ItaliaTheme/View';
+import { RichText } from 'design-volto-theme/components/ItaliaTheme/View';
 /**
  * Venue view component class.
  * @function Venue

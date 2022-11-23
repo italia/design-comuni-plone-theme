@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { OfficeCard } from '@italia/components/ItaliaTheme/View';
+import { OfficeCard } from 'design-volto-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   cured_by: {

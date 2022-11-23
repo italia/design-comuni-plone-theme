@@ -1,3 +1,28 @@
+@use 'bootstrap-italia/custom/header' as bs-header;
+@use 'bootstrap-italia/custom/headercenter' as bs-headercenter;
+@use 'bootstrap-italia/brand-text' as bs-brandtext;
+@use 'bootstrap-italia/custom/headernavbar' as bs-headernavbar;
+@use 'bootstrap-italia/custom/headerslim' as bs-headerslim;
+@use 'bootstrap-italia/custom/navigation' as bs-navigation;
+@use 'bootstrap-italia/custom/nav' as bs-nav;
+@use 'bootstrap-italia/custom/megamenu' as bs-megamenu;
+@use 'bootstrap-italia/custom/buttons' as bs-buttons;
+@use 'bootstrap-italia/custom/chips' as bs-chips;
+@use 'bootstrap-italia/custom/card' as bs-card;
+@use 'bootstrap-italia/custom/dropdown' as bs-dropdown;
+@use 'bootstrap-italia/custom/linklist' as bs-linklist;
+@use 'bootstrap-italia/custom/navscroll' as bs-navscroll;
+@use 'ItaliaTheme/Components/subsiteFooter' as it-footer;
+@use 'ItaliaTheme/Blocks/cardWithImageAndInEvidence' as it-card-image-evidence;
+@use 'ItaliaTheme/Blocks/completeBlockLinktemplate' as it-complete-link;
+@use 'ItaliaTheme/Blocks/ribbonCardTemplate' as it-ribbon-card;
+@use 'ItaliaTheme/Blocks/highlitedContent' as it-highlight;
+@use 'ItaliaTheme/Blocks/argumentsInEvidence' as it-args-evidence;
+@use 'ItaliaTheme/Blocks/searchSections' as it-search-sections;
+@use 'ItaliaTheme/Blocks/twitterPosts' as it-twitter;
+@use 'ItaliaTheme/Views/common' as it-views;
+@use 'ItaliaTheme/common' as it-common;
+
 @mixin define-subsite(
   $subsite-style,
   $subsite-primary: $primary,
@@ -12,31 +37,73 @@
   body.subsite-#{$subsite-style} {
     &,
     .public-ui {
-      @import 'bootstrap-italia/custom/header';
-      @import 'bootstrap-italia/custom/headercenter';
-      @import 'bootstrap-italia/brand-text';
-      @import 'bootstrap-italia/custom/headernavbar';
-      @import 'bootstrap-italia/custom/headerslim';
-      @import 'bootstrap-italia/custom/navigation';
-      @import 'bootstrap-italia/custom/nav';
-      @import 'bootstrap-italia/custom/megamenu';
-      @import 'bootstrap-italia/custom/header';
-      @import 'bootstrap-italia/custom/buttons';
-      @import 'bootstrap-italia/custom/chips';
-      @import 'bootstrap-italia/custom/card';
-      @import 'bootstrap-italia/custom/dropdown';
-      @import 'bootstrap-italia/custom/linklist';
-      @import 'bootstrap-italia/custom/navscroll';
-      @import 'ItaliaTheme/Components/subsiteFooter';
-      @import 'ItaliaTheme/Blocks/cardWithImageAndInEvidence';
-      @import 'ItaliaTheme/Blocks/completeBlockLinktemplate';
-      @import 'ItaliaTheme/Blocks/ribbonCardTemplate';
-      @import 'ItaliaTheme/Blocks/highlitedContent';
-      @import 'ItaliaTheme/Blocks/argumentsInEvidence';
-      @import 'ItaliaTheme/Blocks/searchSections';
-      @import 'ItaliaTheme/Blocks/twitterPosts';
-      @import 'ItaliaTheme/Views/common';
-      @import 'ItaliaTheme/common';
+      @include bs-header.header(
+        $subsite-light-theme,
+        $subsite-primary,
+        $subsite-primary-text
+      );
+      @include bs-headercenter.headercenter(
+        $subsite-light-theme,
+        $subsite-primary,
+        $subsite-primary-text
+      );
+      @include bs-brandtext.text($subsite-primary, $subsite-primary-text);
+      @include bs-headernavbar.navbar($subsite-primary);
+      @include bs-headerslim.header($subsite-primary-text);
+      @include bs-navigation.nav(
+        $subsite-light-theme,
+        $subsite-primary,
+        $subsite-primary-text,
+        $subsite-link-color
+      );
+      @include bs-nav.nav($subsite-link-color);
+      @include bs-megamenu.megamenu(
+        $subsite-light-theme,
+        $subsite-primary,
+        $subsite-primary-text
+      );
+      @include bs-buttons.buttons(
+        $subsite-light-theme,
+        $subsite-primary,
+        $subsite-primary-text,
+        $subsite-secondary,
+        $subsite-secondary-text,
+        $subsite-tertiary,
+        $subsite-tertiary-text
+      );
+      @include bs-chips.chips(
+        $subsite-light-theme,
+        $subsite-primary,
+        $subsite-primary-text,
+        $subsite-secondary,
+        $subsite-secondary-text
+      );
+      @include bs-card.card($subsite-primary, $subsite-link-color);
+      @include bs-dropdown.dropdown($subsite-link-color);
+      @include bs-linklist.linklist($subsite-primary, $subsite-link-color);
+      @include bs-navscroll.navscroll($subsite-link-color);
+      @include it-footer.footer($subsite-primary, $subsite-primary-text);
+      @include it-card-image-evidence.card($subsite-link-color);
+      @include it-complete-link.block(
+        $subsite-secondary,
+        $subsite-secondary-text
+      );
+      @include it-ribbon-card.card($subsite-link-color);
+      @include it-highlight.block($subsite-link-color);
+      @include it-args-evidence.block($subsite-primary, $subsite-primary-text);
+      @include it-search-sections.block(
+        $subsite-primary,
+        $subsite-secondary,
+        $subsite-secondary-text
+      );
+      @include it-twitter.block();
+      @include it-views.common(
+        $subsite-primary,
+        $subsite-secondary,
+        $subsite-tertiary,
+        $subsite-link-color
+      );
+      @include it-common.common($subsite-tertiary, $subsite-tertiary-text);
 
       a,
       &.cms-ui .public-ui a {

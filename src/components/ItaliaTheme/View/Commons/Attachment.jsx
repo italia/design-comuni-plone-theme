@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { Icon } from '@italia/components/ItaliaTheme';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
 
 const messages = defineMessages({
   attachment: {

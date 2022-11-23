@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { useIntl, defineMessages } from 'react-intl';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { OSMMap } from '@italia/addons/volto-venue';
+import { OSMMap } from 'volto-venue';
 import PropTypes from 'prop-types';
 
 /**

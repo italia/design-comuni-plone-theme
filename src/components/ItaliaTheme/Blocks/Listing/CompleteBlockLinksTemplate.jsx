@@ -10,7 +10,10 @@ import {
   Row,
   Col,
 } from 'design-react-kit/dist/design-react-kit';
-import { ListingLinkMore, ListingImage } from '@italia/components/ItaliaTheme';
+import {
+  ListingLinkMore,
+  ListingImage,
+} from 'design-volto-theme/components/ItaliaTheme';
 
 const CompleteBlockLinksTemplate = ({
   items,

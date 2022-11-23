@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { defineMessages, useIntl } from 'react-intl';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { Icon } from '@italia/components/ItaliaTheme';
-import { GenericCard } from '@italia/components/ItaliaTheme/View';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
+import { GenericCard } from 'design-volto-theme/components/ItaliaTheme/View';
 
 const SITE_SECTIONS = {
   amministrazione: { icon: 'it-pa' },

@@ -11,8 +11,8 @@ import PropTypes from 'prop-types';
 import {
   TrasparenzaPlaceholderAfterContent,
   PageHeader,
-} from '@italia/components/ItaliaTheme/View';
-import { getAmministrazioneTrasparenteTree } from '@italia/actions';
+} from 'design-volto-theme/components/ItaliaTheme/View';
+import { getAmministrazioneTrasparenteTree } from 'design-volto-theme/actions';
 import { LinkList, LinkListItem } from 'design-react-kit/dist/design-react-kit';
 
 /**

@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import BodyWrapper from '@italia/components/ItaliaTheme/Blocks/CTABlock/BodyWrapper';
+import BodyWrapper from 'design-volto-theme/components/ItaliaTheme/Blocks/CTABlock/BodyWrapper';
 
-import Block from '@italia/components/ItaliaTheme/Blocks/CTABlock/Block';
+import Block from 'design-volto-theme/components/ItaliaTheme/Blocks/CTABlock/Block';
 
 const View = ({ data }) => (
   <BodyWrapper inEditMode={false}>

@@ -4,7 +4,7 @@
 import { defineMessages, useIntl } from 'react-intl';
 import React, { useEffect, useState } from 'react';
 import { throttle } from 'lodash';
-import { Icon } from '@italia/components/ItaliaTheme';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
 
 const messages = defineMessages({
   index: {

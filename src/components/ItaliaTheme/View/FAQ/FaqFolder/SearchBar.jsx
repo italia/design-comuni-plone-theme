@@ -6,7 +6,7 @@
 import React, { useState } from 'react';
 import { useIntl, defineMessages } from 'react-intl';
 import { Container } from 'design-react-kit/dist/design-react-kit';
-import { Icon } from '@italia/components/ItaliaTheme';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
 
 const messages = defineMessages({
   search_faq: {

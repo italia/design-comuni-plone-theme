@@ -1,4 +1,4 @@
-import { ORIGINAL_QUERY } from '@italia/actions';
+import { ORIGINAL_QUERY } from 'design-volto-theme/actions';
 
 const initialState = {};
 

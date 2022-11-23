@@ -7,7 +7,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 
-import { Breadcrumbs as ItaliaBreadcrumbs } from '@italia/components/ItaliaTheme';
+import { Breadcrumbs as ItaliaBreadcrumbs } from 'design-volto-theme/components/ItaliaTheme';
 
 const Breadcrumbs = ({ pathname }) => {
   let brdc = ItaliaBreadcrumbs({ pathname: pathname });

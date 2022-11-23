@@ -5,7 +5,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import {
   RichTextArticle,
   OfficeCard,
-} from '@italia/components/ItaliaTheme/View';
+} from 'design-volto-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   contatti: {

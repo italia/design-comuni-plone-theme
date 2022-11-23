@@ -1,11 +1,15 @@
-.block.listing .card-with-image-template,
-.block.listing .in-evidence {
-  .listing-item {
-    .card-title {
-      a {
-        &:hover,
-        &:focus {
-          color: $subsite-link-color;
+@use '../../all_variables' as *;
+
+@mixin card($subsite-link-color) {
+  .block.listing .card-with-image-template,
+  .block.listing .in-evidence {
+    .listing-item {
+      .card-title {
+        a {
+          &:hover,
+          &:focus {
+            color: $subsite-link-color;
+          }
         }
       }
     }

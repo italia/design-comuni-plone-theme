@@ -7,10 +7,7 @@ import React, { useEffect } from 'react';
 import { isMatch } from 'lodash';
 import { useIntl, defineMessages } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  getSecondaryMenu,
-  getItemsByPath,
-} from '@italia/addons/volto-secondarymenu';
+import { getSecondaryMenu, getItemsByPath } from 'volto-secondarymenu';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
 import { Nav, NavItem, NavLink } from 'design-react-kit/dist/design-react-kit';

@@ -3,7 +3,7 @@
  * @module src/reducers/getSearchFiltersReducer
  */
 
-import { GET_SEARCH_FILTERS } from '@italia/actions';
+import { GET_SEARCH_FILTERS } from 'design-volto-theme/actions';
 
 const initialState = {
   error: null,

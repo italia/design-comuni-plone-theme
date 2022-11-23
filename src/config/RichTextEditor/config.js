@@ -8,12 +8,12 @@ import Plugins from '@plone/volto/config/RichTextEditor/Plugins';
 import Blocks from '@plone/volto/config/RichTextEditor/Blocks';
 //import FromHTMLCustomBlockFn from '@plone/volto/config/RichTextEditor/FromHTML';
 
-import UnderlineButton from '@italia/config/RichTextEditor/ToolbarButtons/UnderlineButton';
-import HeadingsButton from '@italia/config/RichTextEditor/ToolbarButtons/HeadingsButton';
-import AlignButton from '@italia/config/RichTextEditor/ToolbarButtons/AlignButton';
-import CalloutsButton from '@italia/config/RichTextEditor/ToolbarButtons/CalloutsButton';
-import ButtonsButton from '@italia/config/RichTextEditor/ToolbarButtons/ButtonsButton';
-import TextSizeButton from '@italia/config/RichTextEditor/ToolbarButtons/TextSizeButton';
+import UnderlineButton from 'design-volto-theme/config/RichTextEditor/ToolbarButtons/UnderlineButton';
+import HeadingsButton from 'design-volto-theme/config/RichTextEditor/ToolbarButtons/HeadingsButton';
+import AlignButton from 'design-volto-theme/config/RichTextEditor/ToolbarButtons/AlignButton';
+import CalloutsButton from 'design-volto-theme/config/RichTextEditor/ToolbarButtons/CalloutsButton';
+import ButtonsButton from 'design-volto-theme/config/RichTextEditor/ToolbarButtons/ButtonsButton';
+import TextSizeButton from 'design-volto-theme/config/RichTextEditor/ToolbarButtons/TextSizeButton';
 
 const ItaliaRichTextEditorPlugins = (props) => [];
 const ItaliaRichTextEditorInlineToolbarButtons = (props, plugins) => {

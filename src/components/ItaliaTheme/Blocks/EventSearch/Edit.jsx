@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Body from '@italia/components/ItaliaTheme/Blocks/EventSearch/Body';
+import Body from 'design-volto-theme/components/ItaliaTheme/Blocks/EventSearch/Body';
 import { SidebarPortal } from '@plone/volto/components';
 import { getBaseUrl } from '@plone/volto/helpers';
-import Sidebar from '@italia/components/ItaliaTheme/Blocks/EventSearch/Sidebar';
+import Sidebar from 'design-volto-theme/components/ItaliaTheme/Blocks/EventSearch/Sidebar';
 import { useIntl, defineMessages } from 'react-intl';
 
 const messages = defineMessages({

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Icon } from '@italia/components/ItaliaTheme';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
 
 /**
  * Dates view component class.

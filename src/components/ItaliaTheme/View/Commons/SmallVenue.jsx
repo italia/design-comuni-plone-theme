@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import { getContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
-import { ContactLink } from '@italia/components/ItaliaTheme/View';
+import { ContactLink } from 'design-volto-theme/components/ItaliaTheme/View';
 import { UniversalLink } from '@plone/volto/components';
 
 /**

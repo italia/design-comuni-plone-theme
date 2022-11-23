@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
 
-import { ListingLinkMore, ListingImage } from '@italia/components/ItaliaTheme';
+import {
+  ListingLinkMore,
+  ListingImage,
+} from 'design-volto-theme/components/ItaliaTheme';
 
 const SmallBlockLinksTemplate = ({
   items,

@@ -5,9 +5,9 @@ import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { SidebarPortal } from '@plone/volto/components';
 import { addAppURL, flattenToAppURL } from '@plone/volto/helpers';
 import cx from 'classnames';
-import { TextEditorWidget } from '@italia/components/ItaliaTheme';
-import Sidebar from '@italia/components/ItaliaTheme/Blocks/CountDown/Sidebar';
-import CountDown from '@italia/components/ItaliaTheme/Blocks/CountDown/CountDown';
+import { TextEditorWidget } from 'design-volto-theme/components/ItaliaTheme';
+import Sidebar from 'design-volto-theme/components/ItaliaTheme/Blocks/CountDown/Sidebar';
+import CountDown from 'design-volto-theme/components/ItaliaTheme/Blocks/CountDown/CountDown';
 
 const messages = defineMessages({
   text: {

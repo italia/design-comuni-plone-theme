@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { defineMessages, useIntl } from 'react-intl';
-import { GenericCard } from '@italia/components/ItaliaTheme/View';
+import { GenericCard } from 'design-volto-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   altre_sedi: {

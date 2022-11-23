@@ -1,5 +1,5 @@
 import { omit } from 'lodash';
-import { GET_SEARCH_BANDI_FILTERS } from '@italia/actions';
+import { GET_SEARCH_BANDI_FILTERS } from 'design-volto-theme/actions';
 
 const RESET_SEARCH_BANDI_FILTERS_RESULTS = 'RESET_SEARCH_BANDI_FILTERS_RESULTS';
 

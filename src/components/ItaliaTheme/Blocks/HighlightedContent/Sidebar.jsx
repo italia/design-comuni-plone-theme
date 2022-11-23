@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 import { Segment, Accordion } from 'semantic-ui-react';
 import { defineMessages, FormattedMessage, useIntl } from 'react-intl';
 import { TextWidget, CheckboxWidget } from '@plone/volto/components';
-import { LinkToWidget, ColorListWidget } from '@italia/components/ItaliaTheme';
+import {
+  LinkToWidget,
+  ColorListWidget,
+} from 'design-volto-theme/components/ItaliaTheme';
 
 const messages = defineMessages({
   News: {

@@ -18,7 +18,7 @@ import {
   LinkList,
   LinkListItem,
 } from 'design-react-kit/dist/design-react-kit';
-import { SectionIcon } from '@italia/components/ItaliaTheme';
+import { SectionIcon } from 'design-volto-theme/components/ItaliaTheme';
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({

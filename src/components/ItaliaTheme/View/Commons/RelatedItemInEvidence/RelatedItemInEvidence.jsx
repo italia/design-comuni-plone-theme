@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ItemInEvidence from '@italia/components/ItaliaTheme/View/Commons/RelatedItemInEvidence/ItemInEvidence';
-import Arguments from '@italia/components/ItaliaTheme/View/Commons/RelatedItemInEvidence/Arguments';
+import ItemInEvidence from 'design-volto-theme/components/ItaliaTheme/View/Commons/RelatedItemInEvidence/ItemInEvidence';
+import Arguments from 'design-volto-theme/components/ItaliaTheme/View/Commons/RelatedItemInEvidence/Arguments';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 
 /**

@@ -4,7 +4,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import {
   richTextHasContent,
   RichTextArticle,
-} from '@italia/components/ItaliaTheme/View';
+} from 'design-volto-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   modalita_accesso: {

@@ -15,7 +15,7 @@ import { createContent } from '@plone/volto/actions';
 import { SidebarPortal } from '@plone/volto/components';
 import { EditTextBlock } from '@plone/volto/components';
 
-import { AlertSidebar } from '@italia/components/ItaliaTheme';
+import { AlertSidebar } from 'design-volto-theme/components/ItaliaTheme';
 /**
  * Edit Alert block class.
  * @class Edit

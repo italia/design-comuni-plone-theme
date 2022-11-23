@@ -4,7 +4,7 @@ import cx from 'classnames';
 import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
 import PropTypes from 'prop-types';
 
-import { viewDate } from '@italia/helpers';
+import { viewDate } from 'design-volto-theme/helpers';
 
 const messages = defineMessages({
   other_info: {

@@ -7,7 +7,7 @@ import {
   RichText,
   RichTextArticle,
   Dates,
-} from '@italia/components/ItaliaTheme/View';
+} from 'design-volto-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   date_e_orari: {

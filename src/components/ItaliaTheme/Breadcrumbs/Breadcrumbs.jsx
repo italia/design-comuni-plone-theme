@@ -18,7 +18,7 @@ import {
   Breadcrumb,
   BreadcrumbItem,
 } from 'design-react-kit/dist/design-react-kit';
-import GoogleBreadcrumbs from '@italia/components/ItaliaTheme/Breadcrumbs/GoogleBreadcrumbs';
+import GoogleBreadcrumbs from 'design-volto-theme/components/ItaliaTheme/Breadcrumbs/GoogleBreadcrumbs';
 
 const messages = defineMessages({
   home: {

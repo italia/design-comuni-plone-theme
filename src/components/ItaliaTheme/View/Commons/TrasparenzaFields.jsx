@@ -3,7 +3,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import {
   RichTextArticle,
   RichTextRender,
-} from '@italia/components/ItaliaTheme/View';
+} from 'design-volto-theme/components/ItaliaTheme/View';
 import { UniversalLink } from '@plone/volto/components';
 
 const messages = defineMessages({

@@ -5,7 +5,7 @@ import { defineMessages, useIntl } from 'react-intl';
 
 import { ListingBlockData as ListingData, Icon } from '@plone/volto/components';
 import { CheckboxWidget, TextWidget } from '@plone/volto/components';
-import { LocationFiltersWidget } from '@italia/components/ItaliaTheme';
+import { LocationFiltersWidget } from 'design-volto-theme/components/ItaliaTheme';
 
 import upSVG from '@plone/volto/icons/up-key.svg';
 import downSVG from '@plone/volto/icons/down-key.svg';

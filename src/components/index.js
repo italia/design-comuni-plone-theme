@@ -2,19 +2,19 @@
  * Add your components here.
  * @module components
  * @example
- * import Footer from '@italia/components/Footer/Footer';
+ * import Footer from 'design-volto-theme/components/Footer/Footer';
  *
  * export {
  *   Footer,
  * };
  */
 
-import LanguageSelector from '@italia/components/ItaliaTheme/LanguageSelector/LanguageSelector';
-import Checkbox from '@italia/components/Checkbox';
-import TextInput from '@italia/components/TextInput';
-import SearchUtils from '@italia/components/ItaliaTheme/Search/utils';
-import SelectInput from '@italia/components/SelectInput/SelectInput';
-import Collapse from '@italia/components/Collapse';
+import LanguageSelector from 'design-volto-theme/components/ItaliaTheme/LanguageSelector/LanguageSelector';
+import Checkbox from 'design-volto-theme/components/Checkbox';
+import TextInput from 'design-volto-theme/components/TextInput';
+import SearchUtils from 'design-volto-theme/components/ItaliaTheme/Search/utils';
+import SelectInput from 'design-volto-theme/components/SelectInput/SelectInput';
+import Collapse from 'design-volto-theme/components/Collapse';
 
 export {
   LanguageSelector,

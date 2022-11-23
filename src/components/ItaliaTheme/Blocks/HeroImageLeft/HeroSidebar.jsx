@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Segment, Accordion } from 'semantic-ui-react';
 import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
 import { TextWidget, CheckboxWidget } from '@plone/volto/components';
-import { LinkToWidget } from '@italia/components/ItaliaTheme';
+import { LinkToWidget } from 'design-volto-theme/components/ItaliaTheme';
 
 import clearSVG from '@plone/volto/icons/clear.svg';
 

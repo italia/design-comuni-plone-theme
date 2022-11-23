@@ -25,7 +25,7 @@ import { Skiplink, SkiplinkItem } from 'design-react-kit/dist/design-react-kit';
 import { useLocation, useHistory } from 'react-router-dom';
 
 import { Helmet, flattenToAppURL } from '@plone/volto/helpers';
-import { resetSubsite } from '@italia/addons/volto-subsites';
+import { resetSubsite } from 'volto-subsites';
 
 import {
   Pagination,
@@ -35,10 +35,14 @@ import {
   Icon,
   RemoveBodyClass,
   SearchResultItem,
-} from '@italia/components/ItaliaTheme';
-import { SearchUtils, TextInput, SelectInput } from '@italia/components';
-import { getSearchFilters, getSearchResults } from '@italia/actions';
-import { useDebouncedEffect } from '@italia/helpers';
+} from 'design-volto-theme/components/ItaliaTheme';
+import {
+  SearchUtils,
+  TextInput,
+  SelectInput,
+} from 'design-volto-theme/components';
+import { getSearchFilters, getSearchResults } from 'design-volto-theme/actions';
+import { useDebouncedEffect } from 'design-volto-theme/helpers';
 import config from '@plone/volto/registry';
 
 const {

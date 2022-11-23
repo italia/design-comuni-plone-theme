@@ -2,7 +2,7 @@ import { defineMessages } from 'react-intl';
 import {
   addSchemaField,
   addDefaultAdditionalOptions,
-} from '@italia/config/Blocks/ListingOptions';
+} from 'design-volto-theme/config/Blocks/ListingOptions';
 
 import config from '@plone/volto/registry';
 

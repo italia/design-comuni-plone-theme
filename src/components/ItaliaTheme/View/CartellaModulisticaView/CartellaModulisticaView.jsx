@@ -17,7 +17,7 @@ import {
   TextOrBlocks,
   RelatedItemInEvidence,
   PageMetadata,
-} from '@italia/components/ItaliaTheme/View';
+} from 'design-volto-theme/components/ItaliaTheme/View';
 
 import DocRow from './DocRow';
 

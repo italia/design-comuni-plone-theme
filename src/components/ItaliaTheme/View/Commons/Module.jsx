@@ -16,7 +16,7 @@ import {
   CardTitle,
 } from 'design-react-kit/dist/design-react-kit';
 
-import { DownloadFileFormat } from '@italia/components/ItaliaTheme/View';
+import { DownloadFileFormat } from 'design-volto-theme/components/ItaliaTheme/View';
 
 /**
  * Module view component class.

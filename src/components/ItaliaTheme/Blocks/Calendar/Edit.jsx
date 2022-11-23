@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Body from '@italia/components/ItaliaTheme/Blocks/Calendar/Body';
+import Body from 'design-volto-theme/components/ItaliaTheme/Blocks/Calendar/Body';
 import { SidebarPortal } from '@plone/volto/components';
 import { getBaseUrl } from '@plone/volto/helpers';
-import ListingSidebar from '@italia/components/ItaliaTheme/Blocks/Calendar/ListingSidebar';
+import ListingSidebar from 'design-volto-theme/components/ItaliaTheme/Blocks/Calendar/ListingSidebar';
 
 const Edit = ({ data, block, onChangeBlock, selected, pathname }) => {
   return (

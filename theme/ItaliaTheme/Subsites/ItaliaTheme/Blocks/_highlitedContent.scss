@@ -1,9 +1,13 @@
-.block.highlitedContent {
-  .card-title {
-    a {
-      &:hover,
-      &:focus {
-        color: $subsite-link-color;
+@use '../../all_variables' as *;
+
+@mixin block($subsite-link-color) {
+  .block.highlitedContent {
+    .card-title {
+      a {
+        &:hover,
+        &:focus {
+          color: $subsite-link-color;
+        }
       }
     }
   }

@@ -17,7 +17,7 @@ import {
 
 import { flattenToAppURL } from '@plone/volto/helpers';
 
-import { Collapse } from '@italia/components';
+import { Collapse } from 'design-volto-theme/components';
 import {
   MegaMenu,
   MenuSecondary,
@@ -27,12 +27,9 @@ import {
   Icon,
   SocialHeader,
   BrandText,
-} from '@italia/components/ItaliaTheme';
+} from 'design-volto-theme/components/ItaliaTheme';
 
-import {
-  getDropdownMenuNavitems,
-  getItemsByPath,
-} from '@italia/addons/volto-dropdownmenu';
+import { getDropdownMenuNavitems, getItemsByPath } from 'volto-dropdownmenu';
 
 const Navigation = ({ pathname }) => {
   const [collapseOpen, setCollapseOpen] = useState(false);

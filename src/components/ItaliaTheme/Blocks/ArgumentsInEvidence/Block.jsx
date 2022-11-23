@@ -1,6 +1,6 @@
 import React from 'react';
 import { defineMessages } from 'react-intl';
-import { TextEditorWidget } from '@italia/components/ItaliaTheme';
+import { TextEditorWidget } from 'design-volto-theme/components/ItaliaTheme';
 import {
   Card,
   CardBody,
@@ -10,7 +10,7 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import redraft from 'redraft';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { ArgumentIcon } from '@italia/components/ItaliaTheme/View';
+import { ArgumentIcon } from 'design-volto-theme/components/ItaliaTheme/View';
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({

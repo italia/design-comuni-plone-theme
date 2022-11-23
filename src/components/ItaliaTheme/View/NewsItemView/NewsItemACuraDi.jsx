@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { CuredBy } from '@italia/components/ItaliaTheme/View';
+import { CuredBy } from 'design-volto-theme/components/ItaliaTheme/View';
 
 const NewsItemACuraDi = ({ content }) => {
   return (content.a_cura_di && content.a_cura_di.length > 0) ||

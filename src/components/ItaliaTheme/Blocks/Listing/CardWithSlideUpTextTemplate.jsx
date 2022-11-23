@@ -7,13 +7,13 @@ import {
 
 import { UniversalLink } from '@plone/volto/components';
 
-import { getCalendarDate } from '@italia/helpers';
+import { getCalendarDate } from 'design-volto-theme/helpers';
 import {
   ListingLinkMore,
   ListingCategory,
   getListingImageBackground,
-} from '@italia/components/ItaliaTheme';
-import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
+} from 'design-volto-theme/components/ItaliaTheme';
+import { getCategory } from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 import { defineMessages, useIntl } from 'react-intl';
 
 const messages = defineMessages({

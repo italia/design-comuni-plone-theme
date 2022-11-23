@@ -6,9 +6,9 @@
 import React, { useState } from 'react';
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { DownloadFileFormat } from '@italia/components/ItaliaTheme/View';
-import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
-import { Icon } from '@italia/components/ItaliaTheme';
+import { DownloadFileFormat } from 'design-volto-theme/components/ItaliaTheme/View';
+import { FontAwesomeIcon } from 'design-volto-theme/components/ItaliaTheme';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
 import cx from 'classnames';
 
 /**

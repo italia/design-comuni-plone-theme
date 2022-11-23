@@ -12,7 +12,7 @@ import {
   flattenToAppURL,
 } from '@plone/volto/helpers';
 import { ConditionalEmbed } from 'volto-gdpr-privacy';
-import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
+import { FontAwesomeIcon } from 'design-volto-theme/components/ItaliaTheme';
 import { useIntl, defineMessages } from 'react-intl';
 import config from '@plone/volto/registry';
 

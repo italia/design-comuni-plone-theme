@@ -13,7 +13,7 @@ import React from 'react';
  */
 
 /* SVG example */
-import { Icon } from '@italia/components/ItaliaTheme';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
 const Logo = () => <Icon color="" icon="it-pa" padding={false} size="" />;
 
 /* PNG example using https://www.npmjs.com/package/webpack-image-resize-loader *

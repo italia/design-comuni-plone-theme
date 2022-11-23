@@ -23,7 +23,7 @@ import {
   NewsItemDataset,
   NewsItemMetadata,
   ContentTypeViewSections,
-} from '@italia/components/ItaliaTheme/View';
+} from 'design-volto-theme/components/ItaliaTheme/View';
 
 export const NewsItemViewSectionsOrder = [
   {

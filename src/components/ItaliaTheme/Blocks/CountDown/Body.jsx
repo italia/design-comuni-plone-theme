@@ -8,7 +8,10 @@ import { useHistory } from 'react-router-dom';
 import { Button } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
-import { Icon, SearchSectionsBackground } from '@italia/components/ItaliaTheme';
+import {
+  Icon,
+  SearchSectionsBackground,
+} from 'design-volto-theme/components/ItaliaTheme';
 
 const navigate = (text, sections) => {
   window.location.href =

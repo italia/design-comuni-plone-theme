@@ -25,7 +25,7 @@ import {
   SkipToMainContent,
   ContentTypeViewSections,
   EventoSponsors,
-} from '@italia/components/ItaliaTheme/View';
+} from 'design-volto-theme/components/ItaliaTheme/View';
 
 export const EventoViewSectionsOrder = [
   {

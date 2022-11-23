@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { GenericCard } from '@italia/components/ItaliaTheme/View';
+import { GenericCard } from 'design-volto-theme/components/ItaliaTheme/View';
 /**
  * RelateedArticles view component class.
  * @function RelatedArticles

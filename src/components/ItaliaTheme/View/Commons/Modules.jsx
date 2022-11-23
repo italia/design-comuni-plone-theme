@@ -5,7 +5,10 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { RichTextArticle, Module } from '@italia/components/ItaliaTheme/View';
+import {
+  RichTextArticle,
+  Module,
+} from 'design-volto-theme/components/ItaliaTheme/View';
 
 /**
  * Modules view component class.

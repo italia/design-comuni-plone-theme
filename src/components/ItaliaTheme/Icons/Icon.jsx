@@ -7,7 +7,7 @@ import classNames from 'classnames';
 
 import DesignIcon from './DesignIcon';
 import TelegramSVG from './svg/TelegramSVG';
-import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
+import { FontAwesomeIcon } from 'design-volto-theme/components/ItaliaTheme';
 
 const Icon = (props) => {
   const { icon, className, color, size, padding, ...rest } = props;

@@ -27,7 +27,7 @@ import {
   getBaseUrl,
 } from '@plone/volto/helpers';
 import { UniversalLink, ConditionalLink } from '@plone/volto/components';
-import { Icon } from '@italia/components/ItaliaTheme';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({

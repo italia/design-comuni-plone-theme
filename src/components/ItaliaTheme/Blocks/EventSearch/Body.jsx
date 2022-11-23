@@ -11,10 +11,10 @@ import cx from 'classnames';
 
 import { getQueryStringResults } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
-import { Pagination } from '@italia/components/ItaliaTheme';
+import CardWithImageTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
+import { Pagination } from 'design-volto-theme/components/ItaliaTheme';
 
-import FiltersConfig from '@italia/components/ItaliaTheme/Blocks/EventSearch/FiltersConfig';
+import FiltersConfig from 'design-volto-theme/components/ItaliaTheme/Blocks/EventSearch/FiltersConfig';
 
 const messages = defineMessages({
   find: {

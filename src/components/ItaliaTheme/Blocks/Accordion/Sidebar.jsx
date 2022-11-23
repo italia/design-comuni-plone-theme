@@ -7,7 +7,7 @@ import upSVG from '@plone/volto/icons/up-key.svg';
 import downSVG from '@plone/volto/icons/down-key.svg';
 import { defineMessages, useIntl } from 'react-intl';
 
-import { LinkToWidget } from '@italia/components/ItaliaTheme';
+import { LinkToWidget } from 'design-volto-theme/components/ItaliaTheme';
 const messages = defineMessages({
   linkMoreTitle: {
     id: 'linkMoreTitle',

@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { NewsCard } from '@italia/components/ItaliaTheme/View';
+import { NewsCard } from 'design-volto-theme/components/ItaliaTheme/View';
 import PropTypes from 'prop-types';
 /**
  * RelatedNews view component class.

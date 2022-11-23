@@ -4,7 +4,7 @@
 
 import React from 'react';
 
-import { Unauthorized as UnauthorizedItalia } from '@italia/components/ItaliaTheme';
+import { Unauthorized as UnauthorizedItalia } from 'design-volto-theme/components/ItaliaTheme';
 
 /**
  * unauthorized function.

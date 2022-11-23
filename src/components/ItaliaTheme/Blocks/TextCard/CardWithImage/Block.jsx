@@ -12,7 +12,7 @@ import {
 import { defineMessages, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import redraft from 'redraft';
-import { TextEditorWidget } from '@italia/components/ItaliaTheme';
+import { TextEditorWidget } from 'design-volto-theme/components/ItaliaTheme';
 import config from '@plone/volto/registry';
 import cx from 'classnames';
 

@@ -11,7 +11,7 @@ import { getContent, getQueryStringResults } from '@plone/volto/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import config from '@plone/volto/registry';
 
-import { setOriginalQuery } from '@italia/actions';
+import { setOriginalQuery } from 'design-volto-theme/actions';
 
 function getDisplayName(WrappedComponent) {
   return WrappedComponent.displayName || WrappedComponent.name || 'Component';

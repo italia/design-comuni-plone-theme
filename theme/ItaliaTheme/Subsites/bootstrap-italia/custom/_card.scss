@@ -1,19 +1,23 @@
-// flag
-.flag-icon {
-  background: $subsite-primary;
-}
+@use '../../all_variables' as *;
 
-// read more text
-a.read-more {
-  color: $subsite-link-color;
-
-  .icon {
-    fill: $subsite-link-color;
+@mixin card($subsite-primary, $subsite-link-color) {
+  // flag
+  .flag-icon {
+    background: $subsite-primary;
   }
-}
 
-a {
-  .card .card-body .card-title a:hover {
-    color: darken($subsite-link-color, 10%);
+  // read more text
+  a.read-more {
+    color: $subsite-link-color;
+
+    .icon {
+      fill: $subsite-link-color;
+    }
+  }
+
+  a {
+    .card .card-body .card-title a:hover {
+      color: darken($subsite-link-color, 10%);
+    }
   }
 }

@@ -1,22 +1,22 @@
+import 'slick-carousel/slick/slick.css';
+import 'design-volto-theme/components/slick-carousel/slick/slick-theme.css';
+
+import { Col, Container, Row } from 'design-react-kit/dist/design-react-kit';
+import {
+  Icon,
+  ListingImage,
+  ListingLinkMore,
+} from 'design-volto-theme/components/ItaliaTheme';
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/interactive-supports-focus */
-import React, { useState, useRef } from 'react';
+import React, { useRef, useState } from 'react';
+import { defineMessages, useIntl } from 'react-intl';
+
 import PropTypes from 'prop-types';
-import cx from 'classnames';
-import { useIntl, defineMessages } from 'react-intl';
-import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
-
 import { UniversalLink } from '@plone/volto/components';
+import cx from 'classnames';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
-import {
-  Icon,
-  ListingLinkMore,
-  ListingImage,
-} from '@italia/components/ItaliaTheme';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 
 const messages = defineMessages({
   viewImage: {

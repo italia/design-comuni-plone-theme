@@ -14,7 +14,7 @@ import {
   Icon,
   LoginButton,
   RemoveBodyClass,
-} from '@italia/components/ItaliaTheme';
+} from 'design-volto-theme/components/ItaliaTheme';
 
 import config from '@plone/volto/registry';
 /**

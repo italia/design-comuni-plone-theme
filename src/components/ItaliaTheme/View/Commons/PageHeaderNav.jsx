@@ -7,7 +7,7 @@ import {
   Collapse,
 } from 'design-react-kit/dist/design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
-import { Icon } from '@italia/components/ItaliaTheme';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
 
 /**
  * PageHeaderNav view component class.

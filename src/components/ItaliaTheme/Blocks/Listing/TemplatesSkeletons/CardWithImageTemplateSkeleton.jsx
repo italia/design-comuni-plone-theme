@@ -13,7 +13,7 @@ import {
   Chip,
 } from 'design-react-kit/dist/design-react-kit';
 
-import { CardCategory } from '@italia/components/ItaliaTheme';
+import { CardCategory } from 'design-volto-theme/components/ItaliaTheme';
 
 const CardWithImageTemplateSkeleton = ({
   isEditMode,

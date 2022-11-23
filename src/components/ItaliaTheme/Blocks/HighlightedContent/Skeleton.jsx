@@ -13,7 +13,7 @@ import {
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
 
-import { CardCategory } from '@italia/components/ItaliaTheme';
+import { CardCategory } from 'design-volto-theme/components/ItaliaTheme';
 
 const Skeleton = ({ content, pathname, block }) => {
   return (

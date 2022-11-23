@@ -1,7 +1,7 @@
 import React from 'react';
 import cx from 'classnames';
 import { useIntl } from 'react-intl';
-import { getSiteProperty } from '@italia/helpers';
+import { getSiteProperty } from 'design-volto-theme/helpers';
 
 const BrandText = ({ mobile = false, subsite }) => {
   const intl = useIntl();

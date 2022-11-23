@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Locations } from '@italia/components/ItaliaTheme/View';
+import { Locations } from 'design-volto-theme/components/ItaliaTheme/View';
 
 const UOContactsLocations = ({ content }) => {
   return content.geolocation?.latitude > 0 ||

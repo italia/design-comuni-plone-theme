@@ -9,7 +9,7 @@ import {
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { ArgumentIcon } from '@italia/components/ItaliaTheme/View';
+import { ArgumentIcon } from 'design-volto-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   explore: {

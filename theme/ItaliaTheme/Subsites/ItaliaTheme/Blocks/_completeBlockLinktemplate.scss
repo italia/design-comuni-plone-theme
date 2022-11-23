@@ -1,9 +1,13 @@
-.complete-block-links-template {
-  .card.card-bg {
-    background-color: $subsite-secondary;
+@use '../../all_variables' as *;
 
-    a {
-      color: $subsite-secondary-text;
+@mixin block($subsite-secondary, $subsite-secondary-text) {
+  .complete-block-links-template {
+    .card.card-bg {
+      background-color: $subsite-secondary;
+
+      a {
+        color: $subsite-secondary-text;
+      }
     }
   }
 }

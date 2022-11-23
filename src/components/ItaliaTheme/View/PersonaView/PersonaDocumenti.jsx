@@ -4,9 +4,9 @@ import {
   RichTextArticle,
   Attachment,
   Attachments,
-} from '@italia/components/ItaliaTheme/View';
+} from 'design-volto-theme/components/ItaliaTheme/View';
 
-import { contentFolderHasItems } from '@italia/helpers';
+import { contentFolderHasItems } from 'design-volto-theme/helpers';
 
 const messages = defineMessages({
   documenti: {

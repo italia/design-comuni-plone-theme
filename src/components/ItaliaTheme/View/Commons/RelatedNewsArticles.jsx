@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { RelatedNews } from '@italia/components/ItaliaTheme/View';
+import { RelatedNews } from 'design-volto-theme/components/ItaliaTheme/View';
 /**
  * RelatedNewsArticles view component class.
  * @function RelatedNewsArticles

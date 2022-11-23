@@ -5,7 +5,7 @@ import { UniversalLink } from '@plone/volto/components';
 import PropTypes from 'prop-types';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { Icon } from '@italia/components/ItaliaTheme';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
 import Image from '@plone/volto/components/theme/Image/Image';
 
 const messages = defineMessages({

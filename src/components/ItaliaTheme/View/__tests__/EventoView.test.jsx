@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitForElement } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import EventoView from '../EventoView/EventoView';
 import configureStore from 'redux-mock-store';
@@ -9,7 +9,7 @@ import thunk from 'redux-thunk';
 
 // Warning: An update to Icon inside a test was not wrapped in act(...).
 // When testing, code that causes React state updates should be wrapped into act(...):
-jest.mock('@italia/components/ItaliaTheme/Icons/Icon');
+jest.mock('design-volto-theme/components/ItaliaTheme/Icons/Icon');
 jest.mock('@plone/volto/helpers/Loadable/Loadable');
 beforeAll(
   async () =>
@@ -232,8 +232,7 @@ const mock_mandatory = {
   previous_item: {},
   prezzo: {
     'content-type': 'text/html',
-    data:
-      '<p>TRIBUNA 1 E 4</p>\n<h5 id="b6el">€ 30</h5>\n<p>Tribune coperte site nella via Roma lato Palazzo Vivanet (tribuna n. 1) e nella via Roma fronte palazzo Civico (tribuna n. 4), per circa 770 posti a sedere.</p>\n<p/>\n<p>TRIBUNA 5</p>\n<h5 id="1rkjt">€ 25</h5>\n<p>Tribuna coperta fronte largo Carlo Felice, dislocata nell\'incrocio, nello spazio compreso tra i due semafori della via Roma, per circa 400 posti a sedere.</p>',
+    data: '<p>TRIBUNA 1 E 4</p>\n<h5 id="b6el">€ 30</h5>\n<p>Tribune coperte site nella via Roma lato Palazzo Vivanet (tribuna n. 1) e nella via Roma fronte palazzo Civico (tribuna n. 4), per circa 770 posti a sedere.</p>\n<p/>\n<p>TRIBUNA 5</p>\n<h5 id="1rkjt">€ 25</h5>\n<p>Tribuna coperta fronte largo Carlo Felice, dislocata nell\'incrocio, nello spazio compreso tra i due semafori della via Roma, per circa 400 posti a sedere.</p>',
     encoding: 'utf-8',
   },
   quartiere: null,
@@ -243,16 +242,23 @@ const mock_mandatory = {
   rights: null,
   sponsor: {
     'content-type': 'text/html',
-    data:
-      '<p>Parmigiao reggiao</p>\n<p>Trattore blu</p>\n<p>Figurine di Harry Potter</p>',
+    data: '<p>Parmigiao reggiao</p>\n<p>Trattore blu</p>\n<p>Figurine di Harry Potter</p>',
     encoding: 'utf-8',
   },
   strutture_politiche: [],
   subjects: [],
   sync_uid: null,
   tassonomia_argomenti: [
-    { title: 'Fanciullo', token: 'fanciullo' },
-    { title: 'Animale domestico', token: 'animale-domestico' },
+    {
+      '@id': 'http://localhost:8080/Plone/fanciullo',
+      title: 'Fanciullo',
+      token: 'fanciullo',
+    },
+    {
+      '@id': 'http://localhost:8080/Plone/animale-domestico',
+      title: 'Animale domestico',
+      token: 'animale-domestico',
+    },
   ],
   version: 'current',
   video_evento: 'https://youtu.be/eIZkVaM-0K8',
@@ -279,30 +285,31 @@ const store = mockStore({
           title: 'Ravenna',
         },
       },
-      'http://loremipsum.com/amministrazione/enti-e-fondazioni/ente-svago_office': {
-        data: {
-          '@id':
-            'http://loremipsum.com/amministrazione/enti-e-fondazioni/ente-svago',
-          '@type': 'Unita organizzativa',
-          UID: 'c5ee7af923204be484ffd329f91f3de2',
-          city: 'Lugo',
-          email: 'martina.bustacchini@redturtle.it',
-          phone: '03468492433',
-          street: 'Ravegnana 158a',
-          title: 'Ente svago',
-          website: null,
-          zip_code: null,
-        },
-        'http://loremipsum.com/amministrazione/luoghi/ravenna-1_venue': {
+      'http://loremipsum.com/amministrazione/enti-e-fondazioni/ente-svago_office':
+        {
           data: {
-            '@id': 'http://loremipsum.com/amministrazione/luoghi/ravenna-1',
-            '@type': 'Venue',
-            UID: '42abd9ce876f4eea9bca32b6845d3a71',
-            id: 'ravenna-1',
-            title: 'Ravenna',
+            '@id':
+              'http://loremipsum.com/amministrazione/enti-e-fondazioni/ente-svago',
+            '@type': 'Unita organizzativa',
+            UID: 'c5ee7af923204be484ffd329f91f3de2',
+            city: 'Lugo',
+            email: 'martina.bustacchini@redturtle.it',
+            phone: '03468492433',
+            street: 'Ravegnana 158a',
+            title: 'Ente svago',
+            website: null,
+            zip_code: null,
+          },
+          'http://loremipsum.com/amministrazione/luoghi/ravenna-1_venue': {
+            data: {
+              '@id': 'http://loremipsum.com/amministrazione/luoghi/ravenna-1',
+              '@type': 'Venue',
+              UID: '42abd9ce876f4eea9bca32b6845d3a71',
+              id: 'ravenna-1',
+              title: 'Ravenna',
+            },
           },
         },
-      },
     },
   },
   search: {
@@ -375,7 +382,7 @@ it('expect to have all mandatory fields in page', async () => {
   // const luoghi = await waitForElement(() => getByText(/Ravenna/i));
   // expect(luoghi).toBeInTheDocument();
 
-  const contatti = await waitForElement(() => getByText(/nessuno/i));
+  const contatti = await waitFor(async () => await getByText(/nessuno/i));
   expect(contatti).toBeInTheDocument();
 
   // const supporto = await waitForElement(() => getByText(/Ente svago/i));

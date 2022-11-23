@@ -15,7 +15,7 @@ import {
   Label,
 } from 'design-react-kit/dist/design-react-kit';
 
-import FileWidget from '@italia/components/ItaliaTheme/manage/Widgets/FileWidget';
+import FileWidget from 'design-volto-theme/components/ItaliaTheme/manage/Widgets/FileWidget';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import WysiwygWidget from '@plone/volto/components/manage/Widgets/WysiwygWidget';
 

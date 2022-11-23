@@ -2,7 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { hasBlocksData } from '@plone/volto/helpers';
-import { RichText, RenderBlocks } from '@italia/components/ItaliaTheme/View';
+import {
+  RichText,
+  RenderBlocks,
+} from 'design-volto-theme/components/ItaliaTheme/View';
 
 /**
  * TextOrBlocks view component class.

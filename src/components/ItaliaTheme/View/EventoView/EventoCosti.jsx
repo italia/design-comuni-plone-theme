@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { defineMessages, useIntl } from 'react-intl';
 
-import { RichTextArticle } from '@italia/components/ItaliaTheme/View';
+import { RichTextArticle } from 'design-volto-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   costi: {

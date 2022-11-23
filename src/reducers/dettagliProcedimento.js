@@ -3,7 +3,7 @@
  * @module src/reducers/getdettagliProcedimento
  */
 
-import { GET_DETTAGLI_PROCEDIMENTO } from '@italia/actions';
+import { GET_DETTAGLI_PROCEDIMENTO } from 'design-volto-theme/actions';
 
 const initialState = {
   error: null,
@@ -12,10 +12,7 @@ const initialState = {
   loadingResults: false,
 };
 
-export const dettagliProcedimento = (
-  state = initialState,
-  action = {},
-) => {
+export const dettagliProcedimento = (state = initialState, action = {}) => {
   switch (action.type) {
     case `${GET_DETTAGLI_PROCEDIMENTO}_PENDING`:
       return {

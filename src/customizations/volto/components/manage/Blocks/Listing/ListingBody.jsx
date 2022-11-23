@@ -8,7 +8,10 @@ import React from 'react';
 import { FormattedMessage, injectIntl } from 'react-intl';
 import config from '@plone/volto/registry';
 import withQuerystringResults from '@plone/volto/components/manage/Blocks/Listing/withQuerystringResults';
-import { Pagination, Skeleton } from '@italia/components/ItaliaTheme';
+import {
+  Pagination,
+  Skeleton,
+} from 'design-volto-theme/components/ItaliaTheme';
 
 import { isEqual } from 'lodash';
 

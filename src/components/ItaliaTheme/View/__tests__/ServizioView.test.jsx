@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, waitForElement } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import ServizioView from '../ServizioView/ServizioView';
 import configureStore from 'redux-mock-store';
@@ -12,7 +12,7 @@ const mockStore = configureStore(middlewares);
 
 // Warning: An update to Icon inside a test was not wrapped in act(...).
 // When testing, code that causes React state updates should be wrapped into act(...):
-jest.mock('@italia/components/ItaliaTheme/Icons/Icon');
+jest.mock('design-volto-theme/components/ItaliaTheme/Icons/Icon');
 // loadables.push('rrule');
 jest.mock('@plone/volto/helpers/Loadable/Loadable');
 beforeAll(
@@ -28,6 +28,7 @@ const mock_mandatory = {
   items: [],
   tassonomia_argomenti: [
     {
+      '@id': 'http://localhost:8080/Plone/istruzione',
       title: 'Tassonomia: Istruzione',
       token: 'istruzione',
     },
@@ -74,8 +75,7 @@ const mock_mandatory = {
   },
   fasi_scadenze: {
     'content-type': 'text/html',
-    data:
-      '<p>Quali sono le fasi e le scadenze da rispettare per avere il servizio</p>',
+    data: '<p>Quali sono le fasi e le scadenze da rispettare per avere il servizio</p>',
     encoding: 'utf-8',
   },
   ufficio_responsabile: [
@@ -111,8 +111,7 @@ const mock_other_fields = {
   ],
   autenticazione: {
     'content-type': 'text/html',
-    data:
-      '<p>Tipi di autenticazione richiesti per usare il servizio on line</p>',
+    data: '<p>Tipi di autenticazione richiesti per usare il servizio on line</p>',
     encoding: 'utf-8',
   },
   ulteriori_informazioni: {
@@ -122,8 +121,7 @@ const mock_other_fields = {
   },
   canale_digitale: {
     'content-type': 'text/html',
-    data:
-      "<p><a href='https://www.loremipsum.com/canale_digitale'>https://www.loremipsum.com/canale_digitale</a></p>",
+    data: "<p><a href='https://www.loremipsum.com/canale_digitale'>https://www.loremipsum.com/canale_digitale</a></p>",
     encoding: 'utf-8',
   },
   canale_fisico_prenotazione: 'Canale fisicio di prenotazione del servizio',
@@ -176,8 +174,7 @@ const mock_other_fields = {
   ],
   link_siti_esterni: {
     'content-type': 'text/html',
-    data:
-      '<p><a href="https://www.loremipsum.it/agid">https://www.loremipsum.it/agid</a></p>',
+    data: '<p><a href="https://www.loremipsum.it/agid">https://www.loremipsum.it/agid</a></p>',
     encoding: 'utf-8',
   },
   relatedItems: [
@@ -218,6 +215,7 @@ const mock_other_fields = {
 };
 
 const mock_servizio_chiuso = {
+  title: 'Chiuso',
   motivo_stato_servizio: {
     'content-type': 'text/html',
     data: '<p>Il servizio non è più erogato</p>',
@@ -226,6 +224,7 @@ const mock_servizio_chiuso = {
   stato_servizio: true,
   items: [],
   area: [],
+  ufficio_responsabile: [],
 };
 
 const store = mockStore({
@@ -318,7 +317,7 @@ test('expect to have all mandatory fields in page', async () => {
   const { getByText /*, queryAllByText*/ } = render(
     <Provider store={store}>
       <MemoryRouter>
-        <ServizioView content={mock_mandatory} />
+        <ServizioView title={mock_mandatory.title} content={mock_mandatory} />
       </MemoryRouter>
     </Provider>,
   );
@@ -352,8 +351,8 @@ test('expect to have all mandatory fields in page', async () => {
   // fasi_scadenze
   // expect(getByText(/Quali sono le fasi e le scadenze da/i)).toBeInTheDocument();
   // ufficio_responsabile
-  const ufficio_responsabile = await waitForElement(() =>
-    getByText(/Ufficio responsabile del servizio/i),
+  const ufficio_responsabile = await waitFor(
+    async () => await getByText(/Ufficio responsabile del servizio/i),
   );
   expect(ufficio_responsabile).toBeInTheDocument();
   // rights
@@ -415,8 +414,8 @@ test('expect to have all fields in page', async () => {
   // link_siti_esterni
   expect(getByText(/https:\/\/www.loremipsum.it\/agid/i)).toBeInTheDocument();
   // relatedItems
-  const related_iteems = await waitForElement(() =>
-    getByText(/Pagina allegata/i),
+  const related_iteems = await waitFor(
+    async () => await getByText(/Pagina allegata/i),
   );
   expect(related_iteems).toBeInTheDocument();
   // related_news

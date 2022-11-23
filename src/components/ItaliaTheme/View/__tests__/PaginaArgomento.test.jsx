@@ -9,7 +9,7 @@ import thunk from 'redux-thunk';
 
 // Warning: An update to Icon inside a test was not wrapped in act(...).
 // When testing, code that causes React state updates should be wrapped into act(...):
-jest.mock('@italia/components/ItaliaTheme/Icons/Icon');
+jest.mock('design-volto-theme/components/ItaliaTheme/Icons/Icon');
 
 jest.mock('@plone/volto/helpers/Loadable/Loadable');
 beforeAll(
@@ -211,8 +211,7 @@ const with_blocks = {
               },
             ],
             key: '1vnli',
-            text:
-              'Eventi ambiente ed educazione \nParchi e Boschi urbani\nContabilit\u00e0 ambientale e Open Data ambientali',
+            text: 'Eventi ambiente ed educazione \nParchi e Boschi urbani\nContabilit\u00e0 ambientale e Open Data ambientali',
             type: 'unstyled',
           },
         ],

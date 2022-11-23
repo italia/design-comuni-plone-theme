@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Attachments } from '@italia/components/ItaliaTheme/View';
+import { Attachments } from 'design-volto-theme/components/ItaliaTheme/View';
 
 const NewsItemAllegati = ({ content }) => {
   return <Attachments content={content} folder_name={'documenti-allegati'} />;

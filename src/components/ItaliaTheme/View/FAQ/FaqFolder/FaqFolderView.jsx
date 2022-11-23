@@ -19,8 +19,8 @@ import {
   PageMetadata,
   FaqFolderSearchBar,
   FaqFolderTree,
-} from '@italia/components/ItaliaTheme/View';
-import { useDebouncedEffect } from '@italia/helpers';
+} from 'design-volto-theme/components/ItaliaTheme/View';
+import { useDebouncedEffect } from 'design-volto-theme/helpers';
 import { resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 

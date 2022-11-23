@@ -15,7 +15,7 @@ import {
   withDNDContext,
   SubblocksEdit,
   SubblocksWrapper,
-} from '@italia/addons/volto-subblocks';
+} from 'volto-subblocks';
 
 import { SidebarPortal } from '@plone/volto/components';
 import Sidebar from './Sidebar.jsx';

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import {
   ModuloFilePrincipale,
   ModuloFormatiAlternativi,
-} from '@italia/components/ItaliaTheme/View';
+} from 'design-volto-theme/components/ItaliaTheme/View';
 
 const ModuloFiles = ({ content }) => {
   return (

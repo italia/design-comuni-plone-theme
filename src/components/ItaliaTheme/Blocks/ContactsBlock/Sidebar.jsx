@@ -6,7 +6,10 @@ import { TextWidget } from '@plone/volto/components';
 
 import { defineMessages, useIntl } from 'react-intl';
 
-import { LinkToWidget, ColorListWidget } from '@italia/components/ItaliaTheme';
+import {
+  LinkToWidget,
+  ColorListWidget,
+} from 'design-volto-theme/components/ItaliaTheme';
 
 const messages = defineMessages({
   linkMoreTitle: {

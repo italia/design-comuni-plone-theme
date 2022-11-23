@@ -9,16 +9,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         ref: develop
         # ref: ${{ github.base_ref }}
     - uses: actions/setup-node@v3
       with:
-        node-version: 14
+        node-version: 16
 
     - name: Install dependencies
-      run: yarn --frozen-lockfile
+      run: yarn set version 3.2.3 && yarn --immutable
       env:
         NODE_AUTH_TOKEN: ${{secrets.TOKEN_REPO}}
 
@@ -45,17 +45,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
     - uses: actions/setup-node@v3
       with:
-        node-version: 14
+        node-version: 16
     - name: Install dependencies
-      run: yarn --frozen-lockfile
-      env:
-        NODE_AUTH_TOKEN: ${{secrets.TOKEN_REPO}}
-
-    - name: Dev requirements
-      run: yarn develop
+      run: yarn set version 3.2.3 && yarn --immutable
       env:
         NODE_AUTH_TOKEN: ${{secrets.TOKEN_REPO}}
 

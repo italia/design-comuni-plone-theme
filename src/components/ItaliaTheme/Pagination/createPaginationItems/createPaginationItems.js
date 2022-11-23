@@ -4,15 +4,15 @@ import {
   createNextItem,
   createPageFactory,
   createPrevItem,
-} from '@italia/components/ItaliaTheme/Pagination/createPaginationItems/itemFactories';
+} from 'design-volto-theme/components/ItaliaTheme/Pagination/createPaginationItems/itemFactories';
 import {
   createComplexRange,
   createSimpleRange,
-} from '@italia/components/ItaliaTheme/Pagination/createPaginationItems/rangeFactories';
+} from 'design-volto-theme/components/ItaliaTheme/Pagination/createPaginationItems/rangeFactories';
 import {
   isSimplePagination,
   typifyOptions,
-} from '@italia/components/ItaliaTheme/Pagination/createPaginationItems/paginationUtils';
+} from 'design-volto-theme/components/ItaliaTheme/Pagination/createPaginationItems/paginationUtils';
 
 /**
  * @param {object} rawOptions

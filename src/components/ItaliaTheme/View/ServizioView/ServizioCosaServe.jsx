@@ -6,7 +6,7 @@ import {
   RichTextArticle,
   richTextHasContent,
   HelpBox,
-} from '@italia/components/ItaliaTheme/View';
+} from 'design-volto-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   cosa_serve: {

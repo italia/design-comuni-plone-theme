@@ -1,46 +1,56 @@
-//mobile
-.chip {
-  &.chip-primary {
-    @if $subsite-light-theme {
-      border-color: darken($subsite-primary, 10);
-      color: darken($subsite-primary, 10);
-    } @else {
-      border-color: $subsite-primary;
-      color: $subsite-primary;
-    }
+@use '../../all_variables' as *;
 
-    & > .chip-label {
+@mixin chips(
+  $subsite-light-theme,
+  $subsite-primary,
+  $subsite-primary-text,
+  $subsite-secondary,
+  $subsite-secondary-text
+) {
+  //mobile
+  .chip {
+    &.chip-primary {
       @if $subsite-light-theme {
+        border-color: darken($subsite-primary, 10);
         color: darken($subsite-primary, 10);
       } @else {
+        border-color: $subsite-primary;
         color: $subsite-primary;
       }
-    }
-
-    &:hover {
-      border-color: $subsite-primary;
-      background-color: $subsite-primary;
 
       & > .chip-label {
-        color: $subsite-primary-text;
+        @if $subsite-light-theme {
+          color: darken($subsite-primary, 10);
+        } @else {
+          color: $subsite-primary;
+        }
+      }
+
+      &:hover {
+        border-color: $subsite-primary;
+        background-color: $subsite-primary;
+
+        & > .chip-label {
+          color: $subsite-primary-text;
+        }
       }
     }
-  }
 
-  &.chip-secondary {
-    border-color: $subsite-secondary;
-    color: $subsite-primary;
-
-    & > .chip-label {
-      color: $subsite-secondary;
-    }
-
-    &:hover {
+    &.chip-secondary {
       border-color: $subsite-secondary;
-      background-color: $subsite-secondary;
+      color: $subsite-primary;
 
       & > .chip-label {
-        color: $subsite-secondary-text;
+        color: $subsite-secondary;
+      }
+
+      &:hover {
+        border-color: $subsite-secondary;
+        background-color: $subsite-secondary;
+
+        & > .chip-label {
+          color: $subsite-secondary-text;
+        }
       }
     }
   }

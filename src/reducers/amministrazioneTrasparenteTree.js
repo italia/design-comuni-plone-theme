@@ -3,7 +3,7 @@
  * @module src/reducers/getAmministrazioneTrasparenteTree
  */
 
-import { GET_AMMINISTRAZIONE_TRASPARENTE } from '@italia/actions';
+import { GET_AMMINISTRAZIONE_TRASPARENTE } from 'design-volto-theme/actions';
 
 const initialState = {
   error: null,

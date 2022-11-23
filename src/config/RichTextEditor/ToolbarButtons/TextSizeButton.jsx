@@ -1,7 +1,7 @@
 import React from 'react';
 import Icon from '@plone/volto/components/theme/Icon/Icon';
 
-// import DraftJsDropdownButton from '@italia/config/RichTextEditor/ToolbarButtons/DraftJsDropdownButton';
+// import DraftJsDropdownButton from 'design-volto-theme/config/RichTextEditor/ToolbarButtons/DraftJsDropdownButton';
 
 import formatSVG from '@plone/volto/icons/format.svg';
 

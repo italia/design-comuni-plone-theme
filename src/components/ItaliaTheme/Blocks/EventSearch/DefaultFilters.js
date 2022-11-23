@@ -1,12 +1,13 @@
-import { useSelector } from 'react-redux';
-import { useIntl, defineMessages } from 'react-intl';
-import moment from 'moment';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import {
-  TextFilter,
-  SelectFilter,
   DateFilter,
-} from '@italia/components/ItaliaTheme/Blocks/Common/SearchFilters';
+  SelectFilter,
+  TextFilter,
+} from 'design-volto-theme/components/ItaliaTheme/Blocks/Common/SearchFilters';
+import { defineMessages, useIntl } from 'react-intl';
+
+import { flattenToAppURL } from '@plone/volto/helpers';
+import moment from 'moment';
+import { useSelector } from 'react-redux';
 
 const messages = defineMessages({
   text_filter: {

@@ -27,9 +27,6 @@
   button {
     height: 1em;
   }
-  // &.selected {
-  //   @extend .chip:hover;
-  // }
 
   &.chip-lg {
     height: unset;
@@ -40,16 +37,5 @@
 #metadata {
   .chip.disabled:hover {
     cursor: default;
-  }
-}
-
-a {
-  &:hover,
-  &:focus,
-  &:active {
-    .chip,
-    .public-ui .chip {
-      @extend .chip:hover;
-    }
   }
 }

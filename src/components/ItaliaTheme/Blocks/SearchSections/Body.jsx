@@ -10,7 +10,7 @@ import {
   Icon,
   BackgroundUser,
   SearchSectionsBackground,
-} from '@italia/components/ItaliaTheme';
+} from 'design-volto-theme/components/ItaliaTheme';
 
 const navigate = (text, sections) => {
   window.location.href =

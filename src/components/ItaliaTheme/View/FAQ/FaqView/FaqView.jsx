@@ -14,7 +14,7 @@ import {
   PageMetadata,
   FaqPlaceholderAfterContent,
   FaqPlaceholderAfterRelatedItems,
-} from '@italia/components/ItaliaTheme/View';
+} from 'design-volto-theme/components/ItaliaTheme/View';
 
 /**
  * FaqView view component class.

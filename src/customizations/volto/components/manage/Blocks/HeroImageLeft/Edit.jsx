@@ -25,8 +25,8 @@ import { createContent } from '@plone/volto/actions';
 import { Icon, SidebarPortal } from '@plone/volto/components';
 
 import clearSVG from '@plone/volto/icons/clear.svg';
-import StoresButtons from '@italia/components/ItaliaTheme/Blocks/HeroImageLeft/StoresButtons';
-import HeroSidebar from '@italia/components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar';
+import StoresButtons from 'design-volto-theme/components/ItaliaTheme/Blocks/HeroImageLeft/StoresButtons';
+import HeroSidebar from 'design-volto-theme/components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar';
 
 const messages = defineMessages({
   title: {

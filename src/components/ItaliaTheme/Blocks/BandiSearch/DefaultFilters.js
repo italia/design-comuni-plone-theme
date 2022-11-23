@@ -7,8 +7,8 @@ import {
   TextFilter,
   SelectFilter,
   DateFilter,
-} from '@italia/components/ItaliaTheme/Blocks/Common/SearchFilters';
-import { getSearchBandiFilters } from '@italia/actions';
+} from 'design-volto-theme/components/ItaliaTheme/Blocks/Common/SearchFilters';
+import { getSearchBandiFilters } from 'design-volto-theme/actions';
 
 const messages = defineMessages({
   text_filter: {

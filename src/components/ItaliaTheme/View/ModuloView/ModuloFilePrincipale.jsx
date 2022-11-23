@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import { DownloadFileFormat } from '@italia/components/ItaliaTheme/View';
+import { DownloadFileFormat } from 'design-volto-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   file_principale: {

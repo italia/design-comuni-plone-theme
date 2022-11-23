@@ -7,8 +7,8 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { isEmpty } from 'lodash';
 
-import { Icon } from '@italia/components/ItaliaTheme';
-import { getSocialSettings } from '@italia/addons/volto-social-settings';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
+import { getSocialSettings } from 'volto-social-settings';
 
 const FooterSocials = () => {
   const socialSettings = useSelector((state) => state.socialSettings);

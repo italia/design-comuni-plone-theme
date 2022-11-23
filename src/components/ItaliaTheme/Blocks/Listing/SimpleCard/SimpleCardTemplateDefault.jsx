@@ -16,15 +16,18 @@ import {
 
 import { UniversalLink } from '@plone/volto/components';
 
-import { CardCategory } from '@italia/components/ItaliaTheme';
-import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
+import { CardCategory } from 'design-volto-theme/components/ItaliaTheme';
+import { getCategory } from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 import {
   getItemIcon,
   ListingCategory,
   ListingText,
   ListingLinkMore,
-} from '@italia/components/ItaliaTheme';
-import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
+} from 'design-volto-theme/components/ItaliaTheme';
+import {
+  getCalendarDate,
+  getEventRecurrenceMore,
+} from 'design-volto-theme/helpers';
 
 const messages = defineMessages({
   card_detail_label: { id: 'Card detail label', defaultMessage: 'Vedi' },

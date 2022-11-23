@@ -15,7 +15,10 @@ import cx from 'classnames';
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
-import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
+import {
+  getCalendarDate,
+  getEventRecurrenceMore,
+} from 'design-volto-theme/helpers';
 import {
   ListingCategory,
   ListingText,
@@ -23,7 +26,7 @@ import {
   getItemIcon,
   ListingLinkMore,
   ListingImage,
-} from '@italia/components/ItaliaTheme';
+} from 'design-volto-theme/components/ItaliaTheme';
 
 const ContentInEvidenceTemplate = ({
   items,

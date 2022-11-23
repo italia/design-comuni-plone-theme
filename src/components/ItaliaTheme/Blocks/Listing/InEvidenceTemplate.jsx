@@ -17,7 +17,10 @@ import cx from 'classnames';
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
-import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
+import {
+  getCalendarDate,
+  getEventRecurrenceMore,
+} from 'design-volto-theme/helpers';
 import {
   CardCalendar,
   getItemIcon,
@@ -27,8 +30,8 @@ import {
   ListingImage,
   CardCategory,
   CardPersona,
-} from '@italia/components/ItaliaTheme';
-import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
+} from 'design-volto-theme/components/ItaliaTheme';
+import { getCategory } from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 
 const InEvidenceTemplate = (props) => {
   const {

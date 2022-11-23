@@ -11,7 +11,7 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 
 import { toPublicURL } from '@plone/volto/helpers';
-import { Icon } from '@italia/components/ItaliaTheme';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
 
 /**
  * Sharing view component class.

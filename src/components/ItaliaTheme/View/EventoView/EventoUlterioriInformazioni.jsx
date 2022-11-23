@@ -9,7 +9,7 @@ import {
   Metadata,
   HelpBox,
   GenericCard,
-} from '@italia/components/ItaliaTheme/View';
+} from 'design-volto-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   event_url: {

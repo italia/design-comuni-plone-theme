@@ -1,21 +1,19 @@
-.public-ui/*,
-.cms-ui .it-header-wrapper,
-.cms-ui .it-footer */ {
+.public-ui {
   // @import 'bootstrap-italia/src/scss/bootstrap-italia';
-  @import 'node_modules/bootstrap-select/sass/bootstrap-select';
-  @import 'node_modules/owl.carousel/src/scss/core';
-  @import 'node_modules/owl.carousel/src/scss/animate';
-  @import 'node_modules/owl.carousel/src/scss/autoheight';
+  @import 'bootstrap-select/sass/bootstrap-select';
+  @import 'owl.carousel/src/scss/core';
+  @import 'owl.carousel/src/scss/animate';
+  @import 'owl.carousel/src/scss/autoheight';
 }
 
 // funzioni e variabili colore
 @import 'bootstrap-italia/src/scss/functions';
 @import 'bootstrap-italia/src/scss/utilities/colors_vars';
 
-//variables
+// variables
 @import 'bootstrap-italia/src/scss/variables';
 
-//classi colore
+// classi colore
 @import 'bootstrap-italia/src/scss/utilities/colors';
 
 @import 'bootstrap/scss/functions';
@@ -26,20 +24,20 @@
 @import 'bootstrap-italia/src/scss/custom/mixins/buttons';
 @import 'bootstrap-italia/src/scss/custom/mixins/text-emphasis';
 
-.public-ui/*,
-.cms-ui .it-header-wrapper,
-.cms-ui .it-footer*/ {
-  // mixins
-  @import 'bootstrap/scss/root';
-  @import 'bootstrap/scss/print';
+// Commented root custom properties, we don't use them
+// (I found out we never could,
+// they were inside the following .public-ui selector and not working)
+// @import 'bootstrap/scss/root';
+
+@import './bootstrap/print';
+
+.public-ui {
   @import 'bootstrap/scss/reboot';
 }
 
 @import './bootstrap/reboot';
 
-.public-ui/*,
-.cms-ui .it-header-wrapper,
-.cms-ui .it-footer*/ {
+.public-ui {
   @import 'bootstrap/scss/type';
   @import 'bootstrap/scss/images';
   @import 'bootstrap/scss/code';
@@ -82,9 +80,7 @@
 @import './bootstrap-italia/type';
 @import './bootstrap-italia/grid';
 
-.public-ui/*,
-.cms-ui .it-header-wrapper,
-.cms-ui .it-footer*/ {
+.public-ui {
   @import 'bootstrap-italia/src/scss/custom/grid';
   @import 'bootstrap-italia/src/scss/custom/tables';
   @import 'bootstrap-italia/src/scss/custom/breadcrumb';
@@ -176,13 +172,13 @@
   // footer
   @import 'bootstrap-italia/src/scss/custom/footer';
 
-  //colors theme
+  // colors theme
   @import 'bootstrap-italia/src/scss/custom/navigationtheme';
 
   // componente di esempio
   @import 'bootstrap-italia/src/scss/custom/componente-base';
 
-  //gestione dei focus
+  // gestione dei focus
   @import 'bootstrap-italia/src/scss/utilities/focus';
   @import 'bootstrap-italia/src/scss/utilities/icons';
 }

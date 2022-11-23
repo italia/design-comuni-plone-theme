@@ -13,8 +13,11 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
 
-import { ListingText, ListingLinkMore } from '@italia/components/ItaliaTheme';
-import { viewDate } from '@italia/helpers';
+import {
+  ListingText,
+  ListingLinkMore,
+} from 'design-volto-theme/components/ItaliaTheme';
+import { viewDate } from 'design-volto-theme/helpers';
 
 const messages = defineMessages({
   vedi: {

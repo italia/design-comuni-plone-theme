@@ -24,6 +24,41 @@ body {
 picture.volto-image {
   display: block;
   width: 100%;
+
+  &.floated {
+    margin-right: 1em;
+    margin-bottom: 1em;
+    float: left;
+
+    &.right {
+      margin-right: 0;
+      margin-bottom: 1em;
+      margin-left: 1em;
+      float: right;
+    }
+  }
+
+  &.large {
+    width: 50%;
+  }
+
+  &.medium {
+    width: 25%;
+  }
+
+  &.small {
+    width: 15%;
+  }
+
+  &.thumb {
+    width: 128px;
+    max-height: 128px;
+  }
+
+  &.responsive img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .full-width,
@@ -157,11 +192,11 @@ div.sticky-wrapper {
 
       border: 1px solid $neutral-1-a1;
 
+      border-radius: 4px;
+
       border-left-width: 10px;
       margin-bottom: 20px;
       margin-left: 70px;
-
-      border-radius: 4px;
 
       box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 
@@ -202,8 +237,8 @@ div.sticky-wrapper {
         left: -25px;
         width: 9px;
         height: 9px;
-        background-color: $secondary;
         border-radius: 50%;
+        background-color: $secondary;
 
         content: '';
       }
@@ -272,9 +307,9 @@ div.sticky-wrapper {
   min-height: 44px;
   align-items: center;
   justify-content: center;
+  border-radius: 44px;
 
   background-color: $argument-icon-bg;
-  border-radius: 44px;
 
   .icon,
   svg {

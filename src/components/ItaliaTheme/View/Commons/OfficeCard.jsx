@@ -6,8 +6,11 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { Icon } from '@italia/components/ItaliaTheme';
-import { RichText, ContactLink } from '@italia/components/ItaliaTheme/View';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
+import {
+  RichText,
+  ContactLink,
+} from 'design-volto-theme/components/ItaliaTheme/View';
 
 /**
  * OfficeCard view component class.

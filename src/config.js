@@ -1,4 +1,4 @@
-import applyItaliaConfig from '@italia/config/italiaConfig';
+import applyItaliaConfig from 'design-volto-theme/config/italiaConfig';
 
 import '@plone/volto/config';
 

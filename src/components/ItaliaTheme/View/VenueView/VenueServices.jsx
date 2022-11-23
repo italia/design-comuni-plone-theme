@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import { RelatedArticles } from '@italia/components/ItaliaTheme/View';
+import { RelatedArticles } from 'design-volto-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   related_services: {

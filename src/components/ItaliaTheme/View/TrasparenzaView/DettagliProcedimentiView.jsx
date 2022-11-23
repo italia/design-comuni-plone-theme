@@ -8,7 +8,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { getDettagliProcedimento } from '@italia/actions';
+import { getDettagliProcedimento } from 'design-volto-theme/actions';
 import { useLocation } from 'react-router-dom';
 import { flattenHTMLToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';

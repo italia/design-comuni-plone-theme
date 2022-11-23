@@ -17,9 +17,12 @@ import {
 import Image from '@plone/volto/components/theme/Image/Image';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
-import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
-import { CardCategory, getItemIcon } from '@italia/components/ItaliaTheme';
-import { viewDate } from '@italia/helpers';
+import { getCategory } from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/Commons/utils';
+import {
+  CardCategory,
+  getItemIcon,
+} from 'design-volto-theme/components/ItaliaTheme';
+import { viewDate } from 'design-volto-theme/helpers';
 
 const Body = (props) => {
   const { content, block } = props;

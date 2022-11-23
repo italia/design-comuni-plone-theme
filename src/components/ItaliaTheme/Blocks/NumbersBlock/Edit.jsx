@@ -9,14 +9,14 @@ import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 
 import { SidebarPortal } from '@plone/volto/components';
 import { addAppURL, flattenToAppURL } from '@plone/volto/helpers';
-import { Icon } from '@italia/components/ItaliaTheme';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
 
 import {
   withDNDContext,
   SubblocksEdit,
   SubblocksWrapper,
-} from '@italia/addons/volto-subblocks';
-import { TextEditorWidget } from '@italia/components/ItaliaTheme';
+} from 'volto-subblocks';
+import { TextEditorWidget } from 'design-volto-theme/components/ItaliaTheme';
 
 import EditBlock from './Block/EditBlock';
 import Sidebar from './Sidebar.jsx';

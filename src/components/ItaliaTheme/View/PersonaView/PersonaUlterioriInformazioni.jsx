@@ -3,7 +3,7 @@ import {
   Metadata,
   richTextHasContent,
   HelpBox,
-} from '@italia/components/ItaliaTheme/View';
+} from 'design-volto-theme/components/ItaliaTheme/View';
 
 const PersonaUlterioriInformazioni = ({ content }) => {
   return (

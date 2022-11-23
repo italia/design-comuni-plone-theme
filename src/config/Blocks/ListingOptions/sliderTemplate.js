@@ -1,6 +1,6 @@
 import { defineMessages } from 'react-intl';
 
-import { addSchemaField } from '@italia/config/Blocks/ListingOptions';
+import { addSchemaField } from 'design-volto-theme/config/Blocks/ListingOptions';
 
 const messages = defineMessages({
   show_full_width: {

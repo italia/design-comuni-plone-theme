@@ -1,49 +1,49 @@
-import SimpleCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplate';
+import SimpleCardTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplate';
 
-import CardWithImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
-import CardWithImageTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CardWithImageTemplateSkeleton';
+import CardWithImageTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
+import CardWithImageTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CardWithImageTemplateSkeleton';
 
-import InEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate';
-import InEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/InEvidenceTemplateSkeleton';
+import InEvidenceTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate';
+import InEvidenceTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/InEvidenceTemplateSkeleton';
 
-import ContentInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/ContentInEvidenceTemplate';
-import ContentInEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/ContentInEvidenceTemplateSkeleton';
+import ContentInEvidenceTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/ContentInEvidenceTemplate';
+import ContentInEvidenceTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/ContentInEvidenceTemplateSkeleton';
 
-import RibbonCardTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate';
-import RibbonCardTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/RibbonCardTemplateSkeleton';
+import RibbonCardTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate';
+import RibbonCardTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/RibbonCardTemplateSkeleton';
 
-import MapTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/MapTemplate';
-import MapTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/MapTemplateSkeleton';
+import MapTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/MapTemplate';
+import MapTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/MapTemplateSkeleton';
 
-import SmallBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
-import SmallBlockLinksTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SmallBlockLinksTemplateSkeleton';
+import SmallBlockLinksTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
+import SmallBlockLinksTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SmallBlockLinksTemplateSkeleton';
 
-import CompleteBlockLinksTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate';
-import CompleteBlockLinksTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CompleteBlockLinksTemplateSkeleton';
+import CompleteBlockLinksTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate';
+import CompleteBlockLinksTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CompleteBlockLinksTemplateSkeleton';
 
-import PhotogalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
-import PhotogalleryTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/PhotogalleryTemplateSkeleton';
+import PhotogalleryTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
+import PhotogalleryTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/PhotogalleryTemplateSkeleton';
 
-import SliderTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SliderTemplate';
-import SliderTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SliderTemplateSkeleton';
+import SliderTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/SliderTemplate';
+import SliderTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SliderTemplateSkeleton';
 
-import GridGalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate';
-import GridGalleryTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/GridGalleryTemplateSkeleton';
+import GridGalleryTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate';
+import GridGalleryTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/GridGalleryTemplateSkeleton';
 
-import BandiInEvidenceTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate';
-import BandiInEvidenceTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton';
+import BandiInEvidenceTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate';
+import BandiInEvidenceTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton';
 
-import SquaresImageTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SquaresImageTemplate';
-import SquaresImageTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SquaresImageTemplateSkeleton';
+import SquaresImageTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/SquaresImageTemplate';
+import SquaresImageTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SquaresImageTemplateSkeleton';
 
-import SimpleListTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleListTemplate';
-import SimpleListTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SimpleListTemplateSkeleton';
+import SimpleListTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/SimpleListTemplate';
+import SimpleListTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SimpleListTemplateSkeleton';
 
-import CardWithSlideUpTextTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/CardWithSlideUpTextTemplate';
-import CardWithSlideUpTextTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CardWithSlideUpTextTemplateSkeleton';
+import CardWithSlideUpTextTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/CardWithSlideUpTextTemplate';
+import CardWithSlideUpTextTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CardWithSlideUpTextTemplateSkeleton';
 
-// import AmministrazioneTrasparenteTablesTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
-// import AmministrazioneTrasparenteTablesTemplateSkeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/AmministrazioneTrasparenteTablesTemplateSkeleton';
+// import AmministrazioneTrasparenteTablesTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
+// import AmministrazioneTrasparenteTablesTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/AmministrazioneTrasparenteTablesTemplateSkeleton';
 
 import {
   addSimpleCardTemplateOptions,
@@ -58,7 +58,7 @@ import {
   addSimpleListTemplateOptions,
   addCardWithSlideUpTextTemplateOptions,
   addPhotogalleryTemplateOptions,
-} from '@italia/config/Blocks/ListingOptions';
+} from 'design-volto-theme/config/Blocks/ListingOptions';
 
 import { addLighthouseField } from '@italia/config/Blocks/ListingOptions/utils';
 

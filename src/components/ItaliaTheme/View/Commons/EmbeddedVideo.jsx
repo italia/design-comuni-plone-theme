@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { ConditionalEmbed } from 'volto-gdpr-privacy';
 import { Embed } from 'semantic-ui-react';
-import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
+import { FontAwesomeIcon } from 'design-volto-theme/components/ItaliaTheme';
 import { useIntl, defineMessages } from 'react-intl';
 
 const messages = defineMessages({

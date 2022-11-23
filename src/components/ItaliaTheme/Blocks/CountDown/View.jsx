@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import redraft from 'redraft';
-import { checkRedraftHasContent } from '@italia/helpers';
+import { checkRedraftHasContent } from 'design-volto-theme/helpers';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { addAppURL, flattenToAppURL } from '@plone/volto/helpers';
 import cx from 'classnames';
-import CountDown from '@italia/components/ItaliaTheme/Blocks/CountDown/CountDown';
+import CountDown from 'design-volto-theme/components/ItaliaTheme/Blocks/CountDown/CountDown';
 import config from '@plone/volto/registry';
 
 const View = ({ data, id }) => {

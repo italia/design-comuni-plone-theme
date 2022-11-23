@@ -15,8 +15,8 @@ import {
   withDNDContext,
   SubblocksEdit,
   SubblocksWrapper,
-} from '@italia/addons/volto-subblocks';
-import { TextEditorWidget } from '@italia/components/ItaliaTheme';
+} from 'volto-subblocks';
+import { TextEditorWidget } from 'design-volto-theme/components/ItaliaTheme';
 
 import EditBlock from './Block/EditBlock';
 import Sidebar from './Sidebar.jsx';

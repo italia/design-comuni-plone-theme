@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Sponsors } from '@italia/components/ItaliaTheme/View';
+import { Sponsors } from 'design-volto-theme/components/ItaliaTheme/View';
 
 const EventoSponsors = ({ content }) => (
   <Sponsors content={content} folder_name={'sponsor_evento'} />

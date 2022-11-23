@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import { viewDate } from '@italia/helpers';
+import { viewDate } from 'design-volto-theme/helpers';
 
 const messages = defineMessages({
   days: {

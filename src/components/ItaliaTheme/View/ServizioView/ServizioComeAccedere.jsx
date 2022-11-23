@@ -7,7 +7,7 @@ import {
   RichTextArticle,
   richTextHasContent,
   Locations,
-} from '@italia/components/ItaliaTheme/View';
+} from 'design-volto-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   accedere_al_servizio: {

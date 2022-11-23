@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Container } from 'design-react-kit/dist/design-react-kit';
-import SimpleCardTemplateDefault from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault';
-import SimpleCardTemplateCompact from '@italia/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateCompact';
+import SimpleCardTemplateDefault from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault';
+import SimpleCardTemplateCompact from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateCompact';
 
-import { SimpleCardTemplateAppearance_COMPACT } from '@italia/config/Blocks/ListingOptions';
+import { SimpleCardTemplateAppearance_COMPACT } from 'design-volto-theme/config/Blocks/ListingOptions';
 
 const SimpleCardTemplate = (data) => {
   let content = null;

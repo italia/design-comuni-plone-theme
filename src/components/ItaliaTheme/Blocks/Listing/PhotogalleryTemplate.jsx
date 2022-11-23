@@ -1,19 +1,22 @@
-import React, { useState, useRef } from 'react';
-import PropTypes from 'prop-types';
-import { useIntl, defineMessages } from 'react-intl';
-import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
-
-import cx from 'classnames';
-import { UniversalLink } from '@plone/volto/components';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
-import { ListingLinkMore, ListingImage } from '@italia/components/ItaliaTheme';
-import { Icon } from '@italia/components/ItaliaTheme';
-import { flattenToAppURL } from '@plone/volto/helpers';
-import { GalleryPreview } from '@italia/components/ItaliaTheme';
 import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import 'design-volto-theme/components/slick-carousel/slick/slick-theme.css';
+
+import { Col, Container, Row } from 'design-react-kit/dist/design-react-kit';
+import {
+  ListingImage,
+  ListingLinkMore,
+} from 'design-volto-theme/components/ItaliaTheme';
+import React, { useRef, useState } from 'react';
+import { defineMessages, useIntl } from 'react-intl';
+
 import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
+import { GalleryPreview } from 'design-volto-theme/components/ItaliaTheme';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
+import PropTypes from 'prop-types';
+import { UniversalLink } from '@plone/volto/components';
+import cx from 'classnames';
+import { flattenToAppURL } from '@plone/volto/helpers';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 const messages = defineMessages({
   viewImage: {

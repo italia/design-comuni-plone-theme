@@ -7,13 +7,13 @@ import {
   CardTitle,
   CardText,
 } from 'design-react-kit/dist/design-react-kit';
-import { Icon } from '@italia/components/ItaliaTheme';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
 import {
   richTextHasContent,
   RichText,
   RichTextArticle,
-} from '@italia/components/ItaliaTheme/View';
-import { OSMMap } from '@italia/addons/volto-venue';
+} from 'design-volto-theme/components/ItaliaTheme/View';
+import { OSMMap } from 'volto-venue';
 
 const messages = defineMessages({
   dove: {

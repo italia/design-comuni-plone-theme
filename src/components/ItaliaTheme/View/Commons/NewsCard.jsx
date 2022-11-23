@@ -3,7 +3,7 @@ import { useIntl } from 'react-intl';
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
-import { viewDate } from '@italia/helpers';
+import { viewDate } from 'design-volto-theme/helpers';
 /**
  *
  * NewsCard view component class.

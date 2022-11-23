@@ -7,8 +7,8 @@ import {
   RichText,
   OfficeCard,
   Gallery,
-} from '@italia/components/ItaliaTheme/View';
-import { contentFolderHasItems, viewDate } from '@italia/helpers';
+} from 'design-volto-theme/components/ItaliaTheme/View';
+import { contentFolderHasItems, viewDate } from 'design-volto-theme/helpers';
 
 const messages = defineMessages({
   ruolo: {

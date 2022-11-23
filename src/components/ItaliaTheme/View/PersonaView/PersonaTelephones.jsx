@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { defineMessages, useIntl } from 'react-intl';
-import { ContactLink } from '@italia/components/ItaliaTheme/View';
+import { ContactLink } from 'design-volto-theme/components/ItaliaTheme/View';
 
 /**
  * PersonaTelephones component class.
@@ -26,10 +26,10 @@ const PersonaTelephones = ({ content }) => {
     <p>
       <strong>{intl.formatMessage(messages.telefono)}: </strong>
       {content.telefono.map((tel, index) => (
-        <>
+        <React.Fragment key={index}>
           <ContactLink tel={tel} label={false} />
           {index !== nItems - 1 && ', '}
-        </>
+        </React.Fragment>
       ))}
     </p>
   ) : null;

@@ -11,8 +11,8 @@ import {
   Label,
   Collapse,
 } from 'design-react-kit/dist/design-react-kit';
-import { Icon } from '@italia/components/ItaliaTheme';
-import { SearchUtils, Checkbox } from '@italia/components';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
+import { SearchUtils, Checkbox } from 'design-volto-theme/components';
 
 const messages = defineMessages({
   searchInSection: {

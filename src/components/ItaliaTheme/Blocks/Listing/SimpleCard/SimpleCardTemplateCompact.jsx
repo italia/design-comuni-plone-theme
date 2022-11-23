@@ -14,7 +14,7 @@ import {
   Icon,
   getItemIcon,
   ListingLinkMore,
-} from '@italia/components/ItaliaTheme';
+} from 'design-volto-theme/components/ItaliaTheme';
 
 const SimpleCardTemplateCompact = ({
   items,

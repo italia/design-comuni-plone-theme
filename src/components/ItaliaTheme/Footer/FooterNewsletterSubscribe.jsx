@@ -12,7 +12,7 @@ import {
   Input,
   Button,
 } from 'design-react-kit/dist/design-react-kit';
-import { Icon } from '@italia/components/ItaliaTheme';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
 
 const messages = defineMessages({
   subscribe: {

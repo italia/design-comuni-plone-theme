@@ -1,22 +1,26 @@
-.btn-tertiary {
-  @include button-variant($subsite-tertiary, $subsite-tertiary-text);
+@use '../all_variables' as *;
 
-  svg {
-    fill: $subsite-tertiary-text;
-  }
+@mixin common($subsite-tertiary, $subsite-tertiary-text) {
+  .btn-tertiary {
+    @include button-variant($subsite-tertiary, $subsite-tertiary-text);
 
-  &:hover,
-  &:active {
     svg {
       fill: $subsite-tertiary-text;
     }
+
+    &:hover,
+    &:active {
+      svg {
+        fill: $subsite-tertiary-text;
+      }
+    }
   }
-}
 
-a.btn-tertiary {
-  color: $subsite-tertiary-text;
-}
+  a.btn-tertiary {
+    color: $subsite-tertiary-text;
+  }
 
-.btn-outline-tertiary {
-  @include button-outline-variant($subsite-tertiary);
+  .btn-outline-tertiary {
+    @include button-outline-variant($subsite-tertiary);
+  }
 }

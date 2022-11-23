@@ -4,11 +4,11 @@ import { useIntl, defineMessages } from 'react-intl';
 
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { When } from '@plone/volto/components/theme/View/EventDatesInfo';
-import { viewDate } from '@italia/helpers';
+import { viewDate } from 'design-volto-theme/helpers';
 import {
   getCalendarDate_extend,
   getEventRecurrenceMore_extend,
-} from '@italia/helpers/ListingHelper_extend';
+} from 'design-volto-theme/helpers/ListingHelper_extend';
 
 const messages = defineMessages({
   from: {

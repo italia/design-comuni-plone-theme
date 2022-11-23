@@ -4,7 +4,7 @@ import {
   addSchemaField,
   addDefaultOptions,
   templatesOptions,
-} from '@italia/config/Blocks/ListingOptions';
+} from 'design-volto-theme/config/Blocks/ListingOptions';
 
 import { addLighthouseField } from '@italia/config/Blocks/ListingOptions/utils';
 

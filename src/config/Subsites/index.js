@@ -2,23 +2,27 @@ import loadable from '@loadable/component';
 
 export const loadables = {
   'subsite-light-blue': loadable.lib(() =>
-    import('@italia/config/Subsites/light-blue'),
+    import('design-volto-theme/config/Subsites/light-blue'),
   ),
   'subsite-light-pink': loadable.lib(() =>
-    import('@italia/config/Subsites/light-pink'),
+    import('design-volto-theme/config/Subsites/light-pink'),
   ),
   'subsite-light-teal': loadable.lib(() =>
-    import('@italia/config/Subsites/light-teal'),
+    import('design-volto-theme/config/Subsites/light-teal'),
   ),
   'subsite-light-yellow': loadable.lib(() =>
-    import('@italia/config/Subsites/light-yellow'),
+    import('design-volto-theme/config/Subsites/light-yellow'),
   ),
   'subsite-magenta': loadable.lib(() =>
-    import('@italia/config/Subsites/magenta'),
+    import('design-volto-theme/config/Subsites/magenta'),
   ),
-  'subsite-teal': loadable.lib(() => import('@italia/config/Subsites/teal')),
-  'subsite-white': loadable.lib(() => import('@italia/config/Subsites/white')),
+  'subsite-teal': loadable.lib(() =>
+    import('design-volto-theme/config/Subsites/teal'),
+  ),
+  'subsite-white': loadable.lib(() =>
+    import('design-volto-theme/config/Subsites/white'),
+  ),
   'subsite-yellow': loadable.lib(() =>
-    import('@italia/config/Subsites/yellow'),
+    import('design-volto-theme/config/Subsites/yellow'),
   ),
 };

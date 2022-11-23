@@ -15,9 +15,9 @@ import { FormattedMessage } from 'react-intl';
 import { Embed, Message } from 'semantic-ui-react';
 import cx from 'classnames';
 import { isInternalURL, getParentUrl } from '@plone/volto/helpers';
-import { videoUrlHelper } from '@italia/helpers';
+import { videoUrlHelper } from 'design-volto-theme/helpers';
 import { ConditionalEmbed } from 'volto-gdpr-privacy';
-import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
+import { FontAwesomeIcon } from 'design-volto-theme/components/ItaliaTheme';
 import config from '@plone/volto/registry';
 
 /**

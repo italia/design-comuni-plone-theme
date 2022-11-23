@@ -7,7 +7,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import StoresButtons from '@italia/components/ItaliaTheme/Blocks/HeroImageLeft/StoresButtons';
+import StoresButtons from 'design-volto-theme/components/ItaliaTheme/Blocks/HeroImageLeft/StoresButtons';
 
 /**
  * View image block class.

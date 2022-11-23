@@ -11,14 +11,11 @@ import { defineMessages, useIntl } from 'react-intl';
 import { Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { ConditionalLink } from '@plone/volto/components';
 import { flattenHTMLToAppURL } from '@plone/volto/helpers';
-import {
-  getEditableFooterColumns,
-  getItemsByPath,
-} from '@italia/addons/volto-editablefooter';
+import { getEditableFooterColumns, getItemsByPath } from 'volto-editablefooter';
 import {
   FooterNewsletterSubscribe,
   FooterSocials,
-} from '@italia/components/ItaliaTheme';
+} from 'design-volto-theme/components/ItaliaTheme';
 
 const messages = defineMessages({
   goToPage: {

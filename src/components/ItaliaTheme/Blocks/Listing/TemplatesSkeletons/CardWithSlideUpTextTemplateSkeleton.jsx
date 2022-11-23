@@ -13,10 +13,8 @@ const messages = defineMessages({
 
 const CardWithSlideUpTextTemplateSkeleton = ({
   title,
-  isEditMode,
   linkTitle,
   linkHref,
-  show_description = true,
 }) => {
   const intl = useIntl();
 
@@ -27,7 +25,11 @@ const CardWithSlideUpTextTemplateSkeleton = ({
         <div className="grid mb-3 mt-5">
           {[0, 1, 2].map((i) => {
             return (
-              <UniversalLink href="#" className="listing-item box bg-img">
+              <UniversalLink
+                href="#"
+                className="listing-item box bg-img"
+                key={i}
+              >
                 <div className="bg-gradient"></div>
                 <h3 className="title">{title}</h3>
                 <div className="box-slide-up">
@@ -35,7 +37,7 @@ const CardWithSlideUpTextTemplateSkeleton = ({
                   {linkHref && (
                     <div className="read-more">
                       <div className="read-more justify-content-end my-4">
-                        {intl.formatMessage(messages.vedi)}
+                        {linkTitle || intl.formatMessage(messages.vedi)}
                       </div>
                     </div>
                   )}
@@ -52,8 +54,7 @@ const CardWithSlideUpTextTemplateSkeleton = ({
 };
 
 CardWithSlideUpTextTemplateSkeleton.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.any).isRequired,
-  isEditMode: PropTypes.bool,
+  title: PropTypes.string,
   linkTitle: PropTypes.any,
   linkHrefs: PropTypes.any,
 };

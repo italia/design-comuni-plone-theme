@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import { TextWidget, SelectWidget } from '@plone/volto/components';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-import { FontAwesomeIcon } from '@italia/components/ItaliaTheme';
-import IconPreviewWidget from '@italia/components/ItaliaTheme/manage/Widgets/IconPreviewWidget';
+import { FontAwesomeIcon } from 'design-volto-theme/components/ItaliaTheme';
+import IconPreviewWidget from 'design-volto-theme/components/ItaliaTheme/manage/Widgets/IconPreviewWidget';
 
 const messages = defineMessages({
   icon: {

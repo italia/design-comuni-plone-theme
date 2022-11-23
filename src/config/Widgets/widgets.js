@@ -1,19 +1,19 @@
 import React from 'react';
-import CharCounterDescriptionWidget from '@italia/components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget';
+import CharCounterDescriptionWidget from 'design-volto-theme/components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget';
 import { DatetimeWidget } from '@plone/volto/config/Widgets';
 import { ArrayWidget } from '@plone/volto/components';
-import { MultilingualWidget } from '@italia/addons/volto-multilingual-widget';
-import IconWidget from '@italia/components/ItaliaTheme/manage/Widgets/IconWidget';
-import SubsiteSocialLinksWidget from '@italia/components/ItaliaTheme/manage/Widgets/SubsiteSocialLinksWidget';
-import SearchSectionsConfigurationWidget from '@italia/components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget';
-import { defaultIconWidgetOptions } from '@italia/helpers/index';
+import { MultilingualWidget } from 'volto-multilingual-widget';
+import IconWidget from 'design-volto-theme/components/ItaliaTheme/manage/Widgets/IconWidget';
+import SubsiteSocialLinksWidget from 'design-volto-theme/components/ItaliaTheme/manage/Widgets/SubsiteSocialLinksWidget';
+import SearchSectionsConfigurationWidget from 'design-volto-theme/components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget';
+import { defaultIconWidgetOptions } from 'design-volto-theme/helpers/index';
 import {
   ColorListWidget,
   PathFiltersWidget,
   LocationFiltersWidget,
-} from '@italia/components/ItaliaTheme';
+} from 'design-volto-theme/components/ItaliaTheme';
 
-//import TinymceWidget from '@italia/components/ItaliaTheme/manage/Widgets/TinymceWidget';
+//import TinymceWidget from 'design-volto-theme/components/ItaliaTheme/manage/Widgets/TinymceWidget';
 
 const getItaliaWidgets = (config) => {
   return {

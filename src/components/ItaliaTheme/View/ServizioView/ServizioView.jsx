@@ -30,7 +30,7 @@ import {
   ServizioCorrelati,
   ServizioUlterioriInformazioni,
   ContentTypeViewSections,
-} from '@italia/components/ItaliaTheme/View';
+} from 'design-volto-theme/components/ItaliaTheme/View';
 
 export const VenueViewSectionsOrder = [
   {

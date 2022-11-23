@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import redraft from 'redraft';
 import { useIntl, defineMessages } from 'react-intl';
 import cx from 'classnames';
-import { Icon } from '@italia/components/ItaliaTheme';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({

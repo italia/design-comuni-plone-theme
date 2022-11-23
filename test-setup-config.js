@@ -8,7 +8,7 @@
  */
 
 import config from '@plone/volto/registry';
-import { loadables } from '@italia/config/loadables';
+import { loadables } from 'design-volto-theme/config/loadables';
 
 config.set('settings', {
   ...config.settings,
@@ -32,4 +32,3 @@ config.set('settings', {
     huge: 1600,
   },
 });
-

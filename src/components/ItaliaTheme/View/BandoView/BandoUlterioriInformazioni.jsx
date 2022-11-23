@@ -5,7 +5,7 @@ import {
   Metadata,
   HelpBox,
   richTextHasContent,
-} from '@italia/components/ItaliaTheme/View';
+} from 'design-volto-theme/components/ItaliaTheme/View';
 
 const BandoUlterioriInformazioni = ({ content }) => {
   return (

@@ -20,7 +20,7 @@ import {
   SkipToMainContent,
   RelatedItems,
   RelatedItemInEvidence,
-} from '@italia/components/ItaliaTheme/View';
+} from 'design-volto-theme/components/ItaliaTheme/View';
 
 // import { getBaseUrl } from '@plone/volto/helpers';
 

@@ -7,10 +7,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import redraft from 'redraft';
 
-import { Icon } from '@italia/components/ItaliaTheme';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
 import { Card, CardBody } from 'design-react-kit/dist/design-react-kit';
 import config from '@plone/volto/registry';
-import { checkRedraftHasContent } from '@italia/helpers';
+import { checkRedraftHasContent } from 'design-volto-theme/helpers';
 
 /**
  * ViewBlock class.

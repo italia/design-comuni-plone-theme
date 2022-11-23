@@ -1,4 +1,4 @@
-import { createEllipsisItem } from '@italia/components/ItaliaTheme/Pagination/createPaginationItems/itemFactories';
+import { createEllipsisItem } from 'design-volto-theme/components/ItaliaTheme/Pagination/createPaginationItems/itemFactories';
 
 export const createInnerPrefix = (
   firstGroupEnd,

@@ -1,23 +1,29 @@
-//mobile
-.navbar {
-  &.it-navscroll-wrapper {
-    .link-list-wrapper {
-      ul {
-        li {
-          a {
-            &.active {
-              border-left-color: $subsite-link-color;
-              span {
-                color: $subsite-link-color;
+@use '../../all_variables' as *;
+
+@mixin navscroll($subsite-link-color) {
+  //mobile
+  .navbar {
+    &.it-navscroll-wrapper {
+      .link-list-wrapper {
+        ul {
+          li {
+            a {
+              &.active {
+                border-left-color: $subsite-link-color;
+
+                span {
+                  color: $subsite-link-color;
+                }
               }
             }
-          }
-          ul {
-            li {
-              a {
-                &.active {
-                  span {
-                    color: $subsite-link-color;
+
+            ul {
+              li {
+                a {
+                  &.active {
+                    span {
+                      color: $subsite-link-color;
+                    }
                   }
                 }
               }
@@ -27,29 +33,31 @@
       }
     }
   }
-}
 
-//Tablet horizontal / small desktop
-@media (min-width: #{map-get($grid-breakpoints, lg)}) {
-  .navbar {
-    &.it-navscroll-wrapper {
-      .link-list-wrapper {
-        ul {
-          li {
-            a {
-              &.active {
-                border-left-color: $subsite-link-color;
-                span {
-                  color: $subsite-link-color;
+  //Tablet horizontal / small desktop
+  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+    .navbar {
+      &.it-navscroll-wrapper {
+        .link-list-wrapper {
+          ul {
+            li {
+              a {
+                &.active {
+                  border-left-color: $subsite-link-color;
+
+                  span {
+                    color: $subsite-link-color;
+                  }
                 }
               }
-            }
-            ul {
-              li {
-                a {
-                  &.active {
-                    span {
-                      color: $subsite-link-color;
+
+              ul {
+                li {
+                  a {
+                    &.active {
+                      span {
+                        color: $subsite-link-color;
+                      }
                     }
                   }
                 }

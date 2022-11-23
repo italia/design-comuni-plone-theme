@@ -2,7 +2,7 @@
  * Add your components here.
  * @module components
  * @example
- * import Footer from '@italia/components/ItaliaTheme/Footer/Footer';
+ * import Footer from 'design-volto-theme/components/ItaliaTheme/Footer/Footer';
  *
  * export {
  *   Footer,
@@ -10,76 +10,76 @@
  */
 
 /********* WIDGETS ********* */
-export TextEditorWidget from '@italia/components/ItaliaTheme/manage/Widgets/TextEditorWidget';
-export LinkToWidget from '@italia/components/ItaliaTheme/manage/Widgets/LinkToWidget';
-export ColorListWidget from '@italia/components/ItaliaTheme/manage/Widgets/ColorListWidget';
-export FileWidget from '@italia/components/ItaliaTheme/manage/Widgets/FileWidget';
-export PathFiltersWidget from '@italia/components/ItaliaTheme/manage/Widgets/PathFiltersWidget';
-export LocationFiltersWidget from '@italia/components/ItaliaTheme/manage/Widgets/LocationFiltersWidget';
+export TextEditorWidget from 'design-volto-theme/components/ItaliaTheme/manage/Widgets/TextEditorWidget';
+export LinkToWidget from 'design-volto-theme/components/ItaliaTheme/manage/Widgets/LinkToWidget';
+export ColorListWidget from 'design-volto-theme/components/ItaliaTheme/manage/Widgets/ColorListWidget';
+export FileWidget from 'design-volto-theme/components/ItaliaTheme/manage/Widgets/FileWidget';
+export PathFiltersWidget from 'design-volto-theme/components/ItaliaTheme/manage/Widgets/PathFiltersWidget';
+export LocationFiltersWidget from 'design-volto-theme/components/ItaliaTheme/manage/Widgets/LocationFiltersWidget';
 
 /********* ICONS ********* */
-export getItemIcon from '@italia/components/ItaliaTheme/Icons/common/common';
-export Icon from '@italia/components/ItaliaTheme/Icons/Icon';
-export FontAwesomeIcon from '@italia/components/ItaliaTheme/Icons/FontAwesomeIcon';
-export SectionIcon from '@italia/components/ItaliaTheme/Icons/SectionIcon';
+export getItemIcon from 'design-volto-theme/components/ItaliaTheme/Icons/common/common';
+export Icon from 'design-volto-theme/components/ItaliaTheme/Icons/Icon';
+export FontAwesomeIcon from 'design-volto-theme/components/ItaliaTheme/Icons/FontAwesomeIcon';
+export SectionIcon from 'design-volto-theme/components/ItaliaTheme/Icons/SectionIcon';
 
 /********* COMMONS ********* */
-export CardCategory from '@italia/components/ItaliaTheme/Cards/CardCategory';
-export RemoveBodyClass from '@italia/components/ItaliaTheme/RemoveBodyClass/RemoveBodyClass';
-export CardPersona from '@italia/components/ItaliaTheme/Cards/CardPersona';
-export GalleryPreview from '@italia/components/ItaliaTheme/GalleryPreview/GalleryPreview';
+export CardCategory from 'design-volto-theme/components/ItaliaTheme/Cards/CardCategory';
+export RemoveBodyClass from 'design-volto-theme/components/ItaliaTheme/RemoveBodyClass/RemoveBodyClass';
+export CardPersona from 'design-volto-theme/components/ItaliaTheme/Cards/CardPersona';
+export GalleryPreview from 'design-volto-theme/components/ItaliaTheme/GalleryPreview/GalleryPreview';
 
 /********* LAYOUT ********* */
-export LanguageSelector from '@italia/components/ItaliaTheme/LanguageSelector/LanguageSelector';
-export HeaderSlim from '@italia/components/ItaliaTheme/Header/HeaderSlim';
-export HeaderSlimRightZone from '@italia/components/ItaliaTheme/Header/HeaderSlim/HeaderSlimRightZone';
-export ArLogin from '@italia/components/ItaliaTheme/Header/HeaderSlim/ArLogin';
-export LoginButton from '@italia/components/ItaliaTheme/Header/HeaderSlim/LoginButton';
-export TertiaryMenu from '@italia/components/ItaliaTheme/Header/HeaderSlim/TertiaryMenu';
-export UserLoggedMenu from '@italia/components/ItaliaTheme/Header/HeaderSlim/UserLoggedMenu';
-export HeaderCenter from '@italia/components/ItaliaTheme/Header/HeaderCenter';
-export SocialHeader from '@italia/components/ItaliaTheme/Header/SocialHeader';
-export SubsiteHeader from '@italia/components/ItaliaTheme/Header/SubsiteHeader';
-export ParentSiteMenu from '@italia/components/ItaliaTheme/Header/ParentSiteMenu';
-export HeaderSearch from '@italia/components/ItaliaTheme/Header/HeaderSearch/HeaderSearch';
-export SearchModal from '@italia/components/ItaliaTheme/Header/HeaderSearch/SearchModal';
-export SearchSections from '@italia/components/ItaliaTheme/Search/SearchSections';
-export SearchTopics from '@italia/components/ItaliaTheme/Search/SearchTopics';
-export SearchCTs from '@italia/components/ItaliaTheme/Search/SearchCTs';
-export SearchResultItem from '@italia/components/ItaliaTheme/Search/ResultItem';
-export MegaMenu from '@italia/components/ItaliaTheme/MegaMenu/MegaMenu';
-export MenuSecondary from '@italia/components/ItaliaTheme/MenuSecondary/MenuSecondary';
-export Logo from '@italia/components/ItaliaTheme/Logo/Logo';
-export BrandText from '@italia/components/ItaliaTheme/BrandText/BrandText';
-export BrandTextFooter from '@italia/components/ItaliaTheme/BrandTextFooter/BrandTextFooter';
-export LogoFooter from '@italia/components/ItaliaTheme/LogoFooter/LogoFooter';
-export FooterMain from '@italia/components/ItaliaTheme/Footer/FooterMain';
-export FooterInfos from '@italia/components/ItaliaTheme/Footer/FooterInfos';
-export FooterNavigation from '@italia/components/ItaliaTheme/Footer/FooterNavigation';
-export FooterSmall from '@italia/components/ItaliaTheme/Footer/FooterSmall';
-export FooterNewsletterSubscribe from '@italia/components/ItaliaTheme/Footer/FooterNewsletterSubscribe';
-export FooterSocials from '@italia/components/ItaliaTheme/Footer/FooterSocials';
-export SubsiteFooter from '@italia/components/ItaliaTheme/Footer/SubsiteFooter';
-export Pagination from '@italia/components/ItaliaTheme/Pagination/Pagination';
-export SkipLinks from '@italia/components/ItaliaTheme/SkipLinks/SkipLinks';
-export Breadcrumbs from '@italia/components/ItaliaTheme/Breadcrumbs/Breadcrumbs';
-export CustomerSatisfaction from '@italia/components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction';
+export LanguageSelector from 'design-volto-theme/components/ItaliaTheme/LanguageSelector/LanguageSelector';
+export HeaderSlim from 'design-volto-theme/components/ItaliaTheme/Header/HeaderSlim';
+export HeaderSlimRightZone from 'design-volto-theme/components/ItaliaTheme/Header/HeaderSlim/HeaderSlimRightZone';
+export ArLogin from 'design-volto-theme/components/ItaliaTheme/Header/HeaderSlim/ArLogin';
+export LoginButton from 'design-volto-theme/components/ItaliaTheme/Header/HeaderSlim/LoginButton';
+export TertiaryMenu from 'design-volto-theme/components/ItaliaTheme/Header/HeaderSlim/TertiaryMenu';
+export UserLoggedMenu from 'design-volto-theme/components/ItaliaTheme/Header/HeaderSlim/UserLoggedMenu';
+export HeaderCenter from 'design-volto-theme/components/ItaliaTheme/Header/HeaderCenter';
+export SocialHeader from 'design-volto-theme/components/ItaliaTheme/Header/SocialHeader';
+export SubsiteHeader from 'design-volto-theme/components/ItaliaTheme/Header/SubsiteHeader';
+export ParentSiteMenu from 'design-volto-theme/components/ItaliaTheme/Header/ParentSiteMenu';
+export HeaderSearch from 'design-volto-theme/components/ItaliaTheme/Header/HeaderSearch/HeaderSearch';
+export SearchModal from 'design-volto-theme/components/ItaliaTheme/Header/HeaderSearch/SearchModal';
+export SearchSections from 'design-volto-theme/components/ItaliaTheme/Search/SearchSections';
+export SearchTopics from 'design-volto-theme/components/ItaliaTheme/Search/SearchTopics';
+export SearchCTs from 'design-volto-theme/components/ItaliaTheme/Search/SearchCTs';
+export SearchResultItem from 'design-volto-theme/components/ItaliaTheme/Search/ResultItem';
+export MegaMenu from 'design-volto-theme/components/ItaliaTheme/MegaMenu/MegaMenu';
+export MenuSecondary from 'design-volto-theme/components/ItaliaTheme/MenuSecondary/MenuSecondary';
+export Logo from 'design-volto-theme/components/ItaliaTheme/Logo/Logo';
+export BrandText from 'design-volto-theme/components/ItaliaTheme/BrandText/BrandText';
+export BrandTextFooter from 'design-volto-theme/components/ItaliaTheme/BrandTextFooter/BrandTextFooter';
+export LogoFooter from 'design-volto-theme/components/ItaliaTheme/LogoFooter/LogoFooter';
+export FooterMain from 'design-volto-theme/components/ItaliaTheme/Footer/FooterMain';
+export FooterInfos from 'design-volto-theme/components/ItaliaTheme/Footer/FooterInfos';
+export FooterNavigation from 'design-volto-theme/components/ItaliaTheme/Footer/FooterNavigation';
+export FooterSmall from 'design-volto-theme/components/ItaliaTheme/Footer/FooterSmall';
+export FooterNewsletterSubscribe from 'design-volto-theme/components/ItaliaTheme/Footer/FooterNewsletterSubscribe';
+export FooterSocials from 'design-volto-theme/components/ItaliaTheme/Footer/FooterSocials';
+export SubsiteFooter from 'design-volto-theme/components/ItaliaTheme/Footer/SubsiteFooter';
+export Pagination from 'design-volto-theme/components/ItaliaTheme/Pagination/Pagination';
+export SkipLinks from 'design-volto-theme/components/ItaliaTheme/SkipLinks/SkipLinks';
+export Breadcrumbs from 'design-volto-theme/components/ItaliaTheme/Breadcrumbs/Breadcrumbs';
+export CustomerSatisfaction from 'design-volto-theme/components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction';
 
 /********* BLOCKS ********* */
-export AlertSidebar from '@italia/components/ItaliaTheme/Blocks/Alert/Sidebar';
-export BlockSearchSectionsSidebar from '@italia/components/ItaliaTheme/Blocks/SearchSections/SideBar';
-export BlockSearchSectionsBody from '@italia/components/ItaliaTheme/Blocks/SearchSections/Body';
-export ArgumentsInEvidenceBackground from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Background';
-export SearchSectionsBackground from '@italia/components/ItaliaTheme/Blocks/SearchSections/Background';
-export BackgroundUser from '@italia/components/ItaliaTheme/Blocks/SearchSections/BackgroundUser';
-export Skeleton from '@italia/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/Skeleton';
-export CardCalendar from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/CardCalendar';
-export ListingCategory from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/ListingCategory';
-export ListingText from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/ListingText';
-export ListingLinkMore from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/ListingLinkMore';
+export AlertSidebar from 'design-volto-theme/components/ItaliaTheme/Blocks/Alert/Sidebar';
+export BlockSearchSectionsSidebar from 'design-volto-theme/components/ItaliaTheme/Blocks/SearchSections/SideBar';
+export BlockSearchSectionsBody from 'design-volto-theme/components/ItaliaTheme/Blocks/SearchSections/Body';
+export ArgumentsInEvidenceBackground from 'design-volto-theme/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Background';
+export SearchSectionsBackground from 'design-volto-theme/components/ItaliaTheme/Blocks/SearchSections/Background';
+export BackgroundUser from 'design-volto-theme/components/ItaliaTheme/Blocks/SearchSections/BackgroundUser';
+export Skeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/Skeleton';
+export CardCalendar from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/Commons/CardCalendar';
+export ListingCategory from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/Commons/ListingCategory';
+export ListingText from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/Commons/ListingText';
+export ListingLinkMore from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/Commons/ListingLinkMore';
 export ListingImage, {
   getListingImageBackground,
-} from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/ListingImage';
+} from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/Commons/ListingImage';
 
 /********* ERROR PAGES ********* */
-export Unauthorized from '@italia/components/ItaliaTheme/Unauthorized/Unauthorized';
+export Unauthorized from 'design-volto-theme/components/ItaliaTheme/Unauthorized/Unauthorized';

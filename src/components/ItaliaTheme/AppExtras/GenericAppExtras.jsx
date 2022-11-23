@@ -3,10 +3,10 @@ import { useSelector } from 'react-redux';
 import { useIntl } from 'react-intl';
 import { useLocation } from 'react-router-dom';
 import { Helmet, BodyClass } from '@plone/volto/helpers';
-import { RemoveBodyClass } from '@italia/components/ItaliaTheme';
-import { getSiteProperty } from '@italia/helpers';
-import ScrollToTop from '@italia/components/ItaliaTheme/ScrollToTop/ScrollToTop';
-import { SubsiteLoader } from '@italia/addons/volto-subsites';
+import { RemoveBodyClass } from 'design-volto-theme/components/ItaliaTheme';
+import { getSiteProperty } from 'design-volto-theme/helpers';
+import ScrollToTop from 'design-volto-theme/components/ItaliaTheme/ScrollToTop/ScrollToTop';
+import { SubsiteLoader } from 'volto-subsites';
 import config from '@plone/volto/registry';
 
 const GenericAppExtras = (props) => {

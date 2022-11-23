@@ -8,7 +8,7 @@
 
 .react-select__control:focus {
   border-bottom: solid #435a70 1.25px !important;
-  //box-shadow: none !important;
+  /* box-shadow: none !important; */
 }
 
 .react-select__control:hover {

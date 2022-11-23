@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import { Collapse as CollapseBase } from 'reactstrap';
 
-import { Icon } from '@italia/components/ItaliaTheme';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
 
 /**
  * Clone di https://github.com/italia/design-react-kit/blob/master/src/components/Collapse/Collapse.js

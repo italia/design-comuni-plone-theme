@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import BodyWrapper from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper';
-import BottomBody from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody';
-import Block from '@italia/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block';
-import { ArgumentsInEvidenceBackground } from '@italia/components/ItaliaTheme';
+import BodyWrapper from 'design-volto-theme/components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper';
+import BottomBody from 'design-volto-theme/components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody';
+import Block from 'design-volto-theme/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block';
+import { ArgumentsInEvidenceBackground } from 'design-volto-theme/components/ItaliaTheme';
 import { useIntl } from 'react-intl';
 
 const View = ({ data, id }) => {

@@ -3,7 +3,7 @@ import moment from 'moment';
 import {
   TextFilter,
   SelectFilter,
-} from '@italia/components/ItaliaTheme/Blocks/Common/SearchFilters';
+} from 'design-volto-theme/components/ItaliaTheme/Blocks/Common/SearchFilters';
 
 const messages = defineMessages({
   text_filter: {

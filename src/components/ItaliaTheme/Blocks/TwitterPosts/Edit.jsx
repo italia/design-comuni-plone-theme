@@ -6,7 +6,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import Body from '@italia/components/ItaliaTheme/Blocks/TwitterPosts/Body';
+import Body from 'design-volto-theme/components/ItaliaTheme/Blocks/TwitterPosts/Body';
 
 import { SidebarPortal } from '@plone/volto/components';
 import Sidebar from './Sidebar.jsx';

@@ -4,7 +4,10 @@ import {
   Container,
   Row,
 } from 'design-react-kit/dist/design-react-kit';
-import { ListingImage, ListingLinkMore } from '@italia/components/ItaliaTheme';
+import {
+  ListingImage,
+  ListingLinkMore,
+} from 'design-volto-theme/components/ItaliaTheme';
 import { defineMessages, useIntl } from 'react-intl';
 
 import PropTypes from 'prop-types';

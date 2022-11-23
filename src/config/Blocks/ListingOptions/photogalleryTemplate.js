@@ -1,5 +1,5 @@
 import { defineMessages } from 'react-intl';
-import { templatesOptions } from '@italia/config/Blocks/ListingOptions';
+import { templatesOptions } from 'design-volto-theme/config/Blocks/ListingOptions';
 
 const messages = defineMessages({
   show_image_popup: {

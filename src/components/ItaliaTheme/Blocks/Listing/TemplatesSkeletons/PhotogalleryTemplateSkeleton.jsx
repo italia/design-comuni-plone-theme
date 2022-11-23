@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PhotogalleryTemplate from '@italia/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
+import PhotogalleryTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
 
 const PhotogalleryTemplateSkeleton = (data) => {
   let items = [];

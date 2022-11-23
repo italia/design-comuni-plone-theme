@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import createPaginationItems from '@italia/components/ItaliaTheme/Pagination/createPaginationItems';
+import createPaginationItems from 'design-volto-theme/components/ItaliaTheme/Pagination/createPaginationItems';
 import { Pager, PagerList } from 'design-react-kit/dist/design-react-kit';
-import PaginationItem from '@italia/components/ItaliaTheme/Pagination/PaginationItem';
+import PaginationItem from 'design-volto-theme/components/ItaliaTheme/Pagination/PaginationItem';
 import { invoke, isNil, map } from 'lodash';
 
 /**

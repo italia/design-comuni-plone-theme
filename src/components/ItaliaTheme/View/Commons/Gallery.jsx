@@ -1,20 +1,19 @@
+import 'slick-carousel/slick/slick.css';
+import 'design-volto-theme/components/slick-carousel/slick/slick-theme.css';
+
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
+import { resetSearchContent, searchContent } from '@plone/volto/actions';
 import { useDispatch, useSelector } from 'react-redux';
-import PropTypes from 'prop-types';
 
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-import { searchContent, resetSearchContent } from '@plone/volto/actions';
-import { flattenToAppURL } from '@plone/volto/helpers';
-import Image from '@plone/volto/components/theme/Image/Image';
-
-import { GalleryPreview } from '@italia/components/ItaliaTheme';
-import { contentFolderHasItems } from '@italia/helpers';
 import EmbeddedVideo from './EmbeddedVideo';
+import { GalleryPreview } from 'design-volto-theme/components/ItaliaTheme';
+import Image from '@plone/volto/components/theme/Image/Image';
+import PropTypes from 'prop-types';
+import { contentFolderHasItems } from 'design-volto-theme/helpers';
+import { flattenToAppURL } from '@plone/volto/helpers';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 const messages = defineMessages({
   gallery: {

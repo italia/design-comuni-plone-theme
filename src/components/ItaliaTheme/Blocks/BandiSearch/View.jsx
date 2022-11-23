@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Body from '@italia/components/ItaliaTheme/Blocks/BandiSearch/Body';
+import Body from 'design-volto-theme/components/ItaliaTheme/Blocks/BandiSearch/Body';
 import { getBaseUrl } from '@plone/volto/helpers';
 
 const View = ({ data, id, path, properties, block }) => {

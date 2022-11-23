@@ -9,7 +9,7 @@ import {
   CheckboxWidget,
   FormFieldWrapper,
 } from '@plone/volto/components';
-import ImageSizeWidget from '@plone/volto/components/manage/Blocks/Image/ImageSizeWidget';
+import ImageSizeWidget from '@plone/volto/components/manage/Widgets/ImageSizeWidget';
 
 const messages = defineMessages({
   cardImage: {

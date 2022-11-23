@@ -8,12 +8,12 @@ import cx from 'classnames';
 import { UniversalLink } from '@plone/volto/components';
 import { defineMessages, useIntl } from 'react-intl';
 import { Container } from 'design-react-kit/dist/design-react-kit';
-import { getSiteProperty } from '@italia/helpers';
+import { getSiteProperty } from 'design-volto-theme/helpers';
 import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { getSubFooter, getItemsByPath } from '@italia/addons/volto-subfooter';
+import { getSubFooter, getItemsByPath } from 'volto-subfooter';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { displayBanner } from '@italia/addons/volto-gdpr-privacy';
+import { displayBanner } from 'volto-gdpr-privacy';
 
 const messages = defineMessages({
   goToPage: {

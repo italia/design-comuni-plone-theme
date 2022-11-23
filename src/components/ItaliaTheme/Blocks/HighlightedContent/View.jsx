@@ -5,8 +5,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
-import Body from '@italia/components/ItaliaTheme/Blocks/HighlightedContent/Body';
-import Skeleton from '@italia/components/ItaliaTheme/Blocks/HighlightedContent/Skeleton';
+import Body from 'design-volto-theme/components/ItaliaTheme/Blocks/HighlightedContent/Body';
+import Skeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/HighlightedContent/Skeleton';
 
 const View = ({ data, id }) => {
   const content = useSelector((state) => state.content.subrequests[id]?.data);

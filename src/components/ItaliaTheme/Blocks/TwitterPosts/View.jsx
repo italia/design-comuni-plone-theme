@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import Body from '@italia/components/ItaliaTheme/Blocks/TwitterPosts/Body';
+import Body from 'design-volto-theme/components/ItaliaTheme/Blocks/TwitterPosts/Body';
 /**
  * View TwitterPosts block class.
  * @class TwitterPostsView

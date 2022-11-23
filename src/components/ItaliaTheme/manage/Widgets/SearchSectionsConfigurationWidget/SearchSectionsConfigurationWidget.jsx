@@ -12,7 +12,7 @@ import {
 import { TextWidget } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers/Url/Url';
 
-import SearchSectionsConfigurationForm from '@italia/components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm';
+import SearchSectionsConfigurationForm from 'design-volto-theme/components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationForm';
 
 const messages = defineMessages({
   rootItemsHeader: {

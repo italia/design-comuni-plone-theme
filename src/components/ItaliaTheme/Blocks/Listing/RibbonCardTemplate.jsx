@@ -22,9 +22,12 @@ import {
   getItemIcon,
   ListingText,
   ListingLinkMore,
-} from '@italia/components/ItaliaTheme';
-import { getCalendarDate, getEventRecurrenceMore } from '@italia/helpers';
-import { getCategory } from '@italia/components/ItaliaTheme/Blocks/Listing/Commons/utils';
+} from 'design-volto-theme/components/ItaliaTheme';
+import {
+  getCalendarDate,
+  getEventRecurrenceMore,
+} from 'design-volto-theme/helpers';
+import { getCategory } from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 
 const messages = defineMessages({
   default_detail_link: {

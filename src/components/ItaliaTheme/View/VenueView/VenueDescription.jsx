@@ -5,8 +5,8 @@ import {
   RichText,
   Gallery,
   richTextHasContent,
-} from '@italia/components/ItaliaTheme/View';
-import { contentFolderHasItems } from '@italia/helpers';
+} from 'design-volto-theme/components/ItaliaTheme/View';
+import { contentFolderHasItems } from 'design-volto-theme/helpers';
 
 const messages = defineMessages({
   descrizione: {

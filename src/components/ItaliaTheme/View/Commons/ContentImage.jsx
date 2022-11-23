@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { WideImage } from '@italia/components/ItaliaTheme/View';
+import { WideImage } from 'design-volto-theme/components/ItaliaTheme/View';
 import config from '@plone/volto/registry';
 
 /**

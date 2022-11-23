@@ -20,7 +20,7 @@ import {
   LinkListItem,
   UncontrolledDropdown,
 } from 'design-react-kit/dist/design-react-kit';
-import { Icon } from '@italia/components/ItaliaTheme';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
 import config from '@plone/volto/registry';
 
 const languagesISO392 = {

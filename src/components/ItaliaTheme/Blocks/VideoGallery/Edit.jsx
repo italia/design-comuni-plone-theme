@@ -11,7 +11,7 @@ import {
   withDNDContext,
   SubblocksEdit,
   SubblocksWrapper,
-} from '@italia/addons/volto-subblocks';
+} from 'volto-subblocks';
 import Sidebar from './Sidebar.jsx';
 import EditBlock from './Block/EditBlock';
 import Body from './Body';

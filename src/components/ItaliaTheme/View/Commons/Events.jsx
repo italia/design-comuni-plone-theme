@@ -7,9 +7,9 @@ import { UniversalLink } from '@plone/volto/components';
 import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
-import { Icon } from '@italia/components/ItaliaTheme';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
 import Image from '@plone/volto/components/theme/Image/Image';
-import { viewDate } from '@italia/helpers';
+import { viewDate } from 'design-volto-theme/helpers';
 
 const messages = defineMessages({
   events: {

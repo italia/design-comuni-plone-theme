@@ -190,6 +190,11 @@ msgstr ""
 msgid "Description placeholder"
 msgstr ""
 
+#: config/Views/views
+# defaultMessage: Dettagli procedimento
+msgid "Dettagli procedimento"
+msgstr ""
+
 #: config/Blocks/ListingOptions/mapTemplate
 # defaultMessage: Dimensione della mappa
 msgid "Dimensione della mappa"
@@ -576,6 +581,11 @@ msgstr "Déposez un fichier ici pour télécharger un nouveau fichier"
 # defaultMessage: Trascina qui un file per sostituire quello esistente
 msgid "Trascina qui un file per sostituire quello esistente"
 msgstr "Faites glisser un fichier ici pour remplacer l'existant"
+
+#: config/Views/views
+# defaultMessage: Trasparenza
+msgid "Trasparenza"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 # defaultMessage: Twitter Posts

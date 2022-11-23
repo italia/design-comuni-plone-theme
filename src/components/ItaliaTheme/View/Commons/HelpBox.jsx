@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Callout, CalloutTitle } from 'design-react-kit/dist/design-react-kit';
-import { Icon } from '@italia/components/ItaliaTheme';
-import { RichText } from '@italia/components/ItaliaTheme/View';
+import { Icon } from 'design-volto-theme/components/ItaliaTheme';
+import { RichText } from 'design-volto-theme/components/ItaliaTheme/View';
 
 const HelpBox = ({ text }) => {
   return text ? (

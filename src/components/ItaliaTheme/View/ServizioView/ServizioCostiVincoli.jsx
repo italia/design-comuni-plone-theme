@@ -6,7 +6,7 @@ import {
   RichText,
   RichTextArticle,
   richTextHasContent,
-} from '@italia/components/ItaliaTheme/View';
+} from 'design-volto-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   costi_e_vincoli: {

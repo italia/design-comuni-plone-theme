@@ -17,7 +17,7 @@ import {
   SocialHeader,
   HeaderSearch,
   BrandText,
-} from '@italia/components/ItaliaTheme';
+} from 'design-volto-theme/components/ItaliaTheme';
 
 const HeaderCenter = () => {
   const subsite = useSelector((state) => state.subsite?.data);

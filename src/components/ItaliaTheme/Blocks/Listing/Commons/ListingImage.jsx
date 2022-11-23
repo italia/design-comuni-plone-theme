@@ -1,7 +1,7 @@
 import React from 'react';
 import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
 import Image from '@plone/volto/components/theme/Image/Image';
-import { getImageAttributes } from '@plone/volto/helpers';
+import { getImageAttributes } from '@plone/volto/helpers/Image/Image';
 
 const ListingImage = ({
   item,

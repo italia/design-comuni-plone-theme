@@ -26,11 +26,13 @@ module.exports = Object.assign({}, volto_config, {
     env: { target, dev },
     webpackConfig,
     webpackObject,
+    options,
   }) => {
     const base_config = volto_config.modifyWebpackConfig({
       env: { target, dev },
       webpackConfig,
       webpackObject,
+      options,
     });
 
     const fileLoader = base_config.module.rules.find(fileLoaderFinder);
@@ -62,10 +64,7 @@ module.exports = Object.assign({}, volto_config, {
     base_config.module.rules.push(SVG_LOADER);
 
     const urlLoader = base_config.module.rules.find(urlLoaderFinder);
-    urlLoader.exclude = [
-      /\.(png|jpe?g|webp)$/i,
-      ...(urlLoader.exclude || []),
-    ];
+    urlLoader.exclude = [/\.(png|jpe?g|webp)$/i, ...(urlLoader.exclude || [])];
     // see: node_modules/razzle/config/createConfig.js
     const IMG_LOADER = {
       test: /\.(png|jpe?g|webp)$/i,
@@ -97,6 +96,14 @@ module.exports = Object.assign({}, volto_config, {
     // console.log(JSON.stringify(base_config.module.rules, null, 2))
 
     webpackConfig.resolve.alias = {
+      // TODO remove the next two when implemented in core
+      '@plone/volto/components/theme/Image/Image': path.resolve(
+        `${projectRootPath}/src/components/Image/Image.jsx`,
+      ),
+      '@plone/volto/helpers/Image/Image': path.resolve(
+        `${projectRootPath}/src/components/Image/helpers.js`,
+      ),
+
       ...webpackConfig.resolve.alias,
       ...base_config.resolve.alias,
       '../../theme.config$': `${projectRootPath}/theme/theme.config`,
@@ -105,7 +112,8 @@ module.exports = Object.assign({}, volto_config, {
       // to be able to reference path uncustomized by webpack
       '@plone/volto-original': `${voltoPath}/src`,
       // be able to reference current package from customized package
-      '@italia': `${projectRootPath}/src`,
+      '@italia': `${projectRootPath}/src`, // TODO deprecated: remove in version 8
+      'design-volto-theme': `${projectRootPath}/src`,
     };
 
     return base_config;
@@ -117,14 +125,22 @@ module.exports = Object.assign({}, volto_config, {
       options: {
         sass: {
           dev: {
-            outputStyle: 'expanded',
-            sourceMap: true,
-            includePaths: ['node_modules'],
+            sassOptions: {
+              includePaths: ['node_modules'],
+              outputStyle: 'expanded',
+              sourceMap: true,
+              quiet: true,
+              quietDeps: true,
+            },
           },
           prod: {
-            outputStyle: 'expanded',
-            sourceMap: true,
-            includePaths: ['node_modules'],
+            sassOptions: {
+              includePaths: ['node_modules'],
+              outputStyle: 'expanded',
+              sourceMap: true,
+              quiet: true,
+              quietDeps: true,
+            },
           },
         },
       },
