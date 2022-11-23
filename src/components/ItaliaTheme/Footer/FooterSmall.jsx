@@ -68,7 +68,11 @@ const FooterSmall = () => {
                   })}
                   key={url + index}
                 >
-                  <UniversalLink href={url} title={item.title}>
+                  <UniversalLink
+                    data-element={item.id_lighthouse}
+                    href={url}
+                    title={item.title}
+                  >
                     {item.title}
                   </UniversalLink>
                 </li>

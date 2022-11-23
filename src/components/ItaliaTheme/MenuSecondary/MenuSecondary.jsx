@@ -57,6 +57,7 @@ const MenuSecondary = ({ pathname }) => {
                 href={url === '' ? '/' : flattenToAppURL(url)}
                 tag={UniversalLink}
                 active={isMenuActive(url)}
+                data-element={item.id_lighthouse}
               >
                 <span
                   className={item.inEvidence ? 'font-weight-bold' : ''}
