@@ -38,7 +38,6 @@
     "start:prod": "NODE_ENV=production node build/server.js",
     "i18n": "rm -rf build/messages && NODE_ENV=production i18n",
     "release": "release-it --disable-metrics",
-    "install-full": "rm -rfd node_modules/ && yarn cache clean && yarn install --frozen-lockfile",
     "analyze": "BUNDLE_ANALYZE=true razzle build --noninteractive"
   },
   "jest": {
