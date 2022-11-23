@@ -121,7 +121,7 @@ const Navigation = ({ pathname }) => {
                 </UniversalLink>
               </div>
               {/* Main Menu */}
-              <Nav navbar>
+              <Nav data-element="main-navigation" navbar>
                 {menu
                   ?.filter((item) => item.visible)
                   ?.map((item, index) => (
