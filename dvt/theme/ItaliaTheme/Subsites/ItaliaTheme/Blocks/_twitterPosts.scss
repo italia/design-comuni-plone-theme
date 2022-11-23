@@ -1,0 +1,19 @@
+@use '../../all_variables' as *;
+
+@mixin block() {
+  .block.twitter_posts {
+    &,
+    .public-ui {
+      .authors {
+        a {
+          color: #fff;
+
+          &:hover,
+          &:active {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@use '../all_variables' as *;
+
+@mixin text($subsite-primary, $subsite-primary-text) {
+  .it-header-wrapper {
+    .it-brand-text {
+      &,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: $subsite-primary-text;
+      }
+    }
+  }
+
+  // Mobile menu
+  @media (max-width: #{map-get($grid-breakpoints, lg)}) {
+    .navbar {
+      .navbar-collapsable {
+        .menu-wrapper {
+          .it-brand-text {
+            h2 {
+              font-size: 1.5rem;
+            }
+
+            h3 {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .it-header-wrapper {
+      .menu-wrapper {
+        .it-brand-text {
+          &,
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {
+            color: $subsite-primary;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,181 @@
+@media print {
+  body {
+    display: block !important;
+  }
+
+  .public-ui {
+    // removed underlining from links
+    a {
+      font-weight: 600 !important;
+      text-decoration: none !important;
+    }
+
+    // removed part of header header
+    .it-header-slim-wrapper {
+      display: none;
+    }
+
+    .it-header-navbar-wrapper {
+      display: none;
+    }
+
+    .it-header-center-wrapper {
+      background: none;
+
+      .it-header-center-content-wrapper {
+        .it-brand-wrapper {
+          padding: 0;
+          margin: 0 auto;
+
+          // incresed name of municipalitie
+          a {
+            .icon {
+              fill: $primary;
+            }
+
+            .it-brand-text {
+              .no_toc {
+                color: $primary;
+                font-size: 2rem !important;
+              }
+            }
+          }
+        }
+
+        .it-right-zone {
+          display: none;
+        }
+      }
+    }
+
+    /* Removed link list in PageHeader*/
+    .PageHeaderWrapper {
+      .link-list-wrapper {
+        display: none;
+      }
+    }
+
+    /* Removed shadow and card's padding. Add border*/
+    .card {
+      border: 1px solid $gray-border !important;
+      page-break-inside: avoid;
+
+      &.shadow {
+        box-shadow: none !important;
+      }
+
+      &.bigborder {
+        border: none !important;
+        border-left-width: 0 !important;
+      }
+    }
+
+    //card teaser 3
+    .card-wrapper.card-teaser-wrapper.card-teaser-block-3 {
+      > .card-teaser {
+        flex: 0 0 32%;
+      }
+    }
+
+    #text-tempi_e_scadenze > div > p {
+      padding: 1rem 0 0 0 !important;
+      box-shadow: none !important;
+    }
+
+    #briciole {
+      display: none;
+    }
+
+    // removed first column in CT pages
+    #view .page-header-right {
+      display: none;
+    }
+
+    #view > div {
+      .row.border-top.row-column-border.row-column-menu-left {
+        border-top: none !important;
+      }
+
+      // Reduced max width image header
+      .content-image {
+        width: 100%;
+        max-width: 100%;
+
+        .row.row-full-width {
+          margin-right: 0;
+          margin-left: 0;
+        }
+
+        figure {
+          display: flex;
+          justify-content: center;
+
+          img {
+            max-width: 300px !important;
+
+            &.full-width {
+              position: initial;
+              right: unset;
+              left: unset;
+              width: auto !important;
+              height: auto;
+              max-height: 300px;
+              margin: 0 !important;
+              object-fit: unset;
+            }
+          }
+        }
+      }
+
+      aside {
+        display: none;
+      }
+
+      .it-page-sections-container {
+        border-top: none;
+
+        .it-carousel-wrapper {
+          display: none;
+        }
+
+        .video {
+          display: none;
+        }
+
+        /*.block { //i blocchi devono essere visibili per quei CT che hanno i blocchi
+          display: none;
+        }*/
+      }
+    }
+
+    #geocoded-result {
+      .leaflet-control-attribution {
+        display: none;
+      }
+    }
+
+    #contenuti-correlati {
+      display: none;
+    }
+
+    #correlato-in-evidenza {
+      display: none;
+    }
+
+    .scroll-to-top {
+      display: none;
+    }
+
+    footer.it-footer {
+      display: none;
+    }
+
+    .customer-satisfaction {
+      display: none;
+    }
+
+    .grecaptcha-badge {
+      display: none;
+    }
+  }
+}

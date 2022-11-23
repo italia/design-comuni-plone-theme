@@ -1,0 +1,56 @@
+// removes full-width and columns for blocks in menu configuration and view
+.dropdownmenu-blocks-column,
+.menu-configuration-widget .menu-blocks-container {
+  .full-width {
+    position: static;
+
+    left: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  body.cms-ui.has-toolbar.has-sidebar-collapsed & {
+    .ui.container {
+      width: 100% !important;
+    }
+  }
+
+  .card-teaser {
+    flex: 0 0 47% !important;
+
+    @media (max-width: 767px) {
+      flex: 0 0 100% !important;
+    }
+  }
+
+  .DraftEditor-root {
+    padding: 0.5rem 1rem;
+  }
+
+  .category-top {
+    display: flex;
+    flex-wrap: wrap;
+
+    .data {
+      flex: 1 1 100%;
+    }
+  }
+}
+
+.megamenu-close-button {
+  @media (max-width: 767px) {
+    button {
+      position: absolute !important;
+      overflow: hidden !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      border: 0 !important;
+      margin: -1px !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+    }
+  }
+}

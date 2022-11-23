@@ -1,0 +1,41 @@
+.public-ui {
+  .btn-tertiary {
+    @include button-variant($tertiary, $tertiary);
+
+    svg {
+      fill: $tertiary-text;
+    }
+
+    &:hover,
+    &:active {
+      svg {
+        fill: $tertiary-text;
+      }
+    }
+  }
+
+  a.btn-tertiary {
+    color: $tertiary-text !important;
+  }
+
+  .btn-outline-tertiary {
+    @include button-outline-variant($tertiary);
+  }
+
+  button.chip {
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .btn-primary {
+    &,
+    &:hover,
+    &:active {
+      svg.icon {
+        color: $primary-text;
+        fill: $primary-text;
+      }
+    }
+  }
+}

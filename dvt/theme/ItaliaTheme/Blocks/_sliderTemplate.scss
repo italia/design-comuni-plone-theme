@@ -1,0 +1,249 @@
+.sliderTemplate {
+  margin: 40px 0;
+
+  .it-carousel-all {
+    position: relative;
+
+    .play-pause-wrapper {
+      position: absolute;
+      z-index: 1;
+      top: 1rem;
+      right: 1rem;
+
+      button {
+        display: flex;
+        width: 3.5rem;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem;
+        border: none;
+        background-color: #3f4142e0;
+        border-radius: 16px;
+        color: $white;
+        font-size: 0.7rem;
+        font-weight: bold;
+
+        line-height: 1;
+
+        text-transform: uppercase;
+
+        .icon {
+          width: 1.35rem;
+          height: 1.35rem;
+          margin-bottom: 0.4rem;
+          color: $white;
+        }
+      }
+    }
+  }
+
+  .slick-arrow {
+    width: 25px;
+    height: 40px;
+
+    .icon {
+      width: 25px;
+      height: 40px;
+      color: lighten($primary, 40%);
+      fill: lighten($primary, 40%);
+    }
+    &:hover .icon {
+      color: $primary;
+      fill: $primary;
+    }
+
+    &.slick-prev {
+      left: -40px;
+      outline: none !important;
+
+      &:before {
+        content: none;
+      }
+    }
+
+    &.slick-next {
+      right: -40px;
+      outline: none !important;
+
+      &:before {
+        content: none;
+      }
+    }
+  }
+
+  ul.slick-dots {
+    position: unset;
+    bottom: unset;
+    margin-top: 0.5rem !important;
+    li {
+      margin: 0 10px;
+      button {
+        &::before {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .slick-track {
+    display: flex;
+    min-height: 400px;
+    align-items: center;
+  }
+
+  .slider-container {
+    .slick-slide {
+      .slide-wrapper {
+        position: relative;
+        margin: 0 auto;
+
+        figure.img-wrapper {
+          position: relative;
+          overflow: hidden;
+          width: 100%;
+          height: 400px;
+          margin: 0;
+
+          img {
+            min-width: 100%;
+            min-height: 400px;
+          }
+
+          .volto-image.responsive img,
+          img {
+            object-fit: cover;
+          }
+
+          figcaption {
+            padding: 0.5em 1em;
+            color: #666;
+            font-size: 0.8em;
+            text-align: center;
+          }
+        }
+
+        .img-placeholder {
+          height: 400px;
+          background-color: rgba(0, 0, 0, 0.15);
+        }
+
+        .slide-title {
+          position: absolute;
+          right: auto;
+          bottom: 0;
+          left: auto;
+          width: 100%;
+          padding: 0.7rem 1.2rem;
+          margin: 0 auto;
+
+          background-color: #3f4142e0;
+
+          color: $white;
+
+          font-size: 1.8rem;
+          font-weight: bold;
+          text-decoration: none;
+
+          &:hover,
+          &:active {
+            text-decoration-line: underline;
+          }
+
+          .icon {
+            margin-left: 0.5em;
+          }
+        }
+      }
+    }
+  }
+
+  &.slidesToShow-2,
+  &.slidesToShow-3,
+  &.slidesToShow-4,
+  &.slidesToShow-5,
+  &.slidesToShow-6 {
+    .slider-container {
+      .slick-slide {
+        margin-right: 0.65rem;
+        margin-left: 0.65rem;
+
+        .slide-wrapper {
+          .img-placeholder,
+          figure.img-wrapper {
+            height: 300px;
+
+            img {
+              min-height: 300px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.no-margin {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .slider-container.full-width {
+    .slick-arrow.slick-prev {
+      z-index: 1;
+      left: 1rem;
+    }
+
+    .slick-arrow.slick-next {
+      z-index: 1;
+      right: 1rem;
+    }
+  }
+
+  @media (max-width: #{map-get($grid-breakpoints, sm)}) {
+    .slider-container {
+      .it-carousel-all {
+        position: relative;
+
+        .play-pause-wrapper {
+          display: none;
+        }
+      }
+
+      .slick-arrow {
+        width: 20px;
+        height: 30px;
+
+        .icon {
+          width: 20px;
+          height: 30px;
+        }
+      }
+
+      .slick-track {
+        min-height: 150px;
+      }
+
+      .slick-slide {
+        .slide-wrapper {
+          .img-placeholder,
+          figure.img-wrapper {
+            height: 150px;
+
+            img {
+              min-height: 150px;
+            }
+          }
+
+          .slide-title {
+            position: unset;
+            bottom: unset;
+            padding: 0.7rem 1.2rem;
+
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+  }
+}

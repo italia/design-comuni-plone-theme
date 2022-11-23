@@ -1,0 +1,11 @@
+body.public-ui {
+  margin: 0px; // 1
+  background-color: $body-bg; // 2
+  color: $body-color;
+  font-family: $font-family-base;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+  text-align: left; // 3
+
+  @include font-size($font-size-base);
+}

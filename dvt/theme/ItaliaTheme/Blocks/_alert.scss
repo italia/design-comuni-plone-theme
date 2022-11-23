@@ -1,0 +1,101 @@
+.public-ui {
+  .block.alertblock,
+  .alertblock {
+    .bg-alert-danger {
+      background-color: #a32219;
+      color: $white;
+
+      .public-DraftEditorPlaceholder-inner {
+        color: $white;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: $white;
+      }
+
+      a {
+        color: $white;
+      }
+    }
+
+    .bg-alert-warning-orange {
+      background-color: #eb973f;
+      color: $black;
+
+      .public-DraftEditorPlaceholder-inner {
+        color: $black;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: $black;
+      }
+
+      a {
+        color: $black;
+      }
+    }
+
+    .bg-alert-warning {
+      background-color: #f0c250;
+      color: $black;
+
+      .public-DraftEditorPlaceholder-inner {
+        color: $black;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: $black;
+      }
+
+      a {
+        color: $black;
+      }
+    }
+
+    .DraftEditor-root {
+      background: none;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    img.left-image {
+      max-width: 80%;
+      object-fit: unset;
+    }
+
+    .image-col {
+      text-align: center;
+    }
+
+    div + h3,
+    p + h3,
+    h3 + div,
+    h3 + p {
+      margin-top: 1.33rem;
+    }
+
+    div + h2,
+    p + h2,
+    h2 + div,
+    h2 + p {
+      margin-top: 1rem;
+    }
+  }
+}

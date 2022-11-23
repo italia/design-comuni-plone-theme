@@ -1,0 +1,34 @@
+.fileWidget {
+  .dropzone {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-width: 2px;
+    border-style: dashed;
+    border-radius: 2px;
+    outline: none;
+    transition: border 0.24s ease-in-out;
+  }
+
+  .color {
+    border-color: rgba($secondary, 0.5);
+    color: rgba($secondary, 0.5);
+  }
+
+  .dragColor {
+    border-color: rgba($secondary, 1);
+    color: rgba($secondary, 1);
+  }
+
+  .fileName {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .delete-button {
+    margin-left: 0;
+  }
+}

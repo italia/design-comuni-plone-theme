@@ -1,0 +1,17 @@
+@use '../../all_variables' as *;
+
+@mixin block($subsite-primary, $subsite-primary-text) {
+  .argumentInEvidence {
+    .argumentInEvidence-background {
+      background-color: $subsite-primary;
+    }
+
+    &::before {
+      background-color: $subsite-primary;
+    }
+
+    h2 {
+      color: $subsite-primary-text;
+    }
+  }
+}

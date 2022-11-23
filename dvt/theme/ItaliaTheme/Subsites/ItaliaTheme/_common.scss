@@ -1,0 +1,26 @@
+@use '../all_variables' as *;
+
+@mixin common($subsite-tertiary, $subsite-tertiary-text) {
+  .btn-tertiary {
+    @include button-variant($subsite-tertiary, $subsite-tertiary-text);
+
+    svg {
+      fill: $subsite-tertiary-text;
+    }
+
+    &:hover,
+    &:active {
+      svg {
+        fill: $subsite-tertiary-text;
+      }
+    }
+  }
+
+  a.btn-tertiary {
+    color: $subsite-tertiary-text;
+  }
+
+  .btn-outline-tertiary {
+    @include button-outline-variant($subsite-tertiary);
+  }
+}

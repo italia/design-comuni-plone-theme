@@ -1,0 +1,33 @@
+@use '../../all_variables' as *;
+
+@mixin block($subsite-primary, $subsite-secondary, $subsite-secondary-text) {
+  .container .block {
+    .searchSections {
+      @if $subsite-secondary != $subsite-primary {
+        .searchSections-background {
+          background-color: $subsite-secondary;
+        }
+        color: $subsite-secondary-text;
+
+        h2.text-secondary {
+          color: $subsite-secondary-text !important;
+        }
+      } @else {
+        //use default: parent-site secondary color
+      }
+
+      .searchContainer {
+        .searchbar {
+          button {
+            background: $subsite-primary;
+
+            &:hover,
+            &:active {
+              background-color: darken($subsite-primary, 7.5);
+            }
+          }
+        }
+      }
+    }
+  }
+}

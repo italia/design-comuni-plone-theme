@@ -1,0 +1,24 @@
+@use '../../all_variables' as *;
+
+@mixin nav($subsite-link-color) {
+  .nav-tabs {
+    border-bottom: $nav-tabs-border-width solid $neutral-2-b2;
+
+    .nav-link {
+      margin-bottom: -$nav-tabs-border-width;
+      color: $neutral-2-b4;
+
+      &:hover,
+      &:focus {
+        border-color: $subsite-link-color;
+        color: $subsite-link-color;
+      }
+    }
+
+    .nav-link.active,
+    .nav-item.show .nav-link {
+      border-color: $subsite-link-color;
+      color: $subsite-link-color;
+    }
+  }
+}

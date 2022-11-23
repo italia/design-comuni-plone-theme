@@ -1,0 +1,7 @@
+.toggles label {
+  &,
+  &.form-check-label {
+    height: auto;
+    min-height: 32px;
+  }
+}

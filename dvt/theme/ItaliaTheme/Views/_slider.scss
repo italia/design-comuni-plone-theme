@@ -1,0 +1,24 @@
+.slider-container {
+  margin-bottom: 1.5rem;
+
+  /**slick**/
+  .slick-slide {
+    figure {
+      width: 95%;
+    }
+  }
+
+  .it-single-slide-wrapper {
+    figure {
+      a {
+        display: block;
+      }
+    }
+  }
+
+  ul.slick-dots {
+    bottom: -30px;
+    padding: 0;
+    margin: 0;
+  }
+}

@@ -1,0 +1,224 @@
+.public-ui {
+  .block.form {
+    @media (max-width: #{map-get($grid-breakpoints, md)}) {
+      .form-group {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          position: relative;
+          order: 1;
+          font-size: 0.777rem;
+          line-height: 1.375rem;
+          transform: none;
+          transform: none;
+          white-space: normal;
+
+          &.active {
+            font-size: 0.777rem;
+            transform: none;
+          }
+        }
+
+        input,
+        textarea,
+        .form-input-file {
+          order: 2;
+        }
+
+        input[type='date'] ~ label {
+          font-size: 0.777rem;
+          transform: none;
+        }
+
+        small.form-text {
+          position: relative;
+          order: 3;
+        }
+      }
+
+      .form-input-file {
+        .dropzone-placeholder {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+.block.form {
+  .block-description {
+    margin-bottom: 1rem;
+  }
+
+  .card.card-bg:after {
+    content: none;
+  }
+
+  &,
+  .volto-subblocks-wrapper,
+  .form-field {
+    .single-block {
+      .dragsubblock {
+        top: 0.3rem;
+        left: -1.7rem;
+      }
+
+      &.subblock-draggable {
+        transform: unset;
+
+        .ui.basic.button.delete-button {
+          top: 0.3rem;
+          right: -0.15rem;
+          left: unset;
+        }
+      }
+    }
+  }
+
+  .bootstrap-select-wrapper {
+    > label {
+      position: unset;
+      margin-bottom: 0;
+      line-height: 1.375rem;
+      transform: unset;
+      white-space: normal;
+    }
+
+    &.is-invalid {
+      .react-select__control {
+        border-bottom-color: $danger !important;
+      }
+    }
+  }
+
+  .bootstrap-checkbox-radio-wrapper {
+    > label {
+      position: unset;
+
+      display: block;
+      padding: 0 $input-spacing-x;
+      margin-bottom: 0.55rem;
+      color: $select-label-color;
+      font-size: $select-label-size;
+      font-weight: $select-label-weight;
+      line-height: 1.375rem;
+      transform: none;
+      white-space: normal;
+    }
+
+    small {
+      position: unset;
+      padding: 0 $input-spacing-x;
+      font-size: 0.77rem;
+    }
+
+    input[type='checkbox'] ~ label,
+    input[type='radio'] ~ label {
+      overflow: inherit;
+      height: auto;
+      margin: 1px 0;
+      line-height: 1.875rem;
+      white-space: normal;
+
+      @media (max-width: #{map-get($grid-breakpoints, md)}) {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+      }
+    }
+
+    .form-check-group {
+      label {
+        width: 100%;
+      }
+    }
+
+    &.is-invalid {
+      .form-check-group {
+        input[type='checkbox'] + .form-check-label {
+          &::after {
+            border-color: $danger;
+          }
+        }
+
+        input[type='radio'] + .form-check-label {
+          &::before {
+            border-color: $danger;
+          }
+        }
+      }
+    }
+  }
+
+  .form-group input[type='date'] ~ label {
+    font-size: 0.777rem;
+    transform: translateY(-75%);
+  }
+
+  textarea {
+    border: 1px solid rgba(1, 1, 1, 0.1);
+
+    &.form-control.is-invalid {
+      background-size: 25px !important;
+    }
+  }
+
+  .form-input-file {
+    .field-file-name {
+      align-items: center;
+      padding: 0;
+    }
+
+    small.form-text {
+      position: unset;
+    }
+
+    .dropzone-text {
+      margin: 0;
+    }
+
+    .image-preview {
+      max-width: 250px;
+      max-height: 150px;
+    }
+
+    .delete-button {
+      padding: 0.5em;
+      border: none;
+      background: none;
+      box-shadow: none;
+
+      .icon {
+        width: 16px;
+        height: 16px;
+        color: $primary;
+      }
+    }
+  }
+
+  .static-field.row {
+    display: inline-block;
+    width: calc(50% - 0.5rem);
+  }
+
+  .static-field.row:nth-of-type(2n) {
+    margin-left: 1rem;
+  }
+
+  .static-field.row .form-group {
+    margin-bottom: 2rem;
+  }
+
+  fieldset[disabled] {
+    margin-bottom: 2rem;
+  }
+}
+
+.public-ui .form-control:disabled + label,
+.public-ui .form-control[readonly] + label {
+  @extend .active;
+}
+
+.grecaptcha-badge {
+  bottom: 115px !important;
+}

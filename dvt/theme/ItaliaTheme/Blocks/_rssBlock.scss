@@ -1,0 +1,30 @@
+#text-body {
+  .rssBlock {
+    .row > * {
+      max-width: 50%;
+      flex: 1 0 auto;
+
+      @media (max-width: 480px) {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.blocks-widget-container {
+  .block.rssBlock {
+    .public-ui {
+      .row {
+        [class*='col'] {
+          max-width: 50%;
+          flex: 0 0 50%;
+
+          @media (max-width: 1446px) {
+            max-width: 100%;
+            flex: 1 0 auto;
+          }
+        }
+      }
+    }
+  }
+}

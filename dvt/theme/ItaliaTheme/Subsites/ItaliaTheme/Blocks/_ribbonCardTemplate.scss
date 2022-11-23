@@ -1,0 +1,18 @@
+@use '../../all_variables' as *;
+
+@mixin card($subsite-link-color) {
+  .ribbon-card-template {
+    .card {
+      &.show_detail_link {
+        .card-title {
+          a {
+            &:hover,
+            &:active {
+              color: $subsite-link-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,160 @@
+.search-block-filters {
+  .search-container {
+    width: 100%;
+    min-height: unset;
+    padding: 1rem 2rem;
+
+    .filter-wrapper {
+      flex: 1;
+
+      &.text-filter {
+        min-width: 35%;
+      }
+
+      &.select-filter {
+        min-width: 150px;
+
+        &:focus-within {
+          box-shadow: 0 0 0 2px $focus-outline-color;
+        }
+
+        .react-select__control {
+          border: none !important;
+          background-color: transparent;
+
+          .react-select__placeholder {
+            color: #fff !important;
+          }
+
+          .react-select__indicators {
+            svg {
+              fill: #fff;
+            }
+          }
+
+          .react-select__single-value {
+            color: #fff !important;
+          }
+        }
+      }
+
+      &.date-filter {
+        .DateRangePickerInput {
+          background-color: transparent;
+
+          .DateInput {
+            width: 116px;
+            background-color: transparent;
+          }
+
+          .DateInput_input {
+            border: none;
+            background-color: transparent;
+            color: #fff;
+
+            &::placeholder {
+              color: #fff;
+            }
+
+            &.DateInput_input__focused {
+              box-shadow: 0 0 0 2px $focus-outline-color;
+            }
+          }
+
+          .DateRangePickerInput_arrow {
+            color: #fff;
+
+            .DateRangePickerInput_arrow_svg {
+              fill: #fff;
+            }
+          }
+
+          .DateRangePickerInput_clearDates {
+            opacity: 0.8;
+            transition: opacity 0.1s ease;
+
+            svg {
+              fill: #fff;
+            }
+
+            &:hover,
+            &:active {
+              background: none;
+              opacity: 1;
+            }
+
+            &:focus {
+              opacity: 1;
+              outline: none;
+
+              svg {
+                fill: #000;
+              }
+            }
+          }
+        }
+      }
+
+      &.submit-button {
+        text-align: right;
+      }
+
+      @media (max-width: #{map-get($grid-breakpoints, lg)}) {
+        flex: 1 1 100%;
+        margin-right: 0 !important;
+
+        &.submit-button {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .bg-secondary {
+    .search-container {
+      .filter-wrapper {
+        &.text-filter input,
+        &.text-filter input::placeholder {
+          border-color: $secondary-text;
+          background-color: transparent;
+          color: $secondary-text;
+        }
+
+        &.text-filter input:focus {
+          border-color: #ff9900;
+          -webkit-box-shadow: 0 0 0 2px #ff9900;
+          box-shadow: 0 0 0 2px #ff9900;
+        }
+
+        &.select-filter {
+          .react-select__placeholder {
+            color: $secondary-text !important;
+          }
+
+          .react-select__indicators {
+            svg {
+              fill: $secondary-text;
+            }
+          }
+
+          .react-select__single-value {
+            color: $secondary-text !important;
+          }
+        }
+
+        &.date-filter .DateRangePickerInput {
+          .DateInput_input,
+          .DateInput_input::placeholder,
+          .DateRangePickerInput_arrow {
+            color: $secondary-text !important;
+          }
+
+          .DateRangePickerInput_arrow .DateRangePickerInput_arrow_svg,
+          .DateRangePickerInput_clearDates svg {
+            fill: $secondary-text !important;
+          }
+        }
+      }
+    }
+  }
+}

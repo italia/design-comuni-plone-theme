@@ -1,0 +1,41 @@
+.chip,
+.public-ui .chip {
+  display: inline-block;
+  height: unset;
+  cursor: pointer;
+  line-height: 1rem;
+  text-align: center;
+
+  &:not(:disabled):not(.chip-primary):not(.chip-secondary) {
+    &.selected,
+    &:hover,
+    &:focus {
+      border-color: $neutral-2-b5;
+      background: $neutral-2-b5;
+
+      &,
+      span.chip-label {
+        color: #fff;
+      }
+
+      svg.icon {
+        fill: #fff;
+      }
+    }
+  }
+
+  button {
+    height: 1em;
+  }
+
+  &.chip-lg {
+    height: unset;
+    line-height: 1.7em;
+  }
+}
+
+#metadata {
+  .chip.disabled:hover {
+    cursor: default;
+  }
+}

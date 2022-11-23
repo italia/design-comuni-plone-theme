@@ -1,0 +1,46 @@
+@use '../../all_variables' as *;
+
+@mixin linklist($subsite-primary, $subsite-link-color) {
+  //mobile
+  .link-list-wrapper {
+    ul {
+      li {
+        a {
+          // hover state
+          &:hover:not(.disabled) {
+            span {
+              color: $subsite-link-color;
+            }
+
+            p {
+              color: $subsite-link-color;
+            }
+
+            .icon {
+              fill: $subsite-link-color;
+            }
+          }
+
+          span {
+            color: $subsite-link-color;
+          }
+        }
+      }
+    }
+  }
+
+  //Tablet horizontal / small desktop
+  @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+    .link-list-wrapper {
+      // classe modificatore per menu laterale
+      &.menu-link-list {
+        h3,
+        h4 {
+          &:after {
+            background-color: $subsite-primary;
+          }
+        }
+      }
+    }
+  }
+}

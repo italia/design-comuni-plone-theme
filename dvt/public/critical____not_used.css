@@ -1,0 +1,267 @@
+@font-face {
+  font-family: Titillium Web;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200;
+  src: local('Titillium Web Extra Light '), local('Titillium Web-Extra Light'),
+    url(/static/media/titillium-web-latin-200.352c0596.woff2) format('woff2'),
+    url(/static/media/titillium-web-latin-200.c54a0957.woff) format('woff');
+}
+
+@font-face {
+  font-family: Titillium Web;
+  font-style: italic;
+  font-display: swap;
+  font-weight: 200;
+  src: local('Titillium Web Extra Light italic'),
+    local('Titillium Web-Extra Lightitalic'),
+    url(/static/media/titillium-web-latin-200italic.dcc521e4.woff2)
+      format('woff2'),
+    url(/static/media/titillium-web-latin-200italic.bec8ef85.woff)
+      format('woff');
+}
+
+@font-face {
+  font-family: Titillium Web;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src: local('Titillium Web Light '), local('Titillium Web-Light'),
+    url(/static/media/titillium-web-latin-300.e7bd2929.woff2) format('woff2'),
+    url(/static/media/titillium-web-latin-300.9dd84b03.woff) format('woff');
+}
+
+@font-face {
+  font-family: Titillium Web;
+  font-style: italic;
+  font-display: swap;
+  font-weight: 300;
+  src: local('Titillium Web Light italic'), local('Titillium Web-Lightitalic'),
+    url(/static/media/titillium-web-latin-300italic.29e5a493.woff2)
+      format('woff2'),
+    url(/static/media/titillium-web-latin-300italic.b3717846.woff)
+      format('woff');
+}
+
+@font-face {
+  font-family: Titillium Web;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: local('Titillium Web Regular '), local('Titillium Web-Regular'),
+    url(/static/media/titillium-web-latin-400.811f6a5b.woff2) format('woff2'),
+    url(/static/media/titillium-web-latin-400.d8bc9340.woff) format('woff');
+}
+
+@font-face {
+  font-family: Titillium Web;
+  font-style: italic;
+  font-display: swap;
+  font-weight: 400;
+  src: local('Titillium Web Regular italic'),
+    local('Titillium Web-Regularitalic'),
+    url(/static/media/titillium-web-latin-400italic.5b932574.woff2)
+      format('woff2'),
+    url(/static/media/titillium-web-latin-400italic.2bf62e42.woff)
+      format('woff');
+}
+
+@font-face {
+  font-family: Titillium Web;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 600;
+  src: local('Titillium Web SemiBold '), local('Titillium Web-SemiBold'),
+    url(/static/media/titillium-web-latin-600.5d5145c1.woff2) format('woff2'),
+    url(/static/media/titillium-web-latin-600.7679c7b8.woff) format('woff');
+}
+
+@font-face {
+  font-family: Titillium Web;
+  font-style: italic;
+  font-display: swap;
+  font-weight: 600;
+  src: local('Titillium Web SemiBold italic'),
+    local('Titillium Web-SemiBolditalic'),
+    url(/static/media/titillium-web-latin-600italic.4252e716.woff2)
+      format('woff2'),
+    url(/static/media/titillium-web-latin-600italic.ddff3d26.woff)
+      format('woff');
+}
+
+@font-face {
+  font-family: Titillium Web;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: local('Titillium Web Bold '), local('Titillium Web-Bold'),
+    url(/static/media/titillium-web-latin-700.704fc425.woff2) format('woff2'),
+    url(/static/media/titillium-web-latin-700.a804c575.woff) format('woff');
+}
+
+@font-face {
+  font-family: Titillium Web;
+  font-style: italic;
+  font-display: swap;
+  font-weight: 700;
+  src: local('Titillium Web Bold italic'), local('Titillium Web-Bolditalic'),
+    url(/static/media/titillium-web-latin-700italic.1f84eb22.woff2)
+      format('woff2'),
+    url(/static/media/titillium-web-latin-700italic.af872cf0.woff)
+      format('woff');
+}
+
+@font-face {
+  font-family: Titillium Web;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+  src: local('Titillium Web Black '), local('Titillium Web-Black'),
+    url(/static/media/titillium-web-latin-900.42fc8f4d.woff2) format('woff2'),
+    url(/static/media/titillium-web-latin-900.c0d751f2.woff) format('woff');
+}
+
+@font-face {
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100;
+  src: local('Roboto Mono Thin '), local('Roboto Mono-Thin'),
+    url(/static/media/roboto-mono-latin-100.17f46614.woff2) format('woff2'),
+    url(/static/media/roboto-mono-latin-100.cf6d683a.woff) format('woff');
+}
+
+@font-face {
+  font-family: Roboto Mono;
+  font-style: italic;
+  font-display: swap;
+  font-weight: 100;
+  src: local('Roboto Mono Thin italic'), local('Roboto Mono-Thinitalic'),
+    url(/static/media/roboto-mono-latin-100italic.3e35c369.woff2)
+      format('woff2'),
+    url(/static/media/roboto-mono-latin-100italic.d553aa0c.woff) format('woff');
+}
+
+@font-face {
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src: local('Roboto Mono Light '), local('Roboto Mono-Light'),
+    url(/static/media/roboto-mono-latin-300.0c8fb655.woff2) format('woff2'),
+    url(/static/media/roboto-mono-latin-300.44f88800.woff) format('woff');
+}
+
+@font-face {
+  font-family: Roboto Mono;
+  font-style: italic;
+  font-display: swap;
+  font-weight: 300;
+  src: local('Roboto Mono Light italic'), local('Roboto Mono-Lightitalic'),
+    url(/static/media/roboto-mono-latin-300italic.e4709994.woff2)
+      format('woff2'),
+    url(/static/media/roboto-mono-latin-300italic.f6e36c97.woff) format('woff');
+}
+
+@font-face {
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: local('Roboto Mono Regular '), local('Roboto Mono-Regular'),
+    url(/static/media/roboto-mono-latin-400.0c94e034.woff2) format('woff2'),
+    url(/static/media/roboto-mono-latin-400.6d5bc1d8.woff) format('woff');
+}
+
+@font-face {
+  font-family: Roboto Mono;
+  font-style: italic;
+  font-display: swap;
+  font-weight: 400;
+  src: local('Roboto Mono Regular italic'), local('Roboto Mono-Regularitalic'),
+    url(/static/media/roboto-mono-latin-400italic.2820fa2a.woff2)
+      format('woff2'),
+    url(/static/media/roboto-mono-latin-400italic.fce1aae7.woff) format('woff');
+}
+
+@font-face {
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: local('Roboto Mono Medium '), local('Roboto Mono-Medium'),
+    url(/static/media/roboto-mono-latin-500.6221bb5e.woff2) format('woff2'),
+    url(/static/media/roboto-mono-latin-500.3f107f0a.woff) format('woff');
+}
+
+@font-face {
+  font-family: Roboto Mono;
+  font-style: italic;
+  font-display: swap;
+  font-weight: 500;
+  src: local('Roboto Mono Medium italic'), local('Roboto Mono-Mediumitalic'),
+    url(/static/media/roboto-mono-latin-500italic.b340d3a4.woff2)
+      format('woff2'),
+    url(/static/media/roboto-mono-latin-500italic.8f683f31.woff) format('woff');
+}
+
+@font-face {
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: local('Roboto Mono Bold '), local('Roboto Mono-Bold'),
+    url(/static/media/roboto-mono-latin-700.73491684.woff2) format('woff2'),
+    url(/static/media/roboto-mono-latin-700.b5ee3da2.woff) format('woff');
+}
+
+@font-face {
+  font-family: Roboto Mono;
+  font-style: italic;
+  font-display: swap;
+  font-weight: 700;
+  src: local('Roboto Mono Bold italic'), local('Roboto Mono-Bolditalic'),
+    url(/static/media/roboto-mono-latin-700italic.a516d634.woff2)
+      format('woff2'),
+    url(/static/media/roboto-mono-latin-700italic.b933305e.woff) format('woff');
+}
+
+@font-face {
+  font-family: Lora;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: local('Lora Regular '), local('Lora-Regular'),
+    url(/static/media/lora-latin-400.e4cdb14b.woff2) format('woff2'),
+    url(/static/media/lora-latin-400.0d78d370.woff) format('woff');
+}
+
+@font-face {
+  font-family: Lora;
+  font-style: italic;
+  font-display: swap;
+  font-weight: 400;
+  src: local('Lora Regular italic'), local('Lora-Regularitalic'),
+    url(/static/media/lora-latin-400italic.2c4801fa.woff2) format('woff2'),
+    url(/static/media/lora-latin-400italic.7beffbac.woff) format('woff');
+}
+
+@font-face {
+  font-family: Lora;
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: local('Lora Bold '), local('Lora-Bold'),
+    url(/static/media/lora-latin-700.ce18d173.woff2) format('woff2'),
+    url(/static/media/lora-latin-700.1617380e.woff) format('woff');
+}
+
+@font-face {
+  font-family: Lora;
+  font-style: italic;
+  font-display: swap;
+  font-weight: 700;
+  src: local('Lora Bold italic'), local('Lora-Bolditalic'),
+    url(/static/media/lora-latin-700italic.b4bb1fa2.woff2) format('woff2'),
+    url(/static/media/lora-latin-700italic.6ec37b95.woff) format('woff');
+}

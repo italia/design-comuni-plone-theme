@@ -1,0 +1,90 @@
+body.cms-ui {
+  #sidebar {
+    .block.image {
+      .toolbar {
+        height: auto;
+      }
+      img {
+        max-width: 100%;
+      }
+      .dropzone {
+        .toolbar-inner {
+          width: 100%;
+          min-width: unset;
+          input {
+            height: auto;
+            font-size: 0.8em;
+          }
+        }
+      }
+    }
+
+    .tabs-wrapper {
+      .ui.secondary.pointing.menu {
+        .item {
+          font-size: 15px;
+        }
+      }
+    }
+
+    .ui.secondary.segment {
+      font-size: 15px;
+    }
+
+    .ui.form {
+      .field {
+        .wrapper {
+          label {
+            font-size: 15px;
+          }
+        }
+
+        input,
+        textarea {
+          font-size: 15px;
+
+          + span,
+          + p {
+            font-size: 14px;
+          }
+        }
+
+        .simple-field-name {
+          font-size: 15px;
+        }
+
+        .help {
+          font-size: 14px;
+        }
+
+        .react-select__value-container {
+          font-size: 15px;
+        }
+
+        .react-select__menu {
+          color: $text-color;
+          font-size: 15px;
+        }
+      }
+
+      .ui.checkbox {
+        font-size: 15px;
+      }
+    }
+
+    .objectbrowser-field {
+      .action-button {
+        font-size: 15px;
+
+        &:hover,
+        &:focus {
+          background: none;
+        }
+      }
+
+      .selected-values {
+        font-size: 15px;
+      }
+    }
+  }
+}

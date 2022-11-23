@@ -1,0 +1,16 @@
+.breadcrumb-container {
+  .breadcrumb {
+    li.breadcrumb-item {
+      display: flex;
+      align-items: center;
+
+      span.separator {
+        display: inline;
+        border: none;
+        top: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

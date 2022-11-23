@@ -1,0 +1,33 @@
+.scroll-to-top {
+  .btn {
+    position: fixed;
+    z-index: 999;
+    right: 20px;
+    bottom: 20px;
+    padding: 0.8rem;
+    border-radius: 50%;
+
+    //small - tablet
+    @media (min-width: #{map-get($grid-breakpoints, md)}) {
+      right: 30px;
+      bottom: 30px;
+    }
+  }
+}
+
+body.cms-ui {
+  &.has-sidebar {
+    .scroll-to-top {
+      .btn {
+        right: 405px;
+      }
+    }
+  }
+  &.has-sidebar-collapsed {
+    .scroll-to-top {
+      .btn {
+        right: 50px;
+      }
+    }
+  }
+}

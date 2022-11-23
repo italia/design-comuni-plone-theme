@@ -1,0 +1,52 @@
+.complete-block-links-template {
+  margin: 40px 0;
+
+  a {
+    text-decoration: none;
+  }
+
+  .col-item {
+    margin-bottom: 22px;
+  }
+
+  .image-container {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    margin: 18px 0px 0px 18px;
+
+    background-color: $white;
+    border-radius: 44px;
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+  }
+
+  .card.card-bg {
+    background-color: $secondary;
+
+    a {
+      color: $secondary-text;
+    }
+  }
+
+  .card-text {
+    font-family: $font-family-sans-serif !important;
+  }
+
+  h3.card-title {
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    line-height: 1.44444rem;
+  }
+
+  .card:after {
+    content: none;
+  }
+}

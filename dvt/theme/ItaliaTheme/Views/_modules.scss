@@ -1,0 +1,17 @@
+.modules.card-wrapper {
+  .modulo {
+    .download-formats {
+      display: flex;
+      flex-wrap: wrap;
+
+      a {
+        margin-right: 0.6em;
+      }
+
+      .icon-svg-custom {
+        margin-right: 0.2rem;
+        margin-left: -0.1rem;
+      }
+    }
+  }
+}

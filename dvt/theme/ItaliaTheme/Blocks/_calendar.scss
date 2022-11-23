@@ -1,0 +1,155 @@
+.calendar {
+  margin: 3rem 0;
+
+  .full-width {
+    height: auto;
+  }
+
+  .template-header {
+    &.with-filters {
+      /* border-bottom: 1px solid $neutral-1-a2;*/
+      margin-bottom: 1em;
+
+      .path-filter-buttons {
+        display: flex;
+        align-items: flex-end;
+      }
+
+      h2,
+      .path-filter-buttons-wrapper {
+        margin-bottom: 1rem;
+      }
+
+      button {
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+
+  .calendar-header {
+    padding: 0.35rem;
+    background: $primary;
+
+    h3 {
+      margin: 0 !important;
+      color: $white !important;
+    }
+  }
+
+  .slick-dots {
+    bottom: -3rem;
+  }
+
+  .dot {
+    li {
+      button {
+        &:before {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  .slick-arrow {
+    width: 1.5rem;
+    height: auto;
+    color: transparentize($secondary, 0.6);
+
+    &:hover,
+    &:focus {
+      color: transparentize($secondary, 0.3);
+    }
+
+    &.slick-next {
+      right: -2.9rem;
+    }
+
+    &.slick-prev {
+      left: -2.9rem;
+    }
+  }
+
+  .calendar-body {
+    height: 368px;
+    padding: 0rem 1rem;
+
+    .body {
+      height: 368px;
+      padding: 1rem 1rem 1rem 1rem;
+      box-shadow: 10px 0 17px -10px $neutral-1-a2;
+      overflow-y: auto;
+    }
+  }
+
+  .no-results {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .card.card-bg {
+    &:after {
+      content: none;
+    }
+  }
+
+  .day {
+    font-family: $font-family-monospace;
+    font-size: 2.4rem;
+    font-weight: 100;
+  }
+
+  .day-week {
+    font-family: $font-family-monospace;
+    font-weight: 400;
+  }
+
+  .month {
+    margin-left: -1rem;
+    font-family: $font-family-monospace;
+    font-size: 0.8rem;
+  }
+
+  .calendar-item {
+    .calendar-type {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .scadenza_message {
+      color: $complementary-1-b5;
+      font-size: 0.8em;
+    }
+  }
+
+  @media (max-width: 600px) {
+    margin: 0;
+
+    .calendar-body {
+      .body {
+        box-shadow: none;
+      }
+    }
+  }
+  @media (min-width: #{map-get($grid-breakpoints, md)}) {
+    .template-header {
+      &.with-filters {
+        .path-filter-buttons {
+          justify-content: flex-end;
+
+          button {
+            margin-right: 0;
+            margin-bottom: 0;
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+
+    .card-wrapper {
+      margin-bottom: 1rem;
+    }
+  }
+}

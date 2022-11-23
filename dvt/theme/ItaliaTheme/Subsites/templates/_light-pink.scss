@@ -1,0 +1,21 @@
+body.subsite-light-pink {
+  .public-ui {
+    .chip.chip-primary {
+      border-color: $subsite-light-pink-link-color;
+      color: $subsite-light-pink-link-color;
+
+      & > .chip-label {
+        color: $subsite-light-pink-link-color;
+      }
+
+      &:hover {
+        border-color: $subsite-light-pink-link-color;
+        background-color: $subsite-light-pink-link-color;
+
+        & > .chip-label {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.block.listing {
+  .full-width {
+    height: unset;
+  }
+
+  .listing-item picture {
+    max-width: unset;
+    margin: 0;
+  }
+
+  .event-recurrences-more {
+    position: absolute;
+    bottom: $v-gap * 8;
+
+    display: flex;
+    align-items: center;
+    color: $card-link-color;
+    font-size: $card-category-size;
+    letter-spacing: $card-category-l-spacing;
+  }
+
+  .card-persona {
+    .card-image-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+
+      .card-image {
+        flex: 1 1 30%;
+
+        picture {
+          display: block;
+          min-width: 130px;
+        }
+      }
+    }
+  }
+}

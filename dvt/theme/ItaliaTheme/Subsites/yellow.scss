@@ -1,0 +1,19 @@
+@import './common';
+
+$subsite-yellow-primary: #d4a418;
+$subsite-yellow-primary-text: black;
+$subsite-yellow-secondary: green;
+$subsite-yellow-secondary-text: white;
+$subsite-yellow-link-color: #b77d04;
+
+@include define-subsite(
+  'yellow',
+  $subsite-yellow-primary,
+  $subsite-yellow-primary-text,
+  $subsite-yellow-secondary,
+  $subsite-yellow-secondary-text,
+  $tertiary,
+  $tertiary-text,
+  $subsite-yellow-link-color,
+  true
+);

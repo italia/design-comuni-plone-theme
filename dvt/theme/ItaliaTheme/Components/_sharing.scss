@@ -1,0 +1,21 @@
+.page-sharing,
+.page-actions {
+  .link-list-wrapper {
+    ul {
+      li {
+        a.list-item,
+        button.btn-link {
+          display: flex;
+          align-items: center;
+          .icon {
+            margin-right: 0.5em;
+          }
+        }
+
+        button.btn-link {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.input-group {
+  &.input-group-lg {
+    .input-group-prepend ~ label {
+      left: 5rem;
+      max-width: calc(100% - 5rem);
+    }
+  }
+
+  .input-group-append {
+    .btn {
+      &.btn-link {
+        border-radius: 0;
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 2px $focus-outline-color;
+      }
+    }
+  }
+}

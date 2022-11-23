@@ -1,0 +1,27 @@
+.public-ui {
+  @media (min-width: #{map-get($grid-breakpoints, md)}) {
+    &.has-toolbar {
+      .row {
+        &.row-full-width {
+          max-width: calc(100vw - 80px);
+          margin: 0 calc(-50vw + 40px + 50%);
+        }
+      }
+    }
+
+    &.has-toolbar-collapsed {
+      .row {
+        &.row-full-width {
+          max-width: calc(100vw - 20px);
+          margin: 0 calc(-50vw + 10px + 50%);
+        }
+      }
+    }
+
+    .sticky-wrapper {
+      &.navbar-wrapper {
+        z-index: 1;
+      }
+    }
+  }
+}

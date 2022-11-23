@@ -1,0 +1,20 @@
+@import './common';
+
+$subsite-white-primary: #0066cc;
+$subsite-white-primary-text: #fff;
+$subsite-white-secondary: #000eb3;
+$subsite-white-secondary-text: #fff;
+$subsite-white-link-color: #0066cc;
+
+@include define-subsite(
+  'white',
+  $subsite-white-primary,
+  $subsite-white-primary-text,
+  $subsite-white-primary,
+  $subsite-white-primary-text,
+  $tertiary,
+  $tertiary-text,
+  $subsite-white-link-color
+);
+
+@import 'templates/white';

@@ -1,0 +1,273 @@
+.documentFirstHeading {
+  border: none;
+
+  &:before {
+    content: none;
+  }
+}
+
+.documentDescription {
+  color: $body-color;
+  font-size: 1rem;
+  white-space: pre-wrap;
+}
+
+a {
+  cursor: pointer;
+
+  &[href^='mailto'],
+  &[target='_blank'],
+  &[rel='noopener noreferreer'] {
+    word-break: break-word;
+  }
+}
+
+.listing-item img {
+  max-width: unset;
+  margin-right: unset;
+}
+
+.public-ui .text-secondary {
+  color: $secondary-text !important;
+}
+
+button.custom-navbar-toggler svg.icon {
+  fill: $secondary-text;
+}
+
+::selection {
+  background-color: default;
+}
+
+.public-ui {
+  a.btn.btn-primary {
+    color: $primary-text;
+
+    svg {
+      fill: $primary-text;
+    }
+  }
+
+  a.btn.btn-secondary {
+    color: $secondary-text;
+
+    svg {
+      fill: $secondary-text;
+    }
+  }
+}
+
+iframe {
+  max-width: 100%;
+  border: none;
+}
+
+.public-ui,
+.cms-ui {
+  blockquote {
+    position: relative;
+    margin: 1.5rem 2rem;
+    font-family: $font-family-serif;
+
+    &:before {
+      position: absolute;
+      top: -1.8rem;
+      left: -2rem;
+      display: block;
+      height: 0;
+      color: $neutral-2-b2;
+      content: '“';
+      font-size: 400%;
+    }
+  }
+
+  .callout {
+    padding: 1.25rem;
+    border: 1px solid $neutral-1-a2;
+    border-left-width: 0.4rem;
+    margin: 1.25rem 0;
+    border-radius: 0.25rem;
+
+    p,
+    .public-DraftStyleDefault-block {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .callout-bg {
+    padding: 1.25rem;
+    margin: 1.25rem 0;
+    background-color: $primary-c1;
+
+    p,
+    .public-DraftStyleDefault-block {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .draftjs-text-smaller {
+    font-size: 0.75em;
+  }
+
+  .draftjs-text-larger {
+    font-size: 1.75em;
+  }
+
+  .draftjs-buttons {
+    margin: 0;
+
+    a {
+      display: inline-block;
+      padding: 1em 2em;
+      margin: 0.5em 1em 0.5em 0;
+      background-color: $primary;
+      border-radius: $btn-border-radius;
+      color: $primary-text;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+
+      &:hover,
+      &:active {
+        background-color: darken($primary, 8);
+        color: $primary-text;
+        font-weight: 600;
+      }
+    }
+  }
+
+  div[class^='draftJsToolbar__toolbar__'] {
+    line-height: 1rem;
+
+    .icon {
+      font-size: 1rem;
+    }
+
+    .ui.input > input {
+      height: auto;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+#text-body {
+  .full-width {
+    position: static;
+    left: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+}
+
+.select-all-cts.btn.btn-link.btn-mini {
+  padding: 0;
+}
+
+.loading {
+  .progress-spinner {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.public-ui,
+* {
+  .fa,
+  .fas,
+  .far,
+  .fal,
+  .fad,
+  .fab {
+    display: inline-block;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+  }
+
+  .fa-lg {
+    font-size: 1.33333em;
+    line-height: 0.75em;
+    vertical-align: -0.0667em;
+  }
+
+  .fa-xs {
+    font-size: 0.75em;
+  }
+
+  .fa-sm {
+    font-size: 0.875em;
+  }
+
+  .fa-1x {
+    font-size: 1em;
+  }
+
+  .fa-2x {
+    font-size: 2em;
+  }
+
+  .fa-3x {
+    font-size: 3em;
+  }
+
+  .fa-4x {
+    font-size: 4em;
+  }
+
+  .fa-5x {
+    font-size: 5em;
+  }
+
+  .fa-6x {
+    font-size: 6em;
+  }
+
+  .fa-7x {
+    font-size: 7em;
+  }
+
+  .fa-8x {
+    font-size: 8em;
+  }
+
+  .fa-9x {
+    font-size: 9em;
+  }
+
+  .fa-10x {
+    font-size: 10em;
+  }
+
+  svg.fa-icon {
+    width: 1em;
+    fill: currentColor;
+  }
+
+  .icon.fa-icon.placeholder {
+    //to prevent layout shift
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    line-height: 1;
+  }
+}
+
+//table overflow mobile
+@media (max-width: #{map-get($grid-breakpoints, lg)}) {
+  .public-ui table.ui.table {
+    display: block;
+    overflow: auto;
+    th {
+      white-space: nowrap;
+    }
+  }
+}

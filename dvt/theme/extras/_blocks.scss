@@ -1,0 +1,20 @@
+.block {
+  h1:last-child,
+  h2:last-child,
+  h3:last-child,
+  h4:last-child,
+  h5:last-child {
+    margin-top: 0;
+  }
+}
+
+#page-document {
+  div:not([class]):not(.block),
+  div[class=''] {
+    > .public-ui {
+      > .full-width {
+        height: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+.card-wrapper {
+  &.card-teaser-wrapper {
+    .card-teaser {
+      .card-body {
+        max-width: 100%;
+      }
+
+      .icon + .card-body {
+        max-width: calc(100% - 32px - 1em);
+      }
+    }
+    //Landscape
+    @media (min-width: #{map-get($grid-breakpoints, md)}) {
+      .card-teaser {
+        flex: 0 0 49%;
+      }
+
+      &.card-teaser-block-3 {
+        width: 100%;
+        justify-content: space-between;
+
+        & > .card-teaser {
+          flex: 0 0 32%;
+        }
+
+        &:after {
+          flex: 0 0 32%;
+          content: '';
+        }
+      }
+
+      &.card-teaser-block-4 {
+        width: 100%;
+        justify-content: space-between;
+
+        & > .card-teaser {
+          flex: 0 0 24%;
+        }
+
+        &:after {
+          flex: 0 0 24%;
+          content: '';
+        }
+      }
+    }
+  }
+}
+
+.card {
+  .categoryicon-top {
+    .icon {
+      color: $secondary;
+      fill: $secondary;
+    }
+  }
+}
+
+a.read-more {
+  color: $link-color;
+}

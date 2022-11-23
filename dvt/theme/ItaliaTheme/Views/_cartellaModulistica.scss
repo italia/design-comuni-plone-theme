@@ -1,0 +1,193 @@
+$docs-section-margin: 3em;
+
+.contenttype-cartellamodulistica {
+  section.modulistica {
+    .documents-section,
+    .document-row-section {
+      margin-bottom: $docs-section-margin;
+
+      &.document-row-section {
+        margin-bottom: 0;
+      }
+
+      h3 + br {
+        display: none;
+      }
+
+      .items {
+        padding: 0 1.5em;
+
+        .items-header {
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+
+          .downloads {
+            font-size: 0.8em;
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+        }
+      }
+
+      .doc-row {
+        padding: 1em 0;
+        border-bottom: 1px solid $neutral-1-a2;
+
+        &.has-children {
+          padding-bottom: 1em;
+        }
+        .description {
+          font-size: 0.9rem;
+        }
+
+        .doc {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0.4em 0;
+
+          .title-wrap {
+            flex: 1;
+
+            &.single-row {
+              max-width: 70%;
+            }
+            .title {
+              font-size: 1.2em;
+              font-weight: 500;
+            }
+            p.description {
+              margin: 0;
+            }
+          }
+
+          &.modulo {
+            .title {
+              color: $neutral-2-b5;
+              font-size: 1em;
+              font-weight: normal;
+            }
+          }
+
+          .downloads {
+            display: flex;
+            justify-content: center;
+
+            a {
+              width: 2.4em;
+              text-align: center;
+
+              svg {
+                width: 1.4rem !important;
+                height: 1.4rem !important;
+                font-size: 1.3em;
+              }
+            }
+          }
+
+          a.modulistica-link {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+
+            svg {
+              width: 2em;
+              font-size: 1.2em;
+            }
+          }
+        }
+
+        .accordion-wrapper {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .accordion-header {
+            padding: 0.5em 0;
+            color: $secondary;
+            font-size: 1rem;
+          }
+          button {
+            padding: 0 0.4em;
+            border: none;
+            background: none;
+
+            .icon {
+              width: 1.2rem;
+              fill: $accordion-icon-color;
+            }
+          }
+        }
+        .accordion-content {
+          overflow: hidden;
+          height: auto;
+          max-height: 0;
+          padding: 0;
+
+          transition: max-height 0.3s ease;
+
+          &.open {
+            max-height: 1000vh;
+            overflow-y: auto;
+          }
+
+          .accordion-inner {
+            padding: 1em 0;
+          }
+
+          .link-more {
+            text-align: right;
+
+            a {
+              font-weight: bold;
+
+              svg {
+                width: 1.2em;
+                fill: $link-color;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .document-row-section + .documents-section {
+      margin-top: $docs-section-margin;
+    }
+  }
+
+  #metadata {
+    margin-top: 3rem;
+  }
+
+  @media (max-width: #{map-get($grid-breakpoints, lg)}) {
+    section.modulistica {
+      .documents-section,
+      .document-row-section {
+        .doc-row {
+          .doc {
+            flex-wrap: wrap;
+            align-items: unset;
+            justify-content: unset;
+            .title-wrap {
+              &.single-row {
+                max-width: none;
+              }
+            }
+            .title,
+            .downloads {
+              flex: 1 1 100%;
+              justify-content: flex-end;
+
+              a {
+                width: 2em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

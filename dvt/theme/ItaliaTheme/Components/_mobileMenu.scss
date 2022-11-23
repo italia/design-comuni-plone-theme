@@ -1,0 +1,155 @@
+.navbar {
+  @media (max-width: 991px) {
+    .navbar-collapsable {
+      &,
+      .public-ui & {
+        z-index: 10;
+        display: block !important;
+        overflow: hidden;
+        max-width: 0;
+        opacity: 0;
+      }
+
+      &.expanded {
+        z-index: 1001;
+        max-width: 100%;
+        opacity: 1;
+      }
+
+      .menu-wrapper {
+        // z-index: 100;
+
+        .it-brand-wrapper {
+          padding: 3rem 1.5rem 1.5rem;
+
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+          }
+
+          h2 {
+            margin-bottom: 0;
+            color: $text-color;
+            font-size: 1.5rem;
+          }
+
+          h3 {
+            margin-bottom: 0;
+            color: $secondary;
+            font-size: 1rem;
+          }
+
+          svg {
+            width: 3rem;
+            height: 3rem;
+          }
+
+          .it-brand-text {
+            flex: 1;
+            padding-left: 1rem;
+          }
+
+          a {
+            text-decoration: none;
+          }
+        }
+
+        .navbar-nav {
+          li.nav-item {
+            &.active {
+              a.nav-link {
+                border-left: 5px solid $secondary;
+              }
+            }
+
+            a.nav-link {
+              &.active {
+                border-left: 5px solid $secondary;
+                background: rgba($secondary, 0.1);
+              }
+            }
+          }
+        }
+
+        .navbar-secondary,
+        .it-socials {
+          &::before {
+            width: 100%;
+            max-width: 65px;
+            height: 1px;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            margin-left: 1.5rem;
+            background: rgba($secondary, 0.5);
+            content: '';
+          }
+        }
+
+        .it-socials {
+          display: flex !important;
+          flex-direction: column;
+
+          span,
+          ul {
+            padding: 0 1.5rem;
+          }
+
+          ul {
+            margin: 1rem 0;
+            list-style: none;
+
+            li {
+              display: inline-block;
+              margin: 0.5rem 1rem;
+
+              margin-left: 0;
+
+              .icon {
+                width: 28px;
+                height: 28px;
+              }
+            }
+          }
+        }
+      }
+
+      .close-div {
+        left: calc(100vw - 48px);
+        background: none;
+        text-align: center;
+
+        button.close-menu {
+          float: none;
+          border-radius: 0;
+
+          &:focus {
+            border-color: $focus-outline-color;
+            -webkit-box-shadow: 0 0 0 2px $focus-outline-color;
+            box-shadow: 0 0 0 2px $focus-outline-color;
+            outline: none;
+          }
+
+          svg {
+            color: #fff;
+          }
+        }
+      }
+
+      .overlay {
+        background: rgba(#00101f, 0.9);
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    .navbar-collapsable {
+      .menu-wrapper {
+        .it-brand-wrapper,
+        .it-socials {
+          display: none !important;
+        }
+      }
+    }
+  }
+}

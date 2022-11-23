@@ -1,0 +1,11 @@
+.siteroot,
+body.public-ui.contenttype-lrf {
+  .block-editor-title,
+  .documentFirstHeading {
+    display: none;
+  }
+}
+
+.sidebar-container-enter-done {
+  z-index: 150000 !important;
+}

@@ -1,0 +1,47 @@
+body.contenttype-unitaorganizzativa {
+  #ulteriori_informazioni {
+    margin: 0 !important;
+  }
+
+  #persone-struttura {
+    a:first-of-type {
+      margin-left: 0;
+    }
+
+    .ruolo-persone-struttura {
+      margin-bottom: 0.3rem;
+
+      h5 {
+        display: inline-block;
+        margin-right: 0.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  #geocoded-result {
+    height: 300px !important;
+  }
+
+  .orario-pubblico {
+    padding: 1rem;
+
+    p:last-of-type {
+      margin-bottom: 8px;
+    }
+  }
+
+  dl.contatti-list {
+    .contatti {
+      dt,
+      dd {
+        display: inline-block;
+      }
+
+      dt {
+        min-width: 5rem;
+      }
+    }
+  }
+}

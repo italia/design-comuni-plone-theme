@@ -1,0 +1,33 @@
+.block.image-text-block {
+  .img-responsive-wrapper {
+    .img-wrapper img {
+      width: 100%;
+    }
+  }
+
+  .card::after {
+    display: none;
+  }
+
+  .revert-row.row {
+    flex-direction: row-reverse;
+  }
+
+  @media (max-width: #{map-get($grid-breakpoints, lg)}) {
+    .image-text-card-wrapper h2 {
+      padding: 0 2rem;
+    }
+
+    .card-body {
+      .card-body-row {
+        flex-direction: column;
+
+        .col-4,
+        .col-6,
+        .col-8 {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

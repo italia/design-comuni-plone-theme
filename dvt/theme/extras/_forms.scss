@@ -1,0 +1,67 @@
+$sidebarFormBg: #fafafa;
+
+#sidebar,
+.cms-ui {
+  .ui.form {
+    .ui.input input[type='email'],
+    .ui.input input[type='number'],
+    .ui.input input[type='password'],
+    .ui.input input[type='search'],
+    .ui.input input[type='tel'],
+    .ui.input input[type='time'],
+    .ui.input input[type='text'],
+    .ui.input input[type='url'],
+    textarea,
+    .DraftEditor-root {
+      padding-right: 10px;
+      padding-left: 10px;
+      margin-top: 0.5rem;
+      background: $sidebarFormBg;
+
+      &:focus {
+        background: $sidebarFormBg;
+        color: #666;
+      }
+    }
+
+    .react-select-container {
+      &,
+      .react-select__control {
+        background: $sidebarFormBg;
+      }
+
+      .react-select__control {
+        padding-right: 5px;
+        padding-left: 5px;
+      }
+    }
+
+    .field.inline.textarea textarea {
+      padding: 10px;
+    }
+
+    .DraftEditor-editorContainer {
+      .public-DraftEditor-content {
+        min-height: 60px;
+      }
+    }
+
+    .blocks-widget-container {
+      .DraftEditor-editorContainer {
+        .public-DraftEditor-content {
+          min-height: unset;
+        }
+      }
+
+      .DraftEditor-root {
+        border-bottom: none;
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.cms-ui .ui.checkbox input:focus ~ label,
+#toolbar .ui.checkbox input:focus ~ label {
+  color: #000;
+}

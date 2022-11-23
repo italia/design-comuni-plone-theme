@@ -1,0 +1,6 @@
+@media (min-width: #{map-get($grid-breakpoints, lg)}) {
+  .nav-item.megamenu > .dropdown {
+    position: static;
+    display: flex;
+  }
+}
