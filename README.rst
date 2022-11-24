@@ -18,7 +18,7 @@ Questo tema si basa sulla versione 2017.1 delle linee guida.
 
 Il nuovo tema lo puoi trovare a questo `indirizzo`__.
 
-__ https://github.com/RedTurtle/design-volto-theme
+__ https://github.com/italia/design-comuni-plone-theme/
 
 |
 
