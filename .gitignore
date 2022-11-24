@@ -14,9 +14,17 @@ cache
 .env.development.local
 .env.test.local
 .env.production.local
-.yarn/install-state.gz
 
 data
 omelette
 
 locales/*.json
+
+# Yarn 3
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions

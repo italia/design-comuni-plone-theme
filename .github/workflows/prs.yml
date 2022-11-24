@@ -12,7 +12,6 @@ jobs:
       #   uses: docker/setup-qemu-action@v2
 
       - name: Set up Docker Buildx
-        id: buildx
         uses: docker/setup-buildx-action@v2
 
       - name: Login to DockerHub
@@ -28,7 +27,6 @@ jobs:
           tags: redturtletech/io-comune-base:develop
           pull: true
           push: false
-          builder: ${{ steps.buildx.outputs.name }}
           cache-from: type=registry,ref=redturtletech/io-comune-base:develop
           cache-to: type=inline
           # platforms: linux/amd64,linux/arm64
