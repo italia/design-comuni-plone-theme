@@ -5,7 +5,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import {
   RichTextArticle,
   richTextHasContent,
-} from 'design-volto-theme/components/ItaliaTheme/View';
+} from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   service_not_active: {

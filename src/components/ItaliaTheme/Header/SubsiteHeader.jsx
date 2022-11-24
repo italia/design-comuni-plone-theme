@@ -11,7 +11,7 @@ import { isSubsiteRoot } from 'volto-subsites';
 import {
   richTextHasContent,
   RichText,
-} from 'design-volto-theme/components/ItaliaTheme/View';
+} from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const SubsiteHeader = () => {
   const subsite = useSelector((state) => state.subsite?.data);

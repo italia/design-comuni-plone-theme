@@ -1,49 +1,49 @@
-import SimpleCardTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplate';
+import SimpleCardTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplate';
 
-import CardWithImageTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
-import CardWithImageTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CardWithImageTemplateSkeleton';
+import CardWithImageTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
+import CardWithImageTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CardWithImageTemplateSkeleton';
 
-import InEvidenceTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate';
-import InEvidenceTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/InEvidenceTemplateSkeleton';
+import InEvidenceTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/InEvidenceTemplate';
+import InEvidenceTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/InEvidenceTemplateSkeleton';
 
-import ContentInEvidenceTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/ContentInEvidenceTemplate';
-import ContentInEvidenceTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/ContentInEvidenceTemplateSkeleton';
+import ContentInEvidenceTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/ContentInEvidenceTemplate';
+import ContentInEvidenceTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/ContentInEvidenceTemplateSkeleton';
 
-import RibbonCardTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate';
-import RibbonCardTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/RibbonCardTemplateSkeleton';
+import RibbonCardTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/RibbonCardTemplate';
+import RibbonCardTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/RibbonCardTemplateSkeleton';
 
-import MapTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/MapTemplate';
-import MapTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/MapTemplateSkeleton';
+import MapTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/MapTemplate';
+import MapTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/MapTemplateSkeleton';
 
-import SmallBlockLinksTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
-import SmallBlockLinksTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SmallBlockLinksTemplateSkeleton';
+import SmallBlockLinksTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/SmallBlockLinksTemplate';
+import SmallBlockLinksTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SmallBlockLinksTemplateSkeleton';
 
-import CompleteBlockLinksTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate';
-import CompleteBlockLinksTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CompleteBlockLinksTemplateSkeleton';
+import CompleteBlockLinksTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/CompleteBlockLinksTemplate';
+import CompleteBlockLinksTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CompleteBlockLinksTemplateSkeleton';
 
-import PhotogalleryTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
-import PhotogalleryTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/PhotogalleryTemplateSkeleton';
+import PhotogalleryTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate';
+import PhotogalleryTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/PhotogalleryTemplateSkeleton';
 
-import SliderTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/SliderTemplate';
-import SliderTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SliderTemplateSkeleton';
+import SliderTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/SliderTemplate';
+import SliderTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SliderTemplateSkeleton';
 
-import GridGalleryTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate';
-import GridGalleryTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/GridGalleryTemplateSkeleton';
+import GridGalleryTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/GridGalleryTemplate';
+import GridGalleryTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/GridGalleryTemplateSkeleton';
 
-import BandiInEvidenceTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate';
-import BandiInEvidenceTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton';
+import BandiInEvidenceTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/BandiInEvidenceTemplate';
+import BandiInEvidenceTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/BandiInEvidenceTemplateSkeleton';
 
-import SquaresImageTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/SquaresImageTemplate';
-import SquaresImageTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SquaresImageTemplateSkeleton';
+import SquaresImageTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/SquaresImageTemplate';
+import SquaresImageTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SquaresImageTemplateSkeleton';
 
-import SimpleListTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/SimpleListTemplate';
-import SimpleListTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SimpleListTemplateSkeleton';
+import SimpleListTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/SimpleListTemplate';
+import SimpleListTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/SimpleListTemplateSkeleton';
 
-import CardWithSlideUpTextTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/CardWithSlideUpTextTemplate';
-import CardWithSlideUpTextTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CardWithSlideUpTextTemplateSkeleton';
+import CardWithSlideUpTextTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/CardWithSlideUpTextTemplate';
+import CardWithSlideUpTextTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/CardWithSlideUpTextTemplateSkeleton';
 
-// import AmministrazioneTrasparenteTablesTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
-// import AmministrazioneTrasparenteTablesTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/AmministrazioneTrasparenteTablesTemplateSkeleton';
+// import AmministrazioneTrasparenteTablesTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/AmministrazioneTrasparenteTablesTemplate';
+// import AmministrazioneTrasparenteTablesTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/TemplatesSkeletons/AmministrazioneTrasparenteTablesTemplateSkeleton';
 
 import {
   addSimpleCardTemplateOptions,
@@ -58,7 +58,7 @@ import {
   addSimpleListTemplateOptions,
   addCardWithSlideUpTextTemplateOptions,
   addPhotogalleryTemplateOptions,
-} from 'design-volto-theme/config/Blocks/ListingOptions';
+} from 'design-comuni-plone-theme/config/Blocks/ListingOptions';
 
 import { addLighthouseField } from '@italia/config/Blocks/ListingOptions/utils';
 
@@ -265,9 +265,10 @@ export const getItaliaListingVariations = (config) => {
 };
 export const removeListingVariation = (config, id) => {
   let indexOfVariation = -1;
-  indexOfVariation = config.blocks?.blocksConfig?.listing?.variations?.findIndex(
-    (x) => x.id === id,
-  );
+  indexOfVariation =
+    config.blocks?.blocksConfig?.listing?.variations?.findIndex(
+      (x) => x.id === id,
+    );
   if (indexOfVariation >= 0) {
     config.blocks.blocksConfig.listing.variations.splice(indexOfVariation, 1);
   }

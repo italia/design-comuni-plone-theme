@@ -3,9 +3,9 @@ import { defineMessages } from 'react-intl';
 import {
   templatesOptions,
   addDefaultOptions,
-} from 'design-volto-theme/config/Blocks/ListingOptions';
+} from 'design-comuni-plone-theme/config/Blocks/ListingOptions';
 
-import { addLighthouseField } from 'design-volto-theme/config/Blocks/ListingOptions/utils';
+import { addLighthouseField } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
 
 const messages = defineMessages({
   always_show_image: {

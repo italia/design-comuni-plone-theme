@@ -3,7 +3,7 @@
  * @module src/reducers/getAmministrazioneTrasparenteTree
  */
 
-import { GET_AMMINISTRAZIONE_TRASPARENTE } from 'design-volto-theme/actions';
+import { GET_AMMINISTRAZIONE_TRASPARENTE } from 'design-comuni-plone-theme/actions';
 
 const initialState = {
   error: null,

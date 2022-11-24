@@ -113,7 +113,7 @@ module.exports = Object.assign({}, volto_config, {
       '@plone/volto-original': `${voltoPath}/src`,
       // be able to reference current package from customized package
       '@italia': `${projectRootPath}/src`, // TODO deprecated: remove in version 8
-      'design-volto-theme': `${projectRootPath}/src`,
+      'design-comuni-plone-theme': `${projectRootPath}/src`,
     };
 
     return base_config;

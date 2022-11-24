@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useIntl, defineMessages } from 'react-intl';
 
-import { viewDate } from 'design-volto-theme/helpers';
+import { viewDate } from 'design-comuni-plone-theme/helpers';
 
 const messages = defineMessages({
   from: {

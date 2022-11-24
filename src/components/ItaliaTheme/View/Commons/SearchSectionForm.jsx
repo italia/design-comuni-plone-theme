@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Button } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { SearchUtils } from 'design-volto-theme/components';
-import { Icon } from 'design-volto-theme/components/ItaliaTheme';
+import { SearchUtils } from 'design-comuni-plone-theme/components';
+import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const { getSearchParamsURL } = SearchUtils;
 /**

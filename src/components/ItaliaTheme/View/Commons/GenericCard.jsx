@@ -8,13 +8,13 @@ import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import Image from '@plone/volto/components/theme/Image/Image';
 
-import { getCalendarDate } from 'design-volto-theme/helpers';
+import { getCalendarDate } from 'design-comuni-plone-theme/helpers';
 import {
   Icon,
   CardCategory,
   getItemIcon,
   ListingCategory,
-} from 'design-volto-theme/components/ItaliaTheme';
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 /**
  * GenericCard view component class.

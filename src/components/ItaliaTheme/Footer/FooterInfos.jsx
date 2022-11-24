@@ -15,7 +15,7 @@ import { getEditableFooterColumns, getItemsByPath } from 'volto-editablefooter';
 import {
   FooterNewsletterSubscribe,
   FooterSocials,
-} from 'design-volto-theme/components/ItaliaTheme';
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const messages = defineMessages({
   goToPage: {

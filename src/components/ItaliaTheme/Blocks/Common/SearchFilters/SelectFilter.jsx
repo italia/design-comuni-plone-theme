@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react';
-import { SelectInput } from 'design-volto-theme/components';
+import { SelectInput } from 'design-comuni-plone-theme/components';
 import { useDispatch, useSelector } from 'react-redux';
 import { searchContent, getVocabulary } from '@plone/volto/actions';
 
@@ -10,11 +10,12 @@ const SelectFilter = ({ options, value, id, onChange, placeholder }) => {
   const state = useSelector((state) => {
     return state;
   });
-  const selectOptions = (options.dispatch?.action
-    ? state?.[options.dispatch.stateSelector]?.result[
-        options.dispatch.resultProp ?? 'items'
-      ]
-    : state?.search?.subrequests?.[options?.dispatch?.subrequests_name]?.items
+  const selectOptions = (
+    options.dispatch?.action
+      ? state?.[options.dispatch.stateSelector]?.result[
+          options.dispatch.resultProp ?? 'items'
+        ]
+      : state?.search?.subrequests?.[options?.dispatch?.subrequests_name]?.items
   )?.map((i) => {
     return {
       value: i.UID,

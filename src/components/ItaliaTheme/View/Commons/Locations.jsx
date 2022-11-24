@@ -1,5 +1,5 @@
-import LocationsMap from 'design-volto-theme/components/ItaliaTheme/View/Commons/LocationsMap';
-import LocationItem from 'design-volto-theme/components/ItaliaTheme/View/Commons/LocationItem';
+import LocationsMap from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/LocationsMap';
+import LocationItem from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/LocationItem';
 import PropTypes from 'prop-types';
 import React from 'react';
 

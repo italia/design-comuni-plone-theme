@@ -4,7 +4,7 @@ import {
   Metadata,
   HelpBox,
   richTextHasContent,
-} from 'design-volto-theme/components/ItaliaTheme/View';
+} from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const ServizioUlterioriInformazioni = ({ content }) => {
   return (

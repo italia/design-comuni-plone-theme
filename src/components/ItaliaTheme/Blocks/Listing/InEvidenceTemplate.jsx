@@ -20,7 +20,7 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import {
   getCalendarDate,
   getEventRecurrenceMore,
-} from 'design-volto-theme/helpers';
+} from 'design-comuni-plone-theme/helpers';
 import {
   CardCalendar,
   getItemIcon,
@@ -30,8 +30,8 @@ import {
   ListingImage,
   CardCategory,
   CardPersona,
-} from 'design-volto-theme/components/ItaliaTheme';
-import { getCategory } from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/Commons/utils';
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { getCategory } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 
 const InEvidenceTemplate = (props) => {
   const {

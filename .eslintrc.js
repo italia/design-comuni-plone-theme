@@ -22,7 +22,7 @@ module.exports = {
           ['@plone/volto', '@plone/volto/src'],
           ['@package', './src'],
           ['@italia', './src'], // TODO deprecated: remove in version 8
-          ['design-volto-theme', './src'],
+          ['design-comuni-plone-theme', './src'],
           // TODO remove the next two when implemented in core
           [
             '@plone/volto/components/theme/Image/Image',

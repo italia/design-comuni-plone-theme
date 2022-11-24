@@ -1,5 +1,5 @@
 {
-  "name": "design-volto-theme",
+  "name": "design-comuni-plone-theme",
   "description": "Volto Theme for Italia design guidelines",
   "license": "MIT",
   "version": "6.5.0",
@@ -25,11 +25,8 @@
   ],
   "scripts": {
     "start": "razzle start",
-    "preinstall": "make preinstall",
-    "postinstall": "yarn omelette && yarn patches",
+    "postinstall": "make omelette && make patches",
     "prepare": "husky install",
-    "omelette": "make omelette",
-    "patches": "/bin/bash patches/patchit.sh > /dev/null 2>&1 ||true",
     "build": "razzle build --noninteractive",
     "test": "razzle test --maxWorkers=1",
     "test:ci": "CI=true NODE_ICU_DATA=node_modules/full-icu razzle test",
@@ -60,11 +57,11 @@
       "load-volto-addons": "<rootDir>/node_modules/@plone/volto/jest-addons-loader.js",
       "@package/config": "<rootDir>/jest-addons-loader.js",
       "@italia/icons/fontawesome-free-5.15.4-web/svgs/\\${prefixFolder}/\\${iconName}\\.svg": "<rootDir>/src/icons/fontawesome-free-5.15.4-web/svgs/regular/moon.svg",
-      "^design-volto-theme/icons/fontawesome-free-5.15.4-web/svgs/\\${prefixFolder}/\\${iconName}\\.svg": "<rootDir>/src/icons/fontawesome-free-5.15.4-web/svgs/regular/moon.svg",
+      "^design-comuni-plone-theme/icons/fontawesome-free-5.15.4-web/svgs/\\${prefixFolder}/\\${iconName}\\.svg": "<rootDir>/src/icons/fontawesome-free-5.15.4-web/svgs/regular/moon.svg",
       "~/(.*)$": "<rootDir>/src/$1",
       "@root/(.*)$": "<rootDir>/src/$1",
       "@italia/(.*)$": "<rootDir>/src/$1",
-      "^design-volto-theme/(.*)$": "<rootDir>/src/$1",
+      "^design-comuni-plone-theme/(.*)$": "<rootDir>/src/$1",
       "^volto-gdpr-privacy/(.*)$": "<rootDir>/node_modules/volto-gdpr-privacy/src/$1"
     },
     "testMatch": [

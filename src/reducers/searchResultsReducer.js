@@ -3,7 +3,7 @@
  * @module src/reducers/getSearchFiltersReducer
  */
 
-import { GET_SEARCH_RESULTS } from 'design-volto-theme/actions';
+import { GET_SEARCH_RESULTS } from 'design-comuni-plone-theme/actions';
 
 const initialState = {
   error: null,

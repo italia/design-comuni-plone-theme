@@ -3,7 +3,7 @@ import {
   HelpBox,
   Metadata,
   richTextHasContent,
-} from 'design-volto-theme/components/ItaliaTheme/View';
+} from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const UOMoreInfos = ({ content }) => {
   return (

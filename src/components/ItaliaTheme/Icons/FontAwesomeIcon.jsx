@@ -21,7 +21,7 @@ const FontAwesomeIcon = (props) => {
   React.useEffect(() => {
     if (iconName && !loadedIcon) {
       import(
-        `design-volto-theme/icons/fontawesome-free-5.15.4-web/svgs/${prefixFolder}/${iconName}.svg`
+        `design-comuni-plone-theme/icons/fontawesome-free-5.15.4-web/svgs/${prefixFolder}/${iconName}.svg`
       ).then((_loadedIcon) => {
         setLoadedIcon(_loadedIcon);
       });

@@ -9,7 +9,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import { isEmpty } from 'lodash';
 
 import { HeaderSocialsZone } from 'design-react-kit/dist/design-react-kit';
-import { Icon } from 'design-volto-theme/components/ItaliaTheme';
+import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { getSocialSettings } from 'volto-social-settings';
 
 const messages = defineMessages({

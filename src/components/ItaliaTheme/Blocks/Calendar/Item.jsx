@@ -5,11 +5,11 @@ import { defineMessages, useIntl } from 'react-intl';
 import { Spinner } from 'design-react-kit/dist/design-react-kit';
 import cx from 'classnames';
 import useDeepCompareEffect from 'use-deep-compare-effect';
-import { getCalendarDayResults } from 'design-volto-theme/actions';
+import { getCalendarDayResults } from 'design-comuni-plone-theme/actions';
 import { ConditionalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
-import { viewDate } from 'design-volto-theme/helpers';
+import { viewDate } from 'design-comuni-plone-theme/helpers';
 
 const messages = defineMessages({
   scadenza_bando: {

@@ -9,7 +9,7 @@ import {
   CheckboxWidget,
   TextWidget,
 } from '@plone/volto/components';
-import { LinkToWidget } from 'design-volto-theme/components/ItaliaTheme';
+import { LinkToWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const messages = defineMessages({
   ctaImage: {

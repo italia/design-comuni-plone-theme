@@ -3,7 +3,7 @@
  * @module src/reducers/getdettagliProcedimento
  */
 
-import { GET_DETTAGLI_PROCEDIMENTO } from 'design-volto-theme/actions';
+import { GET_DETTAGLI_PROCEDIMENTO } from 'design-comuni-plone-theme/actions';
 
 const initialState = {
   error: null,

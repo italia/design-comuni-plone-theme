@@ -22,12 +22,12 @@ import {
   getItemIcon,
   ListingText,
   ListingLinkMore,
-} from 'design-volto-theme/components/ItaliaTheme';
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 import {
   getCalendarDate,
   getEventRecurrenceMore,
-} from 'design-volto-theme/helpers';
-import { getCategory } from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/Commons/utils';
+} from 'design-comuni-plone-theme/helpers';
+import { getCategory } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 
 const messages = defineMessages({
   default_detail_link: {

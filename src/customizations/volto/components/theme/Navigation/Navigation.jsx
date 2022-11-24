@@ -17,7 +17,7 @@ import {
 
 import { flattenToAppURL } from '@plone/volto/helpers';
 
-import { Collapse } from 'design-volto-theme/components';
+import { Collapse } from 'design-comuni-plone-theme/components';
 import {
   MegaMenu,
   MenuSecondary,
@@ -27,7 +27,7 @@ import {
   Icon,
   SocialHeader,
   BrandText,
-} from 'design-volto-theme/components/ItaliaTheme';
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 import { getDropdownMenuNavitems, getItemsByPath } from 'volto-dropdownmenu';
 

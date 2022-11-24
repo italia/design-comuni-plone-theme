@@ -5,7 +5,7 @@ import { hasBlocksData } from '@plone/volto/helpers';
 import {
   RichText,
   RenderBlocks,
-} from 'design-volto-theme/components/ItaliaTheme/View';
+} from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 /**
  * TextOrBlocks view component class.

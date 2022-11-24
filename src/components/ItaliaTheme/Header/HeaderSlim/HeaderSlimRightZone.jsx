@@ -11,7 +11,7 @@ import {
   LanguageSelector,
   ArLogin,
   TertiaryMenu,
-} from 'design-volto-theme/components/ItaliaTheme';
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const HeaderSlimRightZone = () => {
   const subsite = useSelector((state) => state.subsite?.data);

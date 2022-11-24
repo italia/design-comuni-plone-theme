@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Events } from 'design-volto-theme/components/ItaliaTheme/View';
+import { Events } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const EventoPadreEFigli = ({ content }) => {
   const isChildEvent = content?.parent['@type'] === 'Event';

@@ -17,7 +17,7 @@ import {
   SocialHeader,
   HeaderSearch,
   BrandText,
-} from 'design-volto-theme/components/ItaliaTheme';
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const HeaderCenter = () => {
   const subsite = useSelector((state) => state.subsite?.data);

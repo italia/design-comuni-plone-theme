@@ -16,8 +16,8 @@ import { UniversalLink } from '@plone/volto/components';
 import {
   ListingText,
   ListingLinkMore,
-} from 'design-volto-theme/components/ItaliaTheme';
-import { viewDate } from 'design-volto-theme/helpers';
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { viewDate } from 'design-comuni-plone-theme/helpers';
 
 const messages = defineMessages({
   vedi: {
@@ -199,12 +199,10 @@ const BandiInEvidenceTemplate = ({
                             className={cx('bando-state', {
                               open: item.bando_state?.includes('open'),
                               closed: item.bando_state?.includes('closed'),
-                              scheduled: item.bando_state?.includes(
-                                'scheduled',
-                              ),
-                              'in-progress': item.bando_state?.includes(
-                                'inProgress',
-                              ),
+                              scheduled:
+                                item.bando_state?.includes('scheduled'),
+                              'in-progress':
+                                item.bando_state?.includes('inProgress'),
                             })}
                           >
                             {intl.formatMessage(messages[item.bando_state[0]])}

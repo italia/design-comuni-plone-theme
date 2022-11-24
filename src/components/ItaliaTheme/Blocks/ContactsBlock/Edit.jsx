@@ -16,7 +16,7 @@ import {
   SubblocksEdit,
   SubblocksWrapper,
 } from 'volto-subblocks';
-import { TextEditorWidget } from 'design-volto-theme/components/ItaliaTheme';
+import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 import EditBlock from './Block/EditBlock';
 import Sidebar from './Sidebar.jsx';

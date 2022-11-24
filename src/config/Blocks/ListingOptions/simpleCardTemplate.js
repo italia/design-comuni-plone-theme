@@ -4,7 +4,7 @@ import {
   addSchemaField,
   addDefaultOptions,
   templatesOptions,
-} from 'design-volto-theme/config/Blocks/ListingOptions';
+} from 'design-comuni-plone-theme/config/Blocks/ListingOptions';
 
 import { addLighthouseField } from '@italia/config/Blocks/ListingOptions/utils';
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import SliderTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/SliderTemplate';
+import SliderTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/SliderTemplate';
 
 const SliderTemplateSkeleton = (data) => {
   let items = [];

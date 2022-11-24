@@ -30,9 +30,9 @@ import {
   Toggle,
 } from 'design-react-kit/dist/design-react-kit';
 
-import { Icon } from 'design-volto-theme/components/ItaliaTheme';
-import { getSearchFilters } from 'design-volto-theme/actions';
-import { SearchUtils, Checkbox } from 'design-volto-theme/components';
+import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { getSearchFilters } from 'design-comuni-plone-theme/actions';
+import { SearchUtils, Checkbox } from 'design-comuni-plone-theme/components';
 
 const {
   defaultOptions,

@@ -15,7 +15,7 @@ import {
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
 
-import { getViewDate } from 'design-volto-theme/components/ItaliaTheme/Blocks/RssBlock/utils';
+import { getViewDate } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/RssBlock/utils';
 
 const messages = defineMessages({
   readMore: { id: 'rss_read_more', defaultMessage: 'Read more' },
