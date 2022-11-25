@@ -36,6 +36,7 @@ const HeaderCenter = () => {
         <div className="it-brand-wrapper">
           <UniversalLink
             href={subsite?.['@id'] ? flattenToAppURL(subsite['@id']) : '/'}
+            title="homepage"
           >
             {subsite?.subsite_logo ? logoSubsite : <Logo />}
             <BrandText subsite={subsite} />
