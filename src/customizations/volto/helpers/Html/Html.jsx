@@ -2,12 +2,13 @@
  * Html helper.
  * @module helpers/Html
  */
+
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Helmet } from '@plone/volto/helpers';
+import Helmet from '@plone/volto/helpers/Helmet/Helmet';
 import serialize from 'serialize-javascript';
 import { join } from 'lodash';
-import { BodyClass } from '@plone/volto/helpers/';
+import BodyClass from '@plone/volto/helpers/BodyClass/BodyClass';
 import { runtimeConfig } from '@plone/volto/runtime_config';
 import config from '@plone/volto/registry';
 
@@ -21,10 +22,11 @@ if (window.addEventListener) {
 }`;
 
 export const loadReducers = (state = {}) => {
+  const { settings } = config;
   return Object.assign(
     {},
     ...Object.keys(state).map((name) =>
-      config.settings.initialReducersBlacklist.includes(name)
+      settings.initialReducersBlacklist.includes(name)
         ? {}
         : { [name]: state[name] },
     ),
@@ -40,6 +42,14 @@ export const loadReducers = (state = {}) => {
  * The only thing this component doesn't (and can't) include is the
  * HTML doctype declaration, which is added to the rendered output
  * by the server.js file.
+ *
+ * Critical.css behaviour: when a file `public/critical.css` is present, the
+ * loading of stylesheets is changed. The styles in critical.css are inlined in
+ * the generated HTML, and the whole story needs to change completely: instead
+ * of treating stylesheets as priority for rendering, we want to defer their
+ * loading as much as possible. So we change the stylesheets to be prefetched
+ * and we switch their rel back to stylesheets at document ready event.
+ *
  * @function Html
  * @param {Object} props Component properties.
  * @param {Object} props.assets Assets to be rendered.
@@ -47,6 +57,7 @@ export const loadReducers = (state = {}) => {
  * @param {Object} props.store Store object.
  * @returns {string} Markup of the not found page.
  */
+
 /**
  * Html class.
  * @class Html
@@ -69,13 +80,15 @@ class Html extends Component {
       getState: PropTypes.func,
     }).isRequired,
   };
+
   /**
    * Render method.
    * @method render
    * @returns {string} Markup for the component.
    */
   render() {
-    const { extractor, markup, store, criticalCss } = this.props;
+    const { extractor, markup, store, criticalCss, apiPath, publicURL } =
+      this.props;
     const head = Helmet.rewind();
     const bodyClass = join(BodyClass.rewind(), ' ');
     return (
@@ -88,18 +101,38 @@ class Html extends Component {
           {head.link.toComponent()}
           {head.script.toComponent()}
           <meta property="og:type" content="website" />
+
           <script
             dangerouslySetInnerHTML={{
-              __html: `window.env = ${serialize(runtimeConfig)};`,
+              __html: `window.env = ${serialize({
+                ...runtimeConfig,
+                // Seamless mode requirement, the client need to know where the API is located
+                // if not set in the API_PATH
+                ...(apiPath && {
+                  apiPath,
+                }),
+                ...(publicURL && {
+                  publicURL,
+                }),
+              })};`,
             }}
           />
           <link rel="shortcut icon" href="/favicon.ico" />
+          <link rel="icon" href="/favicon.ico" sizes="any" />
+          <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+          <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/apple-touch-icon.png"
+          />
+          <link rel="manifest" href="/site.webmanifest" />
+          <meta property="og:type" content="website" />
+          <meta name="generator" content="Plone 6 - https://plone.org" />
           <meta
             name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+            content="width=device-width, initial-scale=1 shrink-to-fit=no"
           />
           <meta name="apple-mobile-web-app-capable" content="yes" />
-
           {process.env.NODE_ENV === 'production' && criticalCss && (
             <style
               dangerouslySetInnerHTML={{ __html: this.props.criticalCss }}
@@ -170,4 +203,5 @@ class Html extends Component {
     );
   }
 }
+
 export default Html;
