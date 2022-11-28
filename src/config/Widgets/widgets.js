@@ -1,7 +1,7 @@
 import React from 'react';
 import CharCounterDescriptionWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget';
 import { DatetimeWidget } from '@plone/volto/config/Widgets';
-import { ArrayWidget } from '@plone/volto/components';
+import { ArrayWidget, WysiwygWidget } from '@plone/volto/components';
 import { MultilingualWidget } from 'volto-multilingual-widget';
 import IconWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/IconWidget';
 import SubsiteSocialLinksWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/SubsiteSocialLinksWidget';
@@ -58,7 +58,7 @@ const getItaliaWidgets = (config) => {
     },
     widget: {
       ...config.widgets.widget,
-      // richtext: TinymceWidget
+      richtext: WysiwygWidget,
       color_list: ColorListWidget,
       path_filters: PathFiltersWidget,
       location_filter: LocationFiltersWidget,
