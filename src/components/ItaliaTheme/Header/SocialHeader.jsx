@@ -17,6 +17,10 @@ const messages = defineMessages({
     id: 'Seguici su',
     defaultMessage: 'Seguici su',
   },
+  socialOpen: {
+    id: 'Nuova scheda',
+    defaultMessage: '- apri in nuova scheda',
+  },
 });
 
 const SocialHeader = () => {
@@ -46,7 +50,9 @@ const SocialHeader = () => {
           {socials?.map((social, idx) => (
             <li key={idx}>
               <a
-                title={social.title}
+                title={
+                  social.title + ' ' + intl.formatMessage(messages.socialOpen)
+                }
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
