@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  Card,
-  CardBody,
-  CardTitle,
-  CardText,
-} from 'design-react-kit/dist/design-react-kit';
+import { Card, CardBody, CardTitle, CardText } from 'design-react-kit';
 
 import { UniversalLink } from '@plone/volto/components';
 import { CardCategory } from 'design-comuni-plone-theme/components/ItaliaTheme';

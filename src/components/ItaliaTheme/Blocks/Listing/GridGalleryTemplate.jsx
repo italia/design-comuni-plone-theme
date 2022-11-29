@@ -1,9 +1,4 @@
-import {
-  Alert,
-  Col,
-  Container,
-  Row,
-} from 'design-react-kit/dist/design-react-kit';
+import { Alert, Col, Container, Row } from 'design-react-kit';
 import {
   ListingImage,
   ListingLinkMore,

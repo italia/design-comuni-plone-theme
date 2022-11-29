@@ -10,11 +10,7 @@ import { Portal } from 'react-portal';
 import cx from 'classnames';
 
 import { UniversalLink } from '@plone/volto/components';
-import {
-  Card,
-  CardBody,
-  CardText,
-} from 'design-react-kit/dist/design-react-kit';
+import { Card, CardBody, CardText } from 'design-react-kit';
 import Image from '@plone/volto/components/theme/Image/Image';
 import {
   BodyClass,

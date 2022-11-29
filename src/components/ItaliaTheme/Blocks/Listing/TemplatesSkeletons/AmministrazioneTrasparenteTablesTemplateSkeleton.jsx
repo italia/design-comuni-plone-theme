@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
+import { Container, Row, Col } from 'design-react-kit';
 
 const AmministrazioneTrasparenteTablesTemplate = ({
   isEditMode,

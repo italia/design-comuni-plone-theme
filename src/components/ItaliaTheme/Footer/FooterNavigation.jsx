@@ -12,12 +12,7 @@ import { isEqual } from 'lodash';
 import { getBaseUrl } from '@plone/volto/helpers';
 import { getNavigation } from '@plone/volto/actions';
 import { UniversalLink } from '@plone/volto/components';
-import {
-  Row,
-  Col,
-  LinkList,
-  LinkListItem,
-} from 'design-react-kit/dist/design-react-kit';
+import { Row, Col, LinkList, LinkListItem } from 'design-react-kit';
 import { SectionIcon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import config from '@plone/volto/registry';
 

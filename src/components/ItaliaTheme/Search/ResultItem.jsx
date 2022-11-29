@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody } from 'design-react-kit/dist/design-react-kit';
+import { Card, CardBody } from 'design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
 import Highlighter from 'react-highlight-words';
 

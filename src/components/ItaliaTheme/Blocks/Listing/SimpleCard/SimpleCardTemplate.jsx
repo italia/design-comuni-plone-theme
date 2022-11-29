@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container } from 'design-react-kit/dist/design-react-kit';
+import { Container } from 'design-react-kit';
 import SimpleCardTemplateDefault from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault';
 import SimpleCardTemplateCompact from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateCompact';
 

@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { defineMessages, injectIntl } from 'react-intl';
 import createPaginationItems from 'design-comuni-plone-theme/components/ItaliaTheme/Pagination/createPaginationItems';
-import { Pager, PagerList } from 'design-react-kit/dist/design-react-kit';
+import { Pager } from 'design-react-kit';
 import PaginationItem from 'design-comuni-plone-theme/components/ItaliaTheme/Pagination/PaginationItem';
 import { invoke, isNil, map } from 'lodash';
 
 /**
  * A component to render a pagination.
  */
-export default class Pagination extends Component {
+class Pagination extends Component {
   static propTypes = {
     /** A pagination item can have an aria label. */
     'aria-label': PropTypes.string,
@@ -81,8 +82,11 @@ export default class Pagination extends Component {
     });
 
     return (
-      <Pager className="justify-content-center mt-5">
-        <PagerList>
+      <Pager
+        className="justify-content-center mt-5"
+        aria-label={this.props.intl.formatMessage(messages.paginationLabel)}
+      >
+        <ul className="pagination">
           {map(items, ({ active, type, value }) => (
             <React.Fragment key={value + type}>
               {['firstItem', 'lastItem'].indexOf(type) < 0 && (
@@ -98,8 +102,17 @@ export default class Pagination extends Component {
               )}
             </React.Fragment>
           ))}
-        </PagerList>
+        </ul>
       </Pager>
     );
   }
 }
+
+export default injectIntl(Pagination);
+
+const messages = defineMessages({
+  paginationLabel: {
+    id: 'paginationLabel',
+    defaultMessage: 'Selettore di pagina',
+  },
+});

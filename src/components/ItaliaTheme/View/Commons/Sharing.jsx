@@ -8,7 +8,7 @@ import {
   DropdownMenu,
   LinkList,
   LinkListItem,
-} from 'design-react-kit/dist/design-react-kit';
+} from 'design-react-kit';
 
 import { toPublicURL } from '@plone/volto/helpers';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';

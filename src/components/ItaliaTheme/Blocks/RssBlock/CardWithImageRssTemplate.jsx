@@ -10,7 +10,7 @@ import {
   CardReadMore,
   Row,
   Col,
-} from 'design-react-kit/dist/design-react-kit';
+} from 'design-react-kit';
 
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';

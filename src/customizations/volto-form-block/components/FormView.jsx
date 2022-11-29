@@ -12,7 +12,7 @@ import {
   Button,
   Alert,
   Progress,
-} from 'design-react-kit/dist/design-react-kit';
+} from 'design-react-kit';
 // eslint-disable-next-line import/no-unresolved
 import { getFieldName } from 'volto-form-block/components/utils';
 // eslint-disable-next-line import/no-unresolved

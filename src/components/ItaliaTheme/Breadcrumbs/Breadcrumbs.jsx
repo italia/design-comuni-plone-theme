@@ -12,12 +12,7 @@ import { getBreadcrumbs } from '@plone/volto/actions';
 import { getBaseUrl, flattenToAppURL } from '@plone/volto/helpers';
 
 import { UniversalLink } from '@plone/volto/components';
-import {
-  Row,
-  Col,
-  Breadcrumb,
-  BreadcrumbItem,
-} from 'design-react-kit/dist/design-react-kit';
+import { Row, Col, Breadcrumb, BreadcrumbItem } from 'design-react-kit';
 import GoogleBreadcrumbs from 'design-comuni-plone-theme/components/ItaliaTheme/Breadcrumbs/GoogleBreadcrumbs';
 
 const messages = defineMessages({

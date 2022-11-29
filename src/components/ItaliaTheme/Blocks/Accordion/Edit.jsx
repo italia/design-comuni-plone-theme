@@ -6,11 +6,7 @@
 import React from 'react';
 import EditBlock from './Block/EditBlock';
 
-import {
-  Container,
-  Card,
-  CardBody,
-} from 'design-react-kit/dist/design-react-kit';
+import { Container, Card, CardBody } from 'design-react-kit';
 import {
   withDNDContext,
   SubblocksEdit,

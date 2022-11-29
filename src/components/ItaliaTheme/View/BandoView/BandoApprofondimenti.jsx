@@ -4,11 +4,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
-import {
-  Card,
-  CardBody,
-  CardTitle,
-} from 'design-react-kit/dist/design-react-kit';
+import { Card, CardBody, CardTitle } from 'design-react-kit';
 
 import {
   Attachment,

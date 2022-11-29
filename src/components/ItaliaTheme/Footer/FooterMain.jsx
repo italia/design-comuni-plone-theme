@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
+import { Container, Row, Col } from 'design-react-kit';
 
 import { UniversalLink } from '@plone/volto/components';
 import {

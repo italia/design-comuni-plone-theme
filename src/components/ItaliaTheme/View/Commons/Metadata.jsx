@@ -1,7 +1,7 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import cx from 'classnames';
-import { Chip, ChipLabel } from 'design-react-kit/dist/design-react-kit';
+import { Chip, ChipLabel } from 'design-react-kit';
 import PropTypes from 'prop-types';
 
 import { viewDate } from 'design-comuni-plone-theme/helpers';

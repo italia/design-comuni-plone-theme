@@ -3,13 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useIntl, defineMessages } from 'react-intl';
 import useDeepCompareEffect from 'use-deep-compare-effect';
 import { FontAwesomeIcon } from 'design-comuni-plone-theme/components/ItaliaTheme';
-import {
-  Card,
-  Row,
-  Col,
-  Container,
-  Button,
-} from 'design-react-kit/dist/design-react-kit';
+import { Card, Row, Col, Container, Button } from 'design-react-kit';
 import cx from 'classnames';
 
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';

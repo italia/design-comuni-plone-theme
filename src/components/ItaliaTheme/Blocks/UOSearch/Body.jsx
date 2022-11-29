@@ -1,11 +1,7 @@
 import React, { useState, useReducer, useEffect, createRef } from 'react';
 import { useIntl, defineMessages } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  Container,
-  Button,
-  Spinner,
-} from 'design-react-kit/dist/design-react-kit';
+import { Container, Button, Spinner } from 'design-react-kit';
 import cx from 'classnames';
 
 import { getQueryStringResults } from '@plone/volto/actions';

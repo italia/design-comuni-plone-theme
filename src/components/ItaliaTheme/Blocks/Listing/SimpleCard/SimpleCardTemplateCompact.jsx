@@ -2,13 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { UniversalLink } from '@plone/volto/components';
-import {
-  Card,
-  CardBody,
-  CardTitle,
-  Row,
-  Col,
-} from 'design-react-kit/dist/design-react-kit';
+import { Card, CardBody, CardTitle, Row, Col } from 'design-react-kit';
 
 import {
   Icon,

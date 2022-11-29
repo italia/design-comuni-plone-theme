@@ -8,7 +8,7 @@ import {
   Container,
   Row,
   Col,
-} from 'design-react-kit/dist/design-react-kit';
+} from 'design-react-kit';
 import { defineMessages, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import redraft from 'redraft';

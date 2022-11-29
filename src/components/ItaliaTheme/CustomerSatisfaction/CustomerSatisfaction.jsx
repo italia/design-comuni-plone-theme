@@ -3,12 +3,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { useIntl, defineMessages } from 'react-intl';
-import {
-  Button,
-  Input,
-  Progress,
-  Alert,
-} from 'design-react-kit/dist/design-react-kit';
+import { Button, Input, Progress, Alert } from 'design-react-kit';
 
 import { FontAwesomeIcon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import {
@@ -269,6 +264,7 @@ const CustomerSatisfaction = () => {
           role="progressbar"
           tag="div"
           className="mt-4"
+          wrapperClassName={true}
         />
       )}
       {submitResults?.loaded && (

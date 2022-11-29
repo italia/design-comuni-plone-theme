@@ -4,12 +4,7 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 
 import PropTypes from 'prop-types';
 
-import {
-  Modal,
-  ModalHeader,
-  ModalBody,
-  Button,
-} from 'design-react-kit/dist/design-react-kit';
+import { Modal, ModalHeader, ModalBody, Button } from 'design-react-kit';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
 

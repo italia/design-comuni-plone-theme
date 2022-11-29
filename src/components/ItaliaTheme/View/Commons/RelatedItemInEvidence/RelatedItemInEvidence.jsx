@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ItemInEvidence from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RelatedItemInEvidence/ItemInEvidence';
 import Arguments from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RelatedItemInEvidence/Arguments';
-import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
+import { Container, Row, Col } from 'design-react-kit';
 
 /**
  * RelatedItems view component class.

@@ -4,7 +4,7 @@ import cx from 'classnames';
 
 import { UniversalLink } from '@plone/volto/components';
 
-import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
+import { Container, Row, Col } from 'design-react-kit';
 
 const GridGalleryTemplateSkeleton = ({
   isEditMode,

@@ -10,11 +10,7 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
 import { getContent, resetContent } from '@plone/volto/actions';
 
-import {
-  Card,
-  CardBody,
-  CardTitle,
-} from 'design-react-kit/dist/design-react-kit';
+import { Card, CardBody, CardTitle } from 'design-react-kit';
 
 import { DownloadFileFormat } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 

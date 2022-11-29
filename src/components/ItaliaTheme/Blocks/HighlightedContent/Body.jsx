@@ -12,7 +12,7 @@ import {
   CardText,
   CardTitle,
   CardReadMore,
-} from 'design-react-kit/dist/design-react-kit';
+} from 'design-react-kit';
 
 import Image from '@plone/volto/components/theme/Image/Image';
 import { flattenToAppURL } from '@plone/volto/helpers';

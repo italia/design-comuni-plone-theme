@@ -7,7 +7,7 @@ import {
   CardTitle,
   CardText,
   CardReadMore,
-} from 'design-react-kit/dist/design-react-kit';
+} from 'design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { ArgumentIcon } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 

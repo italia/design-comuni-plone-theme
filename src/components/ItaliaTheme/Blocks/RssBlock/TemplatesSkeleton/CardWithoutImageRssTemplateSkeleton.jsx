@@ -9,7 +9,7 @@ import {
   CardReadMore,
   Row,
   Col,
-} from 'design-react-kit/dist/design-react-kit';
+} from 'design-react-kit';
 
 const CardWithoutImageRssTemplateSkeleton = ({ isEditMode, data = {} }) => {
   return (

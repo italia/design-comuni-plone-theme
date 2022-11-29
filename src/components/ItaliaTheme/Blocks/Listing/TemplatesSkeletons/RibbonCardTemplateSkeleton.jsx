@@ -12,7 +12,7 @@ import {
   Row,
   Col,
   Container,
-} from 'design-react-kit/dist/design-react-kit';
+} from 'design-react-kit';
 
 import { Link } from 'react-router-dom';
 

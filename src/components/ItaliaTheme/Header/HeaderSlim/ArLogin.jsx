@@ -16,7 +16,7 @@ import {
   LinkList,
   LinkListItem,
   UncontrolledDropdown,
-} from 'design-react-kit/dist/design-react-kit';
+} from 'design-react-kit';
 
 import { getUser, logout, purgeMessages } from '@plone/volto/actions';
 

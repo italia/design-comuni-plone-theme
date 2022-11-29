@@ -5,12 +5,7 @@ import React, { useState, useEffect } from 'react';
 import cx from 'classnames';
 import { useIntl, defineMessages } from 'react-intl';
 
-import {
-  Col,
-  FormGroup,
-  Label,
-  Collapse,
-} from 'design-react-kit/dist/design-react-kit';
+import { Col, FormGroup, Label, Collapse } from 'design-react-kit';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { SearchUtils, Checkbox } from 'design-comuni-plone-theme/components';
 

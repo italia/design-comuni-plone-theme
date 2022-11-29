@@ -1,9 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  Container,
-  CardReadMore,
-} from 'design-react-kit/dist/design-react-kit';
+import { Container, CardReadMore } from 'design-react-kit';
 
 import { UniversalLink } from '@plone/volto/components';
 

@@ -9,7 +9,7 @@ import { injectIntl, defineMessages } from 'react-intl';
 
 import { injectDNDSubblocks, SubblockEdit, Subblock } from 'volto-subblocks';
 
-import { Card, CardBody } from 'design-react-kit/dist/design-react-kit';
+import { Card, CardBody } from 'design-react-kit';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';

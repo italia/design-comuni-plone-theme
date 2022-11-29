@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ConditionalLink } from '@plone/volto/components';
-import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
+import { Container, Row, Col } from 'design-react-kit';
 import { ListingLinkMore } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const SimpleListTemplate = ({

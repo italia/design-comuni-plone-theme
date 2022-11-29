@@ -8,12 +8,7 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { UniversalLink } from '@plone/volto/components';
 
-import {
-  Header,
-  HeaderContent,
-  HeaderToggler,
-  Nav,
-} from 'design-react-kit/dist/design-react-kit';
+import { Header, HeaderContent, HeaderToggler, Nav } from 'design-react-kit';
 
 import { flattenToAppURL } from '@plone/volto/helpers';
 

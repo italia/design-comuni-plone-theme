@@ -1,6 +1,6 @@
 import React from 'react';
 import { useIntl, defineMessages } from 'react-intl';
-import { Skiplink, SkiplinkItem } from 'design-react-kit/dist/design-react-kit';
+import { Skiplink, SkiplinkItem } from 'design-react-kit';
 
 const messages = defineMessages({
   mainView: {

@@ -5,7 +5,7 @@
 
 import React from 'react';
 
-import { Button as DesignButton } from 'design-react-kit/dist/design-react-kit';
+import { Button as DesignButton } from 'design-react-kit';
 
 /*This component facilitates the customization of buttons*/
 

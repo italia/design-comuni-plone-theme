@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Progress } from 'design-react-kit/dist/design-react-kit';
+import { Progress } from 'design-react-kit';
 import { useIntl, defineMessages } from 'react-intl';
 
 const messages = defineMessages({

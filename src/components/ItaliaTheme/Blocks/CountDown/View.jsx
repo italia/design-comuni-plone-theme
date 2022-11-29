@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import redraft from 'redraft';
 import { checkRedraftHasContent } from 'design-comuni-plone-theme/helpers';
-import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
+import { Container, Row, Col } from 'design-react-kit';
 import { addAppURL, flattenToAppURL } from '@plone/volto/helpers';
 import cx from 'classnames';
 import CountDown from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CountDown/CountDown';

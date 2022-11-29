@@ -1,12 +1,7 @@
 import React from 'react';
 import { defineMessages } from 'react-intl';
 import { UniversalLink, ConditionalLink } from '@plone/volto/components';
-import {
-  Chip,
-  ChipLabel,
-  Button,
-  Container,
-} from 'design-react-kit/dist/design-react-kit';
+import { Chip, ChipLabel, Button, Container } from 'design-react-kit';
 
 const messages = defineMessages({
   view_all: {

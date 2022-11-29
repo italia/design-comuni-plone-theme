@@ -6,7 +6,7 @@
 
 import React, { useState, useEffect } from 'react';
 
-import { Button } from 'design-react-kit/dist/design-react-kit';
+import { Button } from 'design-react-kit';
 
 import config from '@plone/volto/registry';
 

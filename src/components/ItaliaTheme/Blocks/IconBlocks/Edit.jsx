@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { defineMessages } from 'react-intl';
-import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
+import { Container, Row, Col } from 'design-react-kit';
 
 import { SidebarPortal } from '@plone/volto/components';
 import { flattenToAppURL, addAppURL } from '@plone/volto/helpers';

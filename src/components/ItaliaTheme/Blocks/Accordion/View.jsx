@@ -6,11 +6,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import ViewBlock from './Block/ViewBlock';
-import {
-  Container,
-  Card,
-  CardBody,
-} from 'design-react-kit/dist/design-react-kit';
+import { Container, Card, CardBody } from 'design-react-kit';
 
 /**
  * View Accordion block class.

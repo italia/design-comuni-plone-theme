@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { Container, Row } from 'design-react-kit/dist/design-react-kit';
+import { Container, Row } from 'design-react-kit';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 const twitter_slider_settings = {

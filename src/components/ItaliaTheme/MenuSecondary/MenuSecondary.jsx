@@ -10,7 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getSecondaryMenu, getItemsByPath } from 'volto-secondarymenu';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
-import { Nav, NavItem, NavLink } from 'design-react-kit/dist/design-react-kit';
+import { Nav, NavItem, NavLink } from 'design-react-kit';
 
 const messages = defineMessages({
   menu_selected: {

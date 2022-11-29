@@ -5,7 +5,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Dimmer, Button } from 'design-react-kit/dist/design-react-kit';
+import { Dimmer, Button } from 'design-react-kit';
 import { readAsDataURL } from 'promise-file-reader';
 import { injectIntl, defineMessages, useIntl } from 'react-intl';
 import loadable from '@loadable/component';

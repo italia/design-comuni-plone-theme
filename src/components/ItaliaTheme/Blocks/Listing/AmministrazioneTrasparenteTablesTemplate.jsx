@@ -5,7 +5,7 @@ import { useIntl } from 'react-intl';
 import { useLocation } from 'react-router-dom';
 import { flatMapDeep } from 'lodash';
 import moment from 'moment';
-import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
+import { Container, Row, Col } from 'design-react-kit';
 
 import { UniversalLink } from '@plone/volto/components';
 import { flattenHTMLToAppURL } from '@plone/volto/helpers';

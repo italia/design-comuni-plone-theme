@@ -6,11 +6,7 @@
 import React from 'react';
 import { UniversalLink } from '@plone/volto/components';
 import { useSelector } from 'react-redux';
-import {
-  Header,
-  HeaderContent,
-  HeaderRightZone,
-} from 'design-react-kit/dist/design-react-kit';
+import { Header, HeaderContent, HeaderRightZone } from 'design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import {
   Logo,

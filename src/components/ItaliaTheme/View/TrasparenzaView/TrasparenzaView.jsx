@@ -13,7 +13,7 @@ import {
   PageHeader,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 import { getAmministrazioneTrasparenteTree } from 'design-comuni-plone-theme/actions';
-import { LinkList, LinkListItem } from 'design-react-kit/dist/design-react-kit';
+import { LinkList, LinkListItem } from 'design-react-kit';
 
 /**
  * TrasparenzaView component class.

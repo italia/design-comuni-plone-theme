@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Callout, CalloutTitle } from 'design-react-kit/dist/design-react-kit';
+import { Callout, CalloutTitle } from 'design-react-kit';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { RichText } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 

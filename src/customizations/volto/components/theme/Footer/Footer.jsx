@@ -6,7 +6,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { useGoogleAnalytics } from 'volto-google-analytics';
-import { Container } from 'design-react-kit/dist/design-react-kit';
+import { Container } from 'design-react-kit';
 
 import {
   FooterMain,

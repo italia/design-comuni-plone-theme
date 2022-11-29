@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
+import { Container, Row, Col } from 'design-react-kit';
 import { SidebarPortal } from '@plone/volto/components';
 import { addAppURL, flattenToAppURL } from '@plone/volto/helpers';
 import cx from 'classnames';

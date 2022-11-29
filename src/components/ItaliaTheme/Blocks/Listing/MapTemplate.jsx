@@ -6,7 +6,7 @@ import { useHistory } from 'react-router-dom';
 import moment from 'moment';
 import cx from 'classnames';
 import { OSMMap } from 'volto-venue';
-import { Row, Col, Container } from 'design-react-kit/dist/design-react-kit';
+import { Row, Col, Container } from 'design-react-kit';
 import { ListingLinkMore } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const messages = defineMessages({

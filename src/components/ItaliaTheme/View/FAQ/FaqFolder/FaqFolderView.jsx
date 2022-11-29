@@ -8,7 +8,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { defineMessages, useIntl } from 'react-intl';
-import { Container, Spinner } from 'design-react-kit/dist/design-react-kit';
+import { Container, Spinner } from 'design-react-kit';
 import {
   PageHeader,
   RelatedItems,

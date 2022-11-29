@@ -10,7 +10,7 @@ import {
   CardText,
   Chip,
   ChipLabel,
-} from 'design-react-kit/dist/design-react-kit';
+} from 'design-react-kit';
 import { Link } from 'react-router-dom';
 import cx from 'classnames';
 

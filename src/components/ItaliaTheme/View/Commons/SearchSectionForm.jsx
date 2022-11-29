@@ -2,7 +2,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import { useSelector } from 'react-redux';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Button } from 'design-react-kit/dist/design-react-kit';
+import { Button } from 'design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { SearchUtils } from 'design-comuni-plone-theme/components';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';

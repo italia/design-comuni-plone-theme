@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import redraft from 'redraft';
 
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
-import { Card, CardBody } from 'design-react-kit/dist/design-react-kit';
+import { Card, CardBody } from 'design-react-kit';
 import config from '@plone/volto/registry';
 import { checkRedraftHasContent } from 'design-comuni-plone-theme/helpers';
 

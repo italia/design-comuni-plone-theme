@@ -19,7 +19,7 @@ import {
   HeaderCenter,
   SubsiteHeader,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
-import { Headers } from 'design-react-kit/dist/design-react-kit';
+import { Headers } from 'design-react-kit';
 
 const Header = ({ pathname }) => {
   // const [mini, setMini] = useState(false);

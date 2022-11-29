@@ -7,11 +7,7 @@ import React, { useState } from 'react';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { TextOrBlocks } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 import { UniversalLink } from '@plone/volto/components';
-import {
-  Accordion,
-  AccordionHeader,
-  AccordionBody,
-} from 'design-react-kit/dist/design-react-kit';
+import { Accordion, AccordionHeader, AccordionBody } from 'design-react-kit';
 
 /**
  * FaqFolderTree view component class.

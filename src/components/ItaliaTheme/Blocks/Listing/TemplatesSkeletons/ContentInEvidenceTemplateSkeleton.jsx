@@ -9,7 +9,7 @@ import {
   CardText,
   Chip,
   Container,
-} from 'design-react-kit/dist/design-react-kit';
+} from 'design-react-kit';
 import cx from 'classnames';
 
 import { CardCategory } from 'design-comuni-plone-theme/components/ItaliaTheme';

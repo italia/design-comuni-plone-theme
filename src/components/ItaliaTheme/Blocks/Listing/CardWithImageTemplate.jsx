@@ -12,7 +12,7 @@ import {
   CardText,
   Chip,
   ChipLabel,
-} from 'design-react-kit/dist/design-react-kit';
+} from 'design-react-kit';
 
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';

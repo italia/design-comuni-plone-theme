@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container } from 'design-react-kit/dist/design-react-kit';
+import { Container } from 'design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
 import { defineMessages, useIntl } from 'react-intl';
 

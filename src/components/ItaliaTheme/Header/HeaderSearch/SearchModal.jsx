@@ -28,7 +28,7 @@ import {
   Input,
   Label,
   Toggle,
-} from 'design-react-kit/dist/design-react-kit';
+} from 'design-react-kit';
 
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { getSearchFilters } from 'design-comuni-plone-theme/actions';

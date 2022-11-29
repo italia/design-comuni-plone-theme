@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { Nav, NavItem, NavLink } from 'design-react-kit/dist/design-react-kit';
+import { Nav, NavItem, NavLink } from 'design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
 import { useIntl } from 'react-intl';
 import config from '@plone/volto/registry';

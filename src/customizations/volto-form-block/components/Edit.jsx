@@ -12,13 +12,7 @@ import EditBlock from 'volto-form-block/components/EditBlock';
 // eslint-disable-next-line import/no-unresolved
 import Sidebar from 'volto-form-block/components/Sidebar';
 
-import {
-  Card,
-  CardBody,
-  Button,
-  Row,
-  Col,
-} from 'design-react-kit/dist/design-react-kit';
+import { Card, CardBody, Button, Row, Col } from 'design-react-kit';
 import {
   withDNDContext,
   SubblocksEdit,

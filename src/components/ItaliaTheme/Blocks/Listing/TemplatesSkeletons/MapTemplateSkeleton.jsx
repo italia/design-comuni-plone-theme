@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Container } from 'design-react-kit/dist/design-react-kit';
+import { Container } from 'design-react-kit';
 
 const MapTemplateSkeleton = ({
   isEditMode,

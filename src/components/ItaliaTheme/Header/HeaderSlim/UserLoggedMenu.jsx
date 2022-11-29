@@ -7,7 +7,7 @@ import React from 'react';
 //import { Link } from 'react-router-dom';
 //import { defineMessages, useIntl } from 'react-intl';
 
-//import { LinkListItem } from 'design-react-kit/dist/design-react-kit';
+//import { LinkListItem } from 'design-react-kit';
 
 //const messages = defineMessages({});
 

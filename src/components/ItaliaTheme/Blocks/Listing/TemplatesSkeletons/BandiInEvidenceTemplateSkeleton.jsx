@@ -10,7 +10,7 @@ import {
   CardBody,
   CardTitle,
   CardReadMore,
-} from 'design-react-kit/dist/design-react-kit';
+} from 'design-react-kit';
 
 const BandiInEvidenceTemplateSkeleton = ({
   title,

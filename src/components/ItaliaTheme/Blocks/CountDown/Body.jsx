@@ -5,7 +5,7 @@ import { useIntl, defineMessages } from 'react-intl';
 import moment from 'moment';
 import { flatMapDeep } from 'lodash';
 import { useHistory } from 'react-router-dom';
-import { Button } from 'design-react-kit/dist/design-react-kit';
+import { Button } from 'design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
 import {

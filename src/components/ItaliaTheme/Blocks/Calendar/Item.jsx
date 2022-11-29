@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
-import { Spinner } from 'design-react-kit/dist/design-react-kit';
+import { Spinner } from 'design-react-kit';
 import cx from 'classnames';
 import useDeepCompareEffect from 'use-deep-compare-effect';
 import { getCalendarDayResults } from 'design-comuni-plone-theme/actions';

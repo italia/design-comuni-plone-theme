@@ -7,7 +7,7 @@ import React, { useState, useEffect } from 'react';
 import cx from 'classnames';
 import { UniversalLink } from '@plone/volto/components';
 import { defineMessages, useIntl } from 'react-intl';
-import { Container } from 'design-react-kit/dist/design-react-kit';
+import { Container } from 'design-react-kit';
 import { getSiteProperty } from 'design-comuni-plone-theme/helpers';
 import { useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';

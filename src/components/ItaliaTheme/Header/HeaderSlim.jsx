@@ -11,7 +11,7 @@ import {
   HeaderBrand,
   HeaderContent,
   HeaderRightZone,
-} from 'design-react-kit/dist/design-react-kit';
+} from 'design-react-kit';
 import { useIntl } from 'react-intl';
 import { getSiteProperty } from 'design-comuni-plone-theme/helpers';
 

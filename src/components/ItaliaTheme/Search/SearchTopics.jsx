@@ -3,12 +3,7 @@
  */
 import React, { useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import {
-  Input,
-  FormGroup,
-  Label,
-  Collapse,
-} from 'design-react-kit/dist/design-react-kit';
+import { Input, FormGroup, Label, Collapse } from 'design-react-kit';
 
 const messages = defineMessages({
   showAll: {

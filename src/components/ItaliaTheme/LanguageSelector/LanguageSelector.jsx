@@ -19,7 +19,7 @@ import {
   LinkList,
   LinkListItem,
   UncontrolledDropdown,
-} from 'design-react-kit/dist/design-react-kit';
+} from 'design-react-kit';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import config from '@plone/volto/registry';
 

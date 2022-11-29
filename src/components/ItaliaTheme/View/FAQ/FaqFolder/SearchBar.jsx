@@ -5,7 +5,7 @@
 
 import React, { useState } from 'react';
 import { useIntl, defineMessages } from 'react-intl';
-import { Container } from 'design-react-kit/dist/design-react-kit';
+import { Container } from 'design-react-kit';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const messages = defineMessages({

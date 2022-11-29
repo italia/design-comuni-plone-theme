@@ -17,7 +17,7 @@ import {
   Row,
   Col,
   LinkList,
-} from 'design-react-kit/dist/design-react-kit';
+} from 'design-react-kit';
 import { defineMessages, useIntl } from 'react-intl';
 import {
   flattenToAppURL,

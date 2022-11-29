@@ -10,11 +10,7 @@ import { useIntl, defineMessages } from 'react-intl';
 import { UniversalLink } from '@plone/volto/components';
 
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
-import {
-  Card,
-  CardBody,
-  CardReadMore,
-} from 'design-react-kit/dist/design-react-kit';
+import { Card, CardBody, CardReadMore } from 'design-react-kit';
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({

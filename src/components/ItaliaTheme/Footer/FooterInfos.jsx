@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 
 import { defineMessages, useIntl } from 'react-intl';
-import { Row, Col } from 'design-react-kit/dist/design-react-kit';
+import { Row, Col } from 'design-react-kit';
 import { ConditionalLink } from '@plone/volto/components';
 import { flattenHTMLToAppURL } from '@plone/volto/helpers';
 import { getEditableFooterColumns, getItemsByPath } from 'volto-editablefooter';
