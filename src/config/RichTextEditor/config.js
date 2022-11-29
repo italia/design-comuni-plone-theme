@@ -1,7 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
-
-import UniversalLink from '@plone/volto/components/manage/UniversalLink/UniversalLink';
 import Styles from '@plone/volto/config/RichTextEditor/Styles';
 
 import ToHTMLRenderers from '@plone/volto/config/RichTextEditor/ToHTML';
@@ -16,6 +13,8 @@ import AlignButton from 'design-comuni-plone-theme/config/RichTextEditor/Toolbar
 import CalloutsButton from 'design-comuni-plone-theme/config/RichTextEditor/ToolbarButtons/CalloutsButton';
 import ButtonsButton from 'design-comuni-plone-theme/config/RichTextEditor/ToolbarButtons/ButtonsButton';
 import TextSizeButton from 'design-comuni-plone-theme/config/RichTextEditor/ToolbarButtons/TextSizeButton';
+
+import LinkEntity from 'design-comuni-plone-theme/config/RichTextEditor/LinkEntity';
 
 const ItaliaRichTextEditorPlugins = (props) => [];
 const ItaliaRichTextEditorInlineToolbarButtons = (props, plugins) => {
@@ -212,33 +211,6 @@ export default function applyConfig(config) {
       },
     };
   };
-
-  const LinkEntity = connect((state) => ({
-    token: state.userSession.token,
-  }))((props) => {
-    const {
-      token,
-      // key,
-      url,
-      target,
-      targetUrl,
-      download,
-      children,
-      dataElement,
-    } = props;
-    const to = token ? url : targetUrl || url;
-
-    return (
-      <UniversalLink
-        href={to}
-        openLinkInNewTab={target === '_blank' || undefined}
-        download={download}
-        data-element={dataElement}
-      >
-        {children}
-      </UniversalLink>
-    );
-  });
 
   // TODO: rimuovere questa customizzazione quando sistemano https://github.com/plone/volto/issues/1601
   config.settings.richtextViewSettings.ToHTMLRenderers = {

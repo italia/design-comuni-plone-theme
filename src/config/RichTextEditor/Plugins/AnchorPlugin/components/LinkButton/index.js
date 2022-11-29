@@ -1,19 +1,19 @@
 /**
  * Customizzato:
- * - aggiunta gestione data-element
+ * - Aggiunta gestione data-element
+ * - Importato AddLinkForm file customizzato
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import EditorUtils from '@plone/volto/components/manage/AnchorPlugin/utils/EditorUtils';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-import AddLinkForm from './AddLinkForm';
+import EditorUtils from '@plone/volto/components/manage/AnchorPlugin/utils/EditorUtils';
 import Icon from '@plone/volto/components/theme/Icon/Icon';
+
+import AddLinkForm from 'design-comuni-plone-theme/config/RichTextEditor/Plugins/AnchorPlugin/components/LinkButton/AddLinkForm';
 
 import linkSVG from '@plone/volto/icons/link.svg';
 import unlinkSVG from '@plone/volto/icons/unlink.svg';
-
-// import unionClassNames from 'union-class-names';
 
 /**
  * Add link form class.

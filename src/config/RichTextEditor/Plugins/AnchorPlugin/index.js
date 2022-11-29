@@ -1,14 +1,14 @@
 /**
  * Customizzato
- * - customizzato per cambiare gli import dei link per poterli customizzare
+ * - Cambiato import dei link per poter customizzare i file
  */
 import decorateComponentWithProps from 'decorate-component-with-props';
-
-import DefaultLink from '@italia/config/RichTextEditor/Plugins/AnchorPlugin/components/Link';
-import LinkButton from '@italia/config/RichTextEditor/Plugins/AnchorPlugin/components/LinkButton';
 import linkStrategy, {
   matchesEntityType,
 } from '@plone/volto/components/manage/AnchorPlugin/linkStrategy';
+
+import DefaultLink from 'design-comuni-plone-theme/config/RichTextEditor/Plugins/AnchorPlugin/components/Link';
+import LinkButton from 'design-comuni-plone-theme/config/RichTextEditor/Plugins/AnchorPlugin/components/LinkButton';
 
 function unboundRemoveEntity(editorState) {
   const contentState = editorState.getCurrentContent();
