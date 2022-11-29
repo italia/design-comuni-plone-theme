@@ -156,7 +156,7 @@ const DettagliProcedimentiView = ({ content }) => {
 
           {dettagliProcedimento.modalita_avvio && (
             <p className="d-flex">
-              <span className="font-weight-semibold mr-2">
+              <span className="fw-semibold me-2">
                 {intl.formatMessage(messages.modalita_di_avvio)}:
               </span>
               <span
@@ -171,7 +171,7 @@ const DettagliProcedimentiView = ({ content }) => {
 
           {dettagliProcedimento.descrizione && (
             <p className="d-flex">
-              <span className="font-weight-semibold mr-2">
+              <span className="fw-semibold me-2">
                 {intl.formatMessage(messages.descrizione)}:
               </span>
               <span
@@ -186,7 +186,7 @@ const DettagliProcedimentiView = ({ content }) => {
 
           {dettagliProcedimento.file_correlato && (
             <p className="d-flex">
-              <span className="font-weight-semibold mr-2">
+              <span className="fw-semibold me-2">
                 {intl.formatMessage(messages.file_correlato)}:
               </span>
               <a
@@ -206,7 +206,7 @@ const DettagliProcedimentiView = ({ content }) => {
             dettagliProcedimento.silenzio_assenso) && (
             <>
               <p className="d-flex">
-                <span className="font-weight-semibold mr-2">
+                <span className="fw-semibold me-2">
                   {intl.formatMessage(messages.termini_del_procedimento)}:
                 </span>
               </p>
@@ -214,7 +214,7 @@ const DettagliProcedimentiView = ({ content }) => {
                 {dettagliProcedimento.decorrenza_termine && (
                   <li>
                     <p className="d-flex">
-                      <span className="font-weight-semibold mr-2">
+                      <span className="fw-semibold me-2">
                         {intl.formatMessage(messages.decorrenza_termine)}:{' '}
                       </span>
                       <span
@@ -230,7 +230,7 @@ const DettagliProcedimentiView = ({ content }) => {
                 {dettagliProcedimento.fine_termine && (
                   <li>
                     <p className="d-flex">
-                      <span className="font-weight-semibold mr-2">
+                      <span className="fw-semibold me-2">
                         {intl.formatMessage(messages.fine_termine)}:{' '}
                       </span>
                       <span
@@ -246,7 +246,7 @@ const DettagliProcedimentiView = ({ content }) => {
                 {dettagliProcedimento.tempo_medio && (
                   <li>
                     <p className="d-flex">
-                      <span className="font-weight-semibold mr-2">
+                      <span className="fw-semibold me-2">
                         {intl.formatMessage(messages.tempo_medio)}:{' '}
                       </span>
                       <span
@@ -262,7 +262,7 @@ const DettagliProcedimentiView = ({ content }) => {
                 {dettagliProcedimento.silenzio_assenso && (
                   <li>
                     <p className="d-flex">
-                      <span className="font-weight-semibold mr-2">
+                      <span className="fw-semibold me-2">
                         {intl.formatMessage(messages.silenzio_assenso)}:
                       </span>
                       <div>
@@ -278,7 +278,7 @@ const DettagliProcedimentiView = ({ content }) => {
           )}
           {dettagliProcedimento.provvedimento_finale && (
             <p className="d-flex">
-              <span className="font-weight-semibold mr-2">
+              <span className="fw-semibold me-2">
                 {intl.formatMessage(messages.provvedimento_finale)}:
               </span>
               <span
@@ -299,11 +299,11 @@ const DettagliProcedimentiView = ({ content }) => {
         </h2>
         {dettagliProcedimento.ufficio_responsabile?.length > 0 && (
           <p className="d-flex">
-            <span className="font-weight-semibold mr-2">
+            <span className="fw-semibold me-2">
               {intl.formatMessage(messages.unita_organizzativa_competente)}:
             </span>
             {dettagliProcedimento.ufficio_responsabile?.map((d, index) => (
-              <UniversalLink href={d['@id']} className="mr-2" key={index}>
+              <UniversalLink href={d['@id']} className="me-2" key={index}>
                 {d.title}
               </UniversalLink>
             ))}
@@ -311,12 +311,12 @@ const DettagliProcedimentiView = ({ content }) => {
         )}
         {dettagliProcedimento.dirigente?.length > 0 && (
           <p className="d-flex">
-            <span className="font-weight-semibold mr-2">
+            <span className="fw-semibold me-2">
               {intl.formatMessage(messages.dirigente)}:
             </span>
             <div>
               {dettagliProcedimento.dirigente?.map((d, index) => (
-                <UniversalLink href={d['@id']} className="mr-2" key={index}>
+                <UniversalLink href={d['@id']} className="me-2" key={index}>
                   {d.title}
                 </UniversalLink>
               ))}
@@ -326,13 +326,13 @@ const DettagliProcedimentiView = ({ content }) => {
 
         {dettagliProcedimento.responsabile_procedimento?.length > 0 && (
           <p className="d-flex">
-            <span className="font-weight-semibold mr-2">
+            <span className="fw-semibold me-2">
               {intl.formatMessage(messages.responsabile_del_procedimento)}:
             </span>
             <div>
               {dettagliProcedimento.responsabile_procedimento?.map(
                 (d, index) => (
-                  <UniversalLink href={d['@id']} className="mr-2" key={index}>
+                  <UniversalLink href={d['@id']} className="me-2" key={index}>
                     {d.title}
                   </UniversalLink>
                 ),
@@ -343,7 +343,7 @@ const DettagliProcedimentiView = ({ content }) => {
 
         {dettagliProcedimento.organo_competente_provvedimento_finale && (
           <p className="d-flex">
-            <span className="font-weight-semibold mr-2">
+            <span className="fw-semibold me-2">
               {intl.formatMessage(
                 messages.organo_competente_provvedimento_finale,
               )}
@@ -362,7 +362,7 @@ const DettagliProcedimentiView = ({ content }) => {
 
         {dettagliProcedimento.modalita_richiesta_informazioni && (
           <p className="d-flex">
-            <span className="font-weight-semibold mr-2">
+            <span className="fw-semibold me-2">
               {intl.formatMessage(
                 messages.modalita_richiedere_informazioni_procedimentodali,
               )}
@@ -385,7 +385,7 @@ const DettagliProcedimentiView = ({ content }) => {
 
         {dettagliProcedimento.strumenti_tutela && (
           <p className="d-flex">
-            <span className="font-weight-semibold mr-2">
+            <span className="fw-semibold me-2">
               {intl.formatMessage(messages.strumenti_di_tutela)}:
             </span>
             <span
@@ -400,7 +400,7 @@ const DettagliProcedimentiView = ({ content }) => {
 
         {dettagliProcedimento.titolare_potere_sostitutivo && (
           <p className="d-flex">
-            <span className="font-weight-semibold mr-2">
+            <span className="fw-semibold me-2">
               {intl.formatMessage(messages.titolare_potere_sostitutivo)}:
             </span>
             <span
@@ -419,7 +419,7 @@ const DettagliProcedimentiView = ({ content }) => {
 
         {dettagliProcedimento.customer_satisfaction && (
           <p className="d-flex">
-            <span className="font-weight-semibold mr-2">
+            <span className="fw-semibold me-2">
               {intl.formatMessage(
                 messages.risultati_indagini_customer_satisfaction,
               )}
@@ -437,7 +437,7 @@ const DettagliProcedimentiView = ({ content }) => {
 
         {dettagliProcedimento.riferimenti_normativi && (
           <p className="d-flex">
-            <span className="font-weight-semibold mr-2">
+            <span className="fw-semibold me-2">
               {intl.formatMessage(messages.riferimenti_normativi)}:
             </span>
             <span

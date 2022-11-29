@@ -22,8 +22,8 @@ export default function TextInput(props) {
   return (
     <div className="form-group">
       <div className={cx('input-group', size ? 'input-group-' + size : '')}>
-        {prepend && <div className="input-group-prepend">{prepend}</div>}
-        {/* <div className="input-group-prepend">
+        {prepend && <div className="input-group-text">{prepend}</div>}
+        {/* <div className="input-group-text">
           <div className="input-group-text">
             <Icon color="" icon="it-search" padding={false} size="sm" />
           </div>
@@ -46,8 +46,8 @@ export default function TextInput(props) {
           }}
           placeholder={placeholder ? placeholder : label}
         />
-        {append && <div className="input-group-append">{append}</div>}
-        {/* <div className="input-group-append">
+        {append && <div className="input-group-text">{append}</div>}
+        {/* <div className="input-group-text">
           <Button className="btn-icon" tag="button" icon color="">
             <Icon color="" icon="it-search" padding={false} size="sm" />
           </Button>

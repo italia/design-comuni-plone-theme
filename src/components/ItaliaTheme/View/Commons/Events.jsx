@@ -50,7 +50,7 @@ const Evento = ({ event, show_image }) => {
               href={flattenToAppURL(event['@id'])}
               title={event.title}
             >
-              <h6 className="font-weight-semibold">{event.title}</h6>
+              <h6 className="fw-semibold">{event.title}</h6>
             </UniversalLink>
           </div>
         </div>

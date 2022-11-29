@@ -25,7 +25,7 @@ const RichText = ({
     <>
       {title &&
         (title_size === 'h6' ? (
-          <h6 className="font-weight-bold mt-4">{title}</h6>
+          <h6 className="fw-bold mt-4">{title}</h6>
         ) : (
           <h5 className="mt-4">{title}</h5>
         ))}

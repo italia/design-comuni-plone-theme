@@ -2075,19 +2075,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hypnosphi/create-react-context@npm:^0.3.1":
-  version: 0.3.1
-  resolution: "@hypnosphi/create-react-context@npm:0.3.1"
-  dependencies:
-    gud: ^1.0.0
-    warning: ^4.0.3
-  peerDependencies:
-    prop-types: ^15.0.0
-    react: ">=0.14.0"
-  checksum: d2f069a562e138057aa067e1483e28cea3193bbacd33ca9528131f31e656939cfeb552af760b3be437d3a8074315a8854fc6d5d89878e2746618ad930c817122
-  languageName: node
-  linkType: hard
-
 "@iarna/toml@npm:2.2.5":
   version: 2.2.5
   resolution: "@iarna/toml@npm:2.2.5"
@@ -2883,7 +2870,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@popperjs/core@npm:^2.6.0":
+"@popperjs/core@npm:^2.11.2, @popperjs/core@npm:^2.6.0":
   version: 2.11.6
   resolution: "@popperjs/core@npm:2.11.6"
   checksum: 47fb328cec1924559d759b48235c78574f2d71a8a6c4c03edb6de5d7074078371633b91e39bbf3f901b32aa8af9b9d8f82834856d2f5737a23475036b16817f0
@@ -3979,6 +3966,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"animejs@npm:^3.2.1":
+  version: 3.2.1
+  resolution: "animejs@npm:3.2.1"
+  checksum: 6939171bed17d6b28307747e564d33e93312c26169b98498c833117d86f174ce7a318469bfd81716c223860a6d13bd76b761e79e765b86b2a2f851963caaa851
+  languageName: node
+  linkType: hard
+
 "ansi-align@npm:^3.0.0":
   version: 3.0.1
   resolution: "ansi-align@npm:3.0.1"
@@ -5038,41 +5032,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bootstrap-italia@npm:1":
-  version: 1.6.4
-  resolution: "bootstrap-italia@npm:1.6.4"
+"bootstrap-italia@npm:2.0.9":
+  version: 2.0.9
+  resolution: "bootstrap-italia@npm:2.0.9"
   dependencies:
+    "@popperjs/core": ^2.11.2
     "@splidejs/splide": ^3.6.12
     accessible-autocomplete: ^2.0.4
-    bootstrap: ^4.6.1
-    bootstrap-select: ^1.13.18
-    jquery: ^3.6.0
-    just-validate: ^3.5.0
-    just-validate-plugin-date: ^1.1.1
-    owl.carousel: 2.3.4
-    popper.js: 1.16.1
-    svgxuse: 1.2.6
-  checksum: ce82297b1144acb87f22766c03814a36fa2841ce893628f3b5b40b73b02100dcd01eb018a9163e38759e4ef382f42d0df309dd2181cc76329d3919f84e63e540
+    animejs: ^3.2.1
+    bootstrap: 5.1.3
+    just-validate: ^3.5.1
+    masonry-layout: ^4.2.2
+    progressbar.js: ^1.1.0
+    uuid: ^8.3.2
+  checksum: b9a8e3461e391d75d0edadfb372300413d368298865bae60a49e71fbbb6d70a45f1ce6366ceb267eb594c525dc8cbcc985e3f5a93e10099512fa301b52a4859c
   languageName: node
   linkType: hard
 
-"bootstrap-select@npm:^1.13.18":
-  version: 1.13.18
-  resolution: "bootstrap-select@npm:1.13.18"
+"bootstrap@npm:5.1.3":
+  version: 5.1.3
+  resolution: "bootstrap@npm:5.1.3"
   peerDependencies:
-    bootstrap: ">=3.0.0"
-    jquery: 1.9.1 - 3
-  checksum: b81e977c3b8837ce7125f0050e15343aa2a59a70b8df3e40c843c35f3bb07000a1977a04f19e56d44d06093106427293433f84c1da6f83e96257f62642137530
-  languageName: node
-  linkType: hard
-
-"bootstrap@npm:^4.6.1":
-  version: 4.6.2
-  resolution: "bootstrap@npm:4.6.2"
-  peerDependencies:
-    jquery: 1.9.1 - 3
-    popper.js: ^1.16.1
-  checksum: 3f4e7768ff7d618c49d4bf4f02aa54a9bfb679d4eecb0f3854fa4af1a17b9114b147009c435946432cdd1572efffc71d88ec385c55943a12fa66253cde0876b0
+    "@popperjs/core": ^2.10.2
+  checksum: 301b5ed872efba061104cf22ac93568e3837867fb5527ab9326a51510fb752bd4883e1d488225c8be72f86d9d3a55ef5b166aa7fa62c2fdd077c3f05b65752f8
   languageName: node
   linkType: hard
 
@@ -7321,13 +7303,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:2.28.0":
-  version: 2.28.0
-  resolution: "date-fns@npm:2.28.0"
-  checksum: a0516b2e4f99b8bffc6cc5193349f185f195398385bdcaf07f17c2c4a24473c99d933eb0018be4142a86a6d46cb0b06be6440ad874f15e795acbedd6fd727a1f
-  languageName: node
-  linkType: hard
-
 "dateformat@npm:^3.0.0":
   version: 3.0.3
   resolution: "dateformat@npm:3.0.3"
@@ -7465,7 +7440,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"deep-equal@npm:^1.0.1, deep-equal@npm:^1.1.1":
+"deep-equal@npm:^1.0.1":
   version: 1.1.1
   resolution: "deep-equal@npm:1.1.1"
   dependencies:
@@ -7673,6 +7648,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"desandro-matches-selector@npm:^2.0.0":
+  version: 2.0.2
+  resolution: "desandro-matches-selector@npm:2.0.2"
+  checksum: 30979e6b45d7720d259d4db11ec026fcbee242deee5ec0944c265d7e386a7358ab29f7417cbc3631830d0dbe6e827940dee31f789ed865dba22880d209fc9f8e
+  languageName: node
+  linkType: hard
+
 "design-comuni-plone-theme@workspace:.":
   version: 0.0.0-use.local
   resolution: "design-comuni-plone-theme@workspace:."
@@ -7687,7 +7669,7 @@ __metadata:
     "@loadable/babel-plugin": 5.13.2
     "@plone/volto": 16.0.0
     "@release-it/conventional-changelog": ^2.0.1
-    bootstrap-italia: 1
+    bootstrap-italia: 2.0.9
     bundlewatch: ^0.3.3
     classnames: ^2.3.2
     design-react-kit: 4.0.2
@@ -7732,25 +7714,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"design-react-kit@npm:4.0.2":
-  version: 4.0.2
-  resolution: "design-react-kit@npm:4.0.2"
+"design-react-kit@portal:/Users/pieronicolli/Lab/io-comune/design-react-kit::locator=design-comuni-plone-theme%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "design-react-kit@portal:/Users/pieronicolli/Lab/io-comune/design-react-kit::locator=design-comuni-plone-theme%40workspace%3A."
   dependencies:
     classnames: ^2.3.1
     is-number: ^7.0.0
     react-select: ^4.3.0
-    react-stickup: ^1.12.0
+    react-stickup: ^1.12.1
     react-toastify: ^7.0.4
-    react-transition-group: ^4.4.1
+    react-transition-group: ^4.4.5
     react-use-navscroll: 0.2.0
-    reactstrap: ^8.9.0
+    reactstrap: ^9.1.4
     webfontloader: ^1.6.28
   peerDependencies:
-    bootstrap-italia: 1.4.3
-    react: ">=16.8.0"
-  checksum: 67b4047882d5406ee518037e179e86214a10b3808209741c7406ca0dd8b5491235eca166b0da5e69f03e167a22ffca85c8624d3d9f6a0cc6ca73a193eeb4160e
+    bootstrap-italia: ^2.0.3
+    react: ">=17.0.2"
   languageName: node
-  linkType: hard
+  linkType: soft
 
 "destroy@npm:1.2.0":
   version: 1.2.0
@@ -7954,15 +7935,6 @@ __metadata:
   dependencies:
     utila: ~0.4
   checksum: ea52fe303f5392e48dea563abef0e6fb3a478b8dbe3c599e99bb5d53981c6c38fc4944e56bb92a8ead6bb989d10b7914722ae11febbd2fd0910e33b9fc4aaa77
-  languageName: node
-  linkType: hard
-
-"dom-helpers@npm:^3.4.0":
-  version: 3.4.0
-  resolution: "dom-helpers@npm:3.4.0"
-  dependencies:
-    "@babel/runtime": ^7.1.2
-  checksum: 58d9f1c4a96daf77eddc63ae1236b826e1cddd6db66bbf39b18d7e21896d99365b376593352d52a60969d67fa4a8dbef26adc1439fa2c1b355efa37cacbaf637
   languageName: node
   linkType: hard
 
@@ -9038,6 +9010,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ev-emitter@npm:^1.0.0":
+  version: 1.1.1
+  resolution: "ev-emitter@npm:1.1.1"
+  checksum: 3dd78a7620701ef8095794f611dd251bdd9023badf322b3d6fa5e10a660c50e83eec5ee5bbc7654682635cf7b8858c94e2c77e1d10bdc188a2b0593436403476
+  languageName: node
+  linkType: hard
+
 "event-stream@npm:=3.3.4":
   version: 3.3.4
   resolution: "event-stream@npm:3.3.4"
@@ -9769,6 +9748,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fizzy-ui-utils@npm:^2.0.0":
+  version: 2.0.7
+  resolution: "fizzy-ui-utils@npm:2.0.7"
+  dependencies:
+    desandro-matches-selector: ^2.0.0
+  checksum: 001e54effa22c4f62728b90a25e8eb5477057ab53d0184e1c3231bbdfc7c34e278418fbcaf7d63c75ede823d82e61245e668ce8cba90e1c5699de960188c654f
+  languageName: node
+  linkType: hard
+
 "flat-cache@npm:^2.0.1":
   version: 2.0.1
   resolution: "flat-cache@npm:2.0.1"
@@ -10040,7 +10028,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@npm:^2.1.2, fsevents@npm:~2.3.2":
+"fsevents@npm:^2.1.2, fsevents@npm:^2.3.2, fsevents@npm:~2.3.2":
   version: 2.3.2
   resolution: "fsevents@npm:2.3.2"
   dependencies:
@@ -10060,7 +10048,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fsevents@patch:fsevents@^2.1.2#~builtin<compat/fsevents>, fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
+"fsevents@patch:fsevents@^2.1.2#~builtin<compat/fsevents>, fsevents@patch:fsevents@^2.3.2#~builtin<compat/fsevents>, fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.2
   resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7"
   dependencies:
@@ -10194,6 +10182,13 @@ __metadata:
   bin:
     get-pkg-repo: src/cli.js
   checksum: 5abf169137665e45b09a857b33ad2fdcf2f4a09f0ecbd0ebdd789a7ce78c39186a21f58621127eb724d2d4a3a7ee8e6bd4ac7715efda01ad5200665afc218e0d
+  languageName: node
+  linkType: hard
+
+"get-size@npm:^2.0.2":
+  version: 2.0.3
+  resolution: "get-size@npm:2.0.3"
+  checksum: 18d5a5fdb3f541db8b1e6ad46a5411d4bb7da3061d2ef7e544db3bbce7a13543f05c91fd40c7f68b4bc4bc035c160fed23c45514cde7d5fb18de1cce10208b19
   languageName: node
   linkType: hard
 
@@ -10573,13 +10568,6 @@ __metadata:
   version: 1.3.0
   resolution: "growly@npm:1.3.0"
   checksum: 53cdecd4c16d7d9154a9061a9ccb87d602e957502ca69b529d7d1b2436c2c0b700ec544fc6b3e4cd115d59b81e62e44ce86bd0521403b579d3a2a97d7ce72a44
-  languageName: node
-  linkType: hard
-
-"gud@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "gud@npm:1.0.0"
-  checksum: 3e2eb37cf794364077c18f036d6aa259c821c7fd188f2b7935cb00d589d82a41e0ebb1be809e1a93679417f62f1ad0513e745c3cf5329596e489aef8c5e5feae
   languageName: node
   linkType: hard
 
@@ -12921,7 +12909,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jquery@npm:>=1.8.3, jquery@npm:^3.6.0, jquery@npm:x.*":
+"jquery@npm:x.*":
   version: 3.6.1
   resolution: "jquery@npm:3.6.1"
   checksum: 6177d866a74f1137cad800f142c7cdbd5ab19cd4282546f8bdb4890c9f933b1d542ab96f2aa15d007e43c98de7315b0513e849ec5359d3ac5640f720892fe547
@@ -13219,16 +13207,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"just-validate-plugin-date@npm:^1.1.1":
-  version: 1.2.0
-  resolution: "just-validate-plugin-date@npm:1.2.0"
-  dependencies:
-    date-fns: 2.28.0
-  checksum: 41dc6c32ea2b61e43f51e0a8940fb67a19bda98a155a57b281c8f51ecf5e866b8426ffbe17993dac02e9e348fc3ff2090928f14e5d09b7f3edcb378a7db28e99
-  languageName: node
-  linkType: hard
-
-"just-validate@npm:^3.5.0":
+"just-validate@npm:^3.5.1":
   version: 3.8.1
   resolution: "just-validate@npm:3.8.1"
   checksum: 667356e90c9495a521cdc89e5e81b3bab2149e17820b4b3bac580379c1d7a0332d857c2899ea3056faad9ce53c2e3eb019c98bdc41221c40ef0939dfb4ef47c0
@@ -14057,6 +14036,16 @@ __metadata:
   dependencies:
     object-visit: ^1.0.0
   checksum: c27045a5021c344fc19b9132eb30313e441863b2951029f8f8b66f79d3d8c1e7e5091578075a996f74e417479506fe9ede28c44ca7bc351a61c9d8073daec36a
+  languageName: node
+  linkType: hard
+
+"masonry-layout@npm:^4.2.2":
+  version: 4.2.2
+  resolution: "masonry-layout@npm:4.2.2"
+  dependencies:
+    get-size: ^2.0.2
+    outlayer: ^2.1.0
+  checksum: b947029b8fdfb384d17d7749d80a4f00f88d885acea04d77e1fefd36827cc2a345fd40d9ccddf720ed9323e133d8ea498125eece91d2c8517f69fd4e9e1bbdf4
   languageName: node
   linkType: hard
 
@@ -15377,12 +15366,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"owl.carousel@npm:2.3.4":
-  version: 2.3.4
-  resolution: "owl.carousel@npm:2.3.4"
+"outlayer@npm:^2.1.0":
+  version: 2.1.1
+  resolution: "outlayer@npm:2.1.1"
   dependencies:
-    jquery: ">=1.8.3"
-  checksum: fb28a3373c273d7210bf97739bcb35bfd552afa4e2541d4fc66f19cf1d253136cda927c60162a961902a72bd31dccc6c18084fc9a676d210356bb15677d6d571
+    ev-emitter: ^1.0.0
+    fizzy-ui-utils: ^2.0.0
+    get-size: ^2.0.2
+  checksum: a8b69d07bad6b498ea1956f89a4bae6d38414d81a5feeae6af06cd8206a1bf47db82f664dc3ccd13b8d2c5886a6cded4a4642d0fafcbbd80f68873b7eb9f4153
   languageName: node
   linkType: hard
 
@@ -15973,13 +15964,6 @@ __metadata:
   version: 1.0.10
   resolution: "pofile@npm:1.0.10"
   checksum: 6e1f962cca88c8d6fb66339f985ca6248278de765ea0f9dd3f069ac8e1a5c066c6c22ac68367e2e8566b86c29fb7ff4386c8b6075d92a8c2b910a54267ebedc3
-  languageName: node
-  linkType: hard
-
-"popper.js@npm:1.16.1, popper.js@npm:^1.14.4":
-  version: 1.16.1
-  resolution: "popper.js@npm:1.16.1"
-  checksum: c56ae5001ec50a77ee297a8061a0221d99d25c7348d2e6bcd3e45a0d0f32a1fd81bca29d46cb0d4bdf13efb77685bd6a0ce93f9eb3c608311a461f945fffedbe
   languageName: node
   linkType: hard
 
@@ -16723,6 +16707,15 @@ __metadata:
   version: 2.0.3
   resolution: "progress@npm:2.0.3"
   checksum: f67403fe7b34912148d9252cb7481266a354bd99ce82c835f79070643bb3c6583d10dbcfda4d41e04bbc1d8437e9af0fb1e1f2135727878f5308682a579429b7
+  languageName: node
+  linkType: hard
+
+"progressbar.js@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "progressbar.js@npm:1.1.0"
+  dependencies:
+    shifty: ^2.1.2
+  checksum: 69e7047a333978813878b4b9235cbfdf946f771a055cecfc035923163a98afd5cb0a344763c075cc3630b4689df5146a14244f2dcce3d69b08ceb31d4dc11d96
   languageName: node
   linkType: hard
 
@@ -17807,23 +17800,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-popper@npm:^1.3.6":
-  version: 1.3.11
-  resolution: "react-popper@npm:1.3.11"
-  dependencies:
-    "@babel/runtime": ^7.1.2
-    "@hypnosphi/create-react-context": ^0.3.1
-    deep-equal: ^1.1.1
-    popper.js: ^1.14.4
-    prop-types: ^15.6.1
-    typed-styles: ^0.0.7
-    warning: ^4.0.2
-  peerDependencies:
-    react: 0.14.x || ^15.0.0 || ^16.0.0 || ^17.0.0
-  checksum: a0f5994f5799f1c7364498f74df123dd2561fff4ae834b10fdcca74d9a8e159b523ed1f0708db33bad606933ab4f0d5ce9c90e48cbb671bf30016c890f3c7ea4
-  languageName: node
-  linkType: hard
-
 "react-popper@npm:^2.2.4":
   version: 2.3.0
   resolution: "react-popper@npm:2.3.0"
@@ -18068,7 +18044,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-stickup@npm:^1.12.0":
+"react-stickup@npm:^1.12.1":
   version: 1.12.1
   resolution: "react-stickup@npm:1.12.1"
   dependencies:
@@ -18120,22 +18096,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-transition-group@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "react-transition-group@npm:3.0.0"
-  dependencies:
-    dom-helpers: ^3.4.0
-    loose-envify: ^1.4.0
-    prop-types: ^15.6.2
-    react-lifecycles-compat: ^3.0.4
-  peerDependencies:
-    react: ">=16.6.0"
-    react-dom: ">=16.6.0"
-  checksum: 34605de2d46e5ff31b447dbd59d390f7ec932c18008ce2d784e91d1d01cf0b53070b06cd4d6277b7448a369905048b259154c81c7d7cb46ced5b8a624c457210
-  languageName: node
-  linkType: hard
-
-"react-transition-group@npm:^4, react-transition-group@npm:^4.3.0, react-transition-group@npm:^4.4.1":
+"react-transition-group@npm:^4, react-transition-group@npm:^4.3.0, react-transition-group@npm:^4.4.2, react-transition-group@npm:^4.4.5":
   version: 4.4.5
   resolution: "react-transition-group@npm:4.4.5"
   dependencies:
@@ -18246,19 +18207,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"reactstrap@npm:^8.9.0":
-  version: 8.10.1
-  resolution: "reactstrap@npm:8.10.1"
+"reactstrap@npm:^9.1.4":
+  version: 9.1.5
+  resolution: "reactstrap@npm:9.1.5"
   dependencies:
     "@babel/runtime": ^7.12.5
+    "@popperjs/core": ^2.6.0
     classnames: ^2.2.3
     prop-types: ^15.5.8
-    react-popper: ^1.3.6
-    react-transition-group: ^3.0.0
+    react-popper: ^2.2.4
+    react-transition-group: ^4.4.2
   peerDependencies:
-    react: ">=16.3.0"
-    react-dom: ">=16.3.0"
-  checksum: a91750df39158fe5c7a0b2b3517bcd2a7c10948777b2429bbac1f7167e66cfc4d7ec004c939206b40c7edaa28da430f43c286b0de178f9ad5a64eb228e0889c5
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: 0bb505211388cadd585aef46eaefdae622ba7e00667eae79ac62c879f2c2388d64c682f49da1d359b7981e9331a1881bee3818d8a141c1168373cb1480b171f2
   languageName: node
   linkType: hard
 
@@ -19673,6 +19635,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"shifty@npm:^2.1.2":
+  version: 2.19.1
+  resolution: "shifty@npm:2.19.1"
+  dependencies:
+    fsevents: ^2.3.2
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  checksum: b8da35e57b5535757664ea884ae74d12c66dfb941d31967434c84e13bbe0aeb8fd90f2770b391cfb56253dc5bbe0fd3587a3aaf025dc3dc41c229cb95d854524
+  languageName: node
+  linkType: hard
+
 "side-channel@npm:^1.0.4":
   version: 1.0.4
   resolution: "side-channel@npm:1.0.4"
@@ -20940,13 +20914,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svgxuse@npm:1.2.6":
-  version: 1.2.6
-  resolution: "svgxuse@npm:1.2.6"
-  checksum: fb72766dcbf820b28d134b38ce44291af205943486978351db34d82663ec7a8c16d82ac6d627c98fc66b03a6f794256383a38a76a91454f596f6bf0f17a26e85
-  languageName: node
-  linkType: hard
-
 "symbol-observable@npm:^1.0.4":
   version: 1.2.0
   resolution: "symbol-observable@npm:1.2.0"
@@ -21573,13 +21540,6 @@ __metadata:
   version: 2.7.2
   resolution: "type@npm:2.7.2"
   checksum: 0f42379a8adb67fe529add238a3e3d16699d95b42d01adfe7b9a7c5da297f5c1ba93de39265ba30ffeb37dfd0afb3fb66ae09f58d6515da442219c086219f6f4
-  languageName: node
-  linkType: hard
-
-"typed-styles@npm:^0.0.7":
-  version: 0.0.7
-  resolution: "typed-styles@npm:0.0.7"
-  checksum: 36a6ad6bee008c15ddb8c2425eaf9aee37d2841985b4c44406ea4cf57080a9c30b6f9f3feb842ac952354733ac53299ee44f68d83f734486e8344d413f8c8c0d
   languageName: node
   linkType: hard
 

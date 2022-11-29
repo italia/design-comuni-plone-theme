@@ -54,7 +54,7 @@ const SelectFilter = ({ options, value, id, onChange, placeholder }) => {
     : selectOptions;
 
   return (
-    <div className="mr-lg-3 my-2 my-lg-1 filter-wrapper select-filter">
+    <div className="me-lg-3 my-2 my-lg-1 filter-wrapper select-filter">
       <SelectInput
         id={id}
         value={value}

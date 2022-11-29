@@ -67,7 +67,7 @@ const IconWidget = ({ id, value, defaultOptions, onChange, reactSelect }) => {
       />
       <IconPreviewWidget icon={iconString}>
         {intl.formatMessage(messages.description)}
-        <span className="ml-4">
+        <span className="ms-4">
           <a
             target="_blank"
             href="https://fontawesome.com/icons?d=gallery"

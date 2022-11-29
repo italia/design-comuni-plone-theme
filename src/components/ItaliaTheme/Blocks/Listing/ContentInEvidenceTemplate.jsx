@@ -91,7 +91,7 @@ const ContentInEvidenceTemplate = ({
                               simple
                               color="primary"
                               key={argomento['@id']}
-                              className="mr-2"
+                              className="me-2"
                             >
                               <UniversalLink
                                 href={flattenToAppURL(argomento['@id'])}

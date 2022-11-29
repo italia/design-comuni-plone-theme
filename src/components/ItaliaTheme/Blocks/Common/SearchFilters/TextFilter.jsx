@@ -11,7 +11,7 @@ const messages = defineMessages({
 const TextFilter = ({ value, id, onChange, placeholder }) => {
   const intl = useIntl();
   return (
-    <div className="mr-lg-3 my-2 my-lg-1 filter-wrapper text-filter">
+    <div className="me-lg-3 my-2 my-lg-1 filter-wrapper text-filter">
       <input
         type="text"
         placeholder={

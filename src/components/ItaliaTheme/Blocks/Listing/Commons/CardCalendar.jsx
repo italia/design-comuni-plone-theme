@@ -34,13 +34,13 @@ export const CardCalendar = ({ start, end }) => {
         <div className="custom-calendar-card">
           <div className="card-calendar d-flex flex-column justify-content-center">
             <span className="card-date d-flex justify-content-center align-items-baseline">
-              <div className="date-label mr-1">
+              <div className="date-label me-1">
                 {intl.formatMessage(messages.from)}
               </div>
               <span className="date">{_start.format('DD/MM')}</span>
             </span>
             <span className="card-date d-flex justify-content-center align-items-baseline">
-              <div className="date-label mr-1">
+              <div className="date-label me-1">
                 {intl.formatMessage(messages.to)}
               </div>
               <span className="date">{_end.format('DD/MM')}</span>

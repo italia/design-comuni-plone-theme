@@ -66,7 +66,7 @@ const GridGalleryTemplate = ({
                 <td>
                   <UniversalLink
                     item={item}
-                    className="text-decoration-none font-weight-bold"
+                    className="text-decoration-none fw-bold"
                   >
                     {item.title}
                   </UniversalLink>

@@ -89,7 +89,7 @@ const VenueContacts = ({ content }) => {
           <CardTitle tag="h5">
             <Icon icon="it-telephone" padding={true} />
           </CardTitle>
-          <CardBody tag="div" className={'card-body pr-3'}>
+          <CardBody tag="div" className={'card-body pe-3'}>
             {content.telefono && (
               <p className="card-text mt-3">
                 {intl.formatMessage(messages.riferimento_telefonico_luogo)}
@@ -175,7 +175,7 @@ const VenueContacts = ({ content }) => {
                     <CardText>
                       {content.riferimento_telefonico_struttura && (
                         <div>
-                          <span className="font-weight-semibold">
+                          <span className="fw-semibold">
                             {intl.formatMessage(
                               messages.riferimento_telefonico_struttura,
                             )}
@@ -189,7 +189,7 @@ const VenueContacts = ({ content }) => {
                       )}
                       {content.riferimento_fax_struttura && (
                         <div className="mt-2">
-                          <span className="font-weight-semibold">
+                          <span className="fw-semibold">
                             {intl.formatMessage(
                               messages.riferimento_fax_struttura,
                             )}
@@ -203,7 +203,7 @@ const VenueContacts = ({ content }) => {
                       )}
                       {content.riferimento_mail_struttura && (
                         <div className="mt-2">
-                          <span className="font-weight-semibold">
+                          <span className="fw-semibold">
                             {intl.formatMessage(
                               messages.riferimento_mail_struttura,
                             )}
@@ -217,7 +217,7 @@ const VenueContacts = ({ content }) => {
                       )}
                       {content.riferimento_pec_struttura && (
                         <div className="mt-2">
-                          <span className="font-weight-semibold">
+                          <span className="fw-semibold">
                             {intl.formatMessage(
                               messages.riferimento_pec_struttura,
                             )}

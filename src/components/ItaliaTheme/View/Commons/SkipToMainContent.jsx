@@ -12,7 +12,7 @@ const SkipToMainContent = ({ to = '#main-content-section' }) => {
   const intl = useIntl();
 
   return (
-    <a className="sr-only" href={to}>
+    <a className="visually-hidden" href={to}>
       {intl.formatMessage(messages.content)}
     </a>
   );

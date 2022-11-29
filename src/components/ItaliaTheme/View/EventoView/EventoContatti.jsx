@@ -97,7 +97,7 @@ const EventoDocumenti = ({ content }) => {
             <CardTitle tag="h5">
               <Icon icon="it-telephone" padding={true} />
             </CardTitle>
-            <CardBody tag="div" className={'card-body pr-3'}>
+            <CardBody tag="div" className={'card-body pe-3'}>
               <RichText content={content.organizzato_da_esterno} />
               {content?.telefono && (
                 <p className="card-text mt-3">

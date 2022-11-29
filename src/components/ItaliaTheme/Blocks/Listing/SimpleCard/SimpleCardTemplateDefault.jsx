@@ -142,7 +142,7 @@ const SimpleCardTemplateDefault = (props) => {
                     size="xs"
                     icon={false}
                     tag="button"
-                    className="ml-3"
+                    className="ms-3"
                     onClick={(e) => {
                       addPathFilter(button.path['@id']);
                     }}
@@ -184,7 +184,7 @@ const SimpleCardTemplateDefault = (props) => {
                 {(icon || category || date) && (
                   <CardCategory iconName={icon} date={date}>
                     {category && (
-                      <span className="text font-weight-bold">
+                      <span className="text fw-bold">
                         <ListingCategory category={category} item={item} />
                       </span>
                     )}

@@ -170,7 +170,7 @@ const CardWithImageTemplate = (props) => {
                                 disabled={false}
                                 simple
                                 tag="div"
-                                className="mr-2"
+                                className="me-2"
                               >
                                 <ChipLabel tag="span">
                                   {argument.title}

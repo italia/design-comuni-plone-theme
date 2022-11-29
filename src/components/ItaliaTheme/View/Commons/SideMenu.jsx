@@ -167,7 +167,7 @@ const SideMenu = ({ data, content_uid }) => {
             className="overlay"
             style={isNavOpen ? { display: 'block' } : { display: 'none' }}
           ></div>
-          <div className="close-div sr-only">
+          <div className="close-div visually-hidden">
             <button className="btn close-menu" type="button">
               <span className="it-close"></span>
               {intl.formatMessage(messages.close)}

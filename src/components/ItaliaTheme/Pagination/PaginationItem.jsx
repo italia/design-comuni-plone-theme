@@ -77,7 +77,7 @@ class PaginationItem extends Component {
                 color="primary"
               />
 
-              <span className="sr-only">
+              <span className="visually-hidden">
                 {intl.formatMessage(messages.prevPage)}
               </span>
             </>
@@ -89,7 +89,7 @@ class PaginationItem extends Component {
                 style={{ ariaHidden: true }}
                 color="primary"
               />
-              <span className="sr-only">
+              <span className="visually-hidden">
                 {intl.formatMessage(messages.nextPage)}
               </span>
             </>
@@ -97,7 +97,7 @@ class PaginationItem extends Component {
           {type === 'ellipsisItem' && (
             <>
               {ellipsisItem}
-              <span className="sr-only">
+              <span className="visually-hidden">
                 {intl.formatMessage(messages.nextPage)}
               </span>
             </>

@@ -33,7 +33,7 @@ const CardWithoutImageRssTemplateSkeleton = ({ isEditMode, data = {} }) => {
                 </CardBody>
                 <CardReadMore
                   iconName="it-arrow-right"
-                  className="ml-4"
+                  className="ms-4"
                   tag="a"
                   href="#"
                   text=""

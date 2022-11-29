@@ -65,7 +65,7 @@ const Body = ({ block, sections }) => {
               aria-label={block.placeholder}
             ></input>
             <button
-              className="rounded-right"
+              className="rounded-end"
               onClick={(e) => navigate(inputText, searchFilters())}
               aria-label={intl.formatMessage(messages.doSearch)}
             >

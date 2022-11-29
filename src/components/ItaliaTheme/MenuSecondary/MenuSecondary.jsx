@@ -57,11 +57,11 @@ const MenuSecondary = ({ pathname }) => {
                 data-element={item.id_lighthouse}
               >
                 <span
-                  className={item.inEvidence ? 'font-weight-bold' : ''}
+                  className={item.inEvidence ? 'fw-bold' : ''}
                   dangerouslySetInnerHTML={{ __html: item.title }}
                 ></span>
                 {isMenuActive(url) && (
-                  <span className="sr-only">
+                  <span className="visually-hidden">
                     {intl.formatMessage(messages.menu_selected)}
                   </span>
                 )}

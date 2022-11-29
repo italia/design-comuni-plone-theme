@@ -64,10 +64,10 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
       <div className="point-list-wrapper my-4 mb-5">
         <div className="point-list">
           <div className="point-list-aside point-list-warning">
-            <div className="point-date text-monospace">
+            <div className="point-date font-monospace">
               {start.format('DD')}
             </div>
-            <div className="point-month text-monospace">
+            <div className="point-month font-monospace">
               {start.format('MMMM')}
             </div>
           </div>
@@ -88,8 +88,8 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
         </div>
         <div className="point-list">
           <div className="point-list-aside point-list-warning">
-            <div className="point-date text-monospace">{end.format('DD')}</div>
-            <div className="point-month text-monospace">
+            <div className="point-date font-monospace">{end.format('DD')}</div>
+            <div className="point-month font-monospace">
               {end.format('MMMM')}
             </div>
           </div>

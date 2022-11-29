@@ -17,7 +17,7 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
   return (
     <div className="block-number">
       {data.title && (
-        <div className="subblock-title text-monospace">
+        <div className="subblock-title font-monospace">
           {redraft(
             data.title,
             config.settings.richtextViewSettings.ToHTMLRenderers,

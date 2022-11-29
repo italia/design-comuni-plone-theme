@@ -59,7 +59,7 @@ const FooterNavigation = () => {
               <h4>
                 <SectionIcon
                   section={item.url}
-                  iconProps={{ size: 'sm', color: 'white', className: 'mr-2' }}
+                  iconProps={{ size: 'sm', color: 'white', className: 'me-2' }}
                 />
                 <Link
                   to={item.url}

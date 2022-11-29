@@ -408,18 +408,15 @@ const Search = () => {
                     )}
                   </div>
                   <div className="col-6 align-self-center">
-                    <div className="float-right">
+                    <div className="float-end">
                       <a
                         onClick={() => setCollapseFilters((prev) => !prev)}
                         href="#categoryCollapse"
                         role="button"
-                        className={cx(
-                          'btn btn-sm font-weight-bold text-uppercase',
-                          {
-                            'btn-outline-primary': collapseFilters,
-                            'btn-primary': !collapseFilters,
-                          },
-                        )}
+                        className={cx('btn btn-sm fw-bold text-uppercase', {
+                          'btn-outline-primary': collapseFilters,
+                          'btn-primary': !collapseFilters,
+                        })}
                         data-toggle="collapse"
                         aria-expanded={!collapseFilters}
                         aria-controls="categoryCollapse"
@@ -434,7 +431,7 @@ const Search = () => {
           </Row>
           <Row>
             <aside className="col-lg-3 py-lg-5">
-              <div className="pr-4"></div>
+              <div className="pe-4"></div>
               <Collapse
                 isOpen={!collapseFilters}
                 className="d-lg-block d-xl-block"
@@ -445,7 +442,7 @@ const Search = () => {
                     <h6 className="text-uppercase">
                       {intl.formatMessage(messages.sections)}
                       {activeSections > 0 && (
-                        <span className="badge badge-secondary ml-3">
+                        <span className="badge bg-secondary ms-3">
                           {activeSections}
                         </span>
                       )}
@@ -471,7 +468,7 @@ const Search = () => {
                     <h6 className="text-uppercase">
                       {intl.formatMessage(messages.topics)}
                       {activeTopics > 0 && (
-                        <span className="badge badge-secondary ml-3">
+                        <span className="badge bg-secondary ms-3">
                           {activeTopics}
                         </span>
                       )}
@@ -494,7 +491,7 @@ const Search = () => {
                       icon
                       size="small"
                       onClick={() => setAdvFiltersOpen(!advFiltersOpen)}
-                      className="justify-content-start w-100 pl-2"
+                      className="justify-content-start w-100 ps-2"
                     >
                       <Icon
                         icon={advFiltersOpen ? 'it-minus' : 'it-plus'}
@@ -507,7 +504,7 @@ const Search = () => {
                         <h6 className="text-uppercase">
                           {intl.formatMessage(messages.content_types)}
                           {activePortalTypes > 0 && (
-                            <span className="badge badge-secondary ml-3">
+                            <span className="badge bg-secondary ms-3">
                               {activePortalTypes}
                             </span>
                           )}
@@ -573,7 +570,7 @@ const Search = () => {
                       </span>
                       <button type="button">
                         <Icon color="" icon="it-close" padding={false} />
-                        <span className="sr-only">
+                        <span className="visually-hidden">
                           {intl.formatMessage(messages.removeOption)}
                         </span>
                       </button>
@@ -596,7 +593,7 @@ const Search = () => {
                       </span>
                       <button type="button">
                         <Icon color="" icon="it-close" padding={false} />
-                        <span className="sr-only">
+                        <span className="visually-hidden">
                           {intl.formatMessage(messages.removeOption)}
                         </span>
                       </button>
@@ -624,7 +621,7 @@ const Search = () => {
                             total: searchResults.result.items_total,
                           })}
                         </p>
-                        <p className="d-block d-lg-none mb-0 text-right">
+                        <p className="d-block d-lg-none mb-0 text-end">
                           {intl.formatMessage(messages.orderBy)}
                         </p>
                       </Col>

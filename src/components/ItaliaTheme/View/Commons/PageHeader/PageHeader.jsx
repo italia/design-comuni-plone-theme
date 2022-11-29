@@ -89,7 +89,7 @@ const PageHeader = (props) => {
                 ((
                   <div className="col-6">
                     <small>{intl.formatMessage(messages.reading_time)}</small>
-                    <p className="font-weight-semibold">
+                    <p className="fw-semibold">
                       {props.readingtime} {intl.formatMessage(messages.minutes)}
                     </p>
                   </div>

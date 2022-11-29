@@ -338,7 +338,7 @@ const SearchModal = ({ closeModal, show }) => {
                 intl.locale,
                 false,
               )}
-              className="ml-auto btn btn-outline-primary text-capitalize"
+              className="ms-auto btn btn-outline-primary text-capitalize"
               style={{ visibility: advancedSearch ? 'visible' : 'hidden' }}
               onClick={submitSearch}
             >
@@ -374,7 +374,7 @@ const SearchModal = ({ closeModal, show }) => {
                       //   }
                       // }}
                     />
-                    <div className="input-group-append">
+                    <div className="input-group-text">
                       <a
                         href={getSearchParamsURL(
                           searchableText,
@@ -412,7 +412,7 @@ const SearchModal = ({ closeModal, show }) => {
                       outline={!allSectionsChecked}
                       onClick={resetSections}
                       size="sm"
-                      className="mr-2 mb-2"
+                      className="me-2 mb-2"
                       aria-label={intl.formatMessage(
                         messages.searchAllSections,
                       )}
@@ -425,7 +425,7 @@ const SearchModal = ({ closeModal, show }) => {
                         color="primary"
                         outline={!checkedGroups[groupId]}
                         size="sm"
-                        className="mr-2 mb-2"
+                        className="me-2 mb-2"
                         aria-label={
                           (!checkedGroups[groupId]
                             ? intl.formatMessage(messages.searchInSection)
@@ -465,7 +465,7 @@ const SearchModal = ({ closeModal, show }) => {
               <div className="search-filters search-filters-topics">
                 <div className="h6">{intl.formatMessage(messages.topics)}</div>
                 <button
-                  className={cx('chip chip-simple chip-lg mr-2 mb-2', {
+                  className={cx('chip chip-simple chip-lg me-2 mb-2', {
                     selected: allTopicsChecked,
                   })}
                   type="button"
@@ -488,7 +488,7 @@ const SearchModal = ({ closeModal, show }) => {
                     </span>
                     <button type="button">
                       <Icon color="" icon="it-close" padding={false} />
-                      <span className="sr-only">
+                      <span className="visually-hidden">
                         {intl.formatMessage(messages.removeTopic)}{' '}
                         {selectedTopics[topicId].label}
                       </span>
@@ -510,7 +510,7 @@ const SearchModal = ({ closeModal, show }) => {
               <div className="search-filters search-filters-options">
                 <div className="h6">{intl.formatMessage(messages.options)}</div>
                 <button
-                  className={cx('chip chip-simple chip-lg mr-2 mb-2', {
+                  className={cx('chip chip-simple chip-lg me-2 mb-2', {
                     selected: allOptionsSet,
                   })}
                   type="button"
@@ -531,7 +531,7 @@ const SearchModal = ({ closeModal, show }) => {
                     </span>
                     <button type="button">
                       <Icon color="" icon="it-close" padding={false} />
-                      <span className="sr-only">
+                      <span className="visually-hidden">
                         {intl.formatMessage(messages.removeOption)}{' '}
                         {intl.formatMessage(messages.optionActiveContentButton)}
                       </span>
@@ -553,7 +553,7 @@ const SearchModal = ({ closeModal, show }) => {
                     </span>
                     <button type="button">
                       <Icon color="" icon="it-close" padding={false} />
-                      <span className="sr-only">
+                      <span className="visually-hidden">
                         {intl.formatMessage(messages.removeOption)}{' '}
                         {`${intl.formatMessage(
                           messages.optionDateStartButton,
@@ -579,7 +579,7 @@ const SearchModal = ({ closeModal, show }) => {
                     </span>
                     <button type="button">
                       <Icon color="" icon="it-close" padding={false} />
-                      <span className="sr-only">
+                      <span className="visually-hidden">
                         {intl.formatMessage(messages.removeOption)}{' '}
                         {`${intl.formatMessage(
                           messages.optionDateEndButton,
@@ -622,7 +622,7 @@ const SearchModal = ({ closeModal, show }) => {
                   title={intl.formatMessage(messages.search)}
                 >
                   <Icon icon="it-search" aria-hidden={true} size="sm" />
-                  <span className="ml-2">
+                  <span className="ms-2">
                     {intl.formatMessage(messages.search)}
                   </span>
                 </a>
@@ -715,7 +715,7 @@ const SearchModal = ({ closeModal, show }) => {
                                     for={`modal-search-${groupId}`}
                                     tag="label"
                                     className={cx(
-                                      'group-head font-weight-bold text-primary',
+                                      'group-head fw-bold text-primary',
                                       {
                                         indeterminate: isGroupIndeterminate(
                                           sections[groupId],

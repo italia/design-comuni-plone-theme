@@ -74,7 +74,7 @@ const Body = (props) => {
                         simple
                         color="primary"
                         key={`${idx} ${argomento['@id']}`}
-                        className="mr-2"
+                        className="me-2"
                       >
                         <ConditionalLink
                           condition={!!argomento['@id']}

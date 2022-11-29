@@ -1,4 +1,9 @@
 .public-ui {
+  // text-justify was removed from bootstrap 5
+  .text-justify {
+    text-align: justify;
+  }
+
   .btn-tertiary {
     @include button-variant($tertiary, $tertiary);
 

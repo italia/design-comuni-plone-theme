@@ -36,7 +36,7 @@ const SquaresImageTemplate = ({
                 key={index}
                 data-element={id_lighthouse}
               >
-                <span className="title font-weight-bold">{item?.title}</span>
+                <span className="title fw-bold">{item?.title}</span>
               </UniversalLink>
             );
           })}

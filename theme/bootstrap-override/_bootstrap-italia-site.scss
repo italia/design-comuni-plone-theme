@@ -1,10 +1,6 @@
-.public-ui {
-  // @import 'bootstrap-italia/src/scss/bootstrap-italia';
-  @import 'bootstrap-select/sass/bootstrap-select';
-  @import 'owl.carousel/src/scss/core';
-  @import 'owl.carousel/src/scss/animate';
-  @import 'owl.carousel/src/scss/autoheight';
-}
+// bootstrap italia version variable
+// useful to check for the current version
+@import 'bootstrap-italia/src/scss/custom/version';
 
 // funzioni e variabili colore
 @import 'bootstrap-italia/src/scss/functions';
@@ -16,20 +12,24 @@
 // classi colore
 @import 'bootstrap-italia/src/scss/utilities/colors';
 
+// BS5 Configuration
 @import 'bootstrap/scss/functions';
 @import 'bootstrap/scss/variables';
-
-// mixins
+//@import 'node_modules/bootstrap/scss/maps';
 @import 'bootstrap/scss/mixins';
+// mixins custom
 @import 'bootstrap-italia/src/scss/custom/mixins/buttons';
 @import 'bootstrap-italia/src/scss/custom/mixins/text-emphasis';
+//
+@import 'bootstrap/scss/utilities';
 
 // Commented root custom properties, we don't use them
 // (I found out we never could,
 // they were inside the following .public-ui selector and not working)
 // @import 'bootstrap/scss/root';
 
-@import './bootstrap/print';
+// TODO questo è stato rimosso in bs5, controllare se ci serve ancora
+// @import './bootstrap/print';
 
 .public-ui {
   @import 'bootstrap/scss/reboot';
@@ -40,7 +40,8 @@
 .public-ui {
   @import 'bootstrap/scss/type';
   @import 'bootstrap/scss/images';
-  @import 'bootstrap/scss/code';
+  // @import 'bootstrap/scss/code'; // TODO check: rimosso in bs5
+  @import 'bootstrap/scss/containers';
   @import 'bootstrap/scss/grid';
   @import 'bootstrap/scss/tables';
   @import 'bootstrap/scss/forms';
@@ -48,27 +49,38 @@
   @import 'bootstrap/scss/transitions';
   @import 'bootstrap/scss/dropdown';
   @import 'bootstrap/scss/button-group';
-  @import 'bootstrap/scss/input-group';
-  @import './bootstrap-italia/input-group';
+  // @import 'bootstrap/scss/input-group'; // TODO check: rimosso in bs5
+  // @import './bootstrap-italia/input-group'; // TODO check: rimosso in bs5
   @import 'bootstrap/scss/nav';
   @import 'bootstrap/scss/navbar';
   @import 'bootstrap/scss/card';
+  @import 'bootstrap/scss/accordion';
   @import 'bootstrap/scss/breadcrumb';
   @import 'bootstrap/scss/pagination';
   @import 'bootstrap/scss/badge';
+  @import 'bootstrap/scss/alert';
   @import 'bootstrap/scss/progress';
-  @import 'bootstrap/scss/media';
+  // @import 'bootstrap/scss/media'; // TODO check: rimosso in bs5
   @import 'bootstrap/scss/list-group';
   @import 'bootstrap/scss/close';
+  @import 'bootstrap/scss/toasts';
   @import 'bootstrap/scss/modal';
   @import 'bootstrap/scss/tooltip';
   @import 'bootstrap/scss/popover';
   @import 'bootstrap/scss/carousel';
-  @import 'bootstrap/scss/utilities';
   @import 'bootstrap/scss/spinners';
-  @import 'bootstrap/scss/toasts';
+  @import 'bootstrap/scss/offcanvas';
+  @import 'bootstrap/scss/placeholders';
+
+  // Helpers
+  @import 'bootstrap/scss/helpers';
+
+  // Utilities
+  @import 'bootstrap/scss/utilities/api';
+  // scss-docs-end import-stack
 
   // Customizzazioni e nuovi componenti
+  @import 'bootstrap-italia/src/scss/utilities/text-colors';
   @import 'bootstrap-italia/src/scss/custom/type';
   @import './bootstrap-italia/borders';
   @import './bootstrap-italia/form-toggles';
@@ -86,7 +98,8 @@
   @import 'bootstrap-italia/src/scss/custom/breadcrumb';
   @import './bootstrap-italia/breadcrumb';
   @import 'bootstrap-italia/src/scss/custom/modal';
-  @import 'bootstrap-italia/src/scss/custom/collapse';
+  // @import 'bootstrap-italia/src/scss/custom/collapse'; // TODO check: rimosso in bs-it v2
+  @import 'bootstrap-italia/src/scss/custom/accordion';
   @import 'bootstrap-italia/src/scss/custom/carousel';
   @import 'bootstrap-italia/src/scss/custom/calendar';
   @import 'bootstrap-italia/src/scss/custom/alert';
@@ -151,6 +164,14 @@
   @import 'bootstrap-italia/src/scss/custom/point-list';
   @import 'bootstrap-italia/src/scss/custom/rating-list';
   @import 'bootstrap-italia/src/scss/custom/badge';
+  @import 'bootstrap-italia/src/scss/custom/figcaption';
+  @import 'bootstrap-italia/src/scss/custom/sticky';
+  @import 'bootstrap-italia/src/scss/custom/print';
+  @import 'bootstrap-italia/src/scss/custom/code';
+  @import 'bootstrap-italia/src/scss/custom/images';
+  @import 'bootstrap-italia/src/scss/custom/just-validate';
+  @import 'bootstrap-italia/src/scss/custom/accessible-autocomplete';
+  @import 'bootstrap-italia/src/scss/custom/page-scroll';
 
   // datepicker
   @import 'bootstrap-italia/src/scss/custom/form-datepicker';

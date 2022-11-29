@@ -76,7 +76,7 @@ const CardWithoutImageRssTemplate = ({
                   </CardBody>
                   <CardReadMore
                     iconName="it-arrow-right"
-                    className="ml-4"
+                    className="ms-4"
                     tag="a"
                     target="_blank"
                     rel="noopener noreferrer"

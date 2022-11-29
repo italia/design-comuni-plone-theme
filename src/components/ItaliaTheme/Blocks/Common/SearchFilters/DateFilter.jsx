@@ -224,7 +224,7 @@ const DateFilter = (props) => {
   }, []);
 
   return (
-    <div className="mr-lg-3 my-2 my-lg-1 filter-wrapper date-filter">
+    <div className="me-lg-3 my-2 my-lg-1 filter-wrapper date-filter">
       <DateRangePicker
         {...rest}
         startDate={value?.startDate || defaultStart}

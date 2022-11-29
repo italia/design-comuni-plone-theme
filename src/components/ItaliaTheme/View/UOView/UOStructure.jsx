@@ -99,7 +99,7 @@ const UOStructure = ({ content }) => {
               to={flattenToAppURL(item['@id'])}
               key={item['@id']}
               title={item.title}
-              className="text-decoration-none  mr-2"
+              className="text-decoration-none  me-2"
             >
               <Chip
                 color="primary"
@@ -128,7 +128,7 @@ const UOStructure = ({ content }) => {
               to={flattenToAppURL(item['@id'])}
               key={item['@id']}
               title={item.title}
-              className="text-decoration-none mr-2"
+              className="text-decoration-none me-2"
             >
               <Chip
                 color="primary"

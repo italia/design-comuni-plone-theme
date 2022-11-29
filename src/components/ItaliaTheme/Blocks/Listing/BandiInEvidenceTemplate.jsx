@@ -115,7 +115,7 @@ const BandiInEvidenceTemplate = ({
                     {/* Ente */}
                     {show_ente && item.ente_bando?.length > 0 && (
                       <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
-                        <div className="bando-dati-label mr-2">
+                        <div className="bando-dati-label me-2">
                           {intl.formatMessage(messages.ente)}:
                         </div>
                         <span className="bando-dati-date">
@@ -132,7 +132,7 @@ const BandiInEvidenceTemplate = ({
                     {/* Tipologia */}
                     {show_tipologia && item.tipologia_bando?.title?.length > 0 && (
                       <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
-                        <div className="bando-dati-label mr-2">
+                        <div className="bando-dati-label me-2">
                           {intl.formatMessage(messages.tipologia)}:
                         </div>
                         <span className="bando-dati-date">
@@ -144,7 +144,7 @@ const BandiInEvidenceTemplate = ({
                     {/* Pubblicazione */}
                     {item.effective && (
                       <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
-                        <div className="bando-dati-label mr-2">
+                        <div className="bando-dati-label me-2">
                           {intl.formatMessage(messages.pubblicazione)}:
                         </div>
                         <span className="bando-dati-date">
@@ -156,7 +156,7 @@ const BandiInEvidenceTemplate = ({
                     {/* Scadenza */}
                     {item.scadenza_bando && (
                       <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
-                        <div className="bando-dati-label mr-2">
+                        <div className="bando-dati-label me-2">
                           {intl.formatMessage(messages.scadenza)}:
                         </div>
                         <span className="bando-dati-date">
@@ -173,7 +173,7 @@ const BandiInEvidenceTemplate = ({
                     {/* Chiusura procedimento */}
                     {item.chiusura_procedimento_bando && (
                       <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
-                        <div className="bando-dati-label mr-2">
+                        <div className="bando-dati-label me-2">
                           {intl.formatMessage(messages.chiusura_procedimento)}:
                         </div>
                         <span className="bando-dati-date">
@@ -190,7 +190,7 @@ const BandiInEvidenceTemplate = ({
                     {/* Stato */}
                     {item?.bando_state?.length > 0 && (
                       <span className="d-flex align-items-baseline bando-dati-info">
-                        <div className="bando-dati-label mr-3">
+                        <div className="bando-dati-label me-3">
                           {intl.formatMessage(messages.stato)}:
                         </div>
 

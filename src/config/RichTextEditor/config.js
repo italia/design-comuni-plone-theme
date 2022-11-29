@@ -85,7 +85,7 @@ const ItaliaBlocksHtmlRenderers = {
     )),
   'align-right': (children, { keys }) =>
     children.map((child, i) => (
-      <p id={keys[i]} key={keys[i]} className="text-right">
+      <p id={keys[i]} key={keys[i]} className="text-end">
         {renderHTMLBlock(child)}
       </p>
     )),
@@ -179,7 +179,7 @@ export default function applyConfig(config) {
 
       const styles = {
         'align-center': 'text-center',
-        'align-right': 'text-right',
+        'align-right': 'text-end',
         'align-justify': 'text-justify',
         callout: 'callout',
         'callout-bg': 'callout-bg',

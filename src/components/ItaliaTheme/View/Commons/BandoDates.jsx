@@ -63,10 +63,10 @@ const BandoDates = ({ content }) => {
         {effective && (
           <div className="point-list">
             <div className="point-list-aside point-list-warning">
-              <div className="point-date text-monospace">
+              <div className="point-date font-monospace">
                 {effective.format('DD')}
               </div>
-              <div className="point-month text-monospace">
+              <div className="point-month font-monospace">
                 {effective.format('MMM')}/{effective.format('YY')}
               </div>
             </div>
@@ -89,10 +89,10 @@ const BandoDates = ({ content }) => {
         {apertura_bando && (
           <div className="point-list">
             <div className="point-list-aside point-list-warning">
-              <div className="point-date text-monospace">
+              <div className="point-date font-monospace">
                 {apertura_bando.format('DD')}
               </div>
-              <div className="point-month text-monospace">
+              <div className="point-month font-monospace">
                 {apertura_bando.format('MMM')}/{apertura_bando.format('YY')}
               </div>
             </div>
@@ -116,10 +116,10 @@ const BandoDates = ({ content }) => {
         {scadenza_domande_bando && (
           <div className="point-list">
             <div className="point-list-aside point-list-warning">
-              <div className="point-date text-monospace">
+              <div className="point-date font-monospace">
                 {scadenza_domande_bando.format('DD')}
               </div>
-              <div className="point-month text-monospace">
+              <div className="point-month font-monospace">
                 {scadenza_domande_bando.format('MMM')}/
                 {scadenza_domande_bando.format('YY')}
               </div>
@@ -144,10 +144,10 @@ const BandoDates = ({ content }) => {
         {scadenza_bando && (
           <div className="point-list">
             <div className="point-list-aside point-list-warning">
-              <div className="point-date text-monospace">
+              <div className="point-date font-monospace">
                 {scadenza_bando.format('DD')}
               </div>
-              <div className="point-month text-monospace">
+              <div className="point-month font-monospace">
                 {scadenza_bando.format('MMM')}/{scadenza_bando.format('YY')}
               </div>
             </div>
@@ -171,10 +171,10 @@ const BandoDates = ({ content }) => {
         {chiusura_procedimento_bando && (
           <div className="point-list">
             <div className="point-list-aside point-list-warning">
-              <div className="point-date text-monospace">
+              <div className="point-date font-monospace">
                 {chiusura_procedimento_bando.format('DD')}
               </div>
-              <div className="point-month text-monospace">
+              <div className="point-month font-monospace">
                 {chiusura_procedimento_bando.format('MMM')}/
                 {chiusura_procedimento_bando.format('YY')}
               </div>

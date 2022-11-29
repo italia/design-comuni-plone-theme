@@ -122,7 +122,7 @@ const MegaMenu = ({ item, pathname }) => {
         >
           <span dangerouslySetInnerHTML={{ __html: item.title }}></span>
           {isItemActive && (
-            <span className="sr-only">
+            <span className="visually-hidden">
               {intl.formatMessage(messages.menu_selected)}
             </span>
           )}
@@ -259,7 +259,7 @@ const MegaMenu = ({ item, pathname }) => {
             />
           </DropdownToggle>
           <DropdownMenu flip tag="div">
-            <div className="text-right megamenu-close-button">
+            <div className="text-end megamenu-close-button">
               <Button
                 color="link"
                 onClick={() => setMenuStatus(false)}
@@ -363,7 +363,7 @@ const MegaMenu = ({ item, pathname }) => {
                   <Col lg={8} />
                   <Col lg={4}>
                     <LinkList>
-                      <li className="it-more text-right">
+                      <li className="it-more text-end">
                         <UniversalLink
                           className="list-item medium"
                           item={item.showMoreLink[0]}

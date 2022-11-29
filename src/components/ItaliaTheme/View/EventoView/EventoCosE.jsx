@@ -65,7 +65,7 @@ const EventoCosE = ({ content }) => {
                 simple
                 tag="div"
                 key={item['@id']}
-                className="mr-2"
+                className="me-2"
               >
                 <ChipLabel tag="span">{item.title}</ChipLabel>
               </Chip>

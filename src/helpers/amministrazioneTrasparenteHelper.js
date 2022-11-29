@@ -52,7 +52,7 @@ export const getTableRowData = (items, intl, currentLocation) => {
         return [
           {
             type: 'link',
-            class: 'text-decoration-none font-weight-bold',
+            class: 'text-decoration-none fw-bold',
             text: item.title,
             link: flattenToAppURL(item['@id']),
           },
@@ -85,7 +85,7 @@ export const getTableRowData = (items, intl, currentLocation) => {
         return [
           {
             type: 'link',
-            class: 'text-decoration-none font-weight-bold',
+            class: 'text-decoration-none fw-bold',
             text: item.title,
             link: flattenToAppURL(
               `${currentLocation}/dettaglio-procedimento?uid=${item.UID}`,

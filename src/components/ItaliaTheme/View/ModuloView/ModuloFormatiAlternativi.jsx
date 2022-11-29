@@ -23,7 +23,7 @@ const ModuloFormatiAlternativi = ({ content }) => {
           <DownloadFileFormat
             file={content.formato_alternativo_1}
             iconSize="2x"
-            className="mr-4"
+            className="me-4"
           />
         )}
         {content.formato_alternativo_2 && (

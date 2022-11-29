@@ -25,7 +25,7 @@ const FooterSocials = () => {
 
   return (
     items.length > 0 && (
-      <ul className="list-inline text-left social row">
+      <ul className="list-inline text-start social row">
         {items.map((social, idx) => (
           <li className="list-inline-item" key={idx}>
             <a
@@ -42,7 +42,7 @@ const FooterSocials = () => {
                 padding={false}
                 size="sm"
               />
-              <span className="sr-only">{social.title}</span>
+              <span className="visually-hidden">{social.title}</span>
             </a>
           </li>
         ))}

@@ -56,7 +56,7 @@ const CuredBy = ({ office, people, title }) => {
               <Link
                 to={flattenToAppURL(item['@id'])}
                 key={item['@id']}
-                className="text-decoration-none mr-2"
+                className="text-decoration-none me-2"
               >
                 <Chip
                   color="primary"

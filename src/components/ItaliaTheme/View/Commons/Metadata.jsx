@@ -79,7 +79,7 @@ const Metadata = ({
               simple
               tag="div"
               key={item + i}
-              className="mr-2"
+              className="me-2"
             >
               <ChipLabel tag="span">{item}</ChipLabel>
             </Chip>

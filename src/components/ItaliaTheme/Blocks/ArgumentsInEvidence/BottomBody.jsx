@@ -23,7 +23,7 @@ const BottomBody = ({ data, intl }) => {
             {intl?.formatMessage(messages.otherArguments)}
           </h6>
         </div>
-        <div className="col-lg-9 text-left">
+        <div className="col-lg-9 text-start">
           {data?.arguments?.map((argument, index) => (
             <Chip
               color="primary"
@@ -35,7 +35,7 @@ const BottomBody = ({ data, intl }) => {
               item={argument}
               key={index}
               title={argument.title}
-              className="mr-2 text-decoration-none"
+              className="me-2 text-decoration-none"
             >
               <ChipLabel tag="span">{argument.title}</ChipLabel>
             </Chip>

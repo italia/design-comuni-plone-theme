@@ -169,7 +169,7 @@
     "@babel/plugin-proposal-throw-expressions": "7.18.6",
     "@loadable/babel-plugin": "5.13.2",
     "@plone/volto": "16.0.0",
-    "bootstrap-italia": "1",
+    "bootstrap-italia": "2.0.9",
     "classnames": "^2.3.2",
     "design-react-kit": "4.0.2",
     "react-dropzone": "11.0.1",
@@ -236,7 +236,8 @@
   },
   "resolutions": {
     "moment": "2.29.3",
-    "lodash": "4.17.21"
+    "lodash": "4.17.21",
+    "design-react-kit": "portal:/Users/pieronicolli/Lab/io-comune/design-react-kit"
   },
   "volta": {
     "node": "16.18.0"

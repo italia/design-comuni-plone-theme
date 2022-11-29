@@ -57,7 +57,7 @@ const DownloadFileFormat = ({
       ) : (
         <Icon className="icon-svg-custom" name={icon.name} />
       )}
-      {showLabel && <span className="ml-4">{label}</span>}
+      {showLabel && <span className="ms-4">{label}</span>}
     </a>
   ) : null;
 };

@@ -30,7 +30,7 @@ const Arguments = ({ content }) => {
           href={flattenToAppURL(item['@id'])}
           key={item['@id']}
           title={item.title}
-          className="text-decoration-none mr-2"
+          className="text-decoration-none me-2"
         >
           <Chip disabled={false} large={false} simple tag="div">
             <ChipLabel tag="span">{item.title}</ChipLabel>

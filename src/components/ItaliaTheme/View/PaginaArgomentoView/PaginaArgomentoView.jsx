@@ -108,7 +108,7 @@ const PaginaArgomentoView = ({ content }) => {
                           <div className="d-flex">
                             <CardBody className="">
                               <CardCategory>
-                                <span className="text font-weight-bold">
+                                <span className="text fw-bold">
                                   <UniversalLink
                                     href={flattenToAppURL(u['@id'])}
                                   >
@@ -121,7 +121,7 @@ const PaginaArgomentoView = ({ content }) => {
                               </CardText>
                             </CardBody>
                             {searchResults[u['@id']]?.data?.image && (
-                              <div className="image-container mr-3">
+                              <div className="image-container me-3">
                                 <Image
                                   image={searchResults[u['@id']].data?.image}
                                   alt={

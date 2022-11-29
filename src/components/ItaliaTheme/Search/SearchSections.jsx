@@ -76,7 +76,7 @@ export default function SearchSections({
               tag="label"
               className={cx('group-head', {
                 'text-primary': !toggleGroups,
-                'font-weight-bold': !toggleGroups,
+                'fw-bold': !toggleGroups,
                 indeterminate: SearchUtils.isGroupIndeterminate(
                   sections[groupId],
                   SearchUtils.isGroupChecked(sections[groupId]),
@@ -91,7 +91,7 @@ export default function SearchSections({
               sections[groupId]?.items &&
               Object.keys(sections[groupId]?.items).length > 0 && (
                 <a
-                  className="float-right"
+                  className="float-end"
                   href={`#section${groupId}Collapse`}
                   onClick={(e) => {
                     e.preventDefault();
@@ -122,7 +122,7 @@ export default function SearchSections({
                   check
                   tag="div"
                   key={filterId}
-                  className={cx({ 'pl-4': toggleGroups })}
+                  className={cx({ 'ps-4': toggleGroups })}
                 >
                   <Checkbox
                     id={filterId}

@@ -50,7 +50,7 @@ const OfficeCard = ({
       })}
     >
       {icon && <Icon icon={icon}></Icon>}
-      <div className="card-body pr-3">
+      <div className="card-body pe-3">
         <h5 className="card-title">
           <UniversalLink
             item={office_fo}

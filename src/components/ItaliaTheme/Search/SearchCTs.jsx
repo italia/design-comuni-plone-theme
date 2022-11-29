@@ -167,7 +167,7 @@ export default function SearchCTs({
                 e.preventDefault();
                 setCollapse((prev) => !prev);
               }}
-              className="font-weight-bold"
+              className="fw-bold"
               data-toggle="collapse"
               href="#collapseTopics"
               role="button"

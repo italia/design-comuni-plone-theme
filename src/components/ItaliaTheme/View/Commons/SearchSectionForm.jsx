@@ -71,13 +71,13 @@ const SearchSectionForm = ({ content }) => {
           }"`}
           aria-describedby="search-page-button"
         />
-        <div className="input-group-append">
+        <div className="input-group-text">
           <Button
             color="link"
             onClick={() => doSearch()}
             title={intl.formatMessage(messages.search)}
             id="search-page-button"
-            className="pr-2"
+            className="pe-2"
           >
             <Icon icon="it-search" aria-hidden={true} size="sm" />
           </Button>

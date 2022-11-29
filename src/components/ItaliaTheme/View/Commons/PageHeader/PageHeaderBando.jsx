@@ -50,7 +50,7 @@ const PageHeaderBando = ({ content }) => {
           <div className="card-body">
             <div className="card-text">
               <Icon
-                className="mr-2"
+                className="me-2"
                 color=""
                 icon={
                   {

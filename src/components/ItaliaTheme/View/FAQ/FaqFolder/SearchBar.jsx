@@ -31,8 +31,8 @@ const SearchBar = ({ setSearchableText }) => {
       <Container className="px-4">
         <div className="form-group mb-0">
           <div className="input-group shadow">
-            <div className="input-group-prepend">
-              <div className="input-group-text rounded-left">
+            <div className="input-group-text">
+              <div className="input-group-text rounded-start">
                 <Icon
                   icon="it-search"
                   padding={false}
@@ -50,7 +50,7 @@ const SearchBar = ({ setSearchableText }) => {
               {intl.formatMessage(messages.search_faq)}...
             </label>
             <input
-              className="form-control rounded-right"
+              className="form-control rounded-end"
               id="search-field"
               name="search-field"
               onBlur={(a, b) => {

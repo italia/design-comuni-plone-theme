@@ -25,7 +25,7 @@ const FooterNewsletterSubscribe = () => {
   return (
     <Form action="#" className="form-newsletter" method="post" tag="form">
       <Label
-        className="text-white font-weight-semibold active"
+        className="text-white fw-semibold active"
         htmlFor="input-newsletter"
         style={{
           transition: 'none 0 ease 0',
