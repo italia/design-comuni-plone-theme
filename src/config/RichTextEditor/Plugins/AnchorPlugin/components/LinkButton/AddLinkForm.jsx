@@ -82,7 +82,7 @@ class AddLinkForm extends Component {
     this.selectOptions = [
       ['appointment-booking', 'appointment-booking'],
       ['faq', 'faq'],
-      ['report-inefficency', 'report-inefficency'],
+      ['report-inefficiency', 'report-inefficiency'],
       ['accessibility-link', 'accessibility-link'],
       ['privacy-policy-link', 'privacy-policy-link'],
     ];
