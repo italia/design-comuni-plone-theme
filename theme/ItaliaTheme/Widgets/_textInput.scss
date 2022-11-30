@@ -1,0 +1,8 @@
+.io-text-input {
+  label {
+    &.has-prepend {
+      left: 5rem;
+      max-width: calc(100% - 5rem);
+    }
+  }
+}

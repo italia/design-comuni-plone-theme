@@ -374,29 +374,27 @@ const SearchModal = ({ closeModal, show }) => {
                       //   }
                       // }}
                     />
-                    <div className="input-group-text">
-                      <a
-                        href={getSearchParamsURL(
-                          searchableText,
-                          sections,
-                          topics,
-                          options,
-                          {},
-                          null,
-                          null,
-                          null,
-                          subsite,
-                          intl.locale,
-                          false,
-                        )}
-                        onClick={submitSearch}
-                        className="btn btn-link"
-                        title={intl.formatMessage(messages.search)}
-                        id="search-button"
-                      >
-                        <Icon icon="it-search" aria-hidden={true} size="sm" />
-                      </a>
-                    </div>
+                    <a
+                      href={getSearchParamsURL(
+                        searchableText,
+                        sections,
+                        topics,
+                        options,
+                        {},
+                        null,
+                        null,
+                        null,
+                        subsite,
+                        intl.locale,
+                        false,
+                      )}
+                      onClick={submitSearch}
+                      className="btn btn-link rounded-0 py-0"
+                      title={intl.formatMessage(messages.search)}
+                      id="search-button"
+                    >
+                      <Icon icon="it-search" aria-hidden={true} size="sm" />
+                    </a>
                   </div>
                 </div>
               </div>

@@ -20,15 +20,16 @@ export default function TextInput(props) {
   };
 
   return (
-    <div className="form-group">
+    <div className="form-group io-text-input">
       <div className={cx('input-group', size ? 'input-group-' + size : '')}>
-        {prepend && <div className="input-group-text">{prepend}</div>}
-        {/* <div className="input-group-text">
-          <div className="input-group-text">
-            <Icon color="" icon="it-search" padding={false} size="sm" />
-          </div>
-        </div> */}
-        <label htmlFor={id} className={isFocused ? 'active' : ''}>
+        {prepend}
+        <label
+          htmlFor={id}
+          className={cx({
+            active: isFocused,
+            'has-prepend': !!prepend,
+          })}
+        >
           {label}
         </label>
 
@@ -46,12 +47,7 @@ export default function TextInput(props) {
           }}
           placeholder={placeholder ? placeholder : label}
         />
-        {append && <div className="input-group-text">{append}</div>}
-        {/* <div className="input-group-text">
-          <Button className="btn-icon" tag="button" icon color="">
-            <Icon color="" icon="it-search" padding={false} size="sm" />
-          </Button>
-        </div> */}
+        {append}
       </div>
     </div>
   );

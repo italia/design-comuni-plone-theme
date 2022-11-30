@@ -14,6 +14,7 @@ import {
   CardReadMore,
 } from 'design-react-kit';
 
+// eslint-disable-next-line import/no-unresolved
 import Image from '@plone/volto/components/theme/Image/Image';
 import { flattenToAppURL } from '@plone/volto/helpers';
 

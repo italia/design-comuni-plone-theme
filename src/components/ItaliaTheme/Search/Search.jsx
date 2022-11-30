@@ -351,7 +351,7 @@ const Search = () => {
     <>
       <Helmet title={intl.formatMessage(messages.searchResults)} />
 
-      <div className="public-ui">
+      <div className="public-ui search-view">
         <Container className="px-4 my-4">
           <Row>
             <Col>
@@ -376,6 +376,7 @@ const Search = () => {
                         tag="button"
                         color="link"
                         size="xs"
+                        className="rounded-0 py-0"
                         onClick={doSearch}
                         aria-label={intl.formatMessage(messages.search)}
                       >
