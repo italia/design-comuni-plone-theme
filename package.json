@@ -33,7 +33,7 @@
     "test:coverage": "razzle test --coverage",
     "test:debug": "node --inspect node_modules/.bin/jest --runInBand",
     "start:prod": "NODE_ENV=production node build/server.js",
-    "i18n": "rm -rf build/messages && NODE_ENV=production i18n",
+    "i18n": "rm -rf build/messages && NODE_ENV=production node_modules/.bin/i18n",
     "release": "release-it --disable-metrics",
     "analyze": "BUNDLE_ANALYZE=true razzle build --noninteractive"
   },
