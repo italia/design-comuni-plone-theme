@@ -22,6 +22,7 @@ import {
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 import { defineMessages, useIntl } from 'react-intl';
 import { getLayoutFieldname } from '@plone/volto/helpers';
+// eslint-disable-next-line import/no-unresolved
 import Image from '@plone/volto/components/theme/Image/Image';
 
 import config from '@plone/volto/registry';

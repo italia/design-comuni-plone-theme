@@ -5,6 +5,7 @@
 
 import React, { useState } from 'react';
 import { useIntl, defineMessages } from 'react-intl';
+import cx from 'classnames';
 import { Container } from 'design-react-kit';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
@@ -22,7 +23,7 @@ const messages = defineMessages({
  * @returns {string} Markup of the component.
  */
 
-const SearchBar = ({ setSearchableText }) => {
+const SearchBar = ({ searchableText, setSearchableText }) => {
   const intl = useIntl();
   const [focusSearch, setFocusSearch] = useState(false);
 
@@ -31,7 +32,7 @@ const SearchBar = ({ setSearchableText }) => {
       <Container className="px-4">
         <div className="form-group mb-0">
           <div className="input-group shadow">
-            <div className="input-group-text">
+            <div className="d-flex">
               <div className="input-group-text rounded-start">
                 <Icon
                   icon="it-search"
@@ -44,7 +45,9 @@ const SearchBar = ({ setSearchableText }) => {
               </div>
             </div>
             <label
-              className={focusSearch ? 'active' : ''}
+              className={cx('ms-5', {
+                active: focusSearch || searchableText,
+              })}
               htmlFor="search-field"
             >
               {intl.formatMessage(messages.search_faq)}...
@@ -54,7 +57,7 @@ const SearchBar = ({ setSearchableText }) => {
               id="search-field"
               name="search-field"
               onBlur={(a, b) => {
-                setFocusSearch(true);
+                setFocusSearch(false);
               }}
               onFocus={() => {
                 setFocusSearch(true);
@@ -62,7 +65,6 @@ const SearchBar = ({ setSearchableText }) => {
               onChange={(e) => {
                 setSearchableText(e?.target?.value || '');
               }}
-              placeholder={intl.formatMessage(messages.search_faq)}
               type="text"
             />
           </div>

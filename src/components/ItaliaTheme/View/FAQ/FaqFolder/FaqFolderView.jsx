@@ -97,7 +97,10 @@ const FaqFolderView = ({ content }) => {
       </Container>
 
       {/* -------SEARCH------- */}
-      <FaqFolderSearchBar setSearchableText={setSearchableText} />
+      <FaqFolderSearchBar
+        searchableText={searchableText}
+        setSearchableText={setSearchableText}
+      />
 
       {/* -------CONTENT------- */}
       <Container className="px-4">

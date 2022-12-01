@@ -23,10 +23,7 @@
 //
 @import 'bootstrap/scss/utilities';
 
-// Commented root custom properties, we don't use them
-// (I found out we never could,
-// they were inside the following .public-ui selector and not working)
-// @import 'bootstrap/scss/root';
+@import 'bootstrap/scss/root';
 
 // TODO questo è stato rimosso in bs5, controllare se ci serve ancora
 // @import './bootstrap/print';

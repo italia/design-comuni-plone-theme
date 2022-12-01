@@ -54,8 +54,8 @@ const SearchSectionForm = ({ content }) => {
     }
   };
   return (
-    <div className="form-group mt-5">
-      <div className="input-group mb-3">
+    <div className="form-group mt-5 search-section-form">
+      <div className="input-group">
         <input
           id="search-page-text"
           type="text"
@@ -71,17 +71,15 @@ const SearchSectionForm = ({ content }) => {
           }"`}
           aria-describedby="search-page-button"
         />
-        <div className="input-group-text">
-          <Button
-            color="link"
-            onClick={() => doSearch()}
-            title={intl.formatMessage(messages.search)}
-            id="search-page-button"
-            className="pe-2"
-          >
-            <Icon icon="it-search" aria-hidden={true} size="sm" />
-          </Button>
-        </div>
+        <Button
+          color="link"
+          onClick={() => doSearch()}
+          title={intl.formatMessage(messages.search)}
+          id="search-page-button"
+          className="pe-2 py-0 rounded-0"
+        >
+          <Icon icon="it-search" aria-hidden={true} size="sm" />
+        </Button>
       </div>
     </div>
   );

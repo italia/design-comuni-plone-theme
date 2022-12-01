@@ -5,7 +5,18 @@ import React, { useState } from 'react';
 import cx from 'classnames';
 
 export default function TextInput(props) {
-  const { id, label, placeholder, onChange, prepend, append, size } = props;
+  const {
+    id,
+    label,
+    placeholder,
+    onChange,
+    prepend,
+    append,
+    size,
+    className,
+    groupClassName,
+    ...otherProps
+  } = props;
   const [isFocused, setIsFocused] = useState(false);
 
   const toggleFocusLabel = () => {
@@ -19,7 +30,7 @@ export default function TextInput(props) {
   };
 
   return (
-    <div className="form-group io-text-input">
+    <div className={cx('form-group io-text-input', groupClassName)}>
       <div className={cx('input-group', size ? 'input-group-' + size : '')}>
         {prepend}
         <label
@@ -33,9 +44,11 @@ export default function TextInput(props) {
         </label>
 
         <input
-          {...props}
+          {...otherProps}
+          id={id}
           type="text"
-          className={cx('form-control', size ? 'form-control-' + size : '', {
+          className={cx('form-control', className, {
+            [`form-control-${size}`]: size,
             'focus--mouse': isFocused,
           })}
           onFocus={toggleFocusLabel}
@@ -44,7 +57,7 @@ export default function TextInput(props) {
           onChange={(e) => {
             onChange(e.target.id, e.target.value);
           }}
-          placeholder={placeholder ? placeholder : label}
+          placeholder={placeholder}
         />
         {append}
       </div>

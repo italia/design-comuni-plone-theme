@@ -80,7 +80,7 @@ const Field = ({
           id={name}
           name={name}
           label={getLabel()}
-          type="textarea"
+          tag="textarea"
           rows={10}
           required={required}
           infoText={description}
@@ -145,6 +145,7 @@ const Field = ({
                     onChange(name, v);
                   }}
                   invalid={isInvalid() ? 'true' : null}
+                  addon // Needed to avoid application of form-control class as of kit v4.0.2
                 />
                 <Label for={v + name} check>
                   {v}
@@ -182,6 +183,7 @@ const Field = ({
                     onChange(name, values);
                   }}
                   invalid={isInvalid() ? 'true' : null}
+                  addon // Needed to avoid application of form-control class as of kit v4.0.2
                 />
                 <Label for={v + name} check>
                   {v}
@@ -212,6 +214,7 @@ const Field = ({
                 }}
                 invalid={isInvalid() ? 'true' : null}
                 required={required}
+                addon // Needed to avoid application of form-control class as of kit v4.0.2
               />
               <Label for={name} check>
                 {getLabel()}
