@@ -3,7 +3,6 @@
  */
 import React, { useState } from 'react';
 import cx from 'classnames';
-//import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 export default function TextInput(props) {
   const { id, label, placeholder, onChange, prepend, append, size } = props;

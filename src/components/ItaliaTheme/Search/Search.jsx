@@ -448,7 +448,7 @@ const Search = () => {
                         </span>
                       )}
                     </h6>
-                    <div className="form-checck mt-4">
+                    <div className="mt-4">
                       <SearchSections
                         sections={sections}
                         setSections={setSections}
