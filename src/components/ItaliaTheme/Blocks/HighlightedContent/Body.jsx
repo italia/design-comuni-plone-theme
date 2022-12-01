@@ -14,6 +14,7 @@ import {
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
 
+// eslint-disable-next-line import/no-unresolved
 import Image from '@plone/volto/components/theme/Image/Image';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
@@ -53,6 +54,7 @@ const Body = (props) => {
               <CardCategory
                 date={
                   content.effective &&
+                  block.show_date !== false &&
                   viewDate(intl.locale, content.effective, 'll')
                 }
                 iconName={icon}

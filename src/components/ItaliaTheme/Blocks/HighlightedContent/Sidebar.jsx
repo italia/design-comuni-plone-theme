@@ -34,6 +34,10 @@ const messages = defineMessages({
     id: 'show_type',
     defaultMessage: 'Mostra il tipo',
   },
+  show_date: {
+    id: 'show_date',
+    defaultMessage: 'Mostra la data',
+  },
   bg_color: {
     id: 'bg_color',
     defaultMessage: 'Colore di sfondo',
@@ -55,10 +59,15 @@ const messages = defineMessages({
 const Sidebar = ({ block, data, onChangeBlock, openObjectBrowser }) => {
   const intl = useIntl();
   useEffect(() => {
-    if (data.show_type === undefined && data.show_section === undefined) {
+    if (
+      data.show_type === undefined &&
+      data.show_section === undefined &&
+      data.show_date === undefined
+    ) {
       onChangeBlock(block, {
         ...data,
         show_type: true,
+        show_date: true,
       });
     }
   }, []);
@@ -124,6 +133,17 @@ const Sidebar = ({ block, data, onChangeBlock, openObjectBrowser }) => {
           id="show_section"
           title={intl.formatMessage(messages.show_section)}
           value={data.show_section ? data.show_section : false}
+          onChange={(id, value) => {
+            onChangeBlock(block, {
+              ...data,
+              [id]: value,
+            });
+          }}
+        />
+        <CheckboxWidget
+          id="show_date"
+          title={intl.formatMessage(messages.show_date)}
+          value={data.show_date ? data.show_date : false}
           onChange={(id, value) => {
             onChangeBlock(block, {
               ...data,

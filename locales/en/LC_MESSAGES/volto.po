@@ -2895,6 +2895,11 @@ msgstr "Arrange on 4 columns"
 msgid "share"
 msgstr "Share"
 
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+# defaultMessage: Mostra la data
+msgid "show_date"
+msgstr ""
+
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Mostra la descrizione
 msgid "show_description"
