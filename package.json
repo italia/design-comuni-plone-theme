@@ -171,7 +171,7 @@
     "@plone/volto": "16.0.0",
     "bootstrap-italia": "2.0.9",
     "classnames": "^2.3.2",
-    "design-react-kit": "4.0.2",
+    "design-react-kit": "italia/design-react-kit#2584d0c0f4ad5fdf18d70a74b541f6bfe7def13b",
     "react-dropzone": "11.0.1",
     "react-google-recaptcha-v3": "1.7.0",
     "react-highlight-words": "0.18.0",
@@ -236,8 +236,7 @@
   },
   "resolutions": {
     "moment": "2.29.3",
-    "lodash": "4.17.21",
-    "design-react-kit": "portal:/Users/pieronicolli/Lab/io-comune/design-react-kit"
+    "lodash": "4.17.21"
   },
   "volta": {
     "node": "16.18.0"

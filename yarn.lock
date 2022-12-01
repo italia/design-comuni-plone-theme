@@ -7672,7 +7672,7 @@ __metadata:
     bootstrap-italia: 2.0.9
     bundlewatch: ^0.3.3
     classnames: ^2.3.2
-    design-react-kit: 4.0.2
+    design-react-kit: "italia/design-react-kit#2584d0c0f4ad5fdf18d70a74b541f6bfe7def13b"
     eslint-plugin-prettier: ^3.4.1
     husky: 8.0.2
     jest-environment-jsdom: ^26.0.1
@@ -7714,9 +7714,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"design-react-kit@portal:/Users/pieronicolli/Lab/io-comune/design-react-kit::locator=design-comuni-plone-theme%40workspace%3A.":
-  version: 0.0.0-use.local
-  resolution: "design-react-kit@portal:/Users/pieronicolli/Lab/io-comune/design-react-kit::locator=design-comuni-plone-theme%40workspace%3A."
+"design-react-kit@italia/design-react-kit#2584d0c0f4ad5fdf18d70a74b541f6bfe7def13b":
+  version: 4.0.2
+  resolution: "design-react-kit@https://github.com/italia/design-react-kit.git#commit=2584d0c0f4ad5fdf18d70a74b541f6bfe7def13b"
   dependencies:
     classnames: ^2.3.1
     is-number: ^7.0.0
@@ -7730,8 +7730,9 @@ __metadata:
   peerDependencies:
     bootstrap-italia: ^2.0.3
     react: ">=17.0.2"
+  checksum: cf411bfe07fc862e9ac4950933f6370519b17ad48624eb5995c5c610d8a34ca0cd40983f4b85e1c7280b008f9e4d2516abb6fc119b99e8568031ec20139346fd
   languageName: node
-  linkType: soft
+  linkType: hard
 
 "destroy@npm:1.2.0":
   version: 1.2.0

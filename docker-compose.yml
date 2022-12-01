@@ -4,11 +4,11 @@ services:
   backend:
     image: ghcr.io/redturtle/dist.design.plone:latest
     ports:
-      - "8080:8080"
+      - '8080:8080'
     environment:
       - SITE=Plone
-    #  - 'ADDONS=plone.restapi==8.29.0 plone.volto==4.0.0a13 plone.rest==2.0.0a5'
-    # TODO: profiles per demo content ?
+      #  - 'ADDONS=plone.restapi==8.29.0 plone.volto==4.0.0a13 plone.rest==2.0.0a5'
+      # TODO: profiles per demo content ?
       - 'PROFILES=design.plone.policy:default'
     # Uncomment if you need the data to be persistent
     # volumes:
@@ -21,13 +21,13 @@ services:
       - traefik.http.routers.backend.rule=Host(`localhost`) && PathPrefix(`/++api++`)
       - traefik.http.routers.backend.service=plone-backend
       - "traefik.http.middlewares.backend.replacepathregex.regex=^/\\+\\+api\\+\\+($$|/.*)"
-      - "traefik.http.middlewares.backend.replacepathregex.replacement=/VirtualHostBase/http/localhost/Plone/++api++/VirtualHostRoot/$$1"
+      - 'traefik.http.middlewares.backend.replacepathregex.replacement=/VirtualHostBase/http/localhost/Plone/++api++/VirtualHostRoot/$$1'
       - traefik.http.routers.backend.middlewares=gzip,backend
 
   frontend:
     build: .
     ports:
-      - "3000:3000"
+      - '3000:3000'
     environment:
       RAZZLE_API_PATH: http://localhost
       # These are needed in a Docker environment since the
@@ -53,13 +53,12 @@ services:
     command: --api.insecure=true --providers.docker
     ports:
       # The HTTP port
-      - "80:80"
+      - '80:80'
       # The Web UI (enabled by --api.insecure=true)
-      - "8888:8080"
+      - '8888:8080'
     volumes:
       # So that Traefik can listen to the Docker events
       - /var/run/docker.sock:/var/run/docker.sock
     labels:
       - traefik.http.middlewares.gzip.compress=true
       - traefik.http.middlewares.gzip.compress.excludedcontenttypes=image/png, image/jpeg, font/woff2
-
