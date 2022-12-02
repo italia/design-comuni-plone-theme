@@ -4,7 +4,7 @@ on:
     branches: [design-react-kit-v4]
 
 jobs:
-  build_develop:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

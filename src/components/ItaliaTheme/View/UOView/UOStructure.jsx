@@ -117,7 +117,7 @@ const UOStructure = ({ content }) => {
       {content.tipologia_organizzazione?.title && (
         <div className="mb-5 mt-3">
           <h5>{intl.formatMessage(messages.tipologia_organizzazione)}</h5>
-          <p className="text-serif">{content.tipologia_organizzazione.title}</p>
+          <p className="font-serif">{content.tipologia_organizzazione.title}</p>
         </div>
       )}
       {content.assessore_riferimento?.length > 0 && (

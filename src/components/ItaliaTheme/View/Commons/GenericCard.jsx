@@ -78,7 +78,7 @@ const GenericCard = ({
             </figure>
           </div>
         </div>
-        <div className="card-body">
+        <div className="card-body px-4">
           {infos}
           <h5 className="card-title">
             {show_icon && <Icon icon={show_icon} padding={false} />}

@@ -52,7 +52,7 @@ const Metadata = ({
         </h4>
       )}
       {children}
-      <p className="text-serif mb-0 mt-4">
+      <p className="font-serif mb-0 mt-4">
         {intl.formatMessage(messages.modified)}
       </p>
       <strong>
@@ -60,7 +60,7 @@ const Metadata = ({
       </strong>
       {content.rights && (
         <>
-          <p className="text-serif mb-0 mt-4">
+          <p className="font-serif mb-0 mt-4">
             {intl.formatMessage(messages.rights)}
           </p>
           <strong>{content.rights}</strong>
@@ -68,7 +68,7 @@ const Metadata = ({
       )}
       {showTags && content.subjects?.length > 0 && (
         <>
-          <p className="text-serif mt-4">
+          <p className="font-serif mt-4">
             {intl.formatMessage(messages.subjects)}
           </p>
           {content.subjects?.map((item, i) => (

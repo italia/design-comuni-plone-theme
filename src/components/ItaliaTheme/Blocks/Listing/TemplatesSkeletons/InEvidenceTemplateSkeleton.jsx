@@ -51,7 +51,7 @@ const InEvidenceTemplateSkeleton = ({
                     </div>
                   )}
 
-                  <CardBody>
+                  <CardBody className="px-4">
                     <CardCategory> </CardCategory>
                     <CardTitle tag="h4"> </CardTitle>
                     <CardText className="mb-3"> </CardText>

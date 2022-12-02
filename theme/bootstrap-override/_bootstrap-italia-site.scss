@@ -49,7 +49,7 @@
   @import 'bootstrap/scss/nav';
   @import 'bootstrap/scss/navbar';
   @import 'bootstrap/scss/card';
-  @import 'bootstrap/scss/accordion';
+  // @import 'bootstrap/scss/accordion'; // aggiunto in bs5, ma noi avevamo già un accordion nostro
   @import 'bootstrap/scss/breadcrumb';
   @import 'bootstrap/scss/pagination';
   @import 'bootstrap/scss/badge';
@@ -94,7 +94,7 @@
   @import './bootstrap-italia/breadcrumb';
   @import 'bootstrap-italia/src/scss/custom/modal';
   // @import 'bootstrap-italia/src/scss/custom/collapse'; // TODO check: rimosso in bs-it v2
-  @import 'bootstrap-italia/src/scss/custom/accordion';
+  // @import 'bootstrap-italia/src/scss/custom/accordion'; // aggiunto in bs5, ma noi avevamo già un accordion nostro
   @import 'bootstrap-italia/src/scss/custom/carousel';
   @import 'bootstrap-italia/src/scss/custom/calendar';
   @import 'bootstrap-italia/src/scss/custom/alert';
@@ -117,6 +117,7 @@
   @import 'bootstrap-italia/src/scss/custom/back-to-top';
   @import 'bootstrap-italia/src/scss/custom/autocomplete';
   @import 'bootstrap-italia/src/scss/custom/linklist';
+  @import './bootstrap-italia/linklist';
   @import 'bootstrap-italia/src/scss/custom/navigation';
   @import './bootstrap-italia/navigation';
   @import 'bootstrap-italia/src/scss/custom/skiplinks';

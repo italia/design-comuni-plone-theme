@@ -22,7 +22,7 @@ const UOTelephones = ({ content }) => {
   const intl = useIntl();
 
   return content?.telefono ? (
-    <div className="text-serif contatti">
+    <div className="font-serif contatti">
       <dt>{intl.formatMessage(messages.telefono_sede)}: </dt>
       <dd>
         <ContactLink tel={content.telefono} label={false} />

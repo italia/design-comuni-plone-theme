@@ -127,7 +127,7 @@ const CardWithImageTemplate = (props) => {
                         </div>
                       </div>
                     )}
-                    <CardBody>
+                    <CardBody className="px-4">
                       {(icon || category || date) && (
                         <CardCategory iconName={icon} date={date}>
                           <ListingCategory category={category} item={item} />

@@ -54,7 +54,7 @@ const CardWithImageTemplateSkeleton = ({
                         </div>
                       </div>
                     )}
-                    <CardBody>
+                    <CardBody className="px-4">
                       <CardCategory></CardCategory>
 
                       <CardTitle tag="h4">-</CardTitle>

@@ -32,7 +32,7 @@ const CardWithImageRssTemplateSkeleton = ({ isEditMode, data = {} }) => {
                   </div>
                 </div>
 
-                <CardBody tag="div">
+                <CardBody tag="div" className="px-4">
                   <div className="category-top"></div>
                   <CardTitle className="big-heading" tag="h6"></CardTitle>
                 </CardBody>

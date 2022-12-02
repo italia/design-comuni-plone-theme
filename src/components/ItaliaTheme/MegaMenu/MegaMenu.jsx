@@ -112,7 +112,7 @@ const MegaMenu = ({ item, pathname }) => {
 
   if (item.mode === 'simpleLink') {
     return item.linkUrl?.length > 0 ? (
-      <NavItem tag="li" active={isItemActive}>
+      <NavItem tag="li">
         <NavLink
           href={item.linkUrl === '' ? '/' : null}
           item={item.linkUrl[0]?.['@id'] ? item.linkUrl[0] : '#'}

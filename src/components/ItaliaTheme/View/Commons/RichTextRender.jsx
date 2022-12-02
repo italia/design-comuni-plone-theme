@@ -47,14 +47,14 @@ const RichTextRender = ({ content, add_class, serif = true }) => {
     hasBlocksData(content) ? (
       <div
         className={cx(`richtext-blocks ${add_class ?? ''}`, {
-          'text-serif': serif,
+          'font-serif': serif,
         })}
       >
         <RenderBlocks content={content} />
       </div>
     ) : (
       <div
-        className={cx(add_class, { 'text-serif': serif })}
+        className={cx(add_class, { 'font-serif': serif })}
         dangerouslySetInnerHTML={{ __html: flattenHTMLToAppURL(content.data) }}
       />
     )

@@ -3,6 +3,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
 
+// eslint-disable-next-line import/no-unresolved
 import Image from '@plone/volto/components/theme/Image/Image';
 
 import {
@@ -112,10 +113,8 @@ const PageHeader = (props) => {
         ) : null}
 
         <div className={'page-header-right py-lg-4 col-lg-3 offset-lg-1'}>
-          <div className="row">
-            <Sharing url={props.content['@id']} title={props.content.title} />
-            <Actions url={props.content['@id']} title={props.content.title} />
-          </div>
+          <Sharing url={props.content['@id']} title={props.content.title} />
+          <Actions url={props.content['@id']} title={props.content.title} />
 
           {props.showtassonomiaargomenti && (
             <PageHeaderTassonomiaArgomenti content={props.content} />

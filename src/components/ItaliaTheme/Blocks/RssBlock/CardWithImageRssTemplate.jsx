@@ -66,7 +66,7 @@ const CardWithImageRssTemplate = ({
                       </div>
                     </div>
                   )}
-                  <CardBody tag="div">
+                  <CardBody tag="div" className="px-4">
                     <div className="category-top">
                       {item?.categories?.length > 0 && item.categories[0]._ && (
                         <>

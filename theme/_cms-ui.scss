@@ -602,6 +602,7 @@ body.public-ui.has-toolbar {
     .toolbar-content.show {
       max-height: 100vh;
       overflow-y: scroll !important;
+      z-index: 9;
     }
   }
 }

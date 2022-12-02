@@ -110,7 +110,7 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
         </div>
       </div>
       {recurrenceText && (
-        <div className="mt-4 mb-5 text-serif">
+        <div className="mt-4 mb-5 font-serif">
           <strong>{recurrenceText}</strong>
         </div>
       )}
@@ -118,7 +118,7 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
         <div className="mt-4">
           <h5>{intl.formatMessage(messages.additional_dates)}</h5>
           {rruleSet.rdates().map((additionalDate) => (
-            <div className="text-serif">
+            <div className="font-serif">
               {viewDate(intl.locale, additionalDate, 'dddd DD MMMM YYYY')}
             </div>
           ))}
@@ -128,7 +128,7 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
         <div className="mt-4">
           <h5>{intl.formatMessage(messages.excluded_dates)}</h5>
           {rruleSet.exdates().map((exDate) => (
-            <div className="text-serif">
+            <div className="font-serif">
               {viewDate(intl.locale, exDate, 'dddd DD MMMM YYYY')}
             </div>
           ))}

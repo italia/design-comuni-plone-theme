@@ -22,7 +22,7 @@ const PageMetadata = ({ content, children }) => {
 
   return (
     <article id="metadata" className="bottom-metadata">
-      <span className="text-serif mb-0 mt-4">
+      <span className="font-serif mb-0 mt-4">
         {intl.formatMessage(messages.modified)}:
       </span>{' '}
       {viewDate(intl.locale, content.modified, 'DD-MM-Y HH:MM')}

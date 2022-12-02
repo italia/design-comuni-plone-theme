@@ -81,13 +81,13 @@ const VenueWhere = ({ content }) => {
           <h5 className="mt-3">
             {intl.formatMessage(messages.circoscrizione)}:
           </h5>
-          <div className="text-serif">{content.circoscrizione}</div>
+          <div className="font-serif">{content.circoscrizione}</div>
         </div>
       )}
       {content.quartiere && (
         <div className="quartiere">
           <h5 className="mt-3">{intl.formatMessage(messages.quartiere)}:</h5>
-          <div className="text-serif">{content.quartiere}</div>
+          <div className="font-serif">{content.quartiere}</div>
         </div>
       )}
       {richTextHasContent(content.notes) && (

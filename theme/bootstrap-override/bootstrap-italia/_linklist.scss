@@ -1,0 +1,12 @@
+@include media-breakpoint-up(lg) {
+  .link-list-wrapper.menu-link-list {
+    h3,
+    .h3,
+    h4,
+    .h4 {
+      &:after {
+        background-color: $primary;
+      }
+    }
+  }
+}

@@ -66,7 +66,7 @@ const Sharing = ({ url, title }) => {
   return (
     <UncontrolledDropdown className="d-inline page-sharing">
       <DropdownToggle
-        className={`btn btn-dropdown`}
+        className={`btn btn-dropdown ps-0`}
         color=""
         tag={'button'}
         caret

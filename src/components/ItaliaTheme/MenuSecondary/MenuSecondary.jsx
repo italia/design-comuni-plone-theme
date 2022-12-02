@@ -49,7 +49,7 @@ const MenuSecondary = ({ pathname }) => {
           let url = item.href || item.linkUrl?.[0]?.['@id'] || '';
 
           return (
-            <NavItem tag="li" active={isMenuActive(url)} key={i}>
+            <NavItem tag="li" key={i}>
               <NavLink
                 href={url === '' ? '/' : flattenToAppURL(url)}
                 tag={UniversalLink}

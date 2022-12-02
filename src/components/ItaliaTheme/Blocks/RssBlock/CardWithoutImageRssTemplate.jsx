@@ -70,7 +70,7 @@ const CardWithoutImageRssTemplate = ({
                     <CardTitle className="big-heading" tag="h5">
                       {item.title}
                     </CardTitle>
-                    <CardText tag="p" className="text-serif">
+                    <CardText tag="p" className="font-serif">
                       {item.contentSnippet}
                     </CardText>
                   </CardBody>
