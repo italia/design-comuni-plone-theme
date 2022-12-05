@@ -116,6 +116,12 @@ module.exports = Object.assign({}, volto_config, {
       'design-comuni-plone-theme': `${projectRootPath}/src`,
     };
 
+    // remove unused languages. (TODO: move to ENV at build time)
+    base_config.plugins.push(
+        new webpackObject.ContextReplacementPlugin(/moment[/\\]locale$/, /(it|it-it|en-us|en-gb)$/),
+        // Ignore all locale files of moment.js - new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    );
+
     return base_config;
   },
   plugins: [
