@@ -14,7 +14,7 @@ const LinkEntity = connect((state) => ({
       href={to}
       openLinkInNewTab={target === '_blank' || undefined}
       download={download}
-      data-element={dataElement || null}
+      data-element={dataElement || props['data-element'] || null}
     >
       {children}
     </UniversalLink>
