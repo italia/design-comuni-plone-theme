@@ -1,6 +1,6 @@
-import React from 'react';
 import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
 import Image from '@plone/volto/components/theme/Image/Image';
+import React from 'react';
 import { getImageAttributes } from '@plone/volto/helpers/Image/Image';
 
 const ListingImage = ({
@@ -20,7 +20,7 @@ const ListingImage = ({
     return (
       <Image
         className={className}
-        image={item['@id']}
+        image={item[item.image_field] || item.image || item['@id']}
         aria-hidden="true"
         alt={item.title}
         title={item.title}

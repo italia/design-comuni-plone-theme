@@ -2912,6 +2912,11 @@ msgstr "Disposer sur 4 colonnes"
 msgid "share"
 msgstr "Partager"
 
+#: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
+# defaultMessage: Mostra la data
+msgid "show_date"
+msgstr ""
+
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Mostra la descrizione
 msgid "show_description"

@@ -2663,9 +2663,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@plone/volto@npm:16.0.0":
-  version: 16.0.0
-  resolution: "@plone/volto@npm:16.0.0"
+"@plone/volto@npm:16.3.0":
+  version: 16.3.0
+  resolution: "@plone/volto@npm:16.3.0"
   dependencies:
     "@babel/core": ^7.0.0
     "@babel/plugin-proposal-export-default-from": 7.18.9
@@ -2830,7 +2830,7 @@ __metadata:
     webpack-node-externals: 3.0.0
     xmlrpc: 1.3.2
     yarnhook: 0.5.1
-  checksum: a7aab82a5debbf6772b747e3f0f26f5aa8ddf62e1c5f1adffde8a93017d48b7607dd4ee7629eacd9be02cf5d0acce65244f490c3fb2ee2c7b63d10603897a16b
+  checksum: 2be40ced75f97389d2f9f1d00a90eea76f207be1063f58d7faf8d1831c23270fe949f1d0c8f6505e6dffc95e364b62ae26edd20057631e4625fddc3c8ae28f65
   languageName: node
   linkType: hard
 
@@ -7667,7 +7667,7 @@ __metadata:
     "@commitlint/cli": ^12.0.0
     "@commitlint/config-conventional": ^12.0.0
     "@loadable/babel-plugin": 5.13.2
-    "@plone/volto": 16.0.0
+    "@plone/volto": 16.3.0
     "@release-it/conventional-changelog": ^2.0.1
     bootstrap-italia: 2.0.9
     bundlewatch: ^0.3.3

@@ -54,6 +54,7 @@ const Body = (props) => {
               <CardCategory
                 date={
                   content.effective &&
+                  block.show_date !== false &&
                   viewDate(intl.locale, content.effective, 'll')
                 }
                 iconName={icon}

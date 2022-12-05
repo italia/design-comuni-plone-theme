@@ -33,7 +33,7 @@
     "test:coverage": "razzle test --coverage",
     "test:debug": "node --inspect node_modules/.bin/jest --runInBand",
     "start:prod": "NODE_ENV=production node build/server.js",
-    "i18n": "rm -rf build/messages && NODE_ENV=production i18n",
+    "i18n": "rm -rf build/messages && NODE_ENV=production node_modules/.bin/i18n",
     "release": "release-it --disable-metrics",
     "analyze": "BUNDLE_ANALYZE=true razzle build --noninteractive"
   },
@@ -168,7 +168,7 @@
     "@babel/plugin-proposal-nullish-coalescing-operator": "7.18.6",
     "@babel/plugin-proposal-throw-expressions": "7.18.6",
     "@loadable/babel-plugin": "5.13.2",
-    "@plone/volto": "16.0.0",
+    "@plone/volto": "16.3.0",
     "bootstrap-italia": "2.0.9",
     "classnames": "^2.3.2",
     "design-react-kit": "italia/design-react-kit#2584d0c0f4ad5fdf18d70a74b541f6bfe7def13b",
