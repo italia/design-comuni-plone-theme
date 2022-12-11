@@ -198,6 +198,11 @@ msgstr ""
 msgid "Dimensione della mappa"
 msgstr ""
 
+#: config/RichTextEditor/Plugins/AnchorPlugin/components/LinkButton/AddLinkForm
+# defaultMessage: Enter URL or select an item
+msgid "Enter URL or select an item"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
 # defaultMessage: Etichetta
 msgid "Etichetta location filter"
@@ -398,6 +403,11 @@ msgstr ""
 msgid "Number placeholder"
 msgstr ""
 
+#: components/ItaliaTheme/Header/SocialHeader
+# defaultMessage: - apri in nuova scheda
+msgid "Nuova scheda"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
 # defaultMessage: Apri in un nuovo tab
 msgid "Open in a new tab"
@@ -477,6 +487,11 @@ msgstr ""
 #: components/ItaliaTheme/Header/SocialHeader
 # defaultMessage: Seguici su
 msgid "Seguici su"
+msgstr ""
+
+#: config/RichTextEditor/Plugins/AnchorPlugin/components/LinkButton/AddLinkForm
+# defaultMessage: Seleziona un data-element ID
+msgid "Select a data-element ID"
 msgstr ""
 
 #: components/ItaliaTheme/Search/SearchCTs
