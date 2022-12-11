@@ -60,7 +60,7 @@ import {
   addPhotogalleryTemplateOptions,
 } from 'design-comuni-plone-theme/config/Blocks/ListingOptions';
 
-import { addLighthouseField } from '@italia/config/Blocks/ListingOptions/utils';
+import { addLighthouseField } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
 
 const italiaListingVariations = [
   {
