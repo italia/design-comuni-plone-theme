@@ -1,3 +1,50 @@
+## [7.0.0-alpha.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v6.5.0...v7.0.0-alpha.1) (2022-12-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* moment locales restrict to it/en (#15)
+* change name to design-comuni-plone-theme
+
+### Features
+
+* added checkbox for date in block HighlightedContent ([#7](https://github.com/RedTurtle/design-comuni-plone-theme/issues/7)) ([b1a3bce](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b1a3bceccfa34a1d878465506c0b3657da546f54))
+* added data-element on MegaMenu ([#610](https://github.com/RedTurtle/design-comuni-plone-theme/issues/610)) ([2e51337](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2e51337cb0b969da51cf9a810d81321b415c0c95))
+* data-element added to footer menu and secondary menu ([#611](https://github.com/RedTurtle/design-comuni-plone-theme/issues/611)) ([ef2e748](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ef2e748be536ff1d32c51c67c1a71cd2dcc59243))
+* lighthouse data-element tag on draftjs ([009c01e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/009c01e9f9a9ce31e4b4397f4eec199da8f71ef2))
+* upgrade to volto16 ([#605](https://github.com/RedTurtle/design-comuni-plone-theme/issues/605)) ([e6be34d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e6be34d025b7485c26873e530a3a3587c0706692)), closes [plone/volto#2103](https://github.com/plone/volto/issues/2103)
+* upgraded volto to 16.3.0 ([1115a79](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1115a799f6734bb3cebdcc7f879afdee5adf3d66))
+
+
+### Bug Fixes
+
+* card link color changed ([e2ca9a1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e2ca9a160a5b9829a5d51762fb9cb258ba27b428))
+* i18n bin ([#12](https://github.com/RedTurtle/design-comuni-plone-theme/issues/12)) ([31b3aef](https://github.com/RedTurtle/design-comuni-plone-theme/commit/31b3aefc7b3e2a69a0af86905d7a8202eb699784))
+* i18n cleanup ([41b9af2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/41b9af2bbc2aa6bbbfbb928862f8735a00e41e42))
+* moment locales restrict to it/en ([#15](https://github.com/RedTurtle/design-comuni-plone-theme/issues/15)) ([602ddf9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/602ddf994669b38c1b0b1a12f3a55de58c7eccb0))
+* proper handling of data-element in LinkEntity when it comes from backend data ([4b8106f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4b8106f53465f8ed9483ff7643715572ff23a9e8))
+* removed link style ([f070b02](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f070b02ffaa719d89a974e75965bc9339b67895a))
+* tag inside attachment cards changed to h5 ([#612](https://github.com/RedTurtle/design-comuni-plone-theme/issues/612)) ([ecbc666](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ecbc6662f09dea79f6497bddb970ee0c2e1227e9))
+* text report-inefficiency fixed ([f5877a2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f5877a283343411f660fc9684019c0cba7d3f47f))
+* theme usage from child themes ([#22](https://github.com/RedTurtle/design-comuni-plone-theme/issues/22)) ([eb22c8c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/eb22c8cf0542d02a68e829334701781ca6d56312))
+* update html customization to fix redirects problems ([#4](https://github.com/RedTurtle/design-comuni-plone-theme/issues/4)) ([e9208e6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e9208e647ebbce5056c1f55c49be931a6ee4231f))
+* use full image infos to have width/height in img tag ([#11](https://github.com/RedTurtle/design-comuni-plone-theme/issues/11)) ([035e9ea](https://github.com/RedTurtle/design-comuni-plone-theme/commit/035e9eadb36ac1a9e0ebf4b2c5d942942841457f))
+
+
+### Changes
+
+* change name to design-comuni-plone-theme ([e3bb745](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e3bb7459c66f4d34f4e2dc9a320cd174ba0505e1))
+
+
+### Maintenance
+
+* added a new phrase to social links title ([abfaf8c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/abfaf8c8877a59cb8a8d7e6d4399751f17a9fcf6))
+* added title to logo link ([854275e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/854275eb448090975b8e7d7754621b4ba29a3837))
+* configured draftjs widget ([e05cd0a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e05cd0a31aa487ac0a36e5c00b2dc03b304927f3))
+* update release script ([459cff7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/459cff7ddc00467427c84166b1b40efdf86d03ee))
+* updated docs and removed obsolete scripts ([5723b6b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5723b6be16abbd070a21f4bd67385bbd03909d9c))
+* updated style of link tooltip and codereview ([f9ae9a4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f9ae9a4085cfff2ab040157f4be406b3fe234f6e))
+
 ## [6.5.0](https://github.com/RedTurtle/design-volto-theme/compare/v6.4.0...v6.5.0) (2022-11-08)
 
 
