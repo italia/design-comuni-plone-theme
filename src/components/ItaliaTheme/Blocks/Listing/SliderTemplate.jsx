@@ -6,6 +6,8 @@ import {
   Icon,
   ListingImage,
   ListingLinkMore,
+  NextArrow,
+  PrevArrow,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
@@ -63,24 +65,6 @@ const SliderTemplate = ({
       setUserAutoplay(true);
       slider.current.slickPlay();
     }
-  };
-
-  const NextArrow = (props) => {
-    const { className, style, onClick } = props;
-    return (
-      <div className={className} style={{ ...style }} onClick={onClick}>
-        <Icon icon="chevron-right" key="chevron-right" />
-      </div>
-    );
-  };
-
-  const PrevArrow = (props) => {
-    const { className, style, onClick } = props;
-    return (
-      <div className={className} style={{ ...style }} onClick={onClick}>
-        <Icon icon="chevron-left" key="chevron-left-prev" />
-      </div>
-    );
   };
 
   const settings = {

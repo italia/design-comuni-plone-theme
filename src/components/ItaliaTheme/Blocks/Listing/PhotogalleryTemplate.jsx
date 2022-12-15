@@ -5,6 +5,8 @@ import { Col, Container, Row } from 'design-react-kit/dist/design-react-kit';
 import {
   ListingImage,
   ListingLinkMore,
+  NextArrow,
+  PrevArrow,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import React, { useRef, useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
@@ -106,6 +108,8 @@ const PhotogalleryTemplate = ({
         },
       },
     ],
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     appendDots: (dots) => (
       <div>
         <div className="play-pause-wrapper">
