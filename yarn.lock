@@ -7846,7 +7846,7 @@ __metadata:
     volto-subblocks: 2.0.0
     volto-subfooter: 2.0.0
     volto-subsites: 4.0.0
-    volto-venue: 4.0.0
+    volto-venue: 4.0.1
     webpack-image-resize-loader: ^5.0.0
   languageName: unknown
   linkType: soft
@@ -22455,16 +22455,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"volto-venue@npm:4.0.0":
-  version: 4.0.0
-  resolution: "volto-venue@npm:4.0.0"
+"volto-venue@npm:4.0.1":
+  version: 4.0.1
+  resolution: "volto-venue@npm:4.0.1"
   dependencies:
     leaflet: 1.6.0
     leaflet.markercluster: 1.5.0
     react-leaflet: 2.7.0
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
-  checksum: eca4cf3f0661dd3bd6350aa645d790367928f6d228fabfdae57ed51076abcb9261f69520213f12fcc6e6630ee6275c4dfa518e0db2adac1a59e6203f8ee3e1f6
+  checksum: 8c5d5a20d0cd5883aef6dc59cfb00dcdaf68f0a55b423facb2207f8615221ee84dfeaedf4fbdb0c9bb23838167d29a731b82ff7c343784f3d98ef2d47172f265
   languageName: node
   linkType: hard
 
