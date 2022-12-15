@@ -1,3 +1,10 @@
+## [7.0.0-alpha.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0-alpha.1...v7.0.0-alpha.2) (2022-12-15)
+
+
+### Bug Fixes
+
+* upgraded volto-venue to 4.0.1 ([cafbec6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/cafbec6c2d460553e53cefb867fd29c47613843d))
+
 ## [7.0.0-alpha.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v6.5.0...v7.0.0-alpha.1) (2022-12-11)
 
 
