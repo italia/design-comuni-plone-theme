@@ -589,6 +589,19 @@ body.cms-ui {
       word-break: break-word;
     }
   }
+  &.view-diffview,
+  &.section-historyview {
+    .ui.table,
+    #toolbar .ui.table {
+      table-layout: fixed;
+      width: 100%;
+    }
+  }
+  &.view-diffview {
+    @import 'bootstrap/scss/card';
+    @import 'bootstrap-italia/src/scss/custom/card';
+    @import './bootstrap-override/bootstrap-italia/_card.scss';
+  }
 }
 
 body.public-ui.has-toolbar {
