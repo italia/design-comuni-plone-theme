@@ -1,3 +1,15 @@
+## [7.0.0-alpha.5](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0-alpha.4...v7.0.0-alpha.5) (2022-12-16)
+
+
+### Features
+
+* upgraded volto to 16.5.0 ([6404b0d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6404b0d5a7c83b2603227ab72e6322df9f09f015))
+
+
+### Bug Fixes
+
+* version overview customization ([95332b9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/95332b9ee9fbad337a0b473615f0e8e33694460e))
+
 ## [7.0.0-alpha.4](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0-alpha.3...v7.0.0-alpha.4) (2022-12-16)
 
 
