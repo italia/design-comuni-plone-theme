@@ -1,3 +1,15 @@
+## [7.0.0-alpha.6](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0-alpha.5...v7.0.0-alpha.6) (2022-12-16)
+
+
+### Bug Fixes
+
+* version overview customization ([80606fb](https://github.com/RedTurtle/design-comuni-plone-theme/commit/80606fbeec5ac9fe072f12f887b61c1ad904c219))
+
+
+### Maintenance
+
+* re-add locales in lint-staged ([bc649d0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/bc649d05cb7e142456c6f9e6ac33b70cbb90f683))
+
 ## [7.0.0-alpha.5](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0-alpha.4...v7.0.0-alpha.5) (2022-12-16)
 
 
