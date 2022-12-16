@@ -1,3 +1,19 @@
+## [7.0.0-alpha.4](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0-alpha.3...v7.0.0-alpha.4) (2022-12-16)
+
+
+### Features
+
+* added io-Comune version in controlpanels view ([#17](https://github.com/RedTurtle/design-comuni-plone-theme/issues/17)) ([f8c38fc](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f8c38fc283f8fbebc523d18a9209e259991aa29c))
+* file view custom ([#25](https://github.com/RedTurtle/design-comuni-plone-theme/issues/25)) ([90ce17e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/90ce17e2e2c7239a521c8cacc4edd4f4d0dd843e))
+* use image_scales metadata ([#14](https://github.com/RedTurtle/design-comuni-plone-theme/issues/14)) ([12a4c2e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/12a4c2e7a80fcece8c94e51004ace78dc307e1f8))
+
+
+### Bug Fixes
+
+* editable footer errors and style ([#23](https://github.com/RedTurtle/design-comuni-plone-theme/issues/23)) ([f050b62](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f050b625f4e5201523bd55c8e0d2722a107d7d0f))
+* history view ([#27](https://github.com/RedTurtle/design-comuni-plone-theme/issues/27)) ([f2ddda7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f2ddda7eb39f74e29749ab7c886ed838ab17326d))
+* remove new volto headlines configs from listing block ([#28](https://github.com/RedTurtle/design-comuni-plone-theme/issues/28)) ([157577b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/157577b7c063287d70c6e14125b552d80cd29641))
+
 ## [7.0.0-alpha.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0-alpha.2...v7.0.0-alpha.3) (2022-12-15)
 
 
