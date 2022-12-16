@@ -45,7 +45,7 @@ import {
 import DiffField from './DiffField';
 
 import backSVG from '@plone/volto/icons/back.svg';
-import { Progress } from 'design-react-kit/dist/design-react-kit';
+import { Progress } from 'design-react-kit';
 
 const messages = defineMessages({
   diff: {
