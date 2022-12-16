@@ -20,7 +20,11 @@ const ListingImage = ({
     return (
       <Image
         className={className}
-        image={item[item.image_field] || item.image || item['@id']}
+        image={
+          item.image_scales?.[item.image_field]?.[0] ||
+          item.image ||
+          item['@id']
+        }
         aria-hidden="true"
         alt={item.title}
         title={item.title}
