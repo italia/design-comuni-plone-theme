@@ -1,3 +1,6 @@
+import { version as voltoVersion } from '../../node_modules/@plone/volto/package.json';
+import { version as ioComuneVersion } from '../../package.json';
+
 import menuSVG from '@plone/volto/icons/menu.svg';
 import menuAltSVG from '@plone/volto/icons/menu-alt.svg';
 import navSVG from '@plone/volto/icons/nav.svg';
@@ -59,6 +62,10 @@ export default function applyConfig(voltoConfig) {
 
   config.settings = {
     ...config.settings,
+    info: {
+      voltoVersion,
+      ioComuneVersion,
+    },
     sentryOptions: (libraries) => ({
       ...voltoSentryOptions(libraries),
       ignoreErrors: [
