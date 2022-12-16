@@ -200,6 +200,11 @@ msgstr ""
 msgid "Dimensione della mappa"
 msgstr ""
 
+#: config/RichTextEditor/Plugins/AnchorPlugin/components/LinkButton/AddLinkForm
+# defaultMessage: Enter URL or select an item
+msgid "Enter URL or select an item"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
 # defaultMessage: Etichetta
 msgid "Etichetta location filter"
@@ -400,6 +405,11 @@ msgstr "Ne pas afficher tous les sujets"
 msgid "Number placeholder"
 msgstr ""
 
+#: components/ItaliaTheme/Header/SocialHeader
+# defaultMessage: - apri in nuova scheda
+msgid "Nuova scheda"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
 # defaultMessage: Apri in un nuovo tab
 msgid "Open in a new tab"
@@ -480,6 +490,11 @@ msgstr ""
 # defaultMessage: Seguici su
 msgid "Seguici su"
 msgstr "Suivez-nous sur"
+
+#: config/RichTextEditor/Plugins/AnchorPlugin/components/LinkButton/AddLinkForm
+# defaultMessage: Seleziona un data-element ID
+msgid "Select a data-element ID"
+msgstr ""
 
 #: components/ItaliaTheme/Search/SearchCTs
 # defaultMessage: Seleziona tutti i tipi di contenuti o nessuno
@@ -2281,6 +2296,11 @@ msgstr ""
 msgid "page_cured_by"
 msgstr "Cette page est gérée par"
 
+#: components/ItaliaTheme/Pagination/Pagination
+# defaultMessage: Selettore di pagina
+msgid "paginationLabel"
+msgstr ""
+
 #: components/ItaliaTheme/View/EventoView/EventoCosE
 # defaultMessage: Parteciperanno
 msgid "parteciperanno"
@@ -2880,6 +2900,16 @@ msgstr ""
 # defaultMessage: Il servizio non è attivo
 msgid "service_not_active"
 msgstr "Le service n'est pas actif"
+
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
+# defaultMessage: Servizio non attivo
+msgid "service_off"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
+# defaultMessage: Servizio attivo
+msgid "service_on"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Servizi
