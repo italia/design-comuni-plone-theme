@@ -9,6 +9,8 @@ import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { isEmpty } from 'lodash';
 
+import packageJson from '../../../../../../package.json';
+
 import { defineMessages, useIntl } from 'react-intl';
 import config from '@plone/volto/registry';
 
@@ -40,11 +42,9 @@ const VersionOverview = ({
           paddingLeft: '1rem',
         }}
       >
-        {config.settings.info.ioComuneVersion && (
-          <li>io-Comune {config.settings.info.ioComuneVersion}</li>
-        )}
-        {config.settings.info.voltoVersion && (
-          <li>Volto {config.settings.info.voltoVersion}</li>
+        {packageJson.version && <li>io-Comune {packageJson.version}</li>}
+        {packageJson.dependencies['@plone/volto'] && (
+          <li>Volto {packageJson.dependencies['@plone/volto']}</li>
         )}
         <li>Plone {plone_version}</li>
         <li>plone.restapi {plone_restapi_version}</li>
