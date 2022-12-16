@@ -261,7 +261,23 @@ const italiaListingVariations = [
 ];
 
 export const getItaliaListingVariations = (config) => {
-  return italiaListingVariations;
+  return italiaListingVariations.map((variation) => ({
+    ...variation,
+    schemaEnhancer: ({ schema, formData, intl }) => {
+      const newSchema = variation.schemaEnhancer({ schema, formData, intl });
+      const defaultFieldsetIndex = newSchema.fieldsets.findIndex(
+        (fieldset) => fieldset.id === 'default',
+      );
+      if (defaultFieldsetIndex > -1) {
+        const defaultFieldset = newSchema.fieldsets[defaultFieldsetIndex];
+        defaultFieldset.fields = defaultFieldset.fields.filter(
+          (field) => field !== 'headline' && field !== 'headlineTag',
+        );
+      }
+
+      return newSchema;
+    },
+  }));
 };
 export const removeListingVariation = (config, id) => {
   let indexOfVariation = -1;

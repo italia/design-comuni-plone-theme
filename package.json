@@ -62,7 +62,8 @@
       "@root/(.*)$": "<rootDir>/src/$1",
       "@italia/(.*)$": "<rootDir>/src/$1",
       "^design-comuni-plone-theme/(.*)$": "<rootDir>/src/$1",
-      "^volto-gdpr-privacy/(.*)$": "<rootDir>/node_modules/volto-gdpr-privacy/src/$1"
+      "^volto-gdpr-privacy/(.*)$": "<rootDir>/node_modules/volto-gdpr-privacy/src/$1",
+      "^volto-venue/(.*)$": "<rootDir>/node_modules/volto-venue/src/$1"
     },
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs,ts,tsx}",
