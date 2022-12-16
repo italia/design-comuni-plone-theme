@@ -123,7 +123,7 @@ const Image = ({
           alt={alt}
           className={className}
           role={role}
-          // removed because this is for the placeholder.Lazy loading is made from intersectionObserver
+          // removed because this is for the placeholder. Lazy loading is made using intersectionObserver
           // loading={critical ? 'eager' : 'lazy'}
           width={width}
           height={height}

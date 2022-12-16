@@ -11,7 +11,7 @@
     "releaseName": "${version}"
   },
   "hooks": {
-    "before:init": ["yarn install --frozen-lockfile", "yarn i18n"]
+    "before:init": ["yarn install --immutable", "yarn i18n"]
   },
   "plugins": {
     "@release-it/conventional-changelog": {

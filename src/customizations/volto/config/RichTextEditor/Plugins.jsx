@@ -2,7 +2,7 @@
  * Customizzato:
  * - cambiato l'import di AnchorPlugin per poterlo customizzare
  */
-import createLinkPlugin from '@italia/config/RichTextEditor/Plugins/AnchorPlugin';
+import createLinkPlugin from 'design-comuni-plone-theme/config/RichTextEditor/Plugins/AnchorPlugin';
 
 import Styles from '@plone/volto/config/RichTextEditor/Styles';
 
@@ -27,9 +27,8 @@ const breakOutOptions = {
 const plugins = (props) => {
   const { draftJsInlineToolbarPlugin, draftJsBlockBreakoutPlugin } = props;
   const { Separator } = draftJsInlineToolbarPlugin;
-  const blockBreakoutPlugin = draftJsBlockBreakoutPlugin.default(
-    breakOutOptions,
-  );
+  const blockBreakoutPlugin =
+    draftJsBlockBreakoutPlugin.default(breakOutOptions);
 
   const linkPlugin = createLinkPlugin({ libraries: props });
 

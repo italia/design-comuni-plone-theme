@@ -271,3 +271,42 @@ iframe {
     }
   }
 }
+
+// fix footer line and columns without title
+.it-footer-main {
+  .row > div {
+    h4:empty:before {
+      content: '\200b';
+      @media (max-width: #{map-get($grid-breakpoints, md)}) {
+        content: none;
+      }
+    }
+
+    h4 {
+      padding-bottom: 0.889rem;
+      border-bottom: 1px solid hsla(0, 0%, 100%, 0.5);
+      @media (max-width: #{map-get($grid-breakpoints, md)}) {
+        &:empty {
+          margin-bottom: 0 !important;
+          padding-bottom: 0 !important;
+        }
+      }
+    }
+  }
+  .row > div ~ div h4:empty {
+    position: relative;
+    border-bottom: none;
+    &::after {
+      content: '';
+      position: absolute;
+      width: calc(100% + $grid-gutter-width);
+      background: hsla(0, 0%, 100%, 0.5);
+      height: 1px;
+      bottom: -1px;
+      left: -$grid-gutter-width;
+      @media (max-width: #{map-get($grid-breakpoints, md)}) {
+        content: none;
+      }
+    }
+  }
+}

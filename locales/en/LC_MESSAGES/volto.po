@@ -391,7 +391,7 @@ msgstr ""
 #: components/ItaliaTheme/Header/SocialHeader
 # defaultMessage: - apri in nuova scheda
 msgid "Nuova scheda"
-msgstr " - open in a new window"
+msgstr "- open in a new tab"
 
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
 # defaultMessage: Apri in un nuovo tab
@@ -477,7 +477,7 @@ msgstr "Follow us on"
 #: config/RichTextEditor/Plugins/AnchorPlugin/components/LinkButton/AddLinkForm
 # defaultMessage: Seleziona un data-element ID
 msgid "Select a data-element ID"
-msgstr ""
+msgstr "Select a data-element ID"
 
 #: components/ItaliaTheme/Search/SearchCTs
 # defaultMessage: Seleziona tutti i tipi di contenuti o nessuno

@@ -61,16 +61,18 @@ const FooterInfos = () => {
             key={index}
           >
             <h4>
-              <ConditionalLink
-                condition={column.titleLink?.length > 0}
-                item={column.titleLink?.[0]}
-                to={column.titleLink?.[0]?.['@id'] ? null : ''}
-                title={
-                  intl.formatMessage(messages.goToPage) + ':' + column.title
-                }
-              >
-                {column.title}
-              </ConditionalLink>
+              {column?.title && (
+                <ConditionalLink
+                  condition={column.titleLink?.length > 0}
+                  item={column.titleLink?.[0]}
+                  to={column.titleLink?.[0]?.['@id'] ? null : ''}
+                  title={
+                    intl.formatMessage(messages.goToPage) + ':' + column.title
+                  }
+                >
+                  {column.title}
+                </ConditionalLink>
+              )}
             </h4>
             {column.showSocial && <FooterSocials />}
 
