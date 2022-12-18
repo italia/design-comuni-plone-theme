@@ -1,3 +1,10 @@
+## [7.0.0-alpha.7](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0-alpha.6...v7.0.0-alpha.7) (2022-12-18)
+
+
+### Features
+
+* upgraded volto-editablefooter to 5.0.1 ([3be20c0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3be20c0ea6922d7b249d8d1754169aba66de6dab))
+
 ## [7.0.0-alpha.6](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0-alpha.5...v7.0.0-alpha.6) (2022-12-16)
 
 
