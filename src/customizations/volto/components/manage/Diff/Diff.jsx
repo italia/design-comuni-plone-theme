@@ -136,18 +136,19 @@ class Diff extends Component {
     const history = createBrowserHistory();
 
     const store = configureStore(this.props.reduxState, history, api);
-    this.setState((state) => ({ ...state, store, history }));
+
+    if (store) this.setState((state) => ({ ...state, store, history }));
   }
-  initialize(overriddenType = '') {
+  initialize(overriddenType) {
     // prevent type from being undefined, especially on reload
-    this.props.getSchema(overriddenType ?? this.props.type);
+    if (!overriddenType) return;
+    this.props.getSchema(overriddenType);
     this.props.getHistory(getBaseUrl(this.props.pathname));
     this.props.getDiff(
       getBaseUrl(this.props.pathname),
       this.props.one,
       this.props.two,
     );
-    this.createStore();
   }
   /**
    * Component did mount
@@ -159,9 +160,9 @@ class Diff extends Component {
       // need to refetch content, we lost it in reload
       this.props.getContent(this.props.location.pathname.split('/diff')[0]);
     } else {
-      this.initialize();
+      this.initialize(this.props.type);
+      if (this.props.reduxState) this.createStore();
     }
-    this.createStore();
     this.setState({ isClient: true });
   }
 
@@ -177,6 +178,14 @@ class Diff extends Component {
       this.initialize(nextProps.type);
     }
     if (
+      (nextProps.reduxState && !this.props.reduxState) ||
+      this.props.pathname !== nextProps.pathname ||
+      nextProps?.reduxState !== this.state?.store?.getState()
+    ) {
+      // need to refetch content, we lost it in reload
+      this.createStore();
+    }
+    if (
       this.props.pathname !== nextProps.pathname ||
       this.props.one !== nextProps.one ||
       this.props.two !== nextProps.two
@@ -186,6 +195,7 @@ class Diff extends Component {
         nextProps.one,
         nextProps.two,
       );
+      this.createStore();
     }
   }
 
@@ -252,7 +262,8 @@ class Diff extends Component {
 
     return (
       !this.props.error &&
-      this.props.contentLoaded && (
+      this.props.contentLoaded &&
+      this.state.store && (
         <Container id="page-diff">
           <Helmet title={this.props.intl.formatMessage(messages.diff)} />
           <h1>
@@ -272,6 +283,12 @@ class Diff extends Component {
                 <FormattedMessage
                   id="You can view the difference of the revisions below."
                   defaultMessage="You can view the difference of the revisions below."
+                />
+              </p>
+              <p className="description">
+                <FormattedMessage
+                  id="Some blocks cannot be rendered in this view and placeholders will be visible. Use `See content at specific revision` tool to see ar complete render of this content."
+                  defaultMessage="Alcuni blocchi non possono essere renderizzati correttamente in questa vista e verranno mostrati dei placeholder al loro posto o delle informazioni incomplete. Per visualizzare un render completo di un contenuto ad una specifica versione, usa lo strumento Mostra questa revisione nella pagina della cronologia del contenuto."
                 />
               </p>
             </Grid.Column>
@@ -364,6 +381,8 @@ class Diff extends Component {
                     field={field}
                     store={this.state.store}
                     history={this.state.history}
+                    contentOne={this.props?.data?.[0]}
+                    contentTwo={this.props?.data?.[1]}
                   />
                 );
               }),

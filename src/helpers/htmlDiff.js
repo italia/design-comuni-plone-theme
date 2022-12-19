@@ -4,6 +4,7 @@ import { DefaultView } from '@plone/volto/components';
 import { ConnectedRouter } from 'connected-react-router';
 
 export const blockIsNotEmptyPlaceholder = (blockField) => {
+  if (!!!blockField?.blocks) return true;
   return Object.values(blockField?.blocks)?.some((entry) => {
     const type = entry['@type'];
     if (entry[type]?.blocks?.length > 0) return true;
@@ -40,7 +41,7 @@ export const SSRRenderHtml = (history, store, content, type) => {
   //       )
   //     : '<p></p>';
   // }
-  else if (type === 'image') {
+  else if (type.includes('image')) {
     return `<p>${content?.filename ?? ''}</p>`;
   } else if (type === 'geolocation') {
     const toRender = content

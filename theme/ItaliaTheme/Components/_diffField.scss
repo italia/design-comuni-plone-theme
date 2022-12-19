@@ -9,6 +9,17 @@ table.diffField {
       max-width: calc(100% - $grid-gutter-width) !important;
       object-fit: contain;
     }
+    .block.full-width,
+    .full-width {
+      width: calc(100% - $grid-gutter-width) !important;
+      left: unset !important;
+      right: unset !important;
+      margin: 0 !important;
+    }
+    // calendar block
+    .calendar .slick-dots {
+      top: 0;
+    }
     // video block
     .block.video {
       .video-inner {

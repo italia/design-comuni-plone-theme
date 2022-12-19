@@ -190,7 +190,10 @@ class History extends Component {
                 <Table.HeaderCell width={2}>
                   <FormattedMessage id="Who" defaultMessage="Who" />
                 </Table.HeaderCell>
-                <Table.HeaderCell width={2}>
+                <Table.HeaderCell
+                  width={2}
+                  style={{ whiteSpace: 'break-spaces' }}
+                >
                   <FormattedMessage id="When" defaultMessage="When" />
                 </Table.HeaderCell>
                 <Table.HeaderCell width={4}>
@@ -218,7 +221,7 @@ class History extends Component {
                       </Link>
                     )) || <span>{entry.version}</span>}
                   </Table.Cell>
-                  <Table.Cell width={4}>
+                  <Table.Cell width={4} style={{ whiteSpace: 'break-spaces' }}>
                     {('version' in entry && entry.version > 0 && (
                       <Link
                         className="item"
@@ -239,11 +242,15 @@ class History extends Component {
                       </span>
                     )}
                   </Table.Cell>
-                  <Table.Cell width={2}>{entry.actor.fullname}</Table.Cell>
+                  <Table.Cell width={2} style={{ whiteSpace: 'break-spaces' }}>
+                    {entry.actor.fullname}
+                  </Table.Cell>
                   <Table.Cell width={2}>
                     <FormattedDate date={entry.time} />
                   </Table.Cell>
-                  <Table.Cell width={4}>{entry.comments}</Table.Cell>
+                  <Table.Cell width={4} style={{ whiteSpace: 'break-spaces' }}>
+                    {entry.comments}
+                  </Table.Cell>
                   <Table.Cell width={1}>
                     {entry.type === 'versioning' && (
                       <Dropdown icon="ellipsis horizontal">
