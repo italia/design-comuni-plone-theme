@@ -5,6 +5,9 @@ import { ArrayWidget, WysiwygWidget } from '@plone/volto/components';
 import { MultilingualWidget } from 'volto-multilingual-widget';
 import IconWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/IconWidget';
 import SubsiteSocialLinksWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/SubsiteSocialLinksWidget';
+import MenuConfigurationForm from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/MenuConfigurationForm';
+import SecondaryMenuConfigurationForm from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/SecondaryMenuConfigurationForm';
+import SubFooterConfigurationForm from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/SubFooterConfigurationForm';
 import SearchSectionsConfigurationWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget';
 import { defaultIconWidgetOptions } from 'design-comuni-plone-theme/helpers/index';
 import {
@@ -16,6 +19,19 @@ import {
 //import TinymceWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/TinymceWidget';
 
 const getItaliaWidgets = (config) => {
+  config.registerComponent({
+    name: 'MenuConfigurationForm',
+    component: MenuConfigurationForm,
+  });
+  config.registerComponent({
+    name: 'SecondaryMenuConfigurationForm',
+    component: SecondaryMenuConfigurationForm,
+  });
+  config.registerComponent({
+    name: 'SubFooterConfigurationForm',
+    component: SubFooterConfigurationForm,
+  });
+
   return {
     id: {
       ...config.widgets.id,

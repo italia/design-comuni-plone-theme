@@ -1,7 +1,8 @@
 /**
  * SubFooterConfigurationForm
  * @module components/src/widget/SubFooterConfigurationForm.jsx
- * added new select field with lighthouse options
+ * Customized via component registry:
+ * - added new select field with lighthouse options
  */
 
 import React, { useEffect } from 'react';

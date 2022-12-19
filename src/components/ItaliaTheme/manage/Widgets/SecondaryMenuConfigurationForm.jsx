@@ -1,7 +1,8 @@
 /**
  * SecondaryMenuConfigurationForm
  * @module components/src/widget/SecondaryMenuConfigurationForm.jsx
- * added new select field with lighthouse options
+ * Customized via component registry:
+ * - added new select field with lighthouse options
  */
 
 import React, { useEffect } from 'react';
