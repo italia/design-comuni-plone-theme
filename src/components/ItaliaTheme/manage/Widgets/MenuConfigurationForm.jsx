@@ -1,7 +1,8 @@
 /**
  * MenuConfigurationForm
  * @module components/src/widget/MenuConfigurationForm.jsx
- * added new select field with lighthouse options
+ * Customized via component registry:
+ * - added new select field with lighthouse options
  */
 
 import React, { useEffect } from 'react';

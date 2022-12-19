@@ -1,3 +1,19 @@
+## [7.0.0-alpha.8](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0-alpha.7...v7.0.0-alpha.8) (2022-12-19)
+
+
+### Bug Fixes
+
+* race condition in Diff view and components, better diff preview for native volto blocks ([#30](https://github.com/RedTurtle/design-comuni-plone-theme/issues/30)) ([fc6535e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fc6535e6912bf7d52632a5830651bd53d2d656a9))
+* updated locales ([4433ed9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4433ed9487ea1ff6d0604445ab80b148c4ee7a45))
+* upgraded volto-subfooter volto-secondarymenu volto-dropdownmenu ([2ce140c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2ce140c0b1b5d3601f727fc158eb2e6e6b16a5c8))
+
+## [7.0.0-alpha.7](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0-alpha.6...v7.0.0-alpha.7) (2022-12-18)
+
+
+### Features
+
+* upgraded volto-editablefooter to 5.0.1 ([3be20c0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3be20c0ea6922d7b249d8d1754169aba66de6dab))
+
 ## [7.0.0-alpha.6](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0-alpha.5...v7.0.0-alpha.6) (2022-12-16)
 
 

@@ -260,6 +260,9 @@ msgstr ""
 msgid "ID Lighthouse"
 msgstr ""
 
+#: components/ItaliaTheme/manage/Widgets/MenuConfigurationForm
+#: components/ItaliaTheme/manage/Widgets/SecondaryMenuConfigurationForm
+#: components/ItaliaTheme/manage/Widgets/SubFooterConfigurationForm
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Identificativo di servizio a solo uso interno, utilizzato per le verifiche AgID inerenti al PNRR.
 msgid "ID Lighthouse Help Description"
@@ -1675,9 +1678,84 @@ msgstr ""
 msgid "download"
 msgstr ""
 
+#: components/ItaliaTheme/manage/Widgets/MenuConfigurationForm
+# defaultMessage: Additional classes
+msgid "dropdownmenu-additionalClasses"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/MenuConfigurationForm
+# defaultMessage: Additional classes for the item to apply specific styles, accordingly to site layout.
+msgid "dropdownmenu-additionalClassesDescription"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/MenuConfigurationForm
+# defaultMessage: Blocks
+msgid "dropdownmenu-blocks"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/MenuConfigurationForm
+# defaultMessage: Add some blocks to show in dropdown menu.
+msgid "dropdownmenu-blocks-description"
+msgstr ""
+
 #: components/ItaliaTheme/MegaMenu/MegaMenu
 # defaultMessage: Close menu
 msgid "dropdownmenu-close-menu-button"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/MenuConfigurationForm
+# defaultMessage: Delete menu item
+msgid "dropdownmenu-deletemenuitem"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/MenuConfigurationForm
+# defaultMessage: Delete menu item
+msgid "dropdownmenu-deletemenuitem-button"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/MenuConfigurationForm
+# defaultMessage: Link
+msgid "dropdownmenu-linkUrl"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/MenuConfigurationForm
+# defaultMessage: Mode
+msgid "dropdownmenu-mode"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/MenuConfigurationForm
+# defaultMessage: Dropdown
+msgid "dropdownmenu-mode-dropdown"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/MenuConfigurationForm
+# defaultMessage: Simple link
+msgid "dropdownmenu-mode-simpleLink"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/MenuConfigurationForm
+# defaultMessage: Navigation root
+msgid "dropdownmenu-navigationRoot"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/MenuConfigurationForm
+# defaultMessage: "Show more" link
+msgid "dropdownmenu-showMoreLink"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/MenuConfigurationForm
+# defaultMessage: "Show more" link text
+msgid "dropdownmenu-showMoreText"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/MenuConfigurationForm
+# defaultMessage: Title
+msgid "dropdownmenu-title"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/MenuConfigurationForm
+# defaultMessage: Visible
+msgid "dropdownmenu-visible"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/SubsiteSocialLinksWidget
@@ -2843,6 +2921,36 @@ msgstr ""
 msgid "searchsectionswidget-title"
 msgstr ""
 
+#: components/ItaliaTheme/manage/Widgets/SecondaryMenuConfigurationForm
+# defaultMessage: Delete menu item
+msgid "secondarymenu-deletemenuitem-button"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SecondaryMenuConfigurationForm
+# defaultMessage: In evidence
+msgid "secondarymenu-inevidence"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SecondaryMenuConfigurationForm
+# defaultMessage: Link
+msgid "secondarymenu-linkUrl"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SecondaryMenuConfigurationForm
+# defaultMessage: Type an external url, or select an internal url clicking on the right button
+msgid "secondarymenu-linkUrl_description"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SecondaryMenuConfigurationForm
+# defaultMessage: Title
+msgid "secondarymenu-title"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SecondaryMenuConfigurationForm
+# defaultMessage: Visible
+msgid "secondarymenu-visible"
+msgstr ""
+
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: altro
 msgid "section_undefined"
@@ -3143,6 +3251,36 @@ msgstr ""
 #: components/ItaliaTheme/View/VenueView/VenueContacts
 # defaultMessage: Struttura responsabile
 msgid "struttura_responsabile"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SubFooterConfigurationForm
+# defaultMessage: Delete menu item
+msgid "subfooter-deletemenuitem-button"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SubFooterConfigurationForm
+# defaultMessage: In evidence
+msgid "subfooter-inevidence"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SubFooterConfigurationForm
+# defaultMessage: Link
+msgid "subfooter-linkUrl"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SubFooterConfigurationForm
+# defaultMessage: Type an external url, or select an internal url clicking on the right button
+msgid "subfooter-linkUrl_description"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SubFooterConfigurationForm
+# defaultMessage: Title
+msgid "subfooter-title"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/SubFooterConfigurationForm
+# defaultMessage: Visible
+msgid "subfooter-visible"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Metadata

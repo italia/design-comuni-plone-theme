@@ -7732,17 +7732,17 @@ __metadata:
     typeface-titillium-web: 0.0.72
     volto-blocks-widget: 3.0.0
     volto-customer-satisfaction: 1.0.0
-    volto-dropdownmenu: 3.0.0
+    volto-dropdownmenu: 4.0.0
     volto-editablefooter: 5.0.1
     volto-form-block: 3.0.0
     volto-gdpr-privacy: 2.0.0
     volto-google-analytics: 2.0.0
     volto-multilingual-widget: 3.0.0
     volto-rss-block: 3.0.0
-    volto-secondarymenu: 3.0.0
+    volto-secondarymenu: 4.0.0
     volto-social-settings: 3.0.0
     volto-subblocks: 2.0.0
-    volto-subfooter: 2.0.0
+    volto-subfooter: 3.0.0
     volto-subsites: 4.0.0
     volto-venue: 4.0.2
     webpack-image-resize-loader: ^5.0.0
@@ -22203,14 +22203,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"volto-dropdownmenu@npm:3.0.0":
-  version: 3.0.0
-  resolution: "volto-dropdownmenu@npm:3.0.0"
+"volto-dropdownmenu@npm:4.0.0":
+  version: 4.0.0
+  resolution: "volto-dropdownmenu@npm:4.0.0"
   dependencies:
     react-outside-click-handler: 1.3.0
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
-  checksum: 32011786a7d6ec213566fea7a7b0d3219434804d18c553a958a3d72f2fcfc77c9d52b5e8134a4a89a12acfa48a197c9c7e1046a9335456333467255a6a2ea6bf
+  checksum: 789ef900dc9f5d0d03b37b82d172c3cd864ef8c367c0d275486da73e789f882576506b415c530ad7f8e5f9c85ca33c4e7ded917b3fe24e030cb4baf1bdb2001d
   languageName: node
   linkType: hard
 
@@ -22280,12 +22280,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"volto-secondarymenu@npm:3.0.0":
-  version: 3.0.0
-  resolution: "volto-secondarymenu@npm:3.0.0"
+"volto-secondarymenu@npm:4.0.0":
+  version: 4.0.0
+  resolution: "volto-secondarymenu@npm:4.0.0"
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
-  checksum: e52a61b5a36cd4d483e703d78a41885e652f93b898eff94fbe0f7b19fcac251acf6da206f7adc269d0076f2bdd104b5812314fc1be3c801b767bb785e3520d6d
+  checksum: cec270574025c0fdf66f050261d018738fb3784ff6d90524d6e034722aaa5e62216f286b720c45829e2de7fdc20cf694c49f5aeae37f6cad65dce88da1a03ade
   languageName: node
   linkType: hard
 
@@ -22310,12 +22310,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"volto-subfooter@npm:2.0.0":
-  version: 2.0.0
-  resolution: "volto-subfooter@npm:2.0.0"
+"volto-subfooter@npm:3.0.0":
+  version: 3.0.0
+  resolution: "volto-subfooter@npm:3.0.0"
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
-  checksum: bb211ab7f6db8621efc7bf1ba2af60a32caff5f6aabf5d0a4d7b59fd81a83c83a6b97528d8e1b073e446af4fa7dfbfa2056cea5dc8b648e27bd26a60c771d7e5
+  checksum: c7619ac55e4e8d148c080e3333f612afb2b38a42b2f754f984cf0725972684625e84f5bab4c03f4480ce7911c8833cdfdf66765ed47496022cb983cdbd178a8e
   languageName: node
   linkType: hard
 

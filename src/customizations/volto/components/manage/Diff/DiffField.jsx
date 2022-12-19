@@ -19,6 +19,13 @@ import {
   blockIsNotEmptyPlaceholder,
   SSRRenderHtml,
 } from 'design-comuni-plone-theme/helpers';
+import {
+  getBaseUrl,
+  getBlocksFieldname,
+  getBlocksLayoutFieldname,
+  hasBlocksData,
+} from '@plone/volto/helpers';
+import content from '../../../../../../omelette/src/reducers/content/content';
 
 /**
  * Enhanced diff words utility
@@ -66,7 +73,7 @@ const DiffField = ({
   const diffs = useMemo(() => {
     let parts;
 
-    if (isEqual(one, two)) return null;
+    if (isEqual(one, two) || field === 'blocks_layout') return null;
     if (schema?.widget) {
       switch (schema.widget) {
         case 'richtext':
@@ -82,11 +89,12 @@ const DiffField = ({
             ),
           );
           break;
-        case 'json':
+
         case 'blocks':
           if (
-            !blockIsNotEmptyPlaceholder(one) &&
-            !blockIsNotEmptyPlaceholder(two)
+            (!blockIsNotEmptyPlaceholder(one) &&
+              !blockIsNotEmptyPlaceholder(two)) ||
+            !!!store
           )
             break;
 
@@ -95,11 +103,20 @@ const DiffField = ({
 
           parts = diff2(first, second);
           break;
+        case 'json':
+          if (isEqual(contentOne, contentTwo)) break;
+          const bOne = SSRRenderHtml(history, store, contentOne, schema.widget);
+          const bTwo = SSRRenderHtml(history, store, contentTwo, schema.widget);
+
+          parts = diff2(bOne, bTwo);
+          break;
         default:
           parts = diff2(one, two);
           break;
       }
-    } else if (schema.type === 'object') {
+    } else if (schema.type === 'object' && store) {
+      if (field.includes('image') && isEqual(one?.filename, two?.filename))
+        return;
       const first = SSRRenderHtml(history, store, one, field);
       const second = SSRRenderHtml(history, store, two, field);
       parts = diff2(first, second);
@@ -118,8 +135,9 @@ const DiffField = ({
     }
     return parts;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [one, two, schema, field, language]);
-  return diffs ? (
+  }, [one, two, schema, field, language, store, history]);
+
+  return store && diffs ? (
     <Table compact data-testid="DiffField" className="diffField">
       <Table.Header>
         <Table.Row>
@@ -136,9 +154,13 @@ const DiffField = ({
                   __html: SSRRenderHtml(
                     history,
                     store,
-                    schema?.type === 'boolean' ? booleanMapping[!!one] : one,
+                    schema?.type === 'boolean'
+                      ? booleanMapping[!!one]
+                      : schema?.widget === 'json'
+                      ? contentOne
+                      : one,
                     schema?.widget ??
-                      (schema?.type === 'object' && field === 'image'
+                      (schema?.type === 'object' && field.includes('image')
                         ? field
                         : schema?.type),
                   ),
