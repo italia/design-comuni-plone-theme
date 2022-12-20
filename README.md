@@ -1,10 +1,52 @@
-# Tema di Plone per la Pubblica Amministrazione
+# io-Comune: il tema di Plone per la Pubblica Amministrazione
 
-[io-Comune](https://www.io-comune.it/) è il tema Volto per il CMS [Plone](https://plone.org/) che rispetta le indicazioni [Linee guida di design per i servizi digitali della PA](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/it/stabile/index.html) usando [bootstrap-italia](https://italia.github.io/bootstrap-italia/).
+Crea con semplicità il nuovo sito del tuo Comune o Ente Pubblico:\
+conforme alle nuove linee guida AgID, accessibile a tutti ed usabile da smartphone e da PC.
 
-E' basato sulle linee guida versione 2020.1 e questo tema estende il tema base di Volto [design.plone.theme](https://github.com/italia/design.plone.theme/).
+![io-comune](/docs/01-io-comune.png)
 
-io-Comune non è solo un tema grafico ma gestisce e implementa anche tutte le tipologia di contenuto (Content Type) delle linee guida: di fatto consente la realizzazione di un sito istituzionale di un Comune (ma anche di altri tipi di Enti) conforme alle linee guida di design.
+### Pensato per i cittadini, costruito con i redattori
+
+io-Comune è la soluzione versatile e facile da usare per garantire ai cittadini un rapido accesso ai contenuti e ai servizi del tuo Comune, sia dal PC che da mobile.      
+      
+### AgID 2.0
+
+io-Comune segue le linee guida ufficiali per il design dei siti web dei Comuni italiani: layout grafico, architettura informativa, struttura dei contenuti e flussi di navigazione rispecchiano gli standard definiti da AgID.
+      
+### Trovabilità dei contenuti
+
+io-Comune integra componenti e flussi di navigazione suggeriti da AgID, con l'esperienza ventennale di [RedTurtle](https://www.redturtle.it/) nella gestione di complesse basi informative per darti la migliore esperienza di fruizione e portarti velocemente al contenuto desiderato.
+
+### La porta per i servizi online
+      
+io-Comune supporta nativamente le piattaforme abilitanti, come la componente di autenticazione SPID e il sistema di pagamento pagoPA.\
+Inoltre, io-Comune permetterà l’integrazione con IO, l'app ufficiale dei servizi pubblici, per poter dialogare con i cittadini anche dal telefono.
+      
+### Certificato e sicuro, si affida ad un CMS open source
+      
+Puoi  utilizzare io-Comune in totale sicurezza perché ha seguito con successo il [percorso di qualificazione per i fornitori di Software as a Service](https://catalogocloud.agid.gov.it/service/1085) della PA (SaaS).
+
+Questo ti garantisce un servizio di qualità e libertà di cambiare piattaforma senza vincoli di lock-in.
+
+io-Comune è una piattaforma disponibile nel cloud certificato della PA. In particolare il servizio viene erogato sulla piattaforma certificata IaaS (Infrastructure as a Service) Amazon Web Services presso la server farm di Milano, offrendo tutta la robustezza e sicurezza necessaria.
+
+[io-Comune](https://www.io-comune.it/) è il tema Volto per il CMS [Plone](https://plone.org/) che permette di aderire al [modello di sito istituzionale dei Comuni Italiani](https://designers.italia.it/modello/comuni/).
+
+Quindi non solo un semplice tema grafico, gestisce ed implementa anche tutte le tipologia di contenuto (Content Type) delle linee guida: di fatto consente la realizzazione di un sito istituzionale di un Comune (ma anche di altri tipi di Enti Pubblici) conforme alle linee guida di design.
+
+Usato da piccoli Enti e anche da grandi PA come la **Regione Emilia Romagna**, l’**Università di Bologna** e la **Guardia di Finanza** per centinaia di siti.
+
+![io-comune](/docs/04-io-comune.png)
+
+## Installazione e supporto
+
+Nel progetto è presente una configurazione docker compose per testare un sito Io-Comune semplicemente usando il comando::
+
+```bash
+% docker compose up
+```
+
+## Sottositi
 
 Il sistema implementa anche un tipo di contenuto ad hoc per la gestione di sottositi, in linee con le indicazioni generali.
 
@@ -49,63 +91,9 @@ Si veda ad esempio:
 - [Unione Val d'Enza](https://www.unionevaldenza.it/)
 - [Unione Val di Bisenzio](https://www.bisenzio.it/)
 
-## Documentazione tecnica (in inglese)
+## Riferimenti
 
-A training on how to create your own website using Volto is available as part of the Plone training at [https://training.plone.org/volto/index.html](https://training.plone.org/volto/index.html).
-
-## Quick Start
-
-Below is a list of commands you will probably find useful.
-
-### `yarn install`
-
-Installs dependencies with [yarn](https://yarnpkg.com/).
-If you are not installing new dependencies (after updating the package.json file), you may want to use `yarn install --immutable` instead to be sure the versions are the correct ones.
-
-### `yarn start`
-
-Runs the project in development mode.
-You can view your application at `http://localhost:3000`
-
-The page will reload if you make edits.
-
-### `yarn build`
-
-Builds the app for production to the build folder.
-
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
-
-### `yarn start:prod`
-
-Runs the compiled app in production.
-
-You can again view your application at `http://localhost:3000`
-
-### `yarn test`
-
-Runs the test watcher (Jest) in an interactive mode.
-By default, runs tests related to files changed since the last commit.
-
-### `yarn i18n`
-
-Runs the test i18n runner which extracts all the translation strings and
-generates the needed files.
-
-## Release
-
-It is all configured for [release-it](https://github.com/release-it/release-it) and uses conventional changelog (see [COMMITLINT.md](./COMMITLINT.md)).
-To run a release, just run:
-
-```bash
-yarn release-it
-```
-
-if you want to check the configuration, it is in [.release-it.json](./.release-it.json).
-
-By default it will use the commits type and scope to determine the version following semantic versioning rules, but if you want to set a different version, you can add to the release command the version step: major, minor or step.
-For example:
-
-```bash
-yarn release-it -- major
-```
+* [Documentazione tecnica per lo sviluppo del tema](DEVELOPMENT.md)
+* [Documentazione tecnica CMS Plone](https://6.docs.plone.org)
+* [Sito web progetto io-Comune](https://www.io-comune.it/)
+* [Modello di sito istituzionale dei Comuni Italiani](https://designers.italia.it/modello/comuni/)
