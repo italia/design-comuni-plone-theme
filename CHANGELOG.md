@@ -1,3 +1,10 @@
+## [7.0.0-alpha.9](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0-alpha.8...v7.0.0-alpha.9) (2022-12-20)
+
+
+### Bug Fixes
+
+* install volto-sentry to restore sentry functionality ([5f7fe26](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5f7fe2638501f9f587f02662bfaca70bbfc26bf3))
+
 ## [7.0.0-alpha.8](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0-alpha.7...v7.0.0-alpha.8) (2022-12-19)
 
 

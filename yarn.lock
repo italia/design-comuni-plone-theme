@@ -2662,6 +2662,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@plone-collective/volto-sentry@npm:0.3.0":
+  version: 0.3.0
+  resolution: "@plone-collective/volto-sentry@npm:0.3.0"
+  dependencies:
+    "@sentry/browser": 7.15.0
+    "@sentry/integrations": 7.15.0
+    "@sentry/node": 7.15.0
+    "@sentry/webpack-plugin": 1.19.1
+  checksum: 99e5493e46fdc93d69dcdacfdbd7a4ca746952edca805ff095a5fd6789a41820510e4e73d0a4d218f9fbb9b65f80641ac4f2a0c65753a20f193f88e92a04ee1d
+  languageName: node
+  linkType: hard
+
 "@plone/scripts@npm:2.1.2":
   version: 2.1.2
   resolution: "@plone/scripts@npm:2.1.2"
@@ -2949,6 +2961,100 @@ __metadata:
     react: ^16.0.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
   checksum: c16cf268177ed16cd63a56b8c8ec38c41b82afa16a9589accab68b3c20d821d0ad3bfde73a2695618bd04219dd992339d0bc2d6998af5ae44fd061e6b800db58
+  languageName: node
+  linkType: hard
+
+"@sentry/browser@npm:7.15.0":
+  version: 7.15.0
+  resolution: "@sentry/browser@npm:7.15.0"
+  dependencies:
+    "@sentry/core": 7.15.0
+    "@sentry/types": 7.15.0
+    "@sentry/utils": 7.15.0
+    tslib: ^1.9.3
+  checksum: 7adc551a12ab792ebd3a20a82cdbb2751db9ef873fd7a96b4fb5357526b04f4a7b371594163c77fcf096a99c5d537cb7aade0e3df012a96645bcc623077b8912
+  languageName: node
+  linkType: hard
+
+"@sentry/cli@npm:^1.74.4":
+  version: 1.74.6
+  resolution: "@sentry/cli@npm:1.74.6"
+  dependencies:
+    https-proxy-agent: ^5.0.0
+    mkdirp: ^0.5.5
+    node-fetch: ^2.6.7
+    npmlog: ^4.1.2
+    progress: ^2.0.3
+    proxy-from-env: ^1.1.0
+    which: ^2.0.2
+  bin:
+    sentry-cli: bin/sentry-cli
+  checksum: 3d1ef94d5505ed23858503228b59ae1ed401774e27466d7a47eba47be3855e9706f12292d4a0a6135303a5916791620e0d3a184d2fda9e28f2d26ccd347b36fb
+  languageName: node
+  linkType: hard
+
+"@sentry/core@npm:7.15.0":
+  version: 7.15.0
+  resolution: "@sentry/core@npm:7.15.0"
+  dependencies:
+    "@sentry/types": 7.15.0
+    "@sentry/utils": 7.15.0
+    tslib: ^1.9.3
+  checksum: 3a0c410a186f062ba026c85729e35ee78d99e8d124036742fb52e8064f95c32a5d9516514bfb0e52fcd3bfd8ff96678eb586f351e2ed270d8c7733c98cc77548
+  languageName: node
+  linkType: hard
+
+"@sentry/integrations@npm:7.15.0":
+  version: 7.15.0
+  resolution: "@sentry/integrations@npm:7.15.0"
+  dependencies:
+    "@sentry/types": 7.15.0
+    "@sentry/utils": 7.15.0
+    localforage: ^1.8.1
+    tslib: ^1.9.3
+  checksum: 77e1d7a48e14c4b96a1913f2e504c4ec401148f937d1586361b3dba7be33719874995472a181bbbe3245de3df5e406b1c453d823eda72c3ee981068c5b551df2
+  languageName: node
+  linkType: hard
+
+"@sentry/node@npm:7.15.0":
+  version: 7.15.0
+  resolution: "@sentry/node@npm:7.15.0"
+  dependencies:
+    "@sentry/core": 7.15.0
+    "@sentry/types": 7.15.0
+    "@sentry/utils": 7.15.0
+    cookie: ^0.4.1
+    https-proxy-agent: ^5.0.0
+    lru_map: ^0.3.3
+    tslib: ^1.9.3
+  checksum: 84f29792b0afb831daef75b1b52f6981623bc71ebe4da1cc9941f99d97c0c426ac6af8848a0f7f59d07636c7d9030ccffe623377066a6819964f88b669b3bc82
+  languageName: node
+  linkType: hard
+
+"@sentry/types@npm:7.15.0":
+  version: 7.15.0
+  resolution: "@sentry/types@npm:7.15.0"
+  checksum: 114fb1eeacce6a92fc50e9b8ecf35ccef6993cb43c7b428c06394177d8ed0e42ee84ec64e801356c6a0190d4aa71d032cf82ee9e34a976b634dac6a0c284361a
+  languageName: node
+  linkType: hard
+
+"@sentry/utils@npm:7.15.0":
+  version: 7.15.0
+  resolution: "@sentry/utils@npm:7.15.0"
+  dependencies:
+    "@sentry/types": 7.15.0
+    tslib: ^1.9.3
+  checksum: 9445a78c23b230a39d05c4ff44fb02f66bbb4dd4638216419b99ab53fa403bf613ea175c642b0bc015038370d229af76046689a08efe5a030d64b5cb0e02cfa1
+  languageName: node
+  linkType: hard
+
+"@sentry/webpack-plugin@npm:1.19.1":
+  version: 1.19.1
+  resolution: "@sentry/webpack-plugin@npm:1.19.1"
+  dependencies:
+    "@sentry/cli": ^1.74.4
+    webpack-sources: ^2.0.0 || ^3.0.0
+  checksum: 16602581dc9457007ca2da17ac666fbf35ff775067fece0804647963758efa62f921fe371932708bd4c5ab2b0ed724c02d8f5113dd5fb74114f1b27b4960a443
   languageName: node
   linkType: hard
 
@@ -6666,7 +6772,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cookie@npm:^0.4.0":
+"cookie@npm:^0.4.0, cookie@npm:^0.4.1":
   version: 0.4.2
   resolution: "cookie@npm:0.4.2"
   checksum: a00833c998bedf8e787b4c342defe5fa419abd96b32f4464f718b91022586b8f1bafbddd499288e75c037642493c83083da426c6a9080d309e3bd90fd11baa9b
@@ -7701,6 +7807,7 @@ __metadata:
     "@commitlint/cli": ^12.0.0
     "@commitlint/config-conventional": ^12.0.0
     "@loadable/babel-plugin": 5.13.2
+    "@plone-collective/volto-sentry": 0.3.0
     "@plone/volto": 16.5.0
     "@release-it/conventional-changelog": ^2.0.1
     bootstrap-italia: 2.0.9
@@ -11313,6 +11420,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"immediate@npm:~3.0.5":
+  version: 3.0.6
+  resolution: "immediate@npm:3.0.6"
+  checksum: f9b3486477555997657f70318cc8d3416159f208bec4cca3ff3442fd266bc23f50f0c9bd8547e1371a6b5e82b821ec9a7044a4f7b944798b25aa3cc6d5e63e62
+  languageName: node
+  linkType: hard
+
 "immer@npm:8.0.1":
   version: 8.0.1
   resolution: "immer@npm:8.0.1"
@@ -13509,6 +13623,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lie@npm:3.1.1":
+  version: 3.1.1
+  resolution: "lie@npm:3.1.1"
+  dependencies:
+    immediate: ~3.0.5
+  checksum: 6da9f2121d2dbd15f1eca44c0c7e211e66a99c7b326ec8312645f3648935bc3a658cf0e9fa7b5f10144d9e2641500b4f55bd32754607c3de945b5f443e50ddd1
+  languageName: node
+  linkType: hard
+
 "lilconfig@npm:2.0.5":
   version: 2.0.5
   resolution: "lilconfig@npm:2.0.5"
@@ -13728,6 +13851,15 @@ __metadata:
   version: 0.1.0
   resolution: "locale@npm:0.1.0"
   checksum: 42af4432bc240af9e0d320a64178f482e910ad3e2baca449f9d4cf94ceeb78d1a60d59cdf767567150c9aa400c3ab0d06312c6302f3103854e74f7e3cb97f1f3
+  languageName: node
+  linkType: hard
+
+"localforage@npm:^1.8.1":
+  version: 1.10.0
+  resolution: "localforage@npm:1.10.0"
+  dependencies:
+    lie: 3.1.1
+  checksum: f2978b434dafff9bcb0d9498de57d97eba165402419939c944412e179cab1854782830b5ec196212560b22712d1dd03918939f59cf1d4fc1d756fca7950086cf
   languageName: node
   linkType: hard
 
@@ -13988,6 +14120,13 @@ __metadata:
   version: 7.14.0
   resolution: "lru-cache@npm:7.14.0"
   checksum: efdd329f2c1bb790b71d497c6c59272e6bc2d7dd060ba55fc136becd3dd31fc8346edb446275504d94cb60d3c8385dbf5267b79b23789e409b2bdf302d13f0d7
+  languageName: node
+  linkType: hard
+
+"lru_map@npm:^0.3.3":
+  version: 0.3.3
+  resolution: "lru_map@npm:0.3.3"
+  checksum: ca9dd43c65ed7a4f117c548028101c5b6855e10923ea9d1f635af53ad20c5868ff428c364d454a7b57fe391b89c704982275410c3c5099cca5aeee00d76e169a
   languageName: node
   linkType: hard
 
@@ -14563,7 +14702,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mkdirp@npm:^0.5.0, mkdirp@npm:^0.5.1, mkdirp@npm:^0.5.3, mkdirp@npm:^0.5.6, mkdirp@npm:~0.5.1":
+"mkdirp@npm:^0.5.0, mkdirp@npm:^0.5.1, mkdirp@npm:^0.5.3, mkdirp@npm:^0.5.5, mkdirp@npm:^0.5.6, mkdirp@npm:~0.5.1":
   version: 0.5.6
   resolution: "mkdirp@npm:0.5.6"
   dependencies:
@@ -15065,7 +15204,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npmlog@npm:^4.0.1":
+"npmlog@npm:^4.0.1, npmlog@npm:^4.1.2":
   version: 4.1.2
   resolution: "npmlog@npm:4.1.2"
   dependencies:
@@ -16760,7 +16899,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"progress@npm:^2.0.0":
+"progress@npm:^2.0.0, progress@npm:^2.0.3":
   version: 2.0.3
   resolution: "progress@npm:2.0.3"
   checksum: f67403fe7b34912148d9252cb7481266a354bd99ce82c835f79070643bb3c6583d10dbcfda4d41e04bbc1d8437e9af0fb1e1f2135727878f5308682a579429b7
@@ -16923,7 +17062,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"proxy-from-env@npm:^1.0.0":
+"proxy-from-env@npm:^1.0.0, proxy-from-env@npm:^1.1.0":
   version: 1.1.0
   resolution: "proxy-from-env@npm:1.1.0"
   checksum: ed7fcc2ba0a33404958e34d95d18638249a68c430e30fcb6c478497d72739ba64ce9810a24f53a7d921d0c065e5b78e3822759800698167256b04659366ca4d4
@@ -21488,7 +21627,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.10.0, tslib@npm:^1.9.0":
+"tslib@npm:^1.10.0, tslib@npm:^1.9.0, tslib@npm:^1.9.3":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd
@@ -22601,6 +22740,13 @@ __metadata:
     source-list-map: ^2.0.0
     source-map: ~0.6.1
   checksum: 37463dad8d08114930f4bc4882a9602941f07c9f0efa9b6bc78738cd936275b990a596d801ef450d022bb005b109b9f451dd087db2f3c9baf53e8e22cf388f79
+  languageName: node
+  linkType: hard
+
+"webpack-sources@npm:^2.0.0 || ^3.0.0":
+  version: 3.2.3
+  resolution: "webpack-sources@npm:3.2.3"
+  checksum: 989e401b9fe3536529e2a99dac8c1bdc50e3a0a2c8669cbafad31271eadd994bc9405f88a3039cd2e29db5e6d9d0926ceb7a1a4e7409ece021fe79c37d9c4607
   languageName: node
   linkType: hard
 
