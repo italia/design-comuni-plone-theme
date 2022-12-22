@@ -19,7 +19,8 @@
     "volto-form-block",
     "volto-subfooter",
     "volto-customer-satisfaction",
-    "volto-gdpr-privacy"
+    "volto-gdpr-privacy",
+    "volto-data-grid-widget"
   ],
   "customizationPaths": [
     "src/customizations/"
@@ -64,7 +65,8 @@
       "@italia/(.*)$": "<rootDir>/src/$1",
       "^design-comuni-plone-theme/(.*)$": "<rootDir>/src/$1",
       "^volto-gdpr-privacy/(.*)$": "<rootDir>/node_modules/volto-gdpr-privacy/src/$1",
-      "^volto-venue/(.*)$": "<rootDir>/node_modules/volto-venue/src/$1"
+      "^volto-venue/(.*)$": "<rootDir>/node_modules/volto-venue/src/$1",
+      "^volto-data-grid-widget/(.*)$": "<rootDir>/node_modules/volto-data-grid-widget/src/$1"
     },
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs,ts,tsx}",
@@ -191,6 +193,7 @@
     "typeface-titillium-web": "0.0.72",
     "volto-blocks-widget": "3.0.0",
     "volto-customer-satisfaction": "1.0.0",
+    "volto-data-grid-widget": "^1.0.3",
     "volto-dropdownmenu": "4.0.0",
     "volto-editablefooter": "5.0.1",
     "volto-form-block": "3.0.0",

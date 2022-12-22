@@ -37,7 +37,6 @@ export const PersonaViewSectionsOrder = [
 const PersonaView = ({ content }) => {
   let documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
-
   useEffect(() => {
     if (documentBody.current) {
       if (__CLIENT__) {

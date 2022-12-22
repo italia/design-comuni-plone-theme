@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-
 import {
   richTextHasContent,
   RichTextArticle,
@@ -12,11 +11,14 @@ import {
   contentFolderHasItems,
   viewDate,
 } from 'design-comuni-plone-theme/helpers';
+import { getContent, resetContent } from '@plone/volto/actions';
+import { flattenToAppURL } from '@plone/volto/helpers';
+import { useDispatch, useSelector } from 'react-redux';
 
 const messages = defineMessages({
   ruolo: {
     id: 'ruolo',
-    defaultMessage: 'Ruolo',
+    defaultMessage: 'Incarico',
   },
   organizzazione_riferimento: {
     id: 'organizzazione_riferimento',
@@ -34,6 +36,10 @@ const messages = defineMessages({
     id: 'competenze',
     defaultMessage: 'Competenze',
   },
+  compensi: {
+    id: 'compensi',
+    defaultMessage: 'Compensi',
+  },
   deleghe: {
     id: 'deleghe',
     defaultMessage: 'Deleghe',
@@ -46,6 +52,10 @@ const messages = defineMessages({
     id: 'data_insediamento',
     defaultMessage: 'Data di insediamento',
   },
+  data_inizio_incarico: {
+    id: 'data_inizio_incarico',
+    defaultMessage: "Data di inizio dell'incarico",
+  },
   biografia: {
     id: 'biografia',
     defaultMessage: 'Biografia',
@@ -56,130 +66,213 @@ const messages = defineMessages({
   },
   data_conclusione_incarico: {
     id: 'data_conclusione_incarico',
-    defaultMessage: "Ha fatto parte dell'organizzazione comunale fino al",
+    defaultMessage:
+      "Ha fatto parte dell'organizzazione comunale come {incarico} fino al",
   },
 });
 
+// TODO: rework this when taxonomies available and official wireframes
+// appear in the wild. Internal previews show no understanding of their
+// own guidelines (i.e. incarichi multipli)
 const PersonaRuolo = ({ content }) => {
   const intl = useIntl();
+  const dispatch = useDispatch();
+  const fetchedIncarichi = useSelector((state) => state.content.subrequests);
+  const incarichi = content?.incarichi?.map((incarico) => {
+    let url = flattenToAppURL(incarico['@id']);
+    return {
+      key: `incarico${url}`,
+      url: url,
+    };
+  });
 
-  const showSection =
-    content.ruolo?.token ||
-    content?.data_conclusione_incarico ||
-    (!content?.data_conclusione_incarico &&
-      (content?.organizzazione_riferimento?.length > 0 ||
-        content?.responsabile_di?.length > 0 ||
-        content?.assessore_di?.length > 0 ||
-        richTextHasContent(content?.competenze) ||
-        richTextHasContent(content?.deleghe) ||
-        content?.tipologia_persona ||
-        content?.data_insediamento ||
-        richTextHasContent(content?.biografia) ||
-        contentFolderHasItems(content, 'foto-e-attivita-politica')));
+  useEffect(() => {
+    incarichi.forEach((incarico) => {
+      if (
+        !fetchedIncarichi?.[incarico.key]?.loading &&
+        !fetchedIncarichi?.[incarico.key]?.loaded
+      ) {
+        dispatch(getContent(incarico.url, null, incarico.key));
+      }
+    });
 
-  return showSection ? (
-    <RichTextArticle tag_id="ruolo" title={intl.formatMessage(messages.ruolo)}>
-      {content?.ruolo?.token?.length > 0 && (
-        <div className="mb-5">{content.ruolo.title}</div>
-      )}
-      {!content?.data_conclusione_incarico && (
-        <>
-          {content?.organizzazione_riferimento?.length > 0 && (
+    return () =>
+      incarichi.forEach((incarico) => {
+        dispatch(resetContent(incarico.key));
+      });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dispatch, content?.incarichi]);
+
+  const incarichiData = useMemo(() => {
+    return incarichi.reduce(
+      (acc, val) => {
+        const incarico = fetchedIncarichi?.[val.key]?.data;
+        if (incarico) {
+          if (incarico?.data_conclusione_incarico) {
+            return {
+              ...acc,
+              incarichiInattivi: [...acc.incarichiInattivi, incarico],
+            };
+          } else
+            return {
+              ...acc,
+              incarichiAttivi: [...acc.incarichiAttivi, incarico],
+            };
+        }
+        return acc;
+      },
+      {
+        incarichiAttivi: [],
+        incarichiInattivi: [],
+      },
+    );
+  }, [fetchedIncarichi, incarichi]);
+  // Not shown in wireframes, somehow
+  // const strutture = useMemo(() => {
+  //   return incarichiData?.incarichiAttivi?.reduce((acc, val) => {
+  //     if (val?.responsabile_struttura?.length > 0)
+  //       return [...acc, ...val.responsabile_struttura];
+  //     return acc;
+  //   }, []);
+  // }, [incarichiData]);
+  // const uffici = useMemo(() => {
+  //   return incarichiData?.incarichiAttivi?.reduce((acc, val) => {
+  //     if (val?.unita_organizzativa?.length > 0)
+  //       return [...acc, ...val.unita_organizzativa];
+  //     return acc;
+  //   }, []);
+  // }, [incarichiData]);
+
+  return (
+    <>
+      <RichTextArticle
+        tag_id="incarico"
+        title={intl.formatMessage(messages.ruolo)}
+      >
+        <div className="mb-5">
+          {incarichiData?.incarichiAttivi?.map((inc) => (
+            /* TODO: usare tassonomia quando disponibile
+              definire per bene come li vogliamo visualizzare,
+              non vale piu' la vecchia visualizzazione
+          */
+            <div>
+              {inc.title}
+              <p>
+                <strong>
+                  {intl.formatMessage(messages.data_insediamento)}
+                  {': '}
+                </strong>
+                {viewDate(intl.locale, inc?.data_inizio_incarico, 'DD-MM-Y')}
+              </p>
+              {inc?.data_insediamento && (
+                <p>
+                  <strong>
+                    {intl.formatMessage(messages.data_insediamento)}
+                    {': '}
+                  </strong>
+                  {viewDate(intl.locale, inc?.data_insediamento, 'DD-MM-Y')}
+                </p>
+              )}
+            </div>
+          ))}
+          {incarichiData?.incarichiInattivi?.map((inc) => (
+            <p>
+              <strong>
+                {intl.formatMessage(messages.data_conclusione_incarico, {
+                  incarico: inc.title,
+                })}
+                :
+              </strong>{' '}
+              {viewDate(intl.locale, inc?.data_conclusione_incarico, 'DD-MM-Y')}
+            </p>
+          ))}
+          {/* Not shown in wireframes, somehow */}
+          {/* {uffici.length > 0 && (
             <div className="mb-5 mt-3">
               <h4>{intl.formatMessage(messages.organizzazione_riferimento)}</h4>
               <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                {content?.organizzazione_riferimento?.map((item, i) => (
+                {uffici.map((item, i) => (
                   <OfficeCard key={item['@id']} office={item} />
                 ))}
               </div>
             </div>
           )}
 
-          {content?.responsabile_di?.length > 0 && (
+          {strutture.length > 0 && (
             <div className="mb-5 mt-3">
               <h5>{intl.formatMessage(messages.responsabile_di)}</h5>
               <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                {content?.responsabile_di?.map((item, i) => (
+                {strutture.map((item, i) => (
                   <OfficeCard key={item['@id']} office={item} />
                 ))}
               </div>
             </div>
+          )} */}
+        </div>
+      </RichTextArticle>
+      <RichTextArticle
+        tag_id="compensi"
+        title={intl.formatMessage(messages.compensi)}
+      >
+        {incarichiData?.incarichiAttivi?.map((inc) => (
+          <RichText title_size="h5" title={''} content={inc.compensi} />
+        ))}
+      </RichTextArticle>
+      <RichTextArticle
+        tag_id="data_insediamento"
+        title={intl.formatMessage(messages.data_insediamento)}
+      >
+        {incarichiData?.incarichiAttivi?.length === 1 &&
+          viewDate(
+            intl.locale,
+            incarichiData?.incarichiAttivi?.[0]?.data_inizio_incarico,
+            'DD-MM-Y',
           )}
-
-          {content?.assessore_di?.length > 0 && (
-            <div className="mb-5 mt-3">
-              <h5>{intl.formatMessage(messages.assessore_di)}</h5>
-              <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                {content?.assessore_di?.map((item, i) => (
-                  <OfficeCard key={item['@id']} office={item} />
-                ))}
-              </div>
-            </div>
-          )}
-
-          {richTextHasContent(content?.competenze) && (
-            <div className="mb-5 mt-3">
-              <RichText
-                title_size="h5"
-                title={intl.formatMessage(messages.competenze)}
-                content={content.competenze}
-              />
-            </div>
-          )}
-
-          {richTextHasContent(content?.deleghe) && (
-            <div className="mb-5 mt-3">
-              <RichText
-                title_size="h5"
-                title={intl.formatMessage(messages.deleghe)}
-                content={content.deleghe}
-              />
-            </div>
-          )}
-
-          {content?.tipologia_persona && (
-            <div className="mb-5 mt-3">
-              <h5>{intl.formatMessage(messages.tipologia_persona)}</h5>
-              {content?.tipologia_persona?.title}
-            </div>
-          )}
-
-          {content?.data_insediamento && (
-            <div className="mb-5 mt-3">
-              <h5>{intl.formatMessage(messages.data_insediamento)}</h5>
-              {viewDate(intl.locale, content?.data_insediamento, 'DD-MM-Y')}
-            </div>
-          )}
-
-          {richTextHasContent(content?.biografia) > 0 && (
-            <div className="mb-5 mt-3">
-              <RichText
-                title_size="h5"
-                title={intl.formatMessage(messages.biografia)}
-                content={content.biografia}
-              />
-            </div>
-          )}
-
-          <Gallery
-            content={content}
-            folder_name="foto-e-attivita-politica"
-            title={intl.formatMessage(messages.foto_attivita_politica)}
-            title_type="h5"
+      </RichTextArticle>
+      {/* {content?.tipologia_persona && (
+        <div className="mb-5 mt-3">
+          <h5>{intl.formatMessage(messages.tipologia_persona)}</h5>
+          {content?.tipologia_persona?.title}
+        </div>
+      )} */}
+      {richTextHasContent(content?.competenze) && (
+        <div className="mb-5 mt-3">
+          <RichText
+            title_size="h5"
+            title={intl.formatMessage(messages.competenze)}
+            content={content.competenze}
           />
-        </>
+        </div>
       )}
-      {content?.data_conclusione_incarico && (
-        <p>
-          <strong>
-            {intl.formatMessage(messages.data_conclusione_incarico)}:
-          </strong>{' '}
-          {viewDate(intl.locale, content?.data_conclusione_incarico, 'DD-MM-Y')}
-        </p>
+
+      {richTextHasContent(content?.deleghe) && (
+        <div className="mb-5 mt-3">
+          <RichText
+            title_size="h5"
+            title={intl.formatMessage(messages.deleghe)}
+            content={content.deleghe}
+          />
+        </div>
       )}
-    </RichTextArticle>
-  ) : (
-    <></>
+      {richTextHasContent(content?.biografia) > 0 && (
+        <div className="mb-5 mt-3">
+          <RichText
+            title_size="h5"
+            title={intl.formatMessage(messages.biografia)}
+            content={content.biografia}
+          />
+        </div>
+      )}
+
+      {contentFolderHasItems(content, 'foto-e-attivita-politica') && (
+        <Gallery
+          content={content}
+          folder_name="foto-e-attivita-politica"
+          title={intl.formatMessage(messages.foto_attivita_politica)}
+          title_type="h5"
+        />
+      )}
+    </>
   );
 };
 
