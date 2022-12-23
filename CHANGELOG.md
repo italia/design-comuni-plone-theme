@@ -1,3 +1,16 @@
+## [7.0.0-alpha.10](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0-alpha.9...v7.0.0-alpha.10) (2022-12-23)
+
+
+### Features
+
+* upgraded volto to 16.6.0 ([47ea40d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/47ea40d247cd42911a112394ab60a7d084915849))
+
+
+### Bug Fixes
+
+* IntersectionObserver.unobserve: Argument 1 is not an object ([#36](https://github.com/RedTurtle/design-comuni-plone-theme/issues/36)) ([b3e6870](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b3e687016febead7daba781d3ec5bbab402b051c))
+* related items preview image ([#35](https://github.com/RedTurtle/design-comuni-plone-theme/issues/35)) ([d48c48d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d48c48dc9cea05a2b07e241c24e934664b59e548))
+
 ## [7.0.0-alpha.9](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0-alpha.8...v7.0.0-alpha.9) (2022-12-20)
 
 
