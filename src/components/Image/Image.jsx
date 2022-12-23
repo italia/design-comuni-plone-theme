@@ -99,7 +99,9 @@ const Image = ({
             entries.forEach((entry) => {
               if (entry.isIntersecting && !actualSrcSet) {
                 srcSet && applySrcSet();
-                observer.unobserve(imageRef.current);
+                if (imageRef.current instanceof Element) {
+                  observer.unobserve(imageRef.current);
+                }
               }
             });
           },
