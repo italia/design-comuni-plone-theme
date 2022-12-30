@@ -75,6 +75,11 @@ msgstr ""
 msgid "CardImageSize"
 msgstr ""
 
+#: config/Views/views
+# defaultMessage: Cartella modulistica
+msgid "Cartella modulistica"
+msgstr "Cartella modulistica"
+
 #: components/ItaliaTheme/Header/HeaderSearch/HeaderSearch
 # defaultMessage: Cerca
 msgid "Cerca"
@@ -324,6 +329,11 @@ msgstr "Titolo per il link ad altro"
 # defaultMessage: Sto caricando la pagina richiesta...
 msgid "Loading page..."
 msgstr ""
+
+#: config/Views/views
+# defaultMessage: Luogo
+msgid "Luogo"
+msgstr "Luogo"
 
 #: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
 # defaultMessage: Luogo
