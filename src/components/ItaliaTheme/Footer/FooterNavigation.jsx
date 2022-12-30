@@ -70,7 +70,7 @@ const FooterNavigation = () => {
                   {item.title}
                 </Link>
               </h4>
-              {item.items && (
+              {!config.settings.isFooterCollapsed && item.items && (
                 <LinkList className="footer-list clearfix" tag="div">
                   {item.items.map((subitem) => {
                     return (

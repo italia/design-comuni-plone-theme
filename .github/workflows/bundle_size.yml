@@ -92,7 +92,7 @@ jobs:
           excluded_assets: '\.map$'
 
       - name: Comment
-        uses: NejcZdovc/comment-pr@v1
+        uses: NejcZdovc/comment-pr@v2
         with:
           file: 'bundle_size_comment.md'
         env:
