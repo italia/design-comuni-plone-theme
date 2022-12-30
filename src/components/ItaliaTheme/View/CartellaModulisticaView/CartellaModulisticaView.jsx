@@ -6,8 +6,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
-import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import {
+  getModulisticaItems,
+  resetModulisticaItems,
+} from 'design-comuni-plone-theme/actions';
 import {
   PageHeader,
   RelatedItems,
@@ -36,31 +39,25 @@ const messages = defineMessages({
  */
 
 const CartellaModulisticaView = ({ content }) => {
-  const modulistica_key = 'modulistica';
-  const locationContent = useSelector((state) => state.content.subrequests);
+  const modulisticaItems = useSelector((state) => state.modulisticaItems);
   const dispatch = useDispatch();
   const intl = useIntl();
+
+  const hasItems = content.items?.length > 0;
+  const modulistica_items_url =
+    content['@components']['modulistica-items']['@id'];
+
   useEffect(() => {
-    if (
-      content?.items?.length > 0 &&
-      !locationContent[modulistica_key]?.loaded
-    ) {
-      const modulistica_items_url =
-        content['@components']['modulistica-items']['@id'];
-
-      dispatch(
-        getContent(
-          flattenToAppURL(modulistica_items_url),
-          null,
-          modulistica_key,
-        ),
-      );
-      return () => dispatch(resetContent(modulistica_key));
+    if (hasItems && !modulisticaItems.loading && !modulisticaItems.loaded) {
+      dispatch(getModulisticaItems(flattenToAppURL(modulistica_items_url)));
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [dispatch, hasItems, modulisticaItems, modulistica_items_url]);
 
-  const modulistica = locationContent[modulistica_key]?.data?.items ?? [];
+  useEffect(() => {
+    return () => dispatch(resetModulisticaItems());
+  }, [dispatch]);
+
+  const modulistica = modulisticaItems?.data?.items ?? [];
 
   return (
     <>
