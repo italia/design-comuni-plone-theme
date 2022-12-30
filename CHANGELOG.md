@@ -1,3 +1,18 @@
+## [7.0.0-alpha.11](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0-alpha.10...v7.0.0-alpha.11) (2022-12-30)
+
+
+### Features
+
+* hideable footer sub items ([#37](https://github.com/RedTurtle/design-comuni-plone-theme/issues/37)) ([567a2ed](https://github.com/RedTurtle/design-comuni-plone-theme/commit/567a2ed1df49e3913492600a145838f76c344c64))
+
+
+### Bug Fixes
+
+* fixed layoutViewsNamesMapping config ([#39](https://github.com/RedTurtle/design-comuni-plone-theme/issues/39)) ([fff7819](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fff781944344887329cc4e956e62d8904535d0b5))
+* image in complete block links template ([#38](https://github.com/RedTurtle/design-comuni-plone-theme/issues/38)) ([24b4109](https://github.com/RedTurtle/design-comuni-plone-theme/commit/24b4109ce89bca515a199ab6aa624a90969598fc))
+* modulistica view race condition on rendering content items ([#43](https://github.com/RedTurtle/design-comuni-plone-theme/issues/43)) ([f51dd5f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f51dd5f1cbc2679cf16f8bd84b4e29f3ef7c1925))
+* race condition in rendering the toolbar in multilingual sites after saving a page ([6e557b1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6e557b1c5b65e09103cd5df79fca40f709a9482c))
+
 ## [7.0.0-alpha.10](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0-alpha.9...v7.0.0-alpha.10) (2022-12-23)
 
 
