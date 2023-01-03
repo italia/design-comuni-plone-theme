@@ -1,3 +1,15 @@
+## [7.0.0-alpha.12](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0-alpha.11...v7.0.0-alpha.12) (2023-01-03)
+
+
+### Bug Fixes
+
+* customized arrayWidget to fix condition of select without vocabulary ([#44](https://github.com/RedTurtle/design-comuni-plone-theme/issues/44)) ([d7d34cb](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d7d34cb4b870f36477cb19d43b468e236172e45c))
+
+
+### Documentation
+
+* improve conventional changelog ([1143ed8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1143ed83cd33d2f807dcc56276a734c4a71c4882))
+
 ## [7.0.0-alpha.11](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0-alpha.10...v7.0.0-alpha.11) (2022-12-30)
 
 
