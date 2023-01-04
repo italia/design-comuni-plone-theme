@@ -157,7 +157,6 @@ const searchOrderDict = {
   relevance: {},
   date: {
     sort_on: 'Date',
-    sort_order: 'reverse',
   },
   sortable_title: {
     sort_on: 'sortable_title',
