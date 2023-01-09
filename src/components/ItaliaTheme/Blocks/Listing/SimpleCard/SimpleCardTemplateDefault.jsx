@@ -43,6 +43,7 @@ const SimpleCardTemplateDefault = (props) => {
     isEditMode,
     linkTitle,
     linkHref,
+    linkAlign,
     show_icon = true,
     show_section = true,
     show_type,
@@ -223,7 +224,12 @@ const SimpleCardTemplateDefault = (props) => {
         })}
       </div>
 
-      <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
+      <ListingLinkMore
+        title={linkTitle}
+        href={linkHref}
+        className="my-4"
+        linkAlign={linkAlign}
+      />
     </div>
   );
 };

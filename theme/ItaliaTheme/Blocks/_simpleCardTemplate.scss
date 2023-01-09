@@ -89,6 +89,15 @@
     justify-content: center;
     margin: 30px 0;
   }
+
+  //* custom align button
+
+  .link-more-button-align-right {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin: 30px 0;
+  }
 }
 
 .simple-card-compact-template {

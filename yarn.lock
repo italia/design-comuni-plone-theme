@@ -2675,8 +2675,8 @@ __metadata:
   linkType: hard
 
 "@plone/scripts@npm:*":
-  version: 2.2.1
-  resolution: "@plone/scripts@npm:2.2.1"
+  version: 2.2.2
+  resolution: "@plone/scripts@npm:2.2.2"
   dependencies:
     babel-plugin-react-intl: 5.1.17
     babel-preset-razzle: 4.2.17
@@ -2691,7 +2691,7 @@ __metadata:
     addon: addon/index.js
     changelogupdater: changelogupdater.cjs
     i18n: i18n.cjs
-  checksum: f630c724137a07457203a73d954e46bddd4dea8cd16bb96e0358f6b99270dfcda5aca5352a93b07565c5a86dd5752b980d899fcc9a9ec233a40c50f1b46b04a8
+  checksum: 33d63c1d0fe096984aa3a37b0842f65f13ef84065ffa88f66b6ada38c73a545f2236c8d24987881c50be36c903ec4b96bf5dc63dc3e4409985174efc122f737a
   languageName: node
   linkType: hard
 
@@ -7860,7 +7860,7 @@ __metadata:
     typeface-titillium-web: 0.0.72
     volto-blocks-widget: 3.0.0
     volto-customer-satisfaction: 1.0.0
-    volto-data-grid-widget: ^1.0.3
+    volto-data-grid-widget: 1.0.3
     volto-dropdownmenu: 4.0.0
     volto-editablefooter: 5.0.1
     volto-form-block: 3.0.0
@@ -22364,7 +22364,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"volto-data-grid-widget@npm:^1.0.3":
+"volto-data-grid-widget@npm:1.0.3":
   version: 1.0.3
   resolution: "volto-data-grid-widget@npm:1.0.3"
   dependencies:
