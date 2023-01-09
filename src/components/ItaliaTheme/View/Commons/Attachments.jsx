@@ -26,7 +26,7 @@ const Attachments = ({
   folder_name,
   items,
   title,
-  as_article = true,
+  as_section = true,
   article_id = folder_name,
 }) => {
   const intl = useIntl();
@@ -97,17 +97,17 @@ const Attachments = ({
     </div>
   );
 
-  return !hasChildren ? null : as_article ? (
-    <article id={article_id} className="it-page-section anchor-offset mt-5">
+  return !hasChildren ? null : as_section ? (
+    <section id={article_id} className="it-page-section mb-5">
       {title ? (
-        <h4 id={`header-${article_id}`}>{title}</h4>
+        <h2 id={`header-${article_id}`}>{title}</h2>
       ) : (
-        <h4 id={`header-${article_id}`}>
+        <h2 id={`header-${article_id}`}>
           {intl.formatMessage(messages.attachments)}
-        </h4>
+        </h2>
       )}
       {attachments.length > 0 && attachments_view}
-    </article>
+    </section>
   ) : (
     <div className="mb-5 mt-3">
       {title && <h5>{title}</h5>}

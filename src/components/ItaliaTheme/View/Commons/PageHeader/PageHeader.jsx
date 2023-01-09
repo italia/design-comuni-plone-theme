@@ -1,5 +1,4 @@
 import cx from 'classnames';
-import { Chip, ChipLabel } from 'design-react-kit';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 
@@ -15,6 +14,8 @@ import {
   PageHeaderExtend,
   PageHeaderNewsItem,
   PageHeaderPersona,
+  PageHeaderStatoServizio,
+  PageHeaderLinkServizio,
   PageHeaderTassonomiaArgomenti,
   Sharing,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
@@ -35,14 +36,6 @@ const messages = defineMessages({
     id: 'minutes',
     defaultMessage: 'min',
   },
-  service_on: {
-    id: 'service_on',
-    defaultMessage: 'Servizio attivo',
-  },
-  service_off: {
-    id: 'service_off',
-    defaultMessage: 'Servizio non attivo',
-  },
 });
 
 const PageHeader = (props) => {
@@ -60,38 +53,30 @@ const PageHeader = (props) => {
           {(props.content.icon || props.content.icona) && (
             <ArgumentIcon icon={props.content.icon || props.content.icona} />
           )}
-          <h1 data-element="service-title">
+          <h1
+            data-element={
+              props.content['@type'] === 'Servizio'
+                ? 'service-title'
+                : undefined
+            }
+          >
             {props.content.title}
             {props.content.subtitle && ` - ${props.content.subtitle}`}
             {props.content.sottotitolo && ` - ${props.content.sottotitolo}`}
           </h1>
 
           <PageHeaderEventDates content={props.content} />
-          {props.content['@type'] === 'Servizio' && (
-            <ul className="chip-wrapper list-unstyled my-4">
-              <li>
-                {props.content.stato_servizio !== null && (
-                  <Chip
-                    tag="div"
-                    simple
-                    color="primary"
-                    data-element="service-status"
-                  >
-                    <ChipLabel>
-                      {props.content.stato_servizio
-                        ? intl.formatMessage(messages.service_on)
-                        : intl.formatMessage(messages.service_off)}
-                    </ChipLabel>
-                  </Chip>
-                )}
-              </li>
-            </ul>
-          )}
+
+          <PageHeaderStatoServizio content={props.content} />
 
           {props.content.description && (
             <p
               className="documentDescription"
-              data-element="service-description"
+              data-element={
+                props.content['@type'] === 'Servizio'
+                  ? 'service-description'
+                  : undefined
+              }
             >
               {props.content.description}
             </p>
@@ -102,6 +87,8 @@ const PageHeader = (props) => {
           <PageHeaderPersona content={props.content} />
 
           <PageHeaderNewsItem content={props.content} />
+
+          <PageHeaderLinkServizio content={props.content} />
 
           <PageHeaderExtend {...props} />
 

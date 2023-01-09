@@ -87,21 +87,6 @@ picture.volto-image.responsive img.full-width {
   }
 }
 
-//richtext-blocks
-h2,
-h3,
-h4,
-h5,
-h6 {
-  ~ .richtext-blocks {
-    margin-top: 0.5rem;
-  }
-
-  + .richtext-blocks {
-    margin-bottom: 2.5rem;
-  }
-}
-
 @media (max-width: #{map-get($grid-breakpoints, lg)}) {
   .page-side-menu {
     display: none;

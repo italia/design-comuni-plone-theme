@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 
-import { RichTextArticle } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+import { RichTextSection } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   casi_particolari: {
@@ -14,7 +14,7 @@ const messages = defineMessages({
 const ServizioCasiParticolari = ({ content }) => {
   const intl = useIntl();
   return (
-    <RichTextArticle
+    <RichTextSection
       content={content.casi_particolari}
       tag_id={'text-casi_particolari'}
       title={intl.formatMessage(messages.casi_particolari)}

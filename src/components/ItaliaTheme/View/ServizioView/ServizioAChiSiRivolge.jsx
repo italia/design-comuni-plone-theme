@@ -4,14 +4,14 @@ import { defineMessages, useIntl } from 'react-intl';
 
 import {
   RichText,
-  RichTextArticle,
+  RichTextSection,
   richTextHasContent,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   a_chi_si_rivolge: {
     id: 'a_chi_si_rivolge',
-    defaultMessage: 'A chi si rivolge',
+    defaultMessage: 'A chi è rivolto',
   },
   chi_puo_presentare: {
     id: 'chi_puo_presentare',
@@ -28,24 +28,23 @@ const ServizioAChiSiRivolge = ({ content }) => {
   return richTextHasContent(content.a_chi_si_rivolge) ||
     richTextHasContent(content.chi_puo_presentare) ||
     richTextHasContent(content.copertura_geografica) ? (
-    <RichTextArticle
+    <RichTextSection
       content={content.a_chi_si_rivolge}
-      tag_id={'text-a_chi_si_rivolge'}
-      field="a_chi_si_rivolge,chi_puo_presentare,copertura_geografica"
+      tag_id="who-needs"
       title={intl.formatMessage(messages.a_chi_si_rivolge)}
     >
       <RichText
         title={intl.formatMessage(messages.chi_puo_presentare)}
-        title_size="h5"
+        title_size="h3"
         content={content.chi_puo_presentare}
       />
 
       <RichText
         title={intl.formatMessage(messages.copertura_geografica)}
-        title_size="h5"
+        title_size="h3"
         content={content.copertura_geografica}
       />
-    </RichTextArticle>
+    </RichTextSection>
   ) : (
     <></>
   );

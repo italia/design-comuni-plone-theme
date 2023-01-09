@@ -7,10 +7,6 @@ import PropTypes from 'prop-types';
 import { viewDate } from 'design-comuni-plone-theme/helpers';
 
 const messages = defineMessages({
-  other_info: {
-    id: 'other_info',
-    defaultMessage: 'Ulteriori informazioni',
-  },
   modified: {
     id: 'modified',
     defaultMessage: 'Ultimo aggiornamento',
@@ -42,13 +38,13 @@ const Metadata = ({
   const intl = useIntl();
 
   return (
-    <article
+    <section
       id="metadata"
-      className={cx('it-page-section', 'anchor-offset', { 'mt-5': !noMargin })}
+      className={cx('it-page-section', { 'mb-5': !noMargin })}
     >
-      {showSectionTitle && (
+      {showSectionTitle && title && (
         <h4 id="header-metadata" className="mb-3">
-          {title || intl.formatMessage(messages.other_info)}
+          {title}
         </h4>
       )}
       {children}
@@ -86,7 +82,7 @@ const Metadata = ({
           ))}
         </>
       )}
-    </article>
+    </section>
   );
 };
 

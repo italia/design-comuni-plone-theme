@@ -1,5 +1,5 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 import { RichTextRender } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 /**
  * RichText view component class.
@@ -9,7 +9,7 @@ import { RichTextRender } from 'design-comuni-plone-theme/components/ItaliaTheme
  */
 const RichText = ({
   title,
-  title_size,
+  title_size = 'h5',
   content,
   add_class,
   children,
@@ -21,14 +21,19 @@ const RichText = ({
     serif: serif,
   });
 
-  return content_to_display || children ? (
+  const Tag = title_size;
+
+  return content_to_display || children || title ? (
     <>
-      {title &&
-        (title_size === 'h6' ? (
-          <h6 className="fw-bold mt-4">{title}</h6>
-        ) : (
-          <h5 className="mt-4">{title}</h5>
-        ))}
+      {title && (
+        <Tag
+          className={cx('mt-4', {
+            'fw-bold': title_size === 'h6',
+          })}
+        >
+          {title}
+        </Tag>
+      )}
       {content_to_display}
       {children}
     </>
@@ -38,7 +43,8 @@ export default RichText;
 
 RichText.propTypes = {
   title: PropTypes.string,
+  title_size: PropTypes.oneOf(['h2', 'h3', 'h4', 'h5', 'h6']),
   content: PropTypes.object,
   add_class: PropTypes.string,
-  title_size: PropTypes.string,
+  serif: PropTypes.bool,
 };
