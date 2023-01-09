@@ -1,5 +1,6 @@
 /* --- Commons --- */
 export RichTextArticle from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RichTextArticle';
+export RichTextSection from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RichTextSection';
 export RichText from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/RichText';
 export {
   RichTextRender,
@@ -33,6 +34,8 @@ export PageHeaderEventDates from 'design-comuni-plone-theme/components/ItaliaThe
 export PageHeaderPersona from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona';
 export PageHeaderBando from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/PageHeader/PageHeaderBando';
 export PageHeaderNewsItem from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/PageHeader/PageHeaderNewsItem';
+export PageHeaderStatoServizio from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/PageHeader/PageHeaderStatoServizio';
+export PageHeaderLinkServizio from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/PageHeader/PageHeaderLinkServizio';
 export PageHeaderTassonomiaArgomenti from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/PageHeader/PageHeaderTassonomiaArgomenti';
 export Attachment from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/Attachment';
 export Attachments from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/Attachments';
@@ -139,9 +142,11 @@ export ServizioPlaceholderAfterContent from 'design-comuni-plone-theme/component
 export ServizioPlaceholderAfterRelatedItems from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/Placeholder/AfterRelatedItems';
 export ServizioStato from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioStato';
 export ServizioCosE from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioCosE';
+export ServizioAccedi from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioAccedi';
 export ServizioAChiSiRivolge from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioAChiSiRivolge';
-export ServizioComeAccedere from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioComeAccedere';
+export ServizioComeFare from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioComeFare';
 export ServizioCosaServe from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioCosaServe';
+export ServizioCosaSiOttiene from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioCosaSiOttiene';
 export ServizioCostiVincoli from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioCostiVincoli';
 export ServizioTempiScadenze from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioTempiScadenze';
 export ServizioCasiParticolari from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioCasiParticolari';
@@ -153,6 +158,8 @@ export ServizioModulistica from 'design-comuni-plone-theme/components/ItaliaThem
 export ServizioTrasparenza from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioTrasparenza';
 export ServizioCorrelati from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioCorrelati';
 export ServizioUlterioriInformazioni from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioUlterioriInformazioni';
+export ServizioMetadati from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioMetadati';
+export ServizioCondizioni from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioCondizioni';
 
 export TrasparenzaPlaceholderAfterContent from 'design-comuni-plone-theme/components/ItaliaTheme/View/TrasparenzaView/Placeholder/AfterContent';
 export UOPlaceholderAfterContent from 'design-comuni-plone-theme/components/ItaliaTheme/View/UOView/Placeholder/AfterContent';

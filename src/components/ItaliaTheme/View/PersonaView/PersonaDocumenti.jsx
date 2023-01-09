@@ -90,7 +90,7 @@ const PersonaDocumenti = ({ content }) => {
             <Attachments
               content={content}
               folder_name={'curriculum-vitae'}
-              as_article={false}
+              as_section={false}
             />
           )}
         </div>
@@ -100,21 +100,21 @@ const PersonaDocumenti = ({ content }) => {
         content={content}
         folder_name={'compensi'}
         title={intl.formatMessage(messages.compensi)}
-        as_article={false}
+        as_section={false}
       />
 
       <Attachments
         content={content}
         folder_name={'importi-di-viaggio-e-o-servizi'}
         title={intl.formatMessage(messages.importi_di_viaggio_e_o_servizi)}
-        as_article={false}
+        as_section={false}
       />
 
       <Attachments
         content={content}
         folder_name={'altre-cariche'}
         title={intl.formatMessage(messages.altre_cariche)}
-        as_article={false}
+        as_section={false}
       />
 
       {content.atto_nomina?.download && (
@@ -133,28 +133,28 @@ const PersonaDocumenti = ({ content }) => {
         content={content}
         folder_name={'situazione-patrimoniale'}
         title={intl.formatMessage(messages.situazione_patrimoniale)}
-        as_article={false}
+        as_section={false}
       />
 
       <Attachments
         content={content}
         folder_name={'dichiarazione-dei-redditi'}
         title={intl.formatMessage(messages.dichiarazione_dei_redditi)}
-        as_article={false}
+        as_section={false}
       />
 
       <Attachments
         content={content}
         folder_name={'spese-elettorali'}
         title={intl.formatMessage(messages.spese_elettorali)}
-        as_article={false}
+        as_section={false}
       />
 
       <Attachments
         content={content}
         folder_name={'variazione-situazione-patrimoniale'}
         title={intl.formatMessage(messages.variazione_situazione_patrimoniale)}
-        as_article={false}
+        as_section={false}
       />
     </RichTextArticle>
   ) : (

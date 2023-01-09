@@ -15,9 +15,11 @@ import {
   SkipToMainContent,
   ServizioStato,
   ServizioCosE,
+  ServizioAccedi,
   ServizioAChiSiRivolge,
-  ServizioComeAccedere,
+  ServizioComeFare,
   ServizioCosaServe,
+  ServizioCosaSiOttiene,
   ServizioCostiVincoli,
   ServizioTempiScadenze,
   ServizioCasiParticolari,
@@ -29,6 +31,8 @@ import {
   ServizioTrasparenza,
   ServizioCorrelati,
   ServizioUlterioriInformazioni,
+  ServizioMetadati,
+  ServizioCondizioni,
   ContentTypeViewSections,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
@@ -42,35 +46,43 @@ export const VenueViewSectionsOrder = [
 
   { /* STATO DEL SERVIZIO */ component: ServizioStato },
 
-  { /* TEXT BODY */ component: ServizioCosE },
+  { /* A CHI È RIVOLTO */ component: ServizioAChiSiRivolge },
 
-  { /* A CHI SI RIVOLGE */ component: ServizioAChiSiRivolge },
+  { /* DESCRIZIONE */ component: ServizioCosE },
 
-  { /* ACCEDERE AL SERVIZIO */ component: ServizioComeAccedere },
+  { /* COME FARE */ component: ServizioComeFare },
 
   { /* COSA SERVE */ component: ServizioCosaServe },
 
-  { /* COSTI E VINCOLI */ component: ServizioCostiVincoli },
+  { /* COSA SI OTTIENE */ component: ServizioCosaSiOttiene },
 
   { /* TEMPI E SCADENZE */ component: ServizioTempiScadenze },
 
-  { /* CASI PARTICOLARI */ component: ServizioCasiParticolari },
+  { /* QUANTO COSTA */ component: ServizioCostiVincoli },
+
+  { /* ?? CASI PARTICOLARI ?? */ component: ServizioCasiParticolari },
+
+  { /* ACCEDI AL SERVIZIO */ component: ServizioAccedi },
+
+  { /* ULTERIORI INFORMAZIONI */ component: ServizioUlterioriInformazioni },
+
+  { /* ?? ALTRI DOCUMENTI ?? */ component: ServizioAltriDocumenti },
+
+  { /* ?? SITI ESTERNI ?? */ component: ServizioSitiEsterni },
+
+  { /* ?? ALLEGATI ?? */ component: ServizioAllegati },
+
+  { /* ?? MODULISTICA ?? */ component: ServizioModulistica },
+
+  { /* CONDIZIONI DI SERVIZIO */ component: ServizioCondizioni },
 
   { /* CONTATTI */ component: ServizioContatti },
 
-  { /* ALTRI DOCUMENTI */ component: ServizioAltriDocumenti },
+  { /* ?? TRASPARENZA ?? */ component: ServizioTrasparenza },
 
-  { /* SITI ESTERNI */ component: ServizioSitiEsterni },
+  { /* ?? CORRELATI ??  */ component: ServizioCorrelati },
 
-  { /* ALLEGATI */ component: ServizioAllegati },
-
-  { /* MODULISTICA */ component: ServizioModulistica },
-
-  { /* TRASPARENZA */ component: ServizioTrasparenza },
-
-  { /* CORRELATI */ component: ServizioCorrelati },
-
-  { /* ULTERIORI INFORMAZIONI */ component: ServizioUlterioriInformazioni },
+  { /* ULTIMO AGGIORNAMENTO  */ component: ServizioMetadati },
 ];
 
 /**

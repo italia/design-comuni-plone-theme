@@ -152,22 +152,8 @@ msgstr "Contenuto"
 msgid "Date aggiuntive"
 msgstr "Date aggiuntive"
 
-#: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
-#: components/ItaliaTheme/manage/Widgets/TinymceWidget
-# defaultMessage: Default
-msgid "Default"
-msgstr "Default"
-
-#: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
-#: components/ItaliaTheme/manage/Widgets/TinymceWidget
-# defaultMessage: Delete
-msgid "Delete"
-msgstr "Elimina"
-
 #: components/ItaliaTheme/Blocks/ContactsBlock/Edit
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
-#: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
-#: components/ItaliaTheme/manage/Widgets/TinymceWidget
 # defaultMessage: Descrizione...
 msgid "Description"
 msgstr "Descrizione"
@@ -445,12 +431,6 @@ msgstr "Play"
 msgid "Previous page"
 msgstr "Pagina precedente"
 
-#: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
-#: components/ItaliaTheme/manage/Widgets/TinymceWidget
-# defaultMessage: Required
-msgid "Required"
-msgstr "Required"
-
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Rimuovi il file
 msgid "Rimuovi il file"
@@ -512,12 +492,6 @@ msgstr "Seleziona un file"
 msgid "Seleziona un'icona"
 msgstr ""
 
-#: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
-#: components/ItaliaTheme/manage/Widgets/TinymceWidget
-# defaultMessage: Short Name
-msgid "Short Name"
-msgstr "Short Name"
-
 #: components/ItaliaTheme/Search/SearchCTs
 #: components/ItaliaTheme/Search/SearchTopics
 # defaultMessage: Mostra tutto
@@ -559,8 +533,6 @@ msgstr "Grazie."
 #: components/ItaliaTheme/Blocks/ContactsBlock/Edit
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
 #: components/ItaliaTheme/Blocks/VideoGallery/Edit
-#: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
-#: components/ItaliaTheme/manage/Widgets/TinymceWidget
 # defaultMessage: Titolo...
 msgid "Title"
 msgstr "Titolo"
@@ -635,12 +607,6 @@ msgstr "Non autorizzato"
 msgid "Unknown Block"
 msgstr "Blocco sconosciuto"
 
-#: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
-#: components/ItaliaTheme/manage/Widgets/TinymceWidget
-# defaultMessage: Used for programmatic access to the fieldset.
-msgid "Used for programmatic access to the fieldset."
-msgstr "Used for programmatic access to the fieldset."
-
 #: components/ItaliaTheme/Footer/FooterInfos
 #: components/ItaliaTheme/Footer/FooterNavigation
 #: components/ItaliaTheme/Footer/FooterSmall
@@ -695,9 +661,9 @@ msgid "You are trying to access a protected resource, please {login} first."
 msgstr "Stai provando ad accedere ad una risorsa protetta, per favore fai prima il {login}."
 
 #: components/ItaliaTheme/View/ServizioView/ServizioAChiSiRivolge
-# defaultMessage: A chi si rivolge
+# defaultMessage: A chi è rivolto
 msgid "a_chi_si_rivolge"
-msgstr "A chi si rivolge"
+msgstr "A chi è rivolto"
 
 #: components/ItaliaTheme/View/ServizioView/ServizioComeAccedere
 # defaultMessage: Accedere al servizio
@@ -839,11 +805,6 @@ msgstr "Atti e documenti a corredo dell'istanza"
 # defaultMessage: Atto di nomina
 msgid "atto_nomina"
 msgstr "Atto di nomina"
-
-#: components/ItaliaTheme/View/ServizioView/ServizioComeAccedere
-# defaultMessage: Metodi di autenticazione al servizio
-msgid "autenticazione"
-msgstr "Autenticazione"
 
 #: config/Blocks/ListingOptions/sliderTemplate
 # defaultMessage: Autoplay
@@ -1232,14 +1193,9 @@ msgid "cosa_si_ottiene"
 msgstr "Cosa si ottiene"
 
 #: components/ItaliaTheme/View/ServizioView/ServizioCostiVincoli
-# defaultMessage: Costi
-msgid "costi"
-msgstr "Costi"
-
-#: components/ItaliaTheme/View/ServizioView/ServizioCostiVincoli
-# defaultMessage: Costi e vincoli
+# defaultMessage: Quanto costa
 msgid "costi_e_vincoli"
-msgstr "Costi e vincoli"
+msgstr "Quanto costa"
 
 #: components/ItaliaTheme/Blocks/CountDown/Sidebar
 # defaultMessage: Posizione del contatore
@@ -1663,11 +1619,6 @@ msgstr "Fatto"
 msgid "dove"
 msgstr "Dove"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioComeAccedere
-# defaultMessage: Dove rivolgersi
-msgid "dove_rivolgersi"
-msgstr "Dove rivolgersi"
-
 #: components/ItaliaTheme/View/Commons/Actions
 # defaultMessage: Scarica
 msgid "download"
@@ -1835,7 +1786,8 @@ msgstr "Sito web dell'evento"
 msgid "events"
 msgstr "Appuntamenti"
 
-#: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
+#: components/ItaliaTheme/manage/Widgets/CharCounterTextareaWidget
+#: components/ItaliaTheme/manage/Widgets/CharCounterTextWidget
 # defaultMessage: Il testo supera la lunghezza consigliata
 msgid "exceeded_chars"
 msgstr "Il testo supera la lunghezza consigliata"
@@ -2352,7 +2304,7 @@ msgstr "ALTRI ARGOMENTI"
 msgid "other_arguments"
 msgstr "Altri argomenti"
 
-#: components/ItaliaTheme/View/Commons/Metadata
+#: components/ItaliaTheme/View/ServizioView/ServizioUlterioriInformazioni
 # defaultMessage: Ulteriori informazioni
 msgid "other_info"
 msgstr "Ulteriori informazioni"
@@ -2993,24 +2945,24 @@ msgid "select_risultato"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioCosE
-# defaultMessage: Cos'è
+# defaultMessage: Descrizione
 msgid "service_cos_e"
-msgstr ""
+msgstr "Descrizione"
 
 #: components/ItaliaTheme/View/ServizioView/ServizioStato
 # defaultMessage: Il servizio non è attivo
 msgid "service_not_active"
 msgstr "Il servizio non è attivo"
 
-#: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
-# defaultMessage: Servizio non attivo
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderStatoServizio
+# defaultMessage: Servizio chiuso
 msgid "service_off"
-msgstr ""
+msgstr "Servizio chiuso"
 
-#: components/ItaliaTheme/View/Commons/PageHeader/PageHeader
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderStatoServizio
 # defaultMessage: Servizio attivo
 msgid "service_on"
-msgstr ""
+msgstr "Servizio attivo"
 
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Servizi
@@ -3027,6 +2979,47 @@ msgstr "Servizi collegati"
 # defaultMessage: Servizi
 msgid "servizi_offerti"
 msgstr "Servizi"
+
+#: components/ItaliaTheme/View/ServizioView/ServizioAccedi
+# defaultMessage: Accedi al servizio
+msgid "servizio_canale_digitale"
+msgstr "Accedi al servizio"
+
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderLinkServizio
+#: components/ItaliaTheme/View/ServizioView/ServizioAccedi
+# defaultMessage: Richiedi iscrizione online
+msgid "servizio_canale_digitale_link"
+msgstr "Richiedi iscrizione online"
+
+#: components/ItaliaTheme/View/ServizioView/ServizioComeFare
+# defaultMessage: Come fare
+msgid "servizio_come_fare"
+msgstr "Come fare"
+
+#: components/ItaliaTheme/View/ServizioView/ServizioCondizioni
+# defaultMessage: Condizioni di servizio
+msgid "servizio_condizioni"
+msgstr "Condizioni di servizio"
+
+#: components/ItaliaTheme/View/ServizioView/ServizioCondizioni
+# defaultMessage: Termini e condizioni di servizio
+msgid "servizio_condizioni_link"
+msgstr "Termini e condizioni di servizio"
+
+#: components/ItaliaTheme/View/ServizioView/ServizioCondizioni
+# defaultMessage: Per conoscere i dettagli di scadenze, requisiti e altre informazioni importanti, leggi i termini e le condizioni di servizio.
+msgid "servizio_condizioni_text"
+msgstr "Per conoscere i dettagli di scadenze, requisiti e altre informazioni importanti, leggi i termini e le condizioni di servizio."
+
+#: components/ItaliaTheme/View/ServizioView/ServizioCosaSiOttiene
+# defaultMessage: Cosa si ottiene
+msgid "servizio_cosa_si_ottiene"
+msgstr "Cosa si ottiene"
+
+#: components/ItaliaTheme/View/ServizioView/ServizioAccedi
+# defaultMessage: Prenota appuntamento
+msgid "servizio_prenota_appuntamento"
+msgstr "Prenota appuntamento"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Vai alle altre opzioni di ricerca

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 
 import {
-  RichTextArticle,
+  RichTextSection,
   OfficeCard,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
@@ -17,7 +17,7 @@ const messages = defineMessages({
 const ServizioContatti = ({ content }) => {
   const intl = useIntl();
   return content.ufficio_responsabile?.length > 0 || content.area.length > 0 ? (
-    <RichTextArticle
+    <RichTextSection
       tag_id="contatti"
       title={intl.formatMessage(messages.contatti)}
     >
@@ -37,10 +37,8 @@ const ServizioContatti = ({ content }) => {
           </>
         )}
       </div>
-    </RichTextArticle>
-  ) : (
-    <></>
-  );
+    </RichTextSection>
+  ) : null;
 };
 
 ServizioContatti.propTypes = {

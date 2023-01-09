@@ -2,7 +2,7 @@ import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 
 import {
-  RichTextArticle,
+  RichTextSection,
   GenericCard,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
@@ -26,7 +26,7 @@ const ServizioCorrelati = ({ content }) => {
   return content.servizi_collegati?.length > 0 ||
     /*content.related_news?.length > 0 ||*/
     content.relatedItems?.length > 0 ? (
-    <RichTextArticle
+    <RichTextSection
       tag_id="correlati"
       title={intl.formatMessage(messages.related_items)}
     >
@@ -70,10 +70,8 @@ const ServizioCorrelati = ({ content }) => {
           </div>
         </div>
       )}
-    </RichTextArticle>
-  ) : (
-    <></>
-  );
+    </RichTextSection>
+  ) : null;
 };
 
 export default ServizioCorrelati;

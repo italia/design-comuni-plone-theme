@@ -1,8 +1,7 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 
-import { RichTextArticle } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+import { RichTextSection } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   tempi_e_scadenze: {
@@ -14,10 +13,10 @@ const messages = defineMessages({
 const ServizioTempiScadenze = ({ content }) => {
   const intl = useIntl();
   return (
-    <RichTextArticle
+    <RichTextSection
       content={content.tempi_e_scadenze}
       add_class="style_ol_list"
-      tag_id={'text-tempi_e_scadenze'}
+      tag_id="deadlines"
       title={intl.formatMessage(messages.tempi_e_scadenze)}
     />
   );

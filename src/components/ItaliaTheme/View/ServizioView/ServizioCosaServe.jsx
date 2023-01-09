@@ -1,11 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 
 import {
-  RichTextArticle,
+  RichTextSection,
   richTextHasContent,
-  HelpBox,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
@@ -18,16 +16,14 @@ const messages = defineMessages({
 const ServizioCosaServe = ({ content }) => {
   const intl = useIntl();
   return richTextHasContent(content.cosa_serve) ? (
-    <RichTextArticle
-      tag_id={'text-cosa_serve'}
+    <RichTextSection
+      content={content.cosa_serve}
+      tag_id="needed"
       title={intl.formatMessage(messages.cosa_serve)}
-      field="cosa_serve"
-    >
-      <HelpBox text={content.cosa_serve} />
-    </RichTextArticle>
-  ) : (
-    <></>
-  );
+      hasBg
+      p="3"
+    />
+  ) : null;
 };
 
 ServizioCosaServe.propTypes = {
