@@ -23,6 +23,10 @@ const messages = defineMessages({
     id: 'block_bg_color',
     defaultMessage: 'Colore di sfondo',
   },
+  titleLine: {
+    id: 'titleLine',
+    defaultMessage: 'Mostra la linea sotto il titolo',
+  },
 });
 
 /** DEFAULT **/
@@ -43,6 +47,18 @@ const addDefaultOptions = (schema, formData, intl, position = 0) => {
     pos,
   );
   pos++;
+
+  if (formData.title) {
+    addSchemaField(
+      schema,
+      'titleLine',
+      intl.formatMessage(messages.titleLine),
+      null,
+      { type: 'boolean' },
+      pos,
+    );
+    pos++;
+  }
 
   if (listing_items_colors.length > 0) {
     addSchemaField(

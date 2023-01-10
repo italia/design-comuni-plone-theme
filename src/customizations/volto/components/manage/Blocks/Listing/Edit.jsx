@@ -29,7 +29,6 @@ const Edit = React.memo(
   (props) => {
     const { data, onChangeBlock, block, selected, pathname, linkAlign } = props;
 
-    console.log(data.linkAlign);
     const intl = useIntl();
 
     // componentDidMount
@@ -55,11 +54,13 @@ const Edit = React.memo(
     return (
       <>
         <p className="items-preview">{placeholder}</p>
+        {/* <div className={showLine === true ? 'title-bottom-line' : ''}> */}
         {data.headline && (
           <HeadlineTag className="headline">{data.headline}</HeadlineTag>
         )}
-        <ListingBody {...props} path={getBaseUrl(pathname)} isEditMode />
+        {/* </div> */}
 
+        <ListingBody {...props} path={getBaseUrl(pathname)} isEditMode />
         <SidebarPortal selected={selected}>
           <ListingData
             key={block}

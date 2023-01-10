@@ -44,6 +44,7 @@ const SimpleCardTemplateDefault = (props) => {
     linkTitle,
     linkHref,
     linkAlign,
+    titleLine,
     show_icon = true,
     show_section = true,
     show_type,
@@ -59,6 +60,8 @@ const SimpleCardTemplateDefault = (props) => {
     additionalFilters = [],
     id_lighthouse,
   } = props;
+
+  const showLine = titleLine;
 
   let currentPathFilter = additionalFilters
     ?.filter((f) => {
@@ -123,6 +126,7 @@ const SimpleCardTemplateDefault = (props) => {
             <Col md={path_filters_buttons ? 6 : 12}>
               <h2
                 className={cx('', {
+                  'title-bottom-line': showLine === true,
                   'mt-5': !show_block_bg,
                   'mb-4': !path_filters_buttons,
                 })}
