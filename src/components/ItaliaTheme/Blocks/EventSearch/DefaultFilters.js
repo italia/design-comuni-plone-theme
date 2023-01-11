@@ -2,7 +2,7 @@ import {
   DateFilter,
   SelectFilter,
   TextFilter,
-} from 'design-volto-theme/components/ItaliaTheme/Blocks/Common/SearchFilters';
+} from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Common/SearchFilters';
 import { defineMessages, useIntl } from 'react-intl';
 
 import { flattenToAppURL } from '@plone/volto/helpers';

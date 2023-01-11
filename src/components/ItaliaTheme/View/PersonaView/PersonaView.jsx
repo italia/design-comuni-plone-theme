@@ -19,7 +19,7 @@ import {
   RelatedItemInEvidence,
   SkipToMainContent,
   ContentTypeViewSections,
-} from 'design-volto-theme/components/ItaliaTheme/View';
+} from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 export const PersonaViewSectionsOrder = [
   { /* RUOLO */ component: PersonaRuolo },

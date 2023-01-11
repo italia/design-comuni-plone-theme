@@ -10,7 +10,7 @@ import {
   Alert,
 } from 'design-react-kit/dist/design-react-kit';
 
-import { FontAwesomeIcon } from 'design-volto-theme/components/ItaliaTheme';
+import { FontAwesomeIcon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import {
   submitCustomerSatisfaction,
   resetSubmitCustomerSatisfaction,

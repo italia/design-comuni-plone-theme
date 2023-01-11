@@ -7,7 +7,7 @@ import { defineMessages, useIntl } from 'react-intl';
 // monkey/customization attualmente in DVT
 import Image from '@plone/volto/components/theme/Image/Image';
 import PropTypes from 'prop-types';
-import { TextEditorWidget } from 'design-volto-theme/components/ItaliaTheme';
+import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { UniversalLink } from '@plone/volto/components';
 import config from '@plone/volto/registry';
 import cx from 'classnames';

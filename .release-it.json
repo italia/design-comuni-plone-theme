@@ -11,7 +11,7 @@
     "releaseName": "${version}"
   },
   "hooks": {
-    "before:init": ["yarn install --frozen-lockfile", "yarn i18n"]
+    "before:init": ["yarn install --immutable", "yarn i18n"]
   },
   "plugins": {
     "@release-it/conventional-changelog": {
@@ -34,6 +34,34 @@
           {
             "type": "chore",
             "section": "Maintenance"
+          },
+          {
+            "type": "ci",
+            "section": "Maintenance"
+          },
+          {
+            "type": "perf",
+            "section": "Maintenance"
+          },
+          {
+            "type": "build",
+            "section": "Maintenance"
+          },
+          {
+            "type": "style",
+            "section": "Maintenance"
+          },
+          {
+            "type": "revert",
+            "section": "Bug Fixes"
+          },
+          {
+            "type": "test",
+            "section": "Maintenance"
+          },
+          {
+            "type": "docs",
+            "section": "Documentation"
           }
         ]
       }

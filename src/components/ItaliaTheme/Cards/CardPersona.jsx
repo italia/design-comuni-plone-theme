@@ -7,11 +7,11 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 
 import { UniversalLink } from '@plone/volto/components';
-import { CardCategory } from 'design-volto-theme/components/ItaliaTheme';
+import { CardCategory } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import {
   ListingCategory,
   ListingImage,
-} from 'design-volto-theme/components/ItaliaTheme';
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 export const CardPersona = ({
   item,

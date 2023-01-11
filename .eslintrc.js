@@ -1,28 +1,51 @@
+const fs = require('fs');
 const path = require('path');
-const projectRootPath = path.resolve('.');
+const projectRootPath = __dirname;
 const packageJson = require(path.join(projectRootPath, 'package.json'));
 
-// Extends ESlint configuration for adding the aliases to `src` directories in Volto addons
-const addonsAliases = [];
-if (packageJson.addons) {
-  const addons = packageJson.addons;
-  addons.forEach((addon) => {
-    // TODO deprecated: remove in version 8
-    const addonPath = `@italia/addons/${addon}/src`;
-    addonsAliases.push([`@italia/addons/${addon}`, addonPath]);
-  });
+let voltoPath = './node_modules/@plone/volto';
+
+let configFile;
+if (fs.existsSync(`${projectRootPath}/tsconfig.json`))
+  configFile = `${projectRootPath}/tsconfig.json`;
+else if (fs.existsSync(`${projectRootPath}/jsconfig.json`))
+  configFile = `${projectRootPath}/jsconfig.json`;
+
+if (configFile) {
+  const jsConfig = require(configFile).compilerOptions;
+  const pathsConfig = jsConfig.paths;
+  if (pathsConfig['@plone/volto'])
+    voltoPath = `./${jsConfig.baseUrl}/${pathsConfig['@plone/volto'][0]}`;
 }
 
+const AddonConfigurationRegistry = require(`${voltoPath}/addon-registry.js`);
+const reg = new AddonConfigurationRegistry(__dirname);
+
+// Extends ESlint configuration for adding the aliases to `src` directories in Volto addons
+const addonAliases = Object.keys(reg.packages).map((o) => [
+  o,
+  reg.packages[o].modulePath,
+]);
+
+// TODO deprecated: remove in version 8
+const italiaAddonAliases = Object.keys(reg.packages).map((o) => [
+  `@italia/addons/${o}`,
+  reg.packages[o].modulePath,
+]);
+
 module.exports = {
-  extends: './node_modules/@plone/volto/.eslintrc',
+  extends: `${voltoPath}/.eslintrc`,
   settings: {
     'import/resolver': {
       alias: {
         map: [
           ['@plone/volto', '@plone/volto/src'],
-          ['@package', './src'],
-          ['@italia', './src'], // TODO deprecated: remove in version 8
-          ['design-volto-theme', './src'],
+          ['@plone/volto-slate', '@plone/volto/packages/volto-slate/src'],
+          ['design-comuni-plone-theme', `${__dirname}/src`],
+          ...addonAliases,
+          ...italiaAddonAliases,
+          ['@package', `${__dirname}/src`],
+          ['@italia', `${__dirname}/src`], // TODO deprecated: remove in version 8
           // TODO remove the next two when implemented in core
           [
             '@plone/volto/components/theme/Image/Image',
@@ -32,7 +55,6 @@ module.exports = {
             '@plone/volto/helpers/Image/Image',
             path.resolve(`${projectRootPath}/src/components/Image/helpers.js`),
           ],
-          ...addonsAliases,
         ],
         extensions: ['.js', '.jsx', '.json'],
       },

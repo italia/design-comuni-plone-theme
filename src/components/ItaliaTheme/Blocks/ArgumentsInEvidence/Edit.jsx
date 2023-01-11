@@ -1,16 +1,16 @@
 import React from 'react';
-import BodyWrapper from 'design-volto-theme/components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper';
+import BodyWrapper from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/ArgumentsInEvidence/BodyWrapper';
 import PropTypes from 'prop-types';
-import BottomBody from 'design-volto-theme/components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody';
-import Body from 'design-volto-theme/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body';
+import BottomBody from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody';
+import Body from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Body';
 import {
   withDNDContext,
   SubblocksEdit,
   SubblocksWrapper,
 } from 'volto-subblocks';
 import { SidebarPortal } from '@plone/volto/components';
-import Sidebar from 'design-volto-theme/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar.jsx';
-import { ArgumentsInEvidenceBackground } from 'design-volto-theme/components/ItaliaTheme';
+import Sidebar from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar.jsx';
+import { ArgumentsInEvidenceBackground } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 class Edit extends SubblocksEdit {
   render() {

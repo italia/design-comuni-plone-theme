@@ -8,14 +8,14 @@ import {
   CardTitle,
 } from 'design-react-kit/dist/design-react-kit';
 
-import { Icon } from 'design-volto-theme/components/ItaliaTheme';
+import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import {
   RichText,
   richTextHasContent,
   RichTextArticle,
   ContactLink,
   OfficeCard,
-} from 'design-volto-theme/components/ItaliaTheme/View';
+} from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   supported_by: {

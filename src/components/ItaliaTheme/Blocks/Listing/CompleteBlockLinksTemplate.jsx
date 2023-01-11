@@ -13,7 +13,7 @@ import {
 import {
   ListingLinkMore,
   ListingImage,
-} from 'design-volto-theme/components/ItaliaTheme';
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const CompleteBlockLinksTemplate = ({
   items,

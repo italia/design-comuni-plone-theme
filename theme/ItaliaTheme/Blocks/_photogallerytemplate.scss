@@ -26,12 +26,12 @@
     picture.volto-image.responsive {
       height: 300px;
       max-height: 300px;
-    }
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
 
     figcaption {
@@ -46,25 +46,47 @@
     margin-bottom: 60px;
   }
 
-  .slick-prev {
-    outline: none !important;
-
-    &:before {
-      color: $primary;
-    }
-  }
-
-  .slick-next {
-    outline: none !important;
-
-    &:before {
-      color: $primary;
-    }
-  }
-
   .slick-prev,
   .slick-next {
     top: calc(50% - 2rem - 5px);
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .slick-arrow {
+    width: 25px;
+    height: 40px;
+
+    .icon {
+      width: 25px;
+      height: 40px;
+      color: lighten($primary, 40%);
+      fill: lighten($primary, 40%);
+    }
+    &:hover .icon {
+      color: $primary;
+      fill: $primary;
+    }
+
+    &.slick-prev {
+      left: -40px;
+      outline: none !important;
+
+      &:before {
+        content: none;
+      }
+    }
+
+    &.slick-next {
+      right: -40px;
+      outline: none !important;
+
+      &:before {
+        content: none;
+      }
+    }
   }
 
   .slick-dots {

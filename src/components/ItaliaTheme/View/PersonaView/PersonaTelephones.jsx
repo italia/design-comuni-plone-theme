@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { defineMessages, useIntl } from 'react-intl';
-import { ContactLink } from 'design-volto-theme/components/ItaliaTheme/View';
+import { ContactLink } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 /**
  * PersonaTelephones component class.

@@ -1,7 +1,7 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 
-import { Modules } from 'design-volto-theme/components/ItaliaTheme/View';
+import { Modules } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   documenti: {

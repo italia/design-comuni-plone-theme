@@ -5,7 +5,7 @@
 
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { HeaderSlimRightZone } from 'design-volto-theme/components/ItaliaTheme';
+import { HeaderSlimRightZone } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import {
   Header,
   HeaderBrand,
@@ -13,7 +13,7 @@ import {
   HeaderRightZone,
 } from 'design-react-kit/dist/design-react-kit';
 import { useIntl } from 'react-intl';
-import { getSiteProperty } from 'design-volto-theme/helpers';
+import { getSiteProperty } from 'design-comuni-plone-theme/helpers';
 
 const HeaderSlim = () => {
   const subsite = useSelector((state) => state.subsite?.data);

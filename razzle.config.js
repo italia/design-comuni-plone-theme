@@ -92,29 +92,25 @@ module.exports = Object.assign({}, volto_config, {
     };
 
     base_config.module.rules.push(IMG_LOADER);
-    // RegExp.prototype.toJSON = function() { return this.source; };
-    // console.log(JSON.stringify(base_config.module.rules, null, 2))
 
-    webpackConfig.resolve.alias = {
+    base_config.resolve.alias = {
       // TODO remove the next two when implemented in core
-      '@plone/volto/components/theme/Image/Image': path.resolve(
-        `${projectRootPath}/src/components/Image/Image.jsx`,
-      ),
-      '@plone/volto/helpers/Image/Image': path.resolve(
-        `${projectRootPath}/src/components/Image/helpers.js`,
-      ),
-
+      '@plone/volto/components/theme/Image/Image': `${projectRootPath}/src/components/Image/Image.jsx`,
+      '@plone/volto/helpers/Image/Image': `${projectRootPath}/src/components/Image/helpers.js`,
       ...webpackConfig.resolve.alias,
       ...base_config.resolve.alias,
-      '../../theme.config$': `${projectRootPath}/theme/theme.config`,
-
-      '@plone/volto': `${voltoPath}/src`,
-      // to be able to reference path uncustomized by webpack
-      '@plone/volto-original': `${voltoPath}/src`,
-      // be able to reference current package from customized package
       '@italia': `${projectRootPath}/src`, // TODO deprecated: remove in version 8
-      'design-volto-theme': `${projectRootPath}/src`,
+      'design-comuni-plone-theme': `${projectRootPath}/src`,
     };
+
+    // remove unused languages. (TODO: move to ENV at build time)
+    base_config.plugins.push(
+      new webpackObject.ContextReplacementPlugin(
+        /moment[/\\]locale$/,
+        /(it|it-it|en-us|en-gb)$/,
+      ),
+      // Ignore all locale files of moment.js - new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    );
 
     return base_config;
   },

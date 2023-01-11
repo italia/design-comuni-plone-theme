@@ -19,12 +19,12 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import {
   CardCategory,
   ListingLinkMore,
-} from 'design-volto-theme/components/ItaliaTheme';
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 import {
   getCalendarDate,
   getEventRecurrenceMore,
-} from 'design-volto-theme/helpers';
-import { getCategory } from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/Commons/utils';
+} from 'design-comuni-plone-theme/helpers';
+import { getCategory } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 
 import {
   getItemIcon,
@@ -33,7 +33,7 @@ import {
   ListingImage,
   ListingText,
   CardPersona,
-} from 'design-volto-theme/components/ItaliaTheme';
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const CardWithImageTemplate = (props) => {
   const {

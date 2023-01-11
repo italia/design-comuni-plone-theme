@@ -6,7 +6,7 @@ import { UniversalLink } from '@plone/volto/components';
 import {
   ListingLinkMore,
   getListingImageBackground,
-} from 'design-volto-theme/components/ItaliaTheme';
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const SquaresImageTemplate = ({
   items,

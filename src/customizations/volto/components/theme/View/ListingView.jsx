@@ -8,8 +8,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { PageHeader } from 'design-volto-theme/components/ItaliaTheme/View';
-import { ListingImage } from 'design-volto-theme/components/ItaliaTheme';
+import { PageHeader } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+import { ListingImage } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 /**
  * List view component class.

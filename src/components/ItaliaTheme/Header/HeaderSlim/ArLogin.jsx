@@ -26,7 +26,7 @@ import {
   Icon,
   UserLoggedMenu,
   LoginButton,
-} from 'design-volto-theme/components/ItaliaTheme';
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 import config from '@plone/volto/registry';
 

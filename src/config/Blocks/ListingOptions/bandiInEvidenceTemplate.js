@@ -1,6 +1,6 @@
 import { defineMessages } from 'react-intl';
 
-import { templatesOptions } from 'design-volto-theme/config/Blocks/ListingOptions';
+import { templatesOptions } from 'design-comuni-plone-theme/config/Blocks/ListingOptions';
 
 const messages = defineMessages({
   show_ente: {

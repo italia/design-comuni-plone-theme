@@ -12,7 +12,7 @@ import {
 } from 'design-react-kit/dist/design-react-kit';
 import cx from 'classnames';
 
-import { CardCategory } from 'design-volto-theme/components/ItaliaTheme';
+import { CardCategory } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const InEvidenceTemplateSkeleton = ({
   title,

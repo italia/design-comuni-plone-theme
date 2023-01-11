@@ -8,7 +8,7 @@ import { defaultRoutes, multilingualRoutes } from '@plone/volto/routes';
 import config from '@plone/volto/registry';
 
 export const italiaRoutes = [
-  // Add design-volto-theme routes here
+  // Add design-comuni-plone-theme routes here
   {
     path: '/**/search',
     component: Search,

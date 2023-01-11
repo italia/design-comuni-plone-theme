@@ -9,7 +9,7 @@ import thunk from 'redux-thunk';
 
 // Warning: An update to Icon inside a test was not wrapped in act(...).
 // When testing, code that causes React state updates should be wrapped into act(...):
-jest.mock('design-volto-theme/components/ItaliaTheme/Icons/Icon');
+jest.mock('design-comuni-plone-theme/components/ItaliaTheme/Icons/Icon');
 
 jest.mock('@plone/volto/helpers/Loadable/Loadable');
 beforeAll(

@@ -9,7 +9,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import {
   LinkToWidget,
   ColorListWidget,
-} from 'design-volto-theme/components/ItaliaTheme';
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const messages = defineMessages({
   linkMoreTitle: {

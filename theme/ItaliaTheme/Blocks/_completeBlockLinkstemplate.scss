@@ -14,17 +14,18 @@
     width: 40px;
     height: 40px;
     flex-shrink: 0;
-    align-items: center;
-    justify-content: center;
     margin: 18px 0px 0px 18px;
 
     background-color: $white;
-    border-radius: 44px;
+    border-radius: 50%;
+    overflow: hidden;
 
-    img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
+    .volto-image {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 

@@ -25,7 +25,7 @@ import { getContent, resetContent } from '@plone/volto/actions';
 import {
   CardCategory,
   Breadcrumbs,
-} from 'design-volto-theme/components/ItaliaTheme';
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 import {
   ArgumentIcon,
   PaginaArgomentoPlaceholderAfterContent,
@@ -36,7 +36,7 @@ import {
   RelatedItems,
   RelatedItemInEvidence,
   richTextHasContent,
-} from 'design-volto-theme/components/ItaliaTheme/View';
+} from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 /**
  * PaginaArgomentoView view component class.
