@@ -53,7 +53,7 @@
           },
           {
             "type": "revert",
-            "section": "Maintenance"
+            "section": "Bug Fixes"
           },
           {
             "type": "test",

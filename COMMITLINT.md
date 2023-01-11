@@ -43,4 +43,4 @@ BREAKING CHANGE: refactor to use JavaScript features not available in Node 6.
 ## Available Types
 
 In addition to "fix" and "feat" the following types are allowed:
-build:, chore:, ci:, docs:, style:, refactor:, perf:, test:
+build:, chore:, ci:, docs:, style:, refactor:, perf:, test:, revert:
