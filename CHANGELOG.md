@@ -1,3 +1,15 @@
+## [7.0.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0-alpha.12...v7.0.0) (2023-01-11)
+
+
+### Bug Fixes
+
+* remove sort_order from search query by date. Sort order is managed by backend ([#45](https://github.com/RedTurtle/design-comuni-plone-theme/issues/45)) ([802a98d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/802a98d003989c3ac7835db6d712c4d439d0f680))
+
+
+### Documentation
+
+* improve conventional changelog ([5f70e72](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5f70e725f5336e78f74899147bf325c9f85d2c44))
+
 ## [7.0.0-alpha.12](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0-alpha.11...v7.0.0-alpha.12) (2023-01-03)
 
 
