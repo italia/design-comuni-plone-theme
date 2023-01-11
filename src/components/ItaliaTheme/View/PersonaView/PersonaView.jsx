@@ -37,7 +37,6 @@ export const PersonaViewSectionsOrder = [
 const PersonaView = ({ content }) => {
   let documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
-
   useEffect(() => {
     if (documentBody.current) {
       if (__CLIENT__) {
@@ -123,12 +122,7 @@ PersonaView.propTypes = {
     }),
     organizzazione_riferimento: PropTypes.array.isRequired,
     responsabile_di: PropTypes.array,
-    ruolo: PropTypes.object.isRequired,
     telefono: PropTypes.array,
-    tipologia_persona: PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      token: PropTypes.string.isRequired,
-    }).isRequired,
     ulteriori_informazioni: PropTypes.shape({
       data: PropTypes.string,
     }),

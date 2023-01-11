@@ -18,6 +18,8 @@ import FaqView from 'design-comuni-plone-theme/components/ItaliaTheme/View/FAQ/F
 
 import TrasparenzaView from 'design-comuni-plone-theme/components/ItaliaTheme/View/TrasparenzaView/TrasparenzaView';
 import DettagliProcedimentiView from 'design-comuni-plone-theme/components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView';
+import PuntoDiContattoView from 'design-comuni-plone-theme/components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView';
+import IncaricoView from 'design-comuni-plone-theme/components/ItaliaTheme/View/IncaricoView/IncaricoView';
 
 defineMessages({
   modulistica_view: {
@@ -54,6 +56,8 @@ const italiaContentTypesViews = {
   Bando: BandoView,
   FaqFolder: FaqFolderView,
   Faq: FaqView,
+  PuntoDiContatto: PuntoDiContattoView,
+  Incarico: IncaricoView,
 };
 
 /* LAYOUT VIEWS */

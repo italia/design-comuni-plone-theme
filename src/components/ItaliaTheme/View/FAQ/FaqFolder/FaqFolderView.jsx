@@ -109,8 +109,8 @@ const FaqFolderView = ({ content }) => {
         {faq_structure && (
           <>
             {faq_structure?.loaded &&
-              searchableText?.lenght > 0 &&
-              faq_structure.data?.items?.lenght === 0 && (
+              searchableText?.length > 0 &&
+              faq_structure.data?.items?.length === 0 && (
                 <>{intl.formatMessage(messages.no_results)}</>
               )}
 

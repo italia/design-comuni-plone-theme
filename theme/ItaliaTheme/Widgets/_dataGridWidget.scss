@@ -1,0 +1,19 @@
+.data-grid-widget {
+  .ui.grid {
+    margin: 0;
+    .row > .column.term-actions {
+      padding-left: 0;
+      padding-right: 0.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .delete-term {
+        margin-right: 0 !important;
+      }
+    }
+    .row > .field-column {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+    }
+  }
+}

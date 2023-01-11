@@ -1,3 +1,6 @@
+/**
+ * TODO: CONTROLLARE SE SERVE ANCORA. FORSE NO? RIMUOVERE?
+ */
 import React from 'react';
 import PropTypes from 'prop-types';
 

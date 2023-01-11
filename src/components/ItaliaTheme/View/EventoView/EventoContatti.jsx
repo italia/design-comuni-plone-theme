@@ -1,9 +1,6 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-
 import { defineMessages, useIntl } from 'react-intl';
 import { Card, CardBody, CardTitle } from 'design-react-kit';
-
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import {
   RichText,
@@ -11,6 +8,7 @@ import {
   RichTextArticle,
   ContactLink,
   OfficeCard,
+  ContactsCard,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
@@ -22,10 +20,10 @@ const messages = defineMessages({
     id: 'Contatti',
     defaultMessage: 'Contatti',
   },
-  event_web_site: {
-    id: 'event_web_site',
-    defaultMessage: "Sito web dell'evento",
-  },
+  // event_web_site: {
+  //   id: 'event_web_site',
+  //   defaultMessage: "Sito web dell'evento",
+  // },
   contatti_interni: {
     id: 'contatti_interni',
     defaultMessage: 'Contatti interni',
@@ -57,31 +55,14 @@ const EventoDocumenti = ({ content }) => {
   return richTextHasContent(content?.organizzato_da_esterno) ||
     content?.organizzato_da_interno.length > 0 ||
     content?.supportato_da?.length > 0 ||
-    content.web?.length > 0 ||
-    content?.telefono ||
-    content?.email ||
-    content?.fax ? (
+    content?.contact_info?.length > 0 ? (
     <RichTextArticle
       tag_id="contatti"
       title={intl.formatMessage(messages.contatti)}
     >
-      {/* ---web */}
-      {content?.web?.length > 0 && (
-        <div className="mb-5 mt-3">
-          <h5>{intl.formatMessage(messages.event_web_site)}</h5>
-          <a
-            href={
-              content.web.match(/^(http:\/\/|https:\/\/)/gm)
-                ? content.web
-                : `http://${content.web}`
-            }
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {content.web}
-          </a>
-        </div>
-      )}
+      {content.contact_info.map((contact) => (
+        <ContactsCard contact={contact} key={contact['@id']} />
+      ))}
 
       {/* ---organizzato da esterno */}
       {richTextHasContent(content?.organizzato_da_esterno) ||
@@ -152,9 +133,7 @@ const EventoDocumenti = ({ content }) => {
       {/* ---supportato da */}
       {getSupportatoDa()}
     </RichTextArticle>
-  ) : (
-    <></>
-  );
+  ) : null;
 };
 
 EventoDocumenti.propTypes = {

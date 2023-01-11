@@ -2,13 +2,15 @@
 import { isInternalURL, flattenToAppURL } from '@plone/volto/helpers';
 
 // test against all yt link formats I am aware of, not easy, can't find official docs.
-// Try all possible formats, match an alphanumeric token in the expected position, lenght should be 10-20 chars, that's the ID.
+// Try all possible formats, match an alphanumeric token in the expected position, length should be 10-20 chars, that's the ID.
 // Reference sheet used and improved with support to shorts: https://gist.github.com/rodrigoborgesdeoliveira/987683cfbfcc8d800192da1e73adc486
-const ytReg = /^(?:http|https?:)?(?:\/\/)?(?:(?:www\.|m\.)?youtube(?:-nocookie)?\.com\/(?:(?:watch)?\?(?:feature=\w*&)?vi?=|embed\/|vi?\/|e\/|shorts\/)|youtu.be\/)([\w\-]{10,20})/i;
+const ytReg =
+  /^(?:http|https?:)?(?:\/\/)?(?:(?:www\.|m\.)?youtube(?:-nocookie)?\.com\/(?:(?:watch)?\?(?:feature=\w*&)?vi?=|embed\/|vi?\/|e\/|shorts\/)|youtu.be\/)([\w\-]{10,20})/i;
 
 // Vimeo IDs should be only digits, let's try to get only a group of digits and suppose that's the video ID, scrap everything after.
 // Docs link, watch for changes https://developer.vimeo.com/api/common-formats
-const vimeoReg = /(?:http|https)?:?\/?\/?(?:www\.)?(?:player\.)?vimeo\.com\/(?:(?:channels\/(?:[\w*\/]*\/))|(?:groups\/(?:[\w*\/]*\/))|(?:videos\/|video\/|albums\/))?(\d+)/i;
+const vimeoReg =
+  /(?:http|https)?:?\/?\/?(?:www\.)?(?:player\.)?vimeo\.com\/(?:(?:channels\/(?:[\w*\/]*\/))|(?:groups\/(?:[\w*\/]*\/))|(?:videos\/|video\/|albums\/))?(\d+)/i;
 
 // Use regex against url to get video ID, video urls supported are youtube and vimeo.
 // Return videoID and placeholder (if needed), null if no match found.

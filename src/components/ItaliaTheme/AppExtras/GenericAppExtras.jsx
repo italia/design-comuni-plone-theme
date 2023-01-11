@@ -18,7 +18,6 @@ const GenericAppExtras = (props) => {
     config.settings.loadables['subsite-' + subsite?.subsite_css_class?.token];
   if (subsiteLoadable) {
     subsiteLoadable.load();
-    // .then(() => { console.log('css loaded'); });
   }
   const siteTitle = subsite?.title ?? getSiteProperty('siteTitle', intl.locale);
 

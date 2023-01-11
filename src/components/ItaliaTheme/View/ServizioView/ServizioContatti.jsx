@@ -5,6 +5,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import {
   RichTextSection,
   OfficeCard,
+  ContactsCard,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
@@ -21,6 +22,10 @@ const ServizioContatti = ({ content }) => {
       tag_id="contatti"
       title={intl.formatMessage(messages.contatti)}
     >
+      {content.contact_info?.length > 0 &&
+        content.contact_info.map((contact) => (
+          <ContactsCard contact={contact} key={contact['@id']} />
+        ))}
       <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
         {content.ufficio_responsabile?.length > 0 && (
           <>

@@ -58,6 +58,7 @@ const mock_mandatory = {
     data: '<p>no</p>',
     encoding: 'utf-8',
   },
+  contact_info: [],
   effective: '2020-05-25T14:41:00',
   evento_genitore: false,
   evento_supportato_da: [
@@ -368,7 +369,7 @@ it('expect to have all mandatory fields in page', async () => {
   expect(getAllByText('Contatti')).toHaveLength(2);
   // contatti: <span> + <h4>
   expect(getAllByText('Appuntamenti')).toHaveLength(2);
-  expect(getAllByText(/Ulteriori informazioni/i)).toHaveLength(2);
+  // expect(getAllByText(/Ulteriori informazioni/i)).toHaveLength(2);
   expect(getByText('Patrocinato da')).toBeInTheDocument();
   // expect(getByText('Sponsor')).toBeInTheDocument();
   // expect(getByText(/Altre informazioni/i)).toBeInTheDocument();

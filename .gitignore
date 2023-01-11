@@ -17,6 +17,7 @@ cache
 
 data
 omelette
+var
 
 locales/*.json
 

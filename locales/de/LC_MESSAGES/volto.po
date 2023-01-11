@@ -680,14 +680,14 @@ msgstr ""
 msgid "a_chi_si_rivolge"
 msgstr ""
 
-#: components/ItaliaTheme/View/ServizioView/ServizioComeAccedere
-# defaultMessage: Accedere al servizio
-msgid "accedere_al_servizio"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 # defaultMessage: Accordion
 msgid "accordion_block"
+msgstr ""
+
+#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+# defaultMessage: Account
+msgid "account"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Actions
@@ -816,6 +816,7 @@ msgstr ""
 msgid "atti_documenti_corredo"
 msgstr ""
 
+#: components/ItaliaTheme/View/IncaricoView/IncaricoView
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
 # defaultMessage: Atto di nomina
 msgid "atto_nomina"
@@ -1054,11 +1055,6 @@ msgstr ""
 msgid "calendar_prev_arrow"
 msgstr ""
 
-#: components/ItaliaTheme/View/ServizioView/ServizioComeAccedere
-# defaultMessage: Canale digitale
-msgid "canale_digitale"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
 # defaultMessage: Seleziona l'immagine da mostrare
 msgid "cardImage"
@@ -1149,12 +1145,9 @@ msgstr ""
 msgid "color_transparent"
 msgstr ""
 
-#: components/ItaliaTheme/View/ServizioView/ServizioComeAccedere
-# defaultMessage: Come si fa
-msgid "come_si_fa"
-msgstr ""
-
+#: components/ItaliaTheme/View/IncaricoView/IncaricoView
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Compensi
 msgid "compensi"
 msgstr ""
@@ -1175,6 +1168,7 @@ msgstr ""
 msgid "contacts_block"
 msgstr ""
 
+#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
 #: components/ItaliaTheme/View/ServizioView/ServizioContatti
 #: components/ItaliaTheme/View/UOView/UOContacts
 #: components/ItaliaTheme/View/VenueView/VenueContacts
@@ -1200,11 +1194,6 @@ msgstr ""
 #: components/ItaliaTheme/View/ServizioView/ServizioCosaServe
 # defaultMessage: Cosa serve
 msgid "cosa_serve"
-msgstr ""
-
-#: components/ItaliaTheme/View/ServizioView/ServizioComeAccedere
-# defaultMessage: Cosa si ottiene
-msgid "cosa_si_ottiene"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioCostiVincoli
@@ -1347,13 +1336,29 @@ msgstr ""
 msgid "customer_satisfaction_yes"
 msgstr ""
 
-#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
-# defaultMessage: Ha fatto parte dell'organizzazione comunale fino al
-msgid "data_conclusione_incarico"
+#: components/ItaliaTheme/View/IncaricoView/IncaricoView
+# defaultMessage: Data conclusione incarico
+msgid "data_conclusione"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaRuolo
-# defaultMessage: Data di insediamento
+# defaultMessage: Ha fatto parte dell'organizzazione comunale come {incarico} fino al
+msgid "data_conclusione_incarico"
+msgstr ""
+
+#: components/ItaliaTheme/View/IncaricoView/IncaricoView
+# defaultMessage: Data inizio incarico
+msgid "data_inizio"
+msgstr ""
+
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
+# defaultMessage: Data di inizio dell'incarico
+msgid "data_inizio_incarico"
+msgstr ""
+
+#: components/ItaliaTheme/View/IncaricoView/IncaricoView
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
+# defaultMessage: Data insediamento
 msgid "data_insediamento"
 msgstr ""
 
@@ -1729,15 +1734,14 @@ msgstr ""
 msgid "elementi_di_interesse"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/ContactLink
-#: components/ItaliaTheme/View/PersonaView/PersonaContatti
-# defaultMessage: E-mail
-msgid "email_label"
+#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+# defaultMessage: Email
+msgid "email"
 msgstr ""
 
-#: components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsContacts
+#: components/ItaliaTheme/View/Commons/ContactLink
 # defaultMessage: E-mail
-msgid "email_sede"
+msgid "email_label"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Edit
@@ -1791,11 +1795,6 @@ msgstr ""
 msgid "event_url"
 msgstr ""
 
-#: components/ItaliaTheme/View/EventoView/EventoContatti
-# defaultMessage: Sito web dell'evento
-msgid "event_web_site"
-msgstr ""
-
 #: components/ItaliaTheme/View/Commons/Events
 # defaultMessage: Appuntamenti
 msgid "events"
@@ -1828,13 +1827,9 @@ msgid "faq_search"
 msgstr "Typ een trefwoord om antwoorden te vinden"
 
 #: components/ItaliaTheme/View/Commons/ContactLink
+#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
 # defaultMessage: Fax
 msgid "fax"
-msgstr ""
-
-#: components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsContacts
-# defaultMessage: Fax
-msgid "fax_sede"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
@@ -1968,6 +1963,11 @@ msgstr ""
 msgid "importi_di_viaggio_e_o_servizi"
 msgstr ""
 
+#: components/ItaliaTheme/View/IncaricoView/IncaricoView
+# defaultMessage: Importi di viaggio e/o servizio
+msgid "importi_viaggio"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Listing/serviziAmministrazioneTrasparenteTemplate
 #: helpers/amministrazioneTrasparenteHelper
 # defaultMessage: incarico
@@ -1991,6 +1991,11 @@ msgstr ""
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
 # defaultMessage: Iter del procedimento
 msgid "iter_del_procedimento"
+msgstr ""
+
+#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+# defaultMessage: {value}:
+msgid "label"
 msgstr ""
 
 #: components/ItaliaTheme/View/UOView/UOStructure
@@ -2033,6 +2038,11 @@ msgstr ""
 #: components/ItaliaTheme/View/ServizioView/ServizioSitiEsterni
 # defaultMessage: Link utili
 msgid "link_siti_esterni"
+msgstr ""
+
+#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+# defaultMessage: LinkedIn
+msgid "linkedin"
 msgstr ""
 
 #: helpers/ListingHelper
@@ -2081,6 +2091,11 @@ msgstr ""
 #: components/ItaliaTheme/Unauthorized/Unauthorized
 # defaultMessage: Login with Spid
 msgid "login_with_spid"
+msgstr ""
+
+#: components/ItaliaTheme/View/PuntoDiContattoView/RelatedItemsChipsPDC
+# defaultMessage: Luoghi correlati
+msgid "luoghi_correlati"
 msgstr ""
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemLuoghiCorrelati
@@ -2349,14 +2364,20 @@ msgstr ""
 msgid "patrocinato_da"
 msgstr ""
 
+#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
 #: components/ItaliaTheme/View/VenueView/VenueContacts
 # defaultMessage: PEC
 msgid "pec"
 msgstr ""
 
-#: components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsContacts
-# defaultMessage: PEC
-msgid "pec_sede"
+#: components/ItaliaTheme/View/IncaricoView/IncaricoPersone
+# defaultMessage: Persona
+msgid "persona"
+msgstr ""
+
+#: components/ItaliaTheme/View/PuntoDiContattoView/RelatedItemsChipsPDC
+# defaultMessage: Persone correlate
+msgid "persone_correlate"
 msgstr ""
 
 #: components/ItaliaTheme/View/UOView/UOPeople
@@ -2387,11 +2408,6 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 # defaultMessage: Procedura informatizzata online
 msgid "procedura_online"
-msgstr ""
-
-#: components/ItaliaTheme/View/ServizioView/ServizioComeAccedere
-# defaultMessage: Procedure collegate all'esito
-msgid "procedure_collegate"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
@@ -2456,8 +2472,9 @@ msgstr ""
 msgid "reperimento_modulistica"
 msgstr ""
 
+#: components/ItaliaTheme/View/IncaricoView/IncaricoView
 #: components/ItaliaTheme/View/UOView/UOStructure
-# defaultMessage: Responsabile
+# defaultMessage: Responsabile della struttura
 msgid "responsabile"
 msgstr ""
 
@@ -2552,7 +2569,7 @@ msgstr ""
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona
 #: components/ItaliaTheme/View/PersonaView/PersonaRuolo
-# defaultMessage: Ruolo
+# defaultMessage: Incarico
 msgid "ruolo"
 msgstr ""
 
@@ -2990,6 +3007,11 @@ msgstr ""
 msgid "servizi_collegati"
 msgstr ""
 
+#: components/ItaliaTheme/View/PuntoDiContattoView/RelatedItemsChipsPDC
+# defaultMessage: Servizi correlati
+msgid "servizi_correlati"
+msgstr ""
+
 #: components/ItaliaTheme/View/UOView/UOServices
 # defaultMessage: Servizi
 msgid "servizi_offerti"
@@ -3171,9 +3193,19 @@ msgstr ""
 msgid "skiplink-navigation"
 msgstr ""
 
+#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+# defaultMessage: Skype
+msgid "skype"
+msgstr ""
+
 #: config/Blocks/ListingOptions/sliderTemplate
 # defaultMessage: N° slide da mostrare
 msgid "slidesToShow"
+msgstr ""
+
+#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+# defaultMessage: Social
+msgid "social"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
@@ -3256,6 +3288,11 @@ msgstr ""
 msgid "struttura_responsabile"
 msgstr ""
 
+#: components/ItaliaTheme/View/PuntoDiContattoView/RelatedItemsChipsPDC
+# defaultMessage: Strutture correlate
+msgid "strutture_correlate"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/SubFooterConfigurationForm
 # defaultMessage: Delete menu item
 msgid "subfooter-deletemenuitem-button"
@@ -3298,6 +3335,7 @@ msgstr ""
 
 #: components/ItaliaTheme/View/Commons/ContactLink
 #: components/ItaliaTheme/View/PersonaView/PersonaTelephones
+#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
 # defaultMessage: Tel
 msgid "telefono"
 msgstr ""
@@ -3305,6 +3343,11 @@ msgstr ""
 #: components/ItaliaTheme/View/UOView/UOTelephones
 # defaultMessage: Telefono
 msgid "telefono_sede"
+msgstr ""
+
+#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+# defaultMessage: Telegram
+msgid "telegram"
 msgstr ""
 
 #: components/ItaliaTheme/View/BandoView/BandoDate
@@ -3388,6 +3431,11 @@ msgstr ""
 msgid "trasparenza"
 msgstr ""
 
+#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+# defaultMessage: Twitter
+msgid "twitter"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 # defaultMessage: Link alla pagina del profilo
 msgid "twitterAccountLink"
@@ -3406,6 +3454,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/TwitterPosts/Body
 # defaultMessage: Non c'è nessun post da mostrare.
 msgid "twitter_posts_no_results"
+msgstr ""
+
+#: components/ItaliaTheme/View/IncaricoView/IncaricoView
+# defaultMessage: Unita organizzativa
+msgid "ufficio"
 msgstr ""
 
 #: components/ItaliaTheme/View/BandoView/BandoUfficioResponsabile
@@ -3456,6 +3509,11 @@ msgstr ""
 msgid "uo_type"
 msgstr ""
 
+#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+# defaultMessage: Sito web
+msgid "url"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
 # defaultMessage: Variazione situazione patrimoniale
 msgid "variazione_situazione_patrimoniale"
@@ -3495,9 +3553,9 @@ msgstr ""
 msgid "vincoli"
 msgstr ""
 
-#: components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsContacts
-# defaultMessage: Sito web
-msgid "website"
+#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+# defaultMessage: Whatsapp
+msgid "whatsapp"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields

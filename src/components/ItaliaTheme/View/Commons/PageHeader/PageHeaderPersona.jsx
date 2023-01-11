@@ -16,7 +16,7 @@ const messages = defineMessages({
   },
   ruolo: {
     id: 'ruolo',
-    defaultMessage: 'Ruolo',
+    defaultMessage: 'Incarico',
   },
 });
 
