@@ -19,5 +19,3 @@ node_modules
 npm-debug.log*
 omelette
 .vscode/
-.yarn/
-.yarnrc

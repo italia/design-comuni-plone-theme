@@ -10,9 +10,9 @@ import { Container, Row } from 'design-react-kit/dist/design-react-kit';
 import moment from 'moment';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
-import { getTwitterPosts } from 'design-volto-theme/actions';
-import { Icon } from 'design-volto-theme/components/ItaliaTheme';
-import TwitterSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/TwitterPosts/Skeleton';
+import { getTwitterPosts } from 'design-comuni-plone-theme/actions';
+import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import TwitterSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/TwitterPosts/Skeleton';
 
 const messages = defineMessages({
   no_results: {

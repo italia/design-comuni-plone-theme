@@ -18,7 +18,7 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import {
   getCalendarDate,
   getEventRecurrenceMore,
-} from 'design-volto-theme/helpers';
+} from 'design-comuni-plone-theme/helpers';
 import {
   ListingCategory,
   ListingText,
@@ -26,7 +26,7 @@ import {
   getItemIcon,
   ListingLinkMore,
   ListingImage,
-} from 'design-volto-theme/components/ItaliaTheme';
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const ContentInEvidenceTemplate = ({
   items,

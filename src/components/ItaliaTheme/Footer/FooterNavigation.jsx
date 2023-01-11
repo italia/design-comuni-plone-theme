@@ -18,7 +18,7 @@ import {
   LinkList,
   LinkListItem,
 } from 'design-react-kit/dist/design-react-kit';
-import { SectionIcon } from 'design-volto-theme/components/ItaliaTheme';
+import { SectionIcon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({
@@ -75,7 +75,7 @@ const FooterNavigation = () => {
                   {item.title}
                 </Link>
               </h4>
-              {item.items && (
+              {!config.settings.isFooterCollapsed && item.items && (
                 <LinkList className="footer-list clearfix" tag="div">
                   {item.items.map((subitem) => {
                     return (

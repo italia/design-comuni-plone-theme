@@ -1,8 +1,8 @@
-import faFileXml from 'design-volto-theme/icons/file-xml.svg';
-import faFileXsd from 'design-volto-theme/icons/file-xsd.svg';
-import faFileOdp from 'design-volto-theme/icons/file-odp.svg';
-import faFileOds from 'design-volto-theme/icons/file-ods.svg';
-import faFileOdt from 'design-volto-theme/icons/file-odt.svg';
+import faFileXml from 'design-comuni-plone-theme/icons/file-xml.svg';
+import faFileXsd from 'design-comuni-plone-theme/icons/file-xsd.svg';
+import faFileOdp from 'design-comuni-plone-theme/icons/file-odp.svg';
+import faFileOds from 'design-comuni-plone-theme/icons/file-ods.svg';
+import faFileOdt from 'design-comuni-plone-theme/icons/file-odt.svg';
 
 export const FILE_FORMATS = {
   'text/rtf': { icon: { lib: 'far', name: 'file-alt' }, format_name: 'rtf' },

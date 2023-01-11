@@ -6,7 +6,7 @@ import {
   RichText,
   RichTextArticle,
   richTextHasContent,
-} from 'design-volto-theme/components/ItaliaTheme/View';
+} from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   a_chi_si_rivolge: {

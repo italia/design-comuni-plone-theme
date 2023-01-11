@@ -1,5 +1,4 @@
 import React from 'react';
-
 import Styles from '@plone/volto/config/RichTextEditor/Styles';
 
 import ToHTMLRenderers from '@plone/volto/config/RichTextEditor/ToHTML';
@@ -8,12 +7,14 @@ import Plugins from '@plone/volto/config/RichTextEditor/Plugins';
 import Blocks from '@plone/volto/config/RichTextEditor/Blocks';
 //import FromHTMLCustomBlockFn from '@plone/volto/config/RichTextEditor/FromHTML';
 
-import UnderlineButton from 'design-volto-theme/config/RichTextEditor/ToolbarButtons/UnderlineButton';
-import HeadingsButton from 'design-volto-theme/config/RichTextEditor/ToolbarButtons/HeadingsButton';
-import AlignButton from 'design-volto-theme/config/RichTextEditor/ToolbarButtons/AlignButton';
-import CalloutsButton from 'design-volto-theme/config/RichTextEditor/ToolbarButtons/CalloutsButton';
-import ButtonsButton from 'design-volto-theme/config/RichTextEditor/ToolbarButtons/ButtonsButton';
-import TextSizeButton from 'design-volto-theme/config/RichTextEditor/ToolbarButtons/TextSizeButton';
+import UnderlineButton from 'design-comuni-plone-theme/config/RichTextEditor/ToolbarButtons/UnderlineButton';
+import HeadingsButton from 'design-comuni-plone-theme/config/RichTextEditor/ToolbarButtons/HeadingsButton';
+import AlignButton from 'design-comuni-plone-theme/config/RichTextEditor/ToolbarButtons/AlignButton';
+import CalloutsButton from 'design-comuni-plone-theme/config/RichTextEditor/ToolbarButtons/CalloutsButton';
+import ButtonsButton from 'design-comuni-plone-theme/config/RichTextEditor/ToolbarButtons/ButtonsButton';
+import TextSizeButton from 'design-comuni-plone-theme/config/RichTextEditor/ToolbarButtons/TextSizeButton';
+
+import LinkEntity from 'design-comuni-plone-theme/config/RichTextEditor/LinkEntity';
 
 const ItaliaRichTextEditorPlugins = (props) => [];
 const ItaliaRichTextEditorInlineToolbarButtons = (props, plugins) => {
@@ -147,9 +148,8 @@ const ItaliaFromHTMLCustomBlockFn = (element) => {
 export default function applyConfig(config) {
   config.settings.richtextEditorSettings = (props) => {
     const { plugins /*, inlineToolbarButtons*/ } = Plugins(props); // volto plugins
-    const { extendedBlockRenderMap, blockStyleFn, listBlockTypes } = Blocks(
-      props,
-    );
+    const { extendedBlockRenderMap, blockStyleFn, listBlockTypes } =
+      Blocks(props);
 
     const { immutableLib } = props;
     const { Map } = immutableLib;
@@ -203,10 +203,8 @@ export default function applyConfig(config) {
         ...plugins,
         ...ItaliaRichTextEditorPlugins(props),
       ],
-      richTextEditorInlineToolbarButtons: ItaliaRichTextEditorInlineToolbarButtons(
-        props,
-        plugins,
-      ), //[inlineToolbarButtons,...ItaliaRichTextEditorInlineToolbarButtons(props)]
+      richTextEditorInlineToolbarButtons:
+        ItaliaRichTextEditorInlineToolbarButtons(props, plugins), //[inlineToolbarButtons,...ItaliaRichTextEditorInlineToolbarButtons(props)]
       FromHTMLCustomBlockFn: ItaliaFromHTMLCustomBlockFn, //FromHTMLCustomBlockFn
       customStyleMap: {
         TEXT_LARGER: { fontSize: '1.75rem' },
@@ -217,6 +215,16 @@ export default function applyConfig(config) {
   // TODO: rimuovere questa customizzazione quando sistemano https://github.com/plone/volto/issues/1601
   config.settings.richtextViewSettings.ToHTMLRenderers = {
     ...config.settings.richtextViewSettings.ToHTMLRenderers,
+    entities: {
+      ...config.settings.richtextViewSettings.ToHTMLRenderers.entities,
+      LINK: (children, props, other) => {
+        return (
+          <LinkEntity key={other.key} {...props}>
+            {children}
+          </LinkEntity>
+        );
+      },
+    },
     blocks: {
       ...ToHTMLRenderers.blocks,
       ...ItaliaBlocksHtmlRenderers,

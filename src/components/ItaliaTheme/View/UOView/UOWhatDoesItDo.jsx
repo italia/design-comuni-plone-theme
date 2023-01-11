@@ -3,7 +3,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import {
   richTextHasContent,
   RichText,
-} from 'design-volto-theme/components/ItaliaTheme/View';
+} from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 const messages = defineMessages({
   cosa_fa: {
     id: 'cosa_fa',

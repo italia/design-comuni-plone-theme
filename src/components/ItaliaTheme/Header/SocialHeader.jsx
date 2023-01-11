@@ -9,13 +9,17 @@ import { defineMessages, useIntl } from 'react-intl';
 import { isEmpty } from 'lodash';
 
 import { HeaderSocialsZone } from 'design-react-kit/dist/design-react-kit';
-import { Icon } from 'design-volto-theme/components/ItaliaTheme';
+import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { getSocialSettings } from 'volto-social-settings';
 
 const messages = defineMessages({
   followUs: {
     id: 'Seguici su',
     defaultMessage: 'Seguici su',
+  },
+  socialOpen: {
+    id: 'Nuova scheda',
+    defaultMessage: '- apri in nuova scheda',
   },
 });
 
@@ -46,7 +50,9 @@ const SocialHeader = () => {
           {socials?.map((social, idx) => (
             <li key={idx}>
               <a
-                title={social.title}
+                title={
+                  social.title + ' ' + intl.formatMessage(messages.socialOpen)
+                }
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"

@@ -11,7 +11,7 @@ import withQuerystringResults from '@plone/volto/components/manage/Blocks/Listin
 import {
   Pagination,
   Skeleton,
-} from 'design-volto-theme/components/ItaliaTheme';
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 import { isEqual } from 'lodash';
 

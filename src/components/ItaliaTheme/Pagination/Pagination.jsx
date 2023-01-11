@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import createPaginationItems from 'design-volto-theme/components/ItaliaTheme/Pagination/createPaginationItems';
+import createPaginationItems from 'design-comuni-plone-theme/components/ItaliaTheme/Pagination/createPaginationItems';
 import { Pager, PagerList } from 'design-react-kit/dist/design-react-kit';
-import PaginationItem from 'design-volto-theme/components/ItaliaTheme/Pagination/PaginationItem';
+import PaginationItem from 'design-comuni-plone-theme/components/ItaliaTheme/Pagination/PaginationItem';
 import { invoke, isNil, map } from 'lodash';
 
 /**
@@ -68,12 +68,8 @@ export default class Pagination extends Component {
   };
 
   render() {
-    const {
-      boundaryRange,
-      ellipsisItem,
-      siblingRange,
-      totalPages,
-    } = this.props;
+    const { boundaryRange, ellipsisItem, siblingRange, totalPages } =
+      this.props;
     const { activePage } = this.state;
 
     const items = createPaginationItems({

@@ -2,7 +2,7 @@ import React from 'react';
 import { injectIntl } from 'react-intl';
 import { compose } from 'redux';
 import { injectDNDSubblocks, SubblockEdit, Subblock } from 'volto-subblocks';
-import Block from 'design-volto-theme/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block';
+import Block from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block';
 
 class Body extends SubblockEdit {
   constructor(props) {

@@ -9,8 +9,8 @@ import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 
 import { UniversalLink } from '@plone/volto/components';
 import { flattenHTMLToAppURL } from '@plone/volto/helpers';
-import { getTableRowData } from 'design-volto-theme/helpers';
-import { ListingLinkMore } from 'design-volto-theme/components/ItaliaTheme';
+import { getTableRowData } from 'design-comuni-plone-theme/helpers';
+import { ListingLinkMore } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const AmministrazioneTrasparenteTablesTemplate = ({
   items,

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { RichTextRender } from 'design-volto-theme/components/ItaliaTheme/View';
+import { RichTextRender } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 /**
  * RichText view component class.
  * @function RichText

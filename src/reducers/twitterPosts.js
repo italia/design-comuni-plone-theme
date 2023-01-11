@@ -3,7 +3,7 @@
  * @module src/reducers/twitterPosts
  */
 
-import { GET_TWITTER_POSTS } from 'design-volto-theme/actions';
+import { GET_TWITTER_POSTS } from 'design-comuni-plone-theme/actions';
 
 const initialState = {
   error: null,

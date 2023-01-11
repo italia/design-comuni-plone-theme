@@ -3,7 +3,7 @@ set -Ex
 
 function apply_path {
     mainjs=./build/server.js
-    bundlejs=./build/public/static/js/*.js
+    bundlejs="./build/public/static/js/*.js"
     test -f $mainjs
 
     echo "Check that we have API_PATH and API vars"
@@ -11,9 +11,11 @@ function apply_path {
 
     echo "Changing built files inplace"
     sed -i "s#VOLTO_API_PATH#${RAZZLE_API_PATH}#g" $mainjs
-    sed -i "s#VOLTO_API_PATH#${RAZZLE_API_PATH}#g" "$bundlejs"
+    # shellcheck disable=SC2086
+    sed -i "s#VOLTO_API_PATH#${RAZZLE_API_PATH}#g" $bundlejs
     sed -i "s#VOLTO_INTERNAL_API_PATH#${RAZZLE_INTERNAL_API_PATH}#g" $mainjs
-    sed -i "s#VOLTO_INTERNAL_API_PATH#${RAZZLE_INTERNAL_API_PATH}#g" "$bundlejs"
+    # shellcheck disable=SC2086
+    sed -i "s#VOLTO_INTERNAL_API_PATH#${RAZZLE_INTERNAL_API_PATH}#g" $bundlejs
 
     echo "Zipping JS Files"
     gzip -fk $mainjs

@@ -1,4 +1,4 @@
-import getItemIcon_extend from 'design-volto-theme/components/ItaliaTheme/Icons/common/common_extend';
+import getItemIcon_extend from 'design-comuni-plone-theme/components/ItaliaTheme/Icons/common/common_extend';
 
 const getItemIcon = (item) => {
   const type_icons = {

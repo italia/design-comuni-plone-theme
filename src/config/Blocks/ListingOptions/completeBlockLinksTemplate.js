@@ -1,9 +1,9 @@
 import {
   templatesOptions,
   addDefaultOptions,
-} from 'design-volto-theme/config/Blocks/ListingOptions';
+} from 'design-comuni-plone-theme/config/Blocks/ListingOptions';
 
-import { addLighthouseField } from 'design-volto-theme/config/Blocks/ListingOptions/utils';
+import { addLighthouseField } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
 
 export const addCompleteBlockLinksTemplateOptions = (
   schema,

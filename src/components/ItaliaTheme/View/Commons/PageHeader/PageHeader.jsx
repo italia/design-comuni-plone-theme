@@ -16,7 +16,7 @@ import {
   PageHeaderTassonomiaArgomenti,
   PageHeaderExtend,
   ArgumentIcon,
-} from 'design-volto-theme/components/ItaliaTheme/View';
+} from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 /**
  * PageHeader view component class.

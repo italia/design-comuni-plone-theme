@@ -9,7 +9,7 @@ GREEN=`tput setaf 2`
 RESET=`tput sgr0`
 YELLOW=`tput setaf 3`
 
-GIT_NAME = design-volto-theme
+GIT_NAME = design-comuni-plone-theme
 NAMESPACE = ""
 RAZZLE_JEST_CONFIG = jest-addon.config.js
 
@@ -52,15 +52,23 @@ test-acceptance-server: ## Run test acceptance server
 	docker run -i --rm --name=plone -e ZSERVER_HOST=0.0.0.0 -e ZSERVER_PORT=55001 -p 55001:55001 -e SITE=plone -e APPLY_PROFILES=plone.app.contenttypes:plone-content,plone.restapi:default,kitconcept.volto:default-homepage -e CONFIGURE_PACKAGES=plone.app.contenttypes,plone.restapi,kitconcept.volto,kitconcept.volto.cors -e ADDONS='plone.app.robotframework plone.app.contenttypes plone.restapi kitconcept.volto' plone ./bin/robot-server plone.app.robotframework.testing.PLONE_ROBOT_TESTING
 
 .PHONY: demo
-demo: docker-compose.test.yml
-	docker compose -f docker-compose.test.yml pull
-	docker compose -f docker-compose.test.yml build
-	docker compose -f docker-compose.test.yml up
+demo: docker-compose.yml
+	docker compose pull
+	docker compose build
+	docker compose up
 
 .PHONY: preinstall
-preinstall:
-	if [ -f $$(pwd)/mrs.developer.json ]; then if [ -f $$(pwd)/node_modules/.bin/missdev ]; then yarn develop; else yarn develop:npx; fi; fi
+preinstall: ## Preinstall task, checks if missdev (mrs-developer) is present and runs it
+	if [ -f $$(pwd)/mrs.developer.json ]; then make develop; fi
+
+.PHONY: develop
+develop: ## Runs missdev in the local project (mrs.developer.json should be present)
+	npx -p mrs-developer missdev --config=jsconfig.json --output=addons --fetch-https
 
 .PHONY: omelette
-omelette:
+omelette: ## Creates the omelette folder that contains a link to the installed version of Volto (a softlink pointing to node_modules/@plone/volto)
 	if [ ! -d omelette ]; then ln -sf node_modules/@plone/volto omelette; fi
+
+.PHONY: patches
+patches:
+	/bin/bash patches/patchit.sh > /dev/null 2>&1 ||true

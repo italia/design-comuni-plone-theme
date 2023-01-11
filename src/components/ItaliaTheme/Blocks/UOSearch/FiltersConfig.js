@@ -1,5 +1,5 @@
 //import { useSelector } from 'react-redux';
-import DefaultFilters from 'design-volto-theme/components/ItaliaTheme/Blocks/UOSearch/DefaultFilters';
+import DefaultFilters from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/UOSearch/DefaultFilters';
 
 /*
   ***

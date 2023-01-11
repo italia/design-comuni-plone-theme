@@ -7,8 +7,11 @@ import {
   RichText,
   OfficeCard,
   Gallery,
-} from 'design-volto-theme/components/ItaliaTheme/View';
-import { contentFolderHasItems, viewDate } from 'design-volto-theme/helpers';
+} from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+import {
+  contentFolderHasItems,
+  viewDate,
+} from 'design-comuni-plone-theme/helpers';
 
 const messages = defineMessages({
   ruolo: {

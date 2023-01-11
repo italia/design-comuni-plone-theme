@@ -35,14 +35,17 @@ import {
   Icon,
   RemoveBodyClass,
   SearchResultItem,
-} from 'design-volto-theme/components/ItaliaTheme';
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 import {
   SearchUtils,
   TextInput,
   SelectInput,
-} from 'design-volto-theme/components';
-import { getSearchFilters, getSearchResults } from 'design-volto-theme/actions';
-import { useDebouncedEffect } from 'design-volto-theme/helpers';
+} from 'design-comuni-plone-theme/components';
+import {
+  getSearchFilters,
+  getSearchResults,
+} from 'design-comuni-plone-theme/actions';
+import { useDebouncedEffect } from 'design-comuni-plone-theme/helpers';
 import config from '@plone/volto/registry';
 
 const {
@@ -154,7 +157,6 @@ const searchOrderDict = {
   relevance: {},
   date: {
     sort_on: 'Date',
-    sort_order: 'reverse',
   },
   sortable_title: {
     sort_on: 'sortable_title',

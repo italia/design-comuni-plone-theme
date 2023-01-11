@@ -1,4 +1,5 @@
 import { flattenToAppURL, isInternalURL } from '@plone/volto/helpers';
+
 import config from '@plone/volto/registry';
 
 const getImageType = (image) => {
@@ -50,8 +51,8 @@ export const getImageAttributes = (
     return minScale;
   }, null);
 
-  let attrs = {};
-  let imageType = getImageType(image);
+  const attrs = {};
+  const imageType = getImageType(image);
 
   switch (imageType) {
     case 'svg':
@@ -61,7 +62,7 @@ export const getImageAttributes = (
     // Scales object from Plone restapi
     // ideal use of Plone images
     case 'imageObject':
-      let sortedScales = Object.values(image.scales)
+      const sortedScales = Object.values(image.scales)
         .filter((scale) => scale.width <= maxSize)
         .filter(
           (scale, index, array) =>
@@ -77,8 +78,10 @@ export const getImageAttributes = (
       const scale = sortedScales[0];
       attrs.src = flattenToAppURL(scale?.download ?? image.download);
       attrs.aspectRatio = Math.round((image.width / image.height) * 100) / 100;
+      attrs.width = image.width;
+      attrs.height = image.height;
 
-      if (maxSize !== DEFAULT_MAX_SIZE) {
+      if (maxSize !== DEFAULT_MAX_SIZE && sortedScales.length > 0) {
         const maxScale = sortedScales[sortedScales.length - 1];
         attrs.width = maxScale.width;
         attrs.height = maxScale.height;
@@ -121,6 +124,5 @@ export const getImageAttributes = (
       attrs.src = typeof image === 'string' ? image : null;
       break;
   }
-
   return attrs;
 };

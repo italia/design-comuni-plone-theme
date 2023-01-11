@@ -22,7 +22,7 @@
       text-transform: uppercase;
       display: flex;
       align-items: center;
-      margin-bottom: 10px;
+      margin-bottom: 0.889rem;
 
       a {
         font-weight: 700;
@@ -82,8 +82,8 @@
 
   .it-footer-small-prints {
     a {
-        word-break: normal;
-      }
+      word-break: normal;
+    }
     a,
     button,
     a:hover:not(.disabled),

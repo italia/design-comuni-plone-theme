@@ -12,7 +12,7 @@ import {
   FooterInfos,
   LogoFooter,
   BrandTextFooter,
-} from 'design-volto-theme/components/ItaliaTheme/';
+} from 'design-comuni-plone-theme/components/ItaliaTheme/';
 
 /**
  * FooterMain component class.

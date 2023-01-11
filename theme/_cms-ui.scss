@@ -118,6 +118,78 @@ body.cms-ui {
     }
   }
 
+  // Link button and tooltip
+  .link-form-container {
+    display: flex;
+    padding: 0.3rem 0;
+
+    .field {
+      display: flex;
+
+      .wrap-field {
+        display: flex;
+        align-items: center;
+
+        .input-anchorlink-theme input:focus,
+        .ui.icon.button:focus,
+        .ui.basic.button:focus {
+          outline: solid 2px $focus-outline-color;
+          border-radius: 0;
+        }
+
+        .cancel .icon {
+          fill: #e40166 !important;
+        }
+      }
+
+      input#field-link {
+        color: #444;
+        font-weight: normal;
+        height: auto;
+      }
+
+      #field-data-element-select {
+        min-width: 220px;
+        width: 100%;
+        height: 34px;
+        font-family: 'Poppins', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        font-size: 0.8rem;
+        position: relative;
+        font-weight: normal;
+        font-style: normal;
+        padding: 0 7px 0 12px;
+        margin-top: 0.2rem;
+        background-color: transparent;
+        color: #444;
+
+        .react-select__control {
+          min-height: 0;
+          background-color: #fafafa;
+
+          .react-select__single-value {
+            color: #444;
+            font-weight: normal;
+          }
+
+          .react-select__placeholder {
+            opacity: 0.4;
+          }
+        }
+      }
+
+      .wrapper-submit {
+        display: flex;
+        justify-content: flex-end;
+        padding-left: 0.8rem;
+
+        .ui.basic.button:focus {
+          outline: solid 2px $focus-outline-color;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+
   .skiplinks {
     position: absolute;
     top: -100%;
@@ -516,6 +588,19 @@ body.cms-ui {
       white-space: normal;
       word-break: break-word;
     }
+  }
+  &.view-diffview,
+  &.section-historyview {
+    .ui.table,
+    #toolbar .ui.table {
+      table-layout: fixed;
+      width: 100%;
+    }
+  }
+  &.view-diffview {
+    @import 'bootstrap/scss/card';
+    @import 'bootstrap-italia/src/scss/custom/card';
+    @import './bootstrap-override/bootstrap-italia/_card.scss';
   }
 }
 

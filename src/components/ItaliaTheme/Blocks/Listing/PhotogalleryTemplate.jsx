@@ -1,17 +1,19 @@
 import 'slick-carousel/slick/slick.css';
-import 'design-volto-theme/components/slick-carousel/slick/slick-theme.css';
+import 'design-comuni-plone-theme/components/slick-carousel/slick/slick-theme.css';
 
 import { Col, Container, Row } from 'design-react-kit/dist/design-react-kit';
 import {
   ListingImage,
   ListingLinkMore,
-} from 'design-volto-theme/components/ItaliaTheme';
+  NextArrow,
+  PrevArrow,
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 import React, { useRef, useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 
 import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
-import { GalleryPreview } from 'design-volto-theme/components/ItaliaTheme';
-import { Icon } from 'design-volto-theme/components/ItaliaTheme';
+import { GalleryPreview } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import PropTypes from 'prop-types';
 import { UniversalLink } from '@plone/volto/components';
 import cx from 'classnames';
@@ -106,6 +108,8 @@ const PhotogalleryTemplate = ({
         },
       },
     ],
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     appendDots: (dots) => (
       <div>
         <div className="play-pause-wrapper">

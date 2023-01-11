@@ -4,7 +4,7 @@
  */
 import React from 'react';
 
-import { Icon } from 'design-volto-theme/components/ItaliaTheme';
+import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const section_icons = {
   amministrazione: 'it-pa',

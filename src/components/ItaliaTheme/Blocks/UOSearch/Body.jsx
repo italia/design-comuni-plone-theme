@@ -10,9 +10,9 @@ import cx from 'classnames';
 
 import { getQueryStringResults } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import CardWithImageTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
-import { Pagination } from 'design-volto-theme/components/ItaliaTheme';
-import FiltersConfig from 'design-volto-theme/components/ItaliaTheme/Blocks/UOSearch/FiltersConfig';
+import CardWithImageTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/CardWithImageTemplate';
+import { Pagination } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import FiltersConfig from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/UOSearch/FiltersConfig';
 
 const messages = defineMessages({
   find: {

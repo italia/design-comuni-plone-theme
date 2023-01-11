@@ -4,7 +4,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import {
   ContactLink,
   UOTelephones,
-} from 'design-volto-theme/components/ItaliaTheme/View';
+} from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   email_sede: {

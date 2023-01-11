@@ -14,15 +14,16 @@ import {
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
 
+// eslint-disable-next-line import/no-unresolved
 import Image from '@plone/volto/components/theme/Image/Image';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
-import { getCategory } from 'design-volto-theme/components/ItaliaTheme/Blocks/Listing/Commons/utils';
+import { getCategory } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 import {
   CardCategory,
   getItemIcon,
-} from 'design-volto-theme/components/ItaliaTheme';
-import { viewDate } from 'design-volto-theme/helpers';
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { viewDate } from 'design-comuni-plone-theme/helpers';
 
 const Body = (props) => {
   const { content, block } = props;
@@ -53,6 +54,7 @@ const Body = (props) => {
               <CardCategory
                 date={
                   content.effective &&
+                  block.show_date !== false &&
                   viewDate(intl.locale, content.effective, 'll')
                 }
                 iconName={icon}

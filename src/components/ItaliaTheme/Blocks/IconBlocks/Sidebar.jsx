@@ -9,9 +9,9 @@ import { TextWidget, Icon, ObjectBrowserWidget } from '@plone/volto/components';
 import upSVG from '@plone/volto/icons/up-key.svg';
 import downSVG from '@plone/volto/icons/down-key.svg';
 
-import { LinkToWidget } from 'design-volto-theme/components/ItaliaTheme';
-import IconWidget from 'design-volto-theme/components/ItaliaTheme/manage/Widgets/IconWidget';
-import { defaultIconWidgetOptions } from 'design-volto-theme/helpers/index';
+import { LinkToWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import IconWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/IconWidget';
+import { defaultIconWidgetOptions } from 'design-comuni-plone-theme/helpers/index';
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({

@@ -14,9 +14,9 @@ import {
   CardBody,
   CardReadMore,
 } from 'design-react-kit/dist/design-react-kit';
-import { Icon } from 'design-volto-theme/components/ItaliaTheme';
+import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
-import { TextEditorWidget } from 'design-volto-theme/components/ItaliaTheme';
+import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const messages = defineMessages({
   titlePlaceholder: {

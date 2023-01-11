@@ -1,25 +1,29 @@
 import { defineMessages } from 'react-intl';
 
-import PageView from 'design-volto-theme/components/ItaliaTheme/View/PageView/PageView';
-import NewsItemView from 'design-volto-theme/components/ItaliaTheme/View/NewsItemView/NewsItemView';
-import UOView from 'design-volto-theme/components/ItaliaTheme/View/UOView/UOView';
-import PersonaView from 'design-volto-theme/components/ItaliaTheme/View/PersonaView/PersonaView';
-import VenueView from 'design-volto-theme/components/ItaliaTheme/View/VenueView/VenueView';
-import ServizioView from 'design-volto-theme/components/ItaliaTheme/View/ServizioView/ServizioView';
-import EventoView from 'design-volto-theme/components/ItaliaTheme/View/EventoView/EventoView';
-import PaginaArgomentoView from 'design-volto-theme/components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoView';
-import CartellaModulisticaView from 'design-volto-theme/components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView';
-import DocumentoView from 'design-volto-theme/components/ItaliaTheme/View/DocumentoView/DocumentoView';
-import ModuloView from 'design-volto-theme/components/ItaliaTheme/View/ModuloView/ModuloView';
-import BandoView from 'design-volto-theme/components/ItaliaTheme/View/BandoView/BandoView';
+import PageView from 'design-comuni-plone-theme/components/ItaliaTheme/View/PageView/PageView';
+import NewsItemView from 'design-comuni-plone-theme/components/ItaliaTheme/View/NewsItemView/NewsItemView';
+import UOView from 'design-comuni-plone-theme/components/ItaliaTheme/View/UOView/UOView';
+import PersonaView from 'design-comuni-plone-theme/components/ItaliaTheme/View/PersonaView/PersonaView';
+import VenueView from 'design-comuni-plone-theme/components/ItaliaTheme/View/VenueView/VenueView';
+import ServizioView from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioView';
+import EventoView from 'design-comuni-plone-theme/components/ItaliaTheme/View/EventoView/EventoView';
+import PaginaArgomentoView from 'design-comuni-plone-theme/components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoView';
+import CartellaModulisticaView from 'design-comuni-plone-theme/components/ItaliaTheme/View/CartellaModulisticaView/CartellaModulisticaView';
+import DocumentoView from 'design-comuni-plone-theme/components/ItaliaTheme/View/DocumentoView/DocumentoView';
+import ModuloView from 'design-comuni-plone-theme/components/ItaliaTheme/View/ModuloView/ModuloView';
+import BandoView from 'design-comuni-plone-theme/components/ItaliaTheme/View/BandoView/BandoView';
 
-import FaqFolderView from 'design-volto-theme/components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderView';
-import FaqView from 'design-volto-theme/components/ItaliaTheme/View/FAQ/FaqView/FaqView';
+import FaqFolderView from 'design-comuni-plone-theme/components/ItaliaTheme/View/FAQ/FaqFolder/FaqFolderView';
+import FaqView from 'design-comuni-plone-theme/components/ItaliaTheme/View/FAQ/FaqView/FaqView';
 
-import TrasparenzaView from 'design-volto-theme/components/ItaliaTheme/View/TrasparenzaView/TrasparenzaView';
-import DettagliProcedimentiView from 'design-volto-theme/components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView';
+import TrasparenzaView from 'design-comuni-plone-theme/components/ItaliaTheme/View/TrasparenzaView/TrasparenzaView';
+import DettagliProcedimentiView from 'design-comuni-plone-theme/components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView';
 
 defineMessages({
+  modulistica_view: {
+    id: 'Cartella modulistica',
+    defaultMessage: 'Cartella modulistica',
+  },
   trasparenza_view: {
     id: 'Trasparenza',
     defaultMessage: 'Trasparenza',
@@ -27,6 +31,10 @@ defineMessages({
   dettagli_procedimenti_view: {
     id: 'Dettagli procedimento',
     defaultMessage: 'Dettagli procedimento',
+  },
+  venue_view: {
+    id: 'Luogo',
+    defaultMessage: 'Luogo',
   },
 });
 
@@ -56,8 +64,10 @@ const italiaLayoutViews = {
 };
 
 const layoutViewsNamesMapping = {
+  modulistica_view: 'Cartella modulistica',
   trasparenza_view: 'Trasparenza',
   dettagli_procedimenti_view: 'Dettagli procedimento',
+  venue_view: 'Luogo',
 };
 
 const getItaliaViews = (config) => {

@@ -1,5 +1,5 @@
 import { omit } from 'lodash';
-import { GET_CALENDAR_DAY_RESULTS } from 'design-volto-theme/actions';
+import { GET_CALENDAR_DAY_RESULTS } from 'design-comuni-plone-theme/actions';
 
 const RESET_CALENDAR_RESULTS = 'RESET_CALENDAR_RESULTS';
 

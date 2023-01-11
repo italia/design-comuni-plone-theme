@@ -3,7 +3,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
 
-import { Icon } from 'design-volto-theme/components/ItaliaTheme';
+import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 /**
  * PageHeaderBando view component class.

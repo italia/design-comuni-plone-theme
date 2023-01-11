@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
-import { BlockSearchSectionsBody } from 'design-volto-theme/components/ItaliaTheme';
-import { SearchUtils } from 'design-volto-theme/components';
+import { BlockSearchSectionsBody } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { SearchUtils } from 'design-comuni-plone-theme/components';
 
 const View = ({ data, id }) => {
   const { parseFetchedSections } = SearchUtils;

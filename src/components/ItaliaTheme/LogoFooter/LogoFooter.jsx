@@ -1,5 +1,5 @@
 import React from 'react';
-import { Icon } from 'design-volto-theme/components/ItaliaTheme';
+import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 /*
  * Customization with image

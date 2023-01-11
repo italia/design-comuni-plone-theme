@@ -6,7 +6,7 @@ import {
   CardTitle,
   CardText,
 } from 'design-react-kit/dist/design-react-kit';
-import { Icon } from 'design-volto-theme/components/ItaliaTheme';
+import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 import {
   richTextHasContent,
@@ -14,7 +14,7 @@ import {
   RichText,
   GenericCard,
   ContactLink,
-} from 'design-volto-theme/components/ItaliaTheme/View';
+} from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   contatti: {

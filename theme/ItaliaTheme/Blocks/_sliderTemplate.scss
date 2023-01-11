@@ -77,14 +77,6 @@
     position: unset;
     bottom: unset;
     margin-top: 0.5rem !important;
-    li {
-      margin: 0 10px;
-      button {
-        &::before {
-          font-size: 1rem;
-        }
-      }
-    }
   }
 
   .slick-track {

@@ -7,8 +7,8 @@ import { getContent, resetContent } from '@plone/volto/actions';
 import { SidebarPortal } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
-import Body from 'design-volto-theme/components/ItaliaTheme/Blocks/HighlightedContent/Body';
-import Sidebar from 'design-volto-theme/components/ItaliaTheme/Blocks/HighlightedContent/Sidebar';
+import Body from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/HighlightedContent/Body';
+import Sidebar from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/HighlightedContent/Sidebar';
 
 const messages = defineMessages({
   emptySelection: {

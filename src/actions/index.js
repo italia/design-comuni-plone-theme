@@ -30,6 +30,12 @@ import {
   GET_DETTAGLI_PROCEDIMENTO,
 } from './getDettagliProcedimento';
 import {
+  getModulisticaItems,
+  resetModulisticaItems,
+  GET_MODULISTICA_ITEMS,
+  RESET_MODULISTICA_ITEMS,
+} from './getModulisticaItems';
+import {
   getSearchBandiFilters,
   GET_SEARCH_BANDI_FILTERS,
 } from './getSearchBandiFilters';
@@ -48,6 +54,10 @@ export {
   GET_AMMINISTRAZIONE_TRASPARENTE,
   getDettagliProcedimento,
   GET_DETTAGLI_PROCEDIMENTO,
+  getModulisticaItems,
+  GET_MODULISTICA_ITEMS,
+  resetModulisticaItems,
+  RESET_MODULISTICA_ITEMS,
   getTwitterPosts,
   GET_TWITTER_POSTS,
   setOriginalQuery,

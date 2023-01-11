@@ -1,21 +1,37 @@
 import React from 'react';
-import CharCounterDescriptionWidget from 'design-volto-theme/components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget';
+import CharCounterDescriptionWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget';
 import { DatetimeWidget } from '@plone/volto/config/Widgets';
-import { ArrayWidget } from '@plone/volto/components';
+import { ArrayWidget, WysiwygWidget } from '@plone/volto/components';
 import { MultilingualWidget } from 'volto-multilingual-widget';
-import IconWidget from 'design-volto-theme/components/ItaliaTheme/manage/Widgets/IconWidget';
-import SubsiteSocialLinksWidget from 'design-volto-theme/components/ItaliaTheme/manage/Widgets/SubsiteSocialLinksWidget';
-import SearchSectionsConfigurationWidget from 'design-volto-theme/components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget';
-import { defaultIconWidgetOptions } from 'design-volto-theme/helpers/index';
+import IconWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/IconWidget';
+import SubsiteSocialLinksWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/SubsiteSocialLinksWidget';
+import MenuConfigurationForm from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/MenuConfigurationForm';
+import SecondaryMenuConfigurationForm from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/SecondaryMenuConfigurationForm';
+import SubFooterConfigurationForm from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/SubFooterConfigurationForm';
+import SearchSectionsConfigurationWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget';
+import { defaultIconWidgetOptions } from 'design-comuni-plone-theme/helpers/index';
 import {
   ColorListWidget,
   PathFiltersWidget,
   LocationFiltersWidget,
-} from 'design-volto-theme/components/ItaliaTheme';
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 
-//import TinymceWidget from 'design-volto-theme/components/ItaliaTheme/manage/Widgets/TinymceWidget';
+//import TinymceWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/TinymceWidget';
 
 const getItaliaWidgets = (config) => {
+  config.registerComponent({
+    name: 'MenuConfigurationForm',
+    component: MenuConfigurationForm,
+  });
+  config.registerComponent({
+    name: 'SecondaryMenuConfigurationForm',
+    component: SecondaryMenuConfigurationForm,
+  });
+  config.registerComponent({
+    name: 'SubFooterConfigurationForm',
+    component: SubFooterConfigurationForm,
+  });
+
   return {
     id: {
       ...config.widgets.id,
@@ -58,7 +74,7 @@ const getItaliaWidgets = (config) => {
     },
     widget: {
       ...config.widgets.widget,
-      // richtext: TinymceWidget
+      richtext: WysiwygWidget,
       color_list: ColorListWidget,
       path_filters: PathFiltersWidget,
       location_filter: LocationFiltersWidget,

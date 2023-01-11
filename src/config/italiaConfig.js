@@ -8,46 +8,46 @@ import shareSVG from '@plone/volto/icons/share.svg';
 import {
   getItaliaListingVariations,
   removeListingVariation,
-} from 'design-volto-theme/config/Blocks/listingVariations.js';
-import getItaliaBlocks from 'design-volto-theme/config/Blocks/blocks.js';
-import getItaliaViews from 'design-volto-theme/config/Views/views';
-import getItaliaWidgets from 'design-volto-theme/config/Widgets/widgets';
+} from 'design-comuni-plone-theme/config/Blocks/listingVariations.js';
+import getItaliaBlocks from 'design-comuni-plone-theme/config/Blocks/blocks.js';
+import getItaliaViews from 'design-comuni-plone-theme/config/Views/views';
+import getItaliaWidgets from 'design-comuni-plone-theme/config/Widgets/widgets';
 
 import { rssBlock as customRssBlock } from 'volto-rss-block';
-import CardWithImageRssTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
-import CardWithImageRssTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithImageRssTemplateSkeleton';
-import CardWithoutImageRssTemplate from 'design-volto-theme/components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
-import CardWithoutImageRssTemplateSkeleton from 'design-volto-theme/components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton';
+import CardWithImageRssTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate';
+import CardWithImageRssTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithImageRssTemplateSkeleton';
+import CardWithoutImageRssTemplate from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate';
+import CardWithoutImageRssTemplateSkeleton from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/RssBlock/TemplatesSkeleton/CardWithoutImageRssTemplateSkeleton';
 
-import HandleAnchor from 'design-volto-theme/components/ItaliaTheme/AppExtras/HandleAnchor';
-import GenericAppExtras from 'design-volto-theme/components/ItaliaTheme/AppExtras/GenericAppExtras';
-import PageLoader from 'design-volto-theme/components/ItaliaTheme/AppExtras/PageLoader';
+import HandleAnchor from 'design-comuni-plone-theme/components/ItaliaTheme/AppExtras/HandleAnchor';
+import GenericAppExtras from 'design-comuni-plone-theme/components/ItaliaTheme/AppExtras/GenericAppExtras';
+import PageLoader from 'design-comuni-plone-theme/components/ItaliaTheme/AppExtras/PageLoader';
 
-import { loadables as ItaliaLoadables } from 'design-volto-theme/config/loadables';
+import { loadables as ItaliaLoadables } from 'design-comuni-plone-theme/config/loadables';
 
 // CTs icons
-import faFileInvoiceSVG from 'design-volto-theme/icons/file-invoice.svg';
-import faFolderOpenSVG from 'design-volto-theme/icons/folder-open.svg';
-import faImageSVG from 'design-volto-theme/icons/image.svg';
-import faFileSVG from 'design-volto-theme/icons/file.svg';
-import faLinkSVG from 'design-volto-theme/icons/link.svg';
-import faBoxOpenSVG from 'design-volto-theme/icons/box-open.svg';
-import faArchiveSVG from 'design-volto-theme/icons/archive.svg';
-import faFileAltSVG from 'design-volto-theme/icons/file-alt.svg';
-import faCalendarAltSVG from 'design-volto-theme/icons/calendar-alt.svg';
-import faMapMarkedAltSVG from 'design-volto-theme/icons/map-marked-alt.svg';
-import faNewspaperSVG from 'design-volto-theme/icons/newspaper.svg';
-import faUserSVG from 'design-volto-theme/icons/user.svg';
-import faCogSVG from 'design-volto-theme/icons/cog.svg';
-import faSitemapSVG from 'design-volto-theme/icons/sitemap.svg';
-import faBuildingSVG from 'design-volto-theme/icons/building.svg';
-import faFileDownloadSVG from 'design-volto-theme/icons/file-download.svg';
-import faQuestionSVG from 'design-volto-theme/icons/question-solid.svg';
-import bandoSVG from 'design-volto-theme/icons/bando.svg';
+import faFileInvoiceSVG from 'design-comuni-plone-theme/icons/file-invoice.svg';
+import faFolderOpenSVG from 'design-comuni-plone-theme/icons/folder-open.svg';
+import faImageSVG from 'design-comuni-plone-theme/icons/image.svg';
+import faFileSVG from 'design-comuni-plone-theme/icons/file.svg';
+import faLinkSVG from 'design-comuni-plone-theme/icons/link.svg';
+import faBoxOpenSVG from 'design-comuni-plone-theme/icons/box-open.svg';
+import faArchiveSVG from 'design-comuni-plone-theme/icons/archive.svg';
+import faFileAltSVG from 'design-comuni-plone-theme/icons/file-alt.svg';
+import faCalendarAltSVG from 'design-comuni-plone-theme/icons/calendar-alt.svg';
+import faMapMarkedAltSVG from 'design-comuni-plone-theme/icons/map-marked-alt.svg';
+import faNewspaperSVG from 'design-comuni-plone-theme/icons/newspaper.svg';
+import faUserSVG from 'design-comuni-plone-theme/icons/user.svg';
+import faCogSVG from 'design-comuni-plone-theme/icons/cog.svg';
+import faSitemapSVG from 'design-comuni-plone-theme/icons/sitemap.svg';
+import faBuildingSVG from 'design-comuni-plone-theme/icons/building.svg';
+import faFileDownloadSVG from 'design-comuni-plone-theme/icons/file-download.svg';
+import faQuestionSVG from 'design-comuni-plone-theme/icons/question-solid.svg';
+import bandoSVG from 'design-comuni-plone-theme/icons/bando.svg';
 
-import applyRichTextConfig from 'design-volto-theme/config/RichTextEditor/config';
+import applyRichTextConfig from 'design-comuni-plone-theme/config/RichTextEditor/config';
 
-import gdprPrivacyPanelConfig from 'design-volto-theme/config/volto-gdpr-privacy-defaultPanelConfig.js';
+import gdprPrivacyPanelConfig from 'design-comuni-plone-theme/config/volto-gdpr-privacy-defaultPanelConfig.js';
 
 export default function applyConfig(voltoConfig) {
   let config = applyRichTextConfig(voltoConfig);
@@ -77,6 +77,7 @@ export default function applyConfig(voltoConfig) {
       // },
     }),
     isMultilingual: false,
+    isFooterCollapsed: false, // false(default) -> vedere il footer automatico esploso | true -> implodere il footer menu automatico
     supportedLanguages: ['it'],
     defaultLanguage: 'it',
     verticalFormTabs: true,
@@ -87,7 +88,7 @@ export default function applyConfig(voltoConfig) {
     cookieExpires: 15552000, //6 month
     serverConfig: {
       ...config.settings.serverConfig,
-      //criticalCssPath: 'node_modules/design-volto-theme/public/critical.css', //valido solo per i siti figli. Rimosso temporaneamente perchè fa un brutto effetto al caricamento della pagina
+      //criticalCssPath: 'node_modules/design-comuni-plone-theme/public/critical.css', //valido solo per i siti figli. Rimosso temporaneamente perchè fa un brutto effetto al caricamento della pagina
       extractScripts: {
         ...config.settings.serverConfig.extractScripts,
         errorPages: true,

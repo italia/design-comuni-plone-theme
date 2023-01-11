@@ -1,12 +1,14 @@
 import 'slick-carousel/slick/slick.css';
-import 'design-volto-theme/components/slick-carousel/slick/slick-theme.css';
+import 'design-comuni-plone-theme/components/slick-carousel/slick/slick-theme.css';
 
 import { Col, Container, Row } from 'design-react-kit/dist/design-react-kit';
 import {
   Icon,
   ListingImage,
   ListingLinkMore,
-} from 'design-volto-theme/components/ItaliaTheme';
+  NextArrow,
+  PrevArrow,
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/interactive-supports-focus */
@@ -63,24 +65,6 @@ const SliderTemplate = ({
       setUserAutoplay(true);
       slider.current.slickPlay();
     }
-  };
-
-  const NextArrow = (props) => {
-    const { className, style, onClick } = props;
-    return (
-      <div className={className} style={{ ...style }} onClick={onClick}>
-        <Icon icon="chevron-right" key="chevron-right" />
-      </div>
-    );
-  };
-
-  const PrevArrow = (props) => {
-    const { className, style, onClick } = props;
-    return (
-      <div className={className} style={{ ...style }} onClick={onClick}>
-        <Icon icon="chevron-left" key="chevron-left-prev" />
-      </div>
-    );
   };
 
   const settings = {

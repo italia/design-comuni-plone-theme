@@ -1,13 +1,13 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 
-import { contentFolderHasItems } from 'design-volto-theme/helpers';
+import { contentFolderHasItems } from 'design-comuni-plone-theme/helpers';
 import {
   RichTextArticle,
   richTextHasContent,
   Gallery,
   CuredBy,
-} from 'design-volto-theme/components/ItaliaTheme/View';
+} from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   descrizione: {

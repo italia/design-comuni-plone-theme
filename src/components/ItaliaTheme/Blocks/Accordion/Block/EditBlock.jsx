@@ -10,9 +10,9 @@ import { injectIntl, defineMessages } from 'react-intl';
 import { injectDNDSubblocks, SubblockEdit, Subblock } from 'volto-subblocks';
 
 import { Button } from 'design-react-kit/dist/design-react-kit';
-import { Icon } from 'design-volto-theme/components/ItaliaTheme';
+import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
-import { TextEditorWidget } from 'design-volto-theme/components/ItaliaTheme';
+import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const messages = defineMessages({
   titlePlaceholder: {

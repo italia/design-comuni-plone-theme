@@ -12,9 +12,9 @@ import {
   FooterMain,
   FooterSmall,
   SubsiteFooter,
-} from 'design-volto-theme/components/ItaliaTheme/';
+} from 'design-comuni-plone-theme/components/ItaliaTheme/';
 
-import { CustomerSatisfaction } from 'design-volto-theme/components/ItaliaTheme';
+import { CustomerSatisfaction } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import config from '@plone/volto/registry';
 /**
  * Footer component class.

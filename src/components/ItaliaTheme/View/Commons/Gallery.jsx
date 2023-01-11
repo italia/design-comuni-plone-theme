@@ -1,5 +1,5 @@
 import 'slick-carousel/slick/slick.css';
-import 'design-volto-theme/components/slick-carousel/slick/slick-theme.css';
+import 'design-comuni-plone-theme/components/slick-carousel/slick/slick-theme.css';
 
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
@@ -8,10 +8,10 @@ import { resetSearchContent, searchContent } from '@plone/volto/actions';
 import { useDispatch, useSelector } from 'react-redux';
 
 import EmbeddedVideo from './EmbeddedVideo';
-import { GalleryPreview } from 'design-volto-theme/components/ItaliaTheme';
+import { GalleryPreview } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import Image from '@plone/volto/components/theme/Image/Image';
 import PropTypes from 'prop-types';
-import { contentFolderHasItems } from 'design-volto-theme/helpers';
+import { contentFolderHasItems } from 'design-comuni-plone-theme/helpers';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 

@@ -7,7 +7,7 @@ import {
 import {
   ListingImage,
   ListingLinkMore,
-} from 'design-volto-theme/components/ItaliaTheme';
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { defineMessages, useIntl } from 'react-intl';
 
 import PropTypes from 'prop-types';

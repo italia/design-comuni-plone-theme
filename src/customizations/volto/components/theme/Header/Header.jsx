@@ -18,7 +18,7 @@ import {
   HeaderSlim,
   HeaderCenter,
   SubsiteHeader,
-} from 'design-volto-theme/components/ItaliaTheme';
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { Headers } from 'design-react-kit/dist/design-react-kit';
 
 const Header = ({ pathname }) => {

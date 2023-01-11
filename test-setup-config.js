@@ -8,7 +8,7 @@
  */
 
 import config from '@plone/volto/registry';
-import { loadables } from 'design-volto-theme/config/loadables';
+import { loadables } from 'design-comuni-plone-theme/config/loadables';
 
 config.set('settings', {
   ...config.settings,

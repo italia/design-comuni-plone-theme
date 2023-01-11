@@ -1,9 +1,10 @@
 {
-  "name": "design-volto-theme",
+  "name": "design-comuni-plone-theme",
   "description": "Volto Theme for Italia design guidelines",
   "license": "MIT",
-  "version": "6.5.0",
+  "version": "7.0.0",
   "addons": [
+    "@plone-collective/volto-sentry",
     "volto-multilingual-widget",
     "volto-rss-block",
     "volto-venue",
@@ -25,20 +26,16 @@
   ],
   "scripts": {
     "start": "razzle start",
-    "preinstall": "make preinstall",
-    "postinstall": "yarn omelette && yarn patches",
+    "postinstall": "make omelette && make patches",
     "prepare": "husky install",
-    "omelette": "make omelette",
-    "patches": "/bin/bash patches/patchit.sh > /dev/null 2>&1 ||true",
     "build": "razzle build --noninteractive",
     "test": "razzle test --maxWorkers=1",
     "test:ci": "CI=true NODE_ICU_DATA=node_modules/full-icu razzle test",
     "test:coverage": "razzle test --coverage",
     "test:debug": "node --inspect node_modules/.bin/jest --runInBand",
     "start:prod": "NODE_ENV=production node build/server.js",
-    "i18n": "rm -rf build/messages && NODE_ENV=production i18n",
+    "i18n": "rm -rf build/messages && NODE_ENV=production node_modules/.bin/i18n",
     "release": "release-it --disable-metrics",
-    "install-full": "rm -rfd node_modules/ && yarn cache clean && yarn install --frozen-lockfile",
     "analyze": "BUNDLE_ANALYZE=true razzle build --noninteractive"
   },
   "jest": {
@@ -61,12 +58,13 @@
       "load-volto-addons": "<rootDir>/node_modules/@plone/volto/jest-addons-loader.js",
       "@package/config": "<rootDir>/jest-addons-loader.js",
       "@italia/icons/fontawesome-free-5.15.4-web/svgs/\\${prefixFolder}/\\${iconName}\\.svg": "<rootDir>/src/icons/fontawesome-free-5.15.4-web/svgs/regular/moon.svg",
-      "^design-volto-theme/icons/fontawesome-free-5.15.4-web/svgs/\\${prefixFolder}/\\${iconName}\\.svg": "<rootDir>/src/icons/fontawesome-free-5.15.4-web/svgs/regular/moon.svg",
+      "^design-comuni-plone-theme/icons/fontawesome-free-5.15.4-web/svgs/\\${prefixFolder}/\\${iconName}\\.svg": "<rootDir>/src/icons/fontawesome-free-5.15.4-web/svgs/regular/moon.svg",
       "~/(.*)$": "<rootDir>/src/$1",
       "@root/(.*)$": "<rootDir>/src/$1",
       "@italia/(.*)$": "<rootDir>/src/$1",
-      "^design-volto-theme/(.*)$": "<rootDir>/src/$1",
-      "^volto-gdpr-privacy/(.*)$": "<rootDir>/node_modules/volto-gdpr-privacy/src/$1"
+      "^design-comuni-plone-theme/(.*)$": "<rootDir>/src/$1",
+      "^volto-gdpr-privacy/(.*)$": "<rootDir>/node_modules/volto-gdpr-privacy/src/$1",
+      "^volto-venue/(.*)$": "<rootDir>/node_modules/volto-venue/src/$1"
     },
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs,ts,tsx}",
@@ -144,6 +142,10 @@
       "npx eslint --max-warnings=0 --fix",
       "npx prettier --single-quote --write"
     ],
+    "src/**/*.jsx": [
+      "yarn i18n",
+      "git add locales"
+    ],
     "theme/**/*.{css,less}": [
       "npx stylelint --fix"
     ],
@@ -172,10 +174,12 @@
     "@babel/plugin-proposal-nullish-coalescing-operator": "7.18.6",
     "@babel/plugin-proposal-throw-expressions": "7.18.6",
     "@loadable/babel-plugin": "5.13.2",
-    "@plone/volto": "16.0.0",
+    "@plone-collective/volto-sentry": "0.3.0",
+    "@plone/volto": "16.6.0",
     "bootstrap-italia": "1.3.9",
     "classnames": "^2.3.2",
     "design-react-kit": "3.1.3",
+    "htmldiff-js": "1.0.5",
     "react-dropzone": "11.0.1",
     "react-google-recaptcha-v3": "1.7.0",
     "react-highlight-words": "0.18.0",
@@ -187,19 +191,19 @@
     "typeface-titillium-web": "0.0.72",
     "volto-blocks-widget": "3.0.0",
     "volto-customer-satisfaction": "1.0.0",
-    "volto-dropdownmenu": "3.0.0",
-    "volto-editablefooter": "5.0.0",
+    "volto-dropdownmenu": "4.0.0",
+    "volto-editablefooter": "5.0.1",
     "volto-form-block": "3.0.0",
     "volto-gdpr-privacy": "2.0.0",
     "volto-google-analytics": "2.0.0",
     "volto-multilingual-widget": "3.0.0",
     "volto-rss-block": "3.0.0",
-    "volto-secondarymenu": "3.0.0",
+    "volto-secondarymenu": "4.0.0",
     "volto-social-settings": "3.0.0",
     "volto-subblocks": "2.0.0",
-    "volto-subfooter": "2.0.0",
+    "volto-subfooter": "3.0.0",
     "volto-subsites": "4.0.0",
-    "volto-venue": "4.0.0",
+    "volto-venue": "4.0.2",
     "webpack-image-resize-loader": "^5.0.0"
   },
   "devDependencies": {

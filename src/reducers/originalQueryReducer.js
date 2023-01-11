@@ -1,4 +1,4 @@
-import { ORIGINAL_QUERY } from 'design-volto-theme/actions';
+import { ORIGINAL_QUERY } from 'design-comuni-plone-theme/actions';
 
 const initialState = {};
 
