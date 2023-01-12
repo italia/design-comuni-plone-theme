@@ -1336,7 +1336,6 @@ msgstr "Ha fatto parte dell'organizzazione comunale come {incarico} fino al"
 msgid "data_inizio"
 msgstr ""
 
-#: components/ItaliaTheme/View/IncaricoView/IncaricoView
 #: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Data di inizio dell'incarico
 msgid "data_inizio_incarico"
@@ -2084,6 +2083,11 @@ msgstr "Accedi con Spid"
 msgid "luoghi_correlati"
 msgstr ""
 
+#: components/ItaliaTheme/View/VenueView/VenueDescription
+# defaultMessage: Luoghi correlati
+msgid "luoghi_correlatti"
+msgstr ""
+
 #: components/ItaliaTheme/View/NewsItemView/NewsItemLuoghiCorrelati
 # defaultMessage: Luoghi
 msgid "luoghi_notizia"
@@ -2233,6 +2237,11 @@ msgstr "Numero del comunicato stampa"
 msgid "openLinkInNewTab"
 msgstr "Apri link in una nuova scheda"
 
+#: components/ItaliaTheme/View/Commons/Dates
+# defaultMessage: Questo evento ha una data di fine aperta/variabile.
+msgid "open_end"
+msgstr ""
+
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Contenuto attivo
 msgid "optionActiveContentButton"
@@ -2367,18 +2376,8 @@ msgstr "Persona"
 msgid "persone_correlate"
 msgstr "Persone correlate"
 
-#: components/ItaliaTheme/View/IncaricoView/IncaricoPersone
-# defaultMessage: Persona
-msgid "persona"
-msgstr ""
-
-#: components/ItaliaTheme/View/PuntoDiContattoView/RelatedItemsChipsPDC
-# defaultMessage: Persone correlati
-msgid "persone_correlate"
-msgstr ""
-
 #: components/ItaliaTheme/View/UOView/UOPeople
-# defaultMessage: Tutttel le persone che fanno parte di questo servizio
+# defaultMessage: Tutte le persone che fanno parte di questo servizio
 msgid "persone_p_description"
 msgstr ""
 
@@ -3335,11 +3334,6 @@ msgstr "Visibile"
 msgid "subjects"
 msgstr "Tags"
 
-#: components/ItaliaTheme/View/EventoView/EventoContatti
-# defaultMessage: Con il supporto di
-msgid "supported_by"
-msgstr "Con il supporto di"
-
 #: components/ItaliaTheme/View/Commons/ContactLink
 #: components/ItaliaTheme/View/PersonaView/PersonaTelephones
 # defaultMessage: Tel
@@ -3388,6 +3382,11 @@ msgstr "Inserisci un valore"
 # defaultMessage: Tipologia del bando
 msgid "tipologia_bando"
 msgstr "Tipologia del bando"
+
+#: components/ItaliaTheme/View/VenueView/VenueDescription
+# defaultMessage: Tipo di luogo
+msgid "tipologia_luogo"
+msgstr ""
 
 #: components/ItaliaTheme/View/UOView/UOStructure
 # defaultMessage: Tipologia di organizzazione
@@ -3564,9 +3563,9 @@ msgstr "Vincoli"
 msgid "whatsapp"
 msgstr ""
 
-#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
-# defaultMessage: Whatsapp
-msgid "whatsapp"
+#: components/ItaliaTheme/View/Commons/Dates
+# defaultMessage: Questo evento ha luogo per tutta la giornata.
+msgid "whole_day"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields

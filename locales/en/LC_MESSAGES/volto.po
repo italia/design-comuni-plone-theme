@@ -2083,6 +2083,11 @@ msgstr ""
 msgid "luoghi_correlati"
 msgstr ""
 
+#: components/ItaliaTheme/View/VenueView/VenueDescription
+# defaultMessage: Luoghi correlati
+msgid "luoghi_correlatti"
+msgstr ""
+
 #: components/ItaliaTheme/View/NewsItemView/NewsItemLuoghiCorrelati
 # defaultMessage: Luoghi
 msgid "luoghi_notizia"
@@ -2232,6 +2237,11 @@ msgstr "Press release number"
 msgid "openLinkInNewTab"
 msgstr "Open link in a new tab"
 
+#: components/ItaliaTheme/View/Commons/Dates
+# defaultMessage: Questo evento ha una data di fine aperta/variabile.
+msgid "open_end"
+msgstr ""
+
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Contenuto attivo
 msgid "optionActiveContentButton"
@@ -2366,18 +2376,8 @@ msgstr ""
 msgid "persone_correlate"
 msgstr ""
 
-#: components/ItaliaTheme/View/IncaricoView/IncaricoPersone
-# defaultMessage: Persona
-msgid "persona"
-msgstr ""
-
-#: components/ItaliaTheme/View/PuntoDiContattoView/RelatedItemsChipsPDC
-# defaultMessage: Persone correlati
-msgid "persone_correlate"
-msgstr ""
-
 #: components/ItaliaTheme/View/UOView/UOPeople
-# defaultMessage: Tutttel le persone che fanno parte di questo servizio
+# defaultMessage: Tutte le persone che fanno parte di questo servizio
 msgid "persone_p_description"
 msgstr ""
 
@@ -3334,11 +3334,6 @@ msgstr ""
 msgid "subjects"
 msgstr "Tags"
 
-#: components/ItaliaTheme/View/EventoView/EventoContatti
-# defaultMessage: Con il supporto di
-msgid "supported_by"
-msgstr "Supported by"
-
 #: components/ItaliaTheme/View/Commons/ContactLink
 #: components/ItaliaTheme/View/PersonaView/PersonaTelephones
 # defaultMessage: Tel
@@ -3387,6 +3382,11 @@ msgstr "Insert a value"
 # defaultMessage: Tipologia del bando
 msgid "tipologia_bando"
 msgstr "Type of call"
+
+#: components/ItaliaTheme/View/VenueView/VenueDescription
+# defaultMessage: Tipo di luogo
+msgid "tipologia_luogo"
+msgstr ""
 
 #: components/ItaliaTheme/View/UOView/UOStructure
 # defaultMessage: Tipologia di organizzazione
@@ -3563,9 +3563,9 @@ msgstr "Constraints"
 msgid "whatsapp"
 msgstr ""
 
-#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
-# defaultMessage: Whatsapp
-msgid "whatsapp"
+#: components/ItaliaTheme/View/Commons/Dates
+# defaultMessage: Questo evento ha luogo per tutta la giornata.
+msgid "whole_day"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
