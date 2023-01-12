@@ -79,7 +79,7 @@ const PersonaRuolo = ({ content }) => {
   const dispatch = useDispatch();
   const fetchedIncarichi = useSelector((state) => state.content.subrequests);
   const incarichi =
-    content?.incarichi?.map((incarico) => {
+    content?.incarichi_persona?.map((incarico) => {
       let url = flattenToAppURL(incarico['@id']);
       return {
         key: `incarico${url}`,
@@ -88,7 +88,7 @@ const PersonaRuolo = ({ content }) => {
     }) ?? [];
 
   useEffect(() => {
-    incarichi?.forEach((incarico) => {
+    incarichi.forEach((incarico) => {
       if (
         !fetchedIncarichi?.[incarico.key]?.loading &&
         !fetchedIncarichi?.[incarico.key]?.loaded
@@ -98,14 +98,14 @@ const PersonaRuolo = ({ content }) => {
     });
 
     return () =>
-      incarichi?.forEach((incarico) => {
+      incarichi.forEach((incarico) => {
         dispatch(resetContent(incarico.key));
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dispatch, content?.incarichi]);
+  }, [dispatch, content?.incarichi_persona]);
 
   const incarichiData = useMemo(() => {
-    return incarichi?.reduce(
+    return incarichi.reduce(
       (acc, val) => {
         const incarico = fetchedIncarichi?.[val.key]?.data;
         if (incarico) {
@@ -151,12 +151,12 @@ const PersonaRuolo = ({ content }) => {
         title={intl.formatMessage(messages.ruolo)}
       >
         <div className="mb-5">
-          {incarichiData?.incarichiAttivi?.map((inc) => (
+          {incarichiData?.incarichiAttivi?.slice(0, 1).map((inc) => (
             /* TODO: usare tassonomia quando disponibile
               definire per bene come li vogliamo visualizzare,
               non vale piu' la vecchia visualizzazione
           */
-            <div>
+            <div key={inc['@id']}>
               {inc.title}
               <p>
                 <strong>
@@ -177,7 +177,7 @@ const PersonaRuolo = ({ content }) => {
             </div>
           ))}
           {incarichiData?.incarichiInattivi?.map((inc) => (
-            <p>
+            <p key={inc['@id']}>
               <strong>
                 {intl.formatMessage(messages.data_conclusione_incarico, {
                   incarico: inc.title,
