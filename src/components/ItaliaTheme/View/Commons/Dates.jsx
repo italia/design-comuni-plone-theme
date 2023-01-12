@@ -19,6 +19,14 @@ const messages = defineMessages({
     id: 'end',
     defaultMessage: 'Fine evento',
   },
+  open_end: {
+    id: 'open_end',
+    defaultMessage: 'Questo evento ha una data di fine aperta/variabile.',
+  },
+  whole_day: {
+    id: 'whole_day',
+    defaultMessage: 'Questo evento ha luogo per tutta la giornata.',
+  },
   additional_dates: {
     id: 'Date aggiuntive',
     defaultMessage: 'Date aggiuntive',
@@ -62,6 +70,8 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
 
   const start = viewDate(intl.locale, content.start);
   const end = viewDate(intl.locale, content.end);
+  const openEnd = content?.open_end;
+  const wholeDay = content?.whole_day;
 
   return content ? (
     <>
@@ -83,35 +93,44 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
             >
               <CardBody tag="div" className={'card-body'}>
                 <CardTitle tag="h5">
-                  {!content.whole_day && `${start.format('HH:mm')} - `}
+                  {!wholeDay && `${start.format('HH:mm')} - `}
                   {intl.formatMessage(messages.start)}
                 </CardTitle>
+                {openEnd && (
+                  <p>
+                    <i>{intl.formatMessage(messages.open_end)}</i>
+                  </p>
+                )}
               </CardBody>
             </Card>
           </div>
         </div>
-        <div className="point-list">
-          <div className="point-list-aside point-list-warning">
-            <div className="point-date text-monospace">{end.format('DD')}</div>
-            <div className="point-month text-monospace">
-              {end.format('MMMM')}
+        {!openEnd && (
+          <div className="point-list">
+            <div className="point-list-aside point-list-warning">
+              <div className="point-date text-monospace">
+                {end.format('DD')}
+              </div>
+              <div className="point-month text-monospace">
+                {end.format('MMMM')}
+              </div>
+            </div>
+            <div className="point-list-content">
+              <Card
+                className="card card-teaser rounded shadow"
+                noWrapper={true}
+                tag="div"
+              >
+                <CardBody tag="div" className={'card-body'}>
+                  <CardTitle tag="h5">
+                    {!content.whole_day && `${end.format('HH:mm')} - `}
+                    {intl.formatMessage(messages.end)}
+                  </CardTitle>
+                </CardBody>
+              </Card>
             </div>
           </div>
-          <div className="point-list-content">
-            <Card
-              className="card card-teaser rounded shadow"
-              noWrapper={true}
-              tag="div"
-            >
-              <CardBody tag="div" className={'card-body'}>
-                <CardTitle tag="h5">
-                  {!content.whole_day && `${end.format('HH:mm')} - `}
-                  {intl.formatMessage(messages.end)}
-                </CardTitle>
-              </CardBody>
-            </Card>
-          </div>
-        </div>
+        )}
       </div>
       {recurrenceText && (
         <div className="mt-4 mb-5 text-serif">
