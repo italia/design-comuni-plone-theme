@@ -30,15 +30,15 @@ jobs:
           cache-from: type=registry,ref=redturtletech/io-comune-base:main
           cache-to: type=inline
 
-      - name: Deploy to rancher
-        uses: redturtle/rancher-deploy-action@v0.1.0
-        with:
-          host: ${{ secrets.RANCHER_HOST }}
-          api-username: ${{ secrets.RANCHER_API_USERNAME }}
-          api-password: ${{ secrets.RANCHER_API_PASSWORD }}
-          cluster-id: ${{ secrets.RANCHER_CLUSTER_ID }}
-          project-id: ${{ secrets.RANCHER_PROJECT_ID }}
-          namespace: ${{ secrets.RANCHER_NAMESPACE }}
-          workload: ${{ secrets.RANCHER_WORKLOAD }}
-          image: redturtletech/io-comune-base:main
-          slack-hook-url: ${{ secrets.RANCHER_SLACK_HOOK_URL }}
+      # - name: Deploy to rancher
+      #   uses: redturtle/rancher-deploy-action@v0.1.0
+      #   with:
+      #     host: ${{ secrets.RANCHER_HOST }}
+      #     api-username: ${{ secrets.RANCHER_API_USERNAME }}
+      #     api-password: ${{ secrets.RANCHER_API_PASSWORD }}
+      #     cluster-id: ${{ secrets.RANCHER_CLUSTER_ID }}
+      #     project-id: ${{ secrets.RANCHER_PROJECT_ID }}
+      #     namespace: ${{ secrets.RANCHER_NAMESPACE }}
+      #     workload: ${{ secrets.RANCHER_WORKLOAD }}
+      #     image: redturtletech/io-comune-base:main
+      #     slack-hook-url: ${{ secrets.RANCHER_SLACK_HOOK_URL }}
