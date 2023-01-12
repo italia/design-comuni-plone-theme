@@ -10,7 +10,7 @@ import {
   CardTitle,
   CardText,
 } from 'design-react-kit';
-import { Link } from 'react-router-dom';
+import { UniversalLink } from '@plone/volto/components';
 
 const messages = defineMessages({
   servizi_offerti: {
@@ -36,17 +36,13 @@ const UOServices = ({ content }) => {
           <Col xs="12" lg="6">
             <Card className="shadow rounded">
               <CardBody>
-                <CardCategory date="">
-                  {flattenToAppURL(servizio?.['@id'])
-                    ?.split('/')
-                    ?.slice(-2, -1)}
-                </CardCategory>
+                <CardCategory date="">{servizio.parent_title}</CardCategory>
                 <CardTitle tag="h5" className="big-heading">
-                  <Link to={flattenToAppURL(servizio['id'])}>
-                    {servizio?.title}
-                  </Link>
+                  <UniversalLink href={servizio['@id']}>
+                    {servizio.title}
+                  </UniversalLink>
                 </CardTitle>
-                <CardText>{servizio?.description}</CardText>
+                <CardText>{servizio.description}</CardText>
               </CardBody>
             </Card>
           </Col>
