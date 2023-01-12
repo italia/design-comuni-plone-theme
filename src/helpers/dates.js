@@ -23,3 +23,23 @@ export const viewDate = (locale, value, format) => {
   }
   return datetime;
 };
+
+export const getRealStartAndEndWithRecurrence = (
+  locale,
+  value,
+  recurrence,
+  rrulestr,
+  intl,
+) => {
+  if (!rrulestr || !recurrence) return null;
+  const rruleSet = rrulestr(recurrence, {
+    compatible: true,
+    forceset: true,
+  });
+  const rules = rruleSet.rrules();
+
+  return {
+    recurrenceStart: viewDate(intl.locale, rules[0]?.options?.dtstart),
+    recurrenceEnd: viewDate(intl.locale, rules[0]?.options?.until),
+  };
+};
