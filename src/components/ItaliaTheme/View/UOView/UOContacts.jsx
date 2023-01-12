@@ -34,10 +34,10 @@ const UOContacts = ({ content }) => {
         content?.zip_code?.length > 0 ||
         // richTextHasContent(content?.orario_pubblico) ||
         content?.contact_info?.length > 0) && (
-        <article id="contatti" className="it-page-section anchor-offset mt-5">
-          <h4 id="header-contatti" className="mb-3">
+        <section id="contatti" className="it-page-section anchor-offset mt-5">
+          <h3 id="header-contatti" className="mb-3">
             {intl.formatMessage(messages.contatti)}
-          </h4>
+          </h3>
 
           {/* LOCATIONS E MAPPA */}
           <UOContactsLocations content={content} />
@@ -59,7 +59,7 @@ const UOContacts = ({ content }) => {
 
           {/* SEDI SECONDARIE */}
           <UOContactsSediSecondarie content={content} />
-        </article>
+        </section>
       )}
     </>
   );

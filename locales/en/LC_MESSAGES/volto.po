@@ -1989,7 +1989,7 @@ msgid "legami_altre_strutture"
 msgstr "Reference services or offices"
 
 #: components/ItaliaTheme/View/UOView/UOStructure
-# defaultMessage: Servizio o ufficio di appartenenza
+# defaultMessage: Unità organizzativa genitore
 msgid "legami_struttura_padre"
 msgstr "Association service or office"
 
@@ -2320,6 +2320,7 @@ msgid "other_arguments"
 msgstr "Ohter topics"
 
 #: components/ItaliaTheme/View/ServizioView/ServizioUlterioriInformazioni
+#: components/ItaliaTheme/View/UOView/UOMoreInfos
 # defaultMessage: Ulteriori informazioni
 msgid "other_info"
 msgstr "Further information"
@@ -2366,9 +2367,19 @@ msgid "persone_correlate"
 msgstr ""
 
 #: components/ItaliaTheme/View/UOView/UOPeople
+# defaultMessage: Tutttel le persone che fanno parte di questo servizio
+msgid "persone_p_description"
+msgstr ""
+
+#: components/ItaliaTheme/View/UOView/UOPeople
 # defaultMessage: Persone
 msgid "persone_struttura"
 msgstr "People"
+
+#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+# defaultMessage: Telefono
+msgid "phone"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Testo di aiuto
@@ -2998,7 +3009,7 @@ msgid "servizi_correlati"
 msgstr ""
 
 #: components/ItaliaTheme/View/UOView/UOServices
-# defaultMessage: Servizi
+# defaultMessage: Servizi disponibili
 msgid "servizi_offerti"
 msgstr "Services"
 
@@ -3320,7 +3331,6 @@ msgstr "Supported by"
 
 #: components/ItaliaTheme/View/Commons/ContactLink
 #: components/ItaliaTheme/View/PersonaView/PersonaTelephones
-#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
 # defaultMessage: Tel
 msgid "telefono"
 msgstr "Phone"
@@ -3369,7 +3379,7 @@ msgid "tipologia_bando"
 msgstr "Type of call"
 
 #: components/ItaliaTheme/View/UOView/UOStructure
-# defaultMessage: Tipologia organizzazione
+# defaultMessage: Tipologia di organizzazione
 msgid "tipologia_organizzazione"
 msgstr "Type of organization"
 
@@ -3480,7 +3490,7 @@ msgid "uo_altre_sedi"
 msgstr "Other locations"
 
 #: components/ItaliaTheme/View/UOView/UODocuments
-# defaultMessage: Documenti
+# defaultMessage: Allegati
 msgid "uo_documenti"
 msgstr "Documents"
 

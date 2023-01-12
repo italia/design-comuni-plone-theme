@@ -11,7 +11,7 @@ const ListingImage = ({
   className = 'listing-image',
   ...imageProps
 }) => {
-  if (!item.image_field) {
+  if (!item?.image_field) {
     if (showDefault) {
       return <img src={DefaultImageSVG} alt="" />;
     }

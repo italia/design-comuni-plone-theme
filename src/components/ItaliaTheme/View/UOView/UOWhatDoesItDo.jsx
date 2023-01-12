@@ -2,7 +2,7 @@ import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import {
   richTextHasContent,
-  RichText,
+  RichTextSection,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 const messages = defineMessages({
   cosa_fa: {
@@ -17,22 +17,14 @@ const messages = defineMessages({
 
 const UOWhatDoesItDo = ({ content }) => {
   const intl = useIntl();
-
-  return (
-    <>
-      {richTextHasContent(content?.competenze) && (
-        <article id="cosa-fa" className="it-page-section anchor-offset mt-5">
-          <h4 id="header-cosa-fa" className="mb-3">
-            {intl.formatMessage(messages.cosa_fa)}
-          </h4>
-          <div className="mb-5 mt-3">
-            {/* <h5>{intl.formatMessage(messages.competenze)}</h5> //rimosso il titolo 'competenze' perchè è l'unico sottotitolo di 'cosa fa' e ci sarebbero sempre due titoli, un po inutili*/}
-            <RichText content={content.competenze} />
-          </div>
-        </article>
-      )}
-    </>
-  );
+  return richTextHasContent(content?.competenze) ? (
+    <RichTextSection
+      content={content.ulteriori_informazioni}
+      tag_id="competenze"
+      title={intl.formatMessage(messages.competenze)}
+      title_tag="h4"
+    />
+  ) : null;
 };
 
 export default UOWhatDoesItDo;

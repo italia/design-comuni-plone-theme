@@ -78,16 +78,17 @@ const PersonaRuolo = ({ content }) => {
   const intl = useIntl();
   const dispatch = useDispatch();
   const fetchedIncarichi = useSelector((state) => state.content.subrequests);
-  const incarichi = content?.incarichi?.map((incarico) => {
-    let url = flattenToAppURL(incarico['@id']);
-    return {
-      key: `incarico${url}`,
-      url: url,
-    };
-  });
+  const incarichi =
+    content?.incarichi?.map((incarico) => {
+      let url = flattenToAppURL(incarico['@id']);
+      return {
+        key: `incarico${url}`,
+        url: url,
+      };
+    }) ?? [];
 
   useEffect(() => {
-    incarichi.forEach((incarico) => {
+    incarichi?.forEach((incarico) => {
       if (
         !fetchedIncarichi?.[incarico.key]?.loading &&
         !fetchedIncarichi?.[incarico.key]?.loaded
@@ -97,14 +98,14 @@ const PersonaRuolo = ({ content }) => {
     });
 
     return () =>
-      incarichi.forEach((incarico) => {
+      incarichi?.forEach((incarico) => {
         dispatch(resetContent(incarico.key));
       });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [dispatch, content?.incarichi]);
 
   const incarichiData = useMemo(() => {
-    return incarichi.reduce(
+    return incarichi?.reduce(
       (acc, val) => {
         const incarico = fetchedIncarichi?.[val.key]?.data;
         if (incarico) {

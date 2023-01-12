@@ -119,7 +119,7 @@ picture.volto-image.responsive img.full-width {
     margin-bottom: 1rem !important;
     line-height: 1em;
 
-    a {
+    &:not(.big-heading) a {
       color: $primary;
       font-size: 1.125rem;
       line-height: 1.625rem;

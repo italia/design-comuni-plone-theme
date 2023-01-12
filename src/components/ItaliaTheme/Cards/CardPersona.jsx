@@ -11,6 +11,8 @@ import {
 export const CardPersona = ({
   item,
   className,
+  titleClassName = '',
+  titleTagName = 'h3',
   showImage,
   natural_image_size,
   listingText,
@@ -36,7 +38,7 @@ export const CardPersona = ({
               <ListingCategory category={type} item={item} />
             </CardCategory>
           )}
-          <CardTitle tag="h3">
+          <CardTitle tag={titleTagName} className={titleClassName}>
             <UniversalLink
               item={!isEditMode ? item : null}
               href={isEditMode ? '#' : ''}

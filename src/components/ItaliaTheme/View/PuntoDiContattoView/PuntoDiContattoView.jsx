@@ -37,8 +37,8 @@ const messages = defineMessages({
     id: 'social',
     defaultMessage: 'Social',
   },
-  telefono: {
-    id: 'telefono',
+  phone: {
+    id: 'phone',
     defaultMessage: 'Telefono',
   },
   fax: {

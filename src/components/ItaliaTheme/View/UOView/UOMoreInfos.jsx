@@ -1,22 +1,27 @@
 import React from 'react';
 import {
-  HelpBox,
-  Metadata,
+  RichTextSection,
   richTextHasContent,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+import { defineMessages, useIntl } from 'react-intl';
 
 const UOMoreInfos = ({ content }) => {
-  return (
-    <Metadata
-      content={content}
-      showTags={false}
-      showSectionTitle={richTextHasContent(content?.ulteriori_informazioni)}
-    >
-      {richTextHasContent(content?.ulteriori_informazioni) && (
-        <HelpBox text={content.ulteriori_informazioni} />
-      )}
-    </Metadata>
-  );
+  const intl = useIntl();
+  return richTextHasContent(content.ulteriori_informazioni) ? (
+    <RichTextSection
+      content={content.ulteriori_informazioni}
+      tag_id="more-info"
+      title={intl.formatMessage(messages.other_info)}
+      anchorOffset={true}
+    />
+  ) : null;
 };
 
 export default UOMoreInfos;
+
+const messages = defineMessages({
+  other_info: {
+    id: 'other_info',
+    defaultMessage: 'Ulteriori informazioni',
+  },
+});

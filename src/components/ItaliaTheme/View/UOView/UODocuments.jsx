@@ -1,11 +1,15 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import { Attachments } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+import {
+  Attachments,
+  Attachment,
+} from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+import { Row, Col } from 'design-react-kit';
 
 const messages = defineMessages({
   documenti: {
     id: 'uo_documenti',
-    defaultMessage: 'Documenti',
+    defaultMessage: 'Allegati',
   },
 });
 
@@ -13,11 +17,19 @@ const UODocuments = ({ content }) => {
   const intl = useIntl();
 
   return (
-    <Attachments
-      title={intl.formatMessage(messages.documenti)}
-      content={content}
-      folder_name={'allegati'}
-    />
+    <article id="allegati" className="it-page-section anchor-offset mt-5 mb-5">
+      <h3 id="header-allegati">{intl.formatMessage(messages.documenti)}</h3>
+      <Attachments
+        content={content}
+        folder_name={'allegati'}
+        as_section={false}
+      />
+      <Row className="card-wrapper card-teaser-wrapper documenti-pubblici">
+        {content?.documenti_pubblici?.map((dp, i) => (
+          <Attachment {...dp} download_url={dp?.['@id']} key={dp['@id']} />
+        ))}
+      </Row>
+    </article>
   );
 };
 
