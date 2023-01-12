@@ -13,7 +13,7 @@ import { OSMMap } from 'volto-venue';
 const messages = defineMessages({
   dove: {
     id: 'dove',
-    defaultMessage: 'Dove',
+    defaultMessage: 'Indirizzo',
   },
   circoscrizione: {
     id: 'circoscrizione',

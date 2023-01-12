@@ -1621,9 +1621,9 @@ msgid "done_edit_social_links"
 msgstr "Fatto"
 
 #: components/ItaliaTheme/View/VenueView/VenueWhere
-# defaultMessage: Dove
+# defaultMessage: Indirizzo
 msgid "dove"
-msgstr "Dove"
+msgstr "Indirizzo"
 
 #: components/ItaliaTheme/View/Commons/Actions
 # defaultMessage: Scarica
@@ -2292,7 +2292,7 @@ msgstr "Orari"
 #: components/ItaliaTheme/View/VenueView/VenuePublicTimetable
 # defaultMessage: Orario per il pubblico
 msgid "orario_pubblico"
-msgstr "Orari di apertura"
+msgstr "Orario per il pubblico"
 
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Ordina per
@@ -2456,7 +2456,7 @@ msgstr "Novità"
 #: components/ItaliaTheme/View/VenueView/VenueServices
 # defaultMessage: Servizi
 msgid "related_services"
-msgstr "Servizi"
+msgstr "Servizi presenti nel luogo"
 
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
 # defaultMessage: Amministrazione

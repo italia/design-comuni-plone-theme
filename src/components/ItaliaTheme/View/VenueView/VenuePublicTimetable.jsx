@@ -9,7 +9,7 @@ import {
 const messages = defineMessages({
   orario_pubblico: {
     id: 'orario_pubblico',
-    defaultMessage: 'Orari di apertura',
+    defaultMessage: 'Orari per il pubblico',
   },
 });
 

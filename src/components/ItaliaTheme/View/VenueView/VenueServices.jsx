@@ -6,7 +6,7 @@ import { RelatedArticles } from 'design-comuni-plone-theme/components/ItaliaThem
 const messages = defineMessages({
   related_services: {
     id: 'related_services',
-    defaultMessage: 'Servizi',
+    defaultMessage: 'Servizi presenti nel luogo',
   },
 });
 

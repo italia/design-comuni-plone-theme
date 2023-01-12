@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-01-12T10:39:14.654Z\n"
+"POT-Creation-Date: 2023-01-12T11:53:15.028Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1622,7 +1622,7 @@ msgid "done_edit_social_links"
 msgstr ""
 
 #: components/ItaliaTheme/View/VenueView/VenueWhere
-# defaultMessage: Dove
+# defaultMessage: Indirizzo
 msgid "dove"
 msgstr ""
 
