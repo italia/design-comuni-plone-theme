@@ -1336,6 +1336,7 @@ msgstr "Ha fatto parte dell'organizzazione comunale come {incarico} fino al"
 msgid "data_inizio"
 msgstr ""
 
+#: components/ItaliaTheme/View/IncaricoView/IncaricoView
 #: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Data di inizio dell'incarico
 msgid "data_inizio_incarico"
@@ -2365,6 +2366,16 @@ msgstr "Persona"
 # defaultMessage: Persone correlate
 msgid "persone_correlate"
 msgstr "Persone correlate"
+
+#: components/ItaliaTheme/View/IncaricoView/IncaricoPersone
+# defaultMessage: Persona
+msgid "persona"
+msgstr ""
+
+#: components/ItaliaTheme/View/PuntoDiContattoView/RelatedItemsChipsPDC
+# defaultMessage: Persone correlati
+msgid "persone_correlate"
+msgstr ""
 
 #: components/ItaliaTheme/View/UOView/UOPeople
 # defaultMessage: Tutttel le persone che fanno parte di questo servizio
@@ -3547,6 +3558,11 @@ msgstr "Vedi su Google Maps"
 # defaultMessage: Vincoli
 msgid "vincoli"
 msgstr "Vincoli"
+
+#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+# defaultMessage: Whatsapp
+msgid "whatsapp"
+msgstr ""
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
 # defaultMessage: Whatsapp

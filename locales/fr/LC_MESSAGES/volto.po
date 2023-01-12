@@ -2383,6 +2383,16 @@ msgstr ""
 msgid "persone_correlate"
 msgstr ""
 
+#: components/ItaliaTheme/View/IncaricoView/IncaricoPersone
+# defaultMessage: Persona
+msgid "persona"
+msgstr ""
+
+#: components/ItaliaTheme/View/PuntoDiContattoView/RelatedItemsChipsPDC
+# defaultMessage: Persone correlati
+msgid "persone_correlate"
+msgstr ""
+
 #: components/ItaliaTheme/View/UOView/UOPeople
 # defaultMessage: Tutttel le persone che fanno parte di questo servizio
 msgid "persone_p_description"
@@ -3564,6 +3574,11 @@ msgstr "Voir sur Google Maps"
 # defaultMessage: Vincoli
 msgid "vincoli"
 msgstr "Contraintes"
+
+#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
+# defaultMessage: Whatsapp
+msgid "whatsapp"
+msgstr ""
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
 # defaultMessage: Whatsapp

@@ -2,6 +2,8 @@
  * Customizzazione:
  * - gestione campi required di tipo blocks
  * - gestione motivo dello stato di servizio che è required solo se il servizio non è fruibile
+ * - gestione campi tipo dataGridField
+ * - gestione timeline_tempi_scadenze nel servizio che ha solo un campo richiesto su 5
  */
 import { map, uniq, keys, intersection, isEmpty, filter } from 'lodash';
 import { messages } from '@plone/volto/helpers/MessageLabels/MessageLabels';
@@ -208,16 +210,34 @@ const validateRequiredFields = (
     fields.push('motivo_stato_servizio');
   }
 
+  // Custom: Situazione custom per timeline tempi e scadenze del servizio
+  if (
+    formData.timeline_tempi_scadenze &&
+    (isEmpty(touchedField) || 'timeline_tempi_scadenze' in touchedField)
+  ) {
+    fields.push('timeline_tempi_scadenze');
+  }
+
   map(fields, (requiredField) => {
     const type = schema.properties[requiredField]?.type;
     const widget = schema.properties[requiredField]?.widget;
-
     let isEmpty = !formData[requiredField];
     if (!isEmpty) {
       if (type === 'array') {
-        isEmpty = formData[requiredField]
-          ? formData[requiredField].length === 0
-          : true;
+        // Custom: Supporto alla validazione dei campi DataGridField
+        if (widget === 'data_grid') {
+          const dgfFields = schema.properties[requiredField]?.items;
+          const dgfRequiredFields = dgfFields?.required;
+          const dgfData = formData[requiredField];
+          isEmpty =
+            dgfRequiredFields.filter((dgfRequiredField) =>
+              dgfData.some((dgfField) => !!!dgfField[dgfRequiredField]),
+            )?.length > 0;
+        } else {
+          isEmpty = formData[requiredField]
+            ? formData[requiredField].length === 0
+            : true;
+        }
       } else if (type === 'string' && widget === 'richtext') {
         isEmpty = !(
           formData[requiredField]?.data?.replace(/(<([^>]+)>)/g, '').length > 0
