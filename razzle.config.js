@@ -9,6 +9,7 @@ const path = require('path');
 const makeLoaderFinder = require('razzle-dev-utils/makeLoaderFinder');
 const fileLoaderFinder = makeLoaderFinder('file-loader');
 const urlLoaderFinder = makeLoaderFinder('url-loader');
+const lessLoaderFinder = makeLoaderFinder('less-loader');
 const projectRootPath = path.resolve('.');
 
 const pathsConfig = jsConfig.paths;
@@ -92,6 +93,9 @@ module.exports = Object.assign({}, volto_config, {
     };
 
     base_config.module.rules.push(IMG_LOADER);
+
+    const lessLoader = base_config.module.rules.find(lessLoaderFinder);
+    lessLoader.include.push(/node_modules\/volto-data-grid-widget/);
 
     base_config.resolve.alias = {
       // TODO remove the next two when implemented in core
