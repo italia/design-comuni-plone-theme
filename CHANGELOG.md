@@ -1,3 +1,20 @@
+## [8.0.0-alpha.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.1...v8.0.0-alpha.2) (2023-01-13)
+
+
+### Features
+
+* upgrade volto-data-grid-widget to 2.1.0 ([#55](https://github.com/RedTurtle/design-comuni-plone-theme/issues/55)) ([e9f8700](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e9f8700c6f6a70ca16c5ffbcdfa93576f301c1db))
+
+
+### Bug Fixes
+
+* upgraded volto-data-grid-widget to 2.0.0 ([d00b773](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d00b773f33588c7a0456106ee628054a00cb6a02))
+
+
+### Maintenance
+
+* cleanup unused import ([6de76ed](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6de76edc4f98f609ef2ca1ce3926f6d68d296134))
+
 ## [8.0.0-alpha.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0...v8.0.0-alpha.1) (2023-01-12)
 
 
