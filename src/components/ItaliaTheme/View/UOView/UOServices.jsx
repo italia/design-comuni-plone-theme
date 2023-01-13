@@ -1,6 +1,5 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import {
   Row,
   Col,
