@@ -2681,27 +2681,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@plone/scripts@npm:*":
-  version: 2.2.1
-  resolution: "@plone/scripts@npm:2.2.1"
-  dependencies:
-    babel-plugin-react-intl: 5.1.17
-    babel-preset-razzle: 4.2.17
-    chalk: 4
-    commander: 8.2.0
-    fs-extra: 10.1.0
-    git-url-parse: ^11.6.0
-    mrs-developer: "*"
-    pofile: 1.0.10
-    simple-git: 3.5.0
-  bin:
-    addon: addon/index.js
-    changelogupdater: changelogupdater.cjs
-    i18n: i18n.cjs
-  checksum: f630c724137a07457203a73d954e46bddd4dea8cd16bb96e0358f6b99270dfcda5aca5352a93b07565c5a86dd5752b980d899fcc9a9ec233a40c50f1b46b04a8
-  languageName: node
-  linkType: hard
-
 "@plone/scripts@npm:2.1.2":
   version: 2.1.2
   resolution: "@plone/scripts@npm:2.1.2"
@@ -7868,7 +7847,7 @@ __metadata:
     typeface-titillium-web: 0.0.72
     volto-blocks-widget: 3.0.0
     volto-customer-satisfaction: 1.0.0
-    volto-data-grid-widget: ^1.0.3
+    volto-data-grid-widget: 2.0.0
     volto-dropdownmenu: 4.0.0
     volto-editablefooter: 5.0.1
     volto-form-block: 3.0.0
@@ -22372,12 +22351,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"volto-data-grid-widget@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "volto-data-grid-widget@npm:1.0.3"
-  dependencies:
-    "@plone/scripts": "*"
-  checksum: 0c0b8ea30e31ff9a9dd53cfab21fe968e3f4e45fc3034b68e9d9c98d08d378467cd6cc6d48de6dfbebbe1feb9382938f1cb05789e1761671945ba07cc08d265e
+"volto-data-grid-widget@npm:2.0.0":
+  version: 2.0.0
+  resolution: "volto-data-grid-widget@npm:2.0.0"
+  peerDependencies:
+    "@plone/volto": ">=16.0.0-alpha.38"
+  checksum: 1755ecd922f9e7cf61012e93f1de2a04c4da41d85c2ed122883a77c72ead98ebd2085fc1ae20cc440cdc51d83071d26351edfe519f14fb4dadd198ba5284d107
   languageName: node
   linkType: hard
 
