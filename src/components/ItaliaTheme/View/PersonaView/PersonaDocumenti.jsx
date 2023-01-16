@@ -1,7 +1,7 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import {
-  RichTextArticle,
+  RichTextSection,
   Attachment,
   Attachments,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
@@ -69,7 +69,7 @@ const PersonaDocumenti = ({ content }) => {
     contentFolderHasItems(content, 'variazione-situazione-patrimoniale');
 
   return showSection ? (
-    <RichTextArticle
+    <RichTextSection
       title={intl.formatMessage(messages.documenti)}
       tag_id="documenti"
     >
@@ -156,10 +156,8 @@ const PersonaDocumenti = ({ content }) => {
         title={intl.formatMessage(messages.variazione_situazione_patrimoniale)}
         as_section={false}
       />
-    </RichTextArticle>
-  ) : (
-    <></>
-  );
+    </RichTextSection>
+  ) : null;
 };
 
 export default PersonaDocumenti;

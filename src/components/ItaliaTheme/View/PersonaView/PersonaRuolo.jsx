@@ -1,8 +1,7 @@
-import React, { useEffect, useMemo } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import {
   richTextHasContent,
-  RichTextArticle,
+  RichTextSection,
   RichText,
   // OfficeCard,
   Gallery,
@@ -11,9 +10,6 @@ import {
   contentFolderHasItems,
   viewDate,
 } from 'design-comuni-plone-theme/helpers';
-import { getContent, resetContent } from '@plone/volto/actions';
-import { flattenToAppURL } from '@plone/volto/helpers';
-import { useDispatch, useSelector } from 'react-redux';
 
 const messages = defineMessages({
   ruolo: {
@@ -44,9 +40,9 @@ const messages = defineMessages({
     id: 'deleghe',
     defaultMessage: 'Deleghe',
   },
-  tipologia_persona: {
-    id: 'tipologia_persona',
-    defaultMessage: 'Tipologia di persona',
+  tipologia_incarico: {
+    id: 'tipologia_incarico',
+    defaultMessage: 'Tipo di incarico',
   },
   data_insediamento: {
     id: 'data_insediamento',
@@ -71,63 +67,9 @@ const messages = defineMessages({
   },
 });
 
-// TODO: rework this when taxonomies available and official wireframes
-// appear in the wild. Internal previews show no understanding of their
-// own guidelines (i.e. incarichi multipli)
 const PersonaRuolo = ({ content }) => {
   const intl = useIntl();
-  const dispatch = useDispatch();
-  const fetchedIncarichi = useSelector((state) => state.content.subrequests);
-  const incarichi =
-    content?.incarichi_persona?.map((incarico) => {
-      let url = flattenToAppURL(incarico['@id']);
-      return {
-        key: `incarico${url}`,
-        url: url,
-      };
-    }) ?? [];
 
-  useEffect(() => {
-    incarichi.forEach((incarico) => {
-      if (
-        !fetchedIncarichi?.[incarico.key]?.loading &&
-        !fetchedIncarichi?.[incarico.key]?.loaded
-      ) {
-        dispatch(getContent(incarico.url, null, incarico.key));
-      }
-    });
-
-    return () =>
-      incarichi.forEach((incarico) => {
-        dispatch(resetContent(incarico.key));
-      });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [dispatch, content?.incarichi_persona]);
-
-  const incarichiData = useMemo(() => {
-    return incarichi.reduce(
-      (acc, val) => {
-        const incarico = fetchedIncarichi?.[val.key]?.data;
-        if (incarico) {
-          if (incarico?.data_conclusione_incarico) {
-            return {
-              ...acc,
-              incarichiInattivi: [...acc.incarichiInattivi, incarico],
-            };
-          } else
-            return {
-              ...acc,
-              incarichiAttivi: [...acc.incarichiAttivi, incarico],
-            };
-        }
-        return acc;
-      },
-      {
-        incarichiAttivi: [],
-        incarichiInattivi: [],
-      },
-    );
-  }, [fetchedIncarichi, incarichi]);
   // Not shown in wireframes, somehow
   // const strutture = useMemo(() => {
   //   return incarichiData?.incarichiAttivi?.reduce((acc, val) => {
@@ -144,98 +86,50 @@ const PersonaRuolo = ({ content }) => {
   //   }, []);
   // }, [incarichiData]);
 
-  return (
+  return content?.incarichi_persona?.length > 0 ? (
     <>
-      <RichTextArticle
-        tag_id="incarico"
-        title={intl.formatMessage(messages.ruolo)}
-      >
-        <div className="mb-5">
-          {incarichiData?.incarichiAttivi?.slice(0, 1).map((inc) => (
-            /* TODO: usare tassonomia quando disponibile
-              definire per bene come li vogliamo visualizzare,
-              non vale piu' la vecchia visualizzazione
-          */
-            <div key={inc['@id']}>
-              {inc.title}
-              <p>
-                <strong>
-                  {intl.formatMessage(messages.data_insediamento)}
-                  {': '}
-                </strong>
-                {viewDate(intl.locale, inc?.data_inizio_incarico, 'DD-MM-Y')}
-              </p>
-              {inc?.data_insediamento && (
-                <p>
-                  <strong>
-                    {intl.formatMessage(messages.data_insediamento)}
-                    {': '}
-                  </strong>
-                  {viewDate(intl.locale, inc?.data_insediamento, 'DD-MM-Y')}
-                </p>
-              )}
-            </div>
-          ))}
-          {incarichiData?.incarichiInattivi?.map((inc) => (
-            <p key={inc['@id']}>
-              <strong>
-                {intl.formatMessage(messages.data_conclusione_incarico, {
-                  incarico: inc.title,
-                })}
-                :
-              </strong>{' '}
-              {viewDate(intl.locale, inc?.data_conclusione_incarico, 'DD-MM-Y')}
-            </p>
-          ))}
-          {/* Not shown in wireframes, somehow */}
-          {/* {uffici.length > 0 && (
-            <div className="mb-5 mt-3">
-              <h4>{intl.formatMessage(messages.organizzazione_riferimento)}</h4>
-              <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                {uffici.map((item, i) => (
-                  <OfficeCard key={item['@id']} office={item} />
-                ))}
-              </div>
-            </div>
+      {content.incarichi_persona.slice(0, 1).map((inc) => (
+        <>
+          <RichTextSection
+            tag_id="incarico"
+            title={intl.formatMessage(messages.ruolo)}
+          >
+            <div className="font-serif">{inc.title}</div>
+          </RichTextSection>
+          <RichTextSection
+            tag_id="tipologia_incarico"
+            title={intl.formatMessage(messages.tipologia_incarico)}
+          >
+            <div className="font-serif">{inc.tipologia_incarico}</div>
+          </RichTextSection>
+          {richTextHasContent(inc.compensi) && (
+            <RichTextSection
+              tag_id="compensi"
+              title={intl.formatMessage(messages.compensi)}
+              content={inc.compensi}
+            />
           )}
-
-          {strutture.length > 0 && (
-            <div className="mb-5 mt-3">
-              <h5>{intl.formatMessage(messages.responsabile_di)}</h5>
-              <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-                {strutture.map((item, i) => (
-                  <OfficeCard key={item['@id']} office={item} />
-                ))}
-              </div>
+          <RichTextSection
+            tag_id="data_insediamento"
+            title={intl.formatMessage(messages.data_insediamento)}
+          >
+            <div className="font-serif">
+              {viewDate(intl.locale, inc.data_inizio_incarico, 'DD-MM-Y')}
             </div>
-          )} */}
-        </div>
-      </RichTextArticle>
-      <RichTextArticle
-        tag_id="compensi"
-        title={intl.formatMessage(messages.compensi)}
-      >
-        {incarichiData?.incarichiAttivi?.map((inc) => (
-          <RichText title_size="h5" title={''} content={inc.compensi} />
-        ))}
-      </RichTextArticle>
-      <RichTextArticle
-        tag_id="data_insediamento"
-        title={intl.formatMessage(messages.data_insediamento)}
-      >
-        {incarichiData?.incarichiAttivi?.length === 1 &&
-          viewDate(
-            intl.locale,
-            incarichiData?.incarichiAttivi?.[0]?.data_inizio_incarico,
-            'DD-MM-Y',
-          )}
-      </RichTextArticle>
-      {/* {content?.tipologia_persona && (
-        <div className="mb-5 mt-3">
-          <h5>{intl.formatMessage(messages.tipologia_persona)}</h5>
-          {content?.tipologia_persona?.title}
-        </div>
-      )} */}
+          </RichTextSection>
+        </>
+      ))}
+      {/* {incarichiData?.incarichiInattivi?.map((inc) => (
+        <p key={inc['@id']}>
+          <strong>
+            {intl.formatMessage(messages.data_conclusione_incarico, {
+              incarico: inc.title,
+            })}
+            :
+          </strong>{' '}
+          {viewDate(intl.locale, inc?.data_conclusione_incarico, 'DD-MM-Y')}
+        </p>
+      ))} */}
       {richTextHasContent(content?.competenze) && (
         <div className="mb-5 mt-3">
           <RichText
@@ -273,8 +167,30 @@ const PersonaRuolo = ({ content }) => {
           title_type="h5"
         />
       )}
+      {/* Not shown in wireframes, somehow */}
+      {/* {uffici.length > 0 && (
+        <div className="mb-5 mt-3">
+          <h4>{intl.formatMessage(messages.organizzazione_riferimento)}</h4>
+          <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+            {uffici.map((item, i) => (
+              <OfficeCard key={item['@id']} office={item} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {strutture.length > 0 && (
+        <div className="mb-5 mt-3">
+          <h5>{intl.formatMessage(messages.responsabile_di)}</h5>
+          <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+            {strutture.map((item, i) => (
+              <OfficeCard key={item['@id']} office={item} />
+            ))}
+          </div>
+        </div>
+      )} */}
     </>
-  );
+  ) : null;
 };
 
 export default PersonaRuolo;

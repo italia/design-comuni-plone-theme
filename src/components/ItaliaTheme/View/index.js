@@ -134,7 +134,6 @@ export PaginaArgomentoPlaceholderAfterRelatedItems from 'design-comuni-plone-the
 export PaginaArgomentoViewNoBlocks from 'design-comuni-plone-theme/components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks';
 export PersonaPlaceholderAfterContent from 'design-comuni-plone-theme/components/ItaliaTheme/View/PersonaView/Placeholder/AfterContent';
 export PersonaPlaceholderAfterRelatedItems from 'design-comuni-plone-theme/components/ItaliaTheme/View/PersonaView/Placeholder/AfterRelatedItems';
-export PersonaTelephones from 'design-comuni-plone-theme/components/ItaliaTheme/View/PersonaView/PersonaTelephones';
 export PersonaRuolo from 'design-comuni-plone-theme/components/ItaliaTheme/View/PersonaView/PersonaRuolo';
 export PersonaContatti from 'design-comuni-plone-theme/components/ItaliaTheme/View/PersonaView/PersonaContatti';
 export PersonaDocumenti from 'design-comuni-plone-theme/components/ItaliaTheme/View/PersonaView/PersonaDocumenti';
