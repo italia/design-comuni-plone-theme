@@ -23,7 +23,7 @@ const messages = defineMessages({
     defaultMessage: 'Video',
   },
   luoghi_correlati: {
-    id: 'luoghi_correlatti',
+    id: 'luoghi_correlati',
     defaultMessage: 'Luoghi correlati',
   },
   tipologia_luogo: {

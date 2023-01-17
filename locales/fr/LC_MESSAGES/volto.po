@@ -1787,11 +1787,6 @@ msgstr ""
 msgid "event_strutture_politiche"
 msgstr "Structures politiques impliquées"
 
-#: components/ItaliaTheme/View/Commons/Events
-# defaultMessage: Eventi
-msgid "event_title"
-msgstr "Événements"
-
 #: components/ItaliaTheme/View/EventoView/EventoUlterioriInformazioni
 # defaultMessage: Url dell'evento
 msgid "event_url"
@@ -1801,6 +1796,11 @@ msgstr "URL de l'événement"
 # defaultMessage: Appuntamenti
 msgid "events"
 msgstr "Rendez-vous"
+
+#: components/ItaliaTheme/View/Commons/Events
+# defaultMessage: Leggi di più
+msgid "events_read_more"
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/CharCounterTextareaWidget
 #: components/ItaliaTheme/manage/Widgets/CharCounterTextWidget
@@ -2096,13 +2096,9 @@ msgid "login_with_spid"
 msgstr "Connectez-vous avec Spid"
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/RelatedItemsChipsPDC
-# defaultMessage: Luoghi correlati
-msgid "luoghi_correlati"
-msgstr ""
-
 #: components/ItaliaTheme/View/VenueView/VenueDescription
 # defaultMessage: Luoghi correlati
-msgid "luoghi_correlatti"
+msgid "luoghi_correlati"
 msgstr ""
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemLuoghiCorrelati
@@ -3352,7 +3348,6 @@ msgid "subjects"
 msgstr "Sujettes"
 
 #: components/ItaliaTheme/View/Commons/ContactLink
-#: components/ItaliaTheme/View/PersonaView/PersonaTelephones
 # defaultMessage: Tel
 msgid "telefono"
 msgstr "Tél."
@@ -3400,6 +3395,11 @@ msgstr "Entrez du texte"
 msgid "tipologia_bando"
 msgstr "Type d'appel"
 
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
+# defaultMessage: Tipo di incarico
+msgid "tipologia_incarico"
+msgstr ""
+
 #: components/ItaliaTheme/View/VenueView/VenueDescription
 # defaultMessage: Tipo di luogo
 msgid "tipologia_luogo"
@@ -3411,7 +3411,6 @@ msgid "tipologia_organizzazione"
 msgstr "Type d'Organisation"
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona
-#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Tipologia persona
 msgid "tipologia_persona"
 msgstr "Type de personne"

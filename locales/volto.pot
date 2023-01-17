@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-01-12T15:13:24.099Z\n"
+"POT-Creation-Date: 2023-01-17T14:34:24.251Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1772,11 +1772,6 @@ msgstr ""
 msgid "event_strutture_politiche"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/Events
-# defaultMessage: Eventi
-msgid "event_title"
-msgstr ""
-
 #: components/ItaliaTheme/View/EventoView/EventoUlterioriInformazioni
 # defaultMessage: Url dell'evento
 msgid "event_url"
@@ -1785,6 +1780,11 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/Events
 # defaultMessage: Appuntamenti
 msgid "events"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/Events
+# defaultMessage: Leggi di più
+msgid "events_read_more"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/CharCounterTextareaWidget
@@ -2081,13 +2081,9 @@ msgid "login_with_spid"
 msgstr ""
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/RelatedItemsChipsPDC
-# defaultMessage: Luoghi correlati
-msgid "luoghi_correlati"
-msgstr ""
-
 #: components/ItaliaTheme/View/VenueView/VenueDescription
 # defaultMessage: Luoghi correlati
-msgid "luoghi_correlatti"
+msgid "luoghi_correlati"
 msgstr ""
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemLuoghiCorrelati
@@ -3337,7 +3333,6 @@ msgid "subjects"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/ContactLink
-#: components/ItaliaTheme/View/PersonaView/PersonaTelephones
 # defaultMessage: Tel
 msgid "telefono"
 msgstr ""
@@ -3385,6 +3380,11 @@ msgstr ""
 msgid "tipologia_bando"
 msgstr ""
 
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
+# defaultMessage: Tipo di incarico
+msgid "tipologia_incarico"
+msgstr ""
+
 #: components/ItaliaTheme/View/VenueView/VenueDescription
 # defaultMessage: Tipo di luogo
 msgid "tipologia_luogo"
@@ -3396,7 +3396,6 @@ msgid "tipologia_organizzazione"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona
-#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Tipologia persona
 msgid "tipologia_persona"
 msgstr ""

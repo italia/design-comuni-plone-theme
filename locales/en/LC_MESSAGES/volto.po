@@ -1770,11 +1770,6 @@ msgstr ""
 msgid "event_strutture_politiche"
 msgstr "Political structures involved"
 
-#: components/ItaliaTheme/View/Commons/Events
-# defaultMessage: Eventi
-msgid "event_title"
-msgstr "Events"
-
 #: components/ItaliaTheme/View/EventoView/EventoUlterioriInformazioni
 # defaultMessage: Url dell'evento
 msgid "event_url"
@@ -1784,6 +1779,11 @@ msgstr "Event url"
 # defaultMessage: Appuntamenti
 msgid "events"
 msgstr "Appointments"
+
+#: components/ItaliaTheme/View/Commons/Events
+# defaultMessage: Leggi di più
+msgid "events_read_more"
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/CharCounterTextareaWidget
 #: components/ItaliaTheme/manage/Widgets/CharCounterTextWidget
@@ -2079,13 +2079,9 @@ msgid "login_with_spid"
 msgstr ""
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/RelatedItemsChipsPDC
-# defaultMessage: Luoghi correlati
-msgid "luoghi_correlati"
-msgstr ""
-
 #: components/ItaliaTheme/View/VenueView/VenueDescription
 # defaultMessage: Luoghi correlati
-msgid "luoghi_correlatti"
+msgid "luoghi_correlati"
 msgstr ""
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemLuoghiCorrelati
@@ -3335,7 +3331,6 @@ msgid "subjects"
 msgstr "Tags"
 
 #: components/ItaliaTheme/View/Commons/ContactLink
-#: components/ItaliaTheme/View/PersonaView/PersonaTelephones
 # defaultMessage: Tel
 msgid "telefono"
 msgstr "Phone"
@@ -3383,6 +3378,11 @@ msgstr "Insert a value"
 msgid "tipologia_bando"
 msgstr "Type of call"
 
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
+# defaultMessage: Tipo di incarico
+msgid "tipologia_incarico"
+msgstr ""
+
 #: components/ItaliaTheme/View/VenueView/VenueDescription
 # defaultMessage: Tipo di luogo
 msgid "tipologia_luogo"
@@ -3394,7 +3394,6 @@ msgid "tipologia_organizzazione"
 msgstr "Type of organization"
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderPersona
-#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Tipologia persona
 msgid "tipologia_persona"
 msgstr "Person type"
