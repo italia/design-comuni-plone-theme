@@ -32,8 +32,12 @@ const Sponsor = ({ item }) => {
             rel="noopener noreferrer"
           >
             <Image
-              image={item.image}
-              alt={item.image.filename}
+              itemUrl={item['@id']}
+              image={item.image_scales?.[item.image_field]?.[0] || item['@id']}
+              alt={
+                item.image_scales?.[item.image_field]?.[0]?.filename ??
+                item.title
+              }
               className="img-fluid"
             />
           </a>

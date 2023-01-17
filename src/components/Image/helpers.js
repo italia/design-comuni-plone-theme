@@ -18,27 +18,30 @@ const getImageType = (image) => {
   return imageType;
 };
 
-/**
- * Get src-set list from image
- * @param {object | string} image - Image content object or url
- * @param {object} options
- * @param {number} options.maxSize - maximum size to render
- * @param {boolean} options.useOriginal - whether to render original img
- * @returns {object} image attributes
- * @returns {string} image.src attributes.src
- * @returns {string} image.srcset attributes.srcset
- */
-
 const DEFAULT_MAX_SIZE = 10000;
+
+/**
+ * Get src-set list from image. **Important:** read options parameter in order to propertly generate image srcs
+ * @param {object | string} image - Image content object or url
+ * @param {object} options Object with the following properties: itemUrl, imageField, maxSize, useOriginal, minSize. Set `itemUrl` to the item `@id` property if the image is from a brain object, otherwise leave it undefined
+ * @returns {object} image attributes with src and srcset to be used to render the given image
+ */
 export const getImageAttributes = (
   image,
   {
+    itemUrl,
     imageField = 'image',
     maxSize = DEFAULT_MAX_SIZE,
     useOriginal = false,
     minSize = 0,
   } = {},
 ) => {
+  // Brain objects have scale urls that start with @@images
+  // while regular content objects have scales with full urls (i.e. https://.../@@images/...)
+  let itemPath = flattenToAppURL(itemUrl ?? '');
+  if (itemPath.slice(-1) !== '/') itemPath = `${itemPath}/`;
+  const isFromBrain = !!itemUrl;
+
   const imageScales = config.settings.imageScales;
 
   const minScale = Object.keys(imageScales).reduce((minScale, scale) => {
@@ -76,7 +79,9 @@ export const getImageAttributes = (
         });
 
       const scale = sortedScales[0];
-      attrs.src = flattenToAppURL(scale?.download ?? image.download);
+      attrs.src = `${scale?.download ?? image.download}`;
+      if (isFromBrain) attrs.src = `${itemPath}${attrs.src}`;
+
       attrs.aspectRatio = Math.round((image.width / image.height) * 100) / 100;
       attrs.width = image.width;
       attrs.height = image.height;
@@ -87,21 +92,25 @@ export const getImageAttributes = (
         attrs.height = maxScale.height;
       }
 
-      attrs.srcSet = sortedScales.map(
-        (scale) => `${flattenToAppURL(scale.download)} ${scale.width}w`,
-      );
+      attrs.srcSet = sortedScales.map((scale) => {
+        let src = `${scale.download} ${scale.width}w`;
+        if (isFromBrain) src = `${itemPath}${src}`;
+        return src;
+      });
 
-      if (useOriginal || sortedScales?.length === 0)
-        attrs.srcSet = attrs.srcSet.concat(
-          `${flattenToAppURL(image.download)} ${image.width}w`,
-        );
+      if (useOriginal || sortedScales?.length === 0) {
+        let originalSrc = `${image.download} ${image.width}w`;
+        if (isFromBrain) originalSrc = `${itemPath}${originalSrc}`;
+        attrs.srcSet = attrs.srcSet.concat(originalSrc);
+      }
       break;
 
     // Internal URL
     case 'internalUrl':
-      let baseUrl = `${flattenToAppURL(image.split('/@@images')[0])}${
-        image.endsWith('/') ? '' : '/'
-      }@@images/${imageField}`;
+      let baseUrl = `@@images/${imageField}`;
+      if (isFromBrain) baseUrl = `${itemPath}${baseUrl}`;
+      else baseUrl = `${image.split('@@images')[0]}${baseUrl}`;
+
       attrs.src = `${baseUrl}/${minScale}`;
 
       attrs.srcSet = Object.keys(imageScales)

@@ -39,13 +39,6 @@ module.exports = {
     'import/resolver': {
       alias: {
         map: [
-          ['@plone/volto', '@plone/volto/src'],
-          ['@plone/volto-slate', '@plone/volto/packages/volto-slate/src'],
-          ['design-comuni-plone-theme', `${__dirname}/src`],
-          ...addonAliases,
-          ...italiaAddonAliases,
-          ['@package', `${__dirname}/src`],
-          ['@italia', `${__dirname}/src`], // TODO deprecated: remove in version 8
           // TODO remove the next two when implemented in core
           [
             '@plone/volto/components/theme/Image/Image',
@@ -55,6 +48,14 @@ module.exports = {
             '@plone/volto/helpers/Image/Image',
             path.resolve(`${projectRootPath}/src/components/Image/helpers.js`),
           ],
+
+          ['@plone/volto', '@plone/volto/src'],
+          ['@plone/volto-slate', '@plone/volto/packages/volto-slate/src'],
+          ['design-comuni-plone-theme', `${__dirname}/src`],
+          ...addonAliases,
+          ...italiaAddonAliases,
+          ['@package', `${__dirname}/src`],
+          ['@italia', `${__dirname}/src`], // TODO deprecated: remove in version 8
         ],
         extensions: ['.js', '.jsx', '.json'],
       },

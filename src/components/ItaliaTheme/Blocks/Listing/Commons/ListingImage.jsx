@@ -1,7 +1,7 @@
 import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
 import Image from '@plone/volto/components/theme/Image/Image';
 import React from 'react';
-import { getImageAttributes } from '@plone/volto/helpers/Image/Image';
+import { flattenToAppURL } from '@plone/volto/helpers';
 
 const ListingImage = ({
   item,
@@ -20,11 +20,8 @@ const ListingImage = ({
     return (
       <Image
         className={className}
-        image={
-          item.image_scales?.[item.image_field]?.[0] ||
-          item.image ||
-          item['@id']
-        }
+        itemUrl={item['@id']}
+        image={item.image_scales?.[item.image_field]?.[0] || item['@id']}
         aria-hidden="true"
         alt={item.title}
         title={item.title}
@@ -38,16 +35,12 @@ const ListingImage = ({
   }
 };
 
-export const getListingImageBackground = (item, size) => {
+export const getListingImageBackground = (item, size = 'listing') => {
   let url = null;
   if (item.image_field) {
-    url = getImageAttributes(item['@id'], {
-      imageField: item.image_field,
-    })?.src;
-
-    if (size) {
-      url = url.replace('/listing', '/' + size);
-    }
+    url =
+      item.image_scales?.[item.image_field]?.[0]?.[size] ||
+      `${flattenToAppURL(item['@id'])}/@@images/${item.image_field}/${size}`;
   }
 
   return url;

@@ -123,6 +123,7 @@ const PaginaArgomentoView = ({ content }) => {
                             {searchResults[u['@id']]?.data?.image && (
                               <div className="image-container me-3">
                                 <Image
+                                  itemUrl={u['@id']}
                                   image={searchResults[u['@id']].data?.image}
                                   alt={
                                     searchResults[u['@id'].data?.image_caption]

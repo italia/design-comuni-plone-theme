@@ -14,7 +14,6 @@ import {
   CardReadMore,
 } from 'design-react-kit';
 
-// eslint-disable-next-line import/no-unresolved
 import Image from '@plone/volto/components/theme/Image/Image';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
@@ -36,10 +35,10 @@ const Body = (props) => {
   return (
     <div className={`${block.bg_color ? 'bg-' + block.bg_color : ''}`}>
       <Row>
-        {content.image && (
+        {(content.preview_image || content.image) && (
           <Col lg={{ size: 6, offset: 1, order: 2 }}>
             <Image
-              image={content.image}
+              image={content.preview_image || content.image}
               alt=""
               className={cx('item-image', {
                 'natural-image-size': block.natural_image_size,

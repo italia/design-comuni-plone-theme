@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import PropTypes from 'prop-types';
 // eslint-disable-next-line import/no-unresolved
@@ -6,6 +6,7 @@ import { getImageAttributes } from '@plone/volto/helpers/Image/Image';
 
 /**
  * Image component
+ * @param {string} itemUrl - url (`@id`) of the item. **ONLY** use this if rendering an image from a brain object, leave undefined otherwise
  * @param {object | string} image - Plone image as object or url
  * @param {string} imageField - (default: image) image field for scales URL
  * @param {string} alt - Alternative text for image
@@ -20,6 +21,7 @@ import { getImageAttributes } from '@plone/volto/helpers/Image/Image';
  * @param {boolean} useOriginal - whether to render original size
  */
 const Image = ({
+  itemUrl,
   image,
   imageField = 'image',
   alt = '',
@@ -39,6 +41,7 @@ const Image = ({
   const { src, srcSet, width, height, aspectRatio } = getImageAttributes(
     image,
     {
+      itemUrl,
       imageField,
       maxSize,
       useOriginal,
@@ -156,6 +159,7 @@ const Image = ({
 };
 
 Image.propTypes = {
+  itemUrl: PropTypes.string,
   imageField: PropTypes.string,
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
   alt: PropTypes.string,

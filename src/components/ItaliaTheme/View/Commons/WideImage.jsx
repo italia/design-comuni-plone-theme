@@ -9,12 +9,13 @@ import Image from '@plone/volto/components/theme/Image/Image';
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const WideImage = ({ image, title, caption, fullWidth = true }) => {
+const WideImage = ({ itemUrl, image, title, caption, fullWidth = true }) => {
   return (
     <div className={cx('row wide-image', { 'row-full-width my-3': fullWidth })}>
       <figure className="figure">
         {image && (
           <Image
+            itemUrl={itemUrl}
             image={image}
             className={cx('', { 'full-width': fullWidth })}
             alt={caption || title}
@@ -36,12 +37,11 @@ const WideImage = ({ image, title, caption, fullWidth = true }) => {
 export default WideImage;
 
 WideImage.propTypes = {
-  params: PropTypes.shape({
-    title: PropTypes.string,
-    image: PropTypes.shape({
-      download: PropTypes.string,
-    }),
-    caption: PropTypes.string,
-    fullWidth: PropTypes.bool,
+  itemUrl: PropTypes.string,
+  title: PropTypes.string,
+  image: PropTypes.shape({
+    download: PropTypes.string,
   }),
+  caption: PropTypes.string,
+  fullWidth: PropTypes.bool,
 };

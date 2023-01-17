@@ -4,7 +4,6 @@ import { Button, Container } from 'design-react-kit';
 import React, { useRef, useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 
-// monkey/customization attualmente in DVT
 import Image from '@plone/volto/components/theme/Image/Image';
 import PropTypes from 'prop-types';
 import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
@@ -70,7 +69,12 @@ const Block = ({
     >
       {hasImage && data?.ctaImage?.length > 0 && (
         <Image
-          image={data.ctaImage[0]['@id']}
+          itemUrl={data.ctaImage[0]['@id']}
+          image={
+            data.ctaImage[0].image_scales?.[
+              data.ctaImage[0].image_field
+            ]?.[0] || data.ctaImage[0]['@id']
+          }
           key={data.ctaImage[0]['@id']}
           alt=""
           aria-hidden="true"
