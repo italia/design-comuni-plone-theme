@@ -1,3 +1,19 @@
+## [8.0.0-alpha.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.2...v8.0.0-alpha.3) (2023-01-17)
+
+
+### Bug Fixes
+
+* i18n in pdc view ([eb67d56](https://github.com/RedTurtle/design-comuni-plone-theme/commit/eb67d56fbd464cab1fa1ed0a1b780b944a7b4b84))
+* image component with Plone 6 images_scales ([#56](https://github.com/RedTurtle/design-comuni-plone-theme/issues/56)) ([5f97ac9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5f97ac963764c2b239298b66ff7bbe7652f9f135))
+* missing locales ([0729bd6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/0729bd6e1aa8ff407b81c51aa99c9a32ad903899))
+* persona view fields not showing properly ([bc54385](https://github.com/RedTurtle/design-comuni-plone-theme/commit/bc5438517b4806b13e77b925db3fe56b104f02c3))
+* toolbar z-index in contents view ([e3b90de](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e3b90dedb416e278043b9415151f9baeff71c87f))
+
+
+### Maintenance
+
+* added sample test for CardPersona ([413d433](https://github.com/RedTurtle/design-comuni-plone-theme/commit/413d4338e8d933cb97d197086ce375ab3f2c48ac))
+
 ## [8.0.0-alpha.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.1...v8.0.0-alpha.2) (2023-01-13)
 
 
