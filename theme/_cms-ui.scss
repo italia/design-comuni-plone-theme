@@ -604,8 +604,11 @@ body.cms-ui {
   }
 }
 
-body.public-ui.has-toolbar {
-  #toolbar {
+body.has-toolbar {
+  #toolbar .toolbar-content.show {
+    z-index: 9;
+  }
+  &.public-ui #toolbar {
     .toolbar {
       &:before {
         content: none;
@@ -615,7 +618,6 @@ body.public-ui.has-toolbar {
     .toolbar-content.show {
       max-height: 100vh;
       overflow-y: scroll !important;
-      z-index: 9;
     }
   }
 }
