@@ -87,9 +87,9 @@ description:
     screenshots:
       - docs/01-io-comune.png
       - docs/02-io-comune.png
-      - docs/03-io-comune.png
-      - docs/04-io-comune.png
-      - docs/05-io-comune.png
+      - docs/03b-io-comune.png
+      - docs/04b-io-comune.png
+      - docs/05b-io-comune.png
     genericName: Gestore di contenuti e site builder
     longDescription: |
       **io-Comune: pensato per i cittadini, costruito con i redattori**
