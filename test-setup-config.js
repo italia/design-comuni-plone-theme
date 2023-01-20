@@ -7,62 +7,15 @@
  * snapshot consistency and readability.
  */
 
+import '@plone/volto/config';
 import config from '@plone/volto/registry';
-import { loadables } from '@plone/volto/config/Loadables';
-import { loadables as italiaLoadables } from 'design-comuni-plone-theme/config/loadables';
-import { nonContentRoutes } from '@plone/volto/config/NonContentRoutes';
-import ToHTMLRenderers, {
-  options as ToHTMLOptions,
-} from '@plone/volto/config/RichTextEditor/ToHTML';
-import {
-  extendedBlockRenderMap,
-  blockStyleFn,
-  listBlockTypes,
-} from '@plone/volto/config/RichTextEditor/Blocks';
-import FromHTMLCustomBlockFn from '@plone/volto/config/RichTextEditor/FromHTML';
-import { contentIcons } from '@plone/volto/config/ContentIcons';
-import {
-  styleClassNameConverters,
-  styleClassNameExtenders,
-} from '@plone/volto/config/Style';
+import applyItaliaConfig from './src/config';
 
-import {
-  controlPanelsIcons,
-  filterControlPanels,
-  filterControlPanelsSchema,
-} from '@plone/volto/config/ControlPanels';
-
-// we need to do a redefinition here because of circular import issues
-// because draftjs-based components are not really tested, this is basically
-// dummy code.
-const richtextEditorSettings = (props) => {
-  return {
-    extendedBlockRenderMap,
-    blockStyleFn,
-    listBlockTypes,
-    FromHTMLCustomBlockFn,
-    // richTextEditorPlugins: plugins,
-    // richTextEditorInlineToolbarButtons: inlineToolbarButtons,
-  };
-};
-
-const richtextViewSettings = {
-  ToHTMLRenderers,
-  ToHTMLOptions,
-};
+applyItaliaConfig(config);
 
 config.set('settings', {
   ...config.settings,
   apiPath: 'http://localhost:8080/Plone',
-  defaultLanguage: 'en',
-  supportedLanguages: ['en'],
-  defaultPageSize: 24,
-  isMultilingual: false,
-  nonContentRoutes,
-  richtextEditorSettings,
-  richtextViewSettings,
-  contentIcons: contentIcons,
-  loadables: { ...loadables, ...italiaLoadables },
   lazyBundles: {
     cms: [
       'prettierStandalone',
@@ -74,38 +27,8 @@ config.set('settings', {
       // 'diffLib',
     ],
   },
-  controlPanelsIcons,
-  filterControlPanels,
-  filterControlPanelsSchema,
   apiExpanders: [],
-  downloadableObjects: ['File'],
-  viewableInBrowserObjects: [],
-  styleClassNameConverters,
-  styleClassNameExtenders,
   publicURL: 'http://localhost:3000',
-  italiaThemeViewsConfig: {
-    imagePosition: 'afterHeader', // possible values: afterHeader, documentBody
-  },
-  imageScales: {
-    listing: 16,
-    icon: 32,
-    tile: 64,
-    thumb: 128,
-    mini: 200,
-    midi: 300,
-    preview: 400,
-    teaser: 600,
-    large: 800,
-    larger: 1000,
-    great: 1200,
-    huge: 1600,
-  },
-});
-config.set('blocks', {
-  ...config.blocks,
-});
-config.set('views', {
-  ...config.views,
 });
 
 function BaseWidget(name) {
@@ -153,9 +76,6 @@ config.set('widgets', {
   default: BaseWidget('default'),
 });
 
-config.set('components', {
-  ...config.components,
-});
 config.set('experimental', {
   addBlockButton: {
     enabled: false,

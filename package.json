@@ -67,7 +67,8 @@
       "^design-comuni-plone-theme/(.*)$": "<rootDir>/src/$1",
       "^volto-gdpr-privacy/(.*)$": "<rootDir>/node_modules/volto-gdpr-privacy/src/$1",
       "^volto-venue/(.*)$": "<rootDir>/node_modules/volto-venue/src/$1",
-      "^volto-data-grid-widget/(.*)$": "<rootDir>/node_modules/volto-data-grid-widget/src/$1"
+      "^volto-data-grid-widget/(.*)$": "<rootDir>/node_modules/volto-data-grid-widget/src/$1",
+      "^volto-dropdownmenu/(.*)$": "<rootDir>/node_modules/volto-dropdownmenu/src/$1"
     },
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs,ts,tsx}",
