@@ -13,7 +13,6 @@ import {
   ServizioPlaceholderAfterRelatedItems,
   RelatedItemInEvidence,
   SkipToMainContent,
-  ServizioStato,
   ServizioCosE,
   ServizioAccedi,
   ServizioAChiSiRivolge,
@@ -37,15 +36,13 @@ import {
   ContentTypeViewSections,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
-export const VenueViewSectionsOrder = [
+export const ServizioViewSectionsOrder = [
   {
     /* HEADER IMAGE */
 
     component: ContentImage,
     props: { position: 'documentBody' },
   },
-
-  { /* STATO DEL SERVIZIO */ component: ServizioStato },
 
   { /* A CHI È RIVOLTO */ component: ServizioAChiSiRivolge },
 
@@ -131,7 +128,7 @@ const ServizioView = ({ content }) => {
             {/* SEZIONI */}
             <ContentTypeViewSections
               content={content}
-              defaultSections={VenueViewSectionsOrder}
+              defaultSections={ServizioViewSectionsOrder}
             />
           </section>
         </div>

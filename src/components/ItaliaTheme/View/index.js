@@ -140,7 +140,6 @@ export PersonaDocumenti from 'design-comuni-plone-theme/components/ItaliaTheme/V
 export PersonaUlterioriInformazioni from 'design-comuni-plone-theme/components/ItaliaTheme/View/PersonaView/PersonaUlterioriInformazioni';
 export ServizioPlaceholderAfterContent from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/Placeholder/AfterContent';
 export ServizioPlaceholderAfterRelatedItems from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/Placeholder/AfterRelatedItems';
-export ServizioStato from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioStato';
 export ServizioCosE from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioCosE';
 export ServizioAccedi from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioAccedi';
 export ServizioAChiSiRivolge from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioAChiSiRivolge';
