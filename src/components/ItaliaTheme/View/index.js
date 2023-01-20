@@ -150,6 +150,7 @@ export ServizioCosaSiOttiene from 'design-comuni-plone-theme/components/ItaliaTh
 export ServizioCostiVincoli from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioCostiVincoli';
 export ServizioTempiScadenze from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioTempiScadenze';
 export ServizioCasiParticolari from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioCasiParticolari';
+export ServizioProcedure from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioProcedure';
 export ServizioContatti from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioContatti';
 export ServizioAltriDocumenti from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioAltriDocumenti';
 export ServizioSitiEsterni from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioSitiEsterni';

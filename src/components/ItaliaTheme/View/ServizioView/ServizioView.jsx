@@ -23,6 +23,7 @@ import {
   ServizioCostiVincoli,
   ServizioTempiScadenze,
   ServizioCasiParticolari,
+  ServizioProcedure,
   ServizioContatti,
   ServizioAltriDocumenti,
   ServizioSitiEsterni,
@@ -61,6 +62,8 @@ export const VenueViewSectionsOrder = [
   { /* QUANTO COSTA */ component: ServizioCostiVincoli },
 
   { /* ?? CASI PARTICOLARI ?? */ component: ServizioCasiParticolari },
+
+  { /* PROCEDURE ESITO */ component: ServizioProcedure },
 
   { /* ACCEDI AL SERVIZIO */ component: ServizioAccedi },
 
