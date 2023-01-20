@@ -9,6 +9,7 @@ import {
   CardReadMore,
 } from 'design-react-kit';
 import redraft from 'redraft';
+import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { ArgumentIcon } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 import config from '@plone/volto/registry';
@@ -68,7 +69,7 @@ const Block = ({
           {argument && (
             <CardReadMore
               iconName="it-arrow-right"
-              tag="a"
+              tag={UniversalLink}
               text={intl.formatMessage(messages.exploreArgument)}
               href={flattenToAppURL(argument['@id'])}
             />

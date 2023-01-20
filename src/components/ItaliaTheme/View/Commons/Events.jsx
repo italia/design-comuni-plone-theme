@@ -73,7 +73,9 @@ const Evento = ({ event, show_image }) => {
           <CardText></CardText>
           <CardReadMore
             iconName="it-arrow-right"
+            tag={UniversalLink}
             text={intl.formatMessage(messages.events_read_more)}
+            href={flattenToAppURL(event['@id'])}
           />
         </CardBody>
       </Card>
