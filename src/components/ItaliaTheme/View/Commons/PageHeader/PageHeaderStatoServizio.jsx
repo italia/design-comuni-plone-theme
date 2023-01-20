@@ -45,6 +45,6 @@ const messages = defineMessages({
   },
   service_off: {
     id: 'service_off',
-    defaultMessage: 'Servizio chiuso',
+    defaultMessage: 'Servizio non attivo',
   },
 });

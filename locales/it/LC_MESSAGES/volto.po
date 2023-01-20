@@ -2991,7 +2991,7 @@ msgstr "Il servizio non è attivo"
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderStatoServizio
 # defaultMessage: Servizio chiuso
 msgid "service_off"
-msgstr "Servizio chiuso"
+msgstr "Servizio non attivo"
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderStatoServizio
 # defaultMessage: Servizio attivo
