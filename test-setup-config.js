@@ -32,3 +32,63 @@ config.set('settings', {
     huge: 1600,
   },
 });
+config.set('blocks', {
+  ...config.blocks,
+});
+config.set('views', {
+  ...config.views,
+});
+
+function BaseWidget(name) {
+  return (props) => (
+    <div id={`mocked-field-${props.id}`} className={`mocked-${name}-widget`}>
+      {props.title || 'No title'} - {props.description || 'No description'}
+    </div>
+  );
+}
+
+config.set('widgets', {
+  ...config.widgets,
+  id: {
+    schema: BaseWidget('schema'),
+    subjects: BaseWidget('subjects'),
+    query: BaseWidget('query'),
+    recurrence: BaseWidget('recurrence'),
+    remoteUrl: BaseWidget('remoteurl'),
+  },
+  widget: {
+    richtext: BaseWidget('richtext'),
+    textarea: BaseWidget('textarea'),
+    datetime: BaseWidget('datetime'),
+    date: BaseWidget('date'),
+    password: BaseWidget('password'),
+    file: BaseWidget('file'),
+    align: BaseWidget('align'),
+    url: BaseWidget('url'),
+    email: BaseWidget('email'),
+    object_browser: BaseWidget('object_browser'),
+  },
+  vocabulary: {},
+  factory: {},
+  choices: BaseWidget('choices'),
+  type: {
+    boolean: BaseWidget('boolean'),
+    array: BaseWidget('array'),
+    object: BaseWidget('object'),
+    datetime: BaseWidget('datetime'),
+    date: BaseWidget('date'),
+    password: BaseWidget('password'),
+    number: BaseWidget('number'),
+    integer: BaseWidget('integer'),
+  },
+  default: BaseWidget('default'),
+});
+
+config.set('components', {
+  ...config.components,
+});
+config.set('experimental', {
+  addBlockButton: {
+    enabled: false,
+  },
+});
