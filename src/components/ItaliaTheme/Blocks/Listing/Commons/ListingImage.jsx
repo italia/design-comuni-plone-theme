@@ -1,17 +1,16 @@
 import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
 import Image from '@plone/volto/components/theme/Image/Image';
-import React from 'react';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
 const ListingImage = ({
-  item,
+  item = {},
   showDefault = false,
   useOriginal = false,
   maxSize,
   className = 'listing-image',
   ...imageProps
 }) => {
-  if (!item?.image_field) {
+  if (!item.image_field || !item.image_scales?.[item.image_field]?.[0]) {
     if (showDefault) {
       return <img src={DefaultImageSVG} alt="" />;
     }
@@ -35,7 +34,7 @@ const ListingImage = ({
   }
 };
 
-export const getListingImageBackground = (item, size = 'listing') => {
+export const getListingImageBackground = (item = {}, size = 'listing') => {
   let url = null;
   if (item.image_field) {
     url =
