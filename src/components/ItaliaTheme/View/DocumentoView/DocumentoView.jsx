@@ -36,8 +36,8 @@ export const DocumentoViewSectionsOrder = [
   { /* UFFICIO RESPONSABILE */ component: DocumentoUfficioResponsabile },
   { /* AREA RESPONSABILE */ component: DocumentoAreaResponsabile },
   { /* ACCEDERE AL SERVIZIO */ component: DocumentoAccedereServizio },
-  { /* DOCUMENTI ALLEGATI */ component: DocumentoDocAllegati },
   { /* ULTERIORI INFORMAZIONI */ component: DocumentoUlterioriInformazioni },
+  { /* DOCUMENTI ALLEGATI */ component: DocumentoDocAllegati },
 ];
 
 /**
