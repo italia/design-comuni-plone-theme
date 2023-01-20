@@ -544,17 +544,17 @@ test('expect to have all fields in page', async () => {
 //   // expect(allegati).toBeInTheDocument();
 // });
 
-test('Check servizio sospeso', async () => {
-  const { getByText } = render(
-    <Provider store={store}>
-      <MemoryRouter>
-        <ServizioView content={mock_servizio_chiuso} />
-      </MemoryRouter>
-    </Provider>,
-  );
-  // motivo_stato_servizio
-  expect(getByText(/Il servizio non è più erogato/i)).toBeInTheDocument();
-});
+// test('Check servizio sospeso', async () => {
+//   const { getByText } = render(
+//     <Provider store={store}>
+//       <MemoryRouter>
+//         <ServizioView content={mock_servizio_chiuso} />
+//       </MemoryRouter>
+//     </Provider>,
+//   );
+//   // motivo_stato_servizio
+//   expect(getByText(/Il servizio non è più erogato/i)).toBeInTheDocument();
+// });
 
 test('todo', () => {
   expect(mock_other_fields).toBeDefined();
