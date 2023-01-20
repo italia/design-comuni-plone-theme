@@ -8,15 +8,84 @@
  */
 
 import config from '@plone/volto/registry';
-import { loadables } from 'design-comuni-plone-theme/config/loadables';
+import { loadables } from '@plone/volto/config/Loadables';
+import { loadables as italiaLoadables } from 'design-comuni-plone-theme/config/loadables';
+import { nonContentRoutes } from '@plone/volto/config/NonContentRoutes';
+import ToHTMLRenderers, {
+  options as ToHTMLOptions,
+} from '@plone/volto/config/RichTextEditor/ToHTML';
+import {
+  extendedBlockRenderMap,
+  blockStyleFn,
+  listBlockTypes,
+} from '@plone/volto/config/RichTextEditor/Blocks';
+import FromHTMLCustomBlockFn from '@plone/volto/config/RichTextEditor/FromHTML';
+import { contentIcons } from '@plone/volto/config/ContentIcons';
+import {
+  styleClassNameConverters,
+  styleClassNameExtenders,
+} from '@plone/volto/config/Style';
+
+import {
+  controlPanelsIcons,
+  filterControlPanels,
+  filterControlPanelsSchema,
+} from '@plone/volto/config/ControlPanels';
+
+// we need to do a redefinition here because of circular import issues
+// because draftjs-based components are not really tested, this is basically
+// dummy code.
+const richtextEditorSettings = (props) => {
+  return {
+    extendedBlockRenderMap,
+    blockStyleFn,
+    listBlockTypes,
+    FromHTMLCustomBlockFn,
+    // richTextEditorPlugins: plugins,
+    // richTextEditorInlineToolbarButtons: inlineToolbarButtons,
+  };
+};
+
+const richtextViewSettings = {
+  ToHTMLRenderers,
+  ToHTMLOptions,
+};
 
 config.set('settings', {
   ...config.settings,
+  apiPath: 'http://localhost:8080/Plone',
+  defaultLanguage: 'en',
+  supportedLanguages: ['en'],
+  defaultPageSize: 24,
+  isMultilingual: false,
+  nonContentRoutes,
+  richtextEditorSettings,
+  richtextViewSettings,
+  contentIcons: contentIcons,
+  loadables: { ...loadables, ...italiaLoadables },
+  lazyBundles: {
+    cms: [
+      'prettierStandalone',
+      'prettierParserHtml',
+      'prismCore',
+      'toastify',
+      'reactSelect',
+      'reactSortableHOC',
+      // 'diffLib',
+    ],
+  },
+  controlPanelsIcons,
+  filterControlPanels,
+  filterControlPanelsSchema,
+  apiExpanders: [],
+  downloadableObjects: ['File'],
+  viewableInBrowserObjects: [],
+  styleClassNameConverters,
+  styleClassNameExtenders,
   publicURL: 'http://localhost:3000',
   italiaThemeViewsConfig: {
     imagePosition: 'afterHeader', // possible values: afterHeader, documentBody
   },
-  loadables: { ...config.settings.loadables, ...loadables },
   imageScales: {
     listing: 16,
     icon: 32,
