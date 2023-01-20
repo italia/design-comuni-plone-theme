@@ -21,26 +21,26 @@ const ServizioTempiScadenze = ({ content, moment }) => {
       tag_id="deadlines"
       title={intl.formatMessage(messages.tempi_e_scadenze)}
     >
-      <div class="calendar-vertical mb-3">
-        <div class="calendar-vertical mb-3">
+      <div className="calendar-vertical mb-3">
+        <div className="calendar-vertical mb-3">
           {content.timeline_tempi_scadenze?.map((entry, i) => {
             let milestone_label = (
-              <div class="calendar-date-day">
-                <small class="calendar-date-day__year"></small>
-                <span class="title-xxlarge-regular d-flex justify-content-center"></span>
-                <small class="calendar-date-day__month"></small>
+              <div className="calendar-date-day">
+                <small className="calendar-date-day__year"></small>
+                <span className="title-xxlarge-regular d-flex justify-content-center"></span>
+                <small className="calendar-date-day__month"></small>
               </div>
             );
             if (entry?.data_scadenza) {
               milestone_label = (
-                <div class="calendar-date-day">
-                  <small class="calendar-date-day__year">
+                <div className="calendar-date-day">
+                  <small className="calendar-date-day__year">
                     {Moment(entry.data_scadenza).format('Y')}
                   </small>
-                  <span class="title-xxlarge-regular d-flex justify-content-center">
+                  <span className="title-xxlarge-regular d-flex justify-content-center">
                     {Moment(entry.data_scadenza).format('DD')}
                   </span>
-                  <small class="calendar-date-day__month">
+                  <small className="calendar-date-day__month">
                     {Moment(entry.data_scadenza).format('MMM')}
                   </small>
                 </div>
@@ -48,25 +48,25 @@ const ServizioTempiScadenze = ({ content, moment }) => {
             } else {
               if (entry?.interval_qt && entry?.interval_type)
                 milestone_label = (
-                  <div class="calendar-date-day">
-                    <small class="calendar-date-day__year"></small>
-                    <span class="title-xxlarge-regular d-flex justify-content-center">
+                  <div className="calendar-date-day">
+                    <small className="calendar-date-day__year"></small>
+                    <span className="title-xxlarge-regular d-flex justify-content-center">
                       {entry.interval_qt}
                     </span>
-                    <small class="calendar-date-day__month">
+                    <small className="calendar-date-day__month">
                       {entry.interval_type}
                     </small>
                   </div>
                 );
             }
             return (
-              <div class="calendar-date">
+              <div className="calendar-date">
                 {milestone_label}
-                <div class="calendar-date-description rounded">
-                  <div class="calendar-date-description-content">
-                    <h3 class="title-medium-2 mb-0">{entry.milestone}</h3>
+                <div className="calendar-date-description rounded">
+                  <div className="calendar-date-description-content">
+                    <h3 className="title-medium-2 mb-0">{entry.milestone}</h3>
                     {entry?.milestone_description && (
-                      <p class="info-text mt-1 mb-0">
+                      <p className="info-text mt-1 mb-0">
                         {entry.milestone_description}
                       </p>
                     )}

@@ -106,10 +106,10 @@ const ArLogin = () => {
                   nav
                   className="btn-icon"
                 >
-                  <span class="rounded-icon">
+                  <span className="rounded-icon">
                     <Icon color="primary" icon="it-user" size="" />
                   </span>
-                  <span class="d-none d-lg-block">
+                  <span className="d-none d-lg-block">
                     {userLogged.fullname
                       ? userLogged.fullname
                       : userLogged.username}
