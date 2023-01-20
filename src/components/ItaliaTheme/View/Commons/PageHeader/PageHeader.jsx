@@ -60,9 +60,11 @@ const PageHeader = (props) => {
             }
           >
             {props.content.title}
-            {props.content.subtitle && ` - ${props.content.subtitle}`}
-            {props.content.sottotitolo && ` - ${props.content.sottotitolo}`}
           </h1>
+          <p className="h2">
+            {props.content.subtitle && `${props.content.subtitle}`}
+            {props.content.sottotitolo && `${props.content.sottotitolo}`}
+          </p>
 
           <PageHeaderEventDates content={props.content} />
 
