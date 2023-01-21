@@ -1,6 +1,8 @@
 /**
  * TwitterPosts action
  * @module src/actions/getTwitterPosts
+ *
+ * https://github.com/RedTurtle/design.plone.policy/blob/master/README.rst#twitter-feed
  */
 export const GET_TWITTER_POSTS = 'GET_TWITTER_POSTS';
 
