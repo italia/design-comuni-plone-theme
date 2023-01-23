@@ -100,15 +100,6 @@ const Body = ({ data, isEditMode, reactSlick }) => {
             <div className="it-single-slide-wrapper" key={index}>
               <div className="tweet rounded">
                 <div className="author">
-                  <figure>
-                    <img
-                      src={tweet.author.profile_image_url}
-                      alt={tweet.author.name}
-                      aria-hidden="true"
-                      className="rounded-circle"
-                      loading="lazy"
-                    />
-                  </figure>
                   <div className="user-infos">
                     <div className="user-name">
                       <UniversalLink
@@ -117,7 +108,7 @@ const Body = ({ data, isEditMode, reactSlick }) => {
                         {tweet.author.name}
                       </UniversalLink>
                     </div>
-                    <div className="user-username">
+                    <div className="user-username pb-3">
                       <UniversalLink
                         href={`https://twitter.com/${tweet.author.username}`}
                       >
