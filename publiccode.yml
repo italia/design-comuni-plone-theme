@@ -87,9 +87,9 @@ description:
     screenshots:
       - docs/01-io-comune.png
       - docs/02-io-comune.png
-      - docs/03-io-comune.png
-      - docs/04-io-comune.png
-      - docs/05-io-comune.png
+      - docs/03b-io-comune.png
+      - docs/04b-io-comune.png
+      - docs/05b-io-comune.png
     genericName: Gestore di contenuti e site builder
     longDescription: |
       **io-Comune: pensato per i cittadini, costruito con i redattori**
@@ -154,11 +154,7 @@ description:
 
       Puoi acquistare e utilizzare io-Comune in totale sicurezza perché ha
 
-      seguito con successo il [percorso di qualificazione per i fornitori di
-
-      Software as a Service (SaaS) della
-
-      PA](https://catalogocloud.agid.gov.it/service/1085).
+      seguito con successo il [percorso di qualificazione per i fornitori di Software as a Service (SaaS) della PA](https://catalogocloud.agid.gov.it/service/1085).
 
 
 
@@ -178,9 +174,7 @@ description:
 
 
 
-      io-Comune è basato sul [CMS Open Source
-
-      Plone](https://www.redturtle.it/plone/): il CMS facile da usare,
+      io-Comune è basato sul [CMS Open Source Plone](https://www.redturtle.it/plone/): il CMS facile da usare,
 
       estensibile e che vanta il miglior “security track record”, usato per
 
