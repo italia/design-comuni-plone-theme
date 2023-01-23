@@ -12,7 +12,7 @@ const PageHeaderServizio = ({ content }) => {
     <>
       <ul className="chip-wrapper list-unstyled my-4">
         <li>
-          {content.stato_servizio !== null && (
+          {content.stato_servizio && (
             <Chip
               tag="div"
               simple
