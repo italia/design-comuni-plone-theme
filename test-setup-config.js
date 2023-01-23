@@ -7,36 +7,28 @@
  * snapshot consistency and readability.
  */
 
+import '@plone/volto/config';
 import config from '@plone/volto/registry';
-import { loadables } from 'design-comuni-plone-theme/config/loadables';
+import applyItaliaConfig from './src/config';
+
+applyItaliaConfig(config);
 
 config.set('settings', {
   ...config.settings,
+  apiPath: 'http://localhost:8080/Plone',
+  lazyBundles: {
+    cms: [
+      'prettierStandalone',
+      'prettierParserHtml',
+      'prismCore',
+      'toastify',
+      'reactSelect',
+      'reactSortableHOC',
+      // 'diffLib',
+    ],
+  },
+  apiExpanders: [],
   publicURL: 'http://localhost:3000',
-  italiaThemeViewsConfig: {
-    imagePosition: 'afterHeader', // possible values: afterHeader, documentBody
-  },
-  loadables: { ...config.settings.loadables, ...loadables },
-  imageScales: {
-    listing: 16,
-    icon: 32,
-    tile: 64,
-    thumb: 128,
-    mini: 200,
-    midi: 300,
-    preview: 400,
-    teaser: 600,
-    large: 800,
-    larger: 1000,
-    great: 1200,
-    huge: 1600,
-  },
-});
-config.set('blocks', {
-  ...config.blocks,
-});
-config.set('views', {
-  ...config.views,
 });
 
 function BaseWidget(name) {
@@ -84,9 +76,6 @@ config.set('widgets', {
   default: BaseWidget('default'),
 });
 
-config.set('components', {
-  ...config.components,
-});
 config.set('experimental', {
   addBlockButton: {
     enabled: false,

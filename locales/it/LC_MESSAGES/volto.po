@@ -1595,9 +1595,9 @@ msgid "documento_documenti"
 msgstr "Documenti"
 
 #: components/ItaliaTheme/View/DocumentoView/DocumentoDocAllegati
-# defaultMessage: Documenti allegati
-msgid "documento_documenti_allegati"
-msgstr "Documenti allegati"
+# defaultMessage: Documenti collegati
+msgid "documento_documenti_collegati"
+msgstr "Documenti collegati"
 
 #: components/ItaliaTheme/View/DocumentoView/DocumentoDescrizione
 # defaultMessage: Licenza di distribuzione
@@ -2983,13 +2983,8 @@ msgstr "risultato"
 msgid "service_cos_e"
 msgstr "Descrizione"
 
-#: components/ItaliaTheme/View/ServizioView/ServizioStato
-# defaultMessage: Il servizio non è attivo
-msgid "service_not_active"
-msgstr "Il servizio non è attivo"
-
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderStatoServizio
-# defaultMessage: Servizio chiuso
+# defaultMessage: Servizio non attivo
 msgid "service_off"
 msgstr "Servizio non attivo"
 
@@ -3059,6 +3054,11 @@ msgstr "Cosa si ottiene"
 # defaultMessage: Prenota appuntamento
 msgid "servizio_prenota_appuntamento"
 msgstr "Prenota appuntamento"
+
+#: components/ItaliaTheme/View/ServizioView/ServizioProcedure
+# defaultMessage: Procedure collegate all'esito
+msgid "servizio_procedure_collegate"
+msgstr "Procedure collegate all'esito"
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Vai alle altre opzioni di ricerca

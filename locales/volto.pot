@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-01-17T14:34:24.251Z\n"
+"POT-Creation-Date: 2023-01-20T17:57:24.848Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1597,8 +1597,8 @@ msgid "documento_documenti"
 msgstr ""
 
 #: components/ItaliaTheme/View/DocumentoView/DocumentoDocAllegati
-# defaultMessage: Documenti allegati
-msgid "documento_documenti_allegati"
+# defaultMessage: Documenti collegati
+msgid "documento_documenti_collegati"
 msgstr ""
 
 #: components/ItaliaTheme/View/DocumentoView/DocumentoDescrizione
@@ -2985,13 +2985,8 @@ msgstr ""
 msgid "service_cos_e"
 msgstr ""
 
-#: components/ItaliaTheme/View/ServizioView/ServizioStato
-# defaultMessage: Il servizio non è attivo
-msgid "service_not_active"
-msgstr ""
-
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderStatoServizio
-# defaultMessage: Servizio chiuso
+# defaultMessage: Servizio non attivo
 msgid "service_off"
 msgstr ""
 
@@ -3060,6 +3055,11 @@ msgstr ""
 #: components/ItaliaTheme/View/ServizioView/ServizioAccedi
 # defaultMessage: Prenota appuntamento
 msgid "servizio_prenota_appuntamento"
+msgstr ""
+
+#: components/ItaliaTheme/View/ServizioView/ServizioProcedure
+# defaultMessage: Procedure collegate all'esito
+msgid "servizio_procedure_collegate"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal

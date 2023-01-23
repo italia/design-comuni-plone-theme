@@ -81,6 +81,7 @@ export const getImageAttributes = (
       const scale = sortedScales[0];
       attrs.src = `${scale?.download ?? image.download}`;
       if (isFromBrain) attrs.src = `${itemPath}${attrs.src}`;
+      attrs.src = flattenToAppURL(attrs.src);
 
       attrs.aspectRatio = Math.round((image.width / image.height) * 100) / 100;
       attrs.width = image.width;
@@ -95,13 +96,13 @@ export const getImageAttributes = (
       attrs.srcSet = sortedScales.map((scale) => {
         let src = `${scale.download} ${scale.width}w`;
         if (isFromBrain) src = `${itemPath}${src}`;
-        return src;
+        return flattenToAppURL(src);
       });
 
       if (useOriginal || sortedScales?.length === 0) {
         let originalSrc = `${image.download} ${image.width}w`;
         if (isFromBrain) originalSrc = `${itemPath}${originalSrc}`;
-        attrs.srcSet = attrs.srcSet.concat(originalSrc);
+        attrs.srcSet = attrs.srcSet.concat(flattenToAppURL(originalSrc));
       }
       break;
 
@@ -110,6 +111,7 @@ export const getImageAttributes = (
       let baseUrl = `@@images/${imageField}`;
       if (isFromBrain) baseUrl = `${itemPath}${baseUrl}`;
       else baseUrl = `${image.split('@@images')[0]}${baseUrl}`;
+      baseUrl = flattenToAppURL(baseUrl);
 
       attrs.src = `${baseUrl}/${minScale}`;
 
