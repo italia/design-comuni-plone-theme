@@ -12,20 +12,18 @@ const PageHeaderServizio = ({ content }) => {
     <>
       <ul className="chip-wrapper list-unstyled my-4">
         <li>
-          {content.stato_servizio && (
-            <Chip
-              tag="div"
-              simple
-              color={content.stato_servizio ? 'danger' : 'primary'}
-              data-element="service-status"
-            >
-              <ChipLabel>
-                {content.stato_servizio
-                  ? intl.formatMessage(messages.service_off)
-                  : intl.formatMessage(messages.service_on)}
-              </ChipLabel>
-            </Chip>
-          )}
+          <Chip
+            tag="div"
+            simple
+            color={content.stato_servizio ? 'danger' : 'primary'}
+            data-element="service-status"
+          >
+            <ChipLabel>
+              {content.stato_servizio
+                ? intl.formatMessage(messages.service_off)
+                : intl.formatMessage(messages.service_on)}
+            </ChipLabel>
+          </Chip>
         </li>
       </ul>
       {content.stato_servizio &&
