@@ -97,8 +97,8 @@ const Image = ({
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
-              if (entry.isIntersecting && !actualSrcSet) {
-                srcSet && applySrcSet();
+              if (entry.isIntersecting) {
+                applySrcSet();
                 if (imageRef.current instanceof Element) {
                   observer.unobserve(imageRef.current);
                 }

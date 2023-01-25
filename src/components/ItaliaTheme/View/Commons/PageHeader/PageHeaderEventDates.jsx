@@ -18,7 +18,11 @@ const PageHeaderEventDates = ({ content, moment, rrule }) => {
   Moment.locale(intl.locale);
 
   const rrulestr = rrule.rrulestr;
-
+  const wholeDay = content?.whole_day;
+  const openEnd = content?.open_end;
+  const renderOnlyStart =
+    Moment(content.end).format('DD-MM-Y') ===
+    Moment(content.start).format('DD-MM-Y');
   let eventRecurrenceText = null;
 
   if (content['@type'] === 'Event') {
@@ -39,12 +43,17 @@ const PageHeaderEventDates = ({ content, moment, rrule }) => {
   }
   return content['@type'] === 'Event' ? (
     <h4 className="py-2">
-      {Moment(content.end).format('DD-MM-Y') !==
-      Moment(content.start).format('DD-MM-Y')
-        ? `dal ${Moment(content.start).format('DD-MM-Y')} al ${Moment(
-            content.end,
-          ).format('DD-MM-Y')}`
-        : `${Moment(content.start).format('DD-MM-Y')}`}
+      {!wholeDay &&
+        !openEnd &&
+        !renderOnlyStart &&
+        `dal ${Moment(content.start).format('DD-MM-Y')} al ${Moment(
+          content.end,
+        ).format('DD-MM-Y')}`}
+      {(wholeDay || renderOnlyStart) &&
+        !openEnd &&
+        `${Moment(content.start).format('DD-MM-Y')}`}
+      {openEnd &&
+        `dal ${Moment(content.start).format('DD-MM-Y')} fino a conclusione`}
       {eventRecurrenceText && (
         <div className="recurrence small">{eventRecurrenceText}</div>
       )}

@@ -122,7 +122,11 @@ const CardWithImageTemplate = (props) => {
                         <div className="img-responsive img-responsive-panoramic">
                           <figure className="img-wrapper">{image}</figure>
                           {item['@type'] === 'Event' && (
-                            <CardCalendar start={item.start} end={item.end} />
+                            <CardCalendar
+                              start={item.start}
+                              end={item.end}
+                              recurrence={item.recurrence}
+                            />
                           )}
                         </div>
                       </div>

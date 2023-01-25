@@ -17,7 +17,7 @@ cache
 
 data
 omelette
-
+var
 locales/*.json
 
 # Yarn 3
