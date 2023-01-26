@@ -32,7 +32,7 @@ jobs:
           tags: redturtletech/io-comune-base:main
           pull: true
           push: true
-          cache-from: type=registry,ref=redturtletech/io-comune-base:main
+          cache-from: type=registry,ref=redturtletech/io-comune-base:${{ steps.get_version.outputs.VERSION }}
           cache-to: type=inline
 
       - name: Deploy to rancher
