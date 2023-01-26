@@ -2280,6 +2280,11 @@ msgstr ""
 msgid "openLinkInNewTab"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/Dates
+# defaultMessage: Questo evento ha una data di fine aperta/variabile.
+msgid "open_end"
+msgstr ""
+
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Contenuto attivo
 msgid "optionActiveContentButton"
@@ -3490,6 +3495,11 @@ msgstr ""
 #: components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsContacts
 # defaultMessage: Sito web
 msgid "website"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/Dates
+# defaultMessage: Questo evento ha luogo per tutta la giornata.
+msgid "whole_day"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields

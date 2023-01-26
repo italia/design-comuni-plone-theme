@@ -2265,6 +2265,11 @@ msgstr "Press release number"
 msgid "openLinkInNewTab"
 msgstr "Open link in a new tab"
 
+#: components/ItaliaTheme/View/Commons/Dates
+# defaultMessage: Questo evento ha una data di fine aperta/variabile.
+msgid "open_end"
+msgstr ""
+
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Contenuto attivo
 msgid "optionActiveContentButton"
@@ -3476,6 +3481,11 @@ msgstr "Constraints"
 # defaultMessage: Sito web
 msgid "website"
 msgstr "Web site"
+
+#: components/ItaliaTheme/View/Commons/Dates
+# defaultMessage: Questo evento ha luogo per tutta la giornata.
+msgid "whole_day"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView

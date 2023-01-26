@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2022-12-30T12:02:53.163Z\n"
+"POT-Creation-Date: 2023-01-26T12:06:19.993Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -2267,6 +2267,11 @@ msgstr ""
 msgid "openLinkInNewTab"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/Dates
+# defaultMessage: Questo evento ha una data di fine aperta/variabile.
+msgid "open_end"
+msgstr ""
+
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Contenuto attivo
 msgid "optionActiveContentButton"
@@ -3477,6 +3482,11 @@ msgstr ""
 #: components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsContacts
 # defaultMessage: Sito web
 msgid "website"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/Dates
+# defaultMessage: Questo evento ha luogo per tutta la giornata.
+msgid "whole_day"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields

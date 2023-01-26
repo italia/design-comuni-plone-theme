@@ -2282,6 +2282,11 @@ msgstr "Numéro du communiqué de presse"
 msgid "openLinkInNewTab"
 msgstr "Ouvrir le lien dans un nouvel onglet"
 
+#: components/ItaliaTheme/View/Commons/Dates
+# defaultMessage: Questo evento ha una data di fine aperta/variabile.
+msgid "open_end"
+msgstr ""
+
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Contenuto attivo
 msgid "optionActiveContentButton"
@@ -3493,6 +3498,11 @@ msgstr "Contraintes"
 # defaultMessage: Sito web
 msgid "website"
 msgstr "Site Internet"
+
+#: components/ItaliaTheme/View/Commons/Dates
+# defaultMessage: Questo evento ha luogo per tutta la giornata.
+msgid "whole_day"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
