@@ -1,3 +1,18 @@
+### [7.0.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0...v7.0.1) (2023-01-26)
+
+
+### Bug Fixes
+
+* block maps not accessible by default ([#32](https://github.com/RedTurtle/design-comuni-plone-theme/issues/32)) ([21ffeef](https://github.com/RedTurtle/design-comuni-plone-theme/commit/21ffeefb334bb03939e49c20608ed615d5f3ef6c))
+* date aperte e ricorrenze v1 ([#54](https://github.com/RedTurtle/design-comuni-plone-theme/issues/54)) ([7017795](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7017795b05c786071c5a2df2220479e8ab412701))
+* image component and css block link with image ([#57](https://github.com/RedTurtle/design-comuni-plone-theme/issues/57)) ([9b4cde0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9b4cde075559f270d4493e348ce455945d62092f))
+* locales ([1c7fbf1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1c7fbf182660f45bc81e211df0c66c40c53225f2))
+
+
+### Maintenance
+
+* docker build configuration ([e5cff6b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e5cff6b8bb9dcce847ab928f2700a892cb167be1))
+
 ## [7.0.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0-alpha.12...v7.0.0) (2023-01-11)
 
 
