@@ -5179,9 +5179,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bootstrap-italia@npm:2.0.9":
-  version: 2.0.9
-  resolution: "bootstrap-italia@npm:2.0.9"
+"bootstrap-italia@npm:2.2.0":
+  version: 2.2.0
+  resolution: "bootstrap-italia@npm:2.2.0"
   dependencies:
     "@popperjs/core": ^2.11.2
     "@splidejs/splide": ^3.6.12
@@ -5192,7 +5192,7 @@ __metadata:
     masonry-layout: ^4.2.2
     progressbar.js: ^1.1.0
     uuid: ^8.3.2
-  checksum: b9a8e3461e391d75d0edadfb372300413d368298865bae60a49e71fbbb6d70a45f1ce6366ceb267eb594c525dc8cbcc985e3f5a93e10099512fa301b52a4859c
+  checksum: 6a2c585698e051cd88760f34b67c2a447f40c364cee620c017b41e53ad4bee86d5068825e09fe18b37c6334e263055ff321ebdf018ea6053d9838702252c94c3
   languageName: node
   linkType: hard
 
@@ -7818,10 +7818,10 @@ __metadata:
     "@plone-collective/volto-sentry": 0.3.0
     "@plone/volto": 16.8.1
     "@release-it/conventional-changelog": ^2.0.1
-    bootstrap-italia: 2.0.9
+    bootstrap-italia: 2.2.0
     bundlewatch: ^0.3.3
     classnames: ^2.3.2
-    design-react-kit: "italia/design-react-kit#2584d0c0f4ad5fdf18d70a74b541f6bfe7def13b"
+    design-react-kit: "italia/design-react-kit#35767985f5b5de6bd118d752d61cf74dd6229258"
     eslint-plugin-prettier: ^3.4.1
     htmldiff-js: 1.0.5
     husky: 8.0.2
@@ -7865,10 +7865,11 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"design-react-kit@italia/design-react-kit#2584d0c0f4ad5fdf18d70a74b541f6bfe7def13b":
+"design-react-kit@italia/design-react-kit#35767985f5b5de6bd118d752d61cf74dd6229258":
   version: 4.0.2
-  resolution: "design-react-kit@https://github.com/italia/design-react-kit.git#commit=2584d0c0f4ad5fdf18d70a74b541f6bfe7def13b"
+  resolution: "design-react-kit@https://github.com/italia/design-react-kit.git#commit=35767985f5b5de6bd118d752d61cf74dd6229258"
   dependencies:
+    bootstrap-italia: 2.2.0
     classnames: ^2.3.1
     is-number: ^7.0.0
     react-select: ^4.3.0
@@ -7879,9 +7880,9 @@ __metadata:
     reactstrap: ^9.1.4
     webfontloader: ^1.6.28
   peerDependencies:
-    bootstrap-italia: ^2.0.3
+    bootstrap-italia: 2.2.0
     react: ">=17.0.2"
-  checksum: cf411bfe07fc862e9ac4950933f6370519b17ad48624eb5995c5c610d8a34ca0cd40983f4b85e1c7280b008f9e4d2516abb6fc119b99e8568031ec20139346fd
+  checksum: d9ecdba20aac7f391177e5739d7e0617e30a043058a9095ebbedc371a41596ea65ad07aeeeac985e4f54b338caa4257fb311b76703b388e594c916477b3c3110
   languageName: node
   linkType: hard
 
