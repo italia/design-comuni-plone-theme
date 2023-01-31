@@ -1,3 +1,15 @@
+### [7.0.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.1...v7.0.2) (2023-01-31)
+
+
+### Bug Fixes
+
+* content type views section components keys breaking related items ([#66](https://github.com/RedTurtle/design-comuni-plone-theme/issues/66)) ([83fee0d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/83fee0dc0df92d930fc369069a8d003d44b3346f))
+
+
+### Maintenance
+
+* fix build tag for main ([a91505b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a91505bcf8d3d5b6d246f2f361f029c42d433402))
+
 ### [7.0.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.0...v7.0.1) (2023-01-26)
 
 
