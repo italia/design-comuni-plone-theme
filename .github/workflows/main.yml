@@ -29,7 +29,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          tags: redturtletech/io-comune-base:main
+          tags: redturtletech/io-comune-base:${{ steps.get_version.outputs.VERSION }}
           pull: true
           push: true
           cache-from: type=registry,ref=redturtletech/io-comune-base:${{ steps.get_version.outputs.VERSION }}
