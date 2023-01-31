@@ -16,7 +16,7 @@ const ContentTypeViewSections = ({ content, defaultSections }) => {
       <section.component
         content={content}
         {...section.props}
-        key={'section' + i}
+        key={`${content['@id']}-section-${i}`}
       />
     ))
   ) : (
