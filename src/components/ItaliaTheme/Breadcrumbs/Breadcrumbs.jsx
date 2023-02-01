@@ -49,8 +49,8 @@ const Breadcrumbs = ({ pathname }) => {
       <GoogleBreadcrumbs items={items} />
       <Row>
         <Col>
-          <nav className="breadcrumb-container">
-            <Breadcrumb aria-label="breadcrumb" listTag="ol" tag="nav">
+          <nav className="breadcrumb-container" aria-label="breadcrumb">
+            <ol className="breadcrumb" data-element="breadcrumb">
               <BreadcrumbItem tag="li">
                 <UniversalLink href="/">
                   {intl.formatMessage(messages.home)}
@@ -65,7 +65,7 @@ const Breadcrumbs = ({ pathname }) => {
                   )}
                 </BreadcrumbItem>
               ))}
-            </Breadcrumb>
+            </ol>
           </nav>
         </Col>
       </Row>
