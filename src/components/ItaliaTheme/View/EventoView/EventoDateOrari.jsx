@@ -7,6 +7,7 @@ import {
   RichText,
   RichTextArticle,
   Dates,
+  richTextHasContent,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
@@ -29,10 +30,12 @@ const EventoDateOrari = ({ content }) => {
       title={intl.formatMessage(messages.date_e_orari)}
     >
       <Dates content={content} />
-      <RichText
-        title={intl.formatMessage(messages.orari)}
-        content={content?.orari}
-      />
+      {richTextHasContent(content.orari) && (
+        <RichText
+          title={intl.formatMessage(messages.orari)}
+          content={content.orari}
+        />
+      )}
     </RichTextArticle>
   );
 };

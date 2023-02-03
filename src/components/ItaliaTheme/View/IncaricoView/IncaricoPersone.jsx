@@ -15,13 +15,10 @@ const IncaricoPersone = ({ content }) => {
   const intl = useIntl();
 
   return content?.persona?.length > 0 ? (
-    <article
-      id="persone-struttura"
-      className="it-page-section anchor-offset mt-5"
-    >
-      <h4 id="header-persone-struttura">
+    <section id="persone-struttura" className="it-page-section mb-5">
+      <h2 id="header-persone-struttura">
         {intl.formatMessage(messages.persona)}
-      </h4>
+      </h2>
       <div className="ruolo-persone-struttura">
         {content?.persona?.map((person, _i) => (
           <Link
@@ -42,10 +39,8 @@ const IncaricoPersone = ({ content }) => {
           </Link>
         ))}
       </div>
-    </article>
-  ) : (
-    <></>
-  );
+    </section>
+  ) : null;
 };
 
 export default IncaricoPersone;

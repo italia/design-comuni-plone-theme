@@ -10,7 +10,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import {
   PageHeader,
   SkipToMainContent,
-  RichTextArticle,
+  RichTextSection,
   OfficeCard,
   Metadata,
   HelpBox,
@@ -21,10 +21,15 @@ import {
   RelatedItems,
   IncaricoPersone,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
-import { ConditionalLink } from '@plone/volto/components';
+import { contentFolderHasItems } from 'design-comuni-plone-theme/helpers';
+import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 
 const messages = defineMessages({
+  tipologia_incarico: {
+    id: 'tipologia_incarico',
+    defaultMessage: 'Tipo di incarico',
+  },
   importi_viaggio: {
     id: 'importi_viaggio',
     defaultMessage: 'Importi di viaggio e/o servizio',
@@ -80,62 +85,88 @@ const IncaricoView = (props) => {
         className="col-lg-12 it-page-sections-container my-4 py-4"
         id="main-content-section"
       >
-        {/* TODO: add tipologia when present */}
-        <RichTextArticle
-          content={content.importi_viaggio_servizio}
-          tag_id={'text-body'}
-          field="importi_viaggio_servizio"
-          title={intl.formatMessage(messages.importi_viaggio)}
-          show_title={true}
-        />
-        <Attachments
-          content={content}
-          folder_name={'importi-di-viaggio-e-o-servizi'}
-          title={null}
-          as_article={false}
-        />
-        <RichTextArticle
-          content={content.compensi}
-          tag_id={'text-body'}
-          field="compensi"
-          title={intl.formatMessage(messages.compensi)}
-          show_title={true}
-        />
-        <Attachments
-          content={content}
-          folder_name={'compensi-file'}
-          title={null}
-          as_article={false}
-        />
+        {content.tipologia_incarico && (
+          <RichTextSection
+            tag_id="tipologia_incarico"
+            title={intl.formatMessage(messages.tipologia_incarico)}
+          >
+            <div className="font-serif">{content.tipologia_incarico.title}</div>
+          </RichTextSection>
+        )}
+        {richTextHasContent(content.compensi) && (
+          <RichTextSection
+            content={content.compensi}
+            tag_id={'text-body'}
+            title={intl.formatMessage(messages.compensi)}
+          />
+        )}
+        {contentFolderHasItems(content, 'compensi-file') && (
+          <Attachments
+            content={content}
+            folder_name={'compensi-file'}
+            as_article={false}
+          />
+        )}
+        {richTextHasContent(content.importi_viaggio_servizio) && (
+          <RichTextSection
+            content={content.importi_viaggio_servizio}
+            tag_id={'text-body'}
+            title={intl.formatMessage(messages.importi_viaggio)}
+          />
+        )}
+        {contentFolderHasItems(content, 'importi-di-viaggio-e-o-servizi') && (
+          <Attachments
+            content={content}
+            folder_name={'importi-di-viaggio-e-o-servizi'}
+            as_article={false}
+          />
+        )}
         <IncaricoPersone content={content} />
         {content.unita_organizzativa?.length > 0 && (
-          <RichTextArticle
+          <RichTextSection
             tag_id="ufficio"
             title={intl.formatMessage(messages.ufficio)}
           >
             {content.unita_organizzativa?.map((item, i) => (
-              <OfficeCard key={item['@id']} office={item} load_data={false} />
+              <OfficeCard
+                key={flattenToAppURL(item['@id'])}
+                office={item}
+                load_data={false}
+              />
             ))}
-          </RichTextArticle>
+          </RichTextSection>
         )}
         {content.responsabile_struttura?.length > 0 && (
-          <RichTextArticle
+          <RichTextSection
             tag_id="responsabile"
             title={intl.formatMessage(messages.responsabile)}
           >
             {content.responsabile_struttura?.map((item, i) => (
-              <OfficeCard key={item['@id']} office={item} load_data={false} />
+              <OfficeCard
+                key={flattenToAppURL(item['@id'])}
+                office={item}
+                load_data={false}
+              />
             ))}
-          </RichTextArticle>
+          </RichTextSection>
         )}
-        {content.atto_nomina?.map((atto_nomina) => (
-          <div className="mb-5 mt-3">
-            <h5>{intl.formatMessage(messages.atto_nomina)}</h5>
-            <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-              <ConditionalLink to={flattenToAppURL(atto_nomina['@id'])} />
-            </div>
-          </div>
-        ))}
+        {content.atto_nomina?.length > 0 && (
+          <RichTextSection
+            tag_id="atto-nomina"
+            title={intl.formatMessage(messages.atto_nomina)}
+          >
+            {content.atto_nomina.map((atto_nomina) => (
+              <div
+                key={flattenToAppURL(atto_nomina['@id'])}
+                className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal"
+              >
+                <UniversalLink href={flattenToAppURL(atto_nomina['@id'])}>
+                  {atto_nomina.title}
+                </UniversalLink>
+              </div>
+            ))}
+          </RichTextSection>
+        )}
         <Metadata
           content={content}
           showSectionTitle={richTextHasContent(content?.ulteriori_informazioni)}

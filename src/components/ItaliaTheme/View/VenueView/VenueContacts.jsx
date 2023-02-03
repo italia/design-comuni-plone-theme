@@ -5,7 +5,7 @@ import { Card, CardBody, CardTitle } from 'design-react-kit';
 
 import {
   richTextHasContent,
-  RichTextArticle,
+  RichTextSection,
   RichText,
   GenericCard,
   // ContactLink,
@@ -70,12 +70,13 @@ const VenueContacts = ({ content }) => {
     // content?.riferimento_mail_struttura ||
     // content?.riferimento_pec_struttura ? (
     richTextHasContent(content?.struttura_responsabile) ? (
-    <RichTextArticle
-      tag_id="contatti"
-      title={intl.formatMessage(messages.contatti)}
-    >
-      {/* CONTATTI LUOGO */}
-      {/* {(content?.telefono ||
+    <>
+      <RichTextSection
+        tag_id="contatti"
+        title={intl.formatMessage(messages.contatti)}
+      >
+        {/* CONTATTI LUOGO */}
+        {/* {(content?.telefono ||
         content?.email ||
         content?.fax ||
         content?.pec ||
@@ -134,23 +135,25 @@ const VenueContacts = ({ content }) => {
           </CardBody>
         </Card>
       )} */}
-      {content.contact_info?.length > 0 &&
-        content.contact_info.map((contact) => (
-          <ContactsCard contact={contact} key={contact['@id']} />
-        ))}
-      {/*
-    STRUTTURE RESPONSABILI
-    Se è presente una struttura_responsabile_correlati metto quella altrimenti metto una card con i campi singoli, se presenti
-  */}
+        {content.contact_info?.length > 0 &&
+          content.contact_info.map((contact) => (
+            <ContactsCard contact={contact} key={contact['@id']} />
+          ))}
+        {/*
+        STRUTTURE RESPONSABILI
+        Se è presente una struttura_responsabile_correlati metto quella altrimenti metto una card con i campi singoli, se presenti
+      */}
+      </RichTextSection>
       {(content?.struttura_responsabile_correlati?.length > 0 ||
         richTextHasContent(content?.struttura_responsabile) ||
         content?.riferimento_telefonico_struttura ||
         content?.riferimento_fax_struttura ||
         content?.riferimento_mail_struttura ||
         content?.riferimento_pec_struttura) && (
-        <div className="mt-5 mb-5">
-          <h5>{intl.formatMessage(messages.struttura_responsabile)}</h5>
-
+        <RichTextSection
+          tag_id="struttura_responsabile"
+          title={intl.formatMessage(messages.struttura_responsabile)}
+        >
           {content.struttura_responsabile_correlati?.length > 0 ? (
             //STRUTTURE RESPONSABILI CORRELATE
             <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
@@ -239,9 +242,9 @@ const VenueContacts = ({ content }) => {
               )}
             </>
           )}
-        </div>
+        </RichTextSection>
       )}
-    </RichTextArticle>
+    </>
   ) : null;
 };
 

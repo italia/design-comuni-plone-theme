@@ -32,7 +32,7 @@ const UOContacts = ({ content }) => {
         content?.street?.length > 0 ||
         content?.city?.length > 0 ||
         content?.zip_code?.length > 0 ||
-        // richTextHasContent(content?.orario_pubblico) ||
+        richTextHasContent(content?.orario_pubblico) ||
         content?.contact_info?.length > 0) && (
         <section id="contatti" className="it-page-section anchor-offset mt-5">
           <h3 id="header-contatti" className="mb-3">
@@ -47,12 +47,12 @@ const UOContacts = ({ content }) => {
               <RichText content={content.contact_info} />
             </div>
           )}
-          {/* {richTextHasContent(content.orario_pubblico) && (
+          {richTextHasContent(content.orario_pubblico) && (
             <div className="mb-5 mt-3">
               <h5>{intl.formatMessage(messages.orario_pubblico)}</h5>
               <RichText content={content.orario_pubblico} />
             </div>
-          )} */}
+          )}
 
           {/* CONTATTI */}
           <UOContactsContacts content={content} />

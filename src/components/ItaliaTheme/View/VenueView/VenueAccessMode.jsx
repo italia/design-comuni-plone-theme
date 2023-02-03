@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import {
   richTextHasContent,
-  RichTextArticle,
+  RichTextSection,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
@@ -17,7 +17,7 @@ const VenueAccessMode = ({ content }) => {
   const intl = useIntl();
 
   return richTextHasContent(content?.modalita_accesso) ? (
-    <RichTextArticle
+    <RichTextSection
       content={content.modalita_accesso}
       tag_id={'modalita-accesso'}
       title={intl.formatMessage(messages.modalita_accesso)}
