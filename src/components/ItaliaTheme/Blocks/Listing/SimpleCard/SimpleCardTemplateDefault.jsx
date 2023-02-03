@@ -73,7 +73,12 @@ const SimpleCardTemplateDefault = (props) => {
     let className = null;
     switch (item['@type']) {
       case 'News Item':
-        className = item.tipologia_notizia?.toLowerCase().replace(' ', '_');
+        className =
+          item.tipologia_notizia
+            ?.map?.((tipologia) =>
+              tipologia.token.toLowerCase().replace(' ', '_'),
+            )
+            .join(' ') ?? '';
         break;
       default:
         className = null;
@@ -186,6 +191,9 @@ const SimpleCardTemplateDefault = (props) => {
                     {category && (
                       <span className="text fw-bold">
                         <ListingCategory category={category} item={item} />
+                        {item.tipologia_notizia
+                          .map((tipo) => tipo.title)
+                          .join(' ')}
                       </span>
                     )}
                   </CardCategory>

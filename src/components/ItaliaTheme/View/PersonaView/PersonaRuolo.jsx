@@ -100,7 +100,7 @@ const PersonaRuolo = ({ content }) => {
             tag_id="tipologia_incarico"
             title={intl.formatMessage(messages.tipologia_incarico)}
           >
-            <div className="font-serif">{inc.tipologia_incarico}</div>
+            <div className="font-serif">{inc.tipologia_incarico.title}</div>
           </RichTextSection>
           {richTextHasContent(inc.compensi) && (
             <RichTextSection
