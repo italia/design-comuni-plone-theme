@@ -37,7 +37,7 @@ const ContactsCard = ({ contact = {} }) => {
   }
 
   return (
-    <Card teaser noWrapper className="shadow rounded">
+    <Card teaser noWrapper className="shadow rounded my-3">
       <Icon icon="it-telephone" />
       <CardBody>
         <CardTitle className="h5">
