@@ -1136,6 +1136,11 @@ msgstr "Fermer"
 msgid "closeSearch"
 msgstr "Fermer la recherche"
 
+#: components/ItaliaTheme/View/ServizioView/ServizioUlterioriInformazioni
+# defaultMessage: Codice dell'ente erogatore (ipa)
+msgid "codice_ipa"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 # defaultMessage: Primario
@@ -1576,11 +1581,6 @@ msgstr "Déclaration d'impôts"
 msgid "dirigente"
 msgstr "Directeur"
 
-#: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
-# defaultMessage: Documenti
-msgid "documenti"
-msgstr "Documents"
-
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Documenti e dati
 msgid "documenti-e-dati"
@@ -1616,6 +1616,16 @@ msgstr "Documents"
 msgid "documento_documenti_collegati"
 msgstr ""
 
+#: components/ItaliaTheme/View/DocumentoView/DocumentoDocumenti
+# defaultMessage: Formati disponibili
+msgid "documento_formati_disponibili"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDocumento
+# defaultMessage: Protocollo {protocollo} del {data_protocollo}
+msgid "documento_header_protocollo"
+msgstr ""
+
 #: components/ItaliaTheme/View/DocumentoView/DocumentoDescrizione
 # defaultMessage: Licenza di distribuzione
 msgid "documento_licenza_distribuzione"
@@ -1625,6 +1635,16 @@ msgstr "Licence de distribution"
 # defaultMessage: Riferimenti normativi
 msgid "documento_riferimenti_normativi"
 msgstr "Références normatives"
+
+#: components/ItaliaTheme/View/DocumentoView/DocumentoDescrizione
+# defaultMessage: Tipo di documento albo pretorio
+msgid "documento_tipologia_documenti_albopretorio"
+msgstr ""
+
+#: components/ItaliaTheme/View/DocumentoView/DocumentoDescrizione
+# defaultMessage: Tipo di documento
+msgid "documento_tipologia_documento"
+msgstr ""
 
 #: components/ItaliaTheme/View/DocumentoView/DocumentoUfficioResponsabile
 # defaultMessage: Ufficio responsabile
@@ -1953,6 +1973,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/IconBlocks/Sidebar
 # defaultMessage: Blocco con icone
 msgid "iconss_blocks"
+msgstr ""
+
+#: components/ItaliaTheme/View/DocumentoView/DocumentoDescrizione
+# defaultMessage: Identificativo del documento
+msgid "identificativo"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
@@ -2322,7 +2347,7 @@ msgid "order_by"
 msgstr "Trier par"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaRuolo
-# defaultMessage: Organizzazione di riferimento
+# defaultMessage: Organizzazione
 msgid "organizzazione_riferimento"
 msgstr "Organisation de référence"
 
@@ -3068,6 +3093,11 @@ msgid "servizio_cosa_si_ottiene"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioAccedi
+# defaultMessage: Dove rivolgersi
+msgid "servizio_dove_rivolgersi"
+msgstr ""
+
+#: components/ItaliaTheme/View/ServizioView/ServizioAccedi
 # defaultMessage: Prenota appuntamento
 msgid "servizio_prenota_appuntamento"
 msgstr ""
@@ -3086,6 +3116,11 @@ msgstr "Aller à d'autres options de recherche"
 # defaultMessage: Disponi su 4 colonne
 msgid "set_four_columns"
 msgstr "Disposer sur 4 colonnes"
+
+#: components/ItaliaTheme/View/ServizioView/ServizioUlterioriInformazioni
+# defaultMessage: Settore merceologico
+msgid "settore_merceologico"
+msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Sharing
 # defaultMessage: Condividi
@@ -3395,6 +3430,7 @@ msgstr "Entrez du texte"
 msgid "tipologia_bando"
 msgstr "Type d'appel"
 
+#: components/ItaliaTheme/View/IncaricoView/IncaricoView
 #: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Tipo di incarico
 msgid "tipologia_incarico"

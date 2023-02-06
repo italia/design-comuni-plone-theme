@@ -37,6 +37,7 @@ export PageHeaderNewsItem from 'design-comuni-plone-theme/components/ItaliaTheme
 export PageHeaderStatoServizio from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/PageHeader/PageHeaderStatoServizio';
 export PageHeaderLinkServizio from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/PageHeader/PageHeaderLinkServizio';
 export PageHeaderTassonomiaArgomenti from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/PageHeader/PageHeaderTassonomiaArgomenti';
+export PageHeaderDocumento from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDocumento';
 export Attachment from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/Attachment';
 export Attachments from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/Attachments';
 export CuredBy from 'design-comuni-plone-theme/components/ItaliaTheme/View/Commons/CuredBy';

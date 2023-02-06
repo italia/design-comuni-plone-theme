@@ -16,6 +16,7 @@ import {
   PageHeaderStatoServizio,
   PageHeaderLinkServizio,
   PageHeaderTassonomiaArgomenti,
+  PageHeaderDocumento,
   Sharing,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
@@ -69,6 +70,8 @@ const PageHeader = (props) => {
           <PageHeaderEventDates content={props.content} />
 
           <PageHeaderStatoServizio content={props.content} />
+
+          <PageHeaderDocumento content={props.content} />
 
           {props.content.description && (
             <p

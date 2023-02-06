@@ -1,10 +1,8 @@
 import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-import { Link } from 'react-router-dom';
-import { flattenToAppURL } from '@plone/volto/helpers';
 import { OfficeCard } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 import { CardPersona } from 'design-comuni-plone-theme/components/ItaliaTheme';
-import { Chip, ChipLabel, Row, Col } from 'design-react-kit';
+import { Row, Col } from 'design-react-kit';
 
 const messages = defineMessages({
   struttura: {
@@ -53,9 +51,13 @@ const UOStructure = ({ content }) => {
           <p className="font-serif">{content.tipologia_organizzazione.title}</p>
         </div>
       )}
-      <h4 id="header-struttura" className="mb-3">
-        {intl.formatMessage(messages.struttura)}
-      </h4>
+      {(content.uo_parent ||
+        content.uo_children?.length > 0 ||
+        content.legami_con_altre_strutture?.length > 0) && (
+        <h4 id="header-struttura" className="mb-3">
+          {intl.formatMessage(messages.struttura)}
+        </h4>
+      )}
       {content.uo_parent && (
         <div className="mb-5 mt-3">
           <h5>{intl.formatMessage(messages.legami_struttura_padre)}</h5>
