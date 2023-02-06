@@ -27,17 +27,16 @@ jobs:
           push: true
           cache-from: type=registry,ref=redturtletech/io-comune-base:develop
           cache-to: type=inline
-          # platforms: linux/amd64,linux/arm64
 
-      # - name: Deploy to rancher
-      #   uses: redturtle/rancher-deploy-action@v0.1.0
-      #   with:
-      #     host: ${{ secrets.RANCHER_HOST }}
-      #     api-username: ${{ secrets.RANCHER_API_USERNAME }}
-      #     api-password: ${{ secrets.RANCHER_API_PASSWORD }}
-      #     cluster-id: ${{ secrets.RANCHER_CLUSTER_ID }}
-      #     project-id: ${{ secrets.RANCHER_PROJECT_ID }}
-      #     namespace: ${{ secrets.RANCHER_NAMESPACE_DEVELOP }}
-      #     workload: ${{ secrets.RANCHER_WORKLOAD_DEVELOP }}
-      #     image: redturtletech/io-comune-base:develop
-      #     slack-hook-url: ${{ secrets.RANCHER_SLACK_HOOK_URL }}
+      - name: Deploy to rancher
+        uses: redturtle/rancher-deploy-action@v0.1.0
+        with:
+          host: ${{ secrets.RANCHER_HOST }}
+          api-username: ${{ secrets.RANCHER_API_USERNAME }}
+          api-password: ${{ secrets.RANCHER_API_PASSWORD }}
+          cluster-id: ${{ secrets.RANCHER_CLUSTER_ID }}
+          project-id: ${{ secrets.RANCHER_PROJECT_ID }}
+          namespace: ${{ secrets.RANCHER_NAMESPACE_DEVELOP }}
+          workload: ${{ secrets.RANCHER_WORKLOAD_DEVELOP }}
+          image: redturtletech/io-comune-base:develop
+          slack-hook-url: ${{ secrets.RANCHER_SLACK_HOOK_URL }}

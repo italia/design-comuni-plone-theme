@@ -1,15 +1,16 @@
 name: Docker build for latest main version
 on:
   release:
-    types: [published]
+    types: [released]
 
 jobs:
   build_main:
     runs-on: ubuntu-latest
     steps:
-      - name: pull request
-        if: github.event_name == 'release' && github.event.action == 'published' || github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
-        uses: actions/checkout@v3
+      # - name: pull request
+      #   if: github.event_name == 'release' && github.event.action == 'published' || github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
+      #   uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
@@ -20,25 +21,29 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Get the version
+        id: get_version
+        run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+
       - name: Build and push Docker images
         uses: docker/build-push-action@v3
         with:
           context: .
-          tags: redturtletech/io-comune-base:main
+          tags: redturtletech/io-comune-base:${{ steps.get_version.outputs.VERSION }}
           pull: true
           push: true
-          cache-from: type=registry,ref=redturtletech/io-comune-base:main
+          cache-from: type=registry,ref=redturtletech/io-comune-base:${{ steps.get_version.outputs.VERSION }}
           cache-to: type=inline
 
-      # - name: Deploy to rancher
-      #   uses: redturtle/rancher-deploy-action@v0.1.0
-      #   with:
-      #     host: ${{ secrets.RANCHER_HOST }}
-      #     api-username: ${{ secrets.RANCHER_API_USERNAME }}
-      #     api-password: ${{ secrets.RANCHER_API_PASSWORD }}
-      #     cluster-id: ${{ secrets.RANCHER_CLUSTER_ID }}
-      #     project-id: ${{ secrets.RANCHER_PROJECT_ID }}
-      #     namespace: ${{ secrets.RANCHER_NAMESPACE }}
-      #     workload: ${{ secrets.RANCHER_WORKLOAD }}
-      #     image: redturtletech/io-comune-base:main
-      #     slack-hook-url: ${{ secrets.RANCHER_SLACK_HOOK_URL }}
+      - name: Deploy to rancher
+        uses: redturtle/rancher-deploy-action@v0.1.0
+        with:
+          host: ${{ secrets.RANCHER_HOST }}
+          api-username: ${{ secrets.RANCHER_API_USERNAME }}
+          api-password: ${{ secrets.RANCHER_API_PASSWORD }}
+          cluster-id: ${{ secrets.RANCHER_CLUSTER_ID }}
+          project-id: ${{ secrets.RANCHER_PROJECT_ID }}
+          namespace: ${{ secrets.RANCHER_NAMESPACE }}
+          workload: ${{ secrets.RANCHER_WORKLOAD }}
+          image: redturtletech/io-comune-base:${{ steps.get_version.outputs.VERSION }}
+          slack-hook-url: ${{ secrets.RANCHER_SLACK_HOOK_URL }}
