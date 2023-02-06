@@ -1,3 +1,10 @@
+### [7.0.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.2...v7.0.3) (2023-02-06)
+
+
+### Maintenance
+
+* fix build tag for main ([e3a8432](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e3a8432ae9d5fe013a35dd668371c39abe62354e))
+
 ### [7.0.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.1...v7.0.2) (2023-01-31)
 
 
