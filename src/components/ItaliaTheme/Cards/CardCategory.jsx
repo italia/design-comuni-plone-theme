@@ -11,8 +11,7 @@ const propTypes = {
 };
 
 const CardCategory = (props) => {
-  const { iconName, date, href, ...attributes } = props;
-  const { children, ...rest } = attributes;
+  const { iconName, date, href, children, ...rest } = props;
   const classes = classNames({
     'category-top': date || ' ',
     'categoryicon-top': iconName,
