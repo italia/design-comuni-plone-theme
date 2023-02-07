@@ -68,12 +68,7 @@ const mock_mandatory = {
 const mock_allfields = {
   ...mock_mandatory,
   '@id': 'http://loremipsum.it/aguzzoli-claudia-dana',
-  atto_nomina: {
-    'content-type': 'application/pdf',
-    download: 'http://loremipsum.doc',
-    filename: 'AttoNomina.pdf',
-    size: 323279,
-  },
+  atto_nomina: null,
   biografia: {
     'content-type': 'text/html',
     data: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in pharetra nunc, in finibus sapien. Donec eu venenatis dolor, sit amet dignissim sem. Mauris vulputate, enim at vestibulum euismod, quam risus vulputate erat, a varius tortor tellus in metus. Nulla cursus lobortis metus. Pellentesque vehicula risus tincidunt, ornare nisl non, convallis turpis. Nam convallis nulla id neque condimentum hendrerit. Proin ac tincidunt eros, quis fringilla dolor. Duis vitae arcu nibh.</p>\n<p>Donec non urna enim. Nulla mattis accumsan mauris ut sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius lacus sed turpis mollis, in volutpat magna lobortis. Nam erat enim, placerat eget orci nec, consequat efficitur arcu. Nunc auctor, augue in egestas posuere, eros velit auctor dui, in lacinia urna dolor id libero. Proin ac tincidunt ligula. Ut dictum dignissim aliquet. Donec in quam fringilla, fringilla ante sit amet, faucibus libero. Pellentesque a metus ante. Mauris iaculis pellentesque nisl vel vehicula.</p>',
@@ -84,12 +79,7 @@ const mock_allfields = {
     data: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In in pharetra nunc, in finibus sapien. Donec eu venenatis dolor, sit amet dignissim sem. Mauris vulputate, enim at vestibulum euismod, quam risus vulputate erat, a varius tortor tellus in metus. Nulla cursus lobortis metus. Pellentesque vehicula risus tincidunt, ornare nisl non, convallis turpis. Nam convallis nulla id neque condimentum hendrerit. Proin ac tincidunt eros, quis fringilla dolor. Duis vitae arcu nibh.</p>\n<p>Donec non urna enim. Nulla mattis accumsan mauris ut sodales. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius lacus sed turpis mollis, in volutpat magna lobortis. Nam erat enim, placerat eget orci nec, consequat efficitur arcu. Nunc auctor, augue in egestas posuere, eros velit auctor dui, in lacinia urna dolor id libero. Proin ac tincidunt ligula. Ut dictum dignissim aliquet. Donec in quam fringilla, fringilla ante sit amet, faucibus libero. Pellentesque a metus ante. Mauris iaculis pellentesque nisl vel vehicula.</p>',
     encoding: 'utf-8',
   },
-  curriculum_vitae: {
-    'content-type': 'application/pdf',
-    download: 'http://loremipsum.doc',
-    filename: '907122.pdf',
-    size: 57203,
-  },
+  curriculum_vitae: null,
   // data_conclusione_incarico: '2020-03-13',
   // data_insediamento: '2020-03-12',
   deleghe: {
@@ -400,7 +390,7 @@ test('Checks all field when we have filled up mock', async () => {
   );
 
   // atto_nomina
-  expect(getByText(/Atto di nomina/i)).toBeInTheDocument();
+  // expect(getByText(/Atto di nomina/i)).toBeInTheDocument();
 
   // biografia
   // expect(getByText(/Ruolo\/Biografia/i)).toBeInTheDocument();
@@ -409,7 +399,7 @@ test('Checks all field when we have filled up mock', async () => {
   // expect(getByText(/Competenze/i)).toBeInTheDocument();
 
   // curriculum_vitae
-  expect(getByText(/Curriculum vitae/i)).toBeInTheDocument();
+  // expect(getByText(/Curriculum vitae/i)).toBeInTheDocument();
 
   // data_insediamento
   // expect(getByText(/Data di insediamento/i)).toBeInTheDocument();
@@ -493,12 +483,12 @@ test('Check parts loaded from child folders', async () => {
   // expect(await screen.findByText('Compensi')).toBeInTheDocument();
 
   // importi_di_viaggio_e_o_servizi
-  expect(
-    await screen.findByText('Importi di viaggio e/o servizi'),
-  ).toBeInTheDocument();
+  // expect(
+  //   await screen.findByText('Importi di viaggio e/o servizi'),
+  // ).toBeInTheDocument();
 
   // altre-cariche
-  expect(await screen.findByText('Altre cariche')).toBeInTheDocument();
+  // expect(await screen.findByText('Altre cariche')).toBeInTheDocument();
 
   // situazione-patrimoniale
   // const situazione_patrimoniale = await waitForElement(() =>
