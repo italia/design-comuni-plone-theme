@@ -69,43 +69,31 @@ const messages = defineMessages({
 const PersonaRuolo = ({ content }) => {
   const intl = useIntl();
 
-  // Not shown in wireframes, somehow
-  // const strutture = useMemo(() => {
-  //   return incarichiData?.incarichiAttivi?.reduce((acc, val) => {
-  //     if (val?.responsabile_struttura?.length > 0)
-  //       return [...acc, ...val.responsabile_struttura];
-  //     return acc;
-  //   }, []);
-  // }, [incarichiData]);
-  // const uffici = useMemo(() => {
-  //   return incarichiData?.incarichiAttivi?.reduce((acc, val) => {
-  //     if (val?.unita_organizzativa?.length > 0)
-  //       return [...acc, ...val.unita_organizzativa];
-  //     return acc;
-  //   }, []);
-  // }, [incarichiData]);
-
-  return content?.incarichi_persona?.length > 0 ? (
+  return (
     <>
-      {content.incarichi_persona.slice(0, 1).map((inc) => (
+      {content?.incarichi_persona?.length > 0 && (
         <>
           <RichTextSection
             tag_id="incarico"
             title={intl.formatMessage(messages.ruolo)}
           >
-            <div className="font-serif">{inc.title}</div>
+            <div className="font-serif">
+              {content.incarichi_persona[0].title}
+            </div>
           </RichTextSection>
           <RichTextSection
             tag_id="tipologia_incarico"
             title={intl.formatMessage(messages.tipologia_incarico)}
           >
-            <div className="font-serif">{inc.tipologia_incarico.title}</div>
+            <div className="font-serif">
+              {content.incarichi_persona[0].tipologia_incarico.title}
+            </div>
           </RichTextSection>
-          {richTextHasContent(inc.compensi) && (
+          {richTextHasContent(content.incarichi_persona[0].compensi) && (
             <RichTextSection
               tag_id="compensi"
               title={intl.formatMessage(messages.compensi)}
-              content={inc.compensi}
+              content={content.incarichi_persona[0].compensi}
             />
           )}
           <RichTextSection
@@ -113,22 +101,15 @@ const PersonaRuolo = ({ content }) => {
             title={intl.formatMessage(messages.data_insediamento)}
           >
             <div className="font-serif">
-              {viewDate(intl.locale, inc.data_inizio_incarico, 'DD-MM-Y')}
+              {viewDate(
+                intl.locale,
+                content.incarichi_persona[0].data_inizio_incarico,
+                'DD-MM-Y',
+              )}
             </div>
           </RichTextSection>
         </>
-      ))}
-      {/* {incarichiData?.incarichiInattivi?.map((inc) => (
-        <p key={inc['@id']}>
-          <strong>
-            {intl.formatMessage(messages.data_conclusione_incarico, {
-              incarico: inc.title,
-            })}
-            :
-          </strong>{' '}
-          {viewDate(intl.locale, inc?.data_conclusione_incarico, 'DD-MM-Y')}
-        </p>
-      ))} */}
+      )}
       {content.organizzazione_riferimento.length > 0 && (
         <RichTextSection
           tag_id="organization"
@@ -183,7 +164,7 @@ const PersonaRuolo = ({ content }) => {
         </div>
       )} */}
     </>
-  ) : null;
+  );
 };
 
 export default PersonaRuolo;
