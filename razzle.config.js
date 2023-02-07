@@ -10,6 +10,7 @@ const makeLoaderFinder = require('razzle-dev-utils/makeLoaderFinder');
 const fileLoaderFinder = makeLoaderFinder('file-loader');
 const urlLoaderFinder = makeLoaderFinder('url-loader');
 const lessLoaderFinder = makeLoaderFinder('less-loader');
+const babelLoaderFinder = makeLoaderFinder('babel-loader');
 const projectRootPath = path.resolve('.');
 
 const pathsConfig = jsConfig.paths;
@@ -96,6 +97,10 @@ module.exports = Object.assign({}, volto_config, {
 
     const lessLoader = base_config.module.rules.find(lessLoaderFinder);
     lessLoader.include.push(/node_modules\/volto-data-grid-widget/);
+
+    // See https://github.com/italia/design-react-kit/pull/885#issuecomment-1420886066
+    const babelLoader = base_config.module.rules.find(babelLoaderFinder);
+    babelLoader.include.push(/node_modules\/design-react-kit/);
 
     base_config.resolve.alias = {
       // TODO remove the next two when implemented in core

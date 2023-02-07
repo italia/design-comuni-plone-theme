@@ -182,7 +182,7 @@
     "@plone/volto": "16.8.1",
     "bootstrap-italia": "2.2.0",
     "classnames": "^2.3.2",
-    "design-react-kit": "italia/design-react-kit#35767985f5b5de6bd118d752d61cf74dd6229258",
+    "design-react-kit": "italia/design-react-kit#6edcfc7cbde511555701e2ff19120dcbf2803e79",
     "htmldiff-js": "1.0.5",
     "react-dropzone": "11.0.1",
     "react-google-recaptcha-v3": "1.7.0",
