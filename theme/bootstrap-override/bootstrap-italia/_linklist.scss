@@ -1,11 +1,14 @@
+// Rimuovere quando il componente SideMenu sarà fatto con un accordion, senza l'h3 come titolo
 @include media-breakpoint-up(lg) {
   .link-list-wrapper.menu-link-list {
     h3,
     .h3,
     h4,
     .h4 {
+      border-bottom: 0;
+
       &:after {
-        background-color: $primary;
+        display: none;
       }
     }
   }

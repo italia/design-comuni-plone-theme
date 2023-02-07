@@ -4,6 +4,7 @@
 import { defineMessages, useIntl } from 'react-intl';
 import React, { useEffect, useState } from 'react';
 import { throttle } from 'lodash';
+import { Progress } from 'design-react-kit';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const messages = defineMessages({
@@ -61,25 +62,12 @@ const extractHeaders = (elements, intl) => {
  */
 const SideMenu = ({ data, content_uid }) => {
   const intl = useIntl();
-  const [headers, _setHeaders] = useState([]);
-  const headersRef = React.useRef(headers);
-  const setHeaders = (data) => {
-    headersRef.current = data;
-    _setHeaders(data);
-  };
 
-  const [activeSection, _setActiveSection] = useState(null);
-  const activeSectionRef = React.useRef(activeSection);
-  const [isNavOpen, setIsNavOpen] = React.useState(false);
-  const setActiveSection = (data) => {
-    activeSectionRef.current = data;
-    _setActiveSection(data);
-  };
+  const [headers, setHeaders] = useState([]);
+  const [activeSection, setActiveSection] = useState(null);
+
+  const [isNavOpen, setIsNavOpen] = useState(false);
   const [windowScrollY, setWindowScrollY] = useState(0);
-
-  const onNavScrollToggle = () => {
-    setIsNavOpen(!isNavOpen);
-  };
 
   useEffect(() => {
     if (data?.children) {
@@ -105,7 +93,7 @@ const SideMenu = ({ data, content_uid }) => {
 
     setWindowScrollY(window.scrollY);
     let scrollOffset = (scrollDown ? 0.15 : 0.85) * window.innerHeight;
-    let headersHeights = headersRef.current
+    let headersHeights = headers
       .map((section) => {
         let element = document.getElementById(section.id);
         return {
@@ -118,10 +106,10 @@ const SideMenu = ({ data, content_uid }) => {
     if (headersHeights.length > 0) {
       let section = headersHeights.reduce(
         (prev, curr) => (prev.top > curr.top ? prev : curr),
-        headersRef.current[0],
+        headers[0],
       );
 
-      if (section.id !== activeSectionRef.current) {
+      if (section.id !== activeSection.current) {
         setActiveSection(section.id);
       }
     }
@@ -150,7 +138,9 @@ const SideMenu = ({ data, content_uid }) => {
           aria-expanded={isNavOpen ? 'true' : 'false'}
           aria-label="Toggle navigation"
           data-target="#navbarNavB"
-          onClick={() => onNavScrollToggle()}
+          onClick={() => {
+            setIsNavOpen(!isNavOpen);
+          }}
         >
           <span className="it-list"></span>
           {intl.formatMessage(messages.index)}
@@ -179,7 +169,7 @@ const SideMenu = ({ data, content_uid }) => {
             style={isNavOpen ? { display: 'block' } : { display: 'none' }}
             onClick={(e) => {
               e.preventDefault();
-              onNavScrollToggle();
+              setIsNavOpen(!isNavOpen);
             }}
           >
             <Icon
@@ -194,6 +184,17 @@ const SideMenu = ({ data, content_uid }) => {
           <div className="menu-wrapper">
             <div className="link-list-wrapper menu-link-list">
               <h3>{intl.formatMessage(messages.index)}</h3>
+              <div className="mb-3">
+                <Progress
+                  value={
+                    100 *
+                    (window.scrollY /
+                      (document.documentElement.scrollHeight -
+                        document.documentElement.clientHeight))
+                  }
+                  role="progressbar"
+                />
+              </div>
               <ul className="link-list" data-element="page-index">
                 {headers.map((item, i) => (
                   <li className="nav-item" key={item.id}>
