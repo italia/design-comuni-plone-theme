@@ -167,7 +167,7 @@ const defaultPanelConfig = {
           },
         },
       },
-      {
+      /*{
         config_key: 'GOOGLEMAPS',
         referenceUrls: ['google.com/maps'],
         text: {
@@ -196,7 +196,7 @@ const defaultPanelConfig = {
               'Pour afficher la carte, veuillez accepter les cookies de Google Maps.',
           },
         },
-      },
+      },*/
       {
         config_key: 'META',
         referenceUrls: ['facebook.com', 'instagram.com'],
