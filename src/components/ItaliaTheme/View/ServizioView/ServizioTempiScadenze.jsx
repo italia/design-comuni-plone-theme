@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { RichTextSection } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
@@ -12,8 +11,7 @@ const messages = defineMessages({
 
 const ServizioTempiScadenze = ({ content, moment }) => {
   const intl = useIntl();
-  const Moment = moment.default;
-  Moment.locale(intl.locale);
+
   return (
     <RichTextSection
       content={content.tempi_e_scadenze}
@@ -35,13 +33,13 @@ const ServizioTempiScadenze = ({ content, moment }) => {
               milestone_label = (
                 <div className="calendar-date-day">
                   <small className="calendar-date-day__year">
-                    {Moment(entry.data_scadenza).format('Y')}
+                    {moment(entry.data_scadenza).format('Y')}
                   </small>
                   <span className="title-xxlarge-regular d-flex justify-content-center">
-                    {Moment(entry.data_scadenza).format('DD')}
+                    {moment(entry.data_scadenza).format('DD')}
                   </span>
                   <small className="calendar-date-day__month">
-                    {Moment(entry.data_scadenza).format('MMM')}
+                    {moment(entry.data_scadenza).format('MMM')}
                   </small>
                 </div>
               );
@@ -95,4 +93,4 @@ ServizioTempiScadenze.propTypes = {
     }),
   }),
 };
-export default injectLazyLibs(['moment'])(ServizioTempiScadenze);
+export default ServizioTempiScadenze;

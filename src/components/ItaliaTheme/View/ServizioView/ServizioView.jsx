@@ -5,6 +5,8 @@
 
 import React, { createRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { useIntl } from 'react-intl';
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import {
   SideMenu,
   PageHeader,
@@ -36,7 +38,7 @@ import {
   ContentTypeViewSections,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
-export const ServizioViewSectionsOrder = [
+export const ServizioViewSectionsOrder = (props) => [
   {
     /* HEADER IMAGE */
 
@@ -54,11 +56,15 @@ export const ServizioViewSectionsOrder = [
 
   { /* COSA SI OTTIENE */ component: ServizioCosaSiOttiene },
 
-  { /* TEMPI E SCADENZE */ component: ServizioTempiScadenze },
+  {
+    /* TEMPI E SCADENZE */
+    component: ServizioTempiScadenze,
+    props: { moment: props.moment },
+  },
 
   { /* QUANTO COSTA */ component: ServizioCostiVincoli },
 
-  { /* ?? CASI PARTICOLARI ?? */ component: ServizioCasiParticolari },
+  { /* CASI PARTICOLARI */ component: ServizioCasiParticolari },
 
   { /* PROCEDURE ESITO */ component: ServizioProcedure },
 
@@ -66,21 +72,21 @@ export const ServizioViewSectionsOrder = [
 
   { /* ULTERIORI INFORMAZIONI */ component: ServizioUlterioriInformazioni },
 
-  { /* ?? ALTRI DOCUMENTI ?? */ component: ServizioAltriDocumenti },
+  { /* ALTRI DOCUMENTI */ component: ServizioAltriDocumenti },
 
-  { /* ?? SITI ESTERNI ?? */ component: ServizioSitiEsterni },
+  { /* SITI ESTERNI */ component: ServizioSitiEsterni },
 
-  { /* ?? ALLEGATI ?? */ component: ServizioAllegati },
+  { /* ALLEGATI */ component: ServizioAllegati },
 
-  { /* ?? MODULISTICA ?? */ component: ServizioModulistica },
+  { /* MODULISTICA */ component: ServizioModulistica },
 
   { /* CONDIZIONI DI SERVIZIO */ component: ServizioCondizioni },
 
   { /* CONTATTI */ component: ServizioContatti },
 
-  { /* ?? TRASPARENZA ?? */ component: ServizioTrasparenza },
+  { /* TRASPARENZA */ component: ServizioTrasparenza },
 
-  { /* ?? CORRELATI ??  */ component: ServizioCorrelati },
+  { /* CORRELATI  */ component: ServizioCorrelati },
 
   { /* ULTIMO AGGIORNAMENTO  */ component: ServizioMetadati },
 ];
@@ -91,8 +97,12 @@ export const ServizioViewSectionsOrder = [
  * @params {object} content Content object.
  * @returns {string} Markup of the component.
  */
-const ServizioView = ({ content }) => {
-  let documentBody = createRef();
+const ServizioView = ({ content, moment }) => {
+  const intl = useIntl();
+  const Moment = moment.default;
+  Moment.locale(intl.locale);
+
+  const documentBody = createRef();
   const [sideMenuElements, setSideMenuElements] = useState(null);
   useEffect(() => {
     if (documentBody.current) {
@@ -128,7 +138,7 @@ const ServizioView = ({ content }) => {
             {/* SEZIONI */}
             <ContentTypeViewSections
               content={content}
-              defaultSections={ServizioViewSectionsOrder}
+              defaultSections={ServizioViewSectionsOrder({ moment: Moment })}
             />
           </section>
         </div>
@@ -214,4 +224,4 @@ ServizioView.propTypes = {
   }),
 };
 
-export default ServizioView;
+export default injectLazyLibs(['moment'])(ServizioView);
