@@ -205,10 +205,10 @@ export default function applyConfig(voltoConfig) {
     },
     apiExpanders: [
       ...config.settings.apiExpanders,
-      {
-        match: '',
-        GET_CONTENT: ['breadcrumbs', 'navigation', 'actions', 'types'],
-      },
+      // {
+      //   match: '',
+      //   GET_CONTENT: ['breadcrumbs', 'navigation', 'actions', 'types'],
+      // },
     ],
     appExtras: [
       ...config.settings.appExtras,
