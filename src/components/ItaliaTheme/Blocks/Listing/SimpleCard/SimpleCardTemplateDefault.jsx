@@ -191,9 +191,6 @@ const SimpleCardTemplateDefault = (props) => {
                     {category && (
                       <span className="text fw-bold">
                         <ListingCategory category={category} item={item} />
-                        {item.tipologia_notizia
-                          .map((tipo) => tipo.title)
-                          .join(' ')}
                       </span>
                     )}
                   </CardCategory>
