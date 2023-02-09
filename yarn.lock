@@ -7799,7 +7799,7 @@ __metadata:
     bootstrap-italia: 2.2.0
     bundlewatch: ^0.3.3
     classnames: ^2.3.2
-    design-react-kit: "italia/design-react-kit#6edcfc7cbde511555701e2ff19120dcbf2803e79"
+    design-react-kit: "italia/design-react-kit#fc9b40257ba3cb613141faf217f1f5b806489740"
     eslint-plugin-prettier: ^3.4.1
     htmldiff-js: 1.0.5
     husky: 8.0.2
@@ -7843,9 +7843,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"design-react-kit@italia/design-react-kit#6edcfc7cbde511555701e2ff19120dcbf2803e79":
+"design-react-kit@italia/design-react-kit#fc9b40257ba3cb613141faf217f1f5b806489740":
   version: 4.0.2
-  resolution: "design-react-kit@https://github.com/italia/design-react-kit.git#commit=6edcfc7cbde511555701e2ff19120dcbf2803e79"
+  resolution: "design-react-kit@https://github.com/italia/design-react-kit.git#commit=fc9b40257ba3cb613141faf217f1f5b806489740"
   dependencies:
     bootstrap-italia: 2.2.0
     classnames: ^2.3.1
@@ -7860,7 +7860,7 @@ __metadata:
   peerDependencies:
     bootstrap-italia: 2.2.0
     react: ">=17.0.2"
-  checksum: b87ba6f5bc7db366e529e1c97e84eaba15ffbbbecb99c8f37a7cf075c7c63f4e3055085ff85f1c42d64938b67b2a8407cc2da9efbee3bb891cd3a27a9b75fe28
+  checksum: 3b225994514ef2624ca5b16b23c6fd3ef62dbcd65c5d0752817284f73bb8edb4802fc340876e2bfeaea5095158e094513a18b32e7a5dc4f709953e890d118ac0
   languageName: node
   linkType: hard
 
