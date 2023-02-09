@@ -7,7 +7,7 @@ const PageHeaderLinkServizio = ({ content }) => {
   return content['@type'] === 'Servizio' &&
     content.canale_digitale_link &&
     !content.stato_servizio ? (
-    <div className="font-serif mb-4">
+    <div className="mb-4">
       <p className="draftjs-buttons">
         <UniversalLink href={content.canale_digitale_link}>
           {intl.formatMessage(messages.canale_digitale_link)}
@@ -22,6 +22,6 @@ export default PageHeaderLinkServizio;
 const messages = defineMessages({
   canale_digitale_link: {
     id: 'servizio_canale_digitale_link',
-    defaultMessage: 'Richiedi iscrizione online',
+    defaultMessage: 'Accedi al servizio',
   },
 });
