@@ -25,7 +25,7 @@ const ServizioAccedi = ({ content }) => {
           p="4"
         >
           {content.canale_digitale_link && (
-            <div className="font-serif mb-4">
+            <div className="mb-4">
               <p className="draftjs-buttons">
                 <UniversalLink href={content.canale_digitale_link}>
                   {intl.formatMessage(messages.canale_digitale_link)}
@@ -72,7 +72,7 @@ const messages = defineMessages({
   },
   canale_digitale_link: {
     id: 'servizio_canale_digitale_link',
-    defaultMessage: 'Richiedi iscrizione online',
+    defaultMessage: 'Accedi al servizio',
   },
   prenota_appuntamento: {
     id: 'servizio_prenota_appuntamento',

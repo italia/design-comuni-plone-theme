@@ -23,8 +23,11 @@ const getItemIcon = (item) => {
     }
 
     if (
+      // io-comune-v2
       item.design_italia_meta_type === 'Comunicati stampa' ||
-      item.design_italia_meta_type === 'Comunicato stampa'
+      item.design_italia_meta_type === 'Comunicato stampa' ||
+      // io-comune-v3
+      item.design_italia_meta_type === 'Comunicato (stampa)'
     ) {
       icon = 'it-note';
     }

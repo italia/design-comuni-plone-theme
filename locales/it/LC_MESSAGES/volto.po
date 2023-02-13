@@ -3046,9 +3046,9 @@ msgstr "Accedi al servizio"
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderLinkServizio
 #: components/ItaliaTheme/View/ServizioView/ServizioAccedi
-# defaultMessage: Richiedi iscrizione online
+# defaultMessage: Accedi al servizio
 msgid "servizio_canale_digitale_link"
-msgstr "Richiedi iscrizione online"
+msgstr "Accedi al servizio"
 
 #: components/ItaliaTheme/View/ServizioView/ServizioComeFare
 # defaultMessage: Come fare
