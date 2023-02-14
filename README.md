@@ -59,6 +59,7 @@ Si veda ad esempio:
 - [Azienda Ospedaliero-Universitaria di Ferrara](https://www.ospfe.it/)
 - [Azienda USL di Ferrara](https://www.ausl.fe.it/)
 - [Azienda USL di Piacenza](https://www.ausl.pc.it/)
+- [Biblioteca comunale di Imola](https://bim.comune.imola.bo.it/)
 - [Biblioteche Pianura Est](https://bibest.it)
 - [Camera di Commercio dell'Umbria](https://www.umbria.camcom.it/)
 - [Camera di Commercio di Reggio Emilia](https://www.re.camcom.gov.it/)
