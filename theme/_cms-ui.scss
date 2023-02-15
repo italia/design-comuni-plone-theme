@@ -345,6 +345,17 @@ body.cms-ui {
       text-decoration: $link-decoration;
     }
   }
+  .footer-configuration-widget {
+    .DraftEditor-editorContainer {
+      a.link-anchorlink-theme {
+        color: #06c;
+
+        &:hover {
+          color: darken(#06c, 20);
+        }
+      }
+    }
+  }
 
   &.section-controlpanel {
     a {
