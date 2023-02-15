@@ -1,7 +1,8 @@
 .block.twitter_posts {
   &,
   .public-ui {
-    .row-full-width {
+    .section-content.full-width {
+      height: auto;
       background-color: #1ea1f2;
       color: $white;
     }

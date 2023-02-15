@@ -6,7 +6,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { defineMessages, useIntl } from 'react-intl';
-import { Container, Row } from 'design-react-kit';
+import { Container, Section } from 'design-react-kit';
 import moment from 'moment';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
@@ -154,18 +154,22 @@ const Body = ({ data, isEditMode, reactSlick }) => {
   return request?.loadingResults ? (
     <TwitterSkeleton data={data} authors={authors} isEditMode={isEditMode} />
   ) : request.error ? (
-    <Row className="row-full-width">
-      <Container className="p-2">
-        <div className="pt-4 pb-4">
-          <strong>Twitter Posts: </strong>
-          {request.error?.response?.body?.error?.message}
-        </div>
-      </Container>
-    </Row>
+    <div className="public-ui">
+      <Section className="full-width">
+        <Container className="p-2">
+          <div className="pt-4 pb-4">
+            <strong>Twitter Posts: </strong>
+            {request.error?.response?.body?.error?.message}
+          </div>
+        </Container>
+      </Section>
+    </div>
   ) : content ? (
-    <Row className="row-full-width">
-      <Container className="p-2">{content}</Container>
-    </Row>
+    <div className="public-ui">
+      <Section className="full-width">
+        <Container className="p-2">{content}</Container>
+      </Section>
+    </div>
   ) : null;
 };
 
