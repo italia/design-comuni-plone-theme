@@ -685,6 +685,11 @@ msgstr "Vedi azioni"
 msgid "advandedSectionsFilters"
 msgstr "Vai alla ricerca per sezioni avanzata"
 
+#: components/ItaliaTheme/Blocks/Listing/schema
+# defaultMessage: Allinea bottone a destra
+msgid "alignButton"
+msgstr "Allinea bottone a destra"
+
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Tutto
 msgid "allFilters"
@@ -3441,6 +3446,11 @@ msgstr "Tipologia persona"
 # defaultMessage: Titolo
 msgid "title"
 msgstr "Titolo"
+
+#: config/Blocks/ListingOptions/defaultOptions
+# defaultMessage: Mostra la linea sotto il titolo
+msgid "titleLine"
+msgstr "Mostra la linea sotto il titolo"
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-02-09T10:56:57.934Z\n"
+"POT-Creation-Date: 2023-02-09T11:02:52.975Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -685,6 +685,11 @@ msgstr ""
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Vai alla ricerca per sezioni avanzata
 msgid "advandedSectionsFilters"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/schema
+# defaultMessage: Allinea bottone a destra
+msgid "alignButton"
 msgstr ""
 
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
@@ -3442,6 +3447,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 # defaultMessage: Titolo
 msgid "title"
+msgstr ""
+
+#: config/Blocks/ListingOptions/defaultOptions
+# defaultMessage: Mostra la linea sotto il titolo
+msgid "titleLine"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields

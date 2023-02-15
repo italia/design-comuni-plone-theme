@@ -49,6 +49,8 @@ import applyRichTextConfig from 'design-comuni-plone-theme/config/RichTextEditor
 
 import gdprPrivacyPanelConfig from 'design-comuni-plone-theme/config/volto-gdpr-privacy-defaultPanelConfig.js';
 
+import { schemaListing } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/schema.js';
+
 export default function applyConfig(voltoConfig) {
   let config = applyRichTextConfig(voltoConfig);
 
@@ -308,6 +310,7 @@ export default function applyConfig(voltoConfig) {
     listing: {
       ...config.blocks.blocksConfig.listing,
       showLinkMore: true,
+      blockSchema: schemaListing,
       variations: [
         ...config.blocks.blocksConfig.listing.variations,
         ...getItaliaListingVariations(config),

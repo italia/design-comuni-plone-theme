@@ -11,12 +11,18 @@ const messages = defineMessages({
   },
 });
 
-export const ListingLinkMore = ({ title, href, className = '' }) => {
+export const ListingLinkMore = ({ title, href, className = '', linkAlign }) => {
   const intl = useIntl();
   const url = href?.[0]?.['@id'];
 
   return url ? (
-    <div className={`link-button text-center ${className}`}>
+    <div
+      className={
+        linkAlign
+          ? `link-more-button-align-right ${className}`
+          : `link-button text-center ${className}`
+      }
+    >
       <UniversalLink href={flattenToAppURL(url)} className="btn btn-tertiary">
         {title || intl.formatMessage(messages.view_all)}
       </UniversalLink>

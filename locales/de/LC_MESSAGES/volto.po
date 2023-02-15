@@ -700,6 +700,11 @@ msgstr ""
 msgid "advandedSectionsFilters"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/schema
+# defaultMessage: Allinea bottone a destra
+msgid "alignButton"
+msgstr ""
+
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Tutto
 msgid "allFilters"
@@ -3455,6 +3460,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 # defaultMessage: Titolo
 msgid "title"
+msgstr ""
+
+#: config/Blocks/ListingOptions/defaultOptions
+# defaultMessage: Mostra la linea sotto il titolo
+msgid "titleLine"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
