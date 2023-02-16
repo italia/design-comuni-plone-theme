@@ -23,6 +23,35 @@ Object.keys(pathsConfig).forEach((pkg) => {
 
 const volto_config = require(`${voltoPath}/razzle.config`);
 
+const plugins = (volto_config.plugins || []).filter(
+  (plugin) => plugin !== 'scss',
+);
+plugins.push({
+  name: 'scss',
+  options: {
+    sass: {
+      dev: {
+        sassOptions: {
+          includePaths: ['node_modules'],
+          outputStyle: 'expanded',
+          sourceMap: true,
+          quiet: true,
+          quietDeps: true,
+        },
+      },
+      prod: {
+        sassOptions: {
+          includePaths: ['node_modules'],
+          outputStyle: 'expanded',
+          sourceMap: true,
+          quiet: true,
+          quietDeps: true,
+        },
+      },
+    },
+  },
+});
+
 module.exports = Object.assign({}, volto_config, {
   modifyWebpackConfig: ({
     env: { target, dev },
@@ -123,32 +152,5 @@ module.exports = Object.assign({}, volto_config, {
 
     return base_config;
   },
-  plugins: [
-    ...(volto_config.plugins || {}),
-    {
-      name: 'scss',
-      options: {
-        sass: {
-          dev: {
-            sassOptions: {
-              includePaths: ['node_modules'],
-              outputStyle: 'expanded',
-              sourceMap: true,
-              quiet: true,
-              quietDeps: true,
-            },
-          },
-          prod: {
-            sassOptions: {
-              includePaths: ['node_modules'],
-              outputStyle: 'expanded',
-              sourceMap: true,
-              quiet: true,
-              quietDeps: true,
-            },
-          },
-        },
-      },
-    },
-  ],
+  plugins,
 });
