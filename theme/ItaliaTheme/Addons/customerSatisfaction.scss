@@ -37,4 +37,20 @@
       max-height: 800px;
     }
   }
+  .comment {
+    @media (max-width: #{map-get($grid-breakpoints, lg) - 1px }) {
+      margin-top: 3.5rem;
+      .form-group {
+        label {
+          padding-bottom: 1rem;
+        }
+      }
+    }
+    .form-group {
+      label {
+        line-height: unset;
+        white-space: unset;
+      }
+    }
+  }
 }
