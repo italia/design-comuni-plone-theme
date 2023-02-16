@@ -1,0 +1,109 @@
+.public-ui {
+  .feedback-form {
+    margin: 0;
+    padding: 2rem 0;
+    .title-medium-2-semi-bold {
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.2;
+      @media (min-width: #{map-get($grid-breakpoints, sm)}) {
+        font-size: 1.3333333333rem;
+      }
+      @media (min-width: #{map-get($grid-breakpoints, md)}) {
+        line-height: 1.2;
+      }
+    }
+    .rating-container {
+      padding-bottom: 0;
+    }
+    .form-check label {
+      font-weight: 600;
+    }
+    .answers-form .form-check:last-of-type {
+      margin-bottom: 0;
+    }
+    .card-wrapper[data-element='feedback'] {
+      padding: 1.8rem !important;
+    }
+    @media (min-width: #{map-get($grid-breakpoints, sm)}) {
+      .answers-header,
+      .comments-header {
+        padding: 0.78rem;
+        margin-bottom: 2.111rem;
+        font-size: 1rem;
+        & > div {
+          font-size: 0.7777777778rem;
+        }
+      }
+    }
+    .answers-header,
+    .comments-header {
+      font-size: 1.125rem;
+      font-weight: 600;
+      line-height: 2;
+      padding: 0.875rem;
+      margin-bottom: 2.375rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 0.9375rem 1.325rem -0.9rem rgba(0, 0, 0, 0.1);
+      > div {
+        font-size: 0.875rem;
+        font-weight: 600;
+        line-height: 1.5;
+        margin-left: 0.5rem;
+      }
+      h6 {
+        margin-bottom: 0;
+      }
+    }
+
+    .comments-step {
+      .form-group {
+        margin-bottom: 0;
+      }
+      .invalid-feedback.form-text.text-muted {
+        display: block;
+        color: var(--bs-danger) !important;
+      }
+      small {
+        margin: 0;
+        padding: 0.25rem 0.5rem;
+        font-size: 0.777rem;
+      }
+      label.active {
+        color: #596d88;
+      }
+      textarea {
+        border: none;
+        border-bottom: 1px solid #5b6f82;
+        border-radius: 0;
+      }
+    }
+    .card:after {
+      content: none;
+    }
+
+    .form-step-actions[aria-hidden='true'] {
+      padding: 0rem;
+      .next-action,
+      .prev-action {
+        height: 0;
+      }
+    }
+    .form-step-actions[aria-hidden='false'] {
+      .next-action,
+      .prev-action {
+        visibility: visible;
+        padding: 12px 24px;
+      }
+      &.button-shadow {
+        box-shadow: 0 -0.6375rem 1.125rem -0.9rem rgba(0, 0, 0, 0.1);
+        margin-top: 1.25rem;
+        @media (min-width: #{map-get($grid-breakpoints, sm)}) {
+          margin-top: 1.11rem;
+        }
+      }
+    }
+  }
+}

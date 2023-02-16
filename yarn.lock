@@ -7826,10 +7826,10 @@ __metadata:
     typeface-roboto-mono: 0.0.75
     typeface-titillium-web: 0.0.72
     volto-blocks-widget: 3.0.0
-    volto-customer-satisfaction: 1.0.0
     volto-data-grid-widget: 2.1.0
     volto-dropdownmenu: 4.0.0
     volto-editablefooter: 5.0.1
+    volto-feedback: 0.1.5
     volto-form-block: 3.0.0
     volto-gdpr-privacy: 2.0.0
     volto-google-analytics: 2.0.0
@@ -19495,6 +19495,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"semantic-ui-css@npm:2.5.0":
+  version: 2.5.0
+  resolution: "semantic-ui-css@npm:2.5.0"
+  dependencies:
+    jquery: x.*
+  checksum: f8f9bea6f06f084a9ab0bd0fa46191586a4fc94194f092fbd78deff49ee559257eb3ba9b732916073143fa7816348a7424684a94e60621e889cb184906a750d6
+  languageName: node
+  linkType: hard
+
 "semantic-ui-less@npm:2.4.1":
   version: 2.4.1
   resolution: "semantic-ui-less@npm:2.4.1"
@@ -22329,17 +22338,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"volto-customer-satisfaction@npm:1.0.0":
-  version: 1.0.0
-  resolution: "volto-customer-satisfaction@npm:1.0.0"
-  dependencies:
-    react-google-recaptcha-v3: 1.9.5
-  peerDependencies:
-    "@plone/volto": ">=16.0.0-alpha.38"
-  checksum: c43f62b24b0d5b7b1acaffc3973ac8c5dc82dd58372bbe44f0a3eee7928af0185b7977861b66bf94e750d48f8be73d71f6ce5f49eee381978a1b7cdc13ebcd57
-  languageName: node
-  linkType: hard
-
 "volto-data-grid-widget@npm:2.1.0":
   version: 2.1.0
   resolution: "volto-data-grid-widget@npm:2.1.0"
@@ -22368,6 +22366,18 @@ __metadata:
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
   checksum: 8aecc466a36f8b53b1c84cd1c29860d3078d4e54ed9da35d4e0ad221d8545eecf8c14a324194c1a939fc21eca02b768367ade32e3baef2a1af6e9cd1ce519d05
+  languageName: node
+  linkType: hard
+
+"volto-feedback@npm:0.1.5":
+  version: 0.1.5
+  resolution: "volto-feedback@npm:0.1.5"
+  dependencies:
+    react-google-recaptcha-v3: 1.9.5
+    semantic-ui-css: 2.5.0
+  peerDependencies:
+    "@plone/volto": ">=16.0.0"
+  checksum: 1674a91100f8410e6f0851b58febcfd21fbe0cb9a2daa8f6ce73f30b1dd57cc533b8612cf6af5fab89cf68583239dd6c0933d607f5c56027264834c913dd3780
   languageName: node
   linkType: hard
 
