@@ -84,13 +84,15 @@ ServizioTempiScadenze.propTypes = {
     tempi_e_scadenze: PropTypes.shape({
       data: PropTypes.string,
     }),
-    timeline_tempi_scadenze: PropTypes.shape({
-      data_scadenza: PropTypes.string,
-      milestone: PropTypes.string.isRequired,
-      milestone_description: PropTypes.string,
-      interval_qt: PropTypes.string,
-      interval_type: PropTypes.string,
-    }),
+    timeline_tempi_scadenze: PropTypes.arrayOf(
+      PropTypes.shape({
+        data_scadenza: PropTypes.string,
+        milestone: PropTypes.string.isRequired,
+        milestone_description: PropTypes.string,
+        interval_qt: PropTypes.string,
+        interval_type: PropTypes.string,
+      }),
+    ),
   }),
 };
 export default ServizioTempiScadenze;

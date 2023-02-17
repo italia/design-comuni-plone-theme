@@ -127,9 +127,7 @@ UOView.propTypes = {
     persone_struttura: PropTypes.array,
     responsabile: PropTypes.array,
     sedi: PropTypes.array,
-    contact_info: PropTypes.shape({
-      data: PropTypes.string,
-    }),
+    contact_info: PropTypes.array,
     servizi_offerti: PropTypes.array,
     tassonomia_argomenti: PropTypes.arrayOf(
       PropTypes.shape({
