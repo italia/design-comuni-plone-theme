@@ -258,7 +258,67 @@ body.cms-ui {
       fill: #999 !important;
     }
   }
-
+  .sidebar-container {
+    .breadcrumbs {
+      .breadcrumb {
+        flex-wrap: wrap;
+        row-gap: 0.5em;
+        a.section {
+          position: relative;
+          &:not(:last-of-type) {
+            max-width: 33.33%;
+          }
+          &:last-of-type {
+            max-width: 100%;
+            .tooltip {
+              white-space: normal;
+              text-overflow: unset;
+            }
+          }
+          &:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+        .tooltip {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          &:last-child {
+            max-width: none;
+            white-space: normal;
+            text-overflow: unset;
+          }
+        }
+        .tooltip-text {
+          position: absolute;
+          z-index: 1;
+          bottom: 125%;
+          left: 50%;
+          margin-left: -60px;
+          width: 8rem;
+          background-color: $gray-200;
+          color: $black;
+          font-size: 0.8em;
+          text-align: center;
+          border-radius: 0.2em;
+          padding: 5px;
+          opacity: 0;
+          transition: opacity 0.3s;
+          &::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: $gray-200 transparent transparent transparent;
+          }
+        }
+      }
+    }
+  }
   .icon-align-name {
     svg.icon {
       margin-right: 0.75rem !important;
