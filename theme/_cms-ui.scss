@@ -218,6 +218,14 @@ body.cms-ui {
 
   .react-select__menu {
     z-index: 11;
+
+    /* FIX CT SELECT REACTVIRTUALIZED */
+    .ReactVirtualized__Grid.ReactVirtualized__List {
+      width: none !important;
+      .ReactVirtualized__Grid__innerScrollContainer {
+        max-width: none !important;
+      }
+    }
   }
 
   .SingleDatePicker {
