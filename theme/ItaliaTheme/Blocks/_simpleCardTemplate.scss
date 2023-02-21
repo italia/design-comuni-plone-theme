@@ -1,11 +1,5 @@
 .simple-card-default {
   .template-header {
-    //* customizzazione: checkbox linea sotto al titolo
-    .title-bottom-line {
-      border-bottom: 1px solid #455b71;
-      padding-bottom: 15px;
-    }
-
     &.with-filters {
       border-bottom: 1px solid $neutral-1-a2;
       margin-bottom: 1em;
@@ -93,15 +87,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 30px 0;
-  }
-
-  //* custom align button
-
-  .link-more-button-align-right {
-    display: flex;
-    align-items: center;
-    justify-content: right;
     margin: 30px 0;
   }
 }

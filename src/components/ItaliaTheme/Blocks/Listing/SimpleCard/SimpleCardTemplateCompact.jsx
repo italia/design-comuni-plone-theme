@@ -19,13 +19,22 @@ const SimpleCardTemplateCompact = ({
   show_block_bg,
   title,
   id_lighthouse,
+  linkAlign,
+  titleLine,
 }) => {
   return (
     <div className="simple-card-compact-template">
       {title && (
         <Row>
           <Col>
-            <h2 className={cx('mb-4', { 'mt-5': !show_block_bg })}>{title}</h2>
+            <h2
+              className={cx('mb-4', {
+                'mt-5': !show_block_bg,
+                'title-bottom-line': titleLine,
+              })}
+            >
+              {title}
+            </h2>
           </Col>
         </Row>
       )}
@@ -57,7 +66,12 @@ const SimpleCardTemplateCompact = ({
         ))}
       </div>
 
-      <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
+      <ListingLinkMore
+        title={linkTitle}
+        href={linkHref}
+        className="my-4"
+        linkAlign={linkAlign}
+      />
     </div>
   );
 };

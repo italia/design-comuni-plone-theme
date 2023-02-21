@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
+import cx from 'classnames';
 
 import {
   ListingLinkMore,
@@ -13,8 +14,10 @@ const SmallBlockLinksTemplate = ({
   title,
   isEditMode,
   show_block_bg,
+  linkAlign,
   linkTitle,
   linkHref,
+  titleLine,
 }) => {
   return (
     <div className="small-block-links">
@@ -22,7 +25,9 @@ const SmallBlockLinksTemplate = ({
         {title && (
           <Row>
             <Col>
-              <h2 className="mb-4">{title}</h2>
+              <h2 className={cx('mb-4', { 'title-bottom-line': titleLine })}>
+                {title}
+              </h2>
             </Col>
           </Row>
         )}
@@ -51,7 +56,12 @@ const SmallBlockLinksTemplate = ({
             );
           })}
         </Row>
-        <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
+        <ListingLinkMore
+          title={linkTitle}
+          href={linkHref}
+          linkAlign={linkAlign}
+          className="my-4"
+        />
       </Container>
     </div>
   );

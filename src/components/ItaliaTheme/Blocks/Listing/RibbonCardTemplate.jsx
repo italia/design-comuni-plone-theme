@@ -43,6 +43,7 @@ const RibbonCardTemplate = (props) => {
   const {
     items,
     isEditMode,
+    linkAlign,
     linkTitle,
     linkHref,
     title,
@@ -55,6 +56,7 @@ const RibbonCardTemplate = (props) => {
     show_type,
     hide_dates,
     id_lighthouse,
+    titleLine,
   } = props;
 
   return (
@@ -63,7 +65,9 @@ const RibbonCardTemplate = (props) => {
         {title && (
           <Row>
             <Col>
-              <h2 className="mb-4">{title}</h2>
+              <h2 className={cx('mb-4', { 'title-bottom-line': titleLine })}>
+                {title}
+              </h2>
             </Col>
           </Row>
         )}
@@ -140,7 +144,12 @@ const RibbonCardTemplate = (props) => {
             );
           })}
         </Row>
-        <ListingLinkMore title={linkTitle} href={linkHref} className="my-5" />
+        <ListingLinkMore
+          title={linkTitle}
+          href={linkHref}
+          linkAlign={linkAlign}
+          className="my-5"
+        />
       </Container>
     </div>
   );

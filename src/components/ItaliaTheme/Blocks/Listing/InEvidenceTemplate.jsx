@@ -45,8 +45,10 @@ const InEvidenceTemplate = (props) => {
     show_description = true,
     show_topics = true,
     hide_dates,
+    linkAlign,
     linkTitle,
     linkHref,
+    titleLine,
     id_lighthouse,
   } = props;
 
@@ -56,7 +58,12 @@ const InEvidenceTemplate = (props) => {
         {title && (
           <Row>
             <Col>
-              <h2 className={cx('mb-4', { 'mt-5': !show_block_bg })}>
+              <h2
+                className={cx('mb-4', {
+                  'mt-5': !show_block_bg,
+                  'title-bottom-line': titleLine,
+                })}
+              >
                 {title}
               </h2>
             </Col>
@@ -163,7 +170,12 @@ const InEvidenceTemplate = (props) => {
             );
           })}
         </div>
-        <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
+        <ListingLinkMore
+          title={linkTitle}
+          href={linkHref}
+          linkAlign={linkAlign}
+          className="my-4"
+        />
       </Container>
     </div>
   );

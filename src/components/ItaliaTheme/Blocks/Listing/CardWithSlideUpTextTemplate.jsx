@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, CardReadMore } from 'design-react-kit';
+import cx from 'classnames';
 
 import { UniversalLink } from '@plone/volto/components';
 
@@ -27,6 +28,7 @@ const CardWithSlideUpTextTemplate = (props) => {
     items,
     title,
     isEditMode,
+    linkAlign,
     linkTitle,
     linkHref,
     show_type = true,
@@ -34,12 +36,19 @@ const CardWithSlideUpTextTemplate = (props) => {
     show_description = true,
     hide_dates = false,
     id_lighthouse,
+    titleLine,
   } = props;
 
   return (
     <div className="card-slide-text-template">
       <Container>
-        <div className="title">{title && <h2>{title}</h2>}</div>
+        <div className="title">
+          {title && (
+            <h2 className={cx('', { 'title-bottom-line': titleLine })}>
+              {title}
+            </h2>
+          )}
+        </div>
         <div className="grid mb-3 mt-5">
           {items.map((item, index) => {
             const image = getListingImageBackground(item, 'teaser');
@@ -88,7 +97,12 @@ const CardWithSlideUpTextTemplate = (props) => {
           })}
         </div>
 
-        <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
+        <ListingLinkMore
+          title={linkTitle}
+          href={linkHref}
+          linkAlign={linkAlign}
+          className="my-4"
+        />
       </Container>
     </div>
   );

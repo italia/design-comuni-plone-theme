@@ -40,6 +40,7 @@ const SliderTemplate = ({
   title,
   isEditMode,
   show_block_bg,
+  linkAlign,
   linkTitle,
   linkHref,
   slidesToShow = '1',
@@ -49,6 +50,7 @@ const SliderTemplate = ({
   autoplay = false,
   autoplay_speed = 2, //seconds
   reactSlick,
+  titleLine,
 }) => {
   const intl = useIntl();
   const slider = useRef(null);
@@ -106,7 +108,9 @@ const SliderTemplate = ({
         {title && (
           <Row>
             <Col>
-              <h2 className="mb-4">{title}</h2>
+              <h2 className={cx('mb-4', { 'title-bottom-line': titleLine })}>
+                {title}
+              </h2>
             </Col>
           </Row>
         )}
@@ -183,7 +187,12 @@ const SliderTemplate = ({
             </Slider>
           </div>
         </div>
-        <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
+        <ListingLinkMore
+          title={linkTitle}
+          href={linkHref}
+          linkAlign={linkAlign}
+          className="my-4"
+        />
       </Container>
     </div>
   );

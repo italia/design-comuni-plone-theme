@@ -1,6 +1,7 @@
 /* Variation Lista Semplice of Listing block */
 import React from 'react';
 import PropTypes from 'prop-types';
+import cx from 'classnames';
 import { ConditionalLink } from '@plone/volto/components';
 import { Container, Row, Col } from 'design-react-kit';
 import { ListingLinkMore } from 'design-comuni-plone-theme/components/ItaliaTheme';
@@ -9,10 +10,12 @@ const SimpleListTemplate = ({
   items,
   title,
   isEditMode,
+  linkAlign,
   linkTitle,
   linkHref,
   show_block_bg,
   show_pointer_list,
+  titleLine,
 }) => {
   return (
     <div className="simple-list-template">
@@ -20,7 +23,9 @@ const SimpleListTemplate = ({
         {title && (
           <Row>
             <Col>
-              <h2 className="mb-4">{title}</h2>
+              <h2 className={cx('mb-4', { 'title-bottom-line': titleLine })}>
+                {title}
+              </h2>
             </Col>
           </Row>
         )}
@@ -41,7 +46,12 @@ const SimpleListTemplate = ({
             </Col>
           </Row>
         )}
-        <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
+        <ListingLinkMore
+          title={linkTitle}
+          href={linkHref}
+          linkAlign={linkAlign}
+          className="my-4"
+        />
       </Container>
     </div>
   );
