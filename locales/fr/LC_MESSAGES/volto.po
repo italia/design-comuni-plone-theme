@@ -1318,36 +1318,6 @@ msgstr "Curriculum vitae"
 msgid "customer_satisfaction"
 msgstr "Résultats des enquêtes de satisfaction client"
 
-#: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
-# defaultMessage: No
-msgid "customer_satisfaction_no"
-msgstr "No"
-
-#: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
-# defaultMessage: Submit your comment
-msgid "customer_satisfaction_submit"
-msgstr "Soumettez votre commentaire"
-
-#: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
-# defaultMessage: Explain us why, and help us improve the quality of the site. (Leave your email address for any communications on the outcome of the report)
-msgid "customer_satisfaction_suggestions_placeholder"
-msgstr "Dites-nous pourquoi et aidez-nous à améliorer le service. (Laissez votre adresse e-mail pour toute communication sur les résultats du rapport)"
-
-#: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
-# defaultMessage: Thank you for your feedback!
-msgid "customer_satisfaction_thank_you"
-msgstr "Merci pour vos commentaires!"
-
-#: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
-# defaultMessage: Was this page useful to you?
-msgid "customer_satisfaction_title"
-msgstr "Est-ce que cette page vous a été utile?"
-
-#: components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction
-# defaultMessage: Yes
-msgid "customer_satisfaction_yes"
-msgstr "Oui"
-
 #: components/ItaliaTheme/View/IncaricoView/IncaricoView
 # defaultMessage: Data conclusione incarico
 msgid "data_conclusione"
@@ -1857,6 +1827,82 @@ msgstr "Tapez un mot-clé pour trouver des réponses"
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
 # defaultMessage: Fax
 msgid "fax"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/Steps/AnswersStep
+# defaultMessage: Where did you encounter the biggest problems?
+msgid "feedback_answers_header_negative"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/Steps/AnswersStep
+# defaultMessage: Which were the aspects you liked the most?
+msgid "feedback_answers_header_positive"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/Steps/CommentsStep
+# defaultMessage: Do you want to add some more details?
+msgid "feedback_comments_header"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/Steps/CommentsStep
+# defaultMessage: Comment is too long, maximum length is 200 characters
+msgid "feedback_comments_infotext_invalid"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/Steps/CommentsStep
+# defaultMessage: Add your comment, maximum length is 200 characters
+msgid "feedback_comments_infotext_valid"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/Steps/CommentsStep
+# defaultMessage: Comment
+msgid "feedback_comments_label_comment"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
+# defaultMessage: Next
+msgid "feedback_form_button_next"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
+# defaultMessage: Previous
+msgid "feedback_form_button_prev"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
+# defaultMessage: No
+msgid "feedback_form_no"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
+# defaultMessage: Submit your comment
+msgid "feedback_form_submit"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
+#: components/ItaliaTheme/CustomerSatisfaction/Steps/CommentsStep
+# defaultMessage: Explain us why, and help us improve the quality of the site
+msgid "feedback_form_suggestions_placeholder"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
+# defaultMessage: Thank you for your feedback!
+msgid "feedback_form_thank_you"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
+# defaultMessage: How clear is the information on this page?
+msgid "feedback_form_title"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
+# defaultMessage: Yes
+msgid "feedback_form_yes"
+msgstr ""
+
+#: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
+# defaultMessage: Your feedback was sent!
+msgid "feedback_sent"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields

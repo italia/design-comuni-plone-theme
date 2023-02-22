@@ -6,6 +6,15 @@ export const schemaListing = (props) => {
   const intl = props.intl;
   const baseSchema = ListingBlockSchema(props);
 
+  const defaultFieldset = baseSchema.fieldsets.find(
+    (fieldset) => fieldset.id === 'default',
+  );
+  if (defaultFieldset) {
+    defaultFieldset.fields = defaultFieldset.fields.filter(
+      (field) => field !== 'headline' && field !== 'headlineTag',
+    );
+  }
+
   const findFieldset = (fieldset) => {
     return fieldset.id === 'linkmore';
   };

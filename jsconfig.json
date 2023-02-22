@@ -30,12 +30,10 @@
         "../node_modules/volto-form-block/src"
       ],
       "@italia/addons/volto-subfooter": ["../node_modules/volto-subfooter/src"],
-      "@italia/addons/volto-customer-satisfaction": [
-        "../node_modules/volto-customer-satisfaction/src"
-      ],
       "@italia/addons/volto-gdpr-privacy": [
         "../node_modules/volto-gdpr-privacy/src"
-      ]
+      ],
+      "@italia/addons/volto-feedback": ["../node_modules/volto-feedback/src"]
     },
     "baseUrl": "src"
   }

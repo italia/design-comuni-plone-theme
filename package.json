@@ -2,7 +2,7 @@
   "name": "design-comuni-plone-theme",
   "description": "Volto Theme for Italia design guidelines",
   "license": "MIT",
-  "version": "8.0.0-alpha.7",
+  "version": "8.0.0-alpha.8",
   "addons": [
     "@plone-collective/volto-sentry",
     "volto-multilingual-widget",
@@ -18,10 +18,10 @@
     "volto-secondarymenu",
     "volto-form-block",
     "volto-subfooter",
-    "volto-customer-satisfaction",
     "volto-gdpr-privacy",
     "volto-data-grid-widget",
-    "@eeacms/volto-taxonomy"
+    "@eeacms/volto-taxonomy",
+    "volto-feedback"
   ],
   "customizationPaths": [
     "src/customizations/"
@@ -68,7 +68,8 @@
       "^volto-gdpr-privacy/(.*)$": "<rootDir>/node_modules/volto-gdpr-privacy/src/$1",
       "^volto-venue/(.*)$": "<rootDir>/node_modules/volto-venue/src/$1",
       "^volto-data-grid-widget/(.*)$": "<rootDir>/node_modules/volto-data-grid-widget/src/$1",
-      "^volto-dropdownmenu/(.*)$": "<rootDir>/node_modules/volto-dropdownmenu/src/$1"
+      "^volto-dropdownmenu/(.*)$": "<rootDir>/node_modules/volto-dropdownmenu/src/$1",
+      "^volto-feedback/(.*)$": "<rootDir>/node_modules/volto-feedback/src/$1"
     },
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs,ts,tsx}",
@@ -194,10 +195,10 @@
     "typeface-roboto-mono": "0.0.75",
     "typeface-titillium-web": "0.0.72",
     "volto-blocks-widget": "3.0.0",
-    "volto-customer-satisfaction": "1.0.0",
     "volto-data-grid-widget": "2.1.0",
     "volto-dropdownmenu": "4.0.0",
     "volto-editablefooter": "5.0.1",
+    "volto-feedback": "0.1.5",
     "volto-form-block": "3.0.0",
     "volto-gdpr-privacy": "2.0.0",
     "volto-google-analytics": "2.0.0",

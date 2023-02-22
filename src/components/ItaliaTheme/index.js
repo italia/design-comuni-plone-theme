@@ -63,7 +63,9 @@ export SubsiteFooter from 'design-comuni-plone-theme/components/ItaliaTheme/Foot
 export Pagination from 'design-comuni-plone-theme/components/ItaliaTheme/Pagination/Pagination';
 export SkipLinks from 'design-comuni-plone-theme/components/ItaliaTheme/SkipLinks/SkipLinks';
 export Breadcrumbs from 'design-comuni-plone-theme/components/ItaliaTheme/Breadcrumbs/Breadcrumbs';
-export CustomerSatisfaction from 'design-comuni-plone-theme/components/ItaliaTheme/CustomerSatisfaction/CustomerSatisfaction';
+export FeedbackForm from 'design-comuni-plone-theme/components/ItaliaTheme/CustomerSatisfaction/FeedbackForm';
+export AnswersStep from 'design-comuni-plone-theme/components/ItaliaTheme/CustomerSatisfaction/Steps/AnswersStep';
+export CommentsStep from 'design-comuni-plone-theme/components/ItaliaTheme/CustomerSatisfaction/Steps/CommentsStep';
 
 /********* BLOCKS ********* */
 export AlertSidebar from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Alert/Sidebar';
