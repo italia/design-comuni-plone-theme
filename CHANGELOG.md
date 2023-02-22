@@ -1,3 +1,11 @@
+## [8.0.0-alpha.9](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.8...v8.0.0-alpha.9) (2023-02-22)
+
+
+### Bug Fixes
+
+* tendina react virtualized ([#79](https://github.com/RedTurtle/design-comuni-plone-theme/issues/79)) ([0b7097c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/0b7097cff2be398e6b763c0b68d3f7964de5509c))
+* width on react virtualized ([#77](https://github.com/RedTurtle/design-comuni-plone-theme/issues/77)) ([be3076c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/be3076c53e94fdfd3a6542ee20dfb95fafa01db8))
+
 ## [8.0.0-alpha.8](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.7...v8.0.0-alpha.8) (2023-02-17)
 
 
