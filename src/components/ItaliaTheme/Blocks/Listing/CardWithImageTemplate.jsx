@@ -40,6 +40,7 @@ const CardWithImageTemplate = (props) => {
     items,
     isEditMode,
     title,
+    linkAlign,
     linkTitle,
     linkHref,
     show_block_bg = false,
@@ -53,6 +54,7 @@ const CardWithImageTemplate = (props) => {
     hide_dates = false,
     natural_image_size = false,
     id_lighthouse,
+    titleLine,
   } = props;
 
   const imagesToShow = set_four_columns ? 4 : 3;
@@ -63,7 +65,12 @@ const CardWithImageTemplate = (props) => {
         {title && (
           <Row>
             <Col>
-              <h2 className={cx('mb-4', { 'mt-5': !show_block_bg })}>
+              <h2
+                className={cx('mb-4', {
+                  'mt-5': !show_block_bg,
+                  'title-bottom-line': titleLine,
+                })}
+              >
                 {title}
               </h2>
             </Col>
@@ -193,7 +200,12 @@ const CardWithImageTemplate = (props) => {
             );
           })}
         </Row>
-        <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
+        <ListingLinkMore
+          title={linkTitle}
+          href={linkHref}
+          className="my-4"
+          linkAlign={linkAlign}
+        />
       </Container>
     </div>
   );

@@ -16,9 +16,11 @@ const AmministrazioneTrasparenteTablesTemplate = ({
   items,
   isEditMode,
   title,
+  linkAlign,
   linkTitle,
   linkHref,
   show_block_bg,
+  titleLine,
 }) => {
   const intl = useIntl();
 
@@ -61,7 +63,12 @@ const AmministrazioneTrasparenteTablesTemplate = ({
         {title && (
           <Row>
             <Col>
-              <h2 className={cx('mb-4', { 'mt-5': !show_block_bg })}>
+              <h2
+                className={cx('mb-4', {
+                  'mt-5': !show_block_bg,
+                  'title-bottom-line': titleLine,
+                })}
+              >
                 {title}
               </h2>
             </Col>
@@ -90,7 +97,12 @@ const AmministrazioneTrasparenteTablesTemplate = ({
           </tbody>
         </table>
 
-        <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
+        <ListingLinkMore
+          title={linkTitle}
+          href={linkHref}
+          linkAlign={linkAlign}
+          className="my-4"
+        />
       </Container>
     </div>
   );

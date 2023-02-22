@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { UniversalLink } from '@plone/volto/components';
+import cx from 'classnames';
 import {
   Card,
   CardBody,
@@ -19,11 +20,13 @@ const CompleteBlockLinksTemplate = ({
   items,
   title,
   isEditMode,
+  linkAlign,
   linkTitle,
   linkHref,
   show_block_bg,
   show_description = true,
   id_lighthouse,
+  titleLine,
 }) => {
   return (
     <div className="complete-block-links-template">
@@ -31,7 +34,13 @@ const CompleteBlockLinksTemplate = ({
         {title && (
           <Row>
             <Col>
-              <h2 className="mb-4">{title}</h2>
+              <h2
+                className={cx('mb-4', {
+                  'title-bottom-line': titleLine,
+                })}
+              >
+                {title}
+              </h2>
             </Col>
           </Row>
         )}
@@ -73,7 +82,12 @@ const CompleteBlockLinksTemplate = ({
             );
           })}
         </Row>
-        <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
+        <ListingLinkMore
+          title={linkTitle}
+          href={linkHref}
+          linkAlign={linkAlign}
+          className="my-4"
+        />
       </Container>
     </div>
   );
