@@ -1745,7 +1745,7 @@ msgid "event_costi"
 msgstr "Costi"
 
 #: components/ItaliaTheme/View/EventoView/EventoCosE
-# defaultMessage: L'evento è di interesse per
+# defaultMessage: A chi è rivolto
 msgid "event_destinatari"
 msgstr "L'evento è di interesse per"
 
