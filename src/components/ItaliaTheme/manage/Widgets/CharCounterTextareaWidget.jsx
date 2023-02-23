@@ -94,7 +94,7 @@ CharCounterTextareaWidget.propTypes = {
  */
 CharCounterTextareaWidget.defaultProps = {
   description: null,
-  maxLength: 160,
+  maxLength: 255,
   required: false,
   error: [],
   value: null,
