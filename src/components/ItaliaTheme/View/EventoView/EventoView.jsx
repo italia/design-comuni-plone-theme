@@ -117,8 +117,9 @@ EventoView.propTypes = {
     effective: PropTypes.string,
     start: PropTypes.string,
     end: PropTypes.string,
-
-    patrocinato_da: PropTypes.string,
+    patrocinato_da: PropTypes.shape({
+      data: PropTypes.string,
+    }),
     image: PropTypes.object,
     image_caption: PropTypes.string,
     orari: PropTypes.shape({
