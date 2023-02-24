@@ -68,7 +68,7 @@ class TextWidget extends Component {
     icon: null,
     iconAction: null,
     minLength: null,
-    maxLength: 160,
+    maxLength: 255,
     forceMaxLength: true,
   };
 
