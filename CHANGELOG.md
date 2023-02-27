@@ -1,3 +1,20 @@
+## [8.0.0-alpha.10](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.9...v8.0.0-alpha.10) (2023-02-27)
+
+
+### Features
+
+* change patrocinato_da field from TextLine to RichText; change 'contatti interni' to 'organizzato da' ([d712d66](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d712d668c5746c1b27dbb258ea6b795e159a870f))
+* increase char counter limit to 255 ([3a7b7cc](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3a7b7cc051dac0293177bb6808e85bf8893e33ab))
+* update and rebuild i18n catalog ([ac3a220](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ac3a220089cbb3480c59defbbd8ff953d5ece05e))
+
+
+### Bug Fixes
+
+* change details in event view ([3d0c005](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3d0c0053f0417ca7127c108678982aac2c1cd7f5))
+* fix space between galleries ([86e509f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/86e509f487c401cd9a3cda41b72a5cf64863ded4))
+* fix styles for gallery and better PropTypes description ([fdeb6e4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fdeb6e4cc4f7fb82ae2e44ba5bd138f35a7936fd))
+* fix test ([b7fceda](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b7fceda67331d40ee4b373460fd4c0b5112ee4f0))
+
 ## [8.0.0-alpha.9](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.8...v8.0.0-alpha.9) (2023-02-22)
 
 
