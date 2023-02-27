@@ -39,7 +39,7 @@ const Gallery = ({
   title,
   title_type = 'h4',
   title_video,
-  className,
+  className = '',
   reactSlick,
 }) => {
   const Slider = reactSlick.default;
@@ -182,7 +182,9 @@ const Gallery = ({
       ) : null}
 
       {videos?.length > 0 ? (
-        <div className="it-carousel-wrapper it-carousel-landscape-abstract-three-cols">
+        <div
+          className={`it-carousel-wrapper it-carousel-landscape-abstract-three-cols ${className}`}
+        >
           <div className="slider-container">
             {title_video && (
               <div className="it-header-block">

@@ -118,7 +118,9 @@ EventoView.propTypes = {
     start: PropTypes.string,
     end: PropTypes.string,
     patrocinato_da: PropTypes.shape({
+      'content-type': PropTypes.string,
       data: PropTypes.string,
+      encoding: PropTypes.string,
     }),
     image: PropTypes.object,
     image_caption: PropTypes.string,

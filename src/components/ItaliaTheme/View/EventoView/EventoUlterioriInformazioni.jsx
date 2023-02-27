@@ -93,8 +93,10 @@ EventoUlterioriInformazioni.propTypes = {
     ulteriori_informazioni: PropTypes.shape({
       data: PropTypes.string,
     }),
-    patrocinato_da:  PropTypes.shape({
+    patrocinato_da: PropTypes.shape({
+      'content-type': PropTypes.string,
       data: PropTypes.string,
+      encoding: PropTypes.string,
     }),
     strutture_politiche: PropTypes.array,
     items: PropTypes.array,
