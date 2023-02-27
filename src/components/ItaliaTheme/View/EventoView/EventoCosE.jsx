@@ -66,7 +66,7 @@ const EventoCosE = ({ content }) => {
           ))}
         </>
       )}
-      <Gallery content={content} folder_name={'immagini'} className="mt-4"/>
+      <Gallery content={content} folder_name={'immagini'} className="mt-4 pb-4"/>
       <Gallery content={content} folder_name={'video'}/>
 
       {richTextHasContent(content?.descrizione_destinatari) && (
