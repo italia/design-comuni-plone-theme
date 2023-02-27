@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-02-09T11:02:52.975Z\n"
+"POT-Creation-Date: 2023-02-24T14:02:44.948Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -660,6 +660,11 @@ msgstr ""
 #: components/ItaliaTheme/Unauthorized/Unauthorized
 # defaultMessage: You are trying to access a protected resource, please {login} first.
 msgid "You are trying to access a protected resource, please {login} first."
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView/EventoCosE
+# defaultMessage: A chi è rivolto
+msgid "a_chi_rivolto"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioAChiSiRivolge
@@ -1747,7 +1752,7 @@ msgid "event_costi"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView/EventoCosE
-# defaultMessage: L'evento è di interesse per
+# defaultMessage: A chi è rivolto
 msgid "event_destinatari"
 msgstr ""
 
@@ -2380,6 +2385,11 @@ msgstr ""
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Ordina per
 msgid "order_by"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView/EventoContatti
+# defaultMessage: Organizzato da
+msgid "organizzato_da"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaRuolo

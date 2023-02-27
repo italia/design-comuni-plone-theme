@@ -211,7 +211,11 @@ const mock_mandatory = {
     encoding: 'utf-8',
   },
   organizzato_da_interno: [],
-  patrocinato_da: 'Officina della ciccia',
+  patrocinato_da: {
+    'content-type': 'text/html',
+    data: '<p>Comune di io-Comune</p>',
+    encoding: 'utf-8',
+  },
   persone_amministrazione: [
     {
       '@id':

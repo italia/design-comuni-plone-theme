@@ -660,6 +660,11 @@ msgstr "Video gallery"
 msgid "You are trying to access a protected resource, please {login} first."
 msgstr "Stai provando ad accedere ad una risorsa protetta, per favore fai prima il {login}."
 
+#: components/ItaliaTheme/View/EventoView/EventoCosE
+# defaultMessage: A chi è rivolto
+msgid "a_chi_rivolto"
+msgstr ""
+
 #: components/ItaliaTheme/View/ServizioView/ServizioAChiSiRivolge
 # defaultMessage: A chi è rivolto
 msgid "a_chi_si_rivolge"
@@ -1745,7 +1750,7 @@ msgid "event_costi"
 msgstr "Costi"
 
 #: components/ItaliaTheme/View/EventoView/EventoCosE
-# defaultMessage: L'evento è di interesse per
+# defaultMessage: A chi è rivolto
 msgid "event_destinatari"
 msgstr "L'evento è di interesse per"
 
@@ -2379,6 +2384,11 @@ msgstr "Orario per il pubblico"
 # defaultMessage: Ordina per
 msgid "order_by"
 msgstr "Ordina per"
+
+#: components/ItaliaTheme/View/EventoView/EventoContatti
+# defaultMessage: Organizzato da
+msgid "organizzato_da"
+msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Organizzazione

@@ -28,6 +28,10 @@ const messages = defineMessages({
     id: 'contatti_interni',
     defaultMessage: 'Contatti interni',
   },
+  organizzato_da: {
+    id: 'organizzato_da',
+    defaultMessage: 'Organizzato da',
+  },
 });
 
 const EventoDocumenti = ({ content }) => {
@@ -109,7 +113,7 @@ const EventoDocumenti = ({ content }) => {
       {/* ---contatti interno */}
       {content?.organizzato_da_interno?.length > 0 && (
         <div className="mb-5">
-          <h5>{intl.formatMessage(messages.contatti_interni)}</h5>
+          <h5>{intl.formatMessage(messages.organizzato_da)}</h5>
           {content?.organizzato_da_interno?.map((item, index) => (
             <OfficeCard
               margin_bottom={

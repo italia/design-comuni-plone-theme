@@ -6,6 +6,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import { UniversalLink } from '@plone/volto/components';
 import {
   richTextHasContent,
+  RichText,
   Metadata,
   HelpBox,
   GenericCard,
@@ -32,7 +33,7 @@ const EventoUlterioriInformazioni = ({ content }) => {
     () =>
       richTextHasContent(content?.ulteriori_informazioni) ||
       content?.event_url ||
-      content?.patrocinato_da ||
+      richTextHasContent(content?.patrocinato_da) ||
       content?.strutture_politiche.length > 0,
     [content],
   );
@@ -52,10 +53,17 @@ const EventoUlterioriInformazioni = ({ content }) => {
         </div>
       )}
 
-      {content?.patrocinato_da && (
+      {richTextHasContent(content?.patrocinato_da) && (
         <div className="mt-4">
-          <h5>{intl.formatMessage(messages.patrocinato_da)}</h5>
-          {content.patrocinato_da}
+          {richTextHasContent(content?.patrocinato_da) && (
+            <div className="mb-5">
+              <RichText
+                title_size="h5"
+                title={intl.formatMessage(messages.patrocinato_da)}
+                content={content?.patrocinato_da}
+              />
+            </div>
+          )}
         </div>
       )}
 
@@ -85,7 +93,11 @@ EventoUlterioriInformazioni.propTypes = {
     ulteriori_informazioni: PropTypes.shape({
       data: PropTypes.string,
     }),
-    patrocinato_da: PropTypes.string,
+    patrocinato_da: PropTypes.shape({
+      'content-type': PropTypes.string,
+      data: PropTypes.string,
+      encoding: PropTypes.string,
+    }),
     strutture_politiche: PropTypes.array,
     items: PropTypes.array,
   }).isRequired,
