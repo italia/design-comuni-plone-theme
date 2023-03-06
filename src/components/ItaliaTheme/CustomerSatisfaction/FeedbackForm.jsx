@@ -177,7 +177,7 @@ const FeedbackForm = () => {
     );
   };
   return (
-    <div className="bg-primary">
+    <div className="bg-primary customer-satisfaction">
       <Container>
         <Row className="d-flex justify-content-center bg-primary">
           <Col className="col-12 col-lg-6">
