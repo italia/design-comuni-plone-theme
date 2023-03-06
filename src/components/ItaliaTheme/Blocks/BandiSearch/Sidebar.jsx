@@ -89,6 +89,14 @@ const messages = defineMessages({
     id: 'sort_scadenza_bando',
     defaultMessage: 'Scadenza termini partecipazione',
   },
+  sort_effective_date: {
+    id: 'sort_effective_date',
+    defaultMessage: 'Data di pubblicazione',
+  },
+  sort_modified_date: {
+    id: 'sort_modified_date',
+    defaultMessage: 'Data di modifica',
+  },
 });
 
 const Sidebar = ({ block, data, onChangeBlock, required }) => {
@@ -121,6 +129,8 @@ const Sidebar = ({ block, data, onChangeBlock, required }) => {
       intl.formatMessage(messages.sort_chiusura_procedimento_bando),
     ],
     ['scadenza_bando', intl.formatMessage(messages.sort_scadenza_bando)],
+    ['effective', intl.formatMessage(messages.sort_effective_date)],
+    ['modified', intl.formatMessage(messages.sort_modified_date)],
   ];
 
   return (
