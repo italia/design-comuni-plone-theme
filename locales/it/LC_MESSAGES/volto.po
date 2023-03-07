@@ -663,7 +663,7 @@ msgstr "Stai provando ad accedere ad una risorsa protetta, per favore fai prima 
 #: components/ItaliaTheme/View/EventoView/EventoCosE
 # defaultMessage: A chi è rivolto
 msgid "a_chi_rivolto"
-msgstr ""
+msgstr "A chi è rivolto"
 
 #: components/ItaliaTheme/View/ServizioView/ServizioAChiSiRivolge
 # defaultMessage: A chi è rivolto
@@ -1860,12 +1860,12 @@ msgstr "Indietro"
 #: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
 # defaultMessage: No
 msgid "feedback_form_no"
-msgstr ""
+msgstr "No"
 
 #: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
 # defaultMessage: Submit your comment
 msgid "feedback_form_submit"
-msgstr ""
+msgstr "Invia il tuo commento"
 
 #: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
 #: components/ItaliaTheme/CustomerSatisfaction/Steps/CommentsStep
@@ -1891,7 +1891,7 @@ msgstr "Si"
 #: components/ItaliaTheme/CustomerSatisfaction/FeedbackForm
 # defaultMessage: Your feedback was sent!
 msgid "feedback_sent"
-msgstr ""
+msgstr "Il tuo feedback è stato inviato!"
 
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 #: components/ItaliaTheme/View/TrasparenzaView/DettagliProcedimentiView
@@ -2388,7 +2388,7 @@ msgstr "Ordina per"
 #: components/ItaliaTheme/View/EventoView/EventoContatti
 # defaultMessage: Organizzato da
 msgid "organizzato_da"
-msgstr ""
+msgstr "Organizzato da"
 
 #: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Organizzazione
@@ -3320,6 +3320,16 @@ msgstr "Data di apertura"
 # defaultMessage: Chiusura procedimento bando
 msgid "sort_chiusura_procedimento_bando"
 msgstr "Chiusura procedimento bando"
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Data di pubblicazione
+msgid "sort_effective_date"
+msgstr "Data di pubblicazione"
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Data di modifica
+msgid "sort_modified_date"
+msgstr "Data di modifica"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 # defaultMessage: Ordina per

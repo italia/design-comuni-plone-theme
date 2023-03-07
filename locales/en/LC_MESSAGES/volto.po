@@ -3322,6 +3322,16 @@ msgid "sort_chiusura_procedimento_bando"
 msgstr "Closing of procedure"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Data di pubblicazione
+msgid "sort_effective_date"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
+# defaultMessage: Data di modifica
+msgid "sort_modified_date"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 # defaultMessage: Ordina per
 msgid "sort_on"
 msgstr "Sort on"
