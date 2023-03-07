@@ -85,6 +85,7 @@ class AddLinkForm extends Component {
       ['report-inefficiency', 'report-inefficiency'],
       ['accessibility-link', 'accessibility-link'],
       ['privacy-policy-link', 'privacy-policy-link'],
+      ['legal-notes', 'legal-notes'],
     ];
   }
 
