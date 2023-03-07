@@ -1,3 +1,18 @@
+## [8.0.0-alpha.11](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.10...v8.0.0-alpha.11) (2023-03-07)
+
+
+### Features
+
+* add new sort indexes in BandiSearch block: effective and modified date ([#83](https://github.com/RedTurtle/design-comuni-plone-theme/issues/83)) ([62e4322](https://github.com/RedTurtle/design-comuni-plone-theme/commit/62e43226cab1e09903ed0730a0918564dac40087))
+
+
+### Bug Fixes
+
+* added a class to identify the customer satisfaction container ([#81](https://github.com/RedTurtle/design-comuni-plone-theme/issues/81)) ([ace74bf](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ace74bf1f7aecb02df6d5bec658c87adc30f19f1))
+* conditional checking added to not break Documento Pubblico view when  after v3 migration this CT has missing required fields ([#85](https://github.com/RedTurtle/design-comuni-plone-theme/issues/85)) ([d729590](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d729590bb7b4ff711212379a4f2c9ca3fa2f6893))
+* locales ([9166ca6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9166ca6ff715be08503fe4aa850ea49627d01a2b))
+* redirect loop with unescaped chars in uri ([#8](https://github.com/RedTurtle/design-comuni-plone-theme/issues/8)) ([feb2e7a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/feb2e7a952560922f709be55ea1769567f63f7e0))
+
 ## [8.0.0-alpha.10](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.9...v8.0.0-alpha.10) (2023-02-27)
 
 
