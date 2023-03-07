@@ -211,12 +211,12 @@ const validateRequiredFields = (
   }
 
   // Custom: Situazione custom per timeline tempi e scadenze del servizio
-  if (
-    formData.timeline_tempi_scadenze &&
-    (isEmpty(touchedField) || 'timeline_tempi_scadenze' in touchedField)
-  ) {
-    fields.push('timeline_tempi_scadenze');
-  }
+  // if (
+  //   formData.timeline_tempi_scadenze &&
+  //   (isEmpty(touchedField) || 'timeline_tempi_scadenze' in touchedField)
+  // ) {
+  //   fields.push('timeline_tempi_scadenze');
+  // }
 
   map(fields, (requiredField) => {
     const type = schema.properties[requiredField]?.type;
