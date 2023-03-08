@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { Segment, Accordion } from 'semantic-ui-react';
 import { defineMessages, useIntl } from 'react-intl';
 
-import { ListingBlockData as ListingData, Icon } from '@plone/volto/components';
+import { Icon } from '@plone/volto/components';
+import ListingCalendar from './ListingCalendar';
 import { CheckboxWidget, TextWidget } from '@plone/volto/components';
 import { LocationFiltersWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
@@ -110,7 +111,7 @@ const ListingSidebar = (props) => {
           )}
         </Accordion.Title>
         <Accordion.Content active={activeAccIndex === 1}>
-          <ListingData {...props} />
+          <ListingCalendar {...props} />
         </Accordion.Content>
       </Accordion>
     </Segment.Group>
