@@ -1,3 +1,22 @@
+## [7.2.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.1.0...v7.2.0) (2023-03-08)
+
+
+### Features
+
+* new schema for calendar block ([#87](https://github.com/RedTurtle/design-comuni-plone-theme/issues/87)) ([e46c17a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e46c17a8ca4285bf6e90ed8b5da4d89993c0a1a1))
+
+
+### Bug Fixes
+
+* intersection observer ([#69](https://github.com/RedTurtle/design-comuni-plone-theme/issues/69)) ([192688b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/192688bf599d3a45c1934852f2c88991d4a309ad))
+* locales ([3bc5089](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3bc50898ea1bd8f5956da06c9d6d771856514241))
+
+
+### Documentation
+
+* add Biblioteca comunale di Imola ([#132](https://github.com/RedTurtle/design-comuni-plone-theme/issues/132)) ([5b7cbf8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5b7cbf85668f333f926a2cc7f985be732f6a6881))
+* updated publiccode ([78caf91](https://github.com/RedTurtle/design-comuni-plone-theme/commit/78caf91dfed5d710d87a625f0ec621aacff7f5a9))
+
 ## [7.1.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.3...v7.1.0) (2023-02-16)
 
 
