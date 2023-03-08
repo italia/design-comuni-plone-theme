@@ -1,3 +1,11 @@
+## [8.0.0-alpha.12](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.11...v8.0.0-alpha.12) (2023-03-08)
+
+
+### Features
+
+* added legal-notes data-element in editors ([00ca40b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/00ca40bb0acf0436c7eb2f4807b52bfa07ba14a2))
+* timeline_tempi_scadenze non è più obbligatorio ([9e13282](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9e13282172154cd0ee24d9a26c58dfd0ce949dce))
+
 ## [8.0.0-alpha.11](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.10...v8.0.0-alpha.11) (2023-03-07)
 
 
