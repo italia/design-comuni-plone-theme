@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import PropTypes from 'prop-types';
 // eslint-disable-next-line import/no-unresolved
@@ -70,26 +70,7 @@ const Image = ({
   //intersection observer
   useEffect(() => {
     const applySrcSet = () => {
-      // TODO: documentation
-      const newSrcSet = srcSet
-        .filter((s, index) => {
-          const addable = (ss) => {
-            const devicePixelRatio = window.devicePixelRatio;
-            const w = ss
-              ? parseInt(ss.split(' ')[1].replace('w', ''), 10)
-              : null;
-            return w
-              ? w <=
-                  (imageRef?.current?.width * devicePixelRatio ?? Infinity) ||
-                  w <=
-                    (imageRef?.current?.height * devicePixelRatio ?? Infinity)
-              : false;
-          };
-          //add the next item grather then imageRef width, to avoid less quality
-          return addable(s) || addable(srcSet[index - 1]);
-        })
-        .join(', ');
-      setActualSrcSet(newSrcSet);
+      setActualSrcSet(srcSet.join(', '));
     };
 
     if (srcSet && !critical) {
@@ -97,7 +78,7 @@ const Image = ({
         const observer = new IntersectionObserver(
           (entries) => {
             entries.forEach((entry) => {
-              if (entry.isIntersecting) {
+              if (entry.isIntersecting && !actualSrcSet) {
                 applySrcSet();
                 if (imageRef.current instanceof Element) {
                   observer.unobserve(imageRef.current);
@@ -112,7 +93,7 @@ const Image = ({
         applySrcSet();
       }
     }
-  }, [imageRef, imageHasLoaded, srcSet, actualSrcSet, critical]);
+  }, [imageHasLoaded, srcSet, actualSrcSet, critical]);
 
   return (
     <>
