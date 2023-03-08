@@ -1,3 +1,29 @@
+## [7.1.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.3...v7.1.0) (2023-02-16)
+
+
+### Features
+
+* added conditional to set pdf download in a new tab ([dc5fe8a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/dc5fe8ab9d03de033f7d5dd39d9fd64a5dc190bc))
+* upgraded volto 16.11.0 ([918a42b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/918a42bd273009a83fde4e655ce2bd0edc49e4c5))
+
+
+### Bug Fixes
+
+* content type views section components keys breaking related items ([a1525db](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a1525dbed2c7b1f38296e96e9f558bd8f27b38a0))
+* customer satisfaction mobile text not visible ([#76](https://github.com/RedTurtle/design-comuni-plone-theme/issues/76)) ([2f3f32e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2f3f32e3144ac0114a3e8eb41b90d7c440b27f6e))
+
+
+### Maintenance
+
+* profile image inside twitter block removed ([#64](https://github.com/RedTurtle/design-comuni-plone-theme/issues/64)) ([d5703c5](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d5703c5abb18799a11084a1b05bb4c95fa123738))
+
+### [7.0.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.2...v7.0.3) (2023-02-06)
+
+
+### Maintenance
+
+* fix build tag for main ([e3a8432](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e3a8432ae9d5fe013a35dd668371c39abe62354e))
+
 ### [7.0.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.0.1...v7.0.2) (2023-01-31)
 
 
