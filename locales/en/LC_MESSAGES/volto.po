@@ -304,12 +304,19 @@ msgid "L'evento non si terrà nelle seguenti date"
 msgstr "The event will not be held on the following dates"
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+#: components/ItaliaTheme/Blocks/Calendar/schema
 # defaultMessage: Link more
 msgid "Link more"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Calendar/schema
+# defaultMessage: Link Title
+msgid "Link title"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/schema
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
-# defaultMessage: Link a
+# defaultMessage: Link to
 msgid "Link to"
 msgstr ""
 
@@ -323,6 +330,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 # defaultMessage: Testo per il link ad altro
 msgid "Linkto title"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/schema
+# defaultMessage: Listing
+msgid "Listing"
 msgstr ""
 
 #: components/ItaliaTheme/AppExtras/PageLoader
@@ -444,6 +456,11 @@ msgstr "Play"
 # defaultMessage: Pagina precedente
 msgid "Previous page"
 msgstr "Previous page"
+
+#: components/ItaliaTheme/Blocks/Calendar/schema
+# defaultMessage: Query
+msgid "Query"
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
