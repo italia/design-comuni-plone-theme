@@ -1,3 +1,16 @@
+## [8.0.0-alpha.13](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.12...v8.0.0-alpha.13) (2023-03-10)
+
+
+### Features
+
+* added description field to select field on form block ([#91](https://github.com/RedTurtle/design-comuni-plone-theme/issues/91)) ([34f01a7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/34f01a7120e41eef4288cd611995fa918fd7ff2f))
+
+
+### Bug Fixes
+
+* differenze template io comune ([#89](https://github.com/RedTurtle/design-comuni-plone-theme/issues/89)) ([7944531](https://github.com/RedTurtle/design-comuni-plone-theme/commit/79445310d2d969f4cfd7d8630f75ef68abf602d3))
+* locales ([03bade4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/03bade4daf698e8618f568e5d92cbfb3ebb7fa59))
+
 ## [8.0.0-alpha.12](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.11...v8.0.0-alpha.12) (2023-03-08)
 
 
