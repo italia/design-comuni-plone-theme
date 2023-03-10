@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-03-07T08:01:57.792Z\n"
+"POT-Creation-Date: 2023-03-10T16:38:59.735Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -834,6 +834,11 @@ msgstr ""
 msgid "autoplay_speed_description"
 msgstr ""
 
+#: components/ItaliaTheme/View/DocumentoView/DocumentoAutori
+# defaultMessage: Autore
+msgid "autore"
+msgstr ""
+
 #: components/SelectInput/SelectInput
 # defaultMessage: Usa le frecce Su e Giu per scegliere un'opzione
 msgid "ay11_Use Up and Down to choose options"
@@ -1199,7 +1204,7 @@ msgid "cosa_serve"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioCostiVincoli
-# defaultMessage: Quanto costa
+# defaultMessage: Costi
 msgid "costi_e_vincoli"
 msgstr ""
 
@@ -2506,6 +2511,11 @@ msgstr ""
 msgid "provvedimento_finale"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
+# defaultMessage: Data di pubblicazione
+msgid "publication_date"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/LocationItem
 #: components/ItaliaTheme/View/VenueView/VenueWhere
 # defaultMessage: Quartiere
@@ -3625,6 +3635,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
 # defaultMessage: Tipologia
 msgid "uo_type"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
+# defaultMessage: Data di aggiornamento
+msgid "update_date"
 msgstr ""
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView

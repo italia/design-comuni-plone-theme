@@ -847,6 +847,11 @@ msgstr ""
 msgid "autoplay_speed_description"
 msgstr ""
 
+#: components/ItaliaTheme/View/DocumentoView/DocumentoAutori
+# defaultMessage: Autore
+msgid "autore"
+msgstr ""
+
 #: components/SelectInput/SelectInput
 # defaultMessage: Usa le frecce Su e Giu per scegliere un'opzione
 msgid "ay11_Use Up and Down to choose options"
@@ -1212,7 +1217,7 @@ msgid "cosa_serve"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioCostiVincoli
-# defaultMessage: Quanto costa
+# defaultMessage: Costi
 msgid "costi_e_vincoli"
 msgstr ""
 
@@ -2519,6 +2524,11 @@ msgstr ""
 msgid "provvedimento_finale"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
+# defaultMessage: Data di pubblicazione
+msgid "publication_date"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/LocationItem
 #: components/ItaliaTheme/View/VenueView/VenueWhere
 # defaultMessage: Quartiere
@@ -3638,6 +3648,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
 # defaultMessage: Tipologia
 msgid "uo_type"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
+# defaultMessage: Data di aggiornamento
+msgid "update_date"
 msgstr ""
 
 #: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
