@@ -5,7 +5,7 @@ import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import {
   RichText,
   richTextHasContent,
-  RichTextArticle,
+  RichTextSection,
   ContactLink,
   OfficeCard,
   ContactsCard,
@@ -60,7 +60,7 @@ const EventoDocumenti = ({ content }) => {
     content?.organizzato_da_interno.length > 0 ||
     content?.supportato_da?.length > 0 ||
     content?.contact_info?.length > 0 ? (
-    <RichTextArticle
+    <RichTextSection
       tag_id="contatti"
       title={intl.formatMessage(messages.contatti)}
     >
@@ -136,7 +136,7 @@ const EventoDocumenti = ({ content }) => {
 
       {/* ---supportato da */}
       {/* {getSupportatoDa()} */}
-    </RichTextArticle>
+    </RichTextSection>
   ) : null;
 };
 

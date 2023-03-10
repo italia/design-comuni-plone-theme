@@ -58,7 +58,7 @@ const LocationItem = ({
     .join(' - ');
 
   return location_fo ? (
-    <div className="card card-teaser shadow mt-3 rounded location-item">
+    <div className="card card-teaser shadow mt-3 border-left-card card-big p-4 rounded location-item">
       {show_icon && <Icon icon={'it-pin'} />}
       <div className="card-body">
         <h5 className="card-title">

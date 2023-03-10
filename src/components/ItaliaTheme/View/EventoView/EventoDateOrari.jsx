@@ -5,7 +5,7 @@ import { defineMessages, useIntl } from 'react-intl';
 
 import {
   RichText,
-  RichTextArticle,
+  RichTextSection,
   Dates,
   richTextHasContent,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
@@ -25,7 +25,7 @@ const EventoDateOrari = ({ content }) => {
   const intl = useIntl();
 
   return (
-    <RichTextArticle
+    <RichTextSection
       tag_id="date-e-orari"
       title={intl.formatMessage(messages.date_e_orari)}
     >
@@ -36,7 +36,7 @@ const EventoDateOrari = ({ content }) => {
           content={content.orari}
         />
       )}
-    </RichTextArticle>
+    </RichTextSection>
   );
 };
 

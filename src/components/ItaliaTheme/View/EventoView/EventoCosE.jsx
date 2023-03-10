@@ -8,7 +8,7 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
 import {
   RichText,
-  RichTextArticle,
+  RichTextSection,
   richTextHasContent,
   Gallery,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
@@ -20,11 +20,11 @@ const messages = defineMessages({
   },
   event_destinatari: {
     id: 'event_destinatari',
-    defaultMessage: "A chi è rivolto",
+    defaultMessage: 'A chi è rivolto',
   },
   a_chi_rivolto: {
     id: 'a_chi_rivolto',
-    defaultMessage: "A chi è rivolto",
+    defaultMessage: 'A chi è rivolto',
   },
 
   parteciperanno: {
@@ -37,13 +37,13 @@ const EventoCosE = ({ content }) => {
   const intl = useIntl();
 
   return (
-    <RichTextArticle
+    <RichTextSection
       tag_id={'text-body'}
       title={intl.formatMessage(messages.cos_e)}
       show_title={true}
       content={content.descrizione_estesa}
     >
-     {content?.persone_amministrazione?.length > 0 && (
+      {content?.persone_amministrazione?.length > 0 && (
         <>
           <h5>{intl.formatMessage(messages.parteciperanno)}</h5>
           {content.persone_amministrazione.map((item, i) => (
@@ -66,8 +66,12 @@ const EventoCosE = ({ content }) => {
           ))}
         </>
       )}
-      <Gallery content={content} folder_name={'immagini'} className="mt-4 pb-4"/>
-      <Gallery content={content} folder_name={'video'}/>
+      <Gallery
+        content={content}
+        folder_name={'immagini'}
+        className="mt-4 pb-4"
+      />
+      <Gallery content={content} folder_name={'video'} />
 
       {richTextHasContent(content?.descrizione_destinatari) && (
         <div className="mb-5 pt-2">
@@ -78,9 +82,7 @@ const EventoCosE = ({ content }) => {
           />
         </div>
       )}
-
-
-    </RichTextArticle>
+    </RichTextSection>
   );
 };
 

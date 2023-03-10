@@ -29,13 +29,19 @@ const ServizioCorrelati = ({ content }) => {
     <RichTextSection
       tag_id="correlati"
       title={intl.formatMessage(messages.related_items)}
+      title_tag="h4"
     >
       {content.servizi_collegati?.length > 0 && (
         <div className="mb-4">
           {/* <h5>{intl.formatMessage(messages.servizi_collegati)}</h5> */}
           <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
             {content.servizi_collegati.map((item, i) => (
-              <GenericCard key={item['@id']} item={item} showimage={false} />
+              <GenericCard
+                key={item['@id']}
+                item={item}
+                showimage={false}
+                size="small"
+              />
             ))}
           </div>
         </div>

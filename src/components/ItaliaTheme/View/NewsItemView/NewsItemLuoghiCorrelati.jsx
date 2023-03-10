@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import {
-  RichTextArticle,
+  RichTextSection,
   VenuesSmall,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
@@ -16,12 +16,12 @@ const messages = defineMessages({
 const NewsItemLuoghiCorrelati = ({ content }) => {
   const intl = useIntl();
   return content.luoghi_correlati?.length > 0 ? (
-    <RichTextArticle
+    <RichTextSection
       tag_id="luoghi"
       title={intl.formatMessage(messages.luoghi)}
     >
       <VenuesSmall venues={content.luoghi_correlati} />
-    </RichTextArticle>
+    </RichTextSection>
   ) : (
     <></>
   );

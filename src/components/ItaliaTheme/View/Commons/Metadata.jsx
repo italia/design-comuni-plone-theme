@@ -49,11 +49,9 @@ const Metadata = ({
       )}
       {children}
       <p className="font-serif mb-0 mt-4">
-        {intl.formatMessage(messages.modified)}
+        <strong>{intl.formatMessage(messages.modified)}:</strong>{' '}
+        {viewDate(intl.locale, content.modified, 'DD-MM-Y, HH:MM')}
       </p>
-      <strong>
-        {viewDate(intl.locale, content.modified, 'DD-MM-Y HH:MM')}
-      </strong>
       {content.rights && (
         <>
           <p className="font-serif mb-0 mt-4">

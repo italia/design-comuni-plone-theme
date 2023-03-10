@@ -85,6 +85,7 @@ export CartellaModulisticaAfterContent from 'design-comuni-plone-theme/component
 export CartellaModulisticaAfterRelatedItems from 'design-comuni-plone-theme/components/ItaliaTheme/View/CartellaModulisticaView/Placeholder/AfterRelatedItems';
 export DocumentoPlaceholderAfterContent from 'design-comuni-plone-theme/components/ItaliaTheme/View/DocumentoView/Placeholder/AfterContent';
 export DocumentoPlaceholderAfterRelatedItems from 'design-comuni-plone-theme/components/ItaliaTheme/View/DocumentoView/Placeholder/AfterRelatedItems';
+export DocumentoAutori from 'design-comuni-plone-theme/components/ItaliaTheme/View/DocumentoView/DocumentoAutori';
 export DocumentoDescrizione from 'design-comuni-plone-theme/components/ItaliaTheme/View/DocumentoView/DocumentoDescrizione';
 export DocumentoDocumenti from 'design-comuni-plone-theme/components/ItaliaTheme/View/DocumentoView/DocumentoDocumenti';
 export DocumentoUfficioResponsabile from 'design-comuni-plone-theme/components/ItaliaTheme/View/DocumentoView/DocumentoUfficioResponsabile';

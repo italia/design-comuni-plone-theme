@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import { Card, CardBody, CardTitle, CardText } from 'design-react-kit';
-import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
+// import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import {
   richTextHasContent,
   RichText,
@@ -37,8 +37,8 @@ const VenueWhere = ({ content }) => {
     content.quartiere ||
     richTextHasContent(content.notes) ? (
     <RichTextSection tag_id="dove" title={intl.formatMessage(messages.dove)}>
-      <Card className="card card-teaser shadow mt-3 rounded mb-4">
-        <Icon icon={'it-pin'} />
+      <Card className="card card-teaser border-left-card preview-image-card card-big p-4 shadow mt-3 rounded mb-4">
+        {/* <Icon icon={'it-pin'} /> */}
         <CardBody>
           <CardTitle>
             <h5 className="card-title">{content.title}</h5>
@@ -57,6 +57,12 @@ const VenueWhere = ({ content }) => {
             </p>
           </CardText>
         </CardBody>
+        <div className="image-container">
+          <img
+            src={content.image.scales.preview.download}
+            alt={content.title}
+          />
+        </div>
       </Card>
       {__CLIENT__ &&
         content.geolocation?.latitude &&
@@ -90,6 +96,7 @@ const VenueWhere = ({ content }) => {
           <div className="font-serif">{content.quartiere}</div>
         </div>
       )}
+
       {richTextHasContent(content.notes) && (
         <div className="mt-5">
           <RichText content={content.notes} />

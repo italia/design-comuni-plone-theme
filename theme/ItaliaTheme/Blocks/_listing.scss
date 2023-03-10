@@ -1,6 +1,13 @@
 .block.listing {
   .full-width {
     height: unset;
+
+    h2 {
+      @include rem-size(font-size, 32);
+      @include rem-size(line-height, 32);
+      font-weight: 600;
+      color: $secondary;
+    }
   }
 
   .listing-item picture {

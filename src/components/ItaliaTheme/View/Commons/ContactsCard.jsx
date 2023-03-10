@@ -6,7 +6,7 @@ import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { renderPDCItemValue } from 'design-comuni-plone-theme/helpers';
 
-const ContactsCard = ({ contact = {} }) => {
+const ContactsCard = ({ contact = {}, show_title = false }) => {
   const dispatch = useDispatch();
 
   const contactUrl = contact['@id'];
@@ -37,17 +37,22 @@ const ContactsCard = ({ contact = {} }) => {
   }
 
   return (
-    <Card teaser noWrapper className="shadow rounded my-3">
-      <Icon icon="it-telephone" />
+    <Card teaser noWrapper className="shadow rounded my-3 pt-0">
+      {show_title && <Icon icon="it-telephone" />}
       <CardBody>
         <CardTitle className="h5">
-          <UniversalLink href={contact['@id']} className="text-decoration-none">
-            {contact.title}
-          </UniversalLink>
+          {show_title && (
+            <UniversalLink href={contactUrl} className="text-decoration-none">
+              {contact.title}
+            </UniversalLink>
+          )}
         </CardTitle>
         <CardText>
           {data?.value_punto_contatto.map((pdc, index) => (
-            <p key={index}>{renderPDCItemValue(pdc)}</p>
+            <p key={index}>
+              <strong>{pdc.pdc_type}: </strong>
+              {renderPDCItemValue(pdc)}
+            </p>
           )) ?? null}
         </CardText>
       </CardBody>

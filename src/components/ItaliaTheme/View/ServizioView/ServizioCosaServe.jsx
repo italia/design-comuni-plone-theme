@@ -22,6 +22,7 @@ const ServizioCosaServe = ({ content }) => {
       title={intl.formatMessage(messages.cosa_serve)}
       hasBg
       p="3"
+      title_tag="h4"
     />
   ) : null;
 };

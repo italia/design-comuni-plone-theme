@@ -31,7 +31,6 @@ const PageHeaderPersona = ({ content }) => {
           {content.tipologia_persona.title}
         </p>
       )}
-
       {content?.ruolo?.token && !content.data_conclusione_incarico && (
         <p className="mb-0">
           <strong>{intl.formatMessage(messages.ruolo)}:</strong>{' '}

@@ -7,8 +7,10 @@
 }
 
 .documentDescription {
+  @include rem-size(font-size, 24);
+  margin-top: 1.5rem;
+  line-height: 2rem;
   color: $body-color;
-  font-size: 1rem;
   white-space: pre-wrap;
 }
 
@@ -127,7 +129,7 @@ iframe {
       background-color: $primary;
       border-radius: $btn-border-radius;
       color: $primary-text;
-      font-weight: 600;
+      font-weight: 700;
       text-align: center;
       text-decoration: none;
 
@@ -135,7 +137,7 @@ iframe {
       &:active {
         background-color: darken($primary, 8);
         color: $primary-text;
-        font-weight: 600;
+        font-weight: 700;
       }
     }
   }
@@ -308,5 +310,20 @@ iframe {
         content: none;
       }
     }
+  }
+}
+
+.bg-light {
+  --bs-light-rgb: #{red($primary-a0)}, #{green($primary-a0)},
+    #{blue($primary-a0)};
+}
+
+.public-ui {
+  h1 {
+    @include rem-size(font-size, 48);
+  }
+
+  h5 {
+    @include rem-size(font-size, 24);
   }
 }

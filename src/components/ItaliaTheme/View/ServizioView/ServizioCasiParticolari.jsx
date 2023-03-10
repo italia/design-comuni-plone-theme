@@ -18,6 +18,7 @@ const ServizioCasiParticolari = ({ content }) => {
       content={content.casi_particolari}
       tag_id={'text-casi_particolari'}
       title={intl.formatMessage(messages.casi_particolari)}
+      title_tag="h4"
     />
   );
 };

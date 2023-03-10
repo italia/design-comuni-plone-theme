@@ -19,6 +19,7 @@ const ServizioCosE = ({ content }) => {
       tag_id="description"
       title={intl.formatMessage(messages.cos_e)}
       show_title={true}
+      title_tag="h4"
     />
   );
 };

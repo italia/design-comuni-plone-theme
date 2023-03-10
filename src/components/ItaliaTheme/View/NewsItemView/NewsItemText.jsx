@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
-import { RichTextArticle } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+import { RichTextSection } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   news_item_contenuto: {
@@ -14,7 +14,7 @@ const NewsItemText = ({ content }) => {
   const intl = useIntl();
 
   return (
-    <RichTextArticle
+    <RichTextSection
       content={content.descrizione_estesa}
       tag_id={'text-body'}
       field="descrizione_estesa"

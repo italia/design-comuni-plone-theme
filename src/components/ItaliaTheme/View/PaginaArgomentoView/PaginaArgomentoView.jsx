@@ -103,7 +103,9 @@ const PaginaArgomentoView = ({ content }) => {
                     <div className="row mb-3" key={index}>
                       <div className="w-100">
                         <Card
-                          className={'listing-item card-bg border-left-card'}
+                          className={
+                            'listing-item card-bg border-left-card card-small'
+                          }
                         >
                           <div className="d-flex">
                             <CardBody className="">

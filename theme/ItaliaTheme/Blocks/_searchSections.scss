@@ -21,14 +21,14 @@
       overflow: hidden;
       width: 100%;
       height: 100%;
-      background-color: $secondary;
+      background-color: $primary-a0;
       background-position: top center;
       background-repeat: no-repeat;
       background-size: cover;
     }
 
-    h2.text-secondary {
-      color: $secondary-text !important;
+    h2.search-section-title {
+      color: $text-color;
     }
 
     .searchContainer {
@@ -41,41 +41,42 @@
         padding: 0px 10px;
       }
 
-      input.inputSearch {
-        width: 100%;
-        height: 100%;
-        padding: 0;
-        border: none;
-        border-radius: 0;
-        box-shadow: none;
-        font-weight: 500;
-        outline: 0;
-        transition: 0.2s ease-out;
-      }
-
       .searchbar {
-        position: relative;
+        background-color: $white;
         height: 45px;
-        padding: 5px 14px;
 
         button {
-          position: absolute;
-          top: 0;
-          right: 0;
-
+          height: 100%;
           display: flex;
           width: 50px;
           height: 100%;
           align-items: center;
           justify-content: center;
           border-width: 0px;
+          background: transparent;
+          margin-right: 10px;
 
-          background: $primary;
-
+          svg {
+            fill: $primary;
+          }
           &:hover,
           &:active {
-            background-color: darken($primary, 7.5);
+            background-color: darken($white, 5.5);
           }
+        }
+
+        input.inputSearch {
+          width: 100%;
+          height: 100%;
+          padding: 0;
+          border: none;
+          border-radius: 0;
+          box-shadow: none;
+          font-weight: 600;
+          outline: 0;
+          transition: 0.2s ease-out;
+          @include rem-size(font-size, 18);
+          @include rem-size(line-height, 28);
         }
       }
     }

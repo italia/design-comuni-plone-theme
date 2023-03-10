@@ -3,7 +3,7 @@ import { defineMessages, useIntl } from 'react-intl';
 
 import {
   RichText,
-  RichTextArticle,
+  RichTextSection,
   GenericCard,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
@@ -18,7 +18,7 @@ const DocumentoAccedereServizio = ({ content }) => {
   const intl = useIntl();
 
   return content?.servizi_collegati?.length > 0 ? (
-    <RichTextArticle
+    <RichTextSection
       tag_id={'accedere-al-servizio'}
       title={intl.formatMessage(messages.accedere_al_servizio)}
     >
@@ -38,7 +38,7 @@ const DocumentoAccedereServizio = ({ content }) => {
           </GenericCard>
         ))}
       </div>
-    </RichTextArticle>
+    </RichTextSection>
   ) : (
     <></>
   );

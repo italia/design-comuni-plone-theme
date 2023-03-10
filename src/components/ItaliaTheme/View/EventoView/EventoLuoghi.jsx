@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 
 import {
-  RichTextArticle,
+  RichTextSection,
   Locations,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
@@ -27,7 +27,7 @@ const EventoLuoghi = ({ content }) => {
     content?.quartiere ||
     content?.circoscrizione ||
     content?.country ? (
-    <RichTextArticle
+    <RichTextSection
       tag_id="luoghi"
       title={intl.formatMessage(messages.luoghi)}
     >
@@ -36,7 +36,7 @@ const EventoLuoghi = ({ content }) => {
         locations={content?.luoghi_correlati ?? []}
         show_icon={true}
       />
-    </RichTextArticle>
+    </RichTextSection>
   ) : (
     <></>
   );

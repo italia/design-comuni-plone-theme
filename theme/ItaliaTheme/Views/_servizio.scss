@@ -1,0 +1,36 @@
+.contenttype-servizio {
+  #deadlines {
+    .calendar-vertical {
+      .calendar-date-day {
+        span.title-xxlarge-regular {
+          font-family: 'Roboto Mono', monospace;
+          .calendar-date-description {
+            .calendar-date-description-content {
+              color: $body-color;
+            }
+          }
+          .calendar-date-description:before {
+            width: 0px;
+            height: 0%;
+          }
+        }
+      }
+    }
+  }
+
+  #altri_documenti_items {
+    .genericcard {
+      h5.card-title {
+        svg {
+          fill: $primary;
+          @include margin-size(margin-right, 20);
+        }
+        a {
+          text-decoration: none;
+          font-size: 1rem;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

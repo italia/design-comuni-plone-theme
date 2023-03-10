@@ -2,7 +2,7 @@ import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 
 import {
-  RichTextArticle,
+  RichTextSection,
   GenericCard,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
@@ -17,7 +17,7 @@ const DocumentoDocAllegati = ({ content }) => {
   const intl = useIntl();
 
   return content?.documenti_allegati?.length > 0 ? (
-    <RichTextArticle
+    <RichTextSection
       tag_id={'documenti-collegati'}
       title={intl.formatMessage(messages.documenti_collegati)}
     >
@@ -26,7 +26,7 @@ const DocumentoDocAllegati = ({ content }) => {
           <GenericCard key={item['@id']} item={item} show_icon="it-clip" />
         ))}
       </div>
-    </RichTextArticle>
+    </RichTextSection>
   ) : (
     <></>
   );

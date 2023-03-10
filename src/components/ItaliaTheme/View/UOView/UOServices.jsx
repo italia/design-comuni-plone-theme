@@ -26,9 +26,9 @@ const UOServices = ({ content }) => {
       id={'servizi_offerti'}
       className={'it-page-section anchor-offset mt-5'}
     >
-      <h3 id={`header-servizi_offerti`}>
+      <h2 id={`header-servizi_offerti`} className="h4">
         {intl.formatMessage(messages.servizi_offerti)}
-      </h3>
+      </h2>
 
       <Row className="card-wrapper card-teaser-wrapper mt-4">
         {content?.servizi_offerti?.map((servizio, i) => (

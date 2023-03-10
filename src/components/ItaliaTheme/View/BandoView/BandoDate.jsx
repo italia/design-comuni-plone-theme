@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import {
-  RichTextArticle,
+  RichTextSection,
   BandoDates,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
@@ -19,12 +19,12 @@ const BandoDate = ({ content }) => {
     content?.scadenza_bando ||
     content?.scadenza_domande_bando ||
     content?.chiusura_procedimento_bando ? (
-    <RichTextArticle
+    <RichTextSection
       tag_id="tempi_e_scadenze"
       title={intl.formatMessage(messages.tempi_scadenze)}
     >
       <BandoDates content={content} />
-    </RichTextArticle>
+    </RichTextSection>
   ) : (
     <></>
   );

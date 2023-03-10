@@ -7,6 +7,7 @@ import React, { createRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import {
+  ContentImage,
   SideMenu,
   PageHeader,
   RelatedItems,
@@ -53,11 +54,12 @@ const PersonaView = ({ content }) => {
           content={content}
           readingtime={null}
           showreadingtime={false}
-          imageinheader={!!content.foto_persona}
-          imageinheader_field={'foto_persona'}
           showdates={false}
           showtassonomiaargomenti={true}
         />
+
+        {/* HEADER IMAGE */}
+        <ContentImage content={content} position="afterHeader" />
         <div className="row border-top row-column-border row-column-menu-left">
           <aside className="col-lg-4">
             <SideMenu data={sideMenuElements} content_uid={content?.UID} />

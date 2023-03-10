@@ -18,13 +18,13 @@ const UOPeople = ({ content }) => {
   const intl = useIntl();
 
   return content?.persone_struttura?.length > 0 ? (
-    <article
+    <section
       id="persone-struttura"
       className="it-page-section anchor-offset mt-5"
     >
-      <h3 id="header-persone-struttura">
+      <h2 className="h4" id="header-persone-struttura">
         {intl.formatMessage(messages.persone_struttura)}
-      </h3>
+      </h2>
       <p className="mt-4">
         {intl.formatMessage(messages.persone_p_description)}:
       </p>
@@ -44,7 +44,7 @@ const UOPeople = ({ content }) => {
           );
         })}
       </Row>
-    </article>
+    </section>
   ) : (
     <></>
   );

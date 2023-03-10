@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import {
   RichText,
-  RichTextArticle,
+  RichTextSection,
   richTextHasContent,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
@@ -32,7 +32,7 @@ const BandoText = ({ content }) => {
     content?.tipologia_bando ||
     content?.destinatari?.length > 0 ||
     content?.ente_bando?.length > 0 ? (
-    <RichTextArticle
+    <RichTextSection
       tag_id={'text-body'}
       title={intl.formatMessage(messages.descrizione)}
       show_title={true}
@@ -69,7 +69,7 @@ const BandoText = ({ content }) => {
           ))}
         </>
       )}
-    </RichTextArticle>
+    </RichTextSection>
   ) : (
     <></>
   );

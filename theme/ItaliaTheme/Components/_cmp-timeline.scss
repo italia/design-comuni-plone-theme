@@ -67,25 +67,26 @@
       padding: 1.25rem 1rem 1.25rem 1.5rem;
       position: relative;
       z-index: 0;
+      border-left: 8px solid $primary-a0;
 
       @include media-breakpoint-up(sm) {
         padding: 1.11rem 0.89rem 1.11rem 1.33rem;
       }
 
-      &:before {
-        content: '';
-        width: 0.5rem;
-        height: 120%;
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: #f0f8f5;
+      // &:before {
+      //   content: '';
+      //   width: 0.5rem;
+      //   height: 120%;
+      //   position: absolute;
+      //   z-index: 1;
+      //   top: 0;
+      //   left: 0;
+      //   background-color: #f0f8f5;
 
-        @include media-breakpoint-up(sm) {
-          width: 0.44rem;
-        }
-      }
+      //   @include media-breakpoint-up(sm) {
+      //     width: 0.44rem;
+      //   }
+      // }
 
       & span {
         margin: 0;

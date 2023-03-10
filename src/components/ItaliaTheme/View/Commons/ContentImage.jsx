@@ -11,14 +11,14 @@ import config from '@plone/volto/registry';
  */
 const ContentImage = ({ content, position }) => {
   const view =
-    (content?.image || content?.image_caption) &&
+    (content?.image || content?.image_caption || content?.foto_persona) &&
     config.settings.italiaThemeViewsConfig.imagePosition === position;
 
   return view ? (
     <div className="content-image">
       <WideImage
         title={content.title}
-        image={content.image}
+        image={content.image || content.foto_persona}
         caption={content.image_caption}
         fullWidth={
           config.settings.italiaThemeViewsConfig.imagePosition === 'afterHeader'

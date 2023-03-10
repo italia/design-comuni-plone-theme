@@ -1,0 +1,7 @@
+@mixin rem-size($key, $value) {
+  #{$key}: calc($value / 18) + rem;
+}
+
+@mixin margin-size($key, $value) {
+  #{$key}: calc($value / 18) + em;
+}

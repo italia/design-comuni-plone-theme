@@ -18,6 +18,7 @@ const ServizioTempiScadenze = ({ content, moment }) => {
       add_class="style_ol_list cmp-timeline"
       tag_id="deadlines"
       title={intl.formatMessage(messages.tempi_e_scadenze)}
+      title_tag="h4"
     >
       <div className="calendar-vertical mb-3">
         <div className="calendar-vertical mb-3">
@@ -32,14 +33,14 @@ const ServizioTempiScadenze = ({ content, moment }) => {
             if (entry?.data_scadenza) {
               milestone_label = (
                 <div className="calendar-date-day">
-                  <small className="calendar-date-day__year">
-                    {moment(entry.data_scadenza).format('Y')}
-                  </small>
-                  <span className="title-xxlarge-regular d-flex justify-content-center">
+                  <span className="title-xxlarge-regular d-flex justify-content-center mb-1">
                     {moment(entry.data_scadenza).format('DD')}
                   </span>
-                  <small className="calendar-date-day__month">
-                    {moment(entry.data_scadenza).format('MMM')}
+                  <small className="calendar-date-day__month mb-1">
+                    {moment(entry.data_scadenza).format('MMMM')}
+                  </small>
+                  <small className="calendar-date-day__year">
+                    {moment(entry.data_scadenza).format('Y')}
                   </small>
                 </div>
               );

@@ -104,7 +104,7 @@ const PersonaRuolo = ({ content }) => {
               {viewDate(
                 intl.locale,
                 content.incarichi_persona[0].data_inizio_incarico,
-                'DD-MM-Y',
+                'DD MMMM Y',
               )}
             </div>
           </RichTextSection>
@@ -117,7 +117,7 @@ const PersonaRuolo = ({ content }) => {
         >
           <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
             {content.organizzazione_riferimento.map((item, i) => (
-              <OfficeCard key={item['@id']} office={item} />
+              <OfficeCard key={item['@id']} office={item} size="big" />
             ))}
           </div>
         </RichTextSection>

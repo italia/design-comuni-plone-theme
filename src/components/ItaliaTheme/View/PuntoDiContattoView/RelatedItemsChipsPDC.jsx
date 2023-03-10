@@ -29,12 +29,14 @@ const RelatedItemsChipsPDC = ({ content, fieldLists }) => {
   const relatedCategories = pick(content, fieldLists);
   return Object.values(relatedCategories)?.some((v) => v.length > 0) ? (
     Object.keys(relatedCategories)?.map((key, i) => (
-      <article
+      <section
         id={key}
         className="it-page-section anchor-offset my-4"
         key={key}
       >
-        <h4 id={`header-${key}`}>{intl.formatMessage(messages[key])}</h4>
+        <h2 id={`header-${key}`} className="h4">
+          {intl.formatMessage(messages[key])}
+        </h2>
         <div className={key} key={key + i}>
           {content?.[key]?.map((item, _i) => (
             <Link
@@ -56,7 +58,7 @@ const RelatedItemsChipsPDC = ({ content, fieldLists }) => {
             </Link>
           ))}
         </div>
-      </article>
+      </section>
     ))
   ) : (
     <></>

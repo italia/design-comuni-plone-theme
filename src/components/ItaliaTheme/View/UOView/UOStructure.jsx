@@ -44,23 +44,27 @@ const UOStructure = ({ content }) => {
     content?.uo_children?.length > 0 ||
     content?.uo_parent ||
     content?.assessore_riferimento?.length > 0 ? (
-    <article id="struttura" className="it-page-section anchor-offset mt-5">
+    <section id="struttura" className="it-page-section anchor-offset mt-5">
       {content.tipologia_organizzazione?.title && (
         <div className="mb-5 mt-3">
-          <h4>{intl.formatMessage(messages.tipologia_organizzazione)}</h4>
+          <h2 className="h4">
+            {intl.formatMessage(messages.tipologia_organizzazione)}
+          </h2>
           <p className="font-serif">{content.tipologia_organizzazione.title}</p>
         </div>
       )}
       {(content.uo_parent ||
         content.uo_children?.length > 0 ||
         content.legami_con_altre_strutture?.length > 0) && (
-        <h4 id="header-struttura" className="mb-3">
+        <h2 id="header-struttura" className="mb-3 h4">
           {intl.formatMessage(messages.struttura)}
-        </h4>
+        </h2>
       )}
       {content.uo_parent && (
         <div className="mb-5 mt-3">
-          <h5>{intl.formatMessage(messages.legami_struttura_padre)}</h5>
+          <h3 className="h5">
+            {intl.formatMessage(messages.legami_struttura_padre)}
+          </h3>
           <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal mb-3">
             <OfficeCard
               key={content.uo_parent['@id']}
@@ -74,7 +78,9 @@ const UOStructure = ({ content }) => {
 
       {content.uo_children?.length > 0 && (
         <div className="mb-5 mt-3">
-          <h5>{intl.formatMessage(messages.legami_strutture_figlie)}</h5>
+          <h3 className="h5">
+            {intl.formatMessage(messages.legami_strutture_figlie)}
+          </h3>
           <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal mb-3">
             {content.uo_children.map((uo, i) => {
               return (
@@ -92,7 +98,9 @@ const UOStructure = ({ content }) => {
 
       {content.legami_con_altre_strutture?.length > 0 && (
         <div className="mb-5 mt-3">
-          <h5>{intl.formatMessage(messages.legami_altre_strutture)}</h5>
+          <h3 className="h5">
+            {intl.formatMessage(messages.legami_altre_strutture)}
+          </h3>
           <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal mb-3">
             {content.legami_con_altre_strutture.map((item, _i) => (
               <OfficeCard key={item['@id']} office={item} />
@@ -102,7 +110,7 @@ const UOStructure = ({ content }) => {
       )}
       {content.responsabile?.length > 0 && (
         <div className="mb-5 mt-3">
-          <h4>{intl.formatMessage(messages.responsabile)}</h4>
+          <h2 className="h4">{intl.formatMessage(messages.responsabile)}</h2>
           <Row className="card-wrapper card-teaser-wrapper  ruolo-persone-struttura">
             {content.responsabile.map((item, i) => (
               <Col xs="12" lg="12" xl="12" md="12" sm="12" key={item['@id']}>
@@ -122,7 +130,9 @@ const UOStructure = ({ content }) => {
 
       {content.assessore_riferimento?.length > 0 && (
         <div className="mb-5 mt-3">
-          <h5>{intl.formatMessage(messages.assessore_riferimento)}</h5>
+          <h3 className="h5">
+            {intl.formatMessage(messages.assessore_riferimento)}
+          </h3>
           <Row className="card-wrapper card-teaser-wrapper mt-2">
             {content.assessore_riferimento.map((item, _i) => (
               <Col xs="12" lg="12" xl="6" md="12" sm="12" key={item['@id']}>
@@ -139,7 +149,7 @@ const UOStructure = ({ content }) => {
           </Row>
         </div>
       )}
-    </article>
+    </section>
   ) : (
     <></>
   );

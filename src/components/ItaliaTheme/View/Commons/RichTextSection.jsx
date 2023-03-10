@@ -39,7 +39,7 @@ const RichTextSection = ({
       {title && (
         <Tag
           id={title_tag === 'h2' ? `header-${tag_id}` : undefined}
-          className={cx('mb-3', {
+          className={cx('mb-3 h4', {
             'sr-only': !show_title,
           })}
         >

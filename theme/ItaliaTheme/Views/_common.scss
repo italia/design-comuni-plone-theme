@@ -112,8 +112,8 @@ picture.volto-image.responsive img.full-width {
 
     &:not(.big-heading) a {
       color: $primary;
-      font-size: 1.125rem;
-      line-height: 1.625rem;
+      @include rem-size(font-size, 24);
+      @include rem-size(line-height, 28);
     }
   }
 
@@ -252,10 +252,24 @@ div.sticky-wrapper {
         text-transform: lowercase;
       }
 
-      .date {
-        font-family: $font-family-monospace;
-        font-size: 1.3rem;
-        font-weight: 200;
+      .card-date {
+        .date {
+          font-family: $font-family-monospace;
+          font-size: 1.3rem;
+          font-weight: 200;
+
+          &.day {
+            @include rem-size(font-size, 28);
+            @include rem-size(line-height, 28);
+          }
+
+          &.month {
+            text-transform: lowercase;
+            @include rem-size(font-size, 16);
+            @include rem-size(line-height, 21.1);
+            font-weight: 500;
+          }
+        }
       }
     }
   }
@@ -268,7 +282,13 @@ div.sticky-wrapper {
     .card-title {
       a {
         font-size: 1rem;
+        text-decoration: none;
+        @include rem-size(line-height, 24);
+        font-weight: 600;
       }
+    }
+    svg {
+      fill: $primary;
     }
   }
 }
@@ -305,6 +325,11 @@ div.sticky-wrapper {
 .content-image {
   figure {
     width: 100%;
+
+    .figure-caption {
+      @include rem-size(font-size, 14);
+      color: $caption-text;
+    }
   }
 }
 
@@ -343,4 +368,11 @@ dl.trasparenza-fields {
 
 #search-page-button {
   border-bottom: 1px solid $neutral-1-a7;
+}
+
+#metadata {
+  font-family: $font-family-serif;
+  color: $secondary;
+  @include rem-size(font-size, 16px);
+  @include rem-size(line-height, 24px);
 }

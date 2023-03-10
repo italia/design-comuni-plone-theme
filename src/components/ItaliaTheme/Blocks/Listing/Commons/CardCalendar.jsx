@@ -64,6 +64,21 @@ export const CardCalendar = ({ start, end, recurrence, rrule }) => {
           </div>
         </div>
       );
+    } else if (_start.format('M') === _end.format('M')) {
+      return (
+        <div className="custom-calendar-card">
+          <div className="card-calendar d-flex flex-column justify-content-center">
+            <span className="card-date d-flex justify-content-center align-items-baseline">
+              <span className="date day start-date">{_start.format('D')}</span>{' '}
+              <span className="date day divider">-</span>{' '}
+              <span className="date day end-date">{_end.format('D')}</span>
+            </span>
+            <span className="card-date d-flex justify-content-center align-items-baseline">
+              <span className="date month">{_end.format('MMM')}</span>
+            </span>
+          </div>
+        </div>
+      );
     } else {
       return (
         <div className="custom-calendar-card">

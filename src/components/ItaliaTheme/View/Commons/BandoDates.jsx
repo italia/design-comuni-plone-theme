@@ -66,13 +66,12 @@ const BandoDates = ({ content }) => {
               <div className="point-date font-monospace">
                 {effective.format('DD')}
               </div>
-              <div className="point-month font-monospace">
-                {effective.format('MMM')}/{effective.format('YY')}
-              </div>
+              <div className="point-month">{effective.format('MMMM')}</div>
+              <div className="point-month">{effective.format('Y')}</div>
             </div>
             <div className="point-list-content">
               <Card
-                className="card card-teaser rounded shadow"
+                className="card card-teaser rounded shadow border-left-card"
                 noWrapper={true}
                 tag="div"
               >
@@ -92,13 +91,12 @@ const BandoDates = ({ content }) => {
               <div className="point-date font-monospace">
                 {apertura_bando.format('DD')}
               </div>
-              <div className="point-month font-monospace">
-                {apertura_bando.format('MMM')}/{apertura_bando.format('YY')}
-              </div>
+              <div className="point-month">{apertura_bando.format('MMMM')}</div>
+              <div className="point-month">{apertura_bando.format('Y')}</div>
             </div>
             <div className="point-list-content">
               <Card
-                className="card card-teaser rounded shadow"
+                className="card card-teaser rounded shadow border-left-card"
                 noWrapper={true}
                 tag="div"
               >
@@ -119,14 +117,16 @@ const BandoDates = ({ content }) => {
               <div className="point-date font-monospace">
                 {scadenza_domande_bando.format('DD')}
               </div>
-              <div className="point-month font-monospace">
-                {scadenza_domande_bando.format('MMM')}/
-                {scadenza_domande_bando.format('YY')}
+              <div className="point-month">
+                {scadenza_domande_bando.format('MMMM')}
+              </div>
+              <div className="point-month">
+                {scadenza_domande_bando.format('Y')}
               </div>
             </div>
             <div className="point-list-content">
               <Card
-                className="card card-teaser rounded shadow"
+                className="card card-teaser rounded shadow border-left-card"
                 noWrapper={true}
                 tag="div"
               >
@@ -147,13 +147,12 @@ const BandoDates = ({ content }) => {
               <div className="point-date font-monospace">
                 {scadenza_bando.format('DD')}
               </div>
-              <div className="point-month font-monospace">
-                {scadenza_bando.format('MMM')}/{scadenza_bando.format('YY')}
-              </div>
+              <div className="point-month">{scadenza_bando.format('MMMM')}</div>
+              <div className="point-month">{scadenza_bando.format('Y')}</div>
             </div>
             <div className="point-list-content">
               <Card
-                className="card card-teaser rounded shadow"
+                className="card card-teaser rounded shadow border-left-card"
                 noWrapper={true}
                 tag="div"
               >
@@ -174,14 +173,16 @@ const BandoDates = ({ content }) => {
               <div className="point-date font-monospace">
                 {chiusura_procedimento_bando.format('DD')}
               </div>
-              <div className="point-month font-monospace">
-                {chiusura_procedimento_bando.format('MMM')}/
-                {chiusura_procedimento_bando.format('YY')}
+              <div className="point-month">
+                {chiusura_procedimento_bando.format('MMMM')}
+              </div>
+              <div className="point-month">
+                {chiusura_procedimento_bando.format('Y')}
               </div>
             </div>
             <div className="point-list-content">
               <Card
-                className="card card-teaser rounded shadow"
+                className="card card-teaser rounded shadow border-left-card"
                 noWrapper={true}
                 tag="div"
               >

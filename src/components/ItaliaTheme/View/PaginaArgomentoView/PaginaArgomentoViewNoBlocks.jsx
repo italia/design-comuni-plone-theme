@@ -12,7 +12,7 @@ import {
   SideMenu,
   PageHeader,
   OfficeCard,
-  RichTextArticle,
+  RichTextSection,
   Metadata,
   NewsCard,
   PaginaArgomentoPlaceholderAfterContent,
@@ -131,7 +131,7 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
               </article>
             ) : null}
 
-            <RichTextArticle
+            <RichTextSection
               content={content.ulteriori_informazioni}
               tag_id={'text-ulteriori_informazioni'}
               title={intl.formatMessage(messages.ulteriori_informazioni)}

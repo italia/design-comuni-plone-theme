@@ -21,11 +21,12 @@ const ServizioAltriDocumenti = ({ content }) => {
     <RichTextSection
       tag_id="altri_documenti_items"
       title={intl.formatMessage(messages.altri_documenti)}
+      title_tag="h4"
     >
       <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
         {content.altri_documenti.map((item, i) => (
           <GenericCard
-            show_icon={'it-files'}
+            show_icon={'it-clip'}
             key={item['@id']}
             item={item}
             showimage={false}

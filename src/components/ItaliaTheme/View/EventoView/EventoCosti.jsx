@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { defineMessages, useIntl } from 'react-intl';
 
-import { RichTextArticle } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+import { RichTextSection } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   costi: {
@@ -16,7 +16,7 @@ const EventoCosti = ({ content }) => {
   const intl = useIntl();
 
   return (
-    <RichTextArticle
+    <RichTextSection
       content={content?.prezzo}
       tag_id="costi"
       title={intl.formatMessage(messages.costi)}

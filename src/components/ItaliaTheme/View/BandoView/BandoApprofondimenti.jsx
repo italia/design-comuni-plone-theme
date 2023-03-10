@@ -8,7 +8,7 @@ import { Card, CardBody, CardTitle } from 'design-react-kit';
 
 import {
   Attachment,
-  RichTextArticle,
+  RichTextSection,
   Module,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
@@ -85,7 +85,7 @@ const BandoApprofondimenti = ({ content }) => {
   };
 
   return content?.approfondimento?.length > 0 ? (
-    <RichTextArticle
+    <RichTextSection
       tag_id="allegati"
       title={intl.formatMessage(messages.allegati)}
     >
@@ -131,7 +131,7 @@ const BandoApprofondimenti = ({ content }) => {
           ))}
         </>
       )}
-    </RichTextArticle>
+    </RichTextSection>
   ) : (
     <></>
   );

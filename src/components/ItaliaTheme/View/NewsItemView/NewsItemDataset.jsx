@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import {
   richTextHasContent,
-  RichTextArticle,
+  RichTextSection,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
@@ -16,7 +16,7 @@ const messages = defineMessages({
 const NewsItemDataset = ({ content }) => {
   const intl = useIntl();
   return richTextHasContent(content.dataset) ? (
-    <RichTextArticle
+    <RichTextSection
       content={content.dataset}
       tag_id="dataset"
       title={intl.formatMessage(messages.dataset)}

@@ -22,7 +22,6 @@ const UOWhatDoesItDo = ({ content }) => {
       content={content.competenze}
       tag_id="competenze"
       title={intl.formatMessage(messages.competenze)}
-      title_tag="h4"
     />
   ) : null;
 };

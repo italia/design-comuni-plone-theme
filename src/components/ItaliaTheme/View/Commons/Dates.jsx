@@ -77,9 +77,7 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
             <div className="point-date font-monospace">
               {start.format('DD')}
             </div>
-            <div className="point-month font-monospace">
-              {start.format('MMMM')}
-            </div>
+            <div className="point-month">{start.format('MMMM')}</div>
           </div>
           <div className="point-list-content">
             <Card
@@ -107,9 +105,7 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
               <div className="point-date text-monospace">
                 {end.format('DD')}
               </div>
-              <div className="point-month text-monospace">
-                {end.format('MMMM')}
-              </div>
+              <div className="point-month">{end.format('MMMM')}</div>
             </div>
             <div className="point-list-content">
               <Card

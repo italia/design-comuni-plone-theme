@@ -4,7 +4,7 @@ import { defineMessages, useIntl } from 'react-intl';
 import {
   Modules,
   richTextHasContent,
-  RichTextArticle,
+  RichTextSection,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
@@ -29,7 +29,7 @@ const DocumentoDocumenti = ({ content }) => {
         id="elenco-documenti"
       />
       {richTextHasContent(content.formati_disponibili) && (
-        <RichTextArticle
+        <RichTextSection
           tag_id="formats"
           title={intl.formatMessage(messages.formati_disponibili)}
           content={content.formati_disponibili}

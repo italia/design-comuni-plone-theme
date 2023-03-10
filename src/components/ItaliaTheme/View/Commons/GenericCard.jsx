@@ -30,6 +30,7 @@ const GenericCard = ({
   showDescription = true,
   showInfos = false,
   children,
+  size,
 }) => {
   let item_fo = null;
   const locationContent = useSelector((state) => state.content.subrequests);
@@ -92,7 +93,12 @@ const GenericCard = ({
         </div>
       </div>
     ) : (
-      <div className="genericcard card card-teaser shadow p-4 mt-3 rounded">
+      <div
+        className={cx(
+          'genericcard card card-teaser shadow p-4 mt-3 rounded',
+          size === 'big' ? 'card-big' : 'card-small',
+        )}
+      >
         <div className="card-body">
           {infos}
           <h5 className="card-title">

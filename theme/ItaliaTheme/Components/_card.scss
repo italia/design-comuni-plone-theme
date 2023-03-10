@@ -1,0 +1,192 @@
+.card.border-left-card {
+  border-left: 8px solid $primary-a0;
+  box-shadow: 0px 4px 4px 0px #00000026;
+  display: flex;
+  flex-wrap: nowrap;
+
+  &.card-small {
+    @include rem-size(line-height, 24);
+
+    h5.card-title,
+    .text.fw-bold {
+      a {
+        @include rem-size(font-size, 18);
+        text-decoration: none;
+        text-transform: none;
+      }
+    }
+
+    p.card-text {
+      @include rem-size(font-size, 16);
+    }
+  }
+
+  &.card-big {
+    h5.card-title,
+    .text.fw-bold {
+      color: $primary;
+      a {
+        @include rem-size(font-size, 24);
+        @include rem-size(line-height, 32);
+        text-decoration: none;
+        text-transform: none;
+      }
+    }
+
+    p.card-text {
+      @include rem-size(font-size, 18);
+      @include rem-size(line-height, 24);
+    }
+  }
+
+  &.card-teaser .card-body {
+    flex: 0 0 80%;
+  }
+}
+
+.card-big {
+  &.card.card-teaser {
+    display: flex;
+    padding: 0px;
+  }
+  .card-body {
+    h5.card-title {
+      margin-bottom: 0em;
+      a {
+        @include rem-size(font-size, 24);
+        @include rem-size(line-height, 32);
+        text-decoration: none;
+        font-weight: 600;
+      }
+    }
+
+    p.card-text {
+      @include rem-size(font-size, 18);
+      @include rem-size(line-height, 24);
+    }
+  }
+
+  .card-image {
+    flex-basis: 20%;
+    @include rem-size(max-width, 111.18);
+    max-height: -webkit-fill-available;
+    max-width: 111px;
+    margin: auto;
+
+    img {
+      width: -webkit-fill-available;
+    }
+  }
+}
+
+.card-small {
+  .card-body {
+    h5.card-title {
+      a {
+        @include rem-size(font-size, 18);
+        text-decoration: none;
+        text-transform: none;
+      }
+    }
+
+    p.card-text {
+      @include rem-size(font-size, 16);
+    }
+  }
+}
+
+.card.preview-image-card {
+  .image-container {
+    margin: auto;
+    flex-basis: 20%;
+
+    img {
+      max-width: 67.56px;
+      height: 64px;
+      border-radius: 54px;
+    }
+  }
+}
+
+.card-with-image-template {
+  .listing-item.card {
+    .card-body {
+      .category-top {
+        font-size: 0.875rem;
+        line-height: 1.313rem;
+        color: $caption-text;
+
+        span.text {
+          font-weight: 600;
+          letter-spacing: 1px;
+        }
+
+        span.data {
+          font-weight: 400;
+          letter-spacing: 1.1px;
+        }
+      }
+
+      h3.card-title {
+        a {
+          font-size: 1.5rem;
+          line-height: 1.75rem;
+          font-weight: 700;
+          color: $primary;
+        }
+      }
+
+      p.card-text {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: $secondary;
+      }
+    }
+  }
+}
+
+.simple-card-default {
+  .card-title {
+    @include rem-size(font-size, 24px);
+    @include rem-size(line-height, 32px);
+    font-weight: 700;
+  }
+
+  .card-body {
+    .category-top {
+      span.text {
+        span.text.fw-bold {
+          font-size: 0.875rem;
+          line-height: 1.313rem;
+          letter-spacing: 1px;
+          font-weight: 600 !important;
+          color: $primary;
+        }
+      }
+    }
+
+    p.card-text {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      div.document-date {
+        @include rem-size(font-size, 14);
+      }
+    }
+  }
+}
+
+#documenti-collegati .genericcard {
+  .card-body {
+    h5.card-title {
+      a {
+        @include rem-size(font-size, 18);
+        @include rem-size(line-height, 24);
+        font-weight: 600;
+        text-decoration: none;
+      }
+      svg {
+        fill: $primary;
+      }
+    }
+  }
+}

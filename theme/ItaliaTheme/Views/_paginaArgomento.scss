@@ -17,12 +17,12 @@ $header-image-argomento-height-mobile: 300px;
     justify-content: center;
     background-color: $white;
 
-    img {
-      width: 80px !important;
-      height: 80px;
-      @extend .rounded-circle;
-      margin: 0 auto;
-    }
+    // img {
+    //   width: 80px !important;
+    //   height: 80px;
+    //   @extend .rounded-circle;
+    //   margin: 0 auto;
+    // }
   }
 
   .title-description-wrapper {
@@ -47,6 +47,7 @@ $header-image-argomento-height-mobile: 300px;
   }
 
   .card {
+    border-radius: 4px 0px 0px 4px;
     &::after {
       content: none;
     }
@@ -84,18 +85,18 @@ $header-image-argomento-height-mobile: 300px;
     }
 
     &.border-left-card {
-      &::before {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        display: block;
-        width: 8px;
-        height: 100%;
-        background: $secondary;
-        content: '';
-        @extend .rounded-start;
-      }
+      // &::before {
+      //   position: absolute;
+      //   right: 0;
+      //   bottom: 0;
+      //   left: 0;
+      //   display: block;
+      //   width: 8px;
+      //   height: 100%;
+      //   background: $secondary;
+      //   content: '';
+      //   @extend .rounded-start;
+      // }
     }
   }
 }

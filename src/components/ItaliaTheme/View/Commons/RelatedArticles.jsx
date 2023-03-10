@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
-import { GenericCard } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+import { OfficeCard } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 /**
  * RelateedArticles view component class.
  * @function RelatedArticles
@@ -32,11 +32,11 @@ const RelatedArticles = ({
 
       <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
         {items?.map((item, i) => (
-          <GenericCard
+          <OfficeCard
             key={item['@id']}
-            item={item}
-            showimage={showimage}
-            image_field={'immagine'}
+            office={item}
+            load_data={false}
+            show_contacts={false}
           />
         ))}
       </div>

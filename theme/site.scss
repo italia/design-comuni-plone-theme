@@ -1,6 +1,7 @@
 @import 'site-variables';
 @import 'bootstrap-override/bootstrap-italia-site';
 @import 'cms-ui';
+@import 'mixins';
 @import 'extras/blocks';
 @import 'extras/sidebar';
 @import 'extras/toolbar';
@@ -81,6 +82,7 @@
 @import 'ItaliaTheme/Blocks/countdown';
 @import 'ItaliaTheme/Blocks/video';
 @import 'ItaliaTheme/Blocks/HTML';
+@import 'ItaliaTheme/Blocks/simpleCardTemplate';
 
 @import 'ItaliaTheme/Views/uo';
 @import 'ItaliaTheme/Views/evento';
@@ -89,8 +91,7 @@
 @import 'ItaliaTheme/Views/modules';
 @import 'ItaliaTheme/Views/cartellaModulistica';
 @import 'ItaliaTheme/Views/trasparenzaView';
-@import 'ItaliaTheme/Blocks/simpleCardTemplate';
-@import 'ItaliaTheme/Views/paginaArgomentoView';
+@import 'ItaliaTheme/Views/paginaArgomento';
 @import 'ItaliaTheme/Views/sponsors';
 @import 'ItaliaTheme/Views/slider';
 @import 'ItaliaTheme/Views/faqFolder';
@@ -98,6 +99,9 @@
 @import 'ItaliaTheme/Views/embeddedVideo';
 @import 'ItaliaTheme/Views/homepage';
 @import 'ItaliaTheme/Views/puntoDiContatto';
+@import 'ItaliaTheme/Views/persona';
+@import 'ItaliaTheme/Views/servizio';
+@import 'ItaliaTheme/Views/venue';
 @import 'ItaliaTheme/Widgets/iconWidget';
 @import 'ItaliaTheme/Widgets/searchSectionsConfigurationWidget';
 @import 'ItaliaTheme/Widgets/blocksWidget';
@@ -111,8 +115,10 @@
 @import 'ItaliaTheme/Components/mobileMenu';
 @import 'ItaliaTheme/Components/relatedItemInEvidence';
 @import 'ItaliaTheme/Components/pageLoader';
+@import 'ItaliaTheme/Components/breadcrumbs';
+@import 'ItaliaTheme/Components/card';
+@import 'ItaliaTheme/Components/navscroll';
 @import 'ItaliaTheme/Components/customerSatisfaction';
-
 @import 'ItaliaTheme/Print/all_pages';
 @import 'ItaliaTheme/Print/news_items';
 @import 'ItaliaTheme/Print/bandi';
@@ -120,3 +126,5 @@
 @import 'ItaliaTheme/Print/event';
 @import 'ItaliaTheme/Print/servizio';
 @import 'ItaliaTheme/Print/blocks';
+
+@import './bootstrap-override/bootstrap-italia/point-list';

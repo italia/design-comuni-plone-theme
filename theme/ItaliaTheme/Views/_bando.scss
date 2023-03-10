@@ -1,14 +1,5 @@
 .bando-view {
   #tempi_e_scadenze {
-    .point-list {
-      .card-teaser {
-        border-left: 5px solid $lightgrey-c2;
-
-        &.card {
-          padding: 0.8em;
-        }
-      }
-    }
   }
 
   #allegati {
@@ -81,12 +72,6 @@
         padding-right: 10px;
         fill: $analogue-1-a7;
       }
-    }
-  }
-
-  #ufficio_responsabile {
-    div.card-teaser {
-      border-left: 5px solid $lightgrey-c2;
     }
   }
 }

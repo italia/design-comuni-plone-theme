@@ -2,7 +2,7 @@ import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 
 import {
-  RichTextArticle,
+  RichTextSection,
   OfficeCard,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
@@ -17,7 +17,7 @@ const DocumentoUfficioResponsabile = ({ content }) => {
   const intl = useIntl();
 
   return content.ufficio_responsabile?.length > 0 ? (
-    <RichTextArticle
+    <RichTextSection
       tag_id="ufficio_responsabile"
       title={intl.formatMessage(messages.ufficio_responsabile)}
     >
@@ -30,7 +30,7 @@ const DocumentoUfficioResponsabile = ({ content }) => {
           </>
         )}
       </div>
-    </RichTextArticle>
+    </RichTextSection>
   ) : (
     <></>
   );

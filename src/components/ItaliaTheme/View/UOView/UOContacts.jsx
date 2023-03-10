@@ -35,9 +35,9 @@ const UOContacts = ({ content }) => {
         richTextHasContent(content?.orario_pubblico) ||
         content?.contact_info?.length > 0) && (
         <section id="contatti" className="it-page-section anchor-offset mt-5">
-          <h3 id="header-contatti" className="mb-3">
+          <h2 id="header-contatti" className="mb-3 h4">
             {intl.formatMessage(messages.contatti)}
-          </h3>
+          </h2>
 
           {/* LOCATIONS E MAPPA */}
           <UOContactsLocations content={content} />

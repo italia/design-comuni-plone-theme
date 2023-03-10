@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import {
-  RichTextArticle,
+  RichTextSection,
   OfficeCard,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
@@ -16,7 +16,7 @@ const messages = defineMessages({
 const BandoUfficioResponsabile = ({ content }) => {
   const intl = useIntl();
   return content?.ufficio_responsabile?.length > 0 ? (
-    <RichTextArticle
+    <RichTextSection
       tag_id="ufficio_responsabile"
       title={intl.formatMessage(messages.ufficio_responsabile)}
     >
@@ -27,7 +27,7 @@ const BandoUfficioResponsabile = ({ content }) => {
           ))}
         </div>
       </div>
-    </RichTextArticle>
+    </RichTextSection>
   ) : (
     <></>
   );

@@ -52,10 +52,17 @@ const Body = ({ block, sections }) => {
       )}
       <div className="container">
         <div className="searchContainer d-flex w-100">
-          <h2 className="text-secondary mb-4">{block.title}</h2>
-          <div className="searchbar lightgrey-bg-c2 shadow-sm rounded d-flex w-100">
+          <h2 className="search-section-title mb-4">{block.title}</h2>
+          <div className="searchbar shadow-sm rounded d-flex w-100">
+            <button
+              className="rounded-start"
+              onClick={(e) => navigate(inputText, searchFilters())}
+              aria-label={intl.formatMessage(messages.doSearch)}
+            >
+              <Icon icon="it-search" padding={false} size="sm" />
+            </button>
             <input
-              className="inputSearch lightgrey-bg-c2"
+              className="inputSearch"
               type="text"
               placeholder={block.placeholder}
               onChange={(e) => setInputText(e.currentTarget.value)}
@@ -64,13 +71,6 @@ const Body = ({ block, sections }) => {
               }
               aria-label={block.placeholder}
             ></input>
-            <button
-              className="rounded-end"
-              onClick={(e) => navigate(inputText, searchFilters())}
-              aria-label={intl.formatMessage(messages.doSearch)}
-            >
-              <Icon icon="it-search" padding={false} size="sm" color="white" />
-            </button>
           </div>
           <div className="buttonsContainer mt-2 d-flex">
             {block.links?.map((link, index) => {
