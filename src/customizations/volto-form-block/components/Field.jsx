@@ -112,7 +112,6 @@ const Field = ({
               id={name}
               name={name}
               label={getLabel()}
-              infoText={description}
               isSearchable={true}
               onChange={(v) => {
                 onChange(name, v.value);
@@ -126,6 +125,9 @@ const Field = ({
               classNamePrefix="react-select"
               className={isInvalid() ? 'is-invalid' : ''}
             />
+            {description && (
+              <small className="form-text text-muted">{description}</small>
+            )}
           </div>
         </div>
       )}
