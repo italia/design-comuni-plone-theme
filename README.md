@@ -10,7 +10,7 @@ conforme alle nuove linee guida AgID, accessibile a tutti ed usabile da smartpho
 io-Comune segue le linee guida ufficiali per il design dei siti web dei Comuni italiani: layout grafico, architettura informativa, struttura dei contenuti e flussi di navigazione rispecchiano gli standard definiti da AgID.
 
 ### Catalogo del riuso di AgID
-io-Comune è [pubblicato] (https://developers.italia.it/it/software/italia-design-comuni-plone-theme-62ea5c) nel catalogo del riuso del software open source a disposizione della Pubblica Amministrazione, nella sezione Software utile al Piano Nazionale di Ripresa e Resilienza (PNRR).
+io-Comune è [pubblicato](https://developers.italia.it/it/software/italia-design-comuni-plone-theme-62ea5c) nel catalogo del riuso del software open source a disposizione della Pubblica Amministrazione, nella sezione Software utile al Piano Nazionale di Ripresa e Resilienza (PNRR).
 
 ### Pensato per i cittadini, costruito con i redattori
 
