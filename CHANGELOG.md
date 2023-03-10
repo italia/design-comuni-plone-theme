@@ -1,3 +1,16 @@
+## [7.3.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.2.0...v7.3.0) (2023-03-10)
+
+
+### Features
+
+* form select field description ([#90](https://github.com/RedTurtle/design-comuni-plone-theme/issues/90)) ([441d191](https://github.com/RedTurtle/design-comuni-plone-theme/commit/441d191878e2b1aec0d0aab39680284024d5cc0a))
+
+
+### Maintenance
+
+* update publiccode.yml ([5dca3ad](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5dca3adc8ef85c0741639d16a52e9b1a450d354a))
+* update publiccode.yml ([ae9c7ce](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ae9c7ce859a0c688b4513632c8af6ae72db95e7e))
+
 ## [7.2.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.1.0...v7.2.0) (2023-03-08)
 
 
