@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-01-26T12:06:19.993Z\n"
+"POT-Creation-Date: 2023-03-08T16:36:56.204Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -306,12 +306,19 @@ msgid "L'evento non si terrà nelle seguenti date"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+#: components/ItaliaTheme/Blocks/Calendar/schema
 # defaultMessage: Link more
 msgid "Link more"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Calendar/schema
+# defaultMessage: Link Title
+msgid "Link title"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/schema
 #: components/ItaliaTheme/manage/Widgets/LinkToWidget
-# defaultMessage: Link a
+# defaultMessage: Link to
 msgid "Link to"
 msgstr ""
 
@@ -325,6 +332,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/HighlightedContent/Sidebar
 # defaultMessage: Testo per il link ad altro
 msgid "Linkto title"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/schema
+# defaultMessage: Listing
+msgid "Listing"
 msgstr ""
 
 #: components/ItaliaTheme/AppExtras/PageLoader
@@ -445,6 +457,11 @@ msgstr ""
 #: components/ItaliaTheme/Pagination/PaginationItem
 # defaultMessage: Pagina precedente
 msgid "Previous page"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/schema
+# defaultMessage: Query
+msgid "Query"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
