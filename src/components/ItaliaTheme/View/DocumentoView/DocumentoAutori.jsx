@@ -43,7 +43,7 @@ const DocumentoAutori = ({ autori, title }) => {
             <div className="card-image">
               <img
                 src={
-                  autore.image_scales.foto_persona[0].scales.preview.download
+                  autore?.image_scales.foto_persona[0]?.scales.preview.download
                 }
                 alt={autore.title}
               />

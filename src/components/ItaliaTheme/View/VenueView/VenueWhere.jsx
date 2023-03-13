@@ -37,7 +37,7 @@ const VenueWhere = ({ content }) => {
     content.quartiere ||
     richTextHasContent(content.notes) ? (
     <RichTextSection tag_id="dove" title={intl.formatMessage(messages.dove)}>
-      <Card className="card card-teaser border-left-card preview-image-card card-big p-4 shadow mt-3 rounded mb-4">
+      <Card className="card card-teaser border-left-card preview-image-card card-big shadow mt-3 rounded mb-4">
         {/* <Icon icon={'it-pin'} /> */}
         <CardBody>
           <CardTitle>

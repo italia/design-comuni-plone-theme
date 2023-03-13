@@ -47,11 +47,11 @@
 .card-big {
   &.card.card-teaser {
     display: flex;
-    padding: 0px;
   }
   .card-body {
+    padding: 0px !important;
     h5.card-title {
-      margin-bottom: 0em;
+      margin-bottom: 0.3em !important;
       a {
         @include rem-size(font-size, 24);
         @include rem-size(line-height, 32);
@@ -60,9 +60,10 @@
       }
     }
 
-    p.card-text {
+    .card-text {
       @include rem-size(font-size, 18);
       @include rem-size(line-height, 24);
+      font-family: 'Titillium Web' !important;
     }
   }
 

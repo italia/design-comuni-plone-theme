@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 import { Chip, ChipLabel } from 'design-react-kit';
 import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { OfficeCard } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+import {
+  OfficeCard,
+  RichTextSection,
+} from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
   cured_by: {
@@ -32,10 +35,11 @@ const messages = defineMessages({
 const CuredBy = ({ office, people, title }) => {
   const intl = useIntl();
   return (
-    <article id="a-cura-di" className="it-page-section anchor-offset mt-5">
-      <h4 id="header-a-cura-di">
-        {title ?? intl.formatMessage(messages.cured_by)}
-      </h4>
+    <RichTextSection
+      tag_id="a-cura-di"
+      title={intl.formatMessage(messages.cured_by)}
+      className="it-page-section anchor-offset mt-5"
+    >
       <div className="row">
         {office && (
           <div className="col-12 col-sm-8">
@@ -72,7 +76,7 @@ const CuredBy = ({ office, people, title }) => {
           </div>
         ) : null}
       </div>
-    </article>
+    </RichTextSection>
   );
 };
 export default CuredBy;

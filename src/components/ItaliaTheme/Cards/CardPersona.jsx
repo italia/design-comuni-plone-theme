@@ -27,7 +27,7 @@ export const CardPersona = ({
   });
   return (
     <Card
-      className={`card-persona card-teaser-image card-flex no-after ${
+      className={`card-persona card-big p-3 card-teaser-image card-flex no-after ${
         className ?? ''
       }`}
     >

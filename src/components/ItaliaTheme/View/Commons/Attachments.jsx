@@ -3,7 +3,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import React, { useEffect } from 'react';
 import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
-import { Attachment } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+import {
+  Attachment,
+  RichTextSection,
+} from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 import { contentFolderHasItems } from 'design-comuni-plone-theme/helpers';
 import PropTypes from 'prop-types';
 
@@ -98,16 +101,21 @@ const Attachments = ({
   );
 
   return !hasChildren ? null : as_section ? (
-    <section id={article_id} className="it-page-section mb-5">
-      {title ? (
-        <h2 id={`header-${article_id}`}>{title}</h2>
-      ) : (
-        <h2 id={`header-${article_id}`}>
-          {intl.formatMessage(messages.attachments)}
-        </h2>
-      )}
+    <RichTextSection
+      tag_id={article_id}
+      className="it-page-section mb-5"
+      title={
+        title ? (
+          <h2 id={`header-${article_id}`}>{title}</h2>
+        ) : (
+          <h2 id={`header-${article_id}`}>
+            {intl.formatMessage(messages.attachments)}
+          </h2>
+        )
+      }
+    >
       {attachments.length > 0 && attachments_view}
-    </section>
+    </RichTextSection>
   ) : (
     <div className="mb-5 mt-3">
       {title && <h5>{title}</h5>}
