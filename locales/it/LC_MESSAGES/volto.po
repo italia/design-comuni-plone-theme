@@ -1792,9 +1792,9 @@ msgstr "Leggi di più"
 
 #: components/ItaliaTheme/manage/Widgets/CharCounterTextareaWidget
 #: components/ItaliaTheme/manage/Widgets/CharCounterTextWidget
-# defaultMessage: Il testo supera la lunghezza consigliata
+# defaultMessage: Il testo supera la lunghezza consigliata perciò verrà tagliato.
 msgid "exceeded_chars"
-msgstr "Il testo supera la lunghezza consigliata"
+msgstr "Il testo supera la lunghezza consigliata perciò verrà tagliato."
 
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderDates
 # defaultMessage: Scadenza

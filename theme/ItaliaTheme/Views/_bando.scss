@@ -1,5 +1,12 @@
 .bando-view {
   #tempi_e_scadenze {
+    .point-list {
+      .card-teaser {
+        &.card {
+          padding: 0.8em;
+        }
+      }
+    }
   }
 
   #allegati {

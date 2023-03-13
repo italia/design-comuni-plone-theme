@@ -18,6 +18,7 @@ const VenueServices = ({ content }) => {
       id="venue_services"
       items={content.venue_services}
       title={intl.formatMessage(messages.related_services)}
+      title_tag="h4"
     />
   ) : (
     <></>

@@ -5,6 +5,7 @@
  */
 
 import React from 'react';
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Label, TextArea } from 'semantic-ui-react';
 import { defineMessages, injectIntl } from 'react-intl';
@@ -13,7 +14,8 @@ import { FormFieldWrapper } from '@plone/volto/components';
 const messages = defineMessages({
   exceeded_chars: {
     id: 'exceeded_chars',
-    defaultMessage: 'Il testo supera la lunghezza consigliata',
+    defaultMessage:
+      'Il testo supera la lunghezza consigliata perciò verrà tagliato.',
   },
 });
 
@@ -32,22 +34,27 @@ const messages = defineMessages({
 const CharCounterTextareaWidget = (props) => {
   const { id, maxLength, value, onChange, placeholder, intl, forceMaxLength } =
     props;
+  const [textChar, setTextChar] = useState('');
 
   const lengthError = value?.length > 0 && value.length > maxLength;
-
   return (
     <FormFieldWrapper {...props} className="textarea">
       <TextArea
         id={`field-${id}`}
         name={id}
-        value={value || ''}
+        value={value?.slice(0, 255) || ''}
         disabled={props.isDisabled}
         placeholder={placeholder}
-        onChange={({ target }) =>
-          onChange(id, target.value === '' ? undefined : target.value)
-        }
-        maxLength={(forceMaxLength && maxLength) || null}
+        onChange={({ target }) => {
+          setTextChar(target.value);
+          onChange(
+            id,
+            target.value === '' ? undefined : target.value.slice(0, 255),
+          );
+        }}
+        // maxLength={(forceMaxLength && maxLength) || null}
       />
+      {/* forceMaxLength &&  */}
       <span
         style={{
           textAlign: 'right',
@@ -57,7 +64,7 @@ const CharCounterTextareaWidget = (props) => {
       >
         {value?.length ?? 0}/{maxLength}
       </span>
-      {lengthError && (
+      {textChar.length > maxLength && (
         <Label basic color="red" pointing>
           {intl.formatMessage(messages.exceeded_chars)}
         </Label>
