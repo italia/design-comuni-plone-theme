@@ -18,7 +18,6 @@ const ServizioTempiScadenze = ({ content, moment }) => {
       add_class="style_ol_list cmp-timeline"
       tag_id="deadlines"
       title={intl.formatMessage(messages.tempi_e_scadenze)}
-      title_tag="h4"
     >
       <div className="calendar-vertical mb-3">
         <div className="calendar-vertical mb-3">

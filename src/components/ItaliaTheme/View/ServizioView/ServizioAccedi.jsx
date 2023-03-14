@@ -23,7 +23,6 @@ const ServizioAccedi = ({ content }) => {
           title={intl.formatMessage(messages.canale_digitale)}
           hasBg
           p="4"
-          title_tag="h4"
         >
           {content.canale_digitale_link && (
             <div className="mb-4">
@@ -42,10 +41,7 @@ const ServizioAccedi = ({ content }) => {
       )}
       {(content.dove_rivolgersi?.length > 0 ||
         richTextHasContent(content.dove_rivolgersi_extra)) && (
-        <RichTextSection
-          title={intl.formatMessage(messages.dove_rivolgersi)}
-          title_tag="h4"
-        >
+        <RichTextSection title={intl.formatMessage(messages.dove_rivolgersi)}>
           {content.dove_rivolgersi?.map?.((dove) => (
             <div
               key={dove['@id']}

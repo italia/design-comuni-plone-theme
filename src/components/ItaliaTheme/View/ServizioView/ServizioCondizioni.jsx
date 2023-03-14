@@ -21,7 +21,6 @@ const ServizioCondizioni = ({ content }) => {
     <RichTextSection
       tag_id="conditions"
       title={intl.formatMessage(messages.condizioni)}
-      title_tag="h4"
     >
       <p>{intl.formatMessage(messages.condizioni_text)}</p>
       <div>

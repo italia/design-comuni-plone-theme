@@ -21,7 +21,6 @@ const ServizioSitiEsterni = ({ content }) => {
     <RichTextSection
       tag_id="link-esterni"
       title={intl.formatMessage(messages.link_siti_esterni)}
-      title_tag="h4"
     >
       <Card
         className="card card-teaser shadow py-3 px-2 mt-3 rounded link-esterni"

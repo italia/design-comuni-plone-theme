@@ -29,7 +29,6 @@ const ServizioCorrelati = ({ content }) => {
     <RichTextSection
       tag_id="correlati"
       title={intl.formatMessage(messages.related_items)}
-      title_tag="h4"
     >
       {content.servizi_collegati?.length > 0 && (
         <div className="mb-4">

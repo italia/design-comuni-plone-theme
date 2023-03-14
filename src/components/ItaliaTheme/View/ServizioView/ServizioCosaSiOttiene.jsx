@@ -15,7 +15,6 @@ const ServizioCosaSiOttiene = ({ content }) => {
       tag_id="obtain"
       title={intl.formatMessage(messages.cosa_si_ottiene)}
       show_title={true}
-      title_tag="h4"
     />
   ) : null;
 };

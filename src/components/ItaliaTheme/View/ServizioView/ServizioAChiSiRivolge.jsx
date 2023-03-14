@@ -32,7 +32,6 @@ const ServizioAChiSiRivolge = ({ content }) => {
       content={content.a_chi_si_rivolge}
       tag_id="who-needs"
       title={intl.formatMessage(messages.a_chi_si_rivolge)}
-      title_size="h3"
     >
       {richTextHasContent(content.chi_puo_presentare) && (
         <RichText

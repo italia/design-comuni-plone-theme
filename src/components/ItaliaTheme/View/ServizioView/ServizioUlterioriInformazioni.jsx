@@ -16,20 +16,15 @@ const ServizioUlterioriInformazioni = ({ content }) => {
           content={content.ulteriori_informazioni}
           tag_id="more-info"
           title={intl.formatMessage(messages.other_info)}
-          title_tag="h4"
         />
       )}
       {content.codice_ipa && (
-        <RichTextSection
-          title_tag="h4"
-          title={intl.formatMessage(messages.codice_ipa)}
-        >
+        <RichTextSection title={intl.formatMessage(messages.codice_ipa)}>
           <p className="font-serif">{content.codice_ipa}</p>
         </RichTextSection>
       )}
       {content.settore_merceologico && (
         <RichTextSection
-          title_tag="h4"
           title={intl.formatMessage(messages.settore_merceologico)}
         >
           <p className="font-serif">{content.settore_merceologico}</p>
