@@ -55,12 +55,6 @@ const VenueWhere = ({ content }) => {
             </p>
           </CardText>
         </CardBody>
-        <div className="image-container">
-          <img
-            src={content.image.scales.preview.download}
-            alt={content.title}
-          />
-        </div>
       </Card>
       {__CLIENT__ &&
         content.geolocation?.latitude &&
