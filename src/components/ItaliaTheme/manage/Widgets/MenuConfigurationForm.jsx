@@ -18,7 +18,7 @@ import {
   Sidebar,
   SelectWidget,
 } from '@plone/volto/components';
-import RadioWidget from 'volto-dropdownmenu/widget/RadioWidget';
+// import RadioWidget from 'volto-dropdownmenu/widget/RadioWidget';
 /* import SelectWidget from './SelectWidget'; */
 import { Portal } from 'react-portal';
 import config from '@plone/volto/registry';

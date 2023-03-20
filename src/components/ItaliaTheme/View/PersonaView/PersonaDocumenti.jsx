@@ -91,7 +91,7 @@ const PersonaDocumenti = ({ content }) => {
           />
         </RichTextSection>
       )}
-      {contentFolderHasItems(content, 'importi-di-biaggio-e-o-servizi') && (
+      {contentFolderHasItems(content, 'importi-di-viaggio-e-o-servizi') && (
         <RichTextSection
           tag_id="documenti-importi"
           title={intl.formatMessage(messages.importi_di_viaggio_e_o_servizi)}

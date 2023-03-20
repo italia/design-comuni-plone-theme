@@ -26,7 +26,7 @@ const messages = defineMessages({
   },
 });
 
-const Body = ({ block, sections }) => {
+const Body = ({ block, sections, data }) => {
   const history = useHistory();
   const [inputText, setInputText] = useState('');
 

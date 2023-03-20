@@ -59,7 +59,6 @@ const RibbonCardTemplate = (props) => {
     titleLine,
     linkmore_id_lighthouse,
   } = props;
-
   return (
     <div className="ribbon-card-template">
       <Container className="px-4">

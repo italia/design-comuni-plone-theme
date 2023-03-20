@@ -140,7 +140,6 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
       filterThree: filtersConfig[data?.filter_three],
     };
   };
-
   const [{ filterOne, filterTwo, filterThree }, dispatchFilter] = useReducer(
     filtersReducer,
     getInitialState(),

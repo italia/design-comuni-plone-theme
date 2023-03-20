@@ -39,7 +39,6 @@ class Edit extends SubblocksEdit {
     if (__SERVER__) {
       return <div />;
     }
-
     return (
       <div className="public-ui">
         <div className="full-width section section-muted section-inset-shadow py-5 is-edit-mode">

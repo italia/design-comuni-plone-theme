@@ -40,6 +40,7 @@ const messages = defineMessages({
 
 const CartellaModulisticaView = ({ content }) => {
   const modulisticaItems = useSelector((state) => state.modulisticaItems);
+
   const dispatch = useDispatch();
   const intl = useIntl();
 

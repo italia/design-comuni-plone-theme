@@ -81,7 +81,6 @@ const BandiInEvidenceTemplate = ({
   linkmore_id_lighthouse,
 }) => {
   const intl = useIntl();
-
   return (
     <div className="bandi-in-evidence">
       <Container className="px-4">

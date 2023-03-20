@@ -93,6 +93,7 @@
     },
     "setupFiles": [
       "@plone/volto/test-setup-globals.js",
+      "@plone/volto/test-setup-config.js",
       "./test-setup-config.js"
     ],
     "globalSetup": "@plone/volto/global-test-setup.js",

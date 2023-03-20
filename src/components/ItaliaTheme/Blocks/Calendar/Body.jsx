@@ -59,6 +59,7 @@ const Body = ({ data, block, inEditMode, path, onChangeBlock, reactSlick }) => {
   const calendarResults = useSelector(
     (state) => state.calendarSearch.subrequests,
   );
+
   const originalQuery = useSelector((state) =>
     state.originalQuery?.[block]?.[block]?.toArray?.(),
   );
@@ -244,7 +245,6 @@ const Body = ({ data, block, inEditMode, path, onChangeBlock, reactSlick }) => {
     }
     addFilters(filters);
   };
-
   return (
     <div
       className={cx('full-width', {

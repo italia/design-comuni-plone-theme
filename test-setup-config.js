@@ -24,6 +24,8 @@ config.set('settings', {
       'toastify',
       'reactSelect',
       'reactSortableHOC',
+      'moment',
+      'rrule',
       // 'diffLib',
     ],
   },

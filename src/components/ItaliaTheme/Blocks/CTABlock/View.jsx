@@ -4,11 +4,13 @@ import BodyWrapper from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks
 
 import Block from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CTABlock/Block';
 
-const View = ({ data }) => (
-  <BodyWrapper inEditMode={false}>
-    <Block data={data} inEditMode={false} />
-  </BodyWrapper>
-);
+const View = ({ data }) => {
+  return (
+    <BodyWrapper inEditMode={false}>
+      <Block data={data} inEditMode={false} />
+    </BodyWrapper>
+  );
+};
 
 /**
  * Property types.
