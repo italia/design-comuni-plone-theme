@@ -19,6 +19,7 @@ const SquaresImageTemplate = ({
   linkHref,
   id_lighthouse,
   titleLine,
+  linkmore_id_lighthouse,
 }) => {
   return (
     <div className="squares-image-template">
@@ -56,6 +57,7 @@ const SquaresImageTemplate = ({
           href={linkHref}
           linkAlign={linkAlign}
           className="my-4"
+          linkmoreIdLighthouse={linkmore_id_lighthouse}
         />
       </Container>
     </div>

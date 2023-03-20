@@ -28,6 +28,7 @@ const OfficeCard = ({
   show_contacts = true,
   size,
   no_details = false,
+  ...rest
 }) => {
   const url = flattenToAppURL(office['@id']);
   const key = `${url}_office`;
@@ -54,6 +55,7 @@ const OfficeCard = ({
           'mb-3': margin_bottom,
         },
       )}
+      {...rest}
     >
       {icon && <Icon icon={icon}></Icon>}
       <div className="card-body pe-3">

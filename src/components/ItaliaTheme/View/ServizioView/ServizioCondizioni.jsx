@@ -27,6 +27,7 @@ const ServizioCondizioni = ({ content }) => {
         <UniversalLink
           href={content.condizioni_di_servizio.download}
           className="list-item icon-left d-inline-block"
+          data-element="service-file"
         >
           <span className="list-item-title-icon-wrapper">
             <Icon icon="it-clip" className="icon-primary me-1" />

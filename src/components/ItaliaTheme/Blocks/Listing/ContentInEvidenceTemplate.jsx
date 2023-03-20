@@ -37,6 +37,7 @@ const ContentInEvidenceTemplate = ({
   linkTitle,
   linkHref,
   id_lighthouse,
+  linkmore_id_lighthouse,
   titleLine,
 }) => {
   return (
@@ -121,6 +122,7 @@ const ContentInEvidenceTemplate = ({
           href={linkHref}
           linkAlign={linkAlign}
           className="my-4"
+          linkmoreIdLighthouse={linkmore_id_lighthouse}
         />
       </Container>
     </div>

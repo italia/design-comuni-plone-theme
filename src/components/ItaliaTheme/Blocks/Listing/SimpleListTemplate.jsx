@@ -16,6 +16,7 @@ const SimpleListTemplate = ({
   show_block_bg,
   show_pointer_list,
   titleLine,
+  linkmore_id_lighthouse,
 }) => {
   return (
     <div className="simple-list-template">
@@ -51,6 +52,7 @@ const SimpleListTemplate = ({
           href={linkHref}
           linkAlign={linkAlign}
           className="my-4"
+          linkmoreIdLighthouse={linkmore_id_lighthouse}
         />
       </Container>
     </div>

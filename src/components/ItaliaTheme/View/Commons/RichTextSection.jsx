@@ -13,11 +13,13 @@ const RichTextSection = ({
   hasBg,
   p,
   children,
+  lighthouseId = '',
 }) => {
   const content_to_display = RichTextRender({
     content,
     add_class,
     serif: true,
+    lighthouseId,
   });
 
   const Tag = title_tag;
@@ -62,4 +64,5 @@ RichTextSection.propTypes = {
   anchorOffset: PropTypes.bool,
   hasBg: PropTypes.bool,
   p: PropTypes.oneOf(['1', '2', '3', '4', '5']),
+  lighthouseId: PropTypes.string,
 };

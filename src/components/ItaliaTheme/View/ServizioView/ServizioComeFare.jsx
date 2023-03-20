@@ -15,6 +15,7 @@ const ServizioComeFare = ({ content }) => {
       tag_id="how-to"
       title={intl.formatMessage(messages.come_fare)}
       show_title={true}
+      lighthouseId={'service-how-to'}
     />
   ) : null;
 };

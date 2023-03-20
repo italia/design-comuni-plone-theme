@@ -40,7 +40,12 @@ const richTextHasContent = (content) => {
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const RichTextRender = ({ content, add_class, serif = true }) => {
+const RichTextRender = ({
+  content,
+  add_class,
+  serif = true,
+  lighthouseId = '',
+}) => {
   let hasContent = richTextHasContent(content);
 
   return hasContent ? (
@@ -49,6 +54,9 @@ const RichTextRender = ({ content, add_class, serif = true }) => {
         className={cx(`richtext-blocks ${add_class ?? ''}`, {
           'font-serif': serif,
         })}
+        {...(lighthouseId && {
+          'data-element': lighthouseId,
+        })}
       >
         <RenderBlocks content={content} />
       </div>
@@ -56,6 +64,9 @@ const RichTextRender = ({ content, add_class, serif = true }) => {
       <div
         className={cx(add_class, { 'font-serif': serif })}
         dangerouslySetInnerHTML={{ __html: flattenHTMLToAppURL(content.data) }}
+        {...(lighthouseId && {
+          'data-element': lighthouseId,
+        })}
       />
     )
   ) : null;
@@ -66,4 +77,5 @@ export { RichTextRender, richTextHasContent };
 RichTextRender.propTypes = {
   content: PropTypes.string,
   add_class: PropTypes.string,
+  lighthouseId: PropTypes.string,
 };

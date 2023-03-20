@@ -54,6 +54,7 @@ const CardWithImageTemplate = (props) => {
     hide_dates = false,
     natural_image_size = false,
     id_lighthouse,
+    linkmore_id_lighthouse,
     titleLine,
   } = props;
 
@@ -205,6 +206,7 @@ const CardWithImageTemplate = (props) => {
           href={linkHref}
           className="my-4"
           linkAlign={linkAlign}
+          linkmoreIdLighthouse={linkmore_id_lighthouse}
         />
       </Container>
     </div>

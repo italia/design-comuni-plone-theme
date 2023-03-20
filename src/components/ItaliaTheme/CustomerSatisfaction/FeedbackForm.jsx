@@ -5,7 +5,6 @@ import { useIntl, defineMessages } from 'react-intl';
 import { isCmsUi } from '@plone/volto/helpers';
 import {
   Container,
-  Rating,
   Row,
   Col,
   Spinner,
@@ -21,8 +20,12 @@ import {
   GoogleReCaptchaWidget,
   submitFeedback,
   resetSubmitFeedback,
+  getFeedbackThreshold,
 } from 'volto-feedback';
 import cx from 'classnames';
+import AnswersStep from './Steps/AnswersStep';
+import CommentsStep from './Steps/CommentsStep';
+import Rating from './Steps/Commons/Rating';
 
 const messages = defineMessages({
   title: {
@@ -76,6 +79,7 @@ const FeedbackForm = () => {
   const captcha = !!process.env.RAZZLE_RECAPTCHA_KEY ? 'GoogleReCaptcha' : null;
   const submitResults = useSelector((state) => state.submitFeedback);
   const [validToken, setValidToken] = useState(null);
+  const threshold = getFeedbackThreshold();
   let fieldHoney = process.env.RAZZLE_HONEYPOT_FIELD;
 
   if (__CLIENT__) {
@@ -142,6 +146,7 @@ const FeedbackForm = () => {
   };
 
   const sendFormData = () => {
+    setStep(2);
     const data = {
       ...formData,
       ...(captcha && { 'g-recaptcha-response': validToken }),
@@ -161,21 +166,6 @@ const FeedbackForm = () => {
   if (isCmsUi(path)) {
     return null;
   }
-
-  const renderFormStep = () => {
-    if (step === undefined) return null;
-    const StepToRender = getFeedbackFormByStep(step);
-    return (
-      <StepToRender
-        updateFormData={updateFormData}
-        userFeedback={satisfaction}
-        intl={intl}
-        step={step}
-        totalSteps={numberOfSteps}
-        getFormFieldValue={getFormFieldValue}
-      />
-    );
-  };
   return (
     <div className="bg-primary customer-satisfaction">
       <Container>
@@ -186,93 +176,116 @@ const FeedbackForm = () => {
                 className="shadow card-wrapper py-4 px-4"
                 data-element="feedback"
               >
-                {!submitResults?.loading && !submitResults.loaded && (
-                  <>
-                    <h4
-                      id="vf-radiogroup-label"
-                      className="title-medium-2-semi-bold mb-0"
-                    >
-                      {intl.formatMessage(messages.title)}
-                    </h4>
-                    <div className="rating-container mb-0">
-                      <Rating
-                        name="satisfaction"
-                        value={satisfaction}
-                        inputs={[
-                          'star1b',
-                          'star2b',
-                          'star3b',
-                          'star4b',
-                          'star5b',
-                        ]}
-                        aria-controls="vf-more"
-                        className="volto-feedback-rating mb-0"
-                        onChangeRating={changeSatisfaction}
-                        legend=" "
-                      />
-                    </div>
-                    {renderFormStep()}
-                    <HoneypotWidget
-                      updateFormData={updateFormData}
-                      field={fieldHoney}
-                    />
-                    <GoogleReCaptchaWidget
-                      key={action}
-                      onVerify={onVerifyCaptcha}
-                      action={action}
-                    />
-                    <div
-                      className={cx(
-                        'form-step-actions d-flex flex-nowrap w100 justify-content-center button-shadow',
-                        {
-                          'pt-4': satisfaction !== null,
-                        },
-                      )}
-                      aria-hidden={satisfaction === null}
-                    >
-                      <Button
-                        className="prev-action"
-                        disabled={!!(step - 1)}
-                        onClick={prevStep}
-                        type="button"
-                        outline
-                        color="primary"
+                {!submitResults?.loading &&
+                  !submitResults.loaded &&
+                  step !== 2 && (
+                    <>
+                      <h2
+                        id="vf-radiogroup-label"
+                        className="title-medium-2-semi-bold mb-0"
+                        data-element="feedback-title"
                       >
-                        {intl.formatMessage(messages.prev)}
-                      </Button>
-                      {step !== numberOfSteps - 1 && (
+                        {intl.formatMessage(messages.title)}
+                      </h2>
+                      <div className="rating-container mb-0">
+                        <Rating
+                          name="satisfaction"
+                          value={satisfaction}
+                          inputs={[
+                            'star1b',
+                            'star2b',
+                            'star3b',
+                            'star4b',
+                            'star5b',
+                          ]}
+                          aria-controls={
+                            satisfaction > threshold
+                              ? 'vf-more-positive'
+                              : 'vf-more-negative'
+                          }
+                          className="volto-feedback-rating mb-0"
+                          onChangeRating={changeSatisfaction}
+                          legend=" "
+                          wrapperClassName={'rating'}
+                        />
+                      </div>
+                      <AnswersStep
+                        updateFormData={updateFormData}
+                        userFeedback={satisfaction}
+                        intl={intl}
+                        step={step}
+                        totalSteps={numberOfSteps}
+                        getFormFieldValue={getFormFieldValue}
+                      />
+                      <CommentsStep
+                        updateFormData={updateFormData}
+                        userFeedback={satisfaction}
+                        intl={intl}
+                        step={step}
+                        totalSteps={numberOfSteps}
+                        getFormFieldValue={getFormFieldValue}
+                      />
+                      <HoneypotWidget
+                        updateFormData={updateFormData}
+                        field={fieldHoney}
+                      />
+                      <GoogleReCaptchaWidget
+                        key={action}
+                        onVerify={onVerifyCaptcha}
+                        action={action}
+                      />
+                      <div
+                        className={cx(
+                          'form-step-actions d-flex flex-nowrap w100 justify-content-center button-shadow',
+                          {
+                            'pt-4': satisfaction !== null,
+                          },
+                        )}
+                        aria-hidden={satisfaction === null}
+                      >
                         <Button
-                          color="primary"
-                          onClick={nextStep}
-                          className="next-action fw-bold"
+                          className="prev-action"
+                          disabled={!!(step - 1)}
+                          onClick={prevStep}
                           type="button"
-                        >
-                          {intl.formatMessage(messages.next)}
-                        </Button>
-                      )}
-                      {step === numberOfSteps - 1 && (
-                        <Button
-                          className="next-action fw-bold"
+                          outline
                           color="primary"
-                          disabled={invalidForm}
-                          type={'button'}
-                          onClick={sendFormData}
-                          onKeyDown={(e) => {
-                            if (e.key === 'Enter') sendFormData();
-                          }}
                         >
-                          {intl.formatMessage(messages.next)}
+                          {intl.formatMessage(messages.prev)}
                         </Button>
-                      )}
-                    </div>
-                  </>
-                )}
+                        {step !== numberOfSteps - 1 && (
+                          <Button
+                            color="primary"
+                            onClick={nextStep}
+                            className="next-action fw-bold"
+                            type="button"
+                          >
+                            {intl.formatMessage(messages.next)}
+                          </Button>
+                        )}
+                        {step === numberOfSteps - 1 && (
+                          <Button
+                            className="next-action fw-bold"
+                            color="primary"
+                            disabled={invalidForm}
+                            type={'button'}
+                            onClick={sendFormData}
+                            onKeyDown={(e) => {
+                              if (e.key === 'Enter') sendFormData();
+                            }}
+                          >
+                            {intl.formatMessage(messages.next)}
+                          </Button>
+                        )}
+                      </div>
+                    </>
+                  )}
                 {submitResults?.loading && (
                   <div className="d-flex justify-content-center align-items-center">
                     <Spinner double active />
                   </div>
                 )}
-                {submitResults?.loaded && (
+                {submitResults?.loaded && step === 2 && (
                   <CardHeader className="border-0 mb-0 px-0">
                     <h4
                       id="rating-feedback"

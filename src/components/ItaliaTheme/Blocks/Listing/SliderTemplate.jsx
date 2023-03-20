@@ -51,6 +51,7 @@ const SliderTemplate = ({
   autoplay_speed = 2, //seconds
   reactSlick,
   titleLine,
+  linkmore_id_lighthouse,
 }) => {
   const intl = useIntl();
   const slider = useRef(null);
@@ -192,6 +193,7 @@ const SliderTemplate = ({
           href={linkHref}
           linkAlign={linkAlign}
           className="my-4"
+          linkmoreIdLighthouse={linkmore_id_lighthouse}
         />
       </Container>
     </div>

@@ -6,7 +6,7 @@ import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { renderPDCItemValue } from 'design-comuni-plone-theme/helpers';
 
-const ContactsCard = ({ contact = {}, show_title = false }) => {
+const ContactsCard = ({ contact = {}, show_title = false, ...rest }) => {
   const dispatch = useDispatch();
 
   const contactUrl = contact['@id'];
@@ -37,7 +37,7 @@ const ContactsCard = ({ contact = {}, show_title = false }) => {
   }
 
   return (
-    <Card teaser noWrapper className="shadow rounded my-3 pt-0">
+    <Card teaser noWrapper className="shadow rounded my-3 pt-0" {...rest}>
       {show_title && <Icon icon="it-telephone" />}
       <CardBody>
         <CardTitle className="h5">

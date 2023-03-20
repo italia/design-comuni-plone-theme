@@ -50,6 +50,7 @@ const InEvidenceTemplate = (props) => {
     linkHref,
     titleLine,
     id_lighthouse,
+    linkmore_id_lighthouse,
   } = props;
 
   return (
@@ -175,6 +176,7 @@ const InEvidenceTemplate = (props) => {
           href={linkHref}
           linkAlign={linkAlign}
           className="my-4"
+          linkmoreIdLighthouse={linkmore_id_lighthouse}
         />
       </Container>
     </div>

@@ -18,8 +18,12 @@ const ServizioTempiScadenze = ({ content, moment }) => {
       add_class="style_ol_list cmp-timeline"
       tag_id="deadlines"
       title={intl.formatMessage(messages.tempi_e_scadenze)}
+      lighthouseId="service-calendar-text"
     >
-      <div className="calendar-vertical mb-3">
+      <div
+        className="calendar-vertical mb-3"
+        data-element="service-calendar-list"
+      >
         <div className="calendar-vertical mb-3">
           {content.timeline_tempi_scadenze?.map((entry, i) => {
             let milestone_label = (

@@ -29,6 +29,7 @@ const GridGalleryTemplate = ({
   linkHref,
   show_block_bg,
   critical = false,
+  linkmore_id_lighthouse,
 }) => {
   const intl = useIntl();
 
@@ -107,6 +108,7 @@ const GridGalleryTemplate = ({
           href={linkHref}
           linkAlign={linkAlign}
           className="my-5"
+          linkmoreIdLighthouse={linkmore_id_lighthouse}
         />
       </Container>
     </div>

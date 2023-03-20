@@ -18,6 +18,7 @@ const SmallBlockLinksTemplate = ({
   linkTitle,
   linkHref,
   titleLine,
+  linkmore_id_lighthouse,
 }) => {
   return (
     <div className="small-block-links">
@@ -61,6 +62,7 @@ const SmallBlockLinksTemplate = ({
           href={linkHref}
           linkAlign={linkAlign}
           className="my-4"
+          linkmoreIdLighthouse={linkmore_id_lighthouse}
         />
       </Container>
     </div>

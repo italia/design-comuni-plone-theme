@@ -21,6 +21,7 @@ const SimpleCardTemplateCompact = ({
   id_lighthouse,
   linkAlign,
   titleLine,
+  linkmore_id_lighthouse,
 }) => {
   return (
     <div className="simple-card-compact-template">
@@ -71,6 +72,7 @@ const SimpleCardTemplateCompact = ({
         href={linkHref}
         className="my-4"
         linkAlign={linkAlign}
+        linkmoreIdLighthouse={linkmore_id_lighthouse}
       />
     </div>
   );

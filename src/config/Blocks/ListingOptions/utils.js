@@ -67,15 +67,14 @@ export const addSchemaField = (
   description,
   properties = {},
   position = 0,
+  fieldset = 'default',
 ) => {
-  const defaultFieldsetIndex = schema.fieldsets.findIndex(
-    (x) => x.id === 'default',
-  );
+  const fieldsetIndex = schema.fieldsets.findIndex((x) => x.id === fieldset);
 
-  schema.fieldsets[defaultFieldsetIndex] = {
-    ...schema.fieldsets[defaultFieldsetIndex],
+  schema.fieldsets[fieldsetIndex] = {
+    ...schema.fieldsets[fieldsetIndex],
   };
-  schema.fieldsets[defaultFieldsetIndex].fields.splice(position, 0, field);
+  schema.fieldsets[fieldsetIndex].fields.splice(position, 0, field);
   schema.properties[field] = { title, description, ...properties };
 };
 
@@ -155,10 +154,36 @@ export const addLighthouseField = (schema, intl, position = 0) => {
         ['topic-element', 'topic-element'],
         ['service-link', 'service-link'],
         ['administration-element', 'administration-element'],
+        ['management-category-link', 'management-category-link'],
+        ['news-category-link', 'news-category-link'],
+        ['custom-category-link', 'custom-category-link'],
+        ['appointment-booking', 'appointment-booking'],
       ],
       /* default: 'medium', */
     },
     pos,
+  );
+  pos++;
+
+  return pos;
+};
+
+export const addLighthouseFieldLinkMore = (schema, intl, position = 0) => {
+  let pos = position;
+
+  addSchemaField(
+    schema,
+    'linkmore_id_lighthouse',
+    intl.formatMessage(messages.id_lighthouse),
+    intl.formatMessage(messages.id_lighthouse_description),
+    {
+      choices: [
+        ['live-button-event', 'live-button-event'],
+        ['live-button-locations', 'live-button-locations'],
+      ],
+    },
+    2,
+    'linkmore',
   );
   pos++;
 

@@ -50,6 +50,7 @@ const PhotogalleryTemplate = ({
   linkHref,
   reactSlick,
   titleLine,
+  linkmore_id_lighthouse,
 }) => {
   const intl = useIntl();
   const slider = useRef(null);
@@ -222,6 +223,7 @@ const PhotogalleryTemplate = ({
           href={linkHref}
           linkAlign={linkAlign}
           className="my-4"
+          linkmoreIdLighthouse={linkmore_id_lighthouse}
         />
       </Container>
     </div>

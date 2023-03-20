@@ -58,42 +58,102 @@ const AnswersStep = ({
   };
 
   return (
-    <div
-      id="vf-more"
-      className="answers-step"
-      data-step={step}
-      aria-expanded={userFeedback !== null}
-      aria-hidden={userFeedback === null}
-    >
-      <FormHeader
-        title={
-          userFeedback > threshold
-            ? intl.formatMessage(messages.header_positive)
-            : intl.formatMessage(messages.header_negative)
+    <>
+      <fieldset
+        id="vf-more-positive"
+        className="answers-step"
+        data-step={step}
+        aria-expanded={
+          userFeedback !== null && userFeedback > threshold && step === 0
         }
-        step={step + 1}
-        totalSteps={totalSteps}
-        className={'answers-header'}
-      />
-      <Form className="answers-form">
-        {state?.map((s) => (
-          <FormGroup check key={s} className="border-bottom border-light mb-4">
-            <Input
-              name={s}
-              id={s}
-              type="radio"
-              checked={s === selectedAnswer}
-              value={s}
-              onChange={handleAnswerChange}
-              addon
-            />
-            <Label for={s} check className="mb-4">
-              {getTranslatedQuestion(intl, s)}
-            </Label>
-          </FormGroup>
-        ))}
-      </Form>
-    </div>
+        aria-hidden={
+          userFeedback === null || userFeedback < threshold || step !== 0
+        }
+        data-element={'feedback-rating-positive'}
+      >
+        <FormHeader
+          title={intl.formatMessage(messages.header_positive)}
+          step={step + 1}
+          totalSteps={totalSteps}
+          className={'answers-header'}
+        />
+
+        <Form className="answers-form">
+          {state?.map((s, i) => (
+            <FormGroup
+              check
+              key={s}
+              className="border-bottom border-light mb-4"
+            >
+              <Input
+                name={s}
+                id={s}
+                type="radio"
+                checked={s === selectedAnswer}
+                value={s}
+                onChange={handleAnswerChange}
+                addon
+              />
+              <Label
+                for={s}
+                check
+                className="mb-4"
+                data-element="feedback-rating-answer"
+              >
+                {getTranslatedQuestion(intl, s)}
+              </Label>
+            </FormGroup>
+          ))}
+        </Form>
+      </fieldset>
+      <fieldset
+        id="vf-more-negative"
+        className="answers-step"
+        data-step={step}
+        aria-expanded={
+          userFeedback !== null && userFeedback < threshold && step === 0
+        }
+        aria-hidden={
+          userFeedback === null || userFeedback > threshold || step !== 0
+        }
+        data-element={'feedback-rating-positive'}
+      >
+        <FormHeader
+          title={intl.formatMessage(messages.header_negative)}
+          step={step + 1}
+          totalSteps={totalSteps}
+          className={'answers-header'}
+        />
+
+        <Form className="answers-form">
+          {state?.map((s, i) => (
+            <FormGroup
+              check
+              key={s}
+              className="border-bottom border-light mb-4"
+            >
+              <Input
+                name={s}
+                id={s}
+                type="radio"
+                checked={s === selectedAnswer}
+                value={s}
+                onChange={handleAnswerChange}
+                addon
+              />
+              <Label
+                for={s}
+                check
+                className="mb-4"
+                data-element="feedback-rating-answer"
+              >
+                {getTranslatedQuestion(intl, s)}
+              </Label>
+            </FormGroup>
+          ))}
+        </Form>
+      </fieldset>
+    </>
   );
 };
 

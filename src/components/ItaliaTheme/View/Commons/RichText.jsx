@@ -14,11 +14,13 @@ const RichText = ({
   add_class,
   children,
   serif = true,
+  lighthouseId = '',
 }) => {
   let content_to_display = RichTextRender({
     content: content,
     add_class: add_class,
     serif: serif,
+    lighthouseId,
   });
 
   const Tag = title_size;
@@ -47,4 +49,5 @@ RichText.propTypes = {
   content: PropTypes.object,
   add_class: PropTypes.string,
   serif: PropTypes.bool,
+  lighthouseId: PropTypes.string,
 };

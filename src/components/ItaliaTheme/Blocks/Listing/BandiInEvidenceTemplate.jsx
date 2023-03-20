@@ -78,6 +78,7 @@ const BandiInEvidenceTemplate = ({
   linkTitle,
   linkHref,
   titleLine,
+  linkmore_id_lighthouse,
 }) => {
   const intl = useIntl();
 
@@ -247,6 +248,7 @@ const BandiInEvidenceTemplate = ({
           href={linkHref}
           linkAlign={linkAlign}
           className="my-4"
+          linkmoreIdLighthouse={linkmore_id_lighthouse}
         />
       </Container>
     </div>

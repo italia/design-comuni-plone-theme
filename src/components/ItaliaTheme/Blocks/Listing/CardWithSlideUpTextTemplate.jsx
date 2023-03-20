@@ -36,6 +36,7 @@ const CardWithSlideUpTextTemplate = (props) => {
     show_description = true,
     hide_dates = false,
     id_lighthouse,
+    linkmore_id_lighthouse,
     titleLine,
   } = props;
 
@@ -102,6 +103,7 @@ const CardWithSlideUpTextTemplate = (props) => {
           href={linkHref}
           linkAlign={linkAlign}
           className="my-4"
+          linkmoreIdLighthouse={linkmore_id_lighthouse}
         />
       </Container>
     </div>

@@ -67,6 +67,7 @@ const SimpleCardTemplateDefault = (props) => {
     addFilters,
     additionalFilters = [],
     id_lighthouse,
+    linkmore_id_lighthouse,
   } = props;
 
   let currentPathFilter = additionalFilters
@@ -257,6 +258,7 @@ const SimpleCardTemplateDefault = (props) => {
         href={linkHref}
         className="my-4"
         linkAlign={linkAlign}
+        linkmoreIdLighthouse={linkmore_id_lighthouse}
       />
     </div>
   );

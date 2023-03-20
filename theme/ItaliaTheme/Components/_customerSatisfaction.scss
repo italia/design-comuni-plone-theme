@@ -1,4 +1,13 @@
 .public-ui {
+  .feedback-form #vf-more-positive,
+  .feedback-form #vf-more-negative {
+    overflow: hidden;
+    max-height: 0;
+  }
+  .feedback-form #vf-more-positive[aria-expanded='true'],
+  .feedback-form #vf-more-negative[aria-expanded='true'] {
+    max-height: 800px;
+  }
   .feedback-form {
     margin: 0;
     padding: 2rem 0;

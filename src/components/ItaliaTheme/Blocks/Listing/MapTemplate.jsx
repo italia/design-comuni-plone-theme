@@ -30,6 +30,7 @@ const MapTemplate = ({
   titleLine,
   show_map_full_width,
   map_size = 'medium',
+  linkmore_id_lighthouse,
 }) => {
   const intl = useIntl();
   let history = useHistory();
@@ -106,6 +107,7 @@ const MapTemplate = ({
           href={linkHref}
           linkAlign={linkAlign}
           className="my-5"
+          linkmoreIdLighthouse={linkmore_id_lighthouse}
         />
       </Container>
     </div>

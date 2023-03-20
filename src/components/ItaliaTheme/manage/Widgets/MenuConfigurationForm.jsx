@@ -175,6 +175,7 @@ const MenuConfigurationForm = ({ id, menuItem, onChange, deleteMenuItem }) => {
           ['live', 'live'],
           ['news', 'news'],
           ['all-topics', 'all-topics'],
+          ['custom-submenu', 'custom-submenu'],
         ]}
         value={menuItem.id_lighthouse}
         onChange={(id, value) => onChangeFormData('id_lighthouse', value)}

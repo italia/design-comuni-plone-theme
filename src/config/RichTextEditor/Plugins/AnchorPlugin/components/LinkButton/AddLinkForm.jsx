@@ -81,6 +81,7 @@ class AddLinkForm extends Component {
     // Options to data-element select
     this.selectOptions = [
       ['appointment-booking', 'appointment-booking'],
+      ['service-booking-access', 'service-booking-access'],
       ['faq', 'faq'],
       ['report-inefficiency', 'report-inefficiency'],
       ['accessibility-link', 'accessibility-link'],

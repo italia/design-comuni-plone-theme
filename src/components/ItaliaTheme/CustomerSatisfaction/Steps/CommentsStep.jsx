@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import { TextArea, Form, FormGroup } from 'design-react-kit';
 import { defineMessages } from 'react-intl';
 import { FormHeader } from 'volto-feedback';
+import cx from 'classnames';
 
 const messages = defineMessages({
   suggestions_placeholder: {
@@ -42,7 +43,11 @@ const CommentsStep = ({
   const invalid = getFormFieldValue('comment')?.length > 200;
 
   return (
-    <div className="comments-step">
+    <fieldset
+      className={cx('comments-step', {
+        'd-none': step !== 1,
+      })}
+    >
       <FormHeader
         title={intl.formatMessage(messages.header_comments)}
         step={step + 1}
@@ -70,11 +75,12 @@ const CommentsStep = ({
               aria-invalid={invalid}
               invalid={invalid}
               className="mt-1"
+              data-element="feedback-input-text"
             />
           </FormGroup>
         </Form>
       </div>
-    </div>
+    </fieldset>
   );
 };
 

@@ -23,10 +23,15 @@ const ServizioAccedi = ({ content }) => {
           title={intl.formatMessage(messages.canale_digitale)}
           hasBg
           p="4"
+          lighthouseId="service-generic-access"
         >
           {content.canale_digitale_link && (
             <div className="mb-4">
-              <p className="draftjs-buttons">
+              {/* TODO */}
+              <p
+                className="draftjs-buttons"
+                data-element="service-online-access"
+              >
                 <UniversalLink href={content.canale_digitale_link}>
                   {intl.formatMessage(messages.canale_digitale_link)}
                 </UniversalLink>
@@ -35,22 +40,37 @@ const ServizioAccedi = ({ content }) => {
           )}
           <RichText content={content.prenota_appuntamento} />
           {content.canale_fisico?.map?.((canale) => (
-            <OfficeCard key={canale['@id']} office={canale} load_data={false} />
+            <OfficeCard
+              key={canale['@id']}
+              office={canale}
+              load_data={false}
+              data-element="service-generic-access"
+            />
           ))}
         </RichTextSection>
       )}
       {(content.dove_rivolgersi?.length > 0 ||
         richTextHasContent(content.dove_rivolgersi_extra)) && (
-        <RichTextSection title={intl.formatMessage(messages.dove_rivolgersi)}>
+        <RichTextSection
+          title={intl.formatMessage(messages.dove_rivolgersi)}
+          lighthouseId="service-generic-access"
+        >
           {content.dove_rivolgersi?.map?.((dove) => (
             <div
               key={dove['@id']}
               className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal"
             >
-              <OfficeCard office={dove} load_data={false} />
+              <OfficeCard
+                office={dove}
+                load_data={false}
+                data-element="service-generic-access"
+              />
             </div>
           ))}
-          <RichText content={content.dove_rivolgersi_extra} />
+          <RichText
+            content={content.dove_rivolgersi_extra}
+            lighthouseId="service-generic-access"
+          />
         </RichTextSection>
       )}
     </>

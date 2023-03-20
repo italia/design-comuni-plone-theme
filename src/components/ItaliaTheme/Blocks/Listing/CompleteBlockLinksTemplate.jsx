@@ -26,6 +26,7 @@ const CompleteBlockLinksTemplate = ({
   show_block_bg,
   show_description = true,
   id_lighthouse,
+  linkmore_id_lighthouse,
   titleLine,
 }) => {
   return (
@@ -87,6 +88,7 @@ const CompleteBlockLinksTemplate = ({
           href={linkHref}
           linkAlign={linkAlign}
           className="my-4"
+          linkmoreIdLighthouse={linkmore_id_lighthouse}
         />
       </Container>
     </div>
