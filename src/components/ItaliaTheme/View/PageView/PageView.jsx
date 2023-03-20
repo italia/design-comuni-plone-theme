@@ -74,7 +74,9 @@ const PageView = ({ content, token, location, history }) => {
                 })}
               >
                 <PagePlaceholderTitle content={content}>
-                  <h1 className="mb-3">{content?.title}</h1>
+                  <h1 className="mb-3" data-element="page-name">
+                    {content?.title}
+                  </h1>
                 </PagePlaceholderTitle>
 
                 <p className="description">{content?.description}</p>
