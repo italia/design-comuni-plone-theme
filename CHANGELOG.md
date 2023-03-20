@@ -1,3 +1,25 @@
+## [8.0.0-alpha.15](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.14...v8.0.0-alpha.15) (2023-03-20)
+
+
+### Features
+
+* added data-elements where needed for validator ([#95](https://github.com/RedTurtle/design-comuni-plone-theme/issues/95)) ([5ce1d5d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5ce1d5d4815850d82b1a622d73aa1b01d551b672))
+* added page-name data-element on page titles ([3796e83](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3796e839cb94a7e35436a8aed2d9daba45a3bd09))
+* added page-name data-element on page titles ([52e8a37](https://github.com/RedTurtle/design-comuni-plone-theme/commit/52e8a37c6698bbb77a86c0c2cb146e68a891bf5f))
+
+
+### Bug Fixes
+
+* invalid-feedback text was removed by some css in the kit, added it back ([#94](https://github.com/RedTurtle/design-comuni-plone-theme/issues/94)) ([e56ec8b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e56ec8bcafeb963c8efe6b0a388674f45d953f22))
+* locales ([fc91374](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fc913743b835ae631716afcab75b85840c19199f))
+* missing Dal in dates if event dates are not occurring in same year ([#97](https://github.com/RedTurtle/design-comuni-plone-theme/issues/97)) ([8531029](https://github.com/RedTurtle/design-comuni-plone-theme/commit/853102912974fd60d8632cdaf6f3a9d265ffaf79))
+* remove extra content image in venue address part ([fdc0509](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fdc050948da12a5a11f56c6d1d4fa1c7a1126091))
+
+
+### Maintenance
+
+* added several tests ([#92](https://github.com/RedTurtle/design-comuni-plone-theme/issues/92)) ([1097d34](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1097d349323834151783436fcfe61d592775956d))
+
 ## [8.0.0-alpha.14](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.13...v8.0.0-alpha.14) (2023-03-14)
 
 
