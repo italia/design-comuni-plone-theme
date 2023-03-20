@@ -3446,6 +3446,11 @@ msgstr "Visibile"
 msgid "subjects"
 msgstr "Tags"
 
+#: components/ItaliaTheme/View/EventoView/EventoContatti
+# defaultMessage: Con il supporto di
+msgid "supported_by"
+msgstr "Con il supporto di"
+
 #: components/ItaliaTheme/View/Commons/ContactLink
 # defaultMessage: Tel
 msgid "telefono"

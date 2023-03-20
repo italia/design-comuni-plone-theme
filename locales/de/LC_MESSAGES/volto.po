@@ -3461,6 +3461,11 @@ msgstr ""
 msgid "subjects"
 msgstr ""
 
+#: components/ItaliaTheme/View/EventoView/EventoContatti
+# defaultMessage: Con il supporto di
+msgid "supported_by"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/ContactLink
 # defaultMessage: Tel
 msgid "telefono"

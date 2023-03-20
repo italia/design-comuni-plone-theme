@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-03-10T16:38:59.735Z\n"
+"POT-Creation-Date: 2023-03-20T17:55:26.838Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -3446,6 +3446,11 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/Metadata
 # defaultMessage: Tags
 msgid "subjects"
+msgstr ""
+
+#: components/ItaliaTheme/View/EventoView/EventoContatti
+# defaultMessage: Con il supporto di
+msgid "supported_by"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/ContactLink
