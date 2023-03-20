@@ -152,6 +152,7 @@ export const When = ({
     } else {
       return (
         <>
+          {start_label || 'from'}&nbsp;
           <span className="start">
             <span className="start-date">{datesInfo.startDate}</span>
             {!whole_day && show_time && (
