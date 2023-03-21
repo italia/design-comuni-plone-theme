@@ -73,7 +73,7 @@ const IncaricoView = (props) => {
   const { content } = props;
   const intl = useIntl();
   return (
-    <div className="container px-4 my-4 punto-di-contatto-view">
+    <div className="container px-4 my-4 incarico-view">
       <SkipToMainContent />
       <PageHeader
         content={{ ...content, stato_servizio: null }}

@@ -65,7 +65,7 @@ const EventoView = ({ content, location }) => {
 
   return (
     <>
-      <div className="container px-4 my-4 newsitem-view">
+      <div className="container px-4 my-4 evento-view">
         <SkipToMainContent />
         <PageHeader
           content={content}

@@ -61,7 +61,7 @@ const DocumentoView = ({ content, location }) => {
 
   return (
     <>
-      <div className="container px-4 my-4 newsitem-view">
+      <div className="container px-4 my-4 documento-view">
         <SkipToMainContent />
         <PageHeader
           content={content}
