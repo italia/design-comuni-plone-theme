@@ -25,7 +25,6 @@ const ServizioTempiScadenze = ({ content, moment }) => {
       >
         <div className="calendar-vertical mb-3">
           {content.timeline_tempi_scadenze?.map((entry, i) => {
-            console.log(entry);
             let milestone_label = (
               <div className="calendar-date-day">
                 <small className="calendar-date-day__year"></small>
