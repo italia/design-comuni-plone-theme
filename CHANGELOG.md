@@ -1,3 +1,11 @@
+## [8.0.0-alpha.16](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.15...v8.0.0-alpha.16) (2023-03-22)
+
+
+### Bug Fixes
+
+* fixed page names across CTs ([#101](https://github.com/RedTurtle/design-comuni-plone-theme/issues/101)) ([cbf2187](https://github.com/RedTurtle/design-comuni-plone-theme/commit/cbf21870ae413ff657dd9e92d14c2f7d3f7a31c2))
+* missing import in MenuConfigurationForm ([a8baaf0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a8baaf091816ee7522c58b388b30695d6fc90ba6))
+
 ## [8.0.0-alpha.15](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.14...v8.0.0-alpha.15) (2023-03-20)
 
 
