@@ -3,6 +3,9 @@
  * @module components/manage/Sidebar/ObjectBrowserBody
  * Customization:
  * - Tooltip on breadcrumbs
+ * - Set initial search to current path instead of home '/'
+ * - Fix searchable types in query applying selectableTypes from field config
+ * - Use debounce in onSearch to keep requests low and avoid race conditions
  */
 
 import React, { Component } from 'react';
@@ -12,7 +15,7 @@ import { connect } from 'react-redux';
 import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
 import { Input, Segment, Breadcrumb } from 'semantic-ui-react';
 
-import { join } from 'lodash';
+import { join, debounce } from 'lodash';
 
 // These absolute imports (without using the corresponding centralized index.js) are required
 // to cut circular import problems, this file should never use them. This is because of
@@ -105,8 +108,7 @@ class ObjectBrowserBody extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentFolder:
-        this.props.mode === 'multiple' ? '/' : this.props.contextURL || '/',
+      currentFolder: this.props.contextURL || '/',
       currentImageFolder:
         this.props.mode === 'multiple'
           ? '/'
@@ -135,10 +137,11 @@ class ObjectBrowserBody extends Component {
       showSearchInput: false,
       // In image mode, the searchable types default to the image types which
       // can be overridden with the property if specified.
+      // Also fix searchable types applying selectableTypes from field config
       searchableTypes:
         this.props.mode === 'image'
           ? this.props.searchableTypes || config.settings.imageObjects
-          : this.props.searchableTypes,
+          : this.props.searchableTypes || this.props.selectableTypes || null,
     };
     this.searchInputRef = React.createRef();
   }
@@ -226,29 +229,19 @@ class ObjectBrowserBody extends Component {
         },
         `${this.props.block}-${this.props.mode}`,
       );
-    } else {
-      text.length > 2
-        ? this.props.searchContent(
-            '/',
-            {
-              SearchableText: `${text}*`,
-              metadata_fields: '_all',
-              portal_type: this.state.searchableTypes,
-            },
-            `${this.props.block}-${this.props.mode}`,
-          )
-        : this.props.searchContent(
-            '/',
-            {
-              'path.depth': 1,
-              sort_on: 'getObjPositionInParent',
-              metadata_fields: '_all',
-              portal_type: this.state.searchableTypes,
-            },
-            `${this.props.block}-${this.props.mode}`,
-          );
+    } else if (text.length > 2) {
+      this.props.searchContent(
+        '/',
+        {
+          SearchableText: `${text}*`,
+          metadata_fields: '_all',
+          portal_type: this.state.searchableTypes,
+        },
+        `${this.props.block}-${this.props.mode}`,
+      );
     }
   };
+  debouncedSearch = debounce((e) => this.onSearch(e), 250);
 
   onSelectItem = (item) => {
     const url = item['@id'];
@@ -395,7 +388,7 @@ class ObjectBrowserBody extends Component {
             <Input
               className="search"
               ref={this.searchInputRef}
-              onChange={this.onSearch}
+              onChange={this.debouncedSearch}
               placeholder={this.props.intl.formatMessage(
                 messages.SearchInputPlaceholder,
               )}
