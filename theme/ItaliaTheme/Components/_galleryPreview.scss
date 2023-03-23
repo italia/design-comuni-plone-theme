@@ -2,6 +2,27 @@
   .modal-content {
     max-height: calc(100vh - 6rem);
 
+    .modal-header {
+      padding-bottom: 10px;
+
+      .modal-title {
+        text-transform: uppercase;
+        letter-spacing: 1.125px;
+        font-weight: 600;
+      }
+
+      .modal-close-button {
+        button.close-button {
+          background-color: transparent;
+          border: none;
+
+          svg {
+            fill: $gray-400;
+          }
+        }
+      }
+    }
+
     .item-preview {
       position: relative;
       margin-bottom: 1.25rem;
@@ -28,6 +49,12 @@
 
         border-radius: 100%;
         transform: translateY(-50%);
+        height: 3.05rem;
+        width: 1.94rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: unset;
 
         &.prev {
           left: -2.75rem;
@@ -36,9 +63,14 @@
         &.next {
           right: -2.75rem;
         }
+
+        svg.icon {
+          width: 1.67rem;
+          height: auto;
+        }
       }
     }
-    .modal-body{
+    .modal-body {
       padding-top: 0;
     }
   }

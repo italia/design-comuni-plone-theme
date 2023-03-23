@@ -4,7 +4,7 @@ import { flattenToAppURL } from '@plone/volto/helpers';
 
 import PropTypes from 'prop-types';
 
-import { Modal, ModalHeader, ModalBody, Button } from 'design-react-kit';
+import { Modal, ModalBody, Button } from 'design-react-kit';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import DefaultImageSVG from '@plone/volto/components/manage/Blocks/Listing/default-image.svg';
 
@@ -64,13 +64,19 @@ const GalleryPreview = ({ id, viewIndex, setViewIndex, items }) => {
     >
       {viewIndex != null && (
         <>
-          <ModalHeader
-            closeButton={true}
-            closeAriaLabel={intl.formatMessage(messages.close_preview)}
-            toggle={closeModal}
-          >
-            {items[viewIndex].title}
-          </ModalHeader>
+          <div className="modal-header">
+            <div className="modal-title">{items[viewIndex].title}</div>
+            <div className="modal-close-button">
+              <button
+                type="button"
+                onClick={closeModal}
+                aria-label={intl.formatMessage(messages.close_preview)}
+                className="close-button"
+              >
+                <Icon icon="times" padding={false} />
+              </button>{' '}
+            </div>
+          </div>
           <ModalBody>
             {items[viewIndex].description && (
               <p className="pb-3">{items[viewIndex].description}</p>
