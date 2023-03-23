@@ -62,7 +62,8 @@ picture.volto-image.responsive img.full-width {
   left: 50%;
   width: 100vw !important;
   max-width: initial !important;
-  height: 480px;
+  height: auto;
+  max-height: 480px;
   margin-right: -50vw !important;
   margin-left: -50vw !important;
   object-fit: cover;
