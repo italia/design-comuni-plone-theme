@@ -1,3 +1,25 @@
+//navbar spacing fix
+
+.public-ui {
+  .it-header-wrapper {
+    .navbar {
+      .container-fluid {
+        padding: 0px;
+
+        .navbar-secondary {
+          li.nav-item:last-child {
+            a.nav-link {
+              padding-right: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//
+
 .documentFirstHeading {
   border: none;
 
