@@ -78,9 +78,7 @@ const CardWithImageRssTemplate = ({
                       )}
                       <span>{getViewDate(item.pubDate, intl.locale)}</span>{' '}
                     </div>
-                    <CardTitle className="big-heading" tag="h6">
-                      {item.title}
-                    </CardTitle>
+                    <CardTitle tag="h6">{item.title}</CardTitle>
                   </CardBody>
                   <CardReadMore
                     iconName="it-arrow-right"

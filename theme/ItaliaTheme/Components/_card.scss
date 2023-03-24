@@ -25,6 +25,7 @@
     h5.card-title,
     .text.fw-bold {
       color: $primary;
+      font-weight: 600;
       a {
         @include rem-size(font-size, 24);
         @include rem-size(line-height, 32);
@@ -52,6 +53,8 @@
     padding: 0px !important;
     h5.card-title {
       margin-bottom: 0.3em !important;
+      font-weight: 600;
+
       a {
         @include rem-size(font-size, 24);
         @include rem-size(line-height, 32);
@@ -130,7 +133,7 @@
 
       h3.card-title {
         a {
-          font-size: 1.5rem;
+          font-size: 1.3rem;
           line-height: 1.75rem;
           font-weight: 700;
           color: $primary;
@@ -141,36 +144,6 @@
         font-size: 1rem;
         line-height: 1.5rem;
         color: $secondary;
-      }
-    }
-  }
-}
-
-.simple-card-default {
-  .card-title {
-    @include rem-size(font-size, 24px);
-    @include rem-size(line-height, 32px);
-    font-weight: 700;
-  }
-
-  .card-body {
-    .category-top {
-      span.text {
-        span.text.fw-bold {
-          font-size: 0.875rem;
-          line-height: 1.313rem;
-          letter-spacing: 1px;
-          font-weight: 600 !important;
-          color: $primary;
-        }
-      }
-    }
-
-    p.card-text {
-      font-size: 1rem;
-      line-height: 1.5rem;
-      div.document-date {
-        @include rem-size(font-size, 14);
       }
     }
   }
@@ -187,6 +160,17 @@
       }
       svg {
         fill: $primary;
+      }
+    }
+  }
+}
+
+.block.highlitedContent {
+  div.card {
+    h2.card-title {
+      a {
+        color: $primary;
+        font-size: 1.7rem;
       }
     }
   }

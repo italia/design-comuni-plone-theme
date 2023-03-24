@@ -28,7 +28,7 @@ const CardWithoutImageRssTemplateSkeleton = ({ isEditMode, data = {} }) => {
               <Card noWrapper={false} tag="div">
                 <CardBody tag="div">
                   <div className="category-top"></div>
-                  <CardTitle className="big-heading" tag="h5"></CardTitle>
+                  <CardTitle tag="h5"></CardTitle>
                   <CardText tag="p" className="font-serif"></CardText>
                 </CardBody>
                 <CardReadMore

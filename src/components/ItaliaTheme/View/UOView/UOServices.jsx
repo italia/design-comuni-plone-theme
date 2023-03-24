@@ -36,7 +36,7 @@ const UOServices = ({ content }) => {
             <Card className="shadow rounded">
               <CardBody>
                 <CardCategory date="">{servizio.parent_title}</CardCategory>
-                <CardTitle tag="h5" className="big-heading">
+                <CardTitle tag="h5">
                   <UniversalLink href={servizio['@id']}>
                     {servizio.title}
                   </UniversalLink>

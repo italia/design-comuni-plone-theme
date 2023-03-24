@@ -109,12 +109,6 @@ picture.volto-image.responsive img.full-width {
     margin: 0 !important;
     margin-bottom: 1rem !important;
     line-height: 1em;
-
-    &:not(.big-heading) a {
-      color: $primary;
-      @include rem-size(font-size, 24);
-      @include rem-size(line-height, 28);
-    }
   }
 
   .genericcard {

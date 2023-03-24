@@ -28,7 +28,7 @@ const NewsCard = ({ title, typology, effective, description, id }) => {
             </span>
           ) : null}
         </div>
-        <h5 className="card-title big-heading">
+        <h5 className="card-title">
           <UniversalLink href={flattenToAppURL(id)}>{title}</UniversalLink>
         </h5>
         <div className="card-text">{description}</div>

@@ -53,10 +53,33 @@
         margin-bottom: 10px;
 
         a {
+          @include rem-size(font-size, 24);
+          @include rem-size(line-height, 26);
+          font-weight: 700;
           &:hover,
           &:active {
             text-decoration: underline;
           }
+        }
+      }
+
+      .category-top {
+        span.text {
+          span.text.fw-bold {
+            font-size: 0.875rem;
+            line-height: 1.313rem;
+            letter-spacing: 1px;
+            font-weight: 600 !important;
+            color: $primary;
+          }
+        }
+      }
+
+      p.card-text {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        div.document-date {
+          @include rem-size(font-size, 14);
         }
       }
     }
@@ -95,6 +118,21 @@
   .card-teaser-wrapper {
     .icon-argument-container + .card-body {
       margin-left: 1em;
+    }
+
+    .card-title {
+      margin-bottom: 10px;
+
+      a {
+        @include rem-size(font-size, 32);
+        @include rem-size(line-height, 32);
+        font-weight: 700;
+        text-decoration: none;
+        &:hover,
+        &:active {
+          text-decoration: underline;
+        }
+      }
     }
 
     .card-teaser {
