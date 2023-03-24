@@ -2235,7 +2235,9 @@ test('expect to render fields in page', async () => {
   );
 
   // Costi
-  expect(screen.getByRole('heading', { name: /Costi/i })).toBeInTheDocument();
+  expect(
+    screen.getByRole('heading', { name: /Quanto costa/i }),
+  ).toBeInTheDocument();
 
   expect(screen.getByText(/345/i)).toBeInTheDocument();
 

@@ -4,13 +4,14 @@ import { defineMessages, useIntl } from 'react-intl';
 
 import {
   RichText,
+  RichTextSection,
   richTextHasContent,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
-  costi_e_vincoli: {
-    id: 'costi_e_vincoli',
-    defaultMessage: 'Costi',
+  costi_e_vincoli_header: {
+    id: 'costi_e_vincoli_header',
+    defaultMessage: 'Quanto costa',
   },
   vincoli: {
     id: 'vincoli',
@@ -21,15 +22,15 @@ const messages = defineMessages({
 const ServizioCostiVincoli = ({ content }) => {
   const intl = useIntl();
 
-  return (
-    <>
+  return richTextHasContent(content.costi) ||
+    richTextHasContent(content.vincoli) ? (
+    <RichTextSection
+      content={content.a_chi_si_rivolge}
+      tag_id="costs"
+      title={intl.formatMessage(messages.costi_e_vincoli_header)}
+    >
       {richTextHasContent(content.costi) && (
-        <RichText
-          title={intl.formatMessage(messages.costi_e_vincoli)}
-          title_size="h4"
-          add_class="mb-5"
-          content={content.costi}
-        />
+        <RichText add_class="mb-5" content={content.costi} />
       )}
       {richTextHasContent(content.vincoli) && (
         <RichText
@@ -39,8 +40,8 @@ const ServizioCostiVincoli = ({ content }) => {
           content={content.vincoli}
         />
       )}
-    </>
-  );
+    </RichTextSection>
+  ) : null;
 };
 
 ServizioCostiVincoli.propTypes = {
