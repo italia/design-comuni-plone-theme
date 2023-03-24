@@ -2,7 +2,7 @@
   "name": "design-comuni-plone-theme",
   "description": "Volto Theme for Italia design guidelines",
   "license": "MIT",
-  "version": "8.0.0-alpha.16",
+  "version": "8.0.0-alpha.17",
   "addons": [
     "@plone-collective/volto-sentry",
     "volto-multilingual-widget",

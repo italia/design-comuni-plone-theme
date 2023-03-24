@@ -1,3 +1,22 @@
+## [8.0.0-alpha.17](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.16...v8.0.0-alpha.17) (2023-03-24)
+
+
+### Bug Fixes
+
+* Revert "fix: header image height fixed (#103)" (#111) ([9d53dfd](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9d53dfd6cc174f0a2eb033b36a782d9fb9b71b1a)), closes [#103](https://github.com/RedTurtle/design-comuni-plone-theme/issues/103) [#111](https://github.com/RedTurtle/design-comuni-plone-theme/issues/111)
+* add Quanto Costa section to page index ([#100](https://github.com/RedTurtle/design-comuni-plone-theme/issues/100)) ([d8038cc](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d8038cc5b9cf7a4b3b18f17c43e712f3cef8375e))
+* align FormValidation.js customization with Volto pr [#4601](https://github.com/RedTurtle/design-comuni-plone-theme/issues/4601) (fix isValidURL regexp) ([#105](https://github.com/RedTurtle/design-comuni-plone-theme/issues/105)) ([5e6c404](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5e6c4042ae4cf8ec64b0a71464e3a0a988c163f9))
+* carousel close button ([#96](https://github.com/RedTurtle/design-comuni-plone-theme/issues/96)) ([f5d0dcc](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f5d0dccc6e418ac454bc1310b6a2965fcdcd52d9))
+* fixed card heading css rules ([#107](https://github.com/RedTurtle/design-comuni-plone-theme/issues/107)) ([db88ff9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/db88ff9236d482eadda2e2e4ab212335105b4f8f))
+* header image height fixed ([#103](https://github.com/RedTurtle/design-comuni-plone-theme/issues/103)) ([182fa50](https://github.com/RedTurtle/design-comuni-plone-theme/commit/182fa500863327e2424740b16713d34e68b7ee2e))
+* lateral padding for navbar ([#106](https://github.com/RedTurtle/design-comuni-plone-theme/issues/106)) ([e167f34](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e167f34b5e3feab3f5078b66b0e96a87481ee9d0))
+* object browser initial search position ([#98](https://github.com/RedTurtle/design-comuni-plone-theme/issues/98)) ([1a16c8a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1a16c8a30b43795d61a1fbbe2aad0bfa31ac172e))
+
+
+### Maintenance
+
+* remove duplicate code ([566b0cf](https://github.com/RedTurtle/design-comuni-plone-theme/commit/566b0cf46a046b2cf10bd271d06935b5be4b1b5a))
+
 ## [8.0.0-alpha.16](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.15...v8.0.0-alpha.16) (2023-03-22)
 
 
