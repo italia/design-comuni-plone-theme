@@ -29,7 +29,7 @@ const HeaderCenter = () => {
   return (
     <Header small={false} theme="" type="center">
       <HeaderContent>
-        <div className="it-brand-wrapper ps-3">
+        <div className="it-brand-wrapper ps-4">
           <UniversalLink
             href={subsite?.['@id'] ? flattenToAppURL(subsite['@id']) : '/'}
             title="homepage"
