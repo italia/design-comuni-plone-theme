@@ -178,7 +178,7 @@ export const addLighthouseFieldLinkMore = (schema, intl, position = 0) => {
     intl.formatMessage(messages.id_lighthouse_description),
     {
       choices: [
-        ['live-button-event', 'live-button-event'],
+        ['live-button-events', 'live-button-events'],
         ['live-button-locations', 'live-button-locations'],
       ],
     },
