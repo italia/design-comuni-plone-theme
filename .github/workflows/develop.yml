@@ -29,7 +29,7 @@ jobs:
           cache-to: type=inline
 
       - name: Deploy to rancher
-        uses: redturtle/rancher-deploy-action@v0.1.0
+        uses: redturtle/rancher-deploy-action@v0.2.0
         with:
           host: ${{ secrets.RANCHER_HOST }}
           api-username: ${{ secrets.RANCHER_API_USERNAME }}
