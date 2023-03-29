@@ -282,15 +282,15 @@ body.cms-ui {
               text-overflow: unset;
             }
           }
-          &:hover .tooltip-text {
-            visibility: visible;
-            opacity: 1;
-          }
         }
         .tooltip {
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
+          &:hover + .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+          }
           &:last-child {
             max-width: none;
             white-space: normal;
@@ -299,6 +299,7 @@ body.cms-ui {
         }
         .tooltip-text {
           position: absolute;
+          visibility: hidden;
           z-index: 1;
           bottom: 125%;
           left: 50%;
