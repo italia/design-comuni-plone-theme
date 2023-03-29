@@ -1,3 +1,15 @@
+### [7.3.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.3.0...v7.3.1) (2023-03-29)
+
+
+### Bug Fixes
+
+* missing Dal in dates if event dates are not occurring in same year ([#99](https://github.com/RedTurtle/design-comuni-plone-theme/issues/99)) ([376803a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/376803a4e52a87ab35796a04cf10176c5d6852dd))
+
+
+### Documentation
+
+* updated version in publiccode.yml ([91a53c9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/91a53c94ce18441d5d92296b82665babc17a9ecf))
+
 ## [7.3.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.2.0...v7.3.0) (2023-03-10)
 
 
