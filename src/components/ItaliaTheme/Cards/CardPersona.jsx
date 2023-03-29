@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardBody, CardTitle, CardText } from 'design-react-kit';
+import cx from 'classnames';
 
 import { UniversalLink } from '@plone/volto/components';
 import { CardCategory } from 'design-comuni-plone-theme/components/ItaliaTheme';
@@ -25,6 +26,7 @@ export const CardPersona = ({
     maxSize: 300,
     useOriginal: false,
   });
+
   return (
     <Card
       className={`card-persona card-big p-3 card-teaser-image card-flex no-after ${
@@ -46,7 +48,15 @@ export const CardPersona = ({
               {item.title || item.id}
             </UniversalLink>
           </CardTitle>
-          {listingText && <CardText>{listingText}</CardText>}
+          {listingText && (
+            <CardText
+              className={cx('', {
+                'card-with-picture': !!image,
+              })}
+            >
+              {listingText}
+            </CardText>
+          )}
         </CardBody>
         {showImage && (
           <div className="card-image card-image-rounded">{image}</div>

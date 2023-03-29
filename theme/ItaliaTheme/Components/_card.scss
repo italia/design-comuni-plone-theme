@@ -67,18 +67,9 @@
       @include rem-size(font-size, 18);
       @include rem-size(line-height, 24);
       font-family: 'Titillium Web' !important;
-    }
-  }
-
-  .card-image {
-    flex-basis: 20%;
-    @include rem-size(max-width, 111.18);
-    max-height: -webkit-fill-available;
-    max-width: 111px;
-    margin: auto;
-
-    img {
-      width: -webkit-fill-available;
+      &.card-with-picture {
+        width: 60%;
+      }
     }
   }
 }
