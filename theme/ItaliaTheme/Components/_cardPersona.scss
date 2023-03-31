@@ -1,0 +1,67 @@
+.card-persona.card-teaser-image.card-flex.card {
+  min-height: 135px;
+  height: fit-content;
+  .card-image-wrapper {
+    .card-image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      height: 100%;
+      picture.volto-image {
+        height: 100%;
+        display: flex;
+        align-items: stretch;
+
+        img {
+          min-width: 5.27rem;
+          max-width: 7.2rem;
+          width: auto;
+          min-height: 7.5rem;
+          object-fit: cover;
+          aspect-ratio: 180/100;
+          object-position: center;
+        }
+      }
+    }
+    .card-title {
+      font-size: $card-big-head-size;
+      line-height: $card-big-head-l-h;
+    }
+  }
+
+  &.listing-item {
+    .card-body {
+      .category-top {
+        width: 50%;
+
+        svg {
+          height: 1.3rem;
+          width: auto;
+        }
+
+        span.text {
+          font-size: 0.7rem;
+        }
+      }
+
+      h3.card-title {
+        width: 50%;
+        a {
+          font-size: 1.1rem;
+          line-height: 1.5rem;
+        }
+      }
+
+      p.card-text {
+        font-size: 0.8rem;
+      }
+    }
+
+    .card-image {
+      margin-bottom: 0.8em;
+      height: auto;
+    }
+  }
+}
