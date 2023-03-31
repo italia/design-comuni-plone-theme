@@ -3,8 +3,8 @@
     .point-list {
       .point-list-aside.point-list-warning {
         width: 6.8rem;
-        color: $primary;
-        border-color: $primary;
+        color: $link-color;
+        border-color: currentColor;
         border-right-width: 2px;
 
         .point-month {
@@ -13,7 +13,7 @@
       }
 
       .point-list-aside.point-list-warning:after {
-        background-color: $primary;
+        background-color: currentColor;
         width: 0.67em;
         height: 0.67em;
         right: -7px;

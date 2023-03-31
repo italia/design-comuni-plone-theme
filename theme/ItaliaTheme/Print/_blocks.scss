@@ -82,7 +82,7 @@
       }
 
       h2 {
-        color: $primary !important;
+        color: $link-color !important;
       }
 
       .grid {
@@ -104,7 +104,7 @@
         }
 
         h2.text-secondary {
-          color: $primary !important;
+          color: $link-color !important;
         }
 
         border: 1px solid $gray-border;

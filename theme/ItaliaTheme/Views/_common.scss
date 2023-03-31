@@ -118,7 +118,7 @@ picture.volto-image.responsive img.full-width {
       line-height: 1em;
 
       a {
-        color: $primary;
+        color: $link-color;
         font-size: 1.125rem;
         line-height: 1.625rem;
       }
@@ -129,13 +129,13 @@ picture.volto-image.responsive img.full-width {
     ul {
       li {
         button.btn-link {
-          color: $primary;
+          color: $link-color;
 
           &:hover {
-            color: $primary;
+            color: $link-color;
 
             .icon {
-              fill: $primary;
+              fill: $link-color;
             }
           }
         }
@@ -282,7 +282,7 @@ div.sticky-wrapper {
       }
     }
     svg {
-      fill: $primary;
+      fill: $link-color;
     }
   }
 }

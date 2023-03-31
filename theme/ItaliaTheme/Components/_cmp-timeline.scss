@@ -25,7 +25,7 @@
 }
 
 .calendar-vertical {
-  color: $primary;
+  color: $link-color;
 
   &::after {
     display: block;
@@ -122,7 +122,7 @@
       right: 5px;
       width: 2px;
       height: 100%;
-      background-color: $primary;
+      background-color: $link-color;
       content: '';
     }
 
@@ -134,7 +134,7 @@
       z-index: 1;
       top: 1.875rem;
       right: 0.2px;
-      background-color: $primary;
+      background-color: $link-color;
       border-radius: 5px;
 
       @include media-breakpoint-down(md) {

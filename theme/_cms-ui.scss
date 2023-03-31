@@ -108,7 +108,7 @@ body.cms-ui {
 
   .public-ui {
     a {
-      color: $primary;
+      color: $link-color;
     }
   }
 
@@ -586,22 +586,22 @@ body.cms-ui {
   #page-login {
     .help {
       a {
-        color: $primary;
+        color: $link-color;
 
         &:hover,
         &:focus {
-          color: darken($primary, 10%);
+          color: darken($link-color, 10%);
           text-decoration: underline;
         }
       }
     }
 
     button#login-form-submit.ui.basic.button.primary {
-      color: $primary !important;
+      color: $link-color !important;
 
       &:hover,
       &:focus {
-        color: darken($primary, 10%) !important;
+        color: darken($link-color, 10%) !important;
       }
     }
 

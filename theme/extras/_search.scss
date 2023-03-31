@@ -11,7 +11,7 @@ body.search-modal-opened {
 #search-modal {
   .btn-link {
     &:focus {
-      box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba($primary, 0.5);
+      box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba($link-color, 0.5);
     }
   }
 
@@ -54,7 +54,7 @@ body.search-modal-opened {
   }
 
   .card {
-    &::after{
+    &::after {
       content: none;
     }
     .card-body {

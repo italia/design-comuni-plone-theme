@@ -29,7 +29,7 @@
     .genericcard {
       h5.card-title {
         svg {
-          fill: $primary;
+          fill: $link-color;
           @include margin-size(margin-right, 20);
         }
         a {

@@ -30,12 +30,12 @@
       .link-list {
         &.bordered {
           li {
-            border-bottom: 1px solid rgba($primary, 0.2);
+            border-bottom: 1px solid rgba($link-color, 0.2);
 
             &:hover,
             &:active,
             a.active {
-              background-color: rgba($primary, 0.06);
+              background-color: rgba($link-color, 0.06);
             }
 
             a,

@@ -1,3 +1,17 @@
+.link-list-wrapper ul li a {
+  span {
+    color: $link-color;
+  }
+  &:hover:not(.disabled) {
+    span {
+      color: $link-color;
+    }
+    .icon {
+      fill: $link-color;
+    }
+  }
+}
+
 // Rimuovere quando il componente SideMenu sarà fatto con un accordion, senza l'h3 come titolo
 @include media-breakpoint-up(lg) {
   .link-list-wrapper.menu-link-list {

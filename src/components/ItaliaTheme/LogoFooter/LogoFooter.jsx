@@ -1,6 +1,3 @@
-import React from 'react';
-import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
-
 /*
  * Customization with image
  *
@@ -13,6 +10,11 @@ import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
  * Note the icon class.
  */
 
-const LogoFooter = () => <Icon color="" icon="it-pa" padding={false} size="" />;
+// eslint-disable-next-line import/no-unresolved
+import logo from '../Logo/logo.png';
+
+const LogoFooter = () => (
+  <img className="icon" src={logo} width="82" height="82" alt="Logo" />
+);
 
 export default LogoFooter;

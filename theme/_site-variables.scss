@@ -8,19 +8,18 @@ Questo file definisce alcune variabili aggiuntive per design-comuni-plone-theme
 $placeholder: #b8c6c9 !default;
 
 //site
-$primary-h: 210 !default;
-// $primary-s: 4 !default;
-// $primary-b: 99 !default;
+$primary-h: 229 !default;
+$primary-s: 72 !default;
+// $primary-b: 80 !default;
+
 $primary-text: #fff !default;
 $secondary-text: #fff !default;
 $tertiary: #be2816 !default;
 $tertiary-text: #fff !default;
-$highlight-search: #ff0;
-$font-family-monospace-light: Roboto Mono Light;
+$highlight-search: #ff0 !default;
+$font-family-monospace-light: Roboto Mono Light !default;
 
-$caption-text: #455b71;
-
-$bg-light: 236, 239, 241;
+$caption-text: #455b71 !default;
 
 $primary-a0: hsl($primary-h, 62%, 97%) !default;
 
@@ -30,5 +29,5 @@ $argument-icon-bg: #f5f6f7 !default;
 // $dvt-header-center-max-height: 166px;
 // $header-center-max-height-mob: 80px;
 
-$dvt-navigation-v-padding: 15px;
+$dvt-navigation-v-padding: 15px !default;
 // $navigation-h-padding: 24px;

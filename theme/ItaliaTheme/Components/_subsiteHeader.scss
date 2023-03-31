@@ -7,7 +7,7 @@
   .text {
     z-index: 2;
     width: 100%;
-    color: #fff;
+    color: $primary-text;
     font-size: 1.5em;
     font-style: italic;
     line-height: 1.5em;
@@ -18,7 +18,7 @@
     h3,
     h4,
     a {
-      color: #fff;
+      color: $primary-text;
       font-family: $font-family-sans-serif;
       font-style: normal;
     }

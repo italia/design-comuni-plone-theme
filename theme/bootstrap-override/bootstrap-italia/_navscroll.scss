@@ -1,0 +1,7 @@
+.navbar.it-navscroll-wrapper .link-list-wrapper ul li a.active {
+  border-color: $link-color;
+
+  span {
+    color: $link-color;
+  }
+}
