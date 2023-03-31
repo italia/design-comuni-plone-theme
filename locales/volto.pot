@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-03-24T09:49:18.288Z\n"
+"POT-Creation-Date: 2023-03-24T11:17:43.107Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -3089,6 +3089,11 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderStatoServizio
 # defaultMessage: Servizio attivo
 msgid "service_on"
+msgstr ""
+
+#: components/ItaliaTheme/View/ServizioView/ServizioArgomenti
+# defaultMessage: Argomenti:
+msgid "service_topics"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/RelatedItems

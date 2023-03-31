@@ -3089,6 +3089,11 @@ msgstr "Servizio non attivo"
 msgid "service_on"
 msgstr "Servizio attivo"
 
+#: components/ItaliaTheme/View/ServizioView/ServizioArgomenti
+# defaultMessage: Argomenti:
+msgid "service_topics"
+msgstr "Argomenti:"
+
 #: components/ItaliaTheme/View/Commons/RelatedItems
 # defaultMessage: Servizi
 msgid "servizi"

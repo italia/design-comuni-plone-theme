@@ -162,6 +162,7 @@ export ServizioCorrelati from 'design-comuni-plone-theme/components/ItaliaTheme/
 export ServizioUlterioriInformazioni from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioUlterioriInformazioni';
 export ServizioMetadati from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioMetadati';
 export ServizioCondizioni from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioCondizioni';
+export ServizioArgomenti from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioArgomenti';
 
 export TrasparenzaPlaceholderAfterContent from 'design-comuni-plone-theme/components/ItaliaTheme/View/TrasparenzaView/Placeholder/AfterContent';
 export UOPlaceholderAfterContent from 'design-comuni-plone-theme/components/ItaliaTheme/View/UOView/Placeholder/AfterContent';
