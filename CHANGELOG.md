@@ -1,3 +1,18 @@
+## [8.0.0-alpha.19](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.18...v8.0.0-alpha.19) (2023-03-31)
+
+
+### Features
+
+* moved topics section from PageHeader and positioned them after Contacts section in ServizioView ([#123](https://github.com/RedTurtle/design-comuni-plone-theme/issues/123)) ([3aaa3dd](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3aaa3dd0f99d14ecaf7089576f93227e1a8e38c0))
+
+
+### Bug Fixes
+
+* colori dei link, loghi e configurazione base ([#119](https://github.com/RedTurtle/design-comuni-plone-theme/issues/119)) ([5d0796d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5d0796d32ba97f46e7374b59ce45db02934a2acd))
+* fixed CardPersona style ([#122](https://github.com/RedTurtle/design-comuni-plone-theme/issues/122)) ([58f5a6c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/58f5a6cc519e5c68560f5a4bd3b56c9ce5bf8afd))
+* fixed ContactsCard style ([#118](https://github.com/RedTurtle/design-comuni-plone-theme/issues/118)) ([6cde606](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6cde606586a25981fc299f773784046fea9ebdb8))
+* update volto-feedback questions to adhere to new agid specifications ([#124](https://github.com/RedTurtle/design-comuni-plone-theme/issues/124)) ([8d044e2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8d044e27980bbaf4d8c3c1e6a2dc9ebf3a6aec6b))
+
 ## [8.0.0-alpha.18](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.17...v8.0.0-alpha.18) (2023-03-29)
 
 
