@@ -32,6 +32,10 @@ const messages = defineMessages({
     id: 'feedback_form_title',
     defaultMessage: 'How clear is the information on this page?',
   },
+  service_title: {
+    id: 'feedback_form_title_service',
+    defaultMessage: 'How easy was it to use this service?',
+  },
   yes: {
     id: 'feedback_form_yes',
     defaultMessage: 'Yes',
@@ -65,9 +69,50 @@ const messages = defineMessages({
     id: 'feedback_sent',
     defaultMessage: 'Your feedback was sent!',
   },
+  unclear_instructions: {
+    id: 'feedback_unclear_instructions',
+    defaultMessage: 'Some instructions were not clear and confusin',
+  },
+  incomplete_instructions: {
+    id: 'feedback_incomplete_instructions',
+    defaultMessage: 'Some instructions were incomplete',
+  },
+  unclear_proceeding: {
+    id: 'feedback_unclear_proceeding',
+    defaultMessage:
+      "Sometimes I couldn't understand if I was proceeding correctly",
+  },
+  technical_problems: {
+    id: 'feedback_technical_problems',
+    defaultMessage: 'I ran into technical problems',
+  },
+  other_negative: {
+    id: 'feedback_other_negative',
+    defaultMessage: 'Other',
+  },
+  clear_instructions: {
+    id: 'feedback_clear_instructions',
+    defaultMessage: 'The instructions were clear',
+  },
+  complete_instructions: {
+    id: 'feedback_complete_instructions',
+    defaultMessage: 'The instructions were complete',
+  },
+  clear_proceeding: {
+    id: 'feedback_clear_proceeding',
+    defaultMessage: 'I always understood that I was proceeding correctly',
+  },
+  no_technical_problems: {
+    id: 'feedback_no_technical_problems',
+    defaultMessage: 'I had no technical problems',
+  },
+  other_positive: {
+    id: 'feedback_other_positive',
+    defaultMessage: 'Other',
+  },
 });
 
-const FeedbackForm = () => {
+const FeedbackForm = ({ contentType }) => {
   const intl = useIntl();
   const location = useLocation();
   const path = location.pathname ?? '/';
@@ -185,7 +230,9 @@ const FeedbackForm = () => {
                         className="title-medium-2-semi-bold mb-0"
                         data-element="feedback-title"
                       >
-                        {intl.formatMessage(messages.title)}
+                        {contentType === 'Servizio'
+                          ? intl.formatMessage(messages.service_title)
+                          : intl.formatMessage(messages.title)}
                       </h2>
                       <div className="rating-container mb-0">
                         <Rating

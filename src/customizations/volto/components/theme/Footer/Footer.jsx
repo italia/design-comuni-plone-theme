@@ -35,7 +35,9 @@ const Footer = ({ intl }) => {
     <>
       {contentType != null &&
         NoFeedbackFormFor.indexOf(contentType) < 0 &&
-        config.settings.siteProperties.enableFeedbackForm && <FeedbackForm />}
+        config.settings.siteProperties.enableFeedbackForm && (
+          <FeedbackForm contentType={contentType} />
+        )}
 
       <SubsiteFooter />
       <footer className="it-footer" id="footer">
