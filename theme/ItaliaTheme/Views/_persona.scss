@@ -5,18 +5,4 @@
       font-weight: 600;
     }
   }
-
-  section#contacts {
-    div.card {
-      .card-text {
-        font-size: 1rem;
-        @include rem-size(line-height, 28);
-        strong {
-          color: $secondary;
-          text-transform: capitalize;
-          font-weight: 600;
-        }
-      }
-    }
-  }
 }
