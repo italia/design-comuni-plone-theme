@@ -33,6 +33,7 @@ const LoginButton = ({ children, size = 'full' }) => {
       icon={false}
       size={size}
       tag="a"
+      data-element="personal-area-login"
     >
       {children}
     </Button>
