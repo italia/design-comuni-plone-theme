@@ -1,6 +1,18 @@
 .it-footer {
   .it-footer-main {
     .it-brand-wrapper {
+      display: flex;
+      align-items: center;
+      gap: var(--bs-gutter-x);
+      @media (max-width: #{map-get($grid-breakpoints, sm)}) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nextGenerationEULogo {
+        margin-top: 10px;
+        width: 178px;
+        height: 56px;
+      }
       a {
         h2 {
           font-size: 1.777778rem;

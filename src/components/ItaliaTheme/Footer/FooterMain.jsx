@@ -12,6 +12,7 @@ import {
   FooterInfos,
   LogoFooter,
   BrandTextFooter,
+  FooterPNRRLogo,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/';
 
 /**
@@ -27,6 +28,7 @@ const FooterMain = () => {
           <Row className="clearfix" tag="div">
             <Col sm={12} tag="div" widths={['xs', 'sm', 'md', 'lg', 'xl']}>
               <div className="it-brand-wrapper">
+                <FooterPNRRLogo />
                 <UniversalLink href="/">
                   <LogoFooter />
                   <BrandTextFooter />

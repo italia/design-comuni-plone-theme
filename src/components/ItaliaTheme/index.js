@@ -53,6 +53,7 @@ export Logo from 'design-comuni-plone-theme/components/ItaliaTheme/Logo/Logo';
 export BrandText from 'design-comuni-plone-theme/components/ItaliaTheme/BrandText/BrandText';
 export BrandTextFooter from 'design-comuni-plone-theme/components/ItaliaTheme/BrandTextFooter/BrandTextFooter';
 export LogoFooter from 'design-comuni-plone-theme/components/ItaliaTheme/LogoFooter/LogoFooter';
+export FooterPNRRLogo from 'design-comuni-plone-theme/components/ItaliaTheme/Footer/FooterPNRRLogo';
 export FooterMain from 'design-comuni-plone-theme/components/ItaliaTheme/Footer/FooterMain';
 export FooterInfos from 'design-comuni-plone-theme/components/ItaliaTheme/Footer/FooterInfos';
 export FooterNavigation from 'design-comuni-plone-theme/components/ItaliaTheme/Footer/FooterNavigation';
