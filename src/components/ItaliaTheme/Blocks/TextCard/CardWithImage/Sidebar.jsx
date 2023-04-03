@@ -98,11 +98,11 @@ const Sidebar = ({ data, block, onChangeBlock }) => {
             title={intl.formatMessage(messages.CardImageSize)}
           >
             <ImageSizeWidget
-              onChangeBlock={(b, value) => {
-                onChangeBlock({ ...data, sizeImage: value.size });
+              onChange={(b, value) => {
+                onChangeBlock({ ...data, [b]: value });
               }}
-              data={{ ...data, size: data.sizeImage || 's' }}
-              block={block}
+              id={'sizeImage'}
+              value={data.sizeImage || 's'}
             />
           </FormFieldWrapper>
         </Accordion.Content>
