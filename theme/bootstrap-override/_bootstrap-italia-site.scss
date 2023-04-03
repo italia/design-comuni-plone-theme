@@ -95,7 +95,7 @@
   @import './bootstrap-italia/breadcrumb';
   @import 'bootstrap-italia/src/scss/custom/modal';
   // @import 'bootstrap-italia/src/scss/custom/collapse'; // TODO check: rimosso in bs-it v2
-  // @import 'bootstrap-italia/src/scss/custom/accordion'; // aggiunto in bs5, ma noi avevamo già un accordion nostro
+  @import 'bootstrap-italia/src/scss/custom/accordion';
   @import 'bootstrap-italia/src/scss/custom/carousel';
   @import 'bootstrap-italia/src/scss/custom/calendar';
   @import 'bootstrap-italia/src/scss/custom/alert';
