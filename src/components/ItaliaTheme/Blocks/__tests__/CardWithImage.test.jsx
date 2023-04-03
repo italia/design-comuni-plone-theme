@@ -104,8 +104,8 @@ test('View renders all fields', async () => {
   expect(cardBodyRow).toHaveClass('revert-row');
 
   // rapporto dimensione immagine-testo
-  const textCol = screen.findByTestId('col-1');
-  expect(textCol).toHaveClass('col-lg-8');
+  const textCol = await screen.findByTestId('col-1');
+  expect(textCol.getAttribute('class')).toContain('col-8');
 });
 
 test('View renders image as m size', async () => {
@@ -117,8 +117,8 @@ test('View renders image as m size', async () => {
     </Provider>,
   );
   // rapporto dimensione immagine-testo
-  const textCol = screen.findByTestId('col-1');
-  expect(textCol).toHaveClass('col-lg-6');
+  const textCol = await screen.findByTestId('col-1');
+  expect(textCol.getAttribute('class')).toContain('col-6');
 });
 
 test('View renders image as l size', async () => {
@@ -130,8 +130,8 @@ test('View renders image as l size', async () => {
     </Provider>,
   );
   // rapporto dimensione immagine-testo
-  const textCol = screen.findByTestId('col-1');
-  expect(textCol).toHaveClass('col-lg-4');
+  const textCol = await screen.findByTestId('col-1');
+  expect(textCol.getAttribute('class')).toContain('col-4');
 });
 
 test('View renders block without image', async () => {
@@ -143,6 +143,6 @@ test('View renders block without image', async () => {
     </Provider>,
   );
   // rapporto dimensione immagine-testo
-  const textCol = screen.findByTestId('col-1');
-  expect(textCol).toHaveClass('col-lg-12');
+  const textCol = await screen.findByTestId('col-1');
+  expect(textCol.getAttribute('class')).toContain('col-12');
 });
