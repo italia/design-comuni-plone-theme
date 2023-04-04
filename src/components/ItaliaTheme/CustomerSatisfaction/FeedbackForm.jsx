@@ -230,9 +230,14 @@ const FeedbackForm = ({ contentType }) => {
                         className="title-medium-2-semi-bold mb-0"
                         data-element="feedback-title"
                       >
-                        {contentType === 'Servizio'
+                        {/* Il validatore a quanto pare fa il check per titolo.
+                            Il titolo da specifiche deve essere diverso per Servizi, ma loro non lo sanno
+                            https://github.com/italia/pa-website-validator/blob/main/src/storage/municipality/feedbackComponentStructure.ts#L8
+                        */}
+                        {/* {contentType === 'Servizio'
                           ? intl.formatMessage(messages.service_title)
-                          : intl.formatMessage(messages.title)}
+                          : intl.formatMessage(messages.title)} */}
+                        {intl.formatMessage(messages.title)}
                       </h2>
                       <div className="rating-container mb-0">
                         <Rating

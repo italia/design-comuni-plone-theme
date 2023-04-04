@@ -116,7 +116,7 @@ const AnswersStep = ({
         aria-hidden={
           userFeedback === null || userFeedback > threshold || step !== 0
         }
-        data-element={'feedback-rating-positive'}
+        data-element={'feedback-rating-negative'}
       >
         <FormHeader
           title={intl.formatMessage(messages.header_negative)}
