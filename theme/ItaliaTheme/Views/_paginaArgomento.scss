@@ -17,12 +17,12 @@ $header-image-argomento-height-mobile: 300px;
     justify-content: center;
     background-color: $white;
 
-    // img {
-    //   width: 80px !important;
-    //   height: 80px;
-    //   @extend .rounded-circle;
-    //   margin: 0 auto;
-    // }
+    img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
   }
 
   .title-description-wrapper {
