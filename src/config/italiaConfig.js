@@ -346,6 +346,14 @@ export default function applyConfig(voltoConfig) {
       sidebarTab: 1,
     },
     rssBlock,
+    text: {
+      ...config.blocks.blocksConfig.text,
+      restricted: false,
+    },
+    slate: {
+      ...config.blocks.blocksConfig.slate,
+      restricted: true,
+    },
     table: {
       ...config.blocks.blocksConfig.table,
       restricted: false,
