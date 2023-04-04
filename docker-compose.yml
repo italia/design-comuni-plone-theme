@@ -2,7 +2,7 @@ version: '3'
 
 services:
   backend:
-    image: ghcr.io/redturtle/dist.design.plone:latest
+    image: ghcr.io/redturtle/iocomune-backend:latest
     ports:
       - '8080:8080'
     environment:
