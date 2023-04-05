@@ -1,3 +1,35 @@
+## [8.0.0-alpha.20](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.19...v8.0.0-alpha.20) (2023-04-05)
+
+
+### Features
+
+* add configurable PNRR/NextGenerationEU footer logo ([a1f575b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a1f575bad7e1b7977d46327cf7868517b415cd83))
+
+
+### Bug Fixes
+
+* add data-element to LoginButton component ([6a2492a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6a2492a37604941889c030cc9a662481923d41d5))
+* bs-it accordion styles readded ([dd1fd19](https://github.com/RedTurtle/design-comuni-plone-theme/commit/dd1fd19f2bab7d1bbb428b8ad794faa0e3d69f3a))
+* CardWithImage mobile styles, ImageSize selector and tests ([15c77ec](https://github.com/RedTurtle/design-comuni-plone-theme/commit/15c77ec9486afd22e4e822bff9b35fef94898171))
+* changing FeedbackForm title to disregard Service CT value because validator does not respect AGID specifications ([692967c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/692967ce0c7cf279c4001dd88094c51b6f76abf1))
+* fix and rework SideMenu component not showing current section/correct progress ([d7a8ee6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d7a8ee6c11c457ea7f345cce51cf0e66f0617f6c))
+* fix CardWithImage block tests ([fadb661](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fadb661b97eb97adb0cc560fcb4a220b657ed265))
+* fix smallblockLinksTemplate css ([cb5fccd](https://github.com/RedTurtle/design-comuni-plone-theme/commit/cb5fccd80b085e5a3cbe46e0ab7a5ee2846f59a2))
+* highlighted block styles ([43f6eed](https://github.com/RedTurtle/design-comuni-plone-theme/commit/43f6eed6590fec321848a7f43d84cea318ffb8d9))
+* pagina argomento header uo images ([8e4904a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8e4904ab194b51407fc1715af41ed3bed61e7a81))
+* persona image back to header ([05a6677](https://github.com/RedTurtle/design-comuni-plone-theme/commit/05a667716c107e7ba00040a4247e3d9127715515))
+* responsive styles ([#120](https://github.com/RedTurtle/design-comuni-plone-theme/issues/120)) ([e5b4978](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e5b497846dac9a267844957cbd7535cdfd292709))
+* search text input component if page opened with precompiled text ([132d495](https://github.com/RedTurtle/design-comuni-plone-theme/commit/132d495ea198bf83acd118b71efc55b31a6b70d7))
+* servizio argomenti position ([33a3e2f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/33a3e2f9bf0fd2e2904f8805de8da04d1ef86f6d))
+* text block in block chooser ([58020c2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/58020c27daa82e14b3d532f196bb0121cedd9469))
+* toc styles ([b5f1f17](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b5f1f17b8e4e715268be0ca6ff640a2a4f52861e))
+* updated i18n ([ca8ce05](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ca8ce05b91e9c38db5a2d0e0757330c2d225b6f8))
+
+
+### Maintenance
+
+* rimossa patch per le variabili in fase di build ([#86](https://github.com/RedTurtle/design-comuni-plone-theme/issues/86)) ([5fa3544](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5fa3544666d536c746274712ad9d5961df0792e1))
+
 ## [8.0.0-alpha.19](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.18...v8.0.0-alpha.19) (2023-03-31)
 
 
