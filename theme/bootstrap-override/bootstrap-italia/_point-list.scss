@@ -1,28 +1,33 @@
-.public-ui {
-  .point-list-wrapper {
-    .point-list {
-      .point-list-aside.point-list-warning {
+.point-list-wrapper {
+  .point-list {
+    .point-list-aside {
+      &.point-list-warning {
         width: 6.8rem;
         color: $link-color;
         border-color: currentColor;
         border-right-width: 2px;
 
+        .point-date {
+          display: flex;
+          align-items: flex-end;
+        }
+
         .point-month {
           text-transform: none;
         }
       }
+    }
 
-      .point-list-aside.point-list-warning:after {
-        background-color: currentColor;
-        width: 0.67em;
-        height: 0.67em;
-        right: -7px;
-      }
-      .point-list-content {
-        .card-teaser {
-          &.card {
-            padding: 0.8em;
-          }
+    .point-list-aside.point-list-warning:after {
+      background-color: $primary;
+      width: 0.67em;
+      height: 0.67em;
+      right: -7px;
+    }
+    .point-list-content {
+      .card-teaser {
+        &.card {
+          padding: 0.8em;
         }
       }
     }

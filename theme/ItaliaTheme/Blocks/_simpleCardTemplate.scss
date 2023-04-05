@@ -132,6 +132,11 @@
         &:active {
           text-decoration: underline;
         }
+
+        @include media-breakpoint-between(768px, 1023px) {
+          font-size: 1.5rem;
+          line-height: 1.5rem;
+        }
       }
     }
 

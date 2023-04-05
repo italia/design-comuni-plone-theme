@@ -130,11 +130,31 @@
       flex-direction: column-reverse;
 
       .buttons {
-        justify-content: flex-start;
+        justify-content: center;
+
+        .btn {
+          min-width: 9.5rem;
+          &:last-of-type {
+            margin-left: 0em;
+          }
+        }
       }
 
       .read-more {
         margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+.block-editor-hero {
+  .block.hero {
+    .hero-image {
+      width: 450px;
+      max-height: 650px;
+
+      img {
+        object-fit: contain;
       }
     }
   }

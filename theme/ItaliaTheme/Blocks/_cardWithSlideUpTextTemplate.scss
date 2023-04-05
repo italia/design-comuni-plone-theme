@@ -22,15 +22,21 @@
     display: flex;
     height: 350px;
     flex-direction: column;
-    justify-content: flex-end;
     padding: 1.2rem;
     text-decoration: none;
 
     .title {
       z-index: 2;
+      margin-top: auto;
       margin-bottom: 0.8rem;
       color: #fff;
       font-size: 1.7rem;
+      overflow: hidden;
+      max-height: calc(5em * 1.25); // 5 lines
+
+      &.ellipsis::after {
+        content: '…';
+      }
     }
 
     p {
@@ -123,6 +129,10 @@
 
     .box {
       height: 250px;
+
+      .title {
+        max-height: calc(6em * 1.1428); // 6 lines
+      }
 
       .box-slide-up {
         display: none;

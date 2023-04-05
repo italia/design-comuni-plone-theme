@@ -50,7 +50,7 @@
     display: flex;
   }
   .card-body {
-    padding: 0px !important;
+    padding: 0em !important;
     h5.card-title {
       margin-bottom: 0.3em !important;
       font-weight: 600;
@@ -103,43 +103,6 @@
   }
 }
 
-.card-with-image-template {
-  .listing-item.card {
-    .card-body {
-      .category-top {
-        font-size: 0.875rem;
-        line-height: 1.313rem;
-        color: $caption-text;
-
-        span.text {
-          font-weight: 600;
-          letter-spacing: 1px;
-        }
-
-        span.data {
-          font-weight: 400;
-          letter-spacing: 1.1px;
-        }
-      }
-
-      h3.card-title {
-        a {
-          font-size: 1.3rem;
-          line-height: 1.75rem;
-          font-weight: 700;
-          color: $link-color;
-        }
-      }
-
-      p.card-text {
-        font-size: 1rem;
-        line-height: 1.5rem;
-        color: $secondary;
-      }
-    }
-  }
-}
-
 #documenti-collegati .genericcard {
   .card-body {
     h5.card-title {
@@ -162,6 +125,21 @@
       a {
         color: $link-color;
         font-size: 1.7rem;
+      }
+    }
+  }
+}
+
+.block.listing.simpleCard {
+  .card {
+    @include media-breakpoint-between(320px, 1023px) {
+      row-gap: 0.56em;
+    }
+
+    .card-body {
+      @include media-breakpoint-between(320px, 1023px) {
+        margin-left: 0em;
+        flex-basis: 100%;
       }
     }
   }
