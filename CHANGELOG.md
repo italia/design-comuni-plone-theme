@@ -1,3 +1,15 @@
+## [8.0.0-alpha.21](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.20...v8.0.0-alpha.21) (2023-04-05)
+
+
+### Bug Fixes
+
+* card with slide up text styles ([9181eb9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9181eb90956a86711676410e8c81b83d8c2b72dc))
+
+
+### Maintenance
+
+* fixed tests ([e6c4d5b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e6c4d5b9f8e17a3b61fdc4f29a55f2e806e9e58f))
+
 ## [8.0.0-alpha.20](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.19...v8.0.0-alpha.20) (2023-04-05)
 
 
