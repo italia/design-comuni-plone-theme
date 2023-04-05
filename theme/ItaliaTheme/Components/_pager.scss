@@ -1,0 +1,21 @@
+.pagination-wrapper {
+  @include media-breakpoint-between(320px, 1023px) {
+    ul.pagination {
+      flex-wrap: nowrap;
+    }
+
+    li.page-item {
+      button.page-link {
+        min-width: 1rem;
+        height: 2rem;
+      }
+
+      &:first-child,
+      &:last-child {
+        button.page-link {
+          padding: 0px;
+        }
+      }
+    }
+  }
+}

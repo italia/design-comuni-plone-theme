@@ -55,6 +55,7 @@ const CardWithSlideUpTextTemplate = (props) => {
             const image = getListingImageBackground(item, 'teaser');
             const category = getCategory(item, show_type, show_section, props);
             const date = hide_dates ? null : getCalendarDate(item);
+            const title = item?.title || '';
 
             return (
               <UniversalLink
@@ -77,7 +78,14 @@ const CardWithSlideUpTextTemplate = (props) => {
                     {date}
                   </div>
                 )}
-                <h3 className="title">{item?.title}</h3>
+                <h3
+                  className={cx('title', {
+                    ellipsis: title.length > 50,
+                  })}
+                  title={title.length > 50 ? title : undefined}
+                >
+                  {title.substring(0, 50)}
+                </h3>
                 <div className="box-slide-up">
                   {show_description && item.description && (
                     <p>{item.description}</p>

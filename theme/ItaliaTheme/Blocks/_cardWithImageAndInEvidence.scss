@@ -109,3 +109,58 @@
     }
   }
 }
+
+.card-with-image-template {
+  .listing-item.card {
+    .card-body {
+      .category-top {
+        font-size: 0.875rem;
+        line-height: 1.313rem;
+        color: $caption-text;
+
+        .text {
+          font-weight: 600;
+          letter-spacing: 1px;
+        }
+
+        .data {
+          font-weight: 400;
+          letter-spacing: 1.1px;
+        }
+      }
+
+      .card-title {
+        a {
+          font-size: 1.3rem;
+          line-height: 1.75rem;
+          font-weight: 700;
+          color: $link-color;
+        }
+      }
+
+      .card-text {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: $secondary;
+      }
+    }
+  }
+  @include media-breakpoint-between(320px, 767px) {
+    .listing-item.card {
+      .card-body {
+        .category-top {
+          flex-wrap: wrap;
+        }
+
+        .data.data {
+          margin-top: 3px;
+          flex-basis: 100%;
+
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
