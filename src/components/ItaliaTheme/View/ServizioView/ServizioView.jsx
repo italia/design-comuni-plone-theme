@@ -85,11 +85,11 @@ export const ServizioViewSectionsOrder = (props) => [
 
   { /* CONTATTI */ component: ServizioContatti },
 
-  { /* ARGOMENTI */ component: ServizioArgomenti },
-
   { /* TRASPARENZA */ component: ServizioTrasparenza },
 
   { /* CORRELATI  */ component: ServizioCorrelati },
+
+  { /* ARGOMENTI */ component: ServizioArgomenti },
 
   { /* ULTIMO AGGIORNAMENTO  */ component: ServizioMetadati },
 ];

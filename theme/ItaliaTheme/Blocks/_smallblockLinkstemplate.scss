@@ -15,12 +15,11 @@
     background: white;
     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
 
-    img,
+    .volto-image.responsive img,
     .img-skeleton {
       width: auto;
       max-width: 100%;
       height: 100px;
-      object-fit: contain;
     }
 
     .img-skeleton {

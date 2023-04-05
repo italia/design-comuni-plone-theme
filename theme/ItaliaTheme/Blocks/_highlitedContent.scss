@@ -17,15 +17,13 @@
 
   .card-title {
     a {
-      color: $text-color;
-      font-size: 1.8rem;
+      font-size: 1.7rem;
       line-height: 2.3rem;
       text-decoration: none;
       transition: 0.2s color ease;
 
       &:hover,
       &:focus {
-        color: $link-color;
         text-decoration: underline;
       }
     }

@@ -63,7 +63,7 @@ const PaginaArgomentoView = ({ content }) => {
     return () => {
       if (content?.unita_amministrative_responsabili?.length > 0) {
         content.unita_amministrative_responsabili.forEach((x) => {
-          dispatch(resetContent(x['@id']));
+          dispatch(resetContent(flattenToAppURL(x['@id'])));
         });
       }
     };
@@ -101,6 +101,15 @@ const PaginaArgomentoView = ({ content }) => {
 
               {content?.unita_amministrative_responsabili?.length > 0 &&
                 content?.unita_amministrative_responsabili?.map((u, index) => {
+                  const uo_object =
+                    searchResults[flattenToAppURL(u['@id'])]?.data;
+                  let alt = u.title;
+                  if (uo_object?.preview_image && uo_object?.preview_caption) {
+                    alt = uo_object.preview_caption;
+                  } else if (uo_object?.image && uo_object?.image_caption) {
+                    alt = uo_object.image_caption;
+                  }
+
                   return (
                     <div className="row mb-3" key={index}>
                       <div className="w-100">
@@ -120,24 +129,21 @@ const PaginaArgomentoView = ({ content }) => {
                                   </UniversalLink>
                                 </span>
                               </CardCategory>
-                              <CardText>
-                                {searchResults[u['@id']]?.data?.street}
-                              </CardText>
+                              <CardText>{uo_object?.street}</CardText>
                             </CardBody>
-                            {searchResults[u['@id']]?.data?.image && (
-                              <div className="image-container me-3">
-                                <Image
-                                  itemUrl={u['@id']}
-                                  image={searchResults[u['@id']].data?.image}
-                                  alt={
-                                    searchResults[u['@id'].data?.image_caption]
-                                  }
-                                  title={
-                                    searchResults[u['@id'].data?.image_caption]
-                                  }
-                                />
-                              </div>
-                            )}
+                            {uo_object &&
+                              (uo_object.preview_image || uo_object.image) && (
+                                <div className="image-container me-3">
+                                  <Image
+                                    image={
+                                      uo_object.preview_image || uo_object.image
+                                    }
+                                    alt={alt}
+                                    title={alt}
+                                    responsive={false}
+                                  />
+                                </div>
+                              )}
                           </div>
                         </Card>
                       </div>

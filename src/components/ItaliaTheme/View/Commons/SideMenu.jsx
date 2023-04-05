@@ -2,10 +2,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-unused-expressions */
 import { defineMessages, useIntl } from 'react-intl';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { throttle } from 'lodash';
 import { Progress } from 'design-react-kit';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import cx from 'classnames';
 
 const messages = defineMessages({
   index: {
@@ -65,55 +66,53 @@ const SideMenu = ({ data, content_uid }) => {
 
   const [headers, setHeaders] = useState([]);
   const [activeSection, setActiveSection] = useState(null);
+  const [scrollY, setScrollY] = useState(0);
 
   const [isNavOpen, setIsNavOpen] = useState(false);
-  const [windowScrollY, setWindowScrollY] = useState(0);
 
-  useEffect(() => {
-    if (data?.children) {
-      let extractedHeaders = extractHeaders(data.children, intl);
-
-      if (extractedHeaders.length > 0) {
-        setHeaders(extractedHeaders);
-        setActiveSection(extractedHeaders[0].id);
-      }
-      setWindowScrollY(window.scrollY);
-    }
-  }, [data, content_uid]);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const handleScroll = throttle(() => {
-    let scrollDown = window.scrollY > windowScrollY;
-
-    setWindowScrollY(window.scrollY);
-    let scrollOffset = (scrollDown ? 0.15 : 0.85) * window.innerHeight;
-    let headersHeights = headers
+  const handleScroll = useCallback(() => {
+    const scrollOffset = 0.1 * window.innerHeight;
+    setScrollY(window.scrollY);
+    const headersHeights = headers
       .map((section) => {
-        let element = document.getElementById(section.id);
+        const element = document.getElementById(section.id);
         return {
           id: section.id,
           top: element?.getBoundingClientRect()?.top,
         };
       })
       .filter((section) => section.top <= scrollOffset);
-
     if (headersHeights.length > 0) {
-      let section = headersHeights.reduce(
+      const section = headersHeights.reduce(
         (prev, curr) => (prev.top > curr.top ? prev : curr),
         headers[0],
       );
+      setActiveSection(section.id);
+    }
+  }, [headers, activeSection]);
 
-      if (section.id !== activeSection.current) {
-        setActiveSection(section.id);
+  useEffect(() => {
+    if (data?.children) {
+      const extractedHeaders = extractHeaders(data.children, intl);
+
+      if (extractedHeaders.length > 0) {
+        setHeaders(extractedHeaders);
+        setActiveSection(extractedHeaders[0].id);
       }
     }
-  }, 100);
+  }, [data, content_uid]);
+
+  useEffect(() => {
+    if (headers.length > 0)
+      window.addEventListener('scroll', throttledHandleScroll, {
+        passive: true,
+      });
+    return () => {
+      window.removeEventListener('scroll', throttledHandleScroll);
+    };
+  }, [headers]);
+
+  const throttledHandleScroll = throttle(handleScroll, 100);
 
   const handleClickAnchor = (id) => (e) => {
     e.preventDefault();
@@ -123,6 +122,14 @@ const SideMenu = ({ data, content_uid }) => {
     });
     setIsNavOpen(false);
   };
+
+  const progressValue = useMemo(() => {
+    return (
+      scrollY /
+        (document.documentElement.scrollHeight -
+          document.documentElement.clientHeight) || 0
+    );
+  }, [scrollY]);
 
   return headers?.length > 0 ? (
     <div className="sticky-wrapper navbar-wrapper page-side-menu">
@@ -185,23 +192,15 @@ const SideMenu = ({ data, content_uid }) => {
             <div className="link-list-wrapper menu-link-list">
               <h3>{intl.formatMessage(messages.index)}</h3>
               <div className="mb-3">
-                <Progress
-                  value={
-                    100 *
-                    (window.scrollY /
-                      (document.documentElement.scrollHeight -
-                        document.documentElement.clientHeight))
-                  }
-                  role="progressbar"
-                />
+                <Progress value={100 * progressValue} role="progressbar" />
               </div>
               <ul className="link-list" data-element="page-index">
                 {headers.map((item, i) => (
                   <li className="nav-item" key={item.id}>
                     <a
-                      className={`nav-link ${
-                        item.id === activeSection && 'active'
-                      }`}
+                      className={cx('nav-link', {
+                        active: item.id === activeSection,
+                      })}
                       href={`#${item.id}`}
                       onClick={handleClickAnchor(item.id)}
                     >

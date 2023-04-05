@@ -207,11 +207,12 @@ const Block = ({
                   'revert-row': data?.rightImage,
                 })}
               >
-                <Col className="py-4 px-0" key={'col-0'}>
+                <Col className="py-4 px-0" key={'col-0'} data-testid={'col-0'}>
                   {renderImage(data?.image, hasImage, data?.sizeNatural)}
                 </Col>
                 <div
                   key={'col-1'}
+                  data-testid={'col-1'}
                   className={cx('p-4', {
                     'col-12': !hasImage,
                     'col-8':

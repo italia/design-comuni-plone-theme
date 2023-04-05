@@ -49,7 +49,23 @@ const mock_fields = {
   rightImage: true,
   showImage: true,
   sizeNatural: true,
-  // sizeImage
+  sizeImage: 's',
+};
+
+const mock_fields_m_image = {
+  ...mock_fields,
+  sizeImage: 'm',
+};
+
+const mock_fields_l_image = {
+  ...mock_fields,
+  sizeImage: 'l',
+};
+const mock_fields_no_image = {
+  ...mock_fields,
+  sizeImage: undefined,
+  showImage: false,
+  image: undefined,
 };
 
 const store = mockStore({
@@ -87,5 +103,46 @@ test('View renders all fields', async () => {
   const cardBodyRow = document.querySelector('.card-body-row');
   expect(cardBodyRow).toHaveClass('revert-row');
 
-  //dimensione immagine --> non funziona
+  // rapporto dimensione immagine-testo
+  const textCol = await screen.findByTestId('col-1');
+  expect(textCol.getAttribute('class')).toContain('col-8');
+});
+
+test('View renders image as m size', async () => {
+  render(
+    <Provider store={store}>
+      <MemoryRouter>
+        <Block data={mock_fields_m_image} />
+      </MemoryRouter>
+    </Provider>,
+  );
+  // rapporto dimensione immagine-testo
+  const textCol = await screen.findByTestId('col-1');
+  expect(textCol.getAttribute('class')).toContain('col-6');
+});
+
+test('View renders image as l size', async () => {
+  render(
+    <Provider store={store}>
+      <MemoryRouter>
+        <Block data={mock_fields_l_image} />
+      </MemoryRouter>
+    </Provider>,
+  );
+  // rapporto dimensione immagine-testo
+  const textCol = await screen.findByTestId('col-1');
+  expect(textCol.getAttribute('class')).toContain('col-4');
+});
+
+test('View renders block without image', async () => {
+  render(
+    <Provider store={store}>
+      <MemoryRouter>
+        <Block data={mock_fields_no_image} />
+      </MemoryRouter>
+    </Provider>,
+  );
+  // rapporto dimensione immagine-testo
+  const textCol = await screen.findByTestId('col-1');
+  expect(textCol.getAttribute('class')).toContain('col-12');
 });

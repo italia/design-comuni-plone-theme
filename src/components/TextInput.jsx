@@ -36,7 +36,7 @@ export default function TextInput(props) {
         <label
           htmlFor={id}
           className={cx({
-            active: isFocused,
+            active: isFocused || !!otherProps.value,
             'has-prepend': !!prepend,
           })}
         >

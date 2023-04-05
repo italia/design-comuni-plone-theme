@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useIntl, defineMessages } from 'react-intl';
 import {
   Container,
   Row,
@@ -8,12 +9,12 @@ import {
   CardBody,
   CardTitle,
   CardText,
+  CardReadMore,
   Chip,
 } from 'design-react-kit';
 import cx from 'classnames';
 
 import { UniversalLink } from '@plone/volto/components';
-import { flattenToAppURL } from '@plone/volto/helpers';
 
 import {
   getCalendarDate,
@@ -24,7 +25,7 @@ import {
   ListingText,
   CardCategory,
   getItemIcon,
-  ListingLinkMore,
+  // ListingLinkMore,
   ListingImage,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
@@ -40,6 +41,8 @@ const ContentInEvidenceTemplate = ({
   linkmore_id_lighthouse,
   titleLine,
 }) => {
+  const intl = useIntl();
+
   return (
     <div className="contentInEvidenceTemplate">
       <Container
@@ -56,7 +59,6 @@ const ContentInEvidenceTemplate = ({
             </Col>
           </Row>
         )}
-
         {items.map((item, index) => {
           const date = getCalendarDate(item);
           const eventRecurrenceMore = getEventRecurrenceMore(item, isEditMode);
@@ -79,10 +81,7 @@ const ContentInEvidenceTemplate = ({
                       />
                     </CardCategory>
                     <CardTitle tag="h2">
-                      <UniversalLink
-                        href={flattenToAppURL(item['@id'])}
-                        data-element={id_lighthouse}
-                      >
+                      <UniversalLink item={item} data-element={id_lighthouse}>
                         {item.title}
                       </UniversalLink>
                     </CardTitle>
@@ -99,7 +98,7 @@ const ContentInEvidenceTemplate = ({
                               className="me-2"
                             >
                               <UniversalLink
-                                href={flattenToAppURL(argomento['@id'])}
+                                item={argomento}
                                 className="chip-label text-decoration-none"
                               >
                                 {argomento.title}
@@ -110,20 +109,30 @@ const ContentInEvidenceTemplate = ({
                       )}
 
                     {eventRecurrenceMore}
+                    {linkHref?.[0]?.['@id'] && (
+                      <CardReadMore
+                        tag={UniversalLink}
+                        iconName="it-arrow-right"
+                        text={
+                          linkTitle || intl.formatMessage(messages.view_all)
+                        }
+                        href={linkHref[0]['@id']}
+                      />
+                    )}
                   </CardBody>
                 </Card>
               </Col>
             </Row>
           );
         })}
-
+        {/* Commentato in favore del CardReadMore sopra
         <ListingLinkMore
           title={linkTitle}
           href={linkHref}
           linkAlign={linkAlign}
           className="my-4"
           linkmoreIdLighthouse={linkmore_id_lighthouse}
-        />
+      /> */}
       </Container>
     </div>
   );
@@ -138,3 +147,10 @@ ContentInEvidenceTemplate.propTypes = {
 };
 
 export default ContentInEvidenceTemplate;
+
+const messages = defineMessages({
+  view_all: {
+    id: 'Vedi tutto',
+    defaultMessage: 'Vedi tutto',
+  },
+});

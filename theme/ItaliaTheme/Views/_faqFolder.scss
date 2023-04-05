@@ -51,13 +51,16 @@ body.contenttype-faqfolder {
         font-size: 0.85rem;
       }
 
-      .collapse-div {
+      .accordion {
         margin-bottom: 3rem;
 
-        .collapse-header {
+        .accordion-header {
           font-size: 1.4rem;
 
-          *[data-toggle='collapse']:before {
+          .accordion-button[data-bs-toggle='collapse'][aria-expanded='false'] {
+            color: $primary;
+          }
+          .accordion-button[data-bs-toggle='collapse']:before {
             width: 2.5rem;
           }
         }
