@@ -1,3 +1,13 @@
+.public-ui {
+  .card {
+    .card-body {
+      .card-text {
+        line-height: 1.5em;
+      }
+    }
+  }
+}
+
 .card.border-left-card {
   border-left: 8px solid $primary-a0;
   box-shadow: 0px 4px 4px 0px #00000026;
@@ -151,17 +161,6 @@
       }
       svg {
         fill: $link-color;
-      }
-    }
-  }
-}
-
-.block.highlitedContent {
-  div.card {
-    h2.card-title {
-      a {
-        color: $link-color;
-        font-size: 1.7rem;
       }
     }
   }
