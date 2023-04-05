@@ -27,7 +27,6 @@
 
     .title {
       z-index: 2;
-      margin-top: auto;
       margin-bottom: 0.8rem;
       color: #fff;
       font-size: 1.7rem;
@@ -37,6 +36,15 @@
       &.ellipsis::after {
         content: '…';
       }
+    }
+
+    .category,
+    .title {
+      margin-top: auto !important;
+    }
+
+    .category + .title {
+      margin-top: 0 !important;
     }
 
     p {
