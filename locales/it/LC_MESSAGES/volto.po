@@ -633,6 +633,7 @@ msgid "Vedi l'immagine"
 msgstr "Vedi l'immagine"
 
 #: components/ItaliaTheme/Blocks/Listing/Commons/ListingLinkMore
+#: components/ItaliaTheme/Blocks/Listing/ContentInEvidenceTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithImageRssTemplate
 #: components/ItaliaTheme/Blocks/RssBlock/CardWithoutImageRssTemplate
 #: components/ItaliaTheme/MegaMenu/MegaMenu
