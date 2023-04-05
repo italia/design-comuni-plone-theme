@@ -713,6 +713,6 @@ test('View renders all fields', async () => {
 
   //link more
   expect(
-    screen.getByRole('link', { name: /Is this just fantasy?/i }),
-  ).toBeInTheDocument();
+    screen.getAllByRole('link', { name: /Is this just fantasy?/i }).length,
+  ).toEqual(2);
 });
