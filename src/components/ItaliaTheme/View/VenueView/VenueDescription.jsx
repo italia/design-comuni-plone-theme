@@ -62,7 +62,7 @@ const VenueDescription = ({ content }) => {
           content={content.elementi_di_interesse}
         />
       )}
-      {content.luoghi_correlati?.length > 0 && (
+      {content?.luoghi_correlati?.length > 0 && (
         <RichTextSection
           tag_id={'luoghi_correlati'}
           title={intl.formatMessage(messages.luoghi_correlati)}

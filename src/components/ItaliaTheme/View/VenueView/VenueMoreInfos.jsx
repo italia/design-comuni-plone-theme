@@ -26,7 +26,7 @@ const VenueMoreInfos = ({ content }) => {
   return (
     <Metadata content={content} showSectionTitle={showSectionTitle}>
       {/* SEDE DI */}
-      {content.sede_di?.length > 0 && (
+      {content?.sede_di?.length > 0 && (
         <div className="mb-5">
           <RelatedArticles
             title_size={'h5'}

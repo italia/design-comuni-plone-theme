@@ -133,7 +133,7 @@ const VenueContacts = ({ content }) => {
           </CardBody>
         </Card>
       )} */}
-        {content.contact_info?.length > 0 &&
+        {content?.contact_info?.length > 0 &&
           content.contact_info.map((contact) => (
             <ContactsCard
               contact={contact}
@@ -156,7 +156,7 @@ const VenueContacts = ({ content }) => {
           tag_id="struttura_responsabile"
           title={intl.formatMessage(messages.struttura_responsabile)}
         >
-          {content.struttura_responsabile_correlati?.length > 0 ? (
+          {content?.struttura_responsabile_correlati?.length > 0 ? (
             //STRUTTURE RESPONSABILI CORRELATE
             <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
               {content?.struttura_responsabile_correlati?.map((item, i) => (
