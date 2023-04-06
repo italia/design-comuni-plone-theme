@@ -1,3 +1,10 @@
+## [8.0.0-alpha.23](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.22...v8.0.0-alpha.23) (2023-04-06)
+
+
+### Bug Fixes
+
+* ssr error in SideMenu ([bd90ea7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/bd90ea713c749349fad92a1a1413ffbc77ffe17c))
+
 ## [8.0.0-alpha.22](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.21...v8.0.0-alpha.22) (2023-04-06)
 
 
