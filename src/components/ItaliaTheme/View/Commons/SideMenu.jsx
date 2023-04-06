@@ -67,8 +67,13 @@ const SideMenu = ({ data, content_uid }) => {
   const [headers, setHeaders] = useState([]);
   const [activeSection, setActiveSection] = useState(null);
   const [scrollY, setScrollY] = useState(0);
+  const [isClient, setIsClient] = useState(false);
 
   const [isNavOpen, setIsNavOpen] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const handleScroll = useCallback(() => {
     const scrollOffset = 0.1 * window.innerHeight;
@@ -124,12 +129,13 @@ const SideMenu = ({ data, content_uid }) => {
   };
 
   const progressValue = useMemo(() => {
+    if (!isClient) return 0;
     return (
       scrollY /
         (document.documentElement.scrollHeight -
           document.documentElement.clientHeight) || 0
     );
-  }, [scrollY]);
+  }, [scrollY, isClient]);
 
   return headers?.length > 0 ? (
     <div className="sticky-wrapper navbar-wrapper page-side-menu">
