@@ -1,3 +1,11 @@
+## [8.0.0-alpha.22](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.21...v8.0.0-alpha.22) (2023-04-06)
+
+
+### Bug Fixes
+
+* bootstrap breakpoint usage ([7cad6eb](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7cad6eb043b779180304fb7e8492675f14420385))
+* venue view length conditions ([#128](https://github.com/RedTurtle/design-comuni-plone-theme/issues/128)) ([7921e61](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7921e617f2d61630698db0c2d5fe190e7c31485c))
+
 ## [8.0.0-alpha.21](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.20...v8.0.0-alpha.21) (2023-04-05)
 
 
