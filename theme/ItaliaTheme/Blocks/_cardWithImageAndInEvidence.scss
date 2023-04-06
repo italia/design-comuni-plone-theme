@@ -145,7 +145,25 @@
       }
     }
   }
-  @include media-breakpoint-between(320px, 767px) {
+  @include media-breakpoint-only(lg) {
+    .listing-item.card {
+      .card-body {
+        .category-top {
+          flex-wrap: wrap;
+        }
+
+        .data.data {
+          margin-top: 3px;
+          flex-basis: 100%;
+
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  @include media-breakpoint-down(sm) {
     .listing-item.card {
       .card-body {
         .category-top {

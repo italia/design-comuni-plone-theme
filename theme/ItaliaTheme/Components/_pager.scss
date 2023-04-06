@@ -1,5 +1,5 @@
 .pagination-wrapper {
-  @include media-breakpoint-between(320px, 1023px) {
+  @include media-breakpoint-down(xl) {
     ul.pagination {
       flex-wrap: nowrap;
     }

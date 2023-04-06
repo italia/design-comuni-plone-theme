@@ -141,16 +141,14 @@
 }
 
 .block.listing.simpleCard {
-  .card {
-    @include media-breakpoint-between(320px, 1023px) {
+  @include media-breakpoint-down(xl) {
+    .card {
       row-gap: 0.56em;
     }
 
     .card-body {
-      @include media-breakpoint-between(320px, 1023px) {
-        margin-left: 0em;
-        flex-basis: 100%;
-      }
+      margin-left: 0em;
+      flex-basis: 100%;
     }
   }
 }
