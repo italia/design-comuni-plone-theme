@@ -69,34 +69,40 @@ const OfficeCard = ({
           </UniversalLink>
         </h5>
         <p className="card-text">{office_fo.description}</p>
-        {show_contacts &&
-          (office_fo.city || office_fo.zip_code || office_fo.street) && (
-            <div className="card-text">
-              {office_fo.street && <p>{office_fo.street}</p>}
-              {(office_fo.city || office_fo.zip_code) && (
-                <p>
-                  {office_fo.zip_code} {office_fo.city}
-                </p>
-              )}
-              {(office_fo.telefono || office_fo.email) && (
-                <p>
-                  <ContactLink tel={office_fo.telefono} label={true} />
-                  <br />
-                  <ContactLink email={office_fo.email} label={true} />
-                </p>
-              )}
+        {show_contacts && office_fo?.sede?.length > 0 && (
+          <div>
+            {' '}
+            {office_fo?.sede?.map((sede) => {
+              return (
+                <div className="card-text">
+                  {sede.street && <p>{sede.street}</p>}
+                  {(sede.city || sede.zip_code) && (
+                    <p>
+                      {sede.zip_code} {sede.city}
+                    </p>
+                  )}
+                  {(sede.telefono || sede.email) && (
+                    <p>
+                      Telefono: <ContactLink tel={sede.telefono} label={true} />
+                      <br />
+                      Email: <ContactLink email={sede.email} label={true} />
+                    </p>
+                  )}
 
-              {extended ? (
-                <>
-                  <RichText
-                    serif={false}
-                    add_class="card-text"
-                    content={office_fo.contact_info}
-                  />
-                </>
-              ) : null}
-            </div>
-          )}
+                  {extended ? (
+                    <>
+                      <RichText
+                        serif={false}
+                        add_class="card-text"
+                        content={office_fo.sede.contact_info}
+                      />
+                    </>
+                  ) : null}
+                </div>
+              );
+            })}
+          </div>
+        )}
         {children && <div className="card-text">{children}</div>}
       </div>
       <div className="image-container">
