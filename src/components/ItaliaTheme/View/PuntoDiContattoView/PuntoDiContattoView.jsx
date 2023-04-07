@@ -38,7 +38,7 @@ const messages = defineMessages({
     defaultMessage: 'Social',
   },
   telefono: {
-    id: 'phone',
+    id: 'telefono',
     defaultMessage: 'Telefono',
   },
   fax: {
@@ -87,7 +87,6 @@ const messages = defineMessages({
 const PuntoDiContattoView = (props) => {
   const { content } = props;
   const intl = useIntl();
-
   return (
     <div className="container px-4 my-4 punto-di-contatto-view">
       <SkipToMainContent />
@@ -110,9 +109,11 @@ const PuntoDiContattoView = (props) => {
             return (
               <div className="my-2" key={i}>
                 <h6>
-                  {intl.formatMessage(messages.label, {
-                    value: intl.formatMessage(messages[pdc?.pdc_type]),
-                  })}
+                  {messages[pdc?.pdc_type] === undefined
+                    ? pdc?.pdc_type
+                    : intl.formatMessage(messages.label, {
+                        value: intl.formatMessage(messages[pdc?.pdc_type]),
+                      })}
                   <span className="ml-1">{renderPDCItemValue(pdc)}</span>
                 </h6>
               </div>
