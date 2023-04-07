@@ -2,6 +2,7 @@ import React from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 
+import { Row, Col } from 'design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
 import { RichTextSection } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
@@ -29,27 +30,36 @@ const DocumentoAutori = ({ autori, title }) => {
       content={autori}
       title={intl.formatMessage(messages.autore)}
     >
-      <div className="autori-container col-12 col-sm-8">
-        {autori.map((autore) => (
-          <div className="card card-big card-teaser rounded shadow ">
-            <div className="card-body p-4">
-              <h5 className="card-title">
-                <UniversalLink item={autore} title={autore.title}>
-                  {autore.title}
-                </UniversalLink>
-              </h5>
-              <p className="card-text">{autore.description}</p>
-            </div>
-            <div className="card-image">
-              <img
-                src={
-                  autore?.image_scales.foto_persona[0]?.scales.preview.download
-                }
-                alt={autore.title}
-              />
-            </div>
-          </div>
-        ))}
+      <div className="autori-container">
+        <Row className="card-wrapper card-teaser-wrapper  ruolo-persone-struttura">
+          {autori.map((autore) => (
+            <Col xs="12" lg="12" xl="6" md="12" key={autore['@id']}>
+              <div className="card-persona card-big-io-comune p-3 card-teaser-image card-flex no-after shadow card">
+                <div className="card-body p-4">
+                  <h5 className="card-title">
+                    <UniversalLink item={autore} title={autore.title}>
+                      {autore.title}
+                    </UniversalLink>
+                  </h5>
+                  <p className="card-text">{autore.description}</p>
+                </div>
+                <div className="card-image-wrapper">
+                  <div className="card-image">
+                    <div className="volto-image">
+                      <img
+                        src={
+                          autore?.image_scales.foto_persona[0]?.scales.preview
+                            .download
+                        }
+                        alt={autore.title}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Col>
+          ))}
+        </Row>
       </div>
     </RichTextSection>
   );

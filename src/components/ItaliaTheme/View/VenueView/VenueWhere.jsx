@@ -36,7 +36,7 @@ const VenueWhere = ({ content }) => {
     content.quartiere ||
     richTextHasContent(content.notes) ? (
     <RichTextSection tag_id="dove" title={intl.formatMessage(messages.dove)}>
-      <Card className="card card-teaser border-left-card preview-image-card card-big shadow mt-3 rounded mb-4">
+      <Card className="card card-teaser border-left-card preview-image-card card-big-io-comune shadow mt-3 rounded mb-4">
         <CardBody>
           <CardTitle>
             <h5 className="card-title">{content.title}</h5>

@@ -50,7 +50,7 @@ const OfficeCard = ({
     <div
       className={cx(
         'card card-teaser border-left-card rounded shadow p-3 ',
-        size === 'big' ? 'card-big' : 'card-small',
+        size === 'big' ? 'card-big-io-comune' : 'card-small',
         {
           'mb-3': margin_bottom,
         },

@@ -24,6 +24,10 @@
         text-decoration: none;
         text-transform: none;
       }
+
+      a:hover {
+        text-decoration: underline;
+      }
     }
 
     p.card-text {
@@ -31,8 +35,8 @@
     }
   }
 
-  &.card-big {
-    h5.card-title,
+  &.card-big-io-comune {
+    .card-title,
     .text.fw-bold {
       color: $link-color;
       font-weight: 600;
@@ -41,6 +45,10 @@
         @include rem-size(line-height, 32);
         text-decoration: none;
         text-transform: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
       }
     }
 
@@ -55,21 +63,32 @@
   }
 }
 
-.card-big {
+.card-big-io-comune {
   &.card.card-teaser {
     display: flex;
   }
   .card-body {
     padding: 0em !important;
-    h5.card-title {
+    .category-top {
+      .category {
+        text-decoration: none;
+      }
+    }
+
+    .card-title {
       margin-bottom: 0.3em !important;
       font-weight: 600;
 
-      a {
+      a,
+      &.venue-card-title.venue-card-title {
         @include rem-size(font-size, 24);
         @include rem-size(line-height, 32);
         text-decoration: none;
         font-weight: 600;
+      }
+
+      a:hover {
+        text-decoration: underline;
       }
     }
 
@@ -121,6 +140,10 @@
         @include rem-size(line-height, 24);
         font-weight: 600;
         text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
       }
       svg {
         fill: $link-color;

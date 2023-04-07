@@ -32,7 +32,7 @@ const Locations = ({
   location_items = [...location_items, ...locations];
   return (
     <>
-      <div className="card-wrapper card-teaser-wrapper">
+      <div className="card-wrapper card-teaser-wrapper align-items-stretch">
         {[...location_items].map((item, i) => (
           <LocationItem
             key={item['@id'] + i}

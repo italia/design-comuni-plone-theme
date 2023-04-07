@@ -96,7 +96,7 @@ const GenericCard = ({
       <div
         className={cx(
           'genericcard card card-teaser shadow p-4 mt-3 rounded',
-          size === 'big' ? 'card-big' : 'card-small',
+          size === 'big' ? 'card-big-io-comune' : 'card-small',
         )}
       >
         <div className="card-body">

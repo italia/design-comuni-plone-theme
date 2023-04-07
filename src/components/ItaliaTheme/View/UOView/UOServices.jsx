@@ -33,7 +33,7 @@ const UOServices = ({ content }) => {
       <Row className="card-wrapper card-teaser-wrapper mt-4">
         {content?.servizi_offerti?.map((servizio, i) => (
           <Col xs="12" lg="6">
-            <Card className="shadow rounded">
+            <Card className="shadow rounded card-big-io-comune p-3">
               <CardBody>
                 <CardCategory date="">{servizio.parent_title}</CardCategory>
                 <CardTitle tag="h5">
