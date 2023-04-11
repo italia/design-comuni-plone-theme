@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-04-07T15:06:57.638Z\n"
+"POT-Creation-Date: 2023-04-11T09:03:06.987Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -2532,11 +2532,6 @@ msgstr ""
 msgid "persone_struttura"
 msgstr ""
 
-#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
-# defaultMessage: Telefono
-msgid "phone"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
 # defaultMessage: Testo di aiuto
 msgid "placeholder"
@@ -3516,6 +3511,7 @@ msgid "supported_by"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/ContactLink
+#: components/ItaliaTheme/View/PuntoDiContattoView/PuntoDiContattoView
 # defaultMessage: Tel
 msgid "telefono"
 msgstr ""
