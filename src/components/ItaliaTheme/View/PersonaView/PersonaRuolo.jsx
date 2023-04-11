@@ -1,4 +1,5 @@
 import { defineMessages, useIntl } from 'react-intl';
+import { UniversalLink } from '@plone/volto/components';
 import {
   richTextHasContent,
   RichTextSection,
@@ -14,6 +15,10 @@ const messages = defineMessages({
   ruolo: {
     id: 'ruolo',
     defaultMessage: 'Incarico',
+  },
+  atto_nomina: {
+    id: 'atto_nomina',
+    defaultMessage: 'Atto di nomina',
   },
   organizzazione_riferimento: {
     id: 'organizzazione_riferimento',
@@ -77,9 +82,16 @@ const PersonaRuolo = ({ content }) => {
             tag_id="incarico"
             title={intl.formatMessage(messages.ruolo)}
           >
-            <div className="font-serif">
-              {content.incarichi_persona[0].title}
-            </div>
+            {content?.incarichi_persona?.map((incarico) => (
+              <div className="font-serif">
+                <p>{incarico.title}</p>
+                {incarico.atto_di_nomina && (
+                  <UniversalLink href={incarico.atto_di_nomina}>
+                    {intl.formatMessage(messages.atto_nomina)}
+                  </UniversalLink>
+                )}
+              </div>
+            ))}
           </RichTextSection>
           <RichTextSection
             tag_id="tipologia_incarico"

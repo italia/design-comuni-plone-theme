@@ -328,6 +328,8 @@ const mock_allfields = {
       '@id':
         'http://localhost:3000/amministrazione/personale-amministrativo/gianluca-luchetti/incarichi/incaricone',
       '@type': 'Incarico',
+      atto_di_nomina:
+        'http://localhost:3000/amministrazione/personale-amministrativo/gabriele-bianchi/incarichi/incarico-di-gabriele-bianchi/atto-nomina',
       compensi: {
         blocks: {},
         blocks_layout: {
@@ -2553,6 +2555,7 @@ test('expect to have all non-mandatory fields in page', async () => {
   //incarico
   expect(screen.getByRole('heading', { name: /Incarico/ })).toBeInTheDocument();
   expect(screen.getByText(/Incaricone/i)).toBeInTheDocument();
+  expect(screen.getByText(/Atto di nomina/i)).toBeInTheDocument();
 
   // tipo di incarico
   expect(
