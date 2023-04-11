@@ -1,3 +1,21 @@
+## [8.0.0-alpha.24](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.23...v8.0.0-alpha.24) (2023-04-11)
+
+
+### Features
+
+* intersectionObserver new settings and css block _smallblockLinkstemplate ([#125](https://github.com/RedTurtle/design-comuni-plone-theme/issues/125)) ([719067f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/719067f6ed0bda17b9940d939f1ffff0c192dab2))
+* show next generation eu logo by default ([ac66238](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ac66238f877e9c904ac2e093675361d1ccdfcd8d))
+
+
+### Bug Fixes
+
+* card-big class across all views ([#131](https://github.com/RedTurtle/design-comuni-plone-theme/issues/131)) ([be30e40](https://github.com/RedTurtle/design-comuni-plone-theme/commit/be30e40a0c35e5a91be51cb7067c09b8331c06fb))
+* i18n ([cea78a4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/cea78a4ca7104e16225fe4cf33235437072e6878))
+* link atto di nomina sulla persona ([#130](https://github.com/RedTurtle/design-comuni-plone-theme/issues/130)) ([8f10d79](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8f10d7928b08c1f63046b7fa1311825a898e7118))
+* notizia a cura di info in office card ([#127](https://github.com/RedTurtle/design-comuni-plone-theme/issues/127)) ([7017927](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7017927b4f9e96d1bbb234f33fd9a46f24f8a6b6))
+* pdc intl values ([#129](https://github.com/RedTurtle/design-comuni-plone-theme/issues/129)) ([a6bbc48](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a6bbc486106b32bc39d4ab63a086ebab73ea8385))
+* ribbon card styles ([#132](https://github.com/RedTurtle/design-comuni-plone-theme/issues/132)) ([ff75a75](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ff75a75e45ab3510998bbdc98313bcb781a0087f))
+
 ## [8.0.0-alpha.23](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.22...v8.0.0-alpha.23) (2023-04-06)
 
 
