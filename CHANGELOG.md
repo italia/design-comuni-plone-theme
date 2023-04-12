@@ -1,3 +1,11 @@
+## [8.0.0-alpha.25](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.24...v8.0.0-alpha.25) (2023-04-12)
+
+
+### Bug Fixes
+
+* i18n ([20e42f0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/20e42f0931a4c17b49cce3e12ada2cf1da17ad55))
+* listing block options ordering ([fda2d10](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fda2d1039672b64cfd68034b19616c7fcb282ddf))
+
 ## [8.0.0-alpha.24](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.23...v8.0.0-alpha.24) (2023-04-11)
 
 
