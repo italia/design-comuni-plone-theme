@@ -167,25 +167,3 @@ export const addLighthouseField = (schema, intl, position = 0) => {
 
   return pos;
 };
-
-export const addLighthouseFieldLinkMore = (schema, intl, position = 0) => {
-  let pos = position;
-
-  addSchemaField(
-    schema,
-    'linkmore_id_lighthouse',
-    intl.formatMessage(messages.id_lighthouse),
-    intl.formatMessage(messages.id_lighthouse_description),
-    {
-      choices: [
-        ['live-button-events', 'live-button-events'],
-        ['live-button-locations', 'live-button-locations'],
-      ],
-    },
-    2,
-    'linkmore',
-  );
-  pos++;
-
-  return pos;
-};

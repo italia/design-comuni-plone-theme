@@ -4,6 +4,7 @@ export {
 } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
 export addDefaultOptions from 'design-comuni-plone-theme/config/Blocks/ListingOptions/defaultOptions';
 export addDefaultAdditionalOptions from 'design-comuni-plone-theme/config/Blocks/ListingOptions/defaultAdditionalOptions';
+export addLinkMoreOptions from 'design-comuni-plone-theme/config/Blocks/ListingOptions/linkMoreOptions';
 export {
   addSimpleCardTemplateOptions,
   SimpleCardTemplateAppearance_COMPACT,
