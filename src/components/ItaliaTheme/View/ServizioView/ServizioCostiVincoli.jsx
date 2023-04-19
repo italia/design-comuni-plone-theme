@@ -25,7 +25,6 @@ const ServizioCostiVincoli = ({ content }) => {
   return richTextHasContent(content.costi) ||
     richTextHasContent(content.vincoli) ? (
     <RichTextSection
-      content={content.a_chi_si_rivolge}
       tag_id="costs"
       title={intl.formatMessage(messages.costi_e_vincoli_header)}
     >
