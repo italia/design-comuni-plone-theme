@@ -1,3 +1,10 @@
+## [8.0.0-alpha.26](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.25...v8.0.0-alpha.26) (2023-04-19)
+
+
+### Bug Fixes
+
+* testo duplicato nei costi del servizio ([8618d90](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8618d90acd8269952614194ce7f667e39d9da608))
+
 ## [8.0.0-alpha.25](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.24...v8.0.0-alpha.25) (2023-04-12)
 
 
