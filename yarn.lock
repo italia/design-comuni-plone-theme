@@ -2702,9 +2702,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@plone/volto@npm:16.18.0":
-  version: 16.18.0
-  resolution: "@plone/volto@npm:16.18.0"
+"@plone/volto@npm:16.20.4":
+  version: 16.20.4
+  resolution: "@plone/volto@npm:16.20.4"
   dependencies:
     "@babel/core": ^7.0.0
     "@babel/plugin-proposal-export-default-from": 7.18.9
@@ -2794,7 +2794,7 @@ __metadata:
     lodash-move: 1.1.1
     lodash-webpack-plugin: 0.11.5
     mini-css-extract-plugin: 0.9.0
-    moment: 2.24.0
+    moment: 2.29.4
     object-assign: 4.1.1
     pofile: 1.0.10
     postcss: 8.4.13
@@ -2886,7 +2886,7 @@ __metadata:
     webpack-node-externals: 3.0.0
     xmlrpc: 1.3.2
     yarnhook: 0.5.1
-  checksum: e20e3df02ed2abca75fa1539097f82861eec3ddc53aed9c53d5476db417d78e9dacf911d94ed12142270e59434ec5b61f618a939e203c894e50dc9b4e00de96f
+  checksum: 9294c3365b6a81e9c19d92f2614a53784db99de4006088a1dad44813f7752c3dc8b48e494f3af401126290ac8255a6b6948ad505fffc99aa359a322a233b8dd2
   languageName: node
   linkType: hard
 
@@ -7796,7 +7796,7 @@ __metadata:
     "@eeacms/volto-taxonomy": ^1.0.0
     "@loadable/babel-plugin": 5.13.2
     "@plone-collective/volto-sentry": 0.3.0
-    "@plone/volto": 16.18.0
+    "@plone/volto": 16.20.4
     "@release-it/conventional-changelog": ^2.0.1
     bootstrap-italia: 2.2.0
     bundlewatch: ^0.3.3
