@@ -1,3 +1,15 @@
+## [8.0.0-alpha.27](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.26...v8.0.0-alpha.27) (2023-04-24)
+
+
+### Features
+
+* update volto to 16.20.4 ([6a72b51](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6a72b51ff19115ac17f0e3c29382169c6feca974))
+
+
+### Bug Fixes
+
+* bg-gradient usage in cardSlideUpText ([b67dae6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b67dae6fb2f69d1a8d0aa97ed218178bfad242d5))
+
 ## [8.0.0-alpha.26](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.25...v8.0.0-alpha.26) (2023-04-19)
 
 
