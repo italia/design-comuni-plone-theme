@@ -1,3 +1,16 @@
+### [7.4.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.4.0...v7.4.1) (2023-04-24)
+
+
+### Bug Fixes
+
+* remove teaser block ([b526743](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b52674360ab2e484e16bc8802a0a3e6c3203e253))
+
+
+### Documentation
+
+* updated publiccode ([3f58f7d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3f58f7d4209d73c275732e56be440fb1b34105de))
+* updated publiccode ([cc9a025](https://github.com/RedTurtle/design-comuni-plone-theme/commit/cc9a02586acb3094291ddd06eb0d836440078043))
+
 ## [7.4.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.3.1...v7.4.0) (2023-04-24)
 
 
