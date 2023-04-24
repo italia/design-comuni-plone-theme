@@ -175,7 +175,7 @@
     "@babel/plugin-proposal-throw-expressions": "7.18.6",
     "@loadable/babel-plugin": "5.13.2",
     "@plone-collective/volto-sentry": "0.3.0",
-    "@plone/volto": "16.11.0",
+    "@plone/volto": "16.20.4",
     "bootstrap-italia": "1.3.9",
     "classnames": "^2.3.2",
     "design-react-kit": "3.1.3",
