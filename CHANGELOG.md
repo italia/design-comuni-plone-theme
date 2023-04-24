@@ -1,3 +1,21 @@
+## [7.4.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.3.1...v7.4.0) (2023-04-24)
+
+
+### Features
+
+* update volto to 16.20.4 ([d0f8beb](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d0f8bebc50f83c7e08068da393443f2a56b0c86d))
+
+
+### Bug Fixes
+
+* header image height fixed ([#102](https://github.com/RedTurtle/design-comuni-plone-theme/issues/102)) ([539ddb3](https://github.com/RedTurtle/design-comuni-plone-theme/commit/539ddb3f104f61ae66ce34c651fbfd698398bd6c))
+* revert header image height fixed ([#139](https://github.com/RedTurtle/design-comuni-plone-theme/issues/139)) ([2df0723](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2df0723008ba3d0b1e2ea513aef1c9f4eee38179))
+
+
+### Documentation
+
+* updated publiccode ([93f31b3](https://github.com/RedTurtle/design-comuni-plone-theme/commit/93f31b318a1204fd058c49b2e8179005a3bf91c0))
+
 ### [7.3.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.3.0...v7.3.1) (2023-03-29)
 
 
