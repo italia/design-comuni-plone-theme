@@ -231,44 +231,6 @@ div.sticky-wrapper {
   }
 }
 
-.card-wrapper {
-  .custom-calendar-card {
-    .card-calendar {
-      width: 6.4rem;
-      text-align: left;
-
-      .date-label {
-        width: 1.4rem;
-        font-family: $font-family-monospace;
-        font-size: 0.7rem;
-        font-weight: 500;
-        text-align: center;
-        text-transform: lowercase;
-      }
-
-      .card-date {
-        .date {
-          font-family: $font-family-monospace;
-          font-size: 1.3rem;
-          font-weight: 200;
-
-          &.day {
-            @include rem-size(font-size, 28);
-            @include rem-size(line-height, 28);
-          }
-
-          &.month {
-            text-transform: lowercase;
-            @include rem-size(font-size, 16);
-            @include rem-size(line-height, 21.1);
-            font-weight: 500;
-          }
-        }
-      }
-    }
-  }
-}
-
 .public-ui .card-wrapper.card-teaser-wrapper > .card-teaser {
   &.attachment {
     flex-wrap: nowrap;

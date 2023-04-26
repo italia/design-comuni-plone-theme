@@ -37,8 +37,8 @@ export const CardCalendar = ({ start, end, recurrence, rrule }) => {
     if (!recurrenceDates && _start.isSame(_end, 'day')) {
       return (
         <div className="card-calendar d-flex flex-column justify-content-center">
-          <span className="card-date">{_start.format('D')}</span>
-          <span className="card-day">{_end.format('MMMM')}</span>
+          <span className="card-date date">{_start.format('D')}</span>
+          <span className="card-day date">{_end.format('MMMM')}</span>
         </div>
       );
     } else if (recurrenceDates) {
