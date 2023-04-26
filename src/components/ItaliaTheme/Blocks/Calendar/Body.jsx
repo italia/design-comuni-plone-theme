@@ -2,7 +2,10 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useIntl, defineMessages } from 'react-intl';
 import useDeepCompareEffect from 'use-deep-compare-effect';
-import { FontAwesomeIcon } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import {
+  FontAwesomeIcon,
+  ListingLinkMore,
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { Card, Row, Col, Container, Button } from 'design-react-kit';
 import cx from 'classnames';
 
@@ -324,6 +327,14 @@ const Body = ({ data, block, inEditMode, path, onChangeBlock, reactSlick }) => {
             )}
           </div>
         </Card>
+        <div className="link-more-container">
+          <ListingLinkMore
+            title={data.linkTitle}
+            href={data.linkHref}
+            linkAlign={data.linkAlign}
+            className="my-4"
+          />
+        </div>
       </Container>
     </div>
   );

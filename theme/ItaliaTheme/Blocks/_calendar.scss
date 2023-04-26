@@ -124,6 +124,16 @@
     }
   }
 
+  .link-more-container {
+    margin-top: 60px;
+
+    .link-more-button-align-right {
+      align-items: center;
+      justify-content: right;
+      display: flex;
+    }
+  }
+
   @media (max-width: 600px) {
     margin: 0;
 
