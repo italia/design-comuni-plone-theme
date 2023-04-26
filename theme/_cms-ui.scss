@@ -236,6 +236,8 @@ body.cms-ui {
 
     .SingleDatePicker_picker {
       z-index: 10;
+      top: auto !important;
+      bottom: 0;
     }
   }
 
@@ -356,6 +358,11 @@ body.cms-ui {
     .button.secondary,
     .button.secondary.active {
       background-color: $secondary;
+    }
+
+    .button.tertiary,
+    .button.tertiary.active {
+      background-color: $tertiary;
     }
   }
 

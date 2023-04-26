@@ -65,3 +65,10 @@ $sidebarFormBg: #fafafa;
 #toolbar .ui.checkbox input:focus ~ label {
   color: #000;
 }
+
+.recurrence-widget {
+  svg {
+    height: 35px !important;
+    margin-top: 15px !important;
+  }
+}

@@ -9,6 +9,7 @@ import {
   ObjectBrowserWidget,
   CheckboxWidget,
 } from '@plone/volto/components';
+import { ColorListWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import upSVG from '@plone/volto/icons/up-key.svg';
 import downSVG from '@plone/volto/icons/down-key.svg';
 import FiltersConfig from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/EventSearch/FiltersConfig';
@@ -94,8 +95,8 @@ const Sidebar = (props) => {
   ]);
 
   const colors = [
-    ['primary', props.intl.formatMessage(messages.primary)],
-    ['secondary', props.intl.formatMessage(messages.secondary)],
+    { name: 'primary', label: props.intl.formatMessage(messages.primary) },
+    { name: 'secondary', label: props.intl.formatMessage(messages.secondary) },
   ];
 
   return (
@@ -188,7 +189,7 @@ const Sidebar = (props) => {
           )}
         </Accordion.Title>
         <Accordion.Content active={activeAccIndex === 1}>
-          <SelectWidget
+          <ColorListWidget
             id="bg_color"
             title={props.intl.formatMessage(messages.bg_color)}
             value={props.data.bg_color}
@@ -198,9 +199,9 @@ const Sidebar = (props) => {
                 bg_color: value,
               });
             }}
-            choices={colors}
+            colors={colors}
           />
-          <SelectWidget
+          <ColorListWidget
             id="button_color"
             title={props.intl.formatMessage(messages.button_color)}
             value={props.data.button_color}
@@ -210,9 +211,12 @@ const Sidebar = (props) => {
                 button_color: value,
               });
             }}
-            choices={[
+            colors={[
               ...colors,
-              ['tertiary', props.intl.formatMessage(messages.tertiary)],
+              {
+                name: 'tertiary',
+                label: props.intl.formatMessage(messages.tertiary),
+              },
             ]}
           />
         </Accordion.Content>
