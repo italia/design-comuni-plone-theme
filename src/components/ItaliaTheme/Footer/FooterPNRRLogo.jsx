@@ -9,6 +9,7 @@ const FooterPNRRLogo = () => {
       height="56"
       alt="NextGenerationEU"
       loading="lazy"
+      decoding="async"
       className="nextGenerationEULogo"
     />
   ) : null;
