@@ -1,3 +1,29 @@
+## [8.0.0-alpha.28](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.27...v8.0.0-alpha.28) (2023-04-27)
+
+
+### ⚠ BREAKING CHANGES
+
+* remove contents customization (#136)
+
+### Features
+
+* lazy load optional footer image ([30d5650](https://github.com/RedTurtle/design-comuni-plone-theme/commit/30d56500909c5309f36eb7b1149e8bb822c05f53))
+* remove contents customization ([#136](https://github.com/RedTurtle/design-comuni-plone-theme/issues/136)) ([3ca63d0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3ca63d0a234c1cd3e90e4d37b68168517e03f6e5))
+
+
+### Bug Fixes
+
+* better lazy loading for eu footer image ([6a23d43](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6a23d43ee566a228989f9ef2914eff3b24ba735f))
+* fixed description font for cardWithImage component ([#140](https://github.com/RedTurtle/design-comuni-plone-theme/issues/140)) ([c11c5ff](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c11c5ff98f88055f7d8b23c270bd29a0facda755))
+* font in date card evento ([#133](https://github.com/RedTurtle/design-comuni-plone-theme/issues/133)) ([af0dbba](https://github.com/RedTurtle/design-comuni-plone-theme/commit/af0dbba9a2d213ed495116f7640c02bd2191e71b))
+* link more blocco calendario mancante ([#134](https://github.com/RedTurtle/design-comuni-plone-theme/issues/134)) ([d364872](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d3648723f4f2d72e2908eafee89bbb938b438c36))
+* widget date nella ricorrenza, color picker in blocco eventSearch ([#141](https://github.com/RedTurtle/design-comuni-plone-theme/issues/141)) ([ae4610a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ae4610ac43fcf9f720df5c778f2d600bd5ca7210))
+
+
+### Maintenance
+
+* remove obsolete customization ([852acb1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/852acb1b2f9d548a2bf8439a4eac92922a9a7c14))
+
 ## [8.0.0-alpha.27](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.26...v8.0.0-alpha.27) (2023-04-24)
 
 
