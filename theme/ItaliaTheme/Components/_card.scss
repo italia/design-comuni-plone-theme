@@ -59,7 +59,7 @@
   }
 
   &.card-teaser .card-body {
-    flex: 0 0 80%;
+    flex: 1 0 75%;
   }
 }
 
@@ -125,9 +125,10 @@
     flex-basis: 20%;
 
     img {
-      max-width: 67.56px;
+      max-width: 64px;
       height: 64px;
-      border-radius: 54px;
+      border-radius: 50%;
+      object-fit: cover;
     }
   }
 }
@@ -173,6 +174,12 @@
       margin-left: 0em;
       flex-basis: 100%;
     }
+  }
+}
+
+.card-body {
+  .card-link.pdc {
+    font-size: 0.89rem;
   }
 }
 

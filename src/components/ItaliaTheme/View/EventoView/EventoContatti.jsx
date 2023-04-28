@@ -44,12 +44,7 @@ const EventoDocumenti = ({ content }) => {
             {intl.formatMessage(messages.supported_by)}
           </h5>
           {content?.supportato_da?.map((item) => (
-            <OfficeCard
-              key={item['@id']}
-              office={item}
-              extended={true}
-              icon={'it-pa'}
-            />
+            <OfficeCard key={item['@id']} office={item} icon={'it-pa'} />
           ))}
         </>
       )
@@ -121,7 +116,6 @@ const EventoDocumenti = ({ content }) => {
               }
               key={item['@id']}
               office={item}
-              extended={true}
               icon={'it-telephone'}
             >
               {richTextHasContent(content?.contatto_reperibilita) && (

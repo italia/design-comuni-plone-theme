@@ -6,11 +6,9 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import Image from '@plone/volto/components/theme/Image/Image';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
-import {
-  RichText,
-  ContactLink,
-} from 'design-comuni-plone-theme/components/ItaliaTheme/View';
+import { ContactLink } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 /**
  * OfficeCard view component class.
@@ -21,7 +19,6 @@ import {
 const OfficeCard = ({
   office,
   load_data = true,
-  extended,
   icon,
   children,
   margin_bottom = false,
@@ -49,7 +46,7 @@ const OfficeCard = ({
   return office_fo ? (
     <div
       className={cx(
-        'card card-teaser border-left-card rounded shadow p-3 ',
+        'card card-teaser preview-image-card border-left-card rounded shadow p-3 ',
         size === 'big' ? 'card-big-io-comune' : 'card-small',
         {
           'mb-3': margin_bottom,
@@ -72,42 +69,48 @@ const OfficeCard = ({
         {show_contacts && office_fo?.sede?.length > 0 && (
           <div>
             {' '}
-            {office_fo?.sede?.map((sede) => {
+            {office_fo?.sede?.map((sede, i) => {
               return (
-                <div className="card-text">
+                <div className="card-text" key={i}>
                   {sede.street && <p>{sede.street}</p>}
                   {(sede.city || sede.zip_code) && (
                     <p>
                       {sede.zip_code} {sede.city}
                     </p>
                   )}
-                  {(sede.telefono || sede.email) && (
-                    <p>
-                      Telefono: <ContactLink tel={sede.telefono} label={true} />
-                      <br />
-                      Email: <ContactLink email={sede.email} label={true} />
-                    </p>
+                  {office_fo.contact_info?.map((el) =>
+                    el.value_punto_contatto?.map((pdc, i) => {
+                      if (pdc.pdc_type === 'telefono') {
+                        return (
+                          <div key={i}>
+                            <ContactLink tel={pdc.pdc_value} label={false} />
+                          </div>
+                        );
+                      } else if (pdc.pdc_type === 'email')
+                        return (
+                          <div key={i}>
+                            <ContactLink email={pdc.pdc_value} label={false} />
+                          </div>
+                        );
+                      return null;
+                    }),
                   )}
-
-                  {extended ? (
-                    <>
-                      <RichText
-                        serif={false}
-                        add_class="card-text"
-                        content={office_fo.sede.contact_info}
-                      />
-                    </>
-                  ) : null}
                 </div>
               );
             })}
           </div>
         )}
+
         {children && <div className="card-text">{children}</div>}
       </div>
       <div className="image-container">
-        {office.preview_image?.scales?.preview && (
-          <img src={office.preview_image?.scales?.preview} alt={office.id} />
+        {office_fo?.image_scales?.[office_fo?.image_field]?.[0] && (
+          <Image
+            itemUrl={office_fo['@id']}
+            image={office_fo.image_scales[office_fo.image_field][0]}
+            alt=""
+            responsive={false}
+          />
         )}
       </div>
     </div>
@@ -123,6 +126,5 @@ OfficeCard.propTypes = {
     title: PropTypes.string,
     review_state: PropTypes.string,
   }),
-  extended: PropTypes.bool,
   icon: PropTypes.string,
 };

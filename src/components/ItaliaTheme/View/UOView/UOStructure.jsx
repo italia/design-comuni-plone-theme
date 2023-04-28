@@ -103,7 +103,7 @@ const UOStructure = ({ content }) => {
           </h3>
           <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal mb-3">
             {content.legami_con_altre_strutture.map((item, _i) => (
-              <OfficeCard key={item['@id']} office={item} />
+              <OfficeCard key={item['@id']} office={item} load_data={false} />
             ))}
           </div>
         </div>

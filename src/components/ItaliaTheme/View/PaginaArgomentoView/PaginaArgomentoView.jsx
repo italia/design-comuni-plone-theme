@@ -129,7 +129,9 @@ const PaginaArgomentoView = ({ content }) => {
                                   </UniversalLink>
                                 </span>
                               </CardCategory>
-                              <CardText>{uo_object?.street}</CardText>
+                              <CardText>
+                                {uo_object?.sede?.[0]?.street}
+                              </CardText>
                             </CardBody>
                             {uo_object &&
                               (uo_object.preview_image || uo_object.image) && (
