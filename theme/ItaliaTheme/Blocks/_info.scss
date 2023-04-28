@@ -1,0 +1,107 @@
+.public-ui {
+  .infoblock {
+    .bg-alert-warning-orange,
+    .bg-alert-warning,
+    .bg-alert-danger {
+      border-style: solid;
+      border-width: 2px 2px 2px 10px;
+    }
+
+    .bg-alert-warning-orange,
+    .bg-alert-warning {
+      color: $black;
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      a,
+      .public-DraftEditorPlaceholder-inner {
+        color: $black;
+      }
+      &.bg-color-true {
+        svg.icon,
+        .public-DraftEditorPlaceholder-inner {
+          fill: $black;
+          color: $black;
+        }
+      }
+    }
+
+    .bg-alert-danger {
+      border-color: #a32219;
+      color: $black;
+      svg.icon {
+        fill: #a32219;
+      }
+      &.bg-color-true {
+        background-color: #a32219;
+        color: #fff;
+        svg.icon,
+        .public-DraftEditorPlaceholder-inner,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        a {
+          color: #fff;
+          fill: #fff;
+        }
+      }
+    }
+
+    .bg-alert-warning-orange {
+      border-color: #eb973f;
+      svg.icon {
+        fill: #eb973f;
+      }
+      &.bg-color-true {
+        background-color: #eb973f;
+      }
+    }
+
+    .bg-alert-warning {
+      border-color: #f0c250;
+      svg.icon {
+        fill: #f0c250;
+      }
+      &.bg-color-true {
+        background-color: #f0c250;
+      }
+    }
+
+    .DraftEditor-root {
+      background: none;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    img.left-image {
+      max-width: 80%;
+      object-fit: unset;
+    }
+
+    .image-col {
+      text-align: center;
+    }
+
+    div + h3,
+    p + h3,
+    h3 + div,
+    h3 + p {
+      margin-top: 1.33rem;
+    }
+
+    div + h2,
+    p + h2,
+    h2 + div,
+    h2 + p {
+      margin-top: 1rem;
+    }
+  }
+}

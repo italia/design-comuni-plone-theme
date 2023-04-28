@@ -53,6 +53,7 @@ const CardWithImageTemplate = (props) => {
     hide_dates = false,
     natural_image_size = false,
     id_lighthouse,
+    center_cards,
   } = props;
 
   const imagesToShow = set_four_columns ? 4 : 3;
@@ -69,7 +70,7 @@ const CardWithImageTemplate = (props) => {
             </Col>
           </Row>
         )}
-        <Row className="items">
+        <Row className={cx('items', { 'center-cards': center_cards })}>
           {items.map((item, index) => {
             const icon = show_icon ? getItemIcon(item) : null;
             const date = hide_dates ? null : getCalendarDate(item);

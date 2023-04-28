@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
+import cx from 'classnames';
 
 import {
   ListingLinkMore,
@@ -15,6 +16,7 @@ const SmallBlockLinksTemplate = ({
   show_block_bg,
   linkTitle,
   linkHref,
+  center_cards,
 }) => {
   return (
     <div className="small-block-links">
@@ -26,7 +28,7 @@ const SmallBlockLinksTemplate = ({
             </Col>
           </Row>
         )}
-        <Row className="items">
+        <Row className={cx('items', { 'center-cards': center_cards })}>
           {items.map((item, index) => {
             const image = ListingImage({ item, maxSize: 200, style: {} });
 

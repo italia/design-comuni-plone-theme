@@ -55,6 +55,7 @@ const RibbonCardTemplate = (props) => {
     show_type,
     hide_dates,
     id_lighthouse,
+    center_cards,
   } = props;
 
   return (
@@ -68,7 +69,7 @@ const RibbonCardTemplate = (props) => {
           </Row>
         )}
 
-        <Row className="mb-4">
+        <Row className={cx('mb-4', { 'center-cards': center_cards })}>
           {items.map((item, index) => {
             const itemTitle = item.title || item.id;
             const showRibbon =

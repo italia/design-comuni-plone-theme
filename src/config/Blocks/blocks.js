@@ -9,6 +9,10 @@ import alertSVG from '@plone/volto/icons/alert.svg';
 import AlertView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Alert/View';
 import AlertEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Alert/Edit';
 
+import infoSVG from '@plone/volto/icons/info.svg';
+import InfoView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Info/View';
+import InfoEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Info/Edit';
+
 import divideHorizontalSVG from '@plone/volto/icons/divide-horizontal.svg';
 import ViewBreak from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Break/View';
 import EditBreak from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Break/Edit';
@@ -196,6 +200,23 @@ const italiaBlocks = {
     group: 'text',
     view: AlertView,
     edit: AlertEdit,
+    restricted: false,
+    mostUsed: false,
+    blockHasOwnFocusManagement: true,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
+
+  info: {
+    id: 'info',
+    title: 'Informazioni',
+    icon: infoSVG,
+    group: 'text',
+    view: InfoView,
+    edit: InfoEdit,
     restricted: false,
     mostUsed: false,
     blockHasOwnFocusManagement: true,

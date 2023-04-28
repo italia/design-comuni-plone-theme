@@ -48,6 +48,7 @@ const InEvidenceTemplate = (props) => {
     linkTitle,
     linkHref,
     id_lighthouse,
+    center_cards,
   } = props;
 
   return (
@@ -62,7 +63,11 @@ const InEvidenceTemplate = (props) => {
             </Col>
           </Row>
         )}
-        <div className="in-evidence-cards-wrapper mb-5">
+        <div
+          className={cx('in-evidence-cards-wrapper mb-5', {
+            'center-cards': center_cards,
+          })}
+        >
           {items.map((item, index) => {
             const icon = show_icon ? getItemIcon(item) : null;
             const date = hide_dates ? null : getCalendarDate(item);

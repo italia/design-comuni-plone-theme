@@ -11,6 +11,7 @@ import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
 import { flattenToAppURL, addAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
 import config from '@plone/volto/registry';
+import cx from 'classnames';
 
 /**
  * View Accordion block class.
@@ -26,7 +27,9 @@ const AccordionView = ({ data, block }) => {
         <div className="full-width section py-5">
           {data.background?.[0] ? (
             <div
-              className="background-image"
+              className={cx('background-image', {
+                [data.bg_color]: data.bg_color,
+              })}
               style={{
                 backgroundImage: `url(${
                   data.background[0]?.image?.scales?.huge?.download ??
@@ -35,7 +38,11 @@ const AccordionView = ({ data, block }) => {
               }}
             ></div>
           ) : (
-            <div className="background-image"></div>
+            <div
+              className={cx('background-image', {
+                [data.bg_color]: data.bg_color,
+              })}
+            ></div>
           )}
           <Container className="px-md-4">
             <div className="block-header">
@@ -58,7 +65,7 @@ const AccordionView = ({ data, block }) => {
                 </div>
               )}
             </div>
-            <Row>
+            <Row className={cx({ center: data.alignCards })}>
               {data.subblocks.map((subblock, index) => (
                 <Col lg="4" xl="3" key={subblock.id}>
                   <ViewBlock

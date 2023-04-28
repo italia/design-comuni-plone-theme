@@ -34,8 +34,21 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background-color: rgba($primary, 0.85);
       content: '';
+    }
+    &.primary:after {
+      background-color: rgba($primary, 0.85);
+    }
+    &.secondary:after {
+      background-color: rgba($secondary, 0.85);
+    }
+    &.transparent:after {
+      background-color: none;
+    }
+  }
+  .container {
+    .row.center {
+      justify-content: center;
     }
   }
 
@@ -167,8 +180,8 @@
       }
 
       .icon {
-        width: 3.35rem;
-        height: auto;
+        width: auto;
+        height: 4rem;
         color: $tertiary;
       }
     }

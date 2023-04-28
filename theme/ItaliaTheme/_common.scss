@@ -38,4 +38,20 @@
       }
     }
   }
+  .center-cards:not(.in-evidence-cards-wrapper) {
+    justify-content: space-around !important;
+    gap: auto;
+    &:after {
+      display: none;
+    }
+  }
+  .center-cards.in-evidence-cards-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    .card-wrapper {
+      &:last-child {
+        align-self: center;
+      }
+    }
+  }
 }

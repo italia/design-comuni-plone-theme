@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Segment } from 'semantic-ui-react';
 import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
-import { FileWidget } from '@plone/volto/components';
 import { ColorListWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
-import ImageSizeWidget from '@plone/volto/components/manage/Widgets/ImageSizeWidget';
+import { CheckboxWidget } from '@plone/volto/components';
 
 const messages = defineMessages({
-  Color: {
-    id: 'Color',
+  border_color: {
+    id: 'border_color',
     defaultMessage: 'Colore',
   },
   color_warning: {
@@ -23,17 +22,9 @@ const messages = defineMessages({
     id: 'color_danger',
     defaultMessage: 'Rosso',
   },
-  Image: {
-    id: 'Image',
-    defaultMessage: 'Immagine',
-  },
-  CardImageSize: {
-    id: 'CardImageSize',
-    defaultMessage: 'Dimensione immagine',
-  },
-  CardImageSize: {
-    id: 'CardImageSize',
-    defaultMessage: 'Dimensione immagine',
+  bg_color: {
+    id: 'bg_color',
+    defaultMessage: 'Colore di sfondo',
   },
 });
 
@@ -64,14 +55,17 @@ class Sidebar extends Component {
       <Segment.Group raised>
         <header className="header pulled">
           <h2>
-            <FormattedMessage id="blocco_alert" defaultMessage="Blocco alert" />
+            <FormattedMessage
+              id="blocco_info"
+              defaultMessage="Blocco informazioni"
+            />
           </h2>
         </header>
 
         <Segment className="form">
           <ColorListWidget
             id="color"
-            title={this.props.intl.formatMessage(messages.Color)}
+            title={this.props.intl.formatMessage(messages.border_color)}
             value={this.props.data.border_color}
             onChange={(id, value) => {
               this.props.onChangeBlock(this.props.block, {
@@ -81,27 +75,16 @@ class Sidebar extends Component {
             }}
             colors={bg_colors}
           />
-          <FileWidget
-            id="image"
-            title={this.props.intl.formatMessage(messages.Image)}
-            value={this.props.data.image}
-            onChange={(name, value) => {
+          <CheckboxWidget
+            id="bg_color"
+            title={this.props.intl.formatMessage(messages.bg_color)}
+            value={this.props.data.bg_color ? this.props.data.bg_color : false}
+            onChange={(name, checked) => {
               this.props.onChangeBlock(this.props.block, {
                 ...this.props.data,
-                image: value,
+                [name]: checked,
               });
             }}
-          />
-          <ImageSizeWidget
-            id="sizeImage"
-            title={this.props.intl.formatMessage(messages.CardImageSize)}
-            onChange={(name, value) => {
-              this.props.onChangeBlock(this.props.block, {
-                ...this.props.data,
-                sizeImage: value,
-              });
-            }}
-            value={this.props.data.sizeImage}
           />
         </Segment>
       </Segment.Group>

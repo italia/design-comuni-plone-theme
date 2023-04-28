@@ -20,6 +20,7 @@ import { TextEditorWidget } from 'design-comuni-plone-theme/components/ItaliaThe
 
 import EditBlock from './Block/EditBlock';
 import Sidebar from './Sidebar.jsx';
+import cx from 'classnames';
 
 const messages = defineMessages({
   addItem: {
@@ -55,12 +56,18 @@ class Edit extends SubblocksEdit {
       return <div />;
     }
 
+    if (!this.props.data.bg_color) {
+      this.props.data.bg_color = 'primary';
+    }
+
     return (
       <div className="public-ui">
         <div className="full-width section py-5">
           {this.props.data.background?.[0] ? (
             <div
-              className="background-image"
+              className={cx('background-image', {
+                [this.props.data.bg_color]: this.props.data.bg_color,
+              })}
               style={{
                 backgroundImage: `url(${
                   this.props.data.background[0]?.image?.scales?.huge
@@ -70,7 +77,11 @@ class Edit extends SubblocksEdit {
               }}
             ></div>
           ) : (
-            <div className="background-image"></div>
+            <div
+              className={cx('background-image', {
+                [this.props.data.bg_color]: this.props.data.bg_color,
+              })}
+            ></div>
           )}
 
           <Container className="px-md-4">
@@ -117,7 +128,7 @@ class Edit extends SubblocksEdit {
             </div>
 
             <SubblocksWrapper node={this.node}>
-              <Row>
+              <Row className={cx({ center: this.props.data.alignCards })}>
                 {this.state.subblocks.map((subblock, subindex) => (
                   <Col lg="4" xl="3" key={subblock.id}>
                     <EditBlock

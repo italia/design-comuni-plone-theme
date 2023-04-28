@@ -76,6 +76,7 @@ const BandiInEvidenceTemplate = ({
   show_description,
   linkTitle,
   linkHref,
+  center_cards,
 }) => {
   const intl = useIntl();
 
@@ -91,7 +92,11 @@ const BandiInEvidenceTemplate = ({
             </Col>
           </Row>
         )}
-        <div className="bandi-in-evidence-cards-wrapper mb-5">
+        <div
+          className={cx('bandi-in-evidence-cards-wrapper mb-5', {
+            'center-cards': center_cards,
+          })}
+        >
           {items.map((item, index) => {
             const listingText = <ListingText item={item} />;
             return (

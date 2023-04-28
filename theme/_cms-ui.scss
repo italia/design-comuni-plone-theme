@@ -289,6 +289,19 @@ body.cms-ui {
     .button.secondary.active {
       background-color: $secondary;
     }
+    //blocks Alert and Info
+    .button.warning,
+    .button.warning.active {
+      background-color: #f0c250;
+    }
+    .button.danger,
+    .button.danger.active {
+      background-color: #a32219;
+    }
+    .button.warning-orange,
+    .button.warning-orange.active {
+      background-color: #eb973f;
+    }
   }
 
   .path-filter-widget {

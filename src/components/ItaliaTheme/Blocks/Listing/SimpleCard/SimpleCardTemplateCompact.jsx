@@ -25,6 +25,7 @@ const SimpleCardTemplateCompact = ({
   show_block_bg,
   title,
   id_lighthouse,
+  center_cards,
 }) => {
   return (
     <div className="simple-card-compact-template">
@@ -35,7 +36,12 @@ const SimpleCardTemplateCompact = ({
           </Col>
         </Row>
       )}
-      <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-3 mb-3">
+      <div
+        className={cx(
+          'card-wrapper card-teaser-wrapper card-teaser-wrapper-equal card-teaser-block-3 mb-3',
+          { 'center-cards': center_cards },
+        )}
+      >
         {items.map((item, index) => (
           <Card
             className="align-items-center rounded shadow"

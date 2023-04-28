@@ -67,6 +67,7 @@ export CustomerSatisfaction from 'design-comuni-plone-theme/components/ItaliaThe
 
 /********* BLOCKS ********* */
 export AlertSidebar from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Alert/Sidebar';
+export InfoSidebar from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Info/Sidebar';
 export BlockSearchSectionsSidebar from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/SearchSections/SideBar';
 export BlockSearchSectionsBody from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/SearchSections/Body';
 export ArgumentsInEvidenceBackground from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/ArgumentsInEvidence/Background';

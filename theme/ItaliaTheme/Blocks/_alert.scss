@@ -76,8 +76,18 @@
     }
 
     img.left-image {
-      max-width: 80%;
       object-fit: unset;
+      max-width: 80%;
+      @media (min-width: #{map-get($grid-breakpoints, md)}) {
+        &.size {
+          &-m {
+            max-width: 50%;
+          }
+          &-s {
+            max-width: 30%;
+          }
+        }
+      }
     }
 
     .image-col {

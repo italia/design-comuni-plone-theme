@@ -29,11 +29,33 @@
     }
   }
 
-  .card.card-bg {
-    background-color: $secondary;
-
+  .card {
     a {
       color: $secondary-text;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &.card-bg {
+      &.secondary {
+        background-color: $secondary;
+      }
+      &.primary {
+        background-color: $primary;
+      }
+      &.transparent {
+        .text-secondary {
+          color: $body-color !important;
+        }
+        a {
+          color: $body-color;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
     }
   }
 
