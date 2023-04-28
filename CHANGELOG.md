@@ -1,3 +1,10 @@
+## [8.0.0-alpha.29](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.28...v8.0.0-alpha.29) (2023-04-28)
+
+
+### Features
+
+* added contact info in officeCard from pdc ([#137](https://github.com/RedTurtle/design-comuni-plone-theme/issues/137)) ([5bbddd9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5bbddd9b93ce175ff3fcb5da08f9dd4a063020b7))
+
 ## [8.0.0-alpha.28](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.27...v8.0.0-alpha.28) (2023-04-27)
 
 
