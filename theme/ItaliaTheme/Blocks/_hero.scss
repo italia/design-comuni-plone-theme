@@ -13,10 +13,8 @@
   .hero-image {
     display: flex;
     overflow: hidden;
-    max-width: unset;
-    height: unset;
-
-    max-height: unset;
+    width: 450px;
+    max-height: 650px;
 
     flex: 0 1 50%;
 
@@ -28,7 +26,7 @@
     }
 
     img {
-      object-fit: cover;
+      object-fit: contain;
     }
   }
 
