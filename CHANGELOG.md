@@ -1,3 +1,16 @@
+### [7.5.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.5.0...v7.5.1) (2023-05-02)
+
+
+### Bug Fixes
+
+* copy/paste of volto Blocks ([#148](https://github.com/RedTurtle/design-comuni-plone-theme/issues/148)) ([235eeca](https://github.com/RedTurtle/design-comuni-plone-theme/commit/235eeca24de590f7eeb1851e8031a0f15259aa2d))
+* title re-added inside listing blocks sidebar ([#149](https://github.com/RedTurtle/design-comuni-plone-theme/issues/149)) ([cab4c55](https://github.com/RedTurtle/design-comuni-plone-theme/commit/cab4c55f1479694c104aded0cb8cac912526d0ce))
+
+
+### Documentation
+
+* updated publiccode ([59bf887](https://github.com/RedTurtle/design-comuni-plone-theme/commit/59bf8871ce908fbb5b0f61a4f5ea0e207045940b))
+
 ## [7.5.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.4.1...v7.5.0) (2023-04-28)
 
 
