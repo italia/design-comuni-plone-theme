@@ -164,3 +164,9 @@ export const addLighthouseField = (schema, intl, position = 0) => {
 
   return pos;
 };
+
+export const cloneBlock = (blockData) => {
+  const blockID = uuid();
+  const clonedData = { ...blockData, block: blockID };
+  return [blockID, clonedData];
+};
