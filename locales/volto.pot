@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-04-28T08:29:06.188Z\n"
+"POT-Creation-Date: 2023-05-02T13:13:30.519Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -577,6 +577,7 @@ msgid "Title placeholder"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+#: config/Blocks/ListingOptions/defaultOptions
 # defaultMessage: Titolo
 msgid "Titolo"
 msgstr ""

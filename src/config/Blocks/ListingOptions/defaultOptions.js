@@ -1,9 +1,11 @@
 import { defineMessages } from 'react-intl';
 import { addSchemaField } from '@italia/config/Blocks/ListingOptions';
 
-import config from '@plone/volto/registry';
-
 const messages = defineMessages({
+  title: {
+    id: 'Titolo',
+    defaultMessage: 'Titolo',
+  },
   center_cards: {
     id: 'Center block cards',
     defaultMessage: 'Centrare i card',
@@ -18,11 +20,15 @@ const messages = defineMessages({
 
 const addDefaultAdditionalOptions = (schema, formData, intl, position = 0) => {
   let pos = position;
-  let listing_items_colors = [
-    { name: 'red', label: 'Red' },
-    { name: 'light-blue', label: 'Light blue' },
-    { name: 'sidebar-background', label: 'Grey' },
-  ];
+  addSchemaField(
+    schema,
+    'title',
+    intl.formatMessage(messages.title),
+    null,
+    null,
+    pos,
+  );
+  pos++;
   if (
     formData.variation === 'simpleCard' ||
     formData.variation === 'completeBlockLinksTemplate' ||

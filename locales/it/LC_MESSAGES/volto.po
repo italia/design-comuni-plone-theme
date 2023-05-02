@@ -575,6 +575,7 @@ msgid "Title placeholder"
 msgstr "Titolo..."
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+#: config/Blocks/ListingOptions/defaultOptions
 # defaultMessage: Titolo
 msgid "Titolo"
 msgstr "Titolo"
