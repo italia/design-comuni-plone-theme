@@ -1,3 +1,20 @@
+## [7.5.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.4.1...v7.5.0) (2023-04-28)
+
+
+### Features
+
+* new blocks and listing options ([#143](https://github.com/RedTurtle/design-comuni-plone-theme/issues/143)) ([88b5128](https://github.com/RedTurtle/design-comuni-plone-theme/commit/88b5128f1848e3a3cf4ee68272aaf5be34d300ce))
+
+
+### Bug Fixes
+
+* fixed hero block image width and height ([#142](https://github.com/RedTurtle/design-comuni-plone-theme/issues/142)) ([264cb23](https://github.com/RedTurtle/design-comuni-plone-theme/commit/264cb230cde0d25c16a33f7315ab42bce1a565cf))
+
+
+### Documentation
+
+* updated publiccode ([bff6c79](https://github.com/RedTurtle/design-comuni-plone-theme/commit/bff6c79583a164c2ba6c788845082d16ed7e7c67))
+
 ### [7.4.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.4.0...v7.4.1) (2023-04-24)
 
 
