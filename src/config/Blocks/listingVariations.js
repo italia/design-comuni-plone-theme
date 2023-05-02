@@ -60,7 +60,7 @@ import {
   addPhotogalleryTemplateOptions,
 } from 'design-comuni-plone-theme/config/Blocks/ListingOptions';
 
-import { addLighthouseField } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
+import { addLighthouseField, cloneBlock } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
 
 const italiaListingVariations = [
   {
@@ -72,6 +72,7 @@ const italiaListingVariations = [
       addSimpleCardTemplateOptions(schema, formData, intl);
       return schema;
     },
+    cloneData: cloneBlock,
   },
   {
     id: 'cardWithImageTemplate',
@@ -83,6 +84,7 @@ const italiaListingVariations = [
       addCardWithImageTemplateOptions(schema, formData, intl);
       return schema;
     },
+    cloneData: cloneBlock,
   },
   {
     id: 'inEvidenceTemplate',
@@ -94,6 +96,7 @@ const italiaListingVariations = [
       addInEvidenceTemplateOptions(schema, formData, intl);
       return schema;
     },
+    cloneData: cloneBlock,
   },
   {
     id: 'contentInEvidenceTemplate',
@@ -106,6 +109,7 @@ const italiaListingVariations = [
       addDefaultOptions(schema, formData, intl, pos);
       return schema;
     },
+    cloneData: cloneBlock,
   },
   {
     id: 'ribbonCardTemplate',
@@ -117,6 +121,7 @@ const italiaListingVariations = [
       addRibbonCardTemplateOptions(schema, formData, intl);
       return schema;
     },
+    cloneData: cloneBlock,
   },
   {
     id: 'cardSlideUpTextTemplate',
@@ -128,6 +133,7 @@ const italiaListingVariations = [
       addCardWithSlideUpTextTemplateOptions(schema, formData, intl);
       return schema;
     },
+    cloneData: cloneBlock,
   },
   {
     id: 'quaresImageTemplate',
@@ -140,6 +146,7 @@ const italiaListingVariations = [
       addDefaultOptions(schema, formData, intl, pos);
       return schema;
     },
+    cloneData: cloneBlock,
   },
   {
     id: 'mapTemplate',
@@ -152,6 +159,7 @@ const italiaListingVariations = [
       addMapTemplateOptions(schema, formData, intl, pos);
       return schema;
     },
+    cloneData: cloneBlock,
   },
   {
     id: 'smallBlockLinksTemplate',
@@ -163,6 +171,7 @@ const italiaListingVariations = [
       /*let pos = */ addDefaultOptions(schema, formData, intl);
       return schema;
     },
+    cloneData: cloneBlock,
   },
   {
     id: 'completeBlockLinksTemplate',
@@ -174,6 +183,7 @@ const italiaListingVariations = [
       addCompleteBlockLinksTemplateOptions(schema, formData, intl);
       return schema;
     },
+    cloneData: cloneBlock,
   },
   {
     id: 'photogallery',
@@ -186,6 +196,7 @@ const italiaListingVariations = [
       addPhotogalleryTemplateOptions(schema, formData, intl, pos);
       return schema;
     },
+    cloneData: cloneBlock,
   },
   {
     id: 'slider',
@@ -198,6 +209,7 @@ const italiaListingVariations = [
       addSliderTemplateOptions(schema, formData, intl, pos);
       return schema;
     },
+    cloneData: cloneBlock,
   },
   {
     id: 'gridGalleryTemplate',
@@ -209,6 +221,7 @@ const italiaListingVariations = [
       /*let pos = */ addDefaultOptions(schema, formData, intl);
       return schema;
     },
+    cloneData: cloneBlock,
   },
   {
     id: 'bandiInEvidenceTemplate',
@@ -221,6 +234,7 @@ const italiaListingVariations = [
       addBandiInEvidenceTemplateOptions(schema, formData, intl, pos);
       return schema;
     },
+    cloneData: cloneBlock,
   },
   {
     id: 'simpleListTemplate',
@@ -233,6 +247,7 @@ const italiaListingVariations = [
       addSimpleListTemplateOptions(schema, formData, intl, pos);
       return schema;
     },
+    cloneData: cloneBlock,
   },
   //  {
   //    id: 'amministrazioneTrasparenteTablesTemplate',

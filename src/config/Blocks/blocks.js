@@ -73,6 +73,8 @@ import countDownSVG from 'design-comuni-plone-theme/icons/count-down.svg';
 import CountDownBlockView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CountDown/View';
 import CountDownBlockEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CountDown/Edit';
 
+import { cloneBlock } from 'design-comuni-plone-theme/config/Blocks/ListingOptions';
+
 const italiaBlocks = {
   highlitedContent: {
     id: 'highlitedContent',
@@ -82,6 +84,7 @@ const italiaBlocks = {
     view: HighlightedContentView,
     edit: HighlightedContentEdit,
     restricted: false,
+    cloneData: cloneBlock,
     mostUsed: true,
     security: {
       addPermission: [],
@@ -97,6 +100,7 @@ const italiaBlocks = {
     view: SearchSectionsView,
     edit: SearchSectionsEdit,
     restricted: false,
+    cloneData: cloneBlock,
     mostUsed: false,
     security: {
       addPermission: [],
@@ -112,6 +116,7 @@ const italiaBlocks = {
     view: CalendarView,
     edit: CalendarEdit,
     restricted: false,
+    cloneData: cloneBlock,
     mostUsed: false,
     security: {
       addPermission: [],
@@ -127,6 +132,7 @@ const italiaBlocks = {
     view: EventSearchView,
     edit: EventSearchEdit,
     restricted: false,
+    cloneData: cloneBlock,
     mostUsed: false,
     security: {
       addPermission: [],
@@ -142,6 +148,7 @@ const italiaBlocks = {
     view: BandiSearchView,
     edit: BandiSearchEdit,
     restricted: false,
+    cloneData: cloneBlock,
     mostUsed: false,
     security: {
       addPermission: [],
@@ -157,6 +164,7 @@ const italiaBlocks = {
     view: UOSearchView,
     edit: UOSearchEdit,
     restricted: false,
+    cloneData: cloneBlock,
     mostUsed: false,
     security: {
       addPermission: [],
@@ -172,6 +180,7 @@ const italiaBlocks = {
     view: ArgumentsInEvidenceView,
     edit: ArgumentsInEvidenceEdit,
     restricted: false,
+    cloneData: cloneBlock,
     mostUsed: false,
     security: {
       addPermission: [],
@@ -187,6 +196,7 @@ const italiaBlocks = {
     view: ViewBreak,
     edit: EditBreak,
     restricted: false,
+    cloneData: cloneBlock,
     mostUsed: false,
     security: {
       addPermission: [],
@@ -201,6 +211,7 @@ const italiaBlocks = {
     view: AlertView,
     edit: AlertEdit,
     restricted: false,
+    cloneData: cloneBlock,
     mostUsed: false,
     blockHasOwnFocusManagement: true,
     security: {
@@ -218,6 +229,7 @@ const italiaBlocks = {
     view: InfoView,
     edit: InfoEdit,
     restricted: false,
+    cloneData: cloneBlock,
     mostUsed: false,
     blockHasOwnFocusManagement: true,
     security: {
@@ -235,6 +247,7 @@ const italiaBlocks = {
     view: TextCardView,
     edit: TextCardEdit,
     restricted: false,
+    cloneData: cloneBlock,
     mostUsed: false,
     blockHasOwnFocusManagement: true,
     security: {
@@ -250,6 +263,7 @@ const italiaBlocks = {
     view: TextCardWithImageView,
     edit: TextCardWithImageEdit,
     restricted: false,
+    cloneData: cloneBlock,
     mostUsed: false,
     blockHasOwnFocusManagement: true,
     security: {
@@ -266,6 +280,7 @@ const italiaBlocks = {
     view: AccordionView,
     edit: AccordionEdit,
     restricted: false,
+    cloneData: cloneBlock,
     mostUsed: false,
     security: {
       addPermission: [],
@@ -282,6 +297,7 @@ const italiaBlocks = {
     view: NumbersBlockView,
     edit: NumbersBlockEdit,
     restricted: false,
+    cloneData: cloneBlock,
     mostUsed: true,
     security: {
       addPermission: [],
@@ -297,6 +313,7 @@ const italiaBlocks = {
     view: IconBlocksView,
     edit: IconBlocksEdit,
     restricted: false,
+    cloneData: cloneBlock,
     mostUsed: true,
     security: {
       addPermission: [],
@@ -312,6 +329,7 @@ const italiaBlocks = {
     view: ContactsBlockView,
     edit: ContactsBlockEdit,
     restricted: false,
+    cloneData: cloneBlock,
     mostUsed: false,
     security: {
       addPermission: [],
@@ -328,6 +346,7 @@ const italiaBlocks = {
     view: VideoGalleryView,
     edit: VideoGalleryEdit,
     restricted: false,
+    cloneData: cloneBlock,
     mostUsed: false,
     security: {
       addPermission: [],
@@ -343,6 +362,7 @@ const italiaBlocks = {
     view: TwitterPostsView,
     edit: TwitterPostsEdit,
     restricted: false,
+    cloneData: cloneBlock,
     mostUsed: false,
     security: {
       addPermission: [],
@@ -358,6 +378,7 @@ const italiaBlocks = {
     view: CTABlockView,
     edit: CTABlockEdit,
     restricted: false,
+    cloneData: cloneBlock,
     mostUsed: false,
     blockHasOwnFocusManagement: true,
     security: {
@@ -374,6 +395,7 @@ const italiaBlocks = {
     view: CountDownBlockView,
     edit: CountDownBlockEdit,
     restricted: false,
+    cloneData: cloneBlock,
     mostUsed: false,
     security: {
       addPermission: [],
