@@ -1,3 +1,15 @@
+### [7.5.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.5.1...v7.5.2) (2023-05-04)
+
+
+### Bug Fixes
+
+* alert block and icon block fixes ([#150](https://github.com/RedTurtle/design-comuni-plone-theme/issues/150)) ([f6b0af4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f6b0af42fce95776f84e4e5243377b42e453b563))
+
+
+### Documentation
+
+* updated publiccode ([a174361](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a174361ff3663c73bcd811be39dc1b45d758981b))
+
 ### [7.5.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.5.0...v7.5.1) (2023-05-02)
 
 
