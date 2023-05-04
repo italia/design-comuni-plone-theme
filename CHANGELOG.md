@@ -1,3 +1,19 @@
+## [8.0.0-alpha.30](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.29...v8.0.0-alpha.30) (2023-05-04)
+
+
+### Features
+
+* added custom validation for CT Servizio 'Accedere al servizio' section ([#144](https://github.com/RedTurtle/design-comuni-plone-theme/issues/144)) ([4918407](https://github.com/RedTurtle/design-comuni-plone-theme/commit/49184076f05851b3491f03e6669a359deab8088c))
+* added schema.org metadata for ct servizio ([#151](https://github.com/RedTurtle/design-comuni-plone-theme/issues/151)) ([c3d4ff0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c3d4ff088140a2c83eea1f759be809a30b6439b0))
+* updated customerSatisfaction with ModelloPratica condition ([#145](https://github.com/RedTurtle/design-comuni-plone-theme/issues/145)) ([010071a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/010071aa8a8898bbf79ad990d7883f6dbb9544fd))
+
+
+### Bug Fixes
+
+* blocks copy/paste logic ([#146](https://github.com/RedTurtle/design-comuni-plone-theme/issues/146)) ([59caffd](https://github.com/RedTurtle/design-comuni-plone-theme/commit/59caffdfce28fd14cc4859338240c772aab8d1a1))
+* duplicate feedback form title ([2569199](https://github.com/RedTurtle/design-comuni-plone-theme/commit/256919978b9ec34d75fbfc2e5a3631a03f64df66))
+* percorso raddoppiato immagini ([#153](https://github.com/RedTurtle/design-comuni-plone-theme/issues/153)) ([18e9f8a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/18e9f8aa1a49a570d5e308bafe7fbd718f06de37))
+
 ## [8.0.0-alpha.29](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.28...v8.0.0-alpha.29) (2023-04-28)
 
 
