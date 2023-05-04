@@ -1,6 +1,7 @@
 export {
   addSchemaField,
   templatesOptions,
+  cloneBlock,
 } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/utils';
 export addDefaultOptions from 'design-comuni-plone-theme/config/Blocks/ListingOptions/defaultOptions';
 export addDefaultAdditionalOptions from 'design-comuni-plone-theme/config/Blocks/ListingOptions/defaultAdditionalOptions';

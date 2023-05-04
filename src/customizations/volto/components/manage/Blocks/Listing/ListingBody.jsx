@@ -64,6 +64,7 @@ const ListingBody = React.memo(
 
       const getBackgroundClass = () => {
         const block = properties.blocks[data.block];
+
         if (!block?.show_block_bg) return '';
 
         let bg_color = data.bg_color ? `bg-${data.bg_color}` : '';
@@ -83,7 +84,6 @@ const ListingBody = React.memo(
 
         return `${bg_color} ${items_color}`;
       };
-
       return (
         <div className="public-ui">
           {loadingQuery && (

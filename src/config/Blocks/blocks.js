@@ -69,6 +69,8 @@ import countDownSVG from 'design-comuni-plone-theme/icons/count-down.svg';
 import CountDownBlockView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CountDown/View';
 import CountDownBlockEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CountDown/Edit';
 
+import { cloneBlock } from 'design-comuni-plone-theme/config/Blocks/ListingOptions';
+
 const italiaBlocks = {
   highlitedContent: {
     id: 'highlitedContent',
@@ -94,6 +96,7 @@ const italiaBlocks = {
     edit: SearchSectionsEdit,
     restricted: false,
     mostUsed: false,
+    cloneData: cloneBlock,
     security: {
       addPermission: [],
       view: [],
@@ -109,6 +112,7 @@ const italiaBlocks = {
     edit: CalendarEdit,
     restricted: false,
     mostUsed: false,
+    cloneData: cloneBlock,
     security: {
       addPermission: [],
       view: [],
@@ -124,6 +128,7 @@ const italiaBlocks = {
     edit: EventSearchEdit,
     restricted: false,
     mostUsed: false,
+    cloneData: cloneBlock,
     security: {
       addPermission: [],
       view: [],
@@ -139,6 +144,7 @@ const italiaBlocks = {
     edit: BandiSearchEdit,
     restricted: false,
     mostUsed: false,
+    cloneData: cloneBlock,
     security: {
       addPermission: [],
       view: [],
@@ -154,6 +160,7 @@ const italiaBlocks = {
     edit: UOSearchEdit,
     restricted: false,
     mostUsed: false,
+    cloneData: cloneBlock,
     security: {
       addPermission: [],
       view: [],
@@ -169,6 +176,7 @@ const italiaBlocks = {
     edit: ArgumentsInEvidenceEdit,
     restricted: false,
     mostUsed: false,
+    cloneData: cloneBlock,
     security: {
       addPermission: [],
       view: [],
@@ -184,6 +192,7 @@ const italiaBlocks = {
     edit: EditBreak,
     restricted: false,
     mostUsed: false,
+    cloneData: cloneBlock,
     security: {
       addPermission: [],
       view: [],
@@ -198,6 +207,7 @@ const italiaBlocks = {
     edit: AlertEdit,
     restricted: false,
     mostUsed: false,
+    cloneData: cloneBlock,
     blockHasOwnFocusManagement: true,
     security: {
       addPermission: [],
@@ -215,6 +225,7 @@ const italiaBlocks = {
     edit: TextCardEdit,
     restricted: false,
     mostUsed: false,
+    cloneData: cloneBlock,
     blockHasOwnFocusManagement: true,
     security: {
       addPermission: [],
@@ -230,6 +241,7 @@ const italiaBlocks = {
     edit: TextCardWithImageEdit,
     restricted: false,
     mostUsed: false,
+    cloneData: cloneBlock,
     blockHasOwnFocusManagement: true,
     security: {
       addPermission: [],
@@ -246,6 +258,7 @@ const italiaBlocks = {
     edit: AccordionEdit,
     restricted: false,
     mostUsed: false,
+    cloneData: cloneBlock,
     security: {
       addPermission: [],
       view: [],
@@ -261,6 +274,7 @@ const italiaBlocks = {
     view: NumbersBlockView,
     edit: NumbersBlockEdit,
     restricted: false,
+    cloneData: cloneBlock,
     mostUsed: true,
     security: {
       addPermission: [],
@@ -277,6 +291,7 @@ const italiaBlocks = {
     edit: IconBlocksEdit,
     restricted: false,
     mostUsed: true,
+    cloneData: cloneBlock,
     security: {
       addPermission: [],
       view: [],
@@ -292,6 +307,7 @@ const italiaBlocks = {
     edit: ContactsBlockEdit,
     restricted: false,
     mostUsed: false,
+    cloneData: cloneBlock,
     security: {
       addPermission: [],
       view: [],
@@ -308,6 +324,7 @@ const italiaBlocks = {
     edit: VideoGalleryEdit,
     restricted: false,
     mostUsed: false,
+    cloneData: cloneBlock,
     security: {
       addPermission: [],
       view: [],
@@ -323,6 +340,7 @@ const italiaBlocks = {
     edit: TwitterPostsEdit,
     restricted: false,
     mostUsed: false,
+    cloneData: cloneBlock,
     security: {
       addPermission: [],
       view: [],
@@ -338,6 +356,7 @@ const italiaBlocks = {
     edit: CTABlockEdit,
     restricted: false,
     mostUsed: false,
+    cloneData: cloneBlock,
     blockHasOwnFocusManagement: true,
     security: {
       addPermission: [],
@@ -354,6 +373,7 @@ const italiaBlocks = {
     edit: CountDownBlockEdit,
     restricted: false,
     mostUsed: false,
+    cloneData: cloneBlock,
     security: {
       addPermission: [],
       view: [],

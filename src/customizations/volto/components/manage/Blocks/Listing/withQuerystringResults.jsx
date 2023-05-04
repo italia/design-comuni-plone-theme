@@ -34,7 +34,6 @@ const getAdaptedQuery = (querystring, b_size, variation) => {
   ];
 
   const variationSettings = getVariationSettings(variation) ?? {};
-
   return Object.assign(
     variationSettings?.fullobjects
       ? { fullobjects: 1 }
@@ -53,7 +52,6 @@ const getAdaptedQuery = (querystring, b_size, variation) => {
 export default function withQuerystringResults(WrappedComponent) {
   function WithQuerystringResults(props) {
     const { data = {}, path, properties, isEditMode } = props; //properties: content,
-
     const content = useSelector((state) => state.content.data);
     const { settings } = config;
     const querystring = data.querystring || data; // For backwards compat with data saved before Blocks schema
