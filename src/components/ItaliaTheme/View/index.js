@@ -163,6 +163,7 @@ export ServizioUlterioriInformazioni from 'design-comuni-plone-theme/components/
 export ServizioMetadati from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioMetadati';
 export ServizioCondizioni from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioCondizioni';
 export ServizioArgomenti from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioArgomenti';
+export ServizioMetatag from 'design-comuni-plone-theme/components/ItaliaTheme/View/ServizioView/ServizioMetatag';
 
 export TrasparenzaPlaceholderAfterContent from 'design-comuni-plone-theme/components/ItaliaTheme/View/TrasparenzaView/Placeholder/AfterContent';
 export UOPlaceholderAfterContent from 'design-comuni-plone-theme/components/ItaliaTheme/View/UOView/Placeholder/AfterContent';

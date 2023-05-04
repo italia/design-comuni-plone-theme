@@ -36,6 +36,7 @@ import {
   ServizioMetadati,
   ServizioCondizioni,
   ServizioArgomenti,
+  ServizioMetatag,
   ContentTypeViewSections,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
@@ -46,6 +47,8 @@ export const ServizioViewSectionsOrder = (props) => [
     component: ContentImage,
     props: { position: 'documentBody' },
   },
+
+  { /* METADATI SCHEMA.ORG */ component: ServizioMetatag },
 
   { /* A CHI È RIVOLTO */ component: ServizioAChiSiRivolge },
 
