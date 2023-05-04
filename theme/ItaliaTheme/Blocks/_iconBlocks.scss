@@ -47,11 +47,16 @@
     }
   }
   .container {
-    &.secondary,
-    &.transparent {
+    &.secondary {
       .title,
       .description {
         color: $secondary-text;
+      }
+    }
+    &.transparent {
+      .title,
+      .description {
+        color: $body-color;
       }
     }
     .row.center {
