@@ -69,6 +69,10 @@ const Location = ({ location, show_icon }) => {
           </p>
         </div>
       </div>
+      {/* TODO: questo campo non esiste, esiste image.
+        Non ho idea se qualcuno lo sappia, ma se van mostrate le
+        immagini nelle card dei luoghi bisogna sistemare
+      */}
       {location_fo.immagine && (
         <div className="avatar size-xl">
           <Image image={location_fo.immagine} />

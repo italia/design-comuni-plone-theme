@@ -2,6 +2,13 @@ import { flattenToAppURL, isInternalURL } from '@plone/volto/helpers';
 
 import config from '@plone/volto/registry';
 
+const getImageIsFromBrain = (imageDownloadUrl) => {
+  // Old check against itemUrl truthyness isn't valid anymore.
+  // All brains have item[@id], need to check if image.download
+  // starts with @@images
+  return imageDownloadUrl.startsWith('@@images');
+};
+
 const getImageType = (image) => {
   let imageType = 'external';
   if (image['content-type'] === 'image/svg+xml') {
@@ -40,7 +47,7 @@ export const getImageAttributes = (
   // while regular content objects have scales with full urls (i.e. https://.../@@images/...)
   let itemPath = flattenToAppURL(itemUrl ?? '');
   if (itemPath.slice(-1) !== '/') itemPath = `${itemPath}/`;
-  const isFromBrain = !!itemUrl;
+  const isFromBrain = getImageIsFromBrain(image?.download);
 
   const imageScales = config.settings.imageScales;
 
