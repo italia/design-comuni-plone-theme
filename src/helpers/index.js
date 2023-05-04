@@ -36,3 +36,7 @@ export {
   blockIsNotEmptyPlaceholder,
   SSRRenderHtml,
 } from 'design-comuni-plone-theme/helpers/htmlDiff';
+export {
+  serviceFormValidationHelper,
+  blocksFieldIsEmpty,
+} from 'design-comuni-plone-theme/helpers/FormValidation/FormValidationHelpers';

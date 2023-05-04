@@ -1059,6 +1059,11 @@ msgstr "Nessun evento disponibile al momento"
 msgid "calendar_prev_arrow"
 msgstr "Precedente"
 
+#: components/ItaliaTheme/manage/Widgets/CanaleDigitaleWidget
+# defaultMessage: Accedere al servizio
+msgid "canale_digitale_widget_title"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
 # defaultMessage: Seleziona l'immagine da mostrare
 msgid "cardImage"

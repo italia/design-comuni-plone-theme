@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-04-12T11:10:48.690Z\n"
+"POT-Creation-Date: 2023-05-02T07:45:58.231Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1059,6 +1059,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Calendar/Body
 # defaultMessage: Precedente
 msgid "calendar_prev_arrow"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/CanaleDigitaleWidget
+# defaultMessage: Accedere al servizio
+msgid "canale_digitale_widget_title"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
