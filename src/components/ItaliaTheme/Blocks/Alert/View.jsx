@@ -38,7 +38,9 @@ const View = ({ data, pathname }) => {
                   src={`data:${data.image['content-type']};${data.image.encoding},${data.image.data}`}
                   alt=""
                   aria-hidden="true"
-                  className="left-image"
+                  className={cx('left-image', [
+                    data.sizeImage ? 'size-' + data.sizeImage : 'size-l',
+                  ])}
                   loading="lazy"
                 />
               </Col>
