@@ -80,7 +80,9 @@ class Edit extends Component {
                       src={`data:${this.props.data.image['content-type']};${this.props.data.image.encoding},${this.props.data.image.data}`}
                       alt=""
                       className={cx('left-image', [
-                        'size-' + this.props.data.sizeImage,
+                        this.props.data.sizeImage
+                          ? 'size-' + this.props.data.sizeImage
+                          : 'size-l',
                       ])}
                     />
                   </Col>

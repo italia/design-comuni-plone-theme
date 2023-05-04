@@ -47,6 +47,13 @@
     }
   }
   .container {
+    &.secondary,
+    &.transparent {
+      .title,
+      .description {
+        color: $secondary-text;
+      }
+    }
     .row.center {
       justify-content: center;
     }

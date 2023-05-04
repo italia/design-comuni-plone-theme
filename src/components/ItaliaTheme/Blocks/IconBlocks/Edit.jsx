@@ -84,7 +84,7 @@ class Edit extends SubblocksEdit {
             ></div>
           )}
 
-          <Container className="px-md-4">
+          <Container className={`px-md-4 ${this.props.data.bg_color}`}>
             <div className="block-header">
               <div className="title">
                 <TextEditorWidget

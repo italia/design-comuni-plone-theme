@@ -44,7 +44,7 @@ const AccordionView = ({ data, block }) => {
               })}
             ></div>
           )}
-          <Container className="px-md-4">
+          <Container className={`px-md-4 ${data.bg_color}`}>
             <div className="block-header">
               {data.title && (
                 <div className="title">
