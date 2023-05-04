@@ -1,3 +1,15 @@
+### [7.5.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.5.2...v7.5.3) (2023-05-04)
+
+
+### Bug Fixes
+
+* icons listing block title color fix with transparent background ([#152](https://github.com/RedTurtle/design-comuni-plone-theme/issues/152)) ([d7b1178](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d7b1178eb15f019e94a99a65eac2c5bdd0fa78fd))
+
+
+### Documentation
+
+* updated publiccode ([9df4380](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9df4380b56f1bf22828d16228cd2dbc765db2757))
+
 ### [7.5.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.5.1...v7.5.2) (2023-05-04)
 
 
