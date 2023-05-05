@@ -1,4 +1,4 @@
-import { Helmet } from '@plone/volto/helpers';
+import { Helmet, toPublicURL } from '@plone/volto/helpers';
 import { getSiteProperty } from 'design-comuni-plone-theme/helpers';
 import { richTextHasContent } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
@@ -24,6 +24,12 @@ const ServizioMetatag = ({ content }) => {
       '@type': 'GovernmentOrganization',
       name: siteTitle,
     },
+    areaServed: {
+      '@type': 'AdministrativeArea',
+      name: richTextHasContent(content.copertura_geografica)
+        ? fieldDataToPlainText(content.copertura_geografica)
+        : siteTitle,
+    },
     availableChannel: {
       '@type': 'ServiceChannel',
       name: 'Dove rivolgersi',
@@ -42,15 +48,8 @@ const ServizioMetatag = ({ content }) => {
     };
   }
 
-  if (richTextHasContent(content.copertura_geografica)) {
-    schemaOrg.areaServed = {
-      '@type': 'AdministrativeArea',
-      name: fieldDataToPlainText(content.copertura_geografica),
-    };
-  }
-
   if (content.canale_digitale_link) {
-    schemaOrg.serviceUrl = content.canale_digitale_link;
+    schemaOrg.serviceUrl = toPublicURL(content.canale_digitale_link);
   }
 
   if (content.ufficio_responsabile[0]) {
