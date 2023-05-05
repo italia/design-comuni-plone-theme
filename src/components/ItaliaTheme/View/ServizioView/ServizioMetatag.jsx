@@ -71,7 +71,9 @@ const ServizioMetatag = ({ content }) => {
 
   return (
     <Helmet>
-      <script type="application/ld+json">{JSON.stringify(schemaOrg)}</script>
+      <script type="application/ld+json" data-element="metatag">
+        {JSON.stringify(schemaOrg)}
+      </script>
     </Helmet>
   );
 };
