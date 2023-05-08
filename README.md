@@ -49,6 +49,8 @@ Nel progetto è presente una configurazione docker compose per testare un sito I
 % docker compose up
 ```
 
+Al termine il sito io-Comune di prova sarà raggiungibile alla url http://localhost
+
 ## Sottositi
 
 Il sistema implementa anche un tipo di contenuto ad hoc per la gestione di sottositi, in linee con le indicazioni generali.
