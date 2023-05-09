@@ -49,7 +49,18 @@ stylelint: ## Run unit test suite for the addon
 
 .PHONY: test-acceptance-server
 test-acceptance-server: ## Run test acceptance server
-	docker run -i --rm --name=plone -e ZSERVER_HOST=0.0.0.0 -e ZSERVER_PORT=55001 -p 55001:55001 -e SITE=plone -e APPLY_PROFILES=plone.app.contenttypes:plone-content,plone.restapi:default,kitconcept.volto:default-homepage -e CONFIGURE_PACKAGES=plone.app.contenttypes,plone.restapi,kitconcept.volto,kitconcept.volto.cors -e ADDONS='plone.app.robotframework plone.app.contenttypes plone.restapi kitconcept.volto' plone ./bin/robot-server plone.app.robotframework.testing.PLONE_ROBOT_TESTING
+	docker run -it \
+		--rm \
+		--name=plone \
+		-e ZSERVER_HOST=0.0.0.0 \
+		-e ZSERVER_PORT=55001 \
+		-p 55001:55001 \
+		-e SITE=plone \
+		-e APPLY_PROFILES=plone.app.contenttypes:plone-content,plone.restapi:default,plone.app.caching:default,design.plone.policy:default \
+		-e CONFIGURE_PACKAGES=plone.app.contenttypes,plone.restapi,design.plone.policy,design.plone.contenttypes,redturtle.volto,collective.volto.dropdownmenu,collective.volto.socialsettings,collective.volto.secondarymenu,collective.volto.subsites,collective.volto.subsites,redturtle.voltoplugin.editablefooter,collective.volto.subsites,redturtle.voltoplugin.editablefooter,collective.volto.formsupport,collective.volto.subsites,redturtle.voltoplugin.editablefooter,collective.volto.formsupport,collective.volto.subfooter,collective.volto.subsites,redturtle.voltoplugin.editablefooter,collective.volto.formsupport,collective.volto.subfooter,eea.api.taxonomy,collective.volto.subsites,redturtle.voltoplugin.editablefooter,collective.volto.formsupport,collective.volto.subfooter,eea.api.taxonomy,redturtle.faq,collective.volto.subsites,redturtle.voltoplugin.editablefooter,collective.volto.formsupport,collective.volto.subfooter,eea.api.taxonomy,redturtle.faq,collective.feedback,collective.volto.subsites,redturtle.voltoplugin.editablefooter,collective.volto.formsupport,collective.volto.subfooter,eea.api.taxonomy,redturtle.faq,collective.feedback,redturtle.bandi,collective.volto.subsites,redturtle.voltoplugin.editablefooter,collective.volto.formsupport,collective.volto.subfooter,eea.api.taxonomy,redturtle.faq,collective.feedback,redturtle.bandi,collective.venue,collective.volto.subsites,redturtle.voltoplugin.editablefooter,collective.volto.formsupport,collective.volto.subfooter,eea.api.taxonomy,redturtle.faq,collective.feedback,redturtle.bandi,collective.venue,collective.z3cform.datagridfield,collective.volto.subsites,redturtle.voltoplugin.editablefooter,collective.volto.formsupport,collective.volto.subfooter,eea.api.taxonomy,redturtle.faq,collective.feedback,redturtle.bandi,collective.venue,collective.z3cform.datagridfield,collective.taxonomy,collective.volto.subsites,redturtle.voltoplugin.editablefooter,collective.volto.formsupport,collective.volto.subfooter,eea.api.taxonomy,redturtle.faq,collective.feedback,redturtle.bandi,collective.venue,collective.z3cform.datagridfield,collective.taxonomy,plone.app.caching \
+		-e ADDONS='plone.app.robotframework' \
+		ghcr.io/redturtle/iocomune-backend \
+		./bin/robot-server plone.app.robotframework.testing.PLONE_ROBOT_TESTING
 
 .PHONY: demo
 demo: docker-compose.yml
