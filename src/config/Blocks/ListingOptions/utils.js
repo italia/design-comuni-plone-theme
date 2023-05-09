@@ -1,4 +1,5 @@
 import { defineMessages } from 'react-intl';
+import { v4 as uuid } from 'uuid';
 
 const messages = defineMessages({
   show_icon: {
