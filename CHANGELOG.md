@@ -1,20 +1,3 @@
-## [7.6.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.5.3...v7.6.0) (2023-05-09)
-
-
-### Features
-
-* alert block small, medium and large icon now on mobile too ([#156](https://github.com/RedTurtle/design-comuni-plone-theme/issues/156)) ([84eaeb5](https://github.com/RedTurtle/design-comuni-plone-theme/commit/84eaeb5adcae7eb34f8ef99e20c0cdd55c620b3a))
-
-
-### Bug Fixes
-
-* uuid import ([#157](https://github.com/RedTurtle/design-comuni-plone-theme/issues/157)) ([0c35eb3](https://github.com/RedTurtle/design-comuni-plone-theme/commit/0c35eb3e1dc23e1cc02c4095e938b56f91853e0b))
-
-
-### Documentation
-
-* updated publiccode ([c7e9318](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c7e931882224111331e1fff078bbaace176e6175))
-
 ### [7.5.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.5.2...v7.5.3) (2023-05-04)
 
 
