@@ -328,7 +328,7 @@ dl.trasparenza-fields {
 
 #metadata {
   font-family: $font-family-serif;
-  color: $secondary;
+  color: $gray-secondary;
   @include rem-size(font-size, 16px);
   @include rem-size(line-height, 24px);
 }

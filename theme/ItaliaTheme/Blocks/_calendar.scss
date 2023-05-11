@@ -54,11 +54,11 @@
   .slick-arrow {
     width: 1.5rem;
     height: auto;
-    color: transparentize($secondary, 0.6);
+    color: transparentize($gray-secondary, 0.6);
 
     &:hover,
     &:focus {
-      color: transparentize($secondary, 0.3);
+      color: transparentize($gray-secondary, 0.3);
     }
 
     &.slick-next {

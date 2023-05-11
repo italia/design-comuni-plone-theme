@@ -29,8 +29,8 @@
     .categoryicon-top .icon {
       width: 32px;
       height: 32px;
-      color: $secondary;
-      fill: $secondary;
+      color: $gray-secondary;
+      fill: $gray-secondary;
       font-weight: 600;
     }
 
@@ -151,8 +151,8 @@
         flex-wrap: nowrap;
 
         > .icon {
-          color: $secondary;
-          fill: $secondary;
+          color: $gray-secondary;
+          fill: $gray-secondary;
         }
       }
     }

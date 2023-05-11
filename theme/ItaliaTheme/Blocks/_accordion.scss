@@ -46,7 +46,7 @@ $accordion-icon-color: #7fb2e5;
           .accordion-header {
             padding: 0.5em 0;
             border-bottom: 1px solid $gray-border;
-            color: $secondary;
+            color: $primary;
             font-size: 1.2rem;
             font-weight: bold;
 
@@ -79,7 +79,7 @@ $accordion-icon-color: #7fb2e5;
               button {
                 display: flex;
                 align-items: center;
-                color: $secondary;
+                color: $primary;
                 font-size: 1.2rem;
                 font-weight: bold;
 
@@ -97,7 +97,7 @@ $accordion-icon-color: #7fb2e5;
               align-items: center;
 
               .title {
-                color: $secondary;
+                color: $primary;
               }
 
               button {
