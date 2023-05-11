@@ -93,14 +93,16 @@ const PersonaRuolo = ({ content }) => {
               </div>
             ))}
           </RichTextSection>
-          <RichTextSection
-            tag_id="tipologia_incarico"
-            title={intl.formatMessage(messages.tipologia_incarico)}
-          >
-            <div className="font-serif">
-              {content.incarichi_persona[0].tipologia_incarico.title}
-            </div>
-          </RichTextSection>
+          {content.incarichi_persona[0]?.tipologia_incarico?.title && (
+            <RichTextSection
+              tag_id="tipologia_incarico"
+              title={intl.formatMessage(messages.tipologia_incarico)}
+            >
+              <div className="font-serif">
+                {content.incarichi_persona[0].tipologia_incarico.title}
+              </div>
+            </RichTextSection>
+          )}
           {richTextHasContent(content.incarichi_persona[0].compensi) && (
             <RichTextSection
               tag_id="compensi"
