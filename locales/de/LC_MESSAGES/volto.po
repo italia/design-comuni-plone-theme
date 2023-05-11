@@ -378,6 +378,7 @@ msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 #: components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar
+#: config/Blocks/ListingOptions/defaultOptions
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Mostra lo sfondo del blocco
 msgid "Mostra lo sfondo del blocco"

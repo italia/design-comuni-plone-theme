@@ -14,6 +14,10 @@ const messages = defineMessages({
     id: 'card_bg_color',
     defaultMessage: 'Colore di sfondo',
   },
+  show_block_bg: {
+    id: 'Mostra lo sfondo del blocco',
+    defaultMessage: 'Mostra lo sfondo del blocco',
+  },
 });
 
 /** DEFAULT **/
@@ -47,6 +51,16 @@ const addDefaultAdditionalOptions = (schema, formData, intl, position = 0) => {
     );
     pos++;
   }
+
+  addSchemaField(
+    schema,
+    'show_block_bg',
+    intl.formatMessage(messages.show_block_bg),
+    null,
+    { type: 'boolean' },
+    pos,
+  );
+  pos++;
 
   /* if (formData.variation === 'simpleCard') {
     addSchemaField(
