@@ -79,7 +79,7 @@ msgstr "Cartella modulistica"
 #: config/Blocks/ListingOptions/defaultOptions
 # defaultMessage: Centrare i card
 msgid "Center block cards"
-msgstr "Centrare i card"
+msgstr "Centra i risultati"
 
 #: components/ItaliaTheme/Header/HeaderSearch/HeaderSearch
 # defaultMessage: Cerca
