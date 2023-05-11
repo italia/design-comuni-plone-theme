@@ -44,7 +44,6 @@ const RenderBlocks = ({ content, exclude = ['title', 'description'] }) => {
       return null;
     }
   }
-
   return items?.length > 0 ? (
     <>
       {map(items, (block) => {

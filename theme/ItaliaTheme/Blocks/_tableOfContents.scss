@@ -4,21 +4,53 @@ $space-left: 1rem;
   // template for "Indice dei contenuti"
   .ui.bulleted.list {
     padding-left: 0;
-
+    display: flex;
+    & .ui.bulleted.list {
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      padding-top: 0.5rem;
+      [class^='item headline-'] {
+        margin-left: $space-left;
+      }
+      .item:last-child {
+        padding-bottom: 0;
+      }
+    }
     .item {
       display: flex;
-      align-items: center;
+      flex-direction: column;
+      justify-content: center;
       padding-bottom: 0.6rem;
       font-size: 0.9rem;
       list-style: none;
+      position: relative;
 
       a {
         display: inline-block;
-        margin-left: 0.2rem;
+        margin-left: 1rem;
         text-decoration: none;
       }
+      &.headline-2 {
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        font-weight: 600;
+        width: 100%;
 
-      &:not(.headline-two)::before {
+        &::before {
+          width: 0;
+          height: 0;
+          border-top: 0.4rem solid transparent;
+          border-bottom: 0.4rem solid transparent;
+          border-left: 0.5rem solid $link-color;
+          content: '' !important;
+          list-style: none;
+          position: absolute;
+          top: 0.4rem;
+        }
+      }
+
+      &:not(.headline-2)::before {
         position: relative;
         display: inline-block;
         width: 0.55rem;
@@ -27,44 +59,28 @@ $space-left: 1rem;
         min-height: 0.55rem;
         border-top: 0.1rem solid $link-color;
         border-right: 0.1rem solid $link-color;
-        margin-right: 1rem;
         content: '' !important;
         list-style: none;
         transform: rotate(45deg);
+        position: absolute;
+        top: 0.4rem;
       }
-
-      &.headline-two {
-        margin-top: 0.5rem;
-        font-size: 1rem;
-        font-weight: 600;
-
-        &::before {
-          width: 0;
-          height: 0;
-          border-top: 0.4rem solid transparent;
-          border-bottom: 0.4rem solid transparent;
-          border-left: 0.5rem solid $link-color;
-          margin-right: 0.8rem;
-          content: '' !important;
-          list-style: none;
-        }
-      }
-
-      &.headline-three {
-        margin-left: $space-left;
-      }
-
-      &.headline-four {
-        margin-left: calc(#{$space-left} * 2);
-      }
-
-      &.headline-five {
-        margin-left: calc(#{$space-left} * 3);
-      }
-
-      &.headline-six {
-        margin-left: calc(#{$space-left} * 4);
-      }
+    }
+  }
+  ol {
+    counter-reset: item;
+    list-style-type: none;
+  }
+  ol > li {
+    counter-increment: item;
+  }
+  ol > li::before {
+    content: counters(item, '.') '. ';
+  }
+  & > ol.ordered.list {
+    padding-left: 0;
+    li {
+      padding: 0.25rem 0;
     }
   }
 }
