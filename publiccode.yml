@@ -227,9 +227,9 @@ maintenance:
 name: io-Comune - Il sito AgID per Comuni ed Enti Pubblici
 platforms:
   - web
-releaseDate: '2023-05-09'
+releaseDate: '2023-05-11'
 softwareType: standalone/web
-softwareVersion: 7.6.0
+softwareVersion: 7.7.0
 url: 'https://github.com/italia/design-comuni-plone-theme'
 usedBy:
   - ASP Comuni Modenesi Area Nord
