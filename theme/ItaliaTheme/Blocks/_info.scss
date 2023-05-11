@@ -5,6 +5,19 @@
     .bg-alert-danger {
       border-style: solid;
       border-width: 2px 2px 2px 10px;
+      .draftjs-buttons a {
+        color: $body-color;
+      }
+      &.bg-color-true {
+        .draftjs-buttons a {
+          background-color: #fff;
+          color: $body-color;
+          &:hover {
+            background-color: #000;
+            color: #fff;
+          }
+        }
+      }
     }
 
     .bg-alert-warning-orange,
@@ -32,6 +45,13 @@
     .bg-alert-danger {
       border-color: #a32219;
       color: $black;
+      .draftjs-buttons a {
+        background-color: #a32219;
+        color: #fff;
+        &:hover {
+          background-color: darken(#a32219, 10%);
+        }
+      }
       svg.icon {
         fill: #a32219;
       }
@@ -55,6 +75,12 @@
 
     .bg-alert-warning-orange {
       border-color: #eb973f;
+      .draftjs-buttons a {
+        background-color: #eb973f;
+        &:hover {
+          background-color: darken(#eb973f, 10%);
+        }
+      }
       svg.icon {
         fill: #eb973f;
       }
@@ -65,6 +91,12 @@
 
     .bg-alert-warning {
       border-color: #f0c250;
+      .draftjs-buttons a {
+        background-color: #f0c250;
+        &:hover {
+          background-color: darken(#f0c250, 10%);
+        }
+      }
       svg.icon {
         fill: #f0c250;
       }

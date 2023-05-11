@@ -1,6 +1,18 @@
 .public-ui {
   .block.alertblock,
   .alertblock {
+    .bg-alert-warning-orange,
+    .bg-alert-warning,
+    .bg-alert-danger {
+      .draftjs-buttons a {
+        background-color: #fff;
+        color: $body-color;
+        &:hover {
+          background-color: #000;
+          color: #fff;
+        }
+      }
+    }
     .bg-alert-danger {
       background-color: #a32219;
       color: $white;

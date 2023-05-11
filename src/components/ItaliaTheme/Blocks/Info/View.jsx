@@ -7,12 +7,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import redraft from 'redraft';
-import {
-  Container,
-  Row,
-  Col,
-  Icon,
-} from 'design-react-kit/dist/design-react-kit';
+import { Container, Row, Col } from 'design-react-kit/dist/design-react-kit';
+import { Icon } from '@italia/components/ItaliaTheme';
 //import { isCmsUi } from '@plone/volto/helpers';
 import config from '@plone/volto/registry';
 

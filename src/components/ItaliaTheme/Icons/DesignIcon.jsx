@@ -41,7 +41,7 @@ const Icon = ({ icon, title, className, size }) => {
     const { current: name } = ImportedIconRef;
     return (
       <svg
-        xmlns={name.attributes && name.attributes.xmlns}
+        xmlns={name.attributes?.xmlns || 'http://www.w3.org/2000/svg'}
         viewBox={name.attributes && name.attributes.viewBox}
         style={{ height: size, width: 'auto' }}
         className={className}
