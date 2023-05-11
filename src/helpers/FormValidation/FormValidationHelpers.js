@@ -34,6 +34,44 @@ const removeRequiredField = (fields, fieldId) =>
 const fieldIsRequired = (fields, fieldId) => fields?.some((f) => f === fieldId);
 
 /**
+ * Get if field is really empty or not.
+ * Fixes ObjectBrowser bug not updating formData in realtime
+ * and breaking validation next. We fixed validation not being called
+ * onBlur bug, but the sum of bugs makes a feature and without
+ * this fix, validation is broken for all ObjectBrowser fields
+ * @param {object} formData formData values
+ * @param {object} touchedField contains info on touched fields
+ * @param {string} field required field reference to update
+ * @param {string} type field type
+ * @param {string} widget widget type
+ */
+export const getRealEmptyField = (
+  formData,
+  touchedField,
+  field,
+  type,
+  widget,
+) => {
+  if (type === 'array' && widget !== 'data_grid') {
+    if (field in touchedField) {
+      // Fixes ObjectBrowser Volto bug: not updating formData in realtime
+      formData[field] = touchedField[field];
+    }
+    return isEmpty(formData[field]);
+  } else if (type === 'dict' && widget === 'blocks') {
+    const firstBlock = formData?.[field]?.blocks_layout?.items?.[0];
+    return (
+      // se non ci sono blocchi (improbabile)
+      firstBlock === undefined ||
+      // se non c'è alcun blocco di testo o tabella che contenga testo
+      blocksFieldIsEmpty(formData[field])
+    );
+  } else if (type === 'string' && widget === 'richtext') {
+    return !(formData?.[field]?.data?.replace(/(<([^>]+)>)/g, '').length > 0);
+  }
+};
+
+/**
  * Validates form of Servizio CT
  * @param {object} schema schema
  * @param {object} formData formData values

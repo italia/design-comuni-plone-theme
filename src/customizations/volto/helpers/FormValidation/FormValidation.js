@@ -10,6 +10,7 @@ import { messages } from '@plone/volto/helpers/MessageLabels/MessageLabels';
 import {
   serviceFormValidationHelper,
   blocksFieldIsEmpty,
+  getRealEmptyField,
 } from 'design-comuni-plone-theme/helpers';
 
 /**
@@ -219,7 +220,13 @@ const validateRequiredFields = (
   map(uniqueFields, (requiredField) => {
     const type = schema.properties[requiredField]?.type;
     const widget = schema.properties[requiredField]?.widget;
-    let isEmptyField = isEmpty(formData[requiredField]);
+    let isEmptyField = getRealEmptyField(
+      formData,
+      touchedField,
+      requiredField,
+      type,
+      widget,
+    );
     if (!isEmptyField) {
       if (type === 'array') {
         // Custom: Supporto alla validazione dei campi DataGridField
@@ -236,19 +243,6 @@ const validateRequiredFields = (
             ? formData[requiredField].length === 0
             : true;
         }
-      } else if (type === 'string' && widget === 'richtext') {
-        isEmptyField = !(
-          formData[requiredField]?.data?.replace(/(<([^>]+)>)/g, '').length > 0
-        );
-      } else if (type === 'dict' && widget === 'blocks') {
-        // Custom: gestione del campo di tipo blocks
-        const field = formData[requiredField];
-        const firstBlock = field.blocks_layout?.items?.[0];
-        isEmptyField =
-          // se non ci sono blocchi (improbabile)
-          firstBlock === undefined ||
-          // se non c'è alcun blocco di testo o tabella che contenga testo
-          blocksFieldIsEmpty(field);
       }
     }
     if (
