@@ -1,3 +1,25 @@
+## [7.7.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.6.0...v7.7.0) (2023-05-11)
+
+
+### Features
+
+* new colors for draftjs button inside alert and info blocks ([#164](https://github.com/RedTurtle/design-comuni-plone-theme/issues/164)) ([3290640](https://github.com/RedTurtle/design-comuni-plone-theme/commit/32906401816f976b9b1b8562b03c088088f2a02a))
+
+
+### Bug Fixes
+
+* option to show bg replaced ([#159](https://github.com/RedTurtle/design-comuni-plone-theme/issues/159)) ([57ec8a1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/57ec8a113c3b8225485000fc3074f72fad2b8e92))
+
+
+### Documentation
+
+* updated publiccode ([1a94c70](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1a94c704ec2fec3e6f74dce3cf7e4a846641f86a))
+
+
+### Maintenance
+
+* update locales ([198ccd3](https://github.com/RedTurtle/design-comuni-plone-theme/commit/198ccd365a4c9b6667016692daa35db2ffc9e562))
+
 ## [7.6.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.5.3...v7.6.0) (2023-05-09)
 
 
