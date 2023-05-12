@@ -50,7 +50,7 @@ const CardWithoutImageRssTemplate = ({
           <Row>
             {items.map((item, index) => (
               <Col lg={3} className="mb-3" key={index}>
-                <Card noWrapper={false} tag="div">
+                <Card noWrapper={false} tag="div" className="card-bg">
                   <CardBody tag="div">
                     <div className="category-top">
                       {item?.categories?.length > 0 && item.categories[0]._ && (
