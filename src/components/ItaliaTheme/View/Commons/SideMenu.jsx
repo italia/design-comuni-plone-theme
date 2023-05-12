@@ -128,13 +128,11 @@ const SideMenu = ({ data, content_uid }) => {
     setIsNavOpen(false);
   };
 
+  const yCountEnd = document.querySelector('#main-content-section');
+
   const progressValue = useMemo(() => {
     if (!isClient) return 0;
-    return (
-      scrollY /
-        (document.documentElement.scrollHeight -
-          document.documentElement.clientHeight) || 0
-    );
+    return (scrollY - yCountEnd.offsetTop) / yCountEnd.offsetHeight || 0;
   }, [scrollY, isClient]);
 
   return headers?.length > 0 ? (
@@ -198,7 +196,10 @@ const SideMenu = ({ data, content_uid }) => {
             <div className="link-list-wrapper menu-link-list">
               <h3>{intl.formatMessage(messages.index)}</h3>
               <div className="mb-3">
-                <Progress value={100 * progressValue} role="progressbar" />
+                <Progress
+                  value={progressValue > 0 ? 100 * progressValue : 0}
+                  role="progressbar"
+                />
               </div>
               <ul className="link-list" data-element="page-index">
                 {headers.map((item, i) => (
