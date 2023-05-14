@@ -1,3 +1,12 @@
+## [8.0.0-alpha.32](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.31...v8.0.0-alpha.32) (2023-05-14)
+
+
+### Bug Fixes
+
+* fixed title of events in calendar block ([#165](https://github.com/RedTurtle/design-comuni-plone-theme/issues/165)) ([5e73f79](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5e73f792839ba9fd1b9a16b120c258e2e807de9c))
+* progress bar calculation in ct views ([#135](https://github.com/RedTurtle/design-comuni-plone-theme/issues/135)) ([efc5e9c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/efc5e9c866f1d97f3241da068a3ff9ee629ecb04))
+* style of Rss card without image ([#168](https://github.com/RedTurtle/design-comuni-plone-theme/issues/168)) ([ae2673f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ae2673f8d6a13adb591f676696369b80f6cdaafe))
+
 ## [8.0.0-alpha.31](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.30...v8.0.0-alpha.31) (2023-05-11)
 
 
