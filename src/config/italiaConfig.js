@@ -234,12 +234,9 @@ export default function applyConfig(voltoConfig) {
     ],
     'volto-blocks-widget': {
       allowedBlocks: [
-        'text',
-        'image',
-        'video',
-        'html',
-        'table',
-        'maps',
+        ...config.settings['volto-blocks-widget'].allowedBlocks.filter(
+          (block) => block.id !== 'maps',
+        ),
         'break',
         'testo_riquadro_semplice',
         'testo_riquadro_immagine',
