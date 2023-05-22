@@ -128,7 +128,10 @@ const SideMenu = ({ data, content_uid }) => {
     setIsNavOpen(false);
   };
 
-  const yCountEnd = document.querySelector('#main-content-section');
+  // const yCountEnd = document.querySelector('#main-content-section');
+  const yCountEnd = isClient
+    ? document.querySelector('#main-content-section')
+    : null;
 
   const progressValue = useMemo(() => {
     if (!isClient) return 0;
