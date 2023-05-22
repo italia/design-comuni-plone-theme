@@ -93,22 +93,34 @@
       content: none;
     }
   }
+  .flex-container {
+    display: flex;
+    align-items: center;
+    column-gap: 0.56em;
+    .day {
+      font-size: 2.6rem;
+      font-weight: 400;
+    }
 
-  .day {
-    font-family: $font-family-monospace;
-    font-size: 2.4rem;
-    font-weight: 100;
-  }
+    .month-date {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
-  .day-week {
-    font-family: $font-family-monospace;
-    font-weight: 400;
-  }
+      .day-week {
+        font-family: $font-family-sans-serif;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $caption-text;
+      }
 
-  .month {
-    margin-left: -1rem;
-    font-family: $font-family-monospace;
-    font-size: 0.8rem;
+      .month {
+        font-family: $font-family-sans-serif;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: capitalize;
+      }
+    }
   }
 
   .calendar-item {
