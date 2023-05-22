@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux';
 import {
   ParentSiteMenu,
   LanguageSelector,
-  ArLogin,
+  HeaderLogin,
   TertiaryMenu,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
@@ -20,7 +20,7 @@ const HeaderSlimRightZone = () => {
       <ParentSiteMenu />
       {!subsite && <TertiaryMenu />}
       <LanguageSelector />
-      <ArLogin />
+      <HeaderLogin />
     </>
   );
 };

@@ -2,103 +2,159 @@
  * @module components/theme/Unauthorized/Unauthorized
  */
 
+import { Button } from 'design-react-kit';
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, defineMessages, useIntl } from 'react-intl';
 import { Link } from 'react-router-dom';
-import { Container } from 'semantic-ui-react';
 import { useSelector } from 'react-redux';
-import { useLocation } from 'react-router-dom';
+import { Row, Col, Container } from 'design-react-kit';
 import { withServerErrorCode } from '@plone/volto/helpers/Utils/Utils';
-import { getBaseUrl, BodyClass } from '@plone/volto/helpers';
+import { BodyClass } from '@plone/volto/helpers';
+import { useLocation } from 'react-router-dom';
+import { getBaseUrl } from '@plone/volto/helpers';
+import config from '@plone/volto/registry';
 import {
-  Icon,
-  LoginButton,
+  LoginAgidButtons,
   RemoveBodyClass,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
-import config from '@plone/volto/registry';
 /**
  * unauthorized function.
  * @function Unauthorized
  * @returns {string} Markup of the unauthorized page.
  */
-const Unauthorized = () => {
-  const error_message = useSelector((state) => state.apierror.message);
-  let location = useLocation();
+
+const messages = defineMessages({
+  unauthorizedDescription: {
+    id: 'unauthorized_description',
+    defaultMessage:
+      'You are trying to access a protected resource, please login first.',
+  },
+  loginOther: {
+    id: 'login_agid_other',
+    defaultMessage: 'Other users',
+  },
+  loginOtherDescription: {
+    id: 'login_agid_other_description',
+    defaultMessage: 'Alternatively you can use these methods.',
+  },
+  loginPloneUser: {
+    id: 'login_plone_user',
+    defaultMessage: 'Log in as employee',
+  },
+});
+
+const Unauthorized = (props) => {
+  const intl = useIntl();
+  const location = useLocation();
+  const error_message = useSelector((state) => state.apierror?.message);
+  const spidLoginUrl = __CLIENT__
+    ? window.env.RAZZLE_SPID_LOGIN_URL
+    : process.env.RAZZLE_SPID_LOGIN_URL;
+  // BBB: per retrocompatibilità con il vecchio config arLoginUrl
+  const spidLogin = config.settings.siteProperties?.spidLogin;
 
   return (
-    <Container className="view-wrapper">
+    <div id="unauthorized-agid" className="view-wrapper">
       <BodyClass className="public-ui" />
       <RemoveBodyClass className="cms-ui" />
-      <h1>
-        <FormattedMessage id="Unauthorized" defaultMessage="Unauthorized" />
-      </h1>
-      <h3>{error_message}</h3>
-      <p className="description">
-        <FormattedMessage
-          id="You are trying to access a protected resource, please {login} first."
-          defaultMessage="You are trying to access a protected resource, please {login} first."
-          values={{
-            login: (
-              <>
-                {config.settings.siteProperties.spidLogin && (
-                  <>
-                    <FormattedMessage
-                      id="login_spid_message"
-                      defaultMessage="login with Spid"
-                    />
-                    <div className="unauthorized-spid-login">
-                      <LoginButton size="big">
-                        <span className="rounded-icon">
-                          <Icon
-                            color="primary"
-                            icon="it-user"
-                            padding={false}
-                            size=""
-                          />
-                        </span>
-                        <span>
-                          <FormattedMessage
-                            id="login_with_spid"
-                            defaultMessage="Login with Spid"
-                          />
-                        </span>
-                      </LoginButton>
-                    </div>
-                    <FormattedMessage
-                      id="login_admin_message"
-                      defaultMessage="or login as an administrator"
-                    />{' '}
-                  </>
-                )}
-                <Link to={`${getBaseUrl(location.pathname)}/login`}>
-                  <FormattedMessage id="log in" defaultMessage="log in" />
-                </Link>
-              </>
-            ),
-          }}
-        />
-      </p>
-      <p>
-        <FormattedMessage
-          id="If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}."
-          defaultMessage="If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}."
-          values={{
-            site_admin: (
-              <Link to="/contact-form">
+
+      <Container className="view-wrapper py-5">
+        {spidLoginUrl || spidLogin ? (
+          <>
+            <Row className="view-container">
+              <Col xs={12} lg={{ size: 10, offset: 1 }}>
+                <h1>
+                  <FormattedMessage
+                    id="Unauthorized"
+                    defaultMessage="Unauthorized"
+                  />
+                </h1>
+                <p className="description">
+                  <FormattedMessage {...messages.unauthorizedDescription} />
+                </p>
+              </Col>
+            </Row>
+            <hr className="d-none d-lg-block mt-0 mb-4" />
+            <Row className="py-4">
+              <Col xs={12} lg={{ size: 8, offset: 2 }}>
+                <LoginAgidButtons origin={getBaseUrl(location.pathname)} />
+                <div className="login-method">
+                  <h3>{intl.formatMessage(messages.loginOther)}</h3>
+                  <p className="description">
+                    {intl.formatMessage(messages.loginOtherDescription)}
+                  </p>
+                  <div className="unauthorized-spid-login">
+                    <Button
+                      color="primary"
+                      outline
+                      href={`${getBaseUrl(
+                        location.pathname,
+                      )}/login?login_operatore=1`}
+                      tag="button"
+                    >
+                      <span>{intl.formatMessage(messages.loginPloneUser)}</span>
+                    </Button>
+                  </div>
+                </div>
+              </Col>
+            </Row>
+          </>
+        ) : (
+          <Row className="view-container">
+            <Col xs={12} lg={{ size: 10, offset: 1 }}>
+              <h1>
                 <FormattedMessage
-                  id="Site Administration"
-                  defaultMessage="Site Administration"
+                  id="Unauthorized"
+                  defaultMessage="Unauthorized"
                 />
-              </Link>
-            ),
-          }}
-        />
-      </p>
-      <p>
-        <FormattedMessage id="Thank you." defaultMessage="Thank you." />
-      </p>
-    </Container>
+              </h1>
+              <h3>{error_message}</h3>
+              <p className="description">
+                <FormattedMessage
+                  id="You are trying to access a protected resource, please {login} first."
+                  defaultMessage="You are trying to access a protected resource, please {login} first."
+                  values={{
+                    login: (
+                      <Link
+                        to={`${getBaseUrl(
+                          location.pathname,
+                        )}/login?login_operatore=1`}
+                      >
+                        <FormattedMessage id="log in" defaultMessage="log in" />
+                      </Link>
+                    ),
+                  }}
+                />
+              </p>
+            </Col>
+          </Row>
+        )}
+        <Row>
+          <Col xs={12} lg={{ size: 10, offset: 1 }}>
+            <p>
+              <FormattedMessage
+                id="If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}."
+                defaultMessage="If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}."
+                values={{
+                  site_admin: (
+                    <Link to="/contact-form">
+                      <FormattedMessage
+                        id="Site Administration"
+                        defaultMessage="Site Administration"
+                      />
+                    </Link>
+                  ),
+                }}
+              />
+            </p>
+            <p>
+              <FormattedMessage id="Thank you." defaultMessage="Thank you." />
+            </p>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
 };
 

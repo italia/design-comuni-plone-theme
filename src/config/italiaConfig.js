@@ -168,9 +168,9 @@ export default function applyConfig(voltoConfig) {
       subsiteParentSiteTitle: 'io-Comune', //può essere una stringa, o un oggetto nel caso di multilingua: {'it':'Nome del sito padre', 'en':'Parent site name'}. Se multilingua il default è comunque la stringa.
       amministrazioneTrasparenteUrl: '/amministrazione-trasparente',
       showNextGenerationEU: true,
-      // arLoginUrl: '/login',
-      // arLogoutUrl: '/logout',
-      //spidLogin: true, //se true, nella pagina di errore Unauthorized, mostra il pulsante per il login a Spid.
+      // arLoginUrl: '/login?e=1',
+      // arLogoutUrl: '/logout?e=1',
+      // spidLogin: true, //se true, nella pagina di errore Unauthorized, mostra il pulsante per il login a Spid.
       headerslimTertiaryMenu: {
         it: [
           //{ title: 'Contatti', url: '/it/contatti' },

@@ -7,24 +7,24 @@ conforme alle nuove linee guida AgID, accessibile a tutti ed usabile da smartpho
 
 ### Pensato per i cittadini, costruito con i redattori
 
-io-Comune è la soluzione versatile e facile da usare per garantire ai cittadini un rapido accesso ai contenuti e ai servizi del tuo Comune, sia dal PC che da mobile.      
-      
+io-Comune è la soluzione versatile e facile da usare per garantire ai cittadini un rapido accesso ai contenuti e ai servizi del tuo Comune, sia dal PC che da mobile.
+
 ### AgID 2.0
 
 io-Comune segue le linee guida ufficiali per il design dei siti web dei Comuni italiani: layout grafico, architettura informativa, struttura dei contenuti e flussi di navigazione rispecchiano gli standard definiti da AgID.
-      
+
 ### Trovabilità dei contenuti
 
 io-Comune integra componenti e flussi di navigazione suggeriti da AgID, con l'esperienza ventennale di [RedTurtle](https://www.redturtle.it/) nella gestione di complesse basi informative per darti la migliore esperienza di fruizione e portarti velocemente al contenuto desiderato.
 
 ### La porta per i servizi online
-      
+
 io-Comune supporta nativamente le piattaforme abilitanti, come la componente di autenticazione SPID e il sistema di pagamento pagoPA.\
 Inoltre, io-Comune permetterà l’integrazione con IO, l'app ufficiale dei servizi pubblici, per poter dialogare con i cittadini anche dal telefono.
-      
+
 ### Certificato e sicuro, si affida ad un CMS open source
-      
-Puoi  utilizzare io-Comune in totale sicurezza perché ha seguito con successo il [percorso di qualificazione per i fornitori di Software as a Service](https://catalogocloud.agid.gov.it/service/1085) della PA (SaaS).
+
+Puoi utilizzare io-Comune in totale sicurezza perché ha seguito con successo il [percorso di qualificazione per i fornitori di Software as a Service](https://catalogocloud.agid.gov.it/service/1085) della PA (SaaS).
 
 Questo ti garantisce un servizio di qualità e libertà di cambiare piattaforma senza vincoli di lock-in.
 
@@ -52,6 +52,17 @@ Il sistema implementa anche un tipo di contenuto ad hoc per la gestione di sotto
 
 Si veda ad esempio:
 [Comune di Modena: Informagiovani](https://www.comune.modena.it/informagiovani)
+
+## Autenticazione SPID
+
+L'integrazione dell'autenticazione con SPID, viene fatta generalmente tramite addon plone come
+[pas.plugins.oidc](https://pypi.org/project/pas.plugins.oidc),
+[pas.plugins.headers](https://pypi.org/project/pas.plugins.headers), ...
+insieme a sistemi di integrazione SPID verificati con SPID o con federatori di autenticazione
+(Shibboleth, Keycloak, ...).
+
+Il tema prevede la possibilità di definire due environment `RAZZLE_SPID_LOGIN_URL` e `RAZZLE_SPID_LOGOUT_URL`
+su cui impostare rispettivamente la url di login e di logout, eventualmente esterne al sito, per l'integrazione.
 
 ## Esempi di siti che usano questo tema/sistema
 
@@ -93,7 +104,7 @@ Si veda ad esempio:
 
 ## Riferimenti
 
-* [Documentazione tecnica per lo sviluppo del tema](DEVELOPMENT.md)
-* [Documentazione tecnica CMS Plone](https://6.docs.plone.org)
-* [Sito web progetto io-Comune](https://www.io-comune.it/)
-* [Modello di sito istituzionale dei Comuni Italiani](https://designers.italia.it/modello/comuni/)
+- [Documentazione tecnica per lo sviluppo del tema](DEVELOPMENT.md)
+- [Documentazione tecnica CMS Plone](https://6.docs.plone.org)
+- [Sito web progetto io-Comune](https://www.io-comune.it/)
+- [Modello di sito istituzionale dei Comuni Italiani](https://designers.italia.it/modello/comuni/)

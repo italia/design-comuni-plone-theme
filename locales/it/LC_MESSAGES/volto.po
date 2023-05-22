@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#: components/ItaliaTheme/Header/HeaderSlim/ArLogin
+#: components/ItaliaTheme/Header/HeaderSlim/SpidLogin
 # defaultMessage: Accedi all'area personale
 msgid "Accedi all'area personale"
 msgstr "Accedi all'area personale"
@@ -59,6 +59,16 @@ msgstr "Titolo del blocco..."
 # defaultMessage: Block style
 msgid "Block style"
 msgstr "Stile del blocco"
+
+#: components/ItaliaTheme/LoginAgid/LoginOperatore
+# defaultMessage: Both email address and password are case sensitive, check that caps lock is not enabled.
+msgid "Both email address and password are case sensitive, check that caps lock is not enabled."
+msgstr "E-mail e password distinguono entrambi le maiuscole dalle minuscole, verifica di non avere il Blocco maiuscole attivato."
+
+#: components/ItaliaTheme/LoginAgid/LoginOperatore
+# defaultMessage: Cancel
+msgid "Cancel"
+msgstr "Annulla"
 
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
 # defaultMessage: Vedi
@@ -178,6 +188,11 @@ msgstr "Dimensione della mappa"
 # defaultMessage: Enter URL or select an item
 msgid "Enter URL or select an item"
 msgstr "Inserisci un URL o seleziona un elemento"
+
+#: components/ItaliaTheme/LoginAgid/LoginOperatore
+# defaultMessage: Error
+msgid "Error"
+msgstr "Errore"
 
 #: components/ItaliaTheme/manage/Widgets/LocationFiltersWidget
 # defaultMessage: Etichetta
@@ -318,6 +333,21 @@ msgstr "Titolo per il link ad altro"
 msgid "Loading page..."
 msgstr "Sto caricando la pagina richiesta..."
 
+#: components/ItaliaTheme/LoginAgid/LoginOperatore
+# defaultMessage: Log in
+msgid "Log in"
+msgstr "Accedi"
+
+#: components/ItaliaTheme/LoginAgid/LoginOperatore
+# defaultMessage: Login Failed
+msgid "Login Failed"
+msgstr "Accesso fallito"
+
+#: components/ItaliaTheme/LoginAgid/LoginOperatore
+# defaultMessage: Login Name
+msgid "Login Name"
+msgstr "Nome utente"
+
 #: config/Views/views
 # defaultMessage: Luogo
 msgid "Luogo"
@@ -399,6 +429,11 @@ msgstr "- apri in nuova scheda"
 msgid "Open in a new tab"
 msgstr "Apri in un nuovo tab"
 
+#: components/ItaliaTheme/LoginAgid/LoginOperatore
+# defaultMessage: Password
+msgid "Password"
+msgstr "Password"
+
 #: components/ItaliaTheme/manage/Widgets/PathFiltersWidget
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Filtro
@@ -432,6 +467,11 @@ msgstr "Play"
 # defaultMessage: Pagina precedente
 msgid "Previous page"
 msgstr "Pagina precedente"
+
+#: components/ItaliaTheme/LoginAgid/LoginOperatore
+# defaultMessage: Register
+msgid "Register"
+msgstr "Registrati"
 
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Rimuovi il file
@@ -504,6 +544,11 @@ msgstr "Mostra tutto"
 # defaultMessage: Mostra tutti i tipi di contenuto
 msgid "Show all content types"
 msgstr "Mostra tutti i tipi di contenuto"
+
+#: components/ItaliaTheme/LoginAgid/LoginOperatore
+# defaultMessage: Sign in to start session
+msgid "Sign in to start session"
+msgstr "Accedi per iniziare la sessione"
 
 #: components/ItaliaTheme/Unauthorized/Unauthorized
 # defaultMessage: Site Administration
@@ -658,11 +703,6 @@ msgstr "Video"
 msgid "VideoGalleryBlock"
 msgstr "Video gallery"
 
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-# defaultMessage: You are trying to access a protected resource, please {login} first.
-msgid "You are trying to access a protected resource, please {login} first."
-msgstr "Stai provando ad accedere ad una risorsa protetta, per favore fai prima il {login}."
-
 #: components/ItaliaTheme/View/EventoView/EventoCosE
 # defaultMessage: A chi è rivolto
 msgid "a_chi_rivolto"
@@ -753,16 +793,21 @@ msgstr "Apertura del bando"
 msgid "appStoreLink"
 msgstr "APPStore Link"
 
-#: components/ItaliaTheme/Header/HeaderSlim/ArLogin
-# defaultMessage: Esci
-msgid "arLogout"
-msgstr "Logout"
-
 #: components/ItaliaTheme/Blocks/Listing/serviziAmministrazioneTrasparenteTemplate
 #: helpers/amministrazioneTrasparenteHelper
 # defaultMessage: area
 msgid "area"
 msgstr "area"
+
+#: components/ItaliaTheme/Header/HeaderSlim/SpidLogin
+# defaultMessage: Area operatore
+msgid "areaOperatore"
+msgstr "Area operatore"
+
+#: components/ItaliaTheme/Header/HeaderSlim/SpidLogin
+# defaultMessage: Area personale
+msgid "areaPersonale"
+msgstr "Area personale"
 
 #: components/ItaliaTheme/View/PaginaArgomentoView/PaginaArgomentoViewNoBlocks
 # defaultMessage: Area di appartenenza
@@ -1038,6 +1083,11 @@ msgstr "Biografia"
 # defaultMessage: Colore di sfondo
 msgid "block_bg_color"
 msgstr "Colore di sfondo"
+
+#: components/ItaliaTheme/LoginAgid/LoginOperatore
+# defaultMessage: Forgot your password?
+msgid "box_forgot_password_option"
+msgstr "Hai dimenticato la tua password?"
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 # defaultMessage: Calendario
@@ -2208,22 +2258,47 @@ msgstr "Posizione in cui cercare"
 msgid "locations"
 msgstr "Luoghi"
 
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-# defaultMessage: log in
-msgid "log in"
-msgstr "Log in"
+#: components/ItaliaTheme/LoginAgid/LoginAgid
+# defaultMessage: Log in
+msgid "login_agid"
+msgstr "Accedi"
 
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-# defaultMessage: or login as an administrator
-msgid "login_admin_message"
-msgstr "oppure accedi come amministratore del sito"
+#: components/ItaliaTheme/LoginAgid/LoginAgid
+# defaultMessage: To access the site and its services, use one of the following methods.
+msgid "login_agid_description"
+msgstr "Per accedere al sito a ai suoi servizi, utilizza una delle seguenti modalità."
 
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-# defaultMessage: login with Spid
-msgid "login_spid_message"
-msgstr "login con Spid"
+#: components/ItaliaTheme/LoginAgid/LoginAgidButtons
+# defaultMessage: Other users
+msgid "login_agid_other"
+msgstr "Altre utenze"
 
-#: components/ItaliaTheme/Unauthorized/Unauthorized
+#: components/ItaliaTheme/LoginAgid/LoginAgidButtons
+# defaultMessage: Alternatively you can use these methods.
+msgid "login_agid_other_description"
+msgstr "In alternativa puoi utilizzare le seguenti modalità."
+
+#: components/ItaliaTheme/LoginAgid/LoginAgidButtons
+# defaultMessage: Log in as employee
+msgid "login_plone_user"
+msgstr "Accesso operatore"
+
+#: components/ItaliaTheme/LoginAgid/LoginAgidButtons
+# defaultMessage: SPID
+msgid "login_spid"
+msgstr "SPID"
+
+#: components/ItaliaTheme/LoginAgid/LoginAgidButtons
+# defaultMessage: Log in with SPID, the public digital identity system.
+msgid "login_spid_description"
+msgstr "Accedi con SPID, il sistema Pubblico di Identità Digitale."
+
+#: components/ItaliaTheme/LoginAgid/LoginAgidButtons
+# defaultMessage: How to activate SPID
+msgid "login_spid_help"
+msgstr "Come attivare SPID"
+
+#: components/ItaliaTheme/LoginAgid/LoginAgidButtons
 # defaultMessage: Login with Spid
 msgid "login_with_spid"
 msgstr "Accedi con Spid"
@@ -3440,6 +3515,11 @@ msgstr "Scadenza termini partecipazione"
 msgid "spese_elettorali"
 msgstr "Spese elettorali"
 
+#: components/ItaliaTheme/Header/HeaderSlim/SpidLogin
+# defaultMessage: Esci
+msgid "spidLogout"
+msgstr "Esci"
+
 #: components/ItaliaTheme/View/Commons/Sponsors
 # defaultMessage: Sponsor
 msgid "sponsors"
@@ -3668,6 +3748,11 @@ msgstr "Ufficio responsabile"
 # defaultMessage: Ulteriori informazioni
 msgid "ulteriori_informazioni"
 msgstr "Ulteriori informazioni"
+
+#: components/ItaliaTheme/Unauthorized/Unauthorized
+# defaultMessage: You are trying to access a protected resource, please login first.
+msgid "unauthorized_description"
+msgstr "Stai provando ad accedere ad una risorsa protetta, per favore accedi al sito."
 
 #: helpers/amministrazioneTrasparenteHelper
 # defaultMessage: unità operativa

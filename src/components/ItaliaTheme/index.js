@@ -34,7 +34,7 @@ export GalleryPreview from 'design-comuni-plone-theme/components/ItaliaTheme/Gal
 export LanguageSelector from 'design-comuni-plone-theme/components/ItaliaTheme/LanguageSelector/LanguageSelector';
 export HeaderSlim from 'design-comuni-plone-theme/components/ItaliaTheme/Header/HeaderSlim';
 export HeaderSlimRightZone from 'design-comuni-plone-theme/components/ItaliaTheme/Header/HeaderSlim/HeaderSlimRightZone';
-export ArLogin from 'design-comuni-plone-theme/components/ItaliaTheme/Header/HeaderSlim/ArLogin';
+export HeaderLogin from 'design-comuni-plone-theme/components/ItaliaTheme/Header/HeaderSlim/HeaderLogin';
 export LoginButton from 'design-comuni-plone-theme/components/ItaliaTheme/Header/HeaderSlim/LoginButton';
 export TertiaryMenu from 'design-comuni-plone-theme/components/ItaliaTheme/Header/HeaderSlim/TertiaryMenu';
 export UserLoggedMenu from 'design-comuni-plone-theme/components/ItaliaTheme/Header/HeaderSlim/UserLoggedMenu';
@@ -50,6 +50,8 @@ export SearchCTs from 'design-comuni-plone-theme/components/ItaliaTheme/Search/S
 export SearchResultItem from 'design-comuni-plone-theme/components/ItaliaTheme/Search/ResultItem';
 export MegaMenu from 'design-comuni-plone-theme/components/ItaliaTheme/MegaMenu/MegaMenu';
 export MenuSecondary from 'design-comuni-plone-theme/components/ItaliaTheme/MenuSecondary/MenuSecondary';
+export LoginAgid from 'design-comuni-plone-theme/components/ItaliaTheme/LoginAgid/LoginAgid';
+export LoginAgidButtons from 'design-comuni-plone-theme/components/ItaliaTheme/LoginAgid/LoginAgidButtons';
 export Logo from 'design-comuni-plone-theme/components/ItaliaTheme/Logo/Logo';
 export BrandText from 'design-comuni-plone-theme/components/ItaliaTheme/BrandText/BrandText';
 export BrandTextFooter from 'design-comuni-plone-theme/components/ItaliaTheme/BrandTextFooter/BrandTextFooter';
