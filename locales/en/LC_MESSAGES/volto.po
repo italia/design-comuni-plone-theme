@@ -1773,6 +1773,11 @@ msgstr "The event is of interest to"
 msgid "event_documenti"
 msgstr "Documents"
 
+#: helpers/FormValidation/FormValidationHelpers
+# defaultMessage: La data di fine deve essere successiva alla data di inizio
+msgid "event_end"
+msgstr "You cannot specify an end date prior to the start date."
+
 #: components/ItaliaTheme/Blocks/EventSearch/Edit
 #: components/ItaliaTheme/Blocks/UOSearch/Edit
 # defaultMessage: Nessun filtro da mostrare. Seleziona i filtri di ricerca da mostrare dalla sidebar laterale.

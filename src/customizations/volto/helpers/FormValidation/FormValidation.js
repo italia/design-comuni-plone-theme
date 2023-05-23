@@ -5,11 +5,11 @@
  * - gestione campi tipo dataGridField
  * - gestione timeline_tempi_scadenze nel servizio che ha solo un campo richiesto su 5
  */
-import { map, uniq, keys, intersection, isEmpty, filter } from 'lodash';
+import { map, uniq, keys, intersection, isEmpty } from 'lodash';
 import { messages } from '@plone/volto/helpers/MessageLabels/MessageLabels';
 import {
   serviceFormValidationHelper,
-  blocksFieldIsEmpty,
+  eventFormValidationHelper,
   getRealEmptyField,
 } from 'design-comuni-plone-theme/helpers';
 
@@ -216,6 +216,14 @@ const validateRequiredFields = (
     : intersection(schema.required, keys(touchedField));
 
   serviceFormValidationHelper(schema, formData, touchedField, fields);
+  eventFormValidationHelper(
+    schema,
+    formData,
+    touchedField,
+    fields,
+    errors,
+    formatMessage,
+  );
   const uniqueFields = uniq(fields);
   map(uniqueFields, (requiredField) => {
     const type = schema.properties[requiredField]?.type;

@@ -40,4 +40,5 @@ export {
   serviceFormValidationHelper,
   blocksFieldIsEmpty,
   getRealEmptyField,
+  eventFormValidationHelper,
 } from 'design-comuni-plone-theme/helpers/FormValidation/FormValidationHelpers';

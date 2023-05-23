@@ -1790,6 +1790,11 @@ msgstr "Destinataires"
 msgid "event_documenti"
 msgstr "Documents"
 
+#: helpers/FormValidation/FormValidationHelpers
+# defaultMessage: La data di fine deve essere successiva alla data di inizio
+msgid "event_end"
+msgstr "Vous ne pouvez pas spécifier une date de fin antérieure à la date de début"
+
 #: components/ItaliaTheme/Blocks/EventSearch/Edit
 #: components/ItaliaTheme/Blocks/UOSearch/Edit
 # defaultMessage: Nessun filtro da mostrare. Seleziona i filtri di ricerca da mostrare dalla sidebar laterale.

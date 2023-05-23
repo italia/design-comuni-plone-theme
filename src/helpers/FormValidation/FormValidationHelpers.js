@@ -1,4 +1,13 @@
 import { isEmpty, filter } from 'lodash';
+import { defineMessages } from 'react-intl';
+
+const customValidationMessages = defineMessages({
+  event_end: {
+    id: 'event_end',
+    defaultMessage:
+      'La data di fine deve essere successiva alla data di inizio',
+  },
+});
 
 export const blocksFieldIsEmpty = (field) => {
   return (
@@ -68,6 +77,8 @@ export const getRealEmptyField = (
     );
   } else if (type === 'string' && widget === 'richtext') {
     return !(formData?.[field]?.data?.replace(/(<([^>]+)>)/g, '').length > 0);
+  } else {
+    return isEmpty(formData[field]);
   }
 };
 
@@ -209,4 +220,36 @@ export const serviceFormValidationHelper = (
   // ) {
   //   fields.push('timeline_tempi_scadenze');
   // }
+};
+
+/**
+ * Validates form of Event CT
+ * @param {object} schema schema
+ * @param {object} formData formData values
+ * @param {object} touchedField contains info on touched fields
+ * @param {Array} fields required fields reference to update
+ * @param {object} errors errors reference to update
+ */
+export const eventFormValidationHelper = (
+  schema,
+  formData,
+  touchedField,
+  fields,
+  errors,
+  formatMessage,
+) => {
+  if (schema.title !== 'Evento') return;
+
+  if ('end' in touchedField && !isEmpty(formData.start)) {
+    if (new Date(touchedField.end) < new Date(formData.start)) {
+      errors['end'] = [];
+      errors['end'].push(formatMessage(customValidationMessages.event_end));
+    }
+  } else {
+    // check del form data
+    if (new Date(formData.end) < new Date(formData.start)) {
+      errors['end'] = [];
+      errors['end'].push(formatMessage(customValidationMessages.event_end));
+    }
+  }
 };
