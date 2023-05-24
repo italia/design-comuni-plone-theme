@@ -1090,6 +1090,11 @@ msgstr ""
 msgid "blocco_info"
 msgstr ""
 
+#: config/Blocks/ListingOptions/defaultOptions
+# defaultMessage: Colore di sfondo
+msgid "block_bg_color"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Info/Sidebar
 # defaultMessage: Colore
 msgid "border_color"
@@ -2134,6 +2139,11 @@ msgstr "Liens utiles"
 # defaultMessage: Questo evento ha più date: vedi tutte
 msgid "listing_event_recurrence_label"
 msgstr "Cet événement a plusieurs dates: tout voir"
+
+#: config/Blocks/ListingOptions/defaultOptions
+# defaultMessage: Colore dell'elemento
+msgid "listing_items_color"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/VideoGallery/Block/ViewBlock
 #: components/ItaliaTheme/View/Commons/EmbeddedVideo

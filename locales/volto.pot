@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-05-09T13:16:36.242Z\n"
+"POT-Creation-Date: 2023-05-24T09:43:51.592Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1075,6 +1075,11 @@ msgstr ""
 msgid "blocco_info"
 msgstr ""
 
+#: config/Blocks/ListingOptions/defaultOptions
+# defaultMessage: Colore di sfondo
+msgid "block_bg_color"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Info/Sidebar
 # defaultMessage: Colore
 msgid "border_color"
@@ -2118,6 +2123,11 @@ msgstr ""
 #: helpers/ListingHelper
 # defaultMessage: Questo evento ha più date: vedi tutte
 msgid "listing_event_recurrence_label"
+msgstr ""
+
+#: config/Blocks/ListingOptions/defaultOptions
+# defaultMessage: Colore dell'elemento
+msgid "listing_items_color"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/VideoGallery/Block/ViewBlock
