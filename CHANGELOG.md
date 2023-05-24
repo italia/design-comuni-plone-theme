@@ -1,3 +1,15 @@
+### [7.8.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.8.0...v7.8.1) (2023-05-24)
+
+
+### Bug Fixes
+
+* listing options import ([6497b29](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6497b297898952cd34e0c8d3417ccfd8ff571b6a))
+
+
+### Documentation
+
+* updated publiccode ([37d1dc5](https://github.com/RedTurtle/design-comuni-plone-theme/commit/37d1dc55fcb031876b6121eabb0c175fc8439426))
+
 ## [7.8.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.7.0...v7.8.0) (2023-05-24)
 
 
