@@ -1,3 +1,21 @@
+## [7.8.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.7.0...v7.8.0) (2023-05-24)
+
+
+### Features
+
+* Added Spanish support ([#135](https://github.com/RedTurtle/design-comuni-plone-theme/issues/135)) ([c424883](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c4248836914b844f360d448d164d1231011e716a))
+
+
+### Bug Fixes
+
+* defaultOptions ([#175](https://github.com/RedTurtle/design-comuni-plone-theme/issues/175)) ([3bcf497](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3bcf4976cc06e4baa04e6590366b41e386a80916))
+* i18n ([0ea3bf7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/0ea3bf73312f1bdbf8d50bc71ff8745fef183e68))
+
+
+### Documentation
+
+* updated publiccode ([2cd9f73](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2cd9f737e155f708d85bf043f20d4f7e2085e675))
+
 ## [7.7.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.6.0...v7.7.0) (2023-05-11)
 
 
