@@ -1,5 +1,8 @@
 import { defineMessages } from 'react-intl';
-import { addSchemaField } from '@italia/config/Blocks/ListingOptions';
+import {
+  addSchemaField,
+  addDefaultAdditionalOptions,
+} from '@italia/config/Blocks/ListingOptions';
 
 import config from '@plone/volto/registry';
 
