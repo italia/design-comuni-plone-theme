@@ -1,3 +1,18 @@
+## [8.0.0-alpha.34](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.33...v8.0.0-alpha.34) (2023-05-25)
+
+
+### Features
+
+* custom validation and error message for Event if end date is prior to start date ([#170](https://github.com/RedTurtle/design-comuni-plone-theme/issues/170)) ([f94794a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f94794a701a6f1608e51a983a0446a5817d8683e))
+
+
+### Bug Fixes
+
+* date nelle card evento ([#154](https://github.com/RedTurtle/design-comuni-plone-theme/issues/154)) ([3f00f57](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3f00f57170713e831774ec04448c87fcaa5f101f))
+* more resilient configuration ([e0f1189](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e0f1189cd88f90b86ab9b3ed60353064f6f80cbe))
+* remove custom styles for datepickers, use customizations for DatetimeWidget and RecurrenceWidget to keep previous specs for calendar opening on top in adddate recurrence field ([#172](https://github.com/RedTurtle/design-comuni-plone-theme/issues/172)) ([947979b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/947979bb17c9d495c8c45a38f1ea50477107c520))
+* volto-blocks-widget allowedBlocks configurable from add-ons ([c789e48](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c789e48e1c61129b68d22d57c4b4489f5198fdcc))
+
 ## [8.0.0-alpha.33](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.32...v8.0.0-alpha.33) (2023-05-22)
 
 
