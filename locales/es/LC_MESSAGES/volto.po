@@ -1082,11 +1082,14 @@ msgstr "Bloque de alerta"
 msgid "blocco_info"
 msgstr "Bloque de información"
 
+<<<<<<< HEAD
 #: config/Blocks/ListingOptions/defaultOptions
 # defaultMessage: Colore di sfondo
 msgid "block_bg_color"
 msgstr "Color de fondo"
 
+=======
+>>>>>>> ef858d3c05f39bcc6f5880e4df3aca3b51bba1d6
 #: components/ItaliaTheme/Blocks/Info/Sidebar
 # defaultMessage: Colore
 msgid "border_color"
