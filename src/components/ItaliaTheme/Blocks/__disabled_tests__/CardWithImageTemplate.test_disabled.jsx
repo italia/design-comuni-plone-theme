@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import SimpleCardTemplateDefault from '../../../Listing/SimpleCard/SimpleCardTemplateDefault';
+import CardWithImageTemplate from '../Listing/CardWithImageTemplate';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-intl-redux';
 import { MemoryRouter } from 'react-router-dom';
@@ -11,7 +11,6 @@ const middlewares = [thunk];
 const mockStore = configureStore(middlewares);
 
 const mock_fields = {
-  detail_link_label: 'Is this just fantasy?',
   items: [
     {
       '@id': '/eventi/torneo-di-beneficienza-tutti-in-pista',
@@ -1078,458 +1077,345 @@ const mock_fields = {
       update_note: null,
       whole_day: true,
     },
-  ],
-  isEditMode: true,
-  headlineTag: 'h2',
-  show_icon: true,
-  hide_dates: true,
-  path_filters: {
-    0: {
-      label: 'Caught in a landside',
-      path: [
-        {
-          '@id': '/eventi/mega-evento',
-          '@type': 'Event',
-          CreationDate: '2023-01-20T08:12:40+00:00',
-          Creator: 'admin',
-          Date: '2023-01-25T15:23:08+00:00',
-          Description: 'Descrizione del mega evento',
-          EffectiveDate: 'None',
-          ExpirationDate: 'None',
-          ModificationDate: '2023-01-25T15:23:08+00:00',
-          Subject: [],
-          Subject_bando: null,
-          Title: 'Mega Evento',
-          Type: 'Evento',
-          UID: '3a046f1b374d465abaea77175ab20cce',
-          apertura_bando: null,
-          author_name: null,
-          chiusura_procedimento_bando: null,
-          cmf_uid: 190,
-          commentators: [],
-          created: '2023-01-20T08:12:40+00:00',
-          data_conclusione_incarico: null,
-          description: 'Descrizione del mega evento',
-          design_italia_meta_type: 'Evento',
-          destinatari_bando: null,
-          effective: null,
-          end: '2023-01-20T22:59:59+00:00',
-          ente_bando: null,
-          event_location: ['6d27d782beca40deb5c1d3cb8e7392c2'],
-          exclude_from_nav: false,
-          expires: null,
-          geolocation: {
-            latitude: 39.21252001040267,
-            longitude: 9.115209984181092,
+    {
+      '@id':
+        '/eventi/363-festa-di-santefisio/copy_of_il-ballo-dellisola-in-festa',
+      '@type': 'Event',
+      CreationDate: '2023-01-04T11:40:36+00:00',
+      Creator: 'admin',
+      Date: '2023-01-04T11:43:28+00:00',
+      Description: '',
+      EffectiveDate: 'None',
+      ExpirationDate: 'None',
+      ModificationDate: '2023-01-04T11:43:28+00:00',
+      Subject: [],
+      Subject_bando: null,
+      Title: "Il ballo dell'isola in festa",
+      Type: 'Evento',
+      UID: 'fb0f4858c1cf43f7b9c19086500d4c5a',
+      apertura_bando: null,
+      author_name: null,
+      chiusura_procedimento_bando: null,
+      cmf_uid: null,
+      commentators: [],
+      created: '2023-01-04T11:40:36+00:00',
+      data_conclusione_incarico: null,
+      description: '',
+      design_italia_meta_type: 'Evento',
+      destinatari_bando: null,
+      effective: null,
+      end: '2019-12-31T22:59:59+00:00',
+      ente_bando: null,
+      event_location: [],
+      exclude_from_nav: false,
+      expires: null,
+      geolocation: null,
+      getIcon: true,
+      getId: 'copy_of_il-ballo-dellisola-in-festa',
+      getObjSize: '2.5 MB',
+      getPath:
+        '/Plone/eventi/363-festa-di-santefisio/copy_of_il-ballo-dellisola-in-festa',
+      getRemoteUrl: null,
+      getURL:
+        'http://localhost:3000/eventi/363-festa-di-santefisio/copy_of_il-ballo-dellisola-in-festa',
+      hasPreviewImage: true,
+      head_title: null,
+      icona: null,
+      id: 'copy_of_il-ballo-dellisola-in-festa',
+      image: {
+        scales: {
+          gallery: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/copy_of_il-ballo-dellisola-in-festa/@@images/preview_image/gallery',
+            height: 65536,
+            width: 250,
           },
-          getIcon: true,
-          getId: 'mega-evento',
-          getObjSize: '3.2 MB',
-          getPath: '/Plone/eventi/mega-evento',
-          getRemoteUrl: null,
-          getURL: 'http://localhost:3000/eventi/mega-evento',
-          hasPreviewImage: true,
-          head_title: null,
-          icona: null,
-          id: 'mega-evento',
-          image: {
+          great: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/copy_of_il-ballo-dellisola-in-festa/@@images/preview_image/great',
+            height: 65536,
+            width: 1200,
+          },
+          huge: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/copy_of_il-ballo-dellisola-in-festa/@@images/preview_image/huge',
+            height: 65536,
+            width: 1600,
+          },
+          icon: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/copy_of_il-ballo-dellisola-in-festa/@@images/preview_image/icon',
+            height: 32,
+            width: 32,
+          },
+          large: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/copy_of_il-ballo-dellisola-in-festa/@@images/preview_image/large',
+            height: 65536,
+            width: 800,
+          },
+          larger: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/copy_of_il-ballo-dellisola-in-festa/@@images/preview_image/larger',
+            height: 65536,
+            width: 1000,
+          },
+          listing: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/copy_of_il-ballo-dellisola-in-festa/@@images/preview_image/listing',
+            height: 16,
+            width: 16,
+          },
+          midi: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/copy_of_il-ballo-dellisola-in-festa/@@images/preview_image/midi',
+            height: 65536,
+            width: 300,
+          },
+          mini: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/copy_of_il-ballo-dellisola-in-festa/@@images/preview_image/mini',
+            height: 65536,
+            width: 200,
+          },
+          preview: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/copy_of_il-ballo-dellisola-in-festa/@@images/preview_image/preview',
+            height: 65536,
+            width: 400,
+          },
+          teaser: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/copy_of_il-ballo-dellisola-in-festa/@@images/preview_image/teaser',
+            height: 65536,
+            width: 600,
+          },
+          thumb: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/copy_of_il-ballo-dellisola-in-festa/@@images/preview_image/thumb',
+            height: 65536,
+            width: 128,
+          },
+          tile: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/copy_of_il-ballo-dellisola-in-festa/@@images/preview_image/tile',
+            height: 64,
+            width: 64,
+          },
+        },
+      },
+      image_field: 'preview_image',
+      image_scales: {
+        image: [
+          {
+            'content-type': 'image/png',
+            download:
+              '@@images/image-1156-df8f80bf09602fb53ccc700f897ec537.png',
+            filename: 'foto-ospedale.png',
+            height: 940,
             scales: {
-              gallery: {
-                download:
-                  'http://localhost:3000/eventi/mega-evento/@@images/preview_image/gallery',
-                height: 65536,
-                width: 250,
-              },
-              great: {
-                download:
-                  'http://localhost:3000/eventi/mega-evento/@@images/preview_image/great',
-                height: 65536,
-                width: 1200,
-              },
-              huge: {
-                download:
-                  'http://localhost:3000/eventi/mega-evento/@@images/preview_image/huge',
-                height: 65536,
-                width: 1600,
-              },
               icon: {
                 download:
-                  'http://localhost:3000/eventi/mega-evento/@@images/preview_image/icon',
-                height: 32,
+                  '@@images/image-32-93d4452f8edf6664b53b3f7617a170e6.png',
+                height: 26,
                 width: 32,
               },
               large: {
                 download:
-                  'http://localhost:3000/eventi/mega-evento/@@images/preview_image/large',
-                height: 65536,
+                  '@@images/image-800-87e4af79c9a0f6fb63355ca6b05edc0f.png',
+                height: 650,
                 width: 800,
               },
               larger: {
                 download:
-                  'http://localhost:3000/eventi/mega-evento/@@images/preview_image/larger',
-                height: 65536,
+                  '@@images/image-1000-726b7dda823fff20a6d14a98e93bce67.png',
+                height: 813,
                 width: 1000,
               },
               listing: {
                 download:
-                  'http://localhost:3000/eventi/mega-evento/@@images/preview_image/listing',
-                height: 16,
+                  '@@images/image-16-4c5548ed2f111bdd07c5a324f3b0647d.png',
+                height: 13,
                 width: 16,
               },
               midi: {
                 download:
-                  'http://localhost:3000/eventi/mega-evento/@@images/preview_image/midi',
-                height: 65536,
+                  '@@images/image-300-f3cdc12ee7edc4388752123e03de2e1f.png',
+                height: 243,
                 width: 300,
               },
               mini: {
                 download:
-                  'http://localhost:3000/eventi/mega-evento/@@images/preview_image/mini',
-                height: 65536,
+                  '@@images/image-200-c0de84b376d2b409ba41842ddda8f40b.png',
+                height: 162,
                 width: 200,
               },
               preview: {
                 download:
-                  'http://localhost:3000/eventi/mega-evento/@@images/preview_image/preview',
-                height: 65536,
+                  '@@images/image-400-dff863310e56b5d754d0f840b4c16081.png',
+                height: 325,
                 width: 400,
               },
               teaser: {
                 download:
-                  'http://localhost:3000/eventi/mega-evento/@@images/preview_image/teaser',
-                height: 65536,
+                  '@@images/image-600-6b5255fc399afedc995cdf1ace0753ba.png',
+                height: 487,
                 width: 600,
               },
               thumb: {
                 download:
-                  'http://localhost:3000/eventi/mega-evento/@@images/preview_image/thumb',
-                height: 65536,
+                  '@@images/image-128-bafc908a0202e68979d78ef68590ffe3.png',
+                height: 104,
                 width: 128,
               },
               tile: {
                 download:
-                  'http://localhost:3000/eventi/mega-evento/@@images/preview_image/tile',
-                height: 64,
+                  '@@images/image-64-6ba4fed3019340a15373923f7078834d.png',
+                height: 52,
                 width: 64,
               },
             },
+            size: 1296882,
+            width: 1156,
           },
-          image_field: 'preview_image',
-          image_scales: {
-            image: [
-              {
-                'content-type': 'image/png',
+        ],
+        preview_image: [
+          {
+            'content-type': 'image/png',
+            download:
+              '@@images/preview_image-1156-a2cdb5a425a7ea6ae9da7d578ab6090d.png',
+            filename: 'foto-ospedale.png',
+            height: 940,
+            scales: {
+              icon: {
                 download:
-                  '@@images/image-1156-2f7d3e0155375c7425fa36b96a9e81ed.png',
-                filename: 'foto-ospedale.png',
-                height: 940,
-                scales: {
-                  gallery: {
-                    download:
-                      '@@images/image-250-6075fcd9926835a1e0e2d08560237321.png',
-                    height: 203,
-                    width: 250,
-                  },
-                  icon: {
-                    download:
-                      '@@images/image-32-03345d45736c4f95a0a9a97a3b8c4589.png',
-                    height: 26,
-                    width: 32,
-                  },
-                  large: {
-                    download:
-                      '@@images/image-800-f85baa88982b2f3084994deb2ff943ef.png',
-                    height: 650,
-                    width: 800,
-                  },
-                  larger: {
-                    download:
-                      '@@images/image-1000-a681dd2ec11fa21fa9ca115d321c9449.png',
-                    height: 813,
-                    width: 1000,
-                  },
-                  listing: {
-                    download:
-                      '@@images/image-16-a9ee58673fd31065834e3a092bec599f.png',
-                    height: 13,
-                    width: 16,
-                  },
-                  midi: {
-                    download:
-                      '@@images/image-300-ab78d88eceba6080e08e75c19ddcfefb.png',
-                    height: 243,
-                    width: 300,
-                  },
-                  mini: {
-                    download:
-                      '@@images/image-200-fde347ff2cf346a3bfdcda9c12bf2d1d.png',
-                    height: 162,
-                    width: 200,
-                  },
-                  preview: {
-                    download:
-                      '@@images/image-400-366d87093f173877fe90ac594fac414f.png',
-                    height: 325,
-                    width: 400,
-                  },
-                  teaser: {
-                    download:
-                      '@@images/image-600-4f3d389e50ed6b8f22667a993135ce52.png',
-                    height: 487,
-                    width: 600,
-                  },
-                  thumb: {
-                    download:
-                      '@@images/image-128-660fac272fe20b21aabef8aab9c4edc1.png',
-                    height: 104,
-                    width: 128,
-                  },
-                  tile: {
-                    download:
-                      '@@images/image-64-8579a96cc486ed73e77e8c5bc899e878.png',
-                    height: 52,
-                    width: 64,
-                  },
-                },
-                size: 1296882,
-                width: 1156,
+                  '@@images/preview_image-32-2e82f409fd2fa52413d4d2583455efff.png',
+                height: 26,
+                width: 32,
               },
-            ],
-            preview_image: [
-              {
-                'content-type': 'image/jpeg',
+              large: {
                 download:
-                  '@@images/preview_image-5184-4f952739520f0a86838a7ce4eef221a3.jpeg',
-                filename: 'national-cancer-institute.jpeg',
-                height: 3456,
-                scales: {
-                  gallery: {
-                    download:
-                      '@@images/preview_image-250-68713626eab4ffddff93163a853a8cfd.jpeg',
-                    height: 166,
-                    width: 250,
-                  },
-                  great: {
-                    download:
-                      '@@images/preview_image-1200-dfa4e2d9c26671b7da32fdb4564dbd1b.jpeg',
-                    height: 800,
-                    width: 1200,
-                  },
-                  huge: {
-                    download:
-                      '@@images/preview_image-1600-4e3064c0752d070d19f34a7191f2252f.jpeg',
-                    height: 1066,
-                    width: 1600,
-                  },
-                  icon: {
-                    download:
-                      '@@images/preview_image-32-abee06766ab8d2124b9d71734be03a76.jpeg',
-                    height: 21,
-                    width: 32,
-                  },
-                  large: {
-                    download:
-                      '@@images/preview_image-800-5607d72e9f5c2149a78dc09922b96793.jpeg',
-                    height: 533,
-                    width: 800,
-                  },
-                  larger: {
-                    download:
-                      '@@images/preview_image-1000-ed3962a9959037f8586ba67a34b75028.jpeg',
-                    height: 666,
-                    width: 1000,
-                  },
-                  listing: {
-                    download:
-                      '@@images/preview_image-16-9b383f53ccbe169873e3eb92da5b6d43.jpeg',
-                    height: 10,
-                    width: 16,
-                  },
-                  midi: {
-                    download:
-                      '@@images/preview_image-300-9c59b6708bbd1d09c231e37ca62c4a63.jpeg',
-                    height: 200,
-                    width: 300,
-                  },
-                  mini: {
-                    download:
-                      '@@images/preview_image-200-2973a3f4aaaf00bda1ac8e1589ed0279.jpeg',
-                    height: 133,
-                    width: 200,
-                  },
-                  preview: {
-                    download:
-                      '@@images/preview_image-400-0648f4b7e4bfc866b4cdbff82b4bc8d7.jpeg',
-                    height: 266,
-                    width: 400,
-                  },
-                  teaser: {
-                    download:
-                      '@@images/preview_image-600-540cea607644797faaa656fb3775ba37.jpeg',
-                    height: 400,
-                    width: 600,
-                  },
-                  thumb: {
-                    download:
-                      '@@images/preview_image-128-1befc6713b7b327cf06f535399b5dd54.jpeg',
-                    height: 85,
-                    width: 128,
-                  },
-                  tile: {
-                    download:
-                      '@@images/preview_image-64-4bfdfc5e6aafdbd3504de851ee1bb398.jpeg',
-                    height: 42,
-                    width: 64,
-                  },
-                },
-                size: 2026538,
-                width: 5184,
+                  '@@images/preview_image-800-10d352bce01ad7b5d924f37ee8e67216.png',
+                height: 650,
+                width: 800,
               },
-            ],
-          },
-          in_response_to: null,
-          is_folderish: true,
-          last_comment_date: null,
-          latitude: 39.21252001040267,
-          listCreators: ['admin'],
-          location: null,
-          longitude: 9.115209984181092,
-          mime_type: 'text/plain',
-          modified: '2023-01-25T15:23:08+00:00',
-          nav_title: null,
-          open_end: true,
-          parent: {
-            '@id': 'http://localhost:3000/eventi',
-            UID: 'd973c55883254c118dc0ccba067329b8',
-            title: 'Eventi',
-          },
-          portal_type: 'Event',
-          recurrence: null,
-          review_state: 'private',
-          scadenza_bando: null,
-          start: '2023-01-19T23:00:00+00:00',
-          sync_uid: '3a046f1b374d465abaea77175ab20cce@localhost:3000',
-          tassonomia_argomenti: [
-            {
-              '@id': 'http://localhost:3000/argomenti/muoversi',
-              '@type': 'Pagina Argomento',
-              CreationDate: '2023-01-04T10:08:11+00:00',
-              Creator: 'admin',
-              Date: '2023-01-04T16:06:09+00:00',
-              Description: '',
-              EffectiveDate: 'None',
-              ExpirationDate: 'None',
-              ModificationDate: '2023-01-04T16:06:09+00:00',
-              Subject: [],
-              Subject_bando: null,
-              Title: 'Muoversi',
-              Type: 'Argomento',
-              UID: '8e2091fa73c74822ac3533aa71cef981',
-              apertura_bando: null,
-              author_name: null,
-              chiusura_procedimento_bando: null,
-              cmf_uid: 95,
-              commentators: null,
-              created: '2023-01-04T10:08:11+00:00',
-              data_conclusione_incarico: null,
-              description: '',
-              design_italia_meta_type: 'Argomento',
-              destinatari_bando: null,
-              effective: null,
-              end: null,
-              ente_bando: null,
-              event_location: null,
-              exclude_from_nav: false,
-              expires: null,
-              geolocation: null,
-              getIcon: '',
-              getId: 'muoversi',
-              getObjSize: null,
-              getPath: '/Plone/argomenti/muoversi',
-              getRemoteUrl: null,
-              getURL: 'http://localhost:3000/argomenti/muoversi',
-              hasPreviewImage: null,
-              head_title: null,
-              icona: null,
-              id: 'muoversi',
-              image_field: null,
-              image_scales: null,
-              in_response_to: null,
-              is_folderish: null,
-              last_comment_date: null,
-              latitude: null,
-              listCreators: ['admin'],
-              location: null,
-              longitude: null,
-              mime_type: null,
-              modified: '2023-01-04T16:06:09+00:00',
-              nav_title: null,
-              open_end: null,
-              parent: null,
-              portal_type: 'Pagina Argomento',
-              recurrence: null,
-              review_state: 'private',
-              scadenza_bando: null,
-              start: null,
-              sync_uid: null,
-              tassonomia_argomenti: null,
-              taxonomy_business_events: null,
-              taxonomy_person_life_events: null,
-              taxonomy_temi_dataset: null,
-              taxonomy_tipologia_documenti_albopretorio: null,
-              taxonomy_tipologia_documento: null,
-              taxonomy_tipologia_evento: null,
-              taxonomy_tipologia_frequenza_aggiornamento: null,
-              taxonomy_tipologia_incarico: null,
-              taxonomy_tipologia_licenze: null,
-              taxonomy_tipologia_luogo: null,
-              taxonomy_tipologia_notizia: null,
-              taxonomy_tipologia_organizzazione: null,
-              taxonomy_tipologia_pdc: null,
-              taxonomy_tipologia_stati_pratica: null,
-              tipologia_bando: null,
-              tipologia_documento: null,
-              tipologia_notizia: null,
-              title: 'Muoversi',
-              total_comments: null,
-              ufficio_responsabile_bando: null,
-              update_note: null,
-              whole_day: null,
+              larger: {
+                download:
+                  '@@images/preview_image-1000-b25f3b4b80cf1cbcc311cca53c63e587.png',
+                height: 813,
+                width: 1000,
+              },
+              listing: {
+                download:
+                  '@@images/preview_image-16-fb73ade6ff160b9bfdcb317a76511099.png',
+                height: 13,
+                width: 16,
+              },
+              midi: {
+                download:
+                  '@@images/preview_image-300-48cd0d95454587aedde26487e10d0ffc.png',
+                height: 243,
+                width: 300,
+              },
+              mini: {
+                download:
+                  '@@images/preview_image-200-ff3523d87af7c454d6798570bfb064d3.png',
+                height: 162,
+                width: 200,
+              },
+              preview: {
+                download:
+                  '@@images/preview_image-400-d5ebd311251342231a10824bad43f7de.png',
+                height: 325,
+                width: 400,
+              },
+              teaser: {
+                download:
+                  '@@images/preview_image-600-a293f65df0d28a5a15643b00a699bde4.png',
+                height: 487,
+                width: 600,
+              },
+              thumb: {
+                download:
+                  '@@images/preview_image-128-451eaf1a527ddf7388a6e2d0b85b0250.png',
+                height: 104,
+                width: 128,
+              },
+              tile: {
+                download:
+                  '@@images/preview_image-64-d1d475c3e1d2a5e0938c5c4af8e7418c.png',
+                height: 52,
+                width: 64,
+              },
             },
-          ],
-          taxonomy_business_events: [],
-          taxonomy_person_life_events: [],
-          taxonomy_temi_dataset: [],
-          taxonomy_tipologia_documenti_albopretorio: [],
-          taxonomy_tipologia_documento: [],
-          taxonomy_tipologia_evento: [],
-          taxonomy_tipologia_frequenza_aggiornamento: [],
-          taxonomy_tipologia_incarico: [],
-          taxonomy_tipologia_licenze: [],
-          taxonomy_tipologia_luogo: [],
-          taxonomy_tipologia_notizia: [],
-          taxonomy_tipologia_organizzazione: [],
-          taxonomy_tipologia_pdc: [],
-          taxonomy_tipologia_stati_pratica: [],
-          tipologia_bando: null,
-          tipologia_documento: null,
-          tipologia_notizia: null,
-          title: 'Mega Evento',
-          total_comments: 0,
-          ufficio_responsabile_bando: null,
-          update_note: null,
-          whole_day: true,
-        },
-      ],
+            size: 1296882,
+            width: 1156,
+          },
+        ],
+      },
+      in_response_to: null,
+      is_folderish: true,
+      last_comment_date: null,
+      latitude: 0,
+      listCreators: ['admin'],
+      location: null,
+      longitude: 0,
+      mime_type: 'text/plain',
+      modified: '2023-01-04T11:43:28+00:00',
+      nav_title: null,
+      open_end: true,
+      parent: {
+        '@id': 'http://localhost:3000/eventi/363-festa-di-santefisio',
+        UID: '797e8784ca0241af9ec737ed081bd0cc',
+        title: "363^ Festa di Sant'Efisio",
+      },
+      portal_type: 'Event',
+      recurrence: null,
+      review_state: 'private',
+      scadenza_bando: null,
+      start: '2019-12-30T23:00:00+00:00',
+      sync_uid: 'fb0f4858c1cf43f7b9c19086500d4c5a@localhost:3000',
+      tassonomia_argomenti: [],
+      taxonomy_business_events: null,
+      taxonomy_person_life_events: null,
+      taxonomy_temi_dataset: null,
+      taxonomy_tipologia_documenti_albopretorio: null,
+      taxonomy_tipologia_documento: null,
+      taxonomy_tipologia_evento: null,
+      taxonomy_tipologia_frequenza_aggiornamento: null,
+      taxonomy_tipologia_incarico: null,
+      taxonomy_tipologia_licenze: null,
+      taxonomy_tipologia_luogo: null,
+      taxonomy_tipologia_notizia: null,
+      taxonomy_tipologia_organizzazione: null,
+      taxonomy_tipologia_pdc: null,
+      taxonomy_tipologia_stati_pratica: null,
+      tipologia_bando: null,
+      tipologia_documento: null,
+      tipologia_notizia: null,
+      title: "Il ballo dell'isola in festa",
+      total_comments: 0,
+      ufficio_responsabile_bando: null,
+      update_note: null,
+      whole_day: true,
     },
-  },
-  show_section: true,
-  show_type: true,
-  show_description: true,
-  show_detail_link: true,
-  show_path_filters: true,
+  ],
+  items_total: 4,
   '@type': 'listing',
-  block: 'f928ff41-bc83-4526-aec8-9f81dc06da83',
+  always_show_image: true,
+  block: 'ee2760d7-225f-44c9-b9aa-e398c9ef5743',
+  headlineTag: 'h2',
+  hide_dates: true,
+  linkHref: [
+    {
+      '@id': '/eventi',
+      Description: '',
+      Title: 'Eventi',
+      title: 'Eventi',
+    },
+  ],
+  linkTitle: 'I feel alive',
+  natural_image_size: true,
   query: [],
   querystring: {
     query: [
@@ -1540,23 +1426,23 @@ const mock_fields = {
       },
     ],
     sort_order: 'ascending',
-    b_size: 3,
+    b_size: 4,
+    limit: 4,
   },
-  variation: 'simpleCard',
+  set_four_columns: true,
+  show_description: true,
+  show_detail_link: false,
+  show_icon: true,
+  show_path_filters: false,
+  show_section: true,
+  show_topics: true,
+  show_type: true,
+  variation: 'cardWithImageTemplate',
+  addFilters: 'ƒ addFilters() {}',
   additionalFilters: [],
-  items_total: 6,
-  linkHref: [
-    {
-      '@id': '/eventi',
-      Description: '',
-      Title: 'Eventi',
-      title: 'Eventi',
-    },
-  ],
-  linkTitle: 'No escape from reality',
   loading: false,
   firstLoading: false,
-  title: 'Is this the real life?',
+  title: "Tonight I'm gonna have myself a real good time",
 };
 
 const store = mockStore({
@@ -1565,22 +1451,23 @@ const store = mockStore({
     messages: {},
   },
 });
-
 test('View renders all fields', async () => {
   render(
     <Provider store={store}>
       <MemoryRouter>
-        <SimpleCardTemplateDefault
+        <CardWithImageTemplate
           data={mock_fields}
           items={mock_fields.items}
           title={mock_fields.title}
+          always_show_image={mock_fields.always_show_image}
+          set_four_columns={mock_fields.set_four_columns}
+          natural_image_size={mock_fields.natural_image_size}
           show_icon={mock_fields.show_icon}
-          hide_dates={mock_fields.hide_dates}
+          show_section={mock_fields.show_section}
           show_type={mock_fields.show_type}
-          show_detail_link={mock_fields.show_detail_link}
-          detail_link_label={mock_fields.detail_link_label}
-          path_filters={mock_fields.path_filters}
-          show_path_filters={mock_fields.show_path_filters}
+          hide_dates={mock_fields.hide_dates}
+          show_description={mock_fields.show_description}
+          show_topics={mock_fields.show_topics}
           linkHref={mock_fields.linkHref}
           linkTitle={mock_fields.linkTitle}
         />
@@ -1588,50 +1475,55 @@ test('View renders all fields', async () => {
     </Provider>,
   );
 
-  // titolo;
+  // titolo
   expect(
     screen.getByRole('heading', {
-      name: /Is this the real life?/i,
+      name: "Tonight I'm gonna have myself a real good time",
     }),
   ).toBeInTheDocument();
 
-  //mostra icona
-  const icon = document.querySelectorAll('.categoryicon-top');
-  expect(icon.length).toBeGreaterThan(0);
+  // mostra l'immagine per tutti gli elementi
+  const cardsWithImage = document.querySelectorAll('.card-img');
+  expect(cardsWithImage.length).toBe(mock_fields.items_total);
 
-  //nascondi date
-  const data = document.querySelectorAll('.data');
-  expect(data.length).toBe(0);
+  // non alterare le dimensioni naturali dell'immagine
+  const naturalSize = document.querySelectorAll('.img-responsive-wrapper');
+  naturalSize.forEach((card) => expect(card).toHaveClass('natural-image-size'));
 
-  //mostra sezione
-  expect(screen.getAllByText(/Eventi/i).length).toBeGreaterThan(0);
+  // disponi su 4 colonne
+  const cardColumns = document.querySelectorAll('.items.row .col-item.mb-3');
+  cardColumns.forEach((column) => expect(column).toHaveClass('col-lg-3'));
 
-  //mostra tipo
-  expect(screen.getAllByText(/Evento/i).length).toBeGreaterThan(0);
+  // mostra icona
+  const icon = document.querySelector('.categoryicon-top');
+  expect(icon).toBeInTheDocument();
 
-  //mostra descrizione
+  // mostra sezione
+  expect(screen.getAllByText(/Eventi/)).toBeTruthy();
+
+  // mostra tipo
+  expect(screen.getAllByText(/Evento/)).toBeTruthy();
+
+  // nascondi le date
+  const date = document.querySelectorAll('.data');
+  expect(date.length).toBe(0);
+
+  // mostra la descrizione
   expect(
     screen.getByText(
-      /Dal 2 al 3 giugno torna il torneo di beneficienza “Tutti in pista”. La raccolta fondi finanzierà progetti sportivi per ragazzi e ragazze./i,
+      /Dal 2 al 3 giugno torna il torneo di beneficienza “Tutti in pista”./i,
     ),
   ).toBeInTheDocument();
 
-  //mostra il link al dettaglio
-  expect(screen.getAllByText(/Is this just fantasy?/i).length).toBeGreaterThan(
-    0,
-  );
-
-  //mostra i filtri per percorso
-  expect(
-    screen.getByRole('button', { name: /Caught in a landside/i }),
-  ).toBeInTheDocument();
+  // mostra argomenti
+  expect(screen.getByRole('link', { name: /Sport/i })).toBeInTheDocument();
 
   //risultati per pagina
-  const cards = document.querySelectorAll('.rounded.card-teaser.card');
-  expect(cards.length).toBe(mock_fields.querystring.b_size);
+  const card = document.querySelectorAll('.listing-item.card');
+  expect(card.length).toBe(mock_fields.querystring.b_size);
 
   //link more
   expect(
-    screen.getByRole('link', { name: /No escape from reality/i }),
+    screen.getByRole('link', { name: /I feel alive/i }),
   ).toBeInTheDocument();
 });

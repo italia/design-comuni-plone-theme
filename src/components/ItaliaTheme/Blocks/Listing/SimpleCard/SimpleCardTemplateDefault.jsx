@@ -13,7 +13,7 @@ import {
   Row,
   Col,
 } from 'design-react-kit';
-
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
 
 import { CardCategory } from 'design-comuni-plone-theme/components/ItaliaTheme';
@@ -68,6 +68,7 @@ const SimpleCardTemplateDefault = (props) => {
     additionalFilters = [],
     id_lighthouse,
     linkmore_id_lighthouse,
+    rrule,
   } = props;
 
   let currentPathFilter = additionalFilters
@@ -177,7 +178,9 @@ const SimpleCardTemplateDefault = (props) => {
         {items.map((item, index) => {
           const icon = show_icon ? getItemIcon(item) : null;
           const itemTitle = item.title || item.id;
-          const date = hide_dates ? null : getCalendarDate(item);
+          const date = hide_dates
+            ? null
+            : getCalendarDate(item, rrule.rrulestr);
           const eventRecurrenceMore = hide_dates
             ? null
             : getEventRecurrenceMore(item, isEditMode);
@@ -271,4 +274,4 @@ SimpleCardTemplateDefault.propTypes = {
   linkHref: PropTypes.any,
 };
 
-export default SimpleCardTemplateDefault;
+export default injectLazyLibs(['rrule'])(SimpleCardTemplateDefault);

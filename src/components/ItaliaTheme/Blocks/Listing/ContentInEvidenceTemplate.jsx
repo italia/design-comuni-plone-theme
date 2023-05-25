@@ -13,7 +13,7 @@ import {
   Chip,
 } from 'design-react-kit';
 import cx from 'classnames';
-
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
 
 import {
@@ -40,6 +40,7 @@ const ContentInEvidenceTemplate = ({
   id_lighthouse,
   linkmore_id_lighthouse,
   titleLine,
+  rrule,
 }) => {
   const intl = useIntl();
 
@@ -60,7 +61,7 @@ const ContentInEvidenceTemplate = ({
           </Row>
         )}
         {items.map((item, index) => {
-          const date = getCalendarDate(item);
+          const date = getCalendarDate(item, rrule.rrulestr);
           const eventRecurrenceMore = getEventRecurrenceMore(item, isEditMode);
           const listingText = <ListingText item={item} />;
           const image = ListingImage({ item, className: 'item-image' });
@@ -146,7 +147,7 @@ ContentInEvidenceTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-export default ContentInEvidenceTemplate;
+export default injectLazyLibs(['rrule'])(ContentInEvidenceTemplate);
 
 const messages = defineMessages({
   view_all: {

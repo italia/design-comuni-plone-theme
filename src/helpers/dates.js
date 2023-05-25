@@ -36,10 +36,12 @@ export const getRealStartAndEndWithRecurrence = (
     compatible: true,
     forceset: true,
   });
-  const rules = rruleSet.rrules();
-
+  const recurrenceresults = rruleSet.all();
   return {
-    recurrenceStart: viewDate(intl.locale, rules[0]?.options?.dtstart),
-    recurrenceEnd: viewDate(intl.locale, rules[0]?.options?.until),
+    recurrenceStart: viewDate(intl.locale, recurrenceresults?.[0]),
+    recurrenceEnd: viewDate(
+      intl.locale,
+      recurrenceresults?.[recurrenceresults?.length - 1],
+    ),
   };
 };

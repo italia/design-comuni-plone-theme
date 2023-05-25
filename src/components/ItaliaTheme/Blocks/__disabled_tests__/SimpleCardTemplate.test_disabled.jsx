@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import CardWithImageTemplate from '../../Listing/CardWithImageTemplate';
+import SimpleCardTemplate from '../Listing/SimpleCard/SimpleCardTemplate';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-intl-redux';
 import { MemoryRouter } from 'react-router-dom';
@@ -11,6 +11,7 @@ const middlewares = [thunk];
 const mockStore = configureStore(middlewares);
 
 const mock_fields = {
+  appearance: 'undefined',
   items: [
     {
       '@id': '/eventi/torneo-di-beneficienza-tutti-in-pista',
@@ -1399,50 +1400,989 @@ const mock_fields = {
       update_note: null,
       whole_day: true,
     },
-  ],
-  items_total: 4,
-  '@type': 'listing',
-  always_show_image: true,
-  block: 'ee2760d7-225f-44c9-b9aa-e398c9ef5743',
-  headlineTag: 'h2',
-  hide_dates: true,
-  linkHref: [
     {
-      '@id': '/eventi',
-      Description: '',
-      Title: 'Eventi',
-      title: 'Eventi',
+      '@id': '/eventi/363-festa-di-santefisio',
+      '@type': 'Event',
+      CreationDate: '2023-01-04T10:43:19+00:00',
+      Creator: 'admin',
+      Date: '2023-01-19T14:05:30+00:00',
+      Description:
+        "Il 1° maggio 2019 Cagliari e tutta la Sardegna festeggiano la 363ª Festa di Sant'Efisio. Un intenso momento di devozione, fede, cultura e tradizioni centenarie che si fondono in una processione che non ha eguali.",
+      EffectiveDate: 'None',
+      ExpirationDate: 'None',
+      ModificationDate: '2023-01-19T14:05:30+00:00',
+      Subject: [],
+      Subject_bando: null,
+      Title: "363^ Festa di Sant'Efisio",
+      Type: 'Evento',
+      UID: '797e8784ca0241af9ec737ed081bd0cc',
+      apertura_bando: null,
+      author_name: null,
+      chiusura_procedimento_bando: null,
+      cmf_uid: 104,
+      commentators: [],
+      created: '2023-01-04T10:43:19+00:00',
+      data_conclusione_incarico: null,
+      description:
+        "Il 1° maggio 2019 Cagliari e tutta la Sardegna festeggiano la 363ª Festa di Sant'Efisio. Un intenso momento di devozione, fede, cultura e tradizioni centenarie che si fondono in una processione che non ha eguali.",
+      design_italia_meta_type: 'Evento',
+      destinatari_bando: null,
+      effective: null,
+      end: '2023-05-04T16:00:00+00:00',
+      ente_bando: null,
+      event_location: [],
+      exclude_from_nav: false,
+      expires: null,
+      geolocation: {
+        latitude: 39.219000017838084,
+        longitude: 9.112740004953338,
+      },
+      getIcon: true,
+      getId: '363-festa-di-santefisio',
+      getObjSize: '2.7 MB',
+      getPath: '/Plone/eventi/363-festa-di-santefisio',
+      getRemoteUrl: null,
+      getURL: 'http://localhost:3000/eventi/363-festa-di-santefisio',
+      hasPreviewImage: true,
+      head_title: null,
+      icona: null,
+      id: '363-festa-di-santefisio',
+      image: {
+        scales: {
+          gallery: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/@@images/preview_image/gallery',
+            height: 65536,
+            width: 250,
+          },
+          great: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/@@images/preview_image/great',
+            height: 65536,
+            width: 1200,
+          },
+          huge: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/@@images/preview_image/huge',
+            height: 65536,
+            width: 1600,
+          },
+          icon: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/@@images/preview_image/icon',
+            height: 32,
+            width: 32,
+          },
+          large: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/@@images/preview_image/large',
+            height: 65536,
+            width: 800,
+          },
+          larger: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/@@images/preview_image/larger',
+            height: 65536,
+            width: 1000,
+          },
+          listing: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/@@images/preview_image/listing',
+            height: 16,
+            width: 16,
+          },
+          midi: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/@@images/preview_image/midi',
+            height: 65536,
+            width: 300,
+          },
+          mini: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/@@images/preview_image/mini',
+            height: 65536,
+            width: 200,
+          },
+          preview: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/@@images/preview_image/preview',
+            height: 65536,
+            width: 400,
+          },
+          teaser: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/@@images/preview_image/teaser',
+            height: 65536,
+            width: 600,
+          },
+          thumb: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/@@images/preview_image/thumb',
+            height: 65536,
+            width: 128,
+          },
+          tile: {
+            download:
+              'http://localhost:3000/eventi/363-festa-di-santefisio/@@images/preview_image/tile',
+            height: 64,
+            width: 64,
+          },
+        },
+      },
+      image_field: 'preview_image',
+      image_scales: {
+        image: [
+          {
+            'content-type': 'image/jpeg',
+            download:
+              '@@images/image-5184-450c772936948b6de2316bd23117a107.jpeg',
+            filename: 'vaccini.jpeg',
+            height: 3456,
+            scales: {
+              gallery: {
+                download:
+                  '@@images/image-250-2e45e00059ca3528da4dab9a0879881b.jpeg',
+                height: 166,
+                width: 250,
+              },
+              great: {
+                download:
+                  '@@images/image-1200-30a3083107dd6b23fa7b93a0b5635caa.jpeg',
+                height: 800,
+                width: 1200,
+              },
+              huge: {
+                download:
+                  '@@images/image-1600-adfb1f3e91b013f11b5014e0231f97b3.jpeg',
+                height: 1066,
+                width: 1600,
+              },
+              icon: {
+                download:
+                  '@@images/image-32-7d90e7af6e5d90571fa294215db7a360.jpeg',
+                height: 21,
+                width: 32,
+              },
+              large: {
+                download:
+                  '@@images/image-800-2c3288f674576af857c28119af0b9650.jpeg',
+                height: 533,
+                width: 800,
+              },
+              larger: {
+                download:
+                  '@@images/image-1000-9e025a86c83de9be91fe59419426b293.jpeg',
+                height: 666,
+                width: 1000,
+              },
+              listing: {
+                download:
+                  '@@images/image-16-14a3367d5e9960f4540fe06849e39b79.jpeg',
+                height: 10,
+                width: 16,
+              },
+              midi: {
+                download:
+                  '@@images/image-300-5a09c091e41b2327edc809126c8e4d34.jpeg',
+                height: 200,
+                width: 300,
+              },
+              mini: {
+                download:
+                  '@@images/image-200-ed2ead88e7a375da4e45c9acf0762360.jpeg',
+                height: 133,
+                width: 200,
+              },
+              preview: {
+                download:
+                  '@@images/image-400-533f6e633d950ef73bad86be6f5e594b.jpeg',
+                height: 266,
+                width: 400,
+              },
+              teaser: {
+                download:
+                  '@@images/image-600-088a4d3c644521df2dfb22342b2f3e72.jpeg',
+                height: 400,
+                width: 600,
+              },
+              thumb: {
+                download:
+                  '@@images/image-128-3ff8021940b90cf2795b3b546618d435.jpeg',
+                height: 85,
+                width: 128,
+              },
+              tile: {
+                download:
+                  '@@images/image-64-cdeacb86cedc123214b4562960291a6e.jpeg',
+                height: 42,
+                width: 64,
+              },
+            },
+            size: 1437659,
+            width: 5184,
+          },
+        ],
+        preview_image: [
+          {
+            'content-type': 'image/jpeg',
+            download:
+              '@@images/preview_image-5184-8060e350a48fa004050e86398f5e2a38.jpeg',
+            filename: 'vaccini.jpeg',
+            height: 3456,
+            scales: {
+              gallery: {
+                download:
+                  '@@images/preview_image-250-93dcf4c16b2bd83e28d10d800f12c109.jpeg',
+                height: 166,
+                width: 250,
+              },
+              great: {
+                download:
+                  '@@images/preview_image-1200-a5f1fb71c597abe4c431def4a38ed722.jpeg',
+                height: 800,
+                width: 1200,
+              },
+              huge: {
+                download:
+                  '@@images/preview_image-1600-4cfcf97a411d1d8505b74cdac0362f83.jpeg',
+                height: 1066,
+                width: 1600,
+              },
+              icon: {
+                download:
+                  '@@images/preview_image-32-6cfe33efe44f2edebe2405a69b2d4f62.jpeg',
+                height: 21,
+                width: 32,
+              },
+              large: {
+                download:
+                  '@@images/preview_image-800-a91c98480e44488c603ff752ef94e883.jpeg',
+                height: 533,
+                width: 800,
+              },
+              larger: {
+                download:
+                  '@@images/preview_image-1000-bff659993bf0c90bd1207e9ce0d46d53.jpeg',
+                height: 666,
+                width: 1000,
+              },
+              listing: {
+                download:
+                  '@@images/preview_image-16-07fee2e428270b3d076a746032870238.jpeg',
+                height: 10,
+                width: 16,
+              },
+              midi: {
+                download:
+                  '@@images/preview_image-300-2e5cfc1ff179461f57d9033d2d85b347.jpeg',
+                height: 200,
+                width: 300,
+              },
+              mini: {
+                download:
+                  '@@images/preview_image-200-b96a439dd095dc60ca90c6b3edbc9566.jpeg',
+                height: 133,
+                width: 200,
+              },
+              preview: {
+                download:
+                  '@@images/preview_image-400-13c142578289238168fcf64bc3dfe569.jpeg',
+                height: 266,
+                width: 400,
+              },
+              teaser: {
+                download:
+                  '@@images/preview_image-600-5691ea2bb727fb5b428d39f79a3251ae.jpeg',
+                height: 400,
+                width: 600,
+              },
+              thumb: {
+                download:
+                  '@@images/preview_image-128-b93bca18787a9c2933a96d46c73e51d7.jpeg',
+                height: 85,
+                width: 128,
+              },
+              tile: {
+                download:
+                  '@@images/preview_image-64-36becc9d7bbf5090839f9910bf929425.jpeg',
+                height: 42,
+                width: 64,
+              },
+            },
+            size: 1437659,
+            width: 5184,
+          },
+        ],
+      },
+      in_response_to: null,
+      is_folderish: true,
+      last_comment_date: null,
+      latitude: 39.219000017838084,
+      listCreators: ['admin'],
+      location: null,
+      longitude: 9.112740004953338,
+      mime_type: 'text/plain',
+      modified: '2023-01-19T14:05:30+00:00',
+      nav_title: null,
+      open_end: false,
+      parent: {
+        '@id': 'http://localhost:3000/eventi',
+        UID: 'd973c55883254c118dc0ccba067329b8',
+        title: 'Eventi',
+      },
+      portal_type: 'Event',
+      recurrence: null,
+      review_state: 'private',
+      scadenza_bando: null,
+      start: '2019-05-01T07:00:00+00:00',
+      sync_uid: '797e8784ca0241af9ec737ed081bd0cc@localhost:3000',
+      tassonomia_argomenti: [
+        {
+          '@id': 'http://localhost:3000/argomenti/cultura',
+          '@type': 'Pagina Argomento',
+          CreationDate: '2023-01-04T10:08:02+00:00',
+          Creator: 'admin',
+          Date: '2023-01-04T16:05:38+00:00',
+          Description: '',
+          EffectiveDate: 'None',
+          ExpirationDate: 'None',
+          ModificationDate: '2023-01-04T16:05:38+00:00',
+          Subject: [],
+          Subject_bando: null,
+          Title: 'Cultura',
+          Type: 'Argomento',
+          UID: '2bc2225553b94ac28fa19f9186567938',
+          apertura_bando: null,
+          author_name: null,
+          chiusura_procedimento_bando: null,
+          cmf_uid: 94,
+          commentators: null,
+          created: '2023-01-04T10:08:02+00:00',
+          data_conclusione_incarico: null,
+          description: '',
+          design_italia_meta_type: 'Argomento',
+          destinatari_bando: null,
+          effective: null,
+          end: null,
+          ente_bando: null,
+          event_location: null,
+          exclude_from_nav: false,
+          expires: null,
+          geolocation: null,
+          getIcon: '',
+          getId: 'cultura',
+          getObjSize: null,
+          getPath: '/Plone/argomenti/cultura',
+          getRemoteUrl: null,
+          getURL: 'http://localhost:3000/argomenti/cultura',
+          hasPreviewImage: null,
+          head_title: null,
+          icona: null,
+          id: 'cultura',
+          image_field: null,
+          image_scales: null,
+          in_response_to: null,
+          is_folderish: null,
+          last_comment_date: null,
+          latitude: null,
+          listCreators: ['admin'],
+          location: null,
+          longitude: null,
+          mime_type: null,
+          modified: '2023-01-04T16:05:38+00:00',
+          nav_title: null,
+          open_end: null,
+          parent: null,
+          portal_type: 'Pagina Argomento',
+          recurrence: null,
+          review_state: 'private',
+          scadenza_bando: null,
+          start: null,
+          sync_uid: null,
+          tassonomia_argomenti: null,
+          taxonomy_business_events: null,
+          taxonomy_person_life_events: null,
+          taxonomy_temi_dataset: null,
+          taxonomy_tipologia_documenti_albopretorio: null,
+          taxonomy_tipologia_documento: null,
+          taxonomy_tipologia_evento: null,
+          taxonomy_tipologia_frequenza_aggiornamento: null,
+          taxonomy_tipologia_incarico: null,
+          taxonomy_tipologia_licenze: null,
+          taxonomy_tipologia_luogo: null,
+          taxonomy_tipologia_notizia: null,
+          taxonomy_tipologia_organizzazione: null,
+          taxonomy_tipologia_pdc: null,
+          taxonomy_tipologia_stati_pratica: null,
+          tipologia_bando: null,
+          tipologia_documento: null,
+          tipologia_notizia: null,
+          title: 'Cultura',
+          total_comments: null,
+          ufficio_responsabile_bando: null,
+          update_note: null,
+          whole_day: null,
+        },
+        {
+          '@id': 'http://localhost:3000/argomenti/vivere-la-citta',
+          '@type': 'Pagina Argomento',
+          CreationDate: '2023-01-04T10:44:40+00:00',
+          Creator: 'admin',
+          Date: '2023-01-04T16:06:22+00:00',
+          Description: '',
+          EffectiveDate: 'None',
+          ExpirationDate: 'None',
+          ModificationDate: '2023-01-04T16:06:22+00:00',
+          Subject: [],
+          Subject_bando: null,
+          Title: 'Vivere la città',
+          Type: 'Argomento',
+          UID: '72ff83b127b54800b25d01c1b46b8660',
+          apertura_bando: null,
+          author_name: null,
+          chiusura_procedimento_bando: null,
+          cmf_uid: 107,
+          commentators: null,
+          created: '2023-01-04T10:44:40+00:00',
+          data_conclusione_incarico: null,
+          description: '',
+          design_italia_meta_type: 'Argomento',
+          destinatari_bando: null,
+          effective: null,
+          end: null,
+          ente_bando: null,
+          event_location: null,
+          exclude_from_nav: false,
+          expires: null,
+          geolocation: null,
+          getIcon: '',
+          getId: 'vivere-la-citta',
+          getObjSize: null,
+          getPath: '/Plone/argomenti/vivere-la-citta',
+          getRemoteUrl: null,
+          getURL: 'http://localhost:3000/argomenti/vivere-la-citta',
+          hasPreviewImage: null,
+          head_title: null,
+          icona: null,
+          id: 'vivere-la-citta',
+          image_field: null,
+          image_scales: null,
+          in_response_to: null,
+          is_folderish: null,
+          last_comment_date: null,
+          latitude: null,
+          listCreators: ['admin'],
+          location: null,
+          longitude: null,
+          mime_type: null,
+          modified: '2023-01-04T16:06:22+00:00',
+          nav_title: null,
+          open_end: null,
+          parent: null,
+          portal_type: 'Pagina Argomento',
+          recurrence: null,
+          review_state: 'private',
+          scadenza_bando: null,
+          start: null,
+          sync_uid: null,
+          tassonomia_argomenti: null,
+          taxonomy_business_events: null,
+          taxonomy_person_life_events: null,
+          taxonomy_temi_dataset: null,
+          taxonomy_tipologia_documenti_albopretorio: null,
+          taxonomy_tipologia_documento: null,
+          taxonomy_tipologia_evento: null,
+          taxonomy_tipologia_frequenza_aggiornamento: null,
+          taxonomy_tipologia_incarico: null,
+          taxonomy_tipologia_licenze: null,
+          taxonomy_tipologia_luogo: null,
+          taxonomy_tipologia_notizia: null,
+          taxonomy_tipologia_organizzazione: null,
+          taxonomy_tipologia_pdc: null,
+          taxonomy_tipologia_stati_pratica: null,
+          tipologia_bando: null,
+          tipologia_documento: null,
+          tipologia_notizia: null,
+          title: 'Vivere la città',
+          total_comments: null,
+          ufficio_responsabile_bando: null,
+          update_note: null,
+          whole_day: null,
+        },
+      ],
+      taxonomy_business_events: [],
+      taxonomy_person_life_events: [],
+      taxonomy_temi_dataset: [],
+      taxonomy_tipologia_documenti_albopretorio: [],
+      taxonomy_tipologia_documento: [],
+      taxonomy_tipologia_evento: [],
+      taxonomy_tipologia_frequenza_aggiornamento: [],
+      taxonomy_tipologia_incarico: [],
+      taxonomy_tipologia_licenze: [],
+      taxonomy_tipologia_luogo: [],
+      taxonomy_tipologia_notizia: [],
+      taxonomy_tipologia_organizzazione: [],
+      taxonomy_tipologia_pdc: [],
+      taxonomy_tipologia_stati_pratica: [],
+      tipologia_bando: null,
+      tipologia_documento: null,
+      tipologia_notizia: null,
+      title: "363^ Festa di Sant'Efisio",
+      total_comments: 0,
+      ufficio_responsabile_bando: null,
+      update_note: null,
+      whole_day: false,
+    },
+    {
+      '@id': '/eventi/mega-evento',
+      '@type': 'Event',
+      CreationDate: '2023-01-20T08:12:40+00:00',
+      Creator: 'admin',
+      Date: '2023-01-25T15:23:08+00:00',
+      Description: 'Descrizione del mega evento',
+      EffectiveDate: 'None',
+      ExpirationDate: 'None',
+      ModificationDate: '2023-01-25T15:23:08+00:00',
+      Subject: [],
+      Subject_bando: null,
+      Title: 'Mega Evento',
+      Type: 'Evento',
+      UID: '3a046f1b374d465abaea77175ab20cce',
+      apertura_bando: null,
+      author_name: null,
+      chiusura_procedimento_bando: null,
+      cmf_uid: 190,
+      commentators: [],
+      created: '2023-01-20T08:12:40+00:00',
+      data_conclusione_incarico: null,
+      description: 'Descrizione del mega evento',
+      design_italia_meta_type: 'Evento',
+      destinatari_bando: null,
+      effective: null,
+      end: '2023-01-20T22:59:59+00:00',
+      ente_bando: null,
+      event_location: ['6d27d782beca40deb5c1d3cb8e7392c2'],
+      exclude_from_nav: false,
+      expires: null,
+      geolocation: {
+        latitude: 39.21252001040267,
+        longitude: 9.115209984181092,
+      },
+      getIcon: true,
+      getId: 'mega-evento',
+      getObjSize: '3.2 MB',
+      getPath: '/Plone/eventi/mega-evento',
+      getRemoteUrl: null,
+      getURL: 'http://localhost:3000/eventi/mega-evento',
+      hasPreviewImage: true,
+      head_title: null,
+      icona: null,
+      id: 'mega-evento',
+      image: {
+        scales: {
+          gallery: {
+            download:
+              'http://localhost:3000/eventi/mega-evento/@@images/preview_image/gallery',
+            height: 65536,
+            width: 250,
+          },
+          great: {
+            download:
+              'http://localhost:3000/eventi/mega-evento/@@images/preview_image/great',
+            height: 65536,
+            width: 1200,
+          },
+          huge: {
+            download:
+              'http://localhost:3000/eventi/mega-evento/@@images/preview_image/huge',
+            height: 65536,
+            width: 1600,
+          },
+          icon: {
+            download:
+              'http://localhost:3000/eventi/mega-evento/@@images/preview_image/icon',
+            height: 32,
+            width: 32,
+          },
+          large: {
+            download:
+              'http://localhost:3000/eventi/mega-evento/@@images/preview_image/large',
+            height: 65536,
+            width: 800,
+          },
+          larger: {
+            download:
+              'http://localhost:3000/eventi/mega-evento/@@images/preview_image/larger',
+            height: 65536,
+            width: 1000,
+          },
+          listing: {
+            download:
+              'http://localhost:3000/eventi/mega-evento/@@images/preview_image/listing',
+            height: 16,
+            width: 16,
+          },
+          midi: {
+            download:
+              'http://localhost:3000/eventi/mega-evento/@@images/preview_image/midi',
+            height: 65536,
+            width: 300,
+          },
+          mini: {
+            download:
+              'http://localhost:3000/eventi/mega-evento/@@images/preview_image/mini',
+            height: 65536,
+            width: 200,
+          },
+          preview: {
+            download:
+              'http://localhost:3000/eventi/mega-evento/@@images/preview_image/preview',
+            height: 65536,
+            width: 400,
+          },
+          teaser: {
+            download:
+              'http://localhost:3000/eventi/mega-evento/@@images/preview_image/teaser',
+            height: 65536,
+            width: 600,
+          },
+          thumb: {
+            download:
+              'http://localhost:3000/eventi/mega-evento/@@images/preview_image/thumb',
+            height: 65536,
+            width: 128,
+          },
+          tile: {
+            download:
+              'http://localhost:3000/eventi/mega-evento/@@images/preview_image/tile',
+            height: 64,
+            width: 64,
+          },
+        },
+      },
+      image_field: 'preview_image',
+      image_scales: {
+        image: [
+          {
+            'content-type': 'image/png',
+            download:
+              '@@images/image-1156-2f7d3e0155375c7425fa36b96a9e81ed.png',
+            filename: 'foto-ospedale.png',
+            height: 940,
+            scales: {
+              gallery: {
+                download:
+                  '@@images/image-250-6075fcd9926835a1e0e2d08560237321.png',
+                height: 203,
+                width: 250,
+              },
+              icon: {
+                download:
+                  '@@images/image-32-03345d45736c4f95a0a9a97a3b8c4589.png',
+                height: 26,
+                width: 32,
+              },
+              large: {
+                download:
+                  '@@images/image-800-f85baa88982b2f3084994deb2ff943ef.png',
+                height: 650,
+                width: 800,
+              },
+              larger: {
+                download:
+                  '@@images/image-1000-a681dd2ec11fa21fa9ca115d321c9449.png',
+                height: 813,
+                width: 1000,
+              },
+              listing: {
+                download:
+                  '@@images/image-16-a9ee58673fd31065834e3a092bec599f.png',
+                height: 13,
+                width: 16,
+              },
+              midi: {
+                download:
+                  '@@images/image-300-ab78d88eceba6080e08e75c19ddcfefb.png',
+                height: 243,
+                width: 300,
+              },
+              mini: {
+                download:
+                  '@@images/image-200-fde347ff2cf346a3bfdcda9c12bf2d1d.png',
+                height: 162,
+                width: 200,
+              },
+              preview: {
+                download:
+                  '@@images/image-400-366d87093f173877fe90ac594fac414f.png',
+                height: 325,
+                width: 400,
+              },
+              teaser: {
+                download:
+                  '@@images/image-600-4f3d389e50ed6b8f22667a993135ce52.png',
+                height: 487,
+                width: 600,
+              },
+              thumb: {
+                download:
+                  '@@images/image-128-660fac272fe20b21aabef8aab9c4edc1.png',
+                height: 104,
+                width: 128,
+              },
+              tile: {
+                download:
+                  '@@images/image-64-8579a96cc486ed73e77e8c5bc899e878.png',
+                height: 52,
+                width: 64,
+              },
+            },
+            size: 1296882,
+            width: 1156,
+          },
+        ],
+        preview_image: [
+          {
+            'content-type': 'image/jpeg',
+            download:
+              '@@images/preview_image-5184-4f952739520f0a86838a7ce4eef221a3.jpeg',
+            filename: 'national-cancer-institute.jpeg',
+            height: 3456,
+            scales: {
+              gallery: {
+                download:
+                  '@@images/preview_image-250-68713626eab4ffddff93163a853a8cfd.jpeg',
+                height: 166,
+                width: 250,
+              },
+              great: {
+                download:
+                  '@@images/preview_image-1200-dfa4e2d9c26671b7da32fdb4564dbd1b.jpeg',
+                height: 800,
+                width: 1200,
+              },
+              huge: {
+                download:
+                  '@@images/preview_image-1600-4e3064c0752d070d19f34a7191f2252f.jpeg',
+                height: 1066,
+                width: 1600,
+              },
+              icon: {
+                download:
+                  '@@images/preview_image-32-abee06766ab8d2124b9d71734be03a76.jpeg',
+                height: 21,
+                width: 32,
+              },
+              large: {
+                download:
+                  '@@images/preview_image-800-5607d72e9f5c2149a78dc09922b96793.jpeg',
+                height: 533,
+                width: 800,
+              },
+              larger: {
+                download:
+                  '@@images/preview_image-1000-ed3962a9959037f8586ba67a34b75028.jpeg',
+                height: 666,
+                width: 1000,
+              },
+              listing: {
+                download:
+                  '@@images/preview_image-16-9b383f53ccbe169873e3eb92da5b6d43.jpeg',
+                height: 10,
+                width: 16,
+              },
+              midi: {
+                download:
+                  '@@images/preview_image-300-9c59b6708bbd1d09c231e37ca62c4a63.jpeg',
+                height: 200,
+                width: 300,
+              },
+              mini: {
+                download:
+                  '@@images/preview_image-200-2973a3f4aaaf00bda1ac8e1589ed0279.jpeg',
+                height: 133,
+                width: 200,
+              },
+              preview: {
+                download:
+                  '@@images/preview_image-400-0648f4b7e4bfc866b4cdbff82b4bc8d7.jpeg',
+                height: 266,
+                width: 400,
+              },
+              teaser: {
+                download:
+                  '@@images/preview_image-600-540cea607644797faaa656fb3775ba37.jpeg',
+                height: 400,
+                width: 600,
+              },
+              thumb: {
+                download:
+                  '@@images/preview_image-128-1befc6713b7b327cf06f535399b5dd54.jpeg',
+                height: 85,
+                width: 128,
+              },
+              tile: {
+                download:
+                  '@@images/preview_image-64-4bfdfc5e6aafdbd3504de851ee1bb398.jpeg',
+                height: 42,
+                width: 64,
+              },
+            },
+            size: 2026538,
+            width: 5184,
+          },
+        ],
+      },
+      in_response_to: null,
+      is_folderish: true,
+      last_comment_date: null,
+      latitude: 39.21252001040267,
+      listCreators: ['admin'],
+      location: null,
+      longitude: 9.115209984181092,
+      mime_type: 'text/plain',
+      modified: '2023-01-25T15:23:08+00:00',
+      nav_title: null,
+      open_end: true,
+      parent: {
+        '@id': 'http://localhost:3000/eventi',
+        UID: 'd973c55883254c118dc0ccba067329b8',
+        title: 'Eventi',
+      },
+      portal_type: 'Event',
+      recurrence: null,
+      review_state: 'private',
+      scadenza_bando: null,
+      start: '2023-01-19T23:00:00+00:00',
+      sync_uid: '3a046f1b374d465abaea77175ab20cce@localhost:3000',
+      tassonomia_argomenti: [
+        {
+          '@id': 'http://localhost:3000/argomenti/muoversi',
+          '@type': 'Pagina Argomento',
+          CreationDate: '2023-01-04T10:08:11+00:00',
+          Creator: 'admin',
+          Date: '2023-01-04T16:06:09+00:00',
+          Description: '',
+          EffectiveDate: 'None',
+          ExpirationDate: 'None',
+          ModificationDate: '2023-01-04T16:06:09+00:00',
+          Subject: [],
+          Subject_bando: null,
+          Title: 'Muoversi',
+          Type: 'Argomento',
+          UID: '8e2091fa73c74822ac3533aa71cef981',
+          apertura_bando: null,
+          author_name: null,
+          chiusura_procedimento_bando: null,
+          cmf_uid: 95,
+          commentators: null,
+          created: '2023-01-04T10:08:11+00:00',
+          data_conclusione_incarico: null,
+          description: '',
+          design_italia_meta_type: 'Argomento',
+          destinatari_bando: null,
+          effective: null,
+          end: null,
+          ente_bando: null,
+          event_location: null,
+          exclude_from_nav: false,
+          expires: null,
+          geolocation: null,
+          getIcon: '',
+          getId: 'muoversi',
+          getObjSize: null,
+          getPath: '/Plone/argomenti/muoversi',
+          getRemoteUrl: null,
+          getURL: 'http://localhost:3000/argomenti/muoversi',
+          hasPreviewImage: null,
+          head_title: null,
+          icona: null,
+          id: 'muoversi',
+          image_field: null,
+          image_scales: null,
+          in_response_to: null,
+          is_folderish: null,
+          last_comment_date: null,
+          latitude: null,
+          listCreators: ['admin'],
+          location: null,
+          longitude: null,
+          mime_type: null,
+          modified: '2023-01-04T16:06:09+00:00',
+          nav_title: null,
+          open_end: null,
+          parent: null,
+          portal_type: 'Pagina Argomento',
+          recurrence: null,
+          review_state: 'private',
+          scadenza_bando: null,
+          start: null,
+          sync_uid: null,
+          tassonomia_argomenti: null,
+          taxonomy_business_events: null,
+          taxonomy_person_life_events: null,
+          taxonomy_temi_dataset: null,
+          taxonomy_tipologia_documenti_albopretorio: null,
+          taxonomy_tipologia_documento: null,
+          taxonomy_tipologia_evento: null,
+          taxonomy_tipologia_frequenza_aggiornamento: null,
+          taxonomy_tipologia_incarico: null,
+          taxonomy_tipologia_licenze: null,
+          taxonomy_tipologia_luogo: null,
+          taxonomy_tipologia_notizia: null,
+          taxonomy_tipologia_organizzazione: null,
+          taxonomy_tipologia_pdc: null,
+          taxonomy_tipologia_stati_pratica: null,
+          tipologia_bando: null,
+          tipologia_documento: null,
+          tipologia_notizia: null,
+          title: 'Muoversi',
+          total_comments: null,
+          ufficio_responsabile_bando: null,
+          update_note: null,
+          whole_day: null,
+        },
+      ],
+      taxonomy_business_events: [],
+      taxonomy_person_life_events: [],
+      taxonomy_temi_dataset: [],
+      taxonomy_tipologia_documenti_albopretorio: [],
+      taxonomy_tipologia_documento: [],
+      taxonomy_tipologia_evento: [],
+      taxonomy_tipologia_frequenza_aggiornamento: [],
+      taxonomy_tipologia_incarico: [],
+      taxonomy_tipologia_licenze: [],
+      taxonomy_tipologia_luogo: [],
+      taxonomy_tipologia_notizia: [],
+      taxonomy_tipologia_organizzazione: [],
+      taxonomy_tipologia_pdc: [],
+      taxonomy_tipologia_stati_pratica: [],
+      tipologia_bando: null,
+      tipologia_documento: null,
+      tipologia_notizia: null,
+      title: 'Mega Evento',
+      total_comments: 0,
+      ufficio_responsabile_bando: null,
+      update_note: null,
+      whole_day: true,
     },
   ],
-  linkTitle: 'I feel alive',
-  natural_image_size: true,
-  query: [],
-  querystring: {
-    query: [
-      {
-        i: 'portal_type',
-        o: 'plone.app.querystring.operation.selection.any',
-        v: ['Event'],
-      },
-    ],
-    sort_order: 'ascending',
-    b_size: 4,
-    limit: 4,
-  },
-  set_four_columns: true,
+  isEditMode: true,
+  headlineTag: 'h2',
+  show_icon: true,
+  hide_dates: false,
+  show_section: true,
+  show_type: false,
   show_description: true,
   show_detail_link: false,
-  show_icon: true,
   show_path_filters: false,
-  show_section: true,
-  show_topics: true,
-  show_type: true,
-  variation: 'cardWithImageTemplate',
-  addFilters: 'ƒ addFilters() {}',
+  variation: 'compact',
+  '@type': 'listing',
+  query: [],
+  block: 'f928ff41-bc83-4526-aec8-9f81dc06da83',
   additionalFilters: [],
   loading: false,
-  firstLoading: false,
-  title: "Tonight I'm gonna have myself a real good time",
+  firstLoading: true,
 };
 
 const store = mockStore({
@@ -1451,79 +2391,36 @@ const store = mockStore({
     messages: {},
   },
 });
+
 test('View renders all fields', async () => {
   render(
     <Provider store={store}>
       <MemoryRouter>
-        <CardWithImageTemplate
+        <SimpleCardTemplate
           data={mock_fields}
           items={mock_fields.items}
-          title={mock_fields.title}
-          always_show_image={mock_fields.always_show_image}
-          set_four_columns={mock_fields.set_four_columns}
-          natural_image_size={mock_fields.natural_image_size}
-          show_icon={mock_fields.show_icon}
-          show_section={mock_fields.show_section}
-          show_type={mock_fields.show_type}
-          hide_dates={mock_fields.hide_dates}
-          show_description={mock_fields.show_description}
-          show_topics={mock_fields.show_topics}
-          linkHref={mock_fields.linkHref}
-          linkTitle={mock_fields.linkTitle}
+          appearance={mock_fields.appearance}
         />
       </MemoryRouter>
     </Provider>,
   );
 
+  // tipo template
+  const simpleCard = document.querySelector('.simple-card-default');
+  expect(simpleCard).toBeInTheDocument();
   // titolo
-  expect(
-    screen.getByRole('heading', {
-      name: "Tonight I'm gonna have myself a real good time",
-    }),
-  ).toBeInTheDocument();
+  // expect(
+  //   screen.getByRole('heading', {
+  //     name: /Is this the real life?/i,
+  //   }),
+  // ).toBeInTheDocument();
 
-  // mostra l'immagine per tutti gli elementi
-  const cardsWithImage = document.querySelectorAll('.card-img');
-  expect(cardsWithImage.length).toBe(mock_fields.items_total);
+  // //risultati per pagina
+  // const cards = document.querySelectorAll('.center-image-card');
+  // expect(cards.length).toBe(mock_fields.querystring.b_size);
 
-  // non alterare le dimensioni naturali dell'immagine
-  const naturalSize = document.querySelectorAll('.img-responsive-wrapper');
-  naturalSize.forEach((card) => expect(card).toHaveClass('natural-image-size'));
-
-  // disponi su 4 colonne
-  const cardColumns = document.querySelectorAll('.items.row .col-item.mb-3');
-  cardColumns.forEach((column) => expect(column).toHaveClass('col-lg-3'));
-
-  // mostra icona
-  const icon = document.querySelector('.categoryicon-top');
-  expect(icon).toBeInTheDocument();
-
-  // mostra sezione
-  expect(screen.getAllByText(/Eventi/)).toBeTruthy();
-
-  // mostra tipo
-  expect(screen.getAllByText(/Evento/)).toBeTruthy();
-
-  // nascondi le date
-  const date = document.querySelectorAll('.data');
-  expect(date.length).toBe(0);
-
-  // mostra la descrizione
-  expect(
-    screen.getByText(
-      /Dal 2 al 3 giugno torna il torneo di beneficienza “Tutti in pista”./i,
-    ),
-  ).toBeInTheDocument();
-
-  // mostra argomenti
-  expect(screen.getByRole('link', { name: /Sport/i })).toBeInTheDocument();
-
-  //risultati per pagina
-  const card = document.querySelectorAll('.listing-item.card');
-  expect(card.length).toBe(mock_fields.querystring.b_size);
-
-  //link more
-  expect(
-    screen.getByRole('link', { name: /I feel alive/i }),
-  ).toBeInTheDocument();
+  // //link more
+  // expect(
+  //   screen.getByRole('link', { name: /Is this just fantasy?/i }),
+  // ).toBeInTheDocument();
 });

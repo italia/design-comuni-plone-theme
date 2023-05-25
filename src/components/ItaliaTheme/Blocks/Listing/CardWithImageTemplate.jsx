@@ -13,7 +13,7 @@ import {
   Chip,
   ChipLabel,
 } from 'design-react-kit';
-
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import {
@@ -56,6 +56,7 @@ const CardWithImageTemplate = (props) => {
     id_lighthouse,
     linkmore_id_lighthouse,
     titleLine,
+    rrule,
   } = props;
   const imagesToShow = set_four_columns ? 4 : 3;
 
@@ -79,7 +80,9 @@ const CardWithImageTemplate = (props) => {
         <Row className="items">
           {items.map((item, index) => {
             const icon = show_icon ? getItemIcon(item) : null;
-            const date = hide_dates ? null : getCalendarDate(item);
+            const date = hide_dates
+              ? null
+              : getCalendarDate(item, rrule.rrulestr);
             const eventRecurrenceMore = hide_dates
               ? null
               : getEventRecurrenceMore(item, isEditMode);
@@ -219,4 +222,4 @@ CardWithImageTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-export default CardWithImageTemplate;
+export default injectLazyLibs(['rrule'])(CardWithImageTemplate);

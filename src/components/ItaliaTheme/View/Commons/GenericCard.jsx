@@ -7,7 +7,7 @@ import { UniversalLink } from '@plone/volto/components';
 import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import Image from '@plone/volto/components/theme/Image/Image';
-
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { getCalendarDate } from 'design-comuni-plone-theme/helpers';
 import {
   Icon,
@@ -31,6 +31,7 @@ const GenericCard = ({
   showInfos = false,
   children,
   size,
+  rrule,
 }) => {
   let item_fo = null;
   const locationContent = useSelector((state) => state.content.subrequests);
@@ -42,7 +43,10 @@ const GenericCard = ({
   const infos = (
     <>
       {showInfos && (
-        <CardCategory iconName={icon} date={getCalendarDate(item)}>
+        <CardCategory
+          iconName={icon}
+          date={getCalendarDate(item, rrule.rrulestr)}
+        >
           <ListingCategory
             category={item?.design_italia_meta_type}
             item={item}
@@ -116,7 +120,7 @@ const GenericCard = ({
   ) : null;
 };
 
-export default GenericCard;
+export default injectLazyLibs(['rrule'])(GenericCard);
 
 GenericCard.propTypes = {
   item: PropTypes.shape({

@@ -184,15 +184,17 @@
 }
 
 .custom-calendar-card {
-  .card-calendar {
-    width: 6.4rem;
-    text-align: left;
-
-    .date-label {
-      width: 1.4rem;
-      text-align: center;
+  .card-calendar.extended {
+    width: 100px;
+    .card-date .date-label {
+      @include rem-size(font-size, 16);
+      font-weight: 600;
+      + .date {
+        @include rem-size(font-size, 20);
+      }
     }
-
+  }
+  .card-calendar {
     .card-date {
       .date {
         font-family: $font-family-sans-serif;

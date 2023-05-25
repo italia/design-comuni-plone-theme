@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import ContentInEvidenceTemplate from '../../Listing/ContentInEvidenceTemplate';
+import ContentInEvidenceTemplate from '../Listing/ContentInEvidenceTemplate';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-intl-redux';
 import { MemoryRouter } from 'react-router-dom';

@@ -16,7 +16,7 @@ import cx from 'classnames';
 
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
-
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import {
   getCalendarDate,
   getEventRecurrenceMore,
@@ -51,6 +51,7 @@ const InEvidenceTemplate = (props) => {
     titleLine,
     id_lighthouse,
     linkmore_id_lighthouse,
+    rrule,
   } = props;
 
   return (
@@ -73,7 +74,9 @@ const InEvidenceTemplate = (props) => {
         <div className="in-evidence-cards-wrapper mb-5">
           {items.map((item, index) => {
             const icon = show_icon ? getItemIcon(item) : null;
-            const date = hide_dates ? null : getCalendarDate(item);
+            const date = hide_dates
+              ? null
+              : getCalendarDate(item, rrule.rrulestr);
             const eventRecurrenceMore = hide_dates
               ? null
               : getEventRecurrenceMore(item, isEditMode);
@@ -191,4 +194,4 @@ InEvidenceTemplate.propTypes = {
   title: PropTypes.string,
 };
 
-export default InEvidenceTemplate;
+export default injectLazyLibs(['rrule'])(InEvidenceTemplate);

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import moment from 'moment';
 import cx from 'classnames';
-
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import {
   Card,
   CardBody,
@@ -58,6 +58,7 @@ const RibbonCardTemplate = (props) => {
     id_lighthouse,
     titleLine,
     linkmore_id_lighthouse,
+    rrule,
   } = props;
   return (
     <div className="ribbon-card-template">
@@ -79,7 +80,9 @@ const RibbonCardTemplate = (props) => {
               !show_only_first_ribbon ||
               (show_only_first_ribbon && index === 0);
             const icon = show_icon ? getItemIcon(item) : null;
-            const date = hide_dates ? null : getCalendarDate(item);
+            const date = hide_dates
+              ? null
+              : getCalendarDate(item, rrule.rrulestr);
             const eventRecurrenceMore = hide_dates
               ? null
               : getEventRecurrenceMore(item, isEditMode);
@@ -163,4 +166,4 @@ RibbonCardTemplate.propTypes = {
   linkHref: PropTypes.any,
 };
 
-export default RibbonCardTemplate;
+export default injectLazyLibs(['rrule'])(RibbonCardTemplate);

@@ -153,7 +153,7 @@ export const When = ({
       return (
         <>
           {start_label || 'from'}&nbsp;
-          <span className="start">
+          <span className="start d-inline-flex">
             <span className="start-date">{datesInfo.startDate}</span>
             {!whole_day && show_time && (
               <>
@@ -166,7 +166,7 @@ export const When = ({
           {!open_end && (
             <>
               &nbsp;{end_label || 'to'}&nbsp;
-              <span className="end">
+              <span className="end d-inline-flex">
                 <span className="end-date">{datesInfo.endDate}</span>
                 {!whole_day && show_time && (
                   <>

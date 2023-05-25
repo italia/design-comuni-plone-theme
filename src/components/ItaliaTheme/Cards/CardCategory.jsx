@@ -22,7 +22,9 @@ const CardCategory = (props) => {
       {children}
     </UniversalLink>
   );
-  const categoryDate = date && <span className="data">{date}</span>;
+  const categoryDate = date && (
+    <span className="data d-inline-flex">{date}</span>
+  );
   // Category with icon
   const categoryText = !href && children && (
     <span className="text">{children}</span>
