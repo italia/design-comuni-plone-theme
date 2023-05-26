@@ -4,7 +4,6 @@ $space-left: 1rem;
   // template for "Indice dei contenuti"
   .ui.bulleted.list {
     padding-left: 0;
-    display: flex;
     & .ui.bulleted.list {
       padding-left: 0;
       display: flex;
