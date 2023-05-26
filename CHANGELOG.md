@@ -1,3 +1,19 @@
+### [7.8.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.8.1...v7.8.2) (2023-05-26)
+
+
+### Bug Fixes
+
+* added aria-expanded tag for advanced filters button in search ([#177](https://github.com/RedTurtle/design-comuni-plone-theme/issues/177)) ([a39a476](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a39a4761b597b9c726576d35186249fbbc792fd7))
+* card title changed to p element for screen readers ([#176](https://github.com/RedTurtle/design-comuni-plone-theme/issues/176)) ([5e1ea6b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5e1ea6b93dfb21f6dc021ad022d684419d337f90))
+* changed div elements to span elements for SR ([#174](https://github.com/RedTurtle/design-comuni-plone-theme/issues/174)) ([42df296](https://github.com/RedTurtle/design-comuni-plone-theme/commit/42df296189ff3de6cf5c558ffa8c614d38dd1293))
+* remove basic contact form ([#179](https://github.com/RedTurtle/design-comuni-plone-theme/issues/179)) ([02b5270](https://github.com/RedTurtle/design-comuni-plone-theme/commit/02b527057ad34779a304ade184f701f2266e3dc9))
+* table of contents block ([#181](https://github.com/RedTurtle/design-comuni-plone-theme/issues/181)) ([cc5ecaa](https://github.com/RedTurtle/design-comuni-plone-theme/commit/cc5ecaad1e4895966ef3922bc70ddfbf44b4760e))
+
+
+### Documentation
+
+* updated publiccode ([9d9b68b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9d9b68b30c9c9f81a5824ff57114d0d07909be34))
+
 ### [7.8.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.8.0...v7.8.1) (2023-05-24)
 
 
