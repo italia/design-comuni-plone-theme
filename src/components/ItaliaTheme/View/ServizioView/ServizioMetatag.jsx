@@ -60,7 +60,7 @@ const ServizioMetatag = ({ content }) => {
       name: content.ufficio_responsabile[0].title,
     };
 
-    if (content.ufficio_responsabile[0]?.sede[0]) {
+    if (content.ufficio_responsabile[0]?.sede?.[0]) {
       schemaOrg.availableChannel.serviceLocation.address = {
         '@type': 'PostalAddress',
         streetAddress: content.ufficio_responsabile[0].sede[0].street,
