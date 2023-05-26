@@ -92,7 +92,7 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
               tag="div"
             >
               <CardBody tag="div" className={'card-body'}>
-                <CardTitle tag="h5">
+                <CardTitle tag="p">
                   {!wholeDay && `${start.format('HH:mm')} - `}
                   {intl.formatMessage(messages.start)}
                 </CardTitle>
@@ -122,7 +122,7 @@ const Dates = ({ content, show_image, moment: momentlib, rrule }) => {
                 tag="div"
               >
                 <CardBody tag="div" className={'card-body'}>
-                  <CardTitle tag="h5">
+                  <CardTitle tag="p">
                     {!content.whole_day && `${end.format('HH:mm')} - `}
                     {intl.formatMessage(messages.end)}
                   </CardTitle>

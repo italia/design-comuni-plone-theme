@@ -81,7 +81,7 @@ const BandoDates = ({ content }) => {
                 tag="div"
               >
                 <CardBody tag="div" className={'card-body'}>
-                  <CardTitle tag="h5">
+                  <CardTitle tag="p">
                     {intl.formatMessage(messages.effective)}
                   </CardTitle>
                 </CardBody>
@@ -107,7 +107,7 @@ const BandoDates = ({ content }) => {
                 tag="div"
               >
                 <CardBody tag="div" className={'card-body'}>
-                  <CardTitle tag="h5">
+                  <CardTitle tag="p">
                     {`${apertura_bando.format('HH:mm')} - `}
                     {intl.formatMessage(messages.apertura_bando)}
                   </CardTitle>
@@ -135,7 +135,7 @@ const BandoDates = ({ content }) => {
                 tag="div"
               >
                 <CardBody tag="div" className={'card-body'}>
-                  <CardTitle tag="h5">
+                  <CardTitle tag="p">
                     {`${scadenza_domande_bando.format('HH:mm')} - `}
                     {intl.formatMessage(messages.scadenza_domande_bando)}
                   </CardTitle>
@@ -162,7 +162,7 @@ const BandoDates = ({ content }) => {
                 tag="div"
               >
                 <CardBody tag="div" className={'card-body'}>
-                  <CardTitle tag="h5">
+                  <CardTitle tag="p">
                     {`${scadenza_bando.format('HH:mm')} - `}
                     {intl.formatMessage(messages.scadenza_bando)}
                   </CardTitle>
@@ -190,7 +190,7 @@ const BandoDates = ({ content }) => {
                 tag="div"
               >
                 <CardBody tag="div" className={'card-body'}>
-                  <CardTitle tag="h5">
+                  <CardTitle tag="p">
                     {intl.formatMessage(messages.chiusura_procedimento_bando)}
                   </CardTitle>
                 </CardBody>
