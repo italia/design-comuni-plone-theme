@@ -251,6 +251,12 @@ export default function applyConfig(voltoConfig) {
     showTrasparenzaFields: false,
   };
 
+  //* DISALLOW FORM CONTACT
+
+  config.settings.nonContentRoutes = config.settings.nonContentRoutes.filter(
+    (route) => route !== '/contact-form',
+  );
+
   /******************************************************************************
    * VIEWS
    ******************************************************************************/
