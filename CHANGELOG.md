@@ -1,3 +1,15 @@
+### [7.8.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.8.2...v7.8.3) (2023-05-26)
+
+
+### Bug Fixes
+
+* unnecessary flex removed ([#183](https://github.com/RedTurtle/design-comuni-plone-theme/issues/183)) ([ec90718](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ec9071868c46cff8dde17d50f13476ee9af15fe3))
+
+
+### Documentation
+
+* updated publiccode ([42adb41](https://github.com/RedTurtle/design-comuni-plone-theme/commit/42adb414e2ad6b41d0b6df4980266867a85e81d6))
+
 ### [7.8.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.8.1...v7.8.2) (2023-05-26)
 
 
