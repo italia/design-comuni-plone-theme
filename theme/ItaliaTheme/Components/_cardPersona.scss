@@ -37,19 +37,19 @@
         width: 50%;
 
         svg {
-          height: 1.3rem;
+          height: 1.78rem;
           width: auto;
         }
 
         span.text {
-          font-size: 0.7rem;
+          font-size: $card-category-size;
         }
       }
 
       h3.card-title {
         width: 50%;
         a {
-          font-size: 1.1rem;
+          font-size: 1.3rem;
           line-height: 1.5rem;
         }
       }
