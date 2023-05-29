@@ -1,3 +1,15 @@
+## [7.9.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.8.4...v7.9.0) (2023-05-29)
+
+
+### Features
+
+* upgraded volto-form-block ([9de565a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9de565a9b7e20f52e3b11d2f984fb91f327c4d36))
+
+
+### Documentation
+
+* updated publiccode ([494897d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/494897d30472cc5ed3f0c0c1dc120608851ee105))
+
 ### [7.8.4](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.8.3...v7.8.4) (2023-05-29)
 
 
