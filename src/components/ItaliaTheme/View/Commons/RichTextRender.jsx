@@ -45,6 +45,7 @@ const RichTextRender = ({
   add_class,
   serif = true,
   lighthouseId = '',
+  context,
 }) => {
   let hasContent = richTextHasContent(content);
 
@@ -58,7 +59,7 @@ const RichTextRender = ({
           'data-element': lighthouseId,
         })}
       >
-        <RenderBlocks content={content} />
+        <RenderBlocks content={content} context={context} />
       </div>
     ) : (
       <div
@@ -78,4 +79,5 @@ RichTextRender.propTypes = {
   content: PropTypes.string,
   add_class: PropTypes.string,
   lighthouseId: PropTypes.string,
+  context: PropTypes.object,
 };

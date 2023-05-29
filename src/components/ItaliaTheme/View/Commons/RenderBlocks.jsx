@@ -22,7 +22,11 @@ const messages = defineMessages({
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const RenderBlocks = ({ content, exclude = ['title', 'description'] }) => {
+const RenderBlocks = ({
+  content,
+  exclude = ['title', 'description'],
+  context = {},
+}) => {
   /* Render text or blocks in view, skip title and description blocks by default*/
   const blocksFieldname = getBlocksFieldname(content);
   const blocksLayoutFieldname = getBlocksLayoutFieldname(content);
@@ -54,7 +58,7 @@ const RenderBlocks = ({ content, exclude = ['title', 'description'] }) => {
             <Block
               key={block}
               id={block}
-              properties={content}
+              properties={context}
               data={content[blocksFieldname][block]}
               path={getBaseUrl(location?.pathname || '')}
             />
