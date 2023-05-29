@@ -225,12 +225,12 @@ const SimpleCardTemplateDefault = (props) => {
                     {(type === 'Modulo' || type === 'Documento') && (
                       <div className="document-date mt-3">
                         <strong>
-                          {intl.formatMessage(messages.publication_date)}
+                          {intl.formatMessage(messages.publication_date)}:{' '}
                         </strong>
                         {moment(item.CreationDate).format('DD-MM-YYYY')}
                         <br />
                         <strong>
-                          {intl.formatMessage(messages.update_date)}{' '}
+                          {intl.formatMessage(messages.update_date)}:{' '}
                         </strong>
                         {moment(item.modified).format('DD-MM-YYYY')}
                       </div>
