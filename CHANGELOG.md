@@ -1,3 +1,20 @@
+## [7.10.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.9.0...v7.10.0) (2023-05-29)
+
+
+### Features
+
+* added new sort options in BandiSearch block: effective and modified date ([#191](https://github.com/RedTurtle/design-comuni-plone-theme/issues/191)) ([b1d3d89](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b1d3d89d743cc8aaf5f23eb66f991dc46053729c))
+
+
+### Bug Fixes
+
+* managed some page-break for print media ([#190](https://github.com/RedTurtle/design-comuni-plone-theme/issues/190)) ([09adca3](https://github.com/RedTurtle/design-comuni-plone-theme/commit/09adca35b5af354ed8fe12374c8b250222dfecb8))
+
+
+### Documentation
+
+* updated publiccode ([96d4df2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/96d4df20f2c4804589a18c60238546f9caaca8e9))
+
 ## [7.9.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.8.4...v7.9.0) (2023-05-29)
 
 
