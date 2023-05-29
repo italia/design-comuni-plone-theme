@@ -18,10 +18,14 @@
     .it-header-navbar-wrapper {
       display: none;
     }
-
+    .content-area,
+    .public-ui {
+      page-break-before: avoid;
+      page-break-after: avoid;
+      page-break-inside: avoid;
+    }
     .it-header-center-wrapper {
       background: none;
-
       .it-header-center-content-wrapper {
         .it-brand-wrapper {
           padding: 0;
@@ -50,8 +54,22 @@
 
     /* Removed link list in PageHeader*/
     .PageHeaderWrapper {
+      page-break-before: avoid;
+      page-break-after: avoid;
+      page-break-inside: avoid;
       .link-list-wrapper {
         display: none;
+      }
+    }
+    /* Removed max-height from accordion block*/
+    .block.accordion {
+      display: flex !important;
+      .section.full-width .card {
+        padding: 0;
+        .card-body {
+          max-height: unset;
+          overflow-y: hidden;
+        }
       }
     }
 
