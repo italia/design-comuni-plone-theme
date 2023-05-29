@@ -1,3 +1,15 @@
+### [7.4.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.4.1...v7.4.2) (2023-05-29)
+
+
+### Bug Fixes
+
+* copy/paste of volto Blocks ([#148](https://github.com/RedTurtle/design-comuni-plone-theme/issues/148)) ([41d2a5a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/41d2a5a87708c1350d1d9108eb2b4a41dca838d5))
+* redirect loop with unescaped chars in uri ([#8](https://github.com/RedTurtle/design-comuni-plone-theme/issues/8)) ([8243f0f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8243f0f4bb37200a3bcd8f9de0da9aad21aa8102))
+* remove basic contact form ([#179](https://github.com/RedTurtle/design-comuni-plone-theme/issues/179)) ([4dfd20c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4dfd20cd438e451efd71beb6b28f58955daafcbc))
+* table of contents block ([#181](https://github.com/RedTurtle/design-comuni-plone-theme/issues/181)) ([7756e81](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7756e8127552d162d54751d79178b17d68c26b85))
+* unnecessary flex removed ([#183](https://github.com/RedTurtle/design-comuni-plone-theme/issues/183)) ([3b75a83](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3b75a835020bf4ac68434c5a1b7ff7fa58d1764b))
+* upgraded volto-form-block ([50df7f2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/50df7f297f81f72ae6b0a30c84995385932c833e))
+
 ### [7.4.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.4.0...v7.4.1) (2023-04-24)
 
 
