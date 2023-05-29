@@ -1,3 +1,15 @@
+### [7.8.4](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.8.3...v7.8.4) (2023-05-29)
+
+
+### Bug Fixes
+
+* redirect loop with unescaped chars in uri ([#8](https://github.com/RedTurtle/design-comuni-plone-theme/issues/8)) ([c05d0b6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c05d0b67731c47412f2f70ace742a95f72371f11))
+
+
+### Documentation
+
+* updated publiccode ([1113507](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1113507d6c5ff2aea27f140b23d653f4b488dbaa))
+
 ### [7.8.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.8.2...v7.8.3) (2023-05-26)
 
 
