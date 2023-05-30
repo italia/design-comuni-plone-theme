@@ -1,3 +1,24 @@
+## [8.0.0-alpha.35](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.34...v8.0.0-alpha.35) (2023-05-30)
+
+
+### Features
+
+* upgraded volto-form-block ([e18e153](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e18e1534ad2df8d2aece6d9d597327dfedc43b21))
+
+
+### Bug Fixes
+
+* added space between label and data ([#189](https://github.com/RedTurtle/design-comuni-plone-theme/issues/189)) ([3c75252](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3c75252d07c7eb0078f47bbe8f51a0d708d831b5))
+* font size in CardPersona ([#180](https://github.com/RedTurtle/design-comuni-plone-theme/issues/180)) ([bb09d1f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/bb09d1f3ce53056f62123ead76799c73ebc02738))
+* sede mancante nei metatag del servizio ([#185](https://github.com/RedTurtle/design-comuni-plone-theme/issues/185)) ([cebcdf0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/cebcdf090444ca6751726b9a063d696fbe362a90))
+* unnecessary flex removed ([#184](https://github.com/RedTurtle/design-comuni-plone-theme/issues/184)) ([08ce5dc](https://github.com/RedTurtle/design-comuni-plone-theme/commit/08ce5dc849d83ce043787525d89502aa3aef3e6e))
+* upgrade volto to 16.20.7 ([dc08c9f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/dc08c9fc14373fa9d17dda3a996a025501736f6a))
+
+
+### Maintenance
+
+* added basic api expanders ([#192](https://github.com/RedTurtle/design-comuni-plone-theme/issues/192)) ([2c4cb08](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2c4cb08f2e31ad1435900d4edc0f7feec3f52ac4))
+
 ## [8.0.0-alpha.34](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.33...v8.0.0-alpha.34) (2023-05-25)
 
 
