@@ -21,7 +21,7 @@ const TextOrBlocks = ({ content, exclude = ['title', 'description'] }) => {
         <RenderBlocks content={content} />
       ) : (
         content.text?.data && (
-          <RichText serif={false} content={content.text.data} />
+          <RichText serif={false} data={content.text.data} />
         )
       )}
     </>

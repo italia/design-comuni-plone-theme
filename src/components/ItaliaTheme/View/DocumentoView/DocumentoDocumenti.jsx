@@ -32,7 +32,7 @@ const DocumentoDocumenti = ({ content }) => {
         <RichTextSection
           tag_id="formats"
           title={intl.formatMessage(messages.formati_disponibili)}
-          content={content.formati_disponibili}
+          data={content.formati_disponibili}
         />
       )}
     </>

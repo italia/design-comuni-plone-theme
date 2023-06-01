@@ -132,7 +132,7 @@ const PaginaArgomentoViewNoBlocks = ({ content }) => {
             ) : null}
 
             <RichTextSection
-              content={content.ulteriori_informazioni}
+              data={content.ulteriori_informazioni}
               tag_id={'text-ulteriori_informazioni'}
               title={intl.formatMessage(messages.ulteriori_informazioni)}
             />

@@ -47,7 +47,7 @@ const DocumentoDescrizione = ({ content }) => {
       tag_id={'text-body'}
       title={intl.formatMessage(messages.descrizione)}
       show_title={true}
-      content={content.descrizione_estesa}
+      data={content.descrizione_estesa}
     >
       {contentFolderHasItems(content, 'multimedia') && (
         <Gallery

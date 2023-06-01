@@ -22,24 +22,29 @@ const messages = defineMessages({
  * @params {object} content: Content object.
  * @returns {string} Markup of the component.
  */
-const RenderBlocks = ({ content, exclude = ['title', 'description'] }) => {
+const RenderBlocks = ({
+  data,
+  content,
+  exclude = ['title', 'description'],
+}) => {
   /* Render text or blocks in view, skip title and description blocks by default*/
-  const blocksFieldname = getBlocksFieldname(content);
-  const blocksLayoutFieldname = getBlocksLayoutFieldname(content);
+  const blockContent = data ?? content; // For backwards compatibility of old blocks
+  const blocksFieldname = getBlocksFieldname(blockContent);
+  const blocksLayoutFieldname = getBlocksLayoutFieldname(blockContent);
   const intl = useIntl();
   const location = useLocation();
 
   const items =
-    content[blocksLayoutFieldname]?.items?.length > 0
-      ? content[blocksLayoutFieldname].items.filter((block) => {
-          const blockType = content[blocksFieldname]?.[block]?.['@type'];
+    blockContent[blocksLayoutFieldname]?.items?.length > 0
+      ? blockContent[blocksLayoutFieldname].items.filter((block) => {
+          const blockType = blockContent[blocksFieldname]?.[block]?.['@type'];
           return exclude.indexOf(blockType) < 0;
         })
       : null;
 
   //è il caso in cui c'è solo il primo blocco di testo vuoto. Non si vuole renderizzare il <br/>
   if (items?.length === 1) {
-    const block = content[blocksFieldname][items[0]];
+    const block = blockContent[blocksFieldname][items[0]];
     if (block['@type'] === 'text' && !block.text) {
       return null;
     }
@@ -47,15 +52,15 @@ const RenderBlocks = ({ content, exclude = ['title', 'description'] }) => {
   return items?.length > 0 ? (
     <>
       {map(items, (block) => {
-        const blockType = content[blocksFieldname]?.[block]?.['@type'];
+        const blockType = blockContent[blocksFieldname]?.[block]?.['@type'];
         const Block = config.blocks.blocksConfig[blockType]?.['view'] || null;
         if (Block != null) {
           return (
             <Block
               key={block}
               id={block}
-              properties={content}
-              data={content[blocksFieldname][block]}
+              properties={content ?? data}
+              data={blockContent[blocksFieldname][block]}
               path={getBaseUrl(location?.pathname || '')}
             />
           );
@@ -76,5 +81,5 @@ const RenderBlocks = ({ content, exclude = ['title', 'description'] }) => {
 export default RenderBlocks;
 
 RenderBlocks.propTypes = {
-  content: PropTypes.any,
+  data: PropTypes.any,
 };

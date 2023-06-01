@@ -29,7 +29,7 @@ const Venue = ({ venue, display_title = true }) => {
   let venue_fo = venueContent?.data;
   return venue_fo ? (
     <>
-      <RichText content={venue_fo?.descrizione_breve} />
+      <RichText data={venue_fo?.descrizione_breve} />
 
       {venue_fo.geolocation ? (
         <div className="mapbox">

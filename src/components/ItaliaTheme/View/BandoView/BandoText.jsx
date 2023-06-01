@@ -39,7 +39,7 @@ const BandoText = ({ content }) => {
     >
       {/* DESCRIZIONE DEL BANDO */}
       {richTextHasContent(content?.text) && (
-        <RichText title_size="h5" title={''} content={content?.text} />
+        <RichText title_size="h5" title={''} data={content?.text} />
       )}
       {/* TIPOLOGIA DEL BANDO */}
       {content?.tipologia_bando && (

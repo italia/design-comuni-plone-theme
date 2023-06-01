@@ -95,7 +95,7 @@ const IncaricoView = (props) => {
         )}
         {richTextHasContent(content.compensi) && (
           <RichTextSection
-            content={content.compensi}
+            data={content.compensi}
             tag_id={'text-body'}
             title={intl.formatMessage(messages.compensi)}
           />
@@ -109,7 +109,7 @@ const IncaricoView = (props) => {
         )}
         {richTextHasContent(content.importi_viaggio_servizio) && (
           <RichTextSection
-            content={content.importi_viaggio_servizio}
+            data={content.importi_viaggio_servizio}
             tag_id={'text-body'}
             title={intl.formatMessage(messages.importi_viaggio)}
           />

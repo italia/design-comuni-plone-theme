@@ -78,7 +78,7 @@ const EventoDocumenti = ({ content }) => {
               <Icon icon="it-telephone" padding={true} />
             </CardTitle>
             <CardBody tag="div" className={'card-body pe-3'}>
-              <RichText content={content.organizzato_da_esterno} />
+              <RichText data={content.organizzato_da_esterno} />
               {content?.telefono && (
                 <p className="card-text mt-3">
                   <ContactLink tel={content.telefono} label={true} />

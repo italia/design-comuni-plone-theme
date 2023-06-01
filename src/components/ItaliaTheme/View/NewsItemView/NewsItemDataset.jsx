@@ -17,7 +17,7 @@ const NewsItemDataset = ({ content }) => {
   const intl = useIntl();
   return richTextHasContent(content.dataset) ? (
     <RichTextSection
-      content={content.dataset}
+      data={content.dataset}
       tag_id="dataset"
       title={intl.formatMessage(messages.dataset)}
     />

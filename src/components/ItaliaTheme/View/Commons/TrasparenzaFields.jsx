@@ -239,7 +239,7 @@ const TrasparenzaFields = ({ content }) => {
     if (field.type === 'text') return content[field.attr];
     if (field.type === 'blocks')
       return RichTextRender({
-        content: content[field.attr],
+        data: content[field.attr],
         serif: true,
       });
     if (field.type === 'bool')

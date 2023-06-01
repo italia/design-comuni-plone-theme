@@ -15,7 +15,7 @@ const ServizioCasiParticolari = ({ content }) => {
   const intl = useIntl();
   return (
     <RichTextSection
-      content={content.casi_particolari}
+      data={content.casi_particolari}
       tag_id={'text-casi_particolari'}
       title={intl.formatMessage(messages.casi_particolari)}
     />

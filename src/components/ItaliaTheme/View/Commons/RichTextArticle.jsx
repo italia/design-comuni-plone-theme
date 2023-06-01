@@ -11,14 +11,14 @@ const RichTextArticle = ({
   title,
   title_size,
   show_title = true,
-  content,
+  data,
   tag_id,
   add_class,
   children,
 }) => {
   let content_to_display = RichTextRender({
-    content: content,
-    add_class: add_class,
+    data,
+    add_class,
     serif: true,
   });
 
@@ -49,7 +49,7 @@ export default RichTextArticle;
 
 RichTextArticle.propTypes = {
   title: PropTypes.string,
-  content: PropTypes.object,
+  data: PropTypes.object,
   tag_id: PropTypes.string,
   add_class: PropTypes.string,
 };

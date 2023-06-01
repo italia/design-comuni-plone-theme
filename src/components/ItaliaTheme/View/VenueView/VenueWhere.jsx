@@ -91,7 +91,7 @@ const VenueWhere = ({ content }) => {
 
       {richTextHasContent(content.notes) && (
         <div className="mt-5">
-          <RichText content={content.notes} />
+          <RichText data={content.notes} />
         </div>
       )}
     </RichTextSection>

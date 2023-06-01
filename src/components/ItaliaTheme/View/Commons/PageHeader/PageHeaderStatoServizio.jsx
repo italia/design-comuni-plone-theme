@@ -28,7 +28,7 @@ const PageHeaderServizio = ({ content }) => {
       </ul>
       {content.stato_servizio &&
         richTextHasContent(content.motivo_stato_servizio) && (
-          <RichText content={content.motivo_stato_servizio} serif={false} />
+          <RichText data={content.motivo_stato_servizio} serif={false} />
         )}
     </>
   ) : null;

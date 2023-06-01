@@ -29,7 +29,7 @@ const ServizioAChiSiRivolge = ({ content }) => {
     richTextHasContent(content.chi_puo_presentare) ||
     richTextHasContent(content.copertura_geografica) ? (
     <RichTextSection
-      content={content.a_chi_si_rivolge}
+      data={content.a_chi_si_rivolge}
       tag_id="who-needs"
       title={intl.formatMessage(messages.a_chi_si_rivolge)}
       lighthouseId={'service-addressed'}
@@ -38,14 +38,14 @@ const ServizioAChiSiRivolge = ({ content }) => {
         <RichText
           title={intl.formatMessage(messages.chi_puo_presentare)}
           title_size="h4"
-          content={content.chi_puo_presentare}
+          data={content.chi_puo_presentare}
         />
       )}
       {richTextHasContent(content.copertura_geografica) && (
         <RichText
           title={intl.formatMessage(messages.copertura_geografica)}
           title_size="h4"
-          content={content.copertura_geografica}
+          data={content.copertura_geografica}
         />
       )}
     </RichTextSection>

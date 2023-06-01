@@ -29,14 +29,14 @@ const ServizioCostiVincoli = ({ content }) => {
       title={intl.formatMessage(messages.costi_e_vincoli_header)}
     >
       {richTextHasContent(content.costi) && (
-        <RichText add_class="mb-5" content={content.costi} />
+        <RichText add_class="mb-5" data={content.costi} />
       )}
       {richTextHasContent(content.vincoli) && (
         <RichText
           title={intl.formatMessage(messages.vincoli)}
           title_size="h4"
           add_class="mb-5"
-          content={content.vincoli}
+          data={content.vincoli}
         />
       )}
     </RichTextSection>

@@ -11,7 +11,7 @@ const ServizioCosaSiOttiene = ({ content }) => {
 
   return richTextHasContent(content.cosa_si_ottiene) ? (
     <RichTextSection
-      content={content.cosa_si_ottiene}
+      data={content.cosa_si_ottiene}
       tag_id="obtain"
       title={intl.formatMessage(messages.cosa_si_ottiene)}
       show_title={true}

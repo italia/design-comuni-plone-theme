@@ -31,7 +31,7 @@ const SubsiteHeader = () => {
       <div className={`text`}>
         <div className="container px-md-4 py-5">
           {subsite.subsite_header?.data && (
-            <RichText content={subsite.subsite_header} />
+            <RichText data={subsite.subsite_header} />
           )}
         </div>
       </div>

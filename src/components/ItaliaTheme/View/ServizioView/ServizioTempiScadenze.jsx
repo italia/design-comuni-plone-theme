@@ -13,7 +13,7 @@ const ServizioTempiScadenze = ({ content, moment }) => {
   const intl = useIntl();
   return (
     <RichTextSection
-      content={content.tempi_e_scadenze}
+      data={content.tempi_e_scadenze}
       add_class="style_ol_list cmp-timeline"
       tag_id="deadlines"
       title={intl.formatMessage(messages.tempi_e_scadenze)}

@@ -15,7 +15,7 @@ const ServizioCosE = ({ content }) => {
   const intl = useIntl();
   return (
     <RichTextSection
-      content={content.descrizione_estesa}
+      data={content.descrizione_estesa}
       tag_id="description"
       title={intl.formatMessage(messages.cos_e)}
       show_title={true}

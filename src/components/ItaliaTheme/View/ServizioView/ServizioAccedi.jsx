@@ -18,7 +18,7 @@ const ServizioAccedi = ({ content }) => {
         richTextHasContent(content.prenota_appuntamento) ||
         content.canale_fisico?.length > 0) && (
         <RichTextSection
-          content={content.canale_digitale}
+          data={content.canale_digitale}
           tag_id="submit-request"
           title={intl.formatMessage(messages.canale_digitale)}
           hasBg
@@ -38,7 +38,7 @@ const ServizioAccedi = ({ content }) => {
               </p>
             </div>
           )}
-          <RichText content={content.prenota_appuntamento} />
+          <RichText data={content.prenota_appuntamento} content={content} />
           {content.canale_fisico?.map?.((canale) => (
             <OfficeCard
               key={canale['@id']}
@@ -68,7 +68,7 @@ const ServizioAccedi = ({ content }) => {
             </div>
           ))}
           <RichText
-            content={content.dove_rivolgersi_extra}
+            data={content.dove_rivolgersi_extra}
             lighthouseId="service-generic-access"
           />
         </RichTextSection>

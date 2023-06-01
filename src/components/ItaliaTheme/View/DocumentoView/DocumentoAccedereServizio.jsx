@@ -32,7 +32,7 @@ const DocumentoAccedereServizio = ({ content }) => {
           >
             <RichText
               serif={false}
-              content={servizio.canale_digitale}
+              data={servizio.canale_digitale}
               add_class="mt-3"
             />
           </GenericCard>

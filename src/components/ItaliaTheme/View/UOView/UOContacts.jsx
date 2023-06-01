@@ -44,13 +44,13 @@ const UOContacts = ({ content }) => {
 
           {richTextHasContent(content.contact_info) && (
             <div className="mb-5 mt-3">
-              <RichText content={content.contact_info} />
+              <RichText data={content.contact_info} />
             </div>
           )}
           {richTextHasContent(content.orario_pubblico) && (
             <div className="mb-5 mt-3">
               <h5>{intl.formatMessage(messages.orario_pubblico)}</h5>
-              <RichText content={content.orario_pubblico} />
+              <RichText data={content.orario_pubblico} />
             </div>
           )}
 

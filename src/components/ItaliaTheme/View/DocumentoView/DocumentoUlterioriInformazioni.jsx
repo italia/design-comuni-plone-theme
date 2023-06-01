@@ -33,7 +33,7 @@ const DocumentoUlterioriInformazioni = ({ content }) => {
       {richTextHasContent(content?.riferimenti_normativi) && (
         <div className="mt-2">
           <h5>{intl.formatMessage(messages.riferimenti_normativi)}</h5>
-          <RichText serif={false} content={content.riferimenti_normativi} />
+          <RichText serif={false} data={content.riferimenti_normativi} />
         </div>
       )}
     </Metadata>

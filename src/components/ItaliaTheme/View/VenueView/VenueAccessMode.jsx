@@ -18,7 +18,7 @@ const VenueAccessMode = ({ content }) => {
 
   return richTextHasContent(content?.modalita_accesso) ? (
     <RichTextSection
-      content={content.modalita_accesso}
+      data={content.modalita_accesso}
       tag_id={'modalita-accesso'}
       title={intl.formatMessage(messages.modalita_accesso)}
     />

@@ -15,7 +15,7 @@ const NewsItemText = ({ content }) => {
 
   return (
     <RichTextSection
-      content={content.descrizione_estesa}
+      data={content.descrizione_estesa}
       tag_id={'text-body'}
       field="descrizione_estesa"
       title={intl.formatMessage(messages.news_item_contenuto)}

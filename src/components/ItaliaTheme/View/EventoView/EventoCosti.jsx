@@ -17,7 +17,7 @@ const EventoCosti = ({ content }) => {
 
   return (
     <RichTextSection
-      content={content?.prezzo}
+      data={content?.prezzo}
       tag_id="costi"
       title={intl.formatMessage(messages.costi)}
     />

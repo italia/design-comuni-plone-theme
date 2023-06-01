@@ -1,5 +1,4 @@
 import React from 'react';
-
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import { flattenDeep, values } from 'lodash';
@@ -7,15 +6,13 @@ import { flattenHTMLToAppURL } from '@plone/volto/helpers';
 import { hasBlocksData } from '@plone/volto/helpers';
 import { RenderBlocks } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
-const richTextHasContent = (content) => {
-  if (hasBlocksData(content)) {
-    //ReactDOMServer.renderToStaticMarkup(RenderBlocks({ content: content })),
-    const renderedBlocks = RenderBlocks({ content: content });
+const richTextHasContent = (data) => {
+  if (hasBlocksData(data)) {
+    //ReactDOMServer.renderToStaticMarkup(RenderBlocks({ data: data })),
+    const renderedBlocks = RenderBlocks({ data: data });
 
-    const textBlocks = values(content.blocks).filter(
-      (b) => b['@type'] === 'text',
-    );
-    const noTextBlocks = values(content.blocks).filter(
+    const textBlocks = values(data.blocks).filter((b) => b['@type'] === 'text');
+    const noTextBlocks = values(data.blocks).filter(
       (b) => b['@type'] !== 'text',
     );
 
@@ -29,7 +26,7 @@ const richTextHasContent = (content) => {
         noTextBlocks.length > 0)
     );
   } else {
-    const textToDisplay = content?.data?.replace(/(<([^>]+)>)/g, '') ?? '';
+    const textToDisplay = data?.data?.replace(/(<([^>]+)>)/g, '') ?? '';
     return textToDisplay.length > 0 ? true : false;
   }
 };
@@ -41,15 +38,16 @@ const richTextHasContent = (content) => {
  * @returns {string} Markup of the component.
  */
 const RichTextRender = ({
-  content,
+  data,
   add_class,
   serif = true,
   lighthouseId = '',
+  content,
 }) => {
-  let hasContent = richTextHasContent(content);
+  let hasContent = richTextHasContent(data);
 
   return hasContent ? (
-    hasBlocksData(content) ? (
+    hasBlocksData(data) ? (
       <div
         className={cx(`richtext-blocks ${add_class ?? ''}`, {
           'font-serif': serif,
@@ -58,12 +56,12 @@ const RichTextRender = ({
           'data-element': lighthouseId,
         })}
       >
-        <RenderBlocks content={content} />
+        <RenderBlocks data={data} content={content} />
       </div>
     ) : (
       <div
         className={cx(add_class, { 'font-serif': serif })}
-        dangerouslySetInnerHTML={{ __html: flattenHTMLToAppURL(content.data) }}
+        dangerouslySetInnerHTML={{ __html: flattenHTMLToAppURL(data.data) }}
         {...(lighthouseId && {
           'data-element': lighthouseId,
         })}
@@ -75,7 +73,8 @@ const RichTextRender = ({
 export { RichTextRender, richTextHasContent };
 
 RichTextRender.propTypes = {
-  content: PropTypes.string,
+  data: PropTypes.object,
   add_class: PropTypes.string,
   lighthouseId: PropTypes.string,
+  content: PropTypes.object,
 };

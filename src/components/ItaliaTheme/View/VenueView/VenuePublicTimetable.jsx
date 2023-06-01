@@ -18,7 +18,7 @@ const VenuePublicTimetable = ({ content }) => {
 
   return richTextHasContent(content.orario_pubblico) ? (
     <RichTextSection
-      content={content.orario_pubblico}
+      data={content.orario_pubblico}
       tag_id={'orario-per-pubblico'}
       title={intl.formatMessage(messages.orario_pubblico)}
     />

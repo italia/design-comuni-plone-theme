@@ -40,7 +40,7 @@ const VenueDescription = ({ content }) => {
         <RichTextSection
           tag_id="description"
           title={intl.formatMessage(messages.descrizione)}
-          content={content.descrizione_completa}
+          data={content.descrizione_completa}
         />
       )}
       {content?.tipologia_luogo?.length > 0 && (
@@ -59,7 +59,7 @@ const VenueDescription = ({ content }) => {
         <RichTextSection
           tag_id="elementi-di-interesse"
           title={`${intl.formatMessage(messages.elementi_di_interesse)}:`}
-          content={content.elementi_di_interesse}
+          data={content.elementi_di_interesse}
         />
       )}
       {content?.luoghi_correlati?.length > 0 && (

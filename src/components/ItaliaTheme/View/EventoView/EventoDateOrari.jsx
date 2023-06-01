@@ -33,7 +33,7 @@ const EventoDateOrari = ({ content }) => {
       {richTextHasContent(content.orari) && (
         <RichText
           title={intl.formatMessage(messages.orari)}
-          content={content.orari}
+          data={content.orari}
         />
       )}
     </RichTextSection>

@@ -13,7 +13,7 @@ export default function ServizioProcedure({ content }) {
     <RichTextSection
       tag_id="procedure_collegate"
       title={intl.formatMessage(messages.servizio_procedure_collegate)}
-      content={content.procedure_collegate}
+      data={content.procedure_collegate}
     />
   ) : null;
 }

@@ -19,7 +19,7 @@ const UOWhatDoesItDo = ({ content }) => {
   const intl = useIntl();
   return richTextHasContent(content?.competenze) ? (
     <RichTextSection
-      content={content.competenze}
+      data={content.competenze}
       tag_id="competenze"
       title={intl.formatMessage(messages.competenze)}
     />

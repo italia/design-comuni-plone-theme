@@ -60,7 +60,7 @@ const EventoUlterioriInformazioni = ({ content }) => {
               <RichText
                 title_size="h5"
                 title={intl.formatMessage(messages.patrocinato_da)}
-                content={content?.patrocinato_da}
+                data={content?.patrocinato_da}
               />
             </div>
           )}

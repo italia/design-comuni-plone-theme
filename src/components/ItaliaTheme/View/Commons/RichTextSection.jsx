@@ -6,7 +6,7 @@ const RichTextSection = ({
   title,
   title_tag = 'h2',
   show_title = true,
-  content,
+  data,
   tag_id,
   add_class,
   anchorOffset,
@@ -16,7 +16,7 @@ const RichTextSection = ({
   lighthouseId = '',
 }) => {
   const content_to_display = RichTextRender({
-    content,
+    data,
     add_class,
     serif: true,
     lighthouseId,
@@ -58,7 +58,7 @@ export default RichTextSection;
 RichTextSection.propTypes = {
   title: PropTypes.string,
   title_tag: PropTypes.oneOf(['h2', 'h3', 'h4', 'h5', 'h6']),
-  content: PropTypes.object,
+  data: PropTypes.object,
   tag_id: PropTypes.string,
   add_class: PropTypes.string,
   anchorOffset: PropTypes.bool,

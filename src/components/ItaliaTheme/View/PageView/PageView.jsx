@@ -104,7 +104,7 @@ const PageView = ({ content, token, location, history }) => {
                   )}
                   {richTextHasContent(content.info_testata) && (
                     <div className="header-infos px-4 mb-5">
-                      <RichText serif={false} content={content.info_testata} />
+                      <RichText serif={false} data={content.info_testata} />
                     </div>
                   )}
 

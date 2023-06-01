@@ -20,7 +20,7 @@ it('renders content', () => {
     <Provider store={store}>
       <MemoryRouter>
         <RichText
-          content={{
+          data={{
             blocks: {
               'c3aac6c5-b8d9-48b7-bc01-a7211248548b': {
                 '@type': 'text',

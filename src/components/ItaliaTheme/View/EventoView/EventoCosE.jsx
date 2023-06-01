@@ -41,7 +41,7 @@ const EventoCosE = ({ content }) => {
       tag_id={'text-body'}
       title={intl.formatMessage(messages.cos_e)}
       show_title={true}
-      content={content.descrizione_estesa}
+      data={content.descrizione_estesa}
     >
       {content?.persone_amministrazione?.length > 0 && (
         <>
@@ -78,7 +78,7 @@ const EventoCosE = ({ content }) => {
           <RichText
             title_size="h5"
             title={intl.formatMessage(messages.a_chi_rivolto)}
-            content={content?.descrizione_destinatari}
+            data={content?.descrizione_destinatari}
           />
         </div>
       )}

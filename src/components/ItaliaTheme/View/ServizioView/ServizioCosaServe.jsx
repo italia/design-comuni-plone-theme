@@ -17,7 +17,7 @@ const ServizioCosaServe = ({ content }) => {
   const intl = useIntl();
   return richTextHasContent(content.cosa_serve) ? (
     <RichTextSection
-      content={content.cosa_serve}
+      data={content.cosa_serve}
       tag_id="needed"
       title={intl.formatMessage(messages.cosa_serve)}
       hasBg

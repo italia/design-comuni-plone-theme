@@ -11,7 +11,7 @@ const ServizioComeFare = ({ content }) => {
 
   return richTextHasContent(content.come_si_fa) ? (
     <RichTextSection
-      content={content.come_si_fa}
+      data={content.come_si_fa}
       tag_id="how-to"
       title={intl.formatMessage(messages.come_fare)}
       show_title={true}
