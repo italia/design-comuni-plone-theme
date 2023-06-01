@@ -3,12 +3,22 @@
  * @module components/ItaliaTheme/Icons/SectionIcon
  */
 import React from 'react';
+import { fontAwesomeAliases } from 'design-comuni-plone-theme/helpers/index';
 
 const FontAwesomeIcon = (props) => {
   const { className, icon, prefix, title } = props;
   const [loadedIcon, setLoadedIcon] = React.useState(null);
+
+  const getIconAlias = (icon, aliasList) => {
+    if (icon in aliasList) {
+      return aliasList[icon];
+    } else {
+      return icon;
+    }
+  };
+
   let prefixKey = prefix;
-  let iconName = icon;
+  let iconName = getIconAlias(icon, fontAwesomeAliases);
 
   if (Array.isArray(icon)) {
     prefixKey = icon[0];
@@ -21,10 +31,12 @@ const FontAwesomeIcon = (props) => {
   React.useEffect(() => {
     if (iconName && !loadedIcon) {
       import(
-        `design-comuni-plone-theme/icons/fontawesome-free-5.15.4-web/svgs/${prefixFolder}/${iconName}.svg`
-      ).then((_loadedIcon) => {
-        setLoadedIcon(_loadedIcon);
-      });
+        `design-comuni-plone-theme/icons/fontawesome-free-6.4.0-web/svgs/${prefixFolder}/${iconName}.svg`
+      )
+        .then((_loadedIcon) => {
+          setLoadedIcon(_loadedIcon);
+        })
+        .catch((error) => {});
     }
   }, [iconName, loadedIcon, prefixFolder]);
 

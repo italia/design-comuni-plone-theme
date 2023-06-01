@@ -14,7 +14,7 @@ const messages = defineMessages({
   description: {
     id: 'iconDescription',
     defaultMessage:
-      'Puoi selezionare un’icona fra quelle proposte nel menu a tendina oppure puoi scrivere/incollare nel campo di testo il nome di un’icona di fontawesome 5',
+      'Puoi selezionare un’icona fra quelle proposte nel menu a tendina oppure puoi scrivere/incollare nel campo di testo il nome di un’icona di fontawesome 6',
   },
 });
 
@@ -70,7 +70,7 @@ const IconWidget = ({ id, value, defaultOptions, onChange, reactSelect }) => {
         <span className="ms-4">
           <a
             target="_blank"
-            href="https://fontawesome.com/icons?d=gallery"
+            href="https://fontawesome.com/search?o=r&m=free"
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={'arrow-right'} />
