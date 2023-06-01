@@ -1,3 +1,17 @@
+## [8.0.0-alpha.36](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.35...v8.0.0-alpha.36) (2023-06-01)
+
+
+### Features
+
+* disabled contact-form route ([#187](https://github.com/RedTurtle/design-comuni-plone-theme/issues/187)) ([9e39568](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9e3956834d0be35aa371e99d7fee451a09a55d86))
+
+
+### Bug Fixes
+
+* added content in renderBlocks and renamed old content to data ([#195](https://github.com/RedTurtle/design-comuni-plone-theme/issues/195)) ([66b7338](https://github.com/RedTurtle/design-comuni-plone-theme/commit/66b7338038d4f4f7789b5ea380e3f72f709e56c4))
+* aria-expanded and aria-live in search page ([#182](https://github.com/RedTurtle/design-comuni-plone-theme/issues/182)) ([ca3530a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ca3530ad545dfc5eb544db2b614324216584d608))
+* avoid error when adding empty blocks to servizio block fields ([#196](https://github.com/RedTurtle/design-comuni-plone-theme/issues/196)) ([9a95734](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9a95734833dbc342872589ff083f23ec5eafecb1))
+
 ## [8.0.0-alpha.35](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.34...v8.0.0-alpha.35) (2023-05-30)
 
 
