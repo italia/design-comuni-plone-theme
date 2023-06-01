@@ -3,7 +3,18 @@ body.contenttype-event {
     margin-bottom: 1rem;
   }
 
-  #date-e-orari .point-list-wrapper .point-list-aside.point-list-warning {
-    width: 7.5rem;
+  #date-e-orari .point-list-wrapper {
+    .point-list-aside.point-list-warning {
+      width: 7.5rem;
+    }
+    .point-list-content {
+      .card {
+        .card-body {
+          .card-title {
+            font-weight: 700;
+          }
+        }
+      }
+    }
   }
 }

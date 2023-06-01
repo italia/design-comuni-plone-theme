@@ -63,11 +63,11 @@ const BandoDates = ({ content }) => {
         {effective && (
           <div className="point-list">
             <div className="point-list-aside point-list-warning">
-              <div className="point-date font-monospace">
+              <span className="point-date font-monospace">
                 {effective.format('DD')}
-              </div>
-              <div className="point-month">{effective.format('MMMM')}</div>
-              <div className="point-month">{effective.format('Y')}</div>
+              </span>
+              <span className="point-month">{effective.format('MMMM')}</span>
+              <span className="point-month">{effective.format('Y')}</span>
             </div>
             <div className="point-list-content">
               <Card
@@ -76,7 +76,7 @@ const BandoDates = ({ content }) => {
                 tag="div"
               >
                 <CardBody tag="div" className={'card-body'}>
-                  <CardTitle tag="h5">
+                  <CardTitle tag="p">
                     {intl.formatMessage(messages.effective)}
                   </CardTitle>
                 </CardBody>
@@ -88,11 +88,13 @@ const BandoDates = ({ content }) => {
         {apertura_bando && (
           <div className="point-list">
             <div className="point-list-aside point-list-warning">
-              <div className="point-date font-monospace">
+              <span className="point-date font-monospace">
                 {apertura_bando.format('DD')}
-              </div>
-              <div className="point-month">{apertura_bando.format('MMMM')}</div>
-              <div className="point-month">{apertura_bando.format('Y')}</div>
+              </span>
+              <span className="point-month">
+                {apertura_bando.format('MMMM')}
+              </span>
+              <span className="point-month">{apertura_bando.format('Y')}</span>
             </div>
             <div className="point-list-content">
               <Card
@@ -101,7 +103,7 @@ const BandoDates = ({ content }) => {
                 tag="div"
               >
                 <CardBody tag="div" className={'card-body'}>
-                  <CardTitle tag="h5">
+                  <CardTitle tag="p">
                     {`${apertura_bando.format('HH:mm')} - `}
                     {intl.formatMessage(messages.apertura_bando)}
                   </CardTitle>
@@ -114,15 +116,15 @@ const BandoDates = ({ content }) => {
         {scadenza_domande_bando && (
           <div className="point-list">
             <div className="point-list-aside point-list-warning">
-              <div className="point-date font-monospace">
+              <span className="point-date font-monospace">
                 {scadenza_domande_bando.format('DD')}
-              </div>
-              <div className="point-month">
+              </span>
+              <span className="point-month">
                 {scadenza_domande_bando.format('MMMM')}
-              </div>
-              <div className="point-month">
+              </span>
+              <span className="point-month">
                 {scadenza_domande_bando.format('Y')}
-              </div>
+              </span>
             </div>
             <div className="point-list-content">
               <Card
@@ -131,7 +133,7 @@ const BandoDates = ({ content }) => {
                 tag="div"
               >
                 <CardBody tag="div" className={'card-body'}>
-                  <CardTitle tag="h5">
+                  <CardTitle tag="p">
                     {`${scadenza_domande_bando.format('HH:mm')} - `}
                     {intl.formatMessage(messages.scadenza_domande_bando)}
                   </CardTitle>
@@ -144,11 +146,13 @@ const BandoDates = ({ content }) => {
         {scadenza_bando && (
           <div className="point-list">
             <div className="point-list-aside point-list-warning">
-              <div className="point-date font-monospace">
+              <span className="point-date font-monospace">
                 {scadenza_bando.format('DD')}
-              </div>
-              <div className="point-month">{scadenza_bando.format('MMMM')}</div>
-              <div className="point-month">{scadenza_bando.format('Y')}</div>
+              </span>
+              <span className="point-month">
+                {scadenza_bando.format('MMMM')}
+              </span>
+              <span className="point-month">{scadenza_bando.format('Y')}</span>
             </div>
             <div className="point-list-content">
               <Card
@@ -157,7 +161,7 @@ const BandoDates = ({ content }) => {
                 tag="div"
               >
                 <CardBody tag="div" className={'card-body'}>
-                  <CardTitle tag="h5">
+                  <CardTitle tag="p">
                     {`${scadenza_bando.format('HH:mm')} - `}
                     {intl.formatMessage(messages.scadenza_bando)}
                   </CardTitle>
@@ -170,15 +174,15 @@ const BandoDates = ({ content }) => {
         {chiusura_procedimento_bando && (
           <div className="point-list">
             <div className="point-list-aside point-list-warning">
-              <div className="point-date font-monospace">
+              <span className="point-date font-monospace">
                 {chiusura_procedimento_bando.format('DD')}
-              </div>
-              <div className="point-month">
+              </span>
+              <span className="point-month">
                 {chiusura_procedimento_bando.format('MMMM')}
-              </div>
-              <div className="point-month">
+              </span>
+              <span className="point-month">
                 {chiusura_procedimento_bando.format('Y')}
-              </div>
+              </span>
             </div>
             <div className="point-list-content">
               <Card
@@ -187,7 +191,7 @@ const BandoDates = ({ content }) => {
                 tag="div"
               >
                 <CardBody tag="div" className={'card-body'}>
-                  <CardTitle tag="h5">
+                  <CardTitle tag="p">
                     {intl.formatMessage(messages.chiusura_procedimento_bando)}
                   </CardTitle>
                 </CardBody>
