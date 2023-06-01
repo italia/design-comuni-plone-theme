@@ -26,7 +26,7 @@ const ListingImage = ({
           item['@id']
         }
         aria-hidden="true"
-        alt={item.title}
+        alt=""
         title={item.title}
         role="presentation"
         imageField={item.image_field}

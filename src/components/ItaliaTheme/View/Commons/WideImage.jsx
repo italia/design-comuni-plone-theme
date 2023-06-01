@@ -17,7 +17,7 @@ const WideImage = ({ image, title, caption, fullWidth = true }) => {
           <Image
             image={image}
             className={cx('', { 'full-width': fullWidth })}
-            alt={caption || title}
+            alt=""
             title={caption || title}
             critical
             loading="eager"
