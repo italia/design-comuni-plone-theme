@@ -137,7 +137,7 @@ const PaginaArgomentoView = ({ content }) => {
                                     image={
                                       uo_object.preview_image || uo_object.image
                                     }
-                                    alt={alt}
+                                    alt=""
                                     title={alt}
                                     responsive={false}
                                   />

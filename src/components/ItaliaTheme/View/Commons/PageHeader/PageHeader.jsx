@@ -123,7 +123,7 @@ const PageHeader = (props) => {
             <figure>
               <Image
                 image={props.content[props.imageinheader_field]}
-                alt={props.content.title}
+                alt=""
                 className="img-fluid"
                 maxSize={300}
               />

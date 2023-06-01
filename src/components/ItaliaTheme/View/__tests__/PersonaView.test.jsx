@@ -2550,7 +2550,7 @@ test('expect to have all non-mandatory fields in page', async () => {
   expect(screen.getByText(/Is this the real life?/i)).toBeInTheDocument();
 
   //immagine di testata
-  expect(screen.getByAltText(/Gianluca Luchetti/i)).toBeInTheDocument();
+  expect(screen.getByRole('img', { name: '' })).toBeInTheDocument();
 
   //incarico
   expect(screen.getByRole('heading', { name: /Incarico/ })).toBeInTheDocument();

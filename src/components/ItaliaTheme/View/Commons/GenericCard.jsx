@@ -77,7 +77,7 @@ const GenericCard = ({
             <figure className="img-wrapper">
               <Image
                 image={item_fo.preview_image || item_fo.image}
-                alt={item_fo.title}
+                alt=""
                 title={item_fo.title}
               />
             </figure>

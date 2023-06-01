@@ -248,6 +248,7 @@ const SimpleCardTemplateDefault = (props) => {
                       detail_link_label ||
                       intl.formatMessage(messages.card_detail_label)
                     }
+                    aria-hidden="true"
                   />
                 )}
               </CardBody>

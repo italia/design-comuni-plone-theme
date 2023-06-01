@@ -663,7 +663,7 @@ test('renders all non-mandatory fields in the page', async () => {
   //descrizione
   expect(screen.getByText(/Is this the real life?/i)).toBeInTheDocument();
   //immagine di testata
-  expect(screen.getByAltText(/Cartella modulistica/i)).toBeInTheDocument();
+  expect(screen.getByRole('img', { name: '' })).toBeInTheDocument();
 
   //items
   expect(screen.getByRole('link', { name: /Doc prova/i })).toBeInTheDocument();

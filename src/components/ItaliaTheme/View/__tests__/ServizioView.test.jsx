@@ -3606,8 +3606,6 @@ test('expect to have all mandatory fields in page', async () => {
       </MemoryRouter>
     </Provider>,
   );
-
-  screen.debug();
 });
 
 // test('Check parts loaded from child folders', async () => {

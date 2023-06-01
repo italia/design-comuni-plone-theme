@@ -96,7 +96,7 @@ const PageView = ({ content, token, location, history }) => {
                     <div className="header-image px-4 mb-3">
                       <Image
                         image={content.image}
-                        alt={content.title}
+                        alt=""
                         maxSize={300}
                         key={content.image?.download}
                       />

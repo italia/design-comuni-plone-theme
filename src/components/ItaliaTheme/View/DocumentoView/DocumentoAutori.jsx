@@ -51,7 +51,7 @@ const DocumentoAutori = ({ autori, title }) => {
                           autore?.image_scales.foto_persona[0]?.scales.preview
                             .download
                         }
-                        alt={autore.title}
+                        alt=""
                       />
                     </div>
                   </div>
