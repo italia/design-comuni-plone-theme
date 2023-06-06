@@ -1,0 +1,16 @@
+name: Unit Tests
+on: [push]
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+        python-version: [3.8]
+
+    steps:
+      - name: Main checkout
+        uses: actions/checkout@v3
+
+      - name: Run unit tests
+        run: make test-ci

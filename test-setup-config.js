@@ -9,7 +9,7 @@
 
 import '@plone/volto/config';
 import config from '@plone/volto/registry';
-import applyItaliaConfig from './src/config';
+import applyItaliaConfig from './src';
 
 applyItaliaConfig(config);
 

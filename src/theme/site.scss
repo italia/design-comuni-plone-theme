@@ -1,3 +1,4 @@
+@import 'addonsThemeCustomizationsVariables';
 @import 'site-variables';
 @import 'bootstrap-override/bootstrap-italia-site';
 @import 'cms-ui';
@@ -131,3 +132,7 @@
 @import 'ItaliaTheme/Print/event';
 @import 'ItaliaTheme/Print/servizio';
 @import 'ItaliaTheme/Print/blocks';
+
+@import 'addonsThemeCustomizationsMain';
+
+/* No CSS beyond this point */

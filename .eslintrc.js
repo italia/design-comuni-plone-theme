@@ -1,15 +1,15 @@
 const fs = require('fs');
 const path = require('path');
-const projectRootPath = __dirname;
-const packageJson = require(path.join(projectRootPath, 'package.json'));
 
-let voltoPath = './node_modules/@plone/volto';
+const projectRootPath = fs.realpathSync('.'); // __dirname
+
+let voltoPath = path.join(projectRootPath, 'node_modules/@plone/volto');
 
 let configFile;
-if (fs.existsSync(`${projectRootPath}/tsconfig.json`))
-  configFile = `${projectRootPath}/tsconfig.json`;
-else if (fs.existsSync(`${projectRootPath}/jsconfig.json`))
-  configFile = `${projectRootPath}/jsconfig.json`;
+if (fs.existsSync(`${this.projectRootPath}/tsconfig.json`))
+  configFile = `${this.projectRootPath}/tsconfig.json`;
+else if (fs.existsSync(`${this.projectRootPath}/jsconfig.json`))
+  configFile = `${this.projectRootPath}/jsconfig.json`;
 
 if (configFile) {
   const jsConfig = require(configFile).compilerOptions;
@@ -19,17 +19,11 @@ if (configFile) {
 }
 
 const AddonConfigurationRegistry = require(`${voltoPath}/addon-registry.js`);
-const reg = new AddonConfigurationRegistry(__dirname);
+const reg = new AddonConfigurationRegistry(projectRootPath);
 
 // Extends ESlint configuration for adding the aliases to `src` directories in Volto addons
 const addonAliases = Object.keys(reg.packages).map((o) => [
   o,
-  reg.packages[o].modulePath,
-]);
-
-// TODO deprecated: remove in version 8
-const italiaAddonAliases = Object.keys(reg.packages).map((o) => [
-  `@italia/addons/${o}`,
   reg.packages[o].modulePath,
 ]);
 
@@ -50,12 +44,10 @@ module.exports = {
           ],
 
           ['@plone/volto', '@plone/volto/src'],
-          ['@plone/volto-slate', '@plone/volto/packages/volto-slate/src'],
-          ['design-comuni-plone-theme', `${__dirname}/src`],
           ...addonAliases,
-          ...italiaAddonAliases,
           ['@package', `${__dirname}/src`],
-          ['@italia', `${__dirname}/src`], // TODO deprecated: remove in version 8
+          ['@root', `${__dirname}/src`],
+          ['~', `${__dirname}/src`],
         ],
         extensions: ['.js', '.jsx', '.json'],
       },

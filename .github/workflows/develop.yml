@@ -19,14 +19,19 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push Docker images
-        uses: docker/build-push-action@v3
+        uses: docker/build-push-action@v4
         with:
           context: .
+          file: ./dockerfiles/Dockerfile
           tags: redturtletech/io-comune-base:develop
           pull: true
           push: true
           cache-from: type=registry,ref=redturtletech/io-comune-base:develop
           cache-to: type=inline
+          build-args: |
+            ADDON_NAME=design-comuni-plone-theme
+            ADDON_PATH=design-comuni-plone-theme
+            VOLTO_VERSION=16.20.7
 
       - name: Deploy to rancher
         uses: redturtle/rancher-deploy-action@v0.2.0

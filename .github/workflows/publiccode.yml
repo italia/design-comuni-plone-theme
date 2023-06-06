@@ -1,3 +1,5 @@
+name: 'Publiccode validation'
+
 on: [push]
 
 jobs:
@@ -5,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     name: publiccode validation
     steps:
-    - uses: actions/checkout@v3
-    - uses: italia/publiccode-parser-action@v1
-      with:
-        publiccode: 'publiccode.yml'
+      - uses: actions/checkout@v3
+      - uses: italia/publiccode-parser-action@v1
+        with:
+          publiccode: 'publiccode.yml'

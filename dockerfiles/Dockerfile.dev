@@ -1,0 +1,28 @@
+# syntax=docker/dockerfile:1
+ARG VOLTO_VERSION
+FROM plone/frontend-dev:${VOLTO_VERSION}
+
+ARG ADDON_NAME
+ARG ADDON_PATH
+
+USER root
+
+RUN <<EOT
+    set -e
+    apt update
+    apt install -y --no-install-recommends ca-certificates git-core libvips-dev
+    rm -rf /var/lib/apt/lists/*
+EOT
+
+USER node
+
+COPY --chown=node:node package.json /app/src/addons/${ADDON_PATH}/
+COPY --chown=node:node dockerfiles/helper.js /app/
+
+RUN <<EOT
+    set -e
+    /setupAddon
+    node helper.js
+    yarn install --network-timeout 1000000
+    yarn dedupe @popperjs/core
+EOT

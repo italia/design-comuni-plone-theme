@@ -1,6 +1,43 @@
-SHELL := /bin/bash
+# Yeoman Volto App development
+
+### Defensive settings for make:
+#     https://tech.davis-hansson.com/p/make/
+SHELL:=bash
+.ONESHELL:
+.SHELLFLAGS:=-xeu -o pipefail -O inherit_errexit -c
+.SILENT:
+.DELETE_ON_ERROR:
+MAKEFLAGS+=--warn-undefined-variables
+MAKEFLAGS+=--no-builtin-rules
+
 CURRENT_DIR:=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
+# Project settings
+# Update the versions depending on your project requirements | Last Updated 2022-12-23
+# DOCKER_IMAGE=plone/plone-backend:6.0
+# KGS=
+# TESTING_ADDONS=plone.app.robotframework==2.0.0 plone.app.testing==7.0.0
+# NODEBIN = ./node_modules/.bin
+
+# Plone 5 legacy
+# DOCKER_IMAGE5=plone/plone-backend:5.2.9
+# KGS5=plone.restapi==8.32.6 plone.volto==4.0.0 plone.rest==2.0.0
+
+# DIR=$(shell basename $$(pwd))
+# ADDON ?= "design-comuni-plone-theme"
+
+PLONE_VERSION=6
+VOLTO_VERSION=16.20.7
+
+ADDON_NAME='design-comuni-plone-theme'
+ADDON_PATH='design-comuni-plone-theme'
+DEV_COMPOSE=dockerfiles/docker-compose.yml
+ACCEPTANCE_COMPOSE=acceptance/docker-compose.yml
+CMD=BUILDKIT_PROGRESS=plain CURRENT_DIR=${CURRENT_DIR} ADDON_NAME=${ADDON_NAME} ADDON_PATH=${ADDON_PATH} VOLTO_VERSION=${VOLTO_VERSION} PLONE_VERSION=${PLONE_VERSION} docker compose
+DOCKER_COMPOSE=${CMD} -p ${ADDON_PATH} -f ${DEV_COMPOSE}
+ACCEPTANCE=${CMD} -p ${ADDON_PATH}-acceptance -f ${ACCEPTANCE_COMPOSE}
+
+# Recipe snippets for reuse
 
 # We like colors
 # From: https://coderwall.com/p/izxssa/colored-makefile-for-golang-projects
@@ -9,77 +46,119 @@ GREEN=`tput setaf 2`
 RESET=`tput sgr0`
 YELLOW=`tput setaf 3`
 
-GIT_NAME = design-comuni-plone-theme
-NAMESPACE = ""
-RAZZLE_JEST_CONFIG = jest-addon.config.js
 
-# Add the following 'help' target to your Makefile
-# And add help text after each target name starting with '\#\#'
+# Top-level targets
+
 .PHONY: help
-help: ## This help message
-	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
-
-.PHONY: all
-all: build
-
-.PHONY: test
-test: ## Run unit test suite for the addon
-	@echo "$(GREEN)==> Run unit test suite for the addon$(RESET)"
-	docker run -it --rm -e NAMESPACE="$(NAMESPACE)" -e DEPENDENCIES="$(DEPENDENCIES)" -e GIT_NAME="$(GIT_NAME)" -v $(shell pwd):/opt/frontend/my-volto-project/src/addons/$(GIT_NAME) plone/volto-addon-ci bash -c "RAZZLE_JEST_CONFIG=$(RAZZLE_JEST_CONFIG) yarn test src/addons/$(GIT_NAME) --watchAll"
-
-.PHONY: cypress
-cypress: ## Run unit test suite for the addon
-	@echo "$(GREEN)==> Run cypress for the addon$(RESET)"
-	docker run -i --rm --link plone -e NODE_ENV=production -e RAZZLE_API_PATH="http://plone:55001/plone" -e CYPRESS_BACKEND_HOST="plone" -e NAMESPACE="$(NAMESPACE)" -e DEPENDENCIES="$(DEPENDENCIES)" -e GIT_NAME="$(GIT_NAME)" -v $(shell pwd):/opt/frontend/my-volto-project/src/addons/$(GIT_NAME) plone/volto-addon-ci cypress
-
-.PHONY: prettier
-prettier: ## Run unit test suite for the addon
-	@echo "$(GREEN)==> Run prettier for the addon$(RESET)"
-	docker run -it --rm -e NAMESPACE="$(NAMESPACE)" -e DEPENDENCIES="$(DEPENDENCIES)" -e GIT_NAME="$(GIT_NAME)" -v $(shell pwd):/opt/frontend/my-volto-project/src/addons/$(GIT_NAME) plone/volto-addon-ci prettier
-
-.PHONY: lint
-lint: ## Run unit test suite for the addon
-	@echo "$(GREEN)==> Run ESlint for the addon$(RESET)"
-	docker run -it --rm -e NAMESPACE="$(NAMESPACE)" -e DEPENDENCIES="$(DEPENDENCIES)" -e GIT_NAME="$(GIT_NAME)" -v $(shell pwd):/opt/frontend/my-volto-project/src/addons/$(GIT_NAME) plone/volto-addon-ci eslint
-
-.PHONY: stylelint
-stylelint: ## Run unit test suite for the addon
-	@echo "$(GREEN)==> Run stylelint for the addon$(RESET)"
-	docker run -it --rm -e NAMESPACE="$(NAMESPACE)" -e DEPENDENCIES="$(DEPENDENCIES)" -e GIT_NAME="$(GIT_NAME)" -v $(shell pwd):/opt/frontend/my-volto-project/src/addons/$(GIT_NAME) plone/volto-addon-ci stylelint
-
-.PHONY: test-acceptance-server
-test-acceptance-server: ## Run test acceptance server
-	docker run -it \
-		--rm \
-		--name=plone \
-		-e ZSERVER_HOST=0.0.0.0 \
-		-e ZSERVER_PORT=55001 \
-		-p 55001:55001 \
-		-e SITE=plone \
-		-e APPLY_PROFILES=plone.app.contenttypes:plone-content,plone.restapi:default,plone.app.caching:default,design.plone.policy:default \
-		-e CONFIGURE_PACKAGES=plone.app.contenttypes,plone.restapi,design.plone.policy,design.plone.contenttypes,redturtle.volto,collective.volto.dropdownmenu,collective.volto.socialsettings,collective.volto.secondarymenu,collective.volto.subsites,collective.volto.subsites,redturtle.voltoplugin.editablefooter,collective.volto.subsites,redturtle.voltoplugin.editablefooter,collective.volto.formsupport,collective.volto.subsites,redturtle.voltoplugin.editablefooter,collective.volto.formsupport,collective.volto.subfooter,collective.volto.subsites,redturtle.voltoplugin.editablefooter,collective.volto.formsupport,collective.volto.subfooter,eea.api.taxonomy,collective.volto.subsites,redturtle.voltoplugin.editablefooter,collective.volto.formsupport,collective.volto.subfooter,eea.api.taxonomy,redturtle.faq,collective.volto.subsites,redturtle.voltoplugin.editablefooter,collective.volto.formsupport,collective.volto.subfooter,eea.api.taxonomy,redturtle.faq,collective.feedback,collective.volto.subsites,redturtle.voltoplugin.editablefooter,collective.volto.formsupport,collective.volto.subfooter,eea.api.taxonomy,redturtle.faq,collective.feedback,redturtle.bandi,collective.volto.subsites,redturtle.voltoplugin.editablefooter,collective.volto.formsupport,collective.volto.subfooter,eea.api.taxonomy,redturtle.faq,collective.feedback,redturtle.bandi,collective.venue,collective.volto.subsites,redturtle.voltoplugin.editablefooter,collective.volto.formsupport,collective.volto.subfooter,eea.api.taxonomy,redturtle.faq,collective.feedback,redturtle.bandi,collective.venue,collective.z3cform.datagridfield,collective.volto.subsites,redturtle.voltoplugin.editablefooter,collective.volto.formsupport,collective.volto.subfooter,eea.api.taxonomy,redturtle.faq,collective.feedback,redturtle.bandi,collective.venue,collective.z3cform.datagridfield,collective.taxonomy,collective.volto.subsites,redturtle.voltoplugin.editablefooter,collective.volto.formsupport,collective.volto.subfooter,eea.api.taxonomy,redturtle.faq,collective.feedback,redturtle.bandi,collective.venue,collective.z3cform.datagridfield,collective.taxonomy,plone.app.caching \
-		-e ADDONS='plone.app.robotframework' \
-		ghcr.io/redturtle/iocomune-backend \
-		./bin/robot-server plone.app.robotframework.testing.PLONE_ROBOT_TESTING
+help:		## Show this help.
+	@echo -e "$$(grep -hE '^\S+:.*##' $(MAKEFILE_LIST) | sed -e 's/:.*##\s*/:/' -e 's/^\(.\+\):\(.*\)/\\x1b[36m\1\\x1b[m:\2/' | column -c2 -t -s :)"
 
 .PHONY: demo
-demo: docker-compose.yml
-	docker compose pull
-	docker compose build
-	docker compose up
+demo: docker-compose.yml ## Launch demo site
+	make build-backend
+	make start-backend
+	make build-frontend
+	make start-frontend
 
-.PHONY: preinstall
-preinstall: ## Preinstall task, checks if missdev (mrs-developer) is present and runs it
-	if [ -f $$(pwd)/mrs.developer.json ]; then make develop; fi
+.PHONY: build-backend
+build-backend: ## Build
+	@echo "$(GREEN)==> Build Backend Container $(RESET)"
+	${DOCKER_COMPOSE} build backend
 
-.PHONY: develop
-develop: ## Runs missdev in the local project (mrs.developer.json should be present)
-	npx -p mrs-developer missdev --config=jsconfig.json --output=addons --fetch-https
+.PHONY: start-backend
+start-backend: ## Starts Docker backend
+	@echo "$(GREEN)==> Start Docker-based Plone Backend $(RESET)"
+	${DOCKER_COMPOSE} up backend -d
 
-.PHONY: omelette
-omelette: ## Creates the omelette folder that contains a link to the installed version of Volto (a softlink pointing to node_modules/@plone/volto)
-	if [ ! -d omelette ]; then ln -sf node_modules/@plone/volto omelette; fi
+.PHONY: stop-backend
+stop-backend: ## Stop Docker backend
+	@echo "$(GREEN)==> Stop Docker-based Plone Backend $(RESET)"
+	${DOCKER_COMPOSE} stop backend
 
-.PHONY: patches
-patches:
-	/bin/bash patches/patchit.sh > /dev/null 2>&1 ||true
+.PHONY: build-frontend
+build-frontend: ## Build frontend
+	@echo "$(GREEN)==> Build Frontend Container $(RESET)"
+	${DOCKER_COMPOSE} build addon-prod
+
+.PHONY: start-frontend
+start-frontend: ## Starts Docker frontend
+	@echo "$(GREEN)==> Start Docker-based Volto Frontend $(RESET)"
+	${DOCKER_COMPOSE} up addon-prod -d
+
+.PHONY: stop-frontend
+stop-frontend: ## Stop Docker frontend
+	@echo "$(GREEN)==> Stop Docker-based Volto Frontend $(RESET)"
+	${DOCKER_COMPOSE} stop addon-prod
+
+.PHONY: build-addon
+build-addon: ## Build Addon dev
+	@echo "$(GREEN)==> Build Addon development container $(RESET)"
+	${DOCKER_COMPOSE} build addon-dev
+
+.PHONY: start-dev
+start-dev: ## Starts Dev container
+	@echo "$(GREEN)==> Start Addon Development container $(RESET)"
+	${DOCKER_COMPOSE} up addon-dev
+
+.PHONY: dev
+dev: ## Develop the addon
+	@echo "$(GREEN)==> Start Development Environment $(RESET)"
+	make build-backend
+	make start-backend
+	make build-addon
+	make start-dev
+
+# Dev Helpers
+.PHONY: i18n
+i18n: ## Sync i18n
+	${DOCKER_COMPOSE} --profile unittest run addon-dev i18n
+
+.PHONY: format
+format: ## Format codebase
+	${DOCKER_COMPOSE} --profile unittest run addon-dev lint:fix
+	${DOCKER_COMPOSE} --profile unittest run addon-dev prettier:fix
+	${DOCKER_COMPOSE} --profile unittest run addon-dev stylelint:fix
+
+.PHONY: lint
+lint: ## Lint Codebase
+	${DOCKER_COMPOSE} --profile unittest run addon-dev lint
+	${DOCKER_COMPOSE} --profile unittest run addon-dev prettier
+	${DOCKER_COMPOSE} --profile unittest run addon-dev stylelint
+
+.PHONY: test
+test: ## Run unit tests
+	${DOCKER_COMPOSE} --profile unittest run addon-dev test --watchAll
+
+.PHONY: test-ci
+test-ci: ## Run unit tests in CI
+	${DOCKER_COMPOSE} --profile unittest run -e CI=1 addon-dev test
+
+## Acceptance
+.PHONY: install-acceptance
+install-acceptance: ## Install Cypress, build containers
+	(cd acceptance && yarn)
+	${ACCEPTANCE} --profile dev --profile prod build
+
+.PHONY: start-test-acceptance-server
+start-test-acceptance-server: ## Start acceptance server
+	${ACCEPTANCE} --profile dev up -d
+
+.PHONY: start-test-acceptance-server-prod
+start-test-acceptance-server-prod: ## Start acceptance server
+	${ACCEPTANCE} --profile prod up -d
+
+.PHONY: test-acceptance
+test-acceptance: ## Start Cypress
+	(cd acceptance && ./node_modules/.bin/cypress open)
+
+.PHONY: test-acceptance-headless
+test-acceptance-headless: ## Run cypress tests in CI
+	(cd acceptance && ./node_modules/.bin/cypress run)
+
+.PHONY: stop-test-acceptance-server
+stop-test-acceptance-server: ## Stop acceptance server
+	${ACCEPTANCE} down
+
+.PHONY: status-test-acceptance-server
+status-test-acceptance-server: ## Status of Acceptance Server
+	${ACCEPTANCE} ps

@@ -1,1 +1,1 @@
-import '../../../theme/ItaliaTheme/Subsites/magenta.scss';
+import 'design-comuni-plone-theme/theme/ItaliaTheme/Subsites/magenta.scss';

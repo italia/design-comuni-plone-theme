@@ -5,6 +5,8 @@ logs
 npm-debug.log*
 .DS_Store
 src/addons
+/project/
+/addon-testing-project/
 
 coverage
 node_modules

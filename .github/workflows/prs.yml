@@ -20,13 +20,18 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build and push Docker images
-        uses: docker/build-push-action@v3
+      - name: Build Docker image
+        uses: docker/build-push-action@v4
         with:
           context: .
+          file: ./dockerfiles/Dockerfile
           tags: redturtletech/io-comune-base:develop
           pull: true
           push: false
           cache-from: type=registry,ref=redturtletech/io-comune-base:develop
           cache-to: type=inline
           # platforms: linux/amd64,linux/arm64
+          build-args: |
+            ADDON_NAME=design-comuni-plone-theme
+            ADDON_PATH=design-comuni-plone-theme
+            VOLTO_VERSION=16.20.7

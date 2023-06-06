@@ -1,8 +1,17 @@
 {
   "name": "design-comuni-plone-theme",
   "description": "Volto Theme for Italia design guidelines",
-  "license": "MIT",
+  "license": "GPL-v3",
   "version": "8.0.0-alpha.36",
+  "main": "src/index.js",
+  "keywords": [
+    "volto-addon",
+    "volto",
+    "plone",
+    "react",
+    "io-comune",
+    "italia"
+  ],
   "addons": [
     "@plone-collective/volto-sentry",
     "volto-multilingual-widget",
@@ -23,83 +32,14 @@
     "@eeacms/volto-taxonomy",
     "volto-feedback"
   ],
-  "customizationPaths": [
-    "src/customizations/"
-  ],
   "scripts": {
-    "start": "razzle start",
-    "postinstall": "make omelette && make patches",
     "prepare": "husky install",
-    "build": "razzle build --noninteractive",
-    "test": "razzle test --maxWorkers=1",
-    "test:ci": "CI=true NODE_ICU_DATA=node_modules/full-icu razzle test",
-    "test:coverage": "razzle test --coverage",
-    "test:debug": "node --inspect node_modules/.bin/jest --runInBand",
-    "start:prod": "NODE_ENV=production node build/server.js",
-    "i18n": "rm -rf build/messages && NODE_ENV=production node_modules/.bin/i18n",
+    "i18n": "rm -rf build/messages && NODE_ENV=production i18n --addon",
+    "dry-release": "release-it --dry-run",
+    "release-major-alpha": "release-it major --disable-metrics --preRelease=alpha",
+    "release-alpha": "release-it --disable-metrics --preRelease=alpha",
     "release": "release-it --disable-metrics",
-    "analyze": "BUNDLE_ANALYZE=true razzle build --noninteractive"
-  },
-  "jest": {
-    "verbose": true,
-    "transform": {
-      "\\.[jt]sx?$": "babel-jest",
-      "^.+\\.(png)$": "jest-file",
-      "^.+\\.(jpg)$": "jest-file",
-      "^.+\\.(svg)$": "./node_modules/@plone/volto/jest-svgsystem-transform.js"
-    },
-    "transformIgnorePatterns": [],
-    "moduleNameMapper": {
-      "\\.(css|less|scss|sass)$": "identity-obj-proxy",
-      "@plone/volto/components/theme/Image/Image": "<rootDir>/src/components/Image/Image.jsx",
-      "@plone/volto/helpers/Image/Image": "<rootDir>/src/components/Image/helpers.js",
-      "@plone/volto/babel": "<rootDir>/node_modules/@plone/volto/babel",
-      "@plone/volto/src/(.*)$": "<rootDir>/node_modules/@plone/volto/src/$1",
-      "@plone/volto/(.*)$": "<rootDir>/node_modules/@plone/volto/src/$1",
-      "@plone/volto-slate": "<rootDir>/node_modules/@plone/volto/packages/volto-slate/src",
-      "load-volto-addons": "<rootDir>/node_modules/@plone/volto/jest-addons-loader.js",
-      "@package/config": "<rootDir>/jest-addons-loader.js",
-      "@italia/icons/fontawesome-free-5.15.4-web/svgs/\\${prefixFolder}/\\${iconName}\\.svg": "<rootDir>/src/icons/fontawesome-free-5.15.4-web/svgs/regular/moon.svg",
-      "^design-comuni-plone-theme/icons/fontawesome-free-5.15.4-web/svgs/\\${prefixFolder}/\\${iconName}\\.svg": "<rootDir>/src/icons/fontawesome-free-5.15.4-web/svgs/regular/moon.svg",
-      "~/(.*)$": "<rootDir>/src/$1",
-      "@root/(.*)$": "<rootDir>/src/$1",
-      "@italia/(.*)$": "<rootDir>/src/$1",
-      "^design-comuni-plone-theme/(.*)$": "<rootDir>/src/$1",
-      "^volto-gdpr-privacy/(.*)$": "<rootDir>/node_modules/volto-gdpr-privacy/src/$1",
-      "^volto-venue/(.*)$": "<rootDir>/node_modules/volto-venue/src/$1",
-      "^volto-data-grid-widget/(.*)$": "<rootDir>/node_modules/volto-data-grid-widget/src/$1",
-      "^volto-dropdownmenu/(.*)$": "<rootDir>/node_modules/volto-dropdownmenu/src/$1",
-      "^volto-feedback/(.*)$": "<rootDir>/node_modules/volto-feedback/src/$1"
-    },
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs,ts,tsx}",
-      "<rootDir>/src/**/?(*.)+(spec|test).{js,jsx,mjs,ts,tsx}",
-      "<rootDir>/__tests__/**/?(*.)(spec|test).{js,jsx,mjs,ts,tsx}",
-      "!**/src/addons/volto/**/*",
-      "!**/src/addons/**/*"
-    ],
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "./src/**",
-      "!**/src/addons/**/*"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "branches": 10,
-        "functions": 10,
-        "lines": 10,
-        "statements": 10
-      }
-    },
-    "setupFiles": [
-      "@plone/volto/test-setup-globals.js",
-      "@plone/volto/test-setup-config.js",
-      "./test-setup-config.js"
-    ],
-    "globalSetup": "@plone/volto/global-test-setup.js",
-    "globals": {
-      "__DEV__": true
-    }
+    "test": "make test"
   },
   "prettier": {
     "trailingComma": "all",
@@ -133,15 +73,8 @@
           ]
         }
       ]
-    },
-    "ignoreFiles": "theme/themes/default/**/*.overrides"
+    }
   },
-  "browserslist": [
-    ">1%",
-    "last 2 versions",
-    "not ie 11",
-    "not dead"
-  ],
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json}": [
       "npx eslint --max-warnings=0 --fix",
@@ -175,13 +108,10 @@
   },
   "dependencies": {
     "@babel/plugin-proposal-export-default-from": "7.18.9",
-    "@babel/plugin-proposal-export-namespace-from": "7.18.9",
-    "@babel/plugin-proposal-nullish-coalescing-operator": "7.18.6",
     "@babel/plugin-proposal-throw-expressions": "7.18.6",
     "@eeacms/volto-taxonomy": "^1.0.0",
     "@loadable/babel-plugin": "5.13.2",
     "@plone-collective/volto-sentry": "0.3.0",
-    "@plone/volto": "16.20.7",
     "bootstrap-italia": "2.2.0",
     "classnames": "^2.3.2",
     "design-react-kit": "italia/design-react-kit#fc9b40257ba3cb613141faf217f1f5b806489740",
@@ -192,6 +122,8 @@
     "react-select": "^4.3.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "1.8.1",
+    "svg-inline-loader": "^0.8.2",
+    "svg-inline-react": "^3.2.1",
     "typeface-lora": "0.0.72",
     "typeface-roboto-mono": "0.0.75",
     "typeface-titillium-web": "0.0.72",
@@ -217,44 +149,21 @@
     "@babel/core": "7.19.6",
     "@commitlint/cli": "^12.0.0",
     "@commitlint/config-conventional": "^12.0.0",
+    "@plone/scripts": "*",
     "@release-it/conventional-changelog": "^2.0.1",
-    "bundlewatch": "^0.3.3",
+    "eslint": "8.42.0",
     "eslint-plugin-prettier": "^3.4.1",
     "husky": "8.0.2",
-    "jest-environment-jsdom": "^26.0.1",
     "lint-staged": "13.0.3",
     "prettier": "^2.7.1",
-    "razzle": "4.2.17",
-    "razzle-plugin-scss": "4.2.17",
     "release-it": "^14.6.1",
+    "stylelint": "15.7.0",
     "stylelint-config-idiomatic-order": "^9.0.0",
     "stylelint-config-prettier": "^9.0.3",
-    "stylelint-prettier": "^2.0.0",
-    "svg-inline-loader": "^0.8.2",
-    "svg-inline-react": "^3.2.1"
+    "stylelint-prettier": "^2.0.0"
   },
-  "bundlewatch": {
-    "files": [
-      {
-        "path": "build/public/static/js/*.js",
-        "normalizeFilenames": "^.+?(\\..+?)\\.\\w+$",
-        "maxSize": "2000kB"
-      }
-    ],
-    "ci": {
-      "trackBranches": [
-        "master",
-        "develop",
-        "bundlesize"
-      ]
-    }
-  },
-  "resolutions": {
-    "moment": "2.29.3",
-    "lodash": "4.17.21"
-  },
-  "volta": {
-    "node": "16.18.0"
+  "peerDependencies": {
+    "@plone/volto": "16.20.7"
   },
   "packageManager": "yarn@3.2.3"
 }

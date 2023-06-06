@@ -43,7 +43,7 @@ Usato da piccoli Enti e anche da grandi PA come la **Regione Emilia Romagna**, l
 Nel progetto è presente una configurazione docker compose per testare un sito Io-Comune semplicemente usando il comando::
 
 ```bash
-% docker compose up
+% make demo
 ```
 
 ## Sottositi

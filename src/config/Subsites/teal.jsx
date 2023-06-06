@@ -1,1 +1,1 @@
-import '../../../theme/ItaliaTheme/Subsites/teal.scss';
+import 'design-comuni-plone-theme/theme/ItaliaTheme/Subsites/teal.scss';

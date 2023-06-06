@@ -3,7 +3,6 @@
  * @module reducers/root
  */
 
-import defaultReducers from '@plone/volto/reducers';
 import { searchFiltersReducer } from './searchFiltersReducer';
 import { searchResultsReducer } from './searchResultsReducer';
 import { calendarSearchReducer } from './calendarSearchReducer';
@@ -15,8 +14,6 @@ import { twitterPosts } from './twitterPosts';
 import { originalQueryReducer } from './originalQueryReducer';
 import { searchBandiFiltersReducer } from './searchBandiFiltersReducer';
 
-import config from '@plone/volto/registry';
-
 /**
  * Root reducer.
  * @function
@@ -25,8 +22,6 @@ import config from '@plone/volto/registry';
  * @returns {Object} New state.
  */
 const reducers = {
-  ...defaultReducers,
-  ...config.addonReducers,
   searchFilters: searchFiltersReducer,
   searchResults: searchResultsReducer,
   calendarSearch: calendarSearchReducer,

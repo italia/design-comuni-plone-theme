@@ -1,12 +1,5 @@
-/**
- * Replace with custom runner when needed.
- * @module index
- */
+import applyItaliaConfig from 'design-comuni-plone-theme/config/italiaConfig';
 
-import start from '@plone/volto/start-server';
-
-const reloadServer = start();
-
-if (module.hot) {
-  reloadServer();
+export default function applyConfig(config) {
+  return applyItaliaConfig(config);
 }
