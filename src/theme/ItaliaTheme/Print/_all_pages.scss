@@ -10,6 +10,13 @@
       text-decoration: none !important;
     }
 
+    .content-area,
+    .public-ui {
+      page-break-before: avoid;
+      page-break-after: avoid;
+      page-break-inside: avoid;
+    }
+
     // removed part of header header
     .it-header-slim-wrapper {
       display: none;
@@ -18,7 +25,6 @@
     .it-header-navbar-wrapper {
       display: none;
     }
-
     .it-header-center-wrapper {
       background: none;
 
@@ -50,8 +56,20 @@
 
     /* Removed link list in PageHeader*/
     .PageHeaderWrapper {
+      page-break-before: avoid;
+      page-break-after: avoid;
+      page-break-inside: avoid;
       .link-list-wrapper {
         display: none;
+      }
+    }
+    /* Removed max-height from accordion block*/
+    .block.accordion {
+      display: flex !important;
+      .accordion-item,
+      .accordion-content,
+      .accordion-inner {
+        padding: 0 10px;
       }
     }
 
