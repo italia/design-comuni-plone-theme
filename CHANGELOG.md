@@ -1,3 +1,36 @@
+## [8.0.0-alpha.37](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.36...v8.0.0-alpha.37) (2023-06-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* this is now a Volto theme add-on 💥 (#166)
+
+### Features
+
+* aggiornamento icone da fa5 a fa6 ([#194](https://github.com/RedTurtle/design-comuni-plone-theme/issues/194)) ([59cd2ac](https://github.com/RedTurtle/design-comuni-plone-theme/commit/59cd2ac2189062640010340ab3e758f009506ec5))
+
+
+### Bug Fixes
+
+* changed BandoDates and Dates components for accessibility ([#188](https://github.com/RedTurtle/design-comuni-plone-theme/issues/188)) ([6c133ec](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6c133ec09fd29eb666c771f24e61740aa66c8a53))
+* empty alt tag + aria-hidden for link in cards ([#186](https://github.com/RedTurtle/design-comuni-plone-theme/issues/186)) ([3689353](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3689353654525946a2f647d7920b8d5f3972b077))
+* page-break added for all printable content | print visualization for accordion block fixed ([#197](https://github.com/RedTurtle/design-comuni-plone-theme/issues/197)) ([2ac0189](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2ac018957ce6b3e953b451896dcf9b70b08272f3))
+
+
+### Changes
+
+* this is now a Volto theme add-on 💥 ([#166](https://github.com/RedTurtle/design-comuni-plone-theme/issues/166)) ([19003b7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/19003b77b909ed19b8291ca9f4b900bf66dfa701))
+
+
+### Documentation
+
+* development instructions ([b87e551](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b87e551e5d9066a4c6aab2d48a67f9c988fe1b9f))
+
+
+### Maintenance
+
+* fix babel config ([2052198](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2052198a119a37e503abca6e17e8b4065aa5cfe9))
+
 ## [8.0.0-alpha.36](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.35...v8.0.0-alpha.36) (2023-06-01)
 
 
