@@ -5,27 +5,30 @@ A training on how to create your own website using Volto is available as part of
 ## Quick Start
 
 Below is a list of commands you will probably find useful.
+The quickest way to bootstrap development is using docker, so install it beforehand to use these commands.
 
-### `yarn install`
+### `make build-addon`
 
-Installs dependencies with [yarn](https://yarnpkg.com/).
-If you are not installing new dependencies (after updating the package.json file), you may want to use `yarn install --immutable` instead to be sure the versions are the correct ones.
+Build a docker image to use for development and testing.
 
-### `yarn start`
+Needs to be rebuilt only if `package.json` changes.
+
+### `make start-dev`
 
 Runs the project in development mode.
 You can view your application at `http://localhost:3000`
 
 The page will reload if you make edits.
 
-### `yarn build`
+This is a blank volto project with this add-on installed in development mode.
 
-Builds the app for production to the build folder.
+**Note:** removing the local `node_modules` might be necessary for the build to work, in order to avoid conflicts between the local dependencies and the ones built in the dev container.
 
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
+### `make dev`
 
-### `yarn start:prod`
+Same as `make start-dev` but this also runs a Plone backend.
+
+### `make start-frontend`
 
 Runs the compiled app in production.
 
@@ -47,7 +50,7 @@ It is all configured for [release-it](https://github.com/release-it/release-it) 
 To run a release, just run:
 
 ```bash
-yarn release-it
+yarn release
 ```
 
 if you want to check the configuration, it is in [.release-it.json](./.release-it.json).
@@ -56,6 +59,5 @@ By default it will use the commits type and scope to determine the version follo
 For example:
 
 ```bash
-yarn release-it -- major
+yarn release -- major
 ```
-
