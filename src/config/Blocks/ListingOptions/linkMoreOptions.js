@@ -15,22 +15,23 @@ const messages = defineMessages({
 
 const addLinkMoreOptions = (schema, formData, intl, position = 2) => {
   let pos = position;
-
-  addSchemaField(
-    schema,
-    'linkmore_id_lighthouse',
-    intl.formatMessage(messages.id_lighthouse),
-    intl.formatMessage(messages.id_lighthouse_description),
-    {
-      choices: [
-        ['live-button-events', 'live-button-events'],
-        ['live-button-locations', 'live-button-locations'],
-      ],
-    },
-    pos,
-    'linkmore',
-  );
-  pos++;
+  if (schema.fieldsets.some((f) => f.id === 'linkmore')) {
+    addSchemaField(
+      schema,
+      'linkmore_id_lighthouse',
+      intl.formatMessage(messages.id_lighthouse),
+      intl.formatMessage(messages.id_lighthouse_description),
+      {
+        choices: [
+          ['live-button-events', 'live-button-events'],
+          ['live-button-locations', 'live-button-locations'],
+        ],
+      },
+      pos,
+      'linkmore',
+    );
+    pos++;
+  }
 
   return pos;
 };

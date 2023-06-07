@@ -1,0 +1,200 @@
+.block.search {
+  .full-width {
+    height: 100% !important;
+  }
+  .search-wrapper {
+    position: relative;
+    margin-top: 1.75rem;
+    background-color: #fff;
+    .form-group {
+      flex: 1;
+      margin: 0;
+
+      .form-text {
+        display: none;
+      }
+    }
+    .input-group-append,
+    .clear-icon,
+    input {
+      height: 45px;
+    }
+    label {
+      color: var(--bs-gray-secondary);
+    }
+    label.inactive,
+    input {
+      padding-left: 2.5rem !important;
+    }
+    label.inactive {
+      color: transparent;
+    }
+    label.active {
+      font-size: 1rem;
+      top: -8px;
+    }
+    .autocomplete-icon {
+      position: absolute;
+      left: 0;
+      right: auto;
+      top: 7px;
+      z-index: 5;
+      .icon {
+        fill: $link-color;
+      }
+    }
+    .clear-icon {
+      z-index: 5;
+      border: none;
+      outline: none;
+      position: absolute;
+      right: 80px;
+      font-size: 1rem;
+      border-bottom: 1px solid hsl(210deg, 17.6470588235%, 43.35%);
+    }
+  }
+  .search-details {
+    color: var(--bs-gray-900);
+  }
+  .search-results .public-ui .template-wrapper {
+    .container {
+      padding: 0 !important;
+    }
+  }
+  .sideColumn {
+    @media (max-width: #{map-get($grid-breakpoints, md)}) {
+      padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+      padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
+    }
+    .columnTextTitle {
+      text-transform: uppercase;
+      color: var(--bs-gray-900);
+    }
+
+    .facets {
+      .facet .columnTextTitle {
+        text-transform: none;
+      }
+
+      .daterange-facet {
+        .DateRangePickerInput {
+          border-bottom: 1px solid hsl(210deg, 17.6470588235%, 43.35%);
+          input[type='text'] {
+            border-bottom: none;
+          }
+        }
+        .DayPicker_weekHeader_ul {
+          padding-left: 0 !important;
+        }
+      }
+      .select-facet {
+        div[class*='-ValueContainer'] {
+          flex-wrap: nowrap;
+        }
+        div[class*='-placeholder'] {
+          color: #484848;
+        }
+      }
+    }
+  }
+  .search-results-count-sort {
+    .accordion-wrapper {
+      min-width: 350px;
+      position: relative;
+      @media (max-width: #{map-get($grid-breakpoints, md)}) {
+        min-width: 100%;
+      }
+      .accordion-header {
+        padding: 0.5rem;
+        font-size: 1rem;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        transition: border-color 0.3s ease-in,
+          background-color 0.2s cubic-bezier(0, 1, 0, 1) 0.2s;
+        border: none;
+        border-bottom: 1px solid;
+        border-color: hsl(210deg, 17.6470588235%, 43.35%) !important;
+        &[aria-expanded='true'] {
+          border-color: transparent !important;
+          transition: background-color 0.2s cubic-bezier(0, 1, 0, 1),
+            border-color 0.05s cubic-bezier(1, 0, 1, 0);
+          box-shadow: 0 1rem 2rem -0.25rem rgba(0, 0, 0, 0.15) !important;
+        }
+        .filter-list-title {
+          display: flex;
+          .accordion-control {
+            position: relative;
+            margin-right: 28px;
+            .indicator {
+              position: absolute;
+              right: -22px;
+              bottom: -5px;
+              z-index: 10;
+            }
+          }
+        }
+      }
+
+      .accordion-content {
+        overflow: hidden;
+        max-height: 0;
+        padding: 0;
+        transition: max-height 0.2s cubic-bezier(0, 1, 0, 1);
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        &[aria-expanded='true'] {
+          max-height: 1000vh;
+          overflow: auto;
+          transition: max-height 0.25s cubic-bezier(1, 0, 1, 0);
+          box-shadow: 0 0.8rem 1rem -0.25rem rgba(0, 0, 0, 0.15) !important;
+        }
+
+        .accordion-inner {
+          padding: 0.75rem 1rem;
+          .filter-list-group {
+            display: flex;
+            flex-direction: column;
+            .label-title {
+              color: var(--bs-gray-secondary);
+              text-transform: uppercase;
+              font-weight: 700;
+              font-size: 0.875rem;
+            }
+            .form-label {
+              align-items: center;
+              justify-content: space-between;
+            }
+          }
+        }
+
+        .link-more {
+          text-align: right;
+
+          a {
+            font-weight: bold;
+
+            svg {
+              width: 1.2em;
+              fill: $link-color;
+            }
+          }
+        }
+        .clear-filters {
+          margin-top: 1rem;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+          font-size: 17px;
+          svg {
+            margin-right: 0.5rem !important;
+            fill: var(--bs-danger);
+          }
+        }
+      }
+    }
+  }
+}

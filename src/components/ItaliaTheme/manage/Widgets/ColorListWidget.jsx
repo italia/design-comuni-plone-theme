@@ -46,7 +46,6 @@ class ColorListWidget extends Component {
   render() {
     const { id, title, required, value, onChange, intl, colors, className } =
       this.props;
-
     return colors.length > 0 ? (
       <Form.Field
         inline

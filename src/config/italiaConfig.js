@@ -4,6 +4,7 @@ import navSVG from '@plone/volto/icons/nav.svg';
 import contentSVG from '@plone/volto/icons/content.svg';
 import bookSVG from '@plone/volto/icons/book.svg';
 import shareSVG from '@plone/volto/icons/share.svg';
+import searchIcon from 'bootstrap-italia/src/svg/it-search.svg';
 
 import { Search } from '@plone/volto/components';
 
@@ -25,6 +26,8 @@ import {
   CommentsStep,
   LoginAgid,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import RightColumnFacets from '@plone/volto/components/manage/Blocks/Search/layout/RightColumnFacets';
+import LeftColumnFacets from '@plone/volto/components/manage/Blocks/Search/layout/LeftColumnFacets';
 
 import HandleAnchor from 'design-comuni-plone-theme/components/ItaliaTheme/AppExtras/HandleAnchor';
 import GenericAppExtras from 'design-comuni-plone-theme/components/ItaliaTheme/AppExtras/GenericAppExtras';
@@ -106,6 +109,14 @@ export default function applyConfig(voltoConfig) {
       },
     },
     querystringAdditionalFields: [],
+    searchBlockTemplates: [
+      'simpleCard',
+      'cardWithImageTemplate',
+      'inEvidenceTemplate',
+      'cardSlideUpTextTemplate',
+      'bandiInEvidenceTemplate',
+      'simpleListTemplate',
+    ],
     loadables: { ...config.settings.loadables, ...ItaliaLoadables },
     contentIcons: {
       ...config.settings.contentIcons,
@@ -372,8 +383,25 @@ export default function applyConfig(voltoConfig) {
       ...config.blocks.blocksConfig.maps,
       restricted: true,
     },
+    search: {
+      ...config.blocks.blocksConfig.search,
+      icon: searchIcon,
+      variations: [
+        {
+          id: 'facetsRightSide',
+          title: 'Colonna a destra',
+          view: RightColumnFacets,
+          isDefault: true,
+        },
+        {
+          id: 'facetsLeftSide',
+          title: 'Colonna a sinistra',
+          view: LeftColumnFacets,
+          isDefault: false,
+        },
+      ],
+    },
   };
-
   config.blocks = {
     ...config.blocks,
     blocksConfig: { ...config.blocks.blocksConfig, ...customBlocks },

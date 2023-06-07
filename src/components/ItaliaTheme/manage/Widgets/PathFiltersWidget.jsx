@@ -28,7 +28,7 @@ const messages = defineMessages({
 
 const PathFiltersWidget = (props) => {
   const intl = useIntl();
-  const { id, title, value, onChange, formData } = props;
+  const { id, title, value, onChange, formData = {} } = props;
 
   useEffect(() => {
     if (!value) {

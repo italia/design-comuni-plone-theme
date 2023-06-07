@@ -31,22 +31,26 @@ const messages = defineMessages({
 
 /** DEFAULT **/
 
-const addDefaultOptions = (schema, formData, intl, position = 0) => {
+const addDefaultOptions = (schema, formData = {}, intl, position = 0) => {
   let listing_items_colors =
     config.blocks.blocksConfig.listing?.listing_items_colors || [];
   let listing_bg_colors =
     config.blocks.blocksConfig.listing?.listing_bg_colors || [];
-
+  const fieldset =
+    schema?.id === 'search' ? 'listingTemplateOptions' : 'default';
   let pos = position;
-  addSchemaField(
-    schema,
-    'title',
-    intl.formatMessage(messages.title),
-    null,
-    null,
-    pos,
-  );
-  pos++;
+  if (fieldset === 'default') {
+    addSchemaField(
+      schema,
+      'title',
+      intl.formatMessage(messages.title),
+      null,
+      null,
+      pos,
+      fieldset,
+    );
+    pos++;
+  }
 
   if (formData.title) {
     addSchemaField(
@@ -56,6 +60,7 @@ const addDefaultOptions = (schema, formData, intl, position = 0) => {
       null,
       { type: 'boolean' },
       pos,
+      fieldset,
     );
     pos++;
   }
@@ -68,19 +73,22 @@ const addDefaultOptions = (schema, formData, intl, position = 0) => {
       null,
       { widget: 'color_list', intl: intl, colors: listing_items_colors },
       pos,
+      fieldset,
     );
     pos++;
   }
-
-  addSchemaField(
-    schema,
-    'show_block_bg',
-    intl.formatMessage(messages.show_block_bg),
-    null,
-    { type: 'boolean' },
-    pos,
-  );
-  pos++;
+  if (fieldset !== 'listingTemplateOptions') {
+    addSchemaField(
+      schema,
+      'show_block_bg',
+      intl.formatMessage(messages.show_block_bg),
+      null,
+      { type: 'boolean' },
+      pos,
+      fieldset,
+    );
+    pos++;
+  }
 
   if (listing_bg_colors.length > 0) {
     addSchemaField(
@@ -90,6 +98,7 @@ const addDefaultOptions = (schema, formData, intl, position = 0) => {
       null,
       { widget: 'color_list', intl: intl, colors: listing_bg_colors },
       pos,
+      fieldset,
     );
     pos++;
   }

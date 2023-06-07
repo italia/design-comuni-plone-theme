@@ -9,6 +9,7 @@ export addLinkMoreOptions from 'design-comuni-plone-theme/config/Blocks/ListingO
 export {
   addSimpleCardTemplateOptions,
   SimpleCardTemplateAppearance_COMPACT,
+  SimpleCardTemplateAppearance_ONEFORROW,
 } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/simpleCardTemplate';
 export { addCardWithImageTemplateOptions } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/cardWithImageTemplate';
 export { addInEvidenceTemplateOptions } from 'design-comuni-plone-theme/config/Blocks/ListingOptions/inEvidenceTemplate';

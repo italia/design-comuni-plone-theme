@@ -61,6 +61,7 @@ msgid "Block style"
 msgstr "Stile del blocco"
 
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
+#: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateOneForRow
 # defaultMessage: Vedi
 msgid "Card detail label"
 msgstr "Vedi"
@@ -100,6 +101,11 @@ msgstr "Cerca per argomento"
 # defaultMessage: Cerca per parola chiave
 msgid "Cerca per parola chiave"
 msgstr "Cerca per parola chiave"
+
+#: helpers/Translations/searchBlockExtendedTranslations
+# defaultMessage: Clear filters
+msgid "Clear filters"
+msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Clicca qui per sostituire il file
@@ -147,10 +153,30 @@ msgstr "Contenuto in primo piano"
 msgid "Contenuto"
 msgstr "Contenuto"
 
+#: helpers/Translations/searchBlockExtendedTranslations
+# defaultMessage: Current filters applied
+msgid "Current filters applied"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Dates
 # defaultMessage: Date aggiuntive
 msgid "Date aggiuntive"
 msgstr "Date aggiuntive"
+
+#: helpers/Translations/searchBlockExtendedTranslations
+# defaultMessage: Al {end}
+msgid "DateRangeFacetFilterListEntryAl"
+msgstr ""
+
+#: helpers/Translations/searchBlockExtendedTranslations
+# defaultMessage: Dal {start}
+msgid "DateRangeFacetFilterListEntryDal"
+msgstr ""
+
+#: helpers/Translations/searchBlockExtendedTranslations
+# defaultMessage: Dal {start} al {end}
+msgid "DateRangeFacetFilterListEntryDalAl"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Edit
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
@@ -468,6 +494,16 @@ msgstr "Cerca nel sito"
 # defaultMessage: Ricerca bandi
 msgid "SearchBandiBlock"
 msgstr "Ricerca bandi"
+
+#: helpers/Translations/searchBlockExtendedTranslations
+# defaultMessage: Cerca una parola chiave
+msgid "SearchSearchBlock"
+msgstr ""
+
+#: helpers/Translations/searchBlockExtendedTranslations
+# defaultMessage: Search
+msgid "SearchSearchBlockButtonText"
+msgstr ""
 
 #: components/ItaliaTheme/Header/SocialHeader
 # defaultMessage: Seguici su
@@ -1132,6 +1168,21 @@ msgstr "Chiusura del procedimento"
 # defaultMessage: Circoscrizione
 msgid "circoscrizione"
 msgstr "Circoscrizione"
+
+#: helpers/Translations/searchBlockExtendedTranslations
+# defaultMessage: Clear all filters
+msgid "clearAllFilters"
+msgstr ""
+
+#: helpers/Translations/searchBlockExtendedTranslations
+# defaultMessage: Clear {filterName} filter
+msgid "clearFilter"
+msgstr "Rimuovi il filtro {filterName}"
+
+#: helpers/Translations/searchBlockExtendedTranslations
+# defaultMessage: Clear search
+msgid "clearSearch"
+msgstr "Rimuovi ricerca testuale"
 
 #: components/ItaliaTheme/View/Commons/SideMenu
 # defaultMessage: Chiudi
@@ -2607,6 +2658,7 @@ msgid "provvedimento_finale"
 msgstr "Provvedimento finale"
 
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
+#: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateOneForRow
 # defaultMessage: Data di pubblicazione
 msgid "publication_date"
 msgstr "Data di pubblicazione"
@@ -3030,6 +3082,11 @@ msgstr "Vai ai risultati di ricerca"
 msgid "search_startDate"
 msgstr "Data inizio"
 
+#: helpers/Translations/searchBlockExtendedTranslations
+# defaultMessage: Ricerca per: <em>{searchedtext}</em>.
+msgid "searchedFor"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 # defaultMessage: Add path
 msgid "searchsectionswidget-add-rootpath"
@@ -3382,6 +3439,11 @@ msgstr "Compatto"
 # defaultMessage: Qui puoi selezionare, per il template 'Card semplice', un aspetto diverso da quello di default.
 msgid "simplecard_listing_appearance_description"
 msgstr "Qui puoi selezionare, per il template 'Card semplice', un aspetto diverso da quello di default."
+
+#: config/Blocks/ListingOptions/simpleCardTemplate
+# defaultMessage: Un elemento per riga
+msgid "simplecard_listing_appearance_oneforrow"
+msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
 # defaultMessage: Situazione patrimoniale
@@ -3749,6 +3811,7 @@ msgid "uo_type"
 msgstr "Tipologia"
 
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
+#: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateOneForRow
 # defaultMessage: Data di aggiornamento
 msgid "update_date"
 msgstr "Data di aggiornamento"

@@ -59,7 +59,6 @@ const CardWithImageTemplate = (props) => {
     rrule,
   } = props;
   const imagesToShow = set_four_columns ? 4 : 3;
-
   return (
     <div className="card-with-image-template">
       <Container className="px-4">

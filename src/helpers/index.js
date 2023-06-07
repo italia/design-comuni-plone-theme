@@ -43,3 +43,5 @@ export {
   getRealEmptyField,
   eventFormValidationHelper,
 } from 'design-comuni-plone-theme/helpers/FormValidation/FormValidationHelpers';
+
+export { commonSearchBlockMessages } from 'design-comuni-plone-theme/helpers/Translations/searchBlockExtendedTranslations';

@@ -5,6 +5,7 @@
 /*
   CUSTOMIZATIONS
   - Gestione e uso di props.onBlur nel widget
+  - Add default onBlur prop in case it's missing from Volto widgets
 */
 
 import React, { Component } from 'react';
@@ -96,6 +97,7 @@ export class ObjectBrowserWidgetComponent extends Component {
     return: 'multiple',
     initialPath: '',
     allowExternals: false,
+    onBlur: () => {},
   };
 
   state = {

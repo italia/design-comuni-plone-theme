@@ -76,6 +76,7 @@ msgid "Block style"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
+#: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateOneForRow
 # defaultMessage: Vedi
 msgid "Card detail label"
 msgstr ""
@@ -114,6 +115,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/EventSearch/DefaultFilters
 # defaultMessage: Cerca per parola chiave
 msgid "Cerca per parola chiave"
+msgstr ""
+
+#: helpers/Translations/searchBlockExtendedTranslations
+# defaultMessage: Clear filters
+msgid "Clear filters"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/FileWidget
@@ -162,9 +168,29 @@ msgstr ""
 msgid "Contenuto"
 msgstr ""
 
+#: helpers/Translations/searchBlockExtendedTranslations
+# defaultMessage: Current filters applied
+msgid "Current filters applied"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Dates
 # defaultMessage: Date aggiuntive
 msgid "Date aggiuntive"
+msgstr ""
+
+#: helpers/Translations/searchBlockExtendedTranslations
+# defaultMessage: Al {end}
+msgid "DateRangeFacetFilterListEntryAl"
+msgstr ""
+
+#: helpers/Translations/searchBlockExtendedTranslations
+# defaultMessage: Dal {start}
+msgid "DateRangeFacetFilterListEntryDal"
+msgstr ""
+
+#: helpers/Translations/searchBlockExtendedTranslations
+# defaultMessage: Dal {start} al {end}
+msgid "DateRangeFacetFilterListEntryDalAl"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/ContactsBlock/Edit
@@ -482,6 +508,16 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 # defaultMessage: Ricerca bandi
 msgid "SearchBandiBlock"
+msgstr ""
+
+#: helpers/Translations/searchBlockExtendedTranslations
+# defaultMessage: Cerca una parola chiave
+msgid "SearchSearchBlock"
+msgstr ""
+
+#: helpers/Translations/searchBlockExtendedTranslations
+# defaultMessage: Search
+msgid "SearchSearchBlockButtonText"
 msgstr ""
 
 #: components/ItaliaTheme/Header/SocialHeader
@@ -1146,6 +1182,21 @@ msgstr ""
 #: components/ItaliaTheme/View/VenueView/VenueWhere
 # defaultMessage: Circoscrizione
 msgid "circoscrizione"
+msgstr ""
+
+#: helpers/Translations/searchBlockExtendedTranslations
+# defaultMessage: Clear all filters
+msgid "clearAllFilters"
+msgstr ""
+
+#: helpers/Translations/searchBlockExtendedTranslations
+# defaultMessage: Clear {filterName} filter
+msgid "clearFilter"
+msgstr ""
+
+#: helpers/Translations/searchBlockExtendedTranslations
+# defaultMessage: Clear search
+msgid "clearSearch"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/SideMenu
@@ -2622,6 +2673,7 @@ msgid "provvedimento_finale"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
+#: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateOneForRow
 # defaultMessage: Data di pubblicazione
 msgid "publication_date"
 msgstr ""
@@ -3045,6 +3097,11 @@ msgstr ""
 msgid "search_startDate"
 msgstr ""
 
+#: helpers/Translations/searchBlockExtendedTranslations
+# defaultMessage: Ricerca per: <em>{searchedtext}</em>.
+msgid "searchedFor"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/SearchSectionsConfigurationWidget/SearchSectionsConfigurationWidget
 # defaultMessage: Add path
 msgid "searchsectionswidget-add-rootpath"
@@ -3396,6 +3453,11 @@ msgstr ""
 #: config/Blocks/ListingOptions/simpleCardTemplate
 # defaultMessage: Qui puoi selezionare, per il template 'Card semplice', un aspetto diverso da quello di default.
 msgid "simplecard_listing_appearance_description"
+msgstr ""
+
+#: config/Blocks/ListingOptions/simpleCardTemplate
+# defaultMessage: Un elemento per riga
+msgid "simplecard_listing_appearance_oneforrow"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
@@ -3764,6 +3826,7 @@ msgid "uo_type"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
+#: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateOneForRow
 # defaultMessage: Data di aggiornamento
 msgid "update_date"
 msgstr ""

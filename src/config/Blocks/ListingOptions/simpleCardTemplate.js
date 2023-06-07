@@ -22,10 +22,15 @@ const messages = defineMessages({
     id: 'simplecard_listing_appearance_compact',
     defaultMessage: 'Compatto',
   },
+  simplecard_listing_appearance_oneforrow: {
+    id: 'simplecard_listing_appearance_oneforrow',
+    defaultMessage: 'Un elemento per riga',
+  },
 });
 
 /** SIMPLE CARD TEMPLATE **/
 export const SimpleCardTemplateAppearance_COMPACT = 'compact';
+export const SimpleCardTemplateAppearance_ONEFORROW = 'oneForRow';
 
 export const addSimpleCardTemplateOptions = (
   schema,
@@ -34,21 +39,27 @@ export const addSimpleCardTemplateOptions = (
   position = 0,
 ) => {
   let pos = position;
-
   pos = addLighthouseField(schema, intl, pos);
-
+  let choices = [
+    [
+      SimpleCardTemplateAppearance_COMPACT,
+      intl.formatMessage(messages.simplecard_listing_appearance_compact),
+    ],
+  ];
+  if (schema.id === 'search')
+    choices = [
+      [
+        SimpleCardTemplateAppearance_ONEFORROW,
+        intl.formatMessage(messages.simplecard_listing_appearance_oneforrow),
+      ],
+    ];
   addSchemaField(
     schema,
     'appearance',
     intl.formatMessage(messages.appearance),
     intl.formatMessage(messages.simplecard_listing_appearance_description),
     {
-      choices: [
-        [
-          SimpleCardTemplateAppearance_COMPACT,
-          intl.formatMessage(messages.simplecard_listing_appearance_compact),
-        ],
-      ],
+      choices,
     },
     pos,
   );
@@ -56,8 +67,17 @@ export const addSimpleCardTemplateOptions = (
 
   pos = addDefaultOptions(schema, formData, intl, pos);
 
-  if (formData.appearance === SimpleCardTemplateAppearance_COMPACT) {
-    pos = templatesOptions(schema, formData, intl, ['show_icon'], null, pos);
+  if (formData?.appearance === SimpleCardTemplateAppearance_COMPACT) {
+    pos = templatesOptions(
+      schema,
+      formData,
+      intl,
+      ['show_icon'],
+      {
+        show_icon: { default: false },
+      },
+      pos,
+    );
   } else {
     pos = templatesOptions(
       schema,
@@ -74,6 +94,7 @@ export const addSimpleCardTemplateOptions = (
       ],
       {
         hide_dates: { default: false },
+        show_icon: { default: true },
         show_type: { default: false },
         show_detail_link: { default: false },
         show_path_filters: { default: false },
