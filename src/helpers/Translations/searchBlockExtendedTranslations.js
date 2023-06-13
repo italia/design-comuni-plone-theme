@@ -30,7 +30,7 @@ export const commonSearchBlockMessages = defineMessages({
   },
   searchedFor: {
     id: 'searchedFor',
-    defaultMessage: 'Ricerca per: <em>{searchedtext}</em>.',
+    defaultMessage: 'Ricerca per: <em>{searchedtext}</em>. ',
   },
   search: {
     id: 'SearchSearchBlock',

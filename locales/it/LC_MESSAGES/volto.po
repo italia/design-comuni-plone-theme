@@ -105,7 +105,7 @@ msgstr "Cerca per parola chiave"
 #: helpers/Translations/searchBlockExtendedTranslations
 # defaultMessage: Clear filters
 msgid "Clear filters"
-msgstr ""
+msgstr "Azzera filtri"
 
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Clicca qui per sostituire il file
@@ -156,7 +156,7 @@ msgstr "Contenuto"
 #: helpers/Translations/searchBlockExtendedTranslations
 # defaultMessage: Current filters applied
 msgid "Current filters applied"
-msgstr ""
+msgstr "Filtri attualmente applicati"
 
 #: components/ItaliaTheme/View/Commons/Dates
 # defaultMessage: Date aggiuntive
@@ -503,7 +503,7 @@ msgstr ""
 #: helpers/Translations/searchBlockExtendedTranslations
 # defaultMessage: Search
 msgid "SearchSearchBlockButtonText"
-msgstr ""
+msgstr "Cerca"
 
 #: components/ItaliaTheme/Header/SocialHeader
 # defaultMessage: Seguici su

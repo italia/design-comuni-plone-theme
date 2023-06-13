@@ -88,8 +88,28 @@
         }
       }
       .select-facet {
-        div[class*='-ValueContainer'] {
+        // Same div, but for some reason when built, valuecontainer
+        // class is not present in html, design-react-kit fault
+        div[class*='-ValueContainer'],
+        div[class*='-control'] > div:first-child {
           flex-wrap: nowrap;
+          display: flex;
+          -webkit-align-items: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          -webkit-flex: 1 1 0%;
+          -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
+          padding: 2px 8px;
+          -webkit-overflow-scrolling: touch;
+          position: relative;
+          overflow: hidden;
+          box-sizing: border-box;
+          height: 2.5rem;
         }
         div[class*='-placeholder'] {
           color: #484848;
