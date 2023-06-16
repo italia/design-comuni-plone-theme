@@ -42,7 +42,6 @@ const copyFields = ['limit', 'query', 'sort_on', 'sort_order', 'depth'];
 
 const Body = ({ data, block, inEditMode, path, onChangeBlock, reactSlick }) => {
   const intl = useIntl();
-
   const Slider = reactSlick.default;
 
   const [activePage, setActivePage] = useState(0);
@@ -308,6 +307,7 @@ const Body = ({ data, block, inEditMode, path, onChangeBlock, reactSlick }) => {
                 {calendarResults[block].items.map((day, index) => (
                   <div key={index} className="body">
                     <Item
+                      data={data}
                       day={day}
                       query={adaptedQuery}
                       path={path}

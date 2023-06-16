@@ -35,6 +35,10 @@ const messages = defineMessages({
     id: 'Mostra lo sfondo del blocco',
     defaultMessage: 'Mostra lo sfondo del blocco',
   },
+  show_preview_img: {
+    id: 'Mostra le immagini di anteprima',
+    defaultMessage: 'Mostra le immagini di anteprima',
+  },
   show_location_filters: {
     id: 'Mostra i filtri per luogo',
     defaultMessage: 'Mostra i filtri per luogo',
@@ -76,6 +80,20 @@ const ListingSidebar = (props) => {
           id="show_block_bg"
           title={intl.formatMessage(messages.show_block_bg)}
           value={props.data.show_block_bg ? props.data.show_block_bg : false}
+          onChange={(id, value) => {
+            props.onChangeBlock(props.block, {
+              ...props.data,
+              [id]: value,
+            });
+          }}
+        />
+
+        <CheckboxWidget
+          id="show_preview_img"
+          title={intl.formatMessage(messages.show_preview_img)}
+          value={
+            props.data.show_preview_img ? props.data.show_preview_img : false
+          }
           onChange={(id, value) => {
             props.onChangeBlock(props.block, {
               ...props.data,

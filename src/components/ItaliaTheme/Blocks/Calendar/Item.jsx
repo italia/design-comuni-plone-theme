@@ -9,6 +9,7 @@ import useDeepCompareEffect from 'use-deep-compare-effect';
 import { getCalendarDayResults } from 'design-comuni-plone-theme/actions';
 import { ConditionalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import Image from '@plone/volto/components/theme/Image/Image';
 
 import { viewDate } from 'design-comuni-plone-theme/helpers';
 
@@ -27,7 +28,7 @@ const messages = defineMessages({
   },
 });
 
-const Item = ({ day, path, query, inEditMode }) => {
+const Item = ({ day, path, query, inEditMode, data }) => {
   const intl = useIntl();
 
   const calendarDayResults = useSelector(
@@ -59,6 +60,9 @@ const Item = ({ day, path, query, inEditMode }) => {
     );
   }, [dayStart, dayEnd, query, day, dispatch, path]);
 
+  // show event preview image
+  const show_preview_img = data.show_preview_img;
+
   return (
     <div>
       <div className="ps-3 flex-container">
@@ -74,18 +78,35 @@ const Item = ({ day, path, query, inEditMode }) => {
         <hr />
         {calendarDayResults[day] ? (
           calendarDayResults[day].items[day]?.map((item, index) => {
+            const eventHasImage = Object.keys(item.image_scales).length > 0;
+
             return (
               <div key={index} className="calendar-item">
-                <div className="ps-3">
-                  <div>{item?.type}</div>
-                  <div>{moment(item.start).format('HH:mm')}</div>
-                  <div className="calendar-type">
-                    <ConditionalLink
-                      condition={!inEditMode}
-                      href={flattenToAppURL(item['@id'] || '')}
-                    >
-                      {item.title}
-                    </ConditionalLink>
+                <div className="ps-3 calendar-item-container">
+                  {show_preview_img && eventHasImage && (
+                    <div className="item-img">
+                      <Image
+                        image={
+                          item.image_scales?.preview_image?.[0] ||
+                          item.image_scales?.image?.[0]
+                        }
+                        itemUrl={item['@id']}
+                        alt=""
+                        containerClassName="img-wrapper"
+                      />
+                    </div>
+                  )}
+                  <div className="item-info">
+                    <div>{item?.type}</div>
+                    <div>{moment(item.start).format('HH:mm')}</div>
+                    <div className="calendar-type">
+                      <ConditionalLink
+                        condition={!inEditMode}
+                        href={flattenToAppURL(item['@id'] || '')}
+                      >
+                        {item.title}
+                      </ConditionalLink>
+                    </div>
                   </div>
 
                   {item.scadenza_domande_bando &&
