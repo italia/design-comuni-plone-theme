@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Plone\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-05-09 11:45-0400\n"
-"PO-Revision-Date: 2023-05-16 02:30-0400\n"
+"PO-Revision-Date: 2023-06-04 22:25-0400\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language: es\n"
 "Language-Team: ES <LL@li.org>\n"
@@ -1085,7 +1085,7 @@ msgstr "Bloque de información"
 #: config/Blocks/ListingOptions/defaultOptions
 # defaultMessage: Colore di sfondo
 msgid "block_bg_color"
-msgstr ""
+msgstr "Color de fondo"
 
 #: components/ItaliaTheme/Blocks/Info/Sidebar
 # defaultMessage: Colore
@@ -2135,7 +2135,7 @@ msgstr "Este evento tiene varias fechas: ver todas"
 #: config/Blocks/ListingOptions/defaultOptions
 # defaultMessage: Colore dell'elemento
 msgid "listing_items_color"
-msgstr ""
+msgstr "Color del elemento"
 
 #: components/ItaliaTheme/Blocks/VideoGallery/Block/ViewBlock
 #: components/ItaliaTheme/View/Commons/EmbeddedVideo
@@ -3235,12 +3235,12 @@ msgstr "Cierre del procedimiento"
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 # defaultMessage: Data di pubblicazione
 msgid "sort_effective_date"
-msgstr ""
+msgstr "Fecha de publicación"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 # defaultMessage: Data di modifica
 msgid "sort_modified_date"
-msgstr ""
+msgstr "Fecha de modificación"
 
 #: components/ItaliaTheme/Blocks/BandiSearch/Sidebar
 # defaultMessage: Ordina per
