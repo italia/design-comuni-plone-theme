@@ -19,6 +19,15 @@ const messages = defineMessages({
     id: 'twitter_posts_no_results',
     defaultMessage: "Non c'è nessun post da mostrare.",
   },
+  not_found: {
+    id: 'twitter_posts_not_found',
+    defaultMessage: 'Post non trovati.',
+  },
+  twitter_error: {
+    id: 'twitter_error',
+    defaultMessage:
+      "Error: Ci scusiamo per l'inconveniente, il server Twitter non risponde.",
+  },
 });
 
 const getTwitterSliderSettings = (nItems) => {
@@ -94,58 +103,63 @@ const Body = ({ data, isEditMode, reactSlick }) => {
             ))}
           </div>
         )}
+        {!Array.isArray(twitter_posts) && (
+          <div>{intl.formatMessage(messages.not_found)}</div>
+        )}
 
-        <Slider {...getTwitterSliderSettings(twitter_posts.length)}>
-          {twitter_posts.map((tweet, index) => (
-            <div className="it-single-slide-wrapper" key={index}>
-              <div className="tweet rounded">
-                <div className="author">
-                  <div className="user-infos">
-                    <div className="user-name">
-                      <UniversalLink
-                        href={`https://twitter.com/${tweet.author.username}`}
-                      >
-                        {tweet.author.name}
-                      </UniversalLink>
+        {Array.isArray(twitter_posts) && (
+          <Slider {...getTwitterSliderSettings(twitter_posts.length)}>
+            {twitter_posts.map((tweet, index) => (
+              <div className="it-single-slide-wrapper" key={index}>
+                <div className="tweet rounded">
+                  <div className="author">
+                    <div className="user-infos">
+                      <div className="user-name">
+                        <UniversalLink
+                          href={`https://twitter.com/${tweet.author.username}`}
+                        >
+                          {tweet.author.name}
+                        </UniversalLink>
+                      </div>
+                      <div className="user-username pb-3">
+                        <UniversalLink
+                          href={`https://twitter.com/${tweet.author.username}`}
+                        >
+                          @{tweet.author.username}
+                        </UniversalLink>
+                      </div>
                     </div>
-                    <div className="user-username pb-3">
-                      <UniversalLink
-                        href={`https://twitter.com/${tweet.author.username}`}
-                      >
-                        @{tweet.author.username}
-                      </UniversalLink>
+                  </div>
+                  <div
+                    className="tweet-text"
+                    dangerouslySetInnerHTML={{
+                      __html: tweet.text,
+                    }}
+                  />
+                  <div className="date-time">
+                    {moment(tweet.created_at)
+                      .locale(intl.locale)
+                      .format('HH:mm - DD MMM YYYY')}
+                  </div>
+                  <div className="numbers">
+                    <div className="number reply" title="Replies">
+                      <Icon icon="reply" />
+                      {tweet.reply_count > 0 && tweet.reply_count}
                     </div>
-                  </div>
-                </div>
-                <div
-                  className="tweet-text"
-                  dangerouslySetInnerHTML={{
-                    __html: tweet.text,
-                  }}
-                />
-                <div className="date-time">
-                  {moment(tweet.created_at)
-                    .locale(intl.locale)
-                    .format('HH:mm - DD MMM YYYY')}
-                </div>
-                <div className="numbers">
-                  <div className="number reply" title="Replies">
-                    <Icon icon="reply" />
-                    {tweet.reply_count > 0 && tweet.reply_count}
-                  </div>
-                  <div className="number retweet" title="Retweets">
-                    <Icon icon="retweet" />{' '}
-                    {tweet.retweet_count > 0 && tweet.retweet_count}
-                  </div>
-                  <div className="number like" title="Likes">
-                    <Icon icon="heart" />
-                    {tweet.like_count > 0 && tweet.like_count}
+                    <div className="number retweet" title="Retweets">
+                      <Icon icon="retweet" />{' '}
+                      {tweet.retweet_count > 0 && tweet.retweet_count}
+                    </div>
+                    <div className="number like" title="Likes">
+                      <Icon icon="heart" />
+                      {tweet.like_count > 0 && tweet.like_count}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </Slider>
+            ))}
+          </Slider>
+        )}
       </div>
     ) : isEditMode ? (
       intl.formatMessage(messages.no_results)
@@ -159,7 +173,7 @@ const Body = ({ data, isEditMode, reactSlick }) => {
         <Container className="p-2">
           <div className="pt-4 pb-4">
             <strong>Twitter Posts: </strong>
-            {request.error?.response?.body?.error?.message}
+            {intl.formatMessage(messages.twitter_error)}
           </div>
         </Container>
       </Section>

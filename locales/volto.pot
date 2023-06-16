@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-06-07T14:21:20.506Z\n"
+"POT-Creation-Date: 2023-06-14T12:48:28.991Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -3085,7 +3085,7 @@ msgid "search_startDate"
 msgstr ""
 
 #: helpers/Translations/searchBlockExtendedTranslations
-# defaultMessage: Ricerca per: <em>{searchedtext}</em>.
+# defaultMessage: Ricerca per: <em>{searchedtext}</em>. 
 msgid "searchedFor"
 msgstr ""
 
@@ -3750,8 +3750,18 @@ msgid "twitterAccounts_description"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/TwitterPosts/Body
+# defaultMessage: Error: Ci scusiamo per l'inconveniente, il server Twitter non risponde.
+msgid "twitter_error"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/TwitterPosts/Body
 # defaultMessage: Non c'è nessun post da mostrare.
 msgid "twitter_posts_no_results"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/TwitterPosts/Body
+# defaultMessage: Post non trovati.
+msgid "twitter_posts_not_found"
 msgstr ""
 
 #: components/ItaliaTheme/View/IncaricoView/IncaricoView

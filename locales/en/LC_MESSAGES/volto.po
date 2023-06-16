@@ -3748,9 +3748,19 @@ msgid "twitterAccounts_description"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/TwitterPosts/Body
+# defaultMessage: Error: Ci scusiamo per l'inconveniente, il server Twitter non risponde.
+msgid "twitter_error"
+msgstr "Sorry for the inconvenience, Twitter server is not responding"
+
+#: components/ItaliaTheme/Blocks/TwitterPosts/Body
 # defaultMessage: Non c'è nessun post da mostrare.
 msgid "twitter_posts_no_results"
 msgstr "There is no post to show"
+
+#: components/ItaliaTheme/Blocks/TwitterPosts/Body
+# defaultMessage: Post non trovati.
+msgid "twitter_posts_not_found"
+msgstr "Posts not found"
 
 #: components/ItaliaTheme/View/IncaricoView/IncaricoView
 # defaultMessage: Unita organizzativa
