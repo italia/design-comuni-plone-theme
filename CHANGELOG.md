@@ -1,3 +1,20 @@
+## [8.0.0-alpha.38](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.37...v8.0.0-alpha.38) (2023-06-19)
+
+
+### Features
+
+* added checkbox for event images in calendar ([#208](https://github.com/RedTurtle/design-comuni-plone-theme/issues/208)) ([e5dcd91](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e5dcd9112b65d98e329666e44a0544504a906e22))
+* aggiunto blocco search ([#198](https://github.com/RedTurtle/design-comuni-plone-theme/issues/198)) ([2f7c7b1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2f7c7b10038eef20883194fa035f3ff7f84691f7))
+* twitter errors ([#206](https://github.com/RedTurtle/design-comuni-plone-theme/issues/206)) ([6cee7ed](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6cee7ed200349e9e58705f1c88558bedb3075187))
+
+
+### Bug Fixes
+
+* fixed logout icon color ([#199](https://github.com/RedTurtle/design-comuni-plone-theme/issues/199)) ([dd2ac69](https://github.com/RedTurtle/design-comuni-plone-theme/commit/dd2ac696613e63183ed16691759c7c700cf3d202))
+* hid cookie icon from print mode ([#205](https://github.com/RedTurtle/design-comuni-plone-theme/issues/205)) ([089a60d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/089a60d1d725b576f6d58126373a7c2ad8afc81a))
+* locales ([b7747ba](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b7747bab717dee9e33326f883e75d91ff01d5cbf))
+* missing it translation, workaround for react select missing classnames in build due to design-react-kit mishap ([#202](https://github.com/RedTurtle/design-comuni-plone-theme/issues/202)) ([be2e53d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/be2e53dc21e948da7c968a072ac487154aa49702))
+
 ## [8.0.0-alpha.37](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.36...v8.0.0-alpha.37) (2023-06-07)
 
 
