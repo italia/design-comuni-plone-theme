@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-06-14T12:48:28.991Z\n"
+"POT-Creation-Date: 2023-06-19T15:33:01.943Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -382,6 +382,11 @@ msgstr ""
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Mostra i filtri per percorso
 msgid "Mostra i filtri per percorso"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
+# defaultMessage: Mostra le immagini di anteprima
+msgid "Mostra le immagini di anteprima"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
