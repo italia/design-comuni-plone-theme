@@ -1,3 +1,26 @@
+## [7.11.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.10.0...v7.11.0) (2023-06-20)
+
+
+### Features
+
+* link more button added to calendar block ([#200](https://github.com/RedTurtle/design-comuni-plone-theme/issues/200)) ([36898b1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/36898b16976007c7b2ade6b9209d725c5f207fa6))
+* twitter block errors ([#204](https://github.com/RedTurtle/design-comuni-plone-theme/issues/204)) ([b0b7ebc](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b0b7ebc8a5cc5855c5cbcc094f4b29fa64907d36))
+
+
+### Bug Fixes
+
+* empty alt tag + aria-hidden for link in cards ([#173](https://github.com/RedTurtle/design-comuni-plone-theme/issues/173)) ([aa38732](https://github.com/RedTurtle/design-comuni-plone-theme/commit/aa3873215ac35c27bd3f909761bb7c06f58bdc00))
+
+
+### Maintenance
+
+* updated spanish translation ([#136](https://github.com/RedTurtle/design-comuni-plone-theme/issues/136)) ([ae05356](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ae053567321beae01fb618b8dc306c368c64be21))
+
+
+### Documentation
+
+* updated publiccode ([4939283](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4939283999cdc48bb3b82e9d28a81718af8d71aa))
+
 ## [7.10.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.9.0...v7.10.0) (2023-05-29)
 
 
