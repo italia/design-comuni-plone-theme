@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useIntl, defineMessages } from 'react-intl';
 import { Skiplink, SkiplinkItem } from 'design-react-kit';
 
@@ -19,6 +19,16 @@ const messages = defineMessages({
 
 const SkipLinks = () => {
   const intl = useIntl();
+
+  // funzione per rimuovere .visually-hidden dagli skiplinks
+  // per correggere bug di design-react-kit che li nasconde
+  useEffect(() => {
+    const skiplinks = document.querySelectorAll(
+      '.skiplinks a.visually-hidden-focusable',
+    );
+
+    skiplinks.forEach((link) => link.classList.remove('visually-hidden'));
+  }, []);
 
   return (
     <Skiplink tag="div">
