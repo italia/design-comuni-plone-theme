@@ -44,17 +44,18 @@ const MenuSecondary = ({ pathname }) => {
 
   return (
     items?.length > 0 && (
-      <Nav navbar className="navbar-secondary" role="navigation">
+      <Nav navbar className="navbar-secondary" role="menubar">
         {items.map((item, i) => {
           let url = item.href || item.linkUrl?.[0]?.['@id'] || '';
 
           return (
-            <NavItem tag="li" active={isMenuActive(url)} key={i}>
+            <NavItem tag="li" active={isMenuActive(url)} key={i} role="none">
               <NavLink
                 href={url === '' ? '/' : flattenToAppURL(url)}
                 tag={UniversalLink}
                 active={isMenuActive(url)}
                 data-element={item.id_lighthouse}
+                role="menuitem"
               >
                 <span
                   className={item.inEvidence ? 'font-weight-bold' : ''}

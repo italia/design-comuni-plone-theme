@@ -112,13 +112,14 @@ const MegaMenu = ({ item, pathname }) => {
 
   if (item.mode === 'simpleLink') {
     return item.linkUrl?.length > 0 ? (
-      <NavItem tag="li" active={isItemActive}>
+      <NavItem tag="li" active={isItemActive} role="none">
         <NavLink
           href={item.linkUrl === '' ? '/' : null}
           item={item.linkUrl[0]?.['@id'] ? item.linkUrl[0] : '#'}
           tag={UniversalLink}
           active={isItemActive}
           data-element={item.id_lighthouse}
+          role="menuitem"
         >
           <span dangerouslySetInnerHTML={{ __html: item.title }}></span>
           {isItemActive && (
@@ -238,7 +239,7 @@ const MegaMenu = ({ item, pathname }) => {
     }
 
     return (
-      <NavItem tag="li" className="megamenu" active={isItemActive}>
+      <NavItem tag="li" className="megamenu" active={isItemActive} role="none">
         <UncontrolledDropdown
           nav
           inNavbar
@@ -269,6 +270,9 @@ const MegaMenu = ({ item, pathname }) => {
                   }
                 }}
                 title={intl.formatMessage(messages.closeMenu)}
+                // APG spec: on Tab menu closes, so remove it from focusable elements
+                // https://www.w3.org/WAI/ARIA/apg/patterns/menubar/examples/menubar-navigation/
+                tabIndex="-1"
               >
                 <Icon icon="it-close" />
               </Button>
@@ -278,10 +282,14 @@ const MegaMenu = ({ item, pathname }) => {
                 <Row>
                   {childrenGroups.map((group, index) => (
                     <Col lg={12 / max_cols} key={'group_' + index}>
-                      <LinkList className="bordered">
+                      <LinkList
+                        className="bordered"
+                        role="menu"
+                        aria-label={item.title ?? ''}
+                      >
                         {group.map((child, idx) => {
                           return (
-                            <li key={child['@id'] + idx}>
+                            <li key={child['@id'] + idx} role="none">
                               {child.showAsHeader ? (
                                 <h3
                                   className={cx('list-item', {
@@ -298,6 +306,7 @@ const MegaMenu = ({ item, pathname }) => {
                                     key={child['@id']}
                                     onClick={() => setMenuStatus(false)}
                                     role="menuitem"
+                                    aria-current="page"
                                   >
                                     <span>{child.title}</span>
                                   </ConditionalLink>
@@ -362,12 +371,13 @@ const MegaMenu = ({ item, pathname }) => {
                 <Row>
                   <Col lg={8} />
                   <Col lg={4}>
-                    <LinkList>
-                      <li className="it-more text-right">
+                    <LinkList role="menu" aria-label={item.showMoreText ?? ''}>
+                      <li className="it-more text-right" role="none">
                         <UniversalLink
                           className="list-item medium"
                           item={item.showMoreLink[0]}
                           onClick={() => setMenuStatus(false)}
+                          role="menuitem"
                         >
                           <span>
                             {item.showMoreText?.length > 0
