@@ -21,19 +21,29 @@ const messages = defineMessages({
 
 const ServizioCostiVincoli = ({ content }) => {
   const intl = useIntl();
+  const sectionTitleToRender = () => {
+    if (richTextHasContent(content.costi))
+      return intl.formatMessage(messages.costi_e_vincoli_header);
+    else if (
+      !richTextHasContent(content.costi) &&
+      richTextHasContent(content.vincoli)
+    )
+      return intl.formatMessage(messages.vincoli);
+  };
 
   return richTextHasContent(content.costi) ||
     richTextHasContent(content.vincoli) ? (
-    <RichTextSection
-      tag_id="costs"
-      title={intl.formatMessage(messages.costi_e_vincoli_header)}
-    >
+    <RichTextSection tag_id="costs" title={sectionTitleToRender()}>
       {richTextHasContent(content.costi) && (
         <RichText add_class="mb-5" data={content.costi} />
       )}
       {richTextHasContent(content.vincoli) && (
         <RichText
-          title={intl.formatMessage(messages.vincoli)}
+          title={
+            richTextHasContent(content.costi)
+              ? intl.formatMessage(messages.vincoli)
+              : null
+          }
           title_size="h4"
           add_class="mb-5"
           data={content.vincoli}
