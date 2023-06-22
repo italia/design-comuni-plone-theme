@@ -55,18 +55,27 @@
     width: 1.5rem;
     height: auto;
     color: transparentize($gray-secondary, 0.6);
-
+    padding: 0;
+    &::before {
+      display: none;
+    }
     &:hover,
     &:focus {
       color: transparentize($gray-secondary, 0.3);
     }
 
     &.slick-next {
-      right: -2.9rem;
+      right: -3.5rem;
+      @media (max-width: #{map-get($grid-breakpoints, md)}) {
+        right: -3rem;
+      }
     }
 
     &.slick-prev {
-      left: -2.9rem;
+      left: -3.5rem;
+      @media (max-width: #{map-get($grid-breakpoints, md)}) {
+        left: -3rem;
+      }
     }
   }
 
