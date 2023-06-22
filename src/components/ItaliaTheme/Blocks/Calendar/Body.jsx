@@ -174,22 +174,35 @@ const Body = ({ data, block, inEditMode, path, onChangeBlock, reactSlick }) => {
   const addFilters = (filters = []) => {
     setAdditionalFilters(filters);
   };
+  const NextArrow = (props) => {
+    const { onClick, className } = props;
+    return (
+      <Button outline color={'unset'} className={className} onClick={onClick}>
+        <FontAwesomeIcon
+          title={intl.formatMessage(messages.calendar_next_arrow)}
+          icon={['fas', 'chevron-right']}
+        />
+      </Button>
+    );
+  };
+
+  const PrevArrow = (props) => {
+    const { onClick, className } = props;
+    return (
+      <Button outline color={'unset'} className={className} onClick={onClick}>
+        <FontAwesomeIcon
+          title={intl.formatMessage(messages.calendar_prev_arrow)}
+          icon={['fas', 'chevron-left']}
+        />
+      </Button>
+    );
+  };
 
   const settings = {
     dots: true,
     arrows: true,
-    nextArrow: (
-      <FontAwesomeIcon
-        title={intl.formatMessage(messages.calendar_next_arrow)}
-        icon={['fas', 'chevron-right']}
-      />
-    ),
-    prevArrow: (
-      <FontAwesomeIcon
-        title={intl.formatMessage(messages.calendar_prev_arrow)}
-        icon={['fas', 'chevron-left']}
-      />
-    ),
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     speed: 500,
     slidesToShow: data.b_size || 4,
     slidesToScroll: data.b_size || 4,
@@ -204,7 +217,6 @@ const Body = ({ data, block, inEditMode, path, onChangeBlock, reactSlick }) => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          dots: true,
         },
       },
       {
@@ -218,9 +230,9 @@ const Body = ({ data, block, inEditMode, path, onChangeBlock, reactSlick }) => {
       {
         breakpoint: 600,
         settings: {
-          dots: false,
           slidesToShow: 1,
           slidesToScroll: 1,
+          dots: false,
         },
       },
     ],
