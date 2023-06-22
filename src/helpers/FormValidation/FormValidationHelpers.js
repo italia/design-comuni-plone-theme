@@ -77,6 +77,8 @@ export const getRealEmptyField = (
     );
   } else if (type === 'string' && widget === 'richtext') {
     return !(formData?.[field]?.data?.replace(/(<([^>]+)>)/g, '').length > 0);
+  } else if (type === 'integer') {
+    return formData?.[field] === null || formData?.[field] === undefined;
   } else {
     return isEmpty(formData[field]);
   }
