@@ -267,6 +267,7 @@ msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/MenuConfigurationForm
 #: components/ItaliaTheme/manage/Widgets/SecondaryMenuConfigurationForm
+#: components/ItaliaTheme/manage/Widgets/SubFooterConfigurationForm
 # defaultMessage: ID lighthouse
 msgid "ID lighthouse"
 msgstr ""
