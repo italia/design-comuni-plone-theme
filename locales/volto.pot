@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-06-23T13:25:05.924Z\n"
+"POT-Creation-Date: 2023-06-23T13:49:31.231Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -2308,6 +2308,11 @@ msgstr ""
 msgid "numbers_block"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/TwitterPosts/Body
+# defaultMessage: Replies
+msgid "numbers_replies"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderNewsItem
 # defaultMessage: Numero del comunicato stampa
 msgid "numero_progressivo_cs"
@@ -3454,6 +3459,11 @@ msgid "twitter_error"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/TwitterPosts/Body
+# defaultMessage: Likes
+msgid "twitter_likes"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/TwitterPosts/Body
 # defaultMessage: Non c'è nessun post da mostrare.
 msgid "twitter_posts_no_results"
 msgstr ""
@@ -3461,6 +3471,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/TwitterPosts/Body
 # defaultMessage: Post non trovati.
 msgid "twitter_posts_not_found"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/TwitterPosts/Body
+# defaultMessage: Retweets
+msgid "twitter_retweets"
 msgstr ""
 
 #: components/ItaliaTheme/View/BandoView/BandoUfficioResponsabile
