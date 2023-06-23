@@ -1224,6 +1224,11 @@ msgstr "Vecindario"
 msgid "close"
 msgstr "Cerca"
 
+#: components/Collapse
+# defaultMessage: Chiudi menu
+msgid "close-menu"
+msgstr ""
+
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Chiudi cerca
 msgid "closeSearch"
