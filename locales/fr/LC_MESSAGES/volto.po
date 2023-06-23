@@ -277,6 +277,11 @@ msgstr "Si vous êtes certain que l'adresse est bonne, mais que vous avez un err
 msgid "Image"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/Events
+# defaultMessage: Immagine
+msgid "Immagine"
+msgstr ""
+
 #: components/ItaliaTheme/Footer/FooterSmall
 # defaultMessage: Impostazioni cookie
 msgid "Impostazioni cookie footer"
