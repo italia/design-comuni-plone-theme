@@ -1,3 +1,22 @@
+### [7.11.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.11.0...v7.11.1) (2023-06-23)
+
+
+### Bug Fixes
+
+* accessibility for megamenu ([#210](https://github.com/RedTurtle/design-comuni-plone-theme/issues/210)) ([a7618ba](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a7618ba7298a526742c81e0fd16f32feef714f0b))
+* calendar arrows mobile ([#201](https://github.com/RedTurtle/design-comuni-plone-theme/issues/201)) ([36697f3](https://github.com/RedTurtle/design-comuni-plone-theme/commit/36697f3c9238aa3ea2e4fa10d1e4ee4749ac18df))
+* fa icons width bug ([#220](https://github.com/RedTurtle/design-comuni-plone-theme/issues/220)) ([cd25c63](https://github.com/RedTurtle/design-comuni-plone-theme/commit/cd25c63a0fd041621cb5b2e6bfa977d3e02ea9ce))
+
+
+### Maintenance
+
+* remove bundle_size ([bd9017f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/bd9017f86d6dc65e35e387fc2a964251535b459f))
+
+
+### Documentation
+
+* updated publiccode ([36b0044](https://github.com/RedTurtle/design-comuni-plone-theme/commit/36b004462c2f03a42b769f415d36225290055a37))
+
 ## [7.11.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.10.0...v7.11.0) (2023-06-20)
 
 
