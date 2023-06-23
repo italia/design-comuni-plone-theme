@@ -1427,6 +1427,11 @@ msgstr "Questa pagina ti è stata utile?"
 msgid "customer_satisfaction_yes"
 msgstr "Sì"
 
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderEventDates
+# defaultMessage: dal {dateStart} fino a conclusione
+msgid "dal {dateStart} fino a conclusione"
+msgstr ""
+
 #: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Ha fatto parte dell'organizzazione comunale fino al
 msgid "data_conclusione_incarico"
