@@ -163,7 +163,7 @@
     "stylelint-prettier": "^2.0.0"
   },
   "peerDependencies": {
-    "@plone/volto": "16.20.7"
+    "@plone/volto": "16.20.8"
   },
   "packageManager": "yarn@3.2.3"
 }
