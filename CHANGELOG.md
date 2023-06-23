@@ -1,3 +1,27 @@
+## [8.0.0-alpha.39](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.38...v8.0.0-alpha.39) (2023-06-23)
+
+
+### Features
+
+* upgrade to volto 16.21.0 ([5b0eafc](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5b0eafc0fd98aa5866258fdd616e8ccc20953a52))
+
+
+### Bug Fixes
+
+* calendar block arrows ([#209](https://github.com/RedTurtle/design-comuni-plone-theme/issues/209)) ([5490ecb](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5490ecb48f8ac619cd7d13a9c18bdb25bf2cf578))
+* fa icons width bug ([#219](https://github.com/RedTurtle/design-comuni-plone-theme/issues/219)) ([4d7b49a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4d7b49ae8b5d34e4e320e1cf38567f6b4eb62fec))
+* fixed integer field value of FormValidationHelpers ([#216](https://github.com/RedTurtle/design-comuni-plone-theme/issues/216)) ([528bceb](https://github.com/RedTurtle/design-comuni-plone-theme/commit/528bcebd16bc3ebee1f8966cdff529e521acdf5e))
+* fixed style for CardBody length when CardPersona has image ([#207](https://github.com/RedTurtle/design-comuni-plone-theme/issues/207)) ([04d1ed9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/04d1ed93af4ab65c01c3ffab4bb0f570d0514afa))
+* il titolo dei costi del servizio ora dipende da quali campi sono popolati ([#203](https://github.com/RedTurtle/design-comuni-plone-theme/issues/203)) ([936a154](https://github.com/RedTurtle/design-comuni-plone-theme/commit/936a154ce59ee662b68a173eb03272d427109f15))
+* removed class that hid skiplinks ([#211](https://github.com/RedTurtle/design-comuni-plone-theme/issues/211)) ([c8f25a7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c8f25a7df9cb4b9a4932e974a0ade83d006af9a0))
+* upgrade volto to volto 16.20.8, remove customization, fix [#193](https://github.com/RedTurtle/design-comuni-plone-theme/issues/193) ([#217](https://github.com/RedTurtle/design-comuni-plone-theme/issues/217)) ([e9bd983](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e9bd983b18fcdf1b21f374957f48d1c06f789bc9))
+* upgrades for volto 16.21.0 ([b4aa077](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b4aa077d2cfe484cd33f634bacd3684d396f034e))
+
+
+### Maintenance
+
+* upgrade volto to 16.21.0 ([841cb37](https://github.com/RedTurtle/design-comuni-plone-theme/commit/841cb377e1ee650f5b69efac882b40ffc6f4e474))
+
 ## [8.0.0-alpha.38](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.37...v8.0.0-alpha.38) (2023-06-19)
 
 
