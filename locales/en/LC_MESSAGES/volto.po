@@ -1730,6 +1730,7 @@ msgid "download"
 msgstr "Download"
 
 #: components/ItaliaTheme/Blocks/VideoGallery/Block/ViewBlock
+#: components/ItaliaTheme/View/Commons/EmbeddedVideo
 # defaultMessage: Download and Play video
 msgid "downloadPlayVideo"
 msgstr ""
@@ -1834,6 +1835,11 @@ msgstr "E-mail"
 # defaultMessage: E-mail
 msgid "email_sede"
 msgstr "E-mail"
+
+#: components/ItaliaTheme/View/Commons/EmbeddedVideo
+# defaultMessage: YouTube Video {id}
+msgid "embedVideo"
+msgstr ""
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Edit
 # defaultMessage: Please select an item in the sidebar in order to show it here
