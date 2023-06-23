@@ -901,6 +901,11 @@ msgid "ay11_Use Up and Down to choose options"
 msgstr "Use Arriba y Abajo para elegir opciones"
 
 #: components/SelectInput/SelectInput
+# defaultMessage: Annulla
+msgid "ay11_select cancel"
+msgstr ""
+
+#: components/SelectInput/SelectInput
 # defaultMessage: deselezionata
 msgid "ay11_select deselected"
 msgstr "deseleccionado"
