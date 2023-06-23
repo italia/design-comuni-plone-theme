@@ -138,6 +138,7 @@ msgstr "Content"
 msgid "Date aggiuntive"
 msgstr "More dates"
 
+#: components/ItaliaTheme/Blocks/Calendar/schema
 #: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
 #: components/ItaliaTheme/manage/Widgets/TinymceWidget
 # defaultMessage: Default

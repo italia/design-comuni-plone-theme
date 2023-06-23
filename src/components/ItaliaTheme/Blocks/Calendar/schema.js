@@ -2,6 +2,10 @@ import { defineMessages } from 'react-intl';
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({
+  Default: {
+    id: 'Default',
+    defaultMessage: 'Default',
+  },
   listing: {
     id: 'Listing',
     defaultMessage: 'Listing',
@@ -29,7 +33,7 @@ export const schemaCalendar = (props, intl) => ({
   fieldsets: [
     {
       id: 'default',
-      title: 'Default',
+      title: intl.formatMessage(messages.Default),
       fields: ['querystring'],
     },
     ...(config.blocks.blocksConfig.listing.showLinkMore
