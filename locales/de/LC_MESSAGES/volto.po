@@ -275,6 +275,11 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/Events
+# defaultMessage: Immagine
+msgid "Immagine"
+msgstr ""
+
 #: components/ItaliaTheme/Footer/FooterSmall
 # defaultMessage: Impostazioni cookie
 msgid "Impostazioni cookie footer"
