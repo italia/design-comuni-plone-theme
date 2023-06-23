@@ -1089,6 +1089,11 @@ msgstr "Colore di sfondo"
 msgid "border_color"
 msgstr "Colore"
 
+#: components/ItaliaTheme/View/Commons/SideMenu
+# defaultMessage: Toggle navigation
+msgid "button-toggler-toggle-navigation"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
 # defaultMessage: Calendario
 msgid "calendarBlockSidebarTitle"

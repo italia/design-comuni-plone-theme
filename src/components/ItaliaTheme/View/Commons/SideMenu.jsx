@@ -23,6 +23,10 @@ const messages = defineMessages({
     id: 'close',
     defaultMessage: 'Chiudi',
   },
+  buttonToggle: {
+    id: 'button-toggler-toggle-navigation',
+    defaultMessage: 'Toggle navigation',
+  },
 });
 
 const extractHeaders = (elements, intl) => {
@@ -148,7 +152,7 @@ const SideMenu = ({ data, content_uid }) => {
           type="button"
           aria-controls="navbarNavB"
           aria-expanded={isNavOpen ? 'true' : 'false'}
-          aria-label="Toggle navigation"
+          aria-label={intl.formatMessage(messages.buttonToggle)}
           data-target="#navbarNavB"
           onClick={() => onNavScrollToggle()}
         >

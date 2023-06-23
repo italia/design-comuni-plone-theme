@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-06-23T14:35:40.578Z\n"
+"POT-Creation-Date: 2023-06-23T14:38:44.261Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1089,6 +1089,11 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Info/Sidebar
 # defaultMessage: Colore
 msgid "border_color"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/SideMenu
+# defaultMessage: Toggle navigation
+msgid "button-toggler-toggle-navigation"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
