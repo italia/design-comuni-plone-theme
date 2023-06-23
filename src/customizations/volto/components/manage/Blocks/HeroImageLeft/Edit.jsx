@@ -12,7 +12,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
-
 import { readAsDataURL } from 'promise-file-reader';
 import { Button, Dimmer, Loader, Message } from 'semantic-ui-react';
 import { isEqual } from 'lodash';
@@ -20,11 +19,16 @@ import { defineMessages, injectIntl } from 'react-intl';
 import cx from 'classnames';
 
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-import { flattenToAppURL, getBaseUrl } from '@plone/volto/helpers';
+import {
+  flattenToAppURL,
+  getBaseUrl,
+  validateFileUploadSize,
+} from '@plone/volto/helpers';
 import { createContent } from '@plone/volto/actions';
-import { Icon, SidebarPortal } from '@plone/volto/components';
+import { Icon, SidebarPortal, LinkMore } from '@plone/volto/components';
 
 import clearSVG from '@plone/volto/icons/clear.svg';
+
 import StoresButtons from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/HeroImageLeft/StoresButtons';
 import HeroSidebar from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/HeroImageLeft/HeroSidebar';
 
@@ -55,6 +59,11 @@ const messages = defineMessages({
   },
 });
 
+/**
+ * Edit image block class.
+ * @class Edit
+ * @extends Component
+ */
 class EditComponent extends Component {
   /**
    * Property types.
@@ -66,7 +75,7 @@ class EditComponent extends Component {
     block: PropTypes.string.isRequired,
     index: PropTypes.number.isRequired,
     data: PropTypes.objectOf(PropTypes.any).isRequired,
-    content: PropTypes.objectOf(PropTypes.any).isRequired,
+    content: PropTypes.objectOf(PropTypes.any),
     request: PropTypes.shape({
       loading: PropTypes.bool,
       loaded: PropTypes.bool,
@@ -108,8 +117,6 @@ class EditComponent extends Component {
     const { Map } = this.props.immutableLib;
 
     if (!__SERVER__) {
-      let titleEditorState;
-      let descriptionEditorState;
       const { DefaultDraftBlockRenderMap, EditorState } = props.draftJs;
       const { stateFromHTML } = props.draftJsImportHtml;
 
@@ -125,13 +132,16 @@ class EditComponent extends Component {
         },
       });
 
-      this.extendedBlockRenderMap =
-        DefaultDraftBlockRenderMap.merge(blockTitleRenderMap);
+      this.extendedBlockRenderMap = DefaultDraftBlockRenderMap.merge(
+        blockTitleRenderMap,
+      );
 
       this.extendedDescripBlockRenderMap = DefaultDraftBlockRenderMap.merge(
         blockDescriptionRenderMap,
       );
 
+      let titleEditorState;
+      let descriptionEditorState;
       if (props.data && props.data.title) {
         titleEditorState = EditorState.createWithContent(
           stateFromHTML(props.data.title),
@@ -176,12 +186,9 @@ class EditComponent extends Component {
    * @returns {undefined}
    */
   UNSAFE_componentWillReceiveProps(nextProps) {
-    const { stateFromHTML } = this.props.draftJsImportHtml;
-    const { EditorState } = this.props.draftJs;
-
     if (
-      this.props.request?.loading &&
-      nextProps.request?.loaded &&
+      this.props.request.loading &&
+      nextProps.request.loaded &&
       this.state.uploading
     ) {
       this.setState({
@@ -192,6 +199,9 @@ class EditComponent extends Component {
         url: nextProps.content['@id'],
       });
     }
+
+    const { EditorState } = this.props.draftJs;
+    const { stateFromHTML } = this.props.draftJsImportHtml;
 
     if (
       nextProps.data.title &&
@@ -275,6 +285,7 @@ class EditComponent extends Component {
    */
   onUploadImage({ target }) {
     const file = target.files[0];
+    if (!validateFileUploadSize(file, this.props.intl.formatMessage)) return;
     this.setState({
       uploading: true,
     });
@@ -392,8 +403,7 @@ class EditComponent extends Component {
                   placeholder={this.props.intl.formatMessage(messages.title)}
                   blockStyleFn={() => 'title-editor'}
                   onUpArrow={() => {
-                    const selectionState =
-                      this.state.titleEditorState.getSelection();
+                    const selectionState = this.state.titleEditorState.getSelection();
                     const { titleEditorState } = this.state;
                     if (
                       titleEditorState
@@ -409,8 +419,7 @@ class EditComponent extends Component {
                     }
                   }}
                   onDownArrow={() => {
-                    const selectionState =
-                      this.state.titleEditorState.getSelection();
+                    const selectionState = this.state.titleEditorState.getSelection();
                     const { titleEditorState } = this.state;
                     if (
                       titleEditorState
@@ -439,8 +448,7 @@ class EditComponent extends Component {
                 )}
                 blockStyleFn={() => 'description-editor'}
                 onUpArrow={() => {
-                  const selectionState =
-                    this.state.descriptionEditorState.getSelection();
+                  const selectionState = this.state.descriptionEditorState.getSelection();
                   const currentCursorPosition = selectionState.getStartOffset();
 
                   if (currentCursorPosition === 0) {
@@ -449,8 +457,7 @@ class EditComponent extends Component {
                   }
                 }}
                 onDownArrow={() => {
-                  const selectionState =
-                    this.state.descriptionEditorState.getSelection();
+                  const selectionState = this.state.descriptionEditorState.getSelection();
                   const { descriptionEditorState } = this.state;
                   const currentCursorPosition = selectionState.getStartOffset();
                   const blockLength = descriptionEditorState
@@ -469,10 +476,10 @@ class EditComponent extends Component {
               <StoresButtons data={this.props.data} />
             </div>
           </div>
-          <SidebarPortal selected={this.props.selected}>
-            <HeroSidebar {...this.props} />
-          </SidebarPortal>
         </div>
+        <SidebarPortal selected={this.props.selected}>
+          <HeroSidebar {...this.props} />
+        </SidebarPortal>
       </div>
     );
   }

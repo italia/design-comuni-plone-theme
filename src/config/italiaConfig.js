@@ -248,6 +248,7 @@ export default function applyConfig(voltoConfig) {
         component: PageLoader,
       },
     ],
+    maxFileUploadSize: null,
     'volto-blocks-widget': {
       allowedBlocks: [
         ...(config.settings['volto-blocks-widget']?.allowedBlocks ?? []).filter(
@@ -448,10 +449,9 @@ export default function applyConfig(voltoConfig) {
     },
   };
   // Remove Horizontal Menu variation of TOC Block
-  config.blocks.blocksConfig.toc.variations =
-    config.blocks.blocksConfig.toc.variations.filter(
-      (v) => v.id !== 'horizontalMenu',
-    );
+  config.blocks.blocksConfig.toc.variations = config.blocks.blocksConfig.toc.variations.filter(
+    (v) => v.id !== 'horizontalMenu',
+  );
 
   // REDUCERS
   config.addonReducers = {
