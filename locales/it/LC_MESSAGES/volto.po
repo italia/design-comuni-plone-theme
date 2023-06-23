@@ -1215,6 +1215,11 @@ msgstr "Circoscrizione"
 msgid "close"
 msgstr "chiudi"
 
+#: components/Collapse
+# defaultMessage: Chiudi menu
+msgid "close-menu"
+msgstr ""
+
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Chiudi cerca
 msgid "closeSearch"

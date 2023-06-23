@@ -1215,6 +1215,11 @@ msgstr "District"
 msgid "close"
 msgstr "close"
 
+#: components/Collapse
+# defaultMessage: Chiudi menu
+msgid "close-menu"
+msgstr ""
+
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Chiudi cerca
 msgid "closeSearch"
