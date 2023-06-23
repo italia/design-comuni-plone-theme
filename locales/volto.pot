@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-06-23T14:49:52.743Z\n"
+"POT-Creation-Date: 2023-06-23T14:53:32.155Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -891,6 +891,11 @@ msgstr ""
 #: components/SelectInput/SelectInput
 # defaultMessage: Usa le frecce Su e Giu per scegliere un'opzione
 msgid "ay11_Use Up and Down to choose options"
+msgstr ""
+
+#: components/SelectInput/SelectInput
+# defaultMessage: Annulla
+msgid "ay11_select cancel"
 msgstr ""
 
 #: components/SelectInput/SelectInput
