@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-06-23T14:47:47.393Z\n"
+"POT-Creation-Date: 2023-06-23T14:49:52.743Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -254,6 +254,7 @@ msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/MenuConfigurationForm
 #: components/ItaliaTheme/manage/Widgets/SecondaryMenuConfigurationForm
+#: components/ItaliaTheme/manage/Widgets/SubFooterConfigurationForm
 # defaultMessage: ID lighthouse
 msgid "ID lighthouse"
 msgstr ""

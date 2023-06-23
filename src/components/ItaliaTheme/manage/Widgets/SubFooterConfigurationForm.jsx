@@ -45,6 +45,10 @@ const messages = defineMessages({
     id: 'subfooter-deletemenuitem-button',
     defaultMessage: 'Delete menu item',
   },
+  id_lighthouse: {
+    id: 'ID lighthouse',
+    defaultMessage: 'ID lighthouse',
+  },
   id_lighthouse_description: {
     id: 'ID Lighthouse Help Description',
     defaultMessage:
@@ -109,7 +113,7 @@ const SubFooterConfigurationForm = ({
       />
       <SelectWidget
         id={`${id}-lighthouse`}
-        title="ID lighthouse"
+        title={intl.formatMessage(messages.id_lighthouse)}
         description={intl.formatMessage(messages.id_lighthouse_description)}
         choices={[
           ['accessibility-link', 'accessibility-link'],
