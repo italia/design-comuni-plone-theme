@@ -34,4 +34,4 @@ jobs:
           build-args: |
             ADDON_NAME=design-comuni-plone-theme
             ADDON_PATH=design-comuni-plone-theme
-            VOLTO_VERSION=16.20.7
+            VOLTO_VERSION=16.21.0
