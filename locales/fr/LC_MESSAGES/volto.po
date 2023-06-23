@@ -192,6 +192,11 @@ msgstr ""
 msgid "Dimensione della mappa"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/TrasparenzaFields
+# defaultMessage: Download
+msgid "Download"
+msgstr ""
+
 #: config/RichTextEditor/Plugins/AnchorPlugin/components/LinkButton/AddLinkForm
 # defaultMessage: Enter URL or select an item
 msgid "Enter URL or select an item"
