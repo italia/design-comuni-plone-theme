@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-06-23T14:41:42.894Z\n"
+"POT-Creation-Date: 2023-06-23T14:44:47.437Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -250,6 +250,11 @@ msgstr ""
 #: config/Blocks/ListingOptions/utils
 # defaultMessage: Identificativo di servizio a solo uso interno, utilizzato per le verifiche AgID inerenti al PNRR.
 msgid "ID Lighthouse Help Description"
+msgstr ""
+
+#: components/ItaliaTheme/manage/Widgets/MenuConfigurationForm
+# defaultMessage: ID lighthouse
+msgid "ID lighthouse"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
