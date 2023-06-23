@@ -1733,6 +1733,11 @@ msgstr "Dónde contactar"
 msgid "download"
 msgstr "Descargar"
 
+#: components/ItaliaTheme/Blocks/VideoGallery/Block/ViewBlock
+# defaultMessage: Download and Play video
+msgid "downloadPlayVideo"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/MenuConfigurationForm
 # defaultMessage: Additional classes
 msgid "dropdownmenu-additionalClasses"
