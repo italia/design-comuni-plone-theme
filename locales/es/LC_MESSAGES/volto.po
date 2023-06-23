@@ -2191,6 +2191,11 @@ msgstr "Lugares"
 msgid "luogo"
 msgstr "Lugar"
 
+#: components/ItaliaTheme/Footer/FooterNewsletterSubscribe
+# defaultMessage: mail@example.com
+msgid "mail@example.com"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/Actions
 # defaultMessage: Invia
 msgid "mailto"
