@@ -251,6 +251,7 @@ msgid "ID Lighthouse Help Description"
 msgstr ""
 
 #: components/ItaliaTheme/manage/Widgets/MenuConfigurationForm
+#: components/ItaliaTheme/manage/Widgets/SecondaryMenuConfigurationForm
 # defaultMessage: ID lighthouse
 msgid "ID lighthouse"
 msgstr ""
