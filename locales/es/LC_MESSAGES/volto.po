@@ -260,6 +260,7 @@ msgid "ID Lighthouse Help Description"
 msgstr "Descripción de Ayuda para ID Lighthouse"
 
 #: components/ItaliaTheme/manage/Widgets/MenuConfigurationForm
+#: components/ItaliaTheme/manage/Widgets/SecondaryMenuConfigurationForm
 # defaultMessage: ID lighthouse
 msgid "ID lighthouse"
 msgstr ""
