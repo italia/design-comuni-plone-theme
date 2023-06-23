@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-06-23T14:13:09.201Z\n"
+"POT-Creation-Date: 2023-06-23T14:22:09.371Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -1732,6 +1732,7 @@ msgid "download"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/VideoGallery/Block/ViewBlock
+#: components/ItaliaTheme/View/Commons/EmbeddedVideo
 # defaultMessage: Download and Play video
 msgid "downloadPlayVideo"
 msgstr ""
@@ -1835,6 +1836,11 @@ msgstr ""
 #: components/ItaliaTheme/View/UOView/UOContactsParts/UOContactsContacts
 # defaultMessage: E-mail
 msgid "email_sede"
+msgstr ""
+
+#: components/ItaliaTheme/View/Commons/EmbeddedVideo
+# defaultMessage: YouTube Video {id}
+msgid "embedVideo"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/HighlightedContent/Edit

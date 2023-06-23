@@ -3,13 +3,21 @@ import PropTypes from 'prop-types';
 import { ConditionalEmbed } from 'volto-gdpr-privacy';
 import { Embed } from 'semantic-ui-react';
 import { FontAwesomeIcon } from 'design-comuni-plone-theme/components/ItaliaTheme';
-import { useIntl, defineMessages } from 'react-intl';
+import { defineMessages, injectIntl, useIntl } from 'react-intl';
 
 const messages = defineMessages({
   loadVideo: {
     id: 'loadVideo',
     defaultMessage:
       'Premi Invio per caricare il video, poi premi Tab per navigare sul video.',
+  },
+  downloadPlayVideo: {
+    id: 'downloadPlayVideo',
+    defaultMessage: 'Download and Play video',
+  },
+  embedVideo: {
+    id: 'embedVideo',
+    defaultMessage: 'YouTube Video {id}',
   },
 });
 
@@ -40,7 +48,7 @@ const EmbeddedVideo = ({ video_url, title, id }) => {
         className="icon-play"
         role="button"
         tabIndex={0}
-        title="Download and Play video"
+        title={intl.formatMessage(messages.downloadPlayVideo)}
       >
         <FontAwesomeIcon icon={['fas', 'play']} />
       </div>
@@ -60,7 +68,9 @@ const EmbeddedVideo = ({ video_url, title, id }) => {
       <ConditionalEmbed url={video_url} key={'embedvideo' + id}>
         <Embed
           id={video_id}
-          title={title || `YouTube Video ${id}`}
+          title={
+            title || intl.formatMessage(messages.embedVideo, { id: `${id}` })
+          }
           source="youtube"
           {...embedSettings}
         />
@@ -75,4 +85,4 @@ EmbeddedVideo.propTypes = {
   id: PropTypes.any,
 };
 
-export default EmbeddedVideo;
+export default injectIntl(EmbeddedVideo);
