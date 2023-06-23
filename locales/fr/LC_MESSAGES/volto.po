@@ -2323,6 +2323,11 @@ msgstr "Annonces"
 msgid "numbers_block"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/TwitterPosts/Body
+# defaultMessage: Replies
+msgid "numbers_replies"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderNewsItem
 # defaultMessage: Numero del comunicato stampa
 msgid "numero_progressivo_cs"
@@ -3469,6 +3474,11 @@ msgid "twitter_error"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/TwitterPosts/Body
+# defaultMessage: Likes
+msgid "twitter_likes"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/TwitterPosts/Body
 # defaultMessage: Non c'è nessun post da mostrare.
 msgid "twitter_posts_no_results"
 msgstr "Il n'y a pas de message à afficher."
@@ -3476,6 +3486,11 @@ msgstr "Il n'y a pas de message à afficher."
 #: components/ItaliaTheme/Blocks/TwitterPosts/Body
 # defaultMessage: Post non trovati.
 msgid "twitter_posts_not_found"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/TwitterPosts/Body
+# defaultMessage: Retweets
+msgid "twitter_retweets"
 msgstr ""
 
 #: components/ItaliaTheme/View/BandoView/BandoUfficioResponsabile
