@@ -1,9 +1,17 @@
 import React from 'react';
+import { defineMessages } from 'react-intl';
 import Icon from '@plone/volto/components/theme/Icon/Icon';
 
 // import DraftJsDropdownButton from 'design-comuni-plone-theme/config/RichTextEditor/ToolbarButtons/DraftJsDropdownButton';
 
 import formatSVG from '@plone/volto/icons/format.svg';
+
+const messages = defineMessages({
+  TextSizeButton: {
+    id: 'text-size-button',
+    defaultMessage: 'Dimensione del testo',
+  },
+});
 
 /*
 const TextSizeButton = (props) => {
@@ -41,7 +49,11 @@ const TextSizeButton = (props) => {
   return createInlineStyleButton({
     style: 'TEXT_LARGER',
     children: (
-      <Icon name={formatSVG} size="1.25em" title="Dimensione del testo" />
+      <Icon
+        name={formatSVG}
+        size="1.25em"
+        title={intl.formatMessage(messages.TextSizeButton)}
+      />
     ),
   });
 };
