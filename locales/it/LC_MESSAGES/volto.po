@@ -2237,6 +2237,11 @@ msgstr "Servizi o uffici interni"
 msgid "link"
 msgstr "Collegamento"
 
+#: components/ItaliaTheme/Header/HeaderCenter
+# defaultMessage: homepage
+msgid "link-subsite-homepage-title"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/HeroImageLeft/StoresButtons
@@ -2306,6 +2311,11 @@ msgstr "login con Spid"
 # defaultMessage: Login with Spid
 msgid "login_with_spid"
 msgstr "Accedi con Spid"
+
+#: components/ItaliaTheme/Header/HeaderCenter
+# defaultMessage: Logo
+msgid "logo-subsite-alt"
+msgstr ""
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemLuoghiCorrelati
 # defaultMessage: Luoghi

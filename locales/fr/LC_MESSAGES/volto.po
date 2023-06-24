@@ -2254,6 +2254,11 @@ msgstr ""
 msgid "link"
 msgstr ""
 
+#: components/ItaliaTheme/Header/HeaderCenter
+# defaultMessage: homepage
+msgid "link-subsite-homepage-title"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Accordion/Sidebar
 #: components/ItaliaTheme/Blocks/ContactsBlock/Sidebar
 #: components/ItaliaTheme/Blocks/HeroImageLeft/StoresButtons
@@ -2323,6 +2328,11 @@ msgstr "se connecter avec Spid"
 # defaultMessage: Login with Spid
 msgid "login_with_spid"
 msgstr "Connectez-vous avec Spid"
+
+#: components/ItaliaTheme/Header/HeaderCenter
+# defaultMessage: Logo
+msgid "logo-subsite-alt"
+msgstr ""
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemLuoghiCorrelati
 # defaultMessage: Luoghi
