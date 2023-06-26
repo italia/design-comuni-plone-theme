@@ -65,7 +65,7 @@ const BandoView = ({ content, location }) => {
           showtassonomiaargomenti={true}
           showbandostate={true}
         />
-        <div className="row border-top row-column-border row-column-menu-left">
+        <div className="row row-column-border row-column-menu-left">
           <aside className="col-lg-4">
             {__CLIENT__ && (
               <SideMenu data={sideMenuElements} content_uid={content?.UID} />

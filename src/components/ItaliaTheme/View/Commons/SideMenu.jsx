@@ -4,8 +4,12 @@
 import { defineMessages, useIntl } from 'react-intl';
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { throttle } from 'lodash';
-import { Progress } from 'design-react-kit';
-import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import {
+  Progress,
+  Accordion,
+  AccordionBody,
+  AccordionHeader,
+} from 'design-react-kit';
 import cx from 'classnames';
 
 const messages = defineMessages({
@@ -69,7 +73,9 @@ const SideMenu = ({ data, content_uid }) => {
   const [scrollY, setScrollY] = useState(0);
   const [isClient, setIsClient] = useState(false);
 
-  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(
+    __CLIENT__ ? window.innerWidth >= 992 : false,
+  );
 
   useEffect(() => {
     setIsClient(true);
@@ -121,14 +127,18 @@ const SideMenu = ({ data, content_uid }) => {
 
   const handleClickAnchor = (id) => (e) => {
     e.preventDefault();
-    document.getElementById(id)?.scrollIntoView?.({
-      behavior: 'smooth',
-      block: 'start',
-    });
-    setIsNavOpen(false);
+    if (window.innerWidth < 992) {
+      setIsNavOpen(false);
+    }
+    // setTimeout hack should wait for rerender after setIsNavOpen
+    setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView?.({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }, 0);
   };
 
-  // const yCountEnd = document.querySelector('#main-content-section');
   const yCountEnd = isClient
     ? document.querySelector('#main-content-section')
     : null;
@@ -141,84 +151,51 @@ const SideMenu = ({ data, content_uid }) => {
   return headers?.length > 0 ? (
     <div className="sticky-wrapper navbar-wrapper page-side-menu">
       <nav className="navbar it-navscroll-wrapper navbar-expand-lg">
-        <button
-          className={
-            isNavOpen
-              ? 'custom-navbar-toggler focus--mouse'
-              : 'custom-navbar-toggler'
-          }
-          type="button"
-          aria-controls="navbarNavB"
-          aria-expanded={isNavOpen ? 'true' : 'false'}
-          aria-label="Toggle navigation"
-          data-target="#navbarNavB"
-          onClick={() => {
-            setIsNavOpen(!isNavOpen);
-          }}
-        >
-          <span className="it-list"></span>
-          {intl.formatMessage(messages.index)}
-        </button>
-
-        <div
-          className={
-            isNavOpen ? 'navbar-collapsable expanded' : 'navbar-collapsable'
-          }
-          id="navbarNavB"
-          style={isNavOpen ? { display: 'block' } : { display: 'none' }}
-        >
-          <div
-            className="overlay"
-            style={isNavOpen ? { display: 'block' } : { display: 'none' }}
-          ></div>
-          <div className="close-div visually-hidden">
-            <button className="btn close-menu" type="button">
-              <span className="it-close"></span>
-              {intl.formatMessage(messages.close)}
-            </button>
-          </div>
-          <a
-            className="it-back-button"
-            href="#"
-            style={isNavOpen ? { display: 'block' } : { display: 'none' }}
-            onClick={(e) => {
-              e.preventDefault();
-              setIsNavOpen(!isNavOpen);
-            }}
-          >
-            <Icon
-              className="align-top"
-              color="primary"
-              icon="it-chevron-left"
-              style={{ ariaHidden: true }}
-              size="sm"
-            />
-            <span>{intl.formatMessage(messages.back)}</span>
-          </a>
-          <div className="menu-wrapper">
-            <div className="link-list-wrapper menu-link-list">
-              <h3>{intl.formatMessage(messages.index)}</h3>
-              <div className="mb-3">
-                <Progress
-                  value={progressValue > 0 ? 100 * progressValue : 0}
-                  role="progressbar"
-                />
-              </div>
-              <ul className="link-list" data-element="page-index">
-                {headers.map((item, i) => (
-                  <li className="nav-item" key={item.id}>
-                    <a
-                      className={cx('nav-link', {
-                        active: item.id === activeSection,
-                      })}
-                      href={`#${item.id}`}
-                      onClick={handleClickAnchor(item.id)}
-                    >
-                      <span>{item.title}</span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
+        <div className="menu-wrapper">
+          <div className="link-list-wrapper menu-link-list">
+            <div className="accordion-wrapper">
+              <Accordion>
+                <AccordionHeader
+                  active={isNavOpen}
+                  onToggle={() => {
+                    setIsNavOpen(!isNavOpen);
+                  }}
+                >
+                  <h3>{intl.formatMessage(messages.index)}</h3>
+                </AccordionHeader>
+                <div className="mb-3">
+                  <Progress
+                    value={progressValue > 0 ? 100 * progressValue : 0}
+                    role="progressbar"
+                  />
+                </div>
+                <AccordionBody
+                  active={isNavOpen}
+                  className={
+                    isNavOpen
+                      ? 'accordion-collapse show'
+                      : 'accordion-collapse collapse'
+                  }
+                >
+                  <ul className="link-list" data-element="page-index">
+                    {headers.map((item, i) => {
+                      return (
+                        <li className="nav-item" key={item.id}>
+                          <a
+                            className={cx('nav-link', {
+                              active: item.id === activeSection,
+                            })}
+                            href={`#${item.id}`}
+                            onClick={handleClickAnchor(item.id)}
+                          >
+                            <span>{item.title}</span>
+                          </a>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </AccordionBody>
+              </Accordion>
             </div>
           </div>
         </div>
