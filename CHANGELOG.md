@@ -1,3 +1,11 @@
+## [8.0.0-alpha.40](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.39...v8.0.0-alpha.40) (2023-06-27)
+
+
+### Features
+
+* added accordion in SideMenu component ([#121](https://github.com/RedTurtle/design-comuni-plone-theme/issues/121)) ([1b342a0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1b342a0af2296342a36d13d274792d532b597bb3))
+* updated gdpr add-on and enabled focus trap in cookie banner ([d860cb1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d860cb13955da2cb1ce0351767888c4b9cb4ebae))
+
 ## [8.0.0-alpha.39](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.38...v8.0.0-alpha.39) (2023-06-23)
 
 
