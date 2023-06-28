@@ -349,3 +349,12 @@ iframe {
     @include rem-size(font-size, 24);
   }
 }
+
+//search weekday fix
+.DayPicker {
+  .DayPicker_weekHeader {
+    .DayPicker_weekHeader_ul {
+      padding-left: 0;
+    }
+  }
+}
