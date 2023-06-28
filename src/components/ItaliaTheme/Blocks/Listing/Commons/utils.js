@@ -15,3 +15,21 @@ export const getCategory = (item, show_type, show_section, props) => {
   }
   return null;
 };
+
+export const visibleSlideTitle = (selector) => {
+  // Needed to deal with react-slick duplicating a lot of slides
+  // when used in infinite mode. It's an useless and counterproductive
+  // thing to do on their part, there are multiple issues opened.
+  // The lib is not actually mantained so...
+  return Array.from(document.querySelectorAll(selector)).find((e) => {
+    const rect = e.getBoundingClientRect();
+    return rect.left >= 0 && rect.right <= window.innerWidth;
+  });
+};
+export const focusNext = (currentSlide) => {
+  // Custom handling of focus as per Arter a11y audit and request
+  const link = visibleSlideTitle(`a.slide-link[data-slide="${currentSlide}"]`);
+  if (!link || document.activeElement === link) return;
+  // eslint-disable-next-line no-unused-expressions
+  link.focus();
+};

@@ -1,20 +1,17 @@
 import 'slick-carousel/slick/slick.css';
 import 'design-comuni-plone-theme/components/slick-carousel/slick/slick-theme.css';
-
 import { Col, Container, Row } from 'design-react-kit';
 import {
   Icon,
   ListingImage,
   ListingLinkMore,
-  NextArrow,
-  PrevArrow,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/interactive-supports-focus */
+import {
+  focusNext,
+  visibleSlideTitle,
+} from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/utils';
 import React, { useRef, useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
-
 import PropTypes from 'prop-types';
 import { UniversalLink } from '@plone/volto/components';
 import cx from 'classnames';
@@ -33,14 +30,98 @@ const messages = defineMessages({
     id: 'Pause slider',
     defaultMessage: 'Metti in pausa',
   },
+  precedente: {
+    id: 'precedente',
+    defaultMessage: 'Precedente',
+  },
+  successivo: {
+    id: 'successivo',
+    defaultMessage: 'Successivo',
+  },
+  dots: {
+    id: 'dots',
+    defaultMessage: 'Navigazione elementi slider',
+  },
+  slideDot: {
+    id: 'slideDot',
+    defaultMessage: 'Vai alla slide {index}',
+  },
 });
+
+function NextArrow(props) {
+  // Custom handling of focus as per Arter a11y audit and request
+  const { className, style, onClick, currentSlide, intl } = props;
+  const handleClick = (options) => {
+    onClick(options, false);
+  };
+
+  const handleKeyDown = async (event) => {
+    // Tab n/p
+    if (event.key === 'Tab' && event.shiftKey) {
+      event.preventDefault();
+      event.stopPropagation();
+      focusNext(currentSlide);
+    }
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      event.stopPropagation();
+      await onClick(event);
+    }
+  };
+  return (
+    <button
+      className={className}
+      style={{ ...style }}
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+      title={intl.formatMessage(messages.successivo)}
+      aria-label={intl.formatMessage(messages.successivo)}
+    >
+      <Icon icon="chevron-right" key="chevron-right" />
+      <span class="sr-only">{intl.formatMessage(messages.successivo)}</span>
+    </button>
+  );
+}
+
+function PrevArrow(props) {
+  // Custom handling of focus as per Arter a11y audit and request
+  const { className, style, onClick, currentSlide, intl } = props;
+
+  const handleKeyDown = async (event) => {
+    // Tab n/p
+    if (event.key === 'Tab' && !event.shiftKey) {
+      event.preventDefault();
+      event.stopPropagation();
+      focusNext(currentSlide);
+    }
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      event.stopPropagation();
+      await onClick(event);
+    }
+  };
+  return (
+    <button
+      className={className}
+      style={{ ...style }}
+      onClick={onClick}
+      tabIndex={0}
+      title={intl.formatMessage(messages.precedente)}
+      aria-label={intl.formatMessage(messages.precedente)}
+      onKeyDown={handleKeyDown}
+    >
+      <Icon icon="chevron-left" key="chevron-left-prev" />
+      <span class="sr-only">{intl.formatMessage(messages.precedente)}</span>
+    </button>
+  );
+}
 
 const SliderTemplate = ({
   items,
   title,
   isEditMode,
   show_block_bg,
-  linkAlign,
   linkTitle,
   linkHref,
   slidesToShow = '1',
@@ -50,14 +131,12 @@ const SliderTemplate = ({
   autoplay = false,
   autoplay_speed = 2, //seconds
   reactSlick,
-  titleLine,
-  linkmore_id_lighthouse,
 }) => {
   const intl = useIntl();
-  const slider = useRef(null);
   const [userAutoplay, setUserAutoplay] = useState(autoplay);
   const nSlidesToShow = parseInt(slidesToShow);
   const Slider = reactSlick.default;
+  const slider = useRef(null);
 
   const toggleAutoplay = () => {
     if (!slider?.current) return;
@@ -68,6 +147,91 @@ const SliderTemplate = ({
       setUserAutoplay(true);
       slider.current.slickPlay();
     }
+  };
+
+  const handleKeyDown = (event) => {
+    // Tab n/p
+    // Custom handling of focus as per Arter a11y audit and request
+    if (event.key === 'Tab') {
+      event.preventDefault();
+      event.stopPropagation();
+      const currentSlide = parseInt(event.target.dataset.slide);
+      if (event.shiftKey) {
+        if (
+          nSlidesToShow > 1 &&
+          visibleSlideTitle(`a.slide-link[data-slide="${currentSlide - 1}"]`)
+        ) {
+          focusNext(currentSlide - 1);
+        } else {
+          const prevArrow = document.querySelector('.slick-arrow.slick-prev');
+          prevArrow.focus();
+        }
+      } else {
+        if (
+          nSlidesToShow > 1 &&
+          visibleSlideTitle(`a.slide-link[data-slide="${currentSlide + 1}"]`)
+        ) {
+          focusNext(currentSlide + 1);
+        } else {
+          const nextArrow = document.querySelector('.slick-arrow.slick-next');
+          nextArrow.focus();
+        }
+      }
+    }
+  };
+  const handleDotKeyDown = (event, index, originalOnClick) => {
+    // Custom handling of focus as per Arter a11y audit and request
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      event.stopPropagation();
+      originalOnClick(event);
+    }
+  };
+
+  const renderCustomDots = (props) => {
+    // Custom handling of focus as per Arter a11y audit and request
+    return (
+      <ul
+        className="slick-dots"
+        aria-label={intl.formatMessage(messages.dots)}
+        title={intl.formatMessage(messages.dots)}
+      >
+        {props.map((item, index) => {
+          const El = item.type;
+          const children = item.props.children;
+          // Justified assumption: children is an Object and not an Array here
+          const Child =
+            children.type ||
+            function () {
+              return null;
+            };
+          return (
+            <El
+              className={`${item.props.className} slick-dot`}
+              tabIndex={0}
+              title={intl.formatMessage(messages.slideDot, {
+                index: index + 1,
+              })}
+              onKeyDown={(event) =>
+                handleDotKeyDown(event, index, children.props.onClick)
+              }
+            >
+              <Child
+                {...children.props}
+                tabIndex={-1}
+                style={{ padding: 0 }}
+                title={intl.formatMessage(messages.slideDot, {
+                  index: index + 1,
+                })}
+                aria-label={intl.formatMessage(messages.slideDot, {
+                  index: index + 1,
+                })}
+              />
+            </El>
+          );
+        })}
+      </ul>
+    );
   };
 
   const settings = {
@@ -86,8 +250,12 @@ const SliderTemplate = ({
     focusOnSelect: true,
     draggable: true,
     accessibility: true,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    // Custom handling of focus as per Arter a11y audit and request
+    nextArrow: <NextArrow intl={intl} />,
+    prevArrow: <PrevArrow intl={intl} />,
+    appendDots: renderCustomDots,
+    //
+    afterChange: focusNext,
     responsive: [
       {
         breakpoint: 980,
@@ -109,9 +277,7 @@ const SliderTemplate = ({
         {title && (
           <Row>
             <Col>
-              <h2 className={cx('mb-4', { 'title-bottom-line': titleLine })}>
-                {title}
-              </h2>
+              <h2 className="mb-4">{title}</h2>
             </Col>
           </Row>
         )}
@@ -154,6 +320,7 @@ const SliderTemplate = ({
                   <div
                     className="it-single-slide-wrapper"
                     key={item['@id'] + index}
+                    data-slide={index}
                   >
                     <div className="slide-wrapper">
                       {image ? (
@@ -162,11 +329,15 @@ const SliderTemplate = ({
                         <div className="img-placeholder"></div>
                       )}
                       {show_image_title && (
-                        <UniversalLink
-                          item={item}
-                          title={intl.formatMessage(messages.viewImage)}
-                        >
-                          <div className="slide-title">
+                        <div className="slide-title">
+                          <UniversalLink
+                            item={item}
+                            title={intl.formatMessage(messages.viewImage)}
+                            tabIndex={0}
+                            onKeyDown={handleKeyDown}
+                            className="slide-link"
+                            data-slide={index}
+                          >
                             {full_width ? (
                               <Container>
                                 {item.title}{' '}
@@ -178,8 +349,8 @@ const SliderTemplate = ({
                                 <Icon icon="arrow-right" key="arrow-right" />
                               </>
                             )}
-                          </div>
-                        </UniversalLink>
+                          </UniversalLink>
+                        </div>
                       )}
                     </div>
                   </div>
@@ -188,13 +359,7 @@ const SliderTemplate = ({
             </Slider>
           </div>
         </div>
-        <ListingLinkMore
-          title={linkTitle}
-          href={linkHref}
-          linkAlign={linkAlign}
-          className="my-4"
-          linkmoreIdLighthouse={linkmore_id_lighthouse}
-        />
+        <ListingLinkMore title={linkTitle} href={linkHref} className="my-4" />
       </Container>
     </div>
   );
