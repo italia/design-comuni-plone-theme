@@ -1711,7 +1711,7 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/SliderTemplate
 # defaultMessage: Navigazione elementi slider
 msgid "dots"
-msgstr ""
+msgstr "Slider elements navigation"
 
 #: components/ItaliaTheme/View/VenueView/VenueWhere
 # defaultMessage: Dove
@@ -2465,7 +2465,7 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/Listing/SliderTemplate
 # defaultMessage: Precedente
 msgid "precedente"
-msgstr ""
+msgstr "Previous"
 
 #: components/ItaliaTheme/manage/Widgets/IconPreviewWidget
 # defaultMessage: Anteprima dell'icona scelta
@@ -3216,7 +3216,7 @@ msgstr "Go to navigation"
 #: components/ItaliaTheme/Blocks/Listing/SliderTemplate
 # defaultMessage: Vai alla slide {index}
 msgid "slideDot"
-msgstr ""
+msgstr "Go to slide {index}"
 
 #: config/Blocks/ListingOptions/sliderTemplate
 # defaultMessage: N° slide da mostrare
@@ -3351,7 +3351,7 @@ msgstr "Tags"
 #: components/ItaliaTheme/Blocks/Listing/SliderTemplate
 # defaultMessage: Successivo
 msgid "successivo"
-msgstr ""
+msgstr "Next"
 
 #: components/ItaliaTheme/View/EventoView/EventoContatti
 # defaultMessage: Con il supporto di
