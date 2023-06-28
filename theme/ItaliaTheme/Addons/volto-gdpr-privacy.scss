@@ -39,6 +39,10 @@
           line-height: 17px;
           outline: none;
           vertical-align: baseline;
+          input:focus ~ label::before {
+            box-shadow: $gdpr-focus-shadow !important;
+            outline: none !important;
+          }
 
           label {
             position: relative;
@@ -48,6 +52,8 @@
 
             &:before {
               left: 0;
+              border: 1px solid $gdpr-toggle-border;
+              background-color: $gdpr-toggle;
               transition: border 0.1s ease, opacity 0.1s ease,
                 transform 0.1s ease, box-shadow 0.1s ease;
             }
@@ -99,7 +105,7 @@
               &:checked {
                 ~ label {
                   &:before {
-                    background-color: $primary;
+                    background-color: $gdpr-toggle-checked;
                   }
 
                   &:after {
@@ -123,7 +129,7 @@
                 display: block;
                 width: 3.5rem;
                 height: 1.5rem;
-                border: none;
+                border: 1px solid $gdpr-toggle-border;
                 border-radius: 500rem;
                 content: '';
                 transform: none;
@@ -135,7 +141,7 @@
                 top: 0rem;
                 width: 1.5rem;
                 height: 1.5rem;
-                border: none;
+                border: 1.5px solid $gdpr-toggle-border;
                 background: #ffffff
                   linear-gradient(transparent, rgba(0, 0, 0, 0.05));
                 border-radius: 500rem;
@@ -216,4 +222,24 @@ body.has-toolbar-collapsed {
       }
     }
   }
+}
+.gdpr-privacy-banner
+  .gdpr-privacy-content-wrapper
+  .gdpr-privacy-content
+  .buttons
+  button.gdpr-privacy-banner-button:focus,
+.gdpr-privacy-banner
+  .gdpr-privacy-content-wrapper
+  .gdpr-privacy-content
+  a:focus {
+  box-shadow: $gdpr-focus-shadow;
+  outline: none !important;
+}
+
+.gdpr-privacy-banner
+  .gdpr-privacy-content-wrapper
+  .gdpr-privacy-content
+  .buttons
+  button.gdpr-privacy-banner-button.btn-primary {
+  background-color: $gdpr-accept-all;
 }
