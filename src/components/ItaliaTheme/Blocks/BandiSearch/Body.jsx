@@ -201,7 +201,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
 
       {!loading ? (
         items?.length > 0 ? (
-          <div className="mt-4" ref={resultsRef}>
+          <div className="mt-4" ref={resultsRef} aria-live="polite">
             <div className="block listing">
               <BandiInEvidenceTemplate items={items} full_width={false} />
             </div>
@@ -215,7 +215,7 @@ const Body = ({ data, inEditMode, path, onChangeBlock }) => {
           </div>
         ) : querystringResults ? (
           <>
-            <div className="mt-4">
+            <div className="mt-4" aria-live="polite">
               <p className="text-center">
                 {intl.formatMessage(messages.noResult)}
               </p>
