@@ -1,3 +1,15 @@
+### [7.12.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.12.1...v7.12.2) (2023-06-29)
+
+
+### Bug Fixes
+
+* useIntl in TextSizeButton ([f290b6b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f290b6b090d1894f3164c00017ea3aabf5af564d))
+
+
+### Documentation
+
+* updated publiccode ([8e5bd97](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8e5bd9791a6c01f24102f26fbfaf49e3a9aed784))
+
 ### [7.12.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.12.0...v7.12.1) (2023-06-29)
 
 
