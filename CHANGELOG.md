@@ -1,3 +1,17 @@
+### [7.12.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.12.0...v7.12.1) (2023-06-29)
+
+
+### Bug Fixes
+
+* locales ([a73da13](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a73da1318f49feac04a7d649fe7e5597fdc584ca))
+* missing intl in collapse component ([b7b2bba](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b7b2bba55af1bedd5909a7b22bb3f8343edb6fbd))
+* translation errors ([2cbc1de](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2cbc1def925180c7688c0c1b40c4e5566fe494fb))
+
+
+### Documentation
+
+* updated publiccode ([19985f6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/19985f6b1aa591c844271aa0a218bec595fadba8))
+
 ## [7.12.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.11.1...v7.12.0) (2023-06-29)
 
 
