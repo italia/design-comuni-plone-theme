@@ -74,95 +74,11 @@ import CountDownBlockView from 'design-comuni-plone-theme/components/ItaliaTheme
 import CountDownBlockEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CountDown/Edit';
 
 import { cloneBlock } from 'design-comuni-plone-theme/config/Blocks/ListingOptions';
-import { defineMessages } from 'react-intl';
 
-const messages = defineMessages({
-  highlited_content: {
-    id: 'Contenuto in primo piano',
-    defaultMessage: 'Contenuto in primo piano',
-  },
-  search_sections: {
-    id: 'Ricerca nelle sezioni',
-    defaultMessage: 'Ricerca nelle sezioni',
-  },
-  calendar: {
-    id: 'Calendario',
-    defaultMessage: 'Calendario',
-  },
-  search_events: {
-    id: 'Ricerca eventi',
-    defaultMessage: 'Ricerca eventi',
-  },
-  search_bandi: {
-    id: 'Ricerca bandi',
-    defaultMessage: 'Ricerca bandi',
-  },
-  search_UO: {
-    id: 'Ricerca Unità Organizzative',
-    defaultMessage: 'Ricerca Unità Organizzative',
-  },
-  arguments_in_evidence: {
-    id: 'Argomenti in evidenza',
-    defaultMessage: 'Argomenti in evidenza',
-  },
-  break: {
-    id: 'Interruzione di pagina',
-    defaultMessage: 'Interruzione di pagina',
-  },
-  alert: {
-    id: 'Alert',
-    defaultMessage: 'Alert',
-  },
-  info: {
-    id: 'Informazioni',
-    defaultMessage: 'Informazioni',
-  },
-  testo_riquadro_semplice: {
-    id: 'Card semplice',
-    defaultMessage: 'Card semplice',
-  },
-  testo_riquadro_immagine: {
-    id: 'Card con immagine',
-    defaultMessage: 'Card con immagine',
-  },
-  accordion: {
-    id: 'Accordion',
-    defaultMessage: 'Accordion',
-  },
-  numbers_block: {
-    id: 'Blocco Numeri',
-    defaultMessage: 'Blocco Numeri',
-  },
-  icon_blocks: {
-    id: 'Blocchi con icone',
-    defaultMessage: 'Blocchi con icone',
-  },
-  contacts: {
-    id: 'Contatti',
-    defaultMessage: 'Contatti',
-  },
-  video_gallery: {
-    id: 'Video Gallery',
-    defaultMessage: 'Video Gallery',
-  },
-  twitter_posts: {
-    id: 'Twitter posts',
-    defaultMessage: 'Twitter posts',
-  },
-  cta_block: {
-    id: 'Blocco CTA',
-    defaultMessage: 'Blocco CTA',
-  },
-  count_down: {
-    id: 'Count Down',
-    defaultMessage: 'Count Down',
-  },
-});
-
-const italiaBlocks = ({ intl }) => ({
+const italiaBlocks = {
   highlitedContent: {
     id: 'highlitedContent',
-    title: intl.formatMessage(messages.highlited_content),
+    title: 'Contenuto in primo piano',
     icon: newsSVG,
     group: 'homePage',
     view: HighlightedContentView,
@@ -178,7 +94,7 @@ const italiaBlocks = ({ intl }) => ({
   },
   searchSections: {
     id: 'searchSections',
-    title: intl.formatMessage(messages.search_sections),
+    title: 'Ricerca nelle sezioni',
     icon: searchIcon,
     group: 'search',
     view: SearchSectionsView,
@@ -194,7 +110,7 @@ const italiaBlocks = ({ intl }) => ({
   },
   calendar: {
     id: 'calendar',
-    title: intl.formatMessage(messages.calendar),
+    title: 'Calendario',
     icon: calendarSvg,
     group: 'homePage',
     view: CalendarView,
@@ -210,7 +126,7 @@ const italiaBlocks = ({ intl }) => ({
   },
   searchEvents: {
     id: 'searchEvents',
-    title: intl.formatMessage(messages.search_events),
+    title: 'Ricerca eventi',
     icon: searchIcon,
     group: 'search',
     view: EventSearchView,
@@ -226,7 +142,7 @@ const italiaBlocks = ({ intl }) => ({
   },
   searchBandi: {
     id: 'searchBandi',
-    title: intl.formatMessage(messages.search_bandi),
+    title: 'Ricerca bandi',
     icon: searchIcon,
     group: 'search',
     view: BandiSearchView,
@@ -242,7 +158,7 @@ const italiaBlocks = ({ intl }) => ({
   },
   searchUO: {
     id: 'searchUO',
-    title: intl.formatMessage(messages.search_UO),
+    title: 'Ricerca Unità Organizzative',
     icon: searchIcon,
     group: 'search',
     view: UOSearchView,
@@ -258,7 +174,7 @@ const italiaBlocks = ({ intl }) => ({
   },
   argumentsInEvidence: {
     id: 'argumentsInEvidence',
-    title: intl.formatMessage(messages.arguments_in_evidence),
+    title: 'Argomenti in evidenza',
     icon: noteSvg,
     group: 'homePage',
     view: ArgumentsInEvidenceView,
@@ -274,7 +190,7 @@ const italiaBlocks = ({ intl }) => ({
   },
   break: {
     id: 'break',
-    title: intl.formatMessage(messages.break),
+    title: 'Interruzione di pagina',
     icon: divideHorizontalSVG,
     group: 'text',
     view: ViewBreak,
@@ -289,7 +205,7 @@ const italiaBlocks = ({ intl }) => ({
   },
   alert: {
     id: 'alert',
-    title: intl.formatMessage(messages.alert),
+    title: 'Alert',
     icon: alertSVG,
     group: 'text',
     view: AlertView,
@@ -307,7 +223,7 @@ const italiaBlocks = ({ intl }) => ({
 
   info: {
     id: 'info',
-    title: intl.formatMessage(messages.info),
+    title: 'Informazioni',
     icon: infoSVG,
     group: 'text',
     view: InfoView,
@@ -325,7 +241,7 @@ const italiaBlocks = ({ intl }) => ({
 
   testo_riquadro_semplice: {
     id: 'testo_riquadro_semplice',
-    title: intl.formatMessage(messages.testo_riquadro_semplice),
+    title: 'Card semplice',
     icon: simpleTextCardSVG,
     group: 'text',
     view: TextCardView,
@@ -341,7 +257,7 @@ const italiaBlocks = ({ intl }) => ({
   },
   testo_riquadro_immagine: {
     id: 'testo_riquadro_immagine',
-    title: intl.formatMessage(messages.testo_riquadro_immagine),
+    title: 'Card con immagine',
     icon: imageTextCardSVG,
     group: 'text',
     view: TextCardWithImageView,
@@ -358,7 +274,7 @@ const italiaBlocks = ({ intl }) => ({
   },
   accordion: {
     id: 'accordion',
-    title: intl.formatMessage(messages.accordion),
+    title: 'Accordion',
     icon: listArrowsSVG,
     group: 'text',
     view: AccordionView,
@@ -375,7 +291,7 @@ const italiaBlocks = ({ intl }) => ({
   },
   numbersBlock: {
     id: 'numbersBlock',
-    title: intl.formatMessage(messages.numbers_block),
+    title: 'Blocco Numeri',
     icon: numbersBlockSVG,
     group: 'text',
     view: NumbersBlockView,
@@ -391,7 +307,7 @@ const italiaBlocks = ({ intl }) => ({
   },
   iconBlocks: {
     id: 'iconBlocks',
-    title: intl.formatMessage(messages.icon_blocks),
+    title: 'Blocchi con icone',
     icon: iconBlocksSVG,
     group: 'text',
     view: IconBlocksView,
@@ -407,7 +323,7 @@ const italiaBlocks = ({ intl }) => ({
   },
   contacts: {
     id: 'contacts',
-    title: intl.formatMessage(messages.contacts),
+    title: 'Contatti',
     icon: emailSVG,
     group: 'text',
     view: ContactsBlockView,
@@ -424,7 +340,7 @@ const italiaBlocks = ({ intl }) => ({
 
   video_gallery: {
     id: 'video_gallery',
-    title: intl.formatMessage(messages.video_gallery),
+    title: 'Video Gallery',
     icon: videoSVG,
     group: 'media',
     view: VideoGalleryView,
@@ -440,7 +356,7 @@ const italiaBlocks = ({ intl }) => ({
   },
   twitter_posts: {
     id: 'twitter_posts',
-    title: intl.formatMessage(messages.twitter_posts),
+    title: 'Twitter posts',
     icon: faTwitter,
     group: 'media',
     view: TwitterPostsView,
@@ -456,7 +372,7 @@ const italiaBlocks = ({ intl }) => ({
   },
   cta_block: {
     id: 'cta_block',
-    title: intl.formatMessage(messages.cta_block),
+    title: 'Blocco CTA',
     icon: flashSVG,
     group: 'common',
     view: CTABlockView,
@@ -473,7 +389,7 @@ const italiaBlocks = ({ intl }) => ({
   },
   count_down: {
     id: 'count_down',
-    title: intl.formatMessage(messages.count_down),
+    title: 'Count Down',
     icon: countDownSVG,
     group: 'common',
     view: CountDownBlockView,
@@ -487,7 +403,7 @@ const italiaBlocks = ({ intl }) => ({
     },
     sidebarTab: 1,
   },
-});
+};
 
 const getItaliaBlocks = (config) => {
   delete config.blocks.blocksConfig.search;
