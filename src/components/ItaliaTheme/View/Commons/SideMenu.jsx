@@ -21,14 +21,6 @@ const messages = defineMessages({
     id: 'Contenuto',
     defaultMessage: 'Contenuto',
   },
-  back: {
-    id: 'back',
-    defaultMessage: 'Indietro',
-  },
-  close: {
-    id: 'close',
-    defaultMessage: 'Chiudi',
-  },
 });
 
 const extractHeaders = (elements, intl) => {

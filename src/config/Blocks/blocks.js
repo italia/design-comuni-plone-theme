@@ -70,11 +70,91 @@ import CountDownBlockView from 'design-comuni-plone-theme/components/ItaliaTheme
 import CountDownBlockEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CountDown/Edit';
 
 import { cloneBlock } from 'design-comuni-plone-theme/config/Blocks/ListingOptions';
+import { defineMessages } from 'react-intl';
 
-const italiaBlocks = {
+const messages = defineMessages({
+  highlited_content: {
+    id: 'Contenuto in primo piano',
+    defaultMessage: 'Contenuto in primo piano',
+  },
+  search_sections: {
+    id: 'Ricerca nelle sezioni',
+    defaultMessage: 'Ricerca nelle sezioni',
+  },
+  calendar: {
+    id: 'Calendario',
+    defaultMessage: 'Calendario',
+  },
+  search_events: {
+    id: 'Ricerca eventi',
+    defaultMessage: 'Ricerca eventi',
+  },
+  search_bandi: {
+    id: 'Ricerca bandi',
+    defaultMessage: 'Ricerca bandi',
+  },
+  search_UO: {
+    id: 'Ricerca Unità Organizzative',
+    defaultMessage: 'Ricerca Unità Organizzative',
+  },
+  arguments_in_evidence: {
+    id: 'Argomenti in evidenza',
+    defaultMessage: 'Argomenti in evidenza',
+  },
+  break: {
+    id: 'Interruzione di pagina',
+    defaultMessage: 'Interruzione di pagina',
+  },
+  alert: {
+    id: 'Alert',
+    defaultMessage: 'Alert',
+  },
+  testo_riquadro_semplice: {
+    id: 'Card semplice',
+    defaultMessage: 'Card semplice',
+  },
+  testo_riquadro_immagine: {
+    id: 'Card con immagine',
+    defaultMessage: 'Card con immagine',
+  },
+  accordion: {
+    id: 'Accordion',
+    defaultMessage: 'Accordion',
+  },
+  numbers_block: {
+    id: 'Blocco Numeri',
+    defaultMessage: 'Blocco Numeri',
+  },
+  icon_blocks: {
+    id: 'Blocchi con icone',
+    defaultMessage: 'Blocchi con icone',
+  },
+  contacts: {
+    id: 'Contatti',
+    defaultMessage: 'Contatti',
+  },
+  video_gallery: {
+    id: 'Video Gallery',
+    defaultMessage: 'Video Gallery',
+  },
+  twitter_posts: {
+    id: 'Twitter posts',
+    defaultMessage: 'Twitter posts',
+  },
+  cta_block: {
+    id: 'Blocco CTA',
+    defaultMessage: 'Blocco CTA',
+  },
+  count_down: {
+    id: 'Count Down',
+    defaultMessage: 'Count Down',
+  },
+});
+
+const italiaBlocks = ({ intl }) => ({
   highlitedContent: {
     id: 'highlitedContent',
-    title: 'Contenuto in primo piano',
+    title: intl.formatMessage(messages.highlited_content),
     icon: newsSVG,
     group: 'homePage',
     view: HighlightedContentView,
@@ -89,7 +169,7 @@ const italiaBlocks = {
   },
   searchSections: {
     id: 'searchSections',
-    title: 'Ricerca nelle sezioni',
+    title: intl.formatMessage(messages.search_sections),
     icon: searchIcon,
     group: 'search',
     view: SearchSectionsView,
@@ -105,7 +185,7 @@ const italiaBlocks = {
   },
   calendar: {
     id: 'calendar',
-    title: 'Calendario',
+    title: intl.formatMessage(messages.calendar),
     icon: calendarSvg,
     group: 'homePage',
     view: CalendarView,
@@ -121,7 +201,7 @@ const italiaBlocks = {
   },
   searchEvents: {
     id: 'searchEvents',
-    title: 'Ricerca eventi',
+    title: intl.formatMessage(messages.search_events),
     icon: searchIcon,
     group: 'search',
     view: EventSearchView,
@@ -137,7 +217,7 @@ const italiaBlocks = {
   },
   searchBandi: {
     id: 'searchBandi',
-    title: 'Ricerca bandi',
+    title: intl.formatMessage(messages.search_bandi),
     icon: searchIcon,
     group: 'search',
     view: BandiSearchView,
@@ -153,7 +233,7 @@ const italiaBlocks = {
   },
   searchUO: {
     id: 'searchUO',
-    title: 'Ricerca Unità Organizzative',
+    title: intl.formatMessage(messages.search_UO),
     icon: searchIcon,
     group: 'search',
     view: UOSearchView,
@@ -169,7 +249,7 @@ const italiaBlocks = {
   },
   argumentsInEvidence: {
     id: 'argumentsInEvidence',
-    title: 'Argomenti in evidenza',
+    title: intl.formatMessage(messages.arguments_in_evidence),
     icon: noteSvg,
     group: 'homePage',
     view: ArgumentsInEvidenceView,
@@ -185,7 +265,7 @@ const italiaBlocks = {
   },
   break: {
     id: 'break',
-    title: 'Interruzione di pagina',
+    title: intl.formatMessage(messages.break),
     icon: divideHorizontalSVG,
     group: 'text',
     view: ViewBreak,
@@ -200,7 +280,7 @@ const italiaBlocks = {
   },
   alert: {
     id: 'alert',
-    title: 'Alert',
+    title: intl.formatMessage(messages.alert),
     icon: alertSVG,
     group: 'text',
     view: AlertView,
@@ -218,7 +298,7 @@ const italiaBlocks = {
 
   testo_riquadro_semplice: {
     id: 'testo_riquadro_semplice',
-    title: 'Card semplice',
+    title: intl.formatMessage(messages.testo_riquadro_semplice),
     icon: simpleTextCardSVG,
     group: 'text',
     view: TextCardView,
@@ -234,7 +314,7 @@ const italiaBlocks = {
   },
   testo_riquadro_immagine: {
     id: 'testo_riquadro_immagine',
-    title: 'Card con immagine',
+    title: intl.formatMessage(messages.testo_riquadro_immagine),
     icon: imageTextCardSVG,
     group: 'text',
     view: TextCardWithImageView,
@@ -251,7 +331,7 @@ const italiaBlocks = {
   },
   accordion: {
     id: 'accordion',
-    title: 'Accordion',
+    title: intl.formatMessage(messages.accordion),
     icon: listArrowsSVG,
     group: 'text',
     view: AccordionView,
@@ -268,7 +348,7 @@ const italiaBlocks = {
   },
   numbersBlock: {
     id: 'numbersBlock',
-    title: 'Blocco Numeri',
+    title: intl.formatMessage(messages.numbers_block),
     icon: numbersBlockSVG,
     group: 'text',
     view: NumbersBlockView,
@@ -284,7 +364,7 @@ const italiaBlocks = {
   },
   iconBlocks: {
     id: 'iconBlocks',
-    title: 'Blocchi con icone',
+    title: intl.formatMessage(messages.icon_blocks),
     icon: iconBlocksSVG,
     group: 'text',
     view: IconBlocksView,
@@ -300,7 +380,7 @@ const italiaBlocks = {
   },
   contacts: {
     id: 'contacts',
-    title: 'Contatti',
+    title: intl.formatMessage(messages.contacts),
     icon: emailSVG,
     group: 'text',
     view: ContactsBlockView,
@@ -317,7 +397,7 @@ const italiaBlocks = {
 
   video_gallery: {
     id: 'video_gallery',
-    title: 'Video Gallery',
+    title: intl.formatMessage(messages.video_gallery),
     icon: videoSVG,
     group: 'media',
     view: VideoGalleryView,
@@ -333,7 +413,7 @@ const italiaBlocks = {
   },
   twitter_posts: {
     id: 'twitter_posts',
-    title: 'Twitter posts',
+    title: intl.formatMessage(messages.twitter_posts),
     icon: faTwitter,
     group: 'media',
     view: TwitterPostsView,
@@ -349,7 +429,7 @@ const italiaBlocks = {
   },
   cta_block: {
     id: 'cta_block',
-    title: 'Blocco CTA',
+    title: intl.formatMessage(messages.cta_block),
     icon: flashSVG,
     group: 'common',
     view: CTABlockView,
@@ -366,7 +446,7 @@ const italiaBlocks = {
   },
   count_down: {
     id: 'count_down',
-    title: 'Count Down',
+    title: intl.formatMessage(messages.count_down),
     icon: countDownSVG,
     group: 'common',
     view: CountDownBlockView,
@@ -380,7 +460,7 @@ const italiaBlocks = {
     },
     sidebarTab: 1,
   },
-};
+});
 
 const getItaliaBlocks = (config) => {
   delete config.blocks.blocksConfig.teaser;

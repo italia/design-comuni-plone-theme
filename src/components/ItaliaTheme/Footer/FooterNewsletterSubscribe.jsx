@@ -18,6 +18,10 @@ const messages = defineMessages({
     id: 'Iscriviti per ricevere la newsletter',
     defaultMessage: 'Iscriviti per riceverla',
   },
+  inputNewsletter: {
+    id: 'mail@example.com',
+    defaultMessage: 'mail@example.com',
+  },
 });
 
 const FooterNewsletterSubscribe = () => {
@@ -39,7 +43,7 @@ const FooterNewsletterSubscribe = () => {
         type="email"
         id="input-newsletter"
         name="input-newsletter"
-        placeholder="mail@example.com"
+        placeholder={intl.formatMessage(messages.inputNewsletter)}
         className="mb-3"
       />
       <Button

@@ -23,6 +23,10 @@ const messages = defineMessages({
     id: 'events_read_more',
     defaultMessage: 'Leggi di più',
   },
+  immagine: {
+    id: 'Immagine',
+    defaultMessage: 'Immagine',
+  },
 });
 
 /**
@@ -49,7 +53,7 @@ const Evento = ({ event, show_image }) => {
                     event.image ||
                     event['@id']
                   }
-                  alt="Immagine"
+                  alt={intl.formatMessage(messages.immagine)}
                   containerClassName="img-wrapper"
                 />
                 {event.start && (

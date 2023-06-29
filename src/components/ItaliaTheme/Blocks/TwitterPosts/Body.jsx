@@ -23,6 +23,22 @@ const messages = defineMessages({
     id: 'twitter_posts_not_found',
     defaultMessage: 'Post non trovati.',
   },
+  replies: {
+    id: 'numbers_replies',
+    defaultMessage: 'Replies',
+  },
+  replies: {
+    id: 'numbers_replies',
+    defaultMessage: 'Replies',
+  },
+  retweets: {
+    id: 'twitter_retweets',
+    defaultMessage: 'Retweets',
+  },
+  likes: {
+    id: 'twitter_likes',
+    defaultMessage: 'Likes',
+  },
   twitter_error: {
     id: 'twitter_error',
     defaultMessage:
@@ -142,15 +158,24 @@ const Body = ({ data, isEditMode, reactSlick }) => {
                       .format('HH:mm - DD MMM YYYY')}
                   </div>
                   <div className="numbers">
-                    <div className="number reply" title="Replies">
+                    <div
+                      className="number reply"
+                      title={intl.formatMessage(messages.replies)}
+                    >
                       <Icon icon="reply" />
                       {tweet.reply_count > 0 && tweet.reply_count}
                     </div>
-                    <div className="number retweet" title="Retweets">
+                    <div
+                      className="number retweet"
+                      title={intl.formatMessage(messages.retweets)}
+                    >
                       <Icon icon="retweet" />{' '}
                       {tweet.retweet_count > 0 && tweet.retweet_count}
                     </div>
-                    <div className="number like" title="Likes">
+                    <div
+                      className="number like"
+                      title={intl.formatMessage(messages.likes)}
+                    >
                       <Icon icon="heart" />
                       {tweet.like_count > 0 && tweet.like_count}
                     </div>

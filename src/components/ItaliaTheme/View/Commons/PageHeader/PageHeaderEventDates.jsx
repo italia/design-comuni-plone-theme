@@ -4,6 +4,14 @@ import PropTypes from 'prop-types';
 
 import { rrulei18n } from '@plone/volto/components/manage/Widgets/RecurrenceWidget/Utils';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
+import { defineMessages } from 'react-intl';
+
+const messages = defineMessages({
+  dateStart: {
+    id: 'dal {dateStart} fino a conclusione',
+    defaultMessage: 'dal {dateStart} fino a conclusione',
+  },
+});
 
 /**
  * PageHeaderEventDates view component class.
@@ -53,7 +61,9 @@ const PageHeaderEventDates = ({ content, moment, rrule }) => {
         !openEnd &&
         `${Moment(content.start).format('DD-MM-Y')}`}
       {openEnd &&
-        `dal ${Moment(content.start).format('DD-MM-Y')} fino a conclusione`}
+        intl.formatMessage(messages.dateStart, {
+          dateStart: `${Moment(content.start).format('DD-MM-Y')}`,
+        })}
       {eventRecurrenceText && (
         <div className="recurrence small">{eventRecurrenceText}</div>
       )}

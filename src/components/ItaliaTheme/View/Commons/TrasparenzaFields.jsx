@@ -1,5 +1,5 @@
 import React from 'react';
-import { defineMessages, useIntl } from 'react-intl';
+import { FormattedMessage, defineMessages, useIntl } from 'react-intl';
 import {
   RichTextArticle,
   RichTextRender,
@@ -260,7 +260,7 @@ const TrasparenzaFields = ({ content }) => {
             download={content[field.attr].filename}
             title={content[field.attr].filename}
           >
-            Download
+            <FormattedMessage id="Download" defaultMessage="Download" />
           </a>
         </p>
       );

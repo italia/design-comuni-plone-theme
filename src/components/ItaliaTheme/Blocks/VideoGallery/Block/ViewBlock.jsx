@@ -22,6 +22,10 @@ const messages = defineMessages({
     defaultMessage:
       'Premi Invio per caricare il video, poi premi Tab per navigare sul video.',
   },
+  downloadPlayVideo: {
+    id: 'downloadPlayVideo',
+    defaultMessage: 'Download and Play video',
+  },
 });
 /**
  * ViewBlock class.
@@ -64,7 +68,7 @@ const ViewBlock = ({ data, index, isEditMode = false }) => {
         className="icon-play"
         role="button"
         tabIndex={0}
-        title="Download and Play video"
+        title={intl.formatMessage(messages.downloadPlayVideo)}
       >
         <FontAwesomeIcon icon={['fas', 'play']} />
       </div>
