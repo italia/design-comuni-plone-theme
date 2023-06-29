@@ -118,6 +118,7 @@ const SideMenu = ({ data, content_uid }) => {
       window.addEventListener('scroll', throttledHandleScroll, {
         passive: true,
       });
+
     return () => {
       window.removeEventListener('scroll', throttledHandleScroll);
     };
@@ -130,6 +131,11 @@ const SideMenu = ({ data, content_uid }) => {
     if (window.innerWidth < 992) {
       setIsNavOpen(false);
     }
+    // Blur a link
+    document.getElementById(`item-${id}`).blur();
+    // Focus on section
+    document.getElementById(id).focus({ preventScroll: true });
+    // Scroll to section
     // setTimeout hack should wait for rerender after setIsNavOpen
     setTimeout(() => {
       document.getElementById(id)?.scrollIntoView?.({
@@ -187,6 +193,7 @@ const SideMenu = ({ data, content_uid }) => {
                             })}
                             href={`#${item.id}`}
                             onClick={handleClickAnchor(item.id)}
+                            id={`item-${item.id}`}
                           >
                             <span>{item.title}</span>
                           </a>
