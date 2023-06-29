@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-06-28T14:34:07.240Z\n"
+"POT-Creation-Date: 2023-06-29T11:15:45.629Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -18,11 +18,6 @@ msgstr ""
 msgid "Accedi all'area personale"
 msgstr ""
 
-#: config/Blocks/blocks
-# defaultMessage: Accordion
-msgid "Accordion"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/Accordion/Edit
 #: components/ItaliaTheme/Blocks/ContactsBlock/Edit
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
@@ -32,19 +27,9 @@ msgstr ""
 msgid "Add accordion item"
 msgstr ""
 
-#: config/Blocks/blocks
-# defaultMessage: Alert
-msgid "Alert"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 # defaultMessage: Allow Externals
 msgid "Allow Externals"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Argomenti in evidenza
-msgid "Argomenti in evidenza"
 msgstr ""
 
 #: config/Blocks/ListingOptions/simpleCardTemplate
@@ -62,21 +47,6 @@ msgstr ""
 msgid "Bando"
 msgstr ""
 
-#: config/Blocks/blocks
-# defaultMessage: Blocchi con icone
-msgid "Blocchi con icone"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Blocco CTA
-msgid "Blocco CTA"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Blocco Numeri
-msgid "Blocco Numeri"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 # defaultMessage: Titolo del blocco...
 msgid "Block Title"
@@ -87,24 +57,9 @@ msgstr ""
 msgid "Block style"
 msgstr ""
 
-#: config/Blocks/blocks
-# defaultMessage: Calendario
-msgid "Calendario"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Card con immagine
-msgid "Card con immagine"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
 # defaultMessage: Vedi
 msgid "Card detail label"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Card semplice
-msgid "Card semplice"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
@@ -161,7 +116,6 @@ msgid "Color"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView/EventoContatti
-#: config/Blocks/blocks
 # defaultMessage: Contatti
 msgid "Contatti"
 msgstr ""
@@ -179,16 +133,6 @@ msgstr ""
 #: components/ItaliaTheme/View/Commons/SideMenu
 # defaultMessage: Contenuto
 msgid "Contenuto"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Contenuto in primo piano
-msgid "Contenuto in primo piano"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Count Down
-msgid "Count Down"
 msgstr ""
 
 #: components/ItaliaTheme/View/Commons/Dates
@@ -345,18 +289,12 @@ msgstr ""
 msgid "In this section"
 msgstr ""
 
-#: config/Blocks/blocks
-# defaultMessage: Informazioni
-msgid "Informazioni"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/CountDown/Edit
 # defaultMessage: Inserisci il testo…
 msgid "Inserisci il testo…"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Break/Edit
-#: config/Blocks/blocks
 # defaultMessage: Interruzione di pagina
 msgid "Interruzione di pagina"
 msgstr ""
@@ -536,26 +474,6 @@ msgstr ""
 msgid "Required"
 msgstr ""
 
-#: config/Blocks/blocks
-# defaultMessage: Ricerca Unità Organizzative
-msgid "Ricerca Unità Organizzative"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Ricerca bandi
-msgid "Ricerca bandi"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Ricerca eventi
-msgid "Ricerca eventi"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Ricerca nelle sezioni
-msgid "Ricerca nelle sezioni"
-msgstr ""
-
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Rimuovi il file
 msgid "Rimuovi il file"
@@ -708,11 +626,6 @@ msgstr ""
 msgid "Twitter Posts"
 msgstr ""
 
-#: config/Blocks/blocks
-# defaultMessage: Twitter posts
-msgid "Twitter posts"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
@@ -792,11 +705,6 @@ msgstr ""
 #: components/ItaliaTheme/View/VenueView/VenueDescription
 # defaultMessage: Video
 msgid "Video"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Video Gallery
-msgid "Video Gallery"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
