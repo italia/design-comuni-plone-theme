@@ -175,6 +175,10 @@ export default function applyConfig(voltoConfig) {
           //{ title: 'Contacts', url: '/en/contacts' },
           //{ title: 'News', url: '/en/news' },
         ],
+        es: [
+          //{ title: 'Contactos', url: '/es/contacts' },
+          //{ title: 'Noticias', url: '/es/news' },
+        ],
       },
       smallFooterLinks: {
         default: [
@@ -197,6 +201,13 @@ export default function applyConfig(voltoConfig) {
           // { title: 'Privacy policy', url: '/en/privacy-policy' },
           // { title: 'Sitemap', url: '/sitemap' },
           // { title: 'Credits', url: 'https://www.redturtle.it/' },
+        ],
+        es: [
+          // { title: 'Política de medios', url: '/es/media-policy' },
+          // { title: 'Notas legales', url: '/es/legal-notes' },
+          // { title: 'Política de privacidad', url: '/es/privacy-policy' },
+          // { title: 'Mapa del sitio', url: '/sitemap' },
+          // { title: 'Créditos', url: 'https://www.redturtle.it/' },
         ],
       },
       enableCustomerSatisfaction: true,
