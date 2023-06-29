@@ -1,3 +1,23 @@
+## [7.12.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.11.1...v7.12.0) (2023-06-29)
+
+
+### Features
+
+* a11y for Slider listing template ([#224](https://github.com/RedTurtle/design-comuni-plone-theme/issues/224)) ([6fb6182](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6fb618241f5abce8afa96c139e11ec71916af67e))
+* updated gdpr add-on and enabled focus trap in cookie banner ([f9ba2a9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f9ba2a9917132cd78bfd9eda3f32dc9b92a03d81))
+
+
+### Bug Fixes
+
+* added more improvements about i18n support ([#138](https://github.com/RedTurtle/design-comuni-plone-theme/issues/138)) ([6849d28](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6849d28474d4c862069898fd9f1c0614bf7464fa))
+* show telephon in office card without address props ([#229](https://github.com/RedTurtle/design-comuni-plone-theme/issues/229)) ([0a076c4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/0a076c4448f5eabc57d4a7c40115c9fe57d5cea0))
+* styles for a11y in cookiebanner ([#225](https://github.com/RedTurtle/design-comuni-plone-theme/issues/225)) ([f7c4300](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f7c4300693c8dd72162b690cd7c7c4b29d9fbeba))
+
+
+### Documentation
+
+* updated publiccode ([b6166cb](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b6166cb5c6d73bfcd1baf825742ee5fec1f5a2e6))
+
 ### [7.11.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.11.0...v7.11.1) (2023-06-23)
 
 
