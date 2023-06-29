@@ -122,6 +122,7 @@ const Events = ({ content, title, show_image, folder_name, isChild }) => {
         <article
           id="appuntamenti"
           className="it-page-section anchor-offset mt-5"
+          aria-labelledby={'header-appuntamenti'}
         >
           {title ? (
             <h4 id="header-appuntamenti">{title}</h4>

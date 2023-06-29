@@ -27,6 +27,7 @@ const RichTextArticle = ({
       id={tag_id}
       className="it-page-section anchor-offset mt-5"
       menu_title={title ? title : ''}
+      aria-labelledby={title_size !== 'h5' ? `header-${tag_id}` : undefined}
     >
       {title && show_title ? (
         title_size === 'h5' ? (

@@ -32,7 +32,11 @@ const messages = defineMessages({
 const CuredBy = ({ office, people, title }) => {
   const intl = useIntl();
   return (
-    <article id="a-cura-di" className="it-page-section anchor-offset mt-5">
+    <article
+      id="a-cura-di"
+      className="it-page-section anchor-offset mt-5"
+      aria-labelledby={'header-a-cura-di'}
+    >
       <h4 id="header-a-cura-di">
         {title ?? intl.formatMessage(messages.cured_by)}
       </h4>

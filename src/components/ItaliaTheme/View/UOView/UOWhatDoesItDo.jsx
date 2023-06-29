@@ -21,7 +21,11 @@ const UOWhatDoesItDo = ({ content }) => {
   return (
     <>
       {richTextHasContent(content?.competenze) && (
-        <article id="cosa-fa" className="it-page-section anchor-offset mt-5">
+        <article
+          id="cosa-fa"
+          className="it-page-section anchor-offset mt-5"
+          aria-labelledby="header-cosa-fa"
+        >
           <h4 id="header-cosa-fa" className="mb-3">
             {intl.formatMessage(messages.cosa_fa)}
           </h4>
