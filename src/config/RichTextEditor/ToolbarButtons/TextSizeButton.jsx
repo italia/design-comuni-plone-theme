@@ -44,18 +44,22 @@ const TextSizeButton = (props) => {
 };
 */
 
-const TextSizeButton = (props) => {
+const ButtonIcon = (props) => {
   const intl = useIntl();
+  return (
+    <Icon
+      name={formatSVG}
+      size="1.25em"
+      title={intl.formatMessage(messages.TextSizeButton)}
+    />
+  );
+};
+
+const TextSizeButton = (props) => {
   const createInlineStyleButton = props.draftJsCreateInlineStyleButton.default;
   return createInlineStyleButton({
     style: 'TEXT_LARGER',
-    children: (
-      <Icon
-        name={formatSVG}
-        size="1.25em"
-        title={intl.formatMessage(messages.TextSizeButton)}
-      />
-    ),
+    children: ButtonIcon,
   });
 };
 export default TextSizeButton;
