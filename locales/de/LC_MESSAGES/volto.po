@@ -31,11 +31,6 @@ msgstr ""
 msgid "Accedi all'area personale"
 msgstr ""
 
-#: config/Blocks/blocks
-# defaultMessage: Accordion
-msgid "Accordion"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/Accordion/Edit
 #: components/ItaliaTheme/Blocks/ContactsBlock/Edit
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
@@ -46,7 +41,6 @@ msgid "Add accordion item"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
-#: config/Blocks/blocks
 # defaultMessage: Alert
 msgid "Alert"
 msgstr ""
@@ -54,11 +48,6 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 # defaultMessage: Allow Externals
 msgid "Allow Externals"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Argomenti in evidenza
-msgid "Argomenti in evidenza"
 msgstr ""
 
 #: config/Blocks/ListingOptions/simpleCardTemplate
@@ -76,21 +65,6 @@ msgstr ""
 msgid "Bando"
 msgstr ""
 
-#: config/Blocks/blocks
-# defaultMessage: Blocchi con icone
-msgid "Blocchi con icone"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Blocco CTA
-msgid "Blocco CTA"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Blocco Numeri
-msgid "Blocco Numeri"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 # defaultMessage: Titolo del blocco...
 msgid "Block Title"
@@ -101,25 +75,10 @@ msgstr ""
 msgid "Block style"
 msgstr ""
 
-#: config/Blocks/blocks
-# defaultMessage: Calendario
-msgid "Calendario"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Card con immagine
-msgid "Card con immagine"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateOneForRow
 # defaultMessage: Vedi
 msgid "Card detail label"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Card semplice
-msgid "Card semplice"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
@@ -190,7 +149,6 @@ msgid "Color_warning_orange"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView/EventoContatti
-#: config/Blocks/blocks
 # defaultMessage: Contatti
 msgid "Contatti"
 msgstr ""
@@ -215,16 +173,6 @@ msgstr ""
 msgid "Current filters applied"
 msgstr ""
 
-#: config/Blocks/blocks
-# defaultMessage: Contenuto in primo piano
-msgid "Contenuto in primo piano"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Count Down
-msgid "Count Down"
-msgstr ""
-
 #: components/ItaliaTheme/View/Commons/Dates
 # defaultMessage: Date aggiuntive
 msgid "Date aggiuntive"
@@ -238,13 +186,6 @@ msgstr ""
 #: helpers/Translations/searchBlockExtendedTranslations
 # defaultMessage: Dal {start}
 msgid "DateRangeFacetFilterListEntryDal"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Calendar/schema
-#: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
-#: components/ItaliaTheme/manage/Widgets/TinymceWidget
-# defaultMessage: Default
-msgid "Default"
 msgstr ""
 
 #: helpers/Translations/searchBlockExtendedTranslations
@@ -388,18 +329,12 @@ msgstr ""
 msgid "In this section"
 msgstr ""
 
-#: config/Blocks/blocks
-# defaultMessage: Informazioni
-msgid "Informazioni"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/CountDown/Edit
 # defaultMessage: Inserisci il testo…
 msgid "Inserisci il testo…"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Break/Edit
-#: config/Blocks/blocks
 # defaultMessage: Interruzione di pagina
 msgid "Interruzione di pagina"
 msgstr ""
@@ -566,37 +501,6 @@ msgstr ""
 msgid "Previous page"
 msgstr "Vorherige Seite"
 
-#: components/ItaliaTheme/Blocks/Calendar/schema
-# defaultMessage: Query
-msgid "Query"
-msgstr ""
-
-#: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
-#: components/ItaliaTheme/manage/Widgets/TinymceWidget
-# defaultMessage: Required
-msgid "Required"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Ricerca Unità Organizzative
-msgid "Ricerca Unità Organizzative"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Ricerca bandi
-msgid "Ricerca bandi"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Ricerca eventi
-msgid "Ricerca eventi"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Ricerca nelle sezioni
-msgid "Ricerca nelle sezioni"
-msgstr ""
-
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Rimuovi il file
 msgid "Rimuovi il file"
@@ -751,11 +655,6 @@ msgstr ""
 msgid "Twitter Posts"
 msgstr ""
 
-#: config/Blocks/blocks
-# defaultMessage: Twitter posts
-msgid "Twitter posts"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
@@ -830,11 +729,6 @@ msgstr ""
 #: components/ItaliaTheme/View/VenueView/VenueDescription
 # defaultMessage: Video
 msgid "Video"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Video Gallery
-msgid "Video Gallery"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
@@ -1110,11 +1004,6 @@ msgstr ""
 msgid "ay11_select_press left to focus selected values"
 msgstr ""
 
-#: components/ItaliaTheme/View/Commons/SideMenu
-# defaultMessage: Indietro
-msgid "back"
-msgstr ""
-
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Torna alla ricerca
 msgid "backToSearch"
@@ -1221,16 +1110,6 @@ msgstr ""
 #: config/Blocks/ListingOptions/defaultOptions
 # defaultMessage: Colore di sfondo
 msgid "block_bg_color"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Info/Sidebar
-# defaultMessage: Colore
-msgid "border_color"
-msgstr ""
-
-#: components/ItaliaTheme/View/Commons/SideMenu
-# defaultMessage: Toggle navigation
-msgid "button-toggler-toggle-navigation"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
@@ -1340,11 +1219,6 @@ msgstr ""
 #: helpers/Translations/searchBlockExtendedTranslations
 # defaultMessage: Clear search
 msgid "clearSearch"
-msgstr ""
-
-#: components/ItaliaTheme/View/Commons/SideMenu
-# defaultMessage: Chiudi
-msgid "close"
 msgstr ""
 
 #: components/Collapse
@@ -1534,6 +1408,11 @@ msgstr ""
 msgid "customer_satisfaction"
 msgstr ""
 
+#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderEventDates
+# defaultMessage: dal {dateStart} fino a conclusione
+msgid "dal {dateStart} fino a conclusione"
+msgstr ""
+
 #: components/ItaliaTheme/View/IncaricoView/IncaricoView
 # defaultMessage: Data conclusione incarico
 msgid "data_conclusione"
@@ -1547,11 +1426,6 @@ msgstr ""
 #: components/ItaliaTheme/View/IncaricoView/IncaricoView
 # defaultMessage: Data inizio incarico
 msgid "data_inizio"
-msgstr ""
-
-#: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderEventDates
-# defaultMessage: dal {dateStart} fino a conclusione
-msgid "dal {dateStart} fino a conclusione"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaRuolo
@@ -2506,15 +2380,15 @@ msgstr ""
 msgid "login_with_spid"
 msgstr ""
 
+#: components/ItaliaTheme/Header/HeaderCenter
+# defaultMessage: Logo
+msgid "logo-subsite-alt"
+msgstr ""
+
 #: components/ItaliaTheme/View/PuntoDiContattoView/RelatedItemsChipsPDC
 #: components/ItaliaTheme/View/VenueView/VenueDescription
 # defaultMessage: Luoghi correlati
 msgid "luoghi_correlati"
-msgstr ""
-
-#: components/ItaliaTheme/Header/HeaderCenter
-# defaultMessage: Logo
-msgid "logo-subsite-alt"
 msgstr ""
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemLuoghiCorrelati
@@ -3991,14 +3865,14 @@ msgstr ""
 msgid "twitter_posts_not_found"
 msgstr ""
 
-#: components/ItaliaTheme/View/IncaricoView/IncaricoView
-# defaultMessage: Unita organizzativa
-msgid "ufficio"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/TwitterPosts/Body
 # defaultMessage: Retweets
 msgid "twitter_retweets"
+msgstr ""
+
+#: components/ItaliaTheme/View/IncaricoView/IncaricoView
+# defaultMessage: Unita organizzativa
+msgid "ufficio"
 msgstr ""
 
 #: components/ItaliaTheme/View/BandoView/BandoUfficioResponsabile

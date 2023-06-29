@@ -33,11 +33,6 @@ msgstr ""
 msgid "Accedi all'area personale"
 msgstr "Accéder à l'espace personnel"
 
-#: config/Blocks/blocks
-# defaultMessage: Accordion
-msgid "Accordion"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/Accordion/Edit
 #: components/ItaliaTheme/Blocks/ContactsBlock/Edit
 #: components/ItaliaTheme/Blocks/IconBlocks/Edit
@@ -52,20 +47,10 @@ msgstr ""
 msgid "Alert"
 msgstr "Alerte"
 
-#: config/Blocks/blocks
-# defaultMessage: Alert
-msgid "Alert"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 # defaultMessage: Allow Externals
 msgid "Allow Externals"
 msgstr "Accepter les URL externes pour l'intégration"
-
-#: config/Blocks/blocks
-# defaultMessage: Argomenti in evidenza
-msgid "Argomenti in evidenza"
-msgstr ""
 
 #: config/Blocks/ListingOptions/simpleCardTemplate
 # defaultMessage: Aspetto
@@ -82,21 +67,6 @@ msgstr "Avertissement!"
 msgid "Bando"
 msgstr "Annonce"
 
-#: config/Blocks/blocks
-# defaultMessage: Blocchi con icone
-msgid "Blocchi con icone"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Blocco CTA
-msgid "Blocco CTA"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Blocco Numeri
-msgid "Blocco Numeri"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/NumbersBlock/Edit
 # defaultMessage: Titolo del blocco...
 msgid "Block Title"
@@ -107,26 +77,11 @@ msgstr ""
 msgid "Block style"
 msgstr ""
 
-#: config/Blocks/blocks
-# defaultMessage: Calendario
-msgid "Calendario"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Card con immagine
-msgid "Card con immagine"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateDefault
 #: components/ItaliaTheme/Blocks/Listing/SimpleCard/SimpleCardTemplateOneForRow
 # defaultMessage: Vedi
 msgid "Card detail label"
 msgstr "Voir"
-
-#: config/Blocks/blocks
-# defaultMessage: Card semplice
-msgid "Card semplice"
-msgstr ""
 
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Sidebar
 # defaultMessage: Allinea immagine a destra
@@ -196,7 +151,6 @@ msgid "Color_warning_orange"
 msgstr ""
 
 #: components/ItaliaTheme/View/EventoView/EventoContatti
-#: config/Blocks/blocks
 # defaultMessage: Contatti
 msgid "Contatti"
 msgstr "Contacts"
@@ -221,16 +175,6 @@ msgstr "Contenu"
 msgid "Current filters applied"
 msgstr ""
 
-#: config/Blocks/blocks
-# defaultMessage: Contenuto in primo piano
-msgid "Contenuto in primo piano"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Count Down
-msgid "Count Down"
-msgstr ""
-
 #: components/ItaliaTheme/View/Commons/Dates
 # defaultMessage: Date aggiuntive
 msgid "Date aggiuntive"
@@ -239,13 +183,6 @@ msgstr "Dates supplémentaires"
 #: helpers/Translations/searchBlockExtendedTranslations
 # defaultMessage: Al {end}
 msgid "DateRangeFacetFilterListEntryAl"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Calendar/schema
-#: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
-#: components/ItaliaTheme/manage/Widgets/TinymceWidget
-# defaultMessage: Default
-msgid "Default"
 msgstr ""
 
 #: helpers/Translations/searchBlockExtendedTranslations
@@ -394,18 +331,12 @@ msgstr "Paramètres des cookies"
 msgid "In this section"
 msgstr "Dans cette section"
 
-#: config/Blocks/blocks
-# defaultMessage: Informazioni
-msgid "Informazioni"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/CountDown/Edit
 # defaultMessage: Inserisci il testo…
 msgid "Inserisci il testo…"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Break/Edit
-#: config/Blocks/blocks
 # defaultMessage: Interruzione di pagina
 msgid "Interruzione di pagina"
 msgstr ""
@@ -572,37 +503,6 @@ msgstr "Début"
 msgid "Previous page"
 msgstr "Page précédente"
 
-#: components/ItaliaTheme/Blocks/Calendar/schema
-# defaultMessage: Query
-msgid "Query"
-msgstr ""
-
-#: components/ItaliaTheme/manage/Widgets/CharCounterDescriptionWidget
-#: components/ItaliaTheme/manage/Widgets/TinymceWidget
-# defaultMessage: Required
-msgid "Required"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Ricerca Unità Organizzative
-msgid "Ricerca Unità Organizzative"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Ricerca bandi
-msgid "Ricerca bandi"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Ricerca eventi
-msgid "Ricerca eventi"
-msgstr ""
-
-#: config/Blocks/blocks
-# defaultMessage: Ricerca nelle sezioni
-msgid "Ricerca nelle sezioni"
-msgstr ""
-
 #: components/ItaliaTheme/manage/Widgets/FileWidget
 # defaultMessage: Rimuovi il file
 msgid "Rimuovi il file"
@@ -757,11 +657,6 @@ msgstr ""
 msgid "Twitter Posts"
 msgstr ""
 
-#: config/Blocks/blocks
-# defaultMessage: Twitter posts
-msgid "Twitter posts"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
@@ -837,11 +732,6 @@ msgstr "Lieux"
 # defaultMessage: Video
 msgid "Video"
 msgstr "Vidéo"
-
-#: config/Blocks/blocks
-# defaultMessage: Video Gallery
-msgid "Video Gallery"
-msgstr ""
 
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 # defaultMessage: Video Gallery
@@ -1116,11 +1006,6 @@ msgstr "appuyez sur Echap pour quitter le menu"
 msgid "ay11_select_press left to focus selected values"
 msgstr "appuyez sur la gauche pour mettre au point les valeurs sélectionnées"
 
-#: components/ItaliaTheme/View/Commons/SideMenu
-# defaultMessage: Indietro
-msgid "back"
-msgstr "retourner"
-
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Torna alla ricerca
 msgid "backToSearch"
@@ -1227,16 +1112,6 @@ msgstr "Biographie"
 #: config/Blocks/ListingOptions/defaultOptions
 # defaultMessage: Colore di sfondo
 msgid "block_bg_color"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/Info/Sidebar
-# defaultMessage: Colore
-msgid "border_color"
-msgstr ""
-
-#: components/ItaliaTheme/View/Commons/SideMenu
-# defaultMessage: Toggle navigation
-msgid "button-toggler-toggle-navigation"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Calendar/ListingSidebar
@@ -1347,11 +1222,6 @@ msgstr ""
 # defaultMessage: Clear search
 msgid "clearSearch"
 msgstr ""
-
-#: components/ItaliaTheme/View/Commons/SideMenu
-# defaultMessage: Chiudi
-msgid "close"
-msgstr "Fermer"
 
 #: components/Collapse
 # defaultMessage: Chiudi menu
@@ -1540,14 +1410,14 @@ msgstr "Curriculum vitae"
 msgid "customer_satisfaction"
 msgstr "Résultats des enquêtes de satisfaction client"
 
-#: components/ItaliaTheme/View/IncaricoView/IncaricoView
-# defaultMessage: Data conclusione incarico
-msgid "data_conclusione"
-msgstr ""
-
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderEventDates
 # defaultMessage: dal {dateStart} fino a conclusione
 msgid "dal {dateStart} fino a conclusione"
+msgstr ""
+
+#: components/ItaliaTheme/View/IncaricoView/IncaricoView
+# defaultMessage: Data conclusione incarico
+msgid "data_conclusione"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaRuolo
@@ -2512,15 +2382,15 @@ msgstr ""
 msgid "login_with_spid"
 msgstr "Connectez-vous avec Spid"
 
+#: components/ItaliaTheme/Header/HeaderCenter
+# defaultMessage: Logo
+msgid "logo-subsite-alt"
+msgstr ""
+
 #: components/ItaliaTheme/View/PuntoDiContattoView/RelatedItemsChipsPDC
 #: components/ItaliaTheme/View/VenueView/VenueDescription
 # defaultMessage: Luoghi correlati
 msgid "luoghi_correlati"
-msgstr ""
-
-#: components/ItaliaTheme/Header/HeaderCenter
-# defaultMessage: Logo
-msgid "logo-subsite-alt"
 msgstr ""
 
 #: components/ItaliaTheme/View/NewsItemView/NewsItemLuoghiCorrelati
@@ -3997,14 +3867,14 @@ msgstr "Il n'y a pas de message à afficher."
 msgid "twitter_posts_not_found"
 msgstr ""
 
-#: components/ItaliaTheme/View/IncaricoView/IncaricoView
-# defaultMessage: Unita organizzativa
-msgid "ufficio"
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/TwitterPosts/Body
 # defaultMessage: Retweets
 msgid "twitter_retweets"
+msgstr ""
+
+#: components/ItaliaTheme/View/IncaricoView/IncaricoView
+# defaultMessage: Unita organizzativa
+msgid "ufficio"
 msgstr ""
 
 #: components/ItaliaTheme/View/BandoView/BandoUfficioResponsabile
