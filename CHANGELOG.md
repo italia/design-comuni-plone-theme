@@ -1,3 +1,25 @@
+
+
+## [8.0.0-alpha.41](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.40...v8.0.0-alpha.41) (2023-06-29)
+
+
+### Features
+
+* a11y for Slider listing template ([#226](https://github.com/RedTurtle/design-comuni-plone-theme/issues/226)) ([7198e7b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7198e7b9fff848220b1a858be616c7d8b71c53b6))
+
+
+### Bug Fixes
+
+* padding weekday date search left padding ([#223](https://github.com/RedTurtle/design-comuni-plone-theme/issues/223)) ([c9fc157](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c9fc157f34f15c606209397adb2335d805770dd5))
+* styles for a11y in cookiebanner ([#227](https://github.com/RedTurtle/design-comuni-plone-theme/issues/227)) ([43f0923](https://github.com/RedTurtle/design-comuni-plone-theme/commit/43f092340e289d5c54961965743c17aea42eb7da))
+
+
+### Maintenance
+
+* aria-live on results/no results divs ([#228](https://github.com/RedTurtle/design-comuni-plone-theme/issues/228)) ([18f5a42](https://github.com/RedTurtle/design-comuni-plone-theme/commit/18f5a427522bd83fef671e0daebf2be24d67f8d9))
+* update release deps ([3e2bbc1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3e2bbc1660a4111a9ce5d6796cecec992b5ae69a))
+* upgrade release-it (+ deps) ([#218](https://github.com/RedTurtle/design-comuni-plone-theme/issues/218)) ([d7b7268](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d7b7268de9547186239f820817ca498d43953634))
+
 ## [8.0.0-alpha.40](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.39...v8.0.0-alpha.40) (2023-06-27)
 
 
