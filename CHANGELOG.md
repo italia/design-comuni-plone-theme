@@ -1,3 +1,16 @@
+### [7.13.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.13.0...v7.13.1) (2023-06-30)
+
+
+### Bug Fixes
+
+* "feat: a11y for Slider listing template ([#224](https://github.com/RedTurtle/design-comuni-plone-theme/issues/224))" ([7a89ddf](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7a89ddfb60cb452b07920a418c0be536b8162dda))
+* small a11y fixes ([242a829](https://github.com/RedTurtle/design-comuni-plone-theme/commit/242a829d5882024eb1e0b59fbb9af6138977fa54))
+
+
+### Documentation
+
+* updated publiccode ([21926a3](https://github.com/RedTurtle/design-comuni-plone-theme/commit/21926a380edc23606b14b89b10b1d5c626199b8e))
+
 ## [7.13.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.12.2...v7.13.0) (2023-06-30)
 
 
