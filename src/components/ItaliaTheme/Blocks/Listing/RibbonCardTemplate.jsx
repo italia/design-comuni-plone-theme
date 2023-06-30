@@ -133,6 +133,7 @@ const RibbonCardTemplate = (props) => {
                           detail_link_label ||
                           intl.formatMessage(messages.default_detail_link)
                         }
+                        aria-hidden="true"
                       />
                     )}
                   </CardBody>
