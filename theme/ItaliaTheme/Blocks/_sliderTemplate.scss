@@ -131,18 +131,15 @@
           margin: 0 auto;
 
           background-color: #3f4142e0;
-          a {
-            color: $white;
 
-            font-size: 1.8rem;
-            font-weight: bold;
-            text-decoration: none;
-          }
+          color: $white;
+
+          font-size: 1.8rem;
+          font-weight: bold;
+          text-decoration: none;
 
           &:hover,
-          &:active,
-          a:hover,
-          a:active {
+          &:active {
             text-decoration-line: underline;
           }
 
