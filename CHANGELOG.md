@@ -1,3 +1,15 @@
+## [7.13.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.12.2...v7.13.0) (2023-06-30)
+
+
+### Features
+
+* focus on sidemenu shifts correctly between selected items and page content ([#213](https://github.com/RedTurtle/design-comuni-plone-theme/issues/213)) ([9bad87a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9bad87abe18f29b5806fe63ed0f7f9ea15ec3f91))
+
+
+### Documentation
+
+* updated publiccode ([8811321](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8811321d43bab71367f167889cb54e9a0b1b7818))
+
 ### [7.12.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.12.1...v7.12.2) (2023-06-29)
 
 
