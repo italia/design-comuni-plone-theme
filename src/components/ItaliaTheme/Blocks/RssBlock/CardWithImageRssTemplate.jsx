@@ -38,7 +38,7 @@ const CardWithImageRssTemplate = ({
   const intl = useIntl();
 
   return (
-    <div className={cx('', { 'public-ui': isEditMode })}>
+    <div className={cx('', { 'public-ui': isEditMode })} aria-live="polite">
       {items?.length > 0 ? (
         <>
           {data.title && (
@@ -107,7 +107,7 @@ const CardWithImageRssTemplate = ({
           )}
         </>
       ) : data.feed ? (
-        <div className="no-rss-feed-results">
+        <div className="no-rss-feed-results" aria-live="polite">
           {intl.formatMessage(messages.noResults)}
         </div>
       ) : null}

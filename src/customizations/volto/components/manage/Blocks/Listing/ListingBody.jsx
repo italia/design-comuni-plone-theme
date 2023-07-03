@@ -93,7 +93,11 @@ const ListingBody = React.memo(
           )}
           {!loadingQuery &&
           (listingItems.length > 0 || additionalFilters?.length > 0) ? (
-            <div className={`full-width ${getBlockClasses()}`} ref={listingRef}>
+            <div
+              className={`full-width ${getBlockClasses()}`}
+              ref={listingRef}
+              aria-live="polite"
+            >
               <ListingBodyTemplate
                 items={listingItems}
                 isEditMode={isEditMode}
@@ -115,7 +119,7 @@ const ListingBody = React.memo(
               )}
             </div>
           ) : isEditMode ? (
-            <div className="listing message">
+            <div className="listing message" aria-live="polite">
               {isFolderContentsListing && (
                 <FormattedMessage
                   id="No items found in this container."
