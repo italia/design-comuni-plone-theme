@@ -43,10 +43,6 @@ import videoSVG from '@plone/volto/icons/video.svg';
 import VideoGalleryView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/VideoGallery/View';
 import VideoGalleryEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/VideoGallery/Edit';
 
-import faTwitter from 'design-comuni-plone-theme/icons/twitter-brands.svg';
-import TwitterPostsView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/TwitterPosts/View';
-import TwitterPostsEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/TwitterPosts/Edit';
-
 import iconBlocksSVG from 'design-comuni-plone-theme/icons/blocco-icone.svg';
 import IconBlocksView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/IconBlocks/View';
 import IconBlocksEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/IconBlocks/Edit';
@@ -345,22 +341,6 @@ const italiaBlocks = {
     group: 'media',
     view: VideoGalleryView,
     edit: VideoGalleryEdit,
-    restricted: false,
-    cloneData: cloneBlock,
-    mostUsed: false,
-    security: {
-      addPermission: [],
-      view: [],
-    },
-    sidebarTab: 1,
-  },
-  twitter_posts: {
-    id: 'twitter_posts',
-    title: 'Twitter posts',
-    icon: faTwitter,
-    group: 'media',
-    view: TwitterPostsView,
-    edit: TwitterPostsEdit,
     restricted: false,
     cloneData: cloneBlock,
     mostUsed: false,

@@ -11,7 +11,6 @@ import { calendarDaySearchReducer } from './calendarDaySearchReducer';
 import { amministrazioneTrasparenteTree } from './amministrazioneTrasparenteTree';
 import { dettagliProcedimento } from './dettagliProcedimento';
 import { modulisticaItems } from './modulisticaItems';
-import { twitterPosts } from './twitterPosts';
 import { originalQueryReducer } from './originalQueryReducer';
 import { searchBandiFiltersReducer } from './searchBandiFiltersReducer';
 
@@ -34,7 +33,6 @@ const reducers = {
   amministrazioneTrasparenteTree: amministrazioneTrasparenteTree,
   dettagliProcedimento: dettagliProcedimento,
   modulisticaItems,
-  twitterPosts: twitterPosts,
   originalQuery: originalQueryReducer,
   searchBandiFilters: searchBandiFiltersReducer,
 };
