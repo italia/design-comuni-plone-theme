@@ -261,6 +261,7 @@ const SliderTemplate = ({
         breakpoint: 980,
         settings: {
           slidesToShow: 1,
+          slidesToScroll: 1,
         },
       },
     ],
