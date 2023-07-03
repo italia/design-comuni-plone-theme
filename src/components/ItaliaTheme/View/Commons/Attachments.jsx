@@ -98,7 +98,11 @@ const Attachments = ({
   );
 
   return !hasChildren ? null : as_article ? (
-    <article id={article_id} className="it-page-section anchor-offset mt-5">
+    <article
+      id={article_id}
+      className="it-page-section anchor-offset mt-5"
+      aria-labelledby={`header-${article_id}`}
+    >
       {title ? (
         <h4 id={`header-${article_id}`}>{title}</h4>
       ) : (

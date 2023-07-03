@@ -9,7 +9,11 @@ import { RelatedNews } from 'design-comuni-plone-theme/components/ItaliaTheme/Vi
  */
 const RelatedNewsArticles = ({ id = 'related-news', news, title }) => {
   return (
-    <article id={id} className="it-page-section anchor-offset mt-5">
+    <article
+      id={id}
+      className="it-page-section anchor-offset mt-5"
+      aria-labelledby={`header-${id}`}
+    >
       <h4 id={`header-${id}`}>{title}</h4>
       <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
         {news?.map((item, i) => (

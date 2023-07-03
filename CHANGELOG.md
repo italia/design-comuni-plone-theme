@@ -1,3 +1,74 @@
+### [7.13.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.13.0...v7.13.1) (2023-06-30)
+
+
+### Bug Fixes
+
+* "feat: a11y for Slider listing template ([#224](https://github.com/RedTurtle/design-comuni-plone-theme/issues/224))" ([7a89ddf](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7a89ddfb60cb452b07920a418c0be536b8162dda))
+* small a11y fixes ([242a829](https://github.com/RedTurtle/design-comuni-plone-theme/commit/242a829d5882024eb1e0b59fbb9af6138977fa54))
+
+
+### Documentation
+
+* updated publiccode ([21926a3](https://github.com/RedTurtle/design-comuni-plone-theme/commit/21926a380edc23606b14b89b10b1d5c626199b8e))
+
+## [7.13.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.12.2...v7.13.0) (2023-06-30)
+
+
+### Features
+
+* focus on sidemenu shifts correctly between selected items and page content ([#213](https://github.com/RedTurtle/design-comuni-plone-theme/issues/213)) ([9bad87a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9bad87abe18f29b5806fe63ed0f7f9ea15ec3f91))
+
+
+### Documentation
+
+* updated publiccode ([8811321](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8811321d43bab71367f167889cb54e9a0b1b7818))
+
+### [7.12.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.12.1...v7.12.2) (2023-06-29)
+
+
+### Bug Fixes
+
+* useIntl in TextSizeButton ([f290b6b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f290b6b090d1894f3164c00017ea3aabf5af564d))
+
+
+### Documentation
+
+* updated publiccode ([8e5bd97](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8e5bd9791a6c01f24102f26fbfaf49e3a9aed784))
+
+### [7.12.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.12.0...v7.12.1) (2023-06-29)
+
+
+### Bug Fixes
+
+* locales ([a73da13](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a73da1318f49feac04a7d649fe7e5597fdc584ca))
+* missing intl in collapse component ([b7b2bba](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b7b2bba55af1bedd5909a7b22bb3f8343edb6fbd))
+* translation errors ([2cbc1de](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2cbc1def925180c7688c0c1b40c4e5566fe494fb))
+
+
+### Documentation
+
+* updated publiccode ([19985f6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/19985f6b1aa591c844271aa0a218bec595fadba8))
+
+## [7.12.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.11.1...v7.12.0) (2023-06-29)
+
+
+### Features
+
+* a11y for Slider listing template ([#224](https://github.com/RedTurtle/design-comuni-plone-theme/issues/224)) ([6fb6182](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6fb618241f5abce8afa96c139e11ec71916af67e))
+* updated gdpr add-on and enabled focus trap in cookie banner ([f9ba2a9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f9ba2a9917132cd78bfd9eda3f32dc9b92a03d81))
+
+
+### Bug Fixes
+
+* added more improvements about i18n support ([#138](https://github.com/RedTurtle/design-comuni-plone-theme/issues/138)) ([6849d28](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6849d28474d4c862069898fd9f1c0614bf7464fa))
+* show telephon in office card without address props ([#229](https://github.com/RedTurtle/design-comuni-plone-theme/issues/229)) ([0a076c4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/0a076c4448f5eabc57d4a7c40115c9fe57d5cea0))
+* styles for a11y in cookiebanner ([#225](https://github.com/RedTurtle/design-comuni-plone-theme/issues/225)) ([f7c4300](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f7c4300693c8dd72162b690cd7c7c4b29d9fbeba))
+
+
+### Documentation
+
+* updated publiccode ([b6166cb](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b6166cb5c6d73bfcd1baf825742ee5fec1f5a2e6))
+
 ### [7.11.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.11.0...v7.11.1) (2023-06-23)
 
 

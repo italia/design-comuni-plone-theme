@@ -39,7 +39,11 @@ const UOContacts = ({ content }) => {
         content?.web?.length > 0 ||
         content?.email?.length > 0 ||
         content?.pec?.length > 0) && (
-        <article id="contatti" className="it-page-section anchor-offset mt-5">
+        <article
+          id="contatti"
+          className="it-page-section anchor-offset mt-5"
+          aria-labelledby="header-contatti"
+        >
           <h4 id="header-contatti" className="mb-3">
             {intl.formatMessage(messages.contatti)}
           </h4>

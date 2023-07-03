@@ -62,7 +62,11 @@ const OfficeCard = ({
         </h5>
         <p className="card-text">{office_fo.description}</p>
         {show_contacts &&
-          (office_fo.city || office_fo.zip_code || office_fo.street) && (
+          (office_fo.city ||
+            office_fo.zip_code ||
+            office_fo.street ||
+            office_fo.telefono ||
+            office_fo.email) && (
             <div className="card-text">
               {office_fo.street && <p>{office_fo.street}</p>}
               {(office_fo.city || office_fo.zip_code) && (

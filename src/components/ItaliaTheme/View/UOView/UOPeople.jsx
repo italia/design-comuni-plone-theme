@@ -25,6 +25,7 @@ const UOPeople = ({ content }) => {
     <article
       id="persone-struttura"
       className="it-page-section anchor-offset mt-5"
+      aria-labelledby="header-persone-struttura"
     >
       <h4 id="header-persone-struttura">
         {intl.formatMessage(messages.persone_struttura)}

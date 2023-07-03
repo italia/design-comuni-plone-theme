@@ -20,6 +20,10 @@ const messages = defineMessages({
     id: 'event_title',
     defaultMessage: 'Eventi',
   },
+  immagine: {
+    id: 'Immagine',
+    defaultMessage: 'Immagine',
+  },
 });
 
 /**
@@ -62,7 +66,7 @@ const Evento = ({ event, show_image }) => {
           </div>
           <Image
             image={event.image}
-            alt="Immagine"
+            alt={intl.formatMessage(messages.immagine)}
             className="event-center-cropped"
           />
         </div>
@@ -118,6 +122,7 @@ const Events = ({ content, title, show_image, folder_name, isChild }) => {
         <article
           id="appuntamenti"
           className="it-page-section anchor-offset mt-5"
+          aria-labelledby={'header-appuntamenti'}
         >
           {title ? (
             <h4 id="header-appuntamenti">{title}</h4>

@@ -23,6 +23,10 @@ const messages = defineMessages({
     id: 'close',
     defaultMessage: 'Chiudi',
   },
+  buttonToggle: {
+    id: 'button-toggler-toggle-navigation',
+    defaultMessage: 'Toggle navigation',
+  },
 });
 
 const extractHeaders = (elements, intl) => {
@@ -129,6 +133,11 @@ const SideMenu = ({ data, content_uid }) => {
 
   const handleClickAnchor = (id) => (e) => {
     e.preventDefault();
+    // Blur a link
+    document.getElementById(`item-${id}`).blur();
+    // Focus on section
+    document.getElementById(id).focus({ preventScroll: true });
+    // Scroll to section
     document.getElementById(id)?.scrollIntoView?.({
       behavior: 'smooth',
       block: 'start',
@@ -148,7 +157,7 @@ const SideMenu = ({ data, content_uid }) => {
           type="button"
           aria-controls="navbarNavB"
           aria-expanded={isNavOpen ? 'true' : 'false'}
-          aria-label="Toggle navigation"
+          aria-label={intl.formatMessage(messages.buttonToggle)}
           data-target="#navbarNavB"
           onClick={() => onNavScrollToggle()}
         >
@@ -203,8 +212,9 @@ const SideMenu = ({ data, content_uid }) => {
                       }`}
                       href={`#${item.id}`}
                       onClick={handleClickAnchor(item.id)}
+                      id={`item-${item.id}`}
                     >
-                      <span>{item.title}</span>
+                      {item.title}
                     </a>
                   </li>
                 ))}

@@ -45,7 +45,11 @@ const UOStructure = ({ content }) => {
     content?.uo_children?.length > 0 ||
     content?.uo_parent ||
     content?.assessore_riferimento?.length > 0 ? (
-    <article id="struttura" className="it-page-section anchor-offset mt-5">
+    <article
+      id="struttura"
+      className="it-page-section anchor-offset mt-5"
+      aria-labelledby="header-struttura"
+    >
       <h4 id="header-struttura" className="mb-3">
         {intl.formatMessage(messages.struttura)}
       </h4>

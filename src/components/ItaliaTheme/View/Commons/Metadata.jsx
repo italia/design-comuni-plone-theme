@@ -45,6 +45,7 @@ const Metadata = ({
     <article
       id="metadata"
       className={cx('it-page-section', 'anchor-offset', { 'mt-5': !noMargin })}
+      aria-labelledby={'header-metadata'}
     >
       {showSectionTitle && (
         <h4 id="header-metadata" className="mb-3">

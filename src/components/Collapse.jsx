@@ -1,10 +1,18 @@
 import React from 'react';
+import { defineMessages, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import { Collapse as CollapseBase } from 'reactstrap';
 
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
+
+const messages = defineMessages({
+  CloseMenu: {
+    id: 'close-menu',
+    defaultMessage: 'Chiudi menu',
+  },
+});
 
 /**
  * Clone di https://github.com/italia/design-react-kit/blob/master/src/components/Collapse/Collapse.js
@@ -33,6 +41,8 @@ const Collapse = ({
   onOverlayClick,
   ...attributes
 }) => {
+  const intl = useIntl();
+
   if (navbar && header) {
     const classes = classNames(className, 'navbar-collapse', {
       expanded: isOpen,
@@ -54,7 +64,7 @@ const Collapse = ({
           <button
             className="btn close-menu"
             type="button"
-            title="Chiudi menu"
+            title={intl.formatMessage(messages.CloseMenu)}
             onClick={onOverlayClick}
           >
             <Icon color="white" icon="it-close-big" padding={false} />

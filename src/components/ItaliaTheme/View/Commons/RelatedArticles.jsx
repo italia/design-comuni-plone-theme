@@ -21,6 +21,7 @@ const RelatedArticles = ({
     <article
       id={id}
       className={cx('it-page-section', 'anchor-offset', { 'mt-5': !noMargin })}
+      aria-labelledby={title_size !== 'h5' ? `header-${id}` : undefined}
     >
       {title && show_title ? (
         title_size === 'h5' ? (

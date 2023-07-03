@@ -399,7 +399,7 @@ const Search = () => {
                 <div className="row pb-3">
                   <div className="col-6">
                     {searchResults?.result?.items_total > 0 && (
-                      <small>
+                      <small aria-live="polite">
                         {intl.formatMessage(messages.foundNResults, {
                           total: searchResults.result.items_total,
                         })}
