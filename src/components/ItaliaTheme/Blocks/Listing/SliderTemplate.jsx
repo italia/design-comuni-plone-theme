@@ -7,10 +7,10 @@ import {
   ListingLinkMore,
 } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import {
-  focusNext,
+  useSlider,
   visibleSlideTitle,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/Commons/utils';
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 import { UniversalLink } from '@plone/volto/components';
@@ -50,7 +50,7 @@ const messages = defineMessages({
 
 function NextArrow(props) {
   // Custom handling of focus as per Arter a11y audit and request
-  const { className, style, onClick, currentSlide, intl } = props;
+  const { className, style, onClick, currentSlide, intl, focusNext } = props;
   const handleClick = (options) => {
     onClick(options, false);
   };
@@ -86,7 +86,7 @@ function NextArrow(props) {
 
 function PrevArrow(props) {
   // Custom handling of focus as per Arter a11y audit and request
-  const { className, style, onClick, currentSlide, intl } = props;
+  const { className, style, onClick, currentSlide, intl, focusNext } = props;
 
   const handleKeyDown = async (event) => {
     // Tab n/p
@@ -136,7 +136,7 @@ const SliderTemplate = ({
   const [userAutoplay, setUserAutoplay] = useState(autoplay);
   const nSlidesToShow = parseInt(slidesToShow);
   const Slider = reactSlick.default;
-  const slider = useRef(null);
+  const { slider, focusNext } = useSlider();
 
   const toggleAutoplay = () => {
     if (!slider?.current) return;
@@ -251,8 +251,8 @@ const SliderTemplate = ({
     draggable: true,
     accessibility: true,
     // Custom handling of focus as per Arter a11y audit and request
-    nextArrow: <NextArrow intl={intl} />,
-    prevArrow: <PrevArrow intl={intl} />,
+    nextArrow: <NextArrow intl={intl} focusNext={focusNext} />,
+    prevArrow: <PrevArrow intl={intl} focusNext={focusNext} />,
     appendDots: renderCustomDots,
     //
     afterChange: focusNext,
