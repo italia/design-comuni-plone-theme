@@ -39,7 +39,6 @@ import {
   getSearchBandiFilters,
   GET_SEARCH_BANDI_FILTERS,
 } from './getSearchBandiFilters';
-import { getTwitterPosts, GET_TWITTER_POSTS } from './getTwitterPosts';
 
 export {
   getSearchFilters,
@@ -58,8 +57,6 @@ export {
   GET_MODULISTICA_ITEMS,
   resetModulisticaItems,
   RESET_MODULISTICA_ITEMS,
-  getTwitterPosts,
-  GET_TWITTER_POSTS,
   setOriginalQuery,
   ORIGINAL_QUERY,
   getSearchBandiFilters,

@@ -635,11 +635,6 @@ msgstr "Trascina qui un file per sostituire quello esistente"
 msgid "Trasparenza"
 msgstr "Trasparenza"
 
-#: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
-# defaultMessage: Twitter Posts
-msgid "Twitter Posts"
-msgstr "Twitter Posts"
-
 #: components/ItaliaTheme/Blocks/CTABlock/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
@@ -2520,11 +2515,6 @@ msgstr "Novità"
 msgid "numbers_block"
 msgstr "Blocco numeri"
 
-#: components/ItaliaTheme/Blocks/TwitterPosts/Body
-# defaultMessage: Replies
-msgid "numbers_replies"
-msgstr ""
-
 #: components/ItaliaTheme/View/Commons/PageHeader/PageHeaderNewsItem
 # defaultMessage: Numero del comunicato stampa
 msgid "numero_progressivo_cs"
@@ -3770,7 +3760,6 @@ msgstr "Tipologia persona"
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Sidebar
 #: components/ItaliaTheme/Blocks/SearchSections/SideBar
-#: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
 #: components/ItaliaTheme/Blocks/VideoGallery/Sidebar
 # defaultMessage: Titolo
 msgid "title"
@@ -3814,46 +3803,6 @@ msgstr "Trasparenza"
 # defaultMessage: Twitter
 msgid "twitter"
 msgstr "Twitter"
-
-#: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
-# defaultMessage: Link alla pagina del profilo
-msgid "twitterAccountLink"
-msgstr "Link alla pagina del profilo"
-
-#: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
-# defaultMessage: Accounts
-msgid "twitterAccounts"
-msgstr "Accounts"
-
-#: components/ItaliaTheme/Blocks/TwitterPosts/Sidebar
-# defaultMessage: Inserisci i nomi degli account di cui vuoi visualizzare i post, separati da virgola. Ad esempio, se vuoi mostrare i tweet di Repubblica e del Corriere della Sera, inserisci “repubblica,Corriere".
-msgid "twitterAccounts_description"
-msgstr "Inserisci i nomi degli account di cui vuoi visualizzare i post, separati da virgola. Ad esempio, se vuoi mostrare i tweet di Repubblica e del Corriere della Sera, inserisci “repubblica,Corriere"."
-
-#: components/ItaliaTheme/Blocks/TwitterPosts/Body
-# defaultMessage: Error: Ci scusiamo per l'inconveniente, il server Twitter non risponde.
-msgid "twitter_error"
-msgstr "Error: Ci scusiamo per l'inconveniente, il server Twitter non risponde."
-
-#: components/ItaliaTheme/Blocks/TwitterPosts/Body
-# defaultMessage: Likes
-msgid "twitter_likes"
-msgstr ""
-
-#: components/ItaliaTheme/Blocks/TwitterPosts/Body
-# defaultMessage: Non c'è nessun post da mostrare.
-msgid "twitter_posts_no_results"
-msgstr "Non c'è nessun post da mostrare."
-
-#: components/ItaliaTheme/Blocks/TwitterPosts/Body
-# defaultMessage: Post non trovati.
-msgid "twitter_posts_not_found"
-msgstr "Post non trovati."
-
-#: components/ItaliaTheme/Blocks/TwitterPosts/Body
-# defaultMessage: Retweets
-msgid "twitter_retweets"
-msgstr ""
 
 #: components/ItaliaTheme/View/IncaricoView/IncaricoView
 # defaultMessage: Unita organizzativa

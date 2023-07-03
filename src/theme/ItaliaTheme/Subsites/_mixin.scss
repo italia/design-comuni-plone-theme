@@ -19,7 +19,6 @@
 @use 'ItaliaTheme/Blocks/highlitedContent' as it-highlight;
 @use 'ItaliaTheme/Blocks/argumentsInEvidence' as it-args-evidence;
 @use 'ItaliaTheme/Blocks/searchSections' as it-search-sections;
-@use 'ItaliaTheme/Blocks/twitterPosts' as it-twitter;
 @use 'ItaliaTheme/Views/common' as it-views;
 @use 'ItaliaTheme/common' as it-common;
 
@@ -96,7 +95,6 @@
         $subsite-secondary,
         $subsite-secondary-text
       );
-      @include it-twitter.block();
       @include it-views.common(
         $subsite-primary,
         $subsite-secondary,
