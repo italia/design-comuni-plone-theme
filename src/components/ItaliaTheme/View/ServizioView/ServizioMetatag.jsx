@@ -52,6 +52,8 @@ const ServizioMetatag = ({ content }) => {
     schemaOrg.availableChannel.serviceUrl = toPublicURL(
       content.canale_digitale_link,
     );
+  } else {
+    schemaOrg.availableChannel.serviceUrl = '';
   }
 
   if (content.ufficio_responsabile[0]) {
