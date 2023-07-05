@@ -15,7 +15,6 @@ export const CardPersona = ({
   titleClassName = '',
   titleTagName = 'h3',
   showImage,
-  natural_image_size,
   listingText,
   icon,
   type,
@@ -35,9 +34,8 @@ export const CardPersona = ({
         {
           'card-with-image': hasImage,
         },
-        `card-persona card-big-io-comune p-4 card-teaser-image card-flex no-after ${
-          className ?? ''
-        }`,
+        `card-persona card-big-io-comune p-4 card-teaser-image card-flex no-after border border-light rounded`,
+        className,
       )}
     >
       <div className="card-image-wrapper">

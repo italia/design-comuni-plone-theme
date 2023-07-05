@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import { Row, Col } from 'design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
+import { CardPersona } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { RichTextSection } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
 const messages = defineMessages({
@@ -31,32 +32,16 @@ const DocumentoAutori = ({ autori, title }) => {
       title={intl.formatMessage(messages.autore)}
     >
       <div className="autori-container">
-        <Row className="card-wrapper card-teaser-wrapper  ruolo-persone-struttura">
+        <Row className="card-wrapper card-teaser-wrapper ruolo-persone-struttura">
           {autori.map((autore) => (
             <Col xs="12" lg="12" xl="6" md="12" key={autore['@id']}>
-              <div className="card-persona card-big-io-comune p-3 card-teaser-image card-flex no-after shadow card">
-                <div className="card-body p-4">
-                  <h5 className="card-title">
-                    <UniversalLink item={autore} title={autore.title}>
-                      {autore.title}
-                    </UniversalLink>
-                  </h5>
-                  <p className="card-text">{autore.description}</p>
-                </div>
-                <div className="card-image-wrapper">
-                  <div className="card-image">
-                    <div className="volto-image">
-                      <img
-                        src={
-                          autore?.image_scales.foto_persona[0]?.scales.preview
-                            .download
-                        }
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <CardPersona
+                item={autore}
+                className="shadow"
+                titleTagName="h5"
+                showImage={true}
+                listingText={autore?.incarichi ?? ''}
+              />
             </Col>
           ))}
         </Row>
