@@ -1,5 +1,36 @@
 
 
+## [8.0.0-alpha.42](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.41...v8.0.0-alpha.42) (2023-07-05)
+
+
+### Features
+
+* focus on sidemenu shifts correctly between selected items and page content ([#212](https://github.com/RedTurtle/design-comuni-plone-theme/issues/212)) ([bb7c0f6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/bb7c0f6d87654b2008f089d3387b2cb8b2c3f676))
+* upgraded volto-data-grid-widget 2.2.0 ([40be1a7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/40be1a786e1bc8ce31337e84d89e4237c31118aa))
+
+
+### Bug Fixes
+
+* "feat: a11y for Slider listing template ([#226](https://github.com/RedTurtle/design-comuni-plone-theme/issues/226))" ([581b1e1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/581b1e1f9a5cff52862672d7a2e62ecf61359e6a))
+* added more improvements about i18n support ([#138](https://github.com/RedTurtle/design-comuni-plone-theme/issues/138)) ([f5d603e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f5d603e2902bf84be5becd99a87514c365d335a3))
+* nav menu font-weight ([e8897e8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/e8897e8eb88239427885485fe39d606ef728b41f))
+* number of slides to scroll on mobile set to 1 ([#239](https://github.com/RedTurtle/design-comuni-plone-theme/issues/239)) ([de0a8cd](https://github.com/RedTurtle/design-comuni-plone-theme/commit/de0a8cd3e367287757dcb7322213055c50181549))
+* rendering autore del documento con UO ([#242](https://github.com/RedTurtle/design-comuni-plone-theme/issues/242)) ([c9d5769](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c9d5769b0be46924ef86735081ae5f4d3a2527d3))
+* small a11y fixes ([94a7496](https://github.com/RedTurtle/design-comuni-plone-theme/commit/94a7496af30dd4e6b93a6189d07c17984a3d7b20))
+* sync datetimewidget customization ([#230](https://github.com/RedTurtle/design-comuni-plone-theme/issues/230)) ([16f78c5](https://github.com/RedTurtle/design-comuni-plone-theme/commit/16f78c5061e5a7c1a02e21ae5a0cca4bfd80b201))
+* translation errors ([772cccd](https://github.com/RedTurtle/design-comuni-plone-theme/commit/772cccd0e0ed7d4082b706e2ceee97756a0b1dce))
+* useIntl in TextSizeButton ([30f77c2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/30f77c2bfe0388014e77546ed9a31ae9ecde1ca3))
+
+
+### Changes
+
+* removed twitter block ([#233](https://github.com/RedTurtle/design-comuni-plone-theme/issues/233)) ([a3c85f4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a3c85f449221f1edc9422f7e73dd73d0373e0d06))
+
+
+### Maintenance
+
+* cleanup locales ([3c76bed](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3c76bedfc26b070b8afd810df769b6e3151555e5))
+
 ## [8.0.0-alpha.41](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.40...v8.0.0-alpha.41) (2023-06-29)
 
 
