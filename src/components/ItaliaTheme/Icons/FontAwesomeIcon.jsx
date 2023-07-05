@@ -22,9 +22,11 @@ const FontAwesomeIcon = (props) => {
     if (iconName && !loadedIcon) {
       import(
         `design-comuni-plone-theme/icons/fontawesome-free-5.15.4-web/svgs/${prefixFolder}/${iconName}.svg`
-      ).then((_loadedIcon) => {
-        setLoadedIcon(_loadedIcon);
-      });
+      )
+        .then((_loadedIcon) => {
+          setLoadedIcon(_loadedIcon);
+        })
+        .catch((error) => {});
     }
   }, [iconName, loadedIcon, prefixFolder]);
 
