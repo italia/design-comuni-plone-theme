@@ -1723,11 +1723,6 @@ msgstr "Bureau responsable"
 msgid "done_edit_social_links"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
-# defaultMessage: Navigazione elementi slider
-msgid "dots"
-msgstr ""
-
 #: components/ItaliaTheme/View/VenueView/VenueWhere
 # defaultMessage: Indirizzo
 msgid "dove"
@@ -2706,11 +2701,6 @@ msgstr ""
 msgid "playStoreLink"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
-# defaultMessage: Precedente
-msgid "precedente"
-msgstr ""
-
 #: components/ItaliaTheme/manage/Widgets/IconPreviewWidget
 # defaultMessage: Anteprima dell'icona scelta
 msgid "previewIconSelected"
@@ -3545,11 +3535,6 @@ msgstr "Aller à la navigation"
 msgid "skype"
 msgstr ""
 
-#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
-# defaultMessage: Vai alla slide {index}
-msgid "slideDot"
-msgstr ""
-
 #: config/Blocks/ListingOptions/sliderTemplate
 # defaultMessage: N° slide da mostrare
 msgid "slidesToShow"
@@ -3689,11 +3674,6 @@ msgstr ""
 # defaultMessage: Tags
 msgid "subjects"
 msgstr "Sujettes"
-
-#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
-# defaultMessage: Successivo
-msgid "successivo"
-msgstr ""
 
 #: components/ItaliaTheme/View/EventoView/EventoContatti
 # defaultMessage: Con il supporto di
