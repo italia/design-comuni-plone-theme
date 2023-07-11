@@ -104,7 +104,7 @@ const CardWithImageTemplate = (props) => {
                 {item['@type'] === 'Persona' ? (
                   <CardPersona
                     item={item}
-                    className="listing-item card-bg"
+                    className="listing-item card-bg shadow-sm"
                     showImage={showImage}
                     natural_image_size={natural_image_size}
                     listingText={listingText}

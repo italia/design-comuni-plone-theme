@@ -92,22 +92,6 @@
       bottom: $v-gap * 3;
     }
   }
-  .card-persona {
-    .card-image-wrapper {
-      .card-body {
-        flex: 2;
-      }
-      .card-image {
-        overflow: hidden;
-        picture {
-          min-width: unset;
-          img {
-            object-fit: cover;
-          }
-        }
-      }
-    }
-  }
 }
 
 .card-with-image-template {

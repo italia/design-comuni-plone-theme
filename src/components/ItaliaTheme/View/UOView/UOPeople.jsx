@@ -34,7 +34,7 @@ const UOPeople = ({ content }) => {
             <Col xs="12" lg="12" xl="6" md="12" key={p['@id']}>
               <CardPersona
                 item={p}
-                className={'shadow'}
+                className={'shadow-sm'}
                 showImage={true}
                 titleTagName={'h5'}
                 listingText={p?.incarichi}

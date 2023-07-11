@@ -24,23 +24,6 @@
     letter-spacing: $card-category-l-spacing;
   }
 
-  .card-persona {
-    .card-image-wrapper {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-start;
-
-      .card-image {
-        flex: 1 1 30%;
-
-        picture {
-          display: block;
-          min-width: 130px;
-        }
-      }
-    }
-  }
-
   //* custom align button
 
   .link-more-button-align-right {

@@ -37,7 +37,7 @@ const DocumentoAutori = ({ autori, title }) => {
             <Col xs="12" lg="12" xl="6" md="12" key={autore['@id']}>
               <CardPersona
                 item={autore}
-                className="shadow"
+                className="shadow-sm"
                 titleTagName="h5"
                 showImage={true}
                 listingText={autore?.incarichi ?? ''}
