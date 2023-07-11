@@ -104,7 +104,7 @@
     ]
   },
   "engines": {
-    "node": "^14 || ^16"
+    "node": "^16 || ^18"
   },
   "dependencies": {
     "@babel/plugin-proposal-export-default-from": "7.18.9",
@@ -163,7 +163,7 @@
     "stylelint-prettier": "^2.0.0"
   },
   "peerDependencies": {
-    "@plone/volto": "16.21.0"
+    "@plone/volto": "17.0.0-alpha.17"
   },
   "packageManager": "yarn@3.2.3"
 }

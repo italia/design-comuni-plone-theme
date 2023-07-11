@@ -5,6 +5,9 @@ CUSTOMIZATIONS:
 - added additional filters
 - added additional fields to pass to @querystring-search (config.settings.querystringAdditionalFields)
 - usedeepCompareEffect and integrate custom logic for searchBlock to make it work with our implementation
+
+TODO:
+- Needs updating, it's quite different in the latest volto version
 */
 import React, { createRef, useEffect } from 'react';
 import hoistNonReactStatics from 'hoist-non-react-statics';

@@ -8,7 +8,7 @@ services:
       args:
         ADDON_NAME: '${ADDON_NAME}'
         ADDON_PATH: '${ADDON_PATH}'
-        VOLTO_VERSION: ${VOLTO_VERSION:-16}
+        VOLTO_VERSION: ${VOLTO_VERSION:-17}
     volumes:
       - ${CURRENT_DIR}:/app/src/addons/${ADDON_PATH}/
     environment:
@@ -34,7 +34,7 @@ services:
       args:
         ADDON_NAME: '${ADDON_NAME}'
         ADDON_PATH: '${ADDON_PATH}'
-        VOLTO_VERSION: ${VOLTO_VERSION:-16}
+        VOLTO_VERSION: ${VOLTO_VERSION:-17}
     environment:
       RAZZLE_INTERNAL_API_PATH: http://backend:8080/Plone
       RAZZLE_API_PATH: http://localhost:8080/Plone
