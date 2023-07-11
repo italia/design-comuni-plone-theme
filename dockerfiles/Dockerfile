@@ -5,6 +5,8 @@ FROM plone/frontend-builder:${VOLTO_VERSION} as builder
 ARG ADDON_NAME
 ARG ADDON_PATH
 
+ENV NODE_OPTIONS "--max_old_space_size=4096"
+
 USER root
 
 RUN <<EOT
