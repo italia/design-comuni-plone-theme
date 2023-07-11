@@ -12,6 +12,14 @@
           }
         }
       }
+
+      .it-search-wrapper {
+        a.search-link:focus {
+          border: 1px solid $primary !important;
+          box-shadow: $search-focus-outline-shadow !important;
+          outline: $search-focus-outline-color !important;
+        }
+      }
     }
   }
 }

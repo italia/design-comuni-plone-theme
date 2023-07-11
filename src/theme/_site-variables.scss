@@ -29,6 +29,16 @@ $gdpr-link-color: #004285 !default;
 $gdpr-focus-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
   0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 0.2rem $gdpr-focus-color !default;
 
+// ACCESSIBILITY - SEARCH BUTTON
+$focus-outline-color-on-primary: #fff !default;
+
+$search-focus-outline-color: $focus-outline-color-on-primary !default;
+
+$focus-outline-shadow-on-primary: 0px 0px 7px 7px
+  $focus-outline-color-on-primary !default;
+
+$search-focus-outline-shadow: $focus-outline-shadow-on-primary !default;
+
 $caption-text: #455b71 !default;
 
 $primary-a0: hsl($primary-h, 62%, 97%) !default;
