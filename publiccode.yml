@@ -10,7 +10,7 @@ categories:
 dependsOn:
   open:
     - name: nodejs
-      versionMin: '14'
+      versionMin: '16'
     - name: Python
       versionMin: '3.8'
     - name: Docker
@@ -227,9 +227,9 @@ maintenance:
 name: io-Comune - Il sito AgID per Comuni ed Enti Pubblici
 platforms:
   - web
-releaseDate: '2023-01-11'
+releaseDate: '2023-07-11'
 softwareType: standalone/web
-softwareVersion: 7.0.0
+softwareVersion: 8.0.0
 url: 'https://github.com/italia/design-comuni-plone-theme'
 usedBy:
   - ASP Comuni Modenesi Area Nord
@@ -239,12 +239,14 @@ usedBy:
   - ASP Comuni Modenesi Area Nord
   - Azienda Ospedaliero-Universitaria di Ferrara
   - Azienda USL di Ferrara
+  - Biblioteca comunale di Imola
   - Biblioteche Pianura Est
   - Camera di Commercio dell'Umbria
   - Camera di Commercio di Reggio Emilia
   - Comune di Bibbiano
   - Comune di Camposanto
   - Comune di Cantagallo
+  - Comune di Cavriago
   - Comune di Imola
   - Comune di Medolla
   - Comune di Mirandola

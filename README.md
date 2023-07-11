@@ -1,89 +1,32 @@
-# io-Comune: il tema di Plone per la Pubblica Amministrazione
+# Tema di Plone per la Pubblica Amministrazione
 
-Crea con semplicità il nuovo sito del tuo Comune o Ente Pubblico:\
-conforme alle nuove linee guida AgID, accessibile a tutti ed usabile da smartphone e da PC.
+[io-Comune](https://www.io-comune.it/) è il tema Volto per il CMS [Plone](https://plone.org/) che rispetta le indicazioni [Linee guida di design per i servizi digitali della PA](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/it/stabile/index.html) usando [bootstrap-italia](https://italia.github.io/bootstrap-italia/).
 
-![io-comune](/docs/01-io-comune.png)
+E' basato sulle linee guida versione 2020.1 e questo tema estende il tema base di Volto [design.plone.theme](https://github.com/italia/design.plone.theme/).
 
-### Pensato per i cittadini, costruito con i redattori
-
-io-Comune è la soluzione versatile e facile da usare per garantire ai cittadini un rapido accesso ai contenuti e ai servizi del tuo Comune, sia dal PC che da mobile.
-
-### AgID 2.0
-
-io-Comune segue le linee guida ufficiali per il design dei siti web dei Comuni italiani: layout grafico, architettura informativa, struttura dei contenuti e flussi di navigazione rispecchiano gli standard definiti da AgID.
-
-### Trovabilità dei contenuti
-
-io-Comune integra componenti e flussi di navigazione suggeriti da AgID, con l'esperienza ventennale di [RedTurtle](https://www.redturtle.it/) nella gestione di complesse basi informative per darti la migliore esperienza di fruizione e portarti velocemente al contenuto desiderato.
-
-### La porta per i servizi online
-
-io-Comune supporta nativamente le piattaforme abilitanti, come la componente di autenticazione SPID e il sistema di pagamento pagoPA.\
-Inoltre, io-Comune permetterà l’integrazione con IO, l'app ufficiale dei servizi pubblici, per poter dialogare con i cittadini anche dal telefono.
-
-### Certificato e sicuro, si affida ad un CMS open source
-
-Puoi utilizzare io-Comune in totale sicurezza perché ha seguito con successo il [percorso di qualificazione per i fornitori di Software as a Service](https://catalogocloud.agid.gov.it/service/1085) della PA (SaaS).
-
-Questo ti garantisce un servizio di qualità e libertà di cambiare piattaforma senza vincoli di lock-in.
-
-io-Comune è una piattaforma disponibile nel cloud certificato della PA. In particolare il servizio viene erogato sulla piattaforma certificata IaaS (Infrastructure as a Service) Amazon Web Services presso la server farm di Milano, offrendo tutta la robustezza e sicurezza necessaria.
-
-[io-Comune](https://www.io-comune.it/) è il tema Volto per il CMS [Plone](https://plone.org/) che permette di aderire al [modello di sito istituzionale dei Comuni Italiani](https://designers.italia.it/modello/comuni/).
-
-Quindi non solo un semplice tema grafico, gestisce ed implementa anche tutte le tipologia di contenuto (Content Type) delle linee guida: di fatto consente la realizzazione di un sito istituzionale di un Comune (ma anche di altri tipi di Enti Pubblici) conforme alle linee guida di design.
-
-Usato da piccoli Enti e anche da grandi PA come la **Regione Emilia Romagna**, l’**Università di Bologna** e la **Guardia di Finanza** per centinaia di siti.
-
-![io-comune](/docs/04-io-comune.png)
-
-## Installazione e supporto
-
-Nel progetto è presente una configurazione docker compose per testare un sito Io-Comune semplicemente usando il comando::
-
-```bash
-% make demo
-```
-
-## Sottositi
+io-Comune non è solo un tema grafico ma gestisce e implementa anche tutte le tipologia di contenuto (Content Type) delle linee guida: di fatto consente la realizzazione di un sito istituzionale di un Comune (ma anche di altri tipi di Enti) conforme alle linee guida di design.
 
 Il sistema implementa anche un tipo di contenuto ad hoc per la gestione di sottositi, in linee con le indicazioni generali.
 
 Si veda ad esempio:
 [Comune di Modena: Informagiovani](https://www.comune.modena.it/informagiovani)
 
-## Autenticazione SPID
-
-L'integrazione dell'autenticazione con SPID, viene fatta generalmente tramite addon plone come
-[pas.plugins.oidc](https://pypi.org/project/pas.plugins.oidc),
-[pas.plugins.headers](https://pypi.org/project/pas.plugins.headers), ...
-insieme a sistemi di integrazione SPID verificati con SPID o con federatori di autenticazione
-(Shibboleth, Keycloak, ...).
-
-Il tema prevede la possibilità di definire due environment `RAZZLE_SPID_LOGIN_URL` e `RAZZLE_SPID_LOGOUT_URL`
-su cui impostare rispettivamente la url di login e di logout, eventualmente esterne al sito, per l'integrazione.
-
-## Esempi di siti che usano questo tema/sistema
+## Esempi di siti che usano questo tema/sistema:
 
 - [ASP Comuni Modenesi Area Nord](https://www.aspareanord.it/)
 - [Azienda Ospedaliero-Universitaria di Ferrara](https://www.ospfe.it/)
 - [Azienda USL di Ferrara](https://www.ausl.fe.it/)
-- [Azienda USL di Piacenza](https://www.ausl.pc.it/)
 - [Biblioteche Pianura Est](https://bibest.it)
 - [Camera di Commercio dell'Umbria](https://www.umbria.camcom.it/)
 - [Camera di Commercio di Reggio Emilia](https://www.re.camcom.gov.it/)
 - [Comune di Bibbiano](https://www.comune.bibbiano.re.it/)
-- [Comune di Campegine](https://www.comune.campegine.re.it/)
 - [Comune di Camposanto](https://www.comune.camposanto.mo.it/)
-- [Comune di Canossa](https://www.comune.canossa.re.it/)
 - [Comune di Cantagallo](https://www.comune.cantagallo.po.it/)
 - [Comune di Imola](https://www.comune.imola.bo.it)
 - [Comune di Medolla](https://www.comune.medolla.mo.it/)
 - [Comune di Mirandola](https://www.comune.mirandola.mo.it/)
 - [Comune di Modena](https://www.comune.modena.it/)
 - [Comune di Montecchio Emilia](https://www.comune.montecchio-emilia.re.it/)
-- [Comune di Novellara](https://www.comune.novellara.re.it/)
 - [Comune di Parma](https://www.comune.parma.it/)
 - [Comune di Piacenza](https://www.comune.piacenza.it/)
 - [Comune di Reggio Emilia](https://www.comune.re.it/)
@@ -102,9 +45,110 @@ su cui impostare rispettivamente la url di login e di logout, eventualmente este
 - [Unione Val d'Enza](https://www.unionevaldenza.it/)
 - [Unione Val di Bisenzio](https://www.bisenzio.it/)
 
-## Riferimenti
 
-- [Documentazione tecnica per lo sviluppo del tema](DEVELOPMENT.md)
-- [Documentazione tecnica CMS Plone](https://6.docs.plone.org)
-- [Sito web progetto io-Comune](https://www.io-comune.it/)
-- [Modello di sito istituzionale dei Comuni Italiani](https://designers.italia.it/modello/comuni/)
+## Documentation
+
+A training on how to create your own website using Volto is available as part of the Plone training at [https://training.plone.org/5/volto/index.html](https://training.plone.org/5/volto/index.html).
+
+## Quick Start
+
+Below is a list of commands you will probably find useful.
+
+### `yarn install`
+
+Installs dependencies with [yarn](https://yarnpkg.com/).
+If you aren't installing new dependencies (after updating the package.json file), you may want to use `yarn install --frozen-lockfile` instead to be sure the versions are the correct ones.
+
+Otherwise, you can use `yarn install-full` to have a fresh istallation.
+
+### `yarn start`
+
+Runs the project in development mode.
+You can view your application at `http://localhost:3000`
+
+The page will reload if you make edits.
+
+### `yarn build`
+
+Builds the app for production to the build folder.
+
+The build is minified and the filenames include the hashes.
+Your app is ready to be deployed!
+
+### `yarn start:prod`
+
+Runs the compiled app in production.
+
+You can again view your application at `http://localhost:3000`
+
+### `yarn test`
+
+Runs the test watcher (Jest) in an interactive mode.
+By default, runs tests related to files changed since the last commit.
+
+### `yarn i18n`
+
+Runs the test i18n runner which extracts all the translation strings and
+generates the needed files.
+
+### mrs_developer
+
+[mrs_developer](https://github.com/collective/mrs-developer) is a great tool
+for developing multiple packages at the same time.
+
+```bash
+yarn develop
+```
+
+or
+
+```bash
+yarn develop:npx
+```
+
+(if you haven't installed mrs-developer yet)
+
+Volto's latest razzle config will pay attention to your jsconfig.json file
+for any customizations.
+
+## Release
+
+It's all configured for [release-it](https://github.com/release-it/release-it) and uses conventional changelog (see [COMMITLINT.md](./COMMITLINT.md)).
+To run a release, just run:
+
+```bash
+yarn release-it
+```
+
+if you want to check the configuration, it's in [.release-it.json](./.release-it.json).
+
+By default it will use the commits type and scope to determine the version following semamtic versioning rules, but if you want to set a different version, you can add to the release command the version step: major, minor or step.
+For example:
+
+```bash
+yarn release-it -- major
+```
+
+## Deploy and prodution scripts
+
+We have some scripts for that!
+
+Our usual scripts are `yarn deploy:prod` or `yarn deploy:staging`.
+
+These commands will build and restart a classical pm2 installation and this is an example of how they are configured:
+
+```json
+{
+  "build:staging": "RAZZLE_PUBLIC_URL=https://staging.my.domain.it RAZZLE_API_PATH=https://staging.my.domain.it/api PORT=4000 razzle build",
+  "build:prod": "RAZZLE_PUBLIC_URL=https://www.my.domain.it RAZZLE_API_PATH=https://www.my.domain.it/api RAZZLE_INTERNAL_API_PATH=http://127.0.0.1:8080/Plone PORT=4000 razzle build",
+  "deploy:staging": "rm -rfd node_modules/ && yarn cache clean && yarn install --frozen-lockfile && yarn build:staging && pm2 restart myproject-volto",
+  "deploy:prod": "rm -rfd node_modules/ && yarn cache clean && yarn install --frozen-lockfile && yarn build:prod && pm2 delete myproject-volto && pm2 start ecosystem.config.js"
+}
+```
+
+If in a production environment, it may have two installations, to always have a running instance of the app while the other can be prepared for a new deployment, minimizing the downtime.
+That's why we have `pm2 delete myproject-volto && pm2 start ecosystem.config.js` and not `pm2 restart myproject-volto`: the former is meant to be run in the installation that's not runnng.
+
+## Update "child" themes
+
+In order to update a "child" project, we have this handy script: [update-dvt](https://gist.github.com/nzambello/f5db6083635e1d641dbf863355cabff8).
