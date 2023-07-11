@@ -1,6 +1,13 @@
 .page-sharing,
 .page-actions {
+  .btn-dropdown:focus {
+    border-color: $focus-outline-color;
+    box-shadow: 0 0 0 2px $focus-outline-color;
+    outline: none;
+  }
   .link-list-wrapper {
+    z-index: 10;
+    position: relative;
     ul {
       li {
         a.list-item,
@@ -14,6 +21,13 @@
 
         button.btn-link {
           width: 100%;
+          border-radius: 0;
+
+          &:focus {
+            border-color: $focus-outline-color;
+            box-shadow: 0 0 0 2px $focus-outline-color;
+            outline: none;
+          }
         }
       }
     }
