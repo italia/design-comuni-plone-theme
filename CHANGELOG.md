@@ -1,3 +1,23 @@
+### [7.13.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.13.1...v7.13.2) (2023-07-11)
+
+
+### Bug Fixes
+
+* accessibility for Actions and Sharing components, contrasts and focus colors ([#237](https://github.com/RedTurtle/design-comuni-plone-theme/issues/237)) ([48fb66c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/48fb66c8c14adb96dac3b940599166e4e40c0f3f))
+* aria-live on results divs ([#234](https://github.com/RedTurtle/design-comuni-plone-theme/issues/234)) ([ca4f76f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ca4f76f0b62991104058ebd67f39adea5dc03720))
+* fontawesome error while fetching icons ([#243](https://github.com/RedTurtle/design-comuni-plone-theme/issues/243)) ([85ebae0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/85ebae046ff2c2b8c00d8cb8f405ce557f624ea6))
+* number of slides to scroll on mobile set to 1 ([#238](https://github.com/RedTurtle/design-comuni-plone-theme/issues/238)) ([34c16c6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/34c16c693f64e0c626ac992f135719c8aaeb632f))
+
+
+### Changes
+
+* twitter block removed ([#232](https://github.com/RedTurtle/design-comuni-plone-theme/issues/232)) ([02bdeee](https://github.com/RedTurtle/design-comuni-plone-theme/commit/02bdeee42fab857de789715221f3de7433600426))
+
+
+### Documentation
+
+* updated publiccode ([56c688f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/56c688f18fc38c016e17970721c958e8e6e328d2))
+
 ### [7.13.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.13.0...v7.13.1) (2023-06-30)
 
 
