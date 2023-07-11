@@ -1,5 +1,23 @@
 
 
+## [8.0.0-alpha.43](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.42...v8.0.0-alpha.43) (2023-07-11)
+
+
+### Features
+
+* empty serviceUrl in servizio schema org metatags when not available ([23602fd](https://github.com/RedTurtle/design-comuni-plone-theme/commit/23602fdd7fe78a311f45f492b7dbe2fe478a1cd7))
+
+
+### Bug Fixes
+
+* a11y styles for focus on search button in header ([#240](https://github.com/RedTurtle/design-comuni-plone-theme/issues/240)) ([6f54cb1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6f54cb1490231dc7125fcf4d001464e980a1981b))
+* cleanup cardpersona styles for style coherence ([8a0630a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8a0630a72209fa9a78cea3264da458c91d476f1a))
+
+
+### Maintenance
+
+* **deps-dev:** bump stylelint from 15.7.0 to 15.10.1 ([#244](https://github.com/RedTurtle/design-comuni-plone-theme/issues/244)) ([100cee6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/100cee67bab233eb70f2ca021742ce2c167875b6))
+
 ## [8.0.0-alpha.42](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.41...v8.0.0-alpha.42) (2023-07-05)
 
 
