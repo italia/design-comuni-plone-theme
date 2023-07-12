@@ -1,3 +1,15 @@
+## [7.14.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.13.2...v7.14.0) (2023-07-12)
+
+
+### Features
+
+* added accordion to side menu ([#231](https://github.com/RedTurtle/design-comuni-plone-theme/issues/231)) ([1283ad1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1283ad16870f7c6ac48c496b51b7c4cc2db84bb0))
+
+
+### Bug Fixes
+
+* changed css for focus on search button in header ([#248](https://github.com/RedTurtle/design-comuni-plone-theme/issues/248)) ([dcb5f89](https://github.com/RedTurtle/design-comuni-plone-theme/commit/dcb5f89793e5f165f1975464f259e19e468230a3))
+
 ### [7.13.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.13.1...v7.13.2) (2023-07-11)
 
 
