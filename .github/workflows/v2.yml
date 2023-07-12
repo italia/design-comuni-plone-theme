@@ -1,10 +1,10 @@
-name: Docker build for latest main version
+name: Docker build for latest v2 version
 on:
   push:
     branches: [v2]
 
 jobs:
-  build_main:
+  build_v2:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
