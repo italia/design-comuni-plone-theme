@@ -2,11 +2,11 @@ name: Unit Tests
 on: [push]
 jobs:
   unit:
+    name: Unit Tests
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [18.x]
-        python-version: [3.8]
 
     steps:
       - name: Main checkout
