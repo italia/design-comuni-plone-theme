@@ -1,0 +1,88 @@
+.side-menu-container {
+  position: relative;
+  aside {
+    z-index: 1;
+    .page-side-menu {
+      .menu-wrapper {
+        width: 100%;
+        .link-list-wrapper.menu-link-list {
+          .accordion-wrapper {
+            .collapse-div {
+              border-bottom: none;
+              .collapse-header {
+                width: 100%;
+                display: block;
+                border-bottom: 4px solid $border-color;
+
+                &:after {
+                  content: '';
+                  position: absolute;
+                  left: 0;
+                  bottom: -4px;
+                  width: 40px;
+                  height: 4px;
+                  background-color: $warning;
+                }
+                button.accordion-button {
+                  border: none;
+                  background: transparent;
+                  width: 100%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  flex-direction: row-reverse;
+                  padding: 14px 24px;
+                  text-decoration: none;
+
+                  h3 {
+                    padding: 0px;
+                    border-bottom: none;
+                    margin-bottom: 0px;
+                    &::after {
+                      display: none;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: #{map-get($grid-breakpoints, lg)}) {
+  .page-side-menu {
+    .menu-wrapper {
+      .accordion-wrapper {
+        .accordion {
+          .accordion-header {
+            button.accordion-button {
+              .accordion-title {
+                padding-bottom: 1.3em;
+                padding-top: 1.3em;
+              }
+            }
+          }
+        }
+      }
+    }
+    .navbar.it-navscroll-wrapper {
+      .menu-wrapper {
+        padding: 0;
+      }
+    }
+  }
+
+  .it-page-sections-container {
+    border-top: none !important;
+  }
+}
+
+// //Tablet horizontal / small desktop
+// @media (min-width: #{map-get($grid-breakpoints, lg)}) {
+//   .link-list-wrapper.menu-link-list:after {
+//     background-color: $tertiary;
+//   }
+// }

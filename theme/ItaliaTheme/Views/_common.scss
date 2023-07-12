@@ -102,16 +102,6 @@ h6 {
   }
 }
 
-@media (max-width: #{map-get($grid-breakpoints, lg)}) {
-  .page-side-menu {
-    display: none;
-  }
-
-  .it-page-sections-container {
-    border-top: none !important;
-  }
-}
-
 .public-ui {
   .card.bigborder {
     border: 1px solid #d9dadb;

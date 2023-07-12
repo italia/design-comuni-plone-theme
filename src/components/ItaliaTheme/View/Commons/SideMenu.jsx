@@ -4,7 +4,11 @@
 import { defineMessages, useIntl } from 'react-intl';
 import React, { useEffect, useState } from 'react';
 import { throttle } from 'lodash';
-import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import {
+  Accordion,
+  AccordionBody,
+  AccordionHeader,
+} from 'design-react-kit/dist/design-react-kit';
 
 const messages = defineMessages({
   index: {
@@ -74,35 +78,15 @@ const SideMenu = ({ data, content_uid }) => {
 
   const [activeSection, _setActiveSection] = useState(null);
   const activeSectionRef = React.useRef(activeSection);
-  const [isNavOpen, setIsNavOpen] = React.useState(false);
+  const [isNavOpen, setIsNavOpen] = React.useState(
+    __CLIENT__ ? window?.innerWidth >= 992 : false,
+  );
+
   const setActiveSection = (data) => {
     activeSectionRef.current = data;
     _setActiveSection(data);
   };
   const [windowScrollY, setWindowScrollY] = useState(0);
-
-  const onNavScrollToggle = () => {
-    setIsNavOpen(!isNavOpen);
-  };
-
-  useEffect(() => {
-    if (data?.children) {
-      let extractedHeaders = extractHeaders(data.children, intl);
-
-      if (extractedHeaders.length > 0) {
-        setHeaders(extractedHeaders);
-        setActiveSection(extractedHeaders[0].id);
-      }
-      setWindowScrollY(window.scrollY);
-    }
-  }, [data, content_uid]);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   const handleScroll = throttle(() => {
     let scrollDown = window.scrollY > windowScrollY;
@@ -131,94 +115,87 @@ const SideMenu = ({ data, content_uid }) => {
     }
   }, 100);
 
+  useEffect(() => {
+    if (data?.children) {
+      let extractedHeaders = extractHeaders(data.children, intl);
+
+      if (extractedHeaders.length > 0) {
+        setHeaders(extractedHeaders);
+        setActiveSection(extractedHeaders[0].id);
+      }
+    }
+  }, [data, content_uid]);
+
+  useEffect(() => {
+    window?.addEventListener('scroll', handleScroll);
+    return () => {
+      window?.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const handleClickAnchor = (id) => (e) => {
     e.preventDefault();
+
+    if (window.innerWidth < 992) {
+      setIsNavOpen(false);
+    }
+
     // Blur a link
     document.getElementById(`item-${id}`).blur();
     // Focus on section
     document.getElementById(id).focus({ preventScroll: true });
     // Scroll to section
-    document.getElementById(id)?.scrollIntoView?.({
-      behavior: 'smooth',
-      block: 'start',
-    });
-    setIsNavOpen(false);
+    setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView?.({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }, 0);
   };
 
   return headers?.length > 0 ? (
     <div className="sticky-wrapper navbar-wrapper page-side-menu">
       <nav className="navbar it-navscroll-wrapper navbar-expand-lg">
-        <button
-          className={
-            isNavOpen
-              ? 'custom-navbar-toggler focus--mouse'
-              : 'custom-navbar-toggler'
-          }
-          type="button"
-          aria-controls="navbarNavB"
-          aria-expanded={isNavOpen ? 'true' : 'false'}
-          aria-label={intl.formatMessage(messages.buttonToggle)}
-          data-target="#navbarNavB"
-          onClick={() => onNavScrollToggle()}
-        >
-          <span className="it-list"></span>
-          {intl.formatMessage(messages.index)}
-        </button>
-
-        <div
-          className={
-            isNavOpen ? 'navbar-collapsable expanded' : 'navbar-collapsable'
-          }
-          id="navbarNavB"
-          style={isNavOpen ? { display: 'block' } : { display: 'none' }}
-        >
-          <div
-            className="overlay"
-            style={isNavOpen ? { display: 'block' } : { display: 'none' }}
-          ></div>
-          <div className="close-div sr-only">
-            <button className="btn close-menu" type="button">
-              <span className="it-close"></span>
-              {intl.formatMessage(messages.close)}
-            </button>
-          </div>
-          <a
-            className="it-back-button"
-            href="#"
-            style={isNavOpen ? { display: 'block' } : { display: 'none' }}
-            onClick={(e) => {
-              e.preventDefault();
-              onNavScrollToggle();
-            }}
-          >
-            <Icon
-              className="align-top"
-              color="primary"
-              icon="it-chevron-left"
-              style={{ ariaHidden: true }}
-              size="sm"
-            />
-            <span>{intl.formatMessage(messages.back)}</span>
-          </a>
-          <div className="menu-wrapper">
-            <div className="link-list-wrapper menu-link-list">
-              <h3>{intl.formatMessage(messages.index)}</h3>
-              <ul className="link-list" data-element="page-index">
-                {headers.map((item, i) => (
-                  <li className="nav-item" key={item.id}>
-                    <a
-                      className={`nav-link ${
-                        item.id === activeSection && 'active'
-                      }`}
-                      href={`#${item.id}`}
-                      onClick={handleClickAnchor(item.id)}
-                      id={`item-${item.id}`}
-                    >
-                      {item.title}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+        <div className="menu-wrapper">
+          <div className="link-list-wrapper menu-link-list">
+            <div className="accordion-wrapper">
+              <Accordion>
+                <AccordionHeader
+                  active={isNavOpen}
+                  onToggle={() => {
+                    setIsNavOpen(!isNavOpen);
+                  }}
+                  aria-expanded={isNavOpen ? 'true' : 'false'}
+                  className="accordion-button"
+                >
+                  <h3>{intl.formatMessage(messages.index)}</h3>
+                </AccordionHeader>
+              </Accordion>
+              <AccordionBody
+                active={isNavOpen}
+                className={
+                  isNavOpen
+                    ? 'accordion-collapse show'
+                    : 'accordion-collapse collapse'
+                }
+              >
+                <ul className="link-list" data-element="page-index">
+                  {headers.map((item, i) => (
+                    <li className="nav-item" key={item.id}>
+                      <a
+                        className={`nav-link ${
+                          item.id === activeSection && 'active'
+                        }`}
+                        href={`#${item.id}`}
+                        onClick={handleClickAnchor(item.id)}
+                        id={`item-${item.id}`}
+                      >
+                        <span>{item.title}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </AccordionBody>
             </div>
           </div>
         </div>
