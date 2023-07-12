@@ -1,5 +1,24 @@
 
 
+## [8.0.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.43...v8.0.0) (2023-07-12)
+
+
+### Documentation
+
+* fixed readme ([8b73766](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8b737663e24cd00bf6b7c22484b04b9455255646))
+* update readme and publiccode ([db47619](https://github.com/RedTurtle/design-comuni-plone-theme/commit/db476193a40ec2e2521a6c7395e54bbf6a9180f4))
+
+
+### Maintenance
+
+* cleanup unit test workflow ([36ece4d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/36ece4d846632145d44be0b8171d505c258f0477))
+* fix node memory issue on github ci ([427b6a9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/427b6a938d18a3fda6f52752ee666b5ef218fb39))
+* update versions ([a7fba75](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a7fba75d861e479c08e521329566af3a35916f7d))
+* update workflows ([eb49a34](https://github.com/RedTurtle/design-comuni-plone-theme/commit/eb49a34d7099dc81bc63acf37c6c57e2fc33f0bb))
+* update yarn.lock ([f9332e6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f9332e691bf943463b1d883e0366b6568524b48e))
+* updated nvmrc with node 18 ([5dee521](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5dee521aa2801f47c90b7900150b5e0911f79beb))
+* upgrade to latest volto17 alpha ([#222](https://github.com/RedTurtle/design-comuni-plone-theme/issues/222)) ([c13a6cb](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c13a6cb2ab1ebf3858db81f54e7e78b26ab579e2))
+
 ## [8.0.0-alpha.43](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.42...v8.0.0-alpha.43) (2023-07-11)
 
 
