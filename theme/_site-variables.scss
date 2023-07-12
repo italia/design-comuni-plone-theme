@@ -26,6 +26,16 @@ $gdpr-focus-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
 $argument-icon-color: $tertiary !default;
 $argument-icon-bg: #f5f6f7 !default;
 
+// ACCESSIBILITY - SEARCH BUTTON
+$focus-outline-color-on-primary: #fff !default;
+
+$search-focus-outline-color: $focus-outline-color-on-primary !default;
+
+$focus-outline-shadow-on-primary: 0px 0px 7px 7px
+  $focus-outline-color-on-primary !default;
+
+$search-focus-outline-shadow: $focus-outline-shadow-on-primary !default;
+
 // $dvt-header-center-max-height: 166px;
 // $header-center-max-height-mob: 80px;
 
