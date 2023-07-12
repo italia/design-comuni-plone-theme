@@ -1,5 +1,12 @@
 
 
+## [8.0.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0...v8.0.1) (2023-07-12)
+
+
+### Bug Fixes
+
+* grid block config, blocks editor z-index ([02724a2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/02724a21b512a4effaedebecfbfe3398fdfc20d8))
+
 ## [8.0.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0-alpha.43...v8.0.0) (2023-07-12)
 
 
