@@ -5,16 +5,13 @@ CUSTOMIZATIONS:
 - added additional filters
 - added additional fields to pass to @querystring-search (config.settings.querystringAdditionalFields)
 - usedeepCompareEffect and integrate custom logic for searchBlock to make it work with our implementation
-
-TODO:
-- Needs updating, it's quite different in the latest volto version
 */
 import React, { createRef, useEffect } from 'react';
 import hoistNonReactStatics from 'hoist-non-react-statics';
 import { getContent, getQueryStringResults } from '@plone/volto/actions';
 import { useDispatch, useSelector } from 'react-redux';
 import useDeepCompareEffect from 'use-deep-compare-effect';
-import { flattenToAppURL } from '@plone/volto/helpers';
+import { flattenToAppURL, getBaseUrl } from '@plone/volto/helpers';
 import config from '@plone/volto/registry';
 
 import { setOriginalQuery } from 'design-comuni-plone-theme/actions';
@@ -57,15 +54,22 @@ const getAdaptedQuery = (querystring, b_size, variation) => {
 
 export default function withQuerystringResults(WrappedComponent) {
   function WithQuerystringResults(props) {
-    const { data = {}, path, properties, isEditMode } = props; //properties: content,
+    const {
+      data = {},
+      id = data.block,
+      //properties: content,
+      properties,
+      path,
+      variation,
+      isEditMode,
+    } = props;
     const content = useSelector((state) => state.content.data);
     const { settings } = config;
     const querystring = data.querystring || data; // For backwards compat with data saved before Blocks schema
-    const { block } = data;
     const { b_size = settings.defaultPageSize } = querystring;
     const [firstLoading, setFirstLoading] = React.useState(true);
     // save the path so it won't trigger dispatch on eager router location change
-    const [initialPath] = React.useState(path);
+    const [initialPath] = React.useState(getBaseUrl(path));
 
     const [currentPage, setCurrentPage] = React.useState(1);
     const querystringResults = useSelector(
@@ -78,44 +82,44 @@ export default function withQuerystringResults(WrappedComponent) {
 
     const originalQuery = useSelector((state) => {
       if (props?.variation?.['@type'] === 'search') {
-        return state.originalQuery?.[path]?.[data?.block];
+        return state.originalQuery?.[path]?.[id];
       }
-      return state.originalQuery?.[properties['@id']]?.[
-        data.block
-      ]?.toArray?.();
+      return state.originalQuery?.[properties['@id']]?.[id]?.toArray?.();
     });
     const folderItems = content?.is_folderish ? content.items : [];
     const hasQuery = querystring?.query?.length > 0;
-    const hasLoaded = hasQuery ? !querystringResults?.[block]?.loading : true;
+    const hasLoaded = hasQuery ? querystringResults?.[id]?.loaded : true;
     const loadingQuery =
-      querystring?.query?.length > 0 &&
-      (querystringResults?.[block]?.loading ||
-        !querystringResults?.[block]?.loaded);
+      hasQuery &&
+      (querystringResults?.[id]?.loading || !querystringResults?.[id]?.loaded);
 
-    const listingItems =
-      hasQuery && querystringResults?.[block]
-        ? querystringResults?.[block]?.items || []
-        : folderItems;
+    const listingItems = hasQuery
+      ? querystringResults?.[id]?.items || []
+      : folderItems;
 
     const showAsFolderListing = !hasQuery && content?.items_total > b_size;
     const showAsQueryListing =
-      hasQuery && querystringResults?.[block]?.total > b_size;
+      hasQuery && querystringResults?.[id]?.total > b_size;
 
     const itemsTotal = showAsFolderListing
       ? content.items_total
-      : querystringResults?.[block]?.total;
+      : querystringResults?.[id]?.total;
 
-    const totalPages = itemsTotal ? Math.ceil(itemsTotal / b_size) : 0;
+    const totalPages = showAsFolderListing
+      ? Math.ceil(content.items_total / b_size)
+      : showAsQueryListing
+      ? Math.ceil(querystringResults[id].total / b_size)
+      : 0;
 
     const prevBatch = showAsFolderListing
       ? content.batching?.prev
       : showAsQueryListing
-      ? querystringResults[block].batching?.prev
+      ? querystringResults[id].batching?.prev
       : null;
     const nextBatch = showAsFolderListing
       ? content.batching?.next
       : showAsQueryListing
-      ? querystringResults[block].batching?.next
+      ? querystringResults[id].batching?.next
       : null;
 
     function handleContentPaginationChange(e, { activePage }) {
@@ -159,19 +163,17 @@ export default function withQuerystringResults(WrappedComponent) {
         );
       }
 
+      if (firstLoading && querystringResults[id] && !loadingQuery) {
+        setFirstLoading(false);
+      }
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    if (firstLoading && querystringResults[block] && !loadingQuery) {
-      setFirstLoading(false);
-    }
-
     useDeepCompareEffect(() => {
       if (
-        (hasQuery > 0 &&
-          (isEditMode ||
-            (!isEditMode && !querystringResults[block]?.loaded))) ||
-        (hasQuery > 0 && props.variation?.['@type'] === 'search')
+        (hasQuery &&
+          (isEditMode || (!isEditMode && !querystringResults[id]?.loaded))) ||
+        (hasQuery && props.variation?.['@type'] === 'search')
       ) {
         doSearch(data);
       }
@@ -220,7 +222,7 @@ export default function withQuerystringResults(WrappedComponent) {
           getQueryStringResults(
             path,
             getAdaptedQuery(_querystring, b_size, data.variation),
-            data.block,
+            id,
             page,
           ),
         );
@@ -234,6 +236,7 @@ export default function withQuerystringResults(WrappedComponent) {
             path,
             {
               ...getAdaptedQuery(_dataQuerystring, b_size, data.variation),
+              b_size: 10000000000,
               query: [
                 {
                   i: 'path',
@@ -242,8 +245,7 @@ export default function withQuerystringResults(WrappedComponent) {
                 },
               ],
             },
-            data.block,
-            page,
+            id,
           ),
         );
       }
@@ -268,7 +270,7 @@ export default function withQuerystringResults(WrappedComponent) {
             ? handleContentPaginationChange(e, { activePage })
             : handleQueryPaginationChange(e, { activePage });
         }}
-        total={querystringResults?.[block]?.total}
+        total={querystringResults?.[id]?.total}
         batch_size={b_size}
         currentPage={currentPage}
         totalPages={totalPages}
