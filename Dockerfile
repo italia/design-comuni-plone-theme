@@ -1,4 +1,4 @@
-FROM node:16-bullseye-slim as base
+FROM node:18-bullseye-slim as base
 
 FROM base as build
 
@@ -9,6 +9,8 @@ USER root
 RUN buildDeps="make" && \
     apt-get update && \
     apt-get install -y --no-install-recommends $buildDeps
+
+ENV NODE_OPTIONS "--max_old_space_size=4096"
 
 COPY . .
 

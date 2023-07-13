@@ -80,10 +80,12 @@ module.exports = Object.assign({}, volto_config, {
           loader: 'svgo-loader',
           options: {
             plugins: [
-              { removeTitle: true },
-              { convertPathData: false },
-              { removeUselessStrokeAndFill: true },
-              { removeViewBox: false },
+              { name: 'removeTitle', params: { removeTitle: true } },
+              { name: 'convertPathData', params: { convertPathData: false } },
+              {
+                name: 'removeUselessStrokeAndFill',
+                params: { removeUselessStrokeAndFill: true },
+              },
             ],
           },
         },

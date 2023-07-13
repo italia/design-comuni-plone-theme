@@ -166,7 +166,7 @@
     ]
   },
   "engines": {
-    "node": "^14 || ^16"
+    "node": "^16 || ^18"
   },
   "dependencies": {
     "@babel/plugin-proposal-export-default-from": "7.18.9",
@@ -175,7 +175,14 @@
     "@babel/plugin-proposal-throw-expressions": "7.18.6",
     "@loadable/babel-plugin": "5.13.2",
     "@plone-collective/volto-sentry": "0.3.0",
-    "@plone/volto": "16.20.4",
+    "@plone/volto": "17.0.0-alpha.17",
+    "@storybook/addon-actions": "^6.5.15",
+    "@storybook/addon-controls": "6.5.15",
+    "@storybook/addon-essentials": "^6.5.15",
+    "@storybook/addon-links": "^6.5.15",
+    "@storybook/builder-webpack5": "^6.5.15",
+    "@storybook/manager-webpack5": "^6.5.15",
+    "@storybook/react": "^6.5.15",
     "bootstrap-italia": "1.3.9",
     "classnames": "^2.3.2",
     "design-react-kit": "3.1.3",
@@ -186,6 +193,8 @@
     "react-select": "^4.3.1",
     "react-slick": "^0.29.0",
     "slick-carousel": "1.8.1",
+    "svg-inline-loader": "^0.8.2",
+    "svg-inline-react": "^3.2.1",
     "typeface-lora": "0.0.72",
     "typeface-roboto-mono": "0.0.75",
     "typeface-titillium-web": "0.0.72",
@@ -210,20 +219,20 @@
     "@babel/core": "7.19.6",
     "@commitlint/cli": "^12.0.0",
     "@commitlint/config-conventional": "^12.0.0",
+    "@plone/scripts": "^2.1.5",
     "@release-it/conventional-changelog": "^2.0.1",
     "bundlewatch": "^0.3.3",
     "eslint-plugin-prettier": "^3.4.1",
     "husky": "8.0.2",
     "jest-environment-jsdom": "^26.0.1",
     "lint-staged": "13.0.3",
+    "postcss": "8.4.13",
     "prettier": "^2.7.1",
-    "razzle": "4.2.17",
+    "razzle": "4.2.18",
     "release-it": "^14.6.1",
     "stylelint-config-idiomatic-order": "^9.0.0",
     "stylelint-config-prettier": "^9.0.3",
-    "stylelint-prettier": "^2.0.0",
-    "svg-inline-loader": "^0.8.2",
-    "svg-inline-react": "^3.2.1"
+    "stylelint-prettier": "^2.0.0"
   },
   "bundlewatch": {
     "files": [

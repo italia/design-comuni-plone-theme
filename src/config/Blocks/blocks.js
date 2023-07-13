@@ -388,6 +388,10 @@ const italiaBlocks = {
 const getItaliaBlocks = (config) => {
   delete config.blocks.blocksConfig.search;
   delete config.blocks.blocksConfig.teaser;
+  config.blocks.blocksConfig.gridBlock.allowedBlocks =
+    config.blocks.blocksConfig.gridBlock.allowedBlocks
+      .filter((item) => !['slate', 'teaser'].includes(item))
+      .concat(['text']);
   return italiaBlocks;
 };
 export default getItaliaBlocks;

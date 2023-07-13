@@ -7,8 +7,7 @@ jobs:
     timeout-minutes: 45
     strategy:
       matrix:
-        # node-version: [14.x]
-        node-version: [14.x, 16.x]
+        node-version: [16.x]
     steps:
       - uses: actions/checkout@v3
 
@@ -20,7 +19,7 @@ jobs:
           cache: yarn
 
       # node install
-      - run: yarn set version 3.2.3 && yarn --immutable
+      - run: yarn --immutable
 
       - name: Jest tests
         run: yarn test
