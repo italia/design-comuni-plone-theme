@@ -1,3 +1,16 @@
+## [7.15.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.14.0...v7.15.0) (2023-07-13)
+
+
+### Features
+
+* updated volto to latest 17.x.x canary ([#221](https://github.com/RedTurtle/design-comuni-plone-theme/issues/221)) ([d4bb8d7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d4bb8d70eb53ca8d866757d9e575fda49b01edcf))
+
+
+### Maintenance
+
+* new workflow for v2 branch ([517a810](https://github.com/RedTurtle/design-comuni-plone-theme/commit/517a810f346d9dbd06c5eeef87d26c1cff2dca00))
+* new workflow for v2 branch ([2aaa817](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2aaa8179451fb55ed700a47de324d426e04b6955))
+
 ## [7.14.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.13.2...v7.14.0) (2023-07-12)
 
 
