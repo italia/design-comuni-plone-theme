@@ -68,7 +68,7 @@ const RenderBlocks = ({
           return (
             <div key={block}>
               {intl.formatMessage(messages.unknownBlock, {
-                block: content[blocksFieldname]?.[block]?.['@type'],
+                block: blockContent[blocksFieldname]?.[block]?.['@type'],
               })}
             </div>
           );
