@@ -1,3 +1,12 @@
+### [7.15.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.15.1...v7.15.2) (2023-07-14)
+
+
+### Bug Fixes
+
+* grid block view with bootstrap-italia ([377c6f4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/377c6f498176a3932c1ab69faceb1bc370a384de))
+* grid block view with bootstrap-italia ([c7226b9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c7226b9deeec9e6cb95563992221f1d7c974d41b))
+* intl missing in SelectInput ([a3452d1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a3452d187d6652cd5ce2b48c8253c472f42eef3e))
+
 ### [7.15.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.15.0...v7.15.1) (2023-07-14)
 
 
