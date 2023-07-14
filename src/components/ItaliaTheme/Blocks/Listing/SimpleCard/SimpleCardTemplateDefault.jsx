@@ -222,19 +222,27 @@ const SimpleCardTemplateDefault = (props) => {
                 {listingText && (
                   <CardText className={cx('', { 'mb-5': eventRecurrenceMore })}>
                     {listingText}
-                    {(type === 'Modulo' || type === 'Documento') && (
-                      <div className="document-date mt-3">
-                        <strong>
-                          {intl.formatMessage(messages.publication_date)}:{' '}
-                        </strong>
-                        {moment(item.CreationDate).format('DD-MM-YYYY')}
-                        <br />
-                        <strong>
-                          {intl.formatMessage(messages.update_date)}:{' '}
-                        </strong>
-                        {moment(item.modified).format('DD-MM-YYYY')}
-                      </div>
-                    )}
+                    {(type === 'Modulo' || type === 'Documento') &&
+                      !hide_dates && (
+                        <div className="document-date mt-3">
+                          {item?.CreationDate && (
+                            <p className="mb-0">
+                              <strong>
+                                {intl.formatMessage(messages.publication_date)}:{' '}
+                              </strong>
+                              {moment(item.CreationDate).format('DD-MM-YYYY')}
+                            </p>
+                          )}
+                          {item?.modified && (
+                            <p>
+                              <strong>
+                                {intl.formatMessage(messages.update_date)}:{' '}
+                              </strong>
+                              {moment(item.modified).format('DD-MM-YYYY')}
+                            </p>
+                          )}
+                        </div>
+                      )}
                   </CardText>
                 )}
                 {eventRecurrenceMore}
