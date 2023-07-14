@@ -1,5 +1,19 @@
 
 
+## [8.0.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.2...v8.0.3) (2023-07-14)
+
+
+### Bug Fixes
+
+* added condition to SimpleCardTemplate for the effective/modified dates ([#251](https://github.com/RedTurtle/design-comuni-plone-theme/issues/251)) ([d578ffa](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d578ffae3dcab1d4e73174762b6507288a93f9e6))
+* grid block view with bootstrap-italia ([aa594d8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/aa594d854b45cab44159328131d0ab782781a4d3))
+* intl missing in SelectInput ([5c9f458](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5c9f45831dc5b8301c832b47f56d4860bebb67da))
+
+
+### Documentation
+
+* updated publiccode ([31efc10](https://github.com/RedTurtle/design-comuni-plone-theme/commit/31efc10ddb1180ae69464371444e8045eba43221))
+
 ## [8.0.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.1...v8.0.2) (2023-07-14)
 
 
