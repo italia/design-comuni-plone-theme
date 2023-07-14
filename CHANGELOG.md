@@ -1,3 +1,10 @@
+### [7.15.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.15.0...v7.15.1) (2023-07-14)
+
+
+### Bug Fixes
+
+* update withQuerystringResults customization ([11f4c06](https://github.com/RedTurtle/design-comuni-plone-theme/commit/11f4c06b7bfeec6176ecea98b94042237e3d0d2e))
+
 ## [7.15.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v7.14.0...v7.15.0) (2023-07-13)
 
 
