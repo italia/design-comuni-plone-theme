@@ -1,5 +1,13 @@
 
 
+## [8.0.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.1...v8.0.2) (2023-07-14)
+
+
+### Bug Fixes
+
+* update withQuerystringResults customization ([4d339a9](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4d339a9ef5e55be5f30ae7da1490a624eac60bf3))
+* wrong block context ([#249](https://github.com/RedTurtle/design-comuni-plone-theme/issues/249)) ([2047edf](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2047edf08186acd26d738683950682afcea1acba))
+
 ## [8.0.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.0...v8.0.1) (2023-07-12)
 
 
