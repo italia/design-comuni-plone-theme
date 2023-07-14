@@ -2,7 +2,7 @@
  * Customizations:
  * - used design-react-kit Grid component
  */
-import { Row, Col } from 'design-react-kit';
+import { Row, Col } from 'design-react-kit/dist/design-react-kit';
 import cx from 'classnames';
 import { RenderBlocks } from '@plone/volto/components';
 import { withBlockExtensions } from '@plone/volto/helpers';
