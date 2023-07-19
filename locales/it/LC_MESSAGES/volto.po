@@ -789,7 +789,7 @@ msgstr "Altre modalità di invio"
 #: components/ItaliaTheme/View/ServizioView/ServizioAltriDocumenti
 # defaultMessage: Documenti correlati
 msgid "altri_documenti"
-msgstr "Altri documenti"
+msgstr "Documenti"
 
 #: config/Blocks/ListingOptions/cardWithImageTemplate
 # defaultMessage: Mostra l'immagine per tutti gli elementi

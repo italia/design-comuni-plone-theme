@@ -10,7 +10,7 @@ import {
 const messages = defineMessages({
   altri_documenti: {
     id: 'altri_documenti',
-    defaultMessage: 'Documenti correlati',
+    defaultMessage: 'Documenti',
   },
 });
 
