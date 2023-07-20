@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-07-20T13:42:57.004Z\n"
+"POT-Creation-Date: 2023-07-20T15:16:26.205Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -789,7 +789,7 @@ msgid "altre_modalita_invio"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioAltriDocumenti
-# defaultMessage: Documenti correlati
+# defaultMessage: Documenti
 msgid "altri_documenti"
 msgstr ""
 
@@ -3138,7 +3138,7 @@ msgid "search_startDate"
 msgstr ""
 
 #: helpers/Translations/searchBlockExtendedTranslations
-# defaultMessage: Ricerca per: <em>{searchedtext}</em>.
+# defaultMessage: Ricerca per: <em>{searchedtext}</em>. 
 msgid "searchedFor"
 msgstr ""
 

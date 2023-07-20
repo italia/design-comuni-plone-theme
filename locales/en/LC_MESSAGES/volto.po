@@ -787,7 +787,7 @@ msgid "altre_modalita_invio"
 msgstr ""
 
 #: components/ItaliaTheme/View/ServizioView/ServizioAltriDocumenti
-# defaultMessage: Documenti correlati
+# defaultMessage: Documenti
 msgid "altri_documenti"
 msgstr "Other documents"
 

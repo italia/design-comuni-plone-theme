@@ -71,7 +71,7 @@ const CuredBy = ({ office, people, title }) => {
                 >
                   <ChipLabel tag="span">{item.title}</ChipLabel>
                 </Chip>
-              </Link>
+              </UniversalLink>
             ))}
           </div>
         ) : null}
