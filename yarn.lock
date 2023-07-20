@@ -4412,9 +4412,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@plone/volto@npm:17.0.0-alpha.17":
-  version: 17.0.0-alpha.17
-  resolution: "@plone/volto@npm:17.0.0-alpha.17"
+"@plone/volto@npm:17.0.0-alpha.19":
+  version: 17.0.0-alpha.19
+  resolution: "@plone/volto@npm:17.0.0-alpha.19"
   dependencies:
     "@babel/core": ^7.0.0
     "@babel/plugin-proposal-export-default-from": 7.18.9
@@ -4442,7 +4442,6 @@ __metadata:
     babel-plugin-react-intl: 5.1.17
     babel-plugin-root-import: 6.1.0
     babel-preset-razzle: 4.2.17
-    bundlewatch: 0.2.7
     circular-dependency-plugin: 5.2.2
     classnames: 2.2.6
     commander: 8.2.0
@@ -4596,7 +4595,7 @@ __metadata:
     webpack-node-externals: 3.0.0
     xmlrpc: 1.3.2
     yarnhook: 0.5.1
-  checksum: fe0eb3967164b41065b6dc2d7b2e6c18fd396e7fa2c4cb97770b83009a8385b4d0faa2c2ce5c44792ada2d189e0a92abbbf39a1f01f1110bcb55576ca2658b85
+  checksum: 00a129bf9579d7fecd80d80ea966292bbcdeb5e784d9a8a55b7151943b5eacd4753173aa9a55f99117c2e6fd5bf36f8aa054acf721ff055b9440da4a01aef944
   languageName: node
   linkType: hard
 
@@ -8683,15 +8682,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^0.19.0":
-  version: 0.19.2
-  resolution: "axios@npm:0.19.2"
-  dependencies:
-    follow-redirects: 1.5.10
-  checksum: dcace11a0a25fdf9b3b97fc9d011d23dd9c67cc13d91778080482ddddbbfe731f7410a090b11aa0bbbdf83686c5911ccb4289fd3683b7488c1b0c4d3c882380c
-  languageName: node
-  linkType: hard
-
 "axios@npm:^0.21.1":
   version: 0.21.4
   resolution: "axios@npm:0.21.4"
@@ -9678,26 +9668,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bundlewatch@npm:0.2.7":
-  version: 0.2.7
-  resolution: "bundlewatch@npm:0.2.7"
-  dependencies:
-    axios: ^0.19.0
-    bytes: ^3.0.0
-    chalk: ^4.0.0
-    ci-env: ^1.14.0
-    commander: ^5.0.0
-    glob: ^7.1.2
-    gzip-size: ^5.1.1
-    jsonpack: ^1.1.5
-    lodash.merge: ^4.6.1
-    read-pkg-up: ^7.0.1
-  bin:
-    bundlewatch: lib/bin/index.js
-  checksum: e1072408780caf04f35a23b83452eeb7e75532ff77753fdac2a17bd13c248d4dd4142f7bb59e31868e77caece78507e7727e099791bd30f5bafa375628b05094
-  languageName: node
-  linkType: hard
-
 "bundlewatch@npm:^0.3.3":
   version: 0.3.3
   resolution: "bundlewatch@npm:0.3.3"
@@ -9725,7 +9695,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bytes@npm:3.1.2, bytes@npm:^3.0.0, bytes@npm:^3.1.1":
+"bytes@npm:3.1.2, bytes@npm:^3.1.1":
   version: 3.1.2
   resolution: "bytes@npm:3.1.2"
   checksum: e4bcd3948d289c5127591fbedf10c0b639ccbf00243504e4e127374a15c3bc8eed0d28d4aaab08ff6f1cf2abc0cce6ba3085ed32f4f90e82a5683ce0014e1b6e
@@ -10208,7 +10178,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ci-env@npm:^1.14.0, ci-env@npm:^1.17.0":
+"ci-env@npm:^1.17.0":
   version: 1.17.0
   resolution: "ci-env@npm:1.17.0"
   checksum: e6a06d9a6c5abce1ab8fa0f1b0f80e7eb7615d59a937ed0a20a3589441cf49cff1fc64f4fa4b289e3b789dd4a1d9a8255f36a93ed3fc15b6e2be9b795d21fb46
@@ -11923,15 +11893,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:=3.1.0":
-  version: 3.1.0
-  resolution: "debug@npm:3.1.0"
-  dependencies:
-    ms: 2.0.0
-  checksum: 0b52718ab957254a5b3ca07fc34543bc778f358620c206a08452251eb7fc193c3ea3505072acbf4350219c14e2d71ceb7bdaa0d3370aa630b50da790458d08b3
-  languageName: node
-  linkType: hard
-
 "debug@npm:^3.0.0, debug@npm:^3.1.0, debug@npm:^3.2.5, debug@npm:^3.2.7":
   version: 3.2.7
   resolution: "debug@npm:3.2.7"
@@ -12249,7 +12210,7 @@ __metadata:
     "@loadable/babel-plugin": 5.13.2
     "@plone-collective/volto-sentry": 0.3.0
     "@plone/scripts": ^2.1.5
-    "@plone/volto": 17.0.0-alpha.17
+    "@plone/volto": 17.0.0-alpha.19
     "@release-it/conventional-changelog": ^2.0.1
     "@storybook/addon-actions": ^6.5.15
     "@storybook/addon-controls": 6.5.15
@@ -14639,15 +14600,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:1.5.10":
-  version: 1.5.10
-  resolution: "follow-redirects@npm:1.5.10"
-  dependencies:
-    debug: =3.1.0
-  checksum: 0edc4b74e37e7b88ee716188a8f2a790238877c1d954f00c7b78d560f3bef40061c130536d13bee8e47b4e8e71edf1175a2de2729e51ab8206e4646b2370e484
-  languageName: node
-  linkType: hard
-
 "follow-redirects@npm:^1.0.0, follow-redirects@npm:^1.14.0, follow-redirects@npm:^1.14.4":
   version: 1.15.2
   resolution: "follow-redirects@npm:1.15.2"
@@ -15578,7 +15530,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"gzip-size@npm:5.1.1, gzip-size@npm:^5.0.0, gzip-size@npm:^5.1.1":
+"gzip-size@npm:5.1.1, gzip-size@npm:^5.0.0":
   version: 5.1.1
   resolution: "gzip-size@npm:5.1.1"
   dependencies:

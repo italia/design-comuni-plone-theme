@@ -175,7 +175,7 @@
     "@babel/plugin-proposal-throw-expressions": "7.18.6",
     "@loadable/babel-plugin": "5.13.2",
     "@plone-collective/volto-sentry": "0.3.0",
-    "@plone/volto": "17.0.0-alpha.17",
+    "@plone/volto": "17.0.0-alpha.19",
     "@storybook/addon-actions": "^6.5.15",
     "@storybook/addon-controls": "6.5.15",
     "@storybook/addon-essentials": "^6.5.15",
