@@ -96,9 +96,6 @@
       @include rem-size(font-size, 18);
       @include rem-size(line-height, 24);
       font-family: 'Titillium Web' !important;
-      &.card-with-picture {
-        width: 60%;
-      }
     }
   }
 }

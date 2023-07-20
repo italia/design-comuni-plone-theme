@@ -26,7 +26,7 @@ export const CardPersona = ({
     useOriginal: false,
   });
 
-  const hasImage = image !== null;
+  const hasImage = image !== null && showImage;
 
   return (
     <Card
@@ -53,15 +53,7 @@ export const CardPersona = ({
               {item.title || item.id}
             </UniversalLink>
           </CardTitle>
-          {listingText && (
-            <CardText
-              className={cx('', {
-                'card-with-picture': !!image,
-              })}
-            >
-              {listingText}
-            </CardText>
-          )}
+          {listingText && <CardText>{listingText}</CardText>}
         </CardBody>
         {showImage && (
           <div className="card-image card-image-rounded">{image}</div>
