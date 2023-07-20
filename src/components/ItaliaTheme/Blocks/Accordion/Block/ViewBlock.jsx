@@ -9,6 +9,7 @@ import redraft from 'redraft';
 import { useIntl, defineMessages } from 'react-intl';
 import cx from 'classnames';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { UniversalLink } from '@plone/volto/components';
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({
@@ -66,10 +67,10 @@ const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
           </div>
           {data.href && (
             <div className="link-more">
-              <a href={data.href}>
+              <UniversalLink href={data.href}>
                 {data.linkMoreTitle || intl.formatMessage(messages.vedi)}
                 <Icon icon="it-arrow-right" />
-              </a>
+              </UniversalLink>
             </div>
           )}
         </div>

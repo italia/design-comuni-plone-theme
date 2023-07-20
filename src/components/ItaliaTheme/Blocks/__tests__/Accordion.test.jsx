@@ -5,6 +5,7 @@ import AccordionView from '../Accordion/View';
 import configureStore from 'redux-mock-store';
 import { Provider } from 'react-intl-redux';
 import thunk from 'redux-thunk';
+import { MemoryRouter } from 'react-router-dom';
 
 const middlewares = [thunk];
 const mockStore = configureStore(middlewares);
@@ -59,7 +60,9 @@ const store = mockStore({
 test('View renders all fields', async () => {
   render(
     <Provider store={store}>
-      <AccordionView data={mock_fields} />
+      <MemoryRouter>
+        <AccordionView data={mock_fields} />
+      </MemoryRouter>
     </Provider>,
   );
 

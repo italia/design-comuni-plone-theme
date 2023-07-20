@@ -10,6 +10,7 @@ import { Container } from 'design-react-kit';
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { UniversalLink } from '@plone/volto/components';
 
 /**
  * View Video Gallery body class
@@ -61,13 +62,13 @@ const Body = ({ data, children, nItems = 0, reactSlick }) => {
           <div className="channel">
             <Icon color="primary" icon="it-youtube" className="me-2" />
             {data.channel_link ? (
-              <a
+              <UniversalLink
                 href={data.channel_link}
                 rel="noopener noreferrer"
                 target="_blank"
               >
                 {data.channel_link_title || data.channel_link}
-              </a>
+              </UniversalLink>
             ) : (
               <span>{data.channel_link_title}</span>
             )}

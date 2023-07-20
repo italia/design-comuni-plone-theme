@@ -3,6 +3,7 @@ import { Form } from 'semantic-ui-react';
 import config from '@plone/volto/registry';
 import cx from 'classnames';
 import { defineMessages, injectIntl } from 'react-intl';
+import { UniversalLink } from '@plone/volto/components';
 
 const messages = defineMessages({
   canale_digitale_widget_title: {
@@ -33,14 +34,9 @@ const CanaleDigitaleWidget = (props) => {
         </h3>
         <p className="help">
           Sezione obbligatoria ai fini della validazione AGID secondo i seguenti{' '}
-          <a
-            href="https://docs.italia.it/italia/designers-italia/app-valutazione-modelli-docs/it/versione-attuale/requisiti-e-modalita-verifica-comuni.html"
-            target="_blank"
-            noopener
-            noreferrer
-          >
+          <UniversalLink href="https://docs.italia.it/italia/designers-italia/app-valutazione-modelli-docs/it/versione-attuale/requisiti-e-modalita-verifica-comuni.html">
             termini
-          </a>
+          </UniversalLink>
           . Per confermare la presenza in pagina della relativa sezione devono
           essere presenti:
           <ul>

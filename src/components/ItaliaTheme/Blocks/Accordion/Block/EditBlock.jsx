@@ -8,7 +8,7 @@ import { compose } from 'redux';
 import { injectIntl, defineMessages } from 'react-intl';
 
 import { injectDNDSubblocks, SubblockEdit, Subblock } from 'volto-subblocks';
-
+import { UniversalLink } from '@plone/volto/components';
 import { Button } from 'design-react-kit';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
@@ -146,11 +146,11 @@ class EditBlock extends SubblockEdit {
               </div>
               {this.props.data.href && (
                 <div className="link-more">
-                  <a href={this.props.data.href}>
+                  <UniversalLink href={this.props.data.href}>
                     {this.props.data.linkMoreTitle ||
                       this.props.intl.formatMessage(messages.vedi)}
                     <Icon icon="it-arrow-right" />
-                  </a>
+                  </UniversalLink>
                 </div>
               )}
             </div>

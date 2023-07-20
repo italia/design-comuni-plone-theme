@@ -3,7 +3,7 @@
  * @module components/theme/Footer/FooterSmall
  */
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import cx from 'classnames';
 import { UniversalLink } from '@plone/volto/components';
 import { defineMessages, useIntl } from 'react-intl';
@@ -35,22 +35,17 @@ const FooterSmall = () => {
   const intl = useIntl();
   const pathname = useLocation().pathname;
   const dispatch = useDispatch();
-  const [links, setLinks] = useState([]);
 
   const subFooter = useSelector((state) => state.subFooter?.result);
   const subFooterItems = getItemsByPath(subFooter, pathname)?.filter(
     (item) => item.visible,
   );
 
-  useEffect(() => {
-    dispatch(getSubFooter());
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const links = getSiteProperty('smallFooterLinks', intl.locale) ?? [];
 
   useEffect(() => {
-    let _links = getSiteProperty('smallFooterLinks', intl.locale) ?? [];
-    setLinks(_links);
-  }, [intl.locale]);
+    dispatch(getSubFooter());
+  }, [dispatch]);
 
   return subFooterItems?.length > 0 || links.length > 0 || true ? (
     <div className="it-footer-small-prints clearfix">
@@ -70,11 +65,7 @@ const FooterSmall = () => {
                   })}
                   key={url + index}
                 >
-                  <UniversalLink
-                    data-element={item.id_lighthouse}
-                    href={url}
-                    title={item.title}
-                  >
+                  <UniversalLink data-element={item.id_lighthouse} href={url}>
                     {item.title}
                   </UniversalLink>
                 </li>
@@ -83,9 +74,7 @@ const FooterSmall = () => {
           {links?.length > 0 &&
             links.map((link) => (
               <li className="list-inline-item" key={link.url}>
-                <UniversalLink href={link.url} title={link.title}>
-                  {link.title}
-                </UniversalLink>
+                <UniversalLink href={link.url}>{link.title}</UniversalLink>
               </li>
             ))}
           <li className="list-inline-item">
@@ -95,7 +84,6 @@ const FooterSmall = () => {
                 e.preventDefault();
                 dispatch(displayBanner(true, true));
               }}
-              title={intl.formatMessage(messages.cookieSettings)}
             >
               {intl.formatMessage(messages.cookieSettings)}
             </button>

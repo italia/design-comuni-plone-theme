@@ -5,6 +5,7 @@ import { searchContent, resetSearchContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import PropTypes from 'prop-types';
 import Image from '@plone/volto/components/theme/Image/Image';
+import { UniversalLink } from '@plone/volto/components';
 
 const messages = defineMessages({
   sponsors: {
@@ -44,14 +45,14 @@ const Sponsor = ({ item }) => {
         </div>
       ) : (
         <div className="sponsor-item">
-          <a
+          <UniversalLink
             href={item.remoteUrl}
             alt=""
             target="_blank"
             rel="noopener noreferrer"
           >
             {item.title}
-          </a>
+          </UniversalLink>
         </div>
       )}
     </>

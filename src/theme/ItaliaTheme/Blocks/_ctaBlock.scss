@@ -41,6 +41,12 @@
         &:focus {
           background: $secondary-text;
           color: $secondary;
+          .external-link {
+            fill: #004080 !important;
+          }
+        }
+        .external-link {
+          fill: $external-link-fill-buttons !important;
         }
       }
 

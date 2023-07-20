@@ -5,6 +5,7 @@ import { getContent, resetContent } from '@plone/volto/actions';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { OSMMap } from 'volto-venue';
 import PropTypes from 'prop-types';
+import { UniversalLink } from '@plone/volto/components';
 
 /**
  * LocationsMap view component class.
@@ -62,7 +63,7 @@ const LocationsMap = ({ center, locations }) => {
       <div className="map-pin-popup">
         <div className="title">{item.title}</div>
         <p>
-          <a
+          <UniversalLink
             href={`http://maps.google.com/?q=${item.street ?? ''} ${
               item.zip_code ?? ''
             } ${item.city ?? ''} ${item.province ?? ''} ${
@@ -72,10 +73,10 @@ const LocationsMap = ({ center, locations }) => {
             rel="noopener noreferrer"
           >
             {intl.formatMessage(messages.view_on_googlemaps)}
-          </a>
+          </UniversalLink>
         </p>
         <p>
-          <a
+          <UniversalLink
             href={`https://bing.com/maps/default.aspx?where1=${
               item.street ?? ''
             } ${item.zip_code ?? ''} ${item.city ?? ''} ${item.province ?? ''}`}
@@ -83,10 +84,10 @@ const LocationsMap = ({ center, locations }) => {
             rel="noopener noreferrer"
           >
             {intl.formatMessage(messages.view_on_bingmaps)}
-          </a>
+          </UniversalLink>
         </p>
         <p>
-          <a
+          <UniversalLink
             href={`  http://maps.apple.com/?q=${item.street ?? ''} ${
               item.zip_code ?? ''
             } ${item.city ?? ''} ${item.province ?? ''}`}
@@ -94,7 +95,7 @@ const LocationsMap = ({ center, locations }) => {
             rel="noopener noreferrer"
           >
             {intl.formatMessage(messages.view_on_applemaps)}
-          </a>
+          </UniversalLink>
         </p>
       </div>
     );

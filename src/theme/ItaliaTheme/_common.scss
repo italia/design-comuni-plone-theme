@@ -43,4 +43,21 @@
       }
     }
   }
+  .btn-primary,
+  .btn-secondary,
+  .btn-tertiary,
+  .draftjs-buttons {
+    .external-link {
+      fill: $external-link-fill-buttons !important;
+    }
+  }
+  .external-link {
+    fill: $link-color !important;
+    &:hover {
+      fill: #004080 !important;
+    }
+  }
+  .it-footer-small-prints-list .external-link {
+    fill: $external-link-fill-subfooter !important;
+  }
 }
