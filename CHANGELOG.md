@@ -1,5 +1,32 @@
 
 
+## [8.1.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.3...v8.1.0) (2023-07-20)
+
+
+### Features
+
+* add icon to external links for accessibility, configurable in theme settings ([#250](https://github.com/RedTurtle/design-comuni-plone-theme/issues/250)) ([cecc025](https://github.com/RedTurtle/design-comuni-plone-theme/commit/cecc0258a8336c0968fa906b29ecb97a8d541749))
+
+
+### Bug Fixes
+
+* a11y title in external links ([a9bd127](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a9bd127f45db0af8593d4ac60fe03eba702e4038))
+* card persona styles ([2f10bde](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2f10bde3bd590e74a25bb09b6ae968aac1562a08))
+* changed title of Altri Documenti section to Documenti ([#253](https://github.com/RedTurtle/design-comuni-plone-theme/issues/253)) ([2f84496](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2f84496382dbc343bea959e6e326e9607a724670))
+* error while cherry-picking changes from v2 ([8d30c6f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8d30c6f9c01bca136beb477ba1dfc1ec9c5db790))
+* upgrade volto-data-grid-widget to 2.2.1 ([08bff18](https://github.com/RedTurtle/design-comuni-plone-theme/commit/08bff189d49e127545eaf98067554dd2ed8d6171))
+
+
+### Documentation
+
+* updated publiccode ([f27748c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/f27748c57d1c1dea5dec20ba73b04e095fe4e259))
+
+
+### Maintenance
+
+* update linters config ([9c4b548](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9c4b548b1dcfcda688d4b4229ad3bb339aacda91))
+* updated peer dep to volto 17.0.0-alpha.19 ([50625e6](https://github.com/RedTurtle/design-comuni-plone-theme/commit/50625e6e1314201b18357fd821b82499e6f607c4))
+
 ## [8.0.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.2...v8.0.3) (2023-07-14)
 
 
