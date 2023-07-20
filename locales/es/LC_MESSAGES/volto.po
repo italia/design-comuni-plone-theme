@@ -2534,6 +2534,11 @@ msgstr "Abrir enlace en una pestaña nueva"
 msgid "open_end"
 msgstr "Este evento tiene una fecha de finalización abierta/variable."
 
+#: helpers/customizationsI18n
+# defaultMessage: Opens in new tab
+msgid "opensInNewTab"
+msgstr ""
+
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Contenuto attivo
 msgid "optionActiveContentButton"

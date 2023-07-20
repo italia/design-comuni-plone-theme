@@ -2,8 +2,8 @@ import { defineMessages, useIntl } from 'react-intl';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Chip, ChipLabel } from 'design-react-kit';
-import { Link } from 'react-router-dom';
 import { flattenToAppURL } from '@plone/volto/helpers';
+import { UniversalLink } from '@plone/volto/components';
 import {
   OfficeCard,
   RichTextSection,
@@ -57,8 +57,8 @@ const CuredBy = ({ office, people, title }) => {
               </h5>
             )}
             {people.map((item, i) => (
-              <Link
-                to={flattenToAppURL(item['@id'])}
+              <UniversalLink
+                href={flattenToAppURL(item['@id'])}
                 key={item['@id']}
                 className="text-decoration-none me-2"
               >

@@ -4,10 +4,12 @@
  *
  * CUSTOMIZATIONS:
  * - aggiunto icona per link esterni
+ * - aggiunto title informativo per link esterni
  */
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useIntl } from 'react-intl';
 import { HashLink as Link } from 'react-router-hash-link';
 import { useSelector } from 'react-redux';
 import {
@@ -30,6 +32,7 @@ const UniversalLink = ({
   title = null,
   ...props
 }) => {
+  const intl = useIntl();
   const token = useSelector((state) => state.userSession?.token);
 
   let url = href;
@@ -99,7 +102,9 @@ const UniversalLink = ({
     tag = (
       <a
         href={url}
-        title={title}
+        title={`${title ? title + ' - ' : ''}${intl.formatMessage({
+          id: 'opensInNewTab',
+        })}`}
         target={
           !checkedURL.isMail &&
           !checkedURL.isTelephone &&

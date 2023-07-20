@@ -2525,6 +2525,11 @@ msgstr "Open link in a new tab"
 msgid "open_end"
 msgstr ""
 
+#: helpers/customizationsI18n
+# defaultMessage: Opens in new tab
+msgid "opensInNewTab"
+msgstr "Opens in new tab"
+
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Contenuto attivo
 msgid "optionActiveContentButton"

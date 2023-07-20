@@ -2525,6 +2525,11 @@ msgstr "Apri link in una nuova scheda"
 msgid "open_end"
 msgstr "Questo evento ha una data di fine aperta/variabile."
 
+#: helpers/customizationsI18n
+# defaultMessage: Opens in new tab
+msgid "opensInNewTab"
+msgstr "Si apre in una nuova scheda"
+
 #: components/ItaliaTheme/Header/HeaderSearch/SearchModal
 # defaultMessage: Contenuto attivo
 msgid "optionActiveContentButton"
