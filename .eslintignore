@@ -1,3 +1,4 @@
 container-query-polyfill.modern.js
-CHANGELOG.md
-README.md
+cypress
+node_modules
+acceptance

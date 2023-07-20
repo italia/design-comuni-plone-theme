@@ -1,59 +1,45 @@
-const fs = require('fs');
-const path = require('path');
-
-const projectRootPath = fs.realpathSync('.'); // __dirname
-
-let voltoPath = path.join(projectRootPath, 'node_modules/@plone/volto');
-
-let configFile;
-if (fs.existsSync(`${this.projectRootPath}/tsconfig.json`))
-  configFile = `${this.projectRootPath}/tsconfig.json`;
-else if (fs.existsSync(`${this.projectRootPath}/jsconfig.json`))
-  configFile = `${this.projectRootPath}/jsconfig.json`;
-
-if (configFile) {
-  const jsConfig = require(configFile).compilerOptions;
-  const pathsConfig = jsConfig.paths;
-  if (pathsConfig['@plone/volto'])
-    voltoPath = `./${jsConfig.baseUrl}/${pathsConfig['@plone/volto'][0]}`;
-}
-
-const AddonConfigurationRegistry = require(`${voltoPath}/addon-registry.js`);
-const reg = new AddonConfigurationRegistry(projectRootPath);
-
-// Extends ESlint configuration for adding the aliases to `src` directories in Volto addons
-const addonAliases = Object.keys(reg.packages).map((o) => [
-  o,
-  reg.packages[o].modulePath,
-]);
-
 module.exports = {
-  extends: `${voltoPath}/.eslintrc`,
-  settings: {
-    'import/resolver': {
-      alias: {
-        map: [
-          // TODO remove the next two when implemented in core
-          [
-            '@plone/volto/components/theme/Image/Image',
-            path.resolve(`${projectRootPath}/src/components/Image/Image.jsx`),
-          ],
-          [
-            '@plone/volto/helpers/Image/Image',
-            path.resolve(`${projectRootPath}/src/components/Image/helpers.js`),
-          ],
-
-          ['@plone/volto', '@plone/volto/src'],
-          ...addonAliases,
-          ['@package', `${__dirname}/src`],
-          ['@root', `${__dirname}/src`],
-          ['~', `${__dirname}/src`],
-        ],
-        extensions: ['.js', '.jsx', '.json'],
-      },
-      'babel-plugin-root-import': {
-        rootPathSuffix: 'src',
-      },
+  extends: ['react-app', 'prettier', 'plugin:jsx-a11y/recommended'],
+  plugins: ['prettier', 'react-hooks', 'jsx-a11y'],
+  env: {
+    es6: true,
+    browser: true,
+    node: true,
+    mocha: true,
+    jasmine: true,
+  },
+  parser: 'babel-eslint',
+  parserOptions: {
+    ecmaVersion: 6,
+    sourceType: 'module',
+    ecmaFeatures: {
+      legacyDecorators: true,
     },
+  },
+  rules: {
+    'import/no-unresolved': 0,
+    'no-alert': 1,
+    'no-console': 1,
+    'no-debugger': 1,
+    'prettier/prettier': ['error', { trailingComma: 'all', singleQuote: true }],
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
+    'react/react-in-jsx-scope': 'off',
+  },
+  globals: {
+    root: true,
+    __DEVELOPMENT__: true,
+    __CLIENT__: true,
+    __SERVER__: true,
+    __DISABLE_SSR__: true,
+    __DEVTOOLS__: true,
+    __DEBUG__: true,
+    __SSR__: true,
+    __SENTRY__: true,
+    cy: true,
+    Cypress: true,
+    jest: true,
+    socket: true,
+    webpackIsomorphicTools: true,
   },
 };
