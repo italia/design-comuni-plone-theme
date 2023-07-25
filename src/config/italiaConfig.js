@@ -169,6 +169,7 @@ export default function applyConfig(voltoConfig) {
       portalTypes: ['Image', 'File'],
     },
     italiaThemeViewsConfig: {
+      ...(config.settings.italiaThemeViewsConfig ?? {}),
       imagePosition: 'afterHeader', // possible values: afterHeader, documentBody
       // Venue: {
       //   sections: [
@@ -461,9 +462,10 @@ export default function applyConfig(voltoConfig) {
     },
   };
   // Remove Horizontal Menu variation of TOC Block
-  config.blocks.blocksConfig.toc.variations = config.blocks.blocksConfig.toc.variations.filter(
-    (v) => v.id !== 'horizontalMenu',
-  );
+  config.blocks.blocksConfig.toc.variations =
+    config.blocks.blocksConfig.toc.variations.filter(
+      (v) => v.id !== 'horizontalMenu',
+    );
 
   // REDUCERS
   config.addonReducers = {
