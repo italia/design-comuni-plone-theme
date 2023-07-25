@@ -18,11 +18,13 @@ const FontAwesomeIcon = (props) => {
   };
 
   let prefixKey = prefix;
-  let iconName = getIconAlias(icon, fontAwesomeAliases);
+  let iconName = '';
 
   if (Array.isArray(icon)) {
     prefixKey = icon[0];
-    iconName = icon[1];
+    iconName = getIconAlias(icon[1], fontAwesomeAliases);
+  } else {
+    iconName = getIconAlias(icon, fontAwesomeAliases);
   }
 
   const prefixFolder =
