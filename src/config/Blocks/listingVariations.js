@@ -298,10 +298,9 @@ export const getItaliaListingVariations = (config) => {
 };
 export const removeListingVariation = (config, id) => {
   let indexOfVariation = -1;
-  indexOfVariation =
-    config.blocks?.blocksConfig?.listing?.variations?.findIndex(
-      (x) => x.id === id,
-    );
+  indexOfVariation = config.blocks?.blocksConfig?.listing?.variations?.findIndex(
+    (x) => x.id === id,
+  );
   if (indexOfVariation >= 0) {
     config.blocks.blocksConfig.listing.variations.splice(indexOfVariation, 1);
   }

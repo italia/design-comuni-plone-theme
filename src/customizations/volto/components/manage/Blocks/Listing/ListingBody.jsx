@@ -34,7 +34,6 @@ const ListingBody = React.memo(
         hasQuery,
         addFilters,
         firstLoading,
-        properties,
         loadingQuery,
         listingRef,
         additionalFilters,
@@ -65,9 +64,7 @@ const ListingBody = React.memo(
 
       const getBackgroundClass = () => {
         const isSearchBlockResults = variation?.['@type'] === 'search';
-        const block = isSearchBlockResults
-          ? variation
-          : properties?.blocks?.[data?.block];
+        const block = isSearchBlockResults ? variation : data;
 
         if (!block?.show_block_bg) return '';
 
@@ -105,7 +102,11 @@ const ListingBody = React.memo(
           )}
           {!loadingQuery &&
           (listingItems.length > 0 || additionalFilters?.length > 0) ? (
-            <div className={`${getBlockClasses()}`} ref={listingRef} aria-live="polite">
+            <div
+              className={`${getBlockClasses()}`}
+              ref={listingRef}
+              aria-live="polite"
+            >
               <ListingBodyTemplate
                 items={listingItems}
                 isEditMode={isEditMode}
