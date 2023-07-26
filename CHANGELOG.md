@@ -1,5 +1,18 @@
 
 
+## [8.2.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.1.0...v8.2.0) (2023-07-26)
+
+
+### Features
+
+* make config.settings.italiaThemeViewsConfig extensible from addons ([#257](https://github.com/RedTurtle/design-comuni-plone-theme/issues/257)) ([5b17faf](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5b17faf33c6ca3b0d8cc0091801ef8601cc8dd38))
+
+
+### Bug Fixes
+
+* display listing bg_color ([#261](https://github.com/RedTurtle/design-comuni-plone-theme/issues/261)) ([5b973c3](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5b973c3d82979db8710432abf0ed90c01bb71cc5))
+* FontAwesomeIcon rendering for both array and string formats ([#256](https://github.com/RedTurtle/design-comuni-plone-theme/issues/256)) ([06eac0e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/06eac0e764156faec99f884f5b4d6bc79d9a168f))
+
 ## [8.1.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.0.3...v8.1.0) (2023-07-20)
 
 
