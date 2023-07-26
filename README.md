@@ -74,6 +74,7 @@ Si veda ad esempio:
 - [Comune di Canossa](https://www.comune.canossa.re.it/)
 - [Comune di Cantagallo](https://www.comune.cantagallo.po.it/)
 - [Comune di Cavriago](https://www.comune.cavriago.re.it/)
+- [Comune di Gattatico](https://www.comune.gattatico.re.it/)
 - [Comune di Imola](https://www.comune.imola.bo.it)
 - [Comune di Medolla](https://www.comune.medolla.mo.it/)
 - [Comune di Mirandola](https://www.comune.mirandola.mo.it/)
