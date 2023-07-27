@@ -1,5 +1,18 @@
 
 
+## [8.2.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.2.0...v8.2.1) (2023-07-27)
+
+
+### Bug Fixes
+
+* fix LinkEntity error on create link in WysWidget and in edit ([ce16c45](https://github.com/redturtle/design-comuni-plone-theme/commit/ce16c45f0894ce1853f0185c859f85d82ec2d847))
+
+
+### Documentation
+
+* updated publiccode ([d6affcf](https://github.com/redturtle/design-comuni-plone-theme/commit/d6affcf7f1241c4d338e40907747f93c57716343))
+* updated publiccode ([12ce260](https://github.com/redturtle/design-comuni-plone-theme/commit/12ce2605354b0a380ce83d0285e33e1b75bdb5a8))
+
 ## [8.2.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.1.0...v8.2.0) (2023-07-26)
 
 
