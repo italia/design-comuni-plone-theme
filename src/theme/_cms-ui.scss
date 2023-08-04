@@ -406,7 +406,12 @@ body.cms-ui {
       .public-DraftStyleDefault-block {
         margin-bottom: unset;
       }
-      // z-index necessario su Volto 17 finché non passiamo ad usare slate
+    }
+  }
+
+  // z-index necessario su Volto 17 finché non passiamo ad usare slate
+  .block {
+    .DraftEditor-root {
       .DraftEditor-editorContainer,
       .public-DraftEditorPlaceholder-root {
         z-index: 0;
