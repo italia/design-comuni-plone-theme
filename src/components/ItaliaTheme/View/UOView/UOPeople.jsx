@@ -28,7 +28,7 @@ const UOPeople = ({ content }) => {
       <p className="mt-4">
         {intl.formatMessage(messages.persone_p_description)}:
       </p>
-      <Row className="card-wrapper card-teaser-wrapper  ruolo-persone-struttura">
+      <Row className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal ruolo-persone-struttura">
         {content?.persone_struttura?.map((p, _i) => {
           return (
             <Col xs="12" lg="12" xl="6" md="12" key={p['@id']}>
