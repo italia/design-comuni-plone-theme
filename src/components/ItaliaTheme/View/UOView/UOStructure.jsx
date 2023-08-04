@@ -119,7 +119,6 @@ const UOStructure = ({ content }) => {
                   className={'shadow-sm'}
                   showImage={true}
                   titleTagName={'h5'}
-                  listingText={item.incarichi}
                 />
               </Col>
             ))}

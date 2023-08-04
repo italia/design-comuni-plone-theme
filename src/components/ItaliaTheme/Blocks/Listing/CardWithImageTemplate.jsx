@@ -107,7 +107,7 @@ const CardWithImageTemplate = (props) => {
                     className="listing-item card-bg shadow-sm"
                     showImage={showImage}
                     natural_image_size={natural_image_size}
-                    listingText={listingText}
+                    show_description={show_description}
                     icon={icon}
                     type={category}
                     isEditMode={isEditMode}

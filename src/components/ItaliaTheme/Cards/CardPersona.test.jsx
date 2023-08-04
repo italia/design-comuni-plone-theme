@@ -21,6 +21,7 @@ it('renders the title correctly', () => {
           item={{
             '@id': 'http://localhost:3000/persona',
             title: 'Mario Rossi',
+            description: '',
             id: 'persona',
           }}
         />

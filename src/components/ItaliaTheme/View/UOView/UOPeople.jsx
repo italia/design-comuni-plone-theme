@@ -37,7 +37,6 @@ const UOPeople = ({ content }) => {
                 className={'shadow-sm'}
                 showImage={true}
                 titleTagName={'h5'}
-                listingText={p?.incarichi}
               />
             </Col>
           );

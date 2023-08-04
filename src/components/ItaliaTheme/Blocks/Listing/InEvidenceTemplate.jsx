@@ -92,7 +92,7 @@ const InEvidenceTemplate = (props) => {
                 item={item}
                 className="listing-item card-bg"
                 showImage={image ? true : false}
-                listingText={listingText}
+                show_description={show_description}
                 icon={icon}
                 isEditMode={isEditMode}
                 key={index}

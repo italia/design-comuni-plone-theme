@@ -15,7 +15,7 @@ export const CardPersona = ({
   titleClassName = '',
   titleTagName = 'h3',
   showImage,
-  listingText,
+  show_description = true,
   icon,
   type,
   isEditMode,
@@ -53,7 +53,9 @@ export const CardPersona = ({
               {item.title || item.id}
             </UniversalLink>
           </CardTitle>
-          {listingText && <CardText>{listingText}</CardText>}
+          {show_description && (
+            <CardText>{item.incarichi || item.description}</CardText>
+          )}
         </CardBody>
         {showImage && (
           <div className="card-image card-image-rounded">{image}</div>

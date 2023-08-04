@@ -3,7 +3,6 @@ import { defineMessages, useIntl } from 'react-intl';
 import PropTypes from 'prop-types';
 
 import { Row, Col } from 'design-react-kit';
-import { UniversalLink } from '@plone/volto/components';
 import { CardPersona } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { RichTextSection } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 
@@ -40,7 +39,6 @@ const DocumentoAutori = ({ autori, title }) => {
                 className="shadow-sm"
                 titleTagName="h5"
                 showImage={true}
-                listingText={autore?.incarichi ?? ''}
               />
             </Col>
           ))}
