@@ -78,8 +78,8 @@ const OfficeCard = ({
                       {sede.zip_code} {sede.city}
                     </p>
                   )}
-                  {office_fo.contact_info?.map((el) =>
-                    el.value_punto_contatto?.map((pdc, i) => {
+                  {office_fo?.contact_info?.map((el) =>
+                    el?.value_punto_contatto?.map((pdc, i) => {
                       if (pdc.pdc_type === 'telefono') {
                         return (
                           <div key={i}>
