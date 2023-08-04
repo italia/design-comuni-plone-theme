@@ -1,5 +1,27 @@
 
 
+## [8.3.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.2.1...v8.3.0) (2023-08-04)
+
+
+### Features
+
+* coherent description in card persona everywhere ([#273](https://github.com/RedTurtle/design-comuni-plone-theme/issues/273)) ([137fdd5](https://github.com/RedTurtle/design-comuni-plone-theme/commit/137fdd5a17d36ccb67c736467761d645f446d116))
+* rimosso link a form contatto, aggiunto link a motore di ricerca del sito ([#269](https://github.com/RedTurtle/design-comuni-plone-theme/issues/269)) ([6793855](https://github.com/RedTurtle/design-comuni-plone-theme/commit/67938552ba8829c383757d8415c24861ce729b88))
+* upgrade to volto alpha.19 ([02e3096](https://github.com/RedTurtle/design-comuni-plone-theme/commit/02e3096c61331cb5137003c2782fa07aaed23c32))
+
+
+### Bug Fixes
+
+* equal height for card persona in uo people ([#276](https://github.com/RedTurtle/design-comuni-plone-theme/issues/276)) ([3a5e8d1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3a5e8d1672b5700e3d1097f43588ecff86efaff1))
+* height of accessibility icon for external links ([#268](https://github.com/RedTurtle/design-comuni-plone-theme/issues/268)) ([8714eb2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/8714eb29ad7a05b6f40058dfdf315e046dff00ef))
+* optional chaining for pdc data in OfficeCard ([#274](https://github.com/RedTurtle/design-comuni-plone-theme/issues/274)) ([88ec896](https://github.com/RedTurtle/design-comuni-plone-theme/commit/88ec896ae9cbbc357ccb8d7a69977562aef3ab1a))
+* z-index moved to a generic block ([#265](https://github.com/RedTurtle/design-comuni-plone-theme/issues/265)) ([c0d729c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c0d729ceaf50021f5752bfbb961124c3e03e7133))
+
+
+### Documentation
+
+* updated publiccode ([6329a9b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6329a9b3f47cc43d4958155db52529ce25f16807))
+
 ## [8.2.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.2.0...v8.2.1) (2023-07-27)
 
 
