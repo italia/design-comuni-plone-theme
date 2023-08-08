@@ -53,8 +53,12 @@ export const getCalendarDate = (item, rrulestr) => {
           rrulestr,
           intl,
         );
-        realStart = recurrenceDates.recurrenceStart;
-        realEnd = recurrenceDates.recurrenceEnd;
+        // If the recurrence range is entirely in the past,
+        // then no future occurrences exist and both
+        // recurrenceStart and recurrenceEnd will be null
+        // so fallback to displaying the original info
+        realStart = recurrenceDates.recurrenceStart || item.start;
+        realEnd = recurrenceDates.recurrenceEnd || item.end;
       }
       ret = (
         <When
