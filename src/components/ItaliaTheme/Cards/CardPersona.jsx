@@ -34,7 +34,7 @@ export const CardPersona = ({
         {
           'card-with-image': hasImage,
         },
-        `card-persona card-big-io-comune p-4 card-teaser-image card-flex no-after border border-light rounded`,
+        `card-persona card-big-io-comune card-teaser-image card-flex no-after border border-light rounded`,
         className,
       )}
     >
@@ -57,7 +57,7 @@ export const CardPersona = ({
             <CardText>{item.incarichi || item.description}</CardText>
           )}
         </CardBody>
-        {showImage && (
+        {hasImage && (
           <div className="card-image card-image-rounded">{image}</div>
         )}
       </div>

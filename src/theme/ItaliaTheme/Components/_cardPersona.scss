@@ -1,50 +1,32 @@
-.card-persona.card-teaser-image.card-flex.card {
-  min-height: 135px;
-  height: fit-content;
+.card-persona.card-flex {
+  .card-image-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+  }
 
-  &.card-with-image {
-    .card-image-wrapper {
-      flex: 1;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
+  .card-body {
+    // TODO Rimuovere important e mettere p-4 come classe nel jsx
+    // nel momento in cui riusciremo a togliere il padding 0 important
+    // dalla classe .card-big-io-comune .card-body globalmente
+    padding: 24px !important;
+  }
 
-      .card-body {
-        width: calc(100% - 7.2rem);
-        flex-grow: 0;
-      }
+  .card-image {
+    flex: 0 0 130px;
+
+    img {
+      // Dobbiamo vincere contro gli stili del blocco listing
+      width: 130px !important;
+      height: 130px * 1.4 !important;
+      object-fit: cover;
+      object-position: center;
     }
   }
 
-  .card-image-wrapper {
-    .card-image {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      overflow: hidden;
-      height: 100%;
-      .volto-image {
-        height: 100%;
-        display: flex;
-        align-items: stretch;
-
-        img {
-          min-width: 5.27rem;
-          max-width: 7.2rem;
-          width: auto;
-          min-height: 7.5rem;
-          object-fit: cover;
-          aspect-ratio: 180/100;
-          object-position: center;
-        }
-      }
-    }
-    .card-title {
-      font-size: $card-big-head-size;
-      line-height: $card-big-head-l-h;
-    }
+  .card-title {
+    font-size: $card-big-head-size;
+    line-height: $card-big-head-l-h;
   }
 
   &.listing-item {
@@ -68,11 +50,6 @@
           line-height: 1.5rem;
         }
       }
-    }
-
-    .card-image {
-      margin-bottom: 0.8em;
-      height: auto;
     }
   }
 }
