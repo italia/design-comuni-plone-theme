@@ -83,7 +83,6 @@ const UniversalLink = ({
     (!isExternal && url.includes('@@display-file')) || false;
 
   const checkedURL = URLUtils.checkAndNormalizeUrl(url);
-
   url = checkedURL.url;
   let tag = (
     <Link

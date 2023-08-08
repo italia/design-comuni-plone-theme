@@ -21,4 +21,7 @@
     padding: 0;
     margin: 0;
   }
+  .no-external-if-link > .external-link {
+    display: none;
+  }
 }
