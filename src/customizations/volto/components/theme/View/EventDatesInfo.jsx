@@ -61,7 +61,7 @@ export const When = ({
   if (!datesInfo) {
     // eslint-disable-next-line no-console
     console.warn('EventWhen: Received invalid start or end date.');
-    return;
+    return null;
   }
 
   const getDate = () => {
