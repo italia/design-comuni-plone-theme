@@ -5,6 +5,7 @@ CUSTOMIZATIONS:
 - added additional filters
 - added additional fields to pass to @querystring-search (config.settings.querystringAdditionalFields)
 - usedeepCompareEffect and integrate custom logic for searchBlock to make it work with our implementation
+- used [subrequestID] instead [id] of block, as id of subrequest to avoid block unload on duplicate contents with blocks with same id's. Volto's pr: https://github.com/plone/volto/pull/5071
 */
 import React, { createRef, useEffect } from 'react';
 import hoistNonReactStatics from 'hoist-non-react-statics';
@@ -66,6 +67,7 @@ export default function withQuerystringResults(WrappedComponent) {
     const content = useSelector((state) => state.content.data);
     const { settings } = config;
     const querystring = data.querystring || data; // For backwards compat with data saved before Blocks schema
+    const subrequestID = content.UID + '-' + id;
     const { b_size = settings.defaultPageSize } = querystring;
     const [firstLoading, setFirstLoading] = React.useState(true);
     // save the path so it won't trigger dispatch on eager router location change
@@ -82,44 +84,49 @@ export default function withQuerystringResults(WrappedComponent) {
 
     const originalQuery = useSelector((state) => {
       if (props?.variation?.['@type'] === 'search') {
-        return state.originalQuery?.[path]?.[id];
+        return state.originalQuery?.[path]?.[subrequestID];
       }
-      return state.originalQuery?.[properties['@id']]?.[id]?.toArray?.();
+      return state.originalQuery?.[properties['@id']]?.[
+        subrequestID
+      ]?.toArray?.();
     });
     const folderItems = content?.is_folderish ? content.items : [];
     const hasQuery = querystring?.query?.length > 0;
-    const hasLoaded = hasQuery ? querystringResults?.[id]?.loaded : true;
+    const hasLoaded = hasQuery
+      ? querystringResults?.[subrequestID]?.loaded
+      : true;
     const loadingQuery =
       hasQuery &&
-      (querystringResults?.[id]?.loading || !querystringResults?.[id]?.loaded);
+      (querystringResults?.[subrequestID]?.loading ||
+        !querystringResults?.[subrequestID]?.loaded);
 
     const listingItems = hasQuery
-      ? querystringResults?.[id]?.items || []
+      ? querystringResults?.[subrequestID]?.items || []
       : folderItems;
 
     const showAsFolderListing = !hasQuery && content?.items_total > b_size;
     const showAsQueryListing =
-      hasQuery && querystringResults?.[id]?.total > b_size;
+      hasQuery && querystringResults?.[subrequestID]?.total > b_size;
 
     const itemsTotal = showAsFolderListing
       ? content.items_total
-      : querystringResults?.[id]?.total;
+      : querystringResults?.[subrequestID]?.total;
 
     const totalPages = showAsFolderListing
       ? Math.ceil(content.items_total / b_size)
       : showAsQueryListing
-      ? Math.ceil(querystringResults[id].total / b_size)
+      ? Math.ceil(querystringResults[subrequestID].total / b_size)
       : 0;
 
     const prevBatch = showAsFolderListing
       ? content.batching?.prev
       : showAsQueryListing
-      ? querystringResults[id].batching?.prev
+      ? querystringResults[subrequestID].batching?.prev
       : null;
     const nextBatch = showAsFolderListing
       ? content.batching?.next
       : showAsQueryListing
-      ? querystringResults[id].batching?.next
+      ? querystringResults[subrequestID].batching?.next
       : null;
 
     function handleContentPaginationChange(e, { activePage }) {
@@ -163,7 +170,7 @@ export default function withQuerystringResults(WrappedComponent) {
         );
       }
 
-      if (firstLoading && querystringResults[id] && !loadingQuery) {
+      if (firstLoading && querystringResults[subrequestID] && !loadingQuery) {
         setFirstLoading(false);
       }
       // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -172,7 +179,8 @@ export default function withQuerystringResults(WrappedComponent) {
     useDeepCompareEffect(() => {
       if (
         (hasQuery &&
-          (isEditMode || (!isEditMode && !querystringResults[id]?.loaded))) ||
+          (isEditMode ||
+            (!isEditMode && !querystringResults[subrequestID]?.loaded))) ||
         (hasQuery && props.variation?.['@type'] === 'search')
       ) {
         doSearch(data);
@@ -222,7 +230,7 @@ export default function withQuerystringResults(WrappedComponent) {
           getQueryStringResults(
             path,
             getAdaptedQuery(_querystring, b_size, data.variation),
-            id,
+            subrequestID,
             page,
           ),
         );
@@ -245,7 +253,7 @@ export default function withQuerystringResults(WrappedComponent) {
                 },
               ],
             },
-            id,
+            subrequestID,
           ),
         );
       }
@@ -270,7 +278,7 @@ export default function withQuerystringResults(WrappedComponent) {
             ? handleContentPaginationChange(e, { activePage })
             : handleQueryPaginationChange(e, { activePage });
         }}
-        total={querystringResults?.[id]?.total}
+        total={querystringResults?.[subrequestID]?.total}
         batch_size={b_size}
         currentPage={currentPage}
         totalPages={totalPages}
