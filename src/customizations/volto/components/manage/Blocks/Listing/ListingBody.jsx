@@ -66,7 +66,7 @@ const ListingBody = React.memo(
         const isSearchBlockResults = variation?.['@type'] === 'search';
         const block = isSearchBlockResults ? variation : data;
 
-        if (!block?.show_block_bg) return '';
+        if (!block?.show_block_bg) return 'full-width';
 
         let bg_color = data.bg_color ? `bg-${data.bg_color}` : '';
 
