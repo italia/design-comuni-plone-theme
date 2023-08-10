@@ -1,5 +1,28 @@
 
 
+## [8.3.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.3.0...v8.3.1) (2023-08-10)
+
+
+### Bug Fixes
+
+* card persona images now have fixed size ([#275](https://github.com/RedTurtle/design-comuni-plone-theme/issues/275)) ([cfbdbc8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/cfbdbc8c458036864dd5c6c02fa35e85fc87fc63))
+* event card in listing breaking with invalid dates ([94aa154](https://github.com/RedTurtle/design-comuni-plone-theme/commit/94aa154e02f1a48f2afb9757d43767fea5c1f01a))
+* event dates in cards when recurrence is entirely in the past ([#277](https://github.com/RedTurtle/design-comuni-plone-theme/issues/277)) ([5c45415](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5c4541529e276693a7d145d99dfbd6a291a52796))
+* focus on cookie banner toggles ([#282](https://github.com/RedTurtle/design-comuni-plone-theme/issues/282)) ([ccc3c73](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ccc3c7324263058916cbe053131be6ae1add7ea0))
+* querystring results when block ids are the same on different pages ([#278](https://github.com/RedTurtle/design-comuni-plone-theme/issues/278)) ([71db4d3](https://github.com/RedTurtle/design-comuni-plone-theme/commit/71db4d30b2ac0faa0dbe1e06302ceb20b81f5b1c))
+* restored full-width class to listing block ([#280](https://github.com/RedTurtle/design-comuni-plone-theme/issues/280)) ([d19c08a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d19c08a29cefe3b4a482e3b2546e71f3c4bf0604))
+* wrong layout for external link indicator icon if objects are Plone Links in anonimous view ([#270](https://github.com/RedTurtle/design-comuni-plone-theme/issues/270)) ([4bbb741](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4bbb74110659144e4f398e54b10b9c66b2c41f7a))
+
+
+### Maintenance
+
+* deploy to rancher disabled ([d924ef1](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d924ef133380d2e7b890483bf0c519ecf4c07a78))
+
+
+### Documentation
+
+* updated publiccode ([c8769d2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c8769d20088300e59b1d0fef70319b4416ef4a97))
+
 ## [8.3.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.2.1...v8.3.0) (2023-08-04)
 
 
