@@ -5,7 +5,8 @@ Changelog
 6.0.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add aria-expanded attribute in search button.
+  [cekk]
 
 
 6.0.2 (2022-08-12)

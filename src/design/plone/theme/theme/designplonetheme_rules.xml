@@ -57,6 +57,7 @@
         <button id="search-toggle"
                 aria-controls="portal-searchbox"
                 aria-label="Apri/chiudi ricerca"
+                aria-expanded="false"
                 title="Apri/chiudi ricerca">
           <i class="fas fa-search"></i>
           <span class="close-icon"></span>

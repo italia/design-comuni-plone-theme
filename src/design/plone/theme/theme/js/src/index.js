@@ -217,6 +217,12 @@ require(['jquery', 'ellipsed'], function($, ellipsed) {
       if ($('#portal-searchbox').hasClass('open')) {
         $('#searchGadget').focus();
       }
+
+      if ($('#search-toggle').hasClass('open')) {
+        $('#search-toggle').attr('aria-expanded', true);
+      } else {
+        $('#search-toggle').attr('aria-expanded', false);
+      }
     });
 
     /*
