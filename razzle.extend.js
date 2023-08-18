@@ -72,10 +72,10 @@ const modify = (webpackConfig, { target, dev }, webpackObject) => {
   webpackConfig.module.rules.push(SVG_LOADER);
 
   const urlLoader = webpackConfig.module.rules.find(urlLoaderFinder);
-  urlLoader.exclude = [/\.(png|jpe?g|webp)$/i, ...(urlLoader.exclude || [])];
+  urlLoader.exclude = [/\.(png|jpe?g)$/i, ...(urlLoader.exclude || [])];
   // see: node_modules/razzle/config/createConfig.js
   const IMG_LOADER = {
-    test: /\.(png|jpe?g|webp)$/i,
+    test: /\.(png|jpe?g)$/i,
     use: [
       {
         loader: 'url-loader',
