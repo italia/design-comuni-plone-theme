@@ -14,10 +14,12 @@
       }
 
       .it-search-wrapper {
-        a.search-link:focus {
-          border: 1px solid $primary !important;
-          box-shadow: $search-focus-outline-shadow !important;
-          outline: $search-focus-outline-color !important;
+        a.search-link {
+          outline: $header-center-bg-color 2px solid !important;
+
+          &:focus {
+            box-shadow: 0 0 0 5px $focus-outline-color !important;
+          }
         }
       }
     }
