@@ -1,5 +1,19 @@
 
 
+## [8.3.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.3.1...v8.3.2) (2023-08-18)
+
+
+### Bug Fixes
+
+* actually use color variable for privacy link in cookie banner ([711efed](https://github.com/RedTurtle/design-comuni-plone-theme/commit/711efed3b9d67d5414bdba5ccf86161fe152943e))
+* focus styles on search button ([#281](https://github.com/RedTurtle/design-comuni-plone-theme/issues/281)) ([d3cddee](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d3cddee4cdfd2fed9bd230b036b29a057851bf25))
+* webp static imports in jsx code ([b1ab875](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b1ab87519b9fb29fcd05edb2bddc3c953b805957))
+
+
+### Documentation
+
+* updated publiccode ([a2d8fb5](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a2d8fb5efe1cf2a813efe44189d98dc9d516d705))
+
 ## [8.3.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.3.0...v8.3.1) (2023-08-10)
 
 
