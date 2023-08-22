@@ -479,7 +479,7 @@ msgstr "Piccolo"
 #: components/ItaliaTheme/Blocks/Listing/SliderTemplate
 # defaultMessage: Play
 msgid "Play slider"
-msgstr "Play"
+msgstr "Seleziona per riprodurre"
 
 #: components/ItaliaTheme/Pagination/PaginationItem
 # defaultMessage: Pagina precedente
@@ -687,7 +687,6 @@ msgid "Vedi"
 msgstr "Vedi"
 
 #: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
-#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
 # defaultMessage: Vedi l'immagine
 msgid "Vedi l'immagine"
 msgstr "Vedi l'immagine"
@@ -1706,6 +1705,11 @@ msgstr "Ufficio responsabile"
 msgid "done_edit_social_links"
 msgstr "Fatto"
 
+#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
+# defaultMessage: Navigazione elementi slider
+msgid "dots"
+msgstr ""
+
 #: components/ItaliaTheme/View/VenueView/VenueWhere
 # defaultMessage: Indirizzo
 msgid "dove"
@@ -2689,6 +2693,11 @@ msgstr "Testo di aiuto"
 msgid "playStoreLink"
 msgstr "PlayStore Link"
 
+#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
+# defaultMessage: Precedente
+msgid "precedente"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/IconPreviewWidget
 # defaultMessage: Anteprima dell'icona scelta
 msgid "previewIconSelected"
@@ -3523,6 +3532,11 @@ msgstr "Vai alla navigazione"
 msgid "skype"
 msgstr "Skype"
 
+#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
+# defaultMessage: Vai alla slide {index}
+msgid "slideDot"
+msgstr ""
+
 #: config/Blocks/ListingOptions/sliderTemplate
 # defaultMessage: N° slide da mostrare
 msgid "slidesToShow"
@@ -3662,6 +3676,11 @@ msgstr "Visibile"
 # defaultMessage: Tags
 msgid "subjects"
 msgstr "Tags"
+
+#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
+# defaultMessage: Successivo
+msgid "successivo"
+msgstr ""
 
 #: components/ItaliaTheme/View/EventoView/EventoContatti
 # defaultMessage: Con il supporto di
@@ -3871,6 +3890,11 @@ msgstr "Variazione situazione patrimoniale"
 # defaultMessage: Luoghi
 msgid "venues"
 msgstr "Luoghi"
+
+#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
+# defaultMessage: Sei attualmente in un carosello, per navigare usa le frecce sinistra e destra
+msgid "viewImage"
+msgstr "Sei attualmente in un carosello, per navigare usa le frecce sinistra e destra"
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody
 # defaultMessage: Vedi tutti

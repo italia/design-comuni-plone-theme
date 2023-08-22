@@ -696,7 +696,6 @@ msgid "Vedi"
 msgstr "Vista"
 
 #: components/ItaliaTheme/Blocks/Listing/PhotogalleryTemplate
-#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
 # defaultMessage: Vedi l'immagine
 msgid "Vedi l'immagine"
 msgstr "Ver la imagen"
@@ -1715,6 +1714,11 @@ msgstr "Oficina responsable"
 msgid "done_edit_social_links"
 msgstr "Hecho"
 
+#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
+# defaultMessage: Navigazione elementi slider
+msgid "dots"
+msgstr ""
+
 #: components/ItaliaTheme/View/VenueView/VenueWhere
 # defaultMessage: Indirizzo
 msgid "dove"
@@ -2698,6 +2702,11 @@ msgstr "Texto de ayuda"
 msgid "playStoreLink"
 msgstr "Enlaces de Play Store"
 
+#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
+# defaultMessage: Precedente
+msgid "precedente"
+msgstr ""
+
 #: components/ItaliaTheme/manage/Widgets/IconPreviewWidget
 # defaultMessage: Anteprima dell'icona scelta
 msgid "previewIconSelected"
@@ -3532,6 +3541,11 @@ msgstr "Ir a navegación"
 msgid "skype"
 msgstr ""
 
+#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
+# defaultMessage: Vai alla slide {index}
+msgid "slideDot"
+msgstr ""
+
 #: config/Blocks/ListingOptions/sliderTemplate
 # defaultMessage: N° slide da mostrare
 msgid "slidesToShow"
@@ -3671,6 +3685,11 @@ msgstr "Visibile"
 # defaultMessage: Tags
 msgid "subjects"
 msgstr "Etiquetas"
+
+#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
+# defaultMessage: Successivo
+msgid "successivo"
+msgstr ""
 
 #: components/ItaliaTheme/View/EventoView/EventoContatti
 # defaultMessage: Con il supporto di
@@ -3880,6 +3899,11 @@ msgstr "Cambio en el balance"
 # defaultMessage: Luoghi
 msgid "venues"
 msgstr "Lugares"
+
+#: components/ItaliaTheme/Blocks/Listing/SliderTemplate
+# defaultMessage: Sei attualmente in un carosello, per navigare usa le frecce sinistra e destra
+msgid "viewImage"
+msgstr "Tu estás actualmente en un carrusel, para navegar usa las flechas izquierda y derecha"
 
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/BottomBody
 # defaultMessage: Vedi tutti

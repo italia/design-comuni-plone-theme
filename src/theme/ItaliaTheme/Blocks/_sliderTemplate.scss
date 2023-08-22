@@ -46,12 +46,12 @@
     .icon {
       width: 25px;
       height: 40px;
-      color: lighten($primary, 40%);
-      fill: lighten($primary, 40%);
+      color: $primary;
+      fill: $primary;
     }
     &:hover .icon {
       color: $primary;
-      fill: $primary;
+      fill: darken($primary, 15%);
     }
 
     &.slick-prev {
@@ -77,6 +77,18 @@
     position: unset;
     bottom: unset;
     margin-top: 0.5rem !important;
+    .slick-dot button:before {
+      background-image: none;
+      background-color: #3f4142e0;
+      opacity: 1;
+      border-radius: 50%;
+    }
+    .slick-dot.slick-active button:before {
+      background-image: none;
+      background-color: $primary;
+      opacity: 1;
+      border-radius: 50%;
+    }
   }
 
   .slick-track {
@@ -132,7 +144,9 @@
 
           background-color: #3f4142e0;
 
-          color: $white;
+          .slide-link {
+            color: $white;
+          }
 
           font-size: 1.8rem;
           font-weight: bold;
