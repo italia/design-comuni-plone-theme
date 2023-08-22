@@ -170,7 +170,7 @@ const SearchModal = ({ closeModal, show }) => {
   const location = useLocation();
 
   const [advancedSearch, setAdvancedSearch] = useState(false);
-  const [advancedTab, setAdvancedTab] = useState('sections');
+  const [advancedTab, setAdvancedTab] = useState(null);
   const [searchableText, setSearchableText] = useState(
     qs.parse(location.search)?.SearchableText ?? '',
   );
@@ -192,16 +192,48 @@ const SearchModal = ({ closeModal, show }) => {
       dispatch(getSearchFilters());
   }, []);
 
+  const handleBackTabbingFromPane = (event) => {
+    if (event.shiftKey && event.key === 'Tab') {
+      const activeTab = document.querySelectorAll('[aria-selected=true] a')[0];
+      if (!activeTab) {
+        return;
+      }
+      const firstSectionItem = document.querySelectorAll(
+        '[role="tabpanel"][aria-expanded="true"] input',
+      )[0];
+      const lastFocusedElement = document.activeElement;
+      const modal = document.querySelectorAll('div.modal[role="dialog"]')[0];
+      //  That input is nasty, make exception in logic
+      const isModalContainer =
+        modal === lastFocusedElement ||
+        lastFocusedElement === document.getElementById('options-date-end');
+      if (
+        lastFocusedElement === firstSectionItem ||
+        !lastFocusedElement ||
+        isModalContainer
+      ) {
+        event.preventDefault(); // Prevent default Shift+Tab behavior
+        activeTab.focus();
+      }
+    }
+  };
+  useEffect(() => {
+    document.addEventListener('keydown', handleBackTabbingFromPane);
+    return () => {
+      document.removeEventListener('keydown', handleBackTabbingFromPane);
+    };
+  }, []);
+
   useEffect(() => {
     if (show) {
       setTimeout(() => {
-        inputRef.current.focus(); //setta il focus sul campo di ricerca all'apertura della modale
+        inputRef.current && inputRef.current.focus(); //setta il focus sul campo di ricerca all'apertura della modale
       }, 100);
       document.body.classList.add('search-modal-opened'); //to prevent scroll body
     } else {
       document.body.classList.remove('search-modal-opened'); //re-enable scroll body
     }
-  }, [show]);
+  }, [show, inputRef]);
 
   useEffect(() => {
     if (Object.keys(searchFilters?.sections ?? {}).length > 0) {
@@ -365,14 +397,6 @@ const SearchModal = ({ closeModal, show }) => {
                       aria-label={intl.formatMessage(messages.searchLabel)}
                       aria-describedby="search-button"
                       ref={inputRef}
-                      // ref={(input) => {
-                      //   console.log('----');
-                      //   if (input) {
-                      //     setTimeout(() => {
-                      //       input.focus();
-                      //     }, 100);
-                      //   }
-                      // }}
                     />
                     <a
                       href={getSearchParamsURL(
@@ -640,6 +664,7 @@ const SearchModal = ({ closeModal, show }) => {
                       href="#"
                       active={advancedTab === 'sections'}
                       onClick={() => setAdvancedTab('sections')}
+                      id={'sections'}
                     >
                       <span>{intl.formatMessage(messages.sections)}</span>
                     </NavLink>
@@ -654,6 +679,7 @@ const SearchModal = ({ closeModal, show }) => {
                     href="#"
                     active={advancedTab === 'topics'}
                     onClick={() => setAdvancedTab('topics')}
+                    id={'topics'}
                   >
                     <span>{intl.formatMessage(messages.topics)}</span>
                   </NavLink>
@@ -667,6 +693,7 @@ const SearchModal = ({ closeModal, show }) => {
                     href="#"
                     active={advancedTab === 'options'}
                     onClick={() => setAdvancedTab('options')}
+                    id={'options'}
                   >
                     <span>{intl.formatMessage(messages.options)}</span>
                   </NavLink>

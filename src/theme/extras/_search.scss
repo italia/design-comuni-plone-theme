@@ -37,8 +37,39 @@ body.search-modal-opened {
 
   .nav-tabs {
     .nav-item {
+      &:first-of-type {
+        a.nav-link:not(.active):focus {
+          border-right: 2px solid hsl(36deg, 100%, 50%) !important;
+          border-left: 2px solid hsl(36deg, 100%, 50%) !important;
+        }
+        a.nav-link.active:focus {
+          border-right: 2px solid hsl(36deg, 100%, 50%) !important;
+          border-left: 2px solid hsl(36deg, 100%, 50%) !important;
+        }
+      }
+      &:last-of-type {
+        a.nav-link:focus {
+          border-right: 2px solid hsl(36deg, 100%, 50%) !important;
+          border-right: 2px solid hsl(36deg, 100%, 50%) !important;
+        }
+      }
       a.nav-link {
         width: 100%;
+        border-top: 2px solid transparent;
+        &.active {
+          border-left: none;
+          border-right: none;
+        }
+        &:focus {
+          border-color: hsl(36deg, 100%, 50%) !important;
+          box-shadow: 0 0 0 2px hsl(36deg, 100%, 50%) !important;
+          outline: none;
+          border-right: none;
+          border-left: none;
+        }
+        &:not(.active):focus {
+          border-right: 2px solid hsl(36deg, 100%, 50%) !important;
+        }
       }
     }
   }
