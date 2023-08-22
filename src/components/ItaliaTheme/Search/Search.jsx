@@ -186,7 +186,11 @@ const Search = () => {
   const [customPath] = useState(qs.parse(location.search)?.custom_path ?? '');
 
   const [sortOn, setSortOn] = useState('relevance');
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(
+    qs.parse(location.search)?.b_start
+      ? qs.parse(location.search).b_start / config.settings.defaultPageSize + 1
+      : 1,
+  );
   const [collapseFilters, _setCollapseFilters] = useState(true);
   const [advFiltersOpen, setAdvFiltersOpen] = useState(false);
 
@@ -313,7 +317,7 @@ const Search = () => {
       options,
       portalTypes,
       searchOrderDict[sortOn] ?? {},
-      (currentPage - 1) * config.settings.defaultPageSize,
+      currentPage,
       customPath,
       subsite,
       intl.locale,
@@ -329,7 +333,7 @@ const Search = () => {
           options,
           {},
           searchOrderDict[sortOn] ?? {},
-          (currentPage - 1) * config.settings.defaultPageSize,
+          currentPage,
           customPath,
           subsite,
           intl.locale,
