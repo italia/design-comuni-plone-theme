@@ -66,6 +66,8 @@ const View = (props) => {
           title: title || block.plaintext,
           items,
           id: draftJSKey,
+          override_toc: block.override_toc,
+          plaintext: block.plaintext,
         };
         if (level < rootLevel) {
           rootLevel = level;
