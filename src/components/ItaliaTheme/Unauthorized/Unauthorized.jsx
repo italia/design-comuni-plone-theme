@@ -132,6 +132,8 @@ const Unauthorized = (props) => {
         )}
         <Row>
           <Col xs={12} lg={{ size: 10, offset: 1 }}>
+            {/*
+            Rimosso perchè la form di contatto è stata disabilitata
             <p>
               <FormattedMessage
                 id="If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}."
@@ -147,7 +149,7 @@ const Unauthorized = (props) => {
                   ),
                 }}
               />
-            </p>
+            </p> */}
             <p>
               <FormattedMessage id="Thank you." defaultMessage="Thank you." />
             </p>
