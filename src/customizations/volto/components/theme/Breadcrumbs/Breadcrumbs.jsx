@@ -16,15 +16,15 @@ const Breadcrumbs = ({ pathname }) => {
 
   const CT_CustomBreadcrumbs = ['Pagina Argomento']; //don't display breadcrumbs for this content-types. They will be displayed by content-type view if needed.
   if (CT_CustomBreadcrumbs?.indexOf(content?.['@type']) >= 0) {
-    brdc = null;
+    return null;
   }
-  return brdc ? (
+  return (
     <div className="public-ui">
       <section id="briciole" className="container px-4 mt-4">
         <div className="">{brdc}</div>
       </section>
     </div>
-  ) : null;
+  );
 };
 
 Breadcrumbs.propTypes = {
