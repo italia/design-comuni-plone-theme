@@ -5,8 +5,8 @@ const FooterPNRRLogo = () => {
   return config.settings.siteProperties.showNextGenerationEU ? (
     <img
       src={logoPNRR}
-      width="178"
-      height="56"
+      width="167"
+      height="41"
       alt="NextGenerationEU"
       loading="lazy"
       decoding="async"
