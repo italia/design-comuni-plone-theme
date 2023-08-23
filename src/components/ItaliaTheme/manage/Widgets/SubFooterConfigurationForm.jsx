@@ -120,6 +120,7 @@ const SubFooterConfigurationForm = ({
           ['privacy-policy-link', 'privacy-policy-link'],
           ['report-inefficiency', 'report-inefficiency'],
           ['faq', 'faq'],
+          ['legal-notes', 'legal-notes'],
         ]}
         value={menuItem.id_lighthouse}
         onChange={(id, value) => onChangeFormData('id_lighthouse', value)}
