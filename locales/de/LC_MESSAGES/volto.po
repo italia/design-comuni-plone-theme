@@ -304,11 +304,6 @@ msgstr ""
 msgid "Icons placeholder"
 msgstr ""
 
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-# defaultMessage: If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}.
-msgid "If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}."
-msgstr ""
-
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 # defaultMessage: Immagine
 msgid "Image"
@@ -581,11 +576,6 @@ msgstr ""
 #: components/ItaliaTheme/Search/SearchCTs
 # defaultMessage: Mostra tutti i tipi di contenuto
 msgid "Show all content types"
-msgstr ""
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-# defaultMessage: Site Administration
-msgid "Site Administration"
 msgstr ""
 
 #: components/ItaliaTheme/Search/Search
@@ -2202,6 +2192,7 @@ msgid "imageBackground"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Importi di viaggio e/o servizi
 msgid "importi_di_viaggio_e_o_servizi"
 msgstr ""

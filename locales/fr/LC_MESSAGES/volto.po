@@ -306,11 +306,6 @@ msgstr ""
 msgid "Icons placeholder"
 msgstr ""
 
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-# defaultMessage: If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}.
-msgid "If you are certain you have the correct web address but are encountering an error, please contact the {site_admin}."
-msgstr "Si vous êtes certain que l'adresse est bonne, mais que vous avez un erreur, veuillez contacter le {site_admin}."
-
 #: components/ItaliaTheme/Blocks/Alert/Sidebar
 # defaultMessage: Immagine
 msgid "Image"
@@ -584,11 +579,6 @@ msgstr "Afficher tout"
 # defaultMessage: Mostra tutti i tipi di contenuto
 msgid "Show all content types"
 msgstr "Afficher tous les types de contenu"
-
-#: components/ItaliaTheme/Unauthorized/Unauthorized
-# defaultMessage: Site Administration
-msgid "Site Administration"
-msgstr "Administration du site"
 
 #: components/ItaliaTheme/Search/Search
 # defaultMessage: Sono occorsi degli errori
@@ -2204,6 +2194,7 @@ msgid "imageBackground"
 msgstr ""
 
 #: components/ItaliaTheme/View/PersonaView/PersonaDocumenti
+#: components/ItaliaTheme/View/PersonaView/PersonaRuolo
 # defaultMessage: Importi di viaggio e/o servizi
 msgid "importi_di_viaggio_e_o_servizi"
 msgstr "Frais de déplacement et services"
