@@ -25,6 +25,7 @@ import cx from 'classnames';
 import AnswersStep from './Steps/AnswersStep';
 import CommentsStep from './Steps/CommentsStep';
 import Rating from './Steps/Commons/Rating';
+import { PropTypes } from 'prop-types';
 
 const messages = defineMessages({
   title: {
@@ -111,10 +112,10 @@ const messages = defineMessages({
   },
 });
 
-const FeedbackForm = ({ contentType }) => {
+const FeedbackForm = ({ contentType, pathname }) => {
   const intl = useIntl();
   const location = useLocation();
-  const path = location.pathname ?? '/';
+  const path = pathname ?? location.pathname ?? '/';
   const dispatch = useDispatch();
   const [satisfaction, setSatisfaction] = useState(null);
   const [step, setStep] = useState(0);
@@ -124,11 +125,9 @@ const FeedbackForm = ({ contentType }) => {
   const submitResults = useSelector((state) => state.submitFeedback);
   const [validToken, setValidToken] = useState(null);
   const threshold = getFeedbackThreshold();
-  let fieldHoney = process.env.RAZZLE_HONEYPOT_FIELD;
-
-  if (__CLIENT__) {
-    fieldHoney = window.env.RAZZLE_HONEYPOT_FIELD;
-  }
+  const fieldHoney = __CLIENT__
+    ? window.env.RAZZLE_HONEYPOT_FIELD
+    : process.env.RAZZLE_HONEYPOT_FIELD;
 
   const numberOfSteps = useMemo(() => getNumberOfSteps(), []);
 
@@ -357,6 +356,11 @@ const FeedbackForm = ({ contentType }) => {
       </Container>
     </div>
   );
+};
+
+FeedbackForm.propTypes = {
+  contentType: PropTypes.string,
+  pathname: PropTypes.string,
 };
 
 export default FeedbackForm;
