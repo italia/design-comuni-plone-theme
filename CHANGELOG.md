@@ -1,5 +1,37 @@
 
 
+## [8.4.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.3.2...v8.4.0) (2023-08-24)
+
+
+### Features
+
+* a11y for Slider listing template ([#235](https://github.com/RedTurtle/design-comuni-plone-theme/issues/235)) ([0bb636d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/0bb636ddaaa7e213e643ac04ba4a99a3b654abe3))
+* add optional custom path to feedbackform ([#285](https://github.com/RedTurtle/design-comuni-plone-theme/issues/285)) ([af41470](https://github.com/RedTurtle/design-comuni-plone-theme/commit/af414709d82a145ea9bef8378efe1b3e91482582))
+* added last element to breadcrumbs for guidelines compat ([#295](https://github.com/RedTurtle/design-comuni-plone-theme/issues/295)) ([badea90](https://github.com/RedTurtle/design-comuni-plone-theme/commit/badea905a588e9b5d4620b4a212befde08055781))
+* added legal-notes to subfooter data-elements ([653263e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/653263ebf909fb9f3449ad0444d2d22dca1eb6a1))
+* added new relation fields in persona view ([#293](https://github.com/RedTurtle/design-comuni-plone-theme/issues/293)) ([d253476](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d2534766bac8d457791ca0f4dcaa7ad4ea8a15d4))
+* aggiunti allegati da incarico delle persone ([#288](https://github.com/RedTurtle/design-comuni-plone-theme/issues/288)) ([86352b7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/86352b775da6075514556ae5067eb7a54cb82d91))
+
+
+### Bug Fixes
+
+* backport prs 4854 and 5069 from latest core volto ([#297](https://github.com/RedTurtle/design-comuni-plone-theme/issues/297)) ([60df809](https://github.com/RedTurtle/design-comuni-plone-theme/commit/60df809ebb40ef3326098dc3a21348aff88a4aa4))
+* eu pnrr loro is now as big as site logo in the footer ([#296](https://github.com/RedTurtle/design-comuni-plone-theme/issues/296)) ([ab59406](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ab5940653fa4c4350e2cb99fd025d365b06a43ce))
+* focus color on all buttons ([#246](https://github.com/RedTurtle/design-comuni-plone-theme/issues/246)) ([fb71407](https://github.com/RedTurtle/design-comuni-plone-theme/commit/fb714075260d4e72fa92ef6995769be742f8a30a))
+* focus styles for single select options ([#287](https://github.com/RedTurtle/design-comuni-plone-theme/issues/287)) ([ce29d43](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ce29d433f4beffaa7d38cbd3f7fadf338bf6c1e8))
+* image block aligned left or right overlay on the block chooser ([#291](https://github.com/RedTurtle/design-comuni-plone-theme/issues/291)) ([5e587dc](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5e587dc070b0f5631a9f570da8657f34cfbe13f9))
+* image block alignment with text when align is left or right ([#292](https://github.com/RedTurtle/design-comuni-plone-theme/issues/292)) ([1d2b74c](https://github.com/RedTurtle/design-comuni-plone-theme/commit/1d2b74c24683a59468d613d056c653c683148568))
+* locales ([ac9aaaa](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ac9aaaaee87b3973014dca5a5cfbcaa358592c66))
+* pagination param in site search ([#294](https://github.com/RedTurtle/design-comuni-plone-theme/issues/294)) ([540e45d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/540e45deb9ad99de37f81a3ddfd3866f1e07b880))
+* remove Contact link in unauthorized error page ([#298](https://github.com/RedTurtle/design-comuni-plone-theme/issues/298)) ([325bc0b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/325bc0b2ddcfd235a9ff9db70682c19b8588fcdf))
+* search modal focus styles and focus handling for keyboard navigation ([#215](https://github.com/RedTurtle/design-comuni-plone-theme/issues/215)) ([46eb7a4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/46eb7a43462d54efc2363b95a73f893dd23500f8))
+* TOC block links ([#272](https://github.com/RedTurtle/design-comuni-plone-theme/issues/272)) ([d185b48](https://github.com/RedTurtle/design-comuni-plone-theme/commit/d185b48ba8865a2776481d6f6c06f22dc57d6151))
+
+
+### Documentation
+
+* updated publiccode ([66433b3](https://github.com/RedTurtle/design-comuni-plone-theme/commit/66433b363344b90df6ba596ad70e2c1c1dc69a14))
+
 ## [8.3.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.3.1...v8.3.2) (2023-08-18)
 
 
