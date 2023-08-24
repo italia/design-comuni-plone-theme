@@ -1,5 +1,17 @@
 
 
+## [8.4.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.4.1...v8.4.2) (2023-08-24)
+
+
+### Bug Fixes
+
+* more external url fixes for images ([dc6da3a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/dc6da3ac832bec31c372cc854ff6b199df32273e))
+
+
+### Documentation
+
+* updated publiccode ([ad343ef](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ad343ef38c2d893c7ec7222c2e24baa7139ef4aa))
+
 ## [8.4.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.4.0...v8.4.1) (2023-08-24)
 
 
