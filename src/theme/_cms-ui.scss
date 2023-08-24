@@ -418,6 +418,14 @@ body.cms-ui {
         z-index: 0;
       }
     }
+    &.image {
+      .block.align {
+        &.left,
+        &.right {
+          z-index: 0;
+        }
+      }
+    }
   }
 
   a {
