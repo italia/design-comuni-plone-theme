@@ -118,7 +118,7 @@ export const getImageAttributes = (
     case 'internalUrl':
       let baseUrl = `@@images/${imageField}`;
       if (isFromBrain) baseUrl = `${itemPath}${baseUrl}`;
-      else baseUrl = `${image.split('@@images')[0]}${baseUrl}`;
+      else baseUrl = `${image.split('/@@images')[0]}/${baseUrl}`;
       baseUrl = flattenToAppURL(baseUrl);
 
       attrs.src = `${baseUrl}/${minScale}`;
