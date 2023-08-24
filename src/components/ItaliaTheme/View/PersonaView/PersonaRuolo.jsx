@@ -20,9 +20,9 @@ const messages = defineMessages({
     id: 'atto_nomina',
     defaultMessage: 'Atto di nomina',
   },
-  organizzazione_riferimento: {
-    id: 'organizzazione_riferimento',
-    defaultMessage: 'Organizzazione',
+  strutture_correlate: {
+    id: 'persona_strutture_correlate',
+    defaultMessage: 'Fa parte di',
   },
   responsabile_di: {
     id: 'responsabile_di',
@@ -124,13 +124,37 @@ const PersonaRuolo = ({ content }) => {
           </RichTextSection>
         </>
       )}
-      {content.organizzazione_riferimento.length > 0 && (
+      {content.assessore_di?.length > 0 && (
         <RichTextSection
-          tag_id="organization"
-          title={intl.formatMessage(messages.organizzazione_riferimento)}
+          tag_id="assessore_di"
+          title={intl.formatMessage(messages.assessore_di)}
         >
           <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
-            {content.organizzazione_riferimento.map((item, i) => (
+            {content.assessore_di.map((item, i) => (
+              <OfficeCard key={item['@id']} office={item} size="big" />
+            ))}
+          </div>
+        </RichTextSection>
+      )}
+      {content.responsabile_di?.length > 0 && (
+        <RichTextSection
+          tag_id="responsabile_di"
+          title={intl.formatMessage(messages.responsabile_di)}
+        >
+          <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+            {content.responsabile_di.map((item, i) => (
+              <OfficeCard key={item['@id']} office={item} size="big" />
+            ))}
+          </div>
+        </RichTextSection>
+      )}
+      {content.strutture_correlate?.length > 0 && (
+        <RichTextSection
+          tag_id="strutture_correlate"
+          title={intl.formatMessage(messages.strutture_correlate)}
+        >
+          <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+            {content.strutture_correlate.map((item, i) => (
               <OfficeCard key={item['@id']} office={item} size="big" />
             ))}
           </div>
