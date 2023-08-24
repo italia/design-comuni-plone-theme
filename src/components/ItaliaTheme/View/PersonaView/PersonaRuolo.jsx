@@ -5,6 +5,7 @@ import {
   RichTextSection,
   OfficeCard,
   Gallery,
+  Attachment,
 } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
 import {
   contentFolderHasItems,
@@ -39,6 +40,10 @@ const messages = defineMessages({
   compensi: {
     id: 'compensi',
     defaultMessage: 'Compensi',
+  },
+  importi_di_viaggio_e_o_servizi: {
+    id: 'importi_di_viaggio_e_o_servizi',
+    default: 'Importi di viaggio e/o servizi',
   },
   deleghe: {
     id: 'deleghe',
@@ -103,12 +108,83 @@ const PersonaRuolo = ({ content }) => {
               </div>
             </RichTextSection>
           )}
+
           {richTextHasContent(content.incarichi_persona[0].compensi) && (
             <RichTextSection
               tag_id="compensi"
               title={intl.formatMessage(messages.compensi)}
               data={content.incarichi_persona[0].compensi}
-            />
+            >
+              {content.incarichi_persona[0]?.compensi_file?.length > 0 && (
+                <div className="compensi-item mb-2">
+                  <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                    {content.incarichi_persona[0]?.compensi_file.map((file) => {
+                      let itemURL = '#';
+                      if (file['@type'] === 'File') {
+                        itemURL = `${file['@id']}/@@download/file`;
+                      } else if (file['@type'] === 'Link') {
+                        itemURL =
+                          file.remoteUrl?.length > 0
+                            ? file.remoteUrl
+                            : file['@id'];
+                      } else {
+                        itemURL = file['@id'];
+                      }
+                      return (
+                        <Attachment
+                          key={file['@id']}
+                          title={file.title}
+                          description={file.description}
+                          download_url={itemURL}
+                          item={file}
+                        />
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+            </RichTextSection>
+          )}
+          {content.incarichi_persona[0]?.importi_di_viaggio_e_o_servizi
+            ?.length > 0 && (
+            <RichTextSection
+              tag_id="importi-di-viaggio"
+              title={intl.formatMessage(
+                messages.importi_di_viaggio_e_o_servizi,
+              )}
+              data={content.incarichi_persona[0].importi_di_viaggio_e_o_servizi}
+            >
+              {content.incarichi_persona[0]?.compensi_file?.length > 0 && (
+                <div className="compensi-item mb-2">
+                  <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
+                    {content.incarichi_persona[0]?.importi_di_viaggio_e_o_servizi.map(
+                      (file) => {
+                        let itemURL = '#';
+                        if (file['@type'] === 'File') {
+                          itemURL = `${file['@id']}/@@download/file`;
+                        } else if (file['@type'] === 'Link') {
+                          itemURL =
+                            file.remoteUrl?.length > 0
+                              ? file.remoteUrl
+                              : file['@id'];
+                        } else {
+                          itemURL = file['@id'];
+                        }
+                        return (
+                          <Attachment
+                            key={file['@id']}
+                            title={file.title}
+                            description={file.description}
+                            download_url={itemURL}
+                            item={file}
+                          />
+                        );
+                      },
+                    )}
+                  </div>
+                </div>
+              )}
+            </RichTextSection>
           )}
           <RichTextSection
             tag_id="data_insediamento"
