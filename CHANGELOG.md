@@ -1,5 +1,17 @@
 
 
+## [8.4.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.4.2...v8.4.3) (2023-08-25)
+
+
+### Bug Fixes
+
+* fix querystringresults to work properly in megamenu ([#304](https://github.com/RedTurtle/design-comuni-plone-theme/issues/304)) ([79687c0](https://github.com/RedTurtle/design-comuni-plone-theme/commit/79687c0c75846b5bbe40dab509ccb0cbad6aa10f))
+
+
+### Documentation
+
+* updated publiccode ([ff9f57b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ff9f57b5c07411835b2d6cf5cc20c78858faa182))
+
 ## [8.4.2](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.4.1...v8.4.2) (2023-08-24)
 
 
