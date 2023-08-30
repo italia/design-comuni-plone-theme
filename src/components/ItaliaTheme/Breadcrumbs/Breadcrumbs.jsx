@@ -59,7 +59,10 @@ const Breadcrumbs = ({ pathname }) => {
               </BreadcrumbItem>
               {items.map((item, index, items) => (
                 <BreadcrumbItem tag="li" key={item.url}>
-                  <UniversalLink href={item.url}>{item.title}</UniversalLink>
+                  {index < items.length - 1 && (
+                    <UniversalLink href={item.url}>{item.title}</UniversalLink>
+                  )}
+                  {index === items.length - 1 && <span>{item.title}</span>}
                   {index < items.length - 1 && (
                     <span className="separator">/</span>
                   )}
