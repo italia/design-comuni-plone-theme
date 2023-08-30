@@ -1,5 +1,12 @@
 
 
+## [8.4.4](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.4.3...v8.4.4) (2023-08-30)
+
+
+### Bug Fixes
+
+* removed link from last breadcrumb element ([a10237b](https://github.com/redturtle/design-comuni-plone-theme/commit/a10237bf697f84d12c0a95045f7203278e3cb42e))
+
 ## [8.4.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.4.2...v8.4.3) (2023-08-25)
 
 
