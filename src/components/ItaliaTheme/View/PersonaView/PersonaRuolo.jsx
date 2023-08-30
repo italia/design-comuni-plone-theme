@@ -109,7 +109,8 @@ const PersonaRuolo = ({ content }) => {
             </RichTextSection>
           )}
 
-          {richTextHasContent(content.incarichi_persona[0].compensi) && (
+          {(richTextHasContent(content.incarichi_persona[0].compensi) ||
+            content.incarichi_persona[0]?.compensi_file?.length > 0) && (
             <RichTextSection
               tag_id="compensi"
               title={intl.formatMessage(messages.compensi)}
