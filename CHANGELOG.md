@@ -1,5 +1,12 @@
 
 
+## [8.4.5](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.4.4...v8.4.5) (2023-08-30)
+
+
+### Bug Fixes
+
+* changed conditions for campo compensi in CT persona ([8b2c7c0](https://github.com/redturtle/design-comuni-plone-theme/commit/8b2c7c0ea2e2a8539c3e8ca16077d74539bc6f5d))
+
 ## [8.4.4](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.4.3...v8.4.4) (2023-08-30)
 
 
