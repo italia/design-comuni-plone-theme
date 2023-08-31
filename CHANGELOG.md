@@ -1,5 +1,12 @@
 
 
+## [8.4.6](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.4.5...v8.4.6) (2023-08-31)
+
+
+### Bug Fixes
+
+* changed conditions for campo importi in CT persona ([65931ac](https://github.com/redturtle/design-comuni-plone-theme/commit/65931acb8d1d8a6e12444067573380b639f03291))
+
 ## [8.4.5](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.4.4...v8.4.5) (2023-08-30)
 
 
