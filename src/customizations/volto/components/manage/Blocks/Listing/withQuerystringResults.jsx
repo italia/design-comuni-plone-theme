@@ -78,6 +78,8 @@ export default function withQuerystringResults(WrappedComponent) {
       (state) => state.querystringsearch.subrequests,
     );
 
+    const subrequestResult = querystringResults[subrequestID];
+
     const dispatch = useDispatch();
     const listingRef = createRef();
     const [additionalFilters, setAdditionalFilters] = React.useState([]);
@@ -170,11 +172,14 @@ export default function withQuerystringResults(WrappedComponent) {
         );
       }
 
-      if (firstLoading && querystringResults[subrequestID] && !loadingQuery) {
-        setFirstLoading(false);
-      }
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
+
+    useEffect(() => {
+      if (firstLoading && subrequestResult && !loadingQuery) {
+        setFirstLoading(false);
+      }
+    }, [firstLoading, loadingQuery, subrequestResult]);
 
     useDeepCompareEffect(() => {
       if (
