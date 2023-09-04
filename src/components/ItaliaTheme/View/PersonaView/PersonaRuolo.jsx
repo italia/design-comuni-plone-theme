@@ -109,7 +109,8 @@ const PersonaRuolo = ({ content }) => {
             </RichTextSection>
           )}
 
-          {richTextHasContent(content.incarichi_persona[0].compensi) && (
+          {(richTextHasContent(content.incarichi_persona[0].compensi) ||
+            content.incarichi_persona[0]?.compensi_file?.length > 0) && (
             <RichTextSection
               tag_id="compensi"
               title={intl.formatMessage(messages.compensi)}
@@ -154,7 +155,8 @@ const PersonaRuolo = ({ content }) => {
               )}
               data={content.incarichi_persona[0].importi_di_viaggio_e_o_servizi}
             >
-              {content.incarichi_persona[0]?.compensi_file?.length > 0 && (
+              {content.incarichi_persona[0]?.importi_di_viaggio_e_o_servizi
+                ?.length > 0 && (
                 <div className="compensi-item mb-2">
                   <div className="card-wrapper card-teaser-wrapper card-teaser-wrapper-equal">
                     {content.incarichi_persona[0]?.importi_di_viaggio_e_o_servizi.map(

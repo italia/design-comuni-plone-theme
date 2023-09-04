@@ -1,5 +1,26 @@
 
 
+## [8.4.6](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.4.5...v8.4.6) (2023-08-31)
+
+
+### Bug Fixes
+
+* changed conditions for campo importi in CT persona ([65931ac](https://github.com/redturtle/design-comuni-plone-theme/commit/65931acb8d1d8a6e12444067573380b639f03291))
+
+## [8.4.5](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.4.4...v8.4.5) (2023-08-30)
+
+
+### Bug Fixes
+
+* changed conditions for campo compensi in CT persona ([8b2c7c0](https://github.com/redturtle/design-comuni-plone-theme/commit/8b2c7c0ea2e2a8539c3e8ca16077d74539bc6f5d))
+
+## [8.4.4](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.4.3...v8.4.4) (2023-08-30)
+
+
+### Bug Fixes
+
+* removed link from last breadcrumb element ([a10237b](https://github.com/redturtle/design-comuni-plone-theme/commit/a10237bf697f84d12c0a95045f7203278e3cb42e))
+
 ## [8.4.3](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.4.2...v8.4.3) (2023-08-25)
 
 
