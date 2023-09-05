@@ -42,7 +42,6 @@ const OfficeCard = ({
   }, [url]);
 
   let office_fo = load_data ? officeContent?.[key]?.data : office;
-
   return office_fo ? (
     <div
       className={cx(
@@ -86,7 +85,10 @@ const OfficeCard = ({
                             <ContactLink tel={pdc.pdc_value} label={false} />
                           </div>
                         );
-                      } else if (pdc.pdc_type === 'email')
+                      } else if (
+                        pdc.pdc_type === 'email' ||
+                        pdc.pdc_type === 'pec'
+                      )
                         return (
                           <div key={i}>
                             <ContactLink email={pdc.pdc_value} label={false} />
