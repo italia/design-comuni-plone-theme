@@ -53,6 +53,7 @@ const Unauthorized = (props) => {
     : process.env.RAZZLE_SPID_LOGIN_URL;
   // BBB: per retrocompatibilità con il vecchio config arLoginUrl
   const spidLogin = config.settings.siteProperties?.spidLogin;
+  const came_from = `${getBaseUrl(location.pathname)}${location.search}`;
 
   return (
     <div id="unauthorized-agid" className="view-wrapper">
@@ -88,9 +89,10 @@ const Unauthorized = (props) => {
                     <Button
                       color="primary"
                       outline
-                      href={`${getBaseUrl(
-                        location.pathname,
-                      )}/login?login_operatore=1`}
+                      href={`/login?${new URLSearchParams({
+                        login_operatore: 1,
+                        return_url: came_from,
+                      })}`}
                       tag="button"
                     >
                       <span>{intl.formatMessage(messages.loginPloneUser)}</span>
@@ -117,9 +119,10 @@ const Unauthorized = (props) => {
                   values={{
                     login: (
                       <Link
-                        to={`${getBaseUrl(
-                          location.pathname,
-                        )}/login?login_operatore=1`}
+                        to={`/login?${new URLSearchParams({
+                          login_operatore: 1,
+                          return_url: came_from,
+                        })}`}
                       >
                         <FormattedMessage id="log in" defaultMessage="log in" />
                       </Link>

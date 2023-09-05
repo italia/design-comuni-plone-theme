@@ -58,7 +58,11 @@ const LoginAgid = (props) => {
     : process.env.RAZZLE_SPID_LOGIN_URL;
   const showFormLogin = !spidLoginUrl || query.get('login_operatore');
   const location = useLocation();
-  const came_from = query.get('came_from') || props.origin || getBaseUrl(location.pathname);
+  const came_from =
+    query.get('came_from') ||
+    props.origin ||
+    `${getBaseUrl(location.pathname)}${location.search}` ||
+    '/';
 
   return (
     <>
@@ -91,7 +95,10 @@ const LoginAgid = (props) => {
                     <Button
                       color="primary"
                       outline
-                      href={`${came_from}/login?login_operatore=1`}
+                      href={`/login?${new URLSearchParams({
+                        login_operatore: 1,
+                        return_url: came_from,
+                      }).toString()}`}
                       tag="button"
                     >
                       <span>{intl.formatMessage(messages.loginPloneUser)}</span>
