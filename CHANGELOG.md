@@ -1,5 +1,27 @@
 
 
+## [8.5.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.4.6...v8.5.0) (2023-09-05)
+
+
+### Features
+
+* added pec to office card info ([#312](https://github.com/RedTurtle/design-comuni-plone-theme/issues/312)) ([a555954](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a555954bbd482f27c711ac314aeda45e01537b06))
+
+
+### Bug Fixes
+
+* fixed videogallery template block and standardized slider styles ([#301](https://github.com/RedTurtle/design-comuni-plone-theme/issues/301)) ([9abe515](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9abe51584c631a75c6145944f8a14a0c187dd625))
+* incorrect logic for determining if search is ongoing, less layout shifts  ([#313](https://github.com/RedTurtle/design-comuni-plone-theme/issues/313)) ([69bc749](https://github.com/RedTurtle/design-comuni-plone-theme/commit/69bc74963760caf6465bdf7cc6e64c0413d8d655))
+* mantiene la querystring nel came_from della login ([#315](https://github.com/RedTurtle/design-comuni-plone-theme/issues/315)) ([5313e8b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/5313e8b4bbcc54b492e07876abf5dc607d5b118b))
+* mostra tutti i campi incarico della persona ([#311](https://github.com/RedTurtle/design-comuni-plone-theme/issues/311)) ([bd9afa2](https://github.com/RedTurtle/design-comuni-plone-theme/commit/bd9afa284f84202fece2f95c6664406bb605d66e))
+* querystring results with additional filters in listing blocks ([#317](https://github.com/RedTurtle/design-comuni-plone-theme/issues/317)) ([ba52c7f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ba52c7f22b98baf4373ac580cd0a0441dc60ad01))
+* revert SSR redirect backport https://github.com/plone/volto/pull/4854 ([#306](https://github.com/RedTurtle/design-comuni-plone-theme/issues/306)) ([ce80334](https://github.com/RedTurtle/design-comuni-plone-theme/commit/ce803342595693b819e9185990ea4e45777fa055))
+
+
+### Documentation
+
+* updated publiccode ([973363a](https://github.com/RedTurtle/design-comuni-plone-theme/commit/973363a7ca46654cf79a1cfd7e9151cb97c77221))
+
 ## [8.4.6](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.4.5...v8.4.6) (2023-08-31)
 
 
