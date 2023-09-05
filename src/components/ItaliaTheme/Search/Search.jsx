@@ -6,7 +6,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useIntl, defineMessages } from 'react-intl';
-import { values } from 'lodash';
+import { values, isEmpty } from 'lodash';
 import cx from 'classnames';
 import qs from 'query-string';
 import moment from 'moment';
@@ -324,7 +324,7 @@ const Search = () => {
       true,
     );
 
-    searchResults.result &&
+    !isEmpty(searchResults.result) &&
       history.push(
         getSearchParamsURL(
           searchableText,
@@ -349,7 +349,6 @@ const Search = () => {
   }, 0);
   let activeTopics = values(topics).filter((t) => t.value).length;
   let activePortalTypes = values(portalTypes).filter((ct) => ct.value).length;
-
   return (
     <>
       <Helmet title={intl.formatMessage(messages.searchResults)} />
@@ -612,72 +611,82 @@ const Search = () => {
             </aside>
 
             <Col lg={9} tag="section" className="py-lg-5">
-              {searchResults.loadingResults ? (
-                <Spinner active />
-              ) : searchResults?.result?.items_total > 0 ? (
-                <div
-                  className="search-results-wrapper"
-                  role="region"
-                  id="search-results-region"
-                  aria-live="polite"
-                >
-                  <div className="d-block ordering-widget">
-                    <Row className="pb-3 border-bottom">
-                      <Col xs={6} className="align-self-center">
-                        <p className="d-none d-lg-block" aria-live="polite">
-                          {intl.formatMessage(messages.foundNResults, {
-                            total: searchResults.result.items_total,
-                          })}
-                        </p>
-                        <p className="d-block d-lg-none mb-0 text-end">
-                          {intl.formatMessage(messages.orderBy)}
-                        </p>
-                      </Col>
-                      <Col xs={6}>
-                        <SelectInput
-                          id="search-sort-on"
-                          value={
-                            sortOnOptions.filter((o) => o.value === sortOn)[0]
-                          }
-                          label={intl.formatMessage(messages.orderBy)}
-                          placeholder={intl.formatMessage(messages.orderBy)}
-                          onChange={(opt) => setSortOn(opt.value)}
-                          options={sortOnOptions}
-                        />
-                      </Col>
-                    </Row>
-                  </div>
-                  <Row>
-                    {searchResults?.result?.items?.map((item, index) => (
-                      <Col md={12} key={item['@id']} className="p-0">
-                        <SearchResultItem
-                          item={item}
-                          index={index}
-                          searchableText={searchableText}
-                          section={getSectionFromId(item['@id'])}
-                        />
-                      </Col>
-                    ))}
+              <div
+                className="search-results-wrapper"
+                role="region"
+                id="search-results-region"
+                aria-live="polite"
+              >
+                <div className="d-block ordering-widget">
+                  <Row className="pb-3 border-bottom">
+                    <Col xs={6} className="align-self-center">
+                      <p className="d-none d-lg-block" aria-live="polite">
+                        {intl.formatMessage(messages.foundNResults, {
+                          total: searchResults?.result?.items_total || 0,
+                        })}
+                      </p>
+                      <p className="d-block d-lg-none mb-0 text-end">
+                        {intl.formatMessage(messages.orderBy)}
+                      </p>
+                    </Col>
+                    <Col xs={6}>
+                      <SelectInput
+                        id="search-sort-on"
+                        value={
+                          sortOnOptions.filter((o) => o.value === sortOn)[0]
+                        }
+                        label={intl.formatMessage(messages.orderBy)}
+                        placeholder={intl.formatMessage(messages.orderBy)}
+                        onChange={(opt) => setSortOn(opt.value)}
+                        options={sortOnOptions}
+                      />
+                    </Col>
                   </Row>
-                  {searchResults?.result?.batching && (
-                    <Pagination
-                      activePage={currentPage}
-                      totalPages={Math.ceil(
-                        (searchResults?.result?.items_total ?? 0) /
-                          config.settings.defaultPageSize,
-                      )}
-                      onPageChange={handleQueryPaginationChange}
-                    />
-                  )}
                 </div>
-              ) : searchResults.error ? (
-                <Alert color="danger">
-                  <strong>{intl.formatMessage(messages.attenzione)}</strong>{' '}
-                  {intl.formatMessage(messages.errors_occured)}
-                </Alert>
-              ) : (
-                <p>{intl.formatMessage(messages.no_results)}</p>
-              )}
+
+                {searchResults.loadingResults ||
+                (!searchResults.hasError && isEmpty(searchResults.result)) ? (
+                  <div className="searchSpinnerWrapper">
+                    <Spinner active />
+                  </div>
+                ) : searchResults?.result?.items_total > 0 ? (
+                  <>
+                    <Row>
+                      {searchResults?.result?.items?.map((item, index) => (
+                        <Col md={12} key={item['@id']} className="p-0">
+                          <SearchResultItem
+                            item={item}
+                            index={index}
+                            searchableText={searchableText}
+                            section={getSectionFromId(item['@id'])}
+                          />
+                        </Col>
+                      ))}
+                    </Row>
+                    {searchResults?.result?.batching && (
+                      <Pagination
+                        activePage={currentPage}
+                        totalPages={Math.ceil(
+                          (searchResults?.result?.items_total ?? 0) /
+                            config.settings.defaultPageSize,
+                        )}
+                        onPageChange={handleQueryPaginationChange}
+                      />
+                    )}
+                  </>
+                ) : searchResults.error ? (
+                  <Alert color="danger">
+                    <strong>{intl.formatMessage(messages.attenzione)}</strong>{' '}
+                    {intl.formatMessage(messages.errors_occured)}
+                  </Alert>
+                ) : (
+                  !searchResults?.hasError &&
+                  !isEmpty(searchResults?.result) &&
+                  searchResults.result?.items.length === 0 && (
+                    <p>{intl.formatMessage(messages.no_results)}</p>
+                  )
+                )}
+              </div>
             </Col>
           </Row>
         </Container>
