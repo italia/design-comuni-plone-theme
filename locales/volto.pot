@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Plone\n"
-"POT-Creation-Date: 2023-08-24T08:14:25.576Z\n"
+"POT-Creation-Date: 2023-08-28T07:32:02.134Z\n"
 "Last-Translator: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -3882,6 +3882,16 @@ msgstr ""
 #: components/ItaliaTheme/Blocks/UOSearch/DefaultFilters
 # defaultMessage: Luoghi
 msgid "venues"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/VideoGallery/Body
+# defaultMessage: Prossimo video
+msgid "videogallery_next_arrow"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/VideoGallery/Body
+# defaultMessage: Video precedente
+msgid "videogallery_prev_arrow"
 msgstr ""
 
 #: components/ItaliaTheme/Blocks/Listing/SliderTemplate

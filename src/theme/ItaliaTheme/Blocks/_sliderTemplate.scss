@@ -39,58 +39,6 @@
     }
   }
 
-  .slick-arrow {
-    width: 25px;
-    height: 40px;
-
-    .icon {
-      width: 25px;
-      height: 40px;
-      color: $primary;
-      fill: $primary;
-    }
-    &:hover .icon {
-      color: $primary;
-      fill: darken($primary, 15%);
-    }
-
-    &.slick-prev {
-      left: -40px;
-      outline: none !important;
-
-      &:before {
-        content: none;
-      }
-    }
-
-    &.slick-next {
-      right: -40px;
-      outline: none !important;
-
-      &:before {
-        content: none;
-      }
-    }
-  }
-
-  ul.slick-dots {
-    position: unset;
-    bottom: unset;
-    margin-top: 0.5rem !important;
-    .slick-dot button:before {
-      background-image: none;
-      background-color: #3f4142e0;
-      opacity: 1;
-      border-radius: 50%;
-    }
-    .slick-dot.slick-active button:before {
-      background-image: none;
-      background-color: $primary;
-      opacity: 1;
-      border-radius: 50%;
-    }
-  }
-
   .slick-track {
     display: flex;
     min-height: 400px;
@@ -98,6 +46,10 @@
   }
 
   .slider-container {
+    .slick-slider ul.slick-dots {
+      margin-top: 0;
+    }
+
     .slick-slide {
       .slide-wrapper {
         position: relative;

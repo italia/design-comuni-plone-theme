@@ -3891,6 +3891,16 @@ msgstr "Cambio en el balance"
 msgid "venues"
 msgstr "Lugares"
 
+#: components/ItaliaTheme/Blocks/VideoGallery/Body
+# defaultMessage: Prossimo video
+msgid "videogallery_next_arrow"
+msgstr ""
+
+#: components/ItaliaTheme/Blocks/VideoGallery/Body
+# defaultMessage: Video precedente
+msgid "videogallery_prev_arrow"
+msgstr ""
+
 #: components/ItaliaTheme/Blocks/Listing/SliderTemplate
 # defaultMessage: Sei attualmente in un carosello, per navigare usa le frecce sinistra e destra
 msgid "viewImage"

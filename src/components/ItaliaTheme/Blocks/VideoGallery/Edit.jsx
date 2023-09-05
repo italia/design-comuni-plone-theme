@@ -6,22 +6,24 @@
 import React from 'react';
 import { defineMessages } from 'react-intl';
 import { SidebarPortal } from '@plone/volto/components';
-
 import {
   withDNDContext,
   SubblocksEdit,
   SubblocksWrapper,
 } from 'volto-subblocks';
-import Sidebar from './Sidebar.jsx';
-import EditBlock from './Block/EditBlock';
-import Body from './Body';
+import Sidebar from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/VideoGallery/Sidebar';
+import Body from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/VideoGallery/Body';
+import EditBlock from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/VideoGallery/Block/EditBlock';
 
 const messages = defineMessages({
   addItem: {
     id: 'Add accordion item',
     defaultMessage: 'Aggiungi elemento',
   },
-  titlePlaceholder: { id: 'Title', defaultMessage: 'Titolo' },
+  titlePlaceholder: {
+    id: 'Title',
+    defaultMessage: 'Titolo',
+  },
   noVideos: {
     id: 'noVideos',
     defaultMessage:

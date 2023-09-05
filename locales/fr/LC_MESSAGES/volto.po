@@ -3899,6 +3899,16 @@ msgstr "Changement de bilan"
 msgid "venues"
 msgstr "Lieux"
 
+#: components/ItaliaTheme/Blocks/VideoGallery/Body
+# defaultMessage: Prossimo video
+msgid "videogallery_next_arrow"
+msgstr "Prochaine vidéo"
+
+#: components/ItaliaTheme/Blocks/VideoGallery/Body
+# defaultMessage: Video precedente
+msgid "videogallery_prev_arrow"
+msgstr "Vidéo précédente"
+
 #: components/ItaliaTheme/Blocks/Listing/SliderTemplate
 # defaultMessage: Sei attualmente in un carosello, per navigare usa le frecce sinistra e destra
 msgid "viewImage"

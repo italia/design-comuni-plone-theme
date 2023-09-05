@@ -130,7 +130,9 @@ const PhotogalleryTemplate = ({
             />
           </button>
         </div>
-        <ul style={{ margin: '0px' }}> {dots} </ul>
+        <ul className="slick-dots" style={{ margin: '0px' }}>
+          {dots}
+        </ul>
       </div>
     ),
   };

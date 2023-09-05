@@ -5,11 +5,12 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container } from 'design-react-kit';
 
 import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
-
+import { useIntl, defineMessages } from 'react-intl';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { FontAwesomeIcon } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { Button, Container } from 'design-react-kit';
 import { UniversalLink } from '@plone/volto/components';
 
 /**
@@ -17,11 +18,56 @@ import { UniversalLink } from '@plone/volto/components';
  * @class Body
  * @extends Component
  */
+
+const messages = defineMessages({
+  videogallery_next_arrow: {
+    id: 'videogallery_next_arrow',
+    defaultMessage: 'Prossimo video',
+  },
+  videogallery_prev_arrow: {
+    id: 'videogallery_prev_arrow',
+    defaultMessage: 'Video precedente',
+  },
+});
+
 const Body = ({ data, children, nItems = 0, reactSlick }) => {
+  const intl = useIntl();
+
+  const NextArrow = (props) => {
+    const { onClick, className } = props;
+    return (
+      <Button
+        outline
+        color={'unset'}
+        className={className}
+        onClick={onClick}
+        aria-label={intl.formatMessage(messages.videogallery_next_arrow)}
+      >
+        <FontAwesomeIcon icon={['fas', 'chevron-right']} />
+      </Button>
+    );
+  };
+  const PrevArrow = (props) => {
+    const { onClick, className } = props;
+    return (
+      <Button
+        outline
+        color={'unset'}
+        className={className}
+        onClick={onClick}
+        aria-label={intl.formatMessage(messages.videogallery_prev_arrow)}
+      >
+        <FontAwesomeIcon icon={['fas', 'chevron-left']} />
+      </Button>
+    );
+  };
+
   const Slider = reactSlick.default;
 
   const settings = {
     dots: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     infinite: true,
     speed: 500,
     slidesToShow: nItems < 3 ? nItems : 3,
@@ -55,7 +101,7 @@ const Body = ({ data, children, nItems = 0, reactSlick }) => {
   };
 
   return (
-    <div className="full-width py-5">
+    <div className="full-width">
       <Container className="px-md-4">
         {data?.title && <h2>{data.title}</h2>}
         {(data?.channel_link || data?.channel_link_title) && (

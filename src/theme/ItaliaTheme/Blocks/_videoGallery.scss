@@ -1,4 +1,6 @@
 .block.video_gallery {
+  margin: 3rem 0;
+
   .full-width {
     height: 350px;
   }
@@ -7,10 +9,18 @@
     .full-width {
       height: 400px;
     }
+    .slick-list {
+      margin: 0;
+    }
+  }
+
+  .slick-list {
+    margin: 0 -1rem;
   }
 
   .add-block-wrapper {
     text-align: center;
+    margin-top: 1rem;
   }
 
   .channel {
@@ -24,8 +34,6 @@
   }
 
   .video-wrapper {
-    margin-bottom: 1.5em;
-
     .ui.embed {
       position: relative;
       width: auto;
@@ -45,6 +53,7 @@
         width: 100%;
         height: 190px;
         object-fit: cover;
+        cursor: auto;
       }
 
       .icon-play {
@@ -94,11 +103,25 @@
   }
 
   .subblock-edit {
-    padding-top: 1.3em;
+    padding-top: 1rem;
 
     .dragsubblock {
       top: 0;
       left: 0;
+    }
+
+    .video-wrapper {
+      padding: 0 0.5rem;
+
+      .ui.embed {
+        pointer-events: none;
+        position: relative;
+        min-height: 190px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+      }
     }
 
     .ui.basic.button.delete-button {

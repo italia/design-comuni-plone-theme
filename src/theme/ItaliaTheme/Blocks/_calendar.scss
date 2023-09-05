@@ -37,10 +37,6 @@
     }
   }
 
-  .slick-dots {
-    bottom: -3rem;
-  }
-
   .dot {
     li {
       button {
@@ -51,30 +47,20 @@
     }
   }
 
-  .slick-arrow {
-    width: 1.5rem;
-    height: auto;
-    color: transparentize($gray-secondary, 0.6);
-    padding: 0;
-    &::before {
-      display: none;
-    }
-    &:hover,
-    &:focus {
-      color: transparentize($gray-secondary, 0.3);
-    }
-
-    &.slick-next {
-      right: -3.5rem;
-      @media (max-width: #{map-get($grid-breakpoints, md)}) {
-        right: -3rem;
+  .slick-slider {
+    .slick-arrow {
+      &.slick-next {
+        right: -3.5rem;
+        @media (max-width: #{map-get($grid-breakpoints, md)}) {
+          right: -3rem;
+        }
       }
-    }
 
-    &.slick-prev {
-      left: -3.5rem;
-      @media (max-width: #{map-get($grid-breakpoints, md)}) {
-        left: -3rem;
+      &.slick-prev {
+        left: -3.5rem;
+        @media (max-width: #{map-get($grid-breakpoints, md)}) {
+          left: -3rem;
+        }
       }
     }
   }
@@ -145,6 +131,7 @@
     .calendar-item-container {
       display: flex;
       align-items: center;
+
       .item-img {
         flex: 0 0 3.11rem;
         margin-right: 0.83em;
@@ -185,6 +172,7 @@
       }
     }
   }
+
   @media (min-width: #{map-get($grid-breakpoints, md)}) {
     .template-header {
       &.with-filters {

@@ -3882,6 +3882,16 @@ msgstr "Change in balance sheet"
 msgid "venues"
 msgstr "Venues"
 
+#: components/ItaliaTheme/Blocks/VideoGallery/Body
+# defaultMessage: Prossimo video
+msgid "videogallery_next_arrow"
+msgstr "Next video"
+
+#: components/ItaliaTheme/Blocks/VideoGallery/Body
+# defaultMessage: Video precedente
+msgid "videogallery_prev_arrow"
+msgstr "Previous video"
+
 #: components/ItaliaTheme/Blocks/Listing/SliderTemplate
 # defaultMessage: Sei attualmente in un carosello, per navigare usa le frecce sinistra e destra
 msgid "viewImage"

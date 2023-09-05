@@ -1,7 +1,7 @@
+/** override slider slick-theme **/
 .slider-container {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
 
-  /**slick**/
   .slick-slide {
     figure {
       width: 95%;
@@ -16,12 +16,64 @@
     }
   }
 
-  ul.slick-dots {
-    bottom: -30px;
-    padding: 0;
-    margin: 0;
-  }
   .no-external-if-link > .external-link {
     display: none;
+  }
+}
+
+.slick-slider {
+  ul.slick-dots {
+    bottom: unset;
+    padding: 0;
+    margin: 1.5rem 0 0;
+
+    li {
+      button:before {
+        background-size: 20px;
+        background-image: none;
+        border-radius: 50%;
+        background-color: $gray-700;
+        opacity: 1;
+      }
+
+      &.slick-active button:before {
+        background-color: $primary;
+      }
+    }
+  }
+
+  .slick-arrow {
+    width: 25px;
+    height: 40px;
+    padding: 0;
+
+    &.slick-prev,
+    &.slick-next {
+      outline: none !important;
+
+      .icon {
+        width: 25px;
+        height: 40px;
+        fill: $primary;
+        color: $primary;
+      }
+
+      &:hover .icon {
+        color: darken($primary, 15%);
+        fill: darken($primary, 15%);
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &.slick-prev {
+      left: -40px;
+    }
+
+    &.slick-next {
+      right: -40px;
+    }
   }
 }
