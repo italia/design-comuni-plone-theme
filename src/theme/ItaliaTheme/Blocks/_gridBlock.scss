@@ -1,0 +1,27 @@
+.block.gridBlock {
+  margin-top: 2rem;
+  .full-width {
+    height: unset !important;
+  }
+  .gridBlock-container {
+    max-width: 1320px;
+    padding: 0 4px;
+    margin: auto;
+    position: relative;
+    .toolbar {
+      left: 16px !important;
+    }
+    .block {
+      .image {
+        .ui.message {
+          padding-left: 8px;
+          padding-right: 8px;
+        }
+        .ui.input {
+          font-size: 14px;
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+}
