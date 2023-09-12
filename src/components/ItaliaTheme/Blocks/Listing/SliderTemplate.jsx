@@ -50,7 +50,7 @@ const messages = defineMessages({
 });
 
 function NextArrow(props) {
-  // Custom handling of focus as per Arter a11y audit and request
+  // Custom handling of focus for a11y
   const { className, style, onClick, intl, currentSlide } = props;
   const handleClick = (options) => {
     onClick(options, false);
@@ -85,7 +85,7 @@ function NextArrow(props) {
 }
 
 function PrevArrow(props) {
-  // Custom handling of focus as per Arter a11y audit and request
+  // Custom handling of focus for a11y
   const {
     className,
     style,
@@ -225,7 +225,7 @@ const SliderTemplate = ({
   };
 
   const renderCustomDots = (props) => {
-    // Custom handling of focus as per Arter a11y audit and request
+    // Custom handling of focus for a11y
     return (
       <ul
         className="slick-dots"
@@ -281,13 +281,13 @@ const SliderTemplate = ({
     pauseOnDotsHover: true,
     swipe: true,
     swipeToSlide: true,
-    focusOnSelect: true,
+    focusOnSelect: false,
     draggable: true,
     accessibility: true,
     nextArrow: <NextArrow intl={intl} focusNext={focusNext} />,
     prevArrow: <PrevArrow intl={intl} focusNext={focusNext} />,
     appendDots: renderCustomDots,
-    // Custom handling of focus as per Arter a11y audit and request
+    // Custom handling of focus for a11y
     afterChange: focusNext,
     responsive: [
       {

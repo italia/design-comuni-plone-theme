@@ -61,7 +61,7 @@ export const useSlider = (userAutoplay) => {
 
     if ((userAutoplay && !slide) || (userAutoplay && !slide.length > 0)) return;
 
-    // Custom handling of focus as per Arter a11y audit and request
+    // Custom handling of focus for a11y
     const link = visibleSlideTitle(
       `a.slide-link[data-slide="${currentSlide}"]`,
     );
@@ -70,7 +70,14 @@ export const useSlider = (userAutoplay) => {
       return;
     }
     // eslint-disable-next-line no-unused-expressions
-    else link.focus();
+    else if (
+      // if the focus was already on a slide, move it to the current one
+      Array.from(document.querySelectorAll('.slick-slide')).some((el) =>
+        el.contains(document.activeElement),
+      )
+    ) {
+      link.focus();
+    }
   };
 
   return {
