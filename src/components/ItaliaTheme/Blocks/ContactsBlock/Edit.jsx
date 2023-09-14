@@ -106,7 +106,7 @@ class Edit extends SubblocksEdit {
             </div>
 
             <SubblocksWrapper node={this.node}>
-              <Row>
+              <Row className="justify-content-center">
                 {this.state.subblocks.map((subblock, subindex) => (
                   <Col lg="4" key={subblock.id}>
                     <EditBlock
@@ -120,7 +120,7 @@ class Edit extends SubblocksEdit {
                 ))}
 
                 {this.props.selected && (
-                  <Col lg={4}>
+                  <Col lg={12} className="text-center pb-3">
                     {this.renderAddBlockButton(
                       this.props.intl.formatMessage(messages.addItem),
                     )}
