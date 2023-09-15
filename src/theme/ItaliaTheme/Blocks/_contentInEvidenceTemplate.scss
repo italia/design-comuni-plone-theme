@@ -44,7 +44,7 @@
   @media (min-width: #{map-get($grid-breakpoints, lg)}) {
     .content-in-evidence:nth-of-type(2n) {
       .order-lg-2 {
-        order: 1;
+        order: 1 !important;
 
         &.offset-lg-1 {
           margin-left: 0;
