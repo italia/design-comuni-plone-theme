@@ -4760,7 +4760,7 @@ __metadata:
     typeface-titillium-web: 0.0.72
     volto-blocks-widget: 3.1.0
     volto-data-grid-widget: 2.2.1
-    volto-dropdownmenu: 4.0.0
+    volto-dropdownmenu: 4.1.0
     volto-editablefooter: 5.0.1
     volto-feedback: 0.1.5
     volto-form-block: 3.1.0
@@ -11920,14 +11920,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"volto-dropdownmenu@npm:4.0.0":
-  version: 4.0.0
-  resolution: "volto-dropdownmenu@npm:4.0.0"
+"volto-dropdownmenu@npm:4.1.0":
+  version: 4.1.0
+  resolution: "volto-dropdownmenu@npm:4.1.0"
   dependencies:
     react-outside-click-handler: 1.3.0
   peerDependencies:
     "@plone/volto": ">=16.0.0-alpha.38"
-  checksum: 789ef900dc9f5d0d03b37b82d172c3cd864ef8c367c0d275486da73e789f882576506b415c530ad7f8e5f9c85ca33c4e7ded917b3fe24e030cb4baf1bdb2001d
+  checksum: ec608dfef948d2feb6d952313a9f3ec21c0b8c7b22a632d56cae050d98dde14cc6834e0088852e287b0db97b43477faecf43f8e31915b30e548ebe421bcb14c8
   languageName: node
   linkType: hard
 
