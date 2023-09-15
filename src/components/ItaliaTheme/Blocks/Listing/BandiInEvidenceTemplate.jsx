@@ -137,6 +137,7 @@ const BandiInEvidenceTemplate = ({
                     )}
 
                     {/* Tipologia */}
+
                     {show_tipologia && item.tipologia_bando?.title?.length > 0 && (
                       <span className="d-flex flex-wrap align-items-baseline bando-dati-info">
                         <div className="bando-dati-label me-2">
@@ -206,10 +207,12 @@ const BandiInEvidenceTemplate = ({
                             className={cx('bando-state', {
                               open: item.bando_state?.includes('open'),
                               closed: item.bando_state?.includes('closed'),
-                              scheduled:
-                                item.bando_state?.includes('scheduled'),
-                              'in-progress':
-                                item.bando_state?.includes('inProgress'),
+                              scheduled: item.bando_state?.includes(
+                                'scheduled',
+                              ),
+                              'in-progress': item.bando_state?.includes(
+                                'inProgress',
+                              ),
                             })}
                           >
                             {intl.formatMessage(messages[item.bando_state[0]])}
