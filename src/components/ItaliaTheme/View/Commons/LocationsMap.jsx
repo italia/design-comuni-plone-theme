@@ -43,12 +43,7 @@ const LocationsMap = ({ center, locations }) => {
 
   useEffect(() => {
     venues.forEach((loc) => {
-      if (
-        !fetchedLocations?.[loc.key]?.loading &&
-        !fetchedLocations?.[loc.key]?.loaded
-      ) {
-        dispatch(getContent(loc.url, null, loc.key));
-      }
+      dispatch(getContent(loc.url, null, loc.key));
     });
 
     return () =>
