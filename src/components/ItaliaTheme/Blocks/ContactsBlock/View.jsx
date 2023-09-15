@@ -42,9 +42,9 @@ const AccordionView = ({ data, block }) => {
                 )}
               </div>
             </div>
-            <Row>
+            <Row className="justify-content-center">
               {data.subblocks.map((subblock, index) => (
-                <Col lg="4" key={subblock.id}>
+                <Col lg="4" key={subblock.id} className="pb-3">
                   <ViewBlock
                     data={subblock}
                     key={index}

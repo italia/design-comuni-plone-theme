@@ -20,7 +20,7 @@ import { checkRedraftHasContent } from 'design-comuni-plone-theme/helpers';
 const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
   return (
     <Card
-      className="card-bg rounded subblock-view"
+      className="card-bg rounded subblock-view "
       noWrapper={false}
       space
       tag="div"
