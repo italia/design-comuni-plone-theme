@@ -1,5 +1,17 @@
 
 
+## [8.6.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.5.1...v8.6.0) (2023-09-18)
+
+
+### Features
+
+* added Release log ([#332](https://github.com/redturtle/design-comuni-plone-theme/issues/332)) ([d1f73d0](https://github.com/redturtle/design-comuni-plone-theme/commit/d1f73d033c54e4c5e9f6b8ec231e938d7bc97c8b))
+
+
+### Bug Fixes
+
+* fix container in edit mode ([#328](https://github.com/redturtle/design-comuni-plone-theme/issues/328)) ([d52a02d](https://github.com/redturtle/design-comuni-plone-theme/commit/d52a02d7218d6ccfcfa13a1b66993887820f7114))
+
 ## [8.5.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.5.0...v8.5.1) (2023-09-18)
 
 
