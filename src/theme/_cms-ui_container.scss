@@ -1,0 +1,87 @@
+$maxWidth: 100%;
+$emSize: 14px;
+$scrollbarWidth: 17px;
+$toolbarWidth: 80px;
+$sidebarWidth: 375px;
+$collapsedWidth: 20px;
+
+$tabletBreakpoint: 768px;
+$largeMonitorBreakpoint: 1200px;
+$computerBreakpoint: 992px;
+
+$largestTabletScreen: ($computerBreakpoint - 1px);
+
+/* Devices */
+$mobileMinimumGutter: 0em;
+$mobileWidth: auto;
+$mobileGutter: 1em;
+
+$tabletMinimumGutter: ($emSize * 1);
+$tabletWidth: $tabletBreakpoint - ($tabletMinimumGutter * 2) - $scrollbarWidth;
+$tabletGutter: auto;
+
+$computerMinimumGutter: ($emSize * 1.5);
+$computerWidth: $computerBreakpoint - ($computerMinimumGutter * 2) -
+  $scrollbarWidth;
+$computerGutter: auto;
+
+$largeMonitorMinimumGutter: ($emSize * 2);
+$largeMonitorWidth: $largeMonitorBreakpoint - ($largeMonitorMinimumGutter * 2) -
+  $scrollbarWidth;
+$largeMonitorGutter: auto;
+
+@mixin contentWidthMedia($width, $gutter, $offset) {
+  .public-ui .container {
+    width: $width !important;
+    margin-right: $gutter !important;
+    margin-left: $gutter !important;
+  }
+  .public-ui .full-width > .px-4.container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+@mixin contentWidth($offset) {
+  @media only screen and (max-width:  #{map-get($grid-breakpoints, sm)} + $offset) {
+    @include contentWidthMedia($mobileWidth, $mobileGutter, -12px);
+  }
+  @media only screen and (min-width: $tabletBreakpoint + $offset) and (max-width: $largestTabletScreen + $offset) {
+    @include contentWidthMedia($tabletWidth, $tabletGutter, -30px);
+  }
+  @media only screen and (min-width: $computerBreakpoint + $offset) {
+    @include contentWidthMedia($computerWidth, $computerGutter, -30px);
+  }
+
+  @media only screen and (min-width: $largeMonitorBreakpoint + $offset) {
+    @include contentWidthMedia($largeMonitorWidth, $largeMonitorGutter, -30px);
+  }
+}
+
+body.cms-ui:not(.has-toolbar):not(.has-sidebar):not(.has-toolbar-collapsed):not(.has-sidebar-collapsed) {
+  @include contentWidth(0);
+}
+
+body.cms-ui.has-toolbar:not(.has-sidebar):not(.has-sidebar-collapsed) {
+  @include contentWidth($toolbarWidth);
+}
+
+body.cms-ui.has-toolbar.has-sidebar {
+  @include contentWidth($toolbarWidth + $sidebarWidth);
+}
+
+body.cms-ui.has-toolbar.has-sidebar-collapsed {
+  @include contentWidth($toolbarWidth + $collapsedWidth);
+}
+
+body.cms-ui.has-toolbar-collapsed:not(.has-sidebar):not(.has-sidebar-collapsed) {
+  @include contentWidth($collapsedWidth);
+}
+
+body.cms-ui.has-toolbar-collapsed.has-sidebar {
+  @include contentWidth($collapsedWidth + $sidebarWidth);
+}
+
+body.cms-ui.has-toolbar-collapsed.has-sidebar-collapsed {
+  @include contentWidth($collapsedWidth + $collapsedWidth);
+}

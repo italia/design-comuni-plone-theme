@@ -46,11 +46,7 @@ const ContentInEvidenceTemplate = ({
 
   return (
     <div className="contentInEvidenceTemplate">
-      <Container
-        className={cx('', {
-          'px-4': isEditMode,
-        })}
-      >
+      <Container>
         {title && (
           <Row>
             <Col>
