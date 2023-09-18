@@ -4741,6 +4741,7 @@ __metadata:
     htmldiff-js: 1.0.5
     husky: 8.0.2
     lint-staged: 13.0.3
+    marked: 9.0.0
     prettier: 2.0.5
     react-dropzone: 11.0.1
     react-google-recaptcha-v3: 1.7.0
@@ -7939,6 +7940,15 @@ __metadata:
   version: 4.3.0
   resolution: "map-obj@npm:4.3.0"
   checksum: fbc554934d1a27a1910e842bc87b177b1a556609dd803747c85ece420692380827c6ae94a95cce4407c054fa0964be3bf8226f7f2cb2e9eeee432c7c1985684e
+  languageName: node
+  linkType: hard
+
+"marked@npm:9.0.0":
+  version: 9.0.0
+  resolution: "marked@npm:9.0.0"
+  bin:
+    marked: bin/marked.js
+  checksum: a8e6e7f84f3940259aeb3a2abdd0961cfe1052131a18dfa714fd8d050559f299920bba43c1aa6c4e60293af8da961e3ec96d8f799661fc2c9bcb93598770e942
   languageName: node
   linkType: hard
 

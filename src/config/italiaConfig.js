@@ -1,3 +1,4 @@
+import loadable from '@loadable/component';
 import menuSVG from '@plone/volto/icons/menu.svg';
 import menuAltSVG from '@plone/volto/icons/menu-alt.svg';
 import navSVG from '@plone/volto/icons/nav.svg';
@@ -54,6 +55,7 @@ import faBuildingSVG from 'design-comuni-plone-theme/icons/building.svg';
 import faFileDownloadSVG from 'design-comuni-plone-theme/icons/file-download.svg';
 import faQuestionSVG from 'design-comuni-plone-theme/icons/question-solid.svg';
 import bandoSVG from 'design-comuni-plone-theme/icons/bando.svg';
+import logSVG from 'design-comuni-plone-theme/icons/log.svg';
 
 import applyRichTextConfig from 'design-comuni-plone-theme/config/RichTextEditor/config';
 
@@ -62,6 +64,10 @@ import gdprPrivacyPanelConfig from 'design-comuni-plone-theme/config/volto-gdpr-
 import { schemaListing } from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Listing/schema.js';
 
 import reducers from 'design-comuni-plone-theme/reducers';
+
+const ReleaseLog = loadable(() =>
+  import('design-comuni-plone-theme/components/ReleaseLog/ReleaseLog'),
+);
 
 export default function applyConfig(voltoConfig) {
   let config = applyRichTextConfig(voltoConfig);
@@ -155,6 +161,15 @@ export default function applyConfig(voltoConfig) {
       great: 1200,
       huge: 1600,
     },
+    controlpanels: [
+      ...(config.settings.controlpanels ?? []),
+      {
+        '@id': '/release-log',
+        group: 'Generali',
+        title: 'Novità ultimi rilasci',
+        id: 'release-log',
+      },
+    ],
     controlPanelsIcons: {
       ...config.settings.controlPanelsIcons,
       'dropdown-menu-settings': menuSVG,
@@ -163,6 +178,7 @@ export default function applyConfig(voltoConfig) {
       'design-plone-settings': contentSVG,
       'bandi-settings': bookSVG,
       'social-settings': shareSVG,
+      'release-log': logSVG,
     },
     defaultBlockType: 'text',
     defaultExcludedFromSearch: {
@@ -306,6 +322,7 @@ export default function applyConfig(voltoConfig) {
   config.settings.nonContentRoutes = config.settings.nonContentRoutes.filter(
     (route) => route !== '/contact-form',
   );
+  config.settings.nonContentRoutes.push('/release-log');
 
   /******************************************************************************
    * VIEWS
@@ -462,10 +479,9 @@ export default function applyConfig(voltoConfig) {
     },
   };
   // Remove Horizontal Menu variation of TOC Block
-  config.blocks.blocksConfig.toc.variations =
-    config.blocks.blocksConfig.toc.variations.filter(
-      (v) => v.id !== 'horizontalMenu',
-    );
+  config.blocks.blocksConfig.toc.variations = config.blocks.blocksConfig.toc.variations.filter(
+    (v) => v.id !== 'horizontalMenu',
+  );
 
   // REDUCERS
   config.addonReducers = {
@@ -483,6 +499,10 @@ export default function applyConfig(voltoConfig) {
     {
       path: ['/login', '/**/login'],
       component: LoginAgid,
+    },
+    {
+      path: ['/controlpanel/release-log', '/release-log'],
+      component: ReleaseLog,
     },
   ];
 

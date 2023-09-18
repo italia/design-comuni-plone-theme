@@ -117,6 +117,7 @@
     "classnames": "^2.3.2",
     "design-react-kit": "italia/design-react-kit#fc9b40257ba3cb613141faf217f1f5b806489740",
     "htmldiff-js": "1.0.5",
+    "marked": "9.0.0",
     "react-dropzone": "11.0.1",
     "react-google-recaptcha-v3": "1.7.0",
     "react-highlight-words": "0.18.0",
