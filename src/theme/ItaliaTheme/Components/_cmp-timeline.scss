@@ -26,6 +26,7 @@
 
 .calendar-vertical {
   color: $link-color;
+  clear: both;
 
   &::after {
     display: block;

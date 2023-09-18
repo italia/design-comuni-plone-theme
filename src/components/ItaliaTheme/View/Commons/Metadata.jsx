@@ -48,13 +48,13 @@ const Metadata = ({
         </h4>
       )}
       {children}
-      <p className="font-serif mb-0 mt-4">
+      <p className="font-serif mb-0 mt-4 last-modified">
         <strong>{intl.formatMessage(messages.modified)}:</strong>{' '}
         {viewDate(intl.locale, content.modified, 'DD-MM-Y, HH:MM')}
       </p>
       {content.rights && (
         <>
-          <p className="font-serif mb-0 mt-4">
+          <p className="font-serif mb-0 mt-4 metadata">
             {intl.formatMessage(messages.rights)}
           </p>
           <strong>{content.rights}</strong>

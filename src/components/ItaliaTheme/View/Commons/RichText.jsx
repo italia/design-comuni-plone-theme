@@ -31,7 +31,7 @@ const RichText = ({
     <>
       {title && (
         <Tag
-          className={cx('mt-4', {
+          className={cx('mt-4 it-page-subsection', {
             'fw-bold': title_size === 'h6',
           })}
         >

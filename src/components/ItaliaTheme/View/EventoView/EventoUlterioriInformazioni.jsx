@@ -43,7 +43,6 @@ const EventoUlterioriInformazioni = ({ content }) => {
       {richTextHasContent(content?.ulteriori_informazioni) && (
         <HelpBox text={content?.ulteriori_informazioni} />
       )}
-
       {content?.event_url && (
         <div className="mt-4">
           <h5>{intl.formatMessage(messages.event_url)}</h5>
@@ -52,7 +51,6 @@ const EventoUlterioriInformazioni = ({ content }) => {
           </UniversalLink>
         </div>
       )}
-
       {richTextHasContent(content?.patrocinato_da) && (
         <div className="mt-4">
           {richTextHasContent(content?.patrocinato_da) && (
@@ -66,7 +64,6 @@ const EventoUlterioriInformazioni = ({ content }) => {
           )}
         </div>
       )}
-
       {content?.strutture_politiche.length > 0 && (
         <div className="mt-4">
           <h5>{intl.formatMessage(messages.strutture_politiche)}</h5>
