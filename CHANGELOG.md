@@ -1,5 +1,24 @@
 
 
+## [8.5.1](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.5.0...v8.5.1) (2023-09-18)
+
+
+### Bug Fixes
+
+* added clear float to page sections ([#324](https://github.com/RedTurtle/design-comuni-plone-theme/issues/324)) ([7f1e46d](https://github.com/RedTurtle/design-comuni-plone-theme/commit/7f1e46d42b8cae11b04f68b3a01988c3e9226db7))
+* fix cContacts block horizontal alignment ([#329](https://github.com/RedTurtle/design-comuni-plone-theme/issues/329)) ([b68ee5e](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b68ee5e9901c81db0048dc2eb29f9611cdc3fb5a))
+* fix Content in Evidence template when there's more than one item ([#327](https://github.com/RedTurtle/design-comuni-plone-theme/issues/327)) ([049f520](https://github.com/RedTurtle/design-comuni-plone-theme/commit/049f5205685d2010982cf4a990479f719142fadf))
+* fix height of icons in Icons Block ([#330](https://github.com/RedTurtle/design-comuni-plone-theme/issues/330)) ([c77ada8](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c77ada86763de62060f95b2fec52a824cbe76011))
+* gridBlock edit overlapping when using 4 columns and adding image block ([#322](https://github.com/RedTurtle/design-comuni-plone-theme/issues/322)) ([018deb7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/018deb7081b3830df526304330349855e5b79d4d))
+* load of locations data in LocationsMap ([#323](https://github.com/RedTurtle/design-comuni-plone-theme/issues/323)) ([093f08b](https://github.com/RedTurtle/design-comuni-plone-theme/commit/093f08bcdb92c46053ec78878b1ed2e375efd2ff))
+* slider a11y ([3d5bcc4](https://github.com/RedTurtle/design-comuni-plone-theme/commit/3d5bcc485c6d280647712ad2d0e3ccf6b8c4974a))
+* updated volto-dropdownmenu to remove upload image when editing dropdownmenu blocks ([#331](https://github.com/RedTurtle/design-comuni-plone-theme/issues/331)) ([2c5605f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/2c5605f3be09632c923196eedc166485c15b04a3))
+
+
+### Documentation
+
+* updated publiccode ([55e59c7](https://github.com/RedTurtle/design-comuni-plone-theme/commit/55e59c7822ca93330c4d509461d0cd32a9b2ea0b))
+
 ## [8.5.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.4.6...v8.5.0) (2023-09-05)
 
 
