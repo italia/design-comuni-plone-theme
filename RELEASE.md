@@ -29,3 +29,9 @@
 ### Fix
 - ...
 -->
+
+## Versione X.X.X
+
+### Fix
+
+- Sistemato l'allineamento degli elementi nel blocco Contatti: se ci sono meno di tre elementi l'allineamento è centrato, se ce ne sono più di 3 l'allineamento è a sinistra.
