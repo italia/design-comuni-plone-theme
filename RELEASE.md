@@ -6,7 +6,7 @@
 <!--- -----------------------------------------------------------------
   Esempio:
   ---------------------------------------------------------------------
-## Versione 7.10.9
+## Versione 7.10.9 (12/09/2023)
 ### Migliorie
 - Fissato il layout di stampa per pagine con Accordion
 ### Novità
@@ -19,7 +19,7 @@
  TEMPLATE PER RELEASE
  ----------------------------------------------------------------------
 
-## Versione X.X.X
+## Versione X.X.X (dd/mm/yyyy)
 ### Migliorie
 - ...
 
