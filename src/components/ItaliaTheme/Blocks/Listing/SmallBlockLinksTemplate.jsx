@@ -19,6 +19,7 @@ const SmallBlockLinksTemplate = ({
   linkHref,
   titleLine,
   linkmore_id_lighthouse,
+  override_links_accessibility_marker,
 }) => {
   return (
     <div className="small-block-links">
@@ -48,6 +49,9 @@ const SmallBlockLinksTemplate = ({
                       item={!isEditMode ? item : null}
                       href={isEditMode ? '#' : ''}
                       className="img-link"
+                      overrideMarkSpecialLinks={
+                        override_links_accessibility_marker
+                      }
                     >
                       {image}
                     </UniversalLink>

@@ -34,7 +34,7 @@ const Downloads = ({ item, titleDoc }) => {
     </React.Fragment>
   ) : (
     <UniversalLink
-      href={flattenToAppURL(item['@id'])}
+      href={item.remoteUrl || flattenToAppURL(item['@id'])}
       title={item.title}
       className="modulistica-link"
     >
@@ -59,7 +59,7 @@ const DocRow = ({ doc }) => {
       })}
     >
       <div id={`title-${doc.id}`} className="title">
-        <UniversalLink href={flattenToAppURL(doc['@id'])}>
+        <UniversalLink href={doc.remoteUrl || flattenToAppURL(doc['@id'])}>
           {doc.title}
         </UniversalLink>
         {doc?.description && (

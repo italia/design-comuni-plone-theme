@@ -30,6 +30,7 @@ const UniversalLink = ({
   children,
   className = null,
   title = null,
+  overrideMarkSpecialLinks = false,
   ...props
 }) => {
   const intl = useIntl();
@@ -116,14 +117,15 @@ const UniversalLink = ({
         {...props}
       >
         {children}
-        {config.settings.siteProperties.markSpecialLinks && (
-          <Icon
-            icon="it-external-link"
-            title={title}
-            size="xs"
-            className="align-top ms-1 external-link"
-          />
-        )}
+        {!overrideMarkSpecialLinks &&
+          config.settings.siteProperties.markSpecialLinks && (
+            <Icon
+              icon="it-external-link"
+              title={title}
+              size="xs"
+              className="align-top ms-1 external-link"
+            />
+          )}
       </a>
     );
   } else if (isDownload) {

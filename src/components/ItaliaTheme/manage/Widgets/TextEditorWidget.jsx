@@ -43,6 +43,8 @@ class TextEditorWidgetComponent extends Component {
     focusOn: PropTypes.func,
     nextFocus: PropTypes.any,
     prevFocus: PropTypes.any,
+    onFocusNextBlock: PropTypes.any,
+    onFocusPreviousBlock: PropTypes.any,
     showToolbar: PropTypes.bool,
     onSelectBlock: PropTypes.func,
     onAddBlock: PropTypes.func,
@@ -219,6 +221,18 @@ class TextEditorWidgetComponent extends Component {
               } else {
                 if (this.props.disableMoveToNearest) {
                   e.stopPropagation();
+                } else {
+                  if (this.props.onFocusPreviousBlock) {
+                    const selectionState = this.state.editorState.getSelection();
+                    const currentCursorPosition = selectionState.getStartOffset();
+
+                    if (currentCursorPosition === 0) {
+                      this.props.onFocusPreviousBlock(
+                        this.props.block,
+                        this.node,
+                      );
+                    }
+                  }
                 }
               }
             }}
@@ -229,6 +243,20 @@ class TextEditorWidgetComponent extends Component {
               } else {
                 if (this.props.disableMoveToNearest) {
                   e.stopPropagation();
+                } else {
+                  if (this.props.onFocusNextBlock) {
+                    const selectionState = this.state.editorState.getSelection();
+                    const { editorState } = this.state;
+                    const currentCursorPosition = selectionState.getStartOffset();
+                    const blockLength = editorState
+                      .getCurrentContent()
+                      .getFirstBlock()
+                      .getLength();
+
+                    if (currentCursorPosition === blockLength) {
+                      this.props.onFocusNextBlock(this.props.block, this.node);
+                    }
+                  }
                 }
               }
             }}

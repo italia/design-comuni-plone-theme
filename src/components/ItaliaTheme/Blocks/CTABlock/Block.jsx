@@ -1,7 +1,7 @@
 import { Button, Container } from 'design-react-kit';
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { defineMessages, useIntl } from 'react-intl';
 
 import Image from '@plone/volto/components/theme/Image/Image';
@@ -35,6 +35,9 @@ const Block = ({
   onSelectBlock,
   onAddBlock,
   index,
+  onFocusNextBlock,
+  onFocusPreviousBlock,
+  selected,
 }) => {
   const intl = useIntl();
   const title = data?.cta_title?.blocks[0]?.text;
@@ -42,9 +45,16 @@ const Block = ({
   const content = data?.cta_content;
   const showFullwidth = data?.showFullWidth;
 
-  const [selected, setSelected] = useState('title');
+  const [selectedField, setSelectedField] = useState('title');
   const titleRef = useRef();
   const contentRef = useRef();
+  useEffect(() => {
+    if (selected) {
+      setSelectedField('title');
+    } else {
+      setSelectedField(null);
+    }
+  }, [selected]);
 
   return (
     <div
@@ -62,7 +72,7 @@ const Block = ({
           }
 
           if (titleRef.current.contains(e.target)) {
-            setSelected('content');
+            setSelectedField('content');
           }
         }
       }}
@@ -90,24 +100,28 @@ const Block = ({
               <div
                 ref={titleRef}
                 onClick={() => {
-                  setSelected('title');
+                  setSelectedField('title');
                 }}
                 onFocus={() => {
-                  setSelected('title');
+                  setSelectedField('title');
                 }}
               >
                 <TextEditorWidget
                   data={data}
                   fieldName="cta_title"
-                  selected={selected === 'title'}
+                  selected={selectedField === 'title'}
                   block={block}
                   onChangeBlock={(data) => onChangeBlock(block, data)}
                   placeholder={intl.formatMessage(messages.cta_title)}
                   showToolbar={false}
                   onSelectBlock={() => {}}
                   onAddBlock={() => {
-                    setSelected('content');
+                    setSelectedField('content');
                   }}
+                  onFocusNextBlock={() => {
+                    setSelectedField('content');
+                  }}
+                  onFocusPreviousBlock={onFocusPreviousBlock}
                 />
               </div>
             ) : (
@@ -118,16 +132,16 @@ const Block = ({
             <div
               ref={contentRef}
               onClick={() => {
-                setSelected('content');
+                setSelectedField('content');
               }}
               onFocus={() => {
-                setSelected('content');
+                setSelectedField('content');
               }}
             >
               <TextEditorWidget
                 data={data}
                 fieldName="cta_content"
-                selected={selected === 'content'}
+                selected={selectedField === 'content'}
                 block={block}
                 onChangeBlock={(data) => onChangeBlock(block, data)}
                 placeholder={intl.formatMessage(messages.cta_content)}
@@ -135,6 +149,10 @@ const Block = ({
                 onSelectBlock={onSelectBlock}
                 onAddBlock={onAddBlock}
                 index={index}
+                onFocusNextBlock={onFocusNextBlock}
+                onFocusPreviousBlock={() => {
+                  setSelectedField('title');
+                }}
               />
             </div>
           ) : (

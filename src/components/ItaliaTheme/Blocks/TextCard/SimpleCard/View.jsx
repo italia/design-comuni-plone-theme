@@ -14,10 +14,10 @@ import BodyWrapper from './BodyWrapper';
  * @extends Component
  */
 
-const TextCardView = ({ data }) => {
+const TextCardView = ({ data, id }) => {
   return (
     <BodyWrapper data={data} inEditMode={false}>
-      <Block data={data} inEditMode={false} />
+      <Block data={data} inEditMode={false} block={{ id: id }} />
     </BodyWrapper>
   );
 };

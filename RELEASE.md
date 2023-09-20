@@ -6,7 +6,7 @@
 <!--- -----------------------------------------------------------------
   Esempio:
   ---------------------------------------------------------------------
-## Versione 7.10.9
+## Versione 7.10.9 (12/09/2023)
 ### Migliorie
 - Fissato il layout di stampa per pagine con Accordion
 ### Novità
@@ -19,7 +19,7 @@
  TEMPLATE PER RELEASE
  ----------------------------------------------------------------------
 
-## Versione X.X.X
+## Versione X.X.X (dd/mm/yyyy)
 ### Migliorie
 - ...
 
@@ -29,3 +29,18 @@
 ### Fix
 - ...
 -->
+
+## Versione 8.6.1 (20/09/2023)
+
+### Migliorie
+
+- Nel template Blocco link solo immagini con link esterni, icona accessibilità per link esterni ora è disattivabile attraverso opzione del template
+- Migliorata l'accessibilità e il supporto Screen Reader per il menu a tendina "Ordina Per" nella pagina di ricerca
+- Migliorata la navigazione da tastiera quando si è in modifica dei blocchi Alert, Card Semplice, Card con Immagine, Accordion
+
+### Fix
+
+- sistemati gli oggetti link che puntano a file nella Cartella Modulistica
+- Sistemato l'allineamento degli elementi nel blocco Contatti: se ci sono meno di tre elementi l'allineamento è centrato, se ce ne sono più di 3 l'allineamento è a sinistra.
+- Migliorata accessibilità del calendario nel blocco ricerca Eventi e ricerca Bandi
+- Fissato il layout del template Blocco link solo immagini con link esterni, posizionata l'icona di accessibilità per link esterni in overlay se presente

@@ -7,15 +7,25 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
-import { injectIntl } from 'react-intl';
+
 import cx from 'classnames';
 import { Container, Row, Col } from 'design-react-kit';
 
 import { createContent } from '@plone/volto/actions';
 import { SidebarPortal } from '@plone/volto/components';
-import { EditTextBlock } from '@plone/volto/components';
+import { defineMessages, injectIntl } from 'react-intl';
 
-import { AlertSidebar } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import {
+  AlertSidebar,
+  TextEditorWidget,
+} from 'design-comuni-plone-theme/components/ItaliaTheme';
+
+const messages = defineMessages({
+  content_placeholder: {
+    id: 'Type text…',
+    defaultMessage: 'Digita il testo…',
+  },
+});
 /**
  * Edit Alert block class.
  * @class Edit
@@ -84,20 +94,23 @@ class Edit extends Component {
                   </Col>
                 )}
                 <Col>
-                  <EditTextBlock
+                  <TextEditorWidget
                     data={this.props.data}
-                    detached={true}
-                    index={this.props.index}
+                    fieldName="text"
                     selected={this.props.selected}
                     block={this.props.block}
-                    onAddBlock={this.props.onAddBlock}
-                    onChangeBlock={this.props.onChangeBlock}
-                    onDeleteBlock={this.props.onDeleteBlock}
-                    onMutateBlock={this.props.onMutateBlock}
-                    onFocusPreviousBlock={this.props.onFocusPreviousBlock}
-                    onFocusNextBlock={this.props.onFocusNextBlock}
+                    onChangeBlock={(data) =>
+                      this.props.onChangeBlock(this.props.block, data)
+                    }
+                    placeholder={this.props.intl.formatMessage(
+                      messages.content_placeholder,
+                    )}
+                    showToolbar={true}
                     onSelectBlock={this.props.onSelectBlock}
-                    blockNode={this.blockNode}
+                    onAddBlock={this.props.onAddBlock}
+                    index={this.props.index}
+                    onFocusNextBlock={this.props.onFocusNextBlock}
+                    onFocusPreviousBlock={this.props.onFocusPreviousBlock}
                   />
                 </Col>
               </Row>

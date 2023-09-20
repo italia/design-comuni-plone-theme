@@ -106,9 +106,15 @@ class Edit extends SubblocksEdit {
             </div>
 
             <SubblocksWrapper node={this.node}>
-              <Row className="justify-content-center">
+              <Row
+                className={
+                  this.state.subblocks.length > 3
+                    ? 'justify-content-start'
+                    : 'justify-content-center'
+                }
+              >
                 {this.state.subblocks.map((subblock, subindex) => (
-                  <Col lg="4" key={subblock.id}>
+                  <Col lg="4" key={subblock.id} className="pb-3">
                     <EditBlock
                       data={subblock}
                       index={subindex}

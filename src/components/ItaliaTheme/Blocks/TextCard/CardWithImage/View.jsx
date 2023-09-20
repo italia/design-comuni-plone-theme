@@ -7,7 +7,7 @@ import Block from './Block';
 const TextCardWithImageView = ({ data, id }) => {
   return (
     <BodyWrapper data={data} inEditMode={false}>
-      <Block data={data} inEditMode={false} />
+      <Block data={data} inEditMode={false} block={{ id: id }} />
     </BodyWrapper>
   );
 };
