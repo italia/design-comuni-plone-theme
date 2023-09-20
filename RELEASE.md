@@ -30,12 +30,12 @@
 - ...
 -->
 
-
 ## Versione X.X.X (dd/mm/yyyy)
 
 ### Migliorie
 
 - Nel template Blocco link solo immagini con link esterni, icona accessibilità per link esterni ora è disattivabile attraverso opzione del template
+- Migliorata l'accessibilità e il supporto Screen Reader per il menu a tendina "Ordina Per" nella pagina di ricerca
 
 ### Fix
 
@@ -43,4 +43,3 @@
 - Sistemato l'allineamento degli elementi nel blocco Contatti: se ci sono meno di tre elementi l'allineamento è centrato, se ce ne sono più di 3 l'allineamento è a sinistra.
 - Migliorata accessibilità del calendario nel blocco ricerca Eventi e ricerca Bandi
 - Fissato il layout del template Blocco link solo immagini con link esterni, posizionata l'icona di accessibilità per link esterni in overlay se presente
-

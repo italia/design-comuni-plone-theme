@@ -636,9 +636,14 @@ const Search = () => {
                           sortOnOptions.filter((o) => o.value === sortOn)[0]
                         }
                         label={intl.formatMessage(messages.orderBy)}
-                        placeholder={intl.formatMessage(messages.orderBy)}
+                        placeholder={
+                          sortOnOptions.find((o) => o.value === sortOn).label
+                        }
                         onChange={(opt) => setSortOn(opt.value)}
                         options={sortOnOptions}
+                        defaultValue={sortOnOptions.find(
+                          (o) => o.value === 'relevance',
+                        )}
                       />
                     </Col>
                   </Row>
