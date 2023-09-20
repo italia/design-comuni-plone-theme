@@ -51,9 +51,17 @@ class Edit extends SubblocksEdit {
                       <EditBlock
                         data={subblock}
                         index={subindex}
-                        selected={this.isSubblockSelected(subindex)}
+                        selected={
+                          this.props.selected &&
+                          this.isSubblockSelected(subindex)
+                        }
                         {...this.subblockProps}
                         openObjectBrowser={this.props.openObjectBrowser}
+                        onFocusPreviousBlock={this.props.onFocusPreviousBlock}
+                        onFocusNextBlock={this.props.onFocusNextBlock}
+                        onSubblockChangeFocus={this.onSubblockChangeFocus}
+                        isLast={this.state.subblocks.length - 1 === subindex}
+                        isFirst={subindex === 0}
                       />
                     </div>
                   ))}

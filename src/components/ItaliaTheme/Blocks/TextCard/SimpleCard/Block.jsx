@@ -32,54 +32,32 @@ const Block = ({
   onChange,
   onSelectBlock,
   onAddBlock,
+  onFocusPreviousBlock,
+  onFocusNextBlock,
   index,
-  blockIsSelected,
+  selected,
 }) => {
   const intl = useIntl();
   const title = data?.simple_card_title?.blocks[0]?.text;
   const content = data?.simple_card_content;
-  const [selected, setSelected] = useState('title');
-  const titleRef = useRef();
-  const contentRef = useRef();
-  const wrapperRef = useRef();
-
-  const handleKeydownNothingSelected = (e) => {
-    if (inEditMode) {
-      if (e.key === 'Enter' && !e.shiftKey && !selected && blockIsSelected) {
-        onAddBlock('text', index + 1);
-      }
-    }
-  };
+  const [selectedField, setSelectedField] = useState('title');
 
   useEffect(() => {
-    window.addEventListener('keydown', handleKeydownNothingSelected);
-
-    return () => {
-      window.removeEventListener('keydown', handleKeydownNothingSelected);
-    };
-  });
+    if (selected) {
+      setSelectedField('title');
+    } else {
+      setSelectedField(null);
+    }
+  }, [selected]);
 
   return (
-    <div className="simple-text-card-wrapper" ref={wrapperRef}>
+    <div className="simple-text-card-wrapper">
       <Card
         color="white"
         className=" card-bg rounded"
         noWrapper={false}
         space
         tag="div"
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' && !e.shiftKey) {
-            if (
-              !titleRef.current.contains(e.target) &&
-              !contentRef.current.contains(e.target)
-            ) {
-              onAddBlock('text', index + 1);
-            }
-            if (titleRef.current.contains(e.target)) {
-              setSelected('content');
-            }
-          }
-        }}
       >
         <CardBody>
           <div className={cx('simple-text-card', { 'cms-ui': inEditMode })}>
@@ -87,18 +65,17 @@ const Block = ({
               <>
                 <CardTitle tag="h4">
                   <div
-                    ref={titleRef}
                     onClick={() => {
-                      setSelected('title');
+                      setSelectedField('title');
                     }}
                     onFocus={() => {
-                      setSelected('title');
+                      setSelectedField('title');
                     }}
                   >
                     <TextEditorWidget
                       data={data}
                       fieldName="simple_card_title"
-                      selected={selected === 'title'}
+                      selected={selectedField === 'title'}
                       block={block}
                       onChangeBlock={(data) =>
                         onChange(data, 'simple_card_title')
@@ -109,31 +86,29 @@ const Block = ({
                       showToolbar={false}
                       onSelectBlock={() => {}}
                       onAddBlock={() => {
-                        setSelected('content');
+                        setSelectedField('content');
                       }}
-                      nextFocus="content"
-                      setFocus={(f) => {
-                        setSelected(f);
+                      onFocusNextBlock={() => {
+                        setSelectedField('content');
                       }}
-                      disableMoveToNearest={true}
+                      onFocusPreviousBlock={onFocusPreviousBlock}
                     />
                   </div>
                 </CardTitle>
                 <Divider />
                 <div
-                  ref={contentRef}
                   onClick={() => {
-                    setSelected('content');
+                    setSelectedField('content');
                   }}
                   onFocus={() => {
-                    setSelected('content');
+                    setSelectedField('content');
                   }}
                 >
                   <CardText>
                     <TextEditorWidget
                       data={data}
                       fieldName="simple_card_content"
-                      selected={selected === 'content'}
+                      selected={selectedField === 'content'}
                       block={block}
                       onChangeBlock={(data) =>
                         onChange(data, 'simple_card_content')
@@ -145,18 +120,19 @@ const Block = ({
                       onSelectBlock={onSelectBlock}
                       onAddBlock={onAddBlock}
                       index={index}
-                      prevFocus="title"
-                      setFocus={(f) => {
-                        setSelected(f);
+                      onFocusNextBlock={onFocusNextBlock}
+                      onFocusPreviousBlock={() => {
+                        setSelectedField('title');
                       }}
-                      disableMoveToNearest={true}
                     />
                   </CardText>
                 </div>
               </>
             ) : (
               <>
-                <CardTitle tag="h4">{title}</CardTitle>
+                <CardTitle tag="h4" id={block.id + '-title'}>
+                  {title}
+                </CardTitle>
                 <Divider />
                 <div>
                   <CardText>

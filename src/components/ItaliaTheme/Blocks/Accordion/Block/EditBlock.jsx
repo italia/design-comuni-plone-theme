@@ -48,16 +48,6 @@ class EditBlock extends SubblockEdit {
     this.accordion_item_ref = React.createRef();
   }
 
-  componentDidMount() {
-    // eslint-disable-next-line no-unused-expressions
-    this.accordion_item_ref?.current?.addEventListener('keydown', (e) => {
-      if (e.keyCode === 13) {
-        if (!(this.state.focusOn === 'text')) {
-          this.setState({ focusOn: 'text' });
-        }
-      }
-    });
-  }
   /**
    * Render method.
    * @method render
@@ -105,12 +95,20 @@ class EditBlock extends SubblockEdit {
                 placeholder={this.props.intl.formatMessage(
                   messages.titlePlaceholder,
                 )}
-                nextFocus="text"
-                prevFocus="text"
-                disableMoveToNearest={true}
-                setFocus={(f) => {
-                  this.setState({ focusOn: f });
+                onSelectBlock={() => {}}
+                onAddBlock={() => {
+                  this.setState({ focusOn: 'text' });
                 }}
+                onFocusNextBlock={() => {
+                  this.setState({ focusOn: 'text' });
+                }}
+                onFocusPreviousBlock={
+                  this.props.isFirst
+                    ? this.props.onFocusPreviousBlock
+                    : () => {
+                        this.props.onSubblockChangeFocus(this.props.index - 1);
+                      }
+                }
                 showToolbar={false}
                 key="title"
               />
@@ -135,11 +133,19 @@ class EditBlock extends SubblockEdit {
                   placeholder={this.props.intl.formatMessage(
                     messages.textPlaceholder,
                   )}
-                  disableMoveToNearest={true}
-                  prevFocus="title"
-                  nextFocus="title"
-                  setFocus={(f) => {
-                    this.setState({ focusOn: f });
+                  onAddBlock={this.props.onFocusNextBlock}
+                  onFocusNextBlock={
+                    this.props.isLast
+                      ? this.props.onFocusNextBlock
+                      : () => {
+                          this.setState({ focusOn: null });
+                          this.props.onSubblockChangeFocus(
+                            this.props.index + 1,
+                          );
+                        }
+                  }
+                  onFocusPreviousBlock={() => {
+                    this.setState({ focusOn: 'title' });
                   }}
                   key="text"
                 />

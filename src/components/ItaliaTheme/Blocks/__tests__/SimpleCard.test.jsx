@@ -53,7 +53,7 @@ test('View renders all fields', async () => {
   render(
     <Provider store={store}>
       <MemoryRouter>
-        <Block data={mock_fields} />
+        <Block data={mock_fields} block={{ id: '1234' }} />
       </MemoryRouter>
     </Provider>,
   );
