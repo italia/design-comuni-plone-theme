@@ -641,11 +641,12 @@ msgstr "Transparencia"
 msgid "Type description…"
 msgstr "Escribe la descripción..."
 
+#: components/ItaliaTheme/Blocks/Alert/Edit
 #: components/ItaliaTheme/Blocks/ArgumentsInEvidence/Block
 #: components/ItaliaTheme/Blocks/TextCard/CardWithImage/Block
 #: components/ItaliaTheme/Blocks/TextCard/SimpleCard/Block
 #: components/ItaliaTheme/manage/Widgets/TextEditorWidget
-# defaultMessage: Digita un testo…
+# defaultMessage: Digita il testo…
 msgid "Type text…"
 msgstr "Ingrese texto..."
 
