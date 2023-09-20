@@ -15,13 +15,20 @@
     border: 8px solid $white;
     background: $white;
     box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    .img-link svg {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      z-index: 2;
+    }
 
     .volto-image.responsive img,
     .img-skeleton {
       width: auto;
       max-width: 100%;
       object-fit: contain;
-
     }
 
     .img-skeleton {

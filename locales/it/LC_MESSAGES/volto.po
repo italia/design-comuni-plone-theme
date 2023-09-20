@@ -2618,6 +2618,11 @@ msgstr "Altri argomenti"
 msgid "other_info"
 msgstr "Ulteriori informazioni"
 
+#: config/Blocks/ListingOptions/smallBlockLinksTemplate
+# defaultMessage: Non mostrare l'icona di accessibilità per i link a siti esterni
+msgid "override_links_accessibility_marker"
+msgstr ""
+
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 # defaultMessage: Pagamenti previsti e modalità
 msgid "pagamenti"

@@ -2635,6 +2635,11 @@ msgstr "Autres sujets"
 msgid "other_info"
 msgstr "Informations complémentaires"
 
+#: config/Blocks/ListingOptions/smallBlockLinksTemplate
+# defaultMessage: Non mostrare l'icona di accessibilità per i link a siti esterni
+msgid "override_links_accessibility_marker"
+msgstr "Ne pas afficher l'icône d'accessibilité pour les liens pointant vers des sites Web ou des ressources externes"
+
 #: components/ItaliaTheme/View/Commons/TrasparenzaFields
 # defaultMessage: Pagamenti previsti e modalità
 msgid "pagamenti"

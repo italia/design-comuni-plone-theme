@@ -59,6 +59,7 @@ import {
   addCardWithSlideUpTextTemplateOptions,
   addPhotogalleryTemplateOptions,
   addLinkMoreOptions,
+  addSmallBlockLinksTemplateOptions,
   cloneBlock,
 } from 'design-comuni-plone-theme/config/Blocks/ListingOptions';
 
@@ -178,7 +179,8 @@ const italiaListingVariations = [
     template: SmallBlockLinksTemplate,
     skeleton: SmallBlockLinksTemplateSkeleton,
     schemaEnhancer: ({ schema, formData, intl }) => {
-      /*let pos = */ addDefaultOptions(schema, formData, intl);
+      let pos = addDefaultOptions(schema, formData, intl);
+      addSmallBlockLinksTemplateOptions(schema, formData, intl, pos);
       addLinkMoreOptions(schema, formData, intl);
       return schema;
     },
