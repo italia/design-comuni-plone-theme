@@ -1,4 +1,4 @@
-# This repository adheres to the publiccode.yml standard by including this 
+# This repository adheres to the publiccode.yml standard by including this
 # metadata file that makes public software easily discoverable.
 # More info at https://github.com/italia/publiccode.yml
 
@@ -227,9 +227,9 @@ maintenance:
 name: io-Comune - Il sito AgID per Comuni ed Enti Pubblici
 platforms:
   - web
-releaseDate: '2023-09-18'
+releaseDate: '2023-09-20'
 softwareType: standalone/web
-softwareVersion: 8.5.1
+softwareVersion: 8.6.1
 url: 'https://github.com/italia/design-comuni-plone-theme'
 usedBy:
   - ASP Comuni Modenesi Area Nord
