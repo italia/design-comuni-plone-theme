@@ -1,5 +1,30 @@
 
 
+## [8.7.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.6.0...v8.7.0) (2023-09-20)
+
+
+### Features
+
+* Us 46339 link esterni smalllinksblock ([#339](https://github.com/RedTurtle/design-comuni-plone-theme/issues/339)) ([9d4ab47](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9d4ab474390d934bbc92ad9a6527fcb44138ad3e))
+
+
+### Bug Fixes
+
+* accessibility and SR fix for selectInput ([#345](https://github.com/RedTurtle/design-comuni-plone-theme/issues/345)) ([67adc6f](https://github.com/RedTurtle/design-comuni-plone-theme/commit/67adc6fb222b72636a772153fb20dbbe70a17190))
+* fix blocks Alert, Card Semplice, Card immagine, Accordion keyboa… ([#348](https://github.com/RedTurtle/design-comuni-plone-theme/issues/348)) ([bc93065](https://github.com/RedTurtle/design-comuni-plone-theme/commit/bc930651ed88c2ce8ba06c3d6b0a793418c2427a))
+* fix Contact Block items align ([#338](https://github.com/RedTurtle/design-comuni-plone-theme/issues/338)) ([c2e9aaa](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c2e9aaab1ea132ac043952deb37b3cd8843ec440))
+* i link in modulistica devono far vedere la remoteUrl e non il link ([#336](https://github.com/RedTurtle/design-comuni-plone-theme/issues/336)) ([a311095](https://github.com/RedTurtle/design-comuni-plone-theme/commit/a3110953b2e99425e864eed8eeb870fe9eab3acb))
+
+
+### Maintenance
+
+* added title to release-log ([#347](https://github.com/RedTurtle/design-comuni-plone-theme/issues/347)) ([b04f947](https://github.com/RedTurtle/design-comuni-plone-theme/commit/b04f947f48b0431acb5ebae1017f49fb9e1a5fcb))
+* update files for release ([eed8929](https://github.com/RedTurtle/design-comuni-plone-theme/commit/eed89299d8a13dea863ee9a8edbb08e298fbec19))
+* updated locales ([9ef4dd3](https://github.com/RedTurtle/design-comuni-plone-theme/commit/9ef4dd38e52bd085c7f09a182addda06e0632254))
+* updated publiccode ([6d46730](https://github.com/RedTurtle/design-comuni-plone-theme/commit/6d467308c02bf2377adf5574e5d1a715f5f33072))
+* updated RELEASE.md ([c8b4982](https://github.com/RedTurtle/design-comuni-plone-theme/commit/c8b49822f88cba8d8e3911e03e1b069306966591))
+* updatedRELEASE.md ([4391e42](https://github.com/RedTurtle/design-comuni-plone-theme/commit/4391e42a3c908c1ed15693a548d06c05c9cb37fd))
+
 ## [8.6.0](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.5.1...v8.6.0) (2023-09-18)
 
 
