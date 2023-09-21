@@ -1,5 +1,15 @@
 
 
+## [8.7.2](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.7.0...v8.7.2) (2023-09-21)
+
+
+### Maintenance
+
+* added id in h2 title of some blocks to enable anchors ([#350](https://github.com/redturtle/design-comuni-plone-theme/issues/350)) ([e67e57a](https://github.com/redturtle/design-comuni-plone-theme/commit/e67e57a3f767f94377cae4605097977a0fa5021a))
+* changed buplicode ([0cce8ff](https://github.com/redturtle/design-comuni-plone-theme/commit/0cce8ff3615b3cc3dd57a5b8715b050d18732679))
+* manage release ([a79ecdf](https://github.com/redturtle/design-comuni-plone-theme/commit/a79ecdf629e1e2900662ed1d9c36ec1053085eaa))
+* updated publicode ([cd8fc79](https://github.com/redturtle/design-comuni-plone-theme/commit/cd8fc791891105e69f7cbc7b8b14e19f0da71601))
+
 ## [8.7.0](https://github.com/RedTurtle/design-comuni-plone-theme/compare/v8.6.0...v8.7.0) (2023-09-20)
 
 
