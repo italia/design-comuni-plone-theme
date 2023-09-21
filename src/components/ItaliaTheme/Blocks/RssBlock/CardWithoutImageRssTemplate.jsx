@@ -32,9 +32,10 @@ const CardWithoutImageRssTemplate = ({
   items = [],
   isEditMode,
   data = {},
-  moment: Moment,
+  //moment: Moment,
 }) => {
   const intl = useIntl();
+  const titleID = data?.title ? data.title.replace(/[^A-Z0-9]+/gi, '_') : '';
 
   return (
     <div className={cx('', { 'public-ui': isEditMode })} aria-live="polite">
@@ -43,7 +44,9 @@ const CardWithoutImageRssTemplate = ({
           {data.title && (
             <Row>
               <Col>
-                <h2 className="mb-4 mt-5">{data.title}</h2>
+                <h2 className="mb-4 mt-5" id={titleID}>
+                  {data.title}
+                </h2>
               </Col>
             </Row>
           )}
