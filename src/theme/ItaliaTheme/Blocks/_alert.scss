@@ -1,6 +1,10 @@
 .public-ui {
   .block.alertblock,
   .alertblock {
+    .full-width {
+      height: auto;
+    }
+
     .bg-alert-danger {
       background-color: #a32219;
       color: $white;
@@ -64,6 +68,16 @@
 
       a {
         color: $black;
+      }
+    }
+
+    .row {
+      margin-right: calc(var(--bs-gutter-x) * -0.25);
+      margin-left: calc(var(--bs-gutter-x) * -0.25);
+
+      .col {
+        padding-right: calc(var(--bs-gutter-x) * 0.25);
+        padding-left: calc(var(--bs-gutter-x) * 0.25);
       }
     }
 

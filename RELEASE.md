@@ -30,6 +30,12 @@
 - ...
 -->
 
+## Versione X.X.X (dd/mm/yyyy)
+
+### Fix
+
+- Sistemato margine del blocco Alert quando allineato a sinistra
+
 ## Versione 8.7.0 (20/09/2023)
 
 ### Migliorie

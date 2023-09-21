@@ -29,7 +29,7 @@ const View = ({ data, pathname }) => {
 
   return (
     <section role="alert" className="block alertblock">
-      <Row className={cx('row-full-width', 'bg-alert-' + data.color)}>
+      <div className={cx('full-width', 'bg-alert-' + data.color)}>
         <Container className="p-4 pt-5 pb-5">
           <Row className="align-items-start">
             {data.image?.data && (
@@ -46,7 +46,7 @@ const View = ({ data, pathname }) => {
             <Col>{content}</Col>
           </Row>
         </Container>
-      </Row>
+      </div>
     </section>
   );
 };
