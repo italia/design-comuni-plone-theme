@@ -281,6 +281,7 @@ const Body = ({ data, block, inEditMode, path, onChangeBlock, reactSlick }) => {
                     'mt-5': !data.show_block_bg,
                     'mb-4': !location_filters_buttons,
                   })}
+                  id={block + 'title'}
                 >
                   {data.title}
                 </h2>

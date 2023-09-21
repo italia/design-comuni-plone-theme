@@ -95,7 +95,7 @@ const Block = ({
       )}
       <Container tag="div" className="px-3 px-md-4">
         <div className="cta-tile-text">
-          <h2 className="title mt-0">
+          <h2 className="title mt-0" id={block + 'title'}>
             {inEditMode ? (
               <div
                 ref={titleRef}
