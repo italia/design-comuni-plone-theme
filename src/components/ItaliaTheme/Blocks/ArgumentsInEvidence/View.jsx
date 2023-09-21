@@ -13,7 +13,7 @@ const View = ({ data, id }) => {
     <div className="block full-width">
       <div className="argumentInEvidence">
         <ArgumentsInEvidenceBackground />
-        <BodyWrapper data={data} inEditMode={false}>
+        <BodyWrapper data={data} inEditMode={false} id={id}>
           {data.subblocks
             ?.filter((subblock) => {
               return subblock.argument?.length > 0;
