@@ -180,7 +180,7 @@ export default function applyConfig(voltoConfig) {
       'social-settings': shareSVG,
       'release-log': logSVG,
     },
-    defaultBlockType: 'text',
+    //defaultBlockType: 'text',
     defaultExcludedFromSearch: {
       portalTypes: ['Image', 'File'],
     },
@@ -402,14 +402,14 @@ export default function applyConfig(voltoConfig) {
       ...config.blocks.blocksConfig.slate,
       restricted: true,
     },
-    table: {
-      ...config.blocks.blocksConfig.table,
-      restricted: false,
-    },
-    slateTable: {
-      ...config.blocks.blocksConfig.slateTable,
-      restricted: true,
-    },
+    // table: {
+    //   ...config.blocks.blocksConfig.table,
+    //   restricted: false,
+    // },
+    // slateTable: {
+    //   ...config.blocks.blocksConfig.slateTable,
+    //   restricted: true,
+    // },
     maps: {
       ...config.blocks.blocksConfig.maps,
       restricted: true,
