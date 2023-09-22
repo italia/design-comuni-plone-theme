@@ -84,12 +84,10 @@ body.cms-ui {
   &.contenttype-argomento,
   &.contenttype-pagina-argomento,
   &.contenttype-cartellamodulistica {
-    &:not(.section-add) {
-      .block {
-        font-family: $font-family-sans-serif;
-        font-weight: 300;
-        line-height: 1.555;
-      }
+    .block {
+      font-family: $font-family-sans-serif;
+      font-weight: 300;
+      line-height: 1.555;
     }
   }
 
