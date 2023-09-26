@@ -12,44 +12,38 @@ import {
 import { Icon } from '@plone/volto/components';
 import { ToolbarButton } from '@plone/volto-slate/editor/ui';
 
-import alignCenterSVG from '@plone/volto/icons/align-center.svg';
-import alignLeftSVG from '@plone/volto/icons/align-left.svg';
-import alignRightSVG from '@plone/volto/icons/align-right.svg';
-import alignJustifySVG from '@plone/volto/icons/align-justify.svg';
+import quoteIcon from '@plone/volto/icons/quote.svg';
 
 import 'design-comuni-plone-theme/config/Slate/dropdownStyle.scss';
 
-const ALIGN_OPTIONS = [
+const OPTIONS = [
   {
-    cssClass: 'text-left',
-    text: 'Allinea a sinistra',
-    icon: alignLeftSVG,
+    title: 'Blockquote semplice',
+    format: 'blockquote',
+    icon: quoteIcon,
   },
   {
-    cssClass: 'text-center',
-    text: 'Allinea al centro',
-    icon: alignCenterSVG,
+    title: 'Blockquote card',
+    format: 'blockquote',
+    icon: quoteIcon,
+    className: 'blockquote-card',
   },
   {
-    cssClass: 'text-end',
-    text: 'Allinea a destra',
-    icon: alignRightSVG,
-  },
-  {
-    cssClass: 'text-justify',
-    text: 'Allinea il testo giustificato',
-    icon: alignJustifySVG,
+    title: 'Blockquote card scuro',
+    format: 'blockquote',
+    icon: quoteIcon,
+    className: 'blockquote-card dark',
   },
 ];
 
 const messages = defineMessages({
-  align: {
-    id: 'Allineamento',
-    defaultMessage: 'Allineamento',
+  blockquote: {
+    id: 'Blockquote',
+    defaultMessage: 'Blockquote',
   },
 });
 
-const AlignMenuButton = ({ icon, active, ...props }) => (
+const BlockquoteMenuButton = ({ icon, active, ...props }) => (
   <ToolbarButton {...props} icon={icon} active={active} />
 );
 
@@ -67,18 +61,18 @@ const MenuOpts = ({ editor, toSelect, option, type }) => {
         toggleStyle(editor, {
           cssClass: selItem.value,
           isBlock: true,
-          oneOf: ALIGN_OPTIONS.reduce((acc, o) => [...acc, o.cssClass], []),
+          oneOf: OPTIONS.reduce((acc, o) => [...acc, o.cssClass], []),
         });
       }}
     />
   );
 };
 
-const AlignButton = (props) => {
+const BlockquoteButton = (props) => {
   const editor = useSlate();
   const intl = useIntl();
 
-  const blockOpts = ALIGN_OPTIONS.map((def) => {
+  const blockOpts = OPTIONS.map((def) => {
     return {
       value: def.cssClass,
       text: def.label,
@@ -90,7 +84,7 @@ const AlignButton = (props) => {
 
   // Calculating the initial selection.
   const toSelect = [];
-  let selectedIcon = ALIGN_OPTIONS[0].icon;
+  let selectedIcon = OPTIONS[0].icon;
 
   // block styles
   for (const val of blockOpts) {
@@ -115,10 +109,10 @@ const AlignButton = (props) => {
       pointing="top left"
       multiple
       value={toSelect}
-      additionLabel={intl.formatMessage(messages.align)}
+      additionLabel={intl.formatMessage(messages.blockquote)}
       trigger={
-        <AlignMenuButton
-          title={intl.formatMessage(messages.align)}
+        <BlockquoteMenuButton
+          title={intl.formatMessage(messages.blockquote)}
           icon={selectedIcon}
           active={toSelect.length > 0}
         />
@@ -141,4 +135,4 @@ const AlignButton = (props) => {
   );
 };
 
-export default AlignButton;
+export default BlockquoteButton;

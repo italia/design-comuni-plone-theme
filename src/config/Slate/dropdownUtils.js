@@ -9,15 +9,15 @@ import config from '@plone/volto/registry';
  * @param {object} options
  * @param {boolean} options.oneOfType Whether the given type is admitted once
  */
-export const toggleStyle = (editor, { cssClass, isBlock, oneOfType }) => {
+export const toggleStyle = (editor, { cssClass, isBlock, oneOf }) => {
   if (isBlock) {
-    toggleBlockStyle(editor, cssClass, oneOfType);
+    toggleBlockStyle(editor, cssClass, oneOf);
   } else {
     toggleInlineStyle(editor, cssClass);
   }
 };
 
-export const toggleBlockStyle = (editor, style, oneOfType) => {
+export const toggleBlockStyle = (editor, style, oneOf) => {
   // We have 6 boolean variables which need to be accounted for.
   // See https://docs.google.com/spreadsheets/d/1mVeMuqSTMABV2BhoHPrPAFjn7zUksbNgZ9AQK_dcd3U/edit?usp=sharing
   const { slate } = config.settings;
@@ -33,7 +33,7 @@ export const toggleBlockStyle = (editor, style, oneOfType) => {
   } else if (!isListItem && wantsList) {
     // changeBlockToList(editor, format);
   } else if (!isListItem && !wantsList) {
-    internalToggleBlockStyle(editor, style);
+    internalToggleBlockStyle(editor, style, oneOf);
   } else {
     console.warn('toggleBlockStyle case not covered, please examine:', {
       wantsList,
@@ -104,8 +104,8 @@ export const isInlineStyleActive = (editor, style) => {
   return false;
 };
 
-export const internalToggleBlockStyle = (editor, style) => {
-  toggleBlockStyleInSelection(editor, style);
+export const internalToggleBlockStyle = (editor, style, oneOf) => {
+  toggleBlockStyleInSelection(editor, style, oneOf);
 };
 
 export const internalToggleInlineStyle = (editor, style) => {
@@ -138,7 +138,7 @@ function toggleInlineStyleInSelection(editor, style) {
   }
 }
 
-function toggleBlockStyleInSelection(editor, style) {
+function toggleBlockStyleInSelection(editor, style, oneOf) {
   const sn = Array.from(
     Editor.nodes(editor, {
       mode: 'highest',
@@ -155,11 +155,22 @@ function toggleBlockStyleInSelection(editor, style) {
     } else if (n.styleName.split(' ').filter((x) => x === style).length > 0) {
       cn = cn
         .split(' ')
-        .filter((x) => x !== style)
+        .filter((x) => x !== style && x !== '')
         .join(' ');
     } else {
+      if (oneOf?.length > 0) {
+        cn = cn
+          .split(' ')
+          .filter((c) => !oneOf.includes(c))
+          .join(' ');
+      }
+
       // the style is not set but other styles are set
-      cn = cn.split(' ').concat(style).join(' ');
+      cn = cn
+        .split(' ')
+        .filter((c) => c !== '')
+        .concat(style)
+        .join(' ');
     }
     Transforms.setNodes(editor, { styleName: cn }, { at: p });
   }

@@ -89,20 +89,7 @@ iframe {
 .public-ui,
 .cms-ui {
   blockquote {
-    position: relative;
-    margin: 1.5rem 2rem;
-    font-family: $font-family-serif;
-
-    &:before {
-      position: absolute;
-      top: -1.8rem;
-      left: -2rem;
-      display: block;
-      height: 0;
-      color: $neutral-2-b2;
-      content: '“';
-      font-size: 400%;
-    }
+    border-color: $primary !important;
   }
 
   .callout {

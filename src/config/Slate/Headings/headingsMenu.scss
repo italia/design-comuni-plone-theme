@@ -1,0 +1,44 @@
+.slate-toolbar .ui.dropdown#headings-menu .menu {
+  .item {
+    padding: 0 !important;
+    text-align: center;
+    .button-wrapper {
+      margin: 0;
+      .ui.button {
+        border: none;
+        border-radius: 0;
+        padding: 0.78571429rem 1.14285714rem !important;
+
+        &,
+        &.active {
+          background-color: transparent !important;
+          color: rgba(0, 0, 0, 0.6) !important;
+        }
+
+        &.headings-h2 {
+          font-size: 2.222rem;
+          font-family: 'Titillium Web', Geneva, Tahoma, sans-serif;
+        }
+        &.headings-h3 {
+          font-size: 1.777rem;
+          font-family: 'Titillium Web', Geneva, Tahoma, sans-serif;
+        }
+        &.headings-h4 {
+          font-size: 1.555rem;
+          font-weight: 600;
+          font-family: 'Titillium Web', Geneva, Tahoma, sans-serif;
+        }
+        &.headings-h5 {
+          font-size: 1.333rem;
+          font-weight: 400;
+          font-family: 'Titillium Web', Geneva, Tahoma, sans-serif;
+        }
+        &.headings-h6 {
+          font-size: 1rem;
+          font-weight: 600;
+          font-family: 'Titillium Web', Geneva, Tahoma, sans-serif;
+        }
+      }
+    }
+  }
+}

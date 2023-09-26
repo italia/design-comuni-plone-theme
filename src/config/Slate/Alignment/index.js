@@ -1,10 +1,8 @@
 import React from 'react';
 import AlignMenu from './AlignMenu';
-//import '@plone/volto-slate/editor/plugins/StyleMenu/style.less';
 
 export const AlignElement = ({ attributes, children, element }) => {
-  console.log(attributes, element);
-  return <p {...attributes} /*className="callout"*/>aaaa{children}</p>;
+  return <p {...attributes}>{children}</p>;
 };
 
 export default function install(config) {
@@ -15,9 +13,14 @@ export default function install(config) {
   );
 
   slate.elements['align'] = AlignElement;
-  slate.toolbarButtons.push('align');
-  slate.expandedToolbarButtons.push('align');
-  console.log(slate);
+
+  //lo metto come primo elemento della toolbar
+  slate.toolbarButtons = ['align', 'separator', ...slate.toolbarButtons];
+  slate.expandedToolbarButtons = [
+    'align',
+    'separator',
+    ...slate.expandedToolbarButtons,
+  ];
 
   return config;
 }
