@@ -1,4 +1,24 @@
 
+
+## [8.7.3](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.7.2...v8.7.3) (2023-09-26)
+
+
+### Bug Fixes
+
+* fix rsss CardWithImageTemplate view date ([d509471](https://github.com/redturtle/design-comuni-plone-theme/commit/d509471994cfc4be62b1f15c60b06388ff8e0a9c))
+
+
+### Maintenance
+
+* preparing release 8.7.3 ([db663e6](https://github.com/redturtle/design-comuni-plone-theme/commit/db663e622df1e5756d7574a1288fd97ca30a3d8a))
+
+## [8.7.1](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.7.2...v8.7.3) (2023-09-21)
+
+
+### Maintenance
+
+* release v8.7.1 ([b201b34](https://github.com/redturtle/design-comuni-plone-theme/commit/b201b34043e3bc14dbca40492b909801b2bbaaad))
+
 ## [8.7.2](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.7.0...v8.7.2) (2023-09-21)
 
 
