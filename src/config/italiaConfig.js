@@ -58,6 +58,7 @@ import bandoSVG from 'design-comuni-plone-theme/icons/bando.svg';
 import logSVG from 'design-comuni-plone-theme/icons/log.svg';
 
 import applyRichTextConfig from 'design-comuni-plone-theme/config/RichTextEditor/config';
+import applyItaliaSlateConfig from 'design-comuni-plone-theme/config/Slate/config';
 
 import gdprPrivacyPanelConfig from 'design-comuni-plone-theme/config/volto-gdpr-privacy-defaultPanelConfig.js';
 
@@ -70,7 +71,8 @@ const ReleaseLog = loadable(() =>
 );
 
 export default function applyConfig(voltoConfig) {
-  let config = applyRichTextConfig(voltoConfig);
+  let config = applyRichTextConfig(voltoConfig); //[ToDO]: da rimuovere in favore di slate?
+  applyItaliaSlateConfig(config);
 
   /******************************************************************************
    * SETTINGS
