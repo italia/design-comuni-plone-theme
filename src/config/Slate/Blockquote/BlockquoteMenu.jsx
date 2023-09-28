@@ -13,6 +13,9 @@ import { Icon } from '@plone/volto/components';
 import { ToolbarButton } from '@plone/volto-slate/editor/ui';
 
 import quoteIcon from '@plone/volto/icons/quote.svg';
+import blockquoteSimpleIcon from 'design-comuni-plone-theme/icons/blockquote-simple.svg';
+import blockquoteCardIcon from 'design-comuni-plone-theme/icons/blockquote-card.svg';
+import blockquoteCardDarkIcon from 'design-comuni-plone-theme/icons/blockquote-card-dark.svg';
 
 import 'design-comuni-plone-theme/config/Slate/dropdownStyle.scss';
 
@@ -20,19 +23,20 @@ const OPTIONS = [
   {
     title: 'Blockquote semplice',
     format: 'blockquote',
-    icon: quoteIcon,
+    icon: blockquoteSimpleIcon,
+    cssClass: 'blockquote',
   },
   {
     title: 'Blockquote card',
     format: 'blockquote',
-    icon: quoteIcon,
-    className: 'blockquote-card',
+    icon: blockquoteCardIcon,
+    cssClass: 'blockquote-card',
   },
   {
     title: 'Blockquote card scuro',
     format: 'blockquote',
-    icon: quoteIcon,
-    className: 'blockquote-card dark',
+    icon: blockquoteCardDarkIcon,
+    cssClass: 'blockquote-card dark',
   },
 ];
 
@@ -47,7 +51,7 @@ const BlockquoteMenuButton = ({ icon, active, ...props }) => (
   <ToolbarButton {...props} icon={icon} active={active} />
 );
 
-const MenuOpts = ({ editor, toSelect, option, type }) => {
+const MenuOpts = ({ editor, toSelect, option, type, ...props }) => {
   const isActive = toSelect.includes(option);
 
   return (
@@ -61,6 +65,8 @@ const MenuOpts = ({ editor, toSelect, option, type }) => {
         toggleStyle(editor, {
           cssClass: selItem.value,
           isBlock: true,
+          format: selItem.format,
+          allowedChildren: props.allowedChildren,
           oneOf: OPTIONS.reduce((acc, o) => [...acc, o.cssClass], []),
         });
       }}
@@ -75,7 +81,9 @@ const BlockquoteButton = (props) => {
   const blockOpts = OPTIONS.map((def) => {
     return {
       value: def.cssClass,
-      text: def.label,
+      text: def.text,
+      title: def.title,
+      format: def.format,
       icon: (props) => <Icon name={def.icon} size="24px" />,
       isBlock: true,
       originalIcon: def.icon,
@@ -84,11 +92,12 @@ const BlockquoteButton = (props) => {
 
   // Calculating the initial selection.
   const toSelect = [];
-  let selectedIcon = OPTIONS[0].icon;
+  let selectedIcon = quoteIcon;
 
+  const oneOf = OPTIONS.reduce((acc, o) => [...acc, o.cssClass], []);
   // block styles
   for (const val of blockOpts) {
-    const ia = isBlockStyleActive(editor, val.value);
+    const ia = isBlockStyleActive(editor, val.value, oneOf);
 
     if (ia) {
       toSelect.push(val);
@@ -99,13 +108,14 @@ const BlockquoteButton = (props) => {
   const menuItemProps = {
     toSelect,
     editor,
+    ...props,
   };
 
   const showMenu = blockOpts.length;
 
   return showMenu ? (
     <Dropdown
-      id="align-menu"
+      id="blockquote-menu"
       pointing="top left"
       multiple
       value={toSelect}
@@ -123,7 +133,7 @@ const BlockquoteButton = (props) => {
           blockOpts.map((option, index) => (
             <MenuOpts
               {...menuItemProps}
-              type="block-align"
+              type="block-blockquote"
               option={option}
               key={index}
             />

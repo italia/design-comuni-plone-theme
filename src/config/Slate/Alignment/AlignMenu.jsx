@@ -22,22 +22,22 @@ import 'design-comuni-plone-theme/config/Slate/dropdownStyle.scss';
 const ALIGN_OPTIONS = [
   {
     cssClass: 'text-left',
-    text: 'Allinea a sinistra',
+    title: 'Allinea a sinistra',
     icon: alignLeftSVG,
   },
   {
     cssClass: 'text-center',
-    text: 'Allinea al centro',
+    title: 'Allinea al centro',
     icon: alignCenterSVG,
   },
   {
     cssClass: 'text-end',
-    text: 'Allinea a destra',
+    title: 'Allinea a destra',
     icon: alignRightSVG,
   },
   {
     cssClass: 'text-justify',
-    text: 'Allinea il testo giustificato',
+    title: 'Allinea il testo giustificato',
     icon: alignJustifySVG,
   },
 ];
@@ -81,7 +81,8 @@ const AlignButton = (props) => {
   const blockOpts = ALIGN_OPTIONS.map((def) => {
     return {
       value: def.cssClass,
-      text: def.label,
+      text: def.text,
+      title: def.title,
       icon: (props) => <Icon name={def.icon} size="24px" />,
       isBlock: true,
       originalIcon: def.icon,
