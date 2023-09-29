@@ -92,7 +92,7 @@ const BlockquoteButton = (props) => {
 
   // Calculating the initial selection.
   const toSelect = [];
-  let selectedIcon = quoteIcon;
+  let selectedIcon = blockquoteCardIcon;
 
   const oneOf = OPTIONS.reduce((acc, o) => [...acc, o.cssClass], []);
   // block styles

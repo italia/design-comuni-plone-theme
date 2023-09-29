@@ -3,6 +3,7 @@ import installAlignment from 'design-comuni-plone-theme/config/Slate/Alignment';
 import installHeadings from 'design-comuni-plone-theme/config/Slate/Headings';
 import installUnderline from 'design-comuni-plone-theme/config/Slate/Underline';
 import installBlockquote from 'design-comuni-plone-theme/config/Slate/Blockquote';
+import installLinkButton from 'design-comuni-plone-theme/config/Slate/LinkButton';
 
 export default function applyItaliaSlateConfig(config) {
   installAlignment(config);
@@ -10,6 +11,8 @@ export default function applyItaliaSlateConfig(config) {
   installUnderline(config);
 
   installBlockquote(config);
+  installLinkButton(config);
+
 
   //remove callout because there's a Volto's block for it
   delete config.settings.slate.elements.callout;
