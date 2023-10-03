@@ -61,7 +61,7 @@ const MenuOpts = ({ editor, toSelect, option, type }) => {
       as="span"
       active={isActive}
       className={cx(`${type}-${option.value}`, { active: isActive })}
-      {...omit(option, ['isBlock'])}
+      {...omit(option, ['isBlock', 'originalIcon'])}
       data-isblock={option.isBlock}
       onClick={(event, selItem) => {
         toggleStyle(editor, {

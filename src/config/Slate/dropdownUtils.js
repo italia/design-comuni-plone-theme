@@ -32,22 +32,40 @@ export const toggleBlockStyle = (
   const { slate } = config.settings;
 
   const isListItem = isBlockActive(editor, slate.listItemType);
+  const isBlockquote = isBlockActive(editor, 'blockquote');
 
   const isActive = isBlockStyleActive(editor, style);
   const wantsList = false;
+  const wantsBlockquote = format === 'blockquote';
 
-  if (isListItem && !wantsList) {
-    toggleBlockStyleAsListItem(editor, style);
+  if (isListItem && wantsBlockquote && !isBlockquote) {
+    //wrap list with blockquote
+    Transforms.wrapNodes(
+      editor,
+      { type: format },
+      {
+        mode: 'highest',
+        split: false,
+      },
+    );
+    internalToggleBlockStyle(editor, style, oneOf, format);
+  } else if (isListItem && wantsBlockquote && isBlockquote) {
+    //remove blockquote wrap to list
+    //Transforms.unwrapNodes(editor, { mode: 'all', at: [0] });
+    const unwrap = true;
+    internalToggleBlockStyle(editor, style, oneOf, format, unwrap);
+  } else if (isListItem && !wantsList) {
+    toggleBlockStyleAsListItem(editor, style, oneOf);
   } else if (isListItem && wantsList && !isActive) {
     // switchListType(editor, format); // this will deconstruct to Volto blocks
   } else if (!isListItem && wantsList) {
     // changeBlockToList(editor, format);
   } else if (!isListItem && !wantsList) {
+    //se ho rimosso tutti gli stili devo rimuoverre anche il format
     if (format && editor.children?.[0]?.type !== format) {
       toggleFormat(editor, format, allowedChildren);
     }
     internalToggleBlockStyle(editor, style, oneOf, format);
-    //sse ho rimosso tutti gli stili devo rimuoverre anche il format
   } else {
     console.warn('toggleBlockStyle case not covered, please examine:', {
       wantsList,
@@ -198,8 +216,14 @@ export const isLinkStyleActive = (editor, style) => {
   return false;
 };
 
-export const internalToggleBlockStyle = (editor, style, oneOf, format) => {
-  toggleBlockStyleInSelection(editor, style, oneOf, format);
+export const internalToggleBlockStyle = (
+  editor,
+  style,
+  oneOf,
+  format,
+  unwrap,
+) => {
+  return toggleBlockStyleInSelection(editor, style, oneOf, format, unwrap);
 };
 
 export const internalToggleInlineStyle = (editor, style) => {
@@ -210,8 +234,8 @@ export const internalToggleInlineStyle = (editor, style) => {
  * Applies a block format unto a list item. Will split the list and deconstruct the
  * block
  */
-export const toggleBlockStyleAsListItem = (editor, style) => {
-  toggleBlockStyleInSelection(editor, style);
+export const toggleBlockStyleAsListItem = (editor, style, oneOf) => {
+  toggleBlockStyleInSelection(editor, style, oneOf);
 };
 
 /*
@@ -301,7 +325,7 @@ function toggleLinkStyleInSelection(editor, style, oneOf) {
   }
 }
 
-function toggleBlockStyleInSelection(editor, style, oneOf, format) {
+function toggleBlockStyleInSelection(editor, style, oneOf, format, unwrap) {
   const sn = Array.from(
     Editor.nodes(editor, {
       mode: 'highest',
@@ -342,7 +366,11 @@ function toggleBlockStyleInSelection(editor, style, oneOf, format) {
       if (addStyle) {
         cn = cn.concat(style);
       } else if (format) {
-        toggleFormat(editor, format);
+        if (unwrap) {
+          Transforms.unwrapNodes(editor, { mode: 'all', at: [0] });
+        } else {
+          toggleFormat(editor, format);
+        }
       }
       cn = cn.join(' ');
     } else if (n.styleName.split(' ').filter((x) => x === style).length > 0) {

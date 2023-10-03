@@ -12,7 +12,6 @@ import {
 import { Icon } from '@plone/volto/components';
 import { ToolbarButton } from '@plone/volto-slate/editor/ui';
 
-import quoteIcon from '@plone/volto/icons/quote.svg';
 import blockquoteSimpleIcon from 'design-comuni-plone-theme/icons/blockquote-simple.svg';
 import blockquoteCardIcon from 'design-comuni-plone-theme/icons/blockquote-card.svg';
 import blockquoteCardDarkIcon from 'design-comuni-plone-theme/icons/blockquote-card-dark.svg';
@@ -59,7 +58,7 @@ const MenuOpts = ({ editor, toSelect, option, type, ...props }) => {
       as="span"
       active={isActive}
       className={cx(`${type}-${option.value}`, { active: isActive })}
-      {...omit(option, ['isBlock'])}
+      {...omit(option, ['isBlock', 'originalIcon'])}
       data-isblock={option.isBlock}
       onClick={(event, selItem) => {
         toggleStyle(editor, {

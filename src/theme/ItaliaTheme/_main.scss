@@ -90,28 +90,19 @@ iframe {
 .cms-ui {
   blockquote {
     border-color: $primary !important;
-  }
 
-  .callout {
-    padding: 1.25rem;
-    border: 1px solid $neutral-1-a2;
-    border-left-width: 0.4rem;
-    margin: 1.25rem 0;
-    border-radius: 0.25rem;
-
-    p,
-    .public-DraftStyleDefault-block {
-      &:last-of-type {
-        margin-bottom: 0;
-      }
+    ul:first-child,
+    ol:first-child {
+      margin-top: 0;
+    }
+    ul:last-child,
+    ol:last-child {
+      margin-bottom: 0;
     }
   }
 
-  .callout-bg {
-    padding: 1.25rem;
-    margin: 1.25rem 0;
-    background-color: $primary-c1;
-
+  .callout {
+    box-shadow: none; //override pastanaga styles
     p,
     .public-DraftStyleDefault-block {
       &:last-of-type {
@@ -124,7 +115,9 @@ iframe {
     font-size: 0.75em;
   }
 
-  .draftjs-text-larger {
+  .draftjs-text-larger,
+  .text-larger {
+    //.text-larger: stile applicabile da editor Slate
     font-size: 1.75em;
   }
 

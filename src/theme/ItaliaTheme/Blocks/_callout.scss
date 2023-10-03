@@ -1,0 +1,29 @@
+body.cms-ui {
+  .block-editor-callout_block {
+    .public-ui {
+      .callout {
+        .callout-title {
+          display: flex;
+          .icon {
+            flex: 1 0 100%;
+            max-width: 32px;
+          }
+          .title-edit-wrapper {
+            flex: 1 1 100%;
+            min-width: 165px;
+            &.has-text {
+              min-width: unset;
+            }
+          }
+        }
+
+        p {
+          &,
+          * {
+            font-family: 'Lora', Georgia, serif !important; //as bootstrap-italia says
+          }
+        }
+      }
+    }
+  }
+}

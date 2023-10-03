@@ -44,8 +44,16 @@ class ColorListWidget extends Component {
    * @returns {string} Markup for the component.
    */
   render() {
-    const { id, title, required, value, onChange, intl, colors, className } =
-      this.props;
+    const {
+      id,
+      title,
+      required,
+      value,
+      onChange,
+      intl,
+      colors,
+      className,
+    } = this.props;
     return colors.length > 0 ? (
       <Form.Field
         inline
@@ -78,6 +86,7 @@ class ColorListWidget extends Component {
                     active={value === color.name}
                     circular
                     aria-label={color.label}
+                    title={color.label}
                   />
                 );
               })}

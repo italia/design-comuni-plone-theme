@@ -1,5 +1,4 @@
 import { defineMessages } from 'react-intl';
-import { v4 as uuid } from 'uuid';
 
 const messages = defineMessages({
   show_icon: {
@@ -179,10 +178,4 @@ export const addLighthouseField = (schema, intl, position = 0) => {
   pos++;
 
   return pos;
-};
-
-export const cloneBlock = (blockData) => {
-  const blockID = uuid();
-  const clonedData = { ...blockData, block: blockID };
-  return [blockID, clonedData];
 };

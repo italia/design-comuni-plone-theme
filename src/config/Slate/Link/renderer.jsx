@@ -3,8 +3,19 @@ import { UniversalLink } from '@plone/volto/components';
 import config from '@plone/volto/registry';
 import { isInternalURL, flattenToAppURL } from '@plone/volto/helpers';
 
-const ViewLink = ({ url, target, download, children, className }) => {
+const ViewLink = ({
+  url,
+  target,
+  download,
+  children,
+  className,
+  dataElement,
+}) => {
   const { openExternalLinkInNewTab } = config.settings;
+  let dataElementAttr = {};
+  if (dataElement) {
+    dataElementAttr['data-element'] = dataElement;
+  }
   return (
     <UniversalLink
       href={url}
@@ -13,6 +24,7 @@ const ViewLink = ({ url, target, download, children, className }) => {
       }
       download={download}
       className={className}
+      {...dataElementAttr}
     >
       {children}
     </UniversalLink>
@@ -22,6 +34,10 @@ const ViewLink = ({ url, target, download, children, className }) => {
 export const LinkElement = (props) => {
   const { attributes, children, element, mode = 'edit' } = props;
 
+  let dataElementAttr = {};
+  if (element.data.dataElement) {
+    dataElementAttr['data-element'] = element.data.dataElement;
+  }
   return mode === 'view' ? (
     <ViewLink {...(element.data || {})} {...attributes}>
       {children}
@@ -29,6 +45,7 @@ export const LinkElement = (props) => {
   ) : (
     <a
       {...attributes}
+      {...dataElementAttr}
       className={'slate-editor-link ' + (attributes.className ?? '')}
       href={
         isInternalURL(element.data?.url)

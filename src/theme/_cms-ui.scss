@@ -145,6 +145,7 @@ body.cms-ui {
         color: #444;
         font-weight: normal;
         height: auto;
+        font-size: 0.7rem;
       }
 
       #field-data-element-select {
@@ -361,6 +362,27 @@ body.cms-ui {
     .button.tertiary,
     .button.tertiary.active {
       background-color: $tertiary;
+    }
+    .button.success,
+    .button.success.active {
+      background-color: $success;
+    }
+    .button.warning,
+    .button.success.warning {
+      background-color: $warning;
+    }
+    .button.danger,
+    .button.danger.active {
+      background-color: $danger;
+    }
+
+    .button.callout_default,
+    .button.callout_default.active {
+      background-color: $secondary;
+    }
+    .button.callout_note,
+    .button.callout_note.active {
+      background-color: $primary;
     }
   }
 

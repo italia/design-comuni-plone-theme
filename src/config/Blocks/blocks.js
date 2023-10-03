@@ -65,7 +65,11 @@ import countDownSVG from 'design-comuni-plone-theme/icons/count-down.svg';
 import CountDownBlockView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CountDown/View';
 import CountDownBlockEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CountDown/Edit';
 
-import { cloneBlock } from 'design-comuni-plone-theme/config/Blocks/ListingOptions';
+import calloutSVG from '@plone/volto/icons/megaphone.svg';
+import CalloutView from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Callout/View';
+import CalloutEdit from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/Callout/Edit';
+
+import { cloneBlock } from 'design-comuni-plone-theme/helpers/blocks';
 
 const italiaBlocks = {
   highlitedContent: {
@@ -360,13 +364,29 @@ const italiaBlocks = {
     },
     sidebarTab: 1,
   },
+  callout_block: {
+    id: 'callout_block',
+    title: 'Callout',
+    icon: calloutSVG,
+    group: 'text',
+    view: CalloutView,
+    edit: CalloutEdit,
+    restricted: false,
+    mostUsed: false,
+    cloneData: cloneBlock,
+    security: {
+      addPermission: [],
+      view: [],
+    },
+    sidebarTab: 1,
+  },
 };
 
 const getItaliaBlocks = (config) => {
   delete config.blocks.blocksConfig.teaser;
-  config.blocks.blocksConfig.gridBlock.allowedBlocks = config.blocks.blocksConfig.gridBlock.allowedBlocks
-    .filter((item) => !['slate', 'teaser'].includes(item))
-    .concat(['text']);
+  config.blocks.blocksConfig.gridBlock.allowedBlocks = config.blocks.blocksConfig.gridBlock.allowedBlocks.filter(
+    (item) => !['teaser'].includes(item),
+  );
   return italiaBlocks;
 };
 export default getItaliaBlocks;

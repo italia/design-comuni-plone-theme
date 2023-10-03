@@ -4,11 +4,16 @@ import installHeadings from 'design-comuni-plone-theme/config/Slate/Headings';
 import installUnderline from 'design-comuni-plone-theme/config/Slate/Underline';
 import installBlockquote from 'design-comuni-plone-theme/config/Slate/Blockquote';
 import installLinkButton from 'design-comuni-plone-theme/config/Slate/LinkButton';
+import installTextLarger from 'design-comuni-plone-theme/config/Slate/TextLarger';
+import installLink from 'design-comuni-plone-theme/config/Slate/Link';
+
 
 export default function applyItaliaSlateConfig(config) {
   installAlignment(config);
   installHeadings(config);
   installUnderline(config);
+  installTextLarger(config);
+  installLink(config);
 
   installBlockquote(config);
   installLinkButton(config);

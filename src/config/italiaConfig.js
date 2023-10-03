@@ -396,22 +396,6 @@ export default function applyConfig(voltoConfig) {
       sidebarTab: 1,
     },
     rssBlock,
-    text: {
-      ...config.blocks.blocksConfig.text,
-      restricted: false,
-    },
-    slate: {
-      ...config.blocks.blocksConfig.slate,
-      restricted: true,
-    },
-    // table: {
-    //   ...config.blocks.blocksConfig.table,
-    //   restricted: false,
-    // },
-    // slateTable: {
-    //   ...config.blocks.blocksConfig.slateTable,
-    //   restricted: true,
-    // },
     maps: {
       ...config.blocks.blocksConfig.maps,
       restricted: true,

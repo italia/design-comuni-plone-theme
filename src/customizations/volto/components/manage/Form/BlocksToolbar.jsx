@@ -17,7 +17,7 @@ import { Icon } from '@plone/volto/components';
 import { Plug } from '@plone/volto/components/manage/Pluggable';
 import { load } from 'redux-localstorage-simple';
 import { isEqual, omit, without } from 'lodash';
-import { cloneBlock } from 'design-comuni-plone-theme/config/Blocks/ListingOptions';
+import { cloneBlock } from 'design-comuni-plone-theme/helpers/blocks';
 import { setBlocksClipboard, resetBlocksClipboard } from '@plone/volto/actions';
 import config from '@plone/volto/registry';
 
