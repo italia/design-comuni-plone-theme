@@ -30,11 +30,12 @@
 - ...
 -->
 
-## Versione X.X.X (dd/mm/yyyy)
+## Versione 8.7.3 (26/09/2023)
 
 ### Fix
 
 - Sistemato margine del blocco Alert quando allineato a sinistra
+- Sistemato il template degli Rss Card con immagine per mostrare la data corretta
 
 ## Versione 8.7.0 (20/09/2023)
 
