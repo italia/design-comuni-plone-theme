@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import { Segment } from 'semantic-ui-react';
 import { FormattedMessage, injectIntl } from 'react-intl';
 import { /*TextWidget,*/ SelectWidget } from '@plone/volto/components';
-
+import { injectLazyLibs } from '@plone/volto/helpers/Loadable/Loadable';
 import { defineMessages, useIntl } from 'react-intl';
-import IconWidget from 'design-comuni-plone-theme/components/ItaliaTheme/manage/Widgets/IconWidget';
-import { defaultIconWidgetOptions } from 'design-comuni-plone-theme/helpers/index';
 import { ColorListWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
+import { FormFieldWrapper } from '@plone/volto/components';
 
 const messages = defineMessages({
   color: { id: 'color', defaultMessage: 'Colore' },
@@ -37,10 +37,15 @@ const messages = defineMessages({
     id: 'callout_style_highlight',
     defaultMessage: 'In evidenza',
   },
+  icon: {
+    id: 'icon',
+    defaultMessage: 'Icona',
+  },
 });
 
-const Sidebar = ({ data, block, onChangeBlock }) => {
+const Sidebar = ({ data, block, onChangeBlock, reactSelect }) => {
   const intl = useIntl();
+  const { Option } = reactSelect.components;
   const colors = [
     {
       name: 'callout_default',
@@ -59,7 +64,12 @@ const Sidebar = ({ data, block, onChangeBlock }) => {
 
   useEffect(() => {
     if (!data.style) {
-      onChangeBlock(block, { ...data, style: styles[0][0] });
+      //default nuovo blocco
+      onChangeBlock(block, {
+        ...data,
+        style: styles[0][0],
+        icon: 'it-info-circle',
+      });
     }
   }, []);
 
@@ -96,18 +106,46 @@ const Sidebar = ({ data, block, onChangeBlock }) => {
           colors={colors}
         />
 
-        <IconWidget
-          id="icon"
-          value={data.icon ?? ''}
-          defaultOptions={defaultIconWidgetOptions}
-          onChange={(name, value) => {
-            onChangeBlock(block, {
-              ...data,
-              [name]: value,
-            });
-          }}
-        />
+        <div className="select-icon-widget">
+          <SelectWidget
+            id="icon"
+            title={intl.formatMessage(messages.icon)}
+            required={false}
+            value={data.icon}
+            intl={intl}
+            onChange={(id, value) => {
+              onChangeBlock(block, { ...data, [id]: value });
+            }}
+            choices={[
+              ['it-info-circle', 'Info'],
+              ['it-check-circle', 'Check'],
+              ['it-help-circle', 'Help'],
+              ['it-close-circle', 'Close'],
+            ]}
+            customOptionStyling={(props) => {
+              return (
+                <Option {...props}>
+                  {props.data.value !== 'no-value' && (
+                    <span className="icon-container italia-icon">
+                      <Icon icon={props.data.value} />
+                    </span>
+                  )}
+                  <span className="label-container">{props.data.label}</span>
+                </Option>
+              );
+            }}
+          />
 
+          <FormFieldWrapper id="icon-preview-widget-id" title="">
+            <p className="help">
+              {data.icon ? (
+                <Icon icon={data.icon} className="show-icon-italia" />
+              ) : (
+                <></>
+              )}
+            </p>
+          </FormFieldWrapper>
+        </div>
         {/* <TextWidget
           id="title"
           title={intl.formatMessage(messages.linkMoreTitle)}
@@ -132,4 +170,4 @@ Sidebar.propTypes = {
   setSelected: PropTypes.func,
 };
 
-export default injectIntl(Sidebar);
+export default injectLazyLibs('reactSelect')(injectIntl(Sidebar));

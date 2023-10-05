@@ -398,6 +398,14 @@ body.cms-ui {
     }
   }
 
+  .field-wrapper-icon {
+    .icon-container.italia-icon {
+      svg.icon {
+        height: 1.5em;
+      }
+    }
+  }
+
   /*.DraftEditor-root {
     font-family: $font-family-serif;
     h1,

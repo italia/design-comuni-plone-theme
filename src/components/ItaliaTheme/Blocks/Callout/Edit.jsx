@@ -35,21 +35,26 @@ const Edit = ({
   block,
   onSelectBlock,
   onAddBlock,
-  index,
   selected,
-  onFocusPreviousBlock,
-  onFocusNextBlock,
+  ...otherProps
 }) => {
   const intl = useIntl();
   const [selectedField, setSelectedField] = useState('title');
 
   useEffect(() => {
-    if (selected) {
+    if (selected && !selectedField) {
       setSelectedField('title');
     } else {
       setSelectedField(null);
     }
   }, [selected]);
+
+  useEffect(() => {
+    if (!selected && selectedField) {
+      onSelectBlock(block);
+    }
+  }, [selectedField]);
+
   /**
    * Change handler
    * @method onChange
@@ -74,48 +79,58 @@ const Edit = ({
         color={data.color?.replace('callout_', '')}
       >
         <CalloutTitle tag="h4">
-          <Icon icon="it-check-circle" padding={false} aria-hidden />
-
+          {data.icon && <Icon icon={data.icon} padding={false} aria-hidden />}
           <TextEditorWidget
+            {...otherProps}
             data={data}
+            value={data.title}
             block={block}
-            setSelected={() => setSelectedField('title')}
-            onSelectBlock={(block) => setSelectedField('title')}
-            onChangeBlock={(block, data) => {
-              onChange({ ...data, title: data.plaintext }, 'title');
-            }}
             selected={selectedField === 'title'}
             placeholder={intl.formatMessage(messages.title)}
-            showToolbar={false}
-            index={index}
+            onChangeBlock={(block, data) => {
+              onChange({ ...data, title: data.value }, 'title');
+            }}
+            setSelected={() => setSelectedField('title')}
+            focusNextField={() => {
+              setSelectedField('text');
+            }}
             wrapClass={`title-edit-wrapper ${
               data.title?.blocks?.[0]?.text?.length > 0 ? 'has-text' : ''
             }`}
-            // onAddBlock={() => {
-            //   setSelectedField('text');
-            // }}
-            // onFocusNextBlock={() => {
-            //   setSelectedField('text');
-            // }}
-            // onFocusPreviousBlock={onFocusPreviousBlock}
           />
         </CalloutTitle>
         <CalloutText>
           <TextEditorWidget
+            showToolbar={false}
             data={data}
             block={block}
-            setSelected={() => setSelectedField('text')}
-            onSelectBlock={(block) => setSelectedField('text')}
+            value={data.text_simple}
             onChangeBlock={(block, data) => {
-              onChange({ ...data, title: data.value }, 'text');
+              onChange({ ...data, text_simple: data.value }, 'text_simple');
             }}
+            selected={selectedField === 'text_simple'}
+            placeholder={intl.formatMessage(messages.text)}
+            setSelected={() => {
+              setSelectedField('text_simple');
+            }}
+            focusPrevField={() => {
+              setSelectedField('title');
+            }}
+          />
+          <TextEditorWidget
+            {...otherProps}
+            data={data}
+            value={data.text}
+            block={block}
             selected={selectedField === 'text'}
             placeholder={intl.formatMessage(messages.text)}
-            index={index}
-            // onFocusNextBlock={onFocusNextBlock}
-            // onFocusPreviousBlock={() => {
-            //   setSelectedField('title');
-            // }}
+            onChangeBlock={(block, data) => {
+              onChange({ ...data, text: data.value }, 'text');
+            }}
+            setSelected={() => setSelectedField('text')}
+            focusPrevField={() => {
+              setSelectedField('title');
+            }}
           />
         </CalloutText>
       </Callout>
