@@ -7,6 +7,7 @@ import installLinkButton from 'design-comuni-plone-theme/config/Slate/LinkButton
 import installTextLarger from 'design-comuni-plone-theme/config/Slate/TextLarger';
 import installLink from 'design-comuni-plone-theme/config/Slate/Link';
 
+import installHandlers from 'design-comuni-plone-theme/config/Slate/handlers';
 
 export default function applyItaliaSlateConfig(config) {
   installAlignment(config);
@@ -14,9 +15,10 @@ export default function applyItaliaSlateConfig(config) {
   installUnderline(config);
   installTextLarger(config);
   installLink(config);
-
   installBlockquote(config);
   installLinkButton(config);
+
+  installHandlers(config);
 
 
   //remove callout because there's a Volto's block for it

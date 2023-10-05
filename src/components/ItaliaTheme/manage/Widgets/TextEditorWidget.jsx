@@ -1,15 +1,25 @@
 /**
  * Edit text block.
  * @module components/Widgets/TextEditorWidget/TextEditorWidget
+ *
+ * E' come il componente DetatchedTextBlockEditor di @plone/volto-slate,
+ * ma in più ha il withBlockProperties,
+ * che serve per getire gli handler (le function di focusPrev e focusNext)
  */
 
 import React from 'react';
-import { defineMessages } from 'react-intl';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-
-import config from '@plone/volto/registry';
-import { TextEditorDraftJSWidget } from './TextEditorDraftJSWidget';
-import { TextBlockEdit } from '@plone/volto-slate/Blocks/Text';
+import { defineMessages, useIntl } from 'react-intl';
+import { useInView } from 'react-intersection-observer';
+import { SlateEditor } from '@plone/volto-slate/editor';
+import { serializeNodesToText } from '@plone/volto-slate/editor/render';
+import { handleKeyDetached } from '@plone/volto-slate/blocks/Text/keyboard';
+import {
+  uploadContent,
+  saveSlateBlockSelection,
+} from '@plone/volto-slate/actions';
+import SimpleTextEditorWidget from './SimpleTextEditorWidget';
 
 const messages = defineMessages({
   text: {
@@ -18,16 +28,40 @@ const messages = defineMessages({
   },
 });
 
-//[ToDo]: se togliamo completamente draftjs, togliere la prop editor_type, la condizione e il widget di TextEditorDraftJSWidget
+const TextEditorWidget = (props) => {
+  const {
+    showToolbar = true,
+    setSelected,
+    wrapClass,
+    index,
+    properties,
+    value,
+    block,
+    selected,
+    onSelectBlock,
+    onChangeBlock,
+    data,
+    ...otherProps
+  } = props;
 
-const TextEditorWidget = ({
-  editor_type = 'slate',
-  showToolbar = true,
-  setSelected,
-  wrapClass,
-  ...props
-}) => {
-  return editor_type === 'slate' ? (
+  const withBlockProperties = React.useCallback(
+    (editor) => {
+      editor.getBlockProps = () => props;
+      return editor;
+    },
+    [props],
+  );
+
+  const intl = useIntl();
+  const placeholder =
+    otherProps.placeholder || intl.formatMessage(messages.text);
+
+  const { ref, inView } = useInView({
+    threshold: 0,
+    rootMargin: '0px 0px 200px 0px',
+  });
+
+  return (
     <div
       className={wrapClass}
       onClick={() => setSelected()}
@@ -36,16 +70,54 @@ const TextEditorWidget = ({
       role="textbox"
       tabIndex="-1"
     >
-      <TextBlockEdit detatched={true} showToolbar={showToolbar} {...props} />
+      {showToolbar ? (
+        <div
+          className="text-slate-editor-inner detached-slate-editor"
+          ref={ref}
+        >
+          <SlateEditor
+            index={index}
+            readOnly={!inView}
+            properties={properties}
+            renderExtensions={[withBlockProperties]}
+            value={value}
+            block={block /* is this needed? */}
+            slateSettings={otherProps.slateSettings}
+            onFocus={() => {
+              if (!selected) {
+                if (onSelectBlock) {
+                  onSelectBlock(block);
+                } else {
+                  setSelected();
+                }
+              }
+            }}
+            onChange={(value, selection, editor) => {
+              onChangeBlock(block, {
+                ...data,
+                value,
+                plaintext: serializeNodesToText(value || []),
+                // TODO: also add html serialized value
+              });
+            }}
+            selected={selected}
+            placeholder={placeholder}
+            onKeyDown={handleKeyDetached}
+            editableProps={{ 'aria-multiline': 'true' }}
+            showToolbar={showToolbar}
+          />
+        </div>
+      ) : (
+        <div className="text-editor-inner simple-text">
+          <SimpleTextEditorWidget {...props} />
+        </div>
+      )}
     </div>
-  ) : (
-    <TextEditorDraftJSWidget {...props} />
   );
 };
 
 TextEditorWidget.propTypes = {
-  editor_type: PropTypes.string.isRequired,
-  data: PropTypes.object.isRequired,
+  data: PropTypes.objectOf(PropTypes.any).isRequired,
   setSelected: PropTypes.func.isRequired,
   onSelectBlock: PropTypes.func.isRequired,
   onChangeBlock: PropTypes.func.isRequired,
@@ -53,6 +125,27 @@ TextEditorWidget.propTypes = {
   selected: PropTypes.bool.isRequired,
   showToolbar: PropTypes.bool,
   wrapClass: PropTypes.string,
+  focusPrevField: PropTypes.func.isRequired,
+  focusNextField: PropTypes.func.isRequired,
+  //from block props:
+  properties: PropTypes.objectOf(PropTypes.any).isRequired,
+  onFocusPreviousBlock: PropTypes.objectOf(PropTypes.any).isRequired,
+  onFocusNextBlock: PropTypes.objectOf(PropTypes.any).isRequired,
 };
 
-export default TextEditorWidget;
+export default connect(
+  (state, props) => {
+    const blockId = props.block;
+    return {
+      defaultSelection: blockId
+        ? state.slate_block_selections?.[blockId]
+        : null,
+      uploadRequest: state.upload_content?.[props.block]?.upload || {},
+      uploadedContent: state.upload_content?.[props.block]?.data || {},
+    };
+  },
+  {
+    uploadContent,
+    saveSlateBlockSelection, // needed as editor blockProps
+  },
+)(TextEditorWidget);
