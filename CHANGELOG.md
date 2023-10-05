@@ -1,5 +1,12 @@
 
 
+## [8.7.4](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.7.3...v8.7.4) (2023-10-05)
+
+
+### Maintenance
+
+* preparing release 8.7.4 ([7627cfd](https://github.com/redturtle/design-comuni-plone-theme/commit/7627cfd5edfa2469b8ddc6d8ccc675486be082dc))
+
 ## [8.7.3](https://github.com/redturtle/design-comuni-plone-theme/compare/v8.7.2...v8.7.3) (2023-09-26)
 
 
