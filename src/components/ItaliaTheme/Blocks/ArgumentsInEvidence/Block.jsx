@@ -8,11 +8,11 @@ import {
   CardText,
   CardReadMore,
 } from 'design-react-kit';
-import redraft from 'redraft';
+
 import { UniversalLink } from '@plone/volto/components';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { ArgumentIcon } from 'design-comuni-plone-theme/components/ItaliaTheme/View';
-import config from '@plone/volto/registry';
+import { TextBlockView } from '@plone/volto-slate/blocks/Text';
 
 const messages = defineMessages({
   text: {
@@ -37,6 +37,8 @@ const Block = ({
   block,
   onChange,
   intl,
+  index,
+  ...otherProps
 }) => {
   const argument = data?.argument ? data?.argument[0] : null;
 
@@ -49,21 +51,25 @@ const Block = ({
           <CardText tag="p">{argument?.description}</CardText>
           {inEditMode ? (
             <TextEditorWidget
+              {...otherProps}
               data={data}
+              block={block}
               fieldName="title"
               selected={selected}
-              block={block}
-              onChangeBlock={onChange}
               placeholder={intl.formatMessage(messages.text)}
-              focusOn={focusOn}
+              onChangeBlock={(block, _data) => {
+                onChange({ ...data, title: _data.value });
+              }}
+              setSelected={() => {
+                focusOn('title');
+              }}
             />
           ) : (
             <div>
-              {redraft(
-                data.title,
-                config.settings.richtextViewSettings.ToHTMLRenderers,
-                config.settings.richtextViewSettings.ToHTMLOptions,
-              )}
+              <TextBlockView
+                id={otherProps.id + '-' + index}
+                data={{ value: data.title }}
+              />
             </div>
           )}
           {argument && (

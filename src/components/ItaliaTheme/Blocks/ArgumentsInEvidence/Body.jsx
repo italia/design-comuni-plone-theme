@@ -23,6 +23,7 @@ class Body extends SubblockEdit {
     return (
       <Subblock subblock={this} className="subblock-edit">
         <Block
+          {...this.props}
           data={this.props.data}
           index={this.props.index}
           key={this.props.index}

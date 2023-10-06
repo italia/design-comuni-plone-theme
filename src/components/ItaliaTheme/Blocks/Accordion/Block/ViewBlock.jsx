@@ -10,7 +10,6 @@ import cx from 'classnames';
 import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { UniversalLink } from '@plone/volto/components';
 import { TextBlockView } from '@plone/volto-slate/blocks/Text';
-import config from '@plone/volto/registry';
 
 const messages = defineMessages({
   vedi: {

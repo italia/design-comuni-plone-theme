@@ -21,6 +21,7 @@ class Edit extends SubblocksEdit {
           <BodyWrapper data={this.props.data} inEditMode={false}>
             {this.state.subblocks.map((subblock, subindex) => (
               <Body
+                {...this.props}
                 data={subblock}
                 index={subindex}
                 key={subblock.id}
