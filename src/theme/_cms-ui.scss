@@ -93,7 +93,8 @@ body.cms-ui {
 
   .simple-text-editor-widget {
     .simple-text-input {
-      height: $line-height-base;
+      min-width: 1px;
+      display: inline-block;
       &:empty:before {
         content: attr(placeholder);
         pointer-events: none;
