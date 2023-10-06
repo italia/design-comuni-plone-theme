@@ -42,9 +42,10 @@ const Edit = ({
   const [selectedField, setSelectedField] = useState('title');
 
   useEffect(() => {
+    console.log(selected, selectedField);
     if (selected && !selectedField) {
       setSelectedField('title');
-    } else {
+    } else if (!selected) {
       setSelectedField(null);
     }
   }, [selected]);
@@ -80,43 +81,27 @@ const Edit = ({
       >
         <CalloutTitle tag="h4">
           {data.icon && <Icon icon={data.icon} padding={false} aria-hidden />}
+
           <TextEditorWidget
             {...otherProps}
-            data={data}
-            value={data.title}
-            block={block}
-            selected={selectedField === 'title'}
-            placeholder={intl.formatMessage(messages.title)}
-            onChangeBlock={(block, data) => {
-              onChange({ ...data, title: data.value }, 'title');
-            }}
-            setSelected={() => setSelectedField('title')}
-            focusNextField={() => {
-              setSelectedField('text');
-            }}
-            wrapClass={`title-edit-wrapper ${
-              data.title?.blocks?.[0]?.text?.length > 0 ? 'has-text' : ''
-            }`}
-          />
-        </CalloutTitle>
-        <CalloutText>
-          <TextEditorWidget
             showToolbar={false}
             data={data}
             block={block}
-            value={data.text_simple}
+            value={data.title}
             onChangeBlock={(block, data) => {
-              onChange({ ...data, text_simple: data.value }, 'text_simple');
+              onChange({ ...data, title: data.value }, 'title');
             }}
-            selected={selectedField === 'text_simple'}
-            placeholder={intl.formatMessage(messages.text)}
+            selected={selectedField === 'title'}
+            placeholder={intl.formatMessage(messages.title)}
             setSelected={() => {
-              setSelectedField('text_simple');
-            }}
-            focusPrevField={() => {
               setSelectedField('title');
             }}
+            focusNextField={() => {
+              setSelectedField('text');
+            }}
           />
+        </CalloutTitle>
+        <CalloutText>
           <TextEditorWidget
             {...otherProps}
             data={data}

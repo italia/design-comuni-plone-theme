@@ -91,6 +91,18 @@ body.cms-ui {
     }
   }
 
+  .simple-text-editor-widget {
+    .simple-text-input {
+      height: $line-height-base;
+      &:empty:before {
+        content: attr(placeholder);
+        pointer-events: none;
+        display: block; /* For Firefox */
+        font-weight: inherit;
+        opacity: 0.333;
+      }
+    }
+  }
   .it-header-wrapper,
   .public-ui {
     font-size: 18px;
@@ -441,12 +453,6 @@ body.cms-ui {
 
   // z-index necessario su Volto 17 finché non passiamo ad usare slate
   .block {
-    .DraftEditor-root {
-      .DraftEditor-editorContainer,
-      .public-DraftEditorPlaceholder-root {
-        z-index: 0;
-      }
-    }
     &.image {
       .block.align {
         &.left,

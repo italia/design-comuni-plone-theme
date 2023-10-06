@@ -46,7 +46,8 @@ const TextEditorWidget = (props) => {
 
   const withBlockProperties = React.useCallback(
     (editor) => {
-      editor.getBlockProps = () => props;
+      const p = { ...props, showToolbar: showToolbar };
+      editor.getBlockProps = () => p;
       return editor;
     },
     [props],
@@ -67,7 +68,7 @@ const TextEditorWidget = (props) => {
       onClick={() => setSelected()}
       onFocus={() => setSelected()}
       onKeyDown={() => setSelected()}
-      role="textbox"
+      role={'textbox'}
       tabIndex="-1"
     >
       {showToolbar ? (

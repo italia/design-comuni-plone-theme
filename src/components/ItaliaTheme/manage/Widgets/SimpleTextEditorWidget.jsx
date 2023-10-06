@@ -5,18 +5,12 @@
  * E' un editor di testo da mettere nei blocchi, senza formattazione.
  */
 
-import React from 'react';
-import { connect } from 'react-redux';
+import React, { useRef, useEffect } from 'react';
+
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import { useInView } from 'react-intersection-observer';
 
-import { handleKeyDetached } from '@plone/volto-slate/blocks/Text/keyboard';
-import {
-  uploadContent,
-  saveSlateBlockSelection,
-} from '@plone/volto-slate/actions';
-import { commonSearchBlockMessages } from '../../../../helpers';
 import config from '@plone/volto/registry';
 
 const messages = defineMessages({
@@ -43,6 +37,8 @@ const SimpleTextEditorWidget = (props) => {
     rootMargin: '0px 0px 200px 0px',
   });
 
+  const fieldRef = useRef();
+
   const handleKey = (event) => {
     const { slate } = config.settings;
 
@@ -51,21 +47,33 @@ const SimpleTextEditorWidget = (props) => {
     if (handlers) {
       // a handler can return `true` to signify it has handled the event in this
       // case, the execution flow is stopped
-      const handlerProps = { getBlockProps: () => props };
+      const handlerProps = {
+        getBlockProps: () => {
+          return { ...props };
+        },
+      };
       return handlers.find((handler) =>
         handler({ editor: handlerProps, event }),
       );
     }
   };
 
+  useEffect(() => {
+    if (selected) {
+      fieldRef.current.focus();
+    }
+  }, [selected]);
+
   return (
     <div className="simple-text-editor-widget" ref={ref}>
-      <textarea
-        readOnly={!inView}
-        value={value}
+      <span
+        className="simple-text-input"
+        contentEditable={inView} //se è in view è editabile, altrimenti è readOnly
+        role="textbox"
+        tabIndex={0}
         placeholder={placeholder || intl.formatMessage(messages.text)}
-        onChange={(e) => {
-          onChangeBlock(block, { ...data, value: e.target.value });
+        onInput={(e) => {
+          onChangeBlock(block, { ...data, value: e.target.textContent });
         }}
         onFocus={(e) => {
           if (!selected) {
@@ -76,8 +84,9 @@ const SimpleTextEditorWidget = (props) => {
             }
           }
         }}
-        onKeyUp={handleKey}
-      />
+        onKeyDown={handleKey}
+        ref={fieldRef}
+      ></span>
     </div>
   );
 };

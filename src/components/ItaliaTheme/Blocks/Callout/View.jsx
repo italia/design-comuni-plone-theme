@@ -16,15 +16,15 @@ import { TextBlockView } from '@plone/volto-slate/blocks/Text';
  */
 
 const View = ({ data, id }) => {
-  const title = <TextBlockView id={id} data={{ value: data.title }} />;
-
   return (
     <div className="block callout_block" id={id}>
-      <Callout>
+      <Callout
+        highlight={data.style === 'highlight'}
+        color={data.color?.replace('callout_', '')}
+      >
         <CalloutTitle>
           {data.icon && <Icon icon={data.icon} padding={false} aria-hidden />}
-          <span className="sr-only">{title}</span>
-          {title}
+          {data.title}
         </CalloutTitle>
         <CalloutText>
           <TextBlockView id={id} data={{ value: data.text }} />
