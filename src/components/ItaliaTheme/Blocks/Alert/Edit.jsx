@@ -78,7 +78,7 @@ class Edit extends Component {
         >
           <Row
             className={cx(
-              'row-full-width p-5',
+              'full-width p-5',
               'bg-alert-' + this.props.data.color,
             )}
           >
@@ -95,22 +95,20 @@ class Edit extends Component {
                 )}
                 <Col>
                   <TextEditorWidget
+                    {...this.props}
                     data={this.props.data}
                     fieldName="text"
                     selected={this.props.selected}
-                    block={this.props.block}
-                    onChangeBlock={(data) =>
-                      this.props.onChangeBlock(this.props.block, data)
+                    onChangeBlock={(block, data) =>
+                      this.props.onChangeBlock(block, {
+                        ...this.props.data,
+                        text: data.value,
+                      })
                     }
                     placeholder={this.props.intl.formatMessage(
                       messages.content_placeholder,
                     )}
                     showToolbar={true}
-                    onSelectBlock={this.props.onSelectBlock}
-                    onAddBlock={this.props.onAddBlock}
-                    index={this.props.index}
-                    onFocusNextBlock={this.props.onFocusNextBlock}
-                    onFocusPreviousBlock={this.props.onFocusPreviousBlock}
                   />
                 </Col>
               </Row>

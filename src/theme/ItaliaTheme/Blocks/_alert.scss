@@ -1,3 +1,28 @@
+$alert-block-danger: #a32219;
+$alert-block-warning-orange: #eb973f;
+$alert-block-warning: #f0c250;
+.alert-colors-widget {
+  .color-list-widget {
+    .ui.button.warning {
+      &,
+      &.active {
+        background-color: $alert-block-warning;
+      }
+    }
+    .ui.button.warning-orange {
+      &,
+      &.active {
+        background-color: $alert-block-warning-orange;
+      }
+    }
+    .ui.button.danger {
+      &,
+      &.active {
+        background-color: $alert-block-danger;
+      }
+    }
+  }
+}
 .public-ui {
   .block.alertblock,
   .alertblock {
@@ -6,7 +31,7 @@
     }
 
     .bg-alert-danger {
-      background-color: #a32219;
+      background-color: $alert-block-danger;
       color: $white;
 
       .public-DraftEditorPlaceholder-inner {
@@ -28,7 +53,7 @@
     }
 
     .bg-alert-warning-orange {
-      background-color: #eb973f;
+      background-color: $alert-block-warning-orange;
       color: $black;
 
       .public-DraftEditorPlaceholder-inner {
@@ -50,7 +75,7 @@
     }
 
     .bg-alert-warning {
-      background-color: #f0c250;
+      background-color: $alert-block-warning;
       color: $black;
 
       .public-DraftEditorPlaceholder-inner {

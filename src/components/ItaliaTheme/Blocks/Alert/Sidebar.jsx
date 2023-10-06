@@ -4,6 +4,7 @@ import { Form } from 'semantic-ui-react';
 import { Button, Grid, Segment } from 'semantic-ui-react';
 import { defineMessages, FormattedMessage, injectIntl } from 'react-intl';
 import { FileWidget } from '@plone/volto/components';
+import { ColorListWidget } from 'design-comuni-plone-theme/components/ItaliaTheme';
 
 const messages = defineMessages({
   Color: {
@@ -46,74 +47,24 @@ class Sidebar extends Component {
         </header>
 
         <Segment className="form">
-          <Form.Field inline required={this.props.required}>
-            <Grid>
-              <Grid.Row>
-                <Grid.Column width="4">
-                  <div className="wrapper">
-                    <label htmlFor="field-align">
-                      {this.props.intl.formatMessage(messages.Color)}
-                    </label>
-                  </div>
-                </Grid.Column>
-                <Grid.Column
-                  width="8"
-                  verticalAlign="middle"
-                  className="color-chooser"
-                >
-                  <Button.Group vertical compact>
-                    <Button
-                      icon
-                      basic={this.props.data.color !== 'warning'}
-                      color="yellow"
-                      onClick={(name, value) => {
-                        this.props.onChangeBlock(this.props.block, {
-                          ...this.props.data,
-                          color: 'warning',
-                        });
-                      }}
-                      active={this.props.data.color === 'warning'}
-                      content={this.props.intl.formatMessage(
-                        messages.Color_warning,
-                      )}
-                    />
+          <ColorListWidget
+            id="color"
+            className="alert-colors-widget"
+            title={this.props.intl.formatMessage(messages.Color)}
+            value={this.props.data.color}
+            onChange={(id, value) => {
+              this.props.onChangeBlock(this.props.block, {
+                ...this.props.data,
+                [id]: value,
+              });
+            }}
+            colors={[
+              { name: 'warning', label: 'Giallo' },
+              { name: 'warning-orange', label: 'Arancione' },
+              { name: 'danger', label: 'Rosso' },
+            ]}
+          />
 
-                    <Button
-                      icon
-                      basic={this.props.data.color !== 'warning-orange'}
-                      color="orange"
-                      onClick={(name, value) => {
-                        this.props.onChangeBlock(this.props.block, {
-                          ...this.props.data,
-                          color: 'warning-orange',
-                        });
-                      }}
-                      active={this.props.data.color === 'warning-orange'}
-                      content={this.props.intl.formatMessage(
-                        messages.Color_warning_orange,
-                      )}
-                    />
-
-                    <Button
-                      icon
-                      basic={this.props.data.color !== 'danger'}
-                      color="red"
-                      onClick={(name, value) => {
-                        this.props.onChangeBlock(this.props.block, {
-                          ...this.props.data,
-                          color: 'danger',
-                        });
-                      }}
-                      active={this.props.data.color === 'danger'}
-                      content={this.props.intl.formatMessage(
-                        messages.Color_danger,
-                      )}
-                    />
-                  </Button.Group>
-                </Grid.Column>
-              </Grid.Row>
-            </Grid>
-          </Form.Field>
           <FileWidget
             id="image"
             title={this.props.intl.formatMessage(messages.Image)}
