@@ -87,30 +87,31 @@ class EditBlock extends SubblockEdit {
               }}
             >
               <TextEditorWidget
+                {...this.props}
+                key="title"
+                showToolbar={false}
                 data={this.props.data}
                 fieldName="title"
+                onChangeBlock={(block, _data) => {
+                  this.onChange({ ...this.props.data, title: _data.value });
+                }}
                 selected={this.props.selected && this.state.focusOn === 'title'}
-                block={this.props.block}
-                onChangeBlock={this.onChange}
                 placeholder={this.props.intl.formatMessage(
                   messages.titlePlaceholder,
                 )}
-                onSelectBlock={() => {}}
-                onAddBlock={() => {
+                setSelected={() => {
+                  this.setState({ focusOn: 'title' });
+                }}
+                focusNextField={() => {
                   this.setState({ focusOn: 'text' });
                 }}
-                onFocusNextBlock={() => {
-                  this.setState({ focusOn: 'text' });
-                }}
-                onFocusPreviousBlock={
+                focusPrevField={
                   this.props.isFirst
                     ? this.props.onFocusPreviousBlock
                     : () => {
                         this.props.onSubblockChangeFocus(this.props.index - 1);
                       }
                 }
-                showToolbar={false}
-                key="title"
               />
             </div>
           </h3>
@@ -123,28 +124,30 @@ class EditBlock extends SubblockEdit {
             >
               <div className="accordion-inner">
                 <TextEditorWidget
+                  {...this.props}
                   data={this.props.data}
                   fieldName="text"
                   selected={
                     this.props.selected && this.state.focusOn === 'text'
                   }
-                  block={this.props.block}
-                  onChangeBlock={this.onChange}
                   placeholder={this.props.intl.formatMessage(
                     messages.textPlaceholder,
                   )}
-                  onAddBlock={this.props.onFocusNextBlock}
-                  onFocusNextBlock={
-                    this.props.isLast
-                      ? this.props.onFocusNextBlock
-                      : () => {
+                  onChangeBlock={(block, _data) => {
+                    this.onChange({ ...this.props.data, text: _data.value });
+                  }}
+                  setSelected={() => this.setState({ focusOn: 'text' })}
+                  focusNextField={
+                    !this.props.isLast
+                      ? () => {
                           this.setState({ focusOn: null });
                           this.props.onSubblockChangeFocus(
                             this.props.index + 1,
                           );
                         }
+                      : null //default go to next block
                   }
-                  onFocusPreviousBlock={() => {
+                  focusPrevField={() => {
                     this.setState({ focusOn: 'title' });
                   }}
                   key="text"

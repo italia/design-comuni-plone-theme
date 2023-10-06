@@ -49,6 +49,7 @@ class Edit extends SubblocksEdit {
                   {this.state.subblocks.map((subblock, subindex) => (
                     <div className="accordion-item" key={subblock.id}>
                       <EditBlock
+                        {...this.props}
                         data={subblock}
                         index={subindex}
                         selected={
@@ -56,9 +57,6 @@ class Edit extends SubblocksEdit {
                           this.isSubblockSelected(subindex)
                         }
                         {...this.subblockProps}
-                        openObjectBrowser={this.props.openObjectBrowser}
-                        onFocusPreviousBlock={this.props.onFocusPreviousBlock}
-                        onFocusNextBlock={this.props.onFocusNextBlock}
                         onSubblockChangeFocus={this.onSubblockChangeFocus}
                         isLast={this.state.subblocks.length - 1 === subindex}
                         isFirst={subindex === 0}
