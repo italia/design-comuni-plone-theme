@@ -86,7 +86,9 @@ const SimpleTextEditorWidget = (props) => {
         }}
         onKeyDown={handleKey}
         ref={fieldRef}
-      ></span>
+      >
+        {value || ''}
+      </span>
     </div>
   );
 };
