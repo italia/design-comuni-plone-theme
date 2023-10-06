@@ -5,43 +5,35 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import redraft from 'redraft';
 import ViewBlock from './Block/ViewBlock';
 import { Container, Row, Col } from 'design-react-kit';
 import { flattenToAppURL } from '@plone/volto/helpers';
 import { UniversalLink } from '@plone/volto/components';
-import config from '@plone/volto/registry';
-
+import { TextBlockView } from '@plone/volto-slate/blocks/Text';
 /**
  * View Accordion block class.
  * @class View
  * @extends Component
  */
-const AccordionView = ({ data, block }) => {
-  const id = new Date().getTime();
+const AccordionView = ({ data, block, id }) => {
+  const now = new Date().getTime();
   return (
-    <div className="block contacts">
+    <div className="block contacts" id={id}>
       <div className="public-ui">
         <div
           className={`full-width section bg-${data.bg_color ?? 'primary'} py-5`}
         >
           <Container className="px-md-4">
-            <div className="block-header">
-              <div className="title">
-                {redraft(
-                  data.title,
-                  config.settings.richtextViewSettings.ToHTMLRenderers,
-                  config.settings.richtextViewSettings.ToHTMLOptions,
+            {(data.title || data.description) && (
+              <div className="block-header">
+                {data.title && <div className="title">{data.title}</div>}
+                {data.description && (
+                  <div className="description">
+                    <TextBlockView id={id} data={{ value: data.description }} />
+                  </div>
                 )}
               </div>
-              <div className="description">
-                {redraft(
-                  data.description,
-                  config.settings.richtextViewSettings.ToHTMLRenderers,
-                  config.settings.richtextViewSettings.ToHTMLOptions,
-                )}
-              </div>
-            </div>
+            )}
             <Row
               className={
                 data.subblocks.length > 3
@@ -54,7 +46,7 @@ const AccordionView = ({ data, block }) => {
                   <ViewBlock
                     data={subblock}
                     key={index}
-                    id={id}
+                    id={now}
                     index={index}
                   />
                 </Col>

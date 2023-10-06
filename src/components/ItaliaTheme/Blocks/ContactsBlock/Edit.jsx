@@ -66,19 +66,23 @@ class Edit extends SubblocksEdit {
             <div className="block-header">
               <div className="title">
                 <TextEditorWidget
+                  {...this.props}
+                  showToolbar={false}
                   data={this.props.data}
+                  block={this.props.block}
                   fieldName="title"
                   selected={this.state.selectedField === 'title'}
-                  block={this.props.block}
-                  onChangeBlock={(data) => {
+                  onChangeBlock={(block, data) => {
                     this.props.onChangeBlock(this.props.block, {
-                      ...data,
+                      ...this.props.data,
+                      title: data.value,
                     });
                   }}
                   placeholder={this.props.intl.formatMessage(messages.title)}
-                  showToolbar={false}
-                  onSelectBlock={() => {}}
-                  onAddBlock={() => {
+                  setSelected={() => {
+                    this.setState({ selectedField: 'title' });
+                  }}
+                  focusNextField={() => {
                     this.setState({ selectedField: 'description' });
                   }}
                 />
@@ -86,21 +90,27 @@ class Edit extends SubblocksEdit {
 
               <div className="description">
                 <TextEditorWidget
+                  {...this.props}
+                  showToolbar={true}
                   data={this.props.data}
                   fieldName="description"
                   selected={this.state.selectedField === 'description'}
                   block={this.props.block}
-                  onChangeBlock={(data) =>
+                  onChangeBlock={(block, data) =>
                     this.props.onChangeBlock(this.props.block, {
-                      ...data,
+                      ...this.props.data,
+                      description: data.value,
                     })
                   }
                   placeholder={this.props.intl.formatMessage(
                     messages.description,
                   )}
-                  showToolbar={true}
-                  onSelectBlock={() => {}}
-                  onAddBlock={() => {}}
+                  setSelected={() =>
+                    this.setState({ selectedField: 'description' })
+                  }
+                  focusPrevField={() => {
+                    this.setState({ selectedField: 'title' });
+                  }}
                 />
               </div>
             </div>
