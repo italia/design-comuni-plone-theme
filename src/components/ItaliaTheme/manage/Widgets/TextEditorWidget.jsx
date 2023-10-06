@@ -36,6 +36,7 @@ const TextEditorWidget = (props) => {
     index,
     properties,
     value,
+    fieldName,
     block,
     selected,
     onSelectBlock,
@@ -62,6 +63,7 @@ const TextEditorWidget = (props) => {
     rootMargin: '0px 0px 200px 0px',
   });
 
+  const _value = value ?? data[fieldName];
   return (
     <div
       className={wrapClass}
@@ -81,7 +83,7 @@ const TextEditorWidget = (props) => {
             readOnly={!inView}
             properties={properties}
             renderExtensions={[withBlockProperties]}
-            value={value}
+            value={_value}
             block={block /* is this needed? */}
             slateSettings={otherProps.slateSettings}
             onFocus={() => {
@@ -110,7 +112,7 @@ const TextEditorWidget = (props) => {
         </div>
       ) : (
         <div className="text-editor-inner simple-text">
-          <SimpleTextEditorWidget {...props} />
+          <SimpleTextEditorWidget {...props} value={_value} />
         </div>
       )}
     </div>
@@ -126,8 +128,8 @@ TextEditorWidget.propTypes = {
   selected: PropTypes.bool.isRequired,
   showToolbar: PropTypes.bool,
   wrapClass: PropTypes.string,
-  focusPrevField: PropTypes.func.isRequired,
-  focusNextField: PropTypes.func.isRequired,
+  focusPrevField: PropTypes.func,
+  focusNextField: PropTypes.func,
   //from block props:
   properties: PropTypes.objectOf(PropTypes.any).isRequired,
   onFocusPreviousBlock: PropTypes.objectOf(PropTypes.any).isRequired,

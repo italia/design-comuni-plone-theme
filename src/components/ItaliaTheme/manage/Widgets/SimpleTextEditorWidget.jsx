@@ -64,11 +64,20 @@ const SimpleTextEditorWidget = (props) => {
     }
   }, [selected]);
 
+  useEffect(() => {
+    //inizializzazione del valore nel campo
+    if (fieldRef.current && value?.length > 0) {
+      fieldRef.current.innerText = value;
+    }
+  }, []);
+
   return (
     <div className="simple-text-editor-widget" ref={ref}>
       <span
         className="simple-text-input"
         contentEditable={inView} //se è in view è editabile, altrimenti è readOnly
+        dir="ltr"
+        suppressContentEditableWarning={true}
         role="textbox"
         tabIndex={0}
         placeholder={placeholder || intl.formatMessage(messages.text)}
@@ -86,9 +95,7 @@ const SimpleTextEditorWidget = (props) => {
         }}
         onKeyDown={handleKey}
         ref={fieldRef}
-      >
-        {value || ''}
-      </span>
+      />
     </div>
   );
 };
