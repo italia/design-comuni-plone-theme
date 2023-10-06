@@ -64,12 +64,20 @@ const TextEditorWidget = (props) => {
   });
 
   const _value = value ?? data[fieldName];
+
+  const selectThis = () => {
+    if (onSelectBlock) {
+      onSelectBlock(block);
+    } else {
+      setSelected();
+    }
+  };
   return (
     <div
       className={wrapClass}
-      onClick={() => setSelected()}
-      onFocus={() => setSelected()}
-      onKeyDown={() => setSelected()}
+      onClick={() => selectThis()}
+      onFocus={() => selectThis()}
+      onKeyDown={() => selectThis()}
       role={'textbox'}
       tabIndex="-1"
     >
@@ -88,11 +96,7 @@ const TextEditorWidget = (props) => {
             slateSettings={otherProps.slateSettings}
             onFocus={() => {
               if (!selected) {
-                if (onSelectBlock) {
-                  onSelectBlock(block);
-                } else {
-                  setSelected();
-                }
+                selectThis();
               }
             }}
             onChange={(value, selection, editor) => {
