@@ -117,12 +117,11 @@ const TextEditorWidget = (props) => {
             placeholder={placeholder}
             onKeyDown={handleKeyDetached}
             editableProps={{ 'aria-multiline': 'true' }}
-            showToolbar={showToolbar}
           />
         </div>
       ) : (
         <div className="text-editor-inner simple-text">
-          <SimpleTextEditorWidget {...props} value={_value} />
+          <SimpleTextEditorWidget {...props} index={index} value={_value} />
         </div>
       )}
     </div>

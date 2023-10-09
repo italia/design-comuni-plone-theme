@@ -20,26 +20,33 @@ const focusPrev = (props) => {
     block,
     blockNode,
     properties,
+    index,
+    saveSlateBlockSelection,
   } = props.editor.getBlockProps();
-
+  console.log('focusPrev');
   let isAtStart = false;
-  props.event.stopPropagation();
 
   if (showToolbar) {
     isAtStart = isCursorAtBlockStart(props.editor);
   } else {
-    isAtStart = props.event.target.selectionStart === 0;
+    let _range = document.getSelection().getRangeAt(0);
+    let range = _range.cloneRange();
+    range.selectNodeContents(props.event.target);
+    range.setEnd(_range.endContainer, _range.endOffset);
+    isAtStart = range.toString().length === 0;
+    //isAtStart = props.event.target.selectionStart === 0;
   }
 
   if (isAtStart) {
     //move to prev field
     if (focusPrevField) {
+      props.event.stopPropagation();
       return focusPrevField();
     }
 
     //handle SimpleTextEditorWidget -> move to prev block
     if (!showToolbar && onFocusPreviousBlock) {
-      const prev = getPreviousVoltoBlock(props.index, properties);
+      const prev = getPreviousVoltoBlock(index, properties);
       if (!prev || prev[0]?.['@type'] !== 'slate')
         return onFocusPreviousBlock(block, blockNode.current);
       const [slateBlock, id] = prev;
@@ -52,7 +59,7 @@ const focusPrev = (props) => {
       const [node, path] = match;
       const point = { path, offset: (node?.text || '').length };
       const selection = { anchor: point, focus: point };
-      props.saveSlateBlockSelection(id, selection);
+      saveSlateBlockSelection(id, selection);
       return onFocusPreviousBlock(block, blockNode.current);
     }
   }
@@ -67,8 +74,10 @@ const goToNextVoltoBlock = (props) => {
     block,
     blockNode,
     properties,
+    index,
+    saveSlateBlockSelection,
   } = props.editor.getBlockProps();
-  const next = getNextVoltoBlock(props.index, properties);
+  const next = getNextVoltoBlock(index, properties);
   if (!next || next[0]?.['@type'] !== 'slate')
     return onFocusNextBlock(block, blockNode.current);
 
@@ -82,7 +91,7 @@ const goToNextVoltoBlock = (props) => {
   const path = match[1];
   const point = { path, offset: 0 };
   const selection = { anchor: point, focus: point };
-  props.saveSlateBlockSelection(id, selection);
+  saveSlateBlockSelection(id, selection);
   return onFocusNextBlock(block, blockNode.current);
 };
 const focusNext = (props) => {
@@ -91,15 +100,20 @@ const focusNext = (props) => {
     showToolbar,
     onFocusNextBlock,
   } = props.editor.getBlockProps();
-
+  console.log('focusNext');
   props.event.stopPropagation();
   let isAtEnd = false;
 
   if (showToolbar) {
     isAtEnd = isCursorAtBlockEnd(props.editor);
   } else {
-    isAtEnd =
-      props.event.target.selectionEnd === props.event.target.value?.length;
+    let _range = document.getSelection().getRangeAt(0);
+    let range = _range.cloneRange();
+    range.selectNodeContents(props.event.target);
+    range.setEnd(_range.endContainer, _range.endOffset);
+    isAtEnd = range.toString().length === props.event.target.innerText?.length;
+    // isAtEnd =
+    //   props.event.target.selectionEnd === props.event.target.value?.length;
   }
 
   if (isAtEnd) {
