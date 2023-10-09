@@ -23,6 +23,7 @@ const focusPrev = (props) => {
   } = props.editor.getBlockProps();
 
   let isAtStart = false;
+  props.event.stopPropagation();
 
   if (showToolbar) {
     isAtStart = isCursorAtBlockStart(props.editor);
@@ -33,7 +34,6 @@ const focusPrev = (props) => {
   if (isAtStart) {
     //move to prev field
     if (focusPrevField) {
-      props.event.stopPropagation();
       return focusPrevField();
     }
 
@@ -92,6 +92,7 @@ const focusNext = (props) => {
     onFocusNextBlock,
   } = props.editor.getBlockProps();
 
+  props.event.stopPropagation();
   let isAtEnd = false;
 
   if (showToolbar) {
@@ -104,7 +105,6 @@ const focusNext = (props) => {
   if (isAtEnd) {
     //move to next field
     if (focusNextField) {
-      props.event.stopPropagation();
       return focusNextField();
     }
 

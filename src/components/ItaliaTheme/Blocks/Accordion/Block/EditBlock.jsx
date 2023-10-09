@@ -95,10 +95,10 @@ class EditBlock extends SubblockEdit {
                 onChangeBlock={(block, _data) => {
                   this.onChange({ ...this.props.data, title: _data.value });
                 }}
-                selected={this.props.selected && this.state.focusOn === 'title'}
                 placeholder={this.props.intl.formatMessage(
                   messages.titlePlaceholder,
                 )}
+                selected={this.props.selected && this.state.focusOn === 'title'}
                 setSelected={() => {
                   this.setState({ focusOn: 'title' });
                 }}
@@ -125,6 +125,7 @@ class EditBlock extends SubblockEdit {
               <div className="accordion-inner">
                 <TextEditorWidget
                   {...this.props}
+                  key="text"
                   data={this.props.data}
                   fieldName="text"
                   selected={
@@ -150,7 +151,6 @@ class EditBlock extends SubblockEdit {
                   focusPrevField={() => {
                     this.setState({ focusOn: 'title' });
                   }}
-                  key="text"
                 />
               </div>
               {this.props.data.href && (

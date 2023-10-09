@@ -87,22 +87,35 @@ class EditBlock extends SubblockEdit {
                 }}
               >
                 <TextEditorWidget
+                  {...this.props}
+                  key="title"
+                  showToolbar={false}
                   data={this.props.data}
                   fieldName="title"
-                  selected={
-                    this.props.selected && this.state.focusOn === 'title'
-                  }
-                  block={this.props.block}
-                  onChangeBlock={this.onChange}
+                  onChangeBlock={(block, _data) => {
+                    this.onChange({ ...this.props.data, title: _data.value });
+                  }}
                   placeholder={this.props.intl.formatMessage(
                     messages.titlePlaceholder,
                   )}
-                  nextFocus="text"
-                  setFocus={(f) => {
-                    this.setState({ focusOn: f });
+                  selected={
+                    this.props.selected && this.state.focusOn === 'title'
+                  }
+                  setSelected={() => {
+                    this.setState({ focusOn: 'title' });
                   }}
-                  showToolbar={false}
-                  key="title"
+                  focusNextField={() => {
+                    this.setState({ focusOn: 'text' });
+                  }}
+                  focusPrevField={
+                    this.props.isFirst
+                      ? this.props.onFocusPreviousBlock
+                      : () => {
+                          this.props.onSubblockChangeFocus(
+                            this.props.index - 1,
+                          );
+                        }
+                  }
                 />
               </div>
             </div>
@@ -114,20 +127,24 @@ class EditBlock extends SubblockEdit {
               }}
             >
               <TextEditorWidget
+                {...this.props}
+                key="text"
                 data={this.props.data}
                 fieldName="text"
-                selected={this.props.selected && this.state.focusOn === 'text'}
-                block={this.props.block}
-                onChangeBlock={this.onChange}
                 placeholder={this.props.intl.formatMessage(
                   messages.textPlaceholder,
                 )}
-                prevFocus="title"
-                nextFocus="tel"
-                setFocus={(f) => {
-                  this.setState({ focusOn: f });
+                onChangeBlock={(block, _data) => {
+                  this.onChange({ ...this.props.data, text: _data.value });
                 }}
-                key="text"
+                selected={this.props.selected && this.state.focusOn === 'text'}
+                setSelected={() => this.setState({ focusOn: 'text' })}
+                focusPrevField={() => {
+                  this.setState({ focusOn: 'title' });
+                }}
+                focusNextField={() => {
+                  this.setState({ focusOn: 'tel' });
+                }}
               />
             </div>
 
@@ -141,19 +158,24 @@ class EditBlock extends SubblockEdit {
                 <Icon icon="phone-alt" />
               </div>
               <TextEditorWidget
+                {...this.props}
+                key="tel"
                 data={this.props.data}
                 fieldName="tel"
                 selected={this.props.selected && this.state.focusOn === 'tel'}
-                block={this.props.block}
-                onChangeBlock={this.onChange}
+                onChangeBlock={(block, _data) => {
+                  this.onChange({ ...this.props.data, tel: _data.value });
+                }}
                 placeholder={this.props.intl.formatMessage(
                   messages.textPlaceholder,
                 )}
-                prevFocus="text"
-                setFocus={(f) => {
-                  this.setState({ focusOn: f });
+                setSelected={() => this.setState({ focusOn: 'tel' })}
+                focusPrevField={() => {
+                  this.setState({ focusOn: 'text' });
                 }}
-                key="tel"
+                focusNextField={() => {
+                  this.setState({ focusOn: 'email' });
+                }}
               />
             </div>
             <div
@@ -166,19 +188,29 @@ class EditBlock extends SubblockEdit {
                 <Icon icon="envelope" />
               </div>
               <TextEditorWidget
+                {...this.props}
+                key="email"
                 data={this.props.data}
                 fieldName="email"
                 selected={this.props.selected && this.state.focusOn === 'email'}
-                block={this.props.block}
-                onChangeBlock={this.onChange}
+                onChangeBlock={(block, _data) => {
+                  this.onChange({ ...this.props.data, email: _data.value });
+                }}
                 placeholder={this.props.intl.formatMessage(
                   messages.textPlaceholder,
                 )}
-                prevFocus="email"
-                setFocus={(f) => {
-                  this.setState({ focusOn: f });
+                setSelected={() => this.setState({ focusOn: 'email' })}
+                focusPrevField={() => {
+                  this.setState({ focusOn: 'tel' });
                 }}
-                key="email"
+                focusNextField={
+                  !this.props.isLast
+                    ? () => {
+                        this.setState({ focusOn: null });
+                        this.props.onSubblockChangeFocus(this.props.index + 1);
+                      }
+                    : null //default go to next block
+                }
               />
             </div>
           </CardBody>

@@ -69,7 +69,7 @@ class Edit extends SubblocksEdit {
                   {...this.props}
                   showToolbar={false}
                   data={this.props.data}
-                  block={this.props.block}
+                  onSelectBlock={null}
                   fieldName="title"
                   selected={this.state.selectedField === 'title'}
                   onChangeBlock={(block, data) => {
@@ -95,7 +95,7 @@ class Edit extends SubblocksEdit {
                   data={this.props.data}
                   fieldName="description"
                   selected={this.state.selectedField === 'description'}
-                  block={this.props.block}
+                  onSelectBlock={null}
                   onChangeBlock={(block, data) =>
                     this.props.onChangeBlock(this.props.block, {
                       ...this.props.data,
@@ -110,6 +110,10 @@ class Edit extends SubblocksEdit {
                   }
                   focusPrevField={() => {
                     this.setState({ selectedField: 'title' });
+                  }}
+                  focusNextField={() => {
+                    this.setState({ selectedField: null });
+                    this.onSubblockChangeFocus(0);
                   }}
                 />
               </div>
@@ -126,11 +130,15 @@ class Edit extends SubblocksEdit {
                 {this.state.subblocks.map((subblock, subindex) => (
                   <Col lg="4" key={subblock.id} className="pb-3">
                     <EditBlock
+                      {...this.props}
                       data={subblock}
                       index={subindex}
                       selected={this.isSubblockSelected(subindex)}
                       {...this.subblockProps}
                       openObjectBrowser={this.props.openObjectBrowser}
+                      onSubblockChangeFocus={this.onSubblockChangeFocus}
+                      isLast={this.state.subblocks.length - 1 === subindex}
+                      isFirst={subindex === 0}
                     />
                   </Col>
                 ))}
@@ -144,7 +152,6 @@ class Edit extends SubblocksEdit {
                 )}
               </Row>
             </SubblocksWrapper>
-
             {this.props.data.href && this.props.data.linkMoreTitle && (
               <div className="link-button text-center my-4">
                 <UniversalLink
