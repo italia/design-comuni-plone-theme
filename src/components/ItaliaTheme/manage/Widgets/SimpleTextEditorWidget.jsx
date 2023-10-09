@@ -85,11 +85,12 @@ const SimpleTextEditorWidget = (props) => {
         placeholder={placeholder || intl.formatMessage(messages.text)}
         onInput={(e) => {
           let retVal = {
-            value,
+            value: e.target.textContent,
           };
           if (fieldName) {
-            retVal = { [fieldName]: value };
+            retVal = { [fieldName]: e.target.textContent };
           }
+
           onChangeBlock(block, { ...data, ...retVal });
         }}
         onFocus={(e) => {
