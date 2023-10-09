@@ -30,6 +30,12 @@
 - ...
 -->
 
+## Versione X.X.X (06/10/2023)
+
+### Fix
+
+- Uniformato e impostato a sinistra l'allineamento del testo nel blocco Elenco nella variazione Quadratoni con immagine
+
 ## Versione 8.7.3 (26/09/2023)
 
 ### Fix
