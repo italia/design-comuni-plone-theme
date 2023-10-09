@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import redraft from 'redraft';
-import { checkRedraftHasContent } from 'design-comuni-plone-theme/helpers';
+import { checkRichTextHasContent } from 'design-comuni-plone-theme/helpers';
 import { Container, Row, Col } from 'design-react-kit';
 import { addAppURL, flattenToAppURL } from '@plone/volto/helpers';
 import cx from 'classnames';
 import CountDown from 'design-comuni-plone-theme/components/ItaliaTheme/Blocks/CountDown/CountDown';
-import config from '@plone/volto/registry';
+import { TextBlockView } from '@plone/volto-slate/blocks/Text';
 
 const View = ({ data, id }) => {
   return (
@@ -33,7 +32,7 @@ const View = ({ data, id }) => {
           )}
           <Container className="px-md-4">
             <Row>
-              {checkRedraftHasContent(data.text) && (
+              {checkRichTextHasContent(data.text) && (
                 <Col
                   xs={{
                     size: 12,
@@ -44,11 +43,7 @@ const View = ({ data, id }) => {
                   }}
                   className="text"
                 >
-                  {redraft(
-                    data.text,
-                    config.settings.richtextViewSettings.ToHTMLRenderers,
-                    config.settings.richtextViewSettings.ToHTMLOptions,
-                  )}
+                  <TextBlockView data={{ value: data.text }} />
                 </Col>
               )}
               <Col
@@ -67,13 +62,9 @@ const View = ({ data, id }) => {
                   showMinutes={data.showMinutes}
                   showSeconds={data.showSeconds}
                 />
-                {checkRedraftHasContent(data.countdown_text) && (
+                {checkRichTextHasContent(data.countdown_text) && (
                   <div className="countdown_text">
-                    {redraft(
-                      data.countdown_text,
-                      config.settings.richtextViewSettings.ToHTMLRenderers,
-                      config.settings.richtextViewSettings.ToHTMLOptions,
-                    )}
+                    <TextBlockView data={{ value: data.countdown_text }} />
                   </div>
                 )}
               </Col>

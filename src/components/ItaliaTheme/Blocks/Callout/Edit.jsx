@@ -42,7 +42,6 @@ const Edit = ({
   const [selectedField, setSelectedField] = useState('title');
 
   useEffect(() => {
-    console.log(selected, selectedField);
     if (selected && !selectedField) {
       setSelectedField('title');
     } else if (!selected) {
@@ -55,21 +54,6 @@ const Edit = ({
       onSelectBlock(block);
     }
   }, [selectedField]);
-
-  /**
-   * Change handler
-   * @method onChange
-   * @param {object} editorState Editor state.
-   * @returns {undefined}
-   */
-  const onChange = (obj, fieldname) => {
-    if (!isEqual(obj[fieldname], data[fieldname])) {
-      onChangeBlock(block, {
-        ...data,
-        [fieldname]: obj[fieldname],
-      });
-    }
-  };
 
   return __SERVER__ ? (
     <div />
@@ -87,10 +71,8 @@ const Edit = ({
             showToolbar={false}
             data={data}
             block={block}
-            value={data.title}
-            onChangeBlock={(block, data) => {
-              onChange({ ...data, title: data.value }, 'title');
-            }}
+            fieldName="title"
+            onChangeBlock={onChangeBlock}
             selected={selectedField === 'title'}
             placeholder={intl.formatMessage(messages.title)}
             setSelected={() => {
@@ -105,13 +87,11 @@ const Edit = ({
           <TextEditorWidget
             {...otherProps}
             data={data}
-            value={data.text}
+            fieldName="text"
             block={block}
             selected={selectedField === 'text'}
             placeholder={intl.formatMessage(messages.text)}
-            onChangeBlock={(block, data) => {
-              onChange({ ...data, text: data.value }, 'text');
-            }}
+            onChangeBlock={onChangeBlock}
             setSelected={() => setSelectedField('text')}
             focusPrevField={() => {
               setSelectedField('title');

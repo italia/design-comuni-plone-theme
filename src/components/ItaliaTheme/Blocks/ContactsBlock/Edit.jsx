@@ -72,12 +72,7 @@ class Edit extends SubblocksEdit {
                   onSelectBlock={null}
                   fieldName="title"
                   selected={this.state.selectedField === 'title'}
-                  onChangeBlock={(block, data) => {
-                    this.props.onChangeBlock(this.props.block, {
-                      ...this.props.data,
-                      title: data.value,
-                    });
-                  }}
+                  onChangeBlock={this.props.onChangeBlock}
                   placeholder={this.props.intl.formatMessage(messages.title)}
                   setSelected={() => {
                     this.setState({ selectedField: 'title' });
@@ -96,12 +91,7 @@ class Edit extends SubblocksEdit {
                   fieldName="description"
                   selected={this.state.selectedField === 'description'}
                   onSelectBlock={null}
-                  onChangeBlock={(block, data) =>
-                    this.props.onChangeBlock(this.props.block, {
-                      ...this.props.data,
-                      description: data.value,
-                    })
-                  }
+                  onChangeBlock={this.props.onChangeBlock}
                   placeholder={this.props.intl.formatMessage(
                     messages.description,
                   )}

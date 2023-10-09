@@ -99,12 +99,6 @@ class Edit extends Component {
                     data={this.props.data}
                     fieldName="text"
                     selected={this.props.selected}
-                    onChangeBlock={(block, data) =>
-                      this.props.onChangeBlock(block, {
-                        ...this.props.data,
-                        text: data.value,
-                      })
-                    }
                     placeholder={this.props.intl.formatMessage(
                       messages.content_placeholder,
                     )}

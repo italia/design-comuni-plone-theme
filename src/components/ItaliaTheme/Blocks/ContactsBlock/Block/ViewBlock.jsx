@@ -5,21 +5,27 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import redraft from 'redraft';
-
-import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
 import { Card, CardBody } from 'design-react-kit';
-
 import { TextBlockView } from '@plone/volto-slate/blocks/Text';
+import { checkRichTextHasContent } from 'design-comuni-plone-theme/helpers';
+import { Icon } from 'design-comuni-plone-theme/components/ItaliaTheme';
+
 /**
  * ViewBlock class.
  * @class ViewBlock
  * @extends Component
  */
 const ViewBlock = ({ data, isOpen, toggle, id, index }) => {
-  const text = <TextBlockView data={{ value: data.text }} />;
-  const tel = <TextBlockView data={{ value: data.tel }} />;
-  const email = <TextBlockView data={{ value: data.email }} />;
+  const text = checkRichTextHasContent(data.text) ? (
+    <TextBlockView data={{ value: data.text }} />
+  ) : null;
+  const tel = checkRichTextHasContent(data.tel) ? (
+    <TextBlockView data={{ value: data.tel }} />
+  ) : null;
+  const email = checkRichTextHasContent(data.email) ? (
+    <TextBlockView data={{ value: data.email }} />
+  ) : null;
+
   return (
     <Card
       className="card-bg rounded subblock-view "

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { defineMessages, useIntl } from 'react-intl';
 import { Container, Row, Col } from 'design-react-kit';
@@ -25,8 +25,17 @@ const Edit = (props) => {
     onSelectBlock,
     onAddBlock,
     index,
+    ...otherProps
   } = props;
   const intl = useIntl();
+  const [selectedField, setSelectedField] = useState('text');
+  useEffect(() => {
+    if (selected && !selectedField) {
+      setSelectedField('text');
+    } else if (!selected) {
+      setSelectedField(null);
+    }
+  }, [selected]);
 
   return (
     <>
@@ -64,17 +73,20 @@ const Edit = (props) => {
                 className="text"
               >
                 <TextEditorWidget
+                  {...otherProps}
+                  showToolbar={true}
                   data={data}
                   fieldName="text"
-                  selected={selected}
+                  selected={selectedField === 'text'}
                   block={block}
-                  onChangeBlock={(data) => onChangeBlock(block, data)}
+                  onChangeBlock={onChangeBlock}
                   placeholder={intl.formatMessage(messages.text)}
-                  showToolbar={true}
-                  onSelectBlock={onSelectBlock}
-                  onAddBlock={onAddBlock}
-                  index={index}
-                  disableMoveToNearest={true}
+                  setSelected={() => {
+                    setSelectedField('text');
+                  }}
+                  focusNextField={() => {
+                    setSelectedField('countdown_text');
+                  }}
                 />
               </Col>
               <Col
@@ -95,17 +107,20 @@ const Edit = (props) => {
                   showSeconds={data.showSeconds}
                 />
                 <TextEditorWidget
-                  data={data}
-                  fieldName="countdown_text"
-                  selected={selected}
-                  block={block}
-                  onChangeBlock={(data) => onChangeBlock(block, data)}
-                  placeholder={intl.formatMessage(messages.text)}
+                  {...otherProps}
                   showToolbar={true}
-                  onSelectBlock={onSelectBlock}
-                  onAddBlock={onAddBlock}
-                  index={index}
-                  disableMoveToNearest={true}
+                  data={data}
+                  block={block}
+                  fieldName="countdown_text"
+                  selected={selectedField === 'countdown_text'}
+                  onChangeBlock={onChangeBlock}
+                  placeholder={intl.formatMessage(messages.text)}
+                  setSelected={() => {
+                    setSelectedField('countdown_text');
+                  }}
+                  focusPrevField={() => {
+                    setSelectedField('text');
+                  }}
                 />
               </Col>
             </Row>
