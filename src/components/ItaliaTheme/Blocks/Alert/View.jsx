@@ -16,7 +16,6 @@ import { TextBlockView } from '@plone/volto-slate/blocks/Text';
  * @extends Component
  */
 const View = ({ data, id }) => {
-  console.log(data);
   return (
     <section role="alert" className="block alertblock">
       <div className={cx('full-width', 'bg-alert-' + data.color)}>
